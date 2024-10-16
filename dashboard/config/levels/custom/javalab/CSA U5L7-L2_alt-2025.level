@@ -1,0 +1,30 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T22:55:09.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Try modifying the program to accept multiple target phrases and count the number of occurrences of each phrase within each row.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "project_template_level_name": "CSA U5L7-IndexOf PBT_alt-2025",
+    "teacher_markdown": "Instead of searching for just one phrase, the program should now search for multiple phrases using the `indexOf()` method for each one.",
+    "encrypted_exemplar_sources": "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\n/+1kA1E1L3YlWiKm\n",
+    "name_suffix": "_alt-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:55:09.677+00:00\",\"changed\":[\"cloned from \\\"CSA U5L7-L2_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L7-L2_pilot-2025\"}]"
+}]]></config>
+</Javalab>

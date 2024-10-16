@@ -1,13 +1,10 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import LearningGoal from '@cdo/apps/templates/rubrics/LearningGoal';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 describe('LearningGoal', () => {
   const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706};
@@ -23,11 +20,11 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi
       />
     );
-    expect(wrapper.find('EvidenceLevels')).to.have.lengthOf(1);
-    expect(wrapper.find('EvidenceLevels').props().evidenceLevels).to.deep.equal(
-      [{understanding: 1, teacherDescription: 'test'}]
-    );
-    expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(0);
+    expect(wrapper.find('EvidenceLevels')).toHaveLength(1);
+    expect(wrapper.find('EvidenceLevels').props().evidenceLevels).toEqual([
+      {understanding: 1, teacherDescription: 'test'},
+    ]);
+    expect(wrapper.find('SafeMarkdown')).toHaveLength(0);
   });
 
   it('renders AiAssessment when teacher has AiEnabled and the learning goal can be tested by AI', () => {
@@ -50,15 +47,13 @@ describe('LearningGoal', () => {
         }}
       />
     );
-    expect(wrapper.find('AiAssessment')).to.have.lengthOf(1);
-    expect(wrapper.find('AiAssessment').props().studentName).to.equal(
+    expect(wrapper.find('AiAssessment')).toHaveLength(1);
+    expect(wrapper.find('AiAssessment').props().studentName).toBe(
       studentLevelInfo.name
     );
-    expect(wrapper.find('AiAssessment').props().aiConfidence).to.equal(50);
-    expect(wrapper.find('AiAssessment').props().aiUnderstandingLevel).to.equal(
-      3
-    );
-    expect(wrapper.find('AiAssessment').props().isAiAssessed).to.equal(true);
+    expect(wrapper.find('AiAssessment').props().aiConfidence).toBe(50);
+    expect(wrapper.find('AiAssessment').props().aiUnderstandingLevel).toBe(3);
+    expect(wrapper.find('AiAssessment').props().isAiAssessed).toBe(true);
   });
 
   it('does not renders AiAssessment when teacher has disabled ai', () => {
@@ -73,7 +68,7 @@ describe('LearningGoal', () => {
         studentLevelInfo={studentLevelInfo}
       />
     );
-    expect(wrapper.find('AiAssessment')).to.have.lengthOf(0);
+    expect(wrapper.find('AiAssessment')).toHaveLength(0);
   });
 
   it('renders tips for teachers', () => {
@@ -89,9 +84,9 @@ describe('LearningGoal', () => {
         isStudent={false}
       />
     );
-    expect(wrapper.find('Heading6')).to.have.lengthOf(2);
-    expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(1);
-    expect(wrapper.find('SafeMarkdown').props().markdown).to.equal('Tips');
+    expect(wrapper.find('Heading6')).toHaveLength(2);
+    expect(wrapper.find('SafeMarkdown')).toHaveLength(1);
+    expect(wrapper.find('SafeMarkdown').props().markdown).toBe('Tips');
   });
 
   it('does not render tips for students', () => {
@@ -107,8 +102,8 @@ describe('LearningGoal', () => {
         isStudent={true}
       />
     );
-    expect(wrapper.find('Heading6')).to.have.lengthOf(1);
-    expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(0);
+    expect(wrapper.find('Heading6')).toHaveLength(1);
+    expect(wrapper.find('SafeMarkdown')).toHaveLength(0);
   });
 
   it('shows AI token when AI is enabled', () => {
@@ -122,10 +117,8 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi
       />
     );
-    expect(wrapper.find('Heading6').first().props().children).to.equal(
-      'Testing'
-    );
-    expect(wrapper.find('AiToken')).to.have.lengthOf(1);
+    expect(wrapper.find('Heading6').first().props().children).toBe('Testing');
+    expect(wrapper.find('AiToken')).toHaveLength(1);
   });
 
   it('does not show AI token when AI is disabled', () => {
@@ -139,10 +132,8 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi
       />
     );
-    expect(wrapper.find('Heading6').first().props().children).to.equal(
-      'Testing'
-    );
-    expect(wrapper.find('AiToken')).to.have.lengthOf(0);
+    expect(wrapper.find('Heading6').first().props().children).toBe('Testing');
+    expect(wrapper.find('AiToken')).toHaveLength(0);
   });
 
   it('does not show AI token when teacher has disabled AI', () => {
@@ -156,10 +147,8 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi={false}
       />
     );
-    expect(wrapper.find('Heading6').first().props().children).to.equal(
-      'Testing'
-    );
-    expect(wrapper.find('AiToken')).to.have.lengthOf(0);
+    expect(wrapper.find('Heading6').first().props().children).toBe('Testing');
+    expect(wrapper.find('AiToken')).toHaveLength(0);
   });
 
   it('does not show AI token after teacher has submitted evaluation', () => {
@@ -177,11 +166,11 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi={false}
       />
     );
-    expect(wrapper.find('AiToken')).to.have.lengthOf(0);
+    expect(wrapper.find('AiToken')).toHaveLength(0);
   });
 
   it('sends event when closed and opened', () => {
-    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
 
     const wrapper = shallow(
       <LearningGoal
@@ -194,7 +183,7 @@ describe('LearningGoal', () => {
       />
     );
     wrapper.find('summary').simulate('click');
-    expect(sendEventSpy).to.have.been.calledWith(
+    expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.TA_RUBRIC_LEARNING_GOAL_EXPANDED_EVENT,
       {
         unitName: 'test-2023',
@@ -204,7 +193,7 @@ describe('LearningGoal', () => {
       }
     );
     wrapper.find('summary').simulate('click');
-    expect(sendEventSpy).to.have.been.calledWith(
+    expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.TA_RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT,
       {
         unitName: 'test-2023',
@@ -213,7 +202,7 @@ describe('LearningGoal', () => {
         learningGoal: 'Testing',
       }
     );
-    sendEventSpy.restore();
+    sendEventSpy.mockRestore();
   });
 
   it('displays Evaluate when AI is disabled and no understanding has been selected', () => {
@@ -229,7 +218,7 @@ describe('LearningGoal', () => {
       />
     );
     wrapper.update();
-    expect(wrapper.find('BodyThreeText').first().text()).to.include('Evaluate');
+    expect(wrapper.find('BodyThreeText').first().text()).toContain('Evaluate');
     wrapper.unmount();
   });
 
@@ -246,7 +235,7 @@ describe('LearningGoal', () => {
       />
     );
     wrapper.update();
-    expect(wrapper.find('BodyThreeText').first().text()).to.include('Approve');
+    expect(wrapper.find('BodyThreeText').first().text()).toContain('Approve');
     wrapper.unmount();
   });
 
@@ -263,9 +252,9 @@ describe('LearningGoal', () => {
         }}
       />
     );
-    expect(wrapper.find('textarea').props().value).to.equal('test feedback');
-    expect(wrapper.find('textarea').props().disabled).to.equal(true);
-    expect(wrapper.find('FontAwesome').at(0).props().icon).to.equal('message');
+    expect(wrapper.find('textarea').props().value).toBe('test feedback');
+    expect(wrapper.find('textarea').props().disabled).toBe(true);
+    expect(wrapper.find('FontAwesome').at(0).props().icon).toBe('message');
   });
 
   it('shows editable textbox for feedback when the teacher can provide feedback', () => {
@@ -279,7 +268,7 @@ describe('LearningGoal', () => {
         }}
       />
     );
-    expect(wrapper.find('textarea').props().disabled).to.equal(false);
+    expect(wrapper.find('textarea').props().disabled).toBe(false);
   });
 
   it('shows understanding in header if submittedEvaluation contains understand', () => {
@@ -295,7 +284,7 @@ describe('LearningGoal', () => {
         }}
       />
     );
-    expect(wrapper.find('BodyThreeText').props().children).to.equal(
+    expect(wrapper.find('BodyThreeText').props().children).toBe(
       'Limited Evidence'
     );
   });
@@ -313,9 +302,7 @@ describe('LearningGoal', () => {
         }}
       />
     );
-    expect(wrapper.find('BodyThreeText').props().children).to.equal(
-      'No Evidence'
-    );
+    expect(wrapper.find('BodyThreeText').props().children).toBe('No Evidence');
   });
 
   it('passes isStudent down to EvidenceLevels', () => {
@@ -332,11 +319,11 @@ describe('LearningGoal', () => {
       isStudent: true,
     };
     const wrapper = shallow(<LearningGoal {...props} />);
-    expect(wrapper.find('EvidenceLevels').props().isStudent).to.equal(true);
-    expect(wrapper.find('EvidenceLevels').props().submittedEvaluation).to.equal(
+    expect(wrapper.find('EvidenceLevels').props().isStudent).toBe(true);
+    expect(wrapper.find('EvidenceLevels').props().submittedEvaluation).toBe(
       props.submittedEvaluation
     );
-    expect(wrapper.find('EvidenceLevels').props().evidenceLevels).to.equal(
+    expect(wrapper.find('EvidenceLevels').props().evidenceLevels).toBe(
       props.learningGoal.evidenceLevels
     );
   });

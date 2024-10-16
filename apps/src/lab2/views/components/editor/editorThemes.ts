@@ -13,14 +13,14 @@ const chalky = '#e5c07b',
   coral = '#e06c75',
   cyan = '#56b6c2',
   invalid = '#ffffff',
-  stone = '#7d8799',
+  stone = color.light_gray_500,
   malibu = '#61afef',
   sage = '#98c379',
   whiskey = '#d19a66',
   violet = '#c678dd',
-  darkBackground = '#21252b',
+  darkBackground = color.light_black,
   highlightBackground = '#2c313a',
-  selection = '#3E4451',
+  selection = '#484D57',
   cursor = '#528bff';
 
 /**
@@ -30,16 +30,15 @@ export const darkTheme = EditorView.theme(
   {
     '&': {
       color: color.lighter_gray,
-      backgroundColor: color.darkest_slate_gray,
+      backgroundColor: darkBackground,
     },
     '.cm-content': {
       caretColor: cursor,
     },
     '&.cm-focused .cm-cursor': {borderLeftColor: cursor},
-    '&.cm-focused .cm-selectionBackground, .cm-selectionBackground, ::selection':
-      {
-        backgroundColor: selection,
-      },
+
+    '&.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground, .cm-selectionBackground, .cm-content ::selection':
+      {backgroundColor: selection},
     '.cm-panels': {backgroundColor: darkBackground, color: color.lighter_gray},
     '.cm-panels button': {color: color.lightest_gray},
     '.cm-panels.cm-panels-top': {borderBottom: '2px solid black'},
@@ -51,14 +50,14 @@ export const darkTheme = EditorView.theme(
     '.cm-searchMatch.cm-searchMatch-selected': {
       backgroundColor: '#6199ff2f',
     },
-    '.cm-activeLine': {backgroundColor: color.dark_gray},
+    '.cm-activeLine': {backgroundColor: '#6699ff0b'},
     '.cm-selectionMatch': {backgroundColor: '#aafe661a'},
     '.cm-matchingBracket, .cm-nonmatchingBracket': {
       backgroundColor: '#bad0f847',
       outline: '1px solid #515a6b',
     },
     '.cm-gutters': {
-      backgroundColor: color.darkest_slate_gray,
+      backgroundColor: darkBackground,
       color: stone,
       border: 'none',
     },

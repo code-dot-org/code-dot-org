@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {PureComponent} from 'react';
 
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import Notification, {
+  NotificationType,
+} from '@cdo/apps/sharedComponents/Notification';
 import i18n from '@cdo/locale';
 
 export default class VerifiedResourcesNotification extends PureComponent {

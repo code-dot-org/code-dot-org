@@ -1,0 +1,28 @@
+name 'sp-pl-DS_Pandas'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Understanding Data 
+
+<img src="https://images.code.org/80296315643b9a40932ff5a48ece2fce-image-1724771901528.png" alt="pandas logo" width="250px" style="border-radius:20px; float:right; margin: 0 0 40px 40px;">
+
+## What is Pandas?
+#### The Python pandas library is a powerful tool used in data science for manipulating, analyzing, and visualizing data.
+#### It allows you to work with data in tables (like Excel spreadsheets), making it easier to perform tasks like filtering, sorting, and calculating statistics.
+
+
+## Why students should learn it?
+#### Pandas is important for students to learn because data is everywhere in today's world—think of social media trends, school grades, or sports statistics.
+#### Understanding how to handle and analyze data gives students the skills to make informed decisions, solve real-world problems, and prepare for careers in data-driven fields.
+
+
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px; "><strong>Teacher Tip:</strong> <b> <i>Use an analogy to help explain Pandas:</i></b> Imagine you have a big box of index cards, each with information written on it (like names, ages, or favorite colors). Pandas is like a digital organizer that helps you neatly arrange those cards into rows and columns. Once everything is organized, you can easily find, sort, and group your cards in any way you want, all with just a few lines of code.
+</p>
+</div>
+
+
+MARKDOWN

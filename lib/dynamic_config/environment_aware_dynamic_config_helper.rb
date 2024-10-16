@@ -6,6 +6,8 @@ module EnvironmentAwareDynamicConfigHelper
       # Use the memory adapter if we're running unit tests, but not if we're
       # running the web application server.
       adapter = MemoryAdapter.new
+      # Append the test env number to prevent conflicts between parallel tests
+      identifier = "#{identifier}#{ENV.fetch('TEST_ENV_NUMBER', nil)}"
     elsif rack_or_rails_env == 'production' || managed_test_server?
       # Production and the managed test system web application servers
       # (test.code.org / studio.code.org) use DynamoDB.

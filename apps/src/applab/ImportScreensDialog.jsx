@@ -7,8 +7,13 @@ import {connect} from 'react-redux';
 import AssetThumbnail, {
   styles as assetThumbnailStyles,
 } from '../code-studio/components/AssetThumbnail';
+import Dialog, {
+  Body,
+  Buttons,
+  Confirm,
+  Cancel,
+} from '../legacySharedComponents/Dialog';
 import Sounds from '../Sounds';
-import Dialog, {Body, Buttons, Confirm, Cancel} from '../templates/Dialog';
 import MultiCheckboxSelector, {
   styles as multiCheckboxStyles,
 } from '../templates/MultiCheckboxSelector';

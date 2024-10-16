@@ -1,13 +1,16 @@
 import _ from 'lodash';
-import {getStore} from '@cdo/apps/redux';
-import CoreLibrary from '../spritelab/CoreLibrary';
-import {POEMS} from './constants';
-import {isBlank} from '../../utils';
+
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
+import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
+import {getStore} from '@cdo/apps/redux';
+
+import {isBlank} from '../../utils';
+import spritelabCommands from '../spritelab/commands/index';
+import CoreLibrary from '../spritelab/CoreLibrary';
+
 import {commands as backgroundEffects} from './commands/backgroundEffects';
 import {commands as behaviors} from './commands/behaviors';
-import spritelabCommands from '../spritelab/commands/index';
-import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
+import {POEMS} from './constants';
 
 const OUTER_MARGIN = 50;
 const LINE_HEIGHT = 50;

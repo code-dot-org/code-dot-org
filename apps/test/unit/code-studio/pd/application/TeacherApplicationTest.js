@@ -1,4 +1,3 @@
-import {expect} from 'chai';
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
 
@@ -26,19 +25,19 @@ describe('TeacherApplication', () => {
     it('has no initial data if there is nothing in session storage, no school id, and no form data', () => {
       expect(
         teacherApplication.findOne('FormController').props.getInitialData()
-      ).to.deep.equal({});
+      ).toEqual({});
     });
     it('has saved form data if nothing in session storage and no school id', () => {
       teacherApplication.mergeProps({savedFormData});
       expect(
         teacherApplication.findOne('FormController').props.getInitialData()
-      ).to.deep.equal(parsedData);
+      ).toEqual(parsedData);
     });
     it('has saved form data and school id if nothing in session storage', () => {
       teacherApplication.mergeProps({savedFormData, schoolId});
       expect(
         teacherApplication.findOne('FormController').props.getInitialData()
-      ).to.deep.equal({
+      ).toEqual({
         ...parsedData,
         school: schoolId,
       });
@@ -50,7 +49,7 @@ describe('TeacherApplication', () => {
       });
       expect(
         teacherApplication.findOne('FormController').props.getInitialData()
-      ).to.deep.equal({school: '16'});
+      ).toEqual({school: '16'});
     });
     it('has only saved form data and no school id if session storage has school info', () => {
       sessionStorage.setItem(
@@ -61,7 +60,7 @@ describe('TeacherApplication', () => {
       teacherApplication.mergeProps({savedFormData, schoolId});
       expect(
         teacherApplication.findOne('FormController').props.getInitialData()
-      ).to.deep.equal(parsedData);
+      ).toEqual(parsedData);
       sessionStorage.removeItem('TeacherApplication');
     });
     it('includes saved form data even if partial saving is not allowed', () => {
@@ -72,7 +71,7 @@ describe('TeacherApplication', () => {
       });
       expect(
         teacherApplication.findOne('FormController').props.getInitialData()
-      ).to.deep.equal({
+      ).toEqual({
         ...parsedData,
         school: schoolId,
       });

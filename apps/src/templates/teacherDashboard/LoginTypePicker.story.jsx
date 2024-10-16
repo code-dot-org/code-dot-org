@@ -1,7 +1,7 @@
 import {action} from '@storybook/addon-actions';
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {

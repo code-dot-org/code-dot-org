@@ -1,10 +1,11 @@
 import React from 'react';
 
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 
 import {ConditionType, Validation, Condition} from '../../types';
 
+import ConditionDescription from './ConditionDescription';
 import EditCondition from './EditCondition';
 
 import moduleStyles from './edit-validations.module.scss';
@@ -95,6 +96,22 @@ const EditValidation: React.FunctionComponent<EditValidationProps> = ({
         />
       </div>
       <div className={moduleStyles.row}>
+        <label htmlFor="callout" className={moduleStyles.label}>
+          Callout (optional):
+        </label>
+        <input
+          type="text"
+          id="edit-validation-callout"
+          name="callout"
+          className={moduleStyles.callout}
+          value={validation.callout}
+          onChange={e => {
+            validation.callout = e.target.value;
+            onValidationChange(validation);
+          }}
+        />
+      </div>
+      <div className={moduleStyles.row}>
         <label htmlFor="next" className={moduleStyles.label}>
           Passes Level?
         </label>
@@ -118,15 +135,23 @@ const EditValidation: React.FunctionComponent<EditValidationProps> = ({
       </Typography>
       {validation.conditions.map((condition, index) => {
         return (
-          <div className={moduleStyles.row} key={index}>
-            <EditCondition
-              condition={condition}
-              conditionTypes={conditionTypes}
-              index={index}
-              onConditionChange={onConditionChange}
-              deleteCondition={deleteCondition}
-            />
-          </div>
+          <>
+            <div className={moduleStyles.row} key={`${index}-condition`}>
+              <EditCondition
+                condition={condition}
+                conditionTypes={conditionTypes}
+                index={index}
+                onConditionChange={onConditionChange}
+                deleteCondition={deleteCondition}
+              />
+            </div>
+            <div className={moduleStyles.row} key={`${index}-description`}>
+              <ConditionDescription
+                condition={condition}
+                conditionTypes={conditionTypes}
+              />
+            </div>
+          </>
         );
       })}
       <div className={moduleStyles.row}>

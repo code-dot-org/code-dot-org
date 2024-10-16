@@ -33,7 +33,8 @@
       }
     },
     "video_key": "csa_random_numbers",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:58:45.862+00:00\",\"changed\":[\"cloned from \\\"CSA U4L5-L5c_2023\\\"\"],\"cloned_from\":\"CSA U4L5-L5c_2023\"}]"

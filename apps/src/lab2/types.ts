@@ -7,8 +7,15 @@
 // live elsewhere.
 // The library data should definitely live elsewhere.
 
+import {ComponentType, LazyExoticComponent} from 'react';
+
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
+import {Theme} from '@cdo/apps/lab2/views/ThemeWrapper';
+
+import {lab2EntryPoints} from '../../lab2EntryPoints';
+
+export {Theme};
 
 /// ------ PROJECTS ------ ///
 
@@ -53,12 +60,15 @@ export interface ProjectSources {
 // We will eventually make this a union type to include other source types.
 export type Source = BlocklySource | MultiFileSource;
 
-export interface SourceUpdateOptions {
+export interface SaveSourceOptions {
+  projectType?: string;
+}
+
+export interface UpdateSourceOptions extends SaveSourceOptions {
   currentVersion: string;
   replace: boolean;
   firstSaveTimestamp: string;
   tabId: string | null;
-  projectType?: ProjectType;
 }
 
 // -- BLOCKLY -- //
@@ -99,6 +109,7 @@ export type FolderId = string;
 export interface MultiFileSource {
   folders: Record<FolderId, ProjectFolder>;
   files: Record<FileId, ProjectFile>;
+  openFiles?: FileId[];
 }
 
 export interface ProjectFile {
@@ -116,6 +127,7 @@ export enum ProjectFileType {
   STARTER = 'starter',
   SUPPORT = 'support',
   VALIDATION = 'validation',
+  LOCKED_STARTER = 'locked_starter',
 }
 
 export interface ProjectFolder {
@@ -155,6 +167,7 @@ export interface LevelProperties {
   // Help and Tips values
   mapReference?: string;
   referenceLinks?: string[];
+  helpVideos?: VideoData[];
   // Exemplars
   exampleSolutions?: string[];
   exemplarSources?: MultiFileSource;
@@ -162,6 +175,10 @@ export interface LevelProperties {
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
   submittable?: boolean;
+  finishUrl?: string;
+  finishDialog?: string;
+  offerTts?: boolean;
+  validationFile?: ProjectFile;
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -175,6 +192,63 @@ export interface ProjectLevelData {
 export interface VideoLevelData {
   src: string;
   download: string;
+  thumbnail: string;
+}
+
+// Addtional fields for videos that are linked as references in the
+// Help & Tips tab of Instructions.
+interface VideoData extends VideoLevelData {
+  name?: string;
+  key?: string;
+  enable_fallback?: boolean;
+  autoplay?: boolean;
+}
+
+export enum OptionsToAvoid {
+  /**
+   * @deprecated: using this option will result in hardcoding this lab into the
+   * downloaded bundle for ALL other lab2 labs, slowing down their loading and
+   * consuming excessive school internet bandwidth.
+   *
+   * See `pythonlab/entrypoint.tsx` for an example that doesn't use this option.
+   *
+   * Please only use this option if there's a good reason you can't lazy load
+   * your lab. With this option set, you must also specify `hardcodedEntryPoint`.
+   */
+  UseHardcodedView_WARNING_Bloats_Lab2_Bundle,
+}
+
+// Configuration for how a Lab should be rendered
+export interface Lab2EntryPoint {
+  /**
+   * Whether this lab should remain rendered in the background once mounted.
+   * If true, the lab will always be present in the tree, but will be hidden
+   * via visibility: hidden when not active. If false, the lab will only
+   * be rendered in the tree when active.
+   */
+  backgroundMode: boolean;
+  /**
+   * A lazy loaded view for the lab. This should be a lazy-loaded react
+   * component using a dynamic import. See `pythonlab/entrypoint.tsx` for an
+   * example.
+   */
+  view: LazyExoticComponent<ComponentType> | OptionsToAvoid;
+  /**
+   * Using this option will result in hardcoding this lab into the downloaded
+   * bundle for ALL other lab2 labs, slowing down their loading and consuming
+   * excessive school internet bandwidth. Please use `view` instead,
+   * which lazy loads you lab on demand, unless you have a really good reason
+   * you can't lazy load.
+   *
+   * See `pythonlab/entrypoint.tsx` for an example that doesn't use this option.
+   */
+  hardcodedView?: ComponentType;
+  /**
+   * Display theme for this lab. This will likely be configured by user
+   * preferences eventually, but for now this is fixed for each lab. Defaults
+   * to the default theme if not specified.
+   */
+  theme?: Theme;
 }
 
 export type LevelData = ProjectLevelData | VideoLevelData;
@@ -201,28 +275,7 @@ export type ProjectType =
   | 'sports'
   | 'basketball';
 
-export type AppName =
-  | 'aichat'
-  | 'applab'
-  | 'calc'
-  | 'dance'
-  | 'eval'
-  | 'flappy'
-  | 'gamelab'
-  | 'javalab'
-  | 'music'
-  | 'thebadguys'
-  | 'weblab'
-  | 'turtle'
-  | 'craft'
-  | 'studio'
-  | 'bounce'
-  | 'poetry'
-  | 'pythonlab'
-  | 'spritelab'
-  | 'standalone_video'
-  | 'panels'
-  | 'weblab2';
+export type AppName = keyof typeof lab2EntryPoints;
 
 export type StandaloneAppName =
   | 'spritelab'
@@ -244,12 +297,14 @@ export interface Condition {
 export interface ConditionType {
   name: string;
   valueType?: 'string' | 'number';
+  description: string;
 }
 
 // Validation in the level.
 export interface Validation {
   conditions: Condition[];
   message: string;
+  callout?: string;
   next: boolean;
   key: string;
 }
@@ -282,4 +337,10 @@ export interface ExtraLinksProjectData {
     remix_ancestry: string[];
   };
   meesage?: string;
+}
+
+export interface ProjectVersion {
+  versionId: string;
+  lastModified: string;
+  isLatest: boolean;
 }

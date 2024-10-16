@@ -7,7 +7,7 @@ import {
   MODAL_EDITOR_DELETE_ID,
   MODAL_EDITOR_CLOSE_ID,
 } from '@cdo/apps/blockly/addons/functionEditorConstants';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {commonI18n} from '@cdo/apps/types/locale';
 import color from '@cdo/apps/util/color';
 

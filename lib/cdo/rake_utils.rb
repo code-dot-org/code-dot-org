@@ -5,6 +5,7 @@ require 'cdo/aws/s3'
 require 'cdo/chat_client'
 require 'digest'
 require 'parallel'
+require 'cdo/python_venv'
 
 module RakeUtils
   def self.system__(command)
@@ -129,6 +130,10 @@ module RakeUtils
     else
       system('bundle', *args)
     end
+  end
+
+  def self.python_venv_install
+    PythonVenv.install
   end
 
   def self.git_add(*args)

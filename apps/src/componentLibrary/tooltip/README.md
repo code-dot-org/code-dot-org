@@ -3,7 +3,7 @@
 ## Consuming This Component
 
 This package exports following styled React
-components: [WithTooltip](./WithTooltip.tsx), [Tooltip](Tooltip.tsx), [TooltipOverlay](Tooltip.tsx).
+components: [WithTooltip](./WithTooltip.tsx), [Tooltip](T_ooltip.tsx), [TooltipOverlay](Tooltip.tsx).
 
 `WithTooltip` is a recommended way to use a tooltip. It wraps `TooltipOverlay` and `Tooltip` components and provides a
 way to add tooltip to any element, handles all the logic behind showing and hiding, positioning and accessibility of the

@@ -72,7 +72,6 @@
     "start_blocks": "var steps = 0;\r\n//1) Change the event so it triggers every time the board is shaken.\r\nonBoardEvent(accelerometer, __, function() {\r\n  //2) Increase then number of steps\r\n  \r\n  //Update the screen\r\n  setProperty(\"stepsTaken\", \"text\", steps);\r\n  setProperty(\"person\", \"x\", 5 * steps);\r\n  var personX = getProperty(\"person\", \"x\");\r\n  //When the person reaches the flag, go to the victory screen\r\n  if (personX >=  230) {\r\n   setScreen(\"congratsScreen\");\r\n  }\r\n});\r\n",
     "long_instructions": "# Shake Event\r\n\r\nThis program should use the `shake` event, which is triggered when the board is shaken.  It should add a step to the jogger's total every time the user shakes the board.\r\n\r\n# Do This\r\n\r\n1) Change the event so it triggers every time the board is shaken. [**(Show me where)**](#triggercallout=shake_event)\r\n2) Add code inside the event so that `steps` increases every time the board is shaken [**(Show me where)**](#triggercallout=increase_steps).\r\n\t- _Hint: Use the [Counter Pattern](https://studio.code.org/docs/concepts/app-lab/the-counter-pattern/) to update your steps variable!_",
     "parent_level_id": 20563,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

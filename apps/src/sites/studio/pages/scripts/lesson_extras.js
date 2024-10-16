@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import LessonExtras from '@cdo/apps/code-studio/components/lessonExtras/LessonExtras';
 import {Provider} from 'react-redux';
+
+import LessonExtras from '@cdo/apps/code-studio/components/lessonExtras/LessonExtras';
 import {getStore} from '@cdo/apps/code-studio/redux';
 
 const script = document.querySelector('script[data-extras]');

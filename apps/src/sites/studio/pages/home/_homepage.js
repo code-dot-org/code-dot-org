@@ -1,25 +1,25 @@
 import $ from 'jquery';
+import queryString from 'query-string';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import queryString from 'query-string';
-import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
-import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
-import i18n from '@cdo/locale';
 import {Provider} from 'react-redux';
+
+import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
+import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
+import ParentalPermissionBanner from '@cdo/apps/templates/policy_compliance/ParentalPermissionBanner';
+import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
+import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import {
   pageTypes,
   setAuthProviders,
   setPageType,
   beginCreatingSection,
-  setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import currentUser from '@cdo/apps/templates/currentUserRedux';
-import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
-import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
-import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
-import ParentalPermissionBanner from '@cdo/apps/templates/policy_compliance/ParentalPermissionBanner';
+import i18n from '@cdo/locale';
 
 $(document).ready(showHomepage);
 
@@ -38,9 +38,6 @@ function showHomepage() {
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
   store.dispatch(setPageType(pageTypes.homepage));
   store.dispatch(setLocaleCode(homepageData.localeCode));
-
-  // DCDO Flag - show/hide Lock Section field
-  store.dispatch(setShowLockSectionField(homepageData.showLockSectionField));
 
   if (homepageData.mapboxAccessToken) {
     store.dispatch(setMapboxAccessToken(homepageData.mapboxAccessToken));

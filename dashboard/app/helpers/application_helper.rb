@@ -80,17 +80,29 @@ module ApplicationHelper
     ret = ''
     if notice.present?
       ret += content_tag(:div, flash.notice, {class: 'alert alert-success'})
-      flash.notice = nil
+      if session[:keep_flashes]
+        session[:keep_flashes] = false
+      else
+        flash.notice = nil
+      end
     end
 
     if flash[:info].present?
       ret += content_tag(:div, flash[:info], {class: 'alert alert-info'})
-      flash[:info] = nil
+      if session[:keep_flashes]
+        session[:keep_flashes] = false
+      else
+        flash[:info] = nil
+      end
     end
 
     if alert.present?
       ret += content_tag(:div, flash.alert, {class: 'alert alert-danger'})
-      flash.alert = nil
+      if session[:keep_flashes]
+        session[:keep_flashes] = false
+      else
+        flash.alert = nil
+      end
     end
 
     ret
@@ -98,14 +110,6 @@ module ApplicationHelper
 
   def code_org_root_path
     CDO.code_org_url
-  end
-
-  def home_url
-    '/home'
-  end
-
-  def teacher_dashboard_section_progress_url(section)
-    "/teacher_dashboard/sections/#{section.id}/progress"
   end
 
   # used by sign-up to retrieve the user return_to URL from the session and delete it.
@@ -125,8 +129,6 @@ module ApplicationHelper
     case provider.to_sym
     when :facebook
       'https://www.facebook.com/logout.php'
-    when :windowslive
-      'http://login.live.com/logout.srf'
     when :google_oauth2
       'https://accounts.google.com/logout'
     end

@@ -85,7 +85,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "# Automatic Windows\r\n\r\nCreate an app prototype that simulates a device that automatically opens and closes window blinds based on the sunlight outside. The app should use the light sensor to detect the light level in the room: if there is a lot of light, open the blinds to let in the sunlight through the window. If there is not a lot of light, close the blinds to turn on other lights inside the house.\r\n\r\nThis app simulates this effect by using images on the app screen. This app has an image element named `blindsImage` that displays window blinds. If we want to open the window, we need to hide the `blindsImage` element; if we want to close the window, we need to show the `blindsImage` element.\r\n\r\n## Do This\r\n1) Use a `setScale` block to set the scale of the lightSensor from 0-100\r\n2) Use an `onBoardEvent` to detect the data from the lightSensor\r\n3) If the lightSensor value is greater than 50: hide the `blindsImage` element, which simulates opening the window\r\n4) If the lightSensor value is less than 50: show the `blindsImage` element, which simulates closing the window",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

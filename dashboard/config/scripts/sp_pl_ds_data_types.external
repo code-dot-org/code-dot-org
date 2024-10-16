@@ -1,0 +1,51 @@
+name 'SP-PL-DS-data_types'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Primary Data Types
+
+
+
+## The main data types in Pandas are: 
+
+   <table border="1" width="100%" cellpadding="10">
+        <tr>
+            <td width="35%">
+                <img src="https://images.code.org/6d5812badb0f2451edb6f438b2a6fd54-image-1728058363345.png" alt="import matplotlab" width="100%">
+            </td>
+            <td width="65%" style="font-size:14pt;">
+            Whole numbers like <b>7</b> or <b>6784</b>
+            </td>
+        </tr>
+        <tr>
+            <td width="35%">
+                <img src="https://images.code.org/e0b3180e72caa2b1d1224bac050cec50-image-1728058394207.png" alt="plt alias" width="100%">
+            </td>
+            <td width="65%" style="font-size:14pt;">
+                Decimal numbers like <b>2.5</b> or <b>92.81</b> 
+            </td>
+        </tr>
+                <tr>
+            <td width="35%">
+                <img src="https://images.code.org/1ec1dae3015af1b0fac1a389df8c0d24-image-1728058427753.png" alt="plt alias" width="100%">
+            </td>
+            <td width="65%" style="font-size:14pt;">
+               a sequence of characters like <b>"purple123"</b>
+            </td>
+        </tr>
+                <tr>
+            <td width="35%">
+                <img src="https://images.code.org/5a94b1e6457be952e0e5a31b7fe3b902-image-1728058460693.png" alt="plt alias" width="100%">
+            </td>
+            <td width="65%" style="font-size:14pt;">
+                a date and time like <b>10/11/2023</b>
+            </td>
+        </tr>
+    </table>
+
+
+### Converting Data types is next. 
+
+
+MARKDOWN

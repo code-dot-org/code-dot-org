@@ -80,7 +80,6 @@
     "makerlab_enabled": "microbit",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20435,
-    "name_suffix": "_mb_2024",
     "map_reference": "/courses/csd-2022/guides/taking-input-with-getproperty",
     "mini_rubric": "false",
     "text_mode_at_start": "false",

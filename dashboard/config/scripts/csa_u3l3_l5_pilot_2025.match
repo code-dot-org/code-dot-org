@@ -1,0 +1,17 @@
+name 'CSA U3L3-L5_pilot-2025'
+title 'Check for Understanding'
+description 'Match each term to its correct definition.'
+height '100'
+
+question 'traverse'
+answer 'to access elements in a data structure one by one'
+
+question 'index'
+answer 'an integer value that indicates the position of a value in a data structure'
+
+question 'data structure'
+answer 'a structure for organizing, processing, retrieving, and storing data'
+
+question 'element'
+answer 'a single value or object in a data structure'
+allow_multiple_attempts true

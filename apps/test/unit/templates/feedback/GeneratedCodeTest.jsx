@@ -4,7 +4,7 @@ import React from 'react';
 import GeneratedCode from '@cdo/apps/templates/feedback/GeneratedCode';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('GeneratedCode', () => {
   const wrapper = shallow(

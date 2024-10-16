@@ -49,6 +49,9 @@ export const procedureDefMutator = {
     if (!this.hasStatements_) {
       container.setAttribute('statements', 'false');
     }
+    if (this.invisible) {
+      container.setAttribute('invisible', 'true');
+    }
     return container;
   },
 
@@ -84,6 +87,11 @@ export const procedureDefMutator = {
       'userCreated',
       FALSEY_DEFAULT
     );
+    this.invisible = readBooleanAttribute(
+      xmlElement,
+      'invisible',
+      FALSEY_DEFAULT
+    );
     this.setStatements_(xmlElement.getAttribute('statements') !== 'false');
     if (!this.description) {
       // Google Blockly projects store descriptions in a separate field.
@@ -103,6 +111,7 @@ export const procedureDefMutator = {
     state['initialEditConfig'] = this.isEditable();
     state['initialMoveConfig'] = this.isMovable();
     state['userCreated'] = this.userCreated;
+    state['invisible'] = this.invisible;
 
     const params =
       this.getProcedureModel().getParameters() as ObservableParameterModel[];
@@ -166,6 +175,7 @@ export const procedureDefMutator = {
     }
     this.setStatements_(state['hasStatements'] === false ? false : true);
     this.userCreated = state['userCreated'];
+    this.invisible = state['invisible'];
   },
 
   /**

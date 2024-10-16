@@ -1,4 +1,4 @@
-import {assert} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 var NetSimClientNode = require('@cdo/apps/netsim/NetSimClientNode');
 var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');

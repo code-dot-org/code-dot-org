@@ -1,0 +1,8 @@
+name 'CSA Pre-Survey q14_pilot-2025'
+question 'Have you ever learned any computer science outside of school before? If yes, please choose your most recent experience.'
+
+right 'Yes, an after-school program.'
+right 'Yes, independent online activities.'
+right 'Yes, a camp or summer program.'
+right 'No, I have never done computer science outside of school.'
+allow_multiple_attempts true

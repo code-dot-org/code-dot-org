@@ -2,12 +2,12 @@
  * This file is deprecated because chai-enzyme is deprecated.
  * Please use reconfiguredChai.js instead.
  * */
-import chai from 'chai';
+import chai from 'chai'; // eslint-disable-line no-restricted-imports
 import chaiAsPromised from 'chai-as-promised';
 import chaiEnzyme from 'chai-enzyme';
 import chaiSubset from 'chai-subset';
 import chaiXml from 'chai-xml';
-import sinonChai from 'sinon-chai';
+import sinonChai from 'sinon-chai'; // eslint-disable-line no-restricted-imports
 
 chai.use(sinonChai);
 chai.use(chaiEnzyme());

@@ -9,11 +9,11 @@ import {
   CourseKeyMap,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
+import Spinner from '../../../../sharedComponents/Spinner';
 import {CSD, CSP, CSA} from '../../application/ApplicationConstants';
 import {DASHBOARD_COURSES} from '../../application_dashboard/application_dashboard.jsx';
 import ConfirmationDialog from '../../components/confirmation_dialog';
 import ScholarshipDropdown from '../../components/scholarshipDropdown';
-import Spinner from '../../components/spinner';
 import {WorkshopAdmin, ProgramManager} from '../permission';
 import {enrollmentShape} from '../types';
 import {workshopEnrollmentStyles as styles} from '../workshop_enrollment_styles';

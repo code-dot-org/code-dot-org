@@ -1,11 +1,8 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import ColumnMenu from '@cdo/apps/storage/dataBrowser/ColumnMenu';
 import commonI18n from '@cdo/locale';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 describe('ColumnMenu', () => {
   describe('localization', () => {
@@ -21,57 +18,72 @@ describe('ColumnMenu', () => {
     }
 
     afterEach(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('should render a localized string for "Rename"', () => {
-      sinon.stub(commonI18n, 'rename').returns('i18n-rename');
+      jest
+        .spyOn(commonI18n, 'rename')
+        .mockClear()
+        .mockReturnValue('i18n-rename');
 
       const wrapper = createColumn();
 
       let menuItem = wrapper.find('li').at(0);
       let menuLink = menuItem.find('a');
-      expect(menuLink.text()).to.contain('i18n-rename');
+      expect(menuLink.text()).toContain('i18n-rename');
     });
 
     it('should render a localized string for "Delete"', () => {
-      sinon.stub(commonI18n, 'delete').returns('i18n-delete');
+      jest
+        .spyOn(commonI18n, 'delete')
+        .mockClear()
+        .mockReturnValue('i18n-delete');
 
       const wrapper = createColumn();
 
       let menuItem = wrapper.find('li').at(1);
       let menuLink = menuItem.find('a');
-      expect(menuLink.text()).to.contain('i18n-delete');
+      expect(menuLink.text()).toContain('i18n-delete');
     });
 
     it('should render a localized string for "Convert to string"', () => {
-      sinon.stub(commonI18n, 'dataTableConvertToString').returns('i18n-ctos');
+      jest
+        .spyOn(commonI18n, 'dataTableConvertToString')
+        .mockClear()
+        .mockReturnValue('i18n-ctos');
 
       const wrapper = createColumn();
 
       let menuItem = wrapper.find('li').at(2);
       let menuLink = menuItem.find('a');
-      expect(menuLink.text()).to.contain('i18n-ctos');
+      expect(menuLink.text()).toContain('i18n-ctos');
     });
 
     it('should render a localized number for "Convert to number"', () => {
-      sinon.stub(commonI18n, 'dataTableConvertToNumber').returns('i18n-cton');
+      jest
+        .spyOn(commonI18n, 'dataTableConvertToNumber')
+        .mockClear()
+        .mockReturnValue('i18n-cton');
 
       const wrapper = createColumn();
 
       let menuItem = wrapper.find('li').at(3);
       let menuLink = menuItem.find('a');
-      expect(menuLink.text()).to.contain('i18n-cton');
+      expect(menuLink.text()).toContain('i18n-cton');
     });
 
     it('should render a localized boolean for "Convert to boolean"', () => {
-      sinon.stub(commonI18n, 'dataTableConvertToBoolean').returns('i18n-ctob');
+      jest
+        .spyOn(commonI18n, 'dataTableConvertToBoolean')
+        .mockClear()
+        .mockReturnValue('i18n-ctob');
 
       const wrapper = createColumn();
 
       let menuItem = wrapper.find('li').at(4);
       let menuLink = menuItem.find('a');
-      expect(menuLink.text()).to.contain('i18n-ctob');
+      expect(menuLink.text()).toContain('i18n-ctob');
     });
   });
 });

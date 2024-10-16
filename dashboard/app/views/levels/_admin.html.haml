@@ -10,7 +10,7 @@
         %li= link_to 'view animation JSON', '', onclick: 'window.viewExportableAnimationList(); return false'
       -# Curriculum writers rarely need to edit STANDALONE_PROJECTS levels, and accidental edits to these levels
       -# can be quite disruptive. As a workaround you can navigate directly to the edit url for these levels.
-      - is_standalone_project = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
+      - is_standalone_project = ProjectsController::STANDALONE_PROJECTS.values.pluck(:name).include?(@level.name)
       - if Rails.application.config.levelbuilder_mode  && !is_standalone_project
         - if can? :edit, @level
           %li
@@ -73,7 +73,7 @@
 
       - elsif @script_level
         %li= link_to 'edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@script_level, @extra_params)).to_s
-    - if (@level.is_a? Blockly) && (!@level.uses_droplet?)
+    - if @level.is_a?(Blockly) && !@level.uses_droplet?
       %button{type: 'button', onclick: 'window.levelbuilder.copySelectedBlockToClipboard()', class: 'btn btn-default btn-sm'}
         Copy selected block
       %button{type: 'button', onclick: 'window.levelbuilder.copyWorkspaceToClipboard()', class: 'btn btn-default btn-sm'}
@@ -84,7 +84,7 @@
       %br
       %button{type: 'button', onclick: 'Blockly.mainBlockSpace.clear()', class: 'btn btn-default btn-sm'}
         Clear workspace
-      - if @level.uses_google_blockly? || (params[:blocklyVersion] == 'google') || (Experiment.enabled?(experiment_name: 'google_blockly', user: current_user))
+      - if @level.uses_google_blockly? || params[:blocklyVersion] == 'google' || Experiment.enabled?(experiment_name: 'google_blockly', user: current_user)
         %button{type: 'button', onclick: 'Blockly.getMainWorkspace().undo(false)', class: 'btn btn-default btn-sm'}
           Undo
       %hr
@@ -163,7 +163,7 @@
         %button{id: "bookmark", class: "btn btn-default btn-sm"}
           Bookmark as a featured project
 
-      #unpublished_warning{'style' => ('display: none; margin-top: 20px; width: 250px;')}
+      #unpublished_warning{'style' => 'display: none; margin-top: 20px; width: 250px;'}
         * This project is currently unpublished. It can still be marked as featured, but it will not show in the gallery until the owner publishes it.
 
     - if current_user.project_validator?

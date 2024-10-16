@@ -1,0 +1,67 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-08-28T17:50:30.000Z",
+  "level_num": "custom",
+  "user_id": 16899,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### <i class=\"fa-duotone fa-solid fa-sparkles\"></i> Make it!\r\n\r\n**Use the blocks in the toolbox to loop a sound.**\r\n\r\n1. Add a `repeat` block to `when run`.\r\n2. Drag a `play sound` block inside of the repeat loop.\r\n3. Choose the number of times you want the sound to repeat.\r\n\r\nPress <i class=\"fa-solid fa-play\"></i> Run to try it out!",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "repeat_simple2"
+          ]
+        }
+      },
+      "library": "launch2024"
+    },
+    "validations": [
+      {
+        "key": "music-intro-coding-loops-modify-verse_7c830576-d0b3-4b7e-abce-969942889242",
+        "message": "Add a sound into a repeat block.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": null
+          }
+        ]
+      },
+      {
+        "key": "music-intro-coding-loops-modify-verse_1ef2c6af-e524-4169-bd51-46d67e4d7347",
+        "message": "Make sure your sound repeats more than once.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-intro-coding-loops-modify-verse_a60b36e4-1637-4781-8d56-87a26e34f6fe",
+        "message": "",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 2
+          }
+        ]
+      }
+    ],
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-16 21:24:55 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 21:26:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 21:27:48 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 21:28:42 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 21:29:39 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 16:55:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-03 20:25:38 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 20:49:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

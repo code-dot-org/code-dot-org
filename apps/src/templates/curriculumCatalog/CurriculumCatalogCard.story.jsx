@@ -1,8 +1,9 @@
+import {configureStore} from '@reduxjs/toolkit';
 import React from 'react';
 import {Provider} from 'react-redux';
+
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {configureStore} from '@reduxjs/toolkit';
 
 export default {
   component: CurriculumCatalogCard,

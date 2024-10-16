@@ -1,4 +1,4 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {CAPTURE_TICK_COUNT} from '@cdo/apps/applab/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -6,7 +6,7 @@ import {TestResults} from '@cdo/apps/constants';
 import * as htmlToCanvasWrapper from '@cdo/apps/util/htmlToCanvasWrapper';
 import {isCaptureComplete} from '@cdo/apps/util/thumbnail';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import tickWrapper from '../../util/tickWrapper';
 
 export default {

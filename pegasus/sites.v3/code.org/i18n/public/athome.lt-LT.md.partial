@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">Paimkite įvadinį, savarankišką kursą</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">Sukurti žaidimą ar programą</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">Išbandykite CS be kompiuterio (“atjungtos” ir mobiliosios parinktys)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Sužinokite CS iš Code.org komandos ir specialių svečių</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Sveiki Ruby</a> - Labiausiai įnoringas pasaulyje būdas sužinoti apie kompiuterius, technologijas ir programavimą. Veikla įvairiomis CS temomis, pvz., Galimybė išskaidyti problemą, vietoje modelius, mąstyti algoritmiškai, derinti problemas ir dirbti kartu. (4-10 metų amžiaus)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - Nemokamos mokymo medžiagos kolekcija, kuri moko informatikos per patrauklių žaidimų ir galvosūkių, kurie naudoja korteles, eilutę, spalvotieji pieštukai ir daug veikia aplink. (5-14 metų amžiaus)</li>
 </ul>
-
-<h2>Nėra kompiuterio namuose? Išbandykite CS savo telefone naudodami šias programas iš mūsų partnerių</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box sala"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Žavingas mobilusis kodavimo žaidimas, kuris priima besimokančiuosius į įdomų nuotykį, mokydamas kodavimo pagrindus, tokius kaip algoritmai, modelio atpažinimas, sekos, kilpos ir sąlygos. <i>(visoms amžiaus grupėms)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="KodaiParkas"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">“CodesPark”</h3></a>apdovanojimų pelniusi “learn-to-code” platforma 5—9 metų vaikams. Išspręskite galvosūkius ir kurkite žaidimus naudodami “The Foos” mokydamiesi koduoti. <strong>Pastaba: “CodeSpark” siūlo nemokamą 3 mėnesių bandomąją versiją. Registracijos metu reikalingas tėvų el. pašto adresas ir kredito kortelės informacija.</strong> <i>(išankstiniams skaitytojams pagal 5 klasę)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Atgal į viršų]</a></p>
-
-<a id="livecoding"></a>
-<h2>Mokykitės iš Code.org komandos ir ypatingų svečių!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="“CodeBytes” logotipas">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes yra lengvai virškinamos, 20 minučių interaktyvios pamokos, maišančios informatiką su realaus pasaulio temomis. Treniruokite AI skaityti gestų kalbą, suprojektuokite programą, kad galėtumėte gerai, tyrinėkite “Minecraft” pasaulį ir dar daugiau!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Peržiūrėti epizodus</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Kodas pertrauka">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Kodas pertrauka</h3>
-        <div class="smalltext" style="">Laikyti kompiuterių mokslo įdomus atsižvelgiant Code Break! Galite sukurti cypher su Ashton Kutcher, sužinoti apie kintamuosius su Yara Shahidi, ir net ištirti, kaip internetas veikia su faktiniu išradėjas internete, Vint Cerf!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Prijunkite</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

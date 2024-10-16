@@ -126,7 +126,6 @@ Parhaan kokemuksen saamiseksi kaikesta Code.org-sisällöstä suosittelemme neuv
 | **Internet-simulaattorin käyttäminen**                                                                                     | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Web Labin käyttäminen**                                                                                                  | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Google Classroomin jakopainikkeen käyttäminen**                                                                          | `https://apis.google.com`                                                                                  |
-| **App Labin tietojoukkojen käyttäminen**                                                                                   | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 

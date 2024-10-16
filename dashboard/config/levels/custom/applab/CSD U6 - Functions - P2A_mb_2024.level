@@ -91,7 +91,6 @@
     "makerlab_enabled": "microbit",
     "palette_category_at_start": "functions",
     "parent_level_id": 20574,
-    "name_suffix": "_mb_2024",
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/6a78fb12e01bde21792db9ff53caa436-image-1649197807725.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Clouds\r\n\r\nThis program makes the clouds move when you blow on the sound sensor. It has a function called `loopCloud()` which uses the parameter `cloudID` to move a cloud across the screen.\r\n\r\nBut, right now the function only moves `\"cloud0\"` across the screen. We need to update the function to use our parameter to move each cloud instead.\r\n\r\n## Do This\r\n\r\n_Note: You can click the instructions below to expand them and see more specific instructions_\r\n\r\n1) ::: details [Update the function to use the `cloudID` parameter]\r\n\t* Scroll down to the `loopCloud()` function ([**Show Me Where**](#triggercallout=define))\r\n\t* Update the function so it uses the `cloudID` parameter\r\n    :::\r\n\r\n**Run the code!** Every cloud should move across the screen when you blow on the sensor!",
     "mini_rubric": "false",
     "text_mode_at_start": "false",

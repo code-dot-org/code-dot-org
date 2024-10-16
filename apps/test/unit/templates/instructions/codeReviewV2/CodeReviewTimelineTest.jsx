@@ -9,8 +9,6 @@ import CodeReviewTimelineElement, {
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
 import CodeReviewTimelineReview from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineReview';
 
-import {expect} from '../../../../util/reconfiguredChai';
-
 const DEFAULT_PROPS = {
   timelineData: [
     {
@@ -68,48 +66,48 @@ describe('CodeReviewTimeline', () => {
   it('renders a created node', () => {
     const wrapper = setUp();
     const createdElement = wrapper.find(CodeReviewTimelineElement);
-    expect(createdElement).to.have.length(1);
-    expect(createdElement.props().type).to.equal(
+    expect(createdElement).toHaveLength(1);
+    expect(createdElement.props().type).toBe(
       codeReviewTimelineElementType.CREATED
     );
-    expect(createdElement.props().isLast).to.be.false;
+    expect(createdElement.props().isLast).toBe(false);
   });
 
   it('if there is no commit or review data created node will have is last set to true', () => {
     const wrapper = setUp({timelineData: []});
     const createdElement = wrapper.find(CodeReviewTimelineElement);
-    expect(createdElement.props().isLast).to.be.true;
+    expect(createdElement.props().isLast).toBe(true);
   });
 
   it('renders every commit as a CodeReviewTimelineCommit', () => {
     const wrapper = setUp();
     // For 2 commits in the timelineData array
-    expect(wrapper.find(CodeReviewTimelineCommit)).to.have.length(2);
+    expect(wrapper.find(CodeReviewTimelineCommit)).toHaveLength(2);
   });
 
   it('renders every review as a CodeReviewTimelineReview', () => {
     const wrapper = setUp();
     // For 1 review in the timelineData array
-    expect(wrapper.find(CodeReviewTimelineReview)).to.have.length(1);
+    expect(wrapper.find(CodeReviewTimelineReview)).toHaveLength(1);
   });
 
   it('elements have expected isLast property', () => {
     const wrapper = setUp();
 
     const createdElement = wrapper.childAt(0);
-    expect(createdElement.find(CodeReviewTimelineElement)).to.have.length(1);
-    expect(createdElement.props().isLast).to.be.false;
+    expect(createdElement.find(CodeReviewTimelineElement)).toHaveLength(1);
+    expect(createdElement.props().isLast).toBe(false);
 
     const firstCommit = wrapper.childAt(1);
-    expect(firstCommit.find(CodeReviewTimelineCommit)).to.have.length(1);
-    expect(firstCommit.props().isLastElementInTimeline).to.be.false;
+    expect(firstCommit.find(CodeReviewTimelineCommit)).toHaveLength(1);
+    expect(firstCommit.props().isLastElementInTimeline).toBe(false);
 
     const review = wrapper.childAt(2);
-    expect(review.find(CodeReviewTimelineReview)).to.have.length(1);
-    expect(review.props().isLastElementInTimeline).to.be.false;
+    expect(review.find(CodeReviewTimelineReview)).toHaveLength(1);
+    expect(review.props().isLastElementInTimeline).toBe(false);
 
     const secondCommit = wrapper.childAt(3);
-    expect(secondCommit.find(CodeReviewTimelineCommit)).to.have.length(1);
-    expect(secondCommit.props().isLastElementInTimeline).to.be.true;
+    expect(secondCommit.find(CodeReviewTimelineCommit)).toHaveLength(1);
+    expect(secondCommit.props().isLastElementInTimeline).toBe(true);
   });
 });

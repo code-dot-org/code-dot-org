@@ -9,7 +9,7 @@ import {
   ActiveCoursesWithSurveys,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
-import Spinner from '../components/spinner';
+import Spinner from '../../../sharedComponents/Spinner';
 
 import EditEnrollmentNameDialog from './components/edit_enrollment_name_dialog';
 import MoveEnrollmentsDialog from './components/move_enrollments_dialog';

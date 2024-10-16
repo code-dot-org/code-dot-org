@@ -4,12 +4,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import videojs from 'video.js';
 
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import FallbackPlayerCaptionDialogLink from '../templates/FallbackPlayerCaptionDialogLink';
-import trackEvent from '../util/trackEvent';
+
+import youTubeAvailabilityEndpointURL from './youTubeAvailabilityEndpointURL';
 
 var clientState = require('./clientState');
 var testImageAccess = require('./url_test');
@@ -89,6 +90,10 @@ window.onYouTubeIframeAPIReady = function () {
       },
       onError: function (error) {
         if (currentVideoOptions) {
+          analyticsReporter.sendEvent(EVENTS.VIDEO_FALLBACK_LOADED, {
+            url: location.href,
+            video: player.getVideoUrl(),
+          });
           var size = error.target.f.getBoundingClientRect();
           addFallbackVideoPlayer(currentVideoOptions, size.width, size.height);
         }
@@ -223,12 +228,7 @@ videos.showVideoDialog = function (options, forceShowVideo) {
     .append($('<i class="fa fa-download" />'))
     .addClass('download-video btn')
     .css('float', 'left')
-    .attr('href', options.download)
-    .click(function () {
-      // track download in Google Analytics
-      trackEvent('downloadvideo', 'startdownloadvideo', options.key);
-      return true;
-    });
+    .attr('href', options.download);
   if (document.dir === 'rtl') {
     download.css('float', 'right');
   }
@@ -390,8 +390,6 @@ function setupVideoFallback(
 
 // This is exported (and placed on window) because it gets accessed externally for our video test page.
 videos.onYouTubeBlocked = function (youTubeBlockedCallback, videoInfo) {
-  var key = videoInfo ? videoInfo.key : undefined;
-
   // Handle URLs with either youtube.com or youtube-nocookie.com.
   var noCookie = videoInfo
     ? videoInfo.src.indexOf('youtube-nocookie.com') !== -1
@@ -400,34 +398,13 @@ videos.onYouTubeBlocked = function (youTubeBlockedCallback, videoInfo) {
   testImageAccess(
     youTubeAvailabilityEndpointURL(noCookie) + '?' + Math.random(),
     // Called when YouTube availability check succeeds.
-    function () {
-      // Track event in Google Analytics.
-      trackEvent('showvideo', 'startVideoYouTube', key);
-    },
-
+    function () {},
     // Called when YouTube availability check fails.
     function () {
-      // Track event in Google Analytics.
-      trackEvent('showvideo', 'startVideoFallback', key);
       youTubeBlockedCallback();
     }
   );
 };
-
-function youTubeAvailabilityEndpointURL(noCookie) {
-  const url = window.document.URL.toString();
-  if (url.indexOf('force_youtube_fallback') >= 0) {
-    return 'https://unreachable-test-subdomain.example.com/favicon.ico';
-  } else if (url.indexOf('force_youtube_player') >= 0) {
-    return 'https://code.org/images/favicon.ico';
-  }
-
-  if (noCookie) {
-    return 'https://www.youtube-nocookie.com/favicon.ico';
-  } else {
-    return 'https://www.youtube.com/favicon.ico';
-  }
-}
 
 // Precondition: $('#video') must exist on the DOM before this function is called.
 function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {

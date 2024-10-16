@@ -1,6 +1,6 @@
 import React from 'react';
 
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 
 import {Condition, ConditionType} from '../../types';
 

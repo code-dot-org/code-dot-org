@@ -2,7 +2,7 @@ import moment from 'moment/moment';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import teacherFeedbackStyles from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackStyles';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';

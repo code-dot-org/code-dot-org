@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-24T16:02:10.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check for Understanding",
+    "long_instructions": "####What is the most interesting thing you've learned how to do so far in CODAP, and what insights were you able to gain from the resulting visualization? How did this help you better understand the data?",
+    "teacher_markdown": "The goal of this question is to assess students’ practical skills in using CODAP, their ability to derive insights from visual data, and their understanding of how these insights relate to the underlying data. It also prompts them to articulate the significance of their findings, helping teachers assess the depth of their data comprehension.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-24 16:02:12 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

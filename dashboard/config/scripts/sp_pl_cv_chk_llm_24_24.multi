@@ -1,6 +1,6 @@
 name 'sp-pl-CV-chk_LLM_24_24'
 editor_experiment ''
-title 'Check for Understanding: Large Language Models'
+title 'Check for Understanding: Computer Vision'
 type 'multi1'
 question 'Which of the following best describes computer vision?'
 

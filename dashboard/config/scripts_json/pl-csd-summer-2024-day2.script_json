@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-09 23:18:16 UTC",
+    "serialized_at": "2024-08-06 19:14:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1578,20 +1578,6 @@
   ],
   "resources": [
     {
-      "name": "Activity Packet",
-      "url": "https://docs.google.com/document/d/15gERZooKYoMlBjeHTEb63zlkG9oaCayUUblHzaSW9VE/edit?usp=sharing",
-      "key": "activity_packet_1",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://docs.google.com/document/d/15gERZooKYoMlBjeHTEb63zlkG9oaCayUUblHzaSW9VE/edit?usp=sharing",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "activity_packet_1"
-      }
-    },
-    {
       "name": "CSD Activity Packet 2024",
       "url": "https://docs.google.com/document/d/1e6h0_yN0txqYVXmxUEco5ldh0l1K8cU4tukxdnXh3Xo/edit?usp=drive_link",
       "key": "csd_activity_packet_2024",
@@ -1719,19 +1705,6 @@
       }
     },
     {
-      "name": "Resource Packet",
-      "url": "https://docs.google.com/document/d/15ho43-c0njEcIEIr-RmHcUjZfIJPFdVZvQdpH6GC4B4/edit?usp=sharing",
-      "key": "resource_packet",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "resource_packet"
-      }
-    },
-    {
       "name": "Variables",
       "url": "https://drive.google.com/file/d/1sZpmFctaVP3RCT1Ojx0wcZ2CUyQhKzKv/view?usp=sharing",
       "key": "variables",
@@ -1797,36 +1770,6 @@
       "seeding_key": {
         "lesson.key": "Introduction to Day 2",
         "resource.key": "equity_in_cs_education"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson Planning - Make a Plan",
-        "resource.key": "activity_packet_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Preparing for TLOs",
-        "resource.key": "activity_packet_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Resources and Assesssment ",
-        "resource.key": "resource_packet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Unit 2 - Web Development Connections",
-        "resource.key": "resource_packet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Unit 3 Curiculum Investigation: Shapes and Variables",
-        "resource.key": "resource_packet"
       }
     },
     {

@@ -1,8 +1,9 @@
 import $ from 'jquery';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 const retrieveInfoForCap = getScriptData('retrieveInfoForCap');
 const userId = getScriptData('userId');

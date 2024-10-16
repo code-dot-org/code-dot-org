@@ -5,7 +5,7 @@ theme: responsive_full_width
 
 -# Set this to true or false when applications open or
 -# close to show the corresponding version of the page.
-- applications_closed = false
+- applications_closed = true
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/young-women-in-cs-styles.css", rel: "stylesheet"}
@@ -43,14 +43,12 @@ theme: responsive_full_width
     .flex-container.justify-space-between.align-items-center.wrap
       .text-wrapper
         %h2
-          =hoc_s((!applications_closed ? :call_to_action_applications_open_exclamation : :cs_ambassador_application_closed_title))
-        - if !applications_closed
-          -# %p.heading-xs
-            -# =hoc_s(:cs_ambassador_priority_deadline)
+          =hoc_s((!applications_closed ? :call_to_action_applications_open_exclamation : :cs_ambassador_closed_heading))
+        - if applications_closed
           %p.heading-xs.no-margin-bottom
-            =hoc_s(:cs_ambassador_application_subhead)
+            =hoc_s(:cs_ambassador_next_year_open)
         %p.body-three
-          =hoc_s((!applications_closed ? :cs_ambassador_application_questions : :cs_ambassador_application_closed_subhead), markdown: :inline, locals:{email_url: "mailto:youngwomen@code.org"})
+          =hoc_s((!applications_closed ? :cs_ambassador_application_questions : :cs_ambassador_drop_us_a_note), markdown: :inline, locals:{email_url: "mailto:youngwomen@code.org"})
         %p.body-three
           =hoc_s(:cs_ambassador_application_parter_program, markdown: :inline)
       - if !applications_closed

@@ -7,7 +7,8 @@ import {
   SetProjectFunction,
   SetConfigFunction,
   OnRunFunction,
-  ResetProjectFunction,
+  SourceType,
+  OnStopFunction,
 } from '../types';
 
 import {
@@ -22,7 +23,9 @@ import {
   NewFileFunction,
   RenameFileFunction,
   MoveFileFunction,
+  MoveFolderFunction,
   RenameFolderFunction,
+  RearrangeFilesFunction,
 } from './types';
 
 type CodebridgeContextType = {
@@ -31,6 +34,7 @@ type CodebridgeContextType = {
   setProject: SetProjectFunction;
   setConfig: SetConfigFunction;
   onRun?: OnRunFunction;
+  onStop?: OnStopFunction;
   saveFile: SaveFileFunction;
   closeFile: CloseFileFunction;
   setActiveFile: SetActiveFileFunction;
@@ -42,9 +46,11 @@ type CodebridgeContextType = {
   newFile: NewFileFunction;
   renameFile: RenameFileFunction;
   moveFile: MoveFileFunction;
+  moveFolder: MoveFolderFunction;
   renameFolder: RenameFolderFunction;
-  resetProject: ResetProjectFunction;
   setFileType: setFileType;
+  rearrangeFiles: RearrangeFilesFunction;
+  startSource: SourceType;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(

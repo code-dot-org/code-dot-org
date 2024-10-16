@@ -6,6 +6,8 @@ import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {TestResults} from '@cdo/apps/constants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import javalabMsg from '@cdo/javalab/locale';
 
@@ -94,6 +96,7 @@ Javalab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
+  this.levelIdForAnalytics = config.serverLevelId;
   // Sets display theme based on displayTheme user preference
   this.displayTheme = getDisplayThemeFromString(config.displayTheme);
   this.isStartMode = !!config.level.editBlocks;
@@ -115,7 +118,6 @@ Javalab.prototype.init = function (config) {
   config.noInstructionsWhenCollapsed = true;
 
   config.pinWorkspaceToBottom = true;
-
   config.getCode = this.getCode.bind(this);
   config.afterClearPuzzle = this.afterClearPuzzle.bind(this);
   const onRun = this.onRun.bind(this);
@@ -355,10 +357,19 @@ Javalab.prototype.onRun = function () {
   }
 
   this.miniApp?.reset?.();
+  analyticsReporter.sendEvent(EVENTS.JAVALAB_RUN_BUTTON_CLICK, {
+    levelId: this.levelIdForAnalytics,
+  });
   this.executeJavabuilder(ExecutionType.RUN);
 };
 
 Javalab.prototype.onTest = function () {
+  const validation = this.level.validation;
+  const validated = !!validation && Object.keys(validation).length !== 0;
+  analyticsReporter.sendEvent(EVENTS.JAVALAB_TEST_BUTTON_CLICK, {
+    levelId: this.levelIdForAnalytics,
+    validated: validated,
+  });
   this.executeJavabuilder(ExecutionType.TEST);
 };
 

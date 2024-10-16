@@ -71,7 +71,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "# Correct-or-Incorrect Sound Board\r\n\r\nCreate an app that plays a \"correct\" or \"incorrect\" sound when you press a button on the micro:bit. You can use the [`playSound()`(#fff176)](/docs/applab/playSound/) or [`playSpeech()`(#fff176)](/docs/applab/playSpeech/) blocks to make a sound of your choosing. Then use that app to quiz your friends and let them know if they got the answer correct or incorrect.\r\n\r\n## Do This\r\n\r\n1) When you press the A button, the app plays the \"correct\" sound.\r\n2) When you press the B button, the app plays the \"incorrect\" sound.\r\n\r\n**Run Your Code!** Look up 5 trivia questions and ask them to some of your classmates, then use the app to let them know if they got it correct or incorrect!",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-18T17:20:20.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check for Understanding",
+    "long_instructions": "##Expository Data Story\r\n\r\nRecord the expository data story you created with your group that explains Micah’s room cleaning habits over time. \r\nMake sure you consider the following:\r\n- How the findings from different datasets integrate to show trends over time. Identify any consistent patterns or significant changes in cleaning habits and discuss possible reasons behind these trends.\r\n- The external factors (like seasons, health, or school events) that might have influenced the observed cleaning patterns. Identify any anomalies in the data, and explain them within your narrative.\r\n- Reflect on how the individual’s maturity or lifestyle changes are reflected in the cleaning data. Do these changes support your conclusions about their future habits?\r\n\r\nNeed help getting started? Try these sentence starters:\r\n\r\n**Answering the data question or writing the data story:**\r\n- The data shows ___, therefore...\r\n- I think __ means ___ because...\r\n\r\n**Adding evidence:**\r\n- The reason I think this is … \r\n- My evidence from the data is … \r\n",
+    "teacher_markdown": "Example Expository Data Story:\r\n\r\nOver the last ten years, a pattern emerges from the 18-year-old’s cleaning habits, showcasing both consistency and evolution in maintaining their room. Initially, they appear to have adhered to a rigorous cleaning schedule, particularly focusing on key months such as March, June, September, and December, likely aligned with the end of academic quarters or preparation for seasonal changes. This pattern suggests an attempt to maintain a clean environment during periods of expected activity or visits.\r\n\r\nAs they grow older, the overall frequency of room cleanings declines, as illustrated by the decreasing trend in the annual cleaning graph. This trend may reflect increased maturity, with the student perhaps learning to keep the room orderly for longer periods, or simply needing less frequent cleanups due to better organizational habits developed over time.\r\n\r\nSeasonal variations are also evident, with heightened cleaning activity in specific months, possibly due to factors like seasonal allergies or differing levels of room usage during holidays and school breaks. However, a detailed heatmap analysis of the room points to a consistent focus on certain areas, particularly around the bed and desk, which receive more frequent attention than other parts of the room throughout the year. This might indicate prioritized cleanliness in areas deemed most important for personal comfort or health.\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-18 17:20:23 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-18 17:20:34 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

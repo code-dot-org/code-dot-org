@@ -69,7 +69,6 @@
     "debugger_disabled": "false",
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/6c0f62f904d02d3764a28b72c4e13114-image-1646239220146.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Excitement Meter\r\n\r\nCreate an app that lets you adjust your level of excitement and displays different images to represent your excitement. Your app should use the `input` event from the slider, then use a variable and if-statements to change the image based on the value. There are some example images you can use, or you can find your own images to use instead!\r\n\r\n## Do This\r\n1) Use an [`onEvent()`(#fff176)](/docs/applab/onEvent/) block to detect when the slider changes\r\n2) Get the value from the slider and store it in a variable\r\n3) Use [`if statements`(#64B5F6)](/docs/applab/ifBlock/) to change the image based on the value of the slider\r\n\t- The slider has values from 1-5, so you will need five if-statements",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

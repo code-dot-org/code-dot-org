@@ -7,8 +7,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import color from '@cdo/apps/util/color';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import msg from '@cdo/locale';
@@ -23,10 +23,10 @@ import {getValidatedResult} from './containedLevels';
 import dom from './dom';
 import FeedbackBlocks from './feedbackBlocks';
 import {dataURIToBlob} from './imageUtils';
+import DialogButtons from './legacySharedComponents/DialogButtons';
 import puzzleRatingUtils from './puzzleRatingUtils';
 import {getStore} from './redux';
 import ChallengeDialog from './templates/ChallengeDialog';
-import DialogButtons from './templates/DialogButtons';
 import CodeWritten from './templates/feedback/CodeWritten';
 import GeneratedCode from './templates/feedback/GeneratedCode';
 import PublishDialog from './templates/projects/publishDialog/PublishDialog';
@@ -36,7 +36,6 @@ import {
   PUBLISH_SUCCESS,
   PUBLISH_FAILURE,
 } from './templates/projects/publishDialog/publishDialogRedux';
-import trackEvent from './util/trackEvent';
 import {createHiddenPrintWindow} from './utils';
 
 // Types of blocks that do not count toward displayed block count. Used
@@ -1040,11 +1039,9 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
           $.post(options.response.phone_share_url, params)
             .done(function (response) {
               $(submitButton).text('Sent!');
-              trackEvent('SendToPhone', 'success');
             })
             .fail(function (xhr) {
               $(submitButton).text('Error!');
-              trackEvent('SendToPhone', 'error');
             });
         });
       }

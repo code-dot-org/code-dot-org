@@ -19,7 +19,6 @@ require 'cdo/developers_topic'
 require "open3"
 
 FOLDERS = {
-  "advocacy.code.org" => "sites.v3/advocacy.code.org",
   "code.org" => "sites.v3/code.org",
   "curriculum-6-8" => "sites/virtual/curriculum-6-8",
   "curriculum-algebra" => "sites/virtual/curriculum-algebra",
@@ -38,8 +37,7 @@ FOLDERS = {
 INTERVAL_SECONDS = 5
 TOTAL_SECONDS = 55 - INTERVAL_SECONDS
 
-LOG_DIR = '/home/ubuntu/staging/log'.freeze
-FileUtils.mkdir_p(LOG_DIR) # This directory should always exist, but just in case
+LOG_DIR = '/home/ubuntu'.freeze
 
 logger = HighFrequencyReporter.new(Slack, 'sync-dropbox-staging', File.join(LOG_DIR, 'dropbox_sync_error_log.csv'))
 logger.load # load errors from most recent sync

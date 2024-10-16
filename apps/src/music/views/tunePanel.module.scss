@@ -1,0 +1,88 @@
+@import 'color.scss';
+
+.tunePanelContainer {
+  background-color: $neutral_dark;
+  align-items: center;
+  padding: 5px;
+  user-select: none;
+
+  .optionsRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+    .dropdown {
+      width: 48%;
+      font-size: 12px;
+    }
+  }
+
+  .editorContainer {
+    display: flex;
+  }
+
+  .eventGridContainer {
+    position: relative;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column-reverse;
+
+    .gridEvent {
+      position: absolute;
+      background-color: $light_cyan;
+      border-radius: 3px;
+    }
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background-color: rgba($background_gray, 0.2);
+    }
+  }
+
+  .outerCell {
+    display: inline-block;
+    padding: 1px 3px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &Playing {
+      background-color: $light-gray;
+    }
+  }
+
+  .cell {
+    padding: 1px;
+    width: 10px;
+    height: 4.75px;
+    background-color: #555;
+    border-radius: 3px;
+  }
+
+  .activeCell {
+    background-color: #68d1f7;
+  }
+
+  .highlightedCell {
+    background-color: #696969;
+  }
+
+  .controlsRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+
+    .dropdown {
+      width: 100%;
+      font-size: 12px;
+      margin: 0 30px;
+    }
+  }
+}

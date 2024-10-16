@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
+
+import foorm, {
+  setFetchableEntities,
+} from '@cdo/apps/code-studio/pd/foorm/editor/foormEditorRedux';
+import FoormLibraryEditorManager from '@cdo/apps/code-studio/pd/foorm/editor/library/FoormLibraryEditorManager';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import getScriptData from '@cdo/apps/util/getScriptData';
+
 import {
   populateCodeMirror,
   resetCodeMirror,
   confirmNoUnsavedChanges,
 } from '../forms/editorHelpers.js';
-import FoormLibraryEditorManager from '@cdo/apps/code-studio/pd/foorm/editor/library/FoormLibraryEditorManager';
-import foorm, {
-  setFetchableEntities,
-} from '@cdo/apps/code-studio/pd/foorm/editor/foormEditorRedux';
 
 import 'survey-react/survey.css';
 

@@ -42,6 +42,11 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       refute_redirect_to lockout_path
     end
 
+    it 'allows CSRF token retrieving' do
+      get get_token_path
+      refute_redirect_to lockout_path
+    end
+
     it 'allows changing language' do
       post locale_path
       refute_redirect_to lockout_path
@@ -59,6 +64,16 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
 
     it 'allows student change account information' do
       patch users_set_student_information_path
+      refute_redirect_to lockout_path
+    end
+
+    it 'allows student to visit the join page' do
+      get student_user_new_path
+      refute_redirect_to lockout_path
+    end
+
+    it 'allows student to join a section' do
+      post student_register_path
       refute_redirect_to lockout_path
     end
 

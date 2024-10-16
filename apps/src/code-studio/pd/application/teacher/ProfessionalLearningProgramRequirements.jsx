@@ -10,7 +10,7 @@ import {
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from '@cdo/apps/util/color';
 
-import Spinner from '../../components/spinner';
+import Spinner from '../../../../sharedComponents/Spinner';
 import {useRegionalPartner} from '../../components/useRegionalPartner';
 import {PrivacyDialogMode} from '../../constants';
 import {FormContext} from '../../form_components_func/FormComponent';

@@ -3,7 +3,7 @@ import React from 'react';
 
 import StylizedBaseDialog, {
   FooterButton,
-} from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+} from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SupportArticleMarkdown from '@cdo/apps/weblab/SupportArticleMarkdown';
 import commonI18n from '@cdo/locale';

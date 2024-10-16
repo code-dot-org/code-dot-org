@@ -1,0 +1,9 @@
+name 'CSA U2L9-L4_pilot_alt-2025'
+display_name 'Skill Building: Mutator Methods'
+description 'Write a mutator method in a class to change the value assigned to its instance variable.'
+
+sublevels
+level 'CSA U2L9-L4a_alt-2025'
+level 'CSA U2L9-L4b_alt-2025'
+level 'CSA U2L9-L4c_alt-2025'
+level 'CSA U2L9-L4d_alt-2025'

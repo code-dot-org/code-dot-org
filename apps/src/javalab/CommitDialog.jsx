@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import StylizedBaseDialog, {
-  FooterButton,
-} from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import fontConstants from '@cdo/apps/fontConstants';
 import {setCommitSaveStatus} from '@cdo/apps/javalab/redux/javalabRedux';
+import StylizedBaseDialog, {
+  FooterButton,
+} from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/javalab/locale';
 

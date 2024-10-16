@@ -1,96 +1,94 @@
 import * as utils from '@cdo/apps/templates/lessonOverview/googleDocsUtils';
 
-import {assert} from '../../../util/reconfiguredChai';
 const {isGDocsUrl, gDocsBaseUrl, gDocsPdfUrl, gDocsMsOfficeUrl, gDocsCopyUrl} =
   utils;
 
 describe('googleDocsUtils module', () => {
   describe('the isGDocsUrl function', () => {
     it('returns false when the url is not valid', () => {
-      assert.isFalse(isGDocsUrl('not valid'));
-      assert.isFalse(isGDocsUrl('https://example.com/'));
-      assert.isFalse(isGDocsUrl('https://example.com/document/d/Some-ID'));
-      assert.isFalse(isGDocsUrl('https://docs.google.com/document/d/'));
-      assert.isFalse(
-        isGDocsUrl('https://docs.google.com/document/d/?not-valid')
+      expect(isGDocsUrl('not valid')).toBe(false);
+      expect(isGDocsUrl('https://example.com/')).toBe(false);
+      expect(isGDocsUrl('https://example.com/document/d/Some-ID')).toBe(false);
+      expect(isGDocsUrl('https://docs.google.com/document/d/')).toBe(false);
+      expect(isGDocsUrl('https://docs.google.com/document/d/?not-valid')).toBe(
+        false
       );
-      assert.isFalse(isGDocsUrl('https://docs.google.com/document/not-valid'));
-      assert.isFalse(isGDocsUrl('https://docs.google.com/not-valid'));
+      expect(isGDocsUrl('https://docs.google.com/document/not-valid')).toBe(
+        false
+      );
+      expect(isGDocsUrl('https://docs.google.com/not-valid')).toBe(false);
     });
 
     it('returns true when the url is valid', () => {
-      assert.isTrue(isGDocsUrl('https://docs.google.com/document/d/Some-ID'));
-      assert.isTrue(isGDocsUrl('https://docs.google.com/document/d/Some-ID/'));
-      assert.isTrue(isGDocsUrl('http://docs.google.com/document/d/Some-ID'));
-      assert.isTrue(
-        isGDocsUrl('https://docs.google.com/presentation/d/Some-ID')
+      expect(isGDocsUrl('https://docs.google.com/document/d/Some-ID')).toBe(
+        true
       );
-      assert.isTrue(
+      expect(isGDocsUrl('https://docs.google.com/document/d/Some-ID/')).toBe(
+        true
+      );
+      expect(isGDocsUrl('http://docs.google.com/document/d/Some-ID')).toBe(
+        true
+      );
+      expect(isGDocsUrl('https://docs.google.com/presentation/d/Some-ID')).toBe(
+        true
+      );
+      expect(
         isGDocsUrl('https://docs.google.com/document/d/_-123Some-ID')
-      );
-      assert.isTrue(
+      ).toBe(true);
+      expect(
         isGDocsUrl('https://docs.google.com/document/d/Some-ID/copy')
-      );
-      assert.isTrue(
+      ).toBe(true);
+      expect(
         isGDocsUrl('https://docs.google.com/document/d/Some-ID/edit')
-      );
-      assert.isTrue(
+      ).toBe(true);
+      expect(
         isGDocsUrl(
           'https://docs.google.com/document/d/Some-ID/export?format=pdf'
         )
-      );
+      ).toBe(true);
     });
   });
 
   describe('the gDocsBaseUrl function', () => {
     it('returns the correct base URL', () => {
-      assert.strictEqual(
-        gDocsBaseUrl('https://docs.google.com/document/d/Some-ID'),
+      expect(gDocsBaseUrl('https://docs.google.com/document/d/Some-ID')).toBe(
         'https://docs.google.com/document/d/Some-ID'
       );
-      assert.strictEqual(
-        gDocsBaseUrl('https://docs.google.com/document/d/Some-ID/'),
+      expect(gDocsBaseUrl('https://docs.google.com/document/d/Some-ID/')).toBe(
         'https://docs.google.com/document/d/Some-ID'
       );
-      assert.strictEqual(
-        gDocsBaseUrl('https://docs.google.com/document/d/Some-ID/edit'),
-        'https://docs.google.com/document/d/Some-ID'
-      );
-      assert.strictEqual(
-        gDocsBaseUrl('https://docs.google.com/document/d/Some-ID/copy'),
-        'https://docs.google.com/document/d/Some-ID'
-      );
-      assert.strictEqual(
-        gDocsBaseUrl('https://docs.google.com/document/d/--_123ID'),
+      expect(
+        gDocsBaseUrl('https://docs.google.com/document/d/Some-ID/edit')
+      ).toBe('https://docs.google.com/document/d/Some-ID');
+      expect(
+        gDocsBaseUrl('https://docs.google.com/document/d/Some-ID/copy')
+      ).toBe('https://docs.google.com/document/d/Some-ID');
+      expect(gDocsBaseUrl('https://docs.google.com/document/d/--_123ID')).toBe(
         'https://docs.google.com/document/d/--_123ID'
       );
-      assert.strictEqual(
-        gDocsBaseUrl('http://docs.google.com/document/d/Some-ID'),
+      expect(gDocsBaseUrl('http://docs.google.com/document/d/Some-ID')).toBe(
         'https://docs.google.com/document/d/Some-ID'
       );
-      assert.strictEqual(
-        gDocsBaseUrl('https://docs.google.com/presentation/d/Some-ID'),
-        'https://docs.google.com/presentation/d/Some-ID'
-      );
-      assert.strictEqual(
-        gDocsBaseUrl('https://docs.google.com/document/d/Some-ID?someQuery'),
-        'https://docs.google.com/document/d/Some-ID'
-      );
-      assert.strictEqual(
-        gDocsBaseUrl('https://docs.google.com/document/d/Some-ID#someID'),
-        'https://docs.google.com/document/d/Some-ID'
-      );
+      expect(
+        gDocsBaseUrl('https://docs.google.com/presentation/d/Some-ID')
+      ).toBe('https://docs.google.com/presentation/d/Some-ID');
+      expect(
+        gDocsBaseUrl('https://docs.google.com/document/d/Some-ID?someQuery')
+      ).toBe('https://docs.google.com/document/d/Some-ID');
+      expect(
+        gDocsBaseUrl('https://docs.google.com/document/d/Some-ID#someID')
+      ).toBe('https://docs.google.com/document/d/Some-ID');
     });
   });
 
   describe('the gDocsPdfUrl function', () => {
     it('returns the expected URL', () => {
-      assert.strictEqual(
-        gDocsPdfUrl('https://docs.google.com/document/d/Some-ID/edit'),
-        'https://docs.google.com/document/d/Some-ID/export?format=pdf'
-      );
-      assert.strictEqual(
-        gDocsPdfUrl('https://docs.google.com/presentation/d/Some-ID/edit'),
+      expect(
+        gDocsPdfUrl('https://docs.google.com/document/d/Some-ID/edit')
+      ).toBe('https://docs.google.com/document/d/Some-ID/export?format=pdf');
+      expect(
+        gDocsPdfUrl('https://docs.google.com/presentation/d/Some-ID/edit')
+      ).toBe(
         'https://docs.google.com/presentation/d/Some-ID/export?format=pdf'
       );
     });
@@ -98,12 +96,12 @@ describe('googleDocsUtils module', () => {
 
   describe('the gDocsMsOfficeUrl function', () => {
     it('returns the expected URL', () => {
-      assert.strictEqual(
-        gDocsMsOfficeUrl('https://docs.google.com/document/d/Some-ID/edit'),
-        'https://docs.google.com/document/d/Some-ID/export?format=doc'
-      );
-      assert.strictEqual(
-        gDocsMsOfficeUrl('https://docs.google.com/presentation/d/Some-ID/edit'),
+      expect(
+        gDocsMsOfficeUrl('https://docs.google.com/document/d/Some-ID/edit')
+      ).toBe('https://docs.google.com/document/d/Some-ID/export?format=doc');
+      expect(
+        gDocsMsOfficeUrl('https://docs.google.com/presentation/d/Some-ID/edit')
+      ).toBe(
         'https://docs.google.com/presentation/d/Some-ID/export?format=pptx'
       );
     });
@@ -111,14 +109,12 @@ describe('googleDocsUtils module', () => {
 
   describe('the gDocsCopyUrl function', () => {
     it('returns the expected URL', () => {
-      assert.strictEqual(
-        gDocsCopyUrl('https://docs.google.com/document/d/Some-ID/edit'),
-        'https://docs.google.com/document/d/Some-ID/copy'
-      );
-      assert.strictEqual(
-        gDocsCopyUrl('https://docs.google.com/presentation/d/Some-ID/edit'),
-        'https://docs.google.com/presentation/d/Some-ID/copy'
-      );
+      expect(
+        gDocsCopyUrl('https://docs.google.com/document/d/Some-ID/edit')
+      ).toBe('https://docs.google.com/document/d/Some-ID/copy');
+      expect(
+        gDocsCopyUrl('https://docs.google.com/presentation/d/Some-ID/edit')
+      ).toBe('https://docs.google.com/presentation/d/Some-ID/copy');
     });
   });
 });

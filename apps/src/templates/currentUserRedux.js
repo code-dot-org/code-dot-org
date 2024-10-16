@@ -1,6 +1,6 @@
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReport from '@cdo/apps/lib/util/AnalyticsReporter';
-import statsigReporter from '@cdo/apps/lib/util/StatsigReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReport from '@cdo/apps/metrics/AnalyticsReporter';
+import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 import experiments from '@cdo/apps/util/experiments';
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -24,6 +24,7 @@ const SET_DATE_PROGRESS_TABLE_INVITATION_LAST_DELAYED =
   'currentUser/SET_DATE_PROGRESS_TABLE_INVITATION_LAST_DELAYED';
 const SET_SEEN_PROGRESS_TABLE_INVITATION =
   'currentUser/SET_SEEN_PROGRESS_TABLE_INVITATION';
+const SET_USER_CREATED_AT = 'currentUser/SET_USER_CREATED_AT';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 
@@ -97,6 +98,10 @@ export const setAiRubricsDisabled = aiRubricsDisabled => ({
   type: SET_AI_RUBRICS_DISABLED,
   aiRubricsDisabled,
 });
+export const setUserCreatedAt = userCreatedAt => ({
+  type: SET_USER_CREATED_AT,
+  userCreatedAt,
+});
 
 const initialState = {
   userId: null,
@@ -117,6 +122,7 @@ const initialState = {
   countryCode: null,
   usStateCode: null,
   inSection: null,
+  userCreatedAt: null,
 };
 
 export default function currentUser(state = initialState, action) {
@@ -215,6 +221,12 @@ export default function currentUser(state = initialState, action) {
       aiRubricsDisabled: action.aiRubricsDisabled,
     };
   }
+  if (action.type === SET_USER_CREATED_AT) {
+    return {
+      ...state,
+      userCreatedAt: action.userCreatedAt,
+    };
+  }
 
   if (action.type === SET_INITIAL_DATA) {
     const {
@@ -236,6 +248,8 @@ export default function currentUser(state = initialState, action) {
       country_code,
       us_state_code,
       in_section,
+      created_at,
+      is_verified_instructor,
     } = action.serverUser;
     analyticsReport.setUserProperties(
       id,
@@ -247,6 +261,7 @@ export default function currentUser(state = initialState, action) {
     statsigReporter.setUserProperties(
       id,
       user_type,
+      is_verified_instructor,
       experiments.getEnabledExperiments()
     );
     return {
@@ -264,6 +279,7 @@ export default function currentUser(state = initialState, action) {
       progressTableV2ClosedBeta: progress_table_v2_closed_beta,
       isLti: is_lti,
       isTeacher: user_type === UserTypes.TEACHER,
+      inUSA: ['US', 'RD'].includes(country_code) || !!us_state_code,
       dateProgressTableInvitationDelayed:
         date_progress_table_invitation_last_delayed,
       hasSeenProgressTableInvite: has_seen_progress_table_v2_invitation,
@@ -271,6 +287,7 @@ export default function currentUser(state = initialState, action) {
       countryCode: country_code,
       usStateCode: us_state_code,
       inSection: in_section,
+      userCreatedAt: created_at,
     };
   }
 

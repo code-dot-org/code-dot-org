@@ -126,7 +126,6 @@ theme: responsive
 | **இணைய சிமுலேட்டரைப் பயன்படுத்த**                                                                                                      | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **இணைய ஆய்வகத்தைப் பயன்படுத்த**                                                                                                        | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **கூகுள் கிளாஸ்ரூம் ஷேர் பட்டனைப் பயன்படுத்த**                                                                                         | `https://apis.google.com`                                                                                  |
-| **ஆப் லேப் தரவுத்தொகுப்புகளைப் பயன்படுத்த**                                                                                            | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## மொபைல் மற்றும் டேப்லெட் ஆதரவு விவரங்கள்
 

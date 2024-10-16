@@ -42,6 +42,8 @@
   "drawShapeWithSideLength": "draw shape with side length",
   "drawSticker": "draw sticker",
   "drawStickerWithSize": "draw sticker with size",
+  "controlsForInputFromToBy": "from %1 to %2 count by %3",
+  "controlsForInputWith": "for",
   "forward": "forward",
   "heightParameter": "height",
   "hideTurtle": "hide artist",

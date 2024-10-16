@@ -4,17 +4,18 @@
 
 import $ from 'jquery';
 import React from 'react';
+
+import {setupApp} from '@cdo/apps/code-studio/initApp/loadApp';
+import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {
   showDialog,
   processResults,
 } from '@cdo/apps/code-studio/levels/dialogHelper';
-import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import {setupApp} from '@cdo/apps/code-studio/initApp/loadApp';
 import {
   LegacyStartOverDialog,
   LegacyInstructionsDialog,
-} from '@cdo/apps/lib/ui/LegacyDialogContents';
-import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
+} from '@cdo/apps/legacySharedComponents/LegacyDialogContents';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/analyticsUtils';
 import i18n from '@cdo/locale';
 
 export function showInstructionsDialog() {

@@ -1,0 +1,62 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2024-09-15T22:21:32.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Health & Fitness\r\n\r\n::: details [**✅ Step 1**]\r\nLoad the data and print a summary using `info()` and `describe()`.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nConvert the following attributes:\r\n- **StudentID** to *int64*\r\n- **Age** to *int64*\r\n- **LastCheckupDate** to *datetime*\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nPrint a new summary using `info()` to verify your changes worked.\r\n:::\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import pandas as pd \nimport matplotlib.pyplot as plt \n\n# STEP 1\n\n# STEP 2\n\n# STEP 3\n\n\n#Visualized data as a bar graph\nplt.figure()\nfavorite_sport_counts = survey_data['FavoriteSport'].value_counts()\nplt.bar(favorite_sport_counts.index, favorite_sport_counts.values, color='blue')\nplt.title('Count of Favorite Sport Choices')\nplt.xlabel('Favorite Sport')\nplt.ylabel('Count')\nplt.show()",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "health_and_fitness.csv",
+          "language": "csv",
+          "contents": "StudentID,Age,ExerciseHoursPerWeek,FavoriteSport,LastCheckupDate\n2621477,14,14.04,Running,6/29/2025\n5535708,14,12.03,Running,1/18/2025\n8979258,17,12.38,Running,1/22/2025\n5161423,16,13.65,Running,7/4/2025\n5960379,18,13.65,Swimming,12/6/2025\n8984456,14,3.25,Running,2/11/2025\n3810604,14,10.31,Soccer,2/20/2025\n4135619,15,7.32,Cycling,4/12/2025\n1677777,17,14.66,Swimming,12/30/2025\n9042459,14,6.93,Tennis,8/25/2025\n5897873,17,8.22,Cycling,9/26/2025\n6657852,18,10.06,Cycling,5/10/2025\n9293776.1,17,10.84,Tennis,12/29/2025\n3635234,15,10.69,Tennis,6/6/2025\n1011927,15,11.51,Basketball,8/4/2025\n9302338,16,7.55,Swimming,6/9/2025\n5526975,14,1.03,Cycling,3/6/2025\n6078490,14,14.89,Swimming,4/6/2025\n5722174,15,1.12,Soccer,4/1/2025\n4759600,15,13.82,Basketball,2/14/2025\n6494920,15,0.53,Swimming,4/2/2025\n1698754,17,8.35,Swimming,8/30/2025\n2827967,17,10.98,Running,6/10/2025\n9463512,18,14.02,Basketball,3/31/2025\n6341715,17,11.46,Tennis,9/29/2025\n6869298,17,7.39,Running,10/18/2025\n8315288,14,7.2,Running,1/18/2025\n9823602,17.2,2.47,Soccer,7/29/2025\n9571135,18,5.26,Soccer,12/10/2025\n8501403,15,1.87,Swimming,10/7/2025\n8988002,14,12.06,Swimming,8/9/2025\n2268721,17,7.71,Running,9/14/2025\n9964615,14,10.5,Tennis,6/10/2025\n7875340,18,14.78,Tennis,2/15/2025\n2236031,15,1.59,Swimming,3/4/2025\n2286242,16,5.53,Swimming,8/21/2025\n6649310,18,2.67,Swimming,2/20/2025\n3064983,17,10.32,Basketball,1/25/2025\n8338855,16,4.62,Swimming,10/15/2025\n4777049,17,8.98,Tennis,3/9/2025\n8463784,14,14.55,Cycling,3/27/2025\n9978311,18,6.12,Swimming,7/5/2025\n3107511,15,11.67,Basketball,5/25/2025\n2718476,15,1.45,Soccer,6/18/2025\n7397026,15,1.48,Tennis,7/19/2025\n7600393,17,12,Tennis,9/2/2025\n1030530,17,10.72,Basketball,2/4/2025\n6134238,17,4.4,Running,1/4/2025\n7143352,17,8.01,Soccer,7/5/2025\n9697419,16,13.84,Swimming,5/23/2025\n4408909,18,2.85,Tennis,7/11/2025\n9046991,14,0.86,Tennis,4/25/2025\n5590298,14,2.43,Swimming,10/18/2025\n5926389,16,6.04,Tennis,5/30/2025\n6847436,15,6.93,Basketball,11/30/2025\n5619907,14,2.63,Tennis,6/21/2025\n3910671,15,7.2,Basketball,12/4/2025\n9218141,16,9.62,Basketball,10/25/2025\n8814476,14,14.48,Swimming,1/29/2025\n6015706,15,10.24,Cycling,5/22/2025\n4023737,15,1.92,Running,7/24/2025\n7127936,15,6,Swimming,4/18/2025\n4779678,15,1.74,Running,2/9/2025\n4994408,14,6.62,Tennis,2/21/2025\n3761281,15,9.25,Running,2/5/2025\n5679050,16,10.1,Soccer,11/29/2025\n1031552,18,9.82,Tennis,4/12/2025\n3408063,17,8.44,Cycling,1/13/2025\n3772000,14,7.59,Basketball,11/24/2025\n8943488,18,5.19,Basketball,10/15/2025\n7456937,15,0.67,Tennis,1/8/2025\n2604075,17,3.45,Basketball,2/18/2025\n3555386,17,12.87,Running,2/19/2025\n9354804,15,11.06,Cycling,8/14/2025\n5825393,14,2.46,Running,3/26/2025\n3034676,17,6.25,Cycling,12/16/2025\n8901957,18,12.07,Basketball,10/5/2025\n1488175,14,10.74,Soccer,1/29/2025\n2140359,17,1.31,Running,1/9/2025\n8172232,15,9.34,Basketball,11/23/2025\n1079156,18,3.22,Swimming,7/24/2025\n9565292,17,1.8,Running,11/3/2025\n4210821,14,0.99,Cycling,1/8/2025\n6143942,17,13.27,Running,4/16/2025\n3114870,14,9.61,Basketball,9/24/2025\n5936855,18,4.74,Soccer,8/5/2025\n2377675,18,6.05,Cycling,2/19/2025\n6502618,14,6.7,Running,5/26/2025\n1819441,15,8.12,Tennis,1/5/2025\n4645074,14,11.88,Tennis,7/4/2025\n7297067,17,13.19,Cycling,1/16/2025\n4807219,17,5.65,Cycling,4/23/2025\n6046123,14,8.79,Basketball,10/28/2025\n1984459,16,6.71,Soccer,10/14/2025\n3344788,18,0.32,Cycling,7/30/2025\n5213094,18,10.04,Swimming,3/8/2025\n8911912,14,7.3,Swimming,6/14/2025\n8012421,18,13.47,Swimming,9/17/2025\n7887291,14,2.46,Tennis,8/20/2025\n7638768,14,4.36,Soccer,8/29/2025\n",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "display_name": "Health & Fitness Survey",
+    "teacher_markdown": "This level practices and assesses students' ability to convert data types using .astype() and to_datetime() as well as loading data and looking at info() about the data.",
+    "bubble_choice_description": "Practice converting data types with a survey about favorite sports, doctor check-ups, and time spent exercising. ",
+    "thumbnail_url": "https://images.code.org/f53a8695eb9b5f8e775d461e000017fe-swimming.png",
+    "validation_file": {
+      "id": "2",
+      "name": "test.py",
+      "language": "py",
+      "contents": "import unittest\nfrom io import StringIO\nimport sys\nimport ast\nimport pandas as pd\n\nclass TestStudentDataModifications(unittest.TestCase):\n\n    def setUp(self):\n        # Setup to capture the print output if needed later\n        self.captured_output = StringIO()\n        sys.stdout = self.captured_output\n\n    def tearDown(self):\n        # Reset redirect and clear print capture\n        sys.stdout = sys.__stdout__\n\n    def test_step_1(self):\n        \"\"\"Test Step 1: Check that a DataFrame is loaded and 'info()' and 'describe()' is called\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Parse the script to check for 'info()' and 'describe()' being called using AST\n        tree = ast.parse(script_content)\n\n        # Traverse the AST to look for 'info()' and 'describe()' method calls on a DataFrame\n        info_called = False\n        describe_called = False\n        for node in ast.walk(tree):\n            if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute):\n                if node.func.attr == 'info':\n                  info_called = True\n                elif node.func.attr == 'describe':\n                  describe_called = True \n\n        # Assert that both info() and  describe() are called at least once\n        self.assertTrue(info_called, \"The code should call 'info()' on a DataFrame in Step 1.\")\n        self.assertTrue(describe_called, \"The code should call 'describe()' on a DataFrame in Step 1.\")\n        self.assertTrue(info_called and describe_called, \"The code should call both 'info()' and 'describe()' on a DataFrame in Step 1.\")\n\n    def test_step_2(self):\n        \"\"\"Test Step 2: Check that 'StudentID', 'Age', and 'LastCheckupDate' attributes are converted correctly\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Execute the script to access the modified DataFrame\n        local_vars = {}\n        exec(script_content, local_vars)\n\n        # Search for any DataFrame in the global variables\n        df_detected = None\n        for var in local_vars.values():\n            if isinstance(var, pd.DataFrame):\n                df_detected = var\n                break\n\n        # Ensure a DataFrame is detected\n        self.assertIsNotNone(df_detected, \"A DataFrame should be loaded and modified in Step 2.\")\n\n        # Check if the 'StudentID' attribute has the correct type 'int64'\n        self.assertIn('StudentID', df_detected.columns, \"The DataFrame should contain a 'StudentID' column.\")\n        self.assertEqual(df_detected['StudentID'].dtype, 'int64', \"The 'StudentID' column should be converted to 'int64'.\")\n\n        # Check if the 'Age' attribute has the correct type 'int64'\n        self.assertIn('Age', df_detected.columns, \"The DataFrame should contain an 'Age' column.\")\n        self.assertEqual(df_detected['Age'].dtype, 'int64', \"The 'Age' column should be converted to 'int64'.\")\n\n        # Check if the 'LastCheckupDate' attribute has the correct type 'datetime64[ns]'\n        self.assertIn('LastCheckupDate', df_detected.columns, \"The DataFrame should contain a 'LastCheckupDate' column.\")\n        self.assertEqual(df_detected['LastCheckupDate'].dtype, 'datetime64[ns]', \"The 'LastCheckupDate' column should be converted to 'datetime64[ns]'.\")\n\n    def test_step_3(self):\n        \"\"\"Test Step 3: Check that 'info()' is called again to verify the changes\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Parse the script to check for multiple 'info()' calls using AST\n        tree = ast.parse(script_content)\n\n        # Traverse the AST to count the number of 'info()' calls\n        info_count = 0\n        for node in ast.walk(tree):\n            if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute):\n                if node.func.attr == 'info':\n                    info_count += 1\n\n        # Assert that info() is called more than once (before and after changes)\n        self.assertGreaterEqual(info_count, 2, \"The code should call 'info()' at least twice to verify changes in Step 3.\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-09-15T22:21:32.724+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L5-L7d_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L5-L7d_2024-pilot\"},{\"changed_at\":\"2024-09-15 22:24:00 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-15 22:24:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-15 22:42:58 +0000\",\"changed\":[\"predict_settings\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-28 18:43:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-28 18:43:37 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-28 18:44:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-28 18:44:14 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-28 18:59:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-28 18:59:39 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-03 16:15:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18753,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

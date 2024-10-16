@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Dance Party", body: "Κωδικοποιήστε ένα Πάρτι με Χορό! Με τους Μπιγιονσέ, Χάρι Στάιλς, Λίζο, Λιλ Νας Χ, Σελένα Γκόμεζ, μουσική από το \"Ενκάντο\" της Disney, και πολλά άλλα!", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "Poem Art", body: "Προσθέστε τέχνη και κινούμενα σχέδια σε ένα κλασικό ποίημα σε αυτήν τη δραστηριότητα Ώρας του Κώδικα!", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "Artist", body: "Σχεδιάστε υπέροχες εικόνες και σχέδια με τον Καλλιτέχνη!", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "Infinity Play Lab", body: "Χρησιμοποιήστε το Play Lab για να δημιουργήσετε μια ιστορία ή ένα παιχνίδι με πρωταγωνιστές τους χαρακτήρες του Disney Infinity.", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

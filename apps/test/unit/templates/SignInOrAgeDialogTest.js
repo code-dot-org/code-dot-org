@@ -1,8 +1,8 @@
 import {render, screen, fireEvent} from '@testing-library/react';
-import {assert} from 'chai';
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import cookies from 'js-cookie';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 import {UnconnectedSignInOrAgeDialog as SignInOrAgeDialog} from '@cdo/apps/templates/SignInOrAgeDialog';
@@ -10,7 +10,7 @@ import * as utils from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import FakeStorage from '../../util/FakeStorage';
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
 
 const DEFAULT_PROPS = {

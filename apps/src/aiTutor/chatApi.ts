@@ -4,8 +4,8 @@ import {
   AITutorInteractionStatusValue,
   ChatCompletionMessage,
 } from '@cdo/apps/aiTutor/types';
-import {MetricEvent} from '@cdo/apps/lib/metrics/events';
-import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
+import {MetricEvent} from '@cdo/apps/metrics/events';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 // These are the possible statuses returned by ShareFiltering.find_failure
@@ -37,11 +37,13 @@ const logViolationDetails = (response: OpenaiChatCompletionMessage) => {
 export async function postOpenaiChatCompletion(
   messagesToSend: OpenaiChatCompletionMessage[],
   levelId?: number,
+  scriptId?: number,
   systemPrompt?: string
 ): Promise<OpenaiChatCompletionMessage | null> {
   const payload = {
     messages: messagesToSend,
     levelId: levelId,
+    scriptId: scriptId,
     systemPrompt: systemPrompt,
   };
 
@@ -76,7 +78,8 @@ export async function getChatCompletionMessage(
   formattedQuestion: string,
   chatMessages: ChatCompletionMessage[],
   systemPrompt?: string,
-  levelId?: number
+  levelId?: number,
+  scriptId?: number
 ): Promise<ChatCompletionResponse> {
   const messagesToSend = [
     ...formatForChatCompletion(chatMessages),
@@ -88,6 +91,7 @@ export async function getChatCompletionMessage(
     response = await postOpenaiChatCompletion(
       messagesToSend,
       levelId,
+      scriptId,
       systemPrompt
     );
   } catch (error) {

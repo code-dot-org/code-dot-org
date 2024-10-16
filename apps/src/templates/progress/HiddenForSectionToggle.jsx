@@ -2,9 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
-
-import Button from '../Button';
 
 /**
  * A component that provides a toggle that goes between visible and hidden that

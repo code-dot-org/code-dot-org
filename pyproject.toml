@@ -1,0 +1,30 @@
+[project]
+requires-python = "==3.12.*"
+
+dependencies = [
+    # Register local python packages from /python here, and in dev-dependencies below:
+    "pycdo @ file:///${PROJECT_ROOT}/python/pycdo",
+
+    ## Do not add dependencies here, add them to a pyproject.toml in /python ##
+]
+
+[tool.pdm.dev-dependencies]
+dev = [
+    # Register local python packages from /python here with -e, and in dependencies above:
+    # Adding -e in --dev mode will make changes to /python/*py available without needing
+    # to run `pdm install` first.
+    "-e file:///${PROJECT_ROOT}/python/pycdo#egg=pycdo",
+
+    "coverage",
+    "ipython",
+    "pytest >=8",
+    "pytest-mock",
+    "ruff",
+]
+
+[tool.pdm]
+distribution = false
+
+[tool.ruff]
+# we use ruff for linting
+line-length = 100

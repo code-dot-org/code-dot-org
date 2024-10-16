@@ -40,7 +40,7 @@ class Census::CensusSummary < ApplicationRecord
     unless CDO.stub_school_data
       Census::CensusSummary.transaction do
         CDO.log.info "Seeding census summary data."
-        AWS::S3.seed_from_file('cdo-census', "access-report-data-files-2023/final_csv/final_csv_2023_09_19.csv") do |filename|
+        AWS::S3.seed_from_file('cdo-census', "access-report-data-files-2024/final-csv/final_csv_2024_09_30.csv") do |filename|
           merge_from_csv(filename) do |row|
             {
               school_id:          row['school_id'],

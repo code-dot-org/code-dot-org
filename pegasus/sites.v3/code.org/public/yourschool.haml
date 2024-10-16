@@ -30,6 +30,8 @@ social:
 - teacher_application_mode  = DCDO.get("teacher_application_mode", CDO.default_teacher_application_mode)
 - census_announcement['teacher_application_mode'] = teacher_application_mode
 - census_announcement['tileset'] = CDO.mapbox_access_tileset
+- show_report_launch = DCDO.get('access-report-launch', false).to_s
+- census_announcement['show_report_launch_banner'] = show_report_launch
 
 = inline_css 'trophy_announcement_sparkle.css'
 
@@ -60,7 +62,7 @@ social:
       = " "
       and in the
       = " "
-      %a{href: CDO.advocacy_url("/stateofcs"), target: "_blank"}> annual State of Computer Science Education
+      %a{href: "https://advocacy.code.org/stateofcs/", target: "_blank"}> annual State of Computer Science Education
       , published each fall.
     %span{style: "font-family: var(--main-font); font-weight: var(--bold-font-weight); font-size: 20px; margin: 0 25px 0 25px;"} In partnership with
     %img{src: '/images/fit-200/avatars/computer_science_teachers_association.png'}

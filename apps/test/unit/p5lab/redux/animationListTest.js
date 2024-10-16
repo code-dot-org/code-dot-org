@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import {combineReducers} from 'redux';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {EMPTY_IMAGE} from '@cdo/apps/p5lab/constants';
@@ -31,7 +31,7 @@ import pageConstantsReducer, {
   setPageConstants,
 } from '@cdo/apps/redux/pageConstants';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {createStore} from '../../../util/redux';
 import {setExternalGlobals} from '../../../util/testUtils';
 

@@ -1,5 +1,5 @@
 import {assertOwnProperty} from '../../util/assertions';
-import {assert} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 var _ = require('lodash');
 

@@ -126,7 +126,6 @@ theme: responsive
 | **Για να χρησιμοποιήσετε τον προσομοιωτή Διαδικτύου**                                                                                    | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Για να χρησιμοποιήσετε το Web Lab**                                                                                                    | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Για να χρησιμοποιήσετε το κουμπί κοινής χρήσης της Google Classroom**                                                                  | `https://apis.google.com`                                                                                  |
-| **Για να χρησιμοποιήσετε σύνολα δεδομένων App Lab**                                                                                      | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 

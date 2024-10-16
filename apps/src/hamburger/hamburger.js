@@ -1,12 +1,24 @@
+import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 import {
   getChannelIdFromUrl,
   userAlreadyReportedAbuse,
 } from '@cdo/apps/reportAbuse';
 
-import trackEvent from '../util/trackEvent';
-
 export const initHamburger = function () {
   $(document).ready(function () {
+    const isInSignupExperiment = statsigReporter.getIsInExperiment(
+      'new_sign_up_v1',
+      'showNewFlow',
+      false
+    );
+    const signupLinks = document.querySelectorAll('#create_account_button');
+
+    if (isInSignupExperiment) {
+      signupLinks.forEach(link => {
+        link.href = 'https://studio.code.org/users/new_sign_up/account_type';
+      });
+    }
+
     $('#hamburger-icon').click(function (e) {
       $(this).toggleClass('active');
       $('#hamburger').removeClass('user-is-tabbing');
@@ -88,27 +100,6 @@ export const initHamburger = function () {
         $('#help-button #help-contents').slideToggle();
         e.preventDefault();
       }
-    });
-
-    $('#help-icon #report-bug').click(function () {
-      trackEvent('help_ui', 'report-bug', 'hamburger');
-    });
-
-    $('#help-icon #support').click(function () {
-      trackEvent('help_ui', 'support', 'hamburger');
-    });
-
-    // This item is not in the hamburger, but actually in the studio footer.
-    $('.footer #support').click(function () {
-      trackEvent('help_ui', 'support', 'studio_footer');
-    });
-
-    // This item is not in the hamburger, but actually in the pegasus footers for
-    // desktop and mobile.
-    $('#pagefooter #support').each(function () {
-      $(this).click(function () {
-        trackEvent('help_ui', 'support', 'studio_footer');
-      });
     });
 
     const channelId = getChannelIdFromUrl(location.href);

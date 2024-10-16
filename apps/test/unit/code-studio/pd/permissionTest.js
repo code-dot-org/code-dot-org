@@ -1,5 +1,3 @@
-import {expect} from 'chai';
-
 import Permission, {
   WorkshopAdmin,
   Facilitator,
@@ -27,9 +25,9 @@ describe('Permission class', () => {
   const expectExactPermissions = (...expectedPermissions) => {
     permissionTypes.forEach(permissionType => {
       if (expectedPermissions.includes(permissionType)) {
-        expect(permission.has(permissionType)).to.be.true;
+        expect(permission.has(permissionType)).toBe(true);
       } else {
-        expect(permission.has(permissionType)).to.be.false;
+        expect(permission.has(permissionType)).toBe(false);
       }
     });
   };

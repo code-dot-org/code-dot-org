@@ -1,0 +1,32 @@
+name 'CSA U1L11-L4_pilot_alt-2025'
+title 'Check for Understanding'
+
+wrong 'I only'
+wrong 'II only'
+wrong 'III only'
+wrong 'I and II'
+right 'I, II, and III'
+
+markdown <<MARKDOWN
+You have been asked to paint a crosswalk to make The Neighborhood safer for pedestrians.
+
+| Start | End |
+| :---: | :---: |
+| ![](https://images.code.org/bbb1ac5c828bdd742207a713ccd72022-image-1666458965051.png) | ![](https://images.code.org/31286e3feaf7a04ca316734d7da31a9d-image-1666458979563.png) |
+
+&nbsp;
+
+Which algorithms make the MOST sense to write to decompose the problem?
+
+I. `paintDiagonal`
+
+II. `paintFast`
+
+III. `turnAround`
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+All three of these methods would be helpful to decompose the problem. The `paintDiagonal()` method can be used to paint the diagonal lines, and the `paintFast()` method can be used to paint a straight line. The `turnAround()` method can be used to turn the `Painter` object around after painting the top line before painting the diagonal lines.
+MARKDOWN
+
+allow_multiple_attempts true

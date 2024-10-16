@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {LegacyMatchErrorDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
+import {LegacyMatchErrorDialog} from '@cdo/apps/legacySharedComponents/LegacyDialogContents';
 
 import {registerGetResult, onAnswerChanged} from './codeStudioLevels';
 

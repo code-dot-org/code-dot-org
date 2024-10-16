@@ -64,7 +64,6 @@
     "start_blocks": "//1) When the A button is down, show an arrow pointing right\r\n\r\n//2) When the B button is down, show an arrow pointing left\r\n",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20416,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",

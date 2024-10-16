@@ -1,0 +1,23 @@
+.flex-container.flex-direction-column-mobile-reverse.justify-content-center.align-items-center.gap-2
+  .text-wrapper{style: "flex: 1.75"}
+    %h2.white
+      =hoc_s("hoc_resources.logos.heading")
+    %p.body-two.white
+      =hoc_s("hoc_resources.logos.desc")
+    .button-wrapper
+      %a.link-button.white{href: "https://images.code.org/share/hour-of-code-logo.zip"}
+        %i{class: "fa-solid fa-download", style: "margin-inline-end: 0.25rem;"}
+        =hoc_s("hoc_resources.logos.button.download")
+  %figure.flex-container.justify-end.gap-1.flex-1
+    %img{src: "/us/en/images/fit-200/hour-of-code-logo.png", alt: "", style: "width: 130px"}
+    %img{src: "/us/en/images/fit-200/hora-del-codigo-logo.png", alt: "", style: "width: 130px"}
+.logo-guidelines{style: "margin-top: 2rem"}
+  %h3.body-three.white
+    =hoc_s("hoc_resources.logos.usage.heading")
+  %p=hoc_s("hoc_resources.logos.usage.body_01.desc")
+  %p.no-margin-bottom=hoc_s("hoc_resources.logos.usage.body_01.list_good")
+  %p=hoc_s("hoc_resources.logos.usage.body_01.list_bad")
+  %p.no-margin-bottom
+    =hoc_s("hoc_resources.logos.usage.body_02")
+    =hoc_s("hoc_resources.logos.usage.body_03", markdown: :inline)
+    =hoc_s("hoc_resources.logos.usage.body_04")

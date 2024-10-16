@@ -64,7 +64,7 @@ module Cdo
 
       # our HTTPS wildcard certificate only supports *.code.org
       # 'env', 'studio.code.org' over https must resolve to 'env-studio.code.org' for non-prod environments
-      sep = (domain.include?('.code.org')) ? '-' : '.'
+      sep = domain.include?('.code.org') ? '-' : '.'
       # developers and CI servers use localhost
       return "localhost#{sep}#{domain}" if rack_env?(:development) || ci_webserver?
       return "translate#{sep}#{domain}" if name == 'crowdin'
@@ -81,10 +81,6 @@ module Cdo
 
     def hourofcode_hostname
       canonical_hostname('hourofcode.com')
-    end
-
-    def advocacy_hostname
-      canonical_hostname('advocacy.code.org')
     end
 
     def codeprojects_hostname
@@ -132,10 +128,6 @@ module Cdo
       site_url('code.org', path, scheme)
     end
 
-    def advocacy_url(path = '', scheme = '')
-      site_url('advocacy.code.org', path, scheme)
-    end
-
     def hourofcode_url(path = '', scheme = '')
       site_url('hourofcode.com', path, scheme)
     end
@@ -152,8 +144,8 @@ module Cdo
         # deployed development instance of Javabuilder, set
         # 'local_javabuilder_stack_name: "your stack name"' in your locals.yml.
         return 'ws://localhost:8080/javabuilder' if CDO.use_localhost_javabuilder
-        stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
-        "wss://#{stack_name}.code.org"
+        javabuilder_stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
+        "wss://#{javabuilder_stack_name}.code.org"
       else
         DCDO.get("javabuilder_websocket_url", 'wss://javabuilder.code.org')
       end
@@ -167,8 +159,8 @@ module Cdo
         # deployed development instance of Javabuilder, set
         # 'local_javabuilder_stack_name: "your stack name"' in your locals.yml.
         return 'http://localhost:8080/javabuilderfiles/seedsources' if CDO.use_localhost_javabuilder
-        stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
-        "https://#{stack_name}-http.code.org/seedsources/sources.json"
+        javabuilder_stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
+        "https://#{javabuilder_stack_name}-http.code.org/seedsources/sources.json"
       else
         http_url = DCDO.get("javabuilder_http_url", 'https://javabuilder-http.code.org')
         http_url + "/seedsources/sources.json"

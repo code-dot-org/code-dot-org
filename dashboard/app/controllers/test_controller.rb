@@ -282,7 +282,7 @@ class TestController < ApplicationController
 
   def create_applications
     %w(csd csp csa).each do |course|
-      (Pd::Application::TeacherApplication.statuses).each do |status|
+      Pd::Application::TeacherApplication.statuses.each do |status|
         teacher_email = "#{course}_#{status}@code.org"
         teacher = User.find_or_create_teacher(
           {name: "#{course} #{status}", email: teacher_email}, nil, nil
@@ -324,6 +324,11 @@ class TestController < ApplicationController
     Pd::Application::TeacherApplication.find(params[:application_id].to_i).destroy
     User.find(params[:teacher_id].to_i).destroy
     User.find_by(name: params[:pm_name]).destroy
+    head :ok
+  end
+
+  def delete_workshop
+    Pd::Workshop.find_by_id(params[:workshop_id]).destroy
     head :ok
   end
 

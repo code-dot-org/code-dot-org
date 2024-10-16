@@ -47,7 +47,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "# Perfect Toast\r\n\r\nThis app simulates a toaster with a piece of toast in between two heated sides. The toast needs to be perfectly placed in the middle - if it's too close to one of the sides, the toast will burn! We can help alert the user of the burning toast by making a noise if the toast is too close to the edges. Then the user can press buttons on the toaster to move the toast closer to the center.\r\n\r\n## Do This:\r\n1) If the toast is too far to the left, play a sound to alert the user\r\n\t- Add an [`if statement`(#64B5F6)](/docs/applab/ifBlock/) to the `buttonA` event to check if the toast is too far to the left.\r\n    - Use the the [`playSound()`(#fff176)](/docs/ide/applab/expressions/playSound) block to play a sound\r\n2) If the toast is too far to the right, play a sound to alert the user\r\n\t- Add an [`if statement`(#64B5F6)](/docs/applab/ifBlock/) to the `buttonB` event to check if the toast is too far to the right.\r\n    - Use the the [`playSound()`(#fff176)](/docs/ide/applab/expressions/playSound) block to play a sound\r\n\r\n**Run Your Code!** Use the A and B buttons to reposition the toast. When the toast gets too close to the walls, the device should buzz!",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

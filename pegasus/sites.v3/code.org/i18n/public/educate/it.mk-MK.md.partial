@@ -126,7 +126,6 @@ theme: responsive
 | **За користење на интернет симулатор**                                                                                         | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Користење на веб лабораторија**                                                                                              | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **За користење на копчето за споделување на Google Classroom**                                                                 | `https://apis.google.com`                                                                                  |
-| **За користење на збирки на податоци за App Lab**                                                                              | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 

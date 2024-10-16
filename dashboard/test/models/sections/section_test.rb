@@ -462,6 +462,8 @@ class SectionTest < ActiveSupport::TestCase
         id: section.id,
         name: section.name,
         courseVersionName: 'somecourse',
+        unitName: nil,
+        isAssignedStandaloneCourse: false,
         login_type: "email",
         grades: nil,
         providerManaged: false,
@@ -471,6 +473,7 @@ class SectionTest < ActiveSupport::TestCase
         sharing_disabled: false,
         studentCount: 0,
         code: section.code,
+        course_display_name: unit_group.course_version.localized_title,
         course_offering_id: unit_group.course_version.course_offering.id,
         course_version_id: unit_group.course_version.id,
         unit_id: nil,
@@ -504,6 +507,8 @@ class SectionTest < ActiveSupport::TestCase
         id: section.id,
         name: section.name,
         courseVersionName: 'jigsaw',
+        unitName: script.name,
+        isAssignedStandaloneCourse: true,
         login_type: "email",
         grades: nil,
         providerManaged: false,
@@ -513,9 +518,10 @@ class SectionTest < ActiveSupport::TestCase
         sharing_disabled: false,
         studentCount: 0,
         code: section.code,
+        course_display_name: script.course_version.localized_title,
         course_offering_id: script.course_version.course_offering.id,
         course_version_id: script.course_version.id,
-        unit_id: nil,
+        unit_id: script.id,
         course_id: nil,
         hidden: false,
         restrict_section: false,
@@ -550,6 +556,8 @@ class SectionTest < ActiveSupport::TestCase
         id: section.id,
         name: section.name,
         courseVersionName: nil,
+        unitName: nil,
+        isAssignedStandaloneCourse: false,
         login_type: "email",
         grades: nil,
         providerManaged: false,
@@ -559,6 +567,7 @@ class SectionTest < ActiveSupport::TestCase
         sharing_disabled: false,
         studentCount: 0,
         code: section.code,
+        course_display_name: nil,
         course_offering_id: nil,
         course_version_id: nil,
         unit_id: nil,
@@ -596,6 +605,8 @@ class SectionTest < ActiveSupport::TestCase
         id: section.id,
         name: section.name,
         courseVersionName: 'somecourse',
+        unitName: script.name,
+        isAssignedStandaloneCourse: false,
         login_type: "email",
         grades: nil,
         providerManaged: false,
@@ -605,6 +616,7 @@ class SectionTest < ActiveSupport::TestCase
         sharing_disabled: false,
         studentCount: 0,
         code: section.code,
+        course_display_name: unit_group.course_version.localized_title,
         course_offering_id: unit_group.course_version.course_offering.id,
         course_version_id: unit_group.course_version.id,
         unit_id: script.id,
@@ -634,6 +646,8 @@ class SectionTest < ActiveSupport::TestCase
         id: section.id,
         name: section.name,
         courseVersionName: nil,
+        unitName: nil,
+        isAssignedStandaloneCourse: false,
         login_type: "email",
         grades: nil,
         providerManaged: false,
@@ -643,6 +657,7 @@ class SectionTest < ActiveSupport::TestCase
         sharing_disabled: false,
         studentCount: 0,
         code: section.code,
+        course_display_name: nil,
         course_offering_id: nil,
         course_version_id: nil,
         unit_id: nil,
@@ -704,7 +719,8 @@ class SectionTest < ActiveSupport::TestCase
         name: section.name,
         login_type_name: "Email",
         script: {id: nil, name: nil, project_sharing: nil},
-        students: []
+        students: [],
+        any_student_has_progress: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -727,6 +743,7 @@ class SectionTest < ActiveSupport::TestCase
         login_type_name: "Email",
         script: {id: script.id, name: script.name, project_sharing: nil},
         students: [],
+        any_student_has_progress: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -792,6 +809,7 @@ class SectionTest < ActiveSupport::TestCase
         login_type: "email",
         login_type_name: "Email",
         participant_type: 'student',
+        course_display_name: unit_group.course_version.localized_title,
         course_offering_id: unit_group.course_version.course_offering.id,
         course_version_id: unit_group.course_version.id,
         unit_id: nil,
@@ -845,6 +863,7 @@ class SectionTest < ActiveSupport::TestCase
         login_type: "email",
         login_type_name: "Email",
         participant_type: 'student',
+        course_display_name: script.course_version.localized_title,
         course_offering_id: script.course_version.course_offering.id,
         course_version_id: script.course_version.id,
         unit_id: nil,
@@ -902,6 +921,7 @@ class SectionTest < ActiveSupport::TestCase
         login_type: "email",
         login_type_name: "Email",
         participant_type: 'student',
+        course_display_name: nil,
         course_offering_id: nil,
         course_version_id: nil,
         unit_id: nil,
@@ -959,6 +979,7 @@ class SectionTest < ActiveSupport::TestCase
         login_type: "email",
         login_type_name: "Email",
         participant_type: 'student',
+        course_display_name: unit_group.course_version.localized_title,
         course_offering_id: unit_group.course_version.course_offering.id,
         course_version_id: unit_group.course_version.id,
         unit_id: script.id,
@@ -1008,6 +1029,7 @@ class SectionTest < ActiveSupport::TestCase
         login_type: "email",
         login_type_name: "Email",
         participant_type: 'student',
+        course_display_name: nil,
         course_offering_id: nil,
         course_version_id: nil,
         unit_id: nil,
@@ -1130,6 +1152,40 @@ class SectionTest < ActiveSupport::TestCase
   test 'code review disabled for sections with code review expiration before current time' do
     section = create :section, code_review_expires_at: Time.now.utc - 1.day
     refute section.code_review_enabled?
+  end
+
+  test 'any_student_has_progress? returns false if no student progress' do
+    section = create :section, script: nil, unit_group: nil
+
+    create(:follower, section: section).student_user
+
+    refute section.any_student_has_progress?
+  end
+
+  test 'any_student_has_progress? returns true if student has progress on unit assigned to section' do
+    script = Unit.find_by_name('jigsaw')
+    unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    CourseOffering.add_course_offering(unit_group)
+
+    section = create :section, script: script, unit_group: unit_group
+
+    student = create(:follower, section: section).student_user
+    UserScript.create!(user: student, script: script)
+
+    assert section.any_student_has_progress?
+  end
+
+  test 'any_student_has_progress? returns true if student has progress on unit not assigned to section' do
+    script = Unit.find_by_name('jigsaw')
+    unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    CourseOffering.add_course_offering(unit_group)
+
+    section = create :section, script: nil, unit_group: nil
+
+    student = create(:follower, section: section).student_user
+    UserScript.create!(user: student, script: script)
+
+    assert section.any_student_has_progress?
   end
 
   test 'reset_code_review_groups creates new code review groups' do

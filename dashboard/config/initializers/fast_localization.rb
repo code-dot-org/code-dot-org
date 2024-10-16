@@ -1,7 +1,7 @@
 # Because loading YAML locales is super-slow, only load english yml locale files in development
 # To load all locales for testing, add "load_locales: true" to locals.yml config
 
-if (CDO.skip_locales || Rails.env.development?) && (!CDO.load_locales)
+if (CDO.skip_locales || Rails.env.development?) && !CDO.load_locales
   Dashboard::Application.config.i18n.railties_load_path.each do |path|
     path.glob = "*{es-ES,en}.yml"
   end
@@ -19,7 +19,7 @@ end
 Dashboard::Application.config.after_initialize do |app|
   app.reloaders.each do |reloader|
     if reloader.is_a?(ActiveSupport::FileUpdateChecker) && reloader.files == I18n.load_path
-      reloader.block = lambda {|files| I18n.backend.load_translations(files)}
+      reloader.block = ->(files) {I18n.backend.load_translations(files)}
     end
   end
 end

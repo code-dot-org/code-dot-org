@@ -18,7 +18,8 @@
 }
 
 .freeResponse {
-  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .predictSolutionContainer {
@@ -33,6 +34,14 @@
   margin-bottom: 10px;
 }
 
-.predictSummaryContainer {
-  margin-bottom: 15px;
+.resetButton {
+  width: 212px;
+
+  // We use important here because the disabled styles used by Button
+  // are more specific than a single class.
+  &:disabled {
+    background-color: $light_black !important;
+    color: $light_gray_800 !important;
+    border: none;
+  }
 }

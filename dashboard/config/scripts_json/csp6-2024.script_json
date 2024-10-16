@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-11 17:00:49 UTC",
+    "serialized_at": "2024-10-03 05:19:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -170,8 +170,8 @@
       "relative_position": 4,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Reminder app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. Students use an Activity Guide to go through the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-lists-lessons-1-4/36478) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1Lb6Zb8zDD8TjjAl7CGtFHhgplnsTfsx9VZ-ejYYadpE/edit?usp=sharing)",
+        "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Reminder app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. Students use an Activity Guide to go through the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps and answer a free-response question in the style of a Create performance task written response prompt. Student apps and written responses can be assessed using a provided rubric. ",
+        "preparation": "* Review the Free-Response Supports and consider which, if any, supports are suitable for your classroom.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-lists-lessons-1-4/36478) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1Lb6Zb8zDD8TjjAl7CGtFHhgplnsTfsx9VZ-ejYYadpE/edit?usp=sharing)",
         "student_overview": "Make an app that uses lists and programming patterns with lists."
       },
       "seeding_key": {
@@ -248,8 +248,8 @@
       "relative_position": 8,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Lock Screen Maker app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with minimal starting code. A progression of levels guides students on the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-loops-lessons-5-8/36480) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1ys33Q7bvhxP0y3i5fPRNoH7J9noVoNhuSoZtx2Ih7iE/edit?usp=sharing)",
+        "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Lock Screen Maker app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with minimal starting code. A progression of levels guides students on the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps and answer a free-response question in the style of a Create performance task written response prompt. Student apps and written responses can be assessed using a provided rubric.",
+        "preparation": "* Review the Free-Response Supports and consider which, if any, supports are suitable for your classroom. \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-loops-lessons-5-8/36480) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1ys33Q7bvhxP0y3i5fPRNoH7J9noVoNhuSoZtx2Ih7iE/edit?usp=sharing)",
         "student_overview": "Practice making an app that uses loops and programming patterns with loops."
       },
       "seeding_key": {
@@ -325,8 +325,8 @@
       "relative_position": 12,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Random Forecaster app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. Students use an Activity Guide to go through the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
-        "preparation": "* If time allows, try to build all or part of the Random Forecaster app yourself to understand the challenges involved\n* Review the debugging practices you intend to reinforce and resources you'll direct students towards as they get stuck\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-traversals-lessons-9-12/36481) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1V1LBmASIokyCCsrdvncdB6FW8z5GH4mZnSr7FKJ3HzU/edit?usp=sharing)",
+        "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Random Forecaster app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. Students use an Activity Guide to go through the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps and answer a free-response question in the style of a Create performance task written response prompt. Student apps and written responses can be assessed using a provided rubric.",
+        "preparation": "* If time allows, try to build all or part of the Random Forecaster app yourself to understand the challenges involved\n* Review the debugging practices you intend to reinforce and resources you'll direct students towards as they get stuck\n* Review the Free-Response Supports and consider which, if any, supports are suitable for your classroom. \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-traversals-lessons-9-12/36481) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1V1LBmASIokyCCsrdvncdB6FW8z5GH4mZnSr7FKJ3HzU/edit?usp=sharing)",
         "student_overview": "Practice making an app that processes a list from a data set using traversal. "
       },
       "seeding_key": {
@@ -1577,13 +1577,36 @@
       }
     },
     {
-      "key": "6e3c35ee-439e-465f-a701-7a2a09a6c113",
+      "key": "b69cedbf-811e-4444-b9c7-369043261d08",
       "position": 1,
+      "properties": {
+        "description": "Great work on your Reminder app today. Before wrapping up, we will practice writing for the style of questions that are asked as part of the Create performance task on the AP exam. Respond to the question in Step 5 in your activity guide, and submit it along with your project.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b69cedbf-811e-4444-b9c7-369043261d08",
+        "lesson_activity.key": "17256873-d9ca-486e-b058-bb85b7048677"
+      }
+    },
+    {
+      "key": "b8b43be2-3a72-46bb-837b-8f0e8b5913b9",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Complete the written response in Step 5 of the Activity Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "b8b43be2-3a72-46bb-837b-8f0e8b5913b9",
+        "lesson_activity.key": "17256873-d9ca-486e-b058-bb85b7048677"
+      }
+    },
+    {
+      "key": "6e3c35ee-439e-465f-a701-7a2a09a6c113",
+      "position": 3,
       "properties": {
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Maximize Work Time:** The wrap up is short to allow the maximum amount of time for students to complete the activity. \n\n"
+            "markdown": "Each student, in every classroom, will come to the written response with a different level of comfort, ability, and familiarity with writing for these style of questions. As such, consider offering one or more of the following supports:\n\n[Writing Support](https://docs.google.com/document/d/1yviJRLtpeJSywP3GYPGiSE2Zag4GrSCl6MEmD064TpY/edit): Provide students with these sentence starters for guiding their response. \n\n[App Interface Support](https://docs.google.com/document/d/1fxuIM2dUclR-NdqKhGX8qlWAlMt8RCidEUeVmHXgUUY/edit#heading=h.yfilne4z9w4x): For students who did not fully complete their app, provide them with this snippet from the exemplar code.\n"
           }
         ]
       },
@@ -1593,23 +1616,17 @@
       }
     },
     {
-      "key": "b8b43be2-3a72-46bb-837b-8f0e8b5913b9",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Awesome work today! Make sure to submit your project when you're done with it!",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "b8b43be2-3a72-46bb-837b-8f0e8b5913b9",
-        "lesson_activity.key": "17256873-d9ca-486e-b058-bb85b7048677"
-      }
-    },
-    {
       "key": "5cc15990-ebb3-43e1-b100-eb2db22c03c5",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "Use the rubric provided with the project to assess student projects.",
-        "name": "Assessment: Make Project\r"
+        "name": "Assessment: Make Project\r",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Student responses can be used as a formative assessment to evaluate their understanding of connections between user interface features and functionality. Review their explanations for clarity, accuracy, and alignment with the AP exam’s expectations. The provided rubric can be used to guide this review, and to help provide students with feedback to guide their learning and improvement."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5cc15990-ebb3-43e1-b100-eb2db22c03c5",
@@ -2260,13 +2277,26 @@
       }
     },
     {
-      "key": "712be287-6b75-41dd-bd00-ae1494585612",
+      "key": "60a038ff-e15c-450a-8ceb-61d93e17d73c",
       "position": 1,
       "properties": {
+        "description": "Great work on your Lock Screen Maker app today. Before wrapping up, we will practice writing for the style of questions that are asked as part of the Create performance task on the AP exam. Respond to the question in Step 5 in your activity guide, and submit it along with your project. \n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "60a038ff-e15c-450a-8ceb-61d93e17d73c",
+        "lesson_activity.key": "894ffad0-ca1d-43d4-88da-2207ec49205d"
+      }
+    },
+    {
+      "key": "712be287-6b75-41dd-bd00-ae1494585612",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Complete the written response in Step 5 of the Activity Guide.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Maximize Work Time:** The wrap up is short to allow the maximum amount of time for students to complete the activity. \r\n\r\n"
+            "markdown": "Each student, in every classroom, will come to the written response with a different level of comfort, ability, and familiarity with writing for these style of questions. As such, consider offering one or more of the following supports:\n\n[Writing Support](https://docs.google.com/document/d/12e2cyLJFKMa3DSBqlaF2PAhBCznMD4rbY-bAnRk0qPY/edit?usp=sharing): Provide students with these sentence starters for guiding their response. \n\n[App Interface Support](https://docs.google.com/document/d/1UYfg5T360it74GfJFMnkx-hpUNriNXoDyJ73IEF-khE/edit?usp=sharing): For students who did not fully complete their app, provide them with this snippet from the exemplar code.\n"
           }
         ]
       },
@@ -2276,23 +2306,28 @@
       }
     },
     {
-      "key": "60a038ff-e15c-450a-8ceb-61d93e17d73c",
-      "position": 2,
+      "key": "367cc27d-5cdb-44a7-80b3-10fcbb8e0be9",
+      "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Awesome work today! Make sure to submit your project when you're done with it!\n",
-        "remarks": true
+        "description": "---"
       },
       "seeding_key": {
-        "activity_section.key": "60a038ff-e15c-450a-8ceb-61d93e17d73c",
+        "activity_section.key": "367cc27d-5cdb-44a7-80b3-10fcbb8e0be9",
         "lesson_activity.key": "894ffad0-ca1d-43d4-88da-2207ec49205d"
       }
     },
     {
       "key": "df7c4cd9-0638-4e57-bc34-0b9d6c5d7201",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "Use the rubric provided with the project to assess student projects.",
-        "name": "Assessment: Make Project\r"
+        "name": "Assessment: Make Project\r",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Student responses can be used as a formative assessment to evaluate their understanding of connections between user interface features and functionality. Review their explanations for clarity, accuracy, and alignment with the AP exam’s expectations. The provided rubric can be used to guide this review, and to help provide students with feedback to guide their learning and improvement."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "df7c4cd9-0638-4e57-bc34-0b9d6c5d7201",
@@ -2713,14 +2748,8 @@
       "key": "7dad4d0f-b365-4aae-afda-38026a0336cf",
       "position": 1,
       "properties": {
-        "description": "Awesome work today! Make sure to submit your project when you're done with it!",
-        "remarks": true,
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Maximize Work Time:** The wrap up is short to allow the maximum amount of time for students to complete the activity.\r\n"
-          }
-        ]
+        "description": "Great work on your Random Forecaster app today. Before wrapping up, we will practice writing for the style of questions that are asked as part of the Create performance task on the AP exam. Respond to the question in Step 5 in your activity guide, and submit it along with your project.",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "7dad4d0f-b365-4aae-afda-38026a0336cf",
@@ -2728,8 +2757,25 @@
       }
     },
     {
-      "key": "0dc7199c-78b0-49b3-ab85-c83ee1a559b6",
+      "key": "e79f7eb6-447b-44be-8eb4-df4784ea8edb",
       "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Complete the written response in Step 5 of the Activity Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Each student, in every classroom, will come to the written response with a different level of comfort, ability, and familiarity with writing for these style of questions. As such, consider offering one or more of the following supports:\n\n[Writing Support](https://docs.google.com/document/d/12vNNLoKCwvO3o0mwBjRDV1Pqrb-SjyJFV_9-xXZicMg/edit?usp=sharing): Provide students with these sentence starters for guiding their response. \n\n[App Interface Support](https://docs.google.com/document/d/1bCKr9hZhpLZlmO4s5xVW8KkpzHBYq74VKFdxHx8urjk/edit#heading=h.yfilne4z9w4x): For students who did not fully complete their app, provide them with this snippet from the exemplar code."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e79f7eb6-447b-44be-8eb4-df4784ea8edb",
+        "lesson_activity.key": "aa2ec2af-bcbb-4a4f-8f06-5ace40a5ec6a"
+      }
+    },
+    {
+      "key": "0dc7199c-78b0-49b3-ab85-c83ee1a559b6",
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -2740,10 +2786,16 @@
     },
     {
       "key": "b5b7a86f-462c-4538-815d-03eb0ccd1f1e",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "Use the rubric provided with the project to assess student projects.",
-        "name": "Assessment: Make Project"
+        "name": "Assessment: Make Project",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Student responses can be used as a formative assessment to evaluate their understanding of connections between user interface features and functionality. Review their explanations for clarity, accuracy, and alignment with the AP exam’s expectations. The provided rubric can be used to guide this review, and to help provide students with feedback to guide their learning and improvement."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b5b7a86f-462c-4538-815d-03eb0ccd1f1e",
@@ -3165,10 +3217,27 @@
       }
     },
     {
-      "key": "16023717-5e34-4ebf-9227-cf4240051e5b",
+      "key": "b18bb958-0c00-484b-b18e-c00335a2803e",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This (30 mins):** Students work silently to complete the Written Response. Students will need to take screenshots of code and insert those screenshots into the appropriate boxes in the Written Response. Students can check the Scoring Guidelines in the Planning Guide to make sure they are meeting all the requirements. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submit:** Students submit their project (one per group), Planning Guide (one per group), and Written Response (individual). \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share:** Now students display their projects on a computer and complete a gallery walk. If you decide to have a winner of the hackathon, students can vote on their favorite projects by writing down the name of the project on a sticky note and passing it in.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This (30 mins):** Students work silently to complete the Written Response. Students will need to take screenshots of code and insert those screenshots into the appropriate boxes in the Written Response. Students can check the Scoring Guidelines in the Planning Guide to make sure they are meeting all the requirements. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Each student, in every classroom, will come to the written response with a different level of comfort, ability, and familiarity with writing for these style of questions. As such, consider offering one or more of the following supports:\n\n[Writing Support](https://docs.google.com/document/d/1AH8ASUhjjgSgTjndQdg7Zp9l8d7nSVWWsYPQP8EdadE/edit?usp=sharing): Provide students with these sentence starters for guiding their response. \n\n[App Code Support](https://docs.google.com/document/d/11h_ILIUvFvYR0og28hy4n-QgRZd8ufQ_FQ6MJmdQt7I/edit?usp=sharing): For students who did not fully complete their app, provide them with this adaptation of the exemplar code."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b18bb958-0c00-484b-b18e-c00335a2803e",
+        "lesson_activity.key": "67cbf904-681e-4fa1-97d2-8fdf52ea8aa3"
+      }
+    },
+    {
+      "key": "16023717-5e34-4ebf-9227-cf4240051e5b",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submit:** Students submit their project (one per group), Planning Guide (one per group), and Written Response (individual). \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share:** Now students display their projects on a computer and complete a gallery walk. If you decide to have a winner of the hackathon, students can vote on their favorite projects by writing down the name of the project on a sticky note and passing it in.",
         "progression_name": "Hackathon Project"
       },
       "seeding_key": {
@@ -3178,7 +3247,7 @@
     },
     {
       "key": "553dbccb-a6df-48fb-837f-6af514959741",
-      "position": 6,
+      "position": 7,
       "properties": {
         "duration": "5",
         "name": "Wrap Up",
@@ -3196,7 +3265,7 @@
     },
     {
       "key": "9e6d452a-023a-44dd-9c17-ccc000210c10",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "Great work everyone on the Hackathon Project! It's amazing how much you were able to accomplish in a short amount of time.And now, the moment that everyone has been waiting for. I have tallied up the votes and the winner is...\n\n",
         "remarks": true
@@ -3208,7 +3277,7 @@
     },
     {
       "key": "35198ac4-9ea9-4f76-89f0-f7aac64c3946",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "---"
       },
@@ -3219,7 +3288,7 @@
     },
     {
       "key": "af6825e3-5651-4ac5-9bb8-765bf0d58424",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "####Assessment: Grading the Project\n\n**Project:** Use the Scoring Guidelines on the final page of the Planning Guide to assess student projects. The Written Response portion is individual, while the Overall Project portion is a group grade.\n\n---"
       },
@@ -3230,7 +3299,7 @@
     },
     {
       "key": "6c29dd1c-62a3-438d-8bf8-ff68ebbb9fc2",
-      "position": 10,
+      "position": 11,
       "properties": {
         "progression_name": "End-of-Unit Survey"
       },
@@ -6315,6 +6384,42 @@
   ],
   "resources": [
     {
+      "name": "[EXEMPLAR] CSP Lists Make - Reminder App",
+      "url": "https://docs.google.com/document/d/1D4ieaYNuRK1S-TCcDSdo9yY85zosx_8uv4_8tGycCgI/edit",
+      "key": "_exemplar_csp_lists_make_-_reminder_app",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_csp_lists_make_-_reminder_app"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] CSP Loops Make - Lock Screen Maker App - Activity Guide",
+      "url": "https://docs.google.com/document/d/16TNOS62OKg4tUoG-9n19_Q9D8D-uEvozVd0ILa1mPOs/edit",
+      "key": "_exemplar_csp_loops_make_-_lock_screen_maker_app_-_activity_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_csp_loops_make_-_lock_screen_maker_app_-_activity_guide"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] CSP Traversals Make - Random Forecaster App - Activity Guide",
+      "url": "https://docs.google.com/document/d/1bZisMQUKVl3CYTCGyoupjb-MzgXvdQ15hEttDC6T6Kw/edit",
+      "key": "_exemplar_csp_traversals_make_-_random_forecaster_app_-_activity_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_csp_traversals_make_-_random_forecaster_app_-_activity_guide"
+      }
+    },
+    {
       "name": "All Resources",
       "url": "/s/csp6-2023/resources",
       "key": "all_resources_5",
@@ -6334,6 +6439,54 @@
       },
       "seeding_key": {
         "resource.key": "all_standards_5"
+      }
+    },
+    {
+      "name": "App Code Support - Loops Make",
+      "url": "https://docs.google.com/document/d/1UYfg5T360it74GfJFMnkx-hpUNriNXoDyJ73IEF-khE/edit?usp=sharing",
+      "key": "app_code_support_-_loops_make",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "app_code_support_-_loops_make"
+      }
+    },
+    {
+      "name": "App Code Support - Traversals Make",
+      "url": "https://docs.google.com/document/d/1bCKr9hZhpLZlmO4s5xVW8KkpzHBYq74VKFdxHx8urjk/edit?usp=sharing",
+      "key": "app_code_support_-_traversals_make",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "app_code_support_-_traversals_make"
+      }
+    },
+    {
+      "name": "App Code Support - Unit 6 Project - Hackathon",
+      "url": "https://docs.google.com/document/d/11h_ILIUvFvYR0og28hy4n-QgRZd8ufQ_FQ6MJmdQt7I/edit?usp=sharing",
+      "key": "app_code_support_-_unit_6_project_-_hackathon",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "app_code_support_-_unit_6_project_-_hackathon"
+      }
+    },
+    {
+      "name": "App Support - Lists Make",
+      "url": "https://docs.google.com/document/d/1fxuIM2dUclR-NdqKhGX8qlWAlMt8RCidEUeVmHXgUUY/edit#heading=h.yfilne4z9w4x",
+      "key": "app_support_-_lists_make",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "app_support_-_lists_make"
       }
     },
     {
@@ -6605,6 +6758,16 @@
       }
     },
     {
+      "name": "CSP Unit 6 - Slides",
+      "url": "https://docs.google.com/presentation/d/1l_mpNKjAK73OlGNpll-0fWEPnsHaP3YeLffqHKN9oPE/template/preview",
+      "key": "csp_unit_6_-_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_6_-_slides"
+      }
+    },
+    {
       "name": "Customize Make Lessons: How-To-Guide",
       "url": "https://docs.google.com/document/d/1K33HqvpPwb8BYX7mvFD7m2d17RSGD7ASEG4UUA0ajOM/edit?usp=sharing",
       "key": "customize_make_lessons_how-to-guide",
@@ -6627,6 +6790,18 @@
       },
       "seeding_key": {
         "resource.key": "data_tab_in_app_lab"
+      }
+    },
+    {
+      "name": "FRQ  EXEMPLAR CSP Unit 6 Hackathon Project Written Response",
+      "url": "https://docs.google.com/document/d/1TjczEvy5Fb9HeRCvPfKB6kp4sFkea7PDyhSd-pjpL9g/edit?usp=sharing",
+      "key": "frq_exemplar_csp_unit_6_hackathon_project_written_response",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "frq_exemplar_csp_unit_6_hackathon_project_written_response"
       }
     },
     {
@@ -6666,18 +6841,6 @@
       }
     },
     {
-      "name": "Hackathon High Score Sample Written Responses",
-      "url": "https://docs.google.com/document/d/1HbpOLfJHCzWEJjOsoXhl2QKocIcs32G3iB-zzw0ddXc/edit?usp=sharing",
-      "key": "hackathon_high_score_sample_written_responses",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "hackathon_high_score_sample_written_responses"
-      }
-    },
-    {
       "name": "Hackathon Mid Score Sample App",
       "url": "https://studio.code.org/projects/applab/hGGs32BtXJMHnxpglngOa3XWPYHzy1obVNG9GYrgU5I",
       "key": "hackathon_mid_score_sample_app",
@@ -6699,18 +6862,6 @@
       },
       "seeding_key": {
         "resource.key": "hackathon_mid_score_sample_planning_guide_rubric"
-      }
-    },
-    {
-      "name": "Hackathon Mid Score Sample Written Responses",
-      "url": "https://docs.google.com/document/d/1CnpIoCRDR511Poisw9AWBs2_MZjYS4fKJGiqV_mIdss/edit?usp=sharing",
-      "key": "hackathon_mid_score_sample_written_responses",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "hackathon_mid_score_sample_written_responses"
       }
     },
     {
@@ -6886,6 +7037,54 @@
       "seeding_key": {
         "resource.key": "using_loops"
       }
+    },
+    {
+      "name": "Writing Support - Lists Make",
+      "url": "https://docs.google.com/document/d/1yviJRLtpeJSywP3GYPGiSE2Zag4GrSCl6MEmD064TpY/edit",
+      "key": "writing_support_-_lists_make",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "writing_support_-_lists_make"
+      }
+    },
+    {
+      "name": "Writing Support - Loops Make",
+      "url": "https://docs.google.com/document/d/12e2cyLJFKMa3DSBqlaF2PAhBCznMD4rbY-bAnRk0qPY/edit?usp=sharing",
+      "key": "writing_support_-_loops_make",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "writing_support_-_loops_make"
+      }
+    },
+    {
+      "name": "Writing Support - Traversals Make",
+      "url": "https://docs.google.com/document/d/12vNNLoKCwvO3o0mwBjRDV1Pqrb-SjyJFV_9-xXZicMg/edit?usp=sharing",
+      "key": "writing_support_-_traversals_make",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "writing_support_-_traversals_make"
+      }
+    },
+    {
+      "name": "Writing Support - Unit 6 Project - Hackathon",
+      "url": "https://docs.google.com/document/d/1AH8ASUhjjgSgTjndQdg7Zp9l8d7nSVWWsYPQP8EdadE/edit?usp=sharing",
+      "key": "writing_support_-_unit_6_project_-_hackathon",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "writing_support_-_unit_6_project_-_hackathon"
+      }
     }
   ],
   "lessons_resources": [
@@ -6958,6 +7157,18 @@
     {
       "seeding_key": {
         "lesson.key": "Lists Make",
+        "resource.key": "_exemplar_csp_lists_make_-_reminder_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Make",
+        "resource.key": "app_support_-_lists_make"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Make",
         "resource.key": "csp_lists_make_-_reminder_app"
       }
     },
@@ -6971,6 +7182,12 @@
       "seeding_key": {
         "lesson.key": "Lists Make",
         "resource.key": "customize_make_lessons_how-to-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Make",
+        "resource.key": "writing_support_-_lists_make"
       }
     },
     {
@@ -7012,6 +7229,18 @@
     {
       "seeding_key": {
         "lesson.key": "Loops Make",
+        "resource.key": "_exemplar_csp_loops_make_-_lock_screen_maker_app_-_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Make",
+        "resource.key": "app_code_support_-_loops_make"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Make",
         "resource.key": "csp_loops_make_-_lock_screen_maker"
       }
     },
@@ -7029,8 +7258,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Loops Make",
+        "resource.key": "writing_support_-_loops_make"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Loops Practice",
         "resource.key": "csp_unit_6_-_lesson_7_-_loops_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Hackathon",
+        "resource.key": "app_code_support_-_unit_6_project_-_hackathon"
       }
     },
     {
@@ -7054,6 +7295,12 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Hackathon",
+        "resource.key": "frq_exemplar_csp_unit_6_hackathon_project_written_response"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Hackathon",
         "resource.key": "hackathon_high_score_sample_app"
       }
     },
@@ -7061,12 +7308,6 @@
       "seeding_key": {
         "lesson.key": "Project - Hackathon",
         "resource.key": "hackathon_high_score_sample_planning_guide_rubric"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Hackathon",
-        "resource.key": "hackathon_high_score_sample_written_responses"
       }
     },
     {
@@ -7084,13 +7325,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Hackathon",
-        "resource.key": "hackathon_mid_score_sample_written_responses"
+        "resource.key": "project_-_hackathon"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Hackathon",
-        "resource.key": "project_-_hackathon"
+        "resource.key": "writing_support_-_unit_6_project_-_hackathon"
       }
     },
     {
@@ -7126,6 +7367,18 @@
     {
       "seeding_key": {
         "lesson.key": "Traversals Make",
+        "resource.key": "_exemplar_csp_traversals_make_-_random_forecaster_app_-_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Make",
+        "resource.key": "app_code_support_-_traversals_make"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Make",
         "resource.key": "csp_traversals_make_-_random_forecaster_app"
       }
     },
@@ -7139,6 +7392,12 @@
       "seeding_key": {
         "lesson.key": "Traversals Make",
         "resource.key": "customize_make_lessons_how-to-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Make",
+        "resource.key": "writing_support_-_traversals_make"
       }
     },
     {
@@ -7164,6 +7423,12 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
+        "script.name": "csp6-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_unit_6_-_slides",
         "script.name": "csp6-2024"
       }
     },

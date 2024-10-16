@@ -40,7 +40,8 @@
       "shelves.png": "e6914ab9-d7ea-4017-8f79-2bed6a262658.png",
       "shelf.png": "572fdb44-1bea-4fbf-9e1e-b8a3aad3a99f.png"
     },
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T21:06:39.551+00:00\",\"changed\":[\"cloned from \\\"CSA U7L3-L7c_2023\\\"\"],\"cloned_from\":\"CSA U7L3-L7c_2023\"}]"

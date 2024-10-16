@@ -3,8 +3,6 @@ import React from 'react';
 
 import CodeDocLink from '@cdo/apps/templates/codeDocs/CodeDocLink';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 describe('CodeDocLink', () => {
   it('renders simple link when no blockName provided', () => {
     const wrapper = shallow(
@@ -16,11 +14,11 @@ describe('CodeDocLink', () => {
         showBlocks
       />
     );
-    expect(wrapper.find('TextLink').length).to.equal(1);
-    expect(wrapper.find('TextLink').first().props().href).to.equal(
+    expect(wrapper.find('TextLink').length).toBe(1);
+    expect(wrapper.find('TextLink').first().props().href).toBe(
       '/docs/applab/code'
     );
-    expect(wrapper.find('EmbeddedBlock').length).to.equal(0);
+    expect(wrapper.find('EmbeddedBlock').length).toBe(0);
   });
 
   it('renders embedded block if blockName provided', () => {
@@ -34,8 +32,8 @@ describe('CodeDocLink', () => {
         showBlocks
       />
     );
-    expect(wrapper.find('TextLink').length).to.equal(0);
-    expect(wrapper.find('EmbeddedBlock').length).to.equal(1);
+    expect(wrapper.find('TextLink').length).toBe(0);
+    expect(wrapper.find('EmbeddedBlock').length).toBe(1);
   });
 
   it('renders simple link if showBlocks is false', () => {
@@ -49,10 +47,10 @@ describe('CodeDocLink', () => {
         showBlocks={false}
       />
     );
-    expect(wrapper.find('TextLink').length).to.equal(1);
-    expect(wrapper.find('TextLink').first().props().href).to.equal(
+    expect(wrapper.find('TextLink').length).toBe(1);
+    expect(wrapper.find('TextLink').first().props().href).toBe(
       '/docs/spritelab/code'
     );
-    expect(wrapper.find('EmbeddedBlock').length).to.equal(0);
+    expect(wrapper.find('EmbeddedBlock').length).toBe(0);
   });
 });

@@ -57,7 +57,7 @@ class HomeController < ApplicationController
       if should_redirect_to_script_overview?
         redirect_to script_path(current_user.most_recently_assigned_script)
       else
-        redirect_to '/home'
+        redirect_to home_path
       end
     else
       redirect_to '/users/sign_in'
@@ -69,7 +69,6 @@ class HomeController < ApplicationController
   def home
     authenticate_user!
     init_homepage
-    @is_teacher_homepage = true
     render 'home/index'
   end
 
@@ -114,9 +113,6 @@ class HomeController < ApplicationController
 
     current_user_permissions = UserPermission.where(user_id: current_user.id).pluck(:permission)
     @homepage_data[:showStudentAsVerifiedTeacherWarning] = current_user.student? && current_user_permissions.include?(UserPermission::AUTHORIZED_TEACHER)
-
-    # DCDO Flag - show/hide Lock Section field - Can/Will be overwritten by DCDO.
-    @homepage_data[:showLockSectionField] = DCDO.get('show_lock_section_field', true)
 
     @force_race_interstitial = params[:forceRaceInterstitial]
     @force_school_info_confirmation_dialog = params[:forceSchoolInfoConfirmationDialog]

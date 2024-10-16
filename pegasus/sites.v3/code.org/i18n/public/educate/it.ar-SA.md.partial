@@ -126,7 +126,6 @@ theme: responsive
 | **لاستخدام محاكي الإنترنت**                                                         | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **لاستخدام معمل الويب**                                                             | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **لاستخدام زر المشاركة في Google Classroom**                                        | `https://apis.google.com`                                                                                  |
-| **لاستخدام مجموعات بيانات App Lab**                                                 | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## تفاصيل دعم الهاتف المحمول والكمبيوتر اللوحي
 

@@ -1346,6 +1346,18 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal level.localized_teacher_markdown, "actual translated markdown"
   end
 
+  test 'get_validations returns validations for level' do
+    level = create :level, name: 'test_level', properties: {validations: 'test validations'}
+
+    assert_equal 'test validations', level.get_validations
+  end
+
+  test 'get_validations returns nil if there are no validations' do
+    level = create :level, name: 'test_level'
+
+    assert_equal nil, level.get_validations
+  end
+
   describe '#available_callouts' do
     let(:available_callouts) {level.available_callouts(script_level)}
 

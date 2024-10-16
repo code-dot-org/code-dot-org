@@ -22,7 +22,7 @@ free_play_level_urls = {
 When /^I check that the (blockly|droplet|minecraft) free play level for "([^"]*)" shows the finish button for (small|mobile) screens/i do |level_type, level_name, screen_type|
   individual_steps <<-STEPS
     And I set up the #{level_type} free play level for "#{level_name}"
-    #{screen_type == 'small' ? 'And I change the browser window size to 1366 by 636' : ''}
+    #{screen_type == 'small' ? 'And I change the browser window size to 1366 by 727' : ''}
     #{level_type == 'minecraft' ? 'And I wait until the Minecraft game is loaded' : ''}
     And I press "runButton"
     And I check that selector "button:contains('Finish')" is in the viewport
@@ -32,7 +32,7 @@ end
 When /^I set up the (blockly|droplet|minecraft) free play level for "([^"]*)"/i do |level_type, level_name|
   individual_steps <<-STEPS
     And I am on "#{free_play_level_urls[level_type][level_name]}"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I bypass the age dialog
     And I close the instructions overlay if it exists
   STEPS

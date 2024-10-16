@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'firebase'
 
 class DatasetsControllerTest < ActionController::TestCase
   setup do

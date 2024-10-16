@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-24T18:10:47.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Line Graphs, Formulas, and Movies! Oh My!",
+    "display_name": "Movies!",
+    "long_instructions": "This data contains information about 2000 movies. Explore the data and answer the data questions:\r\n\r\n- How has the number of movies released annually changed over the past century?\r\n- Can we predict future trends in movie releases based on past data?\r\n- What does the trend behind the rate of movies released each year tell us?\r\n\r\n\r\n#####[CODAP Link](https://codap.concord.org/releases/latest/static/dg/en/cert/index.html?url=https://concord-consortium.github.io/codap-data/SampleDocs/LanguageArts/Movie_Characters/Movie_Characters.codap#)\r\n\r\nDo This\r\n#####1. Create a new collection based on the “year” and a new attribute showing the total of movies released yearly.\r\n\r\n<details><summary><strong>🔎 Expand me for help 🔎</strong></summary>\r\n\r\n- Drag the “year” attribute to the far left to create a new collection\r\n- Click the grey “+” icon to add a new attribute titled “Yearly Totals”\r\n- Click on the “Yearly Totals” attribute and select “Edit formula”\r\n- Add the “count()” function and click “Apply”\r\n</details>\r\n\r\n#####2. Add a graph to the workspace and the appropriate attributes that you think might be helpful to answer the three data questions above.\r\n\r\n\r\n<details><summary><strong>🔎 Expand me for help 🔎</strong></summary>\r\n\r\n- Add the “year” attribute to the x-axis. \r\n- Add the “Yearly Totals” attribute to the y-axis\r\n- Click on the “Measure” icon in the graph toolbar and select “Connecting Lines”\r\n- You should be able to answer all three questions using this line graph!\r\n</details>\r\n",
+    "teacher_markdown": "\r\n![](https://images.code.org/4455cf7ada5d06efa89f03ac4b528b3d-image-1721844601459.png)\r\n\r\nExample student responses:\r\n\r\nHow has the number of movies released annually changed over the past century?\r\n- Over the last century, the number of movies released each year has generally gone up. There was a huge increase starting around the 1980s, and it kept going up fast until around 2010, then it got a bit rocky but mostly stayed high.\r\n\r\nCan we predict future trends in movie releases based on past data?\r\n- Yeah, I think we can predict future trends by looking at how things have gone before. Since the number of movies usually goes up over time, except for a few big drops, it's likely it will keep increasing, but maybe at a slower rate if it follows the pattern from the last few years.\r\n\r\nWhat does the trend behind the rate of movies released each year tell us?\r\n- The trend shows that more and more movies have been coming out every year, especially with new technology making it easier to make and share movies. But, the big drop around 2020 shows that unexpected events like the pandemic can really hit the movie industry hard.\r\n",
+    "bubble_choice_description": "Can you add a formula to the data to create a line graph to answer questions about movies?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "thumbnail_url": "https://images.code.org/7fd55782a5029c7648e5075de10fd10c-777242.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-24 18:10:50 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-24 18:25:34 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

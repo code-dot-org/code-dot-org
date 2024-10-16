@@ -147,7 +147,6 @@ module ScriptConstants
       HOC_ENCRYPTION_NAME = 'hoc-encryption'.freeze,
       TEXT_COMPRESSION_NAME = 'text-compression'.freeze,
       BASKETBALL_NAME = 'basketball'.freeze,
-      SPORTS_NAME = 'sports'.freeze,
       HOC_NAME = 'hourofcode'.freeze, # 2014 hour of code
       DANCE_PARTY_NAME = 'dance'.freeze, # 2018 hour of code
       DANCE_PARTY_EXTRAS_NAME = 'dance-extras'.freeze, # 2018 hour of code
@@ -244,6 +243,15 @@ module ScriptConstants
     CSC_MAPPINGLANDMARKS_2023_NAME = 'csc-mappinglandmarks-2023'.freeze,
   ].freeze
 
+  TRANSLATABLE_PD_PL_UNITS = [
+    K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
+    K5_ONLINEPD_2023 = 'k5-onlinepd-2023'.freeze,
+    K5_ONLINEPD = 'K5-OnlinePD'.freeze,
+    KODEA_PD_2021 = 'kodea-pd-2021'.freeze,
+    SELF_PACED_PL_K5_2024_1 = 'self-paced-pl-k5-2024-1'.freeze,
+    SELF_PACED_PL_K5_2024_2 = 'self-paced-pl-k5-2024-2'.freeze,
+  ].freeze
+
   ADDITIONAL_I18N_UNITS = [
     APPLAB_1HOUR = 'applab-1hour'.freeze,
     APPLAB_2HOUR = 'applab-2hour'.freeze,
@@ -266,12 +274,11 @@ module ScriptConstants
     POEM_ART = 'poem-art'.freeze,
     POETRY_HOC3 = 'poetry-hoc3'.freeze,
     VIGENERE = 'vigenere'.freeze,
-    K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
-    K5_ONLINEPD = 'K5-OnlinePD'.freeze,
-    KODEA_PD_2021 = 'kodea-pd-2021'.freeze,
     ALLTHETHINGS = 'allthethings'.freeze,
     COMPUTER_VISION = 'computer-vision'.freeze,
+    FOUNDATIONS_GEN_AI = 'foundations-gen-ai-2024'.freeze,
     CSD2_2024 = 'csd2-2024'.freeze,
+    K5_UNPLUGGED = 'k5-unplugged'.freeze
   ]
 
   DEFAULT_VERSION_YEAR = '2017'
@@ -330,6 +337,7 @@ module ScriptConstants
     *CATEGORIES[:twenty_hour],
     *ADDITIONAL_I18N_UNITS,
     *TRANSLATEABLE_CSC_UNITS,
+    *TRANSLATABLE_PD_PL_UNITS,
     JIGSAW_NAME,
   ].freeze
 

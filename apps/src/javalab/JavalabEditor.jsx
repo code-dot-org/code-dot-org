@@ -15,8 +15,8 @@ import {
   darkMode,
   lightMode,
 } from '@cdo/apps/lab2/views/components/editor/editorThemes';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import javalabMsg from '@cdo/javalab/locale';
 import i18n from '@cdo/locale';
 

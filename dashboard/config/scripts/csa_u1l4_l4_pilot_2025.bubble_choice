@@ -1,0 +1,9 @@
+name 'CSA U1L4-L4_pilot-2025'
+display_name 'Practice: Painter Class Methods'
+description 'Use the methods in the `Painter` class to navigate around The Neighborhood.'
+
+sublevels
+level 'CSA U1L4-L4a_pilot-2025'
+level 'CSA U1L4-L4b_pilot-2025'
+level 'CSA U1L4-L4c_pilot-2025'
+level 'CSA U1L4-L4d_pilot-2025'

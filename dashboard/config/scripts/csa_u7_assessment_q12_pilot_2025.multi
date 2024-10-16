@@ -1,0 +1,48 @@
+name 'CSA U7 Assessment q12_pilot-2025'
+
+wrong '`recurMethod("aa")`'
+wrong '`recurMethod("aba")`'
+right '`recurMethod("abc")`'
+wrong '`recurMethod("bba")`'
+wrong '`recurMethod("cba")`'
+
+markdown <<MARKDOWN
+Consider the following recursive method.
+
+```
+public static boolean recurMethod(String str) {
+  if (str.length() <= 1) {
+    return true;
+  } else if (str.substring(0, 1).compareTo(str.substring(1, 2)) < 0) {
+    return recurMethod(str.substring(1));
+  } else {
+    return false;
+  }
+}
+```
+
+Which of the following method calls will return `true`?
+MARKDOWN
+
+allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+The `recurMethod` function checks if the `String` is in increasing lexicographical order. It does this by comparing each character in the `String` with the next one. If at any point, a character is not less than (i.e., does not come before in the alphabet) the following character, it immediately returns `false`. If it manages to check the entire `String` without returning `false`, it returns `true`.
+
+Here's how it works:
+
+1. If the `String` has length `1` or less, it returns `true`.
+
+2. It compares the first character of the `String` with the second one. If the first character comes before the second one in lexicographical order, it calls itself recursively on the `String` obtained by removing the first character. If the first character does not come before the second one, it returns `false`.
+
+For the method call `recurMethod("abc")`, here is the sequence of operations:
+
+1. The first character `"a"` comes before the second character `"b"` in the alphabet, so the function calls itself on `"bc"`.
+
+2. The first character `"b"` of `"bc"` comes before the second character `"c"`, so the function calls itself on `"c"`.
+
+3. `"c"` has length `1`, so the function returns `true`.
+
+Since all the recursive calls return `true`, the original call `recurMethod("abc")` also returns `true`.
+
+On the other hand, if the `String` were `"acb"`, for example, the function would return `false`, because `"a"` does not come before `"c"` in the alphabet.
+MARKDOWN

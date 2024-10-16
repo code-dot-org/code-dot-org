@@ -64,7 +64,6 @@
     "long_instructions": "# Medical App\r\n\r\nCreate an app that uses the `ledScreen` that could be used in a medical setting. For example, the app could ask the user to enter information about how they are feeling and then help them decide if they need medical attention by blinking or making sounds in a certain way.\r\n\r\nYou may not be able to create the \"perfect\" app yet, but you can develop a **prototype** which shows the general idea of the app and some of the basic features behind how it could work.",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20396,
-    "name_suffix": "_mb_2024",
     "reference_links": [
       "/courses/csd-2022/guides/responding-to-user-input",
       "/courses/csd-2022/guides/producing-output",

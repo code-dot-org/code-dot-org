@@ -55,7 +55,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "_This level follows a video that you may have watched with your class. If you missed the video, you can watch it in the Help and Tips tab of this level._\r\n\r\n# Functions with Parameters\r\n\r\nThis app has a new set of aliens who want to communicate in their alien language! When we click an alien, a message should appear on the top and bottom of the app and scrolling across the micro:bit. We can use a function with **parameters** to make it easier to update all of these places at once.\r\n\r\nThe `alienMessage` function has already been defined with a **parameter** called `text`. One alien has already been setup - it calls `alienMessage(\"Hello! I'm an alien!\")` to display a message on the screen and the micro:bit. We need to make the other aliens say something too!\r\n\r\n## Do This\r\n1) Inside each [`onEvent()`(#fff176)](/docs/applab/onEvent/): drag out a [`myFunction(n)`(#68D995)](/docs/applab/callMyFunction_n/) block\r\n2) Replace the function name with `alienMessage`\r\n3) Replace the **parameter** with the message you want the aliens to say. For example: `\"We come in peace!\"`, `\"I just flew in and my arms are tired!\"`, etc.\r\n\r\n**Run Your Code!** Verify that the messages change to match each alien!",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

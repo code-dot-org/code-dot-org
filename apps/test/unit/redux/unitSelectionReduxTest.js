@@ -6,15 +6,13 @@ import unitSelection, {
 } from '@cdo/apps/redux/unitSelectionRedux';
 import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
-import {assert} from '../../util/reconfiguredChai';
-
 describe('unitSelectionRedux', () => {
   const initialState = unitSelection(undefined, {});
 
   it('if no scriptId then defaults to first unit of first course version', () => {
     const action = setCoursesWithProgress(fakeCoursesWithProgress);
     const nextState = unitSelection(initialState, action);
-    assert.deepEqual(nextState.scriptId, 2);
+    expect(nextState.scriptId).toEqual(2);
   });
 
   describe('getSelectedScriptName', () => {
@@ -25,7 +23,7 @@ describe('unitSelectionRedux', () => {
           coursesWithProgress: fakeCoursesWithProgress,
         },
       };
-      assert.equal(getSelectedScriptName(state), 'csd1-2018');
+      expect(getSelectedScriptName(state)).toEqual('csd1-2018');
     });
 
     it('returns null if no script is selected', () => {
@@ -35,7 +33,7 @@ describe('unitSelectionRedux', () => {
           coursesWithProgress: fakeCoursesWithProgress,
         },
       };
-      assert.equal(getSelectedScriptName(state), null);
+      expect(getSelectedScriptName(state)).toEqual(null);
     });
   });
 
@@ -47,7 +45,9 @@ describe('unitSelectionRedux', () => {
           coursesWithProgress: fakeCoursesWithProgress,
         },
       };
-      assert.equal(getSelectedScriptDescription(state), 'Make a flappy game!');
+      expect(getSelectedScriptDescription(state)).toEqual(
+        'Make a flappy game!'
+      );
     });
 
     it('returns null if no script is selected', () => {
@@ -57,7 +57,7 @@ describe('unitSelectionRedux', () => {
           coursesWithProgress: fakeCoursesWithProgress,
         },
       };
-      assert.equal(getSelectedScriptDescription(state), null);
+      expect(getSelectedScriptDescription(state)).toEqual(null);
     });
   });
 
@@ -65,7 +65,7 @@ describe('unitSelectionRedux', () => {
     it('sets the script id', () => {
       const action = setScriptId(130);
       const nextState = unitSelection(initialState, action);
-      assert.deepEqual(nextState.scriptId, 130);
+      expect(nextState.scriptId).toEqual(130);
     });
   });
 });

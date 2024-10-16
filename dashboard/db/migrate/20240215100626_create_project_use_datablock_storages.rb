@@ -1,6 +1,4 @@
-# TODO: post-firebase-cleanup, drop this table: #56994
-#
-# This is a temporary table that allows some projects to be in Firebase, and some
+# This is a temporary table that allows some projects to be in F*rebase, and some
 # to be in Datablock storage. Once all projects migrated to Datablock storage,
 # we can remove this table.
 class CreateProjectUseDatablockStorages < ActiveRecord::Migration[6.0]

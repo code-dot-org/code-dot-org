@@ -98,13 +98,15 @@ class Blockly < Level
       # Karel
       "farmer", "farmer_night", "bee", "bee_night", "collector", "harvester", "planter",
       # Spelling Bee
-      "letters"
+      "letters",
+      # Artist
+      "artist", "artist_zombie", "elsa", "anna"
     ]
   end
 
   def uses_google_blockly?
     skin = properties['skin']
-    self.class.migrated_skins.include?(skin) && DCDO.get('maze_sw_google_blockly', true)
+    self.class.migrated_skins.include?(skin)
   end
 
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil)
@@ -867,7 +869,7 @@ class Blockly < Level
 
   def self.asset_host_prefix
     host = ActionController::Base.asset_host
-    (host.blank?) ? "" : "//#{host}"
+    host.blank? ? "" : "//#{host}"
   end
 
   # If true, don't autoplay videos before this level (but do keep them in the

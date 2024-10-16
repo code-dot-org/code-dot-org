@@ -34,14 +34,14 @@ import {makeDisabledConfig} from '../dropletUtils';
 import executionLog from '../executionLog';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import JsInterpreterLogger from '../JsInterpreterLogger';
-import {MB_API} from '../lib/kits/maker/boards/microBit/MicroBitConstants';
-import * as makerToolkitRedux from '../lib/kits/maker/redux';
-import * as makerToolkit from '../lib/kits/maker/toolkit';
 import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
 import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
 import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
 import * as apiTimeoutList from '../lib/util/timeoutList';
 import logToCloud from '../logToCloud';
+import {MB_API} from '../maker/boards/microBit/MicroBitConstants';
+import * as makerToolkitRedux from '../maker/redux';
+import * as makerToolkit from '../maker/toolkit';
 import {getStore} from '../redux';
 import {setStepSpeed} from '../redux/runState';
 import {add as addWatcher} from '../redux/watchedExpressions';
@@ -53,11 +53,7 @@ import {
   updateTableRecords,
   setLibraryManifest,
 } from '../storage/redux/data';
-import {
-  initStorage,
-  isFirebaseStorage,
-  DATABLOCK_STORAGE,
-} from '../storage/storage';
+import {initStorage, DATABLOCK_STORAGE} from '../storage/storage';
 import {singleton as studioApp} from '../StudioApp';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 import {shouldOverlaysBeVisible} from '../templates/VisualizationOverlay';
@@ -120,7 +116,6 @@ consoleApi.setClearMethod(Applab.clear);
 
 var level;
 var skin;
-var copyrightStrings;
 
 //TODO: Make configurable.
 studioApp().setCheckForEmptyBlocks(true);
@@ -235,10 +230,9 @@ function renderFooterInSharedGame() {
 
   ReactDOM.render(
     <SmallFooter
-      i18nDropdown={''}
+      i18nDropdownInBase={false}
       privacyPolicyInBase={false}
       copyrightInBase={false}
-      copyrightStrings={copyrightStrings}
       baseMoreMenuString={commonMsg.builtOnCodeStudio()}
       rowHeight={applabConstants.FOOTER_HEIGHT}
       style={{fontSize: 18}}
@@ -372,7 +366,6 @@ Applab.initReadonly = function (config) {
   // we can ensure that the blocks are appropriately modified for this level
   skin = config.skin;
   level = config.level;
-  copyrightStrings = config.copyrightStrings;
   config.appMsg = applabMsg;
   loadLevel();
 
@@ -436,7 +429,6 @@ Applab.init = function (config) {
   skin.winAvatar = null;
   skin.failureAvatar = null;
   level = config.level;
-  copyrightStrings = config.copyrightStrings;
   Applab.user = {
     labUserId: config.labUserId,
     isSignedIn: config.isSignedIn,
@@ -819,24 +811,7 @@ async function initDataTab(levelOptions) {
           // We don't know what this table is, we should just skip it.
           console.warn(`unknown table ${table}`);
         } else {
-          // TODO: post-firebase-cleanup, remove this conditional when we're done with firebase: #56994
-          if (isFirebaseStorage()) {
-            if (datasetInfo.current) {
-              Applab.storage.addCurrentTableToProject(
-                table,
-                () => console.log('success'),
-                outputError
-              );
-            } else {
-              Applab.storage.copyStaticTable(
-                table,
-                () => console.log('success'),
-                outputError
-              );
-            }
-          } else {
-            Applab.storage.addSharedTable(table);
-          }
+          Applab.storage.addSharedTable(table);
         }
       });
     }
@@ -874,12 +849,7 @@ function setupReduxSubscribers(store) {
       (isDataMode && view !== lastView) ||
       changedToDataMode(state, lastState)
     ) {
-      loadDataForView(
-        Applab.storage,
-        state.data.view,
-        lastState.data.tableName,
-        state.data.tableName
-      );
+      loadDataForView(Applab.storage, state.data.view, state.data.tableName);
     }
 
     const lastIsPreview = lastState.data && lastState.data.isPreviewOpen;

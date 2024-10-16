@@ -1,0 +1,79 @@
+name 'self-paced-pl-gen-ai-customizing_14_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lessons 5-7: Retrieval
+
+#### Lessons 5 through 7 help students develop an understanding of **retrieval**. Take some time to review these lesson plans.
+
+## Lesson Overviews
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 5: Retrieval - Exploration</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/ed33d52d1e8715c0cdc2e3ea53048e2d-Screenshot 2024-08-30 at 2.46.04 PM.png" alt="The Activity Guide for Unit 2 Lesson 5 directing students through the mini project" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** How can we update the information in a chatbot?
+
+#### **Lesson Overview:**
+
+#### This Explore lesson introduces the concept of retrieval and guides students through an investigation on how it impacts a chatbot's behavior. Students start by predicting and discussing how retrieval can impact a chatbot’s behavior, and then investigate and modify existing chatbots to confirm or expand their initial guesses. Through guided activities, they will learn how adding specific information to a chatbot’s knowledge base can significantly improve the accuracy and relevance of its responses. Students will practice adding retrieval information to elicit specific responses from the AI and engage in activities that incorporate personal experiences to see the effect of their retrieval on how the chatbot functions.
+
+#### **Students will be able to:**
+* #### Explain how retrieval allows chatbots to access updated information
+* #### Modify chatbot responses by adding and removing retrieval statements
+
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/16" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 6: Retrieval - Practice</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/d6d370b326a34bdf8918ac33c69c6ef7-Screenshot 2024-10-04 at 2.57.09 PM.png" alt="The Activity Guide for Unit 2 Lesson 5 directing students through the mini project" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** When is retrieval most useful in solving a problem?
+
+#### **Lesson Overview:**
+
+#### This Practice lesson builds fluency in designing and applying retrieval statements, expanding the knowledge students developed in the previous lesson. Through examples and guided practice, students explore how retrieval can be used to provide current, specialized, and accurate information, helping to reduce the occurrence of AI hallucinations. Students apply these skills through practice scenarios simulating real-life use cases and user-stories, emphasizing the use of trusted real-world data sources (ie: copy-and-pasting accurate sentences) is an effective strategy to address real-world issues.
+
+#### **Students will be able to:**
+* #### Identify scenarios where retrieval is essential for updating chatbot information
+* #### Use retrieval to provide current, specialized, and accurate information to chatbots
+
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/17" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 7: Retrieval - Synthesis</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/dab35d579550056c346647f067ca351c-Screenshot 2024-10-04 at 2.59.43 PM.png" alt="The Activity Guide for Unit 2 Lesson 5 directing students through the mini project" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** How can we use retrieval and system prompting strategically to solve problems?
+
+#### **Lesson Overview:**
+
+#### This Synthesis lesson focuses on applying retrieval and system prompting to three complex user scenarios. Students begin by brainstorming and planning how to use these strategies to achieve user goals effectively. They will also explore methods for testing and evaluating chatbots to prevent potential harms. After planning, students will design chatbots tailored to each scenario, deciding strategically between using system prompts or retrieval. The lesson concludes with a reflection on the appropriate use of retrieval versus system prompting and revisits previous tasks, allowing students to apply their new insights to enhance their earlier work.
+
+#### **Students will be able to:**
+* #### Differentiate when to use retrieval versus system prompting to address specific chatbot tasks
+* #### Strategically combine retrieval and system prompting to solve complex problems with chatbots
+
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/18" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> There are some opportunities in these lessons to tie in the retrieval process to <strong>embeddings</strong> which were covered into the Foundations of Generative AI Unit.
+</p>
+</div>
+MARKDOWN

@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Hello World: Soccer", body: "Anda ialah ketua pasukan semasa anda mengekodkan adegan interaktif di padang bola sepak. GOOOLLL!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
-
-{{featured_tutorial, title: "Sports", body: "Adakan permainan bola keranjang atau campurkan dan padankan secara menyeluruh.", image: "/shared/images/courses/logo_tall_sports.jpg", url: "https://code.org/athletes" }}
-
-{{featured_tutorial, title: "Flappy Code", body: "Ingin menulis permainan anda sendiri dalam masa kurang dari 10 minit? Cuba tutorial Kod Flappy kami!", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
-
-{{featured_tutorial, title: "Minecraft Hour of Code", body: "Minecraft kembali untuk Hour of Code dengan aktiviti baharu! Perjalanan menerusi Minecraft dengan kod.", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

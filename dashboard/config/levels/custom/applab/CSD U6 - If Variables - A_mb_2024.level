@@ -78,7 +78,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "# Positivity App\r\n\r\nHawa is making a positivity app where people can track good deeds or positive statements they make throughout the day by pressing a button on the micro:bit. Each time they press a button, the heart grows a little bit in size. When the heart fills the box, a sound should play.\r\n\r\nHawa has already started the app, but needs help adding the variables and if-statements to her code.\r\n\r\n# Do This\r\n\r\n1. Add a variable called `size` as the first line of your code and set it to `30` ( [Show me where](#triggercallout=init_variable) )\r\n2. Add code inside your event that increases the `size` variable by 20 each time a button is pressed ( [Show me where](#triggercallout=increase_variable) )\r\n3. Add an if-statement that checks when the heart has reached a size of at least 300 pixels ( [Show me where](#triggercallout=if-statement) )\r\n4. Inside the if-statement: play a sound to let the user know they're reached their goal",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "true",
     "text_mode_at_start": "false",
     "encrypted": "false",

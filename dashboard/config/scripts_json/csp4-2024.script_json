@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-11 16:36:13 UTC",
+    "serialized_at": "2024-10-10 21:39:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -159,8 +159,8 @@
       "relative_position": 4,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Photo Liker app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. A progression of levels guides students on the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
-        "preparation": "* Review the different steps students will be asked to complete as they build the app\n* Review the information covered in the slides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-variables-lessons-1-4/36474) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1bPkVDFdJsQyphT29OOotUXa0lsZ7YHwXKQJhDfH3KZo/edit?usp=sharing)",
+        "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Photo Liker app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. A progression of levels guides students on the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps and answer a free-response question in the style of a Create performance task written response prompt. Student apps and written responses can be assessed using a provided rubric. \n",
+        "preparation": "* Review the different steps students will be asked to complete as they build the app\n* Review the information covered in the slides\n* Review the Free-Response Supports and consider which, if any, supports are suitable for your classroom. \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-variables-lessons-1-4/36474) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1bPkVDFdJsQyphT29OOotUXa0lsZ7YHwXKQJhDfH3KZo/edit?usp=sharing)",
         "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
         "student_overview": "Practice making an app that uses variables and programming patterns with variables."
       },
@@ -237,8 +237,8 @@
       "relative_position": 8,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Museum Ticket Generator app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. A progression of levels guides students on the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
-        "preparation": "* Review the different steps students will be asked to complete as they build the app\n* Review the information covered in the slides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-conditionals-lessons-5-8/36475) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1JliO9BylCTVvVy3_owFuiz99WyRcqiASq2RhjS4qFcs/edit?usp=sharing)",
+        "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Museum Ticket Generator app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. A progression of levels guides students on the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps and answer a free-response question in the style of a Create performance task written response prompt. Student apps and written responses can be assessed using a provided rubric.\n",
+        "preparation": "* Review the different steps students will be asked to complete as they build the app\n* Review the information covered in the slides\n* Review the Free-Response Supports and consider which, if any, supports are suitable for your classroom.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-conditionals-lessons-5-8/36475) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1JliO9BylCTVvVy3_owFuiz99WyRcqiASq2RhjS4qFcs/edit?usp=sharing)",
         "student_overview": "Practice making an app that uses conditionals and programming patterns with conditionals."
       },
       "seeding_key": {
@@ -294,8 +294,8 @@
       "relative_position": 11,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Quote Maker app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. Students use an Activity Guide to go through the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
-        "preparation": "* Review the Activity Guide to decide if you will use it with your students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-functions-lessons-9-11/36476) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1lAKM8HXduAdK1B7l8uWwp8v-Emaqk-eGHhZWfl_oAKI/edit?usp=sharing)",
+        "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Quote Maker app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. Students use an Activity Guide to go through the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps and answer a free-response question in the style of a Create performance task written response prompt. Student apps and written responses can be assessed using a provided rubric.",
+        "preparation": "* Review the Activity Guide to decide if you will use it with your students\n* Review the Free-Response Supports and consider which, if any, supports are suitable for your classroom.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-functions-lessons-9-11/36476) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1lAKM8HXduAdK1B7l8uWwp8v-Emaqk-eGHhZWfl_oAKI/edit?usp=sharing)",
         "student_overview": "Practice making an app that uses functions and programming patterns with functions."
       },
       "seeding_key": {
@@ -1899,6 +1899,7 @@
       "key": "2582b43c-7cb5-4ff8-b8ea-de502f8743e0",
       "position": 1,
       "properties": {
+        "description": "Great work on your Photo Liker app today. Before wrapping up, we will practice writing for the style of questions that are asked as part of the Create performance task on the AP exam. Respond to the question in Step 5 in your activity guide, and submit it along with your project. ",
         "remarks": true
       },
       "seeding_key": {
@@ -1907,8 +1908,41 @@
       }
     },
     {
-      "key": "5fe95b79-8326-4117-b795-5f23e4e66fd9",
+      "key": "b5890bd4-e0f2-4a67-9fcd-5cf11f356c75",
       "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Complete the written response in Step 5 of the Activity Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Each student, in every classroom, will come to the written response with a different level of comfort, ability, and familiarity with writing for these style of questions. As such, consider offering one or more of the following supports:\n\n[Writing Support](https://docs.google.com/document/d/10JLnOU2UfhP_ie1DclAEMOk0VgE-MsiBpLd85Np-d90/edit?usp=sharing): Provide students with these sentence starters for guiding their response. \n\n[App Interface Support](https://studio.code.org/s/csp4-2023/lessons/4/levels/1): For students who did not fully complete their app, direct them to the completed app in Level 1 in order to respond to the question "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b5890bd4-e0f2-4a67-9fcd-5cf11f356c75",
+        "lesson_activity.key": "0beaa135-6a90-4bc4-9bfd-757b37f368ef"
+      }
+    },
+    {
+      "key": "c97e93ea-0358-4bfd-96d9-6d3059970b6c",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Student responses can be used as a formative assessment to evaluate their understanding of connections between user interface features and functionality. Review their explanations for clarity, accuracy, and alignment with the AP exam’s expectations. The provided rubric can be used to guide this review, and to help provide students with feedback to guide their learning and improvement."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c97e93ea-0358-4bfd-96d9-6d3059970b6c",
+        "lesson_activity.key": "0beaa135-6a90-4bc4-9bfd-757b37f368ef"
+      }
+    },
+    {
+      "key": "5fe95b79-8326-4117-b795-5f23e4e66fd9",
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Awesome work today! Make sure to submit your project when you're done with it!",
         "tips": [
@@ -1924,8 +1958,18 @@
       }
     },
     {
+      "key": "acdb45fa-e07a-4493-8651-c6dcf88a477c",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "acdb45fa-e07a-4493-8651-c6dcf88a477c",
+        "lesson_activity.key": "0beaa135-6a90-4bc4-9bfd-757b37f368ef"
+      }
+    },
+    {
       "key": "cb258902-16a0-443a-954d-aa91fb93a16c",
-      "position": 3,
+      "position": 6,
       "properties": {
         "description": "---"
       },
@@ -1936,7 +1980,7 @@
     },
     {
       "key": "f136dbaa-24ba-42a9-99c1-11e2f796b0e0",
-      "position": 4,
+      "position": 7,
       "properties": {
         "description": "Use the rubric provided with the project to assess student projects.",
         "name": "Assessment: Make Project\r"
@@ -2386,13 +2430,7 @@
       "position": 1,
       "properties": {
         "description": "**Group:** It is recommended that students work in pairs for this lesson. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio, Lesson 7 Level 1. ",
-        "name": "Practice Time",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Optional Resource**: There is an activity guide available in the *Resources* section that contains all of the main tasks that students need to complete over the course of the four levels. The tasks and descriptions in this activity guide are identical to what is presented within the levels themselves. However, some students might benefit from this task list as they work on creating the practice app.  "
-          }
-        ]
+        "name": "Practice Time"
       },
       "seeding_key": {
         "activity_section.key": "d90383d2-f266-4096-a087-6924aa67deb3",
@@ -2591,7 +2629,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "<b>Create Perfomance Task Written Response Practice</b>\n</br>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n</br>\n\nSample Prompt: <i>Examine one procedure (function) that is used in your program. If there's an algorithm that employs relational operators, explain its functionality. If not, how could the inclusion of relational operators optimize or modify the outcome?</i>\n\n</br>\n\n<a href=\"https://docs.google.com/presentation/d/14Z9rmnb5jQVtq1i5-ut7mQDHIPTT7aoRjQnLId1ee68/edit#slide=id.g1ea2483b021_14_3\" target=\"_blank\">Unit Journal Template</a>\n\n<b>Sample Response for Instructors</b>\n\n"
+            "markdown": "<b>Create Perfomance Task Written Response Practice</b>\n</br>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n</br>\n\nSample Prompt: <i>Examine one procedure (function) that is used in your program. If there's an algorithm that employs relational operators, explain its functionality. If not, how could the inclusion of relational operators optimize or modify the outcome?</i>\n\n</br>\n\n<a href=\"https://docs.google.com/presentation/d/14Z9rmnb5jQVtq1i5-ut7mQDHIPTT7aoRjQnLId1ee68/edit#slide=id.g1ea2483b021_14_3\" target=\"_blank\">Unit Journal Template</a>\n\n"
           }
         ]
       },
@@ -2615,6 +2653,7 @@
       "key": "0f4e168d-d2ab-422c-81a5-37571932b6ec",
       "position": 3,
       "properties": {
+        "description": "Great work on your Museum Ticket Generator app today. Before wrapping up, we will be practicing writing for the style of questions that are asked as part of the Create performance task on the AP exam. Respond to the question in Step 5 in your activity guide, and submit it along with your project. ",
         "remarks": true
       },
       "seeding_key": {
@@ -2626,11 +2665,11 @@
       "key": "573d6292-d47c-4a84-8177-3168c563855a",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Awesome work today! Make sure to submit your project when you're done with it!",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Complete the written response in Step 5 of the Activity Guide.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Maximize Work Time:** The wrap up is short to allow the maximum amount of time for students to complete the activity. \r\n\r\n"
+            "markdown": "Each student, in every classroom, will come to the written response with a different level of comfort, ability, and familiarity with writing for these style of questions. As such, consider offering one or more of the following supports:\n\n[Writing Support](https://docs.google.com/document/d/1VPLkN8bQBTbbnOuemID0Vli1NEVPl4pcz7ZMniL6GPE/edit?usp=sharing): Provide students with these sentence starters for guiding their response. \n\n[App Code Support](https://docs.google.com/document/d/1Sk-Zc7ls0VMkjPu6H8e9Eee_Bei9kI7oWLpsNKA8eXI/edit#heading=h.rbww7f2ippqn): For students who did not fully complete their app, provide them with this snippet from the exemplar code."
           }
         ]
       },
@@ -2640,8 +2679,24 @@
       }
     },
     {
-      "key": "3b369530-69aa-4823-9b52-6d431c595b83",
+      "key": "1408e5ab-03c1-43d6-8074-b290f2f9c2a4",
       "position": 5,
+      "properties": {
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Student responses can be used as a formative assessment to evaluate their understanding of connections between user interface features and functionality. Review their explanations for clarity, accuracy, and alignment with the AP exam’s expectations. The provided rubric can be used to guide this review, and to help provide students with feedback to guide their learning and improvement"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1408e5ab-03c1-43d6-8074-b290f2f9c2a4",
+        "lesson_activity.key": "e0a000cd-28f7-4b6c-b406-2db893e01d19"
+      }
+    },
+    {
+      "key": "3b369530-69aa-4823-9b52-6d431c595b83",
+      "position": 6,
       "properties": {
         "description": "Use the rubric provided with the project to assess student projects.",
         "name": "Assessment: Make Project\r"
@@ -3109,6 +3164,8 @@
       "key": "8ce41a33-9d4f-4dc2-8c52-f27e1842851c",
       "position": 1,
       "properties": {
+        "description": "Great work on your Quote Maker app today. Before wrapping up, we will be practicing writing for the style of questions that are asked as part of the Create performance task on the AP exam. Respond to the question in Step 5 in your activity guide, and submit it along with your project. ",
+        "name": "Create Performance Task Written Response Practice",
         "remarks": true
       },
       "seeding_key": {
@@ -3120,11 +3177,11 @@
       "key": "01e0d20c-83a0-417e-888c-5e9f4587f576",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Awesome work today! Make sure to submit your project when you're done with it!",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Complete the written response in Step 5 of the Activity Guide.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Maximize Work Time:** The wrap up is short to allow the maximum amount of time for students to complete the activity. \r\n\r\n"
+            "markdown": "Each student, in every classroom, will come to the written response with a different level of comfort, ability, and familiarity with writing for these style of questions. As such, consider offering one or more of the following supports:\n\n[Writing Support](https://docs.google.com/document/d/1TQltrU_fmR1p4L08exbwbOouGJZSEed_6ll3mys3hI8/edit): Provide students with these sentence starters for guiding their response. \n\n[App Code Support](https://docs.google.com/document/d/17l4ADeprsCzSpJdSdU1MlnENiLh4kCEM3GhaJmjeUN8/edit?usp=drive_link): For students who did not fully complete their app, provide them with this snippet from the exemplar code."
           }
         ]
       },
@@ -3134,8 +3191,24 @@
       }
     },
     {
-      "key": "29c0b26c-7bb1-400c-ab50-e83e33dc9ac4",
+      "key": "a3edb4c7-daa0-4555-bdc2-151f61d46674",
       "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Student responses can be used as a formative assessment to evaluate their understanding of connections between user interface features and functionality. Review their explanations for clarity, accuracy, and alignment with the AP exam’s expectations. The provided rubric can be used to guide this review, and to help provide students with feedback to guide their learning and improvement."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a3edb4c7-daa0-4555-bdc2-151f61d46674",
+        "lesson_activity.key": "4694ff0b-a79b-4829-ba52-fa02e78c9664"
+      }
+    },
+    {
+      "key": "29c0b26c-7bb1-400c-ab50-e83e33dc9ac4",
+      "position": 4,
       "properties": {
         "description": "---"
       },
@@ -3146,7 +3219,7 @@
     },
     {
       "key": "1771725a-b49e-4021-afed-076982d1100d",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "Use the rubric provided with the project to assess student projects.",
         "name": "Assessment: Make Project\r"
@@ -3509,7 +3582,13 @@
       "key": "c76c8b9c-920d-46d2-a068-d7eb2093c665",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Reflection:** Complete the two reflection questions in the Planning Guide\n\n* **Question 1:** Provide a written response that:\n\t* describes the overall purpose of the program \n\t* describes the functionality of your app\n\t* describes the input and outputs of your app\n\t(Approx 150 words)\n\n* **Question 2:** This project was created using a development process that required you to incorporate the ideas of your partner and feedback from your classmates. Provide a written response that describes one part of your app that was improved through input from EITHER your partner or feedback you received from classmates. Include:\n\t* Who specifically provided the idea or recommendation\n\t* What their idea or recommendation was\n\t* The specific change you made to your app’s user interface or functionality in response to the recommendation\n\t* How you believe this change improved your app\n\t(Approx 150 words)\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Complete the written responses in Step 12 of the Project Guide. \n\n* **Question 1:** Your program includes a conditional statement that makes a decision based on certain criteria.\nExplain how the program determines which block of code to execute. What are the possible outcomes of this conditional statement, and how do they affect the program?\n\n\n* **Question 2:** Consider a procedure in your program that performs a specific task.\nExplain how this procedure helps manage the complexity of your program. Describe how using this procedure improves the organization of your code and makes it easier to modify or extend.\n\t\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Each student, in every classroom, will come to the written response with a different level of comfort, ability, and familiarity with writing for these style of questions. As such, consider offering one or more of the following supports:\n\n[Writing Support](https://docs.google.com/document/d/1xmNmw1oAjb-Xge7jnEx4Y3Y8XEBavpmZDoR7-BNRlaU/edit?usp=sharing): Provide students with these sentence starters for guiding their response. \n\n[App Interface Support](https://docs.google.com/document/d/17mdeB9YuU2X_MymLt7f05XmSVH8hvKGCzeaAdu0bJSA/edit?usp=sharing): For students who did not fully complete their app, direct them to the completed app in Level 1 in order to respond to the question"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c76c8b9c-920d-46d2-a068-d7eb2093c665",
@@ -7165,6 +7244,42 @@
   ],
   "resources": [
     {
+      "name": "[EXEMPLAR] CSP Conditionals Make - Museum Ticket Generator App",
+      "url": "https://docs.google.com/document/d/1iVw6sZg8bZjnID5w2stj1uwlhuQUHujs_9m_6N-JJ9w/edit?usp=sharing",
+      "key": "_exemplar_csp_conditionals_make_-_museum_ticket_generator_app",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_csp_conditionals_make_-_museum_ticket_generator_app"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] CSP Functions Make - Quote Maker App",
+      "url": "https://docs.google.com/document/d/1MJRGbKmSFoRoeALSh6M_24fUbz8BgHLuEuO-uK4fcbw/edit",
+      "key": "_exemplar_csp_functions_make_-_quote_maker_app",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_csp_functions_make_-_quote_maker_app"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] CSP Variables Make - Photo Liker App",
+      "url": "https://docs.google.com/document/d/1BxoCYj4pGGcOdZlaTw_aFt6yVTVSLk3udAE18lFfVzg/edit?usp=sharing",
+      "key": "_exemplar_csp_variables_make_-_photo_liker_app",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_csp_variables_make_-_photo_liker_app"
+      }
+    },
+    {
       "name": "All Resources",
       "url": "/s/csp4-2023/resources",
       "key": "all_resources_3",
@@ -7184,6 +7299,42 @@
       },
       "seeding_key": {
         "resource.key": "all_standards_3"
+      }
+    },
+    {
+      "name": "App Code Support - Museum Ticket Generator App",
+      "url": "https://docs.google.com/document/d/1Sk-Zc7ls0VMkjPu6H8e9Eee_Bei9kI7oWLpsNKA8eXI/edit",
+      "key": "app_code_support_-_museum_ticket_generator_app",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "app_code_support_-_museum_ticket_generator_app"
+      }
+    },
+    {
+      "name": "App Code Support - Quote Maker App",
+      "url": "https://docs.google.com/document/d/17l4ADeprsCzSpJdSdU1MlnENiLh4kCEM3GhaJmjeUN8/edit?usp=drive_link",
+      "key": "app_code_support_-_quote_maker_app",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "app_code_support_-_quote_maker_app"
+      }
+    },
+    {
+      "name": "App Code Support - Unit 4 Project - Decision Maker App",
+      "url": "https://docs.google.com/document/d/17mdeB9YuU2X_MymLt7f05XmSVH8hvKGCzeaAdu0bJSA/edit?usp=sharing",
+      "key": "app_code_support_-_unit_4_project_-_decision_maker_app",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "app_code_support_-_unit_4_project_-_decision_maker_app"
       }
     },
     {
@@ -7360,11 +7511,9 @@
     },
     {
       "name": "CSP Unit 4 - Slides",
-      "url": "https://docs.google.com/presentation/d/1Uttzztga2vML2eeC-MveCdVERbsoE5XvwZdavTd5JGU/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1sn4EE3dLf-zUyUJgl-qrBwytwCI_pSz4JUlepFJEg6k/template/preview",
       "key": "csp_unit_4_-_slides",
       "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp_unit_4_-_slides"
@@ -7742,6 +7891,18 @@
       }
     },
     {
+      "name": "Unit 4 - FRQ EXEMPLAR - CSP U4 Practice PT Planning Guide",
+      "url": "https://docs.google.com/document/d/19oKgBJqs3bGqTW2WoKklQ25kerGJy-oZ9XsbKDggtzI/edit?usp=sharing",
+      "key": "unit_4_-_frq_exemplar_-_csp_u4_practice_pt_planning_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "unit_4_-_frq_exemplar_-_csp_u4_practice_pt_planning_guide"
+      }
+    },
+    {
       "name": "Unit 4 Journal (Digital)",
       "url": "https://docs.google.com/presentation/d/14Z9rmnb5jQVtq1i5-ut7mQDHIPTT7aoRjQnLId1ee68/edit?usp=drive_link",
       "key": "unit_4_journal_digital_",
@@ -7799,6 +7960,42 @@
       },
       "seeding_key": {
         "resource.key": "variables_practice"
+      }
+    },
+    {
+      "name": "Writing Support - Museum Ticket Generator App",
+      "url": "https://docs.google.com/document/d/1VPLkN8bQBTbbnOuemID0Vli1NEVPl4pcz7ZMniL6GPE/edit",
+      "key": "writing_support_-_museum_ticket_generator_app",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "writing_support_-_museum_ticket_generator_app"
+      }
+    },
+    {
+      "name": "Writing Support - Quote Maker App",
+      "url": "https://docs.google.com/document/d/1TQltrU_fmR1p4L08exbwbOouGJZSEed_6ll3mys3hI8/edit?usp=drive_link",
+      "key": "writing_support_-_quote_maker_app",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "writing_support_-_quote_maker_app"
+      }
+    },
+    {
+      "name": "Writing Support - Unit 4 Project - Decision Maker App",
+      "url": "https://docs.google.com/document/d/1xmNmw1oAjb-Xge7jnEx4Y3Y8XEBavpmZDoR7-BNRlaU/edit?usp=sharing",
+      "key": "writing_support_-_unit_4_project_-_decision_maker_app",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "writing_support_-_unit_4_project_-_decision_maker_app"
       }
     }
   ],
@@ -7872,6 +8069,18 @@
     {
       "seeding_key": {
         "lesson.key": "Conditionals Make",
+        "resource.key": "_exemplar_csp_conditionals_make_-_museum_ticket_generator_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Make",
+        "resource.key": "app_code_support_-_museum_ticket_generator_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Make",
         "resource.key": "conditionals_make"
       }
     },
@@ -7885,6 +8094,12 @@
       "seeding_key": {
         "lesson.key": "Conditionals Make",
         "resource.key": "customize_make_lessons_how-to-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Make",
+        "resource.key": "writing_support_-_museum_ticket_generator_app"
       }
     },
     {
@@ -7968,6 +8183,18 @@
     {
       "seeding_key": {
         "lesson.key": "Functions Make",
+        "resource.key": "_exemplar_csp_functions_make_-_quote_maker_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Make",
+        "resource.key": "app_code_support_-_quote_maker_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Make",
         "resource.key": "csp_functions_make_-_quote_maker_app"
       }
     },
@@ -7987,6 +8214,12 @@
       "seeding_key": {
         "lesson.key": "Functions Make",
         "resource.key": "guide_to_make_lessons"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Make",
+        "resource.key": "writing_support_-_quote_maker_app"
       }
     },
     {
@@ -8011,6 +8244,12 @@
       "seeding_key": {
         "lesson.key": "Functions Practice",
         "resource.key": "guide_to_practice_lessons"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App",
+        "resource.key": "app_code_support_-_unit_4_project_-_decision_maker_app"
       }
     },
     {
@@ -8065,6 +8304,18 @@
       "seeding_key": {
         "lesson.key": "Project - Decision Maker App",
         "resource.key": "u4_mid_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App",
+        "resource.key": "unit_4_-_frq_exemplar_-_csp_u4_practice_pt_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App",
+        "resource.key": "writing_support_-_unit_4_project_-_decision_maker_app"
       }
     },
     {
@@ -8143,6 +8394,12 @@
       "seeding_key": {
         "lesson.key": "Variables Investigate",
         "resource.key": "variables_investigate"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Make",
+        "resource.key": "_exemplar_csp_variables_make_-_photo_liker_app"
       }
     },
     {

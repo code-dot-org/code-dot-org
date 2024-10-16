@@ -15,21 +15,15 @@ gem 'cgi', '~> 0.3.6'
 # see https://github.com/ruby/set/pull/2
 gem 'sorted_set'
 
-# Force HTTPS for github-source gems.
-# This is a temporary workaround - remove when bundler version is >=2.0
-# @see https://github.com/bundler/bundler/issues/4978
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
+gem 'mutex_m' # needed for httpclient in Ruby >= 3.4, drop explicit dep if we upgrade httpclient
+
+gem 'abbrev' # needed for activesupport in Ruby >= 3.4, drop explicit dep after we upgrade to activesupport >= 7.2
+gem 'drb' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
+gem 'observer' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
+gem 'syslog' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
 
 gem 'rails', '~> 6.1'
 gem 'rails-controller-testing', '~> 1.0.5'
-
-# Compile Sprockets assets concurrently in `assets:precompile`.
-# Ref: https://github.com/rails/sprockets/pull/470
-gem 'sprockets', github: 'code-dot-org/sprockets', ref: 'concurrent_asset_bundle_3.x'
-gem 'sprockets-rails', '3.3.0'
 
 # provide `respond_to` methods
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
@@ -97,6 +91,7 @@ group :development, :test do
   # For unit testing.
   gem 'webmock', '~> 3.8', require: false
 
+  gem 'faker', '~> 3.4', require: false
   gem 'fakeredis', require: false
   gem 'mocha', require: false
   gem 'timecop'
@@ -163,18 +158,14 @@ gem 'cancancan', '~> 3.5.0'
 gem 'devise', '~> 4.9.0'
 gem 'devise_invitable', '~> 2.0.2'
 
-# Ref: https://github.com/daynew/omniauth-clever/pull/1
-gem 'omniauth-clever', '~> 2.0.0', github: 'daynew/omniauth-clever', branch: 'clever-v2.1-upgrade'
+gem 'omniauth-clever', '~> 2.0.1', github: 'code-dot-org/omniauth-clever', tag: 'v2.0.1'
 gem 'omniauth-facebook', '~> 4.0.0'
 gem 'omniauth-google-oauth2', '~> 0.6.0'
 gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
-# Ref: https://github.com/joel/omniauth-windowslive/pull/16
-# Ref: https://github.com/joel/omniauth-windowslive/pull/17
-gem 'omniauth-windowslive', '~> 0.0.11', github: 'code-dot-org/omniauth-windowslive', ref: 'cdo'
 
 # Resolve CVE 2015 9284
 # see: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-9284
-gem 'omniauth-rails_csrf_protection', '~> 0.1'
+gem 'omniauth-rails_csrf_protection', '~> 1.0.2'
 
 gem 'bootstrap-sass', '~> 2.3.2.2'
 
@@ -184,13 +175,13 @@ gem 'jquery-ui-rails', '~> 6.0.1'
 
 gem 'nokogiri', '>= 1.10.0'
 
-gem 'highline', '~> 1.6.21'
+gem 'highline', '~> 3.1.0'
 
 gem 'honeybadger', '>= 4.5.6' # error monitoring
 
 gem 'newrelic_rpm', '~> 6.14.0', group: [:staging, :development, :production] # perf/error/etc monitoring
 
-gem 'redcarpet', '~> 3.5.1'
+gem 'redcarpet', '~> 3.6.0'
 
 gem 'geocoder'
 
@@ -229,10 +220,14 @@ gem 'active_model_serializers', '~> 0.10.13'
 
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
+gem 'aws-sdk-applicationautoscaling'
+gem 'aws-sdk-autoscaling'
+gem 'aws-sdk-bedrockagentruntime', '~> 1.10.0'
 gem 'aws-sdk-cloudformation'
 gem 'aws-sdk-cloudfront'
 gem 'aws-sdk-cloudwatch'
 gem 'aws-sdk-cloudwatchlogs'
+gem 'aws-sdk-comprehend'
 gem 'aws-sdk-core'
 gem 'aws-sdk-databasemigrationservice'
 gem 'aws-sdk-dynamodb'
@@ -270,15 +265,13 @@ gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 
 gem 'daemons', '1.1.9' # Pinned to old version, see PR 57938
 gem 'httparty'
-gem 'net-scp'
-gem 'net-ssh'
 gem 'oj', '~> 3.10'
 
 gem 'rest-client', '~> 2.0.1'
 
 # A rest-client dependency
-# This is the latest version that's installing successfully
-gem 'unf_ext', '0.0.7.2'
+# Needs to be at least this version to install successfully on some ARM processors.
+gem 'unf_ext', '0.0.7.4'
 
 # Generate SSL certificates.
 gem 'acmesmith', '~> 2.3.1'
@@ -286,10 +279,9 @@ gem 'acmesmith', '~> 2.3.1'
 gem 'addressable'
 # bcrypt version specified due to "Invalid Hash" error in Linux
 gem 'bcrypt', '3.1.13'
-gem 'firebase'
-gem 'firebase_token_generator'
 gem 'sshkit'
 gem 'validates_email_format_of'
+gem 'validate_url', '~> 1.0.15'
 
 gem 'composite_primary_keys', '~> 13.0'
 
@@ -300,9 +292,6 @@ gem 'octokit'
 # Used to create a prefix trie of student names within a section
 gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
 gem 'rambling-trie', '>= 2.1.1'
-
-gem 'omniauth-openid'
-gem 'omniauth-openid-connect', github: 'code-dot-org/omniauth-openid-connect', ref: 'cdo'
 
 # Ref: https://github.com/toy/image_optim/pull/145
 # Also include sRGB color profile conversion.
@@ -324,7 +313,7 @@ gem 'recaptcha', require: 'recaptcha/rails'
 gem 'loofah', '~> 2.19.1'
 
 # Install pg gem only on specific production hosts and the i18n-dev server.
-require_pg = -> do
+require_pg = lambda do
   require 'socket'
   %w[production-daemon production-console i18n-dev].include?(Socket.gethostname)
 end
@@ -344,8 +333,6 @@ gem 'require_all', require: false
 
 gem 'dotiw'
 
-gem 'datapackage'
-
 gem 'ruby-progressbar'
 
 gem 'pry', '~> 0.14.0'
@@ -354,6 +341,8 @@ gem 'pry', '~> 0.14.0'
 gem 'cld'
 
 gem 'crowdin-api', '~> 1.10.0'
+
+gem "pycall", ">= 1.5.2"
 
 gem "delayed_job_active_record", "~> 4.1"
 
@@ -367,3 +356,8 @@ gem 'statsig', '~> 1.33'
 
 gem 'mailgun-ruby', '~>1.2.14'
 gem 'mailjet', '~> 1.7.3'
+
+gem 'json-jwt', '~> 1.15'
+gem "json-schema", "~> 4.3"
+
+gem "csv"

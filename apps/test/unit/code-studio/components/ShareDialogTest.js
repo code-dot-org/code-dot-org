@@ -4,8 +4,6 @@ import React from 'react';
 import {UnconnectedShareDialog as ShareDialog} from '@cdo/apps/code-studio/components/ShareDialog';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
-import {assert} from '../../../util/reconfiguredChai';
-
 describe('ShareDialog', () => {
   it('renders our signed in version when signed in', () => {
     const wrapper = shallow(
@@ -16,9 +14,9 @@ describe('ShareDialog', () => {
       />
     );
     const dialog = wrapper.find('Connect(ShareAllowedDialog)');
-    assert.equal(dialog.length, 1);
+    expect(dialog.length).toEqual(1);
     // Make sure props get passed through
-    assert.equal(wrapper.props().appType, 'applab');
+    expect(wrapper.props().appType).toEqual('applab');
   });
 
   it('renders our signed in version when signed out on project page', () => {
@@ -30,9 +28,9 @@ describe('ShareDialog', () => {
       />
     );
     const dialog = wrapper.find('Connect(ShareAllowedDialog)');
-    assert.equal(dialog.length, 1);
+    expect(dialog.length).toEqual(1);
     // Make sure props get passed through
-    assert.equal(wrapper.props().appType, 'applab');
+    expect(wrapper.props().appType).toEqual('applab');
   });
 
   it('renders our signed out version when signed out', () => {
@@ -44,6 +42,6 @@ describe('ShareDialog', () => {
       />
     );
     const dialog = wrapper.find('Connect(ShareDisallowedDialog)');
-    assert.equal(dialog.length, 1);
+    expect(dialog.length).toEqual(1);
   });
 });

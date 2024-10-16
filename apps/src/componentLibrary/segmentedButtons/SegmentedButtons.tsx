@@ -22,6 +22,8 @@ export interface SegmentedButtonsProps {
    * 'number' - we can not render any icons at all.
    * */
   type?: SegmentButtonType;
+  /** Segmented Buttons color */
+  color?: 'primary' | 'strong';
   /** Segmented Buttons selected button unique value */
   selectedButtonValue: string;
   /** Segmented Buttons onChange handler */
@@ -29,6 +31,10 @@ export interface SegmentedButtonsProps {
   /** Custom className (for example if you want to set max width of the button and/or truncate overflowed text)*/
   className?: string;
 }
+
+// TODO: DSCO - SegmentedButtons - use DSCO variables for light/dark mode,
+//  implement black/gray options for segmentedButton (like in Dropdowns (black/gray)),
+//  update hover background color
 
 /**
  * ### Production-ready Checklist:
@@ -47,6 +53,7 @@ const SegmentedButtons: React.FunctionComponent<SegmentedButtonsProps> = ({
   selectedButtonValue,
   onChange,
   className,
+  color = 'primary',
   size = 'm',
   type = 'withLabel',
 }) => {
@@ -54,24 +61,28 @@ const SegmentedButtons: React.FunctionComponent<SegmentedButtonsProps> = ({
     <div
       className={classnames(
         moduleStyles.segmentedButtons,
+        moduleStyles[`segmentedButtons-${color}`],
         moduleStyles[`segmentedButtons-${size}`],
         className
       )}
     >
-      {buttons.map(({label, disabled, iconLeft, iconRight, icon, value}) => (
-        <SegmentedButton
-          key={label}
-          selected={selectedButtonValue === value}
-          label={label}
-          onChange={onChange}
-          disabled={disabled}
-          iconLeft={iconLeft}
-          iconRight={iconRight}
-          icon={icon}
-          buttonType={type}
-          value={value}
-        />
-      ))}
+      {buttons.map(
+        ({label, disabled, iconLeft, iconRight, icon, value, id}) => (
+          <SegmentedButton
+            key={label}
+            selected={selectedButtonValue === value}
+            label={label}
+            onChange={onChange}
+            disabled={disabled}
+            iconLeft={iconLeft}
+            iconRight={iconRight}
+            icon={icon}
+            buttonType={type}
+            value={value}
+            id={id}
+          />
+        )
+      )}
     </div>
   );
 };

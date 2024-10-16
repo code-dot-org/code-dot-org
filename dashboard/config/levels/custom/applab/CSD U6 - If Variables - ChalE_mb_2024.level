@@ -83,7 +83,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "# Debugging: Infinite Scrolling\r\n\r\n<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/4a82e91b1b6ad15623620fee4383c964-image-1648759745413.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\nThis app is meant to move an arrow across the screen. When the arrow reaches the edge of the screen, it should reset back to the beginning - but, something's wrong!\r\n\r\n- **What I Expected to Happen:** When the arrow reaches the far sides, it teleports to the other side so it can keep moving\r\n- **What Actually Happens:** The arrow moves just once, sometimes off of the screen\r\n\r\n_Note: you may need to switch into text mode to fix this bug_\r\n\r\n(Optional) Even when the bug is fixed, the infinite scroll doesn't look great. Can you adjust the numbers so the scrolling effect looks smoother?",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

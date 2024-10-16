@@ -39,7 +39,7 @@ class SecretsConfigTest < Minitest::Test
   def stub_secret(str)
     client = Aws::SecretsManager::Client.new(
       stub_responses: {
-        get_secret_value: ->(_) do
+        get_secret_value: lambda do |_|
           {secret_string: str}
         end
       }
@@ -52,7 +52,7 @@ class SecretsConfigTest < Minitest::Test
   def stub_multiple_secrets(secret_strings)
     client = Aws::SecretsManager::Client.new(
       stub_responses: {
-        get_secret_value: ->(context) do
+        get_secret_value: lambda do |context|
           secret_id = context.params[:secret_id]
           return 'ResourceNotFoundException' unless secret_strings.key?(secret_id)
           {secret_string: secret_strings[secret_id]}

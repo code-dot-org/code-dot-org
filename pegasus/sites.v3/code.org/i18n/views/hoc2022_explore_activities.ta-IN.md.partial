@@ -1,7 +1,0 @@
-{{ featured_tutorial, title:"வணக்கம் உலகம்: விண்வெளி", body: "என்று நீங்கள் சொல்லும் எழுத்துக்கள் மற்றும் ஒலிகளைக் கொண்ட இண்டர்கலெக்டிக் காட்சிகளை உருவாக்கவும்.\ஹலோ வேர்ல்ட்ஸ்!\"", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.codeorg/s/hello-world-space-2022/reset" }}
-
-{{ featured_tutorial, title: NASA's Space Jam", body: "இசை, வானியல் மற்றும் குறியீட்டு முறையைப் பற்றி அறிந்துகொள்வதன் மூலம் உண்மையில் உலுக்கும் சூரிய குடும்பத்தை உருவாக்கவும்!", image: /images/hoc2022-nasa-space-jam.png"url: "https://chandra.si.edu/sound/code/" }}
-
-{{ featured_tutorial, title: "ஸ்டார் வார்ஸ்",body: "டிராய்டுகளை நிரல் செய்ய கற்றுக்கொள்ளுங்கள், மேலும் உங்கள் சொந்த ஸ்டார் வார்ஸ் விளையாட்டை வெகு தொலைவில் உள்ள விண்மீன் மண்டலத்தில் உருவாக்கவும்.", image: "/shared/images/courses/logo_tall_starwars.jpg", url: "https://code.org/starwars" }}
-
-{{ featured_tutorial, title: "SciGirls Code Quest", body: "இந்த ஆன்லைன் குறியீட்டு சாகசத்தில், நீருக்கடியில் சவால்கள் மூலம் சப்பி நீர்மூழ்கிக் கப்பலை எடுத்துச் செல்வீர்கள்.", image: "/images/hoc2022-scigirls-code-quest.png", url: "https://pbskids.org/scigirls/games/code-quest" }}

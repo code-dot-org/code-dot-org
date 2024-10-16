@@ -327,6 +327,35 @@ describe I18nScriptUtils do
         assert_equal 'do not know how to parse file "/unexpected.txt"', actual_error.message
       end
     end
+
+    describe 'when the file does not exist' do
+      let(:non_existent_file_path) {'/nonexistent.json'}
+
+      it 'raises an error' do
+        error = assert_raises(RuntimeError) {I18nScriptUtils.parse_file(non_existent_file_path)}
+        assert_match "File not found: \"#{non_existent_file_path}\" - ", error.message
+      end
+    end
+
+    describe 'when the JSON file is invalid' do
+      let(:file_path) {'/invalid.json'}
+      let(:file_content) {'invalid json content'}
+
+      it 'raises an error' do
+        error = assert_raises(RuntimeError) {I18nScriptUtils.parse_file(file_path)}
+        assert_match "JSON parsing error in file \"#{file_path}\" - ", error.message
+      end
+    end
+
+    describe 'when the YAML file is invalid' do
+      let(:file_path) {'/invalid.yaml'}
+      let(:file_content) {'invalid: yaml: content: :'}
+
+      it 'raises an error' do
+        error = assert_raises(RuntimeError) {I18nScriptUtils.parse_file(file_path)}
+        assert_match "YAML parsing error in file \"#{file_path}\" - ", error.message
+      end
+    end
   end
 
   describe '.write_file' do

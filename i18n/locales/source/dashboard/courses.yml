@@ -459,7 +459,7 @@ en:
           description_teacher: ''
           version_title: '2023'
         virtual-pl-csa-summer-2024:
-          title: virtual-pl-csa-summer-2024
+          title: CSA Virtual Summer Professional Learning '24-'25
           description_short: ''
           description_student: "**You will:**\n\n-   Prepare to teach CS A.\n-   Practice key concepts in the CS A curriculum.\n-   Grow in your understanding of equitable CS education. \n-   Develop empathy for the student experience. \n-   Become a part of a network of teachers who are doing similar work."
           description_teacher: "**Participants will:**\n\n-   Prepare to teach CSA.\n-   Practice key concepts in the CSA curriculum.\n-   Grow in their understanding of equitable CS education. \n-   Develop empathy for the student experience. \n-   Become a part of a network of teachers who are doing similar work."
@@ -509,10 +509,7 @@ en:
         csd-2024:
           title: Computer Science Discoveries ('24-'25)
           description_short: An introductory computer science course that empowers students to create authentic artifacts
-          description_student: |-
-            Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
-
-            **Interested in Teaching CS Discoveries?** Professional development is available to help you get started teaching CS Discoveries. [Click here][0] to learn more about professional learning opportunities in your region or [click here][1] to learn more about a self-paced online option.
+          description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers you to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
           description_teacher: |-
             Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
 
@@ -633,17 +630,17 @@ en:
           description_teacher: "**Participants will:**\n\n-   Prepare to teach CS Discoveries.\n-   Practice key concepts in the CS Discoveries curriculum.\n-   Grow in their understanding of equitable CS education. \n-   Develop empathy for the student experience. \n-   Become a part of a network of teachers who are doing similar work."
           version_title: "'24-'25"
         vpl-csd-2024:
-          title: vpl-csd-2024
+          title: CSD Virtual Professional Learning '24-'25
           description_short: ''
-          description_student: ''
-          description_teacher: ''
-          version_title: ''
+          description_student: "##### **You will:**\n\n-   ##### Prepare to teach CS Discoveries.\n-   ##### Practice key concepts in the CS Discoveries curriculum.\n-   ##### Grow in your understanding of equitable CS education.\n-   ##### Develop empathy for the student experience.\n-   ##### Become a part of a network of teachers who are doing similar work."
+          description_teacher: "##### **Participants will:**\n\n-   ##### Prepare to teach CS Discoveries.\n-   ##### Practice key concepts in the CS Discoveries curriculum.\n-   ##### Grow in their understanding of equitable CS education.\n-   ##### Develop empathy for the student experience.\n-   ##### Become a part of a network of teachers who are doing similar work."
+          version_title: '2024'
         vpl-csa-2024:
-          title: vpl-csa-2024
+          title: CSA Virtual Professional Learning '24-'25
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: '2024'
         self-paced-pl-csa-2024:
           title: self-paced-pl-csa-2024
           description_short: ''
@@ -655,7 +652,7 @@ en:
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: '2024'
         self-paced-pl-csp-2024:
           title: Teaching CS Principles
           description_short: ''
@@ -826,21 +823,21 @@ en:
           description_teacher: ''
           version_title: ''
         3-5gamedesign-2024:
-          title: Elementary Game Design
+          title: Preparing to Teach Elementary Game Design
           description_short: ''
-          description_student: ''
+          description_student: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Elementary Game Design! After completing this professional learning experience, **you'll be comfortable with basic game design concepts for elementary school students**.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           description_teacher: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Elementary Game Design! After completing this professional learning experience, **you'll be comfortable with basic game design concepts for elementary school students**.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           version_title: ''
         microbitmakermodule-2024:
-          title: microbitmakermodule-2024
+          title: Preparing to Teach Maker with micro:bit
           description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_student: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Maker with micro:bit! After completing this professional learning experience, **you'll be comfortable with basic coding and maker concepts**.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
+          description_teacher: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Maker with micro:bit! After completing this professional learning experience, **you'll be comfortable with basic coding and maker concepts**.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           version_title: ''
         elementaryai-2024:
-          title: How AI Makes Decisions
+          title: Preparing to Teach How AI Makes Decisions
           description_short: ''
-          description_student: ''
+          description_student: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get familiar with artificial intelligence (AI) and machine learning! After completing this professional learning experience, **you'll be comfortable with basic AI and machine learning concepts**.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           description_teacher: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get familiar with artificial intelligence (AI) and machine learning! After completing this professional learning experience, **you'll be comfortable with basic AI and machine learning concepts**.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           version_title: ''
         self-paced-pl-computer-vision-2024:
@@ -856,11 +853,87 @@ en:
           description_teacher: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Coding with AI Unit** with your students.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and Coding with AI. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Coding with AI."
           version_title: "'24-'25"
         data-science-2024:
-          title: Data Science Pilot
+          title: "[PILOT] Data Science"
+          description_short: Explore the world of data science using data visualization tools to analyze and interpret real-world phenomena.
+          description_student: This Data Science curriculum introduces students to foundational data science principles and skills. Students will learn how to ask effective data questions, collect and clean datasets, and create compelling visualizations using tools such as CODAP (Unit 1) and Python (Unit 2). As students progress, they apply their programming and analytical skills to real-world datasets, gaining experience with essential data analysis techniques such as grouping, filtering, and statistical calculations. The curriculum culminates in projects that highlight the importance of ethical data practices, data storytelling, and creating actionable insights from complex data sets.
+          description_teacher: Data Science builds a strong foundation in data analysis and visualization for students, using programming tools such as CODAP in Unit 1 and Python in Unit 2 to deepen their analytical skills. Through structured lessons and projects, students will learn how to use data science tools to transform raw data into meaningful visualizations. The units emphasize ethical considerations, guiding students through discussions and activities focused on data privacy, bias, and the societal impacts of data-driven decisions. By the end of each unit, students will be prepared to investigate and solve real-world problems using a comprehensive data-driven approach, culminating in a project that showcases their ability to craft compelling data stories.
+          version_title: "'24-'25"
+        tesselementaryai-2024:
+          title: tesselementaryai-2024
+          description_short: testing fix for getting started
+          description_student: testing fix for getting started
+          description_teacher: testing fix for getting started
+          version_title: ''
+        csa-alt-2025:
+          title: Computer Science A ('25-'26)
+          description_short: Learn Java programming and software engineering skills.
+          description_student: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          description_teacher: |-
+            **This version of the CSA curriculum follows the sequence outlined in the AP CSA CED.**
+
+            Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          version_title: "'25-'26"
+        sandbox-csf-2025:
+          title: sandbox-csf-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csa-2025:
+          title: Computer Science A ('25-'26)
+          description_short: Learn Java programming and software engineering skills.
+          description_student: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          description_teacher: |-
+            Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+
+            **Did You Know?**
+
+            -   Professional development is available to help you get started teaching CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Click here</a> to learn more about professional learning opportunities in your region.
+
+            -   You can find the _Syllabus_, _Course Vocab_, and other resources to help you implement this curriculum in the Teacher Resources menu below.
+          version_title: "'25-'26"
+        csa-pilot-2025:
+          title: Computer Science A ('24-'25 Pilot -- 2025 Framework)
+          description_short: Learn Java programming and software engineering skills.
+          description_student: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          description_teacher: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          version_title: "'24-'25"
+        exploring-gen-ai-2024:
+          title: Exploring Generative AI
           description_short: ''
           description_student: ''
           description_teacher: ''
           version_title: "'24-'25"
+        csd-ayw1-debugging:
+          title: "CSD Academic Year Workshop #1 - Debugging"
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        sandbox-data-science-pl:
+          title: sandbox-data-science-pl
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csd-summer-puertorico-2024:
+          title: Descubrimientos de Ciencias de la Computación - Taller de 5 Dias 2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        creativity-with-ai-2024:
+          title: Creativity with AI Pilot
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'24-'25"
+        self-paced-exploring-gen-ai-2024:
+          title: self-paced-exploring-gen-ai-2024
+          description_short: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Generative AI unit.\n\n##### The Generative AI unit is designed as standalone coursework for 6-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Computer Vision Unit. "
+          description_student: "## Welcome!\n\n##### This professional learning module is designed to help you prepare to teach Code.org’s Generative AI unit.\n\n##### The Generative AI unit is designed as standalone coursework for 6-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Computer Vision Unit. "
+          description_teacher: ''
+          version_title: ''
     resources:
       curriculum/csd/2017:
         name: Curriculum
@@ -1021,6 +1094,9 @@ en:
       all_vocabulary_8/csd/2024:
         name: All Vocabulary
         url: "/courses/csd-2024/vocab"
+      csd_changelog_24-25/csd/2024:
+        name: CSD Changelog 24-25
+        url: "https://docs.google.com/document/d/1DN6WF64Jy3cr1hkeDySNAujMhb9yQZlJvt3ls8OCvRw/edit#heading=h.ydx1g8n6vyu8"
       csd_course_standards_csta_alignment/csd/2024:
         name: CSD Course Standards CSTA Alignment
         url: https://docs.google.com/spreadsheets/d/1mSkUykxhOhSviA7wmo5Ejh3vYgLJDtG46rCm_92607g/edit?usp=sharing

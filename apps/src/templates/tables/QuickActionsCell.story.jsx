@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
+import PopUpMenu, {MenuBreak} from '@cdo/apps/sharedComponents/PopUpMenu';
 
 import QuickActionsCell from './QuickActionsCell';
 

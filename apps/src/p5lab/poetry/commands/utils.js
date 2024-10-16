@@ -1,5 +1,5 @@
-import {PALETTES} from '../constants';
 import {randomInt, randomColor, randomColorFromPalette} from '../../utils';
+import {PALETTES} from '../constants';
 
 export {randomInt, randomColor, randomColorFromPalette};
 

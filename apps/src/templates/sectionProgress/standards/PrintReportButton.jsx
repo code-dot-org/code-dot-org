@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
-
-import Button from '../../Button';
 
 export default class PrintReportButton extends Component {
   static propTypes = {

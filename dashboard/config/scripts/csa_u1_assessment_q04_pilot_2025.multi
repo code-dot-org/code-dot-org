@@ -1,0 +1,16 @@
+name 'CSA U1 Assessment q04_pilot-2025'
+
+wrong 'An object\'s attributes are specified in a class.'
+wrong 'A `Student` object would likely have a `gpa` attribute that represents the current GPA.'
+wrong 'Each `Student` object knows its GPA but not the GPA of other `Student` objects.'
+right 'Attributes are specified by the class\'s methods.'
+
+markdown <<MARKDOWN
+Which of the following statements is false?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Methods specify the behaviors that an object can perform.
+MARKDOWN
+
+allow_multiple_attempts true

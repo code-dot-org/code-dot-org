@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">Танилцуулга авах, өөрөө хурдацтай сургалт</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">Тоглоом эсвэл апп үүсгэх</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">CS компьютергүйгээр туршиж үзээрэй ('unplugged' & mobile options)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Code.org баг болон тусгай зочидоос CS сур</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Сайн уу Ruby</a> - Компьютер, технологи, програмчлалын талаар суралцах дэлхийн хамгийн дур зоргоор арга юм. Асуудлыг задлах, спот хэв маяг, алгоритмаар бодох, асуудлыг дибаг хийх, хамтран ажиллах чадвар гэх мэт олон төрлийн CS сэдвээр үйл ажиллагаа явуулдаг. (4-10 насны)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - Карт, мөр, өнгийн харандаа, олон тооны гүйлтийг ашигладаг тоглоом, таавар ашиглан компьютерийн шинжлэх ухааныг заадаг үнэгүй сургалтын материалын цуглуулга. (5-14 насны)</li>
 </ul>
-
-<h2>Гэртээ компьютер байхгүй байна уу? Манай түншүүдийн эдгээр апп-ууд нь таны утсан дээр CS үзээрэй</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Хайрцаг арал"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Алгоритм, хэв маягийг таних, дараалал, гогцоо, нөхцөл гэх мэт кодчиллын үндсийг заахын зэрэгцээ суралцагчдыг сонирхолтой адал явдлаар аялдаг дур булаам хөдөлгөөнт кодчилолын тоглоом. <i>(бүх насныханд)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="КодеПарк"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">насны хүүхдүүдэд</h3></a>зориулсан CodesPark Шагнал авсан сурах-тулд-код тавцан 5-9. Код сурч байхдаа таавар тааж, The Foos ашиглан тоглоом бий болгох. <strong>Тэмдэглэл: CodeSpark нь 3 сарын үнэгүй туршилтыг санал болгож байна. Бүртгүүлэхэд эцэг эхийн имэйл хаяг, зээлийн картын мэдээлэл шаардлагатай.</strong> <i>(5-р ангиар дамжуулан урьдчилан уншигчдад зориулсан)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Дээш буцах]</a></p>
-
-<a id="livecoding"></a>
-<h2>Code.org баг болон тусгай зочидоос суралцаарай!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Кодбайтын лого">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Codebytes</h3>
-        <div class="smalltext" style="color: dimgray;">Codebytes нь шингэхэд хялбар, 20 минутын интерактив хичээлүүд нь компьютерийн шинжлэх ухааныг бодит ертөнцийн сэдвүүдтэй хольж өгдөг. Дохионы хэлийг унших, сайн сайхны төлөө програм зохиох, Minecraft-ийн ертөнцийг судлах, бусад зүйлийг судлахын тулд хиймэл оюун ухаанд сургах!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>ангиудыг үзэх</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Код завсарлага">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Код завсарлага Код завсарлага авч компьютерийн шинжлэх ухааны хөгжилтэй</h3>
-        <div class="smalltext" style="">байлга! Та Эштон Кутчертай кифр үүсгэж, Yara Shahidi-тай хувьсагчдын талаар суралцаж, интернетийн жинхэнэ зохион бүтээгч Винт Серфтэй хэрхэн ажилладаг талаар судлах боломжтой!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Холбогдсон авах</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

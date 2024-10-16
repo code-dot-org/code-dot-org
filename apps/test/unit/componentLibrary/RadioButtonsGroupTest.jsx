@@ -1,11 +1,8 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon from 'sinon';
 
 import {RadioButtonsGroup} from '@cdo/apps/componentLibrary/radioButton';
-
-import {expect} from '../../util/reconfiguredChai';
 
 const radioButtonsData = [
   {
@@ -38,20 +35,20 @@ describe('Design System - Radio Buttons Group', () => {
     const radioButton2 = screen.getByDisplayValue('test-radioButton2');
     const radioButton3 = screen.getByDisplayValue('test-radioButton3');
 
-    expect(radioButton1).to.exist;
-    expect(radioButton2).to.exist;
-    expect(radioButton3).to.exist;
-    expect(screen.getByText(radioButtonsData[0].label)).to.exist;
-    expect(screen.getByText(radioButtonsData[1].label)).to.exist;
-    expect(screen.getByText(radioButtonsData[2].label)).to.exist;
-    expect(radioButton1.checked).to.be.false;
-    expect(radioButton2.checked).to.be.true;
-    expect(radioButton3.checked).to.be.false;
+    expect(radioButton1).toBeDefined();
+    expect(radioButton2).toBeDefined();
+    expect(radioButton3).toBeDefined();
+    expect(screen.getByText(radioButtonsData[0].label)).toBeDefined();
+    expect(screen.getByText(radioButtonsData[1].label)).toBeDefined();
+    expect(screen.getByText(radioButtonsData[2].label)).toBeDefined();
+    expect(radioButton1.checked).toBe(false);
+    expect(radioButton2.checked).toBe(true);
+    expect(radioButton3.checked).toBe(false);
   });
 
   it('RadioButtonsGroup - selects radio on click, can change selected button by clicking on other radio button ', async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     const onChange = e => {
       spyOnChange(e.target.value);
@@ -66,17 +63,17 @@ describe('Design System - Radio Buttons Group', () => {
     let radioButton2 = screen.getByDisplayValue('test-radioButton2');
     let radioButton3 = screen.getByDisplayValue('test-radioButton3');
 
-    expect(radioButton1).to.exist;
-    expect(radioButton1.checked).to.be.false;
-    expect(radioButton1.disabled).to.be.false;
+    expect(radioButton1).toBeDefined();
+    expect(radioButton1.checked).toBe(false);
+    expect(radioButton1.disabled).toBe(false);
 
-    expect(radioButton2).to.exist;
-    expect(radioButton2.checked).to.be.false;
-    expect(radioButton2.disabled).to.be.false;
+    expect(radioButton2).toBeDefined();
+    expect(radioButton2.checked).toBe(false);
+    expect(radioButton2.disabled).toBe(false);
 
-    expect(radioButton3).to.exist;
-    expect(radioButton3.checked).to.be.false;
-    expect(radioButton3.disabled).to.be.false;
+    expect(radioButton3).toBeDefined();
+    expect(radioButton3.checked).toBe(false);
+    expect(radioButton3.disabled).toBe(false);
 
     await user.click(radioButton3);
 
@@ -89,15 +86,15 @@ describe('Design System - Radio Buttons Group', () => {
     radioButton2 = screen.getByDisplayValue('test-radioButton2');
     radioButton3 = screen.getByDisplayValue('test-radioButton3');
 
-    expect(spyOnChange).to.have.been.calledOnce;
-    expect(spyOnChange).to.have.been.calledWith('test-radioButton3');
+    expect(spyOnChange).toHaveBeenCalledTimes(1);
+    expect(spyOnChange).toHaveBeenCalledWith('test-radioButton3');
 
-    expect(radioButton1.checked).to.be.false;
-    expect(radioButton1.disabled).to.be.false;
-    expect(radioButton2.checked).to.be.false;
-    expect(radioButton2.disabled).to.be.false;
-    expect(radioButton3.checked).to.be.true;
-    expect(radioButton3.disabled).to.be.false;
+    expect(radioButton1.checked).toBe(false);
+    expect(radioButton1.disabled).toBe(false);
+    expect(radioButton2.checked).toBe(false);
+    expect(radioButton2.disabled).toBe(false);
+    expect(radioButton3.checked).toBe(true);
+    expect(radioButton3.disabled).toBe(false);
 
     await user.click(radioButton2);
 
@@ -110,15 +107,15 @@ describe('Design System - Radio Buttons Group', () => {
     radioButton2 = screen.getByDisplayValue('test-radioButton2');
     radioButton3 = screen.getByDisplayValue('test-radioButton3');
 
-    expect(spyOnChange).to.have.been.calledTwice;
-    expect(spyOnChange).to.have.been.calledWith('test-radioButton2');
+    expect(spyOnChange).toHaveBeenCalledTimes(2);
+    expect(spyOnChange).toHaveBeenCalledWith('test-radioButton2');
 
-    expect(radioButton1.checked).to.be.false;
-    expect(radioButton1.disabled).to.be.false;
-    expect(radioButton2.checked).to.be.true;
-    expect(radioButton2.disabled).to.be.false;
-    expect(radioButton3.checked).to.be.false;
-    expect(radioButton3.disabled).to.be.false;
+    expect(radioButton1.checked).toBe(false);
+    expect(radioButton1.disabled).toBe(false);
+    expect(radioButton2.checked).toBe(true);
+    expect(radioButton2.disabled).toBe(false);
+    expect(radioButton3.checked).toBe(false);
+    expect(radioButton3.disabled).toBe(false);
 
     await user.click(radioButton2);
 
@@ -132,19 +129,19 @@ describe('Design System - Radio Buttons Group', () => {
     radioButton3 = screen.getByDisplayValue('test-radioButton3');
 
     // RadioButton's onChange is only called when radioButton is not checked. Second click on the same radio won't call onChange.
-    expect(spyOnChange).to.have.been.calledTwice;
+    expect(spyOnChange).toHaveBeenCalledTimes(2);
 
-    expect(radioButton1.checked).to.be.false;
-    expect(radioButton1.disabled).to.be.false;
-    expect(radioButton2.checked).to.be.true;
-    expect(radioButton2.disabled).to.be.false;
-    expect(radioButton3.checked).to.be.false;
-    expect(radioButton3.disabled).to.be.false;
+    expect(radioButton1.checked).toBe(false);
+    expect(radioButton1.disabled).toBe(false);
+    expect(radioButton2.checked).toBe(true);
+    expect(radioButton2.disabled).toBe(false);
+    expect(radioButton3.checked).toBe(false);
+    expect(radioButton3.disabled).toBe(false);
   });
 
   it("RadioButtonsGroup - renders disabled radioButton, can't click on disabled radio", async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     const modifiedradioButtonsData = [...radioButtonsData];
     modifiedradioButtonsData[0] = {
@@ -172,17 +169,17 @@ describe('Design System - Radio Buttons Group', () => {
     let radioButton2 = screen.getByDisplayValue('test-radioButton2');
     let radioButton3 = screen.getByDisplayValue('test-radioButton3');
 
-    expect(radioButton1).to.exist;
-    expect(radioButton1.checked).to.be.false;
-    expect(radioButton1.disabled).to.be.true;
+    expect(radioButton1).toBeDefined();
+    expect(radioButton1.checked).toBe(false);
+    expect(radioButton1.disabled).toBe(true);
 
-    expect(radioButton2).to.exist;
-    expect(radioButton2.checked).to.be.false;
-    expect(radioButton2.disabled).to.be.true;
+    expect(radioButton2).toBeDefined();
+    expect(radioButton2.checked).toBe(false);
+    expect(radioButton2.disabled).toBe(true);
 
-    expect(radioButton3).to.exist;
-    expect(radioButton3.checked).to.be.false;
-    expect(radioButton3.disabled).to.be.false;
+    expect(radioButton3).toBeDefined();
+    expect(radioButton3.checked).toBe(false);
+    expect(radioButton3.disabled).toBe(false);
 
     await user.click(radioButton2);
 
@@ -198,16 +195,16 @@ describe('Design System - Radio Buttons Group', () => {
     radioButton2 = screen.getByDisplayValue('test-radioButton2');
     radioButton3 = screen.getByDisplayValue('test-radioButton3');
 
-    expect(spyOnChange).to.have.not.been.called;
+    expect(spyOnChange).not.toHaveBeenCalled();
 
-    expect(radioButton1.checked).to.be.false;
-    expect(radioButton1.disabled).to.be.true;
+    expect(radioButton1.checked).toBe(false);
+    expect(radioButton1.disabled).toBe(true);
 
-    expect(radioButton2.checked).to.be.false;
-    expect(radioButton2.disabled).to.be.true;
+    expect(radioButton2.checked).toBe(false);
+    expect(radioButton2.disabled).toBe(true);
 
-    expect(radioButton3.checked).to.be.false;
-    expect(radioButton3.disabled).to.be.false;
+    expect(radioButton3.checked).toBe(false);
+    expect(radioButton3.disabled).toBe(false);
 
     await user.click(radioButton3);
 
@@ -223,17 +220,17 @@ describe('Design System - Radio Buttons Group', () => {
     radioButton2 = screen.getByDisplayValue('test-radioButton2');
     radioButton3 = screen.getByDisplayValue('test-radioButton3');
 
-    expect(spyOnChange).to.have.been.calledOnce;
-    expect(spyOnChange).to.have.been.calledWith('test-radioButton3');
+    expect(spyOnChange).toHaveBeenCalledTimes(1);
+    expect(spyOnChange).toHaveBeenCalledWith('test-radioButton3');
 
-    expect(radioButton1.checked).to.be.false;
-    expect(radioButton1.disabled).to.be.true;
+    expect(radioButton1.checked).toBe(false);
+    expect(radioButton1.disabled).toBe(true);
 
-    expect(radioButton2.checked).to.be.false;
-    expect(radioButton2.disabled).to.be.true;
+    expect(radioButton2.checked).toBe(false);
+    expect(radioButton2.disabled).toBe(true);
 
-    expect(radioButton3.checked).to.be.true;
-    expect(radioButton3.disabled).to.be.false;
+    expect(radioButton3.checked).toBe(true);
+    expect(radioButton3.disabled).toBe(false);
 
     await user.click(radioButton2);
 
@@ -250,15 +247,15 @@ describe('Design System - Radio Buttons Group', () => {
     radioButton3 = screen.getByDisplayValue('test-radioButton3');
 
     // RadioButton's onChange is only called when radioButton is not checked. Second click on the same radio won't call onChange.
-    expect(spyOnChange).to.have.been.calledOnce;
+    expect(spyOnChange).toHaveBeenCalledTimes(1);
 
-    expect(radioButton1.checked).to.be.false;
-    expect(radioButton1.disabled).to.be.true;
+    expect(radioButton1.checked).toBe(false);
+    expect(radioButton1.disabled).toBe(true);
 
-    expect(radioButton2.checked).to.be.false;
-    expect(radioButton2.disabled).to.be.true;
+    expect(radioButton2.checked).toBe(false);
+    expect(radioButton2.disabled).toBe(true);
 
-    expect(radioButton3.checked).to.be.true;
-    expect(radioButton3.disabled).to.be.false;
+    expect(radioButton3.checked).toBe(true);
+    expect(radioButton3.disabled).toBe(false);
   });
 });

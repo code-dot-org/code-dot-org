@@ -1,4 +1,3 @@
-import {expect} from 'chai';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -150,29 +149,25 @@ describe('Local Summer Workshop Daily Survey Results class', () => {
         />
       </Provider>
     );
-    expect(results.find('Tab')).to.have.length(4);
+    expect(results.find('Tab')).toHaveLength(4);
     let firstTab = results.find('Tab').first();
     let secondTab = results.find('Tab').at(1);
 
-    expect(firstTab.find('ChoiceResponses')).to.have.length(3);
-    expect(firstTab.find('TextResponses')).to.have.length(2);
+    expect(firstTab.find('ChoiceResponses')).toHaveLength(3);
+    expect(firstTab.find('TextResponses')).toHaveLength(2);
 
-    expect(secondTab.find('ChoiceResponses')).to.have.length(2);
-    expect(secondTab.find('TextResponses')).to.have.length(3);
+    expect(secondTab.find('ChoiceResponses')).toHaveLength(2);
+    expect(secondTab.find('TextResponses')).toHaveLength(3);
 
-    expect(firstTab.find('h3').map(x => x.text())).to.deep.equal([
+    expect(firstTab.find('h3').map(x => x.text())).toEqual([
       'General Questions',
     ]);
-    expect(secondTab.find('h3').map(x => x.text())).to.deep.equal([
+    expect(secondTab.find('h3').map(x => x.text())).toEqual([
       'General Questions',
       'Facilitator Specific Questions',
     ]);
 
-    expect(results.find('Tab').at(2).find('SurveyRollupTable')).to.have.length(
-      1
-    );
-    expect(results.find('Tab').at(3).find('SurveyRollupTable')).to.have.length(
-      1
-    );
+    expect(results.find('Tab').at(2).find('SurveyRollupTable')).toHaveLength(1);
+    expect(results.find('Tab').at(3).find('SurveyRollupTable')).toHaveLength(1);
   });
 });

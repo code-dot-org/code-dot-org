@@ -7,7 +7,6 @@ import project from '../code-studio/initApp/project';
 import UserPreferences from '../lib/util/UserPreferences';
 import logToCloud from '../logToCloud';
 import {singleton as studioApp} from '../StudioApp';
-import trackEvent from '../util/trackEvent';
 
 import {PaneButton} from './PaneHeader';
 
@@ -37,7 +36,6 @@ class ShowCodeButton extends Component {
   };
 
   onClick() {
-    trackEvent('showCode', 'click', 'header');
     this.props.onClick();
   }
 

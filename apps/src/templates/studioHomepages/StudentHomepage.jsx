@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
+import Notification, {
+  NotificationType,
+} from '@cdo/apps/sharedComponents/Notification';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 import i18n from '@cdo/locale';

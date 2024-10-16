@@ -1,5 +1,6 @@
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {useEffect, useRef} from 'react';
+
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 const UPDATE_RATE = 1000 / 30; // 30 times per second
 

@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedCompletionButton as CompletionButton} from '@cdo/apps/templates/CompletionButton';
 
-import {expect} from '../../util/reconfiguredChai';
-
 describe('CompletionButton', () => {
   it('non-project level, can submit, havent', () => {
     const completionButton = mount(
@@ -15,9 +13,9 @@ describe('CompletionButton', () => {
       />
     );
     const button = completionButton.find('button');
-    expect(button).to.have.length(1);
-    expect(button.props().id).to.equal('submitButton');
-    expect(button.text()).to.equal('Submit');
+    expect(button).toHaveLength(1);
+    expect(button.props().id).toBe('submitButton');
+    expect(button.text()).toBe('Submit');
   });
 
   it('non-project level, can submit, have', () => {
@@ -29,9 +27,9 @@ describe('CompletionButton', () => {
       />
     );
     const button = completionButton.find('button');
-    expect(button).to.have.length(1);
-    expect(button.props().id).to.equal('unsubmitButton');
-    expect(button.text()).to.equal('Unsubmit');
+    expect(button).toHaveLength(1);
+    expect(button.props().id).toBe('unsubmitButton');
+    expect(button.text()).toBe('Unsubmit');
   });
 
   // It is possible for users to get into a state where the level is submitted
@@ -45,9 +43,9 @@ describe('CompletionButton', () => {
       />
     );
     const button = completionButton.find('button');
-    expect(button).to.have.length(1);
-    expect(button.props().id).to.equal('unsubmitButton');
-    expect(button.text()).to.equal('Unsubmit');
+    expect(button).toHaveLength(1);
+    expect(button.props().id).toBe('unsubmitButton');
+    expect(button.text()).toBe('Unsubmit');
   });
 
   it('non-project level, cant submit', () => {
@@ -59,9 +57,9 @@ describe('CompletionButton', () => {
       />
     );
     const button = completionButton.find('button');
-    expect(button).to.have.length(1);
-    expect(button.props().id).to.equal('finishButton');
-    expect(button.text()).to.equal('Finish');
+    expect(button).toHaveLength(1);
+    expect(button.props().id).toBe('finishButton');
+    expect(button.text()).toBe('Finish');
   });
 
   it('project level (cant submit)', () => {
@@ -73,6 +71,6 @@ describe('CompletionButton', () => {
       />
     );
     const button = completionButton.find('button');
-    expect(button).to.have.length(0);
+    expect(button).toHaveLength(0);
   });
 });

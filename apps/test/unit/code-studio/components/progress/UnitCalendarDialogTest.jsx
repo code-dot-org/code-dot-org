@@ -1,12 +1,10 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import UnitCalendar from '@cdo/apps/code-studio/components/progress/UnitCalendar';
 import UnitCalendarDialog, {
   WEEK_WIDTH,
 } from '@cdo/apps/code-studio/components/progress/UnitCalendarDialog';
-
-import {expect} from '../../../../util/reconfiguredChai';
+import UnitCalendarGrid from '@cdo/apps/code-studio/components/progress/UnitCalendarGrid';
 
 import {testLessons} from './unitCalendarTestData';
 
@@ -23,13 +21,13 @@ describe('UnitCalendarDialog', () => {
     );
     expect(
       wrapper.containsMatchingElement(
-        <UnitCalendar
+        <UnitCalendarGrid
           lessons={testLessons}
           weeklyInstructionalMinutes={90}
           weekWidth={WEEK_WIDTH}
         />
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('sets the provided weeklyInstructionalMinutes as default if it is already in the option list', () => {
@@ -42,23 +40,23 @@ describe('UnitCalendarDialog', () => {
         scriptId={123}
       />
     );
-    expect(wrapper.find('option').length).to.equal(10);
+    expect(wrapper.find('option').length).toBe(10);
     expect(
       wrapper.containsMatchingElement(
         <option value={45} key={`minutes-45`}>
           45 minutes
         </option>
       )
-    ).to.be.true;
+    ).toBe(true);
     expect(
       wrapper.containsMatchingElement(
-        <UnitCalendar
+        <UnitCalendarGrid
           lessons={testLessons}
           weeklyInstructionalMinutes={45}
           weekWidth={WEEK_WIDTH}
         />
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('adds the provided weeklyInstructionalMinutes to the dropdown and sets it as default', () => {
@@ -71,23 +69,23 @@ describe('UnitCalendarDialog', () => {
         scriptId={123}
       />
     );
-    expect(wrapper.find('option').length).to.equal(11);
+    expect(wrapper.find('option').length).toBe(11);
     expect(
       wrapper.containsMatchingElement(
         <option value={20} key={`minutes-20`}>
           20 minutes
         </option>
       )
-    ).to.be.true;
+    ).toBe(true);
     expect(
       wrapper.containsMatchingElement(
-        <UnitCalendar
+        <UnitCalendarGrid
           lessons={testLessons}
           weeklyInstructionalMinutes={20}
           weekWidth={WEEK_WIDTH}
         />
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('changes weeklyInstructionalMinutes when the dropdown value changes', () => {
@@ -100,17 +98,17 @@ describe('UnitCalendarDialog', () => {
         scriptId={123}
       />
     );
-    expect(wrapper.state('instructionalMinutes')).to.equal(45);
+    expect(wrapper.state('instructionalMinutes')).toBe(45);
     wrapper.find('select').simulate('change', {target: {value: 90}});
-    expect(wrapper.state('instructionalMinutes')).to.equal(90);
+    expect(wrapper.state('instructionalMinutes')).toBe(90);
     expect(
       wrapper.containsMatchingElement(
-        <UnitCalendar
+        <UnitCalendarGrid
           lessons={testLessons}
           weeklyInstructionalMinutes={90}
           weekWidth={WEEK_WIDTH}
         />
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 });

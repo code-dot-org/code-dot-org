@@ -1,36 +1,69 @@
 import {
   useCodebridgeContext,
-  getNextFileId,
-  getNextFolderId,
+  findFiles,
+  findSubFolders,
 } from '@codebridge/codebridgeContext';
+import OverflowTooltip from '@codebridge/components/OverflowTooltip';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
-import {ProjectType, FolderId, ProjectFile} from '@codebridge/types';
+import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
+import {ProjectType, FolderId} from '@codebridge/types';
 import {
-  findFolder,
-  getErrorMessage,
-  getFileIcon,
+  validateFileName as globalValidateFileName,
+  validateFolderName,
+  sendCodebridgeAnalyticsEvent,
   shouldShowFile,
+  isValidFileName,
 } from '@codebridge/utils';
-import React, {useContext, useMemo} from 'react';
+import {
+  DndContext,
+  DragStartEvent,
+  DragOverEvent,
+  DragEndEvent,
+  PointerSensor,
+  useSensor,
+  useSensors,
+} from '@dnd-kit/core';
+import classNames from 'classnames';
+import React, {useMemo, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {usePartialApply, PAFunctionArgs} from '@cdo/apps/lab2/hooks';
+import {
+  isReadOnlyWorkspace,
+  setOverrideValidations,
+} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {
-  DialogContext,
+  useDialogControl,
   DialogType,
-} from '@cdo/apps/lab2/views/dialogs/DialogManager';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+  extractUserInput as extractInput,
+} from '@cdo/apps/lab2/views/dialogs';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
 import {
-  moveFilePromptType,
-  newFilePromptType,
-  newFolderPromptType,
+  DndDataContextProvider,
+  useDndDataContext,
+} from './DnDDataContextProvider';
+import {Draggable} from './Draggable';
+import {Droppable} from './Droppable';
+import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
+import FileRow from './FileRow';
+import {FileUploader} from './FileUploader';
+import {
+  useFileUploadErrorCallback,
+  useHandleFileUpload,
+  usePrompts,
+} from './hooks';
+import {
+  DragType,
+  DragDataType,
+  DropDataType,
   renameFilePromptType,
   renameFolderPromptType,
   setFileType,
@@ -42,13 +75,10 @@ type FilesComponentProps = {
   files: ProjectType['files'];
   folders: ProjectType['folders'];
   parentId?: FolderId;
-
-  moveFilePrompt: moveFilePromptType;
-  newFilePrompt: newFilePromptType;
-  newFolderPrompt: newFolderPromptType;
   renameFilePrompt: renameFilePromptType;
   renameFolderPrompt: renameFolderPromptType;
   setFileType: setFileType;
+  appName?: string;
 };
 
 const InnerFileBrowser = React.memo(
@@ -56,199 +86,256 @@ const InnerFileBrowser = React.memo(
     parentId,
     folders,
     files,
-    newFolderPrompt,
-    newFilePrompt,
-    moveFilePrompt,
     renameFilePrompt,
     renameFolderPrompt,
     setFileType,
+    appName,
   }: FilesComponentProps) => {
-    const {openFile, deleteFile, toggleOpenFolder, deleteFolder} =
-      useCodebridgeContext();
-    const dialogControl = useContext(DialogContext);
+    const {openMoveFolderPrompt, openNewFilePrompt, openNewFolderPrompt} =
+      usePrompts();
+    const {
+      deleteFile,
+      toggleOpenFolder,
+      deleteFolder,
+      config: {validMimeTypes},
+    } = useCodebridgeContext();
+    const {dragData, dropData} = useDndDataContext();
+    const dialogControl = useDialogControl();
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+    const handleFileUpload = useHandleFileUpload(files);
+    const fileUploadErrorCallback = useFileUploadErrorCallback();
+    const dispatch = useAppDispatch();
+
+    const handleConfirmDeleteFile = (fileId: string) => {
+      // If we are deleting a validation file, we are in start mode, and we should
+      // ensure that the override validation is set to an empty list.
+      if (files[fileId]?.type === ProjectFileType.VALIDATION) {
+        dispatch(setOverrideValidations([]));
+      }
+      deleteFile(fileId);
+      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FILE, appName);
+    };
 
     const handleDeleteFile = (fileId: string) => {
       const filename = files[fileId].name;
-      const title = `Are you sure?`;
-      const message = `Are you sure you want to delete the file ${filename}?`;
-      dialogControl?.showDialog(
-        DialogType.GenericConfirmation,
-        () => deleteFile(fileId),
+      const title = codebridgeI18n.areYouSure();
+      const message = codebridgeI18n.deleteFileConfirm({filename});
+      dialogControl?.showDialog({
+        type: DialogType.GenericConfirmation,
+        handleConfirm: () => handleConfirmDeleteFile(fileId),
         title,
         message,
-        'Delete'
-      );
+        confirmText: codebridgeI18n.delete(),
+        destructive: true,
+      });
+    };
+
+    const handleConfirmDeleteFolder = (folderId: string) => {
+      deleteFolder(folderId);
+      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FOLDER, appName);
     };
 
     const handleDeleteFolder = (folderId: string) => {
       const folderName = folders[folderId].name;
-      const title = `Are you sure?`;
-      const message = `Are you sure you want to delete the folder ${folderName}? This will delete all files and folders inside ${folderName}.`;
-      dialogControl?.showDialog(
-        DialogType.GenericConfirmation,
-        () => deleteFolder(folderId),
+      const projectFolders = Object.values(folders);
+      const projectFiles = Object.values(files);
+      const folderCount = findSubFolders(folderId, projectFolders).length;
+      const fileCount = findFiles(
+        folderId,
+        projectFiles,
+        projectFolders
+      ).length;
+
+      const title = codebridgeI18n.areYouSure();
+      const confirmation = codebridgeI18n.deleteFolderConfirm({folderName});
+      let additionalWarning = '';
+      if (fileCount && folderCount) {
+        additionalWarning = codebridgeI18n.deleteFolderConfirmBoth({
+          fileCount: `${fileCount}`,
+          folderCount: `${folderCount}`,
+          folderName,
+        });
+      } else if (fileCount) {
+        additionalWarning = codebridgeI18n.deleteFolderConfirmFiles({
+          fileCount: `${fileCount}`,
+          folderName,
+        });
+      } else if (folderCount) {
+        additionalWarning = codebridgeI18n.deleteFolderConfirmSubfolders({
+          folderCount: `${folderCount}`,
+          folderName,
+        });
+      }
+      const message = confirmation + ' ' + additionalWarning;
+      dialogControl?.showDialog({
+        type: DialogType.GenericConfirmation,
+        handleConfirm: () => handleConfirmDeleteFolder(folderId),
         title,
         message,
-        'Delete'
-      );
+        confirmText: codebridgeI18n.delete(),
+        destructive: true,
+      });
     };
 
-    const hasValidationFile = Object.values(files).find(
+    const hasValidationFile = !!Object.values(files).find(
       f => f.type === ProjectFileType.VALIDATION
     );
     const isReadOnly = useAppSelector(isReadOnlyWorkspace);
-
-    const startModeFileDropdownOptions = (file: ProjectFile) => {
-      // We only support one validation file per project, so if we already have one,
-      // do not show the option to mark another file as validation.
-      const options = [];
-      if (!hasValidationFile) {
-        options.push(
-          <span
-            onClick={() => setFileType(file.id, ProjectFileType.VALIDATION)}
-            key={'make-validation'}
-          >
-            <i className={`fa-solid fa-flask`} />{' '}
-            {codebridgeI18n.makeValidation()}
-          </span>
-        );
-      }
-      if (
-        file.type === ProjectFileType.VALIDATION ||
-        file.type === ProjectFileType.SUPPORT
-      ) {
-        options.push(
-          <span
-            onClick={() => setFileType(file.id, ProjectFileType.STARTER)}
-            key={'make-starter'}
-          >
-            <i className={`fa-solid fa-eye`} /> {codebridgeI18n.makeStarter()}
-          </span>
-        );
-      }
-      if (
-        file.type === ProjectFileType.VALIDATION ||
-        file.type === ProjectFileType.STARTER ||
-        !file.type // A file wihtout a type is a starter file.
-      ) {
-        options.push(
-          <span
-            onClick={() => setFileType(file.id, ProjectFileType.SUPPORT)}
-            key={'make-support'}
-          >
-            <i className={`fa-solid fa-eye-slash`} />{' '}
-            {codebridgeI18n.makeSupport()}
-          </span>
-        );
-      }
-      return options;
-    };
 
     return (
       <>
         {Object.values(folders)
           .filter(f => f.parentId === parentId)
           .sort((a, b) => a.name.localeCompare(b.name))
-          .map(f => {
-            const caret = (
-              <i
-                className={
-                  f.open ? 'fa-solid fa-caret-down' : 'fa-solid fa-caret-right'
-                }
-              />
-            );
-            return (
-              <li key={f.id + f.open}>
-                <span className={moduleStyles.label}>
-                  <span className={moduleStyles.title}>
-                    <span
-                      className={moduleStyles['caret-container']}
-                      onClick={() => toggleOpenFolder(f.id)}
+          .map(f => (
+            <Droppable
+              data={{id: f.id}}
+              key={f.id + f.open}
+              Component="li"
+              className={classNames(moduleStyles.droppableArea, {
+                [moduleStyles.acceptingDrop]:
+                  f.id === dropData?.id && dragData?.parentId !== f.id,
+              })}
+            >
+              <Draggable
+                data={{id: f.id, type: DragType.FOLDER, parentId: f.parentId}}
+              >
+                <div className={moduleStyles.row}>
+                  <span
+                    className={moduleStyles.title}
+                    onClick={() => toggleOpenFolder(f.id)}
+                  >
+                    <FontAwesomeV6Icon
+                      iconName={f.open ? 'caret-down' : 'caret-right'}
+                      iconStyle={'solid'}
+                      className={moduleStyles.rowIcon}
+                    />
+
+                    <OverflowTooltip
+                      tooltipProps={{
+                        text: f.name,
+                        tooltipId: `folder-tooltip-${f.id}`,
+                        size: 's',
+                        direction: 'onBottom',
+                      }}
+                      tooltipOverlayClassName={moduleStyles.nameContainer}
+                      className={moduleStyles.nameContainer}
                     >
-                      {caret}
-                    </span>
-                    <span>{f.name}</span>
+                      <span
+                        className={classNames({
+                          [moduleStyles.acceptingDrop]:
+                            f.id === dropData?.id &&
+                            dragData?.parentId !== f.id,
+                        })}
+                      >
+                        {f.name}
+                      </span>
+                    </OverflowTooltip>
                   </span>
-                  {!isReadOnly && (
+                  {!isReadOnly && !dragData?.id && (
                     <PopUpButton
                       iconName="ellipsis-v"
                       className={moduleStyles['button-kebab']}
                     >
                       <span className={moduleStyles['button-bar']}>
-                        <span onClick={() => renameFolderPrompt(f.id)}>
-                          <i className="fa-solid fa-pencil" />{' '}
-                          {codebridgeI18n.renameFolder()}
-                        </span>
-                        <span onClick={() => newFolderPrompt(f.id)}>
-                          <i className="fa-solid fa-folder-plus" />{' '}
-                          {codebridgeI18n.addSubFolder()}
-                        </span>
-                        <span onClick={() => newFilePrompt(f.id)}>
-                          <i className="fa-solid fa-plus" />{' '}
-                          {codebridgeI18n.addFile()}
-                        </span>
-                        <span onClick={() => handleDeleteFolder(f.id)}>
-                          <i className="fa-solid fa-trash" />{' '}
-                          {codebridgeI18n.deleteFolder()}
-                        </span>
+                        <PopUpButtonOption
+                          iconName="arrow-right"
+                          labelText={codebridgeI18n.moveFolder()}
+                          clickHandler={() =>
+                            openMoveFolderPrompt({folderId: f.id})
+                          }
+                        />
+                        <PopUpButtonOption
+                          iconName="pencil"
+                          labelText={codebridgeI18n.renameFolder()}
+                          clickHandler={() => renameFolderPrompt(f.id)}
+                        />
+                        <PopUpButtonOption
+                          iconName="folder-plus"
+                          labelText={codebridgeI18n.addSubFolder()}
+                          clickHandler={() =>
+                            openNewFolderPrompt({parentId: f.id})
+                          }
+                        />
+                        <PopUpButtonOption
+                          iconName="plus"
+                          labelText={codebridgeI18n.newFile()}
+                          clickHandler={() =>
+                            openNewFilePrompt({folderId: f.id})
+                          }
+                        />
+
+                        <FileUploader
+                          validMimeTypes={validMimeTypes}
+                          callback={(fileName, contents) =>
+                            handleFileUpload({
+                              folderId: f.id,
+                              fileName,
+                              contents,
+                            })
+                          }
+                          errorCallback={fileUploadErrorCallback}
+                        >
+                          <PopUpButtonOption
+                            iconName="upload"
+                            labelText={codebridgeI18n.uploadFile()}
+                          />
+                        </FileUploader>
+                        <PopUpButtonOption
+                          iconName="trash"
+                          labelText={codebridgeI18n.deleteFolder()}
+                          clickHandler={() => handleDeleteFolder(f.id)}
+                        />
                       </span>
                     </PopUpButton>
                   )}
-                </span>
+                </div>
                 {f.open && (
                   <ul>
                     <InnerFileBrowser
                       folders={folders}
-                      newFolderPrompt={newFolderPrompt}
                       parentId={f.id}
                       files={files}
-                      newFilePrompt={newFilePrompt}
-                      moveFilePrompt={moveFilePrompt}
                       renameFilePrompt={renameFilePrompt}
                       renameFolderPrompt={renameFolderPrompt}
                       setFileType={setFileType}
+                      appName={appName}
                     />
                   </ul>
                 )}
-              </li>
-            );
-          })}
+              </Draggable>
+            </Droppable>
+          ))}
         {Object.values(files)
           .filter(f => f.folderId === parentId && shouldShowFile(f))
           .sort((a, b) => a.name.localeCompare(b.name))
-          .map(f => (
-            <li key={f.id}>
-              <span className={moduleStyles.label}>
-                <span onClick={() => openFile(f.id)}>
-                  <i className={getFileIcon(f)} />
-                  {f.name}
-                </span>
-                {!isReadOnly && (
-                  <PopUpButton
-                    iconName="ellipsis-v"
-                    className={moduleStyles['button-kebab']}
-                  >
-                    <span className={moduleStyles['button-bar']}>
-                      <span onClick={() => moveFilePrompt(f.id)}>
-                        <i className="fa-solid fa-arrow-right" />{' '}
-                        {codebridgeI18n.moveFile()}
-                      </span>
-                      <span onClick={() => renameFilePrompt(f.id)}>
-                        <i className="fa-solid fa-pencil" />{' '}
-                        {codebridgeI18n.renameFile()}
-                      </span>
-                      <span onClick={() => handleDeleteFile(f.id)}>
-                        <i className="fa-solid fa-trash" />{' '}
-                        {codebridgeI18n.deleteFile()}
-                      </span>
-                      {isStartMode && startModeFileDropdownOptions(f)}
-                    </span>
-                  </PopUpButton>
-                )}
-              </span>
-            </li>
-          ))}
+          .map(f => {
+            const isDraggingLocked =
+              !isStartMode && f.type === ProjectFileType.LOCKED_STARTER;
+            const fileRowProps = {
+              key: f.id,
+              file: f,
+              isReadOnly,
+              appName,
+              hasValidationFile,
+              isStartMode,
+              setFileType,
+              handleDeleteFile,
+              renameFilePrompt,
+              enableMenu: !dragData?.id || isDraggingLocked,
+            };
+            return isDraggingLocked ? (
+              <FileRow {...fileRowProps} />
+            ) : (
+              <Draggable
+                data={{id: f.id, type: DragType.FILE, parentId: f.folderId}}
+                key={f.id}
+                Component="li"
+              >
+                <FileRow {...fileRowProps} />
+              </Draggable>
+            );
+          })}
       </>
     );
   }
@@ -257,188 +344,202 @@ const InnerFileBrowser = React.memo(
 export const FileBrowser = React.memo(() => {
   const {
     project,
-    newFile,
     renameFile,
     moveFile,
+    moveFolder,
 
     renameFolder,
-    newFolder,
     setFileType,
   } = useCodebridgeContext();
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
-
-  const newFolderPrompt: FilesComponentProps['newFolderPrompt'] = useMemo(
-    () =>
-      (parentId = DEFAULT_FOLDER_ID) => {
-        const folderId = getNextFolderId(Object.values(project.folders));
-
-        const folderName = window.prompt(codebridgeI18n.newFolderPrompt());
-        if (!folderName) {
-          return;
-        }
-
-        const existingFolder = Object.values(project.folders).some(
-          f => f.name === folderName && f.parentId === parentId
-        );
-        if (existingFolder) {
-          alert(codebridgeI18n.folderExistsError());
-          return;
-        }
-
-        newFolder({parentId, folderName, folderId});
-      },
-    [newFolder, project.folders]
+  const dialogControl = useDialogControl();
+  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const validationFile = useAppSelector(
+    state => state.lab.levelProperties?.validationFile
   );
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
-  const newFilePrompt: FilesComponentProps['newFilePrompt'] = useMemo(
-    () =>
-      (folderId = DEFAULT_FOLDER_ID) => {
-        const fileName = window
-          .prompt(codebridgeI18n.newFilePrompt())
-          ?.replace(/[^\w.]+/g, '');
-        if (!fileName) {
-          return;
-        }
+  const validateFileName = usePartialApply(globalValidateFileName, {
+    isStartMode,
+    validationFile,
+    projectFiles: project.files,
+  } satisfies PAFunctionArgs<typeof globalValidateFileName>);
 
-        if (checkForDuplicateFilename(fileName, folderId, project.files)) {
-          return;
-        }
+  const [dragData, setDragData] = useState<DragDataType | undefined>(undefined);
+  const [dropData, setDropData] = useState<DropDataType | undefined>(undefined);
 
-        /* eslint-disable-next-line */
-        const [_, extension] = fileName.split('.');
-        if (!extension) {
-          window.alert(codebridgeI18n.noFileExtensionError());
-          return;
-        }
-
-        const fileId = getNextFileId(Object.values(project.files));
-        newFile({
-          fileId,
-          fileName,
-          folderId,
-        });
+  const dndMonitor = useMemo(
+    () => ({
+      onDragStart: (e: DragStartEvent) =>
+        setDragData(e.active.data.current as DragDataType),
+      onDragOver: (e: DragOverEvent) =>
+        setDropData(e.over?.data.current as DropDataType),
+      onDragEnd: (e: DragEndEvent) => {
+        setDragData(undefined);
+        setDropData(undefined);
       },
-    [newFile, project.files]
-  );
-
-  const moveFilePrompt: FilesComponentProps['moveFilePrompt'] = useMemo(
-    () => fileId => {
-      const file = project.files[fileId];
-
-      const destinationFolder =
-        window.prompt(codebridgeI18n.moveFilePrompt()) ?? '';
-
-      try {
-        const folderId = findFolder(destinationFolder.split('/'), {
-          folders: Object.values(project.folders),
-          required: true,
-        });
-
-        if (checkForDuplicateFilename(file.name, folderId, project.files)) {
-          return;
-        }
-
-        moveFile(fileId, folderId);
-      } catch (e) {
-        window.alert(getErrorMessage(e));
-      }
-    },
-    [moveFile, project.files, project.folders]
+    }),
+    [setDragData, setDropData]
   );
 
   const renameFilePrompt: FilesComponentProps['renameFilePrompt'] = useMemo(
-    () => fileId => {
+    () => async fileId => {
       const file = project.files[fileId];
-      const newName = window.prompt(codebridgeI18n.renameFile(), file.name);
-      if (newName === null || newName === file.name) {
+      const results = await dialogControl?.showDialog({
+        type: DialogType.GenericPrompt,
+        title: codebridgeI18n.renameFile(),
+        value: file.name,
+        validateInput: (newName: string) => {
+          if (!newName.length) {
+            return;
+          }
+          if (newName === file.name) {
+            return;
+          }
+          if (!isValidFileName(newName)) {
+            return codebridgeI18n.invalidNameError();
+          }
+          return validateFileName({
+            fileName: newName,
+            folderId: file.folderId,
+          });
+        },
+      });
+      if (results.type !== 'confirm') {
         return;
       }
-
-      if (checkForDuplicateFilename(newName, file.folderId, project.files)) {
-        return;
-      }
-
+      const newName = extractInput(results);
       renameFile(fileId, newName);
+      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FILE, appName);
     },
-    [renameFile, project.files]
+    [project.files, dialogControl, renameFile, appName, validateFileName]
   );
 
-  // Check if the filename is already in use in the given folder.
-  // If it is, alert the user and return true, otherwise return false.
-  const checkForDuplicateFilename = (
-    fileName: string,
-    folderId: string,
-    projectFiles: Record<string, ProjectFile>
-  ) => {
-    let message = null;
-    const existingFile = Object.values(projectFiles).find(
-      f => f.name === fileName && f.folderId === folderId
-    );
-    if (existingFile) {
-      message = codebridgeI18n.duplicateFileError({fileName});
-      if (
-        existingFile.type === ProjectFileType.SUPPORT ||
-        existingFile.type === ProjectFileType.VALIDATION
-      ) {
-        message = codebridgeI18n.duplicateSupportFileError({fileName});
-      }
-    }
-    if (message) {
-      alert(message);
-      return true;
-    } else {
-      return false;
-    }
-  };
-
   const renameFolderPrompt: FilesComponentProps['renameFolderPrompt'] = useMemo(
-    () => folderId => {
+    () => async folderId => {
       const folder = project.folders[folderId];
-      const newName = window.prompt(codebridgeI18n.renameFolder(), folder.name);
-      if (newName === null || newName === folder.name) {
+      const results = await dialogControl?.showDialog({
+        type: DialogType.GenericPrompt,
+        title: codebridgeI18n.renameFolder(),
+        value: folder.name,
+        validateInput: (newName: string) => {
+          if (!newName.length) {
+            return;
+          }
+          if (newName === folder.name) {
+            return;
+          }
+
+          return validateFolderName({
+            folderName: newName,
+            parentId: folder.parentId,
+            projectFolders: project.folders,
+          });
+        },
+      });
+      if (results.type !== 'confirm') {
         return;
       }
-
-      const existingFolder = Object.values(project.folders).some(
-        f => f.name === newName && f.parentId === folder.parentId
-      );
-      if (existingFolder) {
-        alert(codebridgeI18n.folderExistsError());
-        return;
-      }
-
-      renameFolder(folder.id, newName);
+      const newName = extractInput(results);
+      renameFolder(folderId, newName);
+      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FOLDER, appName);
     },
-    [renameFolder, project.folders]
+    [project.folders, dialogControl, renameFolder, appName]
+  );
+
+  const handleDragEnd = useMemo(
+    () => (e: DragOverEvent) => {
+      if (e?.over && e?.active) {
+        // first, if we're dragging something into the folder which currently contains it, just bow out.
+        if (e.active.data.current?.parentId === e.over.id) {
+          return;
+        }
+        if (e.active.data.current?.type === DragType.FOLDER) {
+          const validationError = validateFolderName({
+            folderName: project.folders[e.active.data.current.id].name,
+            parentId: e.over.id as string,
+            projectFolders: project.folders,
+          });
+          if (validationError) {
+            dialogControl?.showDialog({
+              type: DialogType.GenericAlert,
+              title: validationError,
+            });
+          } else {
+            moveFolder(e.active.data.current.id as string, e.over.id as string);
+          }
+        } else if (e.active.data.current?.type === DragType.FILE) {
+          const validationError = validateFileName({
+            fileName: project.files[e.active.data.current.id].name,
+            folderId: e.over.id as string,
+          });
+          if (validationError) {
+            dialogControl?.showDialog({
+              type: DialogType.GenericAlert,
+              title: validationError,
+            });
+          } else {
+            moveFile(e.active.data.current.id as string, e.over.id as string);
+          }
+        }
+      }
+    },
+    [
+      dialogControl,
+      moveFile,
+      moveFolder,
+      project.files,
+      project.folders,
+      validateFileName,
+    ]
+  );
+
+  const sensors = useSensors(
+    useSensor(PointerSensor, {
+      activationConstraint: {
+        distance: 2,
+      },
+    })
   );
 
   return (
     <PanelContainer
       id="file-browser"
       headerContent={'Files'}
+      headerClassName={moduleStyles.fileBrowserHeader}
       className={moduleStyles['file-browser']}
-      rightHeaderContent={
-        !isReadOnly && (
-          <FileBrowserHeaderPopUpButton
-            newFolderPrompt={newFolderPrompt}
-            newFilePrompt={newFilePrompt}
-          />
-        )
-      }
+      rightHeaderContent={!isReadOnly && <FileBrowserHeaderPopUpButton />}
     >
-      <ul>
-        <InnerFileBrowser
-          parentId={DEFAULT_FOLDER_ID}
-          folders={project.folders}
-          newFolderPrompt={newFolderPrompt}
-          files={project.files}
-          newFilePrompt={newFilePrompt}
-          moveFilePrompt={moveFilePrompt}
-          renameFilePrompt={renameFilePrompt}
-          renameFolderPrompt={renameFolderPrompt}
-          setFileType={setFileType}
-        />
-      </ul>
+      <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
+        <DndDataContextProvider
+          value={{dragData, dropData}}
+          dndMonitor={dndMonitor}
+        >
+          <Droppable
+            data={{id: DEFAULT_FOLDER_ID}}
+            className={classNames(
+              moduleStyles.droppableArea,
+              moduleStyles.expandedDroppableArea,
+              {
+                [moduleStyles.acceptingDrop]:
+                  DEFAULT_FOLDER_ID === dropData?.id,
+              }
+            )}
+          >
+            <ul>
+              <InnerFileBrowser
+                parentId={DEFAULT_FOLDER_ID}
+                folders={project.folders}
+                files={project.files}
+                renameFilePrompt={renameFilePrompt}
+                renameFolderPrompt={renameFolderPrompt}
+                setFileType={setFileType}
+                appName={appName}
+              />
+            </ul>
+          </Droppable>
+        </DndDataContextProvider>
+      </DndContext>
     </PanelContainer>
   );
 });

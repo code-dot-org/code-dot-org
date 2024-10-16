@@ -1,72 +1,517 @@
 district_s,state_s
+Birmingham City Schools,Alabama
+Dale County Schools,Alabama
+Elmore County Public Schools,Alabama
 Montgomery Public Schools,Alabama
+Galena City School District,Alaska
+Hydaburg City School District,Alaska
+Kenai Peninsula Borough School District,Alaska
+Matanuska-Susitna Borough School District,Alaska
+Sitka School District,Alaska
 Yukon Flats School District,Alaska
+Arizona Connections Academy Charter School Inc.,Arizona
+Balsz Elementary School District,Arizona
+BASIS Flagstaff,Arizona
+Colearn Academy,Arizona
 Deer Valley Unified School District,Arizona
 Paradise Valley Unified School District,Arizona
+Phoenix Hebrew Academy,Arizona
+Scottsdale Unified School District,Arizona
+Shonto Preparatory School,Arizona
+Whiteriver Unified School District,Arizona
+Willcox Unified School District,Arizona
+Bald Knob School District,Arkansas
+Benton Schools,Arkansas
+Buffalo Island Central School District,Arkansas
+Lake Hamilton School District,Arkansas
+Newport Special School District,Arkansas
+Alameda Unified School District,California
+Alta Loma School District,California
+Clovis Unified School District,California
+Columbia Union School District,California
+Corona-Norco Unified School District,California
 Fort Bragg Unified School District,California
 Garden Grove Unified School District,California
+La Cañada Unified,California
 Los Angeles Unified School District,California
-Shasta Union High School,California
+Los Gatos Union School District,California
+Montebello Unified School District,California
+Monterey Peninsula Unified School District,California
+Moreno Valley Unified School District,California
+Orange Unified School District,California
+Pacific Charter Institute,California
 Piedmont Unified School District,California
+Redwood City School District,California
+Riverside Unified School District,California
+Sacramento County Office of Education,California
+San Bernardino City Unified School District,California
+San Lorenzo Valley Unified School District,California
+Santa Maria Bonita School District,California
+Shasta Union High School District,California
+Stanislaus County Office of Education,California
+Stockton Unified School District,California
+Trinity County Office of Education,California
+Denver Public Schools,Colorado
 Pueblo School District 60,Colorado
-Consolidated School District of New Britain,Connecticut
+Telluride School District No. R-1,Colorado
+Berlin Public Schools,Connecticut
+Bethel School District,Connecticut
 Hartford Public Schools,Connecticut
+New Britain School District,Connecticut
+New Canaan Public Schools,Connecticut
+Norwalk Public Schools,Connecticut
+Regional School District 15,Connecticut
+Stamford Public Schools,Connecticut
+Wallingford School District,Connecticut
+Brandywine School District,Delaware
+Divine Savior Academy,Florida
+Duval County Public Schools,Florida
+Madison County School District,Florida
+Miami-Dade County Public Schools,Florida
+Oak Hall School,Florida
+Orange County Public Schools,Florida
+Palm Beach County / CIE,Florida
+Pembroke Pines Charter School,Florida
+Putnam County Public Schools,Florida
+School District of Manatee County,Florida
+St. Johns County School District,Florida
+Volusia County School District,Florida
+City Schools of Decatur,Georgia
+Clinch County School District,Georgia
+Decatur County School District,Georgia
+Dougherty County School District,Georgia
+Effingham County School District,Georgia
+Georgia Cyber Academy,Georgia
+Jeff Davis County School District,Georgia
+Newton County Schools,Georgia
+Seminole County School District,Georgia
+The Epstein School,Georgia
+Twiggs County School District,Georgia
+ZEST Preparatory Academy Charter School,Georgia
+Emmanuel Lutheran School,Hawaii
 Hawaii State Department of Education,Hawaii
+American Falls School District,Idaho
+Blaine County School District,Idaho
+Caldwell School District,Idaho
+Lewiston Independent School District #1,Idaho
+Pocatello Chubbuck School District #25,Idaho
 Calvary Academy,Illinois
-Carlinville Community Unit School District #1,Illinois
+Carlinville CUSD#1,Illinois
+Effingham Community Unit School District 40,Illinois
+Evanston Skokie CCSD 65,Illinois
 Grayslake CCSD 46,Illinois
-Effingham Unit #40,Illinois
+Herscher Community Unit School District #2,Illinois
+Riverton Community Unit School District 14,Illinois
+Rockridge Community Unit School District 300,Illinois
+St. Joseph School,Illinois
 Center Grove Community Schools,Indiana
-Jennings County School District,Indiana
-Lawrenceburg Community School Corporation,Indiana
-Hanover Community School Corporation,Indiana
+Charter School Indiana,Indiana
+Cowan Community School Corporation,Indiana
+Danville Community School Corporation,Indiana
+Fort Wayne Community Schools,Indiana
 Franklin Township Community School Corporation,Indiana
+Griffith Public Schools,Indiana
+Hanover Community School Corporation,Indiana
+Independence Academy of Indiana,Indiana
+Indiana Math & Science Academy North,Indiana
+Jennings County Schools,Indiana
+Lawrenceburg Community School Corporation,Indiana
+Liberty-Perry Community School District,Indiana
+Linton-Stockton School Corporation,Indiana
+Monroe County Community School,Indiana
+MSD of Mount Vernon,Indiana
 Plainfield Community School Corporation,Indiana
-Woodbine Community School District,Iowa
-Dubuque Community School District,Iowa
-Holy Family Catholic Schools,Iowa
-Mid-Prairie Community School District,Iowa
-Osage Community Schools,Iowa
-Sioux City Community School District,Iowa
+South Vermillion Community School Corporation,Indiana
+Southwest Parke Community Schools,Indiana
+St. John the Baptist,Indiana
+Trinity Christian School,Indiana
+Cedar Rapids Community School District,Iowa
 Denison Community Schools,Iowa
-Wichita Public Schools,Kansas
-Daviess County School District,Kentucky
-Discovery Schools,Louisiana
+Dubuque Community School District,Iowa
+George-Little Rock Community School District,Iowa
+Holy Family Catholic Schools,Iowa
+Iowa City Community School District,Iowa
+Mid-Prairie Community Schools,Iowa
+North Iowa Community Schools,Iowa
+Osage Community School,Iowa
+Sioux City Community School District,Iowa
+South Winneshiek CSD,Iowa
+Woodbine Community School District,Iowa
+Blue Valley Unified School District 229,Kansas
+Meade Unified School District 226,Kansas
+Sylvan Lucas Unified School District 299,Kansas
+Wichita Public Schools - USD 259,Kansas
+Daviess County Public Schools,Kentucky
+Jefferson County Public Schools,Kentucky
+Magoffin County Schools,Kentucky
+Robertson County Schools,Kentucky
+Ascension Parish School Board,Louisiana
+Bossier Parish Schools,Louisiana
+Discovery Health Sciences Foundation,Louisiana
+East Baton Rouge,Louisiana
+Integrated Impact Academy,Louisiana
+Pelican Educational Foundation,Louisiana
+Great Salt Bay School,Maine
+Baltimore City Public Schools,Maryland
+Charles County Public Schools,Maryland
+Garrett County Public Schools,Maryland
+Montgomery County Public Schools,Maryland
+Washington County Public Schools,Maryland
+Worcester County Public Schools,Maryland
+Berlin-Boylston Regional School District,Massachusetts
+Bourne Public Schools,Massachusetts
+Duxbury Public Schools,Massachusetts
+Granby Public Schools,Massachusetts
+Ipswich Public Schools,Massachusetts
+Maynard Public Schools,Massachusetts
+Melrose Public Schools,Massachusetts
+Natick Public Schools,Massachusetts
+Phoenix Charter Academy,Massachusetts
+Plymouth Public Schools,Massachusetts
+Somerville Public Schools,Massachusetts
+Southeastern Massachusetts Educational Collaborative,Massachusetts
+Springfield International Charter School,Massachusetts
+Sudbury Public Schools,Massachusetts
+Bedford Public Schools,Michigan
+Bessemer Area Schools,Michigan
 Chippewa Valley Schools,Michigan
-Detroit Public Schools,Michigan
-National Heritage Academies,Michigan
-Notre Dame Preparatory School,Michigan
-Wayne Westland Community Schools,Michigan
+Clarkston Community Schools,Michigan
+Detroit Public Schools Community District,Michigan
+Grand Rapids Public Schools,Michigan
+Huron School District,Michigan
+Kearsley Community Schools,Michigan
 Lake Shore Public Schools,Michigan
-Adrian Independent School District,Minnesota
+Lansing School District,Michigan
+Merrill Community School District,Michigan
+Muskegon Public Schools,Michigan
+National Heritage Academies,Michigan
+Niles Community Schools,Michigan
+Notre Dame Preparatory and Marist Academy,Michigan
+Our Lady Queen of Martyrs,Michigan
+South Lake Schools,Michigan
+Three Rivers Community Schools,Michigan
+Troy School District,Michigan
+Utica Community Schools,Michigan
+Watervliet Public Schools,Michigan
+Wayne-Westland Community Schools,Michigan
+White Cloud Public Schools,Michigan
+Adrian Public Schools District 511,Minnesota
+Belle Plaine Public Schools,Minnesota
+Bloomington Public Schools,Minnesota
 Brooklyn Center Community Schools,Minnesota
+Kasson-Mantorville Schools,Minnesota
+Mankato Area Public Schools,Minnesota
+Martin County West Schools,Minnesota
+Mountain Iron-Buhl,Minnesota
 Nicollet Public 507,Minnesota
-Kasson Mantorville Public Schools,Minnesota
-Mankato Area Public Schools ,Minnesota
-The School District of University City,Missouri
+Princeton Public Schools,Minnesota
+South Washington County Schools,Minnesota
+St. Louis County Schools ISD 2142,Minnesota
+"Thief River Falls Public Schools, District 564",Minnesota
+Ambition Preparatory Charter,Mississippi
+Coffeeville Schools,Mississippi
+Holmes County Consolidated School District,Mississippi
+Instant Impact Global Prep,Mississippi
+Lamar County School District,Mississippi
+Louisville Municipal School District,Mississippi
+Newton Municipal,Mississippi
+Pass Christian Public School District,Mississippi
+Quitman Consolidated School District,Mississippi
+Sunflower County Consolidated School,Mississippi
+West Tallahatchie School District,Mississippi
+Cole Camp R-I School District,Missouri
+Cole County R-V School District,Missouri
+Ferguson-Florissant School District,Missouri
+Greenfield R-IV School District,Missouri
+Iron County C-4 School District,Missouri
+Marshall Public Schools,Missouri
+Marshall Public Schools,Missouri
+Miller R-II Schools,Missouri
+Plato R-V School District,Missouri
+Putnam County R-I School District,Missouri
+University City,Missouri
+Wentzville School District,Missouri
+Battle Creek Public Schools,Nebraska
+Cozad Community Schools,Nebraska
+Diocese of Grand Island,Nebraska
+Grand Island Central Catholic,Nebraska
+Gretna Public Schools,Nebraska
+Hastings Public Schools,Nebraska
+Hay Springs Public School District 3,Nebraska
+Hershey Public Schools,Nebraska
+Lincoln Public Schools,Nebraska
+Maywood Public Schools,Nebraska
+Northwest Public Schools,Nebraska
+Pierce Public Schools,Nebraska
+Raymond Central Public Schools,Nebraska
+Scribner Snyder Community Schools,Nebraska
+Wakefield Community Schools,Nebraska
+Alpine Academy,Nevada
 Clark County School District,Nevada
 Elko County School District,Nevada
 Humboldt County School District,Nevada
+Lincoln County School District,Nevada
 Lyon County School District,Nevada
 Nye County School District,Nevada
-Lincoln County School District,Nevada
-Newark Public School District,New Jersey
-Somerville Public Schools,New Jersey
-Washington Township Program,New Jersey
+Derry Cooperative School District,New Hampshire
+Fall Mountain Regional,New Hampshire
+Pinkerton Academy School District,New Hampshire
+Portsmouth School District,New Hampshire
+SAU 43: Newport School District,New Hampshire
+Barnegat Township School District,New Jersey
+Bayonne Board of Education,New Jersey
+Beach Haven School,New Jersey
+Bloomfield Public Schools,New Jersey
+Brick Education Network,New Jersey
+Cape May County Vocational School District,New Jersey
+Clinton Township School District,New Jersey
+Dunellen Public Schools,New Jersey
+East Hanover Township School District,New Jersey
+Eastern Camden County Regional School District,New Jersey
+Glen Rock Public Schools,New Jersey
+Haddon Heights School District,New Jersey
+Hamilton Township School District,New Jersey
+Hamilton Township Schools,New Jersey
+Hanover Park Regional High School District,New Jersey
+Hillsborough Township Public Schools,New Jersey
+Keyport Public School District,New Jersey
+Kinnelon Public Schools,New Jersey
+Leap Academy University Charter School,New Jersey
+Lebanon Borough School,New Jersey
+Leonia School District,New Jersey
+Lopatcong Township School District,New Jersey
+Middlesex County Magnet Schools,New Jersey
+Midland Park Public Schools,New Jersey
+Millburn Township Public Schools,New Jersey
+Monmouth Beach School District,New Jersey
+Montclair Public Schools,New Jersey
+New Brunswick School District,New Jersey
+Newark Board of Education,New Jersey
+North Hunterdon Voorhees High School District,New Jersey
+Ocean City School District,New Jersey
+Plainfield School District,New Jersey
+Rumson-Fair Haven Regional High School District,New Jersey
+South Brunswick Township School District,New Jersey
+Springfield Public Schools,New Jersey
+St Joseph High School,New Jersey
+The Lower Alloways Creek School District,New Jersey
+Upper Township School District,New Jersey
+Vernon Township School District,New Jersey
+Warren Glen Academy,New Jersey
+"Washington Township Schools, Morris County",New Jersey
+Woodbridge Township School District,New Jersey
 Yavneh Academy,New Jersey
-Evans-Brant Central School District,New York
-Highland Falls Central District,New York
-St. Lawrence-Lewis BOCES,New York
+Cuba Independent Schools,New Mexico
+Estancia Municipal School District,New Mexico
+Las Cruces Public Schools,New Mexico
+Rio Rancho Public Schools,New Mexico
+Voz Collegiate Preparatory Charter School,New Mexico
+All Saints Catholic Academy,New York
+Arlington Central School District,New York
+Brooklyn Amity School,New York
+City School District of New Rochelle,New York
+East Ramapo Central School District,New York
+Eastern Suffolk BOCES Model Schools,New York
+Elmwood Village Charter School,New York
+Gananda Central School District,New York
+Greece Central schools,New York
+Highland Falls Fort Montgomery CSD,New York
+Hyde Leadership Charter School,New York
+Lake Shore Central School District,New York
+Manhattan Charter School,New York
+Mercaz Academy,New York
+Millbrook Central School District,New York
+Mount Markham Central School District,New York
+New Visions Charter Network IV,New York
+Norwood-Norfolk Central School District,New York
+Orchard Park Central School District,New York
+Pathways in Technology Early College High School,New York
+PS 165 Robert E Simon,New York
+Public Schools of the Tarrytowns,New York
+Ravena Coeymans Selkirk CSD,New York
+Rocky Point Union Free School District,New York
+Schenectady School District,New York
+South Glens Falls CSD,New York
+Team Academy,New York
+Uniondale School District,New York
+West Hempstead,New York
+Zeta Charter Schools,New York
+ALA Johnston,North Carolina
+American Renaissance School,North Carolina
+Cape Fear Center for Inquiry,North Carolina
+Carteret County Public Schools,North Carolina
+Cherokee County Schools,North Carolina
 Columbus County Schools,North Carolina
-Currituck County Schools,North Carolina
-North Carolina Telra Institute,North Carolina
+Cumberland County Schools,North Carolina
+Currituck County School District,North Carolina
+Davie County Schools,North Carolina
+Duplin County Schools,North Carolina
+Gaston County Schools,North Carolina
 Guilford County Schools,North Carolina
+Guilford Preparatory Academy,North Carolina
+Hoke County Schools,North Carolina
+Johnston County Public Schools,North Carolina
+Martin County Schools,North Carolina
+Road to Hire,North Carolina
+Sugar Creek Charter School,North Carolina
+Telra Institute,North Carolina
+Tomarra Londeree,North Carolina
+Warren County Schools,North Carolina
+Wilson County Schools,North Carolina
+Alexander 2 School District,North Dakota
+Cavalier 6 School District,North Dakota
+Dakota Boys and Girls Ranch,North Dakota
+Finley-Sharon 19 School District,North Dakota
+Garrison 51 School District,North Dakota
+Hazen Public Schools,North Dakota
+Hillsboro Public School District,North Dakota
+Hope Christian Academy,North Dakota
+Kenmare 28 School District,North Dakota
+Kindred 2 School District,North Dakota
+Maddock Public School District #9,North Dakota
+May-Port CG School District,North Dakota
+Midway Public School #128,North Dakota
+Mott-Regent Public Schools,North Dakota
+Mt Pleasant School District #4,North Dakota
+Napoleon 2 School District,North Dakota
+ND Youth Correctional Center,North Dakota
+New England Public School,North Dakota
+New Rockford-Sheyenne School District,North Dakota
+Northwood 129,North Dakota
+Richland 44,North Dakota
+Sargent Central Public School,North Dakota
+Sawyer Public School District,North Dakota
+St Joseph Catholic School (Williston),North Dakota
+Stanley 2 School District,North Dakota
+The Innovation School,North Dakota
+Thompson Public Schools,North Dakota
+United #7,North Dakota
+Washburn Public School,North Dakota
+Westhope 17 School District,North Dakota
+Williston Basin School District 7,North Dakota
+Williston Trinity Christian School,North Dakota
+Breakthrough Public Schools,Ohio
+Clearview Local School District,Ohio
+Cleveland Metropolitan School District,Ohio
+Columbus City Schools,Ohio
+Educational Solutions Company,Ohio
+Educational Solutions Company,Ohio
+Euclid City Schools,Ohio
 Horizon Science Academy Cleveland High School,Ohio
+Hudson City School District,Ohio
+Indian Hill Exempted Village School District,Ohio
+New Miami Local,Ohio
+Olentangy Local Schools,Ohio
+Par Excellence STEM Academy,Ohio
+Perrysburg Exempted Village School District,Ohio
+Pickerington Local School District,Ohio
+Springfield Local Schools,Ohio
+Allen Public Schools,Oklahoma
+Chouteau Early Childhood Center,Oklahoma
+Coleman Public Schools,Oklahoma
+Coweta School District I-17,Oklahoma
+Epic Charter Schools,Oklahoma
+Kildare Public School,Oklahoma
+Tulsa Public Schools,Oklahoma
+Wayne Public Schools,Oklahoma
+Berwick Area School District,Pennsylvania
+Carbon Learning Achievement School,Pennsylvania
+Community Academy of Philadelphia Charter School,Pennsylvania
+East Stroudsburg University,Pennsylvania
 Norwin School District,Pennsylvania
 Philadelphia Academy Charter School,Pennsylvania
+Russell Byers Charter School,Pennsylvania
+Salem Christian School,Pennsylvania
 School District of Springfield Township,Pennsylvania
-Robertson County School District,Tennessee
-Wilson County Schools,Tennessee
+Union Area School District,Pennsylvania
+Smithfield Public Schools,Rhode Island
+Aiken County Public Schools,South Carolina
+Beaufort County Schools,South Carolina
+Calhoun County Public Schools,South Carolina
+Charleston County School District,South Carolina
+Clarendon County School District,South Carolina
+Darlington County School District,South Carolina
+Lexington County School District One,South Carolina
+Lexington School District 2,South Carolina
+Anderson County School District,Tennessee
+Bradley County Schools,Tennessee
+Bristol Tennessee City School District,Tennessee
+Cocke County School District,Tennessee
+Dyersburg City School District,Tennessee
+Germantown Municipal School District,Tennessee
+Green Dot Public School,Tennessee
+Hickman County Schools,Tennessee
+Humphreys County Board of Education,Tennessee
+Johnson City Schools,Tennessee
+Lincoln County Schools,Tennessee
+McKenzie Special School District,Tennessee
+Memphis Shelby County Schools,Tennessee
+Metro Nashville Public Schools,Tennessee
+Oak Ridge City School District,Tennessee
+Overton County,Tennessee
+Sevier County School System,Tennessee
+St. Mary's Episcopal School,Tennessee
+All Saints' Episcopal School of Fort Worth,Texas
+Austin Achieve Pflugerville,Texas
+Benavides Independent School District,Texas
+Canutillo Independent School District,Texas
+Clifton Independent School District,Texas
+Copperas Cove Independent School District,Texas
+Crowley Independent School District,Texas
+Dripping Springs Independent School District,Texas
+Eagle Mountain Saginaw ISD,Texas
+Ector County Independent School District,Texas
+Eleanor Kolitz Hebrew Language Academy,Texas
+Hallsburg Independent School District,Texas
+Hallsville Independent School District,Texas
+Harmony Public Schools North Texas,Texas
+Hawkins Independent School District,Texas
+Humble Independent School District,Texas
+Irion County Independent School District,Texas
+Jacksboro Independent School District,Texas
+Lexington Independent School District,Texas
+Lockhart Independent School District,Texas
+Lubbock-Cooper ISD,Texas
+McGregor Independent School District,Texas
+Mineola Independent School District,Texas
+Prairie Valley Independent School District,Texas
+Santa Rosa ISD,Texas
 Southside Independent School District,Texas
-Raleigh County School District,West Virginia
-Fayette County Schools,West Virginia	
+Springtown Independent School District,Texas
+St. Joseph's School,Texas
+Stafford MSD,Texas
+Texline Independent School District,Texas
+Westlake Academy,Texas
+Alleghany Highlands Public Schools,Virginia
+"Frederick County Public Schools, (VA)",Virginia
+Loudoun County Public Schools,Virginia
+Osbourn High School,Virginia
+Russell County Public Schools,Virginia
+Suffolk Public Schools,Virginia
+Catalyst Public Schools,Washington
+Clover Park School District,Washington
+Crosspoint Christian School,Washington
+Lake Washington School District,Washington
+Marysville School District,Washington
+Omak School District,Washington
+Renton School District,Washington
+Trillium Academy,Washington
+Calhoun County Schools,West Virginia
+Fayette County Schools,West Virginia
+Monroe County Schools,West Virginia
+Raleigh County Schools,West Virginia
+Roane County School District,West Virginia
+Cornell School District,Wisconsin
+Dodgeville Schools,Wisconsin
+Elmbrook School District,Wisconsin
+Gibraltar Area School District,Wisconsin
+Oneida Nation School System,Wisconsin
+Pewaukee School District,Wisconsin
+Pulaski Community School District,Wisconsin
+School District of Brown Deer,Wisconsin
+School District of Cudahy,Wisconsin
+Seymour Community Schools,Wisconsin
+Sheboygan Area School District,Wisconsin
+Converse County School District #2,Wyoming
+Sheridan County School District #2,Wyoming
+Sweetwater County School District #1,Wyoming

@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import {Position} from '@cdo/apps/constants';
 import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
@@ -7,8 +5,6 @@ import pageConstants from '@cdo/apps/redux/pageConstants';
 import {singleton as studioAppSingleton} from '@cdo/apps/StudioApp';
 import Artist from '@cdo/apps/turtle/artist';
 import {parseElement} from '@cdo/apps/xml';
-
-import {expect} from '../../util/reconfiguredChai';
 
 const SHORT_DIAGONAL = 50 * Math.sqrt(2);
 const VERY_LONG_DIAGONAL = 150 * Math.sqrt(2);
@@ -40,38 +36,42 @@ describe('Artist', () => {
     it('draws 2 joints on a short segment', () => {
       artist.visualization.drawForwardWithJoints_(50, false);
 
-      expect(joints).to.equal(2);
-      expect(segments).to.eql([50]);
+      expect(joints).toBe(2);
+      expect(segments).toEqual([50]);
     });
     it('draws 3 joints on a long segment', () => {
       artist.visualization.drawForwardWithJoints_(100, false);
 
-      expect(joints).to.equal(3);
-      expect(segments).to.eql([50, 50]);
+      expect(joints).toBe(3);
+      expect(segments).toEqual([50, 50]);
     });
     it('draws no joints on a very short segment', () => {
       artist.visualization.drawForwardWithJoints_(10, false);
 
-      expect(joints).to.equal(0);
-      expect(segments).to.eql([10]);
+      expect(joints).toBe(0);
+      expect(segments).toEqual([10]);
     });
     it('draws 2 joints on a short diagonal segment', () => {
       artist.visualization.drawForwardWithJoints_(SHORT_DIAGONAL, true);
 
-      expect(joints).to.equal(2);
-      expect(segments).to.eql([SHORT_DIAGONAL]);
+      expect(joints).toBe(2);
+      expect(segments).toEqual([SHORT_DIAGONAL]);
     });
     it('draws 4 joints on a very long diagonal segment', () => {
       artist.visualization.drawForwardWithJoints_(VERY_LONG_DIAGONAL, true);
 
-      expect(joints).to.equal(4);
-      expect(segments).to.eql([SHORT_DIAGONAL, SHORT_DIAGONAL, SHORT_DIAGONAL]);
+      expect(joints).toBe(4);
+      expect(segments).toEqual([
+        SHORT_DIAGONAL,
+        SHORT_DIAGONAL,
+        SHORT_DIAGONAL,
+      ]);
     });
     it('draws no joints on a very short diagonal segment', () => {
       artist.visualization.drawForwardWithJoints_(SHORT_DIAGONAL - 1, true);
 
-      expect(joints).to.equal(0);
-      expect(segments).to.eql([SHORT_DIAGONAL - 1]);
+      expect(joints).toBe(0);
+      expect(segments).toEqual([SHORT_DIAGONAL - 1]);
     });
   });
 
@@ -84,13 +84,12 @@ describe('Artist', () => {
 
       artist.visualization = new Artist.Visualization();
       artist.visualization.currentPathPattern = img;
-      const setDrawPatternBackwardSpy = sinon.spy(
-        artist.visualization.ctxScratch,
-        'drawImage'
-      );
+      const setDrawPatternBackwardSpy = jest
+        .spyOn(artist.visualization.ctxScratch, 'drawImage')
+        .mockClear();
       artist.visualization.drawForwardLineWithPattern_(-100);
 
-      expect(setDrawPatternBackwardSpy).to.be.have.been.calledWith(
+      expect(setDrawPatternBackwardSpy).toHaveBeenCalledWith(
         img,
         100,
         0,
@@ -102,7 +101,7 @@ describe('Artist', () => {
         100
       );
 
-      setDrawPatternBackwardSpy.restore();
+      setDrawPatternBackwardSpy.mockRestore();
     });
 
     it('draws a pattern forward', () => {
@@ -113,13 +112,12 @@ describe('Artist', () => {
 
       artist.visualization = new Artist.Visualization();
       artist.visualization.currentPathPattern = img;
-      const setDrawPatternForwardSpy = sinon.spy(
-        artist.visualization.ctxScratch,
-        'drawImage'
-      );
+      const setDrawPatternForwardSpy = jest
+        .spyOn(artist.visualization.ctxScratch, 'drawImage')
+        .mockClear();
       artist.visualization.drawForwardLineWithPattern_(100);
 
-      expect(setDrawPatternForwardSpy).to.be.have.been.calledWith(
+      expect(setDrawPatternForwardSpy).toHaveBeenCalledWith(
         img,
         0,
         0,
@@ -131,7 +129,7 @@ describe('Artist', () => {
         100
       );
 
-      setDrawPatternForwardSpy.restore();
+      setDrawPatternForwardSpy.mockRestore();
     });
   });
 
@@ -144,14 +142,13 @@ describe('Artist', () => {
       let options = {smoothAnimate: false};
 
       artist.visualization = new Artist.Visualization();
-      const setStickerSize = sinon.spy(
-        artist.visualization.ctxScratch,
-        'drawImage'
-      );
+      const setStickerSize = jest
+        .spyOn(artist.visualization.ctxScratch, 'drawImage')
+        .mockClear();
       artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
-      expect(setStickerSize).to.be.have.been.calledWith(
+      expect(setStickerSize).toHaveBeenCalledWith(
         img,
         0,
         0,
@@ -163,7 +160,7 @@ describe('Artist', () => {
         100
       );
 
-      setStickerSize.restore();
+      setStickerSize.mockRestore();
     });
     it('draws a sticker when size is 0', () => {
       let artist = new Artist();
@@ -173,14 +170,13 @@ describe('Artist', () => {
       let options = {smoothAnimate: false};
 
       artist.visualization = new Artist.Visualization();
-      const setStickerSize = sinon.spy(
-        artist.visualization.ctxScratch,
-        'drawImage'
-      );
+      const setStickerSize = jest
+        .spyOn(artist.visualization.ctxScratch, 'drawImage')
+        .mockClear();
       artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
-      expect(setStickerSize).to.be.have.been.calledWith(
+      expect(setStickerSize).toHaveBeenCalledWith(
         img,
         0,
         0,
@@ -192,7 +188,7 @@ describe('Artist', () => {
         0
       );
 
-      setStickerSize.restore();
+      setStickerSize.mockRestore();
     });
     it('draws a sticker when size is 50 px', () => {
       let artist = new Artist();
@@ -202,14 +198,13 @@ describe('Artist', () => {
       let options = {smoothAnimate: false};
 
       artist.visualization = new Artist.Visualization();
-      const setStickerSize = sinon.spy(
-        artist.visualization.ctxScratch,
-        'drawImage'
-      );
+      const setStickerSize = jest
+        .spyOn(artist.visualization.ctxScratch, 'drawImage')
+        .mockClear();
       artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
-      expect(setStickerSize).to.be.have.been.calledWith(
+      expect(setStickerSize).toHaveBeenCalledWith(
         img,
         0,
         0,
@@ -221,7 +216,7 @@ describe('Artist', () => {
         50
       );
 
-      setStickerSize.restore();
+      setStickerSize.mockRestore();
     });
     it('draws a sticker when size is 200 px', () => {
       // Test condition when width < size && height < size
@@ -232,14 +227,13 @@ describe('Artist', () => {
       let options = {smoothAnimate: false};
 
       artist.visualization = new Artist.Visualization();
-      const setStickerSize = sinon.spy(
-        artist.visualization.ctxScratch,
-        'drawImage'
-      );
+      const setStickerSize = jest
+        .spyOn(artist.visualization.ctxScratch, 'drawImage')
+        .mockClear();
       artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
-      expect(setStickerSize).to.be.have.been.calledWith(
+      expect(setStickerSize).toHaveBeenCalledWith(
         img,
         0,
         0,
@@ -251,7 +245,7 @@ describe('Artist', () => {
         100
       );
 
-      setStickerSize.restore();
+      setStickerSize.mockRestore();
     });
     it('draws a sticker when size is 30 px', () => {
       let artist = new Artist();
@@ -262,14 +256,13 @@ describe('Artist', () => {
       let options = {smoothAnimate: false};
 
       artist.visualization = new Artist.Visualization();
-      const setStickerSize = sinon.spy(
-        artist.visualization.ctxScratch,
-        'drawImage'
-      );
+      const setStickerSize = jest
+        .spyOn(artist.visualization.ctxScratch, 'drawImage')
+        .mockClear();
       artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
-      expect(setStickerSize).to.be.have.been.calledWith(
+      expect(setStickerSize).toHaveBeenCalledWith(
         img,
         0,
         0,
@@ -281,7 +274,7 @@ describe('Artist', () => {
         12
       );
 
-      setStickerSize.restore();
+      setStickerSize.mockRestore();
     });
   });
 
@@ -295,13 +288,15 @@ describe('Artist', () => {
     it('can point to a specific direction', () => {
       const absoluteDirection = [0, 30, 45, 60, 180, 270];
       const blockId = 'block_id_4';
-      const pointToSpy = sinon.spy(artist.visualization, 'pointTo');
+      const pointToSpy = jest
+        .spyOn(artist.visualization, 'pointTo')
+        .mockClear();
 
       absoluteDirection.forEach(angle => {
         artist.step('PT', [angle, blockId]);
-        expect(pointToSpy).to.be.have.been.calledWith(angle);
+        expect(pointToSpy).toHaveBeenCalledWith(angle);
       });
-      pointToSpy.restore();
+      pointToSpy.mockRestore();
     });
 
     it('can point to a 50 degrees', () => {
@@ -311,19 +306,22 @@ describe('Artist', () => {
       artist.visualization.angle = 50;
       artist.step('PT', [angle, blockId]);
 
-      expect(artist.visualization.angle).to.equal(angle);
+      expect(artist.visualization.angle).toBe(angle);
     });
 
     it('should call setHeading', () => {
       let angle = 60;
       let blockId = 'block_id_8';
 
-      const setHeadingStub = sinon.stub(artist.visualization, 'setHeading');
+      const setHeadingStub = jest
+        .spyOn(artist.visualization, 'setHeading')
+        .mockClear()
+        .mockImplementation();
       artist.step('PT', [angle, blockId]);
 
-      expect(setHeadingStub).to.be.have.been.calledOnce;
+      expect(setHeadingStub).toHaveBeenCalledTimes(1);
 
-      setHeadingStub.restore();
+      setHeadingStub.mockRestore();
     });
   });
 
@@ -340,8 +338,8 @@ describe('Artist', () => {
       coords.forEach(x => {
         coords.forEach(y => {
           artist.step('JT', [[x, y]]);
-          expect(artist.visualization.x).to.equal(x);
-          expect(artist.visualization.y).to.equal(y);
+          expect(artist.visualization.x).toBe(x);
+          expect(artist.visualization.y).toBe(y);
         });
       });
     });
@@ -362,8 +360,8 @@ describe('Artist', () => {
       Object.keys(expectations).forEach(position => {
         const [x, y] = expectations[position];
         artist.step('JT', [Position[position]]);
-        expect(artist.visualization.x).to.equal(x);
-        expect(artist.visualization.y).to.equal(y);
+        expect(artist.visualization.x).toBe(x);
+        expect(artist.visualization.y).toBe(y);
       });
     });
   });
@@ -373,7 +371,10 @@ describe('Artist', () => {
 
     it('executes upon reset', done => {
       const artist = new Artist();
-      const execute = sinon.stub(artist, 'execute');
+      const execute = jest
+        .spyOn(artist, 'execute')
+        .mockClear()
+        .mockImplementation();
       artist.injectStudioApp(studioApp);
       artist
         .init({
@@ -387,13 +388,16 @@ describe('Artist', () => {
 
       artist.resetButtonClick();
 
-      expect(execute).to.have.been.called;
-      execute.restore();
+      expect(execute).toHaveBeenCalled();
+      execute.mockRestore();
     });
 
     it('executes upon code changes', done => {
       const artist = new Artist();
-      const execute = sinon.stub(Artist.prototype, 'execute');
+      const execute = jest
+        .spyOn(Artist.prototype, 'execute')
+        .mockClear()
+        .mockImplementation();
       const container = document.createElement('div');
       container.id = 'artistContainer';
       document.body.appendChild(container);
@@ -410,8 +414,8 @@ describe('Artist', () => {
         .catch(() => done());
       studioApp.runChangeHandlers();
 
-      expect(execute).to.have.been.called;
-      execute.restore();
+      expect(execute).toHaveBeenCalled();
+      execute.mockRestore();
     });
   });
 
@@ -460,7 +464,7 @@ describe('Artist', () => {
       artist.prepareForRemix();
 
       // loadBlocksToWorkspace should not have been called
-      expect(newDom).to.be.undefined;
+      expect(newDom).toBeUndefined();
     });
 
     it('adds moveTo block if initialX is set', () => {
@@ -472,7 +476,7 @@ describe('Artist', () => {
       expect(
         newDom.querySelector('block[type="jump_to_xy"] title[name="XPOS"]')
           .firstChild.wholeText
-      ).to.equal('30');
+      ).toBe('30');
     });
 
     it('adds moveTo block if initialX and initialY are set', () => {
@@ -485,11 +489,11 @@ describe('Artist', () => {
       expect(
         newDom.querySelector('block[type="jump_to_xy"] title[name="XPOS"]')
           .firstChild.wholeText
-      ).to.equal('30');
+      ).toBe('30');
       expect(
         newDom.querySelector('block[type="jump_to_xy"] title[name="YPOS"]')
           .firstChild.wholeText
-      ).to.equal('50');
+      ).toBe('50');
     });
 
     it('adds a moveTo block with 200 for the y coordinate if initialY is not specified in the level', () => {
@@ -501,7 +505,7 @@ describe('Artist', () => {
       expect(
         newDom.querySelector('block[type="jump_to_xy"] title[name="YPOS"]')
           .firstChild.wholeText
-      ).to.equal('200');
+      ).toBe('200');
     });
 
     it('adds moveTo and turn blocks if initialX and startDirection are set', () => {
@@ -514,11 +518,11 @@ describe('Artist', () => {
       expect(
         newDom.querySelector('block[type="jump_to_xy"] title[name="XPOS"]')
           .firstChild.wholeText
-      ).to.equal('30');
+      ).toBe('30');
       expect(
         newDom.querySelector('block[type="draw_turn"] title[name="NUM"]')
           .firstChild.wholeText
-      ).to.equal('-45');
+      ).toBe('-45');
     });
 
     it('adds a whenRun block if none is present', () => {
@@ -529,22 +533,24 @@ describe('Artist', () => {
 
       artist.prepareForRemix();
 
-      expect(newDom.querySelector('block[type="when_run"]')).not.to.be
-        .undefined;
+      expect(newDom.querySelector('block[type="when_run"]')).toBeDefined();
     });
   });
 
   it('Does not alert for infinite loops', () => {
     const artist = new Artist();
-    const alertStub = sinon.stub(window, 'alert');
+    const alertStub = jest
+      .spyOn(window, 'alert')
+      .mockClear()
+      .mockImplementation();
 
     artist.evalCode('while(true) executionInfo.checkTimeout();', {
       ...DEFAULT_EXECUTION_INFO,
       ticks: 10, // Declare an infinite loop after 10 ticks
     });
 
-    expect(alertStub).to.not.have.been.called;
+    expect(alertStub).not.toHaveBeenCalled();
 
-    alertStub.restore();
+    alertStub.mockRestore();
   });
 });

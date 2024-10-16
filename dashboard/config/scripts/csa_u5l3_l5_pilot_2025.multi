@@ -1,0 +1,53 @@
+name 'CSA U5L3-L5_pilot-2025'
+title 'Check for Understanding'
+
+wrong '`4 1 3`'
+right '`5 6 8`'
+wrong '`6 7 9`'
+wrong '`8 5 7`'
+wrong '`9 6 8`'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Consider the following code segment.
+
+```
+int[][] array2D = {{1, 2, 3, 5},
+                   {5, 2, 7, 9},
+                   {10, 3, 4, 1},
+                   {8, 3, 5, 6}};
+
+for (int row = 0; row < array2D.length; row++) {
+  for (int col = 0; col < array2D[0].length; col++) {
+    if (array2D[row][col] == num) {
+      System.out.print(row + array2D[row][col] + " ");
+    }
+  }
+}
+```
+
+What is printed when `num` has the value `5`?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The given code segment iterates through a 2D array and checks if the value at `array2D[row][col]` is equal to the variable `num`. If it is, the code prints the sum of the current row index and the value at that position in the array.
+
+When `num` is 5, we can find the value `5` in the following positions:
+
+* `array2D[0][3]`: row = 0, col = 3
+
+* `array2D[1][0]`: row = 1, col = 0
+
+* `array2D[3][2]`: row = 3, col = 2
+
+We can then calculate the sum of the row index and the value at each of these positions:
+
+* `0 + array2D[0][3]` = 0 + 5 = 5
+
+* `1 + array2D[1][0]` = 1 + 5 = 6
+
+* `3 + array2D[3][2]` = 3 + 5 = 8
+
+So the output will be `5 6 8`.
+MARKDOWN

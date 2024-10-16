@@ -3,8 +3,6 @@ import React from 'react';
 
 import PrimaryTeacher from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/PrimaryTeacher';
 
-import {expect} from '../../../../util/reconfiguredChai';
-
 const testPrimaryTeacher = {
   name: 'Parmesan',
   email: 'parmesan@code.org',
@@ -15,15 +13,15 @@ describe('PrimaryTeacher', () => {
     const wrapper = mount(
       <PrimaryTeacher primaryTeacher={testPrimaryTeacher} numCoteachers={1} />
     );
-    expect(wrapper.text()).to.include('Parmesan');
-    expect(wrapper.text()).to.include('parmesan@code.org');
+    expect(wrapper.text()).toContain('Parmesan');
+    expect(wrapper.text()).toContain('parmesan@code.org');
   });
 
   it('renders nothing if there are no coteachers', () => {
     const wrapper = shallow(
       <PrimaryTeacher primaryTeacher={testPrimaryTeacher} numCoteachers={0} />
     );
-    expect(wrapper).to.be.empty;
+    expect(Object.keys(wrapper)).toHaveLength(0);
   });
 
   it('renders nothing if coteachers are added', () => {
@@ -34,10 +32,10 @@ describe('PrimaryTeacher', () => {
         numCoteachers={numCoteachers}
       />
     );
-    expect(wrapper).to.be.empty;
+    expect(Object.keys(wrapper)).toHaveLength(0);
     numCoteachers = 3;
     wrapper.update();
 
-    expect(wrapper).to.be.empty;
+    expect(Object.keys(wrapper)).toHaveLength(0);
   });
 });

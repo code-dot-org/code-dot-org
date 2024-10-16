@@ -1,7 +1,5 @@
 import photoSelect from '@cdo/apps/applab/designElements/photoSelect';
 
-import {assert} from '../../util/reconfiguredChai';
-
 var setPropertyDropdown = require('@cdo/apps/applab/setPropertyDropdown');
 
 var testUtils = require('../../util/testUtils');
@@ -16,10 +14,10 @@ describe('setPropertyDropdown', function () {
   testUtils.setExternalGlobals();
 
   it('stripQuotes', function () {
-    assert.equal(stripQuotes('"double"'), 'double');
-    assert.equal(stripQuotes("'single'"), 'single');
-    assert.equal(stripQuotes('noquotes'), 'noquotes');
-    assert.equal(stripQuotes('"mismatched\''), '"mismatched\'');
+    expect(stripQuotes('"double"')).toEqual('double');
+    expect(stripQuotes("'single'")).toEqual('single');
+    expect(stripQuotes('noquotes')).toEqual('noquotes');
+    expect(stripQuotes('"mismatched\'')).toEqual('"mismatched\'');
   });
 
   it('getInternalPropertyInfo', function () {
@@ -30,13 +28,13 @@ describe('setPropertyDropdown', function () {
       {tagName: 'img'},
       'image'
     );
-    assert.equal(info.internalName, 'picture');
+    expect(info.internalName).toEqual('picture');
 
     info = setPropertyDropdown.getInternalPropertyInfo(
       {tagName: 'img'},
       'picture'
     );
-    assert.equal(info.internalName, 'picture');
+    expect(info.internalName).toEqual('picture');
 
     // Check that icon-color maps to internal property textColor for photo select elements only
     const photoSelectElement = photoSelect.create();
@@ -44,19 +42,19 @@ describe('setPropertyDropdown', function () {
       photoSelectElement,
       'icon-color'
     );
-    assert.equal(info.internalName, 'textColor');
+    expect(info.internalName).toEqual('textColor');
 
     info = setPropertyDropdown.getInternalPropertyInfo(
       {tagName: 'img'},
       'icon-color'
     );
-    assert.equal(info.internalName, 'icon-color');
+    expect(info.internalName).toEqual('icon-color');
 
     info = setPropertyDropdown.getInternalPropertyInfo(
       {tagName: 'img'},
       'unknown'
     );
-    assert.isUndefined(info);
+    expect(info).not.toBeDefined();
   });
 
   it('getDropdownProperties', function () {
@@ -66,49 +64,49 @@ describe('setPropertyDropdown', function () {
     list = getDropdownProperties(true, 'IMAGE');
     var foundImage = false;
     for (let item of list) {
-      assert(typeof item === 'object');
-      assert(item.text !== '"picture"');
+      expect(typeof item === 'object').toBeTruthy();
+      expect(item.text !== '"picture"').toBeTruthy();
       foundImage = foundImage || item.text === '"image"';
       var clickResult;
       item.click(text => {
         clickResult = text;
       });
-      assert.equal(clickResult, item.display);
+      expect(clickResult).toEqual(item.display);
     }
-    assert(foundImage);
+    expect(foundImage).toBeTruthy();
 
     list = getDropdownProperties(true, 'UNKNOWN');
     // Test two very different properties as a proxy for all properties.
     var foundGroupId = false,
       foundBackgroundColor = false;
     for (let item of list) {
-      assert(typeof item === 'object');
+      expect(typeof item === 'object').toBeTruthy();
       foundGroupId = foundGroupId || item.text === '"group-id"';
       foundBackgroundColor =
         foundBackgroundColor || item.text === '"background-color"';
       item.click(text => {
         clickResult = text;
       });
-      assert.equal(clickResult, item.display);
+      expect(clickResult).toEqual(item.display);
     }
-    assert(foundGroupId);
-    assert(foundBackgroundColor);
+    expect(foundGroupId).toBeTruthy();
+    expect(foundBackgroundColor).toBeTruthy();
 
     list = getDropdownProperties(true);
     // Test two very different properties as a proxy for all properties.
     (foundGroupId = false), (foundBackgroundColor = false);
     for (let item of list) {
-      assert(typeof item === 'object');
+      expect(typeof item === 'object').toBeTruthy();
       foundGroupId = foundGroupId || item.text === '"group-id"';
       foundBackgroundColor =
         foundBackgroundColor || item.text === '"background-color"';
       item.click(text => {
         clickResult = text;
       });
-      assert.equal(clickResult, item.display);
+      expect(clickResult).toEqual(item.display);
     }
-    assert(foundGroupId);
-    assert(foundBackgroundColor);
+    expect(foundGroupId).toBeTruthy();
+    expect(foundBackgroundColor).toBeTruthy();
   });
 
   it('getPropertyValueDropdown', function () {
@@ -119,12 +117,12 @@ describe('setPropertyDropdown', function () {
       // Verify that getPropertyValueDropdown() returns a function for
       // 'image' or 'picture', and a non-empty array for all other types
       let result = getPropertyValueDropdown(property);
-      assert.notEqual(result, undefined);
+      expect(result).not.toEqual(undefined);
       if (property === 'image' || property === 'picture') {
-        assert.isTrue(typeof result === 'function', 'result is a function');
+        expect(typeof result === 'function').toBe(true);
       } else {
-        assert.isTrue(result instanceof Array, 'result is an array');
-        assert.isFalse(result.length === 0, 'array is not empty');
+        expect(result instanceof Array).toBe(true);
+        expect(result.length === 0).toBe(false);
       }
     }
   });

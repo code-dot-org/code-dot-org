@@ -65,7 +65,6 @@
     "long_instructions": "# LED Grid\r\n\r\nCreate an app that lets the user turn on different LEDs by clicking buttons on a grid on the screen.\r\n\r\nThe app has already been started for you - continue the pattern to finish the app!",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20396,
-    "name_suffix": "_mb_2024",
     "reference_links": [
       "/courses/csd-2022/guides/microbit-overview",
       "/courses/csd-2022/guides/microbit-display",

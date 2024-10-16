@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {navigateToHref} from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -14,13 +14,15 @@ import PadAndCenter from './PadAndCenter';
 import ParticipantTypePicker from './ParticipantTypePicker';
 import {sectionShape} from './shapes';
 import {
-  isAddingSection,
   beginImportRosterFlow,
   setRosterProvider,
   editSectionProperties,
   cancelEditingSection,
-  assignedCourseOffering,
 } from './teacherSectionsRedux';
+import {
+  isAddingSection,
+  assignedCourseOffering,
+} from './teacherSectionsReduxSelectors';
 
 // Navigates to the new section setup page if both params are non-null.
 const redirectToNewSectionPage = (participantType, loginType) => {

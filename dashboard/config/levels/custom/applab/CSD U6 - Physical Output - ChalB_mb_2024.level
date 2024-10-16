@@ -74,7 +74,6 @@
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/a9d58920679c8c8d6113c614bf460c39-image-1646930199612.png)\r\n\r\n<br/>\r\n\r\nExample Drawing\r\n\r\n</div>\r\n\r\n# LED Drawing\r\n\r\nDraw a picture on a sheet of paper, then incorporate at least 2 LEDs into the picture by cutting holes in the paper and replacing them with LEDs. For example:\r\n- A picture of a face, but the eyes are LEDs\r\n- A picture of the night sky, but some stars are LEDs\r\n- A picture of a car, but the headlights are LEDs\r\n\r\nThis is a **prototype** for your device, which means it won't be perfect and will probably be a little messy. Instead, focus on demonstrating how all of the pieces would fit together to create your device.\r\n\r\n## Do This:\r\n\r\n**Materials:**\r\n\r\n1) Draw your picture on a sheet of paper\r\n2) Decide where the LEDs will go\r\n3) Cut holes in your drawing and place the LEDs underneath. This will let you hide the wires underneath your drawing\r\n4) Get your micro:bit ready\r\n\r\n**In Code Mode:**\r\n\r\n1) Create two LED variables\r\n2) Turn on the LEDs when the app is run\r\n\r\nConnect your wires to your micro:bit and test your code!",
     "text_mode_at_start": "false",
     "parent_level_id": 20596,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",

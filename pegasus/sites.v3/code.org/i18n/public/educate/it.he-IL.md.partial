@@ -126,7 +126,6 @@ theme: responsive
 | **כדי להשתמש בסימולטור אינטרנט**                                                               | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **כדי להשתמש במעבדת אינטרנט**                                                                  | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **כדי להשתמש בלחצן השיתוף של Google Classroom**                                                | `https://apis.google.com`                                                                                  |
-| **כדי להשתמש במערכות נתונים של App Lab**                                                       | `https://*.firebaseio.com`<br />`ווס: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 

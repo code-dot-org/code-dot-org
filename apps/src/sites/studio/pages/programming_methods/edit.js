@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import ProgrammingMethodEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingMethodEditor';
-import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
-import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
-import {getStore, registerReducers} from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
+
+import ProgrammingMethodEditor from '@cdo/apps/levelbuilder/code-docs-editor/ProgrammingMethodEditor';
+import {getStore, registerReducers} from '@cdo/apps/redux';
+import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
+import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   registerReducers({

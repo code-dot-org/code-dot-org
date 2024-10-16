@@ -3,9 +3,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {Heading1, Heading6} from '@cdo/apps/componentLibrary/typography';
-import DCDO from '@cdo/apps/dcdo';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
@@ -29,14 +28,11 @@ function SectionProgressV2({
   isLoadingProgress,
   isRefreshingProgress,
   isLevelProgressLoaded,
+  isLoadingSectionData,
   expandedLessonIds,
   loadExpandedLessonsFromLocalStorage,
+  hideTopHeading,
 }) {
-  const expandedMetadataEnabled = React.useMemo(
-    () => DCDO.get('progress-v2-metadata-enabled', false),
-    []
-  );
-
   React.useEffect(() => {
     loadExpandedLessonsFromLocalStorage(scriptId, sectionId);
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW, {
@@ -51,11 +47,37 @@ function SectionProgressV2({
     return unitData && isLevelProgressLoaded;
   }, [unitData, isLevelProgressLoaded]);
 
+  // We don't want to load data more than necessary, so we only load data when
+  // the scriptId or sectionId changes, and only if we haven't already loaded
+  // data for that scriptId and sectionId recently.
+  const [loadedData, setLoadedData] = React.useState({
+    scriptId: null,
+    sectionId: null,
+  });
+
   React.useEffect(() => {
-    if (!unitData && !isLoadingProgress && !isRefreshingProgress) {
-      loadUnitProgress(scriptId, sectionId);
+    if (
+      (!unitData || unitData.id !== scriptId) &&
+      (scriptId !== loadedData.scriptId ||
+        sectionId !== loadedData.sectionId) &&
+      !isLoadingProgress &&
+      !isRefreshingProgress &&
+      sectionId &&
+      scriptId
+    ) {
+      loadUnitProgress(scriptId, sectionId).then(() =>
+        setLoadedData({scriptId, sectionId})
+      );
     }
-  }, [unitData, isLoadingProgress, isRefreshingProgress, scriptId, sectionId]);
+  }, [
+    scriptId,
+    sectionId,
+    unitData,
+    isLoadingProgress,
+    isRefreshingProgress,
+    loadedData,
+    setLoadedData,
+  ]);
 
   const isViewingValidatedLevel = React.useMemo(() => {
     return unitData?.lessons
@@ -65,7 +87,7 @@ function SectionProgressV2({
 
   return (
     <div className={styles.progressV2Page} data-testid="section-progress-v2">
-      <Heading1>{i18n.progressBeta()}</Heading1>
+      {!hideTopHeading && <Heading1>{i18n.progressBeta()}</Heading1>}
       <IconKey
         isViewingValidatedLevel={isViewingValidatedLevel}
         expandedLessonIds={expandedLessonIds}
@@ -77,10 +99,17 @@ function SectionProgressV2({
           {i18n.lessonsIn()}
 
           <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
-          {expandedMetadataEnabled && <MoreOptionsDropdown />}
+          <MoreOptionsDropdown />
         </Heading6>
       </div>
-      <ProgressTableV2 isSkeleton={!levelDataInitialized} />
+      <ProgressTableV2
+        isSkeleton={
+          !levelDataInitialized ||
+          isLoadingSectionData ||
+          isLoadingProgress ||
+          isRefreshingProgress
+        }
+      />
     </div>
   );
 }
@@ -92,8 +121,10 @@ SectionProgressV2.propTypes = {
   isLoadingProgress: PropTypes.bool.isRequired,
   isRefreshingProgress: PropTypes.bool.isRequired,
   isLevelProgressLoaded: PropTypes.bool.isRequired,
+  isLoadingSectionData: PropTypes.bool.isRequired,
   expandedLessonIds: PropTypes.array,
   loadExpandedLessonsFromLocalStorage: PropTypes.func.isRequired,
+  hideTopHeading: PropTypes.bool,
 };
 
 export default connect(
@@ -107,6 +138,7 @@ export default connect(
       !!state.sectionProgress.studentLevelProgressByUnit[
         state.unitSelection.scriptId
       ],
+    isLoadingSectionData: state.teacherSections.isLoadingSectionData,
     expandedLessonIds:
       state.sectionProgress.expandedLessonIds[
         state.teacherSections.selectedSectionId

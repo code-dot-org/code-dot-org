@@ -1,0 +1,43 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-08-29T20:15:28.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/d94ecf00067470c5236ba4e69ae4e1e4-Screenshot 2024-09-03 at 10.35.27 AM.png",
+        "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/f7c7de14fdfeb3cb750ce8d96f4fe19c-Screenshot 2024-09-03 at 10.35.32 AM.png",
+        "key": "game_design_spr_types-53c92e2f-0462-48a7-8070-e1224840f013"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/9eaf731799b2c5b334ee79e56960b323-Screenshot 2024-09-03 at 10.35.41 AM.png",
+        "key": "game_design_spr_types-4936be88-574e-4dd8-a31f-e671e54e482b",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/1dab6ff8c03167e9f6ecef69801cd918-Screenshot 2024-09-03 at 12.25.43 PM.png",
+        "key": "gen-ai-panels-test-L1-a74895ac-5363-4d66-9831-a3d899ea8ed7",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/8d4325ee1dde391f46d711ad0b34c2d2-Screenshot 2024-09-03 at 12.24.33 PM.png",
+        "key": "self-paced-pl-gen-ai-customizing-project_02_2024-d188940e-a67a-4deb-8fe0-80956166fdc5"
+      }
+    ],
+    "name_suffix": "_2024"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-29T20:15:28.463+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-gen-ai-customizing-project_02_2024\\\"\"],\"cloned_from\":\"self-paced-pl-gen-ai-customizing-project_02_2024\"},{\"changed_at\":\"2024-09-03 14:38:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 16:26:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

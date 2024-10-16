@@ -8,6 +8,8 @@ import React, {
 } from 'react';
 import {createPortal} from 'react-dom';
 
+import {updatePositionedElementStyles} from '@cdo/apps/componentLibrary/common/helpers';
+
 import Tooltip, {TooltipOverlay, TooltipProps} from './_Tooltip';
 
 // Define the tail offset and length values
@@ -46,58 +48,18 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
 
   const tailLength = tailLengths[tooltipProps.size || 'm'];
 
-  const updateTooltipStyles = useCallback(() => {
-    if (nodePosition && tooltipRef.current) {
-      const rect = nodePosition.getBoundingClientRect();
-      const tooltipRect = tooltipRef.current.getBoundingClientRect();
-      const scrollY = window.scrollY;
-      const scrollX = window.scrollX;
-      const direction = document.documentElement.dir || 'ltr'; // Default to 'ltr' if not specified
-      const isLtr = direction === 'ltr';
-
-      const styles: React.CSSProperties = {};
-
-      const verticalMiddlePosition =
-        rect.top + scrollY + rect.height / 2 - tooltipRect.height / 2;
-      const verticalTopPosition =
-        rect.top + scrollY - tooltipRect.height - tailOffset - tailLength;
-      const verticalBottomPosition =
-        rect.bottom + scrollY + tailOffset + tailLength;
-
-      const horizontalMiddlePosition =
-        rect.left + scrollX + rect.width / 2 - tooltipRect.width / 2;
-      const horizontalLeftPosition =
-        rect.left + scrollX - tooltipRect.width - tailOffset - tailLength;
-      const horizontalRightPosition =
-        rect.right + scrollX + tailOffset + tailLength;
-
-      // Calculate the tooltip position based on the direction and its tail length
-      switch (tooltipProps.direction) {
-        case 'onRight':
-          styles.top = verticalMiddlePosition;
-          styles.left = isLtr
-            ? horizontalRightPosition
-            : horizontalLeftPosition;
-          break;
-        case 'onBottom':
-          styles.top = verticalBottomPosition;
-          styles.left = horizontalMiddlePosition;
-          break;
-        case 'onLeft':
-          styles.top = verticalMiddlePosition;
-          styles.left = isLtr
-            ? horizontalLeftPosition
-            : horizontalRightPosition;
-          break;
-        case 'onTop':
-        default:
-          styles.top = verticalTopPosition;
-          styles.left = horizontalMiddlePosition;
-          break;
-      }
-      setTooltipStyles(styles);
-    }
-  }, [nodePosition, tailLength, tooltipProps.direction]);
+  const updateTooltipStyles = useCallback(
+    () =>
+      updatePositionedElementStyles({
+        nodePosition,
+        positionedElementRef: tooltipRef,
+        direction: tooltipProps.direction,
+        setPositionedElementStyles: setTooltipStyles,
+        tailOffset,
+        tailLength,
+      }),
+    [nodePosition, tailLength, tooltipProps.direction]
+  );
 
   // Effect to update tooltip styles when the tooltip is shown
   useEffect(() => {

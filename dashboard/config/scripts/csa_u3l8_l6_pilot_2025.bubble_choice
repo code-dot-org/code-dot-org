@@ -1,0 +1,9 @@
+name 'CSA U3L8-L6_pilot-2025'
+display_name 'Practice: Writing Algorithms with 1D Arrays'
+description 'Implement your algorithm to work with 1D arrays and find information from the Music & Mental Health Survey Results dataset.'
+
+sublevels
+level 'CSA U3L8-L6a_pilot-2025'
+level 'CSA U3L8-L6b_pilot-2025'
+level 'CSA U3L8-L6c_pilot-2025'
+level 'CSA U3L8-L6d_pilot-2025'

@@ -18,7 +18,7 @@
     "impressive": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "callout_json": "[\r\n  {\"localization_key\":\"snowflake_dropdown\",\"callout_text\":\"Use this drop-down to create different snowflakes!\",\"element_id\":\"#create_snowflake_qtip > .blocklyEditableText\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"snowflake_dropdown\",\r\n  \"callout_text\": \"Use this drop-down to create different snowflakes!\",\r\n  \"element_id\": \"#create_snowflake_qtip > .blocklyEditableText, [data-id=\\\"create_snowflake_qtip\\\"] .blocklyEditableText\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "embed": "false",
     "min_workspace_height": "1200",
     "long_instructions": "You've officially become a master artist! Create a winter wonderland.",

@@ -1,0 +1,12 @@
+name 'data-science-ch1-lesson7-level4'
+title 'Bar Chart'
+
+
+markdown <<MARKDOWN
+#Bar Charts
+###Using the same CODAP link and dot plot you've previously created, form a bar chart by:
+###1. Clicking the Configuration tab on the right of the graph.
+###2. Select 'Fuse Dots into Bars'
+
+###[School Party Survey Data - CODAP](https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FbmRtgGWIm4yEfQjEOp9c%2Ffile.json)
+MARKDOWN

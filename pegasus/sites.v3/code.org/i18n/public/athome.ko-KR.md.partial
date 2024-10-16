@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">자기 주도적 입문 코스 듣기</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">게임 또는 앱 제작하기</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">컴퓨터 없이 CS 체험하기(‘언플러그드’ 및 모바일 옵션)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Code.org 팀과 특별 게스트에게서 CS를 배우세요</a></li>
 </ul>
 
 <br>
@@ -285,56 +284,6 @@ target="_blank"><button>모듈 체험하기</button></a>
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">헬로 루비</a> - 세계에서 가장 기발한 방식으로 컴퓨터와 과학 기술, 프로그래밍을 배우는 방법입니다. 문제를 분해하고 패턴을 찾아내며 알고리즘적으로 생각하고 문제를 디버깅하며 함께 협력하는 능력 등과 같은 광범위한 CS 주제에 관한 활동. (4~10세용)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS 언플러그드</a> - 카드와 끈, 크레용, 뜀박질이 많이 이용되는 매력적인 게임과 퍼즐을 통해 컴퓨터 과학을 가르쳐주는 무료 교육 자료 컬렉션입니다. (5~14세용)</li>
 </ul>
-
-<h2>집에 컴퓨터가 없으세요? 저희 제휴사가 제공하는 이 앱들로 스마트폰에서 CS를 체험하세요</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="박스 아일랜드"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>알고리즘, 패턴 인식, 시퀀스, 루프 및 조건문과 같은 코딩의 기초를 가르치면서 학습자를 흥미진진한 모험으로 안내하는 매력적인 모바일 코딩 게임입니다. <i>(전 연령용)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodesPark</h3></a>어워드를 수상한 5-9세 어린이를 위한 코드 학습 플랫폼입니다. The Foos와 함께 퍼즐을 풀고 게임을 만들며 코드를 배워보세요. <strong>참고: codeSpark는 3개월간 무료 체험할 수 있습니다. 회원 가입 시 학부모의 이메일 주소와 신용 카드 정보가 필요합니다.</strong> <i>(프리리더부터 5학년까지)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[맨 위로]</a></p>
-
-<a id="livecoding"></a>
-<h2>Code.org 팀과 특별 게스트에게서 배우세요!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="CodeBytes 로고">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes는 컴퓨터 과학과 실제 주제를 결합한 이해하기 쉬운 20분 대화형 수업입니다. AI가 수화를 읽고 선의의 앱을 디자인하고 Minecraft의 세계를 탐험하는 등 다양한 일을 할 수 있도록 훈련하세요!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>에피소드 보기</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="코드 브레이크">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">코드 브레이크 코드 브레이크를 통해 컴퓨터 과학의 재미를</h3>
-        <div class="smalltext" style="">유지하세요! Ashton Kutcher와 암호를 만들고 Yara Shahidi와 변수를 배우며 인터넷의 실제 발명가인 Vint Cerf와 함께 인터넷의 작동 원리를 알아볼 수도 있습니다!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>연결하기</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

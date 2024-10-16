@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {closeDialog} from '@cdo/apps/redux/instructionsDialog';
 import StylizedBaseDialog, {
   FooterButton,
-} from '@cdo/apps/componentLibrary/StylizedBaseDialog';
-import {closeDialog} from '@cdo/apps/redux/instructionsDialog';
+} from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import ExampleImage from '@cdo/apps/templates/instructions/ExampleImage';
 import Instructions from '@cdo/apps/templates/instructions/Instructions';
 import i18n from '@cdo/locale';

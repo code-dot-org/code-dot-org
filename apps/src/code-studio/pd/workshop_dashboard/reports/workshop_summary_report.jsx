@@ -6,7 +6,7 @@ import React from 'react';
 import {Checkbox, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 
-import Spinner from '../../components/spinner';
+import Spinner from '../../../../sharedComponents/Spinner';
 import {PermissionPropType, WorkshopAdmin} from '../permission';
 
 import {QUERY_BY_VALUES, COURSE_VALUES} from './report_constants';

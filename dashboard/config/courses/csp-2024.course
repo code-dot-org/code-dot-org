@@ -20,11 +20,11 @@
   "properties": {
     "announcements": [
       {
-        "key": "0c99406c-746f-4883-9593-76e566be61b7",
-        "notice": "Create PT Unit Coming This Fall",
-        "details": "We will be updating the Create PT Unit (Unit 9) based on updates from the College Board and the first round of scoring the new format implemented in the May 2024 AP CS Principles Exam. This unit will become live in the Fall. If you'd like to check out information about the updates implemented last year, click \"Learn More\"",
-        "link": "https://apcentral.collegeboard.org/courses/ap-computer-science-principles/course/frequently-asked-questions/about-create-performance-task-updates",
-        "type": "bullhorn",
+        "key": "a645aed6-f8ed-4f64-becd-0053a6915935",
+        "notice": "Create PT Updates Launched",
+        "details": "Updates throughout the programming Make and Project lessons have been launched as of October 4 to better align with the format of the AP Exam's Create Performance Task.",
+        "link": "https://docs.google.com/document/d/1JJqAWqR9XufLGf4F1Pa2MbUXp4iYlCeqrq3GXpVtGck/edit?usp=sharing",
+        "type": "bullhorn_yellow",
         "visibility": "Teacher-only",
         "dismissible": true,
         "buttonText": "Learn More"
@@ -78,6 +78,16 @@
       },
       "seeding_key": {
         "resource.key": "all_vocabulary_1"
+      }
+    },
+    {
+      "name": "Course Changelog '24-'25",
+      "url": "https://docs.google.com/document/d/1JJqAWqR9XufLGf4F1Pa2MbUXp4iYlCeqrq3GXpVtGck/edit?usp=sharing",
+      "key": "course_changelong_24-_25",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "course_changelong_24-_25"
       }
     },
     {
@@ -204,7 +214,7 @@
     },
     {
       "name": "Syllabus",
-      "url": "\thttps://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1w8N5Hd-URvs_xiIFNWwhw06v9PiFO2ccjJf-pp_hOYE/",
       "key": "syllabus_1",
       "properties": {
       },

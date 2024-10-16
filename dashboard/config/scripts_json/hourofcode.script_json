@@ -69,13 +69,14 @@
         "uz-UZ",
         "vi-VN",
         "zh-CN",
-        "zh-TW"
+        "zh-TW",
+        "es-MX"
       ],
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "hourofcode",
-    "serialized_at": "2024-02-05 21:49:49 UTC",
+    "serialized_at": "2024-07-22 23:56:57 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

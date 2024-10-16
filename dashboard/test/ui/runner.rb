@@ -103,7 +103,6 @@ def parse_options
     options.dashboard_domain = 'test-studio.code.org'
     options.hourofcode_domain = 'test.hourofcode.com'
     options.csedweek_domain = 'test.csedweek.org'
-    options.advocacy_domain = 'test-advocacy.code.org'
     options.local = nil
     options.local_headless = true
     options.html = nil
@@ -144,7 +143,6 @@ def parse_options
         options.dashboard_domain = 'localhost-studio.code.org:3000'
         options.hourofcode_domain = 'localhost.hourofcode.com:3000'
         options.csedweek_domain = 'localhost.csedweek.org:3000'
-        options.advocacy_domain = 'localhost-advocacy.code.org:3000'
       end
       opts.on("--headed", "Open visible chrome browser windows. Runs in headless mode without this flag. Only relevant when -l is specified.") do
         options.local_headless = false
@@ -345,8 +343,9 @@ def run_tests(env, feature, target_platform, arguments, log_prefix)
                         feature_name: feature.include?(".feature") ? feature.split(".feature")[0] : feature,
                         target_browser: target_platform}
     # Metrics for individual feature runs. They will be flushed once all of them run
-    Infrastructure::Logger.put("runner_feature_success", cucumber_succeeded ? 1 : 0, extra_dimensions)
-    Infrastructure::Logger.put("runner_feature_failure", cucumber_succeeded ? 0 : 1, extra_dimensions)
+    Infrastructure::Logger.put("runner_feature_eyes_diff", 1, extra_dimensions) unless eyes_succeeded
+    Infrastructure::Logger.put("runner_feature_success", 1, extra_dimensions) if cucumber_succeeded
+    Infrastructure::Logger.put("runner_feature_failure", 1, extra_dimensions) unless cucumber_succeeded
     Infrastructure::Logger.put("runner_feature_execution_time", duration, extra_dimensions)
     return cucumber_succeeded, eyes_succeeded, stdout, stderr, duration
   end
@@ -740,7 +739,6 @@ def run_feature(browser, feature, options)
   run_environment['DASHBOARD_TEST_DOMAIN'] = options.dashboard_domain if options.dashboard_domain
   run_environment['HOUROFCODE_TEST_DOMAIN'] = options.hourofcode_domain if options.hourofcode_domain
   run_environment['CSEDWEEK_TEST_DOMAIN'] = options.csedweek_domain if options.csedweek_domain
-  run_environment['ADVOCACY_TEST_DOMAIN'] = options.advocacy_domain if options.advocacy_domain
   run_environment['TEST_LOCAL'] = options.local ? "true" : "false"
   run_environment['TEST_LOCAL_HEADLESS'] = options.local_headless ? "true" : "false"
   run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"

@@ -6,7 +6,7 @@ require File.expand_path('../../../pegasus/src/env', __FILE__)
 
 def main
   Dir.chdir(pegasus_dir) do
-    system('rake PEGASUS_RAKE_LOGGER=true seed:sync i18n:sync 2>&1')
+    system('rake PEGASUS_RAKE_LOGGER=true seed:sync 2>&1')
     exit $?.exitstatus
   end
 end

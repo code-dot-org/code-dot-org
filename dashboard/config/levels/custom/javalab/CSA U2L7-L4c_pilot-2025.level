@@ -1,0 +1,41 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-01T22:23:02.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "An event planner is creating a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Playlist</code> class to represent a playlist they use at various events.\r\n\r\n✅ **TO DO #1:** Write an accessor method called <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getNumSongs()</code> in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Playlist</code> class to return the value assigned to the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">numSongs</code> instance variable.\r\n\r\n✅ **TO DO #2:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PlaylistRunner.java</code>, call the accessor method on the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">birthdayPlaylist</code> object and print the result.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with writing accessor methods.\r\n</div>\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "display_name": "Playlists",
+    "bubble_choice_description": "An event planner is creating a `Playlist` class to represent playlists they use at various events. Write an accessor method to return the value assigned to the `numSongs` instance variable.",
+    "thumbnail_url": "https://images.code.org/355d4ee59c395f725c345b02f55411d7-playlist.png",
+    "reference_links": [
+      "/courses/csa-2023/guides/accessor-methods"
+    ],
+    "encrypted_exemplar_sources": "AEpUA/W0ZUbXL0FPrXoRz2+HYj12Ddmr25XVmmI1Fkxal33Gq1hGg19Fy+9W\nXDZdbRWqvQkIHoURCgPKY94B2o6OD8EjdALJuFGu5MA1tSYbwqADd4jCvFYo\nxmqNLiIrWHS+W5u8ChFxK/DCbF8bU+7PwNcRj1OWtj0zpHj8D2mSS/eBK3em\nqEGNJ8HXPYNICV23Np0NEPed+yj/p392OfN4xpFp7uvgEM8tUhM6cKkpwjTL\n2U7/Jaufv9qZlmRaw0zde7fjXIEGBtOrA2CNV8fWKfnNLeJh6Fd3S5IV0NjP\nvJveZkDSe6E5MmjX5uQ7pALfwQk1JI3ZDk+U9MLn0QL0ge+cbmz57CGiW5R/\n02lzPxDZsXRYz7Qzu2mPcQzL+qRkXed5pCk/cJkkH1YYpxB7dBPyGBHQkUpC\nQT8+Txrp50E6/Y8f+fAl0HN4c6CJ1LcHIlFC8AdPdg8VvJUzPvaRowNZTtCj\nUYa29lamzoDeeLyR+QrkihTn6khP9DHq2Gg/s81Wn6ZeG40Xh9OTegVS0wmK\ncH9WudiBboEK4UE8LtFnZwke8NYbsdRdW9FSehMEbAoEsv7cjaGthASCfgSK\n7vTiS1eD+mym7+0XwRdzsQu6CvPyUdC00bgormIL6ozGMtRpHPxfeTTSXR7N\nVRSmRguIhM1c/8frrhPpCBLOE3z3UE9QKMtDU00qqp2UqllEcJ8tN7Hxl12g\nFHT1hpXLZKNCvCU5Dbb/vIUytQ6M5fQ1G4l9ucsVrni0LDu9PrV1fvY4g2qt\nb/e7cToNdrVmzkstt67NYNZt3+Y0HKWDUv0T9XdsI+RvZvbxI36BU9L9R7Qs\nMjzfs1Oc/N4QFFjewo2FGs1BhlEeSKlgtWTOYHhauNMT9OV3ROY6A4SGIA4u\nKtOd4ZS9MhdqAfE5AcL8A1PxEhxqHU8q2o01VdlQqglOxH7Y7LUGmt2dZ200\nvIqZNGqxkn51iUojRXArBYDRAwOfM22ILwLoAS1cRBhUrB4qgccW4u6M9CTT\nTkaSgaspkqrSbxd3N38Vnv9FIqZ0HHKaXr0yPmBSTbMNoVV3pA5RnREYI88S\nu/B5Ji3LnaI29ipYG9pJpf6m4ZDH1Jwv4JNZPQ1CfY4+IPro3Ns72kS4eEvw\nnwvO2LirJSChdJSHYy7kHM8LSP6WB2JokHSU3xHPiqjnESaXPsYM2vVWTQLg\nUuSqjYy971RtHwJlMQDAgoWHM8aBivWROqVGpqn98nQwNasrv1PtRWvqXh+B\nMh0XYsz8ZWinpGz4UWFizAj5/QaKFqhcQehlVmoJ7sO1uKTKEJ5DuBbX5HvL\nF/YxE8dbfG4ocy+RNttdyGOO7YsrsvPu9YYnJAOmwsfBVBtBBIb8JqNATkS+\nxS2l2uFqIV7fJTRw4AZYBhzBQOITReM7kRL+VL4cvkQDC0UUrjLDgT6BbMRU\n2K6YicJkiGK0U5CTiYMGY7lVK/u7qRyBNofsL4G/PxyunzodJ2aQWjqC5Xxg\n80GPTcZ/CfFA1tX3678XyXdR15kOIuey2jAD5OEUe/0ikkhbemWEMq7sfpBm\nO+o8MASvfNXjqpK19OuMOzXztYKMNxVffWcbwrl4jWuYhmkirFwfCgZFNwzx\nTwdO297Bu3fYWUY88wmKRvIcYcR+R6Op394ZBxqCWIOJMruQPhsSUOqZWDe2\nNtNDsMy952OZLdqxGpZErRs3z54v4p4GGypM6MPPBiUx+sa4NrsJT98HKpOs\nnYLtz5C64whbESOYzjSF6M1D2NBXwwri5loPf5kX2AKUgHo+un7TyReIsDH2\n97QHo/Oqr47gpR8YAAubGwwWmV1QsLjRrTg=\n",
+    "encrypted_validation": "gxkRcZzYd7ojy6dnXZ5QnttMLb2MEmv7sJz2XbvJOztlgHXKcVUeADuEHYCe\nsvyL0uhvD2FOxYq9Drncz+QLM6rTp0LBoDlJWPus0OeyAg+1m3r7l96vjgFp\nvbiuI6W5E0dV+Ar5gcmx4ii4mb0Yz4dJifsHVpozZIVSN/uSAFnLiX8a6V/O\nPNenMVTp9fW5yETfeeMu1fPcEGRUCWvrjvvD8CpzWnGDvZNbnywRnhVnY0HI\n7ldxJmtvzlfzxkmngE2Zg05Ci0EeoW+2LmnVTzMOXovEA1O4hk+6geBALFXP\nphfXvceVmBB5+ndTp4Zuf2MbZjrfxxzE8MwTeUaILyaq7YeuSejP0/CC1U2g\nGJd+E8PRdaW0k2MA5DOuIeferlzYyRPiQp/Zd5IScJVMnCsKRQdz1F30U8Co\nfnqKixJuNiOWfhJth0gkj2dYIFa0FPbP91cAEJQKWmhMSLfpxrfx5KPVzU9M\nEGLcflufGM4YnS1L4fl4xkfJ2jeHwztzRK7+L8zAxWPh2za77jghXcl5obD/\ntnIcDlj9VwHeNVrXw3BFV1JMQTzok52TGbO04U29ZGQHpgL3C6mXKYbi9aDW\n4l/qU2SAWdxtDSh0FlY+U41/RL4E+LG3dg+8JePIgsHmBk253yNhO4oK6e25\ngXyDBB15QTbc0XMhRkSorU0AK1zO7ZIkYYbU2DizxkYE0GoPWeQ3bOlpX2Xy\nSnf7MHTRwPVag0x4xru9rpIRFN/GeBKNJPAHkBlDC1suy6dgxaocKgE4SUEx\nqeo3ax+T4JS9WJarf9GmAkdkxtgdbYUlfec9F0rJBFTbVaj7fLxaBWkIiMV5\neTqZCVReO8Q5vPuRxxnzHIEZTjZhP1lwHmFHzOfiP/mXhSxm3wdyR9SRUP5e\nI5Rnj7xEOeBxp3fRcd0nulsA5Xi5FkUUow4eeAhT+n09Kq9wvJbxeIlCPPyg\nqQrJ/hFODGTWVAyJKbv5BnNA0Sou1saJ6V84BhlNxQnqovqD+2lIOSNWbwyR\nkqpIHDFo+q/Z9Rh5hnSvP49rSHMap6zjA4oMkJHbXwyAJDYmXyURTQK79fSy\nB+PmHMDwqiWHXk2J96/YSiCjm/wOI73PO6DJNG+77k+WvMlxySgw8ol71k7Z\n7msPUMHqU5WI5+fdrbhvR48oZGG194drOzju9c4zhxWF077GRlti6DZXEJFO\nPUg6zWRTsMml+5APNaUYntY733upFDV5UkqyDyS8zSo3fHNopET/CqCx49zh\nsOexR8W9PfNUA2nV6nxg5XvidOcjnbgHxsJ9AOhfvgSQLxSRfieb/2vuR+GE\n+thtIt49oJaPWY3eo7GrD8U8CTVcj5WKWjJjbWAU8hvT0S1bC2uikMHVrw88\ngO1QKXu51l4vRJ0pPWxJTDOaPx8Gx1SnQw2gxiQNM9jJcjrDFpMX9XtcoX3q\nmm2k2fEYMAfQsSx6NNerkFiN6pXnsPXeooUsnsBENDQfOaHSLexTmA==\n",
+    "start_sources": {
+      "PlaylistRunner.java": {
+        "text": "public class PlaylistRunner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Call the accessor method on the birthdayPlaylist object and print the result.\n     * -----------------------------------------------------------------------------\n     */\n\n    // Creates a Playlist object\n    Playlist birthdayPlaylist = new Playlist(28);\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Playlist.java": {
+        "text": "/*\n * Represents a playlist used at an event\n */\npublic class Playlist {\n\n  private int numSongs;    // The number of songs in a playlist\n\n  /*\n   * Sets numSongs to the specified number of songs\n   */\n  public Playlist(int numSongs) {\n    this.numSongs = numSongs;\n  }\n\n  /* ----------------------------------- TO DO -----------------------------------\n   * ✅ Write an accessor method to return the value assigned to numSongs.\n   * -----------------------------------------------------------------------------\n   */\n\n\n  \n\n\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    },
+    "video_key": "csa_accessor_methods",
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-01T22:23:02.428+00:00\",\"changed\":[\"cloned from \\\"CSA U2L7-L4c_2025\\\"\"],\"cloned_from\":\"CSA U2L7-L4c_2025\"}]"
+}]]></config>
+</Javalab>

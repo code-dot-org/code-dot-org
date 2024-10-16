@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Hello World: Space", body: "Создайте межгалактические сцены с персонажами и сценами, благодаря которым вы сможете сказать \"Привет, миры!\"", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
-
-{{ featured_tutorial, title: "NASA's Space Jam", body: "Создайте классную солнечную систему, используя музыку, знания в астрономии и написание кода!", image: "/images/hoc2022-nasa-space-jam.png", url: "https://chandra.si.edu/sound/code/" }}
-
-{{ featured_tutorial, title: "Star Wars", body: "Научитесь программировать дроидов и создайте собственную игру Звездные войны в далекой галактике.", image: "/shared/images/courses/logo_tall_starwars.jpg", url: "https://code.org/starwars" }}
-
-{{ featured_tutorial, title: "SciGirls Code Quest", body: "В этом онлайн-приключении вы проведете подводную лодку Сабби через подводные препятствия.", image: "/images/hoc2022-scigirls-code-quest.png", url: "https://pbskids.org/scigirls/games/code-quest" }}

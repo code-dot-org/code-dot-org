@@ -1,5 +1,6 @@
 import {ObservableProcedureModel} from '@blockly/block-shareable-procedures';
 import * as GoogleBlockly from 'blockly/core';
+import {IProcedureModel} from 'blockly/core/procedures';
 import {FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';
 
 import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
@@ -13,7 +14,6 @@ import procedureCallerOnChangeMixin from './mixins/procedureCallerOnChangeMixin'
 import procedureCallerMutator from './mutators/procedureCallerMutator';
 import {procedureDefMutator} from './mutators/procedureDefMutator';
 
-const PARAMETERS_LABEL = 'PARAMETERS_LABEL';
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
  * Replaces blocks that are part of core Blockly.
@@ -187,14 +187,6 @@ GoogleBlockly.Extensions.register(
     );
     // Open mini-toolbox by default
     flyoutToggleButton.setIcon(false);
-    // If we added a flyout, place a 'Parameters' label before it.
-    const flyoutInput = this.getInput('flyout_input');
-    if (flyoutInput) {
-      flyoutInput.insertFieldAt(
-        0,
-        new Blockly.FieldLabel(commonI18n.parameters(), PARAMETERS_LABEL)
-      );
-    }
   }
 );
 
@@ -275,6 +267,44 @@ GoogleBlockly.Extensions.register(
         this.updateName_();
         this.updateEnabled_();
         this.updateParameters_();
+      },
+      /**
+       * Returns the data model for this procedure block, or finds it if it has not been set.
+       *
+       * @returns The data model for this procedure block.
+       */
+      getProcedureModel: function (
+        this: ProcedureBlock
+      ): IProcedureModel | null {
+        if (!this.model_) {
+          this.model_ = this.findProcedureModel_(
+            this.getFieldValue('NAME'),
+            this.paramsFromSerializedState_
+          );
+        }
+        return this.model_;
+      },
+
+      /**
+       * Makes sure that if we are updating the parameters before any move events
+       * have happened, the args map records the current state of the block. Does
+       * not remove entries from the array, since blocks can be disconnected
+       * temporarily during mutation (which triggers this method).
+       */
+      syncArgsMap_: function (this: ProcedureBlock) {
+        // If we haven't yet stored the previous parameters, do so now. This would
+        // normally happen when we initialize the procedure block with a model or
+        // update its parameters.
+        if (!this.prevParams_.length) {
+          this.prevParams_ = [
+            ...(this.getProcedureModel().getParameters() || []),
+          ];
+        }
+        // Original code from shareable procedures plugin follows unmodified:
+        for (const [i, p] of this.prevParams_.entries()) {
+          const target = this.getInputTargetBlock(`ARG${i}`);
+          if (target) this.argsMap_.set(p.getId(), target);
+        }
       },
     };
     // We can't register this as a mixin since we're overwriting existing methods
@@ -358,6 +388,9 @@ export function flyoutCategory(
   } else {
     blockList.push(functionDefinitionBlock);
   }
+
+  // Add blocks from the level toolbox XML, if present.
+  blockList.push(...Blockly.cdoUtils.getCategoryBlocksJson('PROCEDURE'));
 
   // Workspaces to populate functions flyout category from
   const workspaces = [

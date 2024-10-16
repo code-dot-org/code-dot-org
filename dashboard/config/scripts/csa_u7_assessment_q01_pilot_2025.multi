@@ -1,0 +1,47 @@
+name 'CSA U7 Assessment q01_pilot-2025'
+
+wrong '`a`'
+wrong '`b 1`'
+wrong '`b 1 a`'
+right '`a b 1`'
+wrong 'Nothing - compile-time error.'
+
+markdown <<MARKDOWN
+Consider the following class.
+
+```
+public class MysteryClass {
+
+  public void mystery(int first) {
+    System.out.print("b " + first);
+  }
+
+  public void mystery() {
+    System.out.print("a ");
+    mystery(1);
+  }
+}
+```
+
+What is printed when the following code is executed?
+
+```
+MysteryClass m = new MysteryClass();
+m.mystery();
+```
+MARKDOWN
+
+allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+The `mystery()` method first prints `"a "` and then calls `mystery(1)`. The `mystery(int first)` method takes the integer parameter `first` and then prints `"b "` followed by the value of `first`, which is `1` in this case.
+
+Here's the breakdown:
+
+1. `m.mystery();` is called.
+
+2. This leads to `System.out.print("a ");` being executed, printing `"a "`.
+
+3. Immediately after, `mystery(1);` is called from within the `mystery()` method.
+
+4. This leads to `System.out.print("b " + first);` being executed, printing `"b 1"`.
+MARKDOWN

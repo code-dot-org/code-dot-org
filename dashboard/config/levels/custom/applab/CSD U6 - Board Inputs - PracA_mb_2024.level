@@ -63,7 +63,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "# Debugging\r\n\r\nThe app below is meant to update based on how the user interacts with the board. However, the wrong events are displaying. Can you fix the errors so the correct text appears with the correct event?",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

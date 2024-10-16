@@ -85,7 +85,6 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "microbit",
     "parent_level_id": 20571,
-    "name_suffix": "_mb_2024",
     "encrypted": "false",
     "long_instructions": "# Orange and Purple Bugs\r\n\r\nThis app should move either the orange or purple bug depending on which button on the micro:bit is pressed and how the micro:bit is tilted. Right now, only the purple bug works.\r\n\r\n## Do This\r\n\r\n1) Using the purple bug as an example, update the app so the orange bug will move when the B button is pressed.",
     "mini_rubric": "false",

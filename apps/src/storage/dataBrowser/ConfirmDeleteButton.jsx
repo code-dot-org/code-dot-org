@@ -4,7 +4,7 @@ import React from 'react';
 
 import msg from '@cdo/locale';
 
-import Dialog from '../../templates/Dialog';
+import Dialog from '../../legacySharedComponents/Dialog';
 
 import dataStyles from './data-styles.module.scss';
 

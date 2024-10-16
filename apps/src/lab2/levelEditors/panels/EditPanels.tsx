@@ -8,10 +8,10 @@ import {
   Heading3,
   Heading5,
 } from '@cdo/apps/componentLibrary/typography';
-import ImageInput from '@cdo/apps/lib/levelbuilder/ImageInput';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import ImageInput from '@cdo/apps/levelbuilder/ImageInput';
 import PanelsView from '@cdo/apps/panels/PanelsView';
 import {Panel, PanelLayout} from '@cdo/apps/panels/types';
-import Button from '@cdo/apps/templates/Button';
 import {createUuid} from '@cdo/apps/utils';
 
 import moduleStyles from './edit-panels.module.scss';
@@ -121,6 +121,7 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
             onContinue={onContinue}
             targetWidth={1920}
             targetHeight={1080}
+            offerTts={false}
             resetOnChange={false}
           />
         </div>
@@ -221,8 +222,10 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
           selectedValue={panel.layout || 'text-top-right'}
           items={[
             {value: 'text-top-left', text: 'Top Left'},
+            {value: 'text-top-center', text: 'Top Center'},
             {value: 'text-top-right', text: 'Top Right'},
             {value: 'text-bottom-left', text: 'Bottom Left'},
+            {value: 'text-bottom-center', text: 'Bottom Center'},
             {value: 'text-bottom-right', text: 'Bottom Right'},
           ]}
         />

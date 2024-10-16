@@ -8,13 +8,15 @@ require 'policies/lti'
 require 'queries/lti'
 
 class RegistrationsController < Devise::RegistrationsController
+  before_action :require_no_authentication, only: [:account_type, :login_type, :finish_student_account, :finish_teacher_account, :new, :create, :cancel]
+
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [
     :edit, :update, :destroy, :upgrade, :set_email, :set_user_type,
     :migrate_to_multi_auth, :demigrate_from_multi_auth
   ]
   skip_before_action :verify_authenticity_token, only: [:set_student_information]
-  skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :cancel, :create]
+  skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :begin_creating_user, :cancel, :create]
 
   #
   # GET /users/sign_up
@@ -24,13 +26,8 @@ class RegistrationsController < Devise::RegistrationsController
     if PartialRegistration.in_progress?(session)
       user_params = params[:user] || ActionController::Parameters.new
       user_params[:user_type] ||= session[:default_sign_up_user_type]
-      if DCDO.get('student-email-post-enabled', false)
-        user_params[:email] ||= params[:email]
-
-        @user = User.new_with_session(user_params.permit(:user_type, :email), session)
-      else
-        @user = User.new_with_session(user_params.permit(:user_type), session)
-      end
+      user_params[:email] ||= params[:email]
+      @user = User.new_with_session(user_params.permit(:user_type, :email), session)
     else
       save_default_sign_up_user_type
       SignUpTracking.begin_sign_up_tracking(session, split_test: true)
@@ -59,14 +56,60 @@ class RegistrationsController < Devise::RegistrationsController
     @user = User.new(begin_sign_up_params)
     @user.validate_for_finish_sign_up
     SignUpTracking.log_begin_sign_up(@user, session)
-    is_signup_post_enabled = DCDO.get('student-email-post-enabled', false)
 
     if @user.errors.blank?
       PartialRegistration.persist_attributes(session, @user)
-      redirect_to new_user_registration_path and return unless is_signup_post_enabled
     end
 
-    render 'new'
+    if params[:new_sign_up].blank?
+      render 'new'
+    end
+  end
+
+  #
+  # Get /users/new_sign_up/account_type
+  #
+  def account_type
+    view_options(full_width: true, responsive_content: true)
+  end
+
+  #
+  # Get /users/new_sign_up/login_type
+  #
+  def login_type
+    view_options(full_width: true, responsive_content: true)
+    render 'login_type'
+  end
+
+  #
+  # Get /users/gdpr_check
+  #
+  def gdpr_check
+    render json: {gdpr: request.gdpr?, force_in_eu: request.params['force_in_eu']}
+  end
+
+  #
+  # Get /users/new_sign_up/finish_student_account
+  #
+  def finish_student_account
+    @age_options = [{value: '', text: ''}] + User::AGE_DROPDOWN_OPTIONS.map do |age|
+      {value: age.to_s, text: age.to_s}
+    end
+
+    @us_ip = us_ip?
+    @us_state_options = [{value: '', text: ''}] + User.us_state_dropdown_options.map do |code, name|
+      {value: code, text: name}
+    end
+
+    render 'finish_student_account'
+  end
+
+  #
+  # Get /users/new_sign_up/finish_teacher_account
+  #
+  def finish_teacher_account
+    @us_ip = us_ip?
+    render 'finish_teacher_account'
   end
 
   #
@@ -120,25 +163,30 @@ class RegistrationsController < Devise::RegistrationsController
           error_message: "retry ##{retries} failed with exception: #{exception}"
         )
       end
-      super
+
+      if ActiveModel::Type::Boolean.new.cast(params[:new_sign_up])
+        session[:user_return_to] ||= params[:user_return_to]
+        @user = Services::PartialRegistration::UserBuilder.call(request: request)
+        sign_in @user
+      else
+        super
+      end
     end
 
     if current_user && current_user.errors.blank?
       if current_user.teacher?
-        if MailJet.enabled? && request.locale != 'es-MX'
-          begin
-            MailJet.create_contact_and_send_welcome_email(current_user)
-          rescue => exception
-            # If the welcome email fails to send, we don't want to disrupt
-            # sign up, but we do want to know about it.
-            Honeybadger.notify(
-              exception,
-              error_message: 'Failed to send MailJet welcome email',
-              context: {}
-            )
-          end
-        else
-          TeacherMailer.new_teacher_email(current_user, request.locale).deliver_now
+        begin
+          MailJet.create_contact_and_add_to_welcome_series(current_user, request.locale)
+        rescue => exception
+          # If we can't add the user to the welcome series, we don't want to disrupt
+          # sign up, but we do want to know about it.
+          Honeybadger.notify(
+            exception,
+            error_message: 'Failed to add user to welcome series',
+            context: {
+              locale: request.locale,
+            }
+          )
         end
       end
       ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now if current_user.parent_email.present?
@@ -147,10 +195,12 @@ class RegistrationsController < Devise::RegistrationsController
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
       PartialRegistration.delete session
       if Policies::Lti.lti? current_user
+        current_user.verify_teacher! if Policies::Lti.unverified_teacher?(current_user)
         lms_name = Queries::Lti.get_lms_name_from_user(current_user)
         metadata = {
           'user_type' => current_user.user_type,
           'lms_name' => lms_name,
+          'context' => 'registration_controller'
         }
         Metrics::Events.log_event(
           user: current_user,
@@ -264,11 +314,11 @@ class RegistrationsController < Devise::RegistrationsController
     student_information = {}
 
     student_information[:age] = params[:user][:age] if current_user.age.blank?
-    student_information[:us_state] = params[:user][:us_state] unless current_user.user_provided_us_state
+    us_state_param = params[:user][:us_state]
+    student_information[:us_state] = us_state_param if us_state_param.present? && !current_user.user_provided_us_state
     student_information[:user_provided_us_state] = params[:user][:us_state].present? unless current_user.user_provided_us_state
     student_information[:gender_student_input] = params[:user][:gender_student_input] if current_user.gender.blank?
     student_information[:country_code] = params[:user][:country_code] if current_user.country_code.blank?
-
     current_user.update(student_information) unless student_information.empty?
   end
 
@@ -398,7 +448,7 @@ class RegistrationsController < Devise::RegistrationsController
   # GET /users/edit
   #
   def edit
-    @permission_status = current_user.child_account_compliance_state
+    @permission_status = current_user.cap_status
 
     # Get the request location
     location = Geocoder.search(request.ip).try(:first)
@@ -635,5 +685,12 @@ class RegistrationsController < Devise::RegistrationsController
     User.ignore_deleted_at_index.destroy(user_ids_to_destroy)
 
     log_account_deletion_to_firehose(current_user, dependent_users)
+  end
+
+  private def us_ip?
+    # Get the request location
+    location = Geocoder.search(request.ip).try(:first)
+    country_code = location&.country_code.to_s.upcase
+    ['US', 'RD'].include?(country_code)
   end
 end

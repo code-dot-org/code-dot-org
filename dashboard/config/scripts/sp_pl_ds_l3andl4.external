@@ -1,0 +1,47 @@
+name 'sp-pl-DS_L3andL4'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Data and Ethics
+
+
+#### In these lessons, students examine the ethical considerations of data collection and the complexities of data rights, gaining hands-on experience with data handling and exploring diverse perspectives through role-playing activities.
+
+---
+
+## Lesson 4: Ethical Data Collection 
+
+<img src="https://images.code.org/cd2f8aadb676061a688ffc2f84a732ae-image-1724339345439.png" alt="judicial scale icon" width="150px"  style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+
+
+#### In this lesson, students will collect and store classroom data, explore ethical considerations, and learn different data collection methods.
+
+### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
+
+<div style="clear:both;"></div>
+
+## Lesson 5: Data Rights 
+<img src="https://images.code.org/296fb994c0502d16f96bda2d08e5ba05-image-1724339525656.png" alt="scale icon" width="150px" style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+
+#### In this lesson, students will explore data rights through role-play, taking on various stakeholder perspectives to understand the complexities of data rights.
+
+
+### <b>Check out the entire lesson plan  <a href="LINK" target="blank" rel="noopener noreferrer">here</a>.</b>
+
+<div style="clear:both;"></div>
+
+<br><br>
+
+> ####**Key Concepts:**
+> - #### **bias** - when our data or the way we analyze it favors certain outcomes over others
+> - #### **data collection** - the process of gathering and recording information from different sources
+> - #### **data ethics** - the set of guidelines that ensure the responsible use, collection, and  sharing of data while respecting privacy, consent, and fairness
+> - #### **data rights** - rules that make sure a person's information is used safely and fairly
+
+## What's Next?
+
+#### Let’s dive into an activity from **Lesson 4** where students provide ethical guidelines for data collection while planning a party. 
+
+
+MARKDOWN

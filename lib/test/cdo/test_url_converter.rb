@@ -15,8 +15,6 @@ class UrlConverterTest < Minitest::Test
     assert_equal 'https://hourofcode.com', url_converter.replace_origin('https://hourofcode.com')
     assert_equal 'https://csedweek.org', url_converter.replace_origin('https://csedweek.org')
     assert_equal 'https://csedweek.org/about', url_converter.replace_origin('https://csedweek.org/about')
-    assert_equal 'https://advocacy.code.org', url_converter.replace_origin('https://advocacy.code.org')
-    assert_equal 'https://advocacy.code.org/policy-resources', url_converter.replace_origin('https://advocacy.code.org/policy-resources')
   end
 
   def test_upgrades_protocol_in_production_configuration
@@ -28,8 +26,6 @@ class UrlConverterTest < Minitest::Test
     assert_equal 'https://hourofcode.com', url_converter.replace_origin('http://hourofcode.com')
     assert_equal 'https://csedweek.org', url_converter.replace_origin('http://csedweek.org')
     assert_equal 'https://csedweek.org/about', url_converter.replace_origin('http://csedweek.org/about')
-    assert_equal 'https://advocacy.code.org', url_converter.replace_origin('http://advocacy.code.org')
-    assert_equal 'https://advocacy.code.org/policy-resources', url_converter.replace_origin('http://advocacy.code.org/policy-resources')
   end
 
   def test_dont_raise_on_learn_code_org_in_production_configuration
@@ -55,8 +51,6 @@ class UrlConverterTest < Minitest::Test
     assert_equal 'https://test.hourofcode.com', url_converter.replace_origin('https://hourofcode.com')
     assert_equal 'https://test.csedweek.org', url_converter.replace_origin('https://csedweek.org')
     assert_equal 'https://test.csedweek.org/about', url_converter.replace_origin('https://csedweek.org/about')
-    assert_equal 'https://test-advocacy.code.org', url_converter.replace_origin('https://advocacy.code.org')
-    assert_equal 'https://test-advocacy.code.org/policy-resources', url_converter.replace_origin('https://advocacy.code.org/policy-resources')
   end
 
   def test_upgrades_protocol_in_test_configuration
@@ -90,8 +84,6 @@ class UrlConverterTest < Minitest::Test
     assert_equal 'https://localhost.hourofcode.com:3000', url_converter.replace_origin('https://hourofcode.com')
     assert_equal 'https://localhost.csedweek.org:3000', url_converter.replace_origin('https://csedweek.org')
     assert_equal 'https://localhost.csedweek.org:3000/about', url_converter.replace_origin('https://csedweek.org/about')
-    assert_equal 'https://localhost-advocacy.code.org:3000', url_converter.replace_origin('https://advocacy.code.org')
-    assert_equal 'https://localhost-advocacy.code.org:3000/policy-resources', url_converter.replace_origin('https://advocacy.code.org/policy-resources')
   end
 
   def test_does_not_upgrade_protocol_in_local_configuration

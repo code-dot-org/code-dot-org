@@ -11,8 +11,8 @@ require_relative '../../dashboard/config/environment'
 # and we have an approved long-term deletion/obfuscation policy we will
 # disable this cron job. See: https://codedotorg.atlassian.net/browse/CT-372.
 def main
-  thirty_days_ago = Time.now - 30.days
-  AiTutorInteraction.where('created_at < ?', thirty_days_ago).destroy_all
+  ninety_days_ago = Time.now - 90.days
+  AiTutorInteraction.where('created_at < ?', ninety_days_ago).destroy_all
 end
 
 main

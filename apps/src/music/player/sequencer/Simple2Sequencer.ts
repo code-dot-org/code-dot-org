@@ -1,15 +1,24 @@
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
-import {DEFAULT_CHORD_LENGTH, DEFAULT_PATTERN_LENGTH} from '../../constants';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+
+import {
+  DEFAULT_CHORD_LENGTH,
+  DEFAULT_PATTERN_LENGTH,
+  DEFAULT_TUNE_LENGTH,
+} from '../../constants';
 import {ChordEvent, ChordEventValue} from '../interfaces/ChordEvent';
 import {Effects, EffectValue} from '../interfaces/Effects';
-import {PatternEvent, PatternEventValue} from '../interfaces/PatternEvent';
-import {PlaybackEvent} from '../interfaces/PlaybackEvent';
 import {FunctionEvents} from '../interfaces/FunctionEvents';
+import {
+  InstrumentEvent,
+  InstrumentEventValue,
+} from '../interfaces/InstrumentEvent';
+import {PlaybackEvent} from '../interfaces/PlaybackEvent';
 import {SkipContext} from '../interfaces/SkipContext';
 import {SoundEvent} from '../interfaces/SoundEvent';
 import MusicLibrary from '../MusicLibrary';
+
 import Sequencer from './Sequencer';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 interface SequenceFrame {
   measure: number;
@@ -219,13 +228,16 @@ export default class Simple2Sequencer extends Sequencer {
   /**
    * Play a pattern event at the current location.
    */
-  playPattern(value: PatternEventValue, blockId: string) {
-    this.addNewEvent<PatternEvent>({
-      type: 'pattern',
+  playPattern(value: InstrumentEventValue, blockId: string) {
+    const length = value.length || DEFAULT_PATTERN_LENGTH;
+
+    this.addNewEvent<InstrumentEvent>({
+      type: 'instrument',
+      instrumentType: 'drums',
       id: JSON.stringify(value),
       value,
       blockId,
-      length: DEFAULT_PATTERN_LENGTH,
+      length,
       ...this.getCommonEventFields(),
     });
   }
@@ -239,6 +251,21 @@ export default class Simple2Sequencer extends Sequencer {
       id: JSON.stringify(value),
       value,
       length: DEFAULT_CHORD_LENGTH,
+      blockId,
+      ...this.getCommonEventFields(),
+    });
+  }
+
+  /**
+   * Play a tune event at the current location.
+   */
+  playTune(value: InstrumentEventValue, blockId: string) {
+    this.addNewEvent<InstrumentEvent>({
+      type: 'instrument',
+      instrumentType: 'melodic',
+      id: JSON.stringify(value),
+      value,
+      length: value.length || DEFAULT_TUNE_LENGTH,
       blockId,
       ...this.getCommonEventFields(),
     });

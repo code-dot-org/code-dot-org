@@ -1,0 +1,17 @@
+name 'CSA U2L1-L5_pilot-2025'
+title 'Check for Understanding'
+description 'Match each term to its correct definition.'
+height '120'
+
+question 'instance variable'
+answer 'a variable defined in a class that represents an attribute of an object'
+
+question 'access modifier'
+answer 'a keyword used to set the visibility of classes, variables, constructors, and methods'
+
+question 'encapsulation'
+answer 'an object-oriented programming concept where the instance variables of a class are hidden from other classes and can be accessed only through the methods of the class'
+
+question 'refactor'
+answer 'to improve the readability, reusability, or structure of program code without altering its functionality'
+allow_multiple_attempts true

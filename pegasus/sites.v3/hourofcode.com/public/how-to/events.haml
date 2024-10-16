@@ -1,20 +1,24 @@
 ---
-title: How-to Guide for School Assemblies & Events | Hour of Code
 layout: wide_index
-theme: how_to_guide
 ---
 
+:ruby
+  @header["title"] = hoc_s("hoc_how_to.page_title.events")
+
+%link{href: "/css/generated/hoc-banner.css", rel: "stylesheet", type: "text/css"}
+%link{href: '/css/full-width-section.css', rel:'stylesheet', type:'text/css'}
+%link{href: "/css/generated/page/how-to.css", rel: "stylesheet", type: "text/css"}
+
 -# Hero banner
-= view :"how-to/how_to_banner", nav_audience: "guide_nav_events"
+= view :"how-to/how_to_banner"
 
 -# Intro section
-= view :"how-to/how_to_intro", intro_header: hoc_s(:hoc_how_to_events_intro_heading), intro_desc: hoc_s(:hoc_how_to_events_intro_desc_01), intro_desc_02: hoc_s(:hoc_how_to_events_intro_desc_02)
+= view :"how-to/how_to_intro", intro_header: hoc_s("hoc_how_to.events.top.heading"), intro_desc: hoc_s("hoc_how_to.events.top.desc_01"), intro_desc_02: hoc_s("hoc_how_to.events.top.desc_02")
 
 -# Steps
 = view :"how-to/steps/steps_events"
 
--# FAQ
-= view :"how-to/faq/faq_default"
-
 -# Resources
-= view :"how-to/resources/resources_default"
+= view :"how-to/how_to_resources"
+
+%script{src: "/js/how-to.js"}

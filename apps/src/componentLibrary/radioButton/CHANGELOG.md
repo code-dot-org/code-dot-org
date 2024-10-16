@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+# [0.3.1](https://github.com/code-dot-org/code-dot-org/pull/61173)
+
+* set `position: relative;` for `RadioButton` wrapping `label` element to fix the issue when invisible input is positioned far from actual `RadioButton`
+
+## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/60787)
+
+* added support of custom `className` for `RadioButton`
+* added support of common custom className (`commonClassName`) for `RadioButtonGroup`
+* added support of custom RadioButton content (added `children` prop to `RadioButton`)
+
 ## [0.2.3](https://github.com/code-dot-org/code-dot-org/pull/59444)
 
 * removed label fixed height

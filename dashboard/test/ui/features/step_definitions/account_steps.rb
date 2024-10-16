@@ -17,7 +17,7 @@ Then /^I sign out using jquery$/ do
 end
 
 Given(/^I sign in as "([^"]*)"( and go home)?$/) do |name, home|
-  navigate_to replace_hostname('http://studio.code.org/reset_session')
+  reset_session
   sign_in name
   redirect = 'http://studio.code.org/home'
   navigate_to replace_hostname(redirect) if home
@@ -97,7 +97,7 @@ end
 
 # Creates the user and signs them in.
 def create_user(name, url: '/api/test/create_user', **user_opts)
-  navigate_to replace_hostname('http://studio.code.org/reset_session')
+  reset_session
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, tries: 3) do
     # Generate the user
     email, password = generate_user(name)
@@ -149,7 +149,7 @@ def create_user(name, url: '/api/test/create_user', **user_opts)
   end
 end
 
-And(/^I create( as a parent)? a (young )?student(?: using (clever|google))?( in Colorado)?( who has never signed in)? named "([^"]*)"( after CPA exception)?( before CPA exception)?( and go home)?$/) do |parent_created, young, using_sso, locked, new_account, name, after_cpa_exception, before_cpa_exception, home|
+And(/^I create( as a parent)? a (young )?student(?: using (clever|google))?( in Colorado)?( who has never signed in)? named "([^"]*)"( after CAP start)?( before CAP start)?( and go home)?$/) do |parent_created, young, using_sso, locked, new_account, name, after_cap_start, before_cap_start, home|
   age = young ? '10' : '16'
   sign_in_count = new_account ? 0 : 2
 
@@ -169,15 +169,14 @@ And(/^I create( as a parent)? a (young )?student(?: using (clever|google))?( in 
     user_opts[:user_provided_us_state] = true
   end
 
-  # See Cpa::CREATED_AT_EXCEPTION_DATE
-  cpa_exception_date = DateTime.parse('2024-05-26T00:00:00MDT')
+  cap_start_date = DateTime.parse('2023-07-01T00:00:00MDT').freeze
 
-  if after_cpa_exception
-    user_opts[:created_at] = cpa_exception_date
+  if after_cap_start
+    user_opts[:created_at] = cap_start_date
   end
 
-  if before_cpa_exception
-    user_opts[:created_at] = cpa_exception_date - 1.second
+  if before_cap_start
+    user_opts[:created_at] = cap_start_date - 1.second
   end
 
   if parent_created
@@ -214,7 +213,7 @@ And(/^I create a student in the eu named "([^"]*)"$/) do |name|
   )
 end
 
-And(/^I create a teacher( who has never signed in)? named "([^"]*)"( after CPA exception)?( before CPA exception)?( and go home)?$/) do |new_account, name, after_cpa_exception, before_cpa_exception, home|
+And(/^I create a teacher( who has never signed in)? named "([^"]*)"( after CAP start)?( before CAP start)?( and go home)?$/) do |new_account, name, after_cap_start, before_cap_start, home|
   sign_in_count = new_account ? 0 : 2
 
   user_opts = {
@@ -225,14 +224,14 @@ And(/^I create a teacher( who has never signed in)? named "([^"]*)"( after CPA e
   }
 
   # See Cpa::CREATED_AT_EXCEPTION_DATE
-  cpa_exception_date = DateTime.parse('2024-05-26T00:00:00MDT')
+  cap_start_date = DateTime.parse('2024-05-26T00:00:00MDT')
 
-  if after_cpa_exception
-    user_opts[:created_at] = cpa_exception_date
+  if after_cap_start
+    user_opts[:created_at] = cap_start_date
   end
 
-  if before_cpa_exception
-    user_opts[:created_at] = cpa_exception_date - 1.second
+  if before_cap_start
+    user_opts[:created_at] = cap_start_date - 1.second
   end
 
   create_user(name, **user_opts)
@@ -279,7 +278,7 @@ When(/^I sign out$/) do
     browser_request(url: replace_hostname('/users/sign_out.json'), code: 204)
     @browser.execute_script("sessionStorage.clear(); localStorage.clear();")
   else
-    navigate_to replace_hostname('http://studio.code.org/reset_session')
+    reset_session
   end
 end
 
@@ -321,4 +320,15 @@ end
 
 And(/^I get debug info for the current user$/) do
   puts browser_request(url: '/api/v1/users/current', method: 'GET')
+end
+
+# reset_session flakes by not signing out the user.
+# This is because an in flight request to the server may still return and set the session to the user
+# after reset_session should have reset the user.
+# To counteract this, we wait for 3 seconds before calling reset_session to ensure all in flight requests have finished.
+# See this PR for more info: https://github.com/code-dot-org/code-dot-org/pull/60376
+# We are tracking a long-term fix here: https://codedotorg.atlassian.net/browse/P20-1080
+def reset_session
+  steps "And I wait for 3 seconds"
+  navigate_to replace_hostname('http://studio.code.org/reset_session')
 end

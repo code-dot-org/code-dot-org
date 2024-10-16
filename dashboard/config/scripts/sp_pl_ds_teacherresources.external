@@ -1,0 +1,34 @@
+name 'sp-pl-DS-teacherResources'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#Python and Pandas: Resources
+
+#### This chapter covers a wide range of important topics and gets into the technical details of coding in Python with the Pandas library.
+#### This material can be challenging, so this chapter includes a variety of helpful resources to support both your teaching and your students' learning as you work through this content together.
+
+<img src="https://images.code.org/d413739658a53d9c68d3bfa3e0ac25ae-image-1724770105942.png" alt="pixel grid of an X" style="border-radius:40px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 0 60px 20px 0;">
+
+## Teacher Resources:
+
+- #### Guide to  <a href="url" target="blank" rel="noopener noreferrer">Word Walls</a> and  <a href="url" target="blank" rel="noopener noreferrer">Anchor Charts</a>
+- ####  <a href="url" target="blank" rel="noopener noreferrer">Teacher Unit Overviews</a>
+- #### Guide to  <a href="url" target="blank" rel="noopener noreferrer">Data Talks</a>data talks and  <a href="url" target="blank" rel="noopener noreferrer">Three Reads</a>
+
+
+## Student Resources 
+- ####  <a href="url" target="blank" rel="noopener noreferrer">Unit 1 Guide</a>
+- ####  <a href="url" target="blank" rel="noopener noreferrer">Unit 2 Guide </a>
+- ####  <a href="url" target="blank" rel="noopener noreferrer">Study Guide: Unit 1</a>
+- ####  <a href="url" target="blank" rel="noopener noreferrer">Study Guide: Unit 2</a>
+- ####  <a href="url" target="blank" rel="noopener noreferrer">CODAP Guide</a> 
+
+
+
+
+
+
+
+
+MARKDOWN

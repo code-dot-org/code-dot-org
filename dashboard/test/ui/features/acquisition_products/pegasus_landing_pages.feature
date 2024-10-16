@@ -13,6 +13,4 @@ Scenario Outline: Simple page view
 Examples:
   | url                                                               | test_name                  |
   | http://code.org/minecraft                                         | minecraft tutorial landing |
-  | http://code.org/playlab                                           | playlab tutorial landing   |
   | http://code.org/starwars                                          | starwars tutorial landing  |
-  | http://code.org/oceans                                            | oceans tutorial landing    |

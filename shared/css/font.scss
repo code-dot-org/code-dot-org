@@ -6,9 +6,13 @@
 // Try to avoid use of inline styles if you're creating new component).
 // Keeping that in mind -
 
-$metropolis-font: 'Metropolis', sans-serif;
+$metropolis-font: 'Metropolis';
+$noto-sans-fonts: 'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Armenian', 'Noto Sans Bengali', 'Noto Sans SC',
+'Noto Sans TC', 'Noto Sans Devanagari', 'Noto Sans Georgian', 'Noto Sans Hebrew', 'Noto Sans JP',
+'Noto Sans Kannada', 'Noto Sans Khmer', 'Noto Sans KR', 'Noto Sans Myanmar', 'Noto Sans Sinhala',
+'Noto Sans Tamil', 'Noto Sans Telugu', 'Noto Sans Thai', 'Noto Sans Thaana';
 
-$main-font: $metropolis-font;
+$main-font: $metropolis-font, $noto-sans-fonts, sans-serif;
 
 $thin-font-weight: 100;
 $extra-light-font-weight: 200;
@@ -119,18 +123,23 @@ $black-font-weight: 900;
   font-style: italic;
 }
 
-$barlowSemiCondensed-semibold: 'Barlow Semi Condensed Semibold', sans-serif;
-$barlowSemiCondensed-medium: 'Barlow Semi Condensed Medium', sans-serif;
+$barlowSemiCondensed-semibold: 'Barlow Semi Condensed Semibold', $noto-sans-fonts, sans-serif;
+$barlowSemiCondensed-medium: 'Barlow Semi Condensed Medium', $noto-sans-fonts, sans-serif;
 
 $code-font: 'Source Code Pro', Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace;
 
 /*
+   Font Awesome S3 Bucket URLs
+   Current version: 6.6.0
    If you are changing the location of these files,
    see the readme in this directory for more detail on manual steps to take when uploading new files.
  */
-$font-awesome-core-url: 'https://dsco.code.org/assets/font-awesome-pro/1684178876/css/fontawesome.min.css';
-$font-awesome-brands-url: 'https://dsco.code.org/assets/font-awesome-pro/1684178876/css/brands.min.css';
-$font-awesome-solid-url: 'https://dsco.code.org/assets/font-awesome-pro/1684178876/css/solid.min.css';
-$font-awesome-regular-url: 'https://dsco.code.org/assets/font-awesome-pro/1684178876/css/regular.min.css';
-$font-awesome-v4-fonts-url: 'https://dsco.code.org/assets/font-awesome-pro/1684178876/css/v4-font-face.min.css';
-$font-awesome-v4-shims-url: 'https://dsco.code.org/assets/font-awesome-pro/1684178876/css/v4-shims.min.css';
+$font-awesome-core-url: 'https://dsco.code.org/assets/font-awesome-pro/1728421354/css/fontawesome.min.css';
+$font-awesome-brands-url: 'https://dsco.code.org/assets/font-awesome-pro/1728421354/css/brands.min.css';
+$font-awesome-solid-url: 'https://dsco.code.org/assets/font-awesome-pro/1728421354/css/solid.min.css';
+$font-awesome-regular-url: 'https://dsco.code.org/assets/font-awesome-pro/1728421354/css/regular.min.css';
+$font-awesome-v4-fonts-url: 'https://dsco.code.org/assets/font-awesome-pro/1728421354/css/v4-font-face.min.css';
+$font-awesome-v4-shims-url: 'https://dsco.code.org/assets/font-awesome-pro/1728421354/css/v4-shims.min.css';
+$font-awesome-v4-shims-url: 'https://dsco.code.org/assets/font-awesome-pro/1728421354/css/v4-shims.min.css';
+$font-awesome-duotone-url: 'https://dsco.code.org/assets/font-awesome-pro/1728421354/css/duotone.min.css';
+$font-awesome-custom-icons-url: 'https://dsco.code.org/assets/font-awesome-pro/1728421354/css/custom-icons.min.css';

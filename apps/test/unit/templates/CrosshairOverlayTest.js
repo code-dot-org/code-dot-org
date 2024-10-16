@@ -6,8 +6,6 @@ import CrosshairOverlay, {
   styles,
 } from '@cdo/apps/templates/CrosshairOverlay';
 
-import {expect} from '../../util/reconfiguredChai';
-
 describe('CrosshairOverlay', () => {
   const TEST_APP_WIDTH = 300,
     TEST_APP_HEIGHT = 200;
@@ -26,29 +24,31 @@ describe('CrosshairOverlay', () => {
 
   function checkRenderAtMousePosition(x, y) {
     const crosshairOverlay = renderAtMousePosition(x, y);
-    expect(crosshairOverlay.find('svg')).to.have.length(1);
-    expect(crosshairOverlay.find('line')).to.have.length(2);
+    expect(crosshairOverlay.find('svg')).toHaveLength(1);
+    expect(crosshairOverlay.find('line')).toHaveLength(2);
     const firstLine = crosshairOverlay.find('line').first();
-    expect(firstLine.props().x1).to.equal(x);
-    expect(firstLine.props().y1).to.equal(0);
-    expect(firstLine.props().x2).to.equal(x);
-    expect(firstLine.props().y2).to.equal(y - CROSSHAIR_MARGIN);
-    expect(firstLine.props().style).to.equal(styles.line);
+    expect(firstLine.props().x1).toBe(x);
+    expect(firstLine.props().y1).toBe(0);
+    expect(firstLine.props().x2).toBe(x);
+    expect(firstLine.props().y2).toBe(y - CROSSHAIR_MARGIN);
+    expect(firstLine.props().style).toBe(styles.line);
     const secondLine = crosshairOverlay.find('line').last();
-    expect(secondLine.props().x1).to.equal(0);
-    expect(secondLine.props().y1).to.equal(y);
-    expect(secondLine.props().x2).to.equal(x - CROSSHAIR_MARGIN);
-    expect(secondLine.props().y2).to.equal(y);
-    expect(secondLine.props().style).to.equal(styles.line);
+    expect(secondLine.props().x1).toBe(0);
+    expect(secondLine.props().y1).toBe(y);
+    expect(secondLine.props().x2).toBe(x - CROSSHAIR_MARGIN);
+    expect(secondLine.props().y2).toBe(y);
+    expect(secondLine.props().style).toBe(styles.line);
   }
 
   it('renders null if mouse is out of bounds', () => {
-    expect(renderAtMousePosition(-1, 0).html()).to.be.null;
-    expect(renderAtMousePosition(0, -1).html()).to.be.null;
-    expect(renderAtMousePosition(TEST_APP_WIDTH + 1, TEST_APP_HEIGHT).html()).to
-      .be.null;
-    expect(renderAtMousePosition(TEST_APP_WIDTH, TEST_APP_HEIGHT + 1).html()).to
-      .be.null;
+    expect(renderAtMousePosition(-1, 0).html()).toBeNull();
+    expect(renderAtMousePosition(0, -1).html()).toBeNull();
+    expect(
+      renderAtMousePosition(TEST_APP_WIDTH + 1, TEST_APP_HEIGHT).html()
+    ).toBeNull();
+    expect(
+      renderAtMousePosition(TEST_APP_WIDTH, TEST_APP_HEIGHT + 1).html()
+    ).toBeNull();
   });
 
   it('renders lines converging at mouse position if mouse is in bounds', () => {

@@ -2,31 +2,31 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import CourseOverview from '@cdo/apps/templates/courseOverview/CourseOverview';
 import announcementReducer, {
   addAnnouncement,
 } from '@cdo/apps/code-studio/announcementsRedux';
 import clientState from '@cdo/apps/code-studio/clientState';
-import {getStore} from '@cdo/apps/code-studio/redux';
-import {getUserSignedInFromCookieAndDom} from '@cdo/apps/code-studio/initSigninState';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import {getUserSignedInFromCookieAndDom} from '@cdo/apps/code-studio/initSigninState';
+import {getStore} from '@cdo/apps/code-studio/redux';
 import {
-  pageTypes,
-  selectSection,
-  setPageType,
-  setSections,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+  setVerified,
+  setVerifiedResources,
+} from '@cdo/apps/code-studio/verifiedInstructorRedux';
+import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {registerReducers} from '@cdo/apps/redux';
+import CourseOverview from '@cdo/apps/templates/courseOverview/CourseOverview';
 import {
   setUserSignedIn,
   setUserRoleInCourse,
   CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
 import {
-  setVerified,
-  setVerifiedResources,
-} from '@cdo/apps/code-studio/verifiedInstructorRedux';
-import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+  pageTypes,
+  selectSection,
+  setPageType,
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
 
 $(document).ready(showCourseOverview);

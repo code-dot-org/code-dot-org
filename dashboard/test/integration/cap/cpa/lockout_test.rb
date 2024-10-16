@@ -59,18 +59,6 @@ module CAP
             end
           end
 
-          context 'when student was create before P20-937-exception-date' do
-            let(:student) {create(:cpa_non_compliant_student, :before_p20_937_exception_date)}
-
-            it 'student should not be locked out yet' do
-              assert_student_is_not_locked_out
-            end
-
-            it 'student should be redirected away from the lockout page' do
-              assert_student_is_redirected_away_from_lockout
-            end
-          end
-
           context 'when student provider is Google' do
             before do
               create(:google_authentication_option, user: student)
@@ -166,18 +154,6 @@ module CAP
             end
           end
 
-          context 'when student was create before P20-937-exception-date' do
-            let(:student) {create(:cpa_non_compliant_student, :before_p20_937_exception_date)}
-
-            it 'student should be transited to grace period state' do
-              assert_student_in_grace_period
-            end
-
-            it 'student should be redirected away from the lockout page' do
-              assert_student_is_redirected_away_from_lockout
-            end
-          end
-
           context 'when student became compliant during their grace period' do
             let(:student) {create(:cpa_non_compliant_student, :predates_policy, :in_grace_period)}
 
@@ -259,9 +235,8 @@ module CAP
           assert_equal home_path, path
 
           assert_attributes student.reload, {
-            child_account_compliance_state: Policies::ChildAccount::ComplianceState::GRACE_PERIOD,
-            child_account_compliance_state_last_updated: DateTime.now.iso8601(3),
-            child_account_compliance_lock_out_date: nil,
+            cap_status: Policies::ChildAccount::ComplianceState::GRACE_PERIOD,
+            cap_status_date: DateTime.now,
           }
         end
 
@@ -274,7 +249,7 @@ module CAP
         end
 
         private def assert_student_is_locked_out_until_permission_granted
-          initial_cap_compliance_state = student.child_account_compliance_state
+          initial_cap_compliance_state = student.cap_status
 
           get home_path
 
@@ -283,9 +258,8 @@ module CAP
           assert_equal lockout_path, path
 
           assert_attributes student.reload, {
-            child_account_compliance_state: Policies::ChildAccount::ComplianceState::LOCKED_OUT,
-            child_account_compliance_state_last_updated: DateTime.now.iso8601(3),
-            child_account_compliance_lock_out_date: DateTime.now.iso8601(3),
+            cap_status: Policies::ChildAccount::ComplianceState::LOCKED_OUT,
+            cap_status_date: DateTime.now,
           }
 
           assert_latest_student_cap_event(
@@ -303,9 +277,8 @@ module CAP
           assert_equal home_path, path
 
           assert_attributes student.reload, {
-            child_account_compliance_state: Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED,
-            child_account_compliance_state_last_updated: DateTime.now.iso8601(3),
-            child_account_compliance_lock_out_date: nil,
+            cap_status: Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED,
+            cap_status_date: DateTime.now,
           }
 
           assert_latest_student_cap_event(

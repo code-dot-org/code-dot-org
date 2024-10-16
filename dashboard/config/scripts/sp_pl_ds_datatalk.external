@@ -1,0 +1,41 @@
+name 'sp-pl-DS_dataTalk'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Data Talk 
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> The data talk levels are used as warm-up activities to get students thinking and their curiosity peaked.
+</p>
+</div>
+
+#### To facilitate discussion, you can see responses on your teacher dashboard.
+
+#### When you are logged into your class as a teacher, you have a powerful tool at your disposal to encourage classroom discussion and highlight student thinking.
+
+<img src="https://images.code.org/2de07f2dfb3de77880649b65d01dfe55-image-1724424528700.png" alt="cat from the pixel activity" width="350px" style="border-radius:20px; float:right; margin: 0 0 40px 40px;">
+
+- #### **Access Student Responses:** Click the top left corner to view student submissions.
+
+- #### **Encourage Discussion:** Select interesting responses to read aloud, sparking conversation and showcasing diverse perspectives.
+
+- #### **Project for the Class:** Display responses on screen to highlight ideas and promote collaboration.
+
+- #### **Privacy Options:** Hide student names for anonymity and selectively conceal responses for better control over shared content.
+
+
+![](https://images.code.org/27de6fb89d1edc36e3640912a5b3e284-image-1724424496779.png)
+
+### Use these features to create an engaging and inclusive classroom experience!
+
+*Note:This feature is not in the self-paced professional learning module. It is only available when a course is assigned through your teacher account.*
+
+
+
+
+
+
+
+MARKDOWN

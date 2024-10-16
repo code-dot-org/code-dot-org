@@ -1,9 +1,14 @@
-import styles from '../views/SoundStyle.module.scss';
-import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
+import {ChordEvent} from '../player/interfaces/ChordEvent';
+import {InstrumentEvent} from '../player/interfaces/InstrumentEvent';
 import {SoundType} from '../player/MusicLibrary';
 
+import styles from '../views/SoundStyle.module.scss';
+
 type SoundStyle = {
-  [key in SoundType | PlaybackEvent['type']]?: {
+  [key in
+    | SoundType
+    | ChordEvent['type']
+    | InstrumentEvent['instrumentType']]?: {
     // The Font Awesome icon name.
     icon: string;
     // The Font Awesome icon in Unicode, used for rendering an icon as an SVG text element.
@@ -70,7 +75,7 @@ const soundStyle: SoundStyle = {
     classNameBackground: styles.soundVocalBackground,
     classNameBorder: styles.soundVocalBorder,
   },
-  pattern: {
+  drums: {
     icon: '',
     iconCode: '',
     marginLeft: 0,
@@ -84,9 +89,18 @@ const soundStyle: SoundStyle = {
     iconCode: '',
     marginLeft: 0,
     classNameColor: styles.soundChordColor,
-    classNameFill: styles.soundPatternFill,
+    classNameFill: styles.soundChordFill,
     classNameBackground: styles.soundChordBackground,
     classNameBorder: styles.soundChordBorder,
+  },
+  melodic: {
+    icon: '',
+    iconCode: '',
+    marginLeft: 0,
+    classNameColor: styles.soundTuneColor,
+    classNameFill: styles.soundTuneFill,
+    classNameBackground: styles.soundTuneBackground,
+    classNameBorder: styles.soundTuneBorder,
   },
 };
 

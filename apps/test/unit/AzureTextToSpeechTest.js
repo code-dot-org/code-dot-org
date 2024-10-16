@@ -1,8 +1,8 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import AzureTextToSpeech from '@cdo/apps/AzureTextToSpeech';
 
-import {assert, expect} from '../util/reconfiguredChai';
+import {assert, expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const assertSoundResponsesEqual = (expected, actual) => {
   assert.deepEqual(expected.bytes, actual.bytes);

@@ -1,38 +1,56 @@
+import React from 'react';
+
 import i18n from '@cdo/locale';
 import evidenceDemo from '@cdo/static/ai-evidence-demo.gif';
+
+// intro.js-react allows a string or a react component for the intro prop.
+// Providing a string that was written by a translator is risky, because it
+// could contain malicious HTML. This helper method wraps the string in a react
+// fragment, which will take care of sanitizing the string.
+const sanitize = unsafe => <>{unsafe}</>;
 
 export const INITIAL_STEP = 0;
 export const STEPS = [
   {
     element: '#ui-floatingActionButton',
-    title: i18n.rubricTourStepOneTitle(),
-    intro: i18n.rubricTourStepOneText(),
+    title: i18n.rubricTourGettingStartedTitle(),
+    intro: sanitize(i18n.rubricTourGettingStartedText()),
+  },
+  {
+    element: '#class-data-button',
+    title: i18n.rubricTabClassManagement(),
+    intro: sanitize(i18n.rubricTourClassDataText()),
   },
   {
     element: '#tour-ai-assessment',
-    title: i18n.rubricTourStepTwoTitle(),
-    intro: i18n.rubricTourStepTwoText(),
+    title: i18n.rubricTourUnderstandingTitle(),
+    intro: sanitize(i18n.rubricTourUnderstandingText()),
   },
   {
     element: '#tour-ai-evidence',
-    title: i18n.rubricTourStepThreeTitle(),
+    title: i18n.rubricTourEvidenceTitle(),
     position: 'top',
-    intro: `<p>${i18n.rubricTourStepThreeText()}</p><img src=${evidenceDemo}>`,
+    intro: (
+      <>
+        <p>{i18n.rubricTourEvidenceText()}</p>
+        <img src={evidenceDemo} alt={i18n.rubricTourEvidenceAltText()} />
+      </>
+    ),
   },
   {
     element: '#tour-ai-confidence',
-    title: i18n.rubricTourStepFourTitle(),
-    intro: i18n.rubricTourStepFourText(),
+    title: i18n.rubricTourConfidenceTitle(),
+    intro: sanitize(i18n.rubricTourConfidenceText()),
   },
   {
     element: '#tour-evidence-levels',
-    title: i18n.rubricTourStepFiveTitle(),
-    intro: i18n.rubricTourStepFiveText(),
+    title: i18n.rubricTourAssigningTitle(),
+    intro: sanitize(i18n.rubricTourAssigningText()),
   },
   {
     element: '#tour-ai-assessment-feedback',
-    title: i18n.rubricTourStepSixTitle(),
-    intro: i18n.rubricTourStepSixText(),
+    title: i18n.rubricTourFeedbackTitle(),
+    intro: sanitize(i18n.rubricTourFeedbackText()),
   },
 ];
 

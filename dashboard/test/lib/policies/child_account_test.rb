@@ -9,19 +9,19 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
     test 'grace_period?' do
       assert_changes -> {Policies::ChildAccount::ComplianceState.grace_period?(@student)}, from: false, to: true do
-        @student.child_account_compliance_state = 'p'
+        @student.cap_status = 'p'
       end
     end
 
     test 'locked_out?' do
       assert_changes -> {Policies::ChildAccount::ComplianceState.locked_out?(@student)}, from: false, to: true do
-        @student.child_account_compliance_state = 'l'
+        @student.cap_status = 'l'
       end
     end
 
     test 'permission_granted?' do
       assert_changes -> {Policies::ChildAccount::ComplianceState.permission_granted?(@student)}, from: false, to: true do
-        @student.child_account_compliance_state = 'g'
+        @student.cap_status = 'g'
       end
     end
   end
@@ -88,13 +88,6 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2024-07-01T00:00:00MDT'}], false],
       [[:non_compliant_child, :with_google_authentication_option, {created_at: '2024-06-29T23:59:59MDT'}], true],
       [[:non_compliant_child, :with_google_authentication_option, {created_at: '2024-07-01T00:00:00MDT'}], false],
-      # The following test cases address P20-937
-      [[:non_compliant_child, :before_p20_937_exception_date], true],
-      [[:non_compliant_child, :microsoft_v2_sso_provider, :before_p20_937_exception_date], true],
-      [[:non_compliant_child, :facebook_sso_provider, :before_p20_937_exception_date], true],
-      [[:non_compliant_child, :p20_937_exception_date], false],
-      [[:non_compliant_child, :microsoft_v2_sso_provider, :p20_937_exception_date], false],
-      [[:non_compliant_child, :facebook_sso_provider, :p20_937_exception_date], false],
     ]
     failures = []
     test_matrix.each do |traits, compliance|
@@ -191,8 +184,8 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     let(:user) do
       build_stubbed(
         :non_compliant_child,
-        child_account_compliance_state: user_cap_compliance_state,
-        child_account_compliance_state_last_updated: user_cap_compliance_state_updated_at
+        cap_status: user_cap_compliance_state,
+        cap_status_date: user_cap_compliance_state_updated_at
       )
     end
 

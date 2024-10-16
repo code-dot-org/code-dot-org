@@ -1,7 +1,7 @@
 Feature: Block auto-layout
 Background:
   Given I am on "http://studio.code.org/flappy/10?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
 
 Scenario: Auto-placing malformed start blocks
   When I've initialized the workspace with an auto-positioned flappy puzzle with extra newlines
@@ -15,7 +15,7 @@ Scenario: Auto-placing blocks
 
 Scenario: Auto-placing blocks with XML positioning
   Given I am on "http://studio.code.org/s/allthethings/lessons/5/levels/4?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
 
   When I've initialized the workspace with a manually-positioned playlab puzzle
 

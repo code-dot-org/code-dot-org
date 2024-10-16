@@ -4,8 +4,6 @@ import React from 'react';
 import ProgressBox from '@cdo/apps/templates/sectionProgress/ProgressBox';
 import color from '@cdo/apps/util/color';
 
-import {assert} from '../../../util/reconfiguredChai';
-
 const DEFAULT_PROPS = {
   started: true,
   incomplete: 2,
@@ -18,19 +16,17 @@ const DEFAULT_PROPS = {
 describe('ProgressBox', () => {
   it('renders progress bar as green when lessonIsAllAssessment prop is false', () => {
     const wrapper = shallow(<ProgressBox {...DEFAULT_PROPS} />);
-    assert.equal(
-      wrapper.find('.uitest-perfect-bar').first().props().style.backgroundColor,
-      color.level_perfect
-    );
+    expect(
+      wrapper.find('.uitest-perfect-bar').first().props().style.backgroundColor
+    ).toEqual(color.level_perfect);
   });
 
   it('renders progress bar as purple when lessonIsAllAssessment prop is true', () => {
     const wrapper = shallow(
       <ProgressBox {...DEFAULT_PROPS} lessonIsAllAssessment={true} />
     );
-    assert.equal(
-      wrapper.find('.uitest-perfect-bar').first().props().style.backgroundColor,
-      color.level_submitted
-    );
+    expect(
+      wrapper.find('.uitest-perfect-bar').first().props().style.backgroundColor
+    ).toEqual(color.level_submitted);
   });
 });

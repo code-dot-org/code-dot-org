@@ -66,6 +66,16 @@
       }
     },
     {
+      "name": "CSD Changelog 24-25",
+      "url": "https://docs.google.com/document/d/1DN6WF64Jy3cr1hkeDySNAujMhb9yQZlJvt3ls8OCvRw/edit#heading=h.ydx1g8n6vyu8",
+      "key": "csd_changelog_24-25",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_changelog_24-25"
+      }
+    },
+    {
       "name": "CSD Course Standards CSTA Alignment",
       "url": "https://docs.google.com/spreadsheets/d/1mSkUykxhOhSviA7wmo5Ejh3vYgLJDtG46rCm_92607g/edit?usp=sharing",
       "key": "csd_course_standards_csta_alignment",

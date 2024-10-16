@@ -21,7 +21,8 @@
     },
     "encrypted_exemplar_sources": "HM0H7Z3L+CTAPTxDu6u7zslyjM60me7VHOAdpgMoPI5Btj5QD9/tJdqAiYu1\nhsH+0+WdmaCNYt7yi0RwjEN4QTbNWG6nGn+ANmjK+II/66+MUDTMQYmG4OCB\ntBx1E7UcBbLP88WiQ9fI374Fi78tc4liqhesBVqf9DbJbIbWIcJWWEarL38u\nHqdDQYTscs7sYZFaxStWLuOEod1zujrvY9xtPBK+l9Zh7g5ZdYMOps9cBKjr\nvQs5vLEukJ1xK8h5Jaw3kzYQ/U32mKVEW509RPZWx2A1KRoxuXyXEckFMUHg\nCTSszetGGlPjkTD3owfakFSQWOlUg7e9KWEZHrsfPrwYvqfhpB47MhB6+cah\n8Qk3Dx845XHIS6X8y/fV5vSl74+PW5LfyhDtieod/J4TBVDyfA3pHjCQOE/0\nImNO9eh+sK+r70+jIG8d7e1Zbiimp/X5hii11NQ5sBUmxKDBIt8wikH1E4iC\nvhj/F3GwSPKL3Y5yS9iE6FeKVEI1VQpfZnk+hh/csAvHUoywYIHd1GQzJb3P\nLZ3PY1tQ17DZCCd28t2ki/e/OvQtSlU/8Pw2aGcT/YvJtekqbs4PDVQtF+Ob\nTjTgX5tbBTYbaLYwWHJPhM60HqC7MqW0EkKjZ/4HoK1C2VigyrOudehxJqAu\n8seYtegN7eIOGzRkFrVpiDfGRCxdUjqeFPdLMgCbtIZw\n",
     "thumbnail_url": "https://images.code.org/d7a35b239d7d76ce9f40494b84cb8042-image-1651590773854.png",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:52:57.251+00:00\",\"changed\":[\"cloned from \\\"CSA U6L3-L4d_2022\\\"\"],\"cloned_from\":\"CSA U6L3-L4d_2022\"}]"

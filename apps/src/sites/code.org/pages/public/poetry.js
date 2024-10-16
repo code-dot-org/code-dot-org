@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import ProjectCardRow from '@cdo/apps/templates/projects/ProjectCardRow';
 
 const POETRY_PROJECTS = [

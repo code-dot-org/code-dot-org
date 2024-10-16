@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-31T16:38:56.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Warm Up",
+    "long_instructions": "###Think of a time when the way you asked a question changed the answer you received, whether from a person or a digital assistant. How did the wording of your question influence the response?",
+    "teacher_markdown": " Discussion Goal: This question encourages students to recognize the importance of phrasing in everyday communications and how this concept transfers to interactions with AI. For example, when being rude to someone in customer service resulted in them being rude back, or when creating a “compliment sandwich” resulted in a difficult conversation going smooth. The discussion aims to highlight the parallel between human communication and AI interaction, which will be explored in this lesson.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-31 16:38:59 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

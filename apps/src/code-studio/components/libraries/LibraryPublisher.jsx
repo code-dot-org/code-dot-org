@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import {Heading2} from '@cdo/apps/lib/ui/Headings';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {Heading2} from '@cdo/apps/legacySharedComponents/Headings';
 import color from '@cdo/apps/util/color';
 import {findProfanity} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';

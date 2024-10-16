@@ -6,7 +6,7 @@ import MultiResponses, {
 } from '@cdo/apps/templates/levelSummary/MultiResponses';
 import color from '@cdo/apps/util/color';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 const {multiAnswerCounts, multiChartData} = exportedForTesting;
 
 const JS_DATA = {

@@ -1,12 +1,12 @@
 {
   "key": "virtual-pl-csa-summer",
-  "display_name": "virtual-pl-csa-summer",
+  "display_name": "CSA Virtual Summer Learning '24-'25",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Professional Learning",
   "marketing_initiative": null,
   "grade_levels": null,
-  "header": null,
+  "header": "summer_workshops_612",
   "image": null,
   "cs_topic": null,
   "school_subject": null,
@@ -15,6 +15,6 @@
   "professional_learning_program": "https://code.org/apply",
   "video": null,
   "published_date": null,
-  "self_paced_pl_course_offering_id": null,
-  "self_paced_pl_course_offering_key": null
+  "self_paced_pl_course_offering_key": null,
+  "ai_teaching_assistant_available": false
 }

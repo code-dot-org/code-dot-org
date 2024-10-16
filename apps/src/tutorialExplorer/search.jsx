@@ -2,7 +2,7 @@ import debounce from 'lodash/debounce';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import SearchBar from '../templates/SearchBar';
+import SearchBar from '../sharedComponents/SearchBar';
 
 import FilterGroupContainer from './filterGroupContainer';
 

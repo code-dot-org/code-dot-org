@@ -1,17 +1,15 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import firehoseClient from '@cdo/apps/metrics/firehose';
+import {SELECT_COUNTRY} from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import {SchoolDataInputsContainer} from '@cdo/apps/templates/SchoolDataInputsContainer';
 import experiments from '@cdo/apps/util/experiments';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {
-  SELECT_A_SCHOOL,
-  CLICK_TO_ADD,
-  NO_SCHOOL_SETTING,
-} from '@cdo/apps/templates/SchoolZipSearch';
+import getScriptData from '@cdo/apps/util/getScriptData';
+import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
@@ -108,13 +106,15 @@ $(document).ready(() => {
     const newSchoolIdEl = $(
       'select[name="user[school_info_attributes][school_id]"]'
     );
-    if (
-      [NO_SCHOOL_SETTING, CLICK_TO_ADD, SELECT_A_SCHOOL].includes(
-        newSchoolIdEl.val()
-      )
-    ) {
+    if (Object.values(NonSchoolOptions).includes(newSchoolIdEl.val())) {
       newSchoolIdEl.val('');
       $('input[name="user[school_info_attributes][school_zip]"]').val('');
+    }
+
+    // Clear country if not selected
+    const countryEl = $('select[name="user[school_info_attributes][country]"]');
+    if (countryEl.val() === SELECT_COUNTRY) {
+      countryEl.val('');
     }
   }
 
@@ -235,8 +235,8 @@ $(document).ready(() => {
   function renderSchoolInfo() {
     if (schoolInfoMountPoint) {
       ReactDOM.render(
-        <div style={{padding: 10}}>
-          <SchoolDataInputs usIp={usIp} />
+        <div style={{padding: 22}}>
+          <SchoolDataInputsContainer usIp={usIp} />
         </div>,
         schoolInfoMountPoint
       );

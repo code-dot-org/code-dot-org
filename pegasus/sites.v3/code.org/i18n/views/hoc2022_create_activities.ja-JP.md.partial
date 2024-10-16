@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Dance Party", body: "ダンスパーティーを計画！ Featuring Beyoncé、Harry Styles、Lizzo、Lil Nas X、Selena Gomez、Disneyの\"Encanto,\"などの音楽が登場！", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "Poem Art", body: "Hour of Code アクティビティで古典詩にアートとアニメーションを追加しよう！", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "Artist", body: "アーティストと一緒にかっこいい絵やデザインを描こう！", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "Infinity Play Lab", body: "Play Labを使用して、Disney Infinityのキャラクターが主役のストーリーまたはゲームを作成する。", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

@@ -1,7 +1,9 @@
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import MusicPlayer from '../../player/MusicPlayer';
-import MusicLibrary from '../../player/MusicLibrary';
 import {useEffect} from 'react';
+
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import MusicLibrary from '../../player/MusicLibrary';
+import MusicPlayer from '../../player/MusicPlayer';
 import {setBpm, setKey} from '../../redux/musicRedux';
 
 /**

@@ -21,5 +21,5 @@ Scenario: Complete an auto-success level signed-out, continue, the auto-success 
   And I wait to see ".submitButton"
   Then I click ".submitButton" to load a new page
   And I wait until I am on "http://studio.code.org/s/allthethings/lessons/18/levels/15"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I verify progress in the header of the current page is "perfect" for level 14

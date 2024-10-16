@@ -1,0 +1,17 @@
+name 'CSA U3L7-L5_alt-2025'
+title 'Check for Understanding'
+description 'Match each term to its correct definition.'
+height '100'
+
+question 'precondition'
+answer 'a condition that must always be true just before the execution of a code segment'
+
+question 'postcondition'
+answer 'a condition that must always be true just after the execution of a code segment'
+
+question 'traverse'
+answer 'to access elements in a data structure one by one'
+
+question 'data structure'
+answer 'a structure for organizing, processing, retrieving, and storing data'
+allow_multiple_attempts true

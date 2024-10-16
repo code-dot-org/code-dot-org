@@ -13,7 +13,6 @@ const jestAliases = {
   '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
     'jest-transform-stub',
   '\\.(css)$': 'identity-obj-proxy',
-  '^firebase$': '<rootDir>/test/util/MockFirebase.js',
   '^firmata$': 'mock-firmata/mock-firmata',
   'script-loader!@code-dot-org/(.*)': '<rootDir>/node_modules/@code-dot-org/$1',
 };
@@ -178,8 +177,7 @@ const config = {
   ],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  // setupFilesAfterEnv: [],
-
+  setupFilesAfterEnv: ['./test/setupJestAfterEnv.js'],
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,
 

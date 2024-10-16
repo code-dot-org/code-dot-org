@@ -5,9 +5,9 @@ import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 
 import {toggleHiddenLesson} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {getStore} from '@cdo/apps/redux';
-import Button from '@cdo/apps/templates/Button';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 import i18n from '@cdo/locale';
 

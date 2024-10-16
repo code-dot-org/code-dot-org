@@ -6,8 +6,6 @@ import './CodeReviewTestHelper';
 import {UnconnectedComment as Comment} from '@cdo/apps/templates/instructions/codeReviewV2/Comment';
 import color from '@cdo/apps/util/color';
 
-import {expect} from '../../../../util/reconfiguredChai';
-
 const DEFAULT_COMMENT = Factory.build('CodeReviewV2Comment');
 const DEFAULT_PROPS = {
   comment: DEFAULT_COMMENT,
@@ -43,10 +41,7 @@ describe('Code Review Comment', () => {
       .first()
       .props().style;
 
-    expect(commentBodyStyle).to.have.property(
-      'backgroundColor',
-      backgroundColor
-    );
+    expect(commentBodyStyle).toHaveProperty('backgroundColor', backgroundColor);
   };
 
   it('body has a gray background when not from project owner', () => {
@@ -61,12 +56,12 @@ describe('Code Review Comment', () => {
 
   it('displays check mark for resolved comment', () => {
     const wrapper = renderWrapper({isResolved: true});
-    expect(wrapper.find('FontAwesome').props().icon).to.equal('check-circle');
+    expect(wrapper.find('FontAwesome').props().icon).toBe('check-circle');
   });
 
   it('displays show option for hidden resolved comment', () => {
     const wrapper = renderWrapper({isResolved: true});
-    expect(wrapper.find('.fa-eye')).to.have.lengthOf(1);
+    expect(wrapper.find('.fa-eye')).toHaveLength(1);
   });
 
   it('displays hide option for visible resolved comment', () => {
@@ -75,22 +70,22 @@ describe('Code Review Comment', () => {
     const wrapper = renderWrapper({isResolved: true});
     const onClickPromise = wrapper.find('a').first().invoke('onClick')();
     return onClickPromise.then(() =>
-      expect(wrapper.find('.fa-eye-slash')).to.have.lengthOf(1)
+      expect(wrapper.find('.fa-eye-slash')).toHaveLength(1)
     );
   });
 
   it('displays resolve option for code owner', () => {
     const wrapper = renderWrapper({}, {viewingAsOwner: true});
-    expect(wrapper.find('.fa-check-circle')).to.have.lengthOf(1);
+    expect(wrapper.find('.fa-check-circle')).toHaveLength(1);
   });
 
   it('displays unresolve option for code owner', () => {
     const wrapper = renderWrapper({isResolved: true}, {viewingAsOwner: true});
-    expect(wrapper.find('.fa-circle-o')).to.have.lengthOf(1);
+    expect(wrapper.find('.fa-circle-o')).toHaveLength(1);
   });
 
   it('displays delete option for instructor', () => {
     const wrapper = renderWrapper({}, {viewAsTeacher: true});
-    expect(wrapper.find('.fa-trash')).to.have.lengthOf(1);
+    expect(wrapper.find('.fa-trash')).toHaveLength(1);
   });
 });

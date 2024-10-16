@@ -3,7 +3,7 @@ Feature: Modal Function Editor
 
 Background:
   Given I am on "http://studio.code.org/s/allthethings/lessons/36/levels/3?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I wait for 3 seconds
   And I wait until I don't see selector "#p5_loading"
   And I close the instructions overlay if it exists
@@ -41,3 +41,12 @@ Scenario: Can edit a function
   # Now the function editor workspace should have 4 blocks: the procedure block,
   # the set background block, the new sprite block, and the location block attached to the new sprite block.
   Then the function editor workspace has 4 blocks
+
+@chrome
+Scenario: Can close the editor using the ESC key
+  # Open the editor
+  Then I click block field that is number 1 in the list of blocks and number 1 in the field row
+  And element "#modalFunctionEditor" is visible
+  # Close editor
+  Then I press keys ":escape" for element "body"
+  And element "#modalFunctionEditor" is not visible

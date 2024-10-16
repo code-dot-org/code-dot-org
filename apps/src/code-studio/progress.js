@@ -13,8 +13,8 @@ import {
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 import clientState from './clientState';
-import DisabledBubblesAlert from './DisabledBubblesAlert';
-import DisabledBubblesModal from './DisabledBubblesModal';
+import DisabledBubblesAlert from './components/DisabledBubblesAlert';
+import DisabledBubblesModal from './components/DisabledBubblesModal';
 import {getHiddenLessons} from './hiddenLessonRedux';
 import {
   initProgress,
@@ -31,6 +31,7 @@ import {renderTeacherPanel} from './teacherPanelHelpers';
 import {setViewType, ViewType} from './viewAsRedux';
 
 var progress = module.exports;
+export default progress;
 
 function showDisabledBubblesModal() {
   const div = $('<div>');
@@ -237,20 +238,31 @@ function extractLevelResults(userProgressResponse) {
  * @param {boolean} scriptData.age_13_required
  * Fetch and store progress for the course overview page.
  */
-progress.initCourseProgress = function (scriptData) {
+progress.initCourseProgress = function (
+  scriptData,
+  shouldRenderTeacherPanel = true
+) {
   const store = getStore();
   initializeStoreWithProgress(store, scriptData, null, true);
-  queryUserProgress(store, scriptData, null);
+  queryUserProgress(store, scriptData, null, shouldRenderTeacherPanel);
 };
 
 /* Set our initial view type (Participant or Instructor) from current user's user_type
  * or our query string. */
 progress.initViewAs = function (store, isSignedInUser, isInstructor) {
+  progress.initViewAsWithoutStore(store.dispatch, isSignedInUser, isInstructor);
+};
+
+progress.initViewAsWithoutStore = function (
+  dispatch,
+  isSignedInUser,
+  isInstructor
+) {
   // Default to Participant, unless current user is a teacher
   let initialViewAs = ViewType.Participant;
   if (isInstructor) {
     initialViewAs = ViewType.Instructor;
-    store.dispatch(setUserRoleInCourse(CourseRoles.Instructor));
+    dispatch(setUserRoleInCourse(CourseRoles.Instructor));
   }
 
   // If current user is signed out or an instructor, allow the
@@ -260,7 +272,7 @@ progress.initViewAs = function (store, isSignedInUser, isInstructor) {
     initialViewAs = query.viewAs || initialViewAs;
   }
 
-  store.dispatch(setViewType(initialViewAs));
+  dispatch(setViewType(initialViewAs));
 };
 
 progress.retrieveProgress = function (scriptName, scriptData, currentLevelId) {
@@ -276,7 +288,12 @@ progress.retrieveProgress = function (scriptName, scriptData, currentLevelId) {
  * as appropriate. If the user is not signed in, level progress data is populated
  * from session storage.
  */
-function queryUserProgress(store, scriptData, currentLevelId) {
+function queryUserProgress(
+  store,
+  scriptData,
+  currentLevelId,
+  shouldRenderTeacherPanel = true
+) {
   const userId = clientState.queryParams('user_id');
   store.dispatch(reduxQueryUserProgress(userId)).then(data => {
     const onOverviewPage = !currentLevelId;
@@ -303,11 +320,12 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       (data.isInstructor || data.teacherViewingStudent) &&
       !data.deeperLearningCourse
     ) {
-      const pageType = currentLevelId
-        ? pageTypes.level
-        : pageTypes.scriptOverview;
-
-      renderTeacherPanel(store, scriptData.id, scriptData.name, pageType);
+      if (shouldRenderTeacherPanel) {
+        const pageType = currentLevelId
+          ? pageTypes.level
+          : pageTypes.scriptOverview;
+        renderTeacherPanel(store, scriptData.id, scriptData.name, pageType);
+      }
     }
   });
 }

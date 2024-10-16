@@ -49,11 +49,15 @@ module OmniauthCallbacksControllerTests
       sign_in_through AuthenticationOption::GOOGLE
     end
 
-    def finish_sign_up(auth_hash, user_type)
-      post '/users', params: finish_sign_up_params(
-        name: auth_hash[:info]&.name,
-        user_type: user_type
+    def finish_sign_up(auth_hash, user_type, new_sign_up = false)
+      complete_params = finish_sign_up_params(
+        {
+          name: auth_hash[:info]&.name,
+          user_type: user_type
+        },
+        new_sign_up
       )
+      post '/users', params: complete_params
     end
 
     # Intentionally fail to finish sign-up by _not_ checking the terms-of-service box
@@ -65,10 +69,11 @@ module OmniauthCallbacksControllerTests
       )
     end
 
-    def finish_sign_up_params(override_params)
+    def finish_sign_up_params(override_params, new_sign_up = false)
       user_type = override_params[:user_type] || User::TYPE_STUDENT
       if user_type == User::TYPE_STUDENT
         {
+          new_sign_up: new_sign_up,
           user: {
             locale: 'en-US',
             user_type: user_type,
@@ -78,12 +83,14 @@ module OmniauthCallbacksControllerTests
             school_info_attributes: {
               country: 'US'
             },
+            email: 'auth_test@code.org',
             terms_of_service_version: 1,
             email_preference_opt_in: nil,
           }.merge(override_params)
         }
       else
         {
+          new_sign_up: new_sign_up,
           user: {
             locale: 'en-US',
             user_type: user_type,
@@ -93,6 +100,7 @@ module OmniauthCallbacksControllerTests
             school_info_attributes: {
               country: 'US'
             },
+            email: 'auth_test@code.org',
             terms_of_service_version: 1,
             email_preference_opt_in: 'yes',
           }.merge(override_params)
@@ -148,11 +156,11 @@ module OmniauthCallbacksControllerTests
     def assert_sign_up_tracking(expected_study_group, expected_events)
       study_requests = @firehose_requests.select {|e| e[1][:study] == SignUpTracking::STUDY_NAME && e[0] == :analysis}
       study_records = study_requests.map {|e| e[1]}
-      study_groups = study_records.map {|e| e[:study_group]}.uniq.compact
-      study_events = study_records.map {|e| e[:event]}
+      study_groups = study_records.pluck(:study_group).uniq.compact
+      study_events = study_records.pluck(:event)
 
       assert(study_records.all? {|record| record[:data_string].present?})
-      assert_equal 1, study_records.map {|r| r[:data_string]}.uniq.count
+      assert_equal 1, study_records.pluck(:data_string).uniq.count
       assert_equal [expected_study_group], study_groups
       assert_equal expected_events, study_events
     end
@@ -160,6 +168,14 @@ module OmniauthCallbacksControllerTests
     def refute_sign_up_tracking
       study_requests = @firehose_requests.select {|e| e[1][:study] == SignUpTracking::STUDY_NAME && e[0] == :analysis}
       assert_empty study_requests
+    end
+
+    # Simulates an omniauth redirect which is done in Javascript
+    def omniauth_redirect
+      post '/users/finish_sign_up', params: {
+        'user[email]': "test@code.org"
+      }
+      assert_template partial: '_finish_sign_up'
     end
   end
 end

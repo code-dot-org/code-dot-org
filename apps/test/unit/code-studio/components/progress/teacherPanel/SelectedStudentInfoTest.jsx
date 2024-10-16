@@ -5,8 +5,6 @@ import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teach
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../../../util/reconfiguredChai';
-
 const LEVEL_WITH_PROGRESS = {
   id: '123',
   assessment: null,
@@ -45,21 +43,21 @@ const setUp = overrideProps => {
 describe('SelectedStudentInfo', () => {
   it('displays name and bubble no matter level type', () => {
     const wrapper = setUp();
-    expect(wrapper.contains('Student 1')).to.equal(true);
-    expect(wrapper.find('ProgressBubble')).to.have.length(1);
+    expect(wrapper.contains('Student 1')).toBe(true);
+    expect(wrapper.find('ProgressBubble')).toHaveLength(1);
   });
 
   // levelWithProgress data is loaded async, this test ensures the component handles missing data
   it('displays student name, gracefully handles missing userLevel', () => {
     const wrapper = setUp({levelsWithProgress: null});
-    expect(wrapper.contains('Student 1')).to.equal(true);
-    expect(wrapper.find('ProgressBubble')).to.have.length(0);
+    expect(wrapper.contains('Student 1')).toBe(true);
+    expect(wrapper.find('ProgressBubble')).toHaveLength(0);
   });
 
   it('displays teacher if selectedUserId is null, gracefully handles missing userLevel', () => {
     const wrapper = setUp({levelsWithProgress: null, selectedUserId: null});
-    expect(wrapper.contains(i18n.studentTableTeacherDemo())).to.equal(true);
-    expect(wrapper.find('ProgressBubble')).to.have.length(0);
+    expect(wrapper.contains(i18n.studentTableTeacherDemo())).toBe(true);
+    expect(wrapper.find('ProgressBubble')).toHaveLength(0);
   });
 
   it('passes expected levelWithProgress to ProgressBubble for selected user', () => {
@@ -73,8 +71,8 @@ describe('SelectedStudentInfo', () => {
       selectedUserId: null,
     });
     const progressBubble = wrapper.find('ProgressBubble');
-    expect(progressBubble).to.have.length(1);
-    expect(progressBubble.props().level.id).to.equal('test');
+    expect(progressBubble).toHaveLength(1);
+    expect(progressBubble.props().level.id).toBe('test');
   });
 
   it('displays time and unsubmit button if submitted level', () => {
@@ -86,8 +84,8 @@ describe('SelectedStudentInfo', () => {
       userId: DEFAULT_SELECTED_USER,
     };
     const wrapper = setUp({levelsWithProgress: [levelWithProgress]});
-    expect(wrapper.contains('Submitted On:')).to.equal(true);
-    expect(wrapper.find('Button')).to.have.length(1);
+    expect(wrapper.contains('Submitted On:')).toBe(true);
+    expect(wrapper.find('Button')).toHaveLength(1);
   });
 
   it('displays time and clear response button if contained level', () => {
@@ -99,7 +97,7 @@ describe('SelectedStudentInfo', () => {
     };
     const wrapper = setUp({levelsWithProgress: [levelWithProgress]});
 
-    expect(wrapper.contains('Last Updated:')).to.equal(true);
+    expect(wrapper.contains('Last Updated:')).toBe(true);
   });
 
   it('displays time if paired', () => {
@@ -114,12 +112,12 @@ describe('SelectedStudentInfo', () => {
       levelsWithProgress: [levelWithProgress],
     });
 
-    expect(wrapper.contains('Last Updated:')).to.equal(true);
+    expect(wrapper.contains('Last Updated:')).toBe(true);
   });
 
   it('does not display SelectedStudentPairing if not paired', () => {
     const wrapper = setUp();
-    expect(wrapper.find('SelectedStudentPairing')).to.have.length(0);
+    expect(wrapper.find('SelectedStudentPairing')).toHaveLength(0);
   });
 
   it('displays SelectedStudentPairing if paired', () => {
@@ -130,6 +128,6 @@ describe('SelectedStudentInfo', () => {
       userId: DEFAULT_SELECTED_USER,
     };
     const wrapper = setUp({levelsWithProgress: [levelWithProgress]});
-    expect(wrapper.find('SelectedStudentPairing')).to.have.length(1);
+    expect(wrapper.find('SelectedStudentPairing')).toHaveLength(1);
   });
 });

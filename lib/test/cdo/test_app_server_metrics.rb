@@ -7,7 +7,7 @@ class AppServerMetricsTest < Minitest::Test
   SOCKET_LISTENER = '/tmp/sock'.freeze
 
   def app
-    ok = ->(_) do
+    ok = lambda do |_|
       @app.collect_metrics
       [200, {'Content-Type' => 'text/plain'}, ['OK']]
     end

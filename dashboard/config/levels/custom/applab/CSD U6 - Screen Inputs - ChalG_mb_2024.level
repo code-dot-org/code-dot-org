@@ -75,7 +75,6 @@
     "makerlab_enabled": "circuitPlayground",
     "long_instructions": "# Order Form App\r\n\r\nCreate an app prototype that could be used to order a product from a store, such as ordering groceries online or ordering school supplies from a local business. The app can use dropdowns and sliders to let the user select what they would like to order, and show a confirmation screen when the order is complete.\r\n\r\nYou may not be able to create the \"perfect\" app yet, but you can develop a **prototype** which shows the general idea of the app and some of the basic features behind how it could work.",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

@@ -50,7 +50,6 @@
     "makerlab_enabled": "false",
     "long_instructions": "<img src=\"https://images.code.org/a07b3130a5effc22efdd36a3400c8b7b-image-1634321815292.PNG\" style=\"float:right; height: 400px; margin: 10px;\" />\r\n\r\n# Recreate an App Using Code\r\n\r\nWithout using Design Mode and only using [`setProperty()`(#fff176)](/docs/applab/setProperty/) blocks, recreate the app on the right.\r\n\r\n## Additional Information\r\n\r\n* The image of Hedy Lamarr is from Pixabay. You can use this link in your code: `https://cdn.pixabay.com/photo/2013/07/13/09/36/hedy-lamarr-155765_960_720.png`\r\n* You can change the color of the icons using the `icon-color` property\r\n* The color of the background is `gold`",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

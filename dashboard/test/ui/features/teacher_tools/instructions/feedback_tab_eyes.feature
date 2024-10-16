@@ -13,7 +13,7 @@ Feature: Feedback Tab Visibility
   Scenario: As student 'Feedback' tab is the 'Key Concept' tab if no feedback
     When I open my eyes to test "student with no feedback"
     And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     Then I see no difference for "student with no feedback tab"
     Then I sign out
     And I close my eyes
@@ -29,7 +29,7 @@ Feature: Feedback Tab Visibility
     And I give user "Teacher_Lillian" authorized teacher permission
 
     And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     Then I see no difference for "teacher rubric feedback tab"
 
   #As teacher, reviewing work, submit feedback
@@ -37,7 +37,7 @@ Feature: Feedback Tab Visibility
     Then I click selector ".show-handle .fa-chevron-left"
     And I wait until element ".student-table" is visible
     And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     Then I see no difference for "teacher giving feedback tab load"
 
     And I wait to see "#rubric-input-performanceLevel1"
@@ -53,7 +53,7 @@ Feature: Feedback Tab Visibility
 
   #As teacher, refresh page and latest feedback is visible
     And I reload the page
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     Then I see no difference for "teacher gave feedback"
 
   #As student, latest feedback from teacher is displayed

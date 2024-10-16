@@ -18,7 +18,7 @@ describe I18n::Resources::Pegasus::Mobile::SyncUp do
 
     let(:expected_source_files) do
       [
-        CDO.dir('i18n/locales/source/pegasus/mobile.yml'),
+        CDO.dir('i18n/locales/source/pegasus/mobile.json'),
       ]
     end
 

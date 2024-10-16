@@ -36,8 +36,12 @@
 # infrastructure #
 ##################
 
-/.github/                   @code-dot-org/infrastructure
-/aws/                       @code-dot-org/infrastructure
-/cookbooks/                 @code-dot-org/infrastructure
-.drone.yml                  @code-dot-org/infrastructure
-.ruby-version               @code-dot-org/infrastructure
+# Must approve changes to:
+/.github/                       @code-dot-org/infrastructure
+/aws/                           @code-dot-org/infrastructure
+/cookbooks/                     @code-dot-org/infrastructure
+/docker/continuous-integration/ @code-dot-org/infrastructure
+.ruby-version                   @code-dot-org/infrastructure
+
+# May have feedback on:
+.drone.yml                      @code-dot-org/infrastructure

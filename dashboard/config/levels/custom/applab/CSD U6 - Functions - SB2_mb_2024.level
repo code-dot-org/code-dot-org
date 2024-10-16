@@ -54,7 +54,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "# Creating Functions\r\n\r\nIn this app, some new aliens have appeared that are red and blue! When the user clicks on an alien, the LEDs should turn on to match the mood of these new aliens.\r\n\r\n- **Red** aliens are **happy**.\r\n- **Blue** aliens are **sad**.\r\n\r\nThe red aliens have already been completed, but the blue aliens still need to be finished. You'll need to **define** a function called `sadImage`, then **call** the function inside each event.\r\n\r\n## Do This\r\n**1) Defining Our Function**:\r\n\r\n- At the bottom of the code, add a new [`function myFunction() {}`(#68D995)](/docs/applab/functionParams_none/) block [**(Show Me Where)**](#triggercallout=define).\r\n- Name the function `sadImage`. Add a [`ledScreen.display()`(#f78183)](/docs/ide/applab/expressions/ledScreen.display) block to create a sad face.\r\n  - You can use the `happyImage` display block as a reference\r\n\r\n**2) Calling Our Function**:\r\n\r\n- At the top of the code, find the [`onEvent()`(#fff176)](/docs/applab/onEvent/) blocks for the two blue aliens [**(Show Me Where)**](#triggercallout=call).\r\n- Add a [`myFunction()`(#68D995)](/docs/applab/callMyFunction/) block to each event. Change the function mame to `sadImage`.\r\n\r\n**Run your code!** When you click an aliens, the lights should match the mood of the aliens!",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

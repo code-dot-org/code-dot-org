@@ -1,13 +1,19 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+
+import {RootState} from '@cdo/apps/types/redux';
+import {ValueOf} from '@cdo/apps/types/utils';
+
 import {
+  BlockMode,
   DEFAULT_BPM,
   DEFAULT_KEY,
   MAX_BPM,
   MIN_BPM,
   MIN_NUM_MEASURES,
 } from '../constants';
-import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {FunctionEvents} from '../player/interfaces/FunctionEvents';
+import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
+import {MusicLevelData} from '../types';
 import {Key} from '../utils/Notes';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
@@ -23,8 +29,6 @@ export enum InstructionsPosition {
 }
 
 export interface MusicState {
-  /** Current music library name */
-  libraryName: string | null;
   /** Current pack ID, if a specific restricted pack from the current music library is selected */
   packId: string | null;
   /** If the song is currently playing */
@@ -76,7 +80,6 @@ export interface MusicState {
 }
 
 const initialState: MusicState = {
-  libraryName: null,
   packId: null,
   isPlaying: false,
   currentPlayheadPosition: 0,
@@ -112,9 +115,6 @@ const musicSlice = createSlice({
   name: 'music',
   initialState,
   reducers: {
-    setLibraryName: (state, action: PayloadAction<string>) => {
-      state.libraryName = action.payload;
-    },
     setPackId: (state, action: PayloadAction<string>) => {
       state.packId = action.payload;
     },
@@ -293,6 +293,15 @@ export const getCurrentlyPlayingBlockIds = (state: {
   return playingBlockIds;
 };
 
+export const getBlockMode = (state: RootState): ValueOf<typeof BlockMode> => {
+  const {initialSources, levelProperties} = state.lab;
+  return (
+    (initialSources?.labConfig?.music.blockMode as ValueOf<typeof BlockMode>) ||
+    (levelProperties?.levelData as MusicLevelData | undefined)?.blockMode ||
+    BlockMode.SIMPLE2
+  );
+};
+
 // TODO: If/when a top-level component is created that wraps {@link MusicView}, then
 // registering reducers should happen there. We are registering reducers here for now
 // because MusicView is currently the top-level entrypoint into Music Lab and also needs
@@ -300,7 +309,6 @@ export const getCurrentlyPlayingBlockIds = (state: {
 registerReducers({music: musicSlice.reducer});
 
 export const {
-  setLibraryName,
   setPackId,
   setIsPlaying,
   setCurrentPlayheadPosition,

@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">یو تعقیبي، ځان ګړندی کورس واخلئ</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">یوه لوبه یا اپلیکیشن جوړ کړئ</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">د کمپیوټر پرته CS هڅه وکړئ ('غیر پلګ شوي' او ګرځنده اختیارونه)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">د Code.org ټیم او ځانګړي میلمنو څخه CS زده کړئ</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">هیلو روبي</a> - د کمپیوټر، ټیکنالوژۍ او برنامو په اړه د زده کړې لپاره د نړۍ ترټولو زړه پورې لاره. د CS موضوعاتو په لړ کې فعالیتونه، لکه د ستونزې تحلیل کولو وړتیا، د ځای نمونې، په الګوریتمیک ډول فکر وکړئ، ستونزې ډبګ کړئ او یوځای کار وکړئ. (د 4-10 کلونو لپاره)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - د وړیا تدریسي موادو ټولګه چې د ښکیلو لوبو او پزلونو له لارې د کمپیوټر ساینس درس ورکوي چې کارتونه، تار، کریون او شاوخوا شاوخوا شاوخوا ګرځي. (د 5-14 کلونو لپاره)</li>
 </ul>
-
-<h2>په کور کې کمپیوټر نشته؟ زموږ د ملګرو څخه د دې غوښتنلیکونو سره په خپل تلیفون کې CS هڅه وکړئ</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="بکس ټاپو"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">د بکس ټاپو</h3></a>یوه زړه راښکونکې ګرځنده کوډینګ لوبه چې زده کونکي په زړه پورې ساہسک کې اخلي، پداسې حال کې چې د کوډ کولو اساسات درس ورکوي، لکه الګوریتمونه، د نمونې پیژندنه، ترتیبونه، لوپونه او شرایط. <i>(د ټولو عمرونو لپاره)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="کوډپارک"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">د کوډسپارک</h3></a>جایزه ګټونکي زده کړې تر کوډ پلیټ فارم د 5-9 کلونو ماشومانو لپاره. پزلونه حل کړئ او د Foos سره لوبې رامینځته کړئ پداسې حال کې چې کوډ کول زده کوي. <strong>یادونه: کوډپارک د 3 میاشتو وړیا آزموینه وړاندیز کوي. د والدین بریښنالیک آدرس او د کریډیټ کارت معلومات په لاسلیک کې اړین دي.</strong> <i>(د 5 درجې له لارې دمخه لوستونکو لپاره)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[بېرته سر ته]</a></p>
-
-<a id="livecoding"></a>
-<h2>د Code.org ټیم او ځانګړي میلمنو څخه زده کړئ!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="کوډبایټس لوگو">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes د هضم لپاره اسانه دي، 20 دقیقې متقابل درسونه د کمپیوټر ساینس د ریښتیني نړۍ موضوعاتو سره ترکیب کوي. د اشارې ژبې لوستلو لپاره AI روزنه ورکړئ، د ښه لپاره اپلیکیشن ډیزاین کړئ، د ماین کرافټ نړۍ وپلټئ، او نور ډیر څه!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>قسطونه وګورئ</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="کوډ ماتول">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">د کوډ بریک د کوډ بریک په نیولو سره د کمپیوټر ساینس ساتیري</h3>
-        <div class="smalltext" style="">وساتئ! تاسو کولی شئ د اشټن کوچر سره سایفر رامینځته کړئ، د یارا شهیدي سره د متغیرونو په اړه زده کړئ، او حتی وپلټئ چې انټرنیټ د انټرنیټ اصلي اختراع کونکي، وینټ سرف سره څنګه کار کوي!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>وصل شئ</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

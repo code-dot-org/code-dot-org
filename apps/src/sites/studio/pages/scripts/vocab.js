@@ -1,9 +1,10 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import UnitRollup from '@cdo/apps/templates/courseRollupPages/UnitRollup';
 import {Provider} from 'react-redux';
+
 import {getStore} from '@cdo/apps/code-studio/redux';
+import UnitRollup from '@cdo/apps/templates/courseRollupPages/UnitRollup';
 
 $(document).ready(initPage);
 

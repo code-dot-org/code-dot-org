@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import DCDO from '@cdo/apps/dcdo';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {getFullName} from '@cdo/apps/templates/manageStudents/utils.ts';
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import {
   collapseMetadataForStudents,
   expandMetadataForStudents,
@@ -17,7 +17,7 @@ import {
 import SortByNameDropdown from '../SortByNameDropdown';
 
 import styles from './progress-table-v2.module.scss';
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 const SECTION_PROGRESS_V2 = 'SectionProgressV2';
 
@@ -43,23 +43,6 @@ function StudentColumn({
   expandMetadataForStudents,
   collapseMetadataForStudents,
 }) {
-  const expandedMetadataEnabled = React.useMemo(
-    () => DCDO.get('progress-v2-metadata-enabled', false),
-    []
-  );
-
-  const getFullName = student =>
-    student.familyName ? `${student.name} ${student.familyName}` : student.name;
-
-  const getUnexpandableRow = (student, ind) => (
-    <div
-      className={classNames(styles.gridBox, styles.gridBoxStudent)}
-      key={ind}
-    >
-      {getFullName(student)}
-    </div>
-  );
-
   const collapseRow = studentId => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ONE_ROW_COLLAPSED, {
       sectionId: sectionId,
@@ -81,6 +64,7 @@ function StudentColumn({
       onClick={() => expandRow(student.id)}
       type="button"
       aria-expanded={false}
+      id={'ui-test-student-row-unexpanded-' + getFullName(student)}
     >
       <FontAwesome
         icon="caret-right"
@@ -98,6 +82,7 @@ function StudentColumn({
         onClick={() => collapseRow(student.id)}
         type="button"
         aria-expanded={true}
+        id={'ui-test-student-row-expanded-' + getFullName(student)}
       >
         <FontAwesome
           icon="caret-down"
@@ -127,10 +112,6 @@ function StudentColumn({
   const studentColumnBox = (student, ind) => {
     if (isSkeleton) {
       return skeletonCell(ind);
-    }
-
-    if (!expandedMetadataEnabled) {
-      return getUnexpandableRow(student, ind);
     }
 
     if (expandedMetadataStudentIds.includes(student.id)) {

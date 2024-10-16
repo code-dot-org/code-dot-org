@@ -1,17 +1,20 @@
 - @page_title = I18n.t('teacher.dashboard')
 
+%link{href: asset_path('css/scripts.css'), rel: 'stylesheet', type: 'text/css'}
+%link{href: asset_path('css/courses.css'), rel: 'stylesheet', type: 'text/css'}
+
 :ruby
   teacher_dashboard_data = {}
   teacher_dashboard_data[:studioUrlPrefix] = CDO.studio_url('', CDO.default_scheme)
   teacher_dashboard_data[:sections] = @sections
   teacher_dashboard_data[:section] = @section_summary
-  teacher_dashboard_data[:coursesWithProgress] = CourseVersion.courses_for_unit_selector(@section.participant_unit_ids)
   teacher_dashboard_data[:currentUserId] = @current_user.id
   teacher_dashboard_data[:hasSeenStandardsReportInfo] = @current_user.has_seen_standards_report_info_dialog || false
   teacher_dashboard_data[:userName] = @current_user.short_name
   teacher_dashboard_data[:localeCode] = request.locale
-  teacher_dashboard_data[:showLockSectionField] = DCDO.get('show_lock_section_field', true)
   teacher_dashboard_data[:canViewStudentAIChatMessages] = @current_user.can_view_student_ai_chat_messages?
+
+= render partial: 'shared/emulate_print_media'
 
 %script{src: webpack_asset_path('js/teacher_dashboard/show.js'), data: {dashboard: teacher_dashboard_data.to_json}}
 

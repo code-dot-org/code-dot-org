@@ -1,7 +1,7 @@
 #about_nav
   %span.about_list
     -current_url = request.path_info
-    -{'Overview'=> '/hourofcode/overview','MINECRAFT Hour of Code'=>'/hourofcode/mc','Star Wars: Build a Galaxy with Code'=>'/hourofcode/starwars','Code with Anna and Elsa'=>'/hourofcode/frozen','Classic Maze'=>'/hourofcode/hourofcode', 'Flappy Code'=>'/hourofcode/flappy','Infinity Play Lab'=>'/hourofcode/infinity','Play Lab'=>'/hourofcode/playlab','Artist'=>'/hourofcode/artist','Conditionals: Unplugged'=>'/hourofcode/unplugged-conditionals-with-cards','Back to all tutorials'=>'/learn'}.each_pair do |label,url|
+    -{'Overview'=> '/hourofcode/overview','MINECRAFT Hour of Code'=>'/hourofcode/mc','Star Wars: Build a Galaxy with Code'=>'/hourofcode/starwars','Code with Anna and Elsa'=>'/hourofcode/frozen','Classic Maze'=>'/hourofcode/hourofcode', 'Flappy Code'=>'/hourofcode/flappy','Infinity Play Lab'=>'/hourofcode/infinity','Artist'=>'/hourofcode/artist','Conditionals: Unplugged'=>'/hourofcode/unplugged-conditionals-with-cards','Back to all tutorials'=>'/learn'}.each_pair do |label,url|
       - if current_url == url
         %span.about_list_item_selected= label
       -else

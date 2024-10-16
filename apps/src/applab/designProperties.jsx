@@ -29,6 +29,7 @@ export default class DesignProperties extends React.Component {
     onDelete: PropTypes.func.isRequired,
     onInsertEvent: PropTypes.func.isRequired,
     screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+    isRtl: PropTypes.bool.isRequired,
   };
 
   state = {selectedTab: TabType.PROPERTIES};
@@ -230,7 +231,7 @@ export default class DesignProperties extends React.Component {
                seen to be two completely different tables. Otherwise the defaultValues
                in inputs don't update correctly. */}
             <div key={key}>
-              <div style={{float: 'right'}}>
+              <div style={{float: this.props.isRtl ? 'left' : 'right'}}>
                 {!isOnlyScreen && (
                   <DeleteElementButton
                     shouldConfirm={isScreen}

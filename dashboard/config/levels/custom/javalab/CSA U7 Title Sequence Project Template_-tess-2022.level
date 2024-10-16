@@ -20,7 +20,8 @@
         "isVisible": true
       }
     },
-    "name_suffix": "_-tess-2022"
+    "name_suffix": "_-tess-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-03-30T21:29:46.960+00:00\",\"changed\":[\"cloned from \\\"CSA U7 Title Sequence Project Template\\\"\"],\"cloned_from\":\"CSA U7 Title Sequence Project Template\"}]"

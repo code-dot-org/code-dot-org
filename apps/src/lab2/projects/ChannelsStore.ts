@@ -15,7 +15,7 @@ export interface ChannelsStore {
     levelId: number,
     scriptId?: number,
     scriptLevelId?: string,
-    userId?: string
+    userId?: number
   ) => Promise<Response>;
 
   save: (channel: Channel) => Promise<Response>;
@@ -77,7 +77,7 @@ export class RemoteChannelsStore implements ChannelsStore {
     levelId: number,
     scriptId?: number,
     scriptLevelId?: string,
-    userId?: string
+    userId?: number
   ) {
     return projectsApi.getChannelForLevel(
       levelId,

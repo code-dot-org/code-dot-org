@@ -126,7 +126,6 @@ Code.orgのすべてのコンテンツを最大限に活用するため、学校
 | **インターネット シミュレーターを使うには**                                       | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **ウェブ ラボを使うには**                                                | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Google Classroom共有ボタンを使うには**                                 | `https://apis.google.com`                                                                                  |
-| **App Lab データセットを使用するには**                                      | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## モバイルデバイスおよびタブレットのサポート詳細
 

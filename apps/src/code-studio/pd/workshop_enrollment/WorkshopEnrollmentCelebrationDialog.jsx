@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
+import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import i18n from '@cdo/locale';
 
 import style from '@cdo/apps/code-studio/pd/professional_learning_landing/landingPage.module.scss';

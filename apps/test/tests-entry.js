@@ -5,8 +5,8 @@
 
 import '@babel/polyfill/noConflict';
 import 'whatwg-fetch';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import enzyme from 'enzyme'; // eslint-disable-line no-restricted-imports
-import Adapter from 'enzyme-adapter-react-16';
 
 import {clearTimeoutsBetweenTests} from './util/clearTimeoutsBetweenTests';
 import KARMA_CLI_FLAGS from './util/KARMA_CLI_FLAGS';

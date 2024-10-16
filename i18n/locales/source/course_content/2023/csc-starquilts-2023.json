@@ -6,15 +6,57 @@
   },
   "https://studio.code.org/s/csc-starquilts-2023/lessons/2/levels/2": {
     "short_instructions": "Code the artist to draw a rhombus stamp with your choice of color. ",
-    "long_instructions": "<div style=\"float:right;padding:20px\">\n<img src=\"https://images.code.org/06a8b602b8991cbbc8f0bd416a71340e-image-1681764440052.47.11 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\n<p style=\"text-align: center\">\nexample\n</p>\n</div>\n\n**Use a rhombus stamp**\n\n-   Drag the <code style=\"color:black; background-color:#5ED5DD\">draw shape</code> block and snap it under the <code style=\"color:black; background-color:#FFBD46\">when run</code> block.\n-   Use the drop down menu to select a rhombus color.\n-   Click run to test your code and then click finish to move on to the next level."
+    "long_instructions": "<div style=\"float:right;padding:20px\">\n<img src=\"https://images.code.org/06a8b602b8991cbbc8f0bd416a71340e-image-1681764440052.47.11 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\n<p style=\"text-align: center\">\nexample\n</p>\n</div>\n\n**Use a rhombus stamp**\n\n-   Drag the <code style=\"color:black; background-color:#5ED5DD\">draw shape</code> block and snap it under the <code style=\"color:black; background-color:#FFBD46\">when run</code> block.\n-   Use the drop down menu to select a rhombus color.\n-   Click run to test your code and then click finish to move on to the next level.",
+    "function_definitions": {
+      "rowTwo": {
+        "name": "rowTwo"
+      },
+      "rowTwo2": {
+        "name": "rowTwo2"
+      },
+      "rowTwo3": {
+        "name": "rowTwo3"
+      },
+      "findPosition": {
+        "name": "findPosition"
+      }
+    }
   },
   "https://studio.code.org/s/csc-starquilts-2023/lessons/2/levels/3": {
     "short_instructions": "Code the artist to place another rhombus shape to the right of the existing one, making sure to use the correct angle measurement.",
-    "long_instructions": "**Place another rhombus shape next to the existing one.**\n\n<div style=\"float:right;padding:20px\">\n<img src=\"https://images.code.org/e4dfaffd86ff224e99402ad8960d916f-image-1681764629926.49.16 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\n<p style=\"text-align: center\">\nexample\n</p>\n</div>\n\n-   Use the <code style=\"color:black; background-color:#5ED5DD\">turn right by</code> block to get in the correct position for the next rhombus\n-   Use the drop down menu to select the correct angle measurement\n-   Then, use a <code style=\"color:black; background-color:#5ED5DD\">draw shape</code> block to create your next rhombus"
+    "long_instructions": "**Place another rhombus shape next to the existing one.**\n\n<div style=\"float:right;padding:20px\">\n<img src=\"https://images.code.org/e4dfaffd86ff224e99402ad8960d916f-image-1681764629926.49.16 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\n<p style=\"text-align: center\">\nexample\n</p>\n</div>\n\n-   Use the <code style=\"color:black; background-color:#5ED5DD\">turn right by</code> block to get in the correct position for the next rhombus\n-   Use the drop down menu to select the correct angle measurement\n-   Then, use a <code style=\"color:black; background-color:#5ED5DD\">draw shape</code> block to create your next rhombus",
+    "function_definitions": {
+      "rowTwo": {
+        "name": "rowTwo"
+      },
+      "rowTwo2": {
+        "name": "rowTwo2"
+      },
+      "rowTwo3": {
+        "name": "rowTwo3"
+      },
+      "findPosition": {
+        "name": "findPosition"
+      }
+    }
   },
   "https://studio.code.org/s/csc-starquilts-2023/lessons/2/levels/4": {
     "short_instructions": "Code the artist to repeat the pattern to create a 6-point star.",
-    "long_instructions": "**Repeat this pattern to create a 6 point star.**\n\n<div style=\"float:right;padding:20px\">\n<img src=\"https://images.code.org/6a511e7bc29e77fe57c52c3763a6ece7-image-1681764668704.50.11 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\n<p style=\"text-align: center\">\nexample\n</p>\n</div>\n\n-   Use the <code style=\"color:black; background-color:#5ED5DD\">turn right by</code> block to get in the correct position for the next rhombus\n-   Use the drop down menu to select the correct angle measurement\n-   Then, use a <code style=\"color:black; background-color:#5ED5DD\">draw shape</code> block to create your next rhombus\n-   Repeat until you have a 6-point star"
+    "long_instructions": "**Repeat this pattern to create a 6 point star.**\n\n<div style=\"float:right;padding:20px\">\n<img src=\"https://images.code.org/6a511e7bc29e77fe57c52c3763a6ece7-image-1681764668704.50.11 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\n<p style=\"text-align: center\">\nexample\n</p>\n</div>\n\n-   Use the <code style=\"color:black; background-color:#5ED5DD\">turn right by</code> block to get in the correct position for the next rhombus\n-   Use the drop down menu to select the correct angle measurement\n-   Then, use a <code style=\"color:black; background-color:#5ED5DD\">draw shape</code> block to create your next rhombus\n-   Repeat until you have a 6-point star",
+    "function_definitions": {
+      "rowTwo": {
+        "name": "rowTwo"
+      },
+      "rowTwo2": {
+        "name": "rowTwo2"
+      },
+      "rowTwo3": {
+        "name": "rowTwo3"
+      },
+      "findPosition": {
+        "name": "findPosition"
+      }
+    }
   },
   "https://studio.code.org/s/csc-starquilts-2023/lessons/2/levels/6": {
     "short_instructions": "Experiment with the turn block in your code to create a 4-point star.",
@@ -23,6 +65,11 @@
       "hint1": "This is the chunk of code that repeats: \n[blockly block][0]",
       "hint2": "Put the chunk of code into a loop block: \n\n[blockly block][0]",
       "hint3": "How many times does the pattern repeat? \n4 times. \n\nPut the number 4 in the number field of the loop block. \n\n[blockly block][0]"
+    },
+    "function_definitions": {
+      "startBorder": {
+        "name": "startBorder"
+      }
     }
   },
   "https://studio.code.org/s/csc-starquilts-2023/lessons/2/levels/7": {
@@ -75,6 +122,32 @@
       "New Artist Project_callout1": "Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program",
       "New Artist Project_callout2": "Hit \"Run\" to save and run your program",
       "sign_in_to_save_project": "Want to access your project later? Sign in to save this project to your account!"
+    },
+    "function_definitions": {
+      "rowTwo": {
+        "name": "rowTwo"
+      },
+      "rowTwo2": {
+        "name": "rowTwo2"
+      },
+      "rowTwo3": {
+        "name": "rowTwo3"
+      },
+      "findPosition": {
+        "name": "findPosition"
+      },
+      "diagonalLeft": {
+        "name": "diagonalLeft"
+      },
+      "diagonalRight": {
+        "name": "diagonalRight"
+      },
+      "bumpLeft": {
+        "name": "bumpLeft"
+      },
+      "bumpRight": {
+        "name": "bumpRight"
+      }
     }
   },
   "https://studio.code.org/s/csc-starquilts-2023/lessons/3/levels/4": {
@@ -87,6 +160,20 @@
       "New Artist Project_callout1": "Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program",
       "New Artist Project_callout2": "Hit \"Run\" to save and run your program",
       "sign_in_to_save_project": "Want to access your project later? Sign in to save this project to your account!"
+    },
+    "function_definitions": {
+      "diagonalLeft": {
+        "name": "diagonalLeft"
+      },
+      "diagonalRight": {
+        "name": "diagonalRight"
+      },
+      "bumpLeft": {
+        "name": "bumpLeft"
+      },
+      "bumpRight": {
+        "name": "bumpRight"
+      }
     }
   },
   "https://studio.code.org/s/csc-starquilts-2023/lessons/3/levels/5": {
@@ -99,6 +186,20 @@
       "New Artist Project_callout1": "Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program",
       "New Artist Project_callout2": "Hit \"Run\" to save and run your program",
       "sign_in_to_save_project": "Want to access your project later? Sign in to save this project to your account!"
+    },
+    "function_definitions": {
+      "diagonalLeft": {
+        "name": "diagonalLeft"
+      },
+      "diagonalRight": {
+        "name": "diagonalRight"
+      },
+      "bumpLeft": {
+        "name": "bumpLeft"
+      },
+      "bumpRight": {
+        "name": "bumpRight"
+      }
     }
   },
   "https://studio.code.org/s/csc-starquilts-2023/lessons/3/levels/6": {
@@ -111,6 +212,20 @@
       "New Artist Project_callout1": "Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program",
       "New Artist Project_callout2": "Hit \"Run\" to save and run your program",
       "sign_in_to_save_project": "Want to access your project later? Sign in to save this project to your account!"
+    },
+    "function_definitions": {
+      "diagonalLeft": {
+        "name": "diagonalLeft"
+      },
+      "diagonalRight": {
+        "name": "diagonalRight"
+      },
+      "bumpLeft": {
+        "name": "bumpLeft"
+      },
+      "bumpRight": {
+        "name": "bumpRight"
+      }
     }
   },
   "https://studio.code.org/s/csc-starquilts-2023/lessons/3/levels/8": {
@@ -123,6 +238,20 @@
       "New Artist Project_callout1": "Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program",
       "New Artist Project_callout2": "Hit \"Run\" to save and run your program",
       "sign_in_to_save_project": "Want to access your project later? Sign in to save this project to your account!"
+    },
+    "function_definitions": {
+      "diagonalLeft": {
+        "name": "diagonalLeft"
+      },
+      "diagonalRight": {
+        "name": "diagonalRight"
+      },
+      "bumpLeft": {
+        "name": "bumpLeft"
+      },
+      "bumpRight": {
+        "name": "bumpRight"
+      }
     }
   },
   "https://studio.code.org/s/csc-starquilts-2023/lessons/3/levels/9": {
@@ -132,6 +261,32 @@
       "New Artist Project_callout1": "Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program",
       "New Artist Project_callout2": "Hit \"Run\" to save and run your program",
       "sign_in_to_save_project": "Want to access your project later? Sign in to save this project to your account!"
+    },
+    "function_definitions": {
+      "rowTwo": {
+        "name": "rowTwo"
+      },
+      "rowThree": {
+        "name": "rowThree"
+      },
+      "diagonal left": {
+        "name": "diagonal left"
+      },
+      "rowFour": {
+        "name": "rowFour"
+      },
+      "rowFive": {
+        "name": "rowFive"
+      },
+      "diagonal right": {
+        "name": "diagonal right"
+      },
+      "findPosition": {
+        "name": "findPosition"
+      },
+      "bump left": {
+        "name": "bump left"
+      }
     }
   }
 }

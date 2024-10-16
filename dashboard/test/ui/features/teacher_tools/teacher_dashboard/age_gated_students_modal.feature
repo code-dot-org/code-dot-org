@@ -9,12 +9,12 @@ Feature: Age Gated Students Modal and Banner
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
 
-    # Click on Age Gated Banner Learn More button to view Age Gated Students Modal
+    # Click on Age Gated Banner Students button to view Age Gated Students Modal
     When I open my eyes to test "Age Gated Students Banner and Modal"
     And I wait until element "#uitest-age-gated-banner" is visible
     Then I see no difference for "age gated students banner"
 
-    And I click selector "a:contains(Learn more)"
+    And I click selector "a:contains(Students)"
     And I wait until element "#uitest-age-gated-students-modal" is visible
     Then I see no difference for "age gated students modal"
     And I close my eyes
@@ -37,11 +37,12 @@ Feature: Age Gated Students Modal and Banner
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
+    And I wait until element "h3" contains text "It's a bit empty here..."
 
-    # Click on Age Gated Banner Learn More button to view Age Gated Students Modal
+    # Click on Age Gated Banner Students button to view Age Gated Students Modal
     And I wait until element "#uitest-age-gated-banner" is visible
-    And I click selector "a:contains(Learn more)"
+    And I click selector "a:contains(Students)"
     And I wait until element "#uitest-age-gated-students-modal" is visible
     And I wait until element "div:contains(Sally)" is visible
     And I click selector "button:contains(Close)"
-    And I wait until element "#uitest-age-gated-students-modal" is not visible 
+    And I wait until element "#uitest-age-gated-students-modal" is not visible

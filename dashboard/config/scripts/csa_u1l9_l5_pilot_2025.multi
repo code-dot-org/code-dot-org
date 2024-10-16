@@ -1,0 +1,35 @@
+name 'CSA U1L9-L5_pilot-2025'
+title 'Check for Understanding'
+
+wrong 'I only'
+right 'II only'
+wrong 'III only'
+wrong 'II and III'
+wrong 'I, II, and III'
+markdown <<MARKDOWN
+What line of code should replace `/* missing code */` so that the code compiles?
+
+```
+Painter jes = new Painter();
+
+if ( /* missing condition */ ) {
+   jes.move();
+}
+```
+
+I. `canMove()`
+
+II. `jes.canMove()`
+
+III. `canMove(jes)`
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The syntax for calling a method is:
+
+```
+nameOfObject.nameOfMethod()
+```
+MARKDOWN
+
+allow_multiple_attempts true

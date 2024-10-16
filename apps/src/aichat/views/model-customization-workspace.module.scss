@@ -2,10 +2,32 @@
 @import '../../mixins.scss';
 @import './aichat-common.module.scss';
 
-%full-width,
-.full-width {
+// Constants
+$default-spacing: 4px;
+
+%full-width {
   width: 100%;
   box-sizing: border-box;
+}
+
+@mixin slider-track {
+  width: 100%;
+  height: 4px;
+  background: $light_gray_700;
+  border-radius: 0.1rem;
+}
+
+@mixin slider-thumb {
+  width: 12px;
+  height: 12px;
+  background: $white;
+  border-radius: 50%;
+  border: 1px solid $light_gray_700;
+}
+
+@mixin disabled-slider-thumb {
+  background: $light_gray_200;
+  border: none;
 }
 
 .modelCustomizationWorkspace {
@@ -18,6 +40,7 @@
 
   .tabsContainer {
     background-color: #eaebeb;
+    padding: $default-spacing $default-spacing 0 $default-spacing;
   }
 
   .tabPanels {
@@ -30,6 +53,10 @@
     }
   }
 
+  .systemPromptInput {
+    height: 240px;
+  }
+
   textarea {
     @extend %full-width;
     height: 120px;
@@ -38,6 +65,10 @@
     margin: 0;
     border-radius: 4px;
     border-color: $light_black;
+  }
+
+  .temperatureSlider {
+    @extend %full-width;
   }
 
   input {
@@ -74,17 +105,19 @@
   justify-content: center;
   align-items: center;
   border-top: 1px solid $light_gray_200;
-  padding: 10px 26px;
+  padding: 10px 7px;
 }
 
 .selectedModelDropdown {
   @extend %full-width;
   padding-bottom: 10px;
+  display: inline-block;
 }
 
 .updateButton {
   width: 100%;
-  margin: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .buttonNoMargin {
@@ -105,4 +138,61 @@
 
 .fieldLabel {
   margin: 0;
+}
+
+.saveAlertContainer {
+  height: 10px;
+}
+
+.saveAlert {
+  margin-left: 4px;
+  height: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: white;
+}
+
+/* Used in MultiInputCustomization */
+
+.itemContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  border-radius: 4px;
+  border: 1px solid;
+  color: $light_gray_500;
+  border-color: $neutral_dark20;
+
+  span {
+    padding: 6px 12px;
+  }
+}
+
+.removeItemIcon {
+  color: $light_gray_500;
+  margin: 6px;
+
+  &:hover {
+    color: $light_negative_500;
+  }
+}
+
+.removeItemButton {
+  @include remove-button-styles;
+}
+
+.addItemContainer {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.addedItemsHeaderContainer {
+  border-bottom: 1px solid $light_gray_200;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.examplePromptAlert {
+  padding: 0;
+  background-color: white;
 }

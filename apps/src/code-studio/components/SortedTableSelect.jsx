@@ -4,7 +4,7 @@ import React from 'react';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import {Heading1} from '@cdo/apps/lib/ui/Headings';
+import {Heading1} from '@cdo/apps/legacySharedComponents/Headings';
 import {
   tableLayoutStyles,
   sortableOptions,

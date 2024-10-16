@@ -1,0 +1,53 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-10-07T22:05:47.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "name_suffix": "_1",
+    "panels": [
+      {
+        "text": "Great job! You just wrote your first lines of code.\n",
+        "imageUrl": "https://images.code.org/b77a97a0a741d62d79e8bcdf6291e360-Code.jpg",
+        "key": "music_ai_panels_playtogether_3-fa7e7e9c-4ae6-45a7-8248-bef386648cff",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "I work together with coders to build cool products. I’m the product manager.",
+        "imageUrl": "https://images.code.org/ae51290ff3510701802fe31cc7dc1803-Screen Shot 2024-10-01 at 9.02.44 PM.png",
+        "key": "music_ai_panels_playtogether_3-b01a9362-2f56-4898-b3d6-983fe3eb598b"
+      },
+      {
+        "text": "In college, I studied history to understand people.",
+        "imageUrl": "",
+        "key": "music_ai_panels_playtogether_3-3f141e1d-8f98-458f-ab5e-d64387c3b87e"
+      },
+      {
+        "text": "Now, I study music listeners to learn about what they love, and what they don’t.",
+        "imageUrl": "",
+        "key": "music_ai_panels_playtogether_1-91e352ba-fc4d-4157-96c8-ed0141f3387d"
+      },
+      {
+        "text": "I use this knowledge, and my imagination, to come up with creative solutions.",
+        "imageUrl": "",
+        "key": "music_ai_panels_playtogether_1-c6032955-4743-4312-b604-df28a462dd77"
+      },
+      {
+        "imageUrl": "https://images.code.org/b886435ca56512e7c56016cbae52574e-play together (1).gif",
+        "text": "Next, you’ll get creative by experimenting with sound combinations.",
+        "key": "musiclab_intro_panels_playtogether_pdx-a5066092-2920-4c8d-89ea-00b7a8531ad0"
+      },
+      {
+        "text": "What works best? Try playing different sounds at the same time!",
+        "imageUrl": "https://images.code.org/6c0d2e221de0041a36395cb5289b12ad-Screen Shot 2024-10-01 at 9.25.07 PM.png",
+        "key": "music_ai_panels_playtogether_3-6c8a20ce-7787-4113-90a5-d366ecd7355f"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:47.496+00:00\",\"changed\":[\"cloned from \\\"music_ai_panels_playtogether_3\\\"\"],\"cloned_from\":\"music_ai_panels_playtogether_3\"},{\"changed_at\":\"2024-10-08 16:28:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-08 16:30:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-08 16:30:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-08 17:07:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Panels>

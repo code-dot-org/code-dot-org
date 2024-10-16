@@ -1,3 +1,11 @@
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
 import manageStudents, {
   setLoginType,
   setStudents,
@@ -29,10 +37,11 @@ import manageStudents, {
   transferStudentsFailure,
   addStudentsFull,
   transferStudentsFull,
+  loadSectionStudentData,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 import {sectionLoginFactory} from '../../../factories/sectionLogin';
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const sectionLoginData = {
   1: sectionLoginFactory.build({id: 1, name: 'StudentNameA', sectionId: 53}),
@@ -46,6 +55,7 @@ const expectedBlankRow = {
   age: '',
   gender: '',
   username: '',
+  usState: null,
   loginType: '',
   sharingDisabled: true,
   isEditing: true,
@@ -405,6 +415,7 @@ describe('manageStudentsRedux', () => {
           familyName: 'FamName5',
           username: 'student5',
           userType: 'student',
+          usState: 'CO',
           age: 14,
           gender: 'f',
           loginType: 'email',
@@ -543,13 +554,17 @@ describe('manageStudentsRedux', () => {
   });
 
   describe('editStudent', () => {
-    it('sets editingData to new updated values', () => {
-      // Set up a student that is in the editing state.
-      const setStudentsAction = setStudents(sectionLoginData);
-      const nextState = manageStudents(initialState, setStudentsAction);
-      const startEditingStudentAction = startEditingStudent(1);
-      const editingState = manageStudents(nextState, startEditingStudentAction);
+    // Set up a student that is in the editing state.
+    const setStudentsAction = setStudents(sectionLoginData);
+    const nextState = manageStudents(initialState, setStudentsAction);
+    const startEditingStudentAction = startEditingStudent(1);
+    let editingState;
 
+    beforeEach(() => {
+      editingState = manageStudents(nextState, startEditingStudentAction);
+    });
+
+    it('sets editingData to new updated values', () => {
       // Edit name, age, and gender and verify data is updated.
       const editStudentNameAction = editStudent(1, {name: 'New name'});
       const stateWithName = manageStudents(editingState, editStudentNameAction);
@@ -610,6 +625,20 @@ describe('manageStudentsRedux', () => {
         age: 13,
         gender: 'm',
         sharingDisabled: true,
+      });
+    });
+
+    it('sets usState to student state', () => {
+      const expectedUsSate = 'CO';
+
+      const state = manageStudents(
+        editingState,
+        editStudent(1, {usState: expectedUsSate})
+      );
+
+      assert.deepEqual(state.editingData[1], {
+        ...sectionLoginData[1],
+        usState: expectedUsSate,
       });
     });
   });
@@ -757,6 +786,7 @@ describe('manageStudentsRedux', () => {
         familyName: 'fam name',
         age: 17,
         gender: 'f',
+        usState: 'CO',
         secretPicturePath: '/wizard.jpg',
         loginType: 'picture',
         isEditing: false,
@@ -1082,6 +1112,124 @@ describe('manageStudentsRedux', () => {
         sectionCode: 'ABCEDF',
         sectionStudentCount: 500,
       });
+    });
+  });
+
+  describe('load student data', () => {
+    const successResponse = (body = {}) => [
+      200,
+      {'Content-Type': 'application/json'},
+      JSON.stringify(body),
+    ];
+
+    const mockStudentData = [
+      {
+        id: 229,
+        name: 'new student',
+        username: 'coder_abc',
+        family_name: 'fam name',
+        age: 17,
+        sharing_disabled: true,
+        has_ever_signed_in: false,
+        ai_tutor_access_denied: false,
+        at_risk_age_gated: false,
+        child_account_compliance_state: null,
+        latest_permission_request_sent_at: null,
+        depends_on_this_section_for_login: true,
+      },
+    ];
+
+    let store, server;
+
+    let state = () => store.getState().manageStudents;
+
+    beforeEach(function () {
+      server = sinon.fakeServer.create();
+
+      stubRedux();
+      registerReducers({manageStudents: manageStudents});
+      store = getStore();
+    });
+
+    afterEach(function () {
+      server.restore();
+      restoreRedux();
+    });
+
+    it('loadSectionStudentData fetches student info from server', async () => {
+      let store = getStore();
+      let sectionId = 1;
+
+      // assert initial state
+      assert.equal(state().sectionId, null);
+      assert.deepEqual(state().studentData, {});
+      assert.equal(state().isLoadingStudents, true);
+
+      server.respondWith(
+        'GET',
+        `/dashboardapi/sections/${sectionId}/students`,
+        successResponse(mockStudentData)
+      );
+
+      store.dispatch(loadSectionStudentData(sectionId));
+
+      // assert section Id is set before getting response from server
+      assert.equal(state().sectionId, sectionId);
+
+      server.respond();
+      assert.equal(state().isLoadingStudents, false);
+      assert.equal(Object.keys(state().studentData).length, 1);
+    });
+
+    it('loadSectionStudentData is idempotent in fetching student info from server', async () => {
+      let store = getStore();
+      let sectionId = 1;
+
+      // assert initial state
+      assert.equal(state().sectionId, null);
+      assert.deepEqual(state().studentData, {});
+      assert.equal(state().isLoadingStudents, true);
+
+      server.respondWith(
+        'GET',
+        `/dashboardapi/sections/${sectionId}/students`,
+        successResponse(mockStudentData)
+      );
+
+      // send two events to load student data
+      store.dispatch(loadSectionStudentData(sectionId));
+      store.dispatch(loadSectionStudentData(sectionId));
+
+      server.respond();
+
+      // Assert only one request was made to set student data to ensure idempotency.
+      assert.equal(server.requests.length, 1);
+
+      assert.equal(state().sectionId, sectionId);
+      assert.equal(state().isLoadingStudents, false);
+      assert.equal(Object.keys(state().studentData).length, 1);
+    });
+
+    it('loadSectionStudentData failure fetching student info from server', async () => {
+      let store = getStore();
+      let sectionId = 1;
+
+      // assert initial state
+      assert.equal(state().sectionId, null);
+      assert.deepEqual(state().studentData, {});
+      assert.equal(state().isLoadingStudents, true);
+
+      server.respondWith(
+        'GET',
+        `/dashboardapi/sections/${sectionId}/students`,
+        [404, {}, '']
+      );
+
+      store.dispatch(loadSectionStudentData(sectionId));
+      server.respond();
+
+      assert.equal(state().sectionId, null);
+      assert.equal(state().isLoadingStudents, false);
     });
   });
 });

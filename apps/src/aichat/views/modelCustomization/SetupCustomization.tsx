@@ -5,6 +5,7 @@ import {useSelector} from 'react-redux';
 import {AichatLevelProperties, ModelDescription} from '@cdo/apps/aichat/types';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown/SimpleDropdown';
+import Slider, {SliderProps} from '@cdo/apps/componentLibrary/slider/Slider';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -19,6 +20,7 @@ import {
   SET_TEMPERATURE_STEP,
 } from './constants';
 import FieldLabel from './FieldLabel';
+import SaveChangesAlerts from './SaveChangesAlerts';
 import UpdateButton from './UpdateButton';
 import {isVisible, isDisabled, isEditable} from './utils';
 
@@ -77,7 +79,7 @@ const SetupCustomization: React.FunctionComponent = () => {
 
   const renderChooseAndCompareModels = () => {
     return (
-      <div className={styles.inputContainer}>
+      <div>
         <FieldLabel
           id="selected-model"
           label="Selected model"
@@ -126,12 +128,40 @@ const SetupCustomization: React.FunctionComponent = () => {
     );
   };
 
+  const sliderProps: SliderProps = {
+    name: 'temperature-slider',
+    value: aiCustomizations.temperature * 10,
+    minValue: MIN_TEMPERATURE,
+    maxValue: MAX_TEMPERATURE,
+    step: SET_TEMPERATURE_STEP,
+    hideValue: true,
+    disabled: isDisabled(temperature) || readOnlyWorkspace,
+    onChange: event => {
+      const value = parseInt(event.target.value) / 10;
+      dispatch(
+        setAiCustomizationProperty({
+          property: 'temperature',
+          value: value,
+        })
+      );
+    },
+    className: styles.temperatureSlider,
+    leftButtonProps: {
+      icon: {iconName: 'minus', title: 'Decrease'},
+      ['aria-label']: 'Decrease',
+    },
+    rightButtonProps: {
+      icon: {iconName: 'plus', title: 'Increase'},
+      ['aria-label']: 'Increase',
+    },
+  };
+
   return (
     <div className={styles.verticalFlexContainer}>
       <div className={styles.customizationContainer}>
         {isVisible(selectedModelId) && renderChooseAndCompareModels()}
         {isVisible(temperature) && (
-          <div className={styles.inputContainer}>
+          <>
             <div className={styles.horizontalFlexContainer}>
               <FieldLabel
                 id="temperature"
@@ -140,32 +170,18 @@ const SetupCustomization: React.FunctionComponent = () => {
               />
               {aiCustomizations.temperature}
             </div>
-            <input
-              type="range"
-              min={MIN_TEMPERATURE}
-              max={MAX_TEMPERATURE}
-              step={SET_TEMPERATURE_STEP}
-              value={aiCustomizations.temperature}
-              disabled={isDisabled(temperature) || readOnlyWorkspace}
-              onChange={event =>
-                dispatch(
-                  setAiCustomizationProperty({
-                    property: 'temperature',
-                    value: event.target.value,
-                  })
-                )
-              }
-            />
-          </div>
+            <Slider {...sliderProps} />
+          </>
         )}
         {isVisible(systemPrompt) && (
-          <div className={styles.inputContainer}>
+          <>
             <FieldLabel
               id="system-prompt"
               label="System Prompt"
               tooltipText="The system prompt controls how the chatbot behaves. Type your instructions into the text box."
             />
             <textarea
+              className={styles.systemPromptInput}
               id="system-prompt"
               value={aiCustomizations.systemPrompt}
               disabled={isDisabled(systemPrompt) || readOnlyWorkspace}
@@ -178,12 +194,13 @@ const SetupCustomization: React.FunctionComponent = () => {
                 )
               }
             />
-          </div>
+          </>
         )}
       </div>
       <div className={styles.footerButtonContainer}>
         <UpdateButton isDisabledDefault={allFieldsDisabled} />
       </div>
+      <SaveChangesAlerts isReadOnly={allFieldsDisabled} />
     </div>
   );
 };

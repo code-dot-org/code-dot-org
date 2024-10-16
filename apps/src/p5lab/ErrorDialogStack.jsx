@@ -1,16 +1,18 @@
 /** @file Renders error dialogs in sequence, given a stack of errors */
 import PropTypes from 'prop-types';
 import React from 'react';
-import * as actions from './redux/errorDialogStack';
 import {connect} from 'react-redux';
-import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import msg from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-import * as animationActions from './redux/animationList';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+
 import {getCurrentId} from '@cdo/apps/code-studio/initApp/project';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import firehoseClient from '@cdo/apps/metrics/firehose';
+import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import msg from '@cdo/locale';
+
+import * as animationActions from './redux/animationList';
+import * as actions from './redux/errorDialogStack';
 
 /**
  * Renders error dialogs in sequence, given a stack of errors.

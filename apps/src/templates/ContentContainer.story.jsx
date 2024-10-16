@@ -55,7 +55,7 @@ export const WithLink = Template.bind({});
 WithLink.args = {
   heading: 'Recent Courses',
   linkText: 'View all courses',
-  link: 'link to see all of the courses',
+  link: '/courses',
   showLink: true,
 };
 
@@ -63,7 +63,7 @@ export const WithLinkAndDescription = Template.bind({});
 WithLinkAndDescription.args = {
   heading: 'Recent Courses',
   linkText: 'View all courses',
-  link: 'link to see all of the courses',
+  link: '/courses',
   showLink: true,
   description: 'These are courses that you have worked on recently',
 };

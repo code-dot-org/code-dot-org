@@ -44,6 +44,10 @@ def apps_dir(*dirs)
   deploy_dir('apps', *dirs)
 end
 
+def python_dir(*dirs)
+  deploy_dir('python', *dirs)
+end
+
 def tools_dir(*dirs)
   deploy_dir('tools', *dirs)
 end

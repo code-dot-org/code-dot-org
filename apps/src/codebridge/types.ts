@@ -1,7 +1,11 @@
 import {LanguageSupport} from '@codemirror/language';
 import {AnyAction, Dispatch} from 'redux';
 
-import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import {
+  MultiFileSource,
+  ProjectFile,
+  ProjectSources,
+} from '@cdo/apps/lab2/types';
 
 export type {
   FileId,
@@ -17,7 +21,6 @@ export type LeftNavElement = {
 
 export type PreviewComponent = (args: {file: ProjectFile}) => JSX.Element;
 export type EditorComponent = () => JSX.Element;
-export type EmptyEditorComponent = () => JSX.Element;
 
 export type SideBarItem = {
   icon: string;
@@ -37,7 +40,6 @@ export type ConfigType = {
   gridLayoutColumns?: string;
   editableFileTypes: string[];
   previewFileTypes?: string[];
-  blankEmptyEditor?: boolean;
   PreviewComponents?: {[key: string]: PreviewComponent};
   languageMapping: {[key: string]: LanguageSupport};
   labeledGridLayouts?: {
@@ -48,9 +50,12 @@ export type ConfigType = {
     };
   };
   activeGridLayout?: string;
+  showFileBrowser: boolean;
+  validMimeTypes?: string[];
 };
 
 export type ProjectType = MultiFileSource;
+export type SourceType = ProjectSources;
 
 export type SetProjectFunction = (project: ProjectType) => void;
 export type SetConfigFunction = (project: ConfigType) => void;
@@ -58,9 +63,9 @@ export type ResetProjectFunction = () => void;
 export type OnRunFunction = (
   runTests: boolean,
   dispatch: Dispatch<AnyAction>,
-  permissions: string[],
   source: MultiFileSource | undefined
-) => void;
+) => Promise<void>;
+export type OnStopFunction = () => void;
 
 export type ReducerAction = {
   type: string;

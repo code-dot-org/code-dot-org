@@ -5,9 +5,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+
 import i18n from '@cdo/locale';
+
 import {actions, selectors} from './redux';
-import trackEvent from '../../../util/trackEvent';
 
 export default connect(
   state => ({
@@ -42,38 +43,18 @@ export default connect(
     // Wrap button actions to add tracking of presses to investigate student use
     // userInteracted tracks if the user has open/adjusted the debug console
     togglePause = () => {
-      trackEvent(
-        'debug_commands',
-        'debug_button_press',
-        this.props.userInteracted
-      );
       this.props.togglePause();
     };
 
     stepIn = () => {
-      trackEvent(
-        'debug_commands',
-        'debug_button_press',
-        this.props.userInteracted
-      );
       this.props.stepIn();
     };
 
     stepOut = () => {
-      trackEvent(
-        'debug_commands',
-        'debug_button_press',
-        this.props.userInteracted
-      );
       this.props.stepOut();
     };
 
     stepOver = () => {
-      trackEvent(
-        'debug_commands',
-        'debug_button_press',
-        this.props.userInteracted
-      );
       this.props.stepOver();
     };
 

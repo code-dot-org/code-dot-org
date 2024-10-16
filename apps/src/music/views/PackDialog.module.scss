@@ -77,15 +77,34 @@
             border-radius: 5px;
           }
 
-          &Image {
+          &ImageContainer {
             width: 100%;
             transform: scale(1, 1);
             transition: 0.1s ease-in-out;
-            border-radius: 5px;
 
             &:hover, &Selected {
               transform: scale(1.03, 1.03);
               transition: 0.1s ease-in-out;
+            }
+          }
+
+          &Image {
+            border-radius: 5px;
+
+            &Attribution {
+              transform: rotate(270deg) translate(0, 0);
+              position: absolute;
+              top: 6px;
+              right: 18px;
+              transform-origin: top right;
+              font-size: 8px;
+              opacity: 0.3;
+
+              &Left {
+                top: -10px;
+                right: initial;
+                transform: translate(-100%, 100%) rotate(270deg);
+              }
             }
           }
 

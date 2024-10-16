@@ -1,0 +1,47 @@
+name 'CSA U7L3-L5_alt-2025'
+title 'Check for Understanding'
+
+right '`"Welcome to Java! bold"`'
+wrong '`"Hello World! italic"`'
+wrong '`"Hello Java! bold"`'
+wrong '`"Hello Java! italic"`'
+wrong '`"Hello World! bold"`'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Consider the following `TextEditor` class.
+
+```
+public class TextEditor {
+   public static void changeFont(String text, String fontStyle) {
+      text = "Hello World!";
+      fontStyle = "italic";
+   }
+
+   public static void changeFont(String text) {
+      text = "Hello Java!";
+   }
+}
+```
+
+The following code segment appears in a class other than `TextEditor`.
+
+```
+String text = "Welcome to Java!";
+String fontStyle = "bold";
+
+changeFont(text, fontStyle);
+System.out.println(text + " " + fontStyle);
+```
+
+What will be output when this code segment is run?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+In the given code, we have two overloaded methods named `changeFont()`. The first `changeFont()` method accepts two parameters: a `String text` and a `String fontStyle`, and the second `changeFont()` method accepts just one parameter: a `String text`.
+
+We initialize `text` as `"Welcome to Java!"` and `fontStyle` as `"bold"`. Then, we call the `changeFont()` method with both `text` and `fontStyle` as arguments. Inside this method, the variables `text` and `fontStyle` are reassigned to `"Hello World!"` and `"italic"`, respectively. However, these changes do not affect the original `text` and `fontStyle` variables because Java is pass by value, meaning the values of the original variables are passed to the method, not the actual references to the variables.
+
+As a result, when we print the `text` and `fontStyle` variables, their original values (`"Welcome to Java!"` and `"bold"`) are displayed.
+MARKDOWN

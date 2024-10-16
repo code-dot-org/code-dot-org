@@ -72,7 +72,7 @@ class CourseVersionTest < ActiveSupport::TestCase
       @unit_facilitator_to_teacher.id
     ]
 
-    assert_equal CourseVersion.courses_for_unit_selector(student_unit_ids).map {|co| co[:display_name]}.sort, expected_course_info
+    assert_equal CourseVersion.courses_for_unit_selector(student_unit_ids).pluck(:display_name).sort, expected_course_info
   end
 
   test 'get courses with participant progress for pilot teacher should return courses where pilot teacher can be instructor' do
@@ -80,7 +80,7 @@ class CourseVersionTest < ActiveSupport::TestCase
       @pilot_unit.course_version.course_offering.display_name + " *",
     ].sort
 
-    assert_equal CourseVersion.courses_for_unit_selector([@pilot_unit.id]).map {|co| co[:display_name]}.sort, expected_course_info
+    assert_equal CourseVersion.courses_for_unit_selector([@pilot_unit.id]).pluck(:display_name).sort, expected_course_info
   end
 
   test 'get courses with participant progress for teacher should only return courses where they can be the instructor' do
@@ -94,7 +94,7 @@ class CourseVersionTest < ActiveSupport::TestCase
       @unit_teacher_to_students.id
     ]
 
-    assert_equal CourseVersion.courses_for_unit_selector(student_unit_ids).map {|co| co[:display_name]}.sort, expected_course_info
+    assert_equal CourseVersion.courses_for_unit_selector(student_unit_ids).pluck(:display_name).sort, expected_course_info
   end
 
   test 'get courses with participant progress for facilitator should return all courses, amd units where facilitator can be instructor and followers in section have progress' do
@@ -118,9 +118,9 @@ class CourseVersionTest < ActiveSupport::TestCase
 
     courses_with_progress = CourseVersion.courses_for_unit_selector(student_unit_ids)
 
-    assert_equal courses_with_progress.map {|co| co[:display_name]}.sort, expected_course_info
+    assert_equal courses_with_progress.pluck(:display_name).sort, expected_course_info
 
-    unit_names = courses_with_progress.map {|co| co[:units]}.flatten.map {|u| u[:name]}
+    unit_names = courses_with_progress.pluck(:units).flatten.pluck(:name)
     assert_equal unit_names.sort, expected_unit_info
   end
 
@@ -187,6 +187,59 @@ class CourseVersionTest < ActiveSupport::TestCase
     assert ug_2050.course_version.recommended?('fake-locale')
     refute ug_2051.course_version.recommended?('fake-locale')
     assert_equal ug_2050.course_version.content_root, UnitGroup.latest_stable_version('ug', locale: 'fake-locale')
+  end
+
+  test "recommended? is true if its the latest stable unit in the family in user locale across unitgroup" do
+    ug_2050 = create :unit_group, family_name: 'family', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    ug_2050_unit = create(:script, name: 'family1-2050', supported_locales: ['fake-locale'])
+    create :unit_group_unit, unit_group: ug_2050, script: ug_2050_unit, position: 1
+    CourseOffering.add_course_offering(ug_2050)
+
+    script = create :script, family_name: 'family', version_year: '2049', is_course: true, supported_locales: ['fake-locale'], published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(script)
+    script2 = create :script, family_name: 'family', version_year: '2052', is_course: true, supported_locales: [], published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(script2)
+
+    refute ug_2050.course_version.recommended?('en-us')
+    refute script.course_version.recommended?('en-us')
+    assert script2.course_version.recommended?('en-us')
+
+    refute script.course_version.recommended?('fake-locale')
+    refute script2.course_version.recommended?('fake-locale')
+    assert ug_2050.course_version.recommended?('fake-locale')
+  end
+
+  test "recommended? is true if its the latest stable unitgroup in the family in user locale across unit" do
+    ug_2050 = create :unit_group, family_name: 'family', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    ug_2050_unit = create(:script, name: 'family1-2050')
+    create :unit_group_unit, unit_group: ug_2050, script: ug_2050_unit, position: 1
+    CourseOffering.add_course_offering(ug_2050)
+
+    script = create :script, family_name: 'family', version_year: '2048', is_course: true, supported_locales: ['fake-locale'], published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(script)
+    script2 = create :script, family_name: 'family', version_year: '2049', is_course: true, supported_locales: [], published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(script2)
+
+    refute script.course_version.recommended?('en-us')
+    refute script2.course_version.recommended?('en-us')
+    assert ug_2050.course_version.recommended?('en-us')
+
+    assert script.course_version.recommended?('fake-locale')
+    refute script2.course_version.recommended?('fake-locale')
+    refute ug_2050.course_version.recommended?('fake-locale')
+  end
+
+  test "recommended? is true for unit if unit and unitgroup have same version year" do
+    ug_2050 = create :unit_group, family_name: 'family', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    ug_2050_unit = create(:script, name: 'family1-2050')
+    create :unit_group_unit, unit_group: ug_2050, script: ug_2050_unit, position: 1
+    CourseOffering.add_course_offering(ug_2050)
+
+    script = create :script, family_name: 'family', version_year: '2050', is_course: true, supported_locales: ['fake-locale'], published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(script)
+
+    assert script.course_version.recommended?('en-us')
+    refute ug_2050.course_version.recommended?('en-us')
   end
 
   test "add_course_version creates CourseVersion for script that doesn't have one if is_course is true" do

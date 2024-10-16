@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef, useCallback} from 'react';
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import Button from '@cdo/apps/templates/Button';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import color from '../../util/color';

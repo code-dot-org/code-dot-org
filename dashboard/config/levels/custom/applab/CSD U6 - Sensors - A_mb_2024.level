@@ -57,7 +57,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "# Room Monitor\r\n\r\nA micro:bit is installed in a secure room and sends data back to a central command post that monitors activity. The app should automatically update and display the following information:\r\n\r\n- The current temperature\r\n- The current light level on a scale from 0-10\r\n\r\n## Do This\r\n- Create a program that matches the description above. Make sure that the values are automatically updating as the program is run.",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "true",
     "text_mode_at_start": "false",
     "encrypted": "false",
