@@ -1,4 +1,5 @@
 import {Effects} from './player/interfaces/Effects';
+import {InstrumentEventValue} from './player/interfaces/InstrumentEvent';
 import {Key} from './utils/Notes';
 
 export const baseAssetUrl = 'https://curriculum.code.org/media/musiclab/';
@@ -43,26 +44,24 @@ export const BlockMode = {
   ADVANCED: 'Advanced',
 } as const;
 
-// For reference, events look like this:
-// events: [{src: 'sound_1', tick: 3}]
-export const DEFAULT_PATTERN = {
-  kit: 'drums',
+export const DEFAULT_PATTERN_LENGTH = 1;
+export const DEFAULT_PATTERN_AI_LENGTH = 2;
+export const DEFAULT_CHORD_LENGTH = 1;
+export const DEFAULT_TUNE_LENGTH = 1;
+
+export const DEFAULT_PATTERN: InstrumentEventValue = {
+  instrument: 'drums',
+  length: DEFAULT_PATTERN_LENGTH,
   events: [],
   ai: false,
 };
 
-export const DEFAULT_PATTERN_LENGTH = 1;
-
-// For reference, events look like this:
-// events: [{src: 'sound_1', tick: 3}]
-export const DEFAULT_PATTERN_AI = {
-  kit: 'drums',
-  length: 2,
+export const DEFAULT_PATTERN_AI: InstrumentEventValue = {
+  instrument: 'drums',
+  length: DEFAULT_PATTERN_AI_LENGTH,
   events: [],
   ai: true,
 };
-
-export const DEFAULT_PATTERN_AI_LENGTH = 2;
 
 // Type: ChordEventValue
 export const DEFAULT_CHORD = {
@@ -71,16 +70,11 @@ export const DEFAULT_CHORD = {
   playStyle: 'arpeggio-up',
 };
 
-export const DEFAULT_CHORD_LENGTH = 1;
-
-// For reference, events look like this:
-// events: [{note: 60, tick: 3}]
-export const DEFAULT_TUNE = {
+export const DEFAULT_TUNE: InstrumentEventValue = {
   instrument: 'piano',
   events: [],
+  length: DEFAULT_TUNE_LENGTH,
 };
-
-export const DEFAULT_TUNE_LENGTH = 1;
 
 export const LOCAL_STORAGE = 'local';
 export const REMOTE_STORAGE = 'remote';

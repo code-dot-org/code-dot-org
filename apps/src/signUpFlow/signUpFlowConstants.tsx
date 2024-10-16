@@ -1,13 +1,5 @@
 // session storage keys
 export const ACCOUNT_TYPE_SESSION_KEY = 'accountType';
-export const DISPLAY_NAME_SESSION_KEY = 'displayName';
-export const USER_AGE_SESSION_KEY = 'age';
-export const IS_PARENT_SESSION_KEY = 'isParent';
-export const PARENT_EMAIL_SESSION_KEY = 'parentEmail';
-export const PARENT_EMAIL_OPT_IN_SESSION_KEY = 'parentEmailOptIn';
-export const USER_STATE_SESSION_KEY = 'state';
-export const USER_GENDER_SESSION_KEY = 'gender';
-export const EMAIL_OPT_IN_SESSION_KEY = 'emailOptIn';
 export const SCHOOL_ID_SESSION_KEY = 'schoolId';
 export const SCHOOL_ZIP_SESSION_KEY = 'schoolZip';
 export const SCHOOL_NAME_SESSION_KEY = 'schoolName';
@@ -17,13 +9,5 @@ export const EMAIL_SESSION_KEY = 'email';
 // school association
 export const US_COUNTRY_CODE = 'US';
 export const ZIP_REGEX = new RegExp(/(^\d{5}$)/);
-export const SELECT_A_SCHOOL = 'selectASchool';
 export const SELECT_COUNTRY = 'selectCountry';
-export const CLICK_TO_ADD = 'clickToAdd';
-export const NO_SCHOOL_SETTING = 'noSchoolSetting';
 export const SCHOOL_ZIP_SEARCH_URL = '/dashboardapi/v1/schoolzipsearch/';
-export const NON_SCHOOL_OPTIONS_ARRAY = [
-  NO_SCHOOL_SETTING,
-  CLICK_TO_ADD,
-  SELECT_A_SCHOOL,
-];

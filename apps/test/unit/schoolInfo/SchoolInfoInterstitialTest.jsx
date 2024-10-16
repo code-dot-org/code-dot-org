@@ -5,14 +5,8 @@ import React from 'react';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SchoolInfoInterstitial from '@cdo/apps/schoolInfo/SchoolInfoInterstitial';
+import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import {updateSchoolInfo} from '@cdo/apps/schoolInfo/utils/updateSchoolInfo';
-import {
-  CLICK_TO_ADD,
-  NO_SCHOOL_SETTING,
-  SELECT_A_SCHOOL,
-  SELECT_COUNTRY,
-  US_COUNTRY_CODE,
-} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import i18n from '@cdo/locale';
 
 // Mock the dependencies
@@ -23,9 +17,13 @@ jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
 jest.mock('@cdo/apps/schoolInfo/utils/updateSchoolInfo', () => ({
   updateSchoolInfo: jest.fn(),
 }));
+jest.mock('@cdo/apps/schoolInfo/utils/schoolInfoInvalid', () => ({
+  schoolInfoInvalid: jest.fn(),
+}));
 
 const mockUpdateSchoolInfo = updateSchoolInfo;
 const mockSendEvent = analyticsReporter.sendEvent;
+const mockSchoolInfoInvalid = schoolInfoInvalid;
 
 describe('SchoolInfoInterstitial', () => {
   let mockFetch;
@@ -63,6 +61,7 @@ describe('SchoolInfoInterstitial', () => {
     };
     mockFetch = jest.fn().mockResolvedValue(mockResponse);
     window.fetch = mockFetch;
+    mockSchoolInfoInvalid.mockReturnValue(false);
   });
 
   it('should render the component correctly', async () => {
@@ -206,175 +205,12 @@ describe('SchoolInfoInterstitial', () => {
 
   describe('initial school info state', () => {
     it('disables submit form with no info', async () => {
+      mockSchoolInfoInvalid.mockReturnValue(true);
       await act(async () => {
-        renderDefault({
-          scriptData: {
-            ...defaultProps.scriptData,
-            existingSchoolInfo: {
-              country: SELECT_COUNTRY,
-              school_id: SELECT_A_SCHOOL,
-              school_name: '',
-              school_zip: '',
-            },
-            usIp: false,
-          },
-        });
+        renderDefault();
       });
 
       expect(screen.getByRole('button', {name: i18n.save()})).toBeDisabled();
-    });
-  });
-
-  describe('US country selected', () => {
-    it('disables submit form if zip code is missing', async () => {
-      await act(async () => {
-        renderDefault({
-          scriptData: {
-            ...defaultProps.scriptData,
-            existingSchoolInfo: {
-              country: US_COUNTRY_CODE,
-              school_id: 'abc',
-              school_name: '',
-              school_zip: '',
-            },
-            usIp: false,
-          },
-        });
-      });
-
-      expect(screen.getByRole('button', {name: i18n.save()})).toBeDisabled();
-    });
-
-    it('disables submit form if school is not selected and not named', async () => {
-      await act(async () => {
-        renderDefault({
-          scriptData: {
-            ...defaultProps.scriptData,
-            existingSchoolInfo: {
-              country: US_COUNTRY_CODE,
-              school_id: SELECT_A_SCHOOL,
-              school_name: '',
-              school_zip: '12345',
-            },
-            usIp: false,
-          },
-        });
-      });
-
-      expect(screen.getByRole('button', {name: i18n.save()})).toBeDisabled();
-    });
-
-    it('enables submit form if zip is provided and not in a school setting', async () => {
-      await act(async () => {
-        renderDefault({
-          scriptData: {
-            ...defaultProps.scriptData,
-            existingSchoolInfo: {
-              country: US_COUNTRY_CODE,
-              school_id: NO_SCHOOL_SETTING,
-              school_name: '',
-              school_zip: '12345',
-            },
-            usIp: false,
-          },
-        });
-      });
-
-      expect(screen.getByRole('button', {name: i18n.save()})).toBeEnabled();
-
-      fireEvent.click(screen.getByRole('button', {name: i18n.save()}));
-
-      expect(mockUpdateSchoolInfo).toHaveBeenCalled();
-    });
-
-    it('enables submit with US and school id from dropdown', async () => {
-      await act(async () => {
-        renderDefault({
-          scriptData: {
-            ...defaultProps.scriptData,
-            existingSchoolInfo: {
-              country: US_COUNTRY_CODE,
-              school_id: '1',
-              school_name: '',
-              school_zip: '12345',
-            },
-            usIp: false,
-          },
-        });
-      });
-
-      expect(screen.getByRole('button', {name: i18n.save()})).toBeEnabled();
-
-      fireEvent.click(screen.getByRole('button', {name: i18n.save()}));
-
-      expect(mockUpdateSchoolInfo).toHaveBeenCalled();
-    });
-
-    it('enables submit with US and school name', async () => {
-      await act(async () => {
-        renderDefault({
-          scriptData: {
-            ...defaultProps.scriptData,
-            existingSchoolInfo: {
-              country: 'US',
-              school_id: CLICK_TO_ADD,
-              school_name: 'Cool School',
-              school_zip: '12345',
-            },
-            usIp: false,
-          },
-        });
-      });
-
-      expect(screen.getByRole('button', {name: i18n.save()})).toBeEnabled();
-
-      fireEvent.click(screen.getByRole('button', {name: i18n.save()}));
-
-      expect(mockUpdateSchoolInfo).toHaveBeenCalled();
-    });
-  });
-
-  describe('non-US country selected', () => {
-    it('disables submit with only non-US country', async () => {
-      await act(async () => {
-        renderDefault({
-          scriptData: {
-            ...defaultProps.scriptData,
-            existingSchoolInfo: {
-              country: 'UK',
-              school_id: SELECT_A_SCHOOL,
-              school_name: '',
-              school_zip: '',
-            },
-            usIp: false,
-          },
-        });
-      });
-
-      expect(screen.getByRole('button', {name: i18n.save()})).toBeDisabled();
-    });
-
-    it('enables submit with non-US and school name', async () => {
-      await act(async () => {
-        renderDefault({
-          scriptData: {
-            ...defaultProps.scriptData,
-            existingSchoolInfo: {
-              country: 'UK',
-              school_id: SELECT_A_SCHOOL,
-              school_name: 'UK School',
-              school_zip: '',
-            },
-            usIp: false,
-          },
-        });
-      });
-
-      expect(screen.getByRole('button', {name: i18n.save()})).toBeEnabled();
-
-      fireEvent.click(screen.getByRole('button', {name: i18n.save()}));
-
-      expect(mockUpdateSchoolInfo).toHaveBeenCalled();
     });
   });
 

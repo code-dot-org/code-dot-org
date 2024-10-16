@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
-import {useNavigate, useParams} from 'react-router-dom';
+import {generatePath, useNavigate, useParams} from 'react-router-dom';
 
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import plcHeaderReducer, {
@@ -18,6 +18,7 @@ import {
   setPageType,
   pageTypes,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import {PeerReviewLessonInfo} from '@cdo/apps/types/progressTypes';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import experiments from '@cdo/apps/util/experiments';
@@ -246,7 +247,7 @@ const initializeRedux = (
   dispatch(initializeHiddenScripts(unitData.section_hidden_unit_info));
   dispatch(setPageType(pageTypes.scriptOverview));
 
-  progress.initCourseProgress(unitData);
+  progress.initCourseProgress(unitData, false);
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
@@ -332,7 +333,13 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = props => {
       courseOfferingId={selectedSection.courseOfferingId}
       courseVersionId={selectedSection.courseVersionId}
       courseTitle={unitSummaryResponse.unitData.course_title}
-      courseLink={unitSummaryResponse.unitData.course_link}
+      courseLink={
+        unitSummaryResponse.unitData.course_name
+          ? generatePath('../' + TEACHER_NAVIGATION_PATHS.courseOverview, {
+              courseVersionName: unitSummaryResponse.unitData.course_name,
+            })
+          : null
+      }
       excludeCsfColumnInLegend={!unitSummaryResponse.unitData.csf}
       teacherResources={unitSummaryResponse.unitData.teacher_resources}
       studentResources={unitSummaryResponse.unitData.student_resources || []}

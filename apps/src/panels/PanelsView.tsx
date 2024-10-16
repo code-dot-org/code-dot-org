@@ -8,6 +8,7 @@ import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
 import FontAwesome from '../legacySharedComponents/FontAwesome';
 import EnhancedSafeMarkdown from '../templates/EnhancedSafeMarkdown';
 import {commonI18n} from '../types/locale';
+import {cancelSpeech} from '../util/BrowserTextToSpeech';
 
 import {Panel} from './types';
 
@@ -94,6 +95,13 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     }
   }, [currentPanel, panels]);
 
+  // Cancel any in-progress text-to-speech when the panel changes.
+  useEffect(() => {
+    if (offerTts) {
+      cancelSpeech();
+    }
+  }, [currentPanel, offerTts]);
+
   const lastPanel =
     currentPanel > 0 && panels[currentPanel - 1]
       ? panels[currentPanel - 1]
@@ -105,14 +113,19 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   }
 
   const showSmallText = height < 300;
-  const textLayoutClass =
-    panel.layout === 'text-top-left'
-      ? styles.markdownTextTopLeft
-      : panel.layout === 'text-bottom-left'
-      ? styles.markdownTextBottomLeft
-      : panel.layout === 'text-bottom-right'
-      ? styles.markdownTextBottomRight
-      : styles.markdownTextTopRight;
+
+  const layoutClassMap = {
+    'text-top-left': styles.markdownTextTopLeft,
+    'text-top-center': styles.markdownTextTopCenter,
+    'text-bottom-left': styles.markdownTextBottomLeft,
+    'text-bottom-center': styles.markdownTextBottomCenter,
+    'text-bottom-right': styles.markdownTextBottomRight,
+    'text-top-right': styles.markdownTextTopRight,
+  };
+
+  const textLayoutClass = panel.layout
+    ? layoutClassMap[panel.layout]
+    : styles.markdownTextTopRight;
 
   const buttonText =
     currentPanel < panels.length - 1

@@ -79,9 +79,6 @@ def fetch_hoc_metrics
   Properties.get(:hoc_metrics) || {
     'started' => 426_370_561,
     'finished' => 56_214_858,
-    # The count was reset to 0 in June 2017 as the result of moving to HOC2017
-    # from HOC2016.
-    'total_hoc_count' => 0,
     'total_codedotorg_count' => 215_833_097,
   }
 end

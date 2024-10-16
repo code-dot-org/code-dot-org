@@ -203,7 +203,8 @@ Feature: Policy Compliance and Parental Permission
 
     # Have the student pick a state (outside the policy region)
     Given I select the "Alabama" option in dropdown "user_us_state"
-    Then I press "#submit-update input" using jQuery to load a new page
+    Then I click "#submit-update"
+    Then I wait until element "div#account-update-success" is visible
 
     # Right now, we have to assert that the experiment is active
     # This should be unnecessary in the future, but will not hurt
@@ -226,7 +227,8 @@ Feature: Policy Compliance and Parental Permission
 
     # Have the student pick a state within the policy region
     Given I select the "Colorado" option in dropdown "user_us_state"
-    Then I press "#submit-update input" using jQuery to load a new page
+    Then I click "#submit-update"
+    Then I wait until element "div#account-update-success" is visible
 
     # Right now, we have to assert that the experiment is active
     # This should be unnecessary in the future, but will not hurt

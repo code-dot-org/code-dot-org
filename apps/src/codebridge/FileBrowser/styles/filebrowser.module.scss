@@ -26,6 +26,11 @@
   align-items: center;
   cursor: pointer;
   font-size: 14px;
+  min-height: 24px;
+
+  &:hover {
+    background-color: $light_gray_800;
+  }
 }
 
 .title {
@@ -57,9 +62,11 @@
   margin-right: 4px;
 }
 
-li .button-kebab {
+.button-kebab {
   display: none;
-  height: 13px;
+  height: 20px;
+  width: 20px;
+  margin: 2px 2px 2px 0;
 }
 
 div.row:hover .button-kebab {
@@ -76,7 +83,8 @@ div.row:hover .button-kebab {
   display: flex;
   justify-content: flex-start;
   overflow: hidden;
-  margin-right: 4px;
+  padding-right: 4px;
+  width: 100%;
 }
 
 .rowIcon {
@@ -98,5 +106,6 @@ div.row:hover .button-kebab {
 }
 
 .dropdownItem {
-  width: 100px;
+  width: auto;
+  min-width: 100px;
 }

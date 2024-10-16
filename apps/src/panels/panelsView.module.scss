@@ -87,6 +87,12 @@
         left: -20px;
       }
 
+      &TopCenter {
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
       &TopRight {
         top: 40px;
         right: -20px;
@@ -97,6 +103,11 @@
         left: -20px;
       }
 
+      &BottomCenter {
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
 
       &BottomRight {
         bottom: 40px;

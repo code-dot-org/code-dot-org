@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Information
+# Retrieval
 
 #### Using **retrieval**, we can provide the chatbot with different types of information to help it respond more accurately. In general we will want to provide information that is...
 
@@ -20,4 +20,7 @@ markdown <<MARKDOWN
 
 ## **Video Addition** 
 #### Insert short video here showing how to add information using retrieval in AI chat lab.
+
+## **Up Next!** 
+#### Try out applying retrieval in Chatbot Lab.
 MARKDOWN

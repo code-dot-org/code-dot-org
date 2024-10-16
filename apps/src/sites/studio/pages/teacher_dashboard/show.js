@@ -6,6 +6,8 @@ import {BrowserRouter} from 'react-router-dom';
 
 import announcementReducer from '@cdo/apps/code-studio/announcementsRedux';
 import hiddenLesson from '@cdo/apps/code-studio/hiddenLessonRedux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import progressRedux from '@cdo/apps/code-studio/progressRedux';
 import verifiedInstructor from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import viewAs from '@cdo/apps/code-studio/viewAsRedux';
 import DCDO from '@cdo/apps/dcdo';
@@ -30,7 +32,6 @@ import teacherSections, {
   setRosterProvider,
   setRosterProviderName,
   setSections,
-  setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sectionProviderName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
@@ -63,6 +64,8 @@ $(document).ready(function () {
     hiddenLesson,
     verifiedInstructor,
     announcementReducer,
+    progressRedux,
+    isRtl,
   });
 
   const store = getStore();
@@ -71,9 +74,6 @@ $(document).ready(function () {
   );
   store.dispatch(setSections(sections));
   store.dispatch(setLocaleCode(localeCode));
-
-  // DCDO Flag - show/hide Lock Section field
-  store.dispatch(setShowLockSectionField(scriptData.showLockSectionField));
 
   const showAITutorTab = canViewStudentAIChatMessages;
 

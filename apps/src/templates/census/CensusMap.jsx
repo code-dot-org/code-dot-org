@@ -21,21 +21,25 @@ class CensusMapInfoWindow extends Component {
     let color = '';
 
     switch (this.props.teachesCs) {
-      case ('YES', 'Y'):
+      case 'YES':
+      case 'Y':
         censusMessage = 'We believe this school offers Computer Science.';
         color = 'green';
         break;
-      case ('NO', 'N'):
+      case 'NO':
+      case 'N':
         censusMessage =
           'We believe this school offers no Computer Science opportunities.';
         color = 'blue';
         break;
-      case ('HISTORICAL_YES', 'HY'):
+      case 'HISTORICAL_YES':
+      case 'HY':
         censusMessage =
           'We believe this school historically offered Computer Science.';
         color = 'green';
         break;
-      case ('HISTORICAL_NO', 'HN'):
+      case 'HISTORICAL_NO':
+      case 'HN':
         censusMessage =
           'We believe this school historically offered no Computer Science opportunities.';
         color = 'blue';
