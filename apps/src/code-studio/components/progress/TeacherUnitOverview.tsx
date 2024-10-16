@@ -222,9 +222,7 @@ export const initializeRedux = (
     );
   }
 
-  if (unitData.has_verified_resources) {
-    dispatch(setVerifiedResources(true));
-  }
+  dispatch(setVerifiedResources(!!unitData.has_verified_resources));
 
   if (unitData.is_verified_instructor) {
     dispatch(setVerified());
