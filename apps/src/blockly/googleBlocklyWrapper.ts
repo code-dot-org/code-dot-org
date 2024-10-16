@@ -234,7 +234,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
   const getWorkspaceCodeHelper = (
     retryCount: number,
-    hiddenWorkspace: ExtendedWorkspace | undefined
+    hiddenWorkspace: GoogleBlockly.Workspace | undefined
   ): string => {
     let workspaceCode = '';
     try {
