@@ -33,7 +33,7 @@ class PotentialTeachersController < ApplicationController
 
   def send_hoc_email(params)
     name = current_user&.name || params[:name]
-    email = current_user&.email.present? ? current_user.email : params[:email]
+    email = current_user&.email.presence || params[:email]
     unit_id = params[:script_id]
     lessons = Unit.get_from_cache(unit_id).lessons
     lesson_plan_html_url = lessons&.first&.lesson_plan_html_url
