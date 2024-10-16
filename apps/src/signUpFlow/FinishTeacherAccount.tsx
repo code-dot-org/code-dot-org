@@ -21,7 +21,10 @@ import {useSchoolInfo} from '../schoolInfo/hooks/useSchoolInfo';
 import {navigateToHref} from '../utils';
 
 import locale from './locale';
-import {EMAIL_SESSION_KEY} from './signUpFlowConstants';
+import {
+  EMAIL_SESSION_KEY,
+  USER_RETURN_TO_SESSION_KEY,
+} from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
 
@@ -35,6 +38,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const [gdprChecked, setGdprChecked] = useState(false);
   const [showGDPR, setShowGDPR] = useState(false);
   const [isGdprLoaded, setIsGdprLoaded] = useState(false);
+  const [userReturnTo, setUserReturnTo] = useState('/home');
 
   useEffect(() => {
     const fetchGdprData = async () => {
@@ -55,6 +59,14 @@ const FinishTeacherAccount: React.FunctionComponent<{
       }
     };
     fetchGdprData();
+
+    const userReturnToHref = sessionStorage.get(
+      USER_RETURN_TO_SESSION_KEY,
+      null
+    );
+    if (userReturnToHref) {
+      setUserReturnTo(userReturnToHref);
+    }
   }, []);
 
   // GDPR is valid if
@@ -90,7 +102,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
       },
     };
     const authToken = await getAuthenticityToken();
-    const response = await fetch('/users', {
+    await fetch('/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -99,11 +111,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
       body: JSON.stringify(signUpParams),
     });
 
-    if (response.ok) {
-      const responseData = await response.json();
-      const redirectHref = responseData['user_return_to'] || '/home';
-      navigateToHref(redirectHref);
-    }
+    navigateToHref(userReturnTo);
   };
 
   const onGDPRChange = (): void => {
