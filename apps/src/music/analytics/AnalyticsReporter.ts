@@ -31,6 +31,7 @@ const blockFeatureList = [
   BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
   'functions',
   BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
+  BlockTypes.PLAY_PATTERN_AI_AT_CURRENT_LOCATION_SIMPLE2,
 ];
 
 const triggerBlocks: string[] = [
@@ -220,14 +221,19 @@ export default class AnalyticsReporter {
     this.trackUIEvent('Pattern AI panel opened');
   }
 
-  onGenerateAiPatternStart() {
-    this.trackUIEvent('Generate AI pattern start');
+  onGenerateAiPatternStart(temperature: number) {
+    this.trackUIEvent('Generate AI pattern start', {temperature});
   }
 
-  onGenerateAiPatternEnd(timeSeconds: number, isInitialGenerate: boolean) {
+  onGenerateAiPatternEnd(
+    timeSeconds: number,
+    isInitialGenerate: boolean,
+    temperature: number
+  ) {
     this.trackUIEvent('Generate AI pattern end', {
       timeSeconds,
       isInitialGenerate,
+      temperature,
     });
   }
 
