@@ -30,7 +30,7 @@ export const openMoveFolderPrompt = async ({
   const folder = projectFolders[folderId];
 
   // iterate over all the folders in the project AND the default folder, which isn't actually in the list.
-  const validFolders: GenericDropdownProps['items'] = [
+  const possibleDestinationFolders: GenericDropdownProps['items'] = [
     {id: DEFAULT_FOLDER_ID},
     ...Object.values(projectFolders),
   ]
@@ -51,8 +51,8 @@ export const openMoveFolderPrompt = async ({
   const results = await dialogControl?.showDialog({
     type: DialogType.GenericDropdown,
     title: codebridgeI18n.moveFolderPrompt(),
-    selectedValue: validFolders[0].value,
-    items: validFolders,
+    selectedValue: possibleDestinationFolders[0].value,
+    items: possibleDestinationFolders,
     dropdownLabel: '',
   });
 
