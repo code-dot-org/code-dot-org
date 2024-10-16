@@ -10,6 +10,7 @@ Parameters:
 Resources:
   AiDiffKnowledgeBaseWithAoss:
     Type: AWS::Bedrock::KnowledgeBase
+    DependsOn: CreateVectorIndex
     Properties:
       Name: !Sub ai-diff-${Environment}
       Description: "Embedded lesson plans and supporting documents for contextual differentiation chat with AI Teaching assistant"
@@ -31,6 +32,7 @@ Resources:
             VectorField: "ai-diff-vector-field"
             TextField: "text"
             MetadataField: "metadata"
+
   AiDiffDataSource:
     Type: AWS::Bedrock::DataSource
     Properties:
@@ -43,6 +45,7 @@ Resources:
         S3Configuration:
           BucketArn: !GetAtt AiDiffS3Bucket.Arn
           InclusionPrefixes: ["live/"]
+
   AiDiffS3Bucket:
     Type: AWS::S3::Bucket
     Properties:
@@ -54,6 +57,175 @@ Resources:
           - Id: "ExpireOldVersions"
             Status: Enabled
             NoncurrentVersionExpirationInDays: 365
+
+  CreateVectorIndex:
+    Type: Custom::CreateVectorIndex
+    Properties:
+      ServiceToken: !GetAtt CreateVectorIndexCustomResourceLambda.Arn
+      OpenSearchEndpoint: !GetAtt AiDiffCollection.CollectionEndpoint
+      VectorIndexName: ai-diff-index
+      VectorFieldName: ai-diff-vector-field
+
+  CreateVectorIndexCustomResourceLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      Handler: index.handler
+      Role: !GetAtt CreateVectorIndexCustomResourceLambdaRole.Arn
+      Runtime: nodejs18.x
+      Code:
+        ZipFile: |
+          const https = require('https');
+
+          export const handler = async (event, context) => {
+            console.log('Received event:', JSON.stringify(event, null, 2));
+
+            const openSearchEndpoint = event.ResourceProperties.OpenSearchEndpoint;
+            const vectorIndexName = event.ResourceProperties.VectorIndexName;
+            const vectorFieldName = event.ResourceProperties.VectorFieldName;
+            // const openSearchEndpoint = '2ujmstqrao8qec25luhe.us-east-1.aoss.amazonaws.com';
+            // const vectorIndexName = 'ai-diff-index';
+            // const vectorFieldName = 'ai-diff-vector-field';
+
+            const requestBody = JSON.stringify({
+              settings: {
+                index: {
+                  knn: true,
+                  "knn.algo_param.ef_search": 512
+                }
+              },
+              mappings: {
+                properties: {
+                  [vectorFieldName]: {
+                    type: "knn_vector",
+                    dimension: 1024,
+                    method: {
+                      name: "hnsw",
+                      engine: "faiss",
+                      parameters: {},
+                      space_type: "l2"
+                    }
+                  },
+                  text: {
+                    type: "text",
+                    index: "true"
+                  },
+                  metadata: {
+                    type: "text",
+                    index: "false"
+                  }
+                }
+              }
+            });
+
+            const options = {
+              hostname: openSearchEndpoint,
+              path: `/${vectorIndexName}`,
+              method: 'PUT',
+              headers: {
+                'Content-Type': 'application/json',
+                'Content-Length': Buffer.byteLength(requestBody)
+              }
+            };
+
+            try {
+              const response = await sendRequest(options, requestBody);
+              console.log('Response:', response);
+
+              // Send success response to CloudFormation
+              await sendCloudFormationResponse(event, context, 'SUCCESS', { Response: response });
+            } catch (error) {
+              console.error('Error:', error);
+
+              // Send failure response to CloudFormation
+              await sendCloudFormationResponse(event, context, 'FAILED', { Error: error.message });
+            }
+          };
+
+          // Helper function to send HTTPS requests
+          const sendRequest = (options, body) => {
+            return new Promise((resolve, reject) => {
+              const req = https.request(options, (res) => {
+                let data = '';
+
+                res.on('data', (chunk) => {
+                  data += chunk;
+                });
+
+                res.on('end', () => {
+                  if (res.statusCode >= 200 && res.statusCode < 300) {
+                    resolve(data);
+                  } else {
+                    reject(new Error(`Request failed with status code ${res.statusCode}: ${data}`));
+                  }
+                });
+              });
+
+              req.on('error', (error) => reject(error));
+              req.write(body);
+              req.end();
+            });
+          };
+
+          // Helper function to respond to CloudFormation
+          const sendCloudFormationResponse = (event, context, status, data) => {
+            const responseBody = JSON.stringify({
+              Status: status,
+              Reason: data.Error || 'See the details in CloudWatch Log Stream: ' + context.logStreamName,
+              PhysicalResourceId: context.logStreamName,
+              StackId: event.StackId,
+              RequestId: event.RequestId,
+              LogicalResourceId: event.LogicalResourceId,
+              Data: data
+            });
+
+            const options = {
+              hostname: new URL(event.ResponseURL).hostname,
+              path: new URL(event.ResponseURL).pathname,
+              method: 'PUT',
+              headers: {
+                'Content-Type': '',
+                'Content-Length': Buffer.byteLength(responseBody)
+              }
+            };
+
+            return new Promise((resolve, reject) => {
+              const req = https.request(options, (res) => {
+                res.on('end', resolve);
+                res.on('error', reject);
+              });
+
+              req.write(responseBody);
+              req.end();
+            });
+          };
+      Timeout: 10
+
+  CreateVectorIndexCustomResourceLambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: "Allow"
+            Principal:
+              Service: "lambda.amazonaws.com"
+            Action: "sts:AssumeRole"
+      Policies:
+        - PolicyName: "CreateVectorIndexCustomResourceLambdaPolicy"
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: "Allow"
+                Action:
+                  - "logs:CreateLogGroup"
+                  - "logs:CreateLogStream"
+                  - "logs:PutLogEvents"
+                Resource: "*"
+              # - Effect: "Allow"
+              #   Action:
+              #     - "opensearch:ESHttpPut"
+              #   Resource: "*"
+
   AiDiffCollection:
     Type: 'AWS::OpenSearchServerless::Collection'
     Properties:
@@ -140,7 +312,7 @@ Resources:
   AiDiffKnowledgeBaseRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: "AiDiffKnowledgeBaseRole"
+      RoleName: !Sub "AiDiffKnowledgeBaseRole_${Environment}"
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
         Statement:
