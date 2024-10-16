@@ -6,7 +6,6 @@ import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {
   navigateToNextLevel,
   sendSubmitReport,
-  sendSuccessReport,
 } from '@cdo/apps/code-studio/progressRedux';
 import {
   getCurrentLevel,
@@ -15,6 +14,7 @@ import {
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {
   isPredictAnswerLocked,
   setPredictResponse,
@@ -28,7 +28,6 @@ import {ThemeContext} from '@cdo/apps/lab2/views/ThemeWrapper';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {navigateToHref, linkWithQueryParams} from '@cdo/apps/utils';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import commonI18n from '@cdo/locale';
 
@@ -107,9 +106,6 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
   const shouldValidateBeDisabled = isLoadingEnvironment || isRunning;
 
-  const scriptName =
-    useAppSelector(state => state.progress.scriptName) || undefined;
-
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
   const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
 
@@ -130,27 +126,6 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const {theme} = useContext(ThemeContext);
 
   const vertical = layout === 'vertical';
-
-  const sendReportIfNeeded = () => {
-    if (!hasConditions) {
-      // If there are no conditions, we send a success report.
-      dispatch(sendSuccessReport(appType || ''));
-    }
-  };
-
-  const onFinish = () => {
-    sendReportIfNeeded();
-    // If there's no script, we just send a report. Otherwise,
-    // we navigate to the main script page.
-    if (scriptName) {
-      navigateToHref(linkWithQueryParams(`/s/${scriptName}`));
-    }
-  };
-
-  const onContinue = () => {
-    sendReportIfNeeded();
-    onNextPanel();
-  };
 
   const onNextPanel = useCallback(() => {
     if (beforeNextLevel) {
@@ -248,7 +223,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
       return {
         showNavigation,
         navigationText: commonI18n.continue(),
-        handleNavigation: onContinue,
+        handleNavigation: () => dispatch(continueOrFinishLesson()),
         navigationIcon: {iconName: 'arrow-right', iconStyle: 'solid'},
       };
     } else {
@@ -256,7 +231,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
       return {
         showNavigation,
         navigationText: commonI18n.finish(),
-        handleNavigation: onFinish,
+        handleNavigation: () => dispatch(continueOrFinishLesson()),
       };
     }
   };

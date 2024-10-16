@@ -1,4 +1,4 @@
-import {AnyAction, ThunkAction} from '@reduxjs/toolkit';
+import {AnyAction, ThunkAction, ThunkDispatch} from '@reduxjs/toolkit';
 
 import {
   navigateToNextLevel,
@@ -8,6 +8,7 @@ import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {RootState} from '@cdo/apps/types/redux';
 
 import {shareLab2Project} from '../header/lab2HeaderShare';
+import {LevelProperties} from '../types';
 
 /**
  * Handles all logic for continuing lesson progression, either to the next level or finishing the lesson.
@@ -23,22 +24,32 @@ export default (): ThunkAction<void, RootState, undefined, AnyAction> =>
     // If there are no validation conditions, go ahead and send a success report when we continue.
     // Otherwise, success reports are managed by the ProgressContainer and ProgressManager.
     if (!getState().lab.validationState.hasConditions) {
-      dispatch(sendSuccessReport(levelProperties.appName));
-    }
-
-    // If we are not at the last level, continue to the next level.
-    if (nextLevelId(getState()) !== undefined) {
-      dispatch(navigateToNextLevel());
-      return;
-    }
-
-    const {finishUrl, finishDialog} = levelProperties;
-    // If we have a finish URL, show the finish dialog if present, or redirect to the finish URL.
-    if (finishUrl) {
-      if (finishDialog) {
-        shareLab2Project(finishDialog, finishUrl);
-      } else {
-        window.location.href = finishUrl;
-      }
+      dispatch(sendSuccessReport(levelProperties.appName)).then(() =>
+        handleNavigation(levelProperties, dispatch, getState)
+      );
+    } else {
+      handleNavigation(levelProperties, dispatch, getState);
     }
   };
+
+function handleNavigation(
+  levelProperties: LevelProperties,
+  dispatch: ThunkDispatch<RootState, undefined, AnyAction>,
+  getState: () => RootState
+) {
+  // If we are not at the last level, continue to the next level.
+  if (nextLevelId(getState()) !== undefined) {
+    dispatch(navigateToNextLevel());
+    return;
+  }
+
+  const {finishUrl, finishDialog} = levelProperties;
+  // If we have a finish URL, show the finish dialog if present, or redirect to the finish URL.
+  if (finishUrl) {
+    if (finishDialog) {
+      shareLab2Project(finishDialog, finishUrl);
+    } else {
+      window.location.href = finishUrl;
+    }
+  }
+}

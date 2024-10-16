@@ -299,6 +299,12 @@ const progressSlice = createSlice({
 
 // Thunks
 type ProgressThunkAction = ThunkAction<void, RootState, undefined, AnyAction>;
+type AsyncProgressThunkAction = ThunkAction<
+  Promise<void>,
+  RootState,
+  undefined,
+  AnyAction
+>;
 
 export const queryUserProgress =
   (userId: string, mergeProgress: boolean = true): ProgressThunkAction =>
@@ -354,9 +360,9 @@ export function navigateToNextLevel(): ProgressThunkAction {
 
 // The user has successfully completed the level and the page
 // will not be reloading. Currently only used by Lab2 labs.
-export function sendSuccessReport(appType: string): ProgressThunkAction {
+export function sendSuccessReport(appType: string): AsyncProgressThunkAction {
   return (dispatch, getState) => {
-    sendReportHelper(appType, TestResults.ALL_PASS, dispatch, getState);
+    return sendReportHelper(appType, TestResults.ALL_PASS, dispatch, getState);
   };
 }
 
@@ -365,9 +371,9 @@ export function sendSuccessReport(appType: string): ProgressThunkAction {
 export function sendProgressReport(
   appType: string,
   result: TestResults
-): ProgressThunkAction {
+): AsyncProgressThunkAction {
   return (dispatch, getState) => {
-    sendReportHelper(appType, result, dispatch, getState);
+    return sendReportHelper(appType, result, dispatch, getState);
   };
 }
 
@@ -431,11 +437,11 @@ function sendReportHelper(
   const state = getState().progress;
   const levelId = state.currentLevelId;
   if (!state.currentLessonId || !levelId) {
-    return;
+    return Promise.resolve();
   }
   const scriptLevelId = getCurrentScriptLevelId(getState());
   if (!scriptLevelId) {
-    return;
+    return Promise.resolve();
   }
 
   // The server does not appear to use the user ID parameter,
@@ -450,12 +456,13 @@ function sendReportHelper(
     ...extraData,
   };
 
-  fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}`, {
+  return fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}`, {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
     },
     body: JSON.stringify(data),
+    keepalive: true,
   }).then(response => {
     if (response.ok && levelId !== null) {
       // Update the progress store by merging in this
