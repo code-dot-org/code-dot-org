@@ -2,6 +2,7 @@ import {CodeBridgeConsoleState} from '@codebridge/redux/consoleRedux';
 
 import {AichatState} from '@cdo/apps/aichat/redux/aichatRedux';
 import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import {CalendarState} from '@cdo/apps/code-studio/calendarRedux';
 import {HeaderReduxState} from '@cdo/apps/code-studio/headerRedux';
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
 import {JavalabConsoleState} from '@cdo/apps/javalab/redux/consoleRedux';
@@ -49,4 +50,5 @@ export interface RootState {
   predictLevel: PredictLevelState;
   progress: ProgressState;
   teacherSections: TeacherSectionState;
+  calendar: CalendarState;
 }
