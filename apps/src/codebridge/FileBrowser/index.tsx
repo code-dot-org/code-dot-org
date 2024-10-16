@@ -70,6 +70,7 @@ import {
 } from './types';
 
 import moduleStyles from './styles/filebrowser.module.scss';
+import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 type FilesComponentProps = {
   files: ProjectType['files'];
@@ -217,6 +218,7 @@ const InnerFileBrowser = React.memo(
                         tooltipId: `folder-tooltip-${f.id}`,
                         size: 's',
                         direction: 'onBottom',
+                        className: darkModeStyles.tooltipBottom,
                       }}
                       tooltipOverlayClassName={moduleStyles.nameContainer}
                       className={moduleStyles.nameContainer}

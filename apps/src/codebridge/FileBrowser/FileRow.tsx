@@ -21,6 +21,7 @@ import StartModeFileDropdownOptions from './StartModeFileDropdownOptions';
 import {renameFilePromptType, setFileType} from './types';
 
 import moduleStyles from './styles/filebrowser.module.scss';
+import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 interface FileRowProps {
   file: ProjectFile;
@@ -108,6 +109,7 @@ const FileRow: React.FunctionComponent<FileRowProps> = ({
             tooltipId: `file-tooltip-${file.id}`,
             size: 's',
             direction: 'onBottom',
+            className: darkModeStyles.tooltipBottom,
           }}
           tooltipOverlayClassName={moduleStyles.nameContainer}
           className={moduleStyles.nameContainer}
