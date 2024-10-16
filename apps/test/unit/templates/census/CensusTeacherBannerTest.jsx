@@ -30,18 +30,12 @@ describe('CensusTeacherBannerTest', () => {
     schoolYear: 2024,
   };
 
-  beforeEach(() => {
-    //jest.clearAllMocks();
-    //window.fetch = jest.fn();
-  });
-
   function renderDefault(propOverrides = {}) {
     render(<CensusTeacherBanner {...defaultProps} {...propOverrides} />);
   }
 
   it('displays the school name and census question by default', async () => {
     renderDefault();
-    //screen.debug();
     await screen.findByText('Add Test School to our map!');
 
     await screen.findByText(
@@ -84,8 +78,6 @@ describe('CensusTeacherBannerTest', () => {
       });
 
     act(() => {
-      //screen.getByRole('radio', {value: 'SOME'}).click();
-      //screen.getByRole('radio', {value: 'inclass'}).click();
       screen.getByLabelText("Yes, we've done 20 hours.").click();
       screen.getByLabelText('In a classroom').click();
       screen.getByText('Add my school to the map!').click();
