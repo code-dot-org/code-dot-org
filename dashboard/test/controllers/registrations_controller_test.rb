@@ -589,7 +589,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     params_with_panda_name = set_up_partial_registration(@default_params.update(name: panda_panda))
 
     assert_creates(User) do
-      post :create, params: {user: params_with_panda_name}
+      post :create, params: {new_sign_up: true, user: params_with_panda_name}
     end
   end
 
