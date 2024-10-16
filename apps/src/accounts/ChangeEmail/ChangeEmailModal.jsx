@@ -158,6 +158,7 @@ export default class ChangeEmailModal extends React.Component {
             userType={userType}
             isPasswordRequired={isPasswordRequired}
             onChange={this.onFormChange}
+            onSubmit={this.save}
           />
           {STATE_UNKNOWN_ERROR === saveState && (
             <Alert

@@ -15,4 +15,5 @@ export interface ChangeEmailFormProps {
   isPasswordRequired: boolean;
   disabled?: boolean;
   onChange: (value: Record<string, unknown>) => void;
+  onSubmit: () => void;
 }

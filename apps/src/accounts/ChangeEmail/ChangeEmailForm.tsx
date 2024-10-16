@@ -16,6 +16,7 @@ import styles from './formStyle.module.scss';
 
 export const ChangeEmailForm: React.FC<ChangeEmailFormProps> = ({
   onChange,
+  onSubmit,
   values,
   validationErrors,
   disabled,
@@ -50,6 +51,12 @@ export const ChangeEmailForm: React.FC<ChangeEmailFormProps> = ({
     });
   };
 
+  const submitOnEnter = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter' && !disabled) {
+      onSubmit();
+    }
+  };
+
   return (
     <form className={styles.form}>
       <TextField
@@ -58,6 +65,7 @@ export const ChangeEmailForm: React.FC<ChangeEmailFormProps> = ({
         label={i18n.changeEmailModal_newEmail_label()}
         errorMessage={touched ? validationErrors.newEmail : undefined}
         onChange={onNewEmailChange}
+        onKeyDown={submitOnEnter}
         autoComplete="off"
         maxLength={255}
         value={values.newEmail}
@@ -70,6 +78,7 @@ export const ChangeEmailForm: React.FC<ChangeEmailFormProps> = ({
           label={i18n.changeEmailModal_currentPassword_label()}
           errorMessage={touched ? validationErrors.currentPassword : undefined}
           onChange={onCurrentPasswordChange}
+          onKeyDown={submitOnEnter}
           maxLength={255}
           value={values.currentPassword}
           disabled={disabled}

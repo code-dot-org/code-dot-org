@@ -153,6 +153,57 @@ describe('ChangeEmailForm', () => {
     });
   });
 
+  describe('calls onSubmit on pressing Enter key', () => {
+    let onSubmit, wrapper;
+
+    beforeEach(() => {
+      onSubmit = sinon.spy();
+      wrapper = mount(
+        <ChangeEmailForm {...DEFAULT_PROPS} onSubmit={onSubmit} />
+      );
+    });
+
+    it('when the enter key is pressed in the email field', () => {
+      expect(onSubmit).not.to.have.been.called;
+
+      wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Enter'});
+
+      expect(onSubmit).to.have.been.calledOnce;
+      expect(onSubmit.firstCall.args).to.be.empty;
+    });
+
+    it('when the enter key is pressed in the password field', () => {
+      expect(onSubmit).not.to.have.been.called;
+
+      wrapper.find(PASSWORD_SELECTOR).simulate('keydown', {key: 'Enter'});
+
+      expect(onSubmit).to.have.been.calledOnce;
+      expect(onSubmit.firstCall.args).to.be.empty;
+    });
+
+    it('but not when other keys are pressed', () => {
+      expect(onSubmit).not.to.have.been.called;
+
+      wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'a'});
+      wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Backspace'});
+      wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Escape'});
+
+      expect(onSubmit).not.to.have.been.called;
+    });
+
+    it('and not when the form is disabled', () => {
+      wrapper.setProps({userType: 'teacher'});
+      wrapper.setProps({disabled: true});
+      expect(onSubmit).not.to.have.been.called;
+
+      wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Enter'});
+      wrapper.find(PASSWORD_SELECTOR).simulate('keydown', {key: 'Enter'});
+      wrapper.find(OPT_IN_SELECTOR).simulate('keydown', {key: 'Enter'});
+
+      expect(onSubmit).not.to.have.been.called;
+    });
+  });
+
   describe('when disabled', () => {
     let wrapper;
 
