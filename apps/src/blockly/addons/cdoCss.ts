@@ -1,7 +1,7 @@
+import fontConstants from '@cdo/apps/fontConstants';
 import color from '@cdo/apps/util/color';
 
 import {BlocklyWrapperType} from '../types';
-
 export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
   blocklyWrapper.Css.register(
     `.fieldGridDropDownContainer.blocklyMenu .blocklyMenuItem {
@@ -75,6 +75,9 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     .k1ColourDropdown>tr>td {
       height: 35px;
       width: 45px;
+    }
+    .blocklyDropDownDiv .blocklyMenu {
+      font-family: ${fontConstants['main-font']};
     }
     `
   );
