@@ -250,6 +250,14 @@ module ScriptConstants
     KODEA_PD_2021 = 'kodea-pd-2021'.freeze,
     SELF_PACED_PL_K5_2024_1 = 'self-paced-pl-k5-2024-1'.freeze,
     SELF_PACED_PL_K5_2024_2 = 'self-paced-pl-k5-2024-2'.freeze,
+    SELF_PACED_PL_CSD_2024 = 'self-paced-pl-csd-2024'.freeze,
+    SELF_PACED_PL_CSD1_2024 = 'self-paced-pl-csd1-2024'.freeze,
+    SELF_PACED_PL_CSD2_2024 = 'self-paced-pl-csd2-2024'.freeze,
+    SELF_PACED_PL_CSD3_2024 = 'self-paced-pl-csd3-2024'.freeze,
+    SELF_PACED_PL_CSD4_2024 = 'self-paced-pl-csd4-2024'.freeze,
+    SELF_PACED_PL_AIML_2023 = 'self-paced-pl-aiml-2023'.freeze,
+    SELF_PACED_PL_AIML1 = 'self-paced-pl-aiml1'.freeze,
+    SELF_PACED_PL_AIML2 = 'self-paced-pl-aiml2'.freeze,
   ].freeze
 
   ADDITIONAL_I18N_UNITS = [
