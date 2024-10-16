@@ -47,7 +47,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     test_matrix.each do |traits, compliance|
       user = create(*traits)
       actual = Policies::ChildAccount.compliant?(user)
-      failure_msg = "Expected compliant?(#{traits}) to be #{compliance} but it was #{actual}"
+      failure_msg = "Expected compliant?(#{traits}) to be #{compliance} but it was #{actual}\nDAYNE\nuser=#{user}\nage=#{user.age}"
       failures.append(failure_msg) if compliance != actual
     end
     assert failures.empty?, failures.join("\n")
