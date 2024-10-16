@@ -2,7 +2,7 @@ module Cdo
   # Lazily loads global configurations for regional pages
   module GlobalEdition
     # Freezes an entire complex data structure
-    def deep_freeze(data)
+    def self.deep_freeze(data)
       if data.is_a?(Enumerable)
         data.each do |item|
           deep_freeze(item)
@@ -19,13 +19,13 @@ module Cdo
     end
 
     # Retrieves a list a global region names.
-    REGIONS = Dir.glob('*.yml', base: CDO.dir('config', 'global')).map {|f| File.basename(f, '.yml')}.freeze
+    REGIONS = Dir.glob('*.yml', base: CDO.dir('config', 'global_editions')).map {|f| File.basename(f, '.yml')}.freeze
 
     # Returns the parsed configuration for the given region.
     def self.load_config(region)
       raise ArgumentError, "Region #{region} is not available" unless REGIONS.include?(region.to_s)
-      configs = YAML.load_file(CDO.dir('config', 'global', "#{region}.yml")) || {}
-      configs.deep_symbolize_keys
+      config = YAML.load_file(CDO.dir('config', 'global_editions', "#{region}.yml")) || {}
+      deep_freeze(config.deep_symbolize_keys)
     end
   end
 end
