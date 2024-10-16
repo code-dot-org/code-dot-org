@@ -52,7 +52,7 @@ $text-offset-y: 5cqw;
       background-position: center;
 
       &Current {
-        animation: fade-in 2s;
+        animation: fade-in 0.5s;
       }
     }
 
@@ -62,7 +62,7 @@ $text-offset-y: 5cqw;
       width: 40%;
       position: absolute;
       padding: 1.8cqw 2.6cqw;
-      animation: fade-in 4s;
+      animation: fade-in 1.5s;
       font-size: 1.6cqw;
       line-height: 1.4em;
 
@@ -140,7 +140,7 @@ $text-offset-y: 5cqw;
       position: absolute;
       right: 0;
       height: 38px;
-      animation: fade-in 9s, delay-pointer-events 9s;
+      animation: fade-in 3s, delay-pointer-events 3s;
     }
 
     .bubble {

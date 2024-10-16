@@ -168,7 +168,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
             <div>
               <div className={styles.invisiblePlaceholder}>{plainText}</div>
               <Typist
-                startDelay={2500}
+                startDelay={1500}
                 avgTypingDelay={35}
                 stdTypingDelay={15}
                 cursor={{show: false}}
