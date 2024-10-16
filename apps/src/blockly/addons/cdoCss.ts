@@ -78,6 +78,7 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     }
     .blocklyDropDownDiv .blocklyMenu {
       font-family: ${fontConstants['main-font']};
+      font-weight: 400 !important; // Noto Sans Math only supports the normal font-weight
     }
     `
   );
