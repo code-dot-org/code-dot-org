@@ -216,7 +216,22 @@ export default class AnalyticsReporter {
     this.trackUIEvent('Validation attempt', {passed, message});
   }
 
-  private trackUIEvent(eventType: string, payload: object) {
+  onOpenPatternAiPanel() {
+    this.trackUIEvent('Pattern AI panel opened');
+  }
+
+  onGenerateAiPatternStart() {
+    this.trackUIEvent('Generate AI pattern start');
+  }
+
+  onGenerateAiPatternEnd(timeSeconds: number, isInitialGenerate: boolean) {
+    this.trackUIEvent('Generate AI pattern end', {
+      timeSeconds,
+      isInitialGenerate,
+    });
+  }
+
+  private trackUIEvent(eventType: string, payload: object = {}) {
     const logMessage = `${eventType}. Payload: ${JSON.stringify(payload)}`;
 
     if (!this.session) {

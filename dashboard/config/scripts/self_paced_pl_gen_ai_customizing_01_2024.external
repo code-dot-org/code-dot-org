@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Introducing AI Chat Lab
 
-<img src="https://images.code.org/e2fe8ed132758ba6031037e6462de119-Screenshot 2024-08-30 at 2.31.27 PM.png" alt="chatbot lab level" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+<img src="https://images.code.org/e2fe8ed132758ba6031037e6462de119-Screenshot 2024-08-30 at 2.31.27 PM.png" alt="chatbot lab level" width="300px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
 
 
 #### **In this unit, students will learn how to use and customize their own chatbot using AI Chat Lab**. 
@@ -13,6 +13,8 @@ markdown <<MARKDOWN
 #### The chatbots students are working with are in devleopment, and not finished products like ChatGPT or customer support chatbots on a website. So, they need our help to make them better. 
 
 #### This will be our main goal in this unit - to learn techniques to improve chatbots and models once they’ve already been created.
+
+<br>
 
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
