@@ -12,8 +12,6 @@ import GoogleBlockly, {
 import {commonI18n} from '@cdo/apps/types/locale';
 import experiments from '@cdo/apps/util/experiments';
 
-import {getStore} from '@cdo/apps/redux';
-
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
