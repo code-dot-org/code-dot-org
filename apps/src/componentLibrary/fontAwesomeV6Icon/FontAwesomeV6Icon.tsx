@@ -1,9 +1,7 @@
 import classNames from 'classnames';
-import React, {AriaAttributes} from 'react';
+import React, {HTMLAttributes} from 'react';
 
-import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
-
-export interface FontAwesomeV6IconProps extends AriaAttributes {
+export interface FontAwesomeV6IconProps extends HTMLAttributes<HTMLElement> {
   /**
    * Icon style.
    * Style vs Figma font-weight:
@@ -62,26 +60,22 @@ const FontAwesomeV6Icon: React.FunctionComponent<FontAwesomeV6IconProps> = ({
   className,
   title,
   animationType,
-  ...rest
-}) => {
-  const ariaProps = getAriaPropsFromProps(rest);
-
-  return (
-    <i
-      data-testid="font-awesome-v6-icon"
-      className={classNames(
-        iconFamily && `fa-${iconFamily}`,
-        iconStyle && `fa-${iconStyle}`,
-        iconName && `fa-${iconName}`,
-        // Default icon style is solid, but only when no iconFamily prop is provided
-        !iconFamily && !iconStyle && 'fa-solid',
-        animationType && `fa-${animationType}`,
-        className
-      )}
-      title={title}
-      {...ariaProps}
-    />
-  );
-};
+  ...HTMLAttributes
+}) => (
+  <i
+    data-testid="font-awesome-v6-icon"
+    className={classNames(
+      iconFamily && `fa-${iconFamily}`,
+      iconStyle && `fa-${iconStyle}`,
+      iconName && `fa-${iconName}`,
+      // Default icon style is solid, but only when no iconFamily prop is provided
+      !iconFamily && !iconStyle && 'fa-solid',
+      animationType && `fa-${animationType}`,
+      className
+    )}
+    title={title}
+    {...HTMLAttributes}
+  />
+);
 
 export default FontAwesomeV6Icon;
