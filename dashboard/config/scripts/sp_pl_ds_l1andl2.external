@@ -6,11 +6,11 @@ markdown <<MARKDOWN
 # Data, Data, Data
 
 
-#### In Lessons 1 and 2, students explore the foundational role of data in our everyday lives and how it can be used to make informed decisions, starting with a simple exercise of identifying data in a pizza party scenario and progressing to hands-on work with real datasets to solve practical problems. 
+#### In Lessons 2 and 3, students explore the foundational role of data in our everyday lives and how it can be used to make informed decisions, starting with a simple exercise of identifying data in a pizza party scenario and progressing to hands-on work with real datasets to solve practical problems. 
 
 ---
 
-## Lesson 1: Introduction to Data Science 
+## Lesson 2: Introduction to Data Science 
 
 <img src="https://images.code.org/26266fb4b5ea855ad8166b356fca74d2-image-1724268314954.png" alt="pizza icon" width="250px"  style="border-radius:10px; float:right; margin: 0 20px 40px 40px;">
 
@@ -22,7 +22,7 @@ markdown <<MARKDOWN
 
 <div style="clear:both;"></div>
 
-## Lesson 2: Making Sense of Data 
+## Lesson 3: Making Sense of Data 
 <img src="https://images.code.org/b5e2a67a75681390f709e468c050cbd3-image-1724268380001.png" alt="data symbols icon" width="250px" style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
 
 #### Students analyze a spreadsheet using the Three Reads routine to explore a dataset on pizza choices, then use it to answer questions for planning a school event.
@@ -38,7 +38,7 @@ markdown <<MARKDOWN
 > - #### **data** - any form of organized information, such as words, numbers, pictures, etc.
 > - #### **data science** - making meaning from data
 
-#### In the next few levels, we will dive deeper into the activity from **Lesson 2**. 
+#### In the next few levels, we will dive deeper into the activity from **Lesson 3**. 
 
 
 MARKDOWN

@@ -1,0 +1,36 @@
+name 'SP-PL-DS-bar_charts'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Creating a Stacked Bar Chart 
+
+
+## Step 1: Group the data, then sum the category 
+
+<img src="https://images.code.org/5ebb124f71edb19aff0c57a1706bf43e-image-1728578370902.png" alt="design process graph of the cycle" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
+
+#### ***groupby()*** and ***unstack()*** *work together to prepare the data for the stacked bar chart*
+
+<img src="https://images.code.org/aa0907776a9747c89de7626ca0b28740-image-1728578617328.png" alt="design process graph of the cycle" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+
+## Step 2: Create a stacked bar chart
+
+<img src="https://images.code.org/c0623f0673a8e9a0f06ae36dae3001e2-image-1728578701312.png" alt="design process graph of the cycle" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
+
+#### ***plot(kind= 'bar', stacked= True)*** *creates a stacked bar chart*
+
+<br>
+
+## Step 3: Add labels and titles
+
+<img src="https://images.code.org/2e7a870cf992d9875d2e4768c242735a-image-1728578913277.png" alt="design process graph of the cycle" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+
+
+
+
+MARKDOWN

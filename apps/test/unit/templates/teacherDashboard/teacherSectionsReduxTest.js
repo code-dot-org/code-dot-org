@@ -267,6 +267,12 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(nextState.selectedSectionId, sections[0].id);
     });
 
+    it('does not set selectedSectionId if passed a single section and autoSelect false', () => {
+      const action = setSections(sections.slice(0, 1), false);
+      const nextState = reducer(startState, action);
+      assert.strictEqual(nextState.selectedSectionId, NO_SECTION);
+    });
+
     it('throws rather than let us destroy data', () => {
       const action = setSections(sections);
       const nextState = reducer(startState, action);

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "music-lab-advanced-model-sandbox",
-    "serialized_at": "2024-09-19 21:25:07 UTC",
+    "serialized_at": "2024-10-14 21:22:01 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -156,6 +156,16 @@
       }
     },
     {
+      "key": "8bc79c22-f506-4bb0-b53a-772b6f2aac55",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8bc79c22-f506-4bb0-b53a-772b6f2aac55",
+        "lesson_activity.key": "f6a5790c-77d7-4d7a-80f5-4c6d1f26a139"
+      }
+    },
+    {
       "key": "023b8e18-079f-430a-8b4b-a895efcde36d",
       "position": 1,
       "properties": {
@@ -184,6 +194,16 @@
         "activity_section.key": "5c8d9a37-6527-4c78-a3d9-28f1cd39debd",
         "lesson_activity.key": "fea08b11-798f-4e6b-afe1-b175e978ad98"
       }
+    },
+    {
+      "key": "3618500a-a799-4be0-a983-80c4d23ba459",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3618500a-a799-4be0-a983-80c4d23ba459",
+        "lesson_activity.key": "fea08b11-798f-4e6b-afe1-b175e978ad98"
+      }
     }
   ],
   "script_levels": [
@@ -193,6 +213,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "advanced-model-sandbox-variables-1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -210,10 +233,61 @@
     },
     {
       "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "advanced-model-sandbox-variables-2"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "advanced-model-sandbox-variables-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "8bc79c22-f506-4bb0-b53a-772b6f2aac55"
+      },
+      "level_keys": [
+        "advanced-model-sandbox-variables-2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "advanced-model-sandbox-variables-3"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "advanced-model-sandbox-variables-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "8bc79c22-f506-4bb0-b53a-772b6f2aac55"
+      },
+      "level_keys": [
+        "advanced-model-sandbox-variables-3"
+      ]
+    },
+    {
+      "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "advanced-model-sandbox-loops-1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -230,11 +304,14 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "advanced-model-sandbox-conditionals-1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -251,11 +328,14 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "advanced-model-sandbox-functions-1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -270,6 +350,27 @@
       "level_keys": [
         "advanced-model-sandbox-functions-1"
       ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "advanced-model-sandbox-functions-2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "3618500a-a799-4be0-a983-80c4d23ba459"
+      },
+      "level_keys": [
+        "advanced-model-sandbox-functions-2"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -283,6 +384,30 @@
         "lesson_group.key": "",
         "script.name": "music-lab-advanced-model-sandbox",
         "activity_section.key": "a829c613-6045-46d9-bf94-cbc2f5783511"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "advanced-model-sandbox-variables-2",
+        "script_level.level_keys": [
+          "advanced-model-sandbox-variables-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "8bc79c22-f506-4bb0-b53a-772b6f2aac55"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "advanced-model-sandbox-variables-3",
+        "script_level.level_keys": [
+          "advanced-model-sandbox-variables-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "8bc79c22-f506-4bb0-b53a-772b6f2aac55"
       }
     },
     {
@@ -319,6 +444,18 @@
         "lesson_group.key": "",
         "script.name": "music-lab-advanced-model-sandbox",
         "activity_section.key": "5c8d9a37-6527-4c78-a3d9-28f1cd39debd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "advanced-model-sandbox-functions-2",
+        "script_level.level_keys": [
+          "advanced-model-sandbox-functions-2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "3618500a-a799-4be0-a983-80c4d23ba459"
       }
     }
   ],

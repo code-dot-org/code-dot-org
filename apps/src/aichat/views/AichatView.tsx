@@ -2,7 +2,6 @@
 
 import React, {useCallback, useEffect} from 'react';
 
-import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import ActionDropdown from '@cdo/apps/componentLibrary/dropdown/actionDropdown/ActionDropdown';
 import SegmentedButtons, {
@@ -15,7 +14,7 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
+import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -61,10 +60,6 @@ const AichatView: React.FunctionComponent = () => {
 
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
-
-  const beforeNextLevel = useCallback(() => {
-    dispatch(sendSuccessReport('aichat'));
-  }, [dispatch]);
 
   const levelAichatSettings = useAppSelector(
     state =>
@@ -184,13 +179,16 @@ const AichatView: React.FunctionComponent = () => {
   };
 
   const chatWorkspaceHeader = (
-    <div>
-      {projectTemplateLevel && (
-        <ProjectTemplateWorkspaceIcon tooltipPlace="bottom" dark />
-      )}
+    <div className={moduleStyles.workspaceHeaderContent}>
       {viewMode === ViewMode.EDIT
         ? aichatI18n.aichatWorkspaceHeader()
         : botName}
+      {projectTemplateLevel && (
+        <ProjectTemplateWorkspaceIconV2
+          tooltipPlace="onBottom"
+          className={moduleStyles.icon}
+        />
+      )}
     </div>
   );
 
@@ -255,10 +253,7 @@ const AichatView: React.FunctionComponent = () => {
                   }
                 )}
               >
-                <Instructions
-                  beforeNextLevel={beforeNextLevel}
-                  className={moduleStyles.instructions}
-                />
+                <Instructions className={moduleStyles.instructions} />
               </PanelContainer>
             </div>
             {!allFieldsHidden && (

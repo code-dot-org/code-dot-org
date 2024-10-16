@@ -217,13 +217,20 @@ const sectionSlice = createSlice({
         };
       }
     },
-    setSections(state, action: PayloadAction<ServerSection[]>) {
-      const sections = action.payload.map(sectionFromServerSection);
+    setSections(
+      state,
+      action: PayloadAction<{
+        sections: ServerSection[];
+        autoSelectOnlySection?: boolean;
+      }>
+    ) {
+      const sections = action.payload.sections.map(sectionFromServerSection);
 
       // If we have only one section, autoselect it
       const selectedSectionId =
+        action.payload.autoSelectOnlySection &&
         Object.keys(action.payload).length === 1
-          ? action.payload[0].id
+          ? action.payload.sections[0].id
           : state.selectedSectionId;
 
       sections.forEach(section => {
