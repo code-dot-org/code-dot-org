@@ -217,67 +217,77 @@ const sectionSlice = createSlice({
         };
       }
     },
-    setSections(
-      state,
-      action: PayloadAction<{
-        sections: ServerSection[];
-        autoSelectOnlySection?: boolean;
-      }>
-    ) {
-      const sections = action.payload.sections.map(sectionFromServerSection);
+    setSections: {
+      reducer(
+        state,
+        action: PayloadAction<{
+          sections: ServerSection[];
+          autoSelectOnlySection: boolean;
+        }>
+      ) {
+        const sections = action.payload.sections.map(sectionFromServerSection);
 
-      // If we have only one section, autoselect it
-      const selectedSectionId =
-        action.payload.autoSelectOnlySection &&
-        Object.keys(action.payload).length === 1
-          ? action.payload.sections[0].id
-          : state.selectedSectionId;
+        // If we have only one section, autoselect it
+        const selectedSectionId =
+          action.payload.autoSelectOnlySection &&
+          Object.keys(sections).length === 1
+            ? action.payload.sections[0].id
+            : state.selectedSectionId;
 
-      sections.forEach(section => {
-        // SET_SECTIONS is called in two different contexts. On some pages it is called
-        // in a way that only provides name/id per section, in other places (homepage, unit overview)
-        // it provides more detailed information. There are currently no pages where
-        // it should be called in both manners, but we want to make sure that if it
-        // were it will throw an error rather than destroy data.
-        const prevSection = state.sections[section.id];
-        if (prevSection) {
-          Object.keys(section).forEach(key => {
-            if (
-              section[key as keyof Section] === undefined &&
-              prevSection[key as keyof Section] !== undefined
-            ) {
-              throw new Error(
-                'SET_SECTIONS called multiple times in a way that would remove data'
-              );
-            }
-          });
-        }
-      });
+        sections.forEach(section => {
+          // SET_SECTIONS is called in two different contexts. On some pages it is called
+          // in a way that only provides name/id per section, in other places (homepage, unit overview)
+          // it provides more detailed information. There are currently no pages where
+          // it should be called in both manners, but we want to make sure that if it
+          // were it will throw an error rather than destroy data.
+          const prevSection = state.sections[section.id];
+          if (prevSection) {
+            Object.keys(section).forEach(key => {
+              if (
+                section[key as keyof Section] === undefined &&
+                prevSection[key as keyof Section] !== undefined
+              ) {
+                throw new Error(
+                  'SET_SECTIONS called multiple times in a way that would remove data'
+                );
+              }
+            });
+          }
+        });
 
-      const sectionIds = _.uniq(
-        state.sectionIds.concat(sections.map(section => section.id))
-      );
+        const sectionIds = _.uniq(
+          state.sectionIds.concat(sections.map(section => section.id))
+        );
 
-      const studentSectionIds = sections
-        .filter(
-          section => section.participantType === ParticipantAudience.student
-        )
-        .map(section => section.id);
-      const plSectionIds = sections
-        .filter(
-          section => section.participantType !== ParticipantAudience.student
-        )
-        .map(section => section.id);
+        const studentSectionIds = sections
+          .filter(
+            section => section.participantType === ParticipantAudience.student
+          )
+          .map(section => section.id);
+        const plSectionIds = sections
+          .filter(
+            section => section.participantType !== ParticipantAudience.student
+          )
+          .map(section => section.id);
 
-      state.sectionsAreLoaded = true;
-      state.selectedSectionId = selectedSectionId;
-      state.sectionIds = sectionIds;
-      state.studentSectionIds = studentSectionIds;
-      state.plSectionIds = plSectionIds;
-      state.sections = {
-        ...state.sections,
-        ..._.keyBy(sections, 'id'),
-      };
+        state.sectionsAreLoaded = true;
+        state.selectedSectionId = selectedSectionId;
+        state.sectionIds = sectionIds;
+        state.studentSectionIds = studentSectionIds;
+        state.plSectionIds = plSectionIds;
+        state.sections = {
+          ...state.sections,
+          ..._.keyBy(sections, 'id'),
+        };
+      },
+      prepare(sections, autoSelectOnlySection = true) {
+        return {
+          payload: {
+            sections,
+            autoSelectOnlySection,
+          },
+        };
+      },
     },
     startLoadingSectionData(state) {
       state.isLoadingSectionData = true;

@@ -262,7 +262,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('does set selectedSectionId if passed a single section', () => {
-      const action = setSections(sections.slice(0, 1));
+      const action = setSections(sections.slice(0, 1), true);
       const nextState = reducer(startState, action);
       assert.strictEqual(nextState.selectedSectionId, sections[0].id);
     });
