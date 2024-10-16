@@ -347,7 +347,7 @@ header:
 # `false` is provided instead of a set of properties, the component is not
 # rendered at all.
 #
-# Ex: (config/global/foo.yml)
+# Ex: (config/global_editions/foo.yml)
 #
 # pages:
 #   - path: /
