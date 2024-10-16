@@ -1,11 +1,7 @@
 import {MoveFolderFunction} from '@codebridge/codebridgeContext/types';
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {ProjectType, FolderId} from '@codebridge/types';
-import {
-  findFolder,
-  getErrorMessage,
-  getFolderLineage,
-  validateFolderName,
-} from '@codebridge/utils';
+import {getFolderPath, validateFolderName} from '@codebridge/utils';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {
@@ -13,6 +9,7 @@ import {
   DialogControlInterface,
   extractUserInput,
 } from '@cdo/apps/lab2/views/dialogs';
+import {GenericDropdownProps} from '@cdo/apps/lab2/views/dialogs/GenericDropdown';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
 type OpenMoveFolderPromptArgsType = {
@@ -31,62 +28,40 @@ export const openMoveFolderPrompt = async ({
   sendCodebridgeAnalyticsEvent,
 }: OpenMoveFolderPromptArgsType) => {
   const folder = projectFolders[folderId];
+
+  // iterate over all the folders in the project AND the default folder, which isn't actually in the list.
+  const validFolders: GenericDropdownProps['items'] = [
+    {id: DEFAULT_FOLDER_ID},
+    ...Object.values(projectFolders),
+  ]
+    .filter(
+      f =>
+        f.id !== folder.id &&
+        !Boolean(
+          validateFolderName({
+            folderName: folder.name,
+            parentId: f.id,
+            projectFolders,
+          })
+        )
+    )
+    .map(f => ({value: f.id, text: getFolderPath(f.id, projectFolders)}))
+    .sort((a, b) => a.text.localeCompare(b.text));
+
   const results = await dialogControl?.showDialog({
-    type: DialogType.GenericPrompt,
+    type: DialogType.GenericDropdown,
     title: codebridgeI18n.moveFolderPrompt(),
-    placeholder: codebridgeI18n.rootFolder(),
-    requiresPrompt: false,
-
-    // in this case, the destinationFolderName is where we want to move the folder -to-, not what we are
-    // renaming the folder to.
-    // i.e., if we have folder 'foo' and the user types in '/bar/baz', then we want to place folder `foo` into `bar/baz`,
-    // not rename it as `bar/baz`
-    validateInput: (destinationFolderName: string) => {
-      try {
-        const parentId = findFolder(destinationFolderName.split('/'), {
-          folders: Object.values(projectFolders),
-          required: true,
-        });
-
-        if (folderId === parentId) {
-          return codebridgeI18n.moveFolderErrorSelf();
-        }
-
-        const destinationLineage = new Set(
-          getFolderLineage(parentId, Object.values(projectFolders))
-        );
-
-        if (destinationLineage.has(folderId)) {
-          return codebridgeI18n.moveFolderErrorChild();
-        }
-
-        return validateFolderName({
-          folderName: folder.name,
-          parentId,
-          projectFolders,
-        });
-      } catch (e) {
-        return getErrorMessage(e);
-      }
-    },
+    selectedValue: validFolders[0].value,
+    items: validFolders,
+    dropdownLabel: '',
   });
 
   if (results.type !== 'confirm') {
     return;
   }
+  const destinationFolderId = extractUserInput(results);
 
-  const destinationFolderName = extractUserInput(results) || '';
-  try {
-    const parentId = findFolder(destinationFolderName.split('/'), {
-      folders: Object.values(projectFolders),
-      required: true,
-    });
-    moveFolder(folderId, parentId);
-  } catch (e) {
-    dialogControl?.showDialog({
-      type: DialogType.GenericAlert,
-      title: getErrorMessage(e),
-    });
-  }
+  moveFolder(folderId, destinationFolderId);
+
   sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_MOVE_FOLDER);
 };
