@@ -142,7 +142,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
             }
           />
           <Route
-            path={TEACHER_NAVIGATION_PATHS.manageStudents}
+            path={TEACHER_NAVIGATION_PATHS.roster}
             element={applyV1TeacherDashboardWidth(
               <ManageStudents studioUrlPrefix={studioUrlPrefix} />
             )}
@@ -292,6 +292,16 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
             />
           )}
         </Route>
+        {/* /manage_students is the legacy url for /roster. Redirect to /roster so that old bookmarks continue to work */}
+        <Route
+          path={'manage_students'}
+          element={
+            <Navigate
+              to={'../' + TEACHER_NAVIGATION_PATHS.roster}
+              replace={true}
+            />
+          }
+        />
       </Route>
     ),
     [
