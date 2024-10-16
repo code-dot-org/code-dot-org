@@ -5,15 +5,11 @@ import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import i18n from '@cdo/locale';
 
 const SubLevelDropdown = ({subLevels, handleChange}) => {
-  const subLevelNums = Array.from(
-    {length: subLevels.length},
-    (_, index) => index
-  );
   return (
     <SimpleDropdown
-      items={subLevelNums.map(subLevel => ({
-        value: subLevel,
-        text: i18n.question() + ': ' + (subLevel + 1),
+      items={subLevels.map((_, index) => ({
+        value: index,
+        text: i18n.question() + ': ' + (index + 1),
       }))}
       onChange={handleChange}
     />

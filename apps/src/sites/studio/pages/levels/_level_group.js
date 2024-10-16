@@ -31,7 +31,8 @@ $(document).ready(() => {
       initData.page,
       initData.last_attempt
     );
-
+    //This is the entry point for the summary page. It looks for a div with the id 'summaryEntryPoint' and renders the SummaryEntryPoint component inside it.
+    //The div is created by the _level_group.html.haml file only for levelgroups marked as activity guide levels.
     $('#summaryEntryPoint').each(function () {
       const container = this;
       const store = getStore();

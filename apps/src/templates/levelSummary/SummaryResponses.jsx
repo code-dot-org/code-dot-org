@@ -21,6 +21,7 @@ const MULTI = 'Multi';
 
 const SummaryResponses = ({
   scriptData,
+  levelNumber,
   // redux
   isRtl,
   viewAs,
@@ -32,12 +33,12 @@ const SummaryResponses = ({
 }) => {
   const currentLevel = levels.find(l => l.activeId === currentLevelId);
   const predictSettings =
-    scriptData.viewing_level_data.properties?.predict_settings;
+    scriptData.levels[levelNumber].properties?.predict_settings;
   const isFreeResponse =
-    scriptData.viewing_level_data.type === FREE_RESPONSE ||
+    scriptData.levels[levelNumber].type === FREE_RESPONSE ||
     predictSettings?.questionType === PredictQuestionType.FreeResponse;
   const isMulti =
-    scriptData.viewing_level_data.type === MULTI ||
+    scriptData.levels[levelNumber].type === MULTI ||
     predictSettings?.questionType === PredictQuestionType.MultipleChoice;
 
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
@@ -54,39 +55,30 @@ const SummaryResponses = ({
       analyticsReporter.sendEvent(
         eventName,
         {
-          levelId: scriptData.viewing_level_data.id,
-          levelName: scriptData.viewing_level_data.name,
-          levelType: scriptData.viewing_level_data.type,
+          levelId: scriptData.levels[levelNumber].id,
+          levelName: scriptData.levels[levelNumber].name,
+          levelType: scriptData.levels[levelNumber].type,
           sectionSelected: !!selectedSection,
           ...scriptData.reportingData,
         },
         PLATFORMS.BOTH
       );
     },
-    [scriptData, selectedSection]
+    [scriptData, levelNumber, selectedSection]
   );
 
   const eventData = useMemo(() => {
     return {
-      levelId: scriptData.viewing_level_data.id,
-      levelName: scriptData.viewing_level_data.name,
+      levelId: scriptData.levels[levelNumber].id,
+      levelName: scriptData.levels[levelNumber].name,
       curriculumUmbrella: scriptData.reportingData.curriculumUmbrella,
       unitId: scriptData.reportingData.unitId,
     };
-  }, [scriptData]);
+  }, [scriptData, levelNumber]);
 
   useEffect(() => {
     logEvent(EVENTS.SUMMARY_PAGE_LOADED);
   }, [logEvent]);
-
-  // useEffect(() => {
-  //   console.log('fetching sublevels');
-  //   fetch(`/user_levels/levelgroup_sublevels/${currentLevelId}`)
-  //     .then(response => response.json())
-  //     .then(data => setSubLevels(data))
-  //     .catch(error => console.error('Error fetching levels:', error));
-  //   console.log('sublevels', subLevels);
-  // }, [currentLevelId, subLevels]);
 
   useEffect(() => {
     const correctAnswerElement = document.getElementById(
@@ -141,7 +133,7 @@ const SummaryResponses = ({
             <p>
               <i className="fa fa-user" />
               <span>
-                {scriptData.responses.length}/{students.length}{' '}
+                {scriptData.responses[levelNumber].length}/{students.length}{' '}
                 {i18n.studentsAnswered()}
               </span>
             </p>
@@ -187,7 +179,7 @@ const SummaryResponses = ({
         {/* Free response visualization */}
         {isFreeResponse && (
           <FreeResponseResponses
-            responses={scriptData.responses}
+            responses={scriptData.responses[levelNumber]}
             showStudentNames={showStudentNames}
             eventData={eventData}
           />
@@ -197,6 +189,7 @@ const SummaryResponses = ({
         {isMulti && (
           <MultiResponses
             scriptData={scriptData}
+            levelNumber={levelNumber}
             showCorrectAnswer={showCorrectAnswer}
           />
         )}
@@ -207,6 +200,7 @@ const SummaryResponses = ({
 
 SummaryResponses.propTypes = {
   scriptData: PropTypes.object,
+  levelNumber: PropTypes.number,
   isRtl: PropTypes.bool,
   viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
   hasSections: PropTypes.bool,

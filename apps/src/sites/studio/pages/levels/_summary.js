@@ -36,9 +36,7 @@ $(document).ready(() => {
   );
 
   // Predict levels are a lab2 feature that replace contained levels.
-  if (
-    scriptData.viewing_level_data.properties.predict_settings?.isPredictLevel
-  ) {
+  if (scriptData.levels[0].properties.predict_settings?.isPredictLevel) {
     const predictQuestionContainer =
       document.getElementById('predict-question');
     const correctAnswerContainer = document.getElementById(
@@ -47,10 +45,8 @@ $(document).ready(() => {
     if (predictQuestionContainer) {
       ReactDOM.render(
         <SummaryPredictQuestion
-          question={scriptData.viewing_level_data.properties.long_instructions}
-          predictSettings={
-            scriptData.viewing_level_data.properties.predict_settings
-          }
+          question={scriptData.levels[0].properties.long_instructions}
+          predictSettings={scriptData.levels[0].properties.predict_settings}
         />,
         predictQuestionContainer
       );
@@ -59,9 +55,7 @@ $(document).ready(() => {
     if (correctAnswerContainer) {
       ReactDOM.render(
         <UnconnectedPredictSolution
-          predictSettings={
-            scriptData.viewing_level_data.properties.predict_settings
-          }
+          predictSettings={scriptData.levels[0].properties.predict_settings}
         />,
         correctAnswerContainer
       );

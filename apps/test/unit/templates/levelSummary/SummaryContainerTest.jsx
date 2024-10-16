@@ -58,16 +58,6 @@ const JS_DATA_MULTI_LEVEL = {
       name: 'Multiple Choice Question',
     },
   ],
-  viewing_level_data: {
-    properties: {
-      questions: [{text: 'What is 2 + 2?'}],
-      answers: [{text: 'A. 3'}, {text: 'B. 4'}, {text: 'C. 5'}],
-    },
-    height: 100,
-    type: 'Multi',
-    id: 1,
-    name: 'Multiple Choice Question',
-  },
   level_id: 1,
   in_level_group: false,
   last_attempt: 'B. 4',
@@ -105,15 +95,6 @@ const JS_DATA_FREE_RESPONSE = {
       name: 'Photosynthesis Explanation',
     },
   ],
-  viewing_level_data: {
-    properties: {
-      long_instructions: 'Please explain the process of photosynthesis.',
-    },
-    height: 80,
-    type: 'FreeResponse',
-    id: 2,
-    name: 'Photosynthesis Explanation',
-  },
   level_id: 2,
   in_level_group: false,
   last_attempt: 'Photosynthesis is the process by which green plants...',
