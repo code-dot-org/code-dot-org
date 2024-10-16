@@ -60,9 +60,10 @@ class RegistrationsController < Devise::RegistrationsController
     if @user.errors.blank?
       PartialRegistration.persist_attributes(session, @user)
     else
-      # Currently, the only error we're checking for is a duplicate email
       if params[:new_sign_up].present?
-        raise ValidationError.new(@user.errors)
+        render json: {
+          error: @user.errors.as_json(full_messages: true)
+        }, status: :bad_request
       end
     end
 
