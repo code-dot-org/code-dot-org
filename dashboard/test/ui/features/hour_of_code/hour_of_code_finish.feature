@@ -53,11 +53,9 @@ Scenario: Pegasus share page preserves certificate when redirecting
   Given I am on "http://studio.code.org/s/mc/reset"
   And I wait for the lab page to fully load
   Then I wait until the Minecraft game is loaded
-  And I wait for 3 seconds
 
   # Set up a customized certificate
   Given I am on "http://code.org/api/hour/finish/mc"
-  And I wait for 3 seconds
   And I wait until current URL contains "/congrats"
   And I wait to see element with ID "uitest-certificate"
   And I type "Robo Coder" into "#name"
