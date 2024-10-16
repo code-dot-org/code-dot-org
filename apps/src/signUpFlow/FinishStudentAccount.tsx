@@ -168,7 +168,7 @@ const FinishStudentAccount: React.FunctionComponent<{
       },
     };
     const authToken = await getAuthenticityToken();
-    await fetch('/users', {
+    const response = await fetch('/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -177,7 +177,11 @@ const FinishStudentAccount: React.FunctionComponent<{
       body: JSON.stringify(signUpParams),
     });
 
-    navigateToHref('/home');
+    if (response.ok) {
+      const responseData = await response.json();
+      const redirectHref = responseData['user_return_to'] || '/home';
+      navigateToHref(redirectHref);
+    }
   };
 
   return (
