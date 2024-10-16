@@ -113,8 +113,8 @@ class ProgressTableView extends React.Component {
 
     // Sort students, in-place.
     const sortedStudents = props.isSortedByFamilyName
-      ? props.students.sort(stringKeyComparator(['familyName', 'name']))
-      : props.students.sort(stringKeyComparator(['name', 'familyName']));
+      ? [...props.students].sort(stringKeyComparator(['familyName', 'name']))
+      : [...props.students].sort(stringKeyComparator(['name', 'familyName']));
 
     this.state = {
       rows: sortedStudents.map((student, index) => {
