@@ -16,7 +16,7 @@ markdown <<MARKDOWN
 #### Pandas is important for students to learn because data is everywhere in today's world—think of social media trends, school grades, or sports statistics.
 #### Understanding how to handle and analyze data gives students the skills to make informed decisions, solve real-world problems, and prepare for careers in data-driven fields.
 
-
+<br>
 
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
@@ -24,5 +24,7 @@ markdown <<MARKDOWN
 </p>
 </div>
 
+## Documentaion 
 
+#### For extra support, refer to the <a href="https://docs.google.com/document/d/12xlUG_K0F8mx-fqJ9OHhe1o49IGNO6RLPv8yO0jDJ9o/edit?usp=sharing" target="blank" rel="noopener noreferrer">Python / Pandas Documentation</a> provided in this unit. 
 MARKDOWN

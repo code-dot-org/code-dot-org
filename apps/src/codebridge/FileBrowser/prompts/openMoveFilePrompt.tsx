@@ -15,7 +15,6 @@ type OpenMoveFilePromptArgsType = {
   projectFiles: ProjectType['files'];
   projectFolders: ProjectType['folders'];
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
-  appName: string;
   moveFile: MoveFileFunction;
   isStartMode: boolean;
   validationFile: ProjectFile | undefined;
@@ -27,7 +26,6 @@ export const openMoveFilePrompt = async ({
   projectFiles,
   projectFolders,
   dialogControl,
-  appName,
   moveFile,
   isStartMode,
   validationFile,
