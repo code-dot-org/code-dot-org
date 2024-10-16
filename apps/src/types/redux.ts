@@ -1,4 +1,5 @@
-import {CodeBridgeConsoleState} from '@codebridge/redux/consoleRedux';
+import {CodebridgeConsoleState} from '@codebridge/redux/consoleRedux';
+import {CodebridgeWorkspaceState} from '@codebridge/redux/workspaceRedux';
 
 import {AichatState} from '@cdo/apps/aichat/redux/aichatRedux';
 import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
@@ -30,7 +31,8 @@ export interface RootState {
   aiTutor: AITutorState;
   aichat: AichatState;
   blockly: BlocklyState;
-  codebridgeConsole: CodeBridgeConsoleState;
+  codebridgeConsole: CodebridgeConsoleState;
+  codebridgeWorkspace: CodebridgeWorkspaceState;
   currentUser: CurrentUserState;
   header: HeaderReduxState;
   javalab: JavalabState;
