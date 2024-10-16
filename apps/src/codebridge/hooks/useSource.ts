@@ -78,12 +78,23 @@ export const useSource = (defaultSources: ProjectSources) => {
     }
   }, 100);
 
+  // We check for the first edit in a given session for 2 reasons:
+  // 1. The first time the user edits the project (ever), we mark the level as in-progress.
+  // 2. We display the continue button in the instructions for non-validated levels if the user
+  //    has made an edit and run their code in the current session.
   const checkForFirstEdit = useMemo(
     () => (newSource: MultiFileSource) => {
+      // Only do this check if the user hasn't already edited the project yet,
+      // as we are deep comparing the new source to the previous source,
+      // and we don't want to do that on every change.
       if (!hasEdited) {
+        // We have a very permissive definition of edit; any change in the source counts.
+        // This includes moving files, opening/closing files, etc.
         const newSourceHasEdits = !isEqual(newSource, localProjectRef.current);
         if (newSourceHasEdits) {
           dispatch(setHasEdited(true));
+          // If the current level status is not tried, send a progress report.
+          // We debounce it so we don't send a report for multiple edits in quick succession.
           if (currentLevel && currentLevel.status === LevelStatus.not_tried) {
             debouncedProgressReport();
           }
