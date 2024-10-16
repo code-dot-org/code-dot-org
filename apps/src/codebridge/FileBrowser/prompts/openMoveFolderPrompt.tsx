@@ -19,7 +19,6 @@ type OpenMoveFolderPromptArgsType = {
   folderId: FolderId;
   projectFolders: ProjectType['folders'];
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
-  appName: string;
   moveFolder: MoveFolderFunction;
   sendCodebridgeAnalyticsEvent: (eventName: string) => unknown;
 };
@@ -28,7 +27,6 @@ export const openMoveFolderPrompt = async ({
   folderId,
   projectFolders,
   dialogControl,
-  appName,
   moveFolder,
   sendCodebridgeAnalyticsEvent,
 }: OpenMoveFolderPromptArgsType) => {
