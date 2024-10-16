@@ -28,9 +28,12 @@ import {
   useAppSelector,
 } from '@cdo/apps/util/reduxHooks';
 
-import {addAnnouncement, VisibilityType} from '../../announcementsRedux';
+import {
+  addAnnouncement,
+  clearAnnouncements,
+  VisibilityType,
+} from '../../announcementsRedux';
 import {setCalendarData} from '../../calendarRedux';
-import {setStudentDefaultsSummaryView} from '../../progressRedux';
 import {setVerified, setVerifiedResources} from '../../verifiedInstructorRedux';
 
 import UnitOverview from './UnitOverview';
@@ -232,10 +235,8 @@ export const initializeRedux = (
     unitData.announcements.forEach(announcement =>
       dispatch(addAnnouncement(announcement))
     );
-  }
-
-  if (unitData.student_detail_progress_view) {
-    dispatch(setStudentDefaultsSummaryView(false));
+  } else {
+    dispatch(clearAnnouncements());
   }
 
   dispatch(
