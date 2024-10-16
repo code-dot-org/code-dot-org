@@ -1,9 +1,11 @@
 import React, {useMemo} from 'react';
 
 import {ComponentPlacementDirection} from '@cdo/apps/componentLibrary/common/types';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import commonI18n from '@cdo/locale';
 
+import styles from './project-template-workspace-icon-v2.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 interface ProjectTemplateWorkspaceIconV2Props {
@@ -55,8 +57,14 @@ const ProjectTemplateWorkspaceIconV2: React.FunctionComponent<
       }}
       tooltipOverlayClassName={className}
     >
-      {/* FontAwesomeV6Icon does not work with WithTooltip. */}
-      <i className={'fa-kit fa-connected-level'} />
+      {/* Wrap the icon in a button so that the tooltip is tabbable. */}
+      <button type="button" className={styles.iconButton}>
+        <FontAwesomeV6Icon
+          iconFamily={'kit'}
+          iconName={'connected-level'}
+          className={styles.icon}
+        />
+      </button>
     </WithTooltip>
   );
 };
