@@ -4,6 +4,7 @@ import {
   openNewFilePrompt as globalOpenNewFilePrompt,
   openMoveFilePrompt as globalOpenMoveFilePrompt,
   openMoveFolderPrompt as globalOpenMoveFolderPrompt,
+  openRenameFilePrompt as globalOpenRenameFilePrompt,
   openRenameFolderPrompt as globalOpenRenameFolderPrompt,
 } from '@codebridge/FileBrowser/prompts';
 import {sendCodebridgeAnalyticsEvent as globalSendCodebridgeAnalyticsEvent} from '@codebridge/utils';
@@ -23,6 +24,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
  *   - **openMoveFolderPrompt:** Opens a prompt for moving a folder within the project.
  *   - **openNewFilePrompt:** Opens a prompt for creating a new file within the project.
  *   - **openNewFolderPrompt:** Opens a prompt for creating a new folder within the project.
+ *   - **openRenameFilePrompt:** Opens a prompt for renaming a file within the project.
  *   - **openRenameFolderPrompt:** Opens a prompt for renaming a folder within the project.
  */
 export const usePrompts = () => {
@@ -33,8 +35,15 @@ export const usePrompts = () => {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const dialogControl = useDialogControl();
 
-  const {project, moveFile, moveFolder, newFolder, newFile, renameFolder} =
-    useCodebridgeContext();
+  const {
+    project,
+    moveFile,
+    moveFolder,
+    newFolder,
+    newFile,
+    renameFile,
+    renameFolder,
+  } = useCodebridgeContext();
 
   const sendCodebridgeAnalyticsEvent = useCallback(
     (event: string) => globalSendCodebridgeAnalyticsEvent(event, appName),
@@ -74,6 +83,15 @@ export const usePrompts = () => {
     sendCodebridgeAnalyticsEvent,
   } satisfies PAFunctionArgs<typeof globalOpenMoveFolderPrompt>);
 
+  const openRenameFilePrompt = usePartialApply(globalOpenRenameFilePrompt, {
+    dialogControl,
+    renameFile,
+    projectFiles: project.files,
+    sendCodebridgeAnalyticsEvent,
+    isStartMode,
+    validationFile,
+  } satisfies PAFunctionArgs<typeof globalOpenRenameFilePrompt>);
+
   const openRenameFolderPrompt = usePartialApply(globalOpenRenameFolderPrompt, {
     dialogControl,
     renameFolder,
@@ -87,6 +105,7 @@ export const usePrompts = () => {
       openNewFolderPrompt,
       openMoveFilePrompt,
       openMoveFolderPrompt,
+      openRenameFilePrompt,
       openRenameFolderPrompt,
     }),
     [
@@ -94,6 +113,7 @@ export const usePrompts = () => {
       openNewFolderPrompt,
       openMoveFilePrompt,
       openMoveFolderPrompt,
+      openRenameFilePrompt,
       openRenameFolderPrompt,
     ]
   );
