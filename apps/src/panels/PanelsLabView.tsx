@@ -5,12 +5,12 @@
 
 import React, {useCallback} from 'react';
 
+import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {sendSuccessReport} from '../code-studio/progressRedux';
 import {queryParams} from '../code-studio/utils';
-import {continueOrFinishLesson} from '../lab2/progress/progressThunks';
 import useWindowSize from '../util/hooks/useWindowSize';
 
 import PanelsView from './PanelsView';

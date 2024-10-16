@@ -5,14 +5,15 @@ import {useSelector} from 'react-redux';
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
+import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {
   isPredictAnswerLocked,
   setPredictResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {continueOrFinishLesson} from '../../progress/progressThunks';
 import {ThemeContext} from '../ThemeWrapper';
 
 import PredictQuestion from './PredictQuestion';
@@ -20,8 +21,6 @@ import PredictSummary from './PredictSummary';
 import TextToSpeech from './TextToSpeech';
 
 import moduleStyles from './instructions.module.scss';
-
-const commonI18n = require('@cdo/locale');
 
 interface InstructionsProps {
   /** If the instructions panel should be rendered vertically or horizontally. Defaults to vertical. */

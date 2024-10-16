@@ -12,8 +12,7 @@ import {shareLab2Project} from '../header/lab2HeaderShare';
 /**
  * Handles all logic for continuing lesson progression, either to the next level or finishing the lesson.
  */
-export const continueOrFinishLesson =
-  (): ThunkAction<void, RootState, undefined, AnyAction> =>
+export default (): ThunkAction<void, RootState, undefined, AnyAction> =>
   (dispatch, getState) => {
     const levelProperties = getState().lab.levelProperties;
     if (!levelProperties) {
