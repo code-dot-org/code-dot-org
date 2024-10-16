@@ -223,15 +223,14 @@ And(/^I create a teacher( who has never signed in)? named "([^"]*)"( after CAP s
     sign_in_count: sign_in_count,
   }
 
-  # See Cpa::CREATED_AT_EXCEPTION_DATE
-  cap_start_date = DateTime.parse('2024-05-26T00:00:00MDT')
-
   if after_cap_start
-    user_opts[:created_at] = cap_start_date
+    raise "cap_lockout_date undefined" unless @cap_lockout_date
+    user_opts[:created_at] = @cap_lockout_date
   end
 
   if before_cap_start
-    user_opts[:created_at] = cap_start_date - 1.second
+    raise "cap_lockout_date undefined" unless @cap_lockout_date
+    user_opts[:created_at] = @cap_lockout_date - 1.second
   end
 
   create_user(name, **user_opts)
