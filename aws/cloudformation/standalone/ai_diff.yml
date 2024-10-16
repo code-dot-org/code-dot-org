@@ -60,11 +60,12 @@ Resources:
       Name: !Sub ai-diff-${Environment}
       Type: VECTORSEARCH
       Description: AI Differentiation search collection
-    DependsOn: EncryptionPolicy
+    DependsOn:
+      - EncryptionPolicy
   EncryptionPolicy:
     Type: 'AWS::OpenSearchServerless::SecurityPolicy'
     Properties:
-      Name: !Sub ai-diff-${Environment}
+      Name: !Sub ai-diff-${Environment}-encryption-policy
       Type: encryption
       Policy: !Sub |
         {
@@ -76,6 +77,66 @@ Resources:
             }
           ]
         }
+  NetworkPolicy:
+    Type: 'AWS::OpenSearchServerless::SecurityPolicy'
+    Properties:
+      Name: !Sub ai-diff-${Environment}-network-policy
+      Type: network
+      Policy: !Sub |
+        [
+          {
+            "Rules": [
+              {
+                "ResourceType": "collection",
+                "Resource": ["collection/ai-diff-${Environment}"]
+              }
+            ],
+            "AllowFromPublic": false,
+            "SourceServices": ["bedrock.amazonaws.com"]
+          }
+        ]
+  DataPolicy:
+    Type: 'AWS::OpenSearchServerless::AccessPolicy'
+    Properties:
+      Name: !Sub ai-diff-${Environment}-data-policy
+      Type: data
+      Policy: !Sub |
+        [
+          {
+            "Rules": [
+              {
+                "ResourceType": "index",
+                "Resource": [
+                  "index/ai-diff-${Environment}/*"
+                ],
+                "Permission": [
+                  "aoss:*",
+                  "aoss:UpdateIndex",
+                  "aoss:DescribeIndex",
+                  "aoss:ReadDocument",
+                  "aoss:WriteDocument",
+                  "aoss:CreateIndex"
+                ]
+              },
+              {
+                "ResourceType": "collection",
+                "Resource": [
+                  "collection/ai-diff-${Environment}"
+                ],
+                "Permission": [
+                  "aoss:*",
+                  "aoss:DescribeCollectionItems",
+                  "aoss:CreateCollectionItems",
+                  "aoss:UpdateCollectionItems"
+                ]
+              }
+            ],
+            "Principal": [
+              "${AiDiffKnowledgeBaseRole.Arn}",
+              "arn:aws:sts::475661607190:assumed-role/GoogleAdmin/*"
+            ]
+          }
+        ]
   AiDiffKnowledgeBaseRole:
     Type: AWS::IAM::Role
     Properties:
