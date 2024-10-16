@@ -1,5 +1,4 @@
 require 'cdo/shared_constants'
-require 'cpa'
 require 'date'
 
 class Policies::ChildAccount
@@ -73,7 +72,7 @@ class Policies::ChildAccount
 
     # Due to a leaky bucket issue, roster-synced Google accounts weren't being locked out as intended.
     # Therefore, it was decided to move their locking out to the "all-user lockout" phase.
-    return true if user_state_policy[:name] == Cpa::NAME &&
+    return true if user_state_policy[:name] == state_policies['CO'][:name] &&
       user.created_at < user_state_policy[:lockout_date] &&
       user.authentication_options.any?(&:google?)
 
@@ -126,6 +125,7 @@ class Policies::ChildAccount
   # For example, some accounts are created and owned by schools (Clever).
   def self.personal_account?(user)
     return false if user.sponsored?
+
     # List of credential types which we believe schools have ownership of.
     # Does the user have an authentication method which is not controlled by
     # their school? The presence of at least one authentication method which
@@ -147,15 +147,31 @@ class Policies::ChildAccount
     # lockout_date: the date at which we will begin to lockout all CPA users who
     # are not in compliance with the policy.
     # start_date: the date on which this policy first went into effect.
-    {
+    policies = {
       'CO' => {
-        name: Cpa::NAME,
+        name: 'CPA',
         max_age: 12,
-        grace_period_duration: DCDO.get('cpa_grace_period_duration', Cpa::GRACE_PERIOD_DURATION)&.seconds,
-        lockout_date: DateTime.parse(DCDO.get('cpa_schedule', {})[Cpa::ALL_USER_LOCKOUT] || Cpa::ALL_USER_LOCKOUT_DATE.iso8601),
-        start_date: DateTime.parse(DCDO.get('cpa_schedule', {})[Cpa::NEW_USER_LOCKOUT] || Cpa::NEW_USER_LOCKOUT_DATE.iso8601),
+        grace_period_duration: 14.days.seconds,
+        lockout_date: DateTime.parse('2024-07-01T00:00:00MDT'),
+        start_date: DateTime.parse('2023-07-05T23:15:00+00:00'),
+      },
+      'DE' => {
+        name: 'DPDPA',
+        max_age: 12,
+        grace_period_duration: 14.days.seconds,
+        lockout_date: DateTime.parse('2025-01-01T00:00:00-05:00'),
+        start_date: DateTime.parse('2025-01-01T00:00:00-05:00'),
       }
     }
+
+    # Override the configured dates for testing purposes
+    policies.each_key do |state_code|
+      policy = policies[state_code]
+      lockout_date_override = DCDO.get("cap_#{state_code}_lockout_date_override", nil)
+      policy[:lockout_date] = DateTime.parse(lockout_date_override) if lockout_date_override
+      start_date_override = DCDO.get("cap_#{state_code}_start_date_override", nil)
+      policy[:start_date] = DateTime.parse(start_date_override) if start_date_override
+    end
   end
 
   def self.state_policy(user)
@@ -188,7 +204,7 @@ class Policies::ChildAccount
 
     # Check to see if they are old enough at the current date
     # We cannot trust 'user.age' because that is a different time zone and broken for leap years
-    today = Time.zone.today.in_time_zone(lockout_date.utc_offset)
+    today = DateTime.now.in_time_zone(lockout_date.utc_offset)
     student_age = today.year - student_birthday.year
     ((student_birthday + student_age.years > today) ? (student_age - 1) : student_age) <= policy[:max_age]
   end

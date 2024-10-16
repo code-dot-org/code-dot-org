@@ -3,7 +3,6 @@ require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
 require 'cdo/shared_constants'
-require 'cpa'
 require 'policies/child_account'
 
 class ApplicationController < ActionController::Base
@@ -337,9 +336,6 @@ class ApplicationController < ActionController::Base
   # Check that the user is compliant with the Child Account Policy. If they
   # are not compliant, then we need to send them to the lockout page.
   protected def handle_cap_lockout
-    # Check that the child account policy is currently enabled.
-    return unless ::Cpa.cpa_experience(request)
-
     # Transits the user to the CAP grace period if they are eligible.
     Services::ChildAccount::GracePeriodHandler.call(user: current_user)
 
@@ -364,6 +360,8 @@ class ApplicationController < ActionController::Base
       users_set_student_information_path,
       # Allow students to join sections while locked out
       student_user_new_path,
+      student_register_path,
+      reset_session_path,
       student_register_path,
     ].include?(request.path)
 

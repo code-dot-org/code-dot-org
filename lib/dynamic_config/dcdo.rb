@@ -33,7 +33,6 @@ class DCDOBase < DynamicConfigBase
       'pl-launch-hero-banner': DCDO.get('pl-launch-hero-banner', false),
       'curriculum-launch-2024': DCDO.get('curriculum-launch-2024', false),
       'csta-form-extension': DCDO.get('csta-form-extension', false),
-      cpa_experience: DCDO.get('cpa_experience', false),
       gender: DCDO.get('gender', false),
       'amplitude-event-sample-rates': DCDO.get('amplitude-event-sample-rates', {}),
       # Whether to allow the user to toggle between the v1 and v2 progress tables.

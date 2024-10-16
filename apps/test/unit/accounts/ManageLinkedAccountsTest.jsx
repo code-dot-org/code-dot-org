@@ -7,7 +7,6 @@ import {
 } from '@cdo/apps/accounts/ManageLinkedAccounts';
 
 import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
-import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
 
 const DEFAULT_PROPS = {
   userType: 'student',
@@ -254,14 +253,6 @@ describe('ManageLinkedAccounts', () => {
   });
 
   describe('CPA lockout to prevent students from connecting oauth accounts without parent permission', () => {
-    beforeEach(() => {
-      replaceOnWindow('CPA_EXPERIENCE', 'true');
-    });
-
-    afterEach(() => {
-      restoreOnWindow('CPA_EXPERIENCE', undefined);
-    });
-
     it('disables the connect buttons when personal account linking is disabled', () => {
       const wrapper = mount(
         <ManageLinkedAccounts

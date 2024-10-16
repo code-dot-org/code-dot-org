@@ -43,12 +43,14 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:non_compliant_child, :with_interpolated_colorado], true],
       [[:non_compliant_child, :with_interpolated_wa], true],
     ]
+    failures = []
     test_matrix.each do |traits, compliance|
       user = create(*traits)
       actual = Policies::ChildAccount.compliant?(user)
-      failure_msg = "Expected compliant?(#{traits}) to be #{compliance} but it was #{actual}"
-      assert_equal compliance, actual, failure_msg
+      failure_msg = "Expected compliant?(#{traits}) to be #{compliance} but it was #{actual}\nDAYNE\nuser=#{user}\nage=#{user.age}"
+      failures.append(failure_msg) if compliance != actual
     end
+    assert failures.empty?, failures.join("\n")
   end
 
   test 'show_cap_state_modal?' do
@@ -101,21 +103,14 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
   describe 'state_policies' do
     let(:state_policies) {Policies::ChildAccount.state_policies}
-    let(:dcdo_cpa_grace_period_duration) {99.days}
-    let(:dcdo_cpa_schedule) {{}}
 
     around do |test|
       Timecop.freeze {test.call}
     end
 
-    before do
-      DCDO.stubs(:get).with('cpa_grace_period_duration', 14.days).returns(dcdo_cpa_grace_period_duration)
-      DCDO.stubs(:get).with('cpa_schedule', {}).returns(dcdo_cpa_schedule)
-    end
-
     describe 'for Colorado' do
       let(:co_state_policy) {state_policies['CO']}
-      let(:default_start_date) {DateTime.parse('2023-07-01T00:00:00MDT')}
+      let(:default_start_date) {DateTime.parse('2023-07-05T23:15:00+00:00')}
       let(:default_lockout_date) {DateTime.parse('2024-07-01T00:00:00MDT')}
 
       it 'contains expected max age' do
@@ -127,7 +122,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       end
 
       it 'contains expected grace_period_duration' do
-        _(co_state_policy[:grace_period_duration]).must_equal dcdo_cpa_grace_period_duration
+        _(co_state_policy[:grace_period_duration]).must_equal 14.days
       end
 
       it 'contains expected default start_date' do
@@ -136,32 +131,6 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
       it 'contains expected default lockout_date' do
         _(co_state_policy[:lockout_date]).must_equal default_lockout_date
-      end
-
-      context 'when DCDO cpa_schedule with only cpa_new_user_lockout is configured' do
-        let(:dcdo_cpa_schedule) do
-          {
-            'cpa_new_user_lockout' => cpa_new_user_lockout.iso8601
-          }
-        end
-        let(:cpa_new_user_lockout) {default_start_date.ago(100.days)}
-
-        it 'contains DCDO configured start_date' do
-          _(co_state_policy[:start_date]).must_equal cpa_new_user_lockout
-        end
-      end
-
-      context 'when DCDO cpa_schedule with only cpa_all_user_lockout is configured' do
-        let(:dcdo_cpa_schedule) do
-          {
-            'cpa_all_user_lockout' => cpa_all_user_lockout.iso8601
-          }
-        end
-        let(:cpa_all_user_lockout) {default_lockout_date.ago(21.days)}
-
-        it 'contains DCDO configured lockout_date' do
-          _(co_state_policy[:lockout_date]).must_equal cpa_all_user_lockout
-        end
       end
     end
   end
@@ -577,7 +546,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     let(:user) {build_stubbed(:user, user_type: user_type, birthday: user_age&.year&.ago)}
 
     # This is the policy: max age of 12 with a lockout date 1 year after the start date
-    let(:user_state_policy_start_date) {DateTime.now}
+    let(:user_state_policy_start_date) {1.second.ago}
     let(:user_state_policy_max_age) {12}
     let(:user_lockout_date) {user_state_policy_start_date + 1.year}
     let(:user_state_policy) {{start_date: user_state_policy_start_date, lockout_date: user_lockout_date, max_age: user_state_policy_max_age}}
