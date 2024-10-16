@@ -60,10 +60,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
     };
     fetchGdprData();
 
-    const userReturnToHref = sessionStorage.get(
-      USER_RETURN_TO_SESSION_KEY,
-      null
-    );
+    const userReturnToHref = sessionStorage.getItem(USER_RETURN_TO_SESSION_KEY);
     if (userReturnToHref) {
       setUserReturnTo(userReturnToHref);
     }

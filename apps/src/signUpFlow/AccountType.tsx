@@ -28,7 +28,10 @@ const AccountType: React.FunctionComponent = () => {
   useEffect(() => {
     const userReturnTo = queryParams('user_return_to');
     if (userReturnTo) {
-      sessionStorage.set(USER_RETURN_TO_SESSION_KEY, userReturnTo);
+      sessionStorage.setItem(
+        USER_RETURN_TO_SESSION_KEY,
+        userReturnTo as string
+      );
     }
 
     analyticsReporter.sendEvent(
