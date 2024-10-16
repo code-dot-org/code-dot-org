@@ -18,6 +18,7 @@ export interface Panel {
   key: string;
   nextUrl?: string;
   layout?: PanelLayout;
+  dark?: boolean;
   typing?: boolean;
   fadeInOverPrevious?: boolean;
 }

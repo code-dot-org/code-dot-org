@@ -115,25 +115,25 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
       ? panels[currentPanelIndex - 1]
       : null;
 
-  const showSmallText = height < 300;
-
   const layoutClassMap = {
-    'text-top-left': styles.markdownTextTopLeft,
-    'text-top-center': styles.markdownTextTopCenter,
-    'text-bottom-left': styles.markdownTextBottomLeft,
-    'text-bottom-center': styles.markdownTextBottomCenter,
-    'text-bottom-right': styles.markdownTextBottomRight,
-    'text-top-right': styles.markdownTextTopRight,
+    'text-top-left': styles.textTopLeft,
+    'text-top-center': styles.textTopCenter,
+    'text-bottom-left': styles.textBottomLeft,
+    'text-bottom-center': styles.textBottomCenter,
+    'text-bottom-right': styles.textBottomRight,
+    'text-top-right': styles.textTopRight,
   };
 
   const textLayoutClass = panel.layout
     ? layoutClassMap[panel.layout]
-    : styles.markdownTextTopRight;
+    : styles.textTopRight;
 
   const buttonText =
     currentPanelIndex < panels.length - 1
       ? commonI18n.next()
       : commonI18n.continue();
+
+  const plainText = markdownToTxt(panel.text);
 
   return (
     <div
@@ -158,22 +158,26 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
         />
         <div
           className={classNames(
-            styles.markdownText,
-            showSmallText && styles.markdownTextSmall,
+            styles.text,
+            panel.dark && styles.textDark,
             textLayoutClass
           )}
         >
           {offerTts && <TextToSpeech text={panel.text} />}
           {panel.typing ? (
-            <Typist
-              startDelay={2500}
-              avgTypingDelay={35}
-              stdTypingDelay={15}
-              cursor={{show: false}}
-              onTypingDone={() => {}}
-            >
-              {markdownToTxt(panel.text)}
-            </Typist>
+            <div>
+              <div className={styles.invisiblePlaceholder}>{plainText}</div>
+              <Typist
+                startDelay={2500}
+                avgTypingDelay={35}
+                stdTypingDelay={15}
+                cursor={{show: false}}
+                onTypingDone={() => {}}
+                className={styles.typist}
+              >
+                {plainText}
+              </Typist>
+            </div>
           ) : (
             <EnhancedSafeMarkdown markdown={panel.text} />
           )}
