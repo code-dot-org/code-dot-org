@@ -15,7 +15,9 @@ export type PanelLayout =
 export interface Panel {
   imageUrl: string;
   text: string;
+  key: string;
   nextUrl?: string;
   layout?: PanelLayout;
-  key: string;
+  typing?: boolean;
+  fadeInOverPrevious?: boolean;
 }

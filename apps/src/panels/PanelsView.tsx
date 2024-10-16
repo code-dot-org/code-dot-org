@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import markdownToTxt from 'markdown-to-txt';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import Typist from 'react-typist';
 
@@ -48,7 +49,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   offerTts,
   resetOnChange = true,
 }) => {
-  const [currentPanel, setCurrentPanel] = useState(0);
+  const [currentPanelIndex, setCurrentPanelIndex] = useState(0);
 
   targetWidth -= horizontalMargin * 2;
   targetHeight -= verticalMargin * 2 + childrenAreaHeight;
@@ -70,47 +71,49 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   }, [targetWidth, targetHeight]);
 
   const handleButtonClick = useCallback(() => {
-    if (currentPanel < panels.length - 1) {
-      setCurrentPanel(currentPanel + 1);
+    if (currentPanelIndex < panels.length - 1) {
+      setCurrentPanelIndex(currentPanelIndex + 1);
     } else {
-      onContinue(panels[currentPanel].nextUrl);
+      onContinue(panels[currentPanelIndex].nextUrl);
     }
-  }, [panels, currentPanel, onContinue]);
+  }, [panels, currentPanelIndex, onContinue]);
 
   const handleBubbleClick = (index: number) => {
-    setCurrentPanel(index);
+    setCurrentPanelIndex(index);
   };
 
   // Reset to first panel whenever panels content changes if specified.
   useEffect(() => {
     if (resetOnChange) {
-      setCurrentPanel(0);
+      setCurrentPanelIndex(0);
     }
   }, [panels, resetOnChange]);
 
   // Reset to last panel if number of panels has reduced
   useEffect(() => {
-    if (currentPanel >= panels.length) {
-      setCurrentPanel(Math.max(panels.length - 1, 0));
+    if (currentPanelIndex >= panels.length) {
+      setCurrentPanelIndex(Math.max(panels.length - 1, 0));
     }
-  }, [currentPanel, panels]);
+  }, [currentPanelIndex, panels]);
 
   // Cancel any in-progress text-to-speech when the panel changes.
   useEffect(() => {
     if (offerTts) {
       cancelSpeech();
     }
-  }, [currentPanel, offerTts]);
+  }, [currentPanelIndex, offerTts]);
 
-  const lastPanel =
-    currentPanel > 0 && panels[currentPanel - 1]
-      ? panels[currentPanel - 1]
-      : null;
-
-  const panel = panels[currentPanel];
+  const panel = panels[currentPanelIndex];
   if (!panel) {
     return null;
   }
+
+  const previousPanel =
+    panel.fadeInOverPrevious &&
+    currentPanelIndex > 0 &&
+    panels[currentPanelIndex - 1]
+      ? panels[currentPanelIndex - 1]
+      : null;
 
   const showSmallText = height < 300;
 
@@ -128,24 +131,22 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     : styles.markdownTextTopRight;
 
   const buttonText =
-    currentPanel < panels.length - 1
+    currentPanelIndex < panels.length - 1
       ? commonI18n.next()
       : commonI18n.continue();
-
-  const showTyping = true;
 
   return (
     <div
       id="panels-container"
       className={styles.panelsContainer}
-      key={currentPanel}
+      key={currentPanelIndex}
     >
       <div className={styles.panel} style={{width, height}}>
-        {lastPanel && (
+        {previousPanel && (
           <div
             className={styles.image}
             style={{
-              backgroundImage: `url("${lastPanel.imageUrl}")`,
+              backgroundImage: `url("${previousPanel.imageUrl}")`,
             }}
           />
         )}
@@ -163,7 +164,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
           )}
         >
           {offerTts && <TextToSpeech text={panel.text} />}
-          {showTyping ? (
+          {panel.typing ? (
             <Typist
               startDelay={2500}
               avgTypingDelay={35}
@@ -171,7 +172,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
               cursor={{show: false}}
               onTypingDone={() => {}}
             >
-              {panel.text}
+              {markdownToTxt(panel.text)}
             </Typist>
           ) : (
             <EnhancedSafeMarkdown markdown={panel.text} />
@@ -198,7 +199,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
                   className={classNames(
                     'icon',
                     styles.bubble,
-                    index === currentPanel
+                    index === currentPanelIndex
                       ? styles.bubbleCurrent
                       : styles.bubbleNotCurrent
                   )}
