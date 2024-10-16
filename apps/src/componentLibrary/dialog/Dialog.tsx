@@ -33,7 +33,7 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
  *  * (?) implementation of component approved by design team;
  *  * (?) has storybook, covered with stories and documentation;
  *  * (?) has tests: test every prop, every state and every interaction that's js related;
- *  * (see apps/test/unit/componentLibrary/DialogTest.jsx)
+ *  * (see apps/test/unit/componentLibrary/DialogTest.tsx)
  *  * (?) passes accessibility checks;
  *
  * ###  Status: ```WIP```
