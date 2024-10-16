@@ -57,6 +57,7 @@ class ManageLinkedAccounts extends React.Component {
     isCleverStudent: PropTypes.bool.isRequired,
     personalAccountLinkingEnabled: PropTypes.bool.isRequired,
     usStateCode: PropTypes.string,
+    age: PropTypes.number,
     lmsName: PropTypes.string,
   };
 
