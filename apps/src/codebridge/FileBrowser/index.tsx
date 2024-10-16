@@ -7,11 +7,10 @@ import OverflowTooltip from '@codebridge/components/OverflowTooltip';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
 import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
-import {ProjectType, FolderId, ProjectFile, FileId} from '@codebridge/types';
+import {ProjectType, FolderId} from '@codebridge/types';
 import {
   validateFileName as globalValidateFileName,
   validateFolderName,
-  getFileIconNameAndStyle,
   sendCodebridgeAnalyticsEvent,
   shouldShowFile,
   isValidFileName,
@@ -26,7 +25,6 @@ import {
   useSensors,
 } from '@dnd-kit/core';
 import classNames from 'classnames';
-import fileDownload from 'js-file-download';
 import React, {useMemo, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -37,7 +35,6 @@ import {
   isReadOnlyWorkspace,
   setOverrideValidations,
 } from '@cdo/apps/lab2/lab2Redux';
-import {PASSED_ALL_TESTS_VALIDATION} from '@cdo/apps/lab2/progress/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -56,6 +53,7 @@ import {
 import {Draggable} from './Draggable';
 import {Droppable} from './Droppable';
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
+import FileRow from './FileRow';
 import {FileUploader} from './FileUploader';
 import {
   useFileUploadErrorCallback,
@@ -71,11 +69,7 @@ import {
 } from './types';
 
 import moduleStyles from './styles/filebrowser.module.scss';
-
-const handleFileDownload = (file: ProjectFile, appName: string | undefined) => {
-  fileDownload(file.contents, file.name);
-  sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, appName);
-};
+import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 type FilesComponentProps = {
   files: ProjectType['files'];
@@ -96,18 +90,16 @@ const InnerFileBrowser = React.memo(
     appName,
   }: FilesComponentProps) => {
     const {
-      openMoveFilePrompt,
       openMoveFolderPrompt,
       openNewFilePrompt,
       openNewFolderPrompt,
       openRenameFolderPrompt,
     } = usePrompts();
     const {
-      openFile,
       deleteFile,
       toggleOpenFolder,
       deleteFolder,
-      config: {editableFileTypes, validMimeTypes},
+      config: {validMimeTypes},
     } = useCodebridgeContext();
     const {dragData, dropData} = useDndDataContext();
     const dialogControl = useDialogControl();
@@ -187,84 +179,10 @@ const InnerFileBrowser = React.memo(
       });
     };
 
-    // setFileType only gets called in start mode. If we are setting a file to
-    // validation or changing a validation file to a non-validation file, also
-    // set the override validation to a passed all tests condition.
-    // This makes it so the progress manager gets updated accordingly and
-    // levelbuilders can run the new validation file and see results.
-    // All files are set to starter by default, so we will catch all new validation
-    // files with this method.
-    const handleSetFileType = useMemo(
-      () => (fileId: FileId, type: ProjectFileType) => {
-        const file = files[fileId];
-        if (
-          file.type === ProjectFileType.VALIDATION &&
-          type !== ProjectFileType.VALIDATION
-        ) {
-          // If this was a validation file and we are changing it to a non-validation file,
-          // remove the override validation.
-          dispatch(setOverrideValidations([]));
-        } else if (type === ProjectFileType.VALIDATION) {
-          // If the new type is validation, use the passed all tests validation condition.
-          dispatch(setOverrideValidations([PASSED_ALL_TESTS_VALIDATION]));
-        }
-        setFileType(fileId, type);
-      },
-      [dispatch, files, setFileType]
-    );
-
-    const hasValidationFile = Object.values(files).find(
+    const hasValidationFile = !!Object.values(files).find(
       f => f.type === ProjectFileType.VALIDATION
     );
     const isReadOnly = useAppSelector(isReadOnlyWorkspace);
-
-    const startModeFileDropdownOptions = (file: ProjectFile) => {
-      // We only support one validation file per project, so if we already have one,
-      // do not show the option to mark another file as validation.
-      const options = [];
-      if (!hasValidationFile) {
-        options.push(
-          <span
-            onClick={() =>
-              handleSetFileType(file.id, ProjectFileType.VALIDATION)
-            }
-            key={'make-validation'}
-          >
-            <i className={`fa-solid fa-flask`} />{' '}
-            {codebridgeI18n.makeValidation()}
-          </span>
-        );
-      }
-      if (
-        file.type === ProjectFileType.VALIDATION ||
-        file.type === ProjectFileType.SUPPORT
-      ) {
-        options.push(
-          <span
-            onClick={() => handleSetFileType(file.id, ProjectFileType.STARTER)}
-            key={'make-starter'}
-          >
-            <i className={`fa-solid fa-eye`} /> {codebridgeI18n.makeStarter()}
-          </span>
-        );
-      }
-      if (
-        file.type === ProjectFileType.VALIDATION ||
-        file.type === ProjectFileType.STARTER ||
-        !file.type // A file wihtout a type is a starter file.
-      ) {
-        options.push(
-          <span
-            onClick={() => handleSetFileType(file.id, ProjectFileType.SUPPORT)}
-            key={'make-support'}
-          >
-            <i className={`fa-solid fa-eye-slash`} />{' '}
-            {codebridgeI18n.makeSupport()}
-          </span>
-        );
-      }
-      return options;
-    };
 
     return (
       <>
@@ -301,6 +219,7 @@ const InnerFileBrowser = React.memo(
                         tooltipId: `folder-tooltip-${f.id}`,
                         size: 's',
                         direction: 'onBottom',
+                        className: darkModeStyles.tooltipBottom,
                       }}
                       tooltipOverlayClassName={moduleStyles.nameContainer}
                       className={moduleStyles.nameContainer}
@@ -395,77 +314,29 @@ const InnerFileBrowser = React.memo(
           .filter(f => f.folderId === parentId && shouldShowFile(f))
           .sort((a, b) => a.name.localeCompare(b.name))
           .map(f => {
-            const {iconName, iconStyle, isBrand} = getFileIconNameAndStyle(f);
-            const iconClassName = isBrand
-              ? classNames('fa-brands', moduleStyles.rowIcon)
-              : moduleStyles.rowIcon;
-            return (
+            const isDraggingLocked =
+              !isStartMode && f.type === ProjectFileType.LOCKED_STARTER;
+            const fileRowProps = {
+              key: f.id,
+              file: f,
+              isReadOnly,
+              appName,
+              hasValidationFile,
+              isStartMode,
+              setFileType,
+              handleDeleteFile,
+              renameFilePrompt,
+              enableMenu: !dragData?.id || isDraggingLocked,
+            };
+            return isDraggingLocked ? (
+              <FileRow {...fileRowProps} />
+            ) : (
               <Draggable
                 data={{id: f.id, type: DragType.FILE, parentId: f.folderId}}
                 key={f.id}
                 Component="li"
               >
-                <div className={moduleStyles.row}>
-                  <div
-                    className={moduleStyles.label}
-                    onClick={() => openFile(f.id)}
-                  >
-                    <FontAwesomeV6Icon
-                      iconName={iconName}
-                      iconStyle={iconStyle}
-                      className={iconClassName}
-                    />
-
-                    <OverflowTooltip
-                      tooltipProps={{
-                        text: f.name,
-                        tooltipId: `file-tooltip-${f.id}`,
-                        size: 's',
-                        direction: 'onBottom',
-                      }}
-                      tooltipOverlayClassName={moduleStyles.nameContainer}
-                      className={moduleStyles.nameContainer}
-                    >
-                      <span>{f.name}</span>
-                    </OverflowTooltip>
-                  </div>
-                  {!isReadOnly && !dragData?.id && (
-                    <PopUpButton
-                      iconName="ellipsis-v"
-                      className={moduleStyles['button-kebab']}
-                    >
-                      <span className={moduleStyles['button-bar']}>
-                        <PopUpButtonOption
-                          iconName="arrow-right"
-                          labelText={codebridgeI18n.moveFile()}
-                          clickHandler={() =>
-                            openMoveFilePrompt({fileId: f.id})
-                          }
-                        />
-                        <PopUpButtonOption
-                          iconName="pencil"
-                          labelText={codebridgeI18n.renameFile()}
-                          clickHandler={() => renameFilePrompt(f.id)}
-                        />
-                        {editableFileTypes.some(
-                          type => type === f.language
-                        ) && (
-                          <PopUpButtonOption
-                            iconName="download"
-                            labelText={codebridgeI18n.downloadFile()}
-                            clickHandler={() => handleFileDownload(f, appName)}
-                          />
-                        )}
-                        <PopUpButtonOption
-                          iconName="trash"
-                          labelText={codebridgeI18n.deleteFile()}
-                          clickHandler={() => handleDeleteFile(f.id)}
-                        />
-                        {isStartMode && startModeFileDropdownOptions(f)}
-                      </span>
-                    </PopUpButton>
-                  )}
-                </div>
+                <FileRow {...fileRowProps} />
               </Draggable>
             );
           })}
@@ -529,11 +400,6 @@ export const FileBrowser = React.memo(() => {
             fileName: newName,
             folderId: file.folderId,
           });
-
-          const [, extension] = newName.split('.');
-          if (!extension) {
-            return codebridgeI18n.noFileExtensionError();
-          }
         },
       });
       if (results.type !== 'confirm') {
