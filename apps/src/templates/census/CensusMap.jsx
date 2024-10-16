@@ -18,35 +18,35 @@ class CensusMapInfoWindow extends Component {
 
   render() {
     let censusMessage;
-    let color = '';
+    let responseColorStyle = '';
 
     switch (this.props.teachesCs) {
       case 'YES':
       case 'Y':
         censusMessage = 'We believe this school offers Computer Science.';
-        color = 'legend-offers-cs';
+        responseColorStyle = 'legend-offers-cs';
         break;
       case 'NO':
       case 'N':
         censusMessage =
           'We believe this school offers no Computer Science opportunities.';
-        color = 'legend-limited-cs';
+        responseColorStyle = 'legend-limited-cs';
         break;
       case 'HISTORICAL_YES':
       case 'HY':
         censusMessage =
           'We believe this school historically offered Computer Science.';
-        color = 'legend-offers-cs';
+        responseColorStyle = 'legend-offers-cs';
         break;
       case 'HISTORICAL_NO':
       case 'HN':
         censusMessage =
           'We believe this school historically offered no Computer Science opportunities.';
-        color = 'legend-limited-cs';
+        responseColorStyle = 'legend-limited-cs';
         break;
       default:
         censusMessage = 'We need data for this school.';
-        color = 'legend-no-data-cs';
+        responseColorStyle = 'legend-no-data-cs';
     }
 
     const schoolDropdownOption = {
@@ -62,7 +62,7 @@ class CensusMapInfoWindow extends Component {
       },
     };
 
-    const colorClass = `color-small ${color}`;
+    const colorClass = `color-small ${responseColorStyle}`;
 
     return (
       <div id="census-info-window" className="census-info-window">
