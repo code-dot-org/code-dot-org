@@ -1,0 +1,25 @@
+@import 'color';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+
+  input {
+    width: 400px;
+  }
+
+  .radioContainer {
+    margin-top: 0.5rem;
+  }
+
+  .errorMessage {
+    color: $light_negative_500;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: baseline;
+    align-self: stretch;
+    gap: 0.375rem;
+    margin-top: 0.5rem;
+  }
+}

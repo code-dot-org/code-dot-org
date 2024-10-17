@@ -1,4 +1,4 @@
-import {BlockSvg, Workspace, FieldDropdown} from 'blockly';
+import * as GoogleBlockly from 'blockly/core';
 
 import danceMetricsReporter from '../../danceMetricsReporter';
 import {FieldKey, GeneratedEffect} from '../types';
@@ -17,26 +17,26 @@ const validateAndSetFieldValue =
  * and attaches them to each other.
  */
 export const generateAiEffectBlocksFromResult = (
-  workspace: Workspace,
+  workspace: GoogleBlockly.Workspace,
   effect: GeneratedEffect
-): [BlockSvg, BlockSvg] => {
+): [GoogleBlockly.BlockSvg, GoogleBlockly.BlockSvg] => {
   const blocksSvg = generateAiEffectBlocks(workspace);
 
   // Foreground block.
   validateAndSetFieldValue(
-    blocksSvg[0].getField('EFFECT') as FieldDropdown,
+    blocksSvg[0].getField('EFFECT') as GoogleBlockly.FieldDropdown,
     effect.foregroundEffect,
     {logValues: FieldKey.FOREGROUND_EFFECT}
   );
 
   // Background block.
   validateAndSetFieldValue(
-    blocksSvg[1].getField('EFFECT') as FieldDropdown,
+    blocksSvg[1].getField('EFFECT') as GoogleBlockly.FieldDropdown,
     effect.backgroundEffect,
     {logValues: FieldKey.BACKGROUND_EFFECT}
   );
   validateAndSetFieldValue(
-    blocksSvg[1].getField('PALETTE') as FieldDropdown,
+    blocksSvg[1].getField('PALETTE') as GoogleBlockly.FieldDropdown,
     effect.backgroundColor,
     {logValues: FieldKey.BACKGROUND_PALETTE}
   );

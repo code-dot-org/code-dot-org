@@ -1,4 +1,4 @@
-import {Workspace, WorkspaceSvg} from 'blockly';
+import * as GoogleBlockly from 'blockly/core';
 
 import {BLOCK_TYPES} from '../constants';
 import {BlocklyWrapperType, XmlBlockConfig} from '../types';
@@ -26,7 +26,7 @@ export default function initializeBlocklyXml(
   // Override domToBlock so that we can gracefully handle unknown blocks.
   blocklyWrapper.Xml.domToBlock = function (
     xmlBlock: Element,
-    workspace: Workspace
+    workspace: GoogleBlockly.Workspace
   ) {
     let block;
     try {
@@ -91,7 +91,7 @@ export default function initializeBlocklyXml(
  * @returns {string} The XML representation of the project.
  *
  */
-export function getProjectXml(workspace: WorkspaceSvg) {
+export function getProjectXml(workspace: GoogleBlockly.WorkspaceSvg) {
   // Start by getting the XML for all blocks on the workspace.
   const workspaceXml = Blockly.Xml.blockSpaceToDom(workspace);
 

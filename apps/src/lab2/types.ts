@@ -127,6 +127,7 @@ export enum ProjectFileType {
   STARTER = 'starter',
   SUPPORT = 'support',
   VALIDATION = 'validation',
+  LOCKED_STARTER = 'locked_starter',
 }
 
 export interface ProjectFolder {

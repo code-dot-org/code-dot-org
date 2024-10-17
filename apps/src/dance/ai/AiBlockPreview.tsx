@@ -1,4 +1,4 @@
-import {Workspace} from 'blockly';
+import * as GoogleBlockly from 'blockly/core';
 import React, {useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
@@ -18,7 +18,7 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
   results,
 }) => {
   const blockPreviewContainerRef = useRef<HTMLSpanElement>(null);
-  const workspaceRef = useRef<Workspace | null>(null);
+  const workspaceRef = useRef<GoogleBlockly.Workspace | null>(null);
   const isRtl = useSelector((state: {isRtl: boolean}) => state.isRtl);
 
   // Create the workspace once the container has been rendered.

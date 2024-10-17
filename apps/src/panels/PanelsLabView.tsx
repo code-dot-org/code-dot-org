@@ -5,13 +5,11 @@
 
 import React, {useCallback} from 'react';
 
-import {
-  sendSuccessReport,
-  navigateToNextLevel,
-} from '@cdo/apps/code-studio/progressRedux';
+import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {sendSuccessReport} from '../code-studio/progressRedux';
 import {queryParams} from '../code-studio/utils';
 import useWindowSize from '../util/hooks/useWindowSize';
 
@@ -40,12 +38,12 @@ const PanelsLabView: React.FunctionComponent = () => {
   const onContinue = useCallback(
     (nextUrl?: string) => {
       if (nextUrl) {
-        // This is a short-term solution for the Music Lab progression in incubation.  We will not attempt
-        // to send a success report for a level that uses this feature.
+        // This is a short-term solution for the Music Lab progression in incubation.
+        // Send a success report so we turn the bubble green.
+        dispatch(sendSuccessReport(appName));
         window.location.href = nextUrl;
       } else {
-        dispatch(sendSuccessReport(appName));
-        dispatch(navigateToNextLevel());
+        dispatch(continueOrFinishLesson());
       }
     },
     [dispatch]
