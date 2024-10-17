@@ -2,15 +2,7 @@ import {
   ObservableParameterModel,
   ObservableProcedureModel,
 } from '@blockly/block-shareable-procedures';
-import GoogleBlockly, {
-  Block,
-  FieldDropdown,
-  FieldVariable,
-  Menu,
-  MenuItem,
-  MenuOption,
-  WorkspaceSvg,
-} from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 
 import {commonI18n} from '@cdo/apps/types/locale';
 
@@ -35,7 +27,7 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
    * @param {!Blockly.MenuItem} menuItem The MenuItem selected within menu.
    * @protected
    */
-  onItemSelected_(menu: Menu, menuItem: MenuItem) {
+  onItemSelected_(menu: GoogleBlockly.Menu, menuItem: GoogleBlockly.MenuItem) {
     const oldVar = this.getText();
     const id = menuItem.getValue();
     if (this.sourceBlock_ && this.sourceBlock_.workspace) {
@@ -102,9 +94,13 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
 
       const parameterBlocks = workspace
         .getAllBlocks()
-        .filter(block => block.type === 'parameters_get');
-      parameterBlocks.forEach(paramBlock => {
-        const varField = paramBlock?.getField('VAR') as FieldVariable | null;
+        .filter(
+          (block: GoogleBlockly.Block) => block.type === 'parameters_get'
+        );
+      parameterBlocks.forEach((paramBlock: GoogleBlockly.Block) => {
+        const varField = paramBlock?.getField(
+          'VAR'
+        ) as GoogleBlockly.FieldVariable | null;
         if (varField && varField.getVariable()?.name === variable.name) {
           paramBlock.dispose(true);
         }
@@ -158,16 +154,17 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
    *   - `workspace`: The workspace that the parameter block belongs to.
    */
   protected findDefinitionBlockAndWorkspace(): {
-    definitionBlock: Block | null;
-    workspace: WorkspaceSvg;
+    definitionBlock: GoogleBlockly.Block | null;
+    workspace: GoogleBlockly.WorkspaceSvg;
   } {
-    const parameterBlock = this.getSourceBlock() as Block;
-    let definitionBlock: Block | null;
-    let workspace = parameterBlock.workspace as WorkspaceSvg;
+    const parameterBlock = this.getSourceBlock() as GoogleBlockly.Block;
+    let definitionBlock: GoogleBlockly.Block | null;
+    let workspace = parameterBlock.workspace as GoogleBlockly.WorkspaceSvg;
 
     if (parameterBlock.isInFlyout) {
       definitionBlock = (workspace as ExtendedWorkspaceSvg).flyoutParentBlock;
-      workspace = (workspace as WorkspaceSvg).targetWorkspace as WorkspaceSvg;
+      workspace = (workspace as GoogleBlockly.WorkspaceSvg)
+        .targetWorkspace as GoogleBlockly.WorkspaceSvg;
     } else {
       definitionBlock = parameterBlock.getRootBlock();
     }
@@ -239,7 +236,9 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
     (this as any).arrow = arrow;
   }
 
-  menuGenerator_ = function (this: FieldDropdown): MenuOption[] {
+  menuGenerator_ = function (
+    this: GoogleBlockly.FieldDropdown
+  ): GoogleBlockly.MenuOption[] {
     // Parameter field dropdowns only have options to rename or delete.
     return [
       [commonI18n.renameParameter(), RENAME_PARAMETER_ID],
@@ -267,7 +266,7 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
 }
 
 export const getAddParameterButtonWithCallback = (
-  workspace: WorkspaceSvg,
+  workspace: GoogleBlockly.WorkspaceSvg,
   procedure: ObservableProcedureModel
 ) => {
   const addParameterCallbackKey = 'addParameterCallback';

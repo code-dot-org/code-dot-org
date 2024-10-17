@@ -124,18 +124,18 @@
     "/standards/csa2025.json": "e3839d6157adbfe1bf823bb165063b96"
   },
   "de-DE": {
-    "/standards/ai4k12-2021.json": "0c06538ad5f7221a5e35dfe1a43583ef",
-    "/standards/ai4k12-2023.json": "3c58345c1ec38dc1f22f57645724ee01",
-    "/standards/c3ss.json": "0c06538ad5f7221a5e35dfe1a43583ef",
-    "/standards/ccela.json": "0c06538ad5f7221a5e35dfe1a43583ef",
-    "/standards/ccmath.json": "0c06538ad5f7221a5e35dfe1a43583ef",
-    "/standards/csa.json": "0c06538ad5f7221a5e35dfe1a43583ef",
-    "/standards/csp2021.json": "0c06538ad5f7221a5e35dfe1a43583ef",
-    "/standards/csta.json": "0c06538ad5f7221a5e35dfe1a43583ef",
-    "/standards/csta2011.json": "0c06538ad5f7221a5e35dfe1a43583ef",
-    "/standards/iste.json": "0c06538ad5f7221a5e35dfe1a43583ef",
-    "/standards/ngss.json": "0c06538ad5f7221a5e35dfe1a43583ef",
-    "/standards/csa2025.json": "3c58345c1ec38dc1f22f57645724ee01"
+    "/standards/ai4k12-2021.json": "96f85c92ff59543b7a819eb4296158f5",
+    "/standards/ai4k12-2023.json": "32244f9b87e008b6fa7b90f60dfe7db0",
+    "/standards/c3ss.json": "beb52e30fd991f2f0cf9527927725a3e",
+    "/standards/ccela.json": "96f85c92ff59543b7a819eb4296158f5",
+    "/standards/ccmath.json": "96f85c92ff59543b7a819eb4296158f5",
+    "/standards/csa.json": "96f85c92ff59543b7a819eb4296158f5",
+    "/standards/csp2021.json": "96f85c92ff59543b7a819eb4296158f5",
+    "/standards/csta.json": "96f85c92ff59543b7a819eb4296158f5",
+    "/standards/csta2011.json": "96f85c92ff59543b7a819eb4296158f5",
+    "/standards/iste.json": "96f85c92ff59543b7a819eb4296158f5",
+    "/standards/ngss.json": "96f85c92ff59543b7a819eb4296158f5",
+    "/standards/csa2025.json": "32244f9b87e008b6fa7b90f60dfe7db0"
   },
   "dv-MV": {
     "/standards/ai4k12-2021.json": "cbea210f521165cec3d3edb03418d0fd",
@@ -180,18 +180,18 @@
     "/standards/csa2025.json": "f297f51a5736ff06191738cbb3258f61"
   },
   "es-ES": {
-    "/standards/ai4k12-2021.json": "52bd96c2500b34069df6e93ff411a5b5",
-    "/standards/ai4k12-2023.json": "1e40292b4fc277101290b358aacc086b",
-    "/standards/c3ss.json": "c512a92ead44d8a55c5c1b2cf99bd177",
-    "/standards/ccela.json": "52bd96c2500b34069df6e93ff411a5b5",
-    "/standards/ccmath.json": "52bd96c2500b34069df6e93ff411a5b5",
-    "/standards/csa.json": "52bd96c2500b34069df6e93ff411a5b5",
-    "/standards/csp2021.json": "52bd96c2500b34069df6e93ff411a5b5",
-    "/standards/csta.json": "52bd96c2500b34069df6e93ff411a5b5",
-    "/standards/csta2011.json": "52bd96c2500b34069df6e93ff411a5b5",
-    "/standards/iste.json": "52bd96c2500b34069df6e93ff411a5b5",
-    "/standards/ngss.json": "52bd96c2500b34069df6e93ff411a5b5",
-    "/standards/csa2025.json": "1e40292b4fc277101290b358aacc086b"
+    "/standards/ai4k12-2021.json": "3eceb570a438dbc432af1310b35246ed",
+    "/standards/ai4k12-2023.json": "39368a2406d563cb2e8cf74559d8e3af",
+    "/standards/c3ss.json": "3eceb570a438dbc432af1310b35246ed",
+    "/standards/ccela.json": "3eceb570a438dbc432af1310b35246ed",
+    "/standards/ccmath.json": "30ac8f558daeeb59675aeedab669443e",
+    "/standards/csa.json": "3eceb570a438dbc432af1310b35246ed",
+    "/standards/csp2021.json": "3eceb570a438dbc432af1310b35246ed",
+    "/standards/csta.json": "30ac8f558daeeb59675aeedab669443e",
+    "/standards/csta2011.json": "3eceb570a438dbc432af1310b35246ed",
+    "/standards/iste.json": "30ac8f558daeeb59675aeedab669443e",
+    "/standards/ngss.json": "3eceb570a438dbc432af1310b35246ed",
+    "/standards/csa2025.json": "39368a2406d563cb2e8cf74559d8e3af"
   },
   "es-MX": {
     "/standards/ai4k12-2021.json": "06739c7d220ea4f9181b85a215eaf567",
@@ -445,18 +445,18 @@
     "/standards/csa2025.json": "7310f2aa6a93ab148fef40bb74dc1967"
   },
   "it-IT": {
-    "/standards/ai4k12-2021.json": "80036cfb10d814d8950022d90a43f6cd",
-    "/standards/ai4k12-2023.json": "e782ba1e6ccb33da733562eb5bfbd795",
-    "/standards/c3ss.json": "e782ba1e6ccb33da733562eb5bfbd795",
-    "/standards/ccela.json": "80036cfb10d814d8950022d90a43f6cd",
-    "/standards/ccmath.json": "80036cfb10d814d8950022d90a43f6cd",
-    "/standards/csa.json": "80036cfb10d814d8950022d90a43f6cd",
-    "/standards/csp2021.json": "80036cfb10d814d8950022d90a43f6cd",
-    "/standards/csta.json": "80036cfb10d814d8950022d90a43f6cd",
-    "/standards/csta2011.json": "80036cfb10d814d8950022d90a43f6cd",
-    "/standards/iste.json": "80036cfb10d814d8950022d90a43f6cd",
-    "/standards/ngss.json": "80036cfb10d814d8950022d90a43f6cd",
-    "/standards/csa2025.json": "835f2f8f7e0d1fa33576f95295da957f"
+    "/standards/ai4k12-2021.json": "122086c0549fdf2e376401cde1357e7f",
+    "/standards/ai4k12-2023.json": "e36495f19381ec66bf05849283029ec7",
+    "/standards/c3ss.json": "122086c0549fdf2e376401cde1357e7f",
+    "/standards/ccela.json": "122086c0549fdf2e376401cde1357e7f",
+    "/standards/ccmath.json": "879d12f0e5c93bf4452e4819dd6adea9",
+    "/standards/csa.json": "879d12f0e5c93bf4452e4819dd6adea9",
+    "/standards/csp2021.json": "122086c0549fdf2e376401cde1357e7f",
+    "/standards/csta.json": "879d12f0e5c93bf4452e4819dd6adea9",
+    "/standards/csta2011.json": "879d12f0e5c93bf4452e4819dd6adea9",
+    "/standards/iste.json": "879d12f0e5c93bf4452e4819dd6adea9",
+    "/standards/ngss.json": "879d12f0e5c93bf4452e4819dd6adea9",
+    "/standards/csa2025.json": "ef76043c00d63735e24bc47e1284eb70"
   },
   "ja-JP": {
     "/standards/ai4k12-2021.json": "9365e3d4276b2abde004a0b4914d2685",

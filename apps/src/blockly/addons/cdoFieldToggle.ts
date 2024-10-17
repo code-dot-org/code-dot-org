@@ -1,11 +1,11 @@
-import GoogleBlockly, {Block, BlockSvg, Field} from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 
 interface CdoFieldButtonToggleOptions {
   onClick: () => void;
   defaultIcon: SVGElement;
   alternateIcon: SVGElement;
   useDefaultIcon: boolean;
-  callback?: (block: Block) => void;
+  callback?: (block: GoogleBlockly.Block) => void;
   colorOverrides?: {
     icon?: string;
     button?: string;
@@ -18,7 +18,7 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
   private onClick: () => void;
   private defaultIcon: SVGElement;
   private alternateIcon: SVGElement;
-  private callback?: (block: Block) => void;
+  private callback?: (block: GoogleBlockly.Block) => void;
   private colorOverrides?: {
     icon?: string;
     button?: string;
@@ -45,7 +45,7 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
     callback,
     colorOverrides,
   }: CdoFieldButtonToggleOptions) {
-    super(Field.SKIP_SETUP);
+    super(GoogleBlockly.Field.SKIP_SETUP);
     this.onClick = onClick;
     this.defaultIcon = defaultIcon;
     this.alternateIcon = alternateIcon;
@@ -134,7 +134,7 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
    * @override
    */
   applyColour() {
-    const sourceBlock = this.getSourceBlock() as BlockSvg | null;
+    const sourceBlock = this.getSourceBlock() as GoogleBlockly.BlockSvg | null;
     if (!sourceBlock) {
       return;
     }

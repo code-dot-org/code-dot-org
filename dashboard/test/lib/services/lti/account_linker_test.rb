@@ -69,6 +69,20 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
     refute existing_student.reload.verified_teacher?
   end
 
+  test 'migrates the user' do
+    @user.update(provider: nil)
+    partial_lti_teacher = create :teacher
+    ao = create :lti_authentication_option
+    fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}
+    auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
+    ao.update(authentication_id: auth_id)
+    partial_lti_teacher.authentication_options = [ao]
+    ::PartialRegistration.persist_attributes @session, partial_lti_teacher
+    Services::Lti::AccountLinker.call(user: @user, session: @session)
+
+    assert @user.reload.migrated?
+  end
+
   test 'Swaps the existing user into the defunct user\'s sections' do
     new_student = create :student
     existing_student = create :student

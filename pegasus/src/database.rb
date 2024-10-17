@@ -73,6 +73,9 @@ class Tutorials
     by_short_code[short_code]
   end
 
+  # As of HOC 2024 we are no longer using this as a sorting method,
+  # but will leave this here in case we need to revert back to it.
+  # See https://github.com/code-dot-org/code-dot-org/pull/60728.
   def self.sort_by_popularity?(site, hoc_mode)
     (hoc_mode == "post-hoc") || (site == 'code.org' && [false, 'pre-hoc'].include?(hoc_mode))
   end

@@ -8,7 +8,7 @@ import React, {
 } from 'react';
 
 import MusicRegistry from '../MusicRegistry';
-import {TuneEventValue} from '../player/interfaces/TuneEvent';
+import {InstrumentEventValue} from '../player/interfaces/InstrumentEvent';
 import MusicLibrary from '../player/MusicLibrary';
 
 import Keybed from './Keybed';
@@ -21,8 +21,8 @@ const NUM_OCTAVES = 3;
 const START_OCTAVE = 4;
 
 export interface TunePanelProps {
-  initValue: TuneEventValue;
-  onChange: (value: TuneEventValue) => void;
+  initValue: InstrumentEventValue;
+  onChange: (value: InstrumentEventValue) => void;
 }
 
 const TunePanel: React.FunctionComponent<TunePanelProps> = ({
@@ -32,7 +32,9 @@ const TunePanel: React.FunctionComponent<TunePanelProps> = ({
   const [isLoading, setIsLoading] = useState(false);
   // Make a copy of the value object so that we don't overwrite Blockly's
   // data.
-  const currentValue: TuneEventValue = JSON.parse(JSON.stringify(initValue));
+  const currentValue: InstrumentEventValue = JSON.parse(
+    JSON.stringify(initValue)
+  );
 
   const availableInstruments = useMemo(() => {
     return MusicLibrary.getInstance()?.instruments || [];
@@ -88,7 +90,7 @@ const TunePanel: React.FunctionComponent<TunePanelProps> = ({
   }, [onChange, currentValue]);
 
   const startPreview = useCallback(() => {
-    MusicRegistry.player.previewTune(
+    MusicRegistry.player.previewNotes(
       currentValue,
       (tick: number) => setCurrentPreviewTick(tick),
       () => setCurrentPreviewTick(0)
