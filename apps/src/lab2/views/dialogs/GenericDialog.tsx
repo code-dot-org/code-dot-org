@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import FocusTrap from 'focus-trap-react';
 import React, {useCallback, useContext} from 'react';
 
@@ -50,6 +51,7 @@ export type GenericDialogProps = GenericDialogTitleProps &
   };
 
 import moduleStyles from './generic-dialog.module.scss';
+import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 /**
  * Generic root dialog used in Lab2 labs.
@@ -135,11 +137,13 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
             {buttons?.cancel ? (
               <Button
                 onClick={cancelCallback}
-                className={moduleStyles.cancel}
+                className={classNames(moduleStyles.cancel, {
+                  [darkModeStyles.secondaryButton]: theme === Theme.DARK,
+                })}
                 type="secondary"
                 disabled={buttons.cancel.disabled}
                 color={
-                  theme === Theme.LIGHT ? buttonColors.gray : buttonColors.white
+                  theme === Theme.DARK ? buttonColors.white : buttonColors.gray
                 }
                 text={buttons.cancel.text || commonI18n.cancel()}
               />
@@ -158,14 +162,17 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
               )}
               <Button
                 onClick={confirmCallback}
+                className={classNames({
+                  [darkModeStyles.primaryButton]: theme === Theme.DARK,
+                })}
                 disabled={buttons?.confirm?.disabled}
                 type="primary"
                 color={
                   buttons?.confirm?.destructive
                     ? buttonColors.destructive
-                    : theme === Theme.LIGHT
-                    ? buttonColors.purple
-                    : buttonColors.white
+                    : theme === Theme.DARK
+                    ? buttonColors.white
+                    : buttonColors.purple
                 }
                 text={buttons?.confirm?.text || commonI18n.dialogOK()}
               />
