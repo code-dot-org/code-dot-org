@@ -25,7 +25,7 @@ The script will prompt for any missing required inputs.
         TODO: Get this from AWS Secrets if not specified.
 
 ### Files:
-- [deploy_gen_ai_curriulum](./deploy_gen_ai_curriculum_stack): deploy script. Collects inputs, converts ERB template to YML, and deploys the CloudFormation stack (if dry-run is false).
+- [deploy_gen_ai_curriculum_stack](./deploy_gen_ai_curriculum_stack): deploy script. Collects inputs, converts ERB template to YML, and deploys the CloudFormation stack (if dry-run is false).
 - [gen_ai_curriculum.yml.erb](./gen_ai_curriculum.yml.erb): Template ERB script that gets converted to YAML by the deploy script. ERB is used to programmatically generate the various resource configurations for each model/endpoint.
 - [config.rb](./config.rb): Configuration for each endpoint/model. See file for details on what parameters are specified. This configuration is used in the template ERB file.
 
