@@ -8,43 +8,43 @@ Parameters:
     Description: "Environment being deployed to (ex: production, test)"
 
 Resources:
-  AiDiffKnowledgeBaseWithAoss:
-    Type: AWS::Bedrock::KnowledgeBase
-    DependsOn: CreateVectorIndex
-    Properties:
-      Name: !Sub ai-diff-${Environment}
-      Description: "Embedded lesson plans and supporting documents for contextual differentiation chat with AI Teaching assistant"
-      # TODO: define this role in code
-      RoleArn: !GetAtt AiDiffKnowledgeBaseRole.Arn
-      KnowledgeBaseConfiguration:
-        Type: "VECTOR"
-        VectorKnowledgeBaseConfiguration:
-          EmbeddingModelArn: "arn:aws:bedrock:us-east-1::foundation-model/amazon.titan-embed-text-v2:0"
-          EmbeddingModelConfiguration:
-            BedrockEmbeddingModelConfiguration:
-              Dimensions: 1024
-      StorageConfiguration:
-        Type: "OPENSEARCH_SERVERLESS"
-        OpensearchServerlessConfiguration:
-          CollectionArn: !GetAtt AiDiffCollection.Arn
-          VectorIndexName: "ai-diff-index"
-          FieldMapping:
-            VectorField: "ai-diff-vector-field"
-            TextField: "text"
-            MetadataField: "metadata"
+  # AiDiffKnowledgeBaseWithAoss:
+  #   Type: AWS::Bedrock::KnowledgeBase
+  #   DependsOn: CreateVectorIndex
+  #   Properties:
+  #     Name: !Sub ai-diff-${Environment}
+  #     Description: "Embedded lesson plans and supporting documents for contextual differentiation chat with AI Teaching assistant"
+  #     # TODO: define this role in code
+  #     RoleArn: !GetAtt AiDiffKnowledgeBaseRole.Arn
+  #     KnowledgeBaseConfiguration:
+  #       Type: "VECTOR"
+  #       VectorKnowledgeBaseConfiguration:
+  #         EmbeddingModelArn: "arn:aws:bedrock:us-east-1::foundation-model/amazon.titan-embed-text-v2:0"
+  #         EmbeddingModelConfiguration:
+  #           BedrockEmbeddingModelConfiguration:
+  #             Dimensions: 1024
+  #     StorageConfiguration:
+  #       Type: "OPENSEARCH_SERVERLESS"
+  #       OpensearchServerlessConfiguration:
+  #         CollectionArn: !GetAtt AiDiffCollection.Arn
+  #         VectorIndexName: "ai-diff-index"
+  #         FieldMapping:
+  #           VectorField: "ai-diff-vector-field"
+  #           TextField: "text"
+  #           MetadataField: "metadata"
 
-  AiDiffDataSource:
-    Type: AWS::Bedrock::DataSource
-    Properties:
-      KnowledgeBaseId: !Ref AiDiffKnowledgeBaseWithAoss
-      Name: "AI_Differentiation_data"
-      Description: "Lesson Plans and Supporting documents for code.org lessons"
-      DataDeletionPolicy: "RETAIN"
-      DataSourceConfiguration:
-        Type: "S3"
-        S3Configuration:
-          BucketArn: !GetAtt AiDiffS3Bucket.Arn
-          InclusionPrefixes: ["live/"]
+  # AiDiffDataSource:
+  #   Type: AWS::Bedrock::DataSource
+  #   Properties:
+  #     KnowledgeBaseId: !Ref AiDiffKnowledgeBaseWithAoss
+  #     Name: "AI_Differentiation_data"
+  #     Description: "Lesson Plans and Supporting documents for code.org lessons"
+  #     DataDeletionPolicy: "RETAIN"
+  #     DataSourceConfiguration:
+  #       Type: "S3"
+  #       S3Configuration:
+  #         BucketArn: !GetAtt AiDiffS3Bucket.Arn
+  #         InclusionPrefixes: ["live/"]
 
   AiDiffS3Bucket:
     Type: AWS::S3::Bucket
@@ -61,6 +61,7 @@ Resources:
   CreateVectorIndex:
     Type: Custom::CreateVectorIndex
     Properties:
+      ServiceTimeout: 20 
       ServiceToken: !GetAtt CreateVectorIndexCustomResourceLambda.Arn
       OpenSearchEndpoint: !GetAtt AiDiffCollection.CollectionEndpoint
       VectorIndexName: ai-diff-index
@@ -72,72 +73,68 @@ Resources:
       Handler: index.handler
       Role: !GetAtt CreateVectorIndexCustomResourceLambdaRole.Arn
       Runtime: nodejs18.x
+      Timeout: 10
       Code:
         ZipFile: |
           const https = require('https');
+          const response = require('cfn-response');
 
-          export const handler = async (event, context) => {
-            console.log('Received event:', JSON.stringify(event, null, 2));
-
-            const openSearchEndpoint = event.ResourceProperties.OpenSearchEndpoint;
-            const vectorIndexName = event.ResourceProperties.VectorIndexName;
-            const vectorFieldName = event.ResourceProperties.VectorFieldName;
-            // const openSearchEndpoint = '2ujmstqrao8qec25luhe.us-east-1.aoss.amazonaws.com';
-            // const vectorIndexName = 'ai-diff-index';
-            // const vectorFieldName = 'ai-diff-vector-field';
-
-            const requestBody = JSON.stringify({
-              settings: {
-                index: {
-                  knn: true,
-                  "knn.algo_param.ef_search": 512
-                }
-              },
-              mappings: {
-                properties: {
-                  [vectorFieldName]: {
-                    type: "knn_vector",
-                    dimension: 1024,
-                    method: {
-                      name: "hnsw",
-                      engine: "faiss",
-                      parameters: {},
-                      space_type: "l2"
-                    }
-                  },
-                  text: {
-                    type: "text",
-                    index: "true"
-                  },
-                  metadata: {
-                    type: "text",
-                    index: "false"
+          exports.handler = async function (event, context) {
+            try {
+              console.log('Received event:', JSON.stringify(event, null, 2));
+            
+              if (event.RequestType === 'Delete') {
+                console.log("DELETE is a no-op, exiting")
+                response.send(event, context, response.SUCCESS);
+              }
+              
+              const openSearchEndpoint = event.ResourceProperties.OpenSearchEndpoint;
+              const vectorIndexName = event.ResourceProperties.VectorIndexName;
+              const vectorFieldName = event.ResourceProperties.VectorFieldName;
+            
+              const requestBody = JSON.stringify({
+                settings: {
+                  index: { knn: true, "knn.algo_param.ef_search": 512 }
+                },
+                mappings: {
+                  properties: {
+                    [vectorFieldName]: {
+                      type: "knn_vector",
+                      dimension: 1024,
+                      method: {
+                        name: "hnsw",
+                        engine: "faiss",
+                        parameters: {},
+                        space_type: "l2"
+                      }
+                    },
+                    text: { type: "text", index: "true" },
+                    metadata: { type: "text", index: "false" }
                   }
                 }
+              });
+            
+              const options = {
+                hostname: openSearchEndpoint,
+                path: `/${vectorIndexName}`,
+                method: 'PUT',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Content-Length': Buffer.byteLength(requestBody)
+                }
+              };
+            
+              try {
+                const response = await sendRequest(options, requestBody);
+                console.log('Response:', response);
+                response.send(event, context, response.SUCCESS);
+              } catch (error) {
+                console.error('OpenSearch Error:', error);
+                response.send(event, context, response.FAILED, {Status: 'FAILED', Reason: `Error updating OpenSearch: ${error.message}`});
               }
-            });
-
-            const options = {
-              hostname: openSearchEndpoint,
-              path: `/${vectorIndexName}`,
-              method: 'PUT',
-              headers: {
-                'Content-Type': 'application/json',
-                'Content-Length': Buffer.byteLength(requestBody)
-              }
-            };
-
-            try {
-              const response = await sendRequest(options, requestBody);
-              console.log('Response:', response);
-
-              // Send success response to CloudFormation
-              await sendCloudFormationResponse(event, context, 'SUCCESS', { Response: response });
             } catch (error) {
-              console.error('Error:', error);
-
-              // Send failure response to CloudFormation
-              await sendCloudFormationResponse(event, context, 'FAILED', { Error: error.message });
+              console.error('Lambda Error:', error);
+              response.send(event, context, response.FAILED, {Status: 'FAILED', Reason: `Error executing Custom Resource Lambda: ${error.message}`});
             }
           };
 
@@ -165,40 +162,6 @@ Resources:
               req.end();
             });
           };
-
-          // Helper function to respond to CloudFormation
-          const sendCloudFormationResponse = (event, context, status, data) => {
-            const responseBody = JSON.stringify({
-              Status: status,
-              Reason: data.Error || 'See the details in CloudWatch Log Stream: ' + context.logStreamName,
-              PhysicalResourceId: context.logStreamName,
-              StackId: event.StackId,
-              RequestId: event.RequestId,
-              LogicalResourceId: event.LogicalResourceId,
-              Data: data
-            });
-
-            const options = {
-              hostname: new URL(event.ResponseURL).hostname,
-              path: new URL(event.ResponseURL).pathname,
-              method: 'PUT',
-              headers: {
-                'Content-Type': '',
-                'Content-Length': Buffer.byteLength(responseBody)
-              }
-            };
-
-            return new Promise((resolve, reject) => {
-              const req = https.request(options, (res) => {
-                res.on('end', resolve);
-                res.on('error', reject);
-              });
-
-              req.write(responseBody);
-              req.end();
-            });
-          };
-      Timeout: 10
 
   CreateVectorIndexCustomResourceLambdaRole:
     Type: AWS::IAM::Role
@@ -263,8 +226,7 @@ Resources:
                 "Resource": ["collection/ai-diff-${Environment}"]
               }
             ],
-            "AllowFromPublic": false,
-            "SourceServices": ["bedrock.amazonaws.com"]
+            "AllowFromPublic": true
           }
         ]
   DataPolicy:
@@ -305,7 +267,7 @@ Resources:
             ],
             "Principal": [
               "${AiDiffKnowledgeBaseRole.Arn}",
-              "arn:aws:sts::475661607190:assumed-role/GoogleAdmin/*"
+              "arn:aws:sts::${AWS::AccountId}:assumed-role/GoogleAdmin/*"
             ]
           }
         ]
