@@ -111,6 +111,40 @@
   }
 }
 
+// Necessary to prevent "Was this helpful?..." message footer from being wider
+// than the message box for short messages.
+.message-assistant {
+  min-width: 270px;
+}
+
+.message-user {
+  margin-left: 48px;
+}
+
+.messageFeedback {
+  &Container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    color: $light-gray-600;
+  }
+  &Left {
+    display: flex;
+    align-items: center;
+  }
+  &Right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+  }
+  &Button i {
+    color: $light-gray-600;
+  }
+}
+
 .chips fieldset div {
   justify-content: flex-end;
 }
