@@ -87,6 +87,10 @@ class AuthenticationOption < ApplicationRecord
     credential_type == GOOGLE
   end
 
+  def email?
+    credential_type == EMAIL
+  end
+
   def codeorg_email?
     Mail::Address.new(email).domain == 'code.org'
   end

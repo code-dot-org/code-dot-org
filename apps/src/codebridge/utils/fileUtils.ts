@@ -12,10 +12,12 @@ export function shouldShowFile(file?: ProjectFile) {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   // If we are in start mode, show all files. If we are not in start mode,
-  // show starter files or files without a type.
+  // show starter files, locked starter files, and files without a type.
   return isStartMode
     ? true
-    : file.type === ProjectFileType.STARTER || !file.type;
+    : file.type === ProjectFileType.STARTER ||
+        file.type === ProjectFileType.LOCKED_STARTER ||
+        !file.type;
 }
 
 export function getFileIconNameAndStyle(file: ProjectFile): {
@@ -34,6 +36,8 @@ export function getFileIconNameAndStyle(file: ProjectFile): {
     return {iconName: 'flask', iconStyle: 'solid'};
   } else if (file.type === ProjectFileType.SUPPORT) {
     return {iconName: 'eye-slash', iconStyle: 'regular'};
+  } else if (file.type === ProjectFileType.LOCKED_STARTER) {
+    return {iconName: 'lock', iconStyle: 'solid'};
   } else {
     // Starter files or files without a type, which default to starter.
     return {iconName: 'eye', iconStyle: 'regular'};

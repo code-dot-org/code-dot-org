@@ -41,6 +41,12 @@ describe('SectionProgressV2', () => {
     jest
       .spyOn(sectionProgressLoader, 'loadUnitProgress')
       .mockResolvedValue(Promise.resolve());
+
+    global.fetch = jest.fn(() =>
+      Promise.resolve({
+        json: () => Promise.resolve({}),
+      })
+    );
   });
 
   afterEach(() => {

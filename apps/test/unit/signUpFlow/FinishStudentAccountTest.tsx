@@ -54,6 +54,7 @@ describe('FinishStudentAccount', () => {
       <FinishStudentAccount
         ageOptions={ageOptions}
         usIp={usIp}
+        countryCode={'US'}
         usStateOptions={usStateOptions}
       />
     );
@@ -340,6 +341,7 @@ describe('FinishStudentAccount', () => {
     const age = '6';
     const gender = 'Female';
     const state = 'AZ';
+    const country = 'US';
     const parentEmail = 'parent@email.com';
     const finishSignUpParams = {
       new_sign_up: true,
@@ -350,6 +352,7 @@ describe('FinishStudentAccount', () => {
         age: age,
         gender: gender,
         us_state: state,
+        country_code: country,
         parent_email_preference_email: parentEmail,
         parent_email_preference_opt_in: true,
       },
