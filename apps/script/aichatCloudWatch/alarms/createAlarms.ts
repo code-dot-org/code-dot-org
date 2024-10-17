@@ -5,19 +5,26 @@ import {
 
 import {REGION} from '../constants';
 
-import {openaiLowSuccessRateParams} from './alarmParams';
+import {openaiLowSuccessRateConfigurations} from './alarmConfigurations';
 
-// Initialize the CloudWatch client
+// Initialize the CloudWatch client.
 const cloudwatch = new CloudWatchClient({region: REGION});
 
+// Array of alarm configurations.
+const alarmConfigurations = [openaiLowSuccessRateConfigurations];
+
 const createMetricAlarms = async () => {
-  // Send the PutMetricAlarmCommand
-  try {
-    const command = new PutMetricAlarmCommand(openaiLowSuccessRateParams);
-    const response = await cloudwatch.send(command);
-    console.log('Metric alarms created successfully:', response);
-  } catch (error) {
-    console.error('Error creating metric alarms:', error);
+  for (const alarmConfig of alarmConfigurations) {
+    try {
+      const command = new PutMetricAlarmCommand(alarmConfig);
+      const response = await cloudwatch.send(command);
+      console.log(
+        `Alarm ${alarmConfig.AlarmName} created successfully:`,
+        response
+      );
+    } catch (error) {
+      console.error(`Error creating alarm ${alarmConfig.AlarmName}: `, error);
+    }
   }
 };
 

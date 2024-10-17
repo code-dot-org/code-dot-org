@@ -1,16 +1,15 @@
 import {ComparisonOperator} from '@aws-sdk/client-cloudwatch';
 
-export const openaiLowSuccessRateParams = {
+export const openaiLowSuccessRateConfigurations = {
   AlarmName: 'test_script_genai_openai_low_success_rate',
   AlarmDescription: 'test_script_genai_openai_low_success_rate',
   ActionsEnabled: true,
-  OKActions: [], // No OK actions specified
+  OKActions: [],
   AlarmActions: ['arn:aws:sns:us-east-1:475661607190:javabuilder-low-urgency'],
   InsufficientDataActions: [],
   EvaluationPeriods: 5,
   DatapointsToAlarm: 5,
   Threshold: 90,
-  // Use the correct case-sensitive enum value here
   ComparisonOperator: ComparisonOperator.LessThanThreshold,
   TreatMissingData: 'missing',
   Metrics: [
