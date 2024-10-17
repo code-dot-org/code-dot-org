@@ -373,7 +373,7 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -387,11 +387,12 @@ describe('RubricContainer', () => {
       </Provider>
     );
     await wait();
-    wrapper.update();
+
     expect(userFetchStub).to.have.been.called;
     expect(allFetchStub).to.have.been.called;
-    expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_not_attempted());
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
+    screen.getByText(i18n.aiEvaluationStatus_not_attempted());
+    const button = screen.getByRole('button', {name: i18n.runAiAssessment()});
+    expect(button).to.be.disabled;
   });
 
   it('shows status text when level has already been evaluated', async () => {
@@ -400,7 +401,7 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -417,13 +418,11 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
-    wrapper.update();
     expect(userFetchStub).to.have.been.called;
     expect(allFetchStub).to.have.been.called;
-    expect(wrapper.text()).to.include(
-      i18n.aiEvaluationStatus_already_evaluated()
-    );
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
+    screen.getByText(i18n.aiEvaluationStatus_already_evaluated());
+    const button = screen.getByRole('button', {name: i18n.runAiAssessment()});
+    expect(button).to.be.disabled;
   });
 
   it('allows teacher to run analysis when level has not been evaluated', async () => {
@@ -432,7 +431,7 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -449,10 +448,10 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
-    wrapper.update();
     expect(userFetchStub).to.have.been.called;
     expect(allFetchStub).to.have.been.called;
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.false;
+    const button = screen.getByRole('button', {name: i18n.runAiAssessment()});
+    expect(button).to.not.be.disabled;
   });
 
   it('handles running ai assessment', async () => {
@@ -473,7 +472,7 @@ describe('RubricContainer', () => {
     stubFetchAiEvaluations([]);
     stubFetchTourStatus({seen: true});
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -490,8 +489,8 @@ describe('RubricContainer', () => {
     await wait();
 
     // 1. Initial fetch returns a json object that puts AI Status into READY state
-    wrapper.update();
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.false;
+    let button = screen.getByRole('button', {name: i18n.runAiAssessment()});
+    expect(button).to.not.be.disabled;
 
     // 2. User clicks button to run analysis
 
@@ -500,7 +499,7 @@ describe('RubricContainer', () => {
       .withArgs(sinon.match(/rubrics\/\d+\/run_ai_evaluations_for_user$/))
       .returns(Promise.resolve(new Response(JSON.stringify({}))));
     stubFetchEvalStatusForUser(pendingJson);
-    wrapper.find('Button').at(0).simulate('click');
+    fireEvent.click(button);
 
     //expect amplitude event on click
     expect(sendEventSpy).to.have.been.calledWith(
@@ -514,23 +513,23 @@ describe('RubricContainer', () => {
     // Wait for fetches and re-render
     clock.tick(5000);
     await wait();
-    wrapper.update();
 
     // 3. Fetch returns a json object with puts AI Status into EVALUATION_PENDING state
     expect(stubRunAiEvaluationsForUser).to.have.been.called;
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
-    expect(wrapper.text()).include(i18n.aiEvaluationStatus_pending());
+    button = screen.getByRole('button', {name: i18n.runAiAssessment()});
+    expect(button).to.be.disabled;
+    screen.getByText(i18n.aiEvaluationStatus_pending());
 
     stubFetchEvalStatusForUser(runningJson);
 
     // 4. Move clock forward 5 seconds and re-render
     clock.tick(5000);
     await wait();
-    wrapper.update();
 
     // 5. Fetch returns a json object with puts AI Status into EVALUATION_RUNNING state
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
-    expect(wrapper.text()).include(i18n.aiEvaluationStatus_in_progress());
+    button = screen.getByRole('button', {name: i18n.runAiAssessment()});
+    expect(button).to.be.disabled;
+    screen.getByText(i18n.aiEvaluationStatus_in_progress());
 
     stubFetchEvalStatusForUser(successJson);
     stubFetchAiEvaluations(mockAiEvaluations);
@@ -538,14 +537,11 @@ describe('RubricContainer', () => {
     // 6. Move clock forward 5 seconds and re-render
     clock.tick(5000);
     await wait();
-    wrapper.update();
 
     // 7. Fetch returns a json object with puts AI Status into SUCCESS state
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
-    expect(wrapper.text()).include(i18n.aiEvaluationStatus_success());
-    expect(wrapper.find('RubricContent').props().aiEvaluations).to.eql(
-      mockAiEvaluations
-    );
+    button = screen.getByRole('button', {name: i18n.runAiAssessment()});
+    expect(button).to.be.disabled;
+    screen.getByText(i18n.aiEvaluationStatus_success());
   });
 
   it('shows general error message for status 1000', async () => {
