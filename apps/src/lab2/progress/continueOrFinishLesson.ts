@@ -5,10 +5,9 @@ import {
   sendSuccessReport,
 } from '@cdo/apps/code-studio/progressRedux';
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {shareLab2Project} from '@cdo/apps/lab2/header/lab2HeaderShare';
+import {LevelProperties} from '@cdo/apps/lab2/types';
 import {RootState} from '@cdo/apps/types/redux';
-
-import {shareLab2Project} from '../header/lab2HeaderShare';
-import {LevelProperties} from '../types';
 
 /**
  * Handles all logic for continuing lesson progression, either to the next level or finishing the lesson.

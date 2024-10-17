@@ -151,7 +151,13 @@ const PythonlabView: React.FunctionComponent = () => {
       progressManager,
       isStartMode ? undefined : validationFile
     );
-    if (currentLevel && currentLevel.status === LevelStatus.not_tried) {
+    if (
+      currentLevel &&
+      !isPredictLevel &&
+      currentLevel.status === LevelStatus.not_tried
+    ) {
+      // If this is not a predict level and the current status is not tried,
+      // send a level started progress report.
       dispatch(sendProgressReport(appName || '', TestResults.LEVEL_STARTED));
     }
     // Only send a predict level report if this is a predict level and the predict
