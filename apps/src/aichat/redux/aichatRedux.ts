@@ -207,7 +207,7 @@ const saveAiCustomization = async (
     );
 
     // If any fields were flagged for toxicity, display a notification and don't try to save.
-    if (!toxicity.flaggedField.length) {
+    if (!toxicity.flaggedFields.length) {
       passedToxicityScreening = true;
     } else {
       // Log for analysis purposes
@@ -565,7 +565,7 @@ async function handleChatCompletionError(
   } else if (error instanceof NetworkError && error.response.status === 403) {
     await handleErrorUnauthorized(error, dispatch);
   } else {
-    handleErrorGeneric('Aichat.ChatCompletionErrorRateLimited', dispatch);
+    handleErrorGeneric('Aichat.ChatCompletionErrorUnhandled', dispatch);
   }
 }
 
