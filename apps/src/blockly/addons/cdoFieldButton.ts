@@ -1,4 +1,4 @@
-import GoogleBlockly, {BlockSvg, FieldValidator} from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 
 interface ColorOverrides {
   button?: string;
@@ -8,7 +8,7 @@ interface ColorOverrides {
 
 interface CdoFieldButtonOptions {
   value?: string;
-  validator?: FieldValidator<string> | null;
+  validator?: GoogleBlockly.FieldValidator<string> | null;
   onClick: () => void;
   transformText?: (text: string) => string;
   icon?: SVGElement;
@@ -66,7 +66,7 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
   initView() {
     super.initView();
     if (this.icon) {
-      const sourceBlock = this.getSourceBlock() as BlockSvg;
+      const sourceBlock = this.getSourceBlock() as GoogleBlockly.BlockSvg;
       this.icon.style.fill =
         this.colorOverrides?.icon || sourceBlock?.style.colourPrimary;
       // Make the icon centered on Safari.
@@ -118,7 +118,7 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
    * @override
    */
   applyColour() {
-    const sourceBlock = this.getSourceBlock() as BlockSvg;
+    const sourceBlock = this.getSourceBlock() as GoogleBlockly.BlockSvg;
     const buttonColor = this.colorOverrides?.button;
     const textColor = this.colorOverrides?.text;
     const iconColor = this.colorOverrides?.icon;

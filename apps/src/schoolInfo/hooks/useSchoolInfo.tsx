@@ -62,6 +62,13 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
   const [schoolName, setSchoolName] = useState(detectedSchoolName);
   const [schoolsList, setSchoolsList] = useState<SchoolDropdownOption[]>([]);
 
+  const reset = () => {
+    setCountry(detectedCountry);
+    setSchoolId(detectedSchoolId);
+    setSchoolZip(detectedZip);
+    setSchoolName(detectedSchoolName);
+  };
+
   // Memoized fetchSchools function using useCallback
   const fetchSchools = useCallback(
     (
@@ -170,5 +177,6 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     setCountry,
     setSchoolName,
     setSchoolZip,
+    reset,
   };
 }

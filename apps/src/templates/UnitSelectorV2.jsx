@@ -42,11 +42,12 @@ function UnitSelectorV2({
   isLoadingCourses,
   isLoadingSectionData,
 }) {
+  // Reload courses with progress when selected section changes.
   React.useEffect(() => {
-    if (!coursesWithProgress || coursesWithProgress.length === 0) {
+    if (sectionId) {
       asyncLoadCoursesWithProgress();
     }
-  }, [coursesWithProgress, asyncLoadCoursesWithProgress]);
+  }, [sectionId, asyncLoadCoursesWithProgress]);
 
   const unitId = React.useMemo(() => scriptId, [scriptId]);
   const onSelectUnit = React.useCallback(
