@@ -12,9 +12,10 @@
     "level_data": {
       "library": "launch2024"
     },
+    "long_instructions": "### <i class=\"fa-solid fa-wrench\"></i> Customize the trigger\r\n\r\n1. Change the number that triggers the vocals.\r\n2. Press <i class=\"fa-solid fa-play\"></i> Run.\r\n3. Try the trigger.",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-07 19:48:55 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-07 19:48:55 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 21:45:07 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

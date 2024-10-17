@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2024-09-15T21:08:36.000Z",
   "level_num": "custom",
@@ -22,7 +21,7 @@
           "language": "py",
           "contents": "import matplotlib.pyplot as plt\nimport pandas as pd\n\n#Import the data\ndf = pd.read_csv('US_Gas_Prices.csv', sep=',')\ndf.columns\n\n# Create the chart\nplt.plot(df['Date'], df['US Average'], linestyle=':', color='blue')\n\n# ADD CODE HERE To Display the chart\n\n\n# Add title and labels\nplt.title( 'US Average Gas Prices')\nplt.xlabel('Date')\nplt.ylabel('US Dollars')",
           "folderId": "0",
-          "active": true,
+          "active": false,
           "open": true
         },
         "1": {
@@ -46,8 +45,19 @@
     "project_template_level_name": "datascience-U2L4-L6cTempl_2024-pilot",
     "teacher_markdown": "Students might run into errors if they have typos in the file name or forget the .csv. Remind students that these are common errors and how to resolve them.\r\n",
     "bubble_choice_description": "Practice loading the dataset into a variable and printing the first few rows.",
-    "thumbnail_url": "https://images.code.org/51b370e23d0f3bc610d64676e839b144-heart.png"
+    "thumbnail_url": "https://images.code.org/51b370e23d0f3bc610d64676e839b144-heart.png",
+    "validation_file": {
+      "id": "2",
+      "name": "test.py",
+      "language": "py",
+      "contents": "import unittest\nimport ast\n\nclass TestNBAStatsImport(unittest.TestCase):\n    def setUp(self):\n        # Read the student's code from 'main.py' and parse it into an AST\n        with open('main.py', 'r') as f:\n            self.tree = ast.parse(f.read())\n\n    def detect_csv_read(self, file_name=None):\n        \"\"\"\n        Detects if a CSV file is read into a DataFrame using pandas.\n        \n        Args:\n        file_name (str, optional): The name of the CSV file to look for. \n                                   If None, detects any CSV file read.\n        \n        Returns:\n        bool: True if the specified (or any) CSV file is read, False otherwise.\n        \"\"\"\n        for node in ast.walk(self.tree):\n            # Look for pd.read_csv or pandas.read_csv function call\n            if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute):\n                if node.func.attr == 'read_csv':\n                    if file_name is None:\n                        # If no specific file name is provided, return True for any read_csv call\n                        return True\n                    elif (isinstance(node.args[0], ast.Constant) and \n                          isinstance(node.args[0].value, str) and\n                          node.args[0].value.endswith('.csv')):\n                        # If a file name is provided, check if it matches\n                        if file_name == node.args[0].value:\n                            return True\n                    # Check in keyword arguments\n                    for keyword in node.keywords:\n                        if (keyword.arg == 'filepath_or_buffer' and\n                            isinstance(keyword.value, ast.Constant) and\n                            isinstance(keyword.value.value, str) and\n                            keyword.value.value.endswith('.csv')):\n                            if file_name is None or file_name == keyword.value.value:\n                                return True\n        return False\n\n    def detect_head_function(self, variable_name):\n        \"\"\"Detect if head() is used on a specific variable in a print statement.\"\"\"\n        for node in ast.walk(self.tree):\n            if isinstance(node, ast.Expr) and isinstance(node.value, ast.Call):\n                # Check for a print statement with head()\n                if isinstance(node.value.func, ast.Name) and node.value.func.id == 'print':\n                    if node.value.args:\n                        if isinstance(node.value.args[0], ast.Call):\n                            if isinstance(node.value.args[0].func, ast.Attribute):\n                                if node.value.args[0].func.attr == 'head':\n                                    # Check if head() is called on the specified variable\n                                    if isinstance(node.value.args[0].func.value, ast.Name):\n                                        if node.value.args[0].func.value.id == variable_name:\n                                            return True\n        return False\n\n    def test_step_1_read_csv_into_dataframe(self):\n        \"\"\"Read the 'health_data.csv' file into a DataFrame.\"\"\"\n        csv_detected = self.detect_csv_read('health_data.csv')  \n        self.assertTrue(csv_detected, \"The 'health_data.csv' file was not correctly read into a DataFrame using pandas.\")\n    \n    def test_step_2_print_head(self):\n        \"\"\"The first few rows of the DataFrame stored in 'line_chart_data' are printed using head().\"\"\"\n        head_detected = self.detect_head_function('line_chart_data')\n        self.assertTrue(head_detected, \"The first few rows of the DataFrame stored in 'line_chart_data' are not printed correctly using head().\")\n\n    def test_step_3_read_csv_into_dataframe(self):\n        \"\"\"Read the 'pulse_counts.csv' file into a DataFrame.\"\"\"\n        csv_detected = self.detect_csv_read('pulse_counts.csv')  \n        self.assertTrue(csv_detected, \"The 'pulse_counts.csv' file was not correctly read into a DataFrame using pandas.\")\n\n    def test_step_4_print_head(self):\n        \"\"\"The first few rows of the DataFrame stored in 'bar_chart_data' are printed using head().\"\"\"\n        head_detected = self.detect_head_function('bar_chart_data')\n        self.assertTrue(head_detected, \"The first few rows of the DataFrame stored in 'bar_chart_data' are not printed correctly using head().\")\n\nif __name__ == '__main__':\n    unittest.main()",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-15T21:08:36.067+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L4-L6c_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L4-L6c_2024-pilot\"},{\"changed_at\":\"2024-09-15 21:18:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"teacher_markdown\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-15 21:21:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-09-15T21:08:36.067+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L4-L6c_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L4-L6c_2024-pilot\"},{\"changed_at\":\"2024-09-15 21:18:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"teacher_markdown\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-15 21:21:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 03:42:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Pythonlab>

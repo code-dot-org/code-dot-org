@@ -1,4 +1,4 @@
-import GoogleBlockly, {Connection} from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 
 import {BLOCK_TYPES} from '../constants';
 
@@ -28,7 +28,7 @@ export default class CdoConnectionChecker extends GoogleBlockly.ConnectionChecke
    * @param b Connection to compare against.
    * @returns True if the connections share a type.
    */
-  doTypeChecks(a: Connection, b: Connection) {
+  doTypeChecks(a: GoogleBlockly.Connection, b: GoogleBlockly.Connection) {
     const checkArrayOne = a.getCheck(); // An array of strings or null
     const checkArrayTwo = b.getCheck(); // An array of strings or null
 

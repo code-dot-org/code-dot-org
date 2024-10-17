@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
 
@@ -85,6 +86,13 @@ export default function SchoolDataInputs({
 
   const handleSchoolChange = id => {
     setSchoolId(id);
+
+    if (!Object.values(NonSchoolOptions).includes(id)) {
+      const schoolName = schoolsList.find(school => school.value === id)?.text;
+      if (schoolName) {
+        setSchoolName(schoolName);
+      }
+    }
   };
 
   return (
@@ -98,12 +106,13 @@ export default function SchoolDataInputs({
       <div className={style.inputContainer}>
         <SimpleDropdown
           id="uitest-country-dropdown"
+          className={style.dropdown}
           name={fieldNames.country}
           labelText={i18n.whatCountry()}
           items={COUNTRIES_US_FIRST}
           selectedValue={country}
           onChange={e => handleCountryChange(e.target.value)}
-          size="m"
+          dropdownTextThickness="thin"
         />
         {countryIsUS && (
           <div>
@@ -136,7 +145,7 @@ export default function SchoolDataInputs({
               id="uitest-school-dropdown"
               disabled={!schoolZipIsValid}
               name={fieldNames.ncesSchoolId}
-              className={labelClassName}
+              className={classNames(labelClassName, style.dropdown)}
               labelText={i18n.selectYourSchool()}
               itemGroups={[
                 {
@@ -150,7 +159,7 @@ export default function SchoolDataInputs({
               ]}
               selectedValue={schoolId}
               onChange={e => handleSchoolChange(e.target.value)}
-              size="m"
+              dropdownTextThickness="thin"
             />
             {showNoSchoolSettingButton && (
               <Button
@@ -158,7 +167,7 @@ export default function SchoolDataInputs({
                 disabled={!schoolZipIsValid}
                 color={'purple'}
                 type={'tertiary'}
-                size={'xs'}
+                size={'s'}
                 onClick={e => {
                   e.preventDefault();
                   handleSchoolChange(NonSchoolOptions.NO_SCHOOL_SETTING);
@@ -178,7 +187,7 @@ export default function SchoolDataInputs({
               text={i18n.returnToResults()}
               color={'purple'}
               type={'tertiary'}
-              size={'xs'}
+              size={'s'}
               onClick={() => {
                 handleSchoolChange(NonSchoolOptions.SELECT_A_SCHOOL);
               }}

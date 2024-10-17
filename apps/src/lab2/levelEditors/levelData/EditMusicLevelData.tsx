@@ -6,9 +6,13 @@ import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {installFunctionBlocks} from '@cdo/apps/music/blockly/blockUtils';
 import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';
-import {BlockMode, DEFAULT_LIBRARY} from '@cdo/apps/music/constants';
+import {
+  BlockMode,
+  DEFAULT_LIBRARY,
+  DEFAULT_PACK,
+} from '@cdo/apps/music/constants';
 import MusicRegistry from '@cdo/apps/music/MusicRegistry';
-import MusicLibrary from '@cdo/apps/music/player/MusicLibrary';
+import MusicLibrary, {Sounds} from '@cdo/apps/music/player/MusicLibrary';
 import MusicPlayer from '@cdo/apps/music/player/MusicPlayer';
 import {MusicLevelData} from '@cdo/apps/music/types';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
@@ -76,9 +80,13 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
       levelData.library &&
       loadedLibraries[levelData.library]
         ?.getRestrictedPacks()
+        ?.sort((a, b) => a.name.localeCompare(b.name))
         ?.map(({name, id}) => ({value: id, text: name})),
     [levelData.library, loadedLibraries]
   );
+
+  const restrictedPackKeys =
+    (restrictedPacks || []).map(pack => pack.value) || [];
 
   return (
     <div>
@@ -121,14 +129,30 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
                 labelText="Selected Artist Pack"
                 name="packId"
                 size="s"
-                items={[{value: 'none', text: '(none)'}, ...restrictedPacks]}
+                items={[
+                  {value: 'none', text: '(none)'},
+                  {value: DEFAULT_PACK, text: 'Code.org (Default)'},
+                  ...restrictedPacks,
+                ]}
                 selectedValue={levelData.packId}
                 onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
                   const packId =
                     event.target.value === 'none'
                       ? undefined
                       : event.target.value;
-                  setLevelData({...levelData, packId});
+                  // Reset selected sounds from previously selected packs.
+                  const previousSounds = levelData.sounds;
+                  const sounds = previousSounds
+                    ? Object.keys(previousSounds)
+                        .filter(
+                          soundKey => !restrictedPackKeys.includes(soundKey)
+                        )
+                        .reduce((newSounds: Sounds, key) => {
+                          newSounds[key] = previousSounds[key];
+                          return newSounds;
+                        }, {})
+                    : undefined;
+                  setLevelData({...levelData, packId, sounds});
                 }}
               />
             </div>

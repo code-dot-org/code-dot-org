@@ -1,4 +1,4 @@
-import GoogleBlockly from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -147,7 +147,7 @@ class FieldPattern extends GoogleBlockly.Field {
     );
 
     const graphNotes = generateGraphDataFromPattern({
-      patternEventValue: this.getValue(),
+      value: this.getValue(),
       width: FIELD_WIDTH,
       height: FIELD_HEIGHT,
       padding: FIELD_PADDING,

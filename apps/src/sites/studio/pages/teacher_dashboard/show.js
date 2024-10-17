@@ -6,6 +6,8 @@ import {BrowserRouter} from 'react-router-dom';
 
 import announcementReducer from '@cdo/apps/code-studio/announcementsRedux';
 import hiddenLesson from '@cdo/apps/code-studio/hiddenLessonRedux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import progressRedux from '@cdo/apps/code-studio/progressRedux';
 import verifiedInstructor from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import viewAs from '@cdo/apps/code-studio/viewAsRedux';
 import DCDO from '@cdo/apps/dcdo';
@@ -62,13 +64,15 @@ $(document).ready(function () {
     hiddenLesson,
     verifiedInstructor,
     announcementReducer,
+    progressRedux,
+    isRtl,
   });
 
   const store = getStore();
   store.dispatch(
     setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReportInfo)
   );
-  store.dispatch(setSections(sections));
+  store.dispatch(setSections(sections, false));
   store.dispatch(setLocaleCode(localeCode));
 
   const showAITutorTab = canViewStudentAIChatMessages;

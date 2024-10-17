@@ -1,5 +1,5 @@
 import HighContrastTheme from '@blockly/theme-highcontrast';
-import GoogleBlockly from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 
 import fontConstants from '@cdo/apps/fontConstants';
 
