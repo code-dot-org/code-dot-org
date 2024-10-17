@@ -80,6 +80,7 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
       levelData.library &&
       loadedLibraries[levelData.library]
         ?.getRestrictedPacks()
+        ?.sort((a, b) => a.name.localeCompare(b.name))
         ?.map(({name, id}) => ({value: id, text: name})),
     [levelData.library, loadedLibraries]
   );
