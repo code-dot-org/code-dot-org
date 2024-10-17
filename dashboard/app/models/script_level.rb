@@ -277,12 +277,6 @@ class ScriptLevel < ApplicationRecord
     return level.properties["anonymous"] == "true"
   end
 
-  def activity_guide_level?
-    return false if level.nil? || level.properties.nil?
-
-    return level.properties["activity_guide_level"] == "true"
-  end
-
   def bubble_choice?
     oldest_active_level.is_a? BubbleChoice
   end

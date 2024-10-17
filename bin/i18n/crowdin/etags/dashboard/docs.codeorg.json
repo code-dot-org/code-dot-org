@@ -8,7 +8,7 @@
   "az-AZ": {
     "/docs/applab.json": "3f476bea7b34a2520a278572b72c18e3",
     "/docs/gamelab.json": "3f476bea7b34a2520a278572b72c18e3",
-    "/docs/programming_environments.json": "541deafcfa9f9c8c84169f748e3d813a",
+    "/docs/programming_environments.json": "2c5e9772ac08d35f0f77c47f15a507e8",
     "/docs/weblab.json": "3f476bea7b34a2520a278572b72c18e3"
   },
   "bg-BG": {
@@ -54,10 +54,10 @@
     "/docs/weblab.json": "6ccf670af478ce7ac5fb79e3466d7669"
   },
   "de-DE": {
-    "/docs/applab.json": "0c06538ad5f7221a5e35dfe1a43583ef",
-    "/docs/gamelab.json": "0c06538ad5f7221a5e35dfe1a43583ef",
-    "/docs/programming_environments.json": "68b1188cd6c94fc3654a57b7654f59cb",
-    "/docs/weblab.json": "0c06538ad5f7221a5e35dfe1a43583ef"
+    "/docs/applab.json": "beb52e30fd991f2f0cf9527927725a3e",
+    "/docs/gamelab.json": "beb52e30fd991f2f0cf9527927725a3e",
+    "/docs/programming_environments.json": "8687742650dcae1d2f848875e1cfca63",
+    "/docs/weblab.json": "beb52e30fd991f2f0cf9527927725a3e"
   },
   "dv-MV": {
     "/docs/applab.json": "ba9130977a2d2372e496d310e93c9483",
@@ -78,10 +78,10 @@
     "/docs/weblab.json": "037c0353c5a5c05e7491dcd88bd8e9b1"
   },
   "es-ES": {
-    "/docs/applab.json": "c512a92ead44d8a55c5c1b2cf99bd177",
-    "/docs/gamelab.json": "52bd96c2500b34069df6e93ff411a5b5",
-    "/docs/programming_environments.json": "586ecae4d444e66dc3f27c532cd052bb",
-    "/docs/weblab.json": "c512a92ead44d8a55c5c1b2cf99bd177"
+    "/docs/applab.json": "3eceb570a438dbc432af1310b35246ed",
+    "/docs/gamelab.json": "3eceb570a438dbc432af1310b35246ed",
+    "/docs/programming_environments.json": "30ac8f558daeeb59675aeedab669443e",
+    "/docs/weblab.json": "3eceb570a438dbc432af1310b35246ed"
   },
   "es-MX": {
     "/docs/applab.json": "ddb280290f7bec726f0fe7a7135dd0db",
@@ -192,10 +192,10 @@
     "/docs/weblab.json": "0c957543ba62369fead6d0ff9d6bb631"
   },
   "it-IT": {
-    "/docs/applab.json": "e782ba1e6ccb33da733562eb5bfbd795",
-    "/docs/gamelab.json": "80036cfb10d814d8950022d90a43f6cd",
-    "/docs/programming_environments.json": "80036cfb10d814d8950022d90a43f6cd",
-    "/docs/weblab.json": "e782ba1e6ccb33da733562eb5bfbd795"
+    "/docs/applab.json": "122086c0549fdf2e376401cde1357e7f",
+    "/docs/gamelab.json": "122086c0549fdf2e376401cde1357e7f",
+    "/docs/programming_environments.json": "879d12f0e5c93bf4452e4819dd6adea9",
+    "/docs/weblab.json": "122086c0549fdf2e376401cde1357e7f"
   },
   "ja-JP": {
     "/docs/applab.json": "9365e3d4276b2abde004a0b4914d2685",
