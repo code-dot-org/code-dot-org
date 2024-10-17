@@ -1,5 +1,11 @@
 import {ComparisonOperator} from '@aws-sdk/client-cloudwatch';
 
+import modelDescriptions from '../../../static/aichat/modelDescriptions.json';
+
+import {createMetricStat} from './alarmHelpers';
+
+const modelIds = modelDescriptions.map((model: {id: string}) => model.id);
+
 export const openaiLowSuccessRateConfiguration = {
   AlarmName: 'test_script_genai_openai_low_success_rate',
   AlarmDescription: 'test_script_genai_openai_low_success_rate',
@@ -72,6 +78,22 @@ export const openaiLowSuccessRateConfiguration = {
   ],
 };
 
+// Failure job metrics for each model.
+const failureMetrics = modelIds.map((modelId, index) => ({
+  Id: `m${index + 6}`,
+  ...createMetricStat(
+    'AichatRequestChatCompletionJob.Finish',
+    'FAILURE',
+    modelId
+  ),
+}));
+
+// Start(total) jobs metrics for each model.
+const startMetrics = modelIds.map((modelId, index) => ({
+  Id: `m${index + 1}`,
+  ...createMetricStat('AichatRequestChatCompletionJob.Start', null, modelId),
+}));
+
 export const highChatCompletionJobExecutionFailureRateConfiguration = {
   AlarmName: 'test_script_high_chat_completion_job_execution_failure_rate',
   AlarmDescription: 'test_high_chat_completion_job_execution_failure_rate',
@@ -97,251 +119,13 @@ export const highChatCompletionJobExecutionFailureRateConfiguration = {
       ReturnData: false,
       Expression: 'SUM([m6, m7, m8, m9, m10])',
     },
-    {
-      Id: 'm6',
-      ReturnData: false,
-      MetricStat: {
-        Metric: {
-          Namespace: 'GenAICurriculum',
-          MetricName: 'AichatRequestChatCompletionJob.Finish',
-          Dimensions: [
-            {
-              Name: 'ExecutionStatus',
-              Value: 'FAILURE',
-            },
-            {
-              Name: 'Environment',
-              Value: 'production',
-            },
-            {
-              Name: 'ModelId',
-              Value: 'gen-ai-karen-creative-mistral-7b',
-            },
-          ],
-        },
-        Period: 300,
-        Stat: 'Sum',
-      },
-    },
-    {
-      Id: 'm7',
-      ReturnData: false,
-      MetricStat: {
-        Metric: {
-          Namespace: 'GenAICurriculum',
-          MetricName: 'AichatRequestChatCompletionJob.Finish',
-          Dimensions: [
-            {
-              Name: 'ExecutionStatus',
-              Value: 'FAILURE',
-            },
-            {
-              Name: 'Environment',
-              Value: 'production',
-            },
-            {
-              Name: 'ModelId',
-              Value: 'gen-ai-mistral-7b-inst-v01',
-            },
-          ],
-        },
-        Period: 300,
-        Stat: 'Sum',
-      },
-    },
-    {
-      Id: 'm8',
-      ReturnData: false,
-      MetricStat: {
-        Metric: {
-          Namespace: 'GenAICurriculum',
-          MetricName: 'AichatRequestChatCompletionJob.Finish',
-          Dimensions: [
-            {
-              Name: 'ExecutionStatus',
-              Value: 'FAILURE',
-            },
-            {
-              Name: 'Environment',
-              Value: 'production',
-            },
-            {
-              Name: 'ModelId',
-              Value: 'gen-ai-biomistral-7b',
-            },
-          ],
-        },
-        Period: 300,
-        Stat: 'Sum',
-      },
-    },
-    {
-      Id: 'm9',
-      ReturnData: false,
-      MetricStat: {
-        Metric: {
-          Namespace: 'GenAICurriculum',
-          MetricName: 'AichatRequestChatCompletionJob.Finish',
-          Dimensions: [
-            {
-              Name: 'ExecutionStatus',
-              Value: 'FAILURE',
-            },
-            {
-              Name: 'Environment',
-              Value: 'production',
-            },
-            {
-              Name: 'ModelId',
-              Value: 'gen-ai-arithmo2-mistral-7b',
-            },
-          ],
-        },
-        Period: 300,
-        Stat: 'Sum',
-      },
-    },
-    {
-      Id: 'm10',
-      ReturnData: false,
-      MetricStat: {
-        Metric: {
-          Namespace: 'GenAICurriculum',
-          MetricName: 'AichatRequestChatCompletionJob.Finish',
-          Dimensions: [
-            {
-              Name: 'ExecutionStatus',
-              Value: 'FAILURE',
-            },
-            {
-              Name: 'Environment',
-              Value: 'production',
-            },
-            {
-              Name: 'ModelId',
-              Value: 'gen-ai-mistral-pirate-7b',
-            },
-          ],
-        },
-        Period: 300,
-        Stat: 'Sum',
-      },
-    },
+    ...failureMetrics, // Spread the failure metrics array
     {
       Id: 'total',
       Label: 'total_jobs',
       ReturnData: false,
       Expression: 'SUM([m1, m2, m3, m4, m5])',
     },
-    {
-      Id: 'm1',
-      ReturnData: false,
-      MetricStat: {
-        Metric: {
-          Namespace: 'GenAICurriculum',
-          MetricName: 'AichatRequestChatCompletionJob.Start',
-          Dimensions: [
-            {
-              Name: 'Environment',
-              Value: 'production',
-            },
-            {
-              Name: 'ModelId',
-              Value: 'gen-ai-mistral-pirate-7b',
-            },
-          ],
-        },
-        Period: 300,
-        Stat: 'Sum',
-      },
-    },
-    {
-      Id: 'm2',
-      ReturnData: false,
-      MetricStat: {
-        Metric: {
-          Namespace: 'GenAICurriculum',
-          MetricName: 'AichatRequestChatCompletionJob.Start',
-          Dimensions: [
-            {
-              Name: 'Environment',
-              Value: 'production',
-            },
-            {
-              Name: 'ModelId',
-              Value: 'gen-ai-arithmo2-mistral-7b',
-            },
-          ],
-        },
-        Period: 300,
-        Stat: 'Sum',
-      },
-    },
-    {
-      Id: 'm3',
-      ReturnData: false,
-      MetricStat: {
-        Metric: {
-          Namespace: 'GenAICurriculum',
-          MetricName: 'AichatRequestChatCompletionJob.Start',
-          Dimensions: [
-            {
-              Name: 'Environment',
-              Value: 'production',
-            },
-            {
-              Name: 'ModelId',
-              Value: 'gen-ai-karen-creative-mistral-7b',
-            },
-          ],
-        },
-        Period: 300,
-        Stat: 'Sum',
-      },
-    },
-    {
-      Id: 'm4',
-      ReturnData: false,
-      MetricStat: {
-        Metric: {
-          Namespace: 'GenAICurriculum',
-          MetricName: 'AichatRequestChatCompletionJob.Start',
-          Dimensions: [
-            {
-              Name: 'Environment',
-              Value: 'production',
-            },
-            {
-              Name: 'ModelId',
-              Value: 'gen-ai-biomistral-7b',
-            },
-          ],
-        },
-        Period: 300,
-        Stat: 'Sum',
-      },
-    },
-    {
-      Id: 'm5',
-      ReturnData: false,
-      MetricStat: {
-        Metric: {
-          Namespace: 'GenAICurriculum',
-          MetricName: 'AichatRequestChatCompletionJob.Start',
-          Dimensions: [
-            {
-              Name: 'Environment',
-              Value: 'production',
-            },
-            {
-              Name: 'ModelId',
-              Value: 'gen-ai-mistral-7b-inst-v01',
-            },
-          ],
-        },
-        Period: 300,
-        Stat: 'Sum',
-      },
-    },
+    ...startMetrics, // Spread the start metrics array
   ],
 };
