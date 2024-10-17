@@ -23,8 +23,9 @@ class Api::V1::Pd::InternationalOptInsControllerTest < ActionController::TestCas
 
   test 'create creates a new international opt-in and verifies the teacher' do
     sign_in @teacher
+    Api::V1::Pd::InternationalOptInsController.any_instance.stubs(:current_user).returns(@teacher)
 
-    Services::Teacher.expects(:verify).with(@teacher).once
+    @teacher.expects(:verify_teacher!).once
 
     assert_creates Pd::InternationalOptIn do
       put :create, params: {
@@ -37,11 +38,12 @@ class Api::V1::Pd::InternationalOptInsControllerTest < ActionController::TestCas
 
   test 'create returns appropriate errors if international opt-in data is missing' do
     sign_in @teacher
+    Api::V1::Pd::InternationalOptInsController.any_instance.stubs(:current_user).returns(@teacher)
 
     new_form = SAMPLE_FORM_DATA.dup
     new_form.delete :last_name
 
-    Services::Teacher.expects(:verify).with(@teacher).never
+    @teacher.expects(:verify_teacher!).never
 
     assert_does_not_create Pd::InternationalOptIn do
       put :create, params: {
@@ -55,8 +57,9 @@ class Api::V1::Pd::InternationalOptInsControllerTest < ActionController::TestCas
   test 'students can not create a new international opt-in' do
     student = create :student
     sign_in student
+    Api::V1::Pd::InternationalOptInsController.any_instance.stubs(:current_user).returns(student)
 
-    Services::Teacher.expects(:verify).with(@teacher).never
+    student.expects(:verify_teacher!).never
 
     assert_does_not_create Pd::InternationalOptIn do
       put :create, params: {
@@ -68,8 +71,6 @@ class Api::V1::Pd::InternationalOptInsControllerTest < ActionController::TestCas
   end
 
   test 'user required to create a new international opt-in' do
-    Services::Teacher.expects(:verify).with(@teacher).never
-
     assert_does_not_create Pd::InternationalOptIn do
       put :create, params: {
         form_data: SAMPLE_FORM_DATA,

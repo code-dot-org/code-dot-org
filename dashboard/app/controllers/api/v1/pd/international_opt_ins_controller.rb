@@ -1,5 +1,3 @@
-require 'services/teacher'
-
 class Api::V1::Pd::InternationalOptInsController < Api::V1::Pd::FormsController
   authorize_resource class: 'Pd::InternationalOptIn', only: :create
 
@@ -18,6 +16,6 @@ class Api::V1::Pd::InternationalOptInsController < Api::V1::Pd::FormsController
       form_kind: "0"
     )
 
-    Services::Teacher.verify(current_user)
+    current_user.verify_teacher! if current_user.teacher?
   end
 end
