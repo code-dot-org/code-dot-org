@@ -10,24 +10,24 @@ import {
 
 const modelIds = modelDescriptions.map((model: {id: string}) => model.id);
 
-export const openaiLowSuccessRateConfiguration = {
-  AlarmName: 'test_script_genai_openai_low_success_rate',
-  AlarmDescription: 'test_script_genai_openai_low_success_rate',
+export const genaiOpenaiHighFailureRateConfiguration = {
+  AlarmName: 'test_script_genai_openai_high_failure_rate',
+  AlarmDescription: 'test_script_genai_openai_high_failure_rate',
   ActionsEnabled: true,
   OKActions: [],
   AlarmActions: [SNS_TOPIC],
   InsufficientDataActions: [],
   EvaluationPeriods: 5,
   DatapointsToAlarm: 5,
-  Threshold: 90,
-  ComparisonOperator: ComparisonOperator.LessThanThreshold,
+  Threshold: 10,
+  ComparisonOperator: ComparisonOperator.GreaterThanThreshold,
   TreatMissingData: 'missing',
   Metrics: [
     {
-      Id: 'success_rate',
-      Label: 'Success_rate',
+      Id: 'failure_rate',
+      Label: 'Failure_rate',
       ReturnData: true,
-      Expression: '(finish_one_attempt + finish_two_attempt)/start * 100',
+      Expression: '100 - (finish_one_attempt + finish_two_attempt)/start * 100',
     },
     {
       Id: 'finish_one_attempt',
@@ -64,9 +64,10 @@ const failureMetrics = modelIds.map((modelId, index) => ({
   ),
 }));
 
-export const highChatCompletionJobExecutionFailureRateConfiguration = {
-  AlarmName: 'test_script_high_chat_completion_job_execution_failure_rate',
-  AlarmDescription: 'test_high_chat_completion_job_execution_failure_rate',
+export const chatCompletionJobExecutionHighFailureRateConfiguration = {
+  AlarmName: 'test_script_chat_completion_job_execution_high_failure_rate',
+  AlarmDescription:
+    'test_script_chat_completion_job_execution_high_failure_rate',
   ActionsEnabled: true,
   OKActions: [],
   AlarmActions: [SNS_TOPIC],
