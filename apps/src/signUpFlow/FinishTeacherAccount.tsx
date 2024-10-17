@@ -30,7 +30,8 @@ import style from './signUpFlowStyles.module.scss';
 
 const FinishTeacherAccount: React.FunctionComponent<{
   usIp: boolean;
-}> = ({usIp}) => {
+  countryCode: string;
+}> = ({usIp, countryCode}) => {
   const schoolInfo = useSchoolInfo({usIp});
   const [name, setName] = useState('');
   const [showNameError, setShowNameError] = useState(false);
@@ -96,6 +97,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
         name: name,
         email_preference_opt_in: emailOptInChecked,
         school_info_attributes: {...schoolInfo},
+        country_code: countryCode,
       },
     };
     const authToken = await getAuthenticityToken();

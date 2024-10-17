@@ -19141,6 +19141,12 @@ en:
               name: Functionsl
             lesson-4:
               name: Loops
+            lesson-5:
+              name: 'Mini-Project: Simple Melody Generator'
+            lesson-6:
+              name: 'Mini-Project: Rhythm Game Prototype'
+            lesson-7:
+              name: 'Mini-Project: Dynamic Background Music for a Skit'
           lesson_groups: {}
           name: music-lab-advanced-model-sandbox
           title: "[Sandbox] Advanced Model"
