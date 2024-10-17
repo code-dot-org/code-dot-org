@@ -57,10 +57,10 @@ class StudentTable extends React.Component {
 
   sortStudents() {
     const {students, isSortedByFamilyName} = this.props;
-    isSortedByFamilyName
-      ? students.sort(stringKeyComparator(['familyName', 'name']))
-      : students.sort(stringKeyComparator(['name', 'familyName']));
-    this.setState({students});
+    const sortedStudents = isSortedByFamilyName
+      ? [...students].sort(stringKeyComparator(['familyName', 'name']))
+      : [...students].sort(stringKeyComparator(['name', 'familyName']));
+    this.setState({sortedStudents});
   }
 
   render() {
