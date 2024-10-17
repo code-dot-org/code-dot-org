@@ -1,7 +1,9 @@
 import {MoveFileFunction} from '@codebridge/codebridgeContext/types';
-import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {ProjectFile, ProjectType, FileId} from '@codebridge/types';
-import {getFolderPath, validateFileName} from '@codebridge/utils';
+import {
+  getFolderPath,
+  getPossibleDestinationFoldersForFile,
+} from '@codebridge/utils';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {
@@ -36,24 +38,16 @@ export const openMoveFilePrompt = async ({
   const file = projectFiles[fileId];
 
   // iterate over all the folders in the project AND the default folder, which isn't actually in the list.
-  const possibleDestinationFolders: GenericDropdownProps['items'] = [
-    {id: DEFAULT_FOLDER_ID},
-    ...Object.values(projectFolders),
-  ]
-    .filter(
-      f =>
-        !Boolean(
-          validateFileName({
-            fileName: file.name,
-            folderId: f.id,
-            projectFiles,
-            isStartMode,
-            validationFile,
-          })
-        )
-    )
-    .map(f => ({value: f.id, text: getFolderPath(f.id, projectFolders)}))
-    .sort((a, b) => a.text.localeCompare(b.text));
+  const possibleDestinationFolders: GenericDropdownProps['items'] =
+    getPossibleDestinationFoldersForFile({
+      file,
+      projectFiles,
+      projectFolders,
+      isStartMode,
+      validationFile,
+    })
+      .map(f => ({value: f.id, text: getFolderPath(f.id, projectFolders)}))
+      .sort((a, b) => a.text.localeCompare(b.text));
 
   const results = await dialogControl?.showDialog({
     type: DialogType.GenericDropdown,

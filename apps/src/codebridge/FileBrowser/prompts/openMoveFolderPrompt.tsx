@@ -1,7 +1,9 @@
 import {MoveFolderFunction} from '@codebridge/codebridgeContext/types';
-import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {ProjectType, FolderId} from '@codebridge/types';
-import {getFolderPath, validateFolderName} from '@codebridge/utils';
+import {
+  getFolderPath,
+  getPossibleDestinationFoldersForFolder,
+} from '@codebridge/utils';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {
@@ -30,23 +32,13 @@ export const openMoveFolderPrompt = async ({
   const folder = projectFolders[folderId];
 
   // iterate over all the folders in the project AND the default folder, which isn't actually in the list.
-  const possibleDestinationFolders: GenericDropdownProps['items'] = [
-    {id: DEFAULT_FOLDER_ID},
-    ...Object.values(projectFolders),
-  ]
-    .filter(
-      f =>
-        f.id !== folder.id &&
-        !Boolean(
-          validateFolderName({
-            folderName: folder.name,
-            parentId: f.id,
-            projectFolders,
-          })
-        )
-    )
-    .map(f => ({value: f.id, text: getFolderPath(f.id, projectFolders)}))
-    .sort((a, b) => a.text.localeCompare(b.text));
+  const possibleDestinationFolders: GenericDropdownProps['items'] =
+    getPossibleDestinationFoldersForFolder({
+      folder,
+      projectFolders,
+    })
+      .map(f => ({value: f.id, text: getFolderPath(f.id, projectFolders)}))
+      .sort((a, b) => a.text.localeCompare(b.text));
 
   const results = await dialogControl?.showDialog({
     type: DialogType.GenericDropdown,
