@@ -5,13 +5,19 @@ import {
 
 import {REGION} from '../constants';
 
-import {openaiLowSuccessRateConfigurations} from './alarmConfigurations';
+import {
+  openaiLowSuccessRateConfiguration,
+  highChatCompletionJobExecutionFailureRateConfiguration,
+} from './alarmConfigurations';
 
 // Initialize the CloudWatch client.
 const cloudwatch = new CloudWatchClient({region: REGION});
 
 // Array of alarm configurations.
-const alarmConfigurations = [openaiLowSuccessRateConfigurations];
+const alarmConfigurations = [
+  openaiLowSuccessRateConfiguration,
+  highChatCompletionJobExecutionFailureRateConfiguration,
+];
 
 const createMetricAlarms = async () => {
   for (const alarmConfig of alarmConfigurations) {
