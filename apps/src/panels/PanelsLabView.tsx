@@ -75,7 +75,7 @@ const PanelsLabView: React.FunctionComponent = () => {
       onSkip={skipUrl ? onSkip : undefined}
       targetWidth={windowWidth}
       targetHeight={windowHeight}
-      offerTts={offerBrowserTts}
+      offerBrowserTts={offerBrowserTts}
     />
   );
 };
