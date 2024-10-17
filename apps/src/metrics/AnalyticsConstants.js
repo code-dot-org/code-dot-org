@@ -445,6 +445,7 @@ const EVENTS = {
   BLOCKLY_SETTING_THEME: 'theme',
   BLOCKLY_SETTING_ON: 'on',
   BLOCKLY_SETTING_OFF: 'off',
+  BLOCKLY_APP_TYPE_MUSIC: 'music',
 };
 
 const EVENT_GROUP_NAMES = {

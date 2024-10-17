@@ -9,11 +9,10 @@ import GoogleBlockly, {
   WorkspaceSvg,
 } from 'blockly/core';
 
-import {commonI18n} from '@cdo/apps/types/locale';
-import experiments from '@cdo/apps/util/experiments';
-
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {commonI18n} from '@cdo/apps/types/locale';
+import experiments from '@cdo/apps/util/experiments';
 
 import LegacyDialog from '../../code-studio/LegacyDialog';
 import {
