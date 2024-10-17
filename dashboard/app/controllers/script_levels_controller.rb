@@ -166,19 +166,11 @@ class ScriptLevelsController < ApplicationController
       @responses = []
       # We use this for the level summary entry point, so on contained levels
       # what we actually care about are responses to the contained level.
-
-      levels =
-        if @level.is_a?(LevelGroup)
-          @level.levels
-        else
-          [@level.contained_levels.any? ? @level.contained_levels.first : @level]
-        end
+      level = @level.contained_levels.any? ? @level.contained_levels.first : @level
 
       # TODO: Change/remove this check as we add support for more level types.
-      if levels[0].is_a?(FreeResponse) || levels[0].is_a?(Multi) || levels[0].predict_level? || levels[0].is_a?(LevelGroup)
-        @responses = levels.map do |sublevel|
-          UserLevel.where(level: sublevel, user: @section&.students)
-        end
+      if level.is_a?(FreeResponse) || level.is_a?(Multi) || level.predict_level?
+        @responses = UserLevel.where(level: level, user: @section&.students)
       end
     end
 
