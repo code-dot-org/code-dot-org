@@ -21,8 +21,11 @@ class Api::V1::Pd::InternationalOptInsControllerTest < ActionController::TestCas
     @teacher = create :teacher
   end
 
-  test 'create creates a new international opt-in' do
+  test 'create creates a new international opt-in and verifies the teacher' do
     sign_in @teacher
+
+    Services::Teacher.expects(:verify).with(@teacher).once
+
     assert_creates Pd::InternationalOptIn do
       put :create, params: {
         form_data: SAMPLE_FORM_DATA,
@@ -38,6 +41,8 @@ class Api::V1::Pd::InternationalOptInsControllerTest < ActionController::TestCas
     new_form = SAMPLE_FORM_DATA.dup
     new_form.delete :last_name
 
+    Services::Teacher.expects(:verify).with(@teacher).never
+
     assert_does_not_create Pd::InternationalOptIn do
       put :create, params: {
         form_data: new_form,
@@ -51,6 +56,8 @@ class Api::V1::Pd::InternationalOptInsControllerTest < ActionController::TestCas
     student = create :student
     sign_in student
 
+    Services::Teacher.expects(:verify).with(@teacher).never
+
     assert_does_not_create Pd::InternationalOptIn do
       put :create, params: {
         form_data: SAMPLE_FORM_DATA,
@@ -61,6 +68,8 @@ class Api::V1::Pd::InternationalOptInsControllerTest < ActionController::TestCas
   end
 
   test 'user required to create a new international opt-in' do
+    Services::Teacher.expects(:verify).with(@teacher).never
+
     assert_does_not_create Pd::InternationalOptIn do
       put :create, params: {
         form_data: SAMPLE_FORM_DATA,
