@@ -515,7 +515,7 @@ async function handleChatCompletionError(
       addChatEvent({
         id: getNewMessageId(),
         text: messageText,
-        notificationType: 'error',
+        notificationType: 'permissionsError',
         timestamp: Date.now(),
       })
     );

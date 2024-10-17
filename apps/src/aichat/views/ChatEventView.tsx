@@ -2,6 +2,7 @@ import React from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
+import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {modelDescriptions} from '../constants';
@@ -64,9 +65,21 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
     return (
       <Alert
         text={`${text} ${timestampToLocalTime(timestamp)}`}
-        type={notificationType === 'error' ? 'danger' : 'success'}
+        type={
+          ['error', 'permissionsError'].includes(notificationType)
+            ? 'danger'
+            : 'success'
+        }
         onClose={
           isTeacherView ? undefined : () => dispatch(removeUpdateMessage(id))
+        }
+        link={
+          notificationType === 'permissionsError'
+            ? {
+                href: 'https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ',
+                text: commonI18n.learnMore(),
+              }
+            : undefined
         }
         size="s"
       />
