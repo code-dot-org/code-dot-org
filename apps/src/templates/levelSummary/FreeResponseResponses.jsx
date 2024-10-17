@@ -66,13 +66,6 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
     ];
   };
 
-  //This resets the pinned and hidden responses when the responses change so that
-  //pinned and hidden responses are not carried over between different questions
-  useEffect(() => {
-    setPinnedResponseIds([]);
-    setHiddenResponses([]);
-  }, [responses]);
-
   const getResponseBox = (
     response,
     responseClassName,
