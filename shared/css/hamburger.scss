@@ -166,7 +166,7 @@ $arrow-size: 1.5rem;
   @media (max-width: 1268px) {
     &.show-small-desktop,
     .show-small-desktop {
-      display: block;
+      display: block !important;
     }
   }
 
