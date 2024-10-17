@@ -138,7 +138,7 @@ describe('TeacherHomepage', () => {
    */
   it('renders CensusTeacherBanner if showCensusBanner is true and forceHide is false', () => {
     const wrapper = setUp({showCensusBanner: true});
-    assert(!wrapper.find('CensusTeacherBanner').exists());
+    assert(wrapper.find('CensusTeacherBanner').exists());
   });
 
   /*
@@ -147,7 +147,7 @@ describe('TeacherHomepage', () => {
    */
   it('renders a DonorTeacherBanner only if afeEligible is true and shouldShowAFEBanner', () => {
     const wrapper = setUp({afeEligible: true});
-    assert(wrapper.find('DonorTeacherBanner').exists());
+    assert(!wrapper.find('DonorTeacherBanner').exists());
   });
 
   it('renders a TeacherSections component', () => {

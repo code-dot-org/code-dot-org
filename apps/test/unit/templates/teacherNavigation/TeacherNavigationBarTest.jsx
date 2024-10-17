@@ -97,7 +97,7 @@ describe('TeacherNavigationBar', () => {
                     }
                   />
                   <Route
-                    path={'manage_students'}
+                    path={'roster'}
                     element={
                       <div>
                         <LocationElement location={location} />
@@ -173,7 +173,7 @@ describe('TeacherNavigationBar', () => {
 
     screen.getByText('Roster').click();
 
-    await screen.findByText('/sections/11/manage_students path');
+    await screen.findByText('/sections/11/roster path');
   });
 
   test('section dropdown switches url', async () => {

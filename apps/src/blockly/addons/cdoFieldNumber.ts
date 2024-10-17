@@ -1,7 +1,4 @@
-import GoogleBlockly, {
-  FieldNumberConfig,
-  FieldNumberValidator,
-} from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 
 import {EMPTY_OPTION} from '../constants';
 import {
@@ -42,8 +39,8 @@ export default class CdoFieldNumber extends GoogleBlockly.FieldNumber {
     min?: string | number | null,
     max?: string | number | null,
     precision?: string | number | null,
-    validator?: FieldNumberValidator | null,
-    config?: FieldNumberConfig
+    validator?: GoogleBlockly.FieldNumberValidator | null,
+    config?: GoogleBlockly.FieldNumberConfig
   ) {
     super(value, min, max, precision, validator, config);
     this.angleHelper = null;

@@ -6,7 +6,6 @@ import {Provider} from 'react-redux';
 import {AccountInformation} from '@cdo/apps/accounts/AccountInformation';
 import AddParentEmailController from '@cdo/apps/accounts/AddParentEmailController';
 import AddPasswordController from '@cdo/apps/accounts/AddPasswordController';
-import ChangeEmailController from '@cdo/apps/accounts/ChangeEmailController';
 import ChangeUserTypeController from '@cdo/apps/accounts/ChangeUserTypeController';
 import DeleteAccount from '@cdo/apps/accounts/DeleteAccount';
 import LtiRosterSyncSettings from '@cdo/apps/accounts/LtiRosterSyncSettings';
@@ -25,7 +24,6 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 // (possibly unsaved) user-edited values on the form.
 const scriptData = getScriptData('edit');
 const {
-  userAge,
   userType,
   isAdmin,
   isPasswordRequired,
@@ -90,15 +88,6 @@ $(document).ready(() => {
   new RemoveParentEmailController({
     form: $('#remove-parent-email-form'),
     link: $('#remove-parent-email-link'),
-  });
-  new ChangeEmailController({
-    form: $('#change-email-modal-form'),
-    link: $('#edit-email-link'),
-    displayedUserEmail: $('#displayed-user-email'),
-    userAge,
-    userType,
-    isPasswordRequired,
-    emailChangedCallback: onEmailChanged,
   });
 
   new ChangeUserTypeController($('#change-user-type-modal-form'), userType);
@@ -196,14 +185,6 @@ $(document).ready(() => {
 
   initializeCreatePersonalAccountControls();
 });
-
-function onEmailChanged(newEmail, newHashedEmail) {
-  $('#user_hashed_email').val(newHashedEmail);
-  $('#change-user-type_user_email').val(newEmail);
-  $('#change-user-type_user_hashed_email').val(newHashedEmail);
-  $('#change-email-modal_user_email').val(newEmail);
-  $('#change-email-modal_user_hashed_email').val(newHashedEmail);
-}
 
 function initializeCreatePersonalAccountControls() {
   $('#edit_user_create_personal_account').on('submit', function (e) {
