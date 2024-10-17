@@ -1094,7 +1094,7 @@ DEPENDENCIES
   scenic-mysql_adapter
   scss_lint
   sd_notify
-  selenium-webdriver (~> 4.25)
+  selenium-webdriver (~> 4.6)
   sequel (~> 5.29)
   simplecov (~> 0.22.0)
   sinatra (= 2.2.3)
