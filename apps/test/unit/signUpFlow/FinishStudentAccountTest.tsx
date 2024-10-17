@@ -431,6 +431,7 @@ describe('FinishStudentAccount', () => {
     const age = '6';
     const gender = 'Female';
     const state = 'AZ';
+    const country = 'US';
     const parentEmail = 'parent@email.com';
     const userReturnToUrl = '/sample/url';
     const finishSignUpParams = {
@@ -442,6 +443,7 @@ describe('FinishStudentAccount', () => {
         age: age,
         gender: gender,
         us_state: state,
+        country_code: country,
         parent_email_preference_email: parentEmail,
         parent_email_preference_opt_in: true,
       },
