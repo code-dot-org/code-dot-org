@@ -21,9 +21,17 @@ export default (): ThunkAction<void, RootState, undefined, AnyAction> =>
       return;
     }
 
-    // If there are no validation conditions, go ahead and send a success report when we continue.
-    // Otherwise, success reports are managed by the ProgressContainer and ProgressManager.
-    if (!getState().lab.validationState.hasConditions) {
+    // If there are no validation conditions and the level is not submittable,
+    // go ahead and send a success report when we continue.
+    // For validated levels, success reports are managed by the ProgressContainer and ProgressManager.
+    // For submittable levels, success reports are handled by the submit button.
+    if (
+      !getState().lab.validationState.hasConditions &&
+      !levelProperties.submittable
+    ) {
+      // Wait for the success report to complete before handling navigation,
+      // as navigation could cause a page reload (either switching to a non-lab2 level
+      // or redirecting to a finish URL).
       dispatch(sendSuccessReport(levelProperties.appName)).then(() =>
         handleNavigation(levelProperties, dispatch, getState)
       );

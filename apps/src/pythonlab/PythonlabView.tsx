@@ -151,7 +151,6 @@ const PythonlabView: React.FunctionComponent = () => {
       progressManager,
       isStartMode ? undefined : validationFile
     );
-    console.log({currentLevel});
     if (currentLevel && currentLevel.status === LevelStatus.not_tried) {
       dispatch(sendProgressReport(appName || '', TestResults.LEVEL_STARTED));
     }

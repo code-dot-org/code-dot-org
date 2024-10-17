@@ -1,12 +1,9 @@
 import classNames from 'classnames';
-import React, {useCallback, useContext, useEffect, useRef} from 'react';
+import React, {useContext, useEffect, useMemo, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
-import {
-  navigateToNextLevel,
-  sendSubmitReport,
-} from '@cdo/apps/code-studio/progressRedux';
+import {sendSubmitReport} from '@cdo/apps/code-studio/progressRedux';
 import {
   getCurrentLevel,
   nextLevelId,
@@ -127,13 +124,6 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
 
   const vertical = layout === 'vertical';
 
-  const onNextPanel = useCallback(() => {
-    if (beforeNextLevel) {
-      beforeNextLevel();
-    }
-    dispatch(navigateToNextLevel());
-  }, [dispatch, beforeNextLevel]);
-
   const onSubmit = () => {
     const dialogTitle = hasSubmitted
       ? commonI18n.unsubmitYourProject()
@@ -150,12 +140,12 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   };
 
   const handleSubmit = () => {
-    dispatch(
-      sendSubmitReport({appType: appType || '', submitted: !hasSubmitted})
-    );
-    // Go to the next level if we have one and we just submitted.
-    if (hasNextLevel && !hasSubmitted) {
-      onNextPanel();
+    // We either submit or unsubmit the project, depending on the current state.
+    const submit = !hasSubmitted;
+    dispatch(sendSubmitReport({appType: appType || '', submitted: submit}));
+    // If we just submitted, continue or finish the lesson.
+    if (submit) {
+      continueOrFinishLesson();
     }
   };
 
@@ -181,11 +171,20 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     }
   };
 
-  // There are two ways to "meet validation" for a level:
-  // If the level has conditions, they must be satisfied.
-  // If the level has no conditions, the user must run their code at least once.
-  const hasMetValidation =
-    (!hasConditions && hasRun && hasEdited) || (hasConditions && satisfied);
+  // There are 3 ways to "meet validation" for a level:
+  // If the level is a predict level, the user must run the code.
+  // Otherwise, if the level has conditions, they must be satisfied.
+  // If the level has no conditions and is not a predict level,
+  // the user must run their code at least once.
+  const hasMetValidation = useMemo(() => {
+    if (predictSettings?.isPredictLevel) {
+      return hasRun;
+    } else if (hasConditions) {
+      return satisfied;
+    } else {
+      return hasRun && hasEdited;
+    }
+  }, [predictSettings, hasConditions, satisfied, hasRun, hasEdited]);
 
   /**
    * Returns the props for the navigation (continue/finish/submit/unsubmit)
