@@ -10,9 +10,9 @@ import {
 
 const modelIds = modelDescriptions.map((model: {id: string}) => model.id);
 
-export const genaiOpenaiHighFailureRateConfiguration = {
-  AlarmName: 'test_script_genai_openai_high_failure_rate',
-  AlarmDescription: 'test_script_genai_openai_high_failure_rate',
+export const openaiSafetyHighFailureRateConfiguration = {
+  AlarmName: 'genai_openai_safety_high_failure_rate',
+  AlarmDescription: 'genai_openai_safety_high_failure_rate',
   ActionsEnabled: true,
   OKActions: [],
   AlarmActions: [SNS_TOPIC],
@@ -65,9 +65,8 @@ const failureMetrics = modelIds.map((modelId, index) => ({
 }));
 
 export const chatCompletionJobExecutionHighFailureRateConfiguration = {
-  AlarmName: 'test_script_chat_completion_job_execution_high_failure_rate',
-  AlarmDescription:
-    'test_script_chat_completion_job_execution_high_failure_rate',
+  AlarmName: 'genai_chat_completion_job_execution_high_failure_rate',
+  AlarmDescription: 'genai_chat_completion_job_execution_high_failure_rate',
   ActionsEnabled: true,
   OKActions: [],
   AlarmActions: [SNS_TOPIC],
