@@ -2,6 +2,6 @@
   Browser Text-to-Speech
 
 #browser_tts_area.in.collapse
-  %p Enables native browser text-to-speech on all enabled components, such as instructions and validations. Currently only available in Lab2 labs.
+  // Only available on lab2 labs currently.
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :offer_browser_tts, description: "Enable Browser Text-to-Speech"} if @level.uses_lab2?
 

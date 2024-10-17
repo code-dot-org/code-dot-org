@@ -29,7 +29,7 @@ const PanelsLabView: React.FunctionComponent = () => {
     state => state.lab.levelProperties?.appName
   );
   const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
-  const offerTts =
+  const offerBrowserTts =
     useAppSelector(state => state.lab.levelProperties?.offerBrowserTts) ||
     queryParams('show-tts') === 'true';
 
@@ -75,7 +75,7 @@ const PanelsLabView: React.FunctionComponent = () => {
       onSkip={skipUrl ? onSkip : undefined}
       targetWidth={windowWidth}
       targetHeight={windowHeight}
-      offerTts={offerTts}
+      offerTts={offerBrowserTts}
     />
   );
 };

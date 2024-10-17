@@ -86,7 +86,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       predictAnswerLocked={predictAnswerLocked}
       layout={layout}
       handleInstructionsTextClick={handleInstructionsTextClick}
-      offerTts={offerBrowserTts}
+      offerBrowserTts={offerBrowserTts}
       className={className}
       canShowNextButton={manageNavigation && (!hasConditions || satisfied)}
       hasNextLevel={hasNextLevel}
@@ -116,7 +116,7 @@ interface InstructionsPanelProps {
   predictAnswerLocked: boolean;
   /** Optional classname for the container */
   className?: string;
-  offerTts?: boolean;
+  offerBrowserTts?: boolean;
   canShowNextButton: boolean;
   hasNextLevel: boolean;
   onContinueOrFinish: () => void;
@@ -143,7 +143,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   setPredictResponse,
   predictAnswerLocked,
   className,
-  offerTts,
+  offerBrowserTts,
   canShowNextButton,
   hasNextLevel,
   onContinueOrFinish,
@@ -173,7 +173,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             id="instructions-text"
             className={moduleStyles['text-' + theme]}
           >
-            {offerTts && <TextToSpeech text={text} />}
+            {offerBrowserTts && <TextToSpeech text={text} />}
             <div
               id="instructions-text-content"
               className={moduleStyles.textContent}
@@ -203,7 +203,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               id="instructions-feedback-message"
               className={moduleStyles['message-' + theme]}
             >
-              {offerTts && message && <TextToSpeech text={message} />}
+              {offerBrowserTts && message && <TextToSpeech text={message} />}
               {message && (
                 <EnhancedSafeMarkdown
                   markdown={message}
