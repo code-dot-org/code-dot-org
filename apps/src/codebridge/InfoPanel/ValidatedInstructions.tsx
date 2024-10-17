@@ -139,13 +139,15 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     });
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     // We either submit or unsubmit the project, depending on the current state.
     const submit = !hasSubmitted;
-    dispatch(sendSubmitReport({appType: appType || '', submitted: submit}));
+    await dispatch(
+      sendSubmitReport({appType: appType || '', submitted: submit})
+    );
     // If we just submitted, continue or finish the lesson.
     if (submit) {
-      continueOrFinishLesson();
+      dispatch(continueOrFinishLesson());
     }
   };
 
