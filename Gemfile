@@ -109,11 +109,10 @@ group :development, :test do
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec', require: false
-  gem 'selenium-webdriver', '~> 4.0'
+  gem 'selenium-webdriver', '~> 4.25'
   gem 'simplecov', '~> 0.22.0', require: false
   gem 'spring', '~> 3.1.1'
   gem 'spring-commands-testunit'
-  gem 'webdrivers', '~> 5.2'
 
   # For pegasus PDF generation / merging testing.
   gem 'parallel_tests'
