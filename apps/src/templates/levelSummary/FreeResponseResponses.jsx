@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
@@ -28,6 +28,13 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
       pinnedResponseIds.includes(response.user_id)
     );
   }, [responses, pinnedResponseIds]);
+
+  //This resets the pinned and hidden responses when the responses change so that
+  //pinned and hidden responses are not carried over between different questions
+  useEffect(() => {
+    setPinnedResponseIds([]);
+    setHiddenResponses([]);
+  }, [responses]);
 
   const getResponseBox = (
     response,

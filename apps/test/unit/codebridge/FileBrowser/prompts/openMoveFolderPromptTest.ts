@@ -18,8 +18,6 @@ const getMoveFolderMock = (): [ProjectFolder, MoveFolderFunction] => {
   return [MoveFolderData, mock];
 };
 
-const appName = 'Codebridge Unit Test';
-
 describe('openMoveFolderPrompt', function () {
   it('can successfully move a folder', async function () {
     const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
@@ -36,7 +34,6 @@ describe('openMoveFolderPrompt', function () {
       folderId,
       projectFolders: testProject.folders,
       dialogControl: getDialogControlMock(destinationFolderName),
-      appName,
       moveFolder: MoveFolderDataMock,
       sendCodebridgeAnalyticsEvent,
     });
@@ -58,7 +55,6 @@ describe('openMoveFolderPrompt', function () {
       folderId,
       projectFolders: testProject.folders,
       dialogControl: getDialogControlMock(destinationFolderName),
-      appName,
       moveFolder: MoveFolderDataMock,
       sendCodebridgeAnalyticsEvent,
     });
@@ -82,7 +78,6 @@ describe('openMoveFolderPrompt', function () {
       folderId,
       projectFolders: testProject.folders,
       dialogControl: getDialogControlMock(destinationFolderName),
-      appName,
       moveFolder: MoveFolderDataMock,
       sendCodebridgeAnalyticsEvent,
     });
@@ -106,7 +101,6 @@ describe('openMoveFolderPrompt', function () {
       folderId,
       projectFolders: testProject.folders,
       dialogControl: getDialogControlMock(destinationFolderName),
-      appName,
       moveFolder: MoveFolderDataMock,
       sendCodebridgeAnalyticsEvent,
     });
@@ -130,7 +124,6 @@ describe('openMoveFolderPrompt', function () {
       folderId,
       projectFolders: testProject.folders,
       dialogControl: getDialogControlMock(destinationFolderName),
-      appName,
       moveFolder: MoveFolderDataMock,
       sendCodebridgeAnalyticsEvent,
     });
