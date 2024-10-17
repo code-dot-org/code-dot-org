@@ -388,10 +388,10 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test "cannot build user with panda in name" do
+  test "can build user with panda in name" do
     user = build :user, name: panda_panda
-    refute user.valid?
-    assert user.errors[:name].length == 1
+    assert user.valid?
+    assert user.errors[:name].empty?
   end
 
   test "cannot build user with panda in email" do
