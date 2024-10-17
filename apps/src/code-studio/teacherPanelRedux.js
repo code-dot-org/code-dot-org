@@ -30,7 +30,7 @@ export default function reducer(state = initialState, action) {
   return state;
 }
 
-const setLevelsWithProgress = levelsWithProgress => ({
+export const setLevelsWithProgress = levelsWithProgress => ({
   type: SET_LEVELS_WITH_PROGRESS,
   levelsWithProgress,
 });

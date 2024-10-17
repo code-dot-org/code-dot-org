@@ -6,7 +6,9 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
+import teacherPanel, {
+  setLevelsWithProgress,
+} from '@cdo/apps/code-studio/teacherPanelRedux';
 import * as utils from '@cdo/apps/code-studio/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -19,10 +21,13 @@ import {
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {STEPS} from '@cdo/apps/templates/rubrics/productTourHelpers';
 import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import teacherSections, {
+  setStudentsForCurrentSection,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   RubricAiEvaluationLimits,
   RubricAiEvaluationStatus,
+  LevelStatus,
 } from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -36,12 +41,38 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
 
 fetch.mockIf(/\/rubrics\/.*/, JSON.stringify(''));
 
+const studentAlice = {id: 11, name: 'Alice'};
+// const studentBob = {id: 22, name: 'Bob'};
+// const studentCharlie = {id: 33, name: 'Charlie'};
+const sectionId = 999;
+const levelNotTried = {
+  id: '123',
+  assessment: null,
+  contained: false,
+  paired: false,
+  partnerNames: null,
+  partnerCount: null,
+  isConceptLevel: false,
+  levelNumber: 4,
+  passed: false,
+  status: LevelStatus.not_tried,
+};
+// const levelAttempted = {
+//   ...levelNotTried,
+//   status: LevelStatus.attempted,
+// };
+// const levelSubmitted = {
+//   ...levelNotTried,
+//   status: LevelStatus.submitted,
+// };
+
 describe('RubricContainer', () => {
   let clock;
   let store;
   let fetchStub;
   let ajaxStub;
   let sendEventSpy;
+  let students, levelsWithProgress;
 
   async function wait() {
     for (let _ = 0; _ < 10; _++) {
@@ -111,6 +142,10 @@ describe('RubricContainer', () => {
     stubRedux();
     registerReducers({teacherSections, teacherPanel, currentUser});
     store = getStore();
+
+    // set default values to be dispatched via redux
+    students = [studentAlice];
+    levelsWithProgress = [{...levelNotTried, userId: studentAlice.id}];
   });
 
   afterEach(() => {
@@ -135,6 +170,9 @@ describe('RubricContainer', () => {
     attemptedCount: 0,
     attemptedUnevaluatedCount: 1,
     csrfToken: 'abcdef',
+    aiEvalStatusMap: {
+      11: 'NOT_STARTED',
+    },
   };
 
   const readyJson = {
@@ -148,6 +186,9 @@ describe('RubricContainer', () => {
     attemptedCount: 1,
     attemptedUnevaluatedCount: 1,
     csrfToken: 'abcdef',
+    aiEvalStatusMap: {
+      11: 'IN_PROGRESS',
+    },
   };
 
   const pendingJson = {
@@ -175,6 +216,9 @@ describe('RubricContainer', () => {
     attemptedCount: 1,
     attemptedUnevaluatedCount: 0,
     csrfToken: 'abcdef',
+    aiEvalStatusMap: {
+      11: 'READY_TO_REVIEW',
+    },
   };
 
   const defaultRubric = {
@@ -222,7 +266,7 @@ describe('RubricContainer', () => {
     },
   ];
 
-  const defaultStudentInfo = {user_id: 1, name: 'Jane Doe'};
+  const defaultStudentInfo = {user_id: 11, name: 'Alice'};
 
   const mockAiEvaluations = [
     {id: 2, learning_goal_id: 2, understanding: 0, aiConfidencePassFail: 2},
@@ -372,6 +416,10 @@ describe('RubricContainer', () => {
     const allFetchStub = stubFetchEvalStatusForAll(notAttemptedJsonAll);
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
+    stubFetchTourStatus({seen: true});
+
+    store.dispatch(setStudentsForCurrentSection(sectionId, students));
+    store.dispatch(setLevelsWithProgress(levelsWithProgress));
 
     render(
       <Provider store={store}>
@@ -393,6 +441,10 @@ describe('RubricContainer', () => {
     screen.getByText(i18n.aiEvaluationStatus_not_attempted());
     const button = screen.getByRole('button', {name: i18n.runAiAssessment()});
     expect(button).to.be.disabled;
+
+    // Verify status bubble in student selector
+    const dropdownOption = screen.getByText(studentAlice.name).closest('div');
+    expect(dropdownOption.textContent).to.contain(i18n.notStarted());
   });
 
   it('shows status text when level has already been evaluated', async () => {
@@ -400,6 +452,10 @@ describe('RubricContainer', () => {
     const allFetchStub = stubFetchEvalStatusForAll(successJsonAll);
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTourStatus({seen: true});
+
+    store.dispatch(setStudentsForCurrentSection(sectionId, students));
+    store.dispatch(setLevelsWithProgress(levelsWithProgress));
 
     render(
       <Provider store={store}>
@@ -423,6 +479,10 @@ describe('RubricContainer', () => {
     screen.getByText(i18n.aiEvaluationStatus_already_evaluated());
     const button = screen.getByRole('button', {name: i18n.runAiAssessment()});
     expect(button).to.be.disabled;
+
+    // Verify status bubble in student selector
+    const dropdownOption = screen.getByText(studentAlice.name).closest('div');
+    expect(dropdownOption.textContent).to.contain(i18n.readyToReview());
   });
 
   it('allows teacher to run analysis when level has not been evaluated', async () => {
@@ -430,6 +490,10 @@ describe('RubricContainer', () => {
     const allFetchStub = stubFetchEvalStatusForAll(readyJsonAll);
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
+    stubFetchTourStatus({seen: true});
+
+    store.dispatch(setStudentsForCurrentSection(sectionId, students));
+    store.dispatch(setLevelsWithProgress(levelsWithProgress));
 
     render(
       <Provider store={store}>
@@ -452,6 +516,10 @@ describe('RubricContainer', () => {
     expect(allFetchStub).to.have.been.called;
     const button = screen.getByRole('button', {name: i18n.runAiAssessment()});
     expect(button).to.not.be.disabled;
+
+    // Verify status bubble in student selector
+    const dropdownOption = screen.getByText(studentAlice.name).closest('div');
+    expect(dropdownOption.textContent).to.contain(i18n.inProgress());
   });
 
   it('handles running ai assessment', async () => {
