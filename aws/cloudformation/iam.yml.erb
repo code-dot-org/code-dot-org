@@ -786,6 +786,7 @@ roles.each do |name, config| %>
           - Effect: Allow
             Action:
               - logs:GetLogEvents
+              - logs:FilterLogEvents
             Resource: 'arn:aws:logs:*:${AWS::AccountId}:log-group:*:log-stream:*'
           - Effect: Allow
             Action:
