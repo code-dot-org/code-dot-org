@@ -96,10 +96,14 @@ You can get a local coverage report with
 
 
 ### UI Tests and Eyes Tests
-We have a set of integration tests, divided into "UI tests" (Selenium+Cucumber) and "Eyes tests" (Selenium+Cucumber+Applitools).  These tests live in [dashboard/test/ui](dashboard/test/ui) - for information on setting up and running these tests, see [the README in that directory](dashboard/test/ui) and our [guide to adding an eyes test](docs/testing-with-applitools-eyes.md).
+We have a set of integration tests, divided into "UI tests" (Selenium+Cucumber) and "Eyes tests" (Selenium+Cucumber+Applitools).  These tests live in [dashboard/test/ui](dashboard/test/ui) - for information on setting up and running these tests, see [the README in that directory](dashboard/test/ui/README.md) and our [guide to adding an eyes test](docs/testing-with-applitools-eyes.md).
 Or you can just use this shortcut (after you've installed chromedriver):
 
 `bundle exec rake test:ui feature=dashboard/test/ui/features/sometest.feature`
+
+#### Running eyes tests from Drone CI
+
+If you'd like our CI to run all eyes tests on your PR using Saucelabs, include the string "[test eyes]" in your commit message.
 
 ### Shared and Lib Tests
 Tests in the `shared/` and `lib/` directories need to be run slightly differently since they are outside of our Rails environment.
