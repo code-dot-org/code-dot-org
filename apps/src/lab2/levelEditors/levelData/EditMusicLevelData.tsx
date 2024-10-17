@@ -84,7 +84,8 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
     [levelData.library, loadedLibraries]
   );
 
-  const packKeys = (restrictedPacks || []).map(pack => pack.value) || [];
+  const restrictedPackKeys =
+    (restrictedPacks || []).map(pack => pack.value) || [];
 
   return (
     <div>
@@ -142,7 +143,9 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
                   const previousSounds = levelData.sounds;
                   const sounds = previousSounds
                     ? Object.keys(previousSounds)
-                        .filter(soundKey => !packKeys.includes(soundKey))
+                        .filter(
+                          soundKey => !restrictedPackKeys.includes(soundKey)
+                        )
                         .reduce((newSounds: Sounds, key) => {
                           newSounds[key] = previousSounds[key];
                           return newSounds;

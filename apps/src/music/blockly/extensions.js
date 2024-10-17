@@ -161,7 +161,7 @@ export const effectsFieldExtension = function () {
 export const fieldSoundsValidator = function () {
   /**
    * Ensures that sound blocks also have a valid value, even if a level's library or song
-   * pack has changed. *
+   * pack has changed.
    * @param newValue The sound id selected from the field editor or initial sources.
    * @returns The new sound id or, if that's invalid, the id for the first available sound
    */
