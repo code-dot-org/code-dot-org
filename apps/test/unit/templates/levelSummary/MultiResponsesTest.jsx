@@ -10,38 +10,30 @@ import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no
 const {multiAnswerCounts, multiChartData} = exportedForTesting;
 
 const JS_DATA = {
-  levels: [
-    {
-      properties: {
-        answers: [{}],
-      },
+  level: {
+    properties: {
+      answers: [{}],
     },
-  ],
-  responses: [[{user_id: 0, text: '1'}]],
+  },
+  responses: [{user_id: 0, text: '1'}],
 };
 
 const PREDICT_DATA = {
-  levels: [
-    {
-      properties: {
-        predict_settings: {
-          isPredictLevel: true,
-          multipleChoiceOptions: ['option 1', 'option 2', 'option 3'],
-          solution: 'option 1',
-        },
+  level: {
+    properties: {
+      predict_settings: {
+        isPredictLevel: true,
+        multipleChoiceOptions: ['option 1', 'option 2', 'option 3'],
+        solution: 'option 1',
       },
     },
-  ],
-  responses: [[{user_id: 0, text: '1'}]],
+  },
+  responses: [{user_id: 0, text: '1'}],
 };
-
-const LEVEL_NUM = 0;
 
 describe('MultiResponses', () => {
   it('renders chart', () => {
-    const wrapper = shallow(
-      <MultiResponses scriptData={JS_DATA} levelNumber={LEVEL_NUM} />
-    );
+    const wrapper = shallow(<MultiResponses scriptData={JS_DATA} />);
 
     expect(wrapper.find('Chart').length).to.eq(1);
     expect(wrapper.find('Chart').prop('data')).to.eql([
@@ -52,9 +44,7 @@ describe('MultiResponses', () => {
   });
 
   it('renders chart for predict level', () => {
-    const wrapper = shallow(
-      <MultiResponses scriptData={PREDICT_DATA} levelNumber={LEVEL_NUM} />
-    );
+    const wrapper = shallow(<MultiResponses scriptData={PREDICT_DATA} />);
 
     expect(wrapper.find('Chart').length).to.eq(1);
     expect(wrapper.find('Chart').prop('data')).to.eql([
