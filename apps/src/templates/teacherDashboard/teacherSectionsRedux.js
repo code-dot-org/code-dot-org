@@ -200,7 +200,11 @@ export const pageTypes = {
  * Set the list of sections to display.
  * @param sections
  */
-export const setSections = sections => ({type: SET_SECTIONS, sections});
+export const setSections = (sections, autoSelectOnlySection = true) => ({
+  type: SET_SECTIONS,
+  sections,
+  autoSelectOnlySection,
+});
 export const selectSection = sectionId => ({type: SELECT_SECTION, sectionId});
 export const removeSection = sectionId => ({type: REMOVE_SECTION, sectionId});
 export const updateSelectedSection = section => ({
@@ -784,7 +788,10 @@ export default function teacherSections(state = initialState, action) {
 
     let selectedSectionId = state.selectedSectionId;
     // If we have only one section, autoselect it
-    if (Object.keys(action.sections).length === 1) {
+    if (
+      action.autoSelectOnlySection &&
+      Object.keys(action.sections).length === 1
+    ) {
       selectedSectionId = action.sections[0].id;
     }
 

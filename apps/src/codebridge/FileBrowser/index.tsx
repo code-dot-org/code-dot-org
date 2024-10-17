@@ -65,18 +65,17 @@ import {
   DragDataType,
   DropDataType,
   renameFilePromptType,
-  renameFolderPromptType,
   setFileType,
 } from './types';
 
 import moduleStyles from './styles/filebrowser.module.scss';
+import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 type FilesComponentProps = {
   files: ProjectType['files'];
   folders: ProjectType['folders'];
   parentId?: FolderId;
   renameFilePrompt: renameFilePromptType;
-  renameFolderPrompt: renameFolderPromptType;
   setFileType: setFileType;
   appName?: string;
 };
@@ -87,12 +86,15 @@ const InnerFileBrowser = React.memo(
     folders,
     files,
     renameFilePrompt,
-    renameFolderPrompt,
     setFileType,
     appName,
   }: FilesComponentProps) => {
-    const {openMoveFolderPrompt, openNewFilePrompt, openNewFolderPrompt} =
-      usePrompts();
+    const {
+      openMoveFolderPrompt,
+      openNewFilePrompt,
+      openNewFolderPrompt,
+      openRenameFolderPrompt,
+    } = usePrompts();
     const {
       deleteFile,
       toggleOpenFolder,
@@ -217,6 +219,7 @@ const InnerFileBrowser = React.memo(
                         tooltipId: `folder-tooltip-${f.id}`,
                         size: 's',
                         direction: 'onBottom',
+                        className: darkModeStyles.tooltipBottom,
                       }}
                       tooltipOverlayClassName={moduleStyles.nameContainer}
                       className={moduleStyles.nameContainer}
@@ -248,7 +251,9 @@ const InnerFileBrowser = React.memo(
                         <PopUpButtonOption
                           iconName="pencil"
                           labelText={codebridgeI18n.renameFolder()}
-                          clickHandler={() => renameFolderPrompt(f.id)}
+                          clickHandler={() =>
+                            openRenameFolderPrompt({folderId: f.id})
+                          }
                         />
                         <PopUpButtonOption
                           iconName="folder-plus"
@@ -297,7 +302,6 @@ const InnerFileBrowser = React.memo(
                       parentId={f.id}
                       files={files}
                       renameFilePrompt={renameFilePrompt}
-                      renameFolderPrompt={renameFolderPrompt}
                       setFileType={setFileType}
                       appName={appName}
                     />
@@ -342,15 +346,8 @@ const InnerFileBrowser = React.memo(
 );
 
 export const FileBrowser = React.memo(() => {
-  const {
-    project,
-    renameFile,
-    moveFile,
-    moveFolder,
-
-    renameFolder,
-    setFileType,
-  } = useCodebridgeContext();
+  const {project, renameFile, moveFile, moveFolder, setFileType} =
+    useCodebridgeContext();
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const dialogControl = useDialogControl();
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
@@ -413,38 +410,6 @@ export const FileBrowser = React.memo(() => {
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FILE, appName);
     },
     [project.files, dialogControl, renameFile, appName, validateFileName]
-  );
-
-  const renameFolderPrompt: FilesComponentProps['renameFolderPrompt'] = useMemo(
-    () => async folderId => {
-      const folder = project.folders[folderId];
-      const results = await dialogControl?.showDialog({
-        type: DialogType.GenericPrompt,
-        title: codebridgeI18n.renameFolder(),
-        value: folder.name,
-        validateInput: (newName: string) => {
-          if (!newName.length) {
-            return;
-          }
-          if (newName === folder.name) {
-            return;
-          }
-
-          return validateFolderName({
-            folderName: newName,
-            parentId: folder.parentId,
-            projectFolders: project.folders,
-          });
-        },
-      });
-      if (results.type !== 'confirm') {
-        return;
-      }
-      const newName = extractInput(results);
-      renameFolder(folderId, newName);
-      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FOLDER, appName);
-    },
-    [project.folders, dialogControl, renameFolder, appName]
   );
 
   const handleDragEnd = useMemo(
@@ -532,7 +497,6 @@ export const FileBrowser = React.memo(() => {
                 folders={project.folders}
                 files={project.files}
                 renameFilePrompt={renameFilePrompt}
-                renameFolderPrompt={renameFolderPrompt}
                 setFileType={setFileType}
                 appName={appName}
               />

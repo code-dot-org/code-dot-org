@@ -35,7 +35,8 @@
       "supported_locales": [
         "es-MX",
         "it-IT",
-        "sk-SK"
+        "sk-SK",
+        "uk-UA"
       ],
       "tts": true,
       "version_year": "2021",
@@ -43,7 +44,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2024-03-05 20:19:01 UTC",
+    "serialized_at": "2024-10-16 18:43:41 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
