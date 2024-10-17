@@ -18,6 +18,8 @@ export interface Panel {
   key: string;
   nextUrl?: string;
   layout?: PanelLayout;
+
+  // The following fields are exploratory and not yet exposed in levelbuilder.
   dark?: boolean;
   typing?: boolean;
   fadeInOverPrevious?: boolean;
