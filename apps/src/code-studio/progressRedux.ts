@@ -462,7 +462,6 @@ function sendReportHelper(
       'content-type': 'application/json',
     },
     body: JSON.stringify(data),
-    keepalive: true,
   }).then(response => {
     if (response.ok && levelId !== null) {
       // Update the progress store by merging in this
