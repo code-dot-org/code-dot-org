@@ -41,3 +41,11 @@
     }
   }
 }
+
+.editorContainer {
+  height: 80vh; /* Adjust the height as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
