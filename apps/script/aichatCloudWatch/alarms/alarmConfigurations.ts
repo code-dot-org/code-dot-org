@@ -1,9 +1,10 @@
 import {ComparisonOperator} from '@aws-sdk/client-cloudwatch';
 
 import modelDescriptions from '../../../static/aichat/modelDescriptions.json';
+import {SNS_TOPIC} from '../constants';
 
 import {
-  createExecutionJobMetricStat,
+  createJobExecutionMetricStat,
   createOpenaiMetricStat,
 } from './alarmHelpers';
 
@@ -14,7 +15,7 @@ export const openaiLowSuccessRateConfiguration = {
   AlarmDescription: 'test_script_genai_openai_low_success_rate',
   ActionsEnabled: true,
   OKActions: [],
-  AlarmActions: ['arn:aws:sns:us-east-1:475661607190:javabuilder-low-urgency'],
+  AlarmActions: [SNS_TOPIC],
   InsufficientDataActions: [],
   EvaluationPeriods: 5,
   DatapointsToAlarm: 5,
@@ -43,22 +44,22 @@ export const openaiLowSuccessRateConfiguration = {
   ],
 };
 
-// Failure job metrics for each model.
-const failureMetrics = modelIds.map((modelId, index) => ({
-  Id: `m${index + 6}`,
-  ...createExecutionJobMetricStat(
-    'AichatRequestChatCompletionJob.Finish',
-    'FAILURE',
+// Start(total) jobs metrics for each model (m1,...,m5).
+const startMetrics = modelIds.map((modelId, index) => ({
+  Id: `m${index + 1}`,
+  ...createJobExecutionMetricStat(
+    'AichatRequestChatCompletionJob.Start',
+    null,
     modelId
   ),
 }));
 
-// Start(total) jobs metrics for each model.
-const startMetrics = modelIds.map((modelId, index) => ({
-  Id: `m${index + 1}`,
-  ...createExecutionJobMetricStat(
-    'AichatRequestChatCompletionJob.Start',
-    null,
+// Failure job metrics for each model (m6,...,m10).
+const failureMetrics = modelIds.map((modelId, index) => ({
+  Id: `m${index + 6}`,
+  ...createJobExecutionMetricStat(
+    'AichatRequestChatCompletionJob.Finish',
+    'FAILURE',
     modelId
   ),
 }));
@@ -68,7 +69,7 @@ export const highChatCompletionJobExecutionFailureRateConfiguration = {
   AlarmDescription: 'test_high_chat_completion_job_execution_failure_rate',
   ActionsEnabled: true,
   OKActions: [],
-  AlarmActions: ['arn:aws:sns:us-east-1:475661607190:javabuilder-low-urgency'],
+  AlarmActions: [SNS_TOPIC],
   InsufficientDataActions: [],
   EvaluationPeriods: 5,
   DatapointsToAlarm: 5,
@@ -88,13 +89,13 @@ export const highChatCompletionJobExecutionFailureRateConfiguration = {
       ReturnData: false,
       Expression: 'SUM([m6, m7, m8, m9, m10])',
     },
-    ...failureMetrics, // Spread the failure metrics array
+    ...failureMetrics,
     {
       Id: 'total',
       Label: 'total_jobs',
       ReturnData: false,
       Expression: 'SUM([m1, m2, m3, m4, m5])',
     },
-    ...startMetrics, // Spread the start metrics array
+    ...startMetrics,
   ],
 };

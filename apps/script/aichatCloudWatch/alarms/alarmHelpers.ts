@@ -1,5 +1,4 @@
-// Helper function to create metric stat
-export const createExecutionJobMetricStat = (
+export const createJobExecutionMetricStat = (
   metricName: string,
   executionStatus: string | null,
   modelId: string,
