@@ -84,7 +84,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
 
   const classroomContentSectionTitle = getSectionHeader(i18n.classroom());
   const classroomContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
-    ['manageStudents', 'settings'];
+    ['roster', 'settings'];
 
   const teacherNavigationBarContent = [
     {title: coursecontentSectionTitle, keys: courseContentKeys},

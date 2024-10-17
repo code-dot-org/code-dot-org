@@ -328,6 +328,26 @@ export default class MusicLibrary {
       folder?.key ?? folder?.sounds.find(sound => sound.key !== undefined)?.key
     );
   }
+
+  // Returns true if the sound id is associated with an available sound; false otherwise
+  isSoundIdAvailable(id: string): boolean {
+    const lastSlashIndex = id.lastIndexOf('/');
+    const folderId = id.substring(0, lastSlashIndex);
+    const soundSrc = id.substring(lastSlashIndex + 1);
+
+    const folder = this.getFolderForFolderId(folderId);
+    if (!folder) {
+      return false;
+    }
+
+    // Check if the sound exists in the available sounds of this folder.
+    const availableSounds = this.getAvailableSounds();
+    const availableFolder = availableSounds.find(f => f.id === folderId);
+
+    return (
+      availableFolder?.sounds.some(sound => sound.src === soundSrc) || false
+    );
+  }
 }
 
 export const LibraryValidator: ResponseValidator<LibraryJson> = response => {

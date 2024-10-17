@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Python and Pandas
+# Data Science with Python
 
 ## Lesson 10: Exploratory Data Analysis
 

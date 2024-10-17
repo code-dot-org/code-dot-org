@@ -1,4 +1,4 @@
-import {BlockSvg} from 'blockly';
+import * as GoogleBlockly from 'blockly/core';
 
 import {commonI18n} from '@cdo/apps/types/locale';
 
@@ -13,7 +13,7 @@ export default class BlockSvgFrame extends SvgFrame {
    * Constructs an svg frame for a block, such as a function definition.
    */
   constructor(
-    block: BlockSvg,
+    block: GoogleBlockly.BlockSvg,
     text: string | undefined,
     className: string | undefined,
     getColor: () => string

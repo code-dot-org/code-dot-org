@@ -1,4 +1,4 @@
-import GoogleBlockly, {BlockSvg, DropDownDiv, Field} from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -23,7 +23,7 @@ interface FieldChordOptions {
  * A custom field that renders the chord selection UI, used in the
  * "play_chord" block. The UI is rendered by {@link ChordPanel}.
  */
-export default class FieldChord extends Field {
+export default class FieldChord extends GoogleBlockly.Field {
   static fromJson(options: FieldChordOptions) {
     return new FieldChord(options);
   }
@@ -70,7 +70,7 @@ export default class FieldChord extends Field {
   }
 
   applyColour() {
-    const style = (this.sourceBlock_ as BlockSvg).style;
+    const style = (this.sourceBlock_ as GoogleBlockly.BlockSvg).style;
     if (this.borderRect_) {
       this.borderRect_.setAttribute('stroke', style.colourTertiary);
       this.borderRect_.setAttribute('fill', 'transparent');
@@ -152,12 +152,18 @@ export default class FieldChord extends Field {
     super.showEditor_();
 
     const editor = this.createDropdown();
-    DropDownDiv.getContentDiv().appendChild(editor);
+    GoogleBlockly.DropDownDiv.getContentDiv().appendChild(editor);
 
-    const style = (this.sourceBlock_ as BlockSvg).style;
-    DropDownDiv.setColour(style.colourPrimary, style.colourTertiary);
+    const style = (this.sourceBlock_ as GoogleBlockly.BlockSvg).style;
+    GoogleBlockly.DropDownDiv.setColour(
+      style.colourPrimary,
+      style.colourTertiary
+    );
 
-    DropDownDiv.showPositionedByField(this, this.disposeDropdown.bind(this));
+    GoogleBlockly.DropDownDiv.showPositionedByField(
+      this,
+      this.disposeDropdown.bind(this)
+    );
   }
 
   private createDropdown(): HTMLDivElement {

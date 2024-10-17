@@ -21,7 +21,6 @@ const getNewFileMock = (parentId: FolderId): [ProjectFile, NewFileFunction] => {
   return [newFileData, mock];
 };
 
-const appName = 'Codebridge Unit Test';
 const EXPECTED_NEXT_FILE_ID = '8';
 
 describe('openNewFilePrompt', function () {
@@ -34,7 +33,6 @@ describe('openNewFilePrompt', function () {
 
     await openNewFilePrompt({
       folderId,
-      appName,
       dialogControl: getDialogControlMock(newFileName),
       newFile: newFileDataMock,
       projectFiles: testProject.files,
@@ -58,7 +56,6 @@ describe('openNewFilePrompt', function () {
     const [newFileData, newFileDataMock] = getNewFileMock(folderId);
 
     await openNewFilePrompt({
-      appName,
       dialogControl: getDialogControlMock(newFileName),
       newFile: newFileDataMock,
       projectFiles: testProject.files,
@@ -83,7 +80,6 @@ describe('openNewFilePrompt', function () {
 
     await openNewFilePrompt({
       folderId,
-      appName,
       dialogControl: getDialogControlMock(newFileName),
       newFile: newFileDataMock,
       projectFiles: testProject.files,
@@ -108,7 +104,6 @@ describe('openNewFilePrompt', function () {
 
     await openNewFilePrompt({
       folderId,
-      appName,
       dialogControl: getDialogControlMock(newFileName),
       newFile: newFileDataMock,
       projectFiles: testProject.files,
@@ -133,7 +128,6 @@ describe('openNewFilePrompt', function () {
 
     await openNewFilePrompt({
       folderId,
-      appName,
       dialogControl: getDialogControlMock(newFileName),
       newFile: newFileDataMock,
       projectFiles: testProject.files,
