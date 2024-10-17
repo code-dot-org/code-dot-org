@@ -54,8 +54,8 @@ import {Draggable} from './Draggable';
 import {Droppable} from './Droppable';
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
 import FileRow from './FileRow';
-import {FileUploader} from './FileUploader';
 import {
+  useFileUploader,
   useFileUploadErrorCallback,
   useHandleFileUpload,
   usePrompts,
@@ -106,6 +106,17 @@ const InnerFileBrowser = React.memo(
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
     const handleFileUpload = useHandleFileUpload(files);
     const fileUploadErrorCallback = useFileUploadErrorCallback();
+
+    const {startFileUpload, FileUploaderComponent} = useFileUploader({
+      callback: (fileName, contents, folderId) =>
+        handleFileUpload({
+          folderId: folderId as FolderId,
+          fileName,
+          contents,
+        }),
+      errorCallback: fileUploadErrorCallback,
+      validMimeTypes,
+    });
     const dispatch = useAppDispatch();
 
     const handleConfirmDeleteFile = (fileId: string) => {
@@ -186,6 +197,7 @@ const InnerFileBrowser = React.memo(
 
     return (
       <>
+        <FileUploaderComponent />
         {Object.values(folders)
           .filter(f => f.parentId === parentId)
           .sort((a, b) => a.name.localeCompare(b.name))
@@ -270,22 +282,12 @@ const InnerFileBrowser = React.memo(
                           }
                         />
 
-                        <FileUploader
-                          validMimeTypes={validMimeTypes}
-                          callback={(fileName, contents) =>
-                            handleFileUpload({
-                              folderId: f.id,
-                              fileName,
-                              contents,
-                            })
-                          }
-                          errorCallback={fileUploadErrorCallback}
-                        >
-                          <PopUpButtonOption
-                            iconName="upload"
-                            labelText={codebridgeI18n.uploadFile()}
-                          />
-                        </FileUploader>
+                        <PopUpButtonOption
+                          iconName="upload"
+                          labelText={codebridgeI18n.uploadFile()}
+                          clickHandler={() => startFileUpload(f.id)}
+                        />
+
                         <PopUpButtonOption
                           iconName="trash"
                           labelText={codebridgeI18n.deleteFolder()}
