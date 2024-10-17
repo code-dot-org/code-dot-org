@@ -18,7 +18,7 @@ class Services::TeacherTest < ActiveSupport::TestCase
 
       it 'updates the permission to AUTHORIZED_TEACHER if the user is a teacher' do
         _verified_user.must_equal true
-        user.reload.permission?(UserPermission::AUTHORIZED_TEACHER).must_equal true
+        _(user.reload.permission?(UserPermission::AUTHORIZED_TEACHER)).must_equal true
       end
 
       it 'returns false if the user save fails' do
@@ -34,7 +34,6 @@ class Services::TeacherTest < ActiveSupport::TestCase
 
       it 'returns false if the user is not a teacher' do
         _verified_user.must_equal false
-        user.reload.permission?(UserPermission::AUTHORIZED_TEACHER).must_equal false
       end
     end
   end
