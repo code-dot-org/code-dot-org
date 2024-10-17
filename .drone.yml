@@ -200,6 +200,8 @@ steps:
         path: /var/lib/mysql
     environment:
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ui_tests.sh
+      APPLITOOLS_EYES_API_KEY:
+        from_secret: APPLITOOLS_EYES_API_KEY
       CLOUDFRONT_KEY_PAIR_ID:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
@@ -289,6 +291,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 8551f3e768d263e92bb0c8060de2b6bfd8cf939aa31c52047621485746726d16
+hmac: 4a43e43d38fbf5cc553b129f45a938c44ef25d2abc785d2e8da9d5efc581baa8
 
 ...
