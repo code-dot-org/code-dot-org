@@ -1,7 +1,4 @@
 import * as GoogleBlockly from 'blockly/core';
-import {Abstract} from 'blockly/core/events/events_abstract';
-import {BlockChange} from 'blockly/core/events/events_block_change';
-import {FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';
 
 import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
@@ -234,7 +231,7 @@ export function flyoutCategory(
   workspace: GoogleBlockly.WorkspaceSvg,
   functionEditorOpen = false
 ) {
-  const blockList: FlyoutItemInfoArray = [];
+  const blockList: GoogleBlockly.utils.toolbox.FlyoutItemInfoArray = [];
 
   if (functionEditorOpen) {
     // No-op - cannot create new behaviors while the modal editor is open
@@ -306,11 +303,14 @@ const getNewBehaviorButtonWithCallback = (
 
 // Added as a change listener. If a behavior name changes, we need to update any
 // behavior picker blocks that have the old name currently selected.
-function onBehaviorDefChange(event: Abstract, block: ExtendedBlockSvg) {
+function onBehaviorDefChange(
+  event: GoogleBlockly.Events.Abstract,
+  block: ExtendedBlockSvg
+) {
   if (event.type !== Blockly.Events.CHANGE) {
     return;
   }
-  const changeEvent = event as BlockChange;
+  const changeEvent = event as GoogleBlockly.Events.BlockChange;
   if (
     block.id === changeEvent.blockId &&
     // Excludes changes to the description field.

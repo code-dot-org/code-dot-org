@@ -27,8 +27,9 @@ import style from './signUpFlowStyles.module.scss';
 const FinishStudentAccount: React.FunctionComponent<{
   ageOptions: {value: string; text: string}[];
   usIp: boolean;
+  countryCode: string;
   usStateOptions: {value: string; text: string}[];
-}> = ({ageOptions, usIp, usStateOptions}) => {
+}> = ({ageOptions, usIp, countryCode, usStateOptions}) => {
   // Fields
   const [isParent, setIsParent] = useState(false);
   const [parentEmail, setParentEmail] = useState('');
@@ -163,6 +164,7 @@ const FinishStudentAccount: React.FunctionComponent<{
         age: age,
         gender: gender,
         us_state: state,
+        country_code: countryCode,
         parent_email_preference_email: parentEmail,
         parent_email_preference_opt_in: parentEmailOptInChecked,
       },
@@ -244,6 +246,7 @@ const FinishStudentAccount: React.FunctionComponent<{
           <div>
             <SimpleDropdown
               name="userAge"
+              className={style.dropdownContainer}
               labelText={locale.what_is_your_age()}
               size="m"
               items={ageOptions}
@@ -260,6 +263,7 @@ const FinishStudentAccount: React.FunctionComponent<{
             <div>
               <SimpleDropdown
                 name="userState"
+                className={style.dropdownContainer}
                 labelText={locale.what_state_are_you_in()}
                 size="m"
                 items={usStateOptions}

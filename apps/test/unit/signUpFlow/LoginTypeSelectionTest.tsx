@@ -213,6 +213,80 @@ describe('LoginTypeSelection', () => {
     fetchSpy.restore();
   });
 
+  it('trying to use a duplicate email displays email duplicate error message', async () => {
+    const fetchSpy = sinon.stub(window, 'fetch');
+    fetchSpy.returns(
+      Promise.resolve(
+        new Response(
+          JSON.stringify({
+            errors: ['Email has already been taken'],
+          }),
+          {
+            status: 422,
+          }
+        )
+      )
+    );
+
+    await waitFor(() => {
+      renderDefault();
+    });
+
+    // Set up create account button onClick jest function
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.create_my_account(),
+    }) as HTMLButtonElement;
+    const handleClick = jest.fn();
+    finishSignUpButton.onclick = handleClick;
+
+    // Fill in required fields
+    const email = 'myrandomemail@gmail.com';
+    const password = 'password';
+    const emailInput = screen.getByLabelText(locale.email_address());
+    const passwordInput = screen.getByLabelText(locale.password());
+    const confirmPasswordInput = screen.getByLabelText(
+      locale.confirm_password()
+    );
+    const beginSignUpParams = {
+      new_sign_up: true,
+      user: {
+        email: email,
+        password: password,
+        password_confirmation: password,
+      },
+    };
+
+    fireEvent.change(emailInput, {
+      target: {value: email},
+    });
+    fireEvent.change(passwordInput, {target: {value: password}});
+    fireEvent.change(confirmPasswordInput, {target: {value: password}});
+    await waitFor(() => {
+      expect(finishSignUpButton).not.toBeDisabled();
+    });
+
+    // Click create account button
+    fireEvent.click(finishSignUpButton);
+
+    await waitFor(() => {
+      // Verify the button's click handler was called
+      expect(handleClick).toHaveBeenCalled();
+
+      // Verify the button's fetch method was called
+      expect(fetchSpy).toHaveBeenCalled;
+      const fetchCall = fetchSpy.getCall(0);
+      expect(fetchCall.args[0]).toEqual('/users/begin_sign_up');
+      expect(fetchCall.args[1]?.body).toEqual(
+        JSON.stringify(beginSignUpParams)
+      );
+
+      // Verify the user sees the duplicate email error message
+      screen.getByText(i18n.duplicate_email_error_message());
+    });
+
+    fetchSpy.restore();
+  });
+
   it('clicks the create account button when Enter is pressed if the button is enabled', async () => {
     const fetchSpy = sinon.stub(window, 'fetch');
     fetchSpy.returns(Promise.resolve(new Response()));

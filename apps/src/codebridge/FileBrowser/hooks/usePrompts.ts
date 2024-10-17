@@ -4,6 +4,8 @@ import {
   openNewFilePrompt as globalOpenNewFilePrompt,
   openMoveFilePrompt as globalOpenMoveFilePrompt,
   openMoveFolderPrompt as globalOpenMoveFolderPrompt,
+  openRenameFilePrompt as globalOpenRenameFilePrompt,
+  openRenameFolderPrompt as globalOpenRenameFolderPrompt,
 } from '@codebridge/FileBrowser/prompts';
 import {sendCodebridgeAnalyticsEvent as globalSendCodebridgeAnalyticsEvent} from '@codebridge/utils';
 import {useCallback, useMemo} from 'react';
@@ -22,6 +24,8 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
  *   - **openMoveFolderPrompt:** Opens a prompt for moving a folder within the project.
  *   - **openNewFilePrompt:** Opens a prompt for creating a new file within the project.
  *   - **openNewFolderPrompt:** Opens a prompt for creating a new folder within the project.
+ *   - **openRenameFilePrompt:** Opens a prompt for renaming a file within the project.
+ *   - **openRenameFolderPrompt:** Opens a prompt for renaming a folder within the project.
  */
 export const usePrompts = () => {
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
@@ -31,8 +35,15 @@ export const usePrompts = () => {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const dialogControl = useDialogControl();
 
-  const {project, moveFile, moveFolder, newFolder, newFile} =
-    useCodebridgeContext();
+  const {
+    project,
+    moveFile,
+    moveFolder,
+    newFolder,
+    newFile,
+    renameFile,
+    renameFolder,
+  } = useCodebridgeContext();
 
   const sendCodebridgeAnalyticsEvent = useCallback(
     (event: string) => globalSendCodebridgeAnalyticsEvent(event, appName),
@@ -40,7 +51,6 @@ export const usePrompts = () => {
   );
 
   const openNewFolderPrompt = usePartialApply(globalOpenNewFolderPrompt, {
-    appName,
     dialogControl,
     newFolder,
     projectFolders: project.folders,
@@ -48,7 +58,6 @@ export const usePrompts = () => {
   } satisfies PAFunctionArgs<typeof globalOpenNewFolderPrompt>);
 
   const openNewFilePrompt = usePartialApply(globalOpenNewFilePrompt, {
-    appName,
     dialogControl,
     newFile,
     projectFiles: project.files,
@@ -58,7 +67,6 @@ export const usePrompts = () => {
   } satisfies PAFunctionArgs<typeof globalOpenNewFilePrompt>);
 
   const openMoveFilePrompt = usePartialApply(globalOpenMoveFilePrompt, {
-    appName,
     dialogControl,
     moveFile,
     projectFiles: project.files,
@@ -69,12 +77,27 @@ export const usePrompts = () => {
   } satisfies PAFunctionArgs<typeof globalOpenMoveFilePrompt>);
 
   const openMoveFolderPrompt = usePartialApply(globalOpenMoveFolderPrompt, {
-    appName,
     dialogControl,
     moveFolder,
     projectFolders: project.folders,
     sendCodebridgeAnalyticsEvent,
   } satisfies PAFunctionArgs<typeof globalOpenMoveFolderPrompt>);
+
+  const openRenameFilePrompt = usePartialApply(globalOpenRenameFilePrompt, {
+    dialogControl,
+    renameFile,
+    projectFiles: project.files,
+    sendCodebridgeAnalyticsEvent,
+    isStartMode,
+    validationFile,
+  } satisfies PAFunctionArgs<typeof globalOpenRenameFilePrompt>);
+
+  const openRenameFolderPrompt = usePartialApply(globalOpenRenameFolderPrompt, {
+    dialogControl,
+    renameFolder,
+    projectFolders: project.folders,
+    sendCodebridgeAnalyticsEvent,
+  } satisfies PAFunctionArgs<typeof globalOpenRenameFolderPrompt>);
 
   return useMemo(
     () => ({
@@ -82,12 +105,16 @@ export const usePrompts = () => {
       openNewFolderPrompt,
       openMoveFilePrompt,
       openMoveFolderPrompt,
+      openRenameFilePrompt,
+      openRenameFolderPrompt,
     }),
     [
       openNewFilePrompt,
       openNewFolderPrompt,
       openMoveFilePrompt,
       openMoveFolderPrompt,
+      openRenameFilePrompt,
+      openRenameFolderPrompt,
     ]
   );
 };

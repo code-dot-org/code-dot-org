@@ -1,8 +1,4 @@
-import GoogleBlockly, {
-  FieldDropdownConfig,
-  FieldDropdownValidator,
-  MenuGeneratorFunction,
-} from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 
 import {
   printerStyleNumberRangeToList,
@@ -11,7 +7,9 @@ import {
 
 import {EMPTY_OPTION} from '../constants';
 
-export type CustomMenuGenerator = CustomMenuOption[] | MenuGeneratorFunction;
+export type CustomMenuGenerator =
+  | CustomMenuOption[]
+  | GoogleBlockly.MenuGeneratorFunction;
 // Blockly's MenuOption can either be [string, string] or [ImageProperties, string]. We
 // will always use [string, string].
 type CustomMenuOption = [string, string];
@@ -23,8 +21,8 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
   // the field element's config attribute to specify a range of menu options.
   constructor(
     menuGenerator?: CustomMenuGenerator,
-    validator?: FieldDropdownValidator,
-    config?: FieldDropdownConfig
+    validator?: GoogleBlockly.FieldDropdownValidator,
+    config?: GoogleBlockly.FieldDropdownConfig
   ) {
     if (!menuGenerator) {
       menuGenerator = [['', '']];
