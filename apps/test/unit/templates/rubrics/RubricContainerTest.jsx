@@ -540,6 +540,9 @@ describe('RubricContainer', () => {
     stubFetchAiEvaluations([]);
     stubFetchTourStatus({seen: true});
 
+    store.dispatch(setStudentsForCurrentSection(sectionId, students));
+    store.dispatch(setLevelsWithProgress(levelsWithProgress));
+
     render(
       <Provider store={store}>
         <RubricContainer
@@ -548,6 +551,7 @@ describe('RubricContainer', () => {
           teacherHasEnabledAi={true}
           currentLevelName={'test_level'}
           reportingData={{}}
+          sectionId={42}
           open
         />
       </Provider>
@@ -559,6 +563,9 @@ describe('RubricContainer', () => {
     // 1. Initial fetch returns a json object that puts AI Status into READY state
     let button = screen.getByRole('button', {name: i18n.runAiAssessment()});
     expect(button).to.not.be.disabled;
+
+    let dropdownOption = screen.getByText(studentAlice.name).closest('div');
+    expect(dropdownOption.textContent).to.contain(i18n.inProgress());
 
     // 2. User clicks button to run analysis
 
@@ -610,6 +617,9 @@ describe('RubricContainer', () => {
     button = screen.getByRole('button', {name: i18n.runAiAssessment()});
     expect(button).to.be.disabled;
     screen.getByText(i18n.aiEvaluationStatus_success());
+
+    dropdownOption = screen.getByText(studentAlice.name).closest('div');
+    expect(dropdownOption.textContent).to.contain(i18n.readyToReview());
   });
 
   it('shows general error message for status 1000', async () => {
