@@ -59,8 +59,8 @@ const ElementOrEmptyPage: React.FC<ElementOrEmptyPageProps> = ({
     if (showNoStudents) {
       return (
         <NavLink
-          key={TEACHER_NAVIGATION_PATHS.manageStudents}
-          to={TEACHER_NAVIGATION_PATHS.manageStudents}
+          key={TEACHER_NAVIGATION_PATHS.roster}
+          to={TEACHER_NAVIGATION_PATHS.roster}
           className={styles.navLink}
         >
           {i18n.addStudents()}
