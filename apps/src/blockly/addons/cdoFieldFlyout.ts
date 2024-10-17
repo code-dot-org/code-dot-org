@@ -2,11 +2,7 @@ import * as GoogleBlockly from 'blockly/core';
 
 import CdoBlockFlyout from './cdoBlockFlyout';
 
-interface FieldConfig {
-  tooltip?: string;
-}
-
-interface FieldFlyoutConfig extends FieldConfig {
+interface FieldFlyoutConfig extends GoogleBlockly.FieldConfig {
   flyoutKey: string;
   name: string;
 }
