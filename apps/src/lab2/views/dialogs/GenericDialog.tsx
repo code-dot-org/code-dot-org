@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import FocusTrap from 'focus-trap-react';
-import React, {useCallback, useContext} from 'react';
+import React, {useMemo, useContext} from 'react';
 
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
@@ -48,6 +48,7 @@ export type GenericDialogProps = GenericDialogTitleProps &
         destructive?: boolean;
       };
     };
+    getButtonCallback?: typeof defaultGetButtonCallback;
   };
 
 import moduleStyles from './generic-dialog.module.scss';
@@ -67,25 +68,35 @@ import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
  * If no confirm button text is provided, the default text is "OK" (translatable).
  */
 
-type UseClosingCallbackArgs = {
+export type GetButtonCallbackArgs = {
   closeDialog: DialogCloseFunctionType;
   closeType: DialogCloseActionType;
   callback: dialogCallback | undefined;
   disabled: boolean | undefined;
 };
 
-const useClosingCallback = ({
-  closeDialog,
-  closeType,
-  callback,
-  disabled,
-}: UseClosingCallbackArgs) =>
-  useCallback(() => {
+export const defaultGetButtonCallback =
+  ({closeDialog, closeType, callback, disabled}: GetButtonCallbackArgs) =>
+  () => {
     if (!disabled) {
       closeDialog(closeType);
       callback && callback();
     }
-  }, [closeDialog, closeType, callback, disabled]);
+  };
+
+const useButtonCallback = ({
+  closeDialog,
+  closeType,
+  callback,
+  disabled,
+  getButtonCallback,
+}: GetButtonCallbackArgs & {
+  getButtonCallback: typeof defaultGetButtonCallback;
+}) =>
+  useMemo(
+    () => getButtonCallback({closeDialog, closeType, callback, disabled}),
+    [closeDialog, closeType, callback, disabled, getButtonCallback]
+  );
 
 const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
   buttons,
@@ -93,30 +104,34 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
   titleComponent,
   message,
   bodyComponent,
+  getButtonCallback = defaultGetButtonCallback,
 }) => {
   const dialogControl = useDialogControl();
 
   const {theme} = useContext(ThemeContext);
 
-  const cancelCallback = useClosingCallback({
+  const cancelCallback = useButtonCallback({
     closeDialog: dialogControl.closeDialog,
     closeType: 'cancel',
     callback: buttons?.cancel?.callback,
     disabled: buttons?.cancel?.disabled,
+    getButtonCallback,
   });
 
-  const neutralCallback = useClosingCallback({
+  const neutralCallback = useButtonCallback({
     closeDialog: dialogControl.closeDialog,
     closeType: 'neutral',
     callback: buttons?.neutral?.callback,
     disabled: buttons?.neutral?.disabled,
+    getButtonCallback,
   });
 
-  const confirmCallback = useClosingCallback({
+  const confirmCallback = useButtonCallback({
     closeDialog: dialogControl.closeDialog,
     closeType: 'confirm',
     callback: buttons?.confirm?.callback,
     disabled: buttons?.confirm?.disabled,
+    getButtonCallback,
   });
 
   useEscapeKeyboardTrap(cancelCallback);

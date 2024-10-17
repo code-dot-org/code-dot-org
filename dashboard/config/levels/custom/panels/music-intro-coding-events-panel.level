@@ -1,11 +1,33 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2024-10-04T19:26:45.000Z",
   "level_num": "custom",
   "user_id": 18605,
   "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "<h3 style=\"text-align:center;\"><i class=\"fa-regular fa-toggle-on\"></i>  What is an event? </h3>\n<p style=\"text-align:center;\"> Just like buttons on a turn table, events trigger something to happen. </p>",
+        "imageUrl": "https://images.code.org/ed9997ca8d4814c63959a3b5d62190fb-hands-of-a-dj-creating-and-regulating-music-on-dj-2023-11-27-05-13-47-utc.jpg",
+        "key": "music-intro-coding-events-panel-7795df17-bc71-4099-9dfb-18f2d7ed586f",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "<h3 style=\"text-align:center;\"> <i class=\"fa-regular fa-face-thinking\"></i> Why use events? </h3>\n<p style=\"text-align:center;\"> With event triggers, YOU control when the sounds play. </p>",
+        "imageUrl": "https://images.code.org/1b5e9e26bc34d4fee5f0a7d1167d142e-dj video (1).gif",
+        "key": "music-intro-coding-events-panel-d4e29565-e3cf-4d29-b68f-b745b0f223e4",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "<h3 style=\"text-align:center;\"> <i class=\"fa-duotone fa-solid fa-pen-to-square\"></i> How to use an event trigger! </h3>\n\n<p style=\"text-align:center;\">\n1. Connect a sound to the trigger event.\n<br>\n2. Press the trigger!",
+        "imageUrl": "https://images.code.org/205ac85ecaa192c95931dc65035a73ae-Workspace and Timeline.gif",
+        "key": "music-intro-coding-events-panel-3e4de93b-a39e-43ea-8f88-ed1c6d9f989d",
+        "layout": "text-top-center"
+      }
+    ]
   },
-  "published": true
+  "audit_log": "[{\"changed_at\":\"2024-10-10 21:15:59 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 21:20:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 21:30:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 21:36:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 21:39:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 21:40:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-16 21:19:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2024-10-16 21:20:31 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2024-10-16 21:23:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2024-10-16 21:24:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Panels>

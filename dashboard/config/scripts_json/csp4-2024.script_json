@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-10-03 04:59:08 UTC",
+    "serialized_at": "2024-10-10 21:39:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2430,13 +2430,7 @@
       "position": 1,
       "properties": {
         "description": "**Group:** It is recommended that students work in pairs for this lesson. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio, Lesson 7 Level 1. ",
-        "name": "Practice Time",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Optional Resource**: There is an activity guide available in the *Resources* section that contains all of the main tasks that students need to complete over the course of the four levels. The tasks and descriptions in this activity guide are identical to what is presented within the levels themselves. However, some students might benefit from this task list as they work on creating the practice app.  "
-          }
-        ]
+        "name": "Practice Time"
       },
       "seeding_key": {
         "activity_section.key": "d90383d2-f266-4096-a087-6924aa67deb3",

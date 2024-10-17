@@ -1,7 +1,7 @@
-import GoogleBlockly, {Block} from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 
 /** Type of a block that has LOGIC_COMPARE_ONCHANGE_MIXIN */
-type CompareBlock = Block & {
+type CompareBlock = GoogleBlockly.Block & {
   onchange: (this: CompareBlock) => void;
 };
 

@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# HTML Overview
+# Python Overview
 
 ## What is Python?
 
@@ -21,6 +21,10 @@ markdown <<MARKDOWN
 
 
 #### Some key difference you might notice with Python is the absence of semicolons and the need to explicitly define variable types.
+
+## Documentation 
+
+#### For extra support, use the <a href="https://docs.google.com/document/d/12xlUG_K0F8mx-fqJ9OHhe1o49IGNO6RLPv8yO0jDJ9o/edit?usp=sharing" target="blank" rel="noopener noreferrer">Python / Pandas Documentation</a> provided in this unit. 
 
 
 

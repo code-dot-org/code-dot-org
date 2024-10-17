@@ -56,6 +56,7 @@ class DCDOBase < DynamicConfigBase
       'teacher-local-nav-v2': DCDO.get('teacher-local-nav-v2', false),
       'best-of-stem-2024': DCDO.get('best-of-stem-2024', false),
       lti_account_unlinking: DCDO.get('lti_account_unlinking', false),
+      'hoc-2024-sweepstakes': DCDO.get('hoc-2024-sweepstakes', false),
     }
   end
 end

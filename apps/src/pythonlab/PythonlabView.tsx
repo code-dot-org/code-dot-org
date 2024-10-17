@@ -8,14 +8,14 @@ import React, {useContext, useEffect, useState} from 'react';
 
 import {sendPredictLevelReport} from '@cdo/apps/code-studio/progressRedux';
 import {MAIN_PYTHON_FILE, START_SOURCES} from '@cdo/apps/lab2/constants';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {isPredictAnswerLocked} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import useLifecycleNotifier from '../lab2/hooks/useLifecycleNotifier';
-import {getAppOptionsEditBlocks} from '../lab2/projects/utils';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import PythonValidator from './progress/PythonValidator';
@@ -130,6 +130,10 @@ const PythonlabView: React.FunctionComponent = () => {
     dispatch: AppDispatch,
     source: MultiFileSource | undefined
   ) => {
+    // Flush any pending saves if we have a project manager on run. The user will likely
+    // run their code before navigating away from the page, so switching pages
+    // will be faster if we flush save now.
+    Lab2Registry.getInstance().getProjectManager()?.flushSave();
     // We don't send the validation file to the runner if we are in start mode,
     // as we want to use the validation from the sources instead.
     await handleRunClick(

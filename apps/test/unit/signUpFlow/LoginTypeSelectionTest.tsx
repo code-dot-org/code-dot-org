@@ -115,6 +115,39 @@ describe('LoginTypeSelection', () => {
     });
   });
 
+  it('gives email invalid message if given invalid email and create account pressed', async () => {
+    await waitFor(() => {
+      renderDefault();
+    });
+
+    const emailInput = screen.getByLabelText(locale.email_address());
+    await waitFor(() => {
+      fireEvent.change(emailInput, {target: {value: 'invalidEmail'}});
+    });
+    const password = 'password';
+    const passwordInput = screen.getByLabelText(locale.password());
+    const confirmPasswordInput = screen.getByLabelText(
+      locale.confirm_password()
+    );
+    fireEvent.change(passwordInput, {target: {value: password}});
+    fireEvent.change(confirmPasswordInput, {target: {value: password}});
+
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.create_my_account(),
+    }) as HTMLButtonElement;
+    await waitFor(() => {
+      expect(finishSignUpButton).not.toBeDisabled();
+    });
+
+    // Confirm we don't have an error message yet
+    expect(screen.queryByText(i18n.censusInvalidEmail())).toBeNull();
+
+    // Click create account button
+    fireEvent.click(finishSignUpButton);
+    // Confirm we have an error message
+    expect(screen.queryByText(i18n.censusInvalidEmail()));
+  });
+
   it('clicking the create account button triggers fetch call and redirects user', async () => {
     const fetchSpy = sinon.stub(window, 'fetch');
     fetchSpy.returns(Promise.resolve(new Response()));
@@ -151,7 +184,6 @@ describe('LoginTypeSelection', () => {
       target: {value: email},
     });
     fireEvent.change(passwordInput, {target: {value: password}});
-    fireEvent.change(passwordInput, {target: {value: password}});
     fireEvent.change(confirmPasswordInput, {target: {value: password}});
     await waitFor(() => {
       expect(finishSignUpButton).not.toBeDisabled();
@@ -176,6 +208,80 @@ describe('LoginTypeSelection', () => {
       expect(navigateToHrefMock).toHaveBeenCalledWith(
         '/users/new_sign_up/finish_student_account'
       );
+    });
+
+    fetchSpy.restore();
+  });
+
+  it('trying to use a duplicate email displays email duplicate error message', async () => {
+    const fetchSpy = sinon.stub(window, 'fetch');
+    fetchSpy.returns(
+      Promise.resolve(
+        new Response(
+          JSON.stringify({
+            errors: ['Email has already been taken'],
+          }),
+          {
+            status: 422,
+          }
+        )
+      )
+    );
+
+    await waitFor(() => {
+      renderDefault();
+    });
+
+    // Set up create account button onClick jest function
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.create_my_account(),
+    }) as HTMLButtonElement;
+    const handleClick = jest.fn();
+    finishSignUpButton.onclick = handleClick;
+
+    // Fill in required fields
+    const email = 'myrandomemail@gmail.com';
+    const password = 'password';
+    const emailInput = screen.getByLabelText(locale.email_address());
+    const passwordInput = screen.getByLabelText(locale.password());
+    const confirmPasswordInput = screen.getByLabelText(
+      locale.confirm_password()
+    );
+    const beginSignUpParams = {
+      new_sign_up: true,
+      user: {
+        email: email,
+        password: password,
+        password_confirmation: password,
+      },
+    };
+
+    fireEvent.change(emailInput, {
+      target: {value: email},
+    });
+    fireEvent.change(passwordInput, {target: {value: password}});
+    fireEvent.change(confirmPasswordInput, {target: {value: password}});
+    await waitFor(() => {
+      expect(finishSignUpButton).not.toBeDisabled();
+    });
+
+    // Click create account button
+    fireEvent.click(finishSignUpButton);
+
+    await waitFor(() => {
+      // Verify the button's click handler was called
+      expect(handleClick).toHaveBeenCalled();
+
+      // Verify the button's fetch method was called
+      expect(fetchSpy).toHaveBeenCalled;
+      const fetchCall = fetchSpy.getCall(0);
+      expect(fetchCall.args[0]).toEqual('/users/begin_sign_up');
+      expect(fetchCall.args[1]?.body).toEqual(
+        JSON.stringify(beginSignUpParams)
+      );
+
+      // Verify the user sees the duplicate email error message
+      screen.getByText(i18n.duplicate_email_error_message());
     });
 
     fetchSpy.restore();
@@ -300,7 +406,7 @@ describe('LoginTypeSelection', () => {
     screen.getByText('Schoology', {selector: 'span'});
   });
 
-  it('valid email is stored in sessionStorage', async () => {
+  it('email is stored in sessionStorage', async () => {
     await waitFor(() => {
       renderDefault();
     });
@@ -310,18 +416,9 @@ describe('LoginTypeSelection', () => {
     // Session storage starts empty
     expect(sessionStorage.getItem(EMAIL_SESSION_KEY)).toBe(null);
 
-    // Session storage doesn't update for an invalid email
     await waitFor(() => {
       fireEvent.change(emailInput, {target: {value: 'invalidEmail'}});
     });
-    expect(sessionStorage.getItem(EMAIL_SESSION_KEY)).toBe(null);
-
-    // Session storage updates for valid email
-    await waitFor(() => {
-      fireEvent.change(emailInput, {target: {value: 'validEmail@email.com'}});
-    });
-    expect(sessionStorage.getItem(EMAIL_SESSION_KEY)).toBe(
-      'validEmail@email.com'
-    );
+    expect(sessionStorage.getItem(EMAIL_SESSION_KEY)).toBe('invalidEmail');
   });
 });

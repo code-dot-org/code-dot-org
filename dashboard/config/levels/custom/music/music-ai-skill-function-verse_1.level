@@ -43,7 +43,7 @@
     ],
     "level_data": {
       "library": "launch2024",
-      "packId": "carly_rae_jepsen_call_me_maybe",
+      "packId": "alessia_cara_scars_to_your_beautiful",
       "startSources": {
         "blocks": {
           "languageVersion": 0,
@@ -101,12 +101,13 @@
               "id": "L}TeDjTW@]SD^9H0TZY]",
               "x": 210,
               "y": 30,
+              "movable": false,
               "editable": false,
               "extraState": {
                 "procedureId": "-2An+zu~4y~Tt_0CQn}(",
                 "initialDeleteConfig": true,
                 "initialEditConfig": false,
-                "initialMoveConfig": true
+                "initialMoveConfig": false
               },
               "fields": {
                 "NAME": "verse"
@@ -139,15 +140,37 @@
                         "block": {
                           "type": "play_sound_at_current_location_simple2",
                           "id": "0-JPz7RK9_!sIfIViS%f",
+                          "movable": false,
                           "fields": {
-                            "sound": "carly_rae_jepsen_call_me_maybe/hey_i_just_met_you"
+                            "sound": "alessia_cara_scars_to_your_beautiful/vocals_chorus_1"
                           },
                           "next": {
                             "block": {
                               "type": "play_sound_at_current_location_simple2",
                               "id": "play_sound_at_current_location_simple2",
+                              "movable": false,
                               "fields": {
-                                "sound": "carly_rae_jepsen_call_me_maybe/strings_big"
+                                "sound": "alessia_cara_scars_to_your_beautiful/drums_chorus"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "9~,aH;QtMpKTF~o,[0Qt",
+                                  "movable": false,
+                                  "fields": {
+                                    "sound": "alessia_cara_scars_to_your_beautiful/piano_chorus"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "5*x6r$;SAu-dqF[k9Cvc",
+                                      "movable": false,
+                                      "fields": {
+                                        "sound": "alessia_cara_scars_to_your_beautiful/bass_chorus"
+                                      }
+                                    }
+                                  }
+                                }
                               }
                             }
                           }
@@ -245,6 +268,63 @@
           "sweep",
           "strings_flourish",
           "strings_slowdown"
+        ],
+        "lady_gaga_born_this_way": [
+          "vocals_spoken_intro_1",
+          "vocals_spoken_intro_2",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3",
+          "vocals_verse_4",
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_tag",
+          "vocals_postchorus_1",
+          "vocals_postchorus_2",
+          "drums_chorus",
+          "drums_clap_beat",
+          "drums_clap_breakdown",
+          "drums_intro",
+          "drums_prechorus",
+          "drums_small",
+          "drums_glitch_fill",
+          "drums_triplet_fill",
+          "drums_long_fill",
+          "bass_sub",
+          "bass_trashed",
+          "synth_distorted",
+          "synth_main_chorus",
+          "synth_main_intro",
+          "synth_main_small",
+          "synth_saw",
+          "synth_big_chorus",
+          "synth_blocks",
+          "synth_choir",
+          "synth_delay",
+          "synth_plink",
+          "synth_bounce",
+          "organ",
+          "piano",
+          "strings",
+          "strings_low",
+          "strings_end",
+          "crash",
+          "bell",
+          "riser",
+          "sweep",
+          "digital_toms"
+        ],
+        "alessia_cara_scars_to_your_beautiful": [
+          "drums_verse",
+          "drums_chorus",
+          "bass_verse",
+          "bass_chorus",
+          "piano_verse",
+          "piano_chorus",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_chorus_1",
+          "vocals_chorus_2"
         ]
       }
     },
@@ -252,7 +332,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:50.024+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-function-verse_3\\\"\"],\"cloned_from\":\"music-ai-skill-function-verse_3\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:50.024+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-function-verse_3\\\"\"],\"cloned_from\":\"music-ai-skill-function-verse_3\"},{\"changed_at\":\"2024-10-08 19:34:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-08 19:37:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-08 19:37:54 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-08 19:39:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-08 19:40:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

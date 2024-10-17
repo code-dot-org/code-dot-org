@@ -1,4 +1,4 @@
-import {Block} from 'blockly';
+import * as GoogleBlockly from 'blockly/core';
 
 import {
   BlocklyWrapperType,
@@ -44,7 +44,7 @@ export default function initializeGenerator(
   // Used to generate code for an array of top blocks.
   blocklyWrapper.Generator.blocksToCode = function (
     name: string,
-    blocksToGenerate: Block[]
+    blocksToGenerate: GoogleBlockly.Block[]
   ) {
     if (name !== 'JavaScript') {
       console.warn(
@@ -68,7 +68,7 @@ export default function initializeGenerator(
   const originalBlockToCode = blocklyWrapper.Generator.prototype.blockToCode;
   blocklyWrapper.Generator.prototype.blockToCode = function (
     this: ExtendedGenerator,
-    block: Block | null,
+    block: GoogleBlockly.Block | null,
     opt_thisOnly?: boolean
   ) {
     if (!this.variableDB_) {
