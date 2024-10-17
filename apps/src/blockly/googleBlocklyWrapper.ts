@@ -810,7 +810,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       }
     };
 
-    if (!blocklyWrapper.isStartMode && !optOptionsExtended.isBlockEditMode) {
+    if (!blocklyWrapper.isToolboxMode && !optOptionsExtended.isBlockEditMode) {
       workspace.addChangeListener(disableOrphans);
     }
     if (blocklyWrapper.blockLimitMap && blocklyWrapper.blockLimitMap.size > 0) {
