@@ -261,7 +261,10 @@ export const UnconnectedTeacherHomepage = ({
             isProfessionalLearningCourse={true}
           />
         )}
-        <TeacherResources />
+        <GlobalRegionWrapper
+          component={TeacherResources}
+          componentId="TeacherResources"
+        />
         {showIncubatorBanner && (
           <GlobalRegionWrapper
             component={IncubatorBanner}
