@@ -51,7 +51,7 @@ const StartModeFileDropdownOptions: React.FunctionComponent<
         // We also now want to show a banner to levelbuilders to remind them to lock any relevent start files.
         // We only show the banner for 5 seconds.
         dispatch(setShowLockedFilesBanner(true));
-        setTimeout(() => dispatch(setShowLockedFilesBanner(false)), 5000);
+        setTimeout(() => dispatch(setShowLockedFilesBanner(false)), 8000);
       }
       setFileType(file.id, type);
     },
