@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import GlobalRegionWrapper from '@cdo/apps/templates/GlobalRegionWrapper';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -36,6 +37,27 @@ class ManageStudentsLoginInfo extends Component {
     const {loginType, sectionId, sectionCode, sectionName, studioUrlPrefix} =
       this.props;
 
+    const ParentLetterAndStudentPrivacyInfo = () => (
+      <>
+        <h2 style={styles.heading}>{i18n.privacyHeading()}</h2>
+        <p id="uitest-privacy-text">{i18n.privacyDocExplanation()}</p>
+        <DownloadParentLetter
+          sectionId={this.props.sectionId}
+          buttonMetricsCategory={ParentLetterButtonMetricsCategory.BELOW_TABLE}
+        />
+        <br />
+        <span id="uitest-privacy-link">
+          <SafeMarkdown
+            markdown={i18n.privacyLinkToPolicy({
+              privacyPolicyLink: pegasus('/privacy/student-privacy'),
+            })}
+          />
+        </span>
+      </>
+    );
+
+    let counter = 0;
+
     return (
       <div style={styles.explanation}>
         <p>{i18n.setUpClass_childAccountPolicyNotice()}</p>
@@ -47,12 +69,14 @@ class ManageStudentsLoginInfo extends Component {
             <p>{i18n.setUpClassWordIntro()}</p>
             <p style={styles.listAlign}>{i18n.setUpClassWordPic1()}</p>
             <SafeMarkdown
-              markdown={i18n.setUpClassWord2({
-                printLoginCardLink: teacherDashboardUrl(
-                  sectionId,
-                  '/login_info'
-                ),
-              })}
+              markdown={i18n
+                .setUpClassWord2({
+                  printLoginCardLink: teacherDashboardUrl(
+                    sectionId,
+                    '/login_info'
+                  ),
+                })
+                .replace(/^\d./, `${++counter}.`)}
             />
             <div style={styles.sublistAlign}>
               <InlineMarkdown markdown={i18n.loginExportInstructions()} />{' '}
@@ -63,15 +87,24 @@ class ManageStudentsLoginInfo extends Component {
                 students={this.props.studentData}
               />
             </div>
-            <SafeMarkdown
-              markdown={i18n.setUpClass3({
-                parentLetterLink: teacherDashboardUrl(
-                  sectionId,
-                  '/parent_letter'
-                ),
-              })}
+            <GlobalRegionWrapper
+              component={() => (
+                <SafeMarkdown
+                  markdown={i18n
+                    .setUpClass3({
+                      parentLetterLink: teacherDashboardUrl(
+                        sectionId,
+                        '/parent_letter'
+                      ),
+                    })
+                    .replace(/^\d./, `${++counter}.`)}
+                />
+              )}
+              componentId="ClassroomSetUpStep3"
             />
-            <p style={styles.listAlign}>{i18n.setUpClass4()}</p>
+            <SafeMarkdown
+              markdown={i18n.setUpClass4().replace(/^\d./, `${++counter}.`)}
+            />
             <SignInInstructions
               loginType={SectionLoginType.word}
               sectionCode={sectionCode}
@@ -104,15 +137,24 @@ class ManageStudentsLoginInfo extends Component {
                 students={this.props.studentData}
               />
             </div>
-            <SafeMarkdown
-              markdown={i18n.setUpClass3({
-                parentLetterLink: teacherDashboardUrl(
-                  sectionId,
-                  '/parent_letter'
-                ),
-              })}
+            <GlobalRegionWrapper
+              component={() => (
+                <SafeMarkdown
+                  markdown={i18n
+                    .setUpClass3({
+                      parentLetterLink: teacherDashboardUrl(
+                        sectionId,
+                        '/parent_letter'
+                      ),
+                    })
+                    .replace(/^\d./, `${++counter}.`)}
+                />
+              )}
+              componentId="ClassroomSetUpStep3"
             />
-            <p style={styles.listAlign}>{i18n.setUpClass4()}</p>
+            <SafeMarkdown
+              markdown={i18n.setUpClass4().replace(/^\d./, `${++counter}.`)}
+            />
             <SignInInstructions
               loginType={SectionLoginType.picture}
               sectionCode={sectionCode}
@@ -133,15 +175,24 @@ class ManageStudentsLoginInfo extends Component {
                 joinLink: `${studioUrlPrefix}/join/${sectionCode}`,
               })}
             />
-            <SafeMarkdown
-              markdown={i18n.setUpClass3({
-                parentLetterLink: teacherDashboardUrl(
-                  sectionId,
-                  '/parent_letter'
-                ),
-              })}
+            <GlobalRegionWrapper
+              component={() => (
+                <SafeMarkdown
+                  markdown={i18n
+                    .setUpClass3({
+                      parentLetterLink: teacherDashboardUrl(
+                        sectionId,
+                        '/parent_letter'
+                      ),
+                    })
+                    .replace(/^\d./, `${++counter}.`)}
+                />
+              )}
+              componentId="ClassroomSetUpStep3"
             />
-            <p style={styles.listAlign}>{i18n.setUpClass4()}</p>
+            <SafeMarkdown
+              markdown={i18n.setUpClass4().replace(/^\d./, `${++counter}.`)}
+            />
             <SignInInstructions loginType={SectionLoginType.email} />
           </div>
         )}
@@ -166,20 +217,10 @@ class ManageStudentsLoginInfo extends Component {
         {loginType === SectionLoginType.lti_v1 && (
           <LtiLogins sectionProviderName={this.props.sectionProviderName} />
         )}
-        <h2 style={styles.heading}>{i18n.privacyHeading()}</h2>
-        <p id="uitest-privacy-text">{i18n.privacyDocExplanation()}</p>
-        <DownloadParentLetter
-          sectionId={this.props.sectionId}
-          buttonMetricsCategory={ParentLetterButtonMetricsCategory.BELOW_TABLE}
+        <GlobalRegionWrapper
+          component={ParentLetterAndStudentPrivacyInfo}
+          componentId="ParentLetterAndStudentPrivacyInfo"
         />
-        <br />
-        <span id="uitest-privacy-link">
-          <SafeMarkdown
-            markdown={i18n.privacyLinkToPolicy({
-              privacyPolicyLink: pegasus('/privacy/student-privacy'),
-            })}
-          />
-        </span>
       </div>
     );
   }

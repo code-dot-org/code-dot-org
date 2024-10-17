@@ -17,6 +17,7 @@ import Notification, {
 } from '@cdo/apps/sharedComponents/Notification';
 import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
 import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
+import GlobalRegionWrapper from '@cdo/apps/templates/GlobalRegionWrapper';
 import AddMultipleStudents from '@cdo/apps/templates/manageStudents/AddMultipleStudents';
 import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
 import DownloadParentLetter from '@cdo/apps/templates/manageStudents/DownloadParentLetter';
@@ -919,14 +920,19 @@ class ManageStudentsTable extends Component {
               />
             </div>
           )}
-          <div style={styles.button}>
-            <DownloadParentLetter
-              sectionId={this.props.sectionId}
-              buttonMetricsCategory={
-                ParentLetterButtonMetricsCategory.ABOVE_TABLE
-              }
-            />
-          </div>
+          <GlobalRegionWrapper
+            component={() => (
+              <div style={styles.button}>
+                <DownloadParentLetter
+                  sectionId={this.props.sectionId}
+                  buttonMetricsCategory={
+                    ParentLetterButtonMetricsCategory.ABOVE_TABLE
+                  }
+                />
+              </div>
+            )}
+            componentId="DownloadParentLetterButton"
+          />
           {/* Passes button style to CodeReviewGroupsDialog to avoid extra div,
             but is otherwise similar to other button/modal components here.
             Despite being unused in this component, we pass the dataApi object

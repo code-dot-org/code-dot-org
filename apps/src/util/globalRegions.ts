@@ -1,7 +1,7 @@
 import {Regions} from '@cdo/generated-scripts/globalRegionConstants';
 
 interface RegionConfigurationObject {
-  [key: string]: object | boolean;
+  [key: string]: object | Array<object> | boolean;
 }
 
 export interface RegionConfigurationPageObject {
@@ -12,7 +12,7 @@ export interface RegionConfigurationPageObject {
 export interface RegionConfiguration {
   header?: RegionConfigurationObject;
   footer?: RegionConfigurationObject;
-  pages?: readonly [RegionConfigurationPageObject];
+  pages?: readonly RegionConfigurationPageObject[];
 }
 
 /**
