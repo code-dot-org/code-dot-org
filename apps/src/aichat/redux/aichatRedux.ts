@@ -228,9 +228,9 @@ const saveAiCustomization = async (
     }
   } catch (error) {
     if (error instanceof NetworkError && error.response.status === 403) {
-      await handleErrorUnauthorized(error, dispatch);
+      await notifyErrorUnauthorized(error, dispatch);
     } else {
-      handleErrorGeneric(
+      notifyErrorGeneric(
         'Aichat.CustomizationToxicityScreeningErrorUnhandled',
         dispatch
       );
@@ -489,7 +489,7 @@ export const submitChatContents = createAsyncThunk(
   }
 );
 
-function handleErrorGeneric(metricName: string, dispatch: AppDispatch) {
+function notifyErrorGeneric(metricName: string, dispatch: AppDispatch) {
   Lab2Registry.getInstance().getMetricsReporter().incrementCounter(metricName);
   dispatch(
     addChatEvent({
@@ -501,7 +501,7 @@ function handleErrorGeneric(metricName: string, dispatch: AppDispatch) {
   );
 }
 
-async function handleErrorUnauthorized(
+async function notifyErrorUnauthorized(
   error: NetworkError,
   dispatch: AppDispatch
 ) {
@@ -563,9 +563,9 @@ async function handleChatCompletionError(
       })
     );
   } else if (error instanceof NetworkError && error.response.status === 403) {
-    await handleErrorUnauthorized(error, dispatch);
+    await notifyErrorUnauthorized(error, dispatch);
   } else {
-    handleErrorGeneric('Aichat.ChatCompletionErrorUnhandled', dispatch);
+    notifyErrorGeneric('Aichat.ChatCompletionErrorUnhandled', dispatch);
   }
 }
 
