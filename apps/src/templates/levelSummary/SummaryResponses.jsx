@@ -21,7 +21,6 @@ const MULTI = 'Multi';
 
 const SummaryResponses = ({
   scriptData,
-  levelNumber,
   // redux
   isRtl,
   viewAs,
@@ -32,13 +31,12 @@ const SummaryResponses = ({
   levels,
 }) => {
   const currentLevel = levels.find(l => l.activeId === currentLevelId);
-  const predictSettings =
-    scriptData.levels[levelNumber].properties?.predict_settings;
+  const predictSettings = scriptData.level.properties?.predict_settings;
   const isFreeResponse =
-    scriptData.levels[levelNumber].type === FREE_RESPONSE ||
+    scriptData.level.type === FREE_RESPONSE ||
     predictSettings?.questionType === PredictQuestionType.FreeResponse;
   const isMulti =
-    scriptData.levels[levelNumber].type === MULTI ||
+    scriptData.level.type === MULTI ||
     predictSettings?.questionType === PredictQuestionType.MultipleChoice;
 
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
@@ -52,29 +50,30 @@ const SummaryResponses = ({
 
   const logEvent = useCallback(
     eventName => {
+      const {level} = scriptData;
       analyticsReporter.sendEvent(
         eventName,
         {
-          levelId: scriptData.levels[levelNumber].id,
-          levelName: scriptData.levels[levelNumber].name,
-          levelType: scriptData.levels[levelNumber].type,
+          levelId: level.id,
+          levelName: level.name,
+          levelType: level.type,
           sectionSelected: !!selectedSection,
           ...scriptData.reportingData,
         },
         PLATFORMS.BOTH
       );
     },
-    [scriptData, levelNumber, selectedSection]
+    [scriptData, selectedSection]
   );
 
   const eventData = useMemo(() => {
     return {
-      levelId: scriptData.levels[levelNumber].id,
-      levelName: scriptData.levels[levelNumber].name,
+      levelId: scriptData.level.id,
+      levelName: scriptData.level.name,
       curriculumUmbrella: scriptData.reportingData.curriculumUmbrella,
       unitId: scriptData.reportingData.unitId,
     };
-  }, [scriptData, levelNumber]);
+  }, [scriptData]);
 
   useEffect(() => {
     logEvent(EVENTS.SUMMARY_PAGE_LOADED);
@@ -133,7 +132,7 @@ const SummaryResponses = ({
             <p>
               <i className="fa fa-user" />
               <span>
-                {scriptData.responses[levelNumber].length}/{students.length}{' '}
+                {scriptData.responses.length}/{students.length}{' '}
                 {i18n.studentsAnswered()}
               </span>
             </p>
@@ -179,7 +178,7 @@ const SummaryResponses = ({
         {/* Free response visualization */}
         {isFreeResponse && (
           <FreeResponseResponses
-            responses={scriptData.responses[levelNumber]}
+            responses={scriptData.responses}
             showStudentNames={showStudentNames}
             eventData={eventData}
           />
@@ -189,7 +188,6 @@ const SummaryResponses = ({
         {isMulti && (
           <MultiResponses
             scriptData={scriptData}
-            levelNumber={levelNumber}
             showCorrectAnswer={showCorrectAnswer}
           />
         )}
@@ -200,7 +198,6 @@ const SummaryResponses = ({
 
 SummaryResponses.propTypes = {
   scriptData: PropTypes.object,
-  levelNumber: PropTypes.number,
   isRtl: PropTypes.bool,
   viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
   hasSections: PropTypes.bool,

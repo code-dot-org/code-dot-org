@@ -24,11 +24,11 @@ const SummaryTopLinks = ({
 
   const logEvent = useCallback(
     eventName => {
-      const {levels} = scriptData;
+      const {level} = scriptData;
       analyticsReporter.sendEvent(eventName, {
-        levelId: levels[0].id,
-        levelName: levels[0].name,
-        levelType: levels[0].type,
+        levelId: level.id,
+        levelName: level.name,
+        levelType: level.type,
         ...scriptData.reportingData,
       });
     },
