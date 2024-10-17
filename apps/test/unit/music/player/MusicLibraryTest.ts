@@ -8,10 +8,6 @@ import testLibraryJson from './testLibrary.json';
 const testLibrary = testLibraryJson as LibraryJson;
 
 describe('MusicLibrary', () => {
-  beforeEach(() => {});
-
-  afterEach(() => {});
-
   it('loads a library', () => {
     const library = new MusicLibrary('launch2024', testLibrary);
 

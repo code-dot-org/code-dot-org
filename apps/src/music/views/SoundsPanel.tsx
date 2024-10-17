@@ -9,8 +9,8 @@ import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {getBaseAssetUrl} from '../appConfig';
 import musicI18n from '../locale';
 import MusicLibrary, {
-  SoundData,
-  SoundFolder,
+  SoundDataPack,
+  SoundFolderPack,
   SoundType,
 } from '../player/MusicLibrary';
 import SoundStyle from '../utils/SoundStyle';
@@ -26,8 +26,8 @@ type Mode = 'packs' | 'sounds';
 type Filter = 'all' | SoundType;
 
 type SoundEntry = {
-  folder: SoundFolder;
-  sound: SoundData;
+  folder: SoundFolderPack;
+  sound: SoundDataPack;
 };
 
 const getLengthRepresentation = (length: number) => {
@@ -41,9 +41,9 @@ const getLengthRepresentation = (length: number) => {
 interface FolderPanelRowProps {
   libraryGroupPath: string;
   playingPreview: string;
-  folder: SoundFolder;
-  currentValue: SoundFolder;
-  onSelect: (path: SoundFolder) => void;
+  folder: SoundFolderPack;
+  currentValue: SoundFolderPack;
+  onSelect: (path: SoundFolderPack) => void;
   onPreview: (path: string) => void;
   currentFolderRefCallback: (ref: HTMLDivElement) => void;
 }
@@ -127,8 +127,8 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
 interface SoundsPanelRowProps {
   currentValue: string;
   playingPreview: string;
-  folder: SoundFolder;
-  sound: SoundData;
+  folder: SoundFolderPack;
+  sound: SoundDataPack;
   showingSoundsOnly: boolean;
   onSelect: (path: string) => void;
   onPreview: (path: string) => void;
@@ -234,8 +234,9 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   const folders = library.getAvailableSounds();
   const libraryGroupPath = library.getPath();
 
-  const [selectedFolder, setSelectedFolder] = useState<SoundFolder>(
-    library.getAllowedFolderForSoundId(currentValue) || folders[0]
+  const [selectedFolder, setSelectedFolder] = useState<SoundFolderPack>(
+    (library.getAllowedFolderForSoundId(currentValue) as SoundFolderPack) ||
+      folders[0]
   );
   const [mode, setMode] = useState<Mode>('packs');
   const [filter, setFilter] = useState<Filter>('all');

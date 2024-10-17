@@ -9,7 +9,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {DEFAULT_PACK} from '../constants';
 import {AnalyticsContext} from '../context';
 import musicI18n from '../locale';
-import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
+import MusicLibrary, {SoundFolderPack} from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
 import {setPackId} from '../redux/musicRedux';
 
@@ -17,9 +17,9 @@ import styles from './PackDialog.module.scss';
 
 interface PackEntryProps {
   playingPreview: string | null;
-  folder: SoundFolder;
+  folder: SoundFolderPack;
   isSelected: boolean;
-  onSelect: (path: SoundFolder) => void;
+  onSelect: (path: SoundFolderPack) => void;
   onPreview: (path: string) => void;
   onStopPreview: () => void;
 }
@@ -143,7 +143,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
   const analyticsReporter = useContext(AnalyticsContext);
 
   const handleSelectFolder = useCallback(
-    (folder: SoundFolder) => {
+    (folder: SoundFolderPack) => {
       if (!library) {
         return;
       }
@@ -209,7 +209,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
 
   if (!library) return null;
 
-  const folders = library.getRestrictedPacks();
+  const folders = library.getRestrictedPacks() as SoundFolderPack[];
 
   if (currentPackId) {
     return null;
