@@ -2,6 +2,7 @@ import * as GoogleBlockly from 'blockly/core';
 
 import {customConnectionBlockTypes} from './cdoConstants';
 
+// TODO: Remove after the resolution of https://github.com/google/blockly/issues/8621
 interface PuzzleTab {
   type: number;
   width: number;

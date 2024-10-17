@@ -14,6 +14,7 @@ enum FlyoutItemType {
   BUTTON = 'button',
 }
 
+// TODO: Remove after the resolution of https://github.com/google/blockly/issues/8621
 interface FlyoutItem {
   type: FlyoutItemType;
   button?: GoogleBlockly.FlyoutButton | undefined;

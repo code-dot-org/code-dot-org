@@ -10,6 +10,7 @@ interface ButtonConfig {
 
 /**
  * Definition of a human-readable image dropdown option.
+ * TODO: Remove after the resolution of https://github.com/google/blockly/issues/8621
  */
 interface ImageProperties {
   src: string;
