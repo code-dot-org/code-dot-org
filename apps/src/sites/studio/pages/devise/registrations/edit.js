@@ -25,6 +25,7 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 const scriptData = getScriptData('edit');
 const {
   userType,
+  userUsState,
   isAdmin,
   isPasswordRequired,
   authenticationOptions,
@@ -94,7 +95,13 @@ $(document).ready(() => {
 
   const addPasswordMountPoint = document.getElementById('add-password-fields');
   if (addPasswordMountPoint) {
-    new AddPasswordController($('#add-password-form'), addPasswordMountPoint);
+    new AddPasswordController(
+      $('#add-password-form'),
+      addPasswordMountPoint,
+      !personalAccountLinkingEnabled,
+      userAge,
+      userUsState
+    );
   }
 
   const ltiSyncSettingsMountPoint =
