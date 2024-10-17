@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "music-lab-advanced-model-sandbox",
-    "serialized_at": "2024-10-14 21:22:01 UTC",
+    "serialized_at": "2024-10-16 21:40:41 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -92,6 +92,51 @@
         "lesson_group.key": "",
         "script.name": "music-lab-advanced-model-sandbox"
       }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Mini-Project: Simple Melody Generator",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Mini-Project: Rhythm Game Prototype",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Mini-Project: Dynamic Background Music for a Skit",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox"
+      }
     }
   ],
   "lesson_activities": [
@@ -142,6 +187,42 @@
         "lesson_group.key": "",
         "script.name": "music-lab-advanced-model-sandbox"
       }
+    },
+    {
+      "key": "05e5ea69-e6eb-48b3-b5b0-24c09f68130d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "05e5ea69-e6eb-48b3-b5b0-24c09f68130d",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox"
+      }
+    },
+    {
+      "key": "c274baf9-ecf0-4e56-99bd-eb06a1cc2e4a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c274baf9-ecf0-4e56-99bd-eb06a1cc2e4a",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox"
+      }
+    },
+    {
+      "key": "e49bd75e-dec5-446a-ba8f-004a17f38c9d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e49bd75e-dec5-446a-ba8f-004a17f38c9d",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox"
+      }
     }
   ],
   "activity_sections": [
@@ -186,6 +267,26 @@
       }
     },
     {
+      "key": "e7c85a53-3579-402c-a471-48366d273af8",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e7c85a53-3579-402c-a471-48366d273af8",
+        "lesson_activity.key": "511c06a7-614b-4790-a85e-4f5f94903475"
+      }
+    },
+    {
+      "key": "a33d4db5-0031-4e31-a92a-cd10524b128a",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a33d4db5-0031-4e31-a92a-cd10524b128a",
+        "lesson_activity.key": "511c06a7-614b-4790-a85e-4f5f94903475"
+      }
+    },
+    {
       "key": "5c8d9a37-6527-4c78-a3d9-28f1cd39debd",
       "position": 1,
       "properties": {
@@ -203,6 +304,56 @@
       "seeding_key": {
         "activity_section.key": "3618500a-a799-4be0-a983-80c4d23ba459",
         "lesson_activity.key": "fea08b11-798f-4e6b-afe1-b175e978ad98"
+      }
+    },
+    {
+      "key": "b50628e6-cb8c-4e23-b00f-3b006dabd889",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b50628e6-cb8c-4e23-b00f-3b006dabd889",
+        "lesson_activity.key": "05e5ea69-e6eb-48b3-b5b0-24c09f68130d"
+      }
+    },
+    {
+      "key": "99f01ac2-1acf-4b1d-ae69-d90d8520379e",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "99f01ac2-1acf-4b1d-ae69-d90d8520379e",
+        "lesson_activity.key": "05e5ea69-e6eb-48b3-b5b0-24c09f68130d"
+      }
+    },
+    {
+      "key": "92672247-9d64-4c06-92ac-e9b73baca070",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "92672247-9d64-4c06-92ac-e9b73baca070",
+        "lesson_activity.key": "05e5ea69-e6eb-48b3-b5b0-24c09f68130d"
+      }
+    },
+    {
+      "key": "955ee639-fdff-4612-a9fe-d513bcbee252",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "955ee639-fdff-4612-a9fe-d513bcbee252",
+        "lesson_activity.key": "c274baf9-ecf0-4e56-99bd-eb06a1cc2e4a"
+      }
+    },
+    {
+      "key": "c1204efd-2827-4c2a-9ea2-c5425ceedcf9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c1204efd-2827-4c2a-9ea2-c5425ceedcf9",
+        "lesson_activity.key": "e49bd75e-dec5-446a-ba8f-004a17f38c9d"
       }
     }
   ],
@@ -329,6 +480,48 @@
     },
     {
       "chapter": 6,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "advanced-model-sandbox-conditionals-2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "e7c85a53-3579-402c-a471-48366d273af8"
+      },
+      "level_keys": [
+        "advanced-model-sandbox-conditionals-2"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "advanced-model-sandbox-conditionals-3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "a33d4db5-0031-4e31-a92a-cd10524b128a"
+      },
+      "level_keys": [
+        "advanced-model-sandbox-conditionals-3"
+      ]
+    },
+    {
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -352,11 +545,14 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 9,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "advanced-model-sandbox-functions-2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -370,6 +566,111 @@
       },
       "level_keys": [
         "advanced-model-sandbox-functions-2"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "advanced-model-sandbox-mini-project-melody-generator-1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "b50628e6-cb8c-4e23-b00f-3b006dabd889"
+      },
+      "level_keys": [
+        "advanced-model-sandbox-mini-project-melody-generator-1"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "advanced-model-sandbox-mini-project-melody-generator-2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "99f01ac2-1acf-4b1d-ae69-d90d8520379e"
+      },
+      "level_keys": [
+        "advanced-model-sandbox-mini-project-melody-generator-2"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "advanced-model-sandbox-mini-project-melody-generator-3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "92672247-9d64-4c06-92ac-e9b73baca070"
+      },
+      "level_keys": [
+        "advanced-model-sandbox-mini-project-melody-generator-3"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "advanced-model-sandbox-mini-project-rhythm-game-1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "955ee639-fdff-4612-a9fe-d513bcbee252"
+      },
+      "level_keys": [
+        "advanced-model-sandbox-mini-project-rhythm-game-1"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "advanced-model-sandbox-mini-project-background-music-1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "c1204efd-2827-4c2a-9ea2-c5425ceedcf9"
+      },
+      "level_keys": [
+        "advanced-model-sandbox-mini-project-background-music-1"
       ]
     }
   ],
@@ -436,6 +737,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "advanced-model-sandbox-conditionals-2",
+        "script_level.level_keys": [
+          "advanced-model-sandbox-conditionals-2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "e7c85a53-3579-402c-a471-48366d273af8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "advanced-model-sandbox-conditionals-3",
+        "script_level.level_keys": [
+          "advanced-model-sandbox-conditionals-3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "a33d4db5-0031-4e31-a92a-cd10524b128a"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "advanced-model-sandbox-functions-1",
         "script_level.level_keys": [
           "advanced-model-sandbox-functions-1"
@@ -456,6 +781,66 @@
         "lesson_group.key": "",
         "script.name": "music-lab-advanced-model-sandbox",
         "activity_section.key": "3618500a-a799-4be0-a983-80c4d23ba459"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "advanced-model-sandbox-mini-project-melody-generator-1",
+        "script_level.level_keys": [
+          "advanced-model-sandbox-mini-project-melody-generator-1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "b50628e6-cb8c-4e23-b00f-3b006dabd889"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "advanced-model-sandbox-mini-project-melody-generator-2",
+        "script_level.level_keys": [
+          "advanced-model-sandbox-mini-project-melody-generator-2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "99f01ac2-1acf-4b1d-ae69-d90d8520379e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "advanced-model-sandbox-mini-project-melody-generator-3",
+        "script_level.level_keys": [
+          "advanced-model-sandbox-mini-project-melody-generator-3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "92672247-9d64-4c06-92ac-e9b73baca070"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "advanced-model-sandbox-mini-project-rhythm-game-1",
+        "script_level.level_keys": [
+          "advanced-model-sandbox-mini-project-rhythm-game-1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "955ee639-fdff-4612-a9fe-d513bcbee252"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "advanced-model-sandbox-mini-project-background-music-1",
+        "script_level.level_keys": [
+          "advanced-model-sandbox-mini-project-background-music-1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "c1204efd-2827-4c2a-9ea2-c5425ceedcf9"
       }
     }
   ],
