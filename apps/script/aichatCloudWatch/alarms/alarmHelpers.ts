@@ -1,5 +1,5 @@
 // Helper function to create metric stat
-export const createMetricStat = (
+export const createExecutionJobMetricStat = (
   metricName: string,
   executionStatus: string | null,
   modelId: string,
@@ -24,6 +24,35 @@ export const createMetricStat = (
       },
       Period: period,
       Stat: 'Sum',
+    },
+    ReturnData: false,
+  };
+};
+
+export const createOpenaiMetricStat = (
+  metricName: string,
+  attempts: string | null,
+  period = 300,
+  stat = 'Sum'
+) => {
+  const dimensions = [
+    {Name: 'PromptVersion', Value: 'V0'},
+    {Name: 'Environment', Value: 'production'},
+  ];
+
+  if (attempts) {
+    dimensions.unshift({Name: 'Attempts', Value: attempts});
+  }
+
+  return {
+    MetricStat: {
+      Metric: {
+        Namespace: 'GenAICurriculum',
+        MetricName: metricName,
+        Dimensions: dimensions,
+      },
+      Period: period,
+      Stat: stat,
     },
     ReturnData: false,
   };

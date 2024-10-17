@@ -2,7 +2,10 @@ import {ComparisonOperator} from '@aws-sdk/client-cloudwatch';
 
 import modelDescriptions from '../../../static/aichat/modelDescriptions.json';
 
-import {createMetricStat} from './alarmHelpers';
+import {
+  createExecutionJobMetricStat,
+  createOpenaiMetricStat,
+} from './alarmHelpers';
 
 const modelIds = modelDescriptions.map((model: {id: string}) => model.id);
 
@@ -27,53 +30,15 @@ export const openaiLowSuccessRateConfiguration = {
     },
     {
       Id: 'finish_one_attempt',
-      ReturnData: false,
-      MetricStat: {
-        Metric: {
-          Namespace: 'GenAICurriculum',
-          MetricName: 'AichatSafety.Openai.Finish',
-          Dimensions: [
-            {Name: 'Attempts', Value: '1'},
-            {Name: 'PromptVersion', Value: 'V0'},
-            {Name: 'Environment', Value: 'production'},
-          ],
-        },
-        Period: 300,
-        Stat: 'Sum',
-      },
+      ...createOpenaiMetricStat('AichatSafety.Openai.Finish', '1'),
     },
     {
       Id: 'finish_two_attempt',
-      ReturnData: false,
-      MetricStat: {
-        Metric: {
-          Namespace: 'GenAICurriculum',
-          MetricName: 'AichatSafety.Openai.Finish',
-          Dimensions: [
-            {Name: 'Attempts', Value: '2'},
-            {Name: 'PromptVersion', Value: 'V0'},
-            {Name: 'Environment', Value: 'production'},
-          ],
-        },
-        Period: 300,
-        Stat: 'Sum',
-      },
+      ...createOpenaiMetricStat('AichatSafety.Openai.Finish', '2'),
     },
     {
       Id: 'start',
-      ReturnData: false,
-      MetricStat: {
-        Metric: {
-          Namespace: 'GenAICurriculum',
-          MetricName: 'AichatSafety.Openai.Start',
-          Dimensions: [
-            {Name: 'PromptVersion', Value: 'V0'},
-            {Name: 'Environment', Value: 'production'},
-          ],
-        },
-        Period: 300,
-        Stat: 'Sum',
-      },
+      ...createOpenaiMetricStat('AichatSafety.Openai.Start', null),
     },
   ],
 };
@@ -81,7 +46,7 @@ export const openaiLowSuccessRateConfiguration = {
 // Failure job metrics for each model.
 const failureMetrics = modelIds.map((modelId, index) => ({
   Id: `m${index + 6}`,
-  ...createMetricStat(
+  ...createExecutionJobMetricStat(
     'AichatRequestChatCompletionJob.Finish',
     'FAILURE',
     modelId
@@ -91,7 +56,11 @@ const failureMetrics = modelIds.map((modelId, index) => ({
 // Start(total) jobs metrics for each model.
 const startMetrics = modelIds.map((modelId, index) => ({
   Id: `m${index + 1}`,
-  ...createMetricStat('AichatRequestChatCompletionJob.Start', null, modelId),
+  ...createExecutionJobMetricStat(
+    'AichatRequestChatCompletionJob.Start',
+    null,
+    modelId
+  ),
 }));
 
 export const highChatCompletionJobExecutionFailureRateConfiguration = {
