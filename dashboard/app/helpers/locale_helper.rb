@@ -35,7 +35,8 @@ module LocaleHelper
 
     if global_edition
       # Adds language options with the switch to the regional (global) version of the platform.
-      Rack::GlobalEdition::REGIONS_LOCALES.except('en').each do |region, region_locale|
+      Cdo::GlobalEdition::REGIONS.excluding('en', 'root').each do |region|
+        region_locale = Cdo::GlobalEdition.region_locale(region)
         locale_name = Dashboard::Application::LOCALES.dig(region_locale, :native)
         options << ["#{locale_name} (global)", [region_locale, region].join('|')] if locale_name
       end
@@ -47,7 +48,7 @@ module LocaleHelper
   def current_locale_option(global_edition: false)
     return locale unless global_edition
     # Combines the current locale with the Global Edition region, e.g. "fa-IR|fa".
-    [locale, cookies[Rack::GlobalEdition::REGION_KEY]].select(&:presence).join('|')
+    [locale, ge_region].select(&:presence).join('|')
   end
 
   def options_for_locale_code_select

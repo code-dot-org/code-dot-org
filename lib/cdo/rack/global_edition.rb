@@ -1,19 +1,11 @@
 # frozen_string_literal: true
 
+require 'cdo/global_edition'
+
 module Rack
   class GlobalEdition
     REGION_KEY = 'ge_region'
     LANGUAGE_COOKIE_KEY = 'language_'
-    TARGET_HOSTNAMES = Set[
-      CDO.dashboard_hostname,
-    ].freeze
-    AVAILABLE_REGIONS = Set[
-      *Cdo::GlobalEdition::REGIONS
-    ].freeze
-
-    # TODO: Replace with the actual mapping list of regional locales from the Global Edition config files.
-    # @example {'fa' => 'fa-IR', 'en' => 'en-US', ...}
-    REGIONS_LOCALES = YAML.load_file(CDO.dir('dashboard/config/locales.yml')).slice(*AVAILABLE_REGIONS)
 
     class RouteHandler
       ROOT_PATH = '/global'
@@ -24,7 +16,7 @@ module Rack
       PATH_PATTERN = Regexp.new <<~REGEXP.remove(/\s+/)
         ^(?<ge_prefix>
           #{ROOT_PATH}/
-          (?<ge_region>#{AVAILABLE_REGIONS.join('|')})
+          (?<ge_region>#{Cdo::GlobalEdition::REGIONS.join('|')})
         )
         (?<main_path>/.*|$)
       REGEXP
@@ -42,7 +34,9 @@ module Rack
           new_region = request.params[REGION_KEY]
 
           main_path = request_path_vars(:main_path).first || request.path
-          redirect_uri = URI.parse region_available?(new_region) ? regional_path_for(new_region, main_path) : main_path
+          redirect_uri = URI(
+            Cdo::GlobalEdition.region_available?(new_region) ? regional_path_for(new_region, main_path) : main_path
+          )
           redirect_uri.query = URI.encode_www_form(request.params.except(REGION_KEY)).presence
 
           setup_region(new_region) if region_changed?(new_region)
@@ -60,7 +54,7 @@ module Rack
           request.path_info = main_path
 
           setup_region(ge_region) if region_changed?(ge_region)
-        elsif region_available?(request.cookies[REGION_KEY]) && request_redirectable?
+        elsif Cdo::GlobalEdition.region_available?(request.cookies[REGION_KEY]) && request_redirectable?
           # Redirects to the regional version of the path.
           response.redirect regional_path_for(request.cookies[REGION_KEY], request.fullpath)
         end
@@ -95,20 +89,16 @@ module Rack
         end
 
         # Prevents the cookie from being discarded under resource constraints.
-        response.set_cookie_header = "#{response.set_cookie_header}; priority=high;"
-      end
-
-      private def region_available?(region)
-        region.present? && AVAILABLE_REGIONS.include?(region)
+        response.set_cookie_header = "#{response.set_cookie_header}; priority=high"
       end
 
       private def setup_region(region)
         # Resets the region if it's `nil` or sets it only if it's available.
-        return unless region.nil? || region_available?(region)
+        return unless region.nil? || Cdo::GlobalEdition.region_available?(region)
 
         # Sets the request cookies to apply changes immediately without needing to reload the page.
         request.cookies[REGION_KEY] = region
-        request.cookies[LANGUAGE_COOKIE_KEY] = REGIONS_LOCALES[region] if REGIONS_LOCALES[region]
+        request.cookies[LANGUAGE_COOKIE_KEY] = Cdo::GlobalEdition.region_locale(region) if region
 
         # Updates the global `ge_region` cookie to lock the platform to the regional version.
         set_global_cookie(REGION_KEY, request.cookies[REGION_KEY])
@@ -145,7 +135,7 @@ module Rack
     def call(env)
       request = Request.new(env)
 
-      if TARGET_HOSTNAMES.include?(request.hostname)
+      if Cdo::GlobalEdition.target_host?(request.hostname)
         RouteHandler.new(@app, request).call
       else
         @app.call(env)
