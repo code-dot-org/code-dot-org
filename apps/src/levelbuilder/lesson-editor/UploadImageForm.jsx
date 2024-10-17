@@ -95,10 +95,19 @@ export default function UploadImageForm() {
     setIsEditing(true);
   };
 
-  const saveEditedImage = editedImageUrl => {
+  const saveEditedImage = (editedImageUrl, editedImageFile) => {
+    // Update the list of image files
+    setListOfImageFiles(prevFiles =>
+      prevFiles.map((file, index) =>
+        tempImageUrls[index] === imageToEdit ? editedImageFile : file
+      )
+    );
+
+    // Update the temporary image URLs
     setTempImageUrls(prevUrls =>
       prevUrls.map(url => (url === imageToEdit ? editedImageUrl : url))
     );
+
     closeEditor();
   };
 

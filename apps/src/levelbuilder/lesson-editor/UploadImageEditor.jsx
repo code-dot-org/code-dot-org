@@ -33,8 +33,24 @@ export default function UploadImageEditor({imageUrl, onSave, onCancel}) {
 
   const handleSave = () => {
     const editorInstance = editorRef.current.getInstance();
-    const editedImage = editorInstance.toDataURL();
-    onSave(editedImage);
+    const editedImageUrl = editorInstance.toDataURL();
+
+    // Convert Data URL to a File object
+    const dataUrlToFile = (dataUrl, filename) => {
+      const arr = dataUrl.split(',');
+      const mime = arr[0].match(/:(.*?);/)[1];
+      const bstr = atob(arr[1]);
+      let n = bstr.length;
+      const u8arr = new Uint8Array(n);
+      while (n--) {
+        u8arr[n] = bstr.charCodeAt(n);
+      }
+      return new File([u8arr], filename, {type: mime});
+    };
+
+    const editedImageFile = dataUrlToFile(editedImageUrl, 'edited-image.png');
+
+    onSave(editedImageUrl, editedImageFile);
   };
 
   return (
