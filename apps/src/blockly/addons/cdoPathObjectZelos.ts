@@ -1,4 +1,4 @@
-import GoogleBlockly from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 
 export default class CdoPathObjectZelos extends GoogleBlockly.zelos.PathObject {
   // The built-in function also adds a cross-hatch fill pattern to disabled blocks, which we don't want.

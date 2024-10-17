@@ -1,4 +1,4 @@
-import GoogleBlockly from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 
 import {getToolboxType} from '@cdo/apps/blockly/addons/cdoUtils';
 import {ToolboxType} from '@cdo/apps/blockly/constants';

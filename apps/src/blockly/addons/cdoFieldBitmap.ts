@@ -1,12 +1,12 @@
 import {FieldBitmap} from '@blockly/field-bitmap';
-import * as Blockly from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 
 import {commonI18n} from '@cdo/apps/types/locale';
 
 // Use our translations for "Clear" button text.
-Blockly.Msg['BUTTON_LABEL_CLEAR'] = commonI18n.blocklyClear();
+GoogleBlockly.Msg['BUTTON_LABEL_CLEAR'] = commonI18n.blocklyClear();
 
-interface FieldBitmapFromJsonConfig extends Blockly.FieldConfig {
+interface FieldBitmapFromJsonConfig extends GoogleBlockly.FieldConfig {
   value?: number[][];
   width?: number;
   height?: number;
@@ -23,8 +23,8 @@ export class CdoFieldBitmap extends FieldBitmap {
    * @param {object | null} config - Additional configuration options, can be an object or null/undefined.
    */
   constructor(
-    value: number[][] | typeof Blockly.Field.SKIP_SETUP,
-    options?: Blockly.FieldValidator<number[][]>,
+    value: number[][] | typeof GoogleBlockly.Field.SKIP_SETUP,
+    options?: GoogleBlockly.FieldValidator<number[][]>,
     config?: FieldBitmapFromJsonConfig
   ) {
     super(value, options, config);
@@ -84,7 +84,7 @@ export class CdoFieldBitmap extends FieldBitmap {
     this.boundEvents.push(
       // In the base class, browserEvents.conditionalBind is used, which has
       // a side of effect of locking workspace events on touch devices.
-      Blockly.browserEvents.bind(element, eventName, this, callback)
+      GoogleBlockly.browserEvents.bind(element, eventName, this, callback)
     );
   }
 
