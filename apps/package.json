@@ -327,7 +327,7 @@
     "remark-rehype": "8.1.0",
     "rgbcolor": "0.0.4",
     "rosie": "^2.0.1",
-    "sanitize-html": "^1.11.3",
+    "sanitize-html": "^2.12.1",
     "save-csv": "^4.0.6",
     "seedrandom": "2.4.2",
     "slate": "^0.81.0",
