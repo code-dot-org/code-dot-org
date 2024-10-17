@@ -19,6 +19,8 @@ import {
 
 import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
+import styles from './chatWorkspace.module.scss';
+
 interface ChatEventViewProps {
   event: ChatEvent;
   isTeacherView?: boolean;
@@ -78,6 +80,7 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
             ? {
                 href: 'https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ',
                 text: commonI18n.learnMore(),
+                className: styles.alertLink,
               }
             : undefined
         }
