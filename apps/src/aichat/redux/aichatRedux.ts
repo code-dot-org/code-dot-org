@@ -230,10 +230,15 @@ const saveAiCustomization = async (
     if (error instanceof NetworkError && error.response.status === 403) {
       await notifyErrorUnauthorized(error, dispatch);
     } else {
-      notifyErrorGeneric(
-        'Aichat.CustomizationToxicityScreeningErrorUnhandled',
-        dispatch
-      );
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .incrementCounter(
+          'Aichat.CustomizationToxicityScreeningErrorUnhandled'
+        );
+      // Default save error message.
+      const errorMessage =
+        'There was an error saving your project. Please try again.';
+      dispatchSaveFailNotification(dispatch, errorMessage);
     }
     dispatch(endSave());
   }
@@ -565,7 +570,17 @@ async function handleChatCompletionError(
   } else if (error instanceof NetworkError && error.response.status === 403) {
     await notifyErrorUnauthorized(error, dispatch);
   } else {
-    notifyErrorGeneric('Aichat.ChatCompletionErrorUnhandled', dispatch);
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .incrementCounter('Aichat.ChatCompletionErrorUnhandled');
+    dispatch(
+      addChatEvent({
+        role: Role.ASSISTANT,
+        status: Status.ERROR,
+        chatMessageText: 'error',
+        timestamp: Date.now(),
+      })
+    );
   }
 }
 
