@@ -16,7 +16,7 @@ import {installFunctionBlocks} from '../blockly/blockUtils';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import {BlockMode} from '../constants';
-import MusicLibrary from '../player/MusicLibrary';
+import MusicLibrary, {SoundFolderPack} from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
 import AdvancedSequencer from '../player/sequencer/AdvancedSequencer';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
@@ -162,7 +162,9 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   }
 
   const getPackDetails = (packId: string) => {
-    const packFolder = MusicLibrary.getInstance()?.getFolderForFolderId(packId);
+    const packFolder = MusicLibrary.getInstance()?.getFolderForFolderId(
+      packId
+    ) as SoundFolderPack;
 
     if (!packFolder) {
       return null;

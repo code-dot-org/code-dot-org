@@ -16,7 +16,7 @@ import {
 import {PlaybackEvent} from '../interfaces/PlaybackEvent';
 import {SkipContext} from '../interfaces/SkipContext';
 import {SoundEvent} from '../interfaces/SoundEvent';
-import MusicLibrary from '../MusicLibrary';
+import MusicLibrary, {SoundDataPack} from '../MusicLibrary';
 
 import Sequencer from './Sequencer';
 
@@ -209,7 +209,9 @@ export default class Simple2Sequencer extends Sequencer {
    * Play a sound at the current location.
    */
   playSound(id: string, blockId: string) {
-    const soundData = MusicLibrary.getInstance()?.getSoundForId(id);
+    const soundData = MusicLibrary.getInstance()?.getSoundForId(
+      id
+    ) as SoundDataPack;
     if (!soundData) {
       this.metricsReporter.logWarning('Could not find sound with ID: ' + id);
       return;

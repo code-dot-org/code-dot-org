@@ -11,13 +11,13 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {getBaseAssetUrl} from '../appConfig';
 import {AnalyticsContext} from '../context';
 import musicI18n from '../locale';
-import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
+import MusicLibrary, {SoundFolderPack} from '../player/MusicLibrary';
 import {MusicState} from '../redux/musicRedux';
 
 import moduleStyles from './HeaderButtons.module.scss';
 
 interface CurrentPackProps {
-  packFolder: SoundFolder;
+  packFolder: SoundFolderPack;
   noRightPadding: boolean;
 }
 
@@ -90,7 +90,9 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   let packFolder = null;
 
   if (library && currentPackId) {
-    packFolder = library.getAllowedFolderForFolderId(currentPackId);
+    packFolder = library.getAllowedFolderForFolderId(
+      currentPackId
+    ) as SoundFolderPack;
   }
 
   const onClickUndoRedo = useCallback(

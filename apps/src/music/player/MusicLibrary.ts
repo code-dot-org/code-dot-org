@@ -91,11 +91,11 @@ export default class MusicLibrary {
 
   name: string;
 
-  packs: SoundFolder[];
-  instruments: SoundFolder[];
-  kits: SoundFolder[];
+  packs: SoundFolderPack[];
+  instruments: SoundFolderInstrument[];
+  kits: SoundFolderKit[];
 
-  private folders: SoundFolder[];
+  private folders: SoundFolderAny[];
 
   private libraryJson: LibraryJson;
   private allowedSounds: Sounds | null;
@@ -124,9 +124,9 @@ export default class MusicLibrary {
 
     // Combine the JSON-specified folders into one flat list of folders.
     this.folders = [
-      ...libraryJson.packs,
-      ...libraryJson.instruments,
-      ...libraryJson.kits,
+      ...(libraryJson.packs as SoundFolderPack[]),
+      ...(libraryJson.instruments as SoundFolderInstrument[]),
+      ...(libraryJson.kits as SoundFolderKit[]),
     ];
 
     this.packs = libraryJson.packs;
@@ -165,11 +165,13 @@ export default class MusicLibrary {
   // Determine the available sound types available in this library.
   // Only currently-allowed sounds from packs are included.
   private determineAvailableSoundTypes() {
-    const folders = this.getAllowedSounds();
+    const folders = this.getAllowedSounds() as SoundFolderPack[];
 
     folders.forEach(folder => {
       folder.sounds.forEach(sound => {
-        this.availableSoundTypes[sound.type] = true;
+        if (sound.type) {
+          this.availableSoundTypes[sound.type] = true;
+        }
       });
     });
   }
@@ -188,7 +190,7 @@ export default class MusicLibrary {
 
     // The fallback is the first available pack's first available non-preview sound.
     // We will skip restricted folders unless it's the currently selected pack.
-    const firstFolder = this.getAvailableSounds()[0];
+    const firstFolder = (this.getAvailableSounds() as SoundFolderPack[])[0];
     const firstSound = firstFolder?.sounds.find(
       sound => sound.type !== 'preview'
     );
@@ -201,7 +203,7 @@ export default class MusicLibrary {
     const folderId = id.substring(0, lastSlashIndex);
     const src = id.substring(lastSlashIndex + 1);
 
-    const folder = this.getFolderForFolderId(folderId);
+    const folder = this.getFolderForFolderId(folderId) as SoundFolderPack;
 
     if (folder) {
       return folder.sounds.find(sound => sound.src === src) || null;
@@ -241,7 +243,7 @@ export default class MusicLibrary {
 
   // Given a pack ID (e.g. "pack1"), return the path for its image.
   getPackImageUrl(packId: string): string | undefined {
-    const folder = this.getFolderForFolderId(packId);
+    const folder = this.getFolderForFolderId(packId) as SoundFolderPack;
     if (!folder) {
       return undefined;
     }
@@ -269,7 +271,7 @@ export default class MusicLibrary {
   }
 
   getAvailableSounds() {
-    return this.getAllowedSounds().filter(
+    return (this.getAllowedSounds() as SoundFolderPack[]).filter(
       folder =>
         (!folder.restricted || this.currentPackId === folder.id) &&
         folder.id !== DEFAULT_PACK
@@ -277,7 +279,7 @@ export default class MusicLibrary {
   }
 
   getRestrictedPacks(): SoundFolder[] {
-    return this.getAllowedSounds().filter(
+    return (this.getAllowedSounds() as SoundFolderPack[]).filter(
       folder => folder.restricted && folder.id !== DEFAULT_PACK
     );
   }
@@ -310,7 +312,9 @@ export default class MusicLibrary {
     if (!this.currentPackId) {
       return this.bpm;
     }
-    const folder = this.getFolderForFolderId(this.currentPackId);
+    const folder = this.getFolderForFolderId(
+      this.currentPackId
+    ) as SoundFolderPack;
     // Read BPM from the folder, or the first sound that has a BPM if not present on the folder.
     return (
       folder?.bpm || folder?.sounds.find(sound => sound.bpm !== undefined)?.bpm
@@ -322,7 +326,9 @@ export default class MusicLibrary {
     if (!this.currentPackId) {
       return this.key;
     }
-    const folder = this.getFolderForFolderId(this.currentPackId);
+    const folder = this.getFolderForFolderId(
+      this.currentPackId
+    ) as SoundFolderPack;
     // Read key from the folder, or the first sound that has a key if not present on the folder.
     return (
       folder?.key ?? folder?.sounds.find(sound => sound.key !== undefined)?.key
@@ -421,16 +427,37 @@ export interface SampleSequence {
 
 export interface SoundData {
   name: string;
-  path?: string;
   src: string;
-  length: number;
-  type: SoundType;
-  note?: number;
+  path?: string;
   restricted?: boolean;
   sequence?: SampleSequence;
+  type?: SoundType;
   bpm?: number;
   key?: Key;
+  note?: number;
+  length?: number;
+}
+
+export interface SoundDataPack extends Omit<SoundData, 'sequence' | 'note'> {
+  length: number;
+  type: SoundType;
   skipLocalization?: boolean;
+}
+
+export interface SoundDataInstrument
+  extends Omit<
+    SoundData,
+    'path' | 'restricted' | 'sequence' | 'type' | 'key' | 'length'
+  > {
+  note: number;
+}
+
+export interface SoundDataKit
+  extends Omit<
+    SoundData,
+    'path' | 'restricted' | 'sequence' | 'type' | 'bpm' | 'key'
+  > {
+  length: number;
 }
 
 export interface ImageAttribution {
@@ -443,32 +470,44 @@ export type SoundFolderType = 'sound' | 'kit' | 'instrument';
 
 export interface SoundFolder {
   name: string;
-  artist?: string;
   id: string;
-  type?: SoundFolderType;
   path: string;
-  imageSrc: string;
-  color?: string;
-  restricted?: boolean;
+  imageAttribution: ImageAttribution;
+  skipLocalization: boolean;
   sounds: SoundData[];
-  bpm?: number;
-  key?: Key;
-  imageAttribution?: ImageAttribution;
-  skipLocalization?: boolean;
 }
+
+export interface SoundFolderPack extends SoundFolder {
+  artist: string;
+  imageSrc: string;
+  color: string;
+  restricted: boolean;
+  bpm: number;
+  key: Key;
+  sounds: SoundDataPack[];
+}
+
+export interface SoundFolderInstrument extends SoundFolder {
+  type: SoundFolderType;
+  sounds: SoundDataInstrument[];
+}
+
+export interface SoundFolderKit extends SoundFolder {
+  type: SoundFolderType;
+  sounds: SoundDataKit[];
+}
+
+type SoundFolderAny = SoundFolderPack | SoundFolderInstrument | SoundFolderKit;
 
 export type LibraryJson = {
   id: string;
-  name: string;
-  imageSrc: string;
   path: string;
   bpm?: number;
   key?: number;
   defaultSound?: string;
-  folders: SoundFolder[];
-  instruments: SoundFolder[];
-  kits: SoundFolder[];
-  packs: SoundFolder[];
+  instruments: SoundFolderInstrument[];
+  kits: SoundFolderKit[];
+  packs: SoundFolderPack[];
 };
 
 export interface Sounds {
