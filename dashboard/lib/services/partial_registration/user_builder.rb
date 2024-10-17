@@ -43,7 +43,7 @@ module Services
             user_params[:parent_email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
           end
         end
-        user_params[:terms_of_service_version] = User::TERMS_OF_SERVICE_VERSIONS.last
+        user_params[:terms_of_service_version] = ::User::TERMS_OF_SERVICE_VERSIONS.last
         user_params[:data_transfer_agreement_accepted] = user_params[:data_transfer_agreement_accepted] == '1'
         if user_params[:data_transfer_agreement_required] && user_params[:data_transfer_agreement_accepted]
           user_params[:data_transfer_agreement_request_ip] = request.ip
