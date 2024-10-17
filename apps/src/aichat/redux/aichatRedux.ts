@@ -127,7 +127,7 @@ export const updateAiCustomization = createAsyncThunk(
     await saveAiCustomization(
       (getState() as RootState).aichat.currentAiCustomizations,
       'updateChatbot',
-      dispatch
+      dispatch as AppDispatch
     );
   }
 );
@@ -142,7 +142,7 @@ export const publishModel = createAsyncThunk(
     await saveAiCustomization(
       (getState() as RootState).aichat.currentAiCustomizations,
       'publishModelCard',
-      dispatch
+      dispatch as AppDispatch
     );
   }
 );
@@ -161,7 +161,7 @@ export const saveModelCard = createAsyncThunk(
     await saveAiCustomization(
       currentAiCustomizations,
       'saveModelCard',
-      dispatch
+      dispatch as AppDispatch
     );
   }
 );
@@ -171,7 +171,7 @@ export const saveModelCard = createAsyncThunk(
 const saveAiCustomization = async (
   currentAiCustomizations: AiCustomizations,
   saveType: SaveType,
-  dispatch: ThunkDispatch<unknown, unknown, AnyAction>
+  dispatch: AppDispatch
 ) => {
   // Remove any empty example topics on save
   const trimmedExampleTopics =
@@ -199,34 +199,50 @@ const saveAiCustomization = async (
     .getMetricsReporter()
     .incrementCounter('Aichat.SaveStarted');
 
-  // Detect toxicity in the student's customizations
-  const toxicity = await detectToxicityInCustomizations(
-    trimmedCurrentAiCustomizations
-  );
+  let passedToxicityScreening = false;
+  try {
+    // Detect toxicity in the student's customizations
+    const toxicity = await detectToxicityInCustomizations(
+      trimmedCurrentAiCustomizations
+    );
 
-  // If any fields were flagged for toxicity, display a notification and don't try to save.
-  if (toxicity.flaggedFields.length > 0) {
-    // Log for analysis purposes
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .logInfo({
-        message: 'Toxicity detected in AI customizations',
-        flaggedFields: toxicity.flaggedFields,
-        customizations: extractFieldsToCheckForToxicity(
-          trimmedCurrentAiCustomizations
-        ),
-      });
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .incrementCounter('Aichat.SaveFailToxicityDetected');
-    const errorMessage = getToxicityErrorMessage(toxicity.flaggedFields);
-    dispatchSaveFailNotification(dispatch as AppDispatch, errorMessage, true);
-    return;
+    // If any fields were flagged for toxicity, display a notification and don't try to save.
+    if (!toxicity.flaggedField.length) {
+      passedToxicityScreening = true;
+    } else {
+      // Log for analysis purposes
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logInfo({
+          message: 'Toxicity detected in AI customizations',
+          flaggedFields: toxicity.flaggedFields,
+          customizations: extractFieldsToCheckForToxicity(
+            trimmedCurrentAiCustomizations
+          ),
+        });
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .incrementCounter('Aichat.SaveFailToxicityDetected');
+      const errorMessage = getToxicityErrorMessage(toxicity.flaggedFields);
+      dispatchSaveFailNotification(dispatch as AppDispatch, errorMessage, true);
+    }
+  } catch (error) {
+    if (error instanceof NetworkError && error.response.status === 403) {
+      await handleErrorUnauthorized(error, dispatch);
+    } else {
+      handleErrorGeneric(
+        'Aichat.CustomizationToxicityScreeningErrorUnhandled',
+        dispatch
+      );
+    }
+    dispatch(endSave());
   }
 
-  await Lab2Registry.getInstance()
-    .getProjectManager()
-    ?.save({source: JSON.stringify(trimmedCurrentAiCustomizations)}, true);
+  if (passedToxicityScreening) {
+    await Lab2Registry.getInstance()
+      .getProjectManager()
+      ?.save({source: JSON.stringify(trimmedCurrentAiCustomizations)}, true);
+  }
 };
 
 const getToxicityErrorMessage = (flaggedFields: FlaggedField[]) => {
@@ -473,6 +489,53 @@ export const submitChatContents = createAsyncThunk(
   }
 );
 
+function handleErrorGeneric(metricName: string, dispatch: AppDispatch) {
+  Lab2Registry.getInstance().getMetricsReporter().incrementCounter(metricName);
+  dispatch(
+    addChatEvent({
+      role: Role.ASSISTANT,
+      status: Status.ERROR,
+      chatMessageText: 'error',
+      timestamp: Date.now(),
+    })
+  );
+}
+
+async function handleErrorUnauthorized(
+  error: NetworkError,
+  dispatch: AppDispatch
+) {
+  const responseBody = await error.response.json();
+  const userType = responseBody?.user_type;
+
+  const userTypeToMessageText: {[key: string]: string} = {
+    teacher: commonI18n.aiChatNotAuthorizedTeacher(),
+    student: commonI18n.aiChatNotAuthorizedStudent(),
+  };
+  const messageText =
+    userTypeToMessageText[userType] ||
+    commonI18n.aiChatNotAuthorizedSignedOut();
+
+  dispatch(
+    addChatEvent({
+      id: getNewMessageId(),
+      text: messageText,
+      notificationType: 'permissionsError',
+      timestamp: Date.now(),
+    })
+  );
+  dispatch(
+    sendAnalytics(
+      EVENTS.SUBMIT_AICHAT_REQUEST_UNAUTHORIZED,
+      {
+        levelPath: window.location.pathname,
+        userType,
+      },
+      true
+    )
+  );
+}
+
 async function handleChatCompletionError(
   error: Error,
   newUserMessage: ChatMessage,
@@ -500,48 +563,9 @@ async function handleChatCompletionError(
       })
     );
   } else if (error instanceof NetworkError && error.response.status === 403) {
-    const responseBody = await error.response.json();
-    const userType = responseBody?.user_type;
-
-    const userTypeToMessageText: {[key: string]: string} = {
-      teacher: commonI18n.aiChatNotAuthorizedTeacher(),
-      student: commonI18n.aiChatNotAuthorizedStudent(),
-    };
-    const messageText =
-      userTypeToMessageText[userType] ||
-      commonI18n.aiChatNotAuthorizedSignedOut();
-
-    dispatch(
-      addChatEvent({
-        id: getNewMessageId(),
-        text: messageText,
-        notificationType: 'permissionsError',
-        timestamp: Date.now(),
-      })
-    );
-    dispatch(
-      sendAnalytics(
-        EVENTS.SUBMIT_AICHAT_REQUEST_UNAUTHORIZED,
-        {
-          levelPath: window.location.pathname,
-          userType,
-          userMessage: newUserMessage.chatMessageText,
-        },
-        true
-      )
-    );
+    await handleErrorUnauthorized(error, dispatch);
   } else {
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .incrementCounter('Aichat.ChatCompletionErrorUnhandled');
-    dispatch(
-      addChatEvent({
-        role: Role.ASSISTANT,
-        status: Status.ERROR,
-        chatMessageText: 'error',
-        timestamp: Date.now(),
-      })
-    );
+    handleErrorGeneric('Aichat.ChatCompletionErrorRateLimited', dispatch);
   }
 }
 

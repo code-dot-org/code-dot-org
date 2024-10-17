@@ -406,8 +406,7 @@ const EVENTS = {
   AICHAT_START_OVER: 'Student starts over and resets to default model settings',
   SUBMIT_AICHAT_REQUEST_SUCCESS: 'User submits aichat request successfully',
   SUBMIT_AICHAT_REQUEST_UNAUTHORIZED:
-    'Unauthorized user attempts to submit aichat request and fails',
-
+    'Unauthorized user attempts to submit aichat request or model customizations and fails',
   // Codebridge - File broswer-related events
   CODEBRIDGE_DELETE_FILE: 'Delete file on codebridge',
   CODEBRIDGE_DELETE_FOLDER: 'Delete folder on codebridge',
