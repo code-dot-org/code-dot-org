@@ -494,18 +494,6 @@ export const submitChatContents = createAsyncThunk(
   }
 );
 
-function notifyErrorGeneric(metricName: string, dispatch: AppDispatch) {
-  Lab2Registry.getInstance().getMetricsReporter().incrementCounter(metricName);
-  dispatch(
-    addChatEvent({
-      role: Role.ASSISTANT,
-      status: Status.ERROR,
-      chatMessageText: 'error',
-      timestamp: Date.now(),
-    })
-  );
-}
-
 async function notifyErrorUnauthorized(
   error: NetworkError,
   dispatch: AppDispatch
