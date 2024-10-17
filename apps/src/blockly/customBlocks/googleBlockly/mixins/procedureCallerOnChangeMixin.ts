@@ -1,5 +1,4 @@
-import {Abstract} from 'blockly/core/events/events_abstract';
-import {BlockCreate} from 'blockly/core/events/events_block_create';
+import * as GoogleBlockly from 'blockly/core';
 
 import {ProcedureBlock} from '@cdo/apps/blockly/types';
 
@@ -15,7 +14,10 @@ const procedureCallerOnChangeMixin = {
    * @param event Change event.
    * @this {Blockly.Block}
    */
-  onchange: function (this: ProcedureBlock, event: Abstract) {
+  onchange: function (
+    this: ProcedureBlock,
+    event: GoogleBlockly.Events.Abstract
+  ) {
     // If the block is in an embedded workspace, we don't create a procedure definition.
     // An embedded workspace does not need any procedure definitions, and trying to add them
     // will cause confusing UI (for example, an empty procedure definition in a hint).
@@ -66,12 +68,13 @@ const procedureCallerOnChangeMixin = {
    */
   eventIsCreatingThisBlockDuringPaste_(
     this: ProcedureBlock,
-    event: Abstract
+    event: GoogleBlockly.Events.Abstract
   ): boolean {
     return (
       event.type === Blockly.Events.BLOCK_CREATE &&
-      ((event as BlockCreate).blockId === this.id ||
-        (event as BlockCreate).ids?.indexOf(this.id) !== -1) &&
+      ((event as GoogleBlockly.Events.BlockCreate).blockId === this.id ||
+        (event as GoogleBlockly.Events.BlockCreate).ids?.indexOf(this.id) !==
+          -1) &&
       // Record undo makes sure this is during paste.
       event.recordUndo
     );

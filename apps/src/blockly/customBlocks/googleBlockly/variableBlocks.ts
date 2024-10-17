@@ -1,5 +1,4 @@
-import {WorkspaceSvg} from 'blockly';
-import {BlockInfo, FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';
+import * as GoogleBlockly from 'blockly/core';
 
 import {commonI18n} from '@cdo/apps/types/locale';
 
@@ -8,8 +7,8 @@ import {commonI18n} from '@cdo/apps/types/locale';
  * @param {WorkspaceSvg} workspace The workspace containing procedures.
  * @returns {FlyoutDefinition} An array of JSON block elements.
  */
-export function flyoutCategory(workspace: WorkspaceSvg) {
-  const blockList: FlyoutItemInfoArray = [];
+export function flyoutCategory(workspace: GoogleBlockly.WorkspaceSvg) {
+  const blockList: GoogleBlockly.utils.toolbox.FlyoutItemInfoArray = [];
   const newVariableButton = getNewVariableButtonWithCallback(workspace);
   blockList.push(newVariableButton);
 
@@ -23,12 +22,14 @@ export function flyoutCategory(workspace: WorkspaceSvg) {
   // If any of these blocks are found, we can remove the auto-generated block.
   // Count the 'math_change' blocks in blockList.
   const mathChangeBlocksCount = blockList.filter(
-    block => (block as BlockInfo).type === 'math_change'
+    block =>
+      (block as GoogleBlockly.utils.toolbox.BlockInfo).type === 'math_change'
   ).length;
   // If there is more than one, remove the first occurrence which was auto-generated.
   if (mathChangeBlocksCount > 1) {
     const firstMathChangeIndex = blockList.findIndex(
-      block => (block as BlockInfo).type === 'math_change'
+      block =>
+        (block as GoogleBlockly.utils.toolbox.BlockInfo).type === 'math_change'
     );
     if (firstMathChangeIndex !== -1) {
       blockList.splice(firstMathChangeIndex, 1);
@@ -38,7 +39,9 @@ export function flyoutCategory(workspace: WorkspaceSvg) {
   return blockList;
 }
 
-const getNewVariableButtonWithCallback = (workspace: WorkspaceSvg) => {
+const getNewVariableButtonWithCallback = (
+  workspace: GoogleBlockly.WorkspaceSvg
+) => {
   const callbackKey = 'newVariableCallback';
   workspace.registerButtonCallback(callbackKey, () => {
     Blockly.FieldVariable.variableNamePrompt({
@@ -64,7 +67,7 @@ const getNewVariableButtonWithCallback = (workspace: WorkspaceSvg) => {
  * @param workspace The workspace containing variables.
  * @returns {Array<Object>} An array of JSON block objects for a flyout.
  */
-export function flyoutCategoryBlocks(workspace: WorkspaceSvg) {
+export function flyoutCategoryBlocks(workspace: GoogleBlockly.WorkspaceSvg) {
   const variableModelList = workspace.getVariablesOfType('');
 
   const blockList = [];
