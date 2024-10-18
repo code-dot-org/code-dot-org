@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Cdo
   # Lazily loads global configurations for regional pages
   module GlobalEdition
@@ -22,12 +24,12 @@ module Cdo
     # Retrieves the global configuration for the given region.
     def self.configuration_for(region)
       @@configurations ||= {}
-      @@configurations[region] ||= load_config(region)
+      @@configurations[region.to_s] ||= load_config(region) || {}
     end
 
     # Returns the parsed configuration for the given region.
     def self.load_config(region)
-      raise ArgumentError, "Region #{region} is not available" unless region_available?(region)
+      return unless region_available?(region)
       config = YAML.load_file(CDO.dir('config', 'global_editions', "#{region}.yml")) || {}
       deep_freeze(config.deep_symbolize_keys)
     end

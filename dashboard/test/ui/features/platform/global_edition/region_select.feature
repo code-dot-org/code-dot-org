@@ -2,27 +2,27 @@
 Feature: Global Edition - Region Select
 
   Scenario: User can switch between the international and regional versions using the language selector on a Studio page
-    Given I am on "http://studio.code.org/incubator"
+    Given I am on "http://studio.code.org/users/sign_in"
     And element "#locale option:checked" contains text "English"
-    And element "#header-incubator" contains text "Incubator"
+    And element ".main h2" contains text "Have an account already? Sign in"
 
     When I select the "فارسی (global)" option in dropdown "locale"
-    And I get redirected away from "http://studio.code.org/incubator"
-    Then check that I am on "http://studio.code.org/global/fa/incubator?lang=fa-IR"
+    And I get redirected away from "http://studio.code.org/users/sign_in"
+    Then check that I am on "http://studio.code.org/global/fa/users/sign_in?lang=fa-IR"
     And element "#locale option:checked" contains text "فارسی (global)"
-    And element "#header-incubator" contains text "کارگاه"
+    And element ".main h2" contains text "دارای حساب کاربری هستید؟ وارد سیستم شوید"
 
     When I select the "English" option in dropdown "locale"
-    And I get redirected away from "http://studio.code.org/global/fa/incubator?lang=fa-IR"
-    Then check that I am on "http://studio.code.org/incubator?lang=en-US"
+    And I get redirected away from "http://studio.code.org/global/fa/users/sign_in?lang=fa-IR"
+    Then check that I am on "http://studio.code.org/users/sign_in?lang=en-US"
     And element "#locale option:checked" contains text "English"
-    And element "#header-incubator" contains text "Incubator"
+    And element ".main h2" contains text "Have an account already? Sign in"
 
     When I select the "فارسی" option in dropdown "locale"
-    And I get redirected away from "http://studio.code.org/incubator?lang=en-US"
-    Then check that I am on "http://studio.code.org/incubator?lang=fa-IR"
+    And I get redirected away from "http://studio.code.org/users/sign_in?lang=en-US"
+    Then check that I am on "http://studio.code.org/users/sign_in?lang=fa-IR"
     And element "#locale option:checked" contains text "فارسی"
-    And element "#header-incubator" contains text "کارگاه"
+    And element ".main h2" contains text "دارای حساب کاربری هستید؟ وارد سیستم شوید"
 
   Scenario: User can switch between the international and regional versions using the language selector on a Lab page
     Given I am on "http://studio.code.org/projects/artist/new"
