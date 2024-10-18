@@ -31,6 +31,9 @@ const Workspace = () => {
   const hasRestoredOldVersion = useAppSelector(
     state => state.lab2Project.restoredOldVersion
   );
+  const showLockedFilesBanner = useAppSelector(
+    state => state.codebridgeWorkspace.showLockedFilesBanner
+  );
   const dispatch = useAppDispatch();
 
   const headerContent = (
@@ -83,6 +86,13 @@ const Workspace = () => {
           />
         </div>
         <div className={moduleStyles.workspaceWarningArea}>
+          {showLockedFilesBanner && (
+            <Alert
+              text={WARNING_BANNER_MESSAGES.LOCK_FILES}
+              type={'info'}
+              className={moduleStyles.lockedFilesBanner}
+            />
+          )}
           {isStartMode && (
             <Alert
               text={
