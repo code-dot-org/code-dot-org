@@ -48,6 +48,7 @@ export default function RubricContainer({
   const rubricTabSessionKey = 'rubricFABTabSessionKey';
   const rubricPositionX = 'rubricFABPositionX';
   const rubricPositionY = 'rubricFABPositionY';
+  const rubricId = rubric.id;
 
   const [selectedTab, setSelectedTab] = useState(
     tryGetSessionStorage(rubricTabSessionKey, TAB_NAMES.RUBRIC) ||
@@ -102,6 +103,47 @@ export default function RubricContainer({
   useEffect(() => {
     fetchAiEvaluations();
   }, [fetchAiEvaluations]);
+
+  const [allTeacherEvaluationData, setAllTeacherEvaluationData] = useState([]);
+
+  const fetchTeacherEvaluationAll = (rubricId, sectionId) => {
+    return fetch(
+      `/rubrics/${rubricId}/get_teacher_evaluations_for_all?section_id=${sectionId}`
+    );
+  };
+
+  useEffect(() => {
+    const abort = new AbortController();
+    if (!!rubricId && !!sectionId) {
+      fetchTeacherEvaluationAll(rubricId, sectionId).then(response => {
+        if (response.ok) {
+          response.json().then(data => setAllTeacherEvaluationData(data));
+        }
+      });
+    }
+    return () => abort.abort();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [rubricId, sectionId]);
+
+  const [allAiEvaluationStatus, setAllAiEvaluationStatus] = useState(null);
+
+  const fetchAiEvaluationStatusAll = (rubricId, sectionId) => {
+    return fetch(
+      `/rubrics/${rubricId}/ai_evaluation_status_for_all?section_id=${sectionId}`
+    );
+  };
+
+  useEffect(() => {
+    const abort = new AbortController();
+    if (!!rubricId && !!sectionId) {
+      fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
+        if (response.ok) {
+          response.json().then(data => setAllAiEvaluationStatus(data));
+        }
+      });
+    }
+    return () => abort.abort();
+  }, [rubricId, sectionId]);
 
   useEffect(() => {
     trySetSessionStorage(rubricTabSessionKey, selectedTab);
@@ -354,6 +396,8 @@ export default function RubricContainer({
               sectionId={sectionId}
               tabSelectCallback={tabSelectCallback}
               reportingData={reportingData}
+              allTeacherEvaluationData={allTeacherEvaluationData}
+              allAiEvaluationStatus={allAiEvaluationStatus}
             />
           )}
         </div>

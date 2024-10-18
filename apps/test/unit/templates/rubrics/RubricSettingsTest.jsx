@@ -68,12 +68,10 @@ describe('RubricSettings', () => {
     }
   }
 
-  function stubFetch(evalStatus = {}, teacherEvals = {}) {
+  function stubFetch(evalStatus = {}) {
     fetchStub = jest.spyOn(window, 'fetch').mockImplementation(url => {
       if (/rubrics\/\d+\/ai_evaluation_status_for_all.*/.test(url)) {
         return Promise.resolve(new Response(JSON.stringify(evalStatus)));
-      } else if (/rubrics\/\d+\/get_teacher_evaluations_for_all.*/.test(url)) {
-        return Promise.resolve(new Response(JSON.stringify(teacherEvals)));
       }
       return Promise.resolve(new Response(JSON.stringify({})));
     });
@@ -81,7 +79,7 @@ describe('RubricSettings', () => {
 
   beforeEach(() => {
     fetchStub = jest.spyOn(window, 'fetch');
-    stubFetch(ready, evals);
+    stubFetch();
     sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
     refreshAiEvaluationsSpy = jest.fn();
     jest.spyOn(utils, 'queryParams').mockImplementation(arg => {
@@ -184,6 +182,8 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
+          allTeacherEvaluationData={evals}
+          allAiEvaluationStatus={ready}
         />
       </Provider>
     );
@@ -200,6 +200,8 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
+          allTeacherEvaluationData={evals}
+          allAiEvaluationStatus={ready}
         />
       </Provider>
     );
@@ -213,8 +215,6 @@ describe('RubricSettings', () => {
   });
 
   it('disables run AI assessment for all button when no students have attempted', async () => {
-    stubFetch(noAttempts, evals);
-
     render(
       <Provider store={store}>
         <RubricSettings
@@ -222,6 +222,8 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
+          allTeacherEvaluationData={evals}
+          allAiEvaluationStatus={noAttempts}
         />
       </Provider>
     );
@@ -232,8 +234,6 @@ describe('RubricSettings', () => {
   });
 
   it('disables run AI assessment for all button when all student work has been evaluated', async () => {
-    stubFetch(noUnevaluated, evals);
-
     render(
       <Provider store={store}>
         <RubricSettings
@@ -241,6 +241,8 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
+          allTeacherEvaluationData={evals}
+          allAiEvaluationStatus={noUnevaluated}
         />
       </Provider>
     );
@@ -263,6 +265,8 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
+          allTeacherEvaluationData={evals}
+          allAiEvaluationStatus={ready}
         />
       </Provider>
     );
@@ -300,6 +304,8 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
+          allTeacherEvaluationData={evals}
+          allAiEvaluationStatus={ready}
         />
       </Provider>
     );
@@ -339,7 +345,7 @@ describe('RubricSettings', () => {
     // Perform fetches and re-renders
     await wait();
 
-    expect(fetchStub).toHaveBeenCalledTimes(4);
+    expect(fetchStub).toHaveBeenCalledTimes(2);
     expect(
       screen.getByRole('button', {name: i18n.runAiAssessmentClass()})
     ).toBeDisabled();
@@ -347,7 +353,6 @@ describe('RubricSettings', () => {
   });
 
   it('displays switch tab text and button when there are no evaluations', async () => {
-    stubFetch(ready, noEvals);
     render(
       <Provider store={store}>
         <RubricSettings
@@ -355,6 +360,8 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
+          allTeacherEvaluationData={noEvals}
+          allAiEvaluationStatus={ready}
         />
       </Provider>
     );
@@ -375,6 +382,8 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
+          allTeacherEvaluationData={evals}
+          allAiEvaluationStatus={ready}
         />
       </Provider>
     );
@@ -396,6 +405,8 @@ describe('RubricSettings', () => {
           rubric={defaultRubric}
           reportingData={reportingData}
           sectionId={1}
+          allTeacherEvaluationData={evals}
+          allAiEvaluationStatus={ready}
         />
       </Provider>
     );
@@ -423,6 +434,8 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
+          allTeacherEvaluationData={evals}
+          allAiEvaluationStatus={ready}
         />
       </Provider>
     );
@@ -442,6 +455,8 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
+          allTeacherEvaluationData={evals}
+          allAiEvaluationStatus={ready}
         />
       </Provider>
     );
@@ -458,6 +473,8 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
+          allTeacherEvaluationData={evals}
+          allAiEvaluationStatus={ready}
         />
       </Provider>
     );
