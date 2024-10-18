@@ -880,6 +880,9 @@
   cs_ambassador_application_closed_subhead: "Questions about future opportunities or want to learn more? Please contact [youngwomen@code.org](%{email_url})."
   cs_ambassador_application_questions: "Questions? Please contact [youngwomen@code.org](%{email_url})"
   cs_ambassador_application_parter_program: "Not a high school student or teacher? Check out our [Partner Program](#partner-program)."
+  cs_ambassador_closed_heading: "2024 - 25 School Year Applications Now Closed"
+  cs_ambassador_next_year_open: "Next year's application will open in Spring 2025."
+  cs_ambassador_drop_us_a_note: "Drop us a note at [youngwomen@code.org](%{email_url}) to be notified when applications open again!"
   cs_ambassador_do_heading: "What do CS Ambassadors do?"
   cs_ambassador_do_desc: "CS Ambassadors encourage young women to explore the subject, and lift each other up as they reclaim their place in computer science. CS Ambassadors connect with their peers to share their excitement and love of computer science. They visit classrooms, host tables at lunch, and speak at assemblies and club meetings. CS Ambassadors work with teachers and school administrators to breakdown stereotypes that hold young women back."
   cs_ambassador_steps_heading: "What do I need to become a CS Ambassador?"
@@ -1362,17 +1365,19 @@
     in_partnership: "In partnership with"
 
   gen_ai_middle_high_carousel_card:
-    overline: "Grades: 8-12"
+    overline: "8-12"
     title: "Exploring Generative AI"
     desc: "Empower students with hands-on projects and ethical insights into generative AI, equipping them to think critically and innovate in an AI-driven world."
     duration: "6 weeks"
+    aria_label: "Explore the Exploring Generative AI course"
 
-  gen_ai_pl_carousel_cared:
+  gen_ai_pl_carousel_card:
     overline: "8-12 Teachers"
     title: "Teaching Exploring Generative AI"
     curriculum: "Exploring Generative AI"
     duration: "2.5 hours"
     prerequisites: "Verified teacher account or SSO-login needed to access AI Chat Lab"
+    aria_label: "Start the Teaching Exploring Generative AI professional learning course"
 
   ai_integrations:
     heading: "AI Integrations"
@@ -1464,6 +1469,12 @@
   ai_vid_computervision_caption: "Computer Vision"
   ai_vid_ethics1_caption: "Ethics & AI: Equal Access and Algorithmic Bias"
   ai_vid_ethics2_caption: "Ethics & AI: Privacy and the Future of Work"
+
+  gen_ai_vid_input_caption: "Generative AI: Input & Pre-training"
+  gen_ai_vid_storage_caption: "Generative AI: Storage & Embeddings"
+  gen_ai_vid_processing_caption: "Generative AI: Processing & Neural Networks"
+  gen_ai_vid_attention_caption: "Generative AI: Attention"
+  gen_ai_vid_output_caption: "Generative AI: Output & Probabilities"
 
   admins_page_top_heading: "Expand computer science in your district"
   admins_page_top_subhead: "Unlock the future of education with Code.org's comprehensive computer science (CS) programs."
@@ -2375,6 +2386,11 @@
         title: "Curriculum Catalog"
         desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
         button_label: "Explore the catalog"
+
+  access_report_skinny_banner:
+    title: "The 2024 State of CS Report is here!"
+    desc: "Check out the latest data on national and state-level computer science education policy, including policy trends, maps, state summaries, and implementation data."
+    read_report: "Read the report"
 
   app_lab_page:
     heading: "App Lab"
@@ -10976,6 +10992,12 @@
         desc: "Explore a wide selection of one-hour tutorial designed for all ages in over 45 languages."
         button: "Explore activities"
 
+  hoc_sweepstakes_2024:
+    heading: "Win $500 worth of DonorsChoose Credits!"
+    desc: "Now's your chance to win! Code.org is giving away DonorsChoose credits to 250 inspiring teachers! Register your Hour of Code event now, and choose to be entered for a chance to win! [See Official Rules](%{rules_url})"
+    must_be_18: "Must be at least 18 years old at the time you enter"
+    must_be_employed: "Must be employed as a full-time teacher by a public school, public charter school or Office of Head Start that is located in the US"
+
   hoc_activities:
     heading: "Explore activities"
     desc: "Teachers: [Host an hour](%{host_url}) or [read the How-To Guide](%{how_to_url})"
@@ -12009,6 +12031,8 @@
   video_library_page_hero_description: "Code.org's growing library of educational videos is available for re-use by educators worldwide, online or in classrooms. Our goal is to amplify our efforts beyond our own curriculum's reach."
   video_library_page_title_ai_works: "How AI Works"
   video_library_page_description_ai_works: "This series of short videos will introduce you to how artificial intelligence works and why it matters. Learn about neural networks, or how AI learns, and delve into issues like algorithmic bias and the ethics of AI decision-making."
+  video_library_page_title_gen_ai: "Exploring Generative AI"
+  video_library_page_description_gen_ai: "Generative AI may seem magical and mysterious, but it’s a lot easier to understand when you break it down to four core components: input, storage, processing, and output. Learn How Generative AI Works in this video series!"
   video_library_page_title_computers_work: "How Computers Work"
   video_library_page_description_computers_work: "Explains what makes a computer a computer, how digital information is represented in 1s and 0s, how computer circuits work to manipulate digital information, and how a central processing unit (CPU) and operating system control the inputs, outputs, memory, and hardware of a computer."
   video_library_page_title_internet_works: "How the Internet Works"

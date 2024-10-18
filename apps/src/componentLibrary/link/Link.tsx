@@ -31,12 +31,14 @@ export interface LinkBaseProps extends HTMLAttributes<HTMLAnchorElement> {
 export type LinkWithChildren = LinkBaseProps & {
   /** Link content */
   children: React.ReactNode;
+  className?: string;
   text?: never;
 };
 
 export type LinkWithText = LinkBaseProps & {
   /** Link text content */
   text: string;
+  className?: string;
   children?: never;
 };
 

@@ -110,6 +110,26 @@ describe('useSchoolInfo', () => {
       await waitForNextUpdate(); // Wait for initial render
     });
 
+    it('should reset school info to initial state if passed', async () => {
+      await act(async () => {
+        hook.current.setSchoolZip('90210');
+      });
+      expect(hook.current.schoolZip).toBe('90210');
+      await act(async () => {
+        hook.current.setSchoolId(NonSchoolOptions.CLICK_TO_ADD);
+        hook.current.setSchoolName('Fake School');
+      });
+      expect(hook.current.schoolId).toBe(NonSchoolOptions.CLICK_TO_ADD);
+      expect(hook.current.schoolName).toBe('Fake School');
+      await act(async () => {
+        hook.current.reset();
+      });
+      expect(hook.current.schoolZip).toBe(initialState.schoolZip);
+      expect(hook.current.schoolName).toBe(initialState.schoolName);
+      expect(hook.current.schoolId).toBe(initialState.schoolId);
+      expect(hook.current.country).toBe(initialState.country);
+    });
+
     describe('country updates', () => {
       it('should update sessionStorage', () => {
         act(() => {
@@ -218,32 +238,32 @@ describe('useSchoolInfo', () => {
           {value: '2', text: 'Other School'},
         ]);
       });
-    });
 
-    it('should send an analytics event', async () => {
-      await act(async () => {
-        hook.current.setSchoolZip('90210');
+      it('should send an analytics event', async () => {
+        await act(async () => {
+          hook.current.setSchoolZip('90210');
+        });
+
+        expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
+          EVENTS.ZIP_CODE_ENTERED,
+          {zip: '90210'},
+          PLATFORMS.BOTH
+        );
       });
 
-      expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
-        EVENTS.ZIP_CODE_ENTERED,
-        {zip: '90210'},
-        PLATFORMS.BOTH
-      );
-    });
+      it('should fetch schools', async () => {
+        await act(async () => {
+          hook.current.setSchoolZip('90210');
+        });
 
-    it('should fetch schools', async () => {
-      await act(async () => {
-        hook.current.setSchoolZip('90210');
+        expect(mockFetch).toHaveBeenCalledTimes(2);
+        expect(mockFetch.mock.calls[0][0]).toEqual(
+          expect.stringMatching(initialState.schoolZip)
+        );
+        expect(mockFetch.mock.calls[1][0]).toEqual(
+          expect.stringMatching('90210')
+        );
       });
-
-      expect(mockFetch).toHaveBeenCalledTimes(2);
-      expect(mockFetch.mock.calls[0][0]).toEqual(
-        expect.stringMatching(initialState.schoolZip)
-      );
-      expect(mockFetch.mock.calls[1][0]).toEqual(
-        expect.stringMatching('90210')
-      );
     });
 
     describe('schoolId updates', () => {

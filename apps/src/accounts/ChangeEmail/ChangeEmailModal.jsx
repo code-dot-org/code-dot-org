@@ -1,18 +1,19 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Alert, {alertTypes} from '@cdo/apps/componentLibrary/alert/Alert';
+import {Button} from '@cdo/apps/componentLibrary/button';
+import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
+import {Heading3} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
-import {hashEmail} from '../code-studio/hashEmail';
-import {
-  Header,
-  ConfirmCancelFooter,
-} from '../sharedComponents/SystemDialog/SystemDialog';
-import BaseDialog from '../templates/BaseDialog';
-import color from '../util/color';
-import {isEmail} from '../util/formatValidation';
+import {hashEmail} from '../../code-studio/hashEmail';
+import BaseDialog from '../../templates/BaseDialog';
+import {isEmail} from '../../util/formatValidation';
 
-import ChangeEmailForm from './ChangeEmailForm';
+import {ChangeEmailForm} from './ChangeEmailForm';
+
+import styles from './modalStyle.module.scss';
 
 const STATE_INITIAL = 'initial';
 const STATE_SAVING = 'saving';
@@ -63,23 +64,19 @@ export default class ChangeEmailModal extends React.Component {
 
   onSubmitFailure = error => {
     if (error && Object.prototype.hasOwnProperty.call(error, 'serverErrors')) {
-      this.setState(
-        {
-          saveState: STATE_INITIAL,
-          serverErrors: error.serverErrors,
-        },
-        () => this.changeEmailForm.focusOnAnError()
-      );
+      this.setState({
+        saveState: STATE_INITIAL,
+        serverErrors: error.serverErrors,
+      });
     } else {
       this.setState({saveState: STATE_UNKNOWN_ERROR});
     }
   };
 
-  isFormValid(validationErrors) {
-    return Object.keys(validationErrors).every(key => !validationErrors[key]);
-  }
+  isFormValid = validationErrors =>
+    Object.keys(validationErrors).every(key => !validationErrors[key]);
 
-  getValidationErrors() {
+  getValidationErrors = () => {
     const {serverErrors} = this.state;
     return {
       newEmail: serverErrors.newEmail || this.getNewEmailValidationError(),
@@ -89,7 +86,7 @@ export default class ChangeEmailModal extends React.Component {
       emailOptIn:
         serverErrors.emailOptIn || this.getEmailOptInValidationError(),
     };
-  }
+  };
 
   getNewEmailValidationError = () => {
     const {newEmail} = this.state.values;
@@ -146,13 +143,15 @@ export default class ChangeEmailModal extends React.Component {
       <BaseDialog
         useUpdatedStyles
         isOpen
-        handleClose={this.cancel}
+        hideCloseButton
         uncloseable={STATE_SAVING === saveState}
       >
-        <div style={styles.container}>
-          <Header text={i18n.changeEmailModal_title()} />
+        <CloseButton onClick={this.cancel} className={styles.closeButton} />
+        <div className={styles.container}>
+          <Heading3 visualAppearance="heading-sm">
+            {i18n.changeEmailModal_title()}
+          </Heading3>
           <ChangeEmailForm
-            ref={x => (this.changeEmailForm = x)}
             values={values}
             validationErrors={validationErrors}
             disabled={STATE_SAVING === saveState}
@@ -161,28 +160,30 @@ export default class ChangeEmailModal extends React.Component {
             onChange={this.onFormChange}
             onSubmit={this.save}
           />
-          <ConfirmCancelFooter
-            confirmText={i18n.changeEmailModal_save()}
-            onConfirm={this.save}
-            onCancel={this.cancel}
-            disableConfirm={STATE_SAVING === saveState || !isFormValid}
-            disableCancel={STATE_SAVING === saveState}
-            tabIndex="2"
-          >
-            {STATE_SAVING === saveState && <em>{i18n.saving()}</em>}
-            {STATE_UNKNOWN_ERROR === saveState && (
-              <em>{i18n.changeEmailModal_unexpectedError()}</em>
-            )}
-          </ConfirmCancelFooter>
+          {STATE_UNKNOWN_ERROR === saveState && (
+            <Alert
+              text={i18n.changeEmailModal_unexpectedError()}
+              type={alertTypes.danger}
+              className={styles.hasError}
+            />
+          )}
+          <div className={styles.buttonContainer}>
+            <Button
+              text={i18n.cancel()}
+              onClick={this.cancel}
+              type="secondary"
+              color="gray"
+              disabled={STATE_SAVING === saveState}
+            />
+            <Button
+              text={i18n.changeEmailModal_save()}
+              onClick={this.save}
+              isPending={STATE_SAVING === saveState}
+              disabled={STATE_SAVING === saveState || !isFormValid}
+            />
+          </div>
         </div>
       </BaseDialog>
     );
   };
 }
-
-const styles = {
-  container: {
-    margin: 20,
-    color: color.charcoal,
-  },
-};

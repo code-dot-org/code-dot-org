@@ -18,8 +18,6 @@ const getMoveFileMock = (): [ProjectFile, MoveFileFunction] => {
   return [moveFileData, mock];
 };
 
-const appName = 'Codebridge Unit Test';
-
 describe('openMoveFilePrompt', function () {
   it('can successfully move a file', async function () {
     const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
@@ -37,7 +35,6 @@ describe('openMoveFilePrompt', function () {
       projectFiles: testProject.files,
       projectFolders: testProject.folders,
       dialogControl: getDialogControlMock(destinationFolderName),
-      appName,
       moveFile: moveFileDataMock,
       isStartMode: false,
       validationFile: undefined,
@@ -62,7 +59,6 @@ describe('openMoveFilePrompt', function () {
       projectFiles: testProject.files,
       projectFolders: testProject.folders,
       dialogControl: getDialogControlMock(destinationFolderName),
-      appName,
       moveFile: moveFileDataMock,
       isStartMode: false,
       validationFile: undefined,
@@ -89,7 +85,6 @@ describe('openMoveFilePrompt', function () {
       projectFiles: testProject.files,
       projectFolders: testProject.folders,
       dialogControl: getDialogControlMock(destinationFolderName),
-      appName,
       moveFile: moveFileDataMock,
       isStartMode: false,
       validationFile: undefined,

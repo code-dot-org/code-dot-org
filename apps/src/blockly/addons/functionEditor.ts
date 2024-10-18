@@ -7,9 +7,7 @@ import {
   ScrollBlockDragger,
   ScrollOptions,
 } from '@blockly/plugin-scroll-options';
-import {Block, WorkspaceSvg} from 'blockly';
-import {IProcedureModel} from 'blockly/core/procedures';
-import {State} from 'blockly/core/serialization/blocks';
+import * as GoogleBlockly from 'blockly/core';
 
 import {flyoutCategory as behaviorsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/behaviorBlocks';
 import {flyoutCategory as functionsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/proceduresBlocks';
@@ -44,7 +42,7 @@ import WorkspaceSvgFrame from './workspaceSvgFrame';
 export default class FunctionEditor {
   private isReadOnly: boolean;
   private dom: HTMLElement | undefined;
-  private primaryWorkspace: WorkspaceSvg | undefined;
+  private primaryWorkspace: GoogleBlockly.WorkspaceSvg | undefined;
   private editorWorkspace: EditorWorkspaceSvg | undefined;
   private block: ProcedureBlock | undefined;
 
@@ -68,7 +66,8 @@ export default class FunctionEditor {
     // Because we mirror block creation onto the hidden workspace, we need to avoid
     // trying to create blocks with ids that are already used in other definitions.
     const toolbox = Blockly.cdoUtils.toolboxWithoutIds(options.toolbox);
-    this.primaryWorkspace = Blockly.getMainWorkspace() as WorkspaceSvg;
+    this.primaryWorkspace =
+      Blockly.getMainWorkspace() as GoogleBlockly.WorkspaceSvg;
     // Customize auto-populated Functions toolbox category.
     this.editorWorkspace = Blockly.blockly_.inject(modalEditor, {
       comments: false, // Disables Blockly's built-in comment functionality.
@@ -229,8 +228,8 @@ export default class FunctionEditor {
   }
 
   showForFunctionHelper(
-    existingProcedureBlock: Block | null,
-    newProcedure?: IProcedureModel,
+    existingProcedureBlock: GoogleBlockly.Block | null,
+    newProcedure?: GoogleBlockly.Procedures.IProcedureModel,
     procedureType?: ProcedureType
   ) {
     if (
@@ -550,7 +549,9 @@ export default class FunctionEditor {
    * @param blockConfig: Block json configuration
    * @returns Block configuration with x and y coordinates
    */
-  addEditorWorkspaceBlockConfig(blockConfig: State) {
+  addEditorWorkspaceBlockConfig(
+    blockConfig: GoogleBlockly.serialization.blocks.State
+  ) {
     // Position the blocks within the workspace svg frame.
     const x = frameSizes.MARGIN_SIDE + 5;
     const y = frameSizes.MARGIN_TOP + frameSizes.WORKSPACE_HEADER_HEIGHT + 15;
@@ -590,8 +591,8 @@ export default class FunctionEditor {
   }
 
   createProcedureModelForWorkspace(
-    workspace: WorkspaceSvg,
-    procedure: IProcedureModel
+    workspace: GoogleBlockly.WorkspaceSvg,
+    procedure: GoogleBlockly.Procedures.IProcedureModel
   ) {
     const newProcedure = new ObservableProcedureModel(
       workspace,

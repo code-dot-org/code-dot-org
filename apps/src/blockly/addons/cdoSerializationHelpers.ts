@@ -1,4 +1,4 @@
-import {Block, WorkspaceSvg} from 'blockly';
+import * as GoogleBlockly from 'blockly/core';
 import _ from 'lodash';
 
 import {WORKSPACE_PADDING, SETUP_TYPES, BLOCK_TYPES} from '../constants';
@@ -40,7 +40,10 @@ export function hasBlocks(
  * @param {Blockly.Workspace} workspace - The current Blockly workspace
  * @returns {number} Desired coordinate (as far left/right as possible depending on whether we are in LTR or RTL)
  */
-function getXCoordinate(block: ExtendedBlockSvg, workspace: WorkspaceSvg) {
+function getXCoordinate(
+  block: ExtendedBlockSvg,
+  workspace: GoogleBlockly.WorkspaceSvg
+) {
   const {contentWidth = 0, viewWidth = 0} = workspace.getMetrics();
   const padding = viewWidth ? WORKSPACE_PADDING : 0;
   const width = viewWidth || contentWidth;
@@ -135,7 +138,9 @@ export function addPositionsToState(
  * Position blocks on a workspace (if they do not already have positions)
  * @param {Blockly.Workspace} workspace - the current Blockly workspace
  */
-export function positionBlocksOnWorkspace(workspace: WorkspaceSvg) {
+export function positionBlocksOnWorkspace(
+  workspace: GoogleBlockly.WorkspaceSvg
+) {
   if (!workspace.rendered) {
     return;
   }
@@ -160,7 +165,7 @@ export function positionBlocksOnWorkspace(workspace: WorkspaceSvg) {
  */
 function adjustBlockPositions(
   blocks: ExtendedBlockSvg[],
-  workspace: WorkspaceSvg
+  workspace: GoogleBlockly.WorkspaceSvg
 ) {
   // Ordered colliders tracks the areas occupied by existing blocks; new blocks
   // are added to maintain top-to-bottom ordering
@@ -278,15 +283,17 @@ export function isOverlapping(collider1: Collider, collider2: Collider) {
  * @param {Blockly.Block} block - the block being considered
  * @returns {boolean} - true if the block is at the edge of the workspace
  */
-export function isBlockAtEdge(block: Block) {
+export function isBlockAtEdge(block: GoogleBlockly.Block) {
   const {defaultX, defaultY} = getDefaultLocation(
-    block.workspace as WorkspaceSvg
+    block.workspace as GoogleBlockly.WorkspaceSvg
   );
   const {x = 0, y = 0} = block.getRelativeToSurfaceXY();
   return x === defaultX || y === defaultY;
 }
 
-export const getDefaultLocation = (workspaceOverride?: WorkspaceSvg) => {
+export const getDefaultLocation = (
+  workspaceOverride?: GoogleBlockly.WorkspaceSvg
+) => {
   const workspace = workspaceOverride || Blockly.getMainWorkspace();
   const isRTL = workspace.RTL;
 
@@ -344,7 +351,7 @@ export function partitionJsonBlocksByType(
  * @param {Blockly.Workspace} workspace - The workspace to serialize
  * @returns {Object} The combined JSON serialization of the workspace and the hidden definition workspace.
  */
-export function getProjectSerialization(workspace: WorkspaceSvg) {
+export function getProjectSerialization(workspace: GoogleBlockly.WorkspaceSvg) {
   const workspaceSerialization = Blockly.serialization.workspaces.save(
     workspace
   ) as WorkspaceSerialization;
