@@ -32,7 +32,7 @@ $arrow-size: 1.5rem;
   }
 
   .show-mobile {
-    display: none;
+    display: none !important;
   }
 
   .hide-mobile {
@@ -166,14 +166,17 @@ $arrow-size: 1.5rem;
   @media (max-width: 1268px) {
     &.show-small-desktop,
     .show-small-desktop {
-      display: block;
+      display: block !important;
     }
   }
 
   @media(max-width: 1023px) {
     &.show-mobile,
     .show-mobile {
-      display: block;
+      display: block !important;
+    }
+    .show-mobile.item {
+      display: flex !important;
     }
     &.hide-mobile,
     .hide-mobile {
