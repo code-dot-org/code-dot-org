@@ -5,9 +5,9 @@ import {
 import {Dashboard} from 'cloudwatch-dashboard-types';
 import {exit} from 'process';
 
-import modelDescriptions from '../../static/aichat/modelDescriptions.json';
+import modelDescriptions from '../../../static/aichat/modelDescriptions.json';
+import {DASHBOARD_NAME, REGION} from '../constants';
 
-import {DASHBOARD_NAME, REGION} from './constants';
 import {
   createActiveJobGraph,
   createBrowserLatencyByModelGraph,

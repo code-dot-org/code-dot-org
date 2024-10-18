@@ -5,9 +5,8 @@ import {
   WidgetProperties,
 } from 'cloudwatch-dashboard-types';
 
-import {AiRequestExecutionStatus} from '../../generated-scripts/sharedConstants';
-import {getTypedKeys} from '../../src/types/utils';
-
+import {AiRequestExecutionStatus} from '../../../generated-scripts/sharedConstants';
+import {getTypedKeys} from '../../../src/types/utils';
 import {
   BROWSER_COLORS,
   commonGraphProps,
@@ -19,7 +18,7 @@ import {
   REGION,
   STATUS_COLORS,
   WARNING_COLOR,
-} from './constants';
+} from '../constants';
 
 export function createTitleWidget(title: string, level: 'h1' | 'h2'): Widget {
   return createMarkdownWidget(`${level === 'h1' ? '#' : '##'} **${title}**`);

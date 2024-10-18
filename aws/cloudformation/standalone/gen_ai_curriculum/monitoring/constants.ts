@@ -1,5 +1,7 @@
 export const ENDPOINT_VARIANT = 'AllTraffic';
 export const REGION = 'us-east-1';
+export const SNS_TOPIC =
+  'arn:aws:sns:us-east-1:475661607190:javabuilder-low-urgency'; // This will be updated to a team-based SNS topic.
 
 export const commonGraphProps = {
   width: 6,
