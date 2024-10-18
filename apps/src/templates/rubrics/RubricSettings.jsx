@@ -151,8 +151,8 @@ function RubricSettings({
 
   const parseTeacherEvaluationData = useCallback(
     data => {
-      var teachEvalArr = [];
-      var count = 0;
+      const teachEvalArr = [];
+      let count = 0;
       data.forEach(student => {
         var teachEvalRow = {
           user_name: student.user_name,
@@ -191,7 +191,6 @@ function RubricSettings({
 
   // after ai eval is requested, poll for status changes
   useEffect(() => {
-    const abort = new AbortController();
     if (polling && !!rubricId && !!sectionId) {
       const intervalId = setInterval(() => {
         refreshAiEvaluations();
@@ -218,7 +217,6 @@ function RubricSettings({
       }, 5000);
       return () => clearInterval(intervalId);
     }
-    return () => abort.abort();
   }, [
     rubricId,
     polling,
