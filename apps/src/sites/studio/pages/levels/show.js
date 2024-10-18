@@ -37,8 +37,6 @@ function initPage() {
   // the mini view
   getStore().dispatch(setIsMiniView(true));
 
-  analyticsReporter.sendEvent(EVENTS.LEVEL_ACTIVITY, {}, PLATFORMS.BOTH);
-
   const redirectDialogMountPoint = document.getElementById('redirect-dialog');
   if (redirectDialogMountPoint && config.redirect_script_url) {
     ReactDOM.render(

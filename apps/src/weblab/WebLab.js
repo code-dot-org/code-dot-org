@@ -4,8 +4,6 @@ import {Provider} from 'react-redux';
 
 import project from '@cdo/apps/code-studio/initApp/project';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {FatalErrorType} from '@cdo/apps/weblab/constants';
 import {
   DisallowedHtmlWarningDialog,
@@ -240,8 +238,6 @@ WebLab.prototype.init = function (config) {
       });
     }
   }
-
-  analyticsReporter.sendEvent(EVENTS.LEVEL_ACTIVITY, {}, PLATFORMS.BOTH);
 
   ReactDOM.render(
     <Provider store={getStore()}>

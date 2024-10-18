@@ -19,7 +19,7 @@ import {TestResults} from '../constants';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {commands as audioCommands} from '../lib/util/audioApi';
 import logToCloud from '../logToCloud';
-import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
+import {EVENTS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
 import {getStore} from '../redux';
 import Sounds from '../Sounds';
@@ -190,8 +190,6 @@ Dance.prototype.init = function (config) {
     scriptId: state.progress.scriptId,
     userId: state.currentUser.userId,
   });
-
-  analyticsReporter.sendEvent(EVENTS.LEVEL_ACTIVITY, {}, PLATFORMS.BOTH);
 
   ReactDOM.render(
     <Provider store={getStore()}>
