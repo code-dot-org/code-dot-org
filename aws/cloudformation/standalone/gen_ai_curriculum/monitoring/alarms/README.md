@@ -1,8 +1,8 @@
 Code and configuration to create the AI Chat CloudWatch alarms here:
 
-In order to create or overwrite the existing alarms, run the following from this directory:
+In order to create or overwrite the existing alarms:
 
-```
-npm install
-npx ts-node createAlarms.ts
-```
+- Run from `monitoring` directory: `npm install`
+
+- Run from this directory: `npx ts-node createAlarms.ts`
+

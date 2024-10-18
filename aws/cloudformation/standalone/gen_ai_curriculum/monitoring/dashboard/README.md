@@ -2,12 +2,11 @@ Code and configuration to create the AI Chat CloudWatch dashboard here:
 
 https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards/dashboard/GenAICurriculum
 
-In order to create or overwrite the existing dashboard, run the following from this directory:
+In order to create or overwrite the existing dashboard:
 
-```
-npm install
-npx ts-node createDashboard.ts <test|production>
-```
+- Run from `monitoring` directory: `npm install`
+
+- Run from this directory: `npx ts-node createDashboard.ts`
 
 Specifying `test` allows you to test out your changes by writing to a test dashboard (GenAICurriculum-TEST). Run the command with `production` to write to the production dashboard.
 
