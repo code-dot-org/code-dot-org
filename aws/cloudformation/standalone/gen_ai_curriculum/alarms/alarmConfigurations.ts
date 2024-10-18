@@ -1,6 +1,6 @@
 import {ComparisonOperator} from '@aws-sdk/client-cloudwatch';
 
-import modelDescriptions from '../../../static/aichat/modelDescriptions.json';
+import modelDescriptions from '../../../../../apps/static/aichat/modelDescriptions.json';
 import {SNS_TOPIC} from '../constants';
 
 import {

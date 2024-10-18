@@ -4,6 +4,5 @@ In order to create or overwrite the existing alarms, run the following from this
 
 ```
 yarn add @aws-sdk/client-cloudwatch
-yarn add cloudwatch-dashboard-types
 npx ts-node createAlarms.ts
 ```
