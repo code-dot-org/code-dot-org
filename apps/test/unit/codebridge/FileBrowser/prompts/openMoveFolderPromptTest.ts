@@ -4,17 +4,17 @@ import {ProjectFolder} from '@codebridge/types';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
-import {testProject} from '../../test-files/';
+import {smallProject, testProject} from '../../test-files/';
 import {getDialogControlMock, getAnalyticsMock} from '../../test_utils';
 
 const getMoveFolderMock = (): [ProjectFolder, MoveFolderFunction] => {
-  const MoveFolderData = {} as ProjectFolder;
+  const moveFolderData = {} as ProjectFolder;
   const mock: MoveFolderFunction = (folderId, parentId) => {
-    MoveFolderData.id = folderId;
-    MoveFolderData.parentId = parentId;
+    moveFolderData.id = folderId;
+    moveFolderData.parentId = parentId;
   };
 
-  return [MoveFolderData, mock];
+  return [moveFolderData, mock];
 };
 
 describe('openMoveFolderPrompt', function () {
@@ -23,19 +23,38 @@ describe('openMoveFolderPrompt', function () {
     const folderId = '1';
     const destinationFolderId = '3';
 
-    const [MoveFolderData, MoveFolderDataMock] = getMoveFolderMock();
+    const [moveFolderData, moveFolderDataMock] = getMoveFolderMock();
 
     await openMoveFolderPrompt({
       folderId,
       projectFolders: testProject.folders,
       dialogControl: getDialogControlMock(destinationFolderId),
-      moveFolder: MoveFolderDataMock,
+      moveFolder: moveFolderDataMock,
       sendCodebridgeAnalyticsEvent,
     });
 
-    expect(MoveFolderData.id).toEqual(folderId);
-    expect(MoveFolderData.parentId).toEqual(destinationFolderId);
+    expect(moveFolderData.id).toEqual(folderId);
+    expect(moveFolderData.parentId).toEqual(destinationFolderId);
 
     expect(analyticsData.event).toEqual(EVENTS.CODEBRIDGE_MOVE_FOLDER);
+  });
+
+  it('can refuse to move a folder that cannot be moved', async function () {
+    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const folderId = '1';
+    const destinationFolderId = '0';
+
+    const [moveFolderData, moveFolderDataMock] = getMoveFolderMock();
+
+    await openMoveFolderPrompt({
+      folderId,
+      projectFolders: smallProject.folders,
+      dialogControl: getDialogControlMock(destinationFolderId),
+      moveFolder: moveFolderDataMock,
+      sendCodebridgeAnalyticsEvent,
+    });
+
+    expect(Object.keys(moveFolderData).length).toEqual(0);
+    expect(Object.keys(analyticsData).length).toEqual(0);
   });
 });
