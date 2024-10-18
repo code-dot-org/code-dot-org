@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '3.0.5'
+ruby '3.3.4'
 
 gem 'berkshelf'
 gem 'chef', '17.6.18'

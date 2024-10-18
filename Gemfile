@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '3.0.5'
+ruby '3.3.4'
 
 # Ruby 2.7 no longer includes some libraries by default; install
 # the ones we need here
