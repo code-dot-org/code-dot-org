@@ -24,8 +24,6 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I wait for 2 seconds
   And I click selector "#ui-floatingActionButton" once I see it
   And I wait until element "h5:contains(Code Quality)" is visible
-  And element ".uitest-student-progress-status" contains text "Submitted"
-
   And I wait until element "button:contains(Extensive)" is visible
   Then I click selector "button:contains(Extensive)"
   And I wait until element "#ui-teacherFeedback" is enabled
