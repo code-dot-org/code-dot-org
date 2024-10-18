@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -207,8 +208,9 @@ function StudentProgressStatus({level, aiEvalStatus, hasTeacherFeedback}) {
     return null;
   }
 
+  const classes = classnames('uitest-student-progress-status', bubbleColor);
   return (
-    <OverlineThreeText className={bubbleColor}>{bubbleText}</OverlineThreeText>
+    <OverlineThreeText className={classes}>{bubbleText}</OverlineThreeText>
   );
 }
 

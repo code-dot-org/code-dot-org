@@ -24,6 +24,8 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I wait for 2 seconds
   And I click selector "#ui-floatingActionButton" once I see it
   And I wait until element "h5:contains(Code Quality)" is visible
+  And element ".uitest-student-progress-status" contains text "Submitted"
+
   And I wait until element "button:contains(Extensive)" is visible
   Then I click selector "button:contains(Extensive)"
   And I wait until element "#ui-teacherFeedback" is enabled
@@ -34,6 +36,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I click selector "#ui-submitFeedbackButton" once I see it
   And I wait to see "#ui-feedback-submitted-timestamp"
   And I wait until element "p:contains(Feedback submitted at)" is visible
+  And element ".uitest-student-progress-status" contains text "Evaluated"
 
   # Check that the teacher can see submitted feedback
   # FAB should be sticky and be open when page loads
@@ -71,7 +74,7 @@ Scenario: Teacher views rubric product tour
   Then I wait until element "h1:contains(Class Data)" is visible
   And I wait until element ".introjs-tooltiptext" is visible
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
-  
+
   # Teacher views product tour step 3
   Then I wait until element "h1:contains(Understanding the AI Assessment)" is visible
   And I wait until element ".introjs-tooltiptext" is visible
