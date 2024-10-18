@@ -7,6 +7,8 @@
 # with the ones given here, or, if the value is 'false', it removes the
 # component from the page.
 
+locale: fa-IR
+
 # The top bar on the site consisting of dropdown menus and navigation links
 header:
   # The topbar (which is collapsed into the hamburger in certain contexts)

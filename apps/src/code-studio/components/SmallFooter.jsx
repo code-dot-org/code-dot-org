@@ -30,6 +30,7 @@ export default class SmallFooter extends React.Component {
     // encode string of html
     i18nDropdownInBase: PropTypes.bool.isRequired,
     localeUrl: PropTypes.string,
+    currentLocale: PropTypes.string,
     localeOptions: PropTypes.arrayOf(
       PropTypes.shape({
         value: PropTypes.string,
@@ -179,6 +180,7 @@ export default class SmallFooter extends React.Component {
           {this.props.i18nDropdownInBase && (
             <I18nDropdown
               localeUrl={this.props.localeUrl}
+              selectedLocale={this.props.currentLocale}
               optionsForLocaleSelect={this.props.localeOptions}
             />
           )}
