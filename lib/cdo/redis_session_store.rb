@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'action_dispatch/middleware/session/redis_store'
-require 'fileutils'
 
 module Cdo
   # This class extends +ActionDispatch::Session::RedisStore+ (:redis_store)
@@ -34,34 +33,14 @@ module Cdo
     #
     # @see https://github.com/rack/rack/blob/v2.2.9/lib/rack/session/abstract/id.rb#L342
     private def commit_session?(req, session, options)
-      unless options[:renew]
+      result = super
+
+      if result && options[:renew].blank?
         store_session = load_session(req).second.stringify_keys
-        return false if store_session['deleted']
+        result = false if store_session['deleted']
       end
 
-      super
-    end
-
-    # Overrides +Rack::Session::Abstract::Persisted#commit_session+ to add a global lock
-    # ensuring that only one process at a time can commit changes to the same session.
-    #
-    # @note Using the +File#flock+ exclusive lock to ensure single-process access.
-    # @see https://github.com/rack/rack/blob/v2.2.9/lib/rack/session/abstract/id.rb#L373
-    private def commit_session(req, ...)
-      lockfile = CDO.dir('dashboard', 'tmp', "commit_session_#{current_session_id(req)}.lock")
-
-      File.open(lockfile, 'w') do |f|
-        f.flock(File::LOCK_EX) # the next process will wait until the current process releases the lock
-        f.write_nonblock('l') # indicates that the lock is acquired
-
-        super
-      ensure
-        f.truncate(0) # indicates that the lock is released
-        f.flock(File::LOCK_UN) # releases the lock
-      end
-    ensure
-      # A non-empty lockfile indicates that it is in use by another process, so it should not be deleted.
-      FileUtils.rm_f(lockfile) if File.empty?(lockfile)
+      result
     end
   end
 end
