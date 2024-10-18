@@ -11,19 +11,19 @@
     "name_suffix": "_1",
     "panels": [
       {
-        "text": "Now you can change the temperature setting. It controls how creative AI Bot gets with its predictions.",
+        "text": "Now you can change the temperature setting. It controls how creative A.I. Bot gets with its predictions.",
         "imageUrl": "https://images.code.org/feee31aec89883c70fa359b10f9160a4-Screen Shot 2024-10-11 at 9.27.08 AM.png",
         "key": "music_ai_panels_aibeatblock_temperature_1-217131e9-522c-4f14-8fd4-0873ac2c1c75",
         "layout": "text-bottom-center"
       },
       {
-        "text": "A low temperature means the AI will stick closely to what you started with.",
+        "text": "A low temperature means A.I. Bot will stick closely to what you started with.",
         "imageUrl": "https://images.code.org/5809b9f0cf76e2667ab26c57db0640bb-miiiiiiild.gif",
         "key": "music_ai_panels_aibeatblock_temperature_3-4a5ea7cb-f73e-4ee8-9cf0-7c6681166f71",
         "layout": "text-bottom-center"
       },
       {
-        "text": "A high temperature means the AI will mix things up and create more surprising sounds.",
+        "text": "A high temperature means A.I Bot will create more surprising sounds.",
         "imageUrl": "https://images.code.org/ff9aa892860da9638a930c384ab184d0-spiiiiiiiicy.gif",
         "key": "music_ai_panels_aibeatblock-d2ba442b-68e2-47f1-abd5-15c49f5d243c",
         "layout": "text-bottom-center"
@@ -36,6 +36,6 @@
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:49.032+00:00\",\"changed\":[\"cloned from \\\"music_ai_panels_aibeatblock_temperature_3\\\"\"],\"cloned_from\":\"music_ai_panels_aibeatblock_temperature_3\"},{\"changed_at\":\"2024-10-08 18:22:16 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-08 18:22:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-11 16:28:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:49.032+00:00\",\"changed\":[\"cloned from \\\"music_ai_panels_aibeatblock_temperature_3\\\"\"],\"cloned_from\":\"music_ai_panels_aibeatblock_temperature_3\"},{\"changed_at\":\"2024-10-08 18:22:16 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-08 18:22:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-11 16:28:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 23:06:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Panels>
