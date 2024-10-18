@@ -5,11 +5,13 @@ require 'uri'
 
 raise 'please set CDO.db_endpoint_proxy_reporting' unless CDO.db_endpoint_proxy_reporting
 credentials = CDO.db_credential_reader
+host = CDO.db_endpoint_proxy_reporting.split(':')[0]
+port = CDO.db_endpoint_proxy_reporting.split(':')[1] || 3306
 db_connection_settings = URI::Generic.build(
   scheme: 'mysql',
   userinfo: credentials['username'] + ':' + credentials['password'],
-  host: CDO.db_endpoint_proxy_reporting,
-  port: 3306,
+  host: host,
+  port: port,
   path: '/' + CDO.dashboard_db_name
 )
 MysqlConsoleHelper.run(db_connection_settings, ARGV.join(' ').strip)

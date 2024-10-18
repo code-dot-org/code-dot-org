@@ -200,6 +200,7 @@ updates:
     directories:
     - "/aws/offsite/aurora-snapshots-fargate"
     - "/docker/dockerfiles"
+    - "/docker/developers"
     schedule:
       interval: "weekly"
       day: "sunday"
