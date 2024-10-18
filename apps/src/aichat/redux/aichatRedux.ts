@@ -44,6 +44,7 @@ import {
   isNotification,
   isChatMessage,
   FlaggedField,
+  DetectToxicityResponse,
 } from '../types';
 import {extractFieldsToCheckForToxicity} from '../utils';
 import {
@@ -197,56 +198,40 @@ const saveAiCustomization = async (
     .getMetricsReporter()
     .incrementCounter('Aichat.SaveStarted');
 
-  let passedToxicityScreening = false;
-
   // Wrap toxicity check in try/catch to handle unauthorized usage with a helpful user-facing message.
+  let toxicity: DetectToxicityResponse;
   try {
-    const toxicity = await detectToxicityInCustomizations(
+    toxicity = await detectToxicityInCustomizations(
       trimmedCurrentAiCustomizations
     );
-
-    // If any fields were flagged for toxicity, display a notification and don't try to save.
-    if (!toxicity.flaggedFields.length) {
-      passedToxicityScreening = true;
-    } else {
-      // Log for analysis purposes.
-      Lab2Registry.getInstance()
-        .getMetricsReporter()
-        .logInfo({
-          message: 'Toxicity detected in AI customizations',
-          flaggedFields: toxicity.flaggedFields,
-          customizations: extractFieldsToCheckForToxicity(
-            trimmedCurrentAiCustomizations
-          ),
-        });
-      Lab2Registry.getInstance()
-        .getMetricsReporter()
-        .incrementCounter('Aichat.SaveFailToxicityDetected');
-      const errorMessage = getToxicityErrorMessage(toxicity.flaggedFields);
-      dispatchSaveFailNotification(dispatch as AppDispatch, errorMessage, true);
-    }
   } catch (error) {
-    if (error instanceof NetworkError && error.response.status === 403) {
-      await notifyErrorUnauthorized(error, 'Model Customization', dispatch);
-    } else {
-      Lab2Registry.getInstance()
-        .getMetricsReporter()
-        .incrementCounter(
-          'Aichat.CustomizationToxicityScreeningErrorUnhandled'
-        );
-      // Default save error message.
-      const errorMessage =
-        'There was an error saving your project. Please try again.';
-      dispatchSaveFailNotification(dispatch, errorMessage);
-    }
-    dispatch(endSave());
+    await handleToxicityRequestError(error as Error, dispatch);
+    return;
   }
 
-  if (passedToxicityScreening) {
-    await Lab2Registry.getInstance()
-      .getProjectManager()
-      ?.save({source: JSON.stringify(trimmedCurrentAiCustomizations)}, true);
+  // If any fields were flagged for toxicity, display a notification and don't try to save.
+  if (toxicity.flaggedFields.length > 0) {
+    // Log for analysis purposes.
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logInfo({
+        message: 'Toxicity detected in AI customizations',
+        flaggedFields: toxicity.flaggedFields,
+        customizations: extractFieldsToCheckForToxicity(
+          trimmedCurrentAiCustomizations
+        ),
+      });
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .incrementCounter('Aichat.SaveFailToxicityDetected');
+    const errorMessage = getToxicityErrorMessage(toxicity.flaggedFields);
+    dispatchSaveFailNotification(dispatch as AppDispatch, errorMessage, true);
+    return;
   }
+
+  await Lab2Registry.getInstance()
+    .getProjectManager()
+    ?.save({source: JSON.stringify(trimmedCurrentAiCustomizations)}, true);
 };
 
 const getToxicityErrorMessage = (flaggedFields: FlaggedField[]) => {
@@ -528,6 +513,21 @@ async function notifyErrorUnauthorized(
       true
     )
   );
+}
+
+async function handleToxicityRequestError(error: Error, dispatch: AppDispatch) {
+  if (error instanceof NetworkError && error.response.status === 403) {
+    await notifyErrorUnauthorized(error, 'Model Customization', dispatch);
+  } else {
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .incrementCounter('Aichat.CustomizationToxicityScreeningErrorUnhandled');
+    // Default save error message.
+    const errorMessage =
+      'There was an error saving your project. Please try again.';
+    dispatchSaveFailNotification(dispatch, errorMessage);
+  }
+  dispatch(endSave());
 }
 
 async function handleChatCompletionError(
