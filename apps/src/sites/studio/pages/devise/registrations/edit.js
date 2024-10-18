@@ -25,6 +25,7 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 const scriptData = getScriptData('edit');
 const {
   userType,
+  userAge,
   userUsState,
   isAdmin,
   isPasswordRequired,
