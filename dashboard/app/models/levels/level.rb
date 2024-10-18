@@ -647,7 +647,7 @@ class Level < ApplicationRecord
     level = Level.find_by_name(new_name)
     if level
       return level if allow_existing
-      new_name = next_unused_name_for_copy(suffix)
+      raise "Level with given name already exists, please do a shallow copy if reuse is intended or use a different suffix"
     end
 
     begin
