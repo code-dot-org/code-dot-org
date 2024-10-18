@@ -2,7 +2,6 @@
 
 import React, {useCallback, useEffect} from 'react';
 
-import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import ActionDropdown from '@cdo/apps/componentLibrary/dropdown/actionDropdown/ActionDropdown';
 import SegmentedButtons, {
@@ -61,10 +60,6 @@ const AichatView: React.FunctionComponent = () => {
 
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
-
-  const beforeNextLevel = useCallback(() => {
-    dispatch(sendSuccessReport('aichat'));
-  }, [dispatch]);
 
   const levelAichatSettings = useAppSelector(
     state =>
@@ -258,10 +253,7 @@ const AichatView: React.FunctionComponent = () => {
                   }
                 )}
               >
-                <Instructions
-                  beforeNextLevel={beforeNextLevel}
-                  className={moduleStyles.instructions}
-                />
+                <Instructions className={moduleStyles.instructions} />
               </PanelContainer>
             </div>
             {!allFieldsHidden && (

@@ -19,6 +19,7 @@ import projects from '../templates/projects/projectsRedux';
 import publishDialog from '../templates/projects/publishDialog/publishDialogRedux';
 
 import app from './appRedux';
+import calendar from './calendarRedux';
 import shareDialog from './components/shareDialogRedux';
 import header from './headerRedux';
 import hiddenLesson from './hiddenLessonRedux';
@@ -57,6 +58,7 @@ registerReducers({
   codebridgeConsole,
   predictLevel,
   lab2System,
+  calendar,
 });
 
 export {getStore};
