@@ -87,7 +87,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
     setup_script_cache
-    assert_cached_queries(9) do
+    assert_cached_queries(7) do
       post milestone_path(
         user_id: student.id,
         script_level_id: sl.id
@@ -144,7 +144,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       assert_response :success
     end
 
-    assert_cached_queries(4) do
+    assert_cached_queries(2) do
       get "/api/v1/teacher_feedbacks/count?student_id=#{student.id}"
       assert_response :success
     end
@@ -174,7 +174,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student.assign_script(unit)
     sign_in student
 
-    assert_cached_queries(20) do
+    assert_cached_queries(19) do
       get "/s/#{unit.name}/lessons/1/levels/1"
       assert_response :success
     end

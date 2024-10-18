@@ -88,14 +88,14 @@ class CoursesControllerTest < ActionController::TestCase
 
     test 'student views course overview with caching enabled' do
       sign_in create(:student)
-      assert_cached_queries(7) do
+      assert_cached_queries(8) do
         get :show, params: {course_name: @unit_group.name}
       end
     end
 
     test 'teacher views course overview with caching enabled' do
       sign_in create(:teacher)
-      assert_cached_queries(12) do
+      assert_cached_queries(13) do
         get :show, params: {course_name: @unit_group.name}
       end
     end
