@@ -25,10 +25,6 @@ def main
       options[:dry_run] = v.nil? ? true : v
     end
 
-    opts.on("-v", "--image-uri-version IMAGE_URI_VERSION", Numeric, "HuggingFace Image URI version") do |v|
-      options[:image_uri_version] = v
-    end
-
     opts.on("-i", "--image-uri IMAGE_URI", String, "HuggingFace Image URI to use") do |v|
       options[:image_uri] = v
     end
@@ -71,13 +67,16 @@ def main
 
   # Fetch token from secrets manager if not specified
   unless options[:token]
-    print "\nFetching HuggingFace Access Token..."
-    secrets_manager = Aws::SecretsManager::Client.new
-    value = secrets_manager.get_secret_value(
-      {secret_id: "#{options[:environment]}/gen-ai-curriculum/huggingface_token"}
-    )
-    options[:token] = value.secret_string
-    puts "done".colorize(:light_green)
+    # TODO: Upload token to secrets manager using secrets script, and update secret ID.
+    # print "\nFetching HuggingFace Access Token..."
+    # secrets_manager = Aws::SecretsManager::Client.new
+    # value = secrets_manager.get_secret_value(
+    #   {secret_id: "#{options[:environment]}/gen-ai-curriculum/huggingface_token"}
+    # )
+    # options[:token] = value.secret_string
+    # puts "done".colorize(:light_green)
+    print "HuggingFace Access Token: "
+    options[:token] = gets.chomp
   end
 
   puts "\nHuggingFace Image URI: " + image_uri.to_s.colorize(:light_cyan)
