@@ -13,8 +13,6 @@ Description: Data layer including RedShift cluster configuration and synchroniza
 # redshift_password: abcdef
 # Parameters are only required for initial stack creation, and reused if not provided on stack update.
 Parameters:
-  RDSIdentifier:
-    Type: String
   # MySQL user must have granted REPLICATION CLIENT and REPLICATION SLAVE
   # permissions, and must have SELECT permissions on all tables and must have
   # permissions to connect to the Production Reporting RDS Proxy.
@@ -29,11 +27,6 @@ Parameters:
   RDSHost:
     Type: String
     Description: Production MySQL database servername to use for exporting data to Redshift.
-  # Typically in the form: `cluster-[random-AWS-assigned-string].[region].rds.amazonaws.com` without leading dot.
-  RDSClusterEndpointRootDomain:
-    Type: String
-  ReportingCluster:
-    Type: String
   RedshiftDatabase:
     Type: String
     Default: dashboard
@@ -58,6 +51,7 @@ Resources:
   Tableau:
     Type: AWS::Redshift::Cluster
     DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
     Properties:
       AllowVersionUpgrade: true
       AutomatedSnapshotRetentionPeriod: 5
@@ -171,10 +165,9 @@ Resources:
       ReplicationTaskIdentifier: task-<%= task_name %>
       SourceEndpointArn: !Ref MySQLDatabaseSourceEndpoint
       TargetEndpointArn: !Ref RedshiftEndpoint
-      ReplicationTaskSettings: !Sub |
-        <%= YAML.load(erb_file(aws_dir('dms/replication-task-settings.yml.erb'))).to_json %>
-      TableMappings: !Sub |
-          <%= table_mappings.to_json %>
+      # ReplicationTaskSettings and TableMappings must be provided as strings containing JSON
+      ReplicationTaskSettings: '<%= YAML.load(erb_file(aws_dir('dms/replication-task-settings.yml.erb'))).to_json %>'
+      TableMappings: '<%= table_mappings.to_json %>'
       Tags:
         -
           Key: schedule
@@ -255,7 +248,6 @@ Resources:
     cpuUtilization.wait
     cpuUtilization.idle
     cpuUtilization.user
-    cpuUtilization.total
     cpuUtilization.steal
     cpuUtilization.nice
     tasks.total

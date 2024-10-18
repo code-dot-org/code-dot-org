@@ -92,7 +92,9 @@ module Cdo
             to_h
         end
 
-        [task_name, {rules: rules}, schedule]
+        table_mappings = {rules: rules}
+
+        [task_name, table_mappings, schedule]
       end
     end
 
