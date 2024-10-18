@@ -11,8 +11,6 @@ import {getCodeBlocks} from '@cdo/apps/blockly/utils';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
 import reducers from '@cdo/apps/craft/redux';
 import {handlePlayerSelection} from '@cdo/apps/craft/utils';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 
@@ -452,8 +450,6 @@ Craft.init = function (config) {
   studioApp().setPageConstants(config, {
     isMinecraft: true,
   });
-
-  analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
 
   ReactDOM.render(
     <Provider store={getStore()}>

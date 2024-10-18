@@ -11,8 +11,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   showArrowButtons,
   dismissSwipeOverlay,
@@ -2291,8 +2289,6 @@ Studio.init = function (config) {
         );
       }
     }
-
-    analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
 
     drawMap();
   };

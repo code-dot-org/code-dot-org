@@ -26,8 +26,6 @@ import AppView from '../templates/AppView';
 import {getStore} from '../redux';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {KeyCodes, TestResults, ResultType} from '../constants';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
 import {
   showArrowButtons,
@@ -832,8 +830,6 @@ Bounce.init = function (config) {
   };
 
   studioApp().setPageConstants(config);
-
-  analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
 
   ReactDOM.render(
     <Provider store={getStore()}>

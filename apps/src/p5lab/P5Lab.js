@@ -10,8 +10,6 @@ import {
   outputError,
   injectErrorHandler,
 } from '@cdo/apps/lib/util/javascriptMode';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import experiments from '@cdo/apps/util/experiments';
 
 import {TOOLBOX_EDIT_MODE} from '../constants';
@@ -498,8 +496,6 @@ export default class P5Lab {
       soundConfig[Sounds.getExtensionFromUrl(href)] = href;
       Sounds.getSingleton().register(soundConfig);
     });
-
-    analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
 
     this.loadValidationCodeIfNeeded_();
     const loader = this.studioApp_

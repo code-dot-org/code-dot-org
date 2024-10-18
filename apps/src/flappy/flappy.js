@@ -5,8 +5,6 @@
  *
  */
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 import placeholder from '../../static/flappy/placeholder.jpg';
@@ -651,8 +649,6 @@ Flappy.init = function (config) {
   };
 
   studioApp().setPageConstants(config);
-
-  analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
 
   ReactDOM.render(
     <Provider store={getStore()}>

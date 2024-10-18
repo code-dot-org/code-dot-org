@@ -14,8 +14,6 @@ import applabMsg from '@cdo/applab/locale';
 import autogenerateML from '@cdo/apps/applab/ai';
 import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import commonMsg from '@cdo/locale';
@@ -784,10 +782,7 @@ Applab.init = function (config) {
         });
       }
     });
-  // Only send PROJECT_ACTIVITY event if they're on a project level.
-  if (!!config.level.isProjectLevel) {
-    analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
-  }
+
   if (IN_UNIT_TEST) {
     return loader.catch(() => {});
   }

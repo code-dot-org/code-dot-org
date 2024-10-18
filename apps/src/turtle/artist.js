@@ -28,8 +28,6 @@
 import Visualization from '@code-dot-org/artist';
 
 import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
@@ -410,8 +408,6 @@ Artist.prototype.init = function (config) {
       dom.addClickTouchEvent(finishButton, this.checkAnswer.bind(this));
     }
   }
-
-  analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
 
   return Promise.all([
     this.preloadAllStickerImages(),
