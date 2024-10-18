@@ -33,7 +33,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
     setPinnedResponseIds([]);
     setHiddenResponses([]);
   }, [responses]);
-  
+
   const hideResponse = userId => {
     analyticsReporter.sendEvent(
       EVENTS.CFU_RESPONSE_HIDDEN,
@@ -72,7 +72,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
       },
     ];
   };
- 
+
   const getResponseBox = (
     response,
     responseClassName,
