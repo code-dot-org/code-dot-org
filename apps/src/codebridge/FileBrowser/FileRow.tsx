@@ -5,6 +5,7 @@ import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
 import {ProjectFile} from '@codebridge/types';
 import {
   getFileIconNameAndStyle,
+  getPossibleDestinationFoldersForFile,
   sendCodebridgeAnalyticsEvent,
 } from '@codebridge/utils';
 import classNames from 'classnames';
@@ -55,6 +56,7 @@ const FileRow: React.FunctionComponent<FileRowProps> = ({
   setFileType,
 }) => {
   const {
+    project: {files, folders},
     openFile,
     config: {editableFileTypes},
   } = useCodebridgeContext();
@@ -67,7 +69,17 @@ const FileRow: React.FunctionComponent<FileRowProps> = ({
 
   const dropdownOptions = [
     {
-      condition: !isLocked,
+      condition:
+        !isLocked &&
+        Boolean(
+          getPossibleDestinationFoldersForFile({
+            file,
+            projectFiles: files,
+            projectFolders: folders,
+            isStartMode,
+            validationFile: undefined,
+          }).length
+        ),
       iconName: 'arrow-right',
       labelText: codebridgeI18n.moveFile(),
       clickHandler: () => openMoveFilePrompt({fileId: file.id}),
