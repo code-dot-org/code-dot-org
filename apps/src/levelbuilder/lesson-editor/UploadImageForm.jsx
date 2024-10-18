@@ -120,17 +120,20 @@ export default function UploadImageForm() {
     <div className={styles.topContainer}>
       <h2>{i18n.uploadImages()}</h2>
       {tempImageUrls && tempImageUrls.length > 0 && (
-        <div className={styles.imageGrid}>
-          {tempImageUrls.map((url, index) => (
-            <img
-              key={index}
-              src={url}
-              alt={`Preview ${index + 1}`}
-              className={styles.imagePreview}
-              onClick={() => openEditor(url)}
-            />
-          ))}
-        </div>
+        <>
+          <h3>Click on an image to edit it:</h3>
+          <div className={styles.imageGrid}>
+            {tempImageUrls.map((url, index) => (
+              <img
+                key={index}
+                src={url}
+                alt={`Preview ${index + 1}`}
+                className={styles.imagePreview}
+                onClick={() => openEditor(url)}
+              />
+            ))}
+          </div>
+        </>
       )}
       {isEditing && (
         <div>
