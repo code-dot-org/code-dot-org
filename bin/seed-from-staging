@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+require_relative '../deployment'
+require 'cdo/rake_utils'
+
+# This script looks for a separate git worktree at ../../staging that has the
+# staging branch checked out. It will pull the latest content, seed it into the
+# database, and then perform an instance refresh on the web application servers.
+Dir.chdir(dashboard_dir) do
+  staging_dir = '../../staging'
+  begin
+    Dir.chdir(staging_dir) do
+      RakeUtils.git_pull
+    end
+  rescue Errno::ENOENT
+    puts 'Staging directory not found'
+    exit
+  end
+  RakeUtils.rake_stream_output 'seed:default', "CURRICULUM_CONTENT_DIR=#{staging_dir}/dashboard"
+end
+
+# TODO: initiate instance refresh here.
