@@ -277,4 +277,6 @@ module Cdo
   end
 end
 
-CDO_I18N_BACKEND = Cdo::I18n::SimpleBackend.new
+CDO_I18N_BACKEND = CDO.lazy_load_locales ?
+  Cdo::I18n::LazyLoadableBackend.new(lazy_load: true) :
+  Cdo::I18n::SimpleBackend.new
