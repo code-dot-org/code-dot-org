@@ -48,7 +48,7 @@ module LocaleHelper
   def current_locale_option(global_edition: false)
     return locale unless global_edition
     # Combines the current locale with the Global Edition region, e.g. "fa-IR|fa".
-    [locale, ge_region].select(&:presence).join('|')
+    [locale, Cdo::GlobalEdition.current_region].select(&:presence).join('|')
   end
 
   def options_for_locale_code_select

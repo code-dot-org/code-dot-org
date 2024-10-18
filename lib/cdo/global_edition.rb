@@ -1,3 +1,5 @@
+require 'request_store'
+
 module Cdo
   # Lazily loads global configurations for regional pages
   module GlobalEdition
@@ -38,6 +40,10 @@ module Cdo
 
     def self.region_available?(region)
       region.present? && REGIONS.include?(region.to_s)
+    end
+
+    def self.current_region
+      RequestStore.store[:ge_region]
     end
 
     def self.region_locale(region)

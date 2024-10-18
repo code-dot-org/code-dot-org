@@ -36,14 +36,14 @@
   hamburger_options[:loc_prefix] = "nav.header."
   hamburger_options[:page_mode] = request.cookies['pm']
   hamburger_options[:dashboard] = true
-  hamburger_options[:ge_region] = ge_region
+  hamburger_options[:ge_region] = Cdo::GlobalEdition.current_region
 
   header_contents_options = {}
   header_contents_options[:user_type] = user_type
   header_contents_options[:language] = request.language
   header_contents_options[:loc_prefix] = "nav.header."
   header_contents_options[:page_mode] = request.cookies['pm']
-  header_contents_options[:ge_region] = ge_region
+  header_contents_options[:ge_region] = Cdo::GlobalEdition.current_region
 
   should_show_progress = (script_level || @lesson_extras) && !@is_code_reviewing
 
@@ -60,7 +60,7 @@
   user_header_options[:session_pairings] = session[:pairings]
   user_header_options[:loc_prefix] = 'nav.user.'
   user_header_options[:level] = level
-  user_header_options[:ge_region] = ge_region
+  user_header_options[:ge_region] = Cdo::GlobalEdition.current_region
 
   require 'cdo/hamburger'
 

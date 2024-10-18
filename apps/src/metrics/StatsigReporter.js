@@ -21,6 +21,7 @@ class StatsigReporter {
     let user = {
       custom: {
         enabledExperiments: experiments.getEnabledExperiments(),
+        ge_region: cookies.get('ge_region'),
       },
     };
     const user_id_element = document.querySelector('script[data-user-id]');

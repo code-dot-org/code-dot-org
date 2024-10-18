@@ -49,7 +49,7 @@ module Metrics
       def log_event_with_session(session:, event_name:, event_value: nil, metadata: {})
         event_value = event_name if event_value.nil?
         managed_test_environment = CDO.running_web_application? && CDO.test_system?
-        statsig_user = StatsigUser.new({'userID' => session[:statsig_stable_id]})
+        statsig_user = build_statsig_user(userID: session[:statsig_stable_id])
 
         if CDO.rack_env?(:development)
           log_event_to_stdout_with_session(session: session, event_name: event_name, event_value: event_value, metadata: metadata)
@@ -68,7 +68,7 @@ module Metrics
 
       # Logs an event to Statsig
       private def log_statsig_event_with_cdo_user(user:, event_name:, event_value:, metadata:, enabled_experiments:)
-        statsig_user = build_statsig_user(user: user, enabled_experiments: enabled_experiments)
+        statsig_user = build_statsig_user_for(user: user, enabled_experiments: enabled_experiments)
         log_statsig_event(statsig_user: statsig_user, event_name: event_name, event_value: event_value, metadata: metadata)
       end
 
@@ -78,29 +78,34 @@ module Metrics
         Statsig.log_event(statsig_user, event_name, event_value, metadata)
       end
 
+      private def build_statsig_user(**user_data)
+        user_data[:custom] = {
+          ge_region: Cdo::GlobalEdition.current_region,
+        }
+
+        StatsigUser.new(user_data)
+      end
+
       # Builds a StatsigUser object from a user entity
-      private def build_statsig_user(user:, enabled_experiments:)
+      private def build_statsig_user_for(user:, enabled_experiments:)
         if user.present?
           custom_ids = {
             user_type: user.user_type,
             enabled_experiments: enabled_experiments,
           }.compact
-          StatsigUser.new({'userID' => user.id.to_s, 'custom_ids' => custom_ids})
+          build_statsig_user(userID: user.id.to_s, custom_ids: custom_ids)
         else
-          StatsigUser.new({'userID' => ''})
+          build_statsig_user(userID: '')
         end
       end
 
       # Logs an event to stdout, useful for development and debugging
       private def log_event_to_stdout(user:, event_name:, event_value:, metadata:, enabled_experiments:)
-        user_id = user.present? ? user.id : ''
-        user_type = user.present? ? user.user_type : ''
         event_details = {
-          user_id: user_id,
-          custom_ids: {
-            user_type: user_type,
+          **build_statsig_user_for(
+            user: user,
             enabled_experiments: enabled_experiments,
-          }.compact,
+          ).serialize(true),
           event_name: event_name,
           event_value: event_value,
           metadata: metadata,
