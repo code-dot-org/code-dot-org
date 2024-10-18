@@ -39,7 +39,7 @@ class Lti::V1::DynamicRegistrationControllerTest < ActionController::TestCase
     response = {client_id: client_id}
     LtiDynamicRegistrationClient.any_instance.stubs(:make_registration_request).returns(response)
 
-    Metrics::Events.expects(:log_event_with_session).with(
+    Metrics::Events.expects(:log_event).with(
       has_entries(
         session: session,
         event_name: 'lti_dynamic_registration_completed',

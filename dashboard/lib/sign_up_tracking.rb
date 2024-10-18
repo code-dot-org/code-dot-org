@@ -57,7 +57,7 @@ module SignUpTracking
       }
     )
 
-    Metrics::Events.log_event_with_session(
+    Metrics::Events.log_event(
       session: session,
       event_name: event_name,
       metadata: {
@@ -81,7 +81,7 @@ module SignUpTracking
     }
     FirehoseClient.instance.put_record(:analysis, tracking_data)
 
-    Metrics::Events.log_event_with_session(
+    Metrics::Events.log_event(
       session: session,
       event_name: "begin-sign-up-#{result}",
       metadata: {
@@ -102,7 +102,7 @@ module SignUpTracking
       }
     )
 
-    Metrics::Events.log_event_with_session(
+    Metrics::Events.log_event(
       session: session,
       event_name: "#{provider}-load-finish-sign-up",
       metadata: {
@@ -123,7 +123,7 @@ module SignUpTracking
       }
     )
 
-    Metrics::Events.log_event_with_session(
+    Metrics::Events.log_event(
       session: session,
       event_name: "#{provider}-cancel-finish-sign-up",
       metadata: {
@@ -149,7 +149,7 @@ module SignUpTracking
       )
     end
 
-    Metrics::Events.log_event_with_session(
+    Metrics::Events.log_event(
       session: session,
       event_name: event_name,
       metadata: {
@@ -171,7 +171,7 @@ module SignUpTracking
       }
       FirehoseClient.instance.put_record(:analysis, tracking_data)
 
-      Metrics::Events.log_event_with_session(
+      Metrics::Events.log_event(
         session: session,
         event_name: "#{provider}-sign-in",
         metadata: {
@@ -200,7 +200,7 @@ module SignUpTracking
     }
     FirehoseClient.instance.put_record(:analysis, tracking_data)
 
-    Metrics::Events.log_event_with_session(
+    Metrics::Events.log_event(
       session: session,
       event_name: "#{sign_up_type}-sign-up-#{result}",
       metadata: {

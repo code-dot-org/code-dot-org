@@ -349,7 +349,7 @@ Devise.setup do |config|
   end
 
   OmniAuth.config.before_request_phase do |env|
-    Metrics::Events.log_event_with_session(
+    Metrics::Events.log_event(
       session: env['rack.session'],
       event_name: "#{env['omniauth.strategy'].options[:name]}-begin-auth",
       )
