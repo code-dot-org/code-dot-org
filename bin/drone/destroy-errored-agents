@@ -17,14 +17,23 @@ set -e
 # ```
 #
 # Potential upgrades:
-# - publish exeuction events and count of servers destroyed to CloudWatch
+# - gather count metrics regularly and publish to CloudWatch
 # - publish execution events to Slack
 # - convert to a Rake task for consistency
 
 export DRONE_SERVER=https://drone.cdn-code.org
 export DRONE_AUTOSCALER=https://drone.cdn-code.org:8443
 
-
+# Function to send metrics to CloudWatch with error handling
+put_metric_data() {
+    echo "Sending $1 metric"
+    metric_name=$1
+    value=$2
+    unit=$3
+    if ! aws cloudwatch put-metric-data --metric-name "$metric_name" --namespace "ContinuousIntegration" --value "$value" --unit "$unit"; then
+        echo "Failed to send metric: $metric_name with value: $value $unit"
+    fi
+}
 
 # Check if DRONE_TOKEN is valid
 if ! output=$(drone server ls 2>&1); then
@@ -35,12 +44,21 @@ if ! output=$(drone server ls 2>&1); then
     exit 1
 fi
 
-# Get the total count of drone agents and those in error state
 total_count=$(drone server ls -l | tail -n +2 | wc -l)
 error_ids=$(drone server ls -l | grep error | awk '{print $1}')
-
-# Calculate error count, considering empty string as zero
+# Count errored servers, counting empty string as 0
 error_count=$(if [ -z "$error_ids" ]; then echo 0; else echo "$error_ids" | wc -l; fi)
 
+# Terminate agents in 'error' state
 echo "Terminating ${error_count} of ${total_count} drone agents that were in 'error' state"
 [ -z "$error_ids" ] || echo "$error_ids" | xargs -tL1 drone server destroy
+
+# Get new metrics after termination
+new_error_ids=$(drone server ls -l | grep error | awk '{print $1}')
+new_error_count=$(if [ -z "$new_error_ids" ]; then echo 0; else echo "$new_error_ids" | wc -l; fi)
+terminated_count=$((error_count - new_error_count))
+
+# Send metric only if servers were terminated
+if [ "$terminated_count" -gt 0 ]; then
+    put_metric_data TerminatedDroneServers $terminated_count Count
+fi
