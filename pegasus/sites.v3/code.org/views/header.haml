@@ -31,7 +31,7 @@
     -# rubocop:enable CustomCops/DashboardDbUsage
     %ul#headerlinks
       - Hamburger.get_header_contents(header_contents_options).each do |entry|
-        %li{class: entry[:class]}
+        %li
           %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
   .right
     = view :sign_in_or_user
