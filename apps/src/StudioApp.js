@@ -2955,6 +2955,12 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     typeHints: utils.valueOr(config.level.showTypeHints, false),
     isBlocklyRtl:
       getStore().getState().isRtl && config.levelGameName !== 'Jigsaw', // disable RTL for blockly on jigsaw
+    analyticsData: {
+      appType: config.app,
+      scriptName: config.scriptName,
+      scriptId: config.scriptId,
+      levelId: config.serverLevelId,
+    },
   };
 
   // Never show unused blocks in edit mode. Procedure autopopulate should always

@@ -1,4 +1,3 @@
-@no_safari
 Feature: After completing the Hour of Code, the player is directed to a congratulations page
 
 Scenario: Completing Minecraft HoC should go to certificate page and generate a certificate
@@ -51,6 +50,7 @@ Scenario: Pegasus share page preserves certificate when redirecting
   # Reset lesson data (otherwise it will pull a cached certificate from
   # other tests)
   Given I am on "http://studio.code.org/s/mc/reset"
+  And I wait for the lab page to fully load
   Then I wait until the Minecraft game is loaded
 
   # Set up a customized certificate

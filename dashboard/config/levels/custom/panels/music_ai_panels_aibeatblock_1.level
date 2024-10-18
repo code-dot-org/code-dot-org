@@ -11,41 +11,37 @@
     "name_suffix": "_1",
     "panels": [
       {
-        "text": "Welcome to AI Beat Builder!",
+        "text": "You can use A.I. Bot to generate new beats! ",
         "imageUrl": "https://images.code.org/50f6a8f66c6a76e126f8abb649edba0c-empty beat block.png",
         "key": "music_ai_panels_function-973d8506-2906-4bdf-96c6-e08d64b1e677",
-        "layout": "text-bottom-right"
+        "layout": "text-bottom-center"
       },
       {
-        "text": "First, you'll create a starting beat by adding a few notes.",
+        "text": "First, you'll create a starting beat by adding at least four notes.",
         "imageUrl": "https://images.code.org/5433f72d8af7bbe308866777572e408f-seed beat please.gif",
         "key": "music_ai_panels_aibeatblock-2590f59d-fc81-460c-8499-036f2a1f5b60",
-        "layout": "text-bottom-right"
+        "layout": "text-bottom-center"
       },
       {
-        "text": "Then, AI Bot listens to what you played and predicts what should come next.",
+        "text": "Then, A.I. Bot listens to what you played and predicts what should come next.",
         "imageUrl": "https://images.code.org/9e4af2fa58e57b7eabdc15ff5c265d7e-geeenerate.gif",
         "key": "music_ai_panels_aibeatblock-dbb9516c-1147-4f1e-951a-4ef7e00c129f",
-        "layout": "text-bottom-right"
+        "layout": "text-bottom-center"
       },
       {
-        "text": "AI Bot was trained by listening to lots of different beats.",
-        "imageUrl": "",
-        "key": "music_ai_panels_aibeatblock_1-c7b18f33-4cd4-40e8-8904-42ec59b8c427"
-      },
-      {
-        "text": "Based on your starting beat, AI Bot continues and fills in the rest.",
-        "imageUrl": "",
-        "key": "music_ai_panels_aibeatblock_1-7f5ffb8e-c528-47d8-96bb-654b5c7e0647"
+        "text": "A.I. Bot was trained by listening to lots of different beats. \n\nBased on your starting beat, A.I. Bot continues and fills in the rest.",
+        "imageUrl": "https://images.code.org/93da14b65d6971b3dddc66ecd46a8faa-groovecell-step-music-sequencer-pro-tools (1).webp",
+        "key": "music_ai_panels_aibeatblock_1-c7b18f33-4cd4-40e8-8904-42ec59b8c427",
+        "layout": "text-bottom-center"
       },
       {
         "text": "Try it out yourself!",
         "imageUrl": "https://images.code.org/042c61aba57e3d29c6395c6471d88340-Screen Shot 2024-10-01 at 5.07.29 PM.png",
         "key": "music_ai_panels_aibeatblock-6678c7d9-3f09-4960-9113-548c9cfb156e",
-        "layout": "text-bottom-right"
+        "layout": "text-bottom-center"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:48.353+00:00\",\"changed\":[\"cloned from \\\"music_ai_panels_aibeatblock_3\\\"\"],\"cloned_from\":\"music_ai_panels_aibeatblock_3\"},{\"changed_at\":\"2024-10-08 18:20:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-08 18:23:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:48.353+00:00\",\"changed\":[\"cloned from \\\"music_ai_panels_aibeatblock_3\\\"\"],\"cloned_from\":\"music_ai_panels_aibeatblock_3\"},{\"changed_at\":\"2024-10-08 18:20:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-08 18:23:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-11 16:20:38 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 20:48:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 21:44:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Panels>

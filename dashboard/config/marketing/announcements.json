@@ -1,6 +1,6 @@
 {
   "pages": {
-    "/home": "hoc-2024",
+    "/home": "gen-ai-launch-2024",
     "/student-home": "transformers-sept-2024"
   },
   "banners": {
@@ -44,6 +44,15 @@
       "buttonText": "Try it now",
       "buttonUrl": "https://studio.code.org/s/hello-world-transformers-one-2024/lessons/1/levels/1",
       "buttonId": "transformers-sept-2024"
+    },
+    "gen-ai-launch-2024": {
+      "dcdo": "gen-ai-launch",
+      "image": "/images/ai/explore-gen-ai-bot-wizard.png",
+      "title": "Exploring Generative AI",
+      "body": "Prepare your students for the future with an engaging curriculum that demystifies generative AI. Through hands-on projects and ethical discussions, students gain the skills to become creators and critical thinkers in an AI-powered world.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/curriculum/generative-ai",
+      "buttonId": "gen-ai-launch-2024"
     }
   }
 }

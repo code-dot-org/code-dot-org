@@ -24,16 +24,6 @@ class RegistrationsControllerTest < ActionController::TestCase
       age: '13',
       user_type: 'student'
     }
-
-    @default_params_new_signup = {
-      name: 'A name',
-      password: 'apassword',
-      email: 'an@email.address',
-      gender: 'F',
-      age: '13',
-      user_type: 'student',
-      new_sign_up: true
-    }
   end
 
   test "update: returns bad_request if user param is nil" do
@@ -311,14 +301,12 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal ["Age is required"], assigns(:user).errors.full_messages
   end
 
-  test "create does not allow pandas in name" do
+  test "create does allow pandas in name" do
     params_with_panda_name = @default_params.update(name: panda_panda)
 
-    assert_does_not_create(User) do
+    assert_creates(User) do
       post :create, params: {user: params_with_panda_name}
     end
-
-    assert_equal ["Display Name is invalid"], assigns(:user).errors.full_messages
   end
 
   test "create does not allow pandas in email" do
@@ -532,146 +520,127 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   # USING NEW SIGN-UP FLOW [START]
 
-  test "teachers go to specified return to url after signing up [new sign up flow]" do
-    session[:user_return_to] = user_return_to = '//test.code.org/the-return-to-url'
-
-    assert_creates(User) do
-      post :create, params: {user:  @default_params_new_signup.update(user_type: 'teacher', age: '21+', email_preference_opt_in: true)}
-    end
-
-    assert_redirected_to user_return_to
-  end
-
-  test "create retries on Duplicate exception [new sign up flow]" do
+  test "create existing email error on a Duplicate exception [new sign up flow]" do
     # some Mocha shenanigans to simulate throwing a duplicate entry
     # error and then succeeding by returning the existing user
 
-    exception = ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry 'coder1234574782' for key 'index_users_on_username'"))
-    User.any_instance.stubs(:save).raises(exception).then.returns(true)
-    User.any_instance.stubs(:persisted?).returns(true)
+    duplicate_entry_exception = ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry 'coder1234574782' for key 'index_users_on_username'"))
+    User.any_instance.stubs(:save).raises(duplicate_entry_exception)
 
-    post :create, params: {user: @default_params_new_signup}
+    teacher_params = set_up_partial_registration(@default_params)
 
-    assert_redirected_to '/'
-
-    # we are still stubbing user.save (even though we returned true so
-    # we can't actually check that the user was created)
+    exception = assert_raise(Exception) {post :create, params: {new_sign_up: true, user: teacher_params}}
+    assert_equal("Validation failed: Email has already been taken", exception.message)
   end
 
   test "create as student with age [new sign up flow]" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
+      student_params = set_up_partial_registration(@default_params)
       assert_creates(User) do
-        post :create, params: {user: @default_params_new_signup}
+        post :create, params: {new_sign_up: true, user: student_params}
       end
 
-      assert_redirected_to '/'
+      student = User.last
 
-      assert_equal 'A name', assigns(:user).name
-      assert_equal 'f', assigns(:user).gender
-      assert_equal Time.zone.today - 13.years, assigns(:user).birthday
-      assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
-      assert_equal User::TYPE_STUDENT, assigns(:user).user_type
-      assert_equal '', assigns(:user).email
-      assert_equal User.hash_email('an@email.address'), assigns(:user).hashed_email
+      assert_equal 'A name', student.name
+      assert_equal 'f', student.gender
+      assert_equal Time.zone.today - 13.years, student.birthday
+      assert_equal AuthenticationOption::EMAIL, student.primary_contact_info.credential_type
+      assert_equal User::TYPE_STUDENT, student.user_type
+      assert_equal '', student.email
+      assert_equal User.hash_email('an@email.address'), student.hashed_email
     end
   end
 
   test "create as under 13 student with client side hashed email [new sign up flow]" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
-      @default_params_new_signup.delete(:email)
-      params_with_hashed_email = @default_params_new_signup.merge(
+      student_params = set_up_partial_registration(@default_params)
+      student_params.delete(:email)
+      params_with_hashed_email = student_params.merge(
         {hashed_email: User.hash_email('an@email.address')}
       )
 
       assert_creates(User) do
-        post :create, params: {user: params_with_hashed_email}
+        post :create, params: {new_sign_up: true, user: params_with_hashed_email}
       end
 
-      assert_redirected_to '/'
+      student = User.last
 
-      assert_equal 'A name', assigns(:user).name
-      assert_equal 'f', assigns(:user).gender
-      assert_equal Time.zone.today - 13.years, assigns(:user).birthday
-      assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
-      assert_equal User::TYPE_STUDENT, assigns(:user).user_type
-      assert_equal '', assigns(:user).email
-      assert_equal User.hash_email('an@email.address'), assigns(:user).hashed_email
+      assert_equal 'A name', student.name
+      assert_equal 'f', student.gender
+      assert_equal Time.zone.today - 13.years, student.birthday
+      assert_equal AuthenticationOption::EMAIL, student.primary_contact_info.credential_type
+      assert_equal User::TYPE_STUDENT, student.user_type
+      assert_equal '', student.email
+      assert_equal User.hash_email('an@email.address'), student.hashed_email
     end
   end
 
   test "create as student requires age [new sign up flow]" do
-    params_without_age = @default_params_new_signup.update(age: '')
+    params_without_age = set_up_partial_registration(@default_params.update(age: ''))
 
     assert_does_not_create(User) do
-      post :create, params: {user: params_without_age}
+      exception = assert_raise(Exception) {post :create, params: {new_sign_up: true, user: params_without_age}}
+      assert_equal("Validation failed: Age is required", exception.message)
     end
-
-    assert_equal ["Age is required"], assigns(:user).errors.full_messages
   end
 
-  test "create does not allow pandas in name [new sign up flow]" do
-    params_with_panda_name = @default_params_new_signup.update(name: panda_panda)
+  test "create allows pandas in name [new sign up flow]" do
+    params_with_panda_name = set_up_partial_registration(@default_params.update(name: panda_panda))
 
-    assert_does_not_create(User) do
-      post :create, params: {user: params_with_panda_name}
+    assert_creates(User) do
+      post :create, params: {new_sign_up: true, user: params_with_panda_name}
     end
-
-    assert_equal ["Display Name is invalid"], assigns(:user).errors.full_messages
   end
 
   test "create does not allow pandas in email [new sign up flow]" do
-    params_with_panda_email = @default_params_new_signup.update(
-      email: "#{panda_panda}@panda.com"
-    )
+    params_with_panda_email = set_up_partial_registration(@default_params.update(email: "#{panda_panda}@panda.com"))
 
     # don't ask the db for existing panda emails
     User.expects(:find_by_email_or_hashed_email).never
 
     assert_does_not_create(User) do
-      post :create, params: {user: params_with_panda_email}
+      exception = assert_raise(Exception) {post :create, params: {new_sign_up: true, user: params_with_panda_email}}
+      assert exception.message.include?("Email is invalid")
     end
-
-    assert_equal ["Email is invalid"], assigns(:user).errors.full_messages
   end
 
   test "create allows chinese in name [new sign up flow]" do
-    params_with_chinese_name = @default_params_new_signup.update(
-      name: '樊瑞'
-    )
+    params_with_chinese_name = set_up_partial_registration(@default_params.update(name: '樊瑞'))
 
     assert_creates(User) do
-      post :create, params: {user: params_with_chinese_name}
+      post :create, params: {new_sign_up: true, user: params_with_chinese_name}
     end
   end
 
-  test "create as teacher requires age [new sign up flow]" do
-    teacher_params = @default_params_new_signup.update(user_type: 'teacher', age: '', email_preference_opt_in: 'yes')
+  test "create as teacher automatically sets age [new sign up flow]" do
+    teacher_params = set_up_partial_registration(@default_params.update(user_type: 'teacher', age: '', email_preference_opt_in: true))
 
-    assert_does_not_create(User) do
-      post :create, params: {user: teacher_params}
+    assert_creates(User) do
+      post :create, params: {new_sign_up: true, user: teacher_params}
     end
 
-    assert_equal ["Age is required"], assigns(:user).errors.full_messages
+    refute_equal ["Age is required"], assigns(:user).errors.full_messages
   end
 
   test "create new teacher with MailJet enabled sends welcome email [new sign up flow]" do
-    teacher_params = @default_params_new_signup.update(user_type: 'teacher', email_preference_opt_in: 'yes')
+    teacher_params = set_up_partial_registration(@default_params.update(user_type: 'teacher', email_preference_opt_in: true))
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
     MailJet.stubs(:enabled?).returns(true)
     MailJet.expects(:create_contact_and_add_to_welcome_series).once
     assert_creates(User) do
-      post :create, params: {user: teacher_params}
+      post :create, params: {new_sign_up: true, user: teacher_params}
     end
 
     assert_empty ActionMailer::Base.deliveries
   end
 
   test "create new teacher with opt-in option as yes writes email preference as yes [new sign up flow]" do
-    teacher_params = @default_params_new_signup.update(user_type: 'teacher', email_preference_opt_in: 'yes')
+    teacher_params = set_up_partial_registration(@default_params.update(user_type: 'teacher', email_preference_opt_in: true))
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
     assert_creates(User) do
       assert_creates(EmailPreference) do
-        post :create, params: {user: teacher_params}
+        post :create, params: {new_sign_up: true, user: teacher_params}
       end
     end
 
@@ -682,11 +651,11 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "create new teacher with opt-in option as no writes email preference as no [new sign up flow]" do
-    teacher_params = @default_params_new_signup.update(user_type: 'teacher', email_preference_opt_in: 'no')
+    teacher_params = set_up_partial_registration(@default_params.update(user_type: 'teacher', email_preference_opt_in: false))
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
     assert_creates(User) do
       assert_creates(EmailPreference) do
-        post :create, params: {user: teacher_params}
+        post :create, params: {new_sign_up: true, user: teacher_params}
       end
     end
 
@@ -696,117 +665,60 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal EmailPreference::ACCOUNT_SIGN_UP, email_preference[:source]
   end
 
-  test "create new teacher with us ip with opt-in to sharing email with regional partners set share_teacher_email_regional_partner_opt_in value to DateTime value [new sign up flow]" do
-    teacher_params = @default_params_new_signup.update(user_type: 'teacher', email_preference_opt_in: 'no', share_teacher_email_reg_partner_opt_in_radio_choice: 'yes')
-    Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
-    assert_creates(User) do
-      post :create, params: {user: teacher_params}
-    end
-
-    teacher = User.last
-    refute_nil teacher.share_teacher_email_regional_partner_opt_in
-  end
-
-  test "create new teacher with us ip with opt-out to sharing email with regional partners ensure share_teacher_email_regional_partner_opt_in value is nil [new sign up flow]" do
-    teacher_params = @default_params_new_signup.update(user_type: 'teacher', email_preference_opt_in: 'no', share_teacher_email_reg_partner_opt_in_radio_choice: 'no')
-    Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
-    assert_creates(User) do
-      post :create, params: {user: teacher_params}
-    end
-
-    teacher = User.last
-    assert_nil teacher.share_teacher_email_regional_partner_opt_in
-  end
-
-  test "create new teacher with us ip with no selection on sharing email with regional partners ensure share_teacher_email_regional_partner_opt_in value is nil [new sign up flow]" do
-    teacher_params = @default_params_new_signup.update(user_type: 'teacher', email_preference_opt_in: 'no')
-    Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
-    assert_creates(User) do
-      post :create, params: {user: teacher_params}
-    end
-
-    teacher = User.last
-    assert_nil teacher.share_teacher_email_regional_partner_opt_in
-  end
-
-  test "create new teacher with non-us ip ensure share_teacher_email_regional_partner_opt_in value is nil [new sign up flow]" do
-    teacher_params = @default_params_new_signup.update(user_type: 'teacher', email_preference_opt_in: 'no')
-    Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
-    assert_creates(User) do
-      post :create, params: {user: teacher_params}
-    end
-
-    teacher = User.last
-    assert_nil teacher.share_teacher_email_regional_partner_opt_in
-  end
-
-  test "create new student ensure share_teacher_email_regional_partner_opt_in value is nil [new sign up flow]" do
-    student_params = @default_params_new_signup
-    assert_creates(User) do
-      post :create, params: {user: student_params}
-    end
-
-    student = User.last
-    assert_nil student.share_teacher_email_regional_partner_opt_in
-  end
-
   test "create new student in eu fails when missing value [new sign up flow]" do
-    eu_student_params = @default_params_new_signup.update(
-      data_transfer_agreement_required: "1"
-    )
+    eu_student_params = set_up_partial_registration(@default_params.update(data_transfer_agreement_required: "1"))
 
     assert_does_not_create(User) do
-      post :create, params: {user: eu_student_params}
+      exception = assert_raise(Exception) {post :create, params: {new_sign_up: true, user: eu_student_params}}
+      assert_equal "Validation failed: Data transfer agreement accepted must be accepted", exception.message
     end
   end
 
   test "create new student in eu succeeds with value [new sign up flow]" do
-    eu_student_params = @default_params_new_signup.update(
-      data_transfer_agreement_required: "1",
-      data_transfer_agreement_accepted: "1",
-    )
+    eu_student_params = set_up_partial_registration(@default_params.update(data_transfer_agreement_required: "1", data_transfer_agreement_accepted: "1"))
 
     assert_creates(User) do
-      post :create, params: {user: eu_student_params}
+      post :create, params: {new_sign_up: true, user: eu_student_params}
     end
   end
 
   test "create new student does not send email [new sign up flow]" do
-    student_params = @default_params_new_signup
+    student_params = set_up_partial_registration(@default_params)
 
     assert_creates(User) do
-      post :create, params: {user: student_params}
+      post :create, params: {new_sign_up: true, user: student_params}
     end
     assert ActionMailer::Base.deliveries.empty?
   end
 
   test "create as student requires email [new sign up flow]" do
-    @default_params_new_signup.delete(:email)
-
+    @default_params.delete(:email)
+    set_up_partial_registration(@default_params)
     assert_does_not_create(User) do
-      post :create, params: {user: @default_params_new_signup}
+      exception = assert_raise(Exception) {post :create, params: {new_sign_up: true, user: @default_params}}
+      assert exception.message.include?("Email is required")
     end
-
-    assert_equal ["Email is required"], assigns(:user).errors.full_messages
   end
 
   test "create requires case insensitive unique email [new sign up flow]" do
-    create(:student, email: 'not_a@unique.email')
-    params_with_non_unique_email = @default_params_new_signup.update(
-      email: 'not_a@unique.email'
-    )
-
-    assert_does_not_create(User) do
-      post :create, params: {user: params_with_non_unique_email}
+    # Create original account with given email
+    original_email_params = set_up_partial_registration(@default_params.update(email: 'not_a@unique.email'))
+    assert_creates(User) do
+      post :create, params: {new_sign_up: true, user: original_email_params}
     end
 
-    assert_equal ["Email has already been taken"], assigns(:user).errors.full_messages
+    # Create second account with given email
+    assert_does_not_create(User) do
+      same_email_params = set_up_partial_registration(@default_params.update(email: 'not_a@unique.email'))
+      post :create, params: {new_sign_up: true, user: same_email_params}
+    end
   end
 
   test "create causes UserGeo creation [new sign up flow]" do
     request.remote_addr = '1.2.3.4'
+    user_params = set_up_partial_registration(@default_params)
     assert_creates(UserGeo) do
-      post :create, params: {user: @default_params_new_signup}
+      post :create, params: {new_sign_up: true, user: user_params}
     end
 
     user_geo = UserGeo.last
@@ -817,13 +729,50 @@ class RegistrationsControllerTest < ActionController::TestCase
   test "create causes SignIn creation [new sign up flow]" do
     frozen_time = Date.parse('1985-10-26 01:20:00')
     DateTime.stubs(:now).returns(frozen_time)
+    user_params = set_up_partial_registration(@default_params)
     assert_creates(SignIn) do
-      post :create, params: {user: @default_params_new_signup}
+      post :create, params: {new_sign_up: true, user: user_params}
     end
     sign_in = SignIn.last
     assert sign_in
     assert_equal 1, sign_in.sign_in_count
     assert_equal frozen_time, sign_in.sign_in_at
+  end
+
+  test "student can add a parent email without opt in [new sign up flow]" do
+    student_with_parent_params = set_up_partial_registration(@default_params.update(parent_email_preference_email: 'parent@example.com', parent_email_preference_opt_in: ''))
+
+    ParentMailer.any_instance.expects(:parent_email_added_to_student_account).once
+    assert_creates(User) do
+      post :create, params: {new_sign_up: true, user: student_with_parent_params}
+    end
+    student = User.last
+    student.reload
+
+    assert_equal 'parent@example.com', student.parent_email
+
+    email_preference = EmailPreference.last
+    assert_equal 'parent@example.com', email_preference[:email]
+    refute email_preference[:opt_in]
+    assert_equal EmailPreference::ACCOUNT_SIGN_UP, email_preference[:source]
+  end
+
+  test "student can add a parent email with opt in [new sign up flow]" do
+    student_with_parent_params = set_up_partial_registration(@default_params.update(parent_email_preference_email: 'parent@example.com', parent_email_preference_opt_in: true))
+
+    ParentMailer.any_instance.expects(:parent_email_added_to_student_account).once
+    assert_creates(User) do
+      post :create, params: {new_sign_up: true, user: student_with_parent_params}
+    end
+    student = User.last
+    student.reload
+
+    assert_equal 'parent@example.com', student.parent_email
+
+    email_preference = EmailPreference.last
+    assert_equal 'parent@example.com', email_preference[:email]
+    assert email_preference[:opt_in]
+    assert_equal EmailPreference::ACCOUNT_SIGN_UP, email_preference[:source]
   end
 
   # USING NEW SIGN-UP FLOW [END]
@@ -960,5 +909,14 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     get :create
     assert_redirected_to '/'
+  end
+
+  # Starts the new sign-up flow's user-creation process in RegistrationController.begin_sign_up then
+  # returns the parameters with the :password field removed (password is not used when the user is
+  # created in RegistrationController.create).
+  private def set_up_partial_registration(user_params)
+    post :begin_sign_up, params: {new_sign_up: true, user: {email: user_params[:email].presence, password: user_params[:password].presence, password_confirmation: user_params[:password].presence}}
+    user_params.delete(:password)
+    user_params
   end
 end

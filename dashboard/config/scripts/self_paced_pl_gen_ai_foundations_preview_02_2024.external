@@ -5,21 +5,24 @@ description 'description here'
 markdown <<MARKDOWN
 # Input
 
-<img src="https://images.code.org/28dfb421e568c030e5736eaaaeb83d6c-Screenshot 2024-10-09 at 10.59.45 AM.png" alt="system prompt with role, goal, tone, and restriction" width="350px" style="float:right; margin: 20px 20px 20px 20px;">
-
 ## Lesson Highlight: Youtube Playlist
+
+<img src="https://images.code.org/28dfb421e568c030e5736eaaaeb83d6c-Screenshot 2024-10-09 at 10.59.45 AM.png" alt="system prompt with role, goal, tone, and restriction" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 20px 20px 20px 20px">
 
 #### Key learning topics are reinforced throughout this unit in short (2-3 minute) videos. Keep an eye out for these as you preview the lesson plans. Watching these videos yourself are also a great way to reinforce your understanding of Generative AI.
 
 #### <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfJLo5nNGPHo0xCd9Xw5lSs" target="blank" rel="noopener noreferrer">Check out the whole video series here.</a>
 
-## Lesson Preview
+#### Throughout the next few levels, we'll spend some time diving into the lessons and associated activities connected to the topics of each of these videos - **Input, Embeddings, Neural Networks, Attention, and Output**. Come back to this videos if you have trouble understanding the content of the lessons.
 
+#### In the **input** step, a language model is provided with large amounts of training data. The model then learns to recognize words and understand language rules by analyzing this data through a pre-training process.
+
+## Lesson Preview
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 2: Input & Training Data</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
-<img src="https://images.code.org/21c065829829f33aed5dd6d3b349e7d7-6eba28153e23deb394cd6b1f73428121-Slide13.PNG" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+<img src="https://images.code.org/92415b93997e6c1e2bb50ac8e4897584-a6f01a79a091ff67f9bbd2ab11b7a4bb-Slide17.PNG" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
 
 #### **Question of the Day:** How does a computer recognize words used in language?
 
@@ -32,25 +35,6 @@ markdown <<MARKDOWN
 * #### Identify potential data sources relevant to a task being performed by a language model
 
 ### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/2" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
-</p></div>
-</details>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 3: Bias in the Machine</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-<img src="https://images.code.org/6debd3ce2def47f39e00cfb1aecd42bf-3fc2e3897f789e3a47c324fbc19f1ec2-Slide14.PNG" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
-
-#### **Question of the Day:** How do our choices about input data influence a large language model?
-
-#### **Lesson Overview:**
-
-#### This lesson formally introduces the concept of bias, where certain information is favored over others. Students experience how bias can implicitly and unintentionally creep into large-language models by participating in an activity where they are asked to source articles and information for a RecipeBot. Once they've used search engine results to generate their training data, they analyze patterns in the data that the class found as a collection, noticing unintended biases such as certain cuisines being unintentionally excluded or all the articles falling within a certain narrow date range. After acknowledging how bias can appear, students analyze several scenarios and discuss how bias could appear in the training data of each one.
-
-#### **Students will be able to:**
-* #### Describe patterns in collections of data sources that contribute to bias
-
-### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/3" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
 </p></div>
 </details>
 

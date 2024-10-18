@@ -436,6 +436,14 @@ const EVENTS = {
     'Toggled to For Teachers Only on codebridge',
   CODEBRIDGE_INSTRUCTIONS_TOGGLE: 'Toggled to Instructions on codebridge',
   CODEBRIDGE_HELP_TIPS_TOGGLE: 'Toggled to Help and Tips on codebridge',
+
+  // Blockly Lab Settings
+  BLOCKLY_LAB_SETTING_CHANGED: 'Setting changed in Blockly Lab',
+  BLOCKLY_SETTING_KEYBOARD_NAVIGATION: 'keyboardNavigation',
+  BLOCKLY_SETTING_THEME: 'theme',
+  BLOCKLY_SETTING_ON: 'on',
+  BLOCKLY_SETTING_OFF: 'off',
+  BLOCKLY_APP_TYPE_MUSIC: 'music',
 };
 
 const EVENT_GROUP_NAMES = {

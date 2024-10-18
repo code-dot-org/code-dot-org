@@ -63,3 +63,13 @@
   border-bottom: 1px solid $light_gray_800;
   margin-bottom: 0;
 }
+
+.centerHeaderContent {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.lockedFilesBanner {
+  margin-bottom: 4px;
+}

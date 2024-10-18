@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-27 22:03:04 UTC",
+    "serialized_at": "2024-10-17 15:15:51 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1358,7 +1358,7 @@
       "key": "bb7221eb-d910-4024-88db-8b345d44619b",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the video [Data Visualizer in App Lab - Part 2](https://youtu.be/OjUEFHo3Yw0)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** Give students access to [r exploring_two_columns/csp/2024], ideally in digital form.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the video [Data Visualizer in App Lab - Part 2](https://youtu.be/RspulOZZTtM)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** Give students access to [r exploring_two_columns/csp/2024], ideally in digital form.",
         "name": "Making Crosstab Charts",
         "tips": [
           {

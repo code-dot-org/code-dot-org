@@ -3,12 +3,12 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Python and Pandas
+# Data Science with Python
 
 ## Lesson 9: More Visualizations 
 
 #### In this lesson, students will explore heat maps and stacked line charts, as well as line charts that are plotting multiple lines.
-#### They will learn how to make these charts in matplotlib. They will also discuss the pros and cons of each visualization variety.
+#### They will learn how to make these charts in **matplotlib** and discuss the pros and cons of each visualization variety.
 
 <img src="https://images.code.org/ef6272e3e3eb2cadae2f63d8d498aae4-image-1724777151726.png" alt="types of graphs" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
 
@@ -16,13 +16,12 @@ markdown <<MARKDOWN
 
 
 
-## Key concepts 
-
-- #### **stackplot()** -stacks lines, 
-- #### **imshow()** - creates heatmap
-- #### **yticks()** - define labels on y axis 
+>## Key concepts:
+> - #### **stackplot()** -stacks lines, 
+> - #### **imshow()** - creates heatmap
+> - #### **yticks()** - define labels on y axis 
 
 ## Let's practice!  
 
-![]()
+
 MARKDOWN

@@ -1,6 +1,5 @@
 // Event Handlers for Google Blockly.
 
-import {Block, WorkspaceSvg} from 'blockly';
 import * as GoogleBlockly from 'blockly/core';
 
 import {handleWorkspaceResizeOrScroll} from '@cdo/apps/code-studio/callouts';
@@ -80,7 +79,7 @@ export function disableOrphans(event: GoogleBlockly.Events.Abstract) {
   }
 }
 
-function updateBlockEnabled(block: Block) {
+function updateBlockEnabled(block: GoogleBlockly.Block) {
   // Changing blocks as part of this event shouldn't be undoable.
   const initialUndoFlag = Blockly.Events.getRecordUndo();
   try {
@@ -92,7 +91,7 @@ function updateBlockEnabled(block: Block) {
         child.setEnabled(true);
       }
     } else if (block.outputConnection || block.previousConnection) {
-      let currentBlock: Block | null = block;
+      let currentBlock: GoogleBlockly.Block | null = block;
       do {
         currentBlock.setEnabled(false);
         currentBlock = currentBlock.getNextBlock();
@@ -115,11 +114,13 @@ export function adjustCalloutsOnViewportChange(
 
 // When the browser is resized, we need to re-adjust the width of any open flyout.
 export function reflowToolbox() {
-  const mainWorkspace = Blockly.getMainWorkspace() as WorkspaceSvg;
+  const mainWorkspace =
+    Blockly.getMainWorkspace() as GoogleBlockly.WorkspaceSvg;
   mainWorkspace?.getFlyout()?.reflow();
 
   if (Blockly.functionEditor) {
-    const modalWorkspace = Blockly.getFunctionEditorWorkspace() as WorkspaceSvg;
+    const modalWorkspace =
+      Blockly.getFunctionEditorWorkspace() as GoogleBlockly.WorkspaceSvg;
     modalWorkspace?.getFlyout()?.reflow();
   }
 }

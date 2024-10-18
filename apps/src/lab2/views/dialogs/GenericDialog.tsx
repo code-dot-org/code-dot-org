@@ -1,5 +1,6 @@
+import classNames from 'classnames';
 import FocusTrap from 'focus-trap-react';
-import React, {useCallback} from 'react';
+import React, {useMemo, useContext} from 'react';
 
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
@@ -7,6 +8,7 @@ import {
   useEnterKeyboardTrap,
   useEscapeKeyboardTrap,
 } from '@cdo/apps/lab2/hooks';
+import {Theme, ThemeContext} from '@cdo/apps/lab2/views/ThemeWrapper';
 import commonI18n from '@cdo/locale';
 
 import {useDialogControl} from './DialogControlContext';
@@ -46,9 +48,11 @@ export type GenericDialogProps = GenericDialogTitleProps &
         destructive?: boolean;
       };
     };
+    getButtonCallback?: typeof defaultGetButtonCallback;
   };
 
 import moduleStyles from './generic-dialog.module.scss';
+import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 /**
  * Generic root dialog used in Lab2 labs.
@@ -64,25 +68,35 @@ import moduleStyles from './generic-dialog.module.scss';
  * If no confirm button text is provided, the default text is "OK" (translatable).
  */
 
-type UseClosingCallbackArgs = {
+export type GetButtonCallbackArgs = {
   closeDialog: DialogCloseFunctionType;
   closeType: DialogCloseActionType;
   callback: dialogCallback | undefined;
   disabled: boolean | undefined;
 };
 
-const useClosingCallback = ({
-  closeDialog,
-  closeType,
-  callback,
-  disabled,
-}: UseClosingCallbackArgs) =>
-  useCallback(() => {
+export const defaultGetButtonCallback =
+  ({closeDialog, closeType, callback, disabled}: GetButtonCallbackArgs) =>
+  () => {
     if (!disabled) {
       closeDialog(closeType);
       callback && callback();
     }
-  }, [closeDialog, closeType, callback, disabled]);
+  };
+
+const useButtonCallback = ({
+  closeDialog,
+  closeType,
+  callback,
+  disabled,
+  getButtonCallback,
+}: GetButtonCallbackArgs & {
+  getButtonCallback: typeof defaultGetButtonCallback;
+}) =>
+  useMemo(
+    () => getButtonCallback({closeDialog, closeType, callback, disabled}),
+    [closeDialog, closeType, callback, disabled, getButtonCallback]
+  );
 
 const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
   buttons,
@@ -90,28 +104,34 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
   titleComponent,
   message,
   bodyComponent,
+  getButtonCallback = defaultGetButtonCallback,
 }) => {
   const dialogControl = useDialogControl();
 
-  const cancelCallback = useClosingCallback({
+  const {theme} = useContext(ThemeContext);
+
+  const cancelCallback = useButtonCallback({
     closeDialog: dialogControl.closeDialog,
     closeType: 'cancel',
     callback: buttons?.cancel?.callback,
     disabled: buttons?.cancel?.disabled,
+    getButtonCallback,
   });
 
-  const neutralCallback = useClosingCallback({
+  const neutralCallback = useButtonCallback({
     closeDialog: dialogControl.closeDialog,
     closeType: 'neutral',
     callback: buttons?.neutral?.callback,
     disabled: buttons?.neutral?.disabled,
+    getButtonCallback,
   });
 
-  const confirmCallback = useClosingCallback({
+  const confirmCallback = useButtonCallback({
     closeDialog: dialogControl.closeDialog,
     closeType: 'confirm',
     callback: buttons?.confirm?.callback,
     disabled: buttons?.confirm?.disabled,
+    getButtonCallback,
   });
 
   useEscapeKeyboardTrap(cancelCallback);
@@ -119,7 +139,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
 
   return (
     <FocusTrap>
-      <div className={moduleStyles.genericDialog}>
+      <div className={moduleStyles['genericDialog-' + theme]}>
         {titleComponent ? (
           titleComponent
         ) : title ? (
@@ -132,10 +152,14 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
             {buttons?.cancel ? (
               <Button
                 onClick={cancelCallback}
-                className={moduleStyles.cancel}
+                className={classNames(moduleStyles.cancel, {
+                  [darkModeStyles.secondaryButton]: theme === Theme.DARK,
+                })}
                 type="secondary"
                 disabled={buttons.cancel.disabled}
-                color={buttonColors.gray}
+                color={
+                  theme === Theme.DARK ? buttonColors.white : buttonColors.gray
+                }
                 text={buttons.cancel.text || commonI18n.cancel()}
               />
             ) : (
@@ -153,11 +177,16 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
               )}
               <Button
                 onClick={confirmCallback}
+                className={classNames({
+                  [darkModeStyles.primaryButton]: theme === Theme.DARK,
+                })}
                 disabled={buttons?.confirm?.disabled}
                 type="primary"
                 color={
                   buttons?.confirm?.destructive
                     ? buttonColors.destructive
+                    : theme === Theme.DARK
+                    ? buttonColors.white
                     : buttonColors.purple
                 }
                 text={buttons?.confirm?.text || commonI18n.dialogOK()}

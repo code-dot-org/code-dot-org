@@ -19,6 +19,7 @@ module Services
           user.lti_roster_sync_enabled = true if user.teacher?
           user.lms_landing_opted_out = true
           user.verify_teacher! if Policies::Lti.unverified_teacher?(user)
+          user.provider = ::User::PROVIDER_MIGRATED unless user.migrated?
           user.save!
           ::PartialRegistration.delete(session)
           unless rehydrated_user.id

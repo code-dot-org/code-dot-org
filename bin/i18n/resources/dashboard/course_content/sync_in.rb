@@ -200,6 +200,26 @@ module I18n
                   i18n_strings[BLOCK_CATEGORIES_TYPE][name] = name if name
                 end
 
+                ## Lab2 Function Names.
+                ## Blockly in Lab2 uses JSON rather than XML.
+                if level.uses_lab2?
+                  functions = level.
+                    properties.
+                    dig("level_data", "startSources", "blocks", "blocks")&.
+                    filter {|block| block["type"] == "procedures_defnoreturn"}
+
+                  i18n_strings['function_definitions'] = Hash.new unless functions.nil? || functions.empty?
+
+                  functions&.each do |function|
+                    name = function.dig("fields", "NAME")
+                    # The name is used to uniquely identify the function. Skip if there is no name.
+                    next unless name
+                    function_definition = Hash.new
+                    function_definition["name"] = name
+                    i18n_strings['function_definitions'][name] = function_definition
+                  end
+                end
+
                 ## Function Names
                 functions = blocks.xpath("//block[@type=\"procedures_defnoreturn\"]")
                 i18n_strings['function_definitions'] = Hash.new unless functions.empty?

@@ -1,7 +1,9 @@
-import {CodeBridgeConsoleState} from '@codebridge/redux/consoleRedux';
+import {CodebridgeConsoleState} from '@codebridge/redux/consoleRedux';
+import {CodebridgeWorkspaceState} from '@codebridge/redux/workspaceRedux';
 
 import {AichatState} from '@cdo/apps/aichat/redux/aichatRedux';
 import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import {CalendarState} from '@cdo/apps/code-studio/calendarRedux';
 import {HeaderReduxState} from '@cdo/apps/code-studio/headerRedux';
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
 import {JavalabConsoleState} from '@cdo/apps/javalab/redux/consoleRedux';
@@ -30,7 +32,8 @@ export interface RootState {
   aiTutor: AITutorState;
   aichat: AichatState;
   blockly: BlocklyState;
-  codebridgeConsole: CodeBridgeConsoleState;
+  codebridgeConsole: CodebridgeConsoleState;
+  codebridgeWorkspace: CodebridgeWorkspaceState;
   currentUser: CurrentUserState;
   header: HeaderReduxState;
   javalab: JavalabState;
@@ -47,4 +50,5 @@ export interface RootState {
   music: MusicState;
   predictLevel: PredictLevelState;
   progress: ProgressState;
+  calendar: CalendarState;
 }

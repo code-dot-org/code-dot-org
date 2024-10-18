@@ -1,4 +1,4 @@
-import GoogleBlockly, {Field, FieldImage, FieldImageConfig} from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 
 import {FIELD_IMAGE_DEFAULT_SIZE} from '../constants';
 
@@ -13,13 +13,13 @@ export default class CdoFieldImage extends GoogleBlockly.FieldImage {
   // in the CDO Blockly implementation. We override the constructor in order
   // to provide default values for the image width and height.
   constructor(
-    src: string | typeof Field.SKIP_SETUP,
+    src: string | typeof GoogleBlockly.Field.SKIP_SETUP,
     width: string | number = FIELD_IMAGE_DEFAULT_SIZE,
     height: string | number = FIELD_IMAGE_DEFAULT_SIZE,
     alt?: string,
-    onClick?: (p1: FieldImage) => void,
+    onClick?: (p1: GoogleBlockly.FieldImage) => void,
     flipRtl?: boolean,
-    config?: FieldImageConfig
+    config?: GoogleBlockly.FieldImageConfig
   ) {
     super(src, width, height, alt, onClick, flipRtl, config);
   }

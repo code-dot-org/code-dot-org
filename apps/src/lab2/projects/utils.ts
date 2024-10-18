@@ -115,7 +115,11 @@ export function getActiveFileForProject(project: MultiFileSource) {
   // No files are hidden in start mode. In non-start mode, only show starter files
   // (or files without a type, which default to starter files).
   const visibleFiles = files.filter(
-    f => isStartMode || !f.type || f.type === ProjectFileType.STARTER
+    f =>
+      isStartMode ||
+      !f.type ||
+      f.type === ProjectFileType.STARTER ||
+      f.type === ProjectFileType.LOCKED_STARTER
   );
 
   // Get the first active file, if no active file then the first open file,
