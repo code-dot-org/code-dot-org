@@ -10954,9 +10954,6 @@
       heading: "One Hour:"
       subhead: "Ignite. Inspire. Code."
       desc: "Join millions for an Hour of Code! Start an activity today and bring what your students love to life!"
-      button:
-        explore: "Explore activities"
-        host: "Host an event"
     what_is_hoc:
       heading: "What is the Hour of Code?"
       desc: "The Hour of Code is a worldwide movement that aims to introduce millions of students to computer science through one-hour coding activities. Through Hour of Code, we aim to demystify coding and show that anyone can learn the basics, inspiring future interest in computer science."
