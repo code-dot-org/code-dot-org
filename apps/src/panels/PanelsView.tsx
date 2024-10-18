@@ -33,7 +33,7 @@ interface PanelsProps {
   onSkip?: () => void;
   targetWidth: number;
   targetHeight: number;
-  offerTts: boolean;
+  offerBrowserTts: boolean;
   resetOnChange?: boolean;
 }
 
@@ -46,7 +46,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   onSkip,
   targetWidth,
   targetHeight,
-  offerTts,
+  offerBrowserTts,
   resetOnChange = true,
 }) => {
   const [currentPanelIndex, setCurrentPanelIndex] = useState(0);
@@ -99,10 +99,10 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
 
   // Cancel any in-progress text-to-speech when the panel changes.
   useEffect(() => {
-    if (offerTts) {
+    if (offerBrowserTts) {
       cancelSpeech();
     }
-  }, [currentPanelIndex, offerTts]);
+  }, [currentPanelIndex, offerBrowserTts]);
 
   // Reset typing if the panel changes.
   useEffect(() => {
@@ -172,7 +172,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
             textLayoutClass
           )}
         >
-          {offerTts && <TextToSpeech text={panel.text} />}
+          {offerBrowserTts && <TextToSpeech text={panel.text} />}
           {panel.typing ? (
             <div>
               <div className={styles.invisiblePlaceholder}>{plainText}</div>
