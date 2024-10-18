@@ -465,20 +465,13 @@ class RegistrationsController < Devise::RegistrationsController
     @country_code = location&.country_code.to_s.upcase
     @is_usa = ['US', 'RD'].include?(@country_code)
 
-    # We determine if the student is potentially locked by looking at their age
-    # If they are older (or there is no policy for them) they are unlocked
-    # This ignores them being explicitly unlocked by parental permission so we
-    # can show the 'Granted' status of that permission later.
-    underage = Policies::ChildAccount.underage?(current_user)
-    @potentially_locked = underage || !Policies::ChildAccount.has_required_information?(current_user)
-
     # The student is in a 'lockout' flow if they are potentially locked out and not unlocked
     @student_in_lockout_flow = underage && !Policies::ChildAccount::ComplianceState.permission_granted?(current_user)
 
     @personal_account_linking_enabled = Policies::ChildAccount.can_link_new_personal_account?(current_user) && !Policies::ChildAccount.partially_locked_out?(current_user) && cpa_partial_locked_enabled
 
     # Handle users who aren't locked out, but still need parent permission to link personal accounts.
-    if @potentially_locked
+    if underage || !Policies::ChildAccount.has_required_information?(current_user)
       permission_request = current_user.latest_parental_permission_request
       @pending_email = permission_request&.parent_email
       @request_date = permission_request&.updated_at || Date.new

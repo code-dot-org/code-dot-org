@@ -72,7 +72,7 @@
   = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put, id: 'lti-sync-settings-form'}) do |f|
     = f.hidden_field :lti_roster_sync_enabled
 
-- if @potentially_locked && experiment_value('cpa-partial-lockout', request)
+- if (!@personal_account_linking_enabled || Policies::ChildAccount::ComplianceState.permission_granted?(current_user)) && experiment_value('cpa-partial-lockout', request)
   %div#lockout-linked-accounts{
     data: {
       request_date: @request_date&.iso8601,
