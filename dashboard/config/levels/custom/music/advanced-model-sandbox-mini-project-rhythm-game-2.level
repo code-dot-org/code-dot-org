@@ -1,0 +1,85 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2024-10-17T22:04:00.000Z",
+  "level_num": "custom",
+  "user_id": 16899,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "blockMode": "Advanced",
+      "toolbox": {
+      },
+      "library": "launch2024",
+      "startSources": {
+        "variables": [
+          {
+            "name": "i",
+            "id": "Jzt-l.ao[tU*jVezANa#"
+          },
+          {
+            "name": "currentTime",
+            "id": "9(V777h5U{?PdH6?X14f"
+          }
+        ],
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            },
+            {
+              "type": "triggered_at",
+              "id": "e`Rdc+q?^Z.K@K;69bi{",
+              "x": 50,
+              "y": 110,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger1</field>",
+                "var": {
+                  "id": "9(V777h5U{?PdH6?X14f"
+                }
+              }
+            },
+            {
+              "type": "triggered_at",
+              "id": "?gzQ^b^2{,p_B;.[UT(l",
+              "x": 390,
+              "y": 110,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger2</field>",
+                "var": {
+                  "id": "9(V777h5U{?PdH6?X14f"
+                }
+              }
+            },
+            {
+              "type": "triggered_at",
+              "id": "aDmu*jVb[RP_rHc*zHBX",
+              "x": 710,
+              "y": 110,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger3</field>",
+                "var": {
+                  "id": "9(V777h5U{?PdH6?X14f"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "packId": "shakira_maluma_chantaje"
+    },
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-10-17T22:04:00.204+00:00\",\"changed\":[\"cloned from \\\"advanced-model-sandbox-mini-project-rhythm-game-1\\\"\"],\"cloned_from\":\"advanced-model-sandbox-mini-project-rhythm-game-1\"},{\"changed_at\":\"2024-10-17 22:04:02 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-17 22:04:20 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>
