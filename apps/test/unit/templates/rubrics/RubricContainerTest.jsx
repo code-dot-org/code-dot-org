@@ -42,8 +42,6 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
 fetch.mockIf(/\/rubrics\/.*/, JSON.stringify(''));
 
 const studentAlice = {id: 11, name: 'Alice'};
-// const studentBob = {id: 22, name: 'Bob'};
-// const studentCharlie = {id: 33, name: 'Charlie'};
 const sectionId = 999;
 const levelNotTried = {
   id: '123',
@@ -57,14 +55,10 @@ const levelNotTried = {
   passed: false,
   status: LevelStatus.not_tried,
 };
-// const levelAttempted = {
-//   ...levelNotTried,
-//   status: LevelStatus.attempted,
-// };
-// const levelSubmitted = {
-//   ...levelNotTried,
-//   status: LevelStatus.submitted,
-// };
+const levelSubmitted = {
+  ...levelNotTried,
+  status: LevelStatus.submitted,
+};
 
 describe('RubricContainer', () => {
   let clock;
@@ -263,6 +257,21 @@ describe('RubricContainer', () => {
       user_name: 'Chani',
       user_id: 1,
       eval: [],
+    },
+  ];
+
+  const oneEval = [
+    {
+      user_name: studentAlice.name,
+      user_id: studentAlice.id,
+      eval: [
+        {
+          feedback: '',
+          id: studentAlice.id,
+          learning_goal_id: 1587,
+          understanding: 0,
+        },
+      ],
     },
   ];
 
@@ -620,6 +629,91 @@ describe('RubricContainer', () => {
 
     dropdownOption = screen.getByText(studentAlice.name).closest('div');
     expect(dropdownOption.textContent).to.contain(i18n.readyToReview());
+  });
+
+  it('renders submitted status blob for unevaluated submission', async () => {
+    const statusAll = {
+      attemptedCount: 1,
+      attemptedUnevaluatedCount: 0,
+      csrfToken: 'abcdef',
+      aiEvalStatusMap: {
+        [studentAlice.id]: 'IN_PROGRESS',
+      },
+    };
+
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(statusAll);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchAiEvaluations([]);
+    stubFetchTourStatus({seen: true});
+
+    // the level has been submitted by Alice
+    store.dispatch(setStudentsForCurrentSection(sectionId, students));
+    levelsWithProgress = [{...levelSubmitted, userId: studentAlice.id}];
+    store.dispatch(setLevelsWithProgress(levelsWithProgress));
+
+    render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          sectionId={42}
+          open
+        />
+      </Provider>
+    );
+
+    // Wait for fetches
+    await wait();
+
+    // Verify status bubble for selected student
+    let dropdownOption = screen.getByText(studentAlice.name).closest('div');
+    expect(dropdownOption.textContent).to.contain(i18n.submitted());
+  });
+
+  it('renders evaluated status blob when teacher has given feedback', async () => {
+    const statusAll = {
+      attemptedCount: 1,
+      attemptedUnevaluatedCount: 0,
+      csrfToken: 'abcdef',
+      aiEvalStatusMap: {
+        [studentAlice.id]: 'READY_TO_REVIEW',
+      },
+    };
+
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(statusAll);
+    stubFetchTeacherEvaluations(oneEval);
+    stubFetchAiEvaluations([]);
+    stubFetchTourStatus({seen: true});
+
+    // the level has been submitted by Alice
+    store.dispatch(setStudentsForCurrentSection(sectionId, students));
+    store.dispatch(setLevelsWithProgress(levelsWithProgress));
+
+    render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          sectionId={42}
+          open
+        />
+      </Provider>
+    );
+
+    // Wait for fetches
+    await wait();
+
+    // Verify status bubble for selected student
+    let dropdownOption = screen.getByText(studentAlice.name).closest('div');
+    expect(dropdownOption.textContent).to.contain(i18n.evaluated());
   });
 
   it('shows general error message for status 1000', async () => {
