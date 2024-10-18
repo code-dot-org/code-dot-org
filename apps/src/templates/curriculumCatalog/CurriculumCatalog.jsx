@@ -13,7 +13,7 @@ import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
 
 import {Heading5, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   getSimilarRecommendations,
@@ -75,7 +75,8 @@ const CurriculumCatalog = ({
       EVENTS.CURRICULUM_CATALOG_ASSIGN_COMPLETED_EVENT,
       {
         curriculum_offering: assignmentData.assignedTitle,
-      }
+      },
+      PLATFORMS.BOTH
     );
   };
 
