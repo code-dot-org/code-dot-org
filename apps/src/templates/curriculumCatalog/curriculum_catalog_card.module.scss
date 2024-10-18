@@ -17,6 +17,10 @@ $container-width: 309px;
     object-fit: cover;
     border-radius: $border-radius $border-radius 0 0;
   }
+
+  .iconWithDescription {
+    margin: 0 0 0.5em 0;
+  }
 }
 
 .curriculumCatalogCardContainer_english {
@@ -69,7 +73,6 @@ $container-width: 309px;
   display: flex;
   align-items: center;
   column-gap: 0.5em;
-  margin: 0 0 0.5em 0;
 
   > p {
     font-size: 0.875em;
@@ -154,11 +157,11 @@ $container-width: 309px;
   }
 }
 
-.buttonFlex {
+button.buttonFlex {
   flex: 1;
 }
 
-.buttonsContainer a.teacherAndSignedOutLearnMoreButton {
+.buttonsContainer a.teacherAndSignedOutLearnMoreButton, .wideCardButtonsContainer a.teacherAndSignedOutLearnMoreButton {
   display: none;
   text-align: center;
   padding-top: 0;
@@ -182,7 +185,7 @@ $container-width: 309px;
     display: block !important;
   }
 
-  .quickViewButton {
+  button.quickViewButton {
     display: none !important;
   }
 
@@ -191,4 +194,60 @@ $container-width: 309px;
       border-color: $neutral_dark20 !important;
     }
   }
+}
+
+.wideCard {
+  display: flex;
+  height: 305px;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1 0 0;
+  width: 970px;
+  border-radius: 4px;
+  border: 1px solid $neutral_dark;
+  background: $neutral_white;
+}
+
+.wideCardImg {
+  height: 305px;
+  width: 480px;
+  object-fit: cover;
+  border-radius: $border-radius $border-radius 0 0;
+}
+
+.wideCardContentAndButtons {
+  display: flex;
+  padding: 16px 24px 20px 14px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1 0 0;
+}
+
+.wideCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.wideCardButtonsContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 12px;
+  align-self: stretch;
+}
+
+p.wideCardDescription {
+  margin-bottom: 0.5em;
+}
+
+.wideCardAspects {
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 8px;
+align-self: stretch;
 }
