@@ -1,17 +1,26 @@
 #!/usr/bin/env ruby
 
 # The map on code.org/yourschool is run off of Mapbox.
-# This script updates the data on Mapbox by querying all rows from
-# census_summaries table for the appropriate school year,
-# creating maptiles with Mapbox's command line tool, Tippecanoe,
-# and uploading them to Mapbox's server.
+# This script updates the data on Mapbox by reading the rows from
+# the given AWS file and creating maptiles with Mapbox's command
+# line tool, Tippecanoe, and uploading them to Mapbox's server
+# under the `censustiles-dev` tileset.
+#
+# This can be used on staging to test that the data and script will
+# work with the new year's data before merging + running on
+# production using ./bin/update_census_mapbox.
+#
+# Note: This script does not read from the CensusSummaries table while
+# the real update_census_mapbox script does. Both read from the
+# Schools database.
 
 require_relative '../dashboard/config/environment'
 require_relative '../pegasus/helpers/properties'
-
 require_relative './cron/upload_to_mapbox'
 
-raise "CDO.mapbox_upload_token is not defined" unless CDO.mapbox_upload_token
+# Constants to update for the given year
+AWS_ACCESS_REPORT_DATA_FILE = "access-report-data-files-2024/final-csv/final_csv_2024_09_30.csv"
+ACCESS_REPORT_YEAR = "2024"
 
 CSV_IMPORT_OPTIONS = {col_sep: ",", headers: true, encoding: 'bom|utf-8'}.freeze
 
@@ -23,8 +32,7 @@ end
 
 def main
   CDO.log.info "Loading census summary data."
-  AWS::S3.seed_from_file('cdo-census', "access-report-data-files-2024/final-csv/final_csv_2024_09_30.csv") do |filename|
-    year = '2024'
+  AWS::S3.seed_from_file('cdo-census', AWS_ACCESS_REPORT_DATA_FILE) do |filename|
     geojson = JSON.parse('{ "type": "FeatureCollection", "features": [] }')
     entries_skipped = 0
 
@@ -49,7 +57,7 @@ def main
           },
           properties: {
             school_id: school.id,
-            year: year,
+            year: ACCESS_REPORT_YEAR,
             school_name: school.name.titleize,
             school_city: school.city.titleize,
             school_state: school.state,
