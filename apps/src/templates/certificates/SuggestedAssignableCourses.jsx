@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
+import {BodyTwoText, Heading2} from '@cdo/apps/componentLibrary/typography';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import i18n from '@cdo/locale';
 
@@ -29,6 +30,12 @@ function SuggestedAssignableCourses({assignableCourseSuggestions, isEnglish}) {
       if (timeoutId) clearTimeout(timeoutId);
     };
   }, [assignSuccess]);
+
+  const shouldRenderComponent = assignableCourseSuggestions.length === 1;
+
+  if (!shouldRenderComponent) {
+    return null;
+  }
 
   const assignableCourseComponent = () => {
     if (assignableCourseSuggestions.length === 0) {
@@ -103,7 +110,11 @@ function SuggestedAssignableCourses({assignableCourseSuggestions, isEnglish}) {
   };
 
   return (
-    <div>
+    <div className={style.container}>
+      <div className={style.heading}>
+        <Heading2>{i18n.congratsSuggestedCoursesHeading()}</Heading2>
+        <BodyTwoText>{i18n.congratsSuggestedCoursesDescription()}</BodyTwoText>
+      </div>
       {assignableCourseComponent()}
       {assignSuccess && (
         <Alert
