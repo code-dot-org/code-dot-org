@@ -198,8 +198,9 @@ const saveAiCustomization = async (
     .incrementCounter('Aichat.SaveStarted');
 
   let passedToxicityScreening = false;
+
+  // Wrap toxicity check in try/catch to handle unauthorized usage with a helpful user-facing message.
   try {
-    // Detect toxicity in the student's customizations
     const toxicity = await detectToxicityInCustomizations(
       trimmedCurrentAiCustomizations
     );
@@ -208,7 +209,7 @@ const saveAiCustomization = async (
     if (!toxicity.flaggedFields.length) {
       passedToxicityScreening = true;
     } else {
-      // Log for analysis purposes
+      // Log for analysis purposes.
       Lab2Registry.getInstance()
         .getMetricsReporter()
         .logInfo({
@@ -226,7 +227,7 @@ const saveAiCustomization = async (
     }
   } catch (error) {
     if (error instanceof NetworkError && error.response.status === 403) {
-      await notifyErrorUnauthorized(error, dispatch);
+      await notifyErrorUnauthorized(error, 'Model Customization', dispatch);
     } else {
       Lab2Registry.getInstance()
         .getMetricsReporter()
@@ -494,6 +495,7 @@ export const submitChatContents = createAsyncThunk(
 
 async function notifyErrorUnauthorized(
   error: NetworkError,
+  userAction: string,
   dispatch: AppDispatch
 ) {
   const responseBody = await error.response.json();
@@ -521,6 +523,7 @@ async function notifyErrorUnauthorized(
       {
         levelPath: window.location.pathname,
         userType,
+        userAction,
       },
       true
     )
@@ -554,7 +557,7 @@ async function handleChatCompletionError(
       })
     );
   } else if (error instanceof NetworkError && error.response.status === 403) {
-    await notifyErrorUnauthorized(error, dispatch);
+    await notifyErrorUnauthorized(error, 'Chat Completion', dispatch);
   } else {
     Lab2Registry.getInstance()
       .getMetricsReporter()
