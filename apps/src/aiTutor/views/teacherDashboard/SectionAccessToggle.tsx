@@ -47,7 +47,9 @@ const SectionAccessToggle: React.FC<SectionAccessToggleProps> = ({
       sectionId: sectionId,
       uiLocation: 'aiTutorTeacherDashboardTab',
     });
-    dispatch(updateSectionAiTutorEnabled(sectionId, newValue));
+    dispatch(
+      updateSectionAiTutorEnabled({sectionId, aiTutorEnabled: newValue})
+    );
   };
 
   useEffect(() => {
