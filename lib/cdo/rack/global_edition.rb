@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'cdo/global_edition'
-require 'request_store'
 
 module Rack
   class GlobalEdition
@@ -55,8 +54,6 @@ module Rack
           request.path_info = main_path
 
           setup_region(ge_region) if region_changed?(ge_region)
-
-          RequestStore.store[REGION_KEY] = request.cookies[REGION_KEY].presence
         elsif Cdo::GlobalEdition.region_available?(request.cookies[REGION_KEY]) && request_redirectable?
           # Redirects to the regional version of the path.
           response.redirect regional_path_for(request.cookies[REGION_KEY], request.fullpath)
