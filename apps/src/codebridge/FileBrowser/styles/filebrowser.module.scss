@@ -62,11 +62,11 @@
   margin-right: 4px;
 }
 
-li .button-kebab {
+.button-kebab {
   display: none;
   height: 20px;
   width: 20px;
-  margin: 2px;
+  margin: 2px 2px 2px 0;
 }
 
 div.row:hover .button-kebab {
@@ -83,7 +83,8 @@ div.row:hover .button-kebab {
   display: flex;
   justify-content: flex-start;
   overflow: hidden;
-  margin-right: 4px;
+  padding-right: 4px;
+  width: 100%;
 }
 
 .rowIcon {

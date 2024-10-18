@@ -220,6 +220,13 @@ class HomeController < ApplicationController
 
         @homepage_data[:censusQuestion] = school_stats.try(:has_high_school_grades?) ? "how_many_20_hours" : "how_many_10_hours"
         @homepage_data[:currentSchoolYear] = current_census_year
+        @homepage_data[:existingSchoolInfo] = {
+          id: teachers_school.id,
+          name: teachers_school.name,
+          country: 'US',
+          zip: teachers_school.zip,
+          type: teachers_school.school_type,
+        }
         @homepage_data[:ncesSchoolId] = teachers_school.id
         @homepage_data[:teacherName] = current_user.name
         @homepage_data[:teacherId] = current_user.id

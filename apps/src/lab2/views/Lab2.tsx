@@ -8,6 +8,7 @@ import {Provider} from 'react-redux';
 
 import {getStandaloneProjectId} from '@cdo/apps/lab2/projects/utils';
 import {getStore} from '@cdo/apps/redux';
+import BrowserTextToSpeechWrapper from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
 
 import ProjectContainer from '../projects/ProjectContainer';
 
@@ -20,16 +21,18 @@ import ThemeWrapper from './ThemeWrapper';
 const Lab2: React.FunctionComponent = () => {
   return (
     <Provider store={getStore()}>
-      <ThemeWrapper>
-        <Lab2Wrapper>
-          <DialogManager>
-            <MetricsAdapter />
-            <ProjectContainer channelId={getStandaloneProjectId()}>
-              <LabViewsRenderer />
-            </ProjectContainer>
-          </DialogManager>
-        </Lab2Wrapper>
-      </ThemeWrapper>
+      <BrowserTextToSpeechWrapper>
+        <ThemeWrapper>
+          <Lab2Wrapper>
+            <DialogManager>
+              <MetricsAdapter />
+              <ProjectContainer channelId={getStandaloneProjectId()}>
+                <LabViewsRenderer />
+              </ProjectContainer>
+            </DialogManager>
+          </Lab2Wrapper>
+        </ThemeWrapper>
+      </BrowserTextToSpeechWrapper>
     </Provider>
   );
 };

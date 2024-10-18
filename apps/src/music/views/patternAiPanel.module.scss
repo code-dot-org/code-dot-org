@@ -80,6 +80,12 @@
   align-items: center;
   opacity: 0;
   transition: 0.1s ease-in-out;
+  justify-content: flex-end;
+  height: 100%;
+
+  &Gap {
+    gap: 30px;
+  }
 
   &Visible {
     opacity: 1;
@@ -200,7 +206,7 @@
   }
 
   &Generate {
-    top: 143px;
+    top: 172px;
     right: 196px;
 
     &Error {
@@ -224,7 +230,7 @@
 
   &Generate {
     right: 177px;
-    top: 152px;
+    top: 201px;
   }
 }
 

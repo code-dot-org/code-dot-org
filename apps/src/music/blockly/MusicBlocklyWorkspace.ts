@@ -1,9 +1,6 @@
-import {BlocklyOptions, Workspace, WorkspaceSvg} from 'blockly';
-import GoogleBlockly from 'blockly/core';
-import {Abstract} from 'blockly/core/events/events_abstract';
-import {ToolboxItemInfo} from 'blockly/core/utils/toolbox';
+import * as GoogleBlockly from 'blockly/core';
 
-import {Renderers} from '@cdo/apps/blockly/constants';
+import {BLOCK_TYPES, Renderers} from '@cdo/apps/blockly/constants';
 import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
 import {ProcedureBlock} from '@cdo/apps/blockly/types';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
@@ -14,6 +11,7 @@ import {nameComparator} from '@cdo/apps/util/sort';
 
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {BlockMode, Triggers} from '../constants';
+import musicI18n from '../locale';
 
 import {BlockTypes} from './blockTypes';
 import {
@@ -48,7 +46,10 @@ export default class MusicBlocklyWorkspace {
     this.isBlocklyEnvironmentSetup = true;
   }
 
-  private workspace: WorkspaceSvg | Workspace | null;
+  private workspace:
+    | GoogleBlockly.WorkspaceSvg
+    | GoogleBlockly.Workspace
+    | null;
   private container: HTMLElement | null;
   private codeHooks: {[key: string]: (...args: unknown[]) => void};
   private compiledEvents: CompiledEvents;
@@ -82,7 +83,7 @@ export default class MusicBlocklyWorkspace {
    */
   init(
     container: HTMLElement,
-    onBlockSpaceChange: (e: Abstract) => void,
+    onBlockSpaceChange: (e: GoogleBlockly.Events.Abstract) => void,
     isReadOnlyWorkspace: boolean,
     toolbox: ToolboxData | undefined,
     isRtl: boolean,
@@ -130,7 +131,7 @@ export default class MusicBlocklyWorkspace {
       editBlocks: getAppOptionsEditBlocks(),
       customSimpleDialog,
       comments: true,
-    } as BlocklyOptions);
+    } as GoogleBlockly.BlocklyOptions);
 
     this.resizeBlockly();
 
@@ -147,7 +148,7 @@ export default class MusicBlocklyWorkspace {
     if (this.workspace) {
       this.workspace.dispose();
     }
-    this.workspace = new Workspace();
+    this.workspace = new GoogleBlockly.Workspace();
     this.headlessMode = true;
   }
 
@@ -158,7 +159,7 @@ export default class MusicBlocklyWorkspace {
 
     this.container.style.width = '100%';
     this.container.style.height = '100%';
-    Blockly.svgResize(this.workspace as WorkspaceSvg);
+    Blockly.svgResize(this.workspace as GoogleBlockly.WorkspaceSvg);
   }
 
   dispose() {
@@ -393,11 +394,17 @@ export default class MusicBlocklyWorkspace {
     }
     // Clear all highlights.
     for (const block of this.workspace.getAllBlocks()) {
-      (this.workspace as WorkspaceSvg).highlightBlock(block.id, false);
+      (this.workspace as GoogleBlockly.WorkspaceSvg).highlightBlock(
+        block.id,
+        false
+      );
     }
     // Highlight playing blocks.
     for (const blockId of playingBlockIds) {
-      (this.workspace as WorkspaceSvg).highlightBlock(blockId, true);
+      (this.workspace as GoogleBlockly.WorkspaceSvg).highlightBlock(
+        blockId,
+        true
+      );
     }
   }
 
@@ -412,11 +419,15 @@ export default class MusicBlocklyWorkspace {
     }
 
     if (blockId) {
-      (this.workspace as WorkspaceSvg).getBlockById(blockId)?.select();
+      (this.workspace as GoogleBlockly.WorkspaceSvg)
+        .getBlockById(blockId)
+        ?.select();
     } else {
-      (this.workspace as WorkspaceSvg).getAllBlocks().forEach(block => {
-        block.unselect();
-      });
+      (this.workspace as GoogleBlockly.WorkspaceSvg)
+        .getAllBlocks()
+        .forEach(block => {
+          block.unselect();
+        });
     }
   }
 
@@ -454,23 +465,35 @@ export default class MusicBlocklyWorkspace {
     const codeCopy = JSON.parse(JSON.stringify(code));
 
     Blockly.serialization.workspaces.load(codeCopy, this.workspace);
-
-    if (
-      this.toolbox?.addFunctionCalls &&
-      this.toolbox?.type === 'flyout' &&
-      this.blockMode === BlockMode.SIMPLE2
-    ) {
-      this.generateFunctionCallBlocks();
-    }
   }
 
   // For each function body in the current workspace, add a function call
-  // block to the toolbox.
-  generateFunctionCallBlocks() {
+  // block to the toolbox. Also add a function defintion block, if required.
+  generateFunctionBlocks() {
+    const blockList: GoogleBlockly.utils.toolbox.ToolboxItemInfo[] = [];
+
+    if (this.toolbox?.addFunctionDefinition) {
+      blockList.push({
+        kind: 'block',
+        type: BLOCK_TYPES.procedureDefinition,
+        fields: {
+          NAME: musicI18n.blockly_functionNamePlaceholder(),
+        },
+      });
+    }
+
     const allFunctions: GoogleBlockly.serialization.procedures.State[] = [];
 
     (this.workspace?.getTopBlocks() as ProcedureBlock[])
-      .filter(block => block.type === 'procedures_defnoreturn')
+      .filter(
+        // When a block is dragged from the toolbox, an insertion marker is
+        // created with the same type. Insertion markers just provide a
+        // visual indication of where the actual block will go. They should
+        // not be counted here or we could end up with duplicate call blocks.
+        block =>
+          block.type === BLOCK_TYPES.procedureDefinition &&
+          !block.isInsertionMarker()
+      )
       .forEach(block => {
         allFunctions.push(
           Blockly.serialization.procedures.saveProcedure(
@@ -479,12 +502,10 @@ export default class MusicBlocklyWorkspace {
         );
       });
 
-    const blockList: ToolboxItemInfo[] = [];
-
     allFunctions.sort(nameComparator).forEach(({name, id, parameters}) => {
       blockList.push({
         kind: 'block',
-        type: 'procedures_callnoreturn',
+        type: BLOCK_TYPES.procedureCall,
         extraState: {
           name,
           id,
@@ -496,7 +517,9 @@ export default class MusicBlocklyWorkspace {
     if (this.blockMode) {
       const existingToolbox = getToolbox(this.blockMode, this.toolbox);
       existingToolbox.contents = existingToolbox.contents.concat(blockList);
-      (this.workspace as WorkspaceSvg).updateToolbox(existingToolbox);
+      (this.workspace as GoogleBlockly.WorkspaceSvg).updateToolbox(
+        existingToolbox
+      );
     }
   }
 

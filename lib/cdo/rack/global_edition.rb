@@ -8,7 +8,7 @@ module Rack
       CDO.dashboard_hostname,
     ].freeze
     AVAILABLE_REGIONS = Set[
-      FARSI_REGION = 'fa',
+      *Cdo::GlobalEdition::REGIONS
     ].freeze
 
     # TODO: Replace with the actual mapping list of regional locales from the Global Edition config files.

@@ -36,7 +36,7 @@ describe('FinishTeacherAccount', () => {
   });
 
   function renderDefault(usIp: boolean = true) {
-    render(<FinishTeacherAccount usIp={usIp} />);
+    render(<FinishTeacherAccount usIp={usIp} countryCode={'US'} />);
   }
 
   it('renders finish teacher account page with school zip when usIp is true', () => {
@@ -189,11 +189,15 @@ describe('FinishTeacherAccount', () => {
         email: email,
         name: name,
         email_preference_opt_in: true,
-        school: NonSchoolOptions.SELECT_A_SCHOOL,
-        school_id: NonSchoolOptions.SELECT_A_SCHOOL,
-        school_zip: '',
-        school_name: '',
-        school_country: 'US',
+        school_info_attributes: {
+          schoolId: NonSchoolOptions.SELECT_A_SCHOOL,
+          country: 'US',
+          schoolName: '',
+          schoolZip: '',
+          schoolsList: [],
+          usIp: true,
+        },
+        country_code: 'US',
       },
     };
     sessionStorage.setItem('email', email);

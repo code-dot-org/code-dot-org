@@ -9,8 +9,7 @@ import {
   ScrollBlockDragger,
   ScrollOptions,
 } from '@blockly/plugin-scroll-options';
-import {Options, Theme, Workspace} from 'blockly';
-import {FieldProto} from 'blockly/core/field';
+import * as GoogleBlockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 
 import {
@@ -67,6 +66,7 @@ import initializeBlocklyXml, {
 import {registerAllContextMenuItems} from './addons/contextMenu';
 import registerLogicCompareMutator from './addons/extensions/logic_compare';
 import FunctionEditor from './addons/functionEditor';
+import {filterFunctionArgVariables} from './addons/plusMinusBlocks/advancedProcedures';
 import registerIfMutator from './addons/plusMinusBlocks/if';
 import registerTextJoinMutator from './addons/plusMinusBlocks/text_join';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
@@ -234,7 +234,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
   const getWorkspaceCodeHelper = (
     retryCount: number,
-    hiddenWorkspace: Workspace | undefined
+    hiddenWorkspace: GoogleBlockly.Workspace | undefined
   ): string => {
     let workspaceCode = '';
     try {
@@ -269,14 +269,25 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
   // elements in this list should be structured as follows:
   // [field registry name for field, class name of field being overridden, class to use as override]
-  const fieldOverrides: [string, string, FieldProto][] = [
+  const fieldOverrides: [
+    string,
+    string,
+    Pick<typeof GoogleBlockly.Field, 'prototype'>
+  ][] = [
     ['field_variable', 'FieldVariable', CdoFieldVariable],
     ['field_dropdown', 'FieldDropdown', CdoFieldDropdown],
     ['field_colour', 'FieldColour', CdoFieldColour],
     ['field_number', 'FieldNumber', CdoFieldNumber],
     // CdoFieldBitmap extends from a JavaScript class without typing.
     // We know it's a field, so it's safe to cast as unknown.
-    ['field_bitmap', 'FieldBitmap', CdoFieldBitmap as unknown as FieldProto],
+    [
+      'field_bitmap',
+      'FieldBitmap',
+      CdoFieldBitmap as unknown as Pick<
+        typeof GoogleBlockly.Field,
+        'prototype'
+      >,
+    ],
     ['field_label', 'FieldLabel', CdoFieldLabel],
     ['field_parameter', 'FieldParameter', CdoFieldParameter],
   ];
@@ -656,14 +667,14 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     xml,
     options = {}
   ) {
-    const theme = cdoUtils.getUserTheme(options.theme as Theme);
+    const theme = cdoUtils.getUserTheme(options.theme as GoogleBlockly.Theme);
     const workspace = new Blockly.WorkspaceSvg({
       readOnly: true,
       theme: theme,
       plugins: {},
       RTL: options.rtl,
       renderer: options.renderer || Renderers.DEFAULT,
-    } as Options);
+    } as GoogleBlockly.Options);
     // Track that this is and embedded workspace to avoid trying
     // to run logic on it to ensure things run properly (such as procedures).
     blocklyWrapper.addEmbeddedWorkspace(workspace);
@@ -724,7 +735,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     const optOptionsExtended = opt_options as ExtendedBlocklyOptions;
     const options = {
       ...optOptionsExtended,
-      theme: cdoUtils.getUserTheme(optOptionsExtended.theme as Theme),
+      theme: cdoUtils.getUserTheme(
+        optOptionsExtended.theme as GoogleBlockly.Theme
+      ),
       trashcan: false, // Don't use default trashcan.
       move: {
         wheel: true,
@@ -809,7 +822,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       }
     };
 
-    if (!blocklyWrapper.isStartMode && !optOptionsExtended.isBlockEditMode) {
+    if (!blocklyWrapper.isToolboxMode && !optOptionsExtended.isBlockEditMode) {
       workspace.addChangeListener(disableOrphans);
     }
     if (blocklyWrapper.blockLimitMap && blocklyWrapper.blockLimitMap.size > 0) {
@@ -841,7 +854,18 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
     blocklyWrapper.setMainWorkspace(workspace);
 
-    if (!optOptionsExtended.useBlocklyDynamicCategories) {
+    if (optOptionsExtended.useBlocklyDynamicCategories) {
+      const originalVariableFlyoutCategory =
+        workspace.getToolboxCategoryCallback('VARIABLE');
+      if (originalVariableFlyoutCategory) {
+        workspace.registerToolboxCategoryCallback('VARIABLE', workspace =>
+          filterFunctionArgVariables(
+            workspace,
+            originalVariableFlyoutCategory(workspace)
+          )
+        );
+      }
+    } else {
       // Same flyout callbacks are used for both main workspace categories
       // and categories when modal function editor is enabled.
       workspace.registerToolboxCategoryCallback(

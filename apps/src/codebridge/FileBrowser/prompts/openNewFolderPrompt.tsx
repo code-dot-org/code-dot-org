@@ -2,7 +2,7 @@ import {getNextFolderId} from '@codebridge/codebridgeContext';
 import {NewFolderFunction} from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {ProjectType, FolderId} from '@codebridge/types';
-import {isValidFolderName} from '@codebridge/utils';
+import {validateFolderName} from '@codebridge/utils';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {
@@ -13,43 +13,15 @@ import {
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
 type OpenNewFilePromptArgsType = {
-  parentId: FolderId;
-  appName: string;
+  parentId?: FolderId;
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   newFolder: NewFolderFunction;
   projectFolders: ProjectType['folders'];
   sendCodebridgeAnalyticsEvent: (eventName: string) => unknown;
 };
 
-type ValidateInputArgs = {
-  folderName: string;
-  parentId: FolderId;
-  projectFolders: ProjectType['folders'];
-};
-
-export const validateNewFolderName = ({
-  folderName,
-  parentId,
-  projectFolders,
-}: ValidateInputArgs) => {
-  if (!folderName.length) {
-    return;
-  }
-  if (!isValidFolderName(folderName)) {
-    return codebridgeI18n.invalidNameError();
-  }
-
-  const existingFolder = Object.values(projectFolders).some(
-    f => f.name === folderName && f.parentId === parentId
-  );
-  if (existingFolder) {
-    return codebridgeI18n.folderExistsError();
-  }
-};
-
 export const openNewFolderPrompt = async ({
   parentId = DEFAULT_FOLDER_ID,
-  appName,
   dialogControl,
   newFolder,
   projectFolders,
@@ -59,7 +31,7 @@ export const openNewFolderPrompt = async ({
     type: DialogType.GenericPrompt,
     title: codebridgeI18n.newFolderPrompt(),
     validateInput: (folderName: string) =>
-      validateNewFolderName({folderName, parentId, projectFolders}),
+      validateFolderName({folderName, parentId, projectFolders}),
   });
   if (results.type !== 'confirm') {
     return;

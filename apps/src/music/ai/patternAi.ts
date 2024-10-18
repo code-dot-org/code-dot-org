@@ -1,7 +1,8 @@
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
-import {PatternTickEvent} from '../player/interfaces/PatternEvent';
+import MusicRegistry from '../MusicRegistry';
+import {InstrumentTickEvent} from '../player/interfaces/InstrumentEvent';
 
 import {Message} from './types';
 
@@ -13,16 +14,18 @@ const worker = new Worker(new URL('patternAiWorker.ts', import.meta.url));
 let isInitialGenerate = true;
 
 export function generatePattern(
-  seed: PatternTickEvent[],
+  seed: InstrumentTickEvent[],
   seedLength: number,
   generateLength: number,
   temperature: number,
-  onComplete: (result: PatternTickEvent[]) => void,
+  onComplete: (result: InstrumentTickEvent[]) => void,
   onError: (error: Error) => void
 ) {
   const reporter = Lab2Registry.getInstance().getMetricsReporter();
+  const analyticsReporter = MusicRegistry.analyticsReporter;
   // Report attempt
   reporter.incrementCounter('MusicAI.GeneratePatternAttempt');
+  analyticsReporter.onGenerateAiPatternStart(temperature);
 
   worker.postMessage([
     Message.GeneratePattern,
@@ -40,6 +43,11 @@ export function generatePattern(
         reportGeneratePatternTime(reporter, e.data[1], isInitialGenerate);
         break;
       case Message.Result:
+        analyticsReporter.onGenerateAiPatternEnd(
+          e.data[2] / 1000,
+          isInitialGenerate,
+          temperature
+        );
         onComplete(e.data[1]);
         // Flip the flag after the first successful generate.
         isInitialGenerate = false;

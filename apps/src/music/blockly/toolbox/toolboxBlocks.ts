@@ -1,4 +1,4 @@
-import {BlockInfo} from 'blockly/core/utils/toolbox';
+import * as GoogleBlockly from 'blockly/core';
 
 import {BlockTypes} from '../blockTypes';
 import {
@@ -12,7 +12,9 @@ import {
 } from '../constants';
 
 // Blockly's BlockInfo type with an additional 'levelbuilderText' field used for levelbuilder-facing English block text.
-type BlockInfoWithText = BlockInfo & {levelbuilderText: string};
+type BlockInfoWithText = GoogleBlockly.utils.toolbox.BlockInfo & {
+  levelbuilderText: string;
+};
 
 const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfoWithText} = {
   [BlockTypes.PLAY_SOUND]: {
@@ -167,6 +169,12 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfoWithText} = {
     id: BlockTypes.PLAY_SOUNDS_TOGETHER,
     kind: 'block',
     type: BlockTypes.PLAY_SOUNDS_TOGETHER,
+  },
+  [BlockTypes.PLAY_SOUNDS_TOGETHER_NO_NEXT]: {
+    levelbuilderText: 'Play Together (no next)',
+    id: BlockTypes.PLAY_SOUNDS_TOGETHER_NO_NEXT,
+    kind: 'block',
+    type: BlockTypes.PLAY_SOUNDS_TOGETHER_NO_NEXT,
   },
   [BlockTypes.PLAY_SOUNDS_SEQUENTIAL]: {
     levelbuilderText: 'Play Sequential',

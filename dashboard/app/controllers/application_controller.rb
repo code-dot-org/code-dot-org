@@ -362,6 +362,9 @@ class ApplicationController < ActionController::Base
       policy_compliance_child_account_consent_path,
       # The age interstitial when the age isn't known will block the lockout page
       users_set_student_information_path,
+      # Allow students to join sections while locked out
+      student_user_new_path,
+      student_register_path,
     ].include?(request.path)
 
     redirect_to lockout_path
