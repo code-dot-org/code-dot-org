@@ -278,7 +278,7 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
             {musicI18n.packDialogTitle()}
           </Typography>
 
-          <div className={styles.body}>
+          <div className={styles.body} data-theme="Dark">
             <div>{musicI18n.packDialogBody()}</div>
 
             <SegmentedButtons
