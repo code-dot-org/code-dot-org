@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Toggle from '@cdo/apps/componentLibrary/toggle';
-import DCDO from '@cdo/apps/dcdo';
 import {PredictQuestionType} from '@cdo/apps/lab2/levelEditors/types';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -163,7 +162,7 @@ const SummaryResponses = ({
               />
             </div>
           )}
-          {isFreeResponse && DCDO.get('cfu-pin-hide-enabled', false) && (
+          {isFreeResponse && (
             <Toggle
               onChange={toggleNames}
               checked={showStudentNames}
