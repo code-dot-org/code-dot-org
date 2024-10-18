@@ -9,6 +9,7 @@ import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
 import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
 import {ProjectType, FolderId} from '@codebridge/types';
 import {
+  getPossibleDestinationFoldersForFolder,
   validateFileName as globalValidateFileName,
   validateFolderName,
   sendCodebridgeAnalyticsEvent,
@@ -234,13 +235,20 @@ const InnerFileBrowser = React.memo(
                       className={moduleStyles['button-kebab']}
                     >
                       <span className={moduleStyles['button-bar']}>
-                        <PopUpButtonOption
-                          iconName="arrow-right"
-                          labelText={codebridgeI18n.moveFolder()}
-                          clickHandler={() =>
-                            openMoveFolderPrompt({folderId: f.id})
-                          }
-                        />
+                        {Boolean(
+                          getPossibleDestinationFoldersForFolder({
+                            folder: f,
+                            projectFolders: folders,
+                          }).length
+                        ) && (
+                          <PopUpButtonOption
+                            iconName="arrow-right"
+                            labelText={codebridgeI18n.moveFolder()}
+                            clickHandler={() =>
+                              openMoveFolderPrompt({folderId: f.id})
+                            }
+                          />
+                        )}
                         <PopUpButtonOption
                           iconName="pencil"
                           labelText={codebridgeI18n.renameFolder()}
