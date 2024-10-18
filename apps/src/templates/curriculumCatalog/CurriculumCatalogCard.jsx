@@ -1,16 +1,16 @@
 import classNames from 'classnames';
-import {createPortal} from 'react-dom';
 import {concat, intersection} from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
+import {createPortal} from 'react-dom';
 import {connect} from 'react-redux';
 
-import {BodyThreeText, Heading4} from '@cdo/apps/componentLibrary/typography';
 import {
   Button,
   buttonColors,
   LinkButton,
 } from '@cdo/apps/componentLibrary/button';
+import {BodyThreeText, Heading4} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -41,6 +41,7 @@ import {
   defaultImageSrc,
 } from './curriculumCatalogConstants';
 import ExpandedCurriculumCatalogCard from './ExpandedCurriculumCatalogCard';
+
 import style from './curriculum_catalog_card.module.scss';
 
 const CurriculumCatalogCard = ({
