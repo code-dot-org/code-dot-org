@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "music-lab-advanced-model-sandbox",
-    "serialized_at": "2024-10-16 21:40:41 UTC",
+    "serialized_at": "2024-10-17 22:04:43 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -347,6 +347,16 @@
       }
     },
     {
+      "key": "c84becf8-5306-4314-ad26-bea729d7e813",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c84becf8-5306-4314-ad26-bea729d7e813",
+        "lesson_activity.key": "c274baf9-ecf0-4e56-99bd-eb06a1cc2e4a"
+      }
+    },
+    {
       "key": "c1204efd-2827-4c2a-9ea2-c5425ceedcf9",
       "position": 1,
       "properties": {
@@ -654,6 +664,27 @@
     },
     {
       "chapter": 14,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "advanced-model-sandbox-mini-project-rhythm-game-2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "c84becf8-5306-4314-ad26-bea729d7e813"
+      },
+      "level_keys": [
+        "advanced-model-sandbox-mini-project-rhythm-game-2"
+      ]
+    },
+    {
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -829,6 +860,18 @@
         "lesson_group.key": "",
         "script.name": "music-lab-advanced-model-sandbox",
         "activity_section.key": "955ee639-fdff-4612-a9fe-d513bcbee252"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "advanced-model-sandbox-mini-project-rhythm-game-2",
+        "script_level.level_keys": [
+          "advanced-model-sandbox-mini-project-rhythm-game-2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "c84becf8-5306-4314-ad26-bea729d7e813"
       }
     },
     {
