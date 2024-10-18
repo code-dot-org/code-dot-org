@@ -23,8 +23,8 @@ const FREE_RESPONSE_JS_DATA = {
   name: 'Photosynthesis Explanation',
 };
 
-const renderDefault = (viewingLevelData = MULTI_LEVEL_JS_DATA) => {
-  render(<QuestionRenderer viewingLevelData={viewingLevelData} />);
+const renderDefault = (levelData = MULTI_LEVEL_JS_DATA) => {
+  render(<QuestionRenderer levelData={levelData} />);
 };
 
 describe('QuestionRenderer', () => {
