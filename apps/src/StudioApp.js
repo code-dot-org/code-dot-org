@@ -100,7 +100,7 @@ const bigPlaySpacePadding = queryParams('bigPlayspacePadding') || 160;
 
 /**
  * Track whether the run button was clicked, which we log an event for. We
- * only want to log this event once for the first click but not subbequent clicks
+ * only want to log this event once for the first click but not subsequent clicks
  */
 let runButtonWasClicked = false;
 
