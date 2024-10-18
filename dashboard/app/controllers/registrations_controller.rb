@@ -465,6 +465,9 @@ class RegistrationsController < Devise::RegistrationsController
     @country_code = location&.country_code.to_s.upcase
     @is_usa = ['US', 'RD'].include?(@country_code)
 
+    # A student is underage if they reside in a state with a CAP policy and are in the affected age range.
+    underage = Policies::ChildAccount.underage?(current_user)
+
     # The student is in a 'lockout' flow if they are potentially locked out and not unlocked
     @student_in_lockout_flow = underage && !Policies::ChildAccount::ComplianceState.permission_granted?(current_user)
 
