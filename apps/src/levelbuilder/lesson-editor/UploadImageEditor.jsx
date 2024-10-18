@@ -5,20 +5,19 @@ import React, {useRef} from 'react';
 import 'tui-image-editor/dist/tui-image-editor.css';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 
+import LessonEditorDialog from './LessonEditorDialog';
+
+import styles from './uploadImage.module.scss';
+
 const editorOptions = {
   includeUI: {
-    loadImage: {
-      path: '',
-      name: 'SampleImage',
-    },
     theme: {},
-    menu: ['crop', 'flip', 'rotate', 'draw', 'shape', 'text', 'resize'], // Added 'resize' to the menu
-    initMenu: 'crop',
+    menu: ['crop', 'flip', 'rotate', 'draw', 'shape', 'text', 'resize'],
     uiSize: {
       width: '100%',
       height: '100%',
     },
-    menuBarPosition: 'bottom',
+    menuBarPosition: 'left',
   },
   cssMaxWidth: 700,
   cssMaxHeight: 500,
@@ -28,7 +27,16 @@ const editorOptions = {
   },
 };
 
-export default function UploadImageEditor({imageUrl, onSave, onCancel}) {
+const dialogStyles = {
+  height: '80vh',
+};
+
+export default function UploadImageEditor({
+  imageUrl,
+  onSave,
+  onCancel,
+  isOpen,
+}) {
   const editorRef = useRef(null);
 
   const handleSave = () => {
@@ -54,31 +62,37 @@ export default function UploadImageEditor({imageUrl, onSave, onCancel}) {
   };
 
   return (
-    <div className="image-editor-container">
-      <ImageEditor
-        ref={editorRef}
-        {...editorOptions}
-        includeUI={{
-          ...editorOptions.includeUI,
-          loadImage: {
-            path: imageUrl,
-            name: 'EditableImage',
-          },
-        }}
-      />
-      <div className="editor-controls">
-        <Button
-          text="Save"
-          onClick={handleSave}
-          color={Button.ButtonColor.brandPrimaryDefault}
+    <LessonEditorDialog
+      isOpen={isOpen}
+      handleClose={onCancel}
+      style={dialogStyles}
+    >
+      <div className={styles.imageEditorContainer}>
+        <ImageEditor
+          ref={editorRef}
+          {...editorOptions}
+          includeUI={{
+            ...editorOptions.includeUI,
+            loadImage: {
+              path: imageUrl,
+              name: 'EditableImage',
+            },
+          }}
         />
-        <Button
-          text="Cancel"
-          onClick={onCancel}
-          color={Button.ButtonColor.neutralDefault}
-        />
+        <div className={styles.editorControls}>
+          <Button
+            text="Save"
+            onClick={handleSave}
+            color={Button.ButtonColor.brandPrimaryDefault}
+          />
+          <Button
+            text="Cancel"
+            onClick={onCancel}
+            color={Button.ButtonColor.neutralDefault}
+          />
+        </div>
       </div>
-    </div>
+    </LessonEditorDialog>
   );
 }
 
@@ -87,4 +101,5 @@ UploadImageEditor.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   onSave: PropTypes.func.isRequired,
   onCancel: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired,
 };

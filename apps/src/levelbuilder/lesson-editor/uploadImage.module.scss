@@ -42,10 +42,23 @@
   }
 }
 
-.editorContainer {
-  height: 80vh; /* Adjust the height as needed */
+.imageEditorContainer {
   display: flex;
   flex-direction: column;
+  height: 75vh;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.image-editor {
+  flex: 1;
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.editoControls {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }

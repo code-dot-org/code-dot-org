@@ -138,6 +138,7 @@ export default function UploadImageForm() {
             imageUrl={imageToEdit}
             onSave={saveEditedImage}
             onCancel={closeEditor}
+            isOpen={isEditing}
           />
         </div>
       )}
