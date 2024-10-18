@@ -2581,8 +2581,8 @@
         start: "Start Music Lab: Jam Session"
       banner:
         desc_01: "Learn to code as you remix your favorite artists' tracks and explore creating beats with AI!"
-        desc_02: "Make music and learn to code in our new Music Lab activity for Hour of Code! In this self-guided, one-hour activity, students remix tracks from artists like %{artist_list} while mastering coding basics such as sequencing, functions, and exploring AI-driven beat creation."
-        desc_03: "Remix tracks from artists like %{artist_list} while exploring coding basics like sequencing, functions, and generating beats with AI."
+        desc_02: "Make music and learn to code in our new Music Lab activity for Hour of Code! In this self-guided, one-hour activity, students remix tracks from artists like %{artist_list}, and %{artist_name} while mastering coding basics such as sequencing, functions, and exploring AI-driven beat creation."
+        desc_03: "Remix tracks from artists like %{artist_list}, and %{artist_name} while exploring coding basics like sequencing, functions, and generating beats with AI."
       block:
         title: "Teach Music Lab Beyond An Hour of Code"
         desc: "Use our full Music Lab tutorial to unleash your students' musical creativity, combining the joy of music with the principles of coding."
