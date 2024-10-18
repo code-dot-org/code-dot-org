@@ -180,7 +180,7 @@ function StudentProgressStatus({level}) {
   const bubbleColor = STATUS_BUBBLE_COLOR[status];
   const bubbleText = STATUS_BUBBLE_TEXT[status];
 
-  if (bubbleText === null) {
+  if (status === null) {
     return null;
   }
 
