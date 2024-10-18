@@ -147,7 +147,7 @@ Resources:
           IpProtocol: tcp
           FromPort: 22
           ToPort: 22
-          CidrIp: 0.0.0.0/0
+          CidrIp: 3.90.82.166/32
 
   DroneMasterECSCluster:
     Type: AWS::ECS::Cluster
@@ -296,6 +296,7 @@ Resources:
     Type: AWS::ECS::TaskDefinition
     Properties:
       Family: !Sub "${AWS::StackName}-drone-autoscaler"
+      NetworkMode: awsvpc
       RequiresCompatibilities:
         - EC2
       ExecutionRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/DroneEcsTaskExecutionRole"
@@ -393,7 +394,20 @@ Resources:
               Name: DRONE_AGENT_CONCURRENCY
               Value: 1
             # END: Settings for the Drone Runner.
-
+  AutoscalerEcsServiceSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: SecurityGroup for Drone Autoscaler ECS Service
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        -
+          IpProtocol: tcp
+          FromPort: 8080
+          ToPort: 8080
+          SourceSecurityGroupId: !Ref ElbSecurityGroup
+      SecurityGroupEgress:
+        - IpProtocol: -1 # Allows all protocols
+          CidrIp: 0.0.0.0/0 # Allows all destinations
   DroneAutoscalerEcsService:
     Type: AWS::ECS::Service
     DependsOn: LoadBalancerListener
@@ -405,6 +419,12 @@ Resources:
         - ContainerName: drone-autoscaler
           ContainerPort: 8080
           TargetGroupArn: !Ref DroneAutoscalerTargetGroup
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          AssignPublicIp: DISABLED
+          SecurityGroups:
+            - !Ref AutoscalerEcsServiceSecurityGroup
+          Subnets: !Ref ServiceSubnetIds
       TaskDefinition: !Ref DroneAutoscalerTaskDefinition
       PropagateTags: SERVICE
 
@@ -450,8 +470,8 @@ Resources:
       SecurityGroupIngress:
         -
           IpProtocol: tcp
-          FromPort: 1
-          ToPort: 65535
+          FromPort: 8080
+          ToPort: 8080
           SourceSecurityGroupId: !Ref ElbSecurityGroup
         - IpProtocol: tcp
           FromPort: 8080
@@ -461,7 +481,7 @@ Resources:
           IpProtocol: tcp
           FromPort: 22
           ToPort: 22
-          CidrIp: 0.0.0.0/0
+          CidrIp: 3.90.82.166/32
 
   AutoscalerLoadBalancerListener:
     Type: AWS::ElasticLoadBalancingV2::Listener
@@ -478,8 +498,9 @@ Resources:
   DroneAutoscalerTargetGroup:
     Type: AWS::ElasticLoadBalancingV2::TargetGroup
     Properties:
-      Name: !Sub "AutoscalerTargGrp-${AWS::StackName}"
+      Name: !Sub "AutoscalerTrgGp-${AWS::StackName}"
       VpcId: !Ref VpcId
+      TargetType: ip
       Port: 8080
       Protocol: HTTP
       HealthCheckPath: /healthz
@@ -488,27 +509,20 @@ Resources:
           Key: Name
           Value: !Sub "ECS ${AWS::StackName} - Autoscaler TargetGroup"
 
-  DroneWorkerEcsSecurityGroup:
-    Type: AWS::EC2::SecurityGroup
-    Properties:
-      GroupDescription: ECS Allowed Ports
-      VpcId: !Ref VpcId
-
   DroneRunnerEcsSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Drone Runner Allowed Ports
       VpcId: !Ref VpcId
       SecurityGroupIngress:
-        # Enable Autoscaler to issue Docker API calls to EC2 Instances
         -
+          Description: Enable Autoscaler to issue Docker API calls to Runner EC2 Instances.
+          SourceSecurityGroupId: !GetAtt AutoscalerEcsServiceSecurityGroup.GroupId
           IpProtocol: tcp
           FromPort: 2376
           ToPort: 2376
-          # TODO: (suresh) Restrict to Drone Autoscaler.
-          CidrIp: 0.0.0.0/0
-        # Enable SSH to EC2 Instances hosting Drone Runner from gateway
         -
+          Description: Enable SSH to Drone Runner EC2 Instances from gateway.code.org (in the production AWS Account).
           IpProtocol: tcp
           FromPort: 22
           ToPort: 22
