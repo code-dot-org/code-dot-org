@@ -1802,7 +1802,7 @@
   "manageLinkedAccounts": "Manage Linked Accounts",
   "manageLinkedAccounts_actions": "Actions",
   "manageLinkedAccounts_noLoginTooltip": "To make sure you can still sign in to your account, please add a password or another linked account first.",
-  "manageLinkedAccounts_stateRequired": "Uh oh! Please provide your state before adding a linked account.",
+  "manageLinkedAccounts_ageAndStateRequired": "Uh oh! Please provide your age and state before adding a linked account.",
   "manageLinkedAccounts_parentalPermissionRequired": "Uh oh! You must obtain parental permission before creating a linked account.",
   "manageLinkedAccounts_clever": "Clever Account",
   "manageLinkedAccounts_connect": "Connect",

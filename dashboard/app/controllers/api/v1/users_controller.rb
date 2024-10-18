@@ -40,6 +40,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         child_account_compliance_state: current_user.cap_status,
         country_code: helpers.country_code(current_user, request),
         us_state_code: current_user.us_state_code,
+        age: current_user.age,
         in_section: current_user.student? ? current_user.sections_as_student.present? : nil,
         created_at: current_user.created_at,
         has_seen_ai_assessments_announcement: current_user.has_seen_ai_assessments_announcement?,
