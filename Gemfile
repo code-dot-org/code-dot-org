@@ -156,12 +156,12 @@ gem 'gemoji'
 
 # Authentication and permissions.
 gem 'cancancan', '~> 3.5.0'
-gem 'devise', '~> 4.9.0'
-gem 'devise_invitable', '~> 2.0.2'
+gem 'devise', '~> 4.9.4'
+gem 'devise_invitable', '~> 2.0.9'
 
 gem 'omniauth-clever', '~> 2.0.1', github: 'code-dot-org/omniauth-clever', tag: 'v2.0.1'
-gem 'omniauth-facebook', '~> 4.0.0'
-gem 'omniauth-google-oauth2', '~> 0.6.0'
+gem 'omniauth-facebook', '~> 10.0.0'
+gem 'omniauth-google-oauth2', '~> 1.1.3'
 gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
 
 # Resolve CVE 2015 9284
