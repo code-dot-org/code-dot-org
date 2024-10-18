@@ -27,7 +27,7 @@ const SummaryContainer = ({store, scriptData, isLevelGroup}) => {
           />
         </div>
       )}
-      <QuestionRenderer viewingLevelData={scriptData.levels[subLevelNum]} />
+      <QuestionRenderer levelData={scriptData.levels[subLevelNum]} />
       <InstructorsOnly>
         <div>
           <SummaryResponses scriptData={scriptData} levelNumber={subLevelNum} />
