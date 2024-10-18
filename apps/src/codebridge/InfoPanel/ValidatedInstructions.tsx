@@ -97,11 +97,11 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
 
   const appType = useAppSelector(state => state.lab.levelProperties?.appName);
   const isValidating = useAppSelector(state => state.lab2System.isValidating);
-  const isLoadingEnvironment = useAppSelector(
-    state => state.lab2System.loadingCodeEnvironment
+  const hasLoadedEnvironment = useAppSelector(
+    state => state.lab2System.loadedCodeEnvironment
   );
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
-  const shouldValidateBeDisabled = isLoadingEnvironment || isRunning;
+  const shouldValidateBeDisabled = !hasLoadedEnvironment || isRunning;
 
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
   const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
