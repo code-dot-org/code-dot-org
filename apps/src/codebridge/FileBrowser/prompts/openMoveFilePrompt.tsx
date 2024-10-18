@@ -49,6 +49,10 @@ export const openMoveFilePrompt = async ({
       .map(f => ({value: f.id, text: getFolderPath(f.id, projectFolders)}))
       .sort((a, b) => a.text.localeCompare(b.text));
 
+  if (!possibleDestinationFolders.length) {
+    return;
+  }
+
   const results = await dialogControl?.showDialog({
     type: DialogType.GenericDropdown,
     title: codebridgeI18n.moveFilePrompt(),
