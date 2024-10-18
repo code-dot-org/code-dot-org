@@ -332,3 +332,20 @@ def reset_session
   steps "And I wait for 3 seconds"
   navigate_to replace_hostname('http://studio.code.org/reset_session')
 end
+
+Given /^sign in "([^"]*)" (\d+) times$/ do |name, times|
+  repeated_steps = ''
+
+  times.times do
+    repeated_steps += <<~GHERKIN
+      When I am on "http://studio.code.org/users/sign_in"
+      And element ".alert-danger:contains(You are already signed in)" is not visible
+      Then I sign in as "#{name}" from the sign in page
+      When I click selector "#header_display_name"
+      And I click selector "#user-signout" to load a new page
+      Then I wait to see "#header_user_signin"
+    GHERKIN
+  end
+
+  steps repeated_steps
+end
