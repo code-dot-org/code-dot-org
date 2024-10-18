@@ -4,15 +4,13 @@ import React, {useEffect} from 'react';
 
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
+import {ActionDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {Heading3} from '@cdo/apps/componentLibrary/typography';
-import DCDO from '@cdo/apps/dcdo';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getFullName} from '@cdo/apps/templates/manageStudents/utils.ts';
 import i18n from '@cdo/locale';
-
-import ResponseMenuDropdown from './ResponseMenuDropdown';
 
 import styles from './summary.module.scss';
 
@@ -35,7 +33,46 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
     setPinnedResponseIds([]);
     setHiddenResponses([]);
   }, [responses]);
+  
+  const hideResponse = userId => {
+    analyticsReporter.sendEvent(
+      EVENTS.CFU_RESPONSE_HIDDEN,
+      eventData,
+      PLATFORMS.BOTH
+    );
+    setHiddenResponses(prevHidden => [...prevHidden, userId]);
+  };
 
+  const getMenuOptions = (pinResponse, unpinResponse, response) => {
+    return [
+      {
+        value: unpinResponse ? 'unpin-option' : 'pin-option',
+        label: unpinResponse ? i18n.unpinResponse() : i18n.pinResponse(),
+        icon: unpinResponse
+          ? {iconName: 'thumbtack-slash', iconStyle: 'solid'}
+          : {
+              iconName: 'thumbtack',
+              iconStyle: 'solid',
+              className: 'uitest-pin-response',
+            },
+        onClick: () =>
+          unpinResponse
+            ? unpinResponse(response.user_id)
+            : pinResponse(response.user_id),
+      },
+      {
+        value: 'hide-option',
+        label: i18n.hideResponse(),
+        icon: {
+          iconName: 'eye-slash',
+          iconStyle: 'solid',
+          className: 'uitest-hide-response',
+        },
+        onClick: () => hideResponse(response.user_id),
+      },
+    ];
+  };
+ 
   const getResponseBox = (
     response,
     responseClassName,
@@ -51,26 +88,25 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
           )}
         >
           <p>{response.text}</p>
-          <ResponseMenuDropdown
-            response={response}
-            hideResponse={userId => {
-              analyticsReporter.sendEvent(
-                EVENTS.CFU_RESPONSE_HIDDEN,
-                eventData,
-                PLATFORMS.BOTH
-              );
-              setHiddenResponses(prevHidden => [...prevHidden, userId]);
+          <ActionDropdown
+            name="free-response"
+            menuPlacement="right"
+            labelText={i18n.additionalOptions()}
+            size="xs"
+            triggerButtonProps={{
+              isIconOnly: true,
+              icon: {iconName: 'ellipsis-vertical', iconStyle: 'solid'},
+              type: 'tertiary',
+              color: unpinResponse ? 'white' : 'purple',
+              className: unpinResponse && styles.freeresponsePinnedDropdown,
             }}
-            pinResponse={pinResponse}
-            unpinResponse={unpinResponse}
+            options={getMenuOptions(pinResponse, unpinResponse, response)}
           />
         </div>
       </div>
-      {DCDO.get('cfu-pin-hide-enabled', false) && (
-        <div className={styles.studentName}>
-          {showStudentNames && <p>{constructStudentName(response)}</p>}
-        </div>
-      )}
+      <div className={styles.studentName}>
+        {showStudentNames && <p>{constructStudentName(response)}</p>}
+      </div>
     </div>
   );
 

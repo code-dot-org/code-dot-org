@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2024-10-16T19:48:27.000Z",
   "level_num": "custom",
@@ -35,188 +36,204 @@
               "movable": false,
               "next": {
                 "block": {
-                  "type": "play_pattern_at_measure",
-                  "id": "Sn}oxuSe/1%~PKkxXK/c",
+                  "type": "for_loop",
+                  "id": "u]3apQ}Q^4Z.:Rta9Op%",
                   "fields": {
-                    "pattern": {
-                      "instrument": "drums",
-                      "length": 1,
-                      "events": [
-                        {
-                          "tick": 1,
-                          "note": 0
-                        },
-                        {
-                          "tick": 5,
-                          "note": 0
-                        },
-                        {
-                          "tick": 9,
-                          "note": 0
-                        },
-                        {
-                          "tick": 13,
-                          "note": 0
-                        }
-                      ],
-                      "ai": false
+                    "VAR": {
+                      "id": "]$EXHpiIqs2Wya@[Hce}"
                     }
                   },
                   "inputs": {
-                    "measure": {
+                    "FROM": {
                       "shadow": {
                         "type": "math_number",
-                        "id": "@}N}Ci_vO#W/d.qXW4+/",
+                        "id": "h5)[XBN=x(~$gZ^iWp(o",
                         "fields": {
                           "NUM": 1
                         }
                       }
-                    }
-                  },
-                  "next": {
-                    "block": {
-                      "type": "variables_set",
-                      "id": "twH?[C#-J;B[fDZ@kR@,",
-                      "extraState": {
-                      },
-                      "fields": {
-                        "VAR": {
-                          "id": "[OzmDPm2plJH])sVCWq|"
+                    },
+                    "TO": {
+                      "shadow": {
+                        "type": "math_number",
+                        "id": "]o2dF)`mE25)UTbc0jh.",
+                        "fields": {
+                          "NUM": 4
                         }
-                      },
-                      "inputs": {
-                        "VALUE": {
-                          "block": {
-                            "type": "math_number",
-                            "id": "WIe=LL:AnubV7kSetym#",
-                            "fields": {
-                              "NUM": 2
+                      }
+                    },
+                    "BY": {
+                      "shadow": {
+                        "type": "math_number",
+                        "id": ")3s5Pk0B;WI]x=GTz@ry",
+                        "fields": {
+                          "NUM": 1
+                        }
+                      }
+                    },
+                    "DO": {
+                      "block": {
+                        "type": "play_pattern_at_measure",
+                        "id": "Sn}oxuSe/1%~PKkxXK/c",
+                        "fields": {
+                          "pattern": {
+                            "instrument": "drums",
+                            "length": 1,
+                            "events": [
+                              {
+                                "tick": 1,
+                                "note": 0
+                              },
+                              {
+                                "tick": 5,
+                                "note": 0
+                              },
+                              {
+                                "tick": 9,
+                                "note": 0
+                              },
+                              {
+                                "tick": 13,
+                                "note": 0
+                              }
+                            ],
+                            "ai": false
+                          }
+                        },
+                        "inputs": {
+                          "measure": {
+                            "shadow": {
+                              "type": "math_number",
+                              "id": "@}N}Ci_vO#W/d.qXW4+/",
+                              "fields": {
+                                "NUM": 1
+                              }
+                            },
+                            "block": {
+                              "type": "variables_get",
+                              "id": "/T@[|?H9=2a6WmgNzdk]",
+                              "extraState": {
+                              },
+                              "fields": {
+                                "VAR": {
+                                  "id": "]$EXHpiIqs2Wya@[Hce}"
+                                }
+                              }
                             }
                           }
-                        }
-                      },
-                      "next": {
-                        "block": {
-                          "type": "for_loop",
-                          "id": "u]3apQ}Q^4Z.:Rta9Op%",
-                          "fields": {
-                            "VAR": {
-                              "id": "]$EXHpiIqs2Wya@[Hce}"
-                            }
-                          },
-                          "inputs": {
-                            "FROM": {
-                              "shadow": {
-                                "type": "math_number",
-                                "id": "h5)[XBN=x(~$gZ^iWp(o",
-                                "fields": {
-                                  "NUM": 1
-                                }
-                              },
-                              "block": {
-                                "type": "variables_get",
-                                "id": "2*ayAifh!;eODcRNzOB.",
-                                "extraState": {
-                                },
-                                "fields": {
-                                  "VAR": {
-                                    "id": "[OzmDPm2plJH])sVCWq|"
-                                  }
-                                }
-                              }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "controls_if",
+                            "id": "~#q|m:FpEDTtE~07H]xZ",
+                            "extraState": {
+                              "hasElse": true
                             },
-                            "TO": {
-                              "shadow": {
-                                "type": "math_number",
-                                "id": "]o2dF)`mE25)UTbc0jh.",
-                                "fields": {
-                                  "NUM": 4
-                                }
-                              }
-                            },
-                            "BY": {
-                              "shadow": {
-                                "type": "math_number",
-                                "id": ")3s5Pk0B;WI]x=GTz@ry",
-                                "fields": {
-                                  "NUM": 1
-                                }
-                              }
-                            },
-                            "DO": {
-                              "block": {
-                                "type": "play_chord_at_measure",
-                                "id": "jhUoEtnZJ}rap:`fZ@Eg",
-                                "fields": {
-                                  "chord": {
-                                    "notes": [
-                                      57,
-                                      60,
-                                      64
-                                    ],
-                                    "playStyle": "arpeggio-up",
-                                    "instrument": "piano"
-                                  }
-                                },
-                                "inputs": {
-                                  "measure": {
-                                    "shadow": {
-                                      "type": "math_number",
-                                      "id": "eX[5Kvj]6B.xF~%V8y7t",
-                                      "fields": {
-                                        "NUM": 1
+                            "inputs": {
+                              "IF0": {
+                                "block": {
+                                  "type": "logic_compare",
+                                  "id": "HjJCx(SAiM.%+t8EvP-X",
+                                  "fields": {
+                                    "OP": "<field name=\"OP\">LT</field>"
+                                  },
+                                  "inputs": {
+                                    "A": {
+                                      "block": {
+                                        "type": "variables_get",
+                                        "id": "QNNngERp7,Hp=}$@u~IV",
+                                        "extraState": {
+                                        },
+                                        "fields": {
+                                          "VAR": {
+                                            "id": "]$EXHpiIqs2Wya@[Hce}"
+                                          }
+                                        }
                                       }
                                     },
-                                    "block": {
-                                      "type": "variables_get",
-                                      "id": "|_USNJuKC*;_1^G[X!wT",
-                                      "extraState": {
-                                      },
-                                      "fields": {
-                                        "VAR": {
-                                          "id": "]$EXHpiIqs2Wya@[Hce}"
+                                    "B": {
+                                      "block": {
+                                        "type": "math_number",
+                                        "id": "+KJ1%psp)r~cC1T_Tm3@",
+                                        "fields": {
+                                          "NUM": 3
                                         }
                                       }
                                     }
                                   }
-                                },
-                                "next": {
-                                  "block": {
-                                    "type": "play_sound",
-                                    "id": "(WKh#_XiwkLrAyXLUmB+",
-                                    "fields": {
-                                      "sound": "indie/drum_beat_ping"
-                                    },
-                                    "inputs": {
-                                      "measure": {
-                                        "shadow": {
-                                          "type": "math_number",
-                                          "id": ",?U-9`sj?nKmx^A(TPA6",
-                                          "fields": {
-                                            "NUM": 1
-                                          }
+                                }
+                              },
+                              "DO0": {
+                                "block": {
+                                  "type": "play_chord_at_measure",
+                                  "id": "jhUoEtnZJ}rap:`fZ@Eg",
+                                  "fields": {
+                                    "chord": {
+                                      "notes": [
+                                        57,
+                                        60,
+                                        64
+                                      ],
+                                      "playStyle": "arpeggio-up",
+                                      "instrument": "piano"
+                                    }
+                                  },
+                                  "inputs": {
+                                    "measure": {
+                                      "shadow": {
+                                        "type": "math_number",
+                                        "id": "eX[5Kvj]6B.xF~%V8y7t",
+                                        "fields": {
+                                          "NUM": 1
+                                        }
+                                      },
+                                      "block": {
+                                        "type": "variables_get",
+                                        "id": "|_USNJuKC*;_1^G[X!wT",
+                                        "extraState": {
                                         },
-                                        "block": {
-                                          "type": "math_number_property",
-                                          "id": "!*+RQht+aOW_BUmj)~xn",
-                                          "extraState": "<mutation divisor_input=\"false\"></mutation>",
-                                          "fields": {
-                                            "PROPERTY": "<field name=\"PROPERTY\">EVEN</field>"
-                                          },
-                                          "inputs": {
-                                            "NUMBER_TO_CHECK": {
-                                              "block": {
-                                                "type": "variables_get",
-                                                "id": "]4N/U3J(*D9^Mx]|Z1H%",
-                                                "extraState": {
-                                                },
-                                                "fields": {
-                                                  "VAR": {
-                                                    "id": "]$EXHpiIqs2Wya@[Hce}"
-                                                  }
-                                                }
-                                              }
-                                            }
+                                        "fields": {
+                                          "VAR": {
+                                            "id": "]$EXHpiIqs2Wya@[Hce}"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "ELSE": {
+                                "block": {
+                                  "type": "play_chord_at_measure",
+                                  "id": "[ueP7(#Il%v2B$}Pig7V",
+                                  "fields": {
+                                    "chord": {
+                                      "notes": [
+                                        57,
+                                        60,
+                                        64
+                                      ],
+                                      "playStyle": "arpeggio-down",
+                                      "instrument": "piano"
+                                    }
+                                  },
+                                  "inputs": {
+                                    "measure": {
+                                      "shadow": {
+                                        "type": "math_number",
+                                        "id": "xJQLESnH,`(Xh?8iVH.r",
+                                        "fields": {
+                                          "NUM": 1
+                                        }
+                                      },
+                                      "block": {
+                                        "type": "variables_get",
+                                        "id": "}5;Lr.s#m|Ql4K?%a`c~",
+                                        "extraState": {
+                                        },
+                                        "fields": {
+                                          "VAR": {
+                                            "id": "]$EXHpiIqs2Wya@[Hce}"
                                           }
                                         }
                                       }
@@ -237,12 +254,11 @@
         }
       },
       "library": "launch2024",
-      "packId": "aloe_blacc_wake_me_up"
+      "packId": "default"
     },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-10-16T19:48:27.871+00:00\",\"changed\":[\"cloned from \\\"advanced-model-sandbox-mini-project-melody-generator-2\\\"\"],\"cloned_from\":\"advanced-model-sandbox-mini-project-melody-generator-2\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-16T19:48:27.871+00:00\",\"changed\":[\"cloned from \\\"advanced-model-sandbox-mini-project-melody-generator-2\\\"\"],\"cloned_from\":\"advanced-model-sandbox-mini-project-melody-generator-2\"},{\"changed_at\":\"2024-10-17 21:13:42 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-17 21:14:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

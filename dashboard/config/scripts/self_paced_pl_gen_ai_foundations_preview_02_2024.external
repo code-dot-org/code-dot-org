@@ -18,9 +18,6 @@ markdown <<MARKDOWN
 #### In the **input** step, a language model is provided with large amounts of training data. The model then learns to recognize words and understand language rules by analyzing this data through a pre-training process.
 
 ## Lesson Preview
-
-#### There are two lessons in this unit related to **input**, preview them below.
-
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 2: Input & Training Data</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
@@ -38,25 +35,6 @@ markdown <<MARKDOWN
 * #### Identify potential data sources relevant to a task being performed by a language model
 
 ### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/2" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
-</p></div>
-</details>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 3: Bias in the Machine</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-<img src="https://images.code.org/6debd3ce2def47f39e00cfb1aecd42bf-3fc2e3897f789e3a47c324fbc19f1ec2-Slide14.PNG" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
-
-#### **Question of the Day:** How do our choices about input data influence a large language model?
-
-#### **Lesson Overview:**
-
-#### This lesson formally introduces the concept of bias, where certain information is favored over others. Students experience how bias can implicitly and unintentionally creep into large-language models by participating in an activity where they are asked to source articles and information for a RecipeBot. Once they've used search engine results to generate their training data, they analyze patterns in the data that the class found as a collection, noticing unintended biases such as certain cuisines being unintentionally excluded or all the articles falling within a certain narrow date range. After acknowledging how bias can appear, students analyze several scenarios and discuss how bias could appear in the training data of each one.
-
-#### **Students will be able to:**
-* #### Describe patterns in collections of data sources that contribute to bias
-
-### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/3" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
 </p></div>
 </details>
 
