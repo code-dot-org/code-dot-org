@@ -1516,6 +1516,8 @@ class User < ApplicationRecord
     user_type == TYPE_TEACHER
   end
 
+  # Warning: Calling this method will trigger the sending of a verification email,
+  # as establish in the user_permission model
   def verify_teacher!
     self.permission = UserPermission::AUTHORIZED_TEACHER
   end
