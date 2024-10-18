@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2024-08-30T00:01:56.000Z",
   "level_num": "custom",
@@ -28,7 +29,6 @@
       }
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-08-30T00:01:56.433+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L4-6templ_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L2-L4-6templ_2024-pilot\"},{\"changed_at\":\"2024-08-30 00:02:05 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-30 00:03:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-30T00:01:56.433+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L4-6templ_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L2-L4-6templ_2024-pilot\"},{\"changed_at\":\"2024-08-30 00:02:05 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-30 00:03:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-16 15:17:07 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-10-16 15:18:01 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Pythonlab>

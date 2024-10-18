@@ -10,7 +10,7 @@
  * - Animating angle changes when a new value is set (via text input or dropdown menu option selection).
  */
 
-import * as Blockly from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 
 import color from '@cdo/apps/util/color';
 
@@ -165,7 +165,7 @@ class CdoAngleHelper {
 
   init(svgContainer: HTMLElement): void {
     // Create the SVG container for the angle helper
-    this.svg_ = Blockly.utils.dom.createSvgElement(
+    this.svg_ = GoogleBlockly.utils.dom.createSvgElement(
       'svg',
       {
         version: '1.1',
@@ -193,7 +193,7 @@ class CdoAngleHelper {
       this.mouseDownWrapper_ as EventListener
     );
 
-    this.background_.line = Blockly.utils.dom.createSvgElement(
+    this.background_.line = GoogleBlockly.utils.dom.createSvgElement(
       'line',
       {
         stroke: this.lineColour_,
@@ -210,7 +210,7 @@ class CdoAngleHelper {
     ) as SVGLineElement;
 
     if (this.enableBackgroundRotation_) {
-      this.background_.handle = Blockly.utils.dom.createSvgElement(
+      this.background_.handle = GoogleBlockly.utils.dom.createSvgElement(
         'circle',
         {
           cx: this.background_.handleCenter!.x,
@@ -225,7 +225,7 @@ class CdoAngleHelper {
       ) as SVGCircleElement;
     }
 
-    this.arc_ = Blockly.utils.dom.createSvgElement(
+    this.arc_ = GoogleBlockly.utils.dom.createSvgElement(
       'path',
       {
         stroke: this.arcColour_,
@@ -251,7 +251,7 @@ class CdoAngleHelper {
         markerSize = 5;
       }
       this.background_.ticks.push(
-        Blockly.utils.dom.createSvgElement(
+        GoogleBlockly.utils.dom.createSvgElement(
           'line',
           {
             'stroke-linecap': 'round',
@@ -269,7 +269,7 @@ class CdoAngleHelper {
       );
     }
 
-    this.picker_.line = Blockly.utils.dom.createSvgElement(
+    this.picker_.line = GoogleBlockly.utils.dom.createSvgElement(
       'line',
       {
         stroke: this.lineColour_,
@@ -283,7 +283,7 @@ class CdoAngleHelper {
       this.svg_
     ) as SVGLineElement;
 
-    this.picker_.handle = Blockly.utils.dom.createSvgElement(
+    this.picker_.handle = GoogleBlockly.utils.dom.createSvgElement(
       'circle',
       {
         cx: this.picker_.handleCenter!.x,

@@ -27,14 +27,15 @@
       "supported_locales": [
         "es-MX",
         "it-IT",
-        "sk-SK"
+        "sk-SK",
+        "uk-UA"
       ],
       "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-05 20:18:00 UTC",
+    "serialized_at": "2024-10-16 18:42:42 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

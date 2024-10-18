@@ -11,7 +11,7 @@ export const TEACHER_NAVIGATION_PATHS = {
   assessments: 'assessments',
   projects: 'projects',
   stats: 'stats',
-  manageStudents: 'manage_students',
+  roster: 'roster',
   loginInfo: 'login_info',
   standardsReport: 'standards_report',
   aiTutorChatMessages: 'ai_tutor',
@@ -56,9 +56,9 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
     label: i18n.teacherTabStats(),
     icon: 'chart-simple',
   },
-  manageStudents: {
-    url: TEACHER_NAVIGATION_PATHS.manageStudents,
-    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.manageStudents),
+  roster: {
+    url: TEACHER_NAVIGATION_PATHS.roster,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.roster),
     label: i18n.roster(),
     icon: 'users',
   },

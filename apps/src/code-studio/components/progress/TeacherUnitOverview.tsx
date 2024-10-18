@@ -28,8 +28,12 @@ import {
   useAppSelector,
 } from '@cdo/apps/util/reduxHooks';
 
-import {addAnnouncement, VisibilityType} from '../../announcementsRedux';
-import {setStudentDefaultsSummaryView} from '../../progressRedux';
+import {
+  addAnnouncement,
+  clearAnnouncements,
+  VisibilityType,
+} from '../../announcementsRedux';
+import {setCalendarData} from '../../calendarRedux';
 import {setVerified, setVerifiedResources} from '../../verifiedInstructorRedux';
 
 import UnitOverview from './UnitOverview';
@@ -198,7 +202,7 @@ interface TeacherUnitOverviewProps {
   // Define any props you need here
 }
 
-const initializeRedux = (
+export const initializeRedux = (
   unitSummaryResponse: UnitSummaryResponse,
   dispatch: AppDispatch,
   userType: string,
@@ -221,9 +225,7 @@ const initializeRedux = (
     );
   }
 
-  if (unitData.has_verified_resources) {
-    dispatch(setVerifiedResources(true));
-  }
+  dispatch(setVerifiedResources(!!unitData.has_verified_resources));
 
   if (unitData.is_verified_instructor) {
     dispatch(setVerified());
@@ -233,11 +235,16 @@ const initializeRedux = (
     unitData.announcements.forEach(announcement =>
       dispatch(addAnnouncement(announcement))
     );
+  } else {
+    dispatch(clearAnnouncements());
   }
 
-  if (unitData.student_detail_progress_view) {
-    dispatch(setStudentDefaultsSummaryView(false));
-  }
+  dispatch(
+    setCalendarData({
+      showCalendar: !!unitData.showCalendar,
+      calendarLessons: unitData.calendarLessons,
+    })
+  );
 
   progress.initViewAsWithoutStore(
     dispatch,

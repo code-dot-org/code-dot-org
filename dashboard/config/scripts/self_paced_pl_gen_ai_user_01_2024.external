@@ -13,7 +13,7 @@ markdown <<MARKDOWN
 ## Lesson Overviews
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 22: Issue Statements</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 11: Issue Statements</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 <img src="https://images.code.org/42c3d3887db130910c13a6afb2aa0a49-Screenshot 2024-09-03 at 10.19.33 AM.png" alt="the five whys activity ending with a core issue statement" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
@@ -33,7 +33,7 @@ markdown <<MARKDOWN
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 23: User Feedback
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 12: User Feedback
 </summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
@@ -55,7 +55,7 @@ markdown <<MARKDOWN
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 24: Fine Tuning - Exploration
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 13: Fine Tuning - Exploration
 </summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
@@ -76,7 +76,7 @@ markdown <<MARKDOWN
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 25: Chatbots in Society
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 14: Chatbots in Society
 </summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
