@@ -14,7 +14,7 @@ describe('StandardsReportCurrentCourseInfo', () => {
         id: 1163,
         excludeCsfColumnInLegend: false,
         title: 'Express Course (2019)',
-        path: '//localhost-studio.code.org:3000/s/express-2019',
+        path: '//studio.code.org.localhost:3000/s/express-2019',
         lessons: [],
       },
       unitDescription: 'This script teaches things',

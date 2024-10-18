@@ -53,7 +53,7 @@ class ProjectsList extends React.Component {
     projectsData: PropTypes.array.isRequired,
     showProjectThumbnails: PropTypes.bool.isRequired,
     // The prefix for the code studio url in the current environment,
-    // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
+    // e.g. '//studio.code.org' or '//studio.code.org.localhost:3000'.
     studioUrlPrefix: PropTypes.string.isRequired,
   };
 

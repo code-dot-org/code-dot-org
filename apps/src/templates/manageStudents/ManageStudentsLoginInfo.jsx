@@ -25,7 +25,7 @@ class ManageStudentsLoginInfo extends Component {
     loginType: PropTypes.oneOf(Object.values(SectionLoginType)).isRequired,
     studentData: PropTypes.array,
     // The prefix for the code studio url in the current environment,
-    // e.g. 'https://studio.code.org' or 'http://localhost-studio.code.org:3000'.
+    // e.g. 'https://studio.code.org' or 'http://studio.code.org.localhost:3000'.
     studioUrlPrefix: PropTypes.string,
 
     // Provided by Redux

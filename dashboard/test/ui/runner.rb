@@ -139,32 +139,32 @@ def parse_options
       end
       opts.on("-l", "--local", "Use local domains. Also use local webdriver (not Saucelabs) unless -c is specified.") do
         options.local = 'true'
-        options.pegasus_domain = 'localhost.code.org:3000'
-        options.dashboard_domain = 'localhost-studio.code.org:3000'
-        options.hourofcode_domain = 'localhost.hourofcode.com:3000'
-        options.csedweek_domain = 'localhost.csedweek.org:3000'
+        options.pegasus_domain = 'code.org.localhost:3000'
+        options.dashboard_domain = 'studio.code.org.localhost:3000'
+        options.hourofcode_domain = 'hourofcode.com.localhost:3000'
+        options.csedweek_domain = 'csedweek.org.localhost:3000'
       end
       opts.on("--headed", "Open visible chrome browser windows. Runs in headless mode without this flag. Only relevant when -l is specified.") do
         options.local_headless = false
       end
-      opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost.code.org:3000") do |p|
+      opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. code.org.localhost:3000") do |p|
         if p == 'localhost:3000'
           print "WARNING: Some tests may fail using '-p localhost:3000' because cookies will not be available.\n" \
-                "Try '-p localhost.code.org:3000' instead (this is the default when using '-l').\n"
+                "Try '-p code.org.localhost:3000' instead (this is the default when using '-l').\n"
         end
         options.pegasus_domain = p
       end
-      opts.on("-d", "--dashboard Domain", String, "Specify an override domain for studio.code.org, e.g. localhost-studio.code.org:3000") do |d|
+      opts.on("-d", "--dashboard Domain", String, "Specify an override domain for studio.code.org, e.g. studio.code.org.localhost:3000") do |d|
         if d == 'localhost:3000'
           print "WARNING: Some tests may fail using '-d localhost:3000' because cookies will not be available.\n" \
-                "Try '-d localhost-studio.code.org:3000' instead (this is the default when using '-l').\n"
+                "Try '-d studio.code.org.localhost:3000' instead (this is the default when using '-l').\n"
         end
         options.dashboard_domain = d
       end
-      opts.on("--hourofcode Domain", String, "Specify an override domain for hourofcode.com, e.g. localhost.hourofcode.com:3000") do |d|
+      opts.on("--hourofcode Domain", String, "Specify an override domain for hourofcode.com, e.g. hourofcode.com.localhost:3000") do |d|
         options.hourofcode = d
       end
-      opts.on("--csedweek Domain", String, "Specify an override domain for csedweek.org, e.g. localhost.csedweek.org:3000") do |d|
+      opts.on("--csedweek Domain", String, "Specify an override domain for csedweek.org, e.g. csedweek.org.localhost:3000") do |d|
         options.csedweek = d
       end
       opts.on("-r", "--real_mobile_browser", "Use real mobile browser, not emulator") do

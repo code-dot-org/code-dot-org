@@ -11,7 +11,7 @@ export default {
 const Template = args => (
   <SignInInstructions
     sectionCode="ABCDEF"
-    studioUrlPrefix="http://localhost-studio.code.org:3000"
+    studioUrlPrefix="http://studio.code.org.localhost:3000"
     {...args}
   />
 );

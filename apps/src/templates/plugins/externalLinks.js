@@ -23,8 +23,11 @@ export default function externalLinks(options = {}) {
   tokenizers.link.locator = original.locator;
 }
 
+// fullyQualified('/educate') => 'http://studio.code.org.localhost:3000/educate'
 export function isExternalLink(url) {
-  return !/https?:\/\/([^.]+\.)*code.org(:[0-9]+)?\//.test(fullyQualified(url));
+  return !/https?:\/\/([^.]+\.)*code.org(\.localhost)?(:[0-9]+)?\//.test(
+    fullyQualified(url)
+  );
 }
 
 let a;

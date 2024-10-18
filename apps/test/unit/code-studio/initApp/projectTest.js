@@ -393,8 +393,8 @@ describe('project.js', () => {
         codeProjects: 'https://staging.codeprojects.org',
       },
       {
-        studio: 'http://localhost-studio.code.org:3000',
-        codeProjects: 'http://localhost.codeprojects.org:3000',
+        studio: 'http://studio.code.org.localhost:3000',
+        codeProjects: 'http://codeprojects.org.localhost:3000',
       },
     ];
 

@@ -116,7 +116,7 @@ const unitDataByUnit = {
     csf: true,
     hasStandards: true,
     id: scriptId,
-    path: '//localhost-studio.code.org:3000/s/coursea-2019',
+    path: '//studio.code.org.localhost:3000/s/coursea-2019',
     title: 'Course A (2019)',
     lessons: [
       {
@@ -137,9 +137,9 @@ const unitDataByUnit = {
         unplugged: true,
         lesson_plan_html_url: 'https://curriculum.code.org/csf-19/coursea/1',
         lesson_plan_pdf_url:
-          '//localhost.code.org:3000/curriculum/coursea-2019/1/Teacher.pdf',
+          '//code.org.localhost:3000/curriculum/coursea-2019/1/Teacher.pdf',
         lesson_extras_level_url:
-          'http://localhost-studio.code.org:3000/s/coursea-2019/lessons/1/extras',
+          'http://studio.code.org.localhost:3000/s/coursea-2019/lessons/1/extras',
       },
       {
         script_id: scriptId,
@@ -159,9 +159,9 @@ const unitDataByUnit = {
         unplugged: false,
         lesson_plan_html_url: 'https://curriculum.code.org/csf-19/coursea/2',
         lesson_plan_pdf_url:
-          '//localhost.code.org:3000/curriculum/coursea-2019/2/Teacher.pdf',
+          '//code.org.localhost:3000/curriculum/coursea-2019/2/Teacher.pdf',
         lesson_extras_level_url:
-          'http://localhost-studio.code.org:3000/s/coursea-2019/lessons/2/extras',
+          'http://studio.code.org.localhost:3000/s/coursea-2019/lessons/2/extras',
       },
       {
         script_id: scriptId,
@@ -182,9 +182,9 @@ const unitDataByUnit = {
         unplugged: true,
         lesson_plan_html_url: 'https://curriculum.code.org/csf-19/coursea/3',
         lesson_plan_pdf_url:
-          '//localhost.code.org:3000/curriculum/coursea-2019/3/Teacher.pdf',
+          '//code.org.localhost:3000/curriculum/coursea-2019/3/Teacher.pdf',
         lesson_extras_level_url:
-          'http://localhost-studio.code.org:3000/s/coursea-2019/lessons/3/extras',
+          'http://studio.code.org.localhost:3000/s/coursea-2019/lessons/3/extras',
       },
     ],
   },
