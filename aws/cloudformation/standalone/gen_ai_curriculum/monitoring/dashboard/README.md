@@ -5,8 +5,7 @@ https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashbo
 In order to create or overwrite the existing dashboard, run the following from this directory:
 
 ```
-yarn add @aws-sdk/client-cloudwatch
-yarn add cloudwatch-dashboard-types
+npm install
 npx ts-node createDashboard.ts <test|production>
 ```
 
