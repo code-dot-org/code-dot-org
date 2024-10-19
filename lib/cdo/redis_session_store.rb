@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'action_dispatch/middleware/session/redis_store'
+require 'action_dispatch/request/session'
 
 module Cdo
   # This class extends +ActionDispatch::Session::RedisStore+ (:redis_store)
@@ -8,6 +9,23 @@ module Cdo
   #
   # @see https://docs.google.com/document/d/1_H7SDk1vPnUr5N7I14FPSoYs2bPPBGUz7KUAIE8X_A0
   class RedisSessionStore < ActionDispatch::Session::RedisStore
+    # Extends +ActionDispatch::Request::Session+ to allow identifying whether a session has been changed.
+    module SessionExtension
+      def changed?
+        @changed.present?
+      end
+
+      private def load_for_write!
+        @changed = true
+        super
+      end
+    end
+
+    def initialize(...)
+      ActionDispatch::Request::Session.prepend(SessionExtension)
+      super
+    end
+
     # Overrides +Rack::Session::Redis#delete_session+ to temporarily mark the session as deleted,
     # allowing concurrent requests to identify that the session is being deleted and prevent its restoration.
     #
@@ -29,11 +47,18 @@ module Cdo
     end
 
     # Overrides +Rack::Session::Abstract::Persisted#commit_session?+ to skip committing a session
-    # that was deleted during a previous concurrent request, preventing the restoration of that session.
+    # that is either unchanged for an AJAX request or has been deleted during a previous concurrent request,
+    # preventing the restoration of that session and reducing Redis traffic in general.
     #
     # @see https://github.com/rack/rack/blob/v2.2.9/lib/rack/session/abstract/id.rb#L342
     private def commit_session?(req, session, options)
       result = super
+
+      # If the session has not changed but still requires committing,
+      # it's likely due to the presence of options like +:max_age+ and +:expire_after+,
+      # which are intended to prolong the session.
+      # In this case, we can skip committing for AJAX requests to reduce Redis traffic.
+      result = !req.xhr? if result && !session.changed? && forced_session_update?(session, options)
 
       if result && options[:renew].blank?
         store_session = load_session(req).second.stringify_keys
