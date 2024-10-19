@@ -127,8 +127,8 @@ And(/^I create a(n authorized)? teacher-associated( under-13)?( sponsored)? stud
   end
 
   if before_cap_start
-    raise "cap_lockout_date undefined" unless @cap_lockout_date
-    user_opts[:created_at] = @cap_lockout_date - 1.second
+    raise "cap_start_date undefined" unless @cap_start_date
+    user_opts[:created_at] = @cap_start_date - 1.second
   end
 
   create_user(name, **user_opts)
