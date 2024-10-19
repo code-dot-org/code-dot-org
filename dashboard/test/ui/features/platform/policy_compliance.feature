@@ -169,7 +169,7 @@ Feature: Policy Compliance and Parental Permission
   Scenario: Student should not be able to connect a third-party account until their account is unlocked
     Given I am on "http://studio.code.org"
     Given CPA all user lockout phase
-    Given I create a young student in Colorado who has never signed in named "Coco Student" after CAP start and go home
+    Given I create a young student in Colorado who has never signed in named "Coco Student" before CAP start and go home
 
     # Find the locked buttons to connect an account
     Given I am on "http://studio.code.org/users/edit?cpa-partial-lockout=1"
@@ -290,10 +290,10 @@ Feature: Policy Compliance and Parental Permission
     Then element "#user_us_state" is disabled
     Then element "#user_age" is disabled
 
-  Scenario: Student account Under-13 in Colorado created after CAP start cannot change age and state
+  Scenario: Student account Under-13 in Colorado created before CAP start cannot change age and state
     Given I am on "http://studio.code.org"
     Given CPA all user lockout phase
-    Given I create a young student in Colorado named "Tandy" after CAP start
+    Given I create a young student in Colorado named "Tandy" before CAP start
 
     Given I am on "http://studio.code.org/users/edit"
 
@@ -386,10 +386,10 @@ Feature: Policy Compliance and Parental Permission
     Then element "#user_us_state" is disabled
     Then element "#user_age" is disabled
 
-  Scenario: Student account under-13 and in Colorado created after CAP start using google cannot change their age and state
+  Scenario: Student account under-13 and in Colorado created before CAP start using google cannot change their age and state
     Given I am on "http://studio.code.org"
     Given CPA all user lockout phase
-    Given I create a young student using google in Colorado named "Tandy" after CAP start
+    Given I create a young student using google in Colorado named "Tandy" before CAP start
 
     Given I am on "http://studio.code.org/users/edit"
 

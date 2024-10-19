@@ -362,8 +362,7 @@ class ApplicationController < ActionController::Base
       student_user_new_path,
       student_register_path,
       reset_session_path,
-      student_register_path,
-    ].include?(request.path)
+    ].any? {|path| request.path.include?(path)}
 
     redirect_to lockout_path
   rescue StandardError => exception
