@@ -369,7 +369,8 @@ class TestController < ApplicationController
 
   # Creates the user and signs them in.
   def create_user
-    user_opts = params.require(:user).permit(
+    user_params = params.require(:user)
+    user_opts = user_params.permit(
       :user_type,
       :email,
       :password,
@@ -399,9 +400,10 @@ class TestController < ApplicationController
       :data_transfer_agreement_source,
       :data_transfer_agreement_at,
     )
-    if params[:sso]
+    if user_params[:sso]
       user = User.new(**user_opts)
-      User.initialize_new_oauth_user(user, OmniAuth::AuthHash.new({provider: params[:sso], uid: params[:uid], info: {name: params[:name]}}))
+      User.initialize_new_oauth_user(user, OmniAuth::AuthHash.new({provider: user_params[:sso], uid: user_params[:uid], info: {name: user_params[:name]}}), user_params)
+      user.save!
     else
       user = User.create!(**user_opts)
     end
