@@ -5,6 +5,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+
 //Create a boilerplate for the EditChildLevelSettings React component
 const EditChildLevelSettings = ({initialChildLevelSettings}) => {
   const [childLevelSettings, setChildLevelSettings] = React.useState(
@@ -27,14 +29,32 @@ const EditChildLevelSettings = ({initialChildLevelSettings}) => {
     setChildLevelSettings(updatedSettings);
   };
 
+  async function handleSave(index) {
+    event.preventDefault();
+    const childLevel = childLevelSettings[index];
+    // Here you would typically make an API call to save the changes for the specific child level
+    console.log(`Saving changes for child level ${index}:`, childLevel);
+    // Example API call (uncomment and replace with actual API endpoint)
+    const url = `/levels/${childLevel.id}/update_bubble_choice_settings`;
+    fetch(url, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': await getAuthenticityToken(),
+      },
+      body: JSON.stringify(childLevel.properties),
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }
+
   return (
     <>
-      <input
-        type="hidden"
-        id="child_level_settings"
-        name="level[child_level_settings]"
-        value={JSON.stringify(childLevelSettings)}
-      />
       <div>
         <h3>This level has {childLevelSettings.length} sublevels.</h3>
         <div>
@@ -52,6 +72,9 @@ const EditChildLevelSettings = ({initialChildLevelSettings}) => {
                 alt={`${childLevel.properties.display_name} thumbnail`}
                 style={{maxWidth: '100px', maxHeight: '100px'}}
               />
+              <button type="button" onClick={() => handleSave(index)}>
+                Save
+              </button>
             </div>
           ))}
         </div>

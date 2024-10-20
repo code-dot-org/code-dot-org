@@ -345,6 +345,21 @@ class LevelsController < ApplicationController
     render json: {redirect: level_url(@level)}
   end
 
+  # PATCH /levels/:id/update_bubble_choice_settings
+  def update_bubble_choice_settings
+    changes = JSON.parse(request.body.read)
+    if @level.respond_to?(:display_name)
+      @level.properties["display_name"] = changes["display_name"]
+    end
+
+    @level.log_changes(current_user)
+    if @level.save
+      render json: {message: 'Level updated successfully', level: @level}, status: :ok
+    else
+      render json: {errors: @level.errors.full_messages}, status: :unprocessable_entity
+    end
+  end
+
   # POST /levels
   # POST /levels.json
   def create
