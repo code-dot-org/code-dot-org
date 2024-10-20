@@ -5,7 +5,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+
+import styles from './edit-child-level-settings.module.scss';
 
 //Create a boilerplate for the EditChildLevelSettings React component
 const EditChildLevelSettings = ({initialChildLevelSettings}) => {
@@ -59,22 +62,29 @@ const EditChildLevelSettings = ({initialChildLevelSettings}) => {
         <h3>This level has {childLevelSettings.length} sublevels.</h3>
         <div>
           {childLevelSettings.map((childLevel, index) => (
-            <div key={index} style={{marginBottom: '20px'}}>
-              <h4>
-                <input
-                  type="text"
-                  value={childLevel.properties.display_name}
-                  onChange={e => handleDisplayNameChange(index, e.target.value)}
-                />
-              </h4>
-              <img
-                src={childLevel.properties.thumbnail_url}
-                alt={`${childLevel.properties.display_name} thumbnail`}
-                style={{maxWidth: '100px', maxHeight: '100px'}}
-              />
-              <button type="button" onClick={() => handleSave(index)}>
-                Save
-              </button>
+            <div className={styles.collapsibleFieldSection}>
+              <hr />
+              <CollapsibleSection headerContent={childLevel.name}>
+                <div key={index}>
+                  <h4>
+                    <input
+                      type="text"
+                      value={childLevel.properties.display_name}
+                      onChange={e =>
+                        handleDisplayNameChange(index, e.target.value)
+                      }
+                    />
+                  </h4>
+                  <img
+                    src={childLevel.properties.thumbnail_url}
+                    alt={`${childLevel.properties.display_name} thumbnail`}
+                    style={{maxWidth: '100px', maxHeight: '100px'}}
+                  />
+                  <button type="button" onClick={() => handleSave(index)}>
+                    Save
+                  </button>
+                </div>
+              </CollapsibleSection>
             </div>
           ))}
         </div>
