@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import QRCode from 'qrcode.react';
 import React, {useCallback, useEffect, useState} from 'react';
 import FocusLock from 'react-focus-lock';
@@ -28,17 +29,49 @@ const CopyToClipboardButton: React.FunctionComponent<{
   }, [shareUrl, projectType]);
 
   return (
-    <div>
-      <Button
-        iconLeft={{
-          iconName: copiedToClipboard ? 'clipboard-check' : 'clipboard',
-        }}
-        ariaLabel={i18n.copyLinkToProject()}
-        text={i18n.copyLinkToProject()}
+    <Button
+      iconLeft={{
+        iconName: copiedToClipboard ? 'clipboard-check' : 'clipboard',
+      }}
+      ariaLabel={i18n.copyLinkToProject()}
+      text={i18n.copyLinkToProject()}
+      type="secondary"
+      color="white"
+      size="m"
+      onClick={handleCopyToClipboard}
+      className={moduleStyles.copyLinkButton}
+    />
+  );
+};
+
+const AfeCareerTourBlock: React.FunctionComponent = () => {
+  const careersUrl =
+    'https://www.amazonfutureengineer.com/careertours/careervideos';
+
+  return (
+    <div className={classNames(moduleStyles.block, moduleStyles.blockAfe)}>
+      <Typography
+        semanticTag="h2"
+        visualAppearance="heading-md"
+        className={classNames(moduleStyles.heading, moduleStyles.blockHeading)}
+      >
+        {i18n.careerTourTitle()}
+      </Typography>
+      <img alt="" src="/shared/images/afe/afe-career-tours-0.jpg" />
+      {i18n.careerTourDescription()}
+      <LinkButton
+        ariaLabel={i18n.careerTourAction()}
+        href={careersUrl}
+        text={i18n.careerTourAction()}
         type="primary"
-        color="black"
+        color="white"
         size="m"
-        onClick={handleCopyToClipboard}
+        target="_blank"
+        iconRight={{
+          iconName: 'arrow-up-right-from-square',
+          iconStyle: 'solid',
+          title: 'arrow-up-right-from-square',
+        }}
       />
     </div>
   );
@@ -71,8 +104,8 @@ const ShareDialog: React.FunctionComponent<{
     [dispatch]
   );
 
-  const careersUrl =
-    'https://www.amazonfutureengineer.com/careertours/careervideos';
+  dialogId = 'hoc2024';
+  finishUrl = 'blah';
 
   return (
     <FocusLock>
@@ -87,11 +120,27 @@ const ShareDialog: React.FunctionComponent<{
               ? i18n.congratulations()
               : i18n.shareTitle()}
           </Typography>
+          <div>{dialogId === 'hoc2024' && i18n.congratsFinishedHoc()}</div>
           <div className={moduleStyles.columns}>
             <div className={moduleStyles.column}>
-              <div className={moduleStyles.share}>
-                <div id="share-qrcode-container">
-                  <QRCode value={shareUrl + '?qr=true'} size={140} />
+              <div className={moduleStyles.block}>
+                <Typography
+                  semanticTag="h2"
+                  visualAppearance="heading-md"
+                  className={classNames(
+                    moduleStyles.heading,
+                    moduleStyles.blockHeading
+                  )}
+                >
+                  {i18n.shareTitle()}
+                </Typography>
+                <div
+                  className={moduleStyles.QRCodeContainer}
+                  id="share-qrcode-container"
+                >
+                  <div className={moduleStyles.QRCodeBorder}>
+                    <QRCode value={shareUrl + '?qr=true'} size={136} />
+                  </div>
                 </div>
                 <CopyToClipboardButton
                   shareUrl={shareUrl}
@@ -99,44 +148,45 @@ const ShareDialog: React.FunctionComponent<{
                 />
               </div>
             </div>
-            <div className={moduleStyles.column}>
-              {dialogId === 'hoc2024' ? (
-                <div className={moduleStyles.careers}>
-                  Learn more about careers in technology and music.
-                  <LinkButton
-                    ariaLabel={i18n.learnMore()}
-                    href={careersUrl}
-                    text={i18n.learnMore()}
-                    type="primary"
-                    color="black"
-                    size="m"
-                    target="_blank"
-                  />
-                </div>
-              ) : (
-                <div>Share your project by using these links.</div>
-              )}
-
-              {finishUrl ? (
+            {dialogId === 'hoc2024' && (
+              <div className={moduleStyles.column}>
+                <AfeCareerTourBlock />
+              </div>
+            )}
+          </div>
+          <div className={moduleStyles.bottom}>
+            {finishUrl ? (
+              <div className={moduleStyles.contents}>
+                <Button
+                  ariaLabel={i18n.keepPlaying()}
+                  text={i18n.keepPlaying()}
+                  type="secondary"
+                  color="white"
+                  size="m"
+                  onClick={handleClose}
+                  className={moduleStyles.keepPlayingButton}
+                />
                 <LinkButton
                   ariaLabel={i18n.finish()}
                   href={finishUrl}
                   text={i18n.finish()}
                   type="primary"
+                  color="white"
                   size="m"
                   className={moduleStyles.doneButton}
                 />
-              ) : (
-                <Button
-                  ariaLabel={i18n.done()}
-                  text={i18n.done()}
-                  type="primary"
-                  size="m"
-                  onClick={handleClose}
-                  className={moduleStyles.doneButton}
-                />
-              )}
-            </div>
+              </div>
+            ) : (
+              <Button
+                ariaLabel={i18n.done()}
+                text={i18n.done()}
+                type="primary"
+                color="white"
+                size="m"
+                onClick={handleClose}
+                className={moduleStyles.doneButton}
+              />
+            )}
           </div>
           <button
             type="button"
