@@ -5,8 +5,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import ImageInput from '@cdo/apps/levelbuilder/ImageInput';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+
+import BubbleChoiceDescriptionEditor from './BubbleChoiceDescriptionEditor';
 
 import styles from './edit-child-level-settings.module.scss';
 
@@ -24,6 +27,38 @@ const EditChildLevelSettings = ({initialChildLevelSettings}) => {
           properties: {
             ...childLevel.properties,
             display_name: newDisplayName,
+          },
+        };
+      }
+      return childLevel;
+    });
+    setChildLevelSettings(updatedSettings);
+  };
+
+  const handleDescriptionChange = (index, newDescription) => {
+    const updatedSettings = childLevelSettings.map((childLevel, i) => {
+      if (i === index) {
+        return {
+          ...childLevel,
+          properties: {
+            ...childLevel.properties,
+            bubble_choice_description: newDescription,
+          },
+        };
+      }
+      return childLevel;
+    });
+    setChildLevelSettings(updatedSettings);
+  };
+
+  const handleThumbnailUrlChange = (index, newThumbnailUrl) => {
+    const updatedSettings = childLevelSettings.map((childLevel, i) => {
+      if (i === index) {
+        return {
+          ...childLevel,
+          properties: {
+            ...childLevel.properties,
+            thumbnail_url: newThumbnailUrl,
           },
         };
       }
@@ -62,11 +97,12 @@ const EditChildLevelSettings = ({initialChildLevelSettings}) => {
         <h3>This level has {childLevelSettings.length} sublevels.</h3>
         <div>
           {childLevelSettings.map((childLevel, index) => (
-            <div className={styles.collapsibleFieldSection}>
+            <div className={styles.collapsibleFieldSection} key={index}>
               <hr />
               <CollapsibleSection headerContent={childLevel.name}>
-                <div key={index}>
-                  <h4>
+                <div>
+                  <div className={styles.fieldRow}>
+                    <label>Display Name</label>
                     <input
                       type="text"
                       value={childLevel.properties.display_name}
@@ -74,12 +110,26 @@ const EditChildLevelSettings = ({initialChildLevelSettings}) => {
                         handleDisplayNameChange(index, e.target.value)
                       }
                     />
-                  </h4>
-                  <img
-                    src={childLevel.properties.thumbnail_url}
-                    alt={`${childLevel.properties.display_name} thumbnail`}
-                    style={{maxWidth: '100px', maxHeight: '100px'}}
+                  </div>
+                  <BubbleChoiceDescriptionEditor
+                    description={
+                      childLevel.properties.bubble_choice_description || ''
+                    }
+                    index={index}
+                    handleDescriptionChange={handleDescriptionChange}
                   />
+                  <div className={styles.fieldRow}>
+                    <label>Thumbnail URL</label>
+                    <ImageInput
+                      updateImageUrl={newImageUrl =>
+                        handleThumbnailUrlChange(index, newImageUrl)
+                      }
+                      initialImageUrl={
+                        childLevel.properties.thumbnail_url || ''
+                      }
+                      showPreview
+                    />
+                  </div>
                   <button type="button" onClick={() => handleSave(index)}>
                     Save
                   </button>

@@ -1,5 +1,23 @@
+@import 'color.scss';
+
 .collapsiblefieldSection {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
+  }
+
+  .fieldRow {
+    padding: 10px;
+  }
+
+  .bubbleChoiceDescriptionPreview {
+    border: 5px solid $cyan;
+    background-color: $lightest_cyan;
+    padding: 10px;
+  }
+
+  .bubbleChoiceSublevelMarkdown {
+    border: 5px solid gray;
+    border-radius: 5px;
+    padding: 10px;
   }
