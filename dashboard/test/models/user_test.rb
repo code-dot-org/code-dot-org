@@ -3841,13 +3841,14 @@ class UserTest < ActiveSupport::TestCase
     params = {}
 
     assert_creates(User) do
-      user = User.from_omniauth(auth, params)
+      user = User.from_omniauth(auth, params, nil, true)
       assert_equal 'migrated', user.provider
       assert_equal 'Some User', user.name
       assert_equal 'google_oauth2', user.primary_contact_info.credential_type
       assert_equal 'fake oauth token', user.primary_contact_info.data_hash[:oauth_token]
       assert_equal 'fake refresh token', user.primary_contact_info.data_hash[:oauth_refresh_token]
       assert_equal User::TYPE_STUDENT, user.user_type
+      assert_equal true, user.roster_synced
     end
   end
 
@@ -3872,6 +3873,7 @@ class UserTest < ActiveSupport::TestCase
       assert_equal 'fake oauth token', user.primary_contact_info.data_hash[:oauth_token]
       assert_equal 'fake refresh token', user.primary_contact_info.data_hash[:oauth_refresh_token]
       assert_equal 'google_oauth2', user.primary_contact_info.credential_type
+      assert_nil user.roster_synced
     end
   end
 
