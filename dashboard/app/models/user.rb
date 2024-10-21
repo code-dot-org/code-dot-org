@@ -115,6 +115,8 @@ class User < ApplicationRecord
   #   user_provided_us_state: Indicates if the us_state was provided by the user as opposed to being interpolated.
   #   failed_attempts and locked_at: Used by Devise#Lockable to prevent
   #     brute-force password attempts
+  #   roster_synced: Indicates if the user was created during a roster sync operation from an LMS. Implies that the user
+  #     is a school-managed account.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -164,6 +166,7 @@ class User < ApplicationRecord
     failed_attempts
     locked_at
     has_seen_ai_assessments_announcement
+    roster_synced
   )
 
   attr_accessor(
@@ -860,12 +863,13 @@ class User < ApplicationRecord
   end
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
-  def self.from_omniauth(auth, params, session = nil)
+  def self.from_omniauth(auth, params, session = nil, roster_sync = false)
     omniauth_user = find_by_credential(type: auth.provider, id: auth.uid)
 
     unless omniauth_user
       omniauth_user = create
       initialize_new_oauth_user(omniauth_user, auth, params)
+      omniauth_user.roster_synced = true if roster_sync
       omniauth_user.save
       SignUpTracking.log_sign_up_result(omniauth_user, session)
     end
