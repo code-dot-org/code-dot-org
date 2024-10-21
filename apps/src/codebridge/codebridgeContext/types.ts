@@ -8,7 +8,6 @@ export type CloseFileFunction = (fileId: FileId) => void;
 export type SetActiveFileFunction = (fileId: FileId) => void;
 
 export type NewFolderFunction = (arg: {
-  folderId: FolderId;
   folderName: string;
   parentId?: FolderId;
 }) => void;

@@ -148,13 +148,12 @@ export const useProjectUtilities = (
       }),
 
       newFolder: <NewFolderFunction>(({
-        folderId,
         folderName,
         parentId = DEFAULT_FOLDER_ID,
       }) => {
         dispatch({
           type: PROJECT_REDUCER_ACTIONS.NEW_FOLDER,
-          payload: {folderId, folderName, parentId},
+          payload: {folderName, parentId},
         });
       }),
       renameFolder: <RenameFolderFunction>((folderId, newName) => {
