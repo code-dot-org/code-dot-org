@@ -14,12 +14,11 @@ const aiBotImages = [
   require(`@cdo/static/music/ai/ai-bot-3.png`),
 ];
 
-const aiBotImageThinking = require(`@cdo/static/music/ai/ai-bot-thinking.png`);
-
 const arrowImage = require(`@cdo/static/music/music-callout-arrow.png`);
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {useInterval} from '@cdo/apps/util/useInterval';
 
 import {generatePattern} from '../ai/patternAi';
 import appConfig from '../appConfig';
@@ -44,8 +43,14 @@ interface PatternAiPanelProps {
   onChange: (value: InstrumentEventValue) => void;
 }
 
-type UserCompletedTaskType = 'none' | 'generated' | 'drawnDrums';
+type UserCompletedTaskType =
+  | 'none'
+  | 'drawnDrums'
+  | 'changedTemperature'
+  | 'generated';
 type GenerateStateType = 'none' | 'generating' | 'error';
+
+const defaultAiTemperature = 8;
 
 /*
  * Renders a UI for designing a pattern, with AI generation. This is currently
@@ -62,7 +67,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     JSON.stringify(initValue)
   );
 
-  const [aiTemperature, setAiTemperature] = useState(10);
+  const [aiTemperature, setAiTemperature] = useState(defaultAiTemperature);
 
   const availableKits = useMemo(() => {
     return MusicLibrary.getInstance()?.kits || [];
@@ -110,6 +115,22 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
   const handleFolderChange = (event: ChangeEvent<HTMLSelectElement>) => {
     currentValue.instrument = event.target.value;
     onChange(currentValue);
+  };
+
+  const getOuterCellClasses = (tick: number) => {
+    return classNames(
+      styles.outerCell,
+      tick === currentPreviewTick &&
+        generateState === 'none' &&
+        styles.outerCellPlaying,
+      generateState === 'generating' &&
+        tick === generatingScanStep &&
+        styles.outerCellScanning,
+      generateState === 'generating' &&
+        tick !== generatingScanStep &&
+        styles.outerCellSlowFade,
+      tick % 4 === 0 && styles.outerCellFourth
+    );
   };
 
   const getCellClasses = (note: number, tick: number) => {
@@ -168,14 +189,24 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
 
   // Tracks the tasks completed by the user.
   useEffect(() => {
-    if (currentValue.events.some(event => event.tick >= 9)) {
+    if (
+      generateState === 'generating' ||
+      currentValue.events.some(event => event.tick >= 9)
+    ) {
       setUserCompletedTask('generated');
+    } else if (
+      MusicRegistry.showAiTemperatureExplanation &&
+      aiTemperature !== defaultAiTemperature
+    ) {
+      if (userCompletedTask === 'drawnDrums') {
+        setUserCompletedTask('changedTemperature');
+      }
     } else if (currentValue.events.length >= 4) {
       if (userCompletedTask === 'none') {
         setUserCompletedTask('drawnDrums');
       }
     }
-  }, [currentValue.events, userCompletedTask]);
+  }, [generateState, currentValue.events, userCompletedTask, aiTemperature]);
 
   const startPreview = useCallback(
     (value: InstrumentEventValue) => {
@@ -222,7 +253,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
       numEvents - numSeedEvents,
       aiTemperature / 10,
       newEvents => {
-        const delayDuration = Number(appConfig.getValue('ai-delay')) || 0;
+        const delayDuration = Number(appConfig.getValue('ai-delay')) || 5000;
         delay(delayDuration).then(() => {
           currentValue.events = newEvents;
           onChange(currentValue);
@@ -233,7 +264,15 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
       onError
     );
     setGenerateState('generating');
+    setGeneratingScanStep(0);
   }, [currentValue, onChange, aiTemperature, stopPreview, playPreview]);
+
+  const [generatingScanStep, setGeneratingScanStep] = useState(0);
+  useInterval(() => {
+    if (generateState === 'generating' && generatingScanStep <= 8) {
+      setGeneratingScanStep(generatingScanStep + 1);
+    }
+  }, 100);
 
   const aiTemperatureMin = 5;
   const aiTemperatureMax = 20;
@@ -248,16 +287,15 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
   );
   const aiBotImage = aiBotImages[aiBotImageIndex];
 
+  const clickDrumsText = [
+    musicI18n.patternAiClickDrums(),
+    musicI18n.patternAiClickDrums3(),
+    musicI18n.patternAiClickDrums2(),
+    musicI18n.patternAiClickDrums1(),
+  ][currentValue.events.length];
+
   return (
     <div className={styles.patternPanel}>
-      <select value={currentValue.instrument} onChange={handleFolderChange}>
-        {availableKits.map(folder => (
-          <option key={folder.id} value={folder.id}>
-            {folder.name}
-          </option>
-        ))}
-      </select>
-
       <LoadingOverlay
         show={isLoading || generateState === 'generating'}
         delayAppearance={generateState === 'generating'}
@@ -267,7 +305,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
         {userCompletedTask === 'none' && (
           <div className={styles.helpContainer}>
             <div className={classNames(styles.help, styles.helpDrawDrums)}>
-              Click to set up the start of your drums.
+              {clickDrumsText}
             </div>
             <div
               className={classNames(
@@ -284,23 +322,35 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
             </div>
           </div>
         )}
-        {userCompletedTask === 'drawnDrums' && (
-          <div className={styles.helpContainer}>
-            <div
-              className={classNames(
-                styles.help,
-                styles.helpGenerate,
-                generateState === 'error' && styles.helpGenerateError
-              )}
-            >
-              Click this button and A.I. will generate more drums based on what
-              you started.
-              {generateState === 'error' && (
-                <div className={styles.errorMessage}>
-                  <br />
-                  Something went wrong. Try again.
+        {userCompletedTask === 'drawnDrums' &&
+          MusicRegistry.showAiTemperatureExplanation && (
+            <div className={styles.helpContainer}>
+              <div className={classNames(styles.help, styles.helpTemperature)}>
+                {musicI18n.patternAiTemperature()}
+              </div>
+              <div
+                className={classNames(
+                  styles.arrowContainer,
+                  styles.arrowContainerTemperature
+                )}
+              >
+                <div
+                  id="callout-arrow"
+                  className={classNames(styles.arrow, styles.arrowRight)}
+                >
+                  <img src={arrowImage} alt="" />
                 </div>
-              )}
+              </div>
+            </div>
+          )}
+        {(userCompletedTask === 'changedTemperature' ||
+          (userCompletedTask === 'drawnDrums' &&
+            !MusicRegistry.showAiTemperatureExplanation)) && (
+          <div className={styles.helpContainer}>
+            <div className={classNames(styles.help, styles.helpGenerate)}>
+              {userCompletedTask === 'changedTemperature'
+                ? musicI18n.patternAiGenerateTemperature()
+                : musicI18n.patternAiGenerate()}
             </div>
             <div
               className={classNames(
@@ -317,7 +367,14 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
             </div>
           </div>
         )}
-        {userCompletedTask === 'generated' && generateState === 'error' && (
+        {generateState === 'generating' && (
+          <div className={styles.helpContainer}>
+            <div className={classNames(styles.help, styles.helpGenerating)}>
+              {musicI18n.patternAiGenerating()}
+            </div>
+          </div>
+        )}
+        {generateState === 'error' && (
           <div className={styles.helpContainer}>
             <div
               className={classNames(
@@ -326,54 +383,75 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
                 styles.errorMessage
               )}
             >
-              Something went wrong. Try again.
+              {musicI18n.patternAiGenerateError()}
             </div>
           </div>
         )}
 
         <div className={styles.leftArea}>
-          {currentFolder.sounds.map(({name, note}, index) => {
-            return (
-              <div className={styles.row} key={note}>
-                <div className={styles.nameContainer}>
-                  <span
-                    className={styles.name}
-                    onClick={() =>
-                      MusicRegistry.player.previewNote(
-                        note || index,
-                        currentValue.instrument
-                      )
-                    }
-                  >
-                    {name}
-                  </span>
+          <div className={styles.topRow}>
+            <select
+              value={currentValue.instrument}
+              onChange={handleFolderChange}
+              className={styles.select}
+            >
+              {availableKits.map(folder => (
+                <option key={folder.id} value={folder.id}>
+                  {folder.name}
+                </option>
+              ))}
+            </select>
+
+            <PreviewControls
+              enabled={currentValue.events.length > 0}
+              playPreview={playPreview}
+              onClickClear={onClear}
+              cancelPreviews={stopPreview}
+              isPlayingPreview={currentPreviewTick > 0}
+            />
+          </div>
+
+          <div className={styles.patternArea}>
+            {currentFolder.sounds.map(({name, note}, index) => {
+              return (
+                <div className={styles.row} key={note}>
+                  <div className={styles.nameContainer}>
+                    <span
+                      className={styles.name}
+                      onClick={() =>
+                        MusicRegistry.player.previewNote(
+                          note || index,
+                          currentValue.instrument
+                        )
+                      }
+                    >
+                      {name}
+                    </span>
+                  </div>
+                  {arrayOfTicks
+                    .filter(
+                      tick =>
+                        (userCompletedTask === 'generated' &&
+                          generateState === 'none') ||
+                        tick < 9
+                    )
+                    .map(tick => {
+                      return (
+                        <div
+                          className={getOuterCellClasses(tick)}
+                          onClick={() => toggleEvent(tick, index)}
+                          key={tick}
+                        >
+                          <div
+                            className={getCellClasses(note || index, tick)}
+                          />
+                        </div>
+                      );
+                    })}
                 </div>
-                {arrayOfTicks
-                  .filter(
-                    tick =>
-                      (userCompletedTask === 'generated' &&
-                        generateState === 'none') ||
-                      tick < 9
-                  )
-                  .map(tick => {
-                    return (
-                      <div
-                        className={classNames(
-                          styles.outerCell,
-                          tick === currentPreviewTick &&
-                            generateState === 'none' &&
-                            styles.outerCellPlaying
-                        )}
-                        onClick={() => toggleEvent(tick, index)}
-                        key={tick}
-                      >
-                        <div className={getCellClasses(note || index, tick)} />
-                      </div>
-                    );
-                  })}
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
 
         <div className={styles.rightArea}>
@@ -381,14 +459,13 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
             className={classNames(
               styles.botArea,
               MusicRegistry.hideAiTemperature && styles.botAreaGap,
-              ['drawnDrums', 'generated'].includes(userCompletedTask) &&
-                styles.botAreaVisible
+              ['drawnDrums', 'changedTemperature', 'generated'].includes(
+                userCompletedTask
+              ) && styles.botAreaVisible
             )}
           >
             <img
-              src={
-                generateState === 'generating' ? aiBotImageThinking : aiBotImage
-              }
+              src={aiBotImage}
               className={classNames(
                 styles.aiBot,
                 generateState === 'generating' && styles.aiBotGenerating
@@ -398,7 +475,6 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
             />
             {!MusicRegistry.hideAiTemperature && (
               <div>
-                <div className={styles.temperatureText}>{aiTemperature}</div>
                 <div className={styles.temperatureRow}>
                   <div
                     className={styles.temperatureButton}
@@ -440,20 +516,13 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
               onClick={handleAiClick}
               disabled={generateState === 'generating'}
               type="primary"
+              color="white"
               size="s"
               className={styles.button}
             />
           </div>
         </div>
       </div>
-
-      <PreviewControls
-        enabled={currentValue.events.length > 0}
-        playPreview={playPreview}
-        onClickClear={onClear}
-        cancelPreviews={stopPreview}
-        isPlayingPreview={currentPreviewTick > 0}
-      />
     </div>
   );
 };

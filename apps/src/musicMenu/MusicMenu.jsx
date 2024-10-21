@@ -91,6 +91,17 @@ const optionsList = [
     ],
   },
   {
+    name: 'show-ai-temperature-explanation',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: 'Hide AI temperature explanation (default).',
+      },
+      {value: 'true', description: 'Show AI temperature.'},
+    ],
+  },
+  {
     name: 'BPM',
     type: 'string',
     description: 'Set a specific BPM',

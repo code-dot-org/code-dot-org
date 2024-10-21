@@ -19,21 +19,46 @@
   }
 }
 
+@keyframes slidein {
+  from {
+    opacity: 0;
+    margin-top: 20px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
 .patternPanel {
   font-size: 13px;
   user-select: none;
+  height: 100%;
+  //background-color: $light_gray_950;
 }
 
 .body {
   display: flex;
   justify-content: space-around;
+  height: 100%;
 }
 
 .leftArea {
   width: 744px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: space-evenly;
+  height: 100%;
+
+  .topRow {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.select {
+  margin-bottom: 0;
 }
 
 .row {
@@ -41,14 +66,14 @@
   align-items: center;
 
   &:hover {
-    background-color: rgba($background_gray, 0.2);
+    background-color: rgba($light_gray_950, 0.3);
     border-radius: 4px;
   }
 }
 
 .nameContainer {
   display: inline-block;
-  width: 100px;
+  width: 120px;
   vertical-align: middle;
   padding-left: 3px;
 
@@ -60,27 +85,41 @@
 
 .outerCell {
   display: inline-block;
-  padding: 5px 3px;
+  padding: 4px 2px;
   box-sizing: border-box;
   cursor: pointer;
+  transition: background-color 0s;
 
   &Playing {
-    background-color: $light-gray;
+    background-color: $neutral_dark20;
+  }
+
+  &Scanning {
+    background-color: $ai_rubric_cyan;
+  }
+
+  &SlowFade {
+    transition: background-color 0.25s;
+  }
+
+  &Fourth {
+    padding-right: 5px;
   }
 }
 
 .rightArea {
-  width: 100px;
+  width: 120px;
+  height: 100%;
 }
 
 .botArea {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
   opacity: 0;
   transition: 0.1s ease-in-out;
-  justify-content: flex-end;
+  justify-content: center;
   height: 100%;
 
   &Gap {
@@ -93,6 +132,7 @@
 }
 
 .button {
+  background-color: $ai_rubric_cyan !important;
   span {
     user-select: none;
   }
@@ -119,14 +159,8 @@
 }
 
 .aiBot {
-  width: 60px;
   transition: 0.1s ease-in-out;
-  cursor: pointer;
-
-  &Generating {
-    pointer-events: none;
-    cursor: initial;
-  }
+  width: 100px;
 
   &:hover{
     transform: scale(1.05, 1.05);
@@ -137,9 +171,9 @@
 .cell {
   padding: 2px;
   width: 10px;
-  height: 10px;
+  height: 13px;
 
-  border-radius: 50%;
+  border-radius: 2px; // 50%;
   transition: 0.1s ease-in-out;
   animation: 0.5s fade-in;
 
@@ -182,7 +216,7 @@
     }
 
     &Active {
-      background-color: white;
+      background-color: $ai_rubric_cyan;
     }
   }
 }
@@ -199,24 +233,32 @@
   padding: 14px;
   border-radius: 4px;
   max-width: 300px;
+  white-space: pre-line;
+  animation: slidein 0.5s;
 
   &DrawDrums {
     left: 370px;
     top: 80px;
   }
 
-  &Generate {
-    top: 172px;
-    right: 196px;
+  &Temperature {
+    top: 170px;
+    right: 214px;
+  }
 
-    &Error {
-      top: 100px;
-    }
+  &Generate {
+    top: 205px;
+    right: 216px;
+  }
+
+  &Generating {
+    left: 370px;
+    top: 80px;
   }
 
   &Error {
-    top: 143px;
-    right: 196px;
+    left: 370px;
+    top: 80px;
   }
 }
 
@@ -228,9 +270,14 @@
     top: 90px;
   }
 
+  &Temperature {
+    right: 192px;
+    top: 177px;
+  }
+
   &Generate {
-    right: 177px;
-    top: 201px;
+    right: 196px;
+    top: 221px;
   }
 }
 
