@@ -363,7 +363,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
       numEvents - numSeedEvents,
       aiTemperature / 10,
       newEvents => {
-        const delayDuration = Number(appConfig.getValue('ai-delay')) || 5000;
+        const delayDuration = Number(appConfig.getValue('ai-delay')) || 0;
         delay(delayDuration).then(() => {
           currentValue.events = newEvents;
           onChange(currentValue);
