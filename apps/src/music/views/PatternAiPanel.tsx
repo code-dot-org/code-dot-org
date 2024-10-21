@@ -38,19 +38,129 @@ const numSeedEvents = 8;
 // Generate an array containing tick numbers from 1..numEvents.
 const arrayOfTicks = Array.from({length: numEvents}, (_, i) => i + 1);
 
-interface PatternAiPanelProps {
-  initValue: InstrumentEventValue;
-  onChange: (value: InstrumentEventValue) => void;
-}
-
 type UserCompletedTaskType =
   | 'none'
   | 'drawnDrums'
   | 'changedTemperature'
   | 'generated';
+
 type GenerateStateType = 'none' | 'generating' | 'error';
 
 const defaultAiTemperature = 8;
+
+interface HelpProps {
+  userCompletedTask: UserCompletedTaskType;
+  generateState: GenerateStateType;
+  eventsLength: number;
+}
+
+const Help: React.FunctionComponent<HelpProps> = ({
+  userCompletedTask,
+  generateState,
+  eventsLength,
+}) => {
+  const clickDrumsText = [
+    musicI18n.patternAiClickDrums(),
+    musicI18n.patternAiClickDrums3(),
+    musicI18n.patternAiClickDrums2(),
+    musicI18n.patternAiClickDrums1(),
+  ][eventsLength];
+
+  return (
+    <div>
+      {userCompletedTask === 'none' && (
+        <div className={styles.helpContainer}>
+          <div className={classNames(styles.help, styles.helpDrawDrums)}>
+            {clickDrumsText}
+          </div>
+          <div
+            className={classNames(
+              styles.arrowContainer,
+              styles.arrowContainerDrawDrums
+            )}
+          >
+            <div
+              id="callout-arrow"
+              className={classNames(styles.arrow, styles.arrowLeft)}
+            >
+              <img src={arrowImage} alt="" />
+            </div>
+          </div>
+        </div>
+      )}
+      {userCompletedTask === 'drawnDrums' &&
+        MusicRegistry.showAiTemperatureExplanation && (
+          <div className={styles.helpContainer}>
+            <div className={classNames(styles.help, styles.helpTemperature)}>
+              {musicI18n.patternAiTemperature()}
+            </div>
+            <div
+              className={classNames(
+                styles.arrowContainer,
+                styles.arrowContainerTemperature
+              )}
+            >
+              <div
+                id="callout-arrow"
+                className={classNames(styles.arrow, styles.arrowRight)}
+              >
+                <img src={arrowImage} alt="" />
+              </div>
+            </div>
+          </div>
+        )}
+      {(userCompletedTask === 'changedTemperature' ||
+        (userCompletedTask === 'drawnDrums' &&
+          !MusicRegistry.showAiTemperatureExplanation)) && (
+        <div className={styles.helpContainer}>
+          <div className={classNames(styles.help, styles.helpGenerate)}>
+            {userCompletedTask === 'changedTemperature'
+              ? musicI18n.patternAiGenerateTemperature()
+              : musicI18n.patternAiGenerate()}
+          </div>
+          <div
+            className={classNames(
+              styles.arrowContainer,
+              styles.arrowContainerGenerate
+            )}
+          >
+            <div
+              id="callout-arrow"
+              className={classNames(styles.arrow, styles.arrowRight)}
+            >
+              <img src={arrowImage} alt="" />
+            </div>
+          </div>
+        </div>
+      )}
+      {generateState === 'generating' && (
+        <div className={styles.helpContainer}>
+          <div className={classNames(styles.help, styles.helpGenerating)}>
+            {musicI18n.patternAiGenerating()}
+          </div>
+        </div>
+      )}
+      {generateState === 'error' && (
+        <div className={styles.helpContainer}>
+          <div
+            className={classNames(
+              styles.help,
+              styles.helpError,
+              styles.errorMessage
+            )}
+          >
+            {musicI18n.patternAiGenerateError()}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+interface PatternAiPanelProps {
+  initValue: InstrumentEventValue;
+  onChange: (value: InstrumentEventValue) => void;
+}
 
 /*
  * Renders a UI for designing a pattern, with AI generation. This is currently
@@ -287,13 +397,6 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
   );
   const aiBotImage = aiBotImages[aiBotImageIndex];
 
-  const clickDrumsText = [
-    musicI18n.patternAiClickDrums(),
-    musicI18n.patternAiClickDrums3(),
-    musicI18n.patternAiClickDrums2(),
-    musicI18n.patternAiClickDrums1(),
-  ][currentValue.events.length];
-
   return (
     <div className={styles.patternPanel}>
       <LoadingOverlay
@@ -302,91 +405,11 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
       />
 
       <div className={styles.body}>
-        {userCompletedTask === 'none' && (
-          <div className={styles.helpContainer}>
-            <div className={classNames(styles.help, styles.helpDrawDrums)}>
-              {clickDrumsText}
-            </div>
-            <div
-              className={classNames(
-                styles.arrowContainer,
-                styles.arrowContainerDrawDrums
-              )}
-            >
-              <div
-                id="callout-arrow"
-                className={classNames(styles.arrow, styles.arrowLeft)}
-              >
-                <img src={arrowImage} alt="" />
-              </div>
-            </div>
-          </div>
-        )}
-        {userCompletedTask === 'drawnDrums' &&
-          MusicRegistry.showAiTemperatureExplanation && (
-            <div className={styles.helpContainer}>
-              <div className={classNames(styles.help, styles.helpTemperature)}>
-                {musicI18n.patternAiTemperature()}
-              </div>
-              <div
-                className={classNames(
-                  styles.arrowContainer,
-                  styles.arrowContainerTemperature
-                )}
-              >
-                <div
-                  id="callout-arrow"
-                  className={classNames(styles.arrow, styles.arrowRight)}
-                >
-                  <img src={arrowImage} alt="" />
-                </div>
-              </div>
-            </div>
-          )}
-        {(userCompletedTask === 'changedTemperature' ||
-          (userCompletedTask === 'drawnDrums' &&
-            !MusicRegistry.showAiTemperatureExplanation)) && (
-          <div className={styles.helpContainer}>
-            <div className={classNames(styles.help, styles.helpGenerate)}>
-              {userCompletedTask === 'changedTemperature'
-                ? musicI18n.patternAiGenerateTemperature()
-                : musicI18n.patternAiGenerate()}
-            </div>
-            <div
-              className={classNames(
-                styles.arrowContainer,
-                styles.arrowContainerGenerate
-              )}
-            >
-              <div
-                id="callout-arrow"
-                className={classNames(styles.arrow, styles.arrowRight)}
-              >
-                <img src={arrowImage} alt="" />
-              </div>
-            </div>
-          </div>
-        )}
-        {generateState === 'generating' && (
-          <div className={styles.helpContainer}>
-            <div className={classNames(styles.help, styles.helpGenerating)}>
-              {musicI18n.patternAiGenerating()}
-            </div>
-          </div>
-        )}
-        {generateState === 'error' && (
-          <div className={styles.helpContainer}>
-            <div
-              className={classNames(
-                styles.help,
-                styles.helpError,
-                styles.errorMessage
-              )}
-            >
-              {musicI18n.patternAiGenerateError()}
-            </div>
-          </div>
-        )}
+        <Help
+          userCompletedTask={userCompletedTask}
+          generateState={generateState}
+          eventsLength={currentValue.events.length}
+        />
 
         <div className={styles.leftArea}>
           <div className={styles.topRow}>
