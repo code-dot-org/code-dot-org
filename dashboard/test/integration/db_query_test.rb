@@ -187,7 +187,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       assert_response :success
     end
 
-    assert_cached_queries(4) do
+    assert_cached_queries(2) do
       get "/levels/#{level.id}/get_rubric"
       assert_response :success
     end
