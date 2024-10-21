@@ -1,4 +1,5 @@
 require 'aws-sdk-autoscaling'
+require 'cdo/chat_client'
 
 module AWS
   class EC2Autoscaling
@@ -17,6 +18,8 @@ module AWS
       groups_matching_name = asg.describe_auto_scaling_groups(auto_scaling_group_names: [group_name]).auto_scaling_groups
       raise "No AutoScaling group found with name #{group_name}" if groups_matching_name.empty?
       raise "Multiple AutoScaling groups found with name \"#{group_name}\"" if groups_matching_name.length > 1
+
+      ChatClient.log "Refreshing instances in AutoScaling group #{group_name}"
 
       asg.start_instance_refresh(
         auto_scaling_group_name: group_name,
@@ -38,8 +41,6 @@ module AWS
     def self.get_autoscaling_group_for_current_environment
       stack_name = CDO.stack_name
       logical_id = 'Frontends'
-
-      puts "fetching autoscaling group for stack: #{stack_name} and logical id: #{logical_id}"
 
       asg_client = Aws::AutoScaling::Client.new
 
