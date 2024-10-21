@@ -16,7 +16,6 @@ export const useFileUploader: Exclude<
 
   const sendAnalyticsEvent = useCallback(
     (eventName: string, payload: Record<string, string>) => {
-      console.log('SAE : ', eventName, payload);
       switch (eventName) {
         case analyticsEvents.UPLOAD_FAILED: {
           sendCodebridgeAnalyticsEvent(
