@@ -10,11 +10,13 @@ import SummaryResponses from '@cdo/apps/templates/levelSummary/SummaryResponses'
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const JS_DATA = {
-  level: {
-    type: 'FreeResponse',
-    id: 0,
-  },
-  responses: [{user_id: 0, text: 'student answer'}],
+  levels: [
+    {
+      type: 'FreeResponse',
+      id: 0,
+    },
+  ],
+  responses: [[{user_id: 0, text: 'student answer'}]],
   reportingData: {
     curriculumUmbrella: 'curriculum',
     unitId: 0,
@@ -42,6 +44,8 @@ const INITIAL_STATE = {
   },
 };
 
+const LEVEL_NUMBER = 0;
+
 const renderDefault = (state = {}, jsData = {}) => {
   const store = createStore(
     combineReducers({
@@ -55,7 +59,10 @@ const renderDefault = (state = {}, jsData = {}) => {
 
   return render(
     <Provider store={store}>
-      <SummaryResponses scriptData={{...JS_DATA, ...jsData}} />
+      <SummaryResponses
+        scriptData={{...JS_DATA, ...jsData}}
+        levelNumber={LEVEL_NUMBER}
+      />
     </Provider>
   );
 };
@@ -89,13 +96,15 @@ describe('SummaryResponses', () => {
     renderDefault(
       {},
       {
-        level: {
-          type: 'Multi',
-          id: 0,
-          properties: {
-            answers: [],
+        levels: [
+          {
+            type: 'Multi',
+            id: 0,
+            properties: {
+              answers: [],
+            },
           },
-        },
+        ],
         answer_is_visible: true,
       }
     );
@@ -107,13 +116,15 @@ describe('SummaryResponses', () => {
     renderDefault(
       {},
       {
-        level: {
-          type: 'FreeResponse',
-          id: 0,
-          properties: {
-            answers: [],
+        levels: [
+          {
+            type: 'FreeResponse',
+            id: 0,
+            properties: {
+              answers: [],
+            },
           },
-        },
+        ],
         answer_is_visible: true,
       }
     );
@@ -125,13 +136,15 @@ describe('SummaryResponses', () => {
     renderDefault(
       {},
       {
-        level: {
-          type: 'Multi',
-          id: 0,
-          properties: {
-            answers: [],
+        levels: [
+          {
+            type: 'Multi',
+            id: 0,
+            properties: {
+              answers: [],
+            },
           },
-        },
+        ],
       }
     );
 

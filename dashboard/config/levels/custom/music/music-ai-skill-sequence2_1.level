@@ -223,7 +223,7 @@
     "name_suffix": "_1",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:47.060+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-sequence2_3\\\"\"],\"cloned_from\":\"music-ai-skill-sequence2_3\"},{\"changed_at\":\"2024-10-08 19:42:49 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 21:23:33 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:47.060+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-sequence2_3\\\"\"],\"cloned_from\":\"music-ai-skill-sequence2_3\"},{\"changed_at\":\"2024-10-08 19:42:49 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 21:23:33 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-18 23:43:46 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
