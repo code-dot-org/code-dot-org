@@ -84,13 +84,6 @@ def main
   puts "Environment: " + (options[:environment]).to_s.colorize(:light_cyan)
   puts "Dry-run mode: " + (options[:dry_run]).to_s.colorize(:light_cyan)
 
-  unless options[:dry_run]
-    puts "\nChecking autoscaling targets...\n"
-    Config::ENDPOINT_CONFIGS.each do |config|
-      deregister_auto_scaling(config[:model_id], options[:environment])
-    end
-  end
-
   puts "\nTransforming ERB to YAML..."
   ` erb -T - environment=#{options[:environment]} -r ./config.rb gen_ai_curriculum.yml.erb > gen_ai_curriculum.yml `
   return unless $?&.exitstatus == 0
@@ -115,6 +108,11 @@ def main
     puts "\nWould have run command: " + cmd.colorize(:light_cyan)
     puts "\nCreated Cloudformation template. Re-run this script with dry-run: false to deploy.".colorize(:light_green)
     return
+  end
+
+  puts "\nDeregistering autoscaling targets, if present...\n"
+  Config::ENDPOINT_CONFIGS.each do |config|
+    deregister_auto_scaling(config[:model_id], options[:environment])
   end
 
   puts "\nDeploying stack..."
