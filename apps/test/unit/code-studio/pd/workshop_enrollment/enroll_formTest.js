@@ -477,12 +477,15 @@ describe('Enroll Form', () => {
     });
 
     ['last_name', 'school_info'].forEach(param => {
-      it.skip(`do not submit when user does not input ${param}`, () => {
-        testValidateFields(
-          omit(requiredParams, param),
-          param === 'school_info' ? 'school_id' : param
-        );
-      });
+      // TODO: skipped school_info test due to upcoming refactor. add this test back in after
+      if (param === 'last_name') {
+        it(`do not submit when user does not input ${param}`, () => {
+          testValidateFields(
+            omit(requiredParams, param),
+            param === 'school_info' ? 'school_id' : param
+          );
+        });
+      }
     });
   });
 });
