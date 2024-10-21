@@ -67,16 +67,15 @@ def main
 
   # Fetch token from secrets manager if not specified
   unless options[:token]
-    # TODO: Upload token to secrets manager using secrets script, and update secret ID.
-    # print "\nFetching HuggingFace Access Token..."
-    # secrets_manager = Aws::SecretsManager::Client.new
-    # value = secrets_manager.get_secret_value(
-    #   {secret_id: "#{options[:environment]}/gen-ai-curriculum/huggingface_token"}
-    # )
-    # options[:token] = value.secret_string
-    # puts "done".colorize(:light_green)
-    print "HuggingFace Access Token: "
-    options[:token] = gets.chomp
+    print "\nFetching HuggingFace Access Token..."
+    secrets_manager = Aws::SecretsManager::Client.new
+    value = secrets_manager.get_secret_value(
+      # Use the development secret since this script is running locally
+      # and we don't have permissions to access production/test secrets.
+      {secret_id: "development/cdo/gen_ai_curriculum_huggingface_token"}
+    )
+    options[:token] = value.secret_string
+    puts "done".colorize(:light_green)
   end
 
   puts "\nHuggingFace Image URI: " + image_uri.to_s.colorize(:light_cyan)
