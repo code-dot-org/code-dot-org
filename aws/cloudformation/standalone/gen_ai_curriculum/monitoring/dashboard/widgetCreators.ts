@@ -5,8 +5,8 @@ import {
   WidgetProperties,
 } from 'cloudwatch-dashboard-types';
 
-import {AiRequestExecutionStatus} from '../../../generated-scripts/sharedConstants';
-import {getTypedKeys} from '../../../src/types/utils';
+import {AiRequestExecutionStatus} from '../../../../../../apps/generated-scripts/sharedConstants';
+import {getTypedKeys} from '../../../../../../apps/src/types/utils';
 import {
   BROWSER_COLORS,
   commonGraphProps,

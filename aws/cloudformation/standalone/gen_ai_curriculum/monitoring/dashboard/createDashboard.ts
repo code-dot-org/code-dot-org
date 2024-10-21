@@ -5,7 +5,7 @@ import {
 import {Dashboard} from 'cloudwatch-dashboard-types';
 import {exit} from 'process';
 
-import modelDescriptions from '../../../static/aichat/modelDescriptions.json';
+import modelDescriptions from '../../../../../../apps/static/aichat/modelDescriptions.json';
 import {DASHBOARD_NAME, REGION} from '../constants';
 
 import {

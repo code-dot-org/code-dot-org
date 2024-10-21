@@ -4,5 +4,5 @@ In order to create or overwrite the existing alarms:
 
 - Run from `monitoring` directory: `npm install`
 
-- Run from this directory: `npx ts-node createAlarms.ts`
+- Run from this (`alarms`) directory: `npx ts-node createAlarms.ts`
 

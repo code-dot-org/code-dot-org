@@ -6,7 +6,7 @@ In order to create or overwrite the existing dashboard:
 
 - Run from `monitoring` directory: `npm install`
 
-- Run from this directory: `npx ts-node createDashboard.ts`
+- Run from this (`dashboard`) directory: `npx ts-node createDashboard.ts <test|production>`
 
 Specifying `test` allows you to test out your changes by writing to a test dashboard (GenAICurriculum-TEST). Run the command with `production` to write to the production dashboard.
 
