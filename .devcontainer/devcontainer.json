@@ -1,20 +1,18 @@
 // For format details, see https://aka.ms/devcontainer.json.
 {
-  "name": "Rails project development",
+  "name": "Code.org external contributors edition",
   "dockerComposeFile": "compose.yml",
   "service": "dashboard",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
   // Features to add to the dev container. More info: https://containers.dev/features.
   "features": {
-//    "ghcr.io/devcontainers/features/github-cli:1": {
-//      "version": "latest"
-//    },
     "ghcr.io/devcontainers/features/node:1": {
       "version": "18"
     }
   },
 
+  // Increase watcher size limit
   "runArgs": [
     "--ulimit", "nofile=65536:65536"
   ],
@@ -32,13 +30,6 @@
     "MEMCACHE_SERVERS": "memcached:11211"
   },
 
-  // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  // This can be used to network with other containers or the host.
-  // "forwardPorts": [3000, 5432],
-
-  // Use 'postCreateCommand' to run commands after the container is created.
-  // "postCreateCommand": ".devcontainer/boot.sh",
-
   // Configure tool-specific properties.
   "customizations": {
     "vscode": {
@@ -48,7 +39,4 @@
       ]
     }
   },
-
-  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-  // "remoteUser": "root"
 }
