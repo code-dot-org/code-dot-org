@@ -21,3 +21,14 @@
     border-radius: 5px;
     padding: 10px;
   }
+
+  .successMessage {
+    background-color: #dff0d8; // Light green background
+    color: #3c763d; // Dark green text
+    border: 1px solid #d6e9c6; // Light green border
+    padding: 10px; // Padding around the message
+    margin: 10px 0; // Margin to separate from other elements
+    border-radius: 4px; // Rounded corners
+    font-size: 16px; // Font size
+    text-align: center; // Centered text
+  }

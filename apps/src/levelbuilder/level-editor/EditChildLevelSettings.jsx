@@ -3,7 +3,7 @@
 //The component will take in the following props:
 //Child levels: an array of objects representing the child levels
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useState, useCallback} from 'react';
 
 import ImageInput from '@cdo/apps/levelbuilder/ImageInput';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
@@ -15,9 +15,10 @@ import styles from './edit-child-level-settings.module.scss';
 
 //Create a boilerplate for the EditChildLevelSettings React component
 const EditChildLevelSettings = ({initialChildLevelSettings}) => {
-  const [childLevelSettings, setChildLevelSettings] = React.useState(
+  const [childLevelSettings, setChildLevelSettings] = useState(
     initialChildLevelSettings
   );
+  const [saveSuccess, setSaveSuccess] = useState(false);
 
   const handleDisplayNameChange = (index, newDisplayName) => {
     const updatedSettings = childLevelSettings.map((childLevel, i) => {
@@ -35,21 +36,24 @@ const EditChildLevelSettings = ({initialChildLevelSettings}) => {
     setChildLevelSettings(updatedSettings);
   };
 
-  const handleDescriptionChange = (index, newDescription) => {
-    const updatedSettings = childLevelSettings.map((childLevel, i) => {
-      if (i === index) {
-        return {
-          ...childLevel,
-          properties: {
-            ...childLevel.properties,
-            bubble_choice_description: newDescription,
-          },
-        };
-      }
-      return childLevel;
-    });
-    setChildLevelSettings(updatedSettings);
-  };
+  const handleDescriptionChange = useCallback(
+    (index, newDescription) => {
+      const updatedSettings = childLevelSettings.map((childLevel, i) => {
+        if (i === index) {
+          return {
+            ...childLevel,
+            properties: {
+              ...childLevel.properties,
+              bubble_choice_description: newDescription,
+            },
+          };
+        }
+        return childLevel;
+      });
+      setChildLevelSettings(updatedSettings);
+    },
+    [childLevelSettings]
+  );
 
   const handleThumbnailUrlChange = (index, newThumbnailUrl) => {
     const updatedSettings = childLevelSettings.map((childLevel, i) => {
@@ -85,6 +89,8 @@ const EditChildLevelSettings = ({initialChildLevelSettings}) => {
       .then(response => response.json())
       .then(data => {
         console.log('Success:', data);
+        setSaveSuccess(true);
+        setTimeout(() => setSaveSuccess(false), 3000);
       })
       .catch(error => {
         console.error('Error:', error);
@@ -95,6 +101,9 @@ const EditChildLevelSettings = ({initialChildLevelSettings}) => {
     <>
       <div>
         <h3>This level has {childLevelSettings.length} sublevels.</h3>
+        {saveSuccess && (
+          <div className={styles.successMessage}>Save successful!</div>
+        )}
         <div>
           {childLevelSettings.map((childLevel, index) => (
             <div className={styles.collapsibleFieldSection} key={index}>
