@@ -52,6 +52,10 @@ cron-pii:
 - dashboard.learning_goal_teacher_evaluations
 - dashboard.learning_goal_ai_evaluation_feedbacks
 cron:
+- dashboard.ai_tutor_interactions:
+    remove_column:
+      - prompt
+      - ai_response
 - dashboard.experiments
 - dashboard.authored_hint_view_requests
 - dashboard.hint_view_requests
@@ -59,6 +63,14 @@ cron:
 - dashboard.metrics
 - dashboard.contained_level_answers
 - dashboard.contained_levels
+- dashboard.learning_goal_ai_evaluations:
+    remove_column:
+      - observations
+      - evidence
+- dashboard.learning_goal_teacher_evaluations:
+    remove_column: [feedback]
+- dashboard.learning_goal_ai_evaluation_feedbacks:
+    remove_column: [other_content]
 - dashboard.level_sources_multi_types
 - dashboard.paired_user_levels
 - dashboard.parental_permission_requests:
