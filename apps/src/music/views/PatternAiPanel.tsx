@@ -357,14 +357,17 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
       console.error(e);
       setGenerateState('error');
     };
+    const startTime = Date.now();
     generatePattern(
       seedEvents,
       numSeedEvents,
       numEvents - numSeedEvents,
       aiTemperature / 10,
       newEvents => {
-        const delayDuration = Number(appConfig.getValue('ai-delay')) || 0;
-        delay(delayDuration).then(() => {
+        const elapsedTime = Date.now() - startTime;
+        const delayDuration = Number(appConfig.getValue('ai-delay')) || 2500;
+        const remainingDelayDuration = Math.max(delayDuration - elapsedTime, 0);
+        delay(remainingDelayDuration).then(() => {
           currentValue.events = newEvents;
           onChange(currentValue);
           setGenerateState('none');
