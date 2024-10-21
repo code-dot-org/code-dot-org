@@ -72,14 +72,13 @@ export default class WorkshopEnroll extends React.Component {
   };
 
   onSubmissionComplete = result => {
-    if (result.responseJSON) {
+    if (result) {
       this.setState({
-        workshopEnrollmentStatus:
-          result.responseJSON.workshop_enrollment_status,
-        cancelUrl: result.responseJSON.cancel_url,
-        accountExists: result.responseJSON.account_exists,
-        signUpUrl: result.responseJSON.sign_up_url,
-        workshopUrl: result.responseJSON.workshop_url,
+        workshopEnrollmentStatus: result.workshop_enrollment_status,
+        cancelUrl: result.cancel_url,
+        accountExists: result.account_exists,
+        signUpUrl: result.sign_up_url,
+        workshopUrl: result.workshop_url,
       });
     } else {
       this.setState({
