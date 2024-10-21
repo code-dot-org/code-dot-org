@@ -2871,6 +2871,7 @@
   "progressV2_feedback_thumbsDown": "I don't like it",
   "submitProjectGallery_alreadySubmitted": "Submitted to Featured Projects gallery",
   "submitProjectGallery_details": "*Submitting a project does not guarantee that it will be featured. Once submitted, this project cannot be submitted again.",
+  "submitProjectGallery_exampleText": "Example text",
   "submitProjectGallery_goBack": "Go back",
   "submitProjectGallery_header": "Want to show the world what you made?",
   "submitProjectGallery_submit": "Submit to be featured",
