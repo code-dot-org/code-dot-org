@@ -10727,7 +10727,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-k5-getting-started
-          title: 'Getting Started with Code.org (K-5) '
+          title: Getting Started with Code.org
           description_audience: ''
           description_short: ''
           description: "**You will:**\n\n-   Get an introduction to Code.org’s mission. \n-   Learn how to navigate the Code.org website and teacher tools.\n-   Set up a classroom section.\n-   Locate and use course lesson plans and teacher resources.\n-   Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes"
@@ -17860,11 +17860,11 @@ en:
               name: Teaching Resources
           lesson_groups: {}
           name: self-paced-gen-ai-2024
-          title: Generative AI Self-Paced Professional Learning
+          title: Exploring Generative AI Self-Paced Professional Learning
           description_audience: ''
           description_short: ''
-          description: "## Welcome!\n\n##### This professional learning module is designed to help you prepare to teach Code.org’s Generative AI unit.\n\n##### The Generative AI unit is designed as standalone coursework for 6-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Computer Vision Unit. "
-          student_description: ''
+          description: "## Welcome!\n\n##### This professional learning module is designed to help you prepare to teach Code.org’s Exploring Generative AI course.\n\n##### Exploring Generative AI is designed as standalone coursework for 8-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to the Foundations of Generative AI Unit. "
+          student_description: "## Welcome!\n\n##### This professional learning module is designed to help you prepare to teach Code.org’s Exploring Generative AI course.\n\n##### Exploring Generative AI is designed as standalone coursework for 8-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to the Foundations of Generative AI Unit. "
         music-ai-2024:
           lessons:
             lesson-1:
@@ -18330,6 +18330,27 @@ en:
           lesson_groups: {}
           name: hoc-music-ai-pilot-4
           title: 'Playtest 4 (PDX) - Music Lab: A.I. Edition for Hour of Code'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-exploring-gen-ai:
+          lessons:
+            lesson-1:
+              name: Introduction to Generative AI
+            lesson-2:
+              name: Foundations of Generative AI
+            lesson-3:
+              name: Customizing Large Language Models
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Introduction to Generative AI
+            lessonGroup-2:
+              display_name: Foundations of Generative AI
+            lessonGroup-4:
+              display_name: Customizing Large Language Models
+          name: self-paced-pl-exploring-gen-ai
+          title: Exploring Generative AI
           description_audience: ''
           description_short: ''
           description: ''
