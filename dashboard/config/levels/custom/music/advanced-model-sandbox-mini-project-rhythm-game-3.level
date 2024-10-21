@@ -1,7 +1,8 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
-  "created_at": "2024-10-17T22:04:00.000Z",
+  "created_at": "2024-10-18T15:55:49.000Z",
   "level_num": "custom",
   "user_id": 16899,
   "properties": {
@@ -593,8 +594,7 @@
     },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-10-17T22:04:00.204+00:00\",\"changed\":[\"cloned from \\\"advanced-model-sandbox-mini-project-rhythm-game-1\\\"\"],\"cloned_from\":\"advanced-model-sandbox-mini-project-rhythm-game-1\"},{\"changed_at\":\"2024-10-17 22:04:02 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-17 22:04:20 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-18 14:42:46 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-18 15:13:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-18T15:55:49.695+00:00\",\"changed\":[\"cloned from \\\"advanced-model-sandbox-mini-project-rhythm-game-2\\\"\"],\"cloned_from\":\"advanced-model-sandbox-mini-project-rhythm-game-2\"},{\"changed_at\":\"2024-10-18 15:55:53 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
