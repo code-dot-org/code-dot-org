@@ -3841,7 +3841,7 @@ class UserTest < ActiveSupport::TestCase
     params = {}
 
     assert_creates(User) do
-      user = User.from_omniauth(auth, params, nil, true)
+      user = User.from_omniauth(auth, params, roster_sync: true)
       assert_equal 'migrated', user.provider
       assert_equal 'Some User', user.name
       assert_equal 'google_oauth2', user.primary_contact_info.credential_type
