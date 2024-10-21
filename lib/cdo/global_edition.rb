@@ -1,3 +1,5 @@
+require 'cdo'
+
 module Cdo
   # Lazily loads global configurations for regional pages
   module GlobalEdition
