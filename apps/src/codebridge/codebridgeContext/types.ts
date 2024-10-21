@@ -17,7 +17,6 @@ export type DeleteFolderFunction = (folderId: FolderId) => void;
 export type OpenFileFunction = (fileId: FileId) => void;
 export type DeleteFileFunction = (fileId: FileId) => void;
 export type NewFileFunction = (arg: {
-  fileId: FileId;
   fileName: string;
   folderId?: FolderId;
   contents?: string;

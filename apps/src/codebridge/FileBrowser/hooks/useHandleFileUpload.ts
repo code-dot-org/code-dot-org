@@ -1,7 +1,4 @@
-import {
-  getNextFileId,
-  useCodebridgeContext,
-} from '@codebridge/codebridgeContext';
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {FolderId, ProjectFile} from '@codebridge/types';
 import {validateFileName} from '@codebridge/utils';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
@@ -58,10 +55,7 @@ export const useHandleFileUpload = (
         return;
       }
 
-      const fileId = getNextFileId(Object.values(projectFiles));
-
       newFile({
-        fileId,
         fileName,
         folderId,
         contents,

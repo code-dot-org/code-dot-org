@@ -5,7 +5,7 @@ import {getActiveFileForProject} from '@cdo/apps/lab2/projects/utils';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 
 import {PROJECT_REDUCER_ACTIONS} from './constants';
-import {findFiles, findSubFolders} from './utils';
+import {findFiles, findSubFolders, getNextFileId} from './utils';
 type DefaultFilePayload = {
   fileId: FileId;
 };
@@ -26,13 +26,15 @@ export const projectReducer = (
       return newProject;
     }
     case PROJECT_REDUCER_ACTIONS.NEW_FILE: {
-      const {fileId, fileName, folderId, contents = ''} = <
+      const {fileName, folderId, contents = ''} = <
         DefaultFilePayload & {
           fileName: string;
           contents?: string;
           folderId: FolderId;
         }
       >action.payload;
+
+      const fileId = getNextFileId(Object.values(project.files));
 
       const newProject = {...project, files: {...project.files}};
 

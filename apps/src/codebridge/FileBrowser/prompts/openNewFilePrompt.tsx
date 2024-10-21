@@ -1,4 +1,3 @@
-import {getNextFileId} from '@codebridge/codebridgeContext';
 import {NewFileFunction} from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {ProjectType, FolderId, ProjectFile} from '@codebridge/types';
@@ -53,10 +52,8 @@ export const openNewFilePrompt = async ({
   if (validationFile && !isStartMode) {
     files.push(validationFile);
   }
-  const fileId = getNextFileId(files);
 
   newFile({
-    fileId,
     fileName,
     folderId,
   });

@@ -76,7 +76,6 @@ export const useProjectUtilities = (
         });
       }),
       newFile: <NewFileFunction>(({
-        fileId,
         fileName,
         folderId = DEFAULT_FOLDER_ID,
         // this line causes the apparent circular dependency issue
@@ -86,7 +85,6 @@ export const useProjectUtilities = (
         dispatch({
           type: PROJECT_REDUCER_ACTIONS.NEW_FILE,
           payload: {
-            fileId,
             fileName,
             folderId,
             contents: contents.replace(/\${fileName}/g, fileName),
