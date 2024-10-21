@@ -113,7 +113,6 @@ export default function RubricContainer({
   };
 
   useEffect(() => {
-    const abort = new AbortController();
     if (!!rubricId && !!sectionId) {
       fetchTeacherEvaluationAll(rubricId, sectionId).then(response => {
         if (response.ok) {
@@ -124,7 +123,6 @@ export default function RubricContainer({
         }
       });
     }
-    return () => abort.abort();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [rubricId, sectionId]);
 
@@ -138,7 +136,6 @@ export default function RubricContainer({
   };
 
   useEffect(() => {
-    const abort = new AbortController();
     if (!!rubricId && !!sectionId) {
       fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
         if (response.ok) {
@@ -150,7 +147,6 @@ export default function RubricContainer({
         }
       });
     }
-    return () => abort.abort();
   }, [rubricId, sectionId]);
 
   const updateAiEvalStatusForUser = (userId, status) => {
