@@ -11,6 +11,7 @@ import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {setShowProgressTableV2} from '@cdo/apps/templates/currentUserRedux';
+import GlobalRegionWrapper from '@cdo/apps/templates/GlobalRegionWrapper';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
@@ -153,8 +154,10 @@ function SectionProgressSelector({
       {displayV2 && (
         <ProgressBanners hasJustSwitchedToV2={hasJustToggledViews} />
       )}
-      {toggleV1OrV2Link()}
-
+      <GlobalRegionWrapper
+        component={toggleV1OrV2Link}
+        componentId="ProgressV1OrV2ToggleLink"
+      />
       {displayV2 ? (
         <SectionProgressV2 hideTopHeading={!isInV1Navigaton} />
       ) : (
