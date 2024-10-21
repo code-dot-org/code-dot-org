@@ -3,6 +3,7 @@
 require 'request_store'
 require 'uri'
 require 'yaml'
+require 'cdo'
 
 module Cdo
   # Lazily loads global configurations for regional pages
