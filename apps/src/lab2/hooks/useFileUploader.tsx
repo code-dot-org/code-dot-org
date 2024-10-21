@@ -15,6 +15,7 @@ type FileUploaderProps = {
     callbackArgs?: unknown
   ) => void;
   errorCallback: (error: string, callbackArgs?: unknown) => void;
+  multiple?: boolean;
   validMimeTypes?: string[];
   sendAnalyticsEvent?: (
     eventName: analyticsEvents,
@@ -84,13 +85,13 @@ export const useFileUploader = ({
   errorCallback,
   validMimeTypes,
   sendAnalyticsEvent = () => {},
+  multiple = true,
 }: FileUploaderProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const callbackArgs = useRef<unknown>();
 
   const changeHandler = useCallback(() => {
-    const file = inputRef.current?.files?.[0];
-    if (file) {
+    Array.from(inputRef.current?.files || []).forEach(file => {
       if (!isValidMimeType(file.type, validMimeTypes)) {
         sendAnalyticsEvent(analyticsEvents.UPLOAD_UNACCEPTED_FILE, {
           name: file.name,
@@ -117,6 +118,7 @@ export const useFileUploader = ({
             typeof reader.result === 'string'
               ? reader.result
               : bufferToString(reader.result);
+
           callback(file.name, result as string, callbackArgs.current);
         }
       };
@@ -128,7 +130,7 @@ export const useFileUploader = ({
           errorCallback(reader.error.message, callbackArgs.current);
         }
       };
-    }
+    });
   }, [callback, errorCallback, validMimeTypes, sendAnalyticsEvent]);
 
   return useMemo(
@@ -143,9 +145,10 @@ export const useFileUploader = ({
           style={{display: 'none'}}
           onChange={changeHandler}
           ref={inputRef}
+          multiple={multiple}
         />
       ),
     }),
-    [changeHandler, inputRef]
+    [changeHandler, inputRef, multiple]
   );
 };
