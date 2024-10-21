@@ -31,9 +31,10 @@ module OmniauthCallbacksControllerTests
       assert_credentials auth_hash, created_user
 
       assert_sign_up_tracking(
-        SignUpTracking::CONTROL_GROUP,
+        SignUpTracking::NOT_IN_STUDY_GROUP,
         %w(
           facebook-callback
+          facebook-sign-up-error
           facebook-sign-up-success
         )
       )
@@ -90,9 +91,10 @@ module OmniauthCallbacksControllerTests
       assert_credentials auth_hash, created_user
 
       assert_sign_up_tracking(
-        SignUpTracking::CONTROL_GROUP,
+        SignUpTracking::NOT_IN_STUDY_GROUP,
         %w(
           facebook-callback
+          facebook-sign-up-error
           facebook-sign-up-success
         )
       )
