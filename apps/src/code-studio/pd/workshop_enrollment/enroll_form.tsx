@@ -80,7 +80,7 @@ const CSF_COURSES = {
   express: 'Express',
 };
 
-const ATTENDED_CSF_COURSES_OPTIONS: Record<string, string> = {
+const ATTENDED_CSF_COURSES_OPTIONS = {
   'Yes, I attended a CS Fundamentals Intro workshop this academic year.':
     'Yes, this year',
   'Yes, I attended a CS Fundamentals Intro workshop in a previous academic year.':
@@ -99,7 +99,7 @@ interface SchoolInfoProps {
 }
 
 interface EnrollFormState {
-  attended_csf_intro_workshop?: string;
+  attended_csf_intro_workshop?: keyof typeof ATTENDED_CSF_COURSES_OPTIONS;
   csf_course_experience?: Partial<typeof CSF_COURSES>;
   csf_courses_planned?: string[];
   csf_intro_intent?: string;
@@ -120,6 +120,10 @@ interface EnrollFormState {
   years_teaching?: string;
   years_teaching_cs?: string;
 }
+
+type CombinedFormState = keyof EnrollFormState | keyof SchoolInfoProps;
+
+type FormErrors = Partial<Record<CombinedFormState, string>>;
 
 type EnrollmentResponse = {
   workshop_enrollment_status: string;
@@ -170,7 +174,7 @@ export default function EnrollForm(props: EnrollFormProps) {
     school_type: props.school_info?.school_type,
   });
 
-  const [formErrors, setFormErrors] = useState<Record<string, string>>({});
+  const [formErrors, setFormErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionErrorMessage, setSubmissionErrorMessage] = useState('');
 
@@ -288,8 +292,6 @@ export default function EnrollForm(props: EnrollFormProps) {
   const getSchoolType = () => {
     if (!schoolInfoState.school_id && schoolInfoState.school_type) {
       return SCHOOL_TYPES_MAPPING[schoolInfoState.school_type];
-    } else {
-      return schoolInfoState.school_type;
     }
   };
 
@@ -363,7 +365,7 @@ export default function EnrollForm(props: EnrollFormProps) {
       Object.keys(errors).length ||
       Object.keys(schoolInfoErrors).length
     ) {
-      const requiredFieldsErrors: Record<string, string> = {};
+      const requiredFieldsErrors: FormErrors = {};
       missingRequiredFields.forEach(f => {
         requiredFieldsErrors[f] = '';
       });
@@ -415,7 +417,7 @@ export default function EnrollForm(props: EnrollFormProps) {
   };
 
   const getErrors = () => {
-    const errors: Partial<Record<keyof EnrollFormState, string>> = {};
+    const errors: FormErrors = {};
 
     if (formState.email) {
       if (!isEmail(formState.email)) {
