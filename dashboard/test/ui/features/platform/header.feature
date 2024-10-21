@@ -35,7 +35,6 @@ Feature: Header navigation bar
     And element "#header-help" is not visible
     And element "#header-about" is not visible
     And element "#header-incubator" is not visible
-    Then I change the browser window size to 1280 by 1024
 
   Scenario: Student in English should see 4 header links
     Given I create a student named "Sally Student" and go home
@@ -113,7 +112,6 @@ Feature: Header navigation bar
     And element "#header-teacher-professional-learning" has "es" text from key "nav.header.professional_learning"
     And I see "#header-teacher-incubator"
     And element "#header-teacher-incubator" has "es" text from key "nav.header.incubator"
-
   @chrome
   Scenario: Teacher can click on the header links
     Given I create a teacher named "Sir Clicks-A-Lot Teacher" and go home

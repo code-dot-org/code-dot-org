@@ -1,0 +1,7 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#browser_tts_area"}}
+  Browser Text-to-Speech
+
+#browser_tts_area.in.collapse
+  // Only available on lab2 labs currently.
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :offer_browser_tts, description: "Enable Browser Text-to-Speech"} if @level.uses_lab2?
+

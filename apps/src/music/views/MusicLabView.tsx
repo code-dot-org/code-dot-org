@@ -93,9 +93,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const levelData = useAppSelector(
     state => state.lab.levelProperties?.levelData
   );
-  const offerTts =
-    useAppSelector(state => state.lab.levelProperties?.offerTts) ||
-    AppConfig.getValue('show-tts') === 'true';
   const isPlayView = useAppSelector(state => state.lab.isShareView);
   const validationStateCallout = useAppSelector(
     state => state.lab.validationState.callout
@@ -210,13 +207,12 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                   : 'horizontal'
               }
               handleInstructionsTextClick={onInstructionsTextClick}
-              offerTts={offerTts}
             />
           </PanelContainer>
         </div>
       );
     },
-    [hideHeaders, onInstructionsTextClick, offerTts]
+    [hideHeaders, onInstructionsTextClick]
   );
 
   const renderPlayArea = useCallback(

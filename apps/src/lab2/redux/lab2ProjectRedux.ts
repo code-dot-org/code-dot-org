@@ -15,12 +15,14 @@ export interface Lab2ProjectState {
   projectSource: ProjectSources | undefined;
   viewingOldVersion: boolean;
   restoredOldVersion: boolean;
+  hasEdited: boolean;
 }
 
 const initialState: Lab2ProjectState = {
   projectSource: undefined,
   viewingOldVersion: false,
   restoredOldVersion: false,
+  hasEdited: false,
 };
 
 // THUNKS
@@ -101,6 +103,16 @@ const projectSlice = createSlice({
     setRestoredOldVersion(state, action: PayloadAction<boolean>) {
       state.restoredOldVersion = action.payload;
     },
+    setHasEdited(state, action: PayloadAction<boolean>) {
+      state.hasEdited = action.payload;
+    },
+    resetProjectMetadata(state) {
+      // Reset the state that needs to be reset manually on level change.
+      // Project source is handled elsewhere.
+      state.hasEdited = false;
+      state.viewingOldVersion = false;
+      state.restoredOldVersion = false;
+    },
   },
 });
 
@@ -109,6 +121,8 @@ export const {
   setPreviousVersionSource,
   setViewingOldVersion,
   setRestoredOldVersion,
+  resetProjectMetadata,
+  setHasEdited,
 } = projectSlice.actions;
 
 export default projectSlice.reducer;
