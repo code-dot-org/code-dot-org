@@ -58,4 +58,4 @@ You can now run the Code.org website! To start the ruby on rails application, op
 bin/dashboard-server
 ```
 
-You will be able to access your instance at http://localhost-studio.code.org:3000
+You will be able to access your instance at [http://localhost-studio.code.org:3000](http://localhost-studio.code.org:3000)
