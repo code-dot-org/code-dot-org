@@ -8752,8 +8752,8 @@ __metadata:
     "@types/react-bootstrap": ^0.32.36
     "@types/react-dom": ^18.0.11
     "@types/react-router-dom": ^5.3.3
-    "@types/react-typist": ^2.0.6
     "@types/react-select": ^1.2.1
+    "@types/react-typist": ^2.0.6
     "@types/reactabular-table": ^8.14.6
     "@types/sinon": ^10.0.14
     "@types/video.js": ^7.3.58
