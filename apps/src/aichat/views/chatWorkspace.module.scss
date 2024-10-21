@@ -29,7 +29,7 @@ $tabs-default-spacing: 4px;
   padding: $tabs-default-spacing $tabs-default-spacing 0 $tabs-default-spacing;
   ul {
     li > button[role="tab"] {
-      max-width: 300px;  
+      max-width: 300px;
     }
   }
 }
@@ -61,4 +61,8 @@ $tabs-default-spacing: 4px;
   gap: 2px;
   padding: 16px 6px;
   border-top: 1px solid $light_gray_200;
+}
+
+.alertLink {
+  white-space: nowrap;
 }

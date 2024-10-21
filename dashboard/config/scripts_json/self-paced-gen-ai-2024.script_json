@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "self-paced-gen-ai",
-    "serialized_at": "2024-10-10 15:04:04 UTC",
+    "serialized_at": "2024-10-18 15:57:06 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -41,8 +41,8 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "##### In this lesson, you will: \n- #####Get an introduction to teaching Generative AI\n- #####Define and identify different uses of Generative AI\n- #####Explore Generative AI lessons\n\n#####**Suggested Time:** 15 minutes",
-        "student_overview": "##### In this lesson, you will: \n- #####Get an introduction to teaching Generative AI\n- #####Define and identify different uses of Generative AI\n- #####Explore Generative AI lessons\n\n#####**Suggested Time:** 15 minutes"
+        "overview": "##### In this lesson, you will: \n- #####Get an introduction to teaching Generative AI\n- #####Define and identify different uses of Generative AI\n- #####Explore Generative AI lessons\n\n#####**Suggested Time:** 20 minutes",
+        "student_overview": "##### In this lesson, you will: \n- #####Get an introduction to teaching Generative AI\n- #####Define and identify different uses of Generative AI\n- #####Explore Generative AI lessons\n\n#####**Suggested Time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -58,8 +58,8 @@
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
-        "overview": "##### In this lesson, you will: \n- #####Review the content of each lesson\n- #####Preview activities in the lessons\n\n#####**Suggested Time:** 30 minutes",
-        "student_overview": "##### In this lesson, you will: \n- #####Review the content of each lesson\n- #####Preview activities in the lessons\n\n#####**Suggested Time:** 30 minutes"
+        "overview": "##### In this lesson, you will: \n- #####Review the content of each lesson\n- #####Preview activities in the lessons\n\n#####**Suggested Time:** 40 minutes",
+        "student_overview": "##### In this lesson, you will: \n- #####Review the content of each lesson\n- #####Preview activities in the lessons\n\n#####**Suggested Time:** 40 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -83,23 +83,6 @@
         "lesson_group.key": "",
         "script.name": "self-paced-gen-ai-2024"
       }
-    },
-    {
-      "key": "lesson-5",
-      "name": "Teaching Resources",
-      "absolute_position": 4,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 4,
-      "properties": {
-        "overview": "##### In this lesson, you will: \n- #####Explore best practices for teaching Generative AI\n- #####Identify next steps to learn more about AI in the classroom\n\n#####**Suggested Time:** 15 minutes",
-        "student_overview": "##### In this lesson, you will: \n- #####Explore best practices for teaching Generative AI\n- #####Identify next steps to learn more about AI in the classroom\n\n#####**Suggested Time:** 15 minutes"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-gen-ai-2024"
-      }
     }
   ],
   "lesson_activities": [
@@ -107,7 +90,7 @@
       "key": "37f9062e-ee5a-4c8b-9b1f-34054d95e6c9",
       "position": 1,
       "properties": {
-        "duration": 15
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "37f9062e-ee5a-4c8b-9b1f-34054d95e6c9",
@@ -120,7 +103,7 @@
       "key": "bae8fb47-c9cd-4fbc-aa6e-0e5d6c3449c9",
       "position": 1,
       "properties": {
-        "duration": 30
+        "duration": 40
       },
       "seeding_key": {
         "lesson_activity.key": "bae8fb47-c9cd-4fbc-aa6e-0e5d6c3449c9",
@@ -141,19 +124,6 @@
         "lesson_group.key": "",
         "script.name": "self-paced-gen-ai-2024"
       }
-    },
-    {
-      "key": "212500c6-ddd9-42a8-8157-da86be3146ad",
-      "position": 1,
-      "properties": {
-        "duration": 15
-      },
-      "seeding_key": {
-        "lesson_activity.key": "212500c6-ddd9-42a8-8157-da86be3146ad",
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-gen-ai-2024"
-      }
     }
   ],
   "activity_sections": [
@@ -161,7 +131,7 @@
       "key": "502ba333-7f02-486a-b4b3-c1daa0c0c50e",
       "position": 1,
       "properties": {
-        "progression_name": "Overview of Teaching Gen AI (10 min)"
+        "progression_name": "Overview of Teaching Gen AI (15 min)"
       },
       "seeding_key": {
         "activity_section.key": "502ba333-7f02-486a-b4b3-c1daa0c0c50e",
@@ -216,7 +186,7 @@
       "key": "fba06010-99e8-48e6-9979-44e7c1ea463e",
       "position": 3,
       "properties": {
-        "progression_name": "Lesson Previews (15 min)"
+        "progression_name": "Lesson Previews (20 min)"
       },
       "seeding_key": {
         "activity_section.key": "fba06010-99e8-48e6-9979-44e7c1ea463e",
@@ -227,7 +197,7 @@
       "key": "7356e6e5-9edc-4582-8070-d3c9d2976f42",
       "position": 4,
       "properties": {
-        "progression_name": "Final Project (3 min)"
+        "progression_name": "Final Project (8 min)"
       },
       "seeding_key": {
         "activity_section.key": "7356e6e5-9edc-4582-8070-d3c9d2976f42",
@@ -299,50 +269,6 @@
         "activity_section.key": "d240839b-1379-44a8-ae38-327c04779974",
         "lesson_activity.key": "13bba4c1-230a-46d6-8fb8-4de4c93ca34b"
       }
-    },
-    {
-      "key": "a0ae3a79-891c-47bd-b921-40f6ca35a270",
-      "position": 1,
-      "properties": {
-        "progression_name": "Teaching Resources (3 min)"
-      },
-      "seeding_key": {
-        "activity_section.key": "a0ae3a79-891c-47bd-b921-40f6ca35a270",
-        "lesson_activity.key": "212500c6-ddd9-42a8-8157-da86be3146ad"
-      }
-    },
-    {
-      "key": "4ff111e4-a47b-4b84-a1f7-9ff1ac46a9ec",
-      "position": 2,
-      "properties": {
-        "progression_name": "Ethics (5 min)"
-      },
-      "seeding_key": {
-        "activity_section.key": "4ff111e4-a47b-4b84-a1f7-9ff1ac46a9ec",
-        "lesson_activity.key": "212500c6-ddd9-42a8-8157-da86be3146ad"
-      }
-    },
-    {
-      "key": "5708cc9d-8d9f-4315-9f60-9ab86dfaf60f",
-      "position": 3,
-      "properties": {
-        "progression_name": "Assessments (5 min)"
-      },
-      "seeding_key": {
-        "activity_section.key": "5708cc9d-8d9f-4315-9f60-9ab86dfaf60f",
-        "lesson_activity.key": "212500c6-ddd9-42a8-8157-da86be3146ad"
-      }
-    },
-    {
-      "key": "0489e5b7-4204-46c7-aa2c-387412df11a8",
-      "position": 4,
-      "properties": {
-        "progression_name": "Next Steps (2 min)"
-      },
-      "seeding_key": {
-        "activity_section.key": "0489e5b7-4204-46c7-aa2c-387412df11a8",
-        "lesson_activity.key": "212500c6-ddd9-42a8-8157-da86be3146ad"
-      }
     }
   ],
   "script_levels": [
@@ -355,7 +281,7 @@
         "level_keys": [
           "sp-pl-GenAI_overview_objectives"
         ],
-        "progression": "Overview of Teaching Gen AI (10 min)"
+        "progression": "Overview of Teaching Gen AI (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -380,7 +306,7 @@
         "level_keys": [
           "sp-pl-GenAI_ cert"
         ],
-        "progression": "Overview of Teaching Gen AI (10 min)"
+        "progression": "Overview of Teaching Gen AI (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -405,7 +331,7 @@
         "level_keys": [
           "sp-pl-GenAI course_overview2"
         ],
-        "progression": "Overview of Teaching Gen AI (10 min)"
+        "progression": "Overview of Teaching Gen AI (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -430,7 +356,7 @@
         "level_keys": [
           "self-paced-pl-GenAI_AI_Literacy"
         ],
-        "progression": "Overview of Teaching Gen AI (10 min)"
+        "progression": "Overview of Teaching Gen AI (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -455,7 +381,7 @@
         "level_keys": [
           "self-paced-pl-GenAI_Ethical_Approach"
         ],
-        "progression": "Overview of Teaching Gen AI (10 min)"
+        "progression": "Overview of Teaching Gen AI (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -655,7 +581,7 @@
         "level_keys": [
           "self-paced-pl-gen-ai-foundations-preview-01_2024"
         ],
-        "progression": "Lesson Previews (15 min)"
+        "progression": "Lesson Previews (20 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -680,7 +606,7 @@
         "level_keys": [
           "self-paced-pl-gen-ai-foundations-preview-02_2024"
         ],
-        "progression": "Lesson Previews (15 min)"
+        "progression": "Lesson Previews (20 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -703,9 +629,34 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "self-paced-pl-gen-ai-foundations-preview-02b_2024"
+        ],
+        "progression": "Lesson Previews (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-gen-ai-foundations-preview-02b_2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "fba06010-99e8-48e6-9979-44e7c1ea463e"
+      },
+      "level_keys": [
+        "self-paced-pl-gen-ai-foundations-preview-02b_2024"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "self-paced-pl-gen-ai-foundations-preview-03_2024"
         ],
-        "progression": "Lesson Previews (15 min)"
+        "progression": "Lesson Previews (20 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -722,20 +673,20 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 8,
-      "activity_section_position": 4,
+      "chapter": 17,
+      "position": 9,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "self-paced-pl-gen-ai-foundations-preview-04_2024"
+          "self-paced-pl-gen-ai-foundations-preview-04b2024"
         ],
-        "progression": "Lesson Previews (15 min)"
+        "progression": "Lesson Previews (20 min)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-pl-gen-ai-foundations-preview-04_2024"
+          "self-paced-pl-gen-ai-foundations-preview-04b2024"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -743,19 +694,19 @@
         "activity_section.key": "fba06010-99e8-48e6-9979-44e7c1ea463e"
       },
       "level_keys": [
-        "self-paced-pl-gen-ai-foundations-preview-04_2024"
+        "self-paced-pl-gen-ai-foundations-preview-04b2024"
       ]
     },
     {
-      "chapter": 17,
-      "position": 9,
-      "activity_section_position": 5,
+      "chapter": 18,
+      "position": 10,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "self-paced-pl-gen-ai-foundations-preview-05_2024"
         ],
-        "progression": "Lesson Previews (15 min)"
+        "progression": "Lesson Previews (20 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -772,15 +723,15 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 10,
-      "activity_section_position": 6,
+      "chapter": 19,
+      "position": 11,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "self-paced-pl-gen-ai-foundations-preview-06_2024"
         ],
-        "progression": "Lesson Previews (15 min)"
+        "progression": "Lesson Previews (20 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -797,12 +748,15 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 11,
-      "activity_section_position": 7,
+      "chapter": 20,
+      "position": 12,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "progression": "Lesson Previews (15 min)"
+        "level_keys": [
+          "self-paced-pl-gen-ai-foundations-preview-07_2024"
+        ],
+        "progression": "Lesson Previews (20 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -819,15 +773,15 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 12,
+      "chapter": 21,
+      "position": 13,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "self-paced-pl-gen-ai-foundations-project_01_2024"
         ],
-        "progression": "Final Project (3 min)"
+        "progression": "Final Project (8 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -844,15 +798,15 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 13,
+      "chapter": 22,
+      "position": 14,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "self-paced-pl-gen-ai-foundations-project_02_2024"
         ],
-        "progression": "Final Project (3 min)"
+        "progression": "Final Project (8 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -869,15 +823,15 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 14,
+      "chapter": 23,
+      "position": 15,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "self-paced-pl-gen-ai-foundations-project_04_2024"
         ],
-        "progression": "Final Project (3 min)"
+        "progression": "Final Project (8 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -894,7 +848,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -919,7 +873,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -944,7 +898,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -969,7 +923,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -994,7 +948,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -1019,7 +973,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -1044,7 +998,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -1069,7 +1023,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -1094,7 +1048,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 9,
       "activity_section_position": 6,
       "assessment": false,
@@ -1119,7 +1073,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 10,
       "activity_section_position": 7,
       "assessment": false,
@@ -1144,7 +1098,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -1169,7 +1123,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -1194,7 +1148,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -1219,7 +1173,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 14,
       "activity_section_position": 4,
       "assessment": false,
@@ -1244,7 +1198,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 15,
       "activity_section_position": 5,
       "assessment": false,
@@ -1269,7 +1223,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 16,
       "activity_section_position": 6,
       "assessment": false,
@@ -1294,20 +1248,17 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 17,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "self-paced-pl-gen-ai-customizing_15b_2024"
-        ],
         "progression": "Retrieval (10 min)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-pl-gen-ai-customizing_15b_2024"
+          "self-paced-pl-gen-ai-customizing_15c_2024"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -1315,11 +1266,11 @@
         "activity_section.key": "9113846d-dea3-4244-b9d7-d08087b27ad4"
       },
       "level_keys": [
-        "self-paced-pl-gen-ai-customizing_15b_2024"
+        "self-paced-pl-gen-ai-customizing_15c_2024"
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 18,
       "activity_section_position": 2,
       "assessment": false,
@@ -1344,7 +1295,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 19,
       "activity_section_position": 3,
       "assessment": false,
@@ -1369,7 +1320,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 20,
       "activity_section_position": 1,
       "assessment": false,
@@ -1394,34 +1345,9 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 21,
       "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "self-paced-pl-gen-ai-customizing_05c_2024"
-        ],
-        "progression": "Wrapping Up the Unit (10 min)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-pl-gen-ai-customizing_05c_2024"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "self-paced-gen-ai-2024",
-        "activity_section.key": "fd7e3172-4022-4292-8504-a1aeff68c9ec"
-      },
-      "level_keys": [
-        "self-paced-pl-gen-ai-customizing_05c_2024"
-      ]
-    },
-    {
-      "chapter": 44,
-      "position": 22,
-      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1445,8 +1371,8 @@
     },
     {
       "chapter": 45,
-      "position": 23,
-      "activity_section_position": 4,
+      "position": 22,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1470,7 +1396,7 @@
     },
     {
       "chapter": 46,
-      "position": 24,
+      "position": 23,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1495,7 +1421,7 @@
     },
     {
       "chapter": 47,
-      "position": 25,
+      "position": 24,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1520,7 +1446,7 @@
     },
     {
       "chapter": 48,
-      "position": 26,
+      "position": 25,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1541,231 +1467,6 @@
       },
       "level_keys": [
         "self-paced-pl-gen-ai-user-project_04_2024"
-      ]
-    },
-    {
-      "chapter": 49,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "self-paced-pl-gen-ai-resources-overview_01_2024"
-        ],
-        "progression": "Teaching Resources (3 min)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-pl-gen-ai-resources-overview_01_2024"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-gen-ai-2024",
-        "activity_section.key": "a0ae3a79-891c-47bd-b921-40f6ca35a270"
-      },
-      "level_keys": [
-        "self-paced-pl-gen-ai-resources-overview_01_2024"
-      ]
-    },
-    {
-      "chapter": 50,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "self-paced-pl-gen-ai-resources-overview_02_2024"
-        ],
-        "progression": "Teaching Resources (3 min)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-pl-gen-ai-resources-overview_02_2024"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-gen-ai-2024",
-        "activity_section.key": "a0ae3a79-891c-47bd-b921-40f6ca35a270"
-      },
-      "level_keys": [
-        "self-paced-pl-gen-ai-resources-overview_02_2024"
-      ]
-    },
-    {
-      "chapter": 51,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "self-paced-pl-gen-ai-resources-equity_01_2024"
-        ],
-        "progression": "Ethics (5 min)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-pl-gen-ai-resources-equity_01_2024"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-gen-ai-2024",
-        "activity_section.key": "4ff111e4-a47b-4b84-a1f7-9ff1ac46a9ec"
-      },
-      "level_keys": [
-        "self-paced-pl-gen-ai-resources-equity_01_2024"
-      ]
-    },
-    {
-      "chapter": 52,
-      "position": 4,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "self-paced-pl-gen-ai-resources-equity_02_2024"
-        ],
-        "progression": "Ethics (5 min)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-pl-gen-ai-resources-equity_02_2024"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-gen-ai-2024",
-        "activity_section.key": "4ff111e4-a47b-4b84-a1f7-9ff1ac46a9ec"
-      },
-      "level_keys": [
-        "self-paced-pl-gen-ai-resources-equity_02_2024"
-      ]
-    },
-    {
-      "chapter": 53,
-      "position": 5,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "self-paced-pl-gen-ai-resources-equity_03_2024"
-        ],
-        "progression": "Ethics (5 min)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-pl-gen-ai-resources-equity_03_2024"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-gen-ai-2024",
-        "activity_section.key": "4ff111e4-a47b-4b84-a1f7-9ff1ac46a9ec"
-      },
-      "level_keys": [
-        "self-paced-pl-gen-ai-resources-equity_03_2024"
-      ]
-    },
-    {
-      "chapter": 54,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "self-paced-pl-gen-ai-resources-assessments_01_2024"
-        ],
-        "progression": "Assessments (5 min)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-pl-gen-ai-resources-assessments_01_2024"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-gen-ai-2024",
-        "activity_section.key": "5708cc9d-8d9f-4315-9f60-9ab86dfaf60f"
-      },
-      "level_keys": [
-        "self-paced-pl-gen-ai-resources-assessments_01_2024"
-      ]
-    },
-    {
-      "chapter": 55,
-      "position": 7,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "self-paced-pl-gen-ai-resources-assessments_02_2024"
-        ],
-        "progression": "Assessments (5 min)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-pl-gen-ai-resources-assessments_02_2024"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-gen-ai-2024",
-        "activity_section.key": "5708cc9d-8d9f-4315-9f60-9ab86dfaf60f"
-      },
-      "level_keys": [
-        "self-paced-pl-gen-ai-resources-assessments_02_2024"
-      ]
-    },
-    {
-      "chapter": 56,
-      "position": 8,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "self-paced-pl-gen-ai-resources-assessments_03_2024"
-        ],
-        "progression": "Assessments (5 min)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-pl-gen-ai-resources-assessments_03_2024"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-gen-ai-2024",
-        "activity_section.key": "5708cc9d-8d9f-4315-9f60-9ab86dfaf60f"
-      },
-      "level_keys": [
-        "self-paced-pl-gen-ai-resources-assessments_03_2024"
-      ]
-    },
-    {
-      "chapter": 57,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "self-paced-pl-gen-ai-resources-nextsteps_01_2024"
-        ],
-        "progression": "Next Steps (2 min)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-pl-gen-ai-resources-nextsteps_01_2024"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-gen-ai-2024",
-        "activity_section.key": "0489e5b7-4204-46c7-aa2c-387412df11a8"
-      },
-      "level_keys": [
-        "self-paced-pl-gen-ai-resources-nextsteps_01_2024"
       ]
     }
   ],
@@ -1940,6 +1641,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "self-paced-pl-gen-ai-foundations-preview-02b_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-gen-ai-foundations-preview-02b_2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "fba06010-99e8-48e6-9979-44e7c1ea463e"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "self-paced-pl-gen-ai-foundations-preview-03_2024",
         "script_level.level_keys": [
           "self-paced-pl-gen-ai-foundations-preview-03_2024"
@@ -1952,9 +1665,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-pl-gen-ai-foundations-preview-04_2024",
+        "level.key": "self-paced-pl-gen-ai-foundations-preview-04b2024",
         "script_level.level_keys": [
-          "self-paced-pl-gen-ai-foundations-preview-04_2024"
+          "self-paced-pl-gen-ai-foundations-preview-04b2024"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -2228,9 +1941,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-pl-gen-ai-customizing_15b_2024",
+        "level.key": "self-paced-pl-gen-ai-customizing_15c_2024",
         "script_level.level_keys": [
-          "self-paced-pl-gen-ai-customizing_15b_2024"
+          "self-paced-pl-gen-ai-customizing_15c_2024"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -2267,18 +1980,6 @@
         "level.key": "self-paced-pl-gen-ai-customizing_23_2024",
         "script_level.level_keys": [
           "self-paced-pl-gen-ai-customizing_23_2024"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "self-paced-gen-ai-2024",
-        "activity_section.key": "fd7e3172-4022-4292-8504-a1aeff68c9ec"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-pl-gen-ai-customizing_05c_2024",
-        "script_level.level_keys": [
-          "self-paced-pl-gen-ai-customizing_05c_2024"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -2344,114 +2045,6 @@
         "lesson_group.key": "",
         "script.name": "self-paced-gen-ai-2024",
         "activity_section.key": "d240839b-1379-44a8-ae38-327c04779974"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-pl-gen-ai-resources-overview_01_2024",
-        "script_level.level_keys": [
-          "self-paced-pl-gen-ai-resources-overview_01_2024"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-gen-ai-2024",
-        "activity_section.key": "a0ae3a79-891c-47bd-b921-40f6ca35a270"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-pl-gen-ai-resources-overview_02_2024",
-        "script_level.level_keys": [
-          "self-paced-pl-gen-ai-resources-overview_02_2024"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-gen-ai-2024",
-        "activity_section.key": "a0ae3a79-891c-47bd-b921-40f6ca35a270"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-pl-gen-ai-resources-equity_01_2024",
-        "script_level.level_keys": [
-          "self-paced-pl-gen-ai-resources-equity_01_2024"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-gen-ai-2024",
-        "activity_section.key": "4ff111e4-a47b-4b84-a1f7-9ff1ac46a9ec"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-pl-gen-ai-resources-equity_02_2024",
-        "script_level.level_keys": [
-          "self-paced-pl-gen-ai-resources-equity_02_2024"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-gen-ai-2024",
-        "activity_section.key": "4ff111e4-a47b-4b84-a1f7-9ff1ac46a9ec"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-pl-gen-ai-resources-equity_03_2024",
-        "script_level.level_keys": [
-          "self-paced-pl-gen-ai-resources-equity_03_2024"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-gen-ai-2024",
-        "activity_section.key": "4ff111e4-a47b-4b84-a1f7-9ff1ac46a9ec"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-pl-gen-ai-resources-assessments_01_2024",
-        "script_level.level_keys": [
-          "self-paced-pl-gen-ai-resources-assessments_01_2024"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-gen-ai-2024",
-        "activity_section.key": "5708cc9d-8d9f-4315-9f60-9ab86dfaf60f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-pl-gen-ai-resources-assessments_02_2024",
-        "script_level.level_keys": [
-          "self-paced-pl-gen-ai-resources-assessments_02_2024"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-gen-ai-2024",
-        "activity_section.key": "5708cc9d-8d9f-4315-9f60-9ab86dfaf60f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-pl-gen-ai-resources-assessments_03_2024",
-        "script_level.level_keys": [
-          "self-paced-pl-gen-ai-resources-assessments_03_2024"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-gen-ai-2024",
-        "activity_section.key": "5708cc9d-8d9f-4315-9f60-9ab86dfaf60f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-pl-gen-ai-resources-nextsteps_01_2024",
-        "script_level.level_keys": [
-          "self-paced-pl-gen-ai-resources-nextsteps_01_2024"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-gen-ai-2024",
-        "activity_section.key": "0489e5b7-4204-46c7-aa2c-387412df11a8"
       }
     }
   ],

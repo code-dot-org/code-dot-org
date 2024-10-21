@@ -5,18 +5,20 @@ description 'description here'
 markdown <<MARKDOWN
 # Safety Note with AI Chat Lab
 
-#### You may have noticed this pop-up to when you opened up a level using AI Chat Lab.
+#### You may have noticed this pop-up to when you opened up a level using AI Chat Lab. This message will also be displayed to your students as they work with AI Chat Lab.
 
-<img src="https://images.code.org/e65f6834044f4a2b77c14601cf6a749f-Screenshot 2024-08-30 at 2.32.36 PM.png" alt="Remember to chat responsibily pop-up" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+<img src="https://images.code.org/11588e4e069d56245fff291b6204ea16-Screenshot 2024-10-17 at 10.29.38 AM.png" alt="Remember to chat responsibily pop-up" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
 
-#### AI Chat Lab, has been designed with the safety and educational needs of students in mind, differing significantly from general LLMs like ChatGPT. **AI Chat Lab is constructed with a focus on privacy, content appropriateness, and responsible use, ensuring that students interact with AI in a controlled and educational environment**.
+#### ⚠️ **While Code.org's content moderation policy reviews both student customizations and chat messages, violations will be flagged accordingly. However, because this is a generative AI tool, we cannot fully predict or guarantee that the chatbot's output will always be free from disruption.**
 
-#### You should emphasize the importance of responsible usage when introducing students to Chatbot Lab. Here are a few key tips:
+#### You should emphasize the importance of responsible use when introducing students to AI Chat Lab. Here are a few tips:
 * #### **Encourage Awareness**: Remind students that all interactions with the chatbot are recorded and monitored, ensuring that their conversations remain respectful and on-topic. Any inappropriate messages will be flagged, and consequences may follow.
 * #### **Protect Personal Information**: Teach students the importance of keeping personal information private. They should avoid sharing details like their name, phone number, or address when interacting with the chatbot.
 * #### **Promote Responsible Communication**: Reinforce the idea that the chatbot is a tool for learning and growth, not just for casual conversation. Encourage students to use it responsibly and with a focus on education.
+* #### **Be Prepared to Have Discussions with Students**: Use unexpected outputs as teaching moments. Encourage critical thinking by discussing potential biases in AI, how AI works, and why the chatbot might generate certain outputs.
+* #### **Actively Monitor Student Usage**: You should actively monitor student usage to identify any potential issues, providing guidance and intervention as necessary to maintain a safe and supportive learning environment. Learn more about how to do so <a href="https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher" target="blank">here</a>.
 
-#### While we have thoroughly tested the Chatbot Lab model to ensure it aligns with educational standards and student safety, no system is perfect. **You should actively monitor student usage to identify any potential issues, providing guidance and intervention as necessary to maintain a safe and supportive learning environment.**
+#### For more information about safety with AI Chat Lab check out the <a href="https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ" target="blank">FAQ Support Article</a>.
 
 ## Up Next!
 
