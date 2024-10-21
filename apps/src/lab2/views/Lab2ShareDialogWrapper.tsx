@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import ShareDialogLegacy from '@cdo/apps/code-studio/components/ShareDialog';
 import popupWindow from '@cdo/apps/code-studio/popup-window';
 import {LABS_USING_NEW_SHARE_DIALOG} from '@cdo/apps/lab2/constants';
 import {isSignedIn as getIsSignedIn} from '@cdo/apps/templates/currentUserRedux';
+import SubmitProjectModal from '@cdo/apps/templates/projects/submitProjectModal/SubmitProjectModal';
 
 import {LabState} from '../lab2Redux';
 
@@ -16,6 +17,8 @@ import ShareDialog from './dialogs/ShareDialog';
 const Lab2ShareDialogWrapper: React.FunctionComponent<
   Lab2ShareDialogWrapperProps
 > = ({dialogId, shareUrl, finishUrl}) => {
+  const [isShowingSubmitProjectModal, setIsShowingSubmitProjectModal] =
+    useState<boolean>(true);
   const isProjectLevel =
     useSelector(
       (state: {lab: LabState}) => state.lab.levelProperties?.isProjectLevel
@@ -59,14 +62,27 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
     if (!isOpen) {
       return null;
     }
+    const shareDialog = false;
+
+    const onClose = () => {
+      console.log('close submit project modal clicked');
+      setIsShowingSubmitProjectModal(false);
+    };
 
     return (
-      <ShareDialog
-        dialogId={dialogId}
-        shareUrl={shareUrl}
-        finishUrl={finishUrl}
-        projectType={projectType}
-      />
+      <>
+        {isShowingSubmitProjectModal && (
+          <SubmitProjectModal onClose={onClose} />
+        )}
+        {shareDialog && (
+          <ShareDialog
+            dialogId={dialogId}
+            shareUrl={shareUrl}
+            finishUrl={finishUrl}
+            projectType={projectType}
+          />
+        )}
+      </>
     );
   }
 

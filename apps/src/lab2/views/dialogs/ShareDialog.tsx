@@ -117,6 +117,14 @@ const ShareDialog: React.FunctionComponent<{
                 <div>Share your project by using these links.</div>
               )}
 
+              <Button
+                text="Submit project"
+                type="primary"
+                size="m"
+                onClick={() => {
+                  console.log('submit project');
+                }}
+              />
               {finishUrl ? (
                 <LinkButton
                   ariaLabel={i18n.finish()}
