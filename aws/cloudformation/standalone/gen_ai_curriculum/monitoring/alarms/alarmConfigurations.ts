@@ -1,5 +1,6 @@
 import {ComparisonOperator} from '@aws-sdk/client-cloudwatch';
 
+// TODO: Replace with dependency on shared_constants.rb.
 import modelDescriptions from '../../../../../../apps/static/aichat/modelDescriptions.json';
 import {SNS_TOPIC} from '../constants';
 
