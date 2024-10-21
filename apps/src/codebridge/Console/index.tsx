@@ -69,7 +69,7 @@ const Console: React.FunctionComponent = () => {
       leftHeaderContent={<ControlButtons />}
       headerClassName={moduleStyles.consoleHeader}
     >
-      <div className={moduleStyles.console}>
+      <div className={moduleStyles.console} id="uitest-codebridge-console">
         {codeOutput.map((outputLine, index) => {
           if (outputLine.type === 'img') {
             return (

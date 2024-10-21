@@ -874,6 +874,10 @@ en:
         PL-genAI-neuralnetworks: 'Generative AI: Processing & Neural Networks'
         PL-genAI-attention: 'Generative AI: Attention'
         PL-genAI-output: 'Generative AI: Output & Probabilities'
+        gen-ai-understanding-embeddings-overview: Activity Overview - Understanding Embeddings
+        gen-ai-how-embeddings-work-overview: Activity Overview - How Embeddings Work
+        gen-ai-neural-networks-overview: Activity Overview - How Neural Networks Work
+        gen-ai-attention-overview: Activity Overview - Attention is All You Need
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
