@@ -31,6 +31,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     (state: {teacherSections: {sections: SectionsData}}) =>
       state.teacherSections.sections
   );
+  // console.log('lfm', {sections});
 
   const [sectionArray, setSectionArray] = useState<
     {value: string; text: string}[]
@@ -72,7 +73,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   const coursecontentSectionTitle = getSectionHeader(i18n.courseContent());
 
   let courseContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[];
-  if (sections[selectedSectionId].unitName) {
+  if (sections[selectedSectionId]?.unitName) {
     courseContentKeys = ['unitOverview', 'lessonMaterials', 'calendar'];
   } else {
     courseContentKeys = ['courseOverview', 'lessonMaterials', 'calendar'];
@@ -94,6 +95,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
+  // const {urlSectionId} = useParams();
 
   const [currentPathName, currentPathObject] = React.useMemo(() => {
     return (
@@ -104,24 +106,41 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     );
   }, [location]);
 
-  const navigateToDifferentSection = (sectionId: string) => {
-    if (currentPathObject?.absoluteUrl) {
-      navigate(
-        generatePath(currentPathObject.absoluteUrl, {sectionId: sectionId})
-      );
-    }
-  };
+  // React.useEffect(() => {
+  //   console.log('switch section');
+  //   if (urlSectionId) {
+  //     asyncLoadSelectedSection(urlSectionId);
+  //   }
+  // }, [urlSectionId]);
 
-  const navigateToDifferentPage = (
-    page: keyof typeof LABELED_TEACHER_NAVIGATION_PATHS
-  ) => {
-    if (LABELED_TEACHER_NAVIGATION_PATHS[page]) {
-      navigate(
-        generatePath(LABELED_TEACHER_NAVIGATION_PATHS[page].absoluteUrl, {
-          sectionId: selectedSectionId,
-          courseVersionName: sections[selectedSectionId].courseVersionName,
+  React.useEffect(() => {
+    console.log('lfm bar loc', {location});
+  }, [location]);
+
+  const navigateToDifferentSection = (sectionId: number) => {
+    if (currentPathObject?.absoluteUrl) {
+      console.log(
+        'lfm navigate to',
+        generatePath(currentPathObject.absoluteUrl, {
+          sectionId: sectionId,
+          courseVersionName: sections[sectionId]?.courseVersionName,
+          unitName: sections[sectionId]?.unitName,
         })
       );
+      navigate(
+        generatePath(currentPathObject.absoluteUrl, {
+          sectionId: sectionId,
+          courseVersionName: sections[sectionId]?.courseVersionName,
+          unitName: sections[sectionId]?.unitName,
+        })
+      );
+      // window.location.href =
+      //   'http://localhost-studio.code.org:3000/teacher_dashboard' +
+      //   generatePath(currentPathObject.absoluteUrl, {
+      //     sectionId: sectionId,
+      //     courseVersionName: sections[sectionId].courseVersionName,
+      //     unitName: sections[sectionId].unitName,
+      //   });
     }
   };
 
@@ -133,9 +152,9 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
         key={'ui-test-sidebar-' + key}
         isSelected={currentPathName === key}
         sectionId={+selectedSectionId}
-        courseVersionName={sections[selectedSectionId].courseVersionName}
+        courseVersionName={sections[selectedSectionId]?.courseVersionName}
+        unitName={sections[selectedSectionId]?.unitName}
         pathKey={key as keyof typeof LABELED_TEACHER_NAVIGATION_PATHS}
-        onClick={() => navigateToDifferentPage(key)}
       />
     ));
   };
@@ -165,7 +184,9 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
         </Typography>
         <SimpleDropdown
           items={sectionArray}
-          onChange={event => navigateToDifferentSection(event.target.value)}
+          onChange={event =>
+            navigateToDifferentSection(parseInt(event.target.value))
+          }
           labelText=""
           size="m"
           selectedValue={String(selectedSectionId)}

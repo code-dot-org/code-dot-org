@@ -124,12 +124,14 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           }
           loader={async ({params}) => {
             if (params.sectionId) {
+              console.log('lfm params.sectionId', params.sectionId);
               await asyncLoadSelectedSection(params.sectionId);
             }
             return null;
           }}
         >
-          <Route
+          {/* <Route
+          exact
             path={''}
             element={
               <Navigate to={TEACHER_NAVIGATION_PATHS.progress} replace={true} />
@@ -140,7 +142,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
             element={
               <Navigate to={TEACHER_NAVIGATION_PATHS.progress} replace={true} />
             }
-          />
+          /> */}
           <Route
             path={TEACHER_NAVIGATION_PATHS.roster}
             element={applyV1TeacherDashboardWidth(
@@ -266,7 +268,9 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.unitOverview}
-            element={applyV1TeacherDashboardWidth(<TeacherUnitOverview />)}
+            element={applyV1TeacherDashboardWidth(
+              <TeacherUnitOverview key={sectionId} />
+            )}
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.settings}
