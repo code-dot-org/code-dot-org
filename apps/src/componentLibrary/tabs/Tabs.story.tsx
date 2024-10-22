@@ -673,6 +673,8 @@ GroupOfTabsWithClosableTabs.args = {
         {
           value: 'tab2',
           text: 'Tab 2',
+          iconLeft: {iconName: 'check', iconStyle: 'solid'},
+          iconRight: {iconName: 'check', iconStyle: 'solid'},
           tabContent: <div>Tab 2 Content</div>,
           isClosable: true,
         },
