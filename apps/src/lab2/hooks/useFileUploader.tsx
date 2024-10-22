@@ -141,6 +141,7 @@ export const useFileUploader = ({
     () => ({
       startFileUpload: (newCallbackArgs?: unknown) => {
         callbackArgs.current = newCallbackArgs;
+
         inputRef.current?.click();
       },
       FileUploaderComponent: () => (
