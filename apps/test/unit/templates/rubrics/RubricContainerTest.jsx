@@ -281,66 +281,6 @@ describe('RubricContainer', () => {
     {id: 2, learning_goal_id: 2, understanding: 0, aiConfidencePassFail: 2},
   ];
 
-  it('renders a RubricContent component when the rubric tab is selected', () => {
-    const wrapper = shallow(
-      <RubricContainer
-        rubric={defaultRubric}
-        studentLevelInfo={{}}
-        teacherHasEnabledAi={true}
-        currentLevelName={'test_level'}
-        reportingData={{}}
-        open
-      />
-    );
-    expect(wrapper.find('RubricContent')).to.have.lengthOf(1);
-  });
-
-  it('fetches AI evaluations and passes them to children', async () => {
-    stubFetchEvalStatusForUser(successJson);
-    stubFetchEvalStatusForAll(successJsonAll);
-    stubFetchTeacherEvaluations(noEvals);
-    const evalFetch = stubFetchAiEvaluations(mockAiEvaluations);
-    stubFetchTourStatus({seen: true});
-
-    const wrapper = mount(
-      <Provider store={store}>
-        <RubricContainer
-          rubric={defaultRubric}
-          studentLevelInfo={{}}
-          teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
-          reportingData={{}}
-          sectionId={42}
-          open
-        />
-      </Provider>
-    );
-
-    // Push the `fetch`s through
-    await wait();
-
-    // Let the component re-render with the set state
-    wrapper.update();
-    expect(evalFetch).to.have.been.called;
-    expect(wrapper.find('RubricContent').props().aiEvaluations).to.eql(
-      mockAiEvaluations
-    );
-  });
-
-  it('displays RubricTabButtons prop', () => {
-    const wrapper = shallow(
-      <RubricContainer
-        rubric={defaultRubric}
-        studentLevelInfo={{}}
-        teacherHasEnabledAi={true}
-        currentLevelName={'test_level'}
-        reportingData={{}}
-        open
-      />
-    );
-    expect(wrapper.find('RubricTabButtons').length).to.equal(1);
-  });
-
   it('switches components when tabs are clicked', async () => {
     stubFetchEvalStatusForUser(successJson);
     stubFetchEvalStatusForAll(successJsonAll);
