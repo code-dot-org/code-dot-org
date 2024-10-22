@@ -168,11 +168,14 @@
   }
 
   ol, ul {
+    font-size: 14px;
     line-height: 0;
+    margin: 0 0 10px 20px;
   }
 
   li {
     margin-bottom: 10px;
+    line-height: 1.4em;
   }
 
   code {
@@ -180,7 +183,9 @@
   }
 
   p {
+    margin-bottom: 10px;
     font-size: 14px;
+    line-height: 1.4em;
   }
 
   details {

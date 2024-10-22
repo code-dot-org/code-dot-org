@@ -7,6 +7,7 @@ import {
 } from '@cdo/apps/lab2/progress/ProgressManager';
 import {Condition, ConditionType} from '@cdo/apps/lab2/types';
 
+import {PATTERN_AI_NUM_SEED_EVENTS} from '../constants';
 import {isChordEvent} from '../player/interfaces/ChordEvent';
 import {isInstrumentEvent} from '../player/interfaces/InstrumentEvent';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
@@ -68,6 +69,7 @@ export default class MusicValidator extends Validator {
     // And the same for patterns made with AI.
     let playedNumberEmptyPatternsAi = 0;
     let playedNumberPatternsAi = 0;
+    let playedNumberGeneratedPatternsAi = 0;
 
     // Get number of chords that have been started, separately counting those
     // that are empty and those with notes.
@@ -149,6 +151,14 @@ export default class MusicValidator extends Validator {
         } else {
           if (eventData.value.ai) {
             playedNumberPatternsAi++;
+
+            if (
+              eventData.value.events.some(
+                event => event.tick > PATTERN_AI_NUM_SEED_EVENTS
+              )
+            ) {
+              playedNumberGeneratedPatternsAi++;
+            }
           } else {
             playedNumberPatterns++;
           }
@@ -229,6 +239,10 @@ export default class MusicValidator extends Validator {
     this.addPlayedConditions(
       MusicConditions.PLAYED_PATTERNS_AI.name,
       playedNumberPatternsAi
+    );
+    this.addPlayedConditions(
+      MusicConditions.PLAYED_GENERATED_PATTERNS_AI.name,
+      playedNumberGeneratedPatternsAi
     );
 
     // Add satisfied conditions for the played chords.
