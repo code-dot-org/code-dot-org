@@ -156,10 +156,6 @@ export default function RubricContainer({
     });
   };
 
-  const updateAiEvalStatusMap = aiEvalStatusMap => {
-    setAiEvalStatusMap(aiEvalStatusMap);
-  };
-
   const [hasTeacherFeedbackMap, setHasTeacherFeedbackMap] = useState({});
 
   const initializeHasTeacherFeedbackMap = allTeacherEvaluationData => {
@@ -435,7 +431,7 @@ export default function RubricContainer({
               reportingData={reportingData}
               allTeacherEvaluationData={allTeacherEvaluationData}
               aiEvalStatusCounters={aiEvalStatusCounters}
-              updateAiEvalStatusMap={updateAiEvalStatusMap}
+              setAiEvalStatusMap={setAiEvalStatusMap}
             />
           )}
         </div>

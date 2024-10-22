@@ -53,7 +53,7 @@ function RubricSettings({
   setAiRubricsDisabled,
   allTeacherEvaluationData,
   aiEvalStatusCounters,
-  updateAiEvalStatusMap,
+  setAiEvalStatusMap,
 }) {
   const rubricId = rubric.id;
   const {lesson} = rubric;
@@ -209,7 +209,7 @@ function RubricSettings({
                 setStatusAll(STATUS_ALL.EVALUATION_PENDING);
               } else {
                 setStatusAll(STATUS_ALL.SUCCESS);
-                updateAiEvalStatusMap(data.aiEvalStatusMap);
+                setAiEvalStatusMap(data.aiEvalStatusMap);
               }
             });
           }
@@ -223,7 +223,7 @@ function RubricSettings({
     sectionId,
     statusAll,
     refreshAiEvaluations,
-    updateAiEvalStatusMap,
+    setAiEvalStatusMap,
   ]);
 
   const handleRunAiAssessmentAll = () => {
@@ -405,7 +405,7 @@ RubricSettings.propTypes = {
   setAiRubricsDisabled: PropTypes.func.isRequired,
   allTeacherEvaluationData: PropTypes.array,
   aiEvalStatusCounters: PropTypes.object,
-  updateAiEvalStatusMap: PropTypes.func,
+  setAiEvalStatusMap: PropTypes.func,
 };
 
 export const UnconnectedRubricSettings = RubricSettings;
