@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "hoc-music-ai-pilot-4",
-    "serialized_at": "2024-10-11 16:41:05 UTC",
+    "serialized_at": "2024-10-21 23:31:59 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -69,8 +69,8 @@
       "key": "bd4b14b1-93ac-4bef-a759-6dc06c32f759",
       "position": 1,
       "properties": {
-        "name": "Music Lab: A.I. Edition",
-        "progression_name": "Introduction to Music Lab with A.I. "
+        "name": "Music Lab: Jam Session",
+        "progression_name": "Intro"
       },
       "seeding_key": {
         "activity_section.key": "bd4b14b1-93ac-4bef-a759-6dc06c32f759",
@@ -103,7 +103,7 @@
       "key": "70adc636-569a-48e0-95cd-701dccdc5f19",
       "position": 4,
       "properties": {
-        "progression_name": "AI Beat Block "
+        "progression_name": "Play AI Drums"
       },
       "seeding_key": {
         "activity_section.key": "70adc636-569a-48e0-95cd-701dccdc5f19",
@@ -125,7 +125,7 @@
       "key": "ffdf16a4-6c45-4333-8266-f747991df2c7",
       "position": 6,
       "properties": {
-        "progression_name": "Freeplay"
+        "progression_name": "Jam Session"
       },
       "seeding_key": {
         "activity_section.key": "ffdf16a4-6c45-4333-8266-f747991df2c7",
@@ -140,7 +140,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Introduction to Music Lab with A.I. "
+        "level_keys": [
+          "music_lab_intro_panels_start2"
+        ],
+        "progression": "Intro"
       },
       "bonus": false,
       "seeding_key": {
@@ -315,7 +318,7 @@
         "level_keys": [
           "music_ai_panels_aibeatblock_1"
         ],
-        "progression": "AI Beat Block "
+        "progression": "Play AI Drums"
       },
       "bonus": false,
       "seeding_key": {
@@ -340,7 +343,7 @@
         "level_keys": [
           "music-ai-skill-aibeats_1"
         ],
-        "progression": "AI Beat Block "
+        "progression": "Play AI Drums"
       },
       "bonus": false,
       "seeding_key": {
@@ -365,7 +368,7 @@
         "level_keys": [
           "music_ai_panels_aibeatblock_temperature_1"
         ],
-        "progression": "AI Beat Block "
+        "progression": "Play AI Drums"
       },
       "bonus": false,
       "seeding_key": {
@@ -390,7 +393,7 @@
         "level_keys": [
           "music-ai-skill-aibeats-temperature_1"
         ],
-        "progression": "AI Beat Block "
+        "progression": "Play AI Drums"
       },
       "bonus": false,
       "seeding_key": {
@@ -540,7 +543,7 @@
         "level_keys": [
           "music-ai-freeplay_1"
         ],
-        "progression": "Freeplay"
+        "progression": "Jam Session"
       },
       "bonus": false,
       "seeding_key": {
