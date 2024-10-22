@@ -287,7 +287,7 @@ describe('RubricContainer', () => {
     stubFetchAiEvaluations(mockAiEvaluations);
     stubFetchTeacherEvaluations(noEvals);
 
-    const wrapper = mount(
+    const {container} = render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -299,18 +299,30 @@ describe('RubricContainer', () => {
         />
       </Provider>
     );
-    await wait();
-    wrapper.update();
-    deprecatedExpect(wrapper.find('RubricContent').props().visible).to.be.true;
-    deprecatedExpect(wrapper.find('RubricSettings').props().visible).to.be
-      .false;
-    wrapper.find('SegmentedButton').at(1).simulate('click');
-    deprecatedExpect(wrapper.find('RubricContent').props().visible).to.be.false;
-    deprecatedExpect(wrapper.find('RubricSettings').props().visible).to.be.true;
-    wrapper.find('SegmentedButton').at(0).simulate('click');
-    deprecatedExpect(wrapper.find('RubricContent').props().visible).to.be.true;
-    deprecatedExpect(wrapper.find('RubricSettings').props().visible).to.be
-      .false;
+
+    // Use classnames to find elements and check their visibility even though it
+    // is an anti-pattern. Ideally we would find an accessible element in each
+    // pane and use toBeVisible() on it to check visibility. However, that
+    // approach is difficult because jest-dom can't see the styles in our
+    // CSS modules which control element visibility.
+
+    let settings = container.querySelector('.uitest-rubric-settings');
+    let content = container.querySelector('#uitest-rubric-content');
+
+    expect(content).toHaveClass('visibleRubricContent');
+    expect(settings).toHaveClass('settingsHidden');
+
+    fireEvent.click(screen.getByText(i18n.rubricTabClassManagement()));
+
+    expect(content).toHaveClass('hiddenRubricContent');
+    expect(settings).toHaveClass('settingsVisible');
+
+    fireEvent.click(
+      screen.getAllByRole('button', {name: i18n.rubricTabStudent()})[0]
+    );
+
+    expect(content).toHaveClass('visibleRubricContent');
+    expect(settings).toHaveClass('settingsHidden');
   });
 
   it('shows a a button for running analysis if canProvideFeedback is true', async () => {
