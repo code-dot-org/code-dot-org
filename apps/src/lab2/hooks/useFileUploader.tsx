@@ -4,6 +4,7 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 
 export const enum analyticsEvents {
   UPLOAD_FAILED = 'UPLOAD_FAILED',
+  UPLOAD_SUCCEEDED = 'UPLOAD_SUCCEEDED',
   UPLOAD_UNACCEPTED_FILE = 'UPLOAD_UNACCEPTED_FILE',
 }
 
@@ -69,9 +70,9 @@ const isValidMimeType = (
  * @property props.validMimeTypes - An optional array of strings representing the allowed MIME types for uploaded files.
  *                                  If not provided, the hook will validate against the internal defaultMimeTypes array
  * @property props.sendAnalyticsEvent - An optional function that will be called with analytics data. It will generated analytics events for
-                                        analyticsEvents.UPLOAD_UNACCEPTED_FILE and analyticsEvents.UPLOAD_FAILED. Map them to your own analytics events
-                                        The second argument will be a record with more info, as Record<string, string>
-                                        If not provided, then no analytics will be tracked
+                                        analyticsEvents.UPLOAD_UNACCEPTED_FILE, analyticsEvents.UPLOAD_FAILED, and analyticsEvents.UPLOAD_SUCCEEDED.
+                                        Map them to your own analytics events. The second argument will be a record with more info, as Record<string, string>
+                                        If the function is not provided, then no analytics will be tracked
  *
  * @returns An object containing the following properties:
  *
@@ -118,7 +119,10 @@ export const useFileUploader = ({
             typeof reader.result === 'string'
               ? reader.result
               : bufferToString(reader.result);
-
+          sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
+            name: file.name,
+            type: file.type,
+          });
           callback(file.name, result as string, callbackArgs.current);
         }
       };
