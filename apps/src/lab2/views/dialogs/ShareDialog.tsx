@@ -122,13 +122,15 @@ const ShareDialog: React.FunctionComponent<{
           <div className={moduleStyles.columns}>
             <div className={moduleStyles.column}>
               <div className={moduleStyles.block}>
-                <Typography
-                  semanticTag="h2"
-                  visualAppearance="heading-md"
-                  className={moduleStyles.heading}
-                >
-                  {i18n.shareTitle()}
-                </Typography>
+                {dialogId === 'hoc2024' && (
+                  <Typography
+                    semanticTag="h2"
+                    visualAppearance="heading-md"
+                    className={moduleStyles.heading}
+                  >
+                    {i18n.shareTitle()}
+                  </Typography>
+                )}
                 <div
                   className={moduleStyles.QRCodeContainer}
                   id="share-qrcode-container"
