@@ -442,7 +442,7 @@ roles.each do |name, config| %>
   AdvocacyS3AccessPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
-      ManagedPolicyName: NewAdvocacyS3AccessPolicy
+      ManagedPolicyName: AdvocacyS3AccessPolicy
       PolicyDocument:
         Version: 2012-10-17
         Statement:
@@ -485,8 +485,12 @@ roles.each do |name, config| %>
               - 'arn:aws:s3:::cdo-data-sharing-internal/*'
               - 'arn:aws:s3:::cdo-census/*'
               - 'arn:aws:s3:::cdo-nces/*'
-              - 'arn:aws:s3:::cdo-dist/production/assets/advocacy/stateofcs/2023/*'
-              - 'arn:aws:s3:::cdo-dist/production/assets/advocacy/stateofcs/2024/*'
+              - 'arn:aws:s3:::cdo-dist/production/assets/advocacy/stateofcs/*'
+          - Effect: Allow
+            Action:
+              - s3:PutObjectAcl
+            Resource:
+              - 'arn:aws:s3:::cdo-dist/production/assets/advocacy/stateofcs/*'
 
   DataAnalystDmsReadOnlyPolicy:
     Type: AWS::IAM::ManagedPolicy
