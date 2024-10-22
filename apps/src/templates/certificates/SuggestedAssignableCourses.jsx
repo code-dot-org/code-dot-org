@@ -7,6 +7,7 @@ import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/Curricu
 import i18n from '@cdo/locale';
 
 import style from './suggested_assignable_courses.module.scss';
+
 function SuggestedAssignableCourses({assignableCourseSuggestions, isEnglish}) {
   const [expandedCardKey, setExpandedCardKey] = useState(null);
   const handleQuickViewClicked = key => {
@@ -31,6 +32,7 @@ function SuggestedAssignableCourses({assignableCourseSuggestions, isEnglish}) {
     };
   }, [assignSuccess]);
 
+  // TODO: support multiple suggested courses
   const shouldRenderComponent = assignableCourseSuggestions.length === 1;
 
   if (!shouldRenderComponent) {
@@ -38,9 +40,6 @@ function SuggestedAssignableCourses({assignableCourseSuggestions, isEnglish}) {
   }
 
   const assignableCourseComponent = () => {
-    if (assignableCourseSuggestions.length === 0) {
-      return null;
-    }
     if (assignableCourseSuggestions.length === 1) {
       const {
         key,

@@ -164,7 +164,7 @@ CurriculumCatalogCard.propTypes = {
   recommendedStretchCurriculum: PropTypes.object,
 };
 
-export const CustomizableCurriculumCatalogCard = ({
+const CustomizableCurriculumCatalogCard = ({
   courseKey,
   assignButtonDescription,
   assignButtonText,
