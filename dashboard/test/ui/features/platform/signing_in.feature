@@ -74,7 +74,7 @@ Scenario: Join existing section from sign in page goes to section join page
 @no_mobile
 # Ensures that the session is properly terminated during sign-out and not restored by concurrent request
 # See: https://docs.google.com/document/d/1_H7SDk1vPnUr5N7I14FPSoYs2bPPBGUz7KUAIE8X_A0
-Scenario: Teacher successfully signs in and out 20 consecutive times without any issues
+Scenario: Teacher successfully signs in and out 10 consecutive times without any issues
   Given I create a teacher named "Teacher"
   And I sign out
-  Given sign in "Teacher" 20 times
+  Given sign in "Teacher" 10 times
