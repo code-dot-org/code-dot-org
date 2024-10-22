@@ -72,7 +72,7 @@ $(document).ready(function () {
   store.dispatch(
     setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReportInfo)
   );
-  store.dispatch(setSections(sections));
+  store.dispatch(setSections(sections, false));
   store.dispatch(setLocaleCode(localeCode));
 
   const showAITutorTab = canViewStudentAIChatMessages;

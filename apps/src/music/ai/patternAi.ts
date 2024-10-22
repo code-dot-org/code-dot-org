@@ -25,7 +25,7 @@ export function generatePattern(
   const analyticsReporter = MusicRegistry.analyticsReporter;
   // Report attempt
   reporter.incrementCounter('MusicAI.GeneratePatternAttempt');
-  analyticsReporter.onGenerateAiPatternStart();
+  analyticsReporter.onGenerateAiPatternStart(temperature);
 
   worker.postMessage([
     Message.GeneratePattern,
@@ -45,7 +45,8 @@ export function generatePattern(
       case Message.Result:
         analyticsReporter.onGenerateAiPatternEnd(
           e.data[2] / 1000,
-          isInitialGenerate
+          isInitialGenerate,
+          temperature
         );
         onComplete(e.data[1]);
         // Flip the flag after the first successful generate.

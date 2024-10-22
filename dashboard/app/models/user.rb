@@ -115,6 +115,8 @@ class User < ApplicationRecord
   #   user_provided_us_state: Indicates if the us_state was provided by the user as opposed to being interpolated.
   #   failed_attempts and locked_at: Used by Devise#Lockable to prevent
   #     brute-force password attempts
+  #   roster_synced: Indicates if the user was created during a roster sync operation from an LMS. Implies that the user
+  #     is a school-managed account.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -164,6 +166,7 @@ class User < ApplicationRecord
     failed_attempts
     locked_at
     has_seen_ai_assessments_announcement
+    roster_synced
   )
 
   attr_accessor(
@@ -549,9 +552,11 @@ class User < ApplicationRecord
   has_many :user_scripts, -> {order Arel.sql("-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc")}
   has_many :scripts, through: :user_scripts, source: :script
 
+  before_validation on: [:create, :update], if: -> {name&.utf8mb4?} do
+    self.name = name.sanitize_utf8mb4
+  end
   validates :name, presence: true, unless: -> {purged_at}
   validates :name, length: {within: 1..70}, allow_blank: true
-  validates :name, no_utf8mb4: true
 
   defer_age = proc {|user| %w(google_oauth2 clever).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
 
@@ -905,6 +910,7 @@ class User < ApplicationRecord
 
     user.gender_third_party_input = auth.info.gender
     user.gender = Policies::Gender.normalize auth.info.gender
+    user.roster_synced = params['roster_synced'] || false
   end
 
   def oauth?
@@ -1514,6 +1520,8 @@ class User < ApplicationRecord
     user_type == TYPE_TEACHER
   end
 
+  # Warning: Calling this method will trigger the sending of a verification email,
+  # as establish in the user_permission model
   def verify_teacher!
     self.permission = UserPermission::AUTHORIZED_TEACHER
   end
@@ -1643,7 +1651,7 @@ class User < ApplicationRecord
 
   def generate_username
     # skip an expensive db query if the name is not valid anyway. we can't depend on validations being run
-    return if name.blank? || name.utf8mb4? || email&.utf8mb4?
+    return if name.blank? || email&.utf8mb4?
     self.username = UserHelpers.generate_username(User.with_deleted, name)
   end
 
@@ -1712,67 +1720,7 @@ class User < ApplicationRecord
 
   def self.send_reset_password_instructions(attributes = {})
     # override of Devise method
-    if attributes[:email].blank?
-      user = User.new
-      user.errors.add :email, I18n.t('activerecord.errors.messages.blank')
-      return user
-    end
-
-    email = attributes[:email]
-    associated_users = User.associated_users(email)
-    return User.new(email: email).send_reset_password_for_users(email, associated_users)
-  end
-
-  def send_reset_password_for_users(email, users)
-    if users.empty?
-      not_found_user = User.new(email: email)
-      not_found_user.errors.add :email, :not_found
-      return not_found_user
-    end
-
-    unique_users = users.uniq
-
-    # Normal case: single user, owner of the email attached to this account
-    if unique_users.length == 1 && (unique_users.first.email == email || unique_users.first.hashed_email == User.hash_email(email))
-      primary_user = unique_users.first
-      primary_user.raw_token = primary_user.send_reset_password_instructions(email) # protected in the superclass
-      return primary_user
-    end
-
-    # One or more users are associated with parent email, generate reset tokens for each one
-    unique_users.each do |user|
-      raw, enc = Devise.token_generator.generate(User, :reset_password_token)
-      user.raw_token = raw
-      user.reset_password_token   = enc
-      user.reset_password_sent_at = Time.now.utc
-      user.save(validate: false)
-    end
-
-    begin
-      # Send the password reset to the parent
-      raw, _enc = Devise.token_generator.generate(User, :reset_password_token)
-      self.child_users = unique_users
-      send_devise_notification(:reset_password_instructions, raw, {to: email})
-      return self
-    rescue ArgumentError
-      errors.add :base, I18n.t('password.reset_errors.invalid_email')
-      return nil
-    end
-  end
-
-  # Send a password reset email to the user (not to their parent)
-  def send_reset_password_instructions(email)
-    raw, enc = Devise.token_generator.generate(self.class, :reset_password_token)
-
-    self.reset_password_token   = enc
-    self.reset_password_sent_at = Time.now.utc
-    save(validate: false)
-
-    send_devise_notification(:reset_password_instructions, raw, {to: email})
-    raw
-  rescue ArgumentError
-    errors.add :base, I18n.t('password.reset_errors.invalid_email')
-    return nil
+    Services::User::PasswordResetter.call(email: attributes[:email])
   end
 
   def reset_secrets

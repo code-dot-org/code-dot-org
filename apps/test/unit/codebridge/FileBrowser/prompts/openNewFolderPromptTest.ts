@@ -21,7 +21,6 @@ const getNewFolderMock = (
   return [newFolderData, mock];
 };
 
-const appName = 'Codebridge Unit Test';
 const EXPECTED_NEXT_FOLDER_ID = '6';
 
 describe('openNewFolderPrompt', function () {
@@ -34,7 +33,6 @@ describe('openNewFolderPrompt', function () {
 
     await openNewFolderPrompt({
       parentId,
-      appName,
       dialogControl: getDialogControlMock(newFolderName),
       newFolder: newFolderDataMock,
       projectFolders: testProject.folders,
@@ -55,7 +53,6 @@ describe('openNewFolderPrompt', function () {
     const [newFolderData, newFolderDataMock] = getNewFolderMock(parentId);
 
     await openNewFolderPrompt({
-      appName,
       dialogControl: getDialogControlMock(newFolderName),
       newFolder: newFolderDataMock,
       projectFolders: testProject.folders,
@@ -77,7 +74,6 @@ describe('openNewFolderPrompt', function () {
 
     await openNewFolderPrompt({
       parentId,
-      appName,
       dialogControl: getDialogControlMock(newFolderName),
       newFolder: newFolderDataMock,
       projectFolders: testProject.folders,
@@ -99,7 +95,6 @@ describe('openNewFolderPrompt', function () {
 
     await openNewFolderPrompt({
       parentId: DEFAULT_FOLDER_ID,
-      appName,
       dialogControl: getDialogControlMock(newFolderName),
       newFolder: newFolderDataMock,
       projectFolders: testProject.folders,
@@ -119,7 +114,6 @@ describe('openNewFolderPrompt', function () {
 
     await openNewFolderPrompt({
       parentId: DEFAULT_FOLDER_ID,
-      appName,
       dialogControl: getDialogControlMock(newFolderName),
       newFolder: newFolderDataMock,
       projectFolders: testProject.folders,

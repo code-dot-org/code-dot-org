@@ -1,0 +1,792 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2024-10-18T14:59:01.000Z",
+  "level_num": "custom",
+  "user_id": 16899,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "blockMode": "Advanced",
+      "toolbox": {
+      },
+      "startSources": {
+        "variables": [
+          {
+            "name": "x",
+            "id": ",0jW@5:jPW}_i/Z5wK;r"
+          }
+        ],
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "procedures_callnoreturn",
+                  "id": "%P%E0FnL!F7i+%l-wGE]",
+                  "extraState": {
+                    "name": "intro",
+                    "params": [
+                      "x"
+                    ]
+                  },
+                  "inputs": {
+                    "ARG0": {
+                      "block": {
+                        "type": "math_number",
+                        "id": "4y;/SZp-2$cia|nb(*4]",
+                        "fields": {
+                          "NUM": 1
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "procedures_callnoreturn",
+                      "id": "5FMUH)A+{=jXTeF,@@OP",
+                      "extraState": {
+                        "name": "surprise",
+                        "params": [
+                          "x"
+                        ]
+                      },
+                      "inputs": {
+                        "ARG0": {
+                          "block": {
+                            "type": "math_number",
+                            "id": "GfLG}TPLeB!Hk9*wKLYF",
+                            "fields": {
+                              "NUM": 5
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "procedures_callnoreturn",
+                          "id": ",9srjh+(%U]4Bep5bu%8",
+                          "extraState": {
+                            "name": "realization",
+                            "params": [
+                              "x"
+                            ]
+                          },
+                          "inputs": {
+                            "ARG0": {
+                              "block": {
+                                "type": "math_number",
+                                "id": "Yiy3c]hHd,{ls61JJ10$",
+                                "fields": {
+                                  "NUM": 9
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "/GHDcoEnTR|)[AK)^K/,",
+              "x": 370,
+              "y": 250,
+              "extraState": {
+                "params": [
+                  {
+                    "name": "x",
+                    "id": ",0jW@5:jPW}_i/Z5wK;r",
+                    "argId": "?2V?gIM@q:t:^IowTE@G"
+                  }
+                ]
+              },
+              "fields": {
+                "NAME": "surprise"
+              },
+              "inputs": {
+                "?2V?gIM@q:t:^IowTE@G": {
+                  "shadow": {
+                    "type": "argument_reporter",
+                    "id": ".Ige,J)4s_gM(S7I%FVk",
+                    "extraState": {
+                      "modelId": ",0jW@5:jPW}_i/Z5wK;r"
+                    },
+                    "fields": {
+                      "VAR": "x"
+                    }
+                  }
+                },
+                "STACK": {
+                  "block": {
+                    "type": "set_effect",
+                    "id": "q=YFpiC@K!-y?-CyTvW-",
+                    "fields": {
+                      "effects_name": "<field name=\"effects_name\">volume</field>",
+                      "effects_value": "<field name=\"effects_value\">normal</field>"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound",
+                        "id": "?kSMW=yTUVF6:!/C4@Xn",
+                        "fields": {
+                          "sound": "aloe_blacc_wake_me_up/piano_verse"
+                        },
+                        "inputs": {
+                          "measure": {
+                            "shadow": {
+                              "type": "math_number",
+                              "id": "3PUUNn)}Cuj3b$%U=hOd",
+                              "fields": {
+                                "NUM": 1
+                              }
+                            },
+                            "block": {
+                              "type": "variables_get",
+                              "id": "P=CV6Oj,mu~~tW|3Y1w^",
+                              "extraState": {
+                              },
+                              "fields": {
+                                "VAR": {
+                                  "id": ",0jW@5:jPW}_i/Z5wK;r"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound",
+                            "id": "iGO9fS[wFvYc$kkA5-g]",
+                            "fields": {
+                              "sound": "aloe_blacc_wake_me_up/tambourine"
+                            },
+                            "inputs": {
+                              "measure": {
+                                "shadow": {
+                                  "type": "math_number",
+                                  "id": "Z,M.5?:tl4bmwBrV)XG2",
+                                  "fields": {
+                                    "NUM": 1
+                                  }
+                                },
+                                "block": {
+                                  "type": "variables_get",
+                                  "id": "gYX7:$!2G6ZJU$f?AGt2",
+                                  "extraState": {
+                                  },
+                                  "fields": {
+                                    "VAR": {
+                                      "id": ",0jW@5:jPW}_i/Z5wK;r"
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound",
+                                "id": "DeJg+;oWK:xqh6e%j@#1",
+                                "fields": {
+                                  "sound": "aloe_blacc_wake_me_up/tambourine"
+                                },
+                                "inputs": {
+                                  "measure": {
+                                    "shadow": {
+                                      "type": "math_number",
+                                      "id": "Z,M.5?:tl4bmwBrV)XG2",
+                                      "fields": {
+                                        "NUM": 1
+                                      }
+                                    },
+                                    "block": {
+                                      "type": "math_arithmetic",
+                                      "id": "Gotuf}jwwlqKncJt^hh$",
+                                      "fields": {
+                                        "OP": "<field name=\"OP\">ADD</field>"
+                                      },
+                                      "inputs": {
+                                        "A": {
+                                          "shadow": {
+                                            "type": "math_number",
+                                            "id": ":0#Pag+tc=67G{cZBT4d",
+                                            "fields": {
+                                              "NUM": 1
+                                            }
+                                          },
+                                          "block": {
+                                            "type": "variables_get",
+                                            "id": "/Y_i@LH)D-tR~Fattz=_",
+                                            "extraState": {
+                                            },
+                                            "fields": {
+                                              "VAR": {
+                                                "id": ",0jW@5:jPW}_i/Z5wK;r"
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "B": {
+                                          "shadow": {
+                                            "type": "math_number",
+                                            "id": ";s]K|dHn,g~$vMsBofQp",
+                                            "fields": {
+                                              "NUM": 2
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound",
+                                    "id": "?^_66[[j~IN$_j0y6YAB",
+                                    "fields": {
+                                      "sound": "aloe_blacc_wake_me_up/main_beat"
+                                    },
+                                    "inputs": {
+                                      "measure": {
+                                        "shadow": {
+                                          "type": "math_number",
+                                          "id": "Z,M.5?:tl4bmwBrV)XG2",
+                                          "fields": {
+                                            "NUM": 1
+                                          }
+                                        },
+                                        "block": {
+                                          "type": "math_arithmetic",
+                                          "id": "/o{XHqt8kbc~M5nu2YiW",
+                                          "fields": {
+                                            "OP": "<field name=\"OP\">ADD</field>"
+                                          },
+                                          "inputs": {
+                                            "A": {
+                                              "shadow": {
+                                                "type": "math_number",
+                                                "id": ":0#Pag+tc=67G{cZBT4d",
+                                                "fields": {
+                                                  "NUM": 1
+                                                }
+                                              },
+                                              "block": {
+                                                "type": "variables_get",
+                                                "id": "`0IbXZDjjvo.B=XEO.ij",
+                                                "extraState": {
+                                                },
+                                                "fields": {
+                                                  "VAR": {
+                                                    "id": ",0jW@5:jPW}_i/Z5wK;r"
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            "B": {
+                                              "shadow": {
+                                                "type": "math_number",
+                                                "id": "_L{XppJFg79Lfv~.7H~[",
+                                                "fields": {
+                                                  "NUM": 2
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound",
+                                        "id": "vPHBLs9SrxYIA+4#|^,2",
+                                        "fields": {
+                                          "sound": "aloe_blacc_wake_me_up/vocals_ahh"
+                                        },
+                                        "inputs": {
+                                          "measure": {
+                                            "shadow": {
+                                              "type": "math_number",
+                                              "id": "Z,M.5?:tl4bmwBrV)XG2",
+                                              "fields": {
+                                                "NUM": 1
+                                              }
+                                            },
+                                            "block": {
+                                              "type": "variables_get",
+                                              "id": ".0}D+S[*JVl`=WCXoH}K",
+                                              "extraState": {
+                                              },
+                                              "fields": {
+                                                "VAR": {
+                                                  "id": ",0jW@5:jPW}_i/Z5wK;r"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "Pn1Wx#,6M7@@a`P?-QN$",
+              "x": 750,
+              "y": 110,
+              "extraState": {
+                "params": [
+                  {
+                    "name": "x",
+                    "id": ",0jW@5:jPW}_i/Z5wK;r",
+                    "argId": "?2V?gIM@q:t:^IowTE@G"
+                  }
+                ]
+              },
+              "fields": {
+                "NAME": "realization"
+              },
+              "inputs": {
+                "?2V?gIM@q:t:^IowTE@G": {
+                  "shadow": {
+                    "type": "argument_reporter",
+                    "id": "DA`cG%8fQBI7sgPm;u.L",
+                    "extraState": {
+                      "modelId": ",0jW@5:jPW}_i/Z5wK;r"
+                    },
+                    "fields": {
+                      "VAR": "x"
+                    }
+                  }
+                },
+                "STACK": {
+                  "block": {
+                    "type": "set_effect",
+                    "id": "@(mxW47z__2``wrkNK`%",
+                    "fields": {
+                      "effects_name": "<field name=\"effects_name\">volume</field>",
+                      "effects_value": "<field name=\"effects_value\">normal</field>"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound",
+                        "id": "EL_upSNzv+/ZC+]a^iYd",
+                        "fields": {
+                          "sound": "aloe_blacc_wake_me_up/vocals_chorus_2"
+                        },
+                        "inputs": {
+                          "measure": {
+                            "shadow": {
+                              "type": "math_number",
+                              "id": "Z,M.5?:tl4bmwBrV)XG2",
+                              "fields": {
+                                "NUM": 1
+                              }
+                            },
+                            "block": {
+                              "type": "variables_get",
+                              "id": "b-dqfy[#]|[tT5%,=u|7",
+                              "extraState": {
+                              },
+                              "fields": {
+                                "VAR": {
+                                  "id": ",0jW@5:jPW}_i/Z5wK;r"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound",
+                            "id": "o?+sOB.j3#bQfm.DU!I5",
+                            "fields": {
+                              "sound": "aloe_blacc_wake_me_up/guitar_chorus"
+                            },
+                            "inputs": {
+                              "measure": {
+                                "shadow": {
+                                  "type": "math_number",
+                                  "id": "Z,M.5?:tl4bmwBrV)XG2",
+                                  "fields": {
+                                    "NUM": 1
+                                  }
+                                },
+                                "block": {
+                                  "type": "variables_get",
+                                  "id": "5RQD_As/-gL#yjmC9fx-",
+                                  "extraState": {
+                                  },
+                                  "fields": {
+                                    "VAR": {
+                                      "id": ",0jW@5:jPW}_i/Z5wK;r"
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound",
+                                "id": ")9BB{E]jC+^J._d7-|po",
+                                "fields": {
+                                  "sound": "aloe_blacc_wake_me_up/strings_melody"
+                                },
+                                "inputs": {
+                                  "measure": {
+                                    "shadow": {
+                                      "type": "math_number",
+                                      "id": "Z,M.5?:tl4bmwBrV)XG2",
+                                      "fields": {
+                                        "NUM": 1
+                                      }
+                                    },
+                                    "block": {
+                                      "type": "variables_get",
+                                      "id": ")B!d}q?WF%f,TINwN_,)",
+                                      "extraState": {
+                                      },
+                                      "fields": {
+                                        "VAR": {
+                                          "id": ",0jW@5:jPW}_i/Z5wK;r"
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound",
+                                    "id": "WQpxbPlL7p]97|Z.aspK",
+                                    "fields": {
+                                      "sound": "aloe_blacc_wake_me_up/main_beat"
+                                    },
+                                    "inputs": {
+                                      "measure": {
+                                        "shadow": {
+                                          "type": "math_number",
+                                          "id": "Z,M.5?:tl4bmwBrV)XG2",
+                                          "fields": {
+                                            "NUM": 1
+                                          }
+                                        },
+                                        "block": {
+                                          "type": "variables_get",
+                                          "id": "CZ+{TB4Td:M$Z6(d:MG!",
+                                          "extraState": {
+                                          },
+                                          "fields": {
+                                            "VAR": {
+                                              "id": ",0jW@5:jPW}_i/Z5wK;r"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound",
+                                        "id": "Cc/|@,)p]ZBV*PSkf%E/",
+                                        "fields": {
+                                          "sound": "aloe_blacc_wake_me_up/main_beat"
+                                        },
+                                        "inputs": {
+                                          "measure": {
+                                            "shadow": {
+                                              "type": "math_number",
+                                              "id": "Z,M.5?:tl4bmwBrV)XG2",
+                                              "fields": {
+                                                "NUM": 1
+                                              }
+                                            },
+                                            "block": {
+                                              "type": "math_arithmetic",
+                                              "id": "*T,^_K@rlXY7{Jatx9Mu",
+                                              "fields": {
+                                                "OP": "<field name=\"OP\">ADD</field>"
+                                              },
+                                              "inputs": {
+                                                "A": {
+                                                  "shadow": {
+                                                    "type": "math_number",
+                                                    "id": ":0#Pag+tc=67G{cZBT4d",
+                                                    "fields": {
+                                                      "NUM": 1
+                                                    }
+                                                  },
+                                                  "block": {
+                                                    "type": "variables_get",
+                                                    "id": "I..?-*,l)ZF`9OAiD@0J",
+                                                    "extraState": {
+                                                    },
+                                                    "fields": {
+                                                      "VAR": {
+                                                        "id": ",0jW@5:jPW}_i/Z5wK;r"
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "B": {
+                                                  "shadow": {
+                                                    "type": "math_number",
+                                                    "id": "}u!VA=1vu46CuouET@zT",
+                                                    "fields": {
+                                                      "NUM": 2
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "set_effect",
+                                            "id": ".:1{XR7^?9_~}|dZQSbb",
+                                            "fields": {
+                                              "effects_name": "<field name=\"effects_name\">volume</field>",
+                                              "effects_value": "<field name=\"effects_value\">medium</field>"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound",
+                                                "id": ";xg%:jowhToiF`52W.JH",
+                                                "fields": {
+                                                  "sound": "groove/reggaeton_beat"
+                                                },
+                                                "inputs": {
+                                                  "measure": {
+                                                    "shadow": {
+                                                      "type": "math_number",
+                                                      "id": "Z,M.5?:tl4bmwBrV)XG2",
+                                                      "fields": {
+                                                        "NUM": 1
+                                                      }
+                                                    },
+                                                    "block": {
+                                                      "type": "variables_get",
+                                                      "id": "[gK:af-X;A+0AV8!1d4/",
+                                                      "extraState": {
+                                                      },
+                                                      "fields": {
+                                                        "VAR": {
+                                                          "id": ",0jW@5:jPW}_i/Z5wK;r"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "play_sound",
+                                                    "id": "|N8{y%%}*c[?EgW50NJi",
+                                                    "fields": {
+                                                      "sound": "groove/reggaeton_beat"
+                                                    },
+                                                    "inputs": {
+                                                      "measure": {
+                                                        "shadow": {
+                                                          "type": "math_number",
+                                                          "id": "Z,M.5?:tl4bmwBrV)XG2",
+                                                          "fields": {
+                                                            "NUM": 1
+                                                          }
+                                                        },
+                                                        "block": {
+                                                          "type": "math_arithmetic",
+                                                          "id": "(]?-B:{vv|hJ[=~#XAFV",
+                                                          "fields": {
+                                                            "OP": "<field name=\"OP\">ADD</field>"
+                                                          },
+                                                          "inputs": {
+                                                            "A": {
+                                                              "shadow": {
+                                                                "type": "math_number",
+                                                                "id": ":0#Pag+tc=67G{cZBT4d",
+                                                                "fields": {
+                                                                  "NUM": 1
+                                                                }
+                                                              },
+                                                              "block": {
+                                                                "type": "variables_get",
+                                                                "id": "(`9uz=S04+**)Qu=HB7l",
+                                                                "extraState": {
+                                                                },
+                                                                "fields": {
+                                                                  "VAR": {
+                                                                    "id": ",0jW@5:jPW}_i/Z5wK;r"
+                                                                  }
+                                                                }
+                                                              }
+                                                            },
+                                                            "B": {
+                                                              "shadow": {
+                                                                "type": "math_number",
+                                                                "id": "-[6HDy.nc$|DL@N6qpJ?",
+                                                                "fields": {
+                                                                  "NUM": 2
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "{%b}W8lHA30ujV6v*6y+",
+              "x": 390,
+              "y": 30,
+              "extraState": {
+                "params": [
+                  {
+                    "name": "x",
+                    "id": ",0jW@5:jPW}_i/Z5wK;r",
+                    "argId": "?2V?gIM@q:t:^IowTE@G"
+                  }
+                ]
+              },
+              "fields": {
+                "NAME": "intro"
+              },
+              "inputs": {
+                "?2V?gIM@q:t:^IowTE@G": {
+                  "shadow": {
+                    "type": "argument_reporter",
+                    "id": "gO1++hw4P-~W`A6oFgC4",
+                    "extraState": {
+                      "modelId": ",0jW@5:jPW}_i/Z5wK;r"
+                    },
+                    "fields": {
+                      "VAR": "x"
+                    }
+                  }
+                },
+                "STACK": {
+                  "block": {
+                    "type": "set_effect",
+                    "id": "AQG/1-;0yZo+YH,ZS]r@",
+                    "fields": {
+                      "effects_name": "<field name=\"effects_name\">volume</field>",
+                      "effects_value": "<field name=\"effects_value\">normal</field>"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound",
+                        "id": "b,Hw}r`!Fagfu8z67`My",
+                        "fields": {
+                          "sound": "aloe_blacc_wake_me_up/vocals_mmm_2"
+                        },
+                        "inputs": {
+                          "measure": {
+                            "shadow": {
+                              "type": "math_number",
+                              "id": "Z,M.5?:tl4bmwBrV)XG2",
+                              "fields": {
+                                "NUM": 1
+                              }
+                            },
+                            "block": {
+                              "type": "variables_get",
+                              "id": "m7p5,F4ipl1-Ld@v(DDX",
+                              "extraState": {
+                              },
+                              "fields": {
+                                "VAR": {
+                                  "id": ",0jW@5:jPW}_i/Z5wK;r"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound",
+                            "id": "W14nlZevSxcEU}m7ER!+",
+                            "fields": {
+                              "sound": "aloe_blacc_wake_me_up/piano_verse"
+                            },
+                            "inputs": {
+                              "measure": {
+                                "shadow": {
+                                  "type": "math_number",
+                                  "id": "|_0F80c:o^7[QeNxB%$:",
+                                  "fields": {
+                                    "NUM": 2
+                                  }
+                                },
+                                "block": {
+                                  "type": "variables_get",
+                                  "id": "RwH$3ERVt8lS5#Z|p^bm",
+                                  "extraState": {
+                                  },
+                                  "fields": {
+                                    "VAR": {
+                                      "id": ",0jW@5:jPW}_i/Z5wK;r"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "library": "launch2024",
+      "packId": "aloe_blacc_wake_me_up"
+    },
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-10-18T14:59:01.652+00:00\",\"changed\":[\"cloned from \\\"advanced-model-sandbox-mini-project-background-music-1\\\"\"],\"cloned_from\":\"advanced-model-sandbox-mini-project-background-music-1\"},{\"changed_at\":\"2024-10-18 14:59:05 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-18 15:00:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-18 15:00:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-18 15:02:51 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-18 15:08:45 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-18 15:09:19 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

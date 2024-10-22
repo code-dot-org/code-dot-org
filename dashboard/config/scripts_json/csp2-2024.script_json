@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-11 16:27:23 UTC",
+    "serialized_at": "2024-10-15 14:36:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1064,7 +1064,7 @@
       "key": "7a8ceefd-e35d-4d49-9b08-ba0bd7d21525",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** With your group follow the directions given in the box for Week 1\n\n* If you are a group of 5, everyone cross out Sunday\n* If you are a group of 4, everyone cross out Sunday and Saturday\n* Before starting to schedule each week, choose a random day of that week when you’re busy and cross it out\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Run Week 1:** Have students work on filling out their schedules, agreeing with one another on the days when they will meet. This should take 3 - 5 minutes for all groups to finish. When they're done ask students to quickly check that their schedules actually line up.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Discuss:** *With your group check that everyone's schedules match. Then discuss what worked well, what made this tricky, if there's anything you want to try differently in Week 2.*\n\nStudents do not need to share out their conversations with the class but circulate the room and listen as they discuss."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** With your group follow the directions given in the box for Week 1\n\n* If you are a group of 5, everyone cross out Sunday\n* If you are a group of 4, everyone cross out Sunday and Saturday\n* Before starting to schedule each week, each individual should choose a random day of that week when they’re busy and cross it out\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Run Week 1:** Have students work on filling out their schedules, agreeing with one another on the days when they will meet. This should take 3 - 5 minutes for all groups to finish. When they're done ask students to quickly check that their schedules actually line up.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Discuss:** *With your group check that everyone's schedules match. Then discuss what worked well, what made this tricky, if there's anything you want to try differently in Week 2.*\n\nStudents do not need to share out their conversations with the class but circulate the room and listen as they discuss."
       },
       "seeding_key": {
         "activity_section.key": "7a8ceefd-e35d-4d49-9b08-ba0bd7d21525",

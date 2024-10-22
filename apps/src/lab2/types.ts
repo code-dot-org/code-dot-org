@@ -127,6 +127,7 @@ export enum ProjectFileType {
   STARTER = 'starter',
   SUPPORT = 'support',
   VALIDATION = 'validation',
+  LOCKED_STARTER = 'locked_starter',
 }
 
 export interface ProjectFolder {
@@ -176,7 +177,7 @@ export interface LevelProperties {
   submittable?: boolean;
   finishUrl?: string;
   finishDialog?: string;
-  offerTts?: boolean;
+  offerBrowserTts?: boolean;
   validationFile?: ProjectFile;
 }
 

@@ -6,8 +6,8 @@ import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 
-import {FileUploader} from './FileUploader';
 import {
+  useFileUploader,
   useFileUploadErrorCallback,
   useHandleFileUpload,
   usePrompts,
@@ -21,34 +21,40 @@ export const FileBrowserHeaderPopUpButton = () => {
   } = useCodebridgeContext();
   const uploadErrorCallback = useFileUploadErrorCallback();
   const handleFileUpload = useHandleFileUpload(project.files);
+
+  const {startFileUpload, FileUploaderComponent} = useFileUploader({
+    callback: (fileName, contents) =>
+      handleFileUpload({
+        folderId: DEFAULT_FOLDER_ID,
+        fileName,
+        contents,
+      }),
+    errorCallback: uploadErrorCallback,
+    validMimeTypes,
+  });
   return (
-    <PopUpButton iconName="plus" alignment="left">
-      <PopUpButtonOption
-        iconName="plus"
-        labelText={codebridgeI18n.newFolder()}
-        clickHandler={() => openNewFolderPrompt({parentId: DEFAULT_FOLDER_ID})}
-      />
-      <PopUpButtonOption
-        iconName="plus"
-        labelText={codebridgeI18n.newFile()}
-        clickHandler={() => openNewFilePrompt({folderId: DEFAULT_FOLDER_ID})}
-      />
-      <FileUploader
-        validMimeTypes={validMimeTypes}
-        callback={(fileName, contents) =>
-          handleFileUpload({
-            folderId: DEFAULT_FOLDER_ID,
-            fileName,
-            contents,
-          })
-        }
-        errorCallback={uploadErrorCallback}
-      >
+    <>
+      <FileUploaderComponent />
+      <PopUpButton iconName="plus" alignment="left">
+        <PopUpButtonOption
+          iconName="plus"
+          labelText={codebridgeI18n.newFolder()}
+          clickHandler={() =>
+            openNewFolderPrompt({parentId: DEFAULT_FOLDER_ID})
+          }
+        />
+        <PopUpButtonOption
+          iconName="plus"
+          labelText={codebridgeI18n.newFile()}
+          clickHandler={() => openNewFilePrompt({folderId: DEFAULT_FOLDER_ID})}
+        />
+
         <PopUpButtonOption
           iconName="upload"
           labelText={codebridgeI18n.uploadFile()}
+          clickHandler={() => startFileUpload()}
         />
-      </FileUploader>
-    </PopUpButton>
+      </PopUpButton>
+    </>
   );
 };

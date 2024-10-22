@@ -10727,7 +10727,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-k5-getting-started
-          title: 'Getting Started with Code.org (K-5) '
+          title: Getting Started with Code.org
           description_audience: ''
           description_short: ''
           description: "**You will:**\n\n-   Get an introduction to Code.org’s mission. \n-   Learn how to navigate the Code.org website and teacher tools.\n-   Set up a classroom section.\n-   Locate and use course lesson plans and teacher resources.\n-   Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes"
@@ -17687,8 +17687,8 @@ en:
           title: Arrays and Algorithms
           description_audience: ''
           description_short: Students use one-dimensional (1D) arrays to store lists of primitive values and object references.
-          description: "This unit introduces students to data structures to store primitive values and object references. Students use one-dimensional (1D) arrays to store multiple related values while expanding their knowledge of loops and conditionals to analyze and process data in a 1D array. Students learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, students develop and modify algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. While developing algorithms, students identify preconditions and postconditions and implement solutions to ensure that these conditions are satisfied. Students continue to develop software engineering skills as they learn to make design decisions and use 1D arrays to store and analyze data.\n\n### \U0001F3AF Unit Objectives\n\n_By the end of this unit, students will be able to . . ._\n\n-   Declare and initialize one-dimensional (1D) arrays to store primitive values and objects using the `new` keyword and initializer lists\n\n-   Traverse the elements in one-dimensional (1D) arrays using `for` loops, `while` loops, and enhanced `for` loops\n\n-   Write algorithms to find and modify elements in one-dimensional (1D) arrays\n\n-   Implement solutions to satisfy the preconditions and postconditions of an algorithm\n\n-   Debug common errors that occur when traversing one-dimensional (1D) arrays\n\n-   Use polymorphism to create and traverse one-dimensional (1D) arrays of a superclass type\n\n### ✅ AP Classroom Personal Progress Checks\n\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's <a href=\"https://studio.code.org/s/csa2-2023/standards\" target=\"_blank\"><strong>Standards</strong></a> page. You can find instructions and video demonstrations to do this on <a href=\"https://apcentral.collegeboard.org/instructional-resources/ap-classroom\" target=\"_blank\"><strong>AP Central</strong></a>.\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n-   Personal Progress Check 4\n\n-   Personal Progress Check 6\n\n<p><em><strong>Note:</strong> Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.</em></p>\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][0] to let the Code.org curriculum team know how the unit went."
-          student_description: "This unit introduces you to data structures to store primitive values and object references. You use one-dimensional (1D) arrays to store multiple related values while expanding your knowledge of loops and conditionals to analyze and process data in a 1D array. You learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, you develop and modify algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. While developing algorithms, you identify preconditions and postconditions and implement solutions to ensure that these conditions are satisfied. You continue to develop software engineering skills as you learn to make design decisions and use 1D arrays to store and analyze data.\n\n### \U0001F3AF Unit Objectives\n\n_By the end of this unit, you will be able to . . ._\n\n-   Declare and initialize one-dimensional (1D) arrays to store primitive values and objects using the `new` keyword and initializer lists\n\n-   Traverse the elements in one-dimensional (1D) arrays using `for` loops, `while` loops, and enhanced `for` loops\n\n-   Write algorithms to find and modify elements in one-dimensional (1D) arrays\n\n-   Implement solutions to satisfy the preconditions and postconditions of an algorithm\n\n-   Debug common errors that occur when traversing one-dimensional (1D) arrays\n\n-   Use polymorphism to create and traverse one-dimensional (1D) arrays of a superclass type"
+          description: "This unit introduces students to data structures and algorithms that allow for efficient data processing and analysis. Students explore one-dimensional (1D) arrays to store and manipulate both primitive values and object references, applying control structures like loops and conditionals to traverse arrays and implement algorithms. As they develop algorithms, students identify and implement solutions that satisfy preconditions and postconditions. In addition to core technical skills, the unit introduces ethical considerations in data collections, addressing the impact of biased data on fairness and accuracy. By the end of the unit, students develop the skills to design and implement algorithms that work with 1D arrays while considering both technical and ethical dimensions of software engineering.\n\n### \U0001F3AF Unit Objectives\n\n_By the end of this unit, students will be able to . . ._\n\n-   Declare and initialize one-dimensional (1D) arrays to store primitive values and objects using the `new` keyword and initializer lists\n\n-   Traverse the elements in one-dimensional (1D) arrays using `for` loops, `while` loops, and enhanced `for` loops\n\n-   Write algorithms to find and modify elements in one-dimensional (1D) arrays\n\n-   Implement solutions to satisfy the preconditions and postconditions of an algorithm\n\n-   Debug common errors that occur when traversing one-dimensional (1D) arrays\n\n-   Use polymorphism to create and traverse one-dimensional (1D) arrays of a superclass type\n\n-   Apply nested loops to implement more complex algorithms with one-dimensional (1D) arrays\n\n-   Use the `equals()` method to compare `String` objects for equality when working with arrays\n\n-   Analyze ethical and social issues around data collection, including the impact of biased data on program fairness and accuracy\n\n-   Differentiate between executing a return statement inside a loop and at the end of a method\n\n### ✅ AP Classroom Personal Progress Checks\n\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's <a href=\"https://studio.code.org/s/csa2-2023/standards\" target=\"_blank\"><strong>Standards</strong></a> page. You can find instructions and video demonstrations to do this on <a href=\"https://apcentral.collegeboard.org/instructional-resources/ap-classroom\" target=\"_blank\"><strong>AP Central</strong></a>.\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n-   Personal Progress Check 4\n\n-   Personal Progress Check 6\n\n<p><em><strong>Note:</strong> Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.</em></p>\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][0] to let the Code.org curriculum team know how the unit went."
+          student_description: "This unit introduces students to data structures and algorithms that allow for efficient data processing and analysis. You explore one-dimensional (1D) arrays to store and manipulate both primitive values and object references, applying control structures like loops and conditionals to traverse arrays and implement algorithms. As you develop algorithms, you identify and implement solutions that satisfy preconditions and postconditions. In addition to core technical skills, the unit introduces ethical considerations in data collections, addressing the impact of biased data on fairness and accuracy. By the end of the unit, you develop the skills to design and implement algorithms that work with 1D arrays while considering both technical and ethical dimensions of software engineering.\n\n### \U0001F3AF Unit Objectives\n\n_By the end of this unit, you will be able to . . ._\n\n-   Declare and initialize one-dimensional (1D) arrays to store primitive values and objects using the `new` keyword and initializer lists\n\n-   Traverse the elements in one-dimensional (1D) arrays using `for` loops, `while` loops, and enhanced `for` loops\n\n-   Write algorithms to find and modify elements in one-dimensional (1D) arrays\n\n-   Implement solutions to satisfy the preconditions and postconditions of an algorithm\n\n-   Debug common errors that occur when traversing one-dimensional (1D) arrays\n\n-   Use polymorphism to create and traverse one-dimensional (1D) arrays of a superclass type\n\n-   Apply nested loops to implement more complex algorithms with one-dimensional (1D) arrays\n\n-   Use the `equals()` method to compare `String` objects for equality when working with arrays\n\n-   Analyze ethical and social issues around data collection, including the impact of biased data on program fairness and accuracy\n\n-   Differentiate between executing a return statement inside a loop and at the end of a method"
         csa4-pilot-2025:
           lessons: {}
           lesson_groups:
@@ -17860,11 +17860,11 @@ en:
               name: Teaching Resources
           lesson_groups: {}
           name: self-paced-gen-ai-2024
-          title: Generative AI Self-Paced Professional Learning
+          title: Exploring Generative AI Self-Paced Professional Learning
           description_audience: ''
           description_short: ''
-          description: "## Welcome!\n\n##### This professional learning module is designed to help you prepare to teach Code.org’s Generative AI unit.\n\n##### The Generative AI unit is designed as standalone coursework for 6-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Computer Vision Unit. "
-          student_description: ''
+          description: "## Welcome!\n\n##### This professional learning module is designed to help you prepare to teach Code.org’s Exploring Generative AI course.\n\n##### Exploring Generative AI is designed as standalone coursework for 8-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to the Foundations of Generative AI Unit. "
+          student_description: "## Welcome!\n\n##### This professional learning module is designed to help you prepare to teach Code.org’s Exploring Generative AI course.\n\n##### Exploring Generative AI is designed as standalone coursework for 8-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to the Foundations of Generative AI Unit. "
         music-ai-2024:
           lessons:
             lesson-1:
@@ -18065,6 +18065,12 @@ en:
               name: Functionsl
             lesson-4:
               name: Loops
+            lesson-5:
+              name: 'Mini-Project: Simple Melody Generator'
+            lesson-6:
+              name: 'Mini-Project: Rhythm Game Prototype'
+            lesson-7:
+              name: 'Mini-Project: Dynamic Background Music for a Skit'
           lesson_groups: {}
           name: music-lab-advanced-model-sandbox
           title: "[Sandbox] Advanced Model"
@@ -18315,6 +18321,36 @@ en:
           lesson_groups: {}
           name: tessnew-2024
           title: 'Tess test '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hoc-music-ai-pilot-4:
+          lessons: {}
+          lesson_groups: {}
+          name: hoc-music-ai-pilot-4
+          title: 'Playtest 4 (PDX) - Music Lab: A.I. Edition for Hour of Code'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-exploring-gen-ai:
+          lessons:
+            lesson-1:
+              name: Introduction to Generative AI
+            lesson-2:
+              name: Foundations of Generative AI
+            lesson-3:
+              name: Customizing Large Language Models
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Introduction to Generative AI
+            lessonGroup-2:
+              display_name: Foundations of Generative AI
+            lessonGroup-4:
+              display_name: Customizing Large Language Models
+          name: self-paced-pl-exploring-gen-ai
+          title: Exploring Generative AI
           description_audience: ''
           description_short: ''
           description: ''

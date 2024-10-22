@@ -615,6 +615,9 @@ p.aiAssessmentScoreText {
   strong::after {
     content: ' ';
   }
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 p.aiAssessmentEvidenceBlock {

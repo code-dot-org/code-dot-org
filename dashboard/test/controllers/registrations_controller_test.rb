@@ -301,14 +301,12 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal ["Age is required"], assigns(:user).errors.full_messages
   end
 
-  test "create does not allow pandas in name" do
+  test "create does allow pandas in name" do
     params_with_panda_name = @default_params.update(name: panda_panda)
 
-    assert_does_not_create(User) do
+    assert_creates(User) do
       post :create, params: {user: params_with_panda_name}
     end
-
-    assert_equal ["Display Name is invalid"], assigns(:user).errors.full_messages
   end
 
   test "create does not allow pandas in email" do
@@ -587,12 +585,11 @@ class RegistrationsControllerTest < ActionController::TestCase
     end
   end
 
-  test "create does not allow pandas in name [new sign up flow]" do
+  test "create allows pandas in name [new sign up flow]" do
     params_with_panda_name = set_up_partial_registration(@default_params.update(name: panda_panda))
 
-    assert_does_not_create(User) do
-      exception = assert_raise(Exception) {post :create, params: {new_sign_up: true, user: params_with_panda_name}}
-      assert_equal("Validation failed: Display Name is invalid", exception.message)
+    assert_creates(User) do
+      post :create, params: {new_sign_up: true, user: params_with_panda_name}
     end
   end
 

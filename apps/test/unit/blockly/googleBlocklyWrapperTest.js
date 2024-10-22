@@ -1,4 +1,4 @@
-import GoogleBlockly from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {READ_ONLY_PROPERTIES} from '@cdo/apps/blockly/constants';
@@ -10,7 +10,9 @@ import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-re
 describe('Google Blockly Wrapper', () => {
   const cdoBlockly = Blockly;
   beforeEach(() => {
-    GoogleBlockly.JavaScript = sinon.spy();
+    if (GoogleBlockly.JavaScript) {
+      sinon.stub(GoogleBlockly, 'JavaScript');
+    }
     Blockly = initializeGoogleBlocklyWrapper(GoogleBlockly); // eslint-disable-line no-global-assign
   });
   afterEach(() => {

@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Foundations of Generative AI
 
-<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="AI bot and a model card" style="border-radius:40px; float: right; padding-right: 20px; height: 150px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="AI bot" style="border-radius:40px; float: right; padding-right: 20px; height: 150px; clear: both; margin: 0 20px 20px 0;">
 
 #### This unit aims to build a foundational understanding of text-based generative AI models, focusing on core concepts over technical skills.
 #### Students will demystify generative AI models by exploring their internal structures through the familiar lens of input, storage, process, and output. They will gain insights into how these models represent language, the impact of training data on model performance, and the potential for bias.
@@ -19,6 +19,6 @@ markdown <<MARKDOWN
 - #### Preview activities in the lessons
 
 
-### **Suggested time:** 30 minutes
+### **Suggested time:** 40 minutes
 
 MARKDOWN

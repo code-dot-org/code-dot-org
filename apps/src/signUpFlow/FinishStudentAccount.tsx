@@ -20,15 +20,20 @@ import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 import {navigateToHref} from '../utils';
 
 import locale from './locale';
-import {EMAIL_SESSION_KEY} from './signUpFlowConstants';
+import {
+  EMAIL_SESSION_KEY,
+  USER_RETURN_TO_SESSION_KEY,
+  clearSignUpSessionStorage,
+} from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
 
 const FinishStudentAccount: React.FunctionComponent<{
   ageOptions: {value: string; text: string}[];
   usIp: boolean;
+  countryCode: string;
   usStateOptions: {value: string; text: string}[];
-}> = ({ageOptions, usIp, usStateOptions}) => {
+}> = ({ageOptions, usIp, countryCode, usStateOptions}) => {
   // Fields
   const [isParent, setIsParent] = useState(false);
   const [parentEmail, setParentEmail] = useState('');
@@ -47,6 +52,7 @@ const FinishStudentAccount: React.FunctionComponent<{
   const [gdprChecked, setGdprChecked] = useState(false);
   const [showGDPR, setShowGDPR] = useState(false);
   const [isGdprLoaded, setIsGdprLoaded] = useState(false);
+  const [userReturnTo, setUserReturnTo] = useState('/home');
 
   useEffect(() => {
     const fetchGdprData = async () => {
@@ -67,6 +73,11 @@ const FinishStudentAccount: React.FunctionComponent<{
       }
     };
     fetchGdprData();
+
+    const userReturnToHref = sessionStorage.getItem(USER_RETURN_TO_SESSION_KEY);
+    if (userReturnToHref) {
+      setUserReturnTo(userReturnToHref);
+    }
   }, []);
 
   // GDPR is valid if
@@ -163,6 +174,7 @@ const FinishStudentAccount: React.FunctionComponent<{
         age: age,
         gender: gender,
         us_state: state,
+        country_code: countryCode,
         parent_email_preference_email: parentEmail,
         parent_email_preference_opt_in: parentEmailOptInChecked,
       },
@@ -177,7 +189,8 @@ const FinishStudentAccount: React.FunctionComponent<{
       body: JSON.stringify(signUpParams),
     });
 
-    navigateToHref('/home');
+    clearSignUpSessionStorage(false);
+    navigateToHref(userReturnTo);
   };
 
   return (
@@ -244,6 +257,7 @@ const FinishStudentAccount: React.FunctionComponent<{
           <div>
             <SimpleDropdown
               name="userAge"
+              className={style.dropdownContainer}
               labelText={locale.what_is_your_age()}
               size="m"
               items={ageOptions}
@@ -260,6 +274,7 @@ const FinishStudentAccount: React.FunctionComponent<{
             <div>
               <SimpleDropdown
                 name="userState"
+                className={style.dropdownContainer}
                 labelText={locale.what_state_are_you_in()}
                 size="m"
                 items={usStateOptions}
