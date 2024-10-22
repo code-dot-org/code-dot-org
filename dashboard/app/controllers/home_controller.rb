@@ -20,6 +20,8 @@ class HomeController < ApplicationController
   skip_before_action :initialize_statsig_session, only: [:health_check]
 
   def set_locale
+    params[:locale], ge_region = params[:locale]&.split('|')
+
     set_locale_cookie(params[:locale]) if params[:locale]
     redirect_path = if params[:i18npath]
                       "/#{params[:i18npath]}"
@@ -30,6 +32,26 @@ class HomeController < ApplicationController
                     end
     # Query parameter for browser cache to be avoided and load new locale
     redirect_path = "#{redirect_path}?lang=#{params[:locale]}" if params[:locale]
+
+    unless ge_region == helpers.ge_region
+      redirect_uri = URI(redirect_path)
+      redirect_params = URI.decode_www_form(redirect_uri.query.to_s).to_h
+      redirect_params[Rack::GlobalEdition::REGION_KEY] = ge_region
+      redirect_uri.query = URI.encode_www_form(redirect_params).presence
+      redirect_path = redirect_uri.to_s
+
+      Metrics::Events.log_event(
+        user: current_user,
+        event_name: 'Global Edition Region And Locale Changed',
+        metadata: {
+          country: request.country_code,
+          locale: params[:locale],
+          region: ge_region,
+          prevRegion: helpers.ge_region,
+        }
+      )
+    end
+
     redirect_to redirect_path
   rescue URI::InvalidURIError
     redirect_to '/'

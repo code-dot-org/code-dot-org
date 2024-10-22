@@ -4,7 +4,7 @@
   user_type = "student" if user_type == "student_y"
 
   # Forcibly set the 'ge_region' parameter to Farsi
-  params[:ge_region] = 'fa'
+  cookies[Rack::GlobalEdition::REGION_KEY] = 'fa'
 
   hamburger_options = {}
   hamburger_options[:level] = nil
