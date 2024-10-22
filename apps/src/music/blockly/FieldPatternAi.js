@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 
+import {PATTERN_AI_NUM_SEED_EVENTS} from '../constants';
 import {generateGraphDataFromPattern} from '../utils/Patterns';
 import PatternAiPanel from '../views/PatternAiPanel';
 
@@ -97,6 +98,7 @@ class FieldPatternAi extends GoogleBlockly.Field {
 
     this.newDiv_.style.color = color.neutral_light;
     this.newDiv_.style.width = '900px';
+    this.newDiv_.style.height = '274px';
     this.newDiv_.style.backgroundColor = color.dark_black;
     this.newDiv_.style.padding = '5px';
 
@@ -158,7 +160,10 @@ class FieldPatternAi extends GoogleBlockly.Field {
       GoogleBlockly.utils.dom.createSvgElement(
         'rect',
         {
-          fill: graphNote.tick < 9 ? '#fca401' : color.neutral_light,
+          fill:
+            graphNote.tick <= PATTERN_AI_NUM_SEED_EVENTS
+              ? '#fca401'
+              : color.ai_rubric_cyan,
           x: graphNote.x,
           y: graphNote.y,
           width: graphNote.width,

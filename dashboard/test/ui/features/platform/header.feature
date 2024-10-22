@@ -48,6 +48,7 @@ Feature: Header navigation bar
     And element "#header-student-projects" contains text "Projects"
     And I see "#header-incubator"
     And element "#header-incubator" contains text "Incubator"
+    And I sign out
 
   Scenario: Teacher in English should see 5 header links
     Given I create a teacher named "Tessa Teacher" and go home
@@ -62,6 +63,7 @@ Feature: Header navigation bar
     And element "#header-teacher-professional-learning" contains text "Professional Learning"
     And I see "#header-teacher-incubator"
     And element "#header-teacher-incubator" contains text "Incubator"
+    And I sign out
 
   Scenario: Signed out user in Spanish should see 7 header links
     Given I am on "http://code.org/lang/es"
@@ -97,6 +99,7 @@ Feature: Header navigation bar
     And element "#header-student-projects" has "es" text from key "nav.header.project_gallery"
     And I see "#header-incubator"
     And element "#header-incubator" has "es" text from key "nav.header.incubator"
+    And I sign out
 
   Scenario: Teacher in Spanish should see 5 header links
     Given I create a teacher named "Pabla Profesora"
@@ -113,6 +116,7 @@ Feature: Header navigation bar
     And element "#header-teacher-professional-learning" has "es" text from key "nav.header.professional_learning"
     And I see "#header-teacher-incubator"
     And element "#header-teacher-incubator" has "es" text from key "nav.header.incubator"
+    And I sign out
 
   @chrome
   Scenario: Teacher can click on the header links
@@ -135,6 +139,7 @@ Feature: Header navigation bar
     # The logo itself
     And I press "logo_home_link" to load a new page
     Then check that I am on "http://studio.code.org/home"
+    And I sign out
 
   @chrome
   Scenario: Student can click on the header links
@@ -155,6 +160,7 @@ Feature: Header navigation bar
     # The logo itself
     And I press "logo_home_link" to load a new page
     Then check that I am on "http://studio.code.org/home"
+    And I sign out
 
   @chrome
   Scenario: Signed out user can click on the header links

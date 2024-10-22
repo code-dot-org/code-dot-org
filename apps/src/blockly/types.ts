@@ -57,10 +57,18 @@ export interface SerializedFields {
   };
 }
 
+interface AnalyticsData {
+  appType: string;
+  scriptName?: string;
+  scriptId?: number;
+  levelId?: number;
+}
+
 type GoogleBlocklyType = typeof GoogleBlockly;
 
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
+  analyticsData: AnalyticsData;
   showUnusedBlocks: boolean | undefined;
   BlockFieldHelper: {[fieldHelper: string]: string};
   enableParamEditing: boolean;
@@ -263,6 +271,7 @@ export interface ExtendedBlocklyOptions extends GoogleBlockly.BlocklyOptions {
   grayOutUndeletableBlocks: boolean | undefined;
   disableParamEditing: boolean;
   showUnusedBlocks: boolean | undefined;
+  analyticsData: AnalyticsData;
 }
 
 export interface ExtendedWorkspace extends GoogleBlockly.Workspace {

@@ -406,8 +406,7 @@ const EVENTS = {
   AICHAT_START_OVER: 'Student starts over and resets to default model settings',
   SUBMIT_AICHAT_REQUEST_SUCCESS: 'User submits aichat request successfully',
   SUBMIT_AICHAT_REQUEST_UNAUTHORIZED:
-    'Unauthorized user attempts to submit aichat request and fails',
-
+    'Unauthorized user attempts to submit aichat request or model customizations and fails',
   // Codebridge - File broswer-related events
   CODEBRIDGE_DELETE_FILE: 'Delete file on codebridge',
   CODEBRIDGE_DELETE_FOLDER: 'Delete folder on codebridge',
@@ -436,6 +435,14 @@ const EVENTS = {
     'Toggled to For Teachers Only on codebridge',
   CODEBRIDGE_INSTRUCTIONS_TOGGLE: 'Toggled to Instructions on codebridge',
   CODEBRIDGE_HELP_TIPS_TOGGLE: 'Toggled to Help and Tips on codebridge',
+
+  // Blockly Lab Settings
+  BLOCKLY_LAB_SETTING_CHANGED: 'Setting changed in Blockly Lab',
+  BLOCKLY_SETTING_KEYBOARD_NAVIGATION: 'keyboardNavigation',
+  BLOCKLY_SETTING_THEME: 'theme',
+  BLOCKLY_SETTING_ON: 'on',
+  BLOCKLY_SETTING_OFF: 'off',
+  BLOCKLY_APP_TYPE_MUSIC: 'music',
 };
 
 const EVENT_GROUP_NAMES = {
