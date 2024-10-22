@@ -3838,10 +3838,12 @@ class UserTest < ActiveSupport::TestCase
         user_type: 'student'
       },
     )
-    params = {}
+    params = {
+      'roster_synced' => true
+    }
 
     assert_creates(User) do
-      user = User.from_omniauth(auth, params, roster_sync: true)
+      user = User.from_omniauth(auth, params)
       assert_equal 'migrated', user.provider
       assert_equal 'Some User', user.name
       assert_equal 'google_oauth2', user.primary_contact_info.credential_type

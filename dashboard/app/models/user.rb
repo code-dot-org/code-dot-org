@@ -863,13 +863,12 @@ class User < ApplicationRecord
   end
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
-  def self.from_omniauth(auth, params, session = nil, roster_sync: false)
+  def self.from_omniauth(auth, params, session = nil)
     omniauth_user = find_by_credential(type: auth.provider, id: auth.uid)
 
     unless omniauth_user
       omniauth_user = create
       initialize_new_oauth_user(omniauth_user, auth, params)
-      omniauth_user.roster_synced = true if roster_sync
       omniauth_user.save
       SignUpTracking.log_sign_up_result(omniauth_user, session)
     end
@@ -911,6 +910,7 @@ class User < ApplicationRecord
 
     user.gender_third_party_input = auth.info.gender
     user.gender = Policies::Gender.normalize auth.info.gender
+    user.roster_synced = params['roster_synced'] || false
   end
 
   def oauth?
