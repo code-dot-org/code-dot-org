@@ -1,12 +1,9 @@
 import classNames from 'classnames';
-import React, {useCallback, useContext, useEffect, useRef} from 'react';
+import React, {useContext, useEffect, useMemo, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
-import {
-  navigateToNextLevel,
-  sendSubmitReport,
-} from '@cdo/apps/code-studio/progressRedux';
+import {sendSubmitReport} from '@cdo/apps/code-studio/progressRedux';
 import {
   getCurrentLevel,
   nextLevelId,
@@ -14,6 +11,7 @@ import {
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {
   isPredictAnswerLocked,
   setPredictResponse,
@@ -27,7 +25,6 @@ import {ThemeContext} from '@cdo/apps/lab2/views/ThemeWrapper';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {navigateToHref, linkWithQueryParams} from '@cdo/apps/utils';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import commonI18n from '@cdo/locale';
 
@@ -100,35 +97,32 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
 
   const appType = useAppSelector(state => state.lab.levelProperties?.appName);
   const isValidating = useAppSelector(state => state.lab2System.isValidating);
-  const isLoadingEnvironment = useAppSelector(
-    state => state.lab2System.loadingCodeEnvironment
+  const hasLoadedEnvironment = useAppSelector(
+    state => state.lab2System.loadedCodeEnvironment
   );
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
-  const shouldValidateBeDisabled = isLoadingEnvironment || isRunning;
+  const shouldValidateBeDisabled = !hasLoadedEnvironment || isRunning;
 
-  const scriptName =
-    useAppSelector(state => state.progress.scriptName) || undefined;
+  const currentLevel = useAppSelector(state => getCurrentLevel(state));
+  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
+
+  // The icon in the validated instructions panel should match the icon in the
+  // header.
+  const passedStatuses = [
+    LevelStatus.perfect,
+    LevelStatus.submitted,
+    LevelStatus.passed,
+    LevelStatus.free_play_complete,
+    LevelStatus.completed_assessment,
+  ];
+  const showPassedIcon =
+    currentLevel && passedStatuses.includes(currentLevel.status);
 
   const dispatch = useAppDispatch();
 
   const {theme} = useContext(ThemeContext);
 
   const vertical = layout === 'vertical';
-
-  const onFinish = () => {
-    // No-op if there's no script. Students/teachers should always be
-    // accessing the level from a script.
-    if (scriptName) {
-      navigateToHref(linkWithQueryParams(`/s/${scriptName}`));
-    }
-  };
-
-  const onNextPanel = useCallback(() => {
-    if (beforeNextLevel) {
-      beforeNextLevel();
-    }
-    dispatch(navigateToNextLevel());
-  }, [dispatch, beforeNextLevel]);
 
   const onSubmit = () => {
     const dialogTitle = hasSubmitted
@@ -145,13 +139,15 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     });
   };
 
-  const handleSubmit = () => {
-    dispatch(
-      sendSubmitReport({appType: appType || '', submitted: !hasSubmitted})
+  const handleSubmit = async () => {
+    // We either submit or unsubmit the project, depending on the current state.
+    const submit = !hasSubmitted;
+    await dispatch(
+      sendSubmitReport({appType: appType || '', submitted: submit})
     );
-    // Go to the next level if we have one and we just submitted.
-    if (hasNextLevel && !hasSubmitted) {
-      onNextPanel();
+    // If we just submitted, continue or finish the lesson.
+    if (submit) {
+      dispatch(continueOrFinishLesson());
     }
   };
 
@@ -177,11 +173,20 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     }
   };
 
-  // There are two ways to "meet validation" for a level:
-  // If the level has conditions, they must be satisfied.
-  // If the level has no conditions, the user must run their code at least once.
-  const hasMetValidation =
-    (!hasConditions && hasRun) || (hasConditions && satisfied);
+  // There are 3 ways to "meet validation" for a level:
+  // If the level is a predict level, the user must run the code.
+  // Otherwise, if the level has conditions, they must be satisfied.
+  // If the level has no conditions and is not a predict level,
+  // the user must run their code at least once.
+  const hasMetValidation = useMemo(() => {
+    if (predictSettings?.isPredictLevel) {
+      return hasRun;
+    } else if (hasConditions) {
+      return satisfied;
+    } else {
+      return hasRun && hasEdited;
+    }
+  }, [predictSettings, hasConditions, satisfied, hasRun, hasEdited]);
 
   /**
    * Returns the props for the navigation (continue/finish/submit/unsubmit)
@@ -219,7 +224,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
       return {
         showNavigation,
         navigationText: commonI18n.continue(),
-        handleNavigation: onNextPanel,
+        handleNavigation: () => dispatch(continueOrFinishLesson()),
         navigationIcon: {iconName: 'arrow-right', iconStyle: 'solid'},
       };
     } else {
@@ -227,7 +232,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
       return {
         showNavigation,
         navigationText: commonI18n.finish(),
-        handleNavigation: onFinish,
+        handleNavigation: () => dispatch(continueOrFinishLesson()),
       };
     }
   };
@@ -283,8 +288,6 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
       );
     }
   }, [validationResults]);
-
-  const showPassedIcon = hasMetValidation || hasSubmitted;
 
   // Don't render anything if we don't have any instructions.
   if (instructionsText === undefined) {

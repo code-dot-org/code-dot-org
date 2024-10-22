@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "foundations-gen-ai",
-    "serialized_at": "2024-10-10 19:43:50 UTC",
+    "serialized_at": "2024-10-18 19:57:14 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3452,6 +3452,45 @@
       }
     },
     {
+      "name": "[For Teachers] Activity Overview - Attention is All You Need",
+      "url": "https://youtu.be/6A2GHAE3iHg",
+      "key": "_for_teachers_activity_overview_-_attention_is_all_you_need",
+      "properties": {
+        "audience": "Verified Teacher",
+        "download_url": "https://videos.code.org/levelbuilder/lesson_8_attention_v2-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "_for_teachers_activity_overview_-_attention_is_all_you_need"
+      }
+    },
+    {
+      "name": "[For Teachers] Activity Overview - How Embeddings Work",
+      "url": "https://youtu.be/DDnETR6vPcs",
+      "key": "_for_teachers_activity_overview_-_how_embeddings_work",
+      "properties": {
+        "audience": "Verified Teacher",
+        "download_url": "https://videos.code.org/levelbuilder/lesson_5_how_embeddings_are_made_v2-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "_for_teachers_activity_overview_-_how_embeddings_work"
+      }
+    },
+    {
+      "name": "[For Teachers] Activity Overview - How Neural Networks Work",
+      "url": "https://youtu.be/yN2-ll6ZVJ8",
+      "key": "_for_teachers_activity_overview_-_how_neural_networks_work",
+      "properties": {
+        "audience": "Verified Teacher",
+        "download_url": "https://videos.code.org/levelbuilder/lesson_7learning_neural_networks_v2-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "_for_teachers_activity_overview_-_how_neural_networks_work"
+      }
+    },
+    {
       "name": "[For Teachers] Behind the Activity",
       "url": "https://docs.google.com/document/d/1r3bQUafEdjoN2flf-htXkO0iYCIBrW5-_NtQCQMoedU/edit",
       "key": "_for_teachers_behind_the_activity",
@@ -3497,6 +3536,19 @@
       },
       "seeding_key": {
         "resource.key": "_key_learning_a_language"
+      }
+    },
+    {
+      "name": "[For Teachers] Activity Overview - Understanding Embeddings",
+      "url": "https://youtu.be/QjtYSpgiKXY",
+      "key": "activity_overview_-_understanding_embeddings",
+      "properties": {
+        "audience": "Verified Teacher",
+        "download_url": "https://videos.code.org/levelbuilder/lesson_4_understanding_embeddings_v2-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "activity_overview_-_understanding_embeddings"
       }
     },
     {
@@ -4135,6 +4187,12 @@
     {
       "seeding_key": {
         "lesson.key": "Attention Is All You Need",
+        "resource.key": "_for_teachers_activity_overview_-_attention_is_all_you_need"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Attention Is All You Need",
         "resource.key": "attention_is_all_you_need"
       }
     },
@@ -4166,6 +4224,12 @@
       "seeding_key": {
         "lesson.key": "Embeddings: How They're Created",
         "resource.key": "_exemplar_foundations_of_generative_ai_graphic_organizer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Embeddings: How They're Created",
+        "resource.key": "_for_teachers_activity_overview_-_how_embeddings_work"
       }
     },
     {
@@ -4297,6 +4361,12 @@
     {
       "seeding_key": {
         "lesson.key": "Neural Networks: How They're Trained",
+        "resource.key": "_for_teachers_activity_overview_-_how_neural_networks_work"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Neural Networks: How They're Trained",
         "resource.key": "_for_teachers_behind_the_activity"
       }
     },
@@ -4418,6 +4488,12 @@
       "seeding_key": {
         "lesson.key": "Understanding Embeddings",
         "resource.key": "_exemplar_foundations_of_generative_ai_graphic_organizer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Embeddings",
+        "resource.key": "activity_overview_-_understanding_embeddings"
       }
     },
     {

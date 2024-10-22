@@ -1,4 +1,3 @@
-@no_safari
 Feature: After completing the Hour of Code, the player is directed to a congratulations page
 
 Scenario: Completing Minecraft HoC should go to certificate page and generate a certificate
@@ -169,7 +168,6 @@ Scenario: congrats certificate pages
   And I wait to see element with ID "uitest-certificate"
   And element "#uitest-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
-  And I wait until element ".fa-facebook" is visible
   And I wait until element ".fa-twitter" is visible
   And I wait for 5 seconds
   And I see no difference for "uncustomized flappy certificate"
@@ -185,7 +183,6 @@ Scenario: congrats certificate pages
   And I wait to see element with ID "uitest-certificate"
   And element "#uitest-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
-  And I wait until element ".fa-facebook" is visible
   And I wait until element ".fa-twitter" is visible
   And I wait for 5 seconds
   And I see no difference for "uncustomized oceans certificate"
@@ -201,7 +198,6 @@ Scenario: congrats certificate pages
   And I wait to see element with ID "uitest-certificate"
   And element "#uitest-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
-  And I wait until element ".fa-facebook" is visible
   And I wait until element ".fa-twitter" is visible
   And I wait for 5 seconds
   And I see no difference for "uncustomized 20-hour certificate"
@@ -220,7 +216,6 @@ Scenario: congrats certificate pages
   And I wait to see element with ID "uitest-certificate"
   And element "#uitest-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
-  And I wait until element ".fa-facebook" is visible
   And I wait until element ".fa-twitter" is visible
   And I wait for 5 seconds
   And I see no difference for "uncustomized Course A 2017 certificate"
@@ -237,7 +232,6 @@ Scenario: congrats certificate pages show social media icons
   Given I am on "http://studio.code.org/congrats"
   And I wait until element "#uitest-certificate" is visible
   And element "#uitest-certificate" is visible
-  And I wait until element ".fa-facebook" is visible
   And I wait until element ".fa-twitter" is visible
   Then the href of selector ".social-print-link" contains "/print_certificates/"
 
@@ -246,7 +240,6 @@ Scenario: congrats certificate pages show social media icons
   And I wait to see element with ID "uitest-certificate"
   And element "#uitest-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
-  And I wait until element ".fa-facebook" is visible
   And I wait until element ".fa-twitter" is visible
   Then the href of selector ".social-print-link" contains "/print_certificates/"
 
@@ -255,7 +248,6 @@ Scenario: congrats certificate pages show social media icons
   And I wait to see element with ID "uitest-certificate"
   And element "#uitest-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
-  And I wait until element ".fa-facebook" is visible
   And I wait until element ".fa-twitter" is visible
   Then the href of selector ".social-print-link" contains "/print_certificates/"
 
@@ -264,7 +256,6 @@ Scenario: congrats certificate pages show social media icons
   And I wait to see element with ID "uitest-certificate"
   And element "#uitest-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
-  And I wait until element ".fa-facebook" is visible
   And I wait until element ".fa-twitter" is visible
   Then the href of selector ".social-print-link" contains "/print_certificates/"
 
@@ -273,6 +264,5 @@ Scenario: congrats certificate pages show social media icons
   And I wait to see element with ID "uitest-certificate"
   And element "#uitest-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
-  And I wait until element ".fa-facebook" is visible
   And I wait until element ".fa-twitter" is visible
   Then the href of selector ".social-print-link" contains "/print_certificates/"

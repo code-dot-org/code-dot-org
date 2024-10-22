@@ -25,10 +25,10 @@
       "body": "Autobots, roll out! In this Transformers One-themed introduction to our Sprite Lab, students learn the basics of computer science by building fun, interactive projects.",
       "buttonText": "Try it now"
     },
-    "access-report-launch-2024": {
-      "title": "The 2024 State of Computer Science Report is here!",
-      "body": "Check out the latest data on national and state-level computer science education policy, including policy trends, maps, state summaries, and implementation data.",
-      "buttonText": "Read the report"
+    "gen-ai-launch-2024": {
+      "title": "Exploring Generative AI",
+      "body": "Prepare your students for the future with an engaging curriculum that demystifies generative AI. Through hands-on projects and ethical discussions, students gain the skills to become creators and critical thinkers in an AI-powered world.",
+      "buttonText": "Learn more"
     }
   }
 }

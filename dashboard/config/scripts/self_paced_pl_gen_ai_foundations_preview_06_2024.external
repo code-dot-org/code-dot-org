@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 ## Lesson Highlight: Mad Lib Activity
 
-<img src="https://images.code.org/01fd008e4d6048055a571f437280fdc4-1ca792f16c9de3956ac12df63b575695-Slide17.PNG" alt="system prompt with role, goal, tone, and restriction" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 20px 20px 20px 20px">
+<img src="https://images.code.org/01fd008e4d6048055a571f437280fdc4-1ca792f16c9de3956ac12df63b575695-Slide17.PNG" alt="example output precentages from lesson" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 20px 20px 20px 20px">
 
 #### During **Lesson 9: Outputs & Probabilities**, students investigate how language models generate output based on probabilities through creating mad-libs together.
 
@@ -27,7 +27,7 @@ markdown <<MARKDOWN
 </summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
-<img src="https://images.code.org/ee2c1e06e0231d2da55f0092134eeefd-1019ee4f65d7f4008dc7f8bd9da98cc4-Slide4.PNG" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+<img src="https://images.code.org/ee2c1e06e0231d2da55f0092134eeefd-1019ee4f65d7f4008dc7f8bd9da98cc4-Slide4.PNG" alt="activity directions from lesson" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
 
 #### **Question of the Day:** What is the last step for language models to generate output responses?
 
@@ -46,7 +46,7 @@ markdown <<MARKDOWN
     <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 10: Hallucinations and Fabrications</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
-<img src="https://images.code.org/625b1702fa6b7def7fa356f43241c365-9121715a2b9b4b3d3fe248ffa4b4247f-Slide14.PNG" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+<img src="https://images.code.org/625b1702fa6b7def7fa356f43241c365-9121715a2b9b4b3d3fe248ffa4b4247f-Slide14.PNG" alt="activity overview from lesson" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
 
 #### **Question of the Day:** What happens when a language model gives inaccurate information?
 
