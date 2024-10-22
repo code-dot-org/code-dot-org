@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-10-21T14:35:23.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "# Realizing the Benefits of AI in Education\r\n\r\n#### With guidance, an education system may realize the potential benefits of AI to improve learning outcomes, support teacher instruction and quality of life, and enhance educational equity. Without guidance, teachers and students can be exposed to privacy violations, inconsistent disciplinary consequences, and counterproductive AI adoption practices.\r\n\r\n#### Take a look at the graphic below that highlights both some potential benefits and risks of AI in education.\r\n\r\n<br>\r\n<p style=\"text-align:center;\"><img src=\"https://images.code.org/87f60e79b8d9db1cdc81f7251d510b47-Screenshot 2024-04-15 at 1.33.49 PM.png\" alt=\"Potential benefits and risks of AI in education.\">\r\n\r\n## Reflection\r\n#### Reflecting on AI in education, what are you most excited about. What are you most concerned about?",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19619,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-10-21T14:35:23.653+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod1-impact_06_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod1-impact_06_2024\"},{\"changed_at\":\"2024-10-21 15:20:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
