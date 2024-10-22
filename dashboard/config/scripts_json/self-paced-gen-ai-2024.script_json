@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "self-paced-gen-ai",
-    "serialized_at": "2024-10-17 19:57:28 UTC",
+    "serialized_at": "2024-10-18 15:57:06 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -628,6 +628,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-foundations-preview-02b_2024"
+        ],
         "progression": "Lesson Previews (20 min)"
       },
       "bonus": false,
@@ -675,6 +678,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-foundations-preview-04b2024"
+        ],
         "progression": "Lesson Previews (20 min)"
       },
       "bonus": false,
@@ -1247,15 +1253,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "self-paced-pl-gen-ai-customizing_15b_2024"
-        ],
         "progression": "Retrieval (10 min)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-pl-gen-ai-customizing_15b_2024"
+          "self-paced-pl-gen-ai-customizing_15c_2024"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -1263,7 +1266,7 @@
         "activity_section.key": "9113846d-dea3-4244-b9d7-d08087b27ad4"
       },
       "level_keys": [
-        "self-paced-pl-gen-ai-customizing_15b_2024"
+        "self-paced-pl-gen-ai-customizing_15c_2024"
       ]
     },
     {
@@ -1938,9 +1941,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-pl-gen-ai-customizing_15b_2024",
+        "level.key": "self-paced-pl-gen-ai-customizing_15c_2024",
         "script_level.level_keys": [
-          "self-paced-pl-gen-ai-customizing_15b_2024"
+          "self-paced-pl-gen-ai-customizing_15c_2024"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
