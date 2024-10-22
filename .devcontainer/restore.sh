@@ -15,3 +15,6 @@ rm -rf node_modules && \
 yarn install && \
 yarn build && \
 cd ..
+cd dashboard && \
+bin/rails db:migrate RAILS_ENV=development && \
+cd ..
