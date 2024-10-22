@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
+import {ValueOf} from '@cdo/apps/types/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import noteImage from '@cdo/static/music/music-note.png';
 
@@ -11,10 +12,13 @@ import {
   SourcesStore,
 } from '../../lab2/projects/SourcesStore';
 import {Channel} from '../../lab2/types';
+import {installFunctionBlocks} from '../blockly/blockUtils';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
+import {BlockMode} from '../constants';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
+import AdvancedSequencer from '../player/sequencer/AdvancedSequencer';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 
 import moduleStyles from './MiniMusicPlayer.module.scss';
@@ -32,7 +36,10 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   const workspaceRef = useRef<MusicBlocklyWorkspace>(
     new MusicBlocklyWorkspace()
   );
-  const sequencerRef = useRef<Simple2Sequencer>(new Simple2Sequencer());
+  const simple2SequencerRef = useRef<Simple2Sequencer>(new Simple2Sequencer());
+  const advancedSequencerRef = useRef<AdvancedSequencer>(
+    new AdvancedSequencer()
+  );
   const sourcesStoreRef = useRef<SourcesStore>(new RemoteSourcesStore());
   const analyticsReporter = useRef<AnalyticsReporter>(new AnalyticsReporter());
   const [isLoading, setIsLoading] = useState(true);
@@ -46,6 +53,10 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   // Setup library and workspace, and analyticsReporter on mount
   const onMount = useCallback(async () => {
     setUpBlocklyForMusicLab();
+    // We always use the advanced function blocks for the mini-player.
+    // The differences are primarily UI, and both sets of blocks generate equivalent code.
+    // Simple2 deletes two blocks that would be needed for Advanced, but Advanced keeps all.
+    installFunctionBlocks(BlockMode.ADVANCED);
     workspaceRef.current.initHeadless();
     await MusicLibrary.loadLibrary(libraryName);
     setIsLoading(false);
@@ -66,7 +77,18 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   // Optimization: cache code and/or compiled song after played once.
   const onPlaySong = useCallback(
     async (project: Channel) => {
+      const blockMode =
+        (project.labConfig?.music?.blockMode as ValueOf<typeof BlockMode>) ||
+        BlockMode.SIMPLE2;
+
+      // Determine which sequencer reference to use based on blockMode
+      const sequencerRef =
+        blockMode === BlockMode.ADVANCED
+          ? advancedSequencerRef
+          : simple2SequencerRef;
+
       playerRef.current.stopSong();
+
       // Load code
       const projectSources = await sourcesStoreRef.current.load(project.id);
       workspaceRef.current.loadCode(
@@ -74,7 +96,10 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
       );
 
       // Compile song
-      workspaceRef.current.compileSong({Sequencer: sequencerRef.current});
+      workspaceRef.current.compileSong(
+        {Sequencer: sequencerRef.current},
+        blockMode
+      );
 
       // Execute compiled song
       // Sequence out all possible trigger events to preload sounds if necessary.

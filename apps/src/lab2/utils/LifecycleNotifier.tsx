@@ -19,7 +19,9 @@ type CallbackArgs = {
   ];
 };
 
-type Callback<T extends LifecycleEvent> = (...args: CallbackArgs[T]) => void;
+export type Callback<T extends LifecycleEvent> = (
+  ...args: CallbackArgs[T]
+) => void;
 
 /**
  * Notifies listeners of lifecycle events in the Lab2 system, which doesn't reload the page between levels.

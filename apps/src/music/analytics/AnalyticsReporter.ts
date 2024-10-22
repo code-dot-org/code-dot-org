@@ -212,7 +212,26 @@ export default class AnalyticsReporter {
     });
   }
 
-  private trackUIEvent(eventType: string, payload: object) {
+  onValidationAttempt(passed: boolean, message: string) {
+    this.trackUIEvent('Validation attempt', {passed, message});
+  }
+
+  onOpenPatternAiPanel() {
+    this.trackUIEvent('Pattern AI panel opened');
+  }
+
+  onGenerateAiPatternStart() {
+    this.trackUIEvent('Generate AI pattern start');
+  }
+
+  onGenerateAiPatternEnd(timeSeconds: number, isInitialGenerate: boolean) {
+    this.trackUIEvent('Generate AI pattern end', {
+      timeSeconds,
+      isInitialGenerate,
+    });
+  }
+
+  private trackUIEvent(eventType: string, payload: object = {}) {
     const logMessage = `${eventType}. Payload: ${JSON.stringify(payload)}`;
 
     if (!this.session) {

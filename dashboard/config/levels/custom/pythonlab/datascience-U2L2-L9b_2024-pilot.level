@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2024-09-14T16:29:11.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Shopping Cart\r\n\r\n::: details [**✅ Step 1**]\r\nCreate a list named `item_costs` that contains the prices of the items that might be within an online shopping cart.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nCreate an expression that calculates `total_cost` which sums the elements within the `item_costs` list.\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nCreate an expression that calculates `average_cost` which determines the average cost from the elements within the `item_costs` list.\r\n:::\r\n\r\n::: details [**✅ Step 4**]\r\nCreate and print a message variable that will concatenate both the `total_cost` and `average_cost` variables. For example: *“Total cost: $36.48 | Average cost: $12.16”*\r\n:::\r\n\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# Step 1\n\n\n# Step 2 & 3\ntotal_cost = 0\naverage_cost = 0\n\n# Step 4\nmessage = \"\"\nprint(message)",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "display_name": "My Shopping Cart",
+    "bubble_choice_description": "Practice python by calculating the total cost and the average cost per item in an online shopping cart.",
+    "thumbnail_url": "https://images.code.org/835ed7005ae549f71651f6eb1bf18f6e-shopping-cart.png",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "import unittest\nfrom io import StringIO\nimport sys\n\nclass TestShoppingCart(unittest.TestCase):\n\n    def setUp(self):\n        # Setup to capture the print output if needed later\n        self.captured_output = StringIO()\n        sys.stdout = self.captured_output\n\n    def tearDown(self):\n        # Reset redirect.\n        sys.stdout = sys.__stdout__\n\n    def test_step_1(self):\n        \"\"\"Test Step 1: Check that item_costs list is defined\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Execute the script to access variables\n        exec(script_content)\n\n        # Check if the item_costs list is defined\n        self.assertIn('item_costs', locals(), \"List 'item_costs' should be defined in Step 1.\")\n\n        # Check that the item_costs list contains values\n        self.assertGreater(len(locals()['item_costs']), 0, \"'item_costs' list should not be empty.\")\n\n    def test_step_2(self):\n        \"\"\"Test Step 2: Check that total_cost is correctly calculated\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Execute the script to access variables\n        exec(script_content)\n\n        # Check if the variable 'total_cost' is defined\n        self.assertIn('total_cost', locals(), \"Variable 'total_cost' should be defined in Step 2.\")\n\n        # Ensure total_cost is a number and has some value\n        self.assertIsInstance(locals()['total_cost'], (int, float), \"'total_cost' should be a number.\")\n        self.assertGreater(locals()['total_cost'], 0, \"'total_cost' should have a positive value.\")\n\n    def test_step_3(self):\n        \"\"\"Test Step 3: Check that average_cost is correctly calculated\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Execute the script to access variables\n        exec(script_content)\n\n        # Check if the variable 'average_cost' is defined\n        self.assertIn('average_cost', locals(), \"Variable 'average_cost' should be defined in Step 3.\")\n\n        # Ensure average_cost is a number and greater than 0\n        self.assertIsInstance(locals()['average_cost'], (int, float), \"'average_cost' should be a number.\")\n        self.assertGreater(locals()['average_cost'], 0, \"'average_cost' should have a positive value.\")\n\n    def test_step_4(self):\n        \"\"\"Test Step 4: Check that message is defined, is not empty, and contains total and average cost\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Execute the script to access variables\n        exec(script_content)\n\n        # Check if the 'message' variable is defined\n        self.assertIn('message', locals(), \"Variable 'message' should be defined in Step 4.\")\n\n        # Ensure 'message' is not an empty string\n        self.assertNotEqual(locals()['message'], \"\", \"Variable 'message' should not be an empty string.\")\n\n        # Optionally check if the message contains total_cost and average_cost values (flexible check)\n        self.assertIn(str(locals()['total_cost']), locals()['message'], \"The 'message' should contain 'total_cost'.\")\n        self.assertIn(str(locals()['average_cost']), locals()['message'], \"The 'message' should contain 'average_cost'.\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-09-14T16:29:11.496+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L9a_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L2-L9a_2024-pilot\"},{\"changed_at\":\"2024-09-14 16:30:47 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 16:31:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 16:32:52 +0000\",\"changed\":[\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-26 20:38:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-26 20:38:16 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-26 20:38:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-26 20:40:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-26 20:40:15 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-27 20:16:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-03 16:10:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18753,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

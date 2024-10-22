@@ -6,6 +6,8 @@ import {BrowserRouter} from 'react-router-dom';
 
 import announcementReducer from '@cdo/apps/code-studio/announcementsRedux';
 import hiddenLesson from '@cdo/apps/code-studio/hiddenLessonRedux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import progressRedux from '@cdo/apps/code-studio/progressRedux';
 import verifiedInstructor from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import viewAs from '@cdo/apps/code-studio/viewAsRedux';
 import DCDO from '@cdo/apps/dcdo';
@@ -26,14 +28,13 @@ import progressV2Feedback from '@cdo/apps/templates/sectionProgressV2/progressV2
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
 import teacherSections, {
-  sectionProviderName,
   selectSection,
   setRosterProvider,
   setRosterProviderName,
   setSections,
-  setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {sectionProviderName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import TeacherNavigationRouter from '@cdo/apps/templates/teacherNavigation/TeacherNavigationRouter';
 import experiments from '@cdo/apps/util/experiments';
 
@@ -63,6 +64,8 @@ $(document).ready(function () {
     hiddenLesson,
     verifiedInstructor,
     announcementReducer,
+    progressRedux,
+    isRtl,
   });
 
   const store = getStore();
@@ -72,9 +75,6 @@ $(document).ready(function () {
   store.dispatch(setSections(sections));
   store.dispatch(setLocaleCode(localeCode));
 
-  // DCDO Flag - show/hide Lock Section field
-  store.dispatch(setShowLockSectionField(scriptData.showLockSectionField));
-
   const showAITutorTab = canViewStudentAIChatMessages;
 
   const showV2TeacherDashboard =
@@ -83,7 +83,13 @@ $(document).ready(function () {
 
   // When removing v1TeacherDashboard after v2 launch, remove `selectedSection` from api response.
   const getV1TeacherDashboard = () => {
-    const baseUrl = `/teacher_dashboard/sections/${section.id}`;
+    // Removes the trailing part of the current location path that is not needed for the router `basename`.
+    // For example, if the current location path is `/teacher_dashboard/sections/1/progress`,
+    // the router `basename` should be `/teacher_dashboard/sections/1`.
+    const baseUrl = window.location.pathname.replace(
+      RegExp(`(/teacher_dashboard/sections/${section.id}).*`),
+      '$1'
+    );
 
     const selectedSectionFromList = sections.find(s => s.id === section.id);
     const selectedSection = {...selectedSectionFromList, ...section};

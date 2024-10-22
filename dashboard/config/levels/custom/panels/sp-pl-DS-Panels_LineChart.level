@@ -1,0 +1,58 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-10-02T15:45:08.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "Now, let's take at how to make line graphs and bar charts.\n\n",
+        "imageUrl": "https://images.code.org/98bb061f2ebae3e1546177fdc5e01dc5-line1.png",
+        "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/477c385c7cec9e0b5f9168f258fe6bc9-line2.png",
+        "key": "game_design_spr_types-53c92e2f-0462-48a7-8070-e1224840f013"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/27dd08348beeaa0f03976bac62512480-line3.png",
+        "key": "game_design_spr_types-4936be88-574e-4dd8-a31f-e671e54e482b",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/863009265a6b81d5c4643d4b98ea0876-line4.png",
+        "key": "gen-ai-panels-test-L1-a74895ac-5363-4d66-9831-a3d899ea8ed7",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/21cc352ec99b2020350666a87be367e8-line5.png",
+        "key": "sp-pl-DS-SpreadsheetVocab-79e6faa9-6b7f-4aab-a8d7-c91fdc3ca442"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/8ccadd37ac252bdbc49673d5d1977ecd-line6.png",
+        "key": "sp-pl-DS-Panels_LineChart-bbe89a5b-0ef6-4d09-84fc-fe96dd227d5b"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/6b4e46c154a870f99654eddbb40cca8b-line7.png",
+        "key": "sp-pl-DS-Panels_LineChart-307b90ea-4e9d-4091-b691-e9146f7fb147"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/a587b083535e93dd33610e0fe70bd053-line8.png",
+        "key": "sp-pl-DS-Panels_LineChart-16a1c89e-f1d8-44c1-8080-98d358c28537"
+      }
+    ],
+    "name_suffix": "_2024"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-02T15:45:08.083+00:00\",\"changed\":[\"cloned from \\\"sp-pl-DS-PanelsExpressions\\\"\"],\"cloned_from\":\"sp-pl-DS-PanelsExpressions\"},{\"changed_at\":\"2024-10-03 17:00:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Panels>

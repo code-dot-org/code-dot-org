@@ -1,0 +1,15 @@
+name 'Data Sci U1 Post Q10_2024-pilot'
+
+question 'A researcher is conducting a study that involves tracking user activity on a mobile app to improve user experience. What ethical considerations should be addressed, and what actions should be taken?'
+
+wrong 'Collect data without user consent to ensure completeness and accuracy, focusing on the end results rather than user rights.'
+right 'Ignore privacy concerns and focus on gathering as much data as possible to maximize the potential insights from the study.'
+wrong 'Only collect data if users report issues with the app, limiting data collection to avoid potential privacy concerns.'
+wrong 'Inform users about the data collection process, obtain explicit consent, ensure data anonymization, and provide an option to opt-out if they choose.'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

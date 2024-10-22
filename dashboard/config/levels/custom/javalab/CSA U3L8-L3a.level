@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-06-28T17:29:55.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "display_name": "Total Ticket Sales",
@@ -20,13 +24,10 @@
     },
     "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHYT9+7Oi+MNQygDmcty\n05/yLQfVgyshMrrefvE/nlA4gBQ06sKuOqupI7RQq3RdDdaI1FvGV4/8ZxPW\noussQXO8\n",
     "bubble_choice_description": "The Theater is getting ready for a concert! The Theater Manager would like to know the total profit from the ticket sales so far.",
-    "thumbnail_url": "https://images.code.org/f5ab622a4d720db41cef170700ea47d2-image-1629397232458.png"
+    "thumbnail_url": "https://images.code.org/f5ab622a4d720db41cef170700ea47d2-image-1629397232458.png",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2021-06-28T17:29:55.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "audit_log": "[{\"changed_at\":\"2021-06-28 17:45:18 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-28 17:51:29 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-28 17:54:42 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-28 18:00:06 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-28 18:07:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-29 14:43:08 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-19 18:23:13 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

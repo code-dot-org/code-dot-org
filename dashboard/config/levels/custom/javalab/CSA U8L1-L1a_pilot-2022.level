@@ -20,7 +20,8 @@
     "display_name": "Chipotle Orders",
     "bubble_choice_description": "An example project that allows the user to place orders at Chipotle.",
     "thumbnail_url": "https://images.code.org/9055a59fcf7f81297bf1cedb332d340b-Chipotle_Mexican_Grill_Restaurant.jpg",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:56:53.184+00:00\",\"changed\":[\"cloned from \\\"CSA U8L1-L1a_2022\\\"\"],\"cloned_from\":\"CSA U8L1-L1a_2022\"}]"

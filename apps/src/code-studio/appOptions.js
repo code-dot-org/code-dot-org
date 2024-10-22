@@ -191,15 +191,6 @@
  */
 
 /**
- * @property {string} thanks
- * @property {string} help_from_html
- * @property {string} art_from_html
- * @property {string} code_from_html
- * @property {string} powered_by_aws
- * @property {string} trademark
- */
-
-/**
  * @typedef {Object} DialogOptions
  * @property {boolean} skipSound
  * @property {string} preTitle

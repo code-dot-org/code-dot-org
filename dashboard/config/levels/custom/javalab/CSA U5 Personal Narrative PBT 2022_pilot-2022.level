@@ -27,7 +27,8 @@
       "chai.jpg": "b458b7b8-aa84-417f-914b-e0fb079ab764.jpg",
       "cricket.jpg": "aead0704-3a48-4e8b-80b6-57ce4a3fc9fb.jpg"
     },
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:50:34.609+00:00\",\"changed\":[\"cloned from \\\"CSA U5 Personal Narrative PBT 2022\\\"\"],\"cloned_from\":\"CSA U5 Personal Narrative PBT 2022\"}]"

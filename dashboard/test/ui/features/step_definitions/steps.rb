@@ -18,6 +18,14 @@ def wait_until(timeout = DEFAULT_WAIT_TIMEOUT)
   end
 end
 
+def wait_until_interactable(timeout = DEFAULT_WAIT_TIMEOUT)
+  wait_until(timeout) do
+    yield
+  rescue Selenium::WebDriver::Error::ElementNotInteractableError
+    false
+  end
+end
+
 def wait_short_until(&block)
   wait_until(SHORT_WAIT_TIMEOUT, &block)
 end
@@ -383,11 +391,30 @@ When /^I rotate to (landscape|portrait)$/ do |orientation|
   end
 end
 
+When /^I click on the link reading "([^"]*)"(?: within element "([^"]*)")?(?: to load a new (page|tab))?$/ do |text, parent, load|
+  link = nil
+  wait_until_interactable(5) do
+    context = @browser.find_element(:css, parent) if parent
+    context ||= @browser
+    xpath = ".//a[starts-with(text(), '#{text}')]"
+    link = context.find_element(:xpath, xpath)
+    page_load(load) {link.click}
+  end
+end
+
+Then /^the link reading "([^"]*)"(?: within element "([^"]*)")? goes to "([^"]*)"$/ do |text, parent, url|
+  context = @browser.find_element(:css, parent) if parent
+  context ||= @browser
+  xpath = ".//a[contains(text(), '#{text}')]"
+  link = context.find_element(:xpath, xpath)
+  expect(link.attribute("href")).to eq(replace_hostname(url)).or eq(url)
+end
+
 When /^I press "([^"]*)"(?: to load a new (page|tab))?$/ do |button, load|
   wait_short_until do
-    @button = @browser.find_element(id: button)
+    button = @browser.find_element(id: button)
   end
-  page_load(load) {@button.click}
+  page_load(load) {button.click}
 end
 
 When /^I press the child number (.*) of class "([^"]*)"( to load a new page)?$/ do |number, selector, load|
@@ -719,7 +746,6 @@ end
 
 Then /^I reopen the congrats dialog unless I see the sharing input/ do
   next if @browser.execute_script("return $('#sharing-dialog-copy-button').length > 0;")
-  puts "reopening congrats dialog"
   individual_steps %{
     And I press "again-button"
     And I wait until element ".congrats" is not visible
@@ -1200,6 +1226,14 @@ And(/^I submit this level$/) do
   GHERKIN
 end
 
+And(/^I submit this gamelab level$/) do
+  steps <<~GHERKIN
+    And I press "runButton"
+    And I wait to see "#submitButton"
+    And I press "submitButton" to load a new page
+  GHERKIN
+end
+
 And(/^I wait until I am on the join page$/) do
   wait_short_until {/^\/join/.match(@browser.execute_script("return location.pathname"))}
 end
@@ -1332,6 +1366,12 @@ end
 Then /^I append "([^"]*)" to the URL$/ do |append|
   url = @browser.current_url + append
   @browser.navigate.to url
+end
+
+Then /^I switch to the embedded view of current project(?: with query "(.*)")?$/ do |query|
+  embed_url = @browser.current_url.sub('/edit', '/embed')
+  embed_url = "#{embed_url}?#{query}" if query
+  navigate_to embed_url
 end
 
 Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, class_name|

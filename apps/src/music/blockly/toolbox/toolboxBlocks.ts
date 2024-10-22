@@ -11,8 +11,12 @@ import {
   TriggerStart,
 } from '../constants';
 
-const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfo} = {
+// Blockly's BlockInfo type with an additional 'levelbuilderText' field used for levelbuilder-facing English block text.
+type BlockInfoWithText = BlockInfo & {levelbuilderText: string};
+
+const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfoWithText} = {
   [BlockTypes.PLAY_SOUND]: {
+    levelbuilderText: 'Play Sound at Measure',
     kind: 'block',
     type: BlockTypes.PLAY_SOUND,
     inputs: {
@@ -26,40 +30,105 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfo} = {
       },
     },
   },
+  [BlockTypes.PLAY_PATTERN_AT_MEASURE]: {
+    levelbuilderText: 'Play Pattern at Measure',
+    kind: 'block',
+    type: BlockTypes.PLAY_PATTERN_AT_MEASURE,
+    inputs: {
+      measure: {
+        shadow: {
+          type: 'math_number',
+          fields: {
+            NUM: 1,
+          },
+        },
+      },
+    },
+  },
+  [BlockTypes.PLAY_CHORD_AT_MEASURE]: {
+    levelbuilderText: 'Play Chord at Measure',
+    kind: 'block',
+    type: BlockTypes.PLAY_CHORD_AT_MEASURE,
+    inputs: {
+      measure: {
+        shadow: {
+          type: 'math_number',
+          fields: {
+            NUM: 1,
+          },
+        },
+      },
+    },
+  },
+  [BlockTypes.SET_VOLUME_EFFECT]: {
+    levelbuilderText: 'Set volume effect',
+    kind: 'block',
+    type: BlockTypes.SET_EFFECT,
+    fields: {
+      [FIELD_EFFECTS_NAME]: 'volume',
+      [FIELD_EFFECTS_VALUE]: DEFAULT_EFFECT_VALUE,
+    },
+  },
+  [BlockTypes.SET_FILTER_EFFECT]: {
+    levelbuilderText: 'Set filter effect',
+    kind: 'block',
+    type: BlockTypes.SET_EFFECT,
+    fields: {
+      [FIELD_EFFECTS_NAME]: 'filter',
+      [FIELD_EFFECTS_VALUE]: DEFAULT_EFFECT_VALUE,
+    },
+  },
+  [BlockTypes.SET_DELAY_EFFECT]: {
+    levelbuilderText: 'Set delay effect',
+    kind: 'block',
+    type: BlockTypes.SET_EFFECT,
+    fields: {
+      [FIELD_EFFECTS_NAME]: 'delay',
+      [FIELD_EFFECTS_VALUE]: DEFAULT_EFFECT_VALUE,
+    },
+  },
   [BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION]: {
+    levelbuilderText: 'unused',
     kind: 'block',
     type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION,
   },
   [BlockTypes.SET_CURRENT_LOCATION_NEXT_MEASURE]: {
+    levelbuilderText: 'unused',
     kind: 'block',
     type: BlockTypes.SET_CURRENT_LOCATION_NEXT_MEASURE,
   },
   [BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2]: {
+    levelbuilderText: 'Play Sound',
     id: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
     kind: 'block',
     type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
   },
   [BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2]: {
+    levelbuilderText: 'Play Drums',
     id: BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
     kind: 'block',
     type: BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
   },
   [BlockTypes.PLAY_PATTERN_AI_AT_CURRENT_LOCATION_SIMPLE2]: {
+    levelbuilderText: 'Play AI Drums',
     id: BlockTypes.PLAY_PATTERN_AI_AT_CURRENT_LOCATION_SIMPLE2,
     kind: 'block',
     type: BlockTypes.PLAY_PATTERN_AI_AT_CURRENT_LOCATION_SIMPLE2,
   },
   [BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2]: {
+    levelbuilderText: 'Play Chord',
     id: BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
     kind: 'block',
     type: BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
   },
   [BlockTypes.PLAY_TUNE_AT_CURRENT_LOCATION_SIMPLE2]: {
+    levelbuilderText: 'Play Tune',
     id: BlockTypes.PLAY_TUNE_AT_CURRENT_LOCATION_SIMPLE2,
     kind: 'block',
     type: BlockTypes.PLAY_TUNE_AT_CURRENT_LOCATION_SIMPLE2,
   },
   [BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2]: {
+    levelbuilderText: 'Rest',
     kind: 'block',
     type: BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
     fields: {
@@ -67,6 +136,7 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfo} = {
     },
   },
   [BlockTypes.SET_VOLUME_EFFECT_AT_CURRENT_LOCATION_SIMPLE2]: {
+    levelbuilderText: 'Set Volume',
     kind: 'block',
     type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
     fields: {
@@ -75,6 +145,7 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfo} = {
     },
   },
   [BlockTypes.SET_FILTER_EFFECT_AT_CURRENT_LOCATION_SIMPLE2]: {
+    levelbuilderText: 'Set Filter',
     kind: 'block',
     type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
     fields: {
@@ -83,6 +154,7 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfo} = {
     },
   },
   [BlockTypes.SET_DELAY_EFFECT_AT_CURRENT_LOCATION_SIMPLE2]: {
+    levelbuilderText: 'Set Delay',
     kind: 'block',
     type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
     fields: {
@@ -91,19 +163,29 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfo} = {
     },
   },
   [BlockTypes.PLAY_SOUNDS_TOGETHER]: {
+    levelbuilderText: 'Play Together',
     id: BlockTypes.PLAY_SOUNDS_TOGETHER,
     kind: 'block',
     type: BlockTypes.PLAY_SOUNDS_TOGETHER,
   },
+  [BlockTypes.PLAY_SOUNDS_TOGETHER_NO_NEXT]: {
+    levelbuilderText: 'Play Together (no next)',
+    id: BlockTypes.PLAY_SOUNDS_TOGETHER_NO_NEXT,
+    kind: 'block',
+    type: BlockTypes.PLAY_SOUNDS_TOGETHER_NO_NEXT,
+  },
   [BlockTypes.PLAY_SOUNDS_SEQUENTIAL]: {
+    levelbuilderText: 'Play Sequential',
     kind: 'block',
     type: BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
   },
   [BlockTypes.PLAY_SOUNDS_RANDOM]: {
+    levelbuilderText: 'Play Random',
     kind: 'block',
     type: BlockTypes.PLAY_SOUNDS_RANDOM,
   },
   [BlockTypes.REPEAT_SIMPLE2]: {
+    levelbuilderText: 'Repeat',
     id: BlockTypes.REPEAT_SIMPLE2,
     kind: 'block',
     type: BlockTypes.REPEAT_SIMPLE2,
@@ -112,6 +194,7 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfo} = {
     },
   },
   [BlockTypes.PLAY_SOUND_IN_TRACK]: {
+    levelbuilderText: 'unused',
     kind: 'block',
     type: BlockTypes.PLAY_SOUND_IN_TRACK,
     inputs: {
@@ -123,10 +206,12 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfo} = {
     },
   },
   [BlockTypes.VALUE_SAMPLE]: {
+    levelbuilderText: 'unused',
     kind: 'block',
     type: BlockTypes.VALUE_SAMPLE,
   },
   [BlockTypes.REST_IN_TRACK]: {
+    levelbuilderText: 'unused',
     kind: 'block',
     type: BlockTypes.REST_IN_TRACK,
     fields: {
@@ -134,10 +219,12 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfo} = {
     },
   },
   [BlockTypes.NEW_TRACK_AT_START]: {
+    levelbuilderText: 'unused',
     kind: 'block',
     type: BlockTypes.NEW_TRACK_AT_START,
   },
   [BlockTypes.NEW_TRACK_AT_MEASURE]: {
+    levelbuilderText: 'unused',
     kind: 'block',
     type: BlockTypes.NEW_TRACK_AT_MEASURE,
     inputs: {
@@ -152,18 +239,22 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfo} = {
     },
   },
   [BlockTypes.NEW_TRACK_ON_TRIGGER]: {
+    levelbuilderText: 'unused',
     kind: 'block',
     type: BlockTypes.NEW_TRACK_ON_TRIGGER,
   },
   [BlockTypes.TRIGGERED_AT]: {
+    levelbuilderText: 'Triggered at Time',
     kind: 'block',
     type: BlockTypes.TRIGGERED_AT,
   },
   [BlockTypes.TRIGGERED_AT_SIMPLE]: {
+    levelbuilderText: 'unused',
     kind: 'block',
     type: BlockTypes.TRIGGERED_AT_SIMPLE,
   },
   [BlockTypes.TRIGGERED_AT_SIMPLE2]: {
+    levelbuilderText: 'Trigger',
     kind: 'block',
     type: BlockTypes.TRIGGERED_AT_SIMPLE2,
     fields: {
@@ -171,6 +262,7 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfo} = {
     },
   },
   [BlockTypes.FOR_LOOP]: {
+    levelbuilderText: 'For Loop',
     kind: 'block',
     type: BlockTypes.FOR_LOOP,
     inputs: {
@@ -201,10 +293,15 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfo} = {
     },
   },
   ['math_number']: {
+    levelbuilderText: 'Number',
     kind: 'block',
     type: 'math_number',
+    fields: {
+      NUM: 1,
+    },
   },
   ['math_round']: {
+    levelbuilderText: 'Round',
     kind: 'block',
     type: 'math_round',
     fields: {
@@ -222,6 +319,7 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfo} = {
     },
   },
   ['math_arithmetic']: {
+    levelbuilderText: 'Arithmetic',
     kind: 'block',
     type: 'math_arithmetic',
     inputs: {
@@ -244,6 +342,7 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfo} = {
     },
   },
   ['math_random_int']: {
+    levelbuilderText: 'Random Integer',
     kind: 'block',
     type: 'math_random_int',
     inputs: {
@@ -266,6 +365,7 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfo} = {
     },
   },
   ['math_modulo']: {
+    levelbuilderText: 'Remainder of',
     kind: 'block',
     type: 'math_modulo',
     inputs: {
@@ -287,15 +387,23 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfo} = {
       },
     },
   },
+  ['math_number_property']: {
+    levelbuilderText: 'Number Property',
+    kind: 'block',
+    type: 'math_number_property',
+  },
   ['controls_if']: {
+    levelbuilderText: 'If',
     kind: 'block',
     type: 'controls_if',
   },
   ['logic_compare']: {
+    levelbuilderText: 'Compare',
     kind: 'block',
     type: 'logic_compare',
   },
   ['controls_repeat_ext']: {
+    levelbuilderText: 'Repeat',
     kind: 'block',
     type: 'controls_repeat_ext',
     fields: {

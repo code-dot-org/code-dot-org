@@ -15,7 +15,8 @@
     "project_template_level_name": "CSA U2L6-L3d PBT_pilot-2022",
     "bubble_choice_description": "Request a code review to get feedback from your peers on your Cupcake class.",
     "thumbnail_url": "https://images.code.org/567eac46d61d12611c2aab15f1d15027-image-1647347081906.png",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:23:49.641+00:00\",\"changed\":[\"cloned from \\\"CSA U2L6-L4d CR_2022\\\"\"],\"cloned_from\":\"CSA U2L6-L4d CR_2022\"}]"

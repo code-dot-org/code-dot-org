@@ -1,0 +1,9 @@
+name 'datascience-U2L4-L9Prac_2024-pilot'
+display_name 'Matplotlib Practice'
+description 'Choose one of the options below!'
+
+sublevels
+level 'datascience-U2L4-L9a_2024-pilot'
+level 'datascience-U2L4-L9b_2024-pilot'
+level 'datascience-U2L4-L9c_2024-pilot'
+level 'datascience-U2L4-L9d_2024-pilot'

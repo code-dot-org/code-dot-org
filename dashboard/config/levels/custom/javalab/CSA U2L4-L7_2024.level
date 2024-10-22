@@ -31,7 +31,7 @@
       }
     },
     "name_suffix": "_2024",
-    "ai_tutor_available": "true"
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:49:24.214+00:00\",\"changed\":[\"cloned from \\\"CSA U2L4-L7_2023\\\"\"],\"cloned_from\":\"CSA U2L4-L7_2023\"},{\"changed_at\":\"2024-03-28 17:56:46 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":18972,\"changed_by_email\":\"sarah.judd@code.org\"}]"

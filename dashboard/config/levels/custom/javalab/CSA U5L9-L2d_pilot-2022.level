@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:50:24.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "A video game store has a limited supply of game consoles and is only allowing customers to purchase only one game console one time. The owner of the video game store needs to check for duplicate customers and replace these duplicates so the next customer on the wait list can purchase it. They have the information stored in a 2D array, where each row represents a unique game console.\r\n\r\n##In GameStore.java:\r\n\r\n1. Write the method `replaceCustomers()`(#e7e8ea) to find and replace any duplicate values in `customers`(#e7e8ea).\r\n\r\n   * If `currentValue`(#e7e8ea) is found in `customers`(#e7e8ea) at a different row and column location, replace the duplicate with `\"Available\"`(#e7e8ea).\r\n\r\n2. Write the method `replaceDuplicates()`(#e7e8ea) to replace any duplicate values in the 2D array `customers`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n\r\n3. Call the `replaceDuplicates()`(#e7e8ea) method and print the updated array.",
@@ -25,12 +29,9 @@
         "isVisible": true,
         "tabOrder": 1
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:50:24.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:50:24.382+00:00\",\"changed\":[\"cloned from \\\"CSA U5L9-L2d_2022\\\"\"],\"cloned_from\":\"CSA U5L9-L2d_2022\"},{\"changed_at\":\"2022-10-12 22:32:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 22:56:54 +0000\",\"changed\":[\"start_sources\",\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 22:58:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 22:58:33 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

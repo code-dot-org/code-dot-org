@@ -1,9 +1,7 @@
 import classNames from 'classnames';
-import React, {AriaAttributes} from 'react';
+import React, {HTMLAttributes} from 'react';
 
-import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
-
-export interface FontAwesomeV6IconProps extends AriaAttributes {
+export interface FontAwesomeV6IconProps extends HTMLAttributes<HTMLElement> {
   /**
    * Icon style.
    * Style vs Figma font-weight:
@@ -13,6 +11,12 @@ export interface FontAwesomeV6IconProps extends AriaAttributes {
    *  * thin - 100
    * */
   iconStyle?: 'solid' | 'regular' | 'light' | 'thin';
+  /** Icon family
+   *    * brands - for FA brand icons
+   *    * duotone - for FA duotone icons
+   *    * kit - for our custom FA kit icons
+   * */
+  iconFamily?: 'brands' | 'duotone' | 'kit';
   /** Icon name */
   iconName: string;
   /** FontAwesome V6 Animation type to use (use it if we want/need to animate icon)*/
@@ -50,28 +54,28 @@ export interface FontAwesomeV6IconProps extends AriaAttributes {
  * Can can be used in any component in/out of the scope of Design System.
  */
 const FontAwesomeV6Icon: React.FunctionComponent<FontAwesomeV6IconProps> = ({
-  iconStyle = 'solid',
+  iconStyle,
+  iconFamily,
   iconName,
   className,
   title,
   animationType,
-  ...rest
-}) => {
-  const ariaProps = getAriaPropsFromProps(rest);
-
-  return (
-    <i
-      data-testid="font-awesome-v6-icon"
-      className={classNames(
-        iconStyle && `fa-${iconStyle}`,
-        iconName && `fa-${iconName}`,
-        animationType && `fa-${animationType}`,
-        className
-      )}
-      title={title}
-      {...ariaProps}
-    />
-  );
-};
+  ...HTMLAttributes
+}) => (
+  <i
+    data-testid="font-awesome-v6-icon"
+    className={classNames(
+      iconFamily && `fa-${iconFamily}`,
+      iconStyle && `fa-${iconStyle}`,
+      iconName && `fa-${iconName}`,
+      // Default icon style is solid, but only when no iconFamily prop is provided
+      !iconFamily && !iconStyle && 'fa-solid',
+      animationType && `fa-${animationType}`,
+      className
+    )}
+    title={title}
+    {...HTMLAttributes}
+  />
+);
 
 export default FontAwesomeV6Icon;

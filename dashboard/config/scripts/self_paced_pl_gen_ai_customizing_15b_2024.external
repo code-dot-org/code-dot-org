@@ -3,13 +3,13 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Information
+# Retrieval
 
-#### There are lots of new key concepts introduced around system prompting that students will engage with during these lessons. We’ve summarized them below.
+#### Using **retrieval**, we can provide the chatbot with different types of information to help it respond more accurately. In general we will want to provide information that is...
 
-#### **Current**: Chatbots only have information up to a certain date. For more recent information, we can add it with retrieval. 
-#### **Specialized**: Chatbots tend to have general information about topics. For more specialized information, we can add it with retrieval
-#### **Accurate**: Chatbots don't have all the answers and sometimes hallucinate. For situations that require very high accuracy, we can add information with retrieval.
+* #### **Current**: Chatbots only have information up to a certain date. For more recent information, we can add it with retrieval. 
+* #### **Specialized**: Chatbots tend to have general information about topics. For more specialized information, we can add it with retrieval
+* #### **Accurate**: Chatbots don't have all the answers and sometimes hallucinate. For situations that require very high accuracy, we can add information with retrieval.
 
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
@@ -17,4 +17,10 @@ markdown <<MARKDOWN
 </p>
 </div>
 
+
+## **Video Addition** 
+#### Insert short video here showing how to add information using retrieval in AI chat lab.
+
+## **Up Next!** 
+#### Try out applying retrieval in Chatbot Lab.
 MARKDOWN

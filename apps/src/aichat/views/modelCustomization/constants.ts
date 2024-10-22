@@ -7,9 +7,9 @@ import {
   Visibility,
 } from '../../types';
 
-export const MIN_TEMPERATURE = 0.1;
-export const MAX_TEMPERATURE = 1;
-export const SET_TEMPERATURE_STEP = 0.1;
+export const MIN_TEMPERATURE = 1;
+export const MAX_TEMPERATURE = 10;
+export const SET_TEMPERATURE_STEP = 1;
 export const MAX_RETRIEVAL_CONTEXTS = 20;
 export const MAX_ASK_ABOUT_TOPICS = 10;
 
@@ -125,3 +125,9 @@ export const AI_CUSTOMIZATIONS_LABELS: {
   retrievalContexts: 'Retrieval',
   modelCardInfo: 'Model card information',
 };
+
+// Model customization fields that are checked for toxicity before updating.
+export const FIELDS_CHECKED_FOR_TOXICITY = [
+  'systemPrompt',
+  'retrievalContexts',
+] as const satisfies (keyof AiCustomizations)[];

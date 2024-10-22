@@ -4,6 +4,7 @@ import musicI18n from '../locale';
 
 export const DEFAULT_TRACK_NAME_EXTENSION = 'default_track_name_extension';
 export const FIELD_EFFECTS_EXTENSION = 'field_effects_extension';
+export const FIELD_SOUNDS_VALIDATOR = 'field_sounds_validator';
 export const PLAY_MULTI_MUTATOR = 'play_multi_mutator';
 
 // Field / Input Names
@@ -53,7 +54,7 @@ export const MINUS_IMAGE =
 
 // Other
 
-export const DOCS_BASE_URL = '/docs/ide/projectbeats/expressions/';
+export const DOCS_BASE_URL = '/docs/ide/music/expressions/';
 
 export const TriggerStart = {
   IMMEDIATELY: 'immediately',

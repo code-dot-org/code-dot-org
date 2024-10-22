@@ -2,10 +2,11 @@
   full_width = local_assigns[:full_width]
   channel = local_assigns[:channel]
   reactProps = {
-    i18nDropdown: (view_options[:has_i18n] ? ERB::Util.url_encode(i18n_dropdown.to_str) : ''),
+    i18nDropdownInBase: view_options[:has_i18n],
+    localeUrl: locale_url,
+    localeOptions: options_for_locale_dropdown,
     privacyPolicyInBase: true,
     copyrightInBase: true,
-    baseCopyrightString: I18n.t('footer.copyright'),
     baseMoreMenuString: I18n.t('footer.more'),
     menuItems: [],
     # false because we're not rendering into a phone wireframe here

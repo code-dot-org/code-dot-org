@@ -48,6 +48,9 @@ module Dashboard
       end
     end
 
+    require 'cdo/rack/global_edition'
+    config.middleware.insert_before Rack::Cors, Rack::GlobalEdition
+
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
       # For other environments (development / CI), run the HTTP cache from Rack middleware.

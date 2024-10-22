@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:32:08.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "A business owner wants to review their sales for the week, but some of the values were entered wrong – they were entered as negative numbers!\r\n\r\n##In SalesAnalyzer.java:\r\n\r\n1. Write the `cleanData()`(#e7e8ea) method.\r\n\r\n   * Traverse the `sales`(#e7e8ea) array and use `Math.abs()`(#e7e8ea) to get the absolute value of each value in the array.\r\n\r\n   * Return a new array that contains the corrected sales values.\r\n\r\n##In MyConsole.java:\r\n\r\n2. Declare and initialize a new array called `correctedSales`(#e7e8ea) that stores the array returned from the `cleanData()`(#e7e8ea) method.\r\n\r\n3. Print the values stored in the `correctedSales`(#e7e8ea) array.",
@@ -22,12 +26,9 @@
         "text": "/*\n * Analyzes sales data for a business\n */\npublic class SalesAnalyzer {\n\n  private double[] sales;  // The list of sales\n\n  /*\n   * Constructor to create a SalesAnalyzer\n   * with the specified array of sales\n   */\n  public SalesAnalyzer(double[] sales) {\n    this.sales = sales;\n  }\n\n  /*\n   * Returns a new array containing corrected sales values\n   */\n  public double[] cleanData() {\n    // TO DO #1: Return a new array containing the corrected sales values.\n\n\n    return null;\n  }\n  \n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:32:08.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:32:08.693+00:00\",\"changed\":[\"cloned from \\\"CSA U4L7-L5b_2022\\\"\"],\"cloned_from\":\"CSA U4L7-L5b_2022\"},{\"changed_at\":\"2022-09-21 21:50:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-21 21:50:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-21 21:55:00 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

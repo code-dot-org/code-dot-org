@@ -1,23 +1,26 @@
 import {resetOutput} from '@codebridge/redux/consoleRedux';
-import SwapLayoutButton from '@codebridge/SwapLayoutButton';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {useDispatch} from 'react-redux';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
 import ControlButtons from './ControlButtons';
 import GraphModal from './GraphModal';
+import RightButtons from './RightButtons';
 
 import moduleStyles from './console.module.scss';
 
 const Console: React.FunctionComponent = () => {
   const codeOutput = useAppSelector(state => state.codebridgeConsole.output);
   const dispatch = useDispatch();
-  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
-  const previousLevelId = useRef(levelId);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const scrollAnchorRef = useRef<HTMLDivElement>(null);
 
@@ -27,13 +30,14 @@ const Console: React.FunctionComponent = () => {
   // TODO: Update this with other apps that use the console as needed.
   const systemMessagePrefix = appName === 'pythonlab' ? '[PYTHON LAB] ' : '';
 
-  useEffect(() => {
-    // If the level changes, clear the console.
-    if (previousLevelId.current !== levelId) {
-      dispatch(resetOutput());
-      previousLevelId.current = levelId;
-    }
-  }, [dispatch, levelId]);
+  const clearOutput = useCallback(() => {
+    dispatch(resetOutput());
+    sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_CLEAR_CONSOLE, appName);
+    setGraphModalOpen(false);
+  }, [dispatch, appName]);
+
+  // Clear console when we change levels.
+  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, clearOutput);
 
   useEffect(() => {
     scrollAnchorRef.current?.scrollIntoView({
@@ -41,30 +45,10 @@ const Console: React.FunctionComponent = () => {
     });
   }, [codeOutput]);
 
-  const clearOutput = () => {
-    dispatch(resetOutput());
-    setGraphModalOpen(false);
-  };
-
   const popOutGraph = (index: number) => {
+    sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_POP_OUT_IMAGE, appName);
     setActiveGraphIndex(index);
     setGraphModalOpen(true);
-  };
-
-  const headerButton = () => {
-    return (
-      <>
-        <Button
-          isIconOnly
-          color={'black'}
-          icon={{iconStyle: 'solid', iconName: 'eraser'}}
-          ariaLabel="clear console"
-          onClick={clearOutput}
-          size={'xs'}
-        />
-        <SwapLayoutButton />
-      </>
-    );
   };
 
   return (
@@ -72,7 +56,7 @@ const Console: React.FunctionComponent = () => {
       id="codebridge-console"
       className={moduleStyles.consoleContainer}
       headerContent={'Console'}
-      rightHeaderContent={headerButton()}
+      rightHeaderContent={<RightButtons clearOutput={clearOutput} />}
       leftHeaderContent={<ControlButtons />}
       headerClassName={moduleStyles.consoleHeader}
     >

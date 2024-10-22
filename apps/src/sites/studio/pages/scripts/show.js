@@ -11,7 +11,7 @@ import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import plcHeaderReducer, {
   setPlcHeader,
 } from '@cdo/apps/code-studio/plc/plcHeaderRedux';
-import progress from '@cdo/apps/code-studio/progress';
+import {initViewAs, initCourseProgress} from '@cdo/apps/code-studio/progress';
 import {setStudentDefaultsSummaryView} from '@cdo/apps/code-studio/progressRedux';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
@@ -19,6 +19,7 @@ import {
   setVerified,
   setVerifiedResources,
 } from '@cdo/apps/code-studio/verifiedInstructorRedux';
+import DCDO from '@cdo/apps/dcdo';
 import {registerReducers} from '@cdo/apps/redux';
 import ParentalPermissionBanner from '@cdo/apps/templates/policy_compliance/ParentalPermissionBanner';
 import googlePlatformApi, {
@@ -81,18 +82,19 @@ function initPage() {
   if (scriptData.student_detail_progress_view) {
     store.dispatch(setStudentDefaultsSummaryView(false));
   }
-  progress.initViewAs(
-    store,
-    scriptData.user_id !== null,
-    scriptData.is_instructor
-  );
+  initViewAs(store, scriptData.user_id !== null, scriptData.is_instructor);
   if (scriptData.is_instructor) {
     initializeStoreWithSections(store, scriptData.sections, scriptData.section);
   }
   store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
   store.dispatch(setPageType(pageTypes.scriptOverview));
 
-  progress.initCourseProgress(scriptData);
+  const v2TeacherDashboardEnabled =
+    DCDO.get('teacher-local-nav-v2', false) ||
+    experiments.isEnabled('teacher-local-nav-v2');
+
+  // Don't show the teacher panel if v2 dashboard is enabled
+  initCourseProgress(scriptData, !v2TeacherDashboardEnabled);
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
@@ -108,8 +110,7 @@ function initPage() {
   );
 
   const showAiAssessmentsAnnouncement =
-    scriptData.showAiAssessmentsAnnouncement &&
-    experiments.isEnabled(experiments.AI_ASSESSMENTS_ANNOUNCEMENT);
+    scriptData.showAiAssessmentsAnnouncement;
 
   ReactDOM.render(
     <Provider store={store}>
@@ -147,9 +148,6 @@ function initPage() {
         isMigrated={scriptData.is_migrated}
         scriptOverviewPdfUrl={scriptData.scriptOverviewPdfUrl}
         scriptResourcesPdfUrl={scriptData.scriptResourcesPdfUrl}
-        showUnversionedRedirectWarning={
-          scriptData.show_unversioned_redirect_warning
-        }
         isCsdOrCsp={scriptData.isCsd || scriptData.isCsp}
         completedLessonNumber={completedLessonNumber}
         publishedState={scriptData.publishedState}

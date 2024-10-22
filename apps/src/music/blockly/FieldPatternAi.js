@@ -31,6 +31,10 @@ class FieldPatternAi extends GoogleBlockly.Field {
   }
 
   loadState(state) {
+    if (state.kit) {
+      state.instrument = state.kit;
+      delete state.kit;
+    }
     this.setValue(state);
   }
 
@@ -106,12 +110,10 @@ class FieldPatternAi extends GoogleBlockly.Field {
 
     ReactDOM.render(
       <PatternAiPanel
-        library={this.options.getLibrary()}
         initValue={this.getValue()}
         onChange={value => {
           this.setValue(value);
         }}
-        {...this.options}
       />,
       this.newDiv_
     );
@@ -145,12 +147,11 @@ class FieldPatternAi extends GoogleBlockly.Field {
     );
 
     const graphNotes = generateGraphDataFromPattern({
-      patternEventValue: this.getValue(),
+      value: this.getValue(),
       width: FIELD_WIDTH,
       height: FIELD_HEIGHT,
       padding: FIELD_PADDING,
       eventScale: 2,
-      library: this.options.getLibrary(),
     });
 
     graphNotes.forEach(graphNote => {

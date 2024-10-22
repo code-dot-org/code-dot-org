@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import {AccountInformation} from '@cdo/apps/accounts/AccountInformation';
 import AddParentEmailController from '@cdo/apps/accounts/AddParentEmailController';
 import AddPasswordController from '@cdo/apps/accounts/AddPasswordController';
 import ChangeEmailController from '@cdo/apps/accounts/ChangeEmailController';
@@ -12,6 +13,7 @@ import LtiRosterSyncSettings from '@cdo/apps/accounts/LtiRosterSyncSettings';
 import ManageLinkedAccountsController from '@cdo/apps/accounts/ManageLinkedAccountsController';
 import MigrateToMultiAuth from '@cdo/apps/accounts/MigrateToMultiAuth';
 import RemoveParentEmailController from '@cdo/apps/accounts/RemoveParentEmailController';
+import {SchoolInformation} from '@cdo/apps/accounts/SchoolInformation';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
@@ -46,6 +48,25 @@ $(document).ready(() => {
         <MigrateToMultiAuth />
       </Provider>,
       migrateMultiAuthMountPoint
+    );
+  }
+
+  const accountInformationMountPoint = document.getElementById(
+    'account-information'
+  );
+  if (accountInformationMountPoint) {
+    ReactDOM.render(
+      <AccountInformation {...scriptData} />,
+      accountInformationMountPoint
+    );
+  }
+
+  const schoolInformationMountPoint =
+    document.getElementById('school-information');
+  if (schoolInformationMountPoint) {
+    ReactDOM.render(
+      <SchoolInformation {...scriptData} />,
+      schoolInformationMountPoint
     );
   }
 
@@ -147,7 +168,8 @@ $(document).ready(() => {
       isPasswordRequired,
       isGoogleClassroomStudent,
       isCleverStudent,
-      personalAccountLinkingEnabled
+      personalAccountLinkingEnabled,
+      lmsName
     );
   }
 

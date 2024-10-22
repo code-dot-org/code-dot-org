@@ -1,6 +1,6 @@
 {
   "pages": {
-    "/home": "transformers-sept-2024",
+    "/home": "access-report-launch-2024",
     "/student-home": "transformers-sept-2024"
   },
   "banners": {
@@ -44,6 +44,15 @@
       "buttonText": "Try it now",
       "buttonUrl": "https://studio.code.org/s/hello-world-transformers-one-2024/lessons/1/levels/1",
       "buttonId": "transformers-sept-2024"
+    },
+    "access-report-launch-2024": {
+      "dcdo": "access-report-launch",
+      "image": "/images/marketing/accessreport_teacherdash.png",
+      "title": "The 2024 State of Computer Science Report is here!",
+      "body": "Check out the latest data on national and state-level computer science education policy, including policy trends, maps, state summaries, and implementation data.",
+      "buttonText": "Read the report",
+      "buttonUrl": "https://advocacy.code.org/stateofcs/",
+      "buttonId": "access-report-launch-2024"
     }
   }
 }

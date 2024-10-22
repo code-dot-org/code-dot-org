@@ -1,13 +1,16 @@
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
+import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
+
 import FontAwesome from '../legacySharedComponents/FontAwesome';
 import EnhancedSafeMarkdown from '../templates/EnhancedSafeMarkdown';
 import {commonI18n} from '../types/locale';
+import {cancelSpeech} from '../util/BrowserTextToSpeech';
 
 import {Panel} from './types';
 
-import styles from './panels.module.scss';
+import styles from './panelsView.module.scss';
 
 // Leave a margin to the left and the right of the panels, to the edges
 // of the screen.
@@ -27,6 +30,7 @@ interface PanelsProps {
   onSkip?: () => void;
   targetWidth: number;
   targetHeight: number;
+  offerTts: boolean;
   resetOnChange?: boolean;
 }
 
@@ -39,6 +43,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   onSkip,
   targetWidth,
   targetHeight,
+  offerTts,
   resetOnChange = true,
 }) => {
   const [currentPanel, setCurrentPanel] = useState(0);
@@ -88,20 +93,32 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     }
   }, [currentPanel, panels]);
 
+  // Cancel any in-progress text-to-speech when the panel changes.
+  useEffect(() => {
+    if (offerTts) {
+      cancelSpeech();
+    }
+  }, [currentPanel, offerTts]);
+
   const panel = panels[currentPanel];
   if (!panel) {
     return null;
   }
 
   const showSmallText = height < 300;
-  const textLayoutClass =
-    panel.layout === 'text-top-left'
-      ? styles.markdownTextTopLeft
-      : panel.layout === 'text-bottom-left'
-      ? styles.markdownTextBottomLeft
-      : panel.layout === 'text-bottom-right'
-      ? styles.markdownTextBottomRight
-      : styles.markdownTextTopRight;
+
+  const layoutClassMap = {
+    'text-top-left': styles.markdownTextTopLeft,
+    'text-top-center': styles.markdownTextTopCenter,
+    'text-bottom-left': styles.markdownTextBottomLeft,
+    'text-bottom-center': styles.markdownTextBottomCenter,
+    'text-bottom-right': styles.markdownTextBottomRight,
+    'text-top-right': styles.markdownTextTopRight,
+  };
+
+  const textLayoutClass = panel.layout
+    ? layoutClassMap[panel.layout]
+    : styles.markdownTextTopRight;
 
   return (
     <div
@@ -116,14 +133,16 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
             backgroundImage: `url("${panel.imageUrl}")`,
           }}
         />
-        <EnhancedSafeMarkdown
-          markdown={panel.text}
+        <div
           className={classNames(
             styles.markdownText,
             showSmallText && styles.markdownTextSmall,
             textLayoutClass
           )}
-        />
+        >
+          {offerTts && <TextToSpeech text={panel.text} />}
+          <EnhancedSafeMarkdown markdown={panel.text} />
+        </div>
       </div>
       <div
         className={styles.childrenArea}

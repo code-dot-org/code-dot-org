@@ -8,9 +8,9 @@ Feature: Checking the footer appearance
 
     Then I see no difference for "small footer"
 
-    When I press the first ".copyright-link" element
+    When I press the first ".copyright-button" element
     And I wait for 0.25 seconds
-    Then I see no difference for "copyright dialog"
+    Then I see no difference for "copyright modal"
     And I press the first "#ui-close-dialog" element
     And I wait for 0.25 seconds
 
@@ -24,9 +24,9 @@ Feature: Checking the footer appearance
 
     Then I see no difference for "small footer"
 
-    When I press the first ".copyright-link" element
+    When I press the first ".copyright-button" element
     And I wait for 0.25 seconds
-    Then I see no difference for "copyright dialog"
+    Then I see no difference for "copyright modal"
 
     Then I close my eyes
 
@@ -48,7 +48,7 @@ Feature: Checking the footer appearance
     Then I see no difference for "footer menu"
 
     When I press menu item "Copyright"
-    Then I see no difference for "copyright dialog"
+    Then I see no difference for "copyright modal"
     And I wait for 0.25 seconds
     And I close the small footer menu
 
@@ -58,9 +58,9 @@ Feature: Checking the footer appearance
     And I wait until element "#runButton" is visible
     Then I see no difference for "how it works small footer"
 
-    When I press the first ".copyright-link" element
+    When I press the first ".copyright-button" element
     And I wait for 0.25 seconds
-    Then I see no difference for "how it works copyright dialog"
+    Then I see no difference for "how it works copyright modal"
 
     Then I close my eyes
 
@@ -81,7 +81,7 @@ Feature: Checking the footer appearance
     Then I see no difference for "footer menu"
 
     When I press menu item "Copyright"
-    Then I see no difference for "copyright dialog"
+    Then I see no difference for "copyright modal"
     And I wait for 0.25 seconds
     And I close the small footer menu
 
@@ -97,9 +97,9 @@ Feature: Checking the footer appearance
     And I close the small footer menu
     And I wait for 0.25 seconds
 
-    When I press the first ".copyright-link" element
+    When I press the first ".copyright-button" element
     And I wait for 0.25 seconds
-    Then I see no difference for "how it works copyright dialog"
+    Then I see no difference for "how it works copyright modal"
 
     Then I close my eyes
 
@@ -117,7 +117,7 @@ Feature: Checking the footer appearance
     Then I see no difference for "footer menu"
 
     When I press menu item "Copyright"
-    Then I see no difference for "copyright dialog"
+    Then I see no difference for "copyright modal"
 
     Then I close my eyes
 
@@ -145,7 +145,7 @@ Feature: Checking the footer appearance
     Then I see no difference for "footer menu"
 
     When I press menu item "Copyright"
-    Then I see no difference for "copyright dialog"
+    Then I see no difference for "copyright modal"
 
     Then I close my eyes
 
@@ -172,7 +172,7 @@ Feature: Checking the footer appearance
     Then I see no difference for "footer menu"
 
     When I press menu item "Copyright"
-    Then I see no difference for "copyright dialog"
+    Then I see no difference for "copyright modal"
 
     Then I close my eyes
 
@@ -195,6 +195,6 @@ Feature: Checking the footer appearance
     Then I see no difference for "footer menu"
 
     When I press menu item "Copyright"
-    Then I see no difference for "copyright dialog"
+    Then I see no difference for "copyright modal"
 
     Then I close my eyes

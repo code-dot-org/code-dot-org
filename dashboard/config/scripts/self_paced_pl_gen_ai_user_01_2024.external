@@ -3,17 +3,99 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson 22: Issue Statements
+# User-Centered Design
 
-<img src="https://images.code.org/42c3d3887db130910c13a6afb2aa0a49-Screenshot 2024-09-03 at 10.19.33 AM.png" alt="the five whys activity ending with a core issue statement" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+#### For the remainder of this unit students develop their skills related to **User-Centered Design** focusing on building chatbots that are not only functional, but also useful for users in their specific situations.
 
-#### In this lesson, students explore **design thinking** strategy to identify core issues in their community and brainstorm how generative AI can help solve them. They begin by observing a problem in their community, use the **5 Why’s strategy** to uncover the root cause, and then brainstorm potential solutions using model cards. This lesson serves as a practice run for skills and processes they will apply in their project later in the unit.
+#### The lessons in this portion of the unit will help students develop their skills to complete the **Final Project, Solving Community Problems with Chatbots**.
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> Issue Statements are a component of Design Thinking, which is a larger framework for creatively addressing community issues.  
-</p>
-</div>
+## Lesson Overviews
 
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 22: Issue Statements</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/42c3d3887db130910c13a6afb2aa0a49-Screenshot 2024-09-03 at 10.19.33 AM.png" alt="the five whys activity ending with a core issue statement" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** How can generative AI be used to address an issue in your community?
+
+#### **Lesson Overview:**
+
+#### In this lesson, students explore a design thinking strategy to help identify core issues in their community and brainstorm ways generative AI can help solve them. Students start with an initial observation of a problem in their community, then use the 5 Why’s strategy to identify the larger core issue that could be addressed. Students then use model cards to brainstorm possible solutions, then discuss four possible solutions provided by other students. These activities act as a “practice run” for skills and processes students will do for their project later in the unit.
+
+#### **Students will be able to:**
+* #### Brainstorm chatbot solutions to address identified community issues
+* #### Identify community issues through observation and empathy
+
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/22" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 23: User Feedback
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/ddc7ab7741dc379934afff0a81b8b618-Screenshot 2024-09-03 at 10.25.06 AM.png" alt="Alice's user story from the lesson" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** How can we test our chatbots with a variety of users to verify they work as expected and avoid unintended harm?
+
+#### **Lesson Overview:**
+
+#### This lesson has two central parts - first students explore how to act as user testers for a chatbot app, then students help decide what the next-steps should be for a chatbot based on the testing data. This lesson builds to the project students will complete at the end of the unit, where they will user-test each other’s apps using the same structure in this lesson. Students also wrestle with the responsible use of AI and help decide whether or not a chatbot should be launched publicly even when some flaws are uncovered, emphasizing how humans remain decision-makers for how AI products impact society.
+
+#### **Students will be able to:**
+* #### Explain the importance of user testing in developing AI applications
+* #### Make informed decisions based on user feedback to improve chatbot performance and usability
+* #### Perform user testing on chatbots and provide constructive feedback
+
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/23" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 24: Fine Tuning - Exploration
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/98ce6352ee4c01959436a4c0735c556f-Screenshot 2024-10-07 at 10.38.43 AM.png" alt="The Activity Guide for Unit 2 Lesson 5 directing students through the mini project" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** How can we make deep changes to chatbots that affect it’s core behavior?
+
+#### **Lesson Overview:**
+
+#### In this lesson, students are introduced to the process of fine-tuning as a process for altering the core behavior of a language model. The lesson starts with students reflecting on how inside jokes or slang expressions create connections that are difficult to explain to folks outside the group - they must be experienced to be understood. This idea ties into the lesson as we explore a new chatbot that has been specifically designed to act as a medical expert. Students observe how speaking to the medical expert chatbot is different from the typical chatbot due to how the both has been fine-tuned on additional medical data. Students learn about the fine-tuning process, then explore additional models on the Hugging Face website to see additional fine-tuned examples.
+
+#### **Students will be able to:**
+* #### Experiment with different fine-tuned models to observe how additional data sources influence chatbot responses
+* #### Explain the concept of fine-tuning and how it affects the core behavior of chatbots
+
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/24" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 25: Chatbots in Society
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/9fc7470659837116c139ec0a217a0a13-Screenshot 2024-10-07 at 10.41.05 AM.png" alt="The Activity Guide for Unit 2 Lesson 5 directing students through the mini project" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Lesson Overview:**
+
+#### Students explore the impact of generative AI by participating in a collaborative game. Students take on a persona of someone impacted by generative AI to read a few articles and react in-character. Then, students form groups and are given a scenario involving their persona and generative AI. Working together, they come up with guidelines for how generative AI should be implemented in this scenario that includes the voices and perspectives of all stakeholders. Finally, students share their results with the class and reflect on this process.
+
+#### **Students will be able to:**
+* #### Collaboratively develop guidelines for the use of generative AI that consider multiple stakeholders’ needs and concerns
+* #### Understand different perspectives on the impact of generative AI in a specific scenario
+
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/25" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+
+## Up Next!
+#### Explore the final project for the Customizing Language Models Unit.
 
 MARKDOWN

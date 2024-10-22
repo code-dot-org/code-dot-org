@@ -23,14 +23,18 @@ const ChatWarningModal: React.FunctionComponent<ChatWarningModalProps> = ({
   onClose,
 }) => (
   <AccessibleDialog onClose={onClose} className={moduleStyles.chatWarningModal}>
-    <Heading3>{i18n.aiWarningModalHeader()}</Heading3>
+    <div className={moduleStyles.headerContainer}>
+      <Heading3>{i18n.aiWarningModalHeader()}</Heading3>
+    </div>
     <hr />
-    <BodyTwoText>
-      <StrongText>{i18n.aiWarningModalMessagesAreRecorded()}</StrongText>
-    </BodyTwoText>
-    <BodyTwoText>{i18n.aiWarningModalInappropriateFlagged()}</BodyTwoText>
-    <BodyTwoText>{i18n.aiWarningUnsaved()}</BodyTwoText>
-    <BodyTwoText>{i18n.aiWarningModalPersonalNotSubmitted()}</BodyTwoText>
+    <div className={moduleStyles.warningModuleTextContainer}>
+      <BodyTwoText>
+        <StrongText>{i18n.aiWarningModalMessagesAreRecorded()}</StrongText>
+      </BodyTwoText>
+      <BodyTwoText>{i18n.aiWarningModalInappropriateFlagged()}</BodyTwoText>
+      <BodyTwoText>{i18n.aiWarningUnsaved()}</BodyTwoText>
+      <BodyTwoText>{i18n.aiWarningModalPersonalNotSubmitted()}</BodyTwoText>
+    </div>
     <hr />
     <div className={moduleStyles.bottomSection}>
       <Button

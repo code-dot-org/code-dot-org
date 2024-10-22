@@ -106,7 +106,8 @@ export function getFileByName(
 /**
  * Given a map of {fileId: ProjectFile}, return the first non-hidden, active file.
  * @param project - The folders and files for a given project.
- * @returns The first non-hidden, active file, or the first file.
+ * @returns The first non-hidden, active file, the first open file if no files are active,
+ * or undefined if no files are open.
  */
 export function getActiveFileForProject(project: MultiFileSource) {
   const files = Object.values(project.files);
@@ -114,11 +115,16 @@ export function getActiveFileForProject(project: MultiFileSource) {
   // No files are hidden in start mode. In non-start mode, only show starter files
   // (or files without a type, which default to starter files).
   const visibleFiles = files.filter(
-    f => isStartMode || !f.type || f.type === ProjectFileType.STARTER
+    f =>
+      isStartMode ||
+      !f.type ||
+      f.type === ProjectFileType.STARTER ||
+      f.type === ProjectFileType.LOCKED_STARTER
   );
 
-  // Get the first active file, or the first file.
-  return visibleFiles.find(f => f.active) || visibleFiles[0];
+  // Get the first active file, if no active file then the first open file,
+  // or undefined if no files are open.
+  return visibleFiles.find(f => f.active) || visibleFiles.find(f => f.open);
 }
 
 /**

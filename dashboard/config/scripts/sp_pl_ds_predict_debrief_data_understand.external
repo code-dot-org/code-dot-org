@@ -1,0 +1,32 @@
+name 'SP-PL-DS-Predict_Debrief-Data_understand'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Debriefing Predict and Run
+
+![](https://images.code.org/3074c655a29b7289a5421b06c836a08e-image-1727985944389.png)
+
+
+
+## 🔎You might have noticed:
+- #### The **info()** function reveals important information about the data.
+- #### The three data types represented are: **object, float64,** and **int64**.
+- #### Each data type is associated with different kinds of attributes.
+
+<img src="https://images.code.org/e0ad1528b7fd7108b6daf4546fddd624-image-1727985615825.png" alt="output from code" width="350px" style=" border-radius:10px; display: block; margin-left: auto; margin-right: auto;">
+
+## 💡You might Wonder: 
+- #### What might each of the data types (object, float64, int64) represent in the dataset?
+- ####Why are specific data types associated with particular attributes?
+- ####How do the data types affect the behavior or analysis of the dataset?
+
+<br>
+
+
+
+
+##Let's continue to the **Investigate & Modify** levels.
+
+
+MARKDOWN

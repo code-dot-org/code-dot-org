@@ -256,7 +256,7 @@ class Level < ApplicationRecord
       end
     end
 
-    !(current_parent&.type == "LevelGroup")
+    current_parent&.type != "LevelGroup"
   end
 
   def to_xml(options = {})
@@ -840,10 +840,12 @@ class Level < ApplicationRecord
     properties_camelized = properties.camelize_keys
     properties_camelized[:id] = id
     properties_camelized[:levelData] = video if video
+    properties_camelized[:helpVideos] = related_videos.map(&:summarize)
     properties_camelized[:type] = type
     properties_camelized[:appName] = game&.app
     properties_camelized[:useRestrictedSongs] = game.use_restricted_songs?
     properties_camelized[:usesProjects] = try(:is_project_level) || channel_backed?
+    properties_camelized[:finishUrl] = script_level.next_level_or_redirect_path_for_user(current_user) if script_level
 
     if try(:project_template_level).try(:start_sources)
       properties_camelized['templateSources'] = try(:project_template_level).try(:start_sources)
