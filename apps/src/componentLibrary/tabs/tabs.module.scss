@@ -167,7 +167,7 @@
         outline: 2px solid $light_primary_500;
         outline-offset: 2px;
 
-        &:not(.selectedTab) button {
+        &:not(.selectedTab, :active) button {
           color: $light_white;
         }
       }
@@ -220,6 +220,10 @@
         border-bottom-color: $light_gray_800;
         outline: 2px solid $light_primary_500;
         outline-offset: 2px;
+
+        &:not(.selectedTab) button {
+          color: $light_white;
+        }
       }
 
       &:active:not(:disabled) {
