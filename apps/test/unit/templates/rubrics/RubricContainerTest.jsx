@@ -1,6 +1,5 @@
 // react testing library import
 import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -331,7 +330,7 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -343,12 +342,7 @@ describe('RubricContainer', () => {
         />
       </Provider>
     );
-    await wait();
-    wrapper.update();
-    deprecatedExpect(wrapper.find('Button')).to.have.lengthOf(4);
-    deprecatedExpect(wrapper.find('Button').first().props().text).to.equal(
-      i18n.runAiAssessment()
-    );
+    screen.getByRole('button', {name: i18n.runAiAssessment()});
   });
 
   it('does not show a button for running analysis if AI is not enabled for level', async () => {
@@ -691,7 +685,7 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -708,13 +702,14 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
-    wrapper.update();
     deprecatedExpect(userFetchStub).to.have.been.called;
     deprecatedExpect(allFetchStub).to.have.been.called;
-    deprecatedExpect(wrapper.text()).to.include(
-      i18n.aiEvaluationStatus_error()
-    );
-    deprecatedExpect(wrapper.find('Button').at(0).props().disabled).to.be.false;
+    screen.getByText(i18n.aiEvaluationStatus_error());
+    expect(
+      screen.getByRole('button', {
+        name: i18n.runAiAssessment(),
+      })
+    ).not.toBeDisabled();
   });
 
   it('shows PII error message for status 1001', async () => {
@@ -734,7 +729,7 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -751,13 +746,14 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
-    wrapper.update();
     deprecatedExpect(userFetchStub).to.have.been.called;
     deprecatedExpect(allFetchStub).to.have.been.called;
-    deprecatedExpect(wrapper.text()).to.include(
-      i18n.aiEvaluationStatus_pii_error()
-    );
-    deprecatedExpect(wrapper.find('Button').at(0).props().disabled).to.be.true;
+    screen.getByText(i18n.aiEvaluationStatus_pii_error());
+    expect(
+      screen.getByRole('button', {
+        name: i18n.runAiAssessment(),
+      })
+    ).toBeDisabled();
   });
 
   it('shows profanity error message for status 1002', async () => {
@@ -777,7 +773,7 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -794,13 +790,12 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
-    wrapper.update();
     deprecatedExpect(userFetchStub).to.have.been.called;
     deprecatedExpect(allFetchStub).to.have.been.called;
-    deprecatedExpect(wrapper.text()).to.include(
-      i18n.aiEvaluationStatus_profanity_error()
-    );
-    deprecatedExpect(wrapper.find('Button').at(0).props().disabled).to.be.true;
+    screen.getByText(i18n.aiEvaluationStatus_profanity_error());
+    expect(
+      screen.getByRole('button', {name: i18n.runAiAssessment()})
+    ).toBeDisabled();
   });
 
   it('shows request too large error message for status 1003', async () => {
@@ -820,7 +815,7 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -837,13 +832,12 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
-    wrapper.update();
     deprecatedExpect(userFetchStub).to.have.been.called;
     deprecatedExpect(allFetchStub).to.have.been.called;
-    deprecatedExpect(wrapper.text()).to.include(
-      i18n.aiEvaluationStatus_request_too_large()
-    );
-    deprecatedExpect(wrapper.find('Button').at(0).props().disabled).to.be.true;
+    screen.getByText(i18n.aiEvaluationStatus_request_too_large());
+    expect(
+      screen.getByRole('button', {name: i18n.runAiAssessment()})
+    ).toBeDisabled();
   });
 
   it('shows ready state on initial load for status 1004', async () => {
