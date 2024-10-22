@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-staging",
-    "serialized_at": "2024-09-26 20:43:55 UTC",
+    "serialized_at": "2024-10-21 23:01:15 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1149,8 +1149,21 @@
       }
     },
     {
-      "key": "8c03fdda-3fe9-4806-be4c-50dd233215d4",
+      "key": "ff8c3a4c-dc61-40c1-8a04-b262c7259bf8",
       "position": 1,
+      "properties": {
+        "name": "Pre-Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ff8c3a4c-dc61-40c1-8a04-b262c7259bf8",
+        "lesson.key": "Interacting with Language Models",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-staging"
+      }
+    },
+    {
+      "key": "8c03fdda-3fe9-4806-be4c-50dd233215d4",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1164,7 +1177,7 @@
     },
     {
       "key": "ae771748-eb3f-4707-90e8-b04d6e484ea7",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1178,26 +1191,13 @@
     },
     {
       "key": "182970da-222d-4d8d-b51f-ba6c9aa95025",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "182970da-222d-4d8d-b51f-ba6c9aa95025",
-        "lesson.key": "Interacting with Language Models",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging"
-      }
-    },
-    {
-      "key": "1e3228f0-57f0-430c-bd4a-7393540f385b",
-      "position": 4,
-      "properties": {
-        "name": "Pilot Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "1e3228f0-57f0-430c-bd4a-7393540f385b",
         "lesson.key": "Interacting with Language Models",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "gen-ai-staging"
@@ -1851,6 +1851,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "73b6d370-9f31-4aac-af62-84b6df02e790",
+        "lesson.key": "Project: Solving Community Problems with Chatbots",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging"
+      }
+    },
+    {
+      "key": "b9c9cb55-be40-46a7-8b9c-5f6fd7785ac5",
+      "position": 4,
+      "properties": {
+        "name": "Student Post-Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b9c9cb55-be40-46a7-8b9c-5f6fd7785ac5",
         "lesson.key": "Project: Solving Community Problems with Chatbots",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "gen-ai-staging"
@@ -3633,6 +3646,31 @@
       }
     },
     {
+      "key": "cda72a2e-ed0f-42d9-beb7-170d7cfc7fe3",
+      "position": 1,
+      "properties": {
+        "description": "Before beginning the unit, please have students complete a short 5-question presurvey. When students finish, they can start the warm-up in the next level.\n\nAlthough their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "Student Pre-survey",
+        "progression_name": "Student Pre-Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "cda72a2e-ed0f-42d9-beb7-170d7cfc7fe3",
+        "lesson_activity.key": "ff8c3a4c-dc61-40c1-8a04-b262c7259bf8"
+      }
+    },
+    {
+      "key": "7ecf4eb5-774b-46c3-bf11-6c46b03a6a77",
+      "position": 2,
+      "properties": {
+        "description": "Before starting the unit or while students take their survey, please complete [this teacher pre-survey](https://studio.code.org/form/exploring_with_generative_ai_pre_survey). Your feedback is valued and appreciated!",
+        "name": "Teacher Pre-Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ecf4eb5-774b-46c3-bf11-6c46b03a6a77",
+        "lesson_activity.key": "ff8c3a4c-dc61-40c1-8a04-b262c7259bf8"
+      }
+    },
+    {
       "key": "39d9bfae-9327-4a6f-9ef0-0b275f72e08e",
       "position": 1,
       "properties": {
@@ -3826,17 +3864,6 @@
       "seeding_key": {
         "activity_section.key": "888067f0-405f-4125-9049-76df9241b71f",
         "lesson_activity.key": "182970da-222d-4d8d-b51f-ba6c9aa95025"
-      }
-    },
-    {
-      "key": "a56d6337-22a8-4c84-b37f-6862c9198fc2",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n- [Report a Typo / Bug / Unclear Directions](https://docs.google.com/forms/d/e/1FAIpQLScERCG76MbaK7SFjHgSAeaMKl5a3B8JaUTPkQlQIMKThKSglA/viewform)\n- [Submit Feedback on the Lesson](https://docs.google.com/forms/d/e/1FAIpQLSevew-9Arb6tEGRQfHxmPLTdUsL4mHNWoPIE9DRXJpf_d2C5g/viewform) (required for Amazon Gift Card!)\n- [Share Takeaways and Experiences in the Forum!](https://forum.code.org/c/generative-ai-pilot/460)\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "a56d6337-22a8-4c84-b37f-6862c9198fc2",
-        "lesson_activity.key": "1e3228f0-57f0-430c-bd4a-7393540f385b"
       }
     },
     {
@@ -5786,6 +5813,29 @@
       }
     },
     {
+      "key": "a93bda7b-80ef-4d47-8e9f-bb55ae6c7bc4",
+      "position": 1,
+      "properties": {
+        "description": "Please have students take the post-survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "progression_name": "Student Post-Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "a93bda7b-80ef-4d47-8e9f-bb55ae6c7bc4",
+        "lesson_activity.key": "b9c9cb55-be40-46a7-8b9c-5f6fd7785ac5"
+      }
+    },
+    {
+      "key": "30501b4c-d2a4-4a3b-bc59-2f588f5ac5ac",
+      "position": 2,
+      "properties": {
+        "description": "While students take their survey, please [complete this post-survey for teachers as well](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_2). Your feedback is valued and appreciated!"
+      },
+      "seeding_key": {
+        "activity_section.key": "30501b4c-d2a4-4a3b-bc59-2f588f5ac5ac",
+        "lesson_activity.key": "b9c9cb55-be40-46a7-8b9c-5f6fd7785ac5"
+      }
+    },
+    {
       "key": "f90db6c3-4c0d-4da0-9410-ba03a68a720f",
       "position": 1,
       "properties": {
@@ -6003,6 +6053,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson4-wrapup"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -6200,6 +6253,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson9-wrapup"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -6320,6 +6376,28 @@
       "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Student Pre-Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-studentsurvey-premodule"
+        ],
+        "lesson.key": "Interacting with Language Models",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "cda72a2e-ed0f-42d9-beb7-170d7cfc7fe3"
+      },
+      "level_keys": [
+        "gen-ai-customizing-studentsurvey-premodule"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -6342,8 +6420,8 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 2,
+      "chapter": 24,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -6367,8 +6445,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 3,
+      "chapter": 25,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6392,8 +6470,8 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 4,
+      "chapter": 26,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -6417,8 +6495,8 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 5,
+      "chapter": 27,
+      "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -6442,8 +6520,8 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 6,
+      "chapter": 28,
+      "position": 7,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -6467,8 +6545,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 7,
+      "chapter": 29,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6492,8 +6570,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 8,
+      "chapter": 30,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6517,8 +6595,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 9,
+      "chapter": 31,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6542,7 +6620,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6567,7 +6645,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6592,7 +6670,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6617,7 +6695,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -6642,7 +6720,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6667,7 +6745,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6692,7 +6770,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6717,7 +6795,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6742,7 +6820,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6767,7 +6845,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6792,7 +6870,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6817,7 +6895,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -6842,7 +6920,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -6867,7 +6945,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6892,7 +6970,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -6917,7 +6995,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -6942,7 +7020,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6967,7 +7045,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -6992,7 +7070,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -7017,7 +7095,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -7042,7 +7120,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7067,7 +7145,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7092,7 +7170,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7117,7 +7195,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -7142,7 +7220,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7167,7 +7245,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -7192,7 +7270,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -7217,7 +7295,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -7242,7 +7320,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7267,7 +7345,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -7292,7 +7370,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7317,7 +7395,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7342,7 +7420,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7367,7 +7445,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7392,7 +7470,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -7417,7 +7495,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -7442,7 +7520,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7467,7 +7545,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -7492,7 +7570,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7517,7 +7595,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7542,7 +7620,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7567,7 +7645,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7592,7 +7670,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7617,7 +7695,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7642,7 +7720,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -7667,7 +7745,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -7692,7 +7770,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -7717,7 +7795,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 79,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7742,7 +7820,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -7767,7 +7845,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -7792,7 +7870,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 82,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7817,7 +7895,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7842,7 +7920,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7867,7 +7945,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7892,7 +7970,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -7917,7 +7995,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 87,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -7942,7 +8020,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 88,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7967,7 +8045,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 89,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -7992,7 +8070,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 90,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -8017,7 +8095,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 91,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -8042,7 +8120,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 92,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -8067,7 +8145,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 93,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8092,7 +8170,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 94,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8117,7 +8195,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 95,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8142,7 +8220,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 96,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8167,7 +8245,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 97,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8192,7 +8270,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 98,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8217,7 +8295,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 99,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8242,7 +8320,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 100,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8267,7 +8345,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 101,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -8292,7 +8370,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 102,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -8317,7 +8395,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 103,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8342,7 +8420,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 104,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8367,7 +8445,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 105,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8392,7 +8470,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 106,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8417,7 +8495,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 107,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -8442,7 +8520,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 108,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -8467,7 +8545,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 109,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8492,7 +8570,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 110,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -8517,7 +8595,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 111,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8542,7 +8620,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 112,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8564,6 +8642,28 @@
       },
       "level_keys": [
         "gen-ai-customizing-project2-L2_2024"
+      ]
+    },
+    {
+      "chapter": 113,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Student Post-Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-studentsurvey-postmodule"
+        ],
+        "lesson.key": "Project: Solving Community Problems with Chatbots",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "a93bda7b-80ef-4d47-8e9f-bb55ae6c7bc4"
+      },
+      "level_keys": [
+        "gen-ai-customizing-studentsurvey-postmodule"
       ]
     }
   ],
@@ -8818,6 +8918,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "gen-ai-staging",
         "activity_section.key": "b2ad4b4c-abcd-4e97-9e7a-4adb6b1a582e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-studentsurvey-premodule",
+        "script_level.level_keys": [
+          "gen-ai-customizing-studentsurvey-premodule"
+        ],
+        "lesson.key": "Interacting with Language Models",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "cda72a2e-ed0f-42d9-beb7-170d7cfc7fe3"
       }
     },
     {
@@ -9898,6 +10010,18 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "gen-ai-staging",
         "activity_section.key": "bb8431d6-0a02-40c9-aa32-5fe002480643"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-studentsurvey-postmodule",
+        "script_level.level_keys": [
+          "gen-ai-customizing-studentsurvey-postmodule"
+        ],
+        "lesson.key": "Project: Solving Community Problems with Chatbots",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "a93bda7b-80ef-4d47-8e9f-bb55ae6c7bc4"
       }
     }
   ],
