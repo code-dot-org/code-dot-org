@@ -172,7 +172,7 @@ export default function RubricContainer({
     setHasTeacherFeedbackMap(hasFeedbackMap);
   };
 
-  const updateHasTeacherFeedback = userId => {
+  const onSubmitTeacherFeedback = userId => {
     setHasTeacherFeedbackMap({
       ...hasTeacherFeedbackMap,
       [userId]: true,
@@ -447,7 +447,7 @@ export default function RubricContainer({
             studentLevelInfo={studentLevelInfo}
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}
-            updateHasTeacherFeedback={updateHasTeacherFeedback}
+            onSubmitTeacherFeedback={onSubmitTeacherFeedback}
           />
         )}
       </div>

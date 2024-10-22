@@ -223,7 +223,7 @@ describe('RubricSubmitFooter', () => {
           reportingData={{}}
           studentLevelInfo={defaultStudentInfo}
           open
-          updateHasTeacherFeedback={() => {}}
+          onSubmitTeacherFeedback={() => {}}
         />
       </Provider>
     );
@@ -285,7 +285,7 @@ describe('RubricSubmitFooter', () => {
           reportingData={{}}
           studentLevelInfo={defaultStudentInfo}
           open
-          updateHasTeacherFeedback={() => {}}
+          onSubmitTeacherFeedback={() => {}}
         />
       </Provider>
     );
@@ -333,7 +333,7 @@ describe('RubricSubmitFooter', () => {
           reportingData={{}}
           studentLevelInfo={defaultStudentInfo}
           open
-          updateHasTeacherFeedback={() => {}}
+          onSubmitTeacherFeedback={() => {}}
         />
       </Provider>
     );
@@ -367,7 +367,7 @@ describe('RubricSubmitFooter', () => {
           reportingData={{}}
           studentLevelInfo={defaultStudentInfo}
           open
-          updateHasTeacherFeedback={() => {}}
+          onSubmitTeacherFeedback={() => {}}
         />
       </Provider>
     );
@@ -411,7 +411,7 @@ describe('RubricSubmitFooter', () => {
           reportingData={{}}
           studentLevelInfo={defaultStudentInfo}
           open
-          updateHasTeacherFeedback={() => {}}
+          onSubmitTeacherFeedback={() => {}}
         />
       </Provider>
     );
@@ -452,7 +452,7 @@ describe('RubricSubmitFooter', () => {
           reportingData={{}}
           studentLevelInfo={defaultStudentInfo}
           open
-          updateHasTeacherFeedback={() => {}}
+          onSubmitTeacherFeedback={() => {}}
         />
       </Provider>
     );
@@ -493,7 +493,7 @@ describe('RubricSubmitFooter', () => {
           reportingData={{}}
           studentLevelInfo={defaultStudentInfo}
           open
-          updateHasTeacherFeedback={() => {}}
+          onSubmitTeacherFeedback={() => {}}
         />
       </Provider>
     );

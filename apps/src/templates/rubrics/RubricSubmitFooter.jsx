@@ -27,7 +27,7 @@ function RubricSubmitFooter({
   open,
   feedbackAdded,
   setFeedbackAdded,
-  updateHasTeacherFeedback,
+  onSubmitTeacherFeedback,
 
   // redux
   teacherId,
@@ -122,7 +122,7 @@ function RubricSubmitFooter({
         }
         const lastSubmittedDateObj = new Date(json.submittedAt);
         setLastSubmittedTimestamp(lastSubmittedDateObj.toLocaleString());
-        updateHasTeacherFeedback(studentLevelInfo.user_id);
+        onSubmitTeacherFeedback(studentLevelInfo.user_id);
 
         if (feedbackAdded) {
           analyticsReporter.sendEvent(
@@ -196,7 +196,7 @@ RubricSubmitFooter.propTypes = {
   feedbackAdded: PropTypes.bool,
   setFeedbackAdded: PropTypes.func,
   teacherId: PropTypes.number,
-  updateHasTeacherFeedback: PropTypes.func,
+  onSubmitTeacherFeedback: PropTypes.func,
 };
 
 export default connect(state => ({
