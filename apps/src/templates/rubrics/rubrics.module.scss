@@ -1211,6 +1211,19 @@ button.infoAlertRight {
   }
 }
 
+.summaryContainer {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-areas: "a a";
+  width: 100%;
+}
+
+.summaryItemContainer {
+  background: unset;
+  padding: 1rem;
+  text-align: center;
+}
+
 .aiSettingsContainer {
   align-items: unset;
 }
