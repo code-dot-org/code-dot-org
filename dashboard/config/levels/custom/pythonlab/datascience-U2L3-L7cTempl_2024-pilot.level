@@ -21,7 +21,8 @@
           "contents": "",
           "folderId": "0",
           "active": true,
-          "open": true
+          "open": true,
+          "type": "locked_starter"
         },
         "1": {
           "id": "1",
@@ -42,6 +43,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-09-14T17:12:02.221+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L3-L7c_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L3-L7c_2024-pilot\"},{\"changed_at\":\"2024-09-14 17:12:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 17:12:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-14T17:12:02.221+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L3-L7c_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L3-L7c_2024-pilot\"},{\"changed_at\":\"2024-09-14 17:12:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 17:12:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-21 22:52:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":20970,\"changed_by_email\":\"cassi.brenci-levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

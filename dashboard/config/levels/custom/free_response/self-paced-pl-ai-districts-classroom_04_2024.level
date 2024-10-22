@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-10-21T14:48:45.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "# UDL and AI\r\n\r\n#### Universal Design for Learning (UDL) and Culturally Responsive Teaching (CRT) are key approaches in education that, when combined with Artificial Intelligence (AI), can transform how students learn. UDL is about creating lessons that everyone can access and engage with, no matter their learning style. CRT ensures that teaching respects and includes every student's culture, making learning more relevant and engaging for them.\r\n\r\n#### AI can greatly assist teachers in tailoring education to fit every student's needs. Here are some ways AI can help:\r\n* #### **Customized Learning Paths**: AI can analyze what each student knows and how they learn best. Then, it suggests activities that fit just right, like picking books that match their reading level or math problems that challenge them without being too hard. It's like having a learning journey designed just for them.\r\n* #### **Interactive and Engaging Learning Materials**: AI can create learning games and activities that reflect the diverse cultures and interests of the students. This makes learning fun and keeps students interested. For example, an AI program might design a history game that includes stories from all around the world or a science quiz that adapts its questions to what students are curious about.\r\n* #### **Translation and Text Leveling Tools**: AI can enhance accessibility in multilingual classrooms through translation tools and text leveling. AI-powered translation helps bridge language barriers, enabling students who speak different languages to access course materials in their native language. This fosters a more inclusive learning environment where all students can fully participate. Additionally, AI can adjust the complexity of texts to suit the reading level of each student, promoting comprehension and engagement. Whether simplifying a complex scientific paper or enriching a basic text to challenge advanced readers, AI tailors content to meet diverse literacy needs effectively.\r\n* #### **Automated Grading and Assessment**: AI can automate the grading of assignments and assessments, saving teachers valuable time. Beyond just multiple-choice tests, AI systems are now capable of evaluating essays and complex calculations. This allows teachers to focus more on classroom interaction and individual student support, rather than spending extensive time on grading. Moreover, AI can provide detailed analytics on student performance, highlighting strengths and areas for improvement, which can guide further instruction.\r\n\r\n#### By integrating UDL, CRT, and AI, teachers can build a learning environment where every student finds the support and motivation they need to succeed. It's about making education flexible and inclusive, so learning becomes a positive experience for everyone.\r\n\r\n##### * Note: In the previous levels we explored using LLMs, one specific type of AI, which are capable of doing many things to support all students. However, it can’t do everything on this list. Check out the other modules in this series to learn more about different types of AI and how they can be used to support you and your students.\r\n\r\n\r\n# Reflection\r\n\r\n#### What’s one way that you can use AI to support learning for all students in your classroom?\r\n\r\n#### **Take it Further:**\r\n#### Go to an LLM and create or update a lesson plan or activity to include UDL and CRT elements to it.\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">📝 Share in the forum!\r\n</summary>\r\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;\">\r\n    <p>\r\n\r\n####Participating in the <a href=\"https://forum.code.org/c/ai-cs/ai-101-self-paced-pl-community/477\" target=\"_blank\">AI 101 Self-Paced PL Community</a> is optional and not necessary to earn a certificate for this module. However, we encourage you to engage with the broader AI 101 learner community. Please share your response to this reflection in the forum and take the time to read and respond to other educators' posts.\r\n\r\n### <a href=\"https://forum.code.org/t/module-4-level-12-ai-and-supporting-all-students/39653\" target=\"_blank\">Direct Link to this Forum Topic</a>\r\n\r\n</p></div>\r\n</details>\r\n\r\n<br>",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19619,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-10-21T14:48:45.659+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod4-UDL_04_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod4-UDL_04_2024\"},{\"changed_at\":\"2024-10-21 15:31:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
