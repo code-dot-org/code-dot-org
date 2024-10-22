@@ -8,6 +8,7 @@
 # component from the page.
 
 locale: fa-IR
+countries: [IR]
 
 # The top bar on the site consisting of dropdown menus and navigation links
 header:

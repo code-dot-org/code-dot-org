@@ -1,15 +1,17 @@
 # frozen_string_literal: true
 
+require 'cdo/global_edition'
+
 module GlobalEditionHelper
   def ge_region
     cookies[Rack::GlobalEdition::REGION_KEY]
   end
 
   def global_edition_region_switch_confirm_partial
-    return unless Rack::GlobalEdition::TARGET_HOSTNAMES.include?(request.hostname)
+    return unless Cdo::GlobalEdition.target_host?(request.hostname)
 
     country_code = request.country_code
-    ge_region = Rack::GlobalEdition::COUNTIES_REGIONS[country_code]
+    ge_region = Cdo::GlobalEdition.country_region(country_code)
     return unless ge_region
 
     enabled_regions = DCDO.get('global_edition_region_switch_confirm_enabled_in', [])

@@ -45,5 +45,16 @@ module Cdo
     def self.region_locale(region)
       configuration_for(region)[:locale]
     end
+
+    def self.countries_regions
+      @countries_regions ||= REGIONS.each_with_object({}) do |region, countries_regions|
+        region_countries = configuration_for(region).fetch(:countries, [])
+        region_countries.each {|country| countries_regions[country] = region}
+      end
+    end
+
+    def self.country_region(country)
+      countries_regions[country]
+    end
   end
 end
