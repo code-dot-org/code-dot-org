@@ -266,7 +266,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
               disabled={!selectedFolderId}
               type="button"
             >
-              {musicI18n.continue()}
+              {musicI18n.select()}
             </button>
           </div>
         </div>
