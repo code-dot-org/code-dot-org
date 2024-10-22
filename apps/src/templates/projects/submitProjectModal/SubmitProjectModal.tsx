@@ -48,13 +48,14 @@ const SubmitProjectModal: React.FunctionComponent<SubmitProjectModalProps> = ({
       className={moduleStyles.submitProjectModal}
     >
       <div className={moduleStyles.headerContainer}>
-        <Heading3>Want to show the world what you made?</Heading3>
+        <Heading3>Submit to be featured</Heading3>
       </div>
       <hr />
       <div className={moduleStyles.submitProjectTextContainer}>
         <BodyTwoText>
           <StrongText>
-            Tell us about your project! (150 character max)
+            You can submit your project to be considered for our Featured
+            Projects gallery. If you're interested, please describe the project:
           </StrongText>
         </BodyTwoText>
         <textarea
@@ -63,8 +64,8 @@ const SubmitProjectModal: React.FunctionComponent<SubmitProjectModalProps> = ({
           onChange={e => setProjectDescription(e.target.value)}
         />
         <BodyTwoText>
-          *Submitting a project does not guarantee that it will be featured and
-          once submitted, this project cannot be submitted again.
+          Submitting your project does not guarantee that it will be featured. A
+          project can only be submitted once.
         </BodyTwoText>
       </div>
       <hr />
