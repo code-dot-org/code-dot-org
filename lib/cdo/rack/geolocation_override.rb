@@ -16,8 +16,11 @@ module Rack
     end
 
     def call(env)
+      request = Request.new(env)
+      mocked_ip = request.params['using_ip']
+
       # Forcibly update the REMOTE_ADDR to the value given by the cookie
-      override = Rack::Request.new(env).cookies[KEY]
+      override = mocked_ip || Rack::Request.new(env).cookies[KEY]
       env['REMOTE_ADDR'] = override if override
 
       # Coerce Geocoder to turn an internal ip to localhost so it will consider
