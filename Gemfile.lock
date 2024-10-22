@@ -620,6 +620,9 @@ GEM
       actionpack (>= 4.2)
       omniauth (~> 2.0)
     open-uri (0.1.0)
+      stringio
+      time
+      uri
     open_uri_redirections (0.2.1)
     orm_adapter (0.5.0)
     os (1.1.4)
@@ -862,6 +865,7 @@ GEM
       ip3country (~> 0.2.1)
       user_agent_parser (~> 2.15.0)
     stringex (2.5.2)
+    stringio (3.1.1)
     strscan (3.1.0)
     sysexits (1.2.0)
     syslog (0.1.2)
@@ -874,6 +878,8 @@ GEM
     thwait (0.2.0)
       e2mmap
     tilt (2.0.11)
+    time (0.3.0)
+      date
     timecop (0.8.1)
     timeout (0.3.2)
     trailblazer-option (0.1.2)
@@ -890,6 +896,7 @@ GEM
     unf_ext (0.0.7.4)
     unicode-display_width (2.5.0)
     unicode_utils (1.4.0)
+    uri (0.13.0)
     user_agent_parser (2.15.0)
     validate_url (1.0.15)
       activemodel (>= 3.0.0)
