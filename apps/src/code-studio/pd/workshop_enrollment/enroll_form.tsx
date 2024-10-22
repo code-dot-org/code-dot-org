@@ -78,6 +78,7 @@ const CSF_COURSES = {
   courseE: 'Course E',
   courseF: 'Course F',
   express: 'Express',
+  courses14_accelerated: 'Courses 1-4 or Accelerated',
 };
 
 const ATTENDED_CSF_COURSES_OPTIONS = {
@@ -492,7 +493,9 @@ export default function EnrollForm(props: EnrollFormProps) {
   ];
 
   const csfCourses = [
-    ...Object.values(CSF_COURSES),
+    ...Object.values(CSF_COURSES).filter(
+      value => CSF_COURSES.courses14_accelerated !== value
+    ),
     {
       answerText: `${OTHER} ${EXPLAIN}`,
       inputValue: formState.explain_csf_course_other,
