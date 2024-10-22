@@ -7,6 +7,9 @@ import {
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {submitProject} from './submitProjectApi';
 
 import moduleStyles from './submit-project-modal.module.scss';
 
@@ -22,6 +25,23 @@ const SubmitProjectModal: React.FunctionComponent<SubmitProjectModalProps> = ({
   onClose,
 }) => {
   const [projectDescription, setProjectDescription] = useState<string>('');
+  const channelId = useAppSelector(state => state.lab.channel?.id);
+  const projectType = useAppSelector(
+    state => state.lab.channel?.projectType
+  ) as string;
+  console.log('channelId projectType', channelId, projectType);
+
+  const onSubmit = async () => {
+    try {
+      console.log('onsubmit');
+      if (channelId && projectType) {
+        submitProject('submission description example');
+      }
+    } catch (error) {
+      console.error('Publish failed', error);
+    }
+  };
+
   return (
     <AccessibleDialog
       onClose={onClose}
@@ -49,7 +69,7 @@ const SubmitProjectModal: React.FunctionComponent<SubmitProjectModalProps> = ({
       </div>
       <hr />
       <div className={moduleStyles.bottomSection}>
-        <Button onClick={onClose} color={buttonColors.purple} text="Submit" />
+        <Button onClick={onSubmit} color={buttonColors.purple} text="Submit" />
       </div>
     </AccessibleDialog>
   );

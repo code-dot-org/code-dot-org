@@ -272,6 +272,26 @@ class ProjectsController < ApplicationController
     end
   end
 
+  # POST /projects/:project_type/submit/:channel_id
+  def submit
+    project_type = params[:project_type]
+    channel_id = params[:channel_id]
+    submission_description = params[:submissionDescription]
+    puts "submission_description #{submission_description}"
+    return head :forbidden unless current_user
+
+    bad_request unless SharedConstants::ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
+    #forbidden('Sharing disabled for user account') if sharing_disabled? && SharedConstants::CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
+    #forbidden('Project in restricted share mode') if Projects.in_restricted_share_mode(channel_id, project_type)
+
+    begin
+      Projects.new(get_storage_id).publish(channel_id, project_type, current_user).to_json
+      # TODO: submission_description and submission_declined updated
+    rescue Projects::PublishError => exception
+      forbidden(exception.message)
+    end
+  end
+
   # GET /projects/featured
   # Access is restricted to those with project_validator permission
   def featured
