@@ -30,13 +30,14 @@
       display: flex;
       flex-direction: row;
       gap: 40px;
+      justify-content: space-between;
 
       .column {
-        flex: 1;
+        width: 320px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        gap: 25px;
+        margin: 0 auto;
       }
     }
 
@@ -58,12 +59,10 @@
       color: white;
       display: flex;
       flex-direction: column;
+      align-items: center;
+
       gap: 20px;
       height: 100%;
-
-      &Heading {
-        text-align: center;
-      }
 
       &Afe {
         background-color: #2E4486;
@@ -78,15 +77,17 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 164px;
       border-radius: 4px;
+      height: 125px;
+      width: 125px;
 
       .QRCodeBorder {
-        background-color: $white;
-        padding: 4px;
+        background-color: #fff;
         border-radius: 4px;
         box-sizing: border-box;
-        height: 144px;
+        height: 100%;
+        width: 100%;
+        padding: 4px;
       }
     }
 
@@ -121,4 +122,8 @@
 .copyLinkButton {
   width: 100%;
   margin-top: auto;
+}
+
+.fullWidth {
+  width: 100%;
 }

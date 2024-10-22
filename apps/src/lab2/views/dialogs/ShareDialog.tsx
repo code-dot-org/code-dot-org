@@ -53,7 +53,7 @@ const AfeCareerTourBlock: React.FunctionComponent = () => {
       <Typography
         semanticTag="h2"
         visualAppearance="heading-md"
-        className={classNames(moduleStyles.heading, moduleStyles.blockHeading)}
+        className={moduleStyles.heading}
       >
         {i18n.careerTourTitle()}
       </Typography>
@@ -72,6 +72,7 @@ const AfeCareerTourBlock: React.FunctionComponent = () => {
           iconStyle: 'solid',
           title: 'arrow-up-right-from-square',
         }}
+        className={moduleStyles.fullWidth}
       />
     </div>
   );
@@ -104,9 +105,6 @@ const ShareDialog: React.FunctionComponent<{
     [dispatch]
   );
 
-  dialogId = 'hoc2024';
-  finishUrl = 'blah';
-
   return (
     <FocusLock>
       <div className={moduleStyles.dialogContainer}>
@@ -127,10 +125,7 @@ const ShareDialog: React.FunctionComponent<{
                 <Typography
                   semanticTag="h2"
                   visualAppearance="heading-md"
-                  className={classNames(
-                    moduleStyles.heading,
-                    moduleStyles.blockHeading
-                  )}
+                  className={moduleStyles.heading}
                 >
                   {i18n.shareTitle()}
                 </Typography>
@@ -139,7 +134,7 @@ const ShareDialog: React.FunctionComponent<{
                   id="share-qrcode-container"
                 >
                   <div className={moduleStyles.QRCodeBorder}>
-                    <QRCode value={shareUrl + '?qr=true'} size={136} />
+                    <QRCode value={shareUrl + '?qr=true'} size={117} />
                   </div>
                 </div>
                 <CopyToClipboardButton
