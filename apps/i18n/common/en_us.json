@@ -569,7 +569,7 @@
   "congratsProjectSelected": "Congratulations! This project has been selected to be a featured project!",
   "congratsSelfPacedPlTitle": "Explore more self-paced professional learning modules",
   "congratsSelfPacedPlDescription": "Keep learning with our robust selection of self-paced professional learning modules. Our self-paced learning works in tandem with our curriculum so you can empower yourself and your students at the pace that’s best for you.",
-  "congratsSuggestedCoursesHeading": "Start teaching!",
+  "congratsSuggestedCoursesWithCourseNameHeading": "Start teaching {courseName}!",
   "congratsSuggestedCoursesDescription": "Congratulations! You're ready to start teaching your students. Get started by assigning to one of your existing class sections, or create a new section for this curriculum.",
   "congratsStudentHeading": "Students: Continue Learning Beyond an Hour",
   "congratsStudentHeadingNonEng": "Continue Learning Beyond an Hour",

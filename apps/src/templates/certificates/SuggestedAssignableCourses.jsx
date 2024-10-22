@@ -108,10 +108,14 @@ function SuggestedAssignableCourses({assignableCourseSuggestions, isEnglish}) {
     }
   };
 
+  const headingText = i18n.congratsSuggestedCoursesWithCourseNameHeading({
+    courseName: assignableCourseSuggestions[0].display_name,
+  });
+
   return (
     <div className={style.container}>
       <div className={style.heading}>
-        <Heading2>{i18n.congratsSuggestedCoursesHeading()}</Heading2>
+        <Heading2>{headingText}</Heading2>
         <BodyTwoText>{i18n.congratsSuggestedCoursesDescription()}</BodyTwoText>
       </div>
       {assignableCourseComponent()}
