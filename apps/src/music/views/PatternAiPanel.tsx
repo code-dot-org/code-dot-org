@@ -23,6 +23,7 @@ import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/Font
 
 import {generatePattern} from '../ai/patternAi';
 import appConfig from '../appConfig';
+import {PATTERN_AI_NUM_EVENTS, PATTERN_AI_NUM_SEED_EVENTS} from '../constants';
 import musicI18n from '../locale';
 import MusicRegistry from '../MusicRegistry';
 import {InstrumentEventValue} from '../player/interfaces/InstrumentEvent';
@@ -33,11 +34,11 @@ import PreviewControls from './PreviewControls';
 
 import styles from './patternAiPanel.module.scss';
 
-const numEvents = 32;
-const numSeedEvents = 8;
-
-// Generate an array containing tick numbers from 1..numEvents.
-const arrayOfTicks = Array.from({length: numEvents}, (_, i) => i + 1);
+// Generate an array containing tick numbers from 1..PATTERN_AI_NUM_EVENTS.
+const arrayOfTicks = Array.from(
+  {length: PATTERN_AI_NUM_EVENTS},
+  (_, i) => i + 1
+);
 
 interface PatternAiPanelProps {
   initValue: InstrumentEventValue;
@@ -210,7 +211,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
   const handleAiClick = useCallback(async () => {
     stopPreview();
     const seedEvents = currentValue.events.filter(
-      event => event.tick <= numSeedEvents
+      event => event.tick <= PATTERN_AI_NUM_SEED_EVENTS
     );
     const onError = (e: Error) => {
       console.error(e);
@@ -218,8 +219,8 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     };
     generatePattern(
       seedEvents,
-      numSeedEvents,
-      numEvents - numSeedEvents,
+      PATTERN_AI_NUM_SEED_EVENTS,
+      PATTERN_AI_NUM_EVENTS - PATTERN_AI_NUM_SEED_EVENTS,
       aiTemperature / 10,
       newEvents => {
         const delayDuration = Number(appConfig.getValue('ai-delay')) || 0;
