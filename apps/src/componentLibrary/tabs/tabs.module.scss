@@ -1,6 +1,6 @@
 @import 'color';
 @import 'font';
-@import "@cdo/apps/componentLibrary/common/styles/mixins";
+@import '@cdo/apps/componentLibrary/common/styles/mixins';
 
 .tabs {
   ul {
@@ -30,7 +30,7 @@
     }
   }
 
-  button[role="tab"] {
+  button[role='tab'] {
     display: flex;
     justify-content: center;
 
@@ -52,21 +52,19 @@
 
 // Tabs Colors
 .tabs-primary {
-  li button[role="tab"] {
+  li button[role='tab'] {
     align-items: baseline;
     background-color: transparent;
     border-radius: 0;
   }
 
   &.tabs-light {
-
     ul::after {
       border-color: $light_gray_200;
     }
 
-    li button[role="tab"] {
+    li button[role='tab'] {
       color: $light_gray_800;
-
 
       &:hover {
         color: $light_primary_500;
@@ -103,7 +101,7 @@
       border-color: $light_gray_800;
     }
 
-    li button[role="tab"] {
+    li button[role='tab'] {
       color: $light_gray_200;
 
       &:hover {
@@ -138,7 +136,7 @@
 }
 
 .tabs-secondary {
-  li button[role="tab"] {
+  li button[role='tab'] {
     align-items: center;
     border-radius: 0.25rem 0.25rem 0 0;
   }
@@ -148,7 +146,7 @@
       border-color: $light_gray_200;
     }
 
-    li button[role="tab"] {
+    li button[role='tab'] {
       color: $light_gray_800;
       background-color: $light_gray_50;
       border: 1px solid $light_gray_200;
@@ -201,7 +199,7 @@
       border-color: $light_gray_800;
     }
 
-    li button[role="tab"] {
+    li button[role='tab'] {
       color: $light_gray_200;
       background-color: $light_gray_950;
       border: 1px solid $light_gray_800;
@@ -263,7 +261,7 @@
     ul {
       gap: 1rem;
 
-      li button[role="tab"] {
+      li button[role='tab'] {
         @include button-one-text;
         margin: 0;
         padding: 0.625rem 0;
@@ -287,7 +285,7 @@
     ul {
       gap: 0.25rem;
 
-      li button[role="tab"] {
+      li button[role='tab'] {
         @include label-one;
         margin: 0;
         padding: 0 0.75rem;
@@ -295,7 +293,8 @@
         height: 2rem;
         max-width: 222px;
 
-        &:hover, &:focus-visible {
+        &:hover,
+        &:focus-visible {
           &:not(.selectedTab, :active) {
             padding: 0 calc(0.75rem + 1px);
           }
@@ -304,7 +303,8 @@
         &:has(i:first-child) {
           padding-inline-start: 0.625rem;
 
-          &:hover, &:focus-visible {
+          &:hover,
+          &:focus-visible {
             &:not(.selectedTab, :active) {
               padding-inline-start: calc(0.625rem + 1px);
             }
@@ -314,7 +314,8 @@
         &:has(i:last-child) {
           padding-inline-end: 0.625rem;
 
-          &:hover, &:focus-visible {
+          &:hover,
+          &:focus-visible {
             &:not(.selectedTab, :active) {
               padding-inline-end: calc(0.625rem + 1px);
             }
@@ -324,7 +325,8 @@
         &.iconOnlyTab {
           padding: 0 0.625rem;
 
-          &:hover, &:focus-visible {
+          &:hover,
+          &:focus-visible {
             &:not(.selectedTab, :active) {
               padding: 0 calc(0.625rem + 1px);
             }
@@ -350,7 +352,7 @@
     ul {
       gap: 1rem;
 
-      li button[role="tab"] {
+      li button[role='tab'] {
         @include button-two-text;
         margin: 0;
         padding: 0.5rem 0;
@@ -374,7 +376,7 @@
     ul {
       gap: 0.25rem;
 
-      li button[role="tab"] {
+      li button[role='tab'] {
         @include label-two;
         margin: 0;
         padding: 0 0.75rem;
@@ -382,7 +384,8 @@
         height: 1.75rem;
         max-width: 198px;
 
-        &:hover, &:focus-visible {
+        &:hover,
+        &:focus-visible {
           &:not(.selectedTab, :active) {
             padding: 0 calc(0.75rem + 1px);
           }
@@ -391,7 +394,8 @@
         &:has(i:first-child) {
           padding-inline-start: 0.625rem;
 
-          &:hover, &:focus-visible {
+          &:hover,
+          &:focus-visible {
             &:not(.selectedTab, :active) {
               padding-inline-start: calc(0.625rem + 1px);
             }
@@ -401,7 +405,8 @@
         &:has(i:last-child) {
           padding-inline-end: 0.625rem;
 
-          &:hover, &:focus-visible {
+          &:hover,
+          &:focus-visible {
             &:not(.selectedTab, :active) {
               padding-inline-end: calc(0.625rem + 1px);
             }
@@ -411,7 +416,8 @@
         &.iconOnlyTab {
           padding: 0 0.625rem;
 
-          &:hover, &:focus-visible {
+          &:hover,
+          &:focus-visible {
             &:not(.selectedTab, :active) {
               padding: 0 calc(0.625rem + 1px);
             }
@@ -437,7 +443,7 @@
     ul {
       gap: 1rem;
 
-      li button[role="tab"] {
+      li button[role='tab'] {
         @include button-three-text;
         margin: 0;
         padding: 0.3125rem 0;
@@ -461,7 +467,7 @@
     ul {
       gap: 0.125rem;
 
-      li button[role="tab"] {
+      li button[role='tab'] {
         @include label-three;
         margin: 0;
         padding: 0 0.625rem;
@@ -469,7 +475,8 @@
         height: 1.5rem;
         max-width: 169px;
 
-        &:hover, &:focus-visible {
+        &:hover,
+        &:focus-visible {
           &:not(.selectedTab, :active) {
             padding: 0 calc(0.625rem + 1px);
           }
@@ -478,7 +485,8 @@
         &:has(i:first-child) {
           padding-inline-start: 0.5rem;
 
-          &:hover, &:focus-visible {
+          &:hover,
+          &:focus-visible {
             &:not(.selectedTab, :active) {
               padding-inline-start: calc(0.5rem + 1px);
             }
@@ -488,7 +496,8 @@
         &:has(i:last-child) {
           padding-inline-end: 0.5rem;
 
-          &:hover, &:focus-visible {
+          &:hover,
+          &:focus-visible {
             &:not(.selectedTab, :active) {
               padding-inline-end: calc(0.5rem + 1px);
             }
@@ -498,7 +507,8 @@
         &.iconOnlyTab {
           padding: 0 0.5rem;
 
-          &:hover, &:focus-visible {
+          &:hover,
+          &:focus-visible {
             &:not(.selectedTab, :active) {
               padding: 0 calc(0.5rem + 1px);
             }
@@ -525,7 +535,7 @@
     ul {
       gap: 0.5rem;
 
-      li button[role="tab"] {
+      li button[role='tab'] {
         @include button-four-text;
         margin: 0;
         padding: 0.0625rem 0;
@@ -549,7 +559,7 @@
     ul {
       gap: 0.125rem;
 
-      li button[role="tab"] {
+      li button[role='tab'] {
         @include label-four;
         margin: 0;
         padding: 0 0.5rem;
@@ -557,7 +567,8 @@
         height: 1.25rem;
         max-width: 140px;
 
-        &:hover, &:focus-visible {
+        &:hover,
+        &:focus-visible {
           &:not(.selectedTab, :active) {
             padding: 0 calc(0.5rem + 1px);
           }
@@ -566,7 +577,8 @@
         &:has(i:first-child) {
           padding-inline-start: 0.4375rem;
 
-          &:hover, &:focus-visible {
+          &:hover,
+          &:focus-visible {
             &:not(.selectedTab, :active) {
               padding-inline-start: calc(0.4375rem + 1px);
             }
@@ -576,7 +588,8 @@
         &:has(i:last-child) {
           padding-inline-end: 0.4375rem;
 
-          &:hover, &:focus-visible {
+          &:hover,
+          &:focus-visible {
             &:not(.selectedTab, :active) {
               padding-inline-end: calc(0.4375rem + 1px);
             }
@@ -586,7 +599,8 @@
         &.iconOnlyTab {
           padding: 0 0.4375rem;
 
-          &:hover, &:focus-visible {
+          &:hover,
+          &:focus-visible {
             &:not(.selectedTab, :active) {
               padding: 0 calc(0.4375rem + 1px);
             }
