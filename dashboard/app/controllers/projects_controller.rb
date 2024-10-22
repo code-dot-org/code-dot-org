@@ -285,8 +285,17 @@ class ProjectsController < ApplicationController
     #forbidden('Project in restricted share mode') if Projects.in_restricted_share_mode(channel_id, project_type)
 
     begin
-      Projects.new(get_storage_id).publish(channel_id, project_type, current_user).to_json
-      # TODO: submission_description and submission_declined updated
+      # Publish the project, i.e., make it public.
+      Projects.new(get_storage_id).publish(channel_id, project_type, current_user)
+      # Update the submission_description and submission_declined.
+      _, project_id = storage_decrypt_channel_id(params[:channel_id])
+      project = Project.find_by(id: project_id)
+      project_value = JSON.parse(project.value)
+      project_value["submission_description"] = submission_description
+      project_value["submission_declined"] = false
+      project_value["updatedAt"] = DateTime.now.to_s
+      project_value["publishedAt"] = project[:published_at]
+      project.update! value: project_value.to_json
     rescue Projects::PublishError => exception
       forbidden(exception.message)
     end
