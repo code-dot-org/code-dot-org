@@ -24,6 +24,7 @@ import locale from './locale';
 import {
   EMAIL_SESSION_KEY,
   USER_RETURN_TO_SESSION_KEY,
+  clearSignUpSessionStorage,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
@@ -110,6 +111,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
       body: JSON.stringify(signUpParams),
     });
 
+    clearSignUpSessionStorage(true);
     navigateToHref(userReturnTo);
   };
 
