@@ -12,7 +12,7 @@ export interface RegionConfigurationPageObject {
 export interface RegionConfiguration {
   header?: RegionConfigurationObject;
   footer?: RegionConfigurationObject;
-  pages?: readonly [RegionConfigurationPageObject];
+  pages?: readonly RegionConfigurationPageObject[];
 }
 
 /**
