@@ -152,12 +152,9 @@
       border: 1px solid $light_gray_200;
 
       &:hover {
-        color: $light_white;
-        background-color: $light_primary_500;
-        border-color: transparent;
-        border-left: none;
-        border-right: none;
-        border-bottom: 1px solid $light_gray_200;
+        color: $light_black;
+        background-color: $light_gray_100;
+        border: 1px solid $light_gray_200;
       }
 
       &:focus-visible {
@@ -169,6 +166,10 @@
         border-bottom-color: $light_gray_200;
         outline: 2px solid $light_primary_500;
         outline-offset: 2px;
+
+        &:not(.selectedTab) button {
+          color: $light_white;
+        }
       }
 
       &:active:not(:disabled) {
@@ -206,11 +207,8 @@
 
       &:hover {
         color: $light_white;
-        background-color: $light_primary_500;
-        border-color: transparent;
-        border-left: none;
-        border-right: none;
-        border-bottom: 1px solid $light_gray_800;
+        background-color: $light_gray_900;
+        border: 1px solid $light_gray_800;
       }
 
       &:focus-visible {
@@ -293,7 +291,6 @@
         height: 2rem;
         max-width: 222px;
 
-        &:hover,
         &:focus-visible {
           &:not(.selectedTab, :active) {
             padding: 0 calc(0.75rem + 1px);
@@ -303,7 +300,6 @@
         &:has(i:first-child) {
           padding-inline-start: 0.625rem;
 
-          &:hover,
           &:focus-visible {
             &:not(.selectedTab, :active) {
               padding-inline-start: calc(0.625rem + 1px);
@@ -314,7 +310,6 @@
         &:has(i:last-child) {
           padding-inline-end: 0.625rem;
 
-          &:hover,
           &:focus-visible {
             &:not(.selectedTab, :active) {
               padding-inline-end: calc(0.625rem + 1px);
@@ -384,7 +379,6 @@
         height: 1.75rem;
         max-width: 198px;
 
-        &:hover,
         &:focus-visible {
           &:not(.selectedTab, :active) {
             padding: 0 calc(0.75rem + 1px);
@@ -394,7 +388,6 @@
         &:has(i:first-child) {
           padding-inline-start: 0.625rem;
 
-          &:hover,
           &:focus-visible {
             &:not(.selectedTab, :active) {
               padding-inline-start: calc(0.625rem + 1px);
@@ -405,7 +398,6 @@
         &:has(i:last-child) {
           padding-inline-end: 0.625rem;
 
-          &:hover,
           &:focus-visible {
             &:not(.selectedTab, :active) {
               padding-inline-end: calc(0.625rem + 1px);
@@ -416,7 +408,6 @@
         &.iconOnlyTab {
           padding: 0 0.625rem;
 
-          &:hover,
           &:focus-visible {
             &:not(.selectedTab, :active) {
               padding: 0 calc(0.625rem + 1px);
@@ -475,7 +466,6 @@
         height: 1.5rem;
         max-width: 169px;
 
-        &:hover,
         &:focus-visible {
           &:not(.selectedTab, :active) {
             padding: 0 calc(0.625rem + 1px);
@@ -485,7 +475,6 @@
         &:has(i:first-child) {
           padding-inline-start: 0.5rem;
 
-          &:hover,
           &:focus-visible {
             &:not(.selectedTab, :active) {
               padding-inline-start: calc(0.5rem + 1px);
@@ -567,7 +556,6 @@
         height: 1.25rem;
         max-width: 140px;
 
-        &:hover,
         &:focus-visible {
           &:not(.selectedTab, :active) {
             padding: 0 calc(0.5rem + 1px);
@@ -577,7 +565,6 @@
         &:has(i:first-child) {
           padding-inline-start: 0.4375rem;
 
-          &:hover,
           &:focus-visible {
             &:not(.selectedTab, :active) {
               padding-inline-start: calc(0.4375rem + 1px);
@@ -588,7 +575,6 @@
         &:has(i:last-child) {
           padding-inline-end: 0.4375rem;
 
-          &:hover,
           &:focus-visible {
             &:not(.selectedTab, :active) {
               padding-inline-end: calc(0.4375rem + 1px);
@@ -599,7 +585,6 @@
         &.iconOnlyTab {
           padding: 0 0.4375rem;
 
-          &:hover,
           &:focus-visible {
             &:not(.selectedTab, :active) {
               padding: 0 calc(0.4375rem + 1px);
