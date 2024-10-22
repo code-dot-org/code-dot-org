@@ -68,10 +68,14 @@ describe('Enroll Form', () => {
     enrollForm = renderDefault(params);
     enrollForm.find('#submit').simulate('click');
 
-    const validationState = enrollForm
-      .find(`#${errorProperty}`)
-      .prop('validationState');
-    expect(validationState).to.equal('error');
+    // validationState was previously set as a prop on react-select component controlling role
+    // after ts conversion it's clear that prop is invalid
+    if (errorProperty !== 'role') {
+      const validationState = enrollForm
+        .find(`#${errorProperty}`)
+        .prop('validationState');
+      expect(validationState).to.equal('error');
+    }
     expect(jQuery.ajax.called).to.be.false;
   };
 
