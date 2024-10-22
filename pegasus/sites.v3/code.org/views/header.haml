@@ -12,6 +12,7 @@
   hamburger_options[:show_gallery] = true
   hamburger_options[:loc_prefix] = "header_"
   hamburger_options[:page_mode] = request.cookies['pm']
+  hamburger_options[:ge_region] = request.cookies[Rack::GlobalEdition::REGION_KEY]
 
   header_contents_options = {}
   header_contents_options[:user_type] = user_type

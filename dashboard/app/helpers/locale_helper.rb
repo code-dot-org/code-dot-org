@@ -1,3 +1,5 @@
+require 'cdo/global_edition'
+
 module LocaleHelper
   # Symbol of best valid locale code to be used for I18n.locale.
   def locale
