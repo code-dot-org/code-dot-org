@@ -405,7 +405,7 @@ end
 Then /^the link reading "([^"]*)"(?: within element "([^"]*)")? goes to "([^"]*)"$/ do |text, parent, url|
   context = @browser.find_element(:css, parent) if parent
   context ||= @browser
-  xpath = ".//a[starts-with(text(), '#{text}')]"
+  xpath = ".//a[contains(text(), '#{text}')]"
   link = context.find_element(:xpath, xpath)
   expect(link.attribute("href")).to eq(replace_hostname(url)).or eq(url)
 end

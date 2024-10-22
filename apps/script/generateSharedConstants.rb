@@ -113,7 +113,7 @@ def main
       USER_TYPES
       NON_SCHOOL_OPTIONS
       US_STATES
-    ),
+    ), 
     file_type: 'ts'
   )
 

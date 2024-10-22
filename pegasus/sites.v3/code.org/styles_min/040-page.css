@@ -656,31 +656,12 @@ nav.main #hamburger #hamburger-contents {
   right: -3px;
 }
 
-/* Do not show hamburger links that are hidden until the
- * width becomes a certain size.
- */
-@media (min-width: 1268px) {
-  nav.main #hamburger-contents > div.show-small-desktop,
-  nav.main #hamburger-contents > div.show-mobile {
-    display: none !important;
-  }
-}
-
 /* Show the hamburger on small desktop
   with appropriate links hidden */
 @media (min-width: 1024px) and (max-width: 1268px) {
-  /* Hide the header link */
-  nav.main .left ul li.hide-small-desktop {
-    display: none !important;
-  }
-
-  /* But show the hamburger link */
-  nav.main #hamburger-contents > div.show-small-desktop {
-    display: block !important;
-  }
-
-  /* But not the mobile ones */
-  nav.main #hamburger-contents > div.show-mobile {
+  nav.main .left ul li:nth-child(n + 4),
+  nav.main #hamburger-contents:not(.farsi) > div:nth-child(-n + 5),
+  nav.main #hamburger-contents.farsi > div:nth-child(-n + 4) {
     display: none !important;
   }
 }
@@ -689,11 +670,6 @@ nav.main #hamburger #hamburger-contents {
 @media (max-width: 1023px) {
   nav.main .left ul {
     display: none;
-  }
-
-  /* But show the hamburger links */
-  nav.main #hamburger-contents > div.show-mobile {
-    display: block !important;
   }
 }
 

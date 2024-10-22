@@ -7,15 +7,11 @@ markdown <<MARKDOWN
 
 ## Lesson Highlight: Teaching about Bias
 
-<img src="https://images.code.org/ea57e71a6e184155b87e5ecad8c65209-Screenshot 2024-10-17 at 3.30.25 PM.png" alt="system prompt with role, goal, tone, and restriction" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 20px 20px 20px 20px">
-
-#### Lesson 3 is the first time students are introduced to the topic of **bias** in AI.
+#### In Lesson 3 students are introduced to the topic of **bias** in AI.
 
 #### Bias occurs when a decision favors some things and de-prioritizes or excludes others. Bias within an AI system is a direct reflection of the data a system was trained on and the way it is trained.
 
-#### Teaching about biases in technology can be a sensitive subject for your students. These action items will help you feel more comfortable discussion these issues in your class. 
-
-### Action Items
+#### Teaching about biases in technology can be a sensitive subject for your students. These **action items** will help you feel more comfortable discussion these issues in your class. 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;"> 🖥️Assume all AI systems have bias</summary>
@@ -52,7 +48,6 @@ markdown <<MARKDOWN
 </p></div>
 </details>
 
-### Supportive Scripts 
 #### Addressing concerns about AI bias from administrators, parents, or fellow teachers can be challenging. To facilitate these conversations, utilize the range of **scripts** provided in <a href="https://docs.google.com/document/d/1N2C5ymAYQ2JR0NKoPQ2v5IK9Ig77t-1-juVfnWMpNYw/copy" target="blank" rel="noopener noreferrer">this link</a>. These resources are designed to help **clarify issues and foster understanding**. Additionally, there is a specific script available for students to help them express their experiences when affected by AI bias.
 
 ## Lesson Preview
@@ -61,7 +56,7 @@ markdown <<MARKDOWN
     <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 3: Bias in the Machine</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
-<img src="https://images.code.org/6debd3ce2def47f39e00cfb1aecd42bf-3fc2e3897f789e3a47c324fbc19f1ec2-Slide14.PNG" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+<img src="https://images.code.org/6debd3ce2def47f39e00cfb1aecd42bf-3fc2e3897f789e3a47c324fbc19f1ec2-Slide14.PNG" alt="discussion from the lesson" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
 
 #### **Question of the Day:** How do our choices about input data influence a large language model?
 
