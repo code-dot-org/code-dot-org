@@ -316,13 +316,13 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
   }, [params, un, location, nav, loc, hist]);
 
   React.useEffect(() => {
-    console.log('lfm 1', {unitName, sUnit: selectedSection.unitName});
+    console.log('lfm 1', {unitName, sUnit: selectedSection?.unitName});
 
     if (!unitName) {
       navigate(
         generatePath(
           LABELED_TEACHER_NAVIGATION_PATHS.unitOverview.absoluteUrl,
-          {unitName: selectedSection.unitName, sectionId: selectedSection.id}
+          {unitName: selectedSection?.unitName, sectionId: selectedSection.id}
         ),
         {replace: true}
       );

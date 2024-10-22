@@ -6,6 +6,7 @@ import {
   matchPath,
   useLocation,
   useNavigate,
+  useParams,
 } from 'react-router-dom';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
@@ -13,6 +14,7 @@ import Typography from '@cdo/apps/componentLibrary/typography';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
 import i18n from '@cdo/locale';
 
+import {asyncLoadSelectedSection} from './selectedSectionLoader';
 import {LABELED_TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
 
 import styles from './teacher-navigation.module.scss';
@@ -95,7 +97,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
-  // const {urlSectionId} = useParams();
+  const {urlSectionId} = useParams();
 
   const [currentPathName, currentPathObject] = React.useMemo(() => {
     return (
@@ -106,12 +108,12 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     );
   }, [location]);
 
-  // React.useEffect(() => {
-  //   console.log('switch section');
-  //   if (urlSectionId) {
-  //     asyncLoadSelectedSection(urlSectionId);
-  //   }
-  // }, [urlSectionId]);
+  React.useEffect(() => {
+    console.log('switch section');
+    if (urlSectionId && parseInt(urlSectionId) !== selectedSectionId) {
+      asyncLoadSelectedSection(urlSectionId);
+    }
+  }, [urlSectionId, selectedSectionId]);
 
   React.useEffect(() => {
     console.log('lfm bar loc', {location});
