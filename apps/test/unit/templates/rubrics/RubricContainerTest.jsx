@@ -1,6 +1,6 @@
 // react testing library import
 import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
-import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -1002,47 +1002,72 @@ describe('RubricContainer', () => {
     );
   });
 
-  it('renders a RubricSubmitFooter if student data for an evaluation level', () => {
-    const wrapper = shallow(
-      <RubricContainer
-        rubric={defaultRubric}
-        studentLevelInfo={{name: 'Grace Hopper'}}
-        teacherHasEnabledAi={true}
-        currentLevelName={'test_level'}
-        reportingData={{}}
-        open
-      />
+  it('renders a "Submit to student" button if student data for an evaluation level', () => {
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: null});
+
+    render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={{name: 'Grace Hopper'}}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
     );
-    deprecatedExpect(wrapper.find('RubricSubmitFooter')).to.have.lengthOf(0);
+
+    expect(screen.getByText(i18n.submitToStudent())).toBeInTheDocument();
   });
 
-  it('does not render a RubricSubmitFooter if no student data', () => {
-    const wrapper = shallow(
-      <RubricContainer
-        rubric={defaultRubric}
-        teacherHasEnabledAi={true}
-        currentLevelName={'test_level'}
-        reportingData={{}}
-        canProvideFeedback
-        open
-      />
+  it('does not render a "Submit to student" button if no student data', () => {
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: null});
+
+    render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          canProvideFeedback
+          open
+        />
+      </Provider>
     );
-    deprecatedExpect(wrapper.find('RubricSubmitFooter')).to.have.lengthOf(0);
+    expect(screen.queryByText(i18n.submitToStudent())).not.toBeInTheDocument();
   });
 
-  it('does not render a RubricSubmitFooter if not on an evaluated level even if student data exists', () => {
-    const wrapper = shallow(
-      <RubricContainer
-        rubric={defaultRubric}
-        studentLevelInfo={{name: 'Grace Hopper'}}
-        teacherHasEnabledAi={true}
-        currentLevelName={'different_level'}
-        reportingData={{}}
-        canProvideFeedback
-        open
-      />
+  it('does not render a "Submit to student" button if not on an evaluated level even if student data exists', () => {
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: null});
+
+    render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={{name: 'Grace Hopper'}}
+          teacherHasEnabledAi={true}
+          currentLevelName={'different_level'}
+          reportingData={{}}
+          canProvideFeedback
+          open
+        />
+      </Provider>
     );
-    deprecatedExpect(wrapper.find('RubricSubmitFooter')).to.have.lengthOf(0);
+    expect(screen.queryByText(i18n.submitToStudent())).not.toBeInTheDocument();
   });
 
   it('displays product tour when getTourStatus is false', async function () {
