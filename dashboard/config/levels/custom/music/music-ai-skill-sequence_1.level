@@ -9,7 +9,7 @@
     "offerTts": "true",
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Play a Sound\r\n\r\n- Drag the [play](#clickable=play-sound-block) block and connect it under [when run](#clickable=when-run-block). \r\n- Then press [Run](#clickable=run-button).",
+    "long_instructions": "#### Play a Sound\r\n- Drag the [play](#clickable=play-sound-block) block and connect it under [when run](#clickable=when-run-block). \r\n- Then press [Run](#clickable=run-button).",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -25,7 +25,7 @@
       },
       {
         "key": "music-ai-skill-sequence_100f6390-0a0c-4ff7-bc67-2979e4beed57",
-        "message": "You found the Run button! Now, connect a [play](#clickable=play-sound-block) block under [when run](#clickable=when-run-block) in the workspace. ",
+        "message": "You found the Run button! Now, connect a [play](#clickable=play-sound-block) block under [when run](#clickable=when-run-block). ",
         "next": false,
         "conditions": [
 
@@ -71,7 +71,7 @@
     "name_suffix": "_1",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:46.696+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-sequence_3\\\"\"],\"cloned_from\":\"music-ai-skill-sequence_3\"},{\"changed_at\":\"2024-10-08 19:41:43 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 20:33:31 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 20:34:18 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 21:02:01 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 21:14:54 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 21:35:51 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 21:37:59 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 21:38:55 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:46.696+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-sequence_3\\\"\"],\"cloned_from\":\"music-ai-skill-sequence_3\"},{\"changed_at\":\"2024-10-08 19:41:43 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 20:33:31 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 20:34:18 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 21:02:01 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 21:14:54 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 21:35:51 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 21:37:59 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 21:38:55 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-18 23:39:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-18 23:40:05 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
