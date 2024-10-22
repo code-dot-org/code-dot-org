@@ -15,8 +15,11 @@ require 'active_support/inflector'
 # For deep_transform_keys and deep_symbolize_keys
 require 'active_support/core_ext/hash'
 
+$LOAD_PATH.unshift File.expand_path('../../../lib', __FILE__)
+$LOAD_PATH.unshift File.expand_path('../../../shared/middleware', __FILE__)
+
 # Get a reference to our Cdo::Global class
-require_relative '../../lib/cdo/global'
+require 'cdo/global_edition'
 
 # Generates the actual TypeScript file.
 def generate_region_ts_file(content, path)
@@ -39,9 +42,9 @@ def main
   table_content = []
 
   # For each region, we want to get a JSON-appropriate version of its configuration
-  Cdo::Global.regions.each do |region|
+  Cdo::GlobalEdition::REGIONS.each do |region|
     # Get the configuration for this region
-    configuration = Cdo::Global.configuration_for(region)
+    configuration = Cdo::GlobalEdition.configuration_for(region)
 
     # Complain if any pages keys are not URLs
     raise "'pages' must contain URLs starting with '/'" unless (configuration['pages'] || {}).keys.all? {|url| url.to_s.include?('/')}
