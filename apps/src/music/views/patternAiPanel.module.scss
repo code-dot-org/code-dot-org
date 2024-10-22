@@ -34,7 +34,6 @@
   font-size: 13px;
   user-select: none;
   height: 100%;
-  //background-color: $light_gray_950;
 }
 
 .body {
@@ -173,7 +172,7 @@
   width: 10px;
   height: 13px;
 
-  border-radius: 2px; // 50%;
+  border-radius: 2px;
   transition: 0.1s ease-in-out;
   animation: 0.5s fade-in;
 
