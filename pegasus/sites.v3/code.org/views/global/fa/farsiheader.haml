@@ -4,7 +4,7 @@
   user_type = "student" if user_type == "student_y"
 
   # Forcibly set the 'ge_region' parameter to Farsi
-  cookies[Rack::GlobalEdition::REGION_KEY] = 'fa'
+  response.set_cookie(Rack::GlobalEdition::REGION_KEY, {value: 'fa', domain: ".#{request.site}", path: '/', expires: Time.now + (365 * 24 * 3600)})
 
   hamburger_options = {}
   hamburger_options[:level] = nil
