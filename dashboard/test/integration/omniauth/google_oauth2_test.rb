@@ -15,32 +15,6 @@ module OmniauthCallbacksControllerTests
       SignUpTracking.stubs(:split_test_percentage).returns(0)
     end
 
-    test "student sign up for newest sign up flow" do
-      auth_hash = mock_oauth
-
-      post "/users/auth/google_oauth2"
-      get '/users/auth/google_oauth2/callback', params: {finish_url: '/users/new_sign_up/finish_student_account'}
-      assert_template 'omniauth/redirect'
-      assert PartialRegistration.in_progress? session
-
-      assert_creates(User) {finish_sign_up auth_hash, User::TYPE_STUDENT, true}
-      refute PartialRegistration.in_progress? session
-
-      created_user = User.find signed_in_user_id
-      assert_valid_student created_user, expected_email: auth_hash.info.email
-      assert_credentials auth_hash, created_user
-
-      assert_sign_up_tracking(
-        SignUpTracking::CONTROL_GROUP,
-        %w(
-          google_oauth2-callback
-          google_oauth2-sign-up-success
-        )
-      )
-    ensure
-      created_user&.destroy!
-    end
-
     test "student sign-up" do
       auth_hash = mock_oauth
 
