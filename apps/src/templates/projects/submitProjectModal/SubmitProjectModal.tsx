@@ -35,7 +35,7 @@ const SubmitProjectModal: React.FunctionComponent<SubmitProjectModalProps> = ({
     try {
       console.log('onsubmit');
       if (channelId && projectType) {
-        submitProject('submission description example');
+        submitProject(projectDescription);
       }
     } catch (error) {
       console.error('Publish failed', error);
