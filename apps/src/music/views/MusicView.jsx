@@ -331,6 +331,10 @@ class UnconnectedMusicView extends React.Component {
       levelData?.hideAiTemperature ||
       AppConfig.getValue('hide-ai-temperature') === 'true';
 
+    MusicRegistry.showAiTemperatureExplanation =
+      levelData?.showAiTemperatureExplanation ||
+      AppConfig.getValue('show-ai-temperature-explanation') === 'true';
+
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .incrementCounter('LevelLoad', [

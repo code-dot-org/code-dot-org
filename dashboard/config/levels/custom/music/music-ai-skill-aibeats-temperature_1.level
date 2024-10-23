@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### AI can get interesting\r\n\r\nYou can move the temperature slider to generate different results.",
+    "long_instructions": "#### A.I. Gets Interesting\r\n\r\nYou can move the temperature slider to generate different results.",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -24,7 +24,7 @@
       },
       {
         "key": "music-ai-skill-sequence_a0f44420-3323-439a-be62-f0aa67dbcbe1",
-        "message": "Click on the black box in the [AI Beat Block](#clickable=play-drums-ai-block-workspace) and change the slider under A.I. Bot. ",
+        "message": "Click on the blank box in the [play AI drums](#clickable=play-drums-ai-block-workspace) block and change the temperature slider.",
         "next": false,
         "conditions": [
           {
@@ -32,7 +32,7 @@
             "value": 1
           }
         ],
-        "callout": "play-drums-ai-block-workspace"
+        "callout": "id-left:play_pattern_ai_at_current_location_simple2"
       },
       {
         "key": "music-ai-skill-aibeats_a093489c-c9f7-471d-ab0c-49b734ba8463",
@@ -194,9 +194,10 @@
       "blockMode": "Simple2"
     },
     "name_suffix": "_1",
+    "offer_browser_tts": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:49.184+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-aibeats-temperature_3\\\"\"],\"cloned_from\":\"music-ai-skill-aibeats-temperature_3\"},{\"changed_at\":\"2024-10-17 21:51:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 23:07:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:49.184+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-aibeats-temperature_3\\\"\"],\"cloned_from\":\"music-ai-skill-aibeats-temperature_3\"},{\"changed_at\":\"2024-10-17 21:51:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 23:07:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-21 22:33:52 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

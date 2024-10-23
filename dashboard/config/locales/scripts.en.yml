@@ -19431,3 +19431,22 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        self-paced-pl-ai-districts-2024:
+          lessons:
+            lesson-1:
+              name: Introducing AI
+            lesson-2:
+              name: Understanding AI
+            lesson-3:
+              name: Transforming Teaching with AI
+            lesson-4:
+              name: Bringing AI to the Classroom
+            lesson-5:
+              name: Ensuring a Responsible Approach to AI
+          lesson_groups: {}
+          name: self-paced-pl-ai-districts-2024
+          title: AI 101 Self Paced Professional Learning for Districts
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

@@ -79,46 +79,44 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
       role="button"
       ref={isSelected ? currentFolderRefCallback : null}
     >
-      <div>
-        {imageSrc && (
-          <div
-            className={classNames(
-              styles.packImageContainer,
-              isSelected && styles.packImageContainerSelected
-            )}
-          >
-            <img
-              className={styles.packImage}
-              src={imageSrc}
-              alt=""
-              draggable={false}
-            />
-            {false && imageAttributionAuthor && (
-              <div
-                className={classNames(
-                  styles.packImageAttribution,
-                  packImageAttributionLeft && styles.packImageAttributionLeft
-                )}
-                style={{color: imageAttributionColor}}
-              >
-                <FontAwesomeV6Icon
-                  iconName={'brands fa-creative-commons'}
-                  iconStyle="solid"
-                  className={styles.icon}
-                />
-                &nbsp;
-                <FontAwesomeV6Icon
-                  iconName={'brands fa-creative-commons-by'}
-                  iconStyle="solid"
-                  className={styles.icon}
-                />
-                &nbsp;
-                {imageAttributionAuthor}
-              </div>
-            )}
-          </div>
-        )}
-      </div>
+      {imageSrc && (
+        <div
+          className={classNames(
+            styles.packImageContainer,
+            isSelected && styles.packImageContainerSelected
+          )}
+        >
+          <img
+            className={styles.packImage}
+            src={imageSrc}
+            alt=""
+            draggable={false}
+          />
+          {false && imageAttributionAuthor && (
+            <div
+              className={classNames(
+                styles.packImageAttribution,
+                packImageAttributionLeft && styles.packImageAttributionLeft
+              )}
+              style={{color: imageAttributionColor}}
+            >
+              <FontAwesomeV6Icon
+                iconName={'brands fa-creative-commons'}
+                iconStyle="solid"
+                className={styles.icon}
+              />
+              &nbsp;
+              <FontAwesomeV6Icon
+                iconName={'brands fa-creative-commons-by'}
+                iconStyle="solid"
+                className={styles.icon}
+              />
+              &nbsp;
+              {imageAttributionAuthor}
+            </div>
+          )}
+        </div>
+      )}
       <div
         className={classNames(
           styles.packName,
