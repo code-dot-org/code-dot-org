@@ -104,5 +104,7 @@ export const BUS_EFFECT_COMBINATIONS: Effects[] = [
   {delay: 'low'},
 ];
 
+export const PATTERN_NUM_NOTES = 8;
+export const PATTERN_NUM_EVENTS = 16;
 export const PATTERN_AI_NUM_EVENTS = 32;
 export const PATTERN_AI_NUM_SEED_EVENTS = 8;
