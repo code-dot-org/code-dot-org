@@ -60,10 +60,8 @@ const levelSubmitted = {
 };
 
 describe('RubricContainer', () => {
-  let clock;
   let store;
   let fetchStub;
-  let ajaxStub;
   let sendEventSpy;
   let students, levelsWithProgress;
 
@@ -116,7 +114,7 @@ describe('RubricContainer', () => {
   }
 
   beforeEach(() => {
-    ajaxStub = jest.spyOn($, 'ajax').mockImplementation(() => {
+    jest.spyOn($, 'ajax').mockImplementation(() => {
       const request = {
         getResponseHeader: jest.fn().mockReturnValue('some-crsf-token'),
       };
@@ -130,7 +128,7 @@ describe('RubricContainer', () => {
         new Response(JSON.stringify({}), {status: 200, statusText: 'OK'})
       )
     );
-    sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
     sinon.stub(utils, 'queryParams').withArgs('section_id').returns('1');
     stubRedux();
     registerReducers({teacherSections, teacherPanel, currentUser});
@@ -142,14 +140,11 @@ describe('RubricContainer', () => {
   });
 
   afterEach(() => {
-    if (clock) {
-      clock.restore();
-    }
+    jest.useRealTimers();
     restoreRedux();
     utils.queryParams.restore();
     fetchStub.restore();
-    ajaxStub.mockRestore();
-    sendEventSpy.restore();
+    jest.restoreAllMocks();
   });
 
   const notAttemptedJson = {
@@ -490,7 +485,7 @@ describe('RubricContainer', () => {
       7. Fetch returns a json object with puts AI Status into SUCCESS state
       8. Calls refreshAiEvaluations
     */
-    clock = sinon.useFakeTimers();
+    jest.useFakeTimers();
     stubFetchEvalStatusForUser(readyJson);
     stubFetchEvalStatusForAll(readyJsonAll);
     stubFetchTeacherEvaluations(noEvals);
@@ -534,16 +529,17 @@ describe('RubricContainer', () => {
     fireEvent.click(button);
 
     //expect amplitude event on click
-    deprecatedExpect(sendEventSpy).to.have.been.calledWith(
+    expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.TA_RUBRIC_INDIVIDUAL_AI_EVAL,
       {
         rubricId: defaultRubric.id,
         studentId: defaultStudentInfo.user_id,
-      }
+      },
+      'Both'
     );
 
     // Wait for fetches and re-render
-    clock.tick(5000);
+    jest.advanceTimersByTime(5000);
     await wait();
 
     // 3. Fetch returns a json object with puts AI Status into EVALUATION_PENDING state
@@ -555,7 +551,7 @@ describe('RubricContainer', () => {
     stubFetchEvalStatusForUser(runningJson);
 
     // 4. Move clock forward 5 seconds and re-render
-    clock.tick(5000);
+    jest.advanceTimersByTime(5000);
     await wait();
 
     // 5. Fetch returns a json object with puts AI Status into EVALUATION_RUNNING state
@@ -567,7 +563,7 @@ describe('RubricContainer', () => {
     stubFetchAiEvaluations(mockAiEvaluations);
 
     // 6. Move clock forward 5 seconds and re-render
-    clock.tick(5000);
+    jest.advanceTimersByTime(5000);
     await wait();
 
     // 7. Fetch returns a json object with puts AI Status into SUCCESS state
@@ -991,14 +987,14 @@ describe('RubricContainer', () => {
     fireEvent.mouseDown(element, {clientX: 0, clientY: 0});
     fireEvent.mouseMove(element, {clientX: 100, clientY: 100});
 
-    deprecatedExpect(sendEventSpy).to.have.been.calledWith(
+    expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.TA_RUBRIC_WINDOW_MOVE_START,
       {window_x_start: 0, window_y_start: 0}
     );
 
     fireEvent.mouseUp(element);
 
-    deprecatedExpect(sendEventSpy).to.have.been.calledWith(
+    expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.TA_RUBRIC_WINDOW_MOVE_END,
       {window_x_end: 0, window_y_end: 0}
     );
@@ -1198,7 +1194,7 @@ describe('RubricContainer', () => {
     );
 
     await waitFor(() =>
-      deprecatedExpect(sendEventSpy).to.have.been.calledWith(
+      expect(sendEventSpy).toHaveBeenCalledWith(
         EVENTS.TA_RUBRIC_TOUR_STARTED,
         {}
       )
@@ -1233,13 +1229,10 @@ describe('RubricContainer', () => {
     fireEvent.click(nextButton);
 
     await waitFor(() =>
-      deprecatedExpect(sendEventSpy).to.have.been.calledWith(
-        EVENTS.TA_RUBRIC_TOUR_NEXT,
-        {
-          step: 0,
-          nextStep: 1,
-        }
-      )
+      expect(sendEventSpy).toHaveBeenCalledWith(EVENTS.TA_RUBRIC_TOUR_NEXT, {
+        step: 0,
+        nextStep: 1,
+      })
     );
 
     const backButton = await findByText('Back');
@@ -1247,13 +1240,10 @@ describe('RubricContainer', () => {
     fireEvent.click(backButton);
 
     await waitFor(() =>
-      deprecatedExpect(sendEventSpy).to.have.been.calledWith(
-        EVENTS.TA_RUBRIC_TOUR_BACK,
-        {
-          step: 1,
-          nextStep: 0,
-        }
-      )
+      expect(sendEventSpy).toHaveBeenCalledWith(EVENTS.TA_RUBRIC_TOUR_BACK, {
+        step: 1,
+        nextStep: 0,
+      })
     );
   });
 
@@ -1286,12 +1276,9 @@ describe('RubricContainer', () => {
     fireEvent.click(skipButton);
 
     await waitFor(() =>
-      deprecatedExpect(sendEventSpy).to.have.been.calledWith(
-        EVENTS.TA_RUBRIC_TOUR_CLOSED,
-        {
-          step: 0,
-        }
-      )
+      expect(sendEventSpy).toHaveBeenCalledWith(EVENTS.TA_RUBRIC_TOUR_CLOSED, {
+        step: 0,
+      })
     );
   });
 
@@ -1333,7 +1320,7 @@ describe('RubricContainer', () => {
     fireEvent.click(doneButton);
 
     await waitFor(() =>
-      deprecatedExpect(sendEventSpy).to.have.been.calledWith(
+      expect(sendEventSpy).toHaveBeenCalledWith(
         EVENTS.TA_RUBRIC_TOUR_COMPLETE,
         {}
       )
@@ -1373,7 +1360,7 @@ describe('RubricContainer', () => {
     fireEvent.click(element);
 
     await waitFor(() =>
-      deprecatedExpect(sendEventSpy).to.have.been.calledWith(
+      expect(sendEventSpy).toHaveBeenCalledWith(
         EVENTS.TA_RUBRIC_TOUR_RESTARTED,
         {}
       )
