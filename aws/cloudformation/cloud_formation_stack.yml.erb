@@ -532,18 +532,19 @@ Resources:
               - Effect: Allow
                 Action:
                   - rds:DescribeDBInstances
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:db:${AWS::StackName}*"
+              - Effect: Allow
+                Action:
                   - rds:DescribeDBClusters
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:${AWS::StackName}*"
+              - Effect: Allow
+                Action:
                   - rds:DescribeDBClusterSnapshots
-                Resource: '*'
-              - Effect: Allow
-                Action: rds:DescribeDBSnapshots
-                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:db:production"
-              - Effect: Allow
-                Action: rds:CopyDBSnapshot
-                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:snapshot:rds:production-*"
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-snapshot:${AWS::StackName}*"
               - Effect: Allow
                 Action: rds:CopyDBClusterSnapshot
-                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-snapshot:rds:<%=CDO.db_cluster_id%>*"
+                # TODO: Once we have the production database in the stack, we should !Sub in the actual cluster name
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-snapshot:rds:${AWS::StackName}*"
               - Effect: Allow
                 Action:
                   - rds:ModifyDBClusterSnapshotAttribute
@@ -551,14 +552,6 @@ Resources:
                   - rds:DeleteDBClusterSnapshot
                   - rds:DescribeDBClusterSnapshotAttributes
                 Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-snapshot:temp-snapshot*"
-              - Effect: Allow
-                Action:
-                  - rds:CopyDBSnapshot
-                  - rds:DescribeDBSnapshots
-                  - rds:DescribeDBSnapshotAttributes
-                  - rds:ModifyDBSnapshotAttribute
-                  - rds:DeleteDBSnapshot
-                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:snapshot:temp-snapshot-*"
               - Effect: Allow
                 Action:
                   - kms:CreateGrant
