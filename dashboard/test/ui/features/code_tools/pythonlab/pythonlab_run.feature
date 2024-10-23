@@ -15,9 +15,8 @@ Scenario: Can run and see output of Python program
   Then I sign out
 
 Scenario: Continue button and progress status shows up correctly
-  And I focus selector ".cm-content"
-
   # Level 1 is not validated; continue button will show up after editing and running code.
+  And I focus selector ".cm-content"
   And I press keys "print('more code')"
   And I press "uitest-codebridge-run"
   And I wait until "#uitest-codebridge-console" contains text "more code"
