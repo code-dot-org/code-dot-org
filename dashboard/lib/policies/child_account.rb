@@ -246,7 +246,7 @@ class Policies::ChildAccount
     personal_account?(user)
   end
 
-  private def self.conditionally_school_managed?(user)
+  private def conditionally_school_managed?(user)
     user.sections_as_student.present? || user.roster_synced
   end
 end
