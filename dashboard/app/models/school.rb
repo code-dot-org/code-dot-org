@@ -423,6 +423,26 @@ class School < ApplicationRecord
         end
       end
 
+      CDO.log.info "Seeding 2021-2022 private school data."
+      AWS::S3.seed_from_file('cdo-nces', "2021-2022/pss/schools_private.csv") do |filename|
+        merge_from_csv(filename, {headers: true, encoding: 'bom|utf-8'}, true, is_dry_run: false) do |row|
+          {
+            id:                           row['PPIN'],
+            name:                         row['PINST'].upcase,
+            address_line1:                row['PADDRS'].to_s.upcase.truncate(50).presence,
+            address_line2:                nil,
+            address_line3:                nil,
+            city:                         row['PCITY'].to_s.upcase.presence,
+            state:                        row['PSTABB'].to_s.strip.upcase.presence,
+            zip:                          row['PZIP'],
+            latitude:                     row['LATITUDE22'].to_f,
+            longitude:                    row['LONGITUDE22'].to_f,
+            school_type:                  'private',
+            school_district_id:           nil
+          }
+        end
+      end
+
       # Some of this data has #- appended to the front, so we strip that off with .to_s.slice(2) (it's always a single digit)
       CDO.log.info "Seeding 2022-2023 public school data."
       AWS::S3.seed_from_file('cdo-nces', "2022-2023/ccd/schools_public.csv") do |filename|
