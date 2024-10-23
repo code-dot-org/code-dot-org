@@ -10,20 +10,24 @@ import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {submitProject, getSubmissionStatus} from './submitProjectApi';
+import {
+  setShowShareDialog,
+  setShowSubmitProjectDialog,
+} from './submitProjectRedux';
 
-import moduleStyles from './submit-project-modal.module.scss';
+import moduleStyles from './submit-project-dialog.module.scss';
 
 /**
  * Renders a modal that warns the user to chat responsibly with AI.
  */
 
-export interface SubmitProjectModalProps {
+export interface SubmitProjectDialogProps {
   onClose: () => void;
 }
 
-const SubmitProjectModal: React.FunctionComponent<SubmitProjectModalProps> = ({
-  onClose,
-}) => {
+const SubmitProjectDialog: React.FunctionComponent<
+  SubmitProjectDialogProps
+> = ({onClose}) => {
   const [projectDescription, setProjectDescription] = useState<string>('');
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const projectType = useAppSelector(
@@ -44,10 +48,20 @@ const SubmitProjectModal: React.FunctionComponent<SubmitProjectModalProps> = ({
     }
   };
 
+  const onGoBack = async () => {
+    try {
+      console.log('on go back');
+      setShowSubmitProjectDialog(false);
+      setShowShareDialog(true);
+    } catch (error) {
+      console.error('Publish failed', error);
+    }
+  };
+
   return (
     <AccessibleDialog
       onClose={onClose}
-      className={moduleStyles.submitProjectModal}
+      className={moduleStyles.submitProjectdialog}
     >
       <div className={moduleStyles.headerContainer}>
         <Heading3>Submit to be featured</Heading3>
@@ -73,8 +87,9 @@ const SubmitProjectModal: React.FunctionComponent<SubmitProjectModalProps> = ({
       <hr />
       <div className={moduleStyles.bottomSection}>
         <Button onClick={onSubmit} color={buttonColors.purple} text="Submit" />
+        <Button onClick={onGoBack} color={buttonColors.white} text="Go back" />
       </div>
     </AccessibleDialog>
   );
 };
-export default SubmitProjectModal;
+export default SubmitProjectDialog;
