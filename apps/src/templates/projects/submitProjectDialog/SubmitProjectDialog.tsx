@@ -11,10 +11,7 @@ import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {submitProject} from './submitProjectApi';
-import {
-  setShowSubmitProjectDialog,
-  fetchSubmissionStatus,
-} from './submitProjectRedux';
+import {setShowSubmitProjectDialog} from './submitProjectRedux';
 
 import moduleStyles from './submit-project-dialog.module.scss';
 
@@ -35,7 +32,6 @@ const SubmitProjectDialog: React.FunctionComponent<
     state => state.lab.channel?.projectType
   ) as string;
   const dispatch = useAppDispatch();
-  dispatch(fetchSubmissionStatus());
 
   const onSubmit = async () => {
     try {
