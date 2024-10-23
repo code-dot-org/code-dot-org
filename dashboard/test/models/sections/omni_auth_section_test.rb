@@ -22,6 +22,7 @@ class OmniAuthSectionTest < ActiveSupport::TestCase
     section.reload
     assert_equal 'G-222222', section.code
     assert_equal User.from_omniauth(students.first, {}), section.students.first
+    assert_equal section.students.first.roster_synced, true
 
     assert_no_difference 'User.count' do
       # Should find the existing Google Classroom section.
