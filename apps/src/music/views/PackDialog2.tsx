@@ -8,11 +8,13 @@ import React, {
 } from 'react';
 import {FocusOn} from 'react-focus-on';
 
+import {Button} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import appConfig from '../appConfig';
 import {DEFAULT_PACK} from '../constants';
 import {AnalyticsContext} from '../context';
 import musicI18n from '../locale';
@@ -276,7 +278,14 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
             {musicI18n.packDialogTitle()}
           </Typography>
 
-          <div className={styles.body} data-theme="Dark">
+          <div
+            className={classNames(
+              styles.body,
+              appConfig.getValue('pack-dialog-2-stacked') === 'true' &&
+                styles.bodyStacked
+            )}
+            data-theme="Dark"
+          >
             <div>{musicI18n.packDialogBody()}</div>
 
             <SegmentedButtons
@@ -288,6 +297,7 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
               ]}
               onChange={value => setMode(value as Mode)}
               className={styles.segmentedButtons}
+              size="xs"
             />
           </div>
 
@@ -313,25 +323,23 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
 
           <div className={styles.footer}>
             <div className={styles.buttonContainer}>
-              <button
+              <Button
+                ariaLabel={musicI18n.skip()}
+                text={musicI18n.skip()}
+                type="secondary"
+                color="white"
+                size="s"
                 onClick={setPackToDefault}
-                className={classNames('skip-button', styles.skip)}
-                type="button"
-              >
-                {musicI18n.skip()}
-              </button>
-              <button
-                onClick={setPackToSelectedFolder}
-                className={classNames(
-                  styles.continue,
-                  styles.button,
-                  !selectedFolderId && styles.continueDisabled
-                )}
+              />
+              <Button
+                ariaLabel={musicI18n.select()}
+                text={musicI18n.select()}
+                type="primary"
+                color="white"
+                size="s"
                 disabled={!selectedFolderId}
-                type="button"
-              >
-                {musicI18n.select()}
-              </button>
+                onClick={setPackToSelectedFolder}
+              />
             </div>
           </div>
         </div>

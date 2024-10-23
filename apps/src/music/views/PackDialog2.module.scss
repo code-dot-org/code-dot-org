@@ -57,7 +57,16 @@
       align-items: end;
       gap: 10px;
       justify-content: space-between;
-      margin-bottom: 14px;
+      margin-bottom: 7px;
+
+      &Stacked {
+        justify-content: space-around;
+        margin-bottom: 7px;
+        flex-direction: column;
+        align-items: start;
+        gap: 7px;
+        margin-top: 4px;
+      }
     }
 
     .segmentedButtons {
@@ -98,7 +107,7 @@
           }
 
           &Selected {
-            background-color: $dark_black;
+            background-color: $light_primary_500;
             border-radius: 5px;
           }
 
@@ -179,7 +188,8 @@
 .buttonContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: end;
+  gap: 14px;
   width: 100%;
 
   .skip {
