@@ -110,6 +110,10 @@ describe('RubricContainer', () => {
     fetchStub
       .withArgs(sinon.match(/rubrics\/\w+\/update_ai_rubrics_tour_seen/))
       .returns(Promise.resolve(new Response(JSON.stringify(updateTourStatus))));
+
+    fetchStub
+      .withArgs(sinon.match(/rubrics\/\d+\/run_ai_evaluations_for_user$/))
+      .returns(Promise.resolve(new Response(JSON.stringify({}))));
   }
 
   beforeEach(() => {
@@ -528,9 +532,6 @@ describe('RubricContainer', () => {
     // 2. User clicks button to run analysis
 
     // Stub out running the assessment and have it return pending status when asked next
-    const stubRunAiEvaluationsForUser = fetchStub
-      .withArgs(sinon.match(/rubrics\/\d+\/run_ai_evaluations_for_user$/))
-      .returns(Promise.resolve(new Response(JSON.stringify({}))));
     stubFetch({evalStatusForUser: pendingJson, tourStatus: {seen: true}});
 
     fireEvent.click(button);
@@ -550,7 +551,9 @@ describe('RubricContainer', () => {
     await wait();
 
     // 3. Fetch returns a json object with puts AI Status into EVALUATION_PENDING state
-    deprecatedExpect(stubRunAiEvaluationsForUser).to.have.been.called;
+    deprecatedExpect(fetchStub).to.have.been.calledWith(
+      sinon.match(/rubrics\/\d+\/run_ai_evaluations_for_user$/)
+    );
     button = screen.getByRole('button', {name: i18n.runAiAssessment()});
     expect(button).toBeDisabled();
     screen.getByText(i18n.aiEvaluationStatus_pending());
