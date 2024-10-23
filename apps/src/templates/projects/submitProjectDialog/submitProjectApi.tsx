@@ -1,5 +1,6 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import {SubmissionStatusResponse} from './types';
 /**
  * Sends a post request to submit the project.
  */
@@ -27,8 +28,8 @@ export async function submitProject(submissionDescription: string) {
 /**
  * Sends a get request to submit the project.
  */
-export async function getSubmissionStatus() {
+export async function getSubmissionStatus(): Promise<SubmissionStatusResponse> {
   const response = await HttpClient.fetchJson(`submission_status`);
   console.log('response', response);
-  return response.value;
+  return response.value as SubmissionStatusResponse;
 }

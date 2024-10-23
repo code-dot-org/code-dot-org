@@ -279,7 +279,7 @@ class ProjectsController < ApplicationController
     _, project_id = storage_decrypt_channel_id(params[:channel_id])
     project = Project.find_by(id: project_id)
     status = get_status(channel_id, project_type, project)
-    render(status: :ok, json: status)
+    render(status: :ok, json: {status: status})
   end
 
   def get_status(channel_id, project_type, project)
