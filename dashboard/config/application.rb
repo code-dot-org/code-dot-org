@@ -21,6 +21,12 @@ require 'cdo/shared_constants'
 # can be automatically loaded just below.
 require 'cdo/pycall'
 
+# Monkey patch the `state_machine` gem (a dependency of `eyes_selenium`) to
+# support Ruby >= 3.2. This gem was replaced with `state_machines` in
+# `eyes_selenium` v6.0.4, so the patch can be removed once we upgrade.
+# TODO infra: upgrade `eyes_selenium` to something semi-modern ASAP
+require_relative 'monkeypatch_state_machine'
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
