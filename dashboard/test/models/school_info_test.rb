@@ -49,6 +49,32 @@ class SchoolInfoTest < ActiveSupport::TestCase
     assert_equal 'School type is invalid', school_info.errors.full_messages.first
   end
 
+  # US non-nces school
+
+  test 'US non-nces school succeeds' do
+    school_info = build :school_info_us_non_nces
+    assert school_info.valid?, school_info.errors.full_messages
+  end
+
+  test "US non-nces school without zip fails" do
+    school_info = build :school_info_us_non_nces, zip: nil
+    refute school_info.valid?  # Run the validations and set errors
+    assert_equal 'Zip is required', school_info.errors.full_messages.first
+  end
+
+  # US non-school setting
+
+  test 'US non-school setting succeeds' do
+    school_info = build :school_info_us_non_school_setting
+    assert school_info.valid?, school_info.errors.full_messages
+  end
+
+  test "US non-school setting without zip fails" do
+    school_info = build :school_info_us_non_school_setting, zip: nil
+    refute school_info.valid?  # Run the validations and set errors
+    assert_equal 'Zip is required', school_info.errors.full_messages.first
+  end
+
   # US, private
 
   test 'US private with school succeeds' do
