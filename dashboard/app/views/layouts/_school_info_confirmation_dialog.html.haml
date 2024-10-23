@@ -8,15 +8,11 @@
 -# geocoder sometimes shows localhost's country as RD/Reserved
 - us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
 - school_info = Queries::SchoolInfo.current_school(current_user)
-- current_user_user_school_info = Queries::UserSchoolInfo.last_complete(current_user)
--# - current_user_school_info = current_user_user_school_info ? current_user_user_school_info.school_info : nil
 
 - script_data = {}
 - script_data[:existingSchoolInfo] = {}
 - if school_info
   - script_data[:existingSchoolInfo] = school_info
-- if current_user_user_school_info
-  - script_data[:existingSchoolInfo][:user_school_info_id] = current_user_user_school_info.id
 - script_data[:usIp] = us_ip
 
 - content_for(:head) do

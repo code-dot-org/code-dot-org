@@ -19,7 +19,8 @@ class Queries::SchoolInfoTest < ActiveSupport::TestCase
       school_type: 'public',
       school_id: '1',
       school_zip: '12345',
-      country: 'US'
+      country: 'US',
+      user_school_info_id: user_school_info.id
     }
 
     assert_equal expected_result, result
@@ -38,7 +39,8 @@ class Queries::SchoolInfoTest < ActiveSupport::TestCase
       school_type: nil,
       school_id: nil,
       school_zip: '01234', # zip is padded with a leading zero
-      country: 'US'
+      country: 'US',
+      user_school_info_id: user_school_info.id
     }
 
     assert_equal expected_result, result
@@ -57,7 +59,8 @@ class Queries::SchoolInfoTest < ActiveSupport::TestCase
       school_type: SchoolInfo::SCHOOL_TYPE_NO_SCHOOL_SETTING,
       school_id: nil,
       school_zip: '00012', # zip is padded with leading zeros
-      country: 'US'
+      country: 'US',
+      user_school_info_id: user_school_info.id
     }
 
     assert_equal expected_result, result
@@ -76,7 +79,8 @@ class Queries::SchoolInfoTest < ActiveSupport::TestCase
       school_type: nil,
       school_id: nil,
       school_zip: nil,
-      country: 'GB'
+      country: 'GB',
+      user_school_info_id: user_school_info.id
     }
 
     assert_equal expected_result, result
