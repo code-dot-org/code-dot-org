@@ -5,31 +5,15 @@ description 'description here'
 markdown <<MARKDOWN
 # Teaching About AI
 
-#### We hope that by completing these levels you were able to learn a bit more about what teaching about AI looks like, and maybe even learned something about AI yourself.
-
-#### If you’re interested, be sure to check out the complete <a href="https://studio.code.org/s/oceans?section_id=4974168" target="_blank">AI for Oceans</a> activity and the associated <a href="https://studio.code.org/s/oceans/lessons/1" target="_blank">Lesson Plan</a>.
-
-<br>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">What Else is Out There?</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-    <p>
-
-#### Code.org has a lot of other resources for teaching about AI. Check out the <a href="https://code.org/curriculum/how-ai-works" target="_blank">How AI Works</a> page to find lessons and activities that align with your content and classroom. For elementary school teachers you can also check out <a href="https://studio.code.org/s/dance-ai-2023?section_id=4974168" target="_blank">Dance Party: AI Edition</a>, which is appropriate for 3rd grade and up.
-
-
-</p></div>
-</details>
-
-
-# Practice
 
 #### There are so many resources out there to support teachers who want to teach about AI in their classrooms.
 
-#### Today, you're going to get the chance to explore one of Code.org’s lessons on AI - AI for Oceans. AI for Oceans is a 45 minute lesson that is appropriate for grades 3-12.
 
-#### Don’t worry! We’re not going to do the whole lesson. As you click Continue, you’ll work through a few of the student levels to get an idea of the activity. We’ll share the teacher resources and the complete activity when you’re done.
+#### Code.org has a lot of resources for teaching about AI. Check out <a href="https://code.org/ai" target="_blank">code.org/ai</a> to find lessons and activities that align with all grade levels and various content areas.
 
-#### If you’ve completed the previous modules in this AI 101 Self-Paced Professional Learning, you’ve already watched the associated videos so feel free to click Continue and skip past those.
+<p style="text-align:center">
+<img src="https://images.code.org/9d15075ae9e098534878c1e4604d6cd8-Screenshot 2024-10-22 at 1.42.15 PM.png" style="border: 2px solid black; border-radius: 8px; width: 90%" alt="graphic organizer from unit">
+</p>
+
+
 MARKDOWN
