@@ -282,6 +282,10 @@ span {
         .buttonContainer {
           flex-direction: column;
           align-items: stretch;
+
+          div {
+            margin-inline: auto;
+          }
         }
       }
 
