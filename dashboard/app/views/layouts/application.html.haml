@@ -67,6 +67,8 @@
     - else
       - unless Rails.env.production?
         = render partial: 'layouts/environment_tag'
+    - if request.cookies[Rack::GeolocationOverride::KEY]
+      = render partial: 'layouts/geolocation_tag'
     - if current_user&.student?
       - forceStudentInterstitial = params[:forceStudentInterstitial]
       - if current_user.age.nil? || lti_user_info_required?(current_user) || cap_user_info_required?(current_user, request.country) || forceStudentInterstitial

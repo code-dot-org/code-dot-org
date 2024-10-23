@@ -1,0 +1,23 @@
+- if cookies[Rack::GeolocationOverride::KEY]
+  %a{href: "/geolocate/off"}
+    Reset (Remove existing override)
+
+%h2
+  Override your geolocation to have our application think you are in one of these locations:
+
+%ul
+  %li
+    %a{href: "/geolocate/103.10.24.0"}
+      India
+  %li
+    %a{href: "/geolocate/95.38.60.151"}
+      Iran
+  %li
+    %a{href: "/geolocate/104.243.245.0"}
+      Mexico
+  %li
+    %a{href: "/geolocate/103.199.116.255"}
+      Spain
+  %li
+    %a{href: "/geolocate/102.223.180.0"}
+      United States

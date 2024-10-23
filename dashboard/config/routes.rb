@@ -303,6 +303,11 @@ Dashboard::Application.routes.draw do
 
     post '/locale', to: 'home#set_locale', as: 'locale'
 
+    if CDO.use_geolocation_override
+      get '/geolocate', to: 'home#geolocate'
+      get '/geolocate/*ip', to: 'home#set_geolocation_override', constraints: {ip: /[^\/]+/}
+    end
+
     # quick links for cartoon network arabic
     get '/flappy/lang/ar', to: 'home#set_locale', as: 'flappy/lang/ar', locale: 'ar-SA', user_return_to: '/flappy/1'
     get '/playlab/lang/ar', to: 'home#set_locale', as: 'playlab/lang/ar', locale: 'ar-SA', user_return_to: '/s/playlab/lessons/1/levels/1'
