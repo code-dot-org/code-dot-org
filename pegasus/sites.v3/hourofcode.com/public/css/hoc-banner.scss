@@ -13,6 +13,11 @@
 section.banner.homepage {
   padding-bottom: 4rem;
 
+  h1 {
+    font-size: 3rem;
+    margin-block: 0 1rem;
+  }
+
   h2 {
     font-weight: 400;
   }
@@ -63,7 +68,7 @@ section.banner.homepage {
     }
   }
 
-  @media (max-width: $width-lg) {
+  @media (max-width: 1023px) {
     .show-tablet {
       display: block;
     }
@@ -105,23 +110,6 @@ section.banner {
 
   h1, p {
     color: var(--neutral_dark);
-  }
-
-  h1 {
-    font-size: 3rem;
-    margin-block: 0 1rem;
-  }
-
-  p {
-    margin-bottom: 0;
-  }
-
-  a {
-    color: var(--neutral_dark);
-
-    &.link-button {
-      text-decoration: none;
-    }
   }
 
   figure {
