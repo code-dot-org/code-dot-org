@@ -1,7 +1,6 @@
 /*
  * Form to create a workshop enrollment
  */
-import $ from 'jquery';
 import React, {useState} from 'react';
 import {
   FormGroup,
@@ -13,6 +12,7 @@ import {
 import Select, {Option} from 'react-select';
 
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import color from '@cdo/apps/util/color';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 
@@ -296,7 +296,7 @@ export default function EnrollForm(props: EnrollFormProps) {
     }
   };
 
-  const submit = () => {
+  const submit = async () => {
     setFormErrors({});
     setSubmissionErrorMessage('');
     setIsSubmitting(true);
@@ -338,21 +338,30 @@ export default function EnrollForm(props: EnrollFormProps) {
       taught_ap_before: formState.taught_ap_before,
       planning_to_teach_ap: formState.planning_to_teach_ap,
     };
-    // must refactor this now
-    $.ajax({
-      method: 'POST',
-      url: `/api/v1/pd/workshops/${props.workshop_id}/enrollments`,
-      contentType: 'application/json',
-      data: JSON.stringify(params),
-      complete: result => {
-        setIsSubmitting(false);
-        result?.responseJSON?.workshop_enrollment_status === 'error' &&
-          setSubmissionErrorMessage(
-            result?.responseJSON?.error_message || 'unknown error'
-          );
-        props.onSubmissionComplete(result?.responseJSON);
-      },
-    });
+
+    try {
+      const response = await fetch(
+        `/api/v1/pd/workshops/${props.workshop_id}/enrollments`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': await getAuthenticityToken(),
+          },
+          body: JSON.stringify(params),
+        }
+      );
+      setIsSubmitting(false);
+      if (response.ok) {
+        const result = await response.json();
+        if (result.workshop_enrollment_status === 'error') {
+          setSubmissionErrorMessage(result.error_message || 'unknown error');
+        }
+        props.onSubmissionComplete(result);
+      }
+    } catch (error) {
+      setSubmissionErrorMessage('unknown error');
+    }
   };
 
   const getRequiredFieldErrors = () => {
