@@ -10,7 +10,7 @@ Minitest.load_plugins
 Minitest.extensions.delete('rails')
 Minitest.extensions.unshift('rails')
 
-reporters = [CowReporter.new]
+reporters = [CowReporter.new(detailed_skip: !ENV['CI'])]
 if ENV['CIRCLECI']
   reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CIRCLE_TEST_REPORTS', nil)}/dashboard")
 end
