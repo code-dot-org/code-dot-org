@@ -319,7 +319,7 @@ describe('RubricContainer', () => {
     expect(settings).toHaveClass('settingsHidden');
   });
 
-  it('shows a a button for running analysis if canProvideFeedback is true', async () => {
+  it('shows a button for running analysis if canProvideFeedback is true', async () => {
     stubFetch({
       evalStatusForUser: readyJson,
       evalStatusForAll: readyJsonAll,
@@ -346,7 +346,7 @@ describe('RubricContainer', () => {
     stubFetch({
       evalStatusForUser: {},
       evalStatusForAll: {},
-      aiEvals: {},
+      aiEvals: [],
       teacherEvals: noEvals,
       tourStatus: {seen: true},
     });
