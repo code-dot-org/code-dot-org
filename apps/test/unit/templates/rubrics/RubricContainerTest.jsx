@@ -116,13 +116,13 @@ describe('RubricContainer', () => {
   }
 
   beforeEach(() => {
-    ajaxStub = sinon.stub($, 'ajax');
-    const request = sinon.stub();
-    request.getResponseHeader = sinon.stub().returns('some-crsf-token');
-    ajaxStub.returns({
-      done: cb => {
-        cb([], null, request);
-      },
+    ajaxStub = jest.spyOn($, 'ajax').mockImplementation(() => {
+      const request = {
+        getResponseHeader: jest.fn().mockReturnValue('some-crsf-token'),
+      };
+      return {
+        done: cb => cb([], null, request),
+      };
     });
     fetchStub = sinon.stub(window, 'fetch');
     fetchStub.returns(
@@ -148,7 +148,7 @@ describe('RubricContainer', () => {
     restoreRedux();
     utils.queryParams.restore();
     fetchStub.restore();
-    ajaxStub.restore();
+    ajaxStub.mockRestore();
     sendEventSpy.restore();
   });
 
