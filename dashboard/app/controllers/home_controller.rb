@@ -36,16 +36,15 @@ class HomeController < ApplicationController
   end
 
   def set_geolocation_override
-    # Validate the IP address we want to set
-    if begin
-      !!IPAddr.new(params[:ip])
-    rescue
-      false
-    end
+    # Validate the IP address we want to set (will throw an error if not a valid IP)
+    if !!IPAddr.new(params[:ip])
       cookies[Rack::GeolocationOverride::KEY] = {value: params[:ip], domain: :all, expires: 10.years.from_now}
-    else
-      cookies.delete Rack::GeolocationOverride::KEY, domain: :all
     end
+  rescue
+    # Erase the cookie if we see anything invalid as an input
+    cookies.delete Rack::GeolocationOverride::KEY, domain: :all
+  ensure
+    # Always redirect to root
     redirect_to '/'
   end
 
