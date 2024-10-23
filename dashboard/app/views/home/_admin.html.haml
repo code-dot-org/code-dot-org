@@ -13,6 +13,7 @@
       %li= link_to 'User projects', user_projects_form_path
       %li= link_to 'Gatekeeper', gatekeeper_show_path
       %li= link_to 'DCDO', dcdo_show_path
-      %li= link_to 'Geolocate', geolocate_path
+      - if CDO.use_geolocation_override
+        %li= link_to 'Geolocate', geolocate_path
       %li= link_to 'Grant Permissions/Privileges', permissions_form_path
       %li= link_to 'Videos', videos_path
