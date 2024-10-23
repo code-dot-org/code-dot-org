@@ -66,6 +66,14 @@ export interface CustomDropdownProps extends AriaAttributes {
   triggerButtonProps?: ButtonProps;
   /** Children */
   children: React.ReactNode;
+  /** CustomDropdown helper message */
+  helperMessage?: string;
+  /** CustomDropdown helper icon */
+  helperIcon?: FontAwesomeV6IconProps;
+  /** CustomDropdown error message */
+  errorMessage?: string;
+  /** Style the dropdown as a form field */
+  styleAsFormField?: boolean;
 }
 
 /**
@@ -87,6 +95,10 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   menuPlacement = 'left',
   useDSCOButtonAsTrigger = false,
   triggerButtonProps = {},
+  helperMessage,
+  helperIcon,
+  errorMessage,
+  styleAsFormField = false,
   ...rest
 }) => {
   const {activeDropdownName, setActiveDropdownName} = useDropdownContext();
@@ -209,9 +221,26 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
           <FontAwesomeV6Icon iconStyle="solid" iconName="chevron-down" />
         </button>
       )}
-
       {/** Dropdown menu content is rendered here as children props*/}
       {children}
+
+      {!errorMessage && (helperMessage || helperIcon) && (
+        <div className={moduleStyles.helperSection}>
+          {helperIcon && <FontAwesomeV6Icon {...helperIcon} />}
+          {helperMessage && <span>{helperMessage}</span>}
+        </div>
+      )}
+      {errorMessage && (
+        <div
+          className={classNames(
+            moduleStyles.errorSection,
+            moduleStyles.helperSection
+          )}
+        >
+          <FontAwesomeV6Icon iconName={'circle-exclamation'} />
+          <span>{errorMessage}</span>
+        </div>
+      )}
     </div>
   );
 };
