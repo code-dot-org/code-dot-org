@@ -16,6 +16,7 @@ import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import * as selectedSectionLoader from '@cdo/apps/templates/teacherNavigation/selectedSectionLoader';
 import TeacherNavigationBar from '@cdo/apps/templates/teacherNavigation/TeacherNavigationBar';
 import {
   SPECIFIC_SECTION_BASE_URL,
@@ -46,22 +47,46 @@ describe('TeacherNavigationBar', () => {
     {
       id: 13,
       name: 'Period 3',
-      hidden: true,
+      hidden: false,
       courseVersionName: 'csd-2022',
       unitName: 'csd3-2022',
+    },
+    {
+      id: 14,
+      name: 'Period 4',
+      hidden: false,
+      courseVersionName: 'csd-2022',
+      unitName: 'csd6-2022',
+    },
+    {
+      id: 15,
+      name: 'hidden',
+      hidden: true,
     },
   ];
   const serverSections = sections.map(serverSectionFromSection);
 
   let store;
 
-  const renderDefault = (selectedSectionId = 11) => {
+  let loadSelectedSectionSpy;
+
+  const renderDefault = (selectedSectionId = 11, selectedRoute = null) => {
     store = getStore();
     registerReducers({
       teacherSections,
     });
     store.dispatch(setSections(serverSections));
 
+    loadSelectedSectionSpy = jest
+      .spyOn(selectedSectionLoader, 'asyncLoadSelectedSection')
+      .mockImplementation(sectionId => {
+        store.dispatch(selectSection(sectionId));
+        return () => {};
+      });
+
+    const initialRoute = !selectedRoute
+      ? `/teacher_dashboard/sections/${selectedSectionId}/progress`
+      : selectedRoute;
     render(
       <Provider store={store}>
         <RouterProvider
@@ -83,10 +108,6 @@ describe('TeacherNavigationBar', () => {
                       <Outlet />
                     </div>
                   }
-                  loader={({params}) => {
-                    store.dispatch(selectSection(params.sectionId));
-                    return null;
-                  }}
                 >
                   <Route
                     path={'progress'}
@@ -124,9 +145,7 @@ describe('TeacherNavigationBar', () => {
               </Route>,
             ]),
             {
-              initialEntries: [
-                `/teacher_dashboard/sections/${selectedSectionId}/progress`,
-              ],
+              initialEntries: [initialRoute],
               basename: TEACHER_NAVIGATION_BASE_URL,
             }
           )}
@@ -135,14 +154,20 @@ describe('TeacherNavigationBar', () => {
     );
   };
 
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
   test('renders correctly with visible sections', async () => {
     renderDefault();
 
     await screen.findByText(i18n.classSections());
     screen.getByRole('combobox');
-    expect(screen.getByText('Period 1')).toBeVisible();
-    expect(screen.queryByText('Period 3')).toBeNull();
+    screen.getByText('Period 1');
     screen.getByText('Period 2');
+    screen.getByText('Period 3');
+    expect(screen.queryByText('hidden')).toBeNull();
+    expect(loadSelectedSectionSpy).toHaveBeenCalledWith('11');
   });
 
   test('renders all navbarComponents', async () => {
@@ -166,7 +191,7 @@ describe('TeacherNavigationBar', () => {
     screen.getByText(i18n.settings());
   });
 
-  test('section button switches url', async () => {
+  test('page button switches url', async () => {
     renderDefault();
 
     await screen.findByText('/sections/11/progress path');
@@ -182,6 +207,7 @@ describe('TeacherNavigationBar', () => {
 
     screen.getByText('/sections/12/progress path');
     expect(dropdown).toHaveValue('12');
+    expect(loadSelectedSectionSpy).toHaveBeenCalledWith('12');
 
     // Change dropdown value
 
@@ -190,6 +216,7 @@ describe('TeacherNavigationBar', () => {
     await screen.findByText('/sections/11/progress path');
     const dropdownAfterClick = screen.getByRole('combobox');
     expect(dropdownAfterClick).toHaveValue('11');
+    expect(loadSelectedSectionSpy).toHaveBeenCalledWith('11');
   });
 
   test('course link navigates to course when unit is not assigned', async () => {
@@ -197,12 +224,31 @@ describe('TeacherNavigationBar', () => {
     await screen.findByText('Course Content');
     screen.getByText(i18n.course()).click();
     await screen.findByText('/sections/12/courses/csd-2023 path');
+    expect(loadSelectedSectionSpy).toHaveBeenCalledWith('12');
   });
 
   test('course link navigates to unit when unit is assigned', async () => {
     renderDefault(13);
     await screen.findByText('Course Content');
     screen.getByText(i18n.course()).click();
-    await screen.findByText('/sections/13/unit path');
+    await screen.findByText('/sections/13/unit/csd3-2022 path');
+    expect(loadSelectedSectionSpy).toHaveBeenCalledWith('13');
+  });
+
+  test('section switch on unit page goes to selected unit', async () => {
+    renderDefault(13, `/teacher_dashboard/sections/13/unit/csd3-2022`);
+    const dropdown = await screen.findByRole('combobox');
+
+    screen.getByText('/sections/13/unit/csd3-2022 path');
+    expect(dropdown).toHaveValue('13');
+
+    // Change dropdown value
+
+    fireEvent.change(dropdown, {target: {value: '14'}});
+
+    await screen.findByText('/sections/14/unit/csd6-2022 path');
+    const dropdownAfterClick = screen.getByRole('combobox');
+    expect(dropdownAfterClick).toHaveValue('14');
+    expect(loadSelectedSectionSpy).toHaveBeenCalledWith('14');
   });
 });
