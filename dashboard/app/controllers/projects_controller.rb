@@ -272,7 +272,28 @@ class ProjectsController < ApplicationController
     end
   end
 
-  # POST /projects/:project_type/submit/:channel_id
+  # GET /projects/:project_type/:channel_id/submission_status
+  def submission_status
+    project_type = params[:project_type]
+    channel_id = params[:channel_id]
+    _, project_id = storage_decrypt_channel_id(params[:channel_id])
+    project = Project.find_by(id: project_id)
+    status = get_status(channel_id, project_type, project)
+    render(status: :ok, json: status)
+  end
+
+  def get_status(channel_id, project_type, project)
+    return SharedConstants::PROJECT_SUBMISSION_STATUS[:ALREADY_SUBMITTED] if JSON.parse(project.value)["submissionDescription"]
+    return SharedConstants::PROJECT_SUBMISSION_STATUS[:PROJECT_TYPE_NOT_ALLOWED] unless SharedConstants::ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
+    return SharedConstants::PROJECT_SUBMISSION_STATUS[:NOT_PROJECT_OWNER] unless current_user
+    return SharedConstants::PROJECT_SUBMISSION_STATUS[:SHARING_DISABLED] if current_user.sharing_disabled? && SharedConstants::CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
+    return SharedConstants::PROJECT_SUBMISSION_STATUS[:RESTRICTED_SHARE_MODE] if Projects.in_restricted_share_mode(channel_id, project_type)
+    return SharedConstants::PROJECT_SUBMISSION_STATUS[:OWNER_TOO_NEW] unless project.owner_existed_long_enough_to_publish?
+    return SharedConstants::PROJECT_SUBMISSION_STATUS[:PROJECT_TOO_NEW] unless project.existed_long_enough_to_publish?
+    SharedConstants::PROJECT_SUBMISSION_STATUS[:CAN_SUBMIT]
+  end
+
+  # POST /projects/:project_type/:channel_id/submit
   def submit
     project_type = params[:project_type]
     channel_id = params[:channel_id]
@@ -280,12 +301,12 @@ class ProjectsController < ApplicationController
     return render status: :bad_request, json: {error: "Project description is required for submission."} if submission_description.empty?
     _, project_id = storage_decrypt_channel_id(params[:channel_id])
     project = Project.find_by(id: project_id)
-    current_submission_description = JSON.parse(project.value)["submissionDescription"]
-    return render status: :bad_request, json: {error: "Once submitted, a project cannot be submitted again."} if current_submission_description
-    return render status: :forbidden, json: {error: "Sharing disabled for user account."} unless current_user
-    return render status: :bad_request, json: {error: "This project type is not able to be submitted to the featured project gallery."} unless SharedConstants::ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    return render status: :forbidden, json: {error: "Sharing disabled for user account."} if current_user.sharing_disabled? && SharedConstants::CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    return render status: :forbidden, json: {error: "Project in restricted share mode"} if Projects.in_restricted_share_mode(channel_id, project_type)
+    status = get_status(channel_id, project_type, project)
+    return render status: :bad_request, json: {error: "Once submitted, a project cannot be submitted again."} if status == SharedConstants::PROJECT_SUBMISSION_STATUS[:ALREADY_SUBMITTED]
+    return render status: :bad_request, json: {error: "This project type is not able to be submitted to the featured project gallery."} if status == SharedConstants::PROJECT_SUBMISSION_STATUS[:PROJECT_TYPE_NOT_ALLOWED]
+    return render status: :forbidden, json: {error: "Submission disabled for user account because non-owner."} if status == SharedConstants::PROJECT_SUBMISSION_STATUS[:NOT_PROJECT_OWNER]
+    return render status: :forbidden, json: {error: "Submission disabled for user account because sharing disabled."} if status == SharedConstants::PROJECT_SUBMISSION_STATUS[:SHARING_DISABLED]
+    return render status: :forbidden, json: {error: "Submission disabled beause project in restricted share mode."} if status == SharedConstants::PROJECT_SUBMISSION_STATUS[:RESTRICTED_SHARE_MODE]
     # Publish the project, i.e., make it public.
     begin
       Projects.new(get_storage_id).publish(channel_id, project_type, current_user)

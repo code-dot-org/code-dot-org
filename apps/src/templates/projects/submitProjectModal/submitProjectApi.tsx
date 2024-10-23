@@ -23,3 +23,12 @@ export async function submitProject(submissionDescription: string) {
   );
   console.log('response', response);
 }
+
+/**
+ * Sends a get request to submit the project.
+ */
+export async function getSubmissionStatus() {
+  const response = await HttpClient.fetchJson(`submission_status`);
+  console.log('response', response);
+  return response.value;
+}

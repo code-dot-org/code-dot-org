@@ -9,7 +9,7 @@ import {
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {submitProject} from './submitProjectApi';
+import {submitProject, getSubmissionStatus} from './submitProjectApi';
 
 import moduleStyles from './submit-project-modal.module.scss';
 
@@ -36,6 +36,8 @@ const SubmitProjectModal: React.FunctionComponent<SubmitProjectModalProps> = ({
       console.log('onsubmit');
       if (channelId && projectType) {
         submitProject(projectDescription);
+        const status = getSubmissionStatus();
+        console.log('status', status);
       }
     } catch (error) {
       console.error('Publish failed', error);
