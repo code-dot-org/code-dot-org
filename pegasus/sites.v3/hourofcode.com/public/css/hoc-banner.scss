@@ -11,6 +11,7 @@
 
 // Homepage banner
 section.banner.homepage {
+  padding-bottom: 4rem;
 
   h2 {
     font-weight: 400;
@@ -35,15 +36,25 @@ section.banner.homepage {
     height: 552px;
     position: relative;
 
+    html[dir="rtl"] & {
+      background: url('/images/hoc-2024-graphic-bg-rtl.png') no-repeat center center;
+      background-size: contain;
+    }
+
     .text-wrapper {
       position: absolute;
       bottom: 6rem;
       left: 3rem;
-      text-align: left;
+      text-align: initial;
       max-width: 390px;
+
+      html[dir="rtl"] & {
+        right: 3rem;
+      }
 
       h1, h2, p {
         color: var(--neutral_white);
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
       }
     }
 
@@ -52,7 +63,7 @@ section.banner.homepage {
     }
   }
 
-  @media (max-width: 1130px) {
+  @media (max-width: 1024px) {
     .show-tablet {
       display: block;
     }
