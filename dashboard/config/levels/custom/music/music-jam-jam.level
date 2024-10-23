@@ -1,0 +1,30 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-10-22T23:17:18.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "finish_dialog": "hoc2024",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Jam Session \r\n\r\nNew sounds and blocks unlocked! \r\n\r\nYou've got what it takes to make your own song. ",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "showSoundFilters": true,
+      "toolbox": {
+        "includeAi": true,
+        "type": "category",
+        "addFunctionCalls": true
+      }
+    },
+    "name_suffix": "_final",
+    "offer_browser_tts": "false",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:18.751+00:00\",\"changed\":[\"cloned from \\\"music-ai-freeplay_1\\\"\"],\"cloned_from\":\"music-ai-freeplay_1\"},{\"changed_at\":\"2024-10-22 23:51:34 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

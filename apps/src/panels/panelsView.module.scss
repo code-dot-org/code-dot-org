@@ -2,8 +2,8 @@
 @import 'font.scss';
 @import '../mixins.scss';
 
-$text-offset-x: -5cqw;
-$text-offset-y: 5cqw;
+$text-offset-x: 2cqw;
+$text-offset-y: 2cqw;
 
 @keyframes fade-in {
   0%, 50% {
@@ -89,6 +89,11 @@ $text-offset-y: 5cqw;
 
       .invisiblePlaceholder {
         opacity: 0;
+      }
+
+      code {
+        color: $light_primary_700;
+        font-size: 1.37cqw;
       }
 
       .typist {
