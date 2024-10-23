@@ -4,11 +4,10 @@
 Feature: Python Lab manage files and folders
 
 Background:
-  Given I create a student named "Penelope"
   And I am on "http://studio.code.org/s/allthethings/lessons/50/levels/1"
   And I wait to see "#uitest-codebridge-run"
 
-Scenario: Can add a file
+Scenario: Can add a new, unlocked file
   And I press "uitest-files-plus"
   And I wait to see "#uitest-new-file"
   And I press "uitest-new-file"
@@ -17,4 +16,13 @@ Scenario: Can add a file
   And I press "uitest-generic-dialog-ok"
   And element ".cm-content" contains text "Add your changes to new_file.py"
   And element "#uitest-files-list" contains text "new_file.py"
+  And I hover over selector "#uitest-file-3-row"
+  And I press "uitest-file-3-kebab"
+  And element "#uitest-file-3-popup" contains text "Download"
+  And element "#uitest-file-3-popup" contains text "Delete"
 
+Scenario: main.py is locked
+  And I hover over selector "#uitest-file-0-row"
+  And I press "uitest-file-0-kebab"
+  And element "#uitest-file-0-popup" contains text "Download"
+  And element "#uitest-file-0-popup" does not contain text "Rename"
