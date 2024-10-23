@@ -1,0 +1,47 @@
+include:
+  - path: ./docker-compose.mysql.yml
+  - path: ./docker-compose.redis.yml
+  - path: ./docker-compose.networks.yml
+
+services:
+  # Runs all the dependent services when the dashboard server is running natively
+  dashboard-services:
+    image: alpine
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    command: >
+      /bin/sh -c "
+        echo 'Dashboard services running.' &&
+        echo &&
+        echo 'To shut down all containers:' &&
+        echo 'docker compose stop' &&
+        echo &&
+        echo 'To run the native dashboard server:' &&
+        echo './bin/dashboard-server' &&
+        echo &&
+        echo 'Be sure to have the following in your locals.yml to link to the contained services:' &&
+        echo 'These will allow you to connect to the database with: ./bin/mysql-client-admin' &&
+        echo &&
+        echo '# Redis connections' &&
+        echo 'geocoder_redis_url: redis://localhost:${REDIS_NATIVE_PORT}/0/geocoder' &&
+        echo 'session_store_server: redis://localhost:${REDIS_NATIVE_PORT}/0/session' &&
+        echo &&
+        echo '# MySQL connections' &&
+        echo 'db_writer: mysql://root:password@127.0.0.1:${MYSQL_NATIVE_PORT:-3306}/' &&
+        echo 'db_endpoint_writer: 127.0.0.1:${MYSQL_NATIVE_PORT:-3306}' &&
+        echo 'db_credential_admin:' &&
+        echo '  username: root' &&
+        echo '  password: password' &&
+        echo 'db_endpoint_proxy_reporting: 127.0.0.1:${MYSQL_NATIVE_PORT:-3306}' &&
+        echo 'db_endpoint_proxy_reader: 127.0.0.1:${MYSQL_NATIVE_PORT:-3306}' &&
+        echo 'db_credential_reader:' &&
+        echo '  username: root' &&
+        echo '  password: password' &&
+        echo 'db_endpoint_proxy_writer: 127.0.0.1:${MYSQL_NATIVE_PORT:-3306}' &&
+        echo 'db_credential_writer:' &&
+        echo '  username: root' &&
+        echo '  password: password'
+      "

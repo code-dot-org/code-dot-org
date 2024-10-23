@@ -1,0 +1,14 @@
+# Our entry into our docker development environment is described here.
+
+# For an overview of how to use the Docker Development Environment see `DOCKER.md`
+
+# It is split among a few different files that are then merged together via
+# the following `include` section.
+
+include:
+  # Services the dashboard server depends on
+  - path: ./docker/developers/docker-compose.mysql.yml
+  - path: ./docker/developers/docker-compose.redis.yml
+
+  # The dashboard server
+  - path: ./docker/developers/docker-compose.dashboard.yml
