@@ -934,10 +934,18 @@ class Unit < ApplicationRecord
     in_initiative?('CSC')
   end
 
+  def foundations_of_cs?
+    under_curriculum_umbrella?('Foundations of CS')
+  end
+
+  def foundations_of_programming?
+    under_curriculum_umbrella?('Foundations of Programming')
+  end
+
   # TODO: (Dani) Update to use new course types framework.
   # Currently this grouping is used to determine whether the script should have # a custom end-of-lesson experience.
   def middle_high?
-    csd? || csp? || csa?
+    csd? || csp? || csa? || foundations_of_cs? || foundations_of_programming?
   end
 
   def requires_verified_instructor?
@@ -2129,8 +2137,7 @@ class Unit < ApplicationRecord
   # To help teachers have more control over the pacing of certain scripts, we
   # send students on the last level of a lesson to the unit overview page.
   def show_unit_overview_between_lessons?
-    middle_high? || ['vpl-csd-summer-pilot'].include?(get_course_version&.course_offering&.key) ||
-      in_initiative?('Foundations of CS') || in_initiative?('Foundations of Programming')
+    middle_high? || ['vpl-csd-summer-pilot'].include?(get_course_version&.course_offering&.key)
   end
 
   def ai_assessment_enabled?
