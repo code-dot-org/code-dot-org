@@ -129,7 +129,7 @@ describe('RubricContainer', () => {
       )
     );
     sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
-    sinon.stub(utils, 'queryParams').withArgs('section_id').returns('1');
+    jest.spyOn(utils, 'queryParams').mockReturnValue('1');
     stubRedux();
     registerReducers({teacherSections, teacherPanel, currentUser});
     store = getStore();
@@ -142,7 +142,6 @@ describe('RubricContainer', () => {
   afterEach(() => {
     jest.useRealTimers();
     restoreRedux();
-    utils.queryParams.restore();
     fetchStub.restore();
     jest.restoreAllMocks();
   });
