@@ -1,4 +1,4 @@
-@import "color", "font";
+@import 'color', 'font';
 
 // Typography - Label styles
 @mixin label-common {
@@ -88,4 +88,58 @@
   @include button-text-common;
   font-size: 0.75rem;
   line-height: 1.64;
+}
+
+// Common field styles
+@mixin field-common {
+  min-width: 300px;
+}
+
+@mixin field-helper-section-common {
+  display: flex;
+  align-items: baseline;
+  align-self: stretch;
+}
+
+@mixin field-helper-section-l {
+  @include body-two;
+  margin-bottom: 0;
+  gap: 0.375rem;
+}
+
+@mixin field-helper-section-m {
+  @include body-three;
+  margin-bottom: 0;
+  gap: 0.375rem;
+}
+
+@mixin field-helper-section-s {
+  @include body-four;
+  margin-bottom: 0;
+  gap: 0.25rem;
+}
+
+@mixin field-helper-section-black {
+  color: $light_black;
+}
+
+@mixin field-helper-section-black-disabled {
+  color: $light_gray_200;
+}
+
+@mixin field-helper-section-white {
+  color: $light_white;
+}
+
+@mixin field-helper-section-white-disabled {
+  color: $light_gray_700;
+}
+
+@mixin field-error-section-black {
+  color: $light_negative_500;
+}
+
+
+@mixin field-error-section-white {
+  color: $light_white;
 }
