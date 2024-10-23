@@ -416,7 +416,6 @@ icompute_imorse,iMorse - Cryptography with Morse Code & Sphero,http://www.icompu
 iorder,iOrder,http://www.icompute-uk.com/hoc-2017-3
 isave_santa,iSave Santa!,http://www.icompute-uk.com/hoc-2017-4
 icteach_microbit,Micro:bit Cyber Pin Code Generator,https://icteach.com/2023/09/30/microbit-cyber-pin-code-generator/
-imagi_pixelart,Code your own pixel art!,https://imagilabs.com/pages/hour-of-code
 imagilabs,Imagine it. Code it. Wear it.,https://imagilabs.com/pages/hour-of-code-x-imagilabs
 imagi_python,Creative Coding in Python,https://imagilabs.com/pages/hour-of-code-x-imagilabs
 idr_patterns,Creating patterns with code,https://weavly.org/learn/activities/creating-patterns/
@@ -690,7 +689,7 @@ scigirls_cc,SciGirls: Code Creators,http://www.scigirlsconnect.org/resources/cod
 scigirls_pixels,SciGirls: Passion for Pixels,http://www.scigirlsconnect.org/resources/passion-for-pixels/
 scratch_storytelling,Anything is Possible! Storytelling with Scratch,https://resources.scratch.mit.edu/www/HoC/en/HOC_Scratch_Storytelling_2022.pdf 
 scratch_music,Make Music with Scratch,https://scratch.mit.edu/projects/editor/?tip_bar=music&utm_source=codeorg
-scratch_imagine,Imagine a World,https://scratch.mit.edu/imagine
+magi,Imagine a World,https://scratch.mit.edu/imagine
 scratch_fly,Make it Fly with Scratch,https://scratch.mit.edu/projects/editor/?tutorial=make-it-fly&utm_source=codeorg
 scratch_tales,Talking Tales,https://scratch.mit.edu/talking-tales
 scratch_talk,Create Animations That Talk,https://scratch.mit.edu/projects/editor/?tutorial=animations-that-talk
@@ -914,5 +913,5 @@ bubble_popping,Joy of Bubble Popping,aka.ms/bubbles
 hubble_scott_kelly,Mission to Hubble with Scott Kelly,aka.ms/MissionHubble
 loops_diner,Loops Diner,aka.ms/lyla
 kodable_high_flyer,High Flyer,https://www.kodable.com/hour-of-code/creator-high-flyer
-octostudio_creature,Create a Creature,https://octostudio.org/en/hoc/create-a-creature
-octostudio_tilt,Make a Tilt Game,https://octostudio.org/en/hoc/tilt-game
+octostudio_creature,OctoStudio: Create a Creature,https://octostudio.org/en/hoc/create-a-creature
+octostudio_tilt,OctoStudio: Make a Tilt Game,https://octostudio.org/en/hoc/tilt-game

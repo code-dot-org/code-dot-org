@@ -10,8 +10,7 @@ import {getDialogControlMock, getAnalyticsMock} from '../../test_utils';
 
 const getNewFileMock = (parentId: FolderId): [ProjectFile, NewFileFunction] => {
   const newFileData = {} as ProjectFile;
-  const mock: NewFileFunction = ({fileId, fileName, folderId}) => {
-    newFileData.id = fileId ?? DEFAULT_FOLDER_ID;
+  const mock: NewFileFunction = ({fileName, folderId}) => {
     newFileData.name = fileName;
     if (folderId) {
       newFileData.folderId = folderId;
@@ -20,9 +19,6 @@ const getNewFileMock = (parentId: FolderId): [ProjectFile, NewFileFunction] => {
 
   return [newFileData, mock];
 };
-
-const appName = 'Codebridge Unit Test';
-const EXPECTED_NEXT_FILE_ID = '8';
 
 describe('openNewFilePrompt', function () {
   it('can successfully add a new file to root w/o validation file', async function () {
@@ -34,7 +30,6 @@ describe('openNewFilePrompt', function () {
 
     await openNewFilePrompt({
       folderId,
-      appName,
       dialogControl: getDialogControlMock(newFileName),
       newFile: newFileDataMock,
       projectFiles: testProject.files,
@@ -43,7 +38,6 @@ describe('openNewFilePrompt', function () {
       validationFile: undefined,
     });
 
-    expect(newFileData.id).toEqual(EXPECTED_NEXT_FILE_ID);
     expect(newFileData.name).toEqual(newFileName);
     expect(newFileData.folderId).toEqual(folderId);
 
@@ -58,7 +52,6 @@ describe('openNewFilePrompt', function () {
     const [newFileData, newFileDataMock] = getNewFileMock(folderId);
 
     await openNewFilePrompt({
-      appName,
       dialogControl: getDialogControlMock(newFileName),
       newFile: newFileDataMock,
       projectFiles: testProject.files,
@@ -67,7 +60,6 @@ describe('openNewFilePrompt', function () {
       validationFile: undefined,
     });
 
-    expect(newFileData.id).toEqual(EXPECTED_NEXT_FILE_ID);
     expect(newFileData.name).toEqual(newFileName);
     expect(newFileData.folderId).toEqual(folderId);
 
@@ -83,7 +75,6 @@ describe('openNewFilePrompt', function () {
 
     await openNewFilePrompt({
       folderId,
-      appName,
       dialogControl: getDialogControlMock(newFileName),
       newFile: newFileDataMock,
       projectFiles: testProject.files,
@@ -92,7 +83,6 @@ describe('openNewFilePrompt', function () {
       validationFile: undefined,
     });
 
-    expect(newFileData.id).toEqual(EXPECTED_NEXT_FILE_ID);
     expect(newFileData.name).toEqual(newFileName);
     expect(newFileData.folderId).toEqual(folderId);
 
@@ -108,7 +98,6 @@ describe('openNewFilePrompt', function () {
 
     await openNewFilePrompt({
       folderId,
-      appName,
       dialogControl: getDialogControlMock(newFileName),
       newFile: newFileDataMock,
       projectFiles: testProject.files,
@@ -117,7 +106,6 @@ describe('openNewFilePrompt', function () {
       validationFile,
     });
 
-    expect(newFileData.id).toEqual(String(Number(EXPECTED_NEXT_FILE_ID) + 1));
     expect(newFileData.name).toEqual(newFileName);
     expect(newFileData.folderId).toEqual(folderId);
 
@@ -133,7 +121,6 @@ describe('openNewFilePrompt', function () {
 
     await openNewFilePrompt({
       folderId,
-      appName,
       dialogControl: getDialogControlMock(newFileName),
       newFile: newFileDataMock,
       projectFiles: testProject.files,

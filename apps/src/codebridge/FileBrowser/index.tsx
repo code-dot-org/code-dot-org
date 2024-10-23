@@ -9,11 +9,11 @@ import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
 import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
 import {ProjectType, FolderId} from '@codebridge/types';
 import {
+  getPossibleDestinationFoldersForFolder,
   validateFileName as globalValidateFileName,
   validateFolderName,
   sendCodebridgeAnalyticsEvent,
   shouldShowFile,
-  isValidFileName,
 } from '@codebridge/utils';
 import {
   DndContext,
@@ -38,11 +38,7 @@ import {
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import {
-  useDialogControl,
-  DialogType,
-  extractUserInput as extractInput,
-} from '@cdo/apps/lab2/views/dialogs';
+import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -54,20 +50,13 @@ import {Draggable} from './Draggable';
 import {Droppable} from './Droppable';
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
 import FileRow from './FileRow';
-import {FileUploader} from './FileUploader';
 import {
+  useFileUploader,
   useFileUploadErrorCallback,
   useHandleFileUpload,
   usePrompts,
 } from './hooks';
-import {
-  DragType,
-  DragDataType,
-  DropDataType,
-  renameFilePromptType,
-  renameFolderPromptType,
-  setFileType,
-} from './types';
+import {DragType, DragDataType, DropDataType, setFileType} from './types';
 
 import moduleStyles from './styles/filebrowser.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
@@ -76,24 +65,18 @@ type FilesComponentProps = {
   files: ProjectType['files'];
   folders: ProjectType['folders'];
   parentId?: FolderId;
-  renameFilePrompt: renameFilePromptType;
-  renameFolderPrompt: renameFolderPromptType;
   setFileType: setFileType;
   appName?: string;
 };
 
 const InnerFileBrowser = React.memo(
-  ({
-    parentId,
-    folders,
-    files,
-    renameFilePrompt,
-    renameFolderPrompt,
-    setFileType,
-    appName,
-  }: FilesComponentProps) => {
-    const {openMoveFolderPrompt, openNewFilePrompt, openNewFolderPrompt} =
-      usePrompts();
+  ({parentId, folders, files, setFileType, appName}: FilesComponentProps) => {
+    const {
+      openMoveFolderPrompt,
+      openNewFilePrompt,
+      openNewFolderPrompt,
+      openRenameFolderPrompt,
+    } = usePrompts();
     const {
       deleteFile,
       toggleOpenFolder,
@@ -105,6 +88,12 @@ const InnerFileBrowser = React.memo(
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
     const handleFileUpload = useHandleFileUpload(files);
     const fileUploadErrorCallback = useFileUploadErrorCallback();
+
+    const {startFileUpload, FileUploaderComponent} = useFileUploader({
+      callback: handleFileUpload,
+      errorCallback: fileUploadErrorCallback,
+      validMimeTypes,
+    });
     const dispatch = useAppDispatch();
 
     const handleConfirmDeleteFile = (fileId: string) => {
@@ -185,6 +174,7 @@ const InnerFileBrowser = React.memo(
 
     return (
       <>
+        <FileUploaderComponent />
         {Object.values(folders)
           .filter(f => f.parentId === parentId)
           .sort((a, b) => a.name.localeCompare(b.name))
@@ -240,17 +230,26 @@ const InnerFileBrowser = React.memo(
                       className={moduleStyles['button-kebab']}
                     >
                       <span className={moduleStyles['button-bar']}>
-                        <PopUpButtonOption
-                          iconName="arrow-right"
-                          labelText={codebridgeI18n.moveFolder()}
-                          clickHandler={() =>
-                            openMoveFolderPrompt({folderId: f.id})
-                          }
-                        />
+                        {Boolean(
+                          getPossibleDestinationFoldersForFolder({
+                            folder: f,
+                            projectFolders: folders,
+                          }).length
+                        ) && (
+                          <PopUpButtonOption
+                            iconName="arrow-right"
+                            labelText={codebridgeI18n.moveFolder()}
+                            clickHandler={() =>
+                              openMoveFolderPrompt({folderId: f.id})
+                            }
+                          />
+                        )}
                         <PopUpButtonOption
                           iconName="pencil"
                           labelText={codebridgeI18n.renameFolder()}
-                          clickHandler={() => renameFolderPrompt(f.id)}
+                          clickHandler={() =>
+                            openRenameFolderPrompt({folderId: f.id})
+                          }
                         />
                         <PopUpButtonOption
                           iconName="folder-plus"
@@ -267,22 +266,12 @@ const InnerFileBrowser = React.memo(
                           }
                         />
 
-                        <FileUploader
-                          validMimeTypes={validMimeTypes}
-                          callback={(fileName, contents) =>
-                            handleFileUpload({
-                              folderId: f.id,
-                              fileName,
-                              contents,
-                            })
-                          }
-                          errorCallback={fileUploadErrorCallback}
-                        >
-                          <PopUpButtonOption
-                            iconName="upload"
-                            labelText={codebridgeI18n.uploadFile()}
-                          />
-                        </FileUploader>
+                        <PopUpButtonOption
+                          iconName="upload"
+                          labelText={codebridgeI18n.uploadFile()}
+                          clickHandler={() => startFileUpload(f.id)}
+                        />
+
                         <PopUpButtonOption
                           iconName="trash"
                           labelText={codebridgeI18n.deleteFolder()}
@@ -298,8 +287,6 @@ const InnerFileBrowser = React.memo(
                       folders={folders}
                       parentId={f.id}
                       files={files}
-                      renameFilePrompt={renameFilePrompt}
-                      renameFolderPrompt={renameFolderPrompt}
                       setFileType={setFileType}
                       appName={appName}
                     />
@@ -323,7 +310,6 @@ const InnerFileBrowser = React.memo(
               isStartMode,
               setFileType,
               handleDeleteFile,
-              renameFilePrompt,
               enableMenu: !dragData?.id || isDraggingLocked,
             };
             return isDraggingLocked ? (
@@ -344,15 +330,7 @@ const InnerFileBrowser = React.memo(
 );
 
 export const FileBrowser = React.memo(() => {
-  const {
-    project,
-    renameFile,
-    moveFile,
-    moveFolder,
-
-    renameFolder,
-    setFileType,
-  } = useCodebridgeContext();
+  const {project, moveFile, moveFolder, setFileType} = useCodebridgeContext();
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const dialogControl = useDialogControl();
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
@@ -382,71 +360,6 @@ export const FileBrowser = React.memo(() => {
       },
     }),
     [setDragData, setDropData]
-  );
-
-  const renameFilePrompt: FilesComponentProps['renameFilePrompt'] = useMemo(
-    () => async fileId => {
-      const file = project.files[fileId];
-      const results = await dialogControl?.showDialog({
-        type: DialogType.GenericPrompt,
-        title: codebridgeI18n.renameFile(),
-        value: file.name,
-        validateInput: (newName: string) => {
-          if (!newName.length) {
-            return;
-          }
-          if (newName === file.name) {
-            return;
-          }
-          if (!isValidFileName(newName)) {
-            return codebridgeI18n.invalidNameError();
-          }
-          return validateFileName({
-            fileName: newName,
-            folderId: file.folderId,
-          });
-        },
-      });
-      if (results.type !== 'confirm') {
-        return;
-      }
-      const newName = extractInput(results);
-      renameFile(fileId, newName);
-      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FILE, appName);
-    },
-    [project.files, dialogControl, renameFile, appName, validateFileName]
-  );
-
-  const renameFolderPrompt: FilesComponentProps['renameFolderPrompt'] = useMemo(
-    () => async folderId => {
-      const folder = project.folders[folderId];
-      const results = await dialogControl?.showDialog({
-        type: DialogType.GenericPrompt,
-        title: codebridgeI18n.renameFolder(),
-        value: folder.name,
-        validateInput: (newName: string) => {
-          if (!newName.length) {
-            return;
-          }
-          if (newName === folder.name) {
-            return;
-          }
-
-          return validateFolderName({
-            folderName: newName,
-            parentId: folder.parentId,
-            projectFolders: project.folders,
-          });
-        },
-      });
-      if (results.type !== 'confirm') {
-        return;
-      }
-      const newName = extractInput(results);
-      renameFolder(folderId, newName);
-      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FOLDER, appName);
-    },
-    [project.folders, dialogControl, renameFolder, appName]
   );
 
   const handleDragEnd = useMemo(
@@ -533,8 +446,6 @@ export const FileBrowser = React.memo(() => {
                 parentId={DEFAULT_FOLDER_ID}
                 folders={project.folders}
                 files={project.files}
-                renameFilePrompt={renameFilePrompt}
-                renameFolderPrompt={renameFolderPrompt}
                 setFileType={setFileType}
                 appName={appName}
               />

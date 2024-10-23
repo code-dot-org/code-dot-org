@@ -1,0 +1,168 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-10-22T23:17:16.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Play Together Again\r\n\r\n- Add two [sounds](#clickable=play-sound-block) in the *first* [play together](#clickable=play-sounds-together-block-workspace) block.\r\n- Add two [sounds](#clickable=play-sound-block) in the *second* [play together](#clickable=id-left:play_sounds_together_block_2) block.\r\n",
+    "hide_share_and_remix": "true",
+    "validations": [
+      {
+        "key": "music-ai-skill-playtogether_sequence_7e5b311d-9f61-4fdf-8431-5b05e71bcc8e",
+        "message": "Those sounds are great together!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_different_sounds_together_multiple_times",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-playtogether_sequence_524d0be3-14c2-4736-bdbf-d709eda13ff1",
+        "message": "Play different sounds in each [play together](#clickable=id-left:play_sounds_together_block_2) block.\n",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_different_sounds_together_multiple_times",
+            "value": 1
+          }
+        ],
+        "callout": "id-left:play_sounds_together_block_2"
+      },
+      {
+        "key": "music-ai-skill-playtogether_sequence_3_8db01d98-40e3-4fb3-bcee-0f59b17262bb",
+        "message": "Play different sounds in each [play together](#clickable=play-sounds-together-block-workspace) block.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 1
+          }
+        ],
+        "callout": "play-sound-block---play-sounds-together-block-workspace"
+      },
+      {
+        "key": "music-ai-skill-playtogether_36540a11-c67f-47da-bb3a-e2bb6181e9d1",
+        "message": "Nothing has played yet. Add some [sound](#clickable=play-sound-block) blocks into each [play together](#clickable=play-sounds-together-block-workspace) block. ",
+        "next": false,
+        "conditions": [
+
+        ],
+        "callout": "play-sound-block---play-sounds-together-block-workspace"
+      }
+    ],
+    "level_data": {
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together_no_next",
+                      "id": "play_sounds_together_block_2",
+                      "deletable": false,
+                      "movable": false
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "library": "launch2024",
+      "packId": "shakira_maluma_chantaje",
+      "sounds": {
+        "mc_hammer_u_cant_touch_this": [
+          "stop_hammer_time",
+          "cant_touch_this"
+        ],
+        "lady_gaga_born_this_way": [
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_tag",
+          "synth_big_chorus",
+          "synth_plink",
+          "synth_bounce",
+          "piano",
+          "strings",
+          "synth_main_chorus",
+          "synth_main_small"
+        ],
+        "shakira_maluma_chantaje": [
+          "kick_verse_1",
+          "kick_verse_2",
+          "kick_build_1",
+          "kick_build_2",
+          "snap_sample",
+          "snap_sample_full",
+          "percussion",
+          "shaker",
+          "bass_small_1",
+          "bass_small_2",
+          "bass_medium_1",
+          "bass_medium_2",
+          "bass_big_1",
+          "bass_big_2",
+          "ambience",
+          "impact_1",
+          "impact_2",
+          "synth_pulse_1",
+          "synth_pulse_2",
+          "synth_accent_1",
+          "synth_accent_2",
+          "clippy_synth_1",
+          "clippy_synth_2",
+          "pad_1",
+          "pad_2",
+          "guitar_1",
+          "guitar_2",
+          "intro_swell",
+          "vocals_sample_1",
+          "vocals_sample_2",
+          "vocals_chop",
+          "vocals_maluma_1",
+          "vocals_maluma_2",
+          "vocals_maluma_3",
+          "vocals_maluma_4",
+          "vocals_shakira_1",
+          "vocals_shakira_2",
+          "vocals_shakira_3",
+          "vocals_shakira_maluma_4"
+        ]
+      }
+    },
+    "name_suffix": "_final",
+    "offer_browser_tts": "false",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:16.784+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-playtogether_sequence_1\\\"\"],\"cloned_from\":\"music-ai-skill-playtogether_sequence_1\"},{\"changed_at\":\"2024-10-22 23:42:40 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

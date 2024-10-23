@@ -880,6 +880,9 @@
   cs_ambassador_application_closed_subhead: "Questions about future opportunities or want to learn more? Please contact [youngwomen@code.org](%{email_url})."
   cs_ambassador_application_questions: "Questions? Please contact [youngwomen@code.org](%{email_url})"
   cs_ambassador_application_parter_program: "Not a high school student or teacher? Check out our [Partner Program](#partner-program)."
+  cs_ambassador_closed_heading: "2024 - 25 School Year Applications Now Closed"
+  cs_ambassador_next_year_open: "Next year's application will open in Spring 2025."
+  cs_ambassador_drop_us_a_note: "Drop us a note at [youngwomen@code.org](%{email_url}) to be notified when applications open again!"
   cs_ambassador_do_heading: "What do CS Ambassadors do?"
   cs_ambassador_do_desc: "CS Ambassadors encourage young women to explore the subject, and lift each other up as they reclaim their place in computer science. CS Ambassadors connect with their peers to share their excitement and love of computer science. They visit classrooms, host tables at lunch, and speak at assemblies and club meetings. CS Ambassadors work with teachers and school administrators to breakdown stereotypes that hold young women back."
   cs_ambassador_steps_heading: "What do I need to become a CS Ambassador?"
@@ -1029,6 +1032,9 @@
   minecraft_education_activity_desc_2020: "Program the Minecraft Agent to collect data about forest fires. Learn coding basics and explore a real-world example of artificial intelligence."
   minecraft_resources_desc_01: "Utilize this on demand [free course](%{course_url}) or register your entire class to attend a live Hour of Code workshop with a guest teacher. Offered at multiple times during CSEdWeek, %{campaign_date}."
   minecraft_resources_desc_02: "Inspire STEM passion in K-12 learners with 200 hours of computer science curriculum, from block to python, supported by professional development."
+  minecraft_show:
+    title: "Minecraft: The Show Must Go On!"
+    desc: "Step into the theater to save the day in The Show Must Go On! Find the missing star, unlock hidden gags, and interact with a cast of mobs. Help the Agent overcome stage fright as you solve fun coding puzzles. Watch your coding skills shine in an epic final performance!"
 
   afe_page_heading: "Free resources from Amazon Future Engineer"
   afe_page_top_desc: "Enhance your teaching experience with Code.org in partnership with [Amazon Future Engineer](%{afe_url}). Eligible educators from underserved schools can access these benefits at no cost:"
@@ -1362,17 +1368,19 @@
     in_partnership: "In partnership with"
 
   gen_ai_middle_high_carousel_card:
-    overline: "Grades: 8-12"
+    overline: "8-12"
     title: "Exploring Generative AI"
     desc: "Empower students with hands-on projects and ethical insights into generative AI, equipping them to think critically and innovate in an AI-driven world."
     duration: "6 weeks"
+    aria_label: "Explore the Exploring Generative AI course"
 
-  gen_ai_pl_carousel_cared:
+  gen_ai_pl_carousel_card:
     overline: "8-12 Teachers"
     title: "Teaching Exploring Generative AI"
     curriculum: "Exploring Generative AI"
     duration: "2.5 hours"
     prerequisites: "Verified teacher account or SSO-login needed to access AI Chat Lab"
+    aria_label: "Start the Teaching Exploring Generative AI professional learning course"
 
   ai_integrations:
     heading: "AI Integrations"
@@ -1464,6 +1472,12 @@
   ai_vid_computervision_caption: "Computer Vision"
   ai_vid_ethics1_caption: "Ethics & AI: Equal Access and Algorithmic Bias"
   ai_vid_ethics2_caption: "Ethics & AI: Privacy and the Future of Work"
+
+  gen_ai_vid_input_caption: "Generative AI: Input & Pre-training"
+  gen_ai_vid_storage_caption: "Generative AI: Storage & Embeddings"
+  gen_ai_vid_processing_caption: "Generative AI: Processing & Neural Networks"
+  gen_ai_vid_attention_caption: "Generative AI: Attention"
+  gen_ai_vid_output_caption: "Generative AI: Output & Probabilities"
 
   admins_page_top_heading: "Expand computer science in your district"
   admins_page_top_subhead: "Unlock the future of education with Code.org's comprehensive computer science (CS) programs."
@@ -2376,6 +2390,11 @@
         desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
         button_label: "Explore the catalog"
 
+  access_report_skinny_banner:
+    title: "The 2024 State of CS Report is here!"
+    desc: "Check out the latest data on national and state-level computer science education policy, including policy trends, maps, state summaries, and implementation data."
+    read_report: "Read the report"
+
   app_lab_page:
     heading: "App Lab"
     subheading: "Create an app with Javascript"
@@ -2555,6 +2574,18 @@
         teachers_guide_desc: "Check out the teacher's guide to learn how to get started, explore activity ideas, and get answers to common questions."
       videos:
         heading: "Videos to help you get started with Music Lab"
+    jam_session:
+      name: "Music Lab: Jam Session"
+      button:
+        explore: "Explore Music Lab: Jam Session"
+        start: "Start Music Lab: Jam Session"
+      banner:
+        desc_01: "Learn to code as you remix your favorite artists' tracks and explore creating beats with AI!"
+        desc_02: "Make music and learn to code in our new Music Lab activity for Hour of Code! In this self-guided, one-hour activity, students remix tracks from artists like %{artist_list}, and %{artist_name} while mastering coding basics such as sequencing, functions, and exploring AI-driven beat creation."
+        desc_03: "Remix tracks from artists like %{artist_list}, and %{artist_name} while exploring coding basics like sequencing, functions, and generating beats with AI."
+      block:
+        title: "Teach Music Lab Beyond An Hour of Code"
+        desc: "Use our full Music Lab tutorial to unleash your students' musical creativity, combining the joy of music with the principles of coding."
 
   game_design_page:
     heading: "Game design"
@@ -10861,24 +10892,30 @@
   tutorial_socimpactofgenaiai_string_detail_programming_languages: "Language independent"
   tutorial_generationai_string_detail_programming_languages: "Blocks, Python"
 
-  tutorial_scratch_inventing_name: "Inventing with Scratch and Gitanjali Rao"
-  tutorial_scratch_spreading_kindness_name: "Spreading Kindness with Scratch and Gitanjali Rao"
-  tutorial_mc_show_must_go_on_name: "The Show Must Go On"
-  tutorial_scratch_inventing_longdescription: "Remix our starter project to design your own invention, share the invention's goal or purpose through text and/or a voice recording, and learn about Gitanjali's innovation process."
-  tutorial_scratch_spreading_kindness_longdescription: "Remix our starter project to develop and share a message of kindness, inspired by Gitanjali's innovative approach to anti-bullying efforts for young people around the world."
-  tutorial_show_must_go_on_longdescription: "Welcome to The Show Must Go On, where your creativity and coding skills take center stage! The big show is in chaos—the Agent has vanished! Use problem-solving and computational thinking to code through fun challenges, unlock surprises, and bring the show to life. Compose a song, choreograph a dance, craft a costume and save the show—all while learning key coding skills in blocks or Python."
-  tutorial_scratch_inventing_string_detail_grades: "Grades 2+"
-  tutorial_scratch_spreading_kindness_string_detail_grades: "Grades 2+"
-  tutorial_show_must_go_on_string_detail_grades: "Grades 2+"
-  tutorial_scratch_inventing_string_platforms: "All modern browsers"
-  tutorial_scratch_spreading_kindness_string_platforms: "All modern browsers"
-  tutorial_show_must_go_on_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
-  tutorial_scratch_inventing_string_detail_platforms: ""
-  tutorial_scratch_spreading_kindness_string_detail_platforms: ""
-  tutorial_show_must_go_on_string_detail_platforms: ""
-  tutorial_scratch_inventing_string_detail_programming_languages: "Blocks"
-  tutorial_scratch_spreading_kindness_string_detail_programming_languages: "Blocks"
-  tutorial_show_must_go_on_string_detail_programming_languages: "Blocks, Python"
+  tutorial_scratchinventing_name: "Inventing with Scratch and Gitanjali Rao"
+  tutorial_scratchkindness_name: "Spreading Kindness with Scratch and Gitanjali Rao"
+  tutorial_showmustgoon_name: "The Show Must Go On"
+  tutorial_musiclabjam_name: "Music Lab: Jam Session"
+  tutorial_scratchinventing_longdescription: "Remix our starter project to design your own invention, share the invention's goal or purpose through text and/or a voice recording, and learn about Gitanjali's innovation process."
+  tutorial_scratchkindness_longdescription: "Remix our starter project to develop and share a message of kindness, inspired by Gitanjali's innovative approach to anti-bullying efforts for young people around the world."
+  tutorial_showmustgoon_longdescription: "Welcome to The Show Must Go On, where your creativity and coding skills take center stage! The big show is in chaos—the Agent has vanished! Use problem-solving and computational thinking to code through fun challenges, unlock surprises, and bring the show to life. Compose a song, choreograph a dance, craft a costume and save the show—all while learning key coding skills in blocks or Python."
+  tutorial_musiclabjam_longdescription: "Make music and learn to code with Music Lab: Jam Session! In this self-guided, one-hour activity, students remix tracks from artists like Sabrina Carpenter, Lady Gaga, and Shakira while mastering coding basics such as sequencing, functions, and exploring AI-driven beat creation. This hands-on interactive experience sparks creativity and boosts confidence—leaving students proud of their custom track and the coding skills they've gained."
+  tutorial_scratchinventing_string_detail_grades: "Grades 2+"
+  tutorial_scratchkindness_string_detail_grades: "Grades 2+"
+  tutorial_showmustgoon_string_detail_grades: "Grades 2+"
+  tutorial_musiclabjam_string_detail_grades: "Grades 3+"
+  tutorial_scratchinventing_string_platforms: "All modern browsers"
+  tutorial_scratchkindness_string_platforms: "All modern browsers"
+  tutorial_showmustgoon_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
+  tutorial_musiclabjam_string_platforms: "All modern browsers, Android tablet, iPad"
+  tutorial_scratchinventing_string_detail_platforms: ""
+  tutorial_scratchkindness_string_detail_platforms: ""
+  tutorial_showmustgoon_string_detail_platforms: ""
+  tutorial_musiclabjam_string_detail_platforms: ""
+  tutorial_scratchinventing_string_detail_programming_languages: "Blocks"
+  tutorial_scratchkindness_string_detail_programming_languages: "Blocks"
+  tutorial_showmustgoon_string_detail_programming_languages: "Blocks, Python"
+  tutorial_musiclabjam_string_detail_programming_languages: "Blocks"
 
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"
@@ -10928,6 +10965,10 @@
   language_label: "Language"
 
   hoc_homepage:
+    hero:
+      heading: "One Hour:"
+      subhead: "Ignite. Inspire. Code."
+      desc: "Join millions for an Hour of Code! Start an activity today and bring what your students love to life!"
     what_is_hoc:
       heading: "What is the Hour of Code?"
       desc: "The Hour of Code is a worldwide movement that aims to introduce millions of students to computer science through one-hour coding activities. Through Hour of Code, we aim to demystify coding and show that anyone can learn the basics, inspiring future interest in computer science."
@@ -10975,6 +11016,12 @@
         title: "Choose an Activity"
         desc: "Explore a wide selection of one-hour tutorial designed for all ages in over 45 languages."
         button: "Explore activities"
+
+  hoc_sweepstakes_2024:
+    heading: "Win $500 worth of DonorsChoose Credits!"
+    desc: "Now's your chance to win! Code.org is giving away DonorsChoose credits to 250 inspiring teachers! Register your Hour of Code event now, and choose to be entered for a chance to win! [See Official Rules](%{rules_url})"
+    must_be_18: "Must be at least 18 years old at the time you enter"
+    must_be_employed: "Must be employed as a full-time teacher by a public school, public charter school or Office of Head Start that is located in the US"
 
   hoc_activities:
     heading: "Explore activities"
@@ -11095,6 +11142,7 @@
       choose: "Choose your activities"
       plan_event: "Plan your event"
       plan_hour: "Plan your hour"
+      schedule_event: "Schedule your event"
       prepare: "Prepare for your event"
       spread_word: "Help spread the word"
       get_coding: "Get coding!"
@@ -11126,6 +11174,9 @@
       top:
         heading: "How to plan your Hour of Code"
         desc: "The Hour of Code is a one-hour introduction to computer science, using fun tutorials to show how anyone can learn the basics. This year, our campaign aims to showcase how computer science drives innovation across various fields, making it relatable and exciting for students. Whether you or your students are experienced coders or you all are setting out on your very first computer science expedition, this Hour of Code shows you how we're making the invisible, visible with Computer Science."
+      top_v2:
+          heading: "One Hour Can Make The Invisible Visible"
+          desc: "The Hour of Code is a one-hour introduction to computer science, using fun tutorials to show how anyone can do an hour of code. This year, we want every student to see what they are capable of through the power of computer science, making the invisible visible."
       steps:
         register: "Start with a commitment to doing an Hour of Code with your students by registering your event. When you register, you'll receive emails with news and tips for hosting a successful Hour of Code."
         choose_activity: "Explore the coding activity library and choose one based on your group's age, experience, interests and more."
@@ -11148,17 +11199,32 @@
         beyond:
           body_01: "It doesn't end here!"
           body_02: "Computer science doesn't have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don't teach it. Check out the diverse curriculum offerings from Hour of Code partners, and learn how to bring CS to your school today!"
+      steps_v2:
+        register: "Unlock a world of creativity with just one Hour of Code! Register your event and get tips, resources, and updates to make it an engaging, fun experience for your students. Ready to inspire future innovators? Sign up today!"
+        choose_activity: "Explore this year's exciting Hour of Code activities, where computer science meets the things students love! Dive into music with [Music Lab: Jam Session](%{music_url}), get moving with [Minecraft's The Show Must Go On](%{mc_url}), or explore movies/pop culture in Sprite Lab with [Hello World: Transformers One](%{transformers_url}). There's something for every interest!"
+        plan_event:
+          body_01: "**What:** Plan your Hour of Code event during Computer Science Education Week. You can plan a CSE week all year round. However, in honor of computer pioneer Admiral Grace Murray Hopper, CSE week generally runs the week of December 9th. (So check in with your school to see what week works best.)"
+          body_02: "**Where:** Choose a space that works for the number of students and devices you have available. Students can try activities on individual devices, take turns sharing a device, or as a class on a whiteboard. Unplugged activities can be completed with no devices at all, so they can even be done outside!"
+          body_03: "**Get students excited:** [Download and use our activity-themed posters](%{posters_url}) and materials to decorate your classroom. "
+          body_04: "Don't forget to dive into the activity beforehand! This preparation will prepare you for a fun, engaging session that inspires your students."
+        schedule:
+          body_01: "**Prepare with your lesson plan:** Introduce key ideas ahead of time. Explore different music genres before trying [Music Lab: Jam Session](%{music_url}), learn about global dance traditions before diving into [Minecraft's The Show Must Go On](%{mc_url}), or teach about computer science pioneers like Alan Turing, Ada Lovelace, Grace Hopper, and Bill Gates to set the stage for a rich coding experience."
+          body_02: "**Celebrate your students:** Acknowledge their efforts with our downloadable certificates, shout-outs, project demonstration, or a class celebration."
+          body_03: "**Get them excited about doing more:** Encourage students to explore more coding activities or host another coding session shortly after where they can continue their coding journey."
     events:
       heading: "Events"
       top:
         heading: "How to organize an Hour of Code event"
         desc_01: "Hour of Code is a one-hour introduction to computer science, using fun and interactive tutorials to show that anyone can learn the basics. Your efforts can make a huge impact on the way students view computer science and their own potential."
         desc_02: "Schools and organizations who fully engage with Hour of Code can help raise awareness of the computer science movement and inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups."
+      top_v2:
+        desc_01: "The Hour of Code is a one-hour introduction to computer science, using fun tutorials to show how anyone can do an hour of code. This year, we want everyone to see what they are capable of through the power of computer science, making the invisible visible."
+        desc_02: "Organizations who fully engage with Hour of Code can help raise awareness of the computer science movement and inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups."
       steps:
         register: "Register your Hour of Code event to receive information about new activities and special promotions!"
         choose_activity: "Explore the coding activity library and choose one based on your group's age, experience, interests and more."
         prepare:
-          list_01: "Consider where and when you want to hold your event, as well as the tech capabilities of your space. Students can work on their own devices, in pairs on one device, or together as a classroom on a projector, and there are even unplugged tutorials that can be completed with no devices at all!"
+          list_01: "Consider where and when you want to hold your event, as well as the tech capabilities of your space. Users can work on their own devices, in pairs on one device, or together in a working space on a projector, and there are even unplugged tutorials that can be completed with no devices at all!"
           list_02: "Send an email to an elected official or influential business person and invite them to speak."
           list_03: "You may also invite a local politician or local media, such as a local news station, newspaper, or education/tech bloggers."
         plan:
@@ -11182,6 +11248,19 @@
         beyond:
           body_01: "It doesn't end here!"
           body_02: "Computer science doesn't have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don't teach it. Check out the diverse curriculum offerings from Hour of Code partners, and learn how to bring CS to your school today!"
+      steps_v2:
+        register: "An Hour of Code can unlock a lifetime of learning! Register your Hour of Code event to receive information about new activities and special promotions!"
+        choose_activity: "Choose from one of our exciting activities—we've got you covered! This year's hour highlights activities in music, dance, art, and movies/pop culture. We've noticed that these are the topics that students are most engaged with."
+        plan:
+          list_01: "10:00-10:05am: Open with one of our [inspirational videos](%{video_url})."
+          list_02: "10:05-10:15am: Event leader gives an intro overviewing the importance of computer science."
+          list_03: "10:15-10:30am: Special guest talks about their background and how technology and computer science plays an important role in their everyday lives."
+          list_04: "10:30-10:40am: Users do an Hour of Code demo! Fun twist: have them teach the principal, politician, or other students."
+          list_05: "10:40-11:00am: Users demo an unplugged activity and how computer science can be taught without using computers."
+          list_06: "11:00-11:05am: Event leader who helped organize event gives closing remarks."
+        after:
+          list_01: "Celebrate! Print certificates of completion!"
+          list_02: "Thank any special guests for their time and offer to answer any follow-up questions they may have."
 
   hoc_faq:
     heading: "Frequently asked questions"
@@ -12009,6 +12088,8 @@
   video_library_page_hero_description: "Code.org's growing library of educational videos is available for re-use by educators worldwide, online or in classrooms. Our goal is to amplify our efforts beyond our own curriculum's reach."
   video_library_page_title_ai_works: "How AI Works"
   video_library_page_description_ai_works: "This series of short videos will introduce you to how artificial intelligence works and why it matters. Learn about neural networks, or how AI learns, and delve into issues like algorithmic bias and the ethics of AI decision-making."
+  video_library_page_title_gen_ai: "Exploring Generative AI"
+  video_library_page_description_gen_ai: "Generative AI may seem magical and mysterious, but it’s a lot easier to understand when you break it down to four core components: input, storage, processing, and output. Learn How Generative AI Works in this video series!"
   video_library_page_title_computers_work: "How Computers Work"
   video_library_page_description_computers_work: "Explains what makes a computer a computer, how digital information is represented in 1s and 0s, how computer circuits work to manipulate digital information, and how a central processing unit (CPU) and operating system control the inputs, outputs, memory, and hardware of a computer."
   video_library_page_title_internet_works: "How the Internet Works"

@@ -12,7 +12,7 @@ import {
   DEFAULT_PACK,
 } from '@cdo/apps/music/constants';
 import MusicRegistry from '@cdo/apps/music/MusicRegistry';
-import MusicLibrary from '@cdo/apps/music/player/MusicLibrary';
+import MusicLibrary, {Sounds} from '@cdo/apps/music/player/MusicLibrary';
 import MusicPlayer from '@cdo/apps/music/player/MusicPlayer';
 import {MusicLevelData} from '@cdo/apps/music/types';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
@@ -75,15 +75,26 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
     [levelData.library, loadedLibraries]
   );
 
-  const restrictedPacks = useMemo(
+  const restrictedPackOptions = useMemo(
     () =>
       levelData.library &&
       loadedLibraries[levelData.library]
         ?.getRestrictedPacks()
-        ?.map(({name, id}) => ({value: id, text: name})),
+        // Sort by artist name, then by pack name if artists are the same
+        ?.sort((a, b) =>
+          a.artist && b.artist
+            ? a.artist.localeCompare(b.artist) || a.name.localeCompare(b.name)
+            : 0
+        )
+        ?.map(({name, id, artist}) => ({
+          value: id,
+          text: `${artist} - ${name}`,
+        })),
     [levelData.library, loadedLibraries]
   );
 
+  const restrictedPackKeys =
+    (restrictedPackOptions || []).map(pack => pack.value) || [];
   return (
     <div>
       <input
@@ -119,7 +130,7 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
               }}
             />
           </div>
-          {hasRestrictedSounds && restrictedPacks && (
+          {hasRestrictedSounds && restrictedPackOptions && (
             <div>
               <SimpleDropdown
                 labelText="Selected Artist Pack"
@@ -128,7 +139,7 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
                 items={[
                   {value: 'none', text: '(none)'},
                   {value: DEFAULT_PACK, text: 'Code.org (Default)'},
-                  ...restrictedPacks,
+                  ...restrictedPackOptions,
                 ]}
                 selectedValue={levelData.packId}
                 onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -136,7 +147,19 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
                     event.target.value === 'none'
                       ? undefined
                       : event.target.value;
-                  setLevelData({...levelData, packId});
+                  // Reset selected sounds from previously selected packs.
+                  const previousSounds = levelData.sounds;
+                  const sounds = previousSounds
+                    ? Object.keys(previousSounds)
+                        .filter(
+                          soundKey => !restrictedPackKeys.includes(soundKey)
+                        )
+                        .reduce((newSounds: Sounds, key) => {
+                          newSounds[key] = previousSounds[key];
+                          return newSounds;
+                        }, {})
+                    : undefined;
+                  setLevelData({...levelData, packId, sounds});
                 }}
               />
             </div>

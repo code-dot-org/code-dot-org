@@ -49,6 +49,11 @@
     "validations": {
       "musiclab_intro_function_b6e6f37e-268f-42d2-bef5-62968613af46": "Nice work.  You successfully used the function to play a sound.",
       "musiclab_intro_function_46d4cb8f-7dcf-4b78-b963-ca78d8cb439f": "Please play a sound by using the function."
+    },
+    "function_definitions": {
+      "bass": {
+        "name": "bass"
+      }
     }
   },
   "https://studio.code.org/s/music-intro-2024/lessons/1/levels/8": {

@@ -5,6 +5,7 @@ import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
 import {ProjectFile} from '@codebridge/types';
 import {
   getFileIconNameAndStyle,
+  getPossibleDestinationFoldersForFile,
   sendCodebridgeAnalyticsEvent,
 } from '@codebridge/utils';
 import classNames from 'classnames';
@@ -18,7 +19,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
 import {usePrompts} from './hooks';
 import StartModeFileDropdownOptions from './StartModeFileDropdownOptions';
-import {renameFilePromptType, setFileType} from './types';
+import {setFileType} from './types';
 
 import moduleStyles from './styles/filebrowser.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
@@ -31,7 +32,6 @@ interface FileRowProps {
   appName?: string;
   hasValidationFile: boolean; // If the project has a validation file already.
   isStartMode: boolean;
-  renameFilePrompt: renameFilePromptType;
   handleDeleteFile: (fileId: string) => void;
   setFileType: setFileType;
 }
@@ -52,15 +52,15 @@ const FileRow: React.FunctionComponent<FileRowProps> = ({
   appName,
   hasValidationFile,
   isStartMode,
-  renameFilePrompt,
   handleDeleteFile,
   setFileType,
 }) => {
   const {
+    project: {files, folders},
     openFile,
     config: {editableFileTypes},
   } = useCodebridgeContext();
-  const {openMoveFilePrompt} = usePrompts();
+  const {openMoveFilePrompt, openRenameFilePrompt} = usePrompts();
   const {iconName, iconStyle, isBrand} = getFileIconNameAndStyle(file);
   const iconClassName = isBrand
     ? classNames('fa-brands', moduleStyles.rowIcon)
@@ -69,7 +69,17 @@ const FileRow: React.FunctionComponent<FileRowProps> = ({
 
   const dropdownOptions = [
     {
-      condition: !isLocked,
+      condition:
+        !isLocked &&
+        Boolean(
+          getPossibleDestinationFoldersForFile({
+            file,
+            projectFiles: files,
+            projectFolders: folders,
+            isStartMode,
+            validationFile: undefined,
+          }).length
+        ),
       iconName: 'arrow-right',
       labelText: codebridgeI18n.moveFile(),
       clickHandler: () => openMoveFilePrompt({fileId: file.id}),
@@ -78,7 +88,7 @@ const FileRow: React.FunctionComponent<FileRowProps> = ({
       condition: !isLocked,
       iconName: 'pencil',
       labelText: codebridgeI18n.renameFile(),
-      clickHandler: () => renameFilePrompt(file.id),
+      clickHandler: () => openRenameFilePrompt({fileId: file.id}),
     },
     {
       condition: editableFileTypes.includes(file.language),

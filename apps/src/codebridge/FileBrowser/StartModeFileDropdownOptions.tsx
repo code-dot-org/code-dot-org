@@ -8,6 +8,8 @@ import {PASSED_ALL_TESTS_VALIDATION} from '@cdo/apps/lab2/progress/constants';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
+import {setShowLockedFilesBanner} from '../redux/workspaceRedux';
+
 import {setFileType} from './types';
 
 interface StartModeFileDropdownOptionsProps {
@@ -46,6 +48,10 @@ const StartModeFileDropdownOptions: React.FunctionComponent<
       } else if (type === ProjectFileType.VALIDATION) {
         // If the new type is validation, use the passed all tests validation condition.
         dispatch(setOverrideValidations([PASSED_ALL_TESTS_VALIDATION]));
+        // We also now want to show a banner to levelbuilders to remind them to lock any relevent start files.
+        // We only show the banner for 5 seconds.
+        dispatch(setShowLockedFilesBanner(true));
+        setTimeout(() => dispatch(setShowLockedFilesBanner(false)), 8000);
       }
       setFileType(file.id, type);
     },

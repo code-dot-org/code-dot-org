@@ -9,16 +9,94 @@
   background-color: rgba($neutral-white, .9);
 }
 
+// Homepage banner
+section.banner.homepage {
+  padding-bottom: 4rem;
+
+  h2 {
+    font-weight: 400;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  figure {
+    margin: 0 auto 2rem;
+  }
+
+  .show-tablet {
+    display: none;
+  }
+
+  .wrapper.show-desktop {
+    background: url('/images/hoc-2024-graphic-bg.png') no-repeat center center;
+    background-size: contain;
+    max-width: 960px;
+    height: 552px;
+    position: relative;
+
+    html[dir="rtl"] & {
+      background: url('/images/hoc-2024-graphic-bg-rtl.png') no-repeat center center;
+      background-size: contain;
+    }
+
+    .text-wrapper {
+      position: absolute;
+      bottom: 6rem;
+      left: 3rem;
+      text-align: initial;
+      max-width: 390px;
+
+      html[dir="rtl"] & {
+        right: 3rem;
+      }
+
+      h1, h2, p {
+        color: var(--neutral_white);
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .button-wrapper {
+      justify-content: start;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .show-tablet {
+      display: block;
+    }
+
+    .show-desktop {
+      display: none;
+    }
+  }
+
+  .overlay {
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 45%, rgba(255,255,255,0) 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+}
+
 section.banner {
   padding: 2rem 0 6rem;
+  position: relative;
 
   .wrapper {
+    position: relative;
     margin: 0 auto;
     max-width: 800px;
     text-align: center;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    z-index: 1;
 
     @media screen and (max-width: $width-md) {
       width: 80%;
@@ -38,19 +116,15 @@ section.banner {
     margin-bottom: 0;
   }
 
-  a {
-    color: var(--neutral_dark);
-
-    &.link-button {
-      text-decoration: none;
-    }
-  }
-
   figure {
     max-width: 344px;
 
     img {
       width: 100%;
     }
+  }
+
+  .button-wrapper {
+    justify-content: center;
   }
 }

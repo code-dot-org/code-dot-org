@@ -62,7 +62,7 @@
 
     .segmentedButtons {
       span {
-        font-size: 12px !important;
+        user-select: none;
       }
     }
 
@@ -102,13 +102,20 @@
             border-radius: 5px;
           }
 
+          &:hover {
+            .packImageContainer {
+              transform: scale(1.2, 1.2);
+              transition: 0.1s ease-in-out;
+            }
+          }
+
           &ImageContainer {
             width: 30px;
             transform: scale(1, 1);
             transition: 0.1s ease-in-out;
 
             &:hover, &Selected {
-              transform: scale(1.03, 1.03);
+              transform: scale(1.2, 1.2);
               transition: 0.1s ease-in-out;
             }
           }

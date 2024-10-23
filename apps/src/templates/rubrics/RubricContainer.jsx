@@ -48,6 +48,7 @@ export default function RubricContainer({
   const rubricTabSessionKey = 'rubricFABTabSessionKey';
   const rubricPositionX = 'rubricFABPositionX';
   const rubricPositionY = 'rubricFABPositionY';
+  const rubricId = rubric.id;
 
   const [selectedTab, setSelectedTab] = useState(
     tryGetSessionStorage(rubricTabSessionKey, TAB_NAMES.RUBRIC) ||
@@ -102,6 +103,77 @@ export default function RubricContainer({
   useEffect(() => {
     fetchAiEvaluations();
   }, [fetchAiEvaluations]);
+
+  const [allTeacherEvaluationData, setAllTeacherEvaluationData] = useState([]);
+
+  const fetchTeacherEvaluationAll = (rubricId, sectionId) => {
+    return fetch(
+      `/rubrics/${rubricId}/get_teacher_evaluations_for_all?section_id=${sectionId}`
+    );
+  };
+
+  useEffect(() => {
+    if (!!rubricId && !!sectionId) {
+      fetchTeacherEvaluationAll(rubricId, sectionId).then(response => {
+        if (response.ok) {
+          response.json().then(data => {
+            initializeHasTeacherFeedbackMap(data);
+            setAllTeacherEvaluationData(data);
+          });
+        }
+      });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [rubricId, sectionId]);
+
+  const [aiEvalStatusCounters, setAiEvalStatusCounters] = useState(null);
+  const [aiEvalStatusMap, setAiEvalStatusMap] = useState(null);
+
+  const fetchAiEvaluationStatusAll = (rubricId, sectionId) => {
+    return fetch(
+      `/rubrics/${rubricId}/ai_evaluation_status_for_all?section_id=${sectionId}`
+    );
+  };
+
+  useEffect(() => {
+    if (!!rubricId && !!sectionId) {
+      fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
+        if (response.ok) {
+          response.json().then(data => {
+            setAiEvalStatusMap(data?.aiEvalStatusMap);
+            delete data.aiEvalStatusMap;
+            setAiEvalStatusCounters(data);
+          });
+        }
+      });
+    }
+  }, [rubricId, sectionId]);
+
+  const updateAiEvalStatusForUser = (userId, status) => {
+    setAiEvalStatusMap({
+      ...aiEvalStatusMap,
+      [userId]: status,
+    });
+  };
+
+  const [hasTeacherFeedbackMap, setHasTeacherFeedbackMap] = useState({});
+
+  const initializeHasTeacherFeedbackMap = allTeacherEvaluationData => {
+    const hasFeedbackMap = {};
+    allTeacherEvaluationData.forEach(userEvalData => {
+      if (userEvalData?.user_id) {
+        hasFeedbackMap[userEvalData.user_id] = userEvalData.eval.length > 0;
+      }
+    });
+    setHasTeacherFeedbackMap(hasFeedbackMap);
+  };
+
+  const onSubmitTeacherFeedback = userId => {
+    setHasTeacherFeedbackMap({
+      ...hasTeacherFeedbackMap,
+      [userId]: true,
+    });
+  };
 
   useEffect(() => {
     trySetSessionStorage(rubricTabSessionKey, selectedTab);
@@ -318,6 +390,7 @@ export default function RubricContainer({
             refreshAiEvaluations={fetchAiEvaluations}
             rubric={rubric}
             studentName={studentLevelInfo && studentLevelInfo.name}
+            updateAiEvalStatusForUser={updateAiEvalStatusForUser}
           />
           <RubricContent
             productTour={productTour}
@@ -345,6 +418,8 @@ export default function RubricContainer({
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}
             sectionId={sectionId}
+            hasTeacherFeedbackMap={hasTeacherFeedbackMap}
+            aiEvalStatusMap={aiEvalStatusMap}
           />
           {showSettings && (
             <RubricSettings
@@ -354,6 +429,9 @@ export default function RubricContainer({
               sectionId={sectionId}
               tabSelectCallback={tabSelectCallback}
               reportingData={reportingData}
+              allTeacherEvaluationData={allTeacherEvaluationData}
+              aiEvalStatusCounters={aiEvalStatusCounters}
+              setAiEvalStatusMap={setAiEvalStatusMap}
             />
           )}
         </div>
@@ -365,6 +443,7 @@ export default function RubricContainer({
             studentLevelInfo={studentLevelInfo}
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}
+            onSubmitTeacherFeedback={onSubmitTeacherFeedback}
           />
         )}
       </div>

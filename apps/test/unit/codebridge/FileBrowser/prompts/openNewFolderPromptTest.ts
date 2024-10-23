@@ -12,17 +12,13 @@ const getNewFolderMock = (
   parentId: FolderId
 ): [ProjectFolder, NewFolderFunction] => {
   const newFolderData = {} as ProjectFolder;
-  const mock: NewFolderFunction = ({parentId, folderName, folderId}) => {
+  const mock: NewFolderFunction = ({parentId, folderName}) => {
     newFolderData.parentId = parentId ?? DEFAULT_FOLDER_ID;
     newFolderData.name = folderName;
-    newFolderData.id = folderId;
   };
 
   return [newFolderData, mock];
 };
-
-const appName = 'Codebridge Unit Test';
-const EXPECTED_NEXT_FOLDER_ID = '6';
 
 describe('openNewFolderPrompt', function () {
   it('can successfully add a new folder to root', async function () {
@@ -34,7 +30,6 @@ describe('openNewFolderPrompt', function () {
 
     await openNewFolderPrompt({
       parentId,
-      appName,
       dialogControl: getDialogControlMock(newFolderName),
       newFolder: newFolderDataMock,
       projectFolders: testProject.folders,
@@ -43,7 +38,6 @@ describe('openNewFolderPrompt', function () {
 
     expect(newFolderData.parentId).toEqual(parentId);
     expect(newFolderData.name).toEqual(newFolderName);
-    expect(newFolderData.id).toEqual(EXPECTED_NEXT_FOLDER_ID);
     expect(analyticsData.event).toEqual(EVENTS.CODEBRIDGE_NEW_FOLDER);
   });
 
@@ -55,7 +49,6 @@ describe('openNewFolderPrompt', function () {
     const [newFolderData, newFolderDataMock] = getNewFolderMock(parentId);
 
     await openNewFolderPrompt({
-      appName,
       dialogControl: getDialogControlMock(newFolderName),
       newFolder: newFolderDataMock,
       projectFolders: testProject.folders,
@@ -64,7 +57,6 @@ describe('openNewFolderPrompt', function () {
 
     expect(newFolderData.parentId).toEqual(parentId);
     expect(newFolderData.name).toEqual(newFolderName);
-    expect(newFolderData.id).toEqual(EXPECTED_NEXT_FOLDER_ID);
     expect(analyticsData.event).toEqual(EVENTS.CODEBRIDGE_NEW_FOLDER);
   });
 
@@ -77,7 +69,6 @@ describe('openNewFolderPrompt', function () {
 
     await openNewFolderPrompt({
       parentId,
-      appName,
       dialogControl: getDialogControlMock(newFolderName),
       newFolder: newFolderDataMock,
       projectFolders: testProject.folders,
@@ -86,7 +77,6 @@ describe('openNewFolderPrompt', function () {
 
     expect(newFolderData.parentId).toEqual(parentId);
     expect(newFolderData.name).toEqual(newFolderName);
-    expect(newFolderData.id).toEqual(EXPECTED_NEXT_FOLDER_ID);
     expect(analyticsData.event).toEqual(EVENTS.CODEBRIDGE_NEW_SUBFOLDER);
   });
 
@@ -99,7 +89,6 @@ describe('openNewFolderPrompt', function () {
 
     await openNewFolderPrompt({
       parentId: DEFAULT_FOLDER_ID,
-      appName,
       dialogControl: getDialogControlMock(newFolderName),
       newFolder: newFolderDataMock,
       projectFolders: testProject.folders,
@@ -119,7 +108,6 @@ describe('openNewFolderPrompt', function () {
 
     await openNewFolderPrompt({
       parentId: DEFAULT_FOLDER_ID,
-      appName,
       dialogControl: getDialogControlMock(newFolderName),
       newFolder: newFolderDataMock,
       projectFolders: testProject.folders,
