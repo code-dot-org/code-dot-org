@@ -1,4 +1,6 @@
 :ruby
+  require 'cdo/rack/global_edition'
+
   cookie_key = environment_specific_cookie_name '_user_type'
   user_type = request.cookies[cookie_key]
   user_type = "student" if user_type == "student_y"
