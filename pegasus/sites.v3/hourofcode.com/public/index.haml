@@ -21,15 +21,14 @@ layout: wide_index
   #fullwidth
     = view :header
     %section.banner.homepage
-      .wrapper.flex-container
+      .wrapper.show-desktop
+        .text-wrapper
+          = view :hoc_2024_homepage_hero_text, class_name: "white"
+      .wrapper.show-tablet.flex-container
         %figure
           %img{src: "/images/hoc-2024-graphic.png", alt: ""}
         .text-wrapper
-          %h1=hoc_s("hoc_2024.header")
-          %p.body-one
-            =hoc_s("hoc_2024.banner.desc.join_millions")
-        %a.link-button.black{href: resolve_url("/events")}
-          =hoc_s("hoc_2024.button_host_an_event")
+          = view :hoc_2024_homepage_hero_text, class_name: "black"
 
 %main
   -# What is HoC?

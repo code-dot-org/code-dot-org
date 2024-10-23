@@ -9,6 +9,60 @@
   background-color: rgba($neutral-white, .9);
 }
 
+// Homepage banner
+section.banner.homepage {
+
+  h2 {
+    font-weight: 400;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  figure {
+    margin: 0 auto 2rem;
+  }
+
+  .show-tablet {
+    display: none;
+  }
+
+  .wrapper.show-desktop {
+    background: url('/images/hoc-2024-graphic-bg.png') no-repeat center center;
+    background-size: contain;
+    max-width: 1130px;
+    height: 648px;
+    position: relative;
+
+    .text-wrapper {
+      position: absolute;
+      bottom: 6rem;
+      left: 3rem;
+      text-align: left;
+      max-width: 390px;
+
+      h1, h2, p {
+        color: var(--neutral_white);
+      }
+    }
+
+    .button-wrapper {
+      justify-content: start;
+    }
+  }
+
+  @media (max-width: 1130px) {
+    .show-tablet {
+      display: block;
+    }
+
+    .show-desktop {
+      display: none;
+    }
+  }
+}
+
 section.banner {
   padding: 2rem 0 6rem;
 
@@ -52,5 +106,9 @@ section.banner {
     img {
       width: 100%;
     }
+  }
+
+  .button-wrapper {
+    justify-content: center;
   }
 }

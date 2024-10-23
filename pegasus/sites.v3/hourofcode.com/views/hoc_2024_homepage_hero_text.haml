@@ -1,0 +1,11 @@
+%h1.no-margin-bottom
+  =hoc_s("hoc_homepage.hero.heading")
+%h2.no-margin-top
+  =hoc_s("hoc_homepage.hero.subhead")
+%p.body-one
+  =hoc_s("hoc_homepage.hero.desc")
+.button-wrapper
+  %a.link-button{href: resolve_url("/learn"), class: class_name}
+    =hoc_s(:call_to_action_explore_activities)
+  %a.link-button{href: resolve_url("/events"), class: class_name}
+    =hoc_s("hoc_2024.button_host_an_event")
