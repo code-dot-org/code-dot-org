@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import {useSelector} from 'react-redux';
-import {useNavigate, useParams} from 'react-router-dom';
+import {generatePath, useNavigate, useParams} from 'react-router-dom';
 
 import {
   addAnnouncement,
@@ -26,6 +26,7 @@ import {
   setUserSignedIn,
 } from '../currentUserRedux';
 import {pageTypes, setPageType} from '../teacherDashboard/teacherSectionsRedux';
+import {TEACHER_NAVIGATION_PATHS} from '../teacherNavigation/TeacherNavigationPaths';
 
 import CourseOverview from './CourseOverview';
 
@@ -134,29 +135,28 @@ const TeacherCourseOverview: React.FC = () => {
   );
 
   React.useEffect(() => {
-    console.log('lfm', {selectedSection, param: params.courseVersionName});
     if (!selectedSection || !selectedSection?.courseVersionName) {
       return;
     }
-    // if (!selectedSection.courseId && selectedSection.unitName) {
-    //   navigate(
-    //     generatePath('../' + TEACHER_NAVIGATION_PATHS.unitOverview, {
-    //       unitName: selectedSection.unitName,
-    //     }),
-    //     {replace: true}
-    //   );
-    //   return;
-    // }
+    if (!selectedSection.courseId && selectedSection.unitName) {
+      navigate(
+        generatePath('../' + TEACHER_NAVIGATION_PATHS.unitOverview, {
+          unitName: selectedSection.unitName,
+        }),
+        {replace: true}
+      );
+      return;
+    }
 
-    // if (selectedSection.courseVersionName !== params.courseVersionName) {
-    //   navigate(
-    //     generatePath('../' + TEACHER_NAVIGATION_PATHS.courseOverview, {
-    //       courseVersionName: selectedSection.courseVersionName,
-    //     }),
-    //     {replace: true}
-    //   );
-    //   return;
-    // }
+    if (selectedSection.courseVersionName !== params.courseVersionName) {
+      navigate(
+        generatePath('../' + TEACHER_NAVIGATION_PATHS.courseOverview, {
+          courseVersionName: selectedSection.courseVersionName,
+        }),
+        {replace: true}
+      );
+      return;
+    }
 
     courseSummaryCachedLoader(selectedSection.courseVersionName).then(
       response => {

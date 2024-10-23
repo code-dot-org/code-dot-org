@@ -45,7 +45,6 @@ export const asyncLoadSelectedSection = async (sectionId: string) => {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const setSelectedSectionData = (sectionData: any) => {
-  console.log('lfm 1', {sectionData});
   getStore().dispatch(
     setStudentsForCurrentSection(sectionData.id, sectionData.students)
   );

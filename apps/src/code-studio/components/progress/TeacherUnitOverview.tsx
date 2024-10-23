@@ -1,12 +1,6 @@
 import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
-import {
-  generatePath,
-  useLocation,
-  useNavigate,
-  useNavigation,
-  useParams,
-} from 'react-router-dom';
+import {generatePath, useNavigate, useParams} from 'react-router-dom';
 
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import plcHeaderReducer, {
@@ -296,28 +290,9 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
   const dispatch = useAppDispatch();
 
   const navigate = useNavigate();
-  const params = useParams();
-  const location = useLocation();
-  const un = useParams().unitName;
-  const nav = useNavigation();
-  const loc = location.pathname;
-  const hist = history;
-
-  const unitName = React.useMemo(() => {
-    console.log('lfm change', {
-      params,
-      unitName1: un,
-      location,
-      nav,
-      loc,
-      hist,
-    });
-    return params.unitName;
-  }, [params, un, location, nav, loc, hist]);
+  const {unitName} = useParams();
 
   React.useEffect(() => {
-    console.log('lfm 1', {unitName, sUnit: selectedSection?.unitName});
-
     if (!unitName) {
       navigate(
         generatePath(
@@ -336,14 +311,12 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
     }
 
     if (unitLoaded === unitName) {
-      console.log('lfm', {unitLoaded, unitName});
       return;
     }
 
     setUnitSummaryResponse(null);
     setUnitLoaded(unitName);
 
-    console.log('lfm fetch', {unitLoaded, unitName});
     HttpClient.fetchJson<UnitSummaryResponse>(
       `/dashboardapi/unit_summary/${unitName}`
     )

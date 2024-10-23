@@ -33,7 +33,6 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     (state: {teacherSections: {sections: SectionsData}}) =>
       state.teacherSections.sections
   );
-  // console.log('lfm', {sections});
 
   const [sectionArray, setSectionArray] = useState<
     {value: string; text: string}[]
@@ -97,7 +96,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
-  const {urlSectionId} = useParams();
+  const urlSectionId = useParams().sectionId;
 
   const [currentPathName, currentPathObject] = React.useMemo(() => {
     return (
@@ -109,26 +108,13 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   }, [location]);
 
   React.useEffect(() => {
-    console.log('switch section');
     if (urlSectionId && parseInt(urlSectionId) !== selectedSectionId) {
       asyncLoadSelectedSection(urlSectionId);
     }
   }, [urlSectionId, selectedSectionId]);
 
-  React.useEffect(() => {
-    console.log('lfm bar loc', {location});
-  }, [location]);
-
   const navigateToDifferentSection = (sectionId: number) => {
     if (currentPathObject?.absoluteUrl) {
-      console.log(
-        'lfm navigate to',
-        generatePath(currentPathObject.absoluteUrl, {
-          sectionId: sectionId,
-          courseVersionName: sections[sectionId]?.courseVersionName,
-          unitName: sections[sectionId]?.unitName,
-        })
-      );
       navigate(
         generatePath(currentPathObject.absoluteUrl, {
           sectionId: sectionId,
@@ -136,13 +122,6 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
           unitName: sections[sectionId]?.unitName,
         })
       );
-      // window.location.href =
-      //   'http://localhost-studio.code.org:3000/teacher_dashboard' +
-      //   generatePath(currentPathObject.absoluteUrl, {
-      //     sectionId: sectionId,
-      //     courseVersionName: sections[sectionId].courseVersionName,
-      //     unitName: sections[sectionId].unitName,
-      //   });
     }
   };
 
