@@ -54,8 +54,8 @@ const SubmitProjectModal: React.FunctionComponent<SubmitProjectModalProps> = ({
       <div className={moduleStyles.submitProjectTextContainer}>
         <BodyTwoText>
           <StrongText>
-            You can submit your project to be considered for our Featured
-            Projects gallery. If you're interested, please describe the project:
+            If you'd like your project to appear in our Featured Projects
+            gallery, please describe the project:
           </StrongText>
         </BodyTwoText>
         <textarea
