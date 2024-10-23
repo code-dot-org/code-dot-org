@@ -118,22 +118,41 @@ class Policies::ChildAccount
     user_predates_policy?(user) && !ComplianceState.permission_granted?(user)
   end
 
-  # Authentication option types which we consider to be "owned" by the school
+  # Authentication option types which we always consider to be "owned" by the school
   # the student attends because the school has admin control of the account.
-  SCHOOL_OWNED_TYPES = [AuthenticationOption::CLEVER, AuthenticationOption::LTI_V1].freeze
+  SCHOOL_OWNED_TYPES = Set[AuthenticationOption::CLEVER, AuthenticationOption::LTI_V1].freeze
+
+  # Login types that are considered school owned only if the user is in a section or was created via
+  # roster sync from an LMS.
+  CONDITIONALLY_SCHOOL_OWNED_TYPES = Set[AuthenticationOption::GOOGLE, AuthenticationOption::MICROSOFT]
+
+  # Login types that are always considered personal logins.
+  PERSONAL_LOGIN_TYPES = Set[AuthenticationOption::EMAIL, AuthenticationOption::FACEBOOK]
 
   # Does the user login using credentials they personally control?
   # For example, some accounts are created and owned by schools (Clever).
   def self.personal_account?(user)
+    # Sponsored accounts are always managed by the teacher.
     return false if user.sponsored?
-    # List of credential types which we believe schools have ownership of.
-    # Does the user have an authentication method which is not controlled by
-    # their school? The presence of at least one authentication method which
-    # is owned by the student/parent means this is a "personal account".
+
     if user.migrated?
-      user.authentication_options.any? do |option|
-        SCHOOL_OWNED_TYPES.exclude?(option.credential_type)
+      # Email + password logins are always personal logins.
+      return true if user.encrypted_password.present?
+      ao_providers = Set.new(user.authentication_options.pluck(:credential_type))
+
+      # Email and Facebook are always personal logins.
+      return true if ao_providers & PERSONAL_LOGIN_TYPES
+
+      # Clever and LTI are never personal logins if no other login types are present.
+      return false if ao_providers.subset?(SCHOOL_OWNED_TYPES)
+
+      # Google and Microsoft are considered school owned for users who are in sections and/or
+      # if the user was created via a roster sync.
+      if ao_providers & CONDITIONALLY_SCHOOL_OWNED_TYPES
+        conditionally_school_managed?(user)
       end
+
+      return true
     else
       SCHOOL_OWNED_TYPES.exclude?(user.provider)
     end
@@ -225,5 +244,9 @@ class Policies::ChildAccount
     return false unless underage?(user)
 
     personal_account?(user)
+  end
+
+  private def self.conditionally_school_managed?(user)
+    user.sections_as_student.present? || user.roster_synced
   end
 end
