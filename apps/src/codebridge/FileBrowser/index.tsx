@@ -446,7 +446,7 @@ export const FileBrowser = React.memo(() => {
               }
             )}
           >
-            <ul>
+            <ul id="uitest-files-list">
               <InnerFileBrowser
                 parentId={DEFAULT_FOLDER_ID}
                 folders={project.folders}

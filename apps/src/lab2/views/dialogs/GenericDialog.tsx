@@ -190,6 +190,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
                     : buttonColors.purple
                 }
                 text={buttons?.confirm?.text || commonI18n.dialogOK()}
+                id="uitest-generic-dialog-ok"
               />
             </div>
           </div>
