@@ -47,7 +47,13 @@ const SectionAccessToggle: React.FC<SectionAccessToggleProps> = ({
       sectionId: sectionId,
       uiLocation: 'aiTutorTeacherDashboardTab',
     });
-    dispatch(updateSectionAiTutorEnabled(sectionId, newValue));
+    if (sectionList[sectionId]) {
+      dispatch(
+        updateSectionAiTutorEnabled({sectionId, aiTutorEnabled: newValue})
+      );
+    } else {
+      throw new Error('Section does not exist');
+    }
   };
 
   useEffect(() => {
