@@ -1,0 +1,1037 @@
+{
+  "script": {
+    "name": "music-jam-2024",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "curriculum_umbrella": "HOC",
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "2024"
+    },
+    "new_name": null,
+    "family_name": "music-jam",
+    "serialized_at": "2024-10-22 23:56:46 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "music-jam-2024"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Music Lab: AI Edition for Hour of Code",
+      "name": "Music Lab: Jam Session",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "In this 45-minute activity, students will use Code.org’s Music Lab to explore how creativity and coding come together to make music. By creating their own songs using coding concepts like sequencing and decomposition, and configuring an AI Beat Block, students will learn foundational computer science concepts. They will also be introduced to careers that intersect with tech and music through inspiring career spotlights from professionals in the industry, including at Amazon Music.\n\nStudents will gain confidence in their creative abilities and begin to see coding as a tool not only for problem-solving but also for artistic expression. The goal is for students to discover careers that combine music and technology, where creativity is key, and to feel a stronger sense of belonging by seeing themselves reflected in the professionals’ stories and backgrounds.",
+        "preparation": "- Test out Music Lab to ensure familiarity with the platform.\n- Review the introduction video and practice walking students through the steps for using sound blocks, the AI Beat Block, and functions.\n- Prepare discussion prompts that help students connect coding and music creation.\n- *[Optional]* Find the resources you need to plan, implement, and celebrate the Hour of Code at your school [here](https://hourofcode.com/us/how-to)!",
+        "purpose": "This lesson is designed to show students that coding is not just about logic and algorithms—it's about creativity. By using Music Lab, students will create their own music and learn coding basics like sequencing, loops, and functions. They will see how the problem-solving process coders use is similar to the creative process musicians follow. By the end of this lesson, students will feel empowered to explore tech-related careers, knowing that creativity and code can work hand in hand.",
+        "student_overview": "In this 45-minute activity, you’ll use Code.org’s Music Lab to create your own music and remix songs from famous artists. You’ll learn how coding brings music to life, discover key computer science skills, and explore exciting careers that blend music and technology."
+      },
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "626c9aba-0348-4491-a18f-eba602d34a3e",
+      "position": 1,
+      "properties": {
+        "name": "Getting Started"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "626c9aba-0348-4491-a18f-eba602d34a3e",
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024"
+      }
+    },
+    {
+      "key": "3287c49c-474e-4335-ab6a-4df3817a76c1",
+      "position": 2,
+      "properties": {
+        "duration": 2,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3287c49c-474e-4335-ab6a-4df3817a76c1",
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024"
+      }
+    },
+    {
+      "key": "b5d943a6-7c58-465c-b5da-b395afff237d",
+      "position": 3,
+      "properties": {
+        "duration": 40,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b5d943a6-7c58-465c-b5da-b395afff237d",
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024"
+      }
+    },
+    {
+      "key": "dae84cfe-83b7-4ca4-a823-446bbda879e0",
+      "position": 4,
+      "properties": {
+        "duration": 3,
+        "name": "Celebrate!"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dae84cfe-83b7-4ca4-a823-446bbda879e0",
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "aae7a1fd-2141-4295-8545-018f37e46785",
+      "position": 1,
+      "properties": {
+        "description": "This tutorial features songs from popular artists. To get a preview of the song list in this tutorial, check out this [Spotify Playlist (all ages)](https://open.spotify.com/playlist/197J2nTnPFpFP04ragYg1d?si=d1fe0d44b1434256). We are using radio-safe versions of all songs and for students under 13.",
+        "name": "Music Filtering"
+      },
+      "seeding_key": {
+        "activity_section.key": "aae7a1fd-2141-4295-8545-018f37e46785",
+        "lesson_activity.key": "626c9aba-0348-4491-a18f-eba602d34a3e"
+      }
+    },
+    {
+      "key": "cac10f07-2894-4d91-b2dd-2a37e42aec86",
+      "position": 2,
+      "properties": {
+        "description": "- Encourage students to collaborate with their peers when stuck.\n- Remind them to read instructions and hints carefully.\n- If they finish early, encourage them to continue exploring their project and adding new elements.\n",
+        "name": "General Support"
+      },
+      "seeding_key": {
+        "activity_section.key": "cac10f07-2894-4d91-b2dd-2a37e42aec86",
+        "lesson_activity.key": "626c9aba-0348-4491-a18f-eba602d34a3e"
+      }
+    },
+    {
+      "key": "4f6f465e-61f5-4557-9991-1ed848d13a6f",
+      "position": 1,
+      "properties": {
+        "description": "Today, we're going to explore something really exciting—how music and coding are connected. Did you know that both music and coding rely on patterns and sequences? When musicians create a song, they use patterns of sounds to make melodies and rhythms. Coders do something very similar—they use sequences of instructions to make a computer do what they want.\n\nMusic has always been a way to connect people, and with technology, it's even easier to share and discover new music from anywhere in the world. Behind the scenes, technology helps bring music to your fingertips.\n\nIn this activity, you’re going to use code to remix music from popular artists as well as create your own music. And along the way, you'll meet some amazing professionals who have combined their love for music and technology to build exciting careers. These professionals are just like you—they started with a passion for creativity and coding, and now they're using it to shape the future of music. Let's get started!\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4f6f465e-61f5-4557-9991-1ed848d13a6f",
+        "lesson_activity.key": "3287c49c-474e-4335-ab6a-4df3817a76c1"
+      }
+    },
+    {
+      "key": "b3e60a2b-d30a-430b-a6d4-8db64620027d",
+      "position": 1,
+      "properties": {
+        "description": "In this introductory video, students will see how coding is used to create music and explore how professionals at Amazon Music combine creativity and technology. The video will highlight real-world roles like software engineers, UX designers, and music producers, inspiring students to create their own music with code.",
+        "name": "Intro to Music Lab: Jam Session",
+        "progression_name": "Intro"
+      },
+      "seeding_key": {
+        "activity_section.key": "b3e60a2b-d30a-430b-a6d4-8db64620027d",
+        "lesson_activity.key": "b5d943a6-7c58-465c-b5da-b395afff237d"
+      }
+    },
+    {
+      "key": "b8b5e0b5-8bf4-4577-9b94-49cc7e9ae606",
+      "position": 2,
+      "properties": {
+        "description": "In this section, students will begin coding by selecting and sequencing sounds to create their own beats. Using the drag-and-drop interface of Music Lab, students will learn how to add blocks of code that trigger different sounds when activated. Encourage students to experiment with different sounds from the library and sequences, building confidence with the basic coding tools.",
+        "name": "Choosing sounds",
+        "progression_name": "Play Sound"
+      },
+      "seeding_key": {
+        "activity_section.key": "b8b5e0b5-8bf4-4577-9b94-49cc7e9ae606",
+        "lesson_activity.key": "b5d943a6-7c58-465c-b5da-b395afff237d"
+      }
+    },
+    {
+      "key": "62b11716-5c3c-4b9a-b14f-f27a02a169dd",
+      "position": 3,
+      "properties": {
+        "description": "Now, students will level up their music by learning how to play multiple sounds at once. They’ll explore how to layer sounds to create harmonies and more complex musical arrangements. Encourage students to explore different sound combinations and notice how their sequences change when sounds play together.",
+        "name": "Playing multiple sounds at once",
+        "progression_name": "Play Together"
+      },
+      "seeding_key": {
+        "activity_section.key": "62b11716-5c3c-4b9a-b14f-f27a02a169dd",
+        "lesson_activity.key": "b5d943a6-7c58-465c-b5da-b395afff237d"
+      }
+    },
+    {
+      "key": "e6c1a793-76a9-40e2-87a4-c8018cfb0bf5",
+      "position": 4,
+      "properties": {
+        "description": "In this section, students will be introduced to the AI Beat Block, where they can use artificial intelligence to help complete their songs. The AI listens to their starting beat and predicts what should come next, providing students with new ideas for their music.\n\nEncourage students to play with different temperatures and see how the AI responds to their input.",
+        "name": "Use AI to generate new beats",
+        "progression_name": "Play AI Drums",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**AI Beat Block Key Concepts:**\n- A.I. Bot was trained by listening to lots of different beats.\n- Based on your starting beat, A.I. Bot continues and fills in the rest.\n- Low temperature keeps AI predictions similar to the original beat.\n- High temperature creates more variation and surprises.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e6c1a793-76a9-40e2-87a4-c8018cfb0bf5",
+        "lesson_activity.key": "b5d943a6-7c58-465c-b5da-b395afff237d"
+      }
+    },
+    {
+      "key": "e10122ba-b70f-4cb8-a49b-aba713dfca36",
+      "position": 5,
+      "properties": {
+        "description": "Functions in coding are like the sections of a song (intro, chorus, verse). In this section, students will learn how to organize their music into functions, creating reusable blocks of code to control different parts of their song.",
+        "name": "Use functions to build a song",
+        "progression_name": "Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "e10122ba-b70f-4cb8-a49b-aba713dfca36",
+        "lesson_activity.key": "b5d943a6-7c58-465c-b5da-b395afff237d"
+      }
+    },
+    {
+      "key": "9dd37cd7-ff59-4d75-8eb5-f05feb12a7f2",
+      "position": 6,
+      "properties": {
+        "description": "This level allows students to experiment with everything they've learned. Students will choose a song to remix and use the coding blocks and functions to create their own music masterpiece. This is their chance to apply all of the coding concepts they've learned in a creative way.\n\nEncourage students to explore their creativity and apply coding skills in new ways, remixing songs to make them their own.\n",
+        "name": "Time to jam!",
+        "progression_name": "Jam Session"
+      },
+      "seeding_key": {
+        "activity_section.key": "9dd37cd7-ff59-4d75-8eb5-f05feb12a7f2",
+        "lesson_activity.key": "b5d943a6-7c58-465c-b5da-b395afff237d"
+      }
+    },
+    {
+      "key": "16e21d7e-940f-41a3-a655-77d826b68d89",
+      "position": 1,
+      "properties": {
+        "description": "Celebrate the students' accomplishments! At the end of the activity, students will have a number of extension opportunities. They can:\n- Share their creation with their friends and family.\n- Keep playing to reflect on what they've learned and practice additional skills.\n- Further explore career paths in music and technology with Amazon Music through a [free virtual field trip](https://www.amazonfutureengineer.com/careertours/careervideos). \n- Receive a [certificate](http://code.org/certificates) for completing the Hour of Code.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "16e21d7e-940f-41a3-a655-77d826b68d89",
+        "lesson_activity.key": "dae84cfe-83b7-4ca4-a823-446bbda879e0"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-jam-video-intro"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "b3e60a2b-d30a-430b-a6d4-8db64620027d"
+      },
+      "level_keys": [
+        "music-jam-video-intro"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Play Sound"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-jam-sound"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "b8b5e0b5-8bf4-4577-9b94-49cc7e9ae606"
+      },
+      "level_keys": [
+        "music-jam-sound"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Play Sound"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-jam-sequence"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "b8b5e0b5-8bf4-4577-9b94-49cc7e9ae606"
+      },
+      "level_keys": [
+        "music-jam-sequence"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Play Together"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-jam-panels-playtogether"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "62b11716-5c3c-4b9a-b14f-f27a02a169dd"
+      },
+      "level_keys": [
+        "music-jam-panels-playtogether"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Play Together"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-jam-playtogether-preview"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "62b11716-5c3c-4b9a-b14f-f27a02a169dd"
+      },
+      "level_keys": [
+        "music-jam-playtogether-preview"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Play Together"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-jam-playtogether"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "62b11716-5c3c-4b9a-b14f-f27a02a169dd"
+      },
+      "level_keys": [
+        "music-jam-playtogether"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Play Together"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-jam-playtogether-sequence"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "62b11716-5c3c-4b9a-b14f-f27a02a169dd"
+      },
+      "level_keys": [
+        "music-jam-playtogether-sequence"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Play AI Drums"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-jam-panels-ai"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "e6c1a793-76a9-40e2-87a4-c8018cfb0bf5"
+      },
+      "level_keys": [
+        "music-jam-panels-ai"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Play AI Drums"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-jam-ai"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "e6c1a793-76a9-40e2-87a4-c8018cfb0bf5"
+      },
+      "level_keys": [
+        "music-jam-ai"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Play AI Drums"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-jam-panels-ai-temperature"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "e6c1a793-76a9-40e2-87a4-c8018cfb0bf5"
+      },
+      "level_keys": [
+        "music-jam-panels-ai-temperature"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Play AI Drums"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-jam-ai-temperature"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "e6c1a793-76a9-40e2-87a4-c8018cfb0bf5"
+      },
+      "level_keys": [
+        "music-jam-ai-temperature"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-jam-panels-functions"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "e10122ba-b70f-4cb8-a49b-aba713dfca36"
+      },
+      "level_keys": [
+        "music-jam-panels-functions"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-jam-functions-intro"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "e10122ba-b70f-4cb8-a49b-aba713dfca36"
+      },
+      "level_keys": [
+        "music-jam-functions-intro"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-jam-functions-chorus"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "e10122ba-b70f-4cb8-a49b-aba713dfca36"
+      },
+      "level_keys": [
+        "music-jam-functions-chorus"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-jam-functions-verse"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "e10122ba-b70f-4cb8-a49b-aba713dfca36"
+      },
+      "level_keys": [
+        "music-jam-functions-verse"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-jam-panels-outro"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "e10122ba-b70f-4cb8-a49b-aba713dfca36"
+      },
+      "level_keys": [
+        "music-jam-panels-outro"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Jam Session"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-jam-jam"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "9dd37cd7-ff59-4d75-8eb5-f05feb12a7f2"
+      },
+      "level_keys": [
+        "music-jam-jam"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "music-jam-video-intro",
+        "script_level.level_keys": [
+          "music-jam-video-intro"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "b3e60a2b-d30a-430b-a6d4-8db64620027d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-jam-sound",
+        "script_level.level_keys": [
+          "music-jam-sound"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "b8b5e0b5-8bf4-4577-9b94-49cc7e9ae606"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-jam-sequence",
+        "script_level.level_keys": [
+          "music-jam-sequence"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "b8b5e0b5-8bf4-4577-9b94-49cc7e9ae606"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-jam-panels-playtogether",
+        "script_level.level_keys": [
+          "music-jam-panels-playtogether"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "62b11716-5c3c-4b9a-b14f-f27a02a169dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-jam-playtogether-preview",
+        "script_level.level_keys": [
+          "music-jam-playtogether-preview"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "62b11716-5c3c-4b9a-b14f-f27a02a169dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-jam-playtogether",
+        "script_level.level_keys": [
+          "music-jam-playtogether"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "62b11716-5c3c-4b9a-b14f-f27a02a169dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-jam-playtogether-sequence",
+        "script_level.level_keys": [
+          "music-jam-playtogether-sequence"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "62b11716-5c3c-4b9a-b14f-f27a02a169dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-jam-panels-ai",
+        "script_level.level_keys": [
+          "music-jam-panels-ai"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "e6c1a793-76a9-40e2-87a4-c8018cfb0bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-jam-ai",
+        "script_level.level_keys": [
+          "music-jam-ai"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "e6c1a793-76a9-40e2-87a4-c8018cfb0bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-jam-panels-ai-temperature",
+        "script_level.level_keys": [
+          "music-jam-panels-ai-temperature"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "e6c1a793-76a9-40e2-87a4-c8018cfb0bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-jam-ai-temperature",
+        "script_level.level_keys": [
+          "music-jam-ai-temperature"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "e6c1a793-76a9-40e2-87a4-c8018cfb0bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-jam-panels-functions",
+        "script_level.level_keys": [
+          "music-jam-panels-functions"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "e10122ba-b70f-4cb8-a49b-aba713dfca36"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-jam-functions-intro",
+        "script_level.level_keys": [
+          "music-jam-functions-intro"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "e10122ba-b70f-4cb8-a49b-aba713dfca36"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-jam-functions-chorus",
+        "script_level.level_keys": [
+          "music-jam-functions-chorus"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "e10122ba-b70f-4cb8-a49b-aba713dfca36"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-jam-functions-verse",
+        "script_level.level_keys": [
+          "music-jam-functions-verse"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "e10122ba-b70f-4cb8-a49b-aba713dfca36"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-jam-panels-outro",
+        "script_level.level_keys": [
+          "music-jam-panels-outro"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "e10122ba-b70f-4cb8-a49b-aba713dfca36"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-jam-jam",
+        "script_level.level_keys": [
+          "music-jam-jam"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "music-jam-2024",
+        "activity_section.key": "9dd37cd7-ff59-4d75-8eb5-f05feb12a7f2"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "artificial_intelligence_a_i_",
+      "word": "Artificial Intelligence (A.I.)",
+      "definition": "A computer program that takes in data, learns patterns from that data, and then makes decisions based on what it has learned.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "artificial_intelligence_a_i_"
+      }
+    },
+    {
+      "key": "functions",
+      "word": "Functions",
+      "definition": "A named section of a program that performs a specific task.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "functions"
+      }
+    },
+    {
+      "key": "music_producer",
+      "word": "Music Producer",
+      "definition": "Someone who helps create and mix songs by bringing together singers, musicians, and technology to make the track sound great.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "music_producer"
+      }
+    },
+    {
+      "key": "product_manager",
+      "word": "Product Manager",
+      "definition": "A person who helps create new products, like apps or games, by making sure they meet the needs of users.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "product_manager"
+      }
+    },
+    {
+      "key": "sequencing",
+      "word": "Sequencing",
+      "definition": "Putting commands in the correct order so computers can read the commands.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sequencing"
+      }
+    },
+    {
+      "key": "software_engineer",
+      "word": "Software Engineer",
+      "definition": "Someone who writes the code that makes apps, games, and websites work. They are like the builders of the tech world.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "software_engineer"
+      }
+    },
+    {
+      "key": "ux_designer",
+      "word": "UX Designer",
+      "definition": "A person who designs how products look and work, making sure apps, websites, or games are easy and fun to use for all users. UX stands for User Experience: how a person feels and interacts with a product.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "ux_designer"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "vocabulary.key": "artificial_intelligence_a_i_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "vocabulary.key": "functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "vocabulary.key": "music_producer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "vocabulary.key": "product_manager"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "vocabulary.key": "sequencing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "vocabulary.key": "software_engineer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "vocabulary.key": "ux_designer"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "11b68a16-a194-47e6-82f6-327b3fdcbef9",
+      "properties": {
+        "description": "Use coding blocks to sequence sounds and create a song."
+      },
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "objective.key": "11b68a16-a194-47e6-82f6-327b3fdcbef9"
+      }
+    },
+    {
+      "key": "29ba4905-44b7-47ee-9e14-97474bc3caff",
+      "properties": {
+        "description": "Understand computer science concepts like sequencing and decomposition."
+      },
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "objective.key": "29ba4905-44b7-47ee-9e14-97474bc3caff"
+      }
+    },
+    {
+      "key": "72b674f0-f3d1-4af2-9664-1d1a70f223a2",
+      "properties": {
+        "description": "Identify how coding and music share similar patterns and processes."
+      },
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "objective.key": "72b674f0-f3d1-4af2-9664-1d1a70f223a2"
+      }
+    },
+    {
+      "key": "9d680fca-2a04-4b1f-aefc-fd49184492cc",
+      "properties": {
+        "description": "Explore careers in music and technology and see themselves as capable of pursuing these fields."
+      },
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "objective.key": "9d680fca-2a04-4b1f-aefc-fd49184492cc"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

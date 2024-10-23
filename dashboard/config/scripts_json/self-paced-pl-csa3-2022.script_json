@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-06 20:07:24 UTC",
+    "serialized_at": "2024-10-23 01:16:17 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3134,7 +3134,26 @@
 
   ],
   "objectives": [
-
+    {
+      "key": "8f2f846a-2b5d-446b-8b85-f9e4f208837b",
+      "properties": {
+        "description": "Hit green button"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "8f2f846a-2b5d-446b-8b85-f9e4f208837b"
+      }
+    },
+    {
+      "key": "b222e9d7-6144-4913-b7c4-610461f1e8c6",
+      "properties": {
+        "description": "Did hit green button..."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "b222e9d7-6144-4913-b7c4-610461f1e8c6"
+      }
+    }
   ],
   "lessons_standards": [
 
