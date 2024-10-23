@@ -156,10 +156,23 @@ class SchoolInfo < ApplicationRecord
   end
 
   def validate_us
+    if school || (school_type && school_type != SCHOOL_TYPE_NO_SCHOOL_SETTING)
+      validate_nces_school
+    else
+      validate_non_nces_school
+    end
+  end
+
+  def validate_nces_school
     errors.add(:school_type, "is required") unless school_type
     errors.add(:school_type, "is invalid") unless SCHOOL_TYPES.include? school_type
     validate_private_other if [SCHOOL_TYPE_PRIVATE, SCHOOL_TYPE_OTHER].include? school_type
     validate_public_charter if [SCHOOL_TYPE_PUBLIC, SCHOOL_TYPE_CHARTER].include? school_type
+  end
+
+  def validate_non_nces_school
+    errors.add(:zip, "is required") unless zip
+    errors.add(:school_name, "is required") unless school_name || school_type == SCHOOL_TYPE_NO_SCHOOL_SETTING
   end
 
   def validate_private_other
