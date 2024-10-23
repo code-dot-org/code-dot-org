@@ -20,7 +20,7 @@ class SchoolInfoTest < ActiveSupport::TestCase
   # US
 
   test "US without school type fails" do
-    school_info = build :school_info_us
+    school_info = build(:school_info_us, :with_district, :with_school, school: build(:public_school, school_type: nil))
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School type is required', school_info.errors.full_messages.first
   end
