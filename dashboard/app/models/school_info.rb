@@ -144,10 +144,7 @@ class SchoolInfo < ApplicationRecord
   end
 
   def validate_non_us
-    errors.add(:school_type, "is required") unless school_type
-    errors.add(:school_type, "is invalid") unless SCHOOL_TYPES.include? school_type
     errors.add(:school_name, "is required") unless school_name
-    errors.add(:full_address, "is required") unless full_address
 
     errors.add(:state, "is forbidden") if state
     errors.add(:zip, "is forbidden") if zip
