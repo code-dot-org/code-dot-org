@@ -143,53 +143,49 @@ export default connect(
   })
 )(StudentSelector);
 
+const STATUS_BUBBLE_COLOR = {
+  NOT_STARTED: style.grayStatusBlob,
+  IN_PROGRESS: style.yellowStatusBlob,
+  SUBMITTED: style.greenStatusBlob,
+};
+
+const STATUS_BUBBLE_TEXT = {
+  NOT_STARTED: i18n.notStarted(),
+  IN_PROGRESS: i18n.inProgress(),
+  SUBMITTED: i18n.submitted(),
+};
+
+const computeBubbleStatus = level => {
+  if (!level || level.status === LevelStatus.not_tried) {
+    return 'NOT_STARTED';
+  } else if (
+    level.status === LevelStatus.attempted ||
+    level.status === LevelStatus.passed
+  ) {
+    return 'IN_PROGRESS';
+  } else if (
+    level.status === LevelStatus.submitted ||
+    level.status === LevelStatus.perfect ||
+    level.status === LevelStatus.completed_assessment ||
+    level.status === LevelStatus.free_play_complete
+  ) {
+    return 'SUBMITTED';
+  } else {
+    return null;
+  }
+};
+
 function StudentProgressStatus({level}) {
-  const bubbleColor = () => {
-    if (!level || level.status === LevelStatus.not_tried) {
-      return style.grayStatusBlob;
-    } else if (
-      level.status === LevelStatus.attempted ||
-      level.status === LevelStatus.passed
-    ) {
-      return style.yellowStatusBlob;
-    } else if (
-      level.status === LevelStatus.submitted ||
-      level.status === LevelStatus.perfect ||
-      level.status === LevelStatus.completed_assessment ||
-      level.status === LevelStatus.free_play_complete
-    ) {
-      return style.greenStatusBlob;
-    }
-  };
+  const status = computeBubbleStatus(level);
+  const bubbleColor = STATUS_BUBBLE_COLOR[status];
+  const bubbleText = STATUS_BUBBLE_TEXT[status];
 
-  const bubbleText = () => {
-    if (!level || level.status === LevelStatus.not_tried) {
-      return i18n.notStarted();
-    } else if (
-      level.status === LevelStatus.attempted ||
-      level.status === LevelStatus.passed
-    ) {
-      return i18n.inProgress();
-    } else if (
-      level.status === LevelStatus.submitted ||
-      level.status === LevelStatus.perfect ||
-      level.status === LevelStatus.completed_assessment ||
-      level.status === LevelStatus.free_play_complete
-    ) {
-      return i18n.submitted();
-    } else {
-      return null;
-    }
-  };
-
-  if (bubbleText === null) {
+  if (status === null) {
     return null;
   }
 
   return (
-    <OverlineThreeText className={bubbleColor()}>
-      {bubbleText()}
-    </OverlineThreeText>
+    <OverlineThreeText className={bubbleColor}>{bubbleText}</OverlineThreeText>
   );
 }
 

@@ -121,7 +121,7 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
             onContinue={onContinue}
             targetWidth={1920}
             targetHeight={1080}
-            offerTts={false}
+            offerBrowserTts={false}
             resetOnChange={false}
           />
         </div>

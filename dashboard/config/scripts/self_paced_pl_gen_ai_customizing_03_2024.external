@@ -9,7 +9,7 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/11588e4e069d56245fff291b6204ea16-Screenshot 2024-10-17 at 10.29.38 AM.png" alt="Remember to chat responsibily pop-up" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
 
-#### **While Code.org's content moderation policy reviews both student customizations and chat messages, violations will be flagged accordingly. However, because this is a generative AI tool, we cannot fully predict or guarantee that the chatbot's output will always be free from disruption.**
+#### ⚠️ **While Code.org's content moderation policy reviews both student customizations and chat messages, violations will be flagged accordingly. However, because this is a generative AI tool, we cannot fully predict or guarantee that the chatbot's output will always be free from disruption.**
 
 #### You should emphasize the importance of responsible use when introducing students to AI Chat Lab. Here are a few tips:
 * #### **Encourage Awareness**: Remind students that all interactions with the chatbot are recorded and monitored, ensuring that their conversations remain respectful and on-topic. Any inappropriate messages will be flagged, and consequences may follow.
