@@ -1,6 +1,9 @@
 module OpenaiChatHelper
   OPEN_AI_URL = "https://api.openai.com/v1/chat/completions"
   OPENAI_CHAT_COMPLETION_API_KEY = CDO.openai_chat_completion_api_key
+  # TODO: Remove references to openai_chat_completion_api_key once ai_tutor-named keys are in place
+  OPENAI_AI_TUTOR_API_KEY = CDO.openai_ai_tutor_api_key
+
   TEMPERATURE = 0
   OPENAI_AICHAT_SAFETY_API_KEY = CDO.openai_aichat_safety_api_key
 
