@@ -18,6 +18,8 @@ require_relative '../dashboard/config/environment'
 require_relative '../pegasus/helpers/properties'
 require_relative './cron/upload_to_mapbox'
 
+raise "CDO.mapbox_upload_token is not defined" unless CDO.mapbox_upload_token
+
 # Constants to update for the given year
 AWS_ACCESS_REPORT_DATA_FILE = "access-report-data-files-2024/final-csv/final_csv_2024_09_30.csv"
 ACCESS_REPORT_YEAR = "2024"
