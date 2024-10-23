@@ -46,6 +46,14 @@ export interface IconDropdownProps extends AriaAttributes {
   selectedOption: IconDropdownOption;
   /** IconDropdown onChange handler */
   onChange: (option: IconDropdownOption) => void;
+  /** IconDropdown helper message */
+  helperMessage?: string;
+  /** IconDropdown helper icon */
+  helperIcon?: FontAwesomeV6IconProps;
+  /** IconDropdown error message */
+  errorMessage?: string;
+  /** Style the dropdown as a form field */
+  styleAsFormField?: boolean;
 }
 
 const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
@@ -59,6 +67,10 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
   disabled = false,
   color = dropdownColors.black,
   size = 'm',
+  helperMessage,
+  helperIcon,
+  errorMessage,
+  styleAsFormField = false,
   ...rest
 }) => {
   const {setActiveDropdownName} = useDropdownContext();
@@ -82,6 +94,10 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
       color={color}
       icon={selectedOption?.icon}
       size={size}
+      helperMessage={helperMessage}
+      helperIcon={helperIcon}
+      errorMessage={errorMessage}
+      styleAsFormField={styleAsFormField}
       {...rest}
     >
       <div className={moduleStyles.dropdownMenuContainer}>
