@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Congratulations, you are finished with Module 1!
 
-In this set of Professional Learning Modules, you choose your path to continue learning.  Below are your options from here:
+#### In this set of Professional Learning Modules, you choose your path to continue learning.  Below are your options from here:
 
-1. **Option A:** <a href= "https://studio.code.org/courses/self-paced-pl-csa-2023" >Click here</a> to return to the overview page to select your next module.
+#### 1. **Option A:** <a href= "https://studio.code.org/courses/self-paced-pl-csa-2023" >Click here</a> to return to the overview page to select your next module.
 
-2. **Option B:** Use the table below to navigate directly to the content of your choice.
+#### 2. **Option B:** Use the table below to navigate directly to the content of your choice.
 
 | Module      | Description | Intended Audience     |  Estimated Time  |
 | :---        |    :----   |          :---- |          :--- |
@@ -20,7 +20,7 @@ In this set of Professional Learning Modules, you choose your path to continue l
 
 <br></br>
 
-3. **Option C:** Click the "Continue to next module" button below to move to the next module.
+#### 3. **Option C:** Click the "Continue to next module" button below to move to the next module.
 
 <a class="btn btn-large btn-primary" href="https://studio.code.org/s/self-paced-pl-csa2-2023/lessons/1/levels/1=<user_id/>" rel="noopener noreferrer" style="float:right;">Continue to next module</a>
 

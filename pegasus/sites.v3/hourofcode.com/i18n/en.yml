@@ -1196,7 +1196,7 @@
           overline: "3-5"
           title: "How AI Makes Decisions"
           desc: "Introduce young students to AI and machine learning with hands-on activities using predictive data models. Students will practice making their own predictions and learn about data categorization and sorting."
-          duration: "1 hour"
+          duration_1_week: "1 week"
           button: "Explore unit"
           aria_label: "Explore the How AI Makes Decisions unit"
         humanities:
