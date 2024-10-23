@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {useSelector} from 'react-redux';
 
 import ShareDialogLegacy from '@cdo/apps/code-studio/components/ShareDialog';
@@ -10,6 +10,7 @@ import {
   SubmitProjectState,
   setShowSubmitProjectDialog,
 } from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectRedux';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {LabState} from '../lab2Redux';
 
@@ -21,10 +22,10 @@ import ShareDialog from './dialogs/ShareDialog';
 const Lab2ShareDialogWrapper: React.FunctionComponent<
   Lab2ShareDialogWrapperProps
 > = ({dialogId, shareUrl, finishUrl}) => {
-  const {showShareDialog, showSubmitProjectDialog} = useSelector(
+  const {showSubmitProjectDialog} = useSelector(
     (state: {submitProject: SubmitProjectState}) => state.submitProject
   );
-  console.log('showShareDialog', showShareDialog);
+  const dispatch = useAppDispatch();
   const isProjectLevel =
     useSelector(
       (state: {lab: LabState}) => state.lab.levelProperties?.isProjectLevel
@@ -43,7 +44,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   const is13Plus = useSelector(
     (state: {currentUser: {under13: boolean}}) => !state.currentUser.under13
   );
-  const isOpen = useSelector(
+  const isShareDialogOpen = useSelector(
     (state: {shareDialog: {isOpen: boolean}}) => state.shareDialog.isOpen
   );
 
@@ -60,24 +61,21 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   const isPublished = false;
   const canShareSocial = isSignedIn && is13Plus;
 
+  const onCloseSubmitProjectDialog = useCallback(() => {
+    dispatch(setShowSubmitProjectDialog(false));
+  }, [dispatch]);
+
   if (!channelId || !projectType) {
     return null;
   }
 
   if (LABS_USING_NEW_SHARE_DIALOG.includes(projectType)) {
-    if (!isOpen) {
-      return null;
-    }
-
-    const onClose = () => {
-      console.log('close submit project modal clicked');
-      setShowSubmitProjectDialog(false);
-    };
-
     return (
       <>
-        {showSubmitProjectDialog && <SubmitProjectDialog onClose={onClose} />}
-        {showShareDialog && (
+        {showSubmitProjectDialog && (
+          <SubmitProjectDialog onClose={onCloseSubmitProjectDialog} />
+        )}
+        {isShareDialogOpen && (
           <ShareDialog
             dialogId={dialogId}
             shareUrl={shareUrl}

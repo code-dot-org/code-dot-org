@@ -8,6 +8,7 @@ import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import {ProjectType} from '@cdo/apps/lab2/types';
+import {setShowSubmitProjectDialog} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectRedux';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import trackEvent from '@cdo/apps/util/trackEvent';
@@ -158,6 +159,8 @@ const ShareDialog: React.FunctionComponent<{
               size="m"
               onClick={() => {
                 console.log('submit project');
+                dispatch(hideShareDialog());
+                dispatch(setShowSubmitProjectDialog(true));
               }}
             />
             {finishUrl ? (

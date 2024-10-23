@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import React, {useCallback, useState} from 'react';
 
+import {showShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import {
   BodyTwoText,
@@ -7,13 +8,10 @@ import {
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {submitProject, getSubmissionStatus} from './submitProjectApi';
-import {
-  setShowShareDialog,
-  setShowSubmitProjectDialog,
-} from './submitProjectRedux';
+import {setShowSubmitProjectDialog} from './submitProjectRedux';
 
 import moduleStyles from './submit-project-dialog.module.scss';
 
@@ -34,6 +32,7 @@ const SubmitProjectDialog: React.FunctionComponent<
     state => state.lab.channel?.projectType
   ) as string;
   console.log('channelId projectType', channelId, projectType);
+  const dispatch = useAppDispatch();
 
   const onSubmit = async () => {
     try {
@@ -48,20 +47,15 @@ const SubmitProjectDialog: React.FunctionComponent<
     }
   };
 
-  const onGoBack = async () => {
-    try {
-      console.log('on go back');
-      setShowSubmitProjectDialog(false);
-      setShowShareDialog(true);
-    } catch (error) {
-      console.error('Publish failed', error);
-    }
-  };
+  const onGoBack = useCallback(() => {
+    dispatch(setShowSubmitProjectDialog(false));
+    dispatch(showShareDialog());
+  }, [dispatch]);
 
   return (
     <AccessibleDialog
       onClose={onClose}
-      className={moduleStyles.submitProjectdialog}
+      className={moduleStyles.submitProjectDialog}
     >
       <div className={moduleStyles.headerContainer}>
         <Heading3>Submit to be featured</Heading3>
@@ -86,8 +80,8 @@ const SubmitProjectDialog: React.FunctionComponent<
       </div>
       <hr />
       <div className={moduleStyles.bottomSection}>
-        <Button onClick={onSubmit} color={buttonColors.purple} text="Submit" />
         <Button onClick={onGoBack} color={buttonColors.white} text="Go back" />
+        <Button onClick={onSubmit} type="tertiary" text="Submit" />
       </div>
     </AccessibleDialog>
   );
