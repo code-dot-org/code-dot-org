@@ -31,15 +31,19 @@ export const projectReducer = (
       return newProject;
     }
     case PROJECT_REDUCER_ACTIONS.NEW_FILE: {
-      const {fileName, folderId, contents = ''} = <
+      const {fileName, folderId, contents = '', validationFileId} = <
         DefaultFilePayload & {
           fileName: string;
           contents?: string;
           folderId: FolderId;
+          validationFileId?: string;
         }
       >action.payload;
 
-      const fileId = getNextFileId(Object.values(project.files));
+      const fileId = getNextFileId(
+        Object.values(project.files),
+        validationFileId
+      );
 
       const newProject = {...project, files: {...project.files}};
 

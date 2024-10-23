@@ -47,15 +47,10 @@ export const openNewFilePrompt = async ({
   }
   const fileName = extractUserInput(results);
 
-  const files = Object.values(projectFiles);
-  // The validation file is in the project files in start mode.
-  if (validationFile && !isStartMode) {
-    files.push(validationFile);
-  }
-
   newFile({
     fileName,
     folderId,
+    validationFileId: validationFile?.id,
   });
 
   sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_NEW_FILE);

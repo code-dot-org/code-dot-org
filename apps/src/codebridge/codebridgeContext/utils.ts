@@ -32,8 +32,12 @@ import {
   SetFileTypeFunction,
 } from './types';
 
-export const getNextFileId = (files: ProjectFile[]) => {
-  return String(Math.max(0, ...files.map(f => Number(f.id))) + 1);
+// optionally, we can hand in the validationFileId as the second argument. If it's included, then we'll use that as well
+// when we figure out the next file id. If we're not given one, then just set it to '0' so it doesn't interfere with id generation.
+export const getNextFileId = (files: ProjectFile[], validationFileId = '0') => {
+  return String(
+    Math.max(0, Number(validationFileId), ...files.map(f => Number(f.id))) + 1
+  );
 };
 
 export const getNextFolderId = (folders: ProjectFolder[]) => {

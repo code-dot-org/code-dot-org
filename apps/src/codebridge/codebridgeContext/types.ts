@@ -19,6 +19,7 @@ export type NewFileFunction = (arg: {
   fileName: string;
   folderId?: FolderId;
   contents?: string;
+  validationFileId?: string;
 }) => void;
 export type RenameFileFunction = (fileId: FileId, newName: string) => void;
 export type RenameFolderFunction = (folderId: string, newName: string) => void;
