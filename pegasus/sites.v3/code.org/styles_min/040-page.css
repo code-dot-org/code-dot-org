@@ -836,7 +836,7 @@ swiper-slide {
 /* Video carousel styles */
 .carousel-wrapper.video-carousel swiper-slide {
   display: block;
-  text-align: left;
+  text-align: initial;
 }
 
 .carousel-wrapper.video-carousel .swiper-nav-prev,
