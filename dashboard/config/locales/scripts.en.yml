@@ -19450,3 +19450,12 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        music-jam-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: music-jam-2024
+          title: 'Music Lab: Jam Session'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
