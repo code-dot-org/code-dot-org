@@ -244,26 +244,22 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                   !selectedSection.courseVersionName &&
                   !selectedSection.courseOfferingId
                 }
-                element={applyV1TeacherDashboardWidth(
-                  <TeacherCourseOverview />
-                )}
+                element={<TeacherCourseOverview />}
               />
             }
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.unitOverview}
-            element={applyV1TeacherDashboardWidth(
-              <TeacherUnitOverview key={sectionId} />
-            )}
+            element={<TeacherUnitOverview />}
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.settings}
-            element={applyV1TeacherDashboardWidth(
+            element={
               <SectionsSetUpContainer
                 isUsersFirstSection={false}
                 sectionToBeEdited={selectedSection}
               />
-            )}
+            }
           />
           {showAITutorTab && (
             <Route
