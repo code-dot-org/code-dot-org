@@ -302,11 +302,18 @@ class ProjectsController < ApplicationController
     _, project_id = storage_decrypt_channel_id(params[:channel_id])
     project = Project.find_by(id: project_id)
     status = get_status(channel_id, project_type, project)
-    return render status: :bad_request, json: {error: "Once submitted, a project cannot be submitted again."} if status == SharedConstants::PROJECT_SUBMISSION_STATUS[:ALREADY_SUBMITTED]
-    return render status: :bad_request, json: {error: "This project type is not able to be submitted to the featured project gallery."} if status == SharedConstants::PROJECT_SUBMISSION_STATUS[:PROJECT_TYPE_NOT_ALLOWED]
-    return render status: :forbidden, json: {error: "Submission disabled for user account because non-owner."} if status == SharedConstants::PROJECT_SUBMISSION_STATUS[:NOT_PROJECT_OWNER]
-    return render status: :forbidden, json: {error: "Submission disabled for user account because sharing disabled."} if status == SharedConstants::PROJECT_SUBMISSION_STATUS[:SHARING_DISABLED]
-    return render status: :forbidden, json: {error: "Submission disabled beause project in restricted share mode."} if status == SharedConstants::PROJECT_SUBMISSION_STATUS[:RESTRICTED_SHARE_MODE]
+    case status
+    when SharedConstants::PROJECT_SUBMISSION_STATUS[:ALREADY_SUBMITTED]
+      return render status: :bad_request, json: {error: "Once submitted, a project cannot be submitted again."}
+    when SharedConstants::PROJECT_SUBMISSION_STATUS[:PROJECT_TYPE_NOT_ALLOWED]
+      return render status: :bad_request, json: {error: "This project type is not able to be submitted to the featured project gallery."}
+    when SharedConstants::PROJECT_SUBMISSION_STATUS[:NOT_PROJECT_OWNER]
+      return render status: :forbidden, json: {error: "Submission disabled for user account because non-owner."}
+    when SharedConstants::PROJECT_SUBMISSION_STATUS[:SHARING_DISABLED]
+      return render status: :forbidden, json: {error: "Submission disabled for user account because sharing disabled."}
+    when SharedConstants::PROJECT_SUBMISSION_STATUS[:RESTRICTED_SHARE_MODE]
+      return render status: :forbidden, json: {error: "Submission disabled beause project in restricted share mode."}
+    end
     # Publish the project, i.e., make it public.
     begin
       Projects.new(get_storage_id).publish(channel_id, project_type, current_user)
