@@ -26,12 +26,6 @@ import moduleStyles from './chatWorkspace.module.scss';
 interface ChatWorkspaceProps {
   onClear: () => void;
 }
-interface Students {
-  [index: number]: {
-    id: number;
-    name: string;
-  };
-}
 
 enum WorkspaceTeacherViewTab {
   STUDENT_CHAT_HISTORY = 'viewStudentChatHistory',
@@ -59,9 +53,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const visibleItems = useSelector(selectAllVisibleMessages);
 
-  const students = useSelector(
-    (state: {teacherSections: {selectedStudents: Students}}) =>
-      state.teacherSections.selectedStudents
+  const students = useAppSelector(
+    state => state.teacherSections.selectedStudents
   );
 
   const dispatch = useAppDispatch();
