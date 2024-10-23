@@ -365,7 +365,7 @@ describe('RubricContainer', () => {
       </Provider>
     );
     await wait();
-    deprecatedExpect(queryByText(i18n.runAiAssessment())).to.not.exist;
+    expect(queryByText(i18n.runAiAssessment())).not.toBeInTheDocument();
   });
 
   it('shows status text when student has not attempted level', async () => {
@@ -397,11 +397,11 @@ describe('RubricContainer', () => {
     deprecatedExpect(allFetchStub).to.have.been.called;
     screen.getByText(i18n.aiEvaluationStatus_not_attempted());
     const button = screen.getByRole('button', {name: i18n.runAiAssessment()});
-    deprecatedExpect(button).to.be.disabled;
+    expect(button).toBeDisabled();
 
     // Verify status bubble in student selector
     const dropdownOption = screen.getByText(studentAlice.name).closest('div');
-    deprecatedExpect(dropdownOption.textContent).to.contain(i18n.notStarted());
+    expect(dropdownOption.textContent).toContain(i18n.notStarted());
   });
 
   it('shows status text when level has already been evaluated', async () => {
@@ -435,13 +435,11 @@ describe('RubricContainer', () => {
     deprecatedExpect(allFetchStub).to.have.been.called;
     screen.getByText(i18n.aiEvaluationStatus_already_evaluated());
     const button = screen.getByRole('button', {name: i18n.runAiAssessment()});
-    deprecatedExpect(button).to.be.disabled;
+    expect(button).toBeDisabled();
 
     // Verify status bubble in student selector
     const dropdownOption = screen.getByText(studentAlice.name).closest('div');
-    deprecatedExpect(dropdownOption.textContent).to.contain(
-      i18n.readyToReview()
-    );
+    expect(dropdownOption.textContent).toContain(i18n.readyToReview());
   });
 
   it('allows teacher to run analysis when level has not been evaluated', async () => {
@@ -474,11 +472,11 @@ describe('RubricContainer', () => {
     deprecatedExpect(userFetchStub).to.have.been.called;
     deprecatedExpect(allFetchStub).to.have.been.called;
     const button = screen.getByRole('button', {name: i18n.runAiAssessment()});
-    deprecatedExpect(button).to.not.be.disabled;
+    expect(button).not.toBeDisabled();
 
     // Verify status bubble in student selector
     const dropdownOption = screen.getByText(studentAlice.name).closest('div');
-    deprecatedExpect(dropdownOption.textContent).to.contain(i18n.inProgress());
+    expect(dropdownOption.textContent).toContain(i18n.inProgress());
   });
 
   it('handles running ai assessment', async () => {
@@ -521,10 +519,10 @@ describe('RubricContainer', () => {
 
     // 1. Initial fetch returns a json object that puts AI Status into READY state
     let button = screen.getByRole('button', {name: i18n.runAiAssessment()});
-    deprecatedExpect(button).to.not.be.disabled;
+    expect(button).not.toBeDisabled();
 
     let dropdownOption = screen.getByText(studentAlice.name).closest('div');
-    deprecatedExpect(dropdownOption.textContent).to.contain(i18n.inProgress());
+    expect(dropdownOption.textContent).toContain(i18n.inProgress());
 
     // 2. User clicks button to run analysis
 
@@ -535,7 +533,7 @@ describe('RubricContainer', () => {
     stubFetchEvalStatusForUser(pendingJson);
     fireEvent.click(button);
 
-    //deprecatedExpect amplitude event on click
+    //expect amplitude event on click
     deprecatedExpect(sendEventSpy).to.have.been.calledWith(
       EVENTS.TA_RUBRIC_INDIVIDUAL_AI_EVAL,
       {
@@ -551,7 +549,7 @@ describe('RubricContainer', () => {
     // 3. Fetch returns a json object with puts AI Status into EVALUATION_PENDING state
     deprecatedExpect(stubRunAiEvaluationsForUser).to.have.been.called;
     button = screen.getByRole('button', {name: i18n.runAiAssessment()});
-    deprecatedExpect(button).to.be.disabled;
+    expect(button).toBeDisabled();
     screen.getByText(i18n.aiEvaluationStatus_pending());
 
     stubFetchEvalStatusForUser(runningJson);
@@ -562,7 +560,7 @@ describe('RubricContainer', () => {
 
     // 5. Fetch returns a json object with puts AI Status into EVALUATION_RUNNING state
     button = screen.getByRole('button', {name: i18n.runAiAssessment()});
-    deprecatedExpect(button).to.be.disabled;
+    expect(button).toBeDisabled();
     screen.getByText(i18n.aiEvaluationStatus_in_progress());
 
     stubFetchEvalStatusForUser(successJson);
@@ -574,13 +572,11 @@ describe('RubricContainer', () => {
 
     // 7. Fetch returns a json object with puts AI Status into SUCCESS state
     button = screen.getByRole('button', {name: i18n.runAiAssessment()});
-    deprecatedExpect(button).to.be.disabled;
+    expect(button).toBeDisabled();
     screen.getByText(i18n.aiEvaluationStatus_success());
 
     dropdownOption = screen.getByText(studentAlice.name).closest('div');
-    deprecatedExpect(dropdownOption.textContent).to.contain(
-      i18n.readyToReview()
-    );
+    expect(dropdownOption.textContent).toContain(i18n.readyToReview());
   });
 
   it('renders submitted status blob for unevaluated submission', async () => {
@@ -623,7 +619,7 @@ describe('RubricContainer', () => {
 
     // Verify status bubble for selected student
     let dropdownOption = screen.getByText(studentAlice.name).closest('div');
-    deprecatedExpect(dropdownOption.textContent).to.contain(i18n.submitted());
+    expect(dropdownOption.textContent).toContain(i18n.submitted());
   });
 
   it('renders evaluated status blob when teacher has given feedback', async () => {
@@ -665,7 +661,7 @@ describe('RubricContainer', () => {
 
     // Verify status bubble for selected student
     let dropdownOption = screen.getByText(studentAlice.name).closest('div');
-    deprecatedExpect(dropdownOption.textContent).to.contain(i18n.evaluated());
+    expect(dropdownOption.textContent).toContain(i18n.evaluated());
   });
 
   it('shows general error message for status 1000', async () => {
@@ -876,11 +872,11 @@ describe('RubricContainer', () => {
 
     deprecatedExpect(userFetchStub).to.have.been.called;
     deprecatedExpect(allFetchStub).to.have.been.called;
-    deprecatedExpect(screen.queryByTestId('info-alert')).not.to.exist;
+    expect(screen.queryByTestId('info-alert')).not.toBeInTheDocument();
     const button = screen.getByRole('button', {
       name: 'Run AI Assessment for Project',
     });
-    deprecatedExpect(button).not.to.be.disabled;
+    expect(button).not.toBeDisabled();
   });
 
   it('shows error on initial load for status 1005', async () => {
@@ -927,7 +923,7 @@ describe('RubricContainer', () => {
     const button = screen.getByRole('button', {
       name: 'Run AI Assessment for Project',
     });
-    deprecatedExpect(button).to.be.disabled;
+    expect(button).toBeDisabled();
   });
 
   // react testing library
@@ -964,7 +960,7 @@ describe('RubricContainer', () => {
 
     const newPosition = element.style.transform;
 
-    deprecatedExpect(newPosition).to.not.equal(initialPosition);
+    expect(newPosition).not.toEqual(initialPosition);
   });
 
   it('sends event when window is dragged', async function () {
@@ -1096,11 +1092,10 @@ describe('RubricContainer', () => {
       </Provider>
     );
 
-    await waitFor(
-      () =>
-        deprecatedExpect(
-          queryByText('Getting Started with Your AI Teaching Assistant')
-        ).to.exist
+    await waitFor(() =>
+      expect(
+        queryByText('Getting Started with Your AI Teaching Assistant')
+      ).toBeInTheDocument()
     );
   });
 
@@ -1125,9 +1120,9 @@ describe('RubricContainer', () => {
     );
 
     await wait();
-    deprecatedExpect(
+    expect(
       queryByText('Getting Started with Your AI Teaching Assistant')
-    ).to.not.exist;
+    ).not.toBeInTheDocument();
   });
 
   it('does not display product tour when on non-assessment level', async function () {
@@ -1151,9 +1146,9 @@ describe('RubricContainer', () => {
     );
 
     await wait();
-    deprecatedExpect(
+    expect(
       queryByText('Getting Started with Your AI Teaching Assistant')
-    ).to.not.exist;
+    ).not.toBeInTheDocument();
   });
 
   it('does not display product tour when on non-AI level', async function () {
@@ -1177,9 +1172,9 @@ describe('RubricContainer', () => {
     );
 
     await wait();
-    deprecatedExpect(
+    expect(
       queryByText('Getting Started with Your AI Teaching Assistant')
-    ).to.not.exist;
+    ).not.toBeInTheDocument();
   });
 
   it('sends event when tour is started for the first time', async function () {
@@ -1370,9 +1365,9 @@ describe('RubricContainer', () => {
     tourFabBg.scrollBy = jest.fn();
     await wait();
 
-    deprecatedExpect(
+    expect(
       queryByText('Getting Started with Your AI Teaching Assistant')
-    ).to.not.exist;
+    ).not.toBeInTheDocument();
 
     const element = await findByRole('button', {name: 'restart product tour'});
     fireEvent.click(element);
@@ -1387,7 +1382,7 @@ describe('RubricContainer', () => {
 
   it('sanitizes all intro text rendered by introjs', () => {
     STEPS.forEach((step, index) => {
-      deprecatedExpect(typeof step.intro).to.equal(
+      expect(typeof step.intro).toEqual(
         'object',
         `STEP[${index}].intro should be wrapped in a react component or a call to sanitize(): ${step.intro}`
       );
