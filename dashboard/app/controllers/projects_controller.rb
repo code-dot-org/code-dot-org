@@ -277,16 +277,17 @@ class ProjectsController < ApplicationController
     project_type = params[:project_type]
     channel_id = params[:channel_id]
     submission_description = params[:submissionDescription]
-    puts "submission_description #{submission_description}"
     return render status: :bad_request, json: {error: "Project description is required for submission."} if submission_description.empty?
-    return head :forbidden unless current_user
-
-    bad_request unless SharedConstants::ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    return render(status: :forbidden, json: {error: "Sharing disabled for user account."}) if current_user.sharing_disabled? && SharedConstants::CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    return render(status: :forbidden, json: {error: "Project in restricted share mode"}) if Projects.in_restricted_share_mode(channel_id, project_type)
+    _, project_id = storage_decrypt_channel_id(params[:channel_id])
+    project = Project.find_by(id: project_id)
+    current_submission_description = JSON.parse(project.value)["submissionDescription"]
+    return render status: :bad_request, json: {error: "Once submitted, a project cannot be submitted again."} if current_submission_description
+    return render status: :forbidden, json: {error: "Sharing disabled for user account."} unless current_user
+    return render status: :bad_request, json: {error: "This project type is not able to be submitted to the featured project gallery."} unless SharedConstants::ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
+    return render status: :forbidden, json: {error: "Sharing disabled for user account."} if current_user.sharing_disabled? && SharedConstants::CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
+    return render status: :forbidden, json: {error: "Project in restricted share mode"} if Projects.in_restricted_share_mode(channel_id, project_type)
     # Publish the project, i.e., make it public.
     begin
-      _, project_id = storage_decrypt_channel_id(params[:channel_id])
       Projects.new(get_storage_id).publish(channel_id, project_type, current_user)
     rescue Projects::PublishError => exception
       return render(status: :forbidden, json: {error: exception.message})
@@ -301,9 +302,6 @@ class ProjectsController < ApplicationController
       publishedAt: rails_project[:published_at],
     )
     rails_project.update! value: project_value.to_json
-    rails_project = Project.find_by(id: project_id)
-    project_value = JSON.parse(rails_project.value)
-    puts "after update project_value #{project_value}"
   end
 
   # GET /projects/featured
