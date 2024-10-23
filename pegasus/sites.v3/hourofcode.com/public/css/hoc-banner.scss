@@ -13,11 +13,6 @@
 section.banner.homepage {
   padding-bottom: 4rem;
 
-  h1 {
-    font-size: 3rem;
-    margin-block: 0 1rem;
-  }
-
   h2 {
     font-weight: 400;
   }
@@ -110,6 +105,15 @@ section.banner {
 
   h1, p {
     color: var(--neutral_dark);
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-block: 0 1rem;
+  }
+
+  p {
+    margin-bottom: 0;
   }
 
   figure {
