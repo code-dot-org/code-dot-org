@@ -20,6 +20,7 @@ import {LayoutState} from '@cdo/apps/redux/layout';
 import {LocaleState} from '@cdo/apps/redux/localesRedux';
 import {MapboxState} from '@cdo/apps/redux/mapbox';
 import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
+import {SubmitProjectState} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectRedux';
 
 import {BlocklyState} from '../redux/blockly';
 
@@ -51,4 +52,5 @@ export interface RootState {
   predictLevel: PredictLevelState;
   progress: ProgressState;
   calendar: CalendarState;
+  submitProject: SubmitProjectState;
 }
