@@ -3466,7 +3466,8 @@ $width: 400px;
   }
 }
 
-#environment_tag {
+#environment_tag,
+#geolocation_tag {
   position: fixed;
   top: 0;
   right: 0;
@@ -3476,6 +3477,11 @@ $width: 400px;
   z-index: 100;
   cursor: pointer;
   box-shadow: 0 0 7px 2px $shadow;
+}
+
+#assumed_identity_tag ~ #geolocation_tag,
+#environment_tag ~ #geolocation_tag {
+  top: 12px;
 }
 
 #instructor_in_training_tag {

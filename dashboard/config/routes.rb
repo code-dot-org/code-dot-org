@@ -302,6 +302,8 @@ Dashboard::Application.routes.draw do
     get "projects(/script/:script_id)(/script_level/:script_level_id)/level/:level_id(/user/:user_id)", to: 'projects#get_or_create_for_level'
 
     post '/locale', to: 'home#set_locale', as: 'locale'
+    get '/geolocate', to: 'home#geolocate'
+    get '/geolocate/*ip', to: 'home#set_geolocation_override', constraints: {ip: /[^\/]+/}
 
     # quick links for cartoon network arabic
     get '/flappy/lang/ar', to: 'home#set_locale', as: 'flappy/lang/ar', locale: 'ar-SA', user_return_to: '/flappy/1'
