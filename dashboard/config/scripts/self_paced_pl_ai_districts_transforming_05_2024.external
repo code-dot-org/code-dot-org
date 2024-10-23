@@ -3,82 +3,41 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Practice
+# Using AI as an Educator
 
-#### AI offers a vast array of capabilities, and this module presents a chance to discover how it can serve as a time-saving ally in routine teaching duties. You will practice using AI to assist with one of the following tasks:
-* #### Writing a parent email
-* #### Writing a lesson plan
-* #### Writing a formative assessment
+#### AI offers a vast array of capabilities, and including saving time in routine teaching duties. Here is a list of a few examples from teachers who have leveraged AI to enhance their teaching practices.
 
-#### Now it’s your turn. Keep in mind that this technology is changing rapidly, so your experience might be slightly different than what you saw in the videos. For example, Bard is now Gemini and Bing is now Copilot. It’ll look a bit different from the videos, but it has similar functionality.
+* #### “Compose emails to parents, proofread emails, assist in writing tests…”
+* #### “Write lessons, create quizzes and to rewrite the standards into grade level language for my students and their parents.”
+* #### “Help formulate writing rubrics for my English classes.”
+* #### “...Create a lesson plan outline or formulate questions.”
+* #### “...to help teach lessons that I have taught in the past but add more hands-on learning!”
 
-#### Feel free to use a different LLM than the one shown in the video. We recommend <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>, but the choice is up to you.
+## Practice
 
-## Educator’s Choice
+#### Use <a href="https://chat.openai.com/" target="_blank">ChatGPT</a> to write all or part of a lesson plan.
 
-#### Now that you have watched the tutorial on the previous level, select the task that you would most like AI help you with. 
+#### Try out this starter prompt, and then modify it from there: 
 
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">Writing a Parent Email</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-    <p>
-
-#### **To Do:** 
-#### Use an LLM to write an email that you would send to a parent.
-* #### Here are some example scenarios, but feel free to choose something more relevant to you!
-* #### Introduction at the start of the school year
-* #### Template student progress update
-* #### Invitation to parent-teacher conference
-* #### Classroom volunteer request
+##### "Create a detailed introduction for a 7th-grade science lesson on photosynthesis. This introduction should engage students by connecting the topic to real-life examples, explain the importance of photosynthesis, and outline the key concepts that will be covered in the lesson. Include a brief interactive activity to assess prior knowledge and stimulate interest."
 
 <br>
 
-#### **Take it Further:** 
-#### Get the LLM to be critical of what it wrote. See what sort of feedback you get and decide whether or not you want to incorporate the feedback given.
-
-</p></div>
-</details>
-
-
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">Writing a Lesson Plan</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🚀 Want to Learn More?</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
+    
 
-#### **To Do:** 
-#### Use an LLM to write all or part of a lesson plan.
-#### Bonus points if you use this as an opportunity to work AI into the lesson plan itself!
-
-<br>
-
-#### **Take it Further:** 
-#### Use an LLM to generate one part of the lesson. For example, you can use Copilot to find an article or video related to the topic.
-
-</p></div>
-</details>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">Writing a Formative Assessment</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-    <p>
-
-#### **To Do:** 
-#### Use an LLM to help you write a formative assessment you could use with students in the upcoming weeks.
-#### Don’t forget to make an answer sheet as well.
-
-<br>
-
-#### **Take it Further:** 
-#### See if the LLM can generate possible areas of struggle and next steps for those areas.
-
-</p></div>
-</details>
-
-## Tips and Tricks
+### Prompting Tips and Tricks:
 * #### When you’re prompting the AI don’t just stop after the first prompt! Keep asking it more questions and diving deeper.
 * #### For more accurate and helpful responses, try to be as detailed as possible in your requests. The more context you provide, the better LLMs can tailor their answers to your needs.
 * #### Don’t forget to use the feedback mechanisms to improve your experience. Whether it’s clarifying misunderstandings, asking for further details, or simply exploring different approaches, your interactions can help guide the conversation to more effectively meet your goals.
-* #### Keep your critical thinking cap on. Don’t trust the AI at face value. We’ll learn more about AI and misinformation in a future module, but for now use your better judgment and fact check anything that maybe doesn’t sound right. 
+* #### Keep your critical thinking cap on. Don’t trust the AI at face value. We’ll learn more about AI and misinformation in a future module, but for now use your better judgment and fact check anything that maybe doesn’t sound right.
+
+#### Check out <a href="https://docs.google.com/presentation/d/1WXvjG9TscUuH5Xz8Pj2okz6lMIKV__g0v6AoYVXKb40/copy" target="_blank">Large Language Model Prompts for Educators</a>, by Code.org for more ways to level-up your prompting skills.
+</p></div>
+</details>
+
 
 MARKDOWN
