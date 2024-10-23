@@ -278,32 +278,32 @@ class ProjectsController < ApplicationController
     channel_id = params[:channel_id]
     submission_description = params[:submissionDescription]
     puts "submission_description #{submission_description}"
+    return render status: :bad_request, json: {error: "Project description is required for submission."} if submission_description.empty?
     return head :forbidden unless current_user
 
     bad_request unless SharedConstants::ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    forbidden('Sharing disabled for user account') if current_user.sharing_disabled? && SharedConstants::CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    forbidden('Project in restricted share mode') if Projects.in_restricted_share_mode(channel_id, project_type)
-
+    return render(status: :forbidden, json: {error: "Sharing disabled for user account."}) if current_user.sharing_disabled? && SharedConstants::CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
+    return render(status: :forbidden, json: {error: "Project in restricted share mode"}) if Projects.in_restricted_share_mode(channel_id, project_type)
+    # Publish the project, i.e., make it public.
     begin
-      # Publish the project, i.e., make it public.
       _, project_id = storage_decrypt_channel_id(params[:channel_id])
       Projects.new(get_storage_id).publish(channel_id, project_type, current_user)
-      # Update the submission_description and submission_declined.
-      rails_project = Project.find_by(id: project_id)
-      project_value = JSON.parse(rails_project.value)
-      project_value.merge!(
-        submissionDescription: submission_description,
-        submissionDeclined: false,
-        updatedAt: DateTime.now.to_s,
-        publishedAt: rails_project[:published_at],
-      )
-      rails_project.update! value: project_value.to_json
-      rails_project = Project.find_by(id: project_id)
-      project_value = JSON.parse(rails_project.value)
-      puts "after update project_value #{project_value}"
     rescue Projects::PublishError => exception
-      forbidden(exception.message)
+      return render(status: :forbidden, json: {error: exception.message})
     end
+    # Update the submission_description and submission_declined.
+    rails_project = Project.find_by(id: project_id)
+    project_value = JSON.parse(rails_project.value)
+    project_value.merge!(
+      submissionDescription: submission_description,
+      submissionDeclined: false,
+      updatedAt: DateTime.now.to_s,
+      publishedAt: rails_project[:published_at],
+    )
+    rails_project.update! value: project_value.to_json
+    rails_project = Project.find_by(id: project_id)
+    project_value = JSON.parse(rails_project.value)
+    puts "after update project_value #{project_value}"
   end
 
   # GET /projects/featured
