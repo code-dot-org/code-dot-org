@@ -137,11 +137,9 @@ class Projects
     raise NotFound, "channel `#{channel_id}` not found" if project_query_result.empty?
 
     rails_project = get_rails_project(project_id)
-    if rails_project.apply_project_age_publish_limits?
-      raise PublishError, "User too new to publish channel `#{channel_id}`" unless rails_project.owner_existed_long_enough_to_publish?
-      raise PublishError, "Project too new to publish channel `#{channel_id}`" unless rails_project.existed_long_enough_to_publish?
-    end
-
+    # This exceptions defined in apply_project_age_publish_limits are no longer applied.
+    raise PublishError, "User too new to publish channel `#{channel_id}`" unless rails_project.owner_existed_long_enough_to_publish?
+    raise PublishError, "Project too new to publish channel `#{channel_id}`" unless rails_project.existed_long_enough_to_publish?
     project_query_result.update(row)
 
     project = @table.where(id: project_id).first
