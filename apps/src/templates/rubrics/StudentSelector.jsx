@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -30,6 +31,8 @@ function StudentSelector({
   reloadOnChange,
   reportingData,
   sectionId,
+  hasTeacherFeedbackMap,
+  aiEvalStatusMap,
 
   //from redux
   students,
@@ -95,8 +98,10 @@ function StudentSelector({
                           .concat('', '...')
                     : `${student.name}`}
                 </BodyThreeText>
-                {!!levelsWithProgress && (
+                {!!levelsWithProgress && aiEvalStatusMap && (
                   <StudentProgressStatus
+                    aiEvalStatus={aiEvalStatusMap[student.id]}
+                    hasTeacherFeedback={hasTeacherFeedbackMap[student.id]}
                     level={levelsWithProgress.find(
                       userLevel => student.id === userLevel.userId
                     )}
@@ -117,6 +122,8 @@ StudentSelector.propTypes = {
   reloadOnChange: PropTypes.bool,
   sectionId: PropTypes.number,
   reportingData: reportingDataShape,
+  hasTeacherFeedbackMap: PropTypes.object,
+  aiEvalStatusMap: PropTypes.object,
 
   //from redux
   students: PropTypes.arrayOf(
@@ -146,16 +153,20 @@ export default connect(
 const STATUS_BUBBLE_COLOR = {
   NOT_STARTED: style.grayStatusBlob,
   IN_PROGRESS: style.yellowStatusBlob,
-  SUBMITTED: style.greenStatusBlob,
+  SUBMITTED: style.purpleStatusBlob,
+  READY_TO_REVIEW: style.redStatusBlob,
+  EVALUATED: style.greenStatusBlob,
 };
 
 const STATUS_BUBBLE_TEXT = {
   NOT_STARTED: i18n.notStarted(),
   IN_PROGRESS: i18n.inProgress(),
   SUBMITTED: i18n.submitted(),
+  READY_TO_REVIEW: i18n.readyToReview(),
+  EVALUATED: i18n.evaluated(),
 };
 
-const computeBubbleStatus = level => {
+const computeLevelStatus = level => {
   if (!level || level.status === LevelStatus.not_tried) {
     return 'NOT_STARTED';
   } else if (
@@ -175,8 +186,21 @@ const computeBubbleStatus = level => {
   }
 };
 
-function StudentProgressStatus({level}) {
-  const status = computeBubbleStatus(level);
+function computeBubbleStatus(level, aiEvalStatus, hasTeacherFeedback) {
+  if (hasTeacherFeedback) {
+    return 'EVALUATED';
+  }
+  if (aiEvalStatus === 'READY_TO_REVIEW') {
+    return aiEvalStatus;
+  }
+  if (computeLevelStatus(level) === 'SUBMITTED') {
+    return 'SUBMITTED';
+  }
+  return aiEvalStatus;
+}
+
+function StudentProgressStatus({level, aiEvalStatus, hasTeacherFeedback}) {
+  const status = computeBubbleStatus(level, aiEvalStatus, hasTeacherFeedback);
   const bubbleColor = STATUS_BUBBLE_COLOR[status];
   const bubbleText = STATUS_BUBBLE_TEXT[status];
 
@@ -184,11 +208,14 @@ function StudentProgressStatus({level}) {
     return null;
   }
 
+  const classes = classnames('uitest-student-progress-status', bubbleColor);
   return (
-    <OverlineThreeText className={bubbleColor}>{bubbleText}</OverlineThreeText>
+    <OverlineThreeText className={classes}>{bubbleText}</OverlineThreeText>
   );
 }
 
 StudentProgressStatus.propTypes = {
   level: levelWithProgress,
+  aiEvalStatus: PropTypes.string,
+  hasTeacherFeedback: PropTypes.bool,
 };

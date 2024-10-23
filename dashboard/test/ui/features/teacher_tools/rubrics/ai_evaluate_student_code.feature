@@ -50,6 +50,7 @@ Feature: Evaluate student code against rubrics using AI
     Then element ".uitest-learning-goal-title" contains text "Sprites"
     And I wait until element ".uitest-ai-assessment" is visible
     Then element ".uitest-ai-assessment" contains text "Aiden has achieved Extensive or Convincing Evidence"
+    And element ".uitest-student-progress-status" contains text "Ready to review"
 
   Scenario: Student code is evaluated by AI when teacher requests individual evaluation
     Given I create an authorized teacher-associated student named "Aiden"
@@ -84,22 +85,24 @@ Feature: Evaluate student code against rubrics using AI
     #Then I verify progress in the header of the current page is "attempted_assessment" for level 2
     And element "#ui-floatingActionButton" is visible
 
-    # Teacher views AI evaluation status in settings tab
+    # Teacher views AI evaluation status
     When I click selector "#ui-floatingActionButton"
     And I wait until element "#uitest-rubric-content" is visible
     And I wait until element ".uitest-run-ai-assessment" is enabled
+    And element ".uitest-student-progress-status" contains text "In progress"
 
     # Teacher runs AI evaluation
     When I click selector ".uitest-run-ai-assessment"
     Then I wait until element ".uitest-rubric-tab-buttons .__react_component_tooltip" contains text "AI analysis complete."
 
-    # Teacher views AI evaluation results in rubric tab
+    # Teacher views AI evaluation results
     And I wait until element "#uitest-next-goal" is visible
     And I click selector "#uitest-next-goal"
     And I wait until element ".uitest-learning-goal-title" is visible
     Then element ".uitest-learning-goal-title" contains text "Sprites"
     And I wait until element ".uitest-ai-assessment" is visible
     Then element ".uitest-ai-assessment" contains text "Aiden has achieved Extensive or Convincing Evidence"
+    And element ".uitest-student-progress-status" contains text "Ready to review"
 
   Scenario: Student code is evaluated by AI when teacher requests evaluation for entire class
     Given I create an authorized teacher-associated student named "Aiden"
@@ -134,10 +137,11 @@ Feature: Evaluate student code against rubrics using AI
     #Then I verify progress in the header of the current page is "attempted_assessment" for level 2
     And element "#ui-floatingActionButton" is visible
 
-    # Teacher views AI evaluation status in settings tab
+    # Teacher views AI evaluation status
     When I click selector "#ui-floatingActionButton"
     And I wait until element "#uitest-rubric-content" is visible
     And I wait until element ".uitest-run-ai-assessment" is enabled
+    And element ".uitest-student-progress-status" contains text "In progress"
 
     # Teacher switches to Class Management tab
     When I click selector "button:contains('Class Data')"
@@ -157,3 +161,4 @@ Feature: Evaluate student code against rubrics using AI
     Then I wait until element ".uitest-learning-goal-title" contains text "Sprites"
     And I wait until element ".uitest-ai-assessment" is visible
     Then element ".uitest-ai-assessment" contains text "Aiden has achieved Extensive or Convincing Evidence"
+    And element ".uitest-student-progress-status" contains text "Ready to review"

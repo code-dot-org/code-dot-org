@@ -261,6 +261,9 @@ class RubricsController < ApplicationController
     last_attempt_evaluated_count = 0
     pending_count = 0
 
+    # map from user to evaluation status
+    student_to_ai_status_map = {}
+
     user_ids = Section.find_by(id: section_id).followers.pluck(:student_user_id)
     user_ids.each do |user_id|
       @user = User.find(user_id)
@@ -280,6 +283,11 @@ class RubricsController < ApplicationController
       attempted_count += 1 if !!attempted
       last_attempt_evaluated_count += 1 if last_attempt_evaluated
       pending_count += 1 if is_pending
+
+      student_to_ai_status_map[user_id] = compute_student_ai_status(
+        attempted: attempted,
+        last_attempt_evaluated: last_attempt_evaluated,
+      )
     end
     render json: {
       notAttemptedCount: user_ids.length - attempted_count,
@@ -287,7 +295,8 @@ class RubricsController < ApplicationController
       attemptedUnevaluatedCount: attempted_unevaluated_count,
       lastAttemptEvaluatedCount: last_attempt_evaluated_count,
       pendingCount: pending_count,
-      csrfToken: form_authenticity_token
+      csrfToken: form_authenticity_token,
+      aiEvalStatusMap: student_to_ai_status_map
     }
   end
 
@@ -360,5 +369,17 @@ class RubricsController < ApplicationController
     )
     return nil unless channel_token
     channel_token.channel
+  end
+
+  private def compute_student_ai_status(attempted:, last_attempt_evaluated:)
+    if attempted
+      if last_attempt_evaluated
+        return 'READY_TO_REVIEW'
+      else
+        return 'IN_PROGRESS'
+      end
+    else
+      'NOT_STARTED'
+    end
   end
 end

@@ -6,7 +6,9 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
+import teacherPanel, {
+  setLevelsWithProgress,
+} from '@cdo/apps/code-studio/teacherPanelRedux';
 import * as utils from '@cdo/apps/code-studio/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -19,10 +21,13 @@ import {
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {STEPS} from '@cdo/apps/templates/rubrics/productTourHelpers';
 import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import teacherSections, {
+  setStudentsForCurrentSection,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   RubricAiEvaluationLimits,
   RubricAiEvaluationStatus,
+  LevelStatus,
 } from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -36,12 +41,32 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
 
 fetch.mockIf(/\/rubrics\/.*/, JSON.stringify(''));
 
+const studentAlice = {id: 11, name: 'Alice'};
+const sectionId = 999;
+const levelNotTried = {
+  id: '123',
+  assessment: null,
+  contained: false,
+  paired: false,
+  partnerNames: null,
+  partnerCount: null,
+  isConceptLevel: false,
+  levelNumber: 4,
+  passed: false,
+  status: LevelStatus.not_tried,
+};
+const levelSubmitted = {
+  ...levelNotTried,
+  status: LevelStatus.submitted,
+};
+
 describe('RubricContainer', () => {
   let clock;
   let store;
   let fetchStub;
   let ajaxStub;
   let sendEventSpy;
+  let students, levelsWithProgress;
 
   async function wait() {
     for (let _ = 0; _ < 10; _++) {
@@ -111,6 +136,10 @@ describe('RubricContainer', () => {
     stubRedux();
     registerReducers({teacherSections, teacherPanel, currentUser});
     store = getStore();
+
+    // set default values to be dispatched via redux
+    students = [studentAlice];
+    levelsWithProgress = [{...levelNotTried, userId: studentAlice.id}];
   });
 
   afterEach(() => {
@@ -135,6 +164,9 @@ describe('RubricContainer', () => {
     attemptedCount: 0,
     attemptedUnevaluatedCount: 1,
     csrfToken: 'abcdef',
+    aiEvalStatusMap: {
+      11: 'NOT_STARTED',
+    },
   };
 
   const readyJson = {
@@ -148,6 +180,9 @@ describe('RubricContainer', () => {
     attemptedCount: 1,
     attemptedUnevaluatedCount: 1,
     csrfToken: 'abcdef',
+    aiEvalStatusMap: {
+      11: 'IN_PROGRESS',
+    },
   };
 
   const pendingJson = {
@@ -175,6 +210,9 @@ describe('RubricContainer', () => {
     attemptedCount: 1,
     attemptedUnevaluatedCount: 0,
     csrfToken: 'abcdef',
+    aiEvalStatusMap: {
+      11: 'READY_TO_REVIEW',
+    },
   };
 
   const defaultRubric = {
@@ -222,7 +260,22 @@ describe('RubricContainer', () => {
     },
   ];
 
-  const defaultStudentInfo = {user_id: 1, name: 'Jane Doe'};
+  const oneEval = [
+    {
+      user_name: studentAlice.name,
+      user_id: studentAlice.id,
+      eval: [
+        {
+          feedback: '',
+          id: studentAlice.id,
+          learning_goal_id: 1587,
+          understanding: 0,
+        },
+      ],
+    },
+  ];
+
+  const defaultStudentInfo = {user_id: 11, name: 'Alice'};
 
   const mockAiEvaluations = [
     {id: 2, learning_goal_id: 2, understanding: 0, aiConfidencePassFail: 2},
@@ -372,8 +425,12 @@ describe('RubricContainer', () => {
     const allFetchStub = stubFetchEvalStatusForAll(notAttemptedJsonAll);
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
+    stubFetchTourStatus({seen: true});
 
-    const wrapper = mount(
+    store.dispatch(setStudentsForCurrentSection(sectionId, students));
+    store.dispatch(setLevelsWithProgress(levelsWithProgress));
+
+    render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -387,11 +444,16 @@ describe('RubricContainer', () => {
       </Provider>
     );
     await wait();
-    wrapper.update();
+
     expect(userFetchStub).to.have.been.called;
     expect(allFetchStub).to.have.been.called;
-    expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_not_attempted());
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
+    screen.getByText(i18n.aiEvaluationStatus_not_attempted());
+    const button = screen.getByRole('button', {name: i18n.runAiAssessment()});
+    expect(button).to.be.disabled;
+
+    // Verify status bubble in student selector
+    const dropdownOption = screen.getByText(studentAlice.name).closest('div');
+    expect(dropdownOption.textContent).to.contain(i18n.notStarted());
   });
 
   it('shows status text when level has already been evaluated', async () => {
@@ -399,8 +461,12 @@ describe('RubricContainer', () => {
     const allFetchStub = stubFetchEvalStatusForAll(successJsonAll);
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTourStatus({seen: true});
 
-    const wrapper = mount(
+    store.dispatch(setStudentsForCurrentSection(sectionId, students));
+    store.dispatch(setLevelsWithProgress(levelsWithProgress));
+
+    render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -417,13 +483,15 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
-    wrapper.update();
     expect(userFetchStub).to.have.been.called;
     expect(allFetchStub).to.have.been.called;
-    expect(wrapper.text()).to.include(
-      i18n.aiEvaluationStatus_already_evaluated()
-    );
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
+    screen.getByText(i18n.aiEvaluationStatus_already_evaluated());
+    const button = screen.getByRole('button', {name: i18n.runAiAssessment()});
+    expect(button).to.be.disabled;
+
+    // Verify status bubble in student selector
+    const dropdownOption = screen.getByText(studentAlice.name).closest('div');
+    expect(dropdownOption.textContent).to.contain(i18n.readyToReview());
   });
 
   it('allows teacher to run analysis when level has not been evaluated', async () => {
@@ -431,8 +499,12 @@ describe('RubricContainer', () => {
     const allFetchStub = stubFetchEvalStatusForAll(readyJsonAll);
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
+    stubFetchTourStatus({seen: true});
 
-    const wrapper = mount(
+    store.dispatch(setStudentsForCurrentSection(sectionId, students));
+    store.dispatch(setLevelsWithProgress(levelsWithProgress));
+
+    render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -449,10 +521,14 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
-    wrapper.update();
     expect(userFetchStub).to.have.been.called;
     expect(allFetchStub).to.have.been.called;
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.false;
+    const button = screen.getByRole('button', {name: i18n.runAiAssessment()});
+    expect(button).to.not.be.disabled;
+
+    // Verify status bubble in student selector
+    const dropdownOption = screen.getByText(studentAlice.name).closest('div');
+    expect(dropdownOption.textContent).to.contain(i18n.inProgress());
   });
 
   it('handles running ai assessment', async () => {
@@ -473,7 +549,10 @@ describe('RubricContainer', () => {
     stubFetchAiEvaluations([]);
     stubFetchTourStatus({seen: true});
 
-    const wrapper = mount(
+    store.dispatch(setStudentsForCurrentSection(sectionId, students));
+    store.dispatch(setLevelsWithProgress(levelsWithProgress));
+
+    render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -481,6 +560,7 @@ describe('RubricContainer', () => {
           teacherHasEnabledAi={true}
           currentLevelName={'test_level'}
           reportingData={{}}
+          sectionId={42}
           open
         />
       </Provider>
@@ -490,8 +570,11 @@ describe('RubricContainer', () => {
     await wait();
 
     // 1. Initial fetch returns a json object that puts AI Status into READY state
-    wrapper.update();
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.false;
+    let button = screen.getByRole('button', {name: i18n.runAiAssessment()});
+    expect(button).to.not.be.disabled;
+
+    let dropdownOption = screen.getByText(studentAlice.name).closest('div');
+    expect(dropdownOption.textContent).to.contain(i18n.inProgress());
 
     // 2. User clicks button to run analysis
 
@@ -500,7 +583,7 @@ describe('RubricContainer', () => {
       .withArgs(sinon.match(/rubrics\/\d+\/run_ai_evaluations_for_user$/))
       .returns(Promise.resolve(new Response(JSON.stringify({}))));
     stubFetchEvalStatusForUser(pendingJson);
-    wrapper.find('Button').at(0).simulate('click');
+    fireEvent.click(button);
 
     //expect amplitude event on click
     expect(sendEventSpy).to.have.been.calledWith(
@@ -514,23 +597,23 @@ describe('RubricContainer', () => {
     // Wait for fetches and re-render
     clock.tick(5000);
     await wait();
-    wrapper.update();
 
     // 3. Fetch returns a json object with puts AI Status into EVALUATION_PENDING state
     expect(stubRunAiEvaluationsForUser).to.have.been.called;
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
-    expect(wrapper.text()).include(i18n.aiEvaluationStatus_pending());
+    button = screen.getByRole('button', {name: i18n.runAiAssessment()});
+    expect(button).to.be.disabled;
+    screen.getByText(i18n.aiEvaluationStatus_pending());
 
     stubFetchEvalStatusForUser(runningJson);
 
     // 4. Move clock forward 5 seconds and re-render
     clock.tick(5000);
     await wait();
-    wrapper.update();
 
     // 5. Fetch returns a json object with puts AI Status into EVALUATION_RUNNING state
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
-    expect(wrapper.text()).include(i18n.aiEvaluationStatus_in_progress());
+    button = screen.getByRole('button', {name: i18n.runAiAssessment()});
+    expect(button).to.be.disabled;
+    screen.getByText(i18n.aiEvaluationStatus_in_progress());
 
     stubFetchEvalStatusForUser(successJson);
     stubFetchAiEvaluations(mockAiEvaluations);
@@ -538,14 +621,99 @@ describe('RubricContainer', () => {
     // 6. Move clock forward 5 seconds and re-render
     clock.tick(5000);
     await wait();
-    wrapper.update();
 
     // 7. Fetch returns a json object with puts AI Status into SUCCESS state
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
-    expect(wrapper.text()).include(i18n.aiEvaluationStatus_success());
-    expect(wrapper.find('RubricContent').props().aiEvaluations).to.eql(
-      mockAiEvaluations
+    button = screen.getByRole('button', {name: i18n.runAiAssessment()});
+    expect(button).to.be.disabled;
+    screen.getByText(i18n.aiEvaluationStatus_success());
+
+    dropdownOption = screen.getByText(studentAlice.name).closest('div');
+    expect(dropdownOption.textContent).to.contain(i18n.readyToReview());
+  });
+
+  it('renders submitted status blob for unevaluated submission', async () => {
+    const statusAll = {
+      attemptedCount: 1,
+      attemptedUnevaluatedCount: 0,
+      csrfToken: 'abcdef',
+      aiEvalStatusMap: {
+        [studentAlice.id]: 'IN_PROGRESS',
+      },
+    };
+
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(statusAll);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchAiEvaluations([]);
+    stubFetchTourStatus({seen: true});
+
+    // the level has been submitted by Alice
+    store.dispatch(setStudentsForCurrentSection(sectionId, students));
+    levelsWithProgress = [{...levelSubmitted, userId: studentAlice.id}];
+    store.dispatch(setLevelsWithProgress(levelsWithProgress));
+
+    render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          sectionId={42}
+          open
+        />
+      </Provider>
     );
+
+    // Wait for fetches
+    await wait();
+
+    // Verify status bubble for selected student
+    let dropdownOption = screen.getByText(studentAlice.name).closest('div');
+    expect(dropdownOption.textContent).to.contain(i18n.submitted());
+  });
+
+  it('renders evaluated status blob when teacher has given feedback', async () => {
+    const statusAll = {
+      attemptedCount: 1,
+      attemptedUnevaluatedCount: 0,
+      csrfToken: 'abcdef',
+      aiEvalStatusMap: {
+        [studentAlice.id]: 'READY_TO_REVIEW',
+      },
+    };
+
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(statusAll);
+    stubFetchTeacherEvaluations(oneEval);
+    stubFetchAiEvaluations([]);
+    stubFetchTourStatus({seen: true});
+
+    // the level has been submitted by Alice
+    store.dispatch(setStudentsForCurrentSection(sectionId, students));
+    store.dispatch(setLevelsWithProgress(levelsWithProgress));
+
+    render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          sectionId={42}
+          open
+        />
+      </Provider>
+    );
+
+    // Wait for fetches
+    await wait();
+
+    // Verify status bubble for selected student
+    let dropdownOption = screen.getByText(studentAlice.name).closest('div');
+    expect(dropdownOption.textContent).to.contain(i18n.evaluated());
   });
 
   it('shows general error message for status 1000', async () => {
