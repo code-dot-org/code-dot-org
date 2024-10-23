@@ -16,8 +16,10 @@ Scenario: Can run and see output of Python program
 
 Scenario: Continue button and progress status shows up correctly
   # Level 1 is not validated; continue button will show up after editing and running code.
+  And I verify progress in the header of the current page is "not_tried" for level 1
   And I focus selector ".cm-content"
-  And I press keys "print('more code')"
+  And I press keys "print('more code')\n"
+  Then I verify progress in the header of the current page is "attempted" for level 1
   And I press "uitest-codebridge-run"
   And I wait until "#uitest-codebridge-console" contains text "more code"
   And element "#instructions-navigation" is visible
