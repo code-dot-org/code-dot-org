@@ -57,6 +57,20 @@ class HomeController < ApplicationController
     redirect_to '/'
   end
 
+  def set_geolocation_override
+    # Validate the IP address we want to set
+    if begin
+      !!IPAddr.new(params[:ip])
+    rescue
+      false
+    end
+      cookies[Rack::GeolocationOverride::KEY] = {value: params[:ip], domain: :all, expires: 10.years.from_now}
+    else
+      cookies.delete Rack::GeolocationOverride::KEY, domain: :all
+    end
+    redirect_to '/'
+  end
+
   def home_insert
     if current_user
       render 'index', layout: false, formats: [:html]

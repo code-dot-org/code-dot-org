@@ -1,0 +1,5 @@
+#geolocation_tag= "IP: #{request.cookies[Rack::GeolocationOverride::KEY]} (#{request.country})"
+:javascript
+  window.document.querySelector("#geolocation_tag").addEventListener("click", (event) => {
+    event.target.style.display = "none";
+  });
