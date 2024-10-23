@@ -45,6 +45,10 @@
     }
   }
 
+  .helperSection {
+    @include field-helper-section-common;
+  }
+
   .dropdownMenuContainer {
     position: absolute;
     bottom: auto;
@@ -360,6 +364,10 @@
     }
   }
 
+  .helperSection {
+    @include field-helper-section-l;
+  }
+
   .dropdownMenuContainer {
     ul {
       li {
@@ -410,6 +418,10 @@
     }
   }
 
+  .helperSection {
+    @include field-helper-section-m;
+  }
+
   .dropdownMenuContainer {
     ul {
       li {
@@ -458,6 +470,10 @@
       line-height: 125%;
       width: 1.125rem;
     }
+  }
+
+  .helperSection {
+    @include field-helper-section-s;
   }
 
   .dropdownMenuContainer {
