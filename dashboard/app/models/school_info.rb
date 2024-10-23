@@ -124,19 +124,12 @@ class SchoolInfo < ApplicationRecord
     end
   end
 
-  # Validate records in the newer data format (see school_info_test.rb for details).
-  # The following states are valid (from the spec at https://goo.gl/Gw57rL):
-  #
-  # Country “USA” + charter + State + District + School name [selected]
-  # Country “USA” + charter + State + District + zip + School name “other” [typed]
-  # Country “USA” + charter + State + District “other” [typed] + zip + School name [typed]
-  # Country “USA” + private + State + zip + School name [typed]
-  # Country “USA” + public + State + District + School name [selected]
-  # Country “USA” + public + State + District + zip + School name “other” [typed]
-  # Country “USA” + public + State + District “other” [typed] + zip + School name [typed]
-  # Country “USA” + other + State + zip + School name [typed]
-  # Non-USA Country + any school type + address + school name
-  #
+  # Validate records
+  # Non-US schools require country and school name
+  # US nces schools sync required data from the `schools` table
+  # US non-nces schools (not found in `schools` table) require zip and school_name
+  # US non-school settings have school_type = noSchoolSetting and require zip and school_name
+
   # This method reports errors if the record has a country and is invalid.
   def validate_with_country
     return unless country && should_check_for_full_validation?
