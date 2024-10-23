@@ -5,6 +5,7 @@ import {useSelector} from 'react-redux';
 import UnitCalendarGrid from '@cdo/apps//code-studio/components/progress/UnitCalendarGrid';
 import {initializeRedux} from '@cdo/apps/code-studio/components/progress/TeacherUnitOverview';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
@@ -91,27 +92,30 @@ const UnitCalendar: React.FC = () => {
 
   return (
     <div className={styles.calendarContentContainer}>
-      <div className={styles.minutesPerWeekWrapper}>
-        <div className={styles.minutesPerWeekDescription}>
-          {i18n.instructionalMinutesPerWeek()}
-        </div>
-        <SimpleDropdown
-          name="minutesPerWeek"
-          onChange={event => handleDropdownChange(event.target.value)}
-          items={weeklyMinutesOptions}
-          selectedValue={weeklyInstructionalMinutes}
-          size="s"
-          dropdownTextThickness="thin"
-          labelText="minutes per week dropdown"
-          isLabelVisible={false}
-        />
-      </div>
+      {isLoading && <Spinner />}
       {!isLoading && hasCalendar && (
-        <UnitCalendarGrid
-          lessons={calendarLessons}
-          weeklyInstructionalMinutes={weeklyInstructionalMinutes}
-          weekWidth={WEEK_WIDTH}
-        />
+        <div>
+          <div className={styles.minutesPerWeekWrapper}>
+            <div className={styles.minutesPerWeekDescription}>
+              {i18n.instructionalMinutesPerWeek()}
+            </div>
+            <SimpleDropdown
+              name="minutesPerWeek"
+              onChange={event => handleDropdownChange(event.target.value)}
+              items={weeklyMinutesOptions}
+              selectedValue={weeklyInstructionalMinutes}
+              size="s"
+              dropdownTextThickness="thin"
+              labelText="minutes per week dropdown"
+              isLabelVisible={false}
+            />
+          </div>
+          <UnitCalendarGrid
+            lessons={calendarLessons}
+            weeklyInstructionalMinutes={weeklyInstructionalMinutes}
+            weekWidth={WEEK_WIDTH}
+          />
+        </div>
       )}
     </div>
   );

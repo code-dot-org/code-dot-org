@@ -327,7 +327,11 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
       >
         <div id="hidden-item" tabIndex={0} role="button" />
         {showSoundFilters && (
-          <div id="sounds-panel-top" className={styles.soundsPanelTop}>
+          <div
+            id="sounds-panel-top"
+            className={styles.soundsPanelTop}
+            data-theme="Dark"
+          >
             <SegmentedButtons
               selectedButtonValue={mode}
               buttons={[

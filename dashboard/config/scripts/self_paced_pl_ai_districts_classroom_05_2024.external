@@ -1,0 +1,19 @@
+name 'self-paced-pl-ai-districts-classroom_05_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Teaching About AI
+
+
+#### There are so many resources out there to support teachers who want to teach about AI in their classrooms.
+
+
+#### Code.org has a lot of resources for teaching about AI. Check out <a href="https://code.org/ai" target="_blank">code.org/ai</a> to find lessons and activities that align with all grade levels and various content areas.
+
+<p style="text-align:center">
+<img src="https://images.code.org/9d15075ae9e098534878c1e4604d6cd8-Screenshot 2024-10-22 at 1.42.15 PM.png" style="border: 2px solid black; border-radius: 8px; width: 90%" alt="graphic organizer from unit">
+</p>
+
+
+MARKDOWN

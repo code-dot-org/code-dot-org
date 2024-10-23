@@ -18,6 +18,10 @@
           {
             "name": "i",
             "id": "Jzt-l.ao[tU*jVezANa#"
+          },
+          {
+            "name": "currentTime",
+            "id": "9(V777h5U{?PdH6?X14f"
           }
         ],
         "blocks": {
@@ -29,144 +33,115 @@
               "x": 30,
               "y": 30,
               "deletable": false,
-              "movable": false,
+              "movable": false
+            },
+            {
+              "type": "triggered_at",
+              "id": "e`Rdc+q?^Z.K@K;69bi{",
+              "x": 290,
+              "y": 50,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger1</field>",
+                "var": {
+                  "id": "9(V777h5U{?PdH6?X14f"
+                }
+              },
               "next": {
                 "block": {
-                  "type": "for_loop",
-                  "id": ";-EuAcafWIQ8L3GV#*kA",
-                  "enabled": false,
-                  "fields": {
-                    "VAR": {
-                      "id": "Jzt-l.ao[tU*jVezANa#"
-                    }
+                  "type": "controls_if",
+                  "id": "*5yP~`_g~MvY(gL|0aJ]",
+                  "extraState": {
+                    "hasElse": true
                   },
                   "inputs": {
-                    "FROM": {
-                      "shadow": {
-                        "type": "math_number",
-                        "id": "Baw_(U%XPpgMtQkv(dY#",
-                        "fields": {
-                          "NUM": 1
-                        }
-                      }
-                    },
-                    "TO": {
-                      "shadow": {
-                        "type": "math_number",
-                        "id": "xXfq{;c`T1LLi-]A+wc|",
-                        "fields": {
-                          "NUM": 6
-                        }
-                      }
-                    },
-                    "BY": {
-                      "shadow": {
-                        "type": "math_number",
-                        "id": "Aw]ibw@ZZp:RgCfXLsek",
-                        "fields": {
-                          "NUM": 2
-                        }
-                      }
-                    },
-                    "DO": {
+                    "IF0": {
                       "block": {
-                        "type": "controls_if",
-                        "id": ",I@7bK@k=}j))#jh$n]^",
-                        "extraState": {
-                          "hasElse": true
+                        "type": "logic_compare",
+                        "id": "JstE)0SlJLV;@yq7Tcz1",
+                        "fields": {
+                          "OP": "<field name=\"OP\">LT</field>"
                         },
                         "inputs": {
-                          "IF0": {
+                          "A": {
                             "block": {
-                              "type": "logic_compare",
-                              "id": "%Z#C)~(f::]?LDU+?:^d",
-                              "fields": {
-                                "OP": "<field name=\"OP\">LTE</field>"
+                              "type": "variables_get",
+                              "id": "]gsbRbyNu-1cLgI?7Jd8",
+                              "extraState": {
                               },
-                              "inputs": {
-                                "A": {
-                                  "block": {
-                                    "type": "variables_get",
-                                    "id": "-(l^)I6_q=g@._gCl6lY",
-                                    "extraState": {
-                                    },
-                                    "fields": {
-                                      "VAR": {
-                                        "id": "Jzt-l.ao[tU*jVezANa#"
-                                      }
-                                    }
-                                  }
-                                },
-                                "B": {
-                                  "block": {
-                                    "type": "math_number",
-                                    "id": "HrPXI@9v?-UHIDbjQ.Gk",
-                                    "fields": {
-                                      "NUM": 3
-                                    }
-                                  }
+                              "fields": {
+                                "VAR": {
+                                  "id": "9(V777h5U{?PdH6?X14f"
                                 }
                               }
                             }
                           },
-                          "DO0": {
+                          "B": {
                             "block": {
-                              "type": "play_sound",
-                              "id": "zg(fEkqH1VzO5/nR]6O}",
+                              "type": "math_number",
+                              "id": "OzI-lD2bhM3p?EeDF38P",
                               "fields": {
-                                "sound": "shakira_maluma_chantaje/kick_build_1"
+                                "NUM": 3
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "DO0": {
+                      "block": {
+                        "type": "play_sound",
+                        "id": "5E3iVXwLgxdaqPH0A[L3",
+                        "fields": {
+                          "sound": "shakira_maluma_chantaje/kick_build_1"
+                        },
+                        "inputs": {
+                          "measure": {
+                            "shadow": {
+                              "type": "math_number",
+                              "id": "/nwU5Fu{b|WF1bQ(ksq@",
+                              "fields": {
+                                "NUM": 1
+                              }
+                            },
+                            "block": {
+                              "type": "variables_get",
+                              "id": "1D3U!I^x/uBWH}QD(Dr9",
+                              "extraState": {
                               },
-                              "inputs": {
-                                "measure": {
-                                  "shadow": {
-                                    "type": "math_number",
-                                    "id": "a2RVYk_X^~.+UTl8eQE/",
-                                    "fields": {
-                                      "NUM": 1
-                                    }
-                                  },
-                                  "block": {
-                                    "type": "variables_get",
-                                    "id": "1mj*5]iSgVz(eo|g!iQw",
-                                    "extraState": {
-                                    },
-                                    "fields": {
-                                      "VAR": {
-                                        "id": "Jzt-l.ao[tU*jVezANa#"
-                                      }
-                                    }
-                                  }
+                              "fields": {
+                                "VAR": {
+                                  "id": "9(V777h5U{?PdH6?X14f"
                                 }
                               }
                             }
-                          },
-                          "ELSE": {
-                            "block": {
-                              "type": "play_sound",
-                              "id": "_j,u)Z-v1pwoQ/D7NoKr",
+                          }
+                        }
+                      }
+                    },
+                    "ELSE": {
+                      "block": {
+                        "type": "play_sound",
+                        "id": "RH-zOti[0fR{mo7lsTU?",
+                        "fields": {
+                          "sound": "shakira_maluma_chantaje/kick_build_2"
+                        },
+                        "inputs": {
+                          "measure": {
+                            "shadow": {
+                              "type": "math_number",
+                              "id": "EA$7BGTcHP)3yN6nyKvl",
                               "fields": {
-                                "sound": "shakira_maluma_chantaje/kick_build_2"
+                                "NUM": 1
+                              }
+                            },
+                            "block": {
+                              "type": "variables_get",
+                              "id": "61W#~*MU.5L`mwv$Pz.A",
+                              "extraState": {
                               },
-                              "inputs": {
-                                "measure": {
-                                  "shadow": {
-                                    "type": "math_number",
-                                    "id": "a2RVYk_X^~.+UTl8eQE/",
-                                    "fields": {
-                                      "NUM": 1
-                                    }
-                                  },
-                                  "block": {
-                                    "type": "variables_get",
-                                    "id": "]+E3ghCeO{F3p!^(+6ki",
-                                    "extraState": {
-                                    },
-                                    "fields": {
-                                      "VAR": {
-                                        "id": "Jzt-l.ao[tU*jVezANa#"
-                                      }
-                                    }
-                                  }
+                              "fields": {
+                                "VAR": {
+                                  "id": "9(V777h5U{?PdH6?X14f"
                                 }
                               }
                             }
@@ -186,7 +161,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-10-16T19:07:33.736+00:00\",\"changed\":[\"cloned from \\\"advanced-model-sandbox-conditionals-1\\\"\"],\"cloned_from\":\"advanced-model-sandbox-conditionals-1\"},{\"changed_at\":\"2024-10-16 19:07:36 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-16 19:23:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-16 19:24:30 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-16T19:07:33.736+00:00\",\"changed\":[\"cloned from \\\"advanced-model-sandbox-conditionals-1\\\"\"],\"cloned_from\":\"advanced-model-sandbox-conditionals-1\"},{\"changed_at\":\"2024-10-16 19:07:36 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-16 19:23:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-16 19:24:30 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-17 22:00:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-17 22:01:33 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

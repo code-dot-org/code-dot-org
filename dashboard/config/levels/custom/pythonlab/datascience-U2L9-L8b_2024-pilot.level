@@ -22,7 +22,8 @@
           "contents": "import pandas as pd\nimport matplotlib.pyplot as plt\n\ndata = pd.read_csv('Greenland_Snow_and_Ice.csv')\n\n# Display basic information and statistics about the dataset \nprint(data.info()) \nprint(data.describe())\n\n",
           "folderId": "0",
           "active": true,
-          "open": true
+          "open": true,
+          "type": "locked_starter"
         },
         "1": {
           "id": "1",
@@ -57,6 +58,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-09-17T21:27:16.669+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L9-L8a_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L9-L8a_2024-pilot\"},{\"changed_at\":\"2024-09-17 21:31:39 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 21:48:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 00:25:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 00:25:56 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 00:26:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 00:27:05 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-03 16:31:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18753,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-17T21:27:16.669+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L9-L8a_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L9-L8a_2024-pilot\"},{\"changed_at\":\"2024-09-17 21:31:39 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 21:48:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 00:25:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 00:25:56 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 00:26:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 00:27:05 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-03 16:31:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18753,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-21 16:57:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

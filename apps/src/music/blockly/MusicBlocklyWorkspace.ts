@@ -6,6 +6,7 @@ import {ProcedureBlock} from '@cdo/apps/blockly/types';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {nameComparator} from '@cdo/apps/util/sort';
 
@@ -131,6 +132,9 @@ export default class MusicBlocklyWorkspace {
       editBlocks: getAppOptionsEditBlocks(),
       customSimpleDialog,
       comments: true,
+      analyticsData: {
+        appType: EVENTS.BLOCKLY_APP_TYPE_MUSIC,
+      },
     } as GoogleBlockly.BlocklyOptions);
 
     this.resizeBlockly();
