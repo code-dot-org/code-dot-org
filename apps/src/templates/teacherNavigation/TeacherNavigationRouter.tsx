@@ -114,8 +114,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
         }
       >
         <Route path={SPECIFIC_SECTION_BASE_URL} element={<PageLayout />}>
-          {/* <Route
-          exact
+          <Route
             path={''}
             element={
               <Navigate to={TEACHER_NAVIGATION_PATHS.progress} replace={true} />
@@ -126,7 +125,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
             element={
               <Navigate to={TEACHER_NAVIGATION_PATHS.progress} replace={true} />
             }
-          /> */}
+          />
           <Route
             path={TEACHER_NAVIGATION_PATHS.roster}
             element={applyV1TeacherDashboardWidth(
