@@ -18,7 +18,6 @@ import reducer, {
   setCourseOfferings,
   setSections,
   selectSection,
-  removeSection,
   beginCreatingSection,
   beginEditingSection,
   editSectionProperties,
@@ -30,6 +29,7 @@ import reducer, {
   importOrUpdateRoster,
   assignToSection,
   NO_SECTION,
+  removeSectionOrThrow,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   assignmentNames,
@@ -328,26 +328,32 @@ describe('teacherSectionsRedux', () => {
     });
   });
 
-  describe('removeSection', () => {
-    const stateWithSections = reducer(initialState, setSections(sections));
+  describe('removeSectionOrThrow', () => {
+    beforeEach(() => {
+      store.dispatch(setSections(sections));
+    });
 
     it('removes sectionid for a persisted section', () => {
       const sectionId = sections[0].id;
-      const action = removeSection(sectionId);
-      const state = reducer(stateWithSections, action);
-      assert.equal(state.sectionIds.includes(sectionId), false);
+      store.dispatch(removeSectionOrThrow(sectionId));
+      assert.equal(
+        getState().teacherSections.sectionIds.includes(sectionId),
+        false
+      );
     });
 
     it('removes a persisted section', () => {
       const sectionId = sections[0].id;
-      const action = removeSection(sectionId);
-      const state = reducer(stateWithSections, action);
-      assert.strictEqual(state.sections[sectionId], undefined);
+      store.dispatch(removeSectionOrThrow(sectionId));
+      assert.strictEqual(
+        getState().teacherSections.sections[sectionId],
+        undefined
+      );
     });
 
     it('doesnt let you remove a non-existent section', () => {
       assert.throws(() => {
-        reducer(stateWithSections, removeSection(1234));
+        store.dispatch(removeSectionOrThrow(1234));
       });
     });
   });

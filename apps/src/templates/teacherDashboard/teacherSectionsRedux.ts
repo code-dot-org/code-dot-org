@@ -12,6 +12,7 @@ import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseCo
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/metrics/firehose';
+import {RootState} from '@cdo/apps/types/redux';
 import {
   PlGradeValue,
   SectionLoginType,
@@ -53,7 +54,6 @@ type AssignmentData = {
   unitName?: string | null;
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export interface TeacherSectionState {
   nextTempId: number;
   studioUrl: string;
@@ -334,10 +334,6 @@ const sectionSlice = createSlice({
       }>
     ) {
       const {sectionId, aiTutorEnabled} = action.payload;
-      const section = state.sections[sectionId];
-      if (!section) {
-        throw new Error('section does not exist');
-      }
 
       state.sections[sectionId].aiTutorEnabled = aiTutorEnabled;
     },
@@ -382,7 +378,6 @@ const sectionSlice = createSlice({
       const sectionId = action.payload;
       const section = state.sections[sectionId];
       if (!section) {
-        throw new Error('section does not exist');
       }
       state.sectionIds = _.without(state.sectionIds, sectionId);
       state.studentSectionIds = _.without(state.studentSectionIds, sectionId);
@@ -670,8 +665,6 @@ export const __testInterface__ = {
   USER_EDITABLE_SECTION_PROPS,
 };
 
-type RootState = {teacherSections: TeacherSectionState};
-
 //Thunks
 type SectionThunkAction = ThunkAction<void, RootState, undefined, AnyAction>;
 
@@ -762,6 +755,21 @@ export const finishEditingSection =
           reject(status);
         });
     });
+  };
+
+/**
+ * Removes a section or throws an error if the section does not exist.
+ */
+export const removeSectionOrThrow =
+  (sectionId: number): SectionThunkAction =>
+  (dispatch, getState) => {
+    const state = getState().teacherSections;
+
+    if (state.sections[sectionId]) {
+      dispatch(removeSection(sectionId));
+    } else {
+      throw new Error('section does not exist');
+    }
   };
 
 type ParticipantTypesResponse = {
