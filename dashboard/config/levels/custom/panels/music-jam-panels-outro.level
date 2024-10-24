@@ -13,55 +13,63 @@
     "panels": [
       {
         "text": "Wow! You just used functions in your code. \nYou’re looking like an expert coder now!\n\n",
-        "imageUrl": "https://images.code.org/b01a3b18ef8696e56d438e3f7078aa85-orlando1.png",
+        "imageUrl": "https://images.code.org/757d7887beda5dc50b4c01ec08132756-orlando-1.jpg",
         "key": "music_ai_panels_function-973d8506-2906-4bdf-96c6-e08d64b1e677",
-        "layout": "text-bottom-right"
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
       },
       {
-        "imageUrl": "https://images.code.org/6103d93d9267df40cc12adffbded9477-functions_gif2.gif",
+        "imageUrl": "https://images.code.org/58e80d5f56cdf65cff0d9bcb0e709868-orlando-2.jpg",
         "text": "As a software engineer, I use functions all the time too.",
         "key": "musiclab_intro_panels_function_pdx-f1f658c0-64a9-471c-9f2a-399ba1ea8538",
-        "layout": "text-top-right"
+        "layout": "text-bottom-left",
+        "fadeInOverPrevious": true
       },
       {
         "text": "Functions let me build big projects with small blocks of code.",
-        "imageUrl": "https://images.code.org/8fb74b9765c04c2fc3a60a5ce0d7e2b0-orlando3.png",
+        "imageUrl": "https://images.code.org/3e1cca0b5ade999b37f9adac5ddb3e3f-orlando-3.jpg",
         "key": "music_ai_panels_function_orlando_3-37c593a7-2cf3-44e3-9b22-f8a2de64646f",
-        "layout": "text-top-right"
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": true
       },
       {
         "text": "They amplify my creative process!",
-        "imageUrl": "https://images.code.org/7f7ac844b6a119fffb75e22ecbff0b51-Orlando_Slide 4_V1.gif",
+        "imageUrl": "https://images.code.org/45f0eb265cb74b72264a8ef60bd393f5-orlando-4.jpg",
         "key": "music_ai_panels_function_orlando_1-3f60bf55-4eee-4e42-ac18-3250154cb9ad",
-        "layout": "text-bottom-right"
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
       },
       {
         "text": "I loved listening to music as a teenager.",
-        "imageUrl": "https://images.code.org/fd08a9ab88c98af6f6a0e41a4db7d53d-Orlando_Slide 5_V1.gif",
+        "imageUrl": "https://images.code.org/b94d3507d628c988d1b8f80502d98ff6-orlando-5.jpg",
         "key": "music_ai_panels_function_orlando_3-2ab47291-490a-409a-87e7-22b140c0a9f3",
-        "layout": "text-bottom-right"
+        "layout": "text-bottom-left",
+        "fadeInOverPrevious": true
       },
       {
         "text": "In college, I studied computer science and entered coding competitions.",
-        "imageUrl": "https://images.code.org/bbf0e6d5ff21e381c396bba9ba47f9f3-orlando_coding_competitions.png",
+        "imageUrl": "https://images.code.org/dce5d35465ed1feab1e3077738bbb350-orlando-6.jpg",
         "key": "music_ai_panels_function-f164a0ad-f4a0-4fb7-a4a4-a0269980b587",
-        "layout": "text-bottom-right"
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": true
       },
       {
         "text": "Today, my code brings music to millions of listeners around the world.",
-        "imageUrl": "https://images.code.org/57a21ec30295912268b5b9596ee5c1e7-orlando_world.png",
+        "imageUrl": "https://images.code.org/366ad9e185fd30305f267cba57b32438-orlando-7.jpg",
         "key": "music_ai_panels_function_orlando_1-f035b103-9b30-4dfa-a757-f2a2c37c61bc",
-        "layout": "text-top-right"
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
       },
       {
         "text": "If you keep coding, one day you could build something that reaches millions of people too!",
-        "imageUrl": "https://images.code.org/84b0d06a94210244e2a88b4be1777842-orlando_last.png",
+        "imageUrl": "https://images.code.org/cbc5e9288dc50f1b1fb2d8c84d6d9f75-orlando-8.jpg",
         "key": "music_ai_panels_function_orlando_1-6aa299b0-1069-49c8-817f-b450316e3ce7",
-        "layout": "text-bottom-right"
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": true
       }
     ],
     "offer_browser_tts": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:18.549+00:00\",\"changed\":[\"cloned from \\\"music_ai_panels_function_orlando_1\\\"\"],\"cloned_from\":\"music_ai_panels_function_orlando_1\"},{\"changed_at\":\"2024-10-22 23:50:59 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:18.549+00:00\",\"changed\":[\"cloned from \\\"music_ai_panels_function_orlando_1\\\"\"],\"cloned_from\":\"music_ai_panels_function_orlando_1\"},{\"changed_at\":\"2024-10-22 23:50:59 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-23 22:44:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 22:55:05 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>
