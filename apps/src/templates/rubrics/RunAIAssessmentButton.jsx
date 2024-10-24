@@ -51,6 +51,7 @@ export default function RunAIAssessmentButton({
   status,
   setStatus,
   reportingData,
+  updateAiEvalStatusForUser,
 }) {
   const rubricId = rubric.id;
   const [csrfToken, setCsrfToken] = useState('');
@@ -123,6 +124,7 @@ export default function RunAIAssessmentButton({
                 data.status === RubricAiEvaluationStatus.SUCCESS
               ) {
                 setStatus(STATUS.SUCCESS);
+                updateAiEvalStatusForUser(studentUserId, 'READY_TO_REVIEW');
                 refreshAiEvaluations();
               } else if (data.status === RubricAiEvaluationStatus.QUEUED) {
                 setStatus(STATUS.EVALUATION_PENDING);
@@ -153,7 +155,14 @@ export default function RunAIAssessmentButton({
       }, 5000);
       return () => clearInterval(intervalId);
     }
-  }, [rubricId, studentUserId, polling, refreshAiEvaluations, setStatus]);
+  }, [
+    rubricId,
+    studentUserId,
+    polling,
+    refreshAiEvaluations,
+    setStatus,
+    updateAiEvalStatusForUser,
+  ]);
 
   const handleRunAiAssessment = () => {
     setStatus(STATUS.EVALUATION_PENDING);
@@ -214,4 +223,5 @@ RunAIAssessmentButton.propTypes = {
   status: PropTypes.string,
   setStatus: PropTypes.func,
   reportingData: reportingDataShape,
+  updateAiEvalStatusForUser: PropTypes.func,
 };

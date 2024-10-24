@@ -23,12 +23,7 @@ export const FileBrowserHeaderPopUpButton = () => {
   const handleFileUpload = useHandleFileUpload(project.files);
 
   const {startFileUpload, FileUploaderComponent} = useFileUploader({
-    callback: (fileName, contents) =>
-      handleFileUpload({
-        folderId: DEFAULT_FOLDER_ID,
-        fileName,
-        contents,
-      }),
+    callback: handleFileUpload,
     errorCallback: uploadErrorCallback,
     validMimeTypes,
   });
