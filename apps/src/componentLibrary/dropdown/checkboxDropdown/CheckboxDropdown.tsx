@@ -11,8 +11,7 @@ import {
 import CustomDropdown, {
   _CustomDropdownOption,
 } from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
+import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import i18n from '@cdo/locale';
 
 import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
@@ -54,6 +53,14 @@ export interface CheckboxDropdownProps extends AriaAttributes {
       | React.MouseEvent<HTMLButtonElement>
       | React.MouseEvent<HTMLAnchorElement>
   ) => void;
+  /** CheckboxDropdown helper message */
+  helperMessage?: string;
+  /** CheckboxDropdown helper icon */
+  helperIcon?: FontAwesomeV6IconProps;
+  /** CheckboxDropdown error message */
+  errorMessage?: string;
+  /** Style the dropdown as a form field */
+  styleAsFormField?: boolean;
 }
 
 const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
@@ -69,6 +76,10 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   disabled = false,
   color = dropdownColors.black,
   size = 'm',
+  helperMessage,
+  helperIcon,
+  errorMessage,
+  styleAsFormField = false,
   ...rest
 }) => {
   return (
@@ -81,6 +92,10 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
       disabled={disabled}
       size={size}
       isSomeValueSelected={checkedOptions.length > 0}
+      helperMessage={helperMessage}
+      helperIcon={helperIcon}
+      errorMessage={errorMessage}
+      styleAsFormField={styleAsFormField}
       {...rest}
     >
       <div className={moduleStyles.dropdownMenuContainer}>

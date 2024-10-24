@@ -192,6 +192,51 @@ WithDisabledOptionCheckboxDropdown.args = {
   size: 'm',
 };
 
+export const WithErrorCheckboxDropdown = SingleTemplate.bind({});
+WithErrorCheckboxDropdown.args = {
+  name: 'error-checkbox-dropdown',
+  allOptions: [
+    {value: 'option-1', label: 'Option 1'},
+    {value: 'option-2', label: 'Option 2'},
+  ],
+  checkedOptions: ['option-1'],
+  labelText: 'Error Checkbox Dropdown',
+  onChange: args => console.log(args),
+  errorMessage: 'Error message',
+  size: 'm',
+};
+
+export const WithHelperMessageCheckboxDropdown = SingleTemplate.bind({});
+WithHelperMessageCheckboxDropdown.args = {
+  name: 'helper-message-checkbox-dropdown',
+  allOptions: [
+    {value: 'option-1', label: 'Option 1'},
+    {value: 'option-2', label: 'Option 2'},
+  ],
+  checkedOptions: ['option-1'],
+  labelText: 'Helper Message Checkbox Dropdown',
+  onChange: args => console.log(args),
+  helperMessage: 'Helper message',
+  size: 'm',
+};
+
+export const WithHelperMessageAndIconCheckboxDropdown = SingleTemplate.bind({});
+WithHelperMessageAndIconCheckboxDropdown.args = {
+  name: 'helper-icon-checkbox-dropdown',
+  allOptions: [
+    {value: 'option-1', label: 'Option 1'},
+    {value: 'option-2', label: 'Option 2'},
+  ],
+  checkedOptions: ['option-1'],
+  labelText: 'Helper Icon Checkbox Dropdown',
+  onChange: args => console.log(args),
+  helperIcon: {
+    iconName: 'info-circle',
+  },
+  helperMessage: 'Helper message',
+  size: 'm',
+};
+
 export const ThickAndThinCheckboxDropdowns = MultipleTemplate.bind({});
 ThickAndThinCheckboxDropdowns.args = {
   components: [
