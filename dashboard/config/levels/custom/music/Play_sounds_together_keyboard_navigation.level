@@ -1,0 +1,124 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2024-10-23T17:54:12.000Z",
+  "level_num": "custom",
+  "user_id": 18914,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "##Play together \r\n\r\nUse **WASD** to navigate into the **Play Together** block and add two **Play** blocks to play together \r\n\r\nThen **Run** and **Continue**.\r\n\r\n::: details [**Hint**]\r\nUse **WASD** to navigate to the place in the Workspace where you want to add the block. \r\n\r\nOnce you get there, click **Enter** to set a destination. \r\n\r\nNavigate to the toolbox using **T**, and use **Enter** to bring the block into the workspace\r\n:::",
+    "offer_browser_tts": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "chainsmokers_coldplay_something_just_like_this",
+      "sounds": {
+        "chainsmokers_coldplay_something_just_like_this": [
+          "vocals_do_do_do_low",
+          "vocals_do_do_do_high",
+          "vocals_hook_high",
+          "vocals_hook_low",
+          "vocals_prechorus_1",
+          "vocals_prechorus_2",
+          "vocals_prechorus_3",
+          "vocals_prechorus_4",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3",
+          "vocals_verse_4",
+          "drums_drop_beat",
+          "drums_fill",
+          "drums_live_beat",
+          "drums_live_build",
+          "drums_perc_build",
+          "drums_riser",
+          "drums_tom_build",
+          "drums_verse_beat",
+          "bass_live_1",
+          "bass_live_2",
+          "bass_live_3",
+          "bass_sub",
+          "bass_synth",
+          "guitar_acoustic",
+          "guitar_chime",
+          "guitar_intro",
+          "guitar_lead_1",
+          "guitar_lead_2",
+          "guitar_muted_1",
+          "guitar_muted_2",
+          "guitar_verse_1",
+          "guitar_verse_2",
+          "piano_build",
+          "piano_full_1",
+          "piano_full_2",
+          "piano_melody",
+          "wurly",
+          "synth_arp",
+          "synth_drop_1",
+          "synth_drop_2",
+          "synth_lead",
+          "vocals_glitch",
+          "drums_crash",
+          "drums_vibraslap",
+          "vocals_ahh_swell",
+          "vocals_ohahh"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
+                        "fields": {
+                          "sound": "chainsmokers_coldplay_something_just_like_this/vocals_do_do_do_low"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "8.1kfzZ:,[E:l46D(!zc",
+                            "fields": {
+                              "sound": "chainsmokers_coldplay_something_just_like_this/drums_verse_beat"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-10-23 17:57:52 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 17:58:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

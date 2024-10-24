@@ -145,7 +145,7 @@
   "aiEvaluationStatus_success": "AI analysis complete.",
   "aiEvaluationStatus_pending": "AI analysis is in the queue",
   "aiEvaluationStatus_in_progress": "Generating AI analysis",
-  "aiEvaluationStatus_error": "AI analysis cannot be completed due to an error.  Please try again later or contact support.",
+  "aiEvaluationStatus_error": "AI analysis cannot be completed due to an error. Please try again later or contact support.",
   "aiEvaluationStatus_pii_error": "AI analysis cannot be completed due to the presence of potential personal information in the student's code.",
   "aiEvaluationStatus_profanity_error": "AI analysis cannot be completed due to profanity in the student's code.",
   "aiEvaluationStatus_request_too_large": "The AI analysis failed due to lengthy student code. Our team is addressing the issue. Please manually grade this student's project in the meantime.",

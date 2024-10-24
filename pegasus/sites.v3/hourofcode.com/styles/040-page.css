@@ -424,6 +424,25 @@ td {
 section.bg-neutral-light { background-color: var(--neutral_light); }
 section.bg-neutral-dark { background-color: var(--neutral_dark); }
 
+/* Line divider for use between sections
+Use .no-margin-bottom to remove extra space above
+a section that starts with an h2 */
+div.section-divider-line {
+  max-width: 960px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 992px) {
+    padding: 0 2rem;
+  }
+
+  & > hr {
+    border: 0;
+    border-top: 1px solid var(--neutral_dark60);
+    margin: 0;
+    width: 100%;
+  }
+}
+
 /* Start carousel styles ------------------------ */
 .carousel-wrapper {
   position: relative;
