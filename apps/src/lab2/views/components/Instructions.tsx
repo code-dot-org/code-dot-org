@@ -217,6 +217,8 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   text={
                     hasNextLevel ? commonI18n.continue() : commonI18n.finish()
                   }
+                  type={hasNextLevel ? 'primary' : 'secondary'}
+                  color={hasNextLevel ? 'purple' : 'black'}
                   onClick={onContinueOrFinish}
                   className={moduleStyles.buttonInstruction}
                 />
