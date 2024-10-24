@@ -3,16 +3,14 @@ import {Outlet} from 'react-router-dom';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
+
 import PageHeader from './PageHeader';
 
 import styles from './teacher-navigation.module.scss';
 
 const PageLayout: React.FC = () => {
-  const selectedSection = useAppSelector(state =>
-    state.teacherSections.selectedSectionId
-      ? state.teacherSections.sections[state.teacherSections.selectedSectionId]
-      : null
-  );
+  const selectedSection = useAppSelector(selectedSectionSelector);
 
   return (
     <div className={styles.pageWithHeader}>
