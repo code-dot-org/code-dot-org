@@ -69,8 +69,7 @@ span {
   max-width: 100%;
 
   a {
-    text-decoration: underline;
-    color: unset;
+    @include link-style;
   }
 
   .containerWrapper {
@@ -553,5 +552,6 @@ span {
   a {
     text-decoration: underline !important;
     color: unset !important;
+    font-weight: 700;
   }
 }
