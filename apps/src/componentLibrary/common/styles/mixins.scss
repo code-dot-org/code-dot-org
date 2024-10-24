@@ -139,7 +139,18 @@
   color: $light_negative_500;
 }
 
-
 @mixin field-error-section-white {
   color: $light_white;
+}
+
+@mixin field-read-only-black-colors {
+  color: $light_black;
+  border-color: $light_gray_200;
+  background-color: $light_gray_50;
+}
+
+@mixin field-read-only-white-colors {
+  color: $light_white;
+  border-color: $light_gray_700;
+  background-color: $light_gray_900;
 }
