@@ -2142,6 +2142,7 @@ ActiveRecord::Schema.define(version: 2024_10_24_171901) do
     t.datetime "declined_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["declined_at"], name: "index_submitted_projects_on_declined_at"
     t.index ["project_id"], name: "index_submitted_projects_on_project_id", unique: true
   end
 

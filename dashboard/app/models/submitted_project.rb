@@ -11,7 +11,8 @@
 #
 # Indexes
 #
-#  index_submitted_projects_on_project_id  (project_id) UNIQUE
+#  index_submitted_projects_on_declined_at  (declined_at)
+#  index_submitted_projects_on_project_id   (project_id) UNIQUE
 #
 class SubmittedProject < ApplicationRecord
 end

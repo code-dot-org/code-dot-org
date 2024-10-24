@@ -9,5 +9,6 @@ class CreatedSubmittedProjects < ActiveRecord::Migration[6.1]
     end
 
     add_index :submitted_projects, :project_id, unique: true
+    add_index :submitted_projects, :declined_at
   end
 end
