@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {useSelector} from 'react-redux';
 import {generatePath, useNavigate, useParams} from 'react-router-dom';
 
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
@@ -18,9 +17,10 @@ import {
   setPageType,
   pageTypes,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {
-  LABELED_TEACHER_NAVIGATION_PATHS,
   TEACHER_NAVIGATION_PATHS,
+  LABELED_TEACHER_NAVIGATION_PATHS,
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import {PeerReviewLessonInfo} from '@cdo/apps/types/progressTypes';
 import experiments from '@cdo/apps/util/experiments';
@@ -40,17 +40,6 @@ import {setCalendarData} from '../../calendarRedux';
 import {setVerified, setVerifiedResources} from '../../verifiedInstructorRedux';
 
 import UnitOverview from './UnitOverview';
-
-interface Section {
-  id: number;
-  courseId: number | null;
-  courseVersionId: number;
-  courseVersionName: string | null;
-  courseOfferingId: number | null;
-  unitId: number | null;
-  unitName: string | null;
-  courseDisplayName: string | null;
-}
 
 interface Resource {
   id: number;
@@ -275,12 +264,7 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
     useState<UnitSummaryResponse | null>(null);
   const [unitLoaded, setUnitLoaded] = useState<string | null>(null);
 
-  const selectedSection = useSelector(
-    (state: {
-      teacherSections: {sections: Section[]; selectedSectionId: number};
-    }) =>
-      state.teacherSections.sections[state.teacherSections.selectedSectionId]
-  );
+  const selectedSection = useAppSelector(selectedSectionSelector);
 
   const {userId, userType} = useAppSelector(state => ({
     userId: state.currentUser.userId,

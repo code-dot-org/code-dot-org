@@ -1,4 +1,5 @@
-import {CodeBridgeConsoleState} from '@codebridge/redux/consoleRedux';
+import {CodebridgeConsoleState} from '@codebridge/redux/consoleRedux';
+import {CodebridgeWorkspaceState} from '@codebridge/redux/workspaceRedux';
 
 import {AichatState} from '@cdo/apps/aichat/redux/aichatRedux';
 import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
@@ -19,6 +20,7 @@ import {LayoutState} from '@cdo/apps/redux/layout';
 import {LocaleState} from '@cdo/apps/redux/localesRedux';
 import {MapboxState} from '@cdo/apps/redux/mapbox';
 import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
+import {TeacherSectionState} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 import {BlocklyState} from '../redux/blockly';
 
@@ -31,7 +33,8 @@ export interface RootState {
   aiTutor: AITutorState;
   aichat: AichatState;
   blockly: BlocklyState;
-  codebridgeConsole: CodeBridgeConsoleState;
+  codebridgeConsole: CodebridgeConsoleState;
+  codebridgeWorkspace: CodebridgeWorkspaceState;
   currentUser: CurrentUserState;
   header: HeaderReduxState;
   javalab: JavalabState;
@@ -48,5 +51,6 @@ export interface RootState {
   music: MusicState;
   predictLevel: PredictLevelState;
   progress: ProgressState;
+  teacherSections: TeacherSectionState;
   calendar: CalendarState;
 }

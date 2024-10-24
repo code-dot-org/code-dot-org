@@ -2,6 +2,9 @@
 @import 'font.scss';
 @import '../mixins.scss';
 
+$text-offset-x: 2cqw;
+$text-offset-y: 2cqw;
+
 @keyframes fade-in {
   0%, 50% {
     opacity: 0;
@@ -34,6 +37,8 @@
   .panel {
     margin: 0 auto;
     position: relative;
+    container-name: panel;
+    container-type: inline-size;
 
     .image {
       position: absolute;
@@ -45,65 +50,87 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      animation: fade-in 0.5s;
+
+      &Current {
+        animation: fade-in 0.5s;
+      }
     }
 
-    .markdownText {
+    .text {
       background-color: $neutral_light;
       border-radius: 5px;
       width: 40%;
       position: absolute;
-      padding: 20px;
+      padding: 1.8cqw 2.6cqw;
       animation: fade-in 1.5s;
+      font-size: 1.6cqw;
+      line-height: 1.4em;
+
+      &Dark {
+        background-color: $neutral_dark;
+        color: $light_white;
+      }
 
       h1, h2, h3, h4 {
-        margin: 0 0 10px 0;
+        margin: 0 0 1cqw 0;
         font-family: $barlowSemiCondensed-semibold;
-        font-size: 1.75em;
-        line-height: 1.2em;
+        font-size: 3cqw;
+        line-height: 2cqw;
       }
 
       p {
-        font-size: 16px;
-        line-height: 1.5;
-      }
+        font-size: 1.6cqw;
+        line-height: 1.4em;
 
-      &Small {
-        p {
-          font-size: 13px;
+        &:last-child {
+          margin-bottom: 0;
         }
       }
 
+      .invisiblePlaceholder {
+        opacity: 0;
+      }
+
+      code {
+        color: $light_primary_700;
+        font-size: 1.37cqw;
+      }
+
+      .typist {
+        position: absolute;
+        top: 1.8cqw;
+      }
+
       &TopLeft {
-        top: 40px;
-        left: -20px;
+        top: $text-offset-y;
+        left: $text-offset-x;
       }
 
       &TopCenter {
-        top: 40px;
+        top: $text-offset-y;
         left: 50%;
         transform: translateX(-50%);
       }
 
       &TopRight {
-        top: 40px;
-        right: -20px;
+        top: $text-offset-y;
+        right: $text-offset-x;
       }
 
       &BottomLeft {
-        bottom: 40px;
-        left: -20px;
+        bottom: $text-offset-y;
+        left: $text-offset-x;
       }
 
       &BottomCenter {
-        bottom: 40px;
+        bottom: $text-offset-y;
         left: 50%;
         transform: translateX(-50%);
       }
 
       &BottomRight {
-        bottom: 40px;
-        right: -20px;
+        bottom: $text-offset-y;
+        right: $text-offset-x;
       }
     }
   }
@@ -115,17 +142,17 @@
     position: relative;
 
     .button {
-      font-size: 14px;
-      background-color: $brand_secondary_default;
-      border-color: $brand_secondary_default;
-      color: $neutral_light;
-      padding: 5px 10px;
-      border-radius: 8px;
-      height: 38px;
-      margin: 0;
       position: absolute;
       right: 0;
-      animation: fade-in 3s, delay-pointer-events 3s;
+      height: 38px;
+
+      &Ready {
+        animation: fade-in 0.5s;
+      }
+
+      &Delay {
+        animation: fade-in 3s, delay-pointer-events 3s;
+      }
     }
 
     .bubble {

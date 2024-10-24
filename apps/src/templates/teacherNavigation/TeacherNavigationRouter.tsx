@@ -1,5 +1,4 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
 import {
   Route,
   Outlet,
@@ -11,6 +10,7 @@ import {
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
 import TeacherUnitOverview from '@cdo/apps/code-studio/components/progress/TeacherUnitOverview';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import TeacherCourseOverview from '../courseOverview/TeacherCourseOverview';
 import ManageStudents from '../manageStudents/ManageStudents';
@@ -21,7 +21,10 @@ import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelecto
 import SectionsSetUpContainer from '../sectionsRefresh/SectionsSetUpContainer';
 import SectionLoginInfo from '../teacherDashboard/SectionLoginInfo';
 import StatsTableWithData from '../teacherDashboard/StatsTableWithData';
-import {sectionProviderName} from '../teacherDashboard/teacherSectionsReduxSelectors';
+import {
+  sectionProviderName,
+  selectedSectionSelector,
+} from '../teacherDashboard/teacherSectionsReduxSelectors';
 import TextResponses from '../textResponses/TextResponses';
 
 import ElementOrEmptyPage from './ElementOrEmptyPage';
@@ -45,19 +48,6 @@ interface TeacherNavigationRouterProps {
   showAITutorTab: boolean;
 }
 
-export interface Section {
-  id: number;
-  rosterProviderName: string;
-  anyStudentHasProgress: boolean;
-  name: string;
-  courseVersionName: string;
-  courseOfferingId: number;
-  unitId: number;
-  unitName: string;
-  courseDisplayName: string;
-  courseId: number;
-}
-
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
   return <div className={styles.widthLockedPage}>{children}</div>;
 };
@@ -66,40 +56,21 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   studioUrlPrefix,
   showAITutorTab,
 }) => {
-  const sectionId = useSelector(
-    (state: {teacherSections: {selectedSectionId: number}}) =>
-      state.teacherSections.selectedSectionId
+  const sectionId = useAppSelector(
+    state => state.teacherSections.selectedSectionId
   );
-  const selectedSection = useSelector(
-    (state: {
-      teacherSections: {
-        selectedSectionId: number | null;
-        sections: {[id: number]: Section};
-      };
-    }) =>
-      state.teacherSections.selectedSectionId
-        ? state.teacherSections.sections[
-            state.teacherSections.selectedSectionId
-          ]
-        : null
-  );
+  const selectedSection = useAppSelector(selectedSectionSelector);
 
   const anyStudentHasProgress = React.useMemo(
     () => (selectedSection ? selectedSection.anyStudentHasProgress : true),
     [selectedSection]
   );
 
-  const studentCount = useSelector(
-    (state: {teacherSections: {selectedStudents: object[]}}) =>
-      state.teacherSections.selectedStudents.length
+  const studentCount = useAppSelector(
+    state => state.teacherSections.selectedStudents.length
   );
-  const providerName = useSelector(
-    (state: {
-      teacherSections: {
-        section: {[id: number]: Section};
-        selectedSectionId: number;
-      };
-    }) => sectionProviderName(state, state.teacherSections.selectedSectionId)
+  const providerName = useAppSelector(state =>
+    sectionProviderName(state, state.teacherSections.selectedSectionId)
   );
 
   const routes = React.useMemo(

@@ -21,8 +21,9 @@
           "language": "py",
           "contents": "import pandas as pd\nimport matplotlib.pyplot as plt\n\ndf = pd.read_csv('fabric_dye_log.csv')\n\n# Step 1\nfiltered_data = df[]\n\n\n# Step 2\ncolor_counts = filtered_data['Color Result']\n\n\n# ----- Graphing the data -----------\n# Plot the data\nplt.figure(figsize=(14, 8))\n\n\n# Bar chart for Color Result counts\nplt.bar(color_counts.index, color_counts.values, color='purple', label='Color Result Count')\n\n\n# Set labels and title\nplt.xlabel('Color Result')\nplt.ylabel('Count')\nplt.title('Total Color Results Based on Filter')\nplt.xticks(rotation=90)\nplt.legend()\n\n\n# Show the plot\nplt.show()\n\n",
           "folderId": "0",
-          "active": true,
-          "open": true
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
         },
         "1": {
           "id": "1",
@@ -57,6 +58,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-09-17T23:14:05.225+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L10-L8c_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L10-L8c_2024-pilot\"},{\"changed_at\":\"2024-09-17 23:15:47 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"bubble_choice_description\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 23:16:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 19:50:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 19:50:16 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 19:51:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 19:52:02 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-03 16:42:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18753,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-17T23:14:05.225+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L10-L8c_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L10-L8c_2024-pilot\"},{\"changed_at\":\"2024-09-17 23:15:47 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"bubble_choice_description\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 23:16:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 19:50:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 19:50:16 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 19:51:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 19:52:02 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-03 16:42:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18753,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-21 16:50:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>
