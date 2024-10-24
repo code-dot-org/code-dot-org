@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_10_22_150616) do
+ActiveRecord::Schema.define(version: 2024_10_24_180714) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -938,7 +938,7 @@ ActiveRecord::Schema.define(version: 2024_10_22_150616) do
     t.index ["lti_integration_id"], name: "index_lti_deployments_on_lti_integration_id"
   end
 
-  create_table "lti_deployments_user_identities", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "lti_deployments_user_identities", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "lti_deployment_id", null: false
     t.bigint "lti_user_identity_id", null: false
     t.index ["lti_deployment_id"], name: "index_lti_deployments_user_identities_on_lti_deployment_id"
@@ -2235,6 +2235,20 @@ ActiveRecord::Schema.define(version: 2024_10_22_150616) do
     t.index ["user_id"], name: "index_user_geos_on_user_id"
   end
 
+  create_table "user_level_interactions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "level_id", null: false
+    t.integer "script_id", null: false
+    t.string "school_year", null: false
+    t.string "interaction", null: false
+    t.string "code_version"
+    t.json "metadata"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["level_id"], name: "index_user_level_interactions_on_level_id"
+    t.index ["user_id"], name: "index_user_level_interactions_on_user_id"
+  end
+
   create_table "user_levels", id: { type: :bigint, unsigned: true }, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "level_id", null: false
@@ -2422,9 +2436,9 @@ ActiveRecord::Schema.define(version: 2024_10_22_150616) do
     t.integer "primary_contact_info_id"
     t.string "unlock_token"
     t.string "cap_status", limit: 1
-    t.datetime "cap_status_date"
+    t.datetime "cap_state_date"
     t.index ["birthday"], name: "index_users_on_birthday"
-    t.index ["cap_status", "cap_status_date"], name: "index_users_on_cap_status_and_cap_status_date"
+    t.index ["cap_status", "cap_state_date"], name: "index_users_on_cap_state_and_cap_state_date"
     t.index ["current_sign_in_at"], name: "index_users_on_current_sign_in_at"
     t.index ["deleted_at"], name: "index_users_on_deleted_at"
     t.index ["email", "deleted_at"], name: "index_users_on_email_and_deleted_at"
