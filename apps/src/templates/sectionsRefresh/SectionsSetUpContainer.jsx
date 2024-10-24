@@ -125,7 +125,7 @@ export default function SectionsSetUpContainer({
     */
     if (isNewSection) {
       analyticsReporter.sendEvent(
-        EVENTS.COMPLETED_EVENT,
+        EVENTS.SECTION_SETUP_COMPLETED,
         {
           sectionUnitId: section.course?.unitId,
           sectionCurriculumLocalizedName: section.course?.displayName,
@@ -154,20 +154,24 @@ export default function SectionsSetUpContainer({
         initialSection &&
         section.course?.unitId !== initialSection.course?.unitId)
     ) {
-      analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
-        sectionName: section.name,
-        sectionId: section.id,
-        sectionLoginType: section.loginType,
-        previousUnitId: initialSection.course?.unitId,
-        previousCourseId: initialSection.course?.courseOfferingId,
-        previousCourseVersionId: initialSection.course?.versionId,
-        previousVersionYear: null,
-        newUnitId: section.course?.unitId,
-        newCourseId: section.course?.courseOfferingId,
-        newCourseVersionId: section.course?.courseVersionId,
-        newVersionYear: null,
-        flowVersion: NEW,
-      });
+      analyticsReporter.sendEvent(
+        EVENTS.CURRICULUM_ASSIGNED,
+        {
+          sectionName: section.name,
+          sectionId: section.id,
+          sectionLoginType: section.loginType,
+          previousUnitId: initialSection.course?.unitId,
+          previousCourseId: initialSection.course?.courseOfferingId,
+          previousCourseVersionId: initialSection.course?.versionId,
+          previousVersionYear: null,
+          newUnitId: section.course?.unitId,
+          newCourseId: section.course?.courseOfferingId,
+          newCourseVersionId: section.course?.courseVersionId,
+          newVersionYear: null,
+          flowVersion: NEW,
+        },
+        PLATFORMS.BOTH
+      );
     }
   };
 

@@ -105,7 +105,7 @@ const FileRow: React.FunctionComponent<FileRowProps> = ({
   ];
 
   return (
-    <div className={moduleStyles.row}>
+    <div className={moduleStyles.row} id={`uitest-file-${file.id}-row`}>
       <div className={moduleStyles.label} onClick={() => openFile(file.id)}>
         <FontAwesomeV6Icon
           iconName={iconName}
@@ -131,8 +131,12 @@ const FileRow: React.FunctionComponent<FileRowProps> = ({
         <PopUpButton
           iconName="ellipsis-v"
           className={moduleStyles['button-kebab']}
+          id={`uitest-file-${file.id}-kebab`}
         >
-          <span className={moduleStyles['button-bar']}>
+          <span
+            className={moduleStyles['button-bar']}
+            id={`uitest-file-${file.id}-popup`}
+          >
             {dropdownOptions.map(
               ({condition, iconName, labelText, clickHandler}, index) =>
                 condition && (

@@ -63,6 +63,7 @@ const GenericPromptBody: React.FunctionComponent<GenericPromptBodyProps> = ({
         onChange={e => handleInputChange(e.target.value)}
         errorMessage={errorMessage}
         color={theme === Theme.DARK ? 'white' : undefined}
+        id="uitest-prompt-field"
       />
     </>
   );

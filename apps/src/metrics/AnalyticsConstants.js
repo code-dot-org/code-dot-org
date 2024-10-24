@@ -116,7 +116,7 @@ const EVENTS = {
   AFE_HOMEPAGE_BANNER_SUBMIT: 'AFE Teacher Homepage Banner Submitted',
 
   // Sections
-  COMPLETED_EVENT: 'Section Setup Completed',
+  SECTION_SETUP_COMPLETED: 'Section Setup Completed',
   CURRICULUM_ASSIGNED: 'Section Curriculum Assigned',
   PROGRESS_VIEWED: 'Section Progress Viewed',
   PROGRESS_VIEWED_FIXED: 'Accurate V1 Section Progress Viewed',
@@ -187,6 +187,7 @@ const EVENTS = {
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
   RUBRIC_LEVEL_VIEWED_EVENT: 'Rubric Level Viewed',
+  RUBRIC_ACTIVITY: 'Rubric Activity',
   TEACHER_VIEWING_STUDENT_WORK: 'Teacher Viewing Student Work',
   SUMMARY_PAGE_LOADED: 'Summary Page Loaded',
   SUMMARY_PAGE_NEXT_LEVEL_CLICKED: 'Summary Page Next Level Clicked',
@@ -406,8 +407,7 @@ const EVENTS = {
   AICHAT_START_OVER: 'Student starts over and resets to default model settings',
   SUBMIT_AICHAT_REQUEST_SUCCESS: 'User submits aichat request successfully',
   SUBMIT_AICHAT_REQUEST_UNAUTHORIZED:
-    'Unauthorized user attempts to submit aichat request and fails',
-
+    'Unauthorized user attempts to submit aichat request or model customizations and fails',
   // Codebridge - File broswer-related events
   CODEBRIDGE_DELETE_FILE: 'Delete file on codebridge',
   CODEBRIDGE_DELETE_FOLDER: 'Delete folder on codebridge',

@@ -90,10 +90,6 @@ window.onYouTubeIframeAPIReady = function () {
       },
       onError: function (error) {
         if (currentVideoOptions) {
-          analyticsReporter.sendEvent(EVENTS.VIDEO_FALLBACK_LOADED, {
-            url: location.href,
-            video: player.getVideoUrl(),
-          });
           var size = error.target.f.getBoundingClientRect();
           addFallbackVideoPlayer(currentVideoOptions, size.width, size.height);
         }
@@ -412,6 +408,12 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
   // player
 
   var fallbackPlayerID = 'fallbackPlayer' + Date.now();
+
+  analyticsReporter.sendEvent(EVENTS.VIDEO_FALLBACK_LOADED, {
+    url: location.href,
+    forced: !!videoInfo.force_fallback,
+    video: videoInfo.download,
+  });
 
   // If we have want the video player to be at 100% width & 100% height, then
   // let's assume we are attaching to a container that is relative, and we want

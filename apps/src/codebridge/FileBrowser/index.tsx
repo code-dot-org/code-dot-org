@@ -90,12 +90,7 @@ const InnerFileBrowser = React.memo(
     const fileUploadErrorCallback = useFileUploadErrorCallback();
 
     const {startFileUpload, FileUploaderComponent} = useFileUploader({
-      callback: (fileName, contents, folderId) =>
-        handleFileUpload({
-          folderId: folderId as FolderId,
-          fileName,
-          contents,
-        }),
+      callback: handleFileUpload,
       errorCallback: fileUploadErrorCallback,
       validMimeTypes,
     });
@@ -446,7 +441,7 @@ export const FileBrowser = React.memo(() => {
               }
             )}
           >
-            <ul>
+            <ul id="uitest-files-list">
               <InnerFileBrowser
                 parentId={DEFAULT_FOLDER_ID}
                 folders={project.folders}

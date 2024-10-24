@@ -90,6 +90,12 @@ export const MusicConditions: ConditionNames = {
     description:
       'Checks if at least this many AI patterns (`play AI drums` block with at least 1 tick) have played. Ex. Value: 2',
   },
+  PLAYED_GENERATED_PATTERNS_AI: {
+    name: 'played_generated_patterns_ai',
+    valueType: 'number',
+    description:
+      'Checks if at least this many AI patterns with generated notes (`play AI drums` block with at least 1 tick after the first two beats) have played. Ex. Value: 2',
+  },
   PLAYED_DIFFERENT_SOUNDS_TOGETHER_MULTIPLE_TIMES: {
     name: 'played_different_sounds_together_multiple_times',
     valueType: 'number',

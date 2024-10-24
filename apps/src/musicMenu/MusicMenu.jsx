@@ -91,6 +91,17 @@ const optionsList = [
     ],
   },
   {
+    name: 'show-ai-temperature-explanation',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: 'Hide AI temperature explanation (default).',
+      },
+      {value: 'true', description: 'Show AI temperature.'},
+    ],
+  },
+  {
     name: 'BPM',
     type: 'string',
     description: 'Set a specific BPM',
@@ -122,6 +133,17 @@ const optionsList = [
     values: [
       {value: 'sample', description: 'Use the sample player (legacy).'},
       {value: 'tonejs', description: 'Use the ToneJS player (default).'},
+    ],
+  },
+  {
+    name: 'allow-change-starting-playhead-position',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: "Don't allow change starting playhead position (default).",
+      },
+      {value: 'true', description: 'Allow change starting playhead position.'},
     ],
   },
   {

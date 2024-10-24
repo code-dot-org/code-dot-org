@@ -615,6 +615,9 @@ p.aiAssessmentScoreText {
   strong::after {
     content: ' ';
   }
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 p.aiAssessmentEvidenceBlock {
@@ -1268,11 +1271,37 @@ p.detailsHidden {
   border-radius: 20px;
   padding: 5px 10px 0;
   height: 22px;
-  min-width: 80px;
+  min-width: 82px;
   display: inline;
   margin-right: 17px;
   p {
     margin: 0, 0, 0, 0;
+  }
+}
+
+.purpleStatusBlob {
+  background-color: var(--background-brand-purple-light);
+  border-radius: 20px;
+  padding: 4px 10px 0;
+  height: 22px;
+  min-width: 80px;
+  display: inline;
+  margin-right: 17px;
+  p {
+      margin-bottom: 0;
+  }
+}
+
+.redStatusBlob {
+  background-color: $light_negative_100;
+  border-radius: 20px;
+  padding: 4px 10px 0;
+  height: 22px;
+  min-width: 115px;
+  display: inline;
+  margin-right: 17px;
+  p {
+    margin-bottom: 0;
   }
 }
 
@@ -1281,7 +1310,7 @@ p.detailsHidden {
   border-radius: 20px;
   padding: 5px 10px 0;
   height: 22px;
-  min-width: 80px;
+  min-width: 87px;
   display: inline;
   margin-right: 17px;
   p {
@@ -1295,6 +1324,9 @@ p.detailsHidden {
   p {
     margin-bottom: 0;
   }
+  overflow: hidden;
+  height: 20px;
+  text-overflow: ellipsis;
 }
 
 .announcementDialog {
