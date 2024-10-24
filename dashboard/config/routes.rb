@@ -350,6 +350,7 @@ Dashboard::Application.routes.draw do
         post 'update_exemplar_code'
         get 'level_properties'
         get 'extra_links'
+        patch 'update_bubble_choice_settings'
       end
     end
 
