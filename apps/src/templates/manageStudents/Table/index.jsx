@@ -54,7 +54,7 @@ import {
 } from '@cdo/apps/templates/tables/tableConstants';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import {
-  selectedSection,
+  selectedSectionSelector,
   syncEnabled,
   sectionCode,
   sectionName,
@@ -1131,7 +1131,7 @@ export default connect(
         .participantType,
     loginType: state.manageStudents.loginType,
     studentData: convertStudentDataToArray(state.manageStudents.studentData),
-    isSectionAssignedCSA: selectedSection(state).isAssignedCSA,
+    isSectionAssignedCSA: selectedSectionSelector(state).isAssignedCSA,
     editingData: state.manageStudents.editingData,
     showSharingColumn: state.manageStudents.showSharingColumn,
     addStatus: state.manageStudents.addStatus,

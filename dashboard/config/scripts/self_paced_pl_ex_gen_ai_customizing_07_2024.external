@@ -1,0 +1,25 @@
+name 'self-paced-pl-ex-gen-ai-customizing_07_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Safety Note with AI Chat Lab
+
+#### You may have noticed this pop-up to when you opened up a level using AI Chat Lab. This message will also be displayed to your students as they work with AI Chat Lab.
+
+<img src="https://images.code.org/e91aabccd294fb82c1ac7bcc3fe60e86-image.png" alt="Remember to chat responsibily pop-up" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+
+#### While teaching this Unit, it's important to emphasize responsible use when students interact with AI Chat Lab. Here are a few tips:
+* #### **Encourage Awareness**: Remind students that all interactions with the chatbot are recorded and monitored, ensuring that their conversations remain respectful and on-topic. Any inappropriate messages will be flagged, and consequences may follow.
+* #### **Protect Personal Information**: Teach students the importance of keeping personal information private. They should avoid sharing details like their name, phone number, or address when interacting with the chatbot.
+* #### **Promote Responsible Communication**: Reinforce the idea that the chatbot is a tool for learning and growth, not just for casual conversation. Encourage students to use it responsibly and with a focus on education.
+* #### **Be Prepared to Have Discussions with Students**: Use unexpected outputs as teaching moments. Encourage critical thinking by discussing potential biases in AI, how AI works, and why the chatbot might generate certain outputs.
+* #### **Actively Monitor Student Usage**: You should actively monitor student usage to identify any potential issues, providing guidance and intervention as necessary to maintain a safe and supportive learning environment. Learn more about how to do so <a href="https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher" target="blank">here</a>.
+
+#### For more information about safety with AI Chat Lab check out the <a href="https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ" target="blank">FAQ Support Article</a>.
+
+## Up Next!
+
+#### In the next level you’ll get to experiment with **temperature**. Temperature is one of the values you can control once a language model has been trained. Experiment with temperature and see if you can tell what it does!
+
+MARKDOWN

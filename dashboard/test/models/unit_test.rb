@@ -45,6 +45,9 @@ class UnitTest < ActiveSupport::TestCase
     # We also want to test level_concept_difficulties, so make sure to give it
     # one.
     @cacheable_level = create(:level, :with_script, level_concept_difficulty: create(:level_concept_difficulty))
+
+    @foundations_of_cs_unit = create :foundations_of_cs_script, name: 'foundations-of-cs-1'
+    @foundations_of_programming_unit = create :foundations_of_programming_script, name: 'foundations-of-programming-1'
   end
 
   setup do
@@ -1985,6 +1988,8 @@ class UnitTest < ActiveSupport::TestCase
     assert @csd_unit.middle_high?
     assert @csp_unit.middle_high?
     assert @csa_unit.middle_high?
+    assert @foundations_of_cs_unit.middle_high?
+    assert @foundations_of_programming_unit.middle_high?
 
     refute @csf_unit.middle_high?
     refute @csc_unit.middle_high?

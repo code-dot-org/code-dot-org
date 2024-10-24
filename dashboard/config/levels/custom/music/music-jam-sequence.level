@@ -7,6 +7,7 @@
   "user_id": 1196,
   "properties": {
     "encrypted": "false",
+    "background": "music-black",
     "instructions_important": "false",
     "long_instructions": "#### Play More than One Sound\r\n\r\n- Drag two or more [play](#clickable=play-sound-block) blocks under [when run](#clickable=when-run-block). \r\n- Choose two different sounds. \r\n- Press [Run](#clickable=run-button).",
     "hide_share_and_remix": "true",
