@@ -115,6 +115,7 @@ Run **eyes tests** on one feature in one saucelabs browser against your local ma
 - If you're new to [Cucumber](https://cucumber.io), read about [Cucumber scenarios](https://cucumber.io/docs/guides/overview/), especially the keywords [Given When Then](https://cucumber.io/docs/gherkin/reference/).
 - When debugging test scripts, it can be helpful to add pauses, such as: `And I wait for 5 seconds`.
 - If you're missing data locally, try running `bundle exec rake seed:ui_test` from the dashboard directory
+- If you'd like eyes tests to run from Drone CI, include the string `[test eyes]` in your commit message.
 
 ## See Also
 
