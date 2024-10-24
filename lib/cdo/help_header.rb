@@ -7,6 +7,7 @@ class HelpHeader
     loc_prefix = options[:loc_prefix]
 
     ge_region = options[:ge_region] || :root
+
     ge_config = Cdo::GlobalEdition.configuration_for(ge_region)[:header] || {}
     ge_help_config = ge_config[:help] || {}
 

@@ -1,0 +1,159 @@
+# Farsi Global Region
+
+# The structure of a global configuration is to start with the page context and
+# then list the page name, then list components within that page.
+#
+# The component can then specify a value that overrides component properties
+# with the ones given here, or, if the value is 'false', it removes the
+# component from the page.
+
+# The top bar on the site consisting of dropdown menus and navigation links
+header:
+  # The topbar (which is collapsed into the hamburger in certain contexts)
+  top:
+    signed_out:
+      - title: teach
+        id: header-teach
+        domain: code.org
+        url: /global/fa/teacher
+      - title: about
+        id: header-about
+        domain: code.org
+        url: /global/fa/about
+      - title: csf
+        id: header-csf
+        domain: code.org
+        url: /global/fa/csf
+        loc_prefix: header_
+      - title: hour_of_code
+        id: header-hoc
+        domain: code.org
+        url: /global/fa/hourofcode
+        loc_prefix: header_
+      - title: videos
+        id: header-videos
+        domain: code.org
+        url: /global/fa/videos
+        loc_prefix: header_
+
+    student:
+      - title: my_dashboard
+        url: /global/fa/home
+        domain: studio.code.org
+        id: header-student-home
+      - title: course_catalog
+        url: /global/fa/students
+        domain: studio.code.org
+        id: header-student-courses
+
+    teacher:
+      - title: my_dashboard
+        url: /global/fa/home
+        domain: studio.code.org
+        id: header-student-home
+      - title: course_catalog
+        url: /global/fa/catalog
+        domain: studio.code.org
+        id: header-teacher-courses
+      - title: professional_learning
+        url: /global/fa/my-professional-learning
+        domain: studio.code.org
+        id: header-teacher-professional-learning
+
+  # The three-bar "hamburger" menu
+  hamburger:
+    student:
+      - title: learn
+        domain: code.org
+        url: /global/fa/students
+        id: learn
+      - title: legal
+        type: expander
+        id: legal_entries
+        subentries:
+          - title: legal_privacy
+            domain: code.org
+            url: /privacy
+          - title: legal_cookie_notice
+            domain: code.org
+            url: /cookies
+          - title: legal_tos
+            domain: code.org
+            url: /tos
+
+    teacher:
+      - title: learn
+        domain: code.org
+        url: /global/fa/students
+        id: learn
+      - title: legal
+        type: expander
+        id: legal_entries
+        subentries:
+          - title: legal_privacy
+            domain: code.org
+            url: /privacy
+          - title: legal_cookie_notice
+            domain: code.org
+            url: /cookies
+          - title: legal_tos
+            domain: code.org
+            url: /tos
+
+  # Help button (?)
+  help:
+    # The report_bug item is special in that it only appears when appropriate
+    - title: report_bug
+      url: https://support.code.org/hc/ir-fa/requests/new
+      id: report-bug
+
+# The navigation region found at the bottom of each page
+footer:
+  links:
+    studio:
+      - title: privacy_updated
+        url: /privacy
+        domain: code.org
+        style: 'color: #ffa400;'
+      - title: privacy
+        url: /privacy
+        domain: code.org
+        style: 'color: #ffa400;'
+      - title: cookie_notice
+        url: /cookies
+        domain: code.org
+      - title: tos_short
+        url: /tos'
+        domain: code.org
+    code_org:
+      - title: privacy_policy
+        url: /privacy
+        domain: code.org
+      - title: terms
+        url: /tos
+        domain: code.org
+    hour_of_code:
+      - title: terms
+        url: /tos
+        domain: code.org
+        target: _blank
+      - title: privacy
+        url: /privacy
+        domain: code.org
+        target: _blank
+      - title: cookie
+        url: /cookies
+        target: _blank
+# A subset of locales can be specified with the following structure
+#locale_options:
+#  - ['English', 'en-US']
+#  - ['فارسی', 'fa-IR']
+
+
+# Route matching to influence properties of components
+pages:
+  # Home dashboards
+  - path: /home
+    components:
+      MarketingAnnouncementBanner: false
+      IncubatorBanner: false

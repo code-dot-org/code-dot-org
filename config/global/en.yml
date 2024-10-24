@@ -1,0 +1,392 @@
+# This is the configuration for /global/root
+# (which is mirroring the main site at the moment)
+header:
+  # The topbar (which is collapsed into the hamburger in certain contexts)
+  top:
+    signed_out:
+      - title: learn
+        url: /students
+        domain: code.org
+        id: header-learn
+      - title: teach
+        url: /teach
+        domain: code.org
+        id: header-teach
+      - title: districts
+        url: /administrators
+        domain: code.org
+        id: header-districts
+      - title: stats
+        url: /promote
+        domain: code.org
+        id: header-stats
+      - title: help_us
+        url: /help
+        domain: code.org
+        id: header-help
+      - title: incubator
+        url: /incubator
+        domain: studio.code.org
+        id: header-incubator
+      - title: about
+        url: /about
+        domain: code.org
+        id: header-about
+
+    student:
+      - title: my_dashboard
+        url: /home
+        domain: studio.code.org
+        id: header-student-home
+      - title: course_catalog
+        url: /students
+        domain: code.org
+        id: header-student-courses
+      - title: project_gallery
+        url: /projects
+        domain: studio.code.org
+        id: header-student-projects
+      - title: incubator
+        url: /incubator
+        domain: studio.code.org
+        id: header-incubator
+
+    teacher:
+      - title: my_dashboard
+        url: /home
+        domain: studio.code.org
+        id: header-teacher-home
+      - title: course_catalog
+        url: /catalog
+        domain: studio.code.org
+        id: header-teacher-courses
+      - title: project_gallery
+        url: /projects
+        domain: studio.code.org
+        id: header-teacher-projects
+      - title: professional_learning
+        url: /my-professional-learning
+        domain: studio.code.org
+        id: header-teacher-professional-learning
+      - title: incubator
+        url: /incubator
+        domain: studio.code.org
+        id: header-teacher-incubator
+
+  # The three-bar "hamburger" menu
+  hamburger:
+    student:
+      - title: learn
+        domain: code.org
+        url: /students
+        id: learn
+      - title: teach
+        type: expander
+        id: educate_entries
+        subentries:
+          - title: educate_overview
+            domain: code.org
+            url: /teach
+            id: educate-overview
+          - title: course_catalog
+            domain: studio.code.org
+            url: /catalog
+            id: course-catalog
+          - title: educate_elementary
+            domain: code.org
+            url: /educate/curriculum/elementary-school
+          - title: educate_middle
+            domain: code.org
+            url: /educate/curriculum/middle-school
+          - title: educate_high
+            domain: code.org
+            url: /educate/curriculum/high-school
+          - title: educate_hoc
+            url: https://hourofcode.com
+          - title: educate_beyond
+            domain: code.org
+            url: /educate/curriculum/3rd-party
+          - title: educate_community
+            url: https://forum.code.org/
+          - title: educate_requirements
+            domain: code.org
+            url: /educate/it
+          - title: educate_tools
+            domain: code.org
+            url: /educate/resources/videos
+      - title: districts
+        domain: code.org
+        url: /administrators
+        id: districts
+      - title: stats
+        domain: code.org
+        url: /promote
+        id: stats
+      - title: help_us
+        domain: code.org
+        url: /help
+        id: help-us
+      - title: about
+        type: expander
+        id: about_entries
+        subentries:
+          - title: about_us
+            domain: code.org
+            url: /about
+            id: about-us
+          - title: about_leadership
+            domain: code.org
+            url: /about/leadership
+          - title: about_donors
+            domain: code.org
+            url: /about/donors
+          - title: about_partners
+            domain: code.org
+            url: /about/partners
+          - title: about_team
+            domain: code.org
+            url: /about/team
+          - title: about_news
+            domain: code.org
+            url: /about/news
+          - title: about_jobs
+            domain: code.org
+            url: /about/jobs
+          - title: about_contact
+            domain: code.org
+            url: /contact
+          - title: about_faqs
+            domain: code.org
+            url: /faq
+      - title: legal
+        type: expander
+        id: legal_entries
+        subentries:
+          - title: legal_privacy
+            domain: code.org
+            url: /privacy
+          - title: legal_cookie_notice
+            domain: code.org
+            url: /cookies
+          - title: legal_tos
+            domain: code.org
+            url: /tos
+
+    teacher:
+      - title: learn
+        domain: code.org
+        url: /students
+        id: learn
+      - title: teach
+        type: expander
+        id: educate_entries
+        subentries:
+          - title: educate_overview
+            domain: code.org
+            url: /teach
+            id: educate-overview
+          - title: course_catalog
+            domain: studio.code.org
+            url: /catalog
+            id: course-catalog
+          - title: educate_elementary
+            domain: code.org
+            url: /educate/curriculum/elementary-school
+          - title: educate_middle
+            domain: code.org
+            url: /educate/curriculum/middle-school
+          - title: educate_high
+            domain: code.org
+            url: /educate/curriculum/high-school
+          - title: educate_hoc
+            url: https://hourofcode.com
+          - title: educate_beyond
+            domain: code.org
+            url: /educate/curriculum/3rd-party
+          - title: educate_community
+            url: https://forum.code.org/
+          - title: educate_requirements
+            domain: code.org
+            url: /educate/it
+          - title: educate_tools
+            domain: code.org
+            url: /educate/resources/videos
+      - title: districts
+        domain: code.org
+        url: /administrators
+        id: districts
+      - title: stats
+        domain: code.org
+        url: /promote
+        id: stats
+      - title: help_us
+        domain: code.org
+        url: /help
+        id: help-us
+      - title: about
+        type: expander
+        id: about_entries
+        subentries:
+          - title: about_us
+            domain: code.org
+            url: /about
+            id: about-us
+          - title: about_leadership
+            domain: code.org
+            url: /about/leadership
+          - title: about_donors
+            domain: code.org
+            url: /about/donors
+          - title: about_partners
+            domain: code.org
+            url: /about/partners
+          - title: about_team
+            domain: code.org
+            url: /about/team
+          - title: about_news
+            domain: code.org
+            url: /about/news
+          - title: about_jobs
+            domain: code.org
+            url: /about/jobs
+          - title: about_contact
+            domain: code.org
+            url: /contact
+          - title: about_faqs
+            domain: code.org
+            url: /faq
+      - title: legal
+        type: expander
+        id: legal_entries
+        subentries:
+          - title: legal_privacy
+            domain: code.org
+            url: /privacy
+          - title: legal_cookie_notice
+            domain: code.org
+            url: /cookies
+          - title: legal_tos
+            domain: code.org
+            url: /tos
+
+  # Help button (?)
+  help:
+    - title: game_lab_documentation
+      domain: studio.code.org
+      level: Gamelab
+      url: /docs/gamelab
+      id: gamelab-docs
+    - title: game_lab_tutorials
+      domain: code.org
+      level: Gamelab
+      url: /educate/gamelab
+      id: gamelab-tutorials
+    - title: app_lab_documentation
+      domain: studio.code.org
+      level: Applab
+      url: /docs/applab
+      id: applab-docs
+    - title: app_lab_tutorials
+      domain: code.org
+      level: Applab
+      url: /educate/applab
+      id: applab-tutorials
+    - title: sprite_lab_documentation
+      domain: studio.code.org
+      level: Spritelab
+      url: /docs/spritelab
+      id: spritelab-docs
+    - title: sprite_lab_tutorials
+      domain: code.org
+      level: Spritelab
+      url: /educate/spritelab
+      id: spritelab-tutorials
+    - title: web_lab_documentation
+      domain: studio.code.org
+      level: Weblab
+      url: /docs/ide/weblab
+      id: weblab-docs
+    - title: music_lab_documentation
+      domain: studio.code.org
+      level: Music
+      url: /docs/ide/music
+      id: musiclab-docs
+    - title: help_support
+      url: https://support.code.org
+      id: support
+    # The report_bug item is special in that it only appears when appropriate
+    - title: report_bug
+      url: https://support.code.org/hc/en-us/requests/new
+      id: report-bug
+    # The report_abuse still only exists if it is on a relevant page
+    - title: report_abuse
+      domain: studio.code.org
+      url: /report_abuse
+      id: report-abuse
+    - title: teacher_community
+      user_type: teacher
+      url: https://forum.code.org
+      id: teacher-community
+
+# The navigation region found at the bottom of each page
+footer:
+  # Remove these links to support pages
+  links:
+    - title: privacy_updated
+      url: /privacy
+      domain: code.org
+      style: 'color: #ffa400;'
+    - title: privacy
+      url: /privacy
+      domain: code.org
+      style: 'color: #ffa400;'
+    - title: cookie_notice
+      url: /cookies
+      domain: code.org
+    - title: translate
+      url: /translate
+      domain: code.org
+    - title: help_support
+      url: https://support.code.org
+      target: _blank
+      id: support
+    - title: store
+      url: https://store.code.org
+    - title: tos_short
+      url: /tos'
+      domain: code.org
+
+# These override specially wrapped components in particular pages.
+#
+# When we navigate to such a page that matches /global/:region<your mask>
+# the specifically wrapped components will check this table. Their properties
+# will get overriden with those specified here.
+#
+# This table is checked top to bottom to find the last matching route that
+# contains a set of properties. Only those properties are considered. If
+# `false` is provided instead of a set of properties, the component is not
+# rendered at all.
+#
+# Ex: (config/global/foo.yml)
+#
+# pages:
+#   - path: /
+#     components:
+#       MarketingAnnouncementComponent: false
+#   - path: /home
+#     components:
+#       MarketingAnnouncementComponent:
+#         announcement:
+#           body: This is a Farsi only announcement.
+#           buttonId: blah
+#           buttonText: FARSI!
+#           buttonUrl: /
+#           id: farsi-announcement
+#           image: /shared/images/teacher-announcement/incubator-announcement.png
+#           title: foo
+#       
+# When we navigate to the /global/foo/home page, any MarketingAnnouncement will
+# have its normal announcement replaced with the configured one. Whereas, on any
+# other page, the '/' would match, and the `false` indicates the component should
+# be removed.
+#pages:
