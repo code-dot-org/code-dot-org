@@ -42,9 +42,6 @@ function showYourSchool() {
           'parameters-teacher-application-mode'
         )}
         tileset={yourschoolElement.data('parameters-tileset')}
-        showReportLaunchBanner={$('#your-school').data(
-          'parameters-show-report-launch-banner'
-        )}
       />
     </Provider>,
     yourschoolElement[0]
