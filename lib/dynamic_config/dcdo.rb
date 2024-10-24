@@ -57,6 +57,7 @@ class DCDOBase < DynamicConfigBase
       'best-of-stem-2024': DCDO.get('best-of-stem-2024', false),
       lti_account_unlinking: DCDO.get('lti_account_unlinking', false),
       'hoc-2024-sweepstakes': DCDO.get('hoc-2024-sweepstakes', false),
+      'hoc-2024-nov-launch': DCDO.get('hoc-2024-nov-launch', false),
     }
   end
 end
