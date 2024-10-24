@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative '../global_edition'
+
 module Rack
   class GlobalEdition
     REGION_KEY = 'ge_region'
