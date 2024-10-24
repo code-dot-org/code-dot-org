@@ -51,11 +51,11 @@ const optionsList = [
     ],
   },
   {
-    name: 'pack-dialog-2',
+    name: 'pack-dialog-1',
     type: 'radio',
     values: [
-      {value: 'false', description: 'Use regular pack dialog.'},
-      {value: 'true', description: 'Use pack dialog 2.'},
+      {value: 'false', description: 'Use pack dialog 2 (default).'},
+      {value: 'true', description: 'Use older pack dialog.'},
     ],
   },
   {
