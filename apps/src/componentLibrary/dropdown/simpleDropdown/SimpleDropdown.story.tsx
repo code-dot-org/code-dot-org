@@ -78,20 +78,6 @@ DefaultDropdown.args = {
   size: 'm',
 };
 
-export const DisabledDropdown = SingleTemplate.bind({});
-DisabledDropdown.args = {
-  name: 'disabled-dropdown',
-  items: [
-    {value: 'option-1', text: 'Option 1'},
-    {value: 'option-2', text: 'Option 2'},
-  ],
-  selectedValue: 'option-1',
-  labelText: 'Disabled Dropdown',
-  onChange: args => console.log(args),
-  disabled: true,
-  size: 'm',
-};
-
 export const ReadOnlyDropdown = SingleTemplate.bind({});
 ReadOnlyDropdown.args = {
   name: 'disabled-dropdown',
@@ -103,6 +89,20 @@ ReadOnlyDropdown.args = {
   labelText: 'ReadOnly Dropdown',
   onChange: args => console.log(args),
   readOnly: true,
+  size: 'm',
+};
+
+export const DisabledDropdown = SingleTemplate.bind({});
+DisabledDropdown.args = {
+  name: 'disabled-dropdown',
+  items: [
+    {value: 'option-1', text: 'Option 1'},
+    {value: 'option-2', text: 'Option 2'},
+  ],
+  selectedValue: 'option-1',
+  labelText: 'Disabled Dropdown',
+  onChange: args => console.log(args),
+  disabled: true,
   size: 'm',
 };
 
