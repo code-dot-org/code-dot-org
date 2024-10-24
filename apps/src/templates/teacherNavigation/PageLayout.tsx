@@ -1,25 +1,17 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
 import {Outlet} from 'react-router-dom';
 
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
 import PageHeader from './PageHeader';
-import {Section} from './TeacherNavigationRouter';
 
 import styles from './teacher-navigation.module.scss';
 
 const PageLayout: React.FC = () => {
-  const selectedSection = useSelector(
-    (state: {
-      teacherSections: {
-        selectedSectionId: number | null;
-        sections: {[id: number]: Section};
-      };
-    }) =>
-      state.teacherSections.selectedSectionId
-        ? state.teacherSections.sections[
-            state.teacherSections.selectedSectionId
-          ]
-        : null
+  const selectedSection = useAppSelector(state =>
+    state.teacherSections.selectedSectionId
+      ? state.teacherSections.sections[state.teacherSections.selectedSectionId]
+      : null
   );
 
   return (
