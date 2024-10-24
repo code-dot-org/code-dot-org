@@ -183,6 +183,9 @@ class UnconnectedMusicView extends React.Component {
           });
           this.props.clearCallout();
           this.musicBlocklyWorkspace.dispose();
+
+          // Clear any coypright information in the footer.
+          this.props.setCopyrightInformation(undefined);
         }
       });
   }
