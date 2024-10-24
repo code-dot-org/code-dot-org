@@ -33,6 +33,10 @@
       border-radius: 0.25rem;
       outline-offset: 2px;
     }
+
+    &.readOnly {
+      opacity: 1;
+    }
   }
 
   // custom dropdown arrow styles
@@ -119,6 +123,23 @@
       color: $light_gray_200;
     }
   }
+
+  &:has(select.readOnly) {
+    select {
+      color: $light_black;
+      border-color: $light_gray_200;
+      background-color: $light_gray_50;
+    }
+
+    .dropdownArrowDiv:after {
+      color: $light_black;
+    }
+
+    .helperSection,
+    .errorSection {
+      color: $light_black;
+    }
+  }
 }
 
 .dropdownContainer-gray {
@@ -184,6 +205,23 @@
       color: $light_gray_200;
     }
   }
+
+  &:has(select.readOnly) {
+    select {
+      color: $light_black;
+      border-color: $light_gray_200;
+      background-color: $light_gray_50;
+    }
+
+    .dropdownArrowDiv:after {
+      color: $light_black;
+    }
+
+    .helperSection,
+    .errorSection {
+      color: $light_black;
+    }
+  }
 }
 
 .dropdownContainer-white {
@@ -242,6 +280,23 @@
 
   .dropdownArrowDiv:after {
     color: $light_white;
+  }
+
+  &:has(select.readOnly) {
+    select {
+      color: $light_white;
+      border-color: $light_gray_700;
+      background-color: $light_gray_900;
+    }
+
+    .dropdownArrowDiv:after {
+      color: $light_white;
+    }
+
+    .helperSection,
+    .errorSection {
+      color: $light_white;
+    }
   }
 }
 
