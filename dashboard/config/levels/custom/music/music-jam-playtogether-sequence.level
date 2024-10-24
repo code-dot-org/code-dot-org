@@ -7,6 +7,7 @@
   "user_id": 1196,
   "properties": {
     "encrypted": "false",
+    "background": "music-black",
     "instructions_important": "false",
     "long_instructions": "#### Play Together Again\r\n\r\n- Add two [sounds](#clickable=play-sound-block) in the *first* [play together](#clickable=play-sounds-together-block-workspace) block.\r\n- Add two [sounds](#clickable=play-sound-block) in the *second* [play together](#clickable=id-left:play_sounds_together_block_2) block.\r\n",
     "hide_share_and_remix": "true",

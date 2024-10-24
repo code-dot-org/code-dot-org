@@ -7,6 +7,7 @@
   "user_id": 1196,
   "properties": {
     "encrypted": "false",
+    "background": "music-black",
     "instructions_important": "false",
     "long_instructions": "#### Generate a Beat with A.I. \r\nA.I. will help you create a new beat for your song.\r\n\r\n- Click the [play AI drums](#clickable=id-left:play_pattern_ai_at_current_location_simple2) block to generate your own beat.  \r\n- Press [Run](#clickable=run-button). \r\n",
     "hide_share_and_remix": "true",

@@ -8,6 +8,7 @@
   "properties": {
     "offerTts": "true",
     "encrypted": "false",
+    "background": "music-black",
     "instructions_important": "false",
     "long_instructions": "#### Play a Sound\r\n- Drag the [play](#clickable=play-sound-block) block and connect it under [when run](#clickable=when-run-block). \r\n- Then press [Run](#clickable=run-button).",
     "hide_share_and_remix": "true",

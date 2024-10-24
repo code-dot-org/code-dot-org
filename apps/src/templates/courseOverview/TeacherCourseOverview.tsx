@@ -17,7 +17,7 @@ import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {
@@ -26,6 +26,7 @@ import {
   setUserSignedIn,
 } from '../currentUserRedux';
 import {pageTypes, setPageType} from '../teacherDashboard/teacherSectionsRedux';
+import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
 import {TEACHER_NAVIGATION_PATHS} from '../teacherNavigation/TeacherNavigationPaths';
 
 import CourseOverview from './CourseOverview';
@@ -89,14 +90,6 @@ interface Announcement {
   buttonText: string | null;
 }
 
-interface Section {
-  id: number;
-  name: string;
-  courseId: number | null;
-  unitName: string | null;
-  courseVersionName: string | null;
-}
-
 const courseSummaryCachedLoader = _.memoize(async courseVersionName =>
   HttpClient.fetchJson<Response>(
     `/dashboardapi/course_summary/${courseVersionName}`
@@ -116,23 +109,9 @@ const TeacherCourseOverview: React.FC = () => {
 
   const params = useParams();
 
-  const sections = useSelector(
-    (state: {
-      teacherSections: {
-        sections: {[id: number]: Section};
-      };
-    }) => state.teacherSections.sections
-  );
+  const sections = useAppSelector(state => state.teacherSections.sections);
 
-  const selectedSection = useSelector(
-    (state: {
-      teacherSections: {
-        sections: {[id: number]: Section};
-        selectedSectionId: number;
-      };
-    }) =>
-      state.teacherSections.sections[state.teacherSections.selectedSectionId]
-  );
+  const selectedSection = useAppSelector(selectedSectionSelector);
 
   React.useEffect(() => {
     if (!selectedSection || !selectedSection?.courseVersionName) {

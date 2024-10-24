@@ -1,10 +1,8 @@
 // react testing library import
 import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
-import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import teacherPanel, {
   setLevelsWithProgress,
@@ -30,8 +28,6 @@ import {
   LevelStatus,
 } from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
-
-import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   post: jest.fn().mockResolvedValue({
@@ -61,10 +57,8 @@ const levelSubmitted = {
 };
 
 describe('RubricContainer', () => {
-  let clock;
   let store;
   let fetchStub;
-  let ajaxStub;
   let sendEventSpy;
   let students, levelsWithProgress;
 
@@ -76,63 +70,66 @@ describe('RubricContainer', () => {
     }
   }
 
-  // Stubs out getting the AI status for a particular user
-  function stubFetchEvalStatusForUser(data) {
-    return fetchStub
-      .withArgs(sinon.match(/rubrics\/\d+\/ai_evaluation_status_for_user.*/))
-      .returns(Promise.resolve(new Response(JSON.stringify(data))));
-  }
+  function stubFetch({
+    evalStatusForUser = {},
+    evalStatusForAll = {},
+    aiEvals = [],
+    teacherEvals = [],
+    tourStatus = {},
+    updateTourStatus = {},
+  }) {
+    fetchStub.mockImplementation(url => {
+      // Stubs out getting the AI status for a particular user
+      if (/rubrics\/\d+\/ai_evaluation_status_for_user.*/.test(url)) {
+        return Promise.resolve(new Response(JSON.stringify(evalStatusForUser)));
+      }
 
-  // Stubs out getting the overall AI status, which is part of RubricSettings but
-  // useful to track alongside the user status, here
-  function stubFetchEvalStatusForAll(data) {
-    return fetchStub
-      .withArgs(sinon.match(/rubrics\/\d+\/ai_evaluation_status_for_all.*/))
-      .returns(Promise.resolve(new Response(JSON.stringify(data))));
-  }
+      // Stubs out getting the overall AI status, which is part of RubricSettings but
+      // useful to track alongside the user status, here
+      if (/rubrics\/\d+\/ai_evaluation_status_for_all.*/.test(url)) {
+        return Promise.resolve(new Response(JSON.stringify(evalStatusForAll)));
+      }
 
-  // This stubs out polling the AI evaluation list which can be provided by 'data'
-  function stubFetchAiEvaluations(data) {
-    return fetchStub
-      .withArgs(sinon.match(/rubrics\/\d+\/get_ai_evaluations.*/))
-      .returns(Promise.resolve(new Response(JSON.stringify(data))));
-  }
+      // This stubs out polling the AI evaluation list which can be provided by 'data'
+      if (/rubrics\/\d+\/get_ai_evaluations.*/.test(url)) {
+        return Promise.resolve(new Response(JSON.stringify(aiEvals)));
+      }
 
-  function stubFetchTeacherEvaluations(data) {
-    return fetchStub
-      .withArgs(sinon.match(/rubrics\/\d+\/get_teacher_evaluations_for_all.*/))
-      .returns(Promise.resolve(new Response(JSON.stringify(data))));
-  }
+      if (/rubrics\/\d+\/get_teacher_evaluations_for_all.*/.test(url)) {
+        return Promise.resolve(new Response(JSON.stringify(teacherEvals)));
+      }
 
-  function stubFetchTourStatus(data) {
-    return fetchStub
-      .withArgs(sinon.match(/rubrics\/\w+\/get_ai_rubrics_tour_seen/))
-      .returns(Promise.resolve(new Response(JSON.stringify(data))));
-  }
+      if (/rubrics\/\w+\/get_ai_rubrics_tour_seen/.test(url)) {
+        return Promise.resolve(new Response(JSON.stringify(tourStatus)));
+      }
 
-  function stubUpdateTourStatus(data) {
-    return fetchStub
-      .withArgs(sinon.match(/rubrics\/\w+\/update_ai_rubrics_tour_seen/))
-      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+      if (/rubrics\/\w+\/update_ai_rubrics_tour_seen/.test(url)) {
+        return Promise.resolve(new Response(JSON.stringify(updateTourStatus)));
+      }
+
+      if (/rubrics\/\d+\/run_ai_evaluations_for_user$/.test(url)) {
+        return Promise.resolve(new Response(JSON.stringify({})));
+      }
+    });
   }
 
   beforeEach(() => {
-    ajaxStub = sinon.stub($, 'ajax');
-    const request = sinon.stub();
-    request.getResponseHeader = sinon.stub().returns('some-crsf-token');
-    ajaxStub.returns({
-      done: cb => {
-        cb([], null, request);
-      },
+    jest.spyOn($, 'ajax').mockImplementation(() => {
+      const request = {
+        getResponseHeader: jest.fn().mockReturnValue('some-crsf-token'),
+      };
+      return {
+        done: cb => cb([], null, request),
+      };
     });
-    fetchStub = sinon.stub(window, 'fetch');
-    fetchStub.returns(
-      Promise.resolve(
+    fetchStub = jest
+      .spyOn(window, 'fetch')
+      .mockResolvedValue(
         new Response(JSON.stringify({}), {status: 200, statusText: 'OK'})
-      )
-    );
-    sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
-    sinon.stub(utils, 'queryParams').withArgs('section_id').returns('1');
+      );
+
+    sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
+    jest.spyOn(utils, 'queryParams').mockReturnValue('1');
     stubRedux();
     registerReducers({teacherSections, teacherPanel, currentUser});
     store = getStore();
@@ -143,14 +140,9 @@ describe('RubricContainer', () => {
   });
 
   afterEach(() => {
-    if (clock) {
-      clock.restore();
-    }
+    jest.useRealTimers();
     restoreRedux();
-    utils.queryParams.restore();
-    fetchStub.restore();
-    ajaxStub.restore();
-    sendEventSpy.restore();
+    jest.restoreAllMocks();
   });
 
   const notAttemptedJson = {
@@ -281,73 +273,15 @@ describe('RubricContainer', () => {
     {id: 2, learning_goal_id: 2, understanding: 0, aiConfidencePassFail: 2},
   ];
 
-  it('renders a RubricContent component when the rubric tab is selected', () => {
-    const wrapper = shallow(
-      <RubricContainer
-        rubric={defaultRubric}
-        studentLevelInfo={{}}
-        teacherHasEnabledAi={true}
-        currentLevelName={'test_level'}
-        reportingData={{}}
-        open
-      />
-    );
-    expect(wrapper.find('RubricContent')).to.have.lengthOf(1);
-  });
-
-  it('fetches AI evaluations and passes them to children', async () => {
-    stubFetchEvalStatusForUser(successJson);
-    stubFetchEvalStatusForAll(successJsonAll);
-    stubFetchTeacherEvaluations(noEvals);
-    const evalFetch = stubFetchAiEvaluations(mockAiEvaluations);
-    stubFetchTourStatus({seen: true});
-
-    const wrapper = mount(
-      <Provider store={store}>
-        <RubricContainer
-          rubric={defaultRubric}
-          studentLevelInfo={{}}
-          teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
-          reportingData={{}}
-          sectionId={42}
-          open
-        />
-      </Provider>
-    );
-
-    // Push the `fetch`s through
-    await wait();
-
-    // Let the component re-render with the set state
-    wrapper.update();
-    expect(evalFetch).to.have.been.called;
-    expect(wrapper.find('RubricContent').props().aiEvaluations).to.eql(
-      mockAiEvaluations
-    );
-  });
-
-  it('displays RubricTabButtons prop', () => {
-    const wrapper = shallow(
-      <RubricContainer
-        rubric={defaultRubric}
-        studentLevelInfo={{}}
-        teacherHasEnabledAi={true}
-        currentLevelName={'test_level'}
-        reportingData={{}}
-        open
-      />
-    );
-    expect(wrapper.find('RubricTabButtons').length).to.equal(1);
-  });
-
   it('switches components when tabs are clicked', async () => {
-    stubFetchEvalStatusForUser(successJson);
-    stubFetchEvalStatusForAll(successJsonAll);
-    stubFetchAiEvaluations(mockAiEvaluations);
-    stubFetchTeacherEvaluations(noEvals);
+    stubFetch({
+      evalStatusForUser: successJson,
+      evalStatusForAll: successJsonAll,
+      aiEvals: mockAiEvaluations,
+      teacherEvals: noEvals,
+    });
 
-    const wrapper = mount(
+    const {container} = render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -359,25 +293,41 @@ describe('RubricContainer', () => {
         />
       </Provider>
     );
-    await wait();
-    wrapper.update();
-    expect(wrapper.find('RubricContent').props().visible).to.be.true;
-    expect(wrapper.find('RubricSettings').props().visible).to.be.false;
-    wrapper.find('SegmentedButton').at(1).simulate('click');
-    expect(wrapper.find('RubricContent').props().visible).to.be.false;
-    expect(wrapper.find('RubricSettings').props().visible).to.be.true;
-    wrapper.find('SegmentedButton').at(0).simulate('click');
-    expect(wrapper.find('RubricContent').props().visible).to.be.true;
-    expect(wrapper.find('RubricSettings').props().visible).to.be.false;
+
+    // Use classnames to find elements and check their visibility even though it
+    // is an anti-pattern. Ideally we would find an accessible element in each
+    // pane and use toBeVisible() on it to check visibility. However, that
+    // approach is difficult because jest-dom can't see the styles in our
+    // CSS modules which control element visibility.
+
+    let settings = container.querySelector('.uitest-rubric-settings');
+    let content = container.querySelector('#uitest-rubric-content');
+
+    expect(content).toHaveClass('visibleRubricContent');
+    expect(settings).toHaveClass('settingsHidden');
+
+    fireEvent.click(screen.getByText(i18n.rubricTabClassManagement()));
+
+    expect(content).toHaveClass('hiddenRubricContent');
+    expect(settings).toHaveClass('settingsVisible');
+
+    fireEvent.click(
+      screen.getAllByRole('button', {name: i18n.rubricTabStudent()})[0]
+    );
+
+    expect(content).toHaveClass('visibleRubricContent');
+    expect(settings).toHaveClass('settingsHidden');
   });
 
-  it('shows a a button for running analysis if canProvideFeedback is true', async () => {
-    stubFetchEvalStatusForUser(readyJson);
-    stubFetchEvalStatusForAll(readyJsonAll);
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchAiEvaluations([]);
+  it('shows a button for running analysis if canProvideFeedback is true', async () => {
+    stubFetch({
+      evalStatusForUser: readyJson,
+      evalStatusForAll: readyJsonAll,
+      aiEvals: [],
+      teacherEvals: noEvals,
+    });
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -389,20 +339,17 @@ describe('RubricContainer', () => {
         />
       </Provider>
     );
-    await wait();
-    wrapper.update();
-    expect(wrapper.find('Button')).to.have.lengthOf(4);
-    expect(wrapper.find('Button').first().props().text).to.equal(
-      i18n.runAiAssessment()
-    );
+    screen.getByRole('button', {name: i18n.runAiAssessment()});
   });
 
   it('does not show a button for running analysis if AI is not enabled for level', async () => {
-    stubFetchEvalStatusForUser({});
-    stubFetchEvalStatusForAll({});
-    stubFetchAiEvaluations({});
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchTourStatus({seen: true});
+    stubFetch({
+      evalStatusForUser: {},
+      evalStatusForAll: {},
+      aiEvals: [],
+      teacherEvals: noEvals,
+      tourStatus: {seen: true},
+    });
 
     const {queryByText} = render(
       <Provider store={store}>
@@ -417,15 +364,17 @@ describe('RubricContainer', () => {
       </Provider>
     );
     await wait();
-    expect(queryByText(i18n.runAiAssessment())).to.not.exist;
+    expect(queryByText(i18n.runAiAssessment())).not.toBeInTheDocument();
   });
 
   it('shows status text when student has not attempted level', async () => {
-    const userFetchStub = stubFetchEvalStatusForUser(notAttemptedJson);
-    const allFetchStub = stubFetchEvalStatusForAll(notAttemptedJsonAll);
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchAiEvaluations([]);
-    stubFetchTourStatus({seen: true});
+    stubFetch({
+      evalStatusForUser: notAttemptedJson,
+      evalStatusForAll: notAttemptedJsonAll,
+      aiEvals: [],
+      teacherEvals: noEvals,
+      tourStatus: {seen: true},
+    });
 
     store.dispatch(setStudentsForCurrentSection(sectionId, students));
     store.dispatch(setLevelsWithProgress(levelsWithProgress));
@@ -445,23 +394,23 @@ describe('RubricContainer', () => {
     );
     await wait();
 
-    expect(userFetchStub).to.have.been.called;
-    expect(allFetchStub).to.have.been.called;
     screen.getByText(i18n.aiEvaluationStatus_not_attempted());
     const button = screen.getByRole('button', {name: i18n.runAiAssessment()});
-    expect(button).to.be.disabled;
+    expect(button).toBeDisabled();
 
     // Verify status bubble in student selector
     const dropdownOption = screen.getByText(studentAlice.name).closest('div');
-    expect(dropdownOption.textContent).to.contain(i18n.notStarted());
+    expect(dropdownOption.textContent).toContain(i18n.notStarted());
   });
 
   it('shows status text when level has already been evaluated', async () => {
-    const userFetchStub = stubFetchEvalStatusForUser(successJson);
-    const allFetchStub = stubFetchEvalStatusForAll(successJsonAll);
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchAiEvaluations(mockAiEvaluations);
-    stubFetchTourStatus({seen: true});
+    stubFetch({
+      evalStatusForUser: successJson,
+      evalStatusForAll: successJsonAll,
+      aiEvals: mockAiEvaluations,
+      teacherEvals: noEvals,
+      tourStatus: {seen: true},
+    });
 
     store.dispatch(setStudentsForCurrentSection(sectionId, students));
     store.dispatch(setLevelsWithProgress(levelsWithProgress));
@@ -483,23 +432,23 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
-    expect(userFetchStub).to.have.been.called;
-    expect(allFetchStub).to.have.been.called;
     screen.getByText(i18n.aiEvaluationStatus_already_evaluated());
     const button = screen.getByRole('button', {name: i18n.runAiAssessment()});
-    expect(button).to.be.disabled;
+    expect(button).toBeDisabled();
 
     // Verify status bubble in student selector
     const dropdownOption = screen.getByText(studentAlice.name).closest('div');
-    expect(dropdownOption.textContent).to.contain(i18n.readyToReview());
+    expect(dropdownOption.textContent).toContain(i18n.readyToReview());
   });
 
   it('allows teacher to run analysis when level has not been evaluated', async () => {
-    const userFetchStub = stubFetchEvalStatusForUser(readyJson);
-    const allFetchStub = stubFetchEvalStatusForAll(readyJsonAll);
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchAiEvaluations([]);
-    stubFetchTourStatus({seen: true});
+    stubFetch({
+      evalStatusForUser: readyJson,
+      evalStatusForAll: readyJsonAll,
+      aiEvals: [],
+      teacherEvals: noEvals,
+      tourStatus: {seen: true},
+    });
 
     store.dispatch(setStudentsForCurrentSection(sectionId, students));
     store.dispatch(setLevelsWithProgress(levelsWithProgress));
@@ -521,14 +470,12 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
-    expect(userFetchStub).to.have.been.called;
-    expect(allFetchStub).to.have.been.called;
     const button = screen.getByRole('button', {name: i18n.runAiAssessment()});
-    expect(button).to.not.be.disabled;
+    expect(button).not.toBeDisabled();
 
     // Verify status bubble in student selector
     const dropdownOption = screen.getByText(studentAlice.name).closest('div');
-    expect(dropdownOption.textContent).to.contain(i18n.inProgress());
+    expect(dropdownOption.textContent).toContain(i18n.inProgress());
   });
 
   it('handles running ai assessment', async () => {
@@ -542,12 +489,14 @@ describe('RubricContainer', () => {
       7. Fetch returns a json object with puts AI Status into SUCCESS state
       8. Calls refreshAiEvaluations
     */
-    clock = sinon.useFakeTimers();
-    stubFetchEvalStatusForUser(readyJson);
-    stubFetchEvalStatusForAll(readyJsonAll);
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchAiEvaluations([]);
-    stubFetchTourStatus({seen: true});
+    jest.useFakeTimers();
+    stubFetch({
+      evalStatusForUser: readyJson,
+      evalStatusForAll: readyJsonAll,
+      aiEvals: [],
+      teacherEvals: noEvals,
+      tourStatus: {seen: true},
+    });
 
     store.dispatch(setStudentsForCurrentSection(sectionId, students));
     store.dispatch(setLevelsWithProgress(levelsWithProgress));
@@ -571,64 +520,72 @@ describe('RubricContainer', () => {
 
     // 1. Initial fetch returns a json object that puts AI Status into READY state
     let button = screen.getByRole('button', {name: i18n.runAiAssessment()});
-    expect(button).to.not.be.disabled;
+    expect(button).not.toBeDisabled();
 
     let dropdownOption = screen.getByText(studentAlice.name).closest('div');
-    expect(dropdownOption.textContent).to.contain(i18n.inProgress());
+    expect(dropdownOption.textContent).toContain(i18n.inProgress());
 
     // 2. User clicks button to run analysis
 
     // Stub out running the assessment and have it return pending status when asked next
-    const stubRunAiEvaluationsForUser = fetchStub
-      .withArgs(sinon.match(/rubrics\/\d+\/run_ai_evaluations_for_user$/))
-      .returns(Promise.resolve(new Response(JSON.stringify({}))));
-    stubFetchEvalStatusForUser(pendingJson);
+    stubFetch({evalStatusForUser: pendingJson, tourStatus: {seen: true}});
+
     fireEvent.click(button);
 
     //expect amplitude event on click
-    expect(sendEventSpy).to.have.been.calledWith(
+    expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.TA_RUBRIC_INDIVIDUAL_AI_EVAL,
       {
         rubricId: defaultRubric.id,
         studentId: defaultStudentInfo.user_id,
-      }
+      },
+      'Both'
     );
 
     // Wait for fetches and re-render
-    clock.tick(5000);
+    jest.advanceTimersByTime(5000);
     await wait();
 
     // 3. Fetch returns a json object with puts AI Status into EVALUATION_PENDING state
-    expect(stubRunAiEvaluationsForUser).to.have.been.called;
+    expect(fetchStub).toHaveBeenCalledWith(
+      expect.stringMatching(/rubrics\/\d+\/run_ai_evaluations_for_user.*/),
+      expect.objectContaining({
+        method: 'POST',
+        body: '{"user_id":11}',
+      })
+    );
     button = screen.getByRole('button', {name: i18n.runAiAssessment()});
-    expect(button).to.be.disabled;
+    expect(button).toBeDisabled();
     screen.getByText(i18n.aiEvaluationStatus_pending());
 
-    stubFetchEvalStatusForUser(runningJson);
+    stubFetch({evalStatusForUser: runningJson, tourStatus: {seen: true}});
 
     // 4. Move clock forward 5 seconds and re-render
-    clock.tick(5000);
+    jest.advanceTimersByTime(5000);
     await wait();
 
     // 5. Fetch returns a json object with puts AI Status into EVALUATION_RUNNING state
     button = screen.getByRole('button', {name: i18n.runAiAssessment()});
-    expect(button).to.be.disabled;
+    expect(button).toBeDisabled();
     screen.getByText(i18n.aiEvaluationStatus_in_progress());
 
-    stubFetchEvalStatusForUser(successJson);
-    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetch({
+      evalStatusForUser: successJson,
+      aiEvals: mockAiEvaluations,
+      tourStatus: {seen: true},
+    });
 
     // 6. Move clock forward 5 seconds and re-render
-    clock.tick(5000);
+    jest.advanceTimersByTime(5000);
     await wait();
 
     // 7. Fetch returns a json object with puts AI Status into SUCCESS state
     button = screen.getByRole('button', {name: i18n.runAiAssessment()});
-    expect(button).to.be.disabled;
+    expect(button).toBeDisabled();
     screen.getByText(i18n.aiEvaluationStatus_success());
 
     dropdownOption = screen.getByText(studentAlice.name).closest('div');
-    expect(dropdownOption.textContent).to.contain(i18n.readyToReview());
+    expect(dropdownOption.textContent).toContain(i18n.readyToReview());
   });
 
   it('renders submitted status blob for unevaluated submission', async () => {
@@ -641,11 +598,13 @@ describe('RubricContainer', () => {
       },
     };
 
-    stubFetchEvalStatusForUser(readyJson);
-    stubFetchEvalStatusForAll(statusAll);
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchAiEvaluations([]);
-    stubFetchTourStatus({seen: true});
+    stubFetch({
+      evalStatusForUser: readyJson,
+      evalStatusForAll: statusAll,
+      aiEvals: [],
+      teacherEvals: noEvals,
+      tourStatus: {seen: true},
+    });
 
     // the level has been submitted by Alice
     store.dispatch(setStudentsForCurrentSection(sectionId, students));
@@ -671,7 +630,7 @@ describe('RubricContainer', () => {
 
     // Verify status bubble for selected student
     let dropdownOption = screen.getByText(studentAlice.name).closest('div');
-    expect(dropdownOption.textContent).to.contain(i18n.submitted());
+    expect(dropdownOption.textContent).toContain(i18n.submitted());
   });
 
   it('renders evaluated status blob when teacher has given feedback', async () => {
@@ -684,11 +643,13 @@ describe('RubricContainer', () => {
       },
     };
 
-    stubFetchEvalStatusForUser(readyJson);
-    stubFetchEvalStatusForAll(statusAll);
-    stubFetchTeacherEvaluations(oneEval);
-    stubFetchAiEvaluations([]);
-    stubFetchTourStatus({seen: true});
+    stubFetch({
+      evalStatusForUser: readyJson,
+      evalStatusForAll: statusAll,
+      aiEvals: [],
+      teacherEvals: oneEval,
+      tourStatus: {seen: true},
+    });
 
     // the level has been submitted by Alice
     store.dispatch(setStudentsForCurrentSection(sectionId, students));
@@ -713,7 +674,7 @@ describe('RubricContainer', () => {
 
     // Verify status bubble for selected student
     let dropdownOption = screen.getByText(studentAlice.name).closest('div');
-    expect(dropdownOption.textContent).to.contain(i18n.evaluated());
+    expect(dropdownOption.textContent).toContain(i18n.evaluated());
   });
 
   it('shows general error message for status 1000', async () => {
@@ -728,12 +689,14 @@ describe('RubricContainer', () => {
       csrfToken: 'abcdef',
     };
 
-    const userFetchStub = stubFetchEvalStatusForUser(returnedJson);
-    const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetch({
+      evalStatusForUser: returnedJson,
+      evalStatusForAll: returnedJsonAll,
+      aiEvals: mockAiEvaluations,
+      teacherEvals: noEvals,
+    });
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -750,11 +713,12 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
-    wrapper.update();
-    expect(userFetchStub).to.have.been.called;
-    expect(allFetchStub).to.have.been.called;
-    expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_error());
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.false;
+    screen.getByText(i18n.aiEvaluationStatus_error());
+    expect(
+      screen.getByRole('button', {
+        name: i18n.runAiAssessment(),
+      })
+    ).not.toBeDisabled();
   });
 
   it('shows PII error message for status 1001', async () => {
@@ -769,12 +733,14 @@ describe('RubricContainer', () => {
       csrfToken: 'abcdef',
     };
 
-    const userFetchStub = stubFetchEvalStatusForUser(returnedJson);
-    const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetch({
+      evalStatusForUser: returnedJson,
+      evalStatusForAll: returnedJsonAll,
+      aiEvals: mockAiEvaluations,
+      teacherEvals: noEvals,
+    });
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -791,11 +757,12 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
-    wrapper.update();
-    expect(userFetchStub).to.have.been.called;
-    expect(allFetchStub).to.have.been.called;
-    expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_pii_error());
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
+    screen.getByText(i18n.aiEvaluationStatus_pii_error());
+    expect(
+      screen.getByRole('button', {
+        name: i18n.runAiAssessment(),
+      })
+    ).toBeDisabled();
   });
 
   it('shows profanity error message for status 1002', async () => {
@@ -810,12 +777,14 @@ describe('RubricContainer', () => {
       csrfToken: 'abcdef',
     };
 
-    const userFetchStub = stubFetchEvalStatusForUser(returnedJson);
-    const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetch({
+      evalStatusForUser: returnedJson,
+      evalStatusForAll: returnedJsonAll,
+      aiEvals: mockAiEvaluations,
+      teacherEvals: noEvals,
+    });
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -832,13 +801,10 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
-    wrapper.update();
-    expect(userFetchStub).to.have.been.called;
-    expect(allFetchStub).to.have.been.called;
-    expect(wrapper.text()).to.include(
-      i18n.aiEvaluationStatus_profanity_error()
-    );
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
+    screen.getByText(i18n.aiEvaluationStatus_profanity_error());
+    expect(
+      screen.getByRole('button', {name: i18n.runAiAssessment()})
+    ).toBeDisabled();
   });
 
   it('shows request too large error message for status 1003', async () => {
@@ -853,12 +819,14 @@ describe('RubricContainer', () => {
       csrfToken: 'abcdef',
     };
 
-    const userFetchStub = stubFetchEvalStatusForUser(returnedJson);
-    const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetch({
+      evalStatusForUser: returnedJson,
+      evalStatusForAll: returnedJsonAll,
+      aiEvals: mockAiEvaluations,
+      teacherEvals: noEvals,
+    });
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -875,13 +843,10 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
-    wrapper.update();
-    expect(userFetchStub).to.have.been.called;
-    expect(allFetchStub).to.have.been.called;
-    expect(wrapper.text()).to.include(
-      i18n.aiEvaluationStatus_request_too_large()
-    );
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
+    screen.getByText(i18n.aiEvaluationStatus_request_too_large());
+    expect(
+      screen.getByRole('button', {name: i18n.runAiAssessment()})
+    ).toBeDisabled();
   });
 
   it('shows ready state on initial load for status 1004', async () => {
@@ -896,10 +861,12 @@ describe('RubricContainer', () => {
       csrfToken: 'abcdef',
     };
 
-    const userFetchStub = stubFetchEvalStatusForUser(returnedJson);
-    const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetch({
+      evalStatusForUser: returnedJson,
+      evalStatusForAll: returnedJsonAll,
+      aiEvals: mockAiEvaluations,
+      teacherEvals: noEvals,
+    });
 
     render(
       <Provider store={store}>
@@ -918,13 +885,11 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
-    expect(userFetchStub).to.have.been.called;
-    expect(allFetchStub).to.have.been.called;
-    expect(screen.queryByTestId('info-alert')).not.to.exist;
+    expect(screen.queryByTestId('info-alert')).not.toBeInTheDocument();
     const button = screen.getByRole('button', {
       name: 'Run AI Assessment for Project',
     });
-    expect(button).not.to.be.disabled;
+    expect(button).not.toBeDisabled();
   });
 
   it('shows error on initial load for status 1005', async () => {
@@ -939,10 +904,12 @@ describe('RubricContainer', () => {
       csrfToken: 'abcdef',
     };
 
-    const userFetchStub = stubFetchEvalStatusForUser(returnedJson);
-    const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetch({
+      evalStatusForUser: returnedJson,
+      evalStatusForAll: returnedJsonAll,
+      aiEvals: mockAiEvaluations,
+      teacherEvals: noEvals,
+    });
 
     render(
       <Provider store={store}>
@@ -961,8 +928,6 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
-    expect(userFetchStub).to.have.been.called;
-    expect(allFetchStub).to.have.been.called;
     screen.getByText(
       i18n.aiEvaluationStatus_teacher_limit_exceeded({
         limit: RubricAiEvaluationLimits.TEACHER_LIMIT,
@@ -971,15 +936,17 @@ describe('RubricContainer', () => {
     const button = screen.getByRole('button', {
       name: 'Run AI Assessment for Project',
     });
-    expect(button).to.be.disabled;
+    expect(button).toBeDisabled();
   });
 
   // react testing library
   it('moves rubric container when user clicks and drags component', async () => {
-    stubFetchEvalStatusForUser(successJson);
-    stubFetchEvalStatusForAll(successJsonAll);
-    stubFetchAiEvaluations(mockAiEvaluations);
-    stubFetchTeacherEvaluations(noEvals);
+    stubFetch({
+      evalStatusForUser: successJson,
+      evalStatusForAll: successJsonAll,
+      aiEvals: mockAiEvaluations,
+      teacherEvals: noEvals,
+    });
 
     const {getByTestId} = render(
       <Provider store={store}>
@@ -1008,15 +975,17 @@ describe('RubricContainer', () => {
 
     const newPosition = element.style.transform;
 
-    expect(newPosition).to.not.equal(initialPosition);
+    expect(newPosition).not.toEqual(initialPosition);
   });
 
   it('sends event when window is dragged', async function () {
-    stubFetchEvalStatusForUser(readyJson);
-    stubFetchEvalStatusForAll(readyJsonAll);
-    stubFetchAiEvaluations(mockAiEvaluations);
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchTourStatus({seen: true});
+    stubFetch({
+      evalStatusForUser: readyJson,
+      evalStatusForAll: readyJsonAll,
+      aiEvals: mockAiEvaluations,
+      teacherEvals: noEvals,
+      tourStatus: {seen: true},
+    });
 
     const {getByTestId} = render(
       <Provider store={store}>
@@ -1039,68 +1008,101 @@ describe('RubricContainer', () => {
     fireEvent.mouseDown(element, {clientX: 0, clientY: 0});
     fireEvent.mouseMove(element, {clientX: 100, clientY: 100});
 
-    expect(sendEventSpy).to.have.been.calledWith(
+    expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.TA_RUBRIC_WINDOW_MOVE_START,
       {window_x_start: 0, window_y_start: 0}
     );
 
     fireEvent.mouseUp(element);
 
-    expect(sendEventSpy).to.have.been.calledWith(
+    expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.TA_RUBRIC_WINDOW_MOVE_END,
       {window_x_end: 0, window_y_end: 0}
     );
   });
 
-  it('renders a RubricSubmitFooter if student data for an evaluation level', () => {
-    const wrapper = shallow(
-      <RubricContainer
-        rubric={defaultRubric}
-        studentLevelInfo={{name: 'Grace Hopper'}}
-        teacherHasEnabledAi={true}
-        currentLevelName={'test_level'}
-        reportingData={{}}
-        open
-      />
+  it('renders a "Submit to student" button if student data for an evaluation level', () => {
+    stubFetch({
+      evalStatusForUser: readyJson,
+      evalStatusForAll: readyJsonAll,
+      aiEvals: mockAiEvaluations,
+      teacherEvals: noEvals,
+      tourStatus: {seen: null},
+    });
+
+    render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={{name: 'Grace Hopper'}}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
     );
-    expect(wrapper.find('RubricSubmitFooter')).to.have.lengthOf(0);
+
+    expect(screen.getByText(i18n.submitToStudent())).toBeInTheDocument();
   });
 
-  it('does not render a RubricSubmitFooter if no student data', () => {
-    const wrapper = shallow(
-      <RubricContainer
-        rubric={defaultRubric}
-        teacherHasEnabledAi={true}
-        currentLevelName={'test_level'}
-        reportingData={{}}
-        canProvideFeedback
-        open
-      />
+  it('does not render a "Submit to student" button if no student data', () => {
+    stubFetch({
+      evalStatusForUser: readyJson,
+      evalStatusForAll: readyJsonAll,
+      aiEvals: mockAiEvaluations,
+      teacherEvals: noEvals,
+      tourStatus: {seen: true},
+    });
+
+    render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          canProvideFeedback
+          open
+        />
+      </Provider>
     );
-    expect(wrapper.find('RubricSubmitFooter')).to.have.lengthOf(0);
+    expect(screen.queryByText(i18n.submitToStudent())).not.toBeInTheDocument();
   });
 
-  it('does not render a RubricSubmitFooter if not on an evaluated level even if student data exists', () => {
-    const wrapper = shallow(
-      <RubricContainer
-        rubric={defaultRubric}
-        studentLevelInfo={{name: 'Grace Hopper'}}
-        teacherHasEnabledAi={true}
-        currentLevelName={'different_level'}
-        reportingData={{}}
-        canProvideFeedback
-        open
-      />
+  it('does not render a "Submit to student" button if not on an evaluated level even if student data exists', () => {
+    stubFetch({
+      evalStatusForUser: readyJson,
+      evalStatusForAll: readyJsonAll,
+      aiEvals: mockAiEvaluations,
+      teacherEvals: noEvals,
+      tourStatus: {seen: null},
+    });
+
+    render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={{name: 'Grace Hopper'}}
+          teacherHasEnabledAi={true}
+          currentLevelName={'different_level'}
+          reportingData={{}}
+          canProvideFeedback
+          open
+        />
+      </Provider>
     );
-    expect(wrapper.find('RubricSubmitFooter')).to.have.lengthOf(0);
+    expect(screen.queryByText(i18n.submitToStudent())).not.toBeInTheDocument();
   });
 
   it('displays product tour when getTourStatus is false', async function () {
-    stubFetchEvalStatusForUser(readyJson);
-    stubFetchEvalStatusForAll(readyJsonAll);
-    stubFetchAiEvaluations(mockAiEvaluations);
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchTourStatus({seen: null});
+    stubFetch({
+      evalStatusForUser: readyJson,
+      evalStatusForAll: readyJsonAll,
+      aiEvals: mockAiEvaluations,
+      teacherEvals: noEvals,
+      tourStatus: {seen: null},
+    });
 
     const {queryByText} = render(
       <Provider store={store}>
@@ -1115,19 +1117,21 @@ describe('RubricContainer', () => {
       </Provider>
     );
 
-    await waitFor(
-      () =>
-        expect(queryByText('Getting Started with Your AI Teaching Assistant'))
-          .to.exist
+    await waitFor(() =>
+      expect(
+        queryByText('Getting Started with Your AI Teaching Assistant')
+      ).toBeInTheDocument()
     );
   });
 
   it('does not display product tour when getTourStatus returns true', async function () {
-    stubFetchEvalStatusForUser(readyJson);
-    stubFetchEvalStatusForAll(readyJsonAll);
-    stubFetchAiEvaluations(mockAiEvaluations);
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchTourStatus({seen: true});
+    stubFetch({
+      evalStatusForUser: readyJson,
+      evalStatusForAll: readyJsonAll,
+      aiEvals: mockAiEvaluations,
+      teacherEvals: noEvals,
+      tourStatus: {seen: true},
+    });
 
     const {queryByText} = render(
       <Provider store={store}>
@@ -1143,16 +1147,19 @@ describe('RubricContainer', () => {
     );
 
     await wait();
-    expect(queryByText('Getting Started with Your AI Teaching Assistant')).to
-      .not.exist;
+    expect(
+      queryByText('Getting Started with Your AI Teaching Assistant')
+    ).not.toBeInTheDocument();
   });
 
   it('does not display product tour when on non-assessment level', async function () {
-    stubFetchEvalStatusForUser(readyJson);
-    stubFetchEvalStatusForAll(readyJsonAll);
-    stubFetchAiEvaluations(mockAiEvaluations);
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchTourStatus({seen: null});
+    stubFetch({
+      evalStatusForUser: readyJson,
+      evalStatusForAll: readyJsonAll,
+      aiEvals: mockAiEvaluations,
+      teacherEvals: noEvals,
+      tourStatus: {seen: null},
+    });
 
     const {queryByText} = render(
       <Provider store={store}>
@@ -1168,16 +1175,19 @@ describe('RubricContainer', () => {
     );
 
     await wait();
-    expect(queryByText('Getting Started with Your AI Teaching Assistant')).to
-      .not.exist;
+    expect(
+      queryByText('Getting Started with Your AI Teaching Assistant')
+    ).not.toBeInTheDocument();
   });
 
   it('does not display product tour when on non-AI level', async function () {
-    stubFetchEvalStatusForUser(readyJson);
-    stubFetchEvalStatusForAll(readyJsonAll);
-    stubFetchAiEvaluations(mockAiEvaluations);
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchTourStatus({seen: null});
+    stubFetch({
+      evalStatusForUser: readyJson,
+      evalStatusForAll: readyJsonAll,
+      aiEvals: mockAiEvaluations,
+      teacherEvals: noEvals,
+      tourStatus: {seen: null},
+    });
 
     const {queryByText} = render(
       <Provider store={store}>
@@ -1193,16 +1203,19 @@ describe('RubricContainer', () => {
     );
 
     await wait();
-    expect(queryByText('Getting Started with Your AI Teaching Assistant')).to
-      .not.exist;
+    expect(
+      queryByText('Getting Started with Your AI Teaching Assistant')
+    ).not.toBeInTheDocument();
   });
 
   it('sends event when tour is started for the first time', async function () {
-    stubFetchEvalStatusForUser(readyJson);
-    stubFetchEvalStatusForAll(readyJsonAll);
-    stubFetchAiEvaluations(mockAiEvaluations);
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchTourStatus({seen: null});
+    stubFetch({
+      evalStatusForUser: readyJson,
+      evalStatusForAll: readyJsonAll,
+      aiEvals: mockAiEvaluations,
+      teacherEvals: noEvals,
+      tourStatus: {seen: null},
+    });
 
     render(
       <Provider store={store}>
@@ -1218,7 +1231,7 @@ describe('RubricContainer', () => {
     );
 
     await waitFor(() =>
-      expect(sendEventSpy).to.have.been.calledWith(
+      expect(sendEventSpy).toHaveBeenCalledWith(
         EVENTS.TA_RUBRIC_TOUR_STARTED,
         {}
       )
@@ -1226,11 +1239,13 @@ describe('RubricContainer', () => {
   });
 
   it('sends event when user clicks next and back buttons', async function () {
-    stubFetchEvalStatusForUser(readyJson);
-    stubFetchEvalStatusForAll(readyJsonAll);
-    stubFetchAiEvaluations(mockAiEvaluations);
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchTourStatus({seen: null});
+    stubFetch({
+      evalStatusForUser: readyJson,
+      evalStatusForAll: readyJsonAll,
+      aiEvals: mockAiEvaluations,
+      teacherEvals: noEvals,
+      tourStatus: {seen: null},
+    });
 
     const {findByText} = render(
       <Provider store={store}>
@@ -1253,7 +1268,7 @@ describe('RubricContainer', () => {
     fireEvent.click(nextButton);
 
     await waitFor(() =>
-      expect(sendEventSpy).to.have.been.calledWith(EVENTS.TA_RUBRIC_TOUR_NEXT, {
+      expect(sendEventSpy).toHaveBeenCalledWith(EVENTS.TA_RUBRIC_TOUR_NEXT, {
         step: 0,
         nextStep: 1,
       })
@@ -1264,7 +1279,7 @@ describe('RubricContainer', () => {
     fireEvent.click(backButton);
 
     await waitFor(() =>
-      expect(sendEventSpy).to.have.been.calledWith(EVENTS.TA_RUBRIC_TOUR_BACK, {
+      expect(sendEventSpy).toHaveBeenCalledWith(EVENTS.TA_RUBRIC_TOUR_BACK, {
         step: 1,
         nextStep: 0,
       })
@@ -1272,11 +1287,13 @@ describe('RubricContainer', () => {
   });
 
   it('sends event when user exits the tour', async function () {
-    stubFetchEvalStatusForUser(readyJson);
-    stubFetchEvalStatusForAll(readyJsonAll);
-    stubFetchAiEvaluations(mockAiEvaluations);
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchTourStatus({seen: null});
+    stubFetch({
+      evalStatusForUser: readyJson,
+      evalStatusForAll: readyJsonAll,
+      aiEvals: mockAiEvaluations,
+      teacherEvals: noEvals,
+      tourStatus: {seen: null},
+    });
 
     const {findByRole} = render(
       <Provider store={store}>
@@ -1300,21 +1317,20 @@ describe('RubricContainer', () => {
     fireEvent.click(skipButton);
 
     await waitFor(() =>
-      expect(sendEventSpy).to.have.been.calledWith(
-        EVENTS.TA_RUBRIC_TOUR_CLOSED,
-        {
-          step: 0,
-        }
-      )
+      expect(sendEventSpy).toHaveBeenCalledWith(EVENTS.TA_RUBRIC_TOUR_CLOSED, {
+        step: 0,
+      })
     );
   });
 
   it('sends event when user completes the tour', async function () {
-    stubFetchEvalStatusForUser(readyJson);
-    stubFetchEvalStatusForAll(readyJsonAll);
-    stubFetchAiEvaluations(mockAiEvaluations);
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchTourStatus({seen: null});
+    stubFetch({
+      evalStatusForUser: readyJson,
+      evalStatusForAll: readyJsonAll,
+      aiEvals: mockAiEvaluations,
+      teacherEvals: noEvals,
+      tourStatus: {seen: null},
+    });
 
     const {findByText} = render(
       <Provider store={store}>
@@ -1347,7 +1363,7 @@ describe('RubricContainer', () => {
     fireEvent.click(doneButton);
 
     await waitFor(() =>
-      expect(sendEventSpy).to.have.been.calledWith(
+      expect(sendEventSpy).toHaveBeenCalledWith(
         EVENTS.TA_RUBRIC_TOUR_COMPLETE,
         {}
       )
@@ -1355,12 +1371,14 @@ describe('RubricContainer', () => {
   });
 
   it('sends event when tour is restarted from ? button', async function () {
-    stubFetchEvalStatusForUser(readyJson);
-    stubFetchEvalStatusForAll(readyJsonAll);
-    stubFetchAiEvaluations(mockAiEvaluations);
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchTourStatus({seen: true});
-    stubUpdateTourStatus({seen: false});
+    stubFetch({
+      evalStatusForUser: readyJson,
+      evalStatusForAll: readyJsonAll,
+      aiEvals: mockAiEvaluations,
+      teacherEvals: noEvals,
+      tourStatus: {seen: true},
+      updateTourStatus: {seen: false},
+    });
 
     const {findByRole, queryByText} = render(
       <Provider store={store}>
@@ -1379,14 +1397,15 @@ describe('RubricContainer', () => {
     tourFabBg.scrollBy = jest.fn();
     await wait();
 
-    expect(queryByText('Getting Started with Your AI Teaching Assistant')).to
-      .not.exist;
+    expect(
+      queryByText('Getting Started with Your AI Teaching Assistant')
+    ).not.toBeInTheDocument();
 
     const element = await findByRole('button', {name: 'restart product tour'});
     fireEvent.click(element);
 
     await waitFor(() =>
-      expect(sendEventSpy).to.have.been.calledWith(
+      expect(sendEventSpy).toHaveBeenCalledWith(
         EVENTS.TA_RUBRIC_TOUR_RESTARTED,
         {}
       )
@@ -1395,7 +1414,7 @@ describe('RubricContainer', () => {
 
   it('sanitizes all intro text rendered by introjs', () => {
     STEPS.forEach((step, index) => {
-      expect(typeof step.intro).to.equal(
+      expect(typeof step.intro).toEqual(
         'object',
         `STEP[${index}].intro should be wrapped in a react component or a call to sanitize(): ${step.intro}`
       );
