@@ -6,6 +6,8 @@ import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import i18n from '@cdo/locale';
 
+import UploadImageEditor from './UploadImageEditor';
+
 import styles from './uploadImage.module.scss';
 
 export default function UploadImageForm() {
@@ -14,6 +16,8 @@ export default function UploadImageForm() {
   const [isUploading, setIsUploading] = useState(false);
   const [listOfImageFiles, setListOfImageFiles] = useState([]);
   const [tempImageUrls, setTempImageUrls] = useState([]);
+  const [isEditing, setIsEditing] = useState(false);
+  const [imageToEdit, setImageToEdit] = useState(null);
 
   const resetState = () => {
     setImgUrls([]);
@@ -86,19 +90,59 @@ export default function UploadImageForm() {
     );
   };
 
+  const openEditor = imageUrl => {
+    setImageToEdit(imageUrl);
+    setIsEditing(true);
+  };
+
+  const saveEditedImage = (editedImageUrl, editedImageFile) => {
+    // Update the list of image files
+    setListOfImageFiles(prevFiles =>
+      prevFiles.map((file, index) =>
+        tempImageUrls[index] === imageToEdit ? editedImageFile : file
+      )
+    );
+
+    // Update the temporary image URLs
+    setTempImageUrls(prevUrls =>
+      prevUrls.map(url => (url === imageToEdit ? editedImageUrl : url))
+    );
+
+    closeEditor();
+  };
+
+  const closeEditor = () => {
+    setIsEditing(false);
+    setImageToEdit(null);
+  };
+
   return (
     <div className={styles.topContainer}>
       <h2>{i18n.uploadImages()}</h2>
       {tempImageUrls && tempImageUrls.length > 0 && (
-        <div className={styles.imageGrid}>
-          {tempImageUrls.map((url, index) => (
-            <img
-              key={index}
-              src={url}
-              alt={`Preview ${index + 1}`}
-              className={styles.imagePreview}
-            />
-          ))}
+        <>
+          <h3>Click on an image to edit it:</h3>
+          <div className={styles.imageGrid}>
+            {tempImageUrls.map((url, index) => (
+              <img
+                key={index}
+                src={url}
+                alt={`Preview ${index + 1}`}
+                className={styles.imagePreview}
+                onClick={() => openEditor(url)}
+              />
+            ))}
+          </div>
+        </>
+      )}
+      {isEditing && (
+        <div>
+          <UploadImageEditor
+            imageUrl={imageToEdit}
+            onSave={saveEditedImage}
+            onCancel={closeEditor}
+            isOpen={isEditing}
+          />
         </div>
       )}
       <div>
