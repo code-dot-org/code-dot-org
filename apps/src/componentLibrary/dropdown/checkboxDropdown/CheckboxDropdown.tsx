@@ -30,6 +30,8 @@ export interface CheckboxDropdownProps extends AriaAttributes {
   size: ComponentSizeXSToL;
   /** CheckboxDropdown disabled state */
   disabled?: boolean;
+  /** CheckboxDropdown readOnly state */
+  readOnly?: boolean;
   /** CheckboxDropdown label
    * The user-facing label of the dropdown */
   labelText: string;
@@ -74,6 +76,7 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   onSelectAll,
   onClearAll,
   disabled = false,
+  readOnly = false,
   color = dropdownColors.black,
   size = 'm',
   helperMessage,
@@ -90,6 +93,7 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
       labelType={labelType}
       color={color}
       disabled={disabled}
+      readOnly={readOnly}
       size={size}
       isSomeValueSelected={checkedOptions.length > 0}
       helperMessage={helperMessage}
