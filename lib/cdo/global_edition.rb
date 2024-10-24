@@ -3,12 +3,19 @@
 module Cdo
   # Lazily loads global configurations for regional pages
   module GlobalEdition
+    REGION_KEY = 'ge_region'
+
     # Retrieves a list a global region names.
     REGIONS = Dir.glob('*.yml', base: CDO.dir('config', 'global_editions')).map {|f| File.basename(f, '.yml')}.freeze
 
     TARGET_HOSTNAMES = Set[
       CDO.dashboard_hostname,
     ].freeze
+
+    # @see +Rack::GlobalEdition::RouteHandler#response+
+    def self.current_region
+      RequestStore.store[REGION_KEY]
+    end
 
     # Freezes an entire complex data structure
     def self.deep_freeze(data)
