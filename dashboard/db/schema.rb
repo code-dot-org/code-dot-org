@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_10_22_150616) do
+ActiveRecord::Schema.define(version: 2024_10_24_171901) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -2134,6 +2134,14 @@ ActiveRecord::Schema.define(version: 2024_10_22_150616) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "emails"
+  end
+
+  create_table "submitted_projects", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
+    t.integer "project_id"
+    t.string "description"
+    t.datetime "declined_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "survey_results", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
