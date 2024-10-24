@@ -45,6 +45,12 @@
     }
   }
 
+  &.readOnly {
+    .dropdownButton {
+      opacity: 1;
+    }
+  }
+
   .helperSection {
     @include field-helper-section-common;
   }
@@ -277,6 +283,20 @@
       @include field-helper-section-black-disabled;
     }
   }
+
+  &.readOnly {
+    .dropdownButton:disabled {
+      @include field-read-only-black-colors;
+
+      .dropdownLabel {
+        @include field-read-only-black-colors;
+      }
+    }
+    .helperSection,
+    .errorSection {
+      @include field-read-only-black-colors;
+    }
+  }
 }
 
 .dropdownContainer-gray {
@@ -330,6 +350,20 @@
     .helperSection,
     .errorSection {
       @include field-helper-section-black-disabled;
+    }
+  }
+
+  &.readOnly {
+    .dropdownButton:disabled {
+      @include field-read-only-black-colors;
+
+      .dropdownLabel {
+        @include field-read-only-black-colors;
+      }
+    }
+    .helperSection,
+    .errorSection {
+      @include field-read-only-black-colors;
     }
   }
 }
@@ -390,6 +424,20 @@
     .helperSection,
     .errorSection {
       @include field-helper-section-white-disabled;
+    }
+  }
+
+  &.readOnly {
+    .dropdownButton:disabled {
+      @include field-read-only-white-colors;
+
+      .dropdownLabel {
+        @include field-read-only-white-colors;
+      }
+    }
+    .helperSection,
+    .errorSection {
+      @include field-read-only-white-colors;
     }
   }
 }

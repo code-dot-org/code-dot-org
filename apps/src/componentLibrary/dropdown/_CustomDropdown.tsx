@@ -51,6 +51,8 @@ export interface CustomDropdownProps extends AriaAttributes {
   menuPlacement?: 'left' | 'right';
   /** CustomDropdown disabled state */
   disabled?: boolean;
+  /** CustomDropdown readOnly state */
+  readOnly?: boolean;
   /** CustomDropdown label
    * The user-facing label of the dropdown */
   labelText: string;
@@ -90,6 +92,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   isSomeValueSelected = false,
   icon,
   disabled = false,
+  readOnly = false,
   color = dropdownColors.black,
   size = 'm',
   menuPlacement = 'left',
@@ -160,7 +163,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
     id: `${name}-dropdown-button`,
     'data-toggle': 'dropdown',
     onClick: toggleDropdown,
-    disabled: disabled,
+    disabled: disabled || readOnly,
     ...ariaProps,
     'aria-haspopup': true,
     'aria-label': ariaProps['aria-label'] || `${name} filter dropdown`,
@@ -173,6 +176,8 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
         {
           [moduleStyles.open]: isOpen,
           [moduleStyles.hasError]: errorMessage,
+          [moduleStyles.readOnly]: readOnly,
+          [moduleStyles.styleAsFormField]: styleAsFormField,
         },
         moduleStyles.dropdownContainer,
         moduleStyles[`dropdownContainer-${menuPlacement}-menuPlacement`],
