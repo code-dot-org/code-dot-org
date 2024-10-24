@@ -64,37 +64,42 @@ const StartModeFileDropdownOptions: React.FunctionComponent<
       iconName: 'flask',
       labelText: codebridgeI18n.makeValidation(),
       clickHandler: () => handleSetFileType(ProjectFileType.VALIDATION),
+      id: 'uitest-make-validation',
     },
     {
       condition: file.type !== ProjectFileType.STARTER && file.type,
       iconName: 'eye',
       labelText: codebridgeI18n.makeStarter(),
       clickHandler: () => handleSetFileType(ProjectFileType.STARTER),
+      id: 'uitest-make-starter',
     },
     {
       condition: file.type !== ProjectFileType.SUPPORT,
       iconName: 'eye-slash',
       labelText: codebridgeI18n.makeSupport(),
       clickHandler: () => handleSetFileType(ProjectFileType.SUPPORT),
+      id: 'uitest-make-support',
     },
     {
       condition: file.type !== ProjectFileType.LOCKED_STARTER,
       iconName: 'lock',
       labelText: codebridgeI18n.makeLockedStarter(),
       clickHandler: () => handleSetFileType(ProjectFileType.LOCKED_STARTER),
+      id: 'uitest-make-locked-starter',
     },
   ];
 
   return (
     <>
       {dropdownOptions.map(
-        ({condition, iconName, labelText, clickHandler}, index) =>
+        ({condition, iconName, labelText, clickHandler, id}, index) =>
           condition && (
             <PopUpButtonOption
               key={index}
               iconName={iconName}
               labelText={labelText}
               clickHandler={clickHandler}
+              id={id}
             />
           )
       )}
