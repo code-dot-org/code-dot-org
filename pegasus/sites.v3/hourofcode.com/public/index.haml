@@ -21,23 +21,23 @@ layout: wide_index
   #fullwidth
     = view :header
     %section.banner.homepage
-      .wrapper.flex-container
+      .wrapper.show-desktop
+        .text-wrapper
+          = view :hoc_2024_homepage_hero_text, button_color: "white"
+      .wrapper.show-tablet.flex-container
         %figure
           %img{src: "/images/hoc-2024-graphic.png", alt: ""}
         .text-wrapper
-          %h1=hoc_s("hoc_2024.header")
-          %p.body-one
-            =hoc_s("hoc_2024.banner.desc.join_millions")
-        %a.link-button.black{href: resolve_url("/events")}
-          =hoc_s("hoc_2024.button_host_an_event")
+          = view :hoc_2024_homepage_hero_text, button_color: "black"
+      .overlay
 
 %main
   -# What is HoC?
-  %section.bg-neutral-light
+  %section
     .wrapper
       %h2.no-margin-top.centered
         =hoc_s("hoc_homepage.what_is_hoc.heading")
-      %p.centered.body-two.wrap-balance
+      %p.centered.body-two.wrap-balance.no-margin-bottom
         =hoc_s("hoc_homepage.what_is_hoc.desc")
       -# Spanish video and banner
       - if ['es', 'la', 'pt', 'po'].include?(@language)
@@ -54,6 +54,8 @@ layout: wide_index
                   = hoc_s(:hoc_live_learn_message)
                 %a.link-button{href: 'https://code.org/envivo'}
                   = hoc_s(:hoc_live_learn_more)
+
+  = view :section_divider_line
 
   -# Host an Hour of Code
   %section.no-padding-bottom
@@ -89,7 +91,7 @@ layout: wide_index
   -# Stats
   %section.stats.bg-neutral-dark
     .wrapper.centered
-      %h2.white
+      %h2.white.no-margin-top
         =hoc_s("hoc_homepage.global.heading")
       %p.body-two.no-margin-bottom.white
         =hoc_s("hoc_homepage.global.desc")

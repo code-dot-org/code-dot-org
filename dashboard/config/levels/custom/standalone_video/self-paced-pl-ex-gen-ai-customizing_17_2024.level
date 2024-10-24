@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2024-10-23T15:24:45.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "how-ai-works-llms-part1",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_24",
+    "encrypted": "false",
+    "long_instructions": "# Retrieval\r\n\r\n#### Using **retrieval**, we can provide the chatbot with different types of information to help it respond more accurately. In general we will want to provide information that is...\r\n\r\n* #### **Current**: Chatbots only have information up to a certain date. For more recent information, we can add it with retrieval. \r\n* #### **Specialized**: Chatbots tend to have general information about topics. For more specialized information, we can add it with retrieval\r\n* #### **Accurate**: Chatbots don't have all the answers and sometimes hallucinate. For situations that require very high accuracy, we can add information with retrieval.\r\n\r\n<div style=\"background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"><strong>Teacher Tip:</strong> Students will eventually be encouraged to spend their time searching for sources and copying directly from them, rather than trying to write retrieval information themselves. This correlates to how retrieval works in a more realistic sense with actual language models: instead of looking at individual words or statements, modern large-language models ingest entire documents or manuals or websites in order to augment their knowledgebase.  \r\n</p>\r\n</div>\r\n\r\n## **Up Next!** \r\n#### Try out applying **retrieval** in AI Chat Lab. Watch the video below first to learn how to do so."
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-10-23T15:24:45.324+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-gen-ai-customizing_15c_2024\\\"\"],\"cloned_from\":\"self-paced-pl-gen-ai-customizing_15c_2024\"},{\"changed_at\":\"2024-10-23 15:55:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>
