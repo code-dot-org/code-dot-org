@@ -53,5 +53,7 @@ class RedshiftClient
       raise PostgreSQLQueryError.new(result_status)
     end
     result
+  rescue PG::InternalError, PG::Error => exception
+    raise PostgreSQLQueryError.new(exception.message)
   end
 end
