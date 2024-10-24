@@ -47,7 +47,15 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     test_matrix.each do |traits, compliance|
       user = create(*traits)
       actual = Policies::ChildAccount.compliant?(user)
-      failure_msg = "Expected compliant?(#{traits}) to be #{compliance} but it was #{actual}\nDAYNE\nuser=#{user}\nage=#{user.age}"
+      debug_msg = []
+      debug_msg << "age=#{user.age}"
+      debug_msg << "parent_permission_required?=#{Policies::ChildAccount.parent_permission_required?(user)}"
+      debug_msg << "user.student?=#{user.student?}"
+      debug_msg << "state_policy=#{Policies::ChildAccount.state_policy(user)}"
+      debug_msg << "underage?=#{Policies::ChildAccount.underage?(user)}"
+      debug_msg << "personal_account?=#{Policies::ChildAccount.personal_account?(user)}"
+      debug_msg << "user=\n#{user.summarize.map {|e| "\t#{e.first}: #{e.last}"}.join("\n")}"
+      failure_msg = "Expected compliant?(#{traits}) to be #{compliance} but it was #{actual}\nDAYNE\n#{debug_msg.join("\n")}"
       failures.append(failure_msg) if compliance != actual
     end
     assert failures.empty?, failures.join("\n")
