@@ -113,8 +113,8 @@ Resources:
           Prefix: !Ref BucketPrefix
           Status: Enabled
           Tierings:
-            - {AccessTier: ARCHIVE_ACCESS, Days: 90}
-            - {AccessTier: DEEP_ARCHIVE_ACCESS, Days: 180}
+            - {AccessTier: ARCHIVE_ACCESS, Days: 475} # 15 months is roughly how long CloudWatch retains most Metrics.
+            - {AccessTier: DEEP_ARCHIVE_ACCESS, Days: 730} # Roughly 2 years.
       LifecycleConfiguration:
         Rules:
           - Prefix: !Ref BucketPrefix
