@@ -214,31 +214,6 @@ Resources:
         - Key: sqlworkbench-team
           Value: codedotorg
 
-# TODO: Migrate to REDTeam_Analyst
-  DataAnalystRole:
-    Type: AWS::IAM::Role
-    Properties:
-      RoleName: DataAnalyst
-      Path: /dataanalyst/
-      AssumeRolePolicyDocument:
-        Version: 2012-10-17
-        Statement:
-          - Effect: Allow
-            Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
-            Action: sts:AssumeRoleWithSAML
-            Condition:
-              StringEquals:
-                SAML:aud: https://signin.aws.amazon.com/saml
-      ManagedPolicyArns:
-        - !Ref DataAnalystPolicy
-        - !Ref DataAnalystDmsReadOnlyPolicy
-        - !Ref DataAnalystRedshiftPolicy
-        - arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor
-        - arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess
-      Tags:
-        - Key: sqlworkbench-team
-          Value: codedotorg
-
 # TODO: Migrate to Billing_ReadOnly
   BillingRole:
     Type: AWS::IAM::Role
@@ -321,10 +296,20 @@ roles = {
       '!Ref DataAnalystPolicy',
       '!Ref DataAnalystDmsReadOnlyPolicy',
       '!Ref DataAnalystRedshiftPolicy',
+      '!Ref CloudwatchReaderPolicy',
+      '!Ref RedshiftScheduledActionsPolicy',
       'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor',
       'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess',
     ]
   },
+  AdvocacyFullAccessRole: {
+    RoleName: 'Advocacy_FullAccess',
+    ManagedPolicyArns: [
+      '!Ref AdvocacyS3AccessPolicy',
+      'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor',
+      'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess',
+    ]
+  }
   MarketingReadOnlyRole: {
     RoleName: 'Marketing_ReadOnly',
     ManagedPolicyArns: [
@@ -345,7 +330,7 @@ roles = {
     ManagedPolicyArns: [
       'arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess'
       '!Ref BedrockKnowledgeBaseInvocationPolicy',
-      '!Ref CloudwatchDashboardViewerPolicy',
+      '!Ref CloudwatchReaderPolicy',
     ]
   }
 }
@@ -453,6 +438,59 @@ roles.each do |name, config| %>
               - 'arn:aws:s3:::cdo-census'
               - 'arn:aws:s3:::cdo-nces/*'
               - 'arn:aws:s3:::cdo-nces'
+
+  AdvocacyS3AccessPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: AdvocacyS3AccessPolicy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action:
+              - s3:ListAllMyBuckets
+              - s3:GetBucketLocation
+            Resource:
+              - arn:aws:s3:::*
+          - Effect: Allow
+            Action:
+              - s3:ListBucket
+              - s3:ListBucketVersions
+            Resource:
+              - 'arn:aws:s3:::cdo-data-sharing-internal'
+              - 'arn:aws:s3:::cdo-census'
+              - 'arn:aws:s3:::cdo-nces'
+              - 'arn:aws:s3:::cdo-dist'
+          - Effect: Allow
+            Action:
+              - s3:AbortMultipartUpload
+              - s3:DeleteObject
+              - s3:DeleteObjectTagging
+              - s3:DeleteObjectVersion
+              - s3:DeleteObjectVersionTagging
+              - s3:GetObject
+              - s3:GetObjectAcl
+              - s3:GetObjectTagging
+              - s3:GetObjectTorrent
+              - s3:GetObjectVersion
+              - s3:GetObjectVersionAcl
+              - s3:GetObjectVersionForReplication
+              - s3:GetObjectVersionTagging
+              - s3:GetObjectVersionTorrent
+              - s3:PutObject
+              - s3:PutObjectTagging
+              - s3:PutObjectVersionTagging
+              - s3:RestoreObject
+            Resource:
+              - 'arn:aws:s3:::cdo-data-sharing-internal/*'
+              - 'arn:aws:s3:::cdo-census/*'
+              - 'arn:aws:s3:::cdo-nces/*'
+              - 'arn:aws:s3:::cdo-dist/production/assets/advocacy/stateofcs/*'
+          - Effect: Allow
+            Action:
+              - s3:PutObjectAcl
+            Resource:
+              - 'arn:aws:s3:::cdo-dist/production/assets/advocacy/stateofcs/*'
 
   DataAnalystDmsReadOnlyPolicy:
     Type: AWS::IAM::ManagedPolicy
@@ -730,19 +768,56 @@ roles.each do |name, config| %>
             Resource:
               - !Sub 'arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:knowledge-base/*'
 
-  CloudwatchDashboardViewerPolicy:
+  CloudwatchReaderPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
-      ManagedPolicyName: CloudwatchDashboardViewerPolicy
+      ManagedPolicyName: CloudwatchReaderPolicy
       PolicyDocument:
         Version: '2012-10-17'
         Statement:
           - Effect: Allow
             Action:
+              - cloudwatch:DescribeAlarms
+            Resource: 'arn:aws:cloudwatch:*:${AWS::AccountId}:alarm:*'
+          - Effect: Allow
+            Action:
               - cloudwatch:GetDashboard
-              - cloudwatch:ListDashboards
+            Resource: 'arn:aws:cloudwatch::${AWS::AccountId}:dashboard/*'
+          - Effect: Allow
+            Action:
+              - logs:DescribeLogStreams
+            Resource: 'arn:aws:logs:*:${AWS::AccountId}:log-group:*'
+          - Effect: Allow
+            Action:
+              - logs:GetLogEvents
+              - logs:FilterLogEvents
+            Resource: 'arn:aws:logs:*:${AWS::AccountId}:log-group:*:log-stream:*'
+          - Effect: Allow
+            Action:
               - cloudwatch:GetMetricData
+              - cloudwatch:GetMetricStatistics
+              - cloudwatch:ListDashboards
+              - cloudwatch:ListMetrics
+              - logs:DescribeLogGroups
             Resource: '*'
+
+  # Allows the creation and management of Redshift scheduled actions.
+  # Note that these permissions can only apply to "*" resources and
+  # cannot be restricted to specific Redshift clusters or actions.
+  RedshiftScheduledActionsPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: RedshiftScheduledActionsPolicy
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - redshift:ModifyScheduledAction
+              - redshift:DescribeScheduledActions
+              - redshift:DeleteScheduledAction
+              - redshift:CreateScheduledAction
+            Resource: "*"
 
   # Used by FirehoseMicroservice Lambda function.
   # TODO move to Data stack
