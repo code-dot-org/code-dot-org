@@ -243,7 +243,7 @@
       studentInLockoutFlow: @student_in_lockout_flow,
       countryCode: @country_code,
       isUSA: @is_usa,
-      schoolInfo: current_user.school_info
+      schoolInfo: Queries::SchoolInfo.current_school(current_user)
     }.to_json
   }
 %script{src: webpack_asset_path('js/devise/registrations/edit.js'), data: script_data}
