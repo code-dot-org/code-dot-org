@@ -67,8 +67,7 @@ const renderTabButtonContent = (
   icon?: FontAwesomeV6IconProps,
   text?: string,
   iconLeft?: FontAwesomeV6IconProps,
-  iconRight?: FontAwesomeV6IconProps,
-  isClosable?: boolean
+  iconRight?: FontAwesomeV6IconProps
 ) => {
   if (isIconOnly && icon) {
     return <FontAwesomeV6Icon {...icon} />;
@@ -77,7 +76,7 @@ const renderTabButtonContent = (
     <>
       {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
       {text && <span>{text}</span>}
-      {iconRight && !isClosable && <FontAwesomeV6Icon {...iconRight} />}
+      {iconRight && <FontAwesomeV6Icon {...iconRight} />}
     </>
   );
 };
@@ -121,8 +120,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
     icon,
     text,
     iconLeft,
-    iconRight,
-    isClosable
+    iconRight
   );
 
   const buttonElement = (
