@@ -37,6 +37,11 @@ type CompiledEvents = {[key: string]: {code: string; args?: string[]}};
 export default class MusicBlocklyWorkspace {
   private static isBlocklyEnvironmentSetup = false;
 
+  // Utility to hide any custom fields that are showing.
+  public static hideChaff() {
+    Blockly.getMainWorkspace().hideChaff();
+  }
+
   // Setup the global Blockly environment for Music Lab.
   // This should only happen once per page load.
   public static setupBlocklyEnvironment(blockMode: ValueOf<typeof BlockMode>) {

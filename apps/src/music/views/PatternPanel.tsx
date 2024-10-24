@@ -114,6 +114,13 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   }, [setCurrentPreviewTick]);
 
   useEffect(() => {
+    // On unmount.
+    return () => {
+      stopPreview();
+    };
+  }, [stopPreview]);
+
+  useEffect(() => {
     if (!MusicRegistry.player.isInstrumentLoaded(currentValue.instrument)) {
       setIsLoading(true);
       if (MusicRegistry.player.isInstrumentLoading(currentValue.instrument)) {
