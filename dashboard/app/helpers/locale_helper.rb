@@ -35,7 +35,7 @@ module LocaleHelper
       options << [name, locale]
     end
 
-    if global_edition
+    if global_edition && DCDO.get('global_edition_region_selection_enabled', false)
       # Adds language options with the switch to the regional (global) version of the platform.
       Cdo::GlobalEdition::REGIONS.excluding('en', 'root').each do |region|
         region_locale = Cdo::GlobalEdition.region_locale(region)
