@@ -42,7 +42,7 @@ Parameters:
     Description: Subdomain name for Hour Of Code site.
   InstanceType:
     Type: String
-    Default: <%=INSTANCE_TYPE%>
+    Default: <%=rack_env?(:production) ? 'm7i.12xlarge' : 't3.2xlarge'%>
   Branch:
     Type: String
     Default: <%=branch%>
