@@ -21,11 +21,17 @@ import {
 import {getStore} from '@cdo/apps/code-studio/redux';
 import initResponsive from '@cdo/apps/code-studio/responsive';
 import {initHamburger} from '@cdo/apps/hamburger/hamburger.js';
+import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 import GDPRDialog from '@cdo/apps/templates/GDPRDialog';
+import {getGlobalEditionRegion} from '@cdo/apps/util/globalEdition';
 // disable import/order rule to import consoleShim after setting store.
 // This might be safe to remove but needs investigation whether any behavior is changed by order.
 /* eslint-disable import/order*/
 import getScriptData from '@cdo/apps/util/getScriptData';
+
+if (getGlobalEditionRegion()) {
+  statsigReporter.runAutoCapture();
+}
 
 const store = getStore();
 store.dispatch(setRtlFromDOM());

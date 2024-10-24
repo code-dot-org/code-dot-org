@@ -1,3 +1,5 @@
+import {StatsigClient} from '@statsig/js-client';
+import {runStatsigAutoCapture} from '@statsig/web-analytics';
 import cookies from 'js-cookie';
 import Statsig from 'statsig-js';
 
@@ -35,10 +37,13 @@ class StatsigReporter {
       user.userID = this.formatUserId(user_id);
       user.custom.userType = user_type;
     }
+    this.user = user;
+
     const api_element = document.querySelector(
       'script[data-statsig-api-client-key]'
     );
-    const api_key = api_element ? api_element.dataset.statsigApiClientKey : '';
+    this.api_key = api_element ? api_element.dataset.statsigApiClientKey : '';
+
     const managed_test_environment_element = document.querySelector(
       'script[data-managed-test-server]'
     );
@@ -47,13 +52,14 @@ class StatsigReporter {
       : false;
     this.local_mode = !(isProductionEnvironment() || managed_test_environment);
     this.stable_id = this.findOrCreateStableId();
-    const options = {
+    this.options = {
       environment: {tier: getEnvironment()},
       localMode: this.local_mode,
       disableErrorLogging: true,
       overrideStableID: this.stable_id,
     };
-    this.initialize(api_key, user, options);
+
+    this.initialize(this.api_key, this.user, this.options);
   }
 
   // This user object will potentially update via a setUserProperties call
@@ -163,6 +169,18 @@ class StatsigReporter {
       return true;
     }
     return false;
+  }
+
+  /**
+   * Runs Web Analytics auto-capturing.
+   * @see https://docs.statsig.com/webanalytics/overview
+   */
+  async runAutoCapture() {
+    if (this.shouldPutRecord(ALWAYS_SEND)) {
+      const client = new StatsigClient(this.api_key, this.user, this.options);
+      runStatsigAutoCapture(client);
+      await client.initializeAsync();
+    }
   }
 }
 

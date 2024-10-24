@@ -4842,6 +4842,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@statsig/client-core@npm:3.2.0":
+  version: 3.2.0
+  resolution: "@statsig/client-core@npm:3.2.0"
+  checksum: 8c4b9b8f680b2cc413bad369871785d98b13c5caf781a594219154424794aa2143cfa4d95904231609d137f80f74a6fdd5b2d08edcdd53f7f8ab3b47b09f96bd
+  languageName: node
+  linkType: hard
+
+"@statsig/js-client@npm:3.2.0":
+  version: 3.2.0
+  resolution: "@statsig/js-client@npm:3.2.0"
+  dependencies:
+    "@statsig/client-core": 3.2.0
+  checksum: 2c361fb0676ef459627be40b20e546f491f233e674302e36489f3d8e5725459d0b47d0caa60ab3a8c61426acf163bb23669f9889ae7f161209e3609439e7722a
+  languageName: node
+  linkType: hard
+
+"@statsig/web-analytics@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "@statsig/web-analytics@npm:3.2.0"
+  dependencies:
+    "@statsig/client-core": 3.2.0
+    "@statsig/js-client": 3.2.0
+  checksum: e34edb9e30a8018565e0977fd31be409639a057c4955a8f35951949bdb1212953bb2cfd53453371d34b4a2f26642e4e976b73080dda0fdde01a251d025cdcc59
+  languageName: node
+  linkType: hard
+
 "@storybook/addon-a11y@npm:~8.1.11":
   version: 8.1.11
   resolution: "@storybook/addon-a11y@npm:8.1.11"
@@ -8720,6 +8746,7 @@ __metadata:
     "@react-bootstrap/pagination": ^1.0.0
     "@reduxjs/toolkit": ^1.9.3
     "@selectize/selectize": ^0.15.2
+    "@statsig/web-analytics": ^3.2.0
     "@storybook/addon-a11y": ~8.1.11
     "@storybook/addon-essentials": ~8.1.11
     "@storybook/addon-webpack5-compiler-babel": ^3.0.0
