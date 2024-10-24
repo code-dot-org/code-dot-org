@@ -15,6 +15,7 @@ import facilitatorLedPlBanner from '@cdo/static/facilitatorLedPlBanner.png';
 import selfPacedPlBanner from '@cdo/static/selfPacedPlBanner.png';
 
 import Certificate from './Certificate';
+import SuggestedAssignableCourses from './SuggestedAssignableCourses';
 
 import style from './certificate_batch.module.scss';
 
@@ -119,6 +120,8 @@ export default function Congrats(props) {
     nextCourseTitle,
     nextCourseDesc,
     curriculumUrl,
+    assignableCourseSuggestions,
+    isEnglish,
   } = props;
 
   // Determine what time we should consider the current time to be when
@@ -440,6 +443,12 @@ export default function Congrats(props) {
               {renderExtraCertificateLinks(language, tutorial, currentDate)}
             </Certificate>
           </div>
+          {assignableCourseSuggestions && (
+            <SuggestedAssignableCourses
+              assignableCourseSuggestions={assignableCourseSuggestions}
+              isEnglish={isEnglish}
+            />
+          )}
           {renderRecommendedOptions()}
         </>
       )}
@@ -473,4 +482,6 @@ Congrats.propTypes = {
   nextCourseTitle: PropTypes.string,
   nextCourseDesc: PropTypes.string,
   currentDate: PropTypes.object,
+  assignableCourseSuggestions: PropTypes.array,
+  isEnglish: PropTypes.bool,
 };
