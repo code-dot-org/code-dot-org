@@ -16,6 +16,7 @@ const EVENTS = {
   SECTION_SETUP_SIGN_IN_EVENT: 'Section Setup Sign In',
   ABANDON_SECTION_SETUP_SIGN_IN_EVENT: 'Abandon Section Setup Sign In',
   TEACHER_LOGIN_EVENT: 'Teacher Login',
+  STUDENT_LOGIN_EVENT: 'Student Login',
   ACCOUNT_SETTINGS_PAGE_VISITED: 'Account Settings Page Visited',
   LOGIN_PAGE_VISITED: 'Login Page Visited',
   LOGIN_PAGE_CREATE_ACCOUNT_CLICKED: 'Login Page Create Account Button Clicked',
@@ -192,6 +193,10 @@ const EVENTS = {
   SUMMARY_PAGE_LOADED: 'Summary Page Loaded',
   SUMMARY_PAGE_NEXT_LEVEL_CLICKED: 'Summary Page Next Level Clicked',
   SUMMARY_PAGE_BACK_TO_LEVEL_CLICKED: 'Summary Page Back To Level Clicked',
+  LEVEL_ACTIVITY: 'Level Activity',
+
+  // Projects
+  PROJECT_ACTIVITY: 'Project Activity',
 
   // Check for understanding
   CFU_NAMES_TOGGLED_ON: 'Summary Page Names Toggled On',
