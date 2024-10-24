@@ -1,4 +1,3 @@
-- require 'cpa'
 - location = Geocoder.search(request.ip).try(:first)
 - country_code = location&.country_code.to_s.upcase
 -# 'RD' is the 'Reserved' country code for private IP's, i.e. localhost.
@@ -83,7 +82,7 @@
                 = f.label :age, t('signup_form.age')
                 = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
               %br/
-              - if us_ip && Cpa.cpa_experience(request)
+              - if us_ip
                 .itemblock
                   = f.label :us_state, t('signup_form.us_state')
                   = f.select :us_state, us_state_options, include_blank: true

@@ -56,8 +56,6 @@ class HttpCache
     'language_',
     # Experiment flag used to debug the onetrust cookie experience.
     'onetrust_cookie_scripts',
-    # Feature flag for the Colorado Privacy Act (CPA)
-    'cpa_experience',
     # Page mode, for A/B experiments and feature-flag rollouts.
     'pm'
   ].freeze
