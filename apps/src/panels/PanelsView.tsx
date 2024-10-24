@@ -83,19 +83,19 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     setCurrentPanelIndex(index);
   };
 
-  // Reset to first panel whenever panels content changes if specified.
-  useEffect(() => {
-    if (resetOnChange) {
-      setCurrentPanelIndex(0);
-    }
-  }, [panels, resetOnChange]);
-
   // Reset to last panel if number of panels has reduced.
   useEffect(() => {
     if (currentPanelIndex >= panels.length) {
       setCurrentPanelIndex(Math.max(panels.length - 1, 0));
     }
   }, [currentPanelIndex, panels]);
+
+  // Reset to first panel whenever panels content changes if specified.
+  useEffect(() => {
+    if (resetOnChange) {
+      setCurrentPanelIndex(0);
+    }
+  }, [panels, resetOnChange]);
 
   // Cancel any in-progress text-to-speech when the panel changes.
   useEffect(() => {
