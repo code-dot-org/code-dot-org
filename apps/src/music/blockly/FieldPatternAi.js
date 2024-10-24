@@ -122,6 +122,7 @@ class FieldPatternAi extends GoogleBlockly.Field {
   }
 
   dropdownDispose_() {
+    ReactDOM.unmountComponentAtNode(this.newDiv_);
     this.newDiv_ = null;
   }
 
