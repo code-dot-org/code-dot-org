@@ -170,7 +170,10 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
     <div
       id={`${name}-dropdown`}
       className={classNames(
-        {[moduleStyles.open]: isOpen},
+        {
+          [moduleStyles.open]: isOpen,
+          [moduleStyles.hasError]: errorMessage,
+        },
         moduleStyles.dropdownContainer,
         moduleStyles[`dropdownContainer-${menuPlacement}-menuPlacement`],
         moduleStyles[`dropdownContainer-${color}`],
@@ -237,7 +240,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
             moduleStyles.helperSection
           )}
         >
-          <FontAwesomeV6Icon iconName={'circle-exclamation'} />
+          <FontAwesomeV6Icon iconName="circle-exclamation" />
           <span>{errorMessage}</span>
         </div>
       )}
