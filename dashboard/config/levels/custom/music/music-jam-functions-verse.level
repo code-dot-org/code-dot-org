@@ -7,6 +7,7 @@
   "user_id": 1196,
   "properties": {
     "encrypted": "false",
+    "background": "music-black",
     "instructions_important": "false",
     "long_instructions": "#### Complete the Song\r\nNow it's your turn. Write your own verse to complete the song. \r\n\r\n- Add sounds to the [verse](#clickable=id:verse_workspace) function. \r\n\r\n\r\n",
     "hide_share_and_remix": "true",

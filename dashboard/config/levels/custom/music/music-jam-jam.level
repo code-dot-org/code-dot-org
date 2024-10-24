@@ -6,6 +6,7 @@
   "level_num": "custom",
   "user_id": 1196,
   "properties": {
+    "background": "music-black",
     "finish_dialog": "hoc2024",
     "encrypted": "false",
     "instructions_important": "false",

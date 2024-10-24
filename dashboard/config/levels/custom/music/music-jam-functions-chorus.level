@@ -7,6 +7,7 @@
   "user_id": 1196,
   "properties": {
     "encrypted": "false",
+    "background": "music-black",
     "instructions_important": "false",
     "long_instructions": "### Build a Song with Functions\r\n\r\nCall [intro](#clickable=) and [chorus](#clickable=) under [when run](#clickable=when-run-block) to play the sounds in the function.",
     "hide_share_and_remix": "true",
