@@ -7,6 +7,7 @@
   "user_id": 1196,
   "properties": {
     "encrypted": "false",
+    "background": "music-black",
     "instructions_important": "false",
     "long_instructions": "#### Play Together\r\nPlay two or more sounds at the same time.\r\n- Add two different [sounds](#clickable=play-sound-block) _into_ the [play together](#clickable=play-sounds-together-block-workspace) block. ",
     "hide_share_and_remix": "true",

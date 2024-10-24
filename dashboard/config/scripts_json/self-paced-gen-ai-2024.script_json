@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "self-paced-gen-ai",
-    "serialized_at": "2024-10-18 15:57:06 UTC",
+    "serialized_at": "2024-10-23 14:36:05 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -703,15 +703,12 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "self-paced-pl-gen-ai-foundations-preview-05_2024"
-        ],
         "progression": "Lesson Previews (20 min)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-pl-gen-ai-foundations-preview-05_2024"
+          "self-paced-pl-gen-ai-foundations-preview-05b_2024"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -719,7 +716,7 @@
         "activity_section.key": "fba06010-99e8-48e6-9979-44e7c1ea463e"
       },
       "level_keys": [
-        "self-paced-pl-gen-ai-foundations-preview-05_2024"
+        "self-paced-pl-gen-ai-foundations-preview-05b_2024"
       ]
     },
     {
@@ -1253,6 +1250,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-customizing_15c_2024"
+        ],
         "progression": "Retrieval (10 min)"
       },
       "bonus": false,
@@ -1677,9 +1677,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-pl-gen-ai-foundations-preview-05_2024",
+        "level.key": "self-paced-pl-gen-ai-foundations-preview-05b_2024",
         "script_level.level_keys": [
-          "self-paced-pl-gen-ai-foundations-preview-05_2024"
+          "self-paced-pl-gen-ai-foundations-preview-05b_2024"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",

@@ -1,0 +1,75 @@
+name 'self-paced-pl-ex-gen-ai-introduction_05_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Ethical Approach
+
+#### When learning about AI, it is crucial to integrate discussions on ethics due to the profound societal impacts and ethical dilemmas the technology presents. This curriculum weaves ethical considerations throughout, rather than relegating ethics to a single lesson.
+
+#### By embedding ethical discussions, case studies, and extension opportunities into the learning experience, students gain a deeper, more nuanced understanding of AI’s implications, encouraging critical thinking and responsible innovation.
+
+## Leaders Framework 
+
+
+#### LEADERS is an acronym representing key principles designed to guide lessons and discussions about the societal impacts of AI, including bias and ethical concerns. These principles provide reflective practices to help educators better prepare for these important conversations.
+
+   <table border="1" cellpadding="10" align="center">
+        <tr>
+            <td align="center" valign="middle" style="background-color: #f2f2f2 ; font-size: 26pt; height: 30px;"  width="10%;"> L </td>
+            <td style = "font-size: 16pt;"  width="90%;">Link to your subject area</td>
+        </tr>
+        <tr>
+            <td align="center" valign="middle"style="background-color: #f2f2f2; font-size: 26pt; height: 30px;"> E </td>
+            <td style = "font-size: 16pt">Errors occur for many reasons</td>
+        </tr>
+        <tr>
+            <td align="center" valign="middle" style="background-color: #f2f2f2; font-size: 26pt; height: 30px;"> A </td>
+            <td style = "font-size: 16pt">Assume someone in the room is your datapoint</td>
+        </tr>
+        <tr>
+            <td  align="center" valign="middle" style="background-color: #f2f2f2; font-size: 26pt; height: 30px;"> D </td>
+            <td style = "font-size: 16pt">Data sources can be biased</td>
+        </tr>
+        <tr>
+            <td  align="center" valign="middle" style="background-color: #f2f2f2; font-size: 26pt; height: 30px;"> E </td>
+            <td style = "font-size: 16pt">Empathy for multiple stakeholders</td>
+        </tr>
+        <tr>
+            <td align="center" valign="middle" style="background-color: #f2f2f2; font-size: 26pt; height: 30px;"> R </td>
+            <td style = "font-size: 16pt">Real-world cases are history, not opinion</td>
+        </tr>
+        <tr>
+            <td align="center" valign="middle" style="background-color: #f2f2f2; font-size: 26pt; height: 30px;"> S </td>
+            <td style = "font-size: 16pt">Show solutions!</td>
+        </tr>
+    </table>
+
+
+### **Read more about the Leaders Framework in this** <a href = "https://docs.google.com/document/d/17h5Xm7RKRQm_bwGoNlvZ7I6n8mKTNxI8MJL8wrUJt4o/edit?usp=sharing" target = "blank"  rel ="nonreferrer nonopener">Teacher Guide</a>.
+
+## Embedded Ethical Opportunities in the Curriculum 
+
+#### Throughout the currriculum you will notice callouts in the lesson plan and slides depicting opportunities for ethical discussions. 
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px; "> <b>Teacher Tip:</b> As technology evolves and new stories emerge, consider incorporating your own real-world examples into the lessons.
+</p>
+</div>
+
+
+- #### **Real-World Connections** - These showcase real-world case studies or individuals addressing AI's impact on culture or society, providing students with practical connections to lesson content. 
+
+- #### **Pause and Reflect** - These prompt students to reflect on their own experiences through scenarios related to recent activities or concepts. They offer a chance to pause, discuss, and explore personal opinions on technology, with examples provided to guide the conversation and encourage students to develop or refine their ethical views on AI.
+
+
+#### Green tabs marked **'Ethics Opportunities'** are embedded in the lesson plan.
+
+![](https://images.code.org/042f338730fcc4da6ccc7917bc4d0b1e-image-1726684253906.png)
+
+
+### **Read more about Ethical Opportunities in this** <a href = "https://docs.google.com/document/d/1ztq07VnPY-KfuA1dQEeHjCa5yd4Y-E6qc9RdUIl6vDI/edit?usp=sharing" target = "blank"  rel ="nonreferrer nonopener">Teacher Guide</a>.
+
+
+MARKDOWN

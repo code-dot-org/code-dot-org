@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-06 22:07:21 UTC",
+    "serialized_at": "2024-10-23 18:28:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -42,8 +42,8 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "**You will:**\n\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with App Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 20 minutes",
-        "student_overview": "**You will:**\n\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with App Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 20 minutes"
+        "overview": "**You will:**\n\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "Introduction to Interactive Animations and Games",
@@ -495,6 +495,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-24-mod1-Certificate"
+        ],
         "progression": "Introduction to this Module"
       },
       "bonus": false,
@@ -667,6 +670,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-U3-TeacherTools"
+        ],
         "progression": "Teaching Tools"
       },
       "bonus": false,
@@ -689,6 +695,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-U3-TeacherTools-AITAVid"
+        ],
         "progression": "Teaching Tools"
       },
       "bonus": false,
