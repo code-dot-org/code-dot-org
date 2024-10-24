@@ -21,6 +21,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {setAiRubricsDisabled} from '@cdo/apps/templates/currentUserRedux';
 import i18n from '@cdo/locale';
 
+import RubricClassSummary from './RubricClassSummary';
 import {UNDERSTANDING_LEVEL_STRINGS_V2, TAB_NAMES} from './rubricHelpers';
 import {reportingDataShape, rubricShape} from './rubricShapes';
 import SectionSelector from './SectionSelector';
@@ -366,6 +367,8 @@ function RubricSettings({
             )}
           </div>
         </div>
+
+        <RubricClassSummary rubric={rubric} teacherEval={teacherEval} />
 
         <div className={style.settingsGroup}>
           <Heading4>{i18n.aiSettings()}</Heading4>
