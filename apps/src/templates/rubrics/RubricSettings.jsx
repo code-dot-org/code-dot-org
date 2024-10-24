@@ -52,7 +52,8 @@ function RubricSettings({
   aiRubricsDisabled,
   setAiRubricsDisabled,
   allTeacherEvaluationData,
-  allAiEvaluationStatus,
+  aiEvalStatusCounters,
+  setAiEvalStatusMap,
 }) {
   const rubricId = rubric.id;
   const {lesson} = rubric;
@@ -125,7 +126,7 @@ function RubricSettings({
     setDisplayDetails(!displayDetails);
   };
 
-  const parseAiEvaluationStatusAll = useCallback(data => {
+  const parseAiEvalStatusCounters = useCallback(data => {
     // we can't fetch the csrf token from the DOM because CSRF protection
     // is disabled on script level pages.
     setCsrfToken(data.csrfToken);
@@ -143,10 +144,10 @@ function RubricSettings({
 
   // parse initial ai evaluation status
   useEffect(() => {
-    if (allAiEvaluationStatus) {
-      parseAiEvaluationStatusAll(allAiEvaluationStatus);
+    if (aiEvalStatusCounters) {
+      parseAiEvalStatusCounters(aiEvalStatusCounters);
     }
-  }, [allAiEvaluationStatus, parseAiEvaluationStatusAll]);
+  }, [aiEvalStatusCounters, parseAiEvalStatusCounters]);
 
   const parseTeacherEvaluationData = useCallback(
     data => {
@@ -208,6 +209,7 @@ function RubricSettings({
                 setStatusAll(STATUS_ALL.EVALUATION_PENDING);
               } else {
                 setStatusAll(STATUS_ALL.SUCCESS);
+                setAiEvalStatusMap(data.aiEvalStatusMap);
               }
             });
           }
@@ -215,7 +217,14 @@ function RubricSettings({
       }, 5000);
       return () => clearInterval(intervalId);
     }
-  }, [rubricId, polling, sectionId, statusAll, refreshAiEvaluations]);
+  }, [
+    rubricId,
+    polling,
+    sectionId,
+    statusAll,
+    refreshAiEvaluations,
+    setAiEvalStatusMap,
+  ]);
 
   const handleRunAiAssessmentAll = () => {
     setStatusAll(STATUS_ALL.EVALUATION_PENDING);
@@ -395,7 +404,8 @@ RubricSettings.propTypes = {
   aiRubricsDisabled: PropTypes.bool,
   setAiRubricsDisabled: PropTypes.func.isRequired,
   allTeacherEvaluationData: PropTypes.array,
-  allAiEvaluationStatus: PropTypes.object,
+  aiEvalStatusCounters: PropTypes.object,
+  setAiEvalStatusMap: PropTypes.func,
 };
 
 export const UnconnectedRubricSettings = RubricSettings;

@@ -1,0 +1,42 @@
+name 'self-paced-pl-ex-gen-ai-introduction_01_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Teaching Generative AI
+
+
+#### Welcome! This professional learning module is designed to help you prepare to teach Code.org’s **Exploring Generative AI** course.
+
+
+#### This course is designed for 8th-12th grade students and consists of two units: 
+- #### ***Unit 1: Foundations of Generative AI*** 
+- #### ***Unit 2: Customizing Language Models*** 
+
+#### It can be taught as a complete course or as separate units, offering flexibility to meet your educational needs.
+
+<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="AI bot" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 0px 20px 0;">
+
+## **In this module, you will:** 
+- #### Get an introduction to teaching both units in the Exploring Generative AI course
+- #### Define and identify different uses and purposes of Generative AI
+- #### Understand the ethical impact of Generative AI
+- #### Sample lessons from the Exploring Generative AI course
+
+
+### **Suggested total time:** 2 hours
+
+### **Lesson one suggested time:** 20 minutes
+
+## Take the pre-survey
+
+#### Code.org values and is responsive to feedback. Please fill out <a href="https://studio.code.org/form/linkhere" target="blank" rel="noopener noreferrer">this short pre-survey</a> to  tell us about who you are and how we can best support you.
+
+<a class="btn btn-large btn-primary" href="https://studio.code.org/form/linkhere" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
+
+## Let's get started!
+
+<div style="clear:both"/>
+
+
+MARKDOWN

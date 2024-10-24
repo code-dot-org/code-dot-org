@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "hoc-music-ai-pilot-4",
-    "serialized_at": "2024-10-21 23:31:59 UTC",
+    "serialized_at": "2024-10-22 22:16:29 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -42,6 +42,10 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "In this 45-minute activity, students will use Code.org’s Music Lab to explore how creativity and coding come together to make music. By creating their own songs using coding concepts like sequencing and decomposition, and configuring an AI Beat Block, students will learn foundational computer science concepts. They will also be introduced to careers that intersect with tech and music through inspiring career spotlights from professionals in the industry, including at Amazon Music.\n\nStudents will gain confidence in their creative abilities and begin to see coding as a tool not only for problem-solving but also for artistic expression. The goal is for students to discover careers that combine music and technology, where creativity is key, and to feel a stronger sense of belonging by seeing themselves reflected in the professionals’ stories and backgrounds.",
+        "preparation": "- Test out Music Lab to ensure familiarity with the platform.\n- Review the introduction video and practice walking students through the steps for using sound blocks, the AI Beat Block, and functions.\n- Prepare discussion prompts that help students connect coding and music creation.\n- *[Optional]* Find the resources you need to plan, implement, and celebrate the Hour of Code at your school [here](https://hourofcode.com/us/how-to)!",
+        "purpose": "This lesson is designed to show students that coding is not just about logic and algorithms—it's about creativity. By using Music Lab, students will create their own music and learn coding basics like sequencing, loops, and functions. They will see how the problem-solving process coders use is similar to the creative process musicians follow. By the end of this lesson, students will feel empowered to explore tech-related careers, knowing that creativity and code can work hand in hand.",
+        "student_overview": "In this 45-minute activity, you’ll use Code.org’s Music Lab to create your own music and remix songs from famous artists. You’ll learn how coding brings music to life, discover key computer science skills, and explore exciting careers that blend music and technology."
       },
       "seeding_key": {
         "lesson.key": "Music Lab: AI Edition for Hour of Code",
@@ -52,12 +56,55 @@
   ],
   "lesson_activities": [
     {
-      "key": "cfd0dedd-dbb1-443f-bb4b-332bebd07ad9",
+      "key": "5050b2f4-20d7-4def-b54e-b42e59bced04",
       "position": 1,
       "properties": {
+        "name": "Getting Started"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5050b2f4-20d7-4def-b54e-b42e59bced04",
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-4"
+      }
+    },
+    {
+      "key": "20efd04f-3d93-4d33-8bbd-75429deef62a",
+      "position": 2,
+      "properties": {
+        "duration": 2,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "20efd04f-3d93-4d33-8bbd-75429deef62a",
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-4"
+      }
+    },
+    {
+      "key": "cfd0dedd-dbb1-443f-bb4b-332bebd07ad9",
+      "position": 3,
+      "properties": {
+        "duration": 40,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "cfd0dedd-dbb1-443f-bb4b-332bebd07ad9",
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-4"
+      }
+    },
+    {
+      "key": "c892c3ca-7c08-4fa8-99c0-f0eba0364dd8",
+      "position": 4,
+      "properties": {
+        "duration": 3,
+        "name": "Celebrate!"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c892c3ca-7c08-4fa8-99c0-f0eba0364dd8",
         "lesson.key": "Music Lab: AI Edition for Hour of Code",
         "lesson_group.key": "",
         "script.name": "hoc-music-ai-pilot-4"
@@ -66,10 +113,47 @@
   ],
   "activity_sections": [
     {
+      "key": "9f40dfb0-1a62-483f-be65-7798f96b7985",
+      "position": 1,
+      "properties": {
+        "description": "This tutorial features songs from popular artists. To get a preview of the song list in this tutorial, check out this [Spotify Playlist (all ages)](https://open.spotify.com/playlist/197J2nTnPFpFP04ragYg1d?si=d1fe0d44b1434256). We are using radio-safe versions of all songs and for students under 13.",
+        "name": "Music Filtering"
+      },
+      "seeding_key": {
+        "activity_section.key": "9f40dfb0-1a62-483f-be65-7798f96b7985",
+        "lesson_activity.key": "5050b2f4-20d7-4def-b54e-b42e59bced04"
+      }
+    },
+    {
+      "key": "de3da541-d0d7-48df-9545-7262823a049f",
+      "position": 2,
+      "properties": {
+        "description": "- Encourage students to collaborate with their peers when stuck.\n- Remind them to read instructions and hints carefully.\n- If they finish early, encourage them to continue exploring their project and adding new elements.\n",
+        "name": "General Support"
+      },
+      "seeding_key": {
+        "activity_section.key": "de3da541-d0d7-48df-9545-7262823a049f",
+        "lesson_activity.key": "5050b2f4-20d7-4def-b54e-b42e59bced04"
+      }
+    },
+    {
+      "key": "e670a368-726b-4db8-8dcb-3721dcad6121",
+      "position": 1,
+      "properties": {
+        "description": "Today, we're going to explore something really exciting—how music and coding are connected. Did you know that both music and coding rely on patterns and sequences? When musicians create a song, they use patterns of sounds to make melodies and rhythms. Coders do something very similar—they use sequences of instructions to make a computer do what they want.\n\nMusic has always been a way to connect people, and with technology, it's even easier to share and discover new music from anywhere in the world. Behind the scenes, technology helps bring music to your fingertips.\n\nIn this activity, you’re going to use code to remix music from popular artists as well as create your own music. And along the way, you'll meet some amazing professionals who have combined their love for music and technology to build exciting careers. These professionals are just like you—they started with a passion for creativity and coding, and now they're using it to shape the future of music. Let's get started!\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e670a368-726b-4db8-8dcb-3721dcad6121",
+        "lesson_activity.key": "20efd04f-3d93-4d33-8bbd-75429deef62a"
+      }
+    },
+    {
       "key": "bd4b14b1-93ac-4bef-a759-6dc06c32f759",
       "position": 1,
       "properties": {
-        "name": "Music Lab: Jam Session",
+        "description": "In this introductory video, students will see how coding is used to create music and explore how professionals at Amazon Music combine creativity and technology. The video will highlight real-world roles like software engineers, UX designers, and music producers, inspiring students to create their own music with code.",
+        "name": "Intro to Music Lab: Jam Session",
         "progression_name": "Intro"
       },
       "seeding_key": {
@@ -81,6 +165,8 @@
       "key": "e0b517c9-2306-4f55-913b-8e121b8bc6b8",
       "position": 2,
       "properties": {
+        "description": "In this section, students will begin coding by selecting and sequencing sounds to create their own beats. Using the drag-and-drop interface of Music Lab, students will learn how to add blocks of code that trigger different sounds when activated. Encourage students to experiment with different sounds from the library and sequences, building confidence with the basic coding tools.",
+        "name": "Choosing sounds",
         "progression_name": "Play Sound"
       },
       "seeding_key": {
@@ -92,6 +178,8 @@
       "key": "e5be2061-e4b4-4c3d-8c83-3dde9f7306f4",
       "position": 3,
       "properties": {
+        "description": "Now, students will level up their music by learning how to play multiple sounds at once. They’ll explore how to layer sounds to create harmonies and more complex musical arrangements. Encourage students to explore different sound combinations and notice how their sequences change when sounds play together.",
+        "name": "Playing multiple sounds at once",
         "progression_name": "Play Together"
       },
       "seeding_key": {
@@ -103,7 +191,15 @@
       "key": "70adc636-569a-48e0-95cd-701dccdc5f19",
       "position": 4,
       "properties": {
-        "progression_name": "Play AI Drums"
+        "description": "In this section, students will be introduced to the AI Beat Block, where they can use artificial intelligence to help complete their songs. The AI listens to their starting beat and predicts what should come next, providing students with new ideas for their music.\n\nEncourage students to play with different temperatures and see how the AI responds to their input.",
+        "name": "Use AI to generate new beats",
+        "progression_name": "Play AI Drums",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**AI Beat Block Key Concepts:**\n- A.I. Bot was trained by listening to lots of different beats.\n- Based on your starting beat, A.I. Bot continues and fills in the rest.\n- Low temperature keeps AI predictions similar to the original beat.\n- High temperature creates more variation and surprises.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "70adc636-569a-48e0-95cd-701dccdc5f19",
@@ -114,6 +210,8 @@
       "key": "5a22d954-61f6-41a0-9bcf-16ea405bf4bb",
       "position": 5,
       "properties": {
+        "description": "Functions in coding are like the sections of a song (intro, chorus, verse). In this section, students will learn how to organize their music into functions, creating reusable blocks of code to control different parts of their song.",
+        "name": "Use Functions to build a song",
         "progression_name": "Functions"
       },
       "seeding_key": {
@@ -125,11 +223,24 @@
       "key": "ffdf16a4-6c45-4333-8266-f747991df2c7",
       "position": 6,
       "properties": {
+        "description": "This level allows students to experiment with everything they've learned. Students will choose a song to remix and use the coding blocks and functions to create their own music masterpiece. This is their chance to apply all of the coding concepts they've learned in a creative way.\n\nEncourage students to explore their creativity and apply coding skills in new ways, remixing songs to make them their own.\n",
+        "name": "Time to jam!",
         "progression_name": "Jam Session"
       },
       "seeding_key": {
         "activity_section.key": "ffdf16a4-6c45-4333-8266-f747991df2c7",
         "lesson_activity.key": "cfd0dedd-dbb1-443f-bb4b-332bebd07ad9"
+      }
+    },
+    {
+      "key": "2c9d6e36-d9b1-4a45-9fdb-644bd490d004",
+      "position": 1,
+      "properties": {
+        "description": "Celebrate the students' accomplishments! At the end of the activity, students will have a number of extension opportunities. They can:\n- Share their creation with their friends and family.\n- Keep playing to reflect on what they've learned and practice additional skills.\n- Further explore career paths in music and technology with Amazon Music through a [free virtual field trip](https://www.amazonfutureengineer.com/careertours/careervideos). \n- Receive a [certificate](http://code.org/certificates) for completing the Hour of Code.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "2c9d6e36-d9b1-4a45-9fdb-644bd490d004",
+        "lesson_activity.key": "c892c3ca-7c08-4fa8-99c0-f0eba0364dd8"
       }
     }
   ],
@@ -779,19 +890,188 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "artificial_intelligence_a_i_",
+      "word": "Artificial Intelligence (A.I.)",
+      "definition": "A computer program that takes in data, learns patterns from that data, and then makes decisions based on what it has learned.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "artificial_intelligence_a_i_"
+      }
+    },
+    {
+      "key": "functions",
+      "word": "Functions",
+      "definition": "A named section of a program that performs a specific task.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "functions"
+      }
+    },
+    {
+      "key": "music_producer",
+      "word": "Music Producer",
+      "definition": "Someone who helps create and mix songs by bringing together singers, musicians, and technology to make the track sound great.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "music_producer"
+      }
+    },
+    {
+      "key": "product_manager",
+      "word": "Product Manager",
+      "definition": "A person who helps create new products, like apps or games, by making sure they meet the needs of users.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "product_manager"
+      }
+    },
+    {
+      "key": "sequencing",
+      "word": "Sequencing",
+      "definition": "Putting commands in the correct order so computers can read the commands.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sequencing"
+      }
+    },
+    {
+      "key": "software_engineer",
+      "word": "Software Engineer",
+      "definition": "Someone who writes the code that makes apps, games, and websites work. They are like the builders of the tech world.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "software_engineer"
+      }
+    },
+    {
+      "key": "ux_designer",
+      "word": "UX Designer",
+      "definition": "A person who designs how products look and work, making sure apps, websites, or games are easy and fun to use for all users. UX stands for User Experience: how a person feels and interacts with a product.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "ux_designer"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "vocabulary.key": "artificial_intelligence_a_i_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "vocabulary.key": "functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "vocabulary.key": "music_producer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "vocabulary.key": "product_manager"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "vocabulary.key": "sequencing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "vocabulary.key": "software_engineer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "vocabulary.key": "ux_designer"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "0a17a390-dcdf-4fd3-a861-f93de0a9355b",
+      "properties": {
+        "description": "Identify how coding and music share similar patterns and processes."
+      },
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "objective.key": "0a17a390-dcdf-4fd3-a861-f93de0a9355b"
+      }
+    },
+    {
+      "key": "92802c7e-2b2e-41a0-bec5-c51be85f4e27",
+      "properties": {
+        "description": "Understand computer science concepts like sequencing and decomposition."
+      },
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "objective.key": "92802c7e-2b2e-41a0-bec5-c51be85f4e27"
+      }
+    },
+    {
+      "key": "c7270791-a58e-4eed-9ba6-a7bd72ba6730",
+      "properties": {
+        "description": "Use coding blocks to sequence sounds and create a song."
+      },
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "objective.key": "c7270791-a58e-4eed-9ba6-a7bd72ba6730"
+      }
+    },
+    {
+      "key": "f241d94b-85ff-4c14-9ab4-09c633f8d65d",
+      "properties": {
+        "description": "Explore careers in music and technology and see themselves as capable of pursuing these fields."
+      },
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "objective.key": "f241d94b-85ff-4c14-9ab4-09c633f8d65d"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

@@ -1,0 +1,59 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-10-22T23:17:16.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "name_suffix": "_final",
+    "panels": [
+      {
+        "text": "Great job! You just wrote your first lines of code.\n",
+        "imageUrl": "https://images.code.org/993a0df926317cfbf8407e0d42b4caa8-chidi-1.jpg",
+        "key": "music_ai_panels_playtogether_3-fa7e7e9c-4ae6-45a7-8248-bef386648cff",
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "I work together with coders to build cool products. I’m a product manager.",
+        "imageUrl": "https://images.code.org/19392c78c3b97d6214783c2be570f1ab-chidi-2.jpg",
+        "key": "music_ai_panels_playtogether_3-b01a9362-2f56-4898-b3d6-983fe3eb598b",
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "In college, I studied history to understand people.",
+        "imageUrl": "https://images.code.org/7205c5cf7b369d2c7ecc45139ad87063-chidi-3.jpg",
+        "key": "music_ai_panels_playtogether_3-3f141e1d-8f98-458f-ab5e-d64387c3b87e",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "Now, I study music listeners to learn about what they love, and what they don’t.",
+        "imageUrl": "https://images.code.org/b8f5da8739af665313a15eb3111f35bc-chidi-4.jpg",
+        "key": "music_ai_panels_playtogether_1-91e352ba-fc4d-4157-96c8-ed0141f3387d",
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "I use this knowledge, and my imagination, to come up with creative solutions.",
+        "imageUrl": "https://images.code.org/d51605a9ee752967d098b96419cbc752-chidi-5.jpg",
+        "key": "music_ai_panels_playtogether_1-c6032955-4743-4312-b604-df28a462dd77",
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-center"
+      },
+      {
+        "imageUrl": "https://images.code.org/d0416307597d5d7b6c0e9d39ca76b34f-chidi-7.jpg",
+        "text": "Next, you’ll get creative by experimenting with sound combinations. ",
+        "key": "musiclab_intro_panels_playtogether_pdx-a5066092-2920-4c8d-89ea-00b7a8531ad0",
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-right"
+      }
+    ],
+    "offer_browser_tts": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:16.211+00:00\",\"changed\":[\"cloned from \\\"music_ai_panels_playtogether_1\\\"\"],\"cloned_from\":\"music_ai_panels_playtogether_1\"},{\"changed_at\":\"2024-10-22 23:39:08 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-23 22:42:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 22:53:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>
