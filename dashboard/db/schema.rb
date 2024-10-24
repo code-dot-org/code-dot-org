@@ -961,7 +961,7 @@ ActiveRecord::Schema.define(version: 2024_10_22_150616) do
     t.index ["lti_integration_id"], name: "index_lti_deployments_on_lti_integration_id"
   end
 
-  create_table "lti_deployments_user_identities", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "lti_deployments_user_identities", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "lti_deployment_id", null: false
     t.bigint "lti_user_identity_id", null: false
     t.index ["lti_deployment_id"], name: "index_lti_deployments_user_identities_on_lti_deployment_id"
