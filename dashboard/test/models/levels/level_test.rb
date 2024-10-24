@@ -863,18 +863,32 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal old_level, new_level
   end
 
-  test 'clone with suffix replaces old suffix' do
+  test 'clone with suffix does not replaces old suffix that are not in version year format' do
     level_1 = create :level, name: 'my_level_1'
 
     # level_1 has no name suffix, so the new suffix is appended.
-    level_2 = level_1.clone_with_suffix('_2')
-    assert_equal 'my_level_1_2', level_2.name
-    assert_equal '_2', level_2.name_suffix
+    level_2 = level_1.clone_with_suffix('pilot')
+    assert_equal 'my_level_1_pilot', level_2.name
+    assert_equal '_pilot', level_2.name_suffix
 
     # level_2 has a name suffix, which the new suffix replaces.
     level_3 = level_2.clone_with_suffix('_3')
-    assert_equal 'my_level_1_3', level_3.name
+    assert_equal 'my_level_1_pilot_3', level_3.name
     assert_equal '_3', level_3.name_suffix
+  end
+
+  test 'clone with suffix only replaces trailing version year in suffix' do
+    level_1 = create :level, name: 'my_level_1'
+
+    # level_1 has no name suffix, so the new suffix is appended.
+    level_2 = level_1.clone_with_suffix('new_2024')
+    assert_equal 'my_level_1_new_2024', level_2.name
+    assert_equal '_new_2024', level_2.name_suffix
+
+    # level_2 has a name suffix, which the new suffix replaces.
+    level_3 = level_2.clone_with_suffix('2025')
+    assert_equal 'my_level_1_new_2025', level_3.name
+    assert_equal '_2025', level_3.name_suffix
   end
 
   test 'clone with suffix properly escapes suffixes' do
@@ -886,7 +900,7 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal "your_level_1_#{tricky_suffix}", level_2.name
 
     level_3 = level_2.clone_with_suffix('_3')
-    assert_equal 'your_level_1_3', level_3.name
+    assert_equal "your_level_1_#{tricky_suffix}_3", level_3.name
   end
 
   test 'clone with suffix truncates long names' do
@@ -1355,7 +1369,7 @@ class LevelTest < ActiveSupport::TestCase
   test 'get_validations returns nil if there are no validations' do
     level = create :level, name: 'test_level'
 
-    assert_equal nil, level.get_validations
+    assert_nil level.get_validations
   end
 
   describe '#available_callouts' do
