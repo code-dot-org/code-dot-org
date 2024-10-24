@@ -208,6 +208,18 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
             }}
             size="s"
           />
+          <Checkbox
+            checked={!!levelData.allowChangeStartingPlayheadPosition}
+            name="allowChangeStartingPlayheadPosition"
+            label="Allow change starting playhead position"
+            onChange={event => {
+              setLevelData({
+                ...levelData,
+                allowChangeStartingPlayheadPosition: event.target.checked,
+              });
+            }}
+            size="s"
+          />
         </div>
       </CollapsibleSection>
       <hr />
