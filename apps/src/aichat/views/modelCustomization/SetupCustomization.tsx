@@ -131,9 +131,9 @@ const SetupCustomization: React.FunctionComponent = () => {
   const sliderProps: SliderProps = {
     name: 'temperature-slider',
     value: aiCustomizations.temperature * 10,
-    minValue: MIN_TEMPERATURE,
-    maxValue: MAX_TEMPERATURE,
-    step: SET_TEMPERATURE_STEP,
+    minValue: MIN_TEMPERATURE * 10,
+    maxValue: MAX_TEMPERATURE * 10,
+    step: SET_TEMPERATURE_STEP * 10,
     hideValue: true,
     disabled: isDisabled(temperature) || readOnlyWorkspace,
     onChange: event => {
