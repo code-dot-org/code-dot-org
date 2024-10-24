@@ -25,6 +25,7 @@ import MusicLibrary, {
   SampleSequence,
   SoundData,
   SoundFolder,
+  SoundFolderInstrument,
 } from './MusicLibrary';
 import SamplePlayer from './SamplePlayer';
 import SamplePlayerWrapper from './SamplePlayerWrapper';
@@ -348,7 +349,7 @@ export default class MusicPlayer {
     }
 
     if (isSoundEvent(event)) {
-      const soundData = library.getSoundForId(event.id);
+      const soundData = library.getSoundForId(event.id) as SoundData;
       if (!soundData) {
         this.metricsReporter.logWarning('No sound for ID: ' + event.id);
         return [];
@@ -455,7 +456,9 @@ export default class MusicPlayer {
       return null;
     }
 
-    const folder: SoundFolder | null = library.getFolderForFolderId(instrument);
+    const folder: SoundFolderInstrument | null = library.getFolderForFolderId(
+      instrument
+    ) as SoundFolderInstrument;
 
     if (folder === null) {
       this.metricsReporter.logWarning(`No instrument ${instrument}`);
@@ -470,7 +473,7 @@ export default class MusicPlayer {
       return null;
     }
 
-    const url = library.generateSoundUrl(folder, soundData);
+    const url = library.generateSoundUrl(folder as SoundFolder, soundData);
     return url;
   }
 
@@ -560,7 +563,7 @@ export default class MusicPlayer {
   }
 
   private calculatePitchShift(soundData: SoundData) {
-    if (['beat', 'preview'].includes(soundData.type)) {
+    if (!soundData.type || ['beat', 'preview'].includes(soundData.type)) {
       return 0;
     }
     const diff = this.key - (soundData.key || Key.C);

@@ -3,7 +3,10 @@ import React, {useCallback} from 'react';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {BodyTwoText, StrongText} from '@cdo/apps/componentLibrary/typography';
-import MusicLibrary, {Sounds} from '@cdo/apps/music/player/MusicLibrary';
+import MusicLibrary, {
+  SoundFolderPack,
+  Sounds,
+} from '@cdo/apps/music/player/MusicLibrary';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
 import moduleStyles from './edit-music-level-data.module.scss';
@@ -47,7 +50,9 @@ const EditLibrarySounds: React.FunctionComponent<EditLibrarySoundsProps> = ({
     (pack: string, checked: boolean) => {
       const newSelected = {...currentValue};
       if (checked) {
-        const selectedPack = library.getFolderForFolderId(pack);
+        const selectedPack = library.getFolderForFolderId(
+          pack
+        ) as SoundFolderPack;
         if (!selectedPack) {
           return;
         }
@@ -67,7 +72,9 @@ const EditLibrarySounds: React.FunctionComponent<EditLibrarySoundsProps> = ({
       if (!currentValue || !currentValue[pack]) {
         return false;
       }
-      const selectedPack = library.getFolderForFolderId(pack);
+      const selectedPack = library.getFolderForFolderId(
+        pack
+      ) as SoundFolderPack;
       if (!selectedPack) {
         return false;
       }
