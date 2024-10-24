@@ -6514,6 +6514,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-select@npm:^1.2.1":
+  version: 1.3.6
+  resolution: "@types/react-select@npm:1.3.6"
+  dependencies:
+    "@types/react": "*"
+  checksum: 25ba53ba7b4207f8709834f3eeb717b38b90fbf4314ed206fed2c6bc0ee09a4c2f86a79d96f895329e5e0de4c13edc7fe3f84c06af9e9a0492232d1b1e806fe1
+  languageName: node
+  linkType: hard
+
 "@types/react-transition-group@npm:^4.4.5":
   version: 4.4.5
   resolution: "@types/react-transition-group@npm:4.4.5"
@@ -8743,6 +8752,7 @@ __metadata:
     "@types/react-bootstrap": ^0.32.36
     "@types/react-dom": ^18.0.11
     "@types/react-router-dom": ^5.3.3
+    "@types/react-select": ^1.2.1
     "@types/react-typist": ^2.0.6
     "@types/reactabular-table": ^8.14.6
     "@types/sinon": ^10.0.14
