@@ -388,10 +388,10 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test "cannot build user with panda in name" do
+  test "can build user with panda in name" do
     user = build :user, name: panda_panda
-    refute user.valid?
-    assert user.errors[:name].length == 1
+    assert user.valid?
+    assert user.errors[:name].empty?
   end
 
   test "cannot build user with panda in email" do
@@ -504,6 +504,12 @@ class UserTest < ActiveSupport::TestCase
     user.save!
 
     user.valid?
+  end
+
+  test "email does not have to be unique when existing user has LTI authentication" do
+    user = create :teacher, :with_lti_auth
+    dupe_user = create(:teacher, email: user.email)
+    assert dupe_user.valid?
   end
 
   test "cannot create multi-auth LTI user multiple auth options and duplicate of multi-auth user's second email" do
@@ -1703,16 +1709,9 @@ class UserTest < ActiveSupport::TestCase
     assert ActionMailer::Base.deliveries.empty?
   end
 
-  test 'provides helpful error on bad email address' do
-    # Though validation now exists to prevent grossly malformed emails, such was not always the
-    # case. Consequently, we must bypass validation to create the state of such an account.
-    user = create :user
-    user.email = 'bounce@xyz'
-    user.save(validate: false)
-
-    error_user = User.send_reset_password_instructions(email: 'bounce@xyz')
-
-    assert error_user.errors[:base]
+  test 'do not indicate if email is not tied to a user' do
+    empty_user = User.send_reset_password_instructions(email: 'bounce@xyz.com')
+    assert empty_user.errors.nil_or_empty?
   end
 
   test 'send reset password for student' do
@@ -1785,35 +1784,6 @@ class UserTest < ActiveSupport::TestCase
     old_password = student.encrypted_password
 
     assert_includes(mail.body.to_s, 'Change my password')
-
-    assert mail.body.to_s =~ /reset_password_token=(.+)"/
-    # HACK: Fix my syntax highlighting "
-    token = $1
-
-    User.reset_password_by_token(
-      reset_password_token: token,
-      password: 'newone',
-      password_confirmation: 'newone'
-    )
-
-    student = User.find(student.id)
-    # password was changed
-    assert old_password != student.encrypted_password
-  end
-
-  test 'send reset password to parent for student without email address' do
-    parent_email = 'parent_reset_email@email.xx'
-    student = create :student, password: 'oldone', email: nil, parent_email: parent_email
-
-    assert User.send_reset_password_instructions(email: parent_email)
-
-    mail = ActionMailer::Base.deliveries.first
-    assert_equal [parent_email], mail.to
-    assert_equal 'Code.org reset password instructions', mail.subject
-    student = User.find(student.id)
-    old_password = student.encrypted_password
-
-    assert_includes(mail.body.to_s, 'Change password for')
 
     assert mail.body.to_s =~ /reset_password_token=(.+)"/
     # HACK: Fix my syntax highlighting "
@@ -3868,7 +3838,9 @@ class UserTest < ActiveSupport::TestCase
         user_type: 'student'
       },
     )
-    params = {}
+    params = {
+      'roster_synced' => true
+    }
 
     assert_creates(User) do
       user = User.from_omniauth(auth, params)
@@ -3878,6 +3850,7 @@ class UserTest < ActiveSupport::TestCase
       assert_equal 'fake oauth token', user.primary_contact_info.data_hash[:oauth_token]
       assert_equal 'fake refresh token', user.primary_contact_info.data_hash[:oauth_refresh_token]
       assert_equal User::TYPE_STUDENT, user.user_type
+      assert_equal true, user.roster_synced
     end
   end
 
@@ -3902,6 +3875,7 @@ class UserTest < ActiveSupport::TestCase
       assert_equal 'fake oauth token', user.primary_contact_info.data_hash[:oauth_token]
       assert_equal 'fake refresh token', user.primary_contact_info.data_hash[:oauth_refresh_token]
       assert_equal 'google_oauth2', user.primary_contact_info.credential_type
+      assert_nil user.roster_synced
     end
   end
 
@@ -3971,8 +3945,10 @@ class UserTest < ActiveSupport::TestCase
 
   test 'summarize' do
     latest_permission_request_sent_at = 1.month.ago.change(usec: 0)
-
     create(:parental_permission_request, user: @student, updated_at: latest_permission_request_sent_at)
+
+    us_state = 'CO'
+    @student.update!(us_state: us_state)
 
     assert_equal(
       {
@@ -3997,6 +3973,7 @@ class UserTest < ActiveSupport::TestCase
         at_risk_age_gated: false,
         child_account_compliance_state: @student.cap_status,
         latest_permission_request_sent_at: latest_permission_request_sent_at,
+        us_state: us_state,
       },
       @student.summarize
     )
@@ -5411,6 +5388,18 @@ class UserTest < ActiveSupport::TestCase
     assert_equal student.us_state, 'WA'
   end
 
+  test 'teacher can change us_state of student in cpa lockout flow' do
+    new_us_state = 'WA'
+
+    teacher = create(:teacher)
+    student = create(:student, :U13, :in_colorado, :without_parent_permission)
+
+    RequestStore.store[:current_user] = teacher
+    student.update!(us_state: new_us_state)
+
+    assert_equal new_us_state, student.reload.us_state
+  end
+
   test "teacher with oauth account can access AI Chat" do
     teacher = create :teacher, :google_sso_provider
     assert teacher.teacher_can_access_ai_chat?
@@ -5479,6 +5468,58 @@ class UserTest < ActiveSupport::TestCase
 
       it 'returns resend parental permission request' do
         _(latest_parental_permission_request).must_equal user_permission_request1
+      end
+    end
+  end
+
+  describe 'CAP compliance status removing after #us_state updating' do
+    subject(:user) {create(:user, us_state: old_us_state, cap_status: cap_status)}
+
+    let(:cap_status) {'l'}
+    let(:old_us_state) {'CO'}
+    let(:new_us_state) {'WA'}
+
+    let(:update_us_state) do
+      user.us_state = new_us_state
+      user.save(validate: false)
+    end
+
+    let(:expect_cap_compliance_removing) do
+      Services::ChildAccount.expects(:remove_compliance).with(user)
+    end
+
+    it 'calls CAP compliance removing service' do
+      expect_cap_compliance_removing.once
+      update_us_state
+    end
+
+    it 'removes #cap_status' do
+      assert_changes -> {user.reload.cap_status}, from: cap_status, to: nil do
+        update_us_state
+      end
+    end
+
+    it 'updates #us_state' do
+      assert_changes -> {user.reload.us_state}, from: old_us_state, to: new_us_state do
+        update_us_state
+      end
+    end
+
+    context 'when #us_state property is not changed' do
+      let(:new_us_state) {old_us_state}
+
+      it 'does not call CAP compliance removing service' do
+        expect_cap_compliance_removing.never
+        update_us_state
+      end
+    end
+
+    context 'when no CAP compliance status' do
+      let(:cap_status) {nil}
+
+      it 'does not call CAP compliance removing service' do
+        expect_cap_compliance_removing.never
+        update_us_state
       end
     end
   end

@@ -153,11 +153,19 @@ class LtiV1Controller < ApplicationController
       nrps_url = decoded_jwt[Policies::Lti::LTI_NRPS_CLAIM]&.[](:context_memberships_url)
       resource_link_id = decoded_jwt[Policies::Lti::LTI_RESOURCE_LINK_CLAIM]&.[](:id)
       deployment_id = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_ID_CLAIM]
+      deployment_name = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_PLATFORM_CLAIM]&.[](:name)
       deployment = Queries::Lti.get_deployment(integration[:id], deployment_id)
       lti_account_type = Policies::Lti.get_account_type(decoded_jwt[Policies::Lti::LTI_ROLES_KEY])
 
+      # If deployment name is nil, update it with the name from the JWT. This
+      # could likely be removed after a period of time, as we also write the name
+      # for all new deployments in the next block. This line is necessary to
+      # backfill existing deployments that were created before we started
+      # writing the name.
+      deployment&.update(name: deployment_name) if deployment&.name.nil?
+
       if deployment.nil?
-        deployment = Services::Lti.create_lti_deployment(integration[:id], deployment_id)
+        deployment = Services::Lti.create_lti_deployment(integration[:id], deployment_id, deployment_name)
       end
       redirect_params = {
         lti_integration_id: integration[:id],
@@ -231,14 +239,15 @@ class LtiV1Controller < ApplicationController
   end
 
   def render_sync_course_error(reason, status, error = nil, message: nil)
-    @lti_section_sync_result = {error: error, message: message}
-    Honeybadger.notify(
+    honeybadger_id = Honeybadger.notify(
       'LTI roster sync error',
       context: {
         reason: reason,
         details: message,
       }
     )
+    @lti_section_sync_result = {error: error, message: message}
+    @lti_section_sync_result[:honeybadger_id] = honeybadger_id if honeybadger_id
     return respond_to do |format|
       format.html do
         render lti_v1_sync_course_path, status: status
@@ -303,7 +312,11 @@ class LtiV1Controller < ApplicationController
     end
 
     lti_advantage_client = LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
-    nrps_response = lti_advantage_client.get_context_membership(nrps_url, resource_link_id)
+    begin
+      nrps_response = lti_advantage_client.get_context_membership(nrps_url, resource_link_id)
+    rescue
+      return render_sync_course_error('Error calling NRPS', :bad_request, 'nrps_error')
+    end
     if Policies::Lti.issuer_accepts_resource_link?(lti_integration.issuer)
       nrps_response_errors = Services::Lti::NRPSResponseValidator.call(nrps_response)
 
@@ -417,7 +430,7 @@ class LtiV1Controller < ApplicationController
       metadata = {
         lms_name: platform_name,
       }
-      Metrics::Events.log_event_with_session(
+      Metrics::Events.log_event(
         session: session,
         event_name: 'lti_portal_registration_completed',
         metadata: metadata,

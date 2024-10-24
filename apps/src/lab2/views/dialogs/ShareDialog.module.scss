@@ -2,23 +2,11 @@
 @import '../common.scss';
 
 %dialog {
-  background-color: $neutral_light;
+  background-color: $light_gray_950;
+  color: $neutral_light;
   border-radius: 5px;
-  padding: 20px 50px;
+  padding: 20px 32px;
   width: 600px;
-}
-
-%button {
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  padding-left: 16px;
-  padding-right: 16px;
-  border: none !important;
-
-  &:hover /*, &:active */ {
-    box-shadow: none;
-  }
 }
 
 .dialogContainer {
@@ -29,28 +17,82 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    gap: 20px;
+    justify-content: space-between;
+    font-size: 14px;
 
-    .itemsContainer {
+    .heading {
+      color: $neutral_light;
+      margin-bottom: 0;
+    }
+
+    .columns {
       display: flex;
-      justify-content: space-around;
+      flex-direction: row;
+      gap: 40px;
+      justify-content: space-between;
+
+      .column {
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 auto;
+      }
+    }
+
+    .share {
+      background-color: $white;
+      padding: 20px;
+      border-radius: 10px;
+      color: white;
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 12px;
+      gap: 20px;
+    }
 
-      .copyToClipboard {
-        @extend %button;
-        background-color: $light_secondary_500;
-        color: $neutral_light;
+    .block {
+      background-color: $neutral_dark90;
+      padding: 20px;
+      border-radius: 10px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-        &:hover {
-          background-color: $light_secondary_500;
-        }
+      gap: 20px;
+      height: 100%;
 
-        &Icon {
-          font-size: 24px;
-          margin-right: 10px;
-          padding-bottom: 3px;
+      &Afe {
+        background-color: #2E4486;
+
+        img {
+          border-radius: 4px;
         }
       }
+    }
+
+    .QRCodeContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      height: 125px;
+      width: 125px;
+
+      .QRCodeBorder {
+        background-color: #fff;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        padding: 4px;
+      }
+    }
+
+    .doneButton {
+      margin-left: auto;
     }
 
     .closeButton {
@@ -66,4 +108,22 @@
       }
     }
   }
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.contents {
+  display: contents;
+}
+
+.copyLinkButton {
+  width: 100%;
+  margin-top: auto;
+}
+
+.fullWidth {
+  width: 100%;
 }

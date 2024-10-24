@@ -55,9 +55,6 @@
   &.selected {
     color: var(--text-neutral-primary);
   }
-  &:hover {
-    color: var(--text-neutral-primary);
-  }
 }
 
 .sidebarOption {
@@ -81,6 +78,13 @@
   &:hover {
     background-color: $neutral_gray10;
     text-decoration: none;
+    .optionIcon {
+      color: var(--text-neutral-primary);
+    }
+
+    .linkText {
+      color: var(--text-neutral-primary);
+    }
   }
 }
 
@@ -136,4 +140,29 @@
   font-weight: 600;
   color: $light_primary_500;
   text-transform: uppercase;
+  height: 18px;
+}
+
+.skeletonHeaderSectionName {
+  width: fit-content;
+}
+
+.calendarContentContainer {
+  width: fit-content;
+}
+
+.minutesPerWeekWrapper {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.minutesPerWeekDescription {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.calendarDropdown {
+  width: fit-content;
+  margin-bottom: 0;
 }

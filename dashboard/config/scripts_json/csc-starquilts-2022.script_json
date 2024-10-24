@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": "csc-starquilts",
-    "serialized_at": "2023-06-27 22:29:22 UTC",
+    "serialized_at": "2024-10-21 15:45:22 UTC",
     "published_state": "sunsetting",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1775,6 +1775,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

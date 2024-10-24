@@ -51,6 +51,14 @@ const optionsList = [
     ],
   },
   {
+    name: 'pack-dialog-2',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Use regular pack dialog.'},
+      {value: 'true', description: 'Use pack dialog 2.'},
+    ],
+  },
+  {
     name: 'show-tts',
     type: 'radio',
     values: [
@@ -80,6 +88,17 @@ const optionsList = [
     values: [
       {value: 'false', description: 'Show AI temperature (default).'},
       {value: 'true', description: 'Hide AI temperature.'},
+    ],
+  },
+  {
+    name: 'show-ai-temperature-explanation',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: 'Hide AI temperature explanation (default).',
+      },
+      {value: 'true', description: 'Show AI temperature.'},
     ],
   },
   {

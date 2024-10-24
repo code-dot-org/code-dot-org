@@ -1069,6 +1069,20 @@ FactoryBot.define do
       participant_audience {"teacher"}
       instructor_audience {"facilitator"}
     end
+
+    factory :foundations_of_cs_script do
+      after(:create) do |foundations_of_cs_script|
+        foundations_of_cs_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.foundations_of_cs
+        foundations_of_cs_script.save!
+      end
+    end
+
+    factory :foundations_of_programming_script do
+      after(:create) do |foundations_of_programming_script|
+        foundations_of_programming_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.foundations_of_programming
+        foundations_of_programming_script.save!
+      end
+    end
   end
 
   factory :project_storage do

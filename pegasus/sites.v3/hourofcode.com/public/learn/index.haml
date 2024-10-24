@@ -1,21 +1,23 @@
 ---
 layout: wide_index
-social:
-  twitter:card: photo
-  twitter:site: "@codeorg"
-  og:image:width: '1200'
-  og:image:height: '630'
 ---
 
 :ruby
   @header["title"] = hoc_s("hoc_activities.heading")
 
-:css
-  section.archive {
+:scss
+  section.more {
     max-width: 1156px;
-    margin: 4rem auto 0;
-    padding-top: 2.5rem;
-    border-top: 1px solid var(--neutral_dark20);
+    margin: 5rem auto 0;
+    padding: 0;
+
+    @media (max-width: 1156px) {
+      padding-inline: 1.25rem;
+    }
+
+    .flex-container {
+      padding-top: 2rem;
+    }
   }
 
 %link{href: "/css/generated/hoc-banner.css", rel: "stylesheet", type: "text/css"}
@@ -25,7 +27,7 @@ social:
 
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::HOC_ACTIVITIES_PAGE_VISITED
 
-#fullwidth{class: hoc_mode == "soon-hoc" ? 'hoc-2024' : nil}
+#fullwidth
   = view :header
   %section.banner
     = view :learn_banner_text
@@ -64,22 +66,25 @@ social:
 
 .clear{style: "clear: both"}
 
-%section.archive
-  .flex-container.justify-space-between.align-items-center
+%section.more
+  %hr
+  .flex-container.justify-space-between.align-items-center.flex-direction-column-mobile.gap-1
     %h2.heading-sm
-      =hoc_s("hoc_activities.archive.heading")
-    %a.link-button.secondary{href: resolve_url("/learn/archive")}
-      =hoc_s("hoc_activities.archive.button")
+      =hoc_s("hoc_activities.more.heading")
+    %a.link-button.secondary{href: resolve_url("/learn/more")}
+      =hoc_s("hoc_activities.more.button")
 
 :javascript
 
   $(document).ready(function() {
     // Send through some values that the JavaScript will need.
+    // As of 2024 we are no longer showing the "Sort by" dropdown per line 87 and 89.
+    // See https://github.com/code-dot-org/code-dot-org/pull/60728 for more details.
     var tutorialExplorerManager = new window.TutorialExplorerManager({
       tutorials: #{raw tutorials_contents.to_json},
       locale: "#{locale_code}",
       roboticsButtonUrl: "#{resolve_url('/learn/robotics')}",
-      showSortDropdown: #{DCDO.get('learn_show_sort_dropdown', true)},
+      showSortDropdown: false,
       disabledTutorials: #{raw DCDO.get('learn_hide_tutorials', [])},
       defaultSortByPopularity: #{Tutorials.sort_by_popularity?(request.site, DCDO.get("hoc_mode", CDO.default_hoc_mode))}
     });

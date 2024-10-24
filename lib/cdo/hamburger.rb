@@ -3,7 +3,7 @@
 # As part of this content, it also provides CSS classes which determine
 # responsive visibility for the header itself and the items inside it.
 
-require 'cdo/global'
+require 'cdo/global_edition'
 
 require_relative 'help_header'
 
@@ -13,10 +13,13 @@ class Hamburger
   SHOW_ALWAYS = "show-always".freeze
   HIDE_ALWAYS = "hide-always".freeze
   SHOW_MOBILE = "show-mobile".freeze
+  HIDE_MOBILE = "hide-mobile".freeze
   SHOW_SMALL_DESKTOP = "show-small-desktop".freeze
+  HIDE_SMALL_DESKTOP = "hide-small-desktop".freeze
 
   def self.get_divider_visibility(above_section_visibility, below_section_visibility)
     return HIDE_ALWAYS if above_section_visibility == HIDE_ALWAYS || below_section_visibility == HIDE_ALWAYS
+    return SHOW_SMALL_DESKTOP if above_section_visibility == SHOW_SMALL_DESKTOP || below_section_visibility == SHOW_SMALL_DESKTOP
     return SHOW_MOBILE if above_section_visibility == SHOW_MOBILE || below_section_visibility == SHOW_MOBILE
     return SHOW_ALWAYS
   end
@@ -46,7 +49,6 @@ class Hamburger
       show_pegasus_options = SHOW_ALWAYS
 
     else
-
       # The header is available for showing whichever options we want, but they should
       # appear in the hamburger at mobile widths.
       case options[:user_type]
@@ -92,10 +94,9 @@ class Hamburger
     loc_prefix = options[:loc_prefix]
     is_teacher_or_student = options[:user_type] == "teacher" || options[:user_type] == "student"
     is_level = options[:level]
-    is_teacher_or_student || is_level
 
     ge_region = options[:ge_region] || :root
-    ge_config = Cdo::Global.configuration_for(ge_region)[:header] || {}
+    ge_config = Cdo::GlobalEdition.configuration_for(ge_region)[:header] || {}
     ge_hamburger_config = ge_config[:hamburger] || {}
 
     # Get visibility CSS.
@@ -120,6 +121,10 @@ class Hamburger
     # Then we add those first, with the proper visibility
     # When we find a header entry that matches a hamburger option, we omit
     # it in the hamburger menu unless it has mobile visibility
+    header_links_visibility = visibility[:show_teacher_options]
+    if options[:user_type] == "student"
+      header_links_visibility = visibility[:show_student_options]
+    end
     entries.concat(header_links.filter_map do |header_link|
       # Ignore if it is already in the hamburger items
       next nil if hamburger_items.include?(header_link[:key])
@@ -127,7 +132,11 @@ class Hamburger
       # Convert 'hide' into 'show' to invert the visibility logic
       # so that we 'show' the hamburger options when we 'hide' the
       # header links
-      header_link[:class].gsub!("hide", "show")
+      header_link[:class] = header_link[:class].gsub("hide", "show")
+
+      if header_link[:class].include?('show-small-desktop')
+        header_links_visibility = SHOW_SMALL_DESKTOP
+      end
 
       # Ensure a unique id that is prepended with 'hamburger-'
       header_link[:id] = "hamburger-#{header_link[:id]}" if header_link[:id]
@@ -142,9 +151,9 @@ class Hamburger
 )
 
     if options[:user_type] == "teacher"
-      entries << {type: "divider", class: get_divider_visibility(visibility[:show_teacher_options], visibility[:show_help_options]), id: "after-teacher"}
+      entries << {type: "divider", class: get_divider_visibility(header_links_visibility, visibility[:show_help_options]), id: "after-teacher"}
     elsif options[:user_type] == "student"
-      entries << {type: "divider", class: get_divider_visibility(visibility[:show_student_options], visibility[:show_help_options]), id: "after-student"}
+      entries << {type: "divider", class: get_divider_visibility(header_links_visibility, visibility[:show_help_options]), id: "after-student"}
     end
 
     # Show help links before Pegasus links for signed in users.
@@ -169,7 +178,7 @@ class Hamburger
       unless header_index.nil?
         link[:class] = header_links[header_index][:class]
         # Invert the visibility
-        link[:class].gsub!("hide", "show")
+        link[:class] = link[:class].gsub("hide", "show")
       end
 
       link[:title] = I18n.t("#{loc_prefix}#{link[:title]}")
@@ -181,14 +190,21 @@ class Hamburger
 
       # Also handle subentries
       if link[:subentries]
-        link[:subentries] = link[:subentries].map do |sublink|
+        link[:subentries] = link[:subentries].filter_map do |sublink|
           sublink = sublink.dup
-          sublink[:title] = I18n.t("#{loc_prefix}#{sublink[:title]}")
           if sublink[:domain] == 'studio.code.org'
             sublink[:url] = CDO.studio_url(sublink[:url])
           elsif sublink[:domain] == 'code.org'
             sublink[:url] = CDO.code_org_url(sublink[:url])
           end
+
+          # Also handle subentries that are already header items and make sure those
+          # do not appear in the submenu.
+          header_index = header_items.index(sublink[:title])
+          next nil unless header_index.nil?
+
+          # Localize the title
+          sublink[:title] = I18n.t("#{loc_prefix}#{sublink[:title]}")
           sublink
         end
       end
@@ -211,7 +227,7 @@ class Hamburger
     loc_prefix = options[:loc_prefix]
 
     ge_region = options[:ge_region] || :root
-    ge_config = Cdo::Global.configuration_for(ge_region)[:header] || {}
+    ge_config = Cdo::GlobalEdition.configuration_for(ge_region)[:header] || {}
     ge_top_config = ge_config[:top] || {}
 
     links = ge_top_config[:signed_out] || []
@@ -241,10 +257,13 @@ class Hamburger
       # show up when the width is *very* small
       # Specifying both will cause it to disappear for medium width but also
       # continue to appear in very small widths.
-      info[:class] = if i > 2
-                       "hide-small-desktop"
+      #
+      # The exact rule here is: collapse all but the first 3 links when there are
+      # 6 or more links total
+      info[:class] = if i > 2 && links.length > 5
+                       HIDE_SMALL_DESKTOP
                      else
-                       "hide-mobile"
+                       HIDE_MOBILE
                      end
       info
     end

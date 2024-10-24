@@ -1,9 +1,10 @@
+import classNames from 'classnames';
 import QRCode from 'qrcode.react';
 import React, {useCallback, useEffect, useState} from 'react';
 import FocusLock from 'react-focus-lock';
 
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
-import {LinkButton} from '@cdo/apps/componentLibrary/button';
+import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import {ProjectType} from '@cdo/apps/lab2/types';
@@ -28,18 +29,52 @@ const CopyToClipboardButton: React.FunctionComponent<{
   }, [shareUrl, projectType]);
 
   return (
-    <button
-      type="button"
+    <Button
+      iconLeft={{
+        iconName: copiedToClipboard ? 'clipboard-check' : 'clipboard',
+      }}
+      ariaLabel={i18n.copyLinkToProject()}
+      text={i18n.copyLinkToProject()}
+      type="secondary"
+      color="white"
+      size="m"
       onClick={handleCopyToClipboard}
-      className={moduleStyles.copyToClipboard}
-    >
-      <FontAwesomeV6Icon
-        iconName={copiedToClipboard ? 'clipboard-check' : 'clipboard'}
-        iconStyle="thin"
-        className={moduleStyles.copyToClipboardIcon}
+      className={moduleStyles.copyLinkButton}
+    />
+  );
+};
+
+const AfeCareerTourBlock: React.FunctionComponent = () => {
+  const careersUrl =
+    'https://www.amazonfutureengineer.com/careertours/careervideos';
+
+  return (
+    <div className={classNames(moduleStyles.block, moduleStyles.blockAfe)}>
+      <Typography
+        semanticTag="h2"
+        visualAppearance="heading-md"
+        className={moduleStyles.heading}
+      >
+        {i18n.careerTourTitle()}
+      </Typography>
+      <img alt="" src="/shared/images/afe/afe-career-tours-0.jpg" />
+      {i18n.careerTourDescription()}
+      <LinkButton
+        ariaLabel={i18n.careerTourAction()}
+        href={careersUrl}
+        text={i18n.careerTourAction()}
+        type="primary"
+        color="white"
+        size="m"
+        target="_blank"
+        iconRight={{
+          iconName: 'arrow-up-right-from-square',
+          iconStyle: 'solid',
+          title: 'arrow-up-right-from-square',
+        }}
+        className={moduleStyles.fullWidth}
       />
-      {i18n.copyLinkToProject()}
-    </button>
+    </div>
   );
 };
 
@@ -47,15 +82,22 @@ const CopyToClipboardButton: React.FunctionComponent<{
  * A new implementation of the project share dialog for Lab2 labs.  Currently only used
  * by Music Lab and Python Lab, and only supports a minimal subset of functionality.
  */
+
 const ShareDialog: React.FunctionComponent<{
+  dialogId?: string;
   shareUrl: string;
   finishUrl?: string;
   projectType: ProjectType;
-}> = ({shareUrl, finishUrl, projectType}) => {
+}> = ({dialogId, shareUrl, finishUrl, projectType}) => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    trackEvent('share', 'share_open_dialog', {value: projectType});
+    trackEvent('share', 'share_open_dialog', {
+      value:
+        dialogId === 'hoc2024'
+          ? 'share_open_dialog_congrats_hoc2024'
+          : projectType,
+    });
   });
 
   const handleClose = useCallback(
@@ -67,24 +109,79 @@ const ShareDialog: React.FunctionComponent<{
     <FocusLock>
       <div className={moduleStyles.dialogContainer}>
         <div id="share-dialog" className={moduleStyles.shareDialog}>
-          <Typography semanticTag="h1" visualAppearance="heading-lg">
-            {i18n.shareTitle()}
+          <Typography
+            semanticTag="h1"
+            visualAppearance="heading-lg"
+            className={moduleStyles.heading}
+          >
+            {dialogId === 'hoc2024'
+              ? i18n.congratulations()
+              : i18n.shareTitle()}
           </Typography>
-          <div className={moduleStyles.itemsContainer}>
-            <CopyToClipboardButton
-              shareUrl={shareUrl}
-              projectType={projectType}
-            />
-            <div id="share-qrcode-container">
-              <QRCode value={shareUrl + '?qr=true'} size={140} />
+          <div>{dialogId === 'hoc2024' && i18n.congratsFinishedHoc()}</div>
+          <div className={moduleStyles.columns}>
+            <div className={moduleStyles.column}>
+              <div className={moduleStyles.block}>
+                {dialogId === 'hoc2024' && (
+                  <Typography
+                    semanticTag="h2"
+                    visualAppearance="heading-md"
+                    className={moduleStyles.heading}
+                  >
+                    {i18n.shareTitle()}
+                  </Typography>
+                )}
+                <div
+                  className={moduleStyles.QRCodeContainer}
+                  id="share-qrcode-container"
+                >
+                  <div className={moduleStyles.QRCodeBorder}>
+                    <QRCode value={shareUrl + '?qr=true'} size={117} />
+                  </div>
+                </div>
+                <CopyToClipboardButton
+                  shareUrl={shareUrl}
+                  projectType={projectType}
+                />
+              </div>
             </div>
-            {finishUrl && (
-              <LinkButton
+            {dialogId === 'hoc2024' && (
+              <div className={moduleStyles.column}>
+                <AfeCareerTourBlock />
+              </div>
+            )}
+          </div>
+          <div className={moduleStyles.bottom}>
+            {finishUrl ? (
+              <div className={moduleStyles.contents}>
+                <Button
+                  ariaLabel={i18n.keepPlaying()}
+                  text={i18n.keepPlaying()}
+                  type="secondary"
+                  color="white"
+                  size="m"
+                  onClick={handleClose}
+                  className={moduleStyles.keepPlayingButton}
+                />
+                <LinkButton
+                  ariaLabel={i18n.finish()}
+                  href={finishUrl}
+                  text={i18n.finish()}
+                  type="primary"
+                  color="white"
+                  size="m"
+                  className={moduleStyles.doneButton}
+                />
+              </div>
+            ) : (
+              <Button
                 ariaLabel={i18n.done()}
-                href={finishUrl}
                 text={i18n.done()}
                 type="primary"
-                size="s"
+                color="white"
+                size="m"
+                onClick={handleClose}
+                className={moduleStyles.doneButton}
               />
             )}
           </div>

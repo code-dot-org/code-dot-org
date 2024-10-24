@@ -1,0 +1,15 @@
+name 'Data Sci U1 Post Q14_2024-pilot'
+
+question 'When preparing a dataset for analysis, what steps should be taken to address missing values, and how do these steps impact the reliability of the analysis?'
+
+wrong 'Leave missing values as they are to maintain the original dataset, ensuring no alteration to the data structure.'
+wrong 'Remove all rows with missing values to simplify the dataset, which could lead to a significant loss of data and potential bias.'
+right 'Use imputation methods such as mean, median, or mode to fill in missing values, which helps maintain dataset integrity but may introduce some estimation errors.'
+wrong 'Replace missing values with arbitrary constants, ensuring uniformity but potentially distorting the dataset.'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

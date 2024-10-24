@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "foundations-gen-ai",
-    "serialized_at": "2024-09-27 03:18:05 UTC",
+    "serialized_at": "2024-10-18 19:57:14 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2601,7 +2601,7 @@
       "key": "0d097162-ffd1-438f-998c-0fab07a87a62",
       "position": 2,
       "properties": {
-        "description": "While students take their survey, please [complete this post-survey for teachers as well](https://studio.code.org/form/exploring_with_generative_ai_post_unit_survey). Your feedback is valued and appreciated!"
+        "description": "While students take their survey, please [complete this post-survey for teachers as well](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data[unit_number]=unit_1). Your feedback is valued and appreciated!"
       },
       "seeding_key": {
         "activity_section.key": "0d097162-ffd1-438f-998c-0fab07a87a62",
@@ -2616,6 +2616,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-studentsurvey-premodule"
+        ],
         "progression": "Student Pre-Survey"
       },
       "bonus": false,
@@ -2638,6 +2641,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L1-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -2660,6 +2666,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson1-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -2682,6 +2691,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L2-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -2704,6 +2716,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson2-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -2726,6 +2741,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L3-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -2748,6 +2766,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson3-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -2770,6 +2791,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson4-warmup-level1"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -2792,6 +2816,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson4-wrapup"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -2814,6 +2841,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L5-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -2836,6 +2866,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson5-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -2858,6 +2891,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L6-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -2880,6 +2916,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson6-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -2902,6 +2941,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L7-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -2924,6 +2966,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L8-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -2946,6 +2991,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson8-wrapup-level1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -2968,6 +3016,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson9-wrapup"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -2990,6 +3041,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Foundations AI - Outputs - Mad Lib Widget_2024"
+        ],
         "progression": "[For Teachers] Mad Lib Widget"
       },
       "bonus": false,
@@ -3012,6 +3066,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L10-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -3034,6 +3091,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson10-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -3056,6 +3116,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-studentsurvey-postmodule"
+        ],
         "progression": "Student Post-Survey"
       },
       "bonus": false,
@@ -3329,6 +3392,30 @@
   ],
   "resources": [
     {
+      "name": "[Exemplar] AI Auditors",
+      "url": "https://docs.google.com/document/d/1W-3aTLH56DHgM-mV3EcA0-hIFR2WgShp15f7ctIkO7A/edit",
+      "key": "_exemplar_ai_auditors",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_ai_auditors"
+      }
+    },
+    {
+      "name": "[Exemplar] Character Quiz",
+      "url": "https://docs.google.com/document/d/1GdQLnKLwAnrNVoceYXh3WMUEt-nB7nHB7K7WJHayoio/edit",
+      "key": "_exemplar_character_quiz",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_character_quiz"
+      }
+    },
+    {
       "name": "[Exemplar] Foundations of Generative AI Graphic Organizer",
       "url": "https://docs.google.com/presentation/d/1L-NZa63NatGczunX-58GlPNwHnNxD_XQxQSSbqlhP_Y/view",
       "key": "_exemplar_foundations_of_generative_ai_graphic_organizer",
@@ -3338,6 +3425,69 @@
       },
       "seeding_key": {
         "resource.key": "_exemplar_foundations_of_generative_ai_graphic_organizer"
+      }
+    },
+    {
+      "name": "[Exemplar] Meanings from Context",
+      "url": "https://docs.google.com/document/d/1OFqzLA4VMZV0ibii-gGT2BLI3HnJ0RLH8c6KTGP2d2g/edit",
+      "key": "_exemplar_meanings_from_context",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_meanings_from_context"
+      }
+    },
+    {
+      "name": "[Exemplar] Training Data",
+      "url": "https://docs.google.com/document/d/1s-OfR8hRDSjLiLYaVQztOpXiDDqjVOer6NJyw-ejJzM/edit",
+      "key": "_exemplar_training_data",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_training_data"
+      }
+    },
+    {
+      "name": "[For Teachers] Activity Overview - Attention is All You Need",
+      "url": "https://youtu.be/6A2GHAE3iHg",
+      "key": "_for_teachers_activity_overview_-_attention_is_all_you_need",
+      "properties": {
+        "audience": "Verified Teacher",
+        "download_url": "https://videos.code.org/levelbuilder/lesson_8_attention_v2-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "_for_teachers_activity_overview_-_attention_is_all_you_need"
+      }
+    },
+    {
+      "name": "[For Teachers] Activity Overview - How Embeddings Work",
+      "url": "https://youtu.be/DDnETR6vPcs",
+      "key": "_for_teachers_activity_overview_-_how_embeddings_work",
+      "properties": {
+        "audience": "Verified Teacher",
+        "download_url": "https://videos.code.org/levelbuilder/lesson_5_how_embeddings_are_made_v2-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "_for_teachers_activity_overview_-_how_embeddings_work"
+      }
+    },
+    {
+      "name": "[For Teachers] Activity Overview - How Neural Networks Work",
+      "url": "https://youtu.be/yN2-ll6ZVJ8",
+      "key": "_for_teachers_activity_overview_-_how_neural_networks_work",
+      "properties": {
+        "audience": "Verified Teacher",
+        "download_url": "https://videos.code.org/levelbuilder/lesson_7learning_neural_networks_v2-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "_for_teachers_activity_overview_-_how_neural_networks_work"
       }
     },
     {
@@ -3353,6 +3503,30 @@
       }
     },
     {
+      "name": "[Key] How Embeddings are Made (Version A)",
+      "url": "https://docs.google.com/document/d/1Eb7iLCgWuayaW18-rfxbDHCc5djPcQqtFoB66iyGDGM/edit",
+      "key": "_key_how_embeddings_are_made_version_a_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_how_embeddings_are_made_version_a_"
+      }
+    },
+    {
+      "name": "[Key] How Embeddings are Made (Version B)",
+      "url": "https://docs.google.com/document/d/1ghxt4d0MlKfXdjlxyarIrn6OP_10TP8nK4jYnQoxwKw/edit",
+      "key": "_key_how_embeddings_are_made_version_b_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_how_embeddings_are_made_version_b_"
+      }
+    },
+    {
       "name": "[Key] Learning a Language",
       "url": "https://docs.google.com/document/d/1M6bB-O495jmlwUrvOAU0dbS-lAzNuyccK91ljBwMDts/edit",
       "key": "_key_learning_a_language",
@@ -3362,6 +3536,19 @@
       },
       "seeding_key": {
         "resource.key": "_key_learning_a_language"
+      }
+    },
+    {
+      "name": "[For Teachers] Activity Overview - Understanding Embeddings",
+      "url": "https://youtu.be/QjtYSpgiKXY",
+      "key": "activity_overview_-_understanding_embeddings",
+      "properties": {
+        "audience": "Verified Teacher",
+        "download_url": "https://videos.code.org/levelbuilder/lesson_4_understanding_embeddings_v2-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "activity_overview_-_understanding_embeddings"
       }
     },
     {
@@ -3994,6 +4181,18 @@
     {
       "seeding_key": {
         "lesson.key": "Attention Is All You Need",
+        "resource.key": "_exemplar_meanings_from_context"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Attention Is All You Need",
+        "resource.key": "_for_teachers_activity_overview_-_attention_is_all_you_need"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Attention Is All You Need",
         "resource.key": "attention_is_all_you_need"
       }
     },
@@ -4030,6 +4229,24 @@
     {
       "seeding_key": {
         "lesson.key": "Embeddings: How They're Created",
+        "resource.key": "_for_teachers_activity_overview_-_how_embeddings_work"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Embeddings: How They're Created",
+        "resource.key": "_key_how_embeddings_are_made_version_a_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Embeddings: How They're Created",
+        "resource.key": "_key_how_embeddings_are_made_version_b_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Embeddings: How They're Created",
         "resource.key": "how_embeddings_are_made"
       }
     },
@@ -4054,6 +4271,12 @@
     {
       "seeding_key": {
         "lesson.key": "Hallucinations and Fabrications",
+        "resource.key": "_exemplar_ai_auditors"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hallucinations and Fabrications",
         "resource.key": "ai_auditors"
       }
     },
@@ -4067,6 +4290,12 @@
       "seeding_key": {
         "lesson.key": "Input & Training Data",
         "resource.key": "_exemplar_foundations_of_generative_ai_graphic_organizer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Input & Training Data",
+        "resource.key": "_exemplar_training_data"
       }
     },
     {
@@ -4127,6 +4356,12 @@
       "seeding_key": {
         "lesson.key": "Neural Networks: How They're Trained",
         "resource.key": "_exemplar_foundations_of_generative_ai_graphic_organizer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Neural Networks: How They're Trained",
+        "resource.key": "_for_teachers_activity_overview_-_how_neural_networks_work"
       }
     },
     {
@@ -4246,7 +4481,19 @@
     {
       "seeding_key": {
         "lesson.key": "Understanding Embeddings",
+        "resource.key": "_exemplar_character_quiz"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Embeddings",
         "resource.key": "_exemplar_foundations_of_generative_ai_graphic_organizer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Embeddings",
+        "resource.key": "activity_overview_-_understanding_embeddings"
       }
     },
     {

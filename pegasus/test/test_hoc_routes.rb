@@ -37,6 +37,10 @@ class HocRoutesTest < Minitest::Test
       assert_redirects_from_to '/api/hour/begin/mc', '/minecraft'
     end
 
+    it 'starts archived tutorial' do
+      assert_redirects_from_to '/api/hour/begin/play-lab', '/playlab'
+    end
+
     it 'ends tutorial' do
       assert_redirects_from_to '/api/hour/finish', '/congrats'
     end
@@ -45,13 +49,26 @@ class HocRoutesTest < Minitest::Test
       assert_successful_png_get '/api/hour/begin_mc.png'
     end
 
+    it 'starts archived tutorial with png image' do
+      assert_successful_png_get '/api/hour/begin_play-lab.png'
+    end
+
     it 'ends given tutorial with png image' do
       assert_successful_png_get '/api/hour/finish_mc.png'
+    end
+
+    it 'ends archived tutorial with png image' do
+      assert_successful_png_get '/api/hour/finish_play-lab.png'
     end
 
     it 'ends given tutorial, providing script ID to congrats page' do
       assert_redirects_from_to '/api/hour/finish/mc', '/congrats'
       assert_includes @pegasus.last_request.url, "&s=#{Base64.urlsafe_encode64('mc')}"
+    end
+
+    it 'ends archived tutorial, providing script ID to congrats page' do
+      assert_redirects_from_to '/api/hour/finish/play-lab', '/congrats'
+      assert_includes @pegasus.last_request.url, "&s=#{Base64.urlsafe_encode64('play-lab')}"
     end
 
     it 'redirects batch certificate page to code studio' do
@@ -194,6 +211,30 @@ class HocRoutesTest < Minitest::Test
         after_end_row = get_session_hoc_activity_entry
         assert_datetime_within(after_end_row[:started_at], before_began_time, after_began_time)
         assert_datetime_within(after_end_row[:finished_at], before_ended_time, after_ended_time)
+      end
+    end
+
+    it 'starts and ends given tutorial with tracking pixel, tracking time' do
+      DB.transaction(rollback: :always) do
+        before_start_row = get_session_hoc_activity_entry
+        assert_nil before_start_row
+
+        before_began_time = now_in_sequel_datetime
+        assert_successful_png_get '/api/hour/begin_mc.png'
+        after_began_time = now_in_sequel_datetime
+
+        after_start_row = get_session_hoc_activity_entry
+        assert 'mc', after_start_row[:tutorial]
+
+        assert_datetime_within(after_start_row[:pixel_started_at], before_began_time, after_began_time)
+        assert_nil after_start_row[:pixel_finished_at]
+
+        before_ended_time = now_in_sequel_datetime
+        assert_successful_png_get '/api/hour/finish_mc.png'
+        after_ended_time = now_in_sequel_datetime
+
+        after_end_row = get_session_hoc_activity_entry
+        assert_datetime_within(after_end_row[:pixel_finished_at], before_ended_time, after_ended_time)
       end
     end
 

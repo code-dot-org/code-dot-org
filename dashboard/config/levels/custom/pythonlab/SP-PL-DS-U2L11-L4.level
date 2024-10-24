@@ -1,0 +1,49 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-10-15T17:13:36.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "> Explore how the `notnull()` function can be used to get more accurate results when aggregating data.\r\n\r\n# Filter Extremes\r\n\r\n::: details [**✅ Step 1**]\r\nRun the code and investigate the outcome.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nModify the `strongest_hero` DataFrame to also remove those superheroes that have a `null` value for both `Affiliation` and `YearsActive`.\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nModify the `weakest_hero` DataFrame to also remove those superheroes that have a `null` value for both `Affiliation` and `YearsActive`.\r\n:::\r\n\r\n::: details [**✅ Step 4**]\r\nCompare the results of both filters. *How did filtering with `notnull()` affect the output?*\r\n:::\r\n\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import pandas as pd\n\ndf = pd.read_csv('new_superhero_roster.csv')\n\nprint(df.info())\n\nmax_power_level = df['PowerLevel'].max()\nmin_power_level = df['PowerLevel'].min()\n\nstrongest_hero = df[(df['PowerLevel'] == max_power_level)]\nweakest_hero = df[(df['PowerLevel'] == min_power_level)]\n\nprint(\"STRONGEST HERO:\\n\", strongest_hero)\nprint(\"WEAKEST HERO:\\n\", weakest_hero)\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "new_superhero_roster.csv",
+          "language": "csv",
+          "contents": "HeroName,Alias,City,PowerLevel,Affiliation,ArchNemesis,YearsActive\nShadowBlade,The Shadow,New York,96,,Dark Specter,33\nThunderFist,Thunder,Los Angeles,77,Justice League,Red Skull,33\nSilverWing,Silver,Gotham,55,X-Men,Green Goblin,23\nNightWatcher,Watcher,Metropolis,60,Fantastic Four,Thanos,\nFlameBurst,Flame,Central City,93,,Doctor Doom,18\nAquaStrike,Aqua,Star City,83,Teen Titans,Loki,25\nVoltGuardian,Volt,Coast City,87,Defenders,Mystique,\nTerraRider,Terra,Bloodhaven,82,Inhumans,Ultron,\nSpectraFlash,Spectra,Atlantis,72,S.H.I.E.L.D.,Magneto,\nSolarFlare,Solar,Asgard,92,Saber Squad,Darkseid,54\nLunaShade,Luna,Midgard,64,Legion of Super-Heroes,Brainiac,\nIronClad,Iron,Krypton,68,Sentinels of Magic,Dark Specter,44\nFrostBite,Frost,Smallville,99,,Reverse-Flash,17\nWindWalker,Wind,New Genesis,65,Watchmen,Black Adam,\nMysticMage,Mystic,Apokolips,77,,Deathstroke,19\nStarSlinger,Star,Themyscira,65,Alpha Flight,Taskmaster,61\nCosmicKnight,Cosmic,Atlantis,86,Young Avengers,Kingpin,48\nBlazeRunner,Blaze,Wakanda,86,Runaways,Venom,\nCrystalCrest,Crystal,Latveria,77,,Red Skull,67\nNovaSpark,Nova,Genosha,100,Eternals,Killmonger,8\nEclipseHunter,Eclipse,Attilan,56,,Mystique,69\nPhantomEcho,Phantom,Avalon,72,Champions,Apocalypse,61\nShadowMender,Mender,Nanda Parbat,100,A-Force,Sabretooth,\nStormBringer,Storm,Kun Lun,51,Excalibur,Juggernaut,7\nVenomSting,Venom,Xandar,87,,Sandman,\nFirebrand,Fire,Titan,75,X-Factor,Mystique,67\nGlacierGuard,Glacier,Knowhere,71,Thunderbolts,Mysterio,8\nThunderClap,Clap,Sakaar,76,Heroes for Hire,Dark Specter,28\nStarlight,Starlight,Hala,75,New Warriors,Mysterio,\nMoonDancer,Moon,Oa,98,Secret Warriors,Mr. Freeze,72\nTempest,Tempest,Mars,63,,Harley Quinn,51\nAurora,Aurora,Latveria,95,Sentinels of Magic,Poison Ivy,41\nCyclone,Cyclone,Themyscira,51,,Bane,4\nNebula,Nebula,Krypton,64,Watchmen,Dark Specter,43\nInferno,Inferno,Smallville,60,Dark Avengers,Catwoman,43\nBlizzard,Blizzard,Midgard,95,Alpha Flight,Deadshot,10\nTorrent,Torrent,New Genesis,74,Young Avengers,Clayface,\nComet,Comet,Apokolips,80,Runaways,Solomon Grundy,34\nHurricane,Hurricane,Star City,95,Great Lakes Avengers,Man-Bat,16\nSolaris,Solaris,Coast City,85,Eternals,Black Mask,3\nIceBlade,Ice,Bloodhaven,69,Squadron Supreme,Firefly,\nSpecter,Specter,Atlantis,72,Champions,Hush,20\nVortex,Vortex,Wakanda,76,A-Force,Killer Croc,2\nBlaze,Blaze,Latveria,69,Excalibur,Mad Hatter,53\nSeraph,Seraph,Genosha,52,X-Force,Talia al Ghul,27\nShadow,Shadow,Attilan,74,X-Factor,KGBeast,\nTempest,Tempest,Avalon,83,,Anarky,10\nPhantom,Phantom,Nanda Parbat,57,Heroes for Hire,Ventriloquist,13\nShadowBlade,The Shadow,New York,94,New Warriors,Red Skull,\nThunderFist,Thunder,Los Angeles,88,,Mysterio,20\n",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "teacher_markdown": "**Student Takeaways:**\r\n-  Students learn the importance of filtering out rows with null values using notnull() to avoid skewed results when analyzing extremes in the data.\r\n\r\n\r\n**Possible Misconceptions and/or Difficulties:**\r\n- Students might assume that min() and max() automatically handle null values, not realizing that they should filter out nulls first for accurate results.\r\n- There might be confusion about how to apply the notnull() method to multiple columns simultaneously when filtering the DataFrame.\r\n\r\n\r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-15T17:13:36.595+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L10-L4_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L10-L4_2024-pilot\"},{\"changed_at\":\"2024-10-15 17:27:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Pythonlab>

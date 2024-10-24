@@ -8,7 +8,6 @@ import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
 import {RadioButton} from '@cdo/apps/componentLibrary/radioButton';
 import Tags from '@cdo/apps/componentLibrary/tags';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
-import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
@@ -21,7 +20,6 @@ import {
   previewStartSource,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
-import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -94,13 +92,6 @@ const VersionHistoryDropdown: React.FunctionComponent<
       setSelectedVersion(latestVersion);
     }
   }, [versionList, selectedVersion, latestVersion]);
-
-  const resetVersionState = useCallback(() => {
-    dispatch(setViewingOldVersion(false));
-    dispatch(setRestoredOldVersion(false));
-  }, [dispatch]);
-
-  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, resetVersionState);
 
   useEffect(() => {
     if (isOpen && !previousIsOpen.current && selectedVersion !== '') {
@@ -294,6 +285,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
                     },
                   ]}
                   className={moduleStyles.latestTag}
+                  size="s"
                 />
               )}
             </RadioButton>

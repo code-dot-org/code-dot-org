@@ -83,6 +83,10 @@ h1 {
   @include main-font-bold;
   font-size: 32px;
   color: $purple;
+
+  &.text-black {
+    color: $light_black;
+  }
 }
 
 h2 {
@@ -289,6 +293,9 @@ img.video_thumbnail {
     a:hover {
       text-decoration: none;
       background-color: $orange;
+    }
+    &:active {
+      border: 2px solid $white !important;
     }
   }
 
@@ -849,7 +856,7 @@ $small-footer-standard-width: 400px;
       width: 1.625rem;
       box-sizing: border-box;
       border: solid 1px $light_white;
-      background-color: initial;
+      background-color: $light_gray_950;
       color: $light_white;
     }
   }

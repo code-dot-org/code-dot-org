@@ -10,30 +10,43 @@ markdown <<MARKDOWN
 
 ---
 
-## Lesson 8 - Data Cleaning
+## Lesson 9 - Data Cleaning and Analysis Techniques
 
 
-<img src="https://images.code.org/01467ad73fa6fe46843fe7e62d99adb8-image-1724423225270.png" alt="codap logo" width="220px"   style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+<img src="https://images.code.org/01467ad73fa6fe46843fe7e62d99adb8-image-1724423225270.png" alt="codap logo" width="180px"   style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
 
-#### In this lesson, students look at how raw data can be in a format that prevents useful insights from being drawn.
-#### Students practice making the decisions that go into cleaning data and debrief with each other over the challenging parts of that process.
-#### The lesson concludes with a discussion about the tradeoffs inherent in these decisions since they can introduce bias and inaccuracy into a dataset.
+#### In this lesson, students explore how raw data can hinder insights and practice data cleaning decisions. 
+#### They conclude with a discussion on tradeoffs that can introduce bias and inaccuracy.
 
 ### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
 
 <div style="clear:both;"></div>
 
-## Lesson 9 - Data Interpretation 
-<img src="https://images.code.org/ebfa1afbe8f17eae9192bde2b7314eb6-image-1724423378353.png" alt="graph icon" width="220px"  style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+## Lesson 10 - Data Interpretation 
+<img src="https://images.code.org/ebfa1afbe8f17eae9192bde2b7314eb6-image-1724423378353.png" alt="graph icon" width="180px"  style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
 
-#### This lesson delves into how various data visualizations can shape our understanding of the same topic, emphasizing identifying trends, patterns, and outliers. 
-#### Students will analyze individual datasets and create visualizations before participating in a jigsaw activity to merge and discuss insights from different perspectives. 
-#### This collaborative approach enhances their ability to critically assess data and understand the ethical considerations involved in its presentation.
+#### This lesson explores how different data visualizations shape our understanding by highlighting trends, patterns, and outliers. 
+#### Students create visualizations, then collaborate to discuss insights and ethical considerations in data presentation.
 
 ### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
 
+<div style="clear:both;"></div>
+<br>
 
-####Let’s take a look at a cleaning data activity from lesson 8! 
+> #### **Key Concepts:**
+> - #### **bell curve** - a symmetric, bell-shaped curve with most data points clustered around the center
+> - #### **bimodal curve** - shows a distribution with two distinct peaks
+> - #### **data cleaning** - the process of making data useful by deleting doubles or blanks, creating categories, and editing spelling errors
+> - #### **measures of center** - represent the central point or typical value of a data set
+> - #### **shape of distribution** - how data values are spread out and how they form a pattern when visualized on a graph
+> - #### **skewed distribution** - occurs when the data stretches out more on one side than the other
+> - #### **outlier** - a data point that significantly differs from other data points
+> - #### **pattern** - a consistent or recurring sequence that can be observed and predicted
+> - #### **trend** - the general direction in which data points are heading over a period of time
+
+## What's Next?
+
+####Let’s take a look at a cleaning data activity from **Lesson 9!** 
 
 
 MARKDOWN

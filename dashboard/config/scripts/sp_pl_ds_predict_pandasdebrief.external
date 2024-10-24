@@ -12,17 +12,17 @@ markdown <<MARKDOWN
 
 #### While you may not fully understand the code yet, the lists of data separated by commas stands out.
 
-#### **You may have noticed:** 
+### 🔎 **You may have noticed:** 
 
 - ####  The code imports pandas and reads *USGasPrices.csv* into *gas_data*.
 - ####  **'print(gas_data.shape)'** outputs the number of rows and columns.
 
-#### **You might wonder:**
+### 💡 **You might wonder:**
 - ####  Why pandas is shortened to *pd*? 
 - ####  What other functions are in panda?
 
 --- 
-#### Remember, at this stage, the aim isn't for students to master these concepts yet, but rather to encourage them to analyze and discuss the code.
+#### *Remember, at this stage, the aim isn't for students to master these concepts yet, but rather to encourage them to analyze and discuss the code.*
 
 
 MARKDOWN

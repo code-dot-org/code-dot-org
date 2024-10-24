@@ -3,15 +3,13 @@ import {act, renderHook} from '@testing-library/react-hooks';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
 import {
-  CLICK_TO_ADD,
-  NO_SCHOOL_SETTING,
   SCHOOL_COUNTRY_SESSION_KEY,
   SCHOOL_ID_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
   SCHOOL_ZIP_SESSION_KEY,
-  SELECT_A_SCHOOL,
   US_COUNTRY_CODE,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/metrics/AnalyticsReporter');
 jest.mock('@cdo/apps/util/AuthenticityTokenStore');
@@ -95,7 +93,7 @@ describe('useSchoolInfo', () => {
     // sessionStorage state does not have a valid zip code, so no need to await anything
 
     expect(result.current.country).toBe('CA');
-    expect(result.current.schoolId).toBe(SELECT_A_SCHOOL);
+    expect(result.current.schoolId).toBe(NonSchoolOptions.SELECT_A_SCHOOL);
     expect(result.current.schoolName).toBe('Stored School');
     expect(result.current.schoolZip).toBe('');
   });
@@ -110,6 +108,26 @@ describe('useSchoolInfo', () => {
       hook = result;
 
       await waitForNextUpdate(); // Wait for initial render
+    });
+
+    it('should reset school info to initial state if passed', async () => {
+      await act(async () => {
+        hook.current.setSchoolZip('90210');
+      });
+      expect(hook.current.schoolZip).toBe('90210');
+      await act(async () => {
+        hook.current.setSchoolId(NonSchoolOptions.CLICK_TO_ADD);
+        hook.current.setSchoolName('Fake School');
+      });
+      expect(hook.current.schoolId).toBe(NonSchoolOptions.CLICK_TO_ADD);
+      expect(hook.current.schoolName).toBe('Fake School');
+      await act(async () => {
+        hook.current.reset();
+      });
+      expect(hook.current.schoolZip).toBe(initialState.schoolZip);
+      expect(hook.current.schoolName).toBe(initialState.schoolName);
+      expect(hook.current.schoolId).toBe(initialState.schoolId);
+      expect(hook.current.country).toBe(initialState.country);
     });
 
     describe('country updates', () => {
@@ -220,32 +238,32 @@ describe('useSchoolInfo', () => {
           {value: '2', text: 'Other School'},
         ]);
       });
-    });
 
-    it('should send an analytics event', async () => {
-      await act(async () => {
-        hook.current.setSchoolZip('90210');
+      it('should send an analytics event', async () => {
+        await act(async () => {
+          hook.current.setSchoolZip('90210');
+        });
+
+        expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
+          EVENTS.ZIP_CODE_ENTERED,
+          {zip: '90210'},
+          PLATFORMS.BOTH
+        );
       });
 
-      expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
-        EVENTS.ZIP_CODE_ENTERED,
-        {zip: '90210'},
-        PLATFORMS.BOTH
-      );
-    });
+      it('should fetch schools', async () => {
+        await act(async () => {
+          hook.current.setSchoolZip('90210');
+        });
 
-    it('should fetch schools', async () => {
-      await act(async () => {
-        hook.current.setSchoolZip('90210');
+        expect(mockFetch).toHaveBeenCalledTimes(2);
+        expect(mockFetch.mock.calls[0][0]).toEqual(
+          expect.stringMatching(initialState.schoolZip)
+        );
+        expect(mockFetch.mock.calls[1][0]).toEqual(
+          expect.stringMatching('90210')
+        );
       });
-
-      expect(mockFetch).toHaveBeenCalledTimes(2);
-      expect(mockFetch.mock.calls[0][0]).toEqual(
-        expect.stringMatching(initialState.schoolZip)
-      );
-      expect(mockFetch.mock.calls[1][0]).toEqual(
-        expect.stringMatching('90210')
-      );
     });
 
     describe('schoolId updates', () => {
@@ -265,7 +283,7 @@ describe('useSchoolInfo', () => {
 
       it('should send analytics events', () => {
         act(() => {
-          hook.current.setSchoolId(NO_SCHOOL_SETTING);
+          hook.current.setSchoolId(NonSchoolOptions.NO_SCHOOL_SETTING);
         });
 
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
@@ -275,7 +293,7 @@ describe('useSchoolInfo', () => {
         );
 
         act(() => {
-          hook.current.setSchoolId(CLICK_TO_ADD);
+          hook.current.setSchoolId(NonSchoolOptions.CLICK_TO_ADD);
         });
 
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(

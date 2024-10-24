@@ -14,7 +14,7 @@ markdown <<MARKDOWN
     <p>
 
 #### The steps the model takes to explain its answer, showing how it got from the question to the final response, like solving a math problem step by step.
-<img src="https://images.code.org/b47dd24b89e67d4dbb150d1bf6298daf-Screenshot 2024-09-11 at 2.17.19 PM.png" alt="chatbot lab level" width="900px" style="border: 2px solid black; border-radius: 8px; float:center">
+<img src="https://images.code.org/b47dd24b89e67d4dbb150d1bf6298daf-Screenshot 2024-09-11 at 2.17.19 PM.png" alt="chain of reasoning example" width="900px" style="border: 2px solid black; border-radius: 8px; float:center">
 
 <br>
 
@@ -28,7 +28,7 @@ markdown <<MARKDOWN
     <p>
 
 #### Providing specific instances or situations to make the explanation clearer, like saying, "For example, when you..." to help people understand better.
-<img src="https://images.code.org/3432fa7472cb8abd54d4d89209b701fc-Screenshot 2024-09-11 at 2.18.21 PM.png" alt="chatbot lab level" width="900px" style="border: 2px solid black; border-radius: 8px; float:center">
+<img src="https://images.code.org/3432fa7472cb8abd54d4d89209b701fc-Screenshot 2024-09-11 at 2.18.21 PM.png" alt="giving examples example" width="900px" style="border: 2px solid black; border-radius: 8px; float:center">
 
 <br>
 
@@ -40,5 +40,17 @@ markdown <<MARKDOWN
 #### The next level is a **Choice Level** from the curriculum. Choice levels offer a chance to differentiate learning - in this one you'll choose two different scenarios to apply your system prompting skills. 
 
 #### When you're trying out this level, remember the system prompting strategies we've discussed already - **role, tone, audience, and delivery** - as well as **chain of reasoning and giving examples**. Feel free to come back to this level if you get stuck.
+
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🧐 Hint
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+#### You can find teacher answer keys and exemplars as part of each lesson plan. This activity is from <a href="https://docs.google.com/document/d/1-kRr7MLjo4XrJ4wehFq43b5bOSXjqlTabLktbc22LwY/edit" target="blank" rel="noopener noreferrer">Lesson 15</a>.
+</p></div>
+</details>
 
 MARKDOWN

@@ -1,148 +1,106 @@
 @import 'color.scss', 'font.scss', 'breakpoints.scss';
 
-// TODO: clean up these styles once we move to 2024 soon-hoc
 #fullwidth {
   overflow: hidden;
-  background: url('/images/hoc2023-hero-banner.svg') no-repeat center center;
-  background-size: cover;
-
-  &.hoc-2024 {
-    background: none; // this overrides the background image from above
-    background: linear-gradient(110deg, #6977CD -10.82%, #BCDEDE 43.13%, #34DFE5 68.88%, #688AED 95.85%);
-  }
-
-  @media screen and (max-width: $width-sm) {
-    background: url('/images/hoc2023-hero-banner-mobile.svg') no-repeat center center;
-    background-size: cover;
-  }
+  background: linear-gradient(110deg, #6977CD -10.82%, #BCDEDE 43.13%, #34DFE5 68.88%, #688AED 95.85%);
 }
 
 #pageheader {
   background-color: rgba($neutral-white, .9);
 }
 
-// TODO: clean up these styles once we move to 2024 soon-hoc
-section.banner.homepage,
-section.banner {
-
-  .wrapper {
-    @media screen and (max-width: $width-md) {
-      width: 80%;
-    }
-
-    @media screen and (max-width: $width-sm) {
-      padding: 1em 0 4em;
-      width: 88%;
-    }
-  }
-
-  p.hoc-label {
-    color: #00FFF5;
-    font-size: 2.375rem;
-    margin-bottom: 0.5rem;
-
-    @media screen and (max-width: $width-sm) {
-      font-size: 1.875rem;
-    }
-  }
-
-  h1 {
-    font-size: 4rem;
-    margin: 0 auto 0.75rem;
-    color: #00FFF5;
-
-    @media screen and (max-width: $width-md) {
-      font-size: 3.5em;
-    }
-
-    @media screen and (max-width: $width-sm) {
-      font-size: 2.75em;
-      margin-top: 0;
-    }
-  }
-
-  p.hero-desc {
-    color: $neutral_white;
-    font-size: 1.25rem;
-    line-height: 1.3;
-    margin-bottom: 2rem;
-
-    @media screen and (max-width: $width-sm) {
-      font-size: 1.25em;
-    }
-  }
-}
-
+// Homepage banner
 section.banner.homepage {
-  padding: 0;
+  padding-bottom: 4rem;
 
-  .wrapper {
-    max-width: 800px;
-    padding: 2em 0 7em;
+  h2 {
+    font-weight: 400;
+  }
 
-    @media screen and (max-width: $width-sm) {
-      padding: 3em 0 5em;
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  figure {
+    margin: 0 auto 2rem;
+  }
+
+  .show-tablet {
+    display: none;
+  }
+
+  .wrapper.show-desktop {
+    background: url('/images/hoc-2024-graphic-bg.png') no-repeat center center;
+    background-size: contain;
+    max-width: 960px;
+    height: 552px;
+    position: relative;
+
+    html[dir="rtl"] & {
+      background: url('/images/hoc-2024-graphic-bg-rtl.png') no-repeat center center;
+      background-size: contain;
+    }
+
+    .text-wrapper {
+      position: absolute;
+      bottom: 6rem;
+      left: 3rem;
+      text-align: initial;
+      max-width: 390px;
+
+      html[dir="rtl"] & {
+        right: 3rem;
+      }
+
+      h1, h2, p {
+        color: var(--neutral_white);
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .button-wrapper {
+      justify-content: start;
     }
   }
 
-  i {
-    margin: 0 4px;
-  }
-
-  h3 {
-    margin-top: 0;
-  }
-
-  .side-by-side-cta-wrapper {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem;
-
-    .flex-container {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      gap: 1rem;
-
-      &:first-child {
-        border-bottom: 1px solid var(--neutral_dark60);
-        padding: 0 0 2rem 0;
-
-        @media (min-width: $width-sm) {
-          &:first-child {
-            border-bottom: 0;
-            border-right: 1px solid var(--neutral_dark60);
-            padding: 0 2rem 0 0;
-
-            html[dir="rtl"] & {
-              border-right: 0;
-              border-left: 1px solid var(--neutral_dark60);
-              padding: 0 0 0 2rem;
-            }
-          }
-        }
-      }
-
-      a.link-button {
-        text-decoration: none;
-
-        &.secondary {
-          background-color: #121212;
-        }
-      }
+  @media (max-width: 1023px) {
+    .show-tablet {
+      display: block;
     }
+
+    .show-desktop {
+      display: none;
+    }
+  }
+
+  .overlay {
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 45%, rgba(255,255,255,0) 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
   }
 }
 
-// 2024 soon-hoc hero banner styles
-section.banner.homepage.hoc-2024 {
+section.banner {
+  padding: 2rem 0 6rem;
+  position: relative;
 
   .wrapper {
+    position: relative;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    z-index: 1;
+
+    @media screen and (max-width: $width-md) {
+      width: 80%;
+    }
   }
 
   h1, p {
@@ -151,10 +109,11 @@ section.banner.homepage.hoc-2024 {
 
   h1 {
     font-size: 3rem;
+    margin-block: 0 1rem;
   }
 
-  a.link-button {
-    text-decoration: none;
+  p {
+    margin-bottom: 0;
   }
 
   figure {
@@ -164,54 +123,8 @@ section.banner.homepage.hoc-2024 {
       width: 100%;
     }
   }
-}
 
-section.banner {
-  text-align: center;
-  color: $neutral-white;
-
-  .wrapper {
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 2em 0 7em;
-
-    // 2024 soon-hoc hero banner styles
-    &.hoc-2024 {
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-      padding-block-end: 5rem;
-
-      h1, p, p > a {
-        color: var(--neutral_dark);
-      }
-
-      h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-      }
-
-      figure {
-        max-width: 344px;
-
-        img {
-          width: 100%;
-        }
-      }
-    }
-  }
-
-  a {
-    color: $neutral-white;
-    text-decoration: underline;
-    @include main-font-semi-bold;
-
-    &.ctabuttonatag {
-      text-decoration: none;
-    }
-  }
-
-  p:last-child {
-    margin-bottom: 0;
+  .button-wrapper {
+    justify-content: center;
   }
 }

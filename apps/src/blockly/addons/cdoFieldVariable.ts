@@ -1,13 +1,8 @@
-import GoogleBlockly, {
-  FieldDropdown,
-  FieldVariable,
-  Menu,
-  MenuItem,
-  MenuOption,
-  VariableModel,
-} from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 
 import {commonI18n} from '@cdo/apps/types/locale';
+
+import {getNonFunctionVariableIds} from './cdoVariables';
 
 const RENAME_THIS_ID = 'RENAME_THIS_ID';
 const RENAME_ALL_ID = 'RENAME_ALL_ID';
@@ -27,7 +22,7 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
    * @param {!Blockly.MenuItem} menuItem The MenuItem selected within menu.
    * @protected
    */
-  onItemSelected_(menu: Menu, menuItem: MenuItem) {
+  onItemSelected_(menu: GoogleBlockly.Menu, menuItem: GoogleBlockly.MenuItem) {
     const oldVar = this.getText();
     const id = menuItem.getValue();
     if (this.sourceBlock_ && this.sourceBlock_.workspace) {
@@ -41,7 +36,7 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
             callback: newName =>
               this.sourceBlock_?.workspace.renameVariableById(
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                ((this as any).variable as VariableModel).getId(),
+                ((this as any).variable as GoogleBlockly.VariableModel).getId(),
                 newName
               ),
           });
@@ -105,21 +100,36 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
     (this as any).arrow = arrow;
   }
 
-  menuGenerator_ = function (this: FieldDropdown): MenuOption[] {
-    const options = CdoFieldVariable.dropdownCreate.call(this as FieldVariable);
+  menuGenerator_ = function (
+    this: GoogleBlockly.FieldDropdown
+  ): GoogleBlockly.MenuOption[] {
+    const options = CdoFieldVariable.dropdownCreate.call(
+      this as GoogleBlockly.FieldVariable
+    );
 
     // Remove the last two options (Delete and Rename)
     options.pop();
     options.pop();
 
+    const filteredOptions = options.filter(option => {
+      const workspace = this.getSourceBlock()?.workspace;
+      if (!workspace) {
+        return true;
+      }
+
+      const nonParamVarIds = getNonFunctionVariableIds(workspace);
+      const optionValue = option[1] as string;
+      return nonParamVarIds.includes(optionValue);
+    });
+
     // Add our custom options (Rename this variable, Rename all)
-    options.push([
+    filteredOptions.push([
       commonI18n.renameAll({variableName: this.getText()}),
       RENAME_ALL_ID,
     ]);
-    options.push([commonI18n.renameThis(), RENAME_THIS_ID]);
+    filteredOptions.push([commonI18n.renameThis(), RENAME_THIS_ID]);
 
-    return options;
+    return filteredOptions;
   };
 
   /**

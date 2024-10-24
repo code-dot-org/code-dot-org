@@ -3,6 +3,31 @@ import PropTypes from 'prop-types';
 
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
+/**
+ * @const {string[]} The only properties that can be updated by the user
+ * when creating or editing a section.
+ */
+export const USER_EDITABLE_SECTION_PROPS = [
+  'name',
+  'loginType',
+  'lessonExtras',
+  'pairingAllowed',
+  'ttsAutoplayEnabled',
+  'participantType',
+  'courseId',
+  'courseOfferingId',
+  'courseVersionId',
+  'unitId',
+  'grades',
+  'hidden',
+  'restrictSection',
+  'codeReviewExpiresAt',
+  'aiTutorEnabled',
+];
+
+/** @const {number} ID for a new section that has not been saved */
+const PENDING_NEW_SECTION_ID = -1;
+
 // Helpers and Selectors
 
 export function getRoot(state) {
@@ -41,7 +66,7 @@ export function sectionUnitName(state, sectionId) {
   return (getRoot(state).sections[sectionId] || {}).courseVersionName;
 }
 
-export function selectedSection(state) {
+export function selectedSectionSelector(state) {
   const selectedSectionId = getRoot(state).selectedSectionId;
   if (selectedSectionId) {
     return getRoot(state).sections[selectedSectionId];
@@ -123,6 +148,8 @@ export const sectionFromServerSection = serverSection => ({
   id: serverSection.id,
   name: serverSection.name,
   courseVersionName: serverSection.courseVersionName,
+  unitName: serverSection.unitName,
+  isAssignedStandaloneCourse: serverSection.isAssignedStandaloneCourse,
   createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
   loginTypeName: serverSection.login_type_name,
@@ -191,6 +218,33 @@ export function serverSectionFromSection(section) {
     restrict_section: section.restrictSection,
     participant_type: section.participantType,
     ai_tutor_enabled: section.aiTutorEnabled,
+  };
+}
+
+export function newSectionData(participantType) {
+  return {
+    id: PENDING_NEW_SECTION_ID,
+    name: '',
+    loginType: undefined,
+    grades: [''],
+    providerManaged: false,
+    lessonExtras: true,
+    pairingAllowed: true,
+    ttsAutoplayEnabled: false,
+    sharingDisabled: false,
+    studentCount: 0,
+    participantType: participantType,
+    code: '',
+    courseId: null,
+    courseOfferingId: null,
+    courseVersionId: null,
+    courseDisplayName: null,
+    unitId: null,
+    unitName: null,
+    isAssignedStandaloneCourse: false,
+    hidden: false,
+    restrictSection: false,
+    aiTutorEnabled: false,
   };
 }
 

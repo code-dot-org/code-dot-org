@@ -60,10 +60,11 @@ module Services
       )
     end
 
-    def self.create_lti_deployment(integration_id, deployment_id)
+    def self.create_lti_deployment(integration_id, deployment_id, deployment_name)
       LtiDeployment.create(
         lti_integration_id: integration_id,
         deployment_id: deployment_id,
+        name: deployment_name,
       )
     end
 
@@ -101,6 +102,7 @@ module Services
 
       user = ::User.new
       user.provider = ::User::PROVIDER_MIGRATED
+      user.roster_synced = true
       user.name = get_claim_from_list(nrps_member_message, Policies::Lti::STUDENT_NAME_KEYS)
 
       if account_type == ::User::TYPE_TEACHER && email_address.present?

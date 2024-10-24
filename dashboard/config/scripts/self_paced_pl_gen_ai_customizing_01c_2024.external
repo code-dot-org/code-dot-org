@@ -1,0 +1,33 @@
+name 'self-paced-pl-gen-ai-customizing_01c_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lessons 1: Interacting with Language Models
+
+#### The levels you've been working through come from the first lesson in the Customizing Large Language Models Unit. Click the box below to check-out the lesson plan.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 1: Interacting with Language Models</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/149093b1652486ce6fce5cff1dbcd1fe-Screenshot 2024-10-07 at 12.49.53 PM.png" alt="example chat with AI chatlab" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** How can you continue to improve AI agents once they’ve been created?
+
+#### **Lesson Overview:**
+
+#### In this lesson, students are presented an overview of the unit and explore the chatbot lab for the first time. Students begin by exploring a chatbot, using a model card to guide their understanding of its capabilities and limitations. Next they learn about the temperature setting in chatbots and how it influences the creativity and reliability of responses. Through hands-on experimentation, students will adjust the temperature to see its effect on the chatbot's answers. Finally, students explore how chatbots can hallucinate to produce incorrect or misleading information. Throughout the unit, students will monitor and document these instances, enhancing their critical awareness of AI's limitations.
+
+#### **Students will be able to:**
+* #### Explain how temperature settings influence the creativity and reliability of chatbot responses
+* #### Identify and explain hallucinations in chatbot responses
+
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/12" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+## Up Next!
+
+#### Learn about **System Prompting** and how we can start to customize large language models.
+MARKDOWN

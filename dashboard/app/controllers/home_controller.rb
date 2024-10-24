@@ -114,9 +114,6 @@ class HomeController < ApplicationController
     current_user_permissions = UserPermission.where(user_id: current_user.id).pluck(:permission)
     @homepage_data[:showStudentAsVerifiedTeacherWarning] = current_user.student? && current_user_permissions.include?(UserPermission::AUTHORIZED_TEACHER)
 
-    # DCDO Flag - show/hide Lock Section field - Can/Will be overwritten by DCDO.
-    @homepage_data[:showLockSectionField] = DCDO.get('show_lock_section_field', true)
-
     @force_race_interstitial = params[:forceRaceInterstitial]
     @force_school_info_confirmation_dialog = params[:forceSchoolInfoConfirmationDialog]
     @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
@@ -201,6 +198,13 @@ class HomeController < ApplicationController
 
         @homepage_data[:censusQuestion] = school_stats.try(:has_high_school_grades?) ? "how_many_20_hours" : "how_many_10_hours"
         @homepage_data[:currentSchoolYear] = current_census_year
+        @homepage_data[:existingSchoolInfo] = {
+          id: teachers_school.id,
+          name: teachers_school.name,
+          country: 'US',
+          zip: teachers_school.zip,
+          type: teachers_school.school_type,
+        }
         @homepage_data[:ncesSchoolId] = teachers_school.id
         @homepage_data[:teacherName] = current_user.name
         @homepage_data[:teacherId] = current_user.id

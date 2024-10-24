@@ -18,37 +18,26 @@ layout: wide_index
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
 
 #top
-  #fullwidth{class: hoc_mode == "soon-hoc" ? 'hoc-2024' : nil}
+  #fullwidth
     = view :header
-    -# Show 2024 HOC banner if hoc_mode is "soon-hoc", otherwise show 2023 banner
-    - if hoc_mode == "soon-hoc"
-      %section.banner.homepage.hoc-2024
-        .wrapper.flex-container
-          %figure
-            %img{src: "/images/hoc-2024-graphic.png", alt: ""}
-          .text-wrapper
-            %h1=hoc_s("hoc_2024.header")
-            %p.body-one
-              =hoc_s("hoc_2024.banner.desc.join_millions")
-          %a.link-button.black{href: resolve_url("/events")}
-            =hoc_s("hoc_2024.button_host_an_event")
-    - else
-      %section.banner.homepage
-        .wrapper
-          %p.hoc-label
-            =hoc_s(:hour_of_code)
-          %h1=hoc_s(:hoc2023_header)
-          %p.hero-desc
-            =hoc_s(:hoc2023_hero_desc_homepage)
-          = view :hoc2023_hero_banner_ctas
+    %section.banner.homepage
+      .wrapper.show-desktop
+        .text-wrapper
+          = view :hoc_2024_homepage_hero_text, button_color: "white"
+      .wrapper.show-tablet.flex-container
+        %figure
+          %img{src: "/images/hoc-2024-graphic.png", alt: ""}
+        .text-wrapper
+          = view :hoc_2024_homepage_hero_text, button_color: "black"
+      .overlay
 
 %main
   -# What is HoC?
-  %section.bg-neutral-light
+  %section
     .wrapper
       %h2.no-margin-top.centered
         =hoc_s("hoc_homepage.what_is_hoc.heading")
-      %p.centered.body-two.wrap-balance
+      %p.centered.body-two.wrap-balance.no-margin-bottom
         =hoc_s("hoc_homepage.what_is_hoc.desc")
       -# Spanish video and banner
       - if ['es', 'la', 'pt', 'po'].include?(@language)
@@ -65,6 +54,8 @@ layout: wide_index
                   = hoc_s(:hoc_live_learn_message)
                 %a.link-button{href: 'https://code.org/envivo'}
                   = hoc_s(:hoc_live_learn_more)
+
+  = view :section_divider_line
 
   -# Host an Hour of Code
   %section.no-padding-bottom
@@ -100,7 +91,7 @@ layout: wide_index
   -# Stats
   %section.stats.bg-neutral-dark
     .wrapper.centered
-      %h2.white
+      %h2.white.no-margin-top
         =hoc_s("hoc_homepage.global.heading")
       %p.body-two.no-margin-bottom.white
         =hoc_s("hoc_homepage.global.desc")

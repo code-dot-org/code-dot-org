@@ -1,9 +1,8 @@
 import {
-  NO_SCHOOL_SETTING,
-  NON_SCHOOL_OPTIONS_ARRAY,
   SELECT_COUNTRY,
   US_COUNTRY_CODE,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 import {SchoolInfoRequest} from '../types';
 
@@ -23,7 +22,7 @@ export function buildSchoolData({
   if (
     country === US_COUNTRY_CODE &&
     schoolId &&
-    !NON_SCHOOL_OPTIONS_ARRAY.includes(schoolId)
+    !Object.values(NonSchoolOptions).some(option => schoolId === option)
   ) {
     return {
       user: {
@@ -34,12 +33,16 @@ export function buildSchoolData({
     };
   }
 
-  if (country === US_COUNTRY_CODE && schoolId === NO_SCHOOL_SETTING) {
+  if (
+    country === US_COUNTRY_CODE &&
+    schoolId === NonSchoolOptions.NO_SCHOOL_SETTING
+  ) {
     return {
       user: {
         school_info_attributes: {
           country,
-          school_type: NO_SCHOOL_SETTING,
+          school_type: NonSchoolOptions.NO_SCHOOL_SETTING,
+          zip: schoolZip,
         },
       },
     };
@@ -51,6 +54,7 @@ export function buildSchoolData({
         school_info_attributes: {
           country,
           school_name: schoolName,
+          zip: country === US_COUNTRY_CODE ? schoolZip : undefined,
         },
       },
     };

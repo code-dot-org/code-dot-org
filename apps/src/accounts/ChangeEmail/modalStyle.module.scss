@@ -1,0 +1,18 @@
+.container {
+  margin: 1.25rem;
+
+  .buttonContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hasError {
+    margin: 1rem 0;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}

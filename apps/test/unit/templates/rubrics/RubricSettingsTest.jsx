@@ -1,9 +1,6 @@
-import {screen} from '@testing-library/dom';
-import {render, fireEvent, act} from '@testing-library/react';
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {render, screen, fireEvent, act} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import * as utils from '@cdo/apps/code-studio/utils';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
@@ -18,17 +15,50 @@ import {
 import currentUser, {
   setAiRubricsDisabled,
 } from '@cdo/apps/templates/currentUserRedux';
+import {RowType} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import RubricSettings from '@cdo/apps/templates/rubrics/RubricSettings';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import teacherSections, {
+  selectSection,
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+const fakeStudent = {
+  id: 1,
+  name: 'Clark Kent',
+  username: 'clark_kent',
+  sectionId: 101,
+  hasEverSignedIn: true,
+  dependsOnThisSectionForLogin: true,
+  loginType: 'picture',
+  rowType: RowType.STUDENT,
+};
+const fakeStudents = {
+  [fakeStudent.id]: fakeStudent,
+};
+const fakeSection = {
+  id: 101,
+  location: '/v2/sections/101',
+  name: 'My Section',
+  login_type: 'picture',
+  participant_type: 'student',
+  grade: '2',
+  code: 'PMTKVH',
+  lesson_extras: false,
+  pairing_allowed: true,
+  sharing_disabled: false,
+  script: null,
+  course_id: 29,
+  studentCount: 10,
+  students: Object.values(fakeStudents),
+  hidden: false,
+};
 
 describe('RubricSettings', () => {
-  let clock;
   let fetchStub;
   let store;
   let refreshAiEvaluationsSpy;
+  let sendEventSpy;
 
   async function wait() {
     for (let _ = 0; _ < 10; _++) {
@@ -38,35 +68,36 @@ describe('RubricSettings', () => {
     }
   }
 
-  function stubFetchEvalStatusForAll(data) {
-    fetchStub
-      .withArgs(sinon.match(/rubrics\/\d+\/ai_evaluation_status_for_all.*/))
-      .returns(Promise.resolve(new Response(JSON.stringify(data))));
-  }
-
-  function stubFetchTeacherEvaluations(data) {
-    return fetchStub
-      .withArgs(sinon.match(/rubrics\/\d+\/get_teacher_evaluations_for_all.*/))
-      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+  function stubFetch(evalStatus = {}) {
+    fetchStub = jest.spyOn(window, 'fetch').mockImplementation(url => {
+      if (/rubrics\/\d+\/ai_evaluation_status_for_all.*/.test(url)) {
+        return Promise.resolve(new Response(JSON.stringify(evalStatus)));
+      }
+      return Promise.resolve(new Response(JSON.stringify({})));
+    });
   }
 
   beforeEach(() => {
-    fetchStub = sinon.stub(window, 'fetch');
-    fetchStub.returns(Promise.resolve(new Response(JSON.stringify(''))));
-    refreshAiEvaluationsSpy = sinon.spy();
-    sinon.stub(utils, 'queryParams').withArgs('section_id').returns('1');
+    fetchStub = jest.spyOn(window, 'fetch');
+    stubFetch();
+    sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
+    refreshAiEvaluationsSpy = jest.fn();
+    jest.spyOn(utils, 'queryParams').mockImplementation(arg => {
+      if (arg === 'section_id') {
+        return '1';
+      }
+    });
     stubRedux();
     registerReducers({teacherSections, currentUser});
     store = getStore();
+    store.dispatch(setSections([fakeSection]));
+    store.dispatch(selectSection(fakeSection.id));
   });
 
   afterEach(() => {
-    if (clock) {
-      clock.restore();
-    }
+    jest.useRealTimers();
     restoreRedux();
-    utils.queryParams.restore();
-    fetchStub.restore();
+    jest.restoreAllMocks();
   });
 
   const defaultRubric = {
@@ -144,287 +175,127 @@ describe('RubricSettings', () => {
   };
 
   it('displays Section selector', () => {
-    stubFetchEvalStatusForAll(ready);
-    stubFetchTeacherEvaluations(evals);
-
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricSettings
           visible
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
+          allTeacherEvaluationData={evals}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
 
-    expect(wrapper.find('SectionSelector').length).to.equal(1);
+    // section selector is visible
+    screen.getByText(fakeSection.name);
   });
 
   it('allows teacher to run AI assessment for all students when AI status is ready', async () => {
-    stubFetchEvalStatusForAll(ready);
-    stubFetchTeacherEvaluations(evals);
-
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricSettings
           visible
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
+          allTeacherEvaluationData={evals}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
 
-    // Perform fetches
     await wait();
 
-    wrapper.update();
-    expect(wrapper.find('Button').first().props().disabled).to.be.false;
+    const button = screen.getByRole('button', {
+      name: i18n.runAiAssessmentClass(),
+    });
+    expect(button).not.toBeDisabled();
   });
 
   it('disables run AI assessment for all button when no students have attempted', async () => {
-    stubFetchEvalStatusForAll(noAttempts);
-    stubFetchTeacherEvaluations(evals);
-
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricSettings
           visible
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
+          allTeacherEvaluationData={evals}
+          aiEvalStatusCounters={noAttempts}
         />
       </Provider>
     );
-
-    // Perform fetches and re-render
-    await wait();
-    wrapper.update();
-
-    expect(wrapper.find('Button').first().props().disabled).to.be.true;
+    const button = screen.getByRole('button', {
+      name: i18n.runAiAssessmentClass(),
+    });
+    expect(button).toBeDisabled();
   });
 
   it('disables run AI assessment for all button when all student work has been evaluated', async () => {
-    stubFetchEvalStatusForAll(noUnevaluated);
-    stubFetchTeacherEvaluations(evals);
-
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricSettings
           visible
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
+          allTeacherEvaluationData={evals}
+          aiEvalStatusCounters={noUnevaluated}
         />
       </Provider>
     );
 
     // Perform fetches and re-render
     await wait();
-    wrapper.update();
 
-    expect(wrapper.find('Button').first().props().disabled).to.be.true;
+    const button = screen.getByRole('button', {
+      name: i18n.runAiAssessmentClass(),
+    });
+    expect(button).toBeDisabled();
   });
 
   it('shows pending status when eval is pending', async () => {
     // show ready state on initial load
-
-    stubFetchEvalStatusForAll(ready);
-    stubFetchTeacherEvaluations(evals);
-
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricSettings
           visible
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
+          allTeacherEvaluationData={evals}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
 
     // Perform fetches and re-render
     await wait();
-    wrapper.update();
 
-    let status = wrapper.find('BodyTwoText.uitest-eval-status-all-text');
-    expect(status.text()).to.include(
-      i18n.aiEvaluationStatusAll_ready({unevaluatedCount: 1})
-    );
-    expect(wrapper.find('Button').first().props().disabled).to.be.false;
+    screen.getByText(i18n.aiEvaluationStatusAll_ready({unevaluatedCount: 1}));
+    let button = screen.getByRole('button', {
+      name: i18n.runAiAssessmentClass(),
+    });
+    expect(button).not.toBeDisabled();
 
     // show pending state after clicking run
 
-    stubFetchEvalStatusForAll(onePending);
+    stubFetch(onePending);
 
-    wrapper.find('button.uitest-run-ai-assessment-all').simulate('click');
+    fireEvent.click(button);
 
-    status = wrapper.find('BodyTwoText.uitest-eval-status-all-text');
-    expect(status.text()).to.include(i18n.aiEvaluationStatus_pending());
+    screen.getByText(i18n.aiEvaluationStatus_pending());
 
-    expect(wrapper.find('Button').first().props().disabled).to.be.true;
+    button = screen.getByRole('button', {
+      name: i18n.runAiAssessmentClass(),
+    });
+    expect(button).toBeDisabled();
   });
 
   it('runs AI assessment for all unevaluated projects when requested by teacher', async () => {
-    stubFetchEvalStatusForAll(ready);
-    stubFetchTeacherEvaluations(evals);
-    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
-
-    clock = sinon.useFakeTimers();
-
-    const wrapper = mount(
-      <Provider store={store}>
-        <RubricSettings
-          visible
-          refreshAiEvaluations={refreshAiEvaluationsSpy}
-          rubric={defaultRubric}
-          sectionId={1}
-        />
-      </Provider>
-    );
-
-    // Perform fetches and re-renders
-    await wait();
-    wrapper.update();
-
-    // Next time it asks, we have no unevaluated as a status
-    stubFetchEvalStatusForAll(noUnevaluated);
-
-    wrapper.find('Button').first().simulate('click');
-
-    //sends event on click
-    expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.TA_RUBRIC_SECTION_AI_EVAL,
-      {
-        rubricId: defaultRubric.id,
-        sectionId: 1,
-      }
-    );
-
-    // Perform fetches and re-renders
-    await wait();
-    wrapper.update();
-
-    expect(wrapper.find('Button').first().props().disabled).to.be.true;
-    expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_pending());
-
-    // Advance clock 5 seconds
-    clock.tick(5000);
-
-    // Perform fetches and re-renders
-    await wait();
-    wrapper.update();
-    expect(fetchStub).to.have.callCount(4);
-    expect(wrapper.find('Button').first().props().disabled).to.be.true;
-    expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_success());
-    sendEventSpy.restore();
-  });
-
-  it('displays switch tab text and button when there are no evaluations', async () => {
-    fetchStub
-      .onCall(0)
-      .returns(Promise.resolve(new Response(JSON.stringify(noEvals))));
-    fetchStub
-      .onCall(1)
-      .returns(Promise.resolve(new Response(JSON.stringify(noEvals))));
-    const wrapper = mount(
-      <Provider store={store}>
-        <RubricSettings
-          visible
-          refreshAiEvaluations={refreshAiEvaluationsSpy}
-          rubric={defaultRubric}
-          sectionId={1}
-        />
-      </Provider>
-    );
-    await wait();
-    wrapper.update();
-    //fetch for get_teacher_evaluations_all is the 2nd fetch
-    await wait();
-    wrapper.update();
-    expect(wrapper.text()).to.include(i18n.rubricNoStudentEvals());
-    expect(wrapper.find('Button').at(1).text()).to.include(
-      i18n.rubricTabStudent()
-    );
-  });
-
-  it('displays generate CSV button when there are evaluations to export', async () => {
-    fetchStub
-      .onCall(0)
-      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
-    fetchStub
-      .onCall(1)
-      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
-    const wrapper = mount(
-      <Provider store={store}>
-        <RubricSettings
-          visible
-          refreshAiEvaluations={refreshAiEvaluationsSpy}
-          rubric={defaultRubric}
-          sectionId={1}
-        />
-      </Provider>
-    );
-    await wait();
-    wrapper.update();
-    //fetch for get_teacher_evaluations_all is the 2nd fetch
-    await wait();
-    wrapper.update();
-    expect(wrapper.text()).to.include(
-      i18n.rubricNumberStudentEvals({
-        teacherEvalCount: 2,
-      })
-    );
-    expect(wrapper.find('Button').at(1).text()).to.include(i18n.downloadCSV());
-  });
-
-  it('sends event when download CSV is clicked', async () => {
-    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
-    fetchStub
-      .onCall(0)
-      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
-    fetchStub
-      .onCall(1)
-      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
-    const wrapper = mount(
-      <Provider store={store}>
-        <RubricSettings
-          visible
-          refreshAiEvaluations={refreshAiEvaluationsSpy}
-          rubric={defaultRubric}
-          reportingData={reportingData}
-          sectionId={1}
-        />
-      </Provider>
-    );
-    await wait();
-    wrapper.update();
-    //fetch for get_teacher_evaluations_all is the 2nd fetch
-    await wait();
-    wrapper.update();
-    expect(wrapper.text()).to.include(
-      i18n.rubricNumberStudentEvals({
-        teacherEvalCount: 2,
-      })
-    );
-    expect(wrapper.find('Button').at(1).text()).to.include(i18n.downloadCSV());
-    wrapper.find('Button').at(1).simulate('click');
-    expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.TA_RUBRIC_CSV_DOWNLOADED,
-      {
-        unitName: 'test-2023',
-        courseName: 'course-2023',
-        levelName: 'Test Blah Blah Blah',
-        sectionId: 1,
-      }
-    );
-    sendEventSpy.restore();
-  });
-
-  it('displays the AI enable toggle', () => {
-    stubFetchEvalStatusForAll(ready);
-    stubFetchTeacherEvaluations(evals);
+    jest.useFakeTimers();
 
     render(
       <Provider store={store}>
@@ -433,18 +304,148 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
+          allTeacherEvaluationData={evals}
+          aiEvalStatusCounters={ready}
+          setAiEvalStatusMap={jest.fn()}
+        />
+      </Provider>
+    );
+
+    // Perform fetches and re-renders
+    await wait();
+
+    // Next time it asks, we have no unevaluated as a status
+    stubFetch(noUnevaluated);
+
+    const button = screen.getByRole('button', {
+      name: i18n.runAiAssessmentClass(),
+    });
+    fireEvent.click(button);
+
+    //sends event on click
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.TA_RUBRIC_SECTION_AI_EVAL,
+      {
+        rubricId: defaultRubric.id,
+        sectionId: 1,
+      },
+      'Both'
+    );
+
+    // Perform fetches and re-renders
+    await wait();
+
+    expect(
+      screen.getByRole('button', {name: i18n.runAiAssessmentClass()})
+    ).toBeDisabled();
+    screen.getByText(i18n.aiEvaluationStatus_pending());
+
+    // Advance clock 5 seconds
+    jest.advanceTimersByTime(5000);
+
+    // Perform fetches and re-renders
+    await wait();
+
+    expect(fetchStub).toHaveBeenCalledTimes(2);
+    expect(
+      screen.getByRole('button', {name: i18n.runAiAssessmentClass()})
+    ).toBeDisabled();
+    screen.getByText(i18n.aiEvaluationStatus_success());
+  });
+
+  it('displays switch tab text and button when there are no evaluations', async () => {
+    render(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+          allTeacherEvaluationData={noEvals}
+          aiEvalStatusCounters={ready}
+        />
+      </Provider>
+    );
+    await wait();
+
+    //fetch for get_teacher_evaluations_all is the 2nd fetch
+    await wait();
+
+    screen.getByText(i18n.rubricNoStudentEvals());
+    screen.getByRole('button', {name: i18n.rubricTabStudent()});
+  });
+
+  it('displays generate CSV button when there are evaluations to export', async () => {
+    render(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+          allTeacherEvaluationData={evals}
+          aiEvalStatusCounters={ready}
+        />
+      </Provider>
+    );
+    await wait();
+
+    //fetch for get_teacher_evaluations_all is the 2nd fetch
+    await wait();
+
+    screen.getByText(i18n.rubricNumberStudentEvals({teacherEvalCount: 2}));
+    screen.getByRole('button', {name: i18n.downloadCSV()});
+  });
+
+  it('sends event when download CSV is clicked', async () => {
+    render(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          reportingData={reportingData}
+          sectionId={1}
+          allTeacherEvaluationData={evals}
+          aiEvalStatusCounters={ready}
+        />
+      </Provider>
+    );
+    await wait();
+
+    //fetch for get_teacher_evaluations_all is the 2nd fetch
+    await wait();
+
+    screen.getByText(i18n.rubricNumberStudentEvals({teacherEvalCount: 2}));
+    const button = screen.getByRole('button', {name: i18n.downloadCSV()});
+    fireEvent.click(button);
+    expect(sendEventSpy).toHaveBeenCalledWith(EVENTS.TA_RUBRIC_CSV_DOWNLOADED, {
+      unitName: 'test-2023',
+      courseName: 'course-2023',
+      levelName: 'Test Blah Blah Blah',
+      sectionId: 1,
+    });
+  });
+
+  it('displays the AI enable toggle', () => {
+    render(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+          allTeacherEvaluationData={evals}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
 
     const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
-    expect(input.checked).to.be.true;
+    expect(input.checked).toBe(true);
   });
 
   it('ensures the AI enable toggle represents the current value of the AI disabled user setting', () => {
-    stubFetchEvalStatusForAll(ready);
-    stubFetchTeacherEvaluations(evals);
-
     // Set the user's opt-out setting to true (our setting will now be false)
     store.dispatch(setAiRubricsDisabled(true));
 
@@ -455,18 +456,17 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
+          allTeacherEvaluationData={evals}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
 
     const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
-    expect(input.checked).to.be.false;
+    expect(input.checked).toBe(false);
   });
 
   it('updates the AI disabled user setting when the toggle is used', async () => {
-    stubFetchEvalStatusForAll(ready);
-    stubFetchTeacherEvaluations(evals);
-
     render(
       <Provider store={store}>
         <RubricSettings
@@ -474,12 +474,14 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
+          allTeacherEvaluationData={evals}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
 
     // Let's stub out setting the field via UserPreferences
-    const setStub = sinon.stub(
+    const setStub = jest.spyOn(
       UserPreferences.prototype,
       'setAiRubricsDisabled'
     );
@@ -488,8 +490,7 @@ describe('RubricSettings', () => {
     fireEvent.click(input);
     fireEvent.change(input);
 
-    expect(input.checked).to.be.false;
-    expect(setStub).to.have.been.calledWith(true);
-    setStub.restore();
+    expect(input.checked).toBe(false);
+    expect(setStub).toHaveBeenCalledWith(true);
   });
 });

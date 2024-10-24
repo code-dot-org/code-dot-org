@@ -1,0 +1,43 @@
+name 'self-paced-pl-ai-districts-classroom_06_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Congratulations, you are finished! 
+
+<img src="https://images.code.org/2df93307f477af0f75dc1c179d9a9a4c-image-1707852636486.30.31 AM.png" alt="Dance party chaacters celebrating" style="float: left; height: 350px; clear: both; margin: 0 20px 20px 0;">
+
+<div style="clear:both"/>
+
+## Next Steps
+
+### **Revisit This Content**
+
+#### You can return to <a href="studio.code.org/s/self-paced-pl-ai-districts-2024" target="blank" rel="noopener noreferrer" >this professional learning</a> at anytime to review your learning, access links or resources, or just refresh your memory!
+
+### **Learn More About AI**
+
+#### Check out <a href="studio.code.org/courses/self-paced-pl-ai-101-2024" target="_blank">AI 101 Self Paced Professional Learning for Educators</a>. You or your teachers can complete this five-hour Self-Paced Professional Learning.
+
+### **Check Out TeachAI**
+
+#### <a href="https://www.teachai.org/toolkit-principles" target="_blank">TeachAI</a> is all about bringing together education leaders and technology experts to guide the safe, effective, and responsible use of AI in schools  by connecting the discussion of teaching with AI to teaching about AI.
+
+### **Stay Connected** 
+
+* #### Continue participating in the <a href="https://forum.code.org/" target="blank" rel="noopener noreferrer">Code.org forum</a>. 
+
+* #### Connect with <a href="http://twitter.com/teachcode" target="blank" rel="noopener noreferrer">@teachcode</a> on Twitter.
+
+* #### Explore opportunities with the <a href="https://code.org/afe" target="blank" rel="noopener noreferrer">Amazon Future Engineer program</a>. 
+
+* #### Join the <a href="https://www.csteachers.org/" target="blank" rel="noopener noreferrer">Computer Science Teachers Association (CSTA)</a>. 
+
+## Take the Post-survey
+
+#### Code.org values and is responsive to feedback. Please fill out this short survey to tell us what you thought of this module.
+
+<a class="btn btn-large btn-primary" href="https://studio.code.org/form/ai_101_selfpaced_pl_postsurvey" target="blank" rel="noopener noreferrer">Take the Post-survey</a>
+
+## Thank you for learning with us!
+MARKDOWN

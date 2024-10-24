@@ -18,7 +18,6 @@ import {
   setAuthProviders,
   setPageType,
   beginCreatingSection,
-  setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
@@ -39,9 +38,6 @@ function showHomepage() {
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
   store.dispatch(setPageType(pageTypes.homepage));
   store.dispatch(setLocaleCode(homepageData.localeCode));
-
-  // DCDO Flag - show/hide Lock Section field
-  store.dispatch(setShowLockSectionField(homepageData.showLockSectionField));
 
   if (homepageData.mapboxAccessToken) {
     store.dispatch(setMapboxAccessToken(homepageData.mapboxAccessToken));
@@ -104,7 +100,7 @@ function showHomepage() {
             topPlCourse={homepageData.topPlCourse}
             queryStringOpen={query['open']}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
-            ncesSchoolId={homepageData.ncesSchoolId}
+            existingSchoolInfo={homepageData.existingSchoolInfo}
             censusQuestion={homepageData.censusQuestion}
             showCensusBanner={homepageData.showCensusBanner}
             showNpsSurvey={homepageData.showNpsSurvey}

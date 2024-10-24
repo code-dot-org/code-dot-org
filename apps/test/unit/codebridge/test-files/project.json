@@ -1,0 +1,76 @@
+{
+  "folders": {
+    "1": {
+      "id": "1",
+      "name": "testfolder1",
+      "parentId": "0"
+    },
+    "2": {
+      "id": "2",
+      "name": "testfolder2",
+      "parentId": "1"
+    },
+    "3": {
+      "id": "3",
+      "name": "testfolder2",
+      "parentId": "0"
+    },
+    "4": {
+      "id": "4",
+      "name": "testfolder4",
+      "parentId": "2"
+    },
+    "5": {
+      "id": "5",
+      "name": "testfolder5",
+      "parentId": "4"
+    }
+  },
+  "files": {
+    "1": {
+      "id": "1",
+      "name": "testFile1.txt",
+      "language": "txt",
+      "contents": "This is test file 1",
+      "folderId": "0"
+    },
+    "2": {
+      "id": "2",
+      "name": "testFile2.txt",
+      "language": "txt",
+      "contents": "This is test file 2",
+      "folderId": "1"
+    },
+    "3": {
+      "id": "3",
+      "name": "support_file.vld",
+      "language": "vld",
+      "contents": "this is a test support file",
+      "folderId": "0",
+      "type": "support"
+    },
+    "4": {
+      "id": "4",
+      "name": "testFile3.txt",
+      "language": "txt",
+      "contents": "This is test file 3",
+      "folderId": "0"
+    },
+    "5": {
+      "id": "5",
+      "name": "testFile1.txt",
+      "language": "txt",
+      "contents": "This is test file 1, in testfolder1",
+      "folderId": "1"
+    },
+    "7": {
+      "id": "7",
+      "name": "validation_file.vld",
+      "language": "vld",
+      "contents": "this is a test validation file",
+      "folderId": "0",
+      "type": "validation"
+    }
+  },
+  "openFiles": []
+}

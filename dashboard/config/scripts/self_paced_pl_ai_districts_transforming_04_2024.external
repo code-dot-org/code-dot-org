@@ -1,0 +1,37 @@
+name 'self-paced-pl-ai-districts-transforming_04_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Teaching With and About AI
+
+#### We want to make a distinction between teaching *with* and *about* AI.
+
+## Teaching With AI
+
+#### Is all about building AI literacy skills by having students use AI as part of their education. Here are some examples of ways teachers have used AI with their students:
+
+* #### “My students use Claude when they are coding and come across an error they don't understand. They paste in their code and the error message and ask Claude to explain the error to them so they can fix it." 
+* #### “When my students are about to start a major project, I have them use Claude to help them make a plan. They often will tell Claude what they want to make and ask it to help them break their task into reasonable chunks. They also use the tool to ensure they have hit all the requirements.”
+* #### “I have my students use chatGPT to edit their essays. They prompt it to look for grammatical mistakes.”
+* #### “We talk about the challenge of creating prompts that get the AI to do what you actually want. Then, I have students write a short story and challenge them to get Stable Diffusion to generate illustrations for it.”
+* #### “I have done AI lessons with 5th/6th graders. What is AI, how it works, and how it affects their social media. We did two different activities quick draw, so students could see how generative AI works/ dance party with AI.”
+* #### “In the English classroom, I have used an AI-chatbot via SchoolAI to help students develop a research focus.”
+
+## Teaching About AI
+
+#### Involves building students knowledge of how AI works. Often this is done in technology or computer science classes, but it can be integrated into any subject or grade level.
+
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🚀 Want to Learn More?</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+#### Want to support your teachers more on their AI journey? Check out <a href="studio.code.org/courses/self-paced-pl-ai-101-2024" target="_blank">AI 101 Self Paced Professional Learning for Educators</a>. You or your teachers can complete this five-hour Self-Paced Professional Learning on AI to learn more.
+</p></div>
+</details>
+
+
+MARKDOWN

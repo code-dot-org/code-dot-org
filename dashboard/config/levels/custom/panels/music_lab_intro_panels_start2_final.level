@@ -1,0 +1,33 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2024-10-22T23:17:15.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "name_suffix": "_final",
+    "panels": [
+      {
+        "imageUrl": "https://images.code.org/846388521fe0f07f2577b346a7ba51d9-musiclab-big-banner-image.png",
+        "text": "####  ✨ Welcome to Music Lab ✨ \n\nGet ready to make music with code! \n\n\n",
+        "key": "musiclab_intro_panels_start_v2-415ec56a-f841-421b-adff-b680e8d4ca35"
+      },
+      {
+        "text": "#### Using the tutorial\n\n<p style=\"color: black;\"><span style=\"color: #009EB0;\">→</span> 1. Read the instructions.</p>\n\n<p style=\"color: black;\"><span style=\"color: #ED6060;\">→</span> 2.  Drag blocks into the workspace.</p>\n\n<p style=\"color: black;\"><span style=\"color: #FFA400;\">→</span> 3.  Press ▶ Run to start your song.</p>\n\n<p style=\"color: black;\"><span style=\"color: #9660BF;\">→</span>  4. Press Continue for the next level.</p>\n\n\n",
+        "imageUrl": "https://images.code.org/139f3e38ff4c27559c9be3470ed54819-general (3).gif",
+        "key": "musiclab_intro_panels_start_v2-d2e2064a-8f39-452f-81f5-aab175d5a165"
+      },
+      {
+        "imageUrl": "https://images.code.org/1e2594de35f17668394b32b160e88db3-choose sound.gif",
+        "text": "### Change the sound\n\nClick on the sound block to access the sound library. \n\nChoose any sound you like!",
+        "key": "musiclab_intro_panels_start_v2-623c36d1-b475-414b-8e2f-da7d27012391"
+      }
+    ],
+    "offer_browser_tts": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:15.554+00:00\",\"changed\":[\"cloned from \\\"music_lab_intro_panels_start2\\\"\"],\"cloned_from\":\"music_lab_intro_panels_start2\"}]"
+}]]></config>
+</Panels>

@@ -16,6 +16,7 @@ import {
   TriggerStart,
   FIELD_EFFECTS_EXTENSION,
   FIELD_EFFECT_NAME_OPTIONS,
+  FIELD_SOUNDS_VALIDATOR,
 } from '../constants';
 import {
   fieldSoundsDefinition,
@@ -108,6 +109,7 @@ export const playSoundAtCurrentLocationSimple2 = {
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockPlaySoundTooltip(),
     helpUrl: DOCS_BASE_URL + 'play_sample',
+    extensions: [FIELD_SOUNDS_VALIDATOR],
   },
   generator: block =>
     `Sequencer.playSound("${block.getFieldValue(FIELD_SOUNDS_NAME)}", "${
@@ -267,6 +269,15 @@ export const playSoundsTogether = {
       ${Blockly.JavaScript.statementToCode(block, 'code')}
       Sequencer.endTogether();
     `,
+};
+
+export const playSoundsTogetherNoNext = {
+  ...playSoundsTogether,
+  definition: {
+    ...playSoundsTogether.definition,
+    type: BlockTypes.PLAY_SOUNDS_TOGETHER_NO_NEXT,
+    nextStatement: undefined,
+  },
 };
 
 export const playSoundsSequential = {

@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2024-09-14T16:58:09.000Z",
   "level_num": "custom",
@@ -22,8 +21,9 @@
           "language": "py",
           "contents": "",
           "folderId": "0",
-          "active": false,
-          "open": true
+          "active": true,
+          "open": true,
+          "type": "locked_starter"
         },
         "1": {
           "id": "1",
@@ -33,31 +33,31 @@
           "folderId": "0",
           "active": false,
           "open": true
-        },
-        "2": {
-          "id": "2",
-          "name": "validation.py",
-          "language": "py",
-          "contents": "import unittest\nfrom io import StringIO\nimport sys\nimport ast\n\nclass TestCSVReading(unittest.TestCase):\n\n    def setUp(self):\n        # Setup to capture the print output if needed later\n        self.captured_output = StringIO()\n        sys.stdout = self.captured_output\n\n    def tearDown(self):\n        # Reset redirect.\n        sys.stdout = sys.__stdout__\n\n    def test_step_1(self):\n        \"\"\"Test Step 1: Check that the pandas library is imported with 'import pandas as pd'\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Parse the script to check for the exact import statement using AST\n        tree = ast.parse(script_content)\n\n        # Check for 'import pandas as pd' specifically\n        pandas_imported_correctly = False\n\n        # Traverse the AST to look for import statements\n        for node in ast.walk(tree):\n            if isinstance(node, ast.Import):\n                for alias in node.names:\n                    if alias.name == 'pandas' and alias.asname == 'pd':\n                        pandas_imported_correctly = True\n\n        # Assert that 'import pandas as pd' is present\n        self.assertTrue(pandas_imported_correctly, \"The code should include 'import pandas as pd'.\")\n\n    def test_step_2(self):\n        \"\"\"Test Step 2: Check that a DataFrame is read from a CSV file\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Execute the script to access variables and simulate the script environment\n        exec(script_content, globals())\n\n        # Check if a DataFrame is present in the global namespace\n        dataframe_detected = False\n        for var in globals().values():\n            if 'pd' in globals() and isinstance(var, globals()['pd'].DataFrame):\n                dataframe_detected = True\n                break\n\n        # Assert that a DataFrame has been created\n        self.assertTrue(dataframe_detected, \"The code should read a CSV file into a pandas DataFrame.\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
-          "folderId": "0",
-          "active": true,
-          "open": true,
-          "type": "validation"
         }
       },
       "folders": {
       },
       "openFiles": [
         "0",
-        "1",
-        "2"
+        "1"
       ]
     },
     "display_name": "University Rankings",
     "bubble_choice_description": "Import and read the University data into a DataFrame",
     "thumbnail_url": "https://images.code.org/58754588a376f4c66481c2de33088974-college.png",
-    "project_template_level_name": "datascience-U2L3-L7bTempl_2024-pilot"
+    "project_template_level_name": "datascience-U2L3-L7bTempl_2024-pilot",
+    "validation_file": {
+      "id": "2",
+      "name": "test.py",
+      "language": "py",
+      "contents": "import unittest\nimport ast\n\nclass TestUniversityRankingsImport(unittest.TestCase):\n    def setUp(self):\n        # Read the student's code from 'main.py' and parse it into an AST\n        with open('main.py', 'r') as f:\n            self.tree = ast.parse(f.read())\n\n    def detect_pandas_import(self):\n        \"\"\"Detects if pandas is imported in the code.\"\"\"\n        for node in ast.walk(self.tree):\n            if isinstance(node, ast.Import):\n                for alias in node.names:\n                    if alias.name == 'pandas':\n                        return True\n            if isinstance(node, ast.ImportFrom):\n                if node.module == 'pandas':\n                    return True\n        return False\n\n    def detect_csv_read(self):\n        \"\"\"Detects if 'university_rankings.csv' is read into a DataFrame using pandas.\"\"\"\n        for node in ast.walk(self.tree):\n            # Look for pd.read_csv or pandas.read_csv function call\n            if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute):\n                if node.func.attr == 'read_csv':\n                    if isinstance(node.args[0], ast.Constant) and node.args[0].value == 'university_rankings.csv':\n                        return True\n        return False\n\n    def test_step_1_import_pandas(self):\n        \"\"\"Import the pandas library.\"\"\"\n        self.assertTrue(self.detect_pandas_import(), \"The pandas library was not correctly imported.\")\n\n    def test_step_2_read_csv_into_dataframe(self):\n        \"\"\"Read the 'university_rankings.csv' file into a DataFrame.\"\"\"\n        self.assertTrue(self.detect_csv_read(), \"The 'university_rankings.csv' file was not correctly read into a DataFrame using pandas.\")\n\nif __name__ == '__main__':\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-14T16:58:09.718+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L3-L7a_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L3-L7a_2024-pilot\"},{\"changed_at\":\"2024-09-14 16:59:49 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 17:01:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 17:11:42 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-27 17:22:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-27 17:22:55 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-27 17:24:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-27 17:24:08 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-27 17:46:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-27 17:46:50 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-09-14T16:58:09.718+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L3-L7a_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L3-L7a_2024-pilot\"},{\"changed_at\":\"2024-09-14 16:59:49 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 17:01:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 17:11:42 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-27 17:22:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-27 17:22:55 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-27 17:24:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-27 17:24:08 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-27 17:46:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-27 17:46:50 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-03 18:18:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-03 18:19:34 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-03 18:36:20 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-03 18:36:25 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-21 18:56:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":20970,\"changed_by_email\":\"cassi.brenci-levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

@@ -1,0 +1,42 @@
+name 'self-paced-pl-gen-ai-foundations-preview-02_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Input
+
+## Lesson Highlight: Youtube Playlist
+
+<img src="https://images.code.org/28dfb421e568c030e5736eaaaeb83d6c-Screenshot 2024-10-09 at 10.59.45 AM.png" alt="generative AI Input and Pretraining video" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 20px 20px 20px 20px">
+
+#### Key learning topics are reinforced throughout this unit in short (2-3 minute) videos. Keep an eye out for these as you preview the lesson plans. Watching these videos yourself are also a great way to reinforce your understanding of Generative AI.
+
+#### <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfJLo5nNGPHo0xCd9Xw5lSs" target="blank" rel="noopener noreferrer">Check out the whole video series here.</a>
+
+#### Throughout the next few levels, we'll spend some time diving into the lessons and associated activities connected to the topics of each of these videos - **Input, Embeddings, Neural Networks, Attention, and Output**. Come back to this videos if you have trouble understanding the content of the lessons.
+
+#### In the **input** step, a language model is provided with large amounts of training data. The model then learns to recognize words and understand language rules by analyzing this data through a pre-training process.
+
+## Lesson Preview
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 2: Input & Training Data</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/92415b93997e6c1e2bb50ac8e4897584-a6f01a79a091ff67f9bbd2ab11b7a4bb-Slide17.PNG" alt="Discussion question from lesson" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** How does a computer recognize words used in language?
+
+#### **Lesson Overview:**
+
+#### In this lesson, students explore the process of recognizing and categorizing words, comparing it to how AI systems achieve similar tasks. Through discussion and activities, they consider the data sources an AI system requires to build a task-specific vocabulary, leading to the understanding that language models necessitate vast data amounts, like the entire internet. The lesson concludes with students updating a graphic organizer to reflect the Input step of generative AI.
+
+#### **Students will be able to:**
+* #### Explain how a language model uses data to recognize words as input
+* #### Identify potential data sources relevant to a task being performed by a language model
+
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/2" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+
+MARKDOWN

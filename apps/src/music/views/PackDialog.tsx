@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import React, {useCallback, useState, useRef, useContext} from 'react';
-import FocusLock from 'react-focus-lock';
+import {FocusOn} from 'react-focus-on';
 
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import Typography from '@cdo/apps/componentLibrary/typography';
@@ -216,7 +216,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
   }
 
   return (
-    <FocusLock className={styles.focusLock}>
+    <FocusOn className={styles.focusLock}>
       <div className={styles.dialogContainer}>
         <div id="pack-dialog" className={styles.packDialog}>
           <div id="hidden-item" tabIndex={0} role="button" />
@@ -266,12 +266,12 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
               disabled={!selectedFolderId}
               type="button"
             >
-              {musicI18n.continue()}
+              {musicI18n.select()}
             </button>
           </div>
         </div>
       </div>
-    </FocusLock>
+    </FocusOn>
   );
 };
 

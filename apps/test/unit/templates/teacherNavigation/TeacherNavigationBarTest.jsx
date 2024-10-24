@@ -35,16 +35,20 @@ describe('TeacherNavigationBar', () => {
       id: 11,
       name: 'Period 1',
       hidden: false,
+      courseVersionName: 'csd-2024',
     },
     {
       id: 12,
       name: 'Period 2',
       hidden: false,
+      courseVersionName: 'csd-2023',
     },
     {
       id: 13,
       name: 'Period 3',
       hidden: true,
+      courseVersionName: 'csd-2022',
+      unitName: 'csd3-2022',
     },
   ];
   const serverSections = sections.map(serverSectionFromSection);
@@ -93,7 +97,23 @@ describe('TeacherNavigationBar', () => {
                     }
                   />
                   <Route
-                    path={'manage_students'}
+                    path={'roster'}
+                    element={
+                      <div>
+                        <LocationElement location={location} />
+                      </div>
+                    }
+                  />
+                  <Route
+                    path={'unit/:unitName?'}
+                    element={
+                      <div>
+                        <LocationElement location={location} />
+                      </div>
+                    }
+                  />
+                  <Route
+                    path={'courses/:courseVersionName?'}
                     element={
                       <div>
                         <LocationElement location={location} />
@@ -153,7 +173,7 @@ describe('TeacherNavigationBar', () => {
 
     screen.getByText('Roster').click();
 
-    await screen.findByText('/sections/11/manage_students path');
+    await screen.findByText('/sections/11/roster path');
   });
 
   test('section dropdown switches url', async () => {
@@ -170,5 +190,19 @@ describe('TeacherNavigationBar', () => {
     await screen.findByText('/sections/11/progress path');
     const dropdownAfterClick = screen.getByRole('combobox');
     expect(dropdownAfterClick).toHaveValue('11');
+  });
+
+  test('course link navigates to course when unit is not assigned', async () => {
+    renderDefault(12);
+    await screen.findByText('Course Content');
+    screen.getByText(i18n.course()).click();
+    await screen.findByText('/sections/12/courses/csd-2023 path');
+  });
+
+  test('course link navigates to unit when unit is assigned', async () => {
+    renderDefault(13);
+    await screen.findByText('Course Content');
+    screen.getByText(i18n.course()).click();
+    await screen.findByText('/sections/13/unit path');
   });
 });

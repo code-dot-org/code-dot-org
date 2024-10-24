@@ -14,6 +14,7 @@ Feature: School Info Confirmation Dialog
 # 4. A year later after the user has completed school info, the user sees prompt to
 # confirm or update current school info.
 
+@no_safari
 Scenario: School Info Confirmation Dialog
   # Teacher account is created with partial school info
   Given I create a teacher named "Teacher_Chuba" and go home
@@ -44,3 +45,8 @@ Scenario: School Info Confirmation Dialog
   And one year passes for user "Teacher_Chuba"
   Then I reload the page
   And element ".modal-body" is visible
+  Then I press "#update-button" using jQuery
+  And element ".modal" is visible
+  Then I wait to see a modal containing text "United States"
+  Then element "#uitest-school-zip" has value "31513"
+  Then I wait to see a modal containing text "Appling County High School"

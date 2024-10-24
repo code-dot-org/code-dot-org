@@ -1,20 +1,19 @@
 import classNames from 'classnames';
-import React, {useCallback, useContext, useEffect, useState} from 'react';
+import React, {useContext} from 'react';
 import {useSelector} from 'react-redux';
 
-import {navigateToNextLevel} from '@cdo/apps/code-studio/progressRedux';
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {Button} from '@cdo/apps/componentLibrary/button';
-import {shareLab2Project} from '@cdo/apps/lab2/header/lab2HeaderShare';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
+import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {
   isPredictAnswerLocked,
   setPredictResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {LabState} from '../../lab2Redux';
 import {ThemeContext} from '../ThemeWrapper';
 
 import PredictQuestion from './PredictQuestion';
@@ -23,22 +22,17 @@ import TextToSpeech from './TextToSpeech';
 
 import moduleStyles from './instructions.module.scss';
 
-const commonI18n = require('@cdo/locale');
-
 interface InstructionsProps {
-  /** Additional callback to fire before navigating to the next level. */
-  beforeNextLevel?: () => void;
   /** If the instructions panel should be rendered vertically or horizontally. Defaults to vertical. */
   layout?: 'vertical' | 'horizontal';
   /**
    * A callback when the user clicks on clickable text.
    */
   handleInstructionsTextClick?: (id: string) => void;
+  /** Whether the instructions panel should show lesson navigation buttons (Continue & Finish) */
   manageNavigation?: boolean;
   /** Optional classname for the container */
   className?: string;
-  /** Whether we support TTS. */
-  offerTts?: boolean;
 }
 
 /**
@@ -50,54 +44,30 @@ interface InstructionsProps {
  * For Teachers Only, etc.
  */
 const Instructions: React.FunctionComponent<InstructionsProps> = ({
-  beforeNextLevel,
   layout,
   handleInstructionsTextClick,
   className,
   manageNavigation = true,
-  offerTts = false,
 }) => {
-  const instructionsText = useSelector(
-    (state: {lab: LabState}) => state.lab.levelProperties?.longInstructions
+  const instructionsText = useAppSelector(
+    state => state.lab.levelProperties?.longInstructions
   );
   const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
-  const {hasConditions, message, satisfied, index} = useSelector(
-    (state: {lab: LabState}) => state.lab.validationState
+  const {hasConditions, message, satisfied, index} = useAppSelector(
+    state => state.lab.validationState
   );
   const predictSettings = useAppSelector(
     state => state.lab.levelProperties?.predictSettings
   );
   const predictResponse = useAppSelector(state => state.predictLevel.response);
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
-  const finishUrl = useAppSelector(
-    state => state.lab.levelProperties?.finishUrl
+  const offerBrowserTts = useAppSelector(
+    state => state.lab.levelProperties?.offerBrowserTts
   );
-  const finishDialog = useAppSelector(
-    state => state.lab.levelProperties?.finishDialog
-  );
-
-  // If there are no validation conditions, we can show the continue button so long as
-  // there is another level and manageNavigation is true.
-  // If validation is present, also check that conditions are satisfied.
-  const showContinueButton =
-    manageNavigation && (!hasConditions || satisfied) && hasNextLevel;
-
-  // If there are no validation conditions, we can show the finish button so long as
-  // this is the last level in the progression and the instructions panel is managing navigation.
-  // If validation is present, also check that conditions are satisfied.
-  const showFinishButton =
-    manageNavigation && (!hasConditions || satisfied) && !hasNextLevel;
 
   const dispatch = useAppDispatch();
 
   const {theme} = useContext(ThemeContext);
-
-  const onNextPanel = useCallback(() => {
-    if (beforeNextLevel) {
-      beforeNextLevel();
-    }
-    dispatch(navigateToNextLevel());
-  }, [dispatch, beforeNextLevel]);
 
   // Don't render anything if we don't have any instructions.
   if (instructionsText === undefined) {
@@ -109,10 +79,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       text={instructionsText}
       message={message || undefined}
       messageIndex={index}
-      showContinueButton={showContinueButton}
-      showFinishButton={showFinishButton}
-      beforeFinish={beforeNextLevel}
-      onNextPanel={onNextPanel}
       theme={theme}
       predictSettings={predictSettings}
       predictResponse={predictResponse}
@@ -120,10 +86,11 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       predictAnswerLocked={predictAnswerLocked}
       layout={layout}
       handleInstructionsTextClick={handleInstructionsTextClick}
-      offerTts={offerTts}
-      finishUrl={finishUrl}
-      finishDialog={finishDialog}
+      offerBrowserTts={offerBrowserTts}
       className={className}
+      canShowNextButton={manageNavigation && (!hasConditions || satisfied)}
+      hasNextLevel={hasNextLevel}
+      onContinueOrFinish={() => dispatch(continueOrFinishLesson())}
     />
   );
 };
@@ -135,14 +102,6 @@ interface InstructionsPanelProps {
   message?: string;
   /** Key for rendering the optional message. A unique value ensures the appearance animation shows. */
   messageIndex?: number;
-  /** If the continue button should be shown. */
-  showContinueButton?: boolean;
-  /** If the finish button should be shown. */
-  showFinishButton?: boolean;
-  /** Additional callback to fire before finishing the level. */
-  beforeFinish?: () => void;
-  /** Callback to call when clicking the next button. */
-  onNextPanel?: () => void;
   /** If the instructions panel should be rendered vertically or horizontally. Defaults to vertical. */
   layout?: 'vertical' | 'horizontal';
   /** Display theme. Defaults to dark. */
@@ -157,9 +116,10 @@ interface InstructionsPanelProps {
   predictAnswerLocked: boolean;
   /** Optional classname for the container */
   className?: string;
-  offerTts?: boolean;
-  finishUrl?: string;
-  finishDialog?: string;
+  offerBrowserTts?: boolean;
+  canShowNextButton: boolean;
+  hasNextLevel: boolean;
+  onContinueOrFinish: () => void;
 }
 
 /**
@@ -175,10 +135,6 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   text,
   message,
   messageIndex,
-  showContinueButton,
-  showFinishButton,
-  beforeFinish,
-  onNextPanel,
   layout = 'vertical',
   theme = 'dark',
   handleInstructionsTextClick,
@@ -187,37 +143,12 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   setPredictResponse,
   predictAnswerLocked,
   className,
-  offerTts,
-  finishUrl,
-  finishDialog,
+  offerBrowserTts,
+  canShowNextButton,
+  hasNextLevel,
+  onContinueOrFinish,
 }) => {
-  const [isFinished, setIsFinished] = useState(false);
-
   const vertical = layout === 'vertical';
-
-  const canShowContinueButton = showContinueButton && onNextPanel;
-
-  const canShowFinishButton = showFinishButton;
-
-  const onFinish = useCallback(() => {
-    if (!isFinished && beforeFinish) {
-      beforeFinish();
-      setIsFinished(true);
-    }
-
-    if (finishUrl) {
-      if (finishDialog === 'hoc2024') {
-        shareLab2Project(finishUrl);
-      } else {
-        window.location.href = finishUrl;
-      }
-    }
-  }, [isFinished, beforeFinish, finishDialog, finishUrl]);
-
-  // Reset the Finish button state when it changes from shown to hidden.
-  useEffect(() => {
-    setIsFinished(false);
-  }, [canShowFinishButton]);
 
   return (
     <div
@@ -242,7 +173,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             id="instructions-text"
             className={moduleStyles['text-' + theme]}
           >
-            {offerTts && <TextToSpeech text={text} />}
+            {offerBrowserTts && <TextToSpeech text={text} />}
             <div
               id="instructions-text-content"
               className={moduleStyles.textContent}
@@ -262,7 +193,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             </div>
           </div>
         )}
-        {(message || canShowContinueButton || canShowFinishButton) && (
+        {(message || canShowNextButton) && (
           <div
             key={messageIndex + ' - ' + message}
             id="instructions-feedback"
@@ -272,7 +203,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               id="instructions-feedback-message"
               className={moduleStyles['message-' + theme]}
             >
-              {offerTts && message && <TextToSpeech text={message} />}
+              {offerBrowserTts && message && <TextToSpeech text={message} />}
               {message && (
                 <EnhancedSafeMarkdown
                   markdown={message}
@@ -280,23 +211,15 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   handleInstructionsTextClick={handleInstructionsTextClick}
                 />
               )}
-              {canShowContinueButton && (
+              {canShowNextButton && (
                 <Button
                   id="instructions-continue-button"
-                  text={commonI18n.continue()}
-                  onClick={onNextPanel}
+                  text={
+                    hasNextLevel ? commonI18n.continue() : commonI18n.finish()
+                  }
+                  onClick={onContinueOrFinish}
                   className={moduleStyles.buttonInstruction}
                 />
-              )}
-              {canShowFinishButton && (
-                <>
-                  <Button
-                    id="instructions-finish-button"
-                    onClick={onFinish}
-                    className={moduleStyles.buttonInstruction}
-                    text={commonI18n.finish()}
-                  />
-                </>
               )}
             </div>
           </div>

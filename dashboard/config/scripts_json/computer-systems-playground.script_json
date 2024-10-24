@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "computer-systems-playground",
-    "serialized_at": "2024-09-27 23:24:09 UTC",
+    "serialized_at": "2024-10-09 22:18:28 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -34,12 +34,27 @@
   ],
   "lessons": [
     {
-      "key": "lesson-2",
-      "name": "Introduction to micro:bit",
+      "key": "lesson-9",
+      "name": "Pre-assessment",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Introduction to micro:bit",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
       "properties": {
       },
       "seeding_key": {
@@ -51,10 +66,10 @@
     {
       "key": "lesson-3",
       "name": "Designing Computer Systems",
-      "absolute_position": 2,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 2,
+      "relative_position": 3,
       "properties": {
       },
       "seeding_key": {
@@ -66,10 +81,10 @@
     {
       "key": "lesson-1",
       "name": "Buttons",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -81,14 +96,74 @@
     {
       "key": "lesson-4",
       "name": "Sensors",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 5,
       "properties": {
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "LEDs",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Peer Feedback",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Accelerometer",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Additional Output",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "computer-systems-playground"
       }
@@ -139,6 +214,42 @@
       "seeding_key": {
         "lesson_activity.key": "138283ae-e1ab-4468-97e3-d85e912c46b0",
         "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground"
+      }
+    },
+    {
+      "key": "0935d9cd-50e3-42e2-9874-f288dcbb4fd5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0935d9cd-50e3-42e2-9874-f288dcbb4fd5",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground"
+      }
+    },
+    {
+      "key": "d28d1474-4400-4b67-91f3-1674d4a8e904",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d28d1474-4400-4b67-91f3-1674d4a8e904",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground"
+      }
+    },
+    {
+      "key": "2e4ab2c0-f5cf-490c-b533-c316e38c54ca",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2e4ab2c0-f5cf-490c-b533-c316e38c54ca",
+        "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "computer-systems-playground"
       }
@@ -273,6 +384,137 @@
       "seeding_key": {
         "activity_section.key": "ab1f0ac1-a636-437d-a0b7-22c2f70c673b",
         "lesson_activity.key": "138283ae-e1ab-4468-97e3-d85e912c46b0"
+      }
+    },
+    {
+      "key": "307aa002-2163-4750-868e-0557742993f6",
+      "position": 1,
+      "properties": {
+        "progression_name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "307aa002-2163-4750-868e-0557742993f6",
+        "lesson_activity.key": "0935d9cd-50e3-42e2-9874-f288dcbb4fd5"
+      }
+    },
+    {
+      "key": "e09a13fe-5217-43cd-9c04-b8eb2f2850e3",
+      "position": 2,
+      "properties": {
+        "progression_name": "Predict and Run"
+      },
+      "seeding_key": {
+        "activity_section.key": "e09a13fe-5217-43cd-9c04-b8eb2f2850e3",
+        "lesson_activity.key": "0935d9cd-50e3-42e2-9874-f288dcbb4fd5"
+      }
+    },
+    {
+      "key": "47b6c1df-f3f4-4b66-b719-2758ba306e49",
+      "position": 3,
+      "properties": {
+        "progression_name": "Investigate and Modify"
+      },
+      "seeding_key": {
+        "activity_section.key": "47b6c1df-f3f4-4b66-b719-2758ba306e49",
+        "lesson_activity.key": "0935d9cd-50e3-42e2-9874-f288dcbb4fd5"
+      }
+    },
+    {
+      "key": "ea5eb6a2-0f84-46af-8c5f-233e21b24533",
+      "position": 4,
+      "properties": {
+        "progression_name": "Make"
+      },
+      "seeding_key": {
+        "activity_section.key": "ea5eb6a2-0f84-46af-8c5f-233e21b24533",
+        "lesson_activity.key": "0935d9cd-50e3-42e2-9874-f288dcbb4fd5"
+      }
+    },
+    {
+      "key": "3a84a9c8-4aca-46f5-b423-778e1afafaec",
+      "position": 5,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "3a84a9c8-4aca-46f5-b423-778e1afafaec",
+        "lesson_activity.key": "0935d9cd-50e3-42e2-9874-f288dcbb4fd5"
+      }
+    },
+    {
+      "key": "d63d5ddb-137c-445b-84c8-d778192ccc40",
+      "position": 6,
+      "properties": {
+        "progression_name": "Project Level"
+      },
+      "seeding_key": {
+        "activity_section.key": "d63d5ddb-137c-445b-84c8-d778192ccc40",
+        "lesson_activity.key": "0935d9cd-50e3-42e2-9874-f288dcbb4fd5"
+      }
+    },
+    {
+      "key": "0169ef2c-3019-4347-aea9-a331630b1970",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0169ef2c-3019-4347-aea9-a331630b1970",
+        "lesson_activity.key": "d28d1474-4400-4b67-91f3-1674d4a8e904"
+      }
+    },
+    {
+      "key": "f013bc11-8a59-49f9-88ab-5f896bbc747d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "f013bc11-8a59-49f9-88ab-5f896bbc747d",
+        "lesson_activity.key": "2e4ab2c0-f5cf-490c-b533-c316e38c54ca"
+      }
+    },
+    {
+      "key": "981d7116-2941-4e1e-b4e9-35f523145575",
+      "position": 2,
+      "properties": {
+        "progression_name": "Predict and Run"
+      },
+      "seeding_key": {
+        "activity_section.key": "981d7116-2941-4e1e-b4e9-35f523145575",
+        "lesson_activity.key": "2e4ab2c0-f5cf-490c-b533-c316e38c54ca"
+      }
+    },
+    {
+      "key": "11a6e6e9-1af2-494b-b531-3bb0701de3f0",
+      "position": 3,
+      "properties": {
+        "progression_name": "Investigate and Modify"
+      },
+      "seeding_key": {
+        "activity_section.key": "11a6e6e9-1af2-494b-b531-3bb0701de3f0",
+        "lesson_activity.key": "2e4ab2c0-f5cf-490c-b533-c316e38c54ca"
+      }
+    },
+    {
+      "key": "e5f9e7a1-bfb0-4f10-af58-192f8274a07f",
+      "position": 4,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "e5f9e7a1-bfb0-4f10-af58-192f8274a07f",
+        "lesson_activity.key": "2e4ab2c0-f5cf-490c-b533-c316e38c54ca"
+      }
+    },
+    {
+      "key": "417d7a7e-d317-4a46-96ad-fcc81dfccb20",
+      "position": 5,
+      "properties": {
+        "progression_name": "Project Level"
+      },
+      "seeding_key": {
+        "activity_section.key": "417d7a7e-d317-4a46-96ad-fcc81dfccb20",
+        "lesson_activity.key": "2e4ab2c0-f5cf-490c-b533-c316e38c54ca"
       }
     }
   ],
@@ -433,6 +675,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Sensors 1 2"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -455,6 +700,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Sensors 2"
+        ],
         "progression": "Investigate and Modify - If/else"
       },
       "bonus": false,
@@ -477,6 +725,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Sensors Test"
+        ],
         "progression": "Sensor Events"
       },
       "bonus": false,
@@ -499,6 +750,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Sensors 3"
+        ],
         "progression": "Investigate and Modify - Sensor Events"
       },
       "bonus": false,
@@ -538,6 +792,378 @@
       },
       "level_keys": [
         "Computer Systems Playground - Sensors Project Level"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Computer Systems Playground - LEDs Warm Up"
+        ],
+        "progression": "Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - LEDs Warm Up"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "307aa002-2163-4750-868e-0557742993f6"
+      },
+      "level_keys": [
+        "Computer Systems Playground - LEDs Warm Up"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Computer Systems Playground - LEDs Predict"
+        ],
+        "progression": "Predict and Run"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - LEDs Predict"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "e09a13fe-5217-43cd-9c04-b8eb2f2850e3"
+      },
+      "level_keys": [
+        "Computer Systems Playground - LEDs Predict"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Computer Systems Playground - LEDs 2"
+        ],
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - LEDs 2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "47b6c1df-f3f4-4b66-b719-2758ba306e49"
+      },
+      "level_keys": [
+        "Computer Systems Playground - LEDs 2"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Computer Systems Playground - LEDs 3"
+        ],
+        "progression": "Make"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - LEDs 3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "ea5eb6a2-0f84-46af-8c5f-233e21b24533"
+      },
+      "level_keys": [
+        "Computer Systems Playground - LEDs 3"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Computer Systems Playground - LEDs 4"
+        ],
+        "progression": "Make"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - LEDs 4"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "ea5eb6a2-0f84-46af-8c5f-233e21b24533"
+      },
+      "level_keys": [
+        "Computer Systems Playground - LEDs 4"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Computer Systems Playground - LEDs 5"
+        ],
+        "progression": "Make"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - LEDs 5"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "ea5eb6a2-0f84-46af-8c5f-233e21b24533"
+      },
+      "level_keys": [
+        "Computer Systems Playground - LEDs 5"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Computer Systems Playground - LEDs CFU"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - LEDs CFU"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "3a84a9c8-4aca-46f5-b423-778e1afafaec"
+      },
+      "level_keys": [
+        "Computer Systems Playground - LEDs CFU"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Computer Systems Playground - LEDs Project Level"
+        ],
+        "progression": "Project Level"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - LEDs Project Level"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "d63d5ddb-137c-445b-84c8-d778192ccc40"
+      },
+      "level_keys": [
+        "Computer Systems Playground - LEDs Project Level"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Additional Input Warm Up"
+        ],
+        "progression": "Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Additional Input Warm Up"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "f013bc11-8a59-49f9-88ab-5f896bbc747d"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Additional Input Warm Up"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict and Run"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Additional Input Predict"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "981d7116-2941-4e1e-b4e9-35f523145575"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Additional Input Predict"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Additional Input 1"
+        ],
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Additional Input 1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "11a6e6e9-1af2-494b-b531-3bb0701de3f0"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Additional Input 1"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Additional Input 2"
+        ],
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Additional Input 2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "11a6e6e9-1af2-494b-b531-3bb0701de3f0"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Additional Input 2"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Additional Input 3"
+        ],
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Additional Input 3"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "11a6e6e9-1af2-494b-b531-3bb0701de3f0"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Additional Input 3"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Additional Input CFU"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Additional Input CFU"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "e5f9e7a1-bfb0-4f10-af58-192f8274a07f"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Additional Input CFU"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Additional Input Project Level"
+        ],
+        "progression": "Project Level"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Additional Input Project Level"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "417d7a7e-d317-4a46-96ad-fcc81dfccb20"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Additional Input Project Level"
       ]
     }
   ],
@@ -672,6 +1298,186 @@
         "lesson_group.key": "",
         "script.name": "computer-systems-playground",
         "activity_section.key": "ab1f0ac1-a636-437d-a0b7-22c2f70c673b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - LEDs Warm Up",
+        "script_level.level_keys": [
+          "Computer Systems Playground - LEDs Warm Up"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "307aa002-2163-4750-868e-0557742993f6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - LEDs Predict",
+        "script_level.level_keys": [
+          "Computer Systems Playground - LEDs Predict"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "e09a13fe-5217-43cd-9c04-b8eb2f2850e3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - LEDs 2",
+        "script_level.level_keys": [
+          "Computer Systems Playground - LEDs 2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "47b6c1df-f3f4-4b66-b719-2758ba306e49"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - LEDs 3",
+        "script_level.level_keys": [
+          "Computer Systems Playground - LEDs 3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "ea5eb6a2-0f84-46af-8c5f-233e21b24533"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - LEDs 4",
+        "script_level.level_keys": [
+          "Computer Systems Playground - LEDs 4"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "ea5eb6a2-0f84-46af-8c5f-233e21b24533"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - LEDs 5",
+        "script_level.level_keys": [
+          "Computer Systems Playground - LEDs 5"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "ea5eb6a2-0f84-46af-8c5f-233e21b24533"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - LEDs CFU",
+        "script_level.level_keys": [
+          "Computer Systems Playground - LEDs CFU"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "3a84a9c8-4aca-46f5-b423-778e1afafaec"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - LEDs Project Level",
+        "script_level.level_keys": [
+          "Computer Systems Playground - LEDs Project Level"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "d63d5ddb-137c-445b-84c8-d778192ccc40"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Additional Input Warm Up",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Additional Input Warm Up"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "f013bc11-8a59-49f9-88ab-5f896bbc747d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Additional Input Predict",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Additional Input Predict"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "981d7116-2941-4e1e-b4e9-35f523145575"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Additional Input 1",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Additional Input 1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "11a6e6e9-1af2-494b-b531-3bb0701de3f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Additional Input 2",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Additional Input 2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "11a6e6e9-1af2-494b-b531-3bb0701de3f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Additional Input 3",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Additional Input 3"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "11a6e6e9-1af2-494b-b531-3bb0701de3f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Additional Input CFU",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Additional Input CFU"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "e5f9e7a1-bfb0-4f10-af58-192f8274a07f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Additional Input Project Level",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Additional Input Project Level"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "417d7a7e-d317-4a46-96ad-fcc81dfccb20"
       }
     }
   ],

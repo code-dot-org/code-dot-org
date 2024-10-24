@@ -2,16 +2,16 @@ import {
   createAsyncThunk,
   createSlice,
   createSelector,
-  AnyAction,
   PayloadAction,
-  ThunkDispatch,
 } from '@reduxjs/toolkit';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {
   getCurrentScriptLevelId,
   getCurrentLevel,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
+import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -28,7 +28,7 @@ import {
   postAichatCompletionMessage,
 } from '../aichatApi';
 import ChatEventLogger from '../chatEventLogger';
-import {saveTypeToAnalyticsEvent} from '../constants';
+import {ModalTypes, saveTypeToAnalyticsEvent} from '../constants';
 import {
   AichatContext,
   AiCustomizations,
@@ -44,6 +44,7 @@ import {
   isNotification,
   isChatMessage,
   FlaggedField,
+  DetectToxicityResponse,
 } from '../types';
 import {extractFieldsToCheckForToxicity} from '../utils';
 import {
@@ -66,6 +67,7 @@ type MessageLocation = {
   index: number;
   messageListKey: (typeof messageListKeys)[number];
 };
+type ModalType = ModalTypes.WARNING | ModalTypes.TEACHER_ONBOARDING | undefined;
 
 export interface AichatState {
   // Content from previous chat sessions that we track purely for visibility to the user
@@ -79,8 +81,8 @@ export interface AichatState {
   isWaitingForChatResponse: boolean;
   // Student events viewed by a teacher user in chat workspace
   studentChatHistory: ChatEvent[];
-  // Denotes whether we should show the warning modal
-  showWarningModal: boolean;
+  // Denotes whether we should show the warning or teacher onboarding modal
+  showModalType: ModalType;
   // Denotes if there is an error with the chat completion response
   chatMessageError: boolean;
   initialAiCustomizations: AiCustomizations;
@@ -101,7 +103,7 @@ const initialState: AichatState = {
   chatMessagePending: undefined,
   isWaitingForChatResponse: false,
   studentChatHistory: [],
-  showWarningModal: true,
+  showModalType: undefined,
   chatMessageError: false,
   initialAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
@@ -124,7 +126,7 @@ export const updateAiCustomization = createAsyncThunk(
     await saveAiCustomization(
       (getState() as RootState).aichat.currentAiCustomizations,
       'updateChatbot',
-      dispatch
+      dispatch as AppDispatch
     );
   }
 );
@@ -139,7 +141,7 @@ export const publishModel = createAsyncThunk(
     await saveAiCustomization(
       (getState() as RootState).aichat.currentAiCustomizations,
       'publishModelCard',
-      dispatch
+      dispatch as AppDispatch
     );
   }
 );
@@ -158,7 +160,7 @@ export const saveModelCard = createAsyncThunk(
     await saveAiCustomization(
       currentAiCustomizations,
       'saveModelCard',
-      dispatch
+      dispatch as AppDispatch
     );
   }
 );
@@ -168,7 +170,7 @@ export const saveModelCard = createAsyncThunk(
 const saveAiCustomization = async (
   currentAiCustomizations: AiCustomizations,
   saveType: SaveType,
-  dispatch: ThunkDispatch<unknown, unknown, AnyAction>
+  dispatch: AppDispatch
 ) => {
   // Remove any empty example topics on save
   const trimmedExampleTopics =
@@ -196,14 +198,20 @@ const saveAiCustomization = async (
     .getMetricsReporter()
     .incrementCounter('Aichat.SaveStarted');
 
-  // Detect toxicity in the student's customizations
-  const toxicity = await detectToxicityInCustomizations(
-    trimmedCurrentAiCustomizations
-  );
+  // Wrap toxicity check in try/catch to handle unauthorized usage with a helpful user-facing message.
+  let toxicity: DetectToxicityResponse;
+  try {
+    toxicity = await detectToxicityInCustomizations(
+      trimmedCurrentAiCustomizations
+    );
+  } catch (error) {
+    await handleToxicityRequestError(error as Error, dispatch);
+    return;
+  }
 
   // If any fields were flagged for toxicity, display a notification and don't try to save.
   if (toxicity.flaggedFields.length > 0) {
-    // Log for analysis purposes
+    // Log for analysis purposes.
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .logInfo({
@@ -292,6 +300,9 @@ export const onSaveComplete =
     dispatch(setSavedAiCustomizations(currentAiCustomizations));
     // Notify the UI that the save is complete.
     dispatch(endSave());
+    // Send a report that user has started the aichat level after a successful save.
+    // A teacher will view that the level is now in progress.
+    dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     // Go to the presentation page if we just finished publishing the model card.
     if (currentSaveType === 'publishModelCard') {
       dispatch(setViewMode(ViewMode.PRESENTATION));
@@ -457,11 +468,67 @@ export const submitChatContents = createAsyncThunk(
     }
 
     thunkAPI.dispatch(clearChatMessagePending());
+    // Send a report that the user has started the aichat level after successfully sending
+    // a chat message and then receiving a response from the chatbot.
+    // A teacher will view that the level is now in progress.
+    dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     chatApiResponse.messages.forEach(message => {
       dispatch(addChatEvent({...message, timestamp: Date.now()}));
     });
   }
 );
+
+async function notifyErrorUnauthorized(
+  error: NetworkError,
+  userAction: string,
+  dispatch: AppDispatch
+) {
+  const responseBody = await error.response.json();
+  const userType = responseBody?.user_type;
+
+  const userTypeToMessageText: {[key: string]: string} = {
+    teacher: commonI18n.aiChatNotAuthorizedTeacher(),
+    student: commonI18n.aiChatNotAuthorizedStudent(),
+  };
+  const messageText =
+    userTypeToMessageText[userType] ||
+    commonI18n.aiChatNotAuthorizedSignedOut();
+
+  dispatch(
+    addChatEvent({
+      id: getNewMessageId(),
+      text: messageText,
+      notificationType: 'permissionsError',
+      timestamp: Date.now(),
+    })
+  );
+  dispatch(
+    sendAnalytics(
+      EVENTS.SUBMIT_AICHAT_REQUEST_UNAUTHORIZED,
+      {
+        levelPath: window.location.pathname,
+        userType,
+        userAction,
+      },
+      true
+    )
+  );
+}
+
+async function handleToxicityRequestError(error: Error, dispatch: AppDispatch) {
+  if (error instanceof NetworkError && error.response.status === 403) {
+    await notifyErrorUnauthorized(error, 'Model Customization', dispatch);
+  } else {
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .incrementCounter('Aichat.CustomizationToxicityScreeningErrorUnhandled');
+    // Default save error message.
+    const errorMessage =
+      'There was an error saving your project. Please try again.';
+    dispatchSaveFailNotification(dispatch, errorMessage);
+  }
+  dispatch(endSave());
+}
 
 async function handleChatCompletionError(
   error: Error,
@@ -490,36 +557,7 @@ async function handleChatCompletionError(
       })
     );
   } else if (error instanceof NetworkError && error.response.status === 403) {
-    const responseBody = await error.response.json();
-    const userType = responseBody?.user_type;
-
-    const userTypeToMessageText: {[key: string]: string} = {
-      teacher: commonI18n.aiChatNotAuthorizedTeacher(),
-      student: commonI18n.aiChatNotAuthorizedStudent(),
-    };
-    const messageText =
-      userTypeToMessageText[userType] ||
-      commonI18n.aiChatNotAuthorizedSignedOut();
-
-    dispatch(
-      addChatEvent({
-        id: getNewMessageId(),
-        text: messageText,
-        notificationType: 'error',
-        timestamp: Date.now(),
-      })
-    );
-    dispatch(
-      sendAnalytics(
-        EVENTS.SUBMIT_AICHAT_REQUEST_UNAUTHORIZED,
-        {
-          levelPath: window.location.pathname,
-          userType,
-          userMessage: newUserMessage.chatMessageText,
-        },
-        true
-      )
-    );
+    await notifyErrorUnauthorized(error, 'Chat Completion', dispatch);
   } else {
     Lab2Registry.getInstance()
       .getMetricsReporter()
@@ -606,8 +644,8 @@ const aichatSlice = createSlice({
       state.chatEventsPast.push(...state.chatEventsCurrent);
       state.chatEventsCurrent = [];
     },
-    setShowWarningModal: (state, action: PayloadAction<boolean>) => {
-      state.showWarningModal = action.payload;
+    setShowModalType: (state, action: PayloadAction<ModalType>) => {
+      state.showModalType = action.payload;
     },
     setViewMode: (state, action: PayloadAction<ViewMode>) => {
       state.viewMode = action.payload;
@@ -817,7 +855,7 @@ export const {
   setAiCustomizationProperty,
   setModelCardProperty,
   setNewChatSession,
-  setShowWarningModal,
+  setShowModalType,
   setStartingAiCustomizations,
   setStudentChatHistory,
   setUserHasAichatAccess,
