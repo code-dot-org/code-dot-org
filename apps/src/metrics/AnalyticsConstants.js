@@ -444,6 +444,16 @@ const EVENTS = {
   BLOCKLY_SETTING_ON: 'on',
   BLOCKLY_SETTING_OFF: 'off',
   BLOCKLY_APP_TYPE_MUSIC: 'music',
+
+  // Global Edition - Region Switch Confirm events
+  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_SHOWN:
+    'Global Edition Region Switch Confirm Shown',
+  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_CLOSED:
+    'Global Edition Region Switch Confirm Closed',
+  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_ACCEPTED:
+    'Global Edition Region Switch Confirm Accepted',
+  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_REJECTED:
+    'Global Edition Region Switch Confirm Rejected',
 };
 
 const EVENT_GROUP_NAMES = {
