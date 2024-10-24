@@ -241,12 +241,14 @@ And(/^I fill in the sign up form with (in)?valid values for "([^"]*)"$/) do |inv
   password = invalid ? 'Short' : 'ExtraLong'
   email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
   age = "10"
+  us_state = "I live somewhere not listed here"
   steps <<~GHERKIN
     And I type "#{name}" into "#user_name"
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "#{age}" option in dropdown "user_age"
+    And I select the "#{us_state}" option in dropdown "user_us_state"
     And I click ".btn.btn-primary" to load a new page
   GHERKIN
 end
