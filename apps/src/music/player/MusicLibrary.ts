@@ -282,6 +282,18 @@ export default class MusicLibrary {
     );
   }
 
+  getCopyrightInformation() {
+    const authors: string[] = [];
+
+    this.getRestrictedPacks().map(pack => {
+      if (pack.imageAttribution?.author) {
+        authors.push(pack.imageAttribution?.author);
+      }
+    });
+
+    return authors.join(', ') + '.';
+  }
+
   // Return a deep copy of the packs folders only containing folders
   // and sounds currently allowed by the level.
   private getAllowedSounds(): SoundFolder[] {

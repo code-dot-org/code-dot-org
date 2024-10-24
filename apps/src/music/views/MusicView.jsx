@@ -12,6 +12,7 @@ import {
   isReadOnlyWorkspace,
   setIsLoading,
   setPageError,
+  setCopyrightInformation,
 } from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -100,6 +101,7 @@ class UnconnectedMusicView extends React.Component {
     currentlyPlayingBlockIds: PropTypes.array,
     setIsLoading: PropTypes.func,
     setPageError: PropTypes.func,
+    setCopyrightInformation: PropTypes.func,
     initialSources: PropTypes.object,
     levelProperties: PropTypes.object,
     longInstructions: PropTypes.string,
@@ -374,6 +376,9 @@ class UnconnectedMusicView extends React.Component {
     );
 
     this.props.setIsLoading(false);
+
+    // Share copyright information with the component in the footer.
+    this.props.setCopyrightInformation(this.library.getCopyrightInformation());
   };
 
   getIsPlaying = () => {
@@ -796,6 +801,8 @@ const MusicView = connect(
       dispatch(addOrderedFunctions(orderedFunctions)),
     setIsLoading: isLoading => dispatch(setIsLoading(isLoading)),
     setPageError: pageError => dispatch(setPageError(pageError)),
+    setCopyrightInformation: copyrightInformation =>
+      dispatch(setCopyrightInformation(copyrightInformation)),
     updateLoadProgress: value => dispatch(setSoundLoadingProgress(value)),
     setUndoStatus: value => dispatch(setUndoStatus(value)),
     clearCallout: id => dispatch(clearCallout()),
