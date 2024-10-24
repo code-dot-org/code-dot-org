@@ -113,19 +113,21 @@ export default function RubricContainer({
   };
 
   useEffect(() => {
-    const abort = new AbortController();
     if (!!rubricId && !!sectionId) {
       fetchTeacherEvaluationAll(rubricId, sectionId).then(response => {
         if (response.ok) {
-          response.json().then(data => setAllTeacherEvaluationData(data));
+          response.json().then(data => {
+            initializeHasTeacherFeedbackMap(data);
+            setAllTeacherEvaluationData(data);
+          });
         }
       });
     }
-    return () => abort.abort();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [rubricId, sectionId]);
 
-  const [allAiEvaluationStatus, setAllAiEvaluationStatus] = useState(null);
+  const [aiEvalStatusCounters, setAiEvalStatusCounters] = useState(null);
+  const [aiEvalStatusMap, setAiEvalStatusMap] = useState(null);
 
   const fetchAiEvaluationStatusAll = (rubricId, sectionId) => {
     return fetch(
@@ -134,16 +136,44 @@ export default function RubricContainer({
   };
 
   useEffect(() => {
-    const abort = new AbortController();
     if (!!rubricId && !!sectionId) {
       fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
         if (response.ok) {
-          response.json().then(data => setAllAiEvaluationStatus(data));
+          response.json().then(data => {
+            setAiEvalStatusMap(data?.aiEvalStatusMap);
+            delete data.aiEvalStatusMap;
+            setAiEvalStatusCounters(data);
+          });
         }
       });
     }
-    return () => abort.abort();
   }, [rubricId, sectionId]);
+
+  const updateAiEvalStatusForUser = (userId, status) => {
+    setAiEvalStatusMap({
+      ...aiEvalStatusMap,
+      [userId]: status,
+    });
+  };
+
+  const [hasTeacherFeedbackMap, setHasTeacherFeedbackMap] = useState({});
+
+  const initializeHasTeacherFeedbackMap = allTeacherEvaluationData => {
+    const hasFeedbackMap = {};
+    allTeacherEvaluationData.forEach(userEvalData => {
+      if (userEvalData?.user_id) {
+        hasFeedbackMap[userEvalData.user_id] = userEvalData.eval.length > 0;
+      }
+    });
+    setHasTeacherFeedbackMap(hasFeedbackMap);
+  };
+
+  const onSubmitTeacherFeedback = userId => {
+    setHasTeacherFeedbackMap({
+      ...hasTeacherFeedbackMap,
+      [userId]: true,
+    });
+  };
 
   useEffect(() => {
     trySetSessionStorage(rubricTabSessionKey, selectedTab);
@@ -360,6 +390,7 @@ export default function RubricContainer({
             refreshAiEvaluations={fetchAiEvaluations}
             rubric={rubric}
             studentName={studentLevelInfo && studentLevelInfo.name}
+            updateAiEvalStatusForUser={updateAiEvalStatusForUser}
           />
           <RubricContent
             productTour={productTour}
@@ -387,6 +418,8 @@ export default function RubricContainer({
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}
             sectionId={sectionId}
+            hasTeacherFeedbackMap={hasTeacherFeedbackMap}
+            aiEvalStatusMap={aiEvalStatusMap}
           />
           {showSettings && (
             <RubricSettings
@@ -397,7 +430,8 @@ export default function RubricContainer({
               tabSelectCallback={tabSelectCallback}
               reportingData={reportingData}
               allTeacherEvaluationData={allTeacherEvaluationData}
-              allAiEvaluationStatus={allAiEvaluationStatus}
+              aiEvalStatusCounters={aiEvalStatusCounters}
+              setAiEvalStatusMap={setAiEvalStatusMap}
             />
           )}
         </div>
@@ -409,6 +443,7 @@ export default function RubricContainer({
             studentLevelInfo={studentLevelInfo}
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}
+            onSubmitTeacherFeedback={onSubmitTeacherFeedback}
           />
         )}
       </div>
