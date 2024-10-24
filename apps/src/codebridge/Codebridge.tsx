@@ -18,13 +18,14 @@ import {
 } from '@codebridge/types';
 import React, {useEffect, useReducer, useRef} from 'react';
 
-import './styles/cdoIDE.scss';
 import './styles/small-footer-dark-overrides.scss';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 
 import Console from './Console';
 import Workspace from './Workspace';
 import WorkspaceAndConsole from './Workspace/WorkspaceAndConsole';
+
+import moduleStyles from './styles/cdoIDE.module.scss';
 
 type CodebridgeProps = {
   project: ProjectType;
@@ -120,7 +121,7 @@ export const Codebridge = React.memo(
         }}
       >
         <div
-          className="cdoide-container"
+          className={moduleStyles['cdoide-container']}
           style={{
             gridTemplateAreas: gridLayout,
             gridTemplateRows: gridLayoutRows,
