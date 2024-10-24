@@ -515,12 +515,18 @@ export default function EnrollForm(props: EnrollFormProps) {
     "I don't have experience teaching any of these courses",
   ]);
 
-  const roles =
-    props.workshop_course === CSF
-      ? CSF_ROLES
-      : props.workshop_course === ADMIN_COUNSELOR
-      ? ADMIN_COUNSELOR_ROLES
-      : [];
+  const getRoles = (course?: string) => {
+    switch (course) {
+      case CSF:
+        return CSF_ROLES;
+      case ADMIN_COUNSELOR:
+        return ADMIN_COUNSELOR_ROLES;
+      default:
+        return [];
+    }
+  };
+
+  const roles = getRoles(props.workshop_course);
 
   return (
     <form id="enroll-form">
