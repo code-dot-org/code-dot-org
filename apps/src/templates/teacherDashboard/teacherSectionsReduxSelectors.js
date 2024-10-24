@@ -66,7 +66,7 @@ export function sectionUnitName(state, sectionId) {
   return (getRoot(state).sections[sectionId] || {}).courseVersionName;
 }
 
-export function selectedSection(state) {
+export function selectedSectionSelector(state) {
   const selectedSectionId = getRoot(state).selectedSectionId;
   if (selectedSectionId) {
     return getRoot(state).sections[selectedSectionId];
