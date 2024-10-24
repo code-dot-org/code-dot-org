@@ -153,7 +153,10 @@ export function findParentStatementInputTypes(id) {
   if (id === 'preview') {
     return [];
   }
-  const block = Blockly.getMainWorkspace().getBlockById(id);
+
+  // Ensure Blockly is defined for the sake of unit tests.
+  const block = global.Blockly && Blockly.getMainWorkspace().getBlockById(id);
+
   const parentTypes = [];
   function addParentBlockTypes(currentBlock) {
     if (currentBlock) {
