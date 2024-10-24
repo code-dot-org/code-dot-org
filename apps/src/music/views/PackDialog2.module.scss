@@ -70,6 +70,8 @@
     }
 
     .segmentedButtons {
+      flex-shrink: 0;
+
       span {
         user-select: none;
       }

@@ -10,6 +10,12 @@ import i18n from '@cdo/locale';
 import './style.scss';
 import defaultStyle from '@cdo/apps/sharedComponents/accessible-dialogue.module.scss';
 
+// External code can specify additional text to be shown, or clear it again.
+let extraCopyrightText: string | undefined = undefined;
+export const setExtraCopyrightText = (text?: string) => {
+  extraCopyrightText = text;
+};
+
 export interface CopyrightDialogProps {
   isOpen: boolean;
   closeModal: (e: React.ChangeEvent) => void;
@@ -52,6 +58,7 @@ const CopyrightDialog: React.FC<CopyrightDialogProps> = ({
                 'https://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html',
             })}
           />
+          {extraCopyrightText && <p>{extraCopyrightText}</p>}
           <BodyThreeText>{i18n.copyright_builtOnGithub()}</BodyThreeText>
           <Link
             href="https://aws.amazon.com/what-is-cloud-computing"
