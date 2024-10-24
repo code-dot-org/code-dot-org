@@ -1035,6 +1035,7 @@
   minecraft_show:
     title: "Minecraft: The Show Must Go On!"
     desc: "Step into the theater to save the day in The Show Must Go On! Find the missing star, unlock hidden gags, and interact with a cast of mobs. Help the Agent overcome stage fright as you solve fun coding puzzles. Watch your coding skills shine in an epic final performance!"
+    aria_label: "Get started with Minecraft: The Show Must Go On"
 
   afe_page_heading: "Free resources from Amazon Future Engineer"
   afe_page_top_desc: "Enhance your teaching experience with Code.org in partnership with [Amazon Future Engineer](%{afe_url}). Eligible educators from underserved schools can access these benefits at no cost:"
