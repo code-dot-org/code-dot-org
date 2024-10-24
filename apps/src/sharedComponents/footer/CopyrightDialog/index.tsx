@@ -1,9 +1,7 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
 
 import Link from '@cdo/apps/componentLibrary/link';
 import {BodyThreeText, Heading3} from '@cdo/apps/componentLibrary/typography';
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -11,6 +9,12 @@ import i18n from '@cdo/locale';
 
 import './style.scss';
 import defaultStyle from '@cdo/apps/sharedComponents/accessible-dialogue.module.scss';
+
+// External code can specify additional text to be shown, or clear it again.
+let extraCopyrightText: string | undefined = undefined;
+export const setExtraCopyrightText = (text?: string) => {
+  extraCopyrightText = text;
+};
 
 export interface CopyrightDialogProps {
   isOpen: boolean;
@@ -21,10 +25,6 @@ const CopyrightDialog: React.FC<CopyrightDialogProps> = ({
   isOpen,
   closeModal,
 }) => {
-  const extraCopyrightInfo: string | undefined = useSelector(
-    (state: {lab: LabState}) => state.lab.copyrightInformation
-  );
-
   return isOpen ? (
     <AccessibleDialog
       styles={{xCloseButton: defaultStyle.xCloseButton + ' no-mc'}}
@@ -58,7 +58,7 @@ const CopyrightDialog: React.FC<CopyrightDialogProps> = ({
                 'https://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html',
             })}
           />
-          {extraCopyrightInfo && <p>{extraCopyrightInfo}</p>}
+          {extraCopyrightText && <p>{extraCopyrightText}</p>}
           <BodyThreeText>{i18n.copyright_builtOnGithub()}</BodyThreeText>
           <Link
             href="https://aws.amazon.com/what-is-cloud-computing"

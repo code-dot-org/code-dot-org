@@ -12,12 +12,12 @@ import {
   isReadOnlyWorkspace,
   setIsLoading,
   setPageError,
-  setCopyrightInformation,
 } from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
+import {setExtraCopyrightText} from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 import AppConfig from '../appConfig';
@@ -101,7 +101,6 @@ class UnconnectedMusicView extends React.Component {
     currentlyPlayingBlockIds: PropTypes.array,
     setIsLoading: PropTypes.func,
     setPageError: PropTypes.func,
-    setCopyrightInformation: PropTypes.func,
     initialSources: PropTypes.object,
     levelProperties: PropTypes.object,
     longInstructions: PropTypes.string,
@@ -185,7 +184,7 @@ class UnconnectedMusicView extends React.Component {
           this.musicBlocklyWorkspace.dispose();
 
           // Clear any coypright information in the footer.
-          this.props.setCopyrightInformation(undefined);
+          setExtraCopyrightText(undefined);
         }
       });
   }
@@ -381,7 +380,7 @@ class UnconnectedMusicView extends React.Component {
     this.props.setIsLoading(false);
 
     // Share copyright information with the component in the footer.
-    this.props.setCopyrightInformation(this.library.getCopyrightInformation());
+    setExtraCopyrightText(this.library.getCopyrightInformation());
   };
 
   getIsPlaying = () => {
@@ -804,8 +803,6 @@ const MusicView = connect(
       dispatch(addOrderedFunctions(orderedFunctions)),
     setIsLoading: isLoading => dispatch(setIsLoading(isLoading)),
     setPageError: pageError => dispatch(setPageError(pageError)),
-    setCopyrightInformation: copyrightInformation =>
-      dispatch(setCopyrightInformation(copyrightInformation)),
     updateLoadProgress: value => dispatch(setSoundLoadingProgress(value)),
     setUndoStatus: value => dispatch(setUndoStatus(value)),
     clearCallout: id => dispatch(clearCallout()),

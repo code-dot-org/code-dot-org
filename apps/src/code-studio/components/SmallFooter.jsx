@@ -10,10 +10,8 @@ import _ from 'lodash';
 import debounce from 'lodash/debounce';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Provider} from 'react-redux';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
-import {getStore} from '@cdo/apps/redux';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import CopyrightDialog from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
 import I18nDropdown from '@cdo/apps/sharedComponents/footer/I18nDropdown/index';
@@ -185,12 +183,10 @@ export default class SmallFooter extends React.Component {
             />
           )}
           {this.props.copyrightInBase && this.renderCopyright()}
-          <Provider store={getStore()}>
-            <CopyrightDialog
-              isOpen={this.state.menuState === MenuState.COPYRIGHT}
-              closeModal={this.closeCopyrightDialog}
-            />
-          </Provider>
+          <CopyrightDialog
+            isOpen={this.state.menuState === MenuState.COPYRIGHT}
+            closeModal={this.closeCopyrightDialog}
+          />
           {!!this.props.unitYear && yearIsNumeric && (
             <p style={styles.version}>
               <span className="version-caption">{i18n.version()}: </span>

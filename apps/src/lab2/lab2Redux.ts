@@ -77,8 +77,6 @@ export interface LabState {
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
   overrideValidations: Validation[] | undefined;
-  // Copyright information to be displayed in the footer component.
-  copyrightInformation: string | undefined;
 }
 
 const initialState: LabState = {
@@ -91,7 +89,6 @@ const initialState: LabState = {
   levelProperties: undefined,
   isShareView: undefined,
   overrideValidations: undefined,
-  copyrightInformation: undefined,
 };
 
 // Thunks
@@ -386,9 +383,6 @@ const labSlice = createSlice({
     ) {
       state.overrideValidations = action.payload;
     },
-    setCopyrightInformation(state, action: PayloadAction<string | undefined>) {
-      state.copyrightInformation = action.payload;
-    },
   },
   extraReducers: builder => {
     builder.addCase(setUpWithLevel.fulfilled, state => {
@@ -594,7 +588,6 @@ export const {
   setValidationState,
   setIsShareView,
   setOverrideValidations,
-  setCopyrightInformation,
 } = labSlice.actions;
 
 // These should not be set outside of the lab slice.

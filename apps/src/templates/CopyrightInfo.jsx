@@ -31,7 +31,6 @@ const CopyrightInfo = () => {
           openExternalLinksInNewTab
         />
       </div>
-
       <SafeMarkdown
         markdown={i18n.licenseMaterials({link: 'https://code.org/contact'})}
       />
