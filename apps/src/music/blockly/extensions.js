@@ -1,4 +1,4 @@
-import {PATTERN_NUM_EVENTS, PATTERN_NUM_NOTES} from '../constants';
+import {TICKS_PER_MEASURE} from '../constants';
 import MusicLibrary from '../player/MusicLibrary';
 
 import {BlockTypes} from './blockTypes';
@@ -203,12 +203,15 @@ export const fieldPatternsValidator = function () {
    * @returns The modified instrument event value
    */
   patternField?.setValidator(newValue => {
+    const kitNotes = MusicLibrary.getInstance()
+      .kits.find(kit => kit.id === newValue.instrument)
+      .sounds.map(sound => sound.note);
     newValue.events = newValue.events.filter(
       event =>
-        // Remove events with notes that are outside the range of our supported drum sounds.
-        event.note < PATTERN_NUM_NOTES &&
+        // Remove events with notes that not part of the current kit's sounds. (Ex. 1...8)
+        kitNotes.includes(event.note) &&
         // Remove event with ticks that are outside the expected tick range.
-        event.tick <= newValue.length * PATTERN_NUM_EVENTS
+        event.tick <= newValue.length * TICKS_PER_MEASURE
     );
     return newValue;
   });
