@@ -126,18 +126,16 @@
 
   &:has(select.readOnly) {
     select {
-      color: $light_black;
-      border-color: $light_gray_200;
-      background-color: $light_gray_50;
+      @include field-read-only-black-colors;
     }
 
     .dropdownArrowDiv:after {
-      color: $light_black;
+      @include field-read-only-black-colors;
     }
 
     .helperSection,
     .errorSection {
-      color: $light_black;
+      @include field-read-only-black-colors;
     }
   }
 }
@@ -208,18 +206,16 @@
 
   &:has(select.readOnly) {
     select {
-      color: $light_black;
-      border-color: $light_gray_200;
-      background-color: $light_gray_50;
+      @include field-read-only-black-colors;
     }
 
     .dropdownArrowDiv:after {
-      color: $light_black;
+      @include field-read-only-black-colors;
     }
 
     .helperSection,
     .errorSection {
-      color: $light_black;
+      @include field-read-only-black-colors;
     }
   }
 }
@@ -284,18 +280,16 @@
 
   &:has(select.readOnly) {
     select {
-      color: $light_white;
-      border-color: $light_gray_700;
-      background-color: $light_gray_900;
+      @include field-read-only-white-colors;
     }
 
     .dropdownArrowDiv:after {
-      color: $light_white;
+      @include field-read-only-white-colors;
     }
 
     .helperSection,
     .errorSection {
-      color: $light_white;
+      @include field-read-only-white-colors;
     }
   }
 }
