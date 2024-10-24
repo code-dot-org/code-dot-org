@@ -7,9 +7,11 @@ $assistant-color: $brand_primary_light;
 
 %message {
   @extend %markdown-styles;
+  display: flex;
   padding: 12px;
-  overflow: hidden;
-  white-space: pre-line;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
   border-start-start-radius: $message-border-radius;
   border-start-end-radius: $message-border-radius;
 }
@@ -44,6 +46,12 @@ $assistant-color: $brand_primary_light;
     @include body-three;
     margin: 0;
   }
+}
+
+.messageWithChildren {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .message-user {
@@ -85,7 +93,8 @@ $assistant-color: $brand_primary_light;
 .botIconContainer {
   flex: 0 0 32px;
   height: 32px;
-  background: $assistant-color;
+  width: 32px;
+  background: $light-black;
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -93,8 +102,8 @@ $assistant-color: $brand_primary_light;
 }
 
 .botIcon {
-  width: 19.25px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   flex-shrink: 0;
 }
 
