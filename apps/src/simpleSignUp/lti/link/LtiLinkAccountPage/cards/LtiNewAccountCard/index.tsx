@@ -4,7 +4,7 @@ import React, {useContext, useRef, useState} from 'react';
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   Card,
@@ -31,6 +31,11 @@ const LtiNewAccountCard = () => {
       lms_name: ltiProviderName,
       user_type: userType,
     };
+    analyticsReporter.sendEvent(
+      EVENTS.SIGN_UP_STARTED_EVENT,
+      {},
+      PLATFORMS.BOTH
+    );
     analyticsReporter.sendEvent(
       'lti_new_account_click',
       eventPayload,
