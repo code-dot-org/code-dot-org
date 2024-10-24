@@ -2142,6 +2142,7 @@ ActiveRecord::Schema.define(version: 2024_10_24_171901) do
     t.datetime "declined_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["project_id"], name: "index_submitted_projects_on_project_id", unique: true
   end
 
   create_table "survey_results", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|

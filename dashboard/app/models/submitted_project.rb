@@ -9,5 +9,9 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
+# Indexes
+#
+#  index_submitted_projects_on_project_id  (project_id) UNIQUE
+#
 class SubmittedProject < ApplicationRecord
 end

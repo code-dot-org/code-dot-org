@@ -7,5 +7,7 @@ class CreatedSubmittedProjects < ActiveRecord::Migration[6.1]
       t.datetime :declined_at
       t.timestamps
     end
+
+    add_index :submitted_projects, :project_id, unique: true
   end
 end
