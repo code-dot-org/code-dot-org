@@ -32,6 +32,8 @@ interface SkipFrame {
   randomIndex: number;
 }
 
+const MaxNumberEvents = 1000;
+
 /**
  * A {@link Sequencer} used in the Simple2 (functions) block mode.
  */
@@ -46,6 +48,8 @@ export default class Simple2Sequencer extends Sequencer {
   private startMeasure: number;
   private inTrigger: boolean;
 
+  private currentEventCount: number;
+
   constructor(
     private readonly metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {
@@ -59,6 +63,8 @@ export default class Simple2Sequencer extends Sequencer {
     this.uniqueInvocationIdUpTo = 0;
     this.startMeasure = 1;
     this.inTrigger = false;
+
+    this.currentEventCount = 0;
   }
 
   /**
@@ -67,6 +73,7 @@ export default class Simple2Sequencer extends Sequencer {
   clear() {
     this.newSequence();
     this.functionMap = {};
+    this.currentEventCount = 0;
   }
 
   getLastMeasure(): number {
@@ -314,6 +321,12 @@ export default class Simple2Sequencer extends Sequencer {
   }
 
   private addNewEvent<T extends PlaybackEvent>(event: T) {
+    if (this.currentEventCount >= MaxNumberEvents) {
+      console.log(`Exceeded ${MaxNumberEvents} events`);
+      return;
+    } else {
+      this.currentEventCount++;
+    }
     const currentFunctionId = this.getCurrentFunctionId();
     if (currentFunctionId === null) {
       this.metricsReporter.logWarning('Invalid state: no current function ID');
