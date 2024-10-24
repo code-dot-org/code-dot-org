@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2024-10-23T14:27:39.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "gen-ai-attention-overview",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_24",
+    "encrypted": "false",
+    "long_instructions": "# Attention\r\n\r\n## Lesson Highlight: Activity Overview Videos\r\n\r\n#### In **Lesson 8: Attention Is All You Need** students explore how words can have multiple meanings, and how both humans and Gen AI determine the intended meaning based on context clues in the sentence.\r\n\r\n#### This lesson, as well as a few others in this Unit, has an **Activity Overview Video** to help you visualize how the activity will look before you try it with students.\r\n\r\n#### Watch the video below to preview the Meaning from Context Activity. You may want to also open up the <a href=\"https://docs.google.com/document/d/1YXLtaVWarfWdKeNzW0k_mERvtI4fPQwW1dPs9xe_IUE/edit?tab=t.0#heading=h.atd6hhf4lpiu\" target=\"blank\" rel=\"noopener noreferrer\">Activity Guide</a> and/or <a href=\"https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/8\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> to follow along with the video.\r\n\r\n#### You'll find the links to these videos in the *For the teachers* section of the Lesson Plan.\r\n\r\n## Lesson Preview\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">🔎 Lesson 8: Attention Is All You Need\r\n</summary>\r\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\r\n    <p>\r\n<img src=\"https://images.code.org/ffb88967c446f891ff869c2399d66624-d42f141647823ec967845edf94706034-Slide30.PNG\" alt=\"definition of attention\" width=\"300px\" style=\"float:left; margin: 20px 20px 20px 20px;\">\r\n\r\n#### **Question of the Day:** How does a language model determine the meaning of words within a sentence?\r\n\r\n#### **Lesson Overview:**\r\n\r\n#### This lesson delves into the ambiguity of language and the necessity of context for meaning. Students first discuss examples of ambiguous language, followed by an activity where they brainstorm words with multiple meanings and craft sentences to clarify their intended meanings through context. After trading papers with a partner, students guess the intended meanings, identifying which words provided the most context. Reflecting on this, the lesson connects the activity to how language models use embeddings for word meanings and neural networks for relational meaning, introducing the concept of Attention as the process of updating word meanings based on context.\r\n\r\n#### **Students will be able to:**\r\n* #### Construct examples of words and sentences that require context clues to understand fully\r\n* #### Explain how embeddings and neural networks are used in the attention process\r\n\r\n### <a href=\"https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/8\" target=\"blank\" rel=\"noopener noreferrer\">Full Lesson Plan</a>\r\n</p></div>\r\n</details>"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-10-23T14:27:39.669+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-gen-ai-foundations-overview_04_2024\\\"\"],\"cloned_from\":\"self-paced-pl-gen-ai-foundations-overview_04_2024\"},{\"changed_at\":\"2024-10-23 14:35:47 +0000\",\"changed\":[\"video_key\",\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>
