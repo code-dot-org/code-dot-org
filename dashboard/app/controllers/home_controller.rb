@@ -47,7 +47,6 @@ class HomeController < ApplicationController
           country: request.country_code,
           locale: params[:locale],
           region: ge_region,
-          prevRegion: helpers.ge_region,
         }
       )
     end

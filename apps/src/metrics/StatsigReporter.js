@@ -3,6 +3,7 @@ import Statsig from 'statsig-js';
 
 import logToCloud from '@cdo/apps/logToCloud';
 import experiments from '@cdo/apps/util/experiments';
+import {getGlobalEditionRegion} from '@cdo/apps/util/globalEdition';
 
 import {
   getEnvironment,
@@ -21,6 +22,7 @@ class StatsigReporter {
     let user = {
       custom: {
         enabledExperiments: experiments.getEnabledExperiments(),
+        geRegion: getGlobalEditionRegion(),
       },
     };
     const user_id_element = document.querySelector('script[data-user-id]');
