@@ -54,6 +54,8 @@ const FinishStudentAccount: React.FunctionComponent<{
   const [isGdprLoaded, setIsGdprLoaded] = useState(false);
   const [userReturnTo, setUserReturnTo] = useState('/home');
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   useEffect(() => {
     const fetchGdprData = async () => {
       const urlParams = new URLSearchParams(window.location.search);
@@ -164,6 +166,7 @@ const FinishStudentAccount: React.FunctionComponent<{
 
   const submitStudentAccount = async () => {
     sendFinishEvent();
+    setIsSubmitting(true);
 
     const signUpParams = {
       new_sign_up: true,
@@ -341,6 +344,7 @@ const FinishStudentAccount: React.FunctionComponent<{
               (isParent && parentEmail === '') ||
               !gdprValid
             }
+            isPending={isSubmitting}
           />
         </div>
       </div>

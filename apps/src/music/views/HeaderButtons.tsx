@@ -9,6 +9,7 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getBaseAssetUrl} from '../appConfig';
+import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import {AnalyticsContext} from '../context';
 import musicI18n from '../locale';
 import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
@@ -112,7 +113,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
 
   const onClickStartOver = useCallback(() => {
     // Hide any custom fields that are showing.
-    Blockly.getMainWorkspace().hideChaff();
+    MusicBlocklyWorkspace.hideChaff();
 
     if (dialogControl) {
       dialogControl.showDialog({

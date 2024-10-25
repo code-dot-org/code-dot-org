@@ -41,6 +41,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const [showGDPR, setShowGDPR] = useState(false);
   const [isGdprLoaded, setIsGdprLoaded] = useState(false);
   const [userReturnTo, setUserReturnTo] = useState('/home');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     const fetchGdprData = async () => {
@@ -89,6 +90,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
 
   const submitTeacherAccount = async () => {
     sendFinishEvent();
+    setIsSubmitting(true);
 
     const signUpParams = {
       new_sign_up: true,
@@ -219,6 +221,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
               title: 'arrow-right',
             }}
             disabled={name === '' || !gdprValid}
+            isPending={isSubmitting}
           />
         </div>
       </div>

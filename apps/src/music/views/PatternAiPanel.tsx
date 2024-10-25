@@ -274,11 +274,6 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     onChange(currentValue);
   }, [onChange, currentValue]);
 
-  // Report analytics when the panel first opens.
-  useEffect(() => {
-    MusicRegistry.analyticsReporter.onOpenPatternAiPanel();
-  }, []);
-
   useEffect(() => {
     if (!MusicRegistry.player.isInstrumentLoaded(currentValue.instrument)) {
       setIsLoading(true);
@@ -319,6 +314,11 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     }
   }, [generateState, currentValue.events, userCompletedTask, aiTemperature]);
 
+  const stopPreview = useCallback(() => {
+    MusicRegistry.player.cancelPreviews();
+    setCurrentPreviewTick(0);
+  }, []);
+
   const startPreview = useCallback(
     (value: InstrumentEventValue) => {
       MusicRegistry.player.previewNotes(
@@ -334,14 +334,19 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     [setCurrentPreviewTick]
   );
 
-  const stopPreview = useCallback(() => {
-    MusicRegistry.player.cancelPreviews();
-    setCurrentPreviewTick(0);
-  }, []);
-
   const playPreview = useCallback(() => {
     startPreview(currentValue);
   }, [startPreview, currentValue]);
+
+  // Report analytics when the panel first opens.
+  useEffect(() => {
+    MusicRegistry.analyticsReporter.onOpenPatternAiPanel();
+
+    // On unmount.
+    return () => {
+      stopPreview();
+    };
+  }, [stopPreview]);
 
   const delay = (time: number) => {
     return new Promise(res => {
