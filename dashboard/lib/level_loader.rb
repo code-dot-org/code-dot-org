@@ -6,6 +6,19 @@ class LevelLoader
     import_levels(Policies::LevelFiles.level_file_glob(level_name, root_dir))
   end
 
+  #
+  # Loads a group of level files from disk and imports them into the database.
+  #
+  # - Level files not found in the database will be created.
+  # - Level files found in the database will be updated if they don't match the
+  #   file as loaded from disk.
+  #
+  # @param [String] level_file_glob - dashboard-relative, wildcard-friendly path
+  #   to one or more .level files.
+  #   Examples:
+  #     'config/scripts/levels/K-1 Bee 2.level'
+  #     'config/scripts/**/*.level'
+  #
   def self.import_levels(level_file_glob)
     level_file_paths = file_paths_from_glob(level_file_glob)
 
@@ -81,7 +94,7 @@ class LevelLoader
       # callbacks automatically, because someone modifying the level edit
       # experience of any individual level could add an after_save callback
       # which modifies the DB and which they expect to get run only on
-      # levelbuilder. so, just run the callbacks we're sure we need instead.\
+      # levelbuilder. so, just run the callbacks we're sure we need instead.
       changed_levels.each_slice(1000) do |changed_levels_batch|
         levels = Level.
           where(id: changed_levels_batch).
