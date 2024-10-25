@@ -269,6 +269,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
         )}
         color={'white'}
         size={'s'}
+        id={'uitest-validate-button'}
       />
     );
   };

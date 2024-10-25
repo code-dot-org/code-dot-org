@@ -4,18 +4,25 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "9-12 Special topics",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_course": true,
       "is_migrated": true,
       "show_calendar": true,
+      "topic_tags": [
+        "ai"
+      ],
+      "tts": true,
       "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "customizing-llms",
-    "serialized_at": "2024-10-23 23:33:32 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-10-24 22:42:10 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -63,17 +70,19 @@
   ],
   "lessons": [
     {
-      "key": "(Optional) Foundations in a Day",
-      "name": "(Optional) Foundations in a Day",
+      "key": "Introduction to Generative AI",
+      "name": "(Optional) Introduction to Generative AI",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "**Special Note for the Pilot:** This is an optional lesson that will introduce the key learnings from the Foundations of Generative AI unit in a single day, using new videos and the graphic organizer to catch up classrooms who may decide to skip the first unit. It will be released with the full curriculum when it launches and these new videos are ready.\n\nTherefore, we will _not_ be piloting this lesson. However, we've left it in this unit so that the lesson numbers will match in the slide decks and to help us plan behind-the-scenes. For now, you can skip this lesson and start the pilot with Lesson 2."
+        "overview": "This lesson introduces the learning goals focused on artificial intelligence (AI), transitioning into generative AI. It begins with a discussion on the impact of past technological innovations on society. Students then explore the concept of generative AI through the lens of someone familiar only with its hype, aiming to foster understanding and responsible engagement with AI technology. A key part of the lesson is the introduction of the Input, Storage, Processing, Output (ISPO) framework, essential for understanding generative AI's workings.",
+        "preparation": "- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
+        "student_overview": "Explore some of the key themes from this unit, like how we being informed about Artificial Intelligence can help us make better decisions on when and how to use it."
       },
       "seeding_key": {
-        "lesson.key": "(Optional) Foundations in a Day",
+        "lesson.key": "Introduction to Generative AI",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "customizing-llms-2024"
       }
@@ -188,7 +197,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "This **Synthesis** lesson focuses on applying retrieval and system prompting to three complex user scenarios. Students begin by brainstorming and planning how to use these strategies to achieve user goals effectively. They will also explore methods for testing and evaluating chatbots to prevent potential harms. After planning, students will design chatbots tailored to each scenario, deciding strategically between using system prompts or retrieval. The lesson concludes with a reflection on the appropriate use of retrieval versus system prompting and revisits previous tasks, allowing students to apply their new insights to enhance their earlier work.",
+        "overview": "This **Synthesis** lesson focuses on applying retrieval and system prompting to two complex user scenarios. Students begin by brainstorming and planning how to use these strategies to achieve user goals effectively. They will also explore methods for testing and evaluating chatbots to prevent potential harms. After planning, students will design chatbots tailored to each scenario, deciding strategically between using system prompts or retrieval. The lesson concludes with a reflection on the appropriate use of retrieval versus system prompting and revisits previous tasks, allowing students to apply their new insights to enhance their earlier work.",
         "preparation": "- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
       "seeding_key": {
@@ -336,13 +345,43 @@
   ],
   "lesson_activities": [
     {
-      "key": "7b974e5c-a568-4f96-ac74-2042f1dd9cbb",
+      "key": "7b623d0e-6113-496d-98d2-9c5733b2a3e3",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "7b974e5c-a568-4f96-ac74-2042f1dd9cbb",
-        "lesson.key": "(Optional) Foundations in a Day",
+        "lesson_activity.key": "7b623d0e-6113-496d-98d2-9c5733b2a3e3",
+        "lesson.key": "Introduction to Generative AI",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "customizing-llms-2024"
+      }
+    },
+    {
+      "key": "1c3ee4cf-e696-4f4c-b7a4-a3d22592ef63",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1c3ee4cf-e696-4f4c-b7a4-a3d22592ef63",
+        "lesson.key": "Introduction to Generative AI",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "customizing-llms-2024"
+      }
+    },
+    {
+      "key": "b2da7e3e-4b61-4f9b-a861-6e7dbf1d106d",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b2da7e3e-4b61-4f9b-a861-6e7dbf1d106d",
+        "lesson.key": "Introduction to Generative AI",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "customizing-llms-2024"
       }
@@ -821,19 +860,6 @@
       }
     },
     {
-      "key": "9fe450c4-7259-4c07-9697-99b5266d2949",
-      "position": 6,
-      "properties": {
-        "name": "Post-Pilot Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "9fe450c4-7259-4c07-9697-99b5266d2949",
-        "lesson.key": "Project: Create a Personal Chatbot",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "customizing-llms-2024"
-      }
-    },
-    {
       "key": "19002c2e-436a-4c01-b6a5-ce00d8aed130",
       "position": 1,
       "properties": {
@@ -1071,13 +1097,93 @@
   ],
   "activity_sections": [
     {
-      "key": "c6f358ce-3833-406f-81b9-2e5b633890e2",
+      "key": "4a3fb0ed-35f4-451b-8c94-06d2a3eedca2",
       "position": 1,
       "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/9fe9b7fd04d9b8b4473e348eaa2a9b1b-image-1712528172225.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What’s an example of a significant technological innovation from the last century? For example: think of something that didn’t exist when your grandparents were your age, but you use everyday now.\n\t\t<br />\n\t\t<br />Have students discuss in small groups before regrouping as a full group. Ask several students from around the class to share what they said, and let students raise their hands or quietly snap their fingers if they said the same thing or something similar.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This prompt is intentionally open-ended to invite all students into the conversation and offer some kind of technological innovation. Some potential answers might be the internet, social media, driverless cars, smartphones, and (of course) artificial intelligence.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/58f128524e39809fada89d81d15b253f-image-1712528174091.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Many devices we use today were once marvels of modern technology. For example, this picture shows Margaret Hamilton in front of the source code used in the computers for the Apollo 11 space mission. At the time, computers were an exciting innovation set to fundamentally change how we live and work\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Fast forward to today, and the same conversation is happening around artificial intelligence. For example, this picture shows Mira Murati, the chief technology officer of OpenAI, talking about their chatbot ChatGPT, which is a special kind of “generative” artificial intelligence. Just like computers many years go, we’re having these same conversations about the impact of artificial intelligence and its potential impact on society and how we live and work.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Intentional Foreshadowing** - The comparison on this slide between the computer and artificial intelligence is very intentional, as we will ultimately use the same framing for understanding how a computer works to also understand how generative AI works. Making this kind of association early and often is important to help avoid anthropomorphizing artificial intelligence or making it seem impossible to understand. If we are capable of understanding a computer and seeing it as a machine (and not a human), then we are capable of doing the same with artificial intelligence."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "c6f358ce-3833-406f-81b9-2e5b633890e2",
-        "lesson_activity.key": "7b974e5c-a568-4f96-ac74-2042f1dd9cbb"
+        "activity_section.key": "4a3fb0ed-35f4-451b-8c94-06d2a3eedca2",
+        "lesson_activity.key": "7b623d0e-6113-496d-98d2-9c5733b2a3e3"
+      }
+    },
+    {
+      "key": "5c71a307-e940-4fae-9d10-44e09bf022eb",
+      "position": 2,
+      "properties": {
+        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/82c2b01d30b35e86d51d83b864663dfd-image-1712528175990.png\"></td>\n    <td style=\"width: 75%\">\n<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today we’ll start to explore the impact generative AI can have on how we live and work, and uncover some of the key themes we’ll see throughout this unit.<br />\n<br />\n      <strong>Question of the Day:</strong> How can we begin to understand Generative AI’s impact on how we live and work?\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Questions of the Day** - These are questions that, by the end of the lesson, students should (hopefully) be able to answer. It’s presented in the warm-up as a way to frame the content of the lesson in a student-friendly way. It’s also provided in the wrap-up if you would like to use the Question of the Day as an additional exit ticket or student journal response. For schools or districts that have requirements around student-friendly objectives or daily formative assessments, these questions can help meet these requirements or meet other external needs.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5c71a307-e940-4fae-9d10-44e09bf022eb",
+        "lesson_activity.key": "7b623d0e-6113-496d-98d2-9c5733b2a3e3"
+      }
+    },
+    {
+      "key": "9d5c5d3d-a339-49e3-afd8-b18aeb8bd72a",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/800c805f035b8cb4d2c1094f4aec62b5-image-1712533709896.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Show students an example of a text-based generative AI. There are a few options for how to do this:\n\t\t<br />\n\t\t<br />- Option 1: If you are able to access a large-language model at school, such as ChatGPT or Google Gemini or Claude.ai, then you can demonstrate the model for the class. You should come up with 3-4 prompts you plan to demonstrate and test them ahead of time, then run them in front of the class. You can also take questions from the audience, but consider finding a way to preview the responses before students see them to make sure they are appropriate.\n\t\t<br />- Option 2: Play the video embedded in the slides, which shows 3 prompts being given to ChatGPT. Paused the video if needed to look closely at the types of responses being given.\n\t\t<br />- Option 3: Find another video of a person using ChatGPT in an interesting and fascinating way that you think will resonate with your students. Paused the video if needed to look closely at the types of responses being given.\n\t\t<br />\n\t\t<br />Avoid examples with image-based generative AI (like deepfakes or DALL-E) since these technologies are not covered in this unit.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In many ways, generative AI seems like magic - they’re able to create results that seem to mimic human intelligence and perform incredible tasks.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Don’t Skip the Demo** - It can be easy to assume everyone’s heard the hype around generative AI and seen them in action, but this risks isolating the students who may not have seen this technology or are less familiar with it than their peers. Showing one of these demos, even if it’s just the shorter video, gives everyone the same shared experience that you can reference throughout the unit."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9d5c5d3d-a339-49e3-afd8-b18aeb8bd72a",
+        "lesson_activity.key": "1c3ee4cf-e696-4f4c-b7a4-a3d22592ef63"
+      }
+    },
+    {
+      "key": "bbeb9549-7179-4199-ab42-eb3210392c3a",
+      "position": 2,
+      "properties": {
+        "description": "\n<table>\n\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/ebd9e1600ab1db5cb15fd65191454e8f-image-1712533935405.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Let’s start by discussing Artificial Intelligence, or AI, in general. AI is a technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions. Some examples include\n<br />\n\t\t<br />- When you call a help line or a store and you talk to a robot for a brief moment before speaking to a human - this kind of AI understands human language\n\t\t<br />- A robot that’s learned to play chess and can beat a human opponent - this robot recognizes patterns from previous games to learn the optimal strategy\n\t\t<br />- A robot that can navigate around your house and avoid your furniture - this robot uses sensors to make decisions\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What are other examples of AI you can think of?\n\t\t<br />\n\t\t<br />Have students discuss with a neighbor before sharing with the class. Consider asking students to share something interesting they heard their partner say, rather than sharing their own idea.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This is a purposefully open-ended discussion - students will share a variety of answers. For example, students may recall examples from movies or television, or they will reference AI technologies on their devices (like image filters), or they may reference recommendation systems. Try to involve as many student voices in the conversation as you can before continuing to the next slide.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Vocabulary Management** - Artificial Intelligence may seem ubiquitous, but we don’t want to assume everyone in the room has heard this term before so we introduce it here so everyone starts with the same foundation. However, this sometimes introduces tension with vocabulary management - how should students keep track of vocabulary in this unit so they can reference it when needed? \n\nIf you don't have a system for managing vocabulary, you might consider the following strategies:\n- Create a Word Wall or posters for these vocabulary terms and hang them up in your classroom as they are introduced throughout the unit. \n- Provide a vocabulary handout that is updated after lessons and lives near desks or computers so students can reference as needed."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bbeb9549-7179-4199-ab42-eb3210392c3a",
+        "lesson_activity.key": "1c3ee4cf-e696-4f4c-b7a4-a3d22592ef63"
+      }
+    },
+    {
+      "key": "32a2d2ad-c881-4a7b-956b-fd19d0d1847b",
+      "position": 3,
+      "properties": {
+        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/883616aaee713b1758a84c49e9ef5b75-image-1712533719551.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> There are different types of artificial intelligences that focus on different things. One important type is called Machine Learning - let’s watch a video to learn a bit more. After the video, we’ll reflect on which of the examples we just named are also machine learning examples.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=KHbwOetbmbs\">How AI Works: Machine Learning video</a>\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Which examples from before are machine learning?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students won’t have enough context about machine learning to give perfect answers here - instead, help students make connections between things they may have mentioned and examples they saw in the video, such as recommendation algorithms or image recognition / filters. If students ask “is this an example of machine learning?”, it’s okay to say we’re not sure and suggest students do some research if they’re interested. If needed, you can skip to 1:06 in the video where it shows a list of various machine learning tasks. Once a few students have reflected on different machine learning tasks, continue to the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/feb76ce456f872d5673d9efd3951e6b1-image-1712533721488.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This hierarchy of different types of AI goes even deeper!\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Deep Learning is a special type of machine learning that uses a tool called Neural Networks, which we’ll learn more about in this unit. A few examples of Deep Learning are cancer detection or email classification, where the AI system is given an image or piece of text and has to decide the best way to classify it.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> But what if we flipped this around? What if we gave an AI system a certain classification - like “write me an email that sounds junk mail” - and asked it to generate the text instead?\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This is the latest evolution in AI technology, called Generative AI. It works incredibly similar to these other Deep Learning systems, just in reverse - generating new text or image or video rather than trying to classify it.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/5b191686ab53b076a4c57469e16ccaef-image-1712533728260.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Let’s hear a little bit about some of the advances in generative AI from the people who are actively working on it!\n\t\t<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://drive.google.com/file/d/1aMWH4YppBkJqYbNYfY-jpTbVc6-BPE35/view?usp=drive_link\">Introduction to Large Language Models (LLMs)</a> video\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is a Large Language Model?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> The answer to this flies by in the video and is easy to miss, so students aren’t expected to answer it perfectly at this point. Instead, this question sets up for the next slide where we introduce a formal definition. For the discussion, have students share with a neighbor, but don’t have students share as a full group. Instead, continue to the next slide where you can ask how closely their definitions here align with the definition we’ll use as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Let’s see how well your definitions match up with the one we’ll use in this class\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/a8e03e6a8b21fe6300a54fe6a8eeed13-image-1712533729774.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> First let’s define one of the words in this phrase: model. An AI model is a computer program designed to make a decision, like deciding whether or not to unlock your phone based on your facial ID. Regular machine learning models are designed to solve only one type of problem, and the data they need has to be very specialized for the task it’s designed to complete.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Then we have large-language models, which is a computer program that analyzes large amounts of raw human-created data to the point where it can represent and recreate new data to perform a variety of tasks.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> The two reasons large-language models are such a big technological breakthrough is the capacity to look at the raw human-created data and perform a variety of different tasks with the same model - like passing lawyer exams and science exams with the same model\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/51784b8cd1bcf3748b2ab9b450dfec3f-image-1712533732085.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We also have our first clue to help us understand how all the magic of a large-language model works: the fact that it’s a computer program!\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Computers are all around us - in our pockets, in our cars, in schools - even if they look different. What makes something a computer - what do they all have in common?\n\t\t<br />\n\t\t<br />Have students share with their neighbors, but don’t regroup for a full-group share-out. Instead, watch the video on the next slide before debriefing.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/9c97f5ec8808e2851d34172aeec40820-image-1712533733940.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=sLIJNEIE0Rs\">What Makes a Computer a Computer</a> video?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What makes a computer a computer? Is this similar to the answers you discussed?\n\t\t<br />\n\t\t<br />Have students share out as a full class\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should have picked up that a computer is made up of Input <>Storage <> Processing <> Output components. When comparing to the earlier discussion, they may make comparisons to these structures in their answers - for example, all computers have some kind of keyboard or touch screen interface (ie: input), or all computers can perform calculation of some kind (processing).\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/eefc75825b51bee1004865988d437637-image-1712533736549.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This is another key theme in this unit - we can understand large-language models by breaking it into pieces - input, storage, processing, output - and understanding each piece.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> And using this information, we’ll have a better understanding of the opportunities and limitations of generative AI and be better equipped to talk to our imaginary friends who only believe the hype.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/75c3c44efe6424e0b439a2845b828dcd-image-1712533739083.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Based on the generative AI demo we saw earlier, what might you predict is the input, storage, processing, and output for a chatbot language model?\n\t\t<br />\n\t\t<br />Have students discuss in groups before sharing as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This is an open-ended foreshadowing question just to help students start making predictions and thinking about what may come in later lessons. Some students might already think the input are words, like the thing you type into the chatbot, and the output is the new paragraph that the chatbot generates. Students aren’t expected to have correct answers here especially around storage and processing - it’s just a prediction that can be returned to in later lessons.\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "32a2d2ad-c881-4a7b-956b-fd19d0d1847b",
+        "lesson_activity.key": "1c3ee4cf-e696-4f4c-b7a4-a3d22592ef63"
+      }
+    },
+    {
+      "key": "5fc36608-e368-46f0-ae90-8b3e87dcd5c1",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/7997b73fa306224c4d0eb50b0e67edf3-image-1712533746261.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students answer the following questions on their own\n<br />\n\t\t<br />- What is something new you learned about AI today?\n\t\t<br />- What is a question you still have about AI?\n\t\t<br />\n\t\t<br />Consider collecting these as an exit ticket to review what knowledge and questions students have coming into this unit.\n\t\t<br />\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/b95b3a0278a06410f89b7e055984d6a3-Gen AI Slide 24.png\"></td>\n    <td style=\"width: 75%\">\n      Question of the Day: How can we begin to understand Generative AI’s impact on how we live and work?\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/079ce1b04c2bc31173892495957f65c2-Gen AI Slide 25.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> The key vocabulary from this lesson is provided on this slide and in the lesson plan.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "5fc36608-e368-46f0-ae90-8b3e87dcd5c1",
+        "lesson_activity.key": "b2da7e3e-4b61-4f9b-a861-6e7dbf1d106d"
       }
     },
     {
@@ -2183,19 +2289,8 @@
       }
     },
     {
-      "key": "b5c92faa-d24b-48b2-a524-6739b0256b06",
-      "position": 4,
-      "properties": {
-        "progression_name": "User Story #3: Alex Martinez"
-      },
-      "seeding_key": {
-        "activity_section.key": "b5c92faa-d24b-48b2-a524-6739b0256b06",
-        "lesson_activity.key": "8f64691b-7981-42a1-a442-8663f3700a15"
-      }
-    },
-    {
       "key": "1c0b5d70-e8d2-48fa-90e3-7b1a972b51ad",
-      "position": 5,
+      "position": 4,
       "properties": {
         "progression_name": "Check-In"
       },
@@ -2206,12 +2301,23 @@
     },
     {
       "key": "23beb297-c945-457c-b717-a9a3f148803d",
-      "position": 6,
+      "position": 5,
       "properties": {
         "progression_name": "Show What You Know"
       },
       "seeding_key": {
         "activity_section.key": "23beb297-c945-457c-b717-a9a3f148803d",
+        "lesson_activity.key": "8f64691b-7981-42a1-a442-8663f3700a15"
+      }
+    },
+    {
+      "key": "b5c92faa-d24b-48b2-a524-6739b0256b06",
+      "position": 6,
+      "properties": {
+        "progression_name": "(Optional) User Story #3: Alex Martinez"
+      },
+      "seeding_key": {
+        "activity_section.key": "b5c92faa-d24b-48b2-a524-6739b0256b06",
         "lesson_activity.key": "8f64691b-7981-42a1-a442-8663f3700a15"
       }
     },
@@ -2574,10 +2680,33 @@
       "key": "7d8e6fb0-0d93-4691-96cd-ddb5de433a26",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24/export/png?id=1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24&pageid=g1413e1213c5_0_216\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the <a href=\"https://docs.google.com/document/d/1Nyz1VFJ4ApBGNc-G3AD_spUOIQb_NC41Zu_NOMcZMS0/edit\" target=\"_blank\">Project Guide - Demystifying AI</a>\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24/export/png?id=1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24&pageid=g2dbaca4c0de_0_10\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the overview of the project. Students can read individually, or you can read the overview as a class.\n\t\t<br />\n\t\t<br />Students will be making a chatbot to speak on a subject or topic they care about and have deep knowledge of. This chatbot can act as their “agent” to answer questions and educate the world on your particular topic.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24/export/png?id=1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24&pageid=g2dbaca4c0de_0_27\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 1: Prepare your Topic\n\t\t<br />\n\t\t<br />Students will need to:\n\t\t<br />A) Decide on the topic you would like to design your chatbot around. \n\t\t<br />B) Identify the specific knowledge you will add to your chatbot\n\t\t<br />C) Decide on the specific guidance you will give to your chatbot\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Give ample time for students to decide on their topic and begin planning how they will develop their chatbot. This section of the guide will help students later when they need to make decisions about their system prompt, retrieval, and temperature.\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24/export/png?id=1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24&pageid=g1413e1213c5_0_216\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the <a href=\"https://docs.google.com/document/d/1Nyz1VFJ4ApBGNc-G3AD_spUOIQb_NC41Zu_NOMcZMS0/edit\" target=\"_blank\">Project Guide - Demystifying AI</a>\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24/export/png?id=1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24&pageid=g2dbaca4c0de_0_10\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the overview of the project. Students can read individually, or you can read the overview as a class.\n\t\t<br />\n\t\t<br />Students will be making a chatbot to speak on a subject or topic they care about and have deep knowledge of. This chatbot can act as their “agent” to answer questions and educate the world on your particular topic.\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "7d8e6fb0-0d93-4691-96cd-ddb5de433a26",
+        "lesson_activity.key": "5428b630-7ffb-404a-a267-65b7852814db"
+      }
+    },
+    {
+      "key": "645bcddb-ed11-4a88-a19a-8eb88bc7b3b4",
+      "position": 2,
+      "properties": {
+        "description": "### Have students explore example projects",
+        "progression_name": "Example Projects"
+      },
+      "seeding_key": {
+        "activity_section.key": "645bcddb-ed11-4a88-a19a-8eb88bc7b3b4",
+        "lesson_activity.key": "5428b630-7ffb-404a-a267-65b7852814db"
+      }
+    },
+    {
+      "key": "eac435b9-ad7b-4139-a74a-5982889e8dfd",
+      "position": 3,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24/export/png?id=1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24&pageid=g2dbaca4c0de_0_27\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 1: Prepare your Topic\n\t\t<br />\n\t\t<br />Students will need to:\n\t\t<br />A) Decide on the topic you would like to design your chatbot around. \n\t\t<br />B) Identify the specific knowledge you will add to your chatbot\n\t\t<br />C) Decide on the specific guidance you will give to your chatbot\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Give ample time for students to decide on their topic and begin planning how they will develop their chatbot. This section of the guide will help students later when they need to make decisions about their system prompt, retrieval, and temperature.\n    </td>\n  </tr>\n</table>"
+      },
+      "seeding_key": {
+        "activity_section.key": "eac435b9-ad7b-4139-a74a-5982889e8dfd",
         "lesson_activity.key": "5428b630-7ffb-404a-a267-65b7852814db"
       }
     },
@@ -2645,16 +2774,6 @@
       "seeding_key": {
         "activity_section.key": "ebca5884-dd6b-43aa-ad79-29cee42473a4",
         "lesson_activity.key": "47e5674c-f374-46d4-aa92-dae7ea898ca8"
-      }
-    },
-    {
-      "key": "d2bc17a9-44bb-4301-a9c0-a1f5913b9324",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "d2bc17a9-44bb-4301-a9c0-a1f5913b9324",
-        "lesson_activity.key": "9fe450c4-7259-4c07-9697-99b5266d2949"
       }
     },
     {
@@ -3134,10 +3253,21 @@
       }
     },
     {
-      "key": "b79fe826-d3ac-4fc8-89e2-33383ddce23a",
+      "key": "72e73f83-c19a-4202-8d2b-a091d9d28e00",
       "position": 1,
       "properties": {
         "name": "Student Levels",
+        "progression_name": "Example Projects"
+      },
+      "seeding_key": {
+        "activity_section.key": "72e73f83-c19a-4202-8d2b-a091d9d28e00",
+        "lesson_activity.key": "b41230a7-96ae-4d8e-af12-f47758e3a060"
+      }
+    },
+    {
+      "key": "b79fe826-d3ac-4fc8-89e2-33383ddce23a",
+      "position": 2,
+      "properties": {
         "progression_name": "Step 4: Create your Chatbot"
       },
       "seeding_key": {
@@ -3147,7 +3277,7 @@
     },
     {
       "key": "5047ce69-bc16-4a98-8eaa-6cfa3291c7f4",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Step 5: Make a Model Card"
       },
@@ -3158,7 +3288,7 @@
     },
     {
       "key": "42da5138-f3c5-4ab0-8810-1a6792b43ddd",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g1413e1213c5_0_216\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the <a href=\"https://docs.google.com/document/d/1dM1g3ZPt1Q43I8iq-7oxxmm0acqGAiOubaeBdFHRofU/edit\" target=\"_blank\">Project Guide - Solving Community Problems</a>\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2dbaca4c0de_0_10\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the overview of the project. Students can read individually, or you can read the overview as a class.\n\t\t<br />\n\t\t<br />Students will be creating a chatbot that can be used to solve a problem or accomplish a task relevant to their community.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2dbaca4c0de_0_27\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 1: Choose an Issue Statement\n\t\t<br />\n\t\t<br />Students will need to write an issue statement that describes an issue we’ve observed and how it is affecting people in our community. Students can use the <a href=\"https://docs.google.com/presentation/d/171c_MuqxMJZ2Px5DGbxl0Z0q3wNnS5VRkQSQmAK12ag/edit\" target=\"_blank\"><a href=\"https://docs.google.com/presentation/d/171c_MuqxMJZ2Px5DGbxl0Z0q3wNnS5VRkQSQmAK12ag/edit\" target=\"_blank\">5 Why’s Worksheet</a></a> to help develop an issue statement.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> (Optional) <strong>Distribute:</strong> Distribute copies of the 5 Why’s Worksheet to students to help develop their Issue Statement\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Give ample time for students to draft an issue statement. Having a broad but impactful issue statement can make the rest of the project easier to complete since it is anchored in this initial statement.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2e77da08d69_0_13\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 2: Planning a Solution\n\t\t<br />\n\t\t<br />Students will Brainstorm two different types of chatbot that could help with this issue. Each chatbot should have a specific purpose and an ideal user who the chatbot is designed for.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Help students come up with chatbot ideas to address their issue statement, similar to the examples in the Issue Statements lesson earlier in the unit. Encourage students to come up with at least 2 ideas so that if something happens with their first choice, they have a backup. Give students ample time to brainstorm and then make a decision and fill in the written responses on the project guide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2e77da08d69_0_34\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the <a href=\"https://docs.google.com/document/d/1a2cGqEck2s97XZoPhUalPNUKWcg0IKQOcFAxLWWyMXc/edit\" target=\"_blank\">Resource - Chatbot Planning Guide</a>\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
         "name": "Teaching Guide",
@@ -3176,7 +3306,7 @@
     },
     {
       "key": "10d7cf9a-134d-42cc-90e1-cb7539bd6acf",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2e77da08d69_0_24\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 2: Planning a Solution\n\t\t<br />\n\t\t<br />Students will Brainstorm two different types of chatbot that could help with this issue. Each chatbot should have a specific purpose and an ideal user who the chatbot is designed for.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Help students come up with chatbot ideas to address their issue statement, similar to the examples in the Issue Statements lesson earlier in the unit. Encourage students to come up with at least 2 ideas so that if something happens with their first choice, they have a backup. Give students ample time to brainstorm and then make a decision and fill in the written responses on the project guide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g270fde699fd_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson X Level 1.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 4: Make your Chatbot. Students will be setting the system prompt, temperature, and retrieval. They should also test their chatbot and ensure it responds as expected.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g270fde699fd_0_200\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson X Level 2.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 5: Make the Model Card.  Students will be adding their model card information to their chatbot and then “publishing”.\n\t\t<br />\n\t\t<br />Optionally, students can complete a physical or digital model card using this <a href=\"https://docs.google.com/presentation/d/1KXIwPhbXIumnp4enyOcAvhGucqZmlm7_pDYkZPCQNeE/edit\" target=\"_blank\">Model Card Template</a>\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
         "tips": [
@@ -3193,7 +3323,7 @@
     },
     {
       "key": "2210fd42-4826-4acf-b268-1a332317e181",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2e77da08d69_0_48\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out two copies of <a href=\"https://docs.google.com/document/d/1SqWCKewyia6WXiWacVnlD-TWj8AcEAP0apg9yE0X58c/edit\" target=\"_blank\">Activity Guide - Chatbot User Testing</a> to each student\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
         "tips": [
@@ -3210,7 +3340,7 @@
     },
     {
       "key": "57dbd739-8def-4fde-8770-33a604399dce",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2dbaca4c0de_0_43\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 6: User Testing\n\t\t<br />\n\t\t<br />Students will use the Chatbot User Testing Activity Guide to have other users test your chatbot. Try to have at least two other students test your chatbot. Once you’ve had at least two other people test your chatbot, complete the table in the project guide\n\t\t<br />\n\t\t<br />Students will need time to fill out the User Testing Activity guide with 3 prompts of their own, then trade their testing guides with other students to test each others chatbots. Once they’re done, students should review the feedback and decide on how to update their chatbots.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
         "tips": [
@@ -3227,7 +3357,7 @@
     },
     {
       "key": "0d9be6c3-64f7-41a3-89d8-e6b7f2f143b5",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g1413e1213c5_0_280\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> (Optional) Finalize and Present. Have students prepare a short presentation of their chatbot to share with their peers.\n    </td>\n  </tr>\n\n</table>    \n    "
       },
@@ -3278,6 +3408,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-studentsurvey-premodule"
+        ],
         "progression": "Student Pre-Survey"
       },
       "bonus": false,
@@ -3300,6 +3433,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L1_2024"
+        ],
         "progression": "Explore a Chatbot"
       },
       "bonus": false,
@@ -3322,6 +3458,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L2_2024"
+        ],
         "progression": "Explore a Chatbot"
       },
       "bonus": false,
@@ -3344,6 +3483,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L3_2024"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -3366,6 +3508,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L4_2024"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -3388,6 +3533,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L5_2024"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -3410,6 +3558,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L6_2024"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -3432,6 +3583,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L7_2024"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -3454,6 +3608,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L8V2_2024"
+        ],
         "progression": "Investigating Hallucinations"
       },
       "bonus": false,
@@ -3476,6 +3633,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L8_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3498,6 +3658,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L1V2_2024"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -3520,6 +3683,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L2V2_2024"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -3542,6 +3708,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L3_2024"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -3564,6 +3733,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L4_2024"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -3586,6 +3758,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L5_2024"
+        ],
         "progression": "Modify"
       },
       "bonus": false,
@@ -3608,6 +3783,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L6_2024"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -3630,6 +3808,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L7_2024"
+        ],
         "progression": "Make"
       },
       "bonus": false,
@@ -3652,6 +3833,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L1_2024"
+        ],
         "progression": "Using a System Prompt"
       },
       "bonus": false,
@@ -3674,6 +3858,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L2_2024"
+        ],
         "progression": "Using a System Prompt"
       },
       "bonus": false,
@@ -3696,6 +3883,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L3_2024"
+        ],
         "progression": "Using a System Prompt"
       },
       "bonus": false,
@@ -3718,6 +3908,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L4_2024"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -3740,6 +3933,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L5_2024"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -3762,6 +3958,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L6_2024"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -3784,6 +3983,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L7_2024"
+        ],
         "progression": "Audience & Delivery"
       },
       "bonus": false,
@@ -3806,6 +4008,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L8_2024"
+        ],
         "progression": "Audience & Delivery"
       },
       "bonus": false,
@@ -3828,6 +4033,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L9_2024"
+        ],
         "progression": "Audience & Delivery"
       },
       "bonus": false,
@@ -3850,6 +4058,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L10_2024"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -3872,6 +4083,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L11_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3894,6 +4108,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L12_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -3916,6 +4133,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L13_2024"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -3938,6 +4158,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L1_2024"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -3960,6 +4183,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L2_2024"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -3982,6 +4208,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L3_2024"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -4004,6 +4233,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L4_2024"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -4026,6 +4258,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L5_2024"
+        ],
         "progression": "Giving Examples"
       },
       "bonus": false,
@@ -4048,6 +4283,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L6_2024"
+        ],
         "progression": "Giving Examples"
       },
       "bonus": false,
@@ -4070,6 +4308,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L7_2024"
+        ],
         "progression": "Giving Examples"
       },
       "bonus": false,
@@ -4092,6 +4333,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L9_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4114,6 +4358,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L8_2024"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -4136,6 +4383,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-10V2_2024"
+        ],
         "progression": "Show What You Know"
       },
       "bonus": false,
@@ -4158,6 +4408,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L1_2024"
+        ],
         "progression": "Explore"
       },
       "bonus": false,
@@ -4180,6 +4433,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L2V2_2024"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -4202,6 +4458,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L3V2_2024"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -4224,6 +4483,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L4_2024"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4246,6 +4508,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L5_2024"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4268,6 +4533,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L6_2024"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4290,6 +4558,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L7A_2024"
+        ],
         "progression": "Modify"
       },
       "bonus": false,
@@ -4312,6 +4583,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L8_2024"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -4334,6 +4608,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L9_2024"
+        ],
         "progression": "Make"
       },
       "bonus": false,
@@ -4356,6 +4633,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L1_2024"
+        ],
         "progression": "Current Information"
       },
       "bonus": false,
@@ -4378,6 +4658,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L2_2024"
+        ],
         "progression": "Current Information"
       },
       "bonus": false,
@@ -4400,6 +4683,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L3_2024"
+        ],
         "progression": "Specialized Information"
       },
       "bonus": false,
@@ -4422,6 +4708,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L4_2024"
+        ],
         "progression": "Specialized Information"
       },
       "bonus": false,
@@ -4444,6 +4733,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L5_2024"
+        ],
         "progression": "Accurate Information"
       },
       "bonus": false,
@@ -4466,6 +4758,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L6_2024"
+        ],
         "progression": "Accurate Information"
       },
       "bonus": false,
@@ -4488,6 +4783,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L7_2024"
+        ],
         "progression": "Accurate Information"
       },
       "bonus": false,
@@ -4510,6 +4808,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L8_2024"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -4532,6 +4833,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L9_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4554,6 +4858,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L10_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -4576,6 +4883,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L11_2024"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -4598,6 +4908,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L1_2024"
+        ],
         "progression": "User Story #1: Sarah Thompson"
       },
       "bonus": false,
@@ -4620,6 +4933,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L1.1_2024"
+        ],
         "progression": "User Story #1: Sarah Thompson"
       },
       "bonus": false,
@@ -4642,6 +4958,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L2_2024"
+        ],
         "progression": "User Story #1: Sarah Thompson"
       },
       "bonus": false,
@@ -4664,6 +4983,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L4_2024"
+        ],
         "progression": "User Story #2: Janet Lee"
       },
       "bonus": false,
@@ -4686,6 +5008,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L4.1_2024"
+        ],
         "progression": "User Story #2: Janet Lee"
       },
       "bonus": false,
@@ -4708,6 +5033,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L5_2024"
+        ],
         "progression": "User Story #2: Janet Lee"
       },
       "bonus": false,
@@ -4730,72 +5058,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "User Story #3: Alex Martinez"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-retrieval-synthesis-predict-L7_2024"
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L10_2024"
         ],
-        "lesson.key": "Retrieval - Synthesis",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "customizing-llms-2024",
-        "activity_section.key": "b5c92faa-d24b-48b2-a524-6739b0256b06"
-      },
-      "level_keys": [
-        "gen-ai-customizing-retrieval-synthesis-predict-L7_2024"
-      ]
-    },
-    {
-      "chapter": 68,
-      "position": 8,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "User Story #3: Alex Martinez"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-retrieval-synthesis-predict-L7.1_2024"
-        ],
-        "lesson.key": "Retrieval - Synthesis",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "customizing-llms-2024",
-        "activity_section.key": "b5c92faa-d24b-48b2-a524-6739b0256b06"
-      },
-      "level_keys": [
-        "gen-ai-customizing-retrieval-synthesis-predict-L7.1_2024"
-      ]
-    },
-    {
-      "chapter": 69,
-      "position": 9,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "User Story #3: Alex Martinez"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-retrieval-synthesis-L8_2024"
-        ],
-        "lesson.key": "Retrieval - Synthesis",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "customizing-llms-2024",
-        "activity_section.key": "b5c92faa-d24b-48b2-a524-6739b0256b06"
-      },
-      "level_keys": [
-        "gen-ai-customizing-retrieval-synthesis-L8_2024"
-      ]
-    },
-    {
-      "chapter": 70,
-      "position": 10,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Check-In"
       },
       "bonus": false,
@@ -4813,11 +5078,14 @@
       ]
     },
     {
-      "chapter": 71,
-      "position": 11,
+      "chapter": 68,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L11_2024"
+        ],
         "progression": "Show What You Know"
       },
       "bonus": false,
@@ -4835,11 +5103,89 @@
       ]
     },
     {
+      "chapter": 69,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L7_2024"
+        ],
+        "progression": "(Optional) User Story #3: Alex Martinez"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L7_2024"
+        ],
+        "lesson.key": "Retrieval - Synthesis",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "customizing-llms-2024",
+        "activity_section.key": "b5c92faa-d24b-48b2-a524-6739b0256b06"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-synthesis-predict-L7_2024"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L7.1_2024"
+        ],
+        "progression": "(Optional) User Story #3: Alex Martinez"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L7.1_2024"
+        ],
+        "lesson.key": "Retrieval - Synthesis",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "customizing-llms-2024",
+        "activity_section.key": "b5c92faa-d24b-48b2-a524-6739b0256b06"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-synthesis-predict-L7.1_2024"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 11,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L8_2024"
+        ],
+        "progression": "(Optional) User Story #3: Alex Martinez"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L8_2024"
+        ],
+        "lesson.key": "Retrieval - Synthesis",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "customizing-llms-2024",
+        "activity_section.key": "b5c92faa-d24b-48b2-a524-6739b0256b06"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-synthesis-L8_2024"
+      ]
+    },
+    {
       "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-modelcards-practice-L1_2024"
+        ],
         "progression": "Initial Scenario"
       },
       "bonus": false,
@@ -4862,6 +5208,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-modelcards-practice-L2_2024"
+        ],
         "progression": "You Decide!"
       },
       "bonus": false,
@@ -4884,6 +5233,31 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Example Projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-project-L0_2024"
+        ],
+        "lesson.key": "Project: Create a Personal Chatbot",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "customizing-llms-2024",
+        "activity_section.key": "645bcddb-ed11-4a88-a19a-8eb88bc7b3b4"
+      },
+      "level_keys": [
+        "gen-ai-customizing-project-L0_2024"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L1_2024"
+        ],
         "progression": "Model, Temperature, and Prompt"
       },
       "bonus": false,
@@ -4901,11 +5275,14 @@
       ]
     },
     {
-      "chapter": 75,
-      "position": 2,
+      "chapter": 76,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L2_2024"
+        ],
         "progression": "Retrieval"
       },
       "bonus": false,
@@ -4923,11 +5300,14 @@
       ]
     },
     {
-      "chapter": 76,
-      "position": 3,
+      "chapter": 77,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L3_2024"
+        ],
         "progression": "Model Card"
       },
       "bonus": false,
@@ -4945,11 +5325,14 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-L1_2024"
+        ],
         "progression": "User Testing"
       },
       "bonus": false,
@@ -4967,11 +5350,14 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 79,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L2_2024"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -4989,11 +5375,14 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L3_2024"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -5011,11 +5400,14 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L4_2024"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -5033,11 +5425,14 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 82,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L5_2024"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -5055,11 +5450,14 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L1_2024"
+        ],
         "progression": "Explore"
       },
       "bonus": false,
@@ -5077,11 +5475,14 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L2V2_2024"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5099,11 +5500,14 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L3V2_2024"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5121,11 +5525,14 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L4_2024"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -5143,11 +5550,14 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 87,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-panels-finetune-overview_2024"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -5165,11 +5575,14 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 88,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-choice_2024"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -5187,11 +5600,14 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 89,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L6_2024"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -5209,11 +5625,14 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 90,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L5_2024"
+        ],
         "progression": "Make"
       },
       "bonus": false,
@@ -5231,11 +5650,36 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 91,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Example Projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-project2-L0_2024"
+        ],
+        "lesson.key": "Project: Solving Community Problems with Chatbots",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "customizing-llms-2024",
+        "activity_section.key": "72e73f83-c19a-4202-8d2b-a091d9d28e00"
+      },
+      "level_keys": [
+        "gen-ai-customizing-project2-L0_2024"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project2-L1_2024"
+        ],
         "progression": "Step 4: Create your Chatbot"
       },
       "bonus": false,
@@ -5253,11 +5697,14 @@
       ]
     },
     {
-      "chapter": 91,
-      "position": 2,
+      "chapter": 93,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project2-L2_2024"
+        ],
         "progression": "Step 5: Make a Model Card"
       },
       "bonus": false,
@@ -5275,11 +5722,14 @@
       ]
     },
     {
-      "chapter": 92,
-      "position": 3,
+      "chapter": 94,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-studentsurvey-postmodule"
+        ],
         "progression": "Student Post-Survey"
       },
       "bonus": false,
@@ -6092,6 +6542,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-synthesis-L10_2024",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L10_2024"
+        ],
+        "lesson.key": "Retrieval - Synthesis",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "customizing-llms-2024",
+        "activity_section.key": "1c0b5d70-e8d2-48fa-90e3-7b1a972b51ad"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-synthesis-L11_2024",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L11_2024"
+        ],
+        "lesson.key": "Retrieval - Synthesis",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "customizing-llms-2024",
+        "activity_section.key": "23beb297-c945-457c-b717-a9a3f148803d"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "gen-ai-customizing-retrieval-synthesis-predict-L7_2024",
         "script_level.level_keys": [
           "gen-ai-customizing-retrieval-synthesis-predict-L7_2024"
@@ -6128,30 +6602,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "gen-ai-customizing-retrieval-synthesis-L10_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-retrieval-synthesis-L10_2024"
-        ],
-        "lesson.key": "Retrieval - Synthesis",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "customizing-llms-2024",
-        "activity_section.key": "1c0b5d70-e8d2-48fa-90e3-7b1a972b51ad"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "gen-ai-customizing-retrieval-synthesis-L11_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-retrieval-synthesis-L11_2024"
-        ],
-        "lesson.key": "Retrieval - Synthesis",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "customizing-llms-2024",
-        "activity_section.key": "23beb297-c945-457c-b717-a9a3f148803d"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "gen-ai-customizing-modelcards-practice-L1_2024",
         "script_level.level_keys": [
           "gen-ai-customizing-modelcards-practice-L1_2024"
@@ -6172,6 +6622,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "customizing-llms-2024",
         "activity_section.key": "42a257df-2f05-415d-a3b0-9068542639a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-project-L0_2024",
+        "script_level.level_keys": [
+          "gen-ai-customizing-project-L0_2024"
+        ],
+        "lesson.key": "Project: Create a Personal Chatbot",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "customizing-llms-2024",
+        "activity_section.key": "645bcddb-ed11-4a88-a19a-8eb88bc7b3b4"
       }
     },
     {
@@ -6368,6 +6830,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "gen-ai-customizing-project2-L0_2024",
+        "script_level.level_keys": [
+          "gen-ai-customizing-project2-L0_2024"
+        ],
+        "lesson.key": "Project: Solving Community Problems with Chatbots",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "customizing-llms-2024",
+        "activity_section.key": "72e73f83-c19a-4202-8d2b-a091d9d28e00"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "gen-ai-customizing-project2-L1_2024",
         "script_level.level_keys": [
           "gen-ai-customizing-project2-L1_2024"
@@ -6526,6 +7000,18 @@
       }
     },
     {
+      "name": "AI4K12 and CSTA Standards Mapping",
+      "url": "https://docs.google.com/spreadsheets/d/1YuvIyOFDkF8DMgPzv16f7rclVkhQ7asCD3zDBPiOWKw/view",
+      "key": "ai4k12_and_csta_standards_mapping",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ai4k12_and_csta_standards_mapping"
+      }
+    },
+    {
       "name": "AI Scenario",
       "url": "https://docs.google.com/document/d/1Z9P0FYWMBDQguWedAGi541P-HYbRS1gbcjFbFxdpRSk/edit",
       "key": "ai_scenario",
@@ -6535,6 +7021,28 @@
       },
       "seeding_key": {
         "resource.key": "ai_scenario"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/customizing-llms-2024/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/customizing-llms-2024/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
       }
     },
     {
@@ -6626,6 +7134,18 @@
       }
     },
     {
+      "name": "Guide to Ethics Opportunities in Exploring Generative AI",
+      "url": "https://docs.google.com/document/d/1ztq07VnPY-KfuA1dQEeHjCa5yd4Y-E6qc9RdUIl6vDI/edit",
+      "key": "guide_to_ethics_opportunities_in_exploring_generative_ai",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_ethics_opportunities_in_exploring_generative_ai"
+      }
+    },
+    {
       "name": "Interacting with Language Models",
       "url": "https://docs.google.com/presentation/d/1oBkecogXS8uEUQCK19t28A9DOAHUoTyeC3q2LK4kAs4/template/preview",
       "key": "interacting_with_language_models",
@@ -6635,6 +7155,30 @@
       },
       "seeding_key": {
         "resource.key": "interacting_with_language_models"
+      }
+    },
+    {
+      "name": "Introduction to Generative AI",
+      "url": "https://docs.google.com/presentation/d/1ZnXkSXy9SKvhX3tzlcPXvRnauXVD_YtyoYCeClQgsrw/template/preview",
+      "key": "introduction_to_generative_ai",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_generative_ai"
+      }
+    },
+    {
+      "name": "Introduction to Large Language Models",
+      "url": "https://drive.google.com/file/d/1aMWH4YppBkJqYbNYfY-jpTbVc6-BPE35/view",
+      "key": "introduction_to_large_language_models",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_large_language_models"
       }
     },
     {
@@ -6659,6 +7203,18 @@
       },
       "seeding_key": {
         "resource.key": "leaders_framework"
+      }
+    },
+    {
+      "name": "LEADERS Framework",
+      "url": "https://docs.google.com/document/d/17h5Xm7RKRQm_bwGoNlvZ7I6n8mKTNxI8MJL8wrUJt4o/edit",
+      "key": "leaders_framework_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "leaders_framework_1"
       }
     },
     {
@@ -6910,6 +7466,18 @@
       }
     },
     {
+      "name": "Teaching Guide - Incorporating Student Responses via Student Summaries",
+      "url": "https://docs.google.com/document/d/1wESWwYm7Ty46eEK9qFcYfYI7NfG9mqodD12YOmuUcrs/edit",
+      "key": "teaching_guide_-_incorporating_student_responses_via_student_summaries",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "teaching_guide_-_incorporating_student_responses_via_student_summaries"
+      }
+    },
+    {
       "name": "User Testing",
       "url": "https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/template/preview",
       "key": "user_testing",
@@ -6919,6 +7487,31 @@
       },
       "seeding_key": {
         "resource.key": "user_testing"
+      }
+    },
+    {
+      "name": "What Is Machine Learning?",
+      "url": "https://www.youtube.com/watch?v=KHbwOetbmbs",
+      "key": "what_is_machine_learning_",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "what_is_machine_learning_"
+      }
+    },
+    {
+      "name": "What Makes a Computer a Computer?",
+      "url": "https://www.youtube.com/watch?v=sLIJNEIE0Rs",
+      "key": "what_makes_a_computer_a_computer_",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "what_makes_a_computer_a_computer_"
       }
     }
   ],
@@ -6975,6 +7568,30 @@
       "seeding_key": {
         "lesson.key": "Interacting with Language Models",
         "resource.key": "teaching_guide_-_incorporating_student_responses_in_lessons"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Generative AI",
+        "resource.key": "introduction_to_generative_ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Generative AI",
+        "resource.key": "introduction_to_large_language_models"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Generative AI",
+        "resource.key": "what_is_machine_learning_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Generative AI",
+        "resource.key": "what_makes_a_computer_a_computer_"
       }
     },
     {
@@ -7177,16 +7794,97 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "ai4k12_and_csta_standards_mapping",
+        "script.name": "customizing-llms-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "customizing-llms-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "customizing-llms-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_ethics_opportunities_in_exploring_generative_ai",
+        "script.name": "customizing-llms-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "leaders_framework_1",
+        "script.name": "customizing-llms-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teaching_guide_-_incorporating_student_responses_via_student_summaries",
+        "script.name": "customizing-llms-2024"
+      }
+    }
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-
+    {
+      "key": "artificial_intelligence",
+      "word": "Artificial Intelligence",
+      "definition": "A technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "artificial_intelligence"
+      }
+    },
+    {
+      "key": "large_language_model",
+      "word": "Large Language Model",
+      "definition": "A computer program that analyzes large amounts of raw human-created data to the point where it can represent and recreate new data to perform a variety of tasks",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "large_language_model"
+      }
+    },
+    {
+      "key": "model",
+      "word": "Model",
+      "definition": "A computer program designed to make a decision",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "model"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Generative AI",
+        "vocabulary.key": "artificial_intelligence"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Generative AI",
+        "vocabulary.key": "large_language_model"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Generative AI",
+        "vocabulary.key": "model"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
@@ -7293,6 +7991,16 @@
       }
     },
     {
+      "key": "5f37fa4f-376a-4500-8ae8-26a60d773a4d",
+      "properties": {
+        "description": "I can explain the different levels of artificial intelligence"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Generative AI",
+        "objective.key": "5f37fa4f-376a-4500-8ae8-26a60d773a4d"
+      }
+    },
+    {
       "key": "64b23a43-5220-4438-8675-935d3ca72473",
       "properties": {
         "description": "Collaboratively develop guidelines for the use of generative AI that consider multiple stakeholders’ needs and concerns"
@@ -7340,6 +8048,16 @@
       "seeding_key": {
         "lesson.key": "User Feedback",
         "objective.key": "6f78fdcd-853b-436c-8f8f-5e32976c5eac"
+      }
+    },
+    {
+      "key": "771cc60d-0e9f-48dc-83d6-18624902aa88",
+      "properties": {
+        "description": "I can describe the four components that all computers have"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Generative AI",
+        "objective.key": "771cc60d-0e9f-48dc-83d6-18624902aa88"
       }
     },
     {

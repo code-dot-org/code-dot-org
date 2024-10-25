@@ -1,0 +1,8 @@
+name 'gen-ai-customizing-project2-L0_2024'
+display_name 'Example Projects!'
+description 'Choose at least 1 example to investigate'
+
+sublevels
+level 'gen-ai-customizing-project2-L0A_2024'
+level 'gen-ai-customizing-project2-L0B_2024'
+level 'gen-ai-customizing-project2-L0C_2024'

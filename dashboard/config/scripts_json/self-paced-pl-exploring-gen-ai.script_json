@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-10-23 16:08:19 UTC",
+    "serialized_at": "2024-10-24 16:25:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -264,6 +264,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-introduction_01_2024"
+        ],
         "progression": "Overview of Teaching Gen AI (15 min)"
       },
       "bonus": false,
@@ -286,6 +289,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-introduction_02_2024"
+        ],
         "progression": "Overview of Teaching Gen AI (15 min)"
       },
       "bonus": false,
@@ -308,6 +314,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-introduction_03_2024"
+        ],
         "progression": "Overview of Teaching Gen AI (15 min)"
       },
       "bonus": false,
@@ -330,6 +339,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-introduction_04_2024"
+        ],
         "progression": "Overview of Teaching Gen AI (15 min)"
       },
       "bonus": false,
@@ -352,6 +364,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-introduction_05_2024"
+        ],
         "progression": "Overview of Teaching Gen AI (15 min)"
       },
       "bonus": false,
@@ -374,6 +389,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-introduction_06_2024"
+        ],
         "progression": "Generative AI Lesson Structure (5 min)"
       },
       "bonus": false,
@@ -396,6 +414,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-introduction_07_2024"
+        ],
         "progression": "Generative AI Lesson Structure (5 min)"
       },
       "bonus": false,
@@ -418,6 +439,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-introduction_08_2024"
+        ],
         "progression": "Generative AI Lesson Structure (5 min)"
       },
       "bonus": false,
@@ -440,6 +464,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-foundations_01_2024"
+        ],
         "progression": "Unit Overview (2 min)"
       },
       "bonus": false,
@@ -462,6 +489,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-foundations_02_2024"
+        ],
         "progression": "Intro to Gen. AI (10 min)"
       },
       "bonus": false,
@@ -484,6 +514,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-foundations_03_2024"
+        ],
         "progression": "Intro to Gen. AI (10 min)"
       },
       "bonus": false,
@@ -506,6 +539,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-foundations_04_2024"
+        ],
         "progression": "Intro to Gen. AI (10 min)"
       },
       "bonus": false,
@@ -528,6 +564,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-foundations_05_2024"
+        ],
         "progression": "Lesson Previews (20 min)"
       },
       "bonus": false,
@@ -550,6 +589,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-foundations_06_2024"
+        ],
         "progression": "Lesson Previews (20 min)"
       },
       "bonus": false,
@@ -572,6 +614,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-foundations_07_2024"
+        ],
         "progression": "Lesson Previews (20 min)"
       },
       "bonus": false,
@@ -594,6 +639,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-foundations_08_2024"
+        ],
         "progression": "Lesson Previews (20 min)"
       },
       "bonus": false,
@@ -616,6 +664,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-foundations_09_2024"
+        ],
         "progression": "Lesson Previews (20 min)"
       },
       "bonus": false,
@@ -638,6 +689,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-foundations_10_2024"
+        ],
         "progression": "Lesson Previews (20 min)"
       },
       "bonus": false,
@@ -660,6 +714,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-foundations_11_2024"
+        ],
         "progression": "Lesson Previews (20 min)"
       },
       "bonus": false,
@@ -682,6 +739,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-foundations_12_2024"
+        ],
         "progression": "Lesson Previews (20 min)"
       },
       "bonus": false,
@@ -704,6 +764,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-foundations_13_2024"
+        ],
         "progression": "Final Project (8 min)"
       },
       "bonus": false,
@@ -726,6 +789,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-foundations_14_2024"
+        ],
         "progression": "Final Project (8 min)"
       },
       "bonus": false,
@@ -748,6 +814,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-foundations_15_2024"
+        ],
         "progression": "Final Project (8 min)"
       },
       "bonus": false,
@@ -770,6 +839,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_01_2024"
+        ],
         "progression": "Unit Overview (5 min)"
       },
       "bonus": false,
@@ -792,6 +864,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_02_2024"
+        ],
         "progression": "Unit Overview (5 min)"
       },
       "bonus": false,
@@ -814,6 +889,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_03_2024"
+        ],
         "progression": "Unit Overview (5 min)"
       },
       "bonus": false,
@@ -836,6 +914,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_04_2024"
+        ],
         "progression": "Try out AI Chat Lab (15 min)"
       },
       "bonus": false,
@@ -858,6 +939,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_05_2024"
+        ],
         "progression": "Try out AI Chat Lab (15 min)"
       },
       "bonus": false,
@@ -880,6 +964,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_06_2024"
+        ],
         "progression": "Try out AI Chat Lab (15 min)"
       },
       "bonus": false,
@@ -902,6 +989,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_07_2024"
+        ],
         "progression": "Try out AI Chat Lab (15 min)"
       },
       "bonus": false,
@@ -924,6 +1014,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_08_2024"
+        ],
         "progression": "Try out AI Chat Lab (15 min)"
       },
       "bonus": false,
@@ -946,6 +1039,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_09_2024"
+        ],
         "progression": "Try out AI Chat Lab (15 min)"
       },
       "bonus": false,
@@ -968,6 +1064,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_10_2024"
+        ],
         "progression": "Try out AI Chat Lab (15 min)"
       },
       "bonus": false,
@@ -990,6 +1089,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_11_2024"
+        ],
         "progression": "System Prompting (15 min)"
       },
       "bonus": false,
@@ -1012,6 +1114,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_12_2024"
+        ],
         "progression": "System Prompting (15 min)"
       },
       "bonus": false,
@@ -1034,6 +1139,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_13_2024"
+        ],
         "progression": "System Prompting (15 min)"
       },
       "bonus": false,
@@ -1056,6 +1164,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_14_2024"
+        ],
         "progression": "System Prompting (15 min)"
       },
       "bonus": false,
@@ -1078,6 +1189,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_15_2024"
+        ],
         "progression": "System Prompting (15 min)"
       },
       "bonus": false,
@@ -1100,6 +1214,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_16_2024"
+        ],
         "progression": "System Prompting (15 min)"
       },
       "bonus": false,
@@ -1122,6 +1239,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_17_2024"
+        ],
         "progression": "Retrieval (10 min)"
       },
       "bonus": false,
@@ -1144,6 +1264,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_18_2024"
+        ],
         "progression": "Retrieval (10 min)"
       },
       "bonus": false,
@@ -1166,6 +1289,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_19_2024"
+        ],
         "progression": "Retrieval (10 min)"
       },
       "bonus": false,
@@ -1188,6 +1314,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_20_2024"
+        ],
         "progression": "Wrapping Up the Unit (10 min)"
       },
       "bonus": false,
@@ -1210,6 +1339,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_21_2024"
+        ],
         "progression": "Wrapping Up the Unit (10 min)"
       },
       "bonus": false,
@@ -1232,6 +1364,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_22_2024"
+        ],
         "progression": "Wrapping Up the Unit (10 min)"
       },
       "bonus": false,
@@ -1254,6 +1389,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_23_2024"
+        ],
         "progression": "Final Project (5 min)"
       },
       "bonus": false,
@@ -1276,6 +1414,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_24_2024"
+        ],
         "progression": "Final Project (5 min)"
       },
       "bonus": false,
@@ -1298,6 +1439,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ex-gen-ai-customizing_25_2024"
+        ],
         "progression": "Final Project (5 min)"
       },
       "bonus": false,

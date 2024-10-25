@@ -1584,3 +1584,8 @@ And(/^I wait until ai assessments announcement is marked as seen$/) do
     response['has_seen_ai_assessments_announcement']
   end
 end
+
+And(/^I hover over selector "([^"]*)"$/) do |selector|
+  element = @browser.find_element(:css, selector)
+  @browser.action.move_to(element).perform
+end

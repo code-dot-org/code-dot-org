@@ -136,6 +136,17 @@ const optionsList = [
     ],
   },
   {
+    name: 'allow-change-starting-playhead-position',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: "Don't allow change starting playhead position (default).",
+      },
+      {value: 'true', description: 'Allow change starting playhead position.'},
+    ],
+  },
+  {
     name: 'advanced-controls-enabled',
     type: 'radio',
     values: [
