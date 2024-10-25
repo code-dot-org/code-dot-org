@@ -100,6 +100,9 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
       helperIcon={helperIcon}
       errorMessage={errorMessage}
       styleAsFormField={styleAsFormField}
+      selectedValueText={checkedOptions
+        ?.map(str => allOptions.find(opt => opt.value === str)?.label)
+        .join(', ')}
       {...rest}
     >
       <div className={moduleStyles.dropdownMenuContainer}>

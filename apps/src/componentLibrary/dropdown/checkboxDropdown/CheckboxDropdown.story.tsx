@@ -209,6 +209,21 @@ WithDisabledOptionCheckboxDropdown.args = {
   size: 'm',
 };
 
+export const StyledAsFieldCheckboxDropdown = SingleTemplate.bind({});
+StyledAsFieldCheckboxDropdown.args = {
+  name: 'styled-as-field-checkbox-dropdown',
+  allOptions: [
+    {value: 'option-1', label: 'Option 1'},
+    {value: 'option-2', label: 'Option 2'},
+  ],
+  checkedOptions: ['option-1'],
+  labelText: 'Helper Message Checkbox Dropdown',
+  onChange: args => console.log(args),
+  helperMessage: 'Helper message',
+  styleAsFormField: true,
+  size: 'm',
+};
+
 export const WithErrorCheckboxDropdown = SingleTemplate.bind({});
 WithErrorCheckboxDropdown.args = {
   name: 'error-checkbox-dropdown',
