@@ -89,6 +89,7 @@ $(document).ready(() => {
         has_marketing_value = true;
       }
     }
+    let sourceString = isLTI ? 'LTI' : '';
     analyticsReporter.sendEvent(
       EVENTS.SIGN_UP_FINISHED_EVENT,
       {
@@ -96,7 +97,7 @@ $(document).ready(() => {
         'has school': has_school,
         'has marketing value selected': has_marketing_value,
         'has display name': has_display_name,
-        'LTI integration': isLTI,
+        source: sourceString,
       },
       PLATFORMS.BOTH
     );

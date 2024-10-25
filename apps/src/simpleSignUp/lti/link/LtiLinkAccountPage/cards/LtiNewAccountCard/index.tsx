@@ -33,7 +33,7 @@ const LtiNewAccountCard = () => {
     };
     analyticsReporter.sendEvent(
       EVENTS.SIGN_UP_STARTED_EVENT,
-      {ltiIntegration: true},
+      {source: 'LTI'},
       PLATFORMS.BOTH
     );
     analyticsReporter.sendEvent(
