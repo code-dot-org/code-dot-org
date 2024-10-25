@@ -193,6 +193,33 @@ WithDisabledOptionIconDropdown.args = {
   size: 'm',
 };
 
+export const StyledAsFieldIconDropdown = SingleTemplate.bind({});
+StyledAsFieldIconDropdown.args = {
+  name: 'styled-as-field-icon-dropdown',
+  options: [
+    {
+      value: 'option-1',
+      label: 'Option 1',
+      icon: {iconName: 'check', iconStyle: 'solid'},
+    },
+    {
+      value: 'option-2',
+      label: 'Option 2',
+      icon: {iconName: 'xmark', iconStyle: 'solid'},
+    },
+  ],
+  selectedOption: {
+    value: 'option-1',
+    label: 'Option 1',
+    icon: {iconName: 'check', iconStyle: 'solid'},
+  },
+  labelText: 'Styled as Field Icon Dropdown',
+  onChange: args => console.log(args),
+  helperMessage: 'Helper message',
+  styleAsFormField: true,
+  size: 'm',
+};
+
 export const WithErrorDropdown = SingleTemplate.bind({});
 WithErrorDropdown.args = {
   name: 'error-dropdown',

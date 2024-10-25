@@ -102,6 +102,7 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
       helperIcon={helperIcon}
       errorMessage={errorMessage}
       styleAsFormField={styleAsFormField}
+      selectedValueText={selectedOption?.label}
       {...rest}
     >
       <div className={moduleStyles.dropdownMenuContainer}>
