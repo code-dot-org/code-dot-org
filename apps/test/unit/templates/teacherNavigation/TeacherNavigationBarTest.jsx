@@ -37,12 +37,14 @@ describe('TeacherNavigationBar', () => {
       name: 'Period 1',
       hidden: false,
       courseVersionName: 'csd-2024',
+      unitName: 'null',
     },
     {
       id: 12,
       name: 'Period 2',
       hidden: false,
       courseVersionName: 'csd-2023',
+      unitName: 'null',
     },
     {
       id: 13,
@@ -62,6 +64,7 @@ describe('TeacherNavigationBar', () => {
       id: 15,
       name: 'hidden',
       hidden: true,
+      unitName: 'null',
     },
   ];
   const serverSections = sections.map(serverSectionFromSection);
@@ -76,6 +79,7 @@ describe('TeacherNavigationBar', () => {
       teacherSections,
     });
     store.dispatch(setSections(serverSections));
+    store.dispatch(selectSection(selectedSectionId));
 
     loadSelectedSectionSpy = jest
       .spyOn(selectedSectionLoader, 'asyncLoadSelectedSection')
