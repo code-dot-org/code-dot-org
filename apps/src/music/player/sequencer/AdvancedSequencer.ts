@@ -1,6 +1,7 @@
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
+import {findParentStatementInputTypes} from '../../blockly/blockUtils';
 import {DEFAULT_CHORD_LENGTH, DEFAULT_PATTERN_LENGTH} from '../../constants';
 import {ChordEvent, ChordEventValue} from '../interfaces/ChordEvent';
 import {Effects, EffectValue} from '../interfaces/Effects';
@@ -43,6 +44,7 @@ export default class AdvancedSequencer extends Sequencer {
       length: soundData.length,
       soundType: soundData.type,
       blockId,
+      parentControlTypes: findParentStatementInputTypes(blockId),
       triggered: false,
       when: measure ?? DEFAULT_START_MEASURE,
       effects: {...this.effects},
@@ -62,6 +64,7 @@ export default class AdvancedSequencer extends Sequencer {
       instrumentType: 'drums',
       length,
       blockId,
+      parentControlTypes: findParentStatementInputTypes(blockId),
       triggered: false,
       when: measure ?? DEFAULT_START_MEASURE,
       value,
@@ -80,6 +83,7 @@ export default class AdvancedSequencer extends Sequencer {
       type: 'chord',
       length: DEFAULT_CHORD_LENGTH,
       blockId,
+      parentControlTypes: findParentStatementInputTypes(blockId),
       triggered: false,
       when: measure ?? DEFAULT_START_MEASURE,
       value,

@@ -33,6 +33,23 @@ export const MusicConditions: ConditionNames = {
     name: 'played_sound_in_any_function',
     description: 'Checks if a sound is playing in any function. Simple2 only.',
   },
+  PLAYED_ANYTHING_IN_CONDITIONAL: {
+    name: 'played_anything_in_conditional',
+    description:
+      'Checks if something is playing from within an if/else block. Advanced mode only.',
+  },
+  PLAYED_ANYTHING_IN_FUNCTION: {
+    name: 'played_anything_in_function',
+    valueType: 'number',
+    description:
+      'Checks if something is playing from within a function definition block, at least this many times. Ex. Value: 3',
+  },
+  PLAYED_ANYTHING_IN_LOOP: {
+    name: 'played_anything_in_loop',
+    valueType: 'number',
+    description:
+      'Checks if something is playing from within a repeat block, at least this many times. Ex. Value: 3',
+  },
   PLAYED_SOUNDS: {
     name: 'played_sounds',
     valueType: 'number',

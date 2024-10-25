@@ -143,3 +143,34 @@ function simple2FunctionCallGenerator(functionName) {
     Sequencer.endFunctionContext();
   `;
 }
+
+// For a given block id, return a list of block types. These block types
+// represent any C-shaped block between itself and the root (top) block
+// which contains it. The returned list could include types for loop blocks,
+// function definitions, conditionals, or other control structures.
+// These blocks all have a "statement" input that contains other blocks.
+export function findParentStatementInputTypes(id) {
+  if (id === 'preview') {
+    return [];
+  }
+
+  // Ensure Blockly is defined for the sake of unit tests.
+  const block = global.Blockly && Blockly.getMainWorkspace().getBlockById(id);
+
+  const parentTypes = [];
+  function addParentBlockTypes(currentBlock) {
+    if (currentBlock) {
+      const parentBlock = currentBlock.getParent();
+      const parentInput =
+        currentBlock.previousConnection?.targetConnection?.getParentInput();
+      if (parentInput?.type === Blockly.inputTypes.STATEMENT) {
+        parentTypes.push(parentBlock.type);
+      }
+      addParentBlockTypes(parentBlock);
+    }
+  }
+
+  addParentBlockTypes(block);
+
+  return parentTypes;
+}
