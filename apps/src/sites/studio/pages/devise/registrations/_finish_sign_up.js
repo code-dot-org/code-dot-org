@@ -30,7 +30,7 @@ const STUDENT_ONLY_FIELDS = [
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
 const scriptData = getScriptData('signup');
-const {usIp, signUpUID} = scriptData;
+const {usIp, signUpUID, isLTI} = scriptData;
 
 // User type buttons
 const teacherButton = document.getElementById('select-user-type-teacher');
@@ -96,6 +96,7 @@ $(document).ready(() => {
         'has school': has_school,
         'has marketing value selected': has_marketing_value,
         'has display name': has_display_name,
+        'LTI integration': isLTI,
       },
       PLATFORMS.BOTH
     );
