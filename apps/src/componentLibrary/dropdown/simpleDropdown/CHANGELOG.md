@@ -2,10 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.7.0] ()
+## [0.7.0] (https://github.com/code-dot-org/code-dot-org/pull/62023)
 
 - added `readOnly` state support to `SimpleDropdown`
 - added full support of native HTML Select attributes to `SimpleDropdown`
+- added `styleAsFormField` support
 
 ## [0.6.2] (https://github.com/code-dot-org/code-dot-org/pull/61460)
 
