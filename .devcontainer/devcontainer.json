@@ -1,0 +1,42 @@
+// For format details, see https://aka.ms/devcontainer.json.
+{
+  "name": "Code.org external contributors edition",
+  "dockerComposeFile": "compose.yml",
+  "service": "dashboard",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    }
+  },
+
+  // Increase watcher size limit
+  "runArgs": [
+    "--ulimit", "nofile=65536:65536"
+  ],
+
+  "containerEnv": {
+    "CDO_SLACK_BOT_TOKEN": "localoverride",
+    "CDO_PARDOT_PRIVATE_KEY": "localoverride",
+    "CDO_PROPERTIES_ENCRYPTION_KEY": "",
+    "CDO_OPENAI_AICHAT_SAFETY_API_KEY": "",
+    "CDO_DB_WRITER": "mysql://root@db/",
+    "CDO_DB_ENDPOINT_WRITER": "db",
+    "CDO_DB_ENDPOINT_PROXY_REPORTING": "db",
+    "CDO_DB_ENDPOINT_PROXY_READER": "db",
+    "CDO_SESSION_STORE_SERVER": "redis://redis:6379/0/session",
+    "MEMCACHE_SERVERS": "memcached:11211"
+  }, 
+
+  // Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "Shopify.ruby-lsp"
+      ]
+    }
+  },
+}
