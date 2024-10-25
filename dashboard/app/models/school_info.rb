@@ -127,8 +127,8 @@ class SchoolInfo < ApplicationRecord
   # Validate records
   # Non-US schools require country and school name
   # US nces schools sync required data from the `schools` table
-  # US non-nces schools (not found in `schools` table) require zip and school_name
-  # US non-school settings have school_type = noSchoolSetting and require zip and school_name
+  # US non-nces schools (not found in `schools` table) require country (US), zip and school_name
+  # US non-school settings have school_type = noSchoolSetting and require country (US) and zip
 
   # This method reports errors if the record has a country and is invalid.
   def validate_with_country
@@ -149,6 +149,11 @@ class SchoolInfo < ApplicationRecord
   end
 
   def validate_us
+    # The right side of this expression should not be necessary, but there are a ton
+    # of legacy tests in school_info_test.rb that will fail without it. Rather than deleting
+    # the old tests, we decided to keep them until all of the front end components that update
+    # school_info are refactored to send the appropriate data. See "Validate records" comment
+    # above to understand the required data for nces and non-nces schools
     if school || (school_type && school_type != SCHOOL_TYPE_NO_SCHOOL_SETTING)
       validate_nces_school
     else
