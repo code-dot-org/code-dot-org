@@ -1,5 +1,4 @@
 require 'set'
-include ActionView::Helpers::DateHelper
 
 class LevelLoader
   def self.load_custom_levels(level_name, root_dir)
