@@ -15,6 +15,18 @@ class Services::User::PasswordResetterTest < ActiveSupport::TestCase
       _reset_password.must_equal user
     end
 
+    context 'for de-migrated account' do
+      let!(:user) {create(:teacher, :demigrated, email: email)}
+      it 'sends password reset instructions' do
+        reset_password
+        puts user.inspect
+
+        _(mail).wont_be_nil
+        _(mail.to).must_equal [email]
+        _(mail.subject).must_equal 'Code.org reset password instructions'
+      end
+    end
+
     context 'for lti account' do
       let!(:user) {create(:teacher, :with_lti_auth, email: email)}
 

@@ -10,12 +10,13 @@ module Services
       def call
         return user if user.errors.present?
 
-        if user.authentication_options.any?(&:email?)
+        if user.authentication_options.any?(&:email?) || (!user.migrated? && user.authentication_options.empty?)
           user.raw_token = send_reset_password_instructions
         else
           Cdo::Metrics.put(
             'User', 'PasswordResetEmailAuthNotFound', 1, {
-              Environment: CDO.rack_env
+              Environment: CDO.rack_env,
+              # Email: user.email
             }
           )
         end
