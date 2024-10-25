@@ -2579,6 +2579,7 @@
       name: "Music Lab: Jam Session"
       button:
         explore: "Explore Music Lab: Jam Session"
+        explore_short: "Explore Music Lab"
         start: "Start Music Lab: Jam Session"
       banner:
         desc_01: "Learn to code as you remix your favorite artists' tracks and use AI to generate your own beats!"
