@@ -10,10 +10,11 @@ import {
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import Typography from '@cdo/apps/componentLibrary/typography';
-import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
+
+import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
 
 import {asyncLoadSelectedSection} from './selectedSectionLoader';
 import {LABELED_TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
@@ -59,7 +60,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   const coursecontentSectionTitle = getSectionHeader(i18n.courseContent());
 
   let courseContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[];
-  if (selectedSection.unitName) {
+  if (selectedSection?.unitName) {
     courseContentKeys = ['unitOverview', 'lessonMaterials', 'calendar'];
   } else {
     courseContentKeys = ['courseOverview', 'lessonMaterials', 'calendar'];
@@ -93,10 +94,10 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   }, [location]);
 
   React.useEffect(() => {
-    if (urlSectionId && parseInt(urlSectionId) !== selectedSection.id) {
+    if (urlSectionId && parseInt(urlSectionId) !== selectedSection?.id) {
       asyncLoadSelectedSection(urlSectionId);
     }
-  }, [urlSectionId, selectedSection.id]);
+  }, [urlSectionId, selectedSection?.id]);
 
   const navigateToDifferentSection = (sectionId: number) => {
     if (currentPathObject?.absoluteUrl) {
@@ -113,11 +114,14 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   const getSidebarOptionsForSection = (
     sidebarKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[]
   ) => {
+    if (!selectedSection) {
+      return [];
+    }
     return sidebarKeys.map(key => (
       <SidebarOption
         key={'ui-test-sidebar-' + key}
         isSelected={currentPathName === key}
-        sectionId={+selectedSection.id}
+        sectionId={selectedSection.id}
         courseVersionName={selectedSection.courseVersionName}
         unitName={selectedSection.unitName}
         pathKey={key as keyof typeof LABELED_TEACHER_NAVIGATION_PATHS}
@@ -155,11 +159,11 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
           }
           labelText=""
           size="m"
-          selectedValue={String(selectedSection.id)}
+          selectedValue={String(selectedSection?.id)}
           className={styles.sectionDropdown}
           name="section-dropdown"
           color="gray"
-          disabled={isLoadingSectionData}
+          disabled={isLoadingSectionData || !selectedSection}
         />
         {navbarComponents.map(component => component)}
       </div>

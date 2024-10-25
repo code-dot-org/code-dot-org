@@ -11,8 +11,8 @@ import styles from './teacher-navigation.module.scss';
 
 interface SidebarOptionProps {
   isSelected: boolean;
-  sectionId: number;
-  courseVersionName: string | null;
+  sectionId?: number;
+  courseVersionName?: string;
   unitName: string | null;
   pathKey: keyof typeof LABELED_TEACHER_NAVIGATION_PATHS;
 }
