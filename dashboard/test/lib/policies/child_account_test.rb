@@ -36,7 +36,8 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:non_compliant_child, :unknown_us_region], true],
       [[:non_compliant_child, :not_U13], true],
       [[:non_compliant_child, :migrated_imported_from_clever], true],
-      [[:non_compliant_child, :with_lti_auth], true],
+      [[:non_compliant_child, :with_lti_auth], false],
+      [[:non_compliant_child, :with_lti_auth, :without_encrypted_password], true],
       [[:non_compliant_child, {created_at: '2023-06-30T23:59:59MST'}], false],
       [[:non_compliant_child, :skip_validation, {birthday: nil}], true],
       [[:non_compliant_child, :with_interpolated_co], true],
@@ -81,13 +82,13 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:non_compliant_child, {created_at: '2023-06-29T23:59:59MDT'}], true],
       [[:non_compliant_child, {created_at: '2024-06-29T23:59:59MDT'}], false],
       [[:non_compliant_child, {created_at: '2024-07-01T00:00:00MDT'}], false],
-      [[:non_compliant_child, :migrated_imported_from_clever, {created_at: '2023-06-29T23:59:59MDT'}], false],
-      [[:non_compliant_child, :migrated_imported_from_clever, {created_at: '2024-06-29T23:59:59MDT'}], false],
-      [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2023-06-29T23:59:59MDT'}], true],
-      [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2024-06-29T23:59:59MDT'}], true],
-      [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2024-07-01T00:00:00MDT'}], false],
-      [[:non_compliant_child, :with_google_authentication_option, {created_at: '2024-06-29T23:59:59MDT'}], true],
-      [[:non_compliant_child, :with_google_authentication_option, {created_at: '2024-07-01T00:00:00MDT'}], false],
+      [[:non_compliant_child, :migrated_imported_from_clever, :without_encrypted_password, {created_at: '2023-06-29T23:59:59MDT'}], false],
+      [[:non_compliant_child, :migrated_imported_from_clever, :without_encrypted_password, {created_at: '2024-06-29T23:59:59MDT'}], false],
+      [[:non_compliant_child, :migrated_imported_from_google_classroom, :without_encrypted_password, {created_at: '2023-06-29T23:59:59MDT'}], false],
+      [[:non_compliant_child, :migrated_imported_from_google_classroom, :without_encrypted_password, {created_at: '2024-06-29T23:59:59MDT'}], false],
+      [[:non_compliant_child, :migrated_imported_from_google_classroom, :without_encrypted_password, {created_at: '2024-07-01T00:00:00MDT'}], false],
+      [[:non_compliant_child, :with_google_authentication_option, :without_encrypted_password, {created_at: '2024-06-29T23:59:59MDT'}], true],
+      [[:non_compliant_child, :with_google_authentication_option, :without_encrypted_password, {created_at: '2024-07-01T00:00:00MDT'}], false],
     ]
     failures = []
     test_matrix.each do |traits, compliance|
@@ -501,57 +502,122 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
     let(:user_sponsored?) {false}
     let(:user_migrated?) {false}
-    let(:user_provider) {'email'}
-    let(:user_auth_option_credential_type) {'email'}
+    let(:user_provider) {nil}
+    let(:user_encrypted_password) {nil}
+    let(:user_roster_synced) {false}
+    let(:user_auth_option_credential_type) {::AuthenticationOption::EMAIL}
     let(:user_auth_option) {build_stubbed(:authentication_option, credential_type: user_auth_option_credential_type)}
-    let(:user) {build_stubbed(:user, provider: user_provider, authentication_options: [user_auth_option])}
+    let(:user_has_extra_auth_option?) {false}
+    let(:extra_auth_option_type) {::AuthenticationOption::EMAIL}
+    let(:user_in_section?) {false}
+    let(:section) {build_stubbed(:section)}
+    let(:extra_auth_option) {build_stubbed(:authentication_option, credential_type: extra_auth_option_type)}
+    let(:user) {build_stubbed(:user, provider: user_provider, encrypted_password: user_encrypted_password, roster_synced: user_roster_synced)}
 
     before do
       user.stubs(:sponsored?).returns(user_sponsored?)
       user.stubs(:migrated?).returns(user_migrated?)
+      auth_options = []
+      auth_options << user_auth_option if user_migrated?
+      auth_options << extra_auth_option if user_has_extra_auth_option?
+      user.stubs(:authentication_options).returns(auth_options)
+      user.stubs(:sections_as_student).returns(section) if user_in_section?
     end
 
-    it 'returns true' do
-      _(personal_account?).must_equal true
-    end
-
-    context 'when user provider is Clever' do
-      let(:user_provider) {'clever'}
-
-      it 'returns false' do
-        _(personal_account?).must_equal false
-      end
-    end
-
-    context 'when user provider is LTI v1' do
-      let(:user_provider) {'lti_v1'}
-
-      it 'returns false' do
-        _(personal_account?).must_equal false
-      end
-    end
-
-    context 'when user is migrated' do
-      let(:user_migrated?) {true}
-      let(:user_provider) {'clever'}
-
-      it 'returns true' do
-        _(personal_account?).must_equal true
+    context 'when legacy/unmigrated user' do
+      context 'when user has a password' do
+        let(:user_encrypted_password) {'password'}
+        it 'returns true' do
+          _(personal_account?).must_equal true
+        end
       end
 
-      context 'when credential type of user auth option is Clever' do
-        let(:user_auth_option_credential_type) {'clever'}
+      context 'when user provider is Clever' do
+        let(:user_provider) {::AuthenticationOption::CLEVER}
 
         it 'returns false' do
           _(personal_account?).must_equal false
         end
       end
+    end
 
-      context 'when credential type of user auth option is LTI v1' do
-        let(:user_auth_option_credential_type) {'lti_v1'}
+    context 'when user is migrated' do
+      let(:user_migrated?) {true}
+      let(:user_provider) {::User::PROVIDER_MIGRATED}
+
+      it 'returns true' do
+        _(personal_account?).must_equal true
+      end
+
+      context 'when Clever auth option' do
+        let(:user_auth_option_credential_type) {::AuthenticationOption::CLEVER}
 
         it 'returns false' do
           _(personal_account?).must_equal false
+        end
+
+        context 'when user has a password' do
+          let(:user_encrypted_password) {'password'}
+
+          it 'returns true' do
+            _(personal_account?).must_equal true
+          end
+        end
+
+        context 'when user also has an email auth option' do
+          let(:user_has_extra_auth_option?) {true}
+
+          it 'returns true' do
+            _(personal_account?).must_equal true
+          end
+        end
+      end
+
+      context 'when LTI auth option' do
+        let(:user_auth_option_credential_type) {::AuthenticationOption::LTI_V1}
+
+        it 'returns false' do
+          _(personal_account?).must_equal false
+        end
+
+        context 'when user has a password' do
+          let(:user_encrypted_password) {'password'}
+
+          it 'returns true' do
+            _(personal_account?).must_equal true
+          end
+        end
+
+        context 'when user also has an email auth option' do
+          let(:user_has_extra_auth_option?) {true}
+
+          it 'returns true' do
+            _(personal_account?).must_equal true
+          end
+        end
+      end
+
+      context 'when Google auth option' do
+        let(:user_auth_option_credential_type) {::AuthenticationOption::GOOGLE}
+
+        it 'returns true' do
+          _(personal_account?).must_equal true
+        end
+
+        context 'when roster synced' do
+          let(:user_roster_synced) {true}
+
+          it 'returns false' do
+            _(personal_account?).must_equal false
+          end
+        end
+
+        context 'when user is in a section' do
+          let(:user_in_section?) {true}
+
+          it 'returns false' do
+            _(personal_account?).must_equal false
+          end
         end
       end
     end
