@@ -76,6 +76,8 @@ export interface CustomDropdownProps extends AriaAttributes {
   errorMessage?: string;
   /** Style the dropdown as a form field */
   styleAsFormField?: boolean;
+  /** (used with styleAsFormField: true) Selected value text */
+  selectedValueText?: string;
 }
 
 /**
@@ -102,6 +104,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   helperIcon,
   errorMessage,
   styleAsFormField = false,
+  selectedValueText,
   ...rest
 }) => {
   const {activeDropdownName, setActiveDropdownName} = useDropdownContext();
@@ -189,6 +192,11 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
       ref={dropdownRef}
       aria-describedby={ariaProps['aria-describedby']}
     >
+      {styleAsFormField && labelText && (
+        <div>
+          <span className={moduleStyles.dropdownFieldLabel}>{labelText}</span>
+        </div>
+      )}
       {useDSCOButtonAsTrigger ? (
         <Button
           {...triggerComponentProps}
@@ -221,10 +229,12 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
           <span
             className={classNames(
               moduleStyles.dropdownLabel,
-              moduleStyles[`dropdownLabel-${labelType}`]
+              moduleStyles[
+                `dropdownLabel-${styleAsFormField ? 'thin' : labelType}`
+              ]
             )}
           >
-            {labelText}
+            {styleAsFormField ? selectedValueText : labelText}
           </span>
           <FontAwesomeV6Icon iconStyle="solid" iconName="chevron-down" />
         </button>

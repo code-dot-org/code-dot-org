@@ -8,6 +8,23 @@
   display: inline-block;
   margin: 0;
 
+  &.styleAsFormField {
+    width: 18.75rem;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+
+    button {
+      width: 100%;
+
+      span {
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
   .dropdownLabel {
     display: block;
   }
@@ -53,6 +70,7 @@
 
   .helperSection {
     @include field-helper-section-common;
+    margin-top: 0.125rem;
   }
 
   .dropdownMenuContainer {
@@ -292,6 +310,7 @@
         @include field-read-only-black-colors;
       }
     }
+
     .helperSection,
     .errorSection {
       @include field-read-only-black-colors;
@@ -361,6 +380,7 @@
         @include field-read-only-black-colors;
       }
     }
+
     .helperSection,
     .errorSection {
       @include field-read-only-black-colors;
@@ -435,6 +455,7 @@
         @include field-read-only-white-colors;
       }
     }
+
     .helperSection,
     .errorSection {
       @include field-read-only-white-colors;
@@ -444,6 +465,11 @@
 
 // Sizes
 .dropdownContainer-l {
+  .dropdownFieldLabel {
+    @include label-one;
+    margin-bottom: 0.125rem;
+  }
+
   .dropdownLabel-thick {
     @include button-one-text;
     margin-bottom: 0;
@@ -499,6 +525,11 @@
 }
 
 .dropdownContainer-m {
+  .dropdownFieldLabel {
+    @include label-two;
+    margin-bottom: 0.125rem;
+  }
+
   .dropdownLabel-thick {
     @include button-two-text;
     margin-bottom: 0;
@@ -554,6 +585,11 @@
 }
 
 .dropdownContainer-s {
+  .dropdownFieldLabel {
+    @include label-three;
+    margin-bottom: 0.125rem;
+  }
+
   .dropdownLabel-thick {
     @include button-three-text;
     margin-bottom: 0;
@@ -609,6 +645,11 @@
 }
 
 .dropdownContainer-xs {
+  .dropdownFieldLabel {
+    @include label-four;
+    margin-bottom: 0.125rem;
+  }
+
   .dropdownLabel-thick {
     @include button-four-text;
     margin-bottom: 0;
