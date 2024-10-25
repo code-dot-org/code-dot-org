@@ -12,6 +12,8 @@ interface TextToSpeechProps {
 }
 
 const usePause = queryParams('tts-play-pause') === 'true';
+const playIcon = (queryParams('tts-play-icon') as string) || 'volume';
+const stopIcon = (queryParams('tts-stop-icon') as string) || 'circle-stop';
 
 /**
  * TextToSpeech play button.
@@ -72,8 +74,8 @@ const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({text}) => {
       type="button"
     >
       <FontAwesomeV6Icon
-        iconName={'waveform-lines'}
-        iconStyle="regular"
+        iconName={isPlaying ? stopIcon : playIcon}
+        iconStyle={'regular'}
         className={moduleStyles.icon}
       />
     </button>

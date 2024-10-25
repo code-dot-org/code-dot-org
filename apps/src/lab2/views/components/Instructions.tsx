@@ -3,6 +3,7 @@ import React, {useContext} from 'react';
 import {useSelector} from 'react-redux';
 
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
@@ -61,9 +62,9 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   );
   const predictResponse = useAppSelector(state => state.predictLevel.response);
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
-  const offerBrowserTts = useAppSelector(
-    state => state.lab.levelProperties?.offerBrowserTts
-  );
+  const offerBrowserTts =
+    useAppSelector(state => state.lab.levelProperties?.offerBrowserTts) ||
+    queryParams('show-tts') === 'true';
 
   const dispatch = useAppDispatch();
 
