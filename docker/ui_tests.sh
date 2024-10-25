@@ -48,8 +48,8 @@ localize_apps: true
 netsim_redis_groups:
 - master: redis://ui-tests-redis:6379
 no_https_store: true
-override_dashboard: \"localhost-studio.code.org\"
-override_pegasus: \"localhost.code.org\"
+override_dashboard: \"studio.code.org.localhost\"
+override_pegasus: \"code.org.localhost\"
 pegasus_port: 3000
 properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
 saucelabs_authkey: $SAUCE_ACCESS_KEY

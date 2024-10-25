@@ -30,7 +30,7 @@ export default {
         sectionId: 7,
         sectionCode: 'ABCDEF',
         sectionName: 'Name',
-        studioUrlPrefix: 'http://localhost-studio.code.org:3000',
+        studioUrlPrefix: 'http://studio.code.org.localhost:3000',
         studentData: studentData,
       },
     };

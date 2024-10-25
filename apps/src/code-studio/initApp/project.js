@@ -281,13 +281,15 @@ var projects = (module.exports = {
   getShareUrl() {
     const location = this.getLocation();
     if (this.isWebLab()) {
-      const re = /([-.]?studio)?\.?code.org/i;
-      const environmentKey = location.hostname.replace(re, '');
-      const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
-      const port = 'localhost' === environmentKey ? `:${location.port}` : '';
-      return `${
-        location.protocol
-      }//${subdomain}codeprojects.org${port}/projects/weblab/${this.getCurrentId()}`;
+      const path = `projects/weblab/${this.getCurrentId()}`;
+      if (location.hostname.endsWith('.localhost')) {
+        return `${location.protocol}//codeprojects.org.localhost:${location.port}/${path}`;
+      } else {
+        const re = /([-.]?studio)?\.?code.org/i;
+        const environmentKey = location.hostname.replace(re, '');
+        const subdomain = environmentKey ? `${environmentKey}.` : '';
+        return `${location.protocol}//${subdomain}codeprojects.org/${path}`;
+      }
     } else {
       return location.origin + this.getPathName();
     }

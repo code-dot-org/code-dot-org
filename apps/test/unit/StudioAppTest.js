@@ -386,7 +386,7 @@ describe('StudioApp', () => {
 
     it('does return Try-HOC menu item in PlayLab', () => {
       project.getUrl.returns(
-        'http://localhost-studio.code.org:3000/projects/playlab/NTMBaBSuxs0t714y4WITMg/'
+        'http://studio.code.org.localhost:3000/projects/playlab/NTMBaBSuxs0t714y4WITMg/'
       );
       project.getStandaloneApp.returns('playlab');
       var footItems = makeFooterMenuItems();

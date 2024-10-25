@@ -69,7 +69,7 @@ If you want to run tests on Sauce Labs against localhost you need to set up your
      - If you do *not* work on an EC2 instance, the `--tunnel-name` flag (included in the command given by Sauce Labs), can be removed. If you leave it in, you'll also need to set the `tunnelIdentifier` option in the `sauce_capabilities` config. See [Using Sauce Connect Tunnel Identifiers](https://wiki.saucelabs.com/display/DOCS/Using+Sauce+Connect+Tunnel+Identifiers#UsingSauceConnectTunnelIdentifiers-TheBasicsofUsingTunnelIdentifiers) for more details.
      - If you *do* work on an EC2 instance, the `--tunnel-name` flag is required to launch the tunnel.
 3. (Re)start your dashboard-server `./bin/dashboard-server`.
-4. In a new terminal window, navigate back into `dashboard/test/ui` and run your ui tests `./runner.rb -d localhost-studio.code.org:3000 <whatever other arguments you want>`
+4. In a new terminal window, navigate back into `dashboard/test/ui` and run your ui tests `./runner.rb -d studio.code.org.localhost:3000 <whatever other arguments you want>`
 
 You can now watch your tests run at the [Sauce Labs dashboard](https://saucelabs.com/beta/dashboard/tests)
 
@@ -79,8 +79,8 @@ Here are some example command line options. Run `./runner.rb --help` for a full 
 
 Run all UI tests on all browsers against your local host (by default, tests point to test.code.org). Takes some around 45 minutes to run depending on your setup. If you are testing browsers against your localhost other than Chrome, you need to setup SauceConnect - instructions are here https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect.
 
-`./runner.rb -d localhost-studio.code.org:3000`
-Alternatively, `./runner.rb -d localhost-studio.code.org:3000 -n <some number>` will run "some number" of tests in parallel - it might be faster though too high a number will overwhelm your host. 5 seems to work well.
+`./runner.rb -d studio.code.org.localhost:3000`
+Alternatively, `./runner.rb -d studio.code.org.localhost:3000 -n <some number>` will run "some number" of tests in parallel - it might be faster though too high a number will overwhelm your host. 5 seems to work well.
 
 Run all UI tests using the local chromedriver against your localhost. Faster than running through Saucelabs.
 

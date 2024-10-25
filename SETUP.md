@@ -78,7 +78,7 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
 
 1. Run the website `bin/dashboard-server`
 
-1. **Open <http://localhost-studio.code.org:3000/>** to verify its running.
+1. **Open <http://studio.code.org.localhost:3000/>** to verify its running.
 
 After setup, [configure your editor](#editor-configuration), read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
 
@@ -334,7 +334,7 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
   1. Go back up to the [overview](#overview) and run the commands there but when you have completed steps in overview, return to instructions below.
   1. Once you have successfully completed `bundle exec rake build`, you can connect to it as follows:
      * run `ssh -L 3000:127.0.0.1:3000 yourname-ec2` and then `~/code-dot-org/bin/dashboard-server` on your local machine. This sets up SSH port forwarding from your local machine to your ec2 dev instance for as long as your ssh connection is open.
-     * navigate to http://localhost-studio.code.org:3000/ on your local machine
+     * navigate to http://studio.code.org.localhost:3000/ on your local machine
 
 ## Piskel
 ### Local Development Between code-dot-org and forked piskel repo

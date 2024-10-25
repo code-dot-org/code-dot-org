@@ -55,8 +55,8 @@ jobs:
             dashboard_workers: 5
             skip_seed_all: true
             no_https_store: true
-            override_dashboard: \"localhost-studio.code.org\"
-            override_pegasus: \"localhost.code.org\"
+            override_dashboard: \"studio.code.org.localhost\"
+            override_pegasus: \"code.org.localhost\"
             dashboard_port: 3000
             pegasus_port: 3000
             animations_s3_directory: animations_circle/42:-2323

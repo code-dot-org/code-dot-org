@@ -53,7 +53,7 @@ const lessonData = [
         kind: LevelKind.unplugged,
         icon: null,
         title: 'Unplugged Activity',
-        url: 'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/1',
+        url: 'http://studio.code.org.localhost:3000/s/course3/lessons/1/levels/1',
         previous: false,
         is_concept_level: false,
         bonus: false,
@@ -73,7 +73,7 @@ const lessonData = [
         kind: LevelKind.assessment,
         icon: null,
         title: 1,
-        url: 'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/2',
+        url: 'http://studio.code.org.localhost:3000/s/course3/lessons/1/levels/2',
         is_concept_level: false,
         bonus: false,
         display_as_unplugged: false,
@@ -92,7 +92,7 @@ const lessonData = [
         kind: LevelKind.assessment,
         icon: null,
         title: 2,
-        url: 'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/3',
+        url: 'http://studio.code.org.localhost:3000/s/course3/lessons/1/levels/3',
         next: [2, 1],
         is_concept_level: false,
         bonus: true,
@@ -106,7 +106,7 @@ const lessonData = [
             id: '10301',
             position: 1,
             icon: null,
-            url: 'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/3/sublevel/1',
+            url: 'http://studio.code.org.localhost:3000/s/course3/lessons/1/levels/3/sublevel/1',
             path: 's/course3/lessons/1/levels/3/sublevel/1',
             uses_lab2: false,
             type: 'maze',
@@ -116,7 +116,7 @@ const lessonData = [
             id: '10302',
             position: 2,
             icon: null,
-            url: 'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/3/sublevel/2',
+            url: 'http://studio.code.org.localhost:3000/s/course3/lessons/1/levels/3/sublevel/2',
             path: 's/course3/lessons/1/levels/3/sublevel/2',
             uses_lab2: false,
             type: 'maze',
@@ -126,11 +126,11 @@ const lessonData = [
       },
     ],
     lesson_plan_html_url:
-      '//localhost.code.org:3000/curriculum/course3/1/Teacher',
+      '//code.org.localhost:3000/curriculum/course3/1/Teacher',
     lesson_plan_pdf_url:
-      '//localhost.code.org:3000/curriculum/course3/1/Teacher.pdf',
+      '//code.org.localhost:3000/curriculum/course3/1/Teacher.pdf',
     student_lesson_plan_html_url:
-      '//localhost.code.org:3000/s/fake-course/lessons/1/student',
+      '//code.org.localhost:3000/s/fake-course/lessons/1/student',
   },
   // lesson 2 (hacked to have 3 levels)
   {
@@ -152,7 +152,7 @@ const lessonData = [
         kind: LevelKind.puzzle,
         icon: null,
         title: 1,
-        url: 'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/1',
+        url: 'http://studio.code.org.localhost:3000/s/course3/lessons/2/levels/1',
         previous: [1, 3],
         is_concept_level: false,
         bonus: false,
@@ -171,7 +171,7 @@ const lessonData = [
         kind: LevelKind.puzzle,
         icon: null,
         title: 2,
-        url: 'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/2',
+        url: 'http://studio.code.org.localhost:3000/s/course3/lessons/2/levels/2',
         is_concept_level: false,
         bonus: false,
         display_as_unplugged: false,
@@ -189,7 +189,7 @@ const lessonData = [
         kind: LevelKind.puzzle,
         icon: null,
         title: 3,
-        url: 'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/3',
+        url: 'http://studio.code.org.localhost:3000/s/course3/lessons/2/levels/3',
         is_concept_level: false,
         bonus: false,
         display_as_unplugged: false,
@@ -201,11 +201,11 @@ const lessonData = [
       },
     ],
     lesson_plan_html_url:
-      '//localhost.code.org:3000/curriculum/course3/2/Teacher',
+      '//code.org.localhost:3000/curriculum/course3/2/Teacher',
     lesson_plan_pdf_url:
-      '//localhost.code.org:3000/curriculum/course3/2/Teacher.pdf',
+      '//code.org.localhost:3000/curriculum/course3/2/Teacher.pdf',
     lesson_extras_level_url:
-      '//localhost.code.org:3000/s/course3/lessons/2/extras',
+      '//code.org.localhost:3000/s/course3/lessons/2/extras',
   },
 ];
 
@@ -228,7 +228,7 @@ const lockableLessonData = [
         kind: LevelKind.unplugged,
         icon: null,
         title: 'Unplugged Activity',
-        url: 'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/1',
+        url: 'http://studio.code.org.localhost:3000/s/course3/lessons/1/levels/1',
         previous: false,
         is_concept_level: false,
         bonus: false,
@@ -625,7 +625,7 @@ describe('progressReduxTest', () => {
           {
             id: '2106',
             status: 'not_tried',
-            url: 'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/1',
+            url: 'http://studio.code.org.localhost:3000/s/course3/lessons/1/levels/1',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -653,7 +653,7 @@ describe('progressReduxTest', () => {
           {
             id: '323',
             status: 'not_tried',
-            url: 'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/2',
+            url: 'http://studio.code.org.localhost:3000/s/course3/lessons/1/levels/2',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -681,7 +681,7 @@ describe('progressReduxTest', () => {
           {
             id: '322',
             status: 'not_tried',
-            url: 'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/3',
+            url: 'http://studio.code.org.localhost:3000/s/course3/lessons/1/levels/3',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -707,7 +707,7 @@ describe('progressReduxTest', () => {
             sublevels: [
               {
                 id: '10301',
-                url: 'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/3/sublevel/1',
+                url: 'http://studio.code.org.localhost:3000/s/course3/lessons/1/levels/3/sublevel/1',
                 name: undefined,
                 app: undefined,
                 usesLab2: false,
@@ -735,7 +735,7 @@ describe('progressReduxTest', () => {
               },
               {
                 id: '10302',
-                url: 'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/3/sublevel/2',
+                url: 'http://studio.code.org.localhost:3000/s/course3/lessons/1/levels/3/sublevel/2',
                 name: undefined,
                 app: undefined,
                 usesLab2: false,
@@ -768,7 +768,7 @@ describe('progressReduxTest', () => {
           {
             id: '330',
             status: 'not_tried',
-            url: 'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/1',
+            url: 'http://studio.code.org.localhost:3000/s/course3/lessons/2/levels/1',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -796,7 +796,7 @@ describe('progressReduxTest', () => {
           {
             id: '339',
             status: 'perfect',
-            url: 'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/2',
+            url: 'http://studio.code.org.localhost:3000/s/course3/lessons/2/levels/2',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -824,7 +824,7 @@ describe('progressReduxTest', () => {
           {
             id: '341',
             status: 'attempted',
-            url: 'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/3',
+            url: 'http://studio.code.org.localhost:3000/s/course3/lessons/2/levels/3',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -1346,7 +1346,7 @@ describe('progressReduxTest', () => {
 
       assert.strictEqual(
         lessonExtrasUrl(state, state.lessons[0].id),
-        '//localhost.code.org:3000/s/course3/lessons/2/extras'
+        '//code.org.localhost:3000/s/course3/lessons/2/extras'
       );
     });
   });

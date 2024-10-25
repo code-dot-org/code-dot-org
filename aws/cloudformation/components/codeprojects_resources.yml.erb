@@ -9,6 +9,11 @@
 
 <%- if rack_env?(:staging) -%>
 # Developer Resources (Deployed with Staging)
+# This is deprecated, and should be removed in several months once
+# all instances are using .localhost domains for dev
+# e.g. http://studio.code.org.localhost => http://studio.code.org.localhost
+#
+# PR: https://github.com/code-dot-org/code-dot-org/pull/60333
 LocalhostCodeprojectsRecord:
   Type: AWS::Route53::RecordSet
   Properties:
