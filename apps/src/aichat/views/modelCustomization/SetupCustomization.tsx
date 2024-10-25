@@ -128,12 +128,16 @@ const SetupCustomization: React.FunctionComponent = () => {
     );
   };
 
+  // The reason we're multiplying by 10 and dividing by 10 is because the slider
+  // component adds and subtracts by the step value, and with float math, those values
+  // can end up being slightly off after multiple increments/decrements by 0.1.
+  // This way, we can avoid any issues from funky float math.
   const sliderProps: SliderProps = {
     name: 'temperature-slider',
-    value: aiCustomizations.temperature * 10,
-    minValue: MIN_TEMPERATURE,
-    maxValue: MAX_TEMPERATURE,
-    step: SET_TEMPERATURE_STEP,
+    value: Math.round(aiCustomizations.temperature * 10),
+    minValue: Math.round(MIN_TEMPERATURE * 10),
+    maxValue: Math.round(MAX_TEMPERATURE * 10),
+    step: Math.round(SET_TEMPERATURE_STEP * 10),
     hideValue: true,
     disabled: isDisabled(temperature) || readOnlyWorkspace,
     onChange: event => {
