@@ -790,4 +790,15 @@ module SharedConstants
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
 
   US_STATES = STATE_ABBR_WITH_DC_HASH.merge(DC: 'Washington, D.C.').sort_by(&:last).to_h.freeze
+
+  PROJECT_SUBMISSION_STATUS = {
+    CAN_SUBMIT: 0,
+    ALREADY_SUBMITTED: 1,
+    PROJECT_TYPE_NOT_ALLOWED: 102,
+    RESTRICTED_SHARE_MODE: 103,
+    SHARING_DISABLED: 104,
+    NOT_PROJECT_OWNER: 105,
+    OWNER_TOO_NEW: 106,
+    PROJECT_TOO_NEW: 107,
+  }
 end
