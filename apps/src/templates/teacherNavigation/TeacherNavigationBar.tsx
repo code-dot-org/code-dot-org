@@ -5,6 +5,7 @@ import {
   matchPath,
   useLocation,
   useNavigate,
+  useParams,
 } from 'react-router-dom';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
@@ -14,6 +15,7 @@ import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
+import {asyncLoadSelectedSection} from './selectedSectionLoader';
 import {LABELED_TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
 
 import styles from './teacher-navigation.module.scss';
@@ -79,6 +81,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
+  const urlSectionId = useParams().sectionId;
 
   const [currentPathName, currentPathObject] = React.useMemo(() => {
     return (
@@ -89,22 +92,19 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     );
   }, [location]);
 
-  const navigateToDifferentSection = (sectionId: string) => {
+  React.useEffect(() => {
+    if (urlSectionId && parseInt(urlSectionId) !== selectedSection.id) {
+      asyncLoadSelectedSection(urlSectionId);
+    }
+  }, [urlSectionId, selectedSection.id]);
+
+  const navigateToDifferentSection = (sectionId: number) => {
     if (currentPathObject?.absoluteUrl) {
       navigate(
-        generatePath(currentPathObject.absoluteUrl, {sectionId: sectionId})
-      );
-    }
-  };
-
-  const navigateToDifferentPage = (
-    page: keyof typeof LABELED_TEACHER_NAVIGATION_PATHS
-  ) => {
-    if (LABELED_TEACHER_NAVIGATION_PATHS[page]) {
-      navigate(
-        generatePath(LABELED_TEACHER_NAVIGATION_PATHS[page].absoluteUrl, {
-          sectionId: selectedSection.id,
-          courseVersionName: selectedSection.courseVersionName,
+        generatePath(currentPathObject.absoluteUrl, {
+          sectionId: sectionId,
+          courseVersionName: sections[sectionId]?.courseVersionName,
+          unitName: sections[sectionId]?.unitName,
         })
       );
     }
@@ -119,8 +119,8 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
         isSelected={currentPathName === key}
         sectionId={+selectedSection.id}
         courseVersionName={selectedSection.courseVersionName}
+        unitName={selectedSection.unitName}
         pathKey={key as keyof typeof LABELED_TEACHER_NAVIGATION_PATHS}
-        onClick={() => navigateToDifferentPage(key)}
       />
     ));
   };
@@ -150,7 +150,9 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
         </Typography>
         <SimpleDropdown
           items={sectionArray}
-          onChange={event => navigateToDifferentSection(event.target.value)}
+          onChange={event =>
+            navigateToDifferentSection(parseInt(event.target.value))
+          }
           labelText=""
           size="m"
           selectedValue={String(selectedSection.id)}

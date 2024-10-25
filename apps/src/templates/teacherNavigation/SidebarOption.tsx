@@ -13,16 +13,16 @@ interface SidebarOptionProps {
   isSelected: boolean;
   sectionId: number;
   courseVersionName: string | null;
+  unitName: string | null;
   pathKey: keyof typeof LABELED_TEACHER_NAVIGATION_PATHS;
-  onClick: () => void;
 }
 
 const SidebarOption: React.FC<SidebarOptionProps> = ({
   isSelected,
   sectionId,
   courseVersionName,
+  unitName,
   pathKey,
-  onClick,
 }) => {
   return (
     <NavLink
@@ -30,11 +30,11 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
       to={generatePath(LABELED_TEACHER_NAVIGATION_PATHS[pathKey].absoluteUrl, {
         sectionId: sectionId,
         courseVersionName: courseVersionName,
+        unitName: unitName,
       })}
       className={classNames(styles.sidebarOption, {
         [styles.selected]: isSelected,
       })}
-      onClick={onClick}
     >
       <div className={styles.iconContainer}>
         <FontAwesomeV6Icon

@@ -31,8 +31,7 @@ import ElementOrEmptyPage from './ElementOrEmptyPage';
 import LessonMaterialsContainer, {
   lessonMaterialsLoader,
 } from './lessonMaterials/LessonMaterialsContainer';
-import PageHeader from './PageHeader';
-import {asyncLoadSelectedSection} from './selectedSectionLoader';
+import PageLayout from './PageLayout';
 import TeacherNavigationBar from './TeacherNavigationBar';
 import {
   SPECIFIC_SECTION_BASE_URL,
@@ -85,21 +84,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           </div>
         }
       >
-        <Route
-          path={SPECIFIC_SECTION_BASE_URL}
-          element={
-            <div className={styles.pageWithHeader}>
-              <PageHeader />
-              <Outlet />
-            </div>
-          }
-          loader={async ({params}) => {
-            if (params.sectionId) {
-              await asyncLoadSelectedSection(params.sectionId);
-            }
-            return null;
-          }}
-        >
+        <Route path={SPECIFIC_SECTION_BASE_URL} element={<PageLayout />}>
           <Route
             path={''}
             element={
@@ -229,24 +214,22 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                   !selectedSection.courseVersionName &&
                   !selectedSection.courseOfferingId
                 }
-                element={applyV1TeacherDashboardWidth(
-                  <TeacherCourseOverview />
-                )}
+                element={<TeacherCourseOverview />}
               />
             }
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.unitOverview}
-            element={applyV1TeacherDashboardWidth(<TeacherUnitOverview />)}
+            element={<TeacherUnitOverview />}
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.settings}
-            element={applyV1TeacherDashboardWidth(
+            element={
               <SectionsSetUpContainer
                 isUsersFirstSection={false}
                 sectionToBeEdited={selectedSection}
               />
-            )}
+            }
           />
           {showAITutorTab && (
             <Route
