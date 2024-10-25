@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_10_22_150616) do
+ActiveRecord::Schema.define(version: 2024_10_24_180714) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -2233,6 +2233,20 @@ ActiveRecord::Schema.define(version: 2024_10_22_150616) do
     t.decimal "longitude", precision: 9, scale: 6
     t.index ["indexed_at"], name: "index_user_geos_on_indexed_at"
     t.index ["user_id"], name: "index_user_geos_on_user_id"
+  end
+
+  create_table "user_level_interactions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "level_id", null: false
+    t.integer "script_id", null: false
+    t.string "school_year", null: false
+    t.string "interaction", null: false
+    t.string "code_version"
+    t.json "metadata"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["level_id"], name: "index_user_level_interactions_on_level_id"
+    t.index ["user_id"], name: "index_user_level_interactions_on_user_id"
   end
 
   create_table "user_levels", id: { type: :bigint, unsigned: true }, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
