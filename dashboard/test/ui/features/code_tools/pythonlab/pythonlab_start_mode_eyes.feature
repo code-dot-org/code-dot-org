@@ -11,6 +11,7 @@ Background:
   And I wait until element "#uitest-extra-links-button" is visible
   And I wait until element ".project_updated_at" contains text "Saved"
   And I press "uitest-extra-links-button"
+  And I wait until element "a:contains([s]tart)" is visible
   Then I click selector "a:contains([s]tart)" to load a new page
   And I wait to see "#uitest-codebridge-run"
 
