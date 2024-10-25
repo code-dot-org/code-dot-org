@@ -67,6 +67,31 @@ const optionsList = [
     ],
   },
   {
+    name: 'tts-play-pause',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description:
+          'Disable play/pause functionality for text to speech (default).',
+      },
+      {
+        value: 'true',
+        description: 'Enable play/pause functionality for text to speech.',
+      },
+    ],
+  },
+  {
+    name: 'tts-play-icon',
+    type: 'string',
+    description: 'Use a specific icon for text to speech play button.',
+  },
+  {
+    name: 'tts-stop-icon',
+    type: 'string',
+    description: 'Use a specific icon for text to speech stop button.',
+  },
+  {
     name: 'play-tune-block',
     type: 'radio',
     values: [
