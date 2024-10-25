@@ -45,6 +45,8 @@ export interface SimpleDropdownProps extends HTMLAttributes<HTMLSelectElement> {
   helperIcon?: FontAwesomeV6IconProps;
   /** SimpleDropdown error message */
   errorMessage?: string;
+  /** Style SimpleDropdown as a form field */
+  styleAsFormField?: boolean;
 }
 
 /**
@@ -79,6 +81,7 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
   readOnly = false,
   color = 'black',
   size = 'm',
+  styleAsFormField = false,
   ...rest
 }) => (
   <label
@@ -87,6 +90,7 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
       moduleStyles[`dropdownContainer-${size}`],
       moduleStyles[`dropdownContainer-${color}`],
       moduleStyles[`dropdownContainer-${dropdownTextThickness}`],
+      styleAsFormField && moduleStyles.styleAsFormField,
       className
     )}
     aria-describedby={rest['aria-describedby']}

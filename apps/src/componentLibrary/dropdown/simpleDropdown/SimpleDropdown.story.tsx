@@ -106,6 +106,24 @@ DisabledDropdown.args = {
   size: 'm',
 };
 
+export const StyledAsFormFieldSimpleDropdown = SingleTemplate.bind({});
+StyledAsFormFieldSimpleDropdown.args = {
+  name: 'styled-as-field-simple-dropdown',
+  items: [
+    {
+      value: 'option-1',
+      text: 'Option 1 Long Description that should be truncated',
+    },
+    {value: 'option-2', text: 'Option 2'},
+  ],
+  selectedValue: 'option-1',
+  labelText: 'Styled as Field SimpleDropdown',
+  onChange: args => console.log(args),
+  helperMessage: 'Helper message',
+  size: 'm',
+  styleAsFormField: true,
+};
+
 export const WithErrorDropdown = SingleTemplate.bind({});
 WithErrorDropdown.args = {
   name: 'error-dropdown',

@@ -11,6 +11,23 @@
   gap: 0.125rem;
   margin: 0;
 
+  &.styleAsFormField {
+    width: 18.75rem;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+
+    .dropdownArrowDiv {
+      width: 100%;
+
+      select {
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
   .dropdownLabel {
     display: block;
   }
