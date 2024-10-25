@@ -123,6 +123,8 @@ pages:
     components:
       DownloadParentLetterButton: false
       ClassroomSetUpStep3: false
+      SectionProgressSelector:
+        showProgressTableV2: true
       ProgressV1OrV2ToggleLink: false
       ProgressFeedbackBanner: false
       ParentLetterAndStudentPrivacyInfo: false

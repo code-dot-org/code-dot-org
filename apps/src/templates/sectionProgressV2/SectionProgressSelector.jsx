@@ -114,7 +114,7 @@ function SectionProgressSelector({
       ? showProgressTableV2
       : DCDO.get('progress-table-v2-default-v2', false));
 
-  const toggleV1OrV2Link = () => (
+  const ProgressV1OrV2ToggleLink = () => (
     <div className={styles.toggleViews}>
       <Link
         type="primary"
@@ -155,7 +155,7 @@ function SectionProgressSelector({
         <ProgressBanners hasJustSwitchedToV2={hasJustToggledViews} />
       )}
       <GlobalRegionWrapper
-        component={toggleV1OrV2Link}
+        component={ProgressV1OrV2ToggleLink}
         componentId="ProgressV1OrV2ToggleLink"
       />
       {displayV2 ? (
