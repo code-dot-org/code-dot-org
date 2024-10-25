@@ -247,6 +247,6 @@ class Policies::ChildAccount
   end
 
   def self.conditionally_school_managed?(user)
-    user.sections_as_student.present? || user.roster_synced
+    user.sections_as_student.exists? || user.roster_synced
   end
 end
