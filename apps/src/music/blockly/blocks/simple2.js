@@ -17,6 +17,7 @@ import {
   FIELD_EFFECTS_EXTENSION,
   FIELD_EFFECT_NAME_OPTIONS,
   FIELD_SOUNDS_VALIDATOR,
+  FIELD_PATTERNS_VALIDATOR,
 } from '../constants';
 import {
   fieldSoundsDefinition,
@@ -128,6 +129,7 @@ export const playPatternAtCurrentLocationSimple2 = {
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockPlayPatternTooltip(),
     helpUrl: DOCS_BASE_URL + 'play_pattern',
+    extensions: [FIELD_PATTERNS_VALIDATOR],
   },
   generator: block =>
     `Sequencer.playPattern(${JSON.stringify(
@@ -155,6 +157,7 @@ export const playPatternAiAtCurrentLocationSimple2 = {
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockPlayPatternAiTooltip(),
     helpUrl: DOCS_BASE_URL + 'play_pattern_ai',
+    extensions: [FIELD_PATTERNS_VALIDATOR],
   },
   generator: block =>
     `Sequencer.playPattern(${JSON.stringify(
