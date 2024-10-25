@@ -41,6 +41,9 @@ module Metrics
           return
         end
       rescue => exception
+        if CDO.rack_env?(:development)
+          puts "Error logging event: #{exception}"
+        end
         Honeybadger.notify(
           exception,
           error_message: 'Error logging event',
