@@ -166,14 +166,18 @@ class ManageStudentsLoginInfo extends Component {
           <div>
             <p>{i18n.setUpClassEmailIntro()}</p>
             <SafeMarkdown
-              markdown={i18n.setUpClassEmail1({
-                createAccountLink: `${studioUrlPrefix}/users/sign_up`,
-              })}
+              markdown={i18n
+                .setUpClassEmail1({
+                  createAccountLink: `${studioUrlPrefix}/users/sign_up`,
+                })
+                .replace(/^\d./, `${++counter}.`)}
             />
             <SafeMarkdown
-              markdown={i18n.setUpClassEmail2({
-                joinLink: `${studioUrlPrefix}/join/${sectionCode}`,
-              })}
+              markdown={i18n
+                .setUpClassEmail2({
+                  joinLink: `${studioUrlPrefix}/join/${sectionCode}`,
+                })
+                .replace(/^\d./, `${++counter}.`)}
             />
             <GlobalRegionWrapper
               component={() => (
