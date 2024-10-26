@@ -98,6 +98,7 @@ class UnconnectedMusicView extends React.Component {
     addPlaybackEvents: PropTypes.func,
     addOrderedFunctions: PropTypes.func,
     currentlyPlayingBlockIds: PropTypes.array,
+    isLoadingProjectOrLevel: PropTypes.bool,
     setIsLoading: PropTypes.func,
     setPageError: PropTypes.func,
     initialSources: PropTypes.object,
@@ -215,9 +216,8 @@ class UnconnectedMusicView extends React.Component {
     // Update components with new level data and new initial sources when
     // the level changes.
     if (
-      (!isEqual(prevProps.levelProperties, this.props.levelProperties) ||
-        !isEqual(prevProps.initialSources, this.props.initialSources) ||
-        prevProps.isReadOnlyWorkspace !== this.props.isReadOnlyWorkspace) &&
+      prevProps.isLoadingProjectOrLevel &&
+      !this.props.isLoadingProjectOrLevel &&
       this.props.levelProperties?.appName === 'music'
     ) {
       if (this.props.levelProperties?.appName === 'music') {
@@ -767,6 +767,7 @@ const MusicView = connect(
     selectedBlockId: state.music.selectedBlockId,
     showInstructions: state.music.showInstructions,
     currentlyPlayingBlockIds: getCurrentlyPlayingBlockIds(state),
+    isLoadingProjectOrLevel: state.lab.isLoadingProjectOrLevel,
     initialSources: state.lab.initialSources,
     levelProperties: state.lab.levelProperties,
     longInstructions: state.lab.levelProperties?.longInstructions,
