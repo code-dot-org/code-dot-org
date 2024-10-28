@@ -111,3 +111,4 @@ class LevelLoader
     Dir.glob(Rails.root.join(glob)).sort
   end
 end
+
