@@ -1,3 +1,5 @@
+import {showV2TeacherDashboard} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
+
 const dashboardPrefix = '/teacher_dashboard/sections/';
 
 /**
@@ -12,10 +14,14 @@ export const teacherDashboardUrl = (sectionId, path = '') => {
   return dashboardPrefix + sectionId + path;
 };
 
-export const scriptUrlForStudent = (sectionId, scriptName, studentId) => {
-  if (!scriptName) {
+export const unitUrlForStudent = (sectionId, unitName, studentId) => {
+  if (!unitName) {
     return null;
   }
 
-  return `/s/${scriptName}?section_id=${sectionId}&user_id=${studentId}&viewAs=Instructor`;
+  if (showV2TeacherDashboard()) {
+    return `/teacher_dashboard/sections/${sectionId}/unit/${unitName}`;
+  }
+
+  return `/s/${unitName}?section_id=${sectionId}&user_id=${studentId}&viewAs=Instructor`;
 };
