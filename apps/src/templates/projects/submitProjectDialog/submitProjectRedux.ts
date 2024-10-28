@@ -2,6 +2,7 @@ import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {registerReducers} from '@cdo/apps/redux';
+import experiments from '@cdo/apps/util/experiments';
 
 import {getSubmissionStatus} from './submitProjectApi';
 export interface SubmitProjectState {
@@ -40,7 +41,11 @@ const submitProjectSlice = createSlice({
       state.showSubmitProjectDialog = action.payload;
     },
     setSubmissionStatus: (state, action: PayloadAction<number>) => {
-      state.submissionStatus = action.payload;
+      if (!experiments.isEnabled(experiments.LAB2_SUBMIT_PROJECT)) {
+        state.submissionStatus = 1; // Temporary - status denotes cannot be submitted.
+      } else {
+        state.submissionStatus = action.payload;
+      }
     },
   },
 });
