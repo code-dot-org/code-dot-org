@@ -47,7 +47,7 @@ module Metrics
         Honeybadger.notify(
           exception,
           error_message: 'Error logging event',
-      )
+        )
       end
 
       # Logs an event to Statsig
@@ -67,11 +67,12 @@ module Metrics
         custom_ids = {stableID: statsig_stable_id}
 
         if user.present?
-          custom_ids.merge!({
-            user_type: user.user_type,
-            enabled_experiments: enabled_experiments,
-          }.compact
-)
+          custom_ids.merge!(
+            {
+              user_type: user.user_type,
+              enabled_experiments: enabled_experiments,
+            }.compact
+          )
           StatsigUser.new({'userID' => user.id.to_s, 'custom_ids' => custom_ids})
         else
           StatsigUser.new({'userID' => '', 'custom_ids' => custom_ids})
