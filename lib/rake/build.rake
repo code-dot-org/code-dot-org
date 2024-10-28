@@ -119,7 +119,7 @@ namespace :build do
         # Start new workers
         if rack_env?(:production)
           RakeUtils.system 'bin/delayed_job', '-n', '50', 'start'
-        elsif rack_env?(:test)
+        elsif CDO.test_system?
           RakeUtils.system 'bin/delayed_job', '-n', '10', 'start'
         elsif !rack_env?(:development)
           RakeUtils.system 'bin/delayed_job', 'start'
