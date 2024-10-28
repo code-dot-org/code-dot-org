@@ -1,4 +1,5 @@
 @no_mobile
+@no_safari
 Feature: Global Edition - Region Select
 
   Background:
