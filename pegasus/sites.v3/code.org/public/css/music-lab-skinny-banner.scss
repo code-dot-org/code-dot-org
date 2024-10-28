@@ -1,18 +1,23 @@
 $width-sm: 640px;
 
 .music-lab-skinny-banner {
-  background: radial-gradient(
-      80% 200% at -10% 50%,
-      #02107d 5.27%,
-      rgba(33, 34, 64, 0) 100%
-    ),
-    radial-gradient(
-      50% 200% at 100% 50%,
-      rgba(87, 30, 161, 0.7) 0%,
-      rgba(32, 18, 73, 0) 100%
-    ),
-    #041214;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 16, 125, 1) 0%,
+    rgba(11, 28, 66, 1) 33%,
+    rgba(8, 18, 49, 1) 71%,
+    rgba(52, 28, 101, 1) 100%
+  );
   padding: 2rem;
+  @media (max-width: $width-sm) {
+    background: linear-gradient(
+      130deg,
+      rgba(2, 16, 125, 1) 0%,
+      rgba(11, 28, 66, 1) 33%,
+      rgba(8, 18, 49, 1) 71%,
+      rgba(52, 28, 101, 1) 100%
+    );
+  }
 
   .wrapper {
     max-width: 960px;
@@ -64,7 +69,7 @@ $width-sm: 640px;
   }
 
   img {
-    max-width: 21.25rem;
+    max-width: 18rem;
   }
 
   a.link-button {
