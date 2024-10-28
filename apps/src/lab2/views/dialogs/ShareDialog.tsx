@@ -40,7 +40,7 @@ const CopyToClipboardButton: React.FunctionComponent<{
       color="white"
       size="m"
       onClick={handleCopyToClipboard}
-      className={moduleStyles.copyLinkButton}
+      className={moduleStyles.projectButton}
     />
   );
 };
@@ -109,9 +109,40 @@ const ShareDialog: React.FunctionComponent<{
   const submissionStatus = useAppSelector(
     state => state.submitProject.submissionStatus
   );
-  const showSubmitButton = submissionStatus === 0;
-  const submitButtonText = 'Submit to be featured';
 
+  const showSubmitInfo = () => {
+    if (submissionStatus === 0) {
+      return (
+        <Button
+          text="Submit to be featured"
+          type="secondary"
+          color="white"
+          size="m"
+          onClick={() => {
+            console.log('submit project');
+            dispatch(hideShareDialog());
+            dispatch(setShowSubmitProjectDialog(true));
+          }}
+          className={moduleStyles.projectButton}
+        />
+      );
+    } else if (submissionStatus === 1) {
+      return (
+        <Button
+          text="Thanks for your submission."
+          type="tertiary"
+          color="white"
+          size="m"
+          onClick={() => {
+            console.log('already featured');
+          }}
+          className={moduleStyles.projectButton}
+        />
+      );
+    }
+    return null;
+  };
+  //dialogId = 'hoc2024';
   return (
     <FocusLock>
       <div className={moduleStyles.dialogContainer}>
@@ -150,6 +181,7 @@ const ShareDialog: React.FunctionComponent<{
                   shareUrl={shareUrl}
                   projectType={projectType}
                 />
+                {showSubmitInfo()}
               </div>
             </div>
             {dialogId === 'hoc2024' && (
@@ -159,18 +191,6 @@ const ShareDialog: React.FunctionComponent<{
             )}
           </div>
           <div className={moduleStyles.bottom}>
-            {showSubmitButton && (
-              <Button
-                text={submitButtonText}
-                type="primary"
-                size="m"
-                onClick={() => {
-                  console.log('submit project');
-                  dispatch(hideShareDialog());
-                  dispatch(setShowSubmitProjectDialog(true));
-                }}
-              />
-            )}
             {finishUrl ? (
               <div className={moduleStyles.contents}>
                 <Button
