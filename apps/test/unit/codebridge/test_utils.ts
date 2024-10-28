@@ -14,6 +14,18 @@ export const getDialogControlMock = (
   },
 });
 
+export const getDialogAlertMock = (
+  type: 'cancel' | 'confirm'
+): Pick<DialogControlInterface, 'showDialog'> => ({
+  showDialog: () => {
+    if (type === 'confirm') {
+      return Promise.resolve({type: 'confirm'});
+    } else {
+      return Promise.resolve({type: 'cancel'});
+    }
+  },
+});
+
 type AnalyticsDataType = {event: string};
 type AnalyticsMockType = (event: string) => void;
 

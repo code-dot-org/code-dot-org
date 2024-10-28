@@ -45,7 +45,7 @@
             "value": 1
           }
         ],
-        "callout": "play-sound-block---play-sounds-together-block-workspace"
+        "callout": "play-sound-block-workspace"
       },
       {
         "key": "music-ai-skill-playtogether_36540a11-c67f-47da-bb3a-e2bb6181e9d1",
@@ -163,7 +163,7 @@
     "offer_browser_tts": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:16.784+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-playtogether_sequence_1\\\"\"],\"cloned_from\":\"music-ai-skill-playtogether_sequence_1\"},{\"changed_at\":\"2024-10-22 23:42:40 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:16.784+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-playtogether_sequence_1\\\"\"],\"cloned_from\":\"music-ai-skill-playtogether_sequence_1\"},{\"changed_at\":\"2024-10-22 23:42:40 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-25 20:53:44 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

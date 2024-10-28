@@ -7,9 +7,9 @@ import {Button} from '@cdo/apps/componentLibrary/button';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
 
 import FontAwesome from '../legacySharedComponents/FontAwesome';
+import {useBrowserTextToSpeech} from '../sharedComponents/BrowserTextToSpeechWrapper';
 import EnhancedSafeMarkdown from '../templates/EnhancedSafeMarkdown';
 import {commonI18n} from '../types/locale';
-import {cancelSpeech} from '../util/BrowserTextToSpeech';
 
 import {Panel} from './types';
 
@@ -51,6 +51,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
 }) => {
   const [currentPanelIndex, setCurrentPanelIndex] = useState(0);
   const [typingDone, setTypingDone] = useState(false);
+  const {cancel} = useBrowserTextToSpeech();
 
   targetWidth -= horizontalMargin * 2;
   targetHeight -= verticalMargin * 2 + childrenAreaHeight;
@@ -92,17 +93,17 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
 
   // Reset to last panel if number of panels has reduced.
   useEffect(() => {
-    if (currentPanelIndex >= panels.length) {
+    if (!resetOnChange && currentPanelIndex >= panels.length) {
       setCurrentPanelIndex(Math.max(panels.length - 1, 0));
     }
-  }, [currentPanelIndex, panels]);
+  }, [currentPanelIndex, panels, resetOnChange]);
 
   // Cancel any in-progress text-to-speech when the panel changes.
   useEffect(() => {
     if (offerBrowserTts) {
-      cancelSpeech();
+      cancel();
     }
-  }, [currentPanelIndex, offerBrowserTts]);
+  }, [currentPanelIndex, offerBrowserTts, cancel]);
 
   // Reset typing if the panel changes.
   useEffect(() => {

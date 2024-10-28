@@ -17,6 +17,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
+import {setExtraCopyrightContent} from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 import AppConfig from '../appConfig';
@@ -60,6 +61,7 @@ import {Key} from '../utils/Notes';
 import SoundUploader from '../utils/SoundUploader';
 
 import Callouts from './Callouts';
+import ImageAttributions from './ImageAttributions';
 import KeyHandler from './KeyHandler';
 import MusicLabView from './MusicLabView';
 
@@ -181,6 +183,9 @@ class UnconnectedMusicView extends React.Component {
           });
           this.props.clearCallout();
           this.musicBlocklyWorkspace.dispose();
+
+          // Clear any coypright information in the footer.
+          setExtraCopyrightContent(undefined);
         }
       });
   }
@@ -374,6 +379,14 @@ class UnconnectedMusicView extends React.Component {
     );
 
     this.props.setIsLoading(false);
+
+    // Share copyright information with the component in the footer.
+    const imageAttributions = this.library.getImageAttributions();
+    if (imageAttributions.length > 0) {
+      setExtraCopyrightContent(
+        <ImageAttributions attributions={this.library.getImageAttributions()} />
+      );
+    }
   };
 
   getIsPlaying = () => {
@@ -664,6 +677,8 @@ class UnconnectedMusicView extends React.Component {
   playSong = () => {
     this.player.stopSong();
     this.playingTriggers = [];
+
+    MusicBlocklyWorkspace.hideChaff();
 
     this.compileSong();
 

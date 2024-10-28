@@ -9,6 +9,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {updateTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackDataApi';
 import {getTeacherFeedbackForStudent} from '@cdo/apps/templates/instructions/topInstructionsDataApi';
+import {setUserHasTeacherFeedback} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
@@ -27,10 +28,10 @@ function RubricSubmitFooter({
   open,
   feedbackAdded,
   setFeedbackAdded,
-  onSubmitTeacherFeedback,
 
   // redux
   teacherId,
+  setUserHasTeacherFeedback,
 }) {
   const [feedbackLoaded, setFeedbackLoaded] = useState(false);
   const [isSubmittingToStudent, setIsSubmittingToStudent] = useState(false);
@@ -122,7 +123,7 @@ function RubricSubmitFooter({
         }
         const lastSubmittedDateObj = new Date(json.submittedAt);
         setLastSubmittedTimestamp(lastSubmittedDateObj.toLocaleString());
-        onSubmitTeacherFeedback(studentLevelInfo.user_id);
+        setUserHasTeacherFeedback(studentLevelInfo.user_id);
 
         if (feedbackAdded) {
           analyticsReporter.sendEvent(
@@ -196,9 +197,16 @@ RubricSubmitFooter.propTypes = {
   feedbackAdded: PropTypes.bool,
   setFeedbackAdded: PropTypes.func,
   teacherId: PropTypes.number,
-  onSubmitTeacherFeedback: PropTypes.func,
+  setUserHasTeacherFeedback: PropTypes.func,
 };
 
-export default connect(state => ({
-  teacherId: state.currentUser.userId,
-}))(RubricSubmitFooter);
+export default connect(
+  state => ({
+    teacherId: state.currentUser.userId,
+  }),
+  dispatch => ({
+    setUserHasTeacherFeedback(userId) {
+      dispatch(setUserHasTeacherFeedback(userId));
+    },
+  })
+)(RubricSubmitFooter);

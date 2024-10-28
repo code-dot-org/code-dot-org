@@ -109,5 +109,8 @@
   "effectsLabelsVolume": "Volume",
   "effectsLabelsDelay": "Delay",
   "effectsLabelsFilter": "Filter",
-  "generate": "Generate"
+  "generate": "Generate",
+  "imageAttributionHeading": "Music Lab photos",
+  "imageAttributionBodyCreativeCommons": "{artist} [photo]({srcUrl}) by {author} is licensed under [{licenseName}]({licenseUrl}).",
+  "imageAttributionBodyCopyright": "{artist} photo &copy; {year} {author}.  All rights reserved."
 }

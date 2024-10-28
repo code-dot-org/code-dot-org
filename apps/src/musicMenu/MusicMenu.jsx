@@ -51,11 +51,11 @@ const optionsList = [
     ],
   },
   {
-    name: 'pack-dialog-2',
+    name: 'pack-dialog-1',
     type: 'radio',
     values: [
-      {value: 'false', description: 'Use regular pack dialog.'},
-      {value: 'true', description: 'Use pack dialog 2.'},
+      {value: 'false', description: 'Use pack dialog 2 (default).'},
+      {value: 'true', description: 'Use older pack dialog.'},
     ],
   },
   {
@@ -65,6 +65,31 @@ const optionsList = [
       {value: 'false', description: 'Hide text to speech.'},
       {value: 'true', description: 'Show text to speech.'},
     ],
+  },
+  {
+    name: 'tts-play-pause',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description:
+          'Disable play/pause functionality for text to speech (default).',
+      },
+      {
+        value: 'true',
+        description: 'Enable play/pause functionality for text to speech.',
+      },
+    ],
+  },
+  {
+    name: 'tts-play-icon',
+    type: 'string',
+    description: 'Use a specific icon for text to speech play button.',
+  },
+  {
+    name: 'tts-stop-icon',
+    type: 'string',
+    description: 'Use a specific icon for text to speech stop button.',
   },
   {
     name: 'play-tune-block',
@@ -133,6 +158,17 @@ const optionsList = [
     values: [
       {value: 'sample', description: 'Use the sample player (legacy).'},
       {value: 'tonejs', description: 'Use the ToneJS player (default).'},
+    ],
+  },
+  {
+    name: 'allow-change-starting-playhead-position',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: "Don't allow change starting playhead position (default).",
+      },
+      {value: 'true', description: 'Allow change starting playhead position.'},
     ],
   },
   {
