@@ -288,6 +288,8 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
     let(:user) {build_stubbed(:student)}
     let(:approximate) {true}
+    # Use default value
+    let(:future) {nil}
 
     let(:user_cap_compliant?) {false}
     let(:user_grace_period_end_date) {14.days.since}
@@ -301,7 +303,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
 
     before do
-      Policies::ChildAccount.stubs(:compliant?).with(user).returns(user_cap_compliant?)
+      Policies::ChildAccount.stubs(:compliant?).with(user, future: !!future).returns(user_cap_compliant?)
       Policies::ChildAccount.stubs(:grace_period_end_date).with(user, approximate: approximate).returns(user_grace_period_end_date)
       Policies::ChildAccount.stubs(:user_predates_policy?).with(user).returns(user_predates_cap_policy?)
       Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
@@ -535,7 +537,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
   end
 
   describe '.parent_permission_required?' do
-    let(:parent_permission_required?) {Policies::ChildAccount.parent_permission_required?(user)}
+    let(:parent_permission_required?) {Policies::ChildAccount.parent_permission_required?(user, future: future)}
 
     # Create, initially, a student that does require parent permission
     let(:user_type) {'student'}
@@ -550,6 +552,10 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     let(:user_state_policy_max_age) {12}
     let(:user_lockout_date) {user_state_policy_start_date + 1.year}
     let(:user_state_policy) {{start_date: user_state_policy_start_date, lockout_date: user_lockout_date, max_age: user_state_policy_max_age}}
+
+    # Use the default `future` flag if we want to know if the student will need
+    # parent permission in the future.
+    let(:future) {nil}
 
     around do |test|
       Timecop.freeze {test.call}
@@ -594,6 +600,20 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       it 'returns false' do
         _(parent_permission_required?).must_equal false
       end
+
+      context 'they need permission now' do
+        let(:future) {false}
+        it 'returns false' do
+          _(parent_permission_required?).must_equal false
+        end
+      end
+
+      context 'they need permission in the future' do
+        let(:future) {true}
+        it 'returns true' do
+          _(parent_permission_required?).must_equal true
+        end
+      end
     end
 
     context 'when user is not covered by a US State child account policy' do
@@ -609,6 +629,46 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
       it 'returns false' do
         _(parent_permission_required?).must_equal false
+      end
+    end
+  end
+
+  describe '.compliant?' do
+    let(:user) {create(:student)}
+    let(:future) {nil}
+
+    let(:parent_permission_required) {false}
+    let(:compliant) {Policies::ChildAccount.compliant?(user, future: !!future)}
+
+    before do
+      Policies::ChildAccount.stubs(:parent_permission_required?).with(user, future: !!future).returns(parent_permission_required)
+    end
+
+    it 'returns true' do
+      _(compliant).must_equal true
+    end
+
+    context 'permission is required' do
+      let(:parent_permission_required) {true}
+
+      it 'returns false' do
+        _(compliant).must_equal false
+      end
+    end
+
+    context 'in the future' do
+      let(:future) {true}
+
+      it 'returns true' do
+        _(compliant).must_equal true
+      end
+
+      context 'permission is required' do
+        let(:parent_permission_required) {true}
+
+        it 'returns false' do
+          _(compliant).must_equal false
+        end
       end
     end
   end

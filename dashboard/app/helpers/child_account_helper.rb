@@ -4,7 +4,7 @@ module ChildAccountHelper
   # @param request [ActionDispatch::Request] the web request
   # @return [Hash, nil]
   def parental_permission_banner_data(user, request)
-    student_lockout_date = Policies::ChildAccount.lockout_date(user, approximate: true)
+    student_lockout_date = Policies::ChildAccount.lockout_date(user, approximate: true, future: true)
 
     if request.params.key?(:show_parental_permission_banner)
       student_lockout_date ||= Policies::ChildAccount.state_policy(user).try(:[], :lockout_date)
@@ -33,7 +33,7 @@ module ChildAccountHelper
   # @return [String] the HTML for the pre-lockdown parent permission modal
   def render_parental_permission_modal(user, request)
     force_display = request.params.key?(:show_parental_permission_modal)
-    student_lockout_date = Policies::ChildAccount.lockout_date(user, approximate: true)
+    student_lockout_date = Policies::ChildAccount.lockout_date(user, approximate: true, future: true)
 
     if force_display
       student_lockout_date ||= Policies::ChildAccount.state_policy(user).try(:[], :lockout_date)

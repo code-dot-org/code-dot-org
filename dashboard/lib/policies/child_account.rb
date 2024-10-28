@@ -40,8 +40,11 @@ class Policies::ChildAccount
   # Is this user compliant with our Child Account Policy(cap)?
   # For students under-13, in Colorado, with a personal email login: we require
   # parent permission before the student can start using their account.
-  def self.compliant?(user)
-    return true unless parent_permission_required?(user)
+  # @param [Boolean] future Set to true if you want to know if the user will be
+  # compliant in the future after CAP goes into affect in their US State.
+  # Defaults to `false`
+  def self.compliant?(user, future: false)
+    return true unless parent_permission_required?(user, future: future)
     ComplianceState.permission_granted?(user)
   end
 
@@ -98,8 +101,10 @@ class Policies::ChildAccount
   # The date on which the student's account will be locked if the account is not compliant.
   # @param user [User] the student account
   # @param approximate [Boolean] if true, return an approximate date if the exact date is not known
-  def self.lockout_date(user, approximate: false)
-    return if compliant?(user)
+  # @param future [Boolean] return the lockout date for the user even if the CAP
+  # policy for their state hasn't begun yet.
+  def self.lockout_date(user, approximate: false, future: false)
+    return if compliant?(user, future: future)
     return if ComplianceState.locked_out?(user)
 
     # CAP non-compliant "pre-policy" created students can be locked out only after their grace period ends.
@@ -222,7 +227,10 @@ class Policies::ChildAccount
 
   # Check if parent permission is required for this account according to our
   # Child Account Policy.
-  def self.parent_permission_required?(user)
+  # @param [Boolean] future Set to true if you want to know if the student will
+  # need parent permission in the future after CAP goes into affect in their
+  # US State. Defaults to `false`.
+  def self.parent_permission_required?(user, future: false)
     return false unless user.student?
 
     policy = state_policy(user)
@@ -230,7 +238,9 @@ class Policies::ChildAccount
     return false unless policy
 
     # Parental permission is not required until the policy is in effect.
-    return false if policy[:start_date] > DateTime.now
+    # Skip the date check if we want to know if the student will need parent
+    # permission in the future.
+    return false if !future && policy[:start_date] > DateTime.now
 
     # Parental permission is not required for students
     # whose age cannot be identified or who are older than the maximum age covered by the policy.
