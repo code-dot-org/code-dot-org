@@ -7,6 +7,7 @@ import React, {
   useState,
 } from 'react';
 
+import {TICKS_PER_MEASURE} from '../constants';
 import MusicRegistry from '../MusicRegistry';
 import {InstrumentEventValue} from '../player/interfaces/InstrumentEvent';
 import MusicLibrary from '../player/MusicLibrary';
@@ -17,7 +18,7 @@ import PreviewControls from './PreviewControls';
 import styles from './patternPanel.module.scss';
 
 // Generate an array containing tick numbers from 1..16.
-const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);
+const arrayOfTicks = Array.from({length: TICKS_PER_MEASURE}, (_, i) => i + 1);
 
 interface PatternPanelProps {
   initValue: InstrumentEventValue;

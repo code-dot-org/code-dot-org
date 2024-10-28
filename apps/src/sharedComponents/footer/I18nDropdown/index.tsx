@@ -32,7 +32,6 @@ const I18nDropdown: React.FC<I18nDropdownProps> = ({
     >
       <input type="hidden" name="user_return_to" value={window.location.href} />
       <SimpleDropdown
-        id="locale"
         className="languageSelect"
         name="locale"
         selectedValue={selectedLocale || currentLocale()}
