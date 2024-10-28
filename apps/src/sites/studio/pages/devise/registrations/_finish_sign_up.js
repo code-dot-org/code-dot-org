@@ -89,7 +89,7 @@ $(document).ready(() => {
         has_marketing_value = true;
       }
     }
-    let sourceString = isLTI ? 'LTI' : '';
+    const sourceString = isLTI ? 'LTI' : '';
     analyticsReporter.sendEvent(
       EVENTS.SIGN_UP_FINISHED_EVENT,
       {
