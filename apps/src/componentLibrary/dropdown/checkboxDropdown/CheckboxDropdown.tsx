@@ -7,18 +7,20 @@ import {DropdownProviderWrapper} from '@cdo/apps/componentLibrary/common/context
 import {
   ComponentSizeXSToL,
   DropdownColor,
+  DropdownFormFieldRelatedProps,
 } from '@cdo/apps/componentLibrary/common/types';
 import CustomDropdown, {
   _CustomDropdownOption,
 } from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
-import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import i18n from '@cdo/locale';
 
 import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
 
 export interface CheckboxDropdownOption extends _CustomDropdownOption {}
 
-export interface CheckboxDropdownProps extends AriaAttributes {
+export interface CheckboxDropdownProps
+  extends DropdownFormFieldRelatedProps,
+    AriaAttributes {
   /** CheckboxDropdown name.
    * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
   name: string;
@@ -55,14 +57,6 @@ export interface CheckboxDropdownProps extends AriaAttributes {
       | React.MouseEvent<HTMLButtonElement>
       | React.MouseEvent<HTMLAnchorElement>
   ) => void;
-  /** CheckboxDropdown helper message */
-  helperMessage?: string;
-  /** CheckboxDropdown helper icon */
-  helperIcon?: FontAwesomeV6IconProps;
-  /** CheckboxDropdown error message */
-  errorMessage?: string;
-  /** Style the dropdown as a form field */
-  styleAsFormField?: boolean;
 }
 
 const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({

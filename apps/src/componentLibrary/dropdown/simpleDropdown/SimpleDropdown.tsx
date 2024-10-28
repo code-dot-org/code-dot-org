@@ -1,14 +1,17 @@
 import classNames from 'classnames';
 import React, {HTMLAttributes} from 'react';
 
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
-import FontAwesomeV6Icon, {
-  FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import {
+  ComponentSizeXSToL,
+  DropdownFormFieldRelatedProps,
+} from '@cdo/apps/componentLibrary/common/types';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
 import moduleStyles from './simpleDropdown.module.scss';
 
-export interface SimpleDropdownProps extends HTMLAttributes<HTMLSelectElement> {
+export interface SimpleDropdownProps
+  extends DropdownFormFieldRelatedProps,
+    HTMLAttributes<HTMLSelectElement> {
   /** SimpleDropdown items list */
   items?: {value: string; text: string}[];
   /** SimpleDropdown grouped list of items */
@@ -39,14 +42,6 @@ export interface SimpleDropdownProps extends HTMLAttributes<HTMLSelectElement> {
   color?: 'white' | 'black' | 'gray';
   /** SimpleDropdown size */
   size?: ComponentSizeXSToL;
-  /** SimpleDropdown helper message */
-  helperMessage?: string;
-  /** TextField helper icon */
-  helperIcon?: FontAwesomeV6IconProps;
-  /** SimpleDropdown error message */
-  errorMessage?: string;
-  /** Style SimpleDropdown as a form field */
-  styleAsFormField?: boolean;
 }
 
 /**

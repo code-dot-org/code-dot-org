@@ -9,6 +9,7 @@ import {
 import {
   ComponentSizeXSToL,
   DropdownColor,
+  DropdownFormFieldRelatedProps,
 } from '@cdo/apps/componentLibrary/common/types';
 import CustomDropdown, {
   _CustomDropdownOption,
@@ -23,7 +24,9 @@ export interface IconDropdownOption extends _CustomDropdownOption {
   icon: FontAwesomeV6IconProps;
 }
 
-export interface IconDropdownProps extends AriaAttributes {
+export interface IconDropdownProps
+  extends DropdownFormFieldRelatedProps,
+    AriaAttributes {
   /** IconDropdown name.
    * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
   name: string;
@@ -48,14 +51,6 @@ export interface IconDropdownProps extends AriaAttributes {
   selectedOption: IconDropdownOption;
   /** IconDropdown onChange handler */
   onChange: (option: IconDropdownOption) => void;
-  /** IconDropdown helper message */
-  helperMessage?: string;
-  /** IconDropdown helper icon */
-  helperIcon?: FontAwesomeV6IconProps;
-  /** IconDropdown error message */
-  errorMessage?: string;
-  /** Style the dropdown as a form field */
-  styleAsFormField?: boolean;
 }
 
 const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
