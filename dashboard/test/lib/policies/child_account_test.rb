@@ -497,138 +497,28 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
   end
 
-  describe '.personal_account?' do
-    let(:personal_account?) {Policies::ChildAccount.personal_account?(user)}
-
-    let(:user_sponsored?) {false}
-    let(:user_migrated?) {false}
-    let(:user_provider) {nil}
-    let(:user_encrypted_password) {nil}
-    let(:user_roster_synced) {false}
-    let(:user_auth_option_credential_type) {::AuthenticationOption::EMAIL}
-    let(:user_auth_option) {build_stubbed(:authentication_option, credential_type: user_auth_option_credential_type)}
-    let(:user_has_extra_auth_option?) {false}
-    let(:extra_auth_option_type) {::AuthenticationOption::EMAIL}
-    let(:user_in_section?) {false}
-    let(:section) {build_stubbed(:section)}
-    let(:extra_auth_option) {build_stubbed(:authentication_option, credential_type: extra_auth_option_type)}
-    let(:user) {build_stubbed(:user, provider: user_provider, encrypted_password: user_encrypted_password, roster_synced: user_roster_synced)}
-
-    before do
-      user.stubs(:sponsored?).returns(user_sponsored?)
-      user.stubs(:migrated?).returns(user_migrated?)
-      auth_options = []
-      auth_options << user_auth_option if user_migrated?
-      auth_options << extra_auth_option if user_has_extra_auth_option?
-      user.stubs(:authentication_options).returns(auth_options)
-      user.stubs(:sections_as_student).returns(section) if user_in_section?
+  test '.personal_account?' do
+    # [User traits, Expected result from personal_account?]
+    test_matrix = [
+      [[:student], true], # Has email auth option and password by default
+      [[:student, :with_clever_authentication_option, :without_email_auth_option, :without_encrypted_password], false],
+      [[:student, :with_lti_auth, :without_email_auth_option, :without_encrypted_password], false],
+      [[:student, :with_facebook_authentication_option, :without_email_auth_option, :without_encrypted_password], true],
+      [[:student, :with_google_authentication_option, :without_email_auth_option, :without_encrypted_password], true],
+      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :without_encrypted_password], true],
+      [[:student, :with_google_authentication_option, :without_email_auth_option, :without_encrypted_password, {roster_synced: true}], false],
+      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :without_encrypted_password, {roster_synced: true}], false],
+      [[:student, :with_google_authentication_option, :without_email_auth_option, :without_encrypted_password, :in_google_section], false],
+      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :without_encrypted_password, :in_email_section], false],
+    ]
+    failures = []
+    test_matrix.each do |traits, expected_result|
+      user = create(*traits)
+      actual_result = Policies::ChildAccount.personal_account?(user)
+      failure_msg = "Expected personal_account?(#{traits}) to be #{expected_result} but it was #{actual_result}"
+      failures << failure_msg if actual_result != expected_result
     end
-
-    context 'when legacy/unmigrated user' do
-      context 'when user has a password' do
-        let(:user_encrypted_password) {'password'}
-        it 'returns true' do
-          _(personal_account?).must_equal true
-        end
-      end
-
-      context 'when user provider is Clever' do
-        let(:user_provider) {::AuthenticationOption::CLEVER}
-
-        it 'returns false' do
-          _(personal_account?).must_equal false
-        end
-      end
-    end
-
-    context 'when user is migrated' do
-      let(:user_migrated?) {true}
-      let(:user_provider) {::User::PROVIDER_MIGRATED}
-
-      it 'returns true' do
-        _(personal_account?).must_equal true
-      end
-
-      context 'when Clever auth option' do
-        let(:user_auth_option_credential_type) {::AuthenticationOption::CLEVER}
-
-        it 'returns false' do
-          _(personal_account?).must_equal false
-        end
-
-        context 'when user has a password' do
-          let(:user_encrypted_password) {'password'}
-
-          it 'returns true' do
-            _(personal_account?).must_equal true
-          end
-        end
-
-        context 'when user also has an email auth option' do
-          let(:user_has_extra_auth_option?) {true}
-
-          it 'returns true' do
-            _(personal_account?).must_equal true
-          end
-        end
-      end
-
-      context 'when LTI auth option' do
-        let(:user_auth_option_credential_type) {::AuthenticationOption::LTI_V1}
-
-        it 'returns false' do
-          _(personal_account?).must_equal false
-        end
-
-        context 'when user has a password' do
-          let(:user_encrypted_password) {'password'}
-
-          it 'returns true' do
-            _(personal_account?).must_equal true
-          end
-        end
-
-        context 'when user also has an email auth option' do
-          let(:user_has_extra_auth_option?) {true}
-
-          it 'returns true' do
-            _(personal_account?).must_equal true
-          end
-        end
-      end
-
-      context 'when Google auth option' do
-        let(:user_auth_option_credential_type) {::AuthenticationOption::GOOGLE}
-
-        it 'returns true' do
-          _(personal_account?).must_equal true
-        end
-
-        context 'when roster synced' do
-          let(:user_roster_synced) {true}
-
-          it 'returns false' do
-            _(personal_account?).must_equal false
-          end
-        end
-
-        context 'when user is in a section' do
-          let(:user_in_section?) {true}
-
-          it 'returns false' do
-            _(personal_account?).must_equal false
-          end
-        end
-      end
-    end
-
-    context 'when user is sponsored' do
-      let(:user_sponsored?) {true}
-
-      it 'returns false' do
-        _(personal_account?).must_equal false
-      end
-    end
+    assert failures.empty?, failures.join("\n")
   end
 
   describe '.parent_permission_required?' do

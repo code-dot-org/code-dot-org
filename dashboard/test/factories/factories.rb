@@ -348,6 +348,13 @@ FactoryBot.define do
         end
       end
 
+      trait :in_google_section do
+        after(:create) do |user|
+          section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+          section.add_student user
+        end
+      end
+
       factory :student_with_ai_tutor_access do
         after(:create) do |user|
           teacher = create :teacher
@@ -457,12 +464,22 @@ FactoryBot.define do
     end
 
     # We have some tests which want to create student accounts which don't have any authentication setup.
-    # Using this will put the user into an invalid state.
+    # Using this will put the user into an invalid state unless they have another authentication option.
     trait :without_encrypted_password do
       after(:create) do |user|
         user.encrypted_password = nil
         user.password = nil
         user.save validate: false
+      end
+    end
+
+    # The user factory creates an email authentication option by default. This trait will remove that option.
+    # For testing SSO users who have an email address but not an email authentication option.
+    trait :without_email_auth_option do
+      after(:create) do |user|
+        ao = user.authentication_options.find_by(credential_type: AuthenticationOption::EMAIL)
+        ao&.destroy
+        user.save
       end
     end
 
