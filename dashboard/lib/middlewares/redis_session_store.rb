@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
-require 'action_dispatch/middleware/session/redis_store'
-require 'action_dispatch/request/session'
-
-module Cdo
+module Middlewares
   # This class extends +ActionDispatch::Session::RedisStore+ (:redis_store)
   # to resolve the issue of deleted sessions being restored during concurrent requests.
   #
