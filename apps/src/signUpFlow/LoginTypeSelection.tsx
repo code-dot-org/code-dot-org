@@ -367,10 +367,12 @@ const LoginTypeSelection: React.FunctionComponent = () => {
         </div>
       </div>
       <SafeMarkdown
+        className={style.tosAndPrivacy}
         markdown={locale.by_signing_up({
-          tosLink: 'code.org/tos',
-          privacyPolicyLink: 'code.org/privacy',
+          tosLink: 'https://code.org/tos',
+          privacyPolicyLink: 'https://code.org/privacy',
         })}
+        openExternalLinksInNewTab={true}
       />
     </div>
   );

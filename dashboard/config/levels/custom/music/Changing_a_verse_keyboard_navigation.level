@@ -1,0 +1,190 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2024-10-23T18:09:24.000Z",
+  "level_num": "custom",
+  "user_id": 18914,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "##Create a verse\r\n\r\nUse **WASD** to move between code blocks. \r\n\r\nThen use **WASD** to move into the intro block and add a new song. \r\n\r\n::: details [**Hint**]\r\nIf you are at the top of the block stack, you can press **D** to select the entire stack. Only when the entire stack is selected will you be able to jump between different code sections. \r\n:::\r\n",
+    "offer_browser_tts": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "alessia_cara_scars_to_your_beautiful",
+      "sounds": {
+        "alessia_cara_scars_to_your_beautiful": [
+          "drums_verse",
+          "drums_chorus",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "bass_verse",
+          "bass_chorus",
+          "piano_verse",
+          "piano_chorus"
+        ]
+      },
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together"
+          ]
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "procedures_callnoreturn",
+                  "id": "doFurn)}}8a0k@`]2rT/",
+                  "extraState": {
+                    "name": "verse"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "procedures_callnoreturn",
+                      "id": "5OfAn;yO+$)?9e5N?[,X",
+                      "extraState": {
+                        "name": "chorus"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "procedures_callnoreturn",
+                          "id": "X}}X-[1tBHe;V4j9O4Ej",
+                          "extraState": {
+                            "name": "verse"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "procedures_callnoreturn",
+                              "id": "{9jlGJ_=MSCevP}.sO[n",
+                              "extraState": {
+                                "name": "chorus"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "2C.S~L_w:RA(FC4+ZM_I",
+              "x": 170,
+              "y": 30,
+              "extraState": {
+                "procedureId": "jv|/-R)+DmscpTR)jlz`",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "verse"
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "m;-~*:jFljQ_7h6J3^Jl",
+              "x": 330,
+              "y": 30,
+              "extraState": {
+                "procedureId": "o,#.8vVzr~i)u5h!KWPC",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "chorus"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "play_sounds_together",
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "play_sound_at_current_location_simple2",
+                          "fields": {
+                            "sound": "alessia_cara_scars_to_your_beautiful/vocals_chorus_1"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "X[Yv7$d_|o,w{F!p]Zlr",
+                              "fields": {
+                                "sound": "alessia_cara_scars_to_your_beautiful/drums_chorus"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "JMn=p=JZL-x/NA@9g4dv",
+                                  "fields": {
+                                    "sound": "alessia_cara_scars_to_your_beautiful/piano_chorus"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "kkb_,pz!VUXUVOMz[+fJ",
+                                      "fields": {
+                                        "sound": "alessia_cara_scars_to_your_beautiful/bass_chorus"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "jv|/-R)+DmscpTR)jlz`",
+            "name": "verse",
+            "returnTypes": null
+          },
+          {
+            "id": "o,#.8vVzr~i)u5h!KWPC",
+            "name": "chorus",
+            "returnTypes": null
+          }
+        ]
+      }
+    },
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-10-23 18:14:26 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 18:15:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

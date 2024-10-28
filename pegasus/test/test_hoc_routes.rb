@@ -37,6 +37,10 @@ class HocRoutesTest < Minitest::Test
       assert_redirects_from_to '/api/hour/begin/mc', '/minecraft'
     end
 
+    it 'starts archived tutorial' do
+      assert_redirects_from_to '/api/hour/begin/play-lab', '/playlab'
+    end
+
     it 'ends tutorial' do
       assert_redirects_from_to '/api/hour/finish', '/congrats'
     end
@@ -45,13 +49,26 @@ class HocRoutesTest < Minitest::Test
       assert_successful_png_get '/api/hour/begin_mc.png'
     end
 
+    it 'starts archived tutorial with png image' do
+      assert_successful_png_get '/api/hour/begin_play-lab.png'
+    end
+
     it 'ends given tutorial with png image' do
       assert_successful_png_get '/api/hour/finish_mc.png'
+    end
+
+    it 'ends archived tutorial with png image' do
+      assert_successful_png_get '/api/hour/finish_play-lab.png'
     end
 
     it 'ends given tutorial, providing script ID to congrats page' do
       assert_redirects_from_to '/api/hour/finish/mc', '/congrats'
       assert_includes @pegasus.last_request.url, "&s=#{Base64.urlsafe_encode64('mc')}"
+    end
+
+    it 'ends archived tutorial, providing script ID to congrats page' do
+      assert_redirects_from_to '/api/hour/finish/play-lab', '/congrats'
+      assert_includes @pegasus.last_request.url, "&s=#{Base64.urlsafe_encode64('play-lab')}"
     end
 
     it 'redirects batch certificate page to code studio' do

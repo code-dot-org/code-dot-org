@@ -2,12 +2,16 @@ import classNames from 'classnames';
 import React, {MouseEvent, useCallback, useRef} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import appConfig from '../appConfig';
 import {BlockMode, MIN_NUM_MEASURES} from '../constants';
 import {
   clearSelectedBlockId,
   getBlockMode,
   setStartPlayheadPosition,
 } from '../redux/musicRedux';
+import {MusicLevelData} from '../types';
 
 import usePlaybackUpdate from './hooks/usePlaybackUpdate';
 import TimelineSampleEvents from './TimelineSampleEvents';
@@ -63,6 +67,16 @@ const Timeline: React.FunctionComponent = () => {
   const startingPlayheadPosition = useMusicSelector(
     state => state.music.startingPlayheadPosition
   );
+
+  const allowChangeStartingPlayheadPosition =
+    (useAppSelector(
+      state =>
+        (state.lab.levelProperties?.levelData as MusicLevelData | undefined)
+          ?.allowChangeStartingPlayheadPosition
+    ) ||
+      appConfig.getValue('allow-change-starting-playhead-position') ===
+        'true') &&
+    !isPlaying;
   const measuresToDisplay = Math.max(
     MIN_NUM_MEASURES,
     useMusicSelector(state => state.music.lastMeasure)
@@ -93,7 +107,7 @@ const Timeline: React.FunctionComponent = () => {
 
   const onMeasuresBackgroundClick = useCallback(
     (event: MouseEvent) => {
-      if (isPlaying) {
+      if (isPlaying || !allowChangeStartingPlayheadPosition) {
         return;
       }
       const offset =
@@ -105,7 +119,7 @@ const Timeline: React.FunctionComponent = () => {
       const roundedMeasure = Math.round(exactMeasure * 4) / 4;
       dispatch(setStartPlayheadPosition(roundedMeasure));
     },
-    [dispatch, isPlaying]
+    [dispatch, isPlaying, allowChangeStartingPlayheadPosition]
   );
 
   const onMeasureNumberClick = useCallback(
@@ -159,7 +173,8 @@ const Timeline: React.FunctionComponent = () => {
         className={classNames(
           moduleStyles.measuresBackground,
           moduleStyles.fullWidthOverlay,
-          !isPlaying && moduleStyles.measuresBackgroundClickable
+          allowChangeStartingPlayheadPosition &&
+            moduleStyles.measuresBackgroundClickable
         )}
         style={{width: paddingOffset + measuresToDisplay * barWidth}}
         onClick={onMeasuresBackgroundClick}

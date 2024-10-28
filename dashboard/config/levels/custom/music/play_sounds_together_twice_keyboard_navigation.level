@@ -1,0 +1,107 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2024-10-23T18:00:48.000Z",
+  "level_num": "custom",
+  "user_id": 18914,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "##Play together twice \r\n\r\nUser **WASD** to add two sounds into the first **Play Together** block \r\n\r\nAdd two sounds to the second **Play Together** block\r\n\r\nThen **Run** and **Continue**.",
+    "offer_browser_tts": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "shakira_maluma_chantaje",
+      "sounds": {
+        "shakira_maluma_chantaje": [
+          "kick_verse_1",
+          "kick_verse_2",
+          "kick_build_1",
+          "kick_build_2",
+          "snap_sample",
+          "snap_sample_full",
+          "percussion",
+          "shaker",
+          "bass_small_1",
+          "bass_small_2",
+          "bass_medium_1",
+          "bass_medium_2",
+          "bass_big_1",
+          "bass_big_2",
+          "ambience",
+          "impact_1",
+          "impact_2",
+          "synth_pulse_1",
+          "synth_pulse_2",
+          "synth_accent_1",
+          "synth_accent_2",
+          "clippy_synth_1",
+          "clippy_synth_2",
+          "pad_1",
+          "pad_2",
+          "guitar_1",
+          "guitar_2",
+          "intro_swell",
+          "vocals_sample_1",
+          "vocals_sample_2",
+          "vocals_chop",
+          "vocals_maluma_1",
+          "vocals_maluma_2",
+          "vocals_maluma_3",
+          "vocals_maluma_4",
+          "vocals_shakira_1",
+          "vocals_shakira_2",
+          "vocals_shakira_3",
+          "vocals_shakira_maluma_4"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together"
+          ]
+        },
+        "type": "flyout"
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "qlzcv~M[R0Y[m|7CE.gp"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-10-23 18:04:18 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 18:04:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

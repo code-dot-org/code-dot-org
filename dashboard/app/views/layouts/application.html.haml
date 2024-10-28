@@ -67,7 +67,7 @@
     - else
       - unless Rails.env.production?
         = render partial: 'layouts/environment_tag'
-    - if current_user&.student?
+    - if current_user&.student? && !current_user.sponsored?
       - forceStudentInterstitial = params[:forceStudentInterstitial]
       - if current_user.age.nil? || lti_user_info_required?(current_user) || cap_user_info_required?(current_user, request.country) || forceStudentInterstitial
         = render partial: 'layouts/student_information_interstitial', locals: {student: current_user, country: request.country, forceStudentInterstitial: forceStudentInterstitial}

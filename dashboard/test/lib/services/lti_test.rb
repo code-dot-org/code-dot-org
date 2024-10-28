@@ -359,6 +359,11 @@ class Services::LtiTest < ActiveSupport::TestCase
     assert_equal user.user_type, User::TYPE_STUDENT
   end
 
+  test 'should mark the user as roster synced' do
+    user = Services::Lti.initialize_lti_user_from_nrps(client_id: @id_token[:aud], issuer: @id_token[:iss], nrps_member: @nrps_student)
+    assert_equal user.roster_synced, true
+  end
+
   test 'should create a student user if LTI does not provide email despite instructor role' do
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     @nrps_teacher[:message].first.delete(@custom_claims_key)

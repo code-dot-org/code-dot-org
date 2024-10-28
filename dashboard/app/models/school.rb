@@ -18,12 +18,10 @@
 #  longitude                   :decimal(9, 6)
 #  school_category             :string(255)
 #  last_known_school_year_open :string(9)
-#  is_current                  :boolean
 #
 # Indexes
 #
 #  index_schools_on_id                           (id) UNIQUE
-#  index_schools_on_is_current                   (is_current)
 #  index_schools_on_last_known_school_year_open  (last_known_school_year_open)
 #  index_schools_on_name_and_city                (name,city)
 #  index_schools_on_school_district_id           (school_district_id)

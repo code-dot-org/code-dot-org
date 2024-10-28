@@ -1,0 +1,161 @@
+{
+  "https://studio.code.org/s/music-jam-2024/lessons/1/levels/2": {
+    "long_instructions": "#### Play a Sound\n\n-   Drag the [play][0] block and connect it under [when run][1]. \n-   Then press [Run][2].",
+    "validations": {
+      "music-ai-skill-sequence_d6a47c71-67df-4b83-950a-71b503c6cdb6": "Nice work.  You played a sound!",
+      "music-ai-skill-sequence_100f6390-0a0c-4ff7-bc67-2979e4beed57": "You found the Run button! Now, connect a [play][0] block under [when run][1]. "
+    }
+  },
+  "https://studio.code.org/s/music-jam-2024/lessons/1/levels/3": {
+    "long_instructions": "#### Play More than One Sound\n\n-   Drag two or more [play][0] blocks under [when run][1]. \n-   Choose two different sounds. \n-   Press [Run][2].",
+    "validations": {
+      "music-ai-skill-sequence_d6a47c71-67df-4b83-950a-71b503c6cdb6": "That sounds great! ",
+      "music-ai-skill-sequence2_3_cc846575-fc94-438c-a446-41ca46e828a2": "That sounds great! ",
+      "music-ai-skill-sequence2_3_a73de379-9a46-4c14-8cbf-e4af5ec56370": "That sounds great! ",
+      "music-ai-skill-sequence2_3_4116f123-a6d2-499e-bd1e-aa81bdb77b6d": "That sounds great! ",
+      "music-ai-skill-sequence2_3_bdf7ebe3-6e7c-41e2-950c-e7fbeaffeff2": "That sounds great! ",
+      "music-ai-skill-sequence2_3_0f4e2e3e-fbf3-4fb6-98f7-890d38a2e280": "That sounds great! ",
+      "music-ai-skill-sequence2_3_1aca0f88-2ab4-41e0-a026-8a3bbbd5cbd4": "That sounds great! ",
+      "music-ai-skill-sequence2_3_ab984b1f-77bb-4212-b9b2-7f01679e3bca": "That sounds great! ",
+      "music-ai-skill-sequence2_3_42073586-a6b1-4601-8537-f251f003dbd4": "That sounds great! ",
+      "music-ai-skill-sequence2_3_1e873460-2b14-4dd3-b75a-a97489b29c58": "Did you know you can change the sound? Click on the [sound's][0] name. ",
+      "music-ai-skill-sequence2_e3a14922-603d-4ea2-8eaf-4e9ce817f651": "You played one sound, now add another [sound][0]. ",
+      "music-ai-skill-sequence_100f6390-0a0c-4ff7-bc67-2979e4beed57": "Drag at least two [play][0] blocks under [when run][1]. "
+    }
+  },
+  "https://studio.code.org/s/music-jam-2024/lessons/1/levels/4": {
+    "panels": {
+      "music_ai_panels_playtogether_3-fa7e7e9c-4ae6-45a7-8248-bef386648cff": "Great job! You just wrote your first lines of code.",
+      "music_ai_panels_playtogether_3-b01a9362-2f56-4898-b3d6-983fe3eb598b": "I work together with coders to build cool products. I’m a product manager.",
+      "music_ai_panels_playtogether_3-3f141e1d-8f98-458f-ab5e-d64387c3b87e": "In college, I studied history to understand people.",
+      "music_ai_panels_playtogether_1-91e352ba-fc4d-4157-96c8-ed0141f3387d": "Now, I study music listeners to learn about what they love, and what they don’t.",
+      "music_ai_panels_playtogether_1-c6032955-4743-4312-b604-df28a462dd77": "I use this knowledge, and my imagination, to come up with creative solutions.",
+      "musiclab_intro_panels_playtogether_pdx-a5066092-2920-4c8d-89ea-00b7a8531ad0": "Next, you’ll get creative by experimenting with sound combinations. "
+    }
+  },
+  "https://studio.code.org/s/music-jam-2024/lessons/1/levels/5": {
+    "long_instructions": "#### What do you notice?\n\nPress [Run][0] to see how the [play together][1] block works.",
+    "validations": {
+      "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b": "You can play more than one sound at the same time when you use the [play together][0] block.",
+      "music-ai-preview-playtogether_c0220337-0f75-4cdb-b35b-6132fe792482": "Choose two different sounds. The [play together][0] block works best when there are different [sounds][1]  playing. "
+    }
+  },
+  "https://studio.code.org/s/music-jam-2024/lessons/1/levels/6": {
+    "long_instructions": "#### Play Together\n\nPlay two or more sounds at the same time.\n\n-   Add two different [sounds][0] _into_ the [play together][1] block. ",
+    "validations": {
+      "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b": "Those sounds are great together!",
+      "music-ai-skill-playtogether_795b9999-0f45-441c-bd81-23af6c157f81": "Play two different [sounds][0] in the [play together][1] block.",
+      "music-ai-skill-playtogether_7d85508c-951f-4734-8c97-9c67745a4207": "Add another [sound][0] block into the [play together][1] block. ",
+      "music-ai-skill-playtogether_36540a11-c67f-47da-bb3a-e2bb6181e9d1": "No sounds have played yet. Add two [play][0] blocks _into_ the [play together][1] block."
+    }
+  },
+  "https://studio.code.org/s/music-jam-2024/lessons/1/levels/7": {
+    "long_instructions": "#### Play Together Again\n\n-   Add two [sounds][0] in the _first_ [play together][1] block.\n-   Add two [sounds][2] in the _second_ [play together][3] block.",
+    "validations": {
+      "music-ai-skill-playtogether_sequence_7e5b311d-9f61-4fdf-8431-5b05e71bcc8e": "Those sounds are great together!",
+      "music-ai-skill-playtogether_sequence_524d0be3-14c2-4736-bdbf-d709eda13ff1": "Play different sounds in each [play together][0] block.",
+      "music-ai-skill-playtogether_sequence_3_8db01d98-40e3-4fb3-bcee-0f59b17262bb": "Play different sounds in each [play together][0] block.",
+      "music-ai-skill-playtogether_36540a11-c67f-47da-bb3a-e2bb6181e9d1": "Nothing has played yet. Add some [sound][0] blocks into each [play together][1] block. "
+    }
+  },
+  "https://studio.code.org/s/music-jam-2024/lessons/1/levels/8": {
+    "panels": {
+      "music_ai_panels_function-973d8506-2906-4bdf-96c6-e08d64b1e677": "You can use AI (Artificial Intelligence) to generate new beats!",
+      "music_ai_panels_aibeatblock-2590f59d-fc81-460c-8499-036f2a1f5b60": "Start by adding four of your own beats. ",
+      "music_ai_panels_aibeatblock-dbb9516c-1147-4f1e-951a-4ef7e00c129f": "A.I. will generate more beats based one what you started. ",
+      "music_ai_panels_aibeatblock_1-c7b18f33-4cd4-40e8-8904-42ec59b8c427": "How does it work?\n\nA.I. has been trained on lots of different drum patterns, which helps it predict what comes next. ",
+      "music_ai_panels_aibeatblock-6678c7d9-3f09-4960-9113-548c9cfb156e": "Try making your own beat with AI. "
+    }
+  },
+  "https://studio.code.org/s/music-jam-2024/lessons/1/levels/9": {
+    "long_instructions": "#### Generate a Beat with A.I.\n\nA.I. will help you create a new beat for your song.\n\n-   Click the [play AI drums][0] block to generate your own beat.  \n-   Press [Run][1]. ",
+    "validations": {
+      "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b": "That sounds great!",
+      "music-ai-skill-sequence_a0f44420-3323-439a-be62-f0aa67dbcbe1": "Click on the blank box in the [play AI drums][0] block to generate a new beat. ",
+      "music-ai-skill-aibeats_2ec51257-daa4-40af-b5d4-4b42a2cfaf11": "No sounds have played yet. "
+    }
+  },
+  "https://studio.code.org/s/music-jam-2024/lessons/1/levels/10": {
+    "panels": {
+      "music_ai_panels_aibeatblock_temperature_1-217131e9-522c-4f14-8fd4-0873ac2c1c75": "You can now change A.I.'s temperature to make its predictions more adventurous. ",
+      "music_ai_panels_aibeatblock_temperature_3-4a5ea7cb-f73e-4ee8-9cf0-7c6681166f71": "A low temperature will make A.I. stay close to what you started with. ",
+      "music_ai_panels_aibeatblock-d2ba442b-68e2-47f1-abd5-15c49f5d243c": "A high temperature will make A.I. generate more surprising sounds.",
+      "music_ai_panels_aibeatblock_temperature_1-10253ec1-46f6-4286-a421-f54b336a2489": "Try different temperatures and see what happens!"
+    }
+  },
+  "https://studio.code.org/s/music-jam-2024/lessons/1/levels/11": {
+    "long_instructions": "#### A.I. Gets Interesting\n\nYou can move the temperature slider to generate different results.",
+    "validations": {
+      "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b": "That sounds great!",
+      "music-ai-skill-sequence_a0f44420-3323-439a-be62-f0aa67dbcbe1": "Click on the blank box in the [play AI drums][0] block, change the temperature slider, and generate a new beat.",
+      "music-ai-skill-aibeats-temperature_1_1a17f661-6104-4b40-a4b9-aa577b660683": "Choose a few beats in the [play AI drums][0] to get started. Then click \"Generate\". ",
+      "music-ai-skill-aibeats_2ec51257-daa4-40af-b5d4-4b42a2cfaf11": "No sounds have played yet. "
+    }
+  },
+  "https://studio.code.org/s/music-jam-2024/lessons/1/levels/12": {
+    "panels": {
+      "music_ai_panels_function_2-c8877cb4-6e4a-4df6-8f35-d07d428a37ed": "Next, you'll see a **function**. It's a piece of code with a specific purpose. \n\nNotice how it is separate from `when run`. ",
+      "music_ai_panels_function_2-4c0067c6-4389-4f22-9bb1-9e80df2d3cf6": "To use the function, call it from the `when run` block."
+    }
+  },
+  "https://studio.code.org/s/music-jam-2024/lessons/1/levels/13": {
+    "long_instructions": "### Call a Function\n\n-   Use the [intro][0] function by adding it under [when run][1]. \n-   Press [Run][2] to see how it works. ",
+    "validations": {
+      "music-ai-functions-chorus_40e32b8b-3591-4266-82c8-cc24049aa1a0": "Nice work.  You successfully used the function to play a sound.",
+      "music-ai-functions-chorus_e1d6c731-90ed-4e26-a2cd-040bfc5c373f": "Connect the [intro][0] block under [when run][1] to play the sounds in the function."
+    },
+    "function_definitions": {
+      "intro": {
+        "name": "intro"
+      }
+    }
+  },
+  "https://studio.code.org/s/music-jam-2024/lessons/1/levels/14": {
+    "long_instructions": "### Build a Song with Functions\n\nCall [intro][0] and [chorus][1] under [when run][2] to play the sounds in the function.",
+    "validations": {
+      "music-ai-functions-doubleChorus_2_8596d526-19f0-43f3-bc07-02366a151f2a": "You used both functions! Functions help you reuse code quickly. Great work! ",
+      "music-ai-functions-doubleChorus_2_d72de94c-fc7b-4fa8-a9bf-4c67ec49841c": "Are both function blocks added? Make sure to add the `chorus` block under [when run][0]. ",
+      "music-ai-functions-doubleChorus_2_211ec330-8549-468a-9359-6f58deb212a2": "Almost there! Make sure to add the `intro` block under [when run][0].",
+      "music-ai-functions-chorus_e1d6c731-90ed-4e26-a2cd-040bfc5c373f": "Connect the 'intro' and 'chorus' blocks under [when run][0] to play the sounds in each function."
+    },
+    "function_definitions": {
+      "chorus": {
+        "name": "chorus"
+      },
+      "intro": {
+        "name": "intro"
+      }
+    }
+  },
+  "https://studio.code.org/s/music-jam-2024/lessons/1/levels/15": {
+    "long_instructions": "#### Complete the Song\n\nNow it's your turn. Write your own verse to complete the song. \n\n-   Add sounds to the [verse][0] function. ",
+    "validations": {
+      "music-ai-skill-function-verse_fc9881f2-7571-49f1-8971-dcab68a657a9": "Great work! You're organizing your code with functions!",
+      "music-ai-skill-function-verse_03ed3be5-172e-4df5-97cb-075d4032388f": "That chorus sounds great! Now, add sounds into the `verse function`. ",
+      "music-ai-skill-sequence_a0f44420-3323-439a-be62-f0aa67dbcbe1": "Nothing played yet. "
+    },
+    "function_definitions": {
+      "verse": {
+        "name": "verse"
+      },
+      "chorus": {
+        "name": "chorus"
+      }
+    }
+  },
+  "https://studio.code.org/s/music-jam-2024/lessons/1/levels/16": {
+    "panels": {
+      "music_ai_panels_function-973d8506-2906-4bdf-96c6-e08d64b1e677": "Wow! You just used functions in your code. \nYou’re looking like an expert coder now!",
+      "musiclab_intro_panels_function_pdx-f1f658c0-64a9-471c-9f2a-399ba1ea8538": "As a software engineer, I use functions all the time too.",
+      "music_ai_panels_function_orlando_3-37c593a7-2cf3-44e3-9b22-f8a2de64646f": "Functions let me build big projects with small blocks of code.",
+      "music_ai_panels_function_orlando_1-3f60bf55-4eee-4e42-ac18-3250154cb9ad": "They amplify my creative process!",
+      "music_ai_panels_function_orlando_3-2ab47291-490a-409a-87e7-22b140c0a9f3": "I loved listening to music as a teenager.",
+      "music_ai_panels_function-f164a0ad-f4a0-4fb7-a4a4-a0269980b587": "In college, I studied computer science and entered coding competitions.",
+      "music_ai_panels_function_orlando_1-f035b103-9b30-4dfa-a757-f2a2c37c61bc": "Today, my code brings music to millions of listeners around the world.",
+      "music_ai_panels_function_orlando_1-6aa299b0-1069-49c8-817f-b450316e3ce7": "If you keep coding, one day you could build something that reaches millions of people too!"
+    }
+  },
+  "https://studio.code.org/s/music-jam-2024/lessons/1/levels/17": {
+    "long_instructions": "### Jam Session\n\nNew sounds and blocks unlocked! \n\nYou've got what it takes to make your own song. "
+  }
+}

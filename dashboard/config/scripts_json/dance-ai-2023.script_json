@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "dance-ai",
-    "serialized_at": "2024-03-05 20:13:13 UTC",
+    "serialized_at": "2024-10-22 23:20:33 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -145,7 +145,7 @@
       "key": "524efe4b-796a-48eb-b1c6-f4e138699443",
       "position": 2,
       "properties": {
-        "description": "As a teacher, your role is primarily to support students as they make their way through the tutorial. Here are a few tips that should help students regardless of the level they're working on.\n- **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Since this tutorial includes videos and students may be wearing headphones it can easily become isolating.  Help break those barriers by actively pairing students if they seem like they need help. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using pair programming.\n- **Read the Instructions:** The instructions provide steps to complete the level. .\n- **Stuck? Look for hints:** Each level includes a hint with further details about how to pass the level. If students are trying to pass levels as quickly as possible, they might find they just need to wait a certain amount of time for all of the code to play out before moving on. \n- **Move On and Come Back: **Sometimes students will benefit more from coming back to a tricky level. All levels are independent of one another, though they sometimes rely on previously introduced concepts.\n- **Take your time and experiment.** There are explicit instructions and hints to help students pass each level. In addition to passing, students should also feel free to try out their own ideas by experimenting with different dancers, dance moves, effects, and songs. \n",
+        "description": "As a teacher, your role is primarily to support students as they make their way through the tutorial. Here are a few tips that should help students regardless of the level they're working on.\n- **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Since this tutorial includes videos and students may be wearing headphones it can easily become isolating.  Help break those barriers by actively pairing students if they seem like they need help. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using pair programming.\n- **Read the Instructions:** The instructions provide steps to complete the level. .\n- **Stuck? Look for hints:** Each level includes a hint with further details about how to pass the level. If students are trying to pass levels as quickly as possible, they might find they just need to wait a certain amount of time for all of the code to play out before moving on. \n- **Move On and Come Back:** Sometimes students will benefit more from coming back to a tricky level. All levels are independent of one another, though they sometimes rely on previously introduced concepts.\n- **Take your time and experiment.** There are explicit instructions and hints to help students pass each level. In addition to passing, students should also feel free to try out their own ideas by experimenting with different dancers, dance moves, effects, and songs. \n",
         "name": "General Support"
       },
       "seeding_key": {

@@ -1,0 +1,106 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-10-23T17:34:40.000Z",
+  "level_num": "custom",
+  "user_id": 18914,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "##A little bit louder now! \r\n\r\nUse **WASD** and **Enter** to change the volume so it gets louder each time the song plays. \r\n\r\nThen Run and Continue.\r\n\r\n::: details [**Hint**]\r\nLow is lower than medium which is lower than Full. \r\n:::\r\n\r\n\r\n",
+    "offer_browser_tts": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "i_need_a_dollar_aloe_blacc",
+      "sounds": {
+        "i_need_a_dollar_aloe_blacc": [
+          "i_need_a_dollar_1",
+          "drums_1",
+          "organ_1"
+        ]
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "set_effect_at_current_location_simple2",
+                  "id": "CCYn+6ey]ReDzR4.c;ts",
+                  "fields": {
+                    "effects_name": "<field name=\"effects_name\">volume</field>",
+                    "effects_value": "<field name=\"effects_value\">low</field>"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "id": "play_sound_at_current_location_simple2",
+                      "fields": {
+                        "sound": "i_need_a_dollar_aloe_blacc/i_need_a_dollar_1"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "set_effect_at_current_location_simple2",
+                          "id": "S5EFj~S0BUG{2.b:yDR^",
+                          "fields": {
+                            "effects_name": "<field name=\"effects_name\">volume</field>",
+                            "effects_value": "<field name=\"effects_value\">low</field>"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "g)6:$18pc`Sk2ctZ~8vy",
+                              "fields": {
+                                "sound": "i_need_a_dollar_aloe_blacc/i_need_a_dollar_1"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "set_effect_at_current_location_simple2",
+                                  "id": "PJ#XfNpx(}r=~t$HBw[u",
+                                  "fields": {
+                                    "effects_name": "<field name=\"effects_name\">volume</field>",
+                                    "effects_value": "<field name=\"effects_value\">low</field>"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "y8p;5!]qxW.w@.SNCpoM",
+                                      "fields": {
+                                        "sound": "i_need_a_dollar_aloe_blacc/i_need_a_dollar_1"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+        }
+      }
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-23 17:37:25 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 17:41:13 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 17:41:45 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

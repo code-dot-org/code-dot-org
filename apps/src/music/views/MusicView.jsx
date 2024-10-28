@@ -665,6 +665,8 @@ class UnconnectedMusicView extends React.Component {
     this.player.stopSong();
     this.playingTriggers = [];
 
+    MusicBlocklyWorkspace.hideChaff();
+
     this.compileSong();
 
     this.executeCompiledSong();

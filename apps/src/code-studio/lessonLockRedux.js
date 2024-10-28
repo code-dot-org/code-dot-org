@@ -91,7 +91,7 @@ export default function reducer(state = initialState, action) {
       return state;
     }
 
-    const sectionId = action.sectionId;
+    const sectionId = action.payload;
     if (sectionId === NO_SECTION) {
       return {
         ...state,

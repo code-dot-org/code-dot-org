@@ -116,7 +116,7 @@ const EVENTS = {
   AFE_HOMEPAGE_BANNER_SUBMIT: 'AFE Teacher Homepage Banner Submitted',
 
   // Sections
-  COMPLETED_EVENT: 'Section Setup Completed',
+  SECTION_SETUP_COMPLETED: 'Section Setup Completed',
   CURRICULUM_ASSIGNED: 'Section Curriculum Assigned',
   PROGRESS_VIEWED: 'Section Progress Viewed',
   PROGRESS_VIEWED_FIXED: 'Accurate V1 Section Progress Viewed',
@@ -187,6 +187,7 @@ const EVENTS = {
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
   RUBRIC_LEVEL_VIEWED_EVENT: 'Rubric Level Viewed',
+  RUBRIC_ACTIVITY: 'Rubric Activity',
   TEACHER_VIEWING_STUDENT_WORK: 'Teacher Viewing Student Work',
   SUMMARY_PAGE_LOADED: 'Summary Page Loaded',
   SUMMARY_PAGE_NEXT_LEVEL_CLICKED: 'Summary Page Next Level Clicked',

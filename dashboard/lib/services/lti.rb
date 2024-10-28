@@ -102,6 +102,7 @@ module Services
 
       user = ::User.new
       user.provider = ::User::PROVIDER_MIGRATED
+      user.roster_synced = true
       user.name = get_claim_from_list(nrps_member_message, Policies::Lti::STUDENT_NAME_KEYS)
 
       if account_type == ::User::TYPE_TEACHER && email_address.present?

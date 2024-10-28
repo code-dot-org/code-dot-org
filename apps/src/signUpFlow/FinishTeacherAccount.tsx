@@ -21,7 +21,11 @@ import {useSchoolInfo} from '../schoolInfo/hooks/useSchoolInfo';
 import {navigateToHref} from '../utils';
 
 import locale from './locale';
-import {EMAIL_SESSION_KEY} from './signUpFlowConstants';
+import {
+  EMAIL_SESSION_KEY,
+  USER_RETURN_TO_SESSION_KEY,
+  clearSignUpSessionStorage,
+} from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
 
@@ -36,6 +40,8 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const [gdprChecked, setGdprChecked] = useState(false);
   const [showGDPR, setShowGDPR] = useState(false);
   const [isGdprLoaded, setIsGdprLoaded] = useState(false);
+  const [userReturnTo, setUserReturnTo] = useState('/home');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     const fetchGdprData = async () => {
@@ -56,6 +62,11 @@ const FinishTeacherAccount: React.FunctionComponent<{
       }
     };
     fetchGdprData();
+
+    const userReturnToHref = sessionStorage.getItem(USER_RETURN_TO_SESSION_KEY);
+    if (userReturnToHref) {
+      setUserReturnTo(userReturnToHref);
+    }
   }, []);
 
   // GDPR is valid if
@@ -79,6 +90,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
 
   const submitTeacherAccount = async () => {
     sendFinishEvent();
+    setIsSubmitting(true);
 
     const signUpParams = {
       new_sign_up: true,
@@ -101,7 +113,8 @@ const FinishTeacherAccount: React.FunctionComponent<{
       body: JSON.stringify(signUpParams),
     });
 
-    navigateToHref('/home');
+    clearSignUpSessionStorage(true);
+    navigateToHref(userReturnTo);
   };
 
   const onGDPRChange = (): void => {
@@ -208,15 +221,17 @@ const FinishTeacherAccount: React.FunctionComponent<{
               title: 'arrow-right',
             }}
             disabled={name === '' || !gdprValid}
+            isPending={isSubmitting}
           />
         </div>
       </div>
       <SafeMarkdown
         className={style.tosAndPrivacy}
         markdown={locale.by_signing_up({
-          tosLink: 'code.org/tos',
-          privacyPolicyLink: 'code.org/privacy',
+          tosLink: 'https://code.org/tos',
+          privacyPolicyLink: 'https://code.org/privacy',
         })}
+        openExternalLinksInNewTab={true}
       />
     </div>
   );

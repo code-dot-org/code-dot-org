@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.1](https://github.com/code-dot-org/code-dot-org/pull/61939)
+
+- updated secondary Tabs hover styling
+- allowed showing iconRight when Tab is closable
+
 ## [0.4.0](https://github.com/code-dot-org/code-dot-org/pull/61608)
 
 - implemented closable `Tabs`

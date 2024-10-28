@@ -1,0 +1,45 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-10-23T17:43:13.000Z",
+  "level_num": "custom",
+  "user_id": 18914,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "##Play two sounds! \r\n\r\nUse **WASD** to add two songs to the Workspace. \r\n\r\nThen **Run** and **Continue**.\r\n\r\n::: details [**Hint**]\r\nUse **WASD** to navigate to the place in the Workspace where you want to add the block. \r\n\r\nOnce you get there, click **Enter** to set a destination. \r\n\r\nNavigate to the toolbox using **T**, and use **Enter** to bring the block into the workspace\r\n\r\n\r\n:::\r\n",
+    "offer_browser_tts": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "will_i_am_i_like_to_move_it",
+      "sounds": {
+        "will_i_am_i_like_to_move_it": [
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3",
+          "vocals_verse_4",
+          "vocals_move_it"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      }
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-23 17:49:41 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>
