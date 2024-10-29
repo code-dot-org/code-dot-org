@@ -91,10 +91,6 @@
 }
 
 // Common field styles
-@mixin field-common {
-  min-width: 300px;
-}
-
 @mixin field-helper-section-common {
   display: flex;
   align-items: baseline;

@@ -2,8 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.3.5](https://github.com/code-dot-org/code-dot-org/pull/62023)
+## [0.4.0](https://github.com/code-dot-org/code-dot-org/pull/62023)
 
+- created `common/styles/variables.scss` file
 - added `DropdownFormFieldRelatedProps` type constant
 - minor `Changelog` refactor by prettier
 

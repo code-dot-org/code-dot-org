@@ -1,4 +1,5 @@
 @import 'color';
+@import '@cdo/apps/componentLibrary/common/styles/variables';
 @import '@cdo/apps/componentLibrary/common/styles/mixins';
 @import '@cdo/apps/componentLibrary/typography/typography.module';
 
@@ -12,7 +13,7 @@
   margin: 0;
 
   &.styleAsFormField {
-    width: 18.75rem;
+    width: $form-field-width;
     text-wrap: nowrap;
     text-overflow: ellipsis;
 
