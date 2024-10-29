@@ -31,13 +31,13 @@ function StudentSelector({
   reloadOnChange,
   reportingData,
   sectionId,
-  hasTeacherFeedbackMap,
   aiEvalStatusMap,
 
   //from redux
   students,
   selectUser,
   levelsWithProgress,
+  hasTeacherFeedbackMap,
 }) {
   const handleSelectStudentChange = event => {
     const newUserId = event.value;
@@ -122,7 +122,6 @@ StudentSelector.propTypes = {
   reloadOnChange: PropTypes.bool,
   sectionId: PropTypes.number,
   reportingData: reportingDataShape,
-  hasTeacherFeedbackMap: PropTypes.object,
   aiEvalStatusMap: PropTypes.object,
 
   //from redux
@@ -134,6 +133,7 @@ StudentSelector.propTypes = {
   ).isRequired,
   selectUser: PropTypes.func.isRequired,
   levelsWithProgress: PropTypes.arrayOf(levelWithProgress),
+  hasTeacherFeedbackMap: PropTypes.object,
 };
 
 export const UnconnectedStudentSelector = StudentSelector;
@@ -142,6 +142,7 @@ export default connect(
   state => ({
     students: state.teacherSections.selectedStudents,
     levelsWithProgress: state.teacherPanel.levelsWithProgress,
+    hasTeacherFeedbackMap: state.teacherRubric.hasTeacherFeedbackMap,
   }),
   dispatch => ({
     selectUser(userId) {

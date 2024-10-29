@@ -9,7 +9,7 @@
     "encrypted": "false",
     "background": "music-black",
     "instructions_important": "false",
-    "long_instructions": "#### A.I. Gets Interesting\r\n\r\nYou can move the temperature slider to generate different results.",
+    "long_instructions": "#### A.I. Gets Interesting\r\n\r\nYou can move the temperature slider to generate different results.\r\n\r\n- Click the [play AI drums](#clickable=id-left:play_pattern_ai_at_current_location_simple2) block to generate your own beat. \r\n- Use the slider to change the temperature.\r\n- Press [Run](#clickable=run-button). ",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -44,7 +44,8 @@
             "name": "played_empty_patterns_ai",
             "value": 1
           }
-        ]
+        ],
+        "callout": "id-left:play_pattern_ai_at_current_location_simple2"
       },
       {
         "key": "music-ai-skill-aibeats_2ec51257-daa4-40af-b5d4-4b42a2cfaf11",
@@ -77,14 +78,14 @@
                         "type": "play_sound_at_current_location_simple2",
                         "id": "play_sound_at_current_location_simple2",
                         "fields": {
-                          "sound": "tinashe_gravity/vocals_chorus_1"
+                          "sound": "chainsmokers_coldplay_something_just_like_this/vocals_hook_high"
                         },
                         "next": {
                           "block": {
                             "type": "play_sound_at_current_location_simple2",
                             "id": "Q3;:V)Y_qHboc$E*KKe*",
                             "fields": {
-                              "sound": "tinashe_gravity/floaty_piano_vocal"
+                              "sound": "chainsmokers_coldplay_something_just_like_this/guitar_muted_2"
                             },
                             "next": {
                               "block": {
@@ -92,12 +93,12 @@
                                 "id": "play_pattern_ai_at_current_location_simple2",
                                 "fields": {
                                   "pattern_ai": {
-                                    "kit": "drums",
                                     "length": 2,
                                     "events": [
 
                                     ],
-                                    "ai": true
+                                    "ai": true,
+                                    "instrument": "drums"
                                   }
                                 }
                               }
@@ -128,7 +129,7 @@
         "addFunctionCalls": true
       },
       "library": "launch2024",
-      "packId": "tinashe_gravity",
+      "packId": "chainsmokers_coldplay_something_just_like_this",
       "sounds": {
         "chainsmokers_coldplay_something_just_like_this": [
           "vocals_do_do_do_low",
@@ -179,16 +180,6 @@
           "drums_vibraslap",
           "vocals_ahh_swell",
           "vocals_ohahh"
-        ],
-        "tinashe_gravity": [
-          "vocals_chorus_1",
-          "vocals_chorus_2",
-          "vocals_chorus_3",
-          "vocals_chorus_4",
-          "bass_synth_1",
-          "bass_synth_2",
-          "main_pad",
-          "floaty_piano_vocal"
         ]
       },
       "blockMode": "Simple2"
@@ -197,7 +188,7 @@
     "offer_browser_tts": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:17.548+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-aibeats-temperature_1\\\"\"],\"cloned_from\":\"music-ai-skill-aibeats-temperature_1\"},{\"changed_at\":\"2024-10-22 23:46:06 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:17.548+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-aibeats-temperature_1\\\"\"],\"cloned_from\":\"music-ai-skill-aibeats-temperature_1\"},{\"changed_at\":\"2024-10-22 23:46:06 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-25 21:08:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-25 21:29:19 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-25 21:32:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-28 21:04:49 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

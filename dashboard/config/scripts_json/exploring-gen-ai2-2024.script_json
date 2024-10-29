@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-10-24 22:48:58 UTC",
+    "serialized_at": "2024-10-25 17:37:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5017,7 +5017,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "gen-ai-customizing-project-L0_2024"
+          "gen-ai-customizing-project-L0_2024-10-25"
         ],
         "lesson.key": "Project: Create a Personal Chatbot",
         "lesson_group.key": "lessonGroup-3",
@@ -5025,7 +5025,7 @@
         "activity_section.key": "909440f7-65bd-4b10-8f00-9ef329f6b914"
       },
       "level_keys": [
-        "gen-ai-customizing-project-L0_2024"
+        "gen-ai-customizing-project-L0_2024-10-25"
       ]
     },
     {
@@ -6348,9 +6348,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "gen-ai-customizing-project-L0_2024",
+        "level.key": "gen-ai-customizing-project-L0_2024-10-25",
         "script_level.level_keys": [
-          "gen-ai-customizing-project-L0_2024"
+          "gen-ai-customizing-project-L0_2024-10-25"
         ],
         "lesson.key": "Project: Create a Personal Chatbot",
         "lesson_group.key": "lessonGroup-3",

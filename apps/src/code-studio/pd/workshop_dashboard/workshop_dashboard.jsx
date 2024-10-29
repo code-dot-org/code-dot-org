@@ -5,7 +5,7 @@ import {createHistory} from 'history';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Provider} from 'react-redux';
-import {Router, Route, IndexRedirect, useRouterHistory} from 'react-router';
+import {Router, Route, IndexRedirect, useRouterHistory} from 'react-router'; // eslint-disable-line no-restricted-imports
 import {createStore, combineReducers} from 'redux';
 
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';

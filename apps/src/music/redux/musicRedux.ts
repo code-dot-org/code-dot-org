@@ -207,7 +207,7 @@ const musicSlice = createSlice({
     setSoundLoadingProgress: (state, action: PayloadAction<number>) => {
       state.soundLoadingProgress = action.payload;
     },
-    setStartPlayheadPosition: (state, action: PayloadAction<number>) => {
+    setStartingPlayheadPosition: (state, action: PayloadAction<number>) => {
       state.startingPlayheadPosition = action.payload;
     },
     moveStartPlayheadPositionForward: state => {
@@ -329,7 +329,7 @@ export const {
   addPlaybackEvents,
   addOrderedFunctions,
   setSoundLoadingProgress,
-  setStartPlayheadPosition,
+  setStartingPlayheadPosition,
   moveStartPlayheadPositionForward,
   moveStartPlayheadPositionBackward,
   setUndoStatus,

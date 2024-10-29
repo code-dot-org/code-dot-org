@@ -29,7 +29,6 @@ function isTtsAvailable() {
   return ttsAvailable;
 }
 
-// TODO: Pick the best voice for the current locale.
 function speak(text: string) {
   if (!ttsAvailable) {
     console.log('TextToSpeech: not ready or no voices available to play.');
@@ -40,10 +39,7 @@ function speak(text: string) {
   utterance.lang = currentLocale();
   speechSynthesis.cancel();
   speechSynthesis.speak(utterance);
+  return utterance;
 }
 
-function cancelSpeech() {
-  speechSynthesis.cancel();
-}
-
-export {onTtsAvailable, isTtsAvailable, speak, cancelSpeech};
+export {onTtsAvailable, isTtsAvailable, speak};
