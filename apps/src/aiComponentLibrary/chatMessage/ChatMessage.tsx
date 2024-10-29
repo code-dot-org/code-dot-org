@@ -67,7 +67,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
 
   return (
     <>
-      <div className={moduleStyles.messageContainer}>
+      <div className={moduleStyles[`message-container-${role}`]}>
         <div className={moduleStyles.messageWithChildren}>
           <div className={moduleStyles[`container-${role}`]}>
             {role === Role.ASSISTANT && (
@@ -87,7 +87,9 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                 hasWarningStyle && moduleStyles.warning
               )}
               aria-label={
-                role === Role.ASSISTANT ? 'AI bot' : 'User' + ' chat message'
+                role === Role.ASSISTANT
+                  ? commonI18n.aiChatMessageBot()
+                  : commonI18n.aiChatMessageUser()
               }
             >
               <SafeMarkdown markdown={getDisplayText} />

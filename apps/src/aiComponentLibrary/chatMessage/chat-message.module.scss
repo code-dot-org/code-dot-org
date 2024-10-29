@@ -69,9 +69,19 @@ $assistant-color: $brand_primary_light;
   overflow-x: auto;
 }
 
-.messageContainer {
+%message-container {
   display: flex;
   flex-direction: row;
+}
+
+.message-container-assistant {
+  @extend %message-container;
+  justify-content: flex-start;
+}
+
+.messageContainer-user {
+  @extend %message-container;
+  justify-content: flex-end;
 }
 
 %container {
