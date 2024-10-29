@@ -184,9 +184,9 @@ export default class MusicValidator extends Validator {
       }
 
       // Check for a block nested within an if/else block causing something to play.
-      const validaitonInfo = eventData.validationInfo;
-      if (validaitonInfo) {
-        if (validaitonInfo.parentControlTypes?.includes(BlockTypes.IF_ELSE)) {
+      const validationInfo = eventData.validationInfo;
+      if (validationInfo) {
+        if (validationInfo.parentControlTypes?.includes(BlockTypes.IF_ELSE)) {
           this.conditionsChecker.addSatisfiedCondition({
             name: MusicConditions.PLAYED_ANYTHING_IN_CONDITIONAL.name,
           });
@@ -194,7 +194,7 @@ export default class MusicValidator extends Validator {
 
         // Check for a block nested within a function block causing something to play.
         if (
-          validaitonInfo.parentControlTypes?.some(type =>
+          validationInfo.parentControlTypes?.some(type =>
             FunctionDefinitionBlockTypes.includes(type)
           )
         ) {
@@ -211,7 +211,7 @@ export default class MusicValidator extends Validator {
 
         // Check for a block nested within a loop block causing something to play.
         if (
-          validaitonInfo.parentControlTypes?.some(type =>
+          validationInfo.parentControlTypes?.some(type =>
             LoopBlockTypes.includes(type)
           )
         ) {
