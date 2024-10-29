@@ -136,6 +136,10 @@ class Projects
     project_query_result = @table.where(id: project_id).exclude(state: 'deleted')
     raise NotFound, "channel `#{channel_id}` not found" if project_query_result.empty?
 
+    rails_project = get_rails_project(project_id)
+    raise PublishError, "User too new to publish channel `#{channel_id}`" unless rails_project.owner_existed_long_enough_to_publish?
+    raise PublishError, "Project too new to publish channel `#{channel_id}`" unless rails_project.existed_long_enough_to_publish?
+
     project_query_result.update(row)
 
     project = @table.where(id: project_id).first
