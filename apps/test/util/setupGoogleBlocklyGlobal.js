@@ -4,15 +4,16 @@
  * the global space as global.Blockly.
  */
 
+import * as GoogleBlockly from 'blockly/core';
+
+import initializeGoogleBlocklyWrapper from '@cdo/apps/blockly/googleBlocklyWrapper';
+
 export default function setGoogleBlocklyGlobal() {
   // Initialize browser environment.
   document.body.innerHTML = '<div id="codeApp"><div id="app"></div></div>';
-  // locale file requires Blockly as a global
-  var blockly = require('blockly');
-  var initializeGoogleBlocklyWrapper = require('../../src/blockly/googleBlocklyWrapper');
-  window.Blockly = initializeGoogleBlocklyWrapper(blockly);
+  window.Blockly = initializeGoogleBlocklyWrapper(GoogleBlockly);
 
   const messages = require(`blockly/msg/en.js`);
 
-  blockly.setLocale(messages);
+  GoogleBlockly.setLocale(messages);
 }
