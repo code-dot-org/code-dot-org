@@ -10,7 +10,7 @@ module Services
       def call
         return user if user.errors.present?
 
-        if user.authentication_options.any?(&:email?) || (!user.migrated? && user.authentication_options.empty?)
+        if user.authentication_options.any?(&:email?) || (!user.new_record? && !user.migrated? && user.authentication_options.empty?)
           user.raw_token = send_reset_password_instructions
         else
           CDO.log.warn("Password Reset: Email Auth Not Found for #{user.email}.")
