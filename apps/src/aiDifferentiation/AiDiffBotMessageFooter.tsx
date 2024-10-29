@@ -43,7 +43,7 @@ const AiDiffBotMessageFooter: React.FC<Props> = ({message}) => {
         />
         <PDFDownloadLink
           document={<AiDiffPdf messages={[message]} />}
-          fileName="somename.pdf"
+          fileName="ai_differentiation_message.pdf"
         >
           <Button
             onClick={() => {}}

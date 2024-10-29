@@ -37,7 +37,7 @@ const AiDiffChatFooter: React.FC<AiDiffChatFooterProps> = ({
         />
         <PDFDownloadLink
           document={<AiDiffPdf messages={messages} />}
-          fileName="somename.pdf"
+          fileName="ai_differentiation_chat.pdf"
         >
           <Button
             color="black"
