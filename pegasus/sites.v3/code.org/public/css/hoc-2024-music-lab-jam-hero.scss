@@ -1,0 +1,64 @@
+$width-sm: 640px;
+
+.hoc-2024-music-lab-jam-hero {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 16, 125, 1) 0%,
+    rgba(11, 28, 66, 1) 33%,
+    rgba(8, 18, 49, 1) 71%,
+    rgba(52, 28, 101, 1) 100%
+  );
+
+  @media (max-width: $width-sm) {
+    background: linear-gradient(
+      130deg,
+      rgba(2, 16, 125, 1) 0%,
+      rgba(11, 28, 66, 1) 33%,
+      rgba(8, 18, 49, 1) 71%,
+      rgba(52, 28, 101, 1) 100%
+    );
+  }
+
+  .wrapper {
+    max-width: 1440px;
+    margin-block: unset;
+    padding: 5rem 1rem;
+    text-align: center;
+    background-image: url("/images/banners/banner-music-lab-jam.png");
+    background-size: cover;
+    background-position: center;
+
+    .content-wrapper {
+      max-width: 960px;
+      margin-inline: auto;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    .button-wrapper {
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .afe {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+
+      p {
+        margin-bottom: 0;
+      }
+
+      img {
+        width: 180px;
+      }
+    }
+  }
+}
+
