@@ -113,7 +113,7 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
 
     const filteredOptions = options.filter(option => {
       const workspace = this.getSourceBlock()?.workspace;
-      if (!workspace) {
+      if (!workspace || Blockly.embeddedWorkspaces.includes(workspace.id)) {
         return true;
       }
 
