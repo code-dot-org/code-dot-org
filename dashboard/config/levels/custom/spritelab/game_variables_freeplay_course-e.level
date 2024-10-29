@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-05-17T16:37:34.000Z",
   "level_num": "custom",
@@ -64,8 +63,9 @@
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"**It's time to get creative.** Use the checklist in the instructions to get started. \",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/01fda9cdff41f10ba441254c01429a82/game_variables_freeplay.mp3\"}]",
     "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-17T16:37:34.197+00:00\",\"changed\":[\"cloned from \\\"game_variables_freeplay_2024\\\"\"],\"cloned_from\":\"game_variables_freeplay_2024\"},{\"changed_at\":\"2024-07-16 18:21:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-17T16:37:34.197+00:00\",\"changed\":[\"cloned from \\\"game_variables_freeplay_2024\\\"\"],\"cloned_from\":\"game_variables_freeplay_2024\"},{\"changed_at\":\"2024-07-16 18:21:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-13 18:40:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "events": 1,
@@ -1345,9 +1345,9 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_destroy" id=")0x%NA*s%/R2-v$;~gub" x="16" y="994">
+        <block type="gamelab_destroy" id=")0x%NA*s%/R2-v$;~gub" x="51" y="1013">
           <value name="THIS">
-            <block type="gamelab_allSpritesWithAnimation" id="8tN/UW{F/X#16g$z$H5e" movable="false">
+            <block type="gamelab_allSpritesWithAnimation" id="8tN/UW{F/X#16g$z$H5e">
               <field name="ANIMATION">"game_cow"</field>
             </block>
           </value>
@@ -1373,6 +1373,8 @@
           </value>
         </block>
         <block type="gamelab_spriteClicked" id="]pOXTOb?)ZVt8B7!2m}3" x="16" y="1178">
+          <mutation useDefaultIcon="true"/>
+          <field name="button_gamelab_spriteClicked"/>
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id="%.S(6PL2)@6BLf.!4}Vq" movable="false">
@@ -1381,6 +1383,8 @@
           </value>
         </block>
         <block type="gamelab_checkTouching" id="8mg}.yCF;A//1f-vlsA," x="12" y="1262">
+          <mutation useDefaultIcon="true"/>
+          <field name="button_gamelab_checkTouching"/>
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation" id="2(^^d$ID+{!TC,#E%wgM" movable="false">

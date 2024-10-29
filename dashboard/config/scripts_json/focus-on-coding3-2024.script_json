@@ -20777,7 +20777,7 @@
       "key": "89f32deb-1eab-451b-bc4a-73b43ec8428c",
       "position": 2,
       "learning_goal": "Position - Shapes",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": null,
       "seeding_key": {
         "learning_goal.key": "89f32deb-1eab-451b-bc4a-73b43ec8428c",
@@ -20920,7 +20920,7 @@
       "key": "c9117819-b2f5-409b-a95c-f0d66b6d2dba",
       "position": 3,
       "learning_goal": "Variables / Storing Information",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": null,
       "seeding_key": {
         "learning_goal.key": "c9117819-b2f5-409b-a95c-f0d66b6d2dba",
@@ -22268,8 +22268,8 @@
     },
     {
       "understanding": 0,
-      "teacher_description": "They used no shapes in the program.",
-      "ai_prompt": "",
+      "teacher_description": "You used no shapes in the program.",
+      "ai_prompt": "You used no shapes in the program.",
       "seeding_key": {
         "understanding": 0,
         "learning_goal.key": "89f32deb-1eab-451b-bc4a-73b43ec8428c",
@@ -22280,8 +22280,8 @@
     },
     {
       "understanding": 1,
-      "teacher_description": "They use at least 1 shape and place it correctly on the screen using the coordinate system.",
-      "ai_prompt": "",
+      "teacher_description": "You used at least 1 type of shape and placed it using the coordinate system.",
+      "ai_prompt": "You used at least 1 type of shape and placed it using the coordinate system.",
       "seeding_key": {
         "understanding": 1,
         "learning_goal.key": "89f32deb-1eab-451b-bc4a-73b43ec8428c",
@@ -22292,8 +22292,8 @@
     },
     {
       "understanding": 2,
-      "teacher_description": "They only use the ellipse and rect shapes and place them correctly on the screen using the coordinate system.",
-      "ai_prompt": "",
+      "teacher_description": "You used at least 3 different types of shapes and placed them using the coordinate system.",
+      "ai_prompt": "You used at least 3 different types of shapes and placed them using the coordinate system.",
       "seeding_key": {
         "understanding": 2,
         "learning_goal.key": "89f32deb-1eab-451b-bc4a-73b43ec8428c",
@@ -22304,8 +22304,8 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "They used at least 4 different types of shapes2 and placed them correctly on the screen using the coordinate system.",
-      "ai_prompt": "",
+      "teacher_description": "You used at least 4 different types of shapes2 and placed them using the coordinate system3.",
+      "ai_prompt": "You used at least 4 different types of shapes and placed them using the coordinate system.",
       "seeding_key": {
         "understanding": 3,
         "learning_goal.key": "89f32deb-1eab-451b-bc4a-73b43ec8428c",
@@ -22796,8 +22796,8 @@
     },
     {
       "understanding": 0,
-      "teacher_description": "No variables or randomNumbers are used in the program.",
-      "ai_prompt": "",
+      "teacher_description": "No variables or no randomNumbers are used in the program.",
+      "ai_prompt": "No variables or no randomNumbers are used in the program.",
       "seeding_key": {
         "understanding": 0,
         "learning_goal.key": "c9117819-b2f5-409b-a95c-f0d66b6d2dba",
@@ -22808,8 +22808,8 @@
     },
     {
       "understanding": 1,
-      "teacher_description": "They created at least 1 variable and used it in the program.\nThey used randomness in the program, but not within a variable. ",
-      "ai_prompt": "",
+      "teacher_description": "You created at least 1 variable and used it in the program. You used randomness in the program at least once.",
+      "ai_prompt": "You created at least 1 variable and used it in the program. You used randomness in the program at least once.",
       "seeding_key": {
         "understanding": 1,
         "learning_goal.key": "c9117819-b2f5-409b-a95c-f0d66b6d2dba",
@@ -22820,8 +22820,8 @@
     },
     {
       "understanding": 2,
-      "teacher_description": " They created at least 4 variables and used them correctly in the program. All variables have descriptive names. Only 2 of the variables use the randomNumber block to give the program a different look each time the program is run.",
-      "ai_prompt": "",
+      "teacher_description": "You created at least 3 variables and used them correctly in the program. All variables have descriptive names. At least 2 of the variables use the randomNumber block to give the program a different look each time the program is run.",
+      "ai_prompt": "You created at least 3 variables and used them correctly in the program. All variables have descriptive names. At least 2 of the variables use the randomNumber block to give the program a different look each time the program is run.",
       "seeding_key": {
         "understanding": 2,
         "learning_goal.key": "c9117819-b2f5-409b-a95c-f0d66b6d2dba",
@@ -22832,8 +22832,8 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "The program creates and correctly uses at least 4 variables. All variables have descriptive names and use the randomNumber block to give the program a different look each time the program is run.",
-      "ai_prompt": "",
+      "teacher_description": "You created and correctly used at least 4 variables. All variables have descriptive names and at least 4 of them use the randomNumber block to give the program a different look each time the program is run.",
+      "ai_prompt": "You created and correctly used at least 4 variables. All variables have descriptive names and at least 4 of them use the randomNumber block to give the program a different look each time the program is run.",
       "seeding_key": {
         "understanding": 3,
         "learning_goal.key": "c9117819-b2f5-409b-a95c-f0d66b6d2dba",

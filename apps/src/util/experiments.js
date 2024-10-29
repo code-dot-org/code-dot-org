@@ -63,9 +63,8 @@ experiments.NEW_SIGN_UP_FLOW = 'new_sign_up_flow';
 experiments.VIEW_CHAT_HISTORY = 'view_chat_history';
 // Allows user to view the new version of the teacher navigation
 experiments.TEACHER_LOCAL_NAV_V2 = 'teacher-local-nav-v2';
-// Enables LMS cards in the LoginTypePicker during section creation
-experiments.SECTION_CREATE_LMS_CARDS = 'section_create_lms_cards';
-experiments.AI_ASSESSMENTS_ANNOUNCEMENT = 'ai-assessments-announcement';
+// Enables LTI account disconnect buttons on the Account Settings page
+experiments.LTI_ACCOUNT_UNLINKING = 'lti_account_unlinking';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

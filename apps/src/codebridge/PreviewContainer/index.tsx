@@ -1,5 +1,5 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
-import SwapLayoutButton from '@codebridge/SwapLayoutButton';
+import SwapLayoutDropdown from '@codebridge/components/SwapLayoutDropdown';
 import {ProjectFile, ConfigType, PreviewComponent} from '@codebridge/types';
 import {previewFileType} from '@codebridge/utils';
 import React, {useState, useEffect} from 'react';
@@ -72,7 +72,7 @@ export const PreviewContainer = () => {
     <PanelContainer
       id="editor-workspace"
       headerContent={headerContent}
-      rightHeaderContent={<SwapLayoutButton />}
+      rightHeaderContent={<SwapLayoutDropdown />}
       className={moduleStyles.previewContainer}
     >
       <select

@@ -1,19 +1,18 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
 import {
   Route,
   Outlet,
   createRoutesFromElements,
   createBrowserRouter,
   RouterProvider,
+  Navigate,
 } from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
-import TemporaryBlankPage from '@cdo/apps/templates/teacherDashboard/teacherNavigation/TemporaryBlankPage';
+import TeacherUnitOverview from '@cdo/apps/code-studio/components/progress/TeacherUnitOverview';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import TeacherCourseOverview, {
-  teacherCourseOverviewLoader,
-} from '../courseOverview/TeacherCourseOverview';
+import TeacherCourseOverview from '../courseOverview/TeacherCourseOverview';
 import ManageStudents from '../manageStudents/ManageStudents';
 import SectionProjectsListWithData from '../projects/SectionProjectsListWithData';
 import SectionAssessments from '../sectionAssessments/SectionAssessments';
@@ -22,11 +21,16 @@ import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelecto
 import SectionsSetUpContainer from '../sectionsRefresh/SectionsSetUpContainer';
 import SectionLoginInfo from '../teacherDashboard/SectionLoginInfo';
 import StatsTableWithData from '../teacherDashboard/StatsTableWithData';
-import {sectionProviderName} from '../teacherDashboard/teacherSectionsRedux';
+import {
+  sectionProviderName,
+  selectedSectionSelector,
+} from '../teacherDashboard/teacherSectionsReduxSelectors';
 import TextResponses from '../textResponses/TextResponses';
 
-import DefaultTeacherNavRedirect from './DefaultTeacherNavRedirect';
 import ElementOrEmptyPage from './ElementOrEmptyPage';
+import LessonMaterialsContainer, {
+  lessonMaterialsLoader,
+} from './lessonMaterials/LessonMaterialsContainer';
 import PageHeader from './PageHeader';
 import {asyncLoadSelectedSection} from './selectedSectionLoader';
 import TeacherNavigationBar from './TeacherNavigationBar';
@@ -45,15 +49,6 @@ interface TeacherNavigationRouterProps {
   showAITutorTab: boolean;
 }
 
-export interface Section {
-  id: number;
-  rosterProviderName: string;
-  anyStudentHasProgress: boolean;
-  name: string;
-  courseVersionName: string;
-  courseOfferingId: number;
-}
-
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
   return <div className={styles.widthLockedPage}>{children}</div>;
 };
@@ -62,40 +57,21 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   studioUrlPrefix,
   showAITutorTab,
 }) => {
-  const sectionId = useSelector(
-    (state: {teacherSections: {selectedSectionId: number}}) =>
-      state.teacherSections.selectedSectionId
+  const sectionId = useAppSelector(
+    state => state.teacherSections.selectedSectionId
   );
-  const selectedSection = useSelector(
-    (state: {
-      teacherSections: {
-        selectedSectionId: number | null;
-        sections: {[id: number]: Section};
-      };
-    }) =>
-      state.teacherSections.selectedSectionId
-        ? state.teacherSections.sections[
-            state.teacherSections.selectedSectionId
-          ]
-        : null
-  );
+  const selectedSection = useAppSelector(selectedSectionSelector);
 
   const anyStudentHasProgress = React.useMemo(
     () => (selectedSection ? selectedSection.anyStudentHasProgress : true),
     [selectedSection]
   );
 
-  const studentCount = useSelector(
-    (state: {teacherSections: {selectedStudents: object[]}}) =>
-      state.teacherSections.selectedStudents.length
+  const studentCount = useAppSelector(
+    state => state.teacherSections.selectedStudents.length
   );
-  const providerName = useSelector(
-    (state: {
-      teacherSections: {
-        section: {[id: number]: Section};
-        selectedSectionId: number;
-      };
-    }) => sectionProviderName(state, state.teacherSections.selectedSectionId)
+  const providerName = useAppSelector(state =>
+    sectionProviderName(state, state.teacherSections.selectedSectionId)
   );
 
   const routes = React.useMemo(
@@ -127,23 +103,17 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           <Route
             path={''}
             element={
-              <DefaultTeacherNavRedirect
-                sectionId={sectionId}
-                studentCount={studentCount}
-              />
+              <Navigate to={TEACHER_NAVIGATION_PATHS.progress} replace={true} />
             }
           />
           <Route
             path={'*'}
             element={
-              <DefaultTeacherNavRedirect
-                sectionId={sectionId}
-                studentCount={studentCount}
-              />
+              <Navigate to={TEACHER_NAVIGATION_PATHS.progress} replace={true} />
             }
           />
           <Route
-            path={TEACHER_NAVIGATION_PATHS.manageStudents}
+            path={TEACHER_NAVIGATION_PATHS.roster}
             element={applyV1TeacherDashboardWidth(
               <ManageStudents studioUrlPrefix={studioUrlPrefix} />
             )}
@@ -228,11 +198,14 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.lessonMaterials}
+            loader={lessonMaterialsLoader}
             element={
               <ElementOrEmptyPage
                 showNoStudents={studentCount === 0}
+                showNoUnitAssigned={!selectedSection?.unitId}
+                courseName={selectedSection?.courseDisplayName}
                 showNoCurriculumAssigned={!anyStudentHasProgress}
-                element={applyV1TeacherDashboardWidth(<TemporaryBlankPage />)}
+                element={<LessonMaterialsContainer />}
               />
             }
           />
@@ -248,7 +221,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.courseOverview}
-            loader={teacherCourseOverviewLoader}
             element={
               <ElementOrEmptyPage
                 showNoStudents={false}
@@ -265,13 +237,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.unitOverview}
-            element={
-              <ElementOrEmptyPage
-                showNoStudents={studentCount === 0}
-                showNoCurriculumAssigned={!anyStudentHasProgress}
-                element={applyV1TeacherDashboardWidth(<TemporaryBlankPage />)}
-              />
-            }
+            element={applyV1TeacherDashboardWidth(<TeacherUnitOverview />)}
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.settings}
@@ -297,6 +263,16 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
             />
           )}
         </Route>
+        {/* /manage_students is the legacy url for /roster. Redirect to /roster so that old bookmarks continue to work */}
+        <Route
+          path={'manage_students'}
+          element={
+            <Navigate
+              to={'../' + TEACHER_NAVIGATION_PATHS.roster}
+              replace={true}
+            />
+          }
+        />
       </Route>
     ),
     [

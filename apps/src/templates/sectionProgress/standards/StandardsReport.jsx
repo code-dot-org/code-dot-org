@@ -12,7 +12,7 @@ import {
 } from '@cdo/apps/redux/unitSelectionRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {getCurrentUnitData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import {sectionName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {sectionName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 

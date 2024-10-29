@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2024-08-10 10:19:39 UTC",
+    "serialized_at": "2024-10-25 18:00:02 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -5025,6 +5025,27 @@
       "level_keys": [
         "course_e_maker_juicemind_bridging_activity_stretch_test"
       ]
+    },
+    {
+      "chapter": 88,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-project-L0_2024_TEST"
+        ],
+        "lesson.key": "Option A",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "34c52b0d-fd00-42da-98b3-83465bb2bbf1"
+      },
+      "level_keys": [
+        "gen-ai-customizing-project-L0_2024_TEST"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -6070,6 +6091,18 @@
         "lesson_group.key": "",
         "script.name": "csd-playground",
         "activity_section.key": "60274cbe-4bbb-4bc2-953e-3715b3994d62"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-project-L0_2024_TEST",
+        "script_level.level_keys": [
+          "gen-ai-customizing-project-L0_2024_TEST"
+        ],
+        "lesson.key": "Option A",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "34c52b0d-fd00-42da-98b3-83465bb2bbf1"
       }
     }
   ],

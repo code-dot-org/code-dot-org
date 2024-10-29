@@ -30,6 +30,8 @@ social:
 - teacher_application_mode  = DCDO.get("teacher_application_mode", CDO.default_teacher_application_mode)
 - census_announcement['teacher_application_mode'] = teacher_application_mode
 - census_announcement['tileset'] = CDO.mapbox_access_tileset
+- show_report_launch = DCDO.get('access-report-launch', false).to_s
+- census_announcement['show_report_launch_banner'] = show_report_launch
 
 = inline_css 'trophy_announcement_sparkle.css'
 

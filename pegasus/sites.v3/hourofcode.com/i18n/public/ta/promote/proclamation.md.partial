@@ -1,7 +1,6 @@
 ---
 title: கம்ப்யூட்டர் சயின்ஸ் கல்வி வாரம் மற்றும் Hour of Code க்கு ஆதரவான மாதிரி தீர்மானம்
 layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

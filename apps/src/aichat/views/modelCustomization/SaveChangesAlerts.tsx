@@ -1,5 +1,4 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
 
 import {
   selectCurrentCustomizationsMatchInitial,
@@ -7,13 +6,13 @@ import {
   selectSavedCustomizationsMatchInitial,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 import Alert, {alertTypes} from '@cdo/apps/componentLibrary/alert/Alert';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import styles from '../model-customization-workspace.module.scss';
 
-const SaveChangesAlerts: React.FunctionComponent = () => {
-  const isReadOnly = useSelector(isReadOnlyWorkspace);
+const SaveChangesAlerts: React.FunctionComponent<{isReadOnly: boolean}> = ({
+  isReadOnly,
+}) => {
   const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
   const havePropertiesChanged = useAppSelector(selectHavePropertiesChanged);
   const isCurrentDefault = useAppSelector(

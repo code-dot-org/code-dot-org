@@ -99,8 +99,35 @@
   flex-wrap: wrap;
   overflow: hidden;
 
+  @media (max-width: $width-md) {
+    flex-direction: column;
+  }
+
+  .media-wrapper {
+    flex: 1;
+
+    & > * {
+      margin: 1.25rem;
+      width: calc(100% - 1.25rem);
+
+      @media (max-width: $width-md) {
+        margin: 0;
+        width: 100%;
+      }
+    }
+
+    &.right > * {
+      float: right;
+
+      html[dir="rtl"] & {
+        float: left;
+      }
+    }
+  }
+
   .text-wrapper {
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.5rem 1.5rem;
+    flex: 1;
   }
 
   figure.video-responsive {

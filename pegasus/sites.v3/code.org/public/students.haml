@@ -2,6 +2,7 @@
 title: Learn Computer Science
 theme: responsive_full_width
 ---
+%script{src: webpack_asset_path('js/code.org/public/students.js')}
 
 -# Determine if a user is signed in
 - cookie_key = environment_specific_cookie_name("_user_type")
@@ -16,6 +17,7 @@ theme: responsive_full_width
     %p.body-one.no-margin-bottom
       =hoc_s(:student_courses_top_desc)
     - if !user_type
+      -# This button is mislabeled: it is to sign up, not sign in
       %a#sign-in-button.link-button{href: CDO.studio_url("/users/sign_up"), style: "margin-top: 2rem"}
         =hoc_s(:call_to_action_sign_up_free)
 

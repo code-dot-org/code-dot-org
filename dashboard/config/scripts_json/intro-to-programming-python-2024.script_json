@@ -1,0 +1,391 @@
+{
+  "script": {
+    "name": "intro-to-programming-python-2024",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "curriculum_umbrella": "Foundations of CS",
+      "is_course": true,
+      "is_migrated": true,
+      "show_calendar": true,
+      "version_year": "2024",
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": "intro-to-programming-python",
+    "serialized_at": "2024-09-25 17:49:14 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "intro-to-programming-python-2024"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Pre-Assessment"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-programming-python-2024"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-python-2024"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Post-Assessment"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "intro-to-programming-python-2024"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-2",
+      "name": "Pre-Assessment",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-programming-python-2024"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Project Launch",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-python-2024"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Algorithms and Flowcharts",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-python-2024"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Variables and Data Types",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-python-2024"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Conditionals",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-python-2024"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Loops",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-python-2024"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Documenting Code",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-python-2024"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Peer Feedback",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-python-2024"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Lists",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-python-2024"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Functions",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-python-2024"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Project Refinement",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-python-2024"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Bias and Accessibility",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-python-2024"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "User Testing and Feedback",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-python-2024"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "Final Program Development",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-python-2024"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Preparing to Present",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-python-2024"
+      }
+    },
+    {
+      "key": "lesson-17",
+      "name": "Project Presentations",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-python-2024"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "Post-Assessment",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "intro-to-programming-python-2024"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "d8d907d7-3f0f-4986-87d8-82237b97d448",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d8d907d7-3f0f-4986-87d8-82237b97d448",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-python-2024"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "680a9073-8f1b-4537-8260-66ac7552d6fe",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "680a9073-8f1b-4537-8260-66ac7552d6fe",
+        "lesson_activity.key": "d8d907d7-3f0f-4986-87d8-82237b97d448"
+      }
+    }
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

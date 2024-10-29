@@ -7,6 +7,7 @@
 # errors accessing Secrets Manager.
 #slack_bot_token: localoverride
 #pardot_private_key: localoverride
+#openai_aichat_safety_api_key: localoverride
 
 # Whether to prefix bundler commands with 'sudo'.
 # It may be useful to set this false when doing local development on Linux.

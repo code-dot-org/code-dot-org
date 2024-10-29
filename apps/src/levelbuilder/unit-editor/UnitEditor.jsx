@@ -4,12 +4,15 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
+import {Chips} from '@cdo/apps/componentLibrary/chips';
 import {
   InstructionType,
   PublishedState,
   InstructorAudience,
   ParticipantAudience,
   CurriculumUmbrella,
+  CurriculumTopicTags,
+  CurriculumContentArea,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import Dialog from '@cdo/apps/legacySharedComponents/Dialog';
@@ -76,9 +79,17 @@ class UnitEditor extends React.Component {
     initialLocales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string))
       .isRequired,
     initialProjectSharing: PropTypes.bool,
-    initialCurriculumUmbrella: PropTypes.oneOf(
-      Object.values(CurriculumUmbrella).push('')
-    ),
+    initialCurriculumUmbrella: PropTypes.oneOf([
+      ...Object.values(CurriculumUmbrella),
+      '',
+    ]),
+    initialTopicTags: PropTypes.arrayOf(PropTypes.string),
+    // Using keys here so the snake case equivalent of values would get
+    // deserialized, and are preferred for easier querying by RED team
+    initialContentArea: PropTypes.oneOf([
+      ...Object.keys(CurriculumContentArea),
+      '',
+    ]),
     initialFamilyName: PropTypes.string,
     initialVersionYear: PropTypes.string,
     unitFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -142,6 +153,8 @@ class UnitEditor extends React.Component {
       locales: this.props.initialLocales,
       projectSharing: this.props.initialProjectSharing,
       curriculumUmbrella: this.props.initialCurriculumUmbrella,
+      topicTags: this.props.initialTopicTags,
+      contentArea: this.props.initialContentArea,
       versionYear: this.props.initialVersionYear,
       savedVersionYear: this.props.initialVersionYear,
       tts: this.props.initialTts,
@@ -351,6 +364,8 @@ class UnitEditor extends React.Component {
       locales: this.state.locales,
       project_sharing: this.state.projectSharing,
       curriculum_umbrella: this.state.curriculumUmbrella,
+      topic_tags: this.state.topicTags,
+      content_area: this.state.contentArea,
       version_year: this.state.versionYear,
       tts: this.state.tts,
       title: this.state.title,
@@ -704,6 +719,36 @@ class UnitEditor extends React.Component {
                     blocks and there will be information about CSTA Standards.
                   </p>
                 </HelpTip>
+              </label>
+              <label>
+                Content Area
+                <select
+                  style={styles.dropdown}
+                  value={this.state.contentArea}
+                  onChange={e => this.setState({contentArea: e.target.value})}
+                >
+                  <option value="">(None)</option>
+                  {Object.entries(CurriculumContentArea).map(([key, val]) => (
+                    <option key={key} value={key}>
+                      {val}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label>
+                Topic tags
+                <Chips
+                  name="unit-editor-topic-tags"
+                  size="xs"
+                  options={Object.entries(CurriculumTopicTags).map(
+                    ([key, val]) => ({
+                      value: key,
+                      label: val,
+                    })
+                  )}
+                  values={this.state.topicTags}
+                  setValues={vals => this.setState({topicTags: vals})}
+                />
               </label>
               {this.props.hasCourse &&
                 this.state.publishedState !== PublishedState.in_development && (

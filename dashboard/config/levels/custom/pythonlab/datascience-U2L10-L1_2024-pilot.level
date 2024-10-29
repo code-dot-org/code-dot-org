@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2024-08-29T23:35:11.000Z",
   "level_num": "custom",
@@ -16,7 +17,7 @@
       "questionType": "freeResponse",
       "allowMultipleAttempts": false,
       "placeholderText": "student response",
-      "freeResponseHeight": 30,
+      "freeResponseHeight": 50,
       "codeEditableAfterSubmit": false
     },
     "start_sources": {
@@ -49,7 +50,6 @@
     },
     "teacher_markdown": "**Student Takeaways:**\r\n- Students gain exposure to how to apply multiple conditions using logical operators (&, |) to filter rows in a DataFrame\r\n- They inspect the structure of a DataFrame, including data types and non-null counts, using the info() method\r\n\r\n\r\n"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-08-29T23:35:11.175+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L9-L1_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L9-L1_2024-pilot\"},{\"changed_at\":\"2024-08-29 23:35:44 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 23:36:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 23:36:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 23:38:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-29T23:35:11.175+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L9-L1_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L9-L1_2024-pilot\"},{\"changed_at\":\"2024-08-29 23:35:44 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 23:36:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 23:36:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 23:38:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-13 15:52:48 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

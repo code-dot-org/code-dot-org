@@ -1,6 +1,6 @@
-@import "color";
-@import "@cdo/apps/componentLibrary/common/styles/mixins";
-@import "@cdo/apps/componentLibrary/typography/typography.module";
+@import 'color';
+@import '@cdo/apps/componentLibrary/common/styles/mixins';
+@import '@cdo/apps/componentLibrary/typography/typography.module';
 
 // TextField common styles
 .textField {
@@ -16,6 +16,8 @@
     border-radius: 0.25rem;
     border: 1px solid unset;
     caret-color: $light_primary_500;
+    box-sizing: border-box;
+    height: unset;
 
     &:focus-visible {
       outline: 2px solid $light_primary_500;
@@ -32,7 +34,8 @@
 }
 
 // TextField colors
-.textField.textField-black, .textField.textField-gray {
+.textField.textField-black,
+.textField.textField-gray {
   .textFieldLabel {
     color: $light-black;
   }
@@ -40,6 +43,10 @@
   input {
     border-color: $light_black;
     background: $light_white;
+
+    &.hasError {
+      border-color: $light_negative_500;
+    }
 
     &::placeholder {
       color: $light_gray_400;
@@ -69,7 +76,8 @@
       color: $light_gray_200;
     }
 
-    .textFieldHelperSection, .textFieldErrorSection {
+    .textFieldHelperSection,
+    .textFieldErrorSection {
       color: $light_gray_200;
     }
   }
@@ -86,6 +94,10 @@
 .textField.textField-gray {
   input {
     border-color: $light_gray_400;
+
+    &.hasError {
+      border-color: $light_negative_500;
+    }
 
     &:focus-visible {
       border-color: $light_gray_400;
@@ -112,7 +124,8 @@
     }
   }
 
-  .textFieldHelperSection, .textFieldErrorSection {
+  .textFieldHelperSection,
+  .textFieldErrorSection {
     color: $light_white;
   }
 
@@ -127,7 +140,8 @@
       color: $light_gray_800;
     }
 
-    .textFieldHelperSection, .textFieldErrorSection {
+    .textFieldHelperSection,
+    .textFieldErrorSection {
       color: $light_gray_700;
     }
   }

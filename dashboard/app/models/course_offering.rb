@@ -22,6 +22,7 @@
 #  video                            :string(255)
 #  published_date                   :datetime
 #  self_paced_pl_course_offering_id :integer
+#  ai_teaching_assistant_available  :boolean          default(FALSE), not null
 #
 # Indexes
 #
@@ -268,7 +269,8 @@ class CourseOffering < ApplicationRecord
       id: id,
       key: key,
       display_name: any_versions_launched? ? localized_display_name : localized_display_name + ' *',
-      course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}
+      course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)},
+      ai_teaching_assistant_available: ai_teaching_assistant_available,
     }
   end
 
@@ -322,6 +324,7 @@ class CourseOffering < ApplicationRecord
       video: video,
       published_date: published_date,
       self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
+      ai_teaching_assistant_available: ai_teaching_assistant_available,
     }
   end
 
@@ -372,6 +375,7 @@ class CourseOffering < ApplicationRecord
       video: video,
       published_date: published_date,
       self_paced_pl_course_offering_key: self_paced_pl_course_offering&.key,
+      ai_teaching_assistant_available: ai_teaching_assistant_available,
     }
   end
 

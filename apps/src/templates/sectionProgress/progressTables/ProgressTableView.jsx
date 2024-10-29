@@ -20,7 +20,7 @@ import {
   getCurrentUnitData,
   jumpToLessonDetails,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 import i18n from '@cdo/locale';
 
@@ -113,8 +113,8 @@ class ProgressTableView extends React.Component {
 
     // Sort students, in-place.
     const sortedStudents = props.isSortedByFamilyName
-      ? props.students.sort(stringKeyComparator(['familyName', 'name']))
-      : props.students.sort(stringKeyComparator(['name', 'familyName']));
+      ? [...props.students].sort(stringKeyComparator(['familyName', 'name']))
+      : [...props.students].sort(stringKeyComparator(['name', 'familyName']));
 
     this.state = {
       rows: sortedStudents.map((student, index) => {

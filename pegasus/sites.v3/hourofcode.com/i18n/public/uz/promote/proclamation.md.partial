@@ -1,7 +1,6 @@
 ---
 title: Namunaviy echim, kompyuter fanlari bo‘yicha ta'lim haftaligi va soat soati
 layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

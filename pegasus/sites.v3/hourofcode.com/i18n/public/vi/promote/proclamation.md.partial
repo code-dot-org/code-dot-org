@@ -1,7 +1,6 @@
 ---
 title: Giải pháp mẫu Hỗ trợ Tuần giáo dục Khoa học Máy tính và Giờ viết mã
 layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

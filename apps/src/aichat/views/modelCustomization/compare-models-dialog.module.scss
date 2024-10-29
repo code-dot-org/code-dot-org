@@ -1,12 +1,23 @@
 @import 'color';
 
+hr {
+  margin: 1rem 0;
+  border-color: $light_gray_200;
+}
+
 .textContainer {
   background-color: $light_gray_50;
   border-radius: 4px;
-  padding: 2px 0;
 }
 
-.modelDescriptionContainer {
+.modelText {
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.modelDescriptionPanelContainer {
   flex: 1;
   padding: 5px 10px;
   display: flex;
@@ -38,16 +49,13 @@ div.modelComparisonDialog {
   justify-content: flex-end;
 }
 
-.overflowYHidden {
-  overflow-y: hidden;
+.modelDescriptionContainer {
+  overflow-y: auto;
 }
 
-.overflowYScroll {
-  overflow-y: scroll;
-}
-
-.fullWidth {
+.compareModelsDropdown {
   width: 100%;
+  display: inline-block;
 }
 
 .headerContainer {

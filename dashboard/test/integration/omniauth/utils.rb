@@ -49,11 +49,15 @@ module OmniauthCallbacksControllerTests
       sign_in_through AuthenticationOption::GOOGLE
     end
 
-    def finish_sign_up(auth_hash, user_type)
-      post '/users', params: finish_sign_up_params(
-        name: auth_hash[:info]&.name,
-        user_type: user_type,
+    def finish_sign_up(auth_hash, user_type, new_sign_up = false)
+      complete_params = finish_sign_up_params(
+        {
+          name: auth_hash[:info]&.name,
+          user_type: user_type
+        },
+        new_sign_up
       )
+      post '/users', params: complete_params
     end
 
     # Intentionally fail to finish sign-up by _not_ checking the terms-of-service box
@@ -65,10 +69,11 @@ module OmniauthCallbacksControllerTests
       )
     end
 
-    def finish_sign_up_params(override_params)
+    def finish_sign_up_params(override_params, new_sign_up = false)
       user_type = override_params[:user_type] || User::TYPE_STUDENT
       if user_type == User::TYPE_STUDENT
         {
+          new_sign_up: new_sign_up,
           user: {
             locale: 'en-US',
             user_type: user_type,
@@ -85,6 +90,7 @@ module OmniauthCallbacksControllerTests
         }
       else
         {
+          new_sign_up: new_sign_up,
           user: {
             locale: 'en-US',
             user_type: user_type,
@@ -150,11 +156,11 @@ module OmniauthCallbacksControllerTests
     def assert_sign_up_tracking(expected_study_group, expected_events)
       study_requests = @firehose_requests.select {|e| e[1][:study] == SignUpTracking::STUDY_NAME && e[0] == :analysis}
       study_records = study_requests.map {|e| e[1]}
-      study_groups = study_records.map {|e| e[:study_group]}.uniq.compact
-      study_events = study_records.map {|e| e[:event]}
+      study_groups = study_records.pluck(:study_group).uniq.compact
+      study_events = study_records.pluck(:event)
 
       assert(study_records.all? {|record| record[:data_string].present?})
-      assert_equal 1, study_records.map {|r| r[:data_string]}.uniq.count
+      assert_equal 1, study_records.pluck(:data_string).uniq.count
       assert_equal [expected_study_group], study_groups
       assert_equal expected_events, study_events
     end

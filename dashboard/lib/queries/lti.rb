@@ -12,6 +12,10 @@ class Queries::Lti
     user.lti_user_identities.find_by(lti_integration_id: lti_integration.id)&.subject
   end
 
+  def self.lti_user_identity(user, lti_integration)
+    user.lti_user_identities.find_by(lti_integration_id: lti_integration[:id])
+  end
+
   def self.get_lti_integration(issuer, client_id)
     LtiIntegration.find_by(issuer: issuer, client_id: client_id)
   end

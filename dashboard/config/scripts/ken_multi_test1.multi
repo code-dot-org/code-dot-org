@@ -1,0 +1,7 @@
+name 'ken multi test1'
+title 'title'
+description 'description here'
+question 'Question'
+wrong 'wrong answer'
+right 'right answer'
+allow_multiple_attempts false

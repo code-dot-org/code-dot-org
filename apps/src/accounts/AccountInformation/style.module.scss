@@ -1,0 +1,16 @@
+@import '@cdo/apps/componentLibrary/common/styles/mixins';
+@import '@cdo/apps/componentLibrary/typography/typography.module';
+
+.accountForm {
+  label {
+    &.emailInput {
+      margin-bottom: 0.5rem;
+    }
+
+    &.authorizedTeacher {
+      font-weight: bold;
+      color: $light_affirmative_500;
+      margin: 0;
+    }
+  }
+}

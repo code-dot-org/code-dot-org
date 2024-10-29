@@ -11,15 +11,13 @@
 - current_user_school_info = current_user.school_info
 
 - script_data = {}
-- script_data[:formUrl] = '/api/v1/user_school_infos'
-- script_data[:authTokenName] = request_forgery_protection_token.to_s
-- script_data[:authTokenValue] = form_authenticity_token
 - script_data[:existingSchoolInfo] = {}
 - if current_user_school_info
-  - script_data[:existingSchoolInfo] = current_user_school_info.slice(:country, :school_type, :school_id, :school_name, :full_address)
-- script_data[:existingSchoolInfo][:country] ||= 'United States' if us_ip
-- script_data[:mapboxAccessToken] = "#{CDO.mapbox_access_token}"
+  - script_data[:existingSchoolInfo] = current_user_school_info.slice(:country, :school_id, :school_name, :school_type)
+- script_data[:existingSchoolInfo][:school_zip] ||= current_user_school_info&.school&.zip || current_user_school_info&.zip&.to_s&.rjust(5, '0')
+- script_data[:existingSchoolInfo][:school_type] ||= current_user_school_info&.school&.school_type
+- script_data[:existingSchoolInfo][:country] ||= 'US' if us_ip
+- script_data[:usIp] = us_ip
+
 - content_for(:head) do
-  %script{type: "text/javascript", src: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"}
-  %link{rel: "stylesheet", type: "text/css", href: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"}
   %script{src: webpack_asset_path('js/layouts/_school_info_interstitial.js'), data: {schoolinfointerstitial: script_data.to_json}}

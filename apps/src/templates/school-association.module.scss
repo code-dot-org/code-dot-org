@@ -18,16 +18,9 @@
     margin-bottom: 0;
   }
 
-  input {
+  input,
+  .dropdown > div {
     width: 100%;
-    box-sizing: border-box;
-    height: 46px !important;
-    text-indent: 0.25rem;
-  }
-
-  select {
-    font-weight: 400 !important;
-    width: 100% !important;
   }
 
   button {

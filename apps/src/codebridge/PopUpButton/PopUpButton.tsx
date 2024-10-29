@@ -1,14 +1,17 @@
+import classNames from 'classnames';
 import React, {useState, useCallback} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button';
 
 import moduleStyles from './PopUpButton.module.scss';
+import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 type PopUpButtonProps = {
   iconName: string;
   children?: React.ReactNode;
   className?: string;
   alignment?: 'left' | 'right';
+  id?: string;
 };
 
 export const PopUpButton = ({
@@ -16,6 +19,7 @@ export const PopUpButton = ({
   iconName,
   className,
   alignment = 'left',
+  id,
 }: PopUpButtonProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [buttonRect, setButtonRect] = useState<DOMRect>();
@@ -32,6 +36,7 @@ export const PopUpButton = ({
         | React.MouseEvent<HTMLButtonElement>
         | React.MouseEvent<HTMLAnchorElement>
     ) => {
+      e.stopPropagation();
       setButtonRect((e.target as HTMLElement).getBoundingClientRect());
       setOffsetParent(
         (e.target as HTMLElement).offsetParent?.getBoundingClientRect()
@@ -57,12 +62,14 @@ export const PopUpButton = ({
   return (
     <>
       <Button
-        className={className}
+        className={classNames(className, darkModeStyles.iconOnlyTertiaryButton)}
         size="xs"
         icon={{iconStyle: 'solid', iconName}}
-        color="black"
+        color="white"
         isIconOnly
         onClick={clickHandler}
+        type={'tertiary'}
+        id={id}
       />
       {isOpen && buttonRect && offsetParent && (
         <div

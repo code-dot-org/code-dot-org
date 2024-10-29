@@ -1,6 +1,10 @@
 @import "color", "font";
 
 .chatWarningModal {
+  max-height: calc(95vh - 100px);
+  display: flex;
+  flex-direction: column;
+
   hr {
     margin: 1rem 0;
     border-color: $light_gray_200;
@@ -18,6 +22,17 @@
       color: $brand_secondary_dark;
     }
   }
+}
+
+.headerContainer {
+  display: flex;
+  height: 2rem;
+}
+
+.warningModuleTextContainer {
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
 }
 
 .bottomSection {

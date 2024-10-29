@@ -8,8 +8,8 @@ import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shap
 import {
   assignToSection,
   unassignSection,
-  sectionsForDropdown,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import i18n from '@cdo/locale';
 
 class MultipleAssignButton extends React.Component {

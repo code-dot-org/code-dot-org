@@ -3,6 +3,8 @@ import React, {useCallback, useState} from 'react';
 
 import Alert from '@cdo/apps/componentLibrary/alert';
 import {Button} from '@cdo/apps/componentLibrary/button';
+import {TooltipProps} from '@cdo/apps/componentLibrary/tooltip';
+import WithTooltip from '@cdo/apps/componentLibrary/tooltip/WithTooltip';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -14,6 +16,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import VersionHistoryDropdown from './VersionHistoryDropdown';
 
 import moduleStyles from './version-history.module.scss';
+import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 interface VersionHistoryProps {
   startSource: ProjectSources;
@@ -85,17 +88,32 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
     [isVersionHistoryOpen, loadError, loading]
   );
 
+  const tooltipProps: TooltipProps = {
+    text: commonI18n.versionHistory_header(),
+    direction: 'onLeft',
+    tooltipId: 'version-history-tooltip',
+    size: 'xs',
+    className: darkModeStyles.tooltipLeft,
+  };
+
   return (
     <>
-      <Button
-        isIconOnly
-        icon={{iconStyle: 'solid', iconName: 'history'}}
-        color={'black'}
-        onClick={toggleVersionHistory}
-        ariaLabel={commonI18n.versionHistory_header()}
-        size={'xs'}
-        disabled={buttonDisabled}
-      />
+      <WithTooltip tooltipProps={tooltipProps}>
+        <Button
+          isIconOnly
+          icon={{iconStyle: 'solid', iconName: 'history'}}
+          color={'white'}
+          onClick={toggleVersionHistory}
+          ariaLabel={commonI18n.versionHistory_header()}
+          size={'xs'}
+          disabled={buttonDisabled}
+          type={'tertiary'}
+          className={classNames(
+            moduleStyles.versionHistoryButton,
+            darkModeStyles.iconOnlyTertiaryButton
+          )}
+        />
+      </WithTooltip>
       {(loading || loadError) && (
         <div className={moduleStyles.versionHistoryDropdown} ref={menuRef}>
           {loading && (

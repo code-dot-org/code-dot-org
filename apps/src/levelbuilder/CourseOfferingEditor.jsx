@@ -385,6 +385,26 @@ export default function CourseOfferingEditor(props) {
           ))}
         </select>
       </label>
+      <label>
+        AI Teaching Assistant Available
+        <HelpTip>
+          <p>
+            Select this checkbox to show the TA bot icon in the assignment
+            experience.
+          </p>
+        </HelpTip>
+        <input
+          type="checkbox"
+          checked={courseOffering.ai_teaching_assistant_available}
+          style={styles.checkbox}
+          onChange={e =>
+            updateCourseOffering(
+              'ai_teaching_assistant_available',
+              e.target.checked
+            )
+          }
+        />
+      </label>
       <h3>Device Compatibility</h3>
       {DeviceTypes.map(device => (
         <label key={device}>

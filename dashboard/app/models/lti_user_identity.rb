@@ -21,6 +21,7 @@ class LtiUserIdentity < ApplicationRecord
   acts_as_paranoid
   belongs_to :lti_integration
   belongs_to :user
+  has_and_belongs_to_many :lti_deployments
 
   validates :subject, presence: true
 end

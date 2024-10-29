@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-16 16:49:12 UTC",
+    "serialized_at": "2024-10-05 16:49:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2097,7 +2097,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": " <b>Create Perfomance Task Written Response Practice</b>\n</br>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n</br>\n\nSample Prompt: <i>Describe the process you used to develop your program. Include any goals that you set, challenges or setbacks that you encountered, and solutions that worked for your team.</i>\n\n</br>\n\n<a href=\"https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit#slide=id.g29207375a28_127_0\" target=\"_blank\">Unit Journal Template</a>\n\n<b>Sample Response for Instructors</b>\n"
+            "markdown": " <b>Create Perfomance Task Written Response Practice</b>\n</br>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n</br>\n\nSample Prompt: <i>Describe the process you used to develop your program. Include any goals that you set, challenges or setbacks that you encountered, and solutions that worked for your team.</i>\n\n</br>\n\n<a href=\"https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit#slide=id.g29207375a28_127_0\" target=\"_blank\">Unit Journal Template</a>\n"
           }
         ]
       },
@@ -2174,8 +2174,37 @@
       }
     },
     {
-      "key": "e9ae573e-7977-4b50-8ba1-d1b96e4c12f8",
+      "key": "a2770240-81aa-4e9b-8841-e782e7d350e9",
       "position": 6,
+      "properties": {
+        "description": "Great work on your project. Before wrapping up, we will practice writing for the style of questions that are asked as part of the Create performance task on the AP exam. Respond to the question in Step 9 in your activity guide, and submit it along with your project. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a2770240-81aa-4e9b-8841-e782e7d350e9",
+        "lesson_activity.key": "0fca3674-8cdf-4d77-be8d-7ca879147dca"
+      }
+    },
+    {
+      "key": "0cb0a2e5-a200-42bc-a528-52bb4d4ce44c",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Complete the written response in Step 9 of the Project Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Each student, in every classroom, will come to the written response with a different level of comfort, ability, and familiarity with writing for these style of questions. As such, consider offering one or more of the following supports:\n\n[Writing Support](https://docs.google.com/document/d/1yJEM_LofpMtw23zCF4VMWUA6XyyJAaTFbor50S16D-A/edit): Provide students with these sentence starters for guiding their response. \n\n[App Interface Support](https://docs.google.com/document/d/1t3ejgyokOIQ191rjF2UpXDu4j7-Lxkw1YXiOqjXZqUU/edit): For students who did not fully complete their app, direct them to the completed app in Level 1 in order to respond to the question"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0cb0a2e5-a200-42bc-a528-52bb4d4ce44c",
+        "lesson_activity.key": "0fca3674-8cdf-4d77-be8d-7ca879147dca"
+      }
+    },
+    {
+      "key": "e9ae573e-7977-4b50-8ba1-d1b96e4c12f8",
+      "position": 8,
       "properties": {
         "description": "Now that we are near the end of the unit, we are going to play CSP Vocabulary BINGO once again. You have been working hard on learning the definitions of all of the different vocabulary words throughout the unit, and now we will put your amazing memories to the test.\n\nI will give each of your a BINGO card that has randomized vocabulary on it. When you hear the definition for a word that you have on your card, mark that square. If you have 4 in a row horizontally, vertically, or diagonally, yell, \"BINGO!\"\n\nAre there any questions?",
         "duration": "7",
@@ -2189,7 +2218,7 @@
     },
     {
       "key": "91df294c-e018-46c8-8258-cf7f36d4b565",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit Three in order to generate clues for the students."
       },
@@ -2200,7 +2229,7 @@
     },
     {
       "key": "15cddd0c-f604-495d-a82f-bc7d0eeef53b",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "---"
       },
@@ -2211,7 +2240,7 @@
     },
     {
       "key": "d19602b2-f6d7-476b-95ef-12bf7b06cb65",
-      "position": 9,
+      "position": 11,
       "properties": {
         "progression_name": "End-of-Unit Survey"
       },
@@ -3988,6 +4017,18 @@
       }
     },
     {
+      "name": "App Code Support - Unit 3 Project - Designing an App",
+      "url": "https://docs.google.com/document/d/1t3ejgyokOIQ191rjF2UpXDu4j7-Lxkw1YXiOqjXZqUU/edit?usp=sharing",
+      "key": "app_code_support_-_unit_3_project_-_designing_an_app",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "app_code_support_-_unit_3_project_-_designing_an_app"
+      }
+    },
+    {
       "name": "App Development Planning Guide",
       "url": "https://docs.google.com/document/d/1JXIaQGRKzsw9UvZh58yLfkriV2QH7fTE51Omr8OJ1aM/edit?usp=sharing",
       "key": "app_development_planning_guide",
@@ -4065,6 +4106,8 @@
       "url": "https://docs.google.com/presentation/d/1fhkhXMCx7LAwkjzq3r4oXLkCn2m6A9EA2e5NoNnndhg/edit?usp=drive_link",
       "key": "csp_unit_3_slides",
       "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp_unit_3_slides"
@@ -4116,6 +4159,18 @@
       },
       "seeding_key": {
         "resource.key": "designing_an_app_-_days_3-5"
+      }
+    },
+    {
+      "name": "EXEMPLAR CSP Unit 3 App Development Planning Guide",
+      "url": "https://docs.google.com/document/d/1A4KP1ZX1cZDBQDHHxDRUH-oqrK84X2aPPk-CV_nK-b8/edit?usp=sharing",
+      "key": "exemplar_csp_unit_3_app_development_planning_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_csp_unit_3_app_development_planning_guide"
       }
     },
     {
@@ -4252,6 +4307,18 @@
       "seeding_key": {
         "resource.key": "unit_3_interactive_notebook_journal"
       }
+    },
+    {
+      "name": "Writing Support - Unit 3 Project - Designing an App",
+      "url": "https://docs.google.com/document/d/1yJEM_LofpMtw23zCF4VMWUA6XyyJAaTFbor50S16D-A/edit?usp=sharing",
+      "key": "writing_support_-_unit_3_project_-_designing_an_app",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "writing_support_-_unit_3_project_-_designing_an_app"
+      }
     }
   ],
   "lessons_resources": [
@@ -4348,6 +4415,12 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 2",
+        "resource.key": "app_code_support_-_unit_3_project_-_designing_an_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 2",
         "resource.key": "app_development_planning_guide"
       }
     },
@@ -4372,7 +4445,19 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 2",
+        "resource.key": "exemplar_csp_unit_3_app_development_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 2",
         "resource.key": "pair_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 2",
+        "resource.key": "writing_support_-_unit_3_project_-_designing_an_app"
       }
     },
     {

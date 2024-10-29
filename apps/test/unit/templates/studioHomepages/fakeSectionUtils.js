@@ -1,4 +1,4 @@
-import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 
 export const progressUrl =
   'https://studio.code.org/teacher_dashboard/sections/111111/progress';

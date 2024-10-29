@@ -13,13 +13,15 @@ theme: responsive_full_width
       %p.white
         =hoc_s("ai_ta_page.desc")
     %figure
-      %img{src: "/images/ai/page/teaching-assistant/ai-ta-banner.png", alt: "", style: "width: 100%; margin-block-start: -2rem; margin-inline-start: -2rem;"}
+      %img{src: "/images/ai/page/teaching-assistant/ai-ta-banner-winner.png", alt: "", style: "width: 100%; margin-block-start: -2rem; margin-inline-start: -2rem;"}
+
+%section.bg-neutral-light
+  .wrapper
+    = view :"ai_teaching_assistant/ai_ta_get_started"
 
 %section.no-padding-bottom
   .wrapper
     .flex-container.justify-space-between.align-items-center.gap-2.wrap
-      %figure.col-47
-        %img.rounded-corners{src: "/images/ai/page/teaching-assistant/ai-ta-assessment-example.png", alt: "", style: "width: 100%;"}
       .text-wrapper.col-47
         %h2=hoc_s("ai_ta_page.assessment_power.heading")
         %p=hoc_s("ai_ta_page.assessment_power.desc")
@@ -27,10 +29,16 @@ theme: responsive_full_width
           %li=hoc_s("ai_ta_page.assessment_power.list_01", markdown: :inline)
           %li=hoc_s("ai_ta_page.assessment_power.list_02", markdown: :inline)
           %li=hoc_s("ai_ta_page.assessment_power.list_03", markdown: :inline)
+      %figure.col-47
+        %img.rounded-corners{src: "/images/ai/page/teaching-assistant/ai-ta-assessment-example.png", alt: "", style: "width: 100%;"}
 
 %section
   .wrapper
-    = view :section_basic_image_text, image_url: "/images/ai/page/teaching-assistant/ai-ta-focus-example.png", heading: hoc_s("ai_ta_page.focus.heading"), desc: hoc_s("ai_ta_page.focus.desc"), wrap_reverse: true, url: nil, urlText: nil
+    = view :section_basic_image_text, image_url: "/images/ai/page/teaching-assistant/ai-ta-focus-example.png", heading: hoc_s("ai_ta_page.focus.heading"), desc: hoc_s("ai_ta_page.focus.desc"), wrap_reverse: false, url: nil, urlText: nil
+
+%section.bg-neutral-dark
+  .wrapper.centered
+    = view :"ai_teaching_assistant/ai_ta_in_the_news"
 
 %section.bg-neutral-light
   .wrapper.centered

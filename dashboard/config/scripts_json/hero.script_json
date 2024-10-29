@@ -61,7 +61,7 @@
     },
     "new_name": null,
     "family_name": "hero",
-    "serialized_at": "2024-02-05 21:44:23 UTC",
+    "serialized_at": "2024-10-11 19:37:19 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -110,7 +110,8 @@
       "key": "e85d6071-2762-4dbb-843e-2f65408a30f8",
       "position": 1,
       "properties": {
-        "name": "Getting Started (5 minutes)"
+        "duration": 5,
+        "name": "Getting Started"
       },
       "seeding_key": {
         "lesson_activity.key": "e85d6071-2762-4dbb-843e-2f65408a30f8",
@@ -123,7 +124,8 @@
       "key": "a31970cd-e3cd-4bfc-84cb-f6db0ec16d3a",
       "position": 2,
       "properties": {
-        "name": "Activity (30-45 minutes)"
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "a31970cd-e3cd-4bfc-84cb-f6db0ec16d3a",

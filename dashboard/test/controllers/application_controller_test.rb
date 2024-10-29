@@ -67,6 +67,16 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       refute_redirect_to lockout_path
     end
 
+    it 'allows student to visit the join page' do
+      get student_user_new_path
+      refute_redirect_to lockout_path
+    end
+
+    it 'allows student to join a section' do
+      post student_register_path
+      refute_redirect_to lockout_path
+    end
+
     context 'when user is not sign in' do
       before do
         sign_out user

@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import i18n from '@cdo/locale';
 
 export default class Spinner extends React.Component {
   static propTypes = {
@@ -22,6 +23,7 @@ export default class Spinner extends React.Component {
         style={style}
         icon="spinner"
         className={`fa-pulse ${displaySize}`}
+        title={i18n.loading()}
       />
     );
   }

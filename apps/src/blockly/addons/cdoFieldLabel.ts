@@ -1,4 +1,4 @@
-import GoogleBlockly, {Field, FieldLabelConfig} from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 
 // The second parameter of CDO Blockly implementation of this class is
 // a config object, which we are not currently using. In Google Blockly,
@@ -9,9 +9,9 @@ import GoogleBlockly, {Field, FieldLabelConfig} from 'blockly/core';
 // this argument to this class in the future should we need it.
 export default class CdoFieldLabel extends GoogleBlockly.FieldLabel {
   constructor(
-    value?: string | typeof Field.SKIP_SETUP,
+    value?: string | typeof GoogleBlockly.Field.SKIP_SETUP,
     styleConfig?: string | object,
-    config?: FieldLabelConfig
+    config?: GoogleBlockly.FieldLabelConfig
   ) {
     let textClass = undefined;
     if (typeof styleConfig === 'string') {

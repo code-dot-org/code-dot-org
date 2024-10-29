@@ -1,0 +1,14 @@
+name 'Data Sci U1 Post Q6_2024-pilot'
+
+question 'A researcher needs to collect health data from participants while ensuring ethical standards are met. What should they do?'
+
+wrong 'Collect data without informing participants.'
+right 'Obtain informed consent from participants and ensure data is securely stored and anonymized.'
+wrong 'Pay for participant\’s health data from a third party.'
+wrong 'Ignore privacy concerns for faster data collection.'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

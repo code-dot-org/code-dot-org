@@ -81,7 +81,6 @@ def main
     started: total_started,
     finished: total_finished,
     tutorials: total_tutorials,
-    total_hoc_count: total_hoc_count,
     total_codedotorg_count: total_codedotorg,
   }
 

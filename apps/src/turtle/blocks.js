@@ -550,7 +550,8 @@ exports.install = function (blockly, blockInstallOptions) {
     getVars: Blockly.Variables.getVars,
   };
 
-  generator.variables_get_length = generator.variables_get;
+  blockGeneratorFunctionDictionary.variables_get_length =
+    blockGeneratorFunctionDictionary.variables_get;
 
   blockly.Blocks.variables_get_sides = {
     // Variable getter.
@@ -571,7 +572,8 @@ exports.install = function (blockly, blockInstallOptions) {
     getVars: Blockly.Variables.getVars,
   };
 
-  generator.variables_get_sides = generator.variables_get;
+  blockGeneratorFunctionDictionary.variables_get_sides =
+    blockGeneratorFunctionDictionary.variables_get;
 
   // Create a fake "draw a square" function so it can be made available to users
   // without being shown in the workspace.

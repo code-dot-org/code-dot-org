@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import PopUpMenu from '@cdo/apps/sharedComponents/PopUpMenu';
-import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import i18n from '@cdo/locale';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';

@@ -126,16 +126,20 @@ const styles = {
   },
   headerInner: {
     position: 'absolute',
+    display: 'flex',
+    alignItems: 'center',
   },
   scriptLinkWithUpdatedAt: {
     display: 'block',
   },
   outerContainer: {
-    textAlign: 'right',
+    textAlign: 'end',
   },
   containerWithUpdatedAt: {
     verticalAlign: 'bottom',
-    display: 'inline-block',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'end',
   },
 };
 

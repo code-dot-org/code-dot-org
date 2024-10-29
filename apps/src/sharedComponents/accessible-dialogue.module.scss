@@ -38,7 +38,7 @@
 
   position: absolute;
   top: 1rem;
-  right: 1rem;
+  inset-inline-end: 1rem; // Logical property for right in LTR, left in RTL
 
   i {
     color: $light_gray_300;

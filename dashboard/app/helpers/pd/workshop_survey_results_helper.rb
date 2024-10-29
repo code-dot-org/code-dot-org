@@ -2,7 +2,7 @@ require 'honeybadger/ruby'
 
 module Pd::WorkshopSurveyResultsHelper
   TEACHERCON_MULTIPLE_CHOICE_FIELDS = (Pd::TeacherconSurvey.public_required_fields & Pd::TeacherconSurvey.options.keys).freeze
-  TEACHERCON_FIELDS_IN_SUMMARY = (Pd::TeacherconSurvey.public_fields).freeze
+  TEACHERCON_FIELDS_IN_SUMMARY = Pd::TeacherconSurvey.public_fields.freeze
 
   # The output is a hash where
   # - Multiple choice answers (aka scored answers) that are not facilitator specific turn

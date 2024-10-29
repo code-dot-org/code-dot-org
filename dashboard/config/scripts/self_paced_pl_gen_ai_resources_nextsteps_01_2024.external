@@ -5,7 +5,23 @@ description 'description here'
 markdown <<MARKDOWN
 # Next Steps
 
-#### Thank you for completing the **Generative AI** self-paced professional learning module. Check out our curriculum and professional learning offerings to continue your journey.
+#### 🎉 Congratulations on completing the **Generative AI** self-paced professional learning module! Check out our curriculum and professional learning offerings to continue your journey.
+
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">📝 Engage with our Learning Community!
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+####Participating in the <a href="https://padlet.com/codeorgpl/exploring-generative-ai-self-paced-professional-learning-dgb4yws61unrun" target="_blank">Gen AI Self-Paced PL Learning Community</a> is optional and not necessary to earn a certificate for this module. However, we encourage you to engage with the broader Gen AI learner community. 
+
+#### **Please share your your key takeaway from the Self-Paced PL.**
+
+</p></div>
+</details>
+
 
 ## Help us make this module better!
 

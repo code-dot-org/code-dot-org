@@ -14,7 +14,7 @@
     }
   },
   "https://studio.code.org/s/music-tutorial-2024/lessons/1/levels/3": {
-    "long_instructions": "#### Play more sounds\n\nTry playing one sound after another.\n\n1.  Drag one or more [play][0] blocks into the program. \n2.  Then press [Run][1].",
+    "long_instructions": "#### Play more sounds\n\nTry playing one sound after another.\n\n-   Drag one or more [play][0] blocks into the program. \n-   Then press [Run][1].",
     "validations": {
       "musiclab_intro_change_sound_v2_6054328e-dc95-47fe-8c65-980ce00299f1": "Great work! You added new sounds to your song. ",
       "musiclab_intro_change_sound_v2_9ddfc062-5d48-4090-aa06-ff26c4a75916": "Add at least one more sound."
@@ -59,6 +59,11 @@
     "validations": {
       "musiclab_intro_function_elementary_328ae4f1-4120-4555-bfba-4654bd618fd8": "Nice work.  You successfully used the function to play a sound.",
       "musiclab_intro_function_elementary_33cfaef2-2b2e-4e45-93b8-88632b06f78a": "Connect the \"chorus\" block under [when run][0] to play the sounds in the function."
+    },
+    "function_definitions": {
+      "chorus": {
+        "name": "chorus"
+      }
     }
   },
   "https://studio.code.org/s/music-tutorial-2024/lessons/1/levels/10": {

@@ -1,0 +1,8 @@
+name 'gen-ai-foundations-studentsurvey-postmodule-q11a'
+question 'Overall, I am satisfied with my learning experience in this unit.'
+right 'Strongly disagree'
+right 'Disagree'
+right 'Neutral'
+right 'Agree'
+right 'Strongly agree'
+allow_multiple_attempts true

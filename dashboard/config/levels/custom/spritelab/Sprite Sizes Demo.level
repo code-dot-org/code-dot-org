@@ -1,0 +1,67 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2024-10-01T17:11:34.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "true",
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": "true",
+    "use_modal_function_editor": "true",
+    "standalone_app_name": "spritelab",
+    "encrypted": "false",
+    "embed": "false",
+    "instructions_important": "false",
+    "long_instructions": "Demo of custom sprite assets without custom sizing.",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "start_in_animation_tab": "false",
+    "start_animations": "{\"orderedKeys\":[\"2b1f8391-c08e-444a-a35d-59f79cc6a27d\",\"5be48a06-7286-4dda-9648-a0ea38fd620d\",\"2a32bb8a-792d-4317-9ad9-c235ec204144\",\"d3502365-c236-4e52-8474-6b8ff64a7ad5\"],\"propsByKey\":{\"2b1f8391-c08e-444a-a35d-59f79cc6a27d\":{\"name\":\"grid\",\"categories\":[\"backgrounds\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:53:49 UTC\",\"pngLastModified\":\"2021-01-19 23:53:49 UTC\",\"version\":\"L5A9oBn2qdFNAsfGkqGOxWon837dlpa8\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/L5A9oBn2qdFNAsfGkqGOxWon837dlpa8/category_backgrounds/background_grid.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"5be48a06-7286-4dda-9648-a0ea38fd620d\":{\"name\":\"cog\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":389},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T16:44:49.000Z\",\"pngLastModified\":\"2024-08-13T16:44:49.000Z\",\"version\":\"0Pi.JtOW3zvhmxVivxLgge1szzEaBPxv\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/0Pi.JtOW3zvhmxVivxLgge1szzEaBPxv/cog.png\",\"sourceSize\":{\"x\":400,\"y\":389}},\"2a32bb8a-792d-4317-9ad9-c235ec204144\":{\"name\":\"elita_2\",\"frameCount\":1,\"frameSize\":{\"x\":93,\"y\":205},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:42:16.000Z\",\"pngLastModified\":\"2024-08-13T15:42:16.000Z\",\"version\":\"EJz2S41cs3Iybm7zzDEkX8tT5GwkSGI3\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/EJz2S41cs3Iybm7zzDEkX8tT5GwkSGI3/elita_2.png\",\"sourceSize\":{\"x\":93,\"y\":205}},\"d3502365-c236-4e52-8474-6b8ff64a7ad5\":{\"name\":\"optimus_prime_1\",\"frameCount\":1,\"frameSize\":{\"x\":127,\"y\":250},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:44:22.000Z\",\"pngLastModified\":\"2024-08-13T15:44:22.000Z\",\"version\":\"pg3DXjsX8WLcB556l_mQbpIW5dqrrctP\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/pg3DXjsX8WLcB556l_mQbpIW5dqrrctP/optimus_prime_1.png\",\"sourceSize\":{\"x\":127,\"y\":250}}}}\r\n\r\n",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-10-01 17:14:00 +0000\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-01 17:15:08 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-01 17:15:49 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="when_run" id="S+qj92IITUj%~X]eT{)," x="208" y="58"/>
+        <block type="gamelab_makeNewSpriteAnon" id="5S-URx#(oiO2omT#U;hF" x="123" y="155">
+          <field name="ANIMATION_NAME">"cog"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker" id="P*,ab-(C0Q0U^YBH@pk-">
+              <field name="LOCATION"/>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_setBackgroundImageAs" id="ZcN5r4fL4??qgq@R`kKe" x="205" y="318">
+          <field name="IMG">"grid"</field>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

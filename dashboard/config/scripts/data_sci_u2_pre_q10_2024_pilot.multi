@@ -1,0 +1,11 @@
+name 'Data Sci U2 Pre Q10_2024-pilot'
+
+question 'Which of the following is a basic element of Python syntax?'
+
+wrong 'Curly braces `{}` are used to define code blocks.'
+wrong 'Semicolons `;` are required at the end of every statement.'
+right 'Indentation is used to define code blocks.'
+wrong 'Double colons `::` are used to indicate function definitions.'
+
+
+allow_multiple_attempts false

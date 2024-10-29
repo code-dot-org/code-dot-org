@@ -468,8 +468,8 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     context 'when the user is a student without a birthday' do
       let(:user_birthday) {nil}
 
-      it 'returns true' do
-        _(can_link_new_personal_account?).must_equal true
+      it 'returns false' do
+        _(can_link_new_personal_account?).must_equal false
       end
     end
 

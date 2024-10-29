@@ -1,3 +1,5 @@
+require 'cdo/global_edition'
+
 module LocaleHelper
   # Symbol of best valid locale code to be used for I18n.locale.
   def locale
@@ -23,15 +25,32 @@ module LocaleHelper
     locale_code.to_s.downcase.tr('-', '_')
   end
 
-  def options_for_locale_select
+  def options_for_locale_select(global_edition: false)
     options = []
+
     Dashboard::Application::LOCALES.each do |locale, data|
       next unless I18n.available_locales.include?(locale.to_sym) && data.is_a?(Hash)
       name = data[:native]
       name = (data[:debug] ? "#{name} DBG" : name)
       options << [name, locale]
     end
-    options
+
+    if global_edition && DCDO.get('global_edition_region_selection_enabled', false)
+      # Adds language options with the switch to the regional (global) version of the platform.
+      Cdo::GlobalEdition::REGIONS.excluding('en', 'root').each do |region|
+        region_locale = Cdo::GlobalEdition.region_locale(region)
+        locale_name = Dashboard::Application::LOCALES.dig(region_locale, :native)
+        options << ["#{locale_name} (global)", [region_locale, region].join('|')] if locale_name
+      end
+    end
+
+    options.sort_by(&:second)
+  end
+
+  def current_locale_option(global_edition: false)
+    return locale unless global_edition
+    # Combines the current locale with the Global Edition region, e.g. "fa-IR|fa".
+    [locale, ge_region].select(&:presence).join('|')
   end
 
   def options_for_locale_code_select
@@ -74,16 +93,8 @@ module LocaleHelper
 
   # Tries to access translation, returning nil if not found
   def try_t(dotted_path, params = {})
-    I18n.t(dotted_path, **({raise: true}.merge(params)))
+    I18n.t(dotted_path, **{raise: true}.merge(params))
   rescue
     nil
-  end
-
-  def i18n_dropdown
-    # NOTE UTF-8 is not being enforced for this form. Do not modify it to accept
-    # user input or to persist data without also updating it to enforce UTF-8
-    form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;', enforce_utf8: false) do
-      (hidden_field_tag :user_return_to, request.url) + (select_tag :locale, options_for_select(options_for_locale_select, locale), onchange: 'this.form.submit();')
-    end
   end
 end

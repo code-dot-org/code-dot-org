@@ -85,10 +85,15 @@ export const updateActivitySectionField = (
   fieldValue,
 });
 
-export const addActivitySection = (activityPosition, activitySectionKey) => ({
+export const addActivitySection = (
+  activityPosition,
+  activitySectionKey,
+  activitySectionInsertPosition
+) => ({
   type: ADD_ACTIVITY_SECTION,
   activityPosition,
   activitySectionKey,
+  activitySectionInsertPosition,
 });
 
 export const toggleExpand = (
@@ -311,7 +316,9 @@ function activities(state = [], action) {
     case ADD_ACTIVITY_SECTION: {
       const activitySections =
         newState[action.activityPosition - 1].activitySections;
-      activitySections.push({
+      const activitySectionInsertPosition =
+        action.activitySectionInsertPosition;
+      activitySections.splice(activitySectionInsertPosition, 0, {
         ...emptyActivitySection,
         key: action.activitySectionKey,
       });

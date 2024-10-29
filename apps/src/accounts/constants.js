@@ -7,17 +7,21 @@ export const OAuthSectionTypes = makeEnum(
   'microsoft_classroom'
 );
 
-export const OAuthProviders = {
+export const SingleSignOnProviders = {
   google: 'google_oauth2',
   microsoft: 'microsoft_v2_auth',
   clever: 'clever',
   facebook: 'facebook',
+  lti_v1: SectionLoginType.lti_v1,
 };
 
 export const LmsLoginTypeNames = {
   clever: 'Clever',
   google_classroom: 'Google Classroom',
   canvas: 'Canvas',
+  canvas_cloud: 'Canvas',
+  canvas_beta_cloud: 'Canvas Beta',
+  canvas_test_cloud: 'Canvas Test',
   schoology: 'Schoology',
 };
 

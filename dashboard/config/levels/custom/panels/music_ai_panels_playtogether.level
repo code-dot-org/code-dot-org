@@ -17,6 +17,6 @@
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-05T17:38:36.131+00:00\",\"changed\":[\"cloned from \\\"musiclab_tutorial_panels_playtogether\\\"\"],\"cloned_from\":\"musiclab_tutorial_panels_playtogether\"},{\"changed_at\":\"2024-09-05 17:38:41 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 23:55:27 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-05T17:38:36.131+00:00\",\"changed\":[\"cloned from \\\"musiclab_tutorial_panels_playtogether\\\"\"],\"cloned_from\":\"musiclab_tutorial_panels_playtogether\"},{\"changed_at\":\"2024-09-05 17:38:41 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 23:55:27 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 15:25:15 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Panels>

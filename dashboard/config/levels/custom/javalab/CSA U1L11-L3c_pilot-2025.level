@@ -1,5 +1,6 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2024-08-01T20:49:31.000Z",
   "level_num": "custom",
@@ -10,7 +11,7 @@
     "submittable": "false",
     "hide_share_and_remix": "true",
     "csa_view_mode": "neighborhood",
-    "long_instructions": "The Neighborhood is opening a space center! To celebrate, the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Painter</code> has been asked to paint a mural of a rocket.\r\n\r\n🎒 **IMPORT:** Import your <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PainterPlus</code> class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* <a href=\"https://studio.code.org/projects/javalab/MrU6HbfE2LHNSyZIuepuzTDnvKIBCQdg7qcW5PNtDJ4\" target=\"_blank\">***here***</a> *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Implement the solution you planned on the <a href=\"https://docs.google.com/document/d/19ANtAu7p4M4gifIAYntFMehTp4DzLklIIKMKOXLwHJk/edit?usp=sharing\" target=\"_blank\">**Decomposition**</a> activity guide to paint the mural of a rocket.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Use the methods in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">MuralPainter</code> class to help create the mural.\r\n</div>\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## 🎯 Goal\r\n\r\n![](https://images.code.org/72ad592e0280e617cf6c8062decf9802-image-1667090721643.png)",
+    "long_instructions": "The Neighborhood is opening a space center! To celebrate, the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Painter</code> has been asked to paint a mural of a rocket.\r\n\r\n🎒 **IMPORT:** Import your <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PainterPlus</code> class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* <a href=\"https://studio.code.org/projects/javalab/MrU6HbfE2LHNSyZIuepuzTDnvKIBCQdg7qcW5PNtDJ4\" target=\"_blank\">***here***</a> *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Implement the solution you planned on the <a href=\"https://docs.google.com/document/d/1zVS09pOnRXe6emw1NiYc4N7YxbBEJVDCvAkwqUbCaLo/edit?usp=sharing\" target=\"_blank\">**Decomposition**</a> activity guide to paint the mural of a rocket.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Use the methods in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">MuralPainter</code> class to help create the mural.\r\n</div>\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## 🎯 Goal\r\n\r\n![](https://images.code.org/72ad592e0280e617cf6c8062decf9802-image-1667090721643.png)",
     "serialized_maze": [
       [
         {
@@ -779,9 +780,11 @@
     "bubble_choice_description": "The Neighborhood is opening a space center! To celebrate, the `Painter` has been asked to paint a mural of a rocket.",
     "thumbnail_url": "https://images.code.org/85e704a77c197cbfbbaf466d4bcf9e14-U1L11-L3c.png",
     "name_suffix": "_pilot-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true",
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-08-01T20:49:31.914+00:00\",\"changed\":[\"cloned from \\\"CSA U1L11-L3c_2025\\\"\"],\"cloned_from\":\"CSA U1L11-L3c_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-01T20:49:31.914+00:00\",\"changed\":[\"cloned from \\\"CSA U1L11-L3c_2025\\\"\"],\"cloned_from\":\"CSA U1L11-L3c_2025\"},{\"changed_at\":\"2024-09-13 14:18:07 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

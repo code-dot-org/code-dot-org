@@ -1,0 +1,167 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2024-10-16T19:07:33.000Z",
+  "level_num": "custom",
+  "user_id": 16899,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "blockMode": "Advanced",
+      "toolbox": {
+      },
+      "library": "launch2024",
+      "startSources": {
+        "variables": [
+          {
+            "name": "i",
+            "id": "Jzt-l.ao[tU*jVezANa#"
+          },
+          {
+            "name": "currentTime",
+            "id": "9(V777h5U{?PdH6?X14f"
+          }
+        ],
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            },
+            {
+              "type": "triggered_at",
+              "id": "e`Rdc+q?^Z.K@K;69bi{",
+              "x": 290,
+              "y": 50,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger1</field>",
+                "var": {
+                  "id": "9(V777h5U{?PdH6?X14f"
+                }
+              },
+              "next": {
+                "block": {
+                  "type": "controls_if",
+                  "id": "*5yP~`_g~MvY(gL|0aJ]",
+                  "extraState": {
+                    "hasElse": true
+                  },
+                  "inputs": {
+                    "IF0": {
+                      "block": {
+                        "type": "logic_compare",
+                        "id": "JstE)0SlJLV;@yq7Tcz1",
+                        "fields": {
+                          "OP": "<field name=\"OP\">LT</field>"
+                        },
+                        "inputs": {
+                          "A": {
+                            "block": {
+                              "type": "variables_get",
+                              "id": "]gsbRbyNu-1cLgI?7Jd8",
+                              "extraState": {
+                              },
+                              "fields": {
+                                "VAR": {
+                                  "id": "9(V777h5U{?PdH6?X14f"
+                                }
+                              }
+                            }
+                          },
+                          "B": {
+                            "block": {
+                              "type": "math_number",
+                              "id": "OzI-lD2bhM3p?EeDF38P",
+                              "fields": {
+                                "NUM": 3
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "DO0": {
+                      "block": {
+                        "type": "play_sound",
+                        "id": "5E3iVXwLgxdaqPH0A[L3",
+                        "fields": {
+                          "sound": "shakira_maluma_chantaje/kick_build_1"
+                        },
+                        "inputs": {
+                          "measure": {
+                            "shadow": {
+                              "type": "math_number",
+                              "id": "/nwU5Fu{b|WF1bQ(ksq@",
+                              "fields": {
+                                "NUM": 1
+                              }
+                            },
+                            "block": {
+                              "type": "variables_get",
+                              "id": "1D3U!I^x/uBWH}QD(Dr9",
+                              "extraState": {
+                              },
+                              "fields": {
+                                "VAR": {
+                                  "id": "9(V777h5U{?PdH6?X14f"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ELSE": {
+                      "block": {
+                        "type": "play_sound",
+                        "id": "RH-zOti[0fR{mo7lsTU?",
+                        "fields": {
+                          "sound": "shakira_maluma_chantaje/kick_build_2"
+                        },
+                        "inputs": {
+                          "measure": {
+                            "shadow": {
+                              "type": "math_number",
+                              "id": "EA$7BGTcHP)3yN6nyKvl",
+                              "fields": {
+                                "NUM": 1
+                              }
+                            },
+                            "block": {
+                              "type": "variables_get",
+                              "id": "61W#~*MU.5L`mwv$Pz.A",
+                              "extraState": {
+                              },
+                              "fields": {
+                                "VAR": {
+                                  "id": "9(V777h5U{?PdH6?X14f"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "packId": "shakira_maluma_chantaje"
+    },
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-10-16T19:07:33.736+00:00\",\"changed\":[\"cloned from \\\"advanced-model-sandbox-conditionals-1\\\"\"],\"cloned_from\":\"advanced-model-sandbox-conditionals-1\"},{\"changed_at\":\"2024-10-16 19:07:36 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-16 19:23:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-16 19:24:30 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-17 22:00:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-17 22:01:33 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

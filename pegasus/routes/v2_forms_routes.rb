@@ -89,7 +89,7 @@ post '/v2/forms/:kind/:secret/review' do |kind, secret|
   # rubocop:enable CustomCops/DashboardDbUsage
 
   content_type :json
-  ({review: review}).to_json
+  {review: review}.to_json
 end
 
 get '/v2/forms/:parent_kind/:parent_secret/children/:kind' do |parent_kind, parent_secret, kind|

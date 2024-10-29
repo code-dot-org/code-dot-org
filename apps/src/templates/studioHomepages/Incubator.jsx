@@ -1,36 +1,11 @@
 import React, {Component} from 'react';
 
-import DCDO from '@cdo/apps/dcdo';
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {getStore} from '@cdo/apps/redux';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
-import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import HeaderBanner from '../HeaderBanner';
 
 class Incubator extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      canvasBlockEnabled: DCDO.get('incubator-canvas-block-enabled', true),
-      currentUser: getStore().getState().currentUser,
-    };
-  }
-
-  reportEvent(eventName, platform = PLATFORMS.STATSIG) {
-    analyticsReporter.sendEvent(
-      eventName,
-      {
-        userRoleInCourse: this.state.currentUser.userRoleInCourse,
-      },
-      platform
-    );
-  }
-
   render() {
     return (
       <div>
@@ -81,34 +56,6 @@ class Incubator extends Component {
               },
             ]}
           />
-
-          {this.state.canvasBlockEnabled && (
-            <TwoColumnActionBlock
-              imageUrl="/shared/images/teacher-announcement/incubator-canvas-integration.png"
-              subHeading={i18n.incubator_canvasIntegration_earlyAccess_title()}
-              description={i18n.incubator_canvasIntegration_earlyAccess_desc()}
-              marginBottom="20px"
-              buttons={[
-                {
-                  url: 'https://forms.gle/x7EBBiC18yJysb5D7',
-                  text: i18n.incubator_canvasIntegration_earlyAccess_signUp_button(),
-                  target: '_blank',
-                  onClick: () => {
-                    this.reportEvent(EVENTS.LTI_INCUBATOR_SIGNUP_CLICK);
-                  },
-                },
-                {
-                  url: LmsLinks.INSTALL_GUIDE_FOR_CANVAS_URL,
-                  text: i18n.incubator_canvasIntegration_earlyAccess_guides_button(),
-                  color: Button.ButtonColor.neutralDark,
-                  target: '_blank',
-                  onClick: () => {
-                    this.reportEvent(EVENTS.LTI_INCUBATOR_GUIDES_CLICK);
-                  },
-                },
-              ]}
-            />
-          )}
         </div>
       </div>
     );

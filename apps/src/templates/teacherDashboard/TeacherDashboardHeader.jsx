@@ -25,7 +25,8 @@ import {
 import {AgeGatedStudentsBanner} from '../policy_compliance/AgeGatedStudentsModal/AgeGatedStudentsBanner';
 
 import {switchToSection, recordSwitchToSection} from './sectionHelpers';
-import {beginEditingSection, sortedSectionsList} from './teacherSectionsRedux';
+import {beginEditingSection} from './teacherSectionsRedux';
+import {sortedSectionsList} from './teacherSectionsReduxSelectors';
 
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 

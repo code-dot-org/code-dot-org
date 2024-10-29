@@ -60,6 +60,7 @@ class SchoolInfoConfirmationDialog extends Component {
         school_type: PropTypes.string,
         school_name: PropTypes.string,
         full_address: PropTypes.string,
+        school_zip: PropTypes.string,
       }).isRequired,
     }).isRequired,
     onClose: PropTypes.func,

@@ -32,7 +32,7 @@ export default class SendLesson extends React.Component {
       {
         study: 'send-to-students-button',
         study_group: 'v0',
-        event: event,
+        event: 'send-lesson-to-students',
         data_json: this.props.analyticsData,
       },
       {includeUserId: true}

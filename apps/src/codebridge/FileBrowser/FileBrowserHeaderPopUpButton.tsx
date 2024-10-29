@@ -1,29 +1,56 @@
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
+import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
 import React from 'react';
 
-import {newFolderPromptType, newFilePromptType} from './types';
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 
-import moduleStyles from './styles/filebrowser.module.scss';
+import {
+  useFileUploader,
+  useFileUploadErrorCallback,
+  useHandleFileUpload,
+  usePrompts,
+} from './hooks';
 
-type FileBrowserHeaderPopUpButtonProps = {
-  newFolderPrompt: newFolderPromptType;
-  newFilePrompt: newFilePromptType;
+export const FileBrowserHeaderPopUpButton = () => {
+  const {openNewFilePrompt, openNewFolderPrompt} = usePrompts();
+  const {
+    project,
+    config: {validMimeTypes},
+  } = useCodebridgeContext();
+  const uploadErrorCallback = useFileUploadErrorCallback();
+  const handleFileUpload = useHandleFileUpload(project.files);
+
+  const {startFileUpload, FileUploaderComponent} = useFileUploader({
+    callback: handleFileUpload,
+    errorCallback: uploadErrorCallback,
+    validMimeTypes,
+  });
+  return (
+    <>
+      <FileUploaderComponent />
+      <PopUpButton iconName="plus" alignment="left" id="uitest-files-plus">
+        <PopUpButtonOption
+          iconName="plus"
+          labelText={codebridgeI18n.newFolder()}
+          clickHandler={() =>
+            openNewFolderPrompt({parentId: DEFAULT_FOLDER_ID})
+          }
+        />
+        <PopUpButtonOption
+          iconName="plus"
+          labelText={codebridgeI18n.newFile()}
+          clickHandler={() => openNewFilePrompt({folderId: DEFAULT_FOLDER_ID})}
+          id="uitest-new-file"
+        />
+
+        <PopUpButtonOption
+          iconName="upload"
+          labelText={codebridgeI18n.uploadFile()}
+          clickHandler={() => startFileUpload()}
+        />
+      </PopUpButton>
+    </>
+  );
 };
-
-export const FileBrowserHeaderPopUpButton = ({
-  newFolderPrompt,
-  newFilePrompt,
-}: FileBrowserHeaderPopUpButtonProps) => (
-  <PopUpButton iconName="plus" alignment="right">
-    <span className={moduleStyles['button-bar']}>
-      <button type="button" onClick={() => newFolderPrompt()}>
-        <i className="fa-solid fa-folder" />
-        New Folder
-      </button>
-      <button type="button" onClick={() => newFilePrompt()}>
-        <i className="fa-solid fa-file" />
-        New File
-      </button>
-    </span>
-  </PopUpButton>
-);

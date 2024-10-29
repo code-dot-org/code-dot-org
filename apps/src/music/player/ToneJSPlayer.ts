@@ -42,7 +42,7 @@ class ToneJSPlayer implements AudioPlayer {
   private activePlayers: Source<SourceOptions>[];
   private currentPreview: {
     url: string;
-    player: Source<SourceOptions>;
+    player?: Source<SourceOptions>;
   } | null;
   private effectBusses: {[key: string]: ToneAudioNode};
   private registeredCallbacks: {
@@ -160,11 +160,20 @@ class ToneJSPlayer implements AudioPlayer {
     await this.startContextIfNeeded();
     this.cancelPreviews();
 
+    this.currentPreview = {url: sample.sampleUrl};
+
     const buffer = await this.soundCache.loadSound(sample.sampleUrl);
     if (!buffer) {
       this.metricsReporter.logWarning(
         'Could not load sound which should have been in cache: ' +
           sample.sampleUrl
+      );
+      return;
+    }
+
+    if (this.currentPreview?.url !== sample.sampleUrl) {
+      console.log(
+        `Sample preview ${sample.sampleUrl} playback canceled after load but before play.`
       );
       return;
     }
@@ -190,7 +199,7 @@ class ToneJSPlayer implements AudioPlayer {
     };
 
     player.start();
-    this.currentPreview = {url: sample.sampleUrl, player};
+    this.currentPreview.player = player;
   }
 
   async playSamplesImmediately() {
@@ -240,14 +249,14 @@ class ToneJSPlayer implements AudioPlayer {
   }
 
   cancelPreviews() {
-    if (this.currentPreview) {
-      this.currentPreview.player.stop();
-    }
+    this.currentPreview?.player?.stop();
 
     if (this.currentSequencePreviewTimer) {
       clearInterval(this.currentSequencePreviewTimer);
       this.currentSequencePreviewTimer = null;
     }
+
+    this.currentPreview = null;
 
     this.stopAllSamplers();
   }

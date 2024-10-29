@@ -21,7 +21,6 @@ require "open3"
 FOLDERS = {
   "code.org" => "sites.v3/code.org",
   "curriculum-6-8" => "sites/virtual/curriculum-6-8",
-  "curriculum-algebra" => "sites/virtual/curriculum-algebra",
   "curriculum-course1" => "sites/virtual/curriculum-course1",
   "curriculum-course2" => "sites/virtual/curriculum-course2",
   "curriculum-course3" => "sites/virtual/curriculum-course3",
@@ -29,16 +28,13 @@ FOLDERS = {
   "curriculum-csp" => "sites/virtual/curriculum-csp",
   "curriculum-docs" => "sites/virtual/curriculum-docs",
   "curriculum-misc" => "sites/virtual/curriculum-misc",
-  "curriculum-science" => "sites/virtual/curriculum-science",
   "emails" => "emails",
-  "hourofcode.com" => "sites.v3/hourofcode.com"
 }.freeze
 
 INTERVAL_SECONDS = 5
 TOTAL_SECONDS = 55 - INTERVAL_SECONDS
 
-LOG_DIR = '/home/ubuntu/staging/log'.freeze
-FileUtils.mkdir_p(LOG_DIR) # This directory should always exist, but just in case
+LOG_DIR = '/home/ubuntu'.freeze
 
 logger = HighFrequencyReporter.new(Slack, 'sync-dropbox-staging', File.join(LOG_DIR, 'dropbox_sync_error_log.csv'))
 logger.load # load errors from most recent sync

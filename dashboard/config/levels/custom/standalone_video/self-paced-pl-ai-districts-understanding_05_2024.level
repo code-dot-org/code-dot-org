@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2024-10-21T14:40:49.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "self-paced-pl-ai-101-How_LLMs_Work",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 21258,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "long_instructions": "#### Now that we’ve seen the foundations of AI, let’s learn some more about how Large Language Models (LLMs) such as ChatGPT work.\r\n\r\n#### When people talk about \"AI\" these days they are often referring to generative AI such as Large Language Models, even though there are lots more applications of AI than this. Moving forward, these professional learning primarily focus on generative AI.\r\n\r\n#### **This is a long video, but it's really important content!**\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">A Note on Vocabulary</summary>\r\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;\">\r\n    <p>\r\n\r\n#### Here's a quick overivew of some key terms.\r\n\r\n>* #### **Artificial Intelligence (AI):** Teaching computers to think and make decisions like humans do.\r\n>* #### **Generative AI:** A type of AI that creates content whether that's text, images, sound, etc.\r\n>* #### **Large Language Models (LLMs):** Huge computer programs that are really good at understanding and generating human-like text based on what they've learned from a vast amount of written material. The technology behind ChatGPT.\r\n>* #### **ChatGPT:** A smart chat program that can write and chat about almost anything by using what it's learned from a lot of books, websites, and other texts.\r\n</p></div>\r\n</details>\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">📝 Key Points from the Video</summary>\r\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;\">\r\n    <p>\r\n\r\n* #### Large language models differ from other types of AI and machine learning as they train on vast amounts of data from diverse sources like the entire Internet, enabling them to generate new content, including text and code.\r\n* #### The process of training these models involves analyzing sequences of data (like text from Shakespeare) to predict future sequences based on statistical probabilities.\r\n* #### Despite seeming like simple statistical tools, these models can often produce content that feels surprisingly intuitive and human-like by analyzing extensive contextual information from large datasets.\r\n* #### However, the complexity of such systems necessitates significant human oversight to tune and mitigate issues like bias and inappropriate content generation.\r\n* #### The success of large language models in generating realistic outputs has sparked debates about the nature of intelligence and the role of AI in creative and analytical applications.\r\n* #### The discussion highlights the transformative impact of AI technology on society and encourages a deeper understanding and engagement with AI to harness its potential creatively and responsibly.\r\n\r\n</p></div>\r\n</details>\r\n\r\n<br>\r\n\r\n\r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-10-21T14:40:49.762+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod2-llms_01_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod2-llms_01_2024\"},{\"changed_at\":\"2024-10-22 14:21:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-22 16:53:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-22 17:03:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

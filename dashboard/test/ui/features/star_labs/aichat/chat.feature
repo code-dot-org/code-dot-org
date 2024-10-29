@@ -1,4 +1,5 @@
 @no_mobile
+@no_circle
 
 Feature: AI Chat
 

@@ -18,12 +18,10 @@
 #  longitude                   :decimal(9, 6)
 #  school_category             :string(255)
 #  last_known_school_year_open :string(9)
-#  is_current                  :boolean
 #
 # Indexes
 #
 #  index_schools_on_id                           (id) UNIQUE
-#  index_schools_on_is_current                   (is_current)
 #  index_schools_on_last_known_school_year_open  (last_known_school_year_open)
 #  index_schools_on_name_and_city                (name,city)
 #  index_schools_on_school_district_id           (school_district_id)
@@ -60,14 +58,15 @@ class School < ApplicationRecord
   # Determines if school meets Amazon Future Engineer criteria.
   # Eligible if the school is any of the following:
   # a) title I school,
-  # b) >40% URM students,
-  # or c) >40% of students eligible for free and reduced meals.
+  # b) rural school,
+  # c) >30% URM students,
+  # or d) >40% of students eligible for free and reduced meals.
   def afe_high_needs?
     stats = most_recent_school_stats
+    # Return false if we don't have all data for a given school.
     return false if stats.nil?
 
-    # Return false if we don't have all data for a given school.
-    stats.title_i_eligible? || (stats.urm_percent || 0) >= 40 || (stats.frl_eligible_percent || 0) >= 40
+    stats.title_i_eligible? || stats.rural_school? || (stats.urm_percent || 0) >= 30 || (stats.frl_eligible_percent || 0) >= 40
   end
 
   # Public school ids from NCES are always 12 digits, possibly with

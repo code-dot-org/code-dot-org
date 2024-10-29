@@ -15,6 +15,10 @@
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
 #
+# Indexes
+#
+#  index_aichat_requests_on_execution_status  (execution_status)
+#
 class AichatRequest < ApplicationRecord
   belongs_to :user
   after_initialize :set_default_execution_status
