@@ -34,6 +34,7 @@ class ProjectsControllerTest < ActionController::TestCase
     @section = create :section
     @section.add_student @driver
     @section.add_student @navigator
+    @test_project = create :project
   end
 
   teardown do
@@ -569,9 +570,8 @@ class ProjectsControllerTest < ActionController::TestCase
     channel_id = '123456'
     @controller.stubs(:storage_decrypt_channel_id).returns([123, 456])
     submission_description = 'this project rocks'
-    test_project = create :project
-    test_project.stubs(:submission_status).returns(SharedConstants::PROJECT_SUBMISSION_STATUS[:CAN_SUBMIT])
-    Project.stubs(:find_by).returns(test_project)
+    @test_project.stubs(:submission_status).returns(SharedConstants::PROJECT_SUBMISSION_STATUS[:CAN_SUBMIT])
+    Project.stubs(:find_by).returns(@test_project)
     Projects.any_instance.stubs(:publish).returns({})
     post :submit, params: {project_type: 'music', channel_id: channel_id, submissionDescription: submission_description}
     assert_response :success
@@ -581,9 +581,8 @@ class ProjectsControllerTest < ActionController::TestCase
     channel_id = '123456'
     @controller.stubs(:storage_decrypt_channel_id).returns([123, 456])
     submission_description = 'this project rocks'
-    test_project = create :project
-    test_project.stubs(:submission_status).returns(SharedConstants::PROJECT_SUBMISSION_STATUS[:ALREADY_SUBMITTED])
-    Project.stubs(:find_by).returns(test_project)
+    @test_project.stubs(:submission_status).returns(SharedConstants::PROJECT_SUBMISSION_STATUS[:ALREADY_SUBMITTED])
+    Project.stubs(:find_by).returns(@test_project)
     Projects.any_instance.stubs(:publish).returns({})
     post :submit, params: {project_type: 'music', channel_id: channel_id, submissionDescription: submission_description}
     assert_response :forbidden
