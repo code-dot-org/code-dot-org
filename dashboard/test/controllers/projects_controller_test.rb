@@ -14,6 +14,7 @@ class ProjectsControllerTest < ActionController::TestCase
     sign_in_with_request create :user
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
     AzureTextToSpeech.stubs(:get_voices).returns({})
+    @test_project = create :project
   end
 
   self.use_transactional_test_case = true
@@ -34,7 +35,6 @@ class ProjectsControllerTest < ActionController::TestCase
     @section = create :section
     @section.add_student @driver
     @section.add_student @navigator
-    @test_project = create :project
   end
 
   teardown do
