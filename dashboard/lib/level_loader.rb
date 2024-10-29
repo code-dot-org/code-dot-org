@@ -72,7 +72,7 @@ class LevelLoader
       changed_lcds = changed_levels.filter_map(&:level_concept_difficulty)
       lcd_update_columns = LevelConceptDifficulty.columns.map(&:name).map(&:to_sym).
         reject {|column| immutable_lcd_columns.include? column}
-      LevelConceptDifficulty.import! changed_lcds, on_duplicate_key_update: lcd_update_columns, batch_size: 5000
+      LevelConceptDifficulty.import! changed_lcds, on_duplicate_key_update: lcd_update_columns, batch_size: 1000
 
       # activerecord-import doesn't trigger before_save and before_create hooks
       # for imported models, so we trigger these manually to make sure they're
@@ -87,7 +87,7 @@ class LevelLoader
       immutable_level_columns = %i(id name created_at)
       update_columns = Level.columns.map(&:name).map(&:to_sym).
         reject {|column| immutable_level_columns.include? column}
-      Level.import! changed_levels.sort_by(&:id), on_duplicate_key_update: update_columns, batch_size: 5000
+      Level.import! changed_levels.sort_by(&:id), on_duplicate_key_update: update_columns, batch_size: 1000
 
       # now we want to run some after_save callbacks, which didn't get run when
       # by run_callbacks earlier. it seems too risky to run all after_save
