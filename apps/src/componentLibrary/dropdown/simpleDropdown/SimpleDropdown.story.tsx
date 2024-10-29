@@ -92,6 +92,20 @@ DisabledDropdown.args = {
   size: 'm',
 };
 
+export const WithIconLeftSimpleDropdown = SingleTemplate.bind({});
+WithIconLeftSimpleDropdown.args = {
+  name: 'with-icon-dropdown',
+  items: [
+    {value: 'option-1', text: 'Option 1'},
+    {value: 'option-2', text: 'Option 2'},
+  ],
+  selectedValue: 'option-1',
+  labelText: 'Dropdown with IconLeft',
+  onChange: args => console.log(args),
+  iconLeft: {iconName: 'smile', iconStyle: 'solid'},
+  size: 'm',
+};
+
 export const WithErrorDropdown = SingleTemplate.bind({});
 WithErrorDropdown.args = {
   name: 'error-dropdown',

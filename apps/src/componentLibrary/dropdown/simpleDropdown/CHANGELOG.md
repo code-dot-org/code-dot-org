@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.7.1] ()
+
+- added `iconLeft` prop support to `SimpleDropdown` 
+
 ## [0.6.2] (https://github.com/code-dot-org/code-dot-org/pull/61460)
 
 * added `errorMessage` prop to `SimpleDropdown`
