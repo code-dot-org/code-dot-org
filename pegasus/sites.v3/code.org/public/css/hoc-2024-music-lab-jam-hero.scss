@@ -22,11 +22,11 @@ $width-sm: 640px;
   .wrapper {
     max-width: 1440px;
     margin-block: unset;
-    padding: 5rem 1rem;
+    margin-inline: auto;
+    padding: 6rem 1rem;
     text-align: center;
-    background-image: url("/images/banners/banner-music-lab-jam.png");
+    background: url("/images/banners/banner-music-lab-jam.png") center no-repeat;
     background-size: cover;
-    background-position: center;
 
     .content-wrapper {
       max-width: 960px;
