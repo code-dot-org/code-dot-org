@@ -13,12 +13,7 @@ module Services
         if user.authentication_options.any?(&:email?) || (!user.migrated? && user.authentication_options.empty?)
           user.raw_token = send_reset_password_instructions
         else
-          Cdo::Metrics.put(
-            'User', 'PasswordResetEmailAuthNotFound', 1, {
-              Environment: CDO.rack_env,
-              # Email: user.email
-            }
-          )
+          CDO.log.warn("Password Reset: Email Auth Not Found for #{user.email}.")
         end
         user
       end
