@@ -113,6 +113,7 @@ module Levels
         if new_levels_contained_child_levels.present?
           ParentLevelsChildLevel.import!(new_levels_contained_child_levels, batch_size: 1000)
         end
+        levels.each {|level| level.contained_levels_child_levels.reset}
       end
 
       def setup_project_template_level_for(levels)
