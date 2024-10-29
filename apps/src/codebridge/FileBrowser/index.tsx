@@ -1,8 +1,4 @@
-import {
-  useCodebridgeContext,
-  findFiles,
-  findSubFolders,
-} from '@codebridge/codebridgeContext';
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import OverflowTooltip from '@codebridge/components/OverflowTooltip';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
@@ -12,7 +8,6 @@ import {
   getPossibleDestinationFoldersForFolder,
   validateFileName as globalValidateFileName,
   validateFolderName,
-  sendCodebridgeAnalyticsEvent,
   shouldShowFile,
 } from '@codebridge/utils';
 import {
@@ -31,16 +26,12 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {usePartialApply, PAFunctionArgs} from '@cdo/apps/lab2/hooks';
-import {
-  isReadOnlyWorkspace,
-  setOverrideValidations,
-} from '@cdo/apps/lab2/lab2Redux';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {
   DndDataContextProvider,
@@ -72,19 +63,17 @@ type FilesComponentProps = {
 const InnerFileBrowser = React.memo(
   ({parentId, folders, files, setFileType, appName}: FilesComponentProps) => {
     const {
+      openConfirmDeleteFolder,
       openMoveFolderPrompt,
       openNewFilePrompt,
       openNewFolderPrompt,
       openRenameFolderPrompt,
     } = usePrompts();
     const {
-      deleteFile,
       toggleOpenFolder,
-      deleteFolder,
       config: {validMimeTypes},
     } = useCodebridgeContext();
     const {dragData, dropData} = useDndDataContext();
-    const dialogControl = useDialogControl();
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
     const handleFileUpload = useHandleFileUpload(files);
     const fileUploadErrorCallback = useFileUploadErrorCallback();
@@ -94,78 +83,6 @@ const InnerFileBrowser = React.memo(
       errorCallback: fileUploadErrorCallback,
       validMimeTypes,
     });
-    const dispatch = useAppDispatch();
-
-    const handleConfirmDeleteFile = (fileId: string) => {
-      // If we are deleting a validation file, we are in start mode, and we should
-      // ensure that the override validation is set to an empty list.
-      if (files[fileId]?.type === ProjectFileType.VALIDATION) {
-        dispatch(setOverrideValidations([]));
-      }
-      deleteFile(fileId);
-      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FILE, appName);
-    };
-
-    const handleDeleteFile = (fileId: string) => {
-      const filename = files[fileId].name;
-      const title = codebridgeI18n.areYouSure();
-      const message = codebridgeI18n.deleteFileConfirm({filename});
-      dialogControl?.showDialog({
-        type: DialogType.GenericConfirmation,
-        handleConfirm: () => handleConfirmDeleteFile(fileId),
-        title,
-        message,
-        confirmText: codebridgeI18n.delete(),
-        destructive: true,
-      });
-    };
-
-    const handleConfirmDeleteFolder = (folderId: string) => {
-      deleteFolder(folderId);
-      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FOLDER, appName);
-    };
-
-    const handleDeleteFolder = (folderId: string) => {
-      const folderName = folders[folderId].name;
-      const projectFolders = Object.values(folders);
-      const projectFiles = Object.values(files);
-      const folderCount = findSubFolders(folderId, projectFolders).length;
-      const fileCount = findFiles(
-        folderId,
-        projectFiles,
-        projectFolders
-      ).length;
-
-      const title = codebridgeI18n.areYouSure();
-      const confirmation = codebridgeI18n.deleteFolderConfirm({folderName});
-      let additionalWarning = '';
-      if (fileCount && folderCount) {
-        additionalWarning = codebridgeI18n.deleteFolderConfirmBoth({
-          fileCount: `${fileCount}`,
-          folderCount: `${folderCount}`,
-          folderName,
-        });
-      } else if (fileCount) {
-        additionalWarning = codebridgeI18n.deleteFolderConfirmFiles({
-          fileCount: `${fileCount}`,
-          folderName,
-        });
-      } else if (folderCount) {
-        additionalWarning = codebridgeI18n.deleteFolderConfirmSubfolders({
-          folderCount: `${folderCount}`,
-          folderName,
-        });
-      }
-      const message = confirmation + ' ' + additionalWarning;
-      dialogControl?.showDialog({
-        type: DialogType.GenericConfirmation,
-        handleConfirm: () => handleConfirmDeleteFolder(folderId),
-        title,
-        message,
-        confirmText: codebridgeI18n.delete(),
-        destructive: true,
-      });
-    };
 
     const hasValidationFile = !!Object.values(files).find(
       f => f.type === ProjectFileType.VALIDATION
@@ -275,7 +192,9 @@ const InnerFileBrowser = React.memo(
                         <PopUpButtonOption
                           iconName="trash"
                           labelText={codebridgeI18n.deleteFolder()}
-                          clickHandler={() => handleDeleteFolder(f.id)}
+                          clickHandler={() =>
+                            openConfirmDeleteFolder({folder: f})
+                          }
                         />
                       </span>
                     </PopUpButton>
@@ -309,7 +228,6 @@ const InnerFileBrowser = React.memo(
               hasValidationFile,
               isStartMode,
               setFileType,
-              handleDeleteFile,
               enableMenu: !dragData?.id || isDraggingLocked,
             };
             return isDraggingLocked ? (

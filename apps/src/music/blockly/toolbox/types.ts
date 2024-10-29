@@ -38,4 +38,5 @@ export interface ToolboxData {
   includeAi?: boolean;
   addFunctionDefinition?: boolean;
   addFunctionCalls?: boolean;
+  addFunctionCallsSortByPosition?: boolean;
 }

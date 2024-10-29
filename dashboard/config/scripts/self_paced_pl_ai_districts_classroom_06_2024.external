@@ -9,6 +9,17 @@ markdown <<MARKDOWN
 
 <div style="clear:both"/>
 
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">Access Your Certificate of Completion</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+#### Upon finishing this module, you are eligible to receive a certificate of completion similar to the one below. Check out <a href="https://support.code.org/hc/en-us/articles/25824048676621-How-do-I-find-my-Professional-Learning-certificate" target="_blank">this support article</a> to learn how to access your certificate. 
+
+<img src="https://images.code.org/e62f36e2be7f118d2396c81c66c2a185-image-1709678127521.35.18 PM.png" alt="A certificate of completion.">
+</p></div>
+</details>
+
 ## Next Steps
 
 ### **Revisit This Content**
@@ -23,6 +34,9 @@ markdown <<MARKDOWN
 
 #### <a href="https://www.teachai.org/toolkit-principles" target="_blank">TeachAI</a> is all about bringing together education leaders and technology experts to guide the safe, effective, and responsible use of AI in schools  by connecting the discussion of teaching with AI to teaching about AI.
 
+### **Get Support for Your District**
+#### Join the <a href="https://code.org/districts" target="_blank">District Program</a> to partner with Code.org directly, at no cost to bring computer science to your district.
+
 ### **Stay Connected** 
 
 * #### Continue participating in the <a href="https://forum.code.org/" target="blank" rel="noopener noreferrer">Code.org forum</a>. 
@@ -32,12 +46,6 @@ markdown <<MARKDOWN
 * #### Explore opportunities with the <a href="https://code.org/afe" target="blank" rel="noopener noreferrer">Amazon Future Engineer program</a>. 
 
 * #### Join the <a href="https://www.csteachers.org/" target="blank" rel="noopener noreferrer">Computer Science Teachers Association (CSTA)</a>. 
-
-## Take the Post-survey
-
-#### Code.org values and is responsive to feedback. Please fill out this short survey to tell us what you thought of this module.
-
-<a class="btn btn-large btn-primary" href="https://studio.code.org/form/ai_101_selfpaced_pl_postsurvey" target="blank" rel="noopener noreferrer">Take the Post-survey</a>
 
 ## Thank you for learning with us!
 MARKDOWN

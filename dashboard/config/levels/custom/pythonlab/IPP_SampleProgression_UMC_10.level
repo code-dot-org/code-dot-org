@@ -1,12 +1,13 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2024-10-25T17:19:30.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Variable Creation\r\n\r\nGo to the `# Variables` section of code...\r\n\r\n::: details [Step 1]\r\n**Modify:** Add a new variable that might help to further describe this character.\r\n:::\r\n\r\n::: details [Step 2]\r\n**Discuss:** What type of variable did you create?\r\n:::\r\n\r\n::: details [Step 3]\r\n**Modify:** Add additional variables for each of the three types that we have learned: `string`, `integer`, and `float`\r\n:::\r\n",
+    "long_instructions": "# Modifying Expressions\r\n\r\nGo to the `# Expressions` section of the code, and do the following:\r\n\r\n::: details [Step 1]\r\n**Modify:** Create a new expression utilizing one or more of your new variables.\r\n:::\r\n\r\n::: details [Step 2]\r\n**Modify & Discuss:** Change the `+` operator to a different operator (`-` `*` `/` `**` `%`) in the `full_name` expression. Run the program and discuss the results with your partner.\r\n:::\r\n\r\n::: details [Step 3]\r\n**Modify:** The `experience_points` expression is calculating incorrectly. Use parenthesis `(` `)` to surround a part of the expression that should calculate first.\r\n:::\r\n",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -30,7 +31,6 @@
     },
     "project_template_level_name": "IPP_SampleProgression_UMC_Modify_Template_1"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-10-25T17:19:30.376+00:00\",\"changed\":[\"cloned from \\\"IPP_SampleProgression_UMC_9\\\"\"],\"cloned_from\":\"IPP_SampleProgression_UMC_9\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-25T17:19:30.376+00:00\",\"changed\":[\"cloned from \\\"IPP_SampleProgression_UMC_9\\\"\"],\"cloned_from\":\"IPP_SampleProgression_UMC_9\"},{\"changed_at\":\"2024-10-25 18:10:03 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

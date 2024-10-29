@@ -17,6 +17,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
+import {setExtraCopyrightContent} from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 import AppConfig from '../appConfig';
@@ -40,6 +41,7 @@ import {
   setPackId,
   setIsPlaying,
   setCurrentPlayheadPosition,
+  setStartingPlayheadPosition,
   clearSelectedBlockId,
   selectBlockId,
   setShowInstructions,
@@ -60,6 +62,7 @@ import {Key} from '../utils/Notes';
 import SoundUploader from '../utils/SoundUploader';
 
 import Callouts from './Callouts';
+import ImageAttributions from './ImageAttributions';
 import KeyHandler from './KeyHandler';
 import MusicLabView from './MusicLabView';
 
@@ -85,6 +88,8 @@ class UnconnectedMusicView extends React.Component {
     isPlaying: PropTypes.bool,
     setIsPlaying: PropTypes.func,
     setCurrentPlayheadPosition: PropTypes.func,
+    startingPlayheadPosition: PropTypes.number,
+    setStartingPlayheadPosition: PropTypes.func,
     selectedBlockId: PropTypes.string,
     selectBlockId: PropTypes.func,
     setSelectedTriggerId: PropTypes.func,
@@ -103,7 +108,7 @@ class UnconnectedMusicView extends React.Component {
     initialSources: PropTypes.object,
     levelProperties: PropTypes.object,
     longInstructions: PropTypes.string,
-    startingPlayheadPosition: PropTypes.number,
+
     isProjectLevel: PropTypes.bool,
     isReadOnlyWorkspace: PropTypes.bool,
     updateLoadProgress: PropTypes.func,
@@ -181,8 +186,19 @@ class UnconnectedMusicView extends React.Component {
           });
           this.props.clearCallout();
           this.musicBlocklyWorkspace.dispose();
+
+          // Clear any coypright information in the footer.
+          setExtraCopyrightContent(undefined);
         }
-      });
+      })
+      .addListener(
+        LifecycleEvent.LevelLoadCompleted,
+        ({appName, levelData}, _channel, initialSources) => {
+          if (appName === 'music') {
+            this.onLevelLoad(levelData, initialSources);
+          }
+        }
+      );
   }
 
   async componentDidUpdate(prevProps) {
@@ -210,22 +226,6 @@ class UnconnectedMusicView extends React.Component {
 
     if (prevProps.updateLoadProgress !== this.props.updateLoadProgress) {
       this.player.setUpdateLoadProgress(this.props.updateLoadProgress);
-    }
-
-    // Update components with new level data and new initial sources when
-    // the level changes.
-    if (
-      (!isEqual(prevProps.levelProperties, this.props.levelProperties) ||
-        !isEqual(prevProps.initialSources, this.props.initialSources) ||
-        prevProps.isReadOnlyWorkspace !== this.props.isReadOnlyWorkspace) &&
-      this.props.levelProperties?.appName === 'music'
-    ) {
-      if (this.props.levelProperties?.appName === 'music') {
-        this.onLevelLoad(
-          this.props.levelProperties?.levelData,
-          this.props.initialSources
-        );
-      }
     }
   }
 
@@ -335,6 +335,8 @@ class UnconnectedMusicView extends React.Component {
       levelData?.showAiTemperatureExplanation ||
       AppConfig.getValue('show-ai-temperature-explanation') === 'true';
 
+    this.props.setStartingPlayheadPosition(1);
+
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .incrementCounter('LevelLoad', [
@@ -374,6 +376,14 @@ class UnconnectedMusicView extends React.Component {
     );
 
     this.props.setIsLoading(false);
+
+    // Share copyright information with the component in the footer.
+    const imageAttributions = this.library.getImageAttributions();
+    if (imageAttributions.length > 0) {
+      setExtraCopyrightContent(
+        <ImageAttributions attributions={this.library.getImageAttributions()} />
+      );
+    }
   };
 
   getIsPlaying = () => {
@@ -782,6 +792,8 @@ const MusicView = connect(
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),
     setCurrentPlayheadPosition: currentPlayheadPosition =>
       dispatch(setCurrentPlayheadPosition(currentPlayheadPosition)),
+    setStartingPlayheadPosition: startingPlayheadPosition =>
+      dispatch(setStartingPlayheadPosition(startingPlayheadPosition)),
     selectBlockId: blockId => dispatch(selectBlockId(blockId)),
     setSelectedTriggerId: id => dispatch(setSelectedTriggerId(id)),
     clearSelectedTriggerId: () => dispatch(clearSelectedTriggerId()),

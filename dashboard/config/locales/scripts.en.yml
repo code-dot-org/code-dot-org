@@ -19477,11 +19477,11 @@ en:
               name: Ensuring a Responsible Approach to AI
           lesson_groups: {}
           name: self-paced-pl-ai-districts-2024
-          title: AI 101 Self Paced Professional Learning for Districts
+          title: AI 101 Professional Learning for Districts
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "## Welcome! \n##### This professional learning module is designed to introduce you to AI and its impact on your role as a district leader.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to AI. However, you can **engage with the content in the order that best meets your needs.**"
+          student_description: "## Welcome! \n##### This professional learning module is designed to introduce you to AI and its impact on your role as a district leader.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to AI. However, you can **engage with the content in the order that best meets your needs.**"
         music-jam-2024:
           lessons: {}
           lesson_groups: {}
@@ -19503,5 +19503,16 @@ en:
           title: Keyboard Navigation for Music Lab
           description_audience: ''
           description_short: Learn how to create a song using only your computer keyboard in Music Lab
+          description: ''
+          student_description: ''
+        codebridge-ascii:
+          lessons:
+            lesson-1:
+              name: Make some Ascii Art
+          lesson_groups: {}
+          name: codebridge-ascii
+          title: 'Explore Ascii Art with Codebridge '
+          description_audience: ''
+          description_short: ''
           description: ''
           student_description: ''

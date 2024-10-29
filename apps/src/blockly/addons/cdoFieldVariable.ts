@@ -113,7 +113,8 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
 
     const filteredOptions = options.filter(option => {
       const workspace = this.getSourceBlock()?.workspace;
-      if (!workspace) {
+      // Embedded workspaces are read-only, so we don't need to modify the dropdown options.
+      if (!workspace || Blockly.embeddedWorkspaces.includes(workspace.id)) {
         return true;
       }
 
