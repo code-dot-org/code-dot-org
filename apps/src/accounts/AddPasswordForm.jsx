@@ -27,6 +27,9 @@ const DEFAULT_STATE = {
 export default class AddPasswordForm extends React.Component {
   static propTypes = {
     handleSubmit: PropTypes.func.isRequired,
+    disabled: PropTypes.bool,
+    userAge: PropTypes.number,
+    userUsState: PropTypes.string,
   };
 
   state = DEFAULT_STATE;
@@ -110,21 +113,29 @@ export default class AddPasswordForm extends React.Component {
 
   render() {
     const {password, passwordConfirmation, submissionState} = this.state;
+    const {disabled, userAge, userUsState} = this.props;
     let statusTextStyles = styles.statusText;
     statusTextStyles = submissionState.isError
       ? {...statusTextStyles, ...styles.errorText}
       : statusTextStyles;
+    const disabledHint =
+      userAge && userUsState
+        ? i18n.manageLinkedAccounts_parentalPermissionRequired()
+        : i18n.manageLinkedAccounts_ageAndStateRequired();
 
     return (
       <div style={styles.container}>
         <hr />
         <h2 style={styles.header}>{i18n.addPassword()}</h2>
-        <div style={styles.hint}>{i18n.addPasswordHint()}</div>
+        <div style={styles.hint}>
+          {disabled ? disabledHint : i18n.addPasswordHint()}
+        </div>
         <PasswordField
           label={i18n.password()}
           error={this.minimumLengthError(password)}
           value={password}
           onChange={this.onPasswordChange}
+          disabled={disabled}
         />
         <PasswordField
           label={i18n.passwordConfirmation()}
@@ -134,6 +145,7 @@ export default class AddPasswordForm extends React.Component {
           }
           value={passwordConfirmation}
           onChange={this.onPasswordConfirmationChange}
+          disabled={disabled}
         />
         <div style={styles.buttonContainer}>
           <div id="uitest-add-password-status" style={statusTextStyles}>
@@ -157,10 +169,11 @@ class PasswordField extends React.Component {
     error: PropTypes.string,
     value: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
+    disabled: PropTypes.bool,
   };
 
   render() {
-    const {label, value, onChange, error} = this.props;
+    const {label, value, onChange, error, disabled} = this.props;
     return (
       <Field label={label} error={error}>
         <input
@@ -171,6 +184,7 @@ class PasswordField extends React.Component {
           maxLength="255"
           size="255"
           style={styles.input}
+          disabled={disabled}
         />
       </Field>
     );

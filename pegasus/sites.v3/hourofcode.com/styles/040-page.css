@@ -473,11 +473,23 @@ swiper-slide {
   background: url("/images/carousel/prev.svg") no-repeat;
   left: -4rem;
   border: 0;
+
+  html[dir="rtl"] & {
+    background: url("/images/carousel/next.svg") no-repeat;
+    left: unset;
+    right: -4rem;
+  }
 }
 
 .carousel-wrapper .swiper-nav-next {
   background: url("/images/carousel/next.svg") no-repeat;
   right: -4rem;
+
+  html[dir="rtl"] & {
+    background: url("/images/carousel/prev.svg") no-repeat;
+    right: unset;
+    left: -4rem;
+  }
 }
 
 .carousel-wrapper .swiper-button-disabled {
@@ -494,7 +506,7 @@ swiper-slide {
 /* Video carousel styles */
 .carousel-wrapper.video-carousel swiper-slide {
   display: block;
-  text-align: left;
+  text-align: initial;
 }
 
 .carousel-wrapper.video-carousel iframe {

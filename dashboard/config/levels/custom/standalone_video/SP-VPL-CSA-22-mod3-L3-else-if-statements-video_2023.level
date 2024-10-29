@@ -1,5 +1,6 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
   "created_at": "2022-10-21T19:01:44.000Z",
   "level_num": "custom",
@@ -12,11 +13,10 @@
     "parent_level_id": 28813,
     "name_suffix": "_2023",
     "encrypted": "false",
-    "long_instructions": "In this video, you will learn about using multi-selection statements in Java. \r\n\r\n## Vocabulary: \r\n\r\n* **Multi-Selection Statement:** A statement that selects a single action from three or more conditional statements based on which Boolean expression is true\r\n\r\n## Additional resources\r\nLooking for more practice and resource understanding if statements in Java? Consider using the following resources:\r\n\r\n*  <a href=\"https://runestone.academy/ns/books/published/csjava/Unit3-If-Statements/topic-3-4-else-ifs.html\" target=\"_blank\">CS Awesome’s chapter on else-if statements</a>\r\n\r\n* <a href=\"https://codehs.com/textbook/apcsa_textbook/3.4\" target=\"_blank\">CodeHS's chapter on else-if statements statements</a>\r\n\r\n**Up next:** In the next level, we will practice reading and writing code using else-if statements. "
+    "long_instructions": "#### In this video, you will learn about using multi-selection statements in Java. \r\n\r\n## Vocabulary: \r\n\r\n- #### **Multi-Selection Statement:** A statement that selects a single action from three or more conditional statements based on which Boolean expression is true\r\n\r\n## Additional resources\r\n#### Looking for more practice and resource understanding if statements in Java? Consider using the following resources:\r\n\r\n*  <a href=\"https://runestone.academy/ns/books/published/csjava/Unit3-If-Statements/topic-3-4-else-ifs.html\" target=\"_blank\" style = \"font-size:14pt\">CS Awesome’s chapter on else-if statements</a>\r\n\r\n* <a href=\"https://codehs.com/textbook/apcsa_textbook/3.4\" target=\"_blank\" style = \"font-size:14pt\">CodeHS's chapter on else-if statements statements</a>\r\n\r\n#### **Up next:** In the next level, we will practice reading and writing code using else-if statements. "
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-21T19:01:44.539+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-L3-else-if-statements-video\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-L3-else-if-statements-video\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-21T19:01:44.539+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-L3-else-if-statements-video\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-L3-else-if-statements-video\"},{\"changed_at\":\"2024-10-24 18:50:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

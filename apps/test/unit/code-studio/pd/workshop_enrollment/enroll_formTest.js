@@ -1,6 +1,5 @@
 import {assert, expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import jQuery from 'jquery';
 import {pick, omit} from 'lodash';
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -11,16 +10,14 @@ import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 const refute = p => assert.isNotOk(p);
 
 describe('Enroll Form', () => {
-  // We aren't testing server responses, but have a fake server to handle calls and suppress warnings
-  let server;
   let enrollForm;
+  let fetchStub;
+
   beforeEach(() => {
-    server = sinon.fakeServer.create();
-    sinon.spy(jQuery, 'ajax');
+    fetchStub = sinon.stub(window, 'fetch');
   });
   afterEach(() => {
-    server.restore();
-    jQuery.ajax.restore();
+    fetchStub.restore();
   });
 
   const props = {
@@ -68,11 +65,15 @@ describe('Enroll Form', () => {
     enrollForm = renderDefault(params);
     enrollForm.find('#submit').simulate('click');
 
-    const validationState = enrollForm
-      .find(`#${errorProperty}`)
-      .prop('validationState');
-    expect(validationState).to.equal('error');
-    expect(jQuery.ajax.called).to.be.false;
+    // validationState was previously set as a prop on react-select component controlling role
+    // after ts conversion it's clear that prop is invalid
+    if (errorProperty !== 'role') {
+      const validationState = enrollForm
+        .find(`#${errorProperty}`)
+        .prop('validationState');
+      expect(validationState).to.equal('error');
+    }
+    expect(fetchStub.called).to.be.false;
   };
 
   const testSuccessfulSubmit = params => {
@@ -84,7 +85,7 @@ describe('Enroll Form', () => {
     );
 
     expect(errorElements).to.have.lengthOf(0);
-    expect(jQuery.ajax.called).to.be.true;
+    expect(fetchStub.called).to.be.true;
   };
 
   describe('CSF Enroll Form', () => {
@@ -461,7 +462,7 @@ describe('Enroll Form', () => {
       // If I submit in this state, first name should not be one
       // of the validation errors.
       enrollForm.find('#submit').simulate('click');
-      expect(jQuery.ajax.called).to.be.false;
+      expect(fetchStub.called).to.be.false;
       expect(enrollForm.find('#email').prop('validationState')).to.equal(
         'error'
       );

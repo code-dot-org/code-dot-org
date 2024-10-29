@@ -29,7 +29,7 @@ def saucelabs_browser(test_run_name)
     name: test_run_name,
     tags: [ENV.fetch('GIT_BRANCH', nil)],
     build: CDO.circle_run_identifier || ENV.fetch('BUILD', nil),
-    idleTimeout: 60,
+    idleTimeout: 90,
     seleniumVersion: Selenium::WebDriver::VERSION
   }
 

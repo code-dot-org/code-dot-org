@@ -1,8 +1,6 @@
 /*
  * Form to create a workshop enrollment
  */
-import $ from 'jquery';
-import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {
   FormGroup,
@@ -11,9 +9,10 @@ import {
   HelpBlock,
   Alert,
 } from 'react-bootstrap';
-import Select from 'react-select';
+import Select, {Option} from 'react-select';
 
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import color from '@cdo/apps/util/color';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 
@@ -90,8 +89,62 @@ const ATTENDED_CSF_COURSES_OPTIONS = {
   'Nope, I have never attended a CS Fundamentals workshop.': 'No',
 };
 
-function EnrollForm(props) {
-  const [formState, setFormState] = useState({
+interface SchoolInfoProps {
+  school_id?: string;
+  school_district_name?: string;
+  school_district_other?: string;
+  school_name?: string;
+  school_state?: string;
+  school_zip?: string;
+  school_type?: keyof typeof SCHOOL_TYPES_MAPPING;
+}
+
+interface EnrollFormState {
+  attended_csf_intro_workshop?: keyof typeof ATTENDED_CSF_COURSES_OPTIONS;
+  csf_course_experience?: Partial<typeof CSF_COURSES>;
+  csf_courses_planned?: string[];
+  csf_intro_intent?: string;
+  csf_intro_other_factors?: string;
+  describe_role?: string;
+  email?: string;
+  confirm_email?: string;
+  explain_csf_course_other?: string;
+  explain_not_teaching?: string;
+  explain_teaching_other?: string;
+  first_name?: string;
+  grades_teaching?: string[];
+  last_name?: string;
+  planning_to_teach_ap?: string;
+  previous_courses: Array<string>;
+  role?: string;
+  taught_ap_before?: string;
+  years_teaching?: string;
+  years_teaching_cs?: string;
+}
+
+type CombinedFormState = keyof EnrollFormState | keyof SchoolInfoProps;
+
+type FormErrors = Partial<Record<CombinedFormState, string>>;
+
+type EnrollmentResponse = {
+  workshop_enrollment_status: string;
+  account_exists: boolean;
+  sign_up_url: string;
+  cancel_url: string;
+};
+
+type EnrollFormProps = EnrollFormState & {
+  collect_demographics?: boolean;
+  onSubmissionComplete: (response?: EnrollmentResponse) => void;
+  user_id: number;
+  workshop_course?: string;
+  workshop_id: number;
+  workshop_subject?: string;
+  school_info: SchoolInfoProps;
+};
+
+export default function EnrollForm(props: EnrollFormProps) {
+  const [formState, setFormState] = useState<EnrollFormState>({
     first_name: props.first_name,
     last_name: props.last_name,
     email: props.email,
@@ -112,7 +165,7 @@ function EnrollForm(props) {
     role: props.role,
   });
 
-  const [schoolInfoState, setSchoolInfoState] = useState({
+  const [schoolInfoState, setSchoolInfoState] = useState<SchoolInfoProps>({
     school_id: props.school_info?.school_id,
     school_district_name: props.school_info?.school_district_name,
     school_district_other: props.school_info?.school_district_other,
@@ -122,46 +175,50 @@ function EnrollForm(props) {
     school_type: props.school_info?.school_type,
   });
 
-  const [formErrors, setFormErrors] = useState({});
+  const [formErrors, setFormErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionErrorMessage, setSubmissionErrorMessage] = useState('');
 
-  const handleChange = change => {
+  const handleChange = (change: Partial<EnrollFormState>) => {
     setFormState(prevState => ({
       ...prevState,
       ...change,
     }));
   };
 
-  const onSchoolInfoChange = ({school_info}) => {
+  const onSchoolInfoChange = ({
+    school_info,
+  }: {
+    school_info: SchoolInfoProps;
+  }) => {
     setSchoolInfoState(school_info);
   };
 
-  const handleRoleChange = selection => {
-    handleChange({role: selection.value});
+  const handleRoleChange = (selection: Option<string> | null) => {
+    handleChange({role: selection?.value});
   };
 
-  const handleNotTeachingChange = input => {
+  const handleNotTeachingChange = (input: string) => {
     handleChange({explain_not_teaching: input});
   };
 
-  const handleTeachingOtherChange = input => {
+  const handleTeachingOtherChange = (input: string) => {
     handleChange({explain_teaching_other: input});
   };
 
-  const handleCsfCourseOtherChange = input => {
+  const handleCsfCourseOtherChange = (input: string) => {
     handleChange({explain_csf_course_other: input});
   };
 
-  const handleCsfCourseExperienceChange = input => {
-    let exp;
-    if (formState.csf_course_experience) {
-      exp = formState.csf_course_experience;
-    } else {
-      exp = {};
-    }
-    Object.keys(input).map(key => (exp[CSF_COURSES[key]] = input[key]));
-    handleChange({csf_course_experience: exp});
+  const handleCsfCourseExperienceChange = (
+    input: Partial<typeof CSF_COURSES>
+  ) => {
+    handleChange({
+      csf_course_experience: {
+        ...(formState.csf_course_experience ?? {}),
+        ...input,
+      },
+    });
   };
 
   const handleClickRegister = () => {
@@ -189,7 +246,7 @@ function EnrollForm(props) {
     if (!formState.csf_courses_planned) {
       return undefined;
     }
-    const processedCourses = [];
+    const processedCourses: string[] = [];
     formState.csf_courses_planned.forEach(course => {
       if (course === `${OTHER} ${EXPLAIN}`) {
         if (formState.explain_csf_course_other) {
@@ -210,7 +267,7 @@ function EnrollForm(props) {
     if (!formState.grades_teaching) {
       return null;
     }
-    const processedGrades = [];
+    const processedGrades: string[] = [];
     formState.grades_teaching.forEach(grade => {
       if (grade === `${OTHER} ${EXPLAIN}`) {
         if (formState.explain_teaching_other) {
@@ -234,14 +291,12 @@ function EnrollForm(props) {
   };
 
   const getSchoolType = () => {
-    if (!schoolInfoState.school_id) {
+    if (!schoolInfoState.school_id && schoolInfoState.school_type) {
       return SCHOOL_TYPES_MAPPING[schoolInfoState.school_type];
-    } else {
-      return schoolInfoState.school_type;
     }
   };
 
-  const submit = () => {
+  const submit = async () => {
     setFormErrors({});
     setSubmissionErrorMessage('');
     setIsSubmitting(true);
@@ -272,8 +327,9 @@ function EnrollForm(props) {
       csf_course_experience: formState.csf_course_experience,
       csf_courses_planned: getCsfCoursesPlanned(),
       explain_csf_course_other: formState.explain_csf_course_other,
-      attended_csf_intro_workshop:
-        ATTENDED_CSF_COURSES_OPTIONS[formState.attended_csf_intro_workshop],
+      attended_csf_intro_workshop: formState.attended_csf_intro_workshop
+        ? ATTENDED_CSF_COURSES_OPTIONS[formState.attended_csf_intro_workshop]
+        : undefined,
       previous_courses: formState.previous_courses,
       csf_intro_intent: formState.csf_intro_intent,
       csf_intro_other_factors: formState.csf_intro_other_factors,
@@ -282,20 +338,30 @@ function EnrollForm(props) {
       taught_ap_before: formState.taught_ap_before,
       planning_to_teach_ap: formState.planning_to_teach_ap,
     };
-    $.ajax({
-      method: 'POST',
-      url: `/api/v1/pd/workshops/${props.workshop_id}/enrollments`,
-      contentType: 'application/json',
-      data: JSON.stringify(params),
-      complete: result => {
-        setIsSubmitting(false);
-        result?.responseJSON?.workshop_enrollment_status === 'error' &&
-          setSubmissionErrorMessage(
-            result?.responseJSON?.error_message || 'unknown error'
-          );
+
+    try {
+      const response = await fetch(
+        `/api/v1/pd/workshops/${props.workshop_id}/enrollments`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': await getAuthenticityToken(),
+          },
+          body: JSON.stringify(params),
+        }
+      );
+      setIsSubmitting(false);
+      if (response.ok) {
+        const result = await response.json();
+        if (result.workshop_enrollment_status === 'error') {
+          setSubmissionErrorMessage(result.error_message || 'unknown error');
+        }
         props.onSubmissionComplete(result);
-      },
-    });
+      }
+    } catch (error) {
+      setSubmissionErrorMessage('unknown error');
+    }
   };
 
   const getRequiredFieldErrors = () => {
@@ -309,7 +375,7 @@ function EnrollForm(props) {
       Object.keys(errors).length ||
       Object.keys(schoolInfoErrors).length
     ) {
-      let requiredFieldsErrors = {};
+      const requiredFieldsErrors: FormErrors = {};
       missingRequiredFields.forEach(f => {
         requiredFieldsErrors[f] = '';
       });
@@ -319,7 +385,11 @@ function EnrollForm(props) {
   };
 
   const getMissingRequiredFields = () => {
-    const requiredFields = ['first_name', 'last_name', 'email'];
+    const requiredFields: Array<keyof EnrollFormState> = [
+      'first_name',
+      'last_name',
+      'email',
+    ];
 
     if (!props.email) {
       requiredFields.push('confirm_email');
@@ -349,15 +419,15 @@ function EnrollForm(props) {
       );
     }
 
-    const missingRequiredFields = requiredFields.filter(field => {
-      return !formState[field];
-    });
+    const missingRequiredFields = requiredFields.filter(
+      field => !formState[field]
+    );
 
     return missingRequiredFields;
   };
 
   const getErrors = () => {
-    const errors = {};
+    const errors: FormErrors = {};
 
     if (formState.email) {
       if (!isEmail(formState.email)) {
@@ -384,7 +454,8 @@ function EnrollForm(props) {
       <strong>use more of</strong> in the next 12 months? Check all that apply.
     </div>
   );
-  const gradesTeaching = GRADES_TEACHING.concat([
+  const gradesTeaching = [
+    ...GRADES_TEACHING,
     {
       answerText: `${NOT_TEACHING} ${EXPLAIN}`,
       inputValue: formState.explain_not_teaching,
@@ -395,7 +466,7 @@ function EnrollForm(props) {
       inputValue: formState.explain_teaching_other,
       onInputChange: handleTeachingOtherChange,
     },
-  ]);
+  ];
 
   const csfIntroIntentLabel =
     `Most teachers register for the Intro workshop in order to learn how to ` +
@@ -430,23 +501,32 @@ function EnrollForm(props) {
     'Unsure / Still deciding',
   ];
 
-  const csfCourses = Object.keys(CSF_COURSES)
-    .filter(key => key !== 'courses14_accelerated')
-    .map(key => CSF_COURSES[key])
-    .concat([
-      {
-        answerText: `${OTHER} ${EXPLAIN}`,
-        inputValue: formState.explain_csf_course_other,
-        onInputChange: handleCsfCourseOtherChange,
-      },
-    ]);
+  const csfCourses = [
+    ...Object.values(CSF_COURSES).filter(
+      value => CSF_COURSES.courses14_accelerated !== value
+    ),
+    {
+      answerText: `${OTHER} ${EXPLAIN}`,
+      inputValue: formState.explain_csf_course_other,
+      onInputChange: handleCsfCourseOtherChange,
+    },
+  ];
   const previousCourses = props.previous_courses.concat([
     "I don't have experience teaching any of these courses",
   ]);
 
-  const roles =
-    (props.workshop_course === CSF && CSF_ROLES) ||
-    (props.workshop_course === ADMIN_COUNSELOR && ADMIN_COUNSELOR_ROLES);
+  const getRoles = (course?: string) => {
+    switch (course) {
+      case CSF:
+        return CSF_ROLES;
+      case ADMIN_COUNSELOR:
+        return ADMIN_COUNSELOR_ROLES;
+      default:
+        return [];
+    }
+  };
+
+  const roles = getRoles(props.workshop_course);
 
   return (
     <form id="enroll-form">
@@ -535,18 +615,12 @@ function EnrollForm(props) {
             <Select
               id="role"
               clearable={false}
-              placeholder={null}
               value={formState.role}
               onChange={handleRoleChange}
               options={roles.map(r => ({value: r, label: r}))}
-              validationState={
-                Object.prototype.hasOwnProperty.call(formErrors, 'role')
-                  ? VALIDATION_STATE_ERROR
-                  : null
-              }
             />
             <HelpBlock>{formErrors.role}</HelpBlock>
-            {DESCRIBE_ROLES.includes(formState.role) && (
+            {formState.role && DESCRIBE_ROLES.includes(formState.role) && (
               <FieldGroup
                 id="describe_role"
                 label="Please describe your role"
@@ -630,8 +704,8 @@ function EnrollForm(props) {
               label="This workshop is designed for educators that have experience teaching CS Fundamentals. During the past year, how have you used CS Fundamentals course(s) with students?"
               onChange={handleCsfCourseExperienceChange}
               options={['none', 'a few lessons', 'most lessons', 'all lessons']}
-              questions={Object.keys(CSF_COURSES).map(key => ({
-                label: CSF_COURSES[key],
+              questions={Object.entries(CSF_COURSES).map(([key, value]) => ({
+                label: value,
                 name: key,
               }))}
               selectedItems={formState.csf_course_experience}
@@ -819,41 +893,3 @@ function EnrollForm(props) {
     </form>
   );
 }
-
-EnrollForm.propTypes = {
-  attended_csf_intro_workshop: PropTypes.string,
-  collect_demographics: PropTypes.bool,
-  csf_course_experience: PropTypes.string,
-  csf_intro_intent: PropTypes.string,
-  csf_intro_other_factors: PropTypes.string,
-  describe_role: PropTypes.string,
-  email: PropTypes.string,
-  explain_csf_course_other: PropTypes.string,
-  explain_not_teaching: PropTypes.string,
-  explain_teaching_other: PropTypes.string,
-  first_name: PropTypes.string,
-  grades_teaching: PropTypes.string,
-  last_name: PropTypes.string,
-  onSubmissionComplete: PropTypes.func,
-  planning_to_teach_ap: PropTypes.string,
-  previous_courses: PropTypes.arrayOf(PropTypes.string).isRequired,
-  role: PropTypes.string,
-  taught_ap_before: PropTypes.string,
-  user_id: PropTypes.number.isRequired,
-  workshop_course: PropTypes.string,
-  workshop_id: PropTypes.number.isRequired,
-  workshop_subject: PropTypes.string,
-  years_teaching: PropTypes.string,
-  years_teaching_cs: PropTypes.string,
-  school_info: PropTypes.shape({
-    school_id: PropTypes.string,
-    school_district_name: PropTypes.string,
-    school_district_other: PropTypes.string,
-    school_name: PropTypes.string,
-    school_state: PropTypes.string,
-    school_zip: PropTypes.string,
-    school_type: PropTypes.string,
-  }),
-};
-
-export default EnrollForm;

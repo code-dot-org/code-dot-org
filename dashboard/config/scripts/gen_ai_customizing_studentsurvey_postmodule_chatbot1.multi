@@ -1,0 +1,8 @@
+name 'gen-ai-customizing-studentsurvey-postmodule-chatbot1'
+question 'I enjoyed using the chatbot'
+right 'Strongly disagree'
+right 'Disagree'
+right 'Neutral'
+right 'Agree'
+right 'Strongly agree'
+allow_multiple_attempts true

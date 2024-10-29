@@ -15,6 +15,7 @@ export interface MusicLevelData extends ProjectLevelData {
   blockMode?: ValueOf<typeof BlockMode>;
   hideAiTemperature?: boolean;
   showAiTemperatureExplanation?: boolean;
+  allowChangeStartingPlayheadPosition?: boolean;
 }
 
 export type LoadFinishedCallback = (

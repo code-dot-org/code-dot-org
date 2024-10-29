@@ -278,6 +278,17 @@ span {
         flex-direction: row;
       }
 
+      @media (max-width: 850px) {
+        .buttonContainer {
+          flex-direction: column;
+          align-items: stretch;
+
+          div {
+            margin-inline: auto;
+          }
+        }
+      }
+
       .iconContainer {
         margin-bottom: 0.75rem;
 

@@ -8,11 +8,12 @@ import React, {
 } from 'react';
 import {FocusOn} from 'react-focus-on';
 
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {Button} from '@cdo/apps/componentLibrary/button';
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import appConfig from '../appConfig';
 import {DEFAULT_PACK} from '../constants';
 import {AnalyticsContext} from '../context';
 import musicI18n from '../locale';
@@ -49,9 +50,6 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
   const soundPath = previewSound && folder.id + '/' + previewSound.src;
   const isPlayingPreview = previewSound && playingPreview === soundPath;
   const imageSrc = library?.getPackImageUrl(folder.id);
-  const imageAttributionAuthor = folder.imageAttribution?.author;
-  const imageAttributionColor = folder.imageAttribution?.color;
-  const packImageAttributionLeft = folder.imageAttribution?.position === 'left';
 
   const onEntryClick = useCallback(() => {
     onSelect(folder);
@@ -92,29 +90,6 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
             alt=""
             draggable={false}
           />
-          {false && imageAttributionAuthor && (
-            <div
-              className={classNames(
-                styles.packImageAttribution,
-                packImageAttributionLeft && styles.packImageAttributionLeft
-              )}
-              style={{color: imageAttributionColor}}
-            >
-              <FontAwesomeV6Icon
-                iconName={'brands fa-creative-commons'}
-                iconStyle="solid"
-                className={styles.icon}
-              />
-              &nbsp;
-              <FontAwesomeV6Icon
-                iconName={'brands fa-creative-commons-by'}
-                iconStyle="solid"
-                className={styles.icon}
-              />
-              &nbsp;
-              {imageAttributionAuthor}
-            </div>
-          )}
         </div>
       )}
       <div
@@ -276,7 +251,14 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
             {musicI18n.packDialogTitle()}
           </Typography>
 
-          <div className={styles.body} data-theme="Dark">
+          <div
+            className={classNames(
+              styles.body,
+              appConfig.getValue('pack-dialog-2-stacked') === 'true' &&
+                styles.bodyStacked
+            )}
+            data-theme="Dark"
+          >
             <div>{musicI18n.packDialogBody()}</div>
 
             <SegmentedButtons
@@ -288,6 +270,7 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
               ]}
               onChange={value => setMode(value as Mode)}
               className={styles.segmentedButtons}
+              size="xs"
             />
           </div>
 
@@ -313,25 +296,23 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
 
           <div className={styles.footer}>
             <div className={styles.buttonContainer}>
-              <button
+              <Button
+                ariaLabel={musicI18n.skip()}
+                text={musicI18n.skip()}
+                type="secondary"
+                color="white"
+                size="s"
                 onClick={setPackToDefault}
-                className={classNames('skip-button', styles.skip)}
-                type="button"
-              >
-                {musicI18n.skip()}
-              </button>
-              <button
-                onClick={setPackToSelectedFolder}
-                className={classNames(
-                  styles.continue,
-                  styles.button,
-                  !selectedFolderId && styles.continueDisabled
-                )}
+              />
+              <Button
+                ariaLabel={musicI18n.select()}
+                text={musicI18n.select()}
+                type="primary"
+                color="white"
+                size="s"
                 disabled={!selectedFolderId}
-                type="button"
-              >
-                {musicI18n.select()}
-              </button>
+                onClick={setPackToSelectedFolder}
+              />
             </div>
           </div>
         </div>

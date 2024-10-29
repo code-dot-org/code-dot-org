@@ -403,9 +403,11 @@ RubricSettings.propTypes = {
   reportingData: reportingDataShape,
   aiRubricsDisabled: PropTypes.bool,
   setAiRubricsDisabled: PropTypes.func.isRequired,
-  allTeacherEvaluationData: PropTypes.array,
   aiEvalStatusCounters: PropTypes.object,
   setAiEvalStatusMap: PropTypes.func,
+
+  // Redux provided
+  allTeacherEvaluationData: PropTypes.array,
 };
 
 export const UnconnectedRubricSettings = RubricSettings;
@@ -413,6 +415,7 @@ export const UnconnectedRubricSettings = RubricSettings;
 export default connect(
   state => ({
     aiRubricsDisabled: state.currentUser.aiRubricsDisabled,
+    allTeacherEvaluationData: state.teacherRubric.allTeacherEvaluationData,
   }),
   dispatch => ({
     setAiRubricsDisabled: aiRubricsDisabled =>
