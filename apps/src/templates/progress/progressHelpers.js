@@ -245,7 +245,6 @@ function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
 export function lessonProgressForSection(sectionLevelProgress, lessons) {
   // create empty "dictionary" to store lesson progress for each student
   const sectionLessonProgress = {};
-  console.log('lfm 1', {sectionLevelProgress, lessons});
   Object.entries(sectionLevelProgress).forEach(
     // key: studentId, value: "dictionary" of level progress for that student
     ([studentId, studentLevelProgress]) => {

@@ -114,13 +114,6 @@ export function loadUnitProgress(scriptId, sectionId) {
       structureLatencyMs,
     });
 
-    console.log('lfm', {
-      progressByUnit: sectionProgress.studentLevelProgressByUnit,
-      studentLen: students.length,
-      scriptId,
-      sectionId,
-    });
-
     sectionProgress.studentLessonProgressByUnit = {
       ...sectionProgress.studentLessonProgressByUnit,
       [scriptId]: lessonProgressForSection(
