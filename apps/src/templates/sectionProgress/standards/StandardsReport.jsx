@@ -224,8 +224,6 @@ const styles = {
   },
 };
 
-export const UnconnectedStandardsReport = StandardsReport;
-
 export default connect(
   state => ({
     scriptId: state.unitSelection.scriptId,
