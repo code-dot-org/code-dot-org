@@ -900,9 +900,9 @@ en:
           version_title: "'24-'25"
         exploring-gen-ai-2024:
           title: Exploring Generative AI
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_short: 'Learn the basics of generative AI: how AI works and how to use generative AI. '
+          description_student: Learn How AI Works and How the Use Generative AI
+          description_teacher: Exploring Generative AI is a two-unit curriculum that explores How AI Works and How to Use Generative AI. Students participate in hands-on activities that unpack the black box of generative AI through student-centered activities and class discussions, anchored by a video series that demystifies generative AI for a broad audience. With a firm foundation, students then learn to customize language models using the new AI Chat lab which provides students with the tools to select language models, apply system prompts, and curate retrieval information to customize their chatbot. Students create chatbots to solve a variety of problems, and interrogate the validity of responses and appropriate use of chatbots in society.
           version_title: "'24-'25"
         csd-ayw1-debugging:
           title: "CSD Academic Year Workshop #1 - Debugging"

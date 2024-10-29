@@ -112,7 +112,7 @@ const UnitCalendar: React.FC = () => {
           </div>
           <UnitCalendarGrid
             lessons={calendarLessons}
-            weeklyInstructionalMinutes={weeklyInstructionalMinutes}
+            weeklyInstructionalMinutes={parseInt(weeklyInstructionalMinutes)}
             weekWidth={WEEK_WIDTH}
           />
         </div>
