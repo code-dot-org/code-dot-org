@@ -319,6 +319,38 @@ class ChannelsTest < Minitest::Test
     assert_cannot_publish('foo')
   end
 
+  def test_cannot_publish_if_account_too_new
+    stub_project_age(true, false)
+
+    stub_user = {
+      name: 'xavier',
+      birthday: 14.years.ago.to_datetime,
+      properties: {sharing_disabled: false}.to_json
+    }
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
+
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    assert_cannot_publish('applab', channel_id)
+  end
+
+  def test_cannot_publish_if_project_too_new
+    stub_project_age(false, true)
+
+    stub_user = {
+      name: ' xavier',
+      birthday: 14.years.ago.to_datetime,
+      properties: {sharing_disabled: false}.to_json
+    }
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
+
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    assert_cannot_publish('applab', channel_id)
+  end
+
   def test_restricted_publish_permissions
     stub_project_age(true, true)
 
