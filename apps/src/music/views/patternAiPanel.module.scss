@@ -1,5 +1,7 @@
 @import "color.scss";
 
+$ai-rubric-cyan-hover: #37e1db;
+
 // Move the arrow left and right.
 @keyframes left-right {
   0%, 100% {
@@ -12,6 +14,15 @@
 
 @keyframes fade-in {
   0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes delay-fade-in {
+  0%, 80% {
     opacity: 0;
   }
   100% {
@@ -40,6 +51,10 @@
   display: flex;
   justify-content: space-around;
   height: 100%;
+
+  &Generating {
+    pointer-events: none;
+  }
 }
 
 .leftArea {
@@ -75,6 +90,9 @@
   width: 120px;
   vertical-align: middle;
   padding-left: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   .name {
     cursor: pointer;
@@ -84,13 +102,15 @@
 
 .outerCell {
   display: inline-block;
-  padding: 4px 2px;
+  padding: 1px 1px;
+  margin: 2px 1px;
   box-sizing: border-box;
   cursor: pointer;
   transition: background-color 0s;
+  border-radius: 2px;
 
   &Playing {
-    background-color: $neutral_dark20;
+    background-color: $realyellow;
   }
 
   &Scanning {
@@ -102,7 +122,7 @@
   }
 
   &Fourth {
-    padding-right: 5px;
+    margin-right: 5px;
   }
 }
 
@@ -132,6 +152,16 @@
 
 .button {
   background-color: $ai_rubric_cyan !important;
+
+  &:hover, &:disabled {
+    background-color: $ai-rubric-cyan-hover !important;
+  }
+
+  &:disabled {
+    border: 1px solid rgba(0 0 0 / 0);
+    cursor: default;
+  }
+
   span {
     user-select: none;
   }
@@ -293,6 +323,14 @@
     transform: rotate(90deg);
     animation: left-right 0.75s infinite;
   }
+}
+
+.generatingSpinner {
+  position: absolute;
+  left: 525px;
+  top: 190px;
+  font-size: 45px;
+  animation: delay-fade-in 7s;
 }
 
 .errorMessage {

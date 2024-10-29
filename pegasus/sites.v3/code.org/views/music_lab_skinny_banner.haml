@@ -1,0 +1,18 @@
+-# TODO ACQ-2556 - Clean this up after the 2024 HOC launch
+- if !!DCDO.get('hoc-2024-nov-launch', false)
+  %link{href: "/css/generated/music-lab-skinny-banner.css", rel: "stylesheet"}
+  %aside.music-lab-skinny-banner
+    .wrapper.flex-container.justify-space-between.align-items-center.wrap
+      .text-wrapper
+        %h5.white
+          =hoc_s("music_lab.jam_session.name")
+        %p.white.desc
+          =hoc_s("music_lab.jam_session.banner.desc_01")
+        .flex-container.align-items-center.partner
+          %p.white.no-margin-bottom
+            =hoc_s(:in_partnership_with)
+          %figure
+            %img{src: "/images/avatars/amazon_future_engineer_light.png", alt: "Amazon Future Engineer"}
+      %img{src:"/images/banners/banner-music-lab-skinny.png", alt: ""}
+      %a.link-button.has-external-link.white{href:  CDO.studio_url("/s/music-intro-2024/reset"), target: "_blank", rel: "noopener noreferrer"}
+        =hoc_s(:call_to_action_try_activity)
