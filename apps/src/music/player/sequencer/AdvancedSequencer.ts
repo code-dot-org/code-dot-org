@@ -44,7 +44,9 @@ export default class AdvancedSequencer extends Sequencer {
       length: soundData.length,
       soundType: soundData.type,
       blockId,
-      parentControlTypes: findParentStatementInputTypes(blockId),
+      validationInfo: {
+        parentControlTypes: findParentStatementInputTypes(blockId),
+      },
       triggered: false,
       when: measure ?? DEFAULT_START_MEASURE,
       effects: {...this.effects},
@@ -64,7 +66,9 @@ export default class AdvancedSequencer extends Sequencer {
       instrumentType: 'drums',
       length,
       blockId,
-      parentControlTypes: findParentStatementInputTypes(blockId),
+      validationInfo: {
+        parentControlTypes: findParentStatementInputTypes(blockId),
+      },
       triggered: false,
       when: measure ?? DEFAULT_START_MEASURE,
       value,
@@ -83,7 +87,9 @@ export default class AdvancedSequencer extends Sequencer {
       type: 'chord',
       length: DEFAULT_CHORD_LENGTH,
       blockId,
-      parentControlTypes: findParentStatementInputTypes(blockId),
+      validationInfo: {
+        parentControlTypes: findParentStatementInputTypes(blockId),
+      },
       triggered: false,
       when: measure ?? DEFAULT_START_MEASURE,
       value,

@@ -183,7 +183,6 @@ export default class MusicPlayer {
       triggered: false,
       length: 1,
       blockId: 'preview',
-      parentControlTypes: [],
       soundType: 'beat',
     };
     this.analyticsReporter?.onSoundPlayed(id);
@@ -206,7 +205,6 @@ export default class MusicPlayer {
       length: DEFAULT_CHORD_LENGTH,
       id: 'preview',
       blockId: 'preview',
-      parentControlTypes: [],
     };
 
     if (this.audioPlayer.supportsSamplers()) {
@@ -251,7 +249,6 @@ export default class MusicPlayer {
       length: value.length,
       id: 'preview',
       blockId: 'preview',
-      parentControlTypes: [],
     };
 
     if (this.audioPlayer.supportsSamplers()) {

@@ -182,41 +182,49 @@ export default class MusicValidator extends Validator {
           playedNumberChords++;
         }
       }
+
       // Check for a block nested within an if/else block causing something to play.
-      if (eventData.parentControlTypes.includes(BlockTypes.IF_ELSE)) {
-        this.conditionsChecker.addSatisfiedCondition({
-          name: MusicConditions.PLAYED_ANYTHING_IN_CONDITIONAL.name,
-        });
-      }
-      // Check for a block nested within a function block causing something to play.
-      if (
-        eventData.parentControlTypes.some(type =>
-          FunctionDefinitionBlockTypes.includes(type)
-        )
-      ) {
-        if (!blockIdFunctionRepetitions[blockId]) {
-          blockIdFunctionRepetitions[blockId] = 1;
-        } else {
-          blockIdFunctionRepetitions[blockId]++;
+      const validaitonInfo = eventData.validationInfo;
+      if (validaitonInfo) {
+        if (validaitonInfo.parentControlTypes?.includes(BlockTypes.IF_ELSE)) {
+          this.conditionsChecker.addSatisfiedCondition({
+            name: MusicConditions.PLAYED_ANYTHING_IN_CONDITIONAL.name,
+          });
         }
-        this.addPlayedConditions(
-          MusicConditions.PLAYED_ANYTHING_IN_FUNCTION.name,
-          Math.max(...Object.values(blockIdFunctionRepetitions))
-        );
-      }
-      // Check for a block nested within a loop block causing something to play.
-      if (
-        eventData.parentControlTypes.some(type => LoopBlockTypes.includes(type))
-      ) {
-        if (!blockIdLoopRepetitions[blockId]) {
-          blockIdLoopRepetitions[blockId] = 1;
-        } else {
-          blockIdLoopRepetitions[blockId]++;
+
+        // Check for a block nested within a function block causing something to play.
+        if (
+          validaitonInfo.parentControlTypes?.some(type =>
+            FunctionDefinitionBlockTypes.includes(type)
+          )
+        ) {
+          if (!blockIdFunctionRepetitions[blockId]) {
+            blockIdFunctionRepetitions[blockId] = 1;
+          } else {
+            blockIdFunctionRepetitions[blockId]++;
+          }
+          this.addPlayedConditions(
+            MusicConditions.PLAYED_ANYTHING_IN_SAME_FUNCTION.name,
+            Math.max(...Object.values(blockIdFunctionRepetitions))
+          );
         }
-        this.addPlayedConditions(
-          MusicConditions.PLAYED_ANYTHING_IN_LOOP.name,
-          Math.max(...Object.values(blockIdLoopRepetitions))
-        );
+
+        // Check for a block nested within a loop block causing something to play.
+        if (
+          validaitonInfo.parentControlTypes?.some(type =>
+            LoopBlockTypes.includes(type)
+          )
+        ) {
+          if (!blockIdLoopRepetitions[blockId]) {
+            blockIdLoopRepetitions[blockId] = 1;
+          } else {
+            blockIdLoopRepetitions[blockId]++;
+          }
+          this.addPlayedConditions(
+            MusicConditions.PLAYED_ANYTHING_IN_SAME_LOOP.name,
+            Math.max(...Object.values(blockIdLoopRepetitions))
+          );
+        }
       }
     });
 

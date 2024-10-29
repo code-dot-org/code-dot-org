@@ -38,14 +38,14 @@ export const MusicConditions: ConditionNames = {
     description:
       'Checks if something is playing from within an if/else block. Advanced mode only.',
   },
-  PLAYED_ANYTHING_IN_FUNCTION: {
-    name: 'played_anything_in_function',
+  PLAYED_ANYTHING_IN_SAME_FUNCTION: {
+    name: 'played_anything_in_same_function',
     valueType: 'number',
     description:
       'Checks if something is playing from within a function definition block, at least this many times. Ex. Value: 3',
   },
-  PLAYED_ANYTHING_IN_LOOP: {
-    name: 'played_anything_in_loop',
+  PLAYED_ANYTHING_IN_SAME_LOOP: {
+    name: 'played_anything_in_same_loop',
     valueType: 'number',
     description:
       'Checks if something is playing from within a repeat block, at least this many times. Ex. Value: 3',

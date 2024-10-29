@@ -222,7 +222,9 @@ export default class Simple2Sequencer extends Sequencer {
       length: soundData.length,
       soundType: soundData.type,
       blockId,
-      parentControlTypes: findParentStatementInputTypes(blockId),
+      validationInfo: {
+        parentControlTypes: findParentStatementInputTypes(blockId),
+      },
       ...this.getCommonEventFields(),
     });
   }
@@ -239,7 +241,9 @@ export default class Simple2Sequencer extends Sequencer {
       id: JSON.stringify(value),
       value,
       blockId,
-      parentControlTypes: findParentStatementInputTypes(blockId),
+      validationInfo: {
+        parentControlTypes: findParentStatementInputTypes(blockId),
+      },
       length,
       ...this.getCommonEventFields(),
     });
@@ -255,7 +259,9 @@ export default class Simple2Sequencer extends Sequencer {
       value,
       length: DEFAULT_CHORD_LENGTH,
       blockId,
-      parentControlTypes: findParentStatementInputTypes(blockId),
+      validationInfo: {
+        parentControlTypes: findParentStatementInputTypes(blockId),
+      },
       ...this.getCommonEventFields(),
     });
   }
@@ -271,7 +277,9 @@ export default class Simple2Sequencer extends Sequencer {
       value,
       length: value.length || DEFAULT_TUNE_LENGTH,
       blockId,
-      parentControlTypes: findParentStatementInputTypes(blockId),
+      validationInfo: {
+        parentControlTypes: findParentStatementInputTypes(blockId),
+      },
       ...this.getCommonEventFields(),
     });
   }
