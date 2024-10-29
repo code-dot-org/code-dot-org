@@ -8,9 +8,9 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "##A little bit louder now! \r\n\r\nUse **WASD** and **Enter** to change the volume so it gets louder each time the song plays. \r\n\r\nThen Run and Continue.\r\n\r\n::: details [**Hint**]\r\nLow is lower than medium which is lower than Full. \r\n:::\r\n\r\n\r\n",
+    "long_instructions": "##A little bit louder now! \r\n\r\nOnce keyboard navigation is turned on using **Shift+Control+K.**\r\n\r\nUse **WASD** and **Enter** to change the volume so it gets louder each time the song plays. \r\n\r\nThen run using **Space bar** and **Continue** using **Shift+Tab.**\r\n\r\n::: details [**Hint**]\r\nLow is lower than medium which is lower than Full. \r\n:::\r\n\r\n\r\n",
     "offer_browser_tts": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
       "packId": "i_need_a_dollar_aloe_blacc",
@@ -100,7 +100,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-23 17:37:25 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 17:41:13 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 17:41:45 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-23 17:37:25 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 17:41:13 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 17:41:45 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 20:08:07 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 20:10:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 20:11:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

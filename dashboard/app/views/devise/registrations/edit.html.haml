@@ -72,7 +72,7 @@
   = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put, id: 'lti-sync-settings-form'}) do |f|
     = f.hidden_field :lti_roster_sync_enabled
 
-- if @potentially_locked && experiment_value('cpa-partial-lockout', request)
+- if (!@personal_account_linking_enabled || Policies::ChildAccount::ComplianceState.permission_granted?(current_user)) && experiment_value('cpa-partial-lockout', request)
   %div#lockout-linked-accounts{
     data: {
       request_date: @request_date&.iso8601,
@@ -93,7 +93,7 @@
   %h2= t('user.create_personal_login')
 
   %p#edit_user_create_personal_account_description
-    - if @locked
+    - unless @personal_account_linking_enabled
       - if current_user.us_state.nil?
         = t('user.create_personal_login_state_required')
       - else
@@ -102,14 +102,14 @@
       = no_email ? t('user.create_personal_login_under_13_info') : t('user.create_personal_login_info')
       = t('user.create_personal_login_link_account') if current_user.migrated?
   .div{style: 'position: relative'}
-    = form_for(current_user, url: '/users/upgrade', html: {id: 'edit_user_create_personal_account', style: (@locked ? 'opacity: 0.25;' : '')}, namespace: 'create_personal') do |form|
+    = form_for(current_user, url: '/users/upgrade', html: {id: 'edit_user_create_personal_account', style: (!@personal_account_linking_enabled ? 'opacity: 0.25;' : '')}, namespace: 'create_personal') do |form|
       = form.hidden_field :hashed_email
       %h3= t('user.enter_new_login_info')
       - if no_email
         = hidden_field_tag :noEmail, true
         .field
           = form.label t('user.create_personal_login_under_13_username'), class: "label-bold"
-          = form.text_field :username, maxlength: 255, disabled: @locked
+          = form.text_field :username, maxlength: 255, disabled: !@personal_account_linking_enabled
       - else
         .field
           = form.label :personal_email, class: "label-bold" do
@@ -118,26 +118,26 @@
           = form.email_field :email, placeholder: '', autocomplete: 'off', maxlength: 255
       .field
         = form.label :password, maxlength: 255, class: "label-bold"
-        = form.password_field :password, autocomplete: 'off', maxlength: 255, disabled: @locked
+        = form.password_field :password, autocomplete: 'off', maxlength: 255, disabled: !@personal_account_linking_enabled
       .field
         = form.label :password_confirmation, class: "label-bold"
         = form.password_field :password_confirmation, autocomplete: 'off', maxlength: 255
-      - if !@locked
+      - if @personal_account_linking_enabled
         - if current_user.secret_word_account?
           %h3= t('user.confirm_secret_words')
           .field
             = form.label :secret_words, class: "label-bold"
-            = form.text_field :secret_words, autocomplete: 'off', value: '', maxlength: 255, disabled: @locked
+            = form.text_field :secret_words, autocomplete: 'off', value: '', maxlength: 255, disabled: !@personal_account_linking_enabled
         - if no_email
           %h3= t('user.enter_parent_email')
           .field
             = form.label t('user.create_personal_login_under_13_parent_email'), class: "label-bold"
-            = form.text_field :parent_email, maxlength: 255, disabled: @locked
+            = form.text_field :parent_email, maxlength: 255, disabled: !@personal_account_linking_enabled
         = t('user.create_personal_login_terms_markdown', terms_of_service_url: CDO.code_org_url('/tos'), markdown: true).html_safe
         - unless no_email
           = t('user.create_personal_login_email_note_markdown', privacy_policy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
         %div= form.submit t('crud.submit'), id: 'create-personal-login', class: 'btn btn-warning'
-    - if @locked
+    - if !@personal_account_linking_enabled
       %div{style: 'position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; flex-direction: row; align-items: center; justify-content: center; pointer-events: none'}
         %img{src: asset_path('auth/lock.svg'), style: 'width: 3rem; height: 3rem'}
 
@@ -214,6 +214,7 @@
       userDisplayName: current_user.name,
       userEmail: current_user.email,
       userProperties: current_user.properties,
+      userUsState: current_user.us_state,
       isAdmin: current_user.admin,
       isOauth: current_user.oauth?,
       isPasswordRequired: current_user.encrypted_password.present?,

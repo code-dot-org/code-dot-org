@@ -547,8 +547,8 @@
     "long_instructions": "# Style this page!\n\nHere is an opportunity to be creative and have some fun with styles.\n\n# Do this\n\n1.  Link the stylesheet to the web page.\n2.  Make the paragraph text a different size.\n3.  Make the paragraph text a different color.\n    -   It is your choice whether to use a named color or use an RGB color.",
     "mini_rubric": {
       "rubric_key_concept": "Create a stylesheet and link to the sheet in the HTML. The stylesheet includes a rule that changes the paragraph element of a webpage.",
-      "rubric_performance_level_1": "The paragraphs are a new color and size, and there are no errors or inconsistencies in the HTML or CSS code.",
-      "rubric_performance_level_2": "The paragraphs are a new color or size.",
+      "rubric_performance_level_1": "The stylesheet link is placed correctly in the <head> of the HTML code. The paragraphs are a new color and size, and there are no errors or inconsistencies in the HTML or CSS code.",
+      "rubric_performance_level_2": "The stylesheet link is placed correctly in the HTML code. The paragraphs are a new color or size.",
       "rubric_performance_level_3": "The paragraphs have a special rule-set in the stylesheet, and the color or size property is used, but there are enough errors that the text does not change color or size.  There is HTML code that attempts to link the stylesheet to the web page.",
       "rubric_performance_level_4": "There is no special rule-set for paragraphs or the color or size properties are not used in the rule-set.  There is no code to link the stylesheet to the web page."
     }

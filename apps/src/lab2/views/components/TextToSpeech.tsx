@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import DCDO from '@cdo/apps/dcdo';
 import {useBrowserTextToSpeech} from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
 
 import moduleStyles from './TextToSpeech.module.scss';
@@ -14,6 +15,10 @@ interface TextToSpeechProps {
 const usePause = queryParams('tts-play-pause') === 'true';
 const playIcon = (queryParams('tts-play-icon') as string) || 'volume';
 const stopIcon = (queryParams('tts-stop-icon') as string) || 'circle-stop';
+const ttsButtonEnabled = DCDO.get(
+  'browser-tts-button-enabled',
+  true
+) as boolean;
 
 /**
  * TextToSpeech play button.
@@ -60,7 +65,7 @@ const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({text}) => {
     }
   };
 
-  if (!isTtsAvailable) {
+  if (!ttsButtonEnabled || !isTtsAvailable) {
     return null;
   }
 
