@@ -19,6 +19,8 @@ Scenario: Continue button and progress status shows up correctly
   And I verify progress in the header of the current page is "not_tried" for level 1
   And I focus selector ".cm-content"
   And I press keys "print('more code')\n"
+  # Wait to ensure the editor has the updated text before clicking run 
+  And I wait for 1 second
   And I press "uitest-codebridge-run"
   And I wait until "#uitest-codebridge-console" contains text "more code"
   Then I verify progress in the header of the current page is "attempted" for level 1
