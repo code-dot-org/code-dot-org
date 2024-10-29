@@ -150,7 +150,6 @@ $(document).ready(function () {
       {!showV2TeacherDashboard
         ? getV1TeacherDashboard()
         : getV2TeacherDashboard()}
-      )}
     </Provider>,
     document.getElementById('teacher-dashboard')
   );
