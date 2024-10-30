@@ -7,5 +7,5 @@ Dashboard::Application.config.session_store :redis_store,
   servers: [CDO.session_store_server || 'redis://localhost:6379/0/session'],
   secure: !CDO.no_https_store && (!Rails.env.development? || CDO.https_development),
   domain: :all,
-  expire_after: 40.days, # users who interact with the site at least once a month will remain logged in
-  pool_size: 5 # 5 is what the new Rails connection pooling in 7.2 uses as a default; see https://github.com/rails/rails/pull/45111
+  expire_after: 40.days, # Users who interact with the site at least once a month will remain logged in.
+  pool_size: 5 # We arbitrarily use the value this would default to anyway; we just have to specify *something* here to enable pooling in the first place.
