@@ -45,6 +45,7 @@
       =hoc_s("hoc_events.register.disclaimer", markdown: :inline, locals:{close_date: "December 31, 2024"})
     %p.body-three
       =hoc_s("hoc_events.register.desc")
+    = view :"events/form_disclaimer"
     %hr
     %p.body-three.no-margin-bottom
       =hoc_s("hoc_events.register.how_to", markdown: :inline, locals:{how_to_url: resolve_url('/how-to')})

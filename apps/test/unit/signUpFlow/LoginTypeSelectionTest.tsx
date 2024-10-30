@@ -28,9 +28,22 @@ describe('LoginTypeSelection', () => {
     sessionStorage.clear();
   });
 
-  function renderDefault() {
+  function renderDefault(userType: string | null = 'student') {
+    if (userType) {
+      sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, userType);
+    }
     render(<LoginTypeSelection />);
   }
+
+  it('redirects user back to account type page if they have not selected account type', async () => {
+    await waitFor(() => {
+      renderDefault(null);
+    });
+
+    expect(navigateToHrefMock).toHaveBeenCalledWith(
+      '/users/new_sign_up/account_type'
+    );
+  });
 
   it('renders headers, buttons and inputs', async () => {
     await waitFor(() => {
@@ -363,9 +376,8 @@ describe('LoginTypeSelection', () => {
   });
 
   it('if user selected student then finish sign up button sends user to finish student page', async () => {
-    sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, 'student');
     await waitFor(() => {
-      renderDefault();
+      renderDefault('student');
     });
 
     const finishSignUpButton = screen.getByRole('button', {
@@ -385,9 +397,8 @@ describe('LoginTypeSelection', () => {
   });
 
   it('if user selected teacher then finish sign up button sends user to finish teacher page', async () => {
-    sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, 'teacher');
     await waitFor(() => {
-      renderDefault();
+      renderDefault('teacher');
     });
 
     const finishSignUpButton = screen.getByRole('button', {
