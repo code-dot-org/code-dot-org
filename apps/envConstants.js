@@ -35,7 +35,6 @@ module.exports = {
   // 'unit', 'integration', 'storybook', or 'entry'
   NODE_ENV: process.env.NODE_ENV,
   CI: process.env.CI,
-  DRONE: process.env.DRONE,
   CI_TEST_REPORTS: process.env.CI_TEST_REPORTS,
   // If set, run webpack dev server (with hot reloading)
   HOT: process.env.HOT === '1',
