@@ -68,18 +68,60 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     [initialState.schoolName]
   );
 
+  const [state, setState] = useState<{
+    country: string;
+    schoolId: string;
+    schoolZip: string;
+    schoolName: string;
+    schoolsList: SchoolDropdownOption[];
+  }>({
+    country: detectedCountry,
+    schoolId: detectedSchoolId,
+    schoolZip: detectedZip,
+    schoolName: detectedSchoolName,
+    schoolsList: [],
+  });
+
   // State hooks
-  const [country, setCountry] = useState(detectedCountry);
-  const [schoolId, setSchoolId] = useState(detectedSchoolId);
-  const [schoolZip, setSchoolZip] = useState(detectedZip);
-  const [schoolName, setSchoolName] = useState(detectedSchoolName);
-  const [schoolsList, setSchoolsList] = useState<SchoolDropdownOption[]>([]);
+  const setCountry = (value: string) => {
+    setState(prevState => ({
+      ...prevState,
+      country: value,
+    }));
+  };
+  const setSchoolId = (value: string) => {
+    setState(prevState => ({
+      ...prevState,
+      schoolId: value,
+    }));
+  };
+  const setSchoolZip = (value: string) => {
+    setState(prevState => ({
+      ...prevState,
+      schoolZip: value,
+    }));
+  };
+  const setSchoolName = (value: string) => {
+    setState(prevState => ({
+      ...prevState,
+      schoolName: value,
+    }));
+  };
+  const setSchoolsList = (value: SchoolDropdownOption[]) => {
+    setState(prevState => ({
+      ...prevState,
+      schoolsList: value,
+    }));
+  };
 
   const reset = () => {
-    setCountry(detectedCountry);
-    setSchoolId(detectedSchoolId);
-    setSchoolZip(detectedZip);
-    setSchoolName(detectedSchoolName);
+    setState({
+      country: detectedCountry,
+      schoolId: detectedSchoolId,
+      schoolZip: detectedZip,
+      schoolName: detectedSchoolName,
+      schoolsList: [],
+    });
   };
 
   // Memoized fetchSchools function using useCallback
