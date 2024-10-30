@@ -1,12 +1,12 @@
 require 'set'
 
-module CIUtils
+module CI
   # Checks the HEAD commit for the current circle build for the specified tag,
   # returning TRUE if it's present.  A tag is a set of space-separated words
   # wrapped in square brackets.  The words can be given in any order.
   #
   # Example:
-  #   CIUtils.tagged?('skip ui') will match commit messages containing the
+  #   CI.tagged?('skip ui') will match commit messages containing the
   #   strings "[skip ui]" or "[ui skip]"
   def self.tagged?(tag)
     build_tags.include?(tag.downcase.split.to_set)

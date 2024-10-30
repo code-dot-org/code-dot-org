@@ -56,23 +56,23 @@ SKIP_EYES = 'skip eyes'.freeze
 namespace :ci do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
   timed_task_with_logging :run_tests do
-    unless CIUtils.ci_job_unit_tests?
+    unless CI.ci_job_unit_tests?
       ChatClient.log "Wrong CI job, skipping"
       next
     end
 
-    if CIUtils.tagged?(RUN_ALL_TESTS_TAG)
-      ChatClient.log "Commit message: '#{CIUtils.git_commit_message}' contains [#{RUN_ALL_TESTS_TAG}], force-running all tests."
+    if CI.tagged?(RUN_ALL_TESTS_TAG)
+      ChatClient.log "Commit message: '#{CI.git_commit_message}' contains [#{RUN_ALL_TESTS_TAG}], force-running all tests."
       RakeUtils.rake_stream_output 'test:all'
-    elsif CIUtils.tagged?(RUN_APPS_TESTS_TAG)
-      ChatClient.log "Commit message: '#{CIUtils.git_commit_message}' contains [#{RUN_APPS_TESTS_TAG}], force-running apps tests."
+    elsif CI.tagged?(RUN_APPS_TESTS_TAG)
+      ChatClient.log "Commit message: '#{CI.git_commit_message}' contains [#{RUN_APPS_TESTS_TAG}], force-running apps tests."
       RakeUtils.rake_stream_output 'test:apps'
       RakeUtils.rake_stream_output 'test:changed:all_but_apps'
-    elsif CIUtils.tagged?(SKIP_APPS_TESTS_FLAG)
-      ChatClient.log "Commit message: '#{CIUtils.git_commit_message}' contains [#{SKIP_APPS_TESTS_FLAG}], skipping apps tests."
+    elsif CI.tagged?(SKIP_APPS_TESTS_FLAG)
+      ChatClient.log "Commit message: '#{CI.git_commit_message}' contains [#{SKIP_APPS_TESTS_FLAG}], skipping apps tests."
       RakeUtils.rake_stream_output 'test:changed:all_but_apps'
-    elsif CIUtils.tagged?(SKIP_UNIT_TESTS_TAG)
-      ChatClient.log "Commit message: '#{CIUtils.git_commit_message}' contains [#{SKIP_UNIT_TESTS_TAG}], skipping unit tests."
+    elsif CI.tagged?(SKIP_UNIT_TESTS_TAG)
+      ChatClient.log "Commit message: '#{CI.git_commit_message}' contains [#{SKIP_UNIT_TESTS_TAG}], skipping unit tests."
     else
       RakeUtils.rake_stream_output 'test:changed'
     end
@@ -82,13 +82,13 @@ namespace :ci do
 
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
   timed_task_with_logging :run_ui_tests do
-    unless CIUtils.ci_job_ui_tests?
+    unless CI.ci_job_ui_tests?
       ChatClient.log "Wrong CI job, skipping"
       next
     end
 
-    if CIUtils.tagged?(SKIP_UI_TESTS_TAG)
-      ChatClient.log "Commit message: '#{CIUtils.git_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
+    if CI.tagged?(SKIP_UI_TESTS_TAG)
+      ChatClient.log "Commit message: '#{CI.git_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
       next
     end
 
@@ -160,13 +160,13 @@ namespace :ci do
   end
 
   timed_task_with_logging :seed_ui_test do
-    unless CIUtils.ci_job_ui_tests?
+    unless CI.ci_job_ui_tests?
       ChatClient.log "Wrong CI job, skipping"
       next
     end
 
-    if CIUtils.tagged?(SKIP_UI_TESTS_TAG)
-      ChatClient.log "Commit message: '#{CIUtils.git_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
+    if CI.tagged?(SKIP_UI_TESTS_TAG)
+      ChatClient.log "Commit message: '#{CI.git_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
       next
     end
 
@@ -179,16 +179,16 @@ end
 # @return [Array<String>] names of browser configurations for this test run
 def browsers_to_run
   browsers = []
-  browsers << 'Chrome' unless CIUtils.tagged?(SKIP_CHROME_TAG)
-  browsers << 'Firefox' if CIUtils.tagged?(TEST_FIREFOX_TAG) || CIUtils.tagged?(TEST_ALL_BROWSERS_TAG)
-  browsers << 'Safari' if CIUtils.tagged?(TEST_SAFARI_TAG) || CIUtils.tagged?(TEST_ALL_BROWSERS_TAG)
-  browsers << 'iPad' if CIUtils.tagged?(TEST_IPAD_TAG) || CIUtils.tagged?(TEST_IOS_TAG) || CIUtils.tagged?(TEST_ALL_BROWSERS_TAG)
-  browsers << 'iPhone' if CIUtils.tagged?(TEST_IPHONE_TAG) || CIUtils.tagged?(TEST_IOS_TAG) || CIUtils.tagged?(TEST_ALL_BROWSERS_TAG)
+  browsers << 'Chrome' unless CI.tagged?(SKIP_CHROME_TAG)
+  browsers << 'Firefox' if CI.tagged?(TEST_FIREFOX_TAG) || CI.tagged?(TEST_ALL_BROWSERS_TAG)
+  browsers << 'Safari' if CI.tagged?(TEST_SAFARI_TAG) || CI.tagged?(TEST_ALL_BROWSERS_TAG)
+  browsers << 'iPad' if CI.tagged?(TEST_IPAD_TAG) || CI.tagged?(TEST_IOS_TAG) || CI.tagged?(TEST_ALL_BROWSERS_TAG)
+  browsers << 'iPhone' if CI.tagged?(TEST_IPHONE_TAG) || CI.tagged?(TEST_IOS_TAG) || CI.tagged?(TEST_ALL_BROWSERS_TAG)
   browsers
 end
 
 def test_eyes?
-  !CIUtils.tagged?(SKIP_EYES)
+  !CI.tagged?(SKIP_EYES)
 end
 
 def close_sauce_connect

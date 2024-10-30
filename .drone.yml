@@ -89,7 +89,7 @@ steps:
       # cache is restored to source directory, so we need to copy it into the right place
       - cp -rn "$(pwd)/home/ci/.rbenv" /home/ci || true
       - rm -rf "$(pwd)/home/ci/.rbenv"
-      # Depended on by CIUtils: https://github.com/code-dot-org/code-dot-org/blob/33b79dac1c417e227ac2eb014afcc2505bac7ddb/lib/cdo/ci_utils.rb/#L19-L20
+      # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/33b79dac1c417e227ac2eb014afcc2505bac7ddb/lib/cdo/ci_utils.rb/#L19-L20
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
       - export CI_HEAD_BRANCH=$DRONE_SOURCE_BRANCH
@@ -216,7 +216,7 @@ steps:
       - sudo chown -R ci:ci .
       # cache is restored to source directory, so we need to copy it into the right place
       - cp -rn "$(pwd)/home/ci/.rbenv" /home/ci || true
-      # Depended on by CIUtils: https://github.com/code-dot-org/code-dot-org/blob/33b79dac1c417e227ac2eb014afcc2505bac7ddb/lib/cdo/ci_utils.rb/#L19-L20
+      # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/33b79dac1c417e227ac2eb014afcc2505bac7ddb/lib/cdo/ci_utils.rb/#L19-L20
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
       - export CI_HEAD_BRANCH=$DRONE_SOURCE_BRANCH
@@ -294,6 +294,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 2e7c2c3892da07e50278fc69b874948914ef43040192ab0469cbe3049d98b731
+hmac: 82eae1523c85418ed99db5d7b4de3f053fa5ff0d0f1dca7352450067ad6cc9ad
 
 ...

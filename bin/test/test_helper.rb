@@ -25,7 +25,7 @@ require 'yaml'
 
 # Set up JUnit output for CI
 reporters = []
-if CIUtils.ci_job_ui_tests?
+if CI.ci_job_ui_tests?
   reporters << Minitest::Reporters::ProgressReporter.new
   reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CI_TEST_REPORTS', nil)}/bin")
 else
