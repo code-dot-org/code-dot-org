@@ -570,7 +570,7 @@ class ProjectsControllerTest < ActionController::TestCase
     @controller.stubs(:storage_decrypt_channel_id).returns([123, 456])
     submission_description = 'this project rocks'
     test_project = create :project
-    # Stub project that passes all submit/pbulish restrictions.
+    # Stub project that passes all submit/publish restrictions.
     test_project.stubs(:submission_status).returns(SharedConstants::PROJECT_SUBMISSION_STATUS[:CAN_SUBMIT])
     Project.stubs(:find_by).returns(test_project)
     Projects.any_instance.stubs(:publish).returns({})
