@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
@@ -25,6 +26,7 @@ import {
   EMAIL_SESSION_KEY,
   USER_RETURN_TO_SESSION_KEY,
   clearSignUpSessionStorage,
+  COOKIE_SIGN_UP_URL,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
@@ -42,6 +44,9 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const [isGdprLoaded, setIsGdprLoaded] = useState(false);
   const [userReturnTo, setUserReturnTo] = useState('/home');
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Remove oauth url cookie if it exists
+  cookies.remove(COOKIE_SIGN_UP_URL);
 
   useEffect(() => {
     const fetchGdprData = async () => {

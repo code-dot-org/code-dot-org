@@ -23,6 +23,7 @@ import {navigateToHref} from '../utils';
 import {
   ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
+  COOKIE_SIGN_UP_URL,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
@@ -50,7 +51,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   const finishAccountUrl = isTeacher
     ? '/users/new_sign_up/finish_teacher_account'
     : '/users/new_sign_up/finish_student_account';
-  cookies.set('new_sign_up_url', finishAccountUrl);
+  cookies.set(COOKIE_SIGN_UP_URL, finishAccountUrl);
 
   useEffect(() => {
     async function getToken() {
