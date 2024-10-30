@@ -40,7 +40,7 @@ import {
 import {Draggable} from './Draggable';
 import {Droppable} from './Droppable';
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
-import FileRow from './FileRow';
+import {FileRow, FileRowProps} from './FileBrowserRow';
 import {
   useFileUploader,
   useFileUploadErrorCallback,
@@ -220,14 +220,9 @@ const InnerFileBrowser = React.memo(
           .map(f => {
             const isDraggingLocked =
               !isStartMode && f.type === ProjectFileType.LOCKED_STARTER;
-            const fileRowProps = {
-              key: f.id,
-              file: f,
-              isReadOnly,
-              appName,
+            const fileRowProps: FileRowProps = {
+              item: f,
               hasValidationFile,
-              isStartMode,
-              setFileType,
               enableMenu: !dragData?.id || isDraggingLocked,
             };
             return isDraggingLocked ? (
