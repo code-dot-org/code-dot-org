@@ -69,8 +69,5 @@ bundle install --quiet
 bundle exec rake install
 bundle exec rake build
 
-# reprint the hostname in case the first printing has already been truncated by the drone UI
-hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
-
 bundle exec rake circle:seed_ui_test
 bundle exec rake circle:run_ui_tests
