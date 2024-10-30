@@ -6,6 +6,7 @@ import Link from '@cdo/apps/componentLibrary/link/Link';
 import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import i18n from '@cdo/locale';
 
 import {submitProject} from './submitProjectApi';
 import {setShowSubmitProjectDialog} from './submitProjectRedux';
@@ -52,29 +53,23 @@ const SubmitProjectDialog: React.FunctionComponent<
       className={moduleStyles.submitProjectDialog}
     >
       <div className={moduleStyles.headerContainer}>
-        <Heading3>Submit to be featured</Heading3>
+        <Heading3>{i18n.submitProjectGallery_header()}</Heading3>
       </div>
       <hr />
       <div className={moduleStyles.submitProjectTextContainer}>
-        <BodyTwoText>
-          If you'd like your project to appear in our Featured Projects gallery,
-          please describe the project:
-        </BodyTwoText>
+        <BodyTwoText>{i18n.submitProjectGallery_describeProject()}</BodyTwoText>
         <textarea
           id="submission-input"
           value={projectDescription}
           onChange={e => setProjectDescription(e.target.value)}
         />
-        <BodyTwoText>
-          Submitting your project does not guarantee that it will be featured. A
-          project can only be submitted once.
-        </BodyTwoText>
+        <BodyTwoText>{i18n.submitProjectGallery_details()}</BodyTwoText>
       </div>
       <hr />
       <div className={moduleStyles.bottomSection}>
         <div className={moduleStyles.bottomSectionLink}>
           <Link
-            text="Learn more"
+            text={i18n.learnMore()}
             href=""
             className={moduleStyles.link}
             size="m"
@@ -86,13 +81,13 @@ const SubmitProjectDialog: React.FunctionComponent<
             onClick={onGoBack}
             type="secondary"
             color="white"
-            text="Go back"
+            text={i18n.submitProjectGallery_goBack()}
           />
           <Button
             onClick={onSubmit}
             type="primary"
             color="white"
-            text="Submit"
+            text={i18n.submit()}
             disabled={!projectDescription.trim()}
           />
         </div>

@@ -124,6 +124,17 @@
   margin-top: auto;
 }
 
+.alreadySubmittedContainer {
+  background-color: $light_gray_200;
+  border-radius: 0.25em;
+  width: 100%;
+  text-align: center;
+}
+
+.alreadySubmittedText {
+  margin: 0.5em;
+}
+
 .fullWidth {
   width: 100%;
 }
