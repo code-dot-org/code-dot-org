@@ -114,6 +114,7 @@ const ShareDialog: React.FunctionComponent<{
     if (submissionStatus === 'can_submit') {
       return (
         <Button
+          iconLeft={{iconName: 'award'}}
           text="Submit to be featured"
           type="secondary"
           color="white"

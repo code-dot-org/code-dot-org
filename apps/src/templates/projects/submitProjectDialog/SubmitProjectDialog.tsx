@@ -77,7 +77,12 @@ const SubmitProjectDialog: React.FunctionComponent<
       </div>
       <hr />
       <div className={moduleStyles.bottomSection}>
-        <Button onClick={onGoBack} color={buttonColors.white} text="Go back" />
+        <Button
+          iconLeft={{iconName: 'arrow-left'}}
+          onClick={onGoBack}
+          color={buttonColors.white}
+          text="Go back"
+        />
         <Button onClick={onSubmit} type="tertiary" text="Submit" />
       </div>
     </AccessibleDialog>
