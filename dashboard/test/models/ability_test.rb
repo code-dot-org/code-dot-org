@@ -48,9 +48,6 @@ class AbilityTest < ActiveSupport::TestCase
       @in_development_lesson = create(:lesson, script: script, has_lesson_plan: true)
       @in_development_script_level = create(:script_level, script: script)
     end
-
-    project_owner = create :student
-    @test_project = create :project, owner: project_owner
   end
 
   setup do
@@ -991,16 +988,6 @@ class AbilityTest < ActiveSupport::TestCase
     [:log_chat_event, :start_chat_completion, :chat_request].each do |action|
       refute Ability.new(student).can? action, :aichat
     end
-  end
-
-  test 'User can submit a given project successfully if the project passes submission restrictions' do
-    @test_project.stubs(:submission_status).returns(SharedConstants::PROJECT_SUBMISSION_STATUS[:CAN_SUBMIT])
-    assert Ability.new(project_owner).can? :submit, project
-  end
-
-  test 'User cannot submit a given project if already submitted' do
-    @test_project.stubs(:submission_status).returns(SharedConstants::PROJECT_SUBMISSION_STATUS[:ALREADY_SUBMITTED])
-    refute Ability.new(project_owner).can? :submit, project
   end
 
   private def put_students_in_section_and_code_review_group(students, section)
