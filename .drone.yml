@@ -29,7 +29,7 @@ steps:
       - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
       - |
         cat <<EOF
-        Running on $hostname
+        Running on: $hostname
         
         To ssh into this drone instance, wait until the 'unit-tests' step starts and run:
         bin/drone/shell $hostname
@@ -156,7 +156,7 @@ steps:
       - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
       - |
         cat <<EOF
-        Running on $hostname
+        Running on: $hostname
         
         To ssh into this drone instance, wait until the 'ui-tests' step starts and run:
         bin/drone/shell $hostname
@@ -303,6 +303,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: a7dad412199e2d8609a0ef97a4d90cf3cdc7ebd872c24f2cf544db2e65768cd4
+hmac: 141b5c4a9c9c448f0b2445cfb962204aa2be2ef3f02442fd2b7560d9522706f7
 
 ...
