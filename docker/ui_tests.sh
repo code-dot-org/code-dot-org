@@ -11,15 +11,13 @@ ulimit -n 4096
 
 export CI=true
 export CI_JOB=ui_tests
+export CI_BUILD_NUMBER=${CI_BUILD_NUMBER:-$RANDOM$RANDOM} # determines where UI test cucumber logs are stored in S3.
+export CI_TEST_REPORTS=${CI_TEST_REPORTS:-/home/ci/test_reports}
+
 export RAILS_ENV=test
 export RACK_ENV=test
 export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
-# If CI_BUILD_NUMBER is not set, set it to a random number. CI_BUILD_NUMBER determines where UI test cucumber logs are stored in S3.
-if [ -z "$CI_BUILD_NUMBER" ]; then
-  CI_BUILD_NUMBER="$RANDOM$RANDOM"
-fi
-export CI_TEST_REPORTS=/home/ci/test_reports
 
 # set up locals.yml
 # Need to actually write all the commented out lines also
