@@ -77,11 +77,11 @@ jest.mock('react-router-dom', () => ({
   useNavigate: () => navigate,
 }));
 
-// Note: Uncaught [Error: Unmounting a ProtectedStatefulDiv is not allowed.] is an expected error.
+// Note: Uncaught [Error: Unmounting a ProtectedStatefulDiv is not allowed.] is an expected error in console logs.
 // This is caused by UnitOverviewHeader adding a ProtectedStatefulDiv if we are not on the teacher dashboard.
 // This test doesn't set the URL for `location.pathname` and so we get this error.
 
-describe('TeacherUnitOverview Component', () => {
+describe('TeacherUnitOverview', () => {
   let store: Store;
 
   let fetchSpy: jest.SpyInstance;
