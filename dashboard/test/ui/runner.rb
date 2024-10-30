@@ -33,7 +33,7 @@ require_relative './utils/selenium_constants'
 
 require 'active_support/core_ext/object/blank'
 
-ENV['BUILD'] ||= `git rev-parse --short HEAD`
+ENV['GIT_COMMIT'] ||= `git rev-parse --short HEAD`
 
 GIT_BRANCH = GitUtils.current_branch
 COMMIT_HASH = RakeUtils.git_revision
