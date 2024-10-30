@@ -28,7 +28,7 @@ export function getCodeForSingleBlock(block) {
     return getCodeForSingleBlock(block.getNextBlock());
   }
 
-  var func = Blockly.JavaScript[block.type];
+  const func = Blockly.JavaScript.forBlock[block.type];
   if (typeof func !== 'function') {
     throw Error(
       'Language "JavaScript" does not know how to generate ' +
@@ -40,7 +40,7 @@ export function getCodeForSingleBlock(block) {
   // Prior to 24 September 2013 'this' was the only way to access the block.
   // The current preferred method of accessing the block is through the second
   // argument to func.call, which becomes the first parameter to the generator.
-  var code = func.call(block, block);
+  const code = func.call(block, block, Blockly.JavaScript);
   if (Array.isArray(code)) {
     // Value blocks return tuples of code and operator order.
     if (!block.outputConnection) {
