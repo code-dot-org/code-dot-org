@@ -1,4 +1,5 @@
 @import 'color';
+@import '@cdo/apps/componentLibrary/common/styles/variables';
 @import '@cdo/apps/componentLibrary/common/styles/mixins';
 @import '@cdo/apps/componentLibrary/typography/typography.module';
 
@@ -10,6 +11,23 @@
   align-items: flex-start;
   gap: 0.125rem;
   margin: 0;
+
+  &.styleAsFormField {
+    width: $form-field-width;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+
+    .dropdownArrowDiv {
+      width: 100%;
+
+      select {
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
 
   .dropdownLabel {
     display: block;
@@ -37,6 +55,10 @@
       outline: 2px solid $light_primary_500;
       border-radius: 0.25rem;
       outline-offset: 2px;
+    }
+
+    &.readOnly {
+      opacity: 1;
     }
   }
 
@@ -124,6 +146,21 @@
       color: $light_gray_200;
     }
   }
+
+  &:has(select.readOnly) {
+    select {
+      @include field-read-only-black-colors;
+    }
+
+    .dropdownArrowDiv:after {
+      @include field-read-only-black-colors;
+    }
+
+    .helperSection,
+    .errorSection {
+      @include field-read-only-black-colors;
+    }
+  }
 }
 
 .dropdownContainer-gray {
@@ -189,6 +226,21 @@
       color: $light_gray_200;
     }
   }
+
+  &:has(select.readOnly) {
+    select {
+      @include field-read-only-black-colors;
+    }
+
+    .dropdownArrowDiv:after {
+      @include field-read-only-black-colors;
+    }
+
+    .helperSection,
+    .errorSection {
+      @include field-read-only-black-colors;
+    }
+  }
 }
 
 .dropdownContainer-white {
@@ -247,6 +299,21 @@
 
   .dropdownArrowDiv:after {
     color: $light_white;
+  }
+
+  &:has(select.readOnly) {
+    select {
+      @include field-read-only-white-colors;
+    }
+
+    .dropdownArrowDiv:after {
+      @include field-read-only-white-colors;
+    }
+
+    .helperSection,
+    .errorSection {
+      @include field-read-only-white-colors;
+    }
   }
 }
 

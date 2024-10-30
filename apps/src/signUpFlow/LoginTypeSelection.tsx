@@ -23,6 +23,7 @@ import {navigateToHref} from '../utils';
 import {
   ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
+  OAUTH_LOGIN_TYPE_SESSION_KEY,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
@@ -52,6 +53,11 @@ const LoginTypeSelection: React.FunctionComponent = () => {
     : studio('/users/new_sign_up/finish_student_account');
 
   useEffect(() => {
+    // If the user hasn't selected a user type, redirect them back to the first step of signup.
+    if (sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === null) {
+      navigateToHref('/users/new_sign_up/account_type');
+    }
+
     async function getToken() {
       setAuthToken(await getAuthenticityToken());
     }
@@ -173,6 +179,11 @@ const LoginTypeSelection: React.FunctionComponent = () => {
     );
   }
 
+  function selectOauthLoginType(loginType: string) {
+    logUserLoginType(loginType);
+    sessionStorage.setItem(OAUTH_LOGIN_TYPE_SESSION_KEY, loginType);
+  }
+
   return (
     <div className={style.newSignupFlow}>
       <AccountBanner
@@ -195,7 +206,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.googleButton}
-              onClick={() => logUserLoginType('google')}
+              onClick={() => selectOauthLoginType('google')}
               type="submit"
             >
               <FontAwesomeV6Icon
@@ -210,7 +221,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.microsoftButton}
-              onClick={() => logUserLoginType('microsoft')}
+              onClick={() => selectOauthLoginType('microsoft')}
               type="submit"
             >
               <FontAwesomeV6Icon
@@ -225,7 +236,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.facebookButton}
-              onClick={() => logUserLoginType('facebook')}
+              onClick={() => selectOauthLoginType('facebook')}
               type="submit"
             >
               <FontAwesomeV6Icon
@@ -240,7 +251,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.cleverButton}
-              onClick={() => logUserLoginType('clever')}
+              onClick={() => selectOauthLoginType('clever')}
               type="submit"
             >
               <img src={cleverLogo} alt="" />

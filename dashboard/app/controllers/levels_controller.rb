@@ -512,7 +512,8 @@ class LevelsController < ApplicationController
     is_standalone_project = ProjectsController::STANDALONE_PROJECTS.values.pluck(:name).include?(@level.name)
     # Curriculum writers rarely need to edit STANDALONE_PROJECTS levels, and accidental edits to these levels
     # can be quite disruptive. As a workaround you can navigate directly to the edit url for these levels.
-    if Rails.application.config.levelbuilder_mode && !is_standalone_project
+    # We allow editing from the test environment to enable UI testing of the edit page.
+    if (Rails.application.config.levelbuilder_mode || rack_env?(:test)) && !is_standalone_project
       can_edit_level = can? :edit, @level
       if can_edit_level
         links[@level.name] << {text: '[E]dit', url: edit_level_path(@level), access_key: 'e'}

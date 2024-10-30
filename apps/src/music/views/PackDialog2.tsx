@@ -216,7 +216,10 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
 
   // Scroll the current pack into view each time the mode changes.
   useEffect(() => {
-    currentFolderRef.current?.scrollIntoView();
+    currentFolderRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+    });
   }, [mode]);
 
   if (!library) return null;
