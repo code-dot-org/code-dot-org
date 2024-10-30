@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import {useSelector} from 'react-redux';
 import * as Table from 'reactabular-table';
 
 import {fetchStudents} from '@cdo/apps/aiTutor/accessControlsApi';
 import {StudentAccessData} from '@cdo/apps/aiTutor/types';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {tableLayoutStyles as tableStyles} from '@cdo/apps/templates/tables/tableConstants';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {styleOverrides} from './InteractionsTable';
 import SectionAccessToggle from './SectionAccessToggle';
@@ -21,11 +21,6 @@ interface AccessControlsProps {
   sectionId: number;
 }
 
-interface SectionsData {
-  [index: number]: {
-    aiTutorEnabled: boolean;
-  };
-}
 interface StudentRowData {
   id: number;
   name: string;
@@ -39,9 +34,8 @@ const AccessControls: React.FC<AccessControlsProps> = ({sectionId}) => {
     null
   );
 
-  const aiTutorEnabledForSection = useSelector(
-    (state: {teacherSections: {sections: SectionsData}}) =>
-      state.teacherSections.sections[sectionId].aiTutorEnabled
+  const aiTutorEnabledForSection = useAppSelector(
+    state => state.teacherSections.sections[sectionId].aiTutorEnabled
   );
 
   const displayGlobalError = (error: string) => {

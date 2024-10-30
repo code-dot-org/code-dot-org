@@ -193,6 +193,15 @@ RUN curl -SsL https://github.com/boxboat/fixuid/releases/download/v0.4/fixuid-0.
 # install pdm for managing our python dependencies
 RUN pip install --system --prefix=/usr/local pdm
 
+# install sc, the sauce connect proxy for running UI tests
+RUN mkdir sauce_connect && \
+    cd sauce_connect && \
+    curl -SsLOJ https://saucelabs.com/downloads/sauce-connect/5.2.1/sauce-connect-5.2.1_linux.x86_64.tar.gz && \
+    tar -xzf sauce-connect-5.2.1_linux.x86_64.tar.gz && \
+    cp sc /usr/local/bin && \
+    cd .. && \
+    rm -rf sauce_connect
+
 USER ${USER}
 
 WORKDIR /home/${USER}

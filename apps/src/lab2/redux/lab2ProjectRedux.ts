@@ -46,12 +46,18 @@ export const setAndSaveProjectSource = (
 
 export const loadVersion = createAsyncThunk(
   'lab2Project/loadVersion',
-  async (payload: {versionId: string}, thunkAPI) => {
+  async (
+    payload: {versionId: string; startSource: ProjectSources},
+    thunkAPI
+  ) => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (projectManager) {
       // We need to ensure we save the existing project before loading a new one.
       await projectManager.flushSave();
-      const sources = await projectManager.loadSources(payload.versionId);
+      // Fall back to start source if we can't load the version.
+      const sources =
+        (await projectManager.loadSources(payload.versionId)) ||
+        payload.startSource;
       thunkAPI.dispatch(setPreviousVersionSource(sources));
     }
   }

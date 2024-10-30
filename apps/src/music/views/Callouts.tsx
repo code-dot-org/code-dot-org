@@ -73,6 +73,10 @@ const availableCallouts: AvailableCallouts = {
   'flyout-first-block': {
     selector: '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable',
   },
+  'flyout-second-block': {
+    selector:
+      '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable ~ .blocklyDraggable',
+  },
   'toolbox-second-block': {
     selector:
       '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable ~ .blocklyDraggable',

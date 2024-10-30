@@ -1,0 +1,75 @@
+name 'self-paced-pl-ex-gen-ai-foundations_07_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Bias
+
+## Lesson Highlight: Teaching about Bias
+
+#### In Lesson 3 students are introduced to the topic of **bias** in AI.
+
+#### Bias occurs when a decision favors some things and de-prioritizes or excludes others. Bias within an AI system is a direct reflection of the data a system was trained on and the way it is trained.
+
+#### Teaching about biases in technology can be a sensitive subject for your students. These **action items** will help you feel more comfortable discussion these issues in your class. 
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;"> 🖥️Assume all AI systems have bias</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+  Even AI systems that seem innocuous are likely to have biases, whether those are deeply harmful or just irritating. <br><br> Before using an AI system to make decisions in your classroom, examine the ways it might be biased. Start by trying to understand the historical biases in the data the AI system uses.
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🚦Approach discussions of AI bias carefully</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+   Many students have had personal experiences with bias, but may not have used that specific word to explain it. Approach discussions of AI bias with an understanding that students may need time to process such an emotionally difficult concept.
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🌍 Emphasize the importance of team diversity</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+   Talk with students about how team diversity can help in developing widely useful AI systems. Use this fact as a motivator to encourage students to design for their community and advocate for their wants and needs. Avoid positioning students as the ones to fix others’ mistakes, but rather as innovators with a deeply valuable perspective.
+ </p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">✅ Support companies committed to reducing bias</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+   Seek out companies that follow specific, actionable commitments that reduce bias in their AI tools. Read about the company’s background, checking for independent audits and partnerships with reputable community organizations.
+
+</p></div>
+</details>
+
+#### Addressing concerns about AI bias from administrators, parents, or fellow teachers can be challenging. To facilitate these conversations, utilize the range of **scripts** provided in <a href="https://docs.google.com/document/d/1N2C5ymAYQ2JR0NKoPQ2v5IK9Ig77t-1-juVfnWMpNYw/copy" target="blank" rel="noopener noreferrer">this link</a>. These resources are designed to help **clarify issues and foster understanding**. Additionally, there is a specific script available for students to help them express their experiences when affected by AI bias.
+
+## Lesson Preview
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 3: Bias in the Machine</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/6debd3ce2def47f39e00cfb1aecd42bf-3fc2e3897f789e3a47c324fbc19f1ec2-Slide14.PNG" alt="discussion from the lesson" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** How do our choices about input data influence a large language model?
+
+#### **Lesson Overview:**
+
+#### This lesson formally introduces the concept of bias, where certain information is favored over others. Students experience how bias can implicitly and unintentionally creep into large-language models by participating in an activity where they are asked to source articles and information for a RecipeBot. Once they've used search engine results to generate their training data, they analyze patterns in the data that the class found as a collection, noticing unintended biases such as certain cuisines being unintentionally excluded or all the articles falling within a certain narrow date range. After acknowledging how bias can appear, students analyze several scenarios and discuss how bias could appear in the training data of each one.
+
+#### **Students will be able to:**
+* #### Describe patterns in collections of data sources that contribute to bias
+
+### <a href="https://studio.code.org/s/exploring-gen-ai1-2024/lessons/3" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+
+MARKDOWN
