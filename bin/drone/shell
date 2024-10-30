@@ -1,7 +1,7 @@
 #!/bin/sh
 
 USAGE="
-SSHs you into a live drone build, for interactive debugging.
+SSH-es you into a live drone build, for interactive debugging.
 
 Usage: bin/drone/shell ec2-34-201-165-204.us-west-2.compute.amazonaws.com
 
