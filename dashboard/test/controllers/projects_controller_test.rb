@@ -10,13 +10,17 @@ class ProjectsControllerTest < ActionController::TestCase
     ActionDispatch::TestRequest.any_instance.stubs(:user_id).returns(user.id)
   end
 
+  setup_all do
+    @test_project = create :project
+  end
+
   setup do
     sign_in_with_request create :user
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
     AzureTextToSpeech.stubs(:get_voices).returns({})
   end
 
-  self.use_transactional_test_case = true
+  self.use_transactional_test_case = false
 
   setup_all do
     # Create placeholder levels for the standalone project pages.
@@ -565,20 +569,24 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
-  test 'submit project returns the appropriate response' do
+  test 'submit project returns success if project passes all restrictions' do
     channel_id = '123456'
     @controller.stubs(:storage_decrypt_channel_id).returns([123, 456])
     submission_description = 'this project rocks'
-    test_project = create :project
-    # Stub project that passes all submit/publish restrictions.
-    test_project.stubs(:submission_status).returns(SharedConstants::PROJECT_SUBMISSION_STATUS[:CAN_SUBMIT])
-    Project.stubs(:find_by).returns(test_project)
+    @test_project.stubs(:submission_status).returns(SharedConstants::PROJECT_SUBMISSION_STATUS[:CAN_SUBMIT])
+    Project.stubs(:find_by).returns(@test_project)
     Projects.any_instance.stubs(:publish).returns({})
     post :submit, params: {project_type: 'music', channel_id: channel_id, submissionDescription: submission_description}
     assert_response :success
+  end
 
-    # Stub project that is already submitted/published.
-    test_project.stubs(:submission_status).returns(SharedConstants::PROJECT_SUBMISSION_STATUS[:ALREADY_SUBMITTED])
+  test 'submit project returns forbidden if project already submitted' do
+    channel_id = '123456'
+    @controller.stubs(:storage_decrypt_channel_id).returns([123, 456])
+    submission_description = 'this project rocks'
+    @test_project.stubs(:submission_status).returns(SharedConstants::PROJECT_SUBMISSION_STATUS[:ALREADY_SUBMITTED])
+    Project.stubs(:find_by).returns(@test_project)
+    Projects.any_instance.stubs(:publish).returns({published_at: Time.now})
     post :submit, params: {project_type: 'music', channel_id: channel_id, submissionDescription: submission_description}
     assert_response :forbidden
   end
