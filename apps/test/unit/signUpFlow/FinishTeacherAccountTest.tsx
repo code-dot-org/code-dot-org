@@ -5,6 +5,8 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 import FinishTeacherAccount from '@cdo/apps/signUpFlow/FinishTeacherAccount';
 import locale from '@cdo/apps/signUpFlow/locale';
 import {
+  ACCOUNT_TYPE_SESSION_KEY,
+  EMAIL_SESSION_KEY,
   SCHOOL_ID_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
   SCHOOL_ZIP_SESSION_KEY,
@@ -36,9 +38,39 @@ describe('FinishTeacherAccount', () => {
     sessionStorage.clear();
   });
 
-  function renderDefault(usIp: boolean = true) {
+  function renderDefault(
+    usIp: boolean = true,
+    setAccountType: boolean = true,
+    setLoginType: boolean = true
+  ) {
+    if (setAccountType) {
+      sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, 'teacher');
+    }
+    if (setLoginType) {
+      sessionStorage.setItem(EMAIL_SESSION_KEY, 'fake@email.com');
+    }
     render(<FinishTeacherAccount usIp={usIp} countryCode={'US'} />);
   }
+
+  it('redirects user back to account type page if they have not selected account type', async () => {
+    await waitFor(() => {
+      renderDefault(true, false, false);
+    });
+
+    expect(navigateToHrefMock).toHaveBeenCalledWith(
+      '/users/new_sign_up/account_type'
+    );
+  });
+
+  it('redirects user back to login type page if they have not selected login type', async () => {
+    await waitFor(() => {
+      renderDefault(true, true, false);
+    });
+
+    expect(navigateToHrefMock).toHaveBeenCalledWith(
+      '/users/new_sign_up/login_type'
+    );
+  });
 
   it('renders finish teacher account page with school zip when usIp is true', () => {
     renderDefault(true);

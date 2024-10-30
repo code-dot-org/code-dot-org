@@ -23,4 +23,9 @@ export interface PlaybackEvent {
   blockId: string;
   /** A unique ID used to group same sounds together in the timeline */
   id: string;
+  /** Validation-related information */
+  validationInfo?: {
+    /** A list of contextual block types associated with a block's parents */
+    parentControlTypes: string[];
+  };
 }

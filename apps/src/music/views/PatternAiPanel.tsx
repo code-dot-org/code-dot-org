@@ -49,15 +49,22 @@ type GenerateStateType = 'none' | 'generating' | 'error';
 
 const defaultAiTemperature = 8;
 
+// When generating, generatingScanStep goes from 1 to this value.  The first
+// PATTERN_AI_NUM_SEED_EVENTS of these values lights up a seed column, and the
+// remainder give a little delay before the generating help text is shown.
+const numberScanSteps = PATTERN_AI_NUM_SEED_EVENTS + 10;
+
 interface HelpProps {
   userCompletedTask: UserCompletedTaskType;
   generateState: GenerateStateType;
+  generatingScanStep: number;
   eventsLength: number;
 }
 
 const Help: React.FunctionComponent<HelpProps> = ({
   userCompletedTask,
   generateState,
+  generatingScanStep,
   eventsLength,
 }) => {
   const clickDrumsText = [
@@ -134,13 +141,17 @@ const Help: React.FunctionComponent<HelpProps> = ({
           </div>
         </div>
       )}
-      {generateState === 'generating' && (
-        <div className={styles.helpContainer}>
-          <div className={classNames(styles.help, styles.helpGenerating)}>
-            {musicI18n.patternAiGenerating()}
+      {generateState === 'generating' &&
+        generatingScanStep >= numberScanSteps && (
+          <div className={styles.helpContainer}>
+            <div className={classNames(styles.help, styles.helpGenerating)}>
+              {musicI18n.patternAiGenerating()}
+            </div>
+            <div className={styles.generatingSpinner}>
+              <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
+            </div>
           </div>
-        </div>
-      )}
+        )}
       {generateState === 'error' && (
         <div className={styles.helpContainer}>
           <div
@@ -274,11 +285,6 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     onChange(currentValue);
   }, [onChange, currentValue]);
 
-  // Report analytics when the panel first opens.
-  useEffect(() => {
-    MusicRegistry.analyticsReporter.onOpenPatternAiPanel();
-  }, []);
-
   useEffect(() => {
     if (!MusicRegistry.player.isInstrumentLoaded(currentValue.instrument)) {
       setIsLoading(true);
@@ -319,6 +325,11 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     }
   }, [generateState, currentValue.events, userCompletedTask, aiTemperature]);
 
+  const stopPreview = useCallback(() => {
+    MusicRegistry.player.cancelPreviews();
+    setCurrentPreviewTick(0);
+  }, []);
+
   const startPreview = useCallback(
     (value: InstrumentEventValue) => {
       MusicRegistry.player.previewNotes(
@@ -334,14 +345,19 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     [setCurrentPreviewTick]
   );
 
-  const stopPreview = useCallback(() => {
-    MusicRegistry.player.cancelPreviews();
-    setCurrentPreviewTick(0);
-  }, []);
-
   const playPreview = useCallback(() => {
     startPreview(currentValue);
   }, [startPreview, currentValue]);
+
+  // Report analytics when the panel first opens.
+  useEffect(() => {
+    MusicRegistry.analyticsReporter.onOpenPatternAiPanel();
+
+    // On unmount.
+    return () => {
+      stopPreview();
+    };
+  }, [stopPreview]);
 
   const delay = (time: number) => {
     return new Promise(res => {
@@ -366,7 +382,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
       aiTemperature / 10,
       newEvents => {
         const elapsedTime = Date.now() - startTime;
-        const delayDuration = Number(appConfig.getValue('ai-delay')) || 2500;
+        const delayDuration = Number(appConfig.getValue('ai-delay')) || 3500;
         const remainingDelayDuration = Math.max(delayDuration - elapsedTime, 0);
         delay(remainingDelayDuration).then(() => {
           currentValue.events = newEvents;
@@ -378,12 +394,15 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
       onError
     );
     setGenerateState('generating');
-    setGeneratingScanStep(0);
+    setGeneratingScanStep(1);
   }, [currentValue, onChange, aiTemperature, stopPreview, playPreview]);
 
   const [generatingScanStep, setGeneratingScanStep] = useState(0);
   useInterval(() => {
-    if (generateState === 'generating' && generatingScanStep <= 8) {
+    if (
+      generateState === 'generating' &&
+      generatingScanStep < numberScanSteps
+    ) {
       setGeneratingScanStep(generatingScanStep + 1);
     }
   }, 100);
@@ -403,15 +422,18 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
 
   return (
     <div className={styles.patternPanel}>
-      <LoadingOverlay
-        show={isLoading || generateState === 'generating'}
-        delayAppearance={generateState === 'generating'}
-      />
+      <LoadingOverlay show={isLoading} />
 
-      <div className={styles.body}>
+      <div
+        className={classNames(
+          styles.body,
+          generateState === 'generating' && styles.bodyGenerating
+        )}
+      >
         <Help
           userCompletedTask={userCompletedTask}
           generateState={generateState}
+          generatingScanStep={generatingScanStep}
           eventsLength={currentValue.events.length}
         />
 

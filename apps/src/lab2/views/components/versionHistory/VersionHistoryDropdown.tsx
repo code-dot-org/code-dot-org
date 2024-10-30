@@ -229,7 +229,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
       } else if (isLatest) {
         dispatch(resetToCurrentVersion());
       } else {
-        dispatch(loadVersion({versionId: e.target.value}));
+        dispatch(loadVersion({versionId: e.target.value, startSource}));
       }
     },
     [appName, dispatch, isLatestVersion, startSource]

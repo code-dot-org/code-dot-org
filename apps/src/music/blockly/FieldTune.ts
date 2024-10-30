@@ -194,6 +194,11 @@ export default class FieldTune extends GoogleBlockly.Field {
   }
 
   private disposeDropdown() {
+    if (!this.newDiv) {
+      return;
+    }
+
+    ReactDOM.unmountComponentAtNode(this.newDiv);
     this.newDiv = null;
   }
 
