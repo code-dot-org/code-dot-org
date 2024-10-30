@@ -543,7 +543,7 @@ end
 
 def parallel_config(parallel_limit)
   {
-    # Run in parallel threads on CircleCI (less memory), processes on main test machine (better CPU utilization)
+    # Run in parallel threads on CI (less memory), processes on main test machine (better CPU utilization)
     in_threads: ENV['CI'] ? parallel_limit : nil,
     in_processes: ENV['CI'] ? nil : parallel_limit,
 
@@ -702,7 +702,7 @@ def cucumber_arguments_for_feature(options, test_run_string, max_reruns)
     arguments += " --format rerun --out #{rerun_filename test_run_string}"
   end
 
-  # In CircleCI we export additional logs in junit xml format so CircleCI can
+  # In CI we export additional logs in junit xml format so CI could in theory
   # provide pretty test reports with success/fail/timing data upon completion.
   # See: https://circleci.com/docs/test-metadata/#cucumber
   if ENV['CI']

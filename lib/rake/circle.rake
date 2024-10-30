@@ -10,15 +10,12 @@ require 'net/http'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 include TimedTaskWithLogging
 
-# CircleCI Build Tags
-# We provide some limited control over CircleCI's build behavior by adding these
+# CI Build Tags
+# We provide some limited control over CI's build behavior by adding these
 # tags to the latest commit message.  A tag is a set of words in [] square
 # brackets - those words can be in any order and are case-insensitive.
 #
 # Supported Tags:
-
-# Don't run Circle at all (built-in to CircleCI)
-# 'ci skip'
 
 # Run all unit/integration tests, not just a subset based on changed files.
 RUN_ALL_TESTS_TAG = 'test all'.freeze
@@ -52,7 +49,7 @@ TEST_IOS_TAG = 'test ios'.freeze
 # Run UI tests against all browsers
 TEST_ALL_BROWSERS_TAG = 'test all browsers'.freeze
 
-# Overrides for whether to run Applitools eyes tests
+# Overrides for whether to run Applitools eyes tests (WARNING: as of Oct 2024, this is not wired up to anything)
 TEST_EYES = 'test eyes'.freeze
 SKIP_EYES = 'skip eyes'.freeze
 
