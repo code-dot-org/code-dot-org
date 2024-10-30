@@ -53,8 +53,7 @@ describe('ValidatedInstructions', () => {
       </Provider>
     );
 
-    // Continue button should be present
-    screen.getByText(commonI18n.continue());
-    //screen.getByRole('button', {name: 'Continue'});
+    // Continue button should be present.
+    screen.getByRole('button', {name: commonI18n.continue()});
   });
 });
