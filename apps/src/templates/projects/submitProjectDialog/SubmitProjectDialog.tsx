@@ -1,12 +1,8 @@
 import React, {useCallback, useState} from 'react';
 
 import {showShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
-import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
-import {
-  BodyTwoText,
-  Heading3,
-  StrongText,
-} from '@cdo/apps/componentLibrary/typography';
+import Button from '@cdo/apps/componentLibrary/button/Button';
+import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -60,10 +56,8 @@ const SubmitProjectDialog: React.FunctionComponent<
       <hr />
       <div className={moduleStyles.submitProjectTextContainer}>
         <BodyTwoText>
-          <StrongText>
-            If you'd like your project to appear in our Featured Projects
-            gallery, please describe the project:
-          </StrongText>
+          If you'd like your project to appear in our Featured Projects gallery,
+          please describe the project:
         </BodyTwoText>
         <textarea
           id="submission-input"
@@ -80,10 +74,16 @@ const SubmitProjectDialog: React.FunctionComponent<
         <Button
           iconLeft={{iconName: 'arrow-left'}}
           onClick={onGoBack}
-          color={buttonColors.white}
+          type="secondary"
+          color="white"
           text="Go back"
         />
-        <Button onClick={onSubmit} type="tertiary" text="Submit" />
+        <Button
+          onClick={onSubmit}
+          type="secondary"
+          color="white"
+          text="Submit"
+        />
       </div>
     </AccessibleDialog>
   );

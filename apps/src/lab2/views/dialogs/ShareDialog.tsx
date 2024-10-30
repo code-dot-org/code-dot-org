@@ -143,7 +143,7 @@ const ShareDialog: React.FunctionComponent<{
     }
     return null;
   };
-  //dialogId = 'hoc2024';
+  dialogId = 'hoc2024';
   return (
     <FocusLock>
       <div className={moduleStyles.dialogContainer}>

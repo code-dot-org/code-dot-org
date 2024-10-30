@@ -4,10 +4,24 @@
   max-height: calc(95vh - 100px);
   display: flex;
   flex-direction: column;
+  background-color: $light_gray_950;;
+  color: white;
 
   hr {
     margin: 1rem 0;
     border-color: $light_gray_200;
+  }
+  // override any foreground text in the dialog that might be
+  // passed in for the title or body of the dialog
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  strong {
+    color: $light_white;
   }
 
   textarea {
@@ -16,6 +30,7 @@
     resize: none;
     margin-bottom: 20px;
     flex: 1;
+    background-color: $light_white;
   }
 
   a {
@@ -47,4 +62,5 @@
 .bottomSection {
   display: flex;
   justify-content: flex-end;
+  gap: 1em;
 }
