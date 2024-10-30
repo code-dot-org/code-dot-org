@@ -10,6 +10,7 @@ runs:
           set -xe
           ulimit -n 4096
           export CI=true
+          export CI_JOB=1
           export RAILS_ENV=test
           export RACK_ENV=test
           export DISABLE_SPRING=1
@@ -18,7 +19,6 @@ runs:
           # otherwise, use a random number instead. CIRCLE_BUILD_NUM determines where UI test cucumber logs are stored in S3.
           sudo mkdir -p ‘/home/circleci’
           export CIRCLE_BUILD_NUM=${DRONE_BUILD_NUMBER:-$RANDOM$RANDOM}
-          export CI_JOB=1
           export CIRCLE_TEST_REPORTS=/home/circleci/test_reports
           export CIRCLE_ARTIFACTS=/home/circleci/artifacts
           sudo mkdir -p $CIRCLE_TEST_REPORTS/cucumber
