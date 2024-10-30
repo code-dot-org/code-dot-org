@@ -5,7 +5,9 @@ import {
   ComponentSizeXSToL,
   DropdownFormFieldRelatedProps,
 } from '@cdo/apps/componentLibrary/common/types';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
 import moduleStyles from './simpleDropdown.module.scss';
 
@@ -99,18 +101,18 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
 
     <div className={moduleStyles.dropdownArrowDiv}>
       {iconLeft && (
-          <FontAwesomeV6Icon
-            {...iconLeft}
-            className={classNames(moduleStyles.iconLeft, iconLeft.className)}
-          />
-        )}
-        <select
-          name={name}
-          aria-label={isLabelVisible ? undefined : labelText}
-          onChange={onChange}
-          value={selectedValue}
-          id={id}
-          disabled={disabled|| readOnly}
+        <FontAwesomeV6Icon
+          {...iconLeft}
+          className={classNames(moduleStyles.iconLeft, iconLeft.className)}
+        />
+      )}
+      <select
+        name={name}
+        aria-label={isLabelVisible ? undefined : labelText}
+        onChange={onChange}
+        value={selectedValue}
+        id={id}
+        disabled={disabled || readOnly}
         className={classNames({
           [moduleStyles.hasError]: errorMessage,
           [moduleStyles.readOnly]: readOnly,
