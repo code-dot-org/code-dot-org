@@ -7,7 +7,7 @@ Usage: bin/drone/vscode ec2-34-201-165-204.us-west-2.compute.amazonaws.com
 
 Establishing a tunnel:
   1. You'll have to login to GitHub and auth, watch the terminal for a URL + code
-  2. When you get "Open this link in your browser" to vscode.dev, you can either:
+  2. When you get 'Open this link in your browser' to vscode.dev, you can either:
     - open in the browser
     - OR, use the VSCode tunnels extension, if you're signed into GitHub in VSCode in
       the Remote Explorer you can referesh and you shoudl see a tunnel (named a hex code)
