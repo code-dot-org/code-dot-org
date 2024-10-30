@@ -49,7 +49,7 @@ class AbilityTest < ActiveSupport::TestCase
       @in_development_script_level = create(:script_level, script: script)
     end
 
-    @project_owner = create :student
+    project_owner = create :student
     @test_project = create :project, owner: project_owner
   end
 
