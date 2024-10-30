@@ -5,16 +5,20 @@ theme: responsive_full_width
 
 -# TODO ACQ-2556 - Clean this up after the 2024 HOC launch
 - hoc_nov_2024 = DCDO.get('hoc-2024-nov-launch', false)
+- hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/music-styles.css", rel: "stylesheet"}
 
 %section.hero-banner-basic.overlay
-  .wrapper.grid-container.justify-space-between.align-items-center.gap-4
+  .wrapper.grid-container.justify-space-between.align-items-center.gap-2
     .text-wrapper
       -if hoc_nov_2024
         %p.body-one.white.has-icon
-          =hoc_s("social_hoc_is_coming")
+          - if hoc_mode == "soon-hoc"
+            =hoc_s(:social_hoc_is_coming)
+          - elsif hoc_mode == "actual-hoc"
+            =hoc_s(:social_hoc2018_hoc_here)
         %h1.white
           =hoc_s("music_lab.jam_session.name")
         %p.body-one.white
@@ -37,7 +41,7 @@ theme: responsive_full_width
         %figure
           %img{src: "/images/avatars/amazon_future_engineer_light.png", alt: hoc_s("music_lab.amazon_future_engineer")}
     %figure
-      %img{src: hoc_nov_2024 ? "/images/music-lab/music-lab-banner-graphic-best-of-stem.png" : "/images/music-lab/music-lab-banner-graphic.png", alt: "", style: "width: 100%"}
+      %img{src: "/images/music-lab/music-lab-banner-graphic-best-of-stem.png", alt: "", style: "width: 100%"}
 
 %section.bg-neutral-light
   .wrapper.flex-container.justify-space-between.align-items-center.gap-1.wrap.flex-direction-column-mobile
@@ -45,7 +49,7 @@ theme: responsive_full_width
       %h2.heading-lg
         =hoc_s("music_lab.featuring_songs_by")
       %p.no-margin-bottom
-        =hoc_s("music_lab.artist_list", markdown: :inline, locals:{artist_list: "Sabrina Carpenter, Shakira, Benson Boone, Henry Moodie, The Chainsmokers, Rosa Linn, Tinashe, Dove Cameron, Aloe Blacc"})
+        =hoc_s("music_lab.artist_list", markdown: :inline, locals:{artist_list: hoc_nov_2024 ? "Sabrina Carpenter, Shakira, Benson Boone, Henry Moodie, The Chainsmokers, Rosa Linn, Tinashe, Dove Cameron, Aloe Blacc" : "The Chainsmokers, Tinashe, Rosa Linn, Coldplay, Aloe Blacc, Chloe x Halle, Lady Gaga, Dove Cameron"})
     .flex-1
       = view :"music/music_lab_featured_artists"
 
