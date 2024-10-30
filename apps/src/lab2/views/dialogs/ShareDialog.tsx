@@ -13,6 +13,7 @@ import Typography, {
 import {ProjectType} from '@cdo/apps/lab2/types';
 import {setShowSubmitProjectDialog} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectRedux';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import trackEvent from '@cdo/apps/util/trackEvent';
 import i18n from '@cdo/locale';
@@ -114,6 +115,9 @@ const ShareDialog: React.FunctionComponent<{
   );
 
   const showSubmitInfo = () => {
+    if (!experiments.isEnabled(experiments.LAB2_SUBMIT_PROJECT)) {
+      return null;
+    }
     if (submissionStatus === 'can_submit') {
       return (
         <Button
