@@ -147,7 +147,7 @@ $(document).ready(function () {
 
   ReactDOM.render(
     <Provider store={store}>
-      {!showV2TeacherDashboard
+      {!showV2TeacherDashboard()
         ? getV1TeacherDashboard()
         : getV2TeacherDashboard()}
     </Provider>,
