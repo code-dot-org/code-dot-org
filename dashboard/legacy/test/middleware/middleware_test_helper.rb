@@ -7,7 +7,7 @@ require 'webmock'
 # Set up JUnit output for Circle
 reporters = [Minitest::Reporters::SpecReporter.new]
 if ENV['CI']
-  reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CIRCLE_TEST_REPORTS', nil)}/middleware")
+  reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CI_TEST_REPORTS', nil)}/middleware")
 end
 # Skip this if the tests are run in RubyMine
 Minitest::Reporters.use! reporters unless ENV['RM_INFO']

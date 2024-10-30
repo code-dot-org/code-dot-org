@@ -25,7 +25,7 @@ require 'yaml'
 reporters = []
 if ENV['CI']
   reporters << Minitest::Reporters::ProgressReporter.new
-  reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CIRCLE_TEST_REPORTS', nil)}/bin")
+  reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CI_TEST_REPORTS', nil)}/bin")
 else
   reporters << Minitest::Reporters::SpecReporter.new
 end

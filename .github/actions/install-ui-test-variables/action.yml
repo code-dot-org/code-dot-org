@@ -19,8 +19,8 @@ runs:
           # otherwise, use a random number instead. CIRCLE_BUILD_NUM determines where UI test cucumber logs are stored in S3.
           sudo mkdir -p ‘/home/circleci’
           export CIRCLE_BUILD_NUM=${DRONE_BUILD_NUMBER:-$RANDOM$RANDOM}
-          export CIRCLE_TEST_REPORTS=/home/circleci/test_reports
-          export CIRCLE_ARTIFACTS=/home/circleci/artifacts
-          sudo mkdir -p $CIRCLE_TEST_REPORTS/cucumber
-          sudo mkdir -p $CIRCLE_ARTIFACTS    
+          export CI_TEST_REPORTS=/home/circleci/test_reports
+          export CI_ARTIFACTS=/home/circleci/artifacts
+          sudo mkdir -p $CI_TEST_REPORTS/cucumber
+          sudo mkdir -p $CI_ARTIFACTS    
       shell: bash   
