@@ -33,7 +33,7 @@ export const ItemRow: React.FunctionComponent<ItemRowProps> = ({
   openFunction,
 }) => {
   return (
-    <div className={moduleStyles.row}>
+    <div className={moduleStyles.row} id={`uitest-file-${item.id}-row`}>
       <div className={moduleStyles.label} onClick={() => openFunction(item.id)}>
         <IconComponent item={item} />
         <NameComponent item={item} />
@@ -42,8 +42,12 @@ export const ItemRow: React.FunctionComponent<ItemRowProps> = ({
         <PopUpButton
           iconName="ellipsis-v"
           className={moduleStyles['button-kebab']}
+          id={`uitest-file-${item.id}-kebab`}
         >
-          <span className={moduleStyles['button-bar']}>
+          <span
+            className={moduleStyles['button-bar']}
+            id={`uitest-file-${item.id}-popup`}
+          >
             {dropdownOptions.map(
               ({condition, iconName, labelText, clickHandler}) =>
                 condition && (
