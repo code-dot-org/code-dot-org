@@ -161,7 +161,8 @@ button.buttonFlex {
   flex: 1;
 }
 
-.buttonsContainer a.teacherAndSignedOutLearnMoreButton, .wideCardButtonsContainer a.teacherAndSignedOutLearnMoreButton {
+.buttonsContainer a.teacherAndSignedOutLearnMoreButton,
+.wideCardButtonsContainer a.teacherAndSignedOutLearnMoreButton {
   display: none;
   text-align: center;
   padding-top: 0;
@@ -195,10 +196,6 @@ button.buttonFlex {
     }
   }
 
-  p.wideCardDescription {
-    display: none;
-  }
-
   .wideCardButtonsContainer a.teacherAndSignedOutLearnMoreButton {
     display: block;
   }
@@ -212,7 +209,8 @@ button.buttonFlex {
 
 .wideCard {
   display: flex;
-  height: 305px;
+  flex-direction: row;
+  height: auto;
   align-items: flex-start;
   gap: 10px;
   flex: 1 0 0;
@@ -220,23 +218,29 @@ button.buttonFlex {
   border-radius: 4px;
   border: 1px solid $neutral_dark;
   background: $neutral_white;
-}
 
-.wideCardImg {
-  height: 305px;
-  width: 50%;
-  object-fit: cover;
-  border-radius: $border-radius $border-radius 0 0;
-}
+  img {
+    min-height: 320px;
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    border-radius: $border-radius $border-radius 0 0;
+  }
 
-.wideCardContentAndButtons {
-  display: flex;
-  padding: 16px 24px 20px 14px;
-  flex-direction: column;
-  gap: 16px;
-  flex: 1 0 0;
-  height: 269px;
-  justify-content: space-between;
+  .curriculumInfoContainer {
+    display: flex;
+    padding: 16px 24px 20px 14px;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1 0 0;
+    min-height: 269px;
+    justify-content: space-between;
+    border: none;
+
+    h4 {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .wideCardContent {
@@ -246,23 +250,11 @@ button.buttonFlex {
   align-self: stretch;
 }
 
-.wideCardButtonsContainer {
-  display: flex;
+.wideCard .buttonsContainer {
   align-items: flex-start;
   flex-direction: row;
   gap: 12px;
   align-self: stretch;
-
-  button,
-  a,
-  a:link,
-  a:visited {
-    margin: 0;
-    height: 40px;
-    font-size: 1em;
-    line-height: 38px;
-  }
-
 }
 
 p.wideCardDescription {
@@ -271,9 +263,9 @@ p.wideCardDescription {
 
 .wideCardAspects {
   display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-gap: 8px;
-align-self: stretch;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
 }

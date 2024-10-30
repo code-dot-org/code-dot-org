@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import {concat, intersection} from 'lodash';
 import PropTypes from 'prop-types';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {createPortal} from 'react-dom';
 import {connect} from 'react-redux';
 
@@ -205,6 +205,20 @@ const CustomizableCurriculumCatalogCard = ({
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
   const isTeacherOrSignedOut = isSignedOut || isTeacher;
 
+  const disallowWideViewThreshold = 640;
+  const [disallowWideView, setDisallowWideView] = useState(
+    window.innerWidth <= disallowWideViewThreshold
+  );
+
+  useEffect(() => {
+    const onResize = () =>
+      setDisallowWideView(window.innerWidth <= disallowWideViewThreshold);
+    window.addEventListener('resize', onResize);
+    return () => {
+      window.removeEventListener('resize', onResize);
+    };
+  }, []);
+
   const handleClickAssign = cardType => {
     setIsAssignDialogOpen(true);
     analyticsReporter.sendEvent(
@@ -255,123 +269,55 @@ const CustomizableCurriculumCatalogCard = ({
     }
   };
 
-  if (wide) {
-    return (
-      <div className={style.cardsContainer}>
-        <div className={style.wideCard}>
-          <img
-            src={imageSrc}
-            alt={imageAltText}
-            className={style.wideCardImg}
-          />
-          <div className={style.wideCardContentAndButtons}>
-            <div className={style.wideCardContent}>
-              {<CardLabels subjectsAndTopics={subjectsAndTopics} />}
-              <Heading4>{courseDisplayName}</Heading4>
-              <BodyThreeText className={style.wideCardDescription}>
-                {description}
-              </BodyThreeText>
-              <div className={style.wideCardAspects}>
-                <div className={style.iconWithDescription}>
-                  <FontAwesome icon="user" className="fa-solid" />
-                  <p>{gradeRange}</p>
-                </div>
-                <div className={style.iconWithDescription}>
-                  <FontAwesome icon="clock" className="fa-solid" />
-                  <p>{duration}</p>
-                </div>
-              </div>
+  const isWide = wide && !disallowWideView;
+
+  const getCurriculumInfo = () => {
+    if (isWide) {
+      return (
+        <div className={style.wideCardContent}>
+          <CardLabels subjectsAndTopics={subjectsAndTopics} />
+          <Heading4>{courseDisplayName}</Heading4>
+          <BodyThreeText className={style.wideCardDescription}>
+            {description}
+          </BodyThreeText>
+          <div className={style.wideCardAspects}>
+            <div className={style.iconWithDescription}>
+              <FontAwesome icon="user" className="fa-solid" />
+              <p>{gradeRange}</p>
             </div>
-            <div
-              className={classNames(
-                style.wideCardButtonsContainer,
-                isEnglish
-                  ? style.buttonsContainer_english
-                  : style.buttonsContainer_notEnglish
-              )}
-            >
-              {onQuickViewClick && (
-                <Button
-                  color="gray"
-                  type="secondary"
-                  size="m"
-                  onClick={onQuickViewClick}
-                  aria-label={quickViewButtonDescription}
-                  text={i18n.quickView()}
-                  className={`${style.buttonFlex} ${style.quickViewButton}`}
-                />
-              )}
-              {isTeacherOrSignedOut && (
-                <>
-                  <LinkButton
-                    color="gray"
-                    type="secondary"
-                    size="m"
-                    href={pathToCourse}
-                    aria-label={i18n.learnMoreDescription({
-                      course_name: courseDisplayName,
-                    })}
-                    text={i18n.learnMore()}
-                    className={`${style.buttonFlex} ${style.teacherAndSignedOutLearnMoreButton}`}
-                  />
-                  <Button
-                    color="purple"
-                    type="primary"
-                    size="m"
-                    onClick={() => handleClickAssign('wide-card')}
-                    aria-label={assignButtonDescription}
-                    text={assignButtonText}
-                    className={style.buttonFlex}
-                  />
-                </>
-              )}
-              {!isTeacherOrSignedOut && (
-                <LinkButton
-                  color="purple"
-                  type="primary"
-                  href={pathToCourse}
-                  aria-label={i18n.tryCourseNow({
-                    course_name: courseDisplayName,
-                  })}
-                  text={i18n.tryNow()}
-                  className={`${style.buttonFlex} ${style.studentLearnMoreButton}`}
-                />
-              )}
+            <div className={style.iconWithDescription}>
+              <FontAwesome icon="clock" className="fa-solid" />
+              <p>{duration}</p>
             </div>
           </div>
         </div>
-        {isExpanded && (
-          <ExpandedCurriculumCatalogCard
-            courseKey={courseKey}
-            courseDisplayName={courseDisplayName}
-            duration={duration}
-            gradeRange={gradeRange}
-            subjectsAndTopics={subjectsAndTopics}
-            deviceCompatibility={deviceCompatibility}
-            description={description}
-            professionalLearningProgram={professionalLearningProgram}
-            video={video}
-            publishedDate={publishedDate}
-            selfPacedPlCourseOfferingPath={selfPacedPlCourseOfferingPath}
-            pathToCourse={pathToCourse}
-            assignButtonOnClick={handleClickAssign}
-            assignButtonDescription={assignButtonDescription}
-            onClose={onQuickViewClick}
-            handleSetExpandedCardKey={handleSetExpandedCardKey}
-            isInUS={isInUS}
-            imageSrc={imageSrc}
-            imageAltText={imageAltText}
-            availableResources={availableResources}
-            isSignedOut={isSignedOut}
-            isTeacher={isTeacher}
-            recommendedSimilarCurriculum={recommendedSimilarCurriculum}
-            recommendedStretchCurriculum={recommendedStretchCurriculum}
-          />
-        )}
-        {isAssignDialogOpen && renderAssignDialog()}
-      </div>
-    );
-  }
+      );
+    } else {
+      return (
+        <div>
+          <div className={style.labelsAndTranslatabilityContainer}>
+            <CardLabels subjectsAndTopics={subjectsAndTopics} />
+            {!isEnglish && isTranslated && (
+              <FontAwesome
+                icon="language"
+                className="fa-solid"
+                title={translationIconTitle}
+              />
+            )}
+          </div>
+          <h4>{courseDisplayName}</h4>
+          <div className={style.iconWithDescription}>
+            <FontAwesome icon="user" className="fa-solid" />
+            <p>{gradeRange}</p>
+          </div>
+          <div className={style.iconWithDescription}>
+            <FontAwesome icon="clock" className="fa-solid" />
+            <p>{duration}</p>
+          </div>
+        </div>
+      );
+    }
+  };
 
   return (
     <div
@@ -385,30 +331,13 @@ const CustomizableCurriculumCatalogCard = ({
             isExpanded ? style.expandedCard : '',
             isEnglish
               ? style.curriculumCatalogCardContainer_english
-              : style.curriculumCatalogCardContainer_notEnglish
+              : style.curriculumCatalogCardContainer_notEnglish,
+            isWide ? style.wideCard : ''
           )}
         >
           <img src={imageSrc} alt={imageAltText} />
           <div className={style.curriculumInfoContainer}>
-            <div className={style.labelsAndTranslatabilityContainer}>
-              <CardLabels subjectsAndTopics={subjectsAndTopics} />
-              {!isEnglish && isTranslated && (
-                <FontAwesome
-                  icon="language"
-                  className="fa-solid"
-                  title={translationIconTitle}
-                />
-              )}
-            </div>
-            <h4>{courseDisplayName}</h4>
-            <div className={style.iconWithDescription}>
-              <FontAwesome icon="user" className="fa-solid" />
-              <p>{gradeRange}</p>
-            </div>
-            <div className={style.iconWithDescription}>
-              <FontAwesome icon="clock" className="fa-solid" />
-              <p>{duration}</p>
-            </div>
+            {getCurriculumInfo()}
             <div
               className={classNames(
                 style.buttonsContainer,

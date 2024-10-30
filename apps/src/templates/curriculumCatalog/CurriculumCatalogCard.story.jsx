@@ -56,3 +56,10 @@ NoLabelsCard.storyName = 'CurriculumCatalogCard – No Labels';
 export const WideCard = Template.bind({});
 WideCard.args = {...defaultArgs, wide: true};
 WideCard.storyName = 'CurriculumCatalogCard – Wide Card';
+
+export const WideCardLongDescription = Template.bind({});
+WideCardLongDescription.args = {
+  ...defaultArgs,
+  wide: true,
+  description: 'A very long description of this curriculum'.repeat(10),
+};
