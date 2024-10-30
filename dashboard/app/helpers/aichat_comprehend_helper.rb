@@ -3,7 +3,7 @@ module AichatComprehendHelper
   MAX_SEGMENTS_PER_LIST = 10
 
   def self.create_comprehend_client
-    # Stubbed Comprehend allows UI tests (without the roundtrip to the model) to run in CI environments (ie, Drone)
+    # Stubbed Comprehend allows UI tests (without the roundtrip to the model) to run in CI environments
     Rails.application.config.respond_to?(:stub_aichat_aws_services) && Rails.application.config.stub_aichat_aws_services ?
       StubbedComprehendClient.new :
       Aws::Comprehend::Client.new
@@ -72,7 +72,7 @@ module AichatComprehendHelper
   end
 end
 
-# Classes that allow us to stub Comprehend in Drone, which does not have permission to access Comprehend.
+# Classes that allow us to stub Comprehend in CI, which does not have permission to access Comprehend.
 class StubbedComprehendClient
   def detect_toxic_content(__)
     StubbedComprehendResponse.new
