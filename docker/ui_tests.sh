@@ -16,8 +16,8 @@ export RACK_ENV=test
 export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
 # If running on Drone.io, DRONE_BUILD_NUMBER will be set: https://docs.drone.io/reference/environ/drone-build-number/
-# otherwise, use a random number instead. CIRCLE_BUILD_NUM determines where UI test cucumber logs are stored in S3.
-export CIRCLE_BUILD_NUM=${DRONE_BUILD_NUMBER:-$RANDOM$RANDOM}
+# otherwise, use a random number instead. CI_BUILD_NUMBER determines where UI test cucumber logs are stored in S3.
+export CI_BUILD_NUMBER=${DRONE_BUILD_NUMBER:-$RANDOM$RANDOM}
 export CI_TEST_REPORTS=/home/circleci/test_reports
 export CI_ARTIFACTS=/home/circleci/artifacts
 
@@ -26,8 +26,8 @@ mkdir $CI_ARTIFACTS
 # set up locals.yml
 # Need to actually write all the commented out lines also
 echo "
-animations_s3_directory: animations_circle/$CIRCLE_BUILD_NUM
-assets_s3_directory: assets_circle/$CIRCLE_BUILD_NUM
+animations_s3_directory: animations_circle/$CI_BUILD_NUMBER
+assets_s3_directory: assets_circle/$CI_BUILD_NUMBER
 build_apps: true
 build_dashboard: true
 build_i18n: false
@@ -40,9 +40,9 @@ dashboard_enable_pegasus: true
 dashboard_port: 3000
 dashboard_workers: 5
 disable_all_eyes_running: true
-files_s3_directory: files_circle/$CIRCLE_BUILD_NUM
+files_s3_directory: files_circle/$CI_BUILD_NUMBER
 ignore_eyes_mismatches: true
-libraries_s3_directory: libraries_circle/$CIRCLE_BUILD_NUM
+libraries_s3_directory: libraries_circle/$CI_BUILD_NUMBER
 localize_apps: true
 netsim_redis_groups:
 - master: redis://ui-tests-redis:6379
@@ -53,10 +53,10 @@ pegasus_port: 3000
 properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
 saucelabs_authkey: $SAUCE_ACCESS_KEY
 saucelabs_username: $SAUCE_USERNAME
-saucelabs_tunnel_name: cdo-tunnel-$CIRCLE_BUILD_NUM
+saucelabs_tunnel_name: cdo-tunnel-$CI_BUILD_NUMBER
 session_store_server: 'redis://ui-tests-redis:6379/0/session'
 skip_seed_all: true
-sources_s3_directory: sources_circle/$CIRCLE_BUILD_NUM
+sources_s3_directory: sources_circle/$CI_BUILD_NUMBER
 use_my_apps: true
 aiproxy_api_key: 'fake_key'
 " >> locals.yml
