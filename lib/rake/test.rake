@@ -428,7 +428,7 @@ timed_task_with_logging test: ['test:changed']
 # Some files are so fundamental to our test runner(s) that changes to them
 # should cause us to run all tests.
 GLOBS_AFFECTING_EVERYTHING = %w(
-  .circleci/config.yml
+  .drone.yml
   lib/rake/test.rake
 )
 
