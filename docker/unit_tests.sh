@@ -8,6 +8,8 @@ set -e
 
 export CI=true
 export CI_JOB=unit_tests
+export CI_BUILD_NUMBER=${CI_BUILD_NUMBER:-$RANDOM$RANDOM} # determines where test logs are stored in S3.
+export CI_TEST_REPORTS=${CI_TEST_REPORTS:-/home/ci/test_reports}
 
 export RAILS_ENV=test
 export RACK_ENV=test
