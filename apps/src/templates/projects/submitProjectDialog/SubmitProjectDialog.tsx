@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 
 import {showShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import Button from '@cdo/apps/componentLibrary/button/Button';
@@ -90,9 +90,10 @@ const SubmitProjectDialog: React.FunctionComponent<
           />
           <Button
             onClick={onSubmit}
-            type="secondary"
+            type="primary"
             color="white"
             text="Submit"
+            disabled={!projectDescription.trim()}
           />
         </div>
       </div>
