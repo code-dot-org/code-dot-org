@@ -10,7 +10,7 @@ set -e
 ulimit -n 4096
 
 export CI=true
-export CIRCLECI=true
+export CI=true
 export RAILS_ENV=test
 export RACK_ENV=test
 export DISABLE_SPRING=1

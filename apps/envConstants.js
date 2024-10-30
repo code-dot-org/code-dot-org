@@ -34,7 +34,7 @@ module.exports = {
   COVERAGE: getBoolEnv('COVERAGE'),
   // 'unit', 'integration', 'storybook', or 'entry'
   NODE_ENV: process.env.NODE_ENV,
-  CIRCLECI: process.env.CIRCLECI,
+  CI: process.env.CI,
   DRONE: process.env.DRONE,
   CIRCLE_TEST_REPORTS: process.env.CIRCLE_TEST_REPORTS,
   // If set, run webpack dev server (with hot reloading)

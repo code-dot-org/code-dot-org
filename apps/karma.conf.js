@@ -97,7 +97,7 @@ module.exports = function (config) {
     reporters: ['mocha'],
 
     junitReporter: {
-      outputDir: envConstants.CIRCLECI
+      outputDir: envConstants.CI
         ? `${envConstants.CIRCLE_TEST_REPORTS}/apps`
         : '',
       outputFile: `${KARMA_CLI_FLAGS.testType}.xml`,

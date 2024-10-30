@@ -1,7 +1,7 @@
 require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
-require 'cdo/circle_utils'
+require 'cdo/ci_utils'
 require 'cdo/git_utils'
 require 'open-uri'
 require 'json'
@@ -58,23 +58,23 @@ SKIP_EYES = 'skip eyes'.freeze
 namespace :circle do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
   timed_task_with_logging :run_tests do
-    unless CircleUtils.unit_test_container?
+    unless CIUtils.unit_test_container?
       ChatClient.log "Wrong container, skipping"
       next
     end
 
-    if CircleUtils.tagged?(RUN_ALL_TESTS_TAG)
-      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{RUN_ALL_TESTS_TAG}], force-running all tests."
+    if CIUtils.tagged?(RUN_ALL_TESTS_TAG)
+      ChatClient.log "Commit message: '#{CIUtils.git_commit_message}' contains [#{RUN_ALL_TESTS_TAG}], force-running all tests."
       RakeUtils.rake_stream_output 'test:all'
-    elsif CircleUtils.tagged?(RUN_APPS_TESTS_TAG)
-      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{RUN_APPS_TESTS_TAG}], force-running apps tests."
+    elsif CIUtils.tagged?(RUN_APPS_TESTS_TAG)
+      ChatClient.log "Commit message: '#{CIUtils.git_commit_message}' contains [#{RUN_APPS_TESTS_TAG}], force-running apps tests."
       RakeUtils.rake_stream_output 'test:apps'
       RakeUtils.rake_stream_output 'test:changed:all_but_apps'
-    elsif CircleUtils.tagged?(SKIP_APPS_TESTS_FLAG)
-      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_APPS_TESTS_FLAG}], skipping apps tests."
+    elsif CIUtils.tagged?(SKIP_APPS_TESTS_FLAG)
+      ChatClient.log "Commit message: '#{CIUtils.git_commit_message}' contains [#{SKIP_APPS_TESTS_FLAG}], skipping apps tests."
       RakeUtils.rake_stream_output 'test:changed:all_but_apps'
-    elsif CircleUtils.tagged?(SKIP_UNIT_TESTS_TAG)
-      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UNIT_TESTS_TAG}], skipping unit tests."
+    elsif CIUtils.tagged?(SKIP_UNIT_TESTS_TAG)
+      ChatClient.log "Commit message: '#{CIUtils.git_commit_message}' contains [#{SKIP_UNIT_TESTS_TAG}], skipping unit tests."
     else
       RakeUtils.rake_stream_output 'test:changed'
     end
@@ -84,13 +84,13 @@ namespace :circle do
 
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
   timed_task_with_logging :run_ui_tests do
-    unless CircleUtils.ui_test_container?
+    unless CIUtils.ui_test_container?
       ChatClient.log "Wrong container, skipping"
       next
     end
 
-    if CircleUtils.tagged?(SKIP_UI_TESTS_TAG)
-      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
+    if CIUtils.tagged?(SKIP_UI_TESTS_TAG)
+      ChatClient.log "Commit message: '#{CIUtils.git_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
       next
     end
 
@@ -163,13 +163,13 @@ namespace :circle do
   end
 
   timed_task_with_logging :seed_ui_test do
-    unless CircleUtils.ui_test_container?
+    unless CIUtils.ui_test_container?
       ChatClient.log "Wrong container, skipping"
       next
     end
 
-    if CircleUtils.tagged?(SKIP_UI_TESTS_TAG)
-      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
+    if CIUtils.tagged?(SKIP_UI_TESTS_TAG)
+      ChatClient.log "Commit message: '#{CIUtils.git_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
       next
     end
 
@@ -182,16 +182,16 @@ end
 # @return [Array<String>] names of browser configurations for this test run
 def browsers_to_run
   browsers = []
-  browsers << 'Chrome' unless CircleUtils.tagged?(SKIP_CHROME_TAG)
-  browsers << 'Firefox' if CircleUtils.tagged?(TEST_FIREFOX_TAG) || CircleUtils.tagged?(TEST_ALL_BROWSERS_TAG)
-  browsers << 'Safari' if CircleUtils.tagged?(TEST_SAFARI_TAG) || CircleUtils.tagged?(TEST_ALL_BROWSERS_TAG)
-  browsers << 'iPad' if CircleUtils.tagged?(TEST_IPAD_TAG) || CircleUtils.tagged?(TEST_IOS_TAG) || CircleUtils.tagged?(TEST_ALL_BROWSERS_TAG)
-  browsers << 'iPhone' if CircleUtils.tagged?(TEST_IPHONE_TAG) || CircleUtils.tagged?(TEST_IOS_TAG) || CircleUtils.tagged?(TEST_ALL_BROWSERS_TAG)
+  browsers << 'Chrome' unless CIUtils.tagged?(SKIP_CHROME_TAG)
+  browsers << 'Firefox' if CIUtils.tagged?(TEST_FIREFOX_TAG) || CIUtils.tagged?(TEST_ALL_BROWSERS_TAG)
+  browsers << 'Safari' if CIUtils.tagged?(TEST_SAFARI_TAG) || CIUtils.tagged?(TEST_ALL_BROWSERS_TAG)
+  browsers << 'iPad' if CIUtils.tagged?(TEST_IPAD_TAG) || CIUtils.tagged?(TEST_IOS_TAG) || CIUtils.tagged?(TEST_ALL_BROWSERS_TAG)
+  browsers << 'iPhone' if CIUtils.tagged?(TEST_IPHONE_TAG) || CIUtils.tagged?(TEST_IOS_TAG) || CIUtils.tagged?(TEST_ALL_BROWSERS_TAG)
   browsers
 end
 
 def test_eyes?
-  !CircleUtils.tagged?(SKIP_EYES)
+  !CIUtils.tagged?(SKIP_EYES)
 end
 
 def start_sauce_connect

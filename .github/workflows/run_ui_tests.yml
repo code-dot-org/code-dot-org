@@ -74,7 +74,6 @@ jobs:
           DISABLE_SPRING: 1           
           CIRCLE_NODE_INDEX: 1
           CIRCLE_NODE_TOTAL: 1
-          CIRCLECI: true
           LD_LIBRARY_PATH: /usr/local/lib
           CIRCLE_BUILD_NUM: "42:-2323"
           CIRCLE_TEST_REPORTS: /home/circleci/test_reports
@@ -88,7 +87,6 @@ jobs:
           DISABLE_SPRING: 1           
           CIRCLE_NODE_INDEX: 1
           CIRCLE_NODE_TOTAL: 1
-          CIRCLECI: true
           LD_LIBRARY_PATH: /usr/local/lib
           CIRCLE_BUILD_NUM: "42:-2323"
           CIRCLE_TEST_REPORTS: /home/circleci/test_reports

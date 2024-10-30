@@ -41,7 +41,7 @@ build_i18n: true
 # CircleCI environments already override the sources_s3_directory setting to suffix it with the Circle Build number:
 # https://github.com/code-dot-org/code-dot-org/blob/fb53af48ec0598692ed19f340f26d2ed0bd9547b/.circleci/config.yml#L153
 # Detect Circle environment just to be safe.
-sources_s3_directory: sources_test<%=ENV['CIRCLECI'] ? '' : "/#{GitUtils.git_revision_short(root_dir)}"%>
+sources_s3_directory: sources_test<%=ENV['CI'] ? '' : "/#{GitUtils.git_revision_short(root_dir)}"%>
 
 # Disable this for test by default, it won't make much sense if we keep wiping
 # the DB.

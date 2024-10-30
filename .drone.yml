@@ -89,8 +89,8 @@ steps:
       # cache is restored to source directory, so we need to copy it into the right place
       - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
       - rm -rf "$(pwd)/home/circleci/.rbenv"
-      # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
-      - export CIRCLE_SHA1=$DRONE_COMMIT
+      # Depended on by CIUtils: https://github.com/code-dot-org/code-dot-org/blob/33b79dac1c417e227ac2eb014afcc2505bac7ddb/lib/cdo/ci_utils.rb/#L19-L20
+      - export GIT_COMMIT=$DRONE_COMMIT
       - EXIT_CODE=0
       - /entrypoint.sh docker/unit_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
@@ -214,8 +214,8 @@ steps:
       - sudo chown -R circleci:circleci .
       # cache is restored to source directory, so we need to copy it into the right place
       - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
-      # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
-      - export CIRCLE_SHA1=$DRONE_COMMIT
+      # Depended on by CIUtils: https://github.com/code-dot-org/code-dot-org/blob/33b79dac1c417e227ac2eb014afcc2505bac7ddb/lib/cdo/ci_utils.rb/#L19-L20
+      - export GIT_COMMIT=$DRONE_COMMIT
       - EXIT_CODE=0
       - /entrypoint.sh docker/ui_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
@@ -289,6 +289,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 8551f3e768d263e92bb0c8060de2b6bfd8cf939aa31c52047621485746726d16
+hmac: 0c10a1223484940743c685e1f5ff7812233ae1ffc70c839e0c57e25de5491394
 
 ...

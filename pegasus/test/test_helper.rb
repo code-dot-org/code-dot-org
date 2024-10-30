@@ -4,7 +4,7 @@ require_relative '../../shared/test/capture_queries'
 
 # Set up JUnit output for Circle
 reporters = [Minitest::Reporters::SpecReporter.new]
-if ENV['CIRCLECI']
+if ENV['CI']
   reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CIRCLE_TEST_REPORTS', nil)}/pegasus")
 end
 # Skip this if the tests are run in RubyMine

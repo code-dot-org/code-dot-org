@@ -2,7 +2,7 @@ require_relative '../../shared/test/common_test_helper'
 
 # Set up JUnit output for Circle
 reporters = [Minitest::Reporters::SpecReporter.new]
-if ENV['CIRCLECI']
+if ENV['CI']
   reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CIRCLE_TEST_REPORTS', nil)}/lib")
 end
 # Skip this if the tests are run in RubyMine

@@ -23,7 +23,7 @@ require 'yaml'
 
 # Set up JUnit output for Circle
 reporters = []
-if ENV['CIRCLECI']
+if ENV['CI']
   reporters << Minitest::Reporters::ProgressReporter.new
   reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CIRCLE_TEST_REPORTS', nil)}/bin")
 else
@@ -45,7 +45,7 @@ module MiniTest
 
   class Spec
     before do
-      if ENV['CIRCLECI']
+      if ENV['CI']
         $stdout.stubs(:print)
         $stdout.stubs(:puts)
         $stdout.stubs(:warn)
