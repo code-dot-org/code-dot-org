@@ -69,5 +69,5 @@ bundle install --quiet
 bundle exec rake install
 bundle exec rake build
 
-bundle exec rake circle:seed_ui_test
-bundle exec rake circle:run_ui_tests
+bundle exec rake ci:seed_ui_test
+bundle exec rake ci:run_ui_tests

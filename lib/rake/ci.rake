@@ -53,7 +53,7 @@ TEST_ALL_BROWSERS_TAG = 'test all browsers'.freeze
 TEST_EYES = 'test eyes'.freeze
 SKIP_EYES = 'skip eyes'.freeze
 
-namespace :circle do
+namespace :ci do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
   timed_task_with_logging :run_tests do
     unless CIUtils.unit_test_container?

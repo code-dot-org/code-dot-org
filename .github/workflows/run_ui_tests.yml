@@ -77,7 +77,7 @@ jobs:
           CI_BUILD_NUMBER: ${{ github.run_id }}
           CI_TEST_REPORTS: /home/ci/test_reports
           CI_ARTIFACTS: /home/ci/artifacts
-        run: bundle exec rake circle:seed_ui_test --trace   
+        run: bundle exec rake ci:seed_ui_test --trace   
       - name: Rake run UI tests
         env: 
           CI: true
@@ -89,4 +89,4 @@ jobs:
           CI_BUILD_NUMBER: ${{ github.run_id }}
           CI_TEST_REPORTS: /home/ci/test_reports
           CI_ARTIFACTS: /home/ci/artifacts
-        run: bundle exec rake circle:run_ui_tests --trace
+        run: bundle exec rake ci:run_ui_tests --trace

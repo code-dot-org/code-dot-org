@@ -45,4 +45,4 @@ bundle install --quiet
 bundle exec rake install
 bundle exec rake build
 bundle exec ruby tools/hooks/lint.rb origin/$CI_BASE_BRANCH $CI_HEAD_BRANCH
-bundle exec rake circle:run_tests
+bundle exec rake ci:run_tests
