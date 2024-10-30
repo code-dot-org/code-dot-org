@@ -156,6 +156,10 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
         PLATFORMS.BOTH
       );
     } else {
+      const name = schoolsList.find(school => school.value === schoolId)?.text;
+      if (name) {
+        setSchoolName(name);
+      }
       analyticsReporter.sendEvent(
         EVENTS.SCHOOL_SELECTED_FROM_LIST,
         {
@@ -164,7 +168,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
         PLATFORMS.BOTH
       );
     }
-  }, [schoolId]);
+  }, [schoolId, schoolsList]);
 
   // Handle schoolName changes
   useEffect(() => {
