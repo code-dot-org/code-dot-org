@@ -52,7 +52,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   const finishAccountUrl = isTeacher
     ? '/users/new_sign_up/finish_teacher_account'
     : '/users/new_sign_up/finish_student_account';
-  cookies.set(COOKIE_SIGN_UP_URL, finishAccountUrl);
+  cookies.set(COOKIE_SIGN_UP_URL, finishAccountUrl, {path: '/'});
 
   useEffect(() => {
     // If the user hasn't selected a user type, redirect them back to the first step of signup.
