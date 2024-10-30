@@ -32,7 +32,7 @@ steps:
 
         Running on hostname: $hostname
         
-        To ssh into this drone instance, wait until the 'unit-tests' step starts and run:
+        To "ssh" into this drone instance, wait until the 'unit-tests' step starts and run:
         bin/drone/shell $hostname
         EOF
 
@@ -160,7 +160,7 @@ steps:
 
         Running on hostname: $hostname
         
-        To ssh into this drone instance, wait until the 'ui-tests' step starts and run:
+        To "ssh" into this drone instance, wait until the 'ui-tests' step starts and run:
         bin/drone/shell $hostname
         EOF
 
@@ -305,6 +305,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 0a3814af08b5af2895320c7037d5307054cb1311dfe30b949a0555f484b0916f
+hmac: 430a51f1075b3153a899577c120366cafc483eabe1f470ca283717129b602bd3
 
 ...
