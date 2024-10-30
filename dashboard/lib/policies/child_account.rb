@@ -156,6 +156,7 @@ class Policies::ChildAccount
 
       return true
     else
+      return !conditionally_school_managed?(user) if CONDITIONALLY_SCHOOL_OWNED_TYPES.include?(user.provider)
       SCHOOL_OWNED_TYPES.exclude?(user.provider)
     end
   end

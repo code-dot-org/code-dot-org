@@ -500,6 +500,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
   test '.personal_account?' do
     # [User traits, Expected result from personal_account?]
     test_matrix = [
+      # Migrated
       [[:student], true], # Has email auth option and password by default
       [[:student, :with_clever_authentication_option, :without_email_auth_option, :without_encrypted_password], false],
       [[:student, :with_lti_auth, :without_email_auth_option, :without_encrypted_password], false],
@@ -510,6 +511,14 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :without_encrypted_password, {roster_synced: true}], false],
       [[:student, :with_google_authentication_option, :without_email_auth_option, :without_encrypted_password, :in_google_section], false],
       [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :without_encrypted_password, :in_email_section], false],
+      # Unmigrated
+      [[:student, :without_email_auth_option, :demigrated], true],
+      [[:student, :clever_sso_provider, :without_email_auth_option, :without_encrypted_password, :demigrated], false],
+      [[:student, :facebook_sso_provider, :without_email_auth_option, :without_encrypted_password, :demigrated], true],
+      [[:student, :google_sso_provider, :without_email_auth_option, :without_encrypted_password, :demigrated], true],
+      [[:student, :google_sso_provider, :without_email_auth_option, :without_encrypted_password, :demigrated, :in_google_section], false],
+      [[:student, :microsoft_v2_sso_provider, :without_email_auth_option, :without_encrypted_password, :demigrated], true],
+      [[:student, :microsoft_v2_sso_provider, :without_email_auth_option, :without_encrypted_password, :in_email_section, :demigrated], false],
     ]
     failures = []
     test_matrix.each do |traits, expected_result|
