@@ -7,7 +7,7 @@ require 'tempfile'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 include TimedTaskWithLogging
 
-namespace :ci do
+namespace :infra do
   # Synchronize the Chef cookbooks to the Chef repo for this environment using Berkshelf.
   timed_task_with_logging :chef_update do
     # Ensure Chef Client is using an up to date TLS/SSL root certificate store from a trusted source (Mozilla via curl.se)
@@ -110,11 +110,11 @@ timed_task_with_logging :ci do
   # to run the build with no other actions.
   desired_task =
     if ENV['CI_ONLY_BUILD']
-      'ci:build'
+      'infra:build'
     elsif rack_env?(:test)
-      'ci:test'
+      'infra:test'
     else
-      'ci:all'
+      'infra:all'
     end
 
   ChatClient.wrap('CI build', backtrace: true) {Rake::Task[desired_task].invoke}

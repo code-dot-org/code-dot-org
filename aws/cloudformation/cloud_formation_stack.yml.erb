@@ -433,7 +433,7 @@ Resources:
         - PolicyName: Daemon
           PolicyDocument:
             Statement:
-              # APIs used by ci:flush_cloudfront_cache task.
+              # APIs used by infra:flush_cloudfront_cache task.
               - Effect: Allow
                 Action:
                   - 'ec2:DescribeInstances'
@@ -455,7 +455,7 @@ Resources:
               - Effect: Allow
                 Action: 'cloudformation:DescribeStackEvents'
                 Resource: !Ref AWS::StackId
-              # Update Stack through `ci:deploy_stack` task.
+              # Update Stack through `infra:deploy_stack` task.
               - Effect: Allow
                 Action:
                   - 'cloudformation:UpdateStack'
