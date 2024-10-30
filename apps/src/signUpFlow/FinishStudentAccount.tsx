@@ -182,6 +182,7 @@ const FinishStudentAccount: React.FunctionComponent<{
 
   const submitStudentAccount = async () => {
     sendFinishEvent();
+    showErrorCreatingAccountMessage(false);
     setIsSubmitting(true);
 
     const signUpParams = {
@@ -226,13 +227,15 @@ const FinishStudentAccount: React.FunctionComponent<{
         </div>
         {errorCreatingAccountMessage && (
           <div className={style.errorSigningUpMessage}>
-            <FontAwesomeV6Icon
-              iconName={'circle-xmark'}
-              className={style.xIcon}
-            />
-            <BodyThreeText className={style.errorMessageText}>
-              <SafeMarkdown markdown={locale.error_signing_up_message()} />
-            </BodyThreeText>
+            <div className={style.errorMessageWithXMark}>
+              <FontAwesomeV6Icon
+                iconName={'circle-xmark'}
+                className={style.xIcon}
+              />
+              <BodyThreeText className={style.errorMessageText}>
+                <SafeMarkdown markdown={locale.error_signing_up_message()} />
+              </BodyThreeText>
+            </div>
             <CloseButton
               onClick={() => showErrorCreatingAccountMessage(false)}
               aria-label={locale.error_signing_up_message_aria_label()}
