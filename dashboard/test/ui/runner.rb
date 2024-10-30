@@ -173,7 +173,7 @@ def parse_options
       opts.on("-m", "--maximize", "Maximize local webdriver window on startup") do
         options.maximize = true
       end
-      opts.on("--circle", "Whether is CircleCI (skip failing Circle tests)") do
+      opts.on("--ci", "Whether is CI (skip failing CI tests)") do
         options.is_circle = true
       end
       opts.on("--html", "Use html reporter") do
