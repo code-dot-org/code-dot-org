@@ -60,7 +60,7 @@ const FinishStudentAccount: React.FunctionComponent<{
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorCreatingAccountMessage, showErrorCreatingAccountMessage] =
-    useState(true);
+    useState(false);
 
   useEffect(() => {
     // If the user hasn't selected a user type or login type, redirect them back to the incomplete step of signup.
