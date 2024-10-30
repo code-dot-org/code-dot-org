@@ -20,7 +20,7 @@ services:
       - 6379
 
 steps:
-  - name: info
+  - name: bin/drone/shell
     image: curlimages/curl
     commands:
       - set +x
@@ -29,7 +29,7 @@ steps:
       - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
       - |
         cat <<EOF
-        
+
         Running on hostname: $hostname
         
         To ssh into this drone instance, wait until the 'unit-tests' step starts and run:
@@ -148,7 +148,7 @@ services:
       - 6379
 
 steps:
-  - name: info
+  - name: bin/drone/shell
     image: curlimages/curl
     commands:
       - set +x
