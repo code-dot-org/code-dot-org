@@ -1,12 +1,23 @@
 #!/bin/sh
 
-# Usage: bin/drone/shell ec2-34-201-165-204.us-west-2.compute.amazonaws.com
-#
-# 1. Hostname is printed by the "Info" step of the drone build
-# 2. Run only when drone is in either the unit->`unit-tests`  or ui->`ui-tests` step
-#    depending on which you want to debug. Running too early will not work.
-# 3. You must have configured an ~/.ssh/config Host entry for gateway.code.org, and it
-#    must have gateway as an alias
+USAGE="
+SSH's you into a live drone build, for interactive debugging.
+
+Usage: bin/drone/shell ec2-34-201-165-204.us-west-2.compute.amazonaws.com
+
+Notes:
+  1. Hostname is printed by the \"Info\" step of the drone build.
+  2. Run only when drone is in either the unit->\`unit-tests\` or ui->\`ui-tests\` step,
+     depending on which you want to debug. Running too early will not work.
+  3. You must have configured an ~/.ssh/config Host entry for gateway.code.org, and it
+     must have gateway as an alias.
+"
+
+# Print usage note if num command-line args != 1
+if [ "$#" -ne 1 ]; then
+  cat <<< "$USAGE"
+  exit 1
+fi
 
 if ! ssh -G gateway | grep 'hostname gateway.code.org' >/dev/null; then
   echo "WARNING: no gateway alias found in ~/.ssh/config. Please setup a Host entry for gateway.code.org per:"
