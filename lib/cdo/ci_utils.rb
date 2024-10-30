@@ -1,7 +1,7 @@
 require 'set'
 
-CIRCLE_NODE_TOTAL = ENV['CIRCLE_NODE_TOTAL'].to_i
-CI_JOB = ENV['CI_JOB'].to_i
+CIRCLE_NODE_TOTAL = ENV.fetch('CIRCLE_NODE_TOTAL', 0)
+CI_JOB = ENV.fetch('CI_JOB', nil)
 
 module CIUtils
   # Checks the HEAD commit for the current circle build for the specified tag,
