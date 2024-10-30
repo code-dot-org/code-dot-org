@@ -1,7 +1,7 @@
 require 'set'
 
 CIRCLE_NODE_TOTAL = ENV['CIRCLE_NODE_TOTAL'].to_i
-CIRCLE_NODE_INDEX = ENV['CIRCLE_NODE_INDEX'].to_i
+CI_JOB = ENV['CI_JOB'].to_i
 
 module CIUtils
   # Checks the HEAD commit for the current circle build for the specified tag,
@@ -20,11 +20,11 @@ module CIUtils
   end
 
   def self.unit_test_container?
-    CIRCLE_NODE_TOTAL == 1 || CIRCLE_NODE_INDEX == 0
+    CIRCLE_NODE_TOTAL == 1 || CI_JOB == "unit_tests"
   end
 
   def self.ui_test_container?
-    CIRCLE_NODE_TOTAL == 1 || CIRCLE_NODE_INDEX == 1
+    CIRCLE_NODE_TOTAL == 1 || CI_JOB == "ui_tests"
   end
 
   def self.running_on_ci?

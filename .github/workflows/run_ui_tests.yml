@@ -72,7 +72,7 @@ jobs:
           RAILS_ENV: test
           RACK_ENV: test
           DISABLE_SPRING: 1           
-          CIRCLE_NODE_INDEX: 1
+          CI_JOB: ui_tests
           CIRCLE_NODE_TOTAL: 1
           LD_LIBRARY_PATH: /usr/local/lib
           CIRCLE_BUILD_NUM: "42:-2323"
@@ -85,7 +85,7 @@ jobs:
           RAILS_ENV: test
           RACK_ENV: test
           DISABLE_SPRING: 1           
-          CIRCLE_NODE_INDEX: 1
+          CI_JOB: ui_tests
           CIRCLE_NODE_TOTAL: 1
           LD_LIBRARY_PATH: /usr/local/lib
           CIRCLE_BUILD_NUM: "42:-2323"
