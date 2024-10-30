@@ -103,11 +103,7 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
         {iconLeft && (
           <FontAwesomeV6Icon
             {...iconLeft}
-            className={
-              iconLeft.className
-                ? `${iconLeft.className} ${moduleStyles.iconLeft}`
-                : moduleStyles.iconLeft
-            }
+            className={classNames(moduleStyles.iconLeft, iconLeft.className)}
           />
         )}
         <select
