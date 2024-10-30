@@ -93,35 +93,46 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     []
   );
 
+  const handleSessionStorage = (
+    key: string,
+    value: string,
+    callback?: () => void
+  ) => {
+    if (sessionStorage.getItem(key) !== value) {
+      sessionStorage.setItem(key, value);
+      if (callback) {
+        callback();
+      }
+    }
+  };
+
+  const {country, schoolId, schoolZip, schoolName, schoolsList} = state;
+
   // Handle country changes
   useEffect(() => {
-    sessionStorage.setItem(SCHOOL_COUNTRY_SESSION_KEY, country);
-
-    if (mounted.current && country) {
+    handleSessionStorage(SCHOOL_COUNTRY_SESSION_KEY, country, () => {
       analyticsReporter.sendEvent(
         EVENTS.COUNTRY_SELECTED,
         {country},
         PLATFORMS.BOTH
       );
-    }
+    });
   }, [country]);
 
   // Handle schoolZip changes
   useEffect(() => {
     if (!ZIP_REGEX.test(schoolZip)) {
-      sessionStorage.setItem(SCHOOL_ZIP_SESSION_KEY, '');
+      handleSessionStorage(SCHOOL_ZIP_SESSION_KEY, '');
       return;
     }
 
-    if (sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY) !== schoolZip) {
-      sessionStorage.setItem(SCHOOL_ZIP_SESSION_KEY, schoolZip);
-
+    handleSessionStorage(SCHOOL_ZIP_SESSION_KEY, schoolZip, () => {
       analyticsReporter.sendEvent(
         EVENTS.ZIP_CODE_ENTERED,
         {zip: schoolZip},
         PLATFORMS.BOTH
       );
-    }
+    });
 
     fetchSchools(schoolZip, data => {
       if (!mounted.current) return;
@@ -129,6 +140,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
       const schools = data
         .map(constructSchoolOption)
         .sort((a, b) => a.text.localeCompare(b.text));
+
       setSchoolsList(schools);
 
       // this will auto select the school from the fetched list of schools if the user is updating their school info
@@ -140,9 +152,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
 
   // Handle schoolId changes
   useEffect(() => {
-    sessionStorage.setItem(SCHOOL_ID_SESSION_KEY, schoolId);
-    if (!mounted.current) return;
-
+    handleSessionStorage(SCHOOL_ID_SESSION_KEY, schoolId);
     if (schoolId === NonSchoolOptions.NO_SCHOOL_SETTING) {
       setSchoolName('');
       analyticsReporter.sendEvent(
@@ -174,7 +184,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
 
   // Handle schoolName changes
   useEffect(() => {
-    sessionStorage.setItem(SCHOOL_NAME_SESSION_KEY, schoolName);
+    handleSessionStorage(SCHOOL_NAME_SESSION_KEY, schoolName);
   }, [schoolName]);
 
   // Manage mounted state
