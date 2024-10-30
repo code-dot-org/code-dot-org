@@ -144,12 +144,14 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     if (!mounted.current) return;
 
     if (schoolId === NonSchoolOptions.NO_SCHOOL_SETTING) {
+      setSchoolName('');
       analyticsReporter.sendEvent(
         EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED,
         {},
         PLATFORMS.BOTH
       );
     } else if (schoolId === NonSchoolOptions.CLICK_TO_ADD) {
+      setSchoolName('');
       analyticsReporter.sendEvent(
         EVENTS.ADD_MANUALLY_CLICKED,
         {},
