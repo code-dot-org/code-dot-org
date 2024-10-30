@@ -20,7 +20,8 @@ import {setShowLockedFilesBanner} from '../../../redux/workspaceRedux';
  * as validation will only be shown if there is no validation file in the project.
  * @param file - The ProjectFile object representing the file for which options are generated.
  * @param hasValidationFile - Whether the file has a corresponding validation file.
- * @returns An array of objects representing the context menu options.
+ * @returns In start mode, an array of objects representing the context menu options.
+ *   If not in start mode, returns an empty array.
  *   Each object has the following properties:
  *     - `condition`:  A boolean that determines if the option should be displayed.
  *     - `iconName`: The name of the icon to display for the option.
