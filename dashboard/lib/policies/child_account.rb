@@ -138,7 +138,9 @@ class Policies::ChildAccount
     if user.migrated?
       # Email + password logins are always personal logins.
       return true if user.encrypted_password.present?
+
       ao_providers = Set.new(user.authentication_options.pluck(:credential_type))
+      return true if ao_providers.empty?
 
       # Email and Facebook are always personal logins.
       return true if ao_providers.intersect?(PERSONAL_LOGIN_TYPES)
