@@ -566,3 +566,22 @@ span {
     font-weight: 700;
   }
 }
+
+.errorSigningUpMessage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: $light_negative_100;
+  padding: 0.625rem 0.75rem;
+  gap: 0.625rem;
+  border-radius: 0.25rem;
+
+  .xIcon {
+    color: $light_negative_500;
+    font-size: 0.875rem;
+  }
+
+  .errorMessageText {
+    margin-top: 1px;
+  }
+}
