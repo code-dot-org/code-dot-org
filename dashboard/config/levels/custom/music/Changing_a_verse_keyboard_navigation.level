@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "##Create a verse\r\n\r\nTurn on keyboard navigation again in the workspace using **Shift+Control+K.**\r\n\r\nUse **WASD** to move between code blocks. \r\n\r\nIf you are at the top of the block stack, you can press **D** to select the entire stack. Only when the entire stack is selected will you be able to jump between different code sections. \r\n\r\nThen use **WASD** to move into the intro block and add a new song.\r\n\r\nThen run using  **Space bar ** and  **Continue ** using  **Shift+Tab **.\r\n\r\n",
+    "long_instructions": "##Create a verse\r\n\r\nTurn on keyboard navigation again in the workspace using **Shift+Control+K.**\r\n\r\nUse **WASD** to move between code blocks. \r\n\r\nIf you are at the top of the block stack, you can press **D** to select the entire stack. Only when the entire stack is selected will you be able to jump between different code sections. \r\n\r\nThen use **WASD** to move into the intro block and add a new song.\r\n\r\nThen run using  **Space bar** and  **Continue** using  **Shift+Tab**.\r\n\r\n",
     "offer_browser_tts": "false",
     "hide_share_and_remix": "false",
     "level_data": {
@@ -182,9 +182,10 @@
         ]
       }
     },
+    "use_secondary_finish_button": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-23 18:14:26 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 18:15:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 20:47:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-23 18:14:26 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 18:15:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 20:47:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-29 15:17:36 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-29 15:18:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

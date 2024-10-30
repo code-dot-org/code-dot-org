@@ -9,6 +9,7 @@ import {
 import {
   ComponentSizeXSToL,
   DropdownColor,
+  DropdownFormFieldRelatedProps,
 } from '@cdo/apps/componentLibrary/common/types';
 import CustomDropdown, {
   _CustomDropdownOption,
@@ -23,7 +24,9 @@ export interface IconDropdownOption extends _CustomDropdownOption {
   icon: FontAwesomeV6IconProps;
 }
 
-export interface IconDropdownProps extends AriaAttributes {
+export interface IconDropdownProps
+  extends DropdownFormFieldRelatedProps,
+    AriaAttributes {
   /** IconDropdown name.
    * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
   name: string;
@@ -35,6 +38,8 @@ export interface IconDropdownProps extends AriaAttributes {
   size: ComponentSizeXSToL;
   /** IconDropdown disabled state */
   disabled?: boolean;
+  /** IconDropdown readOnly state */
+  readOnly?: boolean;
   /** IconDropdown label
    * The user-facing label of the dropdown */
   labelText: string;
@@ -57,8 +62,13 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
   selectedOption = {},
   onChange,
   disabled = false,
+  readOnly = false,
   color = dropdownColors.black,
   size = 'm',
+  helperMessage,
+  helperIcon,
+  errorMessage,
+  styleAsFormField = false,
   ...rest
 }) => {
   const {setActiveDropdownName} = useDropdownContext();
@@ -79,9 +89,15 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
       labelText={labelText}
       labelType={labelType}
       disabled={disabled}
+      readOnly={readOnly}
       color={color}
       icon={selectedOption?.icon}
       size={size}
+      helperMessage={helperMessage}
+      helperIcon={helperIcon}
+      errorMessage={errorMessage}
+      styleAsFormField={styleAsFormField}
+      selectedValueText={selectedOption?.label}
       {...rest}
     >
       <div className={moduleStyles.dropdownMenuContainer}>

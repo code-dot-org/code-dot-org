@@ -17,8 +17,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-10-08 01:56:28 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-10-30 00:54:57 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -99,7 +99,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**Why is it important to start a project by first identifying requirements, tasks, and priorities?**\n\nStudents are introduced to the Creative Coding with the Console Project and evaluate requirements and examples to identify questions and key features. Students use the requirements and key features they identify to determine the initial tasks they need to complete and set up their Project Planning Board.",
-        "preparation": "* **(Optional)** Print copies of the U8L1 Guided Notes (one for each student)\n* Print copies of the Unit 8 Guide (one for each student)\n* Print copies of the Creative Coding with the Console Project Planning Guide (one for each student)\n* Gather students' Project Backlog folders from the previous unit and a small stack of sticky notes (10-12) for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-1-project-planning/37951) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Project Planning Guided Notes (one for each student)\n* Print copies of the Unit 8 Guide (one for each student)\n* Print copies of the Creative Coding with the Console Project Planning Guide (one for each student)\n* Gather students' Project Backlog folders from the previous unit and a small stack of sticky notes (10-12) for each student",
         "student_overview": "**Why is it important to start a project by first identifying requirements, tasks, and priorities?**\n\nIn this lesson, you are introduced to the Creative Coding with the Console Project and evaluate requirements and examples to identify questions and key features. You use the requirements and key features you identify to determine the initial tasks you need to complete and set up your Project Planning Board."
       },
       "seeding_key": {
@@ -118,7 +118,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.5\n* Topic Questions 7.5\n* Topic Questions 8.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can I determine the efficiency of an algorithm?**\n\nStudents have learned and practiced implementing standard algorithms to find a target element in a list throughout the year. In this lesson, they realize that they have been using the linear search algorithm to find elements and review how this algorithm is applied to different data structures. Students learn how to use execution counts to determine the best, average, and worst cases and practice evaluating the linear search algorithm to determine its efficiency. Students then write user stories for their Creative Coding with the Console Project to identify required program features.",
-        "preparation": "* **(Optional)** Print copies of the U8L2 Guided Notes (one for each student)\n* Gather or prepare enough cards so that each pair of students can have six cards (actual playing cards, printed cards, or index cards that are numbered)\n* Print copies of the Counting Executions with Code handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-2-searching/37952) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Searching Guided Notes (one for each student)\n* Gather or prepare enough cards so that each pair of students can have six cards (actual playing cards, printed cards, or index cards that are numbered)\n* Print copies of the Counting Executions with Code handout (one for each student)",
         "student_overview": "**How can I determine the efficiency of an algorithm?**\n\nYou have learned and practiced implementing standard algorithms to find a target element in a list throughout the year. In this lesson, you realize that you have been using the linear search algorithm to find elements and review how this algorithm is applied to different data structures. You learn how to use execution counts to determine the best, average, and worst cases and practice evaluating the linear search algorithm to determine its efficiency. You then write user stories for your Creative Coding with the Console Project to identify required program features."
       },
       "seeding_key": {
@@ -137,7 +137,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How is a binary search more efficient than a linear search?**\n\nStudents previously learned how to evaluate the linear search algorithm to determine its efficiency using execution counts and identified limitations of this approach to searching. In this lesson, they discover a better searching algorithm that can perform more efficiently if the list is already sorted. Students explore the binary search algorithm to evaluate its efficiency and compare it to the linear search. Students also revisit recursion and explore how the binary search algorithm can be implemented recursively.",
-        "preparation": "* **(Optional)** Print copies of the U8L3 Guided Notes (one for each student)\n* Print copies of the Binary Search handout (one for each pair of students)\n* Gather or prepare enough cards so that each pair of students can have five cards (actual playing cards, printed cards, or index cards that are numbered)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-3-binary-search/37953) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Binary Search Guided Notes (one for each student)\n* Print copies of the Binary Search handout (one for each pair of students)\n* Gather or prepare enough cards so that each pair of students can have five cards (actual playing cards, printed cards, or index cards that are numbered)",
         "student_overview": "**How is a binary search more efficient than a linear search?**\n\nYou previously learned how to evaluate the linear search algorithm to determine its efficiency using execution counts and identified limitations of this approach to searching. In this lesson, you discover a better searching algorithm that can perform more efficiently if the list is already sorted. You explore the binary search algorithm to evaluate its efficiency and compare it to the linear search. You also revisit recursion and explore how the binary search algorithm can be implemented recursively."
       },
       "seeding_key": {
@@ -156,7 +156,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How can I sort elements in a data structure?**\n\nIn this lesson, students learn about the selection sort algorithm. After investigating a program using the selection sort algorithm to sort a list of values, they explore its functionality using manipulatives and evaluate its efficiency using execution counts. Students then identify the benefits and limitations of the selection sort algorithm and scenarios where a selection sort would be useful to sort a list of values.",
-        "preparation": "* **(Optional)** Print copies of the U8L4 Guided Notes (one for each student)\n* Review the Selection Sort Activity Setup resource\n* Gather five cups and prepare sticky note manipulatives for each group of students\n* Print copies of the Selection Sort handout (one for each group of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-4-selection-sort/37954) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Selection Sort Guided Notes (one for each student)\n* Review the Selection Sort Activity Setup resource\n* Gather five cups and prepare sticky note manipulatives for each group of students\n* Print copies of the Selection Sort handout (one for each group of students)",
         "student_overview": "**How can I sort elements in a data structure?**\n\nIn this lesson, you learn about the selection sort algorithm. After investigating a program using the selection sort algorithm to sort a list of values, you explore its functionality using manipulatives and evaluate its efficiency using execution counts. You then identify the benefits and limitations of the selection sort algorithm and scenarios where a selection sort would be useful to sort a list of values."
       },
       "seeding_key": {
@@ -175,7 +175,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How does the insertion sort algorithm compare in efficiency with the selection sort algorithm?**\n\nStudents previously learned about the selection sort algorithm and evaluated its functionality and limitations. In this lesson, they explore the insertion sort algorithm and compare its functionality and efficiency with the selection sort algorithm. Students analyze the efficiency of each algorithm using execution counts and identify the benefits and limitations of both the selection and insertion sort algorithms.",
-        "preparation": "* **(Optional)** Print copies of the U8L5 Guided Notes (one for each student)\n* Print copies of the Sorting Comparison handout (one for each pair of students)\n* Print copies of the Project Planning Feedback handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-5-insertion-sort/37955) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Insertion Sort Guided Notes (one for each student)\n* Print copies of the Sorting Comparison handout (one for each pair of students)\n* Print copies of the Project Planning Feedback handout (one for each student)",
         "student_overview": "**How does the insertion sort algorithm compare in efficiency with the selection sort algorithm?**\n\nYou previously learned about the selection sort algorithm and evaluated its functionality and limitations. In this lesson, you explore the insertion sort algorithm and compare its functionality and efficiency with the selection sort algorithm. You analyze the efficiency of each algorithm using execution counts and identify the benefits and limitations of both the selection and insertion sort algorithms."
       },
       "seeding_key": {
@@ -194,7 +194,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 10.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How does the merge sort algorithm compare in efficiency with the selection and insertion sort algorithms?**\n\nStudents explore the merge sort algorithm to organize elements in a list using a divide-and-conquer approach and identify the components of the algorithm. They learn how the algorithm uses helper functions to implement the divide-and-conquer approach and practice tracing the algorithm to understand its functionality. Students determine its efficiency using execution counts and compare it with the insertion and selection sort algorithms.",
-        "preparation": "* **(Optional)** Print copies of the U8L6 Guided Notes (one for each student)\n* Print copies of the Merge Sort handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-6-merge-sort/37956) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Merge Sort Guided Notes (one for each student)\n* Print copies of the Merge Sort handout (one for each student)",
         "student_overview": "**How does the merge sort algorithm compare in efficiency with the selection and insertion sort algorithms?**\n\nYou explore the merge sort algorithm to organize elements in a list using a divide-and-conquer approach and identify the components of the algorithm. You learn how the algorithm uses helper functions to implement the divide-and-conquer approach and practice tracing the algorithm to understand its functionality. You determine its efficiency using execution counts and compare it with the insertion and selection sort algorithms."
       },
       "seeding_key": {
@@ -213,7 +213,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can I implement searching and sorting algorithms when working multiple lists?**\n\nThroughout the unit, students learned about searching and sorting algorithms and analyzed the efficiency of each. In this lesson, students have an opportunity to apply what they have learned about searching and sorting to work with multiple lists. They review the functionality and ideal scenario for each searching and sorting algorithm and explore how programs work with multiple lists to store different but related values. Students then practice implementing algorithms to traverse multiple lists and use searching and sorting algorithms to find and organize elements in a data structure.",
-        "preparation": "* **(Optional)** Print copies of the U8L7 Guided Notes (one for each student)\n* Preview the *Searching Algorithms* and *Sorting Algorithms* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-7-searching-and-sorting/37957) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Searching and Sorting Guided Notes (one for each student)\n* Preview the *Searching Algorithms* and *Sorting Algorithms* videos",
         "student_overview": "**How can I implement searching and sorting algorithms when working multiple lists?**\n\nThroughout the unit, you learned about searching and sorting algorithms and analyzed the efficiency of each. In this lesson, you have an opportunity to apply what you have learned about searching and sorting to work with multiple lists. You review the functionality and ideal scenario for each searching and sorting algorithm and explore how programs work with multiple lists to store different but related values. You then practice implementing algorithms to traverse multiple lists and use searching and sorting algorithms to find and organize elements in a data structure."
       },
       "seeding_key": {
@@ -231,7 +231,6 @@
       "relative_position": 8,
       "properties": {
         "overview": "Students have worked on their Creative Coding with the Console Project throughout the unit to plan the classes and algorithms they will need to develop and get feedback from their peers on their plans. In this lesson, they review the project requirements and benchmarks and update their Project Planning Boards before beginning development on their projects. Students have an opportunity to get feedback on their initial program code through a code review to help ensure they are on the right track and to emphasize the iterative development process.",
-        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-8-project-development/37958) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "You have worked on your Creative Coding with the Console Project throughout the unit to plan the classes and algorithms you will need to develop and get feedback from your peers on your plans. In this lesson, you review the project requirements and benchmarks and update your Project Planning Board before beginning development on your project. You have an opportunity to get feedback on your initial program code through a code review to help ensure you are on the right track and to emphasize the iterative development process."
       },
       "seeding_key": {
@@ -250,7 +249,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**What are the tradeoffs between the utility of data collection and safeguarding privacy and security?**\n\nIn this lesson, students consider how the apps and programs they use when at home or at school collect data about them, such as their name, address, or favorite TV show. They explore issues related to privacy and security by reading case studies about real-world breaches and debate about the tradeoffs between the utility of data collection and safeguarding privacy and security.",
-        "preparation": "* **(Optional)** Print copies of the U8L9 Guided Notes (one for each student)\n* Print copies of the Data, Privacy, and Security handout (one for each student)\n* Print copies of the Unit 8 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-9-privacy-and-security/37959) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Privacy and Security Guided Notes (one for each student)\n* Print copies of the Data, Privacy, and Security handout (one for each student)\n* Print copies of the Unit 8 Study Guide (one for each student)",
         "student_overview": "**What are the tradeoffs between the utility of data collection and safeguarding privacy and security?**\n\nIn this lesson, you consider how the apps and programs you use when at home or at school collect data about you, such as your name, address, or favorite TV show. You explore issues related to privacy and security by reading case studies about real-world breaches and debate about the tradeoffs between the utility of data collection and safeguarding privacy and security."
       },
       "seeding_key": {
@@ -269,7 +268,6 @@
       "properties": {
         "assessment": true,
         "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents continue to develop their Creative Coding with the Console Project to create a program that portrays a personal interest or solves a problem using the console. Students first self-assess their work to evaluate their progress in completing project requirements, then continue development of your program. They conduct acceptance testing to determine which of their user stories are complete and use the self-assessment and peer feedback to prioritize their remaining tasks. Students use this feedback to finalize development before sharing their projects with their peers to celebrate their successes.",
-        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-10-creative-coding-with-the-console-project/37960) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou continue to develop your Creative Coding with the Console Project to create a program that portrays a personal interest or solves a problem using the console. You first self-assess your work to evaluate your progress in completing project requirements, then continue development of your program. You conduct acceptance testing to determine which of your user stories are complete and use the self-assessment and peer feedback to prioritize your remaining tasks. You use this feedback to finalize development before sharing your project with your peers to celebrate your success."
       },
       "seeding_key": {
@@ -287,7 +285,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**How will I use what I know about 2D arrays and standard algorithms to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock 2D Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
-        "preparation": "* Print copies of the SeatingChart FRQ handout (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the SeatingChart FRQ Scoring Guidelines (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-11-seatingchart-frq/37961) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print copies of the SeatingChart FRQ handout (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the SeatingChart FRQ Scoring Guidelines (one for each student)",
         "student_overview": "**How will I use what I know about 2D arrays and standard algorithms to answer a Free Response Question?**\n\nYou practice developing solutions to AP CSA FRQs on a mock 2D Arrays FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
       },
       "seeding_key": {
@@ -306,7 +304,7 @@
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
-        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-12-unit-8-assessment/37962) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource",
         "student_overview": "Assess your progress through the Unit 8 Assessment."
       },
       "seeding_key": {
@@ -340,7 +338,6 @@
       "properties": {
         "assessment": true,
         "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents continue to develop their Creative Coding with the Console Project to create a program that portrays a personal interest or solves a problem using the Console. Students first self-assess their work to evaluate their progress in completing project requirements, then finish developing their projects. ",
-        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-10-creative-coding-with-the-console-project/37960) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou continue to develop your Creative Coding with the Console Project to create a program that portrays a personal interest or solves a problem using the Console. You first self-assess your work to evaluate your progress in completing project requirements, then finish developing your project. "
       },
       "seeding_key": {
@@ -1332,7 +1329,7 @@
       "key": "8ff96b2a-1f81-4b70-91fc-2fd308b6783e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the method traverses each array one element at a time from first to last. Students also notice that the program displays each element it checks and keeps a count of how many checks it executes. Students may wonder if there is a faster way to search for data.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***linear/sequential search*** and demonstrate using the algorithm with a 1D array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using the algorithm with a 2D array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define the ***best case***, ***average case***, and ***worst case***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the best case for the World's Worst Magician?*\n* *What is the average case for the World's Worst Magician?*\n* *What is the worst case for the World's Worst Magician?*\n\n**Discussion Goal:** Students identify the best case as guessing the card on the first try, and the worst case as the total number of cards. Students suggest values for the average case based on their experience in the warm up activity.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the method traverses each array one element at a time from first to last. Students also notice that the program displays each element it checks and keeps a count of how many checks it executes. Students may wonder if there is a faster way to search for data.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***linear search*** and demonstrate using the algorithm with a 1D array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using the algorithm with a 2D array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define the ***best case***, ***average case***, and ***worst case***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the best case for the World's Worst Magician?*\n* *What is the average case for the World's Worst Magician?*\n* *What is the worst case for the World's Worst Magician?*\n\n**Discussion Goal:** Students identify the best case as guessing the card on the first try, and the worst case as the total number of cards. Students suggest values for the average case based on their experience in the warm up activity.",
         "tips": [
           {
             "type": "teachingTip",
@@ -5512,8 +5509,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U8L1 Guided Notes",
-      "url": "https://docs.google.com/document/d/1_fRd12eD1EBjvHbBLd6XZ114DUBgWcXWGKayXXwEspg/edit?usp=sharing",
+      "name": "[EXEMPLAR] Project Planning Guided Notes",
+      "url": "https://docs.google.com/document/d/1k2hW6m7b0ssEu1L0Nxbvq47dLQ4XVfGuaj5Ktwl7XtU/edit?usp=drive_link",
       "key": "_exemplar_u8l1_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -5525,7 +5522,7 @@
     },
     {
       "name": "[EXEMPLAR] Searching Guided Notes",
-      "url": "https://docs.google.com/document/d/1TNhrfOD0naGpBwX_efXdEwT1iSRb_ziiM1bfyYHi3fw/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1dwOzbLVbC766iYngsL3wmYe2punYca3dDNenKMRvMLA/edit?usp=drive_link",
       "key": "_exemplar_u8l2_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -5536,8 +5533,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U8L3 Guided Notes",
-      "url": "https://docs.google.com/document/d/1H_TolW858JLM1VBlT2BvdUiKtFvd4SX6dsgcTQHn0-A/edit?usp=sharing",
+      "name": "[EXEMPLAR] Binary Search Guided Notes",
+      "url": "https://docs.google.com/document/d/1C6Jma-SXjV7tLAcSyPz9GqFlK_2COJlv_5D9k32sYKg/edit?usp=drive_link",
       "key": "_exemplar_u8l3_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -5548,8 +5545,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U8L4 Guided Notes",
-      "url": "https://docs.google.com/document/d/1rcnGyaXwnu6SRWPAwjzZOZHt_lhLAabWhZDu785LMfc/edit?usp=sharing",
+      "name": "[EXEMPLAR] Selection Sort Guided Notes",
+      "url": "https://docs.google.com/document/d/1oBmFI1Es8hh23D6E7n8e9yk8zazSr4kYwS65W3TX4Ag/edit?usp=drive_link",
       "key": "_exemplar_u8l4_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -5560,8 +5557,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U8L5 Guided Notes",
-      "url": "https://docs.google.com/document/d/1urB517Yg3_UOccmTTiR3DRF32xIAe4G4G98m5SPgq14/edit?usp=sharing",
+      "name": "[EXEMPLAR] Insertion Sort Guided Notes",
+      "url": "https://docs.google.com/document/d/1-ObScfGP5iTChCEGBQ5MCNDkRvEHOCyXmCJz9cKotuo/edit?usp=drive_link",
       "key": "_exemplar_u8l5_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -5572,8 +5569,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U8L6 Guided Notes",
-      "url": "https://docs.google.com/document/d/1g202wb3fjAAmB7PFugqGC6BvzcHh7GYNV4lDCRl6OPk/edit?usp=sharing",
+      "name": "[EXEMPLAR] Merge Sort Guided Notes",
+      "url": "https://docs.google.com/document/d/1p1Bj3VHG6LAMWo_hcDMFf2PLXUiSuahIkxjwAwebEVA/edit?usp=drive_link",
       "key": "_exemplar_u8l6_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -5584,8 +5581,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U8L7 Guided Notes",
-      "url": "https://docs.google.com/document/d/1oRojXmAjHqN5hiSIpbqUYIFKIbk6-0WzBGiy_McQn-4/edit?usp=sharing",
+      "name": "[EXEMPLAR] Searching and Sorting Guided Notes",
+      "url": "https://docs.google.com/document/d/1x24xo1OTXW0PXywJx0cyPpfjmJ92SMKXKFam6Z0g2oM/edit?usp=drive_link",
       "key": "_exemplar_u8l7_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -5596,8 +5593,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U8L9 Guided Notes",
-      "url": "https://docs.google.com/document/d/19yObLBd5HPwDzzJne_VxXDHGZZ5omUnHn7aNymoAoc4/edit?usp=sharing",
+      "name": "[EXEMPLAR] Privacy and Security Guided Notes",
+      "url": "https://docs.google.com/document/d/1ovHR7zkI0hS5Gcy8b5JDN5yrfRsZuzf96AGmlG2GTK0/edit?usp=drive_link",
       "key": "_exemplar_u8l9_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -5608,8 +5605,18 @@
       }
     },
     {
+      "name": "[EXEMPLAR] Unit 8 Guide",
+      "url": "https://docs.google.com/document/d/1OUBibo9bjaM-Q7XWhqQR7twjCOunwhAIBss2jqQfOLU/edit?usp=sharing",
+      "key": "_exemplar_unit_8_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_8_guide"
+      }
+    },
+    {
       "name": "[KEY] Binary Search",
-      "url": "https://docs.google.com/document/d/1csaUTmk69b-TpdBwdMIE16kLp9vFTPzmTi2hgDAvNn4/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1fzKvNgngbnmkUrpRoiffx2M5BTkpxMCZuNV2-vldajo/edit?usp=drive_link",
       "key": "_key_binary_search",
       "properties": {
         "audience": "Verified Teacher",
@@ -5621,7 +5628,7 @@
     },
     {
       "name": "[KEY] Counting Executions with Code",
-      "url": "https://docs.google.com/document/d/1hi96KIqfXl0NX6pddjfueZV8BfajWOqWPm1M55MPRgc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Eo4LWiXC87kH65tWZSESYyfcD9wCxNtLNo0u_GQ8tR4/edit?usp=drive_link",
       "key": "_key_counting_executions_with_code",
       "properties": {
         "audience": "Verified Teacher",
@@ -5633,7 +5640,7 @@
     },
     {
       "name": "[KEY] Data, Privacy, and Security",
-      "url": "https://docs.google.com/document/d/1DbPctw3hptDSLiBBfhf6P3r17niy5ain8j3Qkntp6wQ/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/15O1jOv35V_HGNiQnDPaJoWlVNUGvQi9rgT0NLbA4xt4/edit?usp=drive_link",
       "key": "_key_data_privacy_and_security",
       "properties": {
         "audience": "Verified Teacher",
@@ -5645,7 +5652,7 @@
     },
     {
       "name": "[KEY] Merge Sort",
-      "url": "https://docs.google.com/document/d/1k1owPuozMhxNCCogsrigSK2bnwafDhq1rw8FWhq3-Ko/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/12i1N4oxYxrDr-5QjdN62G-s0fnRMwH008nNrbTxGKMs/edit?usp=drive_link",
       "key": "_key_merge_sort",
       "properties": {
         "audience": "Verified Teacher",
@@ -5669,7 +5676,7 @@
     },
     {
       "name": "[KEY] Selection Sort",
-      "url": "https://docs.google.com/document/d/1H6nMNzlMEyqPnhbxV6D6f5iR_KMZCcWn0EWLGIMg6no/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/16OHB_hEXEVOQQKSdLTU9-QCNulyH2D7jShdJ7mZtLMs/edit?usp=drive_link",
       "key": "_key_selection_sort",
       "properties": {
         "audience": "Verified Teacher",
@@ -5681,7 +5688,7 @@
     },
     {
       "name": "[KEY] Sorting Comparison",
-      "url": "https://docs.google.com/document/d/1QntEkMJ0XIAiv8CDB7kymUjSBg_1zJfqzIcRpgQzDP0/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1WTBGfpQDXXClZLg0pNg_egM16EKUOCm76gqcgh1oqt0/edit?usp=drive_link",
       "key": "_key_sorting_comparison",
       "properties": {
         "audience": "Verified Teacher",
@@ -5692,8 +5699,8 @@
       }
     },
     {
-      "name": "[KEY] U8L1 Extra Practice",
-      "url": "https://docs.google.com/document/d/1ysK9nRBxLZfKtFiEzGd1vxSnz6SFMpIwlVFc1Xxtz3w/edit?usp=sharing",
+      "name": "[KEY] Project Planning Extra Practice",
+      "url": "https://docs.google.com/document/d/13G3E43g6VmLVxnMqU0SBtHtMh7jxcPD2DgUhmwL9cKk/edit?usp=drive_link",
       "key": "_key_u8l1_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -5705,7 +5712,7 @@
     },
     {
       "name": "[KEY] Searching Extra Practice",
-      "url": "https://docs.google.com/document/d/1aWbCCyduXoeKUML43oQXnThjUzwN8qImans2_gXkuyY/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1qqur3zMg-McwgroG0_eqm_2K6VpGDI-YrCHHbFfgBhE/edit?usp=drive_link",
       "key": "_key_u8l2_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -5716,8 +5723,8 @@
       }
     },
     {
-      "name": "[KEY] U8L3 Extra Practice",
-      "url": "https://docs.google.com/document/d/1Ad7kp1OyFe9-Gar7XFMli3rC4Hw7XRn8axvwhDidQNg/edit?usp=sharing",
+      "name": "[KEY] Binary Search Extra Practice",
+      "url": "https://docs.google.com/document/d/1sqnxjP-8T0_T_mOfPfKKWj4QPFGyAto04GVEuoPJ8IQ/edit?usp=drive_link",
       "key": "_key_u8l3_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -5728,8 +5735,8 @@
       }
     },
     {
-      "name": "[KEY] U8L4 Extra Practice",
-      "url": "https://docs.google.com/document/d/1VeW6iz1nmqNOWz3RgbcfukrEbYK4Z6u_i3BETn_ItuM/edit?usp=sharing",
+      "name": "[KEY] Selection Sort Extra Practice",
+      "url": "https://docs.google.com/document/d/1D7JxQoUVjAJdZKd_sloijBW9zMmenLAMziVQmtXhTk4/edit?usp=drive_link",
       "key": "_key_u8l4_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -5740,8 +5747,8 @@
       }
     },
     {
-      "name": "[KEY] U8L5 Extra Practice",
-      "url": "https://docs.google.com/document/d/1wPQJ9sti7CwDRKerwcQXEGD1J6npDEBxWXVIysJEBv4/edit?usp=sharing",
+      "name": "[KEY] Insertion Sort Extra Practice",
+      "url": "https://docs.google.com/document/d/1PEGS_LVCPz9D7SY26Cpo_Nsa_ruyNAxa1NU33in_q7g/edit?usp=drive_link",
       "key": "_key_u8l5_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -5752,8 +5759,8 @@
       }
     },
     {
-      "name": "[KEY] U8L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1WEg_Vou7_go36_WghzM66cVPGgPTJLO8FnSYTe3r8zk/edit?usp=sharing",
+      "name": "[KEY] Merge Sort Extra Practice",
+      "url": "https://docs.google.com/document/d/1vmVGr3vbWgsDu-rf8lfqrkdqSg2Pp8LZW-t7VN-xugY/edit?usp=drive_link",
       "key": "_key_u8l6_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -5764,8 +5771,8 @@
       }
     },
     {
-      "name": "[KEY] U8L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/1PWjEw5bv_DNT4zD6B7NndVFUaF8rYmMqQLpGMxSu_bc/edit?usp=sharing",
+      "name": "[KEY] Searching and Sorting Extra Practice",
+      "url": "https://docs.google.com/document/d/11FQGZ9eNigqXDkt5qW5d6ANSyXn5XblPjxQwOgr6aJA/edit?usp=drive_link",
       "key": "_key_u8l7_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -5776,8 +5783,8 @@
       }
     },
     {
-      "name": "[KEY] U8L8 Extra Practice",
-      "url": "https://docs.google.com/document/d/1hQN1l_WvI214nink9sPzQmtWTdm4ffvFRp0v5fjT4uA/edit?usp=sharing",
+      "name": "[KEY] Project Development Extra Practice",
+      "url": "https://docs.google.com/document/d/1iaGsIPXNmJD-tdc3X42VB_M5NUanpCy3jTaHSB6YOHE/edit?usp=drive_link",
       "key": "_key_u8l8_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -5788,8 +5795,8 @@
       }
     },
     {
-      "name": "[KEY[ U8L9 Extra Practice",
-      "url": "https://docs.google.com/document/d/1oA5hHVEPpoxy-9xQmeTmdJt3ovZ40d2yRws6vyn63Ug/edit?usp=sharing",
+      "name": "[KEY[ Privacy and Security Extra Practice",
+      "url": "https://docs.google.com/document/d/1ph8YF-_R53wPjRguwD0tz4rhUAfTKe2MyNw78lNglIw/edit?usp=drive_link",
       "key": "_key_u8l9_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -5800,8 +5807,41 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa8-pilot-2025/resources",
+      "key": "all_resources_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_7"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa8-pilot-2025/standards",
+      "key": "all_standards_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_7"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa8-pilot-2025/vocab",
+      "key": "all_vocabulary_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_7"
+      }
+    },
+    {
       "name": "Binary Search",
-      "url": "https://docs.google.com/presentation/d/1ypeV8WZK1HNnSpE8jtbLz4G5gcpN5_9stJqJo0EIZ3k/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/19E1mTrleVrpZ-s9tdJRGL84-xRKtY0wiPPD627qcP_g/edit?usp=drive_link",
       "key": "binary_search",
       "properties": {
         "audience": "Verified Teacher",
@@ -5813,7 +5853,7 @@
     },
     {
       "name": "Binary Search",
-      "url": "https://docs.google.com/document/d/1bITy1wy5p9XlRtMZMYH-1KKYaqlj9hK1d1w4_Vaoa0Q/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1qbLB3MKa8kNdQ5bMi6G6XZLzhGrCH3msMkOseN5GSIA/edit?usp=drive_link",
       "key": "binary_search_1",
       "properties": {
         "audience": "Student",
@@ -5826,7 +5866,7 @@
     },
     {
       "name": "Counting Executions with Code",
-      "url": "https://docs.google.com/document/d/1SOsBXIYtG74e23VG4yB2G5vALlX3larQUpPdz-MZUug/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1mwaKsMpuud05gsBYdhhIa-v-KYC2g-KKZvqSwZD2N1A/edit?usp=drive_link",
       "key": "counting_executions_with_code",
       "properties": {
         "audience": "Student",
@@ -5839,7 +5879,7 @@
     },
     {
       "name": "Creative Coding with the Console Project",
-      "url": "https://docs.google.com/presentation/d/1lh6onAMuWynslLCa8GRJ3ukMI9lZYLOXl0LVO15UhM4/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1RAQbLB9WXG8qfhXopxv5t8yoMABu3PxVI0BwZKdn3t0/edit?usp=drive_link",
       "key": "creative_coding_with_the_console_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -5851,7 +5891,7 @@
     },
     {
       "name": "Creative Coding with the Console Project",
-      "url": "https://docs.google.com/presentation/d/12W6s4nkkjIOdDFQB6mm-jTG-vAA9mHbbyZ3gudH3wKs/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1F_59eu2nDkj5Oi6CTkrRDDbdC8RPRFcF8OmwGUnMS1M/edit?usp=drive_link",
       "key": "creative_coding_with_the_console_project_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -5888,7 +5928,7 @@
     },
     {
       "name": "Data, Privacy, and Security",
-      "url": "https://docs.google.com/document/d/1ipGrZrVqvgh9JKgWw3ptv2IFYZwtbkZwnJzsuMsWLkQ/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Ece-SVM3SJLvL-lw7BQ13StXrju2od7E2x6d5YjZIMU/edit?usp=drive_link",
       "key": "data_privacy_and_security",
       "properties": {
         "audience": "Student",
@@ -5933,7 +5973,7 @@
     },
     {
       "name": "Insertion Sort",
-      "url": "https://docs.google.com/presentation/d/1N3QQqMHYV9tfETmjcAoCjuOQXAKx8aHsQdm-6kdq2E4/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1NR4SOIu3NLkGAMxy13ap23Xco0b1tWRukbBk3J_xbW8/edit?usp=drive_link",
       "key": "insertion_sort",
       "properties": {
         "audience": "Verified Teacher",
@@ -5958,7 +5998,7 @@
     },
     {
       "name": "Merge Sort",
-      "url": "https://docs.google.com/presentation/d/1K5fF52rulQT2BVohn8vWU3NGg2DS57KlZy2SDWr0yw0/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1tRIdYuAjFUq9UqJd72E4U9_h79yx6x_PbXTVzir1QL8/edit?usp=drive_link",
       "key": "merge_sort",
       "properties": {
         "audience": "Verified Teacher",
@@ -5970,7 +6010,7 @@
     },
     {
       "name": "Merge Sort",
-      "url": "https://docs.google.com/document/d/12mujYcZtBJwLLx89mQweFNVX3UXmyap7lgHn_P8TxJE/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1aMTh5aA68zmYtQhlsvX6Efewra0I9DebfnxnfzKpfYY/edit?usp=drive_link",
       "key": "merge_sort_1",
       "properties": {
         "audience": "Student",
@@ -5983,7 +6023,7 @@
     },
     {
       "name": "Privacy and Security",
-      "url": "https://docs.google.com/presentation/d/1taykJ95cb7Uu6cpoAh_t_5yUhHg7ELu2KLJU1CdIejA/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1MB2_YbbuExaYyndzGCoE2MY5v_THJjejzBLveYf7OUE/edit?usp=drive_link",
       "key": "privacy_and_security",
       "properties": {
         "audience": "Verified Teacher",
@@ -5995,7 +6035,7 @@
     },
     {
       "name": "Project Development",
-      "url": "https://docs.google.com/presentation/d/1srz1NN78zKEgL3sIw9JUJpezX4qYgBZTzw-arXBfBi8/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1EBjyQ5eliS8dOl_8DTpEN0I1UaSvUtsJhZjIT9XzWVE/edit?usp=drive_link",
       "key": "project_development",
       "properties": {
         "audience": "Verified Teacher",
@@ -6007,7 +6047,7 @@
     },
     {
       "name": "Project Planning",
-      "url": "https://docs.google.com/presentation/d/1glFHQzsAn1qgXZk2hM0Zvf_vzGH3dc-1Ipxkv9qgPEg/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1F8kIypHyvxHo8mKR35Q8NxHbNqW5YCGmTb-UcVkNZuk/edit?usp=drive_link",
       "key": "project_planning",
       "properties": {
         "audience": "Verified Teacher",
@@ -6019,7 +6059,7 @@
     },
     {
       "name": "Project Planning Feedback",
-      "url": "https://docs.google.com/document/d/1zGgaEt_neN9veF6WjM_FU4ECpk4c5fryhnQz25zQ6eU/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1zarfVj6K0nG1xTpGMS5mSwN9KF3hbKMqRppY9QVg8HM/edit?usp=drive_link",
       "key": "project_planning_feedback",
       "properties": {
         "audience": "Student",
@@ -6032,7 +6072,7 @@
     },
     {
       "name": "Searching",
-      "url": "https://docs.google.com/presentation/d/1e3nIXSEzvS87Nd35K07H9gmOLg3fks6OcEo_NRk1g98/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1Pfm8RbsEN6r2LNe6ApQy_RZQPb9a86VFo_Gjv7Sh6kU/edit?usp=drive_link",
       "key": "searching",
       "properties": {
         "audience": "Verified Teacher",
@@ -6056,7 +6096,7 @@
     },
     {
       "name": "Searching and Sorting",
-      "url": "https://docs.google.com/presentation/d/1S0cZ8DEeLtLHXyanq-nWAzrVm_ht_g6GMkcg_f7iWVw/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1bi5tiBAqlKOurVgOxx0hjyEeHWi-Iqwt3qt3xiwV2bg/edit?usp=drive_link",
       "key": "searching_and_sorting",
       "properties": {
         "audience": "Verified Teacher",
@@ -6068,7 +6108,7 @@
     },
     {
       "name": "SeatingChart FRQ",
-      "url": "https://docs.google.com/presentation/d/1xcJCgJeQrbqSHLU_T20Yy1zPRAqGRYIOH060l0ArGPc/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1zFyNiCRBM8ayGcxnQDmQGc4hJfFVpIFHf9WFiA8HOl0/edit?usp=drive_link",
       "key": "seatingchart_frq",
       "properties": {
         "audience": "Verified Teacher",
@@ -6106,7 +6146,7 @@
     },
     {
       "name": "Selection Sort",
-      "url": "https://docs.google.com/presentation/d/1bEJRjqqUgYBDPhMZ4TE4OdOQyiEAlZbV63GghjSeFRI/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1iFYyGM24MmXtPyneiHoUXItzi3IcBdxYMpY7s5zW3HE/edit?usp=drive_link",
       "key": "selection_sort",
       "properties": {
         "audience": "Verified Teacher",
@@ -6118,7 +6158,7 @@
     },
     {
       "name": "Selection Sort",
-      "url": "https://docs.google.com/document/d/1jaAzGNxj0dzPEuin6RnkXROqNiC9lnmUSj3izRasAZI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1gIcBj8_6Ct-a9ZqfXFgNZyWb88T3FVKoUpJmcnRgQRU/edit?usp=drive_link",
       "key": "selection_sort_1",
       "properties": {
         "audience": "Student",
@@ -6131,7 +6171,7 @@
     },
     {
       "name": "Selection Sort Activity Setup",
-      "url": "https://docs.google.com/document/d/1X-piusqYLHVuhKB--U4zzZgJemIFQdH0ynbgqWRICS8/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1TE-w5L6in6oclBh-CRjvZhmA5Bu_u_jX6TwIWOcVGb4/edit?usp=drive_link",
       "key": "selection_sort_activity_setup",
       "properties": {
         "audience": "Verified Teacher",
@@ -6155,7 +6195,7 @@
     },
     {
       "name": "Sorting Comparison",
-      "url": "https://docs.google.com/document/d/13oH1XgrbM4xYgIHH9QnCDV9u8jcL2_DLSu1nd22W7f0/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1pn7eM83jiG-PVbdwzCGuI9xHLbp8m7N0cb1EDU6tnH4/edit?usp=drive_link",
       "key": "sorting_comparison",
       "properties": {
         "audience": "Student",
@@ -6167,8 +6207,8 @@
       }
     },
     {
-      "name": "U8L1 Extra Practice",
-      "url": "https://docs.google.com/document/d/18YMTQ_3dORPgIzht9oGp7TCLt_vsSJF5pIvLfDaGkoU/edit?usp=sharing",
+      "name": "Project Planning Extra Practice",
+      "url": "https://docs.google.com/document/d/1ozlyUcrdsn0oMinxZzp4B_ZQFX8y-4qvD_SUu_DE4Nw/edit?usp=drive_link",
       "key": "u8l1_extra_practice",
       "properties": {
         "audience": "Student",
@@ -6180,8 +6220,8 @@
       }
     },
     {
-      "name": "U8L1 Guided Notes",
-      "url": "https://docs.google.com/document/d/1QIPMsVmMw4QzYecd034LrJ34vi4jkEJshCrW3_yIKyo/edit?usp=sharing",
+      "name": "Project Planning Guided Notes",
+      "url": "https://docs.google.com/document/d/1l-QVTNGU_qaWS9XyjW3QX6OoWZsJRZeOgt1WlOA3GEU/edit?usp=drive_link",
       "key": "u8l1_guided_notes",
       "properties": {
         "audience": "Student",
@@ -6194,7 +6234,7 @@
     },
     {
       "name": "Searching Extra Practice",
-      "url": "https://docs.google.com/document/d/1ir0n846IY_VQhM25N-Ii5pAWvOCkSg_64zZBiNGM1I8/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1IGOmqwdVschFOsI1bwxed_yxXekJydaacTB0Lg7qS_I/edit?usp=drive_link",
       "key": "u8l2_extra_practice",
       "properties": {
         "audience": "Student",
@@ -6207,7 +6247,7 @@
     },
     {
       "name": "Searching Guided Notes",
-      "url": "https://docs.google.com/document/d/1AzoUYqo_ocobQqwUJurDhDYOmZv5IHadYWvxD4bZ3_g/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1JuRwx4F2sMuHvp7Zx2L2BwigUXwEe3OlUrXA4vuilMg/edit?usp=drive_link",
       "key": "u8l2_guided_notes",
       "properties": {
         "audience": "Student",
@@ -6219,8 +6259,8 @@
       }
     },
     {
-      "name": "U8L3 Extra Practice",
-      "url": "https://docs.google.com/document/d/1ReDsKmkOiDivqAZEeOHX7qQKsgQdiURESCRRiXfUnT4/edit?usp=sharing",
+      "name": "Binary Search Extra Practice",
+      "url": "https://docs.google.com/document/d/1xxEcqEJ6q9N450TcHf3R5nXqvREt25gjjnr7oEl4fqc/edit?usp=drive_link",
       "key": "u8l3_extra_practice",
       "properties": {
         "audience": "Student",
@@ -6232,8 +6272,8 @@
       }
     },
     {
-      "name": "U8L3 Guided Notes",
-      "url": "https://docs.google.com/document/d/18rbBjHHdwoZRf1peDJlBVUp4rJVheuUfGOcC9IQVtXI/edit?usp=sharing",
+      "name": "Binary Search Guided Notes",
+      "url": "https://docs.google.com/document/d/15QVbRAyVwFrFByt37LnvC5lEoRtz2qgHbvLZkmIkhHo/edit?usp=drive_link",
       "key": "u8l3_guided_notes",
       "properties": {
         "audience": "Student",
@@ -6245,8 +6285,8 @@
       }
     },
     {
-      "name": "U8L4 Extra Practice",
-      "url": "https://docs.google.com/document/d/1FIMMdXH_vrFKfBa1_6vWYUVa3U8CyIFXx8IDQBe9XKA/edit?usp=sharing",
+      "name": "Selection Sort Extra Practice",
+      "url": "https://docs.google.com/document/d/19bbqOdq5xPOMfroikAbrs_QGPblYUN6Ivs_BhEPg_tA/edit?usp=drive_link",
       "key": "u8l4_extra_practice",
       "properties": {
         "audience": "Student",
@@ -6258,8 +6298,8 @@
       }
     },
     {
-      "name": "U8L4 Guided Notes",
-      "url": "https://docs.google.com/document/d/1FlzF2ZG4UHqW7koPChBc5hJckyt8NtmG4VYUo7K8iMs/edit?usp=sharing",
+      "name": "Selection Sort Guided Notes",
+      "url": "https://docs.google.com/document/d/1MFwXUPqzzS13LoKBzCm8hM7UhStJ9jo4636erc_F_cQ/edit?usp=drive_link",
       "key": "u8l4_guided_notes",
       "properties": {
         "audience": "Student",
@@ -6271,8 +6311,8 @@
       }
     },
     {
-      "name": "U8L5 Extra Practice",
-      "url": "https://docs.google.com/document/d/1YT27_O1sJoT70wsLKoReu7SG1kq32v5wldUEehIeuTk/edit?usp=sharing",
+      "name": "Insertion Sort Extra Practice",
+      "url": "https://docs.google.com/document/d/1GHcsfFacmFqvN49HRFC2oU2ExIzV5McIAUrtHDI1Y94/edit?usp=drive_link",
       "key": "u8l5_extra_practice",
       "properties": {
         "audience": "Student",
@@ -6284,8 +6324,8 @@
       }
     },
     {
-      "name": "U8L5 Guided Notes",
-      "url": "https://docs.google.com/document/d/1QyTpbBGk8BbwXYjWtlaPMd-BKqWsVOMG8_UibsC52wE/edit?usp=sharing",
+      "name": "Insertion Sort Guided Notes",
+      "url": "https://docs.google.com/document/d/1VYi3WQ2Om9PRv7X7fq5y2fSZJ7hc5yOnW00OyCmsgOU/edit?usp=drive_link",
       "key": "u8l5_guided_notes",
       "properties": {
         "audience": "Student",
@@ -6297,8 +6337,8 @@
       }
     },
     {
-      "name": "U8L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1b71Jd5z-NeIHJwytua8e2FuqyiyNaVUYYQbn2cNSRlM/edit?usp=sharing",
+      "name": "Merge Sort Extra Practice",
+      "url": "https://docs.google.com/document/d/1eAtaFKJJ-irCbdZRawEgmGHh-iKz1Yyy1LQdxNevKWc/edit?usp=drive_link",
       "key": "u8l6_extra_practice",
       "properties": {
         "audience": "Student",
@@ -6310,8 +6350,8 @@
       }
     },
     {
-      "name": "U8L6 Guided Notes",
-      "url": "https://docs.google.com/document/d/1BDE8xo-e9bPZjYWD0jZOJwT8mxrgccF9CEO-YeYthec/edit?usp=sharing",
+      "name": "Merge Sort Guided Notes",
+      "url": "https://docs.google.com/document/d/1AT6Ecw2peha9BXv4sxY3UrpteLIIVDygrO6zmq1RruA/edit?usp=drive_link",
       "key": "u8l6_guided_notes",
       "properties": {
         "audience": "Student",
@@ -6323,8 +6363,8 @@
       }
     },
     {
-      "name": "U8L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/1xh2XWmTLsWtfu8DJwMCbrvNviAzxULDg7xlrhn6G3f4/edit?usp=sharing",
+      "name": "Searching and Sorting Extra Practice",
+      "url": "https://docs.google.com/document/d/1ij9oVCwsPSNFbxQc33yNnWLNkbr6FM8B8hhPn75bqvM/edit?usp=drive_link",
       "key": "u8l7_extra_practice",
       "properties": {
         "audience": "Student",
@@ -6336,8 +6376,8 @@
       }
     },
     {
-      "name": "U8L7 Guided Notes",
-      "url": "https://docs.google.com/document/d/1rBNLUkNCSROC2oIqY6V61PAb6q-0LxxpIIP1lhlIijU/edit?usp=sharing",
+      "name": "Searching and Sorting Guided Notes",
+      "url": "https://docs.google.com/document/d/1p_Cm0U9dxeknmVPn8bjJPaBi1NmrmH3omOSCSDq1ZlA/edit?usp=drive_link",
       "key": "u8l7_guided_notes",
       "properties": {
         "audience": "Student",
@@ -6349,8 +6389,8 @@
       }
     },
     {
-      "name": "U8L8 Extra Practice",
-      "url": "https://docs.google.com/document/d/1ACYJXZWE8voOjJK3PhK_9eA6GQNfuCiYIGwFUdaXv7A/edit?usp=sharing",
+      "name": "Project Development Extra Practice",
+      "url": "https://docs.google.com/document/d/15CUo89bx7YlorpWHipbaWXdNSAyFkmaYQNM1L5Q-PFc/edit?usp=drive_link",
       "key": "u8l8_extra_practice",
       "properties": {
         "audience": "Student",
@@ -6362,8 +6402,8 @@
       }
     },
     {
-      "name": "U8L9 Extra Practice",
-      "url": "https://docs.google.com/document/d/1r6XGVwJoqAEWbbn1VRj_V_NgtFB0X-Cdj2n33-g9wGY/edit?usp=sharing",
+      "name": "Privacy and Security Extra Practice",
+      "url": "https://docs.google.com/document/d/1Ece-SVM3SJLvL-lw7BQ13StXrju2od7E2x6d5YjZIMU/edit?usp=drive_link",
       "key": "u8l9_extra_practice",
       "properties": {
         "audience": "Student",
@@ -6375,8 +6415,8 @@
       }
     },
     {
-      "name": "U8L9 Guided Notes",
-      "url": "https://docs.google.com/document/d/1bC0rBEekDKq26xI2jNgqRkL7Qcc-q4QtV8gysvtQYyg/edit?usp=sharing",
+      "name": "Privacy and Security Guided Notes",
+      "url": "https://docs.google.com/document/d/1Ej_pUveHrUVnCgFoXe5tU_BZqCA8vMV9JEIf9eHxU40/edit?usp=drive_link",
       "key": "u8l9_guided_notes",
       "properties": {
         "audience": "Student",
@@ -6389,7 +6429,7 @@
     },
     {
       "name": "Unit 8 Assessment",
-      "url": "https://docs.google.com/presentation/d/1VoBeZgs-q6BP7PemgZxG3cdN5H-oJBWkMhtiNctnbIQ/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1JvW9aCn1gCzPhvtptkzLYi9C5lhPKyKRO-F2u7mseHw/edit?usp=drive_link",
       "key": "unit_8_assessment",
       "properties": {
         "audience": "Verified Teacher",
@@ -6400,8 +6440,38 @@
       }
     },
     {
+      "name": "Unit 8 Guide",
+      "url": "https://docs.google.com/document/d/1aWYwTH8y9aID_6QA-ZLhFs4eN6fc2Tn0gjsfNYwrdf8/edit?usp=sharing",
+      "key": "unit_8_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unit_8_guide"
+      }
+    },
+    {
+      "name": "Unit 8 Overview",
+      "url": "https://docs.google.com/document/d/1ZKcUNQTmSmYTPXTROqMmVb3fkzcuSQmbWuT7PXHl_pI/edit?usp=drive_link",
+      "key": "unit_8_overview",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unit_8_overview"
+      }
+    },
+    {
+      "name": "Unit 8 Slides",
+      "url": "https://docs.google.com/presentation/d/1gbVmh9tQ2LaumE-hqdTzivIL-ZQyHkJeXqM4aKeyMWw/edit?usp=drive_link",
+      "key": "unit_8_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unit_8_slides"
+      }
+    },
+    {
       "name": "Unit 8 Study Guide",
-      "url": "https://docs.google.com/document/d/1OjrxZRtCLe8t7xVB9Tbk1Z7eLWNXJP2T9HV-Fzj2Xm0/edit?usp=share_link",
+      "url": "https://docs.google.com/document/d/1mJ87Z_ZTaLi0NqWuEmWJFbtjg7m4c-bRL9kSri2_gH8/edit?usp=drive_link",
       "key": "unit_8_study_guide",
       "properties": {
         "audience": "Student",
@@ -6410,6 +6480,16 @@
       },
       "seeding_key": {
         "resource.key": "unit_8_study_guide"
+      }
+    },
+    {
+      "name": "Unit 8 Word Wall Cards",
+      "url": "https://docs.google.com/document/d/1mHJgsnGbf8bOxkB1_L1L03reUhGS7dZl-JUHeO6KNSA/edit?usp=sharing",
+      "key": "unit_8_word_wall_cards",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unit_8_word_wall_cards"
       }
     },
     {
@@ -6910,6 +6990,30 @@
   "scripts_resources": [
     {
       "seeding_key": {
+        "resource.key": "_exemplar_unit_8_guide",
+        "script.name": "csa8-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_7",
+        "script.name": "csa8-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_7",
+        "script.name": "csa8-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_7",
+        "script.name": "csa8-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "developing_project_management_skills",
         "script.name": "csa8-pilot-2025"
       }
@@ -6923,6 +7027,36 @@
     {
       "seeding_key": {
         "resource.key": "guide_to_programming_levels_in_csa",
+        "script.name": "csa8-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_8_guide",
+        "script.name": "csa8-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_8_overview",
+        "script.name": "csa8-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_8_slides",
+        "script.name": "csa8-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_8_study_guide",
+        "script.name": "csa8-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_8_word_wall_cards",
         "script.name": "csa8-pilot-2025"
       }
     }
@@ -7002,13 +7136,13 @@
       }
     },
     {
-      "key": "linear_sequential_search",
-      "word": "linear/sequential search",
+      "key": "linear_search",
+      "word": "linear search",
       "definition": "a search algorithm that checks each item in order until the target is found",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "linear_sequential_search"
+        "vocabulary.key": "linear_search"
       }
     },
     {
@@ -7094,7 +7228,7 @@
     {
       "seeding_key": {
         "lesson.key": "Searching",
-        "vocabulary.key": "linear_sequential_search"
+        "vocabulary.key": "linear_search"
       }
     },
     {
@@ -7409,29 +7543,22 @@
     {
       "seeding_key": {
         "lesson.key": "Binary Search",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.P.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.17.B.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Binary Search",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.P.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.17.B.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Binary Search",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.P.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Search",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.P.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.17.B.3"
       }
     },
     {
@@ -7514,8 +7641,15 @@
     {
       "seeding_key": {
         "lesson.key": "Insertion Sort",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.L.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.15.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Insertion Sort",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.15.A.3"
       }
     },
     {
@@ -7556,8 +7690,15 @@
     {
       "seeding_key": {
         "lesson.key": "Merge Sort",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.Q.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.17.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Merge Sort",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.17.C.2"
       }
     },
     {
@@ -7591,15 +7732,15 @@
     {
       "seeding_key": {
         "lesson.key": "Privacy and Security",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "IOC-1.B.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.2.A.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Privacy and Security",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "IOC-1.B.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.1.A.1"
       }
     },
     {
@@ -7633,8 +7774,8 @@
     {
       "seeding_key": {
         "lesson.key": "Searching and Sorting",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.J.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.10.A.2"
       }
     },
     {
@@ -7724,8 +7865,15 @@
     {
       "seeding_key": {
         "lesson.key": "Selection Sort",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.L.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.15.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Selection Sort",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.15.A.2"
       }
     },
     {

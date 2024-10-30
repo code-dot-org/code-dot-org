@@ -2510,7 +2510,7 @@ columns:
   google_sheets_shared_cdo_donors:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: name_s
+    name: obe
     sql_type_metadata: *3
     'null': true
     default:
