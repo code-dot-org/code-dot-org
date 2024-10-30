@@ -57,7 +57,7 @@ namespace :ci do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
   timed_task_with_logging :run_tests do
     unless CIUtils.ci_job_unit_tests?
-      ChatClient.log "Wrong container, skipping"
+      ChatClient.log "Wrong CI job, skipping"
       next
     end
 
@@ -82,8 +82,8 @@ namespace :ci do
 
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
   timed_task_with_logging :run_ui_tests do
-    unless CIUtils.ui_test_container?
-      ChatClient.log "Wrong container, skipping"
+    unless CIUtils.ci_job_ui_tests?
+      ChatClient.log "Wrong CI job, skipping"
       next
     end
 
@@ -160,8 +160,8 @@ namespace :ci do
   end
 
   timed_task_with_logging :seed_ui_test do
-    unless CIUtils.ui_test_container?
-      ChatClient.log "Wrong container, skipping"
+    unless CIUtils.ci_job_ui_tests?
+      ChatClient.log "Wrong CI job, skipping"
       next
     end
 
