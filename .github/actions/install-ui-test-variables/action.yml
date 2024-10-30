@@ -5,7 +5,6 @@ runs:
   steps:
     - name: Setup locals
       env:        
-        CIRCLE_NODE_TOTAL: 1
         CI_JOB: ui_tests
       run: |
           set -xe

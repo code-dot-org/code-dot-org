@@ -1,8 +1,5 @@
 require 'set'
 
-CIRCLE_NODE_TOTAL = ENV.fetch('CIRCLE_NODE_TOTAL', 0)
-CI_JOB = ENV.fetch('CI_JOB', nil)
-
 module CIUtils
   # Checks the HEAD commit for the current circle build for the specified tag,
   # returning TRUE if it's present.  A tag is a set of space-separated words
@@ -20,11 +17,11 @@ module CIUtils
   end
 
   def self.unit_test_container?
-    CIRCLE_NODE_TOTAL == 1 || CI_JOB == "unit_tests"
+    ENV.fetch('CI_JOB', nil) == "unit_tests"
   end
 
   def self.ui_test_container?
-    CIRCLE_NODE_TOTAL == 1 || CI_JOB == "ui_tests"
+    ENV.fetch('CI_JOB', nil) == "ui_tests"
   end
 
   def self.running_on_ci?
