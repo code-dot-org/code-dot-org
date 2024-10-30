@@ -1,7 +1,7 @@
 require 'test_reporter'
 require 'faker'
 
-require_relative '../../lib/cdo/ci_utils'
+require_relative '../../lib/cdo/ci'
 
 if defined? ActiveRecord
   ActiveRecord::Migration&.check_pending!

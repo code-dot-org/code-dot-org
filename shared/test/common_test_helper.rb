@@ -15,7 +15,7 @@ require 'vcr'
 require_relative '../../deployment'
 require 'cdo/db'
 require 'cdo/aws/s3'
-require 'cdo/ci_utils'
+require 'cdo/ci'
 
 raise 'Test helper must only be used in `test` environment!' unless rack_env? :test
 

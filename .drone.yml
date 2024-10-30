@@ -89,7 +89,7 @@ steps:
       # cache is restored to source directory, so we need to copy it into the right place
       - cp -rn "$(pwd)/home/ci/.rbenv" /home/ci || true
       - rm -rf "$(pwd)/home/ci/.rbenv"
-      # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/33b79dac1c417e227ac2eb014afcc2505bac7ddb/lib/cdo/ci_utils.rb/#L19-L20
+      # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
       - export CI_HEAD_BRANCH=$DRONE_SOURCE_BRANCH
@@ -216,7 +216,7 @@ steps:
       - sudo chown -R ci:ci .
       # cache is restored to source directory, so we need to copy it into the right place
       - cp -rn "$(pwd)/home/ci/.rbenv" /home/ci || true
-      # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/33b79dac1c417e227ac2eb014afcc2505bac7ddb/lib/cdo/ci_utils.rb/#L19-L20
+      # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
       - export CI_HEAD_BRANCH=$DRONE_SOURCE_BRANCH

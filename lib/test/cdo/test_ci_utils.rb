@@ -1,5 +1,5 @@
 require_relative '../test_helper'
-require 'cdo/ci_utils'
+require 'cdo/ci'
 
 class CITest < Minitest::Test
   def teardown

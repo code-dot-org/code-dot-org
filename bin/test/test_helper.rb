@@ -1,5 +1,5 @@
 require 'simplecov'
-require_relative '../../lib/cdo/ci_utils'
+require_relative '../../lib/cdo/ci'
 
 SimpleCov.start do
   coverage_dir File.expand_path('../coverage', __FILE__)

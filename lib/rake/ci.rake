@@ -1,7 +1,7 @@
 require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
-require 'cdo/ci_utils'
+require 'cdo/ci'
 require 'cdo/git_utils'
 require 'cdo/sauce_connect'
 require 'open-uri'
