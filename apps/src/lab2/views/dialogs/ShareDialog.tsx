@@ -111,7 +111,7 @@ const ShareDialog: React.FunctionComponent<{
   );
 
   const showSubmitInfo = () => {
-    if (submissionStatus === 0) {
+    if (submissionStatus === 'can_submit') {
       return (
         <Button
           text="Submit to be featured"
@@ -126,7 +126,7 @@ const ShareDialog: React.FunctionComponent<{
           className={moduleStyles.projectButton}
         />
       );
-    } else if (submissionStatus === 1) {
+    } else if (submissionStatus === 'already_submitted') {
       return (
         <Button
           text="Thanks for your submission."

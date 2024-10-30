@@ -7,7 +7,7 @@ import experiments from '@cdo/apps/util/experiments';
 import {getSubmissionStatus} from './submitProjectApi';
 export interface SubmitProjectState {
   showSubmitProjectDialog: boolean;
-  submissionStatus: number | undefined;
+  submissionStatus: string | undefined;
 }
 
 const initialState: SubmitProjectState = {
@@ -24,7 +24,7 @@ export const fetchSubmissionStatus = createAsyncThunk(
     try {
       const response = getSubmissionStatus();
       console.log('response', response);
-      thunkAPI.dispatch(setSubmissionStatus(0));
+      thunkAPI.dispatch(setSubmissionStatus('can_submit'));
     } catch (error) {
       Lab2Registry.getInstance()
         .getMetricsReporter()
@@ -40,9 +40,9 @@ const submitProjectSlice = createSlice({
     setShowSubmitProjectDialog: (state, action: PayloadAction<boolean>) => {
       state.showSubmitProjectDialog = action.payload;
     },
-    setSubmissionStatus: (state, action: PayloadAction<number>) => {
+    setSubmissionStatus: (state, action: PayloadAction<string>) => {
       if (!experiments.isEnabled(experiments.LAB2_SUBMIT_PROJECT)) {
-        state.submissionStatus = 1; // Temporary - status denotes cannot be submitted.
+        state.submissionStatus = 'already_submitted'; // Temporary - status denotes cannot be submitted.
       } else {
         state.submissionStatus = action.payload;
       }
