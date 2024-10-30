@@ -4,6 +4,8 @@
 
 $text-offset-x: 2cqw;
 $text-offset-y: 2cqw;
+$text-vertical-padding: 1.8cqw;
+$text-horizontal-padding: 2.6cqw;
 
 @keyframes fade-in {
   0%, 50% {
@@ -61,7 +63,7 @@ $text-offset-y: 2cqw;
       border-radius: 5px;
       width: 40%;
       position: absolute;
-      padding: 1.8cqw 2.6cqw;
+      padding: $text-vertical-padding $text-horizontal-padding;
       animation: fade-in 1.5s;
       font-size: 1.6cqw;
       line-height: 1.4em;
@@ -75,7 +77,7 @@ $text-offset-y: 2cqw;
         margin: 0 0 1cqw 0;
         font-family: $barlowSemiCondensed-semibold;
         font-size: 3cqw;
-        line-height: 2cqw;
+        line-height: 1.2em;
       }
 
       p {
@@ -99,6 +101,7 @@ $text-offset-y: 2cqw;
       .typist {
         position: absolute;
         top: 1.8cqw;
+        width: calc(100% - 2 * $text-horizontal-padding);
       }
 
       &TopLeft {

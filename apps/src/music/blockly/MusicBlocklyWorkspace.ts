@@ -37,11 +37,6 @@ type CompiledEvents = {[key: string]: {code: string; args?: string[]}};
 export default class MusicBlocklyWorkspace {
   private static isBlocklyEnvironmentSetup = false;
 
-  // Utility to hide any custom fields that are showing.
-  public static hideChaff() {
-    Blockly.getMainWorkspace().hideChaff();
-  }
-
   // Setup the global Blockly environment for Music Lab.
   // This should only happen once per page load.
   public static setupBlocklyEnvironment(blockMode: ValueOf<typeof BlockMode>) {
@@ -178,6 +173,16 @@ export default class MusicBlocklyWorkspace {
 
     this.workspace.dispose();
     this.workspace = null;
+  }
+
+  /**
+   * Hide any custom fields that are showing.
+   */
+  hideChaff() {
+    if (this.headlessMode) {
+      return;
+    }
+    (this.workspace as GoogleBlockly.WorkspaceSvg)?.hideChaff();
   }
 
   /**
@@ -493,7 +498,11 @@ export default class MusicBlocklyWorkspace {
 
     const allFunctions: GoogleBlockly.serialization.procedures.State[] = [];
 
-    (this.workspace?.getTopBlocks() as ProcedureBlock[])
+    (
+      this.workspace?.getTopBlocks(
+        this.toolbox?.addFunctionCallsSortByPosition
+      ) as ProcedureBlock[]
+    )
       .filter(
         // When a block is dragged from the toolbox, an insertion marker is
         // created with the same type. Insertion markers just provide a
@@ -511,7 +520,11 @@ export default class MusicBlocklyWorkspace {
         );
       });
 
-    allFunctions.sort(nameComparator).forEach(({name, id, parameters}) => {
+    const compareFunction = this.toolbox?.addFunctionCallsSortByPosition
+      ? () => 0
+      : nameComparator;
+
+    allFunctions.sort(compareFunction).forEach(({name, id, parameters}) => {
       blockList.push({
         kind: 'block',
         type: BLOCK_TYPES.procedureCall,

@@ -1,4 +1,5 @@
 @no_mobile
+@no_safari
 Feature: Global Edition - Region Select
 
   Background:
@@ -31,23 +32,23 @@ Feature: Global Edition - Region Select
   Scenario: User can switch between the international and regional versions using the language selector on a Lab page
     Given I am on "http://studio.code.org/projects/artist/new"
     And I wait for the lab page to fully load
-    And element "#locale option:checked" contains text "English"
+    And element "#localeForm option:checked" contains text "English"
     And element ".uitest-instructionsTab" contains text "Instructions"
 
-    When I select the "فارسی (global)" option in dropdown "locale"
+    When I select the "فارسی (global)" option in dropdown named "locale"
     And I wait for the lab page to fully load
     Then check that the URL matches "/global/fa/projects/artist/.*/edit\?lang=fa-IR"
-    And element "#locale option:checked" contains text "فارسی (global)"
+    And element "#localeForm option:checked" contains text "فارسی (global)"
     And element ".uitest-instructionsTab" contains text "دستورالعمل"
 
-    When I select the "English" option in dropdown "locale"
+    When I select the "English" option in dropdown named "locale"
     And I wait for the lab page to fully load
     Then check that the URL matches "/projects/artist/.*/edit\?lang=en-US"
-    And element "#locale option:checked" contains text "English"
+    And element "#localeForm option:checked" contains text "English"
     And element ".uitest-instructionsTab" contains text "Instructions"
 
-    When I select the "فارسی" option in dropdown "locale"
+    When I select the "فارسی" option in dropdown named "locale"
     And I wait for the lab page to fully load
     Then check that the URL matches "/projects/artist/.*/edit\?lang=fa-IR"
-    And element "#locale option:checked" contains text "فارسی"
+    And element "#localeForm option:checked" contains text "فارسی"
     And element ".uitest-instructionsTab" contains text "دستورالعمل"

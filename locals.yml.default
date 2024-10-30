@@ -72,7 +72,7 @@ use_my_apps: true
 # multiple browsers
 #saucelabs_username: ''
 #saucelabs_authkey: ''
-#saucelabs_tunnel_name: ''
+#saucelabs_tunnel_name: 'cdo-tunnel'
 
 
 # Credentails for applitools.com, used for running automated visual tests

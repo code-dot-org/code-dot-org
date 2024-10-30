@@ -1,0 +1,31 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-10-28T16:39:18.000Z",
+  "level_num": "custom",
+  "user_id": 18914,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "Lets create some art using ascii characters! \n\n::: details [**Image Credits**]\n* [link](#)\n* [link](#)\n:::",
+        "imageUrl": "https://images.code.org/b6092166f80a3578d92bde8ddf5f5778-Screenshot 2024-10-28 at 12.52.05 PM.png",
+        "key": "ascii-art-intro-incubator-74928108-2dc7-4468-85a9-e2cd5e18a3b2"
+      },
+      {
+        "text": "Ascii art is art that is created using only keys on your keyboard. For example, this fish is made out of the keys: > < { \"",
+        "imageUrl": "https://images.code.org/3ada25391ce5dc2c911ab6c5f7221d3a-Screenshot 2024-10-28 at 12.56.45 PM.png",
+        "key": "ascii-art-intro-incubator-33d1aea9-be91-4293-afa8-4e67ffb093ed"
+      },
+      {
+        "text": "You will be using Python and a brand new Code.org Lab called Codebridge to create some ascii art.  ",
+        "imageUrl": "https://images.code.org/8b59ddd5dea585783ec2d31bcee207c7-Screenshot 2024-10-28 at 1.10.36 PM.png",
+        "key": "ascii-art-intro-incubator-15f6f7c8-dc8f-4ba4-b138-dc13deb651dd"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-28 17:11:01 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 19:05:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Panels>

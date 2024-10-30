@@ -4,7 +4,11 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import FinishStudentAccount from '@cdo/apps/signUpFlow/FinishStudentAccount';
 import locale from '@cdo/apps/signUpFlow/locale';
-import {USER_RETURN_TO_SESSION_KEY} from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import {
+  ACCOUNT_TYPE_SESSION_KEY,
+  EMAIL_SESSION_KEY,
+  USER_RETURN_TO_SESSION_KEY,
+} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {navigateToHref} from '@cdo/apps/utils';
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
@@ -50,7 +54,17 @@ describe('FinishStudentAccount', () => {
     fetchStub.restore();
   });
 
-  function renderDefault(usIp: boolean = true) {
+  function renderDefault(
+    usIp: boolean = true,
+    setAccountType: boolean = true,
+    setLoginType: boolean = true
+  ) {
+    if (setAccountType) {
+      sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, 'student');
+    }
+    if (setLoginType) {
+      sessionStorage.setItem(EMAIL_SESSION_KEY, 'fake@email.com');
+    }
     render(
       <FinishStudentAccount
         ageOptions={ageOptions}
@@ -60,6 +74,26 @@ describe('FinishStudentAccount', () => {
       />
     );
   }
+
+  it('redirects user back to account type page if they have not selected account type', async () => {
+    await waitFor(() => {
+      renderDefault(true, false, false);
+    });
+
+    expect(navigateToHrefMock).toHaveBeenCalledWith(
+      '/users/new_sign_up/account_type'
+    );
+  });
+
+  it('redirects user back to login type page if they have not selected login type', async () => {
+    await waitFor(() => {
+      renderDefault(true, true, false);
+    });
+
+    expect(navigateToHrefMock).toHaveBeenCalledWith(
+      '/users/new_sign_up/login_type'
+    );
+  });
 
   it('renders finish student account page fields', () => {
     renderDefault();

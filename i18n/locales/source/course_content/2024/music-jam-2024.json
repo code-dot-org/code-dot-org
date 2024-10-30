@@ -84,7 +84,7 @@
     }
   },
   "https://studio.code.org/s/music-jam-2024/lessons/1/levels/11": {
-    "long_instructions": "#### A.I. Gets Interesting\n\nYou can move the temperature slider to generate different results.",
+    "long_instructions": "#### A.I. Gets Interesting\n\nYou can move the temperature slider to generate different results.\n\n-   Click the [play AI drums][0] block to generate your own beat. \n-   Use the slider to change the temperature.\n-   Press [Run][1]. ",
     "validations": {
       "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b": "That sounds great!",
       "music-ai-skill-sequence_a0f44420-3323-439a-be62-f0aa67dbcbe1": "Click on the blank box in the [play AI drums][0] block, change the temperature slider, and generate a new beat.",

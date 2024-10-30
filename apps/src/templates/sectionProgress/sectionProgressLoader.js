@@ -117,7 +117,7 @@ export function loadUnitProgress(scriptId, sectionId) {
     sectionProgress.studentLessonProgressByUnit = {
       ...sectionProgress.studentLessonProgressByUnit,
       [scriptId]: lessonProgressForSection(
-        sectionProgress.studentLevelProgressByUnit[scriptId],
+        sectionProgress.studentLevelProgressByUnit[scriptId] || [],
         sectionProgress.unitDataByUnit[scriptId].lessons
       ),
     };
