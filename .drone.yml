@@ -23,10 +23,13 @@ steps:
   - name: info
     image: curlimages/curl
     commands:
+      - set +x
       # If running on EC2, get hostname from ec2 metadata
       - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
       - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
-      - echo "Running on $hostname"
+      - echo "Running on $hostname\n"
+      - echo "To ssh into this drone instance, wait until the 'ui-tests' step starts and run:"
+      - echo "bin/drone/shell $hostname"
 
   # We cache a clone of staging in the `cache-staging-clone` pipeline
   - name: get-cached-staging
@@ -143,10 +146,13 @@ steps:
   - name: info
     image: curlimages/curl
     commands:
+      - set +x
       # If running on EC2, get hostname from ec2 metadata
       - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
       - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
-      - echo "Running on $hostname"
+      - echo "Running on $hostname\n"
+      - echo "To ssh into this drone instance, wait until the 'ui-tests' step starts and run:"
+      - echo "bin/drone/shell $hostname"
 
   # We cache a clone of staging in the `cache-staging-clone` pipeline
   - name: get-cached-staging
@@ -289,6 +295,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: a23424eb3b46ffbbc17d8c215769cc6639ba651799eed53d6e0d263ba7e71f65
+hmac: a7dad412199e2d8609a0ef97a4d90cf3cdc7ebd872c24f2cf544db2e65768cd4
 
 ...
