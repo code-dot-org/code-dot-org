@@ -10,9 +10,9 @@ import progress, {
 import {CodebridgeContextProvider} from '@cdo/apps/codebridge';
 import ValidatedInstructions from '@cdo/apps/codebridge/InfoPanel/ValidatedInstructions';
 import lab, {onLevelChange} from '@cdo/apps/lab2/lab2Redux';
-import lab2Project from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import lab2Project, {setHasEdited} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import predictLevel from '@cdo/apps/lab2/redux/predictLevelRedux';
-import lab2System from '@cdo/apps/lab2/redux/systemRedux';
+import lab2System, {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {
   getStore,
   registerReducers,
@@ -44,8 +44,7 @@ describe('ValidatedInstructions', () => {
     restoreRedux();
   });
 
-  it('continue button is visible for an already-passed level', () => {
-    // Default progress state is on a level that has already passed.
+  function renderDefault() {
     render(
       <Provider store={store}>
         <CodebridgeContextProvider value={getDefaultCodebridgeContext()}>
@@ -53,27 +52,28 @@ describe('ValidatedInstructions', () => {
         </CodebridgeContextProvider>
       </Provider>
     );
+  }
+
+  it('continue button is visible for an already-passed level', () => {
+    // Default progress state is on a level that has already passed.
+    renderDefault();
 
     // Continue button should be present.
     screen.getByRole('button', {name: commonI18n.continue()});
   });
 
-  it('continue button does not show up until you have passed validation', () => {
+  it('for a non-validated level, continue button shows up when you have edited and run code', () => {
     // Level 1 in the progression, which is "in progress"
     store.dispatch(setCurrentLevelId('1'));
-    render(
-      <Provider store={store}>
-        <CodebridgeContextProvider value={getDefaultCodebridgeContext()}>
-          <ValidatedInstructions />
-        </CodebridgeContextProvider>
-      </Provider>
-    );
+    renderDefault();
+
     expect(
       screen.queryByRole('button', {name: commonI18n.continue()})
     ).toBeNull();
 
-    // Now pass the level
-    store.dispatch(mergeResults({'1': 100}));
+    // Update edit and run flags in redux
+    store.dispatch(setHasRun(true));
+    store.dispatch(setHasEdited(true));
 
     // Continue button should be present.
     screen.getByRole('button', {name: commonI18n.continue()});
