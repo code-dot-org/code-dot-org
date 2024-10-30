@@ -1,4 +1,4 @@
-import {TICKS_PER_MEASURE} from '../constants';
+import {TICKS_PER_MEASURE, DEFAULT_PATTERN_LENGTH} from '../constants';
 import MusicLibrary from '../player/MusicLibrary';
 
 import {BlockTypes} from './blockTypes';
@@ -211,7 +211,9 @@ export const fieldPatternsValidator = function () {
         // Remove events with notes that not part of the current kit's sounds. (Ex. 1...8)
         kitNotes.includes(event.note) &&
         // Remove event with ticks that are outside the expected tick range.
-        event.tick <= newValue.length * TICKS_PER_MEASURE
+        // (Older blocks might be missing the length field.)
+        event.tick <=
+          (newValue.length || DEFAULT_PATTERN_LENGTH) * TICKS_PER_MEASURE
     );
     return newValue;
   });
