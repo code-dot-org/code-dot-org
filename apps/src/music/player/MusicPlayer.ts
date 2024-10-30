@@ -303,6 +303,9 @@ export default class MusicPlayer {
 
   private scheduleEvents(events: PlaybackEvent[]) {
     for (const event of events) {
+      if (event.skipContext?.skipSound) {
+        continue;
+      }
       if (isSoundEvent(event) || !this.audioPlayer.supportsSamplers()) {
         const reportCallback = (soundId: string) => {
           this.analyticsReporter?.onSoundPlayed(soundId);
@@ -340,10 +343,6 @@ export default class MusicPlayer {
     const library = MusicLibrary.getInstance();
     if (!library) {
       this.metricsReporter.logWarning('Library not set. Cannot play sounds.');
-      return [];
-    }
-
-    if (event.skipContext?.skipSound) {
       return [];
     }
 
