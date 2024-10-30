@@ -2,6 +2,7 @@ import React, {useCallback, useState} from 'react';
 
 import {showShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import Button from '@cdo/apps/componentLibrary/button/Button';
+import Link from '@cdo/apps/componentLibrary/link/Link';
 import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -71,19 +72,29 @@ const SubmitProjectDialog: React.FunctionComponent<
       </div>
       <hr />
       <div className={moduleStyles.bottomSection}>
-        <Button
-          iconLeft={{iconName: 'arrow-left'}}
-          onClick={onGoBack}
-          type="secondary"
-          color="white"
-          text="Go back"
-        />
-        <Button
-          onClick={onSubmit}
-          type="secondary"
-          color="white"
-          text="Submit"
-        />
+        <div className={moduleStyles.bottomSectionLink}>
+          <Link
+            text="Learn more"
+            href=""
+            className={moduleStyles.link}
+            size="m"
+          />
+        </div>
+        <div className={moduleStyles.bottomSectionButtons}>
+          <Button
+            iconLeft={{iconName: 'arrow-left'}}
+            onClick={onGoBack}
+            type="secondary"
+            color="white"
+            text="Go back"
+          />
+          <Button
+            onClick={onSubmit}
+            type="secondary"
+            color="white"
+            text="Submit"
+          />
+        </div>
       </div>
     </AccessibleDialog>
   );

@@ -6,6 +6,7 @@
   flex-direction: column;
   background-color: $light_gray_950;;
   color: white;
+  padding: 2em 3em;
 
   hr {
     margin: 1rem 0;
@@ -13,14 +14,7 @@
   }
   // override any foreground text in the dialog that might be
   // passed in for the title or body of the dialog
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  strong {
+  h3, p {
     color: $light_white;
   }
 
@@ -32,15 +26,8 @@
     flex: 1;
     background-color: $light_white;
   }
-
   a {
-    @include main-font-semi-bold;
-    font-size: 1rem;
-    color: $brand_secondary_default;
-    margin: 1rem 0;
-    text-decoration: underline;
-    transition: color ease-in-out .2s;
-
+    color: $light_white;
     &:hover {
       color: $brand_secondary_dark;
     }
@@ -61,6 +48,14 @@
 
 .bottomSection {
   display: flex;
+  justify-content: space-between;
+}
+.bottomSectionButtons {
+  display: flex;
   justify-content: flex-end;
   gap: 1em;
+}
+.bottomSectionLink {
+  display: flex;
+  justify-content: start;
 }
