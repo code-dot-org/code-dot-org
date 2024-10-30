@@ -704,7 +704,6 @@ def cucumber_arguments_for_feature(options, test_run_string, max_reruns)
 
   # In CI we export additional logs in junit xml format so CI could in theory
   # provide pretty test reports with success/fail/timing data upon completion.
-  # See: https://circleci.com/docs/test-metadata/#cucumber
   if ENV['CI']
     arguments += " --format junit --out $CI_TEST_REPORTS/cucumber/#{test_run_string}.xml"
   end

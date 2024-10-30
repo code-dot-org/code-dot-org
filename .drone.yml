@@ -75,7 +75,7 @@ steps:
     pull: always
     volumes:
       - name: rbenv
-        path: /home/circleci/.rbenv
+        path: /home/ci/.rbenv
       - name: mysql
         path: /var/lib/mysql
     environment:
@@ -85,10 +85,10 @@ steps:
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
     commands:
-      - sudo chown -R circleci:circleci .
+      - sudo chown -R ci:ci .
       # cache is restored to source directory, so we need to copy it into the right place
-      - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
-      - rm -rf "$(pwd)/home/circleci/.rbenv"
+      - cp -rn "$(pwd)/home/ci/.rbenv" /home/ci || true
+      - rm -rf "$(pwd)/home/ci/.rbenv"
       # Depended on by CIUtils: https://github.com/code-dot-org/code-dot-org/blob/33b79dac1c417e227ac2eb014afcc2505bac7ddb/lib/cdo/ci_utils.rb/#L19-L20
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
@@ -102,7 +102,7 @@ steps:
     image: plugins/s3-cache
     volumes:
       - name: rbenv
-        path: /home/circleci/.rbenv
+        path: /home/ci/.rbenv
     settings:
       endpoint: s3://cdo-drone
       debug: true
@@ -110,7 +110,7 @@ steps:
       rebuild: true
       filename: unit-tests-cache-ubuntu-20.tar
       mount:
-        - /home/circleci/.rbenv
+        - /home/ci/.rbenv
 
 volumes:
   - name: rbenv
@@ -197,7 +197,7 @@ steps:
     pull: always
     volumes:
       - name: rbenv
-        path: /home/circleci/.rbenv
+        path: /home/ci/.rbenv
       - name: mysql
         path: /var/lib/mysql
     environment:
@@ -213,9 +213,9 @@ steps:
       SAUCE_ACCESS_KEY:
         from_secret: SAUCE_ACCESS_KEY
     commands:
-      - sudo chown -R circleci:circleci .
+      - sudo chown -R ci:ci .
       # cache is restored to source directory, so we need to copy it into the right place
-      - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
+      - cp -rn "$(pwd)/home/ci/.rbenv" /home/ci || true
       # Depended on by CIUtils: https://github.com/code-dot-org/code-dot-org/blob/33b79dac1c417e227ac2eb014afcc2505bac7ddb/lib/cdo/ci_utils.rb/#L19-L20
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
@@ -230,7 +230,7 @@ steps:
     image: plugins/s3-cache
     volumes:
       - name: rbenv
-        path: /home/circleci/.rbenv
+        path: /home/ci/.rbenv
     settings:
       endpoint: s3://cdo-drone
       debug: true
@@ -238,7 +238,7 @@ steps:
       rebuild: true
       filename: ui-tests-cache-ubuntu-20.tar
       mount:
-        - /home/circleci/.rbenv
+        - /home/ci/.rbenv
         # Used to avoid re-seeding UI test data unless something changed - see cached_ui_test task in https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/lib/tasks/seed.rake
         - dashboard/db/ui_test_data.hash
         - dashboard/db/ui_test_data.sql
@@ -294,6 +294,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: b3f6cc802292c30b4b577c6c8c662d1b9f95fd1460961e3a384c2ff4211fbed7
+hmac: b6b00ec9e475a43f06b21720c2e9854ff136aed569cc36ee5115f3b8886dc83f
 
 ...

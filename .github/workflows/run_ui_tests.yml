@@ -75,8 +75,8 @@ jobs:
           DISABLE_SPRING: 1           
           LD_LIBRARY_PATH: /usr/local/lib
           CI_BUILD_NUMBER: ${{ github.run_id }}
-          CI_TEST_REPORTS: /home/circleci/test_reports
-          CI_ARTIFACTS: /home/circleci/artifacts
+          CI_TEST_REPORTS: /home/ci/test_reports
+          CI_ARTIFACTS: /home/ci/artifacts
         run: bundle exec rake circle:seed_ui_test --trace   
       - name: Rake run UI tests
         env: 
@@ -87,6 +87,6 @@ jobs:
           DISABLE_SPRING: 1           
           LD_LIBRARY_PATH: /usr/local/lib
           CI_BUILD_NUMBER: ${{ github.run_id }}
-          CI_TEST_REPORTS: /home/circleci/test_reports
-          CI_ARTIFACTS: /home/circleci/artifacts
+          CI_TEST_REPORTS: /home/ci/test_reports
+          CI_ARTIFACTS: /home/ci/artifacts
         run: bundle exec rake circle:run_ui_tests --trace

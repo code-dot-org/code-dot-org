@@ -20,8 +20,8 @@ ENV \
     LANG=C.UTF-8 \
     TZ=Etc/UTC \
     DEBIAN_FRONTEND=noninteractive \
-    USER=circleci \
-    GROUP=circleci
+    USER=ci \
+    GROUP=ci
 
 # just enough to compile ruby: other deps => primary-layer below
 RUN apt-get update && \
@@ -44,7 +44,7 @@ RUN apt-get update && \
         zlib1g-dev \
         && true
 
-# add circleci user
+# add ci user
 RUN groupadd --gid 3434 ${USER} && \
     useradd --uid 3434 --gid ${GROUP} --shell /bin/bash --create-home ${USER} && \
     printf "${USER} ALL=NOPASSWD: ALL\n" > /etc/sudoers.d/50-${USER}
@@ -131,7 +131,7 @@ RUN usermod -d /var/lib/mysql/ mysql
 
 # Also for some reason, MySQL 8 on Ubuntu 20 only grants read permissions to
 # the mysqld directory to the mysql user, but we need to be able to connect as
-# circleci, so we explicitly grant permissions to avoid the error:
+# ci, so we explicitly grant permissions to avoid the error:
 #
 #  ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/run/mysqld/mysqld.sock' (13) 
 RUN sudo chmod -R 755 /run/mysqld

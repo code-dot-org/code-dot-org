@@ -16,10 +16,10 @@ runs:
           export DISABLE_SPRING=1
           export LD_LIBRARY_PATH=/usr/local/lib
           # CI_BUILD_NUMBER determines where UI test cucumber logs are stored in S3.
-          sudo mkdir -p ‘/home/circleci’
+          sudo mkdir -p ‘/home/ci’
           export CI_BUILD_NUMBER=$GITHUB_RUN_ID
-          export CI_TEST_REPORTS=/home/circleci/test_reports
-          export CI_ARTIFACTS=/home/circleci/artifacts
+          export CI_TEST_REPORTS=/home/ci/test_reports
+          export CI_ARTIFACTS=/home/ci/artifacts
           sudo mkdir -p $CI_TEST_REPORTS/cucumber
           sudo mkdir -p $CI_ARTIFACTS    
       shell: bash   

@@ -19,8 +19,8 @@ export LD_LIBRARY_PATH=/usr/local/lib
 if [ -z "$CI_BUILD_NUMBER" ]; then
   CI_BUILD_NUMBER="$RANDOM$RANDOM"
 fi
-export CI_TEST_REPORTS=/home/circleci/test_reports
-export CI_ARTIFACTS=/home/circleci/artifacts
+export CI_TEST_REPORTS=/home/ci/test_reports
+export CI_ARTIFACTS=/home/ci/artifacts
 
 mkdir $CI_ARTIFACTS
 
