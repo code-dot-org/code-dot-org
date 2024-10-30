@@ -1,5 +1,5 @@
 // TODO ACQ-2556 - Remove this after 2024 HOC
-$width-sm: 640px;
+$width-md: 960px;
 
 .hoc-2024-music-lab-jam-hero {
   position: relative;
@@ -17,27 +17,46 @@ $width-sm: 640px;
     z-index: 0;
   }
 
-  @media (max-width: $width-sm) {
-    background: linear-gradient(130deg,#02107d 0%,#0b1c42 33%,#081231 71%,#341c65 100%);
-  }
-
   .wrapper {
-    max-width: 1440px;
+    max-width: 1260px;
     margin-block: unset;
     margin-inline: auto;
     text-align: center;
     background: url("/images/banners/banner-music-lab-jam.png") center no-repeat;
-    background-size: cover;
+    background-size: contain;
     position: relative;
     z-index: 1;
+
+    @media (max-width: $width-md) {
+      background-size: cover;
+    }
 
     .content-wrapper {
       max-width: 960px;
       margin-inline: auto;
-      background: radial-gradient(circle, rgba(0, 0, 0, 0.6) 25%, rgba(0, 0, 0, 0) 80%);
+      background: radial-gradient(
+        circle,
+        #1b0c2d 0%,
+        rgba(27,12,45,0.7) 35%,
+        rgba(27,12,45,0) 85%,
+        rgba(27,12,45,0) 100%
+      );
       padding: 6rem 1rem;
 
-      p.body-two {
+      @media (max-width: $width-md) {
+        background: radial-gradient(
+          circle,
+          #1b0c2d 0%,
+          rgba(27, 12, 45, 0.7) 55%,
+          rgba(27, 12, 45, 0) 100%
+        );
+      }
+
+      p.body-one:nth-of-type(1) {
+        font-weight: 500;
+      }
+
+      p.body-one:nth-of-type(2) {
         max-width: 590px;
         margin-inline: auto;
       }
