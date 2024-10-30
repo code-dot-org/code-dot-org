@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-10-28 21:35:11 UTC",
+    "serialized_at": "2024-10-29 18:47:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7286,6 +7286,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa6-pilot-2025/resources",
+      "key": "all_resources_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_5"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa6-pilot-2025/standards",
+      "key": "all_standards_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_5"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa6-pilot-2025/vocab",
+      "key": "all_vocabulary_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_5"
+      }
+    },
+    {
       "name": "ArrayList and String Algorithms",
       "url": "https://docs.google.com/presentation/d/1rYEaRuNONHyelL5dgRlKIt8AerNEjN1YPOyXodrLUXU/edit?usp=drive_link",
       "key": "arraylist_and_string_algorithms",
@@ -7901,7 +7934,7 @@
     },
     {
       "name": "Unit 6 Word Wall Cards",
-      "url": "https://docs.google.com/document/d/16PaSXLhaT_Tfk3AG5o2u8mSCP4QUXao0jakgkuZxmRw/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1fe7nzFH812SBmD_mSRXqAEdOCvwi31TinhQN9YM5z5c/edit?usp=drive_link",
       "key": "unit_6_word_wall_cards",
       "properties": {
       },
@@ -8451,6 +8484,24 @@
     {
       "seeding_key": {
         "resource.key": "_exemplar_unit_6_guide",
+        "script.name": "csa6-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_5",
+        "script.name": "csa6-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_5",
+        "script.name": "csa6-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_5",
         "script.name": "csa6-pilot-2025"
       }
     },

@@ -157,6 +157,23 @@ DefaultCheckboxDropdown.args = {
   size: 'm',
 };
 
+export const ReadOnlyCheckboxDropdown = SingleTemplate.bind({});
+ReadOnlyCheckboxDropdown.args = {
+  name: 'readOnly-dropdown',
+  allOptions: [
+    {value: 'option-1', label: 'Option 1'},
+    {value: 'option-2', label: 'Option 2'},
+  ],
+  checkedOptions: ['option-1'],
+  labelText: 'ReadOnly Dropdown',
+  onChange: args => null,
+  onSelectAll: args => null,
+  onClearAll: args => null,
+  readOnly: true,
+  color: dropdownColors.black,
+  size: 'm',
+};
+
 export const DisabledCheckboxDropdown = SingleTemplate.bind({});
 DisabledCheckboxDropdown.args = {
   name: 'disabled-dropdown',
@@ -189,6 +206,66 @@ WithDisabledOptionCheckboxDropdown.args = {
   onChange: args => null,
   onSelectAll: args => null,
   onClearAll: args => null,
+  size: 'm',
+};
+
+export const StyledAsFieldCheckboxDropdown = SingleTemplate.bind({});
+StyledAsFieldCheckboxDropdown.args = {
+  name: 'styled-as-field-checkbox-dropdown',
+  allOptions: [
+    {value: 'option-1', label: 'Option 1'},
+    {value: 'option-2', label: 'Option 2'},
+  ],
+  checkedOptions: ['option-1'],
+  labelText: 'Helper Message Checkbox Dropdown',
+  onChange: args => console.log(args),
+  helperMessage: 'Helper message',
+  styleAsFormField: true,
+  size: 'm',
+};
+
+export const WithErrorCheckboxDropdown = SingleTemplate.bind({});
+WithErrorCheckboxDropdown.args = {
+  name: 'error-checkbox-dropdown',
+  allOptions: [
+    {value: 'option-1', label: 'Option 1'},
+    {value: 'option-2', label: 'Option 2'},
+  ],
+  checkedOptions: ['option-1'],
+  labelText: 'Error Checkbox Dropdown',
+  onChange: args => console.log(args),
+  errorMessage: 'Error message',
+  size: 'm',
+};
+
+export const WithHelperMessageCheckboxDropdown = SingleTemplate.bind({});
+WithHelperMessageCheckboxDropdown.args = {
+  name: 'helper-message-checkbox-dropdown',
+  allOptions: [
+    {value: 'option-1', label: 'Option 1'},
+    {value: 'option-2', label: 'Option 2'},
+  ],
+  checkedOptions: ['option-1'],
+  labelText: 'Helper Message Checkbox Dropdown',
+  onChange: args => console.log(args),
+  helperMessage: 'Helper message',
+  size: 'm',
+};
+
+export const WithHelperMessageAndIconCheckboxDropdown = SingleTemplate.bind({});
+WithHelperMessageAndIconCheckboxDropdown.args = {
+  name: 'helper-icon-checkbox-dropdown',
+  allOptions: [
+    {value: 'option-1', label: 'Option 1'},
+    {value: 'option-2', label: 'Option 2'},
+  ],
+  checkedOptions: ['option-1'],
+  labelText: 'Helper Icon Checkbox Dropdown',
+  onChange: args => console.log(args),
+  helperIcon: {
+    iconName: 'info-circle',
+  },
+  helperMessage: 'Helper message',
   size: 'm',
 };
 
