@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 USAGE="
 SSH-es you into a live drone build, for interactive debugging.
@@ -13,18 +13,26 @@ Notes:
      must have gateway as an alias.
 "
 
-# Print USAGE if --help or ARGC != 1
-if [ "$1" = "--help" ] || [ "$#" -ne 1 ]; then
-  cat <<< "$USAGE"
-  exit 1
-fi
+drone-shell () {
+  # Print USAGE if --help or ARGC != 1
+  if [ "$1" = "--help" ] || [ "$#" -ne 1 ]; then
+    cat <<< "$USAGE"
+    exit 1
+  fi
+  hostname=$1
 
-if ! ssh -G gateway | grep 'hostname gateway.code.org' >/dev/null; then
-  echo "WARNING: no gateway alias found in ~/.ssh/config. Please setup a Host entry for gateway.code.org per:"
-  echo "https://docs.google.com/document/d/17oR9KxLu34mnFuB3DAFVQb4XaLS7-7_MJoVcDT4ZgBk/edit?tab=t.0#heading=h.p17oru8r6vpw"
-  echo
-  echo "Trying anyway..."
-  set -x
-fi
+  if ! ssh -G gateway | grep 'hostname gateway.code.org' >/dev/null; then
+    echo "WARNING: no gateway alias found in ~/.ssh/config. Please setup a Host entry for gateway.code.org per:"
+    echo "https://docs.google.com/document/d/17oR9KxLu34mnFuB3DAFVQb4XaLS7-7_MJoVcDT4ZgBk/edit?tab=t.0#heading=h.p17oru8r6vpw"
+    echo
+    echo "Trying anyway..."
+    set -x
+  fi
 
-ssh -tt gateway.code.org "ssh -o StrictHostKeyChecking=no -tti ~/.ssh/drone_access_key ubuntu@$1 sudo docker exec -it \\\`sudo docker ps -lq\\\` bash"
+  ssh -tt gateway.code.org "ssh -o StrictHostKeyChecking=no -tti ~/.ssh/drone_access_key ubuntu@$hostname sudo docker exec -it \\\`sudo docker ps -lq\\\` bash"
+}
+
+# We're being called from the command-line (vs sourced), run drone-shell()
+if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
+  drone-shell "$@"
+fi
