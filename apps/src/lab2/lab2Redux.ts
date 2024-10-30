@@ -588,9 +588,10 @@ export const {
   setValidationState,
   setIsShareView,
   setOverrideValidations,
+  onLevelChange,
 } = labSlice.actions;
 
 // These should not be set outside of the lab slice.
-const {setChannel, onLevelChange} = labSlice.actions;
+const {setChannel} = labSlice.actions;
 
 export default labSlice.reducer;

@@ -277,6 +277,12 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
 
   const {showNavigation, navigationText, navigationIcon, handleNavigation} =
     getNavigationButtonProps();
+  console.log({
+    showNavigation,
+    navigationText,
+    navigationIcon,
+    handleNavigation,
+  });
 
   const validationScrollRef = useRef<HTMLDivElement>(null);
 
