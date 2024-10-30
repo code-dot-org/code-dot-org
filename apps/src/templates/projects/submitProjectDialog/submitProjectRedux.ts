@@ -14,9 +14,7 @@ const initialState: SubmitProjectState = {
   submissionStatus: undefined,
 };
 
-// This thunk's callback function submits a teacher's student's id along with the level/script id
-// (and the scriptLevelId if the level is a sublevel) to the student chat history endpoint,
-// waits for a response, and then returns the student's chat events for that level/script.
+// This thunk's callback function retrieves the proejct's submission status.
 export const fetchSubmissionStatus = createAsyncThunk(
   'aichat/getSubmissionStatus',
   async (_, thunkAPI) => {
