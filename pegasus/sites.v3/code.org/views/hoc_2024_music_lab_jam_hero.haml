@@ -7,11 +7,11 @@
 .hoc-2024-music-lab-jam-hero
   .wrapper
     .content-wrapper
-      - if hoc_mode == "soon-hoc"
-        %p.body-one.white
+      %p.body-one.white
+        - if hoc_mode == "soon-hoc"
           =hoc_s(:social_hoc_is_coming)
-      - elsif hoc_mode == "actual-hoc"
-        %p=hoc_s(:social_hoc2018_hoc_here)
+        - elsif hoc_mode == "actual-hoc"
+          =hoc_s(:social_hoc2018_hoc_here)
       %h1.white
         =hoc_s("music_lab.jam_session.name")
       %p.body-two.white

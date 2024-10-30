@@ -2,22 +2,10 @@
 $width-sm: 640px;
 
 .hoc-2024-music-lab-jam-hero {
-  background: linear-gradient(
-    90deg,
-    rgba(2, 16, 125, 1) 0%,
-    rgba(11, 28, 66, 1) 33%,
-    rgba(8, 18, 49, 1) 71%,
-    rgba(52, 28, 101, 1) 100%
-  );
+  background: linear-gradient(90deg,#02107d 0%,#0b1c42 33%,#081231 71%,#341c65 100%);
 
   @media (max-width: $width-sm) {
-    background: linear-gradient(
-      130deg,
-      rgba(2, 16, 125, 1) 0%,
-      rgba(11, 28, 66, 1) 33%,
-      rgba(8, 18, 49, 1) 71%,
-      rgba(52, 28, 101, 1) 100%
-    );
+    background: linear-gradient(130deg,#02107d 0%,#0b1c42 33%,#081231 71%,#341c65 100%);
   }
 
   .wrapper {
@@ -32,6 +20,11 @@ $width-sm: 640px;
     .content-wrapper {
       max-width: 960px;
       margin-inline: auto;
+
+      p.body-two {
+        max-width: 590px;
+        margin-inline: auto;
+      }
     }
 
     h1 {
