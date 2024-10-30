@@ -34,6 +34,9 @@ steps:
         
         To "ssh" into this drone instance, wait until the 'unit-tests' step starts and run:
         bin/drone/shell $hostname
+
+        You can also open a VSCode tunnel into drone to edit live:
+        bin/drone/vscode $hostname
         EOF
 
   # We cache a clone of staging in the `cache-staging-clone` pipeline
@@ -162,6 +165,9 @@ steps:
         
         To "ssh" into this drone instance, wait until the 'ui-tests' step starts and run:
         bin/drone/shell $hostname
+
+        You can also open a VSCode tunnel into drone to edit live:
+        bin/drone/vscode $hostname
         EOF
 
   # We cache a clone of staging in the `cache-staging-clone` pipeline
@@ -305,6 +311,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 430a51f1075b3153a899577c120366cafc483eabe1f470ca283717129b602bd3
+hmac: 408f9a12af586157de45d55991717dae12d3e96fc2034525a41b793a0412a713
 
 ...
