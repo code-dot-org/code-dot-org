@@ -1,5 +1,5 @@
 {
-  "currentLevelId": "57656",
+  "currentLevelId": "2",
   "deeperLearningCourse": false,
   "saveAnswersBeforeNavigation": false,
   "isFullProgress": false,
@@ -21,11 +21,11 @@
       "numberedLesson": true,
       "levels": [
         {
-          "id": "2764",
+          "id": "1",
           "ids": [
-            "28048"
+            "1"
           ],
-          "activeId": "28048",
+          "activeId": "1",
           "inactiveIds": [],
           "position": 1,
           "kind": "puzzle",
@@ -43,11 +43,11 @@
           "can_have_feedback": false
         },
         {
-          "id": "56981",
+          "id": "2",
           "ids": [
-            "57656"
+            "2"
           ],
-          "activeId": "57656",
+          "activeId": "2",
           "inactiveIds": [],
           "position": 2,
           "kind": "puzzle",
@@ -65,11 +65,11 @@
           "can_have_feedback": false
         },
         {
-          "id": "57025",
+          "id": "3",
           "ids": [
-            "57741"
+            "3"
           ],
-          "activeId": "57741",
+          "activeId": "3",
           "inactiveIds": [],
           "position": 3,
           "kind": "puzzle",
@@ -87,11 +87,11 @@
           "can_have_feedback": false
         },
         {
-          "id": "57026",
+          "id": "4",
           "ids": [
-            "57742"
+            "4"
           ],
-          "activeId": "57742",
+          "activeId": "4",
           "inactiveIds": [],
           "position": 4,
           "kind": "puzzle",
@@ -109,11 +109,11 @@
           "can_have_feedback": false
         },
         {
-          "id": "60098",
+          "id": "5",
           "ids": [
-            "58264"
+            "5"
           ],
-          "activeId": "58264",
+          "activeId": "5",
           "inactiveIds": [],
           "position": 5,
           "kind": "puzzle",
@@ -131,11 +131,11 @@
           "can_have_feedback": false
         },
         {
-          "id": "60781",
+          "id": "6",
           "ids": [
-            "58325"
+            "6"
           ],
-          "activeId": "58325",
+          "activeId": "6",
           "inactiveIds": [],
           "position": 6,
           "kind": "puzzle",
@@ -153,11 +153,11 @@
           "can_have_feedback": false
         },
         {
-          "id": "62445",
+          "id": "7",
           "ids": [
-            "59219"
+            "7"
           ],
-          "activeId": "59219",
+          "activeId": "7",
           "inactiveIds": [],
           "position": 7,
           "kind": "puzzle",

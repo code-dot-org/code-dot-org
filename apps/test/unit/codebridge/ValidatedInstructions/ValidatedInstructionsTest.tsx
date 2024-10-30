@@ -60,7 +60,7 @@ describe('ValidatedInstructions', () => {
 
   it('continue button does not show up until you have passed validation', () => {
     // Level 1 in the progression, which is "in progress"
-    store.dispatch(setCurrentLevelId('28048'));
+    store.dispatch(setCurrentLevelId('1'));
     render(
       <Provider store={store}>
         <CodebridgeContextProvider value={getDefaultCodebridgeContext()}>
@@ -73,7 +73,7 @@ describe('ValidatedInstructions', () => {
     ).toBeNull();
 
     // Now pass the level
-    store.dispatch(mergeResults({'28048': 100}));
+    store.dispatch(mergeResults({'1': 100}));
 
     // Continue button should be present.
     screen.getByRole('button', {name: commonI18n.continue()});
