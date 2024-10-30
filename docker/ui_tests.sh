@@ -54,6 +54,7 @@ pegasus_port: 3000
 properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
 saucelabs_authkey: $SAUCE_ACCESS_KEY
 saucelabs_username: $SAUCE_USERNAME
+saucelabs_tunnel_name: cdo-tunnel-$CIRCLE_BUILD_NUM
 session_store_server: 'redis://ui-tests-redis:6379/0/session'
 skip_seed_all: true
 sources_s3_directory: sources_circle/$CIRCLE_BUILD_NUM

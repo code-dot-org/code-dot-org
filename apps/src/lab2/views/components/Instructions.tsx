@@ -3,6 +3,7 @@ import React, {useContext} from 'react';
 import {useSelector} from 'react-redux';
 
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
@@ -61,9 +62,15 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   );
   const predictResponse = useAppSelector(state => state.predictLevel.response);
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
-  const offerBrowserTts = useAppSelector(
-    state => state.lab.levelProperties?.offerBrowserTts
-  );
+
+  const offerBrowserTts =
+    useAppSelector(state => state.lab.levelProperties?.offerBrowserTts) ||
+    queryParams('show-tts') === 'true';
+
+  const useSecondaryFinishButton =
+    useAppSelector(
+      state => state.lab.levelProperties?.useSecondaryFinishButton
+    ) || queryParams('use-secondary-finish-button') === 'true';
 
   const dispatch = useAppDispatch();
 
@@ -90,6 +97,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       className={className}
       canShowNextButton={manageNavigation && (!hasConditions || satisfied)}
       hasNextLevel={hasNextLevel}
+      useSecondaryFinishButton={useSecondaryFinishButton}
       onContinueOrFinish={() => dispatch(continueOrFinishLesson())}
     />
   );
@@ -119,6 +127,7 @@ interface InstructionsPanelProps {
   offerBrowserTts?: boolean;
   canShowNextButton: boolean;
   hasNextLevel: boolean;
+  useSecondaryFinishButton: boolean;
   onContinueOrFinish: () => void;
 }
 
@@ -146,9 +155,22 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   offerBrowserTts,
   canShowNextButton,
   hasNextLevel,
+  useSecondaryFinishButton,
   onContinueOrFinish,
 }) => {
   const vertical = layout === 'vertical';
+
+  const showSecondaryFinishButton = useSecondaryFinishButton && !hasNextLevel;
+
+  const useMessage =
+    showSecondaryFinishButton &&
+    queryParams('show-secondary-finish-button-question') === 'true'
+      ? commonI18n.finishMessage()
+      : message;
+
+  // The secondary finish button avoids a reappearance animation by not using
+  // the unique index.
+  const useMessageIndex = useSecondaryFinishButton ? undefined : messageIndex;
 
   return (
     <div
@@ -193,20 +215,25 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             </div>
           </div>
         )}
-        {(message || canShowNextButton) && (
+        {(useMessage || canShowNextButton) && (
           <div
-            key={messageIndex + ' - ' + message}
+            key={useMessageIndex + ' - ' + useMessage}
             id="instructions-feedback"
-            className={moduleStyles.feedback}
+            className={classNames(
+              moduleStyles.feedback,
+              showSecondaryFinishButton && moduleStyles.feedbackBottom
+            )}
           >
             <div
               id="instructions-feedback-message"
               className={moduleStyles['message-' + theme]}
             >
-              {offerBrowserTts && message && <TextToSpeech text={message} />}
-              {message && (
+              {offerBrowserTts && useMessage && (
+                <TextToSpeech text={useMessage} />
+              )}
+              {useMessage && (
                 <EnhancedSafeMarkdown
-                  markdown={message}
+                  markdown={useMessage}
                   className={moduleStyles.markdownText}
                   handleInstructionsTextClick={handleInstructionsTextClick}
                 />
@@ -219,6 +246,8 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   }
                   onClick={onContinueOrFinish}
                   className={moduleStyles.buttonInstruction}
+                  type={showSecondaryFinishButton ? 'secondary' : 'primary'}
+                  color={showSecondaryFinishButton ? 'black' : 'purple'}
                 />
               )}
             </div>

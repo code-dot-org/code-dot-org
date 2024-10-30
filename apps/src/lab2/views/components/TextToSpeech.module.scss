@@ -6,15 +6,19 @@
   position: absolute;
   top: 6px;
   right: 6px;
-  width: 22px;
-  height: 22px;
-  color: $neutral_dark70;
+  opacity: 50%;
   cursor: pointer;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 100%;
+  }
 }
 
 .icon {
-  position: absolute;
-  top: 2px;
-  left: 4px;
   font-size: 15px;
+}
+
+.playing {
+  opacity: 100%;
 }

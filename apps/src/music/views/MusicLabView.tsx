@@ -39,9 +39,9 @@ import Timeline from './Timeline';
 
 import moduleStyles from './music-view.module.scss';
 
-// Default to using PackDialog, unless a URL parameter forces the use of
-// the newer PackDialog2.
-const usePackDialog2 = AppConfig.getValue('pack-dialog-2') === 'true';
+// Default to using PackDialog2, unless a URL parameter forces the use of
+// the older PackDialog.
+const usePackDialog = AppConfig.getValue('pack-dialog-1') === 'true';
 
 interface MusicLabViewProps {
   blocklyDivId: string;
@@ -183,6 +183,11 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     }
   }, [dispatch, validationStateCallout]);
 
+  const hideChaff = useCallback(
+    () => blocklyWorkspace.hideChaff(),
+    [blocklyWorkspace]
+  );
+
   const renderInstructions = useCallback(
     (position: InstructionsPosition) => {
       return (
@@ -271,7 +276,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     return <MusicPlayView setPlaying={setPlaying} />;
   }
 
-  const CurrentPackDialog = usePackDialog2 ? PackDialog2 : PackDialog;
+  const CurrentPackDialog = usePackDialog ? PackDialog : PackDialog2;
 
   return (
     <div id="music-lab" className={moduleStyles.musicLab}>
@@ -300,6 +305,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 clearCode={clearCode}
                 allowPackSelection={allowPackSelection}
                 skipUrl={skipUrl}
+                hideChaff={hideChaff}
               />
             }
           >

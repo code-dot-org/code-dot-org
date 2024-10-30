@@ -8,9 +8,9 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "##Change a sound\r\n\r\nAfter turning on keyboard navigation again in the Workspace, use **WASD** to navigate between and into the blocks on the workspace. \r\n\r\nPress **Enter** to open the play block and use **Tab** to navigate between the songs. \r\n\r\nChange the song then **Run**. \r\n\r\nUse **Shift+Tab** to navigate back to the **Continue** button. \r\n\r\n::: details [**Hint**]\r\nMake sure Keyboard Navigation is turned on in the Workspace using **Shift+Control+K**\r\n:::",
+    "long_instructions": "##Change a sound\r\n\r\nTurn on keyboard navigation again in the workspace using **Shift+Control+K**\r\n\r\nUse **WASD** to navigate between and into the blocks on the workspace. \r\n\r\nPress **Enter** to open the play block and use **Tab** to navigate between the songs. \r\n\r\nChange the song then run using the **Space Bar**. \r\n\r\nUse **Shift+Tab** to navigate back to the **Continue** button. ",
     "offer_browser_tts": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
       "sounds": {
@@ -59,7 +59,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-23 16:34:44 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 16:36:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 16:36:52 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 16:40:18 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 16:43:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 16:52:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-23 16:34:44 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 16:36:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 16:36:52 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 16:40:18 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 16:43:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 16:52:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 18:46:38 +0000\",\"changed\":[\"long_instructions\",\"hide_share_and_remix\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -9,7 +9,7 @@ import {BlockMode, MIN_NUM_MEASURES} from '../constants';
 import {
   clearSelectedBlockId,
   getBlockMode,
-  setStartPlayheadPosition,
+  setStartingPlayheadPosition,
 } from '../redux/musicRedux';
 import {MusicLevelData} from '../types';
 
@@ -105,11 +105,15 @@ const Timeline: React.FunctionComponent = () => {
     (_, i) => i + 1
   );
 
+  const currentlyAllowChangeStartingPlayheadPosition =
+    !isPlaying && allowChangeStartingPlayheadPosition;
+
   const onMeasuresBackgroundClick = useCallback(
     (event: MouseEvent) => {
-      if (isPlaying || !allowChangeStartingPlayheadPosition) {
+      if (!currentlyAllowChangeStartingPlayheadPosition) {
         return;
       }
+
       const offset =
         event.clientX -
         (event.target as Element).getBoundingClientRect().x -
@@ -117,20 +121,20 @@ const Timeline: React.FunctionComponent = () => {
       const exactMeasure = offset / barWidth + 1;
       // Round measure to the nearest beat (1/4 note).
       const roundedMeasure = Math.round(exactMeasure * 4) / 4;
-      dispatch(setStartPlayheadPosition(roundedMeasure));
+      dispatch(setStartingPlayheadPosition(roundedMeasure));
     },
-    [dispatch, isPlaying, allowChangeStartingPlayheadPosition]
+    [dispatch, currentlyAllowChangeStartingPlayheadPosition]
   );
 
   const onMeasureNumberClick = useCallback(
     (measureNumber: number) => {
-      if (isPlaying) {
+      if (!currentlyAllowChangeStartingPlayheadPosition) {
         return;
       }
 
-      dispatch(setStartPlayheadPosition(measureNumber));
+      dispatch(setStartingPlayheadPosition(measureNumber));
     },
-    [dispatch, isPlaying]
+    [dispatch, currentlyAllowChangeStartingPlayheadPosition]
   );
 
   const onTimelineClick = useCallback(() => {
@@ -173,7 +177,7 @@ const Timeline: React.FunctionComponent = () => {
         className={classNames(
           moduleStyles.measuresBackground,
           moduleStyles.fullWidthOverlay,
-          allowChangeStartingPlayheadPosition &&
+          currentlyAllowChangeStartingPlayheadPosition &&
             moduleStyles.measuresBackgroundClickable
         )}
         style={{width: paddingOffset + measuresToDisplay * barWidth}}
@@ -194,7 +198,8 @@ const Timeline: React.FunctionComponent = () => {
                   moduleStyles.barNumber,
                   measure === Math.floor(currentPlayheadPosition) &&
                     moduleStyles.barNumberCurrent,
-                  !isPlaying && moduleStyles.barNumberClickable
+                  currentlyAllowChangeStartingPlayheadPosition &&
+                    moduleStyles.barNumberClickable
                 )}
                 onClick={() => onMeasureNumberClick(measure)}
               >

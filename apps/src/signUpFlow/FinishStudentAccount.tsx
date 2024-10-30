@@ -21,7 +21,9 @@ import {navigateToHref} from '../utils';
 
 import locale from './locale';
 import {
+  ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
+  OAUTH_LOGIN_TYPE_SESSION_KEY,
   USER_RETURN_TO_SESSION_KEY,
   clearSignUpSessionStorage,
 } from './signUpFlowConstants';
@@ -57,6 +59,16 @@ const FinishStudentAccount: React.FunctionComponent<{
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
+    // If the user hasn't selected a user type or login type, redirect them back to the incomplete step of signup.
+    if (sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === null) {
+      navigateToHref('/users/new_sign_up/account_type');
+    } else if (
+      sessionStorage.getItem(EMAIL_SESSION_KEY) === null &&
+      sessionStorage.getItem(OAUTH_LOGIN_TYPE_SESSION_KEY) === null
+    ) {
+      navigateToHref('/users/new_sign_up/login_type');
+    }
+
     const fetchGdprData = async () => {
       const urlParams = new URLSearchParams(window.location.search);
       const forceInEu = urlParams.get('force_in_eu');

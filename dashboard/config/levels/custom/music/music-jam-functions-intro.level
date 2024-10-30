@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2024-10-22T23:17:17.000Z",
   "level_num": "custom",
@@ -28,16 +27,16 @@
             },
             {
               "type": "procedures_defnoreturn",
-              "x": 210,
+              "id": "GCjIiZT^[(2+,Bh6xRa8",
+              "x": 190,
               "y": 30,
               "deletable": false,
-              "movable": false,
               "editable": false,
               "extraState": {
                 "procedureId": "intro-procedure-id",
                 "initialDeleteConfig": false,
                 "initialEditConfig": false,
-                "initialMoveConfig": false
+                "initialMoveConfig": true
               },
               "fields": {
                 "NAME": "intro"
@@ -54,6 +53,7 @@
                         "block": {
                           "type": "play_sound_at_current_location_simple2",
                           "id": "N/KYOy.IXc7m*u(+;Buh",
+                          "deletable": false,
                           "movable": false,
                           "fields": {
                             "sound": "sabrina_carpenter_espresso/drums_intro"
@@ -62,6 +62,7 @@
                             "block": {
                               "type": "play_sound_at_current_location_simple2",
                               "id": "jN6v:04PQW@K=KC*]Ik]",
+                              "deletable": false,
                               "movable": false,
                               "fields": {
                                 "sound": "sabrina_carpenter_espresso/bass_intro"
@@ -70,6 +71,7 @@
                                 "block": {
                                   "type": "play_sound_at_current_location_simple2",
                                   "id": "OJW^%gSWxo:Q]%_9Uv1V",
+                                  "deletable": false,
                                   "movable": false,
                                   "fields": {
                                     "sound": "sabrina_carpenter_espresso/keys_intro"
@@ -78,6 +80,7 @@
                                     "block": {
                                       "type": "play_sound_at_current_location_simple2",
                                       "id": "~4#B+CLI?7q0bFzd|Z8[",
+                                      "deletable": false,
                                       "movable": false,
                                       "fields": {
                                         "sound": "sabrina_carpenter_espresso/guitar_intro"
@@ -177,7 +180,8 @@
     "offer_browser_tts": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:17.940+00:00\",\"changed\":[\"cloned from \\\"music-ai-functions-chorus_1\\\"\"],\"cloned_from\":\"music-ai-functions-chorus_1\"},{\"changed_at\":\"2024-10-22 23:48:24 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:17.940+00:00\",\"changed\":[\"cloned from \\\"music-ai-functions-chorus_1\\\"\"],\"cloned_from\":\"music-ai-functions-chorus_1\"},{\"changed_at\":\"2024-10-22 23:48:24 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-28 20:07:01 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-28 20:31:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

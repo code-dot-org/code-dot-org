@@ -19,6 +19,7 @@ import {
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {STEPS} from '@cdo/apps/templates/rubrics/productTourHelpers';
 import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
+import teacherRubric from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import teacherSections, {
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -131,7 +132,12 @@ describe('RubricContainer', () => {
     sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
     jest.spyOn(utils, 'queryParams').mockReturnValue('1');
     stubRedux();
-    registerReducers({teacherSections, teacherPanel, currentUser});
+    registerReducers({
+      teacherRubric,
+      teacherSections,
+      teacherPanel,
+      currentUser,
+    });
     store = getStore();
 
     // set default values to be dispatched via redux
