@@ -16,12 +16,12 @@ module CIUtils
     `git log --format=%B -n 1 $GIT_COMMIT`.strip
   end
 
-  def self.unit_test_container?
-    ENV.fetch('CI_JOB', nil) == "unit_tests"
+  def self.ci_job_unit_tests?
+    ENV['CI_JOB'] == 'unit_tests'
   end
 
-  def self.ui_test_container?
-    ENV.fetch('CI_JOB', nil) == "ui_tests"
+  def self.ci_job_ui_tests?
+    ENV['CI_JOB'] == 'ui_tests'
   end
 
   def self.running_on_ci?

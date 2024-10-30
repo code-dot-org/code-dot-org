@@ -1,4 +1,6 @@
 require 'simplecov'
+require_relative '../../lib/cdo/ci_utils'
+
 SimpleCov.start do
   coverage_dir File.expand_path('../coverage', __FILE__)
 
@@ -23,7 +25,7 @@ require 'yaml'
 
 # Set up JUnit output for CI
 reporters = []
-if ENV['CI']
+if CIUtils.ci_job_ui_tests?
   reporters << Minitest::Reporters::ProgressReporter.new
   reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CI_TEST_REPORTS', nil)}/bin")
 else
@@ -45,7 +47,7 @@ module MiniTest
 
   class Spec
     before do
-      if ENV['CI']
+      if ENV['CI_JOB'] == 'ui_tests'
         $stdout.stubs(:print)
         $stdout.stubs(:puts)
         $stdout.stubs(:warn)
