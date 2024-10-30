@@ -49,7 +49,7 @@ TEST_IOS_TAG = 'test ios'.freeze
 # Run UI tests against all browsers
 TEST_ALL_BROWSERS_TAG = 'test all browsers'.freeze
 
-# Overrides for whether to run Applitools eyes tests (WARNING: as of Oct 2024, this is not wired up to anything)
+# Overrides for whether to run Applitools eyes tests
 TEST_EYES = 'test eyes'.freeze
 SKIP_EYES = 'skip eyes'.freeze
 

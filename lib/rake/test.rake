@@ -404,15 +404,17 @@ namespace :test do
       end
     end
 
-    all_tasks = [:apps,
-                 # currently disabled because these tests take too long to run on circle
-                 # :interpreter,
-                 :dashboard,
-                 :dashboard_legacy,
-                 :pegasus,
-                 :shared,
-                 :lib,
-                 :bin]
+    all_tasks = [
+      :apps,
+      # currently disabled because these tests take too long to run on CI
+      # :interpreter,
+      :dashboard,
+      :dashboard_legacy,
+      :pegasus,
+      :shared,
+      :lib,
+      :bin
+    ]
 
     timed_task_with_logging all_but_apps: all_tasks.reject {|t| t == :apps}
 
