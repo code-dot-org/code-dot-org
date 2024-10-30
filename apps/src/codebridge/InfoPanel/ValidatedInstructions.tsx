@@ -295,6 +295,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   if (instructionsText === undefined) {
     return null;
   }
+
   return (
     <div
       id="instructions"

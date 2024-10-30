@@ -5,6 +5,7 @@ import {Provider} from 'react-redux';
 import progress, {
   initProgress,
   mergeResults,
+  setCurrentLevelId,
 } from '@cdo/apps/code-studio/progressRedux';
 import {CodebridgeContextProvider} from '@cdo/apps/codebridge';
 import ValidatedInstructions from '@cdo/apps/codebridge/InfoPanel/ValidatedInstructions';
@@ -52,6 +53,27 @@ describe('ValidatedInstructions', () => {
         </CodebridgeContextProvider>
       </Provider>
     );
+
+    // Continue button should be present.
+    screen.getByRole('button', {name: commonI18n.continue()});
+  });
+
+  it('continue button does not show up until you have passed validation', () => {
+    // Level 1 in the progression, which is "in progress"
+    store.dispatch(setCurrentLevelId('28048'));
+    render(
+      <Provider store={store}>
+        <CodebridgeContextProvider value={getDefaultCodebridgeContext()}>
+          <ValidatedInstructions />
+        </CodebridgeContextProvider>
+      </Provider>
+    );
+    expect(
+      screen.queryByRole('button', {name: commonI18n.continue()})
+    ).toBeNull();
+
+    // Now pass the level
+    store.dispatch(mergeResults({'28048': 100}));
 
     // Continue button should be present.
     screen.getByRole('button', {name: commonI18n.continue()});
