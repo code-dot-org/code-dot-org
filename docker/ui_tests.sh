@@ -20,9 +20,6 @@ if [ -z "$CI_BUILD_NUMBER" ]; then
   CI_BUILD_NUMBER="$RANDOM$RANDOM"
 fi
 export CI_TEST_REPORTS=/home/ci/test_reports
-export CI_ARTIFACTS=/home/ci/artifacts
-
-mkdir $CI_ARTIFACTS
 
 # set up locals.yml
 # Need to actually write all the commented out lines also
