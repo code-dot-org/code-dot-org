@@ -2,7 +2,7 @@
 require_relative '../../shared/test/common_test_helper'
 require_relative '../../shared/test/capture_queries'
 
-# Set up JUnit output for Circle
+# Set up JUnit output for CI
 reporters = [Minitest::Reporters::SpecReporter.new]
 if ENV['CI']
   reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CI_TEST_REPORTS', nil)}/pegasus")

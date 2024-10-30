@@ -21,7 +21,7 @@ require 'fileutils'
 require 'json'
 require 'yaml'
 
-# Set up JUnit output for Circle
+# Set up JUnit output for CI
 reporters = []
 if ENV['CI']
   reporters << Minitest::Reporters::ProgressReporter.new
