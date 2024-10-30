@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-09 19:01:39 UTC",
+    "serialized_at": "2024-10-28 15:14:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -92,7 +92,7 @@
     },
     {
       "key": "lesson-5",
-      "name": "Lesson Exploration: U1L8 - Inheritance",
+      "name": "Lesson Exploration: U1L9 - Inheritance",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": false,
@@ -143,7 +143,7 @@
     },
     {
       "key": "lesson-8",
-      "name": "Model Lesson 3: U1L10 - Programming Style and Feedback",
+      "name": "Model Lesson 3: U1L11 - Programming Style and Feedback",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": false,
@@ -209,7 +209,7 @@
     },
     {
       "key": "lesson-3",
-      "name": "Model Lesson 4: U1L16 - SpiralPainter FRQ",
+      "name": "Model Lesson 4: U1L17 - SpiralPainter FRQ",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": false,

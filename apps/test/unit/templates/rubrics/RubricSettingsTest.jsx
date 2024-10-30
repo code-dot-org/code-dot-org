@@ -17,6 +17,9 @@ import currentUser, {
 } from '@cdo/apps/templates/currentUserRedux';
 import {RowType} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import RubricSettings from '@cdo/apps/templates/rubrics/RubricSettings';
+import teacherRubric, {
+  setAllTeacherEvaluationData,
+} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import teacherSections, {
   selectSection,
   setSections,
@@ -88,7 +91,7 @@ describe('RubricSettings', () => {
       }
     });
     stubRedux();
-    registerReducers({teacherSections, currentUser});
+    registerReducers({teacherRubric, teacherSections, currentUser});
     store = getStore();
     store.dispatch(setSections([fakeSection]));
     store.dispatch(selectSection(fakeSection.id));
@@ -182,8 +185,7 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
-          allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -200,8 +202,7 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
-          allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -222,8 +223,7 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
-          allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={noAttempts}
+          aiEvalStatusCounters={noAttempts}
         />
       </Provider>
     );
@@ -241,8 +241,7 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
-          allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={noUnevaluated}
+          aiEvalStatusCounters={noUnevaluated}
         />
       </Provider>
     );
@@ -265,8 +264,7 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
-          allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -304,8 +302,8 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
-          allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
+          setAiEvalStatusMap={jest.fn()}
         />
       </Provider>
     );
@@ -361,7 +359,7 @@ describe('RubricSettings', () => {
           rubric={defaultRubric}
           sectionId={1}
           allTeacherEvaluationData={noEvals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -375,6 +373,7 @@ describe('RubricSettings', () => {
   });
 
   it('displays generate CSV button when there are evaluations to export', async () => {
+    store.dispatch(setAllTeacherEvaluationData(evals));
     render(
       <Provider store={store}>
         <RubricSettings
@@ -382,8 +381,7 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
-          allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -397,6 +395,7 @@ describe('RubricSettings', () => {
   });
 
   it('sends event when download CSV is clicked', async () => {
+    store.dispatch(setAllTeacherEvaluationData(evals));
     render(
       <Provider store={store}>
         <RubricSettings
@@ -405,8 +404,7 @@ describe('RubricSettings', () => {
           rubric={defaultRubric}
           reportingData={reportingData}
           sectionId={1}
-          allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -434,8 +432,7 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
-          allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -455,8 +452,7 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
-          allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -473,8 +469,7 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
-          allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );

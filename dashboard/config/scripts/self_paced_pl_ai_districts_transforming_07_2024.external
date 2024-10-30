@@ -3,24 +3,25 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Education Specific Tools
-
-#### LLMs serve as general-purpose AI systems capable of understanding and generating human-like text based on the input they receive. They are designed to be highly versatile, handling a broad range of tasks from writing and summarizing to answering questions across various domains. While interacting directly with an LLM is a key component of AI literacy it’s not always the best tool for the job.
-
-#### Developers have built tools on LLM technology that are often more specialized applications that leverage the underlying capabilities of LLMs but are tailored for specific functions. For example, a customer service chatbot powered by an LLM might only handle inquiries related to billing and technical support, using the LLM’s broad language capabilities in a narrow, focused context. This specialization allows these tools to provide more targeted and efficient solutions in their respective areas, often with additional modifications or training to suit particular needs.
+# Education Specific AI Tools
 
 #### Educational technology companies have taken to developing education-specific tools to support educators in their roles. These tools are not only more specialized but often have additional features such as:
 * #### Guardrails in place for what you can and cannot prompt about
 * #### Stricter privacy policies that may be more appropriate for school settings
 * #### Prompting input and output designed specifically for educator tasks
 
-#### You will explore some of these tools in the next level.
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🚀 Want to Learn More?</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
 
-# Practice
+#### Check out <a href="https://youtu.be/MbsAmE7Gmtw" target="_blank">this video</a> on educational guardrails and data privacy with AI. 
+</p></div>
+</details>
 
-#### Now is your time to explore some additional AI tools that can support your role as an educator.
+## To Do
 
-## Educator’s Choice
+#### Explore some additional AI tools that can support your schools and teachers.
 
 #### Choose an education-focused AI tool from the list below or take this time to explore another one you’ve heard about. Make an account as needed and try out some of the features.
 * #### <a href="https://www.magicschool.ai/" target="_blank">MagicSchool AI</a>
@@ -28,23 +29,7 @@ markdown <<MARKDOWN
 * #### <a href="https://web.diffit.me/" target="_blank">Diffit</a>
 * #### <a href="https://www.khanmigo.ai/" target="_blank">Khanmigo</a>
 
-#### **Note:** Some of these tools are free and available to everyone, some require a login, and some are paid. As this technology is developing rapidly we are unable to provide guidance on which tools fall into each category. If you’re unhappy with one tool, try another.
-
 <br>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">Overwhelmed?</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-    <p>
-
-#### Start with Diffit, a tool specifically designed to differentiate text.
-* #### Go to <a href="https://web.diffit.me/" target="_blank">Diffit</a>.
-* #### Copy and paste a reading from a recent lesson plan or any news article.
-* #### Choose the reading level to differentiate it to and/or language to translate it into.
-* #### Click “Generate Resource”.
-
-</p></div>
-</details>
-
-<br>
+#### **Note:** Some of these tools are free and available to everyone, some require a login, and some are paid.
 MARKDOWN

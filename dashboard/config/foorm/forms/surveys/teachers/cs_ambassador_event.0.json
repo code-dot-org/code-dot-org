@@ -8,7 +8,7 @@
         {
           "type": "html",
           "name": "intro_text",
-          "html": "<p><h1>Thank you for running this event as a Code.org Ambassador! </h1></p><p>In order to measure the impact of our program, we need to gather some information about your event. This step is required for your event to be counted towards the Ambassador Program.</p>"
+          "html": "<p><h1>Thank you for hosting a CS Ambassador Event! </h1></p><p>In order to measure the impact of our program, we need to gather some information about your event. This step is required for your event to be counted towards the Ambassador Program.</p>"
         },
         {
           "type": "radiogroup",
@@ -30,19 +30,26 @@
           "type": "html",
           "name": "student_account",
           "visibleIf": "{teacher_account} = false",
-          "html": "<h2><strong>Please sign out and sign back in using your teacher account credentials</strong></h3>\n<p></p><b><font size=3>Remember that you should sign in using your Code.org teacher account for all activities you do as an ambassador.</p>"
+          "html": "<h2><strong>Please sign out and sign back in using your teacher account credentials</strong></h3>\n<p></p><b><font size=3>Remember that you should sign in using your Code.org teacher account for all activities you do as an ambassador. This is the account that has +amb in the email address. </p>"
         },
         {
           "type": "html",
           "name": "event_info_header",
           "visibleIf": "{teacher_account} = true",
-          "html": "<h2>Event Information</h2>\n<p><span style='font-size: 12pt;'>These questions gather information about your event.</span></p>"
+          "html": "<h2>Event Information</h2>\n<p><span style='font-size: 12pt;'>Please answer these questions about your event.</span></p>"
+        },
+        {
+          "type": "text",
+          "name": "event_date",
+          "visibleIf": "{teacher_account} = true",
+          "title": "What is the date of your event?",
+          "inputType": "date"
         },
         {
           "type": "radiogroup",
           "name": "event_type",
           "visibleIf": "{teacher_account} = true",
-          "title": "Was this an Experience CS event or a Connect with CS event? ",
+          "title": "Is this an \"Experience CS\" event or a \"Connect with CS\" event? ",
           "choices": [
             {
               "value": "experience_cs",
@@ -58,21 +65,21 @@
           "type": "text",
           "name": "total_participants",
           "visibleIf": "{teacher_account} = true",
-          "title": "How many students attended your event?",
+          "title": "How many students attended your event? If you do not know, leave blank. ",
           "inputType": "number"
         },
         {
           "type": "text",
           "name": "pre_enrollment",
           "visibleIf": "{teacher_account} = true",
-          "title": "At the *start* of your event, how many students indicated interest in enrolling in CS next year?",
+          "title": "At the *start* of your event, how many students indicated interest in enrolling in a computer science class at your school next year? \n\nIf you do not know, leave blank. ",
           "inputType": "number"
         },
         {
           "type": "text",
           "name": "post_enrollment",
           "visibleIf": "{teacher_account} = true",
-          "title": "At the *end* of your event, how many students indicated interest in enrolling in CS next year?",
+          "title": "At the *end* of your event, how many students indicated interest in enrolling in a computer science class at your school next year? \n\nIf you do not know, leave blank.",
           "inputType": "number"
         },
         {

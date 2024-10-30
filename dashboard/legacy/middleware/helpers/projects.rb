@@ -26,8 +26,7 @@ class Projects
   #### rather than this middleware class (Projects, plural)
   #### such that we can make use of model associations managed by Rails.
   def get_rails_project(project_id)
-    return @rails_project if @rails_project
-    @rails_project = Project.find(project_id)
+    Project.find(project_id)
   end
 
   def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true, level: nil)

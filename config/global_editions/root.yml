@@ -1,4 +1,7 @@
 # This is the configuration for the main code.org/ root
+
+locale: en-US
+
 header:
   # The topbar (which is collapsed into the hamburger in certain contexts)
   top:

@@ -23,19 +23,14 @@ export const FileBrowserHeaderPopUpButton = () => {
   const handleFileUpload = useHandleFileUpload(project.files);
 
   const {startFileUpload, FileUploaderComponent} = useFileUploader({
-    callback: (fileName, contents) =>
-      handleFileUpload({
-        folderId: DEFAULT_FOLDER_ID,
-        fileName,
-        contents,
-      }),
+    callback: handleFileUpload,
     errorCallback: uploadErrorCallback,
     validMimeTypes,
   });
   return (
     <>
       <FileUploaderComponent />
-      <PopUpButton iconName="plus" alignment="left">
+      <PopUpButton iconName="plus" alignment="left" id="uitest-files-plus">
         <PopUpButtonOption
           iconName="plus"
           labelText={codebridgeI18n.newFolder()}
@@ -47,6 +42,7 @@ export const FileBrowserHeaderPopUpButton = () => {
           iconName="plus"
           labelText={codebridgeI18n.newFile()}
           clickHandler={() => openNewFilePrompt({folderId: DEFAULT_FOLDER_ID})}
+          id="uitest-new-file"
         />
 
         <PopUpButtonOption

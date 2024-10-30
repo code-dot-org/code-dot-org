@@ -69,8 +69,7 @@ span {
   max-width: 100%;
 
   a {
-    text-decoration: underline;
-    color: unset;
+    @include link-style;
   }
 
   .containerWrapper {
@@ -277,6 +276,17 @@ span {
       .buttonContainer {
         display: flex;
         flex-direction: row;
+      }
+
+      @media (max-width: 850px) {
+        .buttonContainer {
+          flex-direction: column;
+          align-items: stretch;
+
+          div {
+            margin-inline: auto;
+          }
+        }
       }
 
       .iconContainer {
@@ -553,5 +563,6 @@ span {
   a {
     text-decoration: underline !important;
     color: unset !important;
+    font-weight: 700;
   }
 }

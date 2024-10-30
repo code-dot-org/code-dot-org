@@ -5,7 +5,7 @@ import {STATE_CODES} from '@cdo/apps/geographyConstants';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {editStudent} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
-import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {RootState} from '@cdo/apps/types/redux';
 
 import {CellProps} from './interface';
@@ -65,7 +65,7 @@ const Cell: React.FC<CellProps> = ({
 export default connect(
   (state: RootState) => ({
     currentUser: state.currentUser,
-    section: selectedSection(state),
+    section: selectedSectionSelector(state),
   }),
   dispatch => ({
     editStudent(id: number, studentData: {usState: string | null}) {

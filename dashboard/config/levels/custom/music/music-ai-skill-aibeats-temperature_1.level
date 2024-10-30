@@ -17,34 +17,33 @@
         "next": true,
         "conditions": [
           {
-            "name": "played_patterns_ai",
+            "name": "played_generated_patterns_ai",
             "value": 1
           }
         ]
       },
       {
         "key": "music-ai-skill-sequence_a0f44420-3323-439a-be62-f0aa67dbcbe1",
-        "message": "Click on the blank box in the [play AI drums](#clickable=play-drums-ai-block-workspace) block and change the temperature slider.",
+        "message": "Click on the blank box in the [play AI drums](#clickable=play-drums-ai-block-workspace) block, change the temperature slider, and generate a new beat.",
         "next": false,
         "conditions": [
           {
-            "name": "played_empty_patterns_ai",
+            "name": "played_patterns_ai",
             "value": 1
           }
         ],
         "callout": "id-left:play_pattern_ai_at_current_location_simple2"
       },
       {
-        "key": "music-ai-skill-aibeats_a093489c-c9f7-471d-ab0c-49b734ba8463",
-        "message": "That's a great choice. Now use the [AI Beat Block](#clickable=play-drums-ai-block-workspace) to generate a new beat. ",
+        "key": "music-ai-skill-aibeats-temperature_1_1a17f661-6104-4b40-a4b9-aa577b660683",
+        "message": "Choose a few beats in the [play AI drums](#clickable=play-drums-ai-block-workspace) to get started. Then click \"Generate\". ",
         "next": false,
         "conditions": [
           {
-            "name": "played_sounds",
+            "name": "played_empty_patterns_ai",
             "value": 1
           }
-        ],
-        "callout": "play-drums-ai-block"
+        ]
       },
       {
         "key": "music-ai-skill-aibeats_2ec51257-daa4-40af-b5d4-4b42a2cfaf11",
@@ -197,7 +196,7 @@
     "offer_browser_tts": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:49.184+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-aibeats-temperature_3\\\"\"],\"cloned_from\":\"music-ai-skill-aibeats-temperature_3\"},{\"changed_at\":\"2024-10-17 21:51:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 23:07:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-21 22:33:52 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:49.184+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-aibeats-temperature_3\\\"\"],\"cloned_from\":\"music-ai-skill-aibeats-temperature_3\"},{\"changed_at\":\"2024-10-17 21:51:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 23:07:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-21 22:33:52 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-22 22:57:30 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-22 23:00:14 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-22 23:01:41 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-22 23:07:36 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
