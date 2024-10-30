@@ -218,6 +218,7 @@ steps:
       # Depended on by CIUtils: https://github.com/code-dot-org/code-dot-org/blob/33b79dac1c417e227ac2eb014afcc2505bac7ddb/lib/cdo/ci_utils.rb/#L19-L20
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
+      - export CI_BUILD_NUMBER=$DRONE_BUILD_NUMBER # used by UI tests to set their S3 log path
       - EXIT_CODE=0
       - /entrypoint.sh docker/ui_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
@@ -291,6 +292,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 5cdf76cd7492dd35923150863bc394295ac9b7d55dd065d163cb62bfa1961d15
+hmac: 7b3a0ca3d3b1b94da31475c1085c8611b90b2c790252e559beba1ebc47cc9977
 
 ...

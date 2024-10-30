@@ -15,9 +15,10 @@ export RAILS_ENV=test
 export RACK_ENV=test
 export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
-# If running on Drone.io, DRONE_BUILD_NUMBER will be set: https://docs.drone.io/reference/environ/drone-build-number/
-# otherwise, use a random number instead. CI_BUILD_NUMBER determines where UI test cucumber logs are stored in S3.
-export CI_BUILD_NUMBER=${DRONE_BUILD_NUMBER:-$RANDOM$RANDOM}
+# If CI_BUILD_NUMBER is not set, set it to a random number. CI_BUILD_NUMBER determines where UI test cucumber logs are stored in S3.
+if [ -z "$CI_BUILD_NUMBER" ]; then
+  CI_BUILD_NUMBER="$RANDOM$RANDOM"
+fi
 export CI_TEST_REPORTS=/home/circleci/test_reports
 export CI_ARTIFACTS=/home/circleci/artifacts
 
