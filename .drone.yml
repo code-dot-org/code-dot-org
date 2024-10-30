@@ -91,6 +91,7 @@ steps:
       - rm -rf "$(pwd)/home/circleci/.rbenv"
       # Depended on by CIUtils: https://github.com/code-dot-org/code-dot-org/blob/33b79dac1c417e227ac2eb014afcc2505bac7ddb/lib/cdo/ci_utils.rb/#L19-L20
       - export GIT_COMMIT=$DRONE_COMMIT
+      - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
       - EXIT_CODE=0
       - /entrypoint.sh docker/unit_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
@@ -216,6 +217,7 @@ steps:
       - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
       # Depended on by CIUtils: https://github.com/code-dot-org/code-dot-org/blob/33b79dac1c417e227ac2eb014afcc2505bac7ddb/lib/cdo/ci_utils.rb/#L19-L20
       - export GIT_COMMIT=$DRONE_COMMIT
+      - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
       - EXIT_CODE=0
       - /entrypoint.sh docker/ui_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
