@@ -1,3 +1,4 @@
+import cookies from 'js-cookie';
 import React, {useState, useEffect} from 'react';
 
 import {Button as NewButton} from '@cdo/apps/componentLibrary/button';
@@ -5,7 +6,6 @@ import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {Heading3, BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import canvas from '@cdo/apps/signUpFlow/images/canvas.png';
@@ -48,8 +48,9 @@ const LoginTypeSelection: React.FunctionComponent = () => {
     sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === 'teacher';
 
   const finishAccountUrl = isTeacher
-    ? studio('/users/new_sign_up/finish_teacher_account')
-    : studio('/users/new_sign_up/finish_student_account');
+    ? '/users/new_sign_up/finish_teacher_account'
+    : '/users/new_sign_up/finish_student_account';
+  cookies.set('new_sign_up_url', finishAccountUrl);
 
   useEffect(() => {
     async function getToken() {
@@ -192,7 +193,6 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             </BodyThreeText>
           </div>
           <form action="/users/auth/google_oauth2" method="POST">
-            <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.googleButton}
               onClick={() => logUserLoginType('google')}
@@ -207,7 +207,6 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/microsoft_v2_auth" method="POST">
-            <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.microsoftButton}
               onClick={() => logUserLoginType('microsoft')}
@@ -222,7 +221,6 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/facebook" method="POST">
-            <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.facebookButton}
               onClick={() => logUserLoginType('facebook')}
@@ -237,7 +235,6 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/clever" method="POST">
-            <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.cleverButton}
               onClick={() => logUserLoginType('clever')}
