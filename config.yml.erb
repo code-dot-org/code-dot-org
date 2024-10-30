@@ -400,8 +400,6 @@ properties_encryption_key: !Secret
 
 start_circle_builds_branch:
 start_circle_builds_token:
-circle_build_num: <%=ENV['CIRCLE_BUILD_NUM']%>
-circle_run_identifier: <%=circle_build_num ? "CIRCLE-BUILD-#{circle_build_num}-#{ENV['CI_JOB']}" : nil%>
 
 ignore_eyes_mismatches:
 
