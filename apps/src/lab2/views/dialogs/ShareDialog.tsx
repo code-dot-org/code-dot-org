@@ -14,7 +14,11 @@ import {ProjectType} from '@cdo/apps/lab2/types';
 import {setShowSubmitProjectDialog} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectRedux';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import experiments from '@cdo/apps/util/experiments';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {
+  AppDispatch,
+  useAppDispatch,
+  useAppSelector,
+} from '@cdo/apps/util/reduxHooks';
 import trackEvent from '@cdo/apps/util/trackEvent';
 import i18n from '@cdo/locale';
 
@@ -83,6 +87,41 @@ const AfeCareerTourBlock: React.FunctionComponent = () => {
   );
 };
 
+const SubmitButtonInfo: React.FunctionComponent<{
+  submissionStatus: string | undefined;
+  dispatch: AppDispatch;
+}> = ({submissionStatus, dispatch}) => {
+  if (!experiments.isEnabled(experiments.LAB2_SUBMIT_PROJECT)) {
+    return null;
+  }
+  if (submissionStatus === 'can_submit') {
+    return (
+      <Button
+        iconLeft={{iconName: 'award'}}
+        text={i18n.submitProjectGallery_header()}
+        type="secondary"
+        color="white"
+        size="m"
+        onClick={() => {
+          console.log('submit project');
+          dispatch(hideShareDialog());
+          dispatch(setShowSubmitProjectDialog(true));
+        }}
+        className={moduleStyles.projectButton}
+      />
+    );
+  } else if (submissionStatus === 'already_submitted') {
+    return (
+      <div className={moduleStyles.alreadySubmittedContainer}>
+        <BodyTwoText className={moduleStyles.alreadySubmittedText}>
+          <EmText>{i18n.submitProjectGallery_thanksForSubmission()}</EmText>
+        </BodyTwoText>
+      </div>
+    );
+  }
+  return null;
+};
+
 /**
  * A new implementation of the project share dialog for Lab2 labs.  Currently only used
  * by Music Lab and Python Lab, and only supports a minimal subset of functionality.
@@ -114,37 +153,6 @@ const ShareDialog: React.FunctionComponent<{
     state => state.submitProject.submissionStatus
   );
 
-  const showSubmitInfo = () => {
-    if (!experiments.isEnabled(experiments.LAB2_SUBMIT_PROJECT)) {
-      return null;
-    }
-    if (submissionStatus === 'can_submit') {
-      return (
-        <Button
-          iconLeft={{iconName: 'award'}}
-          text={i18n.submitProjectGallery_header()}
-          type="secondary"
-          color="white"
-          size="m"
-          onClick={() => {
-            console.log('submit project');
-            dispatch(hideShareDialog());
-            dispatch(setShowSubmitProjectDialog(true));
-          }}
-          className={moduleStyles.projectButton}
-        />
-      );
-    } else if (submissionStatus === 'already_submitted') {
-      return (
-        <div className={moduleStyles.alreadySubmittedContainer}>
-          <BodyTwoText className={moduleStyles.alreadySubmittedText}>
-            <EmText>{i18n.submitProjectGallery_thanksForSubmission()}</EmText>
-          </BodyTwoText>
-        </div>
-      );
-    }
-    return null;
-  };
   // dialogId = 'hoc2024'; // To switch between share and HoC congrats dialogs.
   return (
     <FocusLock>
@@ -184,7 +192,10 @@ const ShareDialog: React.FunctionComponent<{
                   shareUrl={shareUrl}
                   projectType={projectType}
                 />
-                {showSubmitInfo()}
+                <SubmitButtonInfo
+                  submissionStatus={submissionStatus}
+                  dispatch={dispatch}
+                />
               </div>
             </div>
             {dialogId === 'hoc2024' && (
