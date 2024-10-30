@@ -13,8 +13,8 @@ Notes:
      must have gateway as an alias.
 "
 
-# Print usage note if num command-line args != 1
-if [ "$#" -ne 1 ]; then
+# Print USAGE if --help or ARGC != 1
+if [ "$1" = "--help" ] || [ "$#" -ne 1 ]; then
   cat <<< "$USAGE"
   exit 1
 fi
