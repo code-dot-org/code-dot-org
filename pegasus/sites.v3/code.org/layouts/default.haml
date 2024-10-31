@@ -13,6 +13,8 @@
         = view :header
       #mobile-header.mobile-headers.mobile-feature
         = view :mobile_header_responsive
+    -else
+      = view :header
 
   -if @header['theme'] == 'responsive'
     -if @header['responsivePadMobile']
