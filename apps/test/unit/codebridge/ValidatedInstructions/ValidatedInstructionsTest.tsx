@@ -148,7 +148,7 @@ describe('ValidatedInstructions', () => {
   });
 
   it('Buttons are correct on a submittable level', () => {
-    // Level 7 is a submittable level without validation that has not yet passed.
+    // Make Level 7 a submittable level without validation that has not yet passed.
     store.dispatch(setCurrentLevelId('7'));
     store.dispatch(
       onLevelChange({levelProperties: submittableLevelProperties})
@@ -175,5 +175,27 @@ describe('ValidatedInstructions', () => {
     store.dispatch(mergeResults({'7': 1000}));
 
     screen.getByRole('button', {name: commonI18n.unsubmit()});
+  });
+
+  it('shows finish button when on the last level', () => {
+    // Make level 7 a level without validation.
+    store.dispatch(setCurrentLevelId('7'));
+    store.dispatch(
+      onLevelChange({levelProperties: nonValidatedLevelProperties})
+    );
+
+    renderDefault();
+
+    // No finish button to start
+    expect(
+      screen.queryByRole('button', {name: commonI18n.finish()})
+    ).toBeNull();
+
+    // Mark code as run and edited; finish should show up
+    store.dispatch(setHasRun(true));
+    store.dispatch(setHasEdited(true));
+
+    // Finish button should be present.
+    screen.getByRole('button', {name: commonI18n.finish()});
   });
 });
