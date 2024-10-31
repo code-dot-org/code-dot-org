@@ -2,11 +2,14 @@ import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {registerReducers} from '@cdo/apps/redux';
+import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
+
+import {ValueOf} from '../../../types/utils';
 
 import {getSubmissionStatus} from './submitProjectApi';
 export interface SubmitProjectState {
   showSubmitProjectDialog: boolean;
-  submissionStatus: string | undefined;
+  submissionStatus: ValueOf<typeof ProjectSubmissionStatus> | undefined;
 }
 
 const initialState: SubmitProjectState = {
@@ -37,7 +40,10 @@ const submitProjectSlice = createSlice({
     setShowSubmitProjectDialog: (state, action: PayloadAction<boolean>) => {
       state.showSubmitProjectDialog = action.payload;
     },
-    setSubmissionStatus: (state, action: PayloadAction<string>) => {
+    setSubmissionStatus: (
+      state,
+      action: PayloadAction<ValueOf<typeof ProjectSubmissionStatus>>
+    ) => {
       state.submissionStatus = action.payload;
     },
   },

@@ -18,7 +18,10 @@ import {
   useAppSelector,
 } from '@cdo/apps/util/reduxHooks';
 import trackEvent from '@cdo/apps/util/trackEvent';
+import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
+
+import {ValueOf} from '../../../types/utils';
 
 import moduleStyles from './ShareDialog.module.scss';
 
@@ -86,7 +89,7 @@ const AfeCareerTourBlock: React.FunctionComponent = () => {
 };
 
 const SubmitButtonInfo: React.FunctionComponent<{
-  submissionStatus: string | undefined;
+  submissionStatus: ValueOf<typeof ProjectSubmissionStatus> | undefined;
   dispatch: AppDispatch;
 }> = ({submissionStatus, dispatch}) => {
   if (
@@ -94,7 +97,7 @@ const SubmitButtonInfo: React.FunctionComponent<{
   ) {
     return null;
   }
-  if (submissionStatus === 'can_submit') {
+  if (submissionStatus === ProjectSubmissionStatus.CAN_SUBMIT) {
     return (
       <Button
         iconLeft={{iconName: 'award'}}
@@ -109,10 +112,10 @@ const SubmitButtonInfo: React.FunctionComponent<{
         className={moduleStyles.projectButton}
       />
     );
-  } else if (submissionStatus === 'already_submitted') {
+  } else if (submissionStatus === ProjectSubmissionStatus.ALREADY_SUBMITTED) {
     return (
       <Alert
-        text={i18n.submitProjectGallery_thanksForSubmission()}
+        text={i18n.submitted()}
         type="success"
         size="s"
         className={moduleStyles.alert}
