@@ -10,10 +10,17 @@ class Services::User::PasswordResetterTest < ActiveSupport::TestCase
 
     let(:mail) {ActionMailer::Base.deliveries.first}
 
-    context 'for invalid email' do
+    context 'for email without an existing user' do
+      let!(:user) {nil}
       it 'does not send password reset' do
         reset_password
         _(mail).must_be_nil
+      end
+    end
+    context 'for email with an existing user' do
+      let!(:user) {create(:user, email: email)}
+      it 'returns user' do
+        reset_password.must_equal user
       end
     end
 
