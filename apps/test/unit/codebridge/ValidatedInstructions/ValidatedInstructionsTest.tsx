@@ -9,6 +9,7 @@ import progress, {
 } from '@cdo/apps/code-studio/progressRedux';
 import {CodebridgeContextProvider} from '@cdo/apps/codebridge';
 import ValidatedInstructions from '@cdo/apps/codebridge/InfoPanel/ValidatedInstructions';
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import lab, {onLevelChange, setValidationState} from '@cdo/apps/lab2/lab2Redux';
 import lab2Project, {setHasEdited} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import predictLevel from '@cdo/apps/lab2/redux/predictLevelRedux';
@@ -19,6 +20,7 @@ import {
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import commonI18n from '@cdo/locale';
 
 import {
@@ -26,6 +28,8 @@ import {
   validatedLevelProperties,
   levelResults,
   nonValidatedLevelProperties,
+  predictLevelProperties,
+  submittableLevelProperties,
 } from '../test-files';
 import {getDefaultCodebridgeContext} from '../test_utils';
 
@@ -34,7 +38,14 @@ describe('ValidatedInstructions', () => {
   let store: any;
   beforeEach(() => {
     stubRedux();
-    registerReducers({progress, lab, predictLevel, lab2System, lab2Project});
+    registerReducers({
+      progress,
+      lab,
+      predictLevel,
+      lab2System,
+      lab2Project,
+      currentUser,
+    });
     store = getStore();
     store.dispatch(initProgress(initProgressPayload));
     store.dispatch(mergeResults(levelResults));
@@ -63,7 +74,7 @@ describe('ValidatedInstructions', () => {
     screen.getByRole('button', {name: commonI18n.continue()});
   });
 
-  it('For a non-validated level, continue button shows up when you have edited and run code', () => {
+  it('Buttons are correct for a non-validated level', () => {
     // Level 1 in the progression, which is "in progress"
     store.dispatch(setCurrentLevelId('1'));
     store.dispatch(
@@ -83,15 +94,25 @@ describe('ValidatedInstructions', () => {
     screen.getByRole('button', {name: commonI18n.continue()});
   });
 
-  it('For a validated level, continue button shows up when you have passed tests', () => {
+  it('Buttons are correct for a validated level', () => {
     // Level 3 in the progression is validated and not yet passed
     store.dispatch(setCurrentLevelId('3'));
     store.dispatch(onLevelChange({levelProperties: validatedLevelProperties}));
+    store.dispatch(
+      setValidationState({
+        hasConditions: true,
+        satisfied: false,
+        message: '',
+        index: 0,
+      })
+    );
     renderDefault();
 
+    // To start theere should be no continue button but there should be a validate button.
     expect(
       screen.queryByRole('button', {name: commonI18n.continue()})
     ).toBeNull();
+    screen.getByRole('button', {name: codebridgeI18n.validate()});
 
     // Set the validation to passed
     store.dispatch(
@@ -105,5 +126,54 @@ describe('ValidatedInstructions', () => {
 
     // Continue button should be present.
     screen.getByRole('button', {name: commonI18n.continue()});
+  });
+
+  it('Buttons are correct on a predict level', () => {
+    // Level 5 is a predict level that has not yet passed
+    store.dispatch(setCurrentLevelId('5'));
+    store.dispatch(onLevelChange({levelProperties: predictLevelProperties}));
+
+    renderDefault();
+
+    // No continue button to start
+    expect(
+      screen.queryByRole('button', {name: commonI18n.continue()})
+    ).toBeNull();
+
+    // A predict level has met validation after code is run.
+    store.dispatch(setHasRun(true));
+
+    // Continue button should be present.
+    screen.getByRole('button', {name: commonI18n.continue()});
+  });
+
+  it('Buttons are correct on a submittable level', () => {
+    // Level 7 is a submittable level without validation that has not yet passed.
+    store.dispatch(setCurrentLevelId('7'));
+    store.dispatch(
+      onLevelChange({levelProperties: submittableLevelProperties})
+    );
+
+    renderDefault();
+
+    // No submit or unsubmit button to start
+    expect(
+      screen.queryByRole('button', {name: commonI18n.submit()})
+    ).toBeNull();
+    expect(
+      screen.queryByRole('button', {name: commonI18n.unsubmit()})
+    ).toBeNull();
+
+    // Mark code as run and edited; submit should show up
+    store.dispatch(setHasRun(true));
+    store.dispatch(setHasEdited(true));
+
+    // Submit button should be present.
+    screen.getByRole('button', {name: commonI18n.submit()});
+
+    // Now mark level as "submitted", button should change to unsubmit
+    store.dispatch(mergeResults({'7': 1000}));
+
+    screen.getByRole('button', {name: commonI18n.unsubmit()});
   });
 });
