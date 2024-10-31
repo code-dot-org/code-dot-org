@@ -25,14 +25,6 @@ fi
 source "$(dirname "$0")/shell"
 
 drone-shell "$@" <<- 'CMDS'
-  export CI=true
-  export RAILS_ENV=test
-  export CIRCLE_TEST_REPORTS=/home/circleci/test_reports
-  export CIRCLE_BUILD_NUM=${DRONE_BUILD_NUMBER:-$RANDOM$RANDOM}
-  export CIRCLE_NODE_INDEX=1
-  export CIRCLE_TEST_REPORTS=/home/circleci/test_reports
-  export CIRCLE_ARTIFACTS=/home/circleci/artifacts
-  
   cd ~
   curl -Lk 'https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64' --output vscode_cli.tar.gz
   tar -xzf vscode_cli.tar.gz
