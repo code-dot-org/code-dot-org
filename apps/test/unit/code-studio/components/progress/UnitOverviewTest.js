@@ -47,16 +47,6 @@ describe('UnitOverview', () => {
     expect(wrapper.find('Connect(EndOfLessonDialog)').length).toEqual(0);
   });
 
-  it('renders a UnversionedScriptRedirectDialog if showUnversionedRedirectWarning and not displaying dialog', () => {
-    const wrapper = setUp({showUnversionedRedirectWarning: true});
-    expect(wrapper.find('UnversionedScriptRedirectDialog').length).toEqual(1);
-  });
-
-  it('does not render a UnversionedScriptRedirectDialog if showUnversionedRedirectWarning is false', () => {
-    const wrapper = setUp({showUnversionedRedirectWarning: false});
-    expect(wrapper.find('UnversionedScriptRedirectDialog').length).toEqual(0);
-  });
-
   it('displays a course link if courseLink is present', () => {
     const wrapper = setUp({courseLink: '/some/link'});
     expect(wrapper.find('.unit-breadcrumb').length).toEqual(1);

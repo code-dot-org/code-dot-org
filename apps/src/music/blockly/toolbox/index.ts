@@ -1,11 +1,13 @@
-import {ToolboxInfo, ToolboxItemInfo} from 'blockly/core/utils/toolbox';
+import * as GoogleBlockly from 'blockly/core';
 
 import {getTypedKeys, ValueOf} from '@cdo/apps/types/utils';
 
+import appConfig from '../../appConfig';
 import {BlockMode} from '../../constants';
 import musicI18n from '../../locale';
+import {BlockTypes} from '../blockTypes';
 
-import {defaultMaps, options} from './definitions';
+import {defaultMaps} from './definitions';
 import toolboxBlocks from './toolboxBlocks';
 import {Category, ToolboxData} from './types';
 
@@ -17,7 +19,16 @@ const baseCategoryCssConfig = {
   label: moduleStyles.toolboxLabel,
 };
 
-const categoryTypeToLocalizedName: {[key in Category]: string} = {
+const dynamicCategoryLabels: {
+  [key in Category]?: string;
+} = {
+  [Category.Functions]: 'PROCEDURE',
+  [Category.Variables]: 'VARIABLE',
+};
+
+export const dynamicCategories = getTypedKeys(dynamicCategoryLabels);
+
+export const categoryTypeToLocalizedName: {[key in Category]: string} = {
   Control: musicI18n.blockly_toolboxCategoryControl(),
   Effects: musicI18n.blockly_toolboxCategoryEffects(),
   Events: musicI18n.blockly_toolboxCategoryEvents(),
@@ -39,11 +50,10 @@ export function getToolbox(
   levelToolbox?: ToolboxData
 ) {
   const categoryBlocksMap = defaultMaps[blockMode];
-  const toolboxOptions = options[blockMode];
   const allowList = levelToolbox?.blocks;
   const type = levelToolbox?.type;
 
-  const toolbox: ToolboxInfo = {
+  const toolbox: GoogleBlockly.utils.toolbox.ToolboxInfo = {
     kind: type === 'flyout' ? 'flyoutToolbox' : 'categoryToolbox',
     contents: [],
   };
@@ -54,7 +64,20 @@ export function getToolbox(
       continue;
     }
 
-    const categoryContents: ToolboxItemInfo[] = [];
+    if (dynamicCategories.includes(category)) {
+      // Dynamic categories are not allowed in flyout toolboxes
+      if (type !== 'flyout') {
+        toolbox.contents.push({
+          kind: 'category',
+          name: categoryTypeToLocalizedName[category],
+          cssconfig: baseCategoryCssConfig,
+          custom: dynamicCategoryLabels[category],
+        });
+      }
+      continue;
+    }
+
+    const categoryContents: GoogleBlockly.utils.toolbox.ToolboxItemInfo[] = [];
 
     for (const blockName of categoryBlocksMap[category] || []) {
       // Skip if we aren't allowing this block.
@@ -62,6 +85,16 @@ export function getToolbox(
         allowList &&
         allowList[category] &&
         !allowList[category].includes(blockName)
+      ) {
+        continue;
+      }
+
+      if (
+        blockName === BlockTypes.PLAY_PATTERN_AI_AT_CURRENT_LOCATION_SIMPLE2 &&
+        !(
+          levelToolbox?.includeAi ||
+          appConfig.getValue('play-pattern-ai-block') === 'true'
+        )
       ) {
         continue;
       }
@@ -80,27 +113,5 @@ export function getToolbox(
       });
     }
   }
-
-  if (toolboxOptions?.includeVariables) {
-    toolbox.contents.push({
-      kind: 'category',
-      name: categoryTypeToLocalizedName[Category.Variables],
-      cssconfig: baseCategoryCssConfig,
-      custom: 'VARIABLE',
-    });
-  }
-
-  if (toolboxOptions?.includeFunctions) {
-    // Skip if functions are not allowed.
-    if (!allowList || allowList[Category.Functions]) {
-      toolbox.contents.push({
-        kind: 'category',
-        name: categoryTypeToLocalizedName[Category.Functions],
-        cssconfig: baseCategoryCssConfig,
-        custom: 'PROCEDURE',
-      });
-    }
-  }
-
   return toolbox;
 }

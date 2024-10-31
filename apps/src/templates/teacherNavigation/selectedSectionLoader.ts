@@ -1,5 +1,5 @@
 import {getStore} from '@cdo/apps/redux';
-import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import {setScriptId, setUnitName} from '@cdo/apps/redux/unitSelectionRedux';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 import {
@@ -29,7 +29,7 @@ export const asyncLoadSelectedSection = async (sectionId: string) => {
   getStore().dispatch(startLoadingSectionData());
   getStore().dispatch(selectSection(sectionId));
 
-  const response = await fetch(`/dashboardapi/section/${sectionId}`, {
+  const response = fetch(`/dashboardapi/section/${sectionId}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -37,30 +37,41 @@ export const asyncLoadSelectedSection = async (sectionId: string) => {
     },
   });
 
-  return response.json().then(selectedSection => {
-    getStore().dispatch(
-      setStudentsForCurrentSection(selectedSection.id, selectedSection.students)
-    );
-    // Default the scriptId to the script assigned to the section
-    const defaultScriptId = selectedSection.script
-      ? selectedSection.script.id
-      : null;
-    if (defaultScriptId) {
-      getStore().dispatch(setScriptId(defaultScriptId));
-    }
+  return response
+    .then(r => r.json())
+    .then(selectedSection => {
+      getStore().dispatch(
+        setStudentsForCurrentSection(
+          selectedSection.id,
+          selectedSection.students
+        )
+      );
+      // Default the scriptId to the script assigned to the section
+      const defaultScriptId = selectedSection.script
+        ? selectedSection.script.id
+        : null;
+      if (defaultScriptId) {
+        getStore().dispatch(setScriptId(defaultScriptId));
+      }
 
-    if (
-      !selectedSection.sharing_disabled &&
-      selectedSection.script.project_sharing
-    ) {
-      getStore().dispatch(setShowSharingColumn(true));
-    }
-    getStore().dispatch(setLoginType(selectedSection.login_type));
-    getStore().dispatch(setRosterProvider(selectedSection.login_type));
-    getStore().dispatch(setRosterProviderName(selectedSection.login_type_name));
+      if (
+        !selectedSection.sharing_disabled &&
+        selectedSection.script.project_sharing
+      ) {
+        getStore().dispatch(setShowSharingColumn(true));
+      }
 
-    getStore().dispatch(updateSelectedSection(selectedSection));
+      // TODO: update sections list with selected section data to ensure consistency.
 
-    getStore().dispatch(finishLoadingSectionData());
-  });
+      getStore().dispatch(setUnitName(selectedSection.script.name));
+      getStore().dispatch(setLoginType(selectedSection.login_type));
+      getStore().dispatch(setRosterProvider(selectedSection.login_type));
+      getStore().dispatch(
+        setRosterProviderName(selectedSection.login_type_name)
+      );
+
+      getStore().dispatch(updateSelectedSection(selectedSection));
+
+      getStore().dispatch(finishLoadingSectionData());
+    });
 };

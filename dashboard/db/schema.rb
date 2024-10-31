@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_08_07_174943) do
+ActiveRecord::Schema.define(version: 2024_10_22_150616) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -81,6 +81,17 @@ ActiveRecord::Schema.define(version: 2024_08_07_174943) do
     t.index ["user_id", "level_id", "script_id"], name: "index_ace_user_level_script"
   end
 
+  create_table "aichat_messages", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.bigint "aichat_thread_id", null: false
+    t.text "external_id", null: false
+    t.integer "role", null: false
+    t.text "content", null: false
+    t.boolean "is_preset", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["aichat_thread_id"], name: "index_aichat_messages_on_aichat_thread_id"
+  end
+
   create_table "aichat_requests", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "level_id"
@@ -93,6 +104,7 @@ ActiveRecord::Schema.define(version: 2024_08_07_174943) do
     t.text "response"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["execution_status"], name: "index_aichat_requests_on_execution_status"
   end
 
   create_table "aichat_sessions", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
@@ -105,6 +117,18 @@ ActiveRecord::Schema.define(version: 2024_08_07_174943) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id", "level_id", "script_id"], name: "index_acs_user_level_script"
+  end
+
+  create_table "aichat_threads", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.text "external_id", null: false
+    t.text "llm_version", null: false
+    t.text "title"
+    t.integer "unit_id"
+    t.integer "level_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_aichat_threads_on_user_id"
   end
 
   create_table "assessment_activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -449,6 +473,7 @@ ActiveRecord::Schema.define(version: 2024_08_07_174943) do
     t.string "video"
     t.datetime "published_date"
     t.integer "self_paced_pl_course_offering_id"
+    t.boolean "ai_teaching_assistant_available", default: false, null: false
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
   end
 
@@ -543,7 +568,7 @@ ActiveRecord::Schema.define(version: 2024_08_07_174943) do
     t.integer "priority", default: 0, null: false
     t.integer "attempts", default: 0, null: false
     t.text "handler", null: false
-    t.text "last_error"
+    t.text "last_error", size: :medium
     t.datetime "run_at"
     t.datetime "locked_at"
     t.datetime "failed_at"
@@ -931,8 +956,16 @@ ActiveRecord::Schema.define(version: 2024_08_07_174943) do
     t.bigint "lti_integration_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
     t.index ["deployment_id"], name: "index_lti_deployments_on_deployment_id"
     t.index ["lti_integration_id"], name: "index_lti_deployments_on_lti_integration_id"
+  end
+
+  create_table "lti_deployments_user_identities", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.bigint "lti_deployment_id", null: false
+    t.bigint "lti_user_identity_id", null: false
+    t.index ["lti_deployment_id"], name: "index_lti_deployments_user_identities_on_lti_deployment_id"
+    t.index ["lti_user_identity_id"], name: "index_lti_deployments_user_identities_on_lti_user_identity_id"
   end
 
   create_table "lti_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -1901,9 +1934,7 @@ ActiveRecord::Schema.define(version: 2024_08_07_174943) do
     t.decimal "longitude", precision: 9, scale: 6, comment: "Location longitude"
     t.string "school_category"
     t.string "last_known_school_year_open", limit: 9
-    t.boolean "is_current"
     t.index ["id"], name: "index_schools_on_id", unique: true
-    t.index ["is_current"], name: "index_schools_on_is_current"
     t.index ["last_known_school_year_open"], name: "index_schools_on_last_known_school_year_open"
     t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
     t.index ["school_district_id"], name: "index_schools_on_school_district_id"

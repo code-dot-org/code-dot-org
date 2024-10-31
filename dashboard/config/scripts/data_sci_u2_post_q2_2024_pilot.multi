@@ -1,0 +1,12 @@
+name 'Data Sci U2 Post Q2_2024-pilot'
+
+question 'Say you are given a large dataset df but are not sure what the **contents** of the data are. What would be the best Pandas function to print to understand the data content and why?'
+
+right 'Use `df.head()` to see the names of all the columns and some row information.'
+wrong 'Use `df.tail()` to see how many rows and columns the dataset has.'
+wrong 'Use `df.shape()` to see the data type of each category.'
+wrong 'Use `len(df)` to see the entire dataset.'
+
+
+
+allow_multiple_attempts false

@@ -22,12 +22,11 @@ import DialogFooter from './DialogFooter';
 import PrintCertificates from './PrintCertificates';
 import {sortableSectionShape} from './shapes.jsx';
 import {
-  sectionCode,
-  sectionName,
-  removeSection,
+  removeSectionOrThrow,
   toggleSectionHidden,
   importOrUpdateRoster,
 } from './teacherSectionsRedux';
+import {sectionCode, sectionName} from './teacherSectionsReduxSelectors';
 
 class SectionActionDropdown extends Component {
   static propTypes = {
@@ -35,7 +34,7 @@ class SectionActionDropdown extends Component {
     sectionData: sortableSectionShape.isRequired,
 
     //Provided by redux
-    removeSection: PropTypes.func.isRequired,
+    removeSectionOrThrow: PropTypes.func.isRequired,
     toggleSectionHidden: PropTypes.func.isRequired,
     sectionCode: PropTypes.string,
     sectionName: PropTypes.string,
@@ -59,14 +58,14 @@ class SectionActionDropdown extends Component {
   }
 
   onConfirmDelete = () => {
-    const {removeSection} = this.props;
+    const {removeSectionOrThrow} = this.props;
     const section = this.props.sectionData;
     $.ajax({
       url: `/dashboardapi/sections/${section.id}`,
       method: 'DELETE',
     })
       .done(() => {
-        removeSection(section.id);
+        removeSectionOrThrow(section.id);
       })
       .fail((jqXhr, status) => {
         // We may want to handle this more cleanly in the future, but for now this
@@ -289,7 +288,7 @@ export default connect(
     sectionName: sectionName(state, props.sectionData.id),
   }),
   {
-    removeSection,
+    removeSectionOrThrow,
     toggleSectionHidden,
     updateRoster: importOrUpdateRoster,
     setRosterProvider,

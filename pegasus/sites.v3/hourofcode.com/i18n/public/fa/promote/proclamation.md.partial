@@ -1,7 +1,6 @@
 ---
 title: قطعنامه نمونه پشتیبان هفته آموزش علوم کامپیوتر و ساعت کد
 layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

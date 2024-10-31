@@ -1,0 +1,53 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-10-09T18:48:05.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "Now, let's learn two ways to handle missing data with fillna() and dropna()\n\n",
+        "imageUrl": "https://images.code.org/4475726d80f7d1b0463af2d91dcdccd3-1cleandata1.png",
+        "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/0bb3022380978177949a7486bea9b4ac-1cleandata2.png",
+        "key": "game_design_spr_types-53c92e2f-0462-48a7-8070-e1224840f013"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/74b5d2758ca6abe495c2a33d71d59127-1cleandata3.png",
+        "key": "game_design_spr_types-4936be88-574e-4dd8-a31f-e671e54e482b",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/317ddc336abd1dc147b78e0751c6cefa-1cleandata4.png",
+        "key": "gen-ai-panels-test-L1-a74895ac-5363-4d66-9831-a3d899ea8ed7",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/c20cd4207cbbea9be36581018cd39c2f-1cleandata6.png",
+        "key": "sp-pl-DS-SpreadsheetVocab-79e6faa9-6b7f-4aab-a8d7-c91fdc3ca442"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/44ac66993f584cc36ca0b4e9d81c740c-1cleandata6.png",
+        "key": "sp-pl-DS-Panels_missingData-4b9fc726-3616-4023-bef6-1747d692a556"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/6f7e33d7b04e389990ca0548e2e914f6-1cleandata7.png",
+        "key": "sp-pl-DS-Panels_missingData-4d8d7b5f-6a1e-45d9-9651-3ba2d373ecc3"
+      }
+    ],
+    "name_suffix": "_2024"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-09T18:48:05.130+00:00\",\"changed\":[\"cloned from \\\"sp-pl-DS-Panels_indexing\\\"\"],\"cloned_from\":\"sp-pl-DS-Panels_indexing\"},{\"changed_at\":\"2024-10-09 21:06:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Panels>

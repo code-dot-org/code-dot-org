@@ -5,7 +5,7 @@ import * as Table from 'reactabular-table';
 import * as Virtualized from 'reactabular-virtualized';
 
 import {getFullName} from '@cdo/apps/templates/manageStudents/utils.ts';
-import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import {unitUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
 import {
@@ -58,7 +58,7 @@ export default class ProgressTableStudentList extends React.Component {
 
   studentNameFormatter(rowData) {
     const {sectionId, scriptData, studentTimestamps} = this.props;
-    const studentUrl = scriptUrlForStudent(
+    const studentUrl = unitUrlForStudent(
       sectionId,
       scriptData.name,
       rowData.student.id

@@ -1,6 +1,10 @@
 @import '../../../mixins.scss';
 @import 'color.scss';
 
+$scale-factor: 0.5;
+$full-width: 1920px;
+$full-height: 1080px;
+
 .container {
   display: flex;
   flex-direction: column;
@@ -8,16 +12,17 @@
 
 .panelsContainer {
   position: relative;
-  height: 540px;
+  height: $full-height * $scale-factor;
+  width: $full-width * $scale-factor;
   background-color: #121212;
   margin-bottom: 25px;
 }
 
 .fullSizeContainer {
   position: relative;
-  width: 1920px;
-  height: 1080px;
-  transform: scale(0.5) translateX(-50%) translateY(-50%);
+  width: $full-width;
+  height: $full-height;
+  transform: scale($scale-factor) translateX(-50%) translateY(-50%);
 }
 
 .panelEditors {

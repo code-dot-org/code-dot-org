@@ -107,6 +107,12 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
     [setSelectedTab]
   );
 
+  // When switching levels, visible tabs can momentarily become empty.
+  // Don't render anything if there are no visible tabs.
+  if (visibleTabs.length === 0) {
+    return null;
+  }
+
   const tabArgs: TabsProps = {
     name: 'modelCustomizationTabs',
     tabs: visibleTabs,

@@ -484,6 +484,22 @@ class Lesson < ApplicationRecord
     }
   end
 
+  def summarize_for_lesson_materials(user)
+    {
+      id: id,
+      unit: script.summarize_for_lesson_show,
+      position: relative_position,
+      key: key,
+      name: localized_name,
+      resources: resources_for_lesson_plan(user&.verified_instructor?),
+      lessonPlanPdfUrl: lesson_plan_pdf_url,
+      lessonPlanHtmlUrl: lesson_plan_html_url,
+      scriptResourcesPdfUrl: script.get_unit_resources_pdf_url,
+      standardsUrl: standards_script_path(script),
+      vocabularyUrl: vocab_script_path(script),
+    }
+  end
+
   def summarize_for_student_lesson_plan
     all_resources = resources_for_lesson_plan(false)
     {

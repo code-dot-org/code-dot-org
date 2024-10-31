@@ -1,13 +1,13 @@
 import {ScrollMetricsManager} from '@blockly/plugin-scroll-options';
-import {ContainerRegion} from 'blockly/core/metrics_manager';
+import * as GoogleBlockly from 'blockly/core';
 
 export default class MetricsManager extends ScrollMetricsManager {
   /** Force content to start in top-left corner, not scroll in all directions.
    * @override
    */
   getPaddedContent_(
-    viewMetrics: ContainerRegion,
-    contentMetrics: ContainerRegion
+    viewMetrics: GoogleBlockly.MetricsManager.ContainerRegion,
+    contentMetrics: GoogleBlockly.MetricsManager.ContainerRegion
   ) {
     const contentBottom = contentMetrics.top + contentMetrics.height;
     const contentRight = contentMetrics.left + contentMetrics.width;

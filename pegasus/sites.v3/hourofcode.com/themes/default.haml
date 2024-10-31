@@ -1,5 +1,5 @@
 !!! 5
-%html
+%html{dir: language_dir_class(hoc_get_locale_code)}
   %head
     = render inline: File.read(deploy_dir('shared/haml/onetrust_cookie_scripts.haml')), type: :haml, locals: {domain: 'hourofcode.com'}
 

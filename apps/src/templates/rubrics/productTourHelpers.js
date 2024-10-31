@@ -13,39 +13,44 @@ export const INITIAL_STEP = 0;
 export const STEPS = [
   {
     element: '#ui-floatingActionButton',
-    title: i18n.rubricTourStepOneTitle(),
-    intro: sanitize(i18n.rubricTourStepOneText()),
+    title: i18n.rubricTourGettingStartedTitle(),
+    intro: sanitize(i18n.rubricTourGettingStartedText()),
+  },
+  {
+    element: '#class-data-button',
+    title: i18n.rubricTabClassManagement(),
+    intro: sanitize(i18n.rubricTourClassDataText()),
   },
   {
     element: '#tour-ai-assessment',
-    title: i18n.rubricTourStepTwoTitle(),
-    intro: sanitize(i18n.rubricTourStepTwoText()),
+    title: i18n.rubricTourUnderstandingTitle(),
+    intro: sanitize(i18n.rubricTourUnderstandingText()),
   },
   {
     element: '#tour-ai-evidence',
-    title: i18n.rubricTourStepThreeTitle(),
+    title: i18n.rubricTourEvidenceTitle(),
     position: 'top',
     intro: (
       <>
-        <p>{i18n.rubricTourStepThreeText()}</p>
-        <img src={evidenceDemo} alt={i18n.rubricTourStepThreeAltText()} />
+        <p>{i18n.rubricTourEvidenceText()}</p>
+        <img src={evidenceDemo} alt={i18n.rubricTourEvidenceAltText()} />
       </>
     ),
   },
   {
     element: '#tour-ai-confidence',
-    title: i18n.rubricTourStepFourTitle(),
-    intro: sanitize(i18n.rubricTourStepFourText()),
+    title: i18n.rubricTourConfidenceTitle(),
+    intro: sanitize(i18n.rubricTourConfidenceText()),
   },
   {
     element: '#tour-evidence-levels',
-    title: i18n.rubricTourStepFiveTitle(),
-    intro: sanitize(i18n.rubricTourStepFiveText()),
+    title: i18n.rubricTourAssigningTitle(),
+    intro: sanitize(i18n.rubricTourAssigningText()),
   },
   {
     element: '#tour-ai-assessment-feedback',
-    title: i18n.rubricTourStepSixTitle(),
-    intro: sanitize(i18n.rubricTourStepSixText()),
+    title: i18n.rubricTourFeedbackTitle(),
+    intro: sanitize(i18n.rubricTourFeedbackText()),
   },
 ];
 

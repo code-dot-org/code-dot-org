@@ -28,4 +28,4 @@
       \/
       %a.select_none{href: '#'} no
       (shift-click or cmd-click to select multiple).
-    = f.select :available_poems, (@level.class.poems_for_standalone_app(@level.standalone_app_name)), {}, {multiple: true}
+    = f.select :available_poems, @level.class.poems_for_standalone_app(@level.standalone_app_name), {}, {multiple: true}

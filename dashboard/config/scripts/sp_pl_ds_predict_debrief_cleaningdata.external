@@ -1,0 +1,33 @@
+name 'SP-PL-DS-Predict_Debrief_CleaningData'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Debriefing Predict and Run
+
+#### Encourage students to share anything  they notice or wonder about the code. There's no right or wrong observation at this stage—just engage with what stands out.
+
+
+## 🔎You might have noticed:
+- #### A CSV file named 'Occupations.csv' is read into a DataFrame called `data`.
+- #### The statement `print(len(data))` displays the number of rows in the dataset.
+- #### print `(data.describe())` provides summary statistics for the dataset.
+- #### The `isnull()` function in the final print statement displays True/False values indicating missing data in the DataFrame.
+
+
+## 💡You might Wonder: 
+- #### Why does the `isnull()` function show True for some values? What does this signify?
+- #### How can missing values be handled in the dataset?
+- #### What other pandas functions are useful for analyzing and cleaning the dataset?
+
+
+
+<br>
+
+
+
+
+##Let's continue to the **Investigate & Modify** levels.
+
+
+MARKDOWN

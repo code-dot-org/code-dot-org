@@ -4,7 +4,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
-import UnversionedScriptRedirectDialog from '@cdo/apps/code-studio/components/UnversionedScriptRedirectDialog';
 import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
@@ -58,7 +57,6 @@ class UnitOverview extends React.Component {
     isMigrated: PropTypes.bool,
     scriptOverviewPdfUrl: PropTypes.string,
     scriptResourcesPdfUrl: PropTypes.string,
-    showUnversionedRedirectWarning: PropTypes.bool,
     isCsdOrCsp: PropTypes.bool,
     completedLessonNumber: PropTypes.string,
     isProfessionalLearningCourse: PropTypes.bool,
@@ -128,7 +126,6 @@ class UnitOverview extends React.Component {
       isMigrated,
       scriptOverviewPdfUrl,
       scriptResourcesPdfUrl,
-      showUnversionedRedirectWarning,
       isCsdOrCsp,
       completedLessonNumber,
       courseOfferingId,
@@ -147,18 +144,12 @@ class UnitOverview extends React.Component {
       !!scriptId &&
       isScriptHiddenForSection(hiddenLessonState, selectedSectionId, scriptId);
 
-    const showUnversionedRedirectWarningDialog =
-      showUnversionedRedirectWarning && !this.state.showRedirectDialog;
-
     return (
       <div>
         {completedLessonNumber && (
           <EndOfLessonDialog lessonNumber={completedLessonNumber} />
         )}
         <div>
-          {showUnversionedRedirectWarningDialog && (
-            <UnversionedScriptRedirectDialog />
-          )}
           {this.props.courseLink && (
             <div className="unit-breadcrumb" style={styles.navArea}>
               <a
@@ -185,6 +176,7 @@ class UnitOverview extends React.Component {
             courseName={courseName}
             userId={userId}
           />
+          {/* unit-calendar-for-printing has style `display: none` from `style/curriculum/scripts.scss` which is added from the BE */}
           {showCalendar && viewAs === ViewType.Instructor && (
             <div className="unit-calendar-for-printing print-only">
               <UnitCalendarGrid

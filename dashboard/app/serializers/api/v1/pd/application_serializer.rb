@@ -156,7 +156,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   # update emails are sent by the system if there is no regional partner or if the regional partner
   # has not set the decision email flag to SENT_BY_PARTNER
   def update_emails_sent_by_system
-    !(object&.regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_PARTNER)
+    object&.regional_partner&.applications_decision_emails != RegionalPartner::SENT_BY_PARTNER
   end
 
   def meets_scholarship_criteria

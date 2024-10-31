@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 
 import aiFabIcon from '@cdo/static/ai-fab-background.png';
 
+import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
+import analyticsReporter from '../metrics/AnalyticsReporter';
+
 import AiDiffContainer from './AiDiffContainer';
 
 import style from './ai-differentiation.module.scss';
@@ -13,15 +16,27 @@ import style from './ai-differentiation.module.scss';
 
 interface AiDiffFloatingActionButtonProps {
   lessonId: number;
+  lessonName: string;
   unitDisplayName: string;
 }
 
 const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   lessonId,
+  lessonName,
   unitDisplayName,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+
   const handleClick = () => {
+    const eventData = {
+      lessonId: lessonId,
+      lessonName: lessonName,
+      unitName: unitDisplayName,
+    };
+    const eventName = isOpen
+      ? EVENTS.TA_RUBRIC_CLOSED_FROM_FAB_EVENT
+      : EVENTS.TA_RUBRIC_OPENED_FROM_FAB_EVENT;
+    analyticsReporter.sendEvent(eventName, eventData, PLATFORMS.STATSIG);
     setIsOpen(!isOpen);
   };
 
@@ -39,6 +54,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         open={isOpen}
         closeTutor={handleClick}
         lessonId={lessonId}
+        lessonName={lessonName}
         unitDisplayName={unitDisplayName}
       />
     </div>

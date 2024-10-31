@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-10-11T18:04:33.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "How can charts or tables help you analyze a data set and plan an algorithm? Provide an example.",
+    "encrypted_solution": "ZJioA2KTze1iLua44WT9U+6oyShXhaTlgLrK7s8vVhdl5SLN7FodqgVAMt2N\n3Q62zpFEWcOWXA86NZXIc3oMLbwL3NtsY01MEgg0F25ZDgsMFdE7i01c8cGy\n6tlklK9MrD8HZ5k/nKtzJAGPOxAAroceEzHkcu8Hs5u1QaOJKEGHUrWMCsq6\njLJDNHvPu1coXz8VWDi7OkDcORp0FZAtL8gL6ecAJZzHEUaveQAyF9zWdCxF\nh6rxN3S5Dztpgkp9KVPyX4TN9yQKLPaXCl2vk+N+H9p0AF3uioSyoj+mU2R5\n86u40s+5SPRQiVc/c+0EgQIXY/zOIcvSFRLjAWPjFrZq5JoQXU2z5qnuvxZM\nG9bMil7/wtudMe/55YFNrJzccQYOT5fZqMh2f0KITdMu2c7OrliX3xCKriv2\n/6ExT4qusiZ7Vg8ihuIsq8iKQoNITnne2eRwEkkH8JOVfab22j6cUox7Myom\nzX21G76sfjE=\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "title": "Check for Understanding"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-11 18:04:40 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-11 18:04:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

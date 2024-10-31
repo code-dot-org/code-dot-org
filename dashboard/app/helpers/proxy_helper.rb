@@ -36,7 +36,7 @@ module ProxyHelper
     end
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = url.scheme == 'https'
-    path = (url.path.empty?) ? '/' : url.path
+    path = url.path.empty? ? '/' : url.path
     query = url.query || ''
 
     # Limit how long in seconds we're willing to wait.
@@ -110,7 +110,7 @@ module ProxyHelper
 
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = url.scheme == 'https'
-    path = (url.path.empty?) ? '/' : url.path
+    path = url.path.empty? ? '/' : url.path
     query = url.query || ''
 
     # Limit how long in seconds we're willing to wait.

@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 
 import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
@@ -14,6 +14,7 @@ const DEFAULT_PROPS = {
   onChange: () => {},
   asyncLoadCoursesWithProgress: () => {},
   isLoadingCourses: false,
+  isLoadingSectionData: false,
 };
 
 describe('UnitSelector', () => {
@@ -60,10 +61,46 @@ describe('UnitSelector', () => {
     expect(asyncLoadCoursesWithProgress).toHaveBeenCalledTimes(1);
   });
 
+  it('loads courses on section change', () => {
+    const asyncLoadCoursesWithProgress = jest.fn();
+    let sectionId = 1;
+    render(
+      <UnconnectedUnitSelectorV2
+        {...DEFAULT_PROPS}
+        coursesWithProgress={[]}
+        sectionId={sectionId}
+        asyncLoadCoursesWithProgress={asyncLoadCoursesWithProgress}
+      />
+    );
+
+    sectionId = 2;
+
+    waitFor(() => {
+      expect(asyncLoadCoursesWithProgress).toHaveBeenCalledTimes(2);
+    });
+  });
+
   it('shows skeleton if loading', () => {
     render(
       <UnconnectedUnitSelectorV2 {...DEFAULT_PROPS} isLoadingCourses={true} />
     );
     expect(screen.queryByRole('select')).toBeNull();
+  });
+
+  it('shows skeleton if loading courses', () => {
+    render(
+      <UnconnectedUnitSelectorV2 {...DEFAULT_PROPS} isLoadingCourses={true} />
+    );
+    expect(screen.queryByRole('combobox')).toBeNull();
+  });
+
+  it('shows skeleton if loading section', () => {
+    render(
+      <UnconnectedUnitSelectorV2
+        {...DEFAULT_PROPS}
+        isLoadingSectionData={true}
+      />
+    );
+    expect(screen.queryByRole('combobox')).toBeNull();
   });
 });

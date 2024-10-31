@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-11 18:27:29 UTC",
+    "serialized_at": "2024-10-03 16:12:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -200,7 +200,7 @@
       "key": "f6947b9f-5398-48cd-b68d-805aa1d652a8",
       "position": 4,
       "properties": {
-        "progression_name": "AI as your "
+        "progression_name": "AI as your Algorithm Assistant"
       },
       "seeding_key": {
         "activity_section.key": "f6947b9f-5398-48cd-b68d-805aa1d652a8",
@@ -219,8 +219,28 @@
       }
     },
     {
-      "key": "9eb1dbb9-a339-445c-8087-cca7faf336c7",
+      "key": "9bad6723-ef17-463d-ad7e-0d8d36385c09",
       "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9bad6723-ef17-463d-ad7e-0d8d36385c09",
+        "lesson_activity.key": "b5e528e6-ec4b-4e86-a5d4-deb724d9856e"
+      }
+    },
+    {
+      "key": "af0c1d3c-00ae-4c62-9aee-76799bb7db77",
+      "position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "af0c1d3c-00ae-4c62-9aee-76799bb7db77",
+        "lesson_activity.key": "b5e528e6-ec4b-4e86-a5d4-deb724d9856e"
+      }
+    },
+    {
+      "key": "9eb1dbb9-a339-445c-8087-cca7faf336c7",
+      "position": 8,
       "properties": {
         "progression_name": "Beyond the Finished Code"
       },
@@ -762,7 +782,7 @@
         "level_keys": [
           "sp-pd-Code_w_AI-L3-Algorithms_24_24"
         ],
-        "progression": "AI as your "
+        "progression": "AI as your Algorithm Assistant"
       },
       "bonus": false,
       "seeding_key": {
@@ -787,7 +807,7 @@
         "level_keys": [
           "sp-pd-Code_w_AI-L3-Algorithms_strategy_24_24"
         ],
-        "progression": "AI as your "
+        "progression": "AI as your Algorithm Assistant"
       },
       "bonus": false,
       "seeding_key": {
@@ -812,7 +832,7 @@
         "level_keys": [
           "sp-pd-Code_w_AI-L3-Algorithms_wrap_24_24"
         ],
-        "progression": "AI as your "
+        "progression": "AI as your Algorithm Assistant"
       },
       "bonus": false,
       "seeding_key": {

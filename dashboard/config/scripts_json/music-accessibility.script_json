@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "music-accessibility",
-    "serialized_at": "2024-03-05 22:23:04 UTC",
+    "serialized_at": "2024-10-23 16:02:37 UTC",
     "published_state": "beta",
     "instruction_type": "self_paced",
     "instructor_audience": "teacher",
@@ -138,6 +138,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_intro_change_sound"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -159,6 +162,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_intro_play_sound"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -180,6 +186,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_set_volume"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -201,6 +210,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_multiple_volumes"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -222,6 +234,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_add_rest"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -243,6 +258,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_intro_repeat_elementary"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -264,6 +282,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_intro_panels_trigger_elementary"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -285,6 +306,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_intro_trigger_elementary"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -306,6 +330,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_accessibility_freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {

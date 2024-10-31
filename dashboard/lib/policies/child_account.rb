@@ -196,11 +196,16 @@ class Policies::ChildAccount
   # Whether or not the user can create/link new personal logins
   def self.can_link_new_personal_account?(user)
     return true unless user.student?
-    return false unless user.us_state && user.country_code
-    return true unless user.birthday
+    return false unless has_required_information?(user)
+    return true unless ['US', 'RD'].include?(user.country_code)
     return true unless underage?(user)
 
     ComplianceState.permission_granted?(user)
+  end
+
+  # Returns true if the user has provided the minimum information we need to decide if their account is affected by our Child Account Policy.
+  def self.has_required_information?(user)
+    [user.us_state, user.country_code, user.birthday].all?(&:present?)
   end
 
   # Check if parent permission is required for this account according to our

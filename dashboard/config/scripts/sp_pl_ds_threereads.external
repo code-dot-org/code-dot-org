@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Making Sense of Data: Three Reads 
+# Making Sense of Data: Three Reads Strategy
 
 #### After learning the basics of a spreadsheet, students will use the **Three Reads** strategy to examine the pizza party data.  
 
@@ -11,6 +11,8 @@ markdown <<MARKDOWN
 
 
 #### This strategy encourages students to look deeply at data like a data scientist by analyzing the data from three different perspectives.  
+
+## The Three Reads:
 
 - ### **Read 1: Context** - What is this data about? 
 

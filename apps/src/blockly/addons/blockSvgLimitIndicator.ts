@@ -1,4 +1,4 @@
-import {BlockSvg} from 'blockly';
+import * as GoogleBlockly from 'blockly/core';
 
 const BUBBLE_SIZE = 18;
 const HALF_BUBBLE_SIZE = BUBBLE_SIZE / 2;
@@ -8,7 +8,7 @@ const HALF_BUBBLE_SIZE = BUBBLE_SIZE / 2;
  * based on a limit initially stated in the toolbox XML.
  */
 export default class BlockSvgLimitIndicator {
-  private readonly blockSvg: BlockSvg;
+  private readonly blockSvg: GoogleBlockly.BlockSvg;
   private count: number;
   private readonly limitGroup: SVGElement;
   private readonly limitRect: SVGElement;
@@ -19,7 +19,7 @@ export default class BlockSvgLimitIndicator {
    * @param {BlockSvg} element - The block associated with the limit.
    * @param {number} count - The initial count to display.
    */
-  constructor(element: BlockSvg, count: number) {
+  constructor(element: GoogleBlockly.BlockSvg, count: number) {
     this.blockSvg = element;
     this.count = count;
 

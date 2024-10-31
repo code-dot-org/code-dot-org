@@ -106,7 +106,7 @@ export function loadUnitProgress(scriptId, sectionId) {
 
   // Combine and transform the data
   requests.push(scriptRequest);
-  Promise.all(requests).then(() => {
+  return Promise.all(requests).then(() => {
     logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressFinished, {
       sectionId,
       scriptId,

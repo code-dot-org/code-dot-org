@@ -1,0 +1,15 @@
+name 'Data Sci U1 Pre Q7_2024-pilot'
+
+question 'Evaluate the scenario: A company transfers personal data to another company without user consent. Which data right is potentially violated, and what could be a legal repercussion?'
+
+wrong 'Right to access; the company might face fines for non-compliance.'
+wrong 'Right to data portability; the user can demand compensation.'
+wrong 'Right to be forgotten; the user can request data erasure.'
+right 'Right to privacy; the company could be fined for violating privacy laws.'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

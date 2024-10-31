@@ -179,7 +179,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
     load_pl_landing @teacher
 
     response = assigns(:landing_page_data)
-    assert_equal(['CSP Support', 'ECS Support', 'Bills Fandom 101'], response[:summarized_plc_enrollments].map {|enrollment| enrollment[:courseName]})
+    assert_equal(['CSP Support', 'ECS Support', 'Bills Fandom 101'], response[:summarized_plc_enrollments].pluck(:courseName))
   end
 
   test 'id of current year application is passed down' do
@@ -274,7 +274,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
 
     response = assigns(:landing_page_data)
     assert_equal 2, response[:pl_courses_started].length
-    assert_equal([pl_unit1.name, pl_unit2.name], response[:pl_courses_started].map {|u| u[:name]})
+    assert_equal([pl_unit1.name, pl_unit2.name], response[:pl_courses_started].pluck(:name))
     assert_equal 100, response[:pl_courses_started].find {|u| u[:name] == pl_unit1.name}[:percent_completed]
     assert_equal 50, response[:pl_courses_started].find {|u| u[:name] == pl_unit2.name}[:percent_completed]
   end

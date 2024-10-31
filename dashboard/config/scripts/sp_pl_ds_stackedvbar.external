@@ -1,0 +1,37 @@
+name 'SP-PL-DS-stackedVbar'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Stacked Bar vs Pie Charts 
+
+
+
+## Stacked Bar Charts
+
+#### **Purpose:** Best used to compare quantities across categories and subcategories
+
+<img src="https://images.code.org/9209718465c2a64cf8c19cafb2299cc2-image-1728577591650.png" alt="stacked bar chart" width="350px" style="border-radius:10px; float:right; margin: 0 0 0px 0px;">
+
+### **Key Charachteristics**
+- #### Displays data as stacked bars, where each segment represents a subcategory.
+- #### Effective for showing how different categories contribute to a whole across multiple groups.
+- #### Allows for comparison of multiple variables withing the same chart. 
+
+## Pie Charts
+
+#### **Purpose:** Best used to show portions or percentages of a whole.
+
+<img src="https://images.code.org/db9dd8ab670745291de8b4f6cb3948ec-image-1728578111278.png" alt="pie chart" width="350px" style="border-radius:10px; float:right; margin: 0 0 0px 0px;">
+
+### **Key Charachteristics**
+- #### Displays data as slices of a circle, representing parts of a whole.
+- #### Effective for showing how categories compare to eachother within a single group.
+- #### Not ideal for comparing multiple variables simultaneously. 
+
+<div style="clear:both;"></div>
+
+## **Next, let's examine the code to make stacked bar and pie charts**.
+
+![]()
+MARKDOWN

@@ -16,6 +16,8 @@ import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {
@@ -90,13 +92,17 @@ import {parseElement as parseXmlElement} from './xml';
 
 var codegen = require('./lib/tools/jsinterpreter/codegen');
 
-var copyrightStrings;
-
 /**
  * If the bigPlayspace is enabled, either by experiment or by level property,
  * then the padding can be configured via query param as well.
  */
 const bigPlaySpacePadding = queryParams('bigPlayspacePadding') || 160;
+
+/**
+ * Track whether the run button was clicked, which we log an event for. We
+ * only want to log this event once for the first click but not subsequent clicks
+ */
+let runButtonWasClicked = false;
 
 /**
  * Get the maximum resizable width of the playspace.
@@ -339,7 +345,6 @@ StudioApp.prototype.init = function (config) {
   this.config = config;
 
   config.getCode = this.getCode.bind(this);
-  copyrightStrings = config.copyrightStrings;
 
   if (config.legacyShareStyle && config.hideSource) {
     $('body').addClass('legacy-share-view');
@@ -1025,10 +1030,9 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
   container.appendChild(footerDiv);
 
   var reactProps = {
-    i18nDropdown: '',
+    i18nDropdownInBase: false,
     privacyPolicyInBase: false,
     copyrightInBase: false,
-    copyrightStrings: copyrightStrings,
     baseMoreMenuString: msg.builtOnCodeStudio(),
     baseStyle: {
       paddingLeft: 0,
@@ -2154,6 +2158,22 @@ StudioApp.prototype.configureDom = function (config) {
     trailing: false,
   });
 
+  // Modify throttledRunClick to include metrics logging
+  const originalThrottledRunClick = throttledRunClick;
+  throttledRunClick = () => {
+    originalThrottledRunClick();
+    let eventName;
+    if (!!config.level.isProjectLevel) {
+      eventName = EVENTS.PROJECT_ACTIVITY;
+    } else {
+      eventName = EVENTS.LEVEL_ACTIVITY;
+    }
+    if (!runButtonWasClicked) {
+      analyticsReporter.sendEvent(eventName, {}, PLATFORMS.BOTH);
+      runButtonWasClicked = true;
+    }
+  };
+
   if (runButton && resetButton) {
     dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
     dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
@@ -2165,6 +2185,7 @@ StudioApp.prototype.configureDom = function (config) {
       }
     });
   }
+
   var skipButton = container.querySelector('#skipButton');
   if (skipButton) {
     dom.addClickTouchEvent(skipButton, this.skipLevel.bind(this));
@@ -2959,6 +2980,12 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     typeHints: utils.valueOr(config.level.showTypeHints, false),
     isBlocklyRtl:
       getStore().getState().isRtl && config.levelGameName !== 'Jigsaw', // disable RTL for blockly on jigsaw
+    analyticsData: {
+      appType: config.app,
+      scriptName: config.scriptName,
+      scriptId: config.scriptId,
+      levelId: config.serverLevelId,
+    },
   };
 
   // Never show unused blocks in edit mode. Procedure autopopulate should always

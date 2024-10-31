@@ -1,6 +1,3 @@
-require 'serverspec'
-set :backend, :exec
-
 def file_not_exist(file)
   describe file(file) do
     it {should_not exist}

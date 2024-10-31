@@ -9,3 +9,7 @@ export interface SoundEvent extends PlaybackEvent {
   type: 'sound';
   soundType: SoundType;
 }
+
+export function isSoundEvent(event: PlaybackEvent): event is SoundEvent {
+  return event.type === 'sound';
+}

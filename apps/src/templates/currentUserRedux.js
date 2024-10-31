@@ -247,8 +247,10 @@ export default function currentUser(state = initialState, action) {
       child_account_compliance_state,
       country_code,
       us_state_code,
+      age,
       in_section,
       created_at,
+      is_verified_instructor,
     } = action.serverUser;
     analyticsReport.setUserProperties(
       id,
@@ -260,6 +262,7 @@ export default function currentUser(state = initialState, action) {
     statsigReporter.setUserProperties(
       id,
       user_type,
+      is_verified_instructor,
       experiments.getEnabledExperiments()
     );
     return {
@@ -277,12 +280,14 @@ export default function currentUser(state = initialState, action) {
       progressTableV2ClosedBeta: progress_table_v2_closed_beta,
       isLti: is_lti,
       isTeacher: user_type === UserTypes.TEACHER,
+      inUSA: ['US', 'RD'].includes(country_code) || !!us_state_code,
       dateProgressTableInvitationDelayed:
         date_progress_table_invitation_last_delayed,
       hasSeenProgressTableInvite: has_seen_progress_table_v2_invitation,
       childAccountComplianceState: child_account_compliance_state,
       countryCode: country_code,
       usStateCode: us_state_code,
+      age,
       inSection: in_section,
       userCreatedAt: created_at,
     };

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
-import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
+import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census/SchoolAutocompleteDropdownWithLabel';
 import CountryAutocompleteDropdown from '@cdo/apps/templates/CountryAutocompleteDropdown';
 import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound';
 import SchoolTypeDropdown from '@cdo/apps/templates/SchoolTypeDropdown';

@@ -17,7 +17,7 @@ import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import i18n from '@cdo/locale';
 
 import FontAwesome from '../../../legacySharedComponents/FontAwesome';

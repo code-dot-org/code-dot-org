@@ -6,6 +6,10 @@ import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloati
 import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('AIDiffFloatingActionButton', () => {
+  beforeEach(() => {
+    window.HTMLElement.prototype.scrollIntoView = () => {};
+  });
+
   it('begins closed', () => {
     render(<AiDiffFloatingActionButton />);
     expect(screen.getByText('AI Teaching Assistant')).not.be.visible;

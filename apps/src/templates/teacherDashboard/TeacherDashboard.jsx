@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useEffect, useRef} from 'react';
-import {Route, Routes, useLocation} from 'react-router-dom';
+import {Navigate, Route, Routes, useLocation} from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -210,6 +210,13 @@ function TeacherDashboard({
             }
           />
         )}
+        {/* '/roster' is the new URL for '/manage_students' in TeacherNavigationRouter. We should redirect to manage students if a user somehow gets sent `/roster' */}
+        <Route
+          path="/roster"
+          element={
+            <Navigate to={TEACHER_DASHBOARD_PATHS.manageStudents} replace />
+          }
+        />
       </Routes>
     </div>
   );

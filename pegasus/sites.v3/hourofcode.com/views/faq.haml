@@ -1,81 +1,194 @@
-- learn_url = resolve_url('/learn')
+- learn_url = resolve_url("/learn")
+- how_to_url = resolve_url("/how-to")
+- unplugged_url = resolve_url("/learn?platform=no-computers")
+- certificates_url = "https://studio.code.org/congrats"
 
-%h1= hoc_s(:hoc_faq_title)
-
-%details
-  %summary#about= hoc_s(:hoc_faq_what_is_hoc_q)
-  %p!= hoc_s(:hoc_faq_what_is_hoc_a_markdown, markdown: :inline, locals: {tutorials: learn_url, partners: resolve_url('/partners')})
-
-%details
-  %summary= hoc_s(:hoc_faq_when_is_hoc_q)
-  %p!= hoc_s(:hoc_faq_when_is_hoc_a_markdown, markdown: :inline, locals: {csedweek_url: 'https://csedweek.org', campaign_date_year: campaign_date('year'), campaign_date_full: campaign_date('full'), grace_hopper: 'http://en.wikipedia.org/wiki/Grace_Hopper'})
+%h1.no-margin-top
+  =hoc_s("hoc_faq.heading")
 
 %details
-  %summary= hoc_s(:hoc_faq_why_cs_q)
-  %p!= hoc_s(:hoc_faq_why_cs_a_markdown, markdown: :inline, locals: {stats_url: resolve_url('/promote/stats')})
+  %summary
+    =hoc_s("hoc_faq.limitations.q")
+  %p
+    =hoc_s("hoc_faq.limitations.a", markdown: :inline, locals:{guidelines_url: "https://support.code.org/hc/en-us/articles/202518403-Can-I-use-Code-org-s-logo-or-the-Hour-of-Code-logo-for-an-event-flyers-or-on-my-website", email_url: "mailto:marketing@code.org"})
 
 %details
-  %summary= hoc_s(:hoc_faq_how_participate_q)
-  %p!= hoc_s(:hoc_faq_how_participate_a_markdown, markdown: :inline, locals: {howto: resolve_url('/how-to')})
+  %summary
+    =hoc_s("hoc_faq.what_is_hoc.q")
+  %p
+    =hoc_s("hoc_faq.what_is_hoc.a", markdown: :inline, locals:{tutorials_url: learn_url})
 
 %details
-  %summary= hoc_s(:hoc_faq_behind_hoc_q)
-  %p!= hoc_s(:hoc_faq_behind_hoc_a_markdown, markdown: :inline, locals: {partner_url: resolve_url('/partners')})
+  %summary
+    =hoc_s("hoc_faq.when_is_hoc.q")
+  %p
+    =hoc_s("hoc_faq.when_is_hoc.a_new", markdown: :inline, locals:{campaign_date_year: campaign_date("year"), campaign_date_full: campaign_date("full"), csedweek_url: "https://www.csedweek.org/", hopper_url: "https://en.wikipedia.org/wiki/Grace_Hopper"})
 
 %details
-  %summary= hoc_s(:hoc_faq_host_q)
-  %p!= hoc_s(:hoc_faq_host_a_markdown, markdown: :inline, locals: {learn_url: learn_url, howto_url: resolve_url('/how-to')})
+  %summary
+    =hoc_s("hoc_faq.why_cs.q")
+  %p
+    =hoc_s("hoc_faq.why_cs.a")
 
 %details
-  %summary= hoc_s(:hoc_faq_devices_q)
-  %p!= hoc_s(:hoc_faq_devices_a_markdown, markdown: :inline, locals: {it_url: codeorg_url('/educate/it'), learn_url: learn_url, unplugged_url: resolve_url('/learn?platform=no-computers')})
+  %summary
+    =hoc_s("hoc_faq.how_do_i_participate.q")
+  %p
+    =hoc_s("hoc_faq.how_do_i_participate.a", markdown: :inline, locals:{howto_url: how_to_url})
 
 %details
-  %summary= hoc_s(:hoc_faq_need_computers_q)
-  %p!= hoc_s(:hoc_faq_need_computers_a_markdown, markdown: true, locals: {pair_programming_research: 'http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning', pair_programming_video: 'https://www.youtube.com/watch?v=vgkahOzFsummaryQ', unplugged_url: resolve_url('/learn?platform=no-computers')})
-
--if @country == 'us'
-  %details
-    %summary= hoc_s(:hoc_faq_logo_q)
-    %p!= hoc_s(:hoc_faq_logo_a_markdown, markdown: :inline, locals: {logo_url: "https://support.code.org/hc/en-us/articles/202518403"})
-
--if @country != 'us'
-  %details
-    %summary= hoc_s(:hoc_faq_international_q).gsub(/<country>/, HOC_COUNTRIES[@country]['full_name'])
-    %p!= hoc_s(:hoc_faq_international_a_markdown, markdown: :inline, locals: {promote: resolve_url('/promote')})
+  %summary
+    =hoc_s("hoc_faq.who_is_behind_hoc.q")
+  %p
+    =hoc_s("hoc_faq.who_is_behind_hoc.a")
 
 %details
-  %summary= hoc_s(:hoc_faq_tutorial_q)
-  %p!= hoc_s(:hoc_faq_tutorial_a_markdown, markdown: :inline, locals: {tutorial_guidelines: resolve_url('/tutorial-guidelines')})
+  %summary
+    =hoc_s("hoc_faq.dont_know.q")
+  %p
+    =hoc_s("hoc_faq.dont_know.a", markdown: :inline, locals:{learn_url: learn_url, how_to_url: how_to_url})
 
 %details
-  %summary= hoc_s(:hoc_faq_account_q)
-  %p!= hoc_s(:hoc_faq_account_a_markdown, markdown: :inline, locals: {beyond_url: resolve_url('/beyond'), section_instructions_url: "https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section"})
+  %summary
+    =hoc_s("hoc_faq.devices.q")
+  %p
+    =hoc_s("hoc_faq.devices.a", markdown: :inline, locals:{it_url: "https://code.org//educate/it", learn_url: learn_url, unplugged_url: unplugged_url})
 
 %details
-  %summary= hoc_s(:hoc_faq_certificates_q)
-  %p!= hoc_s(:hoc_faq_certificates_answer_markdown, markdown: :inline, locals: {certificates_url: codeorg_url('/certificates')})
+  %summary
+    =hoc_s("hoc_faq.computer_particpant.q")
+  %p
+    =hoc_s("hoc_faq.computer_particpant.a.body_01")
+  %p
+    =hoc_s("hoc_faq.computer_particpant.a.body_02")
+  %ul
+    %li
+      =hoc_s("hoc_faq.computer_particpant.a.list_01_new", markdown: :inline, locals:{research_url: "https://ncwit.org/resource/pairprogramming/"})
+    %li
+      =hoc_s("hoc_faq.computer_particpant.a.list_02")
+    %li
+      =hoc_s("hoc_faq.computer_particpant.a.list_03", markdown: :inline, locals:{unplugged_url: unplugged_url})
 
 %details
-  %summary= hoc_s(:hoc_faq_high_school_q)
-  %p!= hoc_s(:hoc_faq_high_school_a_markdown, markdown: :inline, locals: {learn_url: learn_url})
+  %summary
+    =hoc_s("hoc_faq.account.q")
+  %p
+    =hoc_s("hoc_faq.account.a", markdown: :inline, locals:{courses_url: "https://studio.code.org/catalog", instructions_url: "https://support.code.org/hc/en-us/articles/115000488132-Creating-a-Classroom-Section"})
 
 %details
-  %summary= hoc_s(:hoc_faq_count_hoc_q)
-  %p!= hoc_s(:hoc_faq_count_hoc_a_markdown, markdown: :true)
+  %summary
+    =hoc_s("hoc_faq.certificates.q")
+  %p
+    =hoc_s("hoc_faq.certificates.a", markdown: :inline, locals:{certificates_url: certificates_url})
 
 %details
-  %summary= hoc_s(:hoc_faq_map_q)
-  %p!= hoc_s(:hoc_faq_map_a_markdown, markdown: :inline, locals: {events_url: resolve_url('/events')})
+  %summary
+    =hoc_s("hoc_faq.count.q")
+  %p
+    =hoc_s("hoc_faq.count.a")
 
 %details
-  %summary= hoc_s(:hoc_faq_one_hour_q)
-  %p!= hoc_s(:hoc_faq_one_hour_a_markdown, markdown: true)
+  %summary
+    =hoc_s("hoc_faq.how_much.q")
+  %p
+    =hoc_s("hoc_faq.how_much.a.body_01")
+  %p
+    =hoc_s("hoc_faq.how_much.a.body_02", markdown: :inline, locals:{pd_url: "https://code.org/professional-learning", online_url: "https://code.org/professional-learning/self-paced"})
+  %p
+    =hoc_s("hoc_faq.how_much.a.body_03")
 
 %details
-  %summary= hoc_s(:hoc_faq_keep_learning_q)
-  %p!= hoc_s(:hoc_faq_keep_learning_a_markdown, markdown: :inline, locals: {promote: resolve_url('/promote')})
+  %summary
+    =hoc_s("hoc_faq.keep_learning.q")
+  %p
+    =hoc_s("hoc_faq.keep_learning.a", markdown: :inline, locals:{resources_url: resolve_url("/promote"), events_url: resolve_url("/how-to/events")})
 
 %details
-  %summary= hoc_s(:hoc_faq_bug_q)
-  %p!= hoc_s(:hoc_faq_bug_a_markdown, markdown: :true)
+  %summary
+    =hoc_s("hoc_faq.bug.q")
+  %p
+    =hoc_s("hoc_faq.bug.a.body_01")
+  %p
+    =hoc_s("hoc_faq.bug.a.body_02")
+
+%details
+  %summary
+    =hoc_s("hoc_faq.screen_reader.q")
+  %p
+    =hoc_s("hoc_faq.screen_reader.a.body_01", markdown: :inline, locals:{filter_url: resolve_url("/learn?accessibility=screenreader")})
+  %p
+    =hoc_s("hoc_faq.screen_reader.a.body_02", markdown: :inline, locals:{beginners_url: "https://quorumlanguage.com/hourofcode/astro1.html", comfortable_url: "https://quorumlanguage.com/hourofcode/part1.html"})
+  %p
+    =hoc_s("hoc_faq.screen_reader.a.body_03_new", markdown: :inline, locals:{k5_url: "https://milnel2.github.io/blocks4alliOS/danceCircle1.html", six_8_url: "https://milnel2.github.io/blocks4alliOS/danceCircle2.html"})
+  %p
+    =hoc_s("hoc_faq.screen_reader.a.body_04", markdown: :inline, locals:{k5_url: "https://milnel2.github.io/blocks4alliOS/danceCircle1.html"})
+  %p
+    =hoc_s("hoc_faq.screen_reader.a.body_05_new", markdown: :inline, locals:{six_8_url: "https://milnel2.github.io/blocks4alliOS/danceCircle2.html"})
+
+%details
+  %summary
+    =hoc_s("hoc_faq.without_audio.q")
+  %p
+    =hoc_s("hoc_faq.without_audio.a", markdown: :inline, locals:{code_url: "https://code.org/students"})
+
+%details
+  %summary
+    =hoc_s("hoc_faq.deaf.q")
+  %p
+    =hoc_s("hoc_faq.deaf.a", markdown: :inline, locals:{code_url: "https://code.org/students"})
+
+%details
+  %summary
+    =hoc_s("hoc_faq.blind.q")
+  %p
+    =hoc_s("hoc_faq.blind.a.body_01", markdown: :inline, locals:{beginners_url: "https://quorumlanguage.com/hourofcode/astro1.html", comfortable_url: "https://quorumlanguage.com/hourofcode/part1.html"})
+  %p
+    =hoc_s("hoc_faq.blind.a.body_02")
+
+%details
+  %summary
+    =hoc_s("hoc_faq.other_needs.q")
+  %p
+    =hoc_s("hoc_faq.other_needs.a", markdown: :inline, locals:{certificate_url: certificates_url})
+
+%details
+  %summary
+    =hoc_s("hoc_faq.company.q")
+  %p
+    =hoc_s("hoc_faq.company.a.body_01")
+  %p
+    =hoc_s("hoc_faq.company.a.body_02")
+
+%details
+  %summary
+    =hoc_s("hoc_faq.government.q")
+  %p
+    =hoc_s("hoc_faq.government.a.body_01")
+  %p
+    =hoc_s("hoc_faq.government.a.body_02.desc")
+  %ul
+    %li
+      =hoc_s("hoc_faq.government.a.body_02.list_01")
+    %li
+      =hoc_s("hoc_faq.government.a.body_02.list_02")
+    %li
+      =hoc_s("hoc_faq.government.a.body_02.list_03")
+    %li
+      =hoc_s("hoc_faq.government.a.body_02.list_04")
+  %p
+    =hoc_s("hoc_faq.government.a.body_03.desc")
+  %ul
+    %li
+      =hoc_s("hoc_faq.government.a.body_03.list_01", markdown: :inline, locals:{docusign_url: "https://powerforms.docusign.net/dca0c24f-88a9-48a2-a227-d14fa01a9390?env=na2&acct=66bab3ee-40e1-40e3-ad7f-7576ba73668c&accountId=66bab3ee-40e1-40e3-ad7f-7576ba73668c"})
+    %li
+      =hoc_s("hoc_faq.government.a.body_03.list_02", markdown: :inline, locals:{docusign_url: "https://drive.google.com/file/d/1CrfxcLt0UD_6iOEunCxkKoEFwcko9aur/view?usp=sharing"})
+    %li
+      =hoc_s("hoc_faq.government.a.body_03.list_03", markdown: :inline, locals:{docusign_url: "https://powerforms.docusign.net/5fb23612-668a-4bcb-ba77-f05d4448d3ef?env=na2&acct=66bab3ee-40e1-40e3-ad7f-7576ba73668c&accountId=66bab3ee-40e1-40e3-ad7f-7576ba73668c"})
+    %li
+      =hoc_s("hoc_faq.government.a.body_03.list_04", markdown: :inline, locals:{docusign_url: "https://drive.google.com/file/d/1DIyczgLYCX6A8AWlQjxzl9gNIO-2U0nW/view"})
+
+%details
+  %summary
+    =hoc_s("hoc_faq.volunteer.q")
+  %p
+    =hoc_s("hoc_faq.volunteer.a")

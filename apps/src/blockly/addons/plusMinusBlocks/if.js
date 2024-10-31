@@ -13,7 +13,7 @@
  * @fileoverview Changes the if block to use a +/- mutator UI.
  */
 
-import GoogleBlockly from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 
 import {createMinusField} from './field_minus';
 import {createPlusField} from './field_plus';

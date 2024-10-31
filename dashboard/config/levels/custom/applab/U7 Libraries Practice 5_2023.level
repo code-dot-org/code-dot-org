@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2022-10-19T18:22:07.000Z",
+  "level_num": "custom",
+  "user_id": 832,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -77,16 +82,11 @@
     "encrypted_examples": "xg8KileY/i0QdmrXFxfk606zTsWdgBcdtcmAPn9YuXm78y7P2SP0uuz7BpsT\nD1bwrXgbp/eXWQjEnOKFukjbkQ==\n",
     "start_libraries": "[{\"name\":\"Cats\",\"description\":\"Library for using the cats data set.\",\"functions\":[\"randomBreed\",\"breedImage\",\"allBreeds\",\"randomImage\"],\"dropletConfig\":[{\"func\":\"Cats.randomBreed\",\"category\":\"Functions\",\"comment\":\"Returns the name of a random breed of cat\\nreturn {string} - the name of a random cat breed\",\"type\":\"either\"},{\"func\":\"Cats.breedImage\",\"category\":\"Functions\",\"comment\":\"Returns the image of a given cat breed\\nsearchBreed {string} - the name of the breed to search for\\nreturn {string} - the URL of the searched cat breed, or \\\"Not found\\\" if it wasn't found\",\"type\":\"either\",\"params\":[\"searchBreed\"],\"paletteParams\":[\"searchBreed\"]},{\"func\":\"Cats.allBreeds\",\"category\":\"Functions\",\"comment\":\"Returns the list of all cat breeds\\nreturn {list} - a list of cat breed names as strings\",\"type\":\"either\"},{\"func\":\"Cats.randomImage\",\"category\":\"Functions\",\"comment\":\"Returns the URL of a random cat picture\\nreturn {string} - the URL of a random cat image\",\"type\":\"either\"}],\"source\":\"// Returns the name of a random breed of cat\\n// return {string} - the name of a random cat breed\\nfunction randomBreed(){\\n  var breeds = getColumn(\\\"Cats\\\",\\\"Name\\\");\\n  return breeds[randomNumber(0,breeds.length-1)];\\n}\\n\\n// Returns the image of a given cat breed\\n// searchBreed {string} - the name of the breed to search for\\n// return {string} - the URL of the searched cat breed, or \\\"Not found\\\" if it wasn't found\\nfunction breedImage(searchBreed){\\n  var breeds    = getColumn(\\\"Cats\\\", \\\"Name\\\");\\n  var images    = getColumn(\\\"Cats\\\", \\\"Image\\\");\\n  \\n  for(var i=0; i<breeds.length; i++){\\n    if(breeds[i] == searchBreed){\\n      return images[i];\\n    }\\n  }\\n  \\n  return \\\"Not found\\\";\\n}\\n\\n// Returns the list of all cat breeds\\n// return {list} - a list of cat breed names as strings\\nfunction allBreeds(){\\n  return getColumn(\\\"Cats\\\",\\\"Name\\\");\\n}\\n\\n// Returns the URL of a random cat picture\\n// return {string} - the URL of a random cat image\\nfunction randomImage(){\\n  return breedImage(randomBreed());\\n}\\n\",\"originalName\":\"Cats\",\"versionId\":\"UDNJnGvSABZbPyJRT.z7RT__q6Fae.Oo\",\"channelId\":\"TZhyZKnj2cDktqxVYZrAlg\",\"fromLevelbuilder\":true}]",
     "name_suffix": "_2023",
-    "preload_asset_list": null,
-    "ai_enabled": "false"
+    "ai_enabled": "false",
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-10-19T18:22:07.000Z",
-  "level_num": "custom",
-  "user_id": 832,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-19T18:22:07.233+00:00\",\"changed\":[\"cloned from \\\"U7 Libraries Practice 52022\\\"\"],\"cloned_from\":\"U7 Libraries Practice 52022\"},{\"changed_at\":\"2023-03-16 21:21:08 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-19T18:22:07.233+00:00\",\"changed\":[\"cloned from \\\"U7 Libraries Practice 52022\\\"\"],\"cloned_from\":\"U7 Libraries Practice 52022\"},{\"changed_at\":\"2023-03-16 21:21:08 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-24 17:49:29 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

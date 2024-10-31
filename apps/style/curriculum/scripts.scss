@@ -1,6 +1,7 @@
 @import "markdown";
 @import "pdf_printing";
 
+/* Used for the unit overview page and the teacher dashboard unit overview page */
 @media print {
   /* we have many components that we never want to include in a print view */
   #unit-breadcrumb,

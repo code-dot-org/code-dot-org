@@ -22,6 +22,7 @@ class OmniAuthSectionTest < ActiveSupport::TestCase
     section.reload
     assert_equal 'G-222222', section.code
     assert_equal User.from_omniauth(students.first, {}), section.students.first
+    assert_equal section.students.first.roster_synced, true
 
     assert_no_difference 'User.count' do
       # Should find the existing Google Classroom section.
@@ -220,5 +221,19 @@ class OmniAuthSectionTest < ActiveSupport::TestCase
     section.reload
     assert_equal OmniAuthSection.column_for_attribute(:name).limit, section.name.length
     assert section.name.end_with?('...')
+  end
+
+  test 'unarchive archived sections when imported' do
+    owner = create :teacher
+
+    section = create :section, user: owner, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM, hidden: true
+
+    OmniAuthSection.from_omniauth(
+      code: section.code,
+      type: section.login_type,
+      owner_id: owner.id,
+      students: [],
+        )
+    refute section.reload.hidden
   end
 end

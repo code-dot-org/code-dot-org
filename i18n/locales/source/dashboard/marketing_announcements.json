@@ -24,6 +24,11 @@
       "title": "Get in the fun! Easy-to-learn code with Transformers One",
       "body": "Autobots, roll out! In this Transformers One-themed introduction to our Sprite Lab, students learn the basics of computer science by building fun, interactive projects.",
       "buttonText": "Try it now"
+    },
+    "gen-ai-launch-2024": {
+      "title": "Exploring Generative AI",
+      "body": "Prepare your students for the future with an engaging curriculum that demystifies generative AI. Through hands-on projects and ethical discussions, students gain the skills to become creators and critical thinkers in an AI-powered world.",
+      "buttonText": "Learn more"
     }
   }
 }

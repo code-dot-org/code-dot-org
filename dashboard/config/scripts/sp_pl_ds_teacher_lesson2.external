@@ -3,17 +3,19 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Introduction to Data Science 
+# Making Sense of Data 
 
-#### The first two lessons students gain a foundational understanding of what data is and how to read it on spreadsheets. Students will build on this knowledge as they continue the journey through data science. 
+#### After using the Three Reads strategy, students will analyze a larger dataset to answer the question: *How much pizza should we order for a school party?*
+#### This dataset includes survey responses from hundreds of students, and they'll learn **how data scientists use computers to handle large, complex data sets**.
 
-##
+
 
 <hr style="clear:both">
 
 <img src="https://images.code.org/7dd4694227e30be4aad877c24ecaba9f-image-1724268144095.png" style="float: left; height: 175px; clear: both; margin: 0 30px 20px 0;">
 
 <div style="background-color: #dccbea; border-radius: 40px 40px 5px 40px; color: #000000; width: 80%; margin-left: 10%; padding: 0.2px 10px 1px 10px;">
+
 
 
 <p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
@@ -27,6 +29,8 @@ markdown <<MARKDOWN
   <div style="clear: both;"></div>
 
 ---
+
+#### The first two lessons students gain a foundational understanding of what data is and how to read it on spreadsheets. Students will build on this knowledge as they continue the journey through data science.
 
 ## Let's continue to data ethics!
 MARKDOWN

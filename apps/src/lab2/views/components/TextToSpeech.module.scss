@@ -1,0 +1,24 @@
+@import 'color.scss';
+@import '../../../mixins.scss';
+
+.playButton {
+  @include remove-button-styles;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  opacity: 50%;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 100%;
+  }
+}
+
+.icon {
+  font-size: 15px;
+}
+
+.playing {
+  opacity: 100%;
+}

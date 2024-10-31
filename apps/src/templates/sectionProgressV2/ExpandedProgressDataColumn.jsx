@@ -7,7 +7,7 @@ import {getFullName} from '@cdo/apps/templates/manageStudents/utils.ts';
 import i18n from '@cdo/locale';
 
 import {studentLevelProgressType} from '../progress/progressTypes';
-import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
+import {studentShape} from '../teacherDashboard/teacherSectionsReduxSelectors';
 
 import ExpandedProgressColumnHeader from './ExpandedProgressColumnHeader.jsx';
 import LevelDataCell, {getStudentRowHeaderId} from './LevelDataCell';

@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.6.2] (https://github.com/code-dot-org/code-dot-org/pull/61460)
+
+* added `errorMessage` prop to `SimpleDropdown`
+* added error state border color to `SimpleDropdown` when `errorMessage` exists
+* added `helperMessage` and `helperIcon` props to `SimpleDropdown`
+
+## [0.6.1] ()
+
+* improved `SimpleDropdown` down arrow icon RTL support
+
 ## [0.6.0](https://github.com/code-dot-org/code-dot-org/pull/58637)
 
 * added `gray` color `SimpleDropdown`

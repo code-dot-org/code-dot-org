@@ -11,9 +11,11 @@ import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
 import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
+import {useBrowserTextToSpeech} from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import ErrorBoundary from '../ErrorBoundary';
+import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
 import {
   LabState,
   isLabLoading,
@@ -22,6 +24,7 @@ import {
 } from '../lab2Redux';
 import Lab2Registry from '../Lab2Registry';
 import {getAppOptionsLevelId, getIsShareView} from '../projects/utils';
+import {LifecycleEvent} from '../utils';
 
 import {ErrorFallbackPage, ErrorUI} from './ErrorFallbackPage';
 import Loading from './Loading';
@@ -39,6 +42,7 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
     (state: {lab: LabState}) =>
       state.lab.pageError?.errorMessage || state.lab.pageError?.error?.message
   );
+  const {cancel} = useBrowserTextToSpeech();
 
   // Store some server-provided data in redux.
 
@@ -61,6 +65,10 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
       dispatch(setIsShareView(isShareView));
     }
   }, [isShareView, dispatch]);
+
+  // Add listeners to cancel in any-progress text to speech on level change or reload.
+  useLifecycleNotifier(LifecycleEvent.LevelChangeRequested, cancel);
+  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, cancel);
 
   return (
     <ErrorBoundary

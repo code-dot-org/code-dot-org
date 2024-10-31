@@ -2,10 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {
-  selectSection,
-  sectionsNameAndId,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {sectionsNameAndId} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import i18n from '@cdo/locale';
 
 import {reload} from '../../../utils';

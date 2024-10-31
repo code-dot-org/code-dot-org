@@ -160,6 +160,10 @@ module.exports = {
             name: 'sinon',
             message: 'Use jest spys and stubs instead of sinon',
           },
+          {
+            name: 'react-router',
+            message: 'Use react-router-dom instead of react-router',
+          },
         ],
         patterns: [
           {

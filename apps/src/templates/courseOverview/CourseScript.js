@@ -14,7 +14,7 @@ import AssignButton from '@cdo/apps/templates/AssignButton';
 import Assigned from '@cdo/apps/templates/Assigned';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import UnassignSectionButton from '@cdo/apps/templates/UnassignSectionButton';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
@@ -131,7 +131,11 @@ class CourseScript extends Component {
             <Button
               __useDeprecatedTag
               text={i18n.goToUnit()}
-              href={`/s/${name}${location.search}`}
+              href={
+                location.pathname.includes('teacher_dashboard')
+                  ? `/teacher_dashboard/sections/${selectedSectionId}/unit/${name}`
+                  : `/s/${name}${location.search}`
+              }
               color={Button.ButtonColor.gray}
               className="uitest-go-to-unit-button"
             />

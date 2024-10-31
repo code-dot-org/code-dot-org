@@ -13,11 +13,15 @@
   opacity: 0;
   pointer-events: none;
   z-index: 10;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.4s ease;
 
   &Show {
     opacity: 1;
     pointer-events: auto;
+  }
+
+  &Delay {
+    transition-delay: 3s;
   }
 }
 

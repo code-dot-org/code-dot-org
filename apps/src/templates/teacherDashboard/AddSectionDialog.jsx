@@ -14,13 +14,15 @@ import PadAndCenter from './PadAndCenter';
 import ParticipantTypePicker from './ParticipantTypePicker';
 import {sectionShape} from './shapes';
 import {
-  isAddingSection,
   beginImportRosterFlow,
   setRosterProvider,
   editSectionProperties,
   cancelEditingSection,
-  assignedCourseOffering,
 } from './teacherSectionsRedux';
+import {
+  isAddingSection,
+  assignedCourseOffering,
+} from './teacherSectionsReduxSelectors';
 
 // Navigates to the new section setup page if both params are non-null.
 const redirectToNewSectionPage = (participantType, loginType) => {

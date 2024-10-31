@@ -1,10 +1,5 @@
 import {ObservableProcedureModel} from '@blockly/block-shareable-procedures';
-import {Block, Field, WorkspaceSvg} from 'blockly';
-import {Abstract} from 'blockly/core/events/events_abstract';
-import {BlockChange} from 'blockly/core/events/events_block_change';
-import {BlockCreate} from 'blockly/core/events/events_block_create';
-import {BlockDrag} from 'blockly/core/events/events_block_drag';
-import {BlockInfo, FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';
+import * as GoogleBlockly from 'blockly/core';
 
 import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
 import CdoFieldFlyout from '@cdo/apps/blockly/addons/cdoFieldFlyout';
@@ -47,7 +42,7 @@ export const blocks = {
     renderToolboxBeforeStack = false
   ) {
     // Function to create the flyout
-    const createFlyoutField = function (block: Block) {
+    const createFlyoutField = function (block: GoogleBlockly.Block) {
       const flyoutKey = CdoFieldFlyout.getFlyoutId(block);
       const flyoutField = new Blockly.FieldFlyout('', {
         flyoutKey: flyoutKey,
@@ -114,7 +109,7 @@ export const blocks = {
 
   // Adds a toggle button field to a block. Requires other inputs to already exist.
   appendMiniToolboxToggle(
-    this: Block,
+    this: GoogleBlockly.Block,
     miniToolboxBlocks: string[],
     flyoutToggleButton: CdoFieldToggle,
     renderingInFunctionEditor = false
@@ -146,12 +141,14 @@ export const blocks = {
     }
 
     if (this.workspace.rendered) {
-      (this.workspace as WorkspaceSvg).registerToolboxCategoryCallback(
+      (
+        this.workspace as GoogleBlockly.WorkspaceSvg
+      ).registerToolboxCategoryCallback(
         CdoFieldFlyout.getFlyoutId(this),
         () => {
-          const blocks: FlyoutItemInfoArray = [];
+          const blocks: GoogleBlockly.utils.toolbox.FlyoutItemInfoArray = [];
           miniToolboxBlocks.forEach(blockType => {
-            const block: BlockInfo = {
+            const block: GoogleBlockly.utils.toolbox.BlockInfo = {
               kind: 'block',
               type: blockType,
             };
@@ -164,7 +161,7 @@ export const blocks = {
             if (blockType === BLOCK_TYPES.parametersGet) {
               // Set up the "new parameter" button in the mini-toolbox
               const newParamButton = getAddParameterButtonWithCallback(
-                this.workspace as WorkspaceSvg,
+                this.workspace as GoogleBlockly.WorkspaceSvg,
                 (
                   this as ProcedureBlock
                 ).getProcedureModel() as ObservableProcedureModel
@@ -383,7 +380,7 @@ export const blocks = {
   addBehaviorPickerEditButton(
     block: ProcedureBlock,
     inputConfig: {name: string; label: string},
-    _currentInputRow: Field,
+    _currentInputRow: GoogleBlockly.Field,
     dropdownField: CdoFieldDropdown
   ) {
     const behaviorsFound =
@@ -460,7 +457,10 @@ export const blocks = {
 // HELPERS
 // On change event for a block that shadows an image source block.
 // On an event, checks if the block image should change, and update it.
-function onBlockImageSourceChange(event: Abstract, block: ExtendedBlockSvg) {
+function onBlockImageSourceChange(
+  event: GoogleBlockly.Events.Abstract,
+  block: ExtendedBlockSvg
+) {
   const imagePreview =
     block.inputList &&
     block.inputList[0] &&
@@ -470,17 +470,19 @@ function onBlockImageSourceChange(event: Abstract, block: ExtendedBlockSvg) {
   }
   if (
     event.type === Blockly.Events.BLOCK_DRAG &&
-    (event as BlockDrag).blockId === block.id
+    (event as GoogleBlockly.Events.BlockDrag).blockId === block.id
   ) {
     // If this is a start event, prevent image changes.
     // If it is an end event, allow image changes again.
-    imagePreview.setAllowImageChange(!(event as BlockDrag).isStart);
+    imagePreview.setAllowImageChange(
+      !(event as GoogleBlockly.Events.BlockDrag).isStart
+    );
   }
   if (
     (event.type === Blockly.Events.BLOCK_CREATE &&
-      (event as BlockCreate).blockId === block.id) ||
+      (event as GoogleBlockly.Events.BlockCreate).blockId === block.id) ||
     (event.type === Blockly.Events.BLOCK_CHANGE &&
-      (event as BlockChange).blockId === block.id)
+      (event as GoogleBlockly.Events.BlockChange).blockId === block.id)
   ) {
     // We can skip the following events:
     // This block's create event, as we handle setting the image on block creation

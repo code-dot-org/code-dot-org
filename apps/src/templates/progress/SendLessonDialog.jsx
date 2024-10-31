@@ -46,7 +46,7 @@ class SendLessonDialog extends Component {
       {
         study: 'copy-lesson-link-button',
         study_group: 'v0',
-        event: event,
+        event: 'copy-lesson-link',
         data_json: this.props.analyticsData,
       },
       {includeUserId: true}

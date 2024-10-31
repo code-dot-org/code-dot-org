@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-10-10T21:15:17.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "# Warm Up\r\n\r\nWrite down what you plan to design.",
+    "parent_level_id": 20397,
+    "encrypted": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-10-10T21:15:17.032+00:00\",\"changed\":[\"cloned from \\\"CSD U6 LEDbutton predict embed_mb_2024\\\"\"],\"cloned_from\":\"CSD U6 LEDbutton predict embed_mb_2024\"},{\"changed_at\":\"2024-10-10 21:15:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

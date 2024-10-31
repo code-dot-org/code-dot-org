@@ -19,6 +19,7 @@ export interface ValidationState {
   hasConditions: boolean;
   satisfied: boolean;
   message: string | null;
+  callout?: string;
   index: number;
   validationResults?: ValidationResult[];
 }
@@ -41,6 +42,7 @@ export const getInitialValidationState: () => ValidationState = () => ({
   hasConditions: false,
   satisfied: false,
   message: null,
+  callout: undefined,
   index: 0,
 });
 
@@ -107,6 +109,7 @@ export default class ProgressManager {
           if (!this.currentValidationState.satisfied) {
             this.currentValidationState.satisfied = validation.next;
             this.currentValidationState.message = validation.message;
+            this.currentValidationState.callout = validation.callout;
             this.onProgressChange();
           }
           return;
@@ -132,6 +135,7 @@ export default class ProgressManager {
       hasConditions,
       satisfied: false,
       message: null,
+      callout: undefined,
       // Ensure that the validation feedback UI is rendered fresh.  This index is
       // used as part of the key for that React component; having a unique value
       // ensures that the UI is rendered fresh, and any apperance animation is

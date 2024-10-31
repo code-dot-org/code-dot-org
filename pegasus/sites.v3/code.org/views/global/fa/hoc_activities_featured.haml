@@ -1,0 +1,43 @@
+:ruby
+  block_item = [
+    {
+      overline: hoc_s(:module_grade_2_12),
+      title: hoc_s(:"farsi_site.farsi_hello_world"),
+      image: "/images/helloworld/animals.png",
+      desc: hoc_s("hello_world.carousel.animals_desc"),
+      url: "https://studio.code.org/s/hello-world-animals-2021/reset",
+      button_label: hoc_s(:"farsi_site.farsi_hello_world_cta")
+    },
+    {
+      overline: hoc_s(:module_grade_3_12),
+      title: hoc_s(:curriculum_name_ai_for_oceans),
+      image: "/images/ai/ai-curriclum-oceans.png",
+      desc: hoc_s(:ai_curriculum_desc_03),
+      url: "https://studio.code.org/s/oceans/reset",
+      button_label: hoc_s(:call_to_action_explore_ai_for_oceans)
+    },
+    {
+      overline: hoc_s(:module_grade_2_12),
+      title: hoc_s(:minecraft_cdo_activity_title_designer),
+      image: "/images/mc/minecraft-tile-generic.png",
+      desc: hoc_s(:hoc_page_activity_minecraft_desc),
+      url: "https://studio.code.org/s/minecraft/reset",
+      button_label: hoc_s(:call_to_action_explore_minecraft)
+    },
+  ]
+
+.action-block__wrapper.action-block__wrapper--three-col
+  - block_item.each do |block_item|
+    .action-block.action-block--one-col.flex-space-between
+      .content-wrapper
+        %p.overline
+          =hoc_s(:module_label_grades)
+          = block_item[:overline]
+        %h3
+          = block_item[:title]
+        %img{src: block_item[:image], alt: ""}
+        %p
+          = block_item[:desc]
+      .content-footer
+        %a.link-button{href: "#{block_item[:url]}"}
+          = block_item[:button_label]

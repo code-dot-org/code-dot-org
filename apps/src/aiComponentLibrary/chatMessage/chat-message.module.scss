@@ -79,7 +79,7 @@ $assistant-color: $brand_primary_light;
   justify-content: flex-start;
 }
 
-.messageContainer-user {
+.message-container-user {
   @extend %message-container;
   justify-content: flex-end;
 }

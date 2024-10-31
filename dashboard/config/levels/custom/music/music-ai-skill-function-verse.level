@@ -8,23 +8,45 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Your turn:\r\n\r\nMake your own `verse` function.\r\n\r\n",
+    "long_instructions": "#### Your turn:\r\n\r\n- Add sounds to the `verse` function. \r\n- Call the `verse` function by adding it under `when run`. \r\n\r\n",
     "hide_share_and_remix": "false",
     "validations": [
       {
-        "key": "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b",
-        "message": "Nice work.  You successfully used the function to play a sound.",
-        "next": false,
+        "key": "music-ai-skill-function-verse_fc9881f2-7571-49f1-8971-dcab68a657a9",
+        "message": "Great work! You're organizing your code with functions!",
+        "next": true,
         "conditions": [
           {
-            "name": "played_sounds_together",
+            "name": "played_sounds",
             "value": 1
           }
         ]
       },
       {
+        "key": "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b",
+        "message": "That verse sounds great! Now, add the `chorus` block to finish the song. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_in_function",
+            "value": "verse"
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-function-verse_03ed3be5-172e-4df5-97cb-075d4032388f",
+        "message": "That chorus sounds great! Now, add sounds into the `verse function`. Then connect the `verse` block under `when run`.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_in_function",
+            "value": "chorus"
+          }
+        ]
+      },
+      {
         "key": "music-ai-skill-sequence_a0f44420-3323-439a-be62-f0aa67dbcbe1",
-        "message": "Connect the \"chorus\" block under [when run](#clickable=when-run-block) to play the sounds in the function.",
+        "message": "Add sounds into the `verse function`. Then connect the `verse` block under `when run`.",
         "next": false,
         "conditions": [
 
@@ -48,16 +70,32 @@
             },
             {
               "type": "procedures_defnoreturn",
+              "id": "L}TeDjTW@]SD^9H0TZY]",
               "x": 230,
               "y": 30,
+              "movable": false,
+              "extraState": {
+                "procedureId": "-2An+zu~4y~Tt_0CQn}(",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": false
+              },
               "fields": {
                 "NAME": "verse"
               }
             },
             {
               "type": "procedures_defnoreturn",
+              "id": "!^sDFN@95hnMYj/jj2LP",
               "x": 500,
               "y": 30,
+              "movable": false,
+              "extraState": {
+                "procedureId": ",5cIAcf@n^`.cIJH]tU6",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": false
+              },
               "fields": {
                 "NAME": "chorus"
               },
@@ -77,28 +115,28 @@
                           "next": {
                             "block": {
                               "type": "play_sound_at_current_location_simple2",
-                              "id": "play_sound_at_current_location_simple2",
+                              "id": "0-JPz7RK9_!sIfIViS%f",
                               "fields": {
                                 "sound": "sabrina_carpenter_espresso/drums_main_beat"
                               },
                               "next": {
                                 "block": {
                                   "type": "play_sound_at_current_location_simple2",
-                                  "id": "play_sound_at_current_location_simple2",
+                                  "id": "*=J~HgX`^|#,oSz!+1s,",
                                   "fields": {
                                     "sound": "sabrina_carpenter_espresso/guitar_intro"
                                   },
                                   "next": {
                                     "block": {
                                       "type": "play_sound_at_current_location_simple2",
-                                      "id": "play_sound_at_current_location_simple2",
+                                      "id": "Y)|7#zp40[l8xQ1!VlkK",
                                       "fields": {
                                         "sound": "sabrina_carpenter_espresso/keys_chorus_1"
                                       },
                                       "next": {
                                         "block": {
                                           "type": "play_sound_at_current_location_simple2",
-                                          "id": "play_sound_at_current_location_simple2",
+                                          "id": ";7)scPlwMd;Mu{*R+GH%",
                                           "fields": {
                                             "sound": "sabrina_carpenter_espresso/bass_main"
                                           }
@@ -116,47 +154,47 @@
                     "next": {
                       "block": {
                         "type": "play_sounds_together",
-                        "id": "play_sounds_together",
+                        "id": "1]~DU_aUWXofCRH3g~6J",
                         "inputs": {
                           "code": {
                             "block": {
                               "type": "play_sound_at_current_location_simple2",
-                              "id": "play_sound_at_current_location_simple2",
+                              "id": "+C]jtY`7nZJ-wG;b{7*_",
                               "fields": {
                                 "sound": "sabrina_carpenter_espresso/vocals_chorus_2"
                               },
                               "next": {
                                 "block": {
                                   "type": "play_sound_at_current_location_simple2",
-                                  "id": "play_sound_at_current_location_simple2",
+                                  "id": ",[GpOv:4_E}W-}Hi@`^T",
                                   "fields": {
                                     "sound": "sabrina_carpenter_espresso/vocals_chorus_backgrounds"
                                   },
                                   "next": {
                                     "block": {
                                       "type": "play_sound_at_current_location_simple2",
-                                      "id": "play_sound_at_current_location_simple2",
+                                      "id": "=`n2x;D]TuLt4,WH4$Ri",
                                       "fields": {
                                         "sound": "sabrina_carpenter_espresso/drums_main_beat"
                                       },
                                       "next": {
                                         "block": {
                                           "type": "play_sound_at_current_location_simple2",
-                                          "id": "play_sound_at_current_location_simple2",
+                                          "id": "Vl:Jz-9l,5]V|gDK5+ne",
                                           "fields": {
                                             "sound": "sabrina_carpenter_espresso/guitar_intro"
                                           },
                                           "next": {
                                             "block": {
                                               "type": "play_sound_at_current_location_simple2",
-                                              "id": "play_sound_at_current_location_simple2",
+                                              "id": "=}E)}oKq9!0UcWkW{lF$",
                                               "fields": {
                                                 "sound": "sabrina_carpenter_espresso/keys_chorus_1"
                                               },
                                               "next": {
                                                 "block": {
                                                   "type": "play_sound_at_current_location_simple2",
-                                                  "id": "play_sound_at_current_location_simple2",
+                                                  "id": "Um2`]{F(fwc=1DM]VJE`",
                                                   "fields": {
                                                     "sound": "sabrina_carpenter_espresso/bass_main"
                                                   }
@@ -180,32 +218,73 @@
               }
             }
           ]
-        }
-      },
-      "toolbox": {
-        "categories": [
+        },
+        "procedures": [
           {
-            "name": "Control",
-            "blocks": [
-              {
-                "type": "play_sounds_together"
-              }
-            ]
+            "id": "-2An+zu~4y~Tt_0CQn}(",
+            "name": "verse",
+            "returnTypes": null
           },
           {
-            "name": "Play",
-            "blocks": [
-              {
-                "type": "play_sound_at_current_location_simple2"
-              }
-            ]
+            "id": ",5cIAcf@n^`.cIJH]tU6",
+            "name": "chorus",
+            "returnTypes": null
           }
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Control": [
+            "play_sounds_together"
+          ],
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Functions": [
+
+          ]
+        }
+      },
+      "sounds": {
+        "sabrina_carpenter_espresso": [
+          "drums_intro",
+          "drums_main_beat",
+          "drums_hats",
+          "drums_fill",
+          "drums_percussion_1",
+          "drums_percussion_2",
+          "bass_intro",
+          "bass_main",
+          "keys_intro",
+          "keys_chorus_1",
+          "keys_chorus_2",
+          "keys_prechorus",
+          "synth",
+          "guitar_intro",
+          "guitar_1",
+          "guitar_2",
+          "crash",
+          "wow",
+          "mmm",
+          "breaths",
+          "reverse_vocal",
+          "vocals_now_hes",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_prechorus_1",
+          "vocals_prechorus_2",
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_backgrounds",
+          "vocals_adlib_i_know",
+          "vocals_adlib_espresso",
+          "vocals_adlib"
         ]
       }
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-05T17:50:35.842+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-function\\\"\"],\"cloned_from\":\"music-ai-skill-function\"},{\"changed_at\":\"2024-09-05 17:52:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 23:58:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-06 00:01:00 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-06 00:04:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-06 00:06:09 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-09 15:56:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-09 17:42:47 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-05T17:50:35.842+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-function\\\"\"],\"cloned_from\":\"music-ai-skill-function\"},{\"changed_at\":\"2024-09-05 17:52:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 23:58:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-06 00:01:00 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-06 00:04:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-06 00:06:09 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-09 15:56:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-09 17:42:47 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 20:51:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 20:54:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 20:55:35 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 20:59:32 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 21:01:14 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 22:27:12 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 22:32:24 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-12 22:35:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-12 22:40:09 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-12 22:45:07 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 02:59:06 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-14 03:03:50 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-14 03:04:29 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-16 19:38:00 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-16 19:41:03 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-17 21:48:34 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-17 21:55:37 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-17 22:00:10 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-17 22:01:20 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-17 22:03:20 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-17 22:06:16 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-17 22:31:11 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-17 22:31:29 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-18 23:28:01 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-20 01:58:26 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-20 02:05:00 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

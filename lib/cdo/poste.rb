@@ -522,7 +522,7 @@ module Poste2
         contact_email: recipient[:email],
         hashed_email: Digest::MD5.hexdigest(recipient[:email]),
         message_id: message_id,
-        params: (params).to_json,
+        params: params.to_json,
       }
     )
   end

@@ -1,0 +1,91 @@
+---
+theme: responsive_full_width
+---
+
+:ruby
+  @header["title"] = hoc_s(:curriculum_name_csf)
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/csf-styles.css", rel: "stylesheet"}
+
+%section.hero-banner-basic.overlay
+  .wrapper.flex-container.justify-space-between.align-items-center.wrap
+    .text-wrapper
+      %h1.white
+        =hoc_s(:curriculum_name_csf)
+      %p.white
+        =hoc_s(:csf_page_top_desc)
+      %a.link-button.white{href: "#pick-a-course"}
+        =hoc_s(:call_to_action_explore_courses)
+    %figure
+      %img{src: "/images/banners/banner-csf-characters.png", alt: ""}
+    .clear
+
+%section
+  .wrapper
+    %figure
+      %img.col-45{src: "/images/courses-art-k-5.png", alt: ""}
+    .text-wrapper.col-45{style: "float: right;"}
+      %h2=hoc_s(:csf_page_intro_heading)
+      %ul
+        %li=hoc_s(:csf_page_intro_list_01)
+        %li=hoc_s(:csf_page_intro_list_02)
+        %li=hoc_s(:csf_page_intro_list_03)
+        %li=hoc_s(:csf_page_intro_list_04)
+      %a.link-button{href: "#pick-a-course"}
+        =hoc_s(:call_to_action_explore_courses)
+    .clear
+
+%section.quote.bg-neutral-dark
+  .wrapper
+    %div.quotes-wrapper
+      %p.quote-text.large
+        =hoc_s(:csf_page_quote)
+      %p.no-margin-bottom
+        =hoc_s(:teacher_label_csf)
+
+%section#pick-a-course.bg-neutral-light
+  .wrapper
+    %h2=hoc_s(:csf_page_pick_a_course_heading)
+    %p=hoc_s(:csf_page_pick_a_course_desc)
+    %hr
+    %div.centered
+      %h3.heading-md
+        =hoc_s(:csf_page_pick_a_course_heading_02)
+      .button-wrapper.centered
+        %a.link-button{href: "#csf-teacher-led"}
+          =hoc_s(:curriculum_name_csf_teacher_led)
+        %a.link-button{href: "#csf-self-paced"}
+          =hoc_s(:curriculum_name_csf_self_paced)
+        %a.link-button{href: "#csf-no-devices"}
+          =hoc_s(:curriculum_name_csf_no_device)
+
+%section#csf-teacher-led
+  .wrapper
+    %h2=hoc_s(:csf_page_courses_heading)
+    %p=hoc_s(:csf_page_courses_desc)
+    = view :csf_page_courses
+
+= view :section_divider_line
+
+%section#csf-self-paced
+  .wrapper
+    %h2=hoc_s(:csf_page_courses_self_paced_heading)
+    %p=hoc_s(:"farsi_site.farsi_csf_express_description")
+    = view :csf_page_courses_self_paced
+
+= view :section_divider_line
+
+%section#csf-no-devices
+  .wrapper
+    %h2=hoc_s(:heading_no_devices)
+    %p=hoc_s(:"farsi_site.farsi_csf_unplugged_description")
+    .action-block.action-block--two-col
+      .media-wrapper.col-50
+        %img{src: "/images/global/fa/unplugged-curriculum.png", alt: ""}
+      .text-wrapper.col-50
+        %h3=hoc_s(:no_devices_section_subhead)
+        %p=hoc_s(:no_devices_section_desc)
+        %a.link-button{href: "https://studio.code.org/s/k5-unplugged", target: "_blank", rel: "noopener noreferrer"}
+          =hoc_s(:call_to_action_explore_unplugged_lesson)
+      .clear

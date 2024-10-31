@@ -9,11 +9,13 @@ import {
 import {ChordEvent, ChordEventValue} from '../interfaces/ChordEvent';
 import {Effects, EffectValue} from '../interfaces/Effects';
 import {FunctionEvents} from '../interfaces/FunctionEvents';
-import {PatternEvent, PatternEventValue} from '../interfaces/PatternEvent';
+import {
+  InstrumentEvent,
+  InstrumentEventValue,
+} from '../interfaces/InstrumentEvent';
 import {PlaybackEvent} from '../interfaces/PlaybackEvent';
 import {SkipContext} from '../interfaces/SkipContext';
 import {SoundEvent} from '../interfaces/SoundEvent';
-import {TuneEvent, TuneEventValue} from '../interfaces/TuneEvent';
 import MusicLibrary from '../MusicLibrary';
 
 import Sequencer from './Sequencer';
@@ -226,11 +228,12 @@ export default class Simple2Sequencer extends Sequencer {
   /**
    * Play a pattern event at the current location.
    */
-  playPattern(value: PatternEventValue, blockId: string) {
+  playPattern(value: InstrumentEventValue, blockId: string) {
     const length = value.length || DEFAULT_PATTERN_LENGTH;
 
-    this.addNewEvent<PatternEvent>({
-      type: 'pattern',
+    this.addNewEvent<InstrumentEvent>({
+      type: 'instrument',
+      instrumentType: 'drums',
       id: JSON.stringify(value),
       value,
       blockId,
@@ -256,12 +259,13 @@ export default class Simple2Sequencer extends Sequencer {
   /**
    * Play a tune event at the current location.
    */
-  playTune(value: TuneEventValue, blockId: string) {
-    this.addNewEvent<TuneEvent>({
-      type: 'tune',
+  playTune(value: InstrumentEventValue, blockId: string) {
+    this.addNewEvent<InstrumentEvent>({
+      type: 'instrument',
+      instrumentType: 'melodic',
       id: JSON.stringify(value),
       value,
-      length: DEFAULT_TUNE_LENGTH,
+      length: value.length || DEFAULT_TUNE_LENGTH,
       blockId,
       ...this.getCommonEventFields(),
     });

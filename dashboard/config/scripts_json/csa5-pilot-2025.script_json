@@ -17,8 +17,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-22 15:08:49 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-10-28 20:06:55 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -100,7 +100,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/5/topic/1) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**What if the data I need to store is best represented as a table?**\n\nIn this lesson, students are introduced to two-dimensional (2D) arrays and explore how these can be used to store tables of data. Students discover that 2D arrays are arrays of arrays and identify similarities and differences between the structure and functionality of 1D and 2D arrays. They learn how to declare and initialize 2D arrays using the `new` keyword and initializer lists and practice creating 2D arrays to store data.",
-        "preparation": "* **(Optional)** Print copies of the U5L1 Guided Notes (one for each student)\n* Preview the *Two-Dimensional (2D) Arrays* video\n* Print copies of the Unit 5 Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-1-two-dimensional-2d-arrays/37910) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Two-Dimensional (2D) Arrays Guided Notes (one for each student)\n* Preview the *Two-Dimensional (2D) Arrays* video\n* Print copies of the Unit 5 Guide (one for each student)",
         "student_overview": "**What if the data I need to store is best represented as a table?**\n\nIn this lesson, you are introduced to two-dimensional (2D) arrays and explore how these can be used to store tables of data. You discover that 2D arrays are arrays of arrays and identify similarities and differences between the structure and functionality of 1D and 2D arrays. You learn how to declare and initialize 2D arrays using the `new` keyword and initializer lists and practice creating 2D arrays to store data."
       },
       "seeding_key": {
@@ -119,7 +119,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/5/topic/2) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I access and modify rows and elements in a 2D array?**\n\nStudents now know how to declare and initialize a two-dimensional (2D) array using the `new` keyword and an initializer list. In this lesson, students explore how to access and modify individual rows and elements in a 2D array and identify similarities and differences between accessing elements in a 2D array and a 1D array. They then practice accessing and modifying rows and elements in a 2D array.",
-        "preparation": "* **(Optional)** Print copies of the U5L2 Guided Notes (one for each student)\n* Preview the *Working with 2D Array Elements* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-2-2d-array-elements/37911) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the 2D Array Elements Guided Notes (one for each student)\n* Preview the *Working with 2D Array Elements* video",
         "student_overview": "**How can I access and modify rows and elements in a 2D array?**\n\nYou now know how to declare and initialize a two-dimensional (2D) array using the `new` keyword and an initializer list. In this lesson, you explore how to access and modify individual rows and elements in a 2D array and identify similarities and differences between accessing elements in a 2D array and a 1D array. You then practice accessing and modifying rows and elements in a 2D array."
       },
       "seeding_key": {
@@ -138,7 +138,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n* Topic Questions 8.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/5/topic/3) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I traverse a 2D array?**\n\nStudents have previously learned how to traverse a 1D array and use nested loops. In this lesson, students build on this knowledge to learn how to traverse a two-dimensional (2D) array in row-major order. Students explore how elements can be accessed in a 2D array using nested loops and consider the types of questions they could ask or problems they could solve with this approach. They trace code segments that traverse a 2D array in row-major order, then practice writing nested loops to traverse a 2D array and access its elements.",
-        "preparation": "* **(Optional)** Print copies of the U5L3 Guided Notes (one for each student)\n* Preview the *Row-Major Traversal* video\n* Print copies of the Tracing 2D Array Traversals handout (one for each student)\n* Print copies of the Writing Algorithms with 2D Arrays handout (one for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-3-row-major-traversal/37912) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Row-Major Traversal Guided Notes (one for each student)\n* Preview the *Row-Major Traversal* video\n* Print copies of the Tracing 2D Array Traversals handout (one for each student)\n* Print copies of the Writing Algorithms with 2D Arrays handout (one for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies",
         "student_overview": "**How can I traverse a 2D array?**\n\nYou have previously learned how to traverse a 1D array and use nested loops. In this lesson, you build on this knowledge to learn how to traverse a two-dimensional (2D) array in row-major order. You explore how elements can be accessed in a 2D array using nested loops and consider the types of questions you could ask or problems you could solve with this approach. You trace code segments that traverse a 2D array in row-major order, then practice writing nested loops to traverse a 2D array and access its elements."
       },
       "seeding_key": {
@@ -157,7 +157,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/5/topic/4) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How do I access elements in a 2D array by column?**\n\nStudents learn to use nested loops to traverse a 2D array in column-major order and differentiate between column-major and row-major traversals. Students identify scenarios that are best for traversing in row-major and column-major order and develop an algorithm to traverse a 2D array in column-major order to find the sum of all values in each column of the array. Students then practice applying standard 1D array algorithms to 2D arrays to find information and perform calculations.",
-        "preparation": "* **(Optional)** Print copies of the U5L4 Guided Notes (one for each student)\n* Preview the *Column-Major Traversal* video\n* Print copies of the Tracing Column-Major Traversals handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-4-column-major-traversal/37913) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Column-Major Traversal Guided Notes (one for each student)\n* Preview the *Column-Major Traversal* video\n* Print copies of the Tracing Column-Major Traversals handout (one for each student)",
         "student_overview": "**How do I access elements in a 2D array by column?**\n\nYou learned to use nested loops to traverse a 2D array in row-major order and discovered that standard 1D array algorithms can be applied to 2D arrays. In this lesson, you learn to use nested loops to traverse a 2D array in column-major order and differentiate between column-major and row-major traversals. You identify scenarios that are best for traversing in row-major and column-major order and develop an algorithm to traverse a 2D array in column-major order to find the sum of all values in each column of the array. You then practice applying standard 1D array algorithms to 2D arrays to find information and perform calculations."
       },
       "seeding_key": {
@@ -176,7 +176,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/5/topic/5) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I use enhanced `for` loops to traverse a 2D array?**\n\nStudents revisit enhanced `for` loops to explore how these are used with 2D arrays. In the process, students discover that objects can be modified using an enhanced `for` loop because the loop variable is an alias of the object reference in the array. Students explore how enhanced `for` loops can be used with 2D arrays and identify similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays. Students then practice using enhanced `for` loops with 2D arrays.",
-        "preparation": "* **(Optional)** Print copies of the U5L5 Guided Notes (one for each student)\n* Preview the *Enhanced For Loops and 2D Arrays* video\n* Print copies of the Enhanced For Loops Anticipation Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-5-enhanced-for-loops/37914) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Enhanced For Loops Guided Notes (one for each student)\n* Preview the *Enhanced For Loops and 2D Arrays* video\n* Print copies of the Enhanced For Loops Anticipation Guide (one for each student)",
         "student_overview": "**How can I use enhanced `for` loops to traverse a 2D array?**\n\nYou used enhanced `for` loops with 1D arrays to access each element from first to last. In this lesson, you revisit enhanced `for` loops to explore how these are used with 2D arrays. In the process, you discover that objects can be modified using an enhanced `for` loop because the loop variable is an alias of the object reference in the array. You explore how enhanced `for` loops can be used with 2D arrays and identify similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays. You then practice using enhanced `for` loops with 2D arrays."
       },
       "seeding_key": {
@@ -195,7 +195,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How can I create image filters using The Theater?**\n\nStudents apply their knowledge of 2D arrays and object-oriented programming to create image filters using The Theater. Students learn how images are made up of pixels and that pixels consist of red, green, and blue color values and explore the `Image` and `Pixel` classes. Students write pseudocode to create an image filter that sets a specific color value to zero and then implement their algorithm in Java.",
-        "preparation": "* **(Optional)** Print copies of the U5L6 Guided Notes (one for each student)\n* Preview the *Images and Pixels* video\n* Print copies of the Creating Image Filters handout (one for each student)\n* (Optional) Cut out the manipulatives from the Creating Image Filters handout\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-6-images-in-the-theater/37915) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Images in The Theater Guided Notes (one for each student)\n* Preview the *Images and Pixels* video\n* Print copies of the Creating Image Filters handout (one for each student)\n* (Optional) Cut out the manipulatives from the Creating Image Filters handout",
         "student_overview": "**How can I create image filters using The Theater?**\n\nYou may have used or seen image filters in various social media apps or photo editing programs. In this lesson, you apply your knowledge of 2D arrays and object-oriented programming to create image filters using The Theater. You learn how images are made up of pixels and that pixels consist of red, green, and blue color values and explore the `Image` and `Pixel` classes. You write pseudocode to create an image filter that sets a specific color value to zero and then implement your algorithm in Java."
       },
       "seeding_key": {
@@ -214,7 +214,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/5/topic/7) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I use what I know about object-oriented programming and 2D arrays to plan and implement algorithms?**\n\nIn this lesson, students apply what they have learned so far to plan and implement standard algorithms to search or modify a two-dimensional (2D) array. They learn about the `indexOf()` method in the `String` class and how it can be used to check if a specific character or `String` appears in a `String` object and explore algorithms using the `indexOf()` method. Students then work with a partner and use manipulatives to plan and implement an algorithm to search or modify elements in a 2D array.",
-        "preparation": "* **(Optional)** Print copies of the U5L7 Guided Notes (one for each student)\n* Print copies of the Writing Algorithms with 2D Arrays handout (one for each student)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-7-2d-array-algorithms/37916) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the 2D Array Algorithms Guided Notes (one for each student)\n* Print copies of the Writing Algorithms with 2D Arrays handout (one for each student)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies",
         "student_overview": "**How can I use what I know about object-oriented programming and 2D arrays to plan and implement algorithms?**\n\nIn this lesson, you apply what you have learned so far to plan and implement standard algorithms to search or modify a two-dimensional (2D) array. You learn about the `indexOf()` method in the `String` class and how it can be used to check if a specific character or `String` appears in a `String` object and explore algorithms using the `indexOf()` method. You then work with a partner and use manipulatives to plan and implement an algorithm to search or modify elements in a 2D array."
       },
       "seeding_key": {
@@ -233,7 +233,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n* Topic Questions 8.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can I modify standard algorithms to create image filters?**\n\nStudents practice working with two-dimensional (2D) arrays and modifying standard algorithms to create new image filters using The Theater. Students explore an example of a new image filter and then write pseudocode to create a new image filter. Students implement their algorithm in Java and create additional image filters by modifying `Pixel` objects stored in a 2D array.",
-        "preparation": "* **(Optional)** Print copies of the U5L8 Guided Notes (one for each student)\n* Print copies of the Modifying Colors handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-8-modifying-images/37917) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Modifying Images Guided Notes (one for each student)\n* Print copies of the Modifying Colors handout (one for each student)",
         "student_overview": "**How can I modify standard algorithms to create image filters?**\n\nIn this lesson, you practice working with two-dimensional (2D) arrays and modifying standard algorithms to create new image filters using The Theater. You explore an example of a new image filter and then write pseudocode to create a new image filter. You implement your algorithm in Java and create additional image filters by modifying `Pixel` objects stored in a 2D array."
       },
       "seeding_key": {
@@ -252,7 +252,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**What are the beneficial and harmful impacts of programs?**\n\nIn this lesson, students explore the beneficial and harmful impacts of programs by analyzing and discussing real-world applications of image manipulation, such as deep fakes. Students look at examples of deep fakes and realize the difficulty in identifying the difference between real and manipulated images. After considering the beneficial and harmful impacts of deep fakes, students explore some common image manipulation algorithms used to detect objects in an image or replace parts of an image with a different image.",
-        "preparation": "* **(Optional)** Print copies of the U5L9 Guided Notes (one for each student)\n* Preview the *This is Not Morgan Freeman* video\n* Print copies of the Unit 5 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-9-impacts-of-programs/37918) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Impacts of Programs Guided Notes (one for each student)\n* Preview the *This is Not Morgan Freeman* video\n* Print copies of the Unit 5 Study Guide (one for each student)",
         "student_overview": "**What are the beneficial and harmful impacts of programs?**\n\nIn this lesson, you explore the beneficial and harmful impacts of programs by analyzing and discussing real-world applications of image manipulation, such as deep fakes. You look at examples of deep fakes and realize the difficulty in identifying the difference between real and manipulated images. After considering the beneficial and harmful impacts of deep fakes, you explore some common image manipulation algorithms used to detect objects in an image or replace parts of an image with a different image."
       },
       "seeding_key": {
@@ -271,7 +271,7 @@
       "properties": {
         "assessment": true,
         "overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, students use the skills they have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. Students choose the topic for their personal narrative and the image filters or manipulation techniques they want to use. After brainstorming and planning, students develop their programs to create their personal narrative collage or animation.",
-        "preparation": "* Print copies of the Personal Narrative Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-10-personal-narrative-project/37919) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print copies of the Personal Narrative Project Planning Guide (one for each student)",
         "student_overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, you use the skills you have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. You choose the topic for your personal narrative and the image filters or manipulation techniques you want to use. After brainstorming and planning, you develop your program to create your personal narrative collage or animation."
       },
       "seeding_key": {
@@ -289,7 +289,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**How will I use what I know about 2D arrays and standard algorithms to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock 2D Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
-        "preparation": "* Print copies of the GrayscaleImage FRQ handout (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the GrayscaleImage FRQ Scoring Guidelines (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-11-grayscaleimage-frq/37920) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print copies of the GrayscaleImage FRQ handout (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the GrayscaleImage FRQ Scoring Guidelines (one for each student)",
         "student_overview": "**How will I use what I know about 2D arrays and standard algorithms to answer a Free Response Question?**\n\nYou practice developing solutions to AP CSA FRQs on a mock 2D Arrays FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
       },
       "seeding_key": {
@@ -308,7 +308,7 @@
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
-        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-12-unit-5-assessment/37921) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource",
         "student_overview": "Congratulations, you completed Unit 5! Assess your progress through the Unit 5 Assessment."
       },
       "seeding_key": {
@@ -342,7 +342,7 @@
       "properties": {
         "assessment": true,
         "overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, students use the skills they have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. Students choose the topic for their personal narrative and the image filters or manipulation techniques they want to use. After brainstorming and planning, students develop their programs to create their personal narrative collage or animation.",
-        "preparation": "* Print copies of the Personal Narrative Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-10-personal-narrative-project/37919) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print copies of the Personal Narrative Project Planning Guide (one for each student)",
         "student_overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, you use the skills you have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. You choose the topic for your personal narrative and the image filters or manipulation techniques you want to use. After brainstorming and planning, you develop your program to create your personal narrative collage or animation."
       },
       "seeding_key": {
@@ -1122,7 +1122,7 @@
       "key": "51f8c936-bf22-4cd1-903c-3f7ea1a5bcb9",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall how objects are stored in a one-dimensional (1D) array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***two-dimensional (2D) array***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that 2D arrays are often represented as a table and define ***row*** and ***column***.\n\n**Do This:** Demonstrate declaring and initializing a 2D array using the `new` keyword:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declare a 2D array\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Initialize a 2D array using the `new` keyword\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declare and initialize a 2D array in one line\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students complete a Check for Understanding on Level 2, then continue to Level 3 to complete a choice level to practice creating a 2D array using the `new` keyword.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall how objects are stored in a one-dimensional (1D) array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***two-dimensional (2D) array***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that 2D arrays are often represented as a table and define ***row*** and ***column***.\n\n**Do This:** Demonstrate declaring and initializing a 2D array using the `new` keyword:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declare a 2D array\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Initialize a 2D array using the `new` keyword\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declare and initialize a 2D array in one line\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Identify the default values for elements when using the `new` keyword\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students complete a Check for Understanding on Level 2, then continue to Level 3 to complete a choice level to practice creating a 2D array using the `new` keyword.",
         "progression_name": "Skill Building: Creating 2D Arrays",
         "tips": [
           {
@@ -1585,7 +1585,7 @@
       "key": "4b48dbc4-a9a6-4750-bc3a-8b436825d377",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate a row-major traversal.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Tracing 2D Array Traversals handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Tracing 2D Array Traversals handout.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to determine the number of rows in a 2D array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to use valid row indices.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to determine the number of columns in a 2D array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to use valid column indices.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate an `ArrayIndexOutOfBoundsException`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can this code segment be rewritten to prevent an `ArrayIndexOutOfBoundsException`?*\n\n**Discussion Goal:** Students share solutions, such as setting `numRows` to `values.length - 1`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate a row-major traversal.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Tracing 2D Array Traversals handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Tracing 2D Array Traversals handout.",
         "tips": [
           {
             "type": "teachingTip",
@@ -6504,7 +6504,7 @@
   "resources": [
     {
       "name": "2D Array Algorithms",
-      "url": "https://docs.google.com/presentation/d/1GXtijS1Yl9vaqyirVYMP9zEtFKO5reZiHFkkbfqpaV8/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1hYZCb70KUsjmavo___OmNRrmMRJ5zEP4db1M_M7Eh3I/edit?usp=drive_link",
       "key": "2d_array_algorithms",
       "properties": {
         "audience": "Verified Teacher",
@@ -6516,7 +6516,7 @@
     },
     {
       "name": "2D Array Elements",
-      "url": "https://docs.google.com/presentation/d/1bdrE_CxWGucOTVh0Ry9l7JcvxHoE1aN_3Qu0aax6Ums/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1Ay5szEYXyq2rzbudONs9Rrc_U3-XdetXvKnTqbJsHyA/edit?usp=drive_link",
       "key": "2d_array_elements",
       "properties": {
         "audience": "Verified Teacher",
@@ -6551,8 +6551,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U5L1 Guided Notes",
-      "url": "https://docs.google.com/document/d/1-jOb7WOg_TG3LLvtJE2AawWeRRYErO708UF64VodNrU/edit?usp=sharing",
+      "name": "[EXEMPLAR] Two-Dimensional (2D) Arrays Guided Notes",
+      "url": "https://docs.google.com/document/d/1uelGgJp3g9LeMBvBU5ByhXDS4DMzZInJsnxhB7o42Qk/edit?usp=drive_link",
       "key": "_exemplar_u5l1_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -6563,8 +6563,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U5L2 Guided Notes",
-      "url": "https://docs.google.com/document/d/1TX3IDgk08OYgoJ-K9Wfd11j3fCQWBDT49WV6NOJDrlI/edit?usp=sharing",
+      "name": "[EXEMPLAR] 2D Array Elements Guided Notes",
+      "url": "https://docs.google.com/document/d/1XSS6ik5c6Aw3U3Qn4rrrbhE2wtQoGmrkv-rndSxDzfI/edit?usp=drive_link",
       "key": "_exemplar_u5l2_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -6575,8 +6575,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U5L3 Guided Notes",
-      "url": "https://docs.google.com/document/d/1VQjT9FPHMXtZ_MRmpMluyO1xND5v5J3bV4ZDAhEaIgI/edit?usp=sharing",
+      "name": "[EXEMPLAR] Row-Major Traversal Guided Notes",
+      "url": "https://docs.google.com/document/d/1rNfLR3AXgCrahQzqcIh_hX4T_VA8G4FUjreYC5W03go/edit?usp=drive_link",
       "key": "_exemplar_u5l3_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -6587,8 +6587,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U5L4 Guided Notes",
-      "url": "https://docs.google.com/document/d/109yMcQpj3I6A86ByqUOlEnZn9UmH4CimNsfWTljyFbI/edit?usp=sharing",
+      "name": "[EXEMPLAR] Column-Major Traversal Guided Notes",
+      "url": "https://docs.google.com/document/d/1v6p0JeGHbuY2icoClJWTii92bzFI0aaXFroEjN8B4PI/edit?usp=drive_link",
       "key": "_exemplar_u5l4_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -6599,8 +6599,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U5L5 Guided Notes",
-      "url": "https://docs.google.com/document/d/1aZHvFfIW2t9uM13d31RfMRPHjGoZvYl5fSdfqYOMd5o/edit?usp=sharing",
+      "name": "[EXEMPLAR] Enhanced For Loops Guided Notes",
+      "url": "https://docs.google.com/document/d/15dcm584gIOSiw0vqmOTfGv3D2Js05J_lSUmR89c4H9s/edit?usp=drive_link",
       "key": "_exemplar_u5l5_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -6611,8 +6611,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U5L6 Guided Notes",
-      "url": "https://docs.google.com/document/d/1TVq2ccMwSCaQyOdc1HHrOjkyxUoT5IVe5G2clgmWo5M/edit?usp=sharing",
+      "name": "[EXEMPLAR] Images in The Theater Guided Notes",
+      "url": "https://docs.google.com/document/d/17PTSdPbkxylI4KCCVdyHyivtz0-EIyW1el2gXg0uJHs/edit?usp=drive_link",
       "key": "_exemplar_u5l6_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -6623,8 +6623,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U5L7 Guided Notes",
-      "url": "https://docs.google.com/document/d/1ooaHZLUXkUPwQrJRNCEIrHdO31WIy8xdYcdhKEwRyYI/edit?usp=sharing",
+      "name": "[EXEMPLAR] 2D Array Algorithms Guided Notes",
+      "url": "https://docs.google.com/document/d/1c4JgGxjn5ruhD4AQe_MwkGEDOJbgnU61jefMYCNKoPk/edit?usp=drive_link",
       "key": "_exemplar_u5l7_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -6635,8 +6635,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U5L8 Guided Notes",
-      "url": "https://docs.google.com/document/d/1Ighe4NWSyYaex0Tf_fuy-2P6m01laUmu-J1Qq9FpKZM/edit?usp=sharing",
+      "name": "[EXEMPLAR] Modifying Images Guided Notes",
+      "url": "https://docs.google.com/document/d/1RDmnihGNADAUxEkgJ92ZGQzZ5WyV2AUQX3qt1kTQhPs/edit?usp=drive_link",
       "key": "_exemplar_u5l8_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -6647,8 +6647,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U5L9 Guided Notes",
-      "url": "https://docs.google.com/document/d/1MRIurFr2KH5S8FcV1LsvuawpKQzGDtQRugnJHzWrAM0/edit?usp=sharing",
+      "name": "[EXEMPLAR] Impacts of Programs Guided Notes",
+      "url": "https://docs.google.com/document/d/1ZkYOM22cY_hsWj-4aMV0hMhffVC8NmUD9RdybYq8Ul0/edit?usp=drive_link",
       "key": "_exemplar_u5l9_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -6659,8 +6659,18 @@
       }
     },
     {
+      "name": "[EXEMPLAR] Unit 5 Guide",
+      "url": "https://docs.google.com/document/d/1vlaElrbyBzgN2DZ8MDFOiFW7pxjAK-TvHX0veb2NTOc/edit?usp=sharing",
+      "key": "_exemplar_unit_5_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_5_guide"
+      }
+    },
+    {
       "name": "[KEY] Creating Image Filters",
-      "url": "https://docs.google.com/document/d/1S9PgMGIP-KzWL6eB5XG6GzVdTxIX6HRE1g4Et_YmAdw/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1OGieu2fyrue5x6X1vppqZQgx9dgLVeLSHFlpAuxFamM/edit?usp=drive_link",
       "key": "_key_creating_image_filters",
       "properties": {
         "audience": "Verified Teacher",
@@ -6672,7 +6682,7 @@
     },
     {
       "name": "[KEY] Enhanced For Loops Anticipation Guide",
-      "url": "https://docs.google.com/document/d/1L0ul_MgcpC8w3T38wIwVgwMOqPLi8cBYrL-Rz8qo_8s/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1e5aO0FdjXjSoHX3CxBFcVKH_ChJsJFW3d7Od1vpvc2g/edit?usp=drive_link",
       "key": "_key_enhanced_for_loops_anticipation_guide",
       "properties": {
         "audience": "Verified Teacher",
@@ -6696,7 +6706,7 @@
     },
     {
       "name": "[KEY] Modifying Colors",
-      "url": "https://docs.google.com/document/d/1qFqJyU-SNbHYRSn5-3wrIgf1GVyzqJxRwRh5PnbId_c/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1KTKomDfiDF-1oZ6aFI0sUGQNvUp4fv18sT2M_y0kVFg/edit?usp=drive_link",
       "key": "_key_modifying_colors",
       "properties": {
         "audience": "Verified Teacher",
@@ -6708,7 +6718,7 @@
     },
     {
       "name": "[KEY] Tracing 2D Array Traversals",
-      "url": "https://docs.google.com/document/d/1nKK9CrN7SqZLG3e_7dckDT7oA5ILwfzBDA4xXX--e90/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1iZvsYq6Re4XeFFbjsky0nc7AS-8NHtPo_jG27DqrZig/edit?usp=drive_link",
       "key": "_key_tracing_2d_array_traversals",
       "properties": {
         "audience": "Verified Teacher",
@@ -6720,7 +6730,7 @@
     },
     {
       "name": "[KEY] Tracing Column-Major Traversals",
-      "url": "https://docs.google.com/document/d/1CtUHkyM48Js_-o1RvnRxZl28mktL_qOjawxs4GPee0Q/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1CynmSr0QnTWwZq8Gj315UOMgtc7Q-g_3ph8yzXTpo_4/edit?usp=drive_link",
       "key": "_key_tracing_column-major_traversals",
       "properties": {
         "audience": "Verified Teacher",
@@ -6731,8 +6741,8 @@
       }
     },
     {
-      "name": "[KEY] U5L1 Extra Practice",
-      "url": "https://docs.google.com/document/d/1F5XBr-NmQlHq0VJwrz4wwWpXEdzjOScIipduAJM61PU/edit?usp=sharing",
+      "name": "[KEY] Two-Dimensional (2D) Arrays Extra Practice",
+      "url": "https://docs.google.com/document/d/1nblyyIqyvOZYCwe-ZtRuCUYipZOxkxVUQb4YfUiJRQQ/edit?usp=drive_link",
       "key": "_key_u5l1_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -6743,8 +6753,8 @@
       }
     },
     {
-      "name": "[KEY] U5L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/1PSQNXXhLtuf7DAUgqR8OGzM7CPdaXWWJckXwQhHUHC8/edit?usp=sharing",
+      "name": "[KEY] 2D Array Elements Extra Practice",
+      "url": "https://docs.google.com/document/d/1RC4AiLSU3Hw715WtP0YQs3pl9KXBbecpIwixm_rY3zg/edit?usp=drive_link",
       "key": "_key_u5l2_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -6755,8 +6765,8 @@
       }
     },
     {
-      "name": "[KEY] U5L3 Extra Practice",
-      "url": "https://docs.google.com/document/d/1Om8xt4tpkHLh8HRxJdIvRgvSbG2DVOpxZwEoAi1ayBg/edit?usp=sharing",
+      "name": "[KEY] Row-Major Traversal Extra Practice",
+      "url": "https://docs.google.com/document/d/1oAbd4oC_CgOm_nSHoPllBW1P6TXj3WVnLfhOAOxWImE/edit?usp=drive_link",
       "key": "_key_u5l3_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -6767,8 +6777,8 @@
       }
     },
     {
-      "name": "[KEY] U5L4 Extra Practice",
-      "url": "https://docs.google.com/document/d/1HbXv72gYCF3nn8ZtTX7O_dnEZbrZZjBI2msrmABVTAY/edit?usp=sharing",
+      "name": "[KEY] Column-Major Traversal Extra Practice",
+      "url": "https://docs.google.com/document/d/1mYOCf8MRtA3MjYvf6g0V3Xgsv49urW2iLYadtfoYL9s/edit?usp=sharing",
       "key": "_key_u5l4_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -6779,8 +6789,8 @@
       }
     },
     {
-      "name": "[KEY] U5L5 Extra Practice",
-      "url": "https://docs.google.com/document/d/16AujqaErHKpiAD_ibCT89lgGhR5JduUt_bNyknb13q8/edit?usp=sharing",
+      "name": "[KEY] Enhanced For Loops Extra Practice",
+      "url": "https://docs.google.com/document/d/1pwEOvEyLrQYYfuewVctq4TIM623CnnWUHeoLBtifDHg/edit?usp=drive_link",
       "key": "_key_u5l5_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -6791,8 +6801,8 @@
       }
     },
     {
-      "name": "[KEY] U5L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1fi_w-54kO5Kvh81EhcErDNl6K8vYMExrkd0VHWYu7DY/edit?usp=sharing",
+      "name": "[KEY] Images in The Theater Extra Practice",
+      "url": "https://docs.google.com/document/d/1DpI6N7QosLRSTQ_xZGLcyccWB7kkzqMEZdt5cCNClJw/edit?usp=drive_link",
       "key": "_key_u5l6_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -6803,8 +6813,8 @@
       }
     },
     {
-      "name": "[KEY] U5L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/1l67_2hxt3-lsaEQhBOSs3iT_OMM1ASy02A17_OIRuks/edit?usp=sharing",
+      "name": "[KEY] 2D Array Algorithms Extra Practice",
+      "url": "https://docs.google.com/document/d/1TCZzbGZj-8fcrcyeWoMTDDZ-e2gnRm6CJcKW-049lVs/edit?usp=drive_link",
       "key": "_key_u5l7_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -6815,8 +6825,8 @@
       }
     },
     {
-      "name": "[KEY] U5L8 Extra Practice",
-      "url": "https://docs.google.com/document/d/1dpgglp3Gyw_9PK8P5EZFpKHwEpiZ7jNdBVZt99Oj0MY/edit?usp=sharing",
+      "name": "[KEY] Modifying Images Extra Practice",
+      "url": "https://docs.google.com/document/d/166SrhFJdhJd9hBjbHK2pHr-1v8sbj4DvbLE7EpYl2dg/edit?usp=drive_link",
       "key": "_key_u5l8_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -6827,8 +6837,8 @@
       }
     },
     {
-      "name": "[KEY] U5L9 Extra Practice",
-      "url": "https://docs.google.com/document/d/17zQP06_e8Fnrooi_cbBIW0SDo3caUlvXkNu8qI7HU3E/edit?usp=sharing",
+      "name": "[KEY] Impacts of Programs Extra Practice",
+      "url": "https://docs.google.com/document/d/1_XWY3uTQbIA7iN-0iAbFD5_AtgahdSCIG5T8zU0xZ-A/edit?usp=drive_link",
       "key": "_key_u5l9_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -6840,7 +6850,7 @@
     },
     {
       "name": "[KEY] Writing Algorithms with 2D Arrays",
-      "url": "https://docs.google.com/document/d/1hWQ_DzdspGuYuA3rZIDN0ybIlcX06gs8RY3Ewoe4OSM/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1D3VuMG0caG7stfo9zgpAt_en-D0GIb4FdpwqLFoEKUE/edit?usp=drive_link",
       "key": "_key_writing_algorithms_with_2d_arrays",
       "properties": {
         "audience": "Verified Teacher",
@@ -6852,7 +6862,7 @@
     },
     {
       "name": "[KEY] Writing Algorithms with 2D Arrays",
-      "url": "https://docs.google.com/document/d/1zN6tHoLI_gAw14LqKMzR_PsGmb3klIiMNJXCGP1Q6yU/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1kRETMEz-zdfl3iLRxyw5sfKROPCv9BDWoGRZ-8g_tJU/edit?usp=drive_link",
       "key": "_key_writing_algorithms_with_2d_arrays_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -6863,8 +6873,41 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa5-pilot-2025/resources",
+      "key": "all_resources_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_4"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa5-pilot-2025/standards",
+      "key": "all_standards_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_4"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa5-pilot-2025/vocab",
+      "key": "all_vocabulary_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4"
+      }
+    },
+    {
       "name": "Column-Major Traversal",
-      "url": "https://docs.google.com/presentation/d/1ouaFfonE710Whme4LGVAqkV6eQ1FdkIe6GaSa-Dxqvs/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1JsFw-yaFt7uK0Eo670krbYUp9txCyt-68oALq8VLYEc/edit?usp=drive_link",
       "key": "column-major_traversal",
       "properties": {
         "audience": "Verified Teacher",
@@ -6898,7 +6941,7 @@
     },
     {
       "name": "Creating Image Filters",
-      "url": "https://docs.google.com/document/d/10HeCA75sgVRuDYLyMeWuJD6up33WsqXiysY-7HcK-qw/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1nv2jVotWyFrVH-2FtkZC4-BKd5Cer6DU3rw0pZt-yFM/edit?usp=drive_link",
       "key": "creating_image_filters",
       "properties": {
         "audience": "Student",
@@ -6911,7 +6954,7 @@
     },
     {
       "name": "Enhanced For Loops",
-      "url": "https://docs.google.com/presentation/d/1vu3ObiYpOYba0ORGV-gF3OJT7JTGI8hU4WkzHN9Naog/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1iPvbkCr0JWmIDJAAeU7nsHM415N91Or28EvGsNfjXjs/edit?usp=drive_link",
       "key": "enhanced_for_loops_2",
       "properties": {
         "audience": "Verified Teacher",
@@ -6935,7 +6978,7 @@
     },
     {
       "name": "Enhanced For Loops Anticipation Guide",
-      "url": "https://docs.google.com/document/d/1HUH0Hx4d3fBXVaWfVxj1yXaAAjXv7aGl1iSiICZfOAs/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/195XYqvqhTb4acjMP4TFTegQfYinj0_FChBpM7s_TS80/edit?usp=drive_link",
       "key": "enhanced_for_loops_anticipation_guide",
       "properties": {
         "audience": "Student",
@@ -6961,7 +7004,7 @@
     },
     {
       "name": "GrayscaleImage FRQ",
-      "url": "https://docs.google.com/presentation/d/1ghDXil7SfcIMKm6EZgqxGxOdkvkKdqkgw9rNtkINIbA/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1yI9TEpBjk3WFErhsT483Xn_y95lFgQ6vjYoLOgLn6CM/edit?usp=drive_link",
       "key": "grayscaleimage_frq",
       "properties": {
         "audience": "Verified Teacher",
@@ -7010,7 +7053,7 @@
     },
     {
       "name": "Images in The Theater",
-      "url": "https://docs.google.com/presentation/d/1txY2_0noV1tujNvIoCrF6D8_JBn79f6KeJmwUMTa0rM/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1r0bgcUweUDZqxJSQbth235NM3Ybvm_OdGqhzNdawh1c/edit?usp=drive_link",
       "key": "images_in_the_theater",
       "properties": {
         "audience": "Verified Teacher",
@@ -7022,7 +7065,7 @@
     },
     {
       "name": "Impacts of Programs",
-      "url": "https://docs.google.com/presentation/d/1aqs2crOUPLs5yeSKEuk-7rpkKs1HuRzP4RgZI7ighCI/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1ivrVFX6rMJvn7rYEOnGQTlnVBFGOzH7wPSOk1Le900o/edit?usp=drive_link",
       "key": "impacts_of_programs",
       "properties": {
         "audience": "Verified Teacher",
@@ -7047,7 +7090,7 @@
     },
     {
       "name": "Modifying Colors",
-      "url": "https://docs.google.com/document/d/1U7KadRIYqDHg3vEaN5Qh1UwjRCKGdrMc_PfzCfoxl4s/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/19vdmQEml9JtSO5pT8GzWYwhfk8xMmEpKuk-u6_EM24E/edit?usp=drive_link",
       "key": "modifying_colors",
       "properties": {
         "audience": "Student",
@@ -7060,7 +7103,7 @@
     },
     {
       "name": "Modifying Images",
-      "url": "https://docs.google.com/presentation/d/1JMDCGHmuH6HoVN8xWG68Ji3B44LReEgnnUkKMGRz_BM/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1Vb24_4qtjiTDuQm2-Vu4horDc8J-VcvPGcNwtIMfl2k/edit?usp=drive_link",
       "key": "modifying_images",
       "properties": {
         "audience": "Verified Teacher",
@@ -7072,7 +7115,7 @@
     },
     {
       "name": "Personal Narrative Project",
-      "url": "https://docs.google.com/presentation/d/1DxA0rXABD7yW_hpbA4hDeP0zj3qvRtjOrFY-c4mKJJQ/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/11D0dKEp646dAbkjpqWFhsPFZ9V-QJZly8Uua87QXgJk/edit?usp=drive_link",
       "key": "personal_narrative_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -7080,6 +7123,18 @@
       },
       "seeding_key": {
         "resource.key": "personal_narrative_project"
+      }
+    },
+    {
+      "name": "Personal Narrative Project",
+      "url": "https://docs.google.com/presentation/d/1cb2ioLK1Aode6V2O0Cc89OgXANyi67oSlXe_WCm3x3k/edit?usp=drive_link",
+      "key": "personal_narrative_project_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "personal_narrative_project_1"
       }
     },
     {
@@ -7109,7 +7164,7 @@
     },
     {
       "name": "Planning Algorithms Manipulatives",
-      "url": "https://docs.google.com/document/d/1s3C8sqFduqYRdozFSaHnUqw2bygCmoXbaQYc6jgXgDg/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1r6gIfGzwDEFeSeEyv0DpCHTp8t_dAC0mB72gPxa8Gc8/edit?usp=drive_link",
       "key": "planning_algorithms_manipulatives_2",
       "properties": {
         "audience": "Student",
@@ -7122,7 +7177,7 @@
     },
     {
       "name": "Planning Algorithms Manipulatives",
-      "url": "https://docs.google.com/presentation/d/1yjyTJa1o-mwfbaOW37RkNx15mKvQgp6lsfHo0vK_NJc/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1T3xEsquic4B7c2m-BgnkyXn8ojUf4c34PfYLcWSWaKs/edit?usp=drive_link",
       "key": "planning_algorithms_manipulatives_3",
       "properties": {
         "audience": "Student",
@@ -7145,7 +7200,7 @@
     },
     {
       "name": "Row-Major Traversal",
-      "url": "https://docs.google.com/presentation/d/1rFZGLV-6AxGL-qrKwqE9w_r_cnPOaeCHWpYr0MZum4M/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1Tkrhdkwm0jQusonLK4DkPvaeIyu8oPHzxxAmcdKweNI/edit?usp=drive_link",
       "key": "row-major_traversal",
       "properties": {
         "audience": "Verified Teacher",
@@ -7181,7 +7236,7 @@
     },
     {
       "name": "Tracing 2D Array Traversals",
-      "url": "https://docs.google.com/document/d/1Vz2eFbsj6fm3d2Pb94AbbNBV1IFXIjcqIcbVoRoQy5A/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1TvTFhHmcTXUlBEh2ivnFBO5BQYjBQOuCYt9h_DHot9s/edit?usp=drive_link",
       "key": "tracing_2d_array_traversals",
       "properties": {
         "audience": "Student",
@@ -7194,7 +7249,7 @@
     },
     {
       "name": "Tracing Column-Major Traversals",
-      "url": "https://docs.google.com/document/d/1vyo6w3GXThQejJGcW49kKflvaBDFO0eR2nsrR1t2e8w/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/160NT49K2jJI1Ngc7orFRqeirmUL4_eeNTqwUHAFhtMI/edit?usp=drive_link",
       "key": "tracing_column-major_traversals",
       "properties": {
         "audience": "Student",
@@ -7207,7 +7262,7 @@
     },
     {
       "name": "Two-Dimensional (2D) Arrays",
-      "url": "https://docs.google.com/presentation/d/1mYvzL8ufZ1CbpPE50ASzOicPlGrh_PY4nCGCzUqc_NI/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1VCteAl8tZvTGUpkQC8F2rpcEaeiHlT9P6bUePGJynMI/edit?usp=drive_link",
       "key": "two-dimensional_2d_arrays",
       "properties": {
         "audience": "Verified Teacher",
@@ -7230,8 +7285,8 @@
       }
     },
     {
-      "name": "U5L1 Extra Practice",
-      "url": "https://docs.google.com/document/d/1DWzap3RV0j4UXda-br6hSVlhjXUSD2zvufEJHw1nusQ/edit?usp=sharing",
+      "name": "Two-Dimensional (2D) Arrays Extra Practice",
+      "url": "https://docs.google.com/document/d/16WrnCs6Oc-yq-ujWQ4GEdz_GDAQMBROjY5gwreM2poE/edit?usp=drive_link",
       "key": "u5l1_extra_practice",
       "properties": {
         "audience": "Student",
@@ -7243,8 +7298,8 @@
       }
     },
     {
-      "name": "U5L1 Guided Notes",
-      "url": "https://docs.google.com/document/d/1DSF2DnpHU-ZKf5PfAJ63iorO4wJKPNVNE7YaET0MdKg/edit?usp=sharing",
+      "name": "Two-Dimensional (2D) Arrays Guided Notes",
+      "url": "https://docs.google.com/document/d/17qHDo8dz5RomNw1Ut1X4zMfK_4tAUu2Qz_d_5XKNNwY/edit?usp=drive_link",
       "key": "u5l1_guided_notes",
       "properties": {
         "audience": "Student",
@@ -7256,8 +7311,8 @@
       }
     },
     {
-      "name": "U5L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/1Kpa5cvPJtx6cOitpWf_h7Uyji5VhDWICYsUTlp5E8F4/edit?usp=sharing",
+      "name": "2D Array Elements Extra Practice",
+      "url": "https://docs.google.com/document/d/1WlwgAjrIx2-25baMDYH85mUJY_qQEe0oJtnb1ITrdY0/edit?usp=drive_link",
       "key": "u5l2_extra_practice",
       "properties": {
         "audience": "Student",
@@ -7269,8 +7324,8 @@
       }
     },
     {
-      "name": "U5L2 Guided Notes",
-      "url": "https://docs.google.com/document/d/1ekdkpZT0GdmtbawHaxbVaS-DLI3ub8M8EDonWM6UK0I/edit?usp=sharing",
+      "name": "2D Array Elements Guided Notes",
+      "url": "https://docs.google.com/document/d/1asfnM9L7gHgf_sj8XsTfCcmT_b2JGYvm8Q2-OZwaijM/edit?usp=drive_link",
       "key": "u5l2_guided_notes",
       "properties": {
         "audience": "Student",
@@ -7282,8 +7337,8 @@
       }
     },
     {
-      "name": "U5L3 Extra Practice",
-      "url": "https://docs.google.com/document/d/1Sx5EKAJjZPFI084EITLiqla6bZf8Z9FOp7hx8nrVB-s/edit?usp=sharing",
+      "name": "Row-Major Traversal Extra Practice",
+      "url": "https://docs.google.com/document/d/1ZybDACqit-y_F7dXCjjiSE8QJ79FOvnDiPbCIhT8f_U/edit?usp=drive_link",
       "key": "u5l3_extra_practice",
       "properties": {
         "audience": "Student",
@@ -7295,8 +7350,8 @@
       }
     },
     {
-      "name": "U5L3 Guided Notes",
-      "url": "https://docs.google.com/document/d/1P4VZ7-vYFyXaMwjLdpdkdTJqJiTIM-m0P1bsJuAebpU/edit?usp=sharing",
+      "name": "Row-Major Traversal Guided Notes",
+      "url": "https://docs.google.com/document/d/1l9LKbkhHNThoHKY-PqgtwbYoomTaUvNzPI4QTddvNOs/edit?usp=drive_link",
       "key": "u5l3_guided_notes",
       "properties": {
         "audience": "Student",
@@ -7308,8 +7363,8 @@
       }
     },
     {
-      "name": "U5L4 Extra Practice",
-      "url": "https://docs.google.com/document/d/1NY5EGKkib6-sSEu3nitEqvG7qSq2tnqW3gF2YxMzUKE/edit?usp=sharing",
+      "name": "Column-Major Traversal Extra Practice",
+      "url": "https://docs.google.com/document/d/1SsM6WNtaTkhkiJlzxgvHtHT9KI5P_M6fsk1Yl0fTbxI/edit?usp=drive_link",
       "key": "u5l4_extra_practice",
       "properties": {
         "audience": "Student",
@@ -7321,8 +7376,8 @@
       }
     },
     {
-      "name": "U5L4 Guided Notes",
-      "url": "https://docs.google.com/document/d/1jcYlFcx8LqQeHLIsnPt7GNty-IlE60YDsl_BJD_l53I/edit?usp=sharing",
+      "name": "Column-Major Traversal Guided Notes",
+      "url": "https://docs.google.com/document/d/1ZzH_uXUOPfkG3Xa5lfwkdyBAFfT9SFL7ujqVPSuRHHs/edit?usp=drive_link",
       "key": "u5l4_guided_notes",
       "properties": {
         "audience": "Student",
@@ -7334,8 +7389,8 @@
       }
     },
     {
-      "name": "U5L5 Extra Practice",
-      "url": "https://docs.google.com/document/d/1wqQKAUSs_TpO8WbKySpmZAEQeLZe_mIRPZI_kN2DtfE/edit?usp=sharing",
+      "name": "Enhanced For Loops Extra Practice",
+      "url": "https://docs.google.com/document/d/1lHQxfL17BdLLnNpMC1IW6amu58vaN98l3fBBY1hJOHw/edit?usp=drive_link",
       "key": "u5l5_extra_practice",
       "properties": {
         "audience": "Student",
@@ -7347,8 +7402,8 @@
       }
     },
     {
-      "name": "U5L5 Guided Notes",
-      "url": "https://docs.google.com/document/d/1oVcXNTG6kZ3mC03dt4hdwRTgw9G5vfCPwU0GgVEZ7qM/edit?usp=sharing",
+      "name": "Enhanced For Loops Guided Notes",
+      "url": "https://docs.google.com/document/d/1G-caUELy53w7LeXpkZr-XuW_A-s7t5TUqsgsW2hDoYg/edit?usp=drive_link",
       "key": "u5l5_guided_notes",
       "properties": {
         "audience": "Student",
@@ -7360,8 +7415,8 @@
       }
     },
     {
-      "name": "U5L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1zqe5-lqtgoyqGSFyIc810q2v-m1daVG9LEXdyqcJPNs/edit?usp=sharing",
+      "name": "Images in The Theater Extra Practice",
+      "url": "https://docs.google.com/document/d/1Ua01Jg2panZ9swwnUNpMBJ969bO-rNDcjIMUa3C0LO0/edit?usp=drive_link",
       "key": "u5l6_extra_practice",
       "properties": {
         "audience": "Student",
@@ -7373,8 +7428,8 @@
       }
     },
     {
-      "name": "U5L6 Guided Notes",
-      "url": "https://docs.google.com/document/d/1DeXptsGP99ru8BFNgaEH5AVj8Q01OSbAW3UsD-4BVT0/edit?usp=sharing",
+      "name": "Images in The Theater Guided Notes",
+      "url": "https://docs.google.com/document/d/1WTHDOr2RAg9kXF0ydqstI_YtdsDZ3qLX_IBEKK4U9Nk/edit?usp=drive_link",
       "key": "u5l6_guided_notes",
       "properties": {
         "audience": "Student",
@@ -7386,8 +7441,8 @@
       }
     },
     {
-      "name": "U5L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/1SY5giLnFNu54aZOgmIlDCdTyYJ_areNIAWTh7Hwx4AU/edit?usp=sharing",
+      "name": "2D Array Algorithms Extra Practice",
+      "url": "https://docs.google.com/document/d/1aBkSfhN5s7iH_3BluBFPO2oShzeEzrdZthT0WNBqbYs/edit?usp=drive_link",
       "key": "u5l7_extra_practice",
       "properties": {
         "audience": "Student",
@@ -7399,8 +7454,8 @@
       }
     },
     {
-      "name": "U5L7 Guided Notes",
-      "url": "https://docs.google.com/document/d/1wJybbyQ34Dlf4EipGRbtR8IXJSWIUO7eS2JFCBikfBU/edit?usp=sharing",
+      "name": "2D Array Algorithms Guided Notes",
+      "url": "https://docs.google.com/document/d/1p1HoIEfDLUtciZEvByfbaIO-zq5kfrBc9BymNfOclBI/edit?usp=drive_link",
       "key": "u5l7_guided_notes",
       "properties": {
         "audience": "Student",
@@ -7412,8 +7467,8 @@
       }
     },
     {
-      "name": "U5L8 Extra Practice",
-      "url": "https://docs.google.com/document/d/12wfCs84uN30reaB2uqILtslCl6kU6_sWYqlRYqHoo1E/edit?usp=sharing",
+      "name": "Modifying Images Extra Practice",
+      "url": "https://docs.google.com/document/d/1oRuNwPbSgKFCopkj9Oc6Vi4hnWnCcic0MxI3JpYFdDA/edit?usp=drive_link",
       "key": "u5l8_extra_practice",
       "properties": {
         "audience": "Student",
@@ -7425,8 +7480,8 @@
       }
     },
     {
-      "name": "U5L8 Guided Notes",
-      "url": "https://docs.google.com/document/d/1lnMmdXIvmMAxPH_paNg7Ess-gnS3AZLRhwtsbJqjyDI/edit?usp=sharing",
+      "name": "Modifying Images Guided Notes",
+      "url": "https://docs.google.com/document/d/1UG4awSR8sQe4_nV0RDcNzaoH0t9xfZuta9ekG6qoh1U/edit?usp=drive_link",
       "key": "u5l8_guided_notes",
       "properties": {
         "audience": "Student",
@@ -7438,8 +7493,8 @@
       }
     },
     {
-      "name": "U5L9 Extra Practice",
-      "url": "https://docs.google.com/document/d/1Ntgb-UOSVIFrYzQaTld62a74O18g8dPaiCFFHEWgOQ8/edit?usp=sharing",
+      "name": "Impacts of Programs Extra Practice",
+      "url": "https://docs.google.com/document/d/1SNZi8vkEOsC0_ux191NdYeQN-C4-WpdMfxgOHu_Y_6Y/edit?usp=drive_link",
       "key": "u5l9_extra_practice",
       "properties": {
         "audience": "Student",
@@ -7451,8 +7506,8 @@
       }
     },
     {
-      "name": "U5L9 Guided Notes",
-      "url": "https://docs.google.com/document/d/1Zf9VUf6tm4ySf8nvc68DiqATcdWAzm3RHrm8k8ERIfI/edit?usp=sharing",
+      "name": "Impacts of Programs Guided Notes",
+      "url": "https://docs.google.com/document/d/10yr6HooVXM7vkOF1CcFLNA_cmVhNkf1Zt-iWiI7lkJw/edit?usp=drive_link",
       "key": "u5l9_guided_notes",
       "properties": {
         "audience": "Student",
@@ -7465,7 +7520,7 @@
     },
     {
       "name": "Unit 5 Assessment",
-      "url": "https://docs.google.com/presentation/d/1YAACBBZKLHnp9Wan0C5RaeLxtjjSCF6o4KDAslMcPok/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/18J879xIUvDcSfOvL-xNGrQl6rHyTvplDn8HM3CGIa3w/edit?usp=drive_link",
       "key": "unit_5_assessment",
       "properties": {
         "audience": "Verified Teacher",
@@ -7476,8 +7531,38 @@
       }
     },
     {
+      "name": "Unit 5 Guide",
+      "url": "https://docs.google.com/document/d/1vug-NdjvX47SdsiSXBx0__w8q2YXGlu657gp4PD9qi8/edit?usp=drive_link",
+      "key": "unit_5_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_guide"
+      }
+    },
+    {
+      "name": "Unit 5 Overview",
+      "url": "https://docs.google.com/document/d/1wcfaBlZb1DN8vOwm2FdtSQks92btL8GCXdE_bQ5RNo4/edit?usp=drive_link",
+      "key": "unit_5_overview",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_overview"
+      }
+    },
+    {
+      "name": "Unit 5 Slides",
+      "url": "https://docs.google.com/presentation/d/1gInA1p9MtXdLu3CU5GqhgLTgLUUWROtgJnSPt7mgse4/edit?usp=sharing",
+      "key": "unit_5_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_slides"
+      }
+    },
+    {
       "name": "Unit 5 Study Guide",
-      "url": "https://docs.google.com/document/d/1XsASO5aI0HzNApY9_21rgkgdi48SVzjbFUZiv9LI_Fw/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1oO7LVS9Sxe3TBZ5ZkQOXzK6xpZ0pnTvvrxkAaG8xnTQ/edit?usp=drive_link",
       "key": "unit_5_study_guide",
       "properties": {
         "audience": "Student",
@@ -7486,6 +7571,16 @@
       },
       "seeding_key": {
         "resource.key": "unit_5_study_guide"
+      }
+    },
+    {
+      "name": "Unit 5 Word Wall Cards",
+      "url": "https://docs.google.com/document/d/1lgLxxjhwlo5Q2IZn-s8QHvqJvGdYg-LoKqzbOM5pCSw/edit?usp=sharing",
+      "key": "unit_5_word_wall_cards",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_word_wall_cards"
       }
     },
     {
@@ -7514,7 +7609,7 @@
     },
     {
       "name": "Writing Algorithms with 2D Arrays",
-      "url": "https://docs.google.com/document/d/1sF-UgKSHIvHeCm8q9as_KF40lMJiYctn1lmeB-KR7LE/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1BLTe0HyJSU0JophrWO7ZXCLWvAhXCOZ5ROvCBQpe-2M/edit?usp=drive_link",
       "key": "writing_algorithms_with_2d_arrays",
       "properties": {
         "audience": "Student",
@@ -7527,7 +7622,7 @@
     },
     {
       "name": "Writing Algorithms with 2D Arrays",
-      "url": "https://docs.google.com/document/d/1euZKptREM6oqKsiCkrzB7eWz_4pX4a-1yRqlvU4AEBA/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1h6wKGRKOjSV_eBFNJkK9SE5SgIwf-M1XRKr64QcBftY/edit?usp=drive_link",
       "key": "writing_algorithms_with_2d_arrays_1",
       "properties": {
         "audience": "Student",
@@ -7933,6 +8028,12 @@
     {
       "seeding_key": {
         "lesson.key": "Personal Narrative Project [1-Day Version]",
+        "resource.key": "personal_narrative_project_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Personal Narrative Project [1-Day Version]",
         "resource.key": "personal_narrative_project_planning_guide_1"
       }
     },
@@ -8084,6 +8185,30 @@
   "scripts_resources": [
     {
       "seeding_key": {
+        "resource.key": "_exemplar_unit_5_guide",
+        "script.name": "csa5-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_4",
+        "script.name": "csa5-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_4",
+        "script.name": "csa5-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4",
+        "script.name": "csa5-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "creating_and_using_word_walls_4",
         "script.name": "csa5-pilot-2025"
       }
@@ -8091,6 +8216,36 @@
     {
       "seeding_key": {
         "resource.key": "programming_levels_in_csa_5",
+        "script.name": "csa5-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_guide",
+        "script.name": "csa5-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_overview",
+        "script.name": "csa5-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_slides",
+        "script.name": "csa5-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_study_guide",
+        "script.name": "csa5-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_word_wall_cards",
         "script.name": "csa5-pilot-2025"
       }
     }
@@ -8545,15 +8700,8 @@
     {
       "seeding_key": {
         "lesson.key": "2D Array Algorithms",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.I.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "2D Array Algorithms",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.N.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.13.A.1"
       }
     },
     {
@@ -8601,15 +8749,15 @@
     {
       "seeding_key": {
         "lesson.key": "2D Array Elements",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.F.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.11.A.4"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "2D Array Elements",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.F.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.11.A.5"
       }
     },
     {
@@ -8629,29 +8777,8 @@
     {
       "seeding_key": {
         "lesson.key": "Column-Major Traversal",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.I.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Column-Major Traversal",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.N.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Column-Major Traversal",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.F.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Column-Major Traversal",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.G.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.12.A.1"
       }
     },
     {
@@ -8671,15 +8798,8 @@
     {
       "seeding_key": {
         "lesson.key": "Enhanced For Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.G.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Enhanced For Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.G.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.12.A.2"
       }
     },
     {
@@ -8706,8 +8826,8 @@
     {
       "seeding_key": {
         "lesson.key": "Images in The Theater",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.6.A.2"
       }
     },
     {
@@ -8748,8 +8868,8 @@
     {
       "seeding_key": {
         "lesson.key": "Impacts of Programs",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "IOC-1.A.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.2.A.2"
       }
     },
     {
@@ -8762,15 +8882,8 @@
     {
       "seeding_key": {
         "lesson.key": "Modifying Images",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.I.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Modifying Images",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.N.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.13.A.1"
       }
     },
     {
@@ -8853,36 +8966,15 @@
     {
       "seeding_key": {
         "lesson.key": "Row-Major Traversal",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.I.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.11.A.6"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Row-Major Traversal",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.N.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Row-Major Traversal",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.F.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Row-Major Traversal",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.G.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Row-Major Traversal",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.G.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.12.A.1"
       }
     },
     {
@@ -8909,15 +9001,22 @@
     {
       "seeding_key": {
         "lesson.key": "Two-Dimensional (2D) Arrays",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.F.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.11.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Two-Dimensional (2D) Arrays",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.F.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.11.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Two-Dimensional (2D) Arrays",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.11.A.3"
       }
     },
     {

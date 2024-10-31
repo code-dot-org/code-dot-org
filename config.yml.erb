@@ -448,7 +448,7 @@ levelbuilder_mode:
 # make it easier to tell the difference
 use_local_header_color:
 
-default_hoc_mode: false  # overridden by 'hoc_mode' DCDO param, except in :test
+default_hoc_mode: soon-hoc  # overridden by 'hoc_mode' DCDO param, except in :test
 default_hoc_launch: ''      # overridden by 'hoc_launch' DCDO param, except in :test
 
 # teacher_application_mode values: 'open', 'closing-soon', 'closed'
@@ -623,6 +623,7 @@ openai_chat_completion_api_key: !Secret
 openai_chat_completion_org_id: !Secret
 openai_evaluate_rubric_api_key: !Secret
 openai_evaluate_rubric_org_id:
+openai_aichat_safety_api_key: !Secret
 
 # AI Proxy for OpenAI API
 ai_proxy_origin: https://aiproxy-test.code.org

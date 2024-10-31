@@ -24,6 +24,7 @@ export default function RubricTabButtons({
   rubric,
   studentName,
   reportingData,
+  updateAiEvalStatusForUser,
 }) {
   const [status, setStatus] = useState(STATUS.INITIAL_LOAD);
 
@@ -62,13 +63,18 @@ export default function RubricTabButtons({
 
   return (
     <div className="uitest-rubric-tab-buttons">
-      <div className={style.rubricTabGroup}>
+      <div id="tour-tab-buttons" className={style.rubricTabGroup}>
         <SegmentedButtons
           selectedButtonValue={selectedTab}
           size="s"
           buttons={[
-            {label: i18n.rubricTabStudent(), value: TAB_NAMES.RUBRIC},
             {
+              id: 'assess-a-student-button',
+              label: i18n.rubricTabStudent(),
+              value: TAB_NAMES.RUBRIC,
+            },
+            {
+              id: 'class-data-button',
               label: i18n.rubricTabClassManagement(),
               value: TAB_NAMES.SETTINGS,
               disabled: !showSettings,
@@ -88,6 +94,7 @@ export default function RubricTabButtons({
               status={status}
               setStatus={setStatus}
               reportingData={reportingData}
+              updateAiEvalStatusForUser={updateAiEvalStatusForUser}
             />
             {!!statusText() && (
               <ReactTooltip
@@ -118,4 +125,5 @@ RubricTabButtons.propTypes = {
   rubric: rubricShape.isRequired,
   studentName: PropTypes.string,
   reportingData: reportingDataShape,
+  updateAiEvalStatusForUser: PropTypes.func,
 };

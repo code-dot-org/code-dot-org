@@ -1,7 +1,6 @@
 ---
 title: Ejemplo de resolución que apoya la Semana por la Educación en Ciencias de Computación y la Hora del Código
 layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

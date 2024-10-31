@@ -10,6 +10,6 @@ $(document).ready(function () {
 
   ReactDOM.render(
     <EditPredictSettings initialSettings={initialSettings} />,
-    document.getElementById('predict-settings-container')
+    document.getElementById('predict-settings-editor')
   );
 });

@@ -18,17 +18,16 @@ module RegistrationsControllerTests
       assert_response :bad_request
     end
 
-    test "update student with utf8mb4 in name fails" do
+    test "update student with utf8mb4 in name succeeds" do
       student = create :student
 
       sign_in student
 
-      assert_does_not_create(User) do
-        put '/users', params: {user: {name: panda_panda}}
-      end
-      assert_response :success # which actually means an error...
-      assert_equal ['Display Name is invalid'], assigns(:user).errors.full_messages
-      assert_select 'div#error_explanation', /Display Name is invalid/ # ... is rendered on the page
+      put '/users', params: {format: :js, user: {name: panda_panda}}
+      assert_response :no_content
+
+      student.reload
+      assert_equal panda_panda.sanitize_utf8mb4, student.name
     end
 
     test "update student with age" do

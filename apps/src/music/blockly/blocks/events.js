@@ -1,5 +1,6 @@
 import musicI18n from '../../locale';
 import {BlockTypes} from '../blockTypes';
+import {TRIGGER_FIELD} from '../constants';
 import {fieldTriggerDefinition} from '../fields';
 
 export const whenRun = {
@@ -41,7 +42,7 @@ export const triggeredAt = {
     tooltip: musicI18n.blockly_blockTriggeredAtTooltip(),
   },
   generator: ctx => {
-    const id = ctx.getFieldValue('trigger');
+    const id = ctx.getFieldValue(TRIGGER_FIELD);
     const varName = Blockly.JavaScript.nameDB_.getName(
       ctx.getFieldValue('var'),
       Blockly.Names.NameType.VARIABLE

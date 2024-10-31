@@ -8,7 +8,7 @@ import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStude
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {LtiLogins} from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
 import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
-import {sectionProviderName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {sectionProviderName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import color from '@cdo/apps/util/color';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';

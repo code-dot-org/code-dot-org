@@ -11,15 +11,15 @@ import LtiSectionSyncDialog, {
 } from '@cdo/apps/simpleSignUp/lti/sync/LtiSectionSyncDialog';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {importOrUpdateRoster} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
-  importOrUpdateRoster,
   sectionCode,
   sectionProvider,
   sectionProviderName,
   sectionName,
   ltiSyncResult,
   syncEnabled,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 

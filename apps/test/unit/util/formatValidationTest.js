@@ -8,14 +8,47 @@ import {
 describe('formatValidation', () => {
   describe('isEmail', () => {
     it('Accepts valid email addresses', () => {
-      ['name@code.org', 'name+tag@code.org'].forEach(email => {
+      [
+        'email@example.com',
+        'firstname.lastname@example.com',
+        'email@subdomain.example.co.uk',
+        'firstname+lastname@example.com',
+        '123456789@example.com',
+        'email@example-one.com',
+        '_______@example.com',
+        'email@example.name',
+        'email@example.museum',
+        'email@example.co.jp',
+        'firstname-lastname@example.com',
+        'あいうえお@example.com',
+      ].forEach(email => {
+        console.log(email);
         // Expected isEmail("${email}") to return true
         expect(isEmail(email)).toBe(true);
       });
     });
 
     it('Rejects invalid email addresses', () => {
-      ['invalid', 'invalid@code', 'invalid@ code.org'].forEach(email => {
+      [
+        null,
+        '',
+        ' ',
+        ' @ ',
+        '1234',
+        'plainaddress',
+        '#@%^%#$@#$@#.com',
+        'joe@localhost',
+        '@example.com',
+        'Joe',
+        'Smith',
+        '<email@example.com>',
+        'email.example.com',
+        'email@example@example.com',
+        '(Joe',
+        'Smith)',
+        'email@example',
+        'email@example..com',
+      ].forEach(email => {
         // Expected isEmail("${email}") to return false
         expect(isEmail(email)).toBe(false);
       });

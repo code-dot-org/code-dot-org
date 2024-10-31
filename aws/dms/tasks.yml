@@ -115,9 +115,11 @@ cron:
 - dashboard.lti_feedbacks
 - dashboard.lti_sections
 - dashboard.lti_user_identities
+- dashboard.lti_deployments_user_identities
 - dashboard.new_feature_feedbacks
 - dashboard.cap_user_events
 - dashboard.ai_tutor_interaction_feedbacks
+- dashboard.aichat_sessions
 cron-user-hierarchy:
 - dashboard.users:
     remove_column:

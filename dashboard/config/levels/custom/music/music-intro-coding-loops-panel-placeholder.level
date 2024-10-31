@@ -1,13 +1,89 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2024-08-28T17:49:58.000Z",
   "level_num": "custom",
   "user_id": 16899,
   "properties": {
+    "level_data": {
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "repeat_simple2",
+                  "id": "repeat_simple2",
+                  "fields": {
+                    "times": 1
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
+                        "fields": {
+                          "sound": "chainsmokers_riptide/drums_claps"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "m)jo[vcgE@P`AP:XDTb+",
+                            "fields": {
+                              "sound": "chainsmokers_riptide/bass_1"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "library": "launch2024",
+      "sounds": {
+        "chainsmokers_riptide": [
+          "drums_claps",
+          "bass_1"
+        ]
+      },
+      "packId": "chainsmokers_riptide"
+    },
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "###<i class=\"fa-solid fa-wrench\"></i> Customize the loop with two sounds\r\n\r\n1. Change the number of times both sounds repeat.\r\n2. Then press <i class=\"fa-solid fa-play\"></i> Run.",
+    "hide_share_and_remix": "false",
+    "validations": [
+      {
+        "key": "music-intro-coding-loops-panel-placeholder_a3d1d466-221b-4dbb-835e-958195ab54d0",
+        "message": "",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 4
+          }
+        ]
+      }
+    ],
     "preload_asset_list": null
   },
-  "published": true
+  "audit_log": "[{\"changed_at\":\"2024-09-16 20:36:44 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 20:38:47 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 20:40:27 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 16:37:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-18 21:52:47 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-18 21:53:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-18 21:53:39 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-18 21:55:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 20:46:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

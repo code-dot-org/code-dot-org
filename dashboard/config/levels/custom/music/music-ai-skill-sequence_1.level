@@ -1,0 +1,78 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-10-07T22:05:46.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "offerTts": "true",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Play a Sound\r\n- Drag the [play](#clickable=play-sound-block) block and connect it under [when run](#clickable=when-run-block). \r\n- Then press [Run](#clickable=run-button).",
+    "hide_share_and_remix": "true",
+    "validations": [
+      {
+        "key": "music-ai-skill-sequence_d6a47c71-67df-4b83-950a-71b503c6cdb6",
+        "message": "Nice work.  You played a sound!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-sequence_100f6390-0a0c-4ff7-bc67-2979e4beed57",
+        "message": "You found the Run button! Now, connect a [play](#clickable=play-sound-block) block under [when run](#clickable=when-run-block). ",
+        "next": false,
+        "conditions": [
+
+        ],
+        "callout": "play-sound-block---when-run-block"
+      }
+    ],
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "sounds": {
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_edm",
+          "drum_beat_club",
+          "drum_beat_noise"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      }
+    },
+    "name_suffix": "_1",
+    "offer_browser_tts": "false",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:46.696+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-sequence_3\\\"\"],\"cloned_from\":\"music-ai-skill-sequence_3\"},{\"changed_at\":\"2024-10-08 19:41:43 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 20:33:31 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 20:34:18 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 21:02:01 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 21:14:54 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 21:35:51 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 21:37:59 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 21:38:55 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-18 23:39:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-18 23:40:05 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-21 23:01:08 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-22 00:30:26 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

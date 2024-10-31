@@ -1,0 +1,16 @@
+name 'Data Sci U1 Post Q16_2024-pilot'
+
+question 'Why is it important to consider your audience when designing a data visualization?'
+
+right 'To ensure the message is clear and accessible to the intended viewers.'
+wrong 'To select complex visualizations that showcase technical skills.'
+wrong 'To prevent data from being misinterpreted.'
+wrong 'To choose colors that are visually appealing.'
+
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

@@ -48,7 +48,11 @@ const StandaloneVideo: React.FunctionComponent = () => {
 
   return (
     <div id="standalone-video">
-      <Video src={levelVideo?.src}>
+      <Video
+        src={levelVideo?.src}
+        download={levelVideo?.download}
+        thumbnail={levelVideo?.thumbnail}
+      >
         <button
           id="standalone-video-continue-button"
           type="button"

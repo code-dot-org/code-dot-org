@@ -9,22 +9,25 @@ class TeacherDashboardControllerTest < ActionController::TestCase
     @section = @sections.first
   end
 
-  test 'index: returns forbidden if no logged in user' do
+  test 'index: redirects home if no logged in user' do
     get :show, params: {section_id: @section.id}
-    assert_redirected_to_sign_in
+    assert_response :redirect
+    assert_redirected_to "http://test.host/home"
   end
 
-  test 'index: returns forbidden if logged in user is not a teacher' do
+  test 'index: redirects home if logged in user is not a teacher' do
     sign_in create(:student)
     get :show, params: {section_id: @section.id}
-    assert_response :forbidden
+    assert_response :redirect
+    assert_redirected_to "http://test.host/home"
   end
 
-  test 'index: returns forbidden if requested section does not belong to teacher' do
+  test 'index: redirects home if requested section does not belong to teacher' do
     sign_in @section_owner
     other_teacher_section = create :section
     get :show, params: {section_id: other_teacher_section.id}
-    assert_response :forbidden
+    assert_response :redirect
+    assert_redirected_to "http://test.host/home"
   end
 
   test 'index: returns success if requested section belongs to the section owner' do
@@ -32,6 +35,17 @@ class TeacherDashboardControllerTest < ActionController::TestCase
     section = create :section, user: @section_owner
     get :show, params: {section_id: section.id}
     assert_response :success
+  end
+
+  test 'index: redirects to generic course page if requested section does not belong to teacher' do
+    @section_owner_2 = create :teacher
+    @sections_2 = create_list :section, 3, user: @section_owner_2
+    @section_2 = @sections_2.first
+    sign_in @section_owner_2
+    section = create :section, user: @section_owner
+    get :show, params: {section_id: section.id, course_version_name: 'csd-2024'}
+    assert_response :redirect
+    assert_redirected_to "http://test.host/courses/csd-2024"
   end
 
   test 'index: returns success if requested section is an instructed section for a coteacher' do
@@ -56,8 +70,10 @@ class TeacherDashboardControllerTest < ActionController::TestCase
   test 'redirect_to_newest_section: redirects to newest section progress page if sections instructed' do
     sign_in @section_owner
 
+    section = create :section, user: @section_owner, created_at: 2.days.from_now
+
     get :redirect_to_newest_section
 
-    assert_redirected_to "/teacher_dashboard/sections/#{@section.id}/progress?view=v2"
+    assert_redirected_to "/teacher_dashboard/sections/#{section.id}/progress?view=v2"
   end
 end

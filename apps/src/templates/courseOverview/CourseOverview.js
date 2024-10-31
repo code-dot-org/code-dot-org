@@ -22,7 +22,7 @@ import {
   assignmentCourseVersionShape,
   sectionForDropdownShape,
 } from '@cdo/apps/templates/teacherDashboard/shapes';
-import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import color from '@cdo/apps/util/color';
 import {
   onDismissRedirectDialog,

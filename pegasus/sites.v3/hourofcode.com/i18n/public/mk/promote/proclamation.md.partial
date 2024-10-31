@@ -1,7 +1,6 @@
 ---
 title: Пример Резолуција Поддршка на неделното образованието за компјутерските науки и Hour of Code
 layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

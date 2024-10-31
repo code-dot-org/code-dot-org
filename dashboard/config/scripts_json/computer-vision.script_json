@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "computer-vision",
-    "serialized_at": "2024-07-26 20:53:51 UTC",
+    "serialized_at": "2024-09-26 05:39:52 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -4312,7 +4312,7 @@
       "key": "185512a3-4d42-43cc-9125-3680c8979f39",
       "position": 3,
       "properties": {
-        "description": "While students take their survey, please complete [**this pre-module survey for teachers**](https://studio.code.org/form/computer_vision_module_post_survey) as well. Your feedback is valued and appreciated!"
+        "description": "While students take their survey, please complete [**this post-module survey for teachers**](https://studio.code.org/form/computer_vision_module_post_survey) as well. Your feedback is valued and appreciated!"
       },
       "seeding_key": {
         "activity_section.key": "185512a3-4d42-43cc-9125-3680c8979f39",

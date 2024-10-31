@@ -1,6 +1,10 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
+import {RootState} from '@cdo/apps/types/redux';
+import {ValueOf} from '@cdo/apps/types/utils';
+
 import {
+  BlockMode,
   DEFAULT_BPM,
   DEFAULT_KEY,
   MAX_BPM,
@@ -9,6 +13,7 @@ import {
 } from '../constants';
 import {FunctionEvents} from '../player/interfaces/FunctionEvents';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
+import {MusicLevelData} from '../types';
 import {Key} from '../utils/Notes';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
@@ -202,7 +207,7 @@ const musicSlice = createSlice({
     setSoundLoadingProgress: (state, action: PayloadAction<number>) => {
       state.soundLoadingProgress = action.payload;
     },
-    setStartPlayheadPosition: (state, action: PayloadAction<number>) => {
+    setStartingPlayheadPosition: (state, action: PayloadAction<number>) => {
       state.startingPlayheadPosition = action.payload;
     },
     moveStartPlayheadPositionForward: state => {
@@ -288,6 +293,15 @@ export const getCurrentlyPlayingBlockIds = (state: {
   return playingBlockIds;
 };
 
+export const getBlockMode = (state: RootState): ValueOf<typeof BlockMode> => {
+  const {initialSources, levelProperties} = state.lab;
+  return (
+    (initialSources?.labConfig?.music.blockMode as ValueOf<typeof BlockMode>) ||
+    (levelProperties?.levelData as MusicLevelData | undefined)?.blockMode ||
+    BlockMode.SIMPLE2
+  );
+};
+
 // TODO: If/when a top-level component is created that wraps {@link MusicView}, then
 // registering reducers should happen there. We are registering reducers here for now
 // because MusicView is currently the top-level entrypoint into Music Lab and also needs
@@ -315,7 +329,7 @@ export const {
   addPlaybackEvents,
   addOrderedFunctions,
   setSoundLoadingProgress,
-  setStartPlayheadPosition,
+  setStartingPlayheadPosition,
   moveStartPlayheadPositionForward,
   moveStartPlayheadPositionBackward,
   setUndoStatus,

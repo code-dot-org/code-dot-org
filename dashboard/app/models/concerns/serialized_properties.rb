@@ -19,8 +19,12 @@ module SerializedProperties
     new_properties = attributes.delete('properties').try(:stringify_keys)
 
     super(attributes)
-    # If the properties hash is explicitly assigned then merge its keys with existing properties
-    # instead of replacing the entire hash
+
+    # If the properties hash is explicitly assigned, merge its keys with
+    # existing properties instead of replacing the entire hash. Make sure to
+    # invoke `init_properties` again first, in case the previous `super` call
+    # reset the attributes cache (see refresh_activemodel_attributes_cache.rb).
+    init_properties
     super(properties: properties.merge(new_properties)) if new_properties
   end
 
@@ -38,6 +42,15 @@ module SerializedProperties
     return false if changes.nil?
 
     changes[key] != properties[key]
+  end
+
+  def property_previously_changed?(key)
+    return false unless previous_changes.dig('properties', 0)&.key?(key)
+
+    property_before = previous_changes.dig('properties', 0, key)
+    property_after  = previous_changes.dig('properties', 1, key)
+
+    property_before != property_after
   end
 
   module ClassMethods

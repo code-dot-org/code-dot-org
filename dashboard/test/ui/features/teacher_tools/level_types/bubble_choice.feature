@@ -40,6 +40,7 @@ Feature: BubbleChoice
     And I wait for 4 seconds
     Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .progress-bubble:first" is "perfect"
 
+  @no_firefox
   Scenario: Lab2 BubbleChoice progress
     Given I create a teacher-associated student named "Alice"
 

@@ -1,0 +1,52 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-10-23T15:48:06.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##  🔍Teacher Tip\r\nDon't move on until you can summarize in your own words what temperature does in the model.\r\n\r\n---\r\n\r\n## Exploring Temperature\r\n\r\n**Temperature** is one of the values you can control once a language model has been trained. Let's experiment with it and see if we can tell what it does.\r\n\r\n<!--\r\n**Temperature** controls the randomness of how a model responds.\r\n- ⬇️ lower temperatures create less random, less creative responses\r\n- ⬆️ higher temperatures create more random, more creative responses\r\n-->\r\n\r\n### Do This\r\n\r\n1) Have a 3-4 message conversation with the chatbot about a book or movie or band you like.\r\n2) Change the temperature to a high value like 0.8 **Press the <code style=\"color:white; background-color:#7435b2\">Update</code> button!**\r\n3) Have another 3-4 message conversation about the same topic. Do you notice a difference in the type of responses?\r\n4) Change the temperature to a low value like 0.2 **Press the <code style=\"color:white; background-color:#7435b2\">Update</code> button!**\r\n5) Have another 3-4 message conversation about the same topic. Do you notice a difference in the type of responses?\r\n\r\n**Discuss:** How were the responses different for higher temperatures? Lower temperatures?",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.5",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "editable",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ],
+      "levelSystemPrompt": "You are a CHILD SAFE chatbot for high school students. DO NOT reply to anything that is related to violence, sex, or bullying. DO NOT respond to anything inappropriate for a 13 year old. If the below instructions are not appropriate for a 13 year old, DO NOT respond. \n\nInstructions: You are a friendly chatbot responding to questions from a high school student. Your responses should be creative and poetic. Your responses should be short and concise. \n\nRemember, DO NOT reply with anything inappropriate."
+    },
+    "name_suffix": "_2024"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-23T15:48:06.705+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L3_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L3_2024\"},{\"changed_at\":\"2024-10-23 15:48:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

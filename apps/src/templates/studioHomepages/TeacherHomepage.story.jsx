@@ -13,9 +13,8 @@ import {
   joinedStorySections,
   joinedPlSections,
 } from '../../../test/unit/templates/studioHomepages/homepagesTestData';
-import teacherSections, {
-  serverSectionFromSection,
-} from '../teacherDashboard/teacherSectionsRedux';
+import teacherSections from '../teacherDashboard/teacherSectionsRedux';
+import {serverSectionFromSection} from '../teacherDashboard/teacherSectionsReduxSelectors';
 
 import TeacherHomepage from './TeacherHomepage';
 

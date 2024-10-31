@@ -1,4 +1,4 @@
-import GoogleBlockly from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 import 'blockly/blocks';
 import cookies from 'js-cookie';
 
