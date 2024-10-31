@@ -7,6 +7,7 @@ import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
 import {changeViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Notification, {
   NotificationType,
 } from '@cdo/apps/sharedComponents/Notification';
@@ -23,6 +24,9 @@ import {
   onDismissRedirectWarning,
 } from '@cdo/apps/util/dismissVersionRedirect';
 import i18n from '@cdo/locale';
+
+import {setViewAsUserId} from '../../progressRedux';
+import {updateQueryParam} from '../../utils';
 
 import Announcements from './Announcements';
 
@@ -66,6 +70,7 @@ class UnitOverviewHeader extends Component {
     hasVerifiedResources: PropTypes.bool.isRequired,
     localeCode: PropTypes.string,
     changeViewType: PropTypes.func.isRequired,
+    resetViewAsUserId: PropTypes.func.isRequired,
   };
 
   componentDidMount() {
@@ -112,6 +117,7 @@ class UnitOverviewHeader extends Component {
       isVerifiedInstructor,
       hasVerifiedResources,
       changeViewType,
+      resetViewAsUserId,
     } = this.props;
 
     const displayVerifiedResources =
@@ -129,6 +135,21 @@ class UnitOverviewHeader extends Component {
     } else if (showScriptVersionWarning) {
       versionWarningDetails = i18n.wrongCourseVersionWarningDetails();
     }
+
+    const viewAsToggleAction = viewType => {
+      if (!isOnTeacherDashboard()) {
+        updateQueryParam('viewAs', viewType);
+      }
+
+      if (viewAs === ViewType.Participant) {
+        resetViewAsUserId();
+      }
+      changeViewType(viewType);
+
+      analyticsReporter.sendEvent('unit_overview_toggle_viewAs', {
+        viewType,
+      });
+    };
 
     return (
       <div>
@@ -219,7 +240,7 @@ class UnitOverviewHeader extends Component {
                       value: ViewType.Instructor,
                     },
                   ]}
-                  onChange={value => changeViewType(value)}
+                  onChange={viewAsToggleAction}
                   selectedButtonValue={viewAs}
                   size="s"
                 />
@@ -270,7 +291,7 @@ export default connect(
   }),
   dispatch => {
     return {
-      // determine whether we need isAsync false at times
+      resetViewAsUserId: () => dispatch(setViewAsUserId(null)),
       changeViewType: viewAs => dispatch(changeViewType(viewAs, true)),
     };
   }
