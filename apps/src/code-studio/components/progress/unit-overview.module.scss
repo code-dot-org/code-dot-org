@@ -1,0 +1,50 @@
+@import 'color', 'font';
+
+.heading {
+  width: '100%';
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.title {
+  display: inline-block;
+}
+.versionWrapper {
+  display: flex;
+  align-items: baseline;
+}
+
+.versionLabel {
+  @include main-font-semi-bold;
+  font-size: 15;
+  color: $charcoal;
+}
+
+.versionDropdown {
+  margin-bottom: 13;
+}
+
+.description {
+  width: 700;
+}
+
+.actionRow {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.viewAsLabel {
+  @include main-font-semi-bold;
+  font-size: 15;
+  margin-bottom: 0;
+}
+
+.viewAs {
+  display: flex;
+  flex-direction: column;
+}

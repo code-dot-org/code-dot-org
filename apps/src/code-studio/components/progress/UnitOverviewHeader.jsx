@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import fontConstants from '@cdo/apps/fontConstants';
+import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 import Notification, {
   NotificationType,
 } from '@cdo/apps/sharedComponents/Notification';
@@ -17,7 +17,7 @@ import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import color from '@cdo/apps/util/color';
+import {isOnTeacherDashboard} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
 import {
   dismissedRedirectWarning,
   onDismissRedirectWarning,
@@ -25,6 +25,8 @@ import {
 import i18n from '@cdo/locale';
 
 import Announcements from './Announcements';
+
+import styles from './unit-overview.module.scss';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
 
@@ -181,11 +183,13 @@ class UnitOverviewHeader extends Component {
           />
         )}
         <div id="lesson">
-          <div id="heading" style={styles.heading}>
-            <div style={styles.titleWrapper}>
-              <h1 style={styles.title} id="script-title">
+          <div id="heading" className={styles.heading}>
+            <div className={styles.titleWrapper}>
+              <h1 className={styles.title} id="script-title">
                 {unitTitle}
               </h1>
+            </div>
+            <div className={styles.actionRow}>
               {Object.values(versions).length > 1 && (
                 <AssignmentVersionSelector
                   onChangeVersion={this.onChangeVersion}
@@ -194,23 +198,48 @@ class UnitOverviewHeader extends Component {
                   selectedCourseVersionId={this.props.courseVersionId}
                 />
               )}
+
+              <div className={styles.viewAs}>
+                {
+                  <label htmlFor="viewAs" className={styles.viewAsLabel}>
+                    View page as:
+                  </label>
+                }
+                <SegmentedButtons
+                  id="viewAs"
+                  buttons={[
+                    {
+                      label: 'Student',
+                      value: 'student',
+                    },
+                    {
+                      label: 'Teacher',
+                      value: 'teacher',
+                    },
+                  ]}
+                  onChange={() => {}}
+                  selectedButtonValue="teacher"
+                  size="s"
+                />
+              </div>
             </div>
+            <div />
             {viewAs === ViewType.Instructor && (
               <SafeMarkdown
-                style={styles.description}
+                className={styles.description}
                 openExternalLinksInNewTab={true}
                 markdown={unitDescription}
               />
             )}
             {viewAs === ViewType.Participant && (
               <SafeMarkdown
-                style={styles.description}
+                className={styles.description}
                 openExternalLinksInNewTab={true}
                 markdown={unitStudentDescription}
               />
             )}
           </div>
-          {!location.pathname.includes('teacher_dashboard') && (
+          {!isOnTeacherDashboard() && (
             <ProtectedStatefulDiv ref={element => (this.protected = element)} />
           )}
         </div>
@@ -218,35 +247,6 @@ class UnitOverviewHeader extends Component {
     );
   }
 }
-
-const styles = {
-  heading: {
-    width: '100%',
-  },
-  titleWrapper: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'flex-end',
-  },
-  title: {
-    display: 'inline-block',
-  },
-  versionWrapper: {
-    display: 'flex',
-    alignItems: 'baseline',
-  },
-  versionLabel: {
-    ...fontConstants['main-font-semi-bold'],
-    fontSize: 15,
-    color: color.charcoal,
-  },
-  versionDropdown: {
-    marginBottom: 13,
-  },
-  description: {
-    width: 700,
-  },
-};
 
 export const UnconnectedUnitOverviewHeader = UnitOverviewHeader;
 
