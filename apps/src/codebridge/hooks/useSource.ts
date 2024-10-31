@@ -2,9 +2,13 @@ import {
   combineStartSourcesAndValidation,
   prepareSourceForLevelbuilderSave,
 } from '@codebridge/utils';
+import {debounce, isEqual} from 'lodash';
 import {useEffect, useMemo, useRef} from 'react';
 
 import header from '@cdo/apps/code-studio/header';
+import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {TestResults} from '@cdo/apps/constants';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {
@@ -13,10 +17,12 @@ import {
 } from '@cdo/apps/lab2/projects/utils';
 import {
   setAndSaveProjectSource,
+  setHasEdited,
   setProjectSource,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {useInitialSources} from './useInitialSources';
 
@@ -43,6 +49,7 @@ export const useSource = (defaultSources: ProjectSources) => {
   const validationFile = useAppSelector(
     state => state.lab.levelProperties?.validationFile
   );
+  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
   // keep track of whatever project the user has set locally. This happens after any change in CodeBridge
   // in the setSource function below
@@ -52,6 +59,8 @@ export const useSource = (defaultSources: ProjectSources) => {
   const projectVersionRef = useRef(0);
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
+  const currentLevel = useAppSelector(state => getCurrentLevel(state));
 
   const setSourceHelper = useMemo(
     () => (newProjectSource: ProjectSources) => {
@@ -63,12 +72,45 @@ export const useSource = (defaultSources: ProjectSources) => {
     [dispatch, isReadOnly]
   );
 
+  const debouncedProgressReport = debounce(() => {
+    if (appName) {
+      dispatch(sendProgressReport(appName, TestResults.LEVEL_STARTED));
+    }
+  }, 100);
+
+  // We check for the first edit in a given session for 2 reasons:
+  // 1. The first time the user edits the project (ever), we mark the level as in-progress.
+  // 2. We display the continue button in the instructions for non-validated levels if the user
+  //    has made an edit and run their code in the current session.
+  const checkForFirstEdit = useMemo(
+    () => (newSource: MultiFileSource) => {
+      // Only do this check if the user hasn't already edited the project yet,
+      // as we are deep comparing the new source to the previous source,
+      // and we don't want to do that on every change.
+      if (!hasEdited) {
+        // We have a very permissive definition of edit; any change in the source counts.
+        // This includes moving files, opening/closing files, etc.
+        const newSourceHasEdits = !isEqual(newSource, localProjectRef.current);
+        if (newSourceHasEdits) {
+          dispatch(setHasEdited(true));
+          // If the current level status is not tried, send a progress report.
+          // We debounce it so we don't send a report for multiple edits in quick succession.
+          if (currentLevel && currentLevel.status === LevelStatus.not_tried) {
+            debouncedProgressReport();
+          }
+        }
+      }
+    },
+    [currentLevel, debouncedProgressReport, dispatch, hasEdited]
+  );
+
   const setSource = useMemo(
     () => (newSource: MultiFileSource) => {
+      checkForFirstEdit(newSource);
       localProjectRef.current = newSource;
       setSourceHelper({source: newSource});
     },
-    [setSourceHelper]
+    [setSourceHelper, checkForFirstEdit]
   );
 
   const startSource = useMemo(() => {

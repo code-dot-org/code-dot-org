@@ -1,5 +1,5 @@
 import DarkTheme from '@blockly/theme-dark';
-import GoogleBlockly from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 
 import fontConstants from '@cdo/apps/fontConstants';
 

@@ -247,6 +247,7 @@ export default function currentUser(state = initialState, action) {
       child_account_compliance_state,
       country_code,
       us_state_code,
+      age,
       in_section,
       created_at,
       is_verified_instructor,
@@ -286,6 +287,7 @@ export default function currentUser(state = initialState, action) {
       childAccountComplianceState: child_account_compliance_state,
       countryCode: country_code,
       usStateCode: us_state_code,
+      age,
       inSection: in_section,
       userCreatedAt: created_at,
     };

@@ -1,4 +1,4 @@
-import GoogleBlockly from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -120,6 +120,7 @@ class FieldPattern extends GoogleBlockly.Field {
   }
 
   dropdownDispose_() {
+    ReactDOM.unmountComponentAtNode(this.newDiv_);
     this.newDiv_ = null;
   }
 

@@ -461,7 +461,7 @@ Feature: Hamburger dropdown
       | text                   | url                                             |
       | Help and support       | https://support.code.org/                       |
       | Report a problem       | https://support.code.org/hc/en-us/requests/new  |
-      | Teacher forum          | http://forum.code.org/                          |
+      | Teacher forum          | https://forum.code.org/                          |
 
     Then I change the browser window size to 1280 by 1024
     Then I delete the cookie named "_loc_notice"

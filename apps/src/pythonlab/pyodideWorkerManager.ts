@@ -7,7 +7,7 @@ import {
 } from '@codebridge/redux/consoleRedux';
 
 import {setAndSaveProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
-import {setLoadingCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
+import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
@@ -65,10 +65,10 @@ const setUpPyodideWorker = () => {
         });
         break;
       case 'loading_pyodide':
-        getStore().dispatch(setLoadingCodeEnvironment(true));
+        getStore().dispatch(setLoadedCodeEnvironment(false));
         break;
       case 'loaded_pyodide':
-        getStore().dispatch(setLoadingCodeEnvironment(false));
+        getStore().dispatch(setLoadedCodeEnvironment(true));
         break;
       default:
         console.warn(

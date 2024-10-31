@@ -100,7 +100,7 @@ function showHomepage() {
             topPlCourse={homepageData.topPlCourse}
             queryStringOpen={query['open']}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
-            ncesSchoolId={homepageData.ncesSchoolId}
+            existingSchoolInfo={homepageData.existingSchoolInfo}
             censusQuestion={homepageData.censusQuestion}
             showCensusBanner={homepageData.showCensusBanner}
             showNpsSurvey={homepageData.showNpsSurvey}

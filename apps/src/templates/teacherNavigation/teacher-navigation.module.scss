@@ -55,9 +55,6 @@
   &.selected {
     color: var(--text-neutral-primary);
   }
-  &:hover {
-    color: var(--text-neutral-primary);
-  }
 }
 
 .sidebarOption {
@@ -81,6 +78,13 @@
   &:hover {
     background-color: $neutral_gray10;
     text-decoration: none;
+    .optionIcon {
+      color: var(--text-neutral-primary);
+    }
+
+    .linkText {
+      color: var(--text-neutral-primary);
+    }
   }
 }
 

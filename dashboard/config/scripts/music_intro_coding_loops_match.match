@@ -5,12 +5,12 @@ description 'Can you 🔀 match the loop with the code?'
 height '210'
 width '200'
 
-question 'https://images.code.org/084b5d2b19fb04e234af02d998db03fc-image-1724875080574.jpg'
-answer 'https://images.code.org/5e09c44854c8b52c90acda3e7cfdc6b7-image-1724875086454.jpg'
-question 'https://images.code.org/fcdfedcc81cb1b3b4c21b82a289cb7d2-image-1724875817123.jpg'
-answer 'https://images.code.org/ee8c058e60af4851640e7ed6ef2a055c-image-1724875828301.jpg'
-question 'https://images.code.org/3a2ed1486f37a022502db705c46550bb-image-1724875065850.jpg'
-answer 'https://images.code.org/89fe1c6f966ba19f6ea9437e74826d86-image-1724875072450.jpg'
+question 'https://images.code.org/1f10bef02cf9a23fc4aede3f20aff145-image-1729108528719.jpg'
+answer 'https://images.code.org/a523caf2a3ec2552bf27868c3a6db522-image-1729108937550.jpg'
+question 'https://images.code.org/67153d2804d6a36c9ecfd3f0075c4e35-image-1729108688021.jpg'
+answer 'https://images.code.org/595464ca6a11dfd826a4fdd1a3cf9de6-image-1729109056374.jpg'
+question 'https://images.code.org/dbc3a4f3ab130a9fc47f0bb30697c7e4-image-1729108562909.jpg'
+answer 'https://images.code.org/7228f467a992fb91314f62ba593a41c3-image-1729109143998.jpg'
 
 allow_multiple_attempts true
 

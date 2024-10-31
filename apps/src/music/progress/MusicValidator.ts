@@ -7,6 +7,12 @@ import {
 } from '@cdo/apps/lab2/progress/ProgressManager';
 import {Condition, ConditionType} from '@cdo/apps/lab2/types';
 
+import {
+  BlockTypes,
+  FunctionDefinitionBlockTypes,
+  LoopBlockTypes,
+} from '../blockly/blockTypes';
+import {PATTERN_AI_NUM_SEED_EVENTS} from '../constants';
 import {isChordEvent} from '../player/interfaces/ChordEvent';
 import {isInstrumentEvent} from '../player/interfaces/InstrumentEvent';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
@@ -60,6 +66,12 @@ export default class MusicValidator extends Validator {
     // A list of unique invocated ids associated with played trigger sounds.
     const playedTriggerSoundUniqueInvocationIds: number[] = [];
 
+    // A map of ids for blocks in functions and the count of playback events associated with them.
+    const blockIdFunctionRepetitions: {[key: string]: number} = {};
+
+    // A map of ids for blocks in loops and the count of playback events associated with them.
+    const blockIdLoopRepetitions: {[key: string]: number} = {};
+
     // Get number of patterns that have been started, separately counting those
     // that are empty and those with events.
     let playedNumberEmptyPatterns = 0;
@@ -68,6 +80,7 @@ export default class MusicValidator extends Validator {
     // And the same for patterns made with AI.
     let playedNumberEmptyPatternsAi = 0;
     let playedNumberPatternsAi = 0;
+    let playedNumberGeneratedPatternsAi = 0;
 
     // Get number of chords that have been started, separately counting those
     // that are empty and those with notes.
@@ -84,6 +97,7 @@ export default class MusicValidator extends Validator {
         return;
       }
 
+      const blockId = eventData.blockId;
       const length = eventData.length;
 
       if (isSoundEvent(eventData)) {
@@ -149,6 +163,14 @@ export default class MusicValidator extends Validator {
         } else {
           if (eventData.value.ai) {
             playedNumberPatternsAi++;
+
+            if (
+              eventData.value.events.some(
+                event => event.tick > PATTERN_AI_NUM_SEED_EVENTS
+              )
+            ) {
+              playedNumberGeneratedPatternsAi++;
+            }
           } else {
             playedNumberPatterns++;
           }
@@ -158,6 +180,50 @@ export default class MusicValidator extends Validator {
           playedNumberEmptyChords++;
         } else {
           playedNumberChords++;
+        }
+      }
+
+      // Check for a block nested within an if/else block causing something to play.
+      const validationInfo = eventData.validationInfo;
+      if (validationInfo) {
+        if (validationInfo.parentControlTypes?.includes(BlockTypes.IF_ELSE)) {
+          this.conditionsChecker.addSatisfiedCondition({
+            name: MusicConditions.PLAYED_ANYTHING_IN_CONDITIONAL.name,
+          });
+        }
+
+        // Check for a block nested within a function block causing something to play.
+        if (
+          validationInfo.parentControlTypes?.some(type =>
+            FunctionDefinitionBlockTypes.includes(type)
+          )
+        ) {
+          if (!blockIdFunctionRepetitions[blockId]) {
+            blockIdFunctionRepetitions[blockId] = 1;
+          } else {
+            blockIdFunctionRepetitions[blockId]++;
+          }
+          this.addPlayedConditions(
+            MusicConditions.PLAYED_ANYTHING_IN_SAME_FUNCTION.name,
+            Math.max(...Object.values(blockIdFunctionRepetitions))
+          );
+        }
+
+        // Check for a block nested within a loop block causing something to play.
+        if (
+          validationInfo.parentControlTypes?.some(type =>
+            LoopBlockTypes.includes(type)
+          )
+        ) {
+          if (!blockIdLoopRepetitions[blockId]) {
+            blockIdLoopRepetitions[blockId] = 1;
+          } else {
+            blockIdLoopRepetitions[blockId]++;
+          }
+          this.addPlayedConditions(
+            MusicConditions.PLAYED_ANYTHING_IN_SAME_LOOP.name,
+            Math.max(...Object.values(blockIdLoopRepetitions))
+          );
         }
       }
     });
@@ -229,6 +295,10 @@ export default class MusicValidator extends Validator {
     this.addPlayedConditions(
       MusicConditions.PLAYED_PATTERNS_AI.name,
       playedNumberPatternsAi
+    );
+    this.addPlayedConditions(
+      MusicConditions.PLAYED_GENERATED_PATTERNS_AI.name,
+      playedNumberGeneratedPatternsAi
     );
 
     // Add satisfied conditions for the played chords.

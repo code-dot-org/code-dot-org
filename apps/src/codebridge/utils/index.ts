@@ -11,6 +11,8 @@ export * from './getErrorMessage';
 export * from './getFolderLineage';
 export * from './getFolderPath';
 export * from './getOpenFiles';
+export * from './getPossibleDestinationFoldersForFile';
+export * from './getPossibleDestinationFoldersForFolder';
 export * from './previewFileType';
 export * from './sortFilesByName';
 export * from './validateFileName';

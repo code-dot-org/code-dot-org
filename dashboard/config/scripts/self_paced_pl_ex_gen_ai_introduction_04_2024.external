@@ -1,0 +1,58 @@
+name 'self-paced-pl-ex-gen-ai-introduction_04_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Literacy
+
+#### As AI rapidly transforms our world, it's essential to equip students with a solid understanding of how AI works and how to effectively interact with it. Organizations like  <a href="https://ai4k12.org/" target="blank" rel="noopener noreferrer">AI4K12</a>,  <a href="https://csteachers.org/" target="blank" rel="noopener noreferrer">CSTA</a>, and  <a href="https://www.teachai.org/" target="blank" rel="noopener noreferrer">Teach AI</a> are leading efforts to provide schools and teachers with resources to prepare students for the future.
+
+## 5 Big Ideas
+#### These guidelines, from AI4K12 ensure that students engage with AI in a responsible and ethical manner and the **Exploring Generative AI** Curriculum aligns with these guidelines, offering a comprehensive approach to teaching students about AI.
+
+
+<table width="100%" cellpadding="10" cellspacing="0" border="0">
+        <tr>
+            <td width="25%" height="125px" style="text-align: center; vertical-align: middle;">
+                <img src="https://images.code.org/41d78eec20f3855b7cc3dd009d9f837f-image-1726685931313.png" width="100%" height="125px" alt="Perceptions- computers percieve the world using sensors">
+            </td>
+            <td width="75%" height="125px" style = "font-size: 14pt";>
+                Computers interpret the world through sensors, a process known as perception, which involves extracting meaning from sensory signals. 
+            </td>
+        </tr>
+        <tr>
+            <td width="25%" height="75px" style="text-align: center; vertical-align: middle;">
+                <img src="https://images.code.org/702b20065c656b5c571730b455d61bc0-image-1726686023732.png" width="100%" height="125px" alt="Representation and reasoning - agents maintain representations of the world and use them for reasoning">
+            </td>
+            <td width="75%" height="125px" style = "font-size: 14pt";>
+                Agents use representations of the world for reasoning, a core challenge in both natural and artificial intelligence. While AI can handle complex reasoning tasks, it does so differently than human thought processes.
+            </td>
+        </tr>
+        <tr>
+            <td width="25%" height="125px" style="text-align: center; vertical-align: middle;">
+                <img src="https://images.code.org/0f363d578adad4c70ee2e08dee256c3d-image-1726686098077.png" width="100%" height="125px" alt="Learning - Computers learn from data">
+            </td>
+            <td width="75%" height="125px" style = "font-size: 14pt"; >
+                Computers learn from data through machine learning, which identifies patterns using statistical inference. Recent advances in AI are driven by learning algorithms that develop new representations, although they require large amounts of training data, often provided by people.
+            </td>
+        </tr>
+        <tr>
+            <td width="25%" height="125px" style="text-align: center; vertical-align: middle;">
+                <img src="https://images.code.org/fe4a1c73aac1c1b9fa3b310082c8c472-image-1726686153577.png" width="100%" height="125px" alt="Natural Interaction - intelligent agents require manky kinds of knowledge to interact naturally with humans">
+            </td>
+            <td width="75%" height="125px" style = "font-size: 14pt";>
+                Intelligent agents need extensive knowledge to interact naturally with humans, including language comprehension, emotion recognition, and understanding cultural norms. While current AI systems can handle language to some degree, they lack the general reasoning and conversational skills of even a young child.
+            </td>
+        </tr>
+        <tr>
+            <td width="25%" height="125px" style="text-align: center; vertical-align: middle;">
+                <img src="https://images.code.org/179024d09a19b74258916321cd351330-image-1726686224999.png" width="100%" height="125px" alt="Image 5">
+            </td>
+            <td width="75%" height="125px" style = "font-size: 14pt";>
+                AI significantly influences society by transforming work, travel, communication, and caregiving, but it can also introduce risks like biased data impacting fairness. Therefore, it’s crucial to address AI's societal effects and establish ethical guidelines for its design and use.
+            </td>
+        </tr>
+    </table>
+
+
+MARKDOWN

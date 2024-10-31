@@ -4,7 +4,7 @@
  * Defines blocks useful in multiple blockly apps
  */
 
-import {Block, CodeGenerator} from 'blockly';
+import * as GoogleBlockly from 'blockly/core';
 
 import {
   BlocklyWrapperType,
@@ -50,8 +50,8 @@ export const blocks = {
     generator: JavascriptGeneratorType,
     type: string,
     generatorFunction: (
-      block: Block,
-      generator: CodeGenerator
+      block: GoogleBlockly.Block,
+      generator: GoogleBlockly.CodeGenerator
     ) => [string, number] | string | null
   ) {
     generator.forBlock[type] = generatorFunction;
@@ -103,7 +103,7 @@ export const blocks = {
     }
   },
   // Global function to handle serialization hooks
-  addSerializationHooksToBlock(block: Block) {
+  addSerializationHooksToBlock(block: GoogleBlockly.Block) {
     if (!block.mutationToDom) {
       block.mutationToDom = this.mutationToDom;
     }
@@ -122,7 +122,10 @@ export const blocks = {
   // We need to override this generator in order to continue using the
   // legacy function name from CDO Blockly. Other custom blocks in pools
   // depend on the original name..
-  mathRandomIntGenerator(block: Block, generator: JavascriptGeneratorType) {
+  mathRandomIntGenerator(
+    block: GoogleBlockly.Block,
+    generator: JavascriptGeneratorType
+  ) {
     // Random integer between [X] and [Y].
     const argument0 =
       generator.valueToCode(block, 'FROM', generator.ORDER_NONE) || '0';

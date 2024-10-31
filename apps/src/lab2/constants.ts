@@ -36,6 +36,7 @@ export const TEXT_BASED_LABS: AppName[] = ['aichat', 'pythonlab', 'weblab2'];
 export enum WARNING_BANNER_MESSAGES {
   STANDARD = 'You are editing start sources.',
   TEMPLATE = 'WARNING: You are editing start sources for a level with a template. Start sources should be defined on the template.',
+  LOCK_FILES = 'Reminder: lock all start files your validation file references.',
 }
 
 // Default height of the predict question free response text area.

@@ -1,3 +1,4 @@
+import {TICKS_PER_MEASURE} from '../constants';
 import MusicLibrary from '../player/MusicLibrary';
 
 import {BlockTypes} from './blockTypes';
@@ -12,6 +13,8 @@ import {
   FIELD_EFFECTS_VALUE_OPTIONS,
   DEFAULT_EFFECT_VALUE,
   FIELD_SOUNDS_NAME,
+  FIELD_PATTERN_NAME,
+  FIELD_PATTERN_AI_NAME,
 } from './constants';
 
 export const getDefaultTrackNameExtension = player =>
@@ -155,12 +158,61 @@ export const effectsFieldExtension = function () {
   };
 };
 
+/**
+ * Extension to blocks with sound fields that validates new values.
+ */
 export const fieldSoundsValidator = function () {
+  /**
+   * Ensures that sound blocks also have a valid value, even if a level's library or song
+   * pack has changed.
+   * @param newValue The sound id selected from the field editor or initial sources.
+   * @returns The new sound id or, if that's invalid, the id for the first available sound
+   */
   this.getField(FIELD_SOUNDS_NAME).setValidator(newValue => {
-    if (MusicLibrary.getInstance()?.getSoundForId(newValue)) {
-      return newValue;
-    } else {
-      return MusicLibrary.getInstance()?.getDefaultSound();
+    const libraryInstance = MusicLibrary.getInstance();
+    if (libraryInstance) {
+      const soundDataForValue = libraryInstance.getSoundForId(newValue);
+      const defaultSoundData = libraryInstance.getDefaultSound();
+      if (!soundDataForValue) {
+        console.warn(
+          `A sound field value was reset. ${newValue} was not found in the current library.`
+        );
+        return defaultSoundData;
+      } else if (!libraryInstance.isSoundIdAvailable(newValue)) {
+        console.warn(
+          `A sound field value was reset. ${newValue} was not found in the available sound packs.`
+        );
+        return defaultSoundData;
+      }
     }
+    return newValue;
+  });
+};
+
+/**
+ * Extension to blocks with pattern fields that validates new values.
+ */
+export const fieldPatternsValidator = function () {
+  // A block may have a pattern field or pattern AI field, but should not have both.
+  const patternField =
+    this.getField(FIELD_PATTERN_NAME) || this.getField(FIELD_PATTERN_AI_NAME);
+
+  /**
+   * Removes invalid event notes from pattern field values.
+   * @param newValue The new instrument event value
+   * @returns The modified instrument event value
+   */
+  patternField?.setValidator(newValue => {
+    const kitNotes = MusicLibrary.getInstance()
+      .kits.find(kit => kit.id === newValue.instrument)
+      .sounds.map(sound => sound.note);
+    newValue.events = newValue.events.filter(
+      event =>
+        // Remove events with notes that not part of the current kit's sounds. (Ex. 1...8)
+        kitNotes.includes(event.note) &&
+        // Remove event with ticks that are outside the expected tick range.
+        event.tick <= newValue.length * TICKS_PER_MEASURE
+    );
+    return newValue;
   });
 };

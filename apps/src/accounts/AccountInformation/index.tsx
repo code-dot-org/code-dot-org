@@ -11,7 +11,7 @@ import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
-import ChangeEmailModal from '../ChangeEmailModal';
+import ChangeEmailModal from '../ChangeEmail/ChangeEmailModal';
 
 import {AccountInformationProps} from './types';
 
@@ -156,10 +156,8 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
       if (validationErrors) {
         error = {
           serverErrors: {
-            newEmail: validationErrors.email && validationErrors.email[0],
-            currentPassword:
-              validationErrors.current_password &&
-              validationErrors.current_password[0],
+            newEmail: validationErrors.email?.[0],
+            currentPassword: validationErrors.current_password?.[0],
           },
         };
       } else {

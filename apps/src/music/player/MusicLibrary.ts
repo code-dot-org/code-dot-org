@@ -12,7 +12,7 @@ import {Key} from '../utils/Notes';
 
 // This value can be modifed each time we know that there is an important new version
 // of the library on S3, to help bypass any caching of an older version.
-const requestVersion = 'launch2024-1';
+const requestVersion = 'launch2024-2';
 
 /**
  * Loads a sound library JSON file.
@@ -282,6 +282,19 @@ export default class MusicLibrary {
     );
   }
 
+  getImageAttributions(): ImageAttributionCopyright[] {
+    const attributions: ImageAttributionCopyright[] = [];
+
+    this.getRestrictedPacks().map(pack => {
+      const attribution = pack.imageAttribution;
+      if (pack.artist && attribution?.author) {
+        attributions.push({artist: pack.artist, ...attribution});
+      }
+    });
+
+    return attributions;
+  }
+
   // Return a deep copy of the packs folders only containing folders
   // and sounds currently allowed by the level.
   private getAllowedSounds(): SoundFolder[] {
@@ -326,6 +339,26 @@ export default class MusicLibrary {
     // Read key from the folder, or the first sound that has a key if not present on the folder.
     return (
       folder?.key ?? folder?.sounds.find(sound => sound.key !== undefined)?.key
+    );
+  }
+
+  // Returns true if the sound id is associated with an available sound; false otherwise
+  isSoundIdAvailable(id: string): boolean {
+    const lastSlashIndex = id.lastIndexOf('/');
+    const folderId = id.substring(0, lastSlashIndex);
+    const soundSrc = id.substring(lastSlashIndex + 1);
+
+    const folder = this.getFolderForFolderId(folderId);
+    if (!folder) {
+      return false;
+    }
+
+    // Check if the sound exists in the available sounds of this folder.
+    const availableSounds = this.getAvailableSounds();
+    const availableFolder = availableSounds.find(f => f.id === folderId);
+
+    return (
+      availableFolder?.sounds.some(sound => sound.src === soundSrc) || false
     );
   }
 }
@@ -413,10 +446,20 @@ export interface SoundData {
   skipLocalization?: boolean;
 }
 
+export interface ImageAttributionCopyright extends ImageAttribution {
+  artist: string;
+}
+
+// A Creative Commons (2, 3, or 4) or regular copyright license.
+export type ImageAttributionLicenseVersion = 'CC2' | 'CC3' | 'CC4' | 'C';
+
 export interface ImageAttribution {
   author: string;
   color?: string;
   position?: 'left' | 'right';
+  src?: string;
+  licenseVersion: ImageAttributionLicenseVersion;
+  year?: string;
 }
 
 export type SoundFolderType = 'sound' | 'kit' | 'instrument';

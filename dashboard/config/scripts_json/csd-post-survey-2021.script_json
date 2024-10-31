@@ -11,12 +11,13 @@
         "es-MX",
         "it-IT",
         "pt-BR",
-        "sk-SK"
+        "sk-SK",
+        "uk-UA"
       ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-08 18:37:29 UTC",
+    "serialized_at": "2024-10-16 18:44:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

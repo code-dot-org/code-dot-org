@@ -31,6 +31,4 @@ markdown <<MARKDOWN
 * #### If there are a lot of coding levels, you can break up the flow by adding screen shots of different solutions and asking, "Which one would work?" 
 * #### In order for a learner to earn a certificate, they need to get a green bubble on every level in the course to get the certificate. Most of our multi/match levels allow you to keep trying until you get the right answer.
 * #### Most assessment levels don't provide the opportunity to give the user feedback on why the correct answer was correct. Consider including an explanation level after the assessment level as modeled <a href="https://levelbuilder-studio.code.org/s/self-paced-pl-ai-101-mod2/lessons/1/levels/13" target="_blank">here</a>.
-
-
 MARKDOWN

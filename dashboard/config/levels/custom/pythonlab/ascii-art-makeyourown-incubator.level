@@ -1,0 +1,35 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-10-28T15:33:23.000Z",
+  "level_num": "custom",
+  "user_id": 18914,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Write your name\r\n\r\nMake a **function** for each letter of your name, and **print** it out! \r\n\r\nYou can use [this website](https://patorjk.com/software/taag/#p=display&f=Big&t=z%0A%0A%0A) to create different letters.\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "#Function Definition 1 \ndef draw_l(): \n  print(\"\"\"  _ \n | |\n | |\n | |\n | |\n |_|\n  \"\"\")\n\n#Function Definition 1 \ndef draw_o(): \n  print(\"\"\"\n   ___  \n  / _ \\ \n | (_) |\n  \\___/ \n  \"\"\")\n\n#Function Call\ndraw_l()",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-28 15:47:55 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:48:28 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:48:29 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:48:31 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:48:32 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:49:15 +0000\",\"changed\":[\"long_instructions\",\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

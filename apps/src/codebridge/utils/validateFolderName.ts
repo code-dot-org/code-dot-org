@@ -39,6 +39,7 @@ export const validateFolderName = ({
     parentId,
     projectFolders,
   });
+
   if (duplicate) {
     return codebridgeI18n.duplicateFolderError({folderName});
   }

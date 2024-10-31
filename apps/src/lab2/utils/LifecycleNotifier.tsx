@@ -38,6 +38,7 @@ class LifecycleNotifier {
       this.listeners[event] = [];
     }
     this.listeners[event]?.push(callback);
+    return this;
   }
 
   removeListener<T extends LifecycleEvent>(event: T, callback: Callback<T>) {

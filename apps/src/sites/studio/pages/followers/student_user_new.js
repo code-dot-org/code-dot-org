@@ -6,7 +6,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 $(document).ready(() => {
   analyticsReporter.sendEvent(
     EVENTS.SIGN_UP_STARTED_EVENT,
-    {sectionCodeSignUpForm: true},
+    {source: 'section code sign up form'},
     PLATFORMS.STATSIG
   );
 
@@ -15,7 +15,7 @@ $(document).ready(() => {
     .addEventListener('click', () => {
       analyticsReporter.sendEvent(
         EVENTS.SIGN_UP_FINISHED_EVENT,
-        {sectionCodeSignUpForm: true},
+        {source: 'section code sign up form'},
         PLATFORMS.STATSIG
       );
     });

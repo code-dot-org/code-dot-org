@@ -18,35 +18,35 @@ class CensusMapInfoWindow extends Component {
 
   render() {
     let censusMessage;
-    let color = '';
+    let responseColorStyle = '';
 
     switch (this.props.teachesCs) {
       case 'YES':
       case 'Y':
         censusMessage = 'We believe this school offers Computer Science.';
-        color = 'green';
+        responseColorStyle = 'legend-offers-cs';
         break;
       case 'NO':
       case 'N':
         censusMessage =
           'We believe this school offers no Computer Science opportunities.';
-        color = 'blue';
+        responseColorStyle = 'legend-limited-cs';
         break;
       case 'HISTORICAL_YES':
       case 'HY':
         censusMessage =
           'We believe this school historically offered Computer Science.';
-        color = 'green';
+        responseColorStyle = 'legend-offers-cs';
         break;
       case 'HISTORICAL_NO':
       case 'HN':
         censusMessage =
           'We believe this school historically offered no Computer Science opportunities.';
-        color = 'blue';
+        responseColorStyle = 'legend-limited-cs';
         break;
       default:
         censusMessage = 'We need data for this school.';
-        color = 'white';
+        responseColorStyle = 'legend-no-data-cs';
     }
 
     const schoolDropdownOption = {
@@ -62,7 +62,7 @@ class CensusMapInfoWindow extends Component {
       },
     };
 
-    const colorClass = `color-small ${color}`;
+    const colorClass = `color-small ${responseColorStyle}`;
 
     return (
       <div id="census-info-window" className="census-info-window">
@@ -207,10 +207,10 @@ export default class CensusMap extends Component {
             'match',
             ['get', 'teaches_cs'],
             ['NO', 'N', 'HISTORICAL_NO', 'HN'],
-            '#989CF8',
+            '#8C52BA',
             'white',
           ],
-          'circle-stroke-width': 1,
+          'circle-stroke-width': 0.5,
           'circle-stroke-color': '#000000',
         },
         filter: [
@@ -224,14 +224,23 @@ export default class CensusMap extends Component {
       });
       _this.map.addLayer({
         id: 'census-schools-teaching-cs',
-        type: 'symbol',
+        type: 'circle',
         source: _this.props.tileset,
         'source-layer': 'census',
         layout: {
-          'icon-image': 'marker-15-green',
-          'icon-allow-overlap': true,
-          // Increase the icon size as we zoom in
-          'icon-size': ['interpolate', ['linear'], ['zoom'], 1, 0.7, 14, 1.6],
+          visibility: 'visible',
+        },
+        paint: {
+          'circle-radius': 4,
+          'circle-color': [
+            'match',
+            ['get', 'teaches_cs'],
+            ['YES', 'Y', 'HISTORICAL_YES', 'HY'],
+            '#0093A4',
+            'white',
+          ],
+          'circle-stroke-width': 0.5,
+          'circle-stroke-color': '#000000',
         },
         filter: [
           'any',

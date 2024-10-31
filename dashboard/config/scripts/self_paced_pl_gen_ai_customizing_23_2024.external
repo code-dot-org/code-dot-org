@@ -5,19 +5,60 @@ description 'description here'
 markdown <<MARKDOWN
 # Model Cards
 
-<img src="https://images.code.org/c73259b359788f8e1e5c251de5b549a2-Screenshot 2024-08-30 at 4.03.27 PM.png" alt="model card from recipe recommender bot" width="50%" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+<img src="https://images.code.org/c73259b359788f8e1e5c251de5b549a2-Screenshot 2024-08-30 at 4.03.27 PM.png" alt="model card from recipe recommender bot" width="40%" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
 
+#### Model cards contain additional information about the chatbot for the user to review. 
 
-#### Model cards contain additional information about the chatbot for the user to review. These can include safety features which help the user know how to use the chatbot responsibly. Or transparency information, so the user knows how the chatbot was created or designed. And even usability information, which helps the user know where to get started.
+#### These can include safety features which help the user know how to use the chatbot responsibly. Or transparency information, so the user knows how the chatbot was created or designed. And even usability information, which helps the user know where to get started.
 
 #### You first saw model cards at the beginning of this unit when trying out the Recipe Recommender chatbot. Take a moment to review it now.
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 40%; padding: 1px 20px 1px 20px;">
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 50%; padding: 1px 20px 1px 20px;">
 
 <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> Students may feel challenged when asked to write, explain, and reflect on their chatbots after earlier, more hands-on lessons. Acknowledge this shift but encourage them to embrace it, as documenting and describing digital creations is crucial. Remind them that this task requires a different skill set but is equally important. Provide writing support, like having students explain their thoughts verbally before writing them down.
 
 </p>
 </div>
 
+## Lesson Overviews
 
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 8: Model Cards - Exploration</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/feb663ea8bc09bb24d85099e66de44f1-Screenshot 2024-10-07 at 12.41.57 PM.png" alt="model card example" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** What information should we be providing to potential users of our chatbots?
+
+#### **Lesson Overview:**
+
+#### In this lesson, students are introduced to Model Cards and Foresight in AI charts as tools used to plan for how AI products are used. Students begin by reflecting on what materials are provided to users when we buy a new product, then explore how a Model Card serves a similar purpose for chatbots to clarify and caution how a particular chatbot product should and shouldn’t be used. Then, students explore an example of a Library chatbot and use a Foresight in AI table to examine the intended and unintended users and use-cases for this chatbot. After this example, students create their own model card for a fictitious chatbot, and then analyze each other’s model cards with a Foresight in AI chart.
+
+#### **Students will be able to:**
+* #### Analyze and create model cards for chatbots, including potential intended and unintended uses
+* #### Explain the importance of providing safety, transparency, and usability information for chatbots through model cards
+
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/19" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 9: Model Cards - Practice
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/bc486a590dd79a829fa6dcc1eb089b28-Screenshot 2024-10-07 at 12.43.21 PM.png" alt="model card activity from lesson" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** How can a Model Card help document decisions when making a chatbot?
+
+#### **Lesson Overview:**
+
+#### In this lesson, students explore how to create model cards as they develop their chatbots. Students start by helping a friend design a chatbot to give more specific recommendations using a series of multiple-choice focus questions. Once these decisions are made, students document these decisions on the model card for the chatbot, emphasizing how a model card can also serve as documentation as you make decisions during chatbot development. After doing an example as a class, students choose a new scenario and repeat this process.
+
+#### **Students will be able to:**
+* #### Create and document model cards for chatbots, including making strategic decisions about their behavior
+
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/14" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
 MARKDOWN

@@ -25,9 +25,15 @@ export const getFolderLineage = (
   if (!folder) {
     return [];
   }
-  const parents = [];
+  const parents: FolderId[] = [];
 
   while (folder) {
+    // this shouldn't actually happen in prod, but just in case a user somehow managed to create a circular loop of folders,
+    // this'll break them out of it instead of looping forever.
+    if (parents.includes(folder.id)) {
+      break;
+    }
+
     parents.unshift(folder.id);
     folder = projectFolders.find(f => f.id === folder?.parentId);
   }

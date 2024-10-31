@@ -8,12 +8,12 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Play Together\r\n\r\nPlay two or more sounds at the same time.\r\n\r\nAdd two different [sounds](#clickable=play-sound-block) _into_ the [play together](#clickable=play-sounds-together-block-workspace) block. ",
+    "long_instructions": "#### Play Together\r\nPlay two or more sounds at the same time.\r\n- Add two different [sounds](#clickable=play-sound-block) _into_ the [play together](#clickable=play-sounds-together-block-workspace) block. ",
     "hide_share_and_remix": "true",
     "validations": [
       {
         "key": "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b",
-        "message": "Nice work. Those two sounds are great together!",
+        "message": "Those sounds are great together!",
         "next": true,
         "conditions": [
           {
@@ -24,7 +24,7 @@
       },
       {
         "key": "music-ai-skill-playtogether_795b9999-0f45-441c-bd81-23af6c157f81",
-        "message": "Play two different [sounds](#clickable=play-sound-block) in the [play together](#clickable=play-sounds-together-block-workspace) block.",
+        "message": "Play two different [sounds](#clickable=id-left:play_sound_at_current_location_simple2) in the [play together](#clickable=play-sounds-together-block-workspace) block.",
         "next": false,
         "conditions": [
           {
@@ -32,11 +32,11 @@
             "value": 1
           }
         ],
-        "callout": "play-sound-block-workspace"
+        "callout": "id-left:play_sound_at_current_location_simple2"
       },
       {
         "key": "music-ai-skill-playtogether_7d85508c-951f-4734-8c97-9c67745a4207",
-        "message": "Add another [sound](#clickable=play-sound-block) block into the [play together](#clickable=play-sounds-together-block-workspace) block. ",
+        "message": "Add another [sound](#clickable=#clickable=id-left:play_sound_at_current_location_simple2) block into the [play together](#clickable=play-sounds-together-block-workspace) block. ",
         "next": false,
         "conditions": [
           {
@@ -48,7 +48,7 @@
       },
       {
         "key": "music-ai-skill-playtogether_36540a11-c67f-47da-bb3a-e2bb6181e9d1",
-        "message": "No sounds have played yet. Add two [play](#clickable=play-sound-block-workspace) blocks _into_ the [play together](#clickable=play-sounds-together-block-workspace) block.",
+        "message": "No sounds have played yet. Add two [play](#clickable=#clickable=id-left:play_sound_at_current_location_simple2) blocks _into_ the [play together](#clickable=play-sounds-together-block-workspace) block.",
         "next": false,
         "conditions": [
 
@@ -152,9 +152,10 @@
       "packId": "i_need_a_dollar_aloe_blacc"
     },
     "name_suffix": "_1",
+    "offer_browser_tts": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:47.693+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-playtogether_3\\\"\"],\"cloned_from\":\"music-ai-skill-playtogether_3\"},{\"changed_at\":\"2024-10-08 19:55:40 +0000\",\"changed\":[\"validations\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-08 19:56:47 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 21:47:30 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 22:11:43 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 22:15:00 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 22:23:48 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:47.693+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-playtogether_3\\\"\"],\"cloned_from\":\"music-ai-skill-playtogether_3\"},{\"changed_at\":\"2024-10-08 19:55:40 +0000\",\"changed\":[\"validations\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-08 19:56:47 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 21:47:30 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 22:11:43 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 22:15:00 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 22:23:48 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 21:40:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-18 23:52:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-22 00:02:01 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-22 00:03:08 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-22 00:03:53 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2024-10-07T22:05:48.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Customize a Drum Beat\r\n\r\nClick the [AI Beat block](#clickable=play-drums-ai-block-workspace) to create custom beats. AI Bot will help you generate a new beat for your song. ",
+    "long_instructions": "#### Generate a Beat with A.I. \r\nA.I. will help you create a new beat for your song.\r\n\r\n- Click the [play AI drums](#clickable=id-left:play_pattern_ai_at_current_location_simple2) block to generate your own beat.  \r\n- Press [Run](#clickable=run-button). \r\n",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -23,7 +24,7 @@
       },
       {
         "key": "music-ai-skill-sequence_a0f44420-3323-439a-be62-f0aa67dbcbe1",
-        "message": "Click on the black box in the [AI Beat Block](#clickable=play-drums-ai-block-workspace) to generate a new beat. ",
+        "message": "Click on the blank box in the [play AI drums](#clickable=play-drums-ai-block-workspace) block to generate a new beat. ",
         "next": false,
         "conditions": [
           {
@@ -31,18 +32,7 @@
             "value": 1
           }
         ],
-        "callout": "play-drums-ai-block-workspace"
-      },
-      {
-        "key": "music-ai-skill-aibeats_a093489c-c9f7-471d-ab0c-49b734ba8463",
-        "message": "That's a great choice. Now use the [AI Beat Block](#clickable=play-drums-ai-block-workspace) to generate a new beat. ",
-        "next": false,
-        "conditions": [
-          {
-            "name": "played_sounds",
-            "value": 1
-          }
-        ]
+        "callout": "id-left:play_pattern_ai_at_current_location_simple2"
       },
       {
         "key": "music-ai-skill-aibeats_2ec51257-daa4-40af-b5d4-4b42a2cfaf11",
@@ -181,10 +171,10 @@
       "blockMode": "Simple2"
     },
     "name_suffix": "_1",
+    "offer_browser_tts": "false",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:48.554+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-aibeats_3\\\"\"],\"cloned_from\":\"music-ai-skill-aibeats_3\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:48.554+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-aibeats_3\\\"\"],\"cloned_from\":\"music-ai-skill-aibeats_3\"},{\"changed_at\":\"2024-10-17 21:00:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 21:50:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-21 22:06:13 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-21 22:09:26 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-21 22:10:50 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-22 00:26:32 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-22 00:27:14 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-22 00:27:47 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-22 00:28:26 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -1,4 +1,5 @@
 import {resetOutput} from '@codebridge/redux/consoleRedux';
+import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {useDispatch} from 'react-redux';
 
@@ -9,8 +10,6 @@ import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
 import ControlButtons from './ControlButtons';
 import GraphModal from './GraphModal';
@@ -30,14 +29,22 @@ const Console: React.FunctionComponent = () => {
   // TODO: Update this with other apps that use the console as needed.
   const systemMessagePrefix = appName === 'pythonlab' ? '[PYTHON LAB] ' : '';
 
-  const clearOutput = useCallback(() => {
-    dispatch(resetOutput());
-    sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_CLEAR_CONSOLE, appName);
-    setGraphModalOpen(false);
-  }, [dispatch, appName]);
+  const clearOutput = useCallback(
+    (sendAnalytics: boolean) => {
+      dispatch(resetOutput());
+      if (sendAnalytics) {
+        sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_CLEAR_CONSOLE, appName);
+      }
+      setGraphModalOpen(false);
+    },
+    [dispatch, appName]
+  );
 
-  // Clear console when we change levels.
-  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, clearOutput);
+  // Clear console when we change levels. Don't send an analytics event
+  // as the user did not initiate this action.
+  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () =>
+    clearOutput(false)
+  );
 
   useEffect(() => {
     scrollAnchorRef.current?.scrollIntoView({
@@ -56,11 +63,13 @@ const Console: React.FunctionComponent = () => {
       id="codebridge-console"
       className={moduleStyles.consoleContainer}
       headerContent={'Console'}
-      rightHeaderContent={<RightButtons clearOutput={clearOutput} />}
+      rightHeaderContent={
+        <RightButtons clearOutput={() => clearOutput(true)} />
+      }
       leftHeaderContent={<ControlButtons />}
       headerClassName={moduleStyles.consoleHeader}
     >
-      <div className={moduleStyles.console}>
+      <div className={moduleStyles.console} id="uitest-codebridge-console">
         {codeOutput.map((outputLine, index) => {
           if (outputLine.type === 'img') {
             return (

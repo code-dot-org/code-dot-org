@@ -1,4 +1,4 @@
-import GoogleBlockly, {Block} from 'blockly';
+import * as GoogleBlockly from 'blockly/core';
 
 import {BLOCK_TYPES, VARIABLE_BLOCK_TYPES} from '../constants';
 import {BlocklyWrapperType} from '../types';
@@ -31,7 +31,7 @@ export default function initializeVariables(
   /**
    * Standard implementation of getVars for blocks with a single 'VAR' field
    */
-  blocklyWrapper.Variables.getVars = function (this: Block) {
+  blocklyWrapper.Variables.getVars = function (this: GoogleBlockly.Block) {
     return [this.getFieldValue('VAR')];
   };
 

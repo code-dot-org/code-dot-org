@@ -39,9 +39,9 @@ import Timeline from './Timeline';
 
 import moduleStyles from './music-view.module.scss';
 
-// Default to using PackDialog, unless a URL parameter forces the use of
-// the newer PackDialog2.
-const usePackDialog2 = AppConfig.getValue('pack-dialog-2') === 'true';
+// Default to using PackDialog2, unless a URL parameter forces the use of
+// the older PackDialog.
+const usePackDialog = AppConfig.getValue('pack-dialog-1') === 'true';
 
 interface MusicLabViewProps {
   blocklyDivId: string;
@@ -93,9 +93,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const levelData = useAppSelector(
     state => state.lab.levelProperties?.levelData
   );
-  const offerTts =
-    useAppSelector(state => state.lab.levelProperties?.offerTts) ||
-    AppConfig.getValue('show-tts') === 'true';
   const isPlayView = useAppSelector(state => state.lab.isShareView);
   const validationStateCallout = useAppSelector(
     state => state.lab.validationState.callout
@@ -186,6 +183,11 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     }
   }, [dispatch, validationStateCallout]);
 
+  const hideChaff = useCallback(
+    () => blocklyWorkspace.hideChaff(),
+    [blocklyWorkspace]
+  );
+
   const renderInstructions = useCallback(
     (position: InstructionsPosition) => {
       return (
@@ -210,13 +212,12 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                   : 'horizontal'
               }
               handleInstructionsTextClick={onInstructionsTextClick}
-              offerTts={offerTts}
             />
           </PanelContainer>
         </div>
       );
     },
-    [hideHeaders, onInstructionsTextClick, offerTts]
+    [hideHeaders, onInstructionsTextClick]
   );
 
   const renderPlayArea = useCallback(
@@ -275,7 +276,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     return <MusicPlayView setPlaying={setPlaying} />;
   }
 
-  const CurrentPackDialog = usePackDialog2 ? PackDialog2 : PackDialog;
+  const CurrentPackDialog = usePackDialog ? PackDialog : PackDialog2;
 
   return (
     <div id="music-lab" className={moduleStyles.musicLab}>
@@ -304,6 +305,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 clearCode={clearCode}
                 allowPackSelection={allowPackSelection}
                 skipUrl={skipUrl}
+                hideChaff={hideChaff}
               />
             }
           >

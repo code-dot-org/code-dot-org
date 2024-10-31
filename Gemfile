@@ -109,11 +109,12 @@ group :development, :test do
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec', require: false
-  gem 'selenium-webdriver', '~> 4.0'
+  # Starting with version 4.6, Selenium uses Selenium Manager, eliminating the need for the webdriver gem.
+  # See: https://github.com/titusfortner/webdrivers/commit/5b3dc29ff5cdb7bec110de949e78184c789ef63a
+  gem 'selenium-webdriver', '~> 4.6'
   gem 'simplecov', '~> 0.22.0', require: false
   gem 'spring', '~> 3.1.1'
   gem 'spring-commands-testunit'
-  gem 'webdrivers', '~> 5.2'
 
   # For pegasus PDF generation / merging testing.
   gem 'parallel_tests'

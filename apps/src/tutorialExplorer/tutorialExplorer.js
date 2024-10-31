@@ -218,23 +218,28 @@ export default class TutorialExplorer extends React.Component {
    * Given a sort by choice (popularityrank or displayweight) and a grade range,
    * return the field name from the tutorials data that should used for sorting.
    */
+
+  // As of 2024 we will manually sort activities by displayweight on
+  // the cdo-tutorials gsheet with new activities at the top of the
+  // list followed by ranking in popularity from the previous year.
+  // See https://github.com/code-dot-org/code-dot-org/pull/60728
   getSortByFieldName(sortBy, grade) {
     let sortByFieldName;
 
     const gradeToDisplayWeightSortByFieldName = {
       all: TutorialsSortByFieldNames.displayweight,
-      pre: TutorialsSortByFieldNames.displayweight_pre,
-      '2-5': TutorialsSortByFieldNames.displayweight_25,
-      '6-8': TutorialsSortByFieldNames.displayweight_middle,
-      '9+': TutorialsSortByFieldNames.displayweight_high,
+      pre: TutorialsSortByFieldNames.displayweight,
+      '2-5': TutorialsSortByFieldNames.displayweight,
+      '6-8': TutorialsSortByFieldNames.displayweight,
+      '9+': TutorialsSortByFieldNames.displayweight,
     };
 
     const gradeToPopularityRankSortByFieldName = {
       all: TutorialsSortByFieldNames.popularityrank,
-      pre: TutorialsSortByFieldNames.popularityrank_pre,
-      '2-5': TutorialsSortByFieldNames.popularityrank_25,
-      '6-8': TutorialsSortByFieldNames.popularityrank_middle,
-      '9+': TutorialsSortByFieldNames.popularityrank_high,
+      pre: TutorialsSortByFieldNames.popularityrank,
+      '2-5': TutorialsSortByFieldNames.popularityrank,
+      '6-8': TutorialsSortByFieldNames.popularityrank,
+      '9+': TutorialsSortByFieldNames.popularityrank,
     };
 
     // If we're sorting by recommendation (a.k.a. displayweight) then find the

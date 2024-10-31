@@ -3,51 +3,21 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lessons 19-20: Model Cards
+# Predict Levels
 
-#### These lessons go through **Model Cards**. Take as much time as you'd like to review these lessons.
+<img src="https://images.code.org/45ca799ba1da19c5385e840454fda194-Screenshot 2024-10-17 at 3.39.12 PM.png" alt="model card from recipe recommender bot" width="50%" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 19: Model Cards - Exploration</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-<img src="https://images.code.org/feb663ea8bc09bb24d85099e66de44f1-Screenshot 2024-10-07 at 12.41.57 PM.png" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+#### Predict levels in the Customizing Generative AI unit are designed to engage students by asking them to anticipate how a specific feature will impact the chatbot.
 
-#### **Question of the Day:** What information should we be providing to potential users of our chatbots?
+#### These levels serve as low-stakes, no-wrong-answer prompts that encourage students to think critically and forecast the lesson’s direction. By predicting outcomes, students are actively involved in their learning process, which helps set the stage for the rest of the lesson. These predictions can spark class discussions and provide a natural segue into deeper exploration of the lesson content.
 
-#### **Lesson Overview:**
+#### Key strategies for leveraging these levels include:
+* #### **Encouraging Class Discussions**: Use the summary response screen to highlight and discuss student predictions, connecting their thoughts to the lesson's objectives. This approach is aligned with the PRIMM method for teaching programming, which follows the sequence: Predict, Run, Investigate, Modify, Make.
 
-#### In this lesson, students are introduced to Model Cards and Foresight in AI charts as tools used to plan for how AI products are used. Students begin by reflecting on what materials are provided to users when we buy a new product, then explore how a Model Card serves a similar purpose for chatbots to clarify and caution how a particular chatbot product should and shouldn’t be used. Then, students explore an example of a Library chatbot and use a Foresight in AI table to examine the intended and unintended users and use-cases for this chatbot. After this example, students create their own model card for a fictitious chatbot, and then analyze each other’s model cards with a Foresight in AI chart.
+* #### **Elevating Student Voices**: Always incorporate a discussion around these levels, focusing on specific outcomes outlined in your lesson plan. This not only validates student input but also helps guide the class through key concepts in a structured manner, enhancing comprehension and engagement.
 
-#### **Students will be able to:**
-* #### Analyze and create model cards for chatbots, including potential intended and unintended uses
-* #### Explain the importance of providing safety, transparency, and usability information for chatbots through model cards
+#### By integrating these strategies around Predict levels into your teaching, you create an interactive learning environment where students are motivated to think ahead, share their ideas, and engage more deeply with the material.
 
-### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/19" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
-</p></div>
-</details>
+#### Learn more about incorporating student responses <a href="https://docs.google.com/document/d/1wESWwYm7Ty46eEK9qFcYfYI7NfG9mqodD12YOmuUcrs" target="blank" rel="noopener noreferrer">🔗here</a>.
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 20: Model Cards - Practice
-</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-<img src="https://images.code.org/bc486a590dd79a829fa6dcc1eb089b28-Screenshot 2024-10-07 at 12.43.21 PM.png" alt="The Activity Guide for Unit 2 Lesson 5 directing students through the mini project" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
-
-#### **Question of the Day:** How can a Model Card help document decisions when making a chatbot?
-
-#### **Lesson Overview:**
-
-#### In this lesson, students explore how to create model cards as they develop their chatbots. Students start by helping a friend design a chatbot to give more specific recommendations using a series of multiple-choice focus questions. Once these decisions are made, students document these decisions on the model card for the chatbot, emphasizing how a model card can also serve as documentation as you make decisions during chatbot development. After doing an example as a class, students choose a new scenario and repeat this process.
-
-#### **Students will be able to:**
-* #### Create and document model cards for chatbots, including making strategic decisions about their behavior
-
-### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/14" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
-</p></div>
-</details>
-
-## Up Next!
-
-#### Check out the first project of the unit - Create a Personal Chatbot. 
 MARKDOWN

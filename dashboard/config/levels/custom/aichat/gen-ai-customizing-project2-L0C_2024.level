@@ -1,0 +1,66 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-10-24T22:05:25.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Career Finder v.1\r\n\r\nClick into \"User View\" to view the model card for this project and interact with the chatbot.",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 1,
+        "systemPrompt": "Your job is to recommend a career to students in college who are undecided, based on their interests. Respond in a happy, joyful tone. \nDo not answer any off topic questions. Say \" Hi! I am a Career Finder Chatbot.\" All the steps must be done in order. No steps can be skipped.\n\nStep 1: Say\"  To take the career quiz, type START\"\n\nStep 2: If input = \"START\", then ask 'What are your top interests/hobbies?\" \nStep 3: Ask \"What are your top skills or strengths?\"\nStep 4: Say \"What are your top values or motivations?\"\nStep 5: Say \"What type of work environment do you prefer?\"\nStep 6: Ask \"\nWhat is your preferred level of education or training?\"\nStep 7:  Ask \"What is your preferred salary range?\"\nStep 8: Say one common career from the field that matches the user's responses. Ex. User would do good in social service. suggest a career as a teacher\nStep 9: Say \"The quiz is now over. Thank you for your participation!\"",
+        "retrievalContexts": [
+          "Six Figure Income jobs ($100,000+) High Income jobs ($80,000 - $100,000) Upper Middle Income jobs ($50,000 - $80,000) Middle Income jobs ($30,000 - $50,000) Entry Level Income jobs ($10,000 - $30,000)",
+          "The conventional (organizational/structured) work environment includes jobs like Receptionist",
+          "The enterprising work environment includes jobs like Sales manager",
+          "The social work environment includes jobs like Social worker",
+          "The artistic work environment includes jobs like fashion designer",
+          "The investigative work environment: includes jobs like a Research scientist",
+          "realistic work environment: include jobs like a plumber",
+          "Conventional — data, detail, and regular routines. People with Conventional interests like work that follows set procedures and routines. They prefer working with information and paying attention to detail rather than working with ideas. They like working with clear rules and following a strong leader. Career examples are: Accountants & Auditors, Air Traffic Controllers, Archivists, Biostatisticians, Budget Analysts, Cartographers & Photogrammetrists, Cashiers, Credit Analysts, Customer Service Representatives, Data Entry Keyers, File Clerks, Economists, Flight Attendants, Human Resources Assistants, Interviewers, Judicial Law Clerks, Pharmacy Technicians, Surveyors, Telephone Operators, Word Processors & Typists",
+          "Enterprising — leading, making decisions, and business. People with Enterprising interests like work that has to do with starting up and carrying out business projects. These people like taking action rather than thinking about things. They like persuading and leading. people, making decisions, and taking risks for profit. Career examples are: Administrative Law Judges, Advertising Sales Agents, Architectural & Engineering Managers, Chief Executives, Curators, Customs Brokers, Door-to-Door Sales Workers, News & Street Vendors, & Related Workers, Emergency Management Directors, Farmers, Ranchers, & Other Agricultural Managers, Financial Managers, fast food and counter workers, First Line Supervisors, Fundraising Managers, Government Property Inspectors & Investigators, Information Technology Project Managers, Lawyers, Judicial Law Clerks, Marketing Managers, Private Detectives & Investigators, Real Estate Sales Agents, Real Estate Sales Agents, Telemarketers, Urban & Regional Planners, Umpires, Referees, & Other Sports Officials",
+          "Social — helping people, teaching, and talking. People with Social interests like working with others to help them learn and grow. They like working with people more than working with objects, machines, or information. They like teaching, giving advice, and helping and being of service to people. Career examples are: Acupuncturists, Amusement & Recreation Attendants, Athletic Trainers, Teachers, Nurses, Fitness & Wellness Coordinators, Dietetic Technicians, Hospitalists, Paramedics, Park Naturalists, Recreational Therapists, Speech-Language Pathologists, Tour Guides & Escorts, Tutors, Waiters & Waitresses",
+          "Artistic — creating, designing, and making your own rules. People with Artistic interests like work that deals with the artistic side of things, such as acting, music, art, and design. They like creativity in their work and work that can be done without following a set of rules. Career examples are: Actors, Architects, Art Directors, Camera Operators, Television, Video, & Film, Choreographers, Dancers, editors, Fashion Designers, Floral Designers, Interior Designers, Makeup Artists, Theatrical & Performance, Models, Musicians & Singers, Nannies, Poets, Lyricists & Creative Writers, Video Game Designers",
+          "Investigative — ideas, thinking, and figuring things out. People with Investigative interests like work that has to do with ideas and thinking rather than physical activity or leading people. They like to search for facts and figure out problems. Career examples are: Aerospace Engineers, Animal Scientists, Anesthesiologists, Biochemists & Biophysicists, Biologists, Cardiologists, Chemist, Commercial Divers, Dermatologists, Economists, Epidemiologists Environmental Scientists, Mathematicians, Neurologists, Nuclear Engineers, Orthodontists, Physicists, Political Scientists, Radiologists, Sociologists, Software Developers, Sports Medicine Physicians, Zoologists & Wildlife Biologists",
+          "People with Realistic intrests perform work activities that include practical, hands-on problems and answers. They like working with plants and animals, and real-world materials, like wood, tools, and machinery. They enjoy outside work. Realistic- practical, hands-on problems and solutions should become: Agricultural Inspectors, Animal Breeders/Caretakers, Astronomers, Athletic Trainers, Audio & Video Technicians, Carpenters, Chiropractors, Chemical/Civil Engineers, cooks, dentists, Electricians, Foresters, Geoscientists, Photographers, Plumbers, Roofers, Security Guards, Welders"
+        ],
+        "modelCardInfo": {
+          "botName": "Career Finder v.1",
+          "description": "This chatbot that suggests careers to undecided college students, based on their preferences. The problem this chatbot was created to solve is to make choosing a career easier for college students, as it becomes difficult for them to choose their colleges classes if they are unsure of what they wish to do in life.",
+          "intendedUse": "This chatbot should be used by college students trying to find their career or what to study",
+          "limitationsAndWarnings": "Don't ask about off-topic questions. You should see a counselor for more specific advice.",
+          "testingAndEvaluation": "I tested it with my older brother who's in college and he said it was pretty good",
+          "exampleTopics": [
+            "Let's start!"
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "readonly",
+        "temperature": "readonly",
+        "systemPrompt": "readonly",
+        "retrievalContexts": "readonly",
+        "modelCardInfo": "readonly"
+      },
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ],
+      "levelSystemPrompt": ""
+    },
+    "name_suffix": "_2024",
+    "display_name": "Career Finder v.1",
+    "bubble_choice_description": "This chatbot that suggests careers to undecided college students, based on their preferences."
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-24T22:05:25.912+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project2-L0B_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project2-L0B_2024\"},{\"changed_at\":\"2024-10-24 22:08:37 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Aichat>

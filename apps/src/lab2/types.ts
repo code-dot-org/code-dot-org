@@ -177,8 +177,9 @@ export interface LevelProperties {
   submittable?: boolean;
   finishUrl?: string;
   finishDialog?: string;
-  offerTts?: boolean;
+  offerBrowserTts?: boolean;
   validationFile?: ProjectFile;
+  useSecondaryFinishButton?: boolean;
 }
 
 // Level configuration data used by project-backed labs that don't require

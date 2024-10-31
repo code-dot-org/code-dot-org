@@ -12,6 +12,12 @@
     justify-content: space-between;
     margin-bottom: 5px;
     gap: 8px;
+
+    .segmentedButtons {
+      span {
+        user-select: none;
+      }
+    }
   }
 
   &Body {

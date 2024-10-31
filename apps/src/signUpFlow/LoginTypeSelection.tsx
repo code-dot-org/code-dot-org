@@ -23,6 +23,7 @@ import {navigateToHref} from '../utils';
 import {
   ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
+  OAUTH_LOGIN_TYPE_SESSION_KEY,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
@@ -39,6 +40,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   const [showConfirmPasswordError, setShowConfirmPasswordError] =
     useState(false);
   const [showEmailError, setShowEmailError] = useState(false);
+  const [emailErrorMessage, setEmailErrorMessage] = useState('');
   const [email, setEmail] = useState('');
   const [authToken, setAuthToken] = useState('');
   const [createAccountButtonDisabled, setCreateAccountButtonDisabled] =
@@ -51,6 +53,11 @@ const LoginTypeSelection: React.FunctionComponent = () => {
     : studio('/users/new_sign_up/finish_student_account');
 
   useEffect(() => {
+    // If the user hasn't selected a user type, redirect them back to the first step of signup.
+    if (sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === null) {
+      navigateToHref('/users/new_sign_up/account_type');
+    }
+
     async function getToken() {
       setAuthToken(await getAuthenticityToken());
     }
@@ -120,6 +127,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   const submitLoginType = async () => {
     logUserLoginType('email');
     if (!isEmail(email)) {
+      setEmailErrorMessage(i18n.censusInvalidEmail());
       setShowEmailError(true);
       return;
     }
@@ -131,17 +139,26 @@ const LoginTypeSelection: React.FunctionComponent = () => {
         password_confirmation: password,
       },
     };
-    const authToken = await getAuthenticityToken();
-    await fetch('/users/begin_sign_up', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-CSRF-Token': authToken,
-      },
-      body: JSON.stringify(submitLoginTypeParams),
-    });
-
-    navigateToHref(finishAccountUrl);
+    try {
+      const response = await fetch('/users/begin_sign_up', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': authToken,
+        },
+        body: JSON.stringify(submitLoginTypeParams),
+      });
+      // We are currently only intentionally surfacing errors for duplicate emails
+      if (!response.ok) {
+        setEmailErrorMessage(i18n.duplicate_email_error_message());
+        setShowEmailError(true);
+        return;
+      }
+      navigateToHref(finishAccountUrl);
+    } catch (error) {
+      // Handle network or other errors
+      console.error(error);
+    }
   };
 
   const sendLMSAnalyticsEvent = () => {
@@ -160,6 +177,11 @@ const LoginTypeSelection: React.FunctionComponent = () => {
       },
       PLATFORMS.STATSIG
     );
+  }
+
+  function selectOauthLoginType(loginType: string) {
+    logUserLoginType(loginType);
+    sessionStorage.setItem(OAUTH_LOGIN_TYPE_SESSION_KEY, loginType);
   }
 
   return (
@@ -184,7 +206,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.googleButton}
-              onClick={() => logUserLoginType('google')}
+              onClick={() => selectOauthLoginType('google')}
               type="submit"
             >
               <FontAwesomeV6Icon
@@ -199,7 +221,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.microsoftButton}
-              onClick={() => logUserLoginType('microsoft')}
+              onClick={() => selectOauthLoginType('microsoft')}
               type="submit"
             >
               <FontAwesomeV6Icon
@@ -214,7 +236,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.facebookButton}
-              onClick={() => logUserLoginType('facebook')}
+              onClick={() => selectOauthLoginType('facebook')}
               type="submit"
             >
               <FontAwesomeV6Icon
@@ -229,7 +251,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.cleverButton}
-              onClick={() => logUserLoginType('clever')}
+              onClick={() => selectOauthLoginType('clever')}
               type="submit"
             >
               <img src={cleverLogo} alt="" />
@@ -304,7 +326,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
                     iconName={EXCLAMATION_ICON}
                   />
                   <BodyThreeText className={style.red}>
-                    {i18n.censusInvalidEmail()}
+                    {emailErrorMessage}
                   </BodyThreeText>
                 </div>
               )}
@@ -356,10 +378,12 @@ const LoginTypeSelection: React.FunctionComponent = () => {
         </div>
       </div>
       <SafeMarkdown
+        className={style.tosAndPrivacy}
         markdown={locale.by_signing_up({
-          tosLink: 'code.org/tos',
-          privacyPolicyLink: 'code.org/privacy',
+          tosLink: 'https://code.org/tos',
+          privacyPolicyLink: 'https://code.org/privacy',
         })}
+        openExternalLinksInNewTab={true}
       />
     </div>
   );

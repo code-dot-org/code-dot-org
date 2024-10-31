@@ -7,7 +7,7 @@ import {
   flush,
   setUserId,
 } from '@amplitude/analytics-browser';
-import {Block} from 'blockly';
+import * as GoogleBlockly from 'blockly/core';
 
 import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -31,6 +31,7 @@ const blockFeatureList = [
   BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
   'functions',
   BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
+  BlockTypes.PLAY_PATTERN_AI_AT_CURRENT_LOCATION_SIMPLE2,
 ];
 
 const triggerBlocks: string[] = [
@@ -220,14 +221,19 @@ export default class AnalyticsReporter {
     this.trackUIEvent('Pattern AI panel opened');
   }
 
-  onGenerateAiPatternStart() {
-    this.trackUIEvent('Generate AI pattern start');
+  onGenerateAiPatternStart(temperature: number) {
+    this.trackUIEvent('Generate AI pattern start', {temperature});
   }
 
-  onGenerateAiPatternEnd(timeSeconds: number, isInitialGenerate: boolean) {
+  onGenerateAiPatternEnd(
+    timeSeconds: number,
+    isInitialGenerate: boolean,
+    temperature: number
+  ) {
     this.trackUIEvent('Generate AI pattern end', {
       timeSeconds,
       isInitialGenerate,
+      temperature,
     });
   }
 
@@ -257,7 +263,7 @@ export default class AnalyticsReporter {
     this.session.soundsPlayed[id] = 1 + (this.session.soundsPlayed[id] ?? 0);
   }
 
-  onBlocksUpdated(blocks: Block[]) {
+  onBlocksUpdated(blocks: GoogleBlockly.Block[]) {
     if (!this.session) {
       this.log('No session in progress');
       return;

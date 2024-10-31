@@ -1,5 +1,4 @@
-import GoogleBlockly, {Workspace} from 'blockly/core';
-import {State} from 'blockly/core/serialization/blocks';
+import * as GoogleBlockly from 'blockly/core';
 
 import {BLOCK_TYPES, PROCEDURE_DEFINITION_TYPES} from '../constants';
 
@@ -15,7 +14,10 @@ export default class CdoBlockSerializer extends GoogleBlockly.serialization
    * @param stateToLoad - The state of the blocks to deserialize.
    * @param workspace - The workspace to deserialize into.
    */
-  load(stateToLoad: {blocks: State[]}, workspace: Workspace) {
+  load(
+    stateToLoad: {blocks: GoogleBlockly.serialization.blocks.State[]},
+    workspace: GoogleBlockly.Workspace
+  ) {
     for (const blockState of stateToLoad['blocks']) {
       try {
         if (PROCEDURE_DEFINITION_TYPES.includes(blockState.type)) {

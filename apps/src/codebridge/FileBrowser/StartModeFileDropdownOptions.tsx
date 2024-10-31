@@ -8,6 +8,8 @@ import {PASSED_ALL_TESTS_VALIDATION} from '@cdo/apps/lab2/progress/constants';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
+import {setShowLockedFilesBanner} from '../redux/workspaceRedux';
+
 import {setFileType} from './types';
 
 interface StartModeFileDropdownOptionsProps {
@@ -46,6 +48,10 @@ const StartModeFileDropdownOptions: React.FunctionComponent<
       } else if (type === ProjectFileType.VALIDATION) {
         // If the new type is validation, use the passed all tests validation condition.
         dispatch(setOverrideValidations([PASSED_ALL_TESTS_VALIDATION]));
+        // We also now want to show a banner to levelbuilders to remind them to lock any relevent start files.
+        // We only show the banner for 5 seconds.
+        dispatch(setShowLockedFilesBanner(true));
+        setTimeout(() => dispatch(setShowLockedFilesBanner(false)), 8000);
       }
       setFileType(file.id, type);
     },
@@ -58,37 +64,42 @@ const StartModeFileDropdownOptions: React.FunctionComponent<
       iconName: 'flask',
       labelText: codebridgeI18n.makeValidation(),
       clickHandler: () => handleSetFileType(ProjectFileType.VALIDATION),
+      id: 'uitest-make-validation',
     },
     {
       condition: file.type !== ProjectFileType.STARTER && file.type,
       iconName: 'eye',
       labelText: codebridgeI18n.makeStarter(),
       clickHandler: () => handleSetFileType(ProjectFileType.STARTER),
+      id: 'uitest-make-starter',
     },
     {
       condition: file.type !== ProjectFileType.SUPPORT,
       iconName: 'eye-slash',
       labelText: codebridgeI18n.makeSupport(),
       clickHandler: () => handleSetFileType(ProjectFileType.SUPPORT),
+      id: 'uitest-make-support',
     },
     {
       condition: file.type !== ProjectFileType.LOCKED_STARTER,
       iconName: 'lock',
       labelText: codebridgeI18n.makeLockedStarter(),
       clickHandler: () => handleSetFileType(ProjectFileType.LOCKED_STARTER),
+      id: 'uitest-make-locked-starter',
     },
   ];
 
   return (
     <>
       {dropdownOptions.map(
-        ({condition, iconName, labelText, clickHandler}, index) =>
+        ({condition, iconName, labelText, clickHandler, id}, index) =>
           condition && (
             <PopUpButtonOption
               key={index}
               iconName={iconName}
               labelText={labelText}
               clickHandler={clickHandler}
+              id={id}
             />
           )
       )}

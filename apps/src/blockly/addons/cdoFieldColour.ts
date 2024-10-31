@@ -1,11 +1,11 @@
-import {FieldColour, FieldColourConfig, FieldColourValidator} from 'blockly';
+import * as GoogleBlockly from 'blockly/core';
 
-export default class CdoFieldColour extends FieldColour {
+export default class CdoFieldColour extends GoogleBlockly.FieldColour {
   // The colours and columns properties are both private in the parent class, so we create
   // additional properties to track the config values.
   private coloursConfig: string[] | null = null;
   private columnsConfig: number = 0;
-  static COLOURS: string[] = FieldColour.COLOURS;
+  static COLOURS: string[] = GoogleBlockly.FieldColour.COLOURS;
   static TITLES: string[] = [];
   static COLUMNS: number = 7;
   static K1_HEIGHT: number = 35;
@@ -27,8 +27,8 @@ export default class CdoFieldColour extends FieldColour {
    */
   constructor(
     value?: string | typeof Blockly.Field.SKIP_SETUP,
-    validator?: FieldColourValidator,
-    config?: FieldColourConfig,
+    validator?: GoogleBlockly.FieldColourValidator,
+    config?: GoogleBlockly.FieldColourConfig,
     isK1?: boolean
   ) {
     super(value, validator, config);
