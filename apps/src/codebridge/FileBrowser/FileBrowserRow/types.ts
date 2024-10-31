@@ -5,6 +5,7 @@ export type DropdownOptionType = {
   iconName: string;
   labelText: string;
   clickHandler: () => void;
+  id?: string;
 };
 
 type FileBrowserRowItemType = ProjectFile | ProjectFolder;

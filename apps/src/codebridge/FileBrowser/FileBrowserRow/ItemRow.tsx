@@ -49,13 +49,14 @@ export const ItemRow: React.FunctionComponent<ItemRowProps> = ({
             id={`uitest-file-${item.id}-popup`}
           >
             {dropdownOptions.map(
-              ({condition, iconName, labelText, clickHandler}) =>
+              ({condition, iconName, labelText, clickHandler, id}) =>
                 condition && (
                   <PopUpButtonOption
                     key={labelText}
                     iconName={iconName}
                     labelText={labelText}
                     clickHandler={clickHandler}
+                    id={id}
                   />
                 )
             )}
