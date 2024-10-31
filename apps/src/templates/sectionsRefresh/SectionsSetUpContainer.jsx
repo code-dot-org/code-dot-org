@@ -245,8 +245,12 @@ export default function SectionsSetUpContainer({
         });
         // Redirect to the given redirectUrl if present, otherwise redirect to the
         // sections list on the homepage.
-        let url =
-          window.location.origin + (redirectUrl ? `/${redirectUrl}` : '/home');
+        let url = window.location.pathname
+          .toString()
+          .includes('/teacher_dashboard/')
+          ? window.location
+          : window.location.origin +
+            (redirectUrl ? `/${redirectUrl}` : '/home');
         if (!redirectUrl) {
           if (createAnotherSection) {
             url += '?openAddSectionDialog=true';
