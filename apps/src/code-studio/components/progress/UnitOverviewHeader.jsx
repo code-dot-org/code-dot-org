@@ -204,19 +204,18 @@ class UnitOverviewHeader extends Component {
               <div className={styles.viewAs}>
                 {
                   <label htmlFor="viewAs" className={styles.viewAsLabel}>
-                    View page as:
+                    {i18n.viewPageAs()}
                   </label>
                 }
-                {/*add I18n*/}
                 <SegmentedButtons
                   id="viewAs"
                   buttons={[
                     {
-                      label: 'Student',
+                      label: i18n.student(),
                       value: ViewType.Participant,
                     },
                     {
-                      label: 'Teacher',
+                      label: i18n.teacher(),
                       value: ViewType.Instructor,
                     },
                   ]}
@@ -271,6 +270,7 @@ export default connect(
   }),
   dispatch => {
     return {
+      // determine whether we need isAsync false at times
       changeViewType: viewAs => dispatch(changeViewType(viewAs, true)),
     };
   }
