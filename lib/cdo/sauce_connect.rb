@@ -62,12 +62,12 @@ module Cdo
           puts "Log:"
           puts log_lines.map {|line| "  #{line}"}.join
           puts
-          if tests_started == :timeout
-            log "ERROR: timed out waiting #{SC_START_TIMEOUT_S} seconds for '#{SC_START_MESSAGE}', stopping sc"
-            stop_sauce_connect
-          else
-            log "ERROR: couldn't start sc"
-          end
+          msg = tests_started == :timeout ?
+            "ERROR: timed out waiting #{SC_START_TIMEOUT_S} seconds for '#{SC_START_MESSAGE}', stopping sc" :
+            "ERROR: couldn't start sc, stopping sc"
+          stop_sauce_connect
+          log msg
+          raise "#{msg}, see log at #{log_file.path}"
         end
       ensure
         log_file.close
