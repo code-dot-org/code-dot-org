@@ -19,6 +19,7 @@ import Notification, {
   NotificationType,
 } from '@cdo/apps/sharedComponents/Notification';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
+import experiments from '@cdo/apps/util/experiments';
 import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
@@ -245,12 +246,15 @@ export default function SectionsSetUpContainer({
         });
         // Redirect to the given redirectUrl if present, otherwise redirect to the
         // sections list on the homepage.
-        let url = window.location.pathname
-          .toString()
-          .includes('/teacher_dashboard/')
-          ? window.location
-          : window.location.origin +
+        let url;
+        if (experiments.isEnabled('teacher-local-nav-v2')) {
+          url = window.location.pathname;
+        } else {
+          url =
+            window.location.origin +
             (redirectUrl ? `/${redirectUrl}` : '/home');
+        }
+
         if (!redirectUrl) {
           if (createAnotherSection) {
             url += '?openAddSectionDialog=true';
