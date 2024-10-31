@@ -141,7 +141,7 @@ class UnitOverviewHeader extends Component {
         updateQueryParam('viewAs', viewType);
       }
 
-      if (viewAs === ViewType.Participant) {
+      if (viewType === ViewType.Participant) {
         resetViewAsUserId();
       }
       changeViewType(viewType);
