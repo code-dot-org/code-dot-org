@@ -1,6 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
+import {Store} from 'redux';
 
 import progress, {
   initProgress,
@@ -34,8 +35,7 @@ import {
 import {getDefaultCodebridgeContext} from '../test_utils';
 
 describe('ValidatedInstructions', () => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  let store: any;
+  let store: Store;
   beforeEach(() => {
     stubRedux();
     registerReducers({

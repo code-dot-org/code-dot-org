@@ -42,6 +42,7 @@ let globalReducers = {};
 let __oldReduxStore;
 let __oldGlobalReducers;
 
+// These are exported for use in Typescript unit tests.
 export const stubRedux = function () {
   if (__oldReduxStore) {
     throw new Error(
