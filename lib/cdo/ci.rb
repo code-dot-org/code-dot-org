@@ -1,7 +1,7 @@
 require 'set'
 
 module CI
-  # Checks the HEAD commit for the current circle build for the specified tag,
+  # Checks the HEAD commit for the current CI build for the specified tag,
   # returning TRUE if it's present.  A tag is a set of space-separated words
   # wrapped in square brackets.  The words can be given in any order.
   #
