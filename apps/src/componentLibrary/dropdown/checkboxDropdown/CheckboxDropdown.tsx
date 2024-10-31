@@ -7,19 +7,20 @@ import {DropdownProviderWrapper} from '@cdo/apps/componentLibrary/common/context
 import {
   ComponentSizeXSToL,
   DropdownColor,
+  DropdownFormFieldRelatedProps,
 } from '@cdo/apps/componentLibrary/common/types';
 import CustomDropdown, {
   _CustomDropdownOption,
 } from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import i18n from '@cdo/locale';
 
 import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
 
 export interface CheckboxDropdownOption extends _CustomDropdownOption {}
 
-export interface CheckboxDropdownProps extends AriaAttributes {
+export interface CheckboxDropdownProps
+  extends DropdownFormFieldRelatedProps,
+    AriaAttributes {
   /** CheckboxDropdown name.
    * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
   name: string;
@@ -31,6 +32,8 @@ export interface CheckboxDropdownProps extends AriaAttributes {
   size: ComponentSizeXSToL;
   /** CheckboxDropdown disabled state */
   disabled?: boolean;
+  /** CheckboxDropdown readOnly state */
+  readOnly?: boolean;
   /** CheckboxDropdown label
    * The user-facing label of the dropdown */
   labelText: string;
@@ -67,8 +70,13 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   onSelectAll,
   onClearAll,
   disabled = false,
+  readOnly = false,
   color = dropdownColors.black,
   size = 'm',
+  helperMessage,
+  helperIcon,
+  errorMessage,
+  styleAsFormField = false,
   ...rest
 }) => {
   return (
@@ -79,8 +87,16 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
       labelType={labelType}
       color={color}
       disabled={disabled}
+      readOnly={readOnly}
       size={size}
       isSomeValueSelected={checkedOptions.length > 0}
+      helperMessage={helperMessage}
+      helperIcon={helperIcon}
+      errorMessage={errorMessage}
+      styleAsFormField={styleAsFormField}
+      selectedValueText={checkedOptions
+        ?.map(str => allOptions.find(opt => opt.value === str)?.label)
+        .join(', ')}
       {...rest}
     >
       <div className={moduleStyles.dropdownMenuContainer}>

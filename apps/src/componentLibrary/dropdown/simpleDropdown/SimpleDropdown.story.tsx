@@ -78,6 +78,20 @@ DefaultDropdown.args = {
   size: 'm',
 };
 
+export const ReadOnlyDropdown = SingleTemplate.bind({});
+ReadOnlyDropdown.args = {
+  name: 'disabled-dropdown',
+  items: [
+    {value: 'option-1', text: 'Option 1'},
+    {value: 'option-2', text: 'Option 2'},
+  ],
+  selectedValue: 'option-1',
+  labelText: 'ReadOnly Dropdown',
+  onChange: args => console.log(args),
+  readOnly: true,
+  size: 'm',
+};
+
 export const DisabledDropdown = SingleTemplate.bind({});
 DisabledDropdown.args = {
   name: 'disabled-dropdown',
@@ -89,6 +103,38 @@ DisabledDropdown.args = {
   labelText: 'Disabled Dropdown',
   onChange: args => console.log(args),
   disabled: true,
+  size: 'm',
+};
+
+export const StyledAsFormFieldSimpleDropdown = SingleTemplate.bind({});
+StyledAsFormFieldSimpleDropdown.args = {
+  name: 'styled-as-field-simple-dropdown',
+  items: [
+    {
+      value: 'option-1',
+      text: 'Option 1 Long Description that should be truncated',
+    },
+    {value: 'option-2', text: 'Option 2'},
+  ],
+  selectedValue: 'option-1',
+  labelText: 'Styled as Field SimpleDropdown',
+  onChange: args => console.log(args),
+  helperMessage: 'Helper message',
+  size: 'm',
+  styleAsFormField: true,
+};
+
+export const WithIconLeftSimpleDropdown = SingleTemplate.bind({});
+WithIconLeftSimpleDropdown.args = {
+  name: 'with-icon-dropdown',
+  items: [
+    {value: 'option-1', text: 'Option 1'},
+    {value: 'option-2', text: 'Option 2'},
+  ],
+  selectedValue: 'option-1',
+  labelText: 'Dropdown with IconLeft',
+  onChange: args => console.log(args),
+  iconLeft: {iconName: 'smile', iconStyle: 'solid'},
   size: 'm',
 };
 
