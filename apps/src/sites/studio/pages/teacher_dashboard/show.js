@@ -34,6 +34,7 @@ import teacherSections, {
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sectionProviderName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {setSelectedSectionData} from '@cdo/apps/templates/teacherNavigation/selectedSectionLoader';
 import {showV2TeacherDashboard} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
 import TeacherNavigationRouter from '@cdo/apps/templates/teacherNavigation/TeacherNavigationRouter';
 
@@ -128,16 +129,27 @@ $(document).ready(function () {
     );
   };
 
+  const getV2TeacherDashboard = () => {
+    const selectedSectionFromList = sections.find(s => s.id === section.id);
+    const selectedSection = {...selectedSectionFromList, ...section};
+
+    getStore().dispatch(selectSection(selectedSection.id));
+
+    setSelectedSectionData(selectedSection);
+
+    return (
+      <TeacherNavigationRouter
+        studioUrlPrefix={scriptData.studioUrlPrefix}
+        showAITutorTab={showAITutorTab}
+      />
+    );
+  };
+
   ReactDOM.render(
     <Provider store={store}>
-      {!showV2TeacherDashboard() ? (
-        getV1TeacherDashboard()
-      ) : (
-        <TeacherNavigationRouter
-          studioUrlPrefix={scriptData.studioUrlPrefix}
-          showAITutorTab={showAITutorTab}
-        />
-      )}
+      {!showV2TeacherDashboard()
+        ? getV1TeacherDashboard()
+        : getV2TeacherDashboard()}
     </Provider>,
     document.getElementById('teacher-dashboard')
   );

@@ -6,8 +6,6 @@ import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
 import {ProjectType, FolderId} from '@codebridge/types';
 import {
   getPossibleDestinationFoldersForFolder,
-  validateFileName as globalValidateFileName,
-  validateFolderName,
   shouldShowFile,
 } from '@codebridge/utils';
 import {
@@ -25,25 +23,24 @@ import React, {useMemo, useState} from 'react';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
-import {usePartialApply, PAFunctionArgs} from '@cdo/apps/lab2/hooks';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {
   DndDataContextProvider,
   useDndDataContext,
 } from './DnDDataContextProvider';
-import {Draggable} from './Draggable';
+import {Draggable, NotDraggable} from './Draggable';
 import {Droppable} from './Droppable';
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
-import FileRow from './FileRow';
+import {FileRow, FileRowProps} from './FileBrowserRow';
 import {
   useFileUploader,
   useFileUploadErrorCallback,
+  useHandleDragEnd,
   useHandleFileUpload,
   usePrompts,
 } from './hooks';
@@ -220,26 +217,20 @@ const InnerFileBrowser = React.memo(
           .map(f => {
             const isDraggingLocked =
               !isStartMode && f.type === ProjectFileType.LOCKED_STARTER;
-            const fileRowProps = {
-              key: f.id,
-              file: f,
-              isReadOnly,
-              appName,
+            const fileRowProps: FileRowProps = {
+              item: f,
               hasValidationFile,
-              isStartMode,
-              setFileType,
               enableMenu: !dragData?.id || isDraggingLocked,
             };
-            return isDraggingLocked ? (
-              <FileRow {...fileRowProps} />
-            ) : (
-              <Draggable
+            const MaybeDraggable = isDraggingLocked ? NotDraggable : Draggable;
+            return (
+              <MaybeDraggable
                 data={{id: f.id, type: DragType.FILE, parentId: f.folderId}}
                 key={f.id}
                 Component="li"
               >
                 <FileRow {...fileRowProps} />
-              </Draggable>
+              </MaybeDraggable>
             );
           })}
       </>
@@ -248,20 +239,9 @@ const InnerFileBrowser = React.memo(
 );
 
 export const FileBrowser = React.memo(() => {
-  const {project, moveFile, moveFolder, setFileType} = useCodebridgeContext();
+  const {project, setFileType} = useCodebridgeContext();
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
-  const dialogControl = useDialogControl();
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
-  const validationFile = useAppSelector(
-    state => state.lab.levelProperties?.validationFile
-  );
-  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-
-  const validateFileName = usePartialApply(globalValidateFileName, {
-    isStartMode,
-    validationFile,
-    projectFiles: project.files,
-  } satisfies PAFunctionArgs<typeof globalValidateFileName>);
 
   const [dragData, setDragData] = useState<DragDataType | undefined>(undefined);
   const [dropData, setDropData] = useState<DropDataType | undefined>(undefined);
@@ -280,52 +260,7 @@ export const FileBrowser = React.memo(() => {
     [setDragData, setDropData]
   );
 
-  const handleDragEnd = useMemo(
-    () => (e: DragOverEvent) => {
-      if (e?.over && e?.active) {
-        // first, if we're dragging something into the folder which currently contains it, just bow out.
-        if (e.active.data.current?.parentId === e.over.id) {
-          return;
-        }
-        if (e.active.data.current?.type === DragType.FOLDER) {
-          const validationError = validateFolderName({
-            folderName: project.folders[e.active.data.current.id].name,
-            parentId: e.over.id as string,
-            projectFolders: project.folders,
-          });
-          if (validationError) {
-            dialogControl?.showDialog({
-              type: DialogType.GenericAlert,
-              title: validationError,
-            });
-          } else {
-            moveFolder(e.active.data.current.id as string, e.over.id as string);
-          }
-        } else if (e.active.data.current?.type === DragType.FILE) {
-          const validationError = validateFileName({
-            fileName: project.files[e.active.data.current.id].name,
-            folderId: e.over.id as string,
-          });
-          if (validationError) {
-            dialogControl?.showDialog({
-              type: DialogType.GenericAlert,
-              title: validationError,
-            });
-          } else {
-            moveFile(e.active.data.current.id as string, e.over.id as string);
-          }
-        }
-      }
-    },
-    [
-      dialogControl,
-      moveFile,
-      moveFolder,
-      project.files,
-      project.folders,
-      validateFileName,
-    ]
-  );
+  const handleDragEnd = useHandleDragEnd();
 
   const sensors = useSensors(
     useSensor(PointerSensor, {

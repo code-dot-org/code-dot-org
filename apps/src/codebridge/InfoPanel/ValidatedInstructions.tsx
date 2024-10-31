@@ -115,7 +115,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     LevelStatus.free_play_complete,
     LevelStatus.completed_assessment,
   ];
-  const showPassedIcon =
+  const hasPassed =
     currentLevel && passedStatuses.includes(currentLevel.status);
 
   const dispatch = useAppDispatch();
@@ -200,13 +200,14 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     const showSubmitButton =
       isSubmittable && (hasMetValidation || hasSubmitted);
 
+    // If this is not a submittable level, we show the continue/finish button
+    // if the user has met validation or has already passed the level (green bubble).
+    const showButton = !isSubmittable && (hasMetValidation || hasPassed);
     // We show the finish variant if there is not a next level.
-    const showFinishButton =
-      !isSubmittable && hasMetValidation && !hasNextLevel;
+    const showFinishButton = showButton && !hasNextLevel;
 
     // We show the continue variant if there is a next level.
-    const showContinueButton =
-      !isSubmittable && hasMetValidation && hasNextLevel;
+    const showContinueButton = showButton && hasNextLevel;
 
     const showNavigation =
       showContinueButton || showFinishButton || showSubmitButton || false;
@@ -321,7 +322,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             >
               <div className={moduleStyles.mainInstructions}>
                 <ValidationStatusIcon
-                  status={showPassedIcon ? 'passed' : 'pending'}
+                  status={hasPassed ? 'passed' : 'pending'}
                   className={moduleStyles.validationIcon}
                 />
                 <EnhancedSafeMarkdown

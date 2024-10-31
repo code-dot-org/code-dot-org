@@ -66,14 +66,14 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
     url: TEACHER_NAVIGATION_PATHS.loginInfo,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.loginInfo),
     // this is not part of the navigation sidebar so it doesn't need a label or icon
-    label: null,
+    label: i18n.loginInfo(),
     icon: null,
   },
   standardsReport: {
     url: TEACHER_NAVIGATION_PATHS.standardsReport,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.standardsReport),
     // this is not part of the navigation sidebar so it doesn't need a label or icon
-    label: null,
+    label: i18n.standardsReportHeader(),
     icon: null,
   },
   aiTutorChatMessages: {
