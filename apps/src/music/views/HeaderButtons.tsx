@@ -65,6 +65,7 @@ interface HeaderButtonsProps {
   clearCode: () => void;
   allowPackSelection: boolean;
   skipUrl: string | undefined;
+  hideChaff: () => void;
 }
 
 /**
@@ -76,6 +77,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   clearCode,
   allowPackSelection,
   skipUrl,
+  hideChaff,
 }) => {
   const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
   const {canUndo, canRedo} = useSelector(
@@ -112,7 +114,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
 
   const onClickStartOver = useCallback(() => {
     // Hide any custom fields that are showing.
-    Blockly.getMainWorkspace().hideChaff();
+    hideChaff();
 
     if (dialogControl) {
       dialogControl.showDialog({
@@ -124,7 +126,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
     if (analyticsReporter) {
       analyticsReporter.onButtonClicked('startOver');
     }
-  }, [dialogControl, analyticsReporter, clearCode]);
+  }, [hideChaff, dialogControl, analyticsReporter, clearCode]);
 
   const onFeedbackClicked = () => {
     if (analyticsReporter) {

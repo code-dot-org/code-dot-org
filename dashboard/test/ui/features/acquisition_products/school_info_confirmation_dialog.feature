@@ -45,3 +45,8 @@ Scenario: School Info Confirmation Dialog
   And one year passes for user "Teacher_Chuba"
   Then I reload the page
   And element ".modal-body" is visible
+  Then I press "#update-button" using jQuery
+  And element ".modal" is visible
+  Then I wait to see a modal containing text "United States"
+  Then element "#uitest-school-zip" has value "31513"
+  Then I wait to see a modal containing text "Appling County High School"

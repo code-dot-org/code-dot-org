@@ -33,6 +33,23 @@ export const MusicConditions: ConditionNames = {
     name: 'played_sound_in_any_function',
     description: 'Checks if a sound is playing in any function. Simple2 only.',
   },
+  PLAYED_ANYTHING_IN_CONDITIONAL: {
+    name: 'played_anything_in_conditional',
+    description:
+      'Checks if something is playing from within an if/else block. Advanced mode only.',
+  },
+  PLAYED_ANYTHING_IN_SAME_FUNCTION: {
+    name: 'played_anything_in_same_function',
+    valueType: 'number',
+    description:
+      'Checks if something is playing from within a function definition block, at least this many times. Ex. Value: 3',
+  },
+  PLAYED_ANYTHING_IN_SAME_LOOP: {
+    name: 'played_anything_in_same_loop',
+    valueType: 'number',
+    description:
+      'Checks if something is playing from within a repeat block, at least this many times. Ex. Value: 3',
+  },
   PLAYED_SOUNDS: {
     name: 'played_sounds',
     valueType: 'number',
@@ -89,6 +106,12 @@ export const MusicConditions: ConditionNames = {
     valueType: 'number',
     description:
       'Checks if at least this many AI patterns (`play AI drums` block with at least 1 tick) have played. Ex. Value: 2',
+  },
+  PLAYED_GENERATED_PATTERNS_AI: {
+    name: 'played_generated_patterns_ai',
+    valueType: 'number',
+    description:
+      'Checks if at least this many AI patterns with generated notes (`play AI drums` block with at least 1 tick after the first two beats) have played. Ex. Value: 2',
   },
   PLAYED_DIFFERENT_SOUNDS_TOGETHER_MULTIPLE_TIMES: {
     name: 'played_different_sounds_together_multiple_times',

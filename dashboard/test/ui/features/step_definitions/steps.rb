@@ -405,7 +405,7 @@ end
 Then /^the link reading "([^"]*)"(?: within element "([^"]*)")? goes to "([^"]*)"$/ do |text, parent, url|
   context = @browser.find_element(:css, parent) if parent
   context ||= @browser
-  xpath = ".//a[contains(text(), '#{text}')]"
+  xpath = ".//a[starts-with(text(), '#{text}')]"
   link = context.find_element(:xpath, xpath)
   expect(link.attribute("href")).to eq(replace_hostname(url)).or eq(url)
 end
@@ -1583,4 +1583,9 @@ And(/^I wait until ai assessments announcement is marked as seen$/) do
     response = browser_request(url: '/api/v1/users/current')
     response['has_seen_ai_assessments_announcement']
   end
+end
+
+And(/^I hover over selector "([^"]*)"$/) do |selector|
+  element = @browser.find_element(:css, selector)
+  @browser.action.move_to(element).perform
 end

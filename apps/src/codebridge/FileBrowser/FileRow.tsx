@@ -32,7 +32,6 @@ interface FileRowProps {
   appName?: string;
   hasValidationFile: boolean; // If the project has a validation file already.
   isStartMode: boolean;
-  handleDeleteFile: (fileId: string) => void;
   setFileType: setFileType;
 }
 
@@ -52,7 +51,6 @@ const FileRow: React.FunctionComponent<FileRowProps> = ({
   appName,
   hasValidationFile,
   isStartMode,
-  handleDeleteFile,
   setFileType,
 }) => {
   const {
@@ -60,7 +58,8 @@ const FileRow: React.FunctionComponent<FileRowProps> = ({
     openFile,
     config: {editableFileTypes},
   } = useCodebridgeContext();
-  const {openMoveFilePrompt, openRenameFilePrompt} = usePrompts();
+  const {openConfirmDeleteFile, openMoveFilePrompt, openRenameFilePrompt} =
+    usePrompts();
   const {iconName, iconStyle, isBrand} = getFileIconNameAndStyle(file);
   const iconClassName = isBrand
     ? classNames('fa-brands', moduleStyles.rowIcon)
@@ -100,12 +99,12 @@ const FileRow: React.FunctionComponent<FileRowProps> = ({
       condition: !isLocked,
       iconName: 'trash',
       labelText: codebridgeI18n.deleteFile(),
-      clickHandler: () => handleDeleteFile(file.id),
+      clickHandler: () => openConfirmDeleteFile({file}),
     },
   ];
 
   return (
-    <div className={moduleStyles.row}>
+    <div className={moduleStyles.row} id={`uitest-file-${file.id}-row`}>
       <div className={moduleStyles.label} onClick={() => openFile(file.id)}>
         <FontAwesomeV6Icon
           iconName={iconName}
@@ -131,8 +130,12 @@ const FileRow: React.FunctionComponent<FileRowProps> = ({
         <PopUpButton
           iconName="ellipsis-v"
           className={moduleStyles['button-kebab']}
+          id={`uitest-file-${file.id}-kebab`}
         >
-          <span className={moduleStyles['button-bar']}>
+          <span
+            className={moduleStyles['button-bar']}
+            id={`uitest-file-${file.id}-popup`}
+          >
             {dropdownOptions.map(
               ({condition, iconName, labelText, clickHandler}, index) =>
                 condition && (

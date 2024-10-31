@@ -12,7 +12,7 @@ import {Key} from '../utils/Notes';
 
 // This value can be modifed each time we know that there is an important new version
 // of the library on S3, to help bypass any caching of an older version.
-const requestVersion = 'launch2024-1';
+const requestVersion = 'launch2024-2';
 
 /**
  * Loads a sound library JSON file.
@@ -282,6 +282,19 @@ export default class MusicLibrary {
     );
   }
 
+  getImageAttributions(): ImageAttributionCopyright[] {
+    const attributions: ImageAttributionCopyright[] = [];
+
+    this.getRestrictedPacks().map(pack => {
+      const attribution = pack.imageAttribution;
+      if (pack.artist && attribution?.author) {
+        attributions.push({artist: pack.artist, ...attribution});
+      }
+    });
+
+    return attributions;
+  }
+
   // Return a deep copy of the packs folders only containing folders
   // and sounds currently allowed by the level.
   private getAllowedSounds(): SoundFolder[] {
@@ -433,10 +446,20 @@ export interface SoundData {
   skipLocalization?: boolean;
 }
 
+export interface ImageAttributionCopyright extends ImageAttribution {
+  artist: string;
+}
+
+// A Creative Commons (2, 3, or 4) or regular copyright license.
+export type ImageAttributionLicenseVersion = 'CC2' | 'CC3' | 'CC4' | 'C';
+
 export interface ImageAttribution {
   author: string;
   color?: string;
   position?: 'left' | 'right';
+  src?: string;
+  licenseVersion: ImageAttributionLicenseVersion;
+  year?: string;
 }
 
 export type SoundFolderType = 'sound' | 'kit' | 'instrument';

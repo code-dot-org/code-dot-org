@@ -103,3 +103,7 @@ export const BUS_EFFECT_COMBINATIONS: Effects[] = [
   {delay: 'medium'},
   {delay: 'low'},
 ];
+
+export const TICKS_PER_MEASURE = 16;
+export const PATTERN_AI_NUM_EVENTS = TICKS_PER_MEASURE * 2;
+export const PATTERN_AI_NUM_SEED_EVENTS = 8;

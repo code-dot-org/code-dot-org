@@ -5,7 +5,12 @@ import {getActiveFileForProject} from '@cdo/apps/lab2/projects/utils';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 
 import {PROJECT_REDUCER_ACTIONS} from './constants';
-import {findFiles, findSubFolders} from './utils';
+import {
+  findFiles,
+  findSubFolders,
+  getNextFileId,
+  getNextFolderId,
+} from './utils';
 type DefaultFilePayload = {
   fileId: FileId;
 };
@@ -26,13 +31,19 @@ export const projectReducer = (
       return newProject;
     }
     case PROJECT_REDUCER_ACTIONS.NEW_FILE: {
-      const {fileId, fileName, folderId, contents = ''} = <
+      const {fileName, folderId, contents = '', validationFileId} = <
         DefaultFilePayload & {
           fileName: string;
           contents?: string;
           folderId: FolderId;
+          validationFileId?: string;
         }
       >action.payload;
+
+      const fileId = getNextFileId(
+        Object.values(project.files),
+        validationFileId
+      );
 
       const newProject = {...project, files: {...project.files}};
 
@@ -237,12 +248,14 @@ export const projectReducer = (
     }
 
     case PROJECT_REDUCER_ACTIONS.NEW_FOLDER: {
-      const {folderId, folderName, parentId} = <
+      const {folderName, parentId} = <
         DefaultFolderPayload & {
           folderName: string;
           parentId: string;
         }
       >action.payload;
+
+      const folderId = getNextFolderId(Object.values(project.folders));
 
       const newProject = {...project, folders: {...project.folders}};
 

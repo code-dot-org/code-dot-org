@@ -1,0 +1,600 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-10-18T15:55:49.000Z",
+  "level_num": "custom",
+  "user_id": 16899,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "blockMode": "Advanced",
+      "toolbox": {
+      },
+      "library": "launch2024",
+      "startSources": {
+        "variables": [
+          {
+            "name": "i",
+            "id": "Jzt-l.ao[tU*jVezANa#"
+          },
+          {
+            "name": "currentTime",
+            "id": "9(V777h5U{?PdH6?X14f"
+          },
+          {
+            "name": "visual",
+            "id": "(dl=/ZwJJuGNF6TGV5^X"
+          }
+        ],
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "for_loop",
+                  "id": ":i2=MRBfw/~^^[JAXR3M",
+                  "fields": {
+                    "VAR": {
+                      "id": "Jzt-l.ao[tU*jVezANa#"
+                    }
+                  },
+                  "inputs": {
+                    "FROM": {
+                      "shadow": {
+                        "type": "math_number",
+                        "id": "JG/ZKLm9r5,gD)DM@@K:",
+                        "fields": {
+                          "NUM": 1
+                        }
+                      }
+                    },
+                    "TO": {
+                      "shadow": {
+                        "type": "math_number",
+                        "id": "/Av*DI/q_TrI|a]pEC+X",
+                        "fields": {
+                          "NUM": 8
+                        }
+                      }
+                    },
+                    "BY": {
+                      "shadow": {
+                        "type": "math_number",
+                        "id": "YoUxE28o;X{Oo-r((Zl?",
+                        "fields": {
+                          "NUM": 1
+                        }
+                      }
+                    },
+                    "DO": {
+                      "block": {
+                        "type": "variables_set",
+                        "id": "1i13[_19z$W;J2JJs!sr",
+                        "extraState": {
+                        },
+                        "fields": {
+                          "VAR": {
+                            "id": "(dl=/ZwJJuGNF6TGV5^X"
+                          }
+                        },
+                        "inputs": {
+                          "VALUE": {
+                            "block": {
+                              "type": "math_random_int",
+                              "id": "sMK;o%9)kkTI!w%IrKnK",
+                              "inputs": {
+                                "FROM": {
+                                  "shadow": {
+                                    "type": "math_number",
+                                    "id": "e!ds$+5{,),C{R$Y!KlK",
+                                    "fields": {
+                                      "NUM": 1
+                                    }
+                                  }
+                                },
+                                "TO": {
+                                  "shadow": {
+                                    "type": "math_number",
+                                    "id": "0lot_-:@T09i%3(!8[*#",
+                                    "fields": {
+                                      "NUM": 3
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "triggered_at",
+              "id": "e`Rdc+q?^Z.K@K;69bi{",
+              "x": 50,
+              "y": 190,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger1</field>",
+                "var": {
+                  "id": "9(V777h5U{?PdH6?X14f"
+                }
+              },
+              "next": {
+                "block": {
+                  "type": "play_sound",
+                  "id": "%fpoa~m,21t.eFRWu.t1",
+                  "fields": {
+                    "sound": "shakira_maluma_chantaje/vocals_shakira_1"
+                  },
+                  "inputs": {
+                    "measure": {
+                      "shadow": {
+                        "type": "math_number",
+                        "id": "QrfmHbV=ei:UCiF^yG|D",
+                        "fields": {
+                          "NUM": 1
+                        }
+                      },
+                      "block": {
+                        "type": "variables_get",
+                        "id": "0M,c#d~4@7~}cR-$}Wxk",
+                        "extraState": {
+                        },
+                        "fields": {
+                          "VAR": {
+                            "id": "9(V777h5U{?PdH6?X14f"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound",
+                      "id": "/)q*DG*xfUvW93/t[|9*",
+                      "fields": {
+                        "sound": "shakira_maluma_chantaje/kick_verse_2"
+                      },
+                      "inputs": {
+                        "measure": {
+                          "shadow": {
+                            "type": "math_number",
+                            "id": "QrfmHbV=ei:UCiF^yG|D",
+                            "fields": {
+                              "NUM": 1
+                            }
+                          },
+                          "block": {
+                            "type": "variables_get",
+                            "id": "16w/6e?MTY_CX;`mmk/D",
+                            "extraState": {
+                            },
+                            "fields": {
+                              "VAR": {
+                                "id": "9(V777h5U{?PdH6?X14f"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sound",
+                          "id": "hsE-gxwFCM9oWmxk3mog",
+                          "fields": {
+                            "sound": "shakira_maluma_chantaje/bass_small_1"
+                          },
+                          "inputs": {
+                            "measure": {
+                              "shadow": {
+                                "type": "math_number",
+                                "id": "QrfmHbV=ei:UCiF^yG|D",
+                                "fields": {
+                                  "NUM": 1
+                                }
+                              },
+                              "block": {
+                                "type": "variables_get",
+                                "id": "pj~*LL3yC%2SrtS:R]_]",
+                                "extraState": {
+                                },
+                                "fields": {
+                                  "VAR": {
+                                    "id": "9(V777h5U{?PdH6?X14f"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound",
+                              "id": "VhE$lhAI7Jy{*Q/z0sXn",
+                              "fields": {
+                                "sound": "shakira_maluma_chantaje/shaker"
+                              },
+                              "inputs": {
+                                "measure": {
+                                  "shadow": {
+                                    "type": "math_number",
+                                    "id": "QrfmHbV=ei:UCiF^yG|D",
+                                    "fields": {
+                                      "NUM": 1
+                                    }
+                                  },
+                                  "block": {
+                                    "type": "variables_get",
+                                    "id": "qvx[XODL~Xw]}iv6[H;Y",
+                                    "extraState": {
+                                    },
+                                    "fields": {
+                                      "VAR": {
+                                        "id": "9(V777h5U{?PdH6?X14f"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound",
+                                  "id": "{1=mQx?fKxPy{`[{fqQu",
+                                  "fields": {
+                                    "sound": "shakira_maluma_chantaje/snap_sample"
+                                  },
+                                  "inputs": {
+                                    "measure": {
+                                      "shadow": {
+                                        "type": "math_number",
+                                        "id": "QrfmHbV=ei:UCiF^yG|D",
+                                        "fields": {
+                                          "NUM": 1
+                                        }
+                                      },
+                                      "block": {
+                                        "type": "variables_get",
+                                        "id": "~ve*Inku{GHuGS$YUutC",
+                                        "extraState": {
+                                        },
+                                        "fields": {
+                                          "VAR": {
+                                            "id": "9(V777h5U{?PdH6?X14f"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "triggered_at",
+              "id": "?gzQ^b^2{,p_B;.[UT(l",
+              "x": 450,
+              "y": 190,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger2</field>",
+                "var": {
+                  "id": "9(V777h5U{?PdH6?X14f"
+                }
+              },
+              "next": {
+                "block": {
+                  "type": "play_sound",
+                  "id": "#t6B_m?n8y{l~+M2ms_x",
+                  "fields": {
+                    "sound": "shakira_maluma_chantaje/vocals_shakira_2"
+                  },
+                  "inputs": {
+                    "measure": {
+                      "shadow": {
+                        "type": "math_number",
+                        "id": "QrfmHbV=ei:UCiF^yG|D",
+                        "fields": {
+                          "NUM": 1
+                        }
+                      },
+                      "block": {
+                        "type": "variables_get",
+                        "id": "^kG;nr94Jz3O{+71v}L5",
+                        "extraState": {
+                        },
+                        "fields": {
+                          "VAR": {
+                            "id": "9(V777h5U{?PdH6?X14f"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound",
+                      "id": "*6C3fW7Da2nLRt)sfsl(",
+                      "fields": {
+                        "sound": "shakira_maluma_chantaje/kick_verse_2"
+                      },
+                      "inputs": {
+                        "measure": {
+                          "shadow": {
+                            "type": "math_number",
+                            "id": "QrfmHbV=ei:UCiF^yG|D",
+                            "fields": {
+                              "NUM": 1
+                            }
+                          },
+                          "block": {
+                            "type": "variables_get",
+                            "id": "VBYhA`!@,HG`mQ[X[biX",
+                            "extraState": {
+                            },
+                            "fields": {
+                              "VAR": {
+                                "id": "9(V777h5U{?PdH6?X14f"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sound",
+                          "id": "i5^(@(NY=/e!OY?5C-1`",
+                          "fields": {
+                            "sound": "shakira_maluma_chantaje/bass_small_2"
+                          },
+                          "inputs": {
+                            "measure": {
+                              "shadow": {
+                                "type": "math_number",
+                                "id": "QrfmHbV=ei:UCiF^yG|D",
+                                "fields": {
+                                  "NUM": 1
+                                }
+                              },
+                              "block": {
+                                "type": "variables_get",
+                                "id": "D4ZlMDnHKiJ.qr~DJeEW",
+                                "extraState": {
+                                },
+                                "fields": {
+                                  "VAR": {
+                                    "id": "9(V777h5U{?PdH6?X14f"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound",
+                              "id": "3!6R@#Iy8VlsB#G^hh(2",
+                              "fields": {
+                                "sound": "shakira_maluma_chantaje/shaker"
+                              },
+                              "inputs": {
+                                "measure": {
+                                  "shadow": {
+                                    "type": "math_number",
+                                    "id": "QrfmHbV=ei:UCiF^yG|D",
+                                    "fields": {
+                                      "NUM": 1
+                                    }
+                                  },
+                                  "block": {
+                                    "type": "variables_get",
+                                    "id": "uV(J87;?dIm5NSJWYo#J",
+                                    "extraState": {
+                                    },
+                                    "fields": {
+                                      "VAR": {
+                                        "id": "9(V777h5U{?PdH6?X14f"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "triggered_at",
+              "id": "aDmu*jVb[RP_rHc*zHBX",
+              "x": 810,
+              "y": 190,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger3</field>",
+                "var": {
+                  "id": "9(V777h5U{?PdH6?X14f"
+                }
+              },
+              "next": {
+                "block": {
+                  "type": "play_sound",
+                  "id": "*E%lcod)Z^%=Q:;dbwXD",
+                  "fields": {
+                    "sound": "shakira_maluma_chantaje/vocals_shakira_maluma_4"
+                  },
+                  "inputs": {
+                    "measure": {
+                      "shadow": {
+                        "type": "math_number",
+                        "id": "QrfmHbV=ei:UCiF^yG|D",
+                        "fields": {
+                          "NUM": 1
+                        }
+                      },
+                      "block": {
+                        "type": "variables_get",
+                        "id": "D[}u,r,.Ty`ThACfe6UH",
+                        "extraState": {
+                        },
+                        "fields": {
+                          "VAR": {
+                            "id": "9(V777h5U{?PdH6?X14f"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound",
+                      "id": "aM?xNBozrV@QKo_?k9qB",
+                      "fields": {
+                        "sound": "shakira_maluma_chantaje/kick_build_1"
+                      },
+                      "inputs": {
+                        "measure": {
+                          "shadow": {
+                            "type": "math_number",
+                            "id": "QrfmHbV=ei:UCiF^yG|D",
+                            "fields": {
+                              "NUM": 1
+                            }
+                          },
+                          "block": {
+                            "type": "variables_get",
+                            "id": "(*18HD~$-aGk/wirE~6O",
+                            "extraState": {
+                            },
+                            "fields": {
+                              "VAR": {
+                                "id": "9(V777h5U{?PdH6?X14f"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sound",
+                          "id": "`|V[eWD],sz2;m(Jty+o",
+                          "fields": {
+                            "sound": "shakira_maluma_chantaje/bass_medium_1"
+                          },
+                          "inputs": {
+                            "measure": {
+                              "shadow": {
+                                "type": "math_number",
+                                "id": "QrfmHbV=ei:UCiF^yG|D",
+                                "fields": {
+                                  "NUM": 1
+                                }
+                              },
+                              "block": {
+                                "type": "variables_get",
+                                "id": "0*lPu_BHDPyGaDV`k6zR",
+                                "extraState": {
+                                },
+                                "fields": {
+                                  "VAR": {
+                                    "id": "9(V777h5U{?PdH6?X14f"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound",
+                              "id": "5[TGy~[{mdt_p]06w,8-",
+                              "fields": {
+                                "sound": "shakira_maluma_chantaje/kick_build_2"
+                              },
+                              "inputs": {
+                                "measure": {
+                                  "shadow": {
+                                    "type": "math_number",
+                                    "id": "QrfmHbV=ei:UCiF^yG|D",
+                                    "fields": {
+                                      "NUM": 1
+                                    }
+                                  },
+                                  "block": {
+                                    "type": "math_arithmetic",
+                                    "id": "9WAi%CQtm1=uuUB~1W$_",
+                                    "fields": {
+                                      "OP": "<field name=\"OP\">ADD</field>"
+                                    },
+                                    "inputs": {
+                                      "A": {
+                                        "shadow": {
+                                          "type": "math_number",
+                                          "id": "h|79E.[5|Y(zN8oLH{+X",
+                                          "fields": {
+                                            "NUM": 1
+                                          }
+                                        },
+                                        "block": {
+                                          "type": "variables_get",
+                                          "id": "[$?~JfKL8soKV[I/}+%;",
+                                          "extraState": {
+                                          },
+                                          "fields": {
+                                            "VAR": {
+                                              "id": "9(V777h5U{?PdH6?X14f"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "B": {
+                                        "shadow": {
+                                          "type": "math_number",
+                                          "id": "#IxJ)$qoQ@Nr!H$~NM57",
+                                          "fields": {
+                                            "NUM": 1
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "packId": "shakira_maluma_chantaje"
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-18T15:55:49.695+00:00\",\"changed\":[\"cloned from \\\"advanced-model-sandbox-mini-project-rhythm-game-2\\\"\"],\"cloned_from\":\"advanced-model-sandbox-mini-project-rhythm-game-2\"},{\"changed_at\":\"2024-10-18 15:55:53 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -9,19 +9,6 @@
   width: 600px;
 }
 
-%button {
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  padding-left: 16px;
-  padding-right: 16px;
-  border: none !important;
-
-  &:hover /*, &:active */ {
-    box-shadow: none;
-  }
-}
-
 .dialogContainer {
   @extend %full-container-overlay;
 
@@ -30,23 +17,27 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    gap: 20px;
+    justify-content: space-between;
+    font-size: 14px;
 
     .heading {
       color: $neutral_light;
-      margin-bottom: 20px;
+      margin-bottom: 0;
     }
 
     .columns {
       display: flex;
       flex-direction: row;
       gap: 40px;
+      justify-content: space-between;
 
       .column {
-        flex: 1;
+        width: 320px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        gap: 25px;
+        margin: 0 auto;
       }
     }
 
@@ -61,19 +52,47 @@
       gap: 20px;
     }
 
-    .careers {
-      background-color: $neutral_dark80;
+    .block {
+      background-color: $neutral_dark90;
       padding: 20px;
       border-radius: 10px;
       color: white;
       display: flex;
       flex-direction: column;
+      align-items: center;
+
       gap: 20px;
+      height: 100%;
+
+      &Afe {
+        background-color: #2E4486;
+
+        img {
+          border-radius: 4px;
+        }
+      }
+    }
+
+    .QRCodeContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      height: 125px;
+      width: 125px;
+
+      .QRCodeBorder {
+        background-color: #fff;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        padding: 4px;
+      }
     }
 
     .doneButton {
-      margin-top: auto;
-      margin-bottom: 20px;
+      margin-left: auto;
     }
 
     .closeButton {
@@ -89,4 +108,22 @@
       }
     }
   }
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.contents {
+  display: contents;
+}
+
+.copyLinkButton {
+  width: 100%;
+  margin-top: auto;
+}
+
+.fullWidth {
+  width: 100%;
 }

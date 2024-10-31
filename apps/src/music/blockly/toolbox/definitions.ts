@@ -42,7 +42,6 @@ export const defaultMaps: {
     Play: [
       BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
       BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
-
       BlockTypes.PLAY_PATTERN_AI_AT_CURRENT_LOCATION_SIMPLE2,
       BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
       ...(appConfig.getValue('play-tune-block') === 'true'

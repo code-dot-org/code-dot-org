@@ -94,6 +94,8 @@ class Level < ApplicationRecord
     thumbnail_url
     start_libraries
     ai_tutor_available
+    offer_browser_tts
+    use_secondary_finish_button
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -895,10 +897,6 @@ class Level < ApplicationRecord
   # represent a version year.
   private def base_name
     base_name = name
-    if name_suffix
-      strip_suffix_regex = /^(.*)#{Regexp.escape(name_suffix)}$/
-      base_name = name[strip_suffix_regex, 1] || name
-    end
     base_name = strip_version_year_suffixes(base_name)
     base_name
   end

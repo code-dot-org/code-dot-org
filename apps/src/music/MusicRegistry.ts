@@ -12,6 +12,7 @@ class MusicRegistry {
 
   public showSoundFilters: boolean = false;
   public hideAiTemperature: boolean = false;
+  public showAiTemperatureExplanation: boolean = false;
 
   public get player(): MusicPlayer {
     if (!this.playerRef) {

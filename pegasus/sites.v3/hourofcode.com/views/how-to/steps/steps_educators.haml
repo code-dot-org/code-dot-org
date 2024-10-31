@@ -1,3 +1,8 @@
+-# TODO ACQ-2556 - Remove DCDO logic after launch
+- nov_launch = !!DCDO.get('hoc-2024-nov-launch', false)
+- music_url = "https://code.org/music"
+- mc_url = "https://aka.ms/hourofcode"
+
 :ruby
   steps_educators_index = 8
 
@@ -5,7 +10,7 @@
     hoc_s("hoc_how_to.label.register"),
     hoc_s("hoc_how_to.label.choose"),
     hoc_s("hoc_how_to.label.plan_event"),
-    hoc_s("hoc_how_to.label.plan_hour"),
+    hoc_s("hoc_how_to.label.schedule_event"),
     hoc_s("hoc_how_to.label.spread_word"),
     hoc_s("hoc_how_to.label.get_coding"),
     hoc_s("hoc_how_to.label.celebrate"),
@@ -13,10 +18,10 @@
   ]
 
   steps_educators_desc = [
-    hoc_s("hoc_how_to.teachers.steps.register"),
-    hoc_s("hoc_how_to.teachers.steps.choose_activity"),
-    "",
-    hoc_s("hoc_how_to.teachers.steps.plan_hour.body_01"),
+    hoc_s("hoc_how_to.teachers.steps_v2.register"),
+    nov_launch ? hoc_s("hoc_how_to.teachers.steps_v2.choose_activity", markdown: :inline, locals: {music_url: music_url, mc_url: mc_url, transformers_url: "https://studio.code.org/s/hello-world-transformers-one-2024/lessons/1/levels/1"}) : hoc_s("hoc_how_to.teachers.steps.choose_activity"),
+    hoc_s("hoc_how_to.teachers.steps_v2.plan_event.body_01", markdown: :inline),
+    hoc_s("hoc_how_to.teachers.steps_v2.schedule.body_01", markdown: :inline, locals: {music_url: music_url, mc_url: mc_url}),
     hoc_s("hoc_how_to.teachers.steps.spread_word.body_01", markdown: :inline, locals:{emails_url: resolve_url("/resources#sample-emails")}),
     hoc_s("hoc_how_to.teachers.steps.get_coding"),
     hoc_s("hoc_how_to.teachers.steps.celebrate"),
@@ -51,23 +56,19 @@
             - if index === 1
               %img{src: "/images/activities_2024.jpg", alt: ""}
               %a.link-button{href: resolve_url("/learn")}
-                =hoc_s("hoc_how_to.button.select_activity")
+                =hoc_s(:call_to_action_explore_activities)
 
             -# Step 3 additional content
             - if index === 2
-              %p
-                %strong=hoc_s(:what)
-                =hoc_s(:hoc_how_to_step_educators_plan_desc_01)
-              %p
-                %strong=hoc_s(:when)
-                =hoc_s(:hoc_how_to_step_educators_plan_desc_02, markdown: :inline, locals: {campaign_date: campaign_date("full")})
-              %p
-                %strong=hoc_s(:where)
-                =hoc_s(:hoc_how_to_step_educators_plan_desc_03)
+              %p=hoc_s("hoc_how_to.teachers.steps_v2.plan_event.body_02", markdown: :inline)
+              %p=hoc_s("hoc_how_to.teachers.steps_v2.plan_event.body_03", markdown: :inline, locals:{posters_url: resolve_url("/resources#posters")})
+              %p=hoc_s("hoc_how_to.teachers.steps_v2.plan_event.body_04")
               %img{src: "/images/how-to-neon.png", alt: ""}
 
             -# Step 4 additional content
             - if index === 3
+              %p=hoc_s("hoc_how_to.teachers.steps_v2.schedule.body_02", markdown: :inline)
+              %p=hoc_s("hoc_how_to.teachers.steps_v2.schedule.body_03", markdown: :inline)
               %ul
                 %li
                   =hoc_s("hoc_how_to.teachers.steps.plan_hour.list_01", markdown: :inline, locals:{video_url: resolve_url("/resources#videos")})

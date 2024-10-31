@@ -25,6 +25,7 @@ const DEFAULT_PROPS = {
   selectedSectionId: 789,
   canHaveFeedbackReviewState: true,
   allowUnverified: false,
+  scriptName: 'csa1-2022',
   updateUserProgress: () => {},
 };
 

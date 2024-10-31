@@ -176,6 +176,16 @@ export default class MusicBlocklyWorkspace {
   }
 
   /**
+   * Hide any custom fields that are showing.
+   */
+  hideChaff() {
+    if (this.headlessMode) {
+      return;
+    }
+    (this.workspace as GoogleBlockly.WorkspaceSvg)?.hideChaff();
+  }
+
+  /**
    * Generates executable JavaScript code for all blocks in the workspace.
    *
    * @param scope Global scope to provide the execution runtime
@@ -488,7 +498,11 @@ export default class MusicBlocklyWorkspace {
 
     const allFunctions: GoogleBlockly.serialization.procedures.State[] = [];
 
-    (this.workspace?.getTopBlocks() as ProcedureBlock[])
+    (
+      this.workspace?.getTopBlocks(
+        this.toolbox?.addFunctionCallsSortByPosition
+      ) as ProcedureBlock[]
+    )
       .filter(
         // When a block is dragged from the toolbox, an insertion marker is
         // created with the same type. Insertion markers just provide a
@@ -506,7 +520,11 @@ export default class MusicBlocklyWorkspace {
         );
       });
 
-    allFunctions.sort(nameComparator).forEach(({name, id, parameters}) => {
+    const compareFunction = this.toolbox?.addFunctionCallsSortByPosition
+      ? () => 0
+      : nameComparator;
+
+    allFunctions.sort(compareFunction).forEach(({name, id, parameters}) => {
       blockList.push({
         kind: 'block',
         type: BLOCK_TYPES.procedureCall,

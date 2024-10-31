@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "music-lab-advanced-model-sandbox",
-    "serialized_at": "2024-10-17 22:04:43 UTC",
+    "serialized_at": "2024-10-24 21:59:47 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -257,6 +257,16 @@
       }
     },
     {
+      "key": "eeda63fb-a928-4dbd-ad87-f060ac84d095",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "eeda63fb-a928-4dbd-ad87-f060ac84d095",
+        "lesson_activity.key": "109c6e76-68ac-481a-9fc3-c899220a2fe8"
+      }
+    },
+    {
       "key": "24e5d5ff-2ea9-48ee-988c-0cfed1fc50ee",
       "position": 1,
       "properties": {
@@ -365,6 +375,16 @@
         "activity_section.key": "c1204efd-2827-4c2a-9ea2-c5425ceedcf9",
         "lesson_activity.key": "e49bd75e-dec5-446a-ba8f-004a17f38c9d"
       }
+    },
+    {
+      "key": "d699a54d-44eb-4f66-b769-e3d15243363d",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d699a54d-44eb-4f66-b769-e3d15243363d",
+        "lesson_activity.key": "e49bd75e-dec5-446a-ba8f-004a17f38c9d"
+      }
     }
   ],
   "script_levels": [
@@ -466,6 +486,27 @@
     },
     {
       "chapter": 5,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "advanced-model-sandbox-loops-2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "eeda63fb-a928-4dbd-ad87-f060ac84d095"
+      },
+      "level_keys": [
+        "advanced-model-sandbox-loops-2"
+      ]
+    },
+    {
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -489,11 +530,14 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "advanced-model-sandbox-conditionals-2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -510,11 +554,14 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "advanced-model-sandbox-conditionals-3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -531,7 +578,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -555,7 +602,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -579,11 +626,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "advanced-model-sandbox-mini-project-melody-generator-1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -600,11 +650,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "advanced-model-sandbox-mini-project-melody-generator-2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -621,11 +674,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "advanced-model-sandbox-mini-project-melody-generator-3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -642,11 +698,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "advanced-model-sandbox-mini-project-rhythm-game-1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -663,11 +722,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "advanced-model-sandbox-mini-project-rhythm-game-2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -684,11 +746,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "advanced-model-sandbox-mini-project-background-music-1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -702,6 +767,30 @@
       },
       "level_keys": [
         "advanced-model-sandbox-mini-project-background-music-1"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "advanced-model-sandbox-mini-project-background-music-2"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "advanced-model-sandbox-mini-project-background-music-2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "d699a54d-44eb-4f66-b769-e3d15243363d"
+      },
+      "level_keys": [
+        "advanced-model-sandbox-mini-project-background-music-2"
       ]
     }
   ],
@@ -752,6 +841,18 @@
         "lesson_group.key": "",
         "script.name": "music-lab-advanced-model-sandbox",
         "activity_section.key": "023b8e18-079f-430a-8b4b-a895efcde36d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "advanced-model-sandbox-loops-2",
+        "script_level.level_keys": [
+          "advanced-model-sandbox-loops-2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "eeda63fb-a928-4dbd-ad87-f060ac84d095"
       }
     },
     {
@@ -884,6 +985,18 @@
         "lesson_group.key": "",
         "script.name": "music-lab-advanced-model-sandbox",
         "activity_section.key": "c1204efd-2827-4c2a-9ea2-c5425ceedcf9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "advanced-model-sandbox-mini-project-background-music-2",
+        "script_level.level_keys": [
+          "advanced-model-sandbox-mini-project-background-music-2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "music-lab-advanced-model-sandbox",
+        "activity_section.key": "d699a54d-44eb-4f66-b769-e3d15243363d"
       }
     }
   ],

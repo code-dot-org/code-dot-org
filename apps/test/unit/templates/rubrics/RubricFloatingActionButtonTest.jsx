@@ -14,6 +14,7 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import {UnconnectedRubricFloatingActionButton as RubricFloatingActionButton} from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
+import teacherRubric from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
@@ -51,7 +52,7 @@ const defaultProps = {
 describe('RubricFloatingActionButton - React Testing Library', () => {
   beforeEach(() => {
     stubRedux();
-    registerReducers({teacherSections, teacherPanel});
+    registerReducers({teacherRubric, teacherSections, teacherPanel});
   });
 
   afterEach(() => {
@@ -143,8 +144,10 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
 describe('RubricFloatingActionButton - Enzyme', () => {
   it('begins closed when student level info is null', () => {
     const wrapper = shallow(<RubricFloatingActionButton {...defaultProps} />);
-    expect(wrapper.find('RubricContainer').length).to.equal(1);
-    expect(wrapper.find('RubricContainer').props().open).to.equal(false);
+    expect(wrapper.find('Connect(RubricContainer)').length).to.equal(1);
+    expect(wrapper.find('Connect(RubricContainer)').props().open).to.equal(
+      false
+    );
   });
 
   it('begins open when student level info is provided', () => {
@@ -156,14 +159,14 @@ describe('RubricFloatingActionButton - Enzyme', () => {
         }}
       />
     );
-    expect(wrapper.find('RubricContainer').length).to.equal(1);
+    expect(wrapper.find('Connect(RubricContainer)').length).to.equal(1);
   });
 
   it('opens RubricContainer when clicked', () => {
     const wrapper = shallow(<RubricFloatingActionButton {...defaultProps} />);
     expect(wrapper.find('button').length).to.equal(1);
     wrapper.find('button').simulate('click');
-    expect(wrapper.find('RubricContainer').length).to.equal(1);
+    expect(wrapper.find('Connect(RubricContainer)').length).to.equal(1);
   });
 
   it('sends events when opened and closed', () => {

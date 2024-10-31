@@ -11,6 +11,7 @@ type PopUpButtonProps = {
   children?: React.ReactNode;
   className?: string;
   alignment?: 'left' | 'right';
+  id?: string;
 };
 
 export const PopUpButton = ({
@@ -18,6 +19,7 @@ export const PopUpButton = ({
   iconName,
   className,
   alignment = 'left',
+  id,
 }: PopUpButtonProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [buttonRect, setButtonRect] = useState<DOMRect>();
@@ -67,6 +69,7 @@ export const PopUpButton = ({
         isIconOnly
         onClick={clickHandler}
         type={'tertiary'}
+        id={id}
       />
       {isOpen && buttonRect && offsetParent && (
         <div

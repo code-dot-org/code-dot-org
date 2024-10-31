@@ -59,6 +59,11 @@
     "validations": {
       "musiclab_intro_function_elementary_328ae4f1-4120-4555-bfba-4654bd618fd8": "Nice work.  You successfully used the function to play a sound.",
       "musiclab_intro_function_elementary_33cfaef2-2b2e-4e45-93b8-88632b06f78a": "Connect the \"chorus\" block under [when run][0] to play the sounds in the function."
+    },
+    "function_definitions": {
+      "chorus": {
+        "name": "chorus"
+      }
     }
   },
   "https://studio.code.org/s/music-tutorial-2024/lessons/1/levels/10": {

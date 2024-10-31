@@ -1,49 +1,37 @@
 import _ from 'lodash';
 import React, {useState, useEffect} from 'react';
-import {useSelector} from 'react-redux';
 import {
   generatePath,
   matchPath,
   useLocation,
   useNavigate,
+  useParams,
 } from 'react-router-dom';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
+import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
+
+import {asyncLoadSelectedSection} from './selectedSectionLoader';
 import {LABELED_TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
 
 import styles from './teacher-navigation.module.scss';
 
-interface SectionsData {
-  [sectionId: number]: {
-    name: string;
-    hidden: boolean;
-    courseVersionName: string;
-    unitName: string;
-  };
-}
-
 const TeacherNavigationBar: React.FunctionComponent = () => {
-  const sections = useSelector(
-    (state: {teacherSections: {sections: SectionsData}}) =>
-      state.teacherSections.sections
-  );
+  const sections = useAppSelector(state => state.teacherSections.sections);
 
   const [sectionArray, setSectionArray] = useState<
     {value: string; text: string}[]
   >([]);
 
-  const selectedSectionId = useSelector(
-    (state: {teacherSections: {selectedSectionId: number}}) =>
-      state.teacherSections.selectedSectionId
-  );
+  const selectedSection = useAppSelector(selectedSectionSelector);
 
-  const isLoadingSectionData = useSelector(
-    (state: {teacherSections: {isLoadingSectionData: boolean}}) =>
-      state.teacherSections.isLoadingSectionData
+  const isLoadingSectionData = useAppSelector(
+    state => state.teacherSections.isLoadingSectionData
   );
 
   useEffect(() => {
@@ -55,7 +43,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       }));
 
     setSectionArray(updatedSectionArray);
-  }, [sections, selectedSectionId]);
+  }, [sections, selectedSection]);
 
   const getSectionHeader = (label: string) => {
     return (
@@ -72,7 +60,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   const coursecontentSectionTitle = getSectionHeader(i18n.courseContent());
 
   let courseContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[];
-  if (sections[selectedSectionId].unitName) {
+  if (selectedSection?.unitName) {
     courseContentKeys = ['unitOverview', 'lessonMaterials', 'calendar'];
   } else {
     courseContentKeys = ['courseOverview', 'lessonMaterials', 'calendar'];
@@ -94,6 +82,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
+  const urlSectionId = useParams().sectionId;
 
   const [currentPathName, currentPathObject] = React.useMemo(() => {
     return (
@@ -104,22 +93,19 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     );
   }, [location]);
 
-  const navigateToDifferentSection = (sectionId: string) => {
+  React.useEffect(() => {
+    if (urlSectionId && parseInt(urlSectionId) !== selectedSection?.id) {
+      asyncLoadSelectedSection(urlSectionId);
+    }
+  }, [urlSectionId, selectedSection?.id]);
+
+  const navigateToDifferentSection = (sectionId: number) => {
     if (currentPathObject?.absoluteUrl) {
       navigate(
-        generatePath(currentPathObject.absoluteUrl, {sectionId: sectionId})
-      );
-    }
-  };
-
-  const navigateToDifferentPage = (
-    page: keyof typeof LABELED_TEACHER_NAVIGATION_PATHS
-  ) => {
-    if (LABELED_TEACHER_NAVIGATION_PATHS[page]) {
-      navigate(
-        generatePath(LABELED_TEACHER_NAVIGATION_PATHS[page].absoluteUrl, {
-          sectionId: selectedSectionId,
-          courseVersionName: sections[selectedSectionId].courseVersionName,
+        generatePath(currentPathObject.absoluteUrl, {
+          sectionId: sectionId,
+          courseVersionName: sections[sectionId]?.courseVersionName,
+          unitName: sections[sectionId]?.unitName,
         })
       );
     }
@@ -128,14 +114,17 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   const getSidebarOptionsForSection = (
     sidebarKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[]
   ) => {
+    if (!selectedSection) {
+      return [];
+    }
     return sidebarKeys.map(key => (
       <SidebarOption
         key={'ui-test-sidebar-' + key}
         isSelected={currentPathName === key}
-        sectionId={+selectedSectionId}
-        courseVersionName={sections[selectedSectionId].courseVersionName}
+        sectionId={selectedSection.id}
+        courseVersionName={selectedSection.courseVersionName}
+        unitName={selectedSection.unitName}
         pathKey={key as keyof typeof LABELED_TEACHER_NAVIGATION_PATHS}
-        onClick={() => navigateToDifferentPage(key)}
       />
     ));
   };
@@ -165,14 +154,16 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
         </Typography>
         <SimpleDropdown
           items={sectionArray}
-          onChange={event => navigateToDifferentSection(event.target.value)}
+          onChange={event =>
+            navigateToDifferentSection(parseInt(event.target.value))
+          }
           labelText=""
           size="m"
-          selectedValue={String(selectedSectionId)}
+          selectedValue={String(selectedSection?.id)}
           className={styles.sectionDropdown}
           name="section-dropdown"
           color="gray"
-          disabled={isLoadingSectionData}
+          disabled={isLoadingSectionData || !selectedSection}
         />
         {navbarComponents.map(component => component)}
       </div>
