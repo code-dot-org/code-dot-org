@@ -167,21 +167,21 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
         {zip: schoolZip},
         PLATFORMS.BOTH
       );
+    });
 
-      fetchSchools(schoolZip, data => {
-        if (!mounted.current) return;
+    fetchSchools(schoolZip, data => {
+      if (!mounted.current) return;
 
-        const schools = data
-          .map(constructSchoolOption)
-          .sort((a, b) => a.text.localeCompare(b.text));
+      const schools = data
+        .map(constructSchoolOption)
+        .sort((a, b) => a.text.localeCompare(b.text));
 
-        setSchoolsList(schools);
+      setSchoolsList(schools);
 
-        // this will auto select the school from the fetched list of schools if the user is updating their school info
-        if (schools.some(school => school.value === detectedSchoolId)) {
-          setSchoolId(detectedSchoolId);
-        }
-      });
+      // this will auto select the school from the fetched list of schools if the user is updating their school info
+      if (schools.some(school => school.value === detectedSchoolId)) {
+        setSchoolId(detectedSchoolId);
+      }
     });
   }, [schoolZip, detectedSchoolId, fetchSchools]);
 
