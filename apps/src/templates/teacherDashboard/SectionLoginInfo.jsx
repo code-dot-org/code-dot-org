@@ -191,10 +191,12 @@ class EmailLogins extends React.Component {
           </li>
           <li>{i18n.loginInfo_joinStep2()}</li>
           <li>
-            {i18n.loginInfo_joinStep3({
-              url: `${studioUrlPrefix}/join`,
-              code: sectionCode,
-            })}
+            <SafeMarkdown
+              markdown={i18n.loginInfo_joinStep3({
+                url: `${studioUrlPrefix}/join`,
+                code: sectionCode,
+              })}
+            />
           </li>
           <li>{i18n.loginInfo_joinStep4()}</li>
         </ol>
