@@ -91,7 +91,9 @@ const SubmitButtonInfo: React.FunctionComponent<{
   submissionStatus: string | undefined;
   dispatch: AppDispatch;
 }> = ({submissionStatus, dispatch}) => {
-  if (!experiments.isEnabled(experiments.LAB2_SUBMIT_PROJECT)) {
+  if (
+    !experiments.isEnabledAllowingQueryString(experiments.LAB2_SUBMIT_PROJECT)
+  ) {
     return null;
   }
   if (submissionStatus === 'can_submit') {
@@ -153,7 +155,6 @@ const ShareDialog: React.FunctionComponent<{
     state => state.submitProject.submissionStatus
   );
 
-  // dialogId = 'hoc2024'; // To switch between share and HoC congrats dialogs.
   return (
     <FocusLock>
       <div className={moduleStyles.dialogContainer}>
