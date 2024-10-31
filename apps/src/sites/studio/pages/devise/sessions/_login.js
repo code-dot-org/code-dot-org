@@ -15,7 +15,7 @@ $(document).ready(() => {
     false
   );
   const signupLink = document.getElementById('signup-link');
-  const {userReturnTo} = getScriptData('data');
+  const userReturnTo = getScriptData('userReturnTo');
 
   if (isInSignupExperiment) {
     if (userReturnTo) {

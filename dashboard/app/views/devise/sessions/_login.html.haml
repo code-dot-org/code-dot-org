@@ -1,6 +1,6 @@
 - content_for :head do
   :ruby
-    script_data = {data: {userReturnTo: @user_return_to.presence}.to_json}
+    script_data = {userReturnTo: @user_return_to.presence.to_json}
   %script{src: webpack_asset_path('js/devise/sessions/_login.js'), data: script_data}
 
 %h2= t('signin_form.title')
