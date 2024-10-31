@@ -4,12 +4,10 @@ import React, {useCallback, useEffect, useState} from 'react';
 import FocusLock from 'react-focus-lock';
 
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
+import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import Typography, {
-  BodyTwoText,
-  EmText,
-} from '@cdo/apps/componentLibrary/typography';
+import Typography from '@cdo/apps/componentLibrary/typography';
 import {ProjectType} from '@cdo/apps/lab2/types';
 import {setShowSubmitProjectDialog} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectRedux';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
@@ -105,7 +103,6 @@ const SubmitButtonInfo: React.FunctionComponent<{
         color="white"
         size="m"
         onClick={() => {
-          console.log('submit project');
           dispatch(hideShareDialog());
           dispatch(setShowSubmitProjectDialog(true));
         }}
@@ -114,11 +111,12 @@ const SubmitButtonInfo: React.FunctionComponent<{
     );
   } else if (submissionStatus === 'already_submitted') {
     return (
-      <div className={moduleStyles.alreadySubmittedContainer}>
-        <BodyTwoText className={moduleStyles.alreadySubmittedText}>
-          <EmText>{i18n.submitProjectGallery_thanksForSubmission()}</EmText>
-        </BodyTwoText>
-      </div>
+      <Alert
+        text={i18n.submitProjectGallery_thanksForSubmission()}
+        type="success"
+        size="s"
+        className={moduleStyles.alert}
+      />
     );
   }
   return null;
