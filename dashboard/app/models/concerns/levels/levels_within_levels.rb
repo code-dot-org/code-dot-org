@@ -37,14 +37,6 @@ module Levels
         class_name: 'ParentLevelsChildLevel',
         dependent: :destroy,
         foreign_key: :parent_level_id
-      has_many :contained_levels_child_levels,
-               -> {contained},
-               class_name: 'ParentLevelsChildLevel',
-               foreign_key: :parent_level_id
-      has_one :project_template_levels_child_level,
-               -> {project_template},
-               class_name: 'ParentLevelsChildLevel',
-               foreign_key: :parent_level_id
       has_many :child_levels,
         -> {extending ByKindExtension},
         inverse_of: :parent_levels,
@@ -89,13 +81,10 @@ module Levels
         new_levels_contained_child_levels = []
 
         levels.each do |level|
-          contained_child_level_names = level.contained_levels_child_levels.sort_by(&:position).map do |levels_level|
-            outdated_levels_child_level_ids << levels_level.id
-            levels_level.child_level.name
-          end
           # if our existing contained levels already match the given names, do nothing
-          next if contained_child_level_names == level.contained_level_names
+          next if level.child_levels.contained.map(&:name) == level.contained_level_names
 
+          outdated_levels_child_level_ids += level.levels_child_levels.contained.ids
           Level.where(name: level.contained_level_names).find_each do |contained_level|
             new_levels_contained_child_levels << ParentLevelsChildLevel.new(
               parent_level: level,
@@ -113,7 +102,11 @@ module Levels
         if new_levels_contained_child_levels.present?
           ParentLevelsChildLevel.import!(new_levels_contained_child_levels, batch_size: 1000)
         end
-        levels.each {|level| level.contained_levels_child_levels.reset}
+
+        levels.each do |level|
+          level.levels_child_levels.reset
+          level.child_levels.reset
+        end
       end
 
       def setup_project_template_level_for(levels)
@@ -122,10 +115,10 @@ module Levels
 
         levels.each do |level|
           # if we already have a project template level which matches the specified name, do nothing.
-          next if level.project_template_levels_child_level&.child_level&.name == level.project_template_level_name
+          next if level.child_levels.project_template.first&.name == level.project_template_level_name
 
           # otherwise, update project template level to match
-          outdated_levels_child_level_ids << level.project_template_levels_child_level&.id
+          outdated_levels_child_level_ids += level.levels_child_levels.project_template.ids
           next if level.project_template_level_name.blank?
 
           template_level = Level.find_by_name!(level.project_template_level_name)
@@ -142,6 +135,11 @@ module Levels
 
         if new_levels_project_template_child_levels.present?
           ParentLevelsChildLevel.import!(new_levels_project_template_child_levels, batch_size: 1000)
+        end
+
+        levels.each do |level|
+          level.levels_child_levels.reset
+          level.child_levels.reset
         end
       end
     end
