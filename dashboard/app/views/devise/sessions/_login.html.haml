@@ -1,5 +1,9 @@
 - content_for :head do
   %script{src: webpack_asset_path('js/devise/sessions/_login.js')}
+  - if @user_return_to.present?
+    %script
+      :plain
+        window.userReturnTo = "#{@user_return_to}";
 
 %h2= t('signin_form.title')
 

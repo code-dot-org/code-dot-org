@@ -3,6 +3,7 @@ import $ from 'jquery';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
+import {USER_RETURN_TO_SESSION_KEY} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 
 $(document).ready(() => {
   analyticsReporter.sendEvent(EVENTS.LOGIN_PAGE_VISITED, {}, PLATFORMS.STATSIG);
@@ -15,6 +16,9 @@ $(document).ready(() => {
   const signupLink = document.getElementById('signup-link');
 
   if (isInSignupExperiment) {
+    if (window.userReturnTo) {
+      sessionStorage.setItem(USER_RETURN_TO_SESSION_KEY, window.userReturnTo);
+    }
     signupLink.href = './new_sign_up/account_type';
   }
 
