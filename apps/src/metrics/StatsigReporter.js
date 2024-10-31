@@ -11,7 +11,6 @@ import {
   getEnvironment,
   isProductionEnvironment,
   isDevelopmentEnvironment,
-  createUuid,
 } from '../utils';
 
 // A flag that can be toggled to send events regardless of environment
@@ -51,7 +50,8 @@ class StatsigReporter {
       ? managed_test_environment_element.dataset.managedTestServer === 'true'
       : false;
     this.local_mode = !(isProductionEnvironment() || managed_test_environment);
-    this.stable_id = this.findOrCreateStableId();
+    // stable_id is set as a cookie in application_controller.rb
+    this.stable_id = cookies.get(STABLE_ID_KEY);
     this.options = {
       environment: {tier: getEnvironment()},
       localMode: this.local_mode,
@@ -141,18 +141,6 @@ class StatsigReporter {
       const environment = getEnvironment();
       return `${environment}-${userIdString}`;
     }
-  }
-
-  findOrCreateStableId() {
-    let stableId = cookies.get(STABLE_ID_KEY);
-    if (!stableId) {
-      stableId = createUuid();
-      cookies.set(STABLE_ID_KEY, stableId, {
-        expires: 400,
-        domain: 'code.org',
-      });
-    }
-    return stableId;
   }
 
   /**
