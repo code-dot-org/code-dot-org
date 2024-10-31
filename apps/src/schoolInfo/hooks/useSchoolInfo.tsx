@@ -167,54 +167,57 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
         {zip: schoolZip},
         PLATFORMS.BOTH
       );
-    });
 
-    fetchSchools(schoolZip, data => {
-      if (!mounted.current) return;
+      fetchSchools(schoolZip, data => {
+        if (!mounted.current) return;
 
-      const schools = data
-        .map(constructSchoolOption)
-        .sort((a, b) => a.text.localeCompare(b.text));
+        const schools = data
+          .map(constructSchoolOption)
+          .sort((a, b) => a.text.localeCompare(b.text));
 
-      setSchoolsList(schools);
+        setSchoolsList(schools);
 
-      // this will auto select the school from the fetched list of schools if the user is updating their school info
-      if (schools.some(school => school.value === detectedSchoolId)) {
-        setSchoolId(detectedSchoolId);
-      }
+        // this will auto select the school from the fetched list of schools if the user is updating their school info
+        if (schools.some(school => school.value === detectedSchoolId)) {
+          setSchoolId(detectedSchoolId);
+        }
+      });
     });
   }, [schoolZip, detectedSchoolId, fetchSchools]);
 
   // Handle schoolId changes
   useEffect(() => {
-    handleSessionStorage(SCHOOL_ID_SESSION_KEY, schoolId);
-    if (schoolId === NonSchoolOptions.NO_SCHOOL_SETTING) {
-      setSchoolName('');
-      analyticsReporter.sendEvent(
-        EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED,
-        {},
-        PLATFORMS.BOTH
-      );
-    } else if (schoolId === NonSchoolOptions.CLICK_TO_ADD) {
-      setSchoolName('');
-      analyticsReporter.sendEvent(
-        EVENTS.ADD_MANUALLY_CLICKED,
-        {},
-        PLATFORMS.BOTH
-      );
-    } else {
-      const name = schoolsList.find(school => school.value === schoolId)?.text;
-      if (name) {
-        setSchoolName(name);
+    handleSessionStorage(SCHOOL_ID_SESSION_KEY, schoolId, () => {
+      if (schoolId === NonSchoolOptions.NO_SCHOOL_SETTING) {
+        setSchoolName('');
+        analyticsReporter.sendEvent(
+          EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED,
+          {},
+          PLATFORMS.BOTH
+        );
+      } else if (schoolId === NonSchoolOptions.CLICK_TO_ADD) {
+        setSchoolName('');
+        analyticsReporter.sendEvent(
+          EVENTS.ADD_MANUALLY_CLICKED,
+          {},
+          PLATFORMS.BOTH
+        );
+      } else {
+        const name = schoolsList.find(
+          school => school.value === schoolId
+        )?.text;
+        if (name) {
+          setSchoolName(name);
+        }
+        analyticsReporter.sendEvent(
+          EVENTS.SCHOOL_SELECTED_FROM_LIST,
+          {
+            'nces Id': schoolId,
+          },
+          PLATFORMS.BOTH
+        );
       }
-      analyticsReporter.sendEvent(
-        EVENTS.SCHOOL_SELECTED_FROM_LIST,
-        {
-          'nces Id': schoolId,
-        },
-        PLATFORMS.BOTH
-      );
-    }
+    });
   }, [schoolId, schoolsList]);
 
   // Handle schoolName changes
