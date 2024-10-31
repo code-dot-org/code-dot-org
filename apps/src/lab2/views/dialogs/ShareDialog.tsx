@@ -9,14 +9,10 @@ import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import {ProjectType} from '@cdo/apps/lab2/types';
-import {setShowSubmitProjectDialog} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectRedux';
+import {getSubmissionStatus} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import experiments from '@cdo/apps/util/experiments';
-import {
-  AppDispatch,
-  useAppDispatch,
-  useAppSelector,
-} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import trackEvent from '@cdo/apps/util/trackEvent';
 import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -90,8 +86,8 @@ const AfeCareerTourBlock: React.FunctionComponent = () => {
 
 const SubmitButtonInfo: React.FunctionComponent<{
   submissionStatus: ValueOf<typeof ProjectSubmissionStatus> | undefined;
-  dispatch: AppDispatch;
-}> = ({submissionStatus, dispatch}) => {
+  onSubmitClick: () => void;
+}> = ({submissionStatus, onSubmitClick}) => {
   if (
     !experiments.isEnabledAllowingQueryString(experiments.LAB2_SUBMIT_PROJECT)
   ) {
@@ -105,10 +101,7 @@ const SubmitButtonInfo: React.FunctionComponent<{
         type="secondary"
         color="white"
         size="m"
-        onClick={() => {
-          dispatch(hideShareDialog());
-          dispatch(setShowSubmitProjectDialog(true));
-        }}
+        onClick={onSubmitClick}
         className={moduleStyles.projectButton}
       />
     );
@@ -135,8 +128,25 @@ const ShareDialog: React.FunctionComponent<{
   shareUrl: string;
   finishUrl?: string;
   projectType: ProjectType;
-}> = ({dialogId, shareUrl, finishUrl, projectType}) => {
+  onSubmitClick: () => void;
+}> = ({dialogId, shareUrl, finishUrl, projectType, onSubmitClick}) => {
+  const [submissionStatus, setSubmissionStatus] = useState<
+    ValueOf<typeof ProjectSubmissionStatus> | undefined
+  >(undefined);
   const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    const fetchStatus = async () => {
+      try {
+        const response = await getSubmissionStatus();
+        console.log('response.status', response.status);
+        setSubmissionStatus(response.status);
+      } catch (error) {
+        console.error('Error fetching submission status', error);
+      }
+    };
+    fetchStatus();
+  }, []);
 
   useEffect(() => {
     trackEvent('share', 'share_open_dialog', {
@@ -150,10 +160,6 @@ const ShareDialog: React.FunctionComponent<{
   const handleClose = useCallback(
     () => dispatch(hideShareDialog()),
     [dispatch]
-  );
-
-  const submissionStatus = useAppSelector(
-    state => state.submitProject.submissionStatus
   );
 
   return (
@@ -196,7 +202,7 @@ const ShareDialog: React.FunctionComponent<{
                 />
                 <SubmitButtonInfo
                   submissionStatus={submissionStatus}
-                  dispatch={dispatch}
+                  onSubmitClick={onSubmitClick}
                 />
               </div>
             </div>

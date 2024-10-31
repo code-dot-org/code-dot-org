@@ -1,15 +1,15 @@
-import React, {useCallback} from 'react';
+import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import ShareDialogLegacy from '@cdo/apps/code-studio/components/ShareDialog';
+import {
+  hideShareDialog,
+  showShareDialog,
+} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import popupWindow from '@cdo/apps/code-studio/popup-window';
 import {LABS_USING_NEW_SHARE_DIALOG} from '@cdo/apps/lab2/constants';
 import {isSignedIn as getIsSignedIn} from '@cdo/apps/templates/currentUserRedux';
 import SubmitProjectDialog from '@cdo/apps/templates/projects/submitProjectDialog/SubmitProjectDialog';
-import {
-  SubmitProjectState,
-  setShowSubmitProjectDialog,
-} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {LabState} from '../lab2Redux';
@@ -22,10 +22,6 @@ import ShareDialog from './dialogs/ShareDialog';
 const Lab2ShareDialogWrapper: React.FunctionComponent<
   Lab2ShareDialogWrapperProps
 > = ({dialogId, shareUrl, finishUrl}) => {
-  const {showSubmitProjectDialog} = useSelector(
-    (state: {submitProject: SubmitProjectState}) => state.submitProject
-  );
-  const dispatch = useAppDispatch();
   const isProjectLevel =
     useSelector(
       (state: {lab: LabState}) => state.lab.levelProperties?.isProjectLevel
@@ -47,7 +43,8 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   const isShareDialogOpen = useSelector(
     (state: {shareDialog: {isOpen: boolean}}) => state.shareDialog.isOpen
   );
-
+  const [isSubmitProjectDialogOpen, setIsSubmitProjectDialogOpen] =
+    useState(false);
   // We don't currently support dance party projects in Lab2.
   const selectedSong = null;
   // TODO: support thumbnail url.
@@ -61,9 +58,21 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   const isPublished = false;
   const canShareSocial = isSignedIn && is13Plus;
 
-  const onCloseSubmitProjectDialog = useCallback(() => {
-    dispatch(setShowSubmitProjectDialog(false));
-  }, [dispatch]);
+  const dispatch = useAppDispatch();
+
+  const onCloseSubmitProjectDialog = () => {
+    setIsSubmitProjectDialogOpen(false);
+  };
+
+  const onGoBack = () => {
+    setIsSubmitProjectDialogOpen(false);
+    dispatch(showShareDialog());
+  };
+
+  const onSubmitClick = () => {
+    setIsSubmitProjectDialogOpen(true);
+    dispatch(hideShareDialog());
+  };
 
   if (!channelId || !projectType) {
     return null;
@@ -72,8 +81,11 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   if (LABS_USING_NEW_SHARE_DIALOG.includes(projectType)) {
     return (
       <>
-        {showSubmitProjectDialog && (
-          <SubmitProjectDialog onClose={onCloseSubmitProjectDialog} />
+        {isSubmitProjectDialogOpen && (
+          <SubmitProjectDialog
+            onClose={onCloseSubmitProjectDialog}
+            onGoBack={onGoBack}
+          />
         )}
         {isShareDialogOpen && (
           <ShareDialog
@@ -81,6 +93,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
             shareUrl={shareUrl}
             finishUrl={finishUrl}
             projectType={projectType}
+            onSubmitClick={onSubmitClick}
           />
         )}
       </>

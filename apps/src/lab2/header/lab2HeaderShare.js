@@ -4,7 +4,6 @@ import {Provider} from 'react-redux';
 
 import {showShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import {getStore} from '@cdo/apps/redux';
-import {fetchSubmissionStatus} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectRedux';
 
 import Lab2Registry from '../Lab2Registry';
 import Lab2ShareDialogWrapper from '../views/Lab2ShareDialogWrapper';
@@ -41,6 +40,5 @@ export function shareLab2Project(id, finishUrl) {
     );
 
     getStore().dispatch(showShareDialog());
-    getStore().dispatch(fetchSubmissionStatus());
   });
 }

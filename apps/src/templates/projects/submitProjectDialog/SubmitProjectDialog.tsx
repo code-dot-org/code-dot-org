@@ -1,15 +1,13 @@
-import React, {useCallback, useState} from 'react';
+import React, {useState} from 'react';
 
-import {showShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import Link from '@cdo/apps/componentLibrary/link/Link';
 import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import {submitProject} from './submitProjectApi';
-import {setShowSubmitProjectDialog} from './submitProjectRedux';
 
 import moduleStyles from './submit-project-dialog.module.scss';
 
@@ -20,17 +18,17 @@ import moduleStyles from './submit-project-dialog.module.scss';
 
 export interface SubmitProjectDialogProps {
   onClose: () => void;
+  onGoBack: () => void;
 }
 
 const SubmitProjectDialog: React.FunctionComponent<
   SubmitProjectDialogProps
-> = ({onClose}) => {
+> = ({onClose, onGoBack}) => {
   const [projectDescription, setProjectDescription] = useState<string>('');
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const projectType = useAppSelector(
     state => state.lab.channel?.projectType
   ) as string;
-  const dispatch = useAppDispatch();
 
   const onSubmit = async () => {
     try {
@@ -41,11 +39,6 @@ const SubmitProjectDialog: React.FunctionComponent<
       console.error('Publish failed', error);
     }
   };
-
-  const onGoBack = useCallback(() => {
-    dispatch(setShowSubmitProjectDialog(false));
-    dispatch(showShareDialog());
-  }, [dispatch]);
 
   return (
     <AccessibleDialog
