@@ -174,7 +174,7 @@ def parse_options
         options.maximize = true
       end
       opts.on("--ci", "Whether is CI (skip failing CI tests)") do
-        options.is_circle = true
+        options.is_ci = true
       end
       opts.on("--html", "Use html reporter") do
         options.html = true
@@ -673,12 +673,12 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@only_mobile') unless browser['appium:mobile']
   arguments += skip_tag('@no_phone') if browser['name'] == 'iPhone'
   arguments += skip_tag('@only_phone') unless browser['name'] == 'iPhone'
-  arguments += skip_tag('@no_circle') if options.is_circle
+  arguments += skip_tag('@no_ci') if options.is_ci
 
-  # always run locally or during circle runs.
+  # always run locally or during CI runs.
   # Note that you may end up running in more than one browser if you use flags
-  # like [test safari] or [test firefox] during a circle run.
-  arguments += skip_tag('@only_one_browser') if !options.local && !options.is_circle
+  # like [test safari] or [test firefox] during a CI run.
+  arguments += skip_tag('@only_one_browser') if !options.local && !options.is_ci
 
   arguments += skip_tag('@chrome') if browser['browserName'] != 'chrome' && !options.local
   arguments += skip_tag('@no_chrome') if browser['browserName'] == 'chrome'
@@ -743,7 +743,6 @@ def run_feature(browser, feature, options)
   run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
   run_environment['MOBILE'] = browser['appium:mobile'] ? "true" : "false"
   run_environment['TEST_RUN_NAME'] = test_run_string
-  run_environment['IS_CIRCLE'] = options.is_circle ? "true" : "false"
   run_environment['PRIORITY'] = options.priority
 
   # disable some stuff to make require_rails_env run faster within cucumber.

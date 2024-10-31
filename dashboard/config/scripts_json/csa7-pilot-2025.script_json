@@ -17,8 +17,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-10-08 01:55:26 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-10-29 18:56:17 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -99,7 +99,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**How can I keep track of the tasks I need to complete for a project?**\n\nStudents are introduced to the Creative Coding with The Theater Project and evaluate requirements and examples to identify questions and key features. Students learn about project backlogs and benchmarks and set up their Project Planning Board by identifying some of the tasks they need to complete for the project.",
-        "preparation": "* **(Optional)** Print copies of the U7L1 Guided Notes (one for each student)\n* Print copies of the Unit 7 Guide (one for each student)\n* Print copies of the Creative Coding with The Theater Project Planning Guide (one for each student)\n* Gather a manilla folder and a small stack of sticky notes (10-12) for each student\n* Print copies of the Project Planning Board (one per student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-1-project-planning/37939) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Project Planning Guided Notes (one for each student)\n* Print copies of the Unit 7 Guide (one for each student)\n* Print copies of the Creative Coding with The Theater Project Planning Guide (one for each student)\n* Gather a manilla folder and a small stack of sticky notes (10-12) for each student\n* Print copies of the Project Planning Board (one per student)",
         "student_overview": "**How can I keep track of the tasks I need to complete for a project?**\n\nYou have learned a lot about object-oriented programming and the Java programming language throughout the year. In this unit, you have the opportunity to use your new skills to create a program using The Theater that portrays a personal interest or solves a problem that you choose. The Creative Coding with The Theater Project is a large project that you work on throughout the unit, and project management strategies help to organize and structure your work."
       },
       "seeding_key": {
@@ -118,7 +118,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.6\n* Topic Questions 5.9\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**What are the similarities and differences between passing primitives and object references as parameters?**\n\nStudents revisit passing primitives and object references as parameters to identify similarities and differences between each. They explore the impact of using an object reference as a parameter on the original object and identify scenarios when it is not ideal to use an object reference as a parameter. Students then learn about user stories and some for their projects to identify required program features before revisiting their Need to Knows to determine what they have learned that will be useful for their project and what they still need to learn.",
-        "preparation": "* **(Optional)** Print copies of the U7L2 Guided Notes (one for each student)\n* Preview the *Software Engineering: User Stories* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-2-object-references-as-parameters/37940) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Object References as Parameters Guided Notes (one for each student)\n* Preview the *Software Engineering: User Stories* video",
         "student_overview": "**What are the similarities and differences between passing primitives and object references as parameters?**\n\nIn this lesson, you revisit passing primitives and object references as parameters to identify similarities and differences between each. You explore the impact of using an object reference as a parameter on the original object and identify scenarios when it is not ideal to use an object reference as a parameter. You then learn about user stories and write some for your project to identify required program features before revisiting your Need to Knows to determine what you have learned that will be useful for your project and what you still need to learn."
       },
       "seeding_key": {
@@ -137,7 +137,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can overloading a method be useful in my programs?**\n\nStudents previously learned about overloading when writing multiple constructors in a class. In this lesson, students revisit overloaded constructors and learn how overloading can be applied to methods. They explore how overloaded methods work and consider scenarios where overloaded methods would be useful. Students then practice writing and calling overloaded methods and revisit their Need to Knows to determine what they have learned that will be useful for their project and what they still need to learn.",
-        "preparation": "* **(Optional)** Print copies of the U7L3 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-3-overloaded-methods/37941) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Overloaded Methods Guided Notes (one for each student)",
         "student_overview": "**How can overloading a method be useful in my programs?**\n\nYou previously learned about overloading when writing multiple constructors in a class. In this lesson, you revisit overloaded constructors and learn how overloading can be applied to methods. You explore how overloaded methods work and consider scenarios where overloaded methods would be useful. You then practice writing and calling overloaded methods and revisit your Need to Knows to determine what you have learned that will be useful for your project and what you still need to learn."
       },
       "seeding_key": {
@@ -156,7 +156,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How does making a method `private` change its functionality?**\n\nIn this lesson, students have an opportunity to begin planning their Creative Coding with The Theater project. Students should spend this time creating UML diagrams, planning algorithms, and updating their Project Planning Board with tasks they need to complete. They then revisit the `private` keyword and how this access modifier is used to prevent other classes from accessing instance variables. Students explore how the `private` keyword can be used with methods and consider scenarios where they might want to make a method `private` instead of `public`. They practice writing and calling `private` methods and revisit their Need to Knows to determine what they have learned that will be useful for their project and what they still need to learn.",
-        "preparation": "* **(Optional)** Print copies of the U7L4 Guided Notes (one for each student)\n* Preview the *Private Methods* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-4-private-methods/37942) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Private Methods Guided Notes (one for each student)\n* Preview the *Private Methods* video",
         "student_overview": "**How does making a method `private` change its functionality?**\n\nIn this lesson, you have an opportunity to begin planning your Creative Coding with The Theater project. You should spend this time creating UML diagrams, planning algorithms, and updating your Project Planning Board with tasks you need to complete. You then revisit the `private` keyword and how this access modifier is used to prevent other classes from accessing instance variables. You explore how the `private` keyword can be used with methods and consider scenarios where you might want to make a method `private` instead of `public`. You practice writing and calling `private` methods and revisit your Need to Knows to determine what you have learned that will be useful for your project and what you still need to learn."
       },
       "seeding_key": {
@@ -175,7 +175,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can I override methods from other classes?**\n\nIn this lesson, students have an opportunity to continue planning their Creative Coding with The Theater project. Students should spend this time finalizing their UML diagrams and algorithms and updating their Project Planning Board with tasks they have completed and still need to complete. Students then revisit overriding methods and how they used the `super` keyword to call the superclass version of a class. They consider scenarios for overriding methods and practice writing and calling overridden methods of their own. Students then revisit their Need to Knows to determine what they have learned that will be useful for their project and what they still need to learn.",
-        "preparation": "* **(Optional)** Print copies of the U7L5 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-5-overriding-methods/37943) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Overriding Methods Guided Notes (one for each student)",
         "student_overview": "**How can I override methods from other classes?**\n\nIn this lesson, you have an opportunity to continue planning your Creative Coding with The Theater project. You should spend this time finalizing your UML diagrams and algorithms and updating your Project Planning Board with tasks you have completed and still need to complete. You then revisit overriding methods and how you used the `super` keyword to call the superclass version of a class. You consider scenarios for overriding methods and practice writing and calling overridden methods of your own. You then revisit your Need to Knows to determine what you have learned that will be useful for your project and what you still need to learn."
       },
       "seeding_key": {
@@ -193,9 +193,9 @@
       "relative_position": 6,
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
-        "overview": "**Are AI-generated images art?**\n\nIn a previous unit, students explored image manipulation and the beneficial and harmful impacts of deep fakes. In this lesson, students consider ethical and legal issues related to AI-generated images. They learn about various programs that create AI-generated images and how these programs use images from other artists to train their algorithms, often without their knowledge or permission. Students participate in an AI Carousel activity to discuss current issues related to AI-generated images to share their thoughts and ideas, and brainstorm ways these issues can be addressed.",
-        "preparation": "* **(Optional)** Print copies of the U7L6 Guided Notes (one for each student)\n* Print copies of the Project Planning Feedback handout (one for each student)\n* Print the AI Carousel Stations and post around the classroom with chart paper\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-6-intellectual-property/37944) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**Are AI-generated images art?**\n\nIn a previous unit, you explored image manipulation and the beneficial and harmful impacts of deep fakes. In this lesson, you consider ethical and legal issues related to AI-generated images. You learn about various programs that create AI-generated images and how these programs use images from other artists to train their algorithms, often without their knowledge or permission. You participate in an AI Carousel activity to discuss current issues related to AI-generated images to share your thoughts and ideas, and brainstorm ways these issues can be addressed."
+        "overview": "**Are developers responsible for the ethical use of the code they create and integrate?**\n\nIn this lesson, students will explore the ethical and legal issues surrounding the use of open-source code and proprietary software. They will learn about the significance of intellectual property rights and the impact of using open-source code on society, economics, and culture. Through an Open Source Carousel activity, students will engage in discussions on various scenarios related to the ethical use of code, intellectual property rights, and the responsibilities of developers. This lesson encourages critical thinking about how open-source and non-open-source code can be integrated into projects responsibly. ",
+        "preparation": "* **(Optional)** Print copies of the Intellectual Property Guided Notes (one for each student)\n* Print copies of the Project Planning Feedback handout (one for each student)\n* Print the Open Source Carousel Stations and post around the classroom with chart paper",
+        "student_overview": "**Are developers responsible for the ethical use of the code they create and integrate?**\n\nIn this lesson, you will consider the ethical and legal issues related to open-source code and its role in the technology industry. You will learn about the ways open-source projects are created and shared, and the importance of intellectual property rights when developing software. You will participate in an Open Source Carousel activity to discuss current issues related to open-source software, share your thoughts and ideas, and brainstorm ways these issues can be addressed."
       },
       "seeding_key": {
         "lesson.key": "Intellectual Property",
@@ -213,7 +213,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 10.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**What is recursion?**\n\nIn this lesson, students are introduced to recursion through an unplugged activity and realize how these algorithms differ from how they have implemented algorithms throughout the year. Students learn how to identify the base case and recursive case of a recursive algorithm and how to translate an iterative algorithm into a recursive one. They then practice tracing recursive algorithms and consider the benefits and drawbacks of writing an algorithm using recursion.",
-        "preparation": "* Preview the *Recursion* video\n* Print copies of the Recursion Unplugged handout (one for each pair of students)\n* Print copies of the Coloring Page handout\n* Print and cut out the Method Cards\n* Gather sets of ten disposable cups and markers or colored pencils\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-7-recursion/37945) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Recursion Guided Notes (one for each student)\n* Preview the *Recursion* video\n* Print copies of the Recursion Unplugged handout (one for each pair of students)\n* Print copies of the Coloring Page handout\n* Print and cut out the Method Cards\n* Gather sets of ten disposable cups and markers or colored pencils",
         "student_overview": "**What is recursion?**\n\nIn this lesson, you are introduced to recursion through an unplugged activity and realize how these algorithms differ from how you have implemented algorithms throughout the year. You learn how to identify the base case and recursive case of a recursive algorithm and how to translate an iterative algorithm into a recursive one. You then practice tracing recursive algorithms and consider the benefits and drawbacks of writing an algorithm using recursion."
       },
       "seeding_key": {
@@ -231,7 +231,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "Students have worked on their Creative Coding with The Theater Project throughout the unit to plan the classes and algorithms they will need to develop and get feedback from their peers on their plans. In this lesson, they review the project requirements and benchmarks and update their Project Planning Boards before beginning development on their projects. Students have an opportunity to get feedback on their initial program code through a code review to help ensure they are on the right track and to emphasize the iterative development process.",
-        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-8-project-development/37946) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Project Development Guided Notes (one for each student)",
         "student_overview": "You have worked on your Creative Coding with The Theater Project throughout the unit to plan the classes and algorithms you will need to develop and get feedback from your peers on your plans. In this lesson, you review the project requirements and benchmarks and update your Project Planning Board before beginning development on your project. You have an opportunity to get feedback on your initial program code through a code review to help ensure you are on the right track and to emphasize the iterative development process."
       },
       "seeding_key": {
@@ -249,7 +249,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "**What issues and impacts result from software bugs, and what are strategies to maximize system reliability?**\n\nIn this lesson, students explore examples of bugs in applications and programs that have affected system reliability. They review and analyze a real-life open source software bug and discover the impacts bugs can cause. Students consider ways to prevent similar issues in the future and maximize the reliability of open source software, such as contributing code or identifying and submitting bugs.",
-        "preparation": "* **(Optional)** Print copies of the U7L9 Guided Notes (one for each student)\n* Preview *The Rise of Open Source Software* video\n* Print copies of the Open Source Bugs handouts (two copies of one version per pair of students)\n* Print copies of the Unit 7 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-9-system-reliability/37947) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the System Reliability Guided Notes (one for each student)\n* Preview *The Rise of Open Source Software* video\n* Print copies of the Open Source Bugs handouts (two copies of one version per pair of students)\n* Print copies of the Unit 7 Study Guide (one for each student)",
         "student_overview": "**What issues and impacts result from software bugs, and what are strategies to maximize system reliability?**\n\nIn this lesson, you explore examples of bugs in applications and programs that have affected system reliability. You review and analyze a real-life open source software bug and discover the impacts bugs can cause. You consider ways to prevent similar issues in the future and maximize the reliability of open source software, such as contributing code or identifying and submitting bugs."
       },
       "seeding_key": {
@@ -268,7 +268,7 @@
       "properties": {
         "assessment": true,
         "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents continue to develop their Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. Students first self-assess their work to evaluate their progress in completing project requirements, then continue development of your program. They conduct acceptance testing to determine which of their user stories are complete and use the self-assessment and peer feedback to prioritize their remaining tasks. Students use this feedback to finalize development before sharing their projects with their peers to celebrate their successes.",
-        "preparation": "* Preview the *Software Engineering: Acceptance Testing* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-10-creative-coding-with-the-theater-project/37948) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Preview the *Software Engineering: Acceptance Testing* video",
         "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou continue to develop your Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. You first self-assess your work to evaluate your progress in completing project requirements, then continue development of your program. You conduct acceptance testing to determine which of your user stories are complete and use the self-assessment and peer feedback to prioritize your remaining tasks. You use this feedback to finalize development before sharing your project with your peers to celebrate your success."
       },
       "seeding_key": {
@@ -286,7 +286,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**How will I use what I know about `ArrayList`s and standard algorithms to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
-        "preparation": "* Print copies of the MusicQueue FRQ handout (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the MusicQueue FRQ Scoring Guidelines (one for each student)\n* Gather several sharpened pencils and scratch paper\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-11-musicqueue-frq/37949) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print copies of the MusicQueue FRQ handout (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the MusicQueue FRQ Scoring Guidelines (one for each student)\n* Gather several sharpened pencils and scratch paper",
         "student_overview": "**How will I use what I know about `ArrayList`s and standard algorithms to answer a Free Response Question?**\n\nYou practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
       },
       "seeding_key": {
@@ -305,7 +305,7 @@
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
-        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-12-unit-7-assessment/37950) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource",
         "student_overview": "Assess your progress through the Unit 7 Assessment."
       },
       "seeding_key": {
@@ -339,7 +339,6 @@
       "properties": {
         "assessment": true,
         "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents continue to develop their Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. Students first self-assess their work to evaluate their progress in completing project requirements, then finish developing their projects. ",
-        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-10-creative-coding-with-the-theater-project/37948) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou continue to develop your Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. You first self-assess your work to evaluate your progress in completing project requirements, then finish developing your project. "
       },
       "seeding_key": {
@@ -2284,7 +2283,7 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "15",
-        "name": "AI-Generated Art"
+        "name": "Open Source Code"
       },
       "seeding_key": {
         "activity_section.key": "8f655747-dbb7-4e99-959f-2e38803e04d1",
@@ -2292,78 +2291,67 @@
       }
     },
     {
-      "key": "af10eb28-8e40-4b5f-adcc-d74a25a49732",
+      "key": "3f3aee71-1126-47d3-8c47-3d1d7ee795a2",
       "position": 2,
       "properties": {
-        "description": "We previously explored image manipulation and how machine learning can be used to create deep fakes. Today, we'll take a look at another way AI and machine learning is used to generate images.",
+        "description": "In previous units, we have discussed the creative process and ethical considerations in developing programs. Today we will dive deeper into who owns a program once it is created, and the legal and ethical issues that might arise, especially when using open-source code. ",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "af10eb28-8e40-4b5f-adcc-d74a25a49732",
+        "activity_section.key": "3f3aee71-1126-47d3-8c47-3d1d7ee795a2",
         "lesson_activity.key": "7578e185-83bf-4f5c-806a-75b09fc494c6"
       }
     },
     {
-      "key": "ee1cbf9c-d8d0-4154-8e9d-007f94700173",
+      "key": "8a9293ff-f761-4c2d-9445-45b6855ee5a2",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the example of AI-generated artwork.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder or feel?*\n\n**Discussion Goal:** Students share their reactions to the example and discuss their thoughts on whether they believe this was right or ethical. Students may express surprise or may agree with the person who won the award.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Who owns a program when it is created? What legal issues could come up when making programs? Who is responsible if a program is used in a harmful way, even if it was originally meant to solve a problem?*\n\n**Discussion Goal:** Students share their thoughts on program ownership. Students will discuss who holds the rights to a program once it is created, as well as the legal responsibilities of making programs. Students should generate ideas related to questions around ultimate responsibility if a program is used in a harmful way. Students should be expected to express a range of views on the ethical and legal responsibilities of developers. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***intellectual property*** and ***open source code***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Describe an example of open-source software being used, in this case, Django being used by Instagram in order to quickly scale and maintain reliability. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slideshow to explain four different ways developers find open source projects.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slideshow to list the steps a developer should take in order to incorporate open source code in a developer’s project. "
+      },
+      "seeding_key": {
+        "activity_section.key": "8a9293ff-f761-4c2d-9445-45b6855ee5a2",
+        "lesson_activity.key": "7578e185-83bf-4f5c-806a-75b09fc494c6"
+      }
+    },
+    {
+      "key": "86f8162c-0b28-4bae-818c-f314e9975ab0",
+      "position": 4,
+      "properties": {
+        "description": "Using open-source code requires developers to follow licensing rules and give proper credit. Today, we’ll explore scenarios where developers face legal and ethical choices with open-source code.",
+        "duration": "15",
+        "name": "Responsible Open Source Practices",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "86f8162c-0b28-4bae-818c-f314e9975ab0",
+        "lesson_activity.key": "7578e185-83bf-4f5c-806a-75b09fc494c6"
+      }
+    },
+    {
+      "key": "52a51b6e-3a58-4deb-a275-4acd6456acd1",
+      "position": 5,
+      "properties": {
+        "description": "**Group:** Place students in small groups of three or four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a different colored pen or marker.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the instructions for the Open Source Carousel.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Assign each group to a station.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give groups 1-2 minutes to discuss the topic or question at their station and write down their thoughts and ideas on the chart paper using their assigned colored pen or marker.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
+            "markdown": "When circulating during this group discussion and the rotations that follow, actively listen for the connections students are making to the ethical and legal implications of using open-source code. Some guiding questions might be: “How might using someone’s code without permission affect the original creator” or “Can you think of a scenario where a program designed to help could end up causing harm?” "
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "ee1cbf9c-d8d0-4154-8e9d-007f94700173",
+        "activity_section.key": "52a51b6e-3a58-4deb-a275-4acd6456acd1",
         "lesson_activity.key": "7578e185-83bf-4f5c-806a-75b09fc494c6"
       }
     },
     {
-      "key": "104ddda3-a71d-466b-b17a-97277ca2f4f7",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of AI art-generating programs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how AI art-generating programs work."
-      },
-      "seeding_key": {
-        "activity_section.key": "104ddda3-a71d-466b-b17a-97277ca2f4f7",
-        "lesson_activity.key": "7578e185-83bf-4f5c-806a-75b09fc494c6"
-      }
-    },
-    {
-      "key": "e0ba87a6-3996-4691-8161-ac0c0512e496",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Should we consider AI-generated images art?*\n\n**Discussion Goal:** Students share their opinions on whether AI-generated images can be considered art and explain their reasoning. For example, some students might believe that these are not art because of the lack of human effort while other students might believe these are art because the images have to be generated with prompts and modifications to achieve the desired effect."
-      },
-      "seeding_key": {
-        "activity_section.key": "e0ba87a6-3996-4691-8161-ac0c0512e496",
-        "lesson_activity.key": "7578e185-83bf-4f5c-806a-75b09fc494c6"
-      }
-    },
-    {
-      "key": "047d5f10-944d-4590-93c4-149bb09aeb40",
+      "key": "09aa22f3-b3a9-4427-b8a8-b28890be9559",
       "position": 6,
       "properties": {
-        "description": "Programs that generate images use large amounts of data to train the AI. This data often consists of images found on the web from other artists and may be used without their knowledge or consent.",
-        "duration": "15",
-        "name": "Intellectual Property",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to rotate to the next station and read the new topic or question and the previous group's responses. Have students discuss the topic or question and the responses with their group and add new thoughts and ideas to the chart paper using their assigned colored pen or marker. Students can also write questions about things the other groups wrote. Continue this process until each group is back at their original station.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have each group share the responses at their station."
       },
       "seeding_key": {
-        "activity_section.key": "047d5f10-944d-4590-93c4-149bb09aeb40",
-        "lesson_activity.key": "7578e185-83bf-4f5c-806a-75b09fc494c6"
-      }
-    },
-    {
-      "key": "b708f389-a83f-4ce1-957f-ed8f00888207",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***intellectual property***.\n\n**Group:** Place students in small groups of three or four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a different colored pen or marker.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the instructions for the AI Carousel and assign each group to a station.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give groups 1-2 minutes to discuss the topic or question at their station and write down their thoughts and ideas on the chart paper using their assigned colored pen or marker.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to rotate to the next station and read the new topic or question and the previous group's responses. Have students discuss the topic or question and the responses with their group and add new thoughts and ideas to the chart paper using their assigned colored pen or marker. Students can also write questions about things the other groups wrote. Continue this process until each group is back at their original station.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have each group share the responses at their station."
-      },
-      "seeding_key": {
-        "activity_section.key": "b708f389-a83f-4ce1-957f-ed8f00888207",
+        "activity_section.key": "09aa22f3-b3a9-4427-b8a8-b28890be9559",
         "lesson_activity.key": "7578e185-83bf-4f5c-806a-75b09fc494c6"
       }
     },
@@ -2371,7 +2359,7 @@
       "key": "62a209c2-a96a-42c6-b84e-19834de31d62",
       "position": 1,
       "properties": {
-        "description": "AI-generated images can be useful in some scenarios, but there are some ethical and legal concerns that we have seen that should be considered in how we create and use these images.",
+        "description": "Open source code can be useful in many scenarios, but there are some ethical and legal concerns that we have seen that should be considered in how developers find and incorporate open-source code.",
         "name": "But, Because, So",
         "remarks": true
       },
@@ -5554,8 +5542,20 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U7L1 Guided Notes",
-      "url": "https://docs.google.com/document/d/10uZL0vEcN6ZyVkqGJG04-AAY1X8aqJZNBdTZuSsgFCM/edit?usp=sharing",
+      "name": "[EXEMPLAR] Recursion Guided Notes",
+      "url": "https://docs.google.com/document/d/1FfBQ0CnVljj9UnGv8uAUIsYAUiryR9KVy4bw4X2lKRM/edit?usp=drive_link",
+      "key": "_exemplar_recursion_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_recursion_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Project Planning Guided Notes",
+      "url": "https://docs.google.com/document/d/1qQWwuK29wljoNS9nDxgUqKoi8cC8bgcl8sfn71Sy8EM/edit?usp=drive_link",
       "key": "_exemplar_u7l1_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -5566,8 +5566,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U7L2 Guided Notes",
-      "url": "https://docs.google.com/document/d/1xvQ30YDKINp9au31nVvGbJYMHwPSfhUQ8UYsjwsLmjc/edit?usp=sharing",
+      "name": "[EXEMPLAR] Object References as Parameters Guided Notes",
+      "url": "https://docs.google.com/document/d/1mTMR0AzGYZUhVD13aAQ0P0R7JabDoXy6IimP-njLpDU/edit?usp=drive_link",
       "key": "_exemplar_u7l2_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -5578,8 +5578,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U7L3 Guided Notes",
-      "url": "https://docs.google.com/document/d/1YtlpkMlTPXioa0RwQGnvChyCqUd4J9TsZNNtnWaPT3s/edit?usp=sharing",
+      "name": "[EXEMPLAR] Overloaded Methods Guided Notes",
+      "url": "https://docs.google.com/document/d/1v27nSw8WIp0j2pewENRBXNiigh8VzJj0q1eIFkk354k/edit?usp=drive_link",
       "key": "_exemplar_u7l3_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -5590,8 +5590,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U7L4 Guided Notes",
-      "url": "https://docs.google.com/document/d/1DaJih1fMyVxTKTDL-wW-oRU4SKx4bBP1LL7LKc8MX9w/edit?usp=sharing",
+      "name": "[EXEMPLAR] Private Methods Guided Notes",
+      "url": "https://docs.google.com/document/d/1e1Ppg1D_7XjsYtLonieYPvSM3Tv2POz8vTQCUiLOOyM/edit?usp=drive_link",
       "key": "_exemplar_u7l4_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -5602,8 +5602,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U7L5 Guided Notes",
-      "url": "https://docs.google.com/document/d/1HbmRnxJJjdsUNDVgjs3ccX89nPuUisHgrCto_vbGqfE/edit?usp=sharing",
+      "name": "[EXEMPLAR] Overriding Methods Guided Notes",
+      "url": "https://docs.google.com/document/d/1v-xefkOsM_M6rN15o0mLiobchKG9RKIdZI_Hr-GD4pE/edit?usp=drive_link",
       "key": "_exemplar_u7l5_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -5614,8 +5614,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U7L6 Guided Notes",
-      "url": "https://docs.google.com/document/d/1BEYXBX-VOjqpP3ZQd0WTuL2g2zG-puxYSP5qypncY3I/edit?usp=sharing",
+      "name": "[EXEMPLAR] Intellectual Property Guided Notes",
+      "url": "https://docs.google.com/document/d/1sjH-yMy4VTFX-L8-DWlqyWyCWiM15OHTbY2__ia1VDc/edit?usp=drive_link",
       "key": "_exemplar_u7l6_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -5626,8 +5626,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U7L9 Guided Notes",
-      "url": "https://docs.google.com/document/d/1f87HaFOh5yBSEIkFr-yGXozIJb71gEVVtI612-xpOeU/edit?usp=sharing",
+      "name": "[EXEMPLAR] System Reliability Guided Notes",
+      "url": "https://docs.google.com/document/d/1wiNPpZdxnYqKCZFE6MSU0DtPtiAzJMV8bnaMFGANmGU/edit?usp=drive_link",
       "key": "_exemplar_u7l9_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -5635,6 +5635,16 @@
       },
       "seeding_key": {
         "resource.key": "_exemplar_u7l9_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Unit 7 Guide",
+      "url": "https://docs.google.com/document/d/1gtk9K701IWEjmYu03A8qw56vYd4Z_Dr08SUPffSo3J4/edit?usp=sharing",
+      "key": "_exemplar_unit_7_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_7_guide"
       }
     },
     {
@@ -5651,7 +5661,7 @@
     },
     {
       "name": "[KEY] Open Source Bugs (Version A)",
-      "url": "https://docs.google.com/document/d/167YRD2GJEjpzg-MQ1ilSdDs2ZZosNvQdKeX8JEdl-vU/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/15pwovyH-jWPauMw0mq8mNFkBjZZ82ELkVqea5-SjwsE/edit?usp=drive_link",
       "key": "_key_open_source_bugs_version_a_",
       "properties": {
         "audience": "Verified Teacher",
@@ -5663,7 +5673,7 @@
     },
     {
       "name": "[KEY] Open Source Bugs (Version B)",
-      "url": "https://docs.google.com/document/d/1_b5MOxIimwxjACaDeDsNEQZMfiwn4nvUPtrAawZxc9Y/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/12f_S0H06CVyj6qU5Q65JLD31_rh3PGk9bDw44HoA0H0/edit?usp=drive_link",
       "key": "_key_open_source_bugs_version_b_",
       "properties": {
         "audience": "Verified Teacher",
@@ -5675,7 +5685,7 @@
     },
     {
       "name": "[KEY] Open Source Bugs (Version C)",
-      "url": "https://docs.google.com/document/d/15A2XsAZU1HXJddXN1hdgudrRg1Ln8QLM86TFiQxua14/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1KYU-bkOIouLG2_zL9ent0n5JNknQnWXewTdfZeEHm90/edit?usp=drive_link",
       "key": "_key_open_source_bugs_version_c_",
       "properties": {
         "audience": "Verified Teacher",
@@ -5687,7 +5697,7 @@
     },
     {
       "name": "[KEY] Recursion Unplugged",
-      "url": "https://docs.google.com/document/d/1OwrXVykoeHqDyAPVC8Xzct500VDaBbYe6QQjMZqwRto/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1LdEyQGofCZhD-RVqANrzwH4ZPATbrQwXGgZkTQfRNV4/edit?usp=drive_link",
       "key": "_key_recursion_unplugged",
       "properties": {
         "audience": "Verified Teacher",
@@ -5698,8 +5708,8 @@
       }
     },
     {
-      "name": "[KEY] U7L1 Extra Practice",
-      "url": "https://docs.google.com/document/d/1aC0Kl2VXUU59WTm4Z3VKXIkM8uU2nXIFtMM91_16P-k/edit?usp=share_link",
+      "name": "[KEY] Project Planning Extra Practice",
+      "url": "https://docs.google.com/document/d/1SeJeE55b-nGWb9RDxFecSHVeuNiwca0bFPfT7Mqd93o/edit?usp=drive_link",
       "key": "_key_u7l1_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -5710,8 +5720,8 @@
       }
     },
     {
-      "name": "[KEY] U7L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/17DopuzfXl9txxMXVBsz_I9jZV7D06_vfFM-2A9cNFZc/edit?usp=share_link",
+      "name": "[KEY] Object References as Parameters Extra Practice",
+      "url": "https://docs.google.com/document/d/1nnGYGJiroGE7GiTpDsBI_nNDXHtI5yAwF5WNJG0DlU4/edit?usp=drive_link",
       "key": "_key_u7l2_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -5722,8 +5732,8 @@
       }
     },
     {
-      "name": "[KEY] U7L3 Extra Practice",
-      "url": "https://docs.google.com/document/d/1Ie1PHBHQRt3VZhlbRCbPgBKZhuJn6WTj38L6zgavews/edit?usp=share_link",
+      "name": "[KEY] Overloaded Methods Extra Practice",
+      "url": "https://docs.google.com/document/d/1roHk3iT57UAiERhwnSYY6dA8eH3_8rqOO-d0E678R-k/edit?usp=drive_link",
       "key": "_key_u7l3_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -5734,8 +5744,8 @@
       }
     },
     {
-      "name": "[KEY] U7L4 Extra Practice",
-      "url": "https://docs.google.com/document/d/1j94mzjbTC4BTt7iSzRWhPPke_exjnfeVbhIie7P70ZA/edit?usp=share_link",
+      "name": "[KEY] Private Methods Extra Practice",
+      "url": "https://docs.google.com/document/d/1UhCYgT7oiDjY6ibTqjY8DuxsxafDhS9_ZW9fRv540o0/edit?usp=drive_link",
       "key": "_key_u7l4_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -5746,8 +5756,8 @@
       }
     },
     {
-      "name": "[KEY] U7L5 Extra Practice",
-      "url": "https://docs.google.com/document/d/1dobcvWZQdvThRDIILR-PecscL5QQNr8migdr5OPyskg/edit?usp=share_link",
+      "name": "[KEY] Overriding Methods Extra Practice",
+      "url": "https://docs.google.com/document/d/1ZWXCtPAdUsmulKe44m94iDGixznZa_iBJDyecBXWXR4/edit?usp=drive_link",
       "key": "_key_u7l5_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -5758,8 +5768,8 @@
       }
     },
     {
-      "name": "[KEY] U7L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1r9wDGXbHJY5FmmQOnzNSUgFI-hh9efC3hoTq51qqGVs/edit?usp=share_link",
+      "name": "[KEY] Intellectual Property Extra Practice",
+      "url": "https://docs.google.com/document/d/1Tn1HYTXZeym0nsgyKhwp-FBCGgkT1un3KI2Xbvqb-d4/edit?usp=drive_link",
       "key": "_key_u7l6_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -5770,8 +5780,8 @@
       }
     },
     {
-      "name": "[KEY] U7L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/1MGd3XGmjZOzsGjMuUaPKMAVNbhmn3IAD3GKqCnCR_wo/edit?usp=share_link",
+      "name": "[KEY] Recursion Extra Practice",
+      "url": "https://docs.google.com/document/d/1jcqu_rJnzmZmiOEgy-MQgGXoJiRrFy4Y_24mfv0edKE/edit?usp=drive_link",
       "key": "_key_u7l7_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -5782,8 +5792,8 @@
       }
     },
     {
-      "name": "[KEY] U7L8 Extra Practice",
-      "url": "https://docs.google.com/document/d/1pLBWcS86Cm3RJWG3McUBfRpYip82tpWs9SRpfJs5H1s/edit?usp=share_link",
+      "name": "[KEY] Project Development Extra Practice",
+      "url": "https://docs.google.com/document/d/1vZLy32Ky15Wji9VXIVwKz8Agh69FOd8YV-OSEk9NOnI/edit?usp=drive_link",
       "key": "_key_u7l8_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -5794,8 +5804,8 @@
       }
     },
     {
-      "name": "[KEY] U7L9 Extra Practice",
-      "url": "https://docs.google.com/document/d/1zjvzddEryBFBV6YzskCyLeDNIKBOilQ46LB-1jSq8h8/edit?usp=share_link",
+      "name": "[KEY] System Reliability Extra Practice",
+      "url": "https://docs.google.com/document/d/10tqKZWlq02FeUAKW0ims61oVWwxfHkrgNnQ3sxNzTOk/edit?usp=drive_link",
       "key": "_key_u7l9_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -5806,20 +5816,54 @@
       }
     },
     {
-      "name": "AI Carousel Stations",
-      "url": "https://docs.google.com/document/d/1QK4Y2bco4wEqBpHbCKlKGyPf-Vx_D6vMJpSLIgftj_I/edit?usp=sharing",
-      "key": "ai_carousel_stations",
+      "name": "All Resources",
+      "url": "/s/csa7-pilot-2025/resources",
+      "key": "all_resources_6",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
+        "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "ai_carousel_stations"
+        "resource.key": "all_resources_6"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa7-pilot-2025/standards",
+      "key": "all_standards_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_6"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa7-pilot-2025/vocab",
+      "key": "all_vocabulary_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_6"
+      }
+    },
+    {
+      "name": "CNBC Article",
+      "url": "https://docs.google.com/document/d/1CE3ekrb7pJMvQhX2N7M26l3togQSs4Ofu8niy2sAOW4/edit?usp=drive_link",
+      "key": "cnbc_article",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "cnbc_article"
       }
     },
     {
       "name": "Coloring Page",
-      "url": "https://docs.google.com/document/d/1njVylQ0RpzNSK7Bvn4GODpYB8FxpCYRdBEJzBCe6OCo/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1868VUOHMzvW94AyElPLTyFyAUGeBZW2jTfbNYZRm8tE/edit?usp=drive_link",
       "key": "coloring_page",
       "properties": {
         "audience": "Student",
@@ -5842,7 +5886,7 @@
     },
     {
       "name": "Creative Coding with The Theater Project",
-      "url": "https://docs.google.com/presentation/d/1PLgzAEep1M_0ESlO2Oc3d56I5Z5btlcfSY6z_Cl71fw/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1ixUCQu3Rh_jX9oB3-CyakdmUCEJgek0s3-EBWmZ4wz4/edit?usp=drive_link",
       "key": "creative_coding_with_the_theater_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -5854,7 +5898,7 @@
     },
     {
       "name": "Creative Coding with The Theater Project",
-      "url": "https://docs.google.com/presentation/d/15HgbxJV1-xidPa5ZBnT5zLwb8tjk-ApkZ34WLDenkaw/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1Ec_7REWdeOAVDpHjeyDxUPH9BJNu6z9Lulj6275g5E0/edit?usp=drive_link",
       "key": "creative_coding_with_the_theater_project_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -5937,7 +5981,7 @@
     },
     {
       "name": "Intellectual Property",
-      "url": "https://docs.google.com/presentation/d/1KYAvrTtfhsQRjw5kby8JIcdb40eKM_8-z0BJaFWhZJ4/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1hqcuxW9YLtSQBP8QuBa0f2dwohvMe7kmsuvgiS1hXGU/edit?usp=drive_link",
       "key": "intellectual_property",
       "properties": {
         "audience": "Verified Teacher",
@@ -5962,7 +6006,7 @@
     },
     {
       "name": "Method Cards",
-      "url": "https://docs.google.com/document/d/19G0Gx14aa2W8QsLwNwX3NK1qPCVeZ4afpnuYVn5EPo4/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1rqnUDk75P5b8yup2BYvLoDLqC9gYBF-5gjUrfQheofk/edit?usp=drive_link",
       "key": "method_cards",
       "properties": {
         "audience": "Verified Teacher",
@@ -5975,7 +6019,7 @@
     },
     {
       "name": "MusicQueue FRQ",
-      "url": "https://docs.google.com/presentation/d/1hXhij3s5LKKIf_2W4QUNd_e_PKeoEhhwjQg90bf5MJM/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1_esZ1dTnEEs9q6BAoiuSjk7F5lnPM5jPLnK7rFqE0Sg/edit?usp=drive_link",
       "key": "musicqueue_frq",
       "properties": {
         "audience": "Verified Teacher",
@@ -6013,7 +6057,7 @@
     },
     {
       "name": "Object References as Parameters",
-      "url": "https://docs.google.com/presentation/d/1yLQ9f0z5aQkHauNgYu-6eiStTUCOa_M6VuD6aXHbVgs/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1oxL5f4stQYpokg8KeSoyjtcTTGiwUVwxKMJbpWsyzjI/edit?usp=drive_link",
       "key": "object_references_as_parameters",
       "properties": {
         "audience": "Verified Teacher",
@@ -6025,7 +6069,7 @@
     },
     {
       "name": "Open Source Bugs (Version A)",
-      "url": "https://docs.google.com/document/d/18yJwKGi2U5UV912UAQ0bzl4TKV1C_QkLeYUy385v3lA/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1_g_kf1_KgQ4R6lpbmWYpD4abQlwMHQ2_rq-ms-EH12w/edit?usp=drive_link",
       "key": "open_source_bugs_version_a_",
       "properties": {
         "audience": "Student",
@@ -6038,7 +6082,7 @@
     },
     {
       "name": "Open Source Bugs (Version B)",
-      "url": "https://docs.google.com/document/d/15W9SGP88AVebmADHRzaBxXrimrCFhEOBa--Vh7zJbas/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1INTLwDE_9_u57Zu1J1W3845FRfBqPVL2HLH4uLWW2mA/edit?usp=drive_link",
       "key": "open_source_bugs_version_b_",
       "properties": {
         "audience": "Student",
@@ -6051,7 +6095,7 @@
     },
     {
       "name": "Open Source Bugs (Version C)",
-      "url": "https://docs.google.com/document/d/1zZaquHEkLFKVpWFrZleTC3UR-qlk8zh7gwB3oM2AY6U/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/12Armi4EqmNCl38CvmCWhzaKSYsJkndNOWAUbvvZ-2Ro/edit?usp=drive_link",
       "key": "open_source_bugs_version_c_",
       "properties": {
         "audience": "Student",
@@ -6063,8 +6107,20 @@
       }
     },
     {
+      "name": "Open Source Carousel Stations",
+      "url": "https://docs.google.com/document/d/1Ibak5-hPKWjBGgO8_qs2fMetsQhqf7xJG9I3SD8fToA/edit?usp=drive_link",
+      "key": "open_source_carousel_stations",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "open_source_carousel_stations"
+      }
+    },
+    {
       "name": "Overloaded Methods",
-      "url": "https://docs.google.com/presentation/d/10-EQNaEO0pa2eOXPFyHLANXt863NzCfLzsQyicmi8qE/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1-pZeJVBkCCuIfY6ZsYU5c2FDD0RjkyC5qZ0WOhUztE4/edit?usp=drive_link",
       "key": "overloaded_methods",
       "properties": {
         "audience": "Verified Teacher",
@@ -6076,7 +6132,7 @@
     },
     {
       "name": "Overriding Methods",
-      "url": "https://docs.google.com/presentation/d/1QKJV_wi1OZGZIR-2Dl4oy9-Jdv1jtC9CaegxxJD83us/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1lHn73vz31NOMYDZuwX6pRTATx8gW2K3xeTXNZxkZKk8/edit?usp=drive_link",
       "key": "overriding_methods",
       "properties": {
         "audience": "Verified Teacher",
@@ -6088,7 +6144,7 @@
     },
     {
       "name": "Private Methods",
-      "url": "https://docs.google.com/presentation/d/1ik508agnZyVz3cnK_W-1JsZOwXWLpjEsSmToVT4D4Ls/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1il90zhTHcFeimSR2AwH31HWvzsGbswp0hExf8fuiHu0/edit?usp=drive_link",
       "key": "private_methods",
       "properties": {
         "audience": "Verified Teacher",
@@ -6122,7 +6178,7 @@
     },
     {
       "name": "Project Development",
-      "url": "https://docs.google.com/presentation/d/1rcIiBhmUPZxrO61RagfyR9C5u3wjnneEnHIa48Z3euw/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1k2SPod2KIduGCgAZJJaoim8G42jq3dZPhQoGnWz91Wg/edit?usp=drive_link",
       "key": "project_development_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -6134,7 +6190,7 @@
     },
     {
       "name": "Project Planning",
-      "url": "https://docs.google.com/presentation/d/1TqCT5v3QGQOTzShVrVEDfKMT7L9iwNe4JbMGg31xrZw/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1SGG5xvSTTKKhzI01gAqItvJb5M6sBG_RkbUza4U71uM/edit?usp=drive_link",
       "key": "project_planning_2",
       "properties": {
         "audience": "Verified Teacher",
@@ -6146,7 +6202,7 @@
     },
     {
       "name": "Project Planning Board",
-      "url": "https://docs.google.com/document/d/1-2ptMxJJJkg00NWIyaBkPEYb_bJ_Nspy3QGfHwDsRlI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1RBa-Ll4JhK98--bqC1wedc08iWeBrflZRvKp29nBJJ0/edit?usp=drive_link",
       "key": "project_planning_board",
       "properties": {
         "audience": "Student",
@@ -6172,7 +6228,7 @@
     },
     {
       "name": "Recursion",
-      "url": "https://docs.google.com/presentation/d/1iWXwv7ZhncHIZxSA0fcl-ELGILhXLtaeo_AB1MTQWi4/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1DUEnA1XeSHd-EOlnuKTa344hGHGCOdkduA55jt1PpJ8/edit?usp=drive_link",
       "key": "recursion",
       "properties": {
         "audience": "Verified Teacher",
@@ -6195,8 +6251,21 @@
       }
     },
     {
+      "name": "Recursion Guided Notes",
+      "url": "https://docs.google.com/document/d/1q81JRW2eiF8fuoo79vFYW_oxor8s8IJdgUmcljoymhI/edit?usp=drive_link",
+      "key": "recursion_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "recursion_guided_notes"
+      }
+    },
+    {
       "name": "Recursion Unplugged",
-      "url": "https://docs.google.com/document/d/1Q373N_M2qkMTpDJB8PPbRtA9DFxdC6bWnsWnMuRxaEg/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1FcwiRElqzxJ8dtgEXroGfyWLYGcxlVz0Crcny-8glAw/edit?usp=drive_link",
       "key": "recursion_unplugged",
       "properties": {
         "audience": "Student",
@@ -6233,7 +6302,7 @@
     },
     {
       "name": "System Reliability",
-      "url": "https://docs.google.com/presentation/d/1DzXSX8Nn-hkKqK3GpJDAcuAe9fx_9T91HaUmK7fJmrI/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1raGL2ANJbAnBt4O2Q_RIbeNXhmmuRapvek0b_EuHB8E/edit?usp=drive_link",
       "key": "system_reliability",
       "properties": {
         "audience": "Verified Teacher",
@@ -6241,6 +6310,19 @@
       },
       "seeding_key": {
         "resource.key": "system_reliability"
+      }
+    },
+    {
+      "name": "System Reliability Extra Practice",
+      "url": "https://docs.google.com/document/d/1EiUk4UYn8_HGGaD6rjt5naV7beOl17jDDUxlOhSn_yE/edit?usp=drive_link",
+      "key": "system_reliability_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "system_reliability_extra_practice"
       }
     },
     {
@@ -6256,8 +6338,21 @@
       }
     },
     {
-      "name": "U7L1 Extra Practice",
-      "url": "https://docs.google.com/document/d/1hOSwQd7E1l3pXUkFiiirCGg-frqjoYQC9Q-37v2P_pE/edit?usp=share_link",
+      "name": "The Verge Article",
+      "url": "https://docs.google.com/document/d/1Yw0xiau0H7W5TtUOJ1tQK-a1nGPuA0qSnIhMpkA7Qnk/edit?usp=drive_link",
+      "key": "the_verge_article",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "the_verge_article"
+      }
+    },
+    {
+      "name": "Project Planning Extra Practice",
+      "url": "https://docs.google.com/document/d/1MPaLKUH7n629UPmD54-M50OxQ53-B7TELkr_7Mf2CYo/edit?usp=drive_link",
       "key": "u7l1_extra_practice",
       "properties": {
         "audience": "Student",
@@ -6269,8 +6364,8 @@
       }
     },
     {
-      "name": "U7L1 Guided Notes",
-      "url": "https://docs.google.com/document/d/1nsgoWppwGLVIEQxNoD_bDfp6u2x2Un7nmxzMWcykcDM/edit?usp=sharing",
+      "name": "Project Planning Guided Notes",
+      "url": "https://docs.google.com/document/d/1TguVBOEPlj24sVSawZDCWHGuzJlIzhCVRnIINDQj16M/edit?usp=drive_link",
       "key": "u7l1_guided_notes",
       "properties": {
         "audience": "Student",
@@ -6282,8 +6377,8 @@
       }
     },
     {
-      "name": "U7L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/15rgTpB15uBh5je--Lzyl8kK_gWkoONmrRuP4wQJecOQ/edit?usp=share_link",
+      "name": "Object References as Parameters Extra Practice",
+      "url": "https://docs.google.com/document/d/13uKn-RSXEm9l_PxLv15DytxfcPOoXvNwEYGloz20udc/edit?usp=drive_link",
       "key": "u7l2_extra_practice",
       "properties": {
         "audience": "Student",
@@ -6295,8 +6390,8 @@
       }
     },
     {
-      "name": "U7L2 Guided Notes",
-      "url": "https://docs.google.com/document/d/10J9xl7LIx5VbFrBRvcsBpd4RUvnocGMvCxb10Nxxb1U/edit?usp=sharing",
+      "name": "Object References as Parameters Guided Notes",
+      "url": "https://docs.google.com/document/d/1EW0ESbrsjPqnl8AftAGCz7TM9J_vVBrj0_cfaHp8PBo/edit?usp=drive_link",
       "key": "u7l2_guided_notes",
       "properties": {
         "audience": "Student",
@@ -6308,8 +6403,8 @@
       }
     },
     {
-      "name": "U7L3 Extra Practice",
-      "url": "https://docs.google.com/document/d/1sip1MuPw6KfA59_wRLyATXXnITkyflGU-rPXp_yfVIg/edit?usp=share_link",
+      "name": "Overloaded Methods Extra Practice",
+      "url": "https://docs.google.com/document/d/1WUlDA93dBAU_1p86VBBvhxbUnVrd8AV8DyAkcid5vi0/edit?usp=drive_link",
       "key": "u7l3_extra_practice",
       "properties": {
         "audience": "Student",
@@ -6321,8 +6416,8 @@
       }
     },
     {
-      "name": "U7L3 Guided Notes",
-      "url": "https://docs.google.com/document/d/1XJT1mBsfC-iWrRdBy88VdWaBpNGPw0w5mzZit4UiGyw/edit?usp=sharing",
+      "name": "Overloaded Methods Guided Notes",
+      "url": "https://docs.google.com/document/d/1OqccUReMAwYllZM0jaW1sL1KXwO8j0s2H6va8kHPzIw/edit?usp=drive_link",
       "key": "u7l3_guided_notes",
       "properties": {
         "audience": "Student",
@@ -6334,8 +6429,8 @@
       }
     },
     {
-      "name": "U7L4 Extra Practice",
-      "url": "https://docs.google.com/document/d/1MZHEOBHbfF76G5zj6DewLqpDxoG1oeJYOLMTq__cxAg/edit?usp=share_link",
+      "name": "Private Methods Extra Practice",
+      "url": "https://docs.google.com/document/d/1LAUObHPaj75yZP50l_dgJOTbQGP47zWIfP7FB_ZdKxI/edit?usp=drive_link",
       "key": "u7l4_extra_practice",
       "properties": {
         "audience": "Student",
@@ -6347,8 +6442,8 @@
       }
     },
     {
-      "name": "U7L4 Guided Notes",
-      "url": "https://docs.google.com/document/d/1IwDBAn32IAr7zbxZT4eoU5EvyBvz62s1Hy-TGGhCPPw/edit?usp=sharing",
+      "name": "Private Methods Guided Notes",
+      "url": "https://docs.google.com/document/d/123aNcwJUljvSpvNYAQXjs4q-0MxUgMT4Ca-OVxPiO5E/edit?usp=drive_link",
       "key": "u7l4_guided_notes",
       "properties": {
         "audience": "Student",
@@ -6360,8 +6455,8 @@
       }
     },
     {
-      "name": "U7L5 Extra Practice",
-      "url": "https://docs.google.com/document/d/1IEWMv_L9iv1nBsNvxFF7PxJ8s1mGngMHgMPtuVkWDho/edit?usp=share_link",
+      "name": "Overriding Methods Extra Practice",
+      "url": "https://docs.google.com/document/d/13YHdupRrDABmx1mymfRlGRxAeTHHHe6JaM-aU-k_jlo/edit?usp=drive_link",
       "key": "u7l5_extra_practice",
       "properties": {
         "audience": "Student",
@@ -6373,8 +6468,8 @@
       }
     },
     {
-      "name": "U7L5 Guided Notes",
-      "url": "https://docs.google.com/document/d/1530Mu1BuRUMb1uu2zAEQpOh2WCRLkcTfvEY-oHq3HIQ/edit?usp=sharing",
+      "name": "Overriding Methods Guided Notes",
+      "url": "https://docs.google.com/document/d/1NkFV_N11q79WpzHXEJEr5rPAXgoC6oTtUI-whQIsmiY/edit?usp=drive_link",
       "key": "u7l5_guided_notes",
       "properties": {
         "audience": "Student",
@@ -6386,8 +6481,8 @@
       }
     },
     {
-      "name": "U7L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1Z5x0TLHGgnEPdzR-6KpSNsVSIxVgSgj4M5ZD3dcomBQ/edit?usp=share_link",
+      "name": "Intellectual Property Extra Practice",
+      "url": "https://docs.google.com/document/d/1yqyh5jk1Z683zt27itdS0EuUO0KfCrwxM5KfBLXtlgc/edit?usp=drive_link",
       "key": "u7l6_extra_practice",
       "properties": {
         "audience": "Student",
@@ -6399,8 +6494,8 @@
       }
     },
     {
-      "name": "U7L6 Guided Notes",
-      "url": "https://docs.google.com/document/d/1mkyozOZKXWoms3DNdv9R_g5s_gs3i8GtD12Zu-Rc0wI/edit?usp=sharing",
+      "name": "Intellectual Property Guided Notes",
+      "url": "https://docs.google.com/document/d/1YRNKz8nUi2116pQOeQg0bt0yfQVY_ExjBFXSFeJVx_A/edit?usp=drive_link",
       "key": "u7l6_guided_notes",
       "properties": {
         "audience": "Student",
@@ -6412,8 +6507,8 @@
       }
     },
     {
-      "name": "U7L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/1j9E__64mUwYP8z-mN5dXcGklXw2mruK_SOKV6gIHAhU/edit?usp=share_link",
+      "name": "Recursion Extra Practice",
+      "url": "https://docs.google.com/document/d/19wfnJ7UI9nshA2NxTo5MdMBmwSKNzVDCS-vfgoVms-I/edit?usp=drive_link",
       "key": "u7l7_extra_practice",
       "properties": {
         "audience": "Student",
@@ -6425,8 +6520,8 @@
       }
     },
     {
-      "name": "U7L8 Extra Practice",
-      "url": "https://docs.google.com/document/d/1yh2nWu2ErbFYjzsiZvYHmIpSh9fYimlFZf6yo6vtdDs/edit?usp=share_link",
+      "name": "Project Development Extra Practice",
+      "url": "https://docs.google.com/document/d/1whts0rs9olp8aupFjTf3MQAgt6HTIhsUzNYGpGFB67k/edit?usp=drive_link",
       "key": "u7l8_extra_practice",
       "properties": {
         "audience": "Student",
@@ -6438,8 +6533,8 @@
       }
     },
     {
-      "name": "U7L9 Guided Notes",
-      "url": "https://docs.google.com/document/d/1sCSDNKDrA_BElrgA66d0PK_2b6dwKHHNSbHBoo27qUE/edit?usp=sharing",
+      "name": "System Reliability Guided Notes",
+      "url": "https://docs.google.com/document/d/1-KneYocD1jBTYYG0ZZ2kXbBjIcbO5qrkjFPDb9l8eW8/edit?usp=drive_link",
       "key": "u7l9_guided_notes",
       "properties": {
         "audience": "Student",
@@ -6452,7 +6547,7 @@
     },
     {
       "name": "Unit 7 Assessment",
-      "url": "https://docs.google.com/presentation/d/1U5kqfQyeoXefD2-mUehedQb6ppVarALo76e_hdkpH7o/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1WCcUeAH9uliwPrH3SE57JzIs5CFxi0cZNtXdsxbKz-A/edit?usp=drive_link",
       "key": "unit_7_assessment",
       "properties": {
         "audience": "Verified Teacher",
@@ -6463,8 +6558,38 @@
       }
     },
     {
+      "name": "Unit 7 Guide",
+      "url": "https://docs.google.com/document/d/1XZyUJnzhjdyMN8vhPX-PoApl9JVhprYOvw0B__rF1OY/edit?usp=drive_link",
+      "key": "unit_7_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unit_7_guide"
+      }
+    },
+    {
+      "name": "Unit 7 Overview",
+      "url": "https://docs.google.com/document/d/1aC6x2I3mokYbGuKM3wS4VeU9SVoIcyfOvyhOri71o0E/edit?usp=drive_link",
+      "key": "unit_7_overview",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unit_7_overview"
+      }
+    },
+    {
+      "name": "Unit 7 Slides",
+      "url": "https://docs.google.com/presentation/d/19U_VRhA01opZ63EirbY4jMNMNrLMk5vNyGV7yuvxwQg/edit?usp=sharing",
+      "key": "unit_7_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unit_7_slides"
+      }
+    },
+    {
       "name": "Unit 7 Study Guide",
-      "url": "https://docs.google.com/document/d/1m3jf7bmZaR2fk85b0mR-Ut_5yRatwXk8Bl0g30Gc71k/edit?usp=share_link",
+      "url": "https://docs.google.com/document/d/1V0GPRklj1CEY-yCYll4XumJdNyDt6oi71_elTXV8pzg/edit?usp=drive_link",
       "key": "unit_7_study_guide",
       "properties": {
         "audience": "Student",
@@ -6473,6 +6598,16 @@
       },
       "seeding_key": {
         "resource.key": "unit_7_study_guide"
+      }
+    },
+    {
+      "name": "Unit 7 Word Wall Cards",
+      "url": "https://docs.google.com/document/d/1SFb792S6Z653PiXu3997937OeR8eTitKmGsdwpuhCPk/edit?usp=sharing",
+      "key": "unit_7_word_wall_cards",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unit_7_word_wall_cards"
       }
     },
     {
@@ -6546,7 +6681,7 @@
     {
       "seeding_key": {
         "lesson.key": "Intellectual Property",
-        "resource.key": "ai_carousel_stations"
+        "resource.key": "cnbc_article"
       }
     },
     {
@@ -6558,7 +6693,19 @@
     {
       "seeding_key": {
         "lesson.key": "Intellectual Property",
+        "resource.key": "open_source_carousel_stations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
         "resource.key": "project_planning_feedback_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "resource.key": "the_verge_article"
       }
     },
     {
@@ -6828,6 +6975,12 @@
     {
       "seeding_key": {
         "lesson.key": "Recursion",
+        "resource.key": "_exemplar_recursion_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Recursion",
         "resource.key": "_key_recursion_unplugged"
       }
     },
@@ -6859,6 +7012,12 @@
       "seeding_key": {
         "lesson.key": "Recursion",
         "resource.key": "recursion_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Recursion",
+        "resource.key": "recursion_guided_notes"
       }
     },
     {
@@ -6930,6 +7089,12 @@
     {
       "seeding_key": {
         "lesson.key": "System Reliability",
+        "resource.key": "system_reliability_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "System Reliability",
         "resource.key": "the_rise_of_open_source_software"
       }
     },
@@ -6961,6 +7126,30 @@
   "scripts_resources": [
     {
       "seeding_key": {
+        "resource.key": "_exemplar_unit_7_guide",
+        "script.name": "csa7-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_6",
+        "script.name": "csa7-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_6",
+        "script.name": "csa7-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_6",
+        "script.name": "csa7-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "creating_and_using_word_walls_6",
         "script.name": "csa7-pilot-2025"
       }
@@ -6974,6 +7163,36 @@
     {
       "seeding_key": {
         "resource.key": "programming_levels_in_csa",
+        "script.name": "csa7-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_7_guide",
+        "script.name": "csa7-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_7_overview",
+        "script.name": "csa7-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_7_slides",
+        "script.name": "csa7-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_7_study_guide",
+        "script.name": "csa7-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_7_word_wall_cards",
         "script.name": "csa7-pilot-2025"
       }
     }
@@ -7040,6 +7259,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "intellectual_property"
+      }
+    },
+    {
+      "key": "open_source_code",
+      "word": "open source code",
+      "definition": "code that anyone can see, use, change, and share",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "open_source_code"
       }
     },
     {
@@ -7120,6 +7349,12 @@
       "seeding_key": {
         "lesson.key": "Intellectual Property",
         "vocabulary.key": "intellectual_property"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "vocabulary.key": "open_source_code"
       }
     },
     {
@@ -7354,7 +7589,7 @@
     {
       "key": "7b4e60c7-c3d9-4d27-8890-106b1fc4885c",
       "properties": {
-        "description": "Explain how programs that create AI-generated images collect and use data"
+        "description": "Identify the ethical and legal considerations when incorporating open source code into projects"
       },
       "seeding_key": {
         "lesson.key": "Intellectual Property",
@@ -7394,7 +7629,7 @@
     {
       "key": "a1d70362-b507-43b8-ae70-484095d74cfd",
       "properties": {
-        "description": "Identify ethical and legal concerns related to AI-generated images"
+        "description": "Describe the potential societal, economic, and cultural impacts of creating and using software"
       },
       "seeding_key": {
         "lesson.key": "Intellectual Property",
@@ -7449,6 +7684,16 @@
       "seeding_key": {
         "lesson.key": "Creative Coding with The Theater Project",
         "objective.key": "dc4db250-8189-4fab-b8f5-d40e280acda5"
+      }
+    },
+    {
+      "key": "dd84a39e-603a-49d1-a636-d3c41958913a",
+      "properties": {
+        "description": "Discuss the importance of intellectual property rights and how they apply to software development"
+      },
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "objective.key": "dd84a39e-603a-49d1-a636-d3c41958913a"
       }
     },
     {
@@ -7515,64 +7760,36 @@
     {
       "seeding_key": {
         "lesson.key": "Intellectual Property",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "IOC-1.A.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "IOC-1.A.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.2.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Object References as Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.B.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.4.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Object References as Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.F.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.5.A.8"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Object References as Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.F.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.6.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Object References as Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.F.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Object References as Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.F.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Object References as Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.F.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Object References as Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.H.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.6.A.3"
       }
     },
     {
@@ -7592,8 +7809,8 @@
     {
       "seeding_key": {
         "lesson.key": "Overloaded Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.F.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.9.B.4"
       }
     },
     {
@@ -7606,8 +7823,8 @@
     {
       "seeding_key": {
         "lesson.key": "Overriding Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.12"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.15.A.5"
       }
     },
     {
@@ -7627,8 +7844,8 @@
     {
       "seeding_key": {
         "lesson.key": "Private Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.A.6"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.3.A.6"
       }
     },
     {
@@ -7655,43 +7872,29 @@
     {
       "seeding_key": {
         "lesson.key": "Recursion",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.O.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.16.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Recursion",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.O.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.16.A.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Recursion",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.O.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.16.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Recursion",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.O.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursion",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.O.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursion",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.O.6"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.17.A.1"
       }
     },
     {
@@ -7704,8 +7907,8 @@
     {
       "seeding_key": {
         "lesson.key": "System Reliability",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "IOC-1.A.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.2.A.1"
       }
     }
   ],

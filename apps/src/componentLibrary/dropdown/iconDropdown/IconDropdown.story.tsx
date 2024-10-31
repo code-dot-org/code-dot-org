@@ -106,6 +106,33 @@ DefaultIconDropdown.args = {
   size: 'm',
 };
 
+export const ReadOnlyIconDropdown = SingleTemplate.bind({});
+ReadOnlyIconDropdown.args = {
+  name: 'readOnly-dropdown',
+  options: [
+    {
+      value: 'option-1',
+      label: 'Option 1',
+      icon: {iconName: 'check', iconStyle: 'solid'},
+    },
+    {
+      value: 'option-2',
+      label: 'Option 2',
+      icon: {iconName: 'xmark', iconStyle: 'solid'},
+    },
+  ],
+  selectedOption: {
+    value: 'option-1',
+    label: 'Option 1',
+    icon: {iconName: 'check', iconStyle: 'solid'},
+  },
+  labelText: 'ReadOnly Dropdown',
+  onChange: args => null,
+  readOnly: true,
+  color: dropdownColors.black,
+  size: 'm',
+};
+
 export const DisabledIconDropdown = SingleTemplate.bind({});
 DisabledIconDropdown.args = {
   name: 'disabled-dropdown',
@@ -163,6 +190,114 @@ WithDisabledOptionIconDropdown.args = {
   },
   labelText: 'Dropdown with disabled option',
   onChange: args => null,
+  size: 'm',
+};
+
+export const StyledAsFieldIconDropdown = SingleTemplate.bind({});
+StyledAsFieldIconDropdown.args = {
+  name: 'styled-as-field-icon-dropdown',
+  options: [
+    {
+      value: 'option-1',
+      label: 'Option 1',
+      icon: {iconName: 'check', iconStyle: 'solid'},
+    },
+    {
+      value: 'option-2',
+      label: 'Option 2',
+      icon: {iconName: 'xmark', iconStyle: 'solid'},
+    },
+  ],
+  selectedOption: {
+    value: 'option-1',
+    label: 'Option 1',
+    icon: {iconName: 'check', iconStyle: 'solid'},
+  },
+  labelText: 'Styled as Field Icon Dropdown',
+  onChange: args => console.log(args),
+  helperMessage: 'Helper message',
+  styleAsFormField: true,
+  size: 'm',
+};
+
+export const WithErrorDropdown = SingleTemplate.bind({});
+WithErrorDropdown.args = {
+  name: 'error-dropdown',
+  options: [
+    {
+      value: 'option-1',
+      label: 'Option 1',
+      icon: {iconName: 'check', iconStyle: 'solid'},
+    },
+    {
+      value: 'option-2',
+      label: 'Option 2',
+      icon: {iconName: 'xmark', iconStyle: 'solid'},
+    },
+  ],
+  selectedOption: {
+    value: 'option-1',
+    label: 'Option 1',
+    icon: {iconName: 'check', iconStyle: 'solid'},
+  },
+  labelText: 'Error Dropdown',
+  onChange: args => console.log(args),
+  errorMessage: 'Error message',
+  size: 'm',
+};
+
+export const WithHelperMessageDropdown = SingleTemplate.bind({});
+WithHelperMessageDropdown.args = {
+  name: 'helper-message-dropdown',
+  options: [
+    {
+      value: 'option-1',
+      label: 'Option 1',
+      icon: {iconName: 'check', iconStyle: 'solid'},
+    },
+    {
+      value: 'option-2',
+      label: 'Option 2',
+      icon: {iconName: 'xmark', iconStyle: 'solid'},
+    },
+  ],
+  selectedOption: {
+    value: 'option-1',
+    label: 'Option 1',
+    icon: {iconName: 'check', iconStyle: 'solid'},
+  },
+  labelText: 'Helper Message Dropdown',
+  onChange: args => console.log(args),
+  helperMessage: 'Helper message',
+  size: 'm',
+};
+
+export const WithHelperMessageAndIconDropdown = SingleTemplate.bind({});
+WithHelperMessageAndIconDropdown.args = {
+  name: 'helper-icon-dropdown',
+  options: [
+    {
+      value: 'option-1',
+      label: 'Option 1',
+      icon: {iconName: 'check', iconStyle: 'solid'},
+    },
+    {
+      value: 'option-2',
+      label: 'Option 2',
+      icon: {iconName: 'xmark', iconStyle: 'solid'},
+    },
+  ],
+  selectedOption: {
+    value: 'option-1',
+    label: 'Option 1',
+    icon: {iconName: 'check', iconStyle: 'solid'},
+  },
+  labelText: 'Helper Icon Dropdown',
+  onChange: args => console.log(args),
+  helperIcon: {
+    iconName: 'info-circle',
+  },
+  helperMessage: 'Helper message',
   size: 'm',
 };
 
