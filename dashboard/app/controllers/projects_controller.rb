@@ -548,7 +548,7 @@ class ProjectsController < ApplicationController
     end
     # TODO: Store submission_description in our database.
     # Send ZenDesk ticket with user/project info and submission description.
-    send_project_submission(current_user&.name || '', current_user&.username || '', project_type, channel_id, submission_description)
+    send_project_submission(current_user.name || '', current_user.username || '', project_type, channel_id, submission_description)
   end
 
   def can_publish_age_status
