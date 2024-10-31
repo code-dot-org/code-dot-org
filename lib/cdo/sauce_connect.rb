@@ -35,7 +35,6 @@ module Cdo
 
         cmd = [
           "sc", "run",
-          "--fail",
           "--region", "us-west-1",
           "--tunnel-domains", tunnel_domains,
           "--tunnel-name", CDO.saucelabs_tunnel_name,
