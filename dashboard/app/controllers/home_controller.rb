@@ -43,11 +43,11 @@ class HomeController < ApplicationController
       Metrics::Events.log_event(
         session: session,
         user: current_user,
-        event_name: 'Global Edition Region And Locale Changed',
+        event_name: 'Global Edition Region Selected',
         metadata: {
           country: request.country_code,
-          locale: params[:locale],
           region: ge_region,
+          locale: params[:locale],
         }
       )
     end
