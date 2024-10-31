@@ -73,14 +73,13 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     schoolId: string;
     schoolZip: string;
     schoolName: string;
-    schoolsList: SchoolDropdownOption[];
   }>({
     country: detectedCountry,
     schoolId: detectedSchoolId,
     schoolZip: detectedZip,
     schoolName: detectedSchoolName,
-    schoolsList: [],
   });
+  const [schoolsList, setSchoolsList] = useState<SchoolDropdownOption[]>([]);
 
   // State hooks
   const setCountry = (value: string) => {
@@ -107,12 +106,6 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
       schoolName: value,
     }));
   };
-  const setSchoolsList = (value: SchoolDropdownOption[]) => {
-    setState(prevState => ({
-      ...prevState,
-      schoolsList: value,
-    }));
-  };
 
   const reset = () => {
     setState({
@@ -120,7 +113,6 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
       schoolId: detectedSchoolId,
       schoolZip: detectedZip,
       schoolName: detectedSchoolName,
-      schoolsList: [],
     });
   };
 
@@ -148,7 +140,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     }
   };
 
-  const {country, schoolId, schoolZip, schoolName, schoolsList} = state;
+  const {country, schoolId, schoolZip, schoolName} = state;
 
   // Handle country changes
   useEffect(() => {
@@ -165,6 +157,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
   useEffect(() => {
     if (!ZIP_REGEX.test(schoolZip)) {
       handleSessionStorage(SCHOOL_ZIP_SESSION_KEY, '');
+      setSchoolsList([]);
       return;
     }
 
