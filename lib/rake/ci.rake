@@ -114,7 +114,7 @@ namespace :ci do
       RakeUtils.system_stream_output "bundle exec ./runner.rb " \
           "--feature #{container_features.join(',')} " \
           "--local " \
-          "--circle " \
+          "--ci " \
           "#{use_saucelabs ? "--config #{ui_test_browsers.join(',')} " : ''}" \
           "--parallel #{use_saucelabs ? 16 : 8} " \
           "--abort_when_failures_exceed 10 " \
@@ -128,7 +128,7 @@ namespace :ci do
             "--feature #{container_eyes_features.join(',')} " \
             "--config Chrome,iPhone " \
             "--local " \
-            "--circle " \
+            "--ci " \
             "--parallel 10 " \
             "--retry_count 1 " \
             "--with-status-page " \
