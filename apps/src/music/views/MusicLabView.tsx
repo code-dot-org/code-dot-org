@@ -183,6 +183,11 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     }
   }, [dispatch, validationStateCallout]);
 
+  const hideChaff = useCallback(
+    () => blocklyWorkspace.hideChaff(),
+    [blocklyWorkspace]
+  );
+
   const renderInstructions = useCallback(
     (position: InstructionsPosition) => {
       return (
@@ -300,6 +305,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 clearCode={clearCode}
                 allowPackSelection={allowPackSelection}
                 skipUrl={skipUrl}
+                hideChaff={hideChaff}
               />
             }
           >
