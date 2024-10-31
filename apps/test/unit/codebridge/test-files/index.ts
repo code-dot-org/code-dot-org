@@ -4,21 +4,27 @@ import {LevelProperties} from '@cdo/apps/lab2/types';
 import {InitProgressPayload, LevelResults} from '@cdo/apps/types/progressTypes';
 
 const initProgressPayload: InitProgressPayload = require('./initProgressPayload.json');
-const levelProperties: LevelProperties = require('./levelProperties.json');
 const levelResults: LevelResults = require('./levelResults.json');
+const nonValidatedLevelProperties: LevelProperties = require('./nonValidatedLevelProperties.json');
+const predictLevelProperties: LevelProperties = require('./predictLevelProperties.json');
 const testProject: ProjectType = require('./project.json');
 const smallProject: ProjectType = require('./smallProject.json');
 const starterFile: ProjectFile = require('./starterFile.json');
+const submittableLevelProperties: LevelProperties = require('./submittableLevelProperties.json');
 const supportFile: ProjectFile = require('./supportFile.json');
+const validatedLevelProperties: LevelProperties = require('./validatedLevelProperties.json');
 const validationFile: ProjectFile = require('./validationFile.json');
 
 export {
   initProgressPayload,
-  levelProperties,
   levelResults,
+  nonValidatedLevelProperties,
+  predictLevelProperties,
   testProject,
   smallProject,
   starterFile,
+  submittableLevelProperties,
   supportFile,
+  validatedLevelProperties,
   validationFile,
 };

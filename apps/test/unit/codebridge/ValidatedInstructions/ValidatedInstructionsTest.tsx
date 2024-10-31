@@ -23,8 +23,9 @@ import commonI18n from '@cdo/locale';
 
 import {
   initProgressPayload,
-  levelProperties,
+  validatedLevelProperties,
   levelResults,
+  nonValidatedLevelProperties,
 } from '../test-files';
 import {getDefaultCodebridgeContext} from '../test_utils';
 
@@ -37,7 +38,6 @@ describe('ValidatedInstructions', () => {
     store = getStore();
     store.dispatch(initProgress(initProgressPayload));
     store.dispatch(mergeResults(levelResults));
-    store.dispatch(onLevelChange({levelProperties}));
   });
 
   afterEach(() => {
@@ -55,6 +55,7 @@ describe('ValidatedInstructions', () => {
   }
 
   it('Continue button is visible for an already-passed level', () => {
+    store.dispatch(onLevelChange({levelProperties: validatedLevelProperties}));
     // Default progress state is on a level that has already passed.
     renderDefault();
 
@@ -65,6 +66,9 @@ describe('ValidatedInstructions', () => {
   it('For a non-validated level, continue button shows up when you have edited and run code', () => {
     // Level 1 in the progression, which is "in progress"
     store.dispatch(setCurrentLevelId('1'));
+    store.dispatch(
+      onLevelChange({levelProperties: nonValidatedLevelProperties})
+    );
     renderDefault();
 
     expect(
@@ -82,6 +86,7 @@ describe('ValidatedInstructions', () => {
   it('For a validated level, continue button shows up when you have passed tests', () => {
     // Level 3 in the progression is validated and not yet passed
     store.dispatch(setCurrentLevelId('3'));
+    store.dispatch(onLevelChange({levelProperties: validatedLevelProperties}));
     renderDefault();
 
     expect(
