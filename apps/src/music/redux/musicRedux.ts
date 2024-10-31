@@ -196,7 +196,10 @@ const musicSlice = createSlice({
       action: PayloadAction<{events: PlaybackEvent[]; lastMeasure: number}>
     ) => {
       state.playbackEvents.push(...action.payload.events);
-      state.lastMeasure = action.payload.lastMeasure;
+      state.lastMeasure = Math.max(
+        state.lastMeasure,
+        action.payload.lastMeasure
+      );
     },
     addOrderedFunctions: (
       state,

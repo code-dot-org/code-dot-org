@@ -105,6 +105,10 @@ class Ability
         project_owner.id == user.id || can?(:code_review, project_owner)
       end
 
+      can :submit, Project do |project|
+        project.submission_status == SharedConstants::PROJECT_SUBMISSION_STATUS[:CAN_SUBMIT]
+      end
+
       can :create, CodeReview do |code_review, project|
         code_review.user_id == user.id &&
           project.owner_id == user.id

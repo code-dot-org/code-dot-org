@@ -42,14 +42,14 @@
           "type": "text",
           "name": "event_date",
           "visibleIf": "{teacher_account} = true",
-          "title": "What is the date of your event?",
+          "title": "What was the date of your event?",
           "inputType": "date"
         },
         {
           "type": "radiogroup",
           "name": "event_type",
           "visibleIf": "{teacher_account} = true",
-          "title": "Is this an \"Experience CS\" event or a \"Connect with CS\" event? ",
+          "title": "Was this an \"Experience CS\" event or a \"Connect with CS\" event? ",
           "choices": [
             {
               "value": "experience_cs",
@@ -65,21 +65,21 @@
           "type": "text",
           "name": "total_participants",
           "visibleIf": "{teacher_account} = true",
-          "title": "How many students attended your event? If you do not know, leave blank. ",
+          "title": "How many students attended your event? If you do not know, provide your best estimate. ",
           "inputType": "number"
         },
         {
           "type": "text",
           "name": "pre_enrollment",
           "visibleIf": "{teacher_account} = true",
-          "title": "At the *start* of your event, how many students indicated interest in enrolling in a computer science class at your school next year? \n\nIf you do not know, leave blank. ",
+          "title": "At the *start* of your event, how many students indicated interest in enrolling in a computer science class at your school next year? \n\nIf you do not know, leave it blank. ",
           "inputType": "number"
         },
         {
           "type": "text",
           "name": "post_enrollment",
           "visibleIf": "{teacher_account} = true",
-          "title": "At the *end* of your event, how many students indicated interest in enrolling in a computer science class at your school next year? \n\nIf you do not know, leave blank.",
+          "title": "At the *end* of your event, how many students indicated interest in enrolling in a computer science class at your school next year? \n\nIf you do not know, leave it blank.",
           "inputType": "number"
         },
         {

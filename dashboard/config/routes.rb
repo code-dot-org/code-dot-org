@@ -250,6 +250,9 @@ Dashboard::Application.routes.draw do
 
     get "/gallery", to: redirect("/projects/public")
 
+    get 'projects/:project_type/:channel_id/submission_status', to: 'projects#submission_status'
+    post 'projects/:project_type/:channel_id/submit', to: 'projects#submit'
+
     get 'projects/featured', to: 'projects#featured'
     delete '/featured_projects/:channel_id', to: 'featured_projects#destroy'
     put '/featured_projects/:channel_id/unfeature', to: 'featured_projects#unfeature'
@@ -302,6 +305,11 @@ Dashboard::Application.routes.draw do
     get "projects(/script/:script_id)(/script_level/:script_level_id)/level/:level_id(/user/:user_id)", to: 'projects#get_or_create_for_level'
 
     post '/locale', to: 'home#set_locale', as: 'locale'
+
+    if CDO.use_geolocation_override
+      get '/geolocate', to: 'home#geolocate'
+      get '/geolocate/*ip', to: 'home#set_geolocation_override', constraints: {ip: /[^\/]+/}
+    end
 
     # quick links for cartoon network arabic
     get '/flappy/lang/ar', to: 'home#set_locale', as: 'flappy/lang/ar', locale: 'ar-SA', user_return_to: '/flappy/1'
