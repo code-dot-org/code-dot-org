@@ -60,6 +60,7 @@ class DCDOBase < DynamicConfigBase
       'hoc-2024-sweepstakes': DCDO.get('hoc-2024-sweepstakes', false),
       # TODO ACQ-2556 - Remove this after the 2024 HOC launch
       'hoc-2024-nov-launch': DCDO.get('hoc-2024-nov-launch', false),
+      'browser-tts-button-enabled': DCDO.get('browser-tts-button-enabled', true),
     }
   end
 end
