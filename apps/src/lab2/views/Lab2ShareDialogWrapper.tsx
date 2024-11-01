@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import ShareDialogLegacy from '@cdo/apps/code-studio/components/ShareDialog';
@@ -9,9 +9,12 @@ import {
 import popupWindow from '@cdo/apps/code-studio/popup-window';
 import {LABS_USING_NEW_SHARE_DIALOG} from '@cdo/apps/lab2/constants';
 import {isSignedIn as getIsSignedIn} from '@cdo/apps/templates/currentUserRedux';
+import {getSubmissionStatus} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
 import SubmitProjectDialog from '@cdo/apps/templates/projects/submitProjectDialog/SubmitProjectDialog';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
 
+import {ValueOf} from '../../types/utils';
 import {LabState} from '../lab2Redux';
 
 import ShareDialog from './dialogs/ShareDialog';
@@ -59,6 +62,22 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   const canShareSocial = isSignedIn && is13Plus;
 
   const dispatch = useAppDispatch();
+  const [submissionStatus, setSubmissionStatus] = useState<
+    ValueOf<typeof ProjectSubmissionStatus> | undefined
+  >(undefined);
+
+  useEffect(() => {
+    const fetchStatus = async () => {
+      try {
+        const response = await getSubmissionStatus();
+        console.log('response.status', response.status);
+        setSubmissionStatus(response.status);
+      } catch (error) {
+        console.error('Error fetching submission status', error);
+      }
+    };
+    fetchStatus();
+  }, []);
 
   const onCloseSubmitProjectDialog = () => {
     setIsSubmitProjectDialogOpen(false);
@@ -94,6 +113,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
             finishUrl={finishUrl}
             projectType={projectType}
             onSubmitClick={onSubmitClick}
+            submissionStatus={submissionStatus}
           />
         )}
       </>

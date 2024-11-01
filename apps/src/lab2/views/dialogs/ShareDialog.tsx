@@ -9,7 +9,6 @@ import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import {ProjectType} from '@cdo/apps/lab2/types';
-import {getSubmissionStatus} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -129,24 +128,16 @@ const ShareDialog: React.FunctionComponent<{
   finishUrl?: string;
   projectType: ProjectType;
   onSubmitClick: () => void;
-}> = ({dialogId, shareUrl, finishUrl, projectType, onSubmitClick}) => {
-  const [submissionStatus, setSubmissionStatus] = useState<
-    ValueOf<typeof ProjectSubmissionStatus> | undefined
-  >(undefined);
+  submissionStatus: ValueOf<typeof ProjectSubmissionStatus> | undefined;
+}> = ({
+  dialogId,
+  shareUrl,
+  finishUrl,
+  projectType,
+  onSubmitClick,
+  submissionStatus,
+}) => {
   const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    const fetchStatus = async () => {
-      try {
-        const response = await getSubmissionStatus();
-        console.log('response.status', response.status);
-        setSubmissionStatus(response.status);
-      } catch (error) {
-        console.error('Error fetching submission status', error);
-      }
-    };
-    fetchStatus();
-  }, []);
 
   useEffect(() => {
     trackEvent('share', 'share_open_dialog', {
