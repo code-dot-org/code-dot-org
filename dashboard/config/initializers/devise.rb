@@ -339,6 +339,9 @@ Devise.setup do |config|
     auth.cookies[environment_specific_cookie_name("_shortName")] = {value: "", expires: Time.at(0), domain: :all}
     auth.cookies[environment_specific_cookie_name("_experiments")] = {value: "", expires: Time.at(0), domain: :all}
     auth.cookies[environment_specific_cookie_name("_assumed_identity")] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
+    # statsig_stable_id is set in the application controller so it's available for
+    # all users, both signed-in and signed-out. When the user logs out, we remove
+    # this cookie because it is user-specific.
     auth.cookies[:statsig_stable_id] = {value: "", expires: Time.at(0), domain: :all}
 
     # These marketing cookies are set in the home_controller in init_homepage. When the user logs out, we
@@ -351,9 +354,9 @@ Devise.setup do |config|
 
   OmniAuth.config.before_request_phase do |env|
     Metrics::Events.log_event(
-      session: env['rack.session'],
+      cookies: env['rack.request.cookie_hash'],
       event_name: "#{env['omniauth.strategy'].options[:name]}-begin-auth",
-      )
+    )
   end
 
   # ==> Mountable engine configurations

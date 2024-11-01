@@ -12,9 +12,9 @@ require 'cdo/statsig'
 # }
 #
 # Metrics::Events.log_event(event_name: 'some_event_name')
-# Metrics::Events.log_event(user: current_user, event_name: 'some_event_name', metadata: metadata)
-# Metrics::Events.log_event(user: current_user, event_name: 'some_event_name', event_value: 'some_event_value', metadata: metadata)
-# Metrics::Events.log_event(user: current_user, event_name: 'some_event_name', get_enabled_experiments: true)
+# Metrics::Events.log_event(user: current_user, event_name: 'some_event_name', metadata: metadata, cookies: cookies)
+# Metrics::Events.log_event(user: current_user, event_name: 'some_event_name', event_value: 'some_event_value', metadata: metadata, cookies: cookies)
+# Metrics::Events.log_event(user: current_user, event_name: 'some_event_name', get_enabled_experiments: true, cookies: cookies)
 
 module Metrics
   module Events
