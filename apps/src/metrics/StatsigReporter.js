@@ -58,6 +58,7 @@ class StatsigReporter {
       disableErrorLogging: true,
       overrideStableID: this.stable_id,
     };
+    this.log(`Statsig Stable ID: ${this.stable_id}`);
 
     this.initialize(this.api_key, this.user, this.options);
   }

@@ -45,7 +45,7 @@ module SignUpTracking
     DCDO.get('sign_up_split_test', 0)
   end
 
-  def self.log_load_sign_up(session)
+  def self.log_load_sign_up(session, cookies)
     event_name = new_sign_up_experience?(session) ? 'load-new-sign-up-page' : 'load-sign-up-page'
     FirehoseClient.instance.put_record(
       :analysis,
@@ -67,7 +67,7 @@ module SignUpTracking
       )
   end
 
-  def self.log_begin_sign_up(user, session)
+  def self.log_begin_sign_up(user, session, cookies)
     return unless user && session
     result = user.errors.empty? ? 'success' : 'error'
     tracking_data = {
@@ -91,7 +91,7 @@ module SignUpTracking
       )
   end
 
-  def self.log_load_finish_sign_up(session, provider)
+  def self.log_load_finish_sign_up(session, provider, cookies)
     FirehoseClient.instance.put_record(
       :analysis,
       {
@@ -112,7 +112,7 @@ module SignUpTracking
       )
   end
 
-  def self.log_cancel_finish_sign_up(session, provider)
+  def self.log_cancel_finish_sign_up(session, provider, cookies)
     FirehoseClient.instance.put_record(
       :analysis,
       {
@@ -133,7 +133,7 @@ module SignUpTracking
       )
   end
 
-  def self.log_oauth_callback(provider, session)
+  def self.log_oauth_callback(provider, session, cookies)
     return unless provider && session
     event_name = session[:sign_up_tracking_expiration]&.future? ? "#{provider}-signup-callback" : "#{provider}-callback"
 
@@ -159,8 +159,8 @@ module SignUpTracking
       )
   end
 
-  def self.log_sign_in(user, session, request)
-    return unless user && session && request
+  def self.log_sign_in(user, session, request, cookies)
+    return unless user && session && request && cookies
     provider = request.env['omniauth.auth'].provider.to_s
     if session[:sign_up_tracking_expiration]&.future?
       tracking_data = {
@@ -183,7 +183,7 @@ module SignUpTracking
     end_sign_up_tracking session
   end
 
-  def self.log_sign_up_result(user, session)
+  def self.log_sign_up_result(user, session, cookies)
     return unless user && session
     sign_up_type = session[:sign_up_type]
     sign_up_type ||= user.email ? 'email' : 'other'
