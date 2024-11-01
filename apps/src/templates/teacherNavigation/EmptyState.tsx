@@ -69,6 +69,14 @@ export const EMPTY_STATE: EmptyStateType = {
     button: (
       <LinkButton
         href={`../${TEACHER_NAVIGATION_PATHS.courseOverview}`}
+        // href={generatePath(
+        //   LABELED_TEACHER_NAVIGATION_PATHS.courseOverview.absoluteUrl,
+        //   {
+        //     sectionId: sectionId,
+        //     courseVersionName: courseVersionName,
+        //     unitName: unitName,
+        //   }
+        // )}
         text={i18n.assignAUnit()}
       />
     ),
