@@ -1,3 +1,4 @@
+import path from 'path';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -193,8 +194,8 @@ class EmailLogins extends React.Component {
           <li>
             <SafeMarkdown
               markdown={i18n.loginInfo_joinStep3({
-                url: `${studioUrlPrefix}/join`,
-                code: sectionCode,
+                url: new URL(path.join('/join', sectionCode), studioUrlPrefix)
+                  .href,
               })}
             />
           </li>
