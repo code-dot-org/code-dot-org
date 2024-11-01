@@ -1,10 +1,13 @@
-import {SubmissionStatusType} from '@cdo/apps/lab2/views/dialogs/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
+
+import {ValueOf} from '../../../types/utils';
 
 interface SubmissionStatusResponse {
   status: SubmissionStatusType;
 }
 
+export type SubmissionStatusType = ValueOf<typeof ProjectSubmissionStatus>;
 /**
  * TODO: Sends a post request to submit the project.
  */

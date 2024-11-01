@@ -5,9 +5,11 @@ import ShareDialogLegacy from '@cdo/apps/code-studio/components/ShareDialog';
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import popupWindow from '@cdo/apps/code-studio/popup-window';
 import {LABS_USING_NEW_SHARE_DIALOG} from '@cdo/apps/lab2/constants';
-import {SubmissionStatusType} from '@cdo/apps/lab2/views/dialogs/types';
 import {isSignedIn as getIsSignedIn} from '@cdo/apps/templates/currentUserRedux';
-import {getSubmissionStatus} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
+import {
+  getSubmissionStatus,
+  SubmissionStatusType,
+} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
 import SubmitProjectDialog from '@cdo/apps/templates/projects/submitProjectDialog/SubmitProjectDialog';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -62,11 +64,9 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   >(undefined);
 
   useEffect(() => {
-    const fetchStatus = async () => {
-      const response = await getSubmissionStatus();
-      setSubmissionStatus(response?.status);
-    };
-    fetchStatus();
+    getSubmissionStatus().then(response =>
+      setSubmissionStatus(response?.status)
+    );
   }, []);
 
   const dispatch = useAppDispatch();

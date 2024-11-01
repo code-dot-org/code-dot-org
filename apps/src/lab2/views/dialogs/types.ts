@@ -1,7 +1,3 @@
-import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
-
-import {ValueOf} from '../../../types/utils';
-
 import {GenericAlertDialogProps} from './GenericAlertDialog';
 import {GenericConfirmationDialogProps} from './GenericConfirmationDialog';
 import {GenericDialogProps} from './GenericDialog';
@@ -10,7 +6,6 @@ import {GenericPromptProps} from './GenericPrompt';
 import {SkipDialogProps} from './SkipDialog';
 import {StartOverDialogProps} from './StartOverDialog';
 
-export type SubmissionStatusType = ValueOf<typeof ProjectSubmissionStatus>;
 export enum DialogType {
   GenericAlert = 'GenericAlert',
   GenericConfirmation = 'GenericConfirmation',
