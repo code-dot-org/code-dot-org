@@ -19,8 +19,10 @@ export async function getSubmissionStatus(): Promise<
   SubmissionStatusResponse | undefined
 > {
   try {
-    const response = await HttpClient.fetchJson(`submission_status`);
-    return response.value as SubmissionStatusResponse;
+    const response = await HttpClient.fetchJson<SubmissionStatusResponse>(
+      `submission_status`
+    );
+    return response.value;
   } catch (error) {
     // A signed out user does not have access to `submission_status`.
     return undefined;
