@@ -10,7 +10,10 @@ import NoUnitAssigned from '@cdo/apps/templates/teacherNavigation/images/NoUnitA
 import TeacherDashboardEmptyState from '@cdo/apps/templates/teacherNavigation/images/TeacherDashboardEmptyState.svg';
 import i18n from '@cdo/locale';
 
-import {TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
+import {
+  LABELED_TEACHER_NAVIGATION_PATHS,
+  TEACHER_NAVIGATION_PATHS,
+} from './TeacherNavigationPaths';
 
 import styles from './teacher-navigation.module.scss';
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
@@ -63,7 +66,12 @@ export const EMPTY_STATE: EmptyStateType = {
     }),
     imageComponent: <img src={NoUnitAssigned} alt={i18n.almostThere()} />,
     // button: <Button onClick={navigateToCoursePage} text={i18n.assignAUnit()} />,
-    button: <LinkButton href="/catalog" text={i18n.assignAUnit()} />,
+    button: (
+      <LinkButton
+        href={`../${TEACHER_NAVIGATION_PATHS.courseOverview}`}
+        text={i18n.assignAUnit()}
+      />
+    ),
   },
   noLessonMaterialsForLegacyCourses: {
     headline: i18n.lessonMaterialsAreNotAvailable(),
@@ -74,7 +82,12 @@ export const EMPTY_STATE: EmptyStateType = {
       <img src={TeacherDashboardEmptyState} alt={i18n.almostThere()} />
     ),
     // button: <Button onClick={navigateToCoursePage} text={i18n.goToCourse()} />,
-    button: <LinkButton href="/catalog" text={i18n.assignAUnit()} />,
+    button: (
+      <LinkButton
+        href={`../${TEACHER_NAVIGATION_PATHS.courseOverview}`}
+        text={i18n.assignAUnit()}
+      />
+    ),
   },
   noCalendarForLegacyCourses: {
     headline: i18n.calendarNotAvailable(),
@@ -108,7 +121,12 @@ export const EMPTY_STATE: EmptyStateType = {
     }),
     imageComponent: <img src={NoUnitAssigned} alt={i18n.almostThere()} />,
     // button: <Button onClick={navigateToCoursePage} text={i18n.assignAUnit()} />,
-    button: <LinkButton href="/catalog" text={i18n.assignAUnit()} />,
+    button: (
+      <LinkButton
+        href={LABELED_TEACHER_NAVIGATION_PATHS.courseOverview.absoluteUrl}
+        text={i18n.assignAUnit()}
+      />
+    ),
   },
 };
 

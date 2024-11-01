@@ -22,10 +22,12 @@ export const WEEK_WIDTH = 585;
 
 interface UnitCalendarProps {
   showNoCurriculumAssigned: boolean;
+  showNoUnitAssigned?: boolean;
 }
 
 const UnitCalendar: React.FC<UnitCalendarProps> = ({
   showNoCurriculumAssigned,
+  showNoUnitAssigned,
 }) => {
   const [isLoading, setIsLoading] = useState(false); // it is only loading when you do the fetch
 
@@ -54,12 +56,13 @@ const UnitCalendar: React.FC<UnitCalendarProps> = ({
   const dispatch = useAppDispatch();
 
   useEffect(() => {
+    if (showNoCurriculumAssigned || showNoUnitAssigned) return;
+
     if (
       (!isLoading &&
         unitName &&
         userType &&
         userId &&
-        !showNoCurriculumAssigned &&
         (hasCalendar === undefined || calendarLessons === null)) ||
       unitNameFromProgress !== unitName
     ) {
@@ -91,6 +94,7 @@ const UnitCalendar: React.FC<UnitCalendarProps> = ({
     dispatch,
     isLoading,
     showNoCurriculumAssigned,
+    showNoUnitAssigned,
   ]);
 
   const weeklyMinutesOptions = WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS.map(
@@ -104,10 +108,13 @@ const UnitCalendar: React.FC<UnitCalendarProps> = ({
     setWeeklyInstructionalMinutes(value);
   };
 
-  const calendarEmptyState = isLegacyScript
-    ? EMPTY_STATE.noCalendarForLegacyCourses
-    : showNoCurriculumAssigned
+  // We want to know version year even if there isn't a unit assigned
+  const calendarEmptyState = showNoCurriculumAssigned
+    ? EMPTY_STATE.noCurriculumAssigned
+    : showNoUnitAssigned
     ? EMPTY_STATE.noUnitAssignedForCalendarOrLessonMaterials
+    : isLegacyScript
+    ? EMPTY_STATE.noCalendarForLegacyCourses
     : !hasCalendar
     ? EMPTY_STATE.noCalendarForThisUnit
     : null;
@@ -115,10 +122,10 @@ const UnitCalendar: React.FC<UnitCalendarProps> = ({
   return (
     <div className={styles.calendarContentContainer}>
       {isLoading && <Spinner />}
-      {!isLoading && !!calendarEmptyState && (
+      {!isLoading && calendarEmptyState && (
         <EmptyState emptyState={calendarEmptyState} />
       )}
-      {!isLoading && hasCalendar && (
+      {!isLoading && !calendarEmptyState && (
         <div>
           <div className={styles.minutesPerWeekWrapper}>
             <div className={styles.minutesPerWeekDescription}>
