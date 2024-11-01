@@ -1,11 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import ShareDialogLegacy from '@cdo/apps/code-studio/components/ShareDialog';
-import {
-  hideShareDialog,
-  showShareDialog,
-} from '@cdo/apps/code-studio/components/shareDialogRedux';
+import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import popupWindow from '@cdo/apps/code-studio/popup-window';
 import {LABS_USING_NEW_SHARE_DIALOG} from '@cdo/apps/lab2/constants';
 import {SubmissionStatusType} from '@cdo/apps/lab2/views/dialogs/types';
@@ -23,7 +20,7 @@ import ShareDialog from './dialogs/ShareDialog';
  */
 const Lab2ShareDialogWrapper: React.FunctionComponent<
   Lab2ShareDialogWrapperProps
-> = ({dialogId, shareUrl, finishUrl}) => {
+> = ({shareDialogId, shareUrl, finishUrl}) => {
   const isProjectLevel =
     useSelector(
       (state: {lab: LabState}) => state.lab.levelProperties?.isProjectLevel
@@ -42,11 +39,11 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   const is13Plus = useSelector(
     (state: {currentUser: {under13: boolean}}) => !state.currentUser.under13
   );
-  const isShareDialogOpen = useSelector(
+  // State to track which dialog is displayed (share or submit).
+  const [dialogPanel, setDialogPanel] = useState<'share' | 'submit'>('share');
+  const isDialogOpen = useSelector(
     (state: {shareDialog: {isOpen: boolean}}) => state.shareDialog.isOpen
   );
-  const [isSubmitProjectDialogOpen, setIsSubmitProjectDialogOpen] =
-    useState(false);
   // We don't currently support dance party projects in Lab2.
   const selectedSong = null;
   // TODO: support thumbnail url.
@@ -60,7 +57,6 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   const isPublished = false;
   const canShareSocial = isSignedIn && is13Plus;
 
-  const dispatch = useAppDispatch();
   const [submissionStatus, setSubmissionStatus] = useState<
     SubmissionStatusType | undefined
   >(undefined);
@@ -73,44 +69,39 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
     fetchStatus();
   }, []);
 
-  const onCloseSubmitProjectDialog = () => {
-    setIsSubmitProjectDialogOpen(false);
-  };
+  const dispatch = useAppDispatch();
+  const onCloseSubmitProjectDialog = useCallback(() => {
+    setDialogPanel('share');
+    dispatch(hideShareDialog());
+  }, [dispatch]);
 
   const onGoBack = () => {
-    setIsSubmitProjectDialogOpen(false);
-    dispatch(showShareDialog());
+    setDialogPanel('share');
   };
 
   const onSubmitClick = () => {
-    setIsSubmitProjectDialogOpen(true);
-    dispatch(hideShareDialog());
+    setDialogPanel('submit');
   };
 
   if (!channelId || !projectType) {
     return null;
   }
 
-  if (LABS_USING_NEW_SHARE_DIALOG.includes(projectType)) {
-    return (
-      <>
-        {isSubmitProjectDialogOpen && (
-          <SubmitProjectDialog
-            onClose={onCloseSubmitProjectDialog}
-            onGoBack={onGoBack}
-          />
-        )}
-        {isShareDialogOpen && (
-          <ShareDialog
-            dialogId={dialogId}
-            shareUrl={shareUrl}
-            finishUrl={finishUrl}
-            projectType={projectType}
-            onSubmitClick={onSubmitClick}
-            submissionStatus={submissionStatus}
-          />
-        )}
-      </>
+  if (LABS_USING_NEW_SHARE_DIALOG.includes(projectType) && isDialogOpen) {
+    return dialogPanel === 'share' ? (
+      <ShareDialog
+        dialogId={shareDialogId}
+        shareUrl={shareUrl}
+        finishUrl={finishUrl}
+        projectType={projectType}
+        onSubmitClick={onSubmitClick}
+        submissionStatus={submissionStatus}
+      />
+    ) : (
+      <SubmitProjectDialog
+        onClose={onCloseSubmitProjectDialog}
+        onGoBack={onGoBack}
+      />
     );
   }
 
@@ -135,7 +126,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
 };
 
 interface Lab2ShareDialogWrapperProps {
-  dialogId?: string;
+  shareDialogId?: string;
   shareUrl: string;
   finishUrl?: string;
 }
