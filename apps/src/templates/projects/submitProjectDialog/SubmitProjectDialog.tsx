@@ -4,10 +4,7 @@ import Button from '@cdo/apps/componentLibrary/button/Button';
 import Link from '@cdo/apps/componentLibrary/link/Link';
 import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
-
-import {submitProject} from './submitProjectApi';
 
 import moduleStyles from './submit-project-dialog.module.scss';
 
@@ -25,19 +22,10 @@ const SubmitProjectDialog: React.FunctionComponent<
   SubmitProjectDialogProps
 > = ({onClose, onGoBack}) => {
   const [projectDescription, setProjectDescription] = useState<string>('');
-  const channelId = useAppSelector(state => state.lab.channel?.id);
-  const projectType = useAppSelector(
-    state => state.lab.channel?.projectType
-  ) as string;
 
   const onSubmit = async () => {
-    try {
-      if (channelId && projectType) {
-        submitProject(projectDescription);
-      }
-    } catch (error) {
-      console.error('Publish failed', error);
-    }
+    // TODO: call on submitProject once it's implemented in SubmitProjectApi.
+    console.log('submit project');
   };
 
   return (
