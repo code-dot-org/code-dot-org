@@ -48,6 +48,9 @@ export default class MetricsManager extends ScrollMetricsManager {
    * @override
    */
   hasFixedEdges() {
-    return true;
+    // Fixed edges are disabled in order to prevent blocks being bumped "into bounds"
+    // when a browser resize would move them into a space overlapping the toolbox.
+    // See: https://github.com/google/blockly/issues/8637
+    return !this.workspace_.RTL;
   }
 }
