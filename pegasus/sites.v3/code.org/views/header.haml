@@ -1,6 +1,4 @@
 :ruby
-  require 'cdo/rack/global_edition'
-
   cookie_key = environment_specific_cookie_name '_user_type'
   user_type = request.cookies[cookie_key]
   user_type = "student" if user_type == "student_y"
@@ -14,7 +12,7 @@
   hamburger_options[:show_gallery] = true
   hamburger_options[:loc_prefix] = "header_"
   hamburger_options[:page_mode] = request.cookies['pm']
-  hamburger_options[:ge_region] = request.cookies[Rack::GlobalEdition::REGION_KEY]
+  hamburger_options[:ge_region] = request.ge_region
 
   header_contents_options = {}
   header_contents_options[:user_type] = user_type

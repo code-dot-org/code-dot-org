@@ -29,6 +29,11 @@
       "title": "Exploring Generative AI",
       "body": "Prepare your students for the future with an engaging curriculum that demystifies generative AI. Through hands-on projects and ethical discussions, students gain the skills to become creators and critical thinkers in an AI-powered world.",
       "buttonText": "Learn more"
+    },
+    "music-lab-jam-launch-2024": {
+      "title": "Introducing Music Lab: Jam Session",
+      "body": "Make music and learn to code in our new Music Lab activity for Hour of Code! In this self-guided, one-hour activity, students remix tracks from artists like Sabrina Carpenter, Lady Gaga, and Shakira while mastering coding basics such as sequencing, functions, and exploring AI-driven beat creation.",
+      "buttonText": "Explore Music Lab: Jam Session"
     }
   }
 }

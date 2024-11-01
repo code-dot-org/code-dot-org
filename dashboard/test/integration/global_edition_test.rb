@@ -3,11 +3,14 @@
 require 'test_helper'
 
 class GlobalEditionTest < ActionDispatch::IntegrationTest
+  let(:document) {Nokogiri::HTML(response.body)}
+
   describe 'routing' do
     let(:international_page_path) {'/incubator'}
     let(:ge_region) {'fa'}
     let(:ge_region_locale) {'fa-IR'}
     let(:regional_page_path) {File.join('/global', ge_region, international_page_path)}
+    let(:ge_region_script_data) {document.at('script[data-ge-region]').try(:[], 'data-ge-region')}
 
     describe 'international page' do
       subject(:get_international_page) {get international_page_path, params: params}
@@ -91,6 +94,11 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
 
         must_respond_with 200
         _(path).must_equal regional_page_path
+      end
+
+      it 'script data is set' do
+        get_regional_page
+        _(ge_region_script_data).must_equal ge_region
       end
 
       it 'request cookies contains ge_region' do

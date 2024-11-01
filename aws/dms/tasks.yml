@@ -23,6 +23,9 @@
 #    EXECUTE:
 #
 #    code-dot-org % bundle exec rake stack:data:start RAILS_ENV=production ADMIN=true
+
+# All tables in this section are exported to the Redshift `dashboard_production_pii` schema. Sensitive data may be
+# exported to this schema, but should be limited to only columns that have an identified analytics purpose.
 cron-pii:
 - dashboard.census_submissions
 - pegasus.contacts
@@ -51,7 +54,15 @@ cron-pii:
 - dashboard.learning_goal_ai_evaluations
 - dashboard.learning_goal_teacher_evaluations
 - dashboard.learning_goal_ai_evaluation_feedbacks
+- dashboard.ai_tutor_interactions
+
+# All tables in this section are exported to the Redshift `dashboard_production` schema. Do NOT export columns containing
+# sensitive data to this schema.
 cron:
+- dashboard.ai_tutor_interactions:
+    remove_column:
+      - prompt
+      - ai_response
 - dashboard.experiments
 - dashboard.authored_hint_view_requests
 - dashboard.hint_view_requests
@@ -59,6 +70,14 @@ cron:
 - dashboard.metrics
 - dashboard.contained_level_answers
 - dashboard.contained_levels
+- dashboard.learning_goal_ai_evaluations:
+    remove_column:
+      - observations
+      - evidence
+- dashboard.learning_goal_teacher_evaluations:
+    remove_column: [feedback]
+- dashboard.learning_goal_ai_evaluation_feedbacks:
+    remove_column: [other_content]
 - dashboard.level_sources_multi_types
 - dashboard.paired_user_levels
 - dashboard.parental_permission_requests:
@@ -120,6 +139,9 @@ cron:
 - dashboard.cap_user_events
 - dashboard.ai_tutor_interaction_feedbacks
 - dashboard.aichat_sessions
+
+# All tables in this section are exported to the Redshift `dashboard_production` schema. Do NOT export columns containing
+# sensitive data to this schema.
 cron-user-hierarchy:
 - dashboard.users:
     remove_column:
@@ -161,6 +183,9 @@ cron-user-hierarchy:
 - dashboard.studio_people:
     remove_column: [emails]
 - dashboard.sign_ins
+
+# All tables in this section are exported to the Redshift `dashboard_production_pii` schema. Sensitive data may be
+# exported to this schema, but should be limited to only columns that have an identified analytics purpose.
 cron-user-hierarchy-pii:
 - dashboard.studio_people
 - dashboard.teacher_profiles
@@ -172,8 +197,14 @@ cron-user-hierarchy-pii:
         - secret_words
 - dashboard.user_geos
 - dashboard.user_school_infos
+
+# All tables in this section are exported to the Redshift `dashboard_production` schema. Do NOT export columns containing
+# sensitive data to this schema.
 cron-user-levels:
 - dashboard.user_levels
+
+# All tables in this section are exported to the Redshift `dashboard_production_pii` schema. Sensitive data may be
+# exported to this schema, but should be limited to only columns that have an identified analytics purpose.
 cron-level-sources-pii:
 - dashboard.level_sources:
     skip_staging_table: true

@@ -18,10 +18,13 @@ import {
   pageTypes,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import {
+  TEACHER_NAVIGATION_PATHS,
+  LABELED_TEACHER_NAVIGATION_PATHS,
+} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import {PeerReviewLessonInfo} from '@cdo/apps/types/progressTypes';
-import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import experiments from '@cdo/apps/util/experiments';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   AppDispatch,
   useAppDispatch,
@@ -187,9 +190,7 @@ interface UnitSummaryResponse {
   };
 }
 
-interface TeacherUnitOverviewProps {
-  // Define any props you need here
-}
+interface TeacherUnitOverviewProps {}
 
 export const initializeRedux = (
   unitSummaryResponse: UnitSummaryResponse,
@@ -253,15 +254,15 @@ export const initializeRedux = (
   // This query param is immediately removed so that it is not included in the links
   // rendered on this page
   // updateQueryParam('completedLessonNumber', undefined);
-  if (userType === 'teacher') {
-    registerReducers({googlePlatformApi});
-    dispatch(loadGooglePlatformApi()).catch(e => console.warn(e));
-  }
+
+  registerReducers({googlePlatformApi});
+  dispatch(loadGooglePlatformApi()).catch(e => console.warn(e));
 };
 
-const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = props => {
+const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
   const [unitSummaryResponse, setUnitSummaryResponse] =
     useState<UnitSummaryResponse | null>(null);
+  const [unitLoaded, setUnitLoaded] = useState<string | null>(null);
 
   const selectedSection = useAppSelector(selectedSectionSelector);
 
@@ -277,34 +278,53 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = props => {
 
   React.useEffect(() => {
     if (!unitName && selectedSection?.unitName) {
-      navigate(selectedSection.unitName, {replace: true});
+      navigate(
+        generatePath(
+          LABELED_TEACHER_NAVIGATION_PATHS.unitOverview.absoluteUrl,
+          {unitName: selectedSection.unitName, sectionId: selectedSection.id}
+        ),
+        {replace: true}
+      );
+      return;
     }
-  });
+  }, [unitName, selectedSection, navigate]);
 
   React.useEffect(() => {
     if (!unitName || !userType || !userId) {
       return;
     }
-    setUnitSummaryResponse(null);
 
-    getAuthenticityToken()
-      .then(token =>
-        fetch(`/dashboardapi/unit_summary/${unitName}`, {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-CSRF-Token': token,
-          },
-        })
-      )
-      .then(response => response.json())
+    if (unitLoaded === unitName) {
+      return;
+    }
+
+    setUnitSummaryResponse(null);
+    setUnitLoaded(unitName);
+
+    HttpClient.fetchJson<UnitSummaryResponse>(
+      `/dashboardapi/unit_summary/${unitName}`
+    )
+      .then(response => response?.value)
       .then(responseJson => {
         initializeRedux(responseJson, dispatch, userType, userId);
         setUnitSummaryResponse(responseJson);
       });
-  }, [unitName, userType, userId, dispatch]);
+  }, [
+    unitName,
+    userType,
+    userId,
+    dispatch,
+    navigate,
+    selectedSection,
+    unitLoaded,
+    setUnitLoaded,
+  ]);
 
-  if (!unitSummaryResponse || !selectedSection) {
+  if (
+    !unitSummaryResponse ||
+    !unitSummaryResponse.unitData ||
+    unitSummaryResponse.unitData.name !== unitName
+  ) {
     return <Spinner size={'large'} />;
   }
 
