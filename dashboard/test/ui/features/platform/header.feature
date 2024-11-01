@@ -35,7 +35,7 @@ Feature: Header navigation bar
     And element "#header-help" is not visible
     And element "#header-about" is not visible
     And element "#header-incubator" is not visible
-    Then I change the browser window size to 1280 by 1024
+    Then I maximize the browser window
 
   Scenario: Student in English should see 4 header links
     Given I create a student named "Sally Student" and go home

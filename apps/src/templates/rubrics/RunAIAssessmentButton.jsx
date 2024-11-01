@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import React, {useEffect, useMemo, useState} from 'react';
+import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {setUserAiEvalStatus} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import {RubricAiEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -42,7 +44,7 @@ const fetchAiEvaluationStatus = (rubricId, studentUserId) => {
   );
 };
 
-export default function RunAIAssessmentButton({
+function RunAIAssessmentButton({
   canProvideFeedback,
   studentUserId,
   refreshAiEvaluations,
@@ -51,7 +53,7 @@ export default function RunAIAssessmentButton({
   status,
   setStatus,
   reportingData,
-  updateAiEvalStatusForUser,
+  setUserAiEvalStatus,
 }) {
   const rubricId = rubric.id;
   const [csrfToken, setCsrfToken] = useState('');
@@ -124,7 +126,7 @@ export default function RunAIAssessmentButton({
                 data.status === RubricAiEvaluationStatus.SUCCESS
               ) {
                 setStatus(STATUS.SUCCESS);
-                updateAiEvalStatusForUser(studentUserId, 'READY_TO_REVIEW');
+                setUserAiEvalStatus(studentUserId, 'READY_TO_REVIEW');
                 refreshAiEvaluations();
               } else if (data.status === RubricAiEvaluationStatus.QUEUED) {
                 setStatus(STATUS.EVALUATION_PENDING);
@@ -161,7 +163,7 @@ export default function RunAIAssessmentButton({
     polling,
     refreshAiEvaluations,
     setStatus,
-    updateAiEvalStatusForUser,
+    setUserAiEvalStatus,
   ]);
 
   const handleRunAiAssessment = () => {
@@ -223,5 +225,13 @@ RunAIAssessmentButton.propTypes = {
   status: PropTypes.string,
   setStatus: PropTypes.func,
   reportingData: reportingDataShape,
-  updateAiEvalStatusForUser: PropTypes.func,
+
+  // from redux
+  setUserAiEvalStatus: PropTypes.func,
 };
+
+export default connect(null, dispatch => ({
+  setUserAiEvalStatus(userId, status) {
+    dispatch(setUserAiEvalStatus(userId, status));
+  },
+}))(RunAIAssessmentButton);

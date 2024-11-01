@@ -5,6 +5,7 @@ import Typist from 'react-typist';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
 
 import {queryParams} from '../code-studio/utils';
@@ -51,6 +52,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   offerBrowserTts,
   resetOnChange = true,
 }) => {
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const [currentPanelIndex, setCurrentPanelIndex] = useState(0);
   const [typingDone, setTypingDone] = useState(false);
   const {cancel} = useBrowserTextToSpeech();
@@ -154,7 +156,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     <div
       id="panels-container"
       className={styles.panelsContainer}
-      key={currentPanelIndex}
+      key={currentLevelId + '-' + currentPanelIndex}
     >
       <div className={styles.panel} style={{width, height}}>
         {previousPanel && (
@@ -208,6 +210,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
       >
         {showButton && (
           <Button
+            key={'button-' + currentPanelIndex}
             id="panels-button"
             onClick={handleButtonClick}
             className={classNames(
