@@ -17,7 +17,7 @@ import trackEvent from '@cdo/apps/util/trackEvent';
 import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import moduleStyles from './ShareDialog.module.scss';
+import moduleStyles from './share-dialog.module.scss';
 
 const CopyToClipboardButton: React.FunctionComponent<{
   shareUrl: string;

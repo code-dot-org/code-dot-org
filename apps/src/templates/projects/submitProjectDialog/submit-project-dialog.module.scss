@@ -12,11 +12,6 @@
     margin: 1rem 0;
     border-color: $light_gray_200;
   }
-  // override any foreground text in the dialog that might be
-  // passed in for the title or body of the dialog
-  h3, p {
-    color: $light_white;
-  }
 
   textarea {
     width: 100%;
@@ -26,36 +21,47 @@
     flex: 1;
     background-color: $light_white;
   }
-  a {
+
+  .bodyTwoText {
+    color: $light_white;
+  }
+
+  .heading3 {
+    color: $light_white;
+  }
+
+  .link {
     color: $light_white;
     &:hover {
       color: $brand_secondary_dark;
     }
   }
-}
 
-.headerContainer {
-  display: flex;
-  height: 2rem;
-}
-
-.submitProjectTextContainer {
-  display: flex;
-  overflow-y: auto;
-  flex-direction: column;
-  margin-bottom: -10px;
-}
-
-.bottomSection {
-  display: flex;
-  justify-content: space-between;
-}
-.bottomSectionButtons {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1em;
-}
-.bottomSectionLink {
-  display: flex;
-  justify-content: start;
+  .headerContainer {
+    display: flex;
+    height: 2rem;
+  }
+  
+  .submitProjectTextContainer {
+    display: flex;
+    overflow-y: auto;
+    flex-direction: column;
+    margin-bottom: -10px;
+  }
+  
+  .bottomSection {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .bottomSectionButtons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+  }
+  
+  .bottomSectionLink {
+    display: flex;
+    justify-content: start;
+  }
 }

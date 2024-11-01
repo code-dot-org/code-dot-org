@@ -46,17 +46,23 @@ const SubmitProjectDialog: React.FunctionComponent<
       className={moduleStyles.submitProjectDialog}
     >
       <div className={moduleStyles.headerContainer}>
-        <Heading3>{i18n.submitProjectGallery_header()}</Heading3>
+        <Heading3 className={moduleStyles.heading3}>
+          {i18n.submitProjectGallery_header()}
+        </Heading3>
       </div>
       <hr />
       <div className={moduleStyles.submitProjectTextContainer}>
-        <BodyTwoText>{i18n.submitProjectGallery_describeProject()}</BodyTwoText>
+        <BodyTwoText className={moduleStyles.bodyTwoText}>
+          {i18n.submitProjectGallery_describeProject()}
+        </BodyTwoText>
         <textarea
           id="submission-input"
           value={projectDescription}
           onChange={e => setProjectDescription(e.target.value)}
         />
-        <BodyTwoText>{i18n.submitProjectGallery_details()}</BodyTwoText>
+        <BodyTwoText className={moduleStyles.bodyTwoText}>
+          {i18n.submitProjectGallery_details()}
+        </BodyTwoText>
       </div>
       <hr />
       <div className={moduleStyles.bottomSection}>
