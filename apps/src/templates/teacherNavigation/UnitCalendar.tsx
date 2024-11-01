@@ -6,6 +6,10 @@ import UnitCalendarGrid from '@cdo/apps//code-studio/components/progress/UnitCal
 import {initializeRedux} from '@cdo/apps/code-studio/components/progress/TeacherUnitOverview';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import {
+  EMPTY_STATE,
+  EmptyState,
+} from '@cdo/apps/templates/teacherNavigation/EmptyState';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
@@ -17,7 +21,13 @@ const WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS = [
 ];
 export const WEEK_WIDTH = 585;
 
-const UnitCalendar: React.FC = () => {
+interface UnitCalendarProps {
+  showNoCurriculumAssigned: boolean;
+}
+
+const UnitCalendar: React.FC<UnitCalendarProps> = ({
+  showNoCurriculumAssigned,
+}) => {
   const [isLoading, setIsLoading] = useState(false); // it is only loading when you do the fetch
 
   const [weeklyInstructionalMinutes, setWeeklyInstructionalMinutes] =
@@ -36,6 +46,10 @@ const UnitCalendar: React.FC = () => {
   const calendarLessons = useAppSelector(
     state => state.calendar?.calendarLessons
   );
+
+  // const isLegacyScript = !!useAppSelector(state => state.calendar?.versionYear)
+  //   ? useAppSelector(state => state.calendar?.versionYear) < 2021
+  //   : false;
 
   const {userId, userType} = useAppSelector(state => state.currentUser);
 
@@ -90,9 +104,20 @@ const UnitCalendar: React.FC = () => {
     setWeeklyInstructionalMinutes(value);
   };
 
+  const calendarEmptyState = isLegacyScript
+    ? EMPTY_STATE.noCalendarForLegacyCourses
+    : showNoCurriculumAssigned
+    ? EMPTY_STATE.noUnitAssignedForCalendarOrLessonMaterials
+    : !hasCalendar
+    ? EMPTY_STATE.noCalendarForThisUnit
+    : null;
+
   return (
     <div className={styles.calendarContentContainer}>
       {isLoading && <Spinner />}
+      {!isLoading && calendarEmptyState && (
+        <EmptyState emptyState={calendarEmptyState} />
+      )}
       {!isLoading && hasCalendar && (
         <div>
           <div className={styles.minutesPerWeekWrapper}>

@@ -233,6 +233,9 @@ export const initializeRedux = (
     setCalendarData({
       showCalendar: !!unitData.showCalendar,
       calendarLessons: unitData.calendarLessons,
+      versionYear: unitData.version_year
+        ? parseInt(unitData.version_year)
+        : null,
     })
   );
 
@@ -370,6 +373,7 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
       userType={userType}
       assignedSectionId={selectedSection.id}
       showCalendar={unitSummaryResponse.unitData.showCalendar}
+      versionYear={unitSummaryResponse.unitData.version_year}
       weeklyInstructionalMinutes={
         unitSummaryResponse.unitData.weeklyInstructionalMinutes
       }

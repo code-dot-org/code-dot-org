@@ -165,7 +165,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   const useMessage =
     showSecondaryFinishButton &&
     queryParams('show-secondary-finish-button-question') === 'true'
-      ? commonI18n.finishMessage()
+      ? ''
       : message;
 
   // The secondary finish button avoids a reappearance animation by not using
