@@ -22,19 +22,12 @@
     background-color: $light_white;
   }
 
-  .bodyTwoText {
+  .bodyTwoText, .heading3, .link {
     color: $light_white;
   }
 
-  .heading3 {
-    color: $light_white;
-  }
-
-  .link {
-    color: $light_white;
-    &:hover {
+  .link:hover {
       color: $brand_secondary_dark;
-    }
   }
 
   .headerContainer {
