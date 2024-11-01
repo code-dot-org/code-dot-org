@@ -37,6 +37,23 @@ Given(/^I sign in as "([^"]*)" from the sign in page$/) do |name|
   GHERKIN
 end
 
+Given /^I sign in and out as "([^"]*)" (\d+) times$/ do |name, times|
+  repeated_steps = ''
+
+  times.times do
+    repeated_steps += <<~GHERKIN
+      When I am on "http://studio.code.org/users/sign_in"
+      And element ".alert-danger:contains(You are already signed in)" is not visible
+      Then I sign in as "#{name}" from the sign in page
+      And I click selector "#header_display_name" once I see it
+      And I click selector "#user-signout" to load a new page
+      And I wait to see "#header_user_signin"
+    GHERKIN
+  end
+
+  steps repeated_steps
+end
+
 Given(/^I am a (student|teacher)( and go home)?$/) do |user_type, home|
   random_name = "Test#{user_type.capitalize} " + SecureRandom.base64
   steps "And I create a #{user_type} named \"#{random_name}\"#{home}"
@@ -331,19 +348,4 @@ end
 def reset_session
   steps "And I wait for 3 seconds"
   navigate_to replace_hostname('http://studio.code.org/reset_session')
-end
-
-Given /^sign in "([^"]*)" (\d+) times$/ do |name, times|
-  repeated_steps = ''
-
-  times.times do
-    repeated_steps += <<~GHERKIN
-      When I am on "http://studio.code.org/users/sign_in"
-      And element ".alert-danger:contains(You are already signed in)" is not visible
-      Then I sign in as "#{name}" from the sign in page
-      And I am on "http://studio.code.org/users/sign_out"
-    GHERKIN
-  end
-
-  steps repeated_steps
 end
