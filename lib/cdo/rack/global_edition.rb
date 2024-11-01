@@ -61,6 +61,8 @@ module Rack
         end
 
         response.finish
+      ensure
+        RequestStore.store.delete(Cdo::GlobalEdition::REGION_KEY)
       end
 
       private def region

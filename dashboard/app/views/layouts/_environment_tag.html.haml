@@ -1,5 +1,3 @@
 #environment_tag= Rails.env
 :javascript
-  window.document.querySelector("#environment_tag").addEventListener("click", (event) => {
-    event.target.style.display = "none";
-  });
+   $("#environment_tag").click(function() {$("#environment_tag").hide();});

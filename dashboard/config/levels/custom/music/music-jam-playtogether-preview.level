@@ -168,10 +168,11 @@
       "packId": "carly_rae_jepsen_call_me_maybe"
     },
     "name_suffix": "_final",
-    "offer_browser_tts": "false",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:16.371+00:00\",\"changed\":[\"cloned from \\\"music-ai-preview-playtogether\\\"\"],\"cloned_from\":\"music-ai-preview-playtogether\"},{\"changed_at\":\"2024-10-22 23:40:36 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:16.371+00:00\",\"changed\":[\"cloned from \\\"music-ai-preview-playtogether\\\"\"],\"cloned_from\":\"music-ai-preview-playtogether\"},{\"changed_at\":\"2024-10-22 23:40:36 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-31 21:04:04 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
