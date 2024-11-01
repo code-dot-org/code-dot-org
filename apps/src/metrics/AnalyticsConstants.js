@@ -454,6 +454,8 @@ const EVENTS = {
   NAVIGATE_TO_SECTION: 'Local Nav Class Section Selected',
   NAVIGATE_TO_PAGE: 'Local Nav Page Clicked',
   SECTION_LOAD_FAILURE: 'Local Nav Section Load Failure',
+  VIEW_LESSON_MATERIALS: 'Local Nav View Lesson Materials',
+  LESSON_MATERIALS_FAILURE: 'Local Nav Lesson Materials Load Failure',
 };
 
 const EVENT_GROUP_NAMES = {
