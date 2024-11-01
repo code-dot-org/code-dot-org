@@ -67,13 +67,8 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
 
   useEffect(() => {
     const fetchStatus = async () => {
-      try {
-        const response = await getSubmissionStatus();
-        console.log('response.status', response.status);
-        setSubmissionStatus(response.status);
-      } catch (error) {
-        console.error('Error fetching submission status', error);
-      }
+      const response = await getSubmissionStatus();
+      setSubmissionStatus(response?.status);
     };
     fetchStatus();
   }, []);
