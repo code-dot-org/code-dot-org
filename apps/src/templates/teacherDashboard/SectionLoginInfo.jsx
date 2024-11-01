@@ -193,7 +193,7 @@ class EmailLogins extends React.Component {
           <li>{i18n.loginInfo_joinStep2()}</li>
           <li>
             <SafeMarkdown
-              markdown={i18n.loginInfo_joinStep3({
+              markdown={i18n.loginInfo_join_navigateToLink({
                 url: new URL(path.join('/join', sectionCode), studioUrlPrefix)
                   .href,
               })}
