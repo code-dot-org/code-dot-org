@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-// import {useSelector} from 'react-redux';
 import {useSelector} from 'react-redux';
 
 import UnitCalendarGrid from '@cdo/apps//code-studio/components/progress/UnitCalendarGrid';
@@ -47,9 +46,8 @@ const UnitCalendar: React.FC<UnitCalendarProps> = ({
     state => state.calendar?.calendarLessons
   );
 
-  // const isLegacyScript = !!useAppSelector(state => state.calendar?.versionYear)
-  //   ? useAppSelector(state => state.calendar?.versionYear) < 2021
-  //   : false;
+  const versionYear = useAppSelector(state => state.calendar?.versionYear);
+  const isLegacyScript = versionYear ? versionYear < 2021 : false;
 
   const {userId, userType} = useAppSelector(state => state.currentUser);
 
@@ -61,6 +59,7 @@ const UnitCalendar: React.FC<UnitCalendarProps> = ({
         unitName &&
         userType &&
         userId &&
+        !showNoCurriculumAssigned &&
         (hasCalendar === undefined || calendarLessons === null)) ||
       unitNameFromProgress !== unitName
     ) {
@@ -91,6 +90,7 @@ const UnitCalendar: React.FC<UnitCalendarProps> = ({
     unitNameFromProgress,
     dispatch,
     isLoading,
+    showNoCurriculumAssigned,
   ]);
 
   const weeklyMinutesOptions = WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS.map(
@@ -115,7 +115,7 @@ const UnitCalendar: React.FC<UnitCalendarProps> = ({
   return (
     <div className={styles.calendarContentContainer}>
       {isLoading && <Spinner />}
-      {!isLoading && calendarEmptyState && (
+      {!isLoading && !!calendarEmptyState && (
         <EmptyState emptyState={calendarEmptyState} />
       )}
       {!isLoading && hasCalendar && (

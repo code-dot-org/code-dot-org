@@ -1,9 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-// import {useNavigate, NavLink} from 'react-router-dom';
 
 import {LinkButton} from '@cdo/apps/componentLibrary/button';
-import Button from '@cdo/apps/componentLibrary/button/Button';
 import {Heading3, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import emptyDesk from '@cdo/apps/templates/teacherDashboard/images/empty_desk.svg';
 import blankScreen from '@cdo/apps/templates/teacherDashboard/images/no_curriculum_assigned.svg';
@@ -65,12 +63,7 @@ export const EMPTY_STATE: EmptyStateType = {
     }),
     imageComponent: <img src={NoUnitAssigned} alt={i18n.almostThere()} />,
     // button: <Button onClick={navigateToCoursePage} text={i18n.assignAUnit()} />,
-    button: (
-      <Button
-        onClick={() => console.log('clicked')}
-        text={i18n.assignAUnit()}
-      />
-    ),
+    button: <LinkButton href="/catalog" text={i18n.assignAUnit()} />,
   },
   noLessonMaterialsForLegacyCourses: {
     headline: i18n.lessonMaterialsAreNotAvailable(),
@@ -81,12 +74,7 @@ export const EMPTY_STATE: EmptyStateType = {
       <img src={TeacherDashboardEmptyState} alt={i18n.almostThere()} />
     ),
     // button: <Button onClick={navigateToCoursePage} text={i18n.goToCourse()} />,
-    button: (
-      <Button
-        onClick={() => console.log('clicked')}
-        text={i18n.assignAUnit()}
-      />
-    ),
+    button: <LinkButton href="/catalog" text={i18n.assignAUnit()} />,
   },
   noCalendarForLegacyCourses: {
     headline: i18n.calendarNotAvailable(),
@@ -120,12 +108,7 @@ export const EMPTY_STATE: EmptyStateType = {
     }),
     imageComponent: <img src={NoUnitAssigned} alt={i18n.almostThere()} />,
     // button: <Button onClick={navigateToCoursePage} text={i18n.assignAUnit()} />,
-    button: (
-      <Button
-        onClick={() => console.log('clicked')}
-        text={i18n.assignAUnit()}
-      />
-    ),
+    button: <LinkButton href="/catalog" text={i18n.assignAUnit()} />,
   },
 };
 
