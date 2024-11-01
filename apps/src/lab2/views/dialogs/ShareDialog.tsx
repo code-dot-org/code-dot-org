@@ -9,14 +9,13 @@ import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import {ProjectType} from '@cdo/apps/lab2/types';
+import {SubmissionStatusType} from '@cdo/apps/lab2/views/dialogs/types';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import trackEvent from '@cdo/apps/util/trackEvent';
 import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
-
-import {ValueOf} from '../../../types/utils';
 
 import moduleStyles from './ShareDialog.module.scss';
 
@@ -84,7 +83,7 @@ const AfeCareerTourBlock: React.FunctionComponent = () => {
 };
 
 const SubmitButtonInfo: React.FunctionComponent<{
-  submissionStatus: ValueOf<typeof ProjectSubmissionStatus> | undefined;
+  submissionStatus: SubmissionStatusType | undefined;
   onSubmitClick: () => void;
 }> = ({submissionStatus, onSubmitClick}) => {
   if (
@@ -128,7 +127,7 @@ const ShareDialog: React.FunctionComponent<{
   finishUrl?: string;
   projectType: ProjectType;
   onSubmitClick: () => void;
-  submissionStatus: ValueOf<typeof ProjectSubmissionStatus> | undefined;
+  submissionStatus: SubmissionStatusType | undefined;
 }> = ({
   dialogId,
   shareUrl,
