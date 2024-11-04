@@ -1,4 +1,3 @@
-import cookies from 'js-cookie';
 import React, {useState, useEffect} from 'react';
 
 import {Button as NewButton} from '@cdo/apps/componentLibrary/button';
@@ -23,7 +22,6 @@ import {navigateToHref} from '../utils';
 import {
   ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
-  COOKIE_SIGN_UP_URL,
   OAUTH_LOGIN_TYPE_SESSION_KEY,
 } from './signUpFlowConstants';
 
@@ -52,7 +50,6 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   const finishAccountUrl = isTeacher
     ? '/users/new_sign_up/finish_teacher_account'
     : '/users/new_sign_up/finish_student_account';
-  cookies.set(COOKIE_SIGN_UP_URL, finishAccountUrl, {path: '/'});
 
   useEffect(() => {
     // If the user hasn't selected a user type, redirect them back to the first step of signup.
@@ -139,6 +136,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
         email: email,
         password: password,
         password_confirmation: password,
+        user_type: isTeacher ? 'teacher' : 'student',
       },
     };
     try {

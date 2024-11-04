@@ -311,9 +311,19 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     @form_data = {
       email: user.email
     }
-    new_sign_up_url = cookies['new_sign_up_url']
-    cookies.delete('new_sign_up_url')
+    new_sign_up_url = determine_sign_up_url(user)
     render 'omniauth/redirect', layout: false, locals: {new_sign_up_url: new_sign_up_url}
+  end
+
+  private def determine_sign_up_url(user)
+    user_type = user.user_type
+    if user_type == User::TYPE_STUDENT
+      return '/users/new_sign_up/finish_student_account'
+    elsif user_type == User::TYPE_TEACHER
+      return '/users/new_sign_up/finish_teacher_account'
+    else # We are in the old sign up flow -> no user type yet
+      return ''
+    end
   end
 
   private def extract_microsoft_data(auth)

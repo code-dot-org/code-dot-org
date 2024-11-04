@@ -30,9 +30,6 @@ export const clearSignUpSessionStorage = (isTeacher: boolean) => {
   });
 };
 
-// sign up cookie
-export const COOKIE_SIGN_UP_URL = 'new_sign_up_url';
-
 // school association
 export const US_COUNTRY_CODE = 'US';
 export const ZIP_REGEX = new RegExp(/(^\d{5}$)/);
