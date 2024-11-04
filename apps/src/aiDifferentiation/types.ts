@@ -4,7 +4,6 @@ export type ChatTextMessage = {
   role: Role;
   chatMessageText: string;
   status: string;
-  id?: number;
 };
 
 export type ChatPrompt = {

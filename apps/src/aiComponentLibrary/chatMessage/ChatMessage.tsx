@@ -5,7 +5,7 @@ import Button from '@cdo/apps/componentLibrary/button/Button';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
-import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
+import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
 
 import {Role} from './types';
 
@@ -16,8 +16,6 @@ interface ChatMessageProps {
   role: Role;
   status: string;
   showProfaneUserMessageToggle?: boolean;
-  customStyles?: {[label: string]: string};
-  children?: React.ReactNode;
 }
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
@@ -25,8 +23,6 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   role,
   status,
   showProfaneUserMessageToggle,
-  customStyles,
-  children,
 }) => {
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
 
@@ -67,35 +63,27 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
 
   return (
     <>
-      <div className={moduleStyles[`message-container-${role}`]}>
-        <div className={moduleStyles.messageWithChildren}>
-          <div className={moduleStyles[`container-${role}`]}>
-            {role === Role.ASSISTANT && (
-              <div className={moduleStyles.botIconContainer}>
-                <img
-                  src={aiBotOutlineIcon}
-                  alt={commonI18n.aiChatBotIconAlt()}
-                  className={moduleStyles.botIcon}
-                />
-              </div>
-            )}
-            <div
-              className={classNames(
-                moduleStyles[`message-${role}`],
-                customStyles && customStyles[`message-${role}`],
-                hasDangerStyle && moduleStyles.danger,
-                hasWarningStyle && moduleStyles.warning
-              )}
-              aria-label={
-                role === Role.ASSISTANT
-                  ? commonI18n.aiChatMessageBot()
-                  : commonI18n.aiChatMessageUser()
-              }
-            >
-              <SafeMarkdown markdown={getDisplayText} />
-            </div>
+      <div className={moduleStyles[`container-${role}`]}>
+        {role === Role.ASSISTANT && (
+          <div className={moduleStyles.botIconContainer}>
+            <img
+              src={aiBotIcon}
+              alt={commonI18n.aiChatBotIconAlt()}
+              className={moduleStyles.botIcon}
+            />
           </div>
-          <div className={moduleStyles.childContainer}>{children}</div>
+        )}
+        <div
+          className={classNames(
+            moduleStyles[`message-${role}`],
+            hasDangerStyle && moduleStyles.danger,
+            hasWarningStyle && moduleStyles.warning
+          )}
+          aria-label={
+            role === Role.ASSISTANT ? 'AI bot' : 'User' + ' chat message'
+          }
+        >
+          <SafeMarkdown markdown={getDisplayText} />
         </div>
       </div>
       {showProfaneUserMessageToggle &&
