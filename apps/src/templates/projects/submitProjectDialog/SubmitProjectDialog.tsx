@@ -32,6 +32,7 @@ const SubmitProjectDialog: React.FunctionComponent<
     <AccessibleDialog
       onClose={onClose}
       className={moduleStyles.submitProjectDialog}
+      onDeactivate={null}
     >
       <div className={moduleStyles.headerContainer}>
         <Heading3 className={moduleStyles.heading3}>
