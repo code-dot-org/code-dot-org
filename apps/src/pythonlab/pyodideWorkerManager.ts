@@ -120,6 +120,9 @@ const restartPyodideIfProgramIsRunning = () => {
     pyodideWorker.terminate();
     pyodideWorker = setUpPyodideWorker();
     getStore().dispatch(appendSystemMessage('Program stopped.'));
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .incrementCounter('PythonLab.PyodideRestarted');
   }
 };
 

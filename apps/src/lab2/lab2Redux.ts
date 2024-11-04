@@ -518,6 +518,9 @@ function setProjectAndLevelData(
   if (aborted) {
     return;
   }
+  // Dispatch level change last so labs can react to the new level data
+  // and new initial sources at once.
+  dispatch(onLevelChange(data));
   Lab2Registry.getInstance()
     .getLifecycleNotifier()
     .notify(
@@ -526,9 +529,6 @@ function setProjectAndLevelData(
       data.channel,
       data.initialSources
     );
-  // Dispatch level change last so labs can react to the new level data
-  // and new initial sources at once.
-  dispatch(onLevelChange(data));
 }
 
 async function loadLevelProperties(
