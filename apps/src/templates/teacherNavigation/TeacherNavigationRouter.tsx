@@ -196,11 +196,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.calendar}
-            element={
-              <UnitCalendar
-                showNoCurriculumAssigned={!selectedSection?.courseOfferingId}
-              />
-            }
+            element={<UnitCalendar />}
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.courseOverview}
