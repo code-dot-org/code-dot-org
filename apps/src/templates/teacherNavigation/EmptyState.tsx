@@ -5,7 +5,7 @@ import {Heading3, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import styles from './teacher-navigation.module.scss';
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
-export interface EmptyStateItem {
+export interface EmptyStateContent {
   headline: string;
   descriptionText: string | null;
   imageComponent: JSX.Element;
@@ -13,7 +13,7 @@ export interface EmptyStateItem {
 }
 
 interface EmptyStateProps {
-  emptyStateDetails: EmptyStateItem;
+  emptyStateDetails: EmptyStateContent;
 }
 
 export const EmptyState: React.FC<EmptyStateProps> = props => {

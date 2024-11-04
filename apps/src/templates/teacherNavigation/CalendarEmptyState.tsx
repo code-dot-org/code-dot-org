@@ -6,36 +6,13 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
+import {Section} from '../teacherDashboard/types/teacherSectionTypes';
 
-import {EmptyState, EmptyStateItem} from './EmptyState';
+import {EmptyState, EmptyStateContent} from './EmptyState';
 import {
   getNoCurriculumAssignedEmptyState,
   getNoUnitAssignedForCalendarOrLessonMaterials,
 } from './EmptyStateUtils';
-
-interface Section {
-  id: number;
-  name: string;
-  createdAt?: string;
-  loginType?: string;
-  lessonExtras: boolean;
-  pairingAllowed: boolean;
-  ttsAutoplayEnabled: boolean;
-  studentCount: number;
-  code: string;
-  courseOfferingId?: number;
-  courseVersionId?: number;
-  unitId?: number;
-  courseId?: number;
-  scriptId?: number;
-  grades?: string[];
-  providerManaged: boolean;
-  restrictSection?: boolean;
-  postMilestoneDisabled?: boolean;
-  syncEnabled?: boolean;
-  courseVersionName?: string;
-  courseDisplayName?: string;
-}
 
 export const CalendarEmptyState: React.FC = () => {
   const unitName = useSelector(
@@ -62,7 +39,9 @@ export const CalendarEmptyState: React.FC = () => {
   return <EmptyState emptyStateDetails={emptyStateDetails} />;
 };
 
-export const getNoCalendarForLegacyCourses = (courseName: string) => {
+export const getNoCalendarForLegacyCourses = (
+  courseName: string
+): EmptyStateContent => {
   return {
     headline: i18n.calendarNotAvailable(),
     descriptionText: i18n.calendarLegacyMessage({courseName: courseName}),
@@ -73,15 +52,13 @@ export const getNoCalendarForLegacyCourses = (courseName: string) => {
   };
 };
 
-export const getNoCalendarForThisUnit = () => {
-  return {
-    headline: i18n.calendarNotAvailable(),
-    descriptionText: null,
-    imageComponent: (
-      <img src={CalendarNotAvailable} alt={i18n.calendarNotAvailable()} />
-    ),
-    button: null,
-  };
+export const getNoCalendarForThisUnit: EmptyStateContent = {
+  headline: i18n.calendarNotAvailable(),
+  descriptionText: null,
+  imageComponent: (
+    <img src={CalendarNotAvailable} alt={i18n.calendarNotAvailable()} />
+  ),
+  button: null,
 };
 
 function generateCalendarEmptyState(
@@ -90,7 +67,7 @@ function generateCalendarEmptyState(
   selectedSection: Section,
   isLegacyScript: boolean,
   hasCalendar: boolean
-): EmptyStateItem | null {
+): EmptyStateContent | null {
   let calendarEmptyState = null;
 
   if (showNoCurriculumAssigned) {
@@ -111,7 +88,7 @@ function generateCalendarEmptyState(
       selectedSection.courseDisplayName
     );
   } else if (!hasCalendar) {
-    calendarEmptyState = getNoCalendarForThisUnit();
+    calendarEmptyState = getNoCalendarForThisUnit;
   }
   return calendarEmptyState;
 }
