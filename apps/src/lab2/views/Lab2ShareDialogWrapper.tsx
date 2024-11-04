@@ -64,10 +64,12 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   >(undefined);
 
   useEffect(() => {
-    getSubmissionStatus().then(response =>
-      setSubmissionStatus(response?.status)
-    );
-  }, []);
+    if (channelId && projectType) {
+      getSubmissionStatus(channelId, projectType).then(response =>
+        setSubmissionStatus(response?.status)
+      );
+    }
+  }, [channelId, projectType]);
 
   const dispatch = useAppDispatch();
   const onCloseSubmitProjectDialog = useCallback(() => {

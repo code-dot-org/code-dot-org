@@ -18,12 +18,13 @@ export async function submitProject(submissionDescription: string) {
 /**
  * Sends a get request to submit the project.
  */
-export async function getSubmissionStatus(): Promise<
-  SubmissionStatusResponse | undefined
-> {
+export async function getSubmissionStatus(
+  channelId: string,
+  projectType: string
+): Promise<SubmissionStatusResponse | undefined> {
   try {
     const response = await HttpClient.fetchJson<SubmissionStatusResponse>(
-      `submission_status`
+      `/projects/${projectType}/${channelId}/submission_status`
     );
     return response.value;
   } catch (error) {
