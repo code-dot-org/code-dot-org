@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import {NavLink, generatePath} from 'react-router-dom';
 
 import {LinkButton} from '@cdo/apps/componentLibrary/button';
 import {Heading3, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
@@ -18,8 +18,6 @@ import {
 import styles from './teacher-navigation.module.scss';
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
-export const tryThis = 9;
-
 interface EmptyStateItem {
   headline: string;
   descriptionText: string | null;
@@ -27,19 +25,8 @@ interface EmptyStateItem {
   button: JSX.Element | null;
 }
 
-type EmptyStateType = {
-  noStudents: EmptyStateItem;
-  noCurriculumAssigned: EmptyStateItem;
-  noUnitAssigned: EmptyStateItem;
-  noLessonMaterialsForLegacyCourses: EmptyStateItem;
-  noCalendarForLegacyCourses: EmptyStateItem;
-  noLessonMaterialsForThisLesson: EmptyStateItem;
-  noCalendarForThisUnit: EmptyStateItem;
-  noUnitAssignedForCalendarOrLessonMaterials: EmptyStateItem;
-};
-
-export const EMPTY_STATE: EmptyStateType = {
-  noStudents: {
+export const getNoStudentsEmptyState = () => {
+  return {
     headline: i18n.emptySectionHeadline(),
     descriptionText: i18n.emptySectionDescription(),
     imageComponent: <img src={emptyDesk} alt="empty desk" />,
@@ -52,36 +39,51 @@ export const EMPTY_STATE: EmptyStateType = {
         {i18n.addStudents()}
       </NavLink>
     ),
-  },
-  noCurriculumAssigned: {
+  };
+};
+
+export const getNoCurriculumAssignedEmptyState = () => {
+  return {
     headline: i18n.emptySectionHeadline(),
     descriptionText: i18n.noCurriculumAssigned(),
     imageComponent: <img src={blankScreen} alt="blank screen" />,
     button: <LinkButton href="/catalog" text={i18n.browseCurriculum()} />,
-  },
-  noUnitAssigned: {
+  };
+};
+
+export const getNoUnitAssignedEmptyState = (
+  sectionId: number,
+  courseVersionName: string
+) => {
+  return {
     headline: i18n.almostThere(),
     descriptionText: i18n.noUnitAssigned({
       courseName: '',
     }),
     imageComponent: <img src={NoUnitAssigned} alt={i18n.almostThere()} />,
-    // button: <Button onClick={navigateToCoursePage} text={i18n.assignAUnit()} />,
     button: (
       <LinkButton
-        href={`../${TEACHER_NAVIGATION_PATHS.courseOverview}`}
-        // href={generatePath(
-        //   LABELED_TEACHER_NAVIGATION_PATHS.courseOverview.absoluteUrl,
-        //   {
-        //     sectionId: sectionId,
-        //     courseVersionName: courseVersionName,
-        //     unitName: unitName,
-        //   }
-        // )}
+        href={
+          '/teacher_dashboard' +
+          generatePath(
+            LABELED_TEACHER_NAVIGATION_PATHS.courseOverview.absoluteUrl,
+            {
+              sectionId: sectionId,
+              courseVersionName: courseVersionName,
+            }
+          )
+        }
         text={i18n.assignAUnit()}
       />
     ),
-  },
-  noLessonMaterialsForLegacyCourses: {
+  };
+};
+
+export const getNoLessonMaterialsForLegacyCourses = (
+  sectionId: number,
+  courseVersionName: string
+) => {
+  return {
     headline: i18n.lessonMaterialsAreNotAvailable(),
     descriptionText: i18n.lessonMaterialsLegacyMessage({
       courseName: 'courseName',
@@ -89,64 +91,96 @@ export const EMPTY_STATE: EmptyStateType = {
     imageComponent: (
       <img src={TeacherDashboardEmptyState} alt={i18n.almostThere()} />
     ),
-    // button: <Button onClick={navigateToCoursePage} text={i18n.goToCourse()} />,
     button: (
       <LinkButton
-        href={`../${TEACHER_NAVIGATION_PATHS.courseOverview}`}
+        href={
+          '/teacher_dashboard' +
+          generatePath(
+            LABELED_TEACHER_NAVIGATION_PATHS.courseOverview.absoluteUrl,
+            {
+              sectionId: sectionId,
+              courseVersionName: courseVersionName,
+            }
+          )
+        }
         text={i18n.assignAUnit()}
       />
     ),
-  },
-  noCalendarForLegacyCourses: {
+  };
+};
+
+export const getNoCalendarForLegacyCourses = (courseName: string) => {
+  return {
     headline: i18n.calendarNotAvailable(),
-    descriptionText: i18n.calendarLegacyMessage({courseName: 'courseName'}),
+    descriptionText: i18n.calendarLegacyMessage({courseName: courseName}),
     imageComponent: (
       <img src={CalendarNotAvailable} alt={i18n.calendarNotAvailable()} />
     ),
     button: null,
-  },
-  noLessonMaterialsForThisLesson: {
+  };
+};
+
+export const getNoLessonMaterialsForThisLesson = () => {
+  return {
     headline: i18n.lessonMaterialsNone(),
     descriptionText: null,
     imageComponent: (
       <img src={TeacherDashboardEmptyState} alt={i18n.almostThere()} />
     ),
     button: null,
-  },
-  noCalendarForThisUnit: {
+  };
+};
+
+export const getNoCalendarForThisUnit = () => {
+  return {
     headline: i18n.calendarNotAvailable(),
     descriptionText: null,
     imageComponent: (
       <img src={CalendarNotAvailable} alt={i18n.calendarNotAvailable()} />
     ),
     button: null,
-  },
-  noUnitAssignedForCalendarOrLessonMaterials: {
+  };
+};
+
+export const getNoUnitAssignedForCalendarOrLessonMaterials = (
+  sectionId: number,
+  courseVersionName: string,
+  pageName: string
+) => {
+  return {
     headline: i18n.almostThere(),
     descriptionText: i18n.noUnitAssigned({
-      page: i18n.theCalendar(),
-      courseName: 'courseName',
+      page: pageName,
+      courseName: courseVersionName,
     }),
     imageComponent: <img src={NoUnitAssigned} alt={i18n.almostThere()} />,
-    // button: <Button onClick={navigateToCoursePage} text={i18n.assignAUnit()} />,
     button: (
       <LinkButton
-        href={LABELED_TEACHER_NAVIGATION_PATHS.courseOverview.absoluteUrl}
+        href={
+          '/teacher_dashboard' +
+          generatePath(
+            LABELED_TEACHER_NAVIGATION_PATHS.courseOverview.absoluteUrl,
+            {
+              sectionId: sectionId,
+              courseVersionName: courseVersionName,
+            }
+          )
+        }
         text={i18n.assignAUnit()}
       />
     ),
-  },
+  };
 };
 
 interface EmptyStateProps {
-  emptyState: (typeof EMPTY_STATE)[keyof typeof EMPTY_STATE] | null;
+  emptyStateDetails: EmptyStateItem;
 }
 
-export const EmptyState: React.FC<EmptyStateProps> = ({emptyState}) => {
-  const imageComponent = emptyState?.imageComponent;
-  const headline = emptyState?.headline;
-  const descriptionText = emptyState?.descriptionText;
-  const button = emptyState?.button;
+export const EmptyState: React.FC<EmptyStateProps> = ({emptyStateDetails}) => {
+  const imageComponent = emptyStateDetails?.imageComponent;
+  const headline = emptyStateDetails?.headline;
+  const descriptionText = emptyStateDetails?.descriptionText;
+  const button = emptyStateDetails?.button;
 
   return (
     <div className={dashboardStyles.emptyClassroomDiv}>

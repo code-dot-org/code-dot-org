@@ -182,7 +182,7 @@ interface UnitData {
   calendarLessons: CalendarLesson[];
 }
 
-interface UnitSummaryResponse {
+export interface UnitSummaryResponse {
   unitData: UnitData;
   plcBreadcrumb: {
     unit_name: string;

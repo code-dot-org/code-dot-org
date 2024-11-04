@@ -199,7 +199,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
             element={
               <UnitCalendar
                 showNoCurriculumAssigned={!selectedSection?.courseOfferingId}
-                showNoUnitAssigned={!selectedSection?.unitId}
               />
             }
           />
