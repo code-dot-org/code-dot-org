@@ -5,6 +5,7 @@ import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {Heading3, BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import canvas from '@cdo/apps/signUpFlow/images/canvas.png';
@@ -48,8 +49,8 @@ const LoginTypeSelection: React.FunctionComponent = () => {
     sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === 'teacher';
 
   const finishAccountUrl = isTeacher
-    ? '/users/new_sign_up/finish_teacher_account'
-    : '/users/new_sign_up/finish_student_account';
+    ? studio('/users/new_sign_up/finish_teacher_account')
+    : studio('/users/new_sign_up/finish_student_account');
 
   useEffect(() => {
     // If the user hasn't selected a user type, redirect them back to the first step of signup.
