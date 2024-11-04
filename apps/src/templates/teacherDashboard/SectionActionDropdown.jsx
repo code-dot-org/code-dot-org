@@ -11,6 +11,7 @@ import PopUpMenu from '@cdo/apps/sharedComponents/PopUpMenu';
 import QuickActionsCell from '@cdo/apps/templates/tables/QuickActionsCell';
 import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import experiments from '@cdo/apps/util/experiments';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -79,7 +80,12 @@ class SectionActionDropdown extends Component {
    * Returns the URL to the correct section to be edited
    */
   editRedirectUrl = (sectionId, isPl) => {
-    let editSectionUrl = '/sections/' + sectionId + '/edit';
+    let editSectionUrl;
+    if (experiments.isEnabled('teacher-local-nav-v2')) {
+      editSectionUrl = teacherDashboardUrl(sectionId, '/settings');
+    } else {
+      editSectionUrl = '/sections/' + sectionId + '/edit';
+    }
     editSectionUrl += isPl ? '?redirectToPage=my-professional-learning' : '';
     return editSectionUrl;
   };
