@@ -8,11 +8,31 @@ class Services::User::PasswordResetterTest < ActiveSupport::TestCase
   describe '#call' do
     subject(:reset_password) {described_instance.call}
 
-    let!(:user) {create(:user, email: email)}
     let(:mail) {ActionMailer::Base.deliveries.first}
 
-    it 'returns user' do
-      _reset_password.must_equal user
+    context 'for email without an existing user' do
+      let!(:user) {nil}
+      it 'does not send password reset' do
+        reset_password
+        _(mail).must_be_nil
+      end
+    end
+    context 'for email with an existing user' do
+      let!(:user) {create(:user, email: email)}
+      it 'returns user' do
+        reset_password.must_equal user
+      end
+    end
+
+    context 'for de-migrated account' do
+      let!(:user) {create(:teacher, :demigrated, email: email)}
+      it 'sends password reset instructions' do
+        reset_password
+
+        _(mail).wont_be_nil
+        _(mail.to).must_equal [email]
+        _(mail.subject).must_equal 'Code.org reset password instructions'
+      end
     end
 
     context 'for lti account' do
@@ -20,6 +40,7 @@ class Services::User::PasswordResetterTest < ActiveSupport::TestCase
 
       context 'without email authentication' do
         it 'does not send password reset' do
+          reset_password
           _(mail).must_be_nil
         end
       end
@@ -50,6 +71,7 @@ class Services::User::PasswordResetterTest < ActiveSupport::TestCase
         end
 
         it 'does not send password reset' do
+          reset_password
           _(mail).must_be_nil
         end
       end

@@ -26,6 +26,8 @@
     -# data needed for dcdo.js. This tag is needed on every page because our translation code is
     -# making use of the dcdo feature.
     %script{data: {'dcdo': DCDO.frontend_config.to_json}}
+    -# current Global Edition region
+    %script{'data-ge-region' => request.ge_region.to_s}
     -# auth key needed for amplitude analytics.
     %script{data: {'amplitude-api-key': CDO.safe_amplitude_api_key}}
     -# auth key needed for statsig analytics
@@ -50,6 +52,8 @@
     -# which we only use when optimizing our webpack build (ie, non-development environments).
     - if CDO.optimize_webpack_assets
       %script{src: webpack_asset_path('js/code-studio-common.js'), 'data-ot-ignore' => ''}
+    - if request.ge_region
+      %script{src: webpack_asset_path('js/statsigWebAnalytics.js'), 'data-ot-ignore' => ''}
     = csrf_meta_tags
     = yield :head
     - if content_for? :og

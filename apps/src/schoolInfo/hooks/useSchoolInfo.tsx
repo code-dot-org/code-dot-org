@@ -68,18 +68,52 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     [initialState.schoolName]
   );
 
-  // State hooks
-  const [country, setCountry] = useState(detectedCountry);
-  const [schoolId, setSchoolId] = useState(detectedSchoolId);
-  const [schoolZip, setSchoolZip] = useState(detectedZip);
-  const [schoolName, setSchoolName] = useState(detectedSchoolName);
+  const [state, setState] = useState<{
+    country: string;
+    schoolId: string;
+    schoolZip: string;
+    schoolName: string;
+  }>({
+    country: detectedCountry,
+    schoolId: detectedSchoolId,
+    schoolZip: detectedZip,
+    schoolName: detectedSchoolName,
+  });
   const [schoolsList, setSchoolsList] = useState<SchoolDropdownOption[]>([]);
 
+  // State hooks
+  const setCountry = (value: string) => {
+    setState(prevState => ({
+      ...prevState,
+      country: value,
+    }));
+  };
+  const setSchoolId = (value: string) => {
+    setState(prevState => ({
+      ...prevState,
+      schoolId: value,
+    }));
+  };
+  const setSchoolZip = (value: string) => {
+    setState(prevState => ({
+      ...prevState,
+      schoolZip: value,
+    }));
+  };
+  const setSchoolName = (value: string) => {
+    setState(prevState => ({
+      ...prevState,
+      schoolName: value,
+    }));
+  };
+
   const reset = () => {
-    setCountry(detectedCountry);
-    setSchoolId(detectedSchoolId);
-    setSchoolZip(detectedZip);
-    setSchoolName(detectedSchoolName);
+    setState({
+      country: detectedCountry,
+      schoolId: detectedSchoolId,
+      schoolZip: detectedZip,
+      schoolName: detectedSchoolName,
+    });
   };
 
   // Memoized fetchSchools function using useCallback
@@ -93,35 +127,47 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     []
   );
 
+  const handleSessionStorage = (
+    key: string,
+    value: string,
+    callback?: () => void
+  ) => {
+    if (sessionStorage.getItem(key) !== value) {
+      sessionStorage.setItem(key, value);
+      if (callback) {
+        callback();
+      }
+    }
+  };
+
+  const {country, schoolId, schoolZip, schoolName} = state;
+
   // Handle country changes
   useEffect(() => {
-    sessionStorage.setItem(SCHOOL_COUNTRY_SESSION_KEY, country);
-
-    if (mounted.current && country) {
+    handleSessionStorage(SCHOOL_COUNTRY_SESSION_KEY, country, () => {
       analyticsReporter.sendEvent(
         EVENTS.COUNTRY_SELECTED,
         {country},
         PLATFORMS.BOTH
       );
-    }
+    });
   }, [country]);
 
   // Handle schoolZip changes
   useEffect(() => {
     if (!ZIP_REGEX.test(schoolZip)) {
-      sessionStorage.setItem(SCHOOL_ZIP_SESSION_KEY, '');
+      handleSessionStorage(SCHOOL_ZIP_SESSION_KEY, '');
+      setSchoolsList([]);
       return;
     }
 
-    if (sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY) !== schoolZip) {
-      sessionStorage.setItem(SCHOOL_ZIP_SESSION_KEY, schoolZip);
-
+    handleSessionStorage(SCHOOL_ZIP_SESSION_KEY, schoolZip, () => {
       analyticsReporter.sendEvent(
         EVENTS.ZIP_CODE_ENTERED,
         {zip: schoolZip},
         PLATFORMS.BOTH
       );
-    }
+    });
 
     fetchSchools(schoolZip, data => {
       if (!mounted.current) return;
@@ -129,6 +175,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
       const schools = data
         .map(constructSchoolOption)
         .sort((a, b) => a.text.localeCompare(b.text));
+
       setSchoolsList(schools);
 
       // this will auto select the school from the fetched list of schools if the user is updating their school info
@@ -140,35 +187,42 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
 
   // Handle schoolId changes
   useEffect(() => {
-    sessionStorage.setItem(SCHOOL_ID_SESSION_KEY, schoolId);
-    if (!mounted.current) return;
-
-    if (schoolId === NonSchoolOptions.NO_SCHOOL_SETTING) {
-      analyticsReporter.sendEvent(
-        EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED,
-        {},
-        PLATFORMS.BOTH
-      );
-    } else if (schoolId === NonSchoolOptions.CLICK_TO_ADD) {
-      analyticsReporter.sendEvent(
-        EVENTS.ADD_MANUALLY_CLICKED,
-        {},
-        PLATFORMS.BOTH
-      );
-    } else {
-      analyticsReporter.sendEvent(
-        EVENTS.SCHOOL_SELECTED_FROM_LIST,
-        {
-          'nces Id': schoolId,
-        },
-        PLATFORMS.BOTH
-      );
-    }
-  }, [schoolId]);
+    handleSessionStorage(SCHOOL_ID_SESSION_KEY, schoolId, () => {
+      if (schoolId === NonSchoolOptions.NO_SCHOOL_SETTING) {
+        setSchoolName('');
+        analyticsReporter.sendEvent(
+          EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED,
+          {},
+          PLATFORMS.BOTH
+        );
+      } else if (schoolId === NonSchoolOptions.CLICK_TO_ADD) {
+        setSchoolName('');
+        analyticsReporter.sendEvent(
+          EVENTS.ADD_MANUALLY_CLICKED,
+          {},
+          PLATFORMS.BOTH
+        );
+      } else {
+        const name = schoolsList.find(
+          school => school.value === schoolId
+        )?.text;
+        if (name) {
+          setSchoolName(name);
+        }
+        analyticsReporter.sendEvent(
+          EVENTS.SCHOOL_SELECTED_FROM_LIST,
+          {
+            'nces Id': schoolId,
+          },
+          PLATFORMS.BOTH
+        );
+      }
+    });
+  }, [schoolId, schoolsList]);
 
   // Handle schoolName changes
   useEffect(() => {
-    sessionStorage.setItem(SCHOOL_NAME_SESSION_KEY, schoolName);
+    handleSessionStorage(SCHOOL_NAME_SESSION_KEY, schoolName);
   }, [schoolName]);
 
   // Manage mounted state
