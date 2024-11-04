@@ -46,7 +46,6 @@ export const asyncLoadSelectedSection = async (sectionId: string) => {
     .catch(error => {
       analyticsReporter.sendEvent(EVENTS.SECTION_LOAD_FAILURE, {
         sectionId,
-        error,
       });
       console.log(error);
     });

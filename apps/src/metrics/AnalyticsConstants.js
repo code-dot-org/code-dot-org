@@ -467,6 +467,17 @@ const EVENTS = {
   LESSON_MATERIALS_DOWNLOAD_ALL_HANDOUTS: 'Local Nav Download All Handouts',
   LESSON_MATERIALS_RESOURCE_DROPDOWN_OPTION:
     'Local Nav Resource Dropdown Option Clicked',
+
+  // Unit Overview
+  TEACHER_NAV_UNIT_OVERVIEW_PAGE_VIEWED:
+    'Teacher Nav Unit Overview Page Viewed',
+  TEACHER_NAV_UNIT_OVERVIEW_FAILED: 'Teacher Nav Unit Overview Load Failure',
+
+  // Course Overview
+  TEACHER_NAV_COURSE_OVERVIEW_PAGE_VIEWED:
+    'Teacher Nav Course Overview Page Viewed',
+  TEACHER_NAV_COURSE_OVERVIEW_FAILED:
+    'Teacher Nav Course Overview Load Failure',
 };
 
 const EVENT_GROUP_NAMES = {
