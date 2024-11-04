@@ -25,6 +25,7 @@ export default class MetricsManager extends ScrollMetricsManager {
       viewMetrics.height
     );
 
+    // A margin to prevent blocks from being flush with the edge of the workspace view.
     const blockMargin = 20;
 
     let left, right;
