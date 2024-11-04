@@ -32,6 +32,10 @@ const SubmitProjectDialog: React.FunctionComponent<
     <AccessibleDialog
       onClose={onClose}
       className={moduleStyles.submitProjectDialog}
+      // Set onDeactivate to null so that onClose is not called on when the focus trap is
+      // deactivated. When the 'Go back' button is clicked and the submit project dialog
+      // is closed, we do not want onClose callback function to be executed. We only want the
+      // goBack function to be executed.
       onDeactivate={null}
     >
       <div className={moduleStyles.headerContainer}>
@@ -58,6 +62,7 @@ const SubmitProjectDialog: React.FunctionComponent<
         <div className={moduleStyles.bottomSectionLink}>
           <Link
             text={i18n.learnMore()}
+            // TODO: Add link once it's available.
             href=""
             className={moduleStyles.link}
             size="m"

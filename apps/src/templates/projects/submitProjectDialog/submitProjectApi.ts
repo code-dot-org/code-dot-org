@@ -28,7 +28,7 @@ export async function getSubmissionStatus(
     );
     return response.value;
   } catch (error) {
-    // A signed out user does not have access to `submission_status`.
+    // TODO: handle signed out user case separately from other unhandled errors.
     return undefined;
   }
 }
