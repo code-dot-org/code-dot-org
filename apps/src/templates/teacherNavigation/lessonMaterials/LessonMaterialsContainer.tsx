@@ -103,6 +103,11 @@ const LessonMaterialsContainer: React.FC = () => {
 
   const onDropdownChange = (value: string) => {
     setSelectedLesson(getLessonFromId(Number(value)));
+
+    analyticsReporter.sendEvent(EVENTS.LESSON_MATERIALS_LESSON_CHANGE, {
+      unitName: loadedData?.unitName,
+      lessonId: value,
+    });
   };
 
   const generateLessonDropdownOptions = useCallback(() => {

@@ -1,6 +1,8 @@
 import React from 'react';
 
 import {ActionDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import {RESOURCE_ICONS} from './ResourceIconType';
@@ -23,6 +25,10 @@ const UnitResourcesDropdown: React.FC<UnitResourcesDropdownProps> = ({
       icon: {iconName: RESOURCE_ICONS.LESSON_PLAN.icon},
       onClick: () => {
         window.location.href = scriptOverviewPdfUrl;
+
+        analyticsReporter.sendEvent(
+          EVENTS.LESSON_MATERIALS_DOWNLOAD_ALL_LESSON_PLANS
+        );
       },
     },
     {
@@ -31,6 +37,9 @@ const UnitResourcesDropdown: React.FC<UnitResourcesDropdownProps> = ({
       icon: {iconName: RESOURCE_ICONS.GOOGLE_DOC.icon},
       onClick: () => {
         window.location.href = scriptResourcesPdfUrl;
+        analyticsReporter.sendEvent(
+          EVENTS.LESSON_MATERIALS_DOWNLOAD_ALL_HANDOUTS
+        );
       },
     },
   ];
