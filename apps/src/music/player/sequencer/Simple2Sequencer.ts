@@ -1,6 +1,7 @@
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
+import {findParentStatementInputTypes} from '../../blockly/blockUtils';
 import {
   DEFAULT_CHORD_LENGTH,
   DEFAULT_PATTERN_LENGTH,
@@ -221,7 +222,7 @@ export default class Simple2Sequencer extends Sequencer {
       length: soundData.length,
       soundType: soundData.type,
       blockId,
-      ...this.getCommonEventFields(),
+      ...this.getCommonEventFields(blockId),
     });
   }
 
@@ -238,7 +239,7 @@ export default class Simple2Sequencer extends Sequencer {
       value,
       blockId,
       length,
-      ...this.getCommonEventFields(),
+      ...this.getCommonEventFields(blockId),
     });
   }
 
@@ -252,7 +253,7 @@ export default class Simple2Sequencer extends Sequencer {
       value,
       length: DEFAULT_CHORD_LENGTH,
       blockId,
-      ...this.getCommonEventFields(),
+      ...this.getCommonEventFields(blockId),
     });
   }
 
@@ -267,7 +268,7 @@ export default class Simple2Sequencer extends Sequencer {
       value,
       length: value.length || DEFAULT_TUNE_LENGTH,
       blockId,
-      ...this.getCommonEventFields(),
+      ...this.getCommonEventFields(blockId),
     });
   }
 
@@ -302,7 +303,7 @@ export default class Simple2Sequencer extends Sequencer {
       .flat();
   }
 
-  private getCommonEventFields() {
+  private getCommonEventFields(blockId: string) {
     const effects = this.getCurrentEffects();
     return {
       triggered: this.inTrigger,
@@ -310,6 +311,9 @@ export default class Simple2Sequencer extends Sequencer {
       // Snapshot the current value of effects
       effects: effects ? {...effects} : undefined,
       skipContext: this.getCurrentSkipContext(),
+      validationInfo: {
+        parentControlTypes: findParentStatementInputTypes(blockId),
+      },
     };
   }
 

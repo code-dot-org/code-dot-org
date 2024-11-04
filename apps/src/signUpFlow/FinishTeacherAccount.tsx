@@ -3,6 +3,8 @@ import React, {useState, useEffect, useMemo} from 'react';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
+import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {
   BodyThreeText,
@@ -22,7 +24,9 @@ import {navigateToHref} from '../utils';
 
 import locale from './locale';
 import {
+  ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
+  OAUTH_LOGIN_TYPE_SESSION_KEY,
   USER_RETURN_TO_SESSION_KEY,
   clearSignUpSessionStorage,
 } from './signUpFlowConstants';
@@ -41,8 +45,21 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const [showGDPR, setShowGDPR] = useState(false);
   const [isGdprLoaded, setIsGdprLoaded] = useState(false);
   const [userReturnTo, setUserReturnTo] = useState('/home');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorCreatingAccountMessage, showErrorCreatingAccountMessage] =
+    useState(false);
 
   useEffect(() => {
+    // If the user hasn't selected a user type or login type, redirect them back to the incomplete step of signup.
+    if (sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === null) {
+      navigateToHref('/users/new_sign_up/account_type');
+    } else if (
+      sessionStorage.getItem(EMAIL_SESSION_KEY) === null &&
+      sessionStorage.getItem(OAUTH_LOGIN_TYPE_SESSION_KEY) === null
+    ) {
+      navigateToHref('/users/new_sign_up/login_type');
+    }
+
     const fetchGdprData = async () => {
       const urlParams = new URLSearchParams(window.location.search);
       const forceInEu = urlParams.get('force_in_eu');
@@ -89,6 +106,8 @@ const FinishTeacherAccount: React.FunctionComponent<{
 
   const submitTeacherAccount = async () => {
     sendFinishEvent();
+    showErrorCreatingAccountMessage(false);
+    setIsSubmitting(true);
 
     const signUpParams = {
       new_sign_up: true,
@@ -102,7 +121,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
       },
     };
     const authToken = await getAuthenticityToken();
-    await fetch('/users', {
+    const response = await fetch('/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -111,8 +130,13 @@ const FinishTeacherAccount: React.FunctionComponent<{
       body: JSON.stringify(signUpParams),
     });
 
-    clearSignUpSessionStorage(true);
-    navigateToHref(userReturnTo);
+    if (response.ok) {
+      clearSignUpSessionStorage(true);
+      navigateToHref(userReturnTo);
+    } else {
+      setIsSubmitting(false);
+      showErrorCreatingAccountMessage(true);
+    }
   };
 
   const onGDPRChange = (): void => {
@@ -143,6 +167,23 @@ const FinishTeacherAccount: React.FunctionComponent<{
           <Heading2>{locale.finish_creating_teacher_account()}</Heading2>
           <BodyTwoText>{locale.tailor_experience()}</BodyTwoText>
         </div>
+        {errorCreatingAccountMessage && (
+          <div className={style.errorSigningUpMessage}>
+            <div className={style.errorMessageWithXMark}>
+              <FontAwesomeV6Icon
+                iconName={'circle-xmark'}
+                className={style.xIcon}
+              />
+              <BodyThreeText className={style.errorMessageText}>
+                <SafeMarkdown markdown={locale.error_signing_up_message()} />
+              </BodyThreeText>
+            </div>
+            <CloseButton
+              onClick={() => showErrorCreatingAccountMessage(false)}
+              aria-label={locale.error_signing_up_message_aria_label()}
+            />
+          </div>
+        )}
         <fieldset className={style.inputContainer}>
           <div>
             <TextField
@@ -219,15 +260,17 @@ const FinishTeacherAccount: React.FunctionComponent<{
               title: 'arrow-right',
             }}
             disabled={name === '' || !gdprValid}
+            isPending={isSubmitting}
           />
         </div>
       </div>
       <SafeMarkdown
         className={style.tosAndPrivacy}
         markdown={locale.by_signing_up({
-          tosLink: 'code.org/tos',
-          privacyPolicyLink: 'code.org/privacy',
+          tosLink: 'https://code.org/tos',
+          privacyPolicyLink: 'https://code.org/privacy',
         })}
+        openExternalLinksInNewTab={true}
       />
     </div>
   );

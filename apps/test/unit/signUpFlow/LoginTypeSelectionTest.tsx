@@ -28,9 +28,22 @@ describe('LoginTypeSelection', () => {
     sessionStorage.clear();
   });
 
-  function renderDefault() {
+  function renderDefault(userType: string | null = 'student') {
+    if (userType) {
+      sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, userType);
+    }
     render(<LoginTypeSelection />);
   }
+
+  it('redirects user back to account type page if they have not selected account type', async () => {
+    await waitFor(() => {
+      renderDefault(null);
+    });
+
+    expect(navigateToHrefMock).toHaveBeenCalledWith(
+      '/users/new_sign_up/account_type'
+    );
+  });
 
   it('renders headers, buttons and inputs', async () => {
     await waitFor(() => {
@@ -287,85 +300,9 @@ describe('LoginTypeSelection', () => {
     fetchSpy.restore();
   });
 
-  it('clicks the create account button when Enter is pressed if the button is enabled', async () => {
-    const fetchSpy = sinon.stub(window, 'fetch');
-    fetchSpy.returns(Promise.resolve(new Response()));
-
-    await waitFor(() => {
-      renderDefault();
-    });
-
-    const email = 'myrandomemail@gmail.com';
-    const password = 'password';
-    const emailInput = screen.getByLabelText(locale.email_address());
-    const passwordInput = screen.getByLabelText(locale.password());
-    const confirmPasswordInput = screen.getByLabelText(
-      locale.confirm_password()
-    );
-    const beginSignUpParams = {
-      new_sign_up: true,
-      user: {
-        email: email,
-        password: password,
-        password_confirmation: password,
-      },
-    };
-
-    // Set up create account button onClick jest function
-    const finishSignUpButton = screen.getByRole('button', {
-      name: locale.create_my_account(),
-    }) as HTMLButtonElement;
-    const handleClick = jest.fn();
-    finishSignUpButton.onclick = handleClick;
-
-    // Simulate pressing Enter when button is not enabled
-    fireEvent.keyDown(document, {key: 'Enter', code: 'Enter', charCode: 13});
-
-    // Verify the button's click handler was never called
-    await waitFor(() => {
-      expect(handleClick).not.toHaveBeenCalled();
-    });
-
-    // Ensure the button is enabled
-    fireEvent.change(emailInput, {
-      target: {value: email},
-    });
-    fireEvent.change(passwordInput, {target: {value: password}});
-    fireEvent.change(passwordInput, {target: {value: password}});
-    fireEvent.change(confirmPasswordInput, {target: {value: password}});
-
-    await waitFor(() => {
-      expect(finishSignUpButton).not.toBeDisabled();
-    });
-
-    // Simulate pressing Enter
-    fireEvent.keyDown(document, {key: 'Enter', code: 'Enter', charCode: 13});
-
-    await waitFor(() => {
-      // Verify the button's click handler was called
-      expect(handleClick).toHaveBeenCalled();
-
-      // Verify the button's fetch method was called
-      expect(fetchSpy).toHaveBeenCalled;
-      const fetchCall = fetchSpy.getCall(0);
-      expect(fetchCall.args[0]).toEqual('/users/begin_sign_up');
-      expect(fetchCall.args[1]?.body).toEqual(
-        JSON.stringify(beginSignUpParams)
-      );
-
-      // Verify the user is redirected to the finish sign up page
-      expect(navigateToHrefMock).toHaveBeenCalledWith(
-        '/users/new_sign_up/finish_student_account'
-      );
-    });
-
-    fetchSpy.restore();
-  });
-
   it('if user selected student then finish sign up button sends user to finish student page', async () => {
-    sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, 'student');
     await waitFor(() => {
-      renderDefault();
+      renderDefault('student');
     });
 
     const finishSignUpButton = screen.getByRole('button', {
@@ -385,9 +322,8 @@ describe('LoginTypeSelection', () => {
   });
 
   it('if user selected teacher then finish sign up button sends user to finish teacher page', async () => {
-    sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, 'teacher');
     await waitFor(() => {
-      renderDefault();
+      renderDefault('teacher');
     });
 
     const finishSignUpButton = screen.getByRole('button', {

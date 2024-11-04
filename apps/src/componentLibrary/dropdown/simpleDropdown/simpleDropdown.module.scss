@@ -1,4 +1,5 @@
 @import 'color';
+@import '@cdo/apps/componentLibrary/common/styles/variables';
 @import '@cdo/apps/componentLibrary/common/styles/mixins';
 @import '@cdo/apps/componentLibrary/typography/typography.module';
 
@@ -11,8 +12,30 @@
   gap: 0.125rem;
   margin: 0;
 
+  &.styleAsFormField {
+    width: $form-field-width;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+
+    .dropdownArrowDiv {
+      width: 100%;
+
+      select {
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
   .dropdownLabel {
     display: block;
+  }
+
+  .iconLeft {
+    position: absolute;
+    z-index: 1;
   }
 
   select {
@@ -32,6 +55,10 @@
       outline: 2px solid $light_primary_500;
       border-radius: 0.25rem;
       outline-offset: 2px;
+    }
+
+    &.readOnly {
+      opacity: 1;
     }
   }
 
@@ -119,6 +146,21 @@
       color: $light_gray_200;
     }
   }
+
+  &:has(select.readOnly) {
+    select {
+      @include field-read-only-black-colors;
+    }
+
+    .dropdownArrowDiv:after {
+      @include field-read-only-black-colors;
+    }
+
+    .helperSection,
+    .errorSection {
+      @include field-read-only-black-colors;
+    }
+  }
 }
 
 .dropdownContainer-gray {
@@ -184,6 +226,21 @@
       color: $light_gray_200;
     }
   }
+
+  &:has(select.readOnly) {
+    select {
+      @include field-read-only-black-colors;
+    }
+
+    .dropdownArrowDiv:after {
+      @include field-read-only-black-colors;
+    }
+
+    .helperSection,
+    .errorSection {
+      @include field-read-only-black-colors;
+    }
+  }
 }
 
 .dropdownContainer-white {
@@ -243,6 +300,21 @@
   .dropdownArrowDiv:after {
     color: $light_white;
   }
+
+  &:has(select.readOnly) {
+    select {
+      @include field-read-only-white-colors;
+    }
+
+    .dropdownArrowDiv:after {
+      @include field-read-only-white-colors;
+    }
+
+    .helperSection,
+    .errorSection {
+      @include field-read-only-white-colors;
+    }
+  }
 }
 
 // Sizes
@@ -270,6 +342,21 @@
     height: 3rem;
     padding: 0.625rem 1rem;
     padding-inline-end: 3rem;
+  }
+
+  .iconLeft {
+    font-size: 1.1875rem;
+    line-height: 125%;
+    width: 1.5rem;
+
+    inset-inline-start: 1rem;
+    top: 0.825rem;
+  }
+
+  &:has(.iconLeft) {
+    select {
+      padding-inline-start: 3rem;
+    }
   }
 
   .dropdownArrowDiv:after {
@@ -319,6 +406,21 @@
     padding-inline-end: 2.75rem;
   }
 
+  .iconLeft {
+    font-size: 1rem;
+    line-height: 125%;
+    width: 1.25rem;
+
+    inset-inline-start: 1rem;
+    top: 0.625rem;
+  }
+
+  &:has(.iconLeft) {
+    select {
+      padding-inline-start: 2.75rem;
+    }
+  }
+
   .dropdownArrowDiv:after {
     font-size: 1rem;
     line-height: 1.25;
@@ -365,6 +467,21 @@
     padding-inline-end: 2.625rem;
   }
 
+  .iconLeft {
+    font-size: 0.875rem;
+    line-height: 125%;
+    width: 1.125rem;
+
+    inset-inline-start: 1rem;
+    top: 0.425rem;
+  }
+
+  &:has(.iconLeft) {
+    select {
+      padding-inline-start: 2.625rem;
+    }
+  }
+
   .dropdownArrowDiv:after {
     font-size: 0.875rem;
     line-height: 1.25;
@@ -409,6 +526,21 @@
     height: 1.5rem;
     padding: 0.125rem 0.5rem;
     padding-inline-end: 1.75rem;
+  }
+
+  .iconLeft {
+    font-size: 0.8125rem;
+    line-height: 125%;
+    width: 1rem;
+
+    inset-inline-start: 0.5rem;
+    top: 0.25rem;
+  }
+
+  &:has(.iconLeft) {
+    select {
+      padding-inline-start: 1.75rem;
+    }
   }
 
   .dropdownArrowDiv:after {

@@ -1,0 +1,96 @@
+name 'self-paced-pl-ex-gen-ai-customizing_16_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lessons 2-4: System Prompting
+
+#### Now that you have an idea of how **System Prompting** works, take a look the lesson plans associated with this learning concept. These lessons go through the **Exploration, Practice, Synthesis** model described earlier in this module.
+
+#### Take as much time as you'd like to review these lessons.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 2: System Prompting - Exploration</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/29c99d9ec0c5c98502e79a8cbdb6e57f-Screenshot 2024-08-30 at 2.37.31 PM.png" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** How can we influence how a chatbot behaves?
+
+#### **Lesson Overview:**
+
+#### This Explore lesson introduces the system prompt and guides students through an investigation on how it impacts a chatbot's behavior. Students start by predicting and discussing how a system prompt can impact a chatbot’s behavior, and then investigate and modify existing chatbots to confirm or expand their initial guesses. Through guided activities, they will learn how the design of a prompt can direct and limit chatbot interactions. Students will practice crafting prompts to elicit specific responses from the AI and engage in activities that incorporate personal experiences to see the effect of their prompt design on how the chatbot functions.
+
+#### **Students will be able to:**
+* #### Explain how system prompts can influence the behavior of a chatbot
+* #### Modify system prompts to achieve desired chatbot responses
+
+### <a href="https://studio.code.org/s/exploring-gen-ai2-2024/lessons/2" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 3: System Prompting - Practice
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/d87274abcc3a70f1f7db2db2850267a3-Screenshot 2024-10-07 at 12.30.16 PM.png" alt="practice level from the lesson" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** How do we write system prompts to meet specific needs?
+
+#### **Lesson Overview:**
+
+#### This Practice lesson builds fluency in designing and applying system prompts, expanding the knowledge students developed in the previous lesson. Through examples and guided practice, students learn to craft prompts that guide not only the content but also the style and appropriateness of AI responses based on different audiences and situations. Students apply these skills through practice scenarios simulating real-life use cases and user-stories, emphasizing how problem-solving with system prompts can be applied to address real-world issues.
+
+#### **Students will be able to:**
+* #### Refine system prompts by considering role, tone, audience, and delivery modality
+* #### Write system prompts that meet specific user needs
+
+### <a href="https://studio.code.org/s/exploring-gen-ai2-2024/lessons/3" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 4: System Prompting - Synthesis</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/4e168b9d7bad9acb0d4cb84a9ef312d0-Screenshot 2024-10-07 at 12.31.26 PM.png" alt="practice level from the lesson" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** What are more complex strategies for system prompting?
+
+#### **Lesson Overview:**
+
+#### This Synthesis lesson expands on the prompting techniques students have learned in the previous two lessons, and invites them to revisit and reflect on how their skills have grown. Students explore two advanced prompting techniques: (1) chain of reasoning, which helps chatbots deliver more precise and relevant responses by giving explicit steps, and (2) providing examples, which enhances the chatbot's accuracy and context appropriateness. After practicing these skills in specific contexts, students revisit and refine earlier lesson activities using the knowledge they’ve accumulated so far.
+
+#### **Students will be able to:**
+* #### Use chain-of-reasoning techniques to create system prompts for complex tasks
+* #### Use examples to guide chatbots in generating accurate and specific responses
+
+### <a href="https://studio.code.org/s/exploring-gen-ai2-2024/lessons/4" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> As students struggle getting the chatbot to respond in a particular way, they may want to know the “trick” or “secret” to getting the chatbot to respond how they want. You can assure students that there is no trick, just a set of strategies that tend to work more often than others but are still unreliable.  
+</p>
+</div>
+
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">📝 Engage with our Learning Community!
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;"> <p>
+
+#### Participating in the <a href="https://padlet.com/codeorgpl/exploring-generative-ai-self-paced-professional-learning-dgb4yws61unrun" target="_blank">Gen AI Self-Paced PL Learning Community</a> is optional and not necessary to earn a certificate for this module. However, we encourage you to engage with the broader Gen AI learner community. 
+
+#### **If you were to build a chatbot using AI Chat Lab to support your teaching practice, what  key development considerations would you want to keep in mind?**
+
+</p></div>
+</details>
+
+## Up Next!
+#### You’ll learn about the next tool in our AI tool box - **retrieval**.
+
+MARKDOWN

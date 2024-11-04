@@ -115,6 +115,8 @@ class User < ApplicationRecord
   #   user_provided_us_state: Indicates if the us_state was provided by the user as opposed to being interpolated.
   #   failed_attempts and locked_at: Used by Devise#Lockable to prevent
   #     brute-force password attempts
+  #   roster_synced: Indicates if the user was created during a roster sync operation from an LMS. Implies that the user
+  #     is a school-managed account.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -164,6 +166,7 @@ class User < ApplicationRecord
     failed_attempts
     locked_at
     has_seen_ai_assessments_announcement
+    roster_synced
   )
 
   attr_accessor(
@@ -907,6 +910,7 @@ class User < ApplicationRecord
 
     user.gender_third_party_input = auth.info.gender
     user.gender = Policies::Gender.normalize auth.info.gender
+    user.roster_synced = params['roster_synced'] || false
   end
 
   def oauth?
@@ -1398,7 +1402,7 @@ class User < ApplicationRecord
         curr_user_level = user_levels_by_level[level.id]
 
         # If level.id is not present in user_levels_by_level, check if level has contained_levels with present ids
-        if !curr_user_level && !level.contained_levels.empty?
+        if !curr_user_level && !level.contained_levels.empty? && level.type != "BubbleChoice"
           level.contained_levels.each do |contained_level|
             user_levels.push(user_levels_by_level[contained_level.id])
           end

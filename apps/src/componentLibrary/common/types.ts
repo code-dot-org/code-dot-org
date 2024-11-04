@@ -1,3 +1,5 @@
+import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+
 /**
  * Possible sizes for most(!) of Design System components
  */
@@ -17,3 +19,14 @@ export type ComponentPlacementDirection =
   | 'onRight'
   | 'onBottom'
   | 'onLeft';
+
+export interface DropdownFormFieldRelatedProps {
+  /** Dropdown helper message */
+  helperMessage?: string;
+  /** Dropdown helper icon */
+  helperIcon?: FontAwesomeV6IconProps;
+  /** Dropdown error message */
+  errorMessage?: string;
+  /** Style Dropdown as a form field */
+  styleAsFormField?: boolean;
+}

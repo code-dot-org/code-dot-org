@@ -9,6 +9,7 @@ class SessionsController < Devise::SessionsController
   # GET /resource/sign_in
   def new
     session[:user_return_to] ||= params[:user_return_to]
+    @user_return_to = session[:user_return_to]
     @hide_sign_in_option = true
     @is_english = request.language == 'en'
     if params[:providerNotLinked]

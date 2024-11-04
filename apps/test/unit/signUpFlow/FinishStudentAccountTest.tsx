@@ -4,7 +4,11 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import FinishStudentAccount from '@cdo/apps/signUpFlow/FinishStudentAccount';
 import locale from '@cdo/apps/signUpFlow/locale';
-import {USER_RETURN_TO_SESSION_KEY} from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import {
+  ACCOUNT_TYPE_SESSION_KEY,
+  EMAIL_SESSION_KEY,
+  USER_RETURN_TO_SESSION_KEY,
+} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {navigateToHref} from '@cdo/apps/utils';
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
@@ -50,7 +54,17 @@ describe('FinishStudentAccount', () => {
     fetchStub.restore();
   });
 
-  function renderDefault(usIp: boolean = true) {
+  function renderDefault(
+    usIp: boolean = true,
+    setAccountType: boolean = true,
+    setLoginType: boolean = true
+  ) {
+    if (setAccountType) {
+      sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, 'student');
+    }
+    if (setLoginType) {
+      sessionStorage.setItem(EMAIL_SESSION_KEY, 'fake@email.com');
+    }
     render(
       <FinishStudentAccount
         ageOptions={ageOptions}
@@ -60,6 +74,26 @@ describe('FinishStudentAccount', () => {
       />
     );
   }
+
+  it('redirects user back to account type page if they have not selected account type', async () => {
+    await waitFor(() => {
+      renderDefault(true, false, false);
+    });
+
+    expect(navigateToHrefMock).toHaveBeenCalledWith(
+      '/users/new_sign_up/account_type'
+    );
+  });
+
+  it('redirects user back to login type page if they have not selected login type', async () => {
+    await waitFor(() => {
+      renderDefault(true, true, false);
+    });
+
+    expect(navigateToHrefMock).toHaveBeenCalledWith(
+      '/users/new_sign_up/login_type'
+    );
+  });
 
   it('renders finish student account page fields', () => {
     renderDefault();
@@ -317,6 +351,90 @@ describe('FinishStudentAccount', () => {
     expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
     fireEvent.click(screen.getAllByRole('checkbox')[1]);
     expect(finishSignUpButton.getAttribute('aria-disabled')).toBe(null);
+  });
+
+  it('clicking finish sign up button triggers fetch call and shows error if backend error', async () => {
+    fetchStub.callsFake(() =>
+      Promise.resolve({
+        ok: false,
+        status: 500,
+        json: () => Promise.resolve({success: false}),
+      } as Response)
+    );
+
+    // Declare parameter values and set sessionStorage variables
+    const name = 'FirstName';
+    const email = 'fake@email.com';
+    const age = '6';
+    const gender = 'Female';
+    const state = 'AZ';
+    const country = 'US';
+    const parentEmail = 'parent@email.com';
+    const finishSignUpParams = {
+      new_sign_up: true,
+      user: {
+        user_type: UserTypes.STUDENT,
+        email: email,
+        name: name,
+        age: age,
+        gender: gender,
+        us_state: state,
+        country_code: country,
+        parent_email_preference_email: parentEmail,
+        parent_email_preference_opt_in: true,
+      },
+    };
+    sessionStorage.setItem('email', email);
+
+    await waitFor(() => {
+      renderDefault();
+    });
+
+    // Set up finish sign up button onClick jest function
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    }) as HTMLButtonElement;
+    const handleClick = jest.fn();
+    finishSignUpButton.onclick = handleClick;
+
+    // Fill in fields
+    fireEvent.click(screen.getAllByRole('checkbox')[0]);
+    fireEvent.click(screen.getAllByRole('checkbox')[1]);
+    const parentEmailInput = screen.getAllByDisplayValue('')[1];
+    const displayNameInput = screen.getAllByDisplayValue('')[3];
+    const ageInput = screen.getAllByDisplayValue('')[4];
+    const stateInput = screen.getAllByDisplayValue('')[5];
+    const genderInput = screen.getAllByDisplayValue('')[6];
+    fireEvent.change(parentEmailInput, {target: {value: parentEmail}});
+    fireEvent.change(displayNameInput, {target: {value: name}});
+    fireEvent.change(ageInput, {target: {value: age}});
+    fireEvent.change(stateInput, {target: {value: state}});
+    fireEvent.change(genderInput, {target: {value: gender}});
+
+    // Click finish sign up button
+    fireEvent.click(finishSignUpButton);
+
+    await waitFor(() => {
+      // Verify the button's click handler was called
+      expect(handleClick).toHaveBeenCalled();
+
+      // Verify the authenticity token was obtained
+      expect(getAuthenticityTokenMock).toHaveBeenCalled;
+
+      // Verify the button's fetch method was called
+      expect(fetchStub.calledTwice).toBe(true);
+      const fetchCall = fetchStub.getCall(1);
+      expect(fetchCall.args[0]).toEqual('/users');
+      expect(fetchCall.args[1]?.body).toEqual(
+        JSON.stringify(finishSignUpParams)
+      );
+
+      // Verify the user is NOT redirected to the finish sign up page
+      expect(navigateToHrefMock).toHaveBeenCalledTimes(0);
+      // Verify the error message is shown. Since the message includes a hyperlinked email, it requires the use of a
+      // SafeMarkdown tag, so the email itself is checked to know if the message shows.
+      screen.getByText('support@code.org');
+    });
   });
 
   it('clicking finish sign up button triggers fetch call and redirects user to home page', async () => {

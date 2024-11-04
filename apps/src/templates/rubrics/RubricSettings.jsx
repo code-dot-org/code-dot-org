@@ -19,6 +19,7 @@ import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {setAiRubricsDisabled} from '@cdo/apps/templates/currentUserRedux';
+import {setAiEvalStatusMap} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import i18n from '@cdo/locale';
 
 import {UNDERSTANDING_LEVEL_STRINGS_V2, TAB_NAMES} from './rubricHelpers';
@@ -52,7 +53,8 @@ function RubricSettings({
   aiRubricsDisabled,
   setAiRubricsDisabled,
   allTeacherEvaluationData,
-  allAiEvaluationStatus,
+  aiEvalStatusCounters,
+  setAiEvalStatusMap,
 }) {
   const rubricId = rubric.id;
   const {lesson} = rubric;
@@ -125,7 +127,7 @@ function RubricSettings({
     setDisplayDetails(!displayDetails);
   };
 
-  const parseAiEvaluationStatusAll = useCallback(data => {
+  const parseAiEvalStatusCounters = useCallback(data => {
     // we can't fetch the csrf token from the DOM because CSRF protection
     // is disabled on script level pages.
     setCsrfToken(data.csrfToken);
@@ -143,10 +145,10 @@ function RubricSettings({
 
   // parse initial ai evaluation status
   useEffect(() => {
-    if (allAiEvaluationStatus) {
-      parseAiEvaluationStatusAll(allAiEvaluationStatus);
+    if (aiEvalStatusCounters) {
+      parseAiEvalStatusCounters(aiEvalStatusCounters);
     }
-  }, [allAiEvaluationStatus, parseAiEvaluationStatusAll]);
+  }, [aiEvalStatusCounters, parseAiEvalStatusCounters]);
 
   const parseTeacherEvaluationData = useCallback(
     data => {
@@ -208,6 +210,7 @@ function RubricSettings({
                 setStatusAll(STATUS_ALL.EVALUATION_PENDING);
               } else {
                 setStatusAll(STATUS_ALL.SUCCESS);
+                setAiEvalStatusMap(data.aiEvalStatusMap);
               }
             });
           }
@@ -215,7 +218,14 @@ function RubricSettings({
       }, 5000);
       return () => clearInterval(intervalId);
     }
-  }, [rubricId, polling, sectionId, statusAll, refreshAiEvaluations]);
+  }, [
+    rubricId,
+    polling,
+    sectionId,
+    statusAll,
+    refreshAiEvaluations,
+    setAiEvalStatusMap,
+  ]);
 
   const handleRunAiAssessmentAll = () => {
     setStatusAll(STATUS_ALL.EVALUATION_PENDING);
@@ -394,8 +404,11 @@ RubricSettings.propTypes = {
   reportingData: reportingDataShape,
   aiRubricsDisabled: PropTypes.bool,
   setAiRubricsDisabled: PropTypes.func.isRequired,
+
+  // Redux provided
   allTeacherEvaluationData: PropTypes.array,
-  allAiEvaluationStatus: PropTypes.object,
+  aiEvalStatusCounters: PropTypes.object,
+  setAiEvalStatusMap: PropTypes.func,
 };
 
 export const UnconnectedRubricSettings = RubricSettings;
@@ -403,9 +416,12 @@ export const UnconnectedRubricSettings = RubricSettings;
 export default connect(
   state => ({
     aiRubricsDisabled: state.currentUser.aiRubricsDisabled,
+    allTeacherEvaluationData: state.teacherRubric.allTeacherEvaluationData,
+    aiEvalStatusCounters: state.teacherRubric.aiEvalStatusCounters,
   }),
   dispatch => ({
     setAiRubricsDisabled: aiRubricsDisabled =>
       dispatch(setAiRubricsDisabled(aiRubricsDisabled)),
+    setAiEvalStatusMap: statusMap => dispatch(setAiEvalStatusMap(statusMap)),
   })
 )(RubricSettings);

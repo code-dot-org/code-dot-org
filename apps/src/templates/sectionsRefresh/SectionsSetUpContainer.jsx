@@ -86,6 +86,7 @@ export default function SectionsSetUpContainer({
   sectionToBeEdited,
   canEnableAITutor,
   userCountry,
+  defaultRedirectUrl,
 }) {
   const [sections, updateSection] = useSections(sectionToBeEdited);
   const [isCoteacherOpen, setIsCoteacherOpen] = useState(false);
@@ -125,7 +126,7 @@ export default function SectionsSetUpContainer({
     */
     if (isNewSection) {
       analyticsReporter.sendEvent(
-        EVENTS.COMPLETED_EVENT,
+        EVENTS.SECTION_SETUP_COMPLETED,
         {
           sectionUnitId: section.course?.unitId,
           sectionCurriculumLocalizedName: section.course?.displayName,
@@ -154,20 +155,24 @@ export default function SectionsSetUpContainer({
         initialSection &&
         section.course?.unitId !== initialSection.course?.unitId)
     ) {
-      analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
-        sectionName: section.name,
-        sectionId: section.id,
-        sectionLoginType: section.loginType,
-        previousUnitId: initialSection.course?.unitId,
-        previousCourseId: initialSection.course?.courseOfferingId,
-        previousCourseVersionId: initialSection.course?.versionId,
-        previousVersionYear: null,
-        newUnitId: section.course?.unitId,
-        newCourseId: section.course?.courseOfferingId,
-        newCourseVersionId: section.course?.courseVersionId,
-        newVersionYear: null,
-        flowVersion: NEW,
-      });
+      analyticsReporter.sendEvent(
+        EVENTS.CURRICULUM_ASSIGNED,
+        {
+          sectionName: section.name,
+          sectionId: section.id,
+          sectionLoginType: section.loginType,
+          previousUnitId: initialSection.course?.unitId,
+          previousCourseId: initialSection.course?.courseOfferingId,
+          previousCourseVersionId: initialSection.course?.versionId,
+          previousVersionYear: null,
+          newUnitId: section.course?.unitId,
+          newCourseId: section.course?.courseOfferingId,
+          newCourseVersionId: section.course?.courseVersionId,
+          newVersionYear: null,
+          flowVersion: NEW,
+        },
+        PLATFORMS.BOTH
+      );
     }
   };
 
@@ -242,7 +247,8 @@ export default function SectionsSetUpContainer({
         // Redirect to the given redirectUrl if present, otherwise redirect to the
         // sections list on the homepage.
         let url =
-          window.location.origin + (redirectUrl ? `/${redirectUrl}` : '/home');
+          window.location.origin +
+          (redirectUrl ? `/${redirectUrl}` : defaultRedirectUrl);
         if (!redirectUrl) {
           if (createAnotherSection) {
             url += '?openAddSectionDialog=true';
@@ -489,4 +495,5 @@ SectionsSetUpContainer.propTypes = {
   sectionToBeEdited: PropTypes.object,
   canEnableAITutor: PropTypes.bool,
   userCountry: PropTypes.string,
+  defaultRedirectUrl: PropTypes.string.isRequired,
 };

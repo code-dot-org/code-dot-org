@@ -17,6 +17,10 @@ import currentUser, {
 } from '@cdo/apps/templates/currentUserRedux';
 import {RowType} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import RubricSettings from '@cdo/apps/templates/rubrics/RubricSettings';
+import teacherRubric, {
+  setAllTeacherEvaluationData,
+  setAiEvalStatusCounters,
+} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import teacherSections, {
   selectSection,
   setSections,
@@ -88,7 +92,7 @@ describe('RubricSettings', () => {
       }
     });
     stubRedux();
-    registerReducers({teacherSections, currentUser});
+    registerReducers({teacherRubric, teacherSections, currentUser});
     store = getStore();
     store.dispatch(setSections([fakeSection]));
     store.dispatch(selectSection(fakeSection.id));
@@ -182,8 +186,7 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
-          allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -200,8 +203,7 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
-          allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -215,6 +217,7 @@ describe('RubricSettings', () => {
   });
 
   it('disables run AI assessment for all button when no students have attempted', async () => {
+    store.dispatch(setAiEvalStatusCounters(noAttempts));
     render(
       <Provider store={store}>
         <RubricSettings
@@ -222,8 +225,6 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
-          allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={noAttempts}
         />
       </Provider>
     );
@@ -234,6 +235,7 @@ describe('RubricSettings', () => {
   });
 
   it('disables run AI assessment for all button when all student work has been evaluated', async () => {
+    store.dispatch(setAiEvalStatusCounters(noUnevaluated));
     render(
       <Provider store={store}>
         <RubricSettings
@@ -241,8 +243,6 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
-          allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={noUnevaluated}
         />
       </Provider>
     );
@@ -257,6 +257,7 @@ describe('RubricSettings', () => {
   });
 
   it('shows pending status when eval is pending', async () => {
+    store.dispatch(setAiEvalStatusCounters(ready));
     // show ready state on initial load
     render(
       <Provider store={store}>
@@ -265,8 +266,6 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
-          allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
         />
       </Provider>
     );
@@ -304,8 +303,8 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
-          allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
+          setAiEvalStatusMap={jest.fn()}
         />
       </Provider>
     );
@@ -361,7 +360,7 @@ describe('RubricSettings', () => {
           rubric={defaultRubric}
           sectionId={1}
           allTeacherEvaluationData={noEvals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -375,6 +374,7 @@ describe('RubricSettings', () => {
   });
 
   it('displays generate CSV button when there are evaluations to export', async () => {
+    store.dispatch(setAllTeacherEvaluationData(evals));
     render(
       <Provider store={store}>
         <RubricSettings
@@ -382,8 +382,7 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
-          allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -397,6 +396,7 @@ describe('RubricSettings', () => {
   });
 
   it('sends event when download CSV is clicked', async () => {
+    store.dispatch(setAllTeacherEvaluationData(evals));
     render(
       <Provider store={store}>
         <RubricSettings
@@ -405,8 +405,7 @@ describe('RubricSettings', () => {
           rubric={defaultRubric}
           reportingData={reportingData}
           sectionId={1}
-          allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -434,8 +433,7 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
-          allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -455,8 +453,7 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
-          allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -473,8 +470,7 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
-          allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );

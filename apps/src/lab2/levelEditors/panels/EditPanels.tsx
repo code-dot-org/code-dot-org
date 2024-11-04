@@ -123,6 +123,7 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
             targetHeight={1080}
             offerBrowserTts={false}
             resetOnChange={false}
+            levelId={null}
           />
         </div>
       </div>

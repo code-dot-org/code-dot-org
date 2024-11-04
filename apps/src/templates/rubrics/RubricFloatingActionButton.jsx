@@ -7,7 +7,7 @@ import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import aiFabIcon from '@cdo/static/ai-bot-centered-teal.png';
@@ -26,9 +26,8 @@ import style from './rubrics.module.scss';
 
 export const RubricErrorContainer = ({isOpen, setIsOpen}) => (
   <div
-    className={classnames(style.rubricContainer, {
-      [style.hiddenRubricContainer]: !isOpen,
-    })}
+    className={style.rubricContainer}
+    style={isOpen ? null : {display: 'none'}}
   >
     <div className={style.rubricHeaderRedesign}>
       <div className={style.rubricHeaderLeftSide}>
@@ -158,6 +157,7 @@ function RubricFloatingActionButton({
     <div id="fab-contained">
       <button
         id="ui-floatingActionButton"
+        aria-label={i18n.openOrCloseTeachingAssistant()}
         className={classes}
         onClick={handleClick}
         type="button"
@@ -216,5 +216,5 @@ RubricFloatingActionButton.propTypes = {
 export const UnconnectedRubricFloatingActionButton = RubricFloatingActionButton;
 
 export default connect(state => ({
-  sectionId: selectedSection(state)?.id,
+  sectionId: selectedSectionSelector(state)?.id,
 }))(RubricFloatingActionButton);

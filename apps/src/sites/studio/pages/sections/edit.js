@@ -14,6 +14,7 @@ function initPage() {
     <SectionsSetUpContainer
       sectionToBeEdited={section}
       canEnableAITutor={canEnableAITutor}
+      defaultRedirectUrl="/home"
     />,
     document.getElementById('form')
   );

@@ -1,7 +1,4 @@
-import {
-  getNextFileId,
-  useCodebridgeContext,
-} from '@codebridge/codebridgeContext';
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {FolderId, ProjectFile} from '@codebridge/types';
 import {validateFileName} from '@codebridge/utils';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
@@ -12,12 +9,6 @@ import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-type handleFileUploadArgs = {
-  folderId: FolderId;
-  fileName: string;
-  contents: string;
-};
 
 export const useHandleFileUpload = (
   projectFiles: Record<string, ProjectFile>
@@ -31,12 +22,8 @@ export const useHandleFileUpload = (
   const {newFile} = useCodebridgeContext();
   const dialogControl = useDialogControl();
   return useCallback(
-    ({folderId, fileName, contents}: handleFileUploadArgs) => {
-      // first of all, we just click on the document body to close our pop up
-      // this is because we canceled the original click event inside of the FileUploader
-      // of note - if additional clickhandlers were attached here, they won't be called.
-      // So don't attach other handlers to this button.
-      document.body.click();
+    (fileName: string, contents: string, folderIdArg: unknown) => {
+      const folderId = folderIdArg as FolderId;
 
       const validationError = validateFileName({
         fileName,
@@ -58,13 +45,11 @@ export const useHandleFileUpload = (
         return;
       }
 
-      const fileId = getNextFileId(Object.values(projectFiles));
-
       newFile({
-        fileId,
         fileName,
         folderId,
         contents,
+        validationFileId: validationFile?.id,
       });
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FILE, appName, {
         fileName,

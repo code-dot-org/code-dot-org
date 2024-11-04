@@ -5,11 +5,13 @@ import Typist from 'react-typist';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
+import usePrevious from '@cdo/apps/util/usePrevious';
 
+import {queryParams} from '../code-studio/utils';
 import FontAwesome from '../legacySharedComponents/FontAwesome';
+import {useBrowserTextToSpeech} from '../sharedComponents/BrowserTextToSpeechWrapper';
 import EnhancedSafeMarkdown from '../templates/EnhancedSafeMarkdown';
 import {commonI18n} from '../types/locale';
-import {cancelSpeech} from '../util/BrowserTextToSpeech';
 
 import {Panel} from './types';
 
@@ -34,6 +36,7 @@ interface PanelsProps {
   targetWidth: number;
   targetHeight: number;
   offerBrowserTts: boolean;
+  levelId: string | null;
   resetOnChange?: boolean;
 }
 
@@ -47,10 +50,14 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   targetWidth,
   targetHeight,
   offerBrowserTts,
+  levelId,
   resetOnChange = true,
 }) => {
   const [currentPanelIndex, setCurrentPanelIndex] = useState(0);
   const [typingDone, setTypingDone] = useState(false);
+  const {cancel} = useBrowserTextToSpeech();
+
+  const previousPanelIndex = usePrevious(currentPanelIndex);
 
   targetWidth -= horizontalMargin * 2;
   targetHeight -= verticalMargin * 2 + childrenAreaHeight;
@@ -92,17 +99,17 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
 
   // Reset to last panel if number of panels has reduced.
   useEffect(() => {
-    if (currentPanelIndex >= panels.length) {
+    if (!resetOnChange && currentPanelIndex >= panels.length) {
       setCurrentPanelIndex(Math.max(panels.length - 1, 0));
     }
-  }, [currentPanelIndex, panels]);
+  }, [currentPanelIndex, panels, resetOnChange]);
 
   // Cancel any in-progress text-to-speech when the panel changes.
   useEffect(() => {
     if (offerBrowserTts) {
-      cancelSpeech();
+      cancel();
     }
-  }, [currentPanelIndex, offerBrowserTts]);
+  }, [currentPanelIndex, offerBrowserTts, cancel]);
 
   // Reset typing if the panel changes.
   useEffect(() => {
@@ -116,10 +123,8 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
 
   const previousPanel =
     panel.fadeInOverPrevious &&
-    currentPanelIndex > 0 &&
-    panels[currentPanelIndex - 1]
-      ? panels[currentPanelIndex - 1]
-      : null;
+    previousPanelIndex !== undefined &&
+    panels[previousPanelIndex];
 
   const layoutClassMap = {
     'text-top-left': styles.textTopLeft,
@@ -141,14 +146,17 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
 
   const plainText = markdownToTxt(panel.text);
 
+  const showTyping =
+    panel.typing || queryParams('panels-show-typing') === 'true';
+
   // When typing, only show the button when the typing is done.
-  const showButton = !panel.typing || typingDone;
+  const showButton = !showTyping || typingDone;
 
   return (
     <div
       id="panels-container"
       className={styles.panelsContainer}
-      key={currentPanelIndex}
+      key={`${levelId || 'default'}-${currentPanelIndex}`}
     >
       <div className={styles.panel} style={{width, height}}>
         {previousPanel && (
@@ -165,34 +173,36 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
             backgroundImage: `url("${panel.imageUrl}")`,
           }}
         />
-        <div
-          className={classNames(
-            styles.text,
-            panel.dark && styles.textDark,
-            textLayoutClass
-          )}
-        >
-          {offerBrowserTts && <TextToSpeech text={panel.text} />}
-          {panel.typing ? (
-            <div>
-              <div className={styles.invisiblePlaceholder}>{plainText}</div>
-              <Typist
-                startDelay={1500}
-                avgTypingDelay={35}
-                stdTypingDelay={15}
-                cursor={{show: false}}
-                onTypingDone={() => {
-                  setTypingDone(true);
-                }}
-                className={styles.typist}
-              >
-                {plainText}
-              </Typist>
-            </div>
-          ) : (
-            <EnhancedSafeMarkdown markdown={panel.text} />
-          )}
-        </div>
+        {panel.text && (
+          <div
+            className={classNames(
+              styles.text,
+              panel.dark && styles.textDark,
+              textLayoutClass
+            )}
+          >
+            {offerBrowserTts && <TextToSpeech text={panel.text} />}
+            {showTyping ? (
+              <div>
+                <div className={styles.invisiblePlaceholder}>{plainText}</div>
+                <Typist
+                  startDelay={1500}
+                  avgTypingDelay={35}
+                  stdTypingDelay={15}
+                  cursor={{show: false}}
+                  onTypingDone={() => {
+                    setTypingDone(true);
+                  }}
+                  className={styles.typist}
+                >
+                  {plainText}
+                </Typist>
+              </div>
+            ) : (
+              <EnhancedSafeMarkdown markdown={panel.text} />
+            )}
+          </div>
+        )}
       </div>
       <div
         className={styles.childrenArea}
@@ -200,11 +210,12 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
       >
         {showButton && (
           <Button
+            key={`button-${currentPanelIndex}`}
             id="panels-button"
             onClick={handleButtonClick}
             className={classNames(
               styles.button,
-              panel.typing ? styles.buttonReady : styles.buttonDelay
+              showTyping ? styles.buttonReady : styles.buttonDelay
             )}
             text={buttonText}
           />

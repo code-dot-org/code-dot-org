@@ -69,8 +69,7 @@ span {
   max-width: 100%;
 
   a {
-    text-decoration: underline;
-    color: unset;
+    @include link-style;
   }
 
   .containerWrapper {
@@ -277,6 +276,17 @@ span {
       .buttonContainer {
         display: flex;
         flex-direction: row;
+      }
+
+      @media (max-width: 850px) {
+        .buttonContainer {
+          flex-direction: column;
+          align-items: stretch;
+
+          div {
+            margin-inline: auto;
+          }
+        }
       }
 
       .iconContainer {
@@ -553,5 +563,37 @@ span {
   a {
     text-decoration: underline !important;
     color: unset !important;
+    font-weight: 700;
+  }
+}
+
+.errorSigningUpMessage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $light_negative_100;
+  border-radius: 0.25rem;
+  padding: 0.625rem 0.75rem;
+  margin-bottom: 1.125rem;
+
+  .errorMessageWithXMark {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.625rem;
+
+    .xIcon {
+      color: $light_negative_500;
+      font-size: 0.875rem;
+    }
+  
+    .errorMessageText {
+      margin-top: 2px;
+
+      a {
+        color: $light_black;
+      }
+    }
   }
 }

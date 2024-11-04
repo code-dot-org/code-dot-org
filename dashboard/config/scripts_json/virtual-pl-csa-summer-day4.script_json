@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-09 19:02:42 UTC",
+    "serialized_at": "2024-11-01 14:47:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -126,7 +126,7 @@
     },
     {
       "key": "lesson-7",
-      "name": "Model Lesson 7: U2L9 Mutator Methods ",
+      "name": "Model Lesson 7: U2L11 Mutator Methods ",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
