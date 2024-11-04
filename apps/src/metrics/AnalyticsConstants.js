@@ -456,6 +456,9 @@ const EVENTS = {
   SECTION_LOAD_FAILURE: 'Local Nav Section Load Failure',
   VIEW_LESSON_MATERIALS: 'Local Nav View Lesson Materials',
   LESSON_MATERIALS_FAILURE: 'Local Nav Lesson Materials Load Failure',
+  UNIT_CALENDAR_FAILURE: 'Local Nav Unit Calendar Load Failure',
+  VIEW_UNIT_CALENDAR: 'Local Nav View Unit Calendar',
+  CHANGED_CALENDAR_MINUTES: 'Local Nav Changed Calendar Minutes',
 };
 
 const EVENT_GROUP_NAMES = {

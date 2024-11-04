@@ -5,6 +5,8 @@ import {useSelector} from 'react-redux';
 import UnitCalendarGrid from '@cdo/apps//code-studio/components/progress/UnitCalendarGrid';
 import {initializeRedux} from '@cdo/apps/code-studio/components/progress/TeacherUnitOverview';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -66,6 +68,18 @@ const UnitCalendar: React.FC = () => {
           // Initialize Redux state with the new data
           initializeRedux(responseJson, dispatch, userType, userId);
           setIsLoading(false);
+
+          analyticsReporter.sendEvent(EVENTS.VIEW_UNIT_CALENDAR, {
+            unitName,
+          });
+        })
+        .catch(error => {
+          console.error('Error loading unit calendar', error);
+
+          analyticsReporter.sendEvent(EVENTS.UNIT_CALENDAR_FAILURE, {
+            unitName,
+          });
+          return null;
         });
     }
   }, [
@@ -88,6 +102,11 @@ const UnitCalendar: React.FC = () => {
 
   const handleDropdownChange = (value: string) => {
     setWeeklyInstructionalMinutes(value);
+
+    analyticsReporter.sendEvent(EVENTS.CHANGED_CALENDAR_MINUTES, {
+      unitName,
+      minutes: value,
+    });
   };
 
   return (
