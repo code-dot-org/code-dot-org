@@ -112,6 +112,7 @@ const UnitCalendar: React.FC<UnitCalendarProps> = ({
     : !unitName && selectedSection.courseVersionName
     ? getNoUnitAssignedForCalendarOrLessonMaterials(
         selectedSection.id,
+        selectedSection.courseVersionName,
         selectedSection.courseDisplayName,
         i18n.theCalendar()
       )

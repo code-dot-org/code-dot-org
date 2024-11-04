@@ -145,13 +145,14 @@ export const getNoCalendarForThisUnit = () => {
 export const getNoUnitAssignedForCalendarOrLessonMaterials = (
   sectionId: number,
   courseVersionName: string,
+  courseDisplayName: string,
   pageName: string
 ) => {
   return {
     headline: i18n.almostThere(),
     descriptionText: i18n.noUnitAssigned({
       page: pageName,
-      courseName: courseVersionName,
+      courseName: courseDisplayName,
     }),
     imageComponent: <img src={NoUnitAssigned} alt={i18n.almostThere()} />,
     button: (
