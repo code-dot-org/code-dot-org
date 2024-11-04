@@ -82,18 +82,11 @@ export default function SchoolDataInputs({
     setCountry(c);
   };
 
-  const labelClassName = schoolZipIsValid ? '' : style.disabledLabel;
-
   const handleSchoolChange = id => {
     setSchoolId(id);
-
-    if (!Object.values(NonSchoolOptions).includes(id)) {
-      const schoolName = schoolsList.find(school => school.value === id)?.text;
-      if (schoolName) {
-        setSchoolName(schoolName);
-      }
-    }
   };
+
+  const labelClassName = schoolZipIsValid ? '' : style.disabledLabel;
 
   return (
     <div className={style.schoolAssociationWrapper}>

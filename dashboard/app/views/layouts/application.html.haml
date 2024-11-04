@@ -27,7 +27,7 @@
     -# making use of the dcdo feature.
     %script{data: {'dcdo': DCDO.frontend_config.to_json}}
     -# current Global Edition region
-    %script{'data-ge-region' => request.ge_region.to_s}}
+    %script{'data-ge-region' => request.ge_region.to_s}
     -# auth key needed for amplitude analytics.
     %script{data: {'amplitude-api-key': CDO.safe_amplitude_api_key}}
     -# auth key needed for statsig analytics

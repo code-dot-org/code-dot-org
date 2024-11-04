@@ -17,7 +17,7 @@
 
 %script{'data-statsig-api-client-key' => CDO.safe_statsig_api_client_key}}
 %script{'data-managed-test-server' => "#{CDO.running_web_application? && CDO.test_system?}"}}
-%script{'data-ge-region' => request.ge_region.to_s}}
+%script{'data-ge-region' => request.ge_region.to_s}
 
 - if request.ge_region
   %script{src: webpack_asset_path('js/statsigWebAnalytics.js'), 'data-ot-ignore' => ''}

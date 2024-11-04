@@ -86,6 +86,7 @@ export default function SectionsSetUpContainer({
   sectionToBeEdited,
   canEnableAITutor,
   userCountry,
+  defaultRedirectUrl,
 }) {
   const [sections, updateSection] = useSections(sectionToBeEdited);
   const [isCoteacherOpen, setIsCoteacherOpen] = useState(false);
@@ -246,7 +247,8 @@ export default function SectionsSetUpContainer({
         // Redirect to the given redirectUrl if present, otherwise redirect to the
         // sections list on the homepage.
         let url =
-          window.location.origin + (redirectUrl ? `/${redirectUrl}` : '/home');
+          window.location.origin +
+          (redirectUrl ? `/${redirectUrl}` : defaultRedirectUrl);
         if (!redirectUrl) {
           if (createAnotherSection) {
             url += '?openAddSectionDialog=true';
@@ -493,4 +495,5 @@ SectionsSetUpContainer.propTypes = {
   sectionToBeEdited: PropTypes.object,
   canEnableAITutor: PropTypes.bool,
   userCountry: PropTypes.string,
+  defaultRedirectUrl: PropTypes.string.isRequired,
 };

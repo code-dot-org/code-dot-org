@@ -32,6 +32,7 @@ const PanelsLabView: React.FunctionComponent = () => {
   const offerBrowserTts =
     useAppSelector(state => state.lab.levelProperties?.offerBrowserTts) ||
     queryParams('show-tts') === 'true';
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
 
   const dialogControl = useDialogControl();
 
@@ -76,6 +77,7 @@ const PanelsLabView: React.FunctionComponent = () => {
       targetWidth={windowWidth}
       targetHeight={windowHeight}
       offerBrowserTts={offerBrowserTts}
+      levelId={currentLevelId}
     />
   );
 };
