@@ -1,9 +1,8 @@
 import React, {useEffect} from 'react';
 
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {LifecycleEvent} from '@cdo/apps/lab2/utils';
+import {Callback, LifecycleEvent} from '@cdo/apps/lab2/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 /**
@@ -21,10 +20,6 @@ const MetricsAdapter: React.FunctionComponent = () => {
   );
   const pageError = useAppSelector(state => state.lab.pageError);
 
-  const isProjectLevel = useAppSelector(
-    state => state.lab.levelProperties?.isProjectLevel
-  );
-  const isReadOnly = useAppSelector(state => isReadOnlyWorkspace(state));
   const isShareView = useAppSelector(state => state.lab.isShareView);
 
   useEffect(() => {
@@ -58,13 +53,18 @@ const MetricsAdapter: React.FunctionComponent = () => {
     }
   }, [pageError]);
 
-  const logLoadMetric = () => {
+  const logLoadMetric: Callback<LifecycleEvent.LevelLoadCompleted> = (
+    levelProperties,
+    _channel,
+    _initialSources,
+    isReadOnly
+  ) => {
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .incrementCounter('LevelLoad', [
         {
           name: 'Type',
-          value: isProjectLevel ? 'Project' : 'Level',
+          value: levelProperties?.isProjectLevel ? 'Project' : 'Level',
         },
         {
           name: 'Mode',
@@ -72,7 +72,6 @@ const MetricsAdapter: React.FunctionComponent = () => {
         },
       ]);
   };
-
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, logLoadMetric);
 
   return null;
