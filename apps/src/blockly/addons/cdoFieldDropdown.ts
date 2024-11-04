@@ -199,6 +199,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * Get the text from this field to display on the block. May differ from
    * `getText` due to ellipsis, and other formatting.
    * @override Handling of text for RTL blocks is customized.
+   * See: https://github.com/google/blockly/issues/8645
    * @returns Text to display.
    */
   protected getDisplayText_(): string {
