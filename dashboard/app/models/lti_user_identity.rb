@@ -24,4 +24,5 @@ class LtiUserIdentity < ApplicationRecord
   has_and_belongs_to_many :lti_deployments
 
   validates :subject, presence: true
+  validates :subject, uniqueness: {scope: :lti_integration_id}
 end
