@@ -198,7 +198,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
   /**
    * Get the text from this field to display on the block. May differ from
    * `getText` due to ellipsis, and other formatting.
-   * @override
+   * @override Handling of text for RTL blocks is customized.
    * @returns Text to display.
    */
   protected getDisplayText_(): string {
@@ -214,8 +214,13 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     // Replace whitespace with non-breaking spaces so the text doesn't collapse.
     text = text.replace(/\s/g, GoogleBlockly.Field.NBSP);
     if (this.sourceBlock_ && this.sourceBlock_.RTL) {
-      // The SVG is LTR, force text to be RTL by adding an RLM.
-      text += '\u200F';
+      // Begin CDO Customization:
+      // Add RTL override '\u202E' and then a pop directional formatting '\u202C'.
+      // This approach enforces the RTL direction for the entire text consistently.
+      // The PDF mark ensures the override is localized to this field's text.
+      // Core Blockly instead adds a RTL Mark (text += '\u200F').
+      text = '\u202E' + text + '\u202C';
+      // End CDO Customization
     }
     return text;
   }
