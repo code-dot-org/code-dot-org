@@ -6,10 +6,10 @@ import {
   appendSystemError,
 } from '@codebridge/redux/consoleRedux';
 
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {setAndSaveProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
-import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
 
 import {parseErrorMessage} from './pythonHelpers/messageHelpers';
@@ -21,6 +21,7 @@ let callbacks: {[key: number]: (event: PyodideMessage) => void} = {};
 const setUpPyodideWorker = () => {
   // @ts-expect-error because TypeScript does not like this syntax.
   const worker = new Worker(new URL('./pyodideWebWorker.ts', import.meta.url));
+  let loadStartTime: number | undefined;
 
   callbacks = {};
 
@@ -53,22 +54,27 @@ const setUpPyodideWorker = () => {
         break;
       case 'system_error':
         getStore().dispatch(appendSystemError(message));
-        MetricsReporter.logError({
-          type: 'PythonLabSystemCodeError',
-          message,
-        });
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Python Lab System Code Error', undefined, {message});
         break;
       case 'internal_error':
-        MetricsReporter.logError({
-          type: 'PythonLabInternalError',
-          message,
-        });
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Python Lab Internal Error', undefined, {message});
         break;
       case 'loading_pyodide':
         getStore().dispatch(setLoadedCodeEnvironment(false));
+        loadStartTime = Date.now();
         break;
       case 'loaded_pyodide':
         getStore().dispatch(setLoadedCodeEnvironment(true));
+        if (loadStartTime) {
+          Lab2Registry.getInstance()
+            .getMetricsReporter()
+            .reportLoadTime('PyodideLoadTime', Date.now() - loadStartTime);
+          loadStartTime = undefined;
+        }
         break;
       default:
         console.warn(
@@ -112,6 +118,9 @@ const restartPyodideIfProgramIsRunning = () => {
     pyodideWorker.terminate();
     pyodideWorker = setUpPyodideWorker();
     getStore().dispatch(appendSystemMessage('Program stopped.'));
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .incrementCounter('PythonLab.PyodideRestarted');
   }
 };
 
