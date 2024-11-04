@@ -137,6 +137,7 @@ export default function SectionsSetUpContainer({
           sectionName: section.name,
           sectionPairProgramSelection: section.pairingAllowed,
           flowVersion: NEW,
+          isOnTeacherDashboard: location.pathname.includes('teacher_dashboard'),
         },
         PLATFORMS.BOTH
       );
@@ -170,6 +171,7 @@ export default function SectionsSetUpContainer({
           newCourseVersionId: section.course?.courseVersionId,
           newVersionYear: null,
           flowVersion: NEW,
+          isOnTeacherDashboard: location.pathname.includes('teacher_dashboard'),
         },
         PLATFORMS.BOTH
       );
