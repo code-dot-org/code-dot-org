@@ -234,6 +234,7 @@ export interface ExtendedBlock extends GoogleBlockly.Block {
 }
 
 export interface ExtendedWorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
+  previousViewWidth: number;
   flyoutParentBlock: GoogleBlockly.Block | null;
   globalVariables: string[];
   noFunctionBlockFrame: boolean;
