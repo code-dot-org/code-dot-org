@@ -194,6 +194,31 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (this as any).arrow = arrow;
   }
+
+  /**
+   * Get the text from this field to display on the block. May differ from
+   * `getText` due to ellipsis, and other formatting.
+   * @override
+   * @returns Text to display.
+   */
+  protected getDisplayText_(): string {
+    let text = this.getText();
+    if (!text) {
+      // Prevent the field from disappearing if empty.
+      return GoogleBlockly.Field.NBSP;
+    }
+    if (text.length > this.maxDisplayLength) {
+      // Truncate displayed string and add an ellipsis ('...').
+      text = text.substring(0, this.maxDisplayLength - 2) + '…';
+    }
+    // Replace whitespace with non-breaking spaces so the text doesn't collapse.
+    text = text.replace(/\s/g, GoogleBlockly.Field.NBSP);
+    if (this.sourceBlock_ && this.sourceBlock_.RTL) {
+      // The SVG is LTR, force text to be RTL by adding an RLM.
+      text += '\u200F';
+    }
+    return text;
+  }
 }
 
 /**
