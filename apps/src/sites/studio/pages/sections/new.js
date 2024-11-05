@@ -14,6 +14,7 @@ $(document).ready(() => {
       isUsersFirstSection={isUsersFirstSection}
       canEnableAITutor={canEnableAITutor}
       userCountry={userCountry}
+      defaultRedirectUrl="/home"
     />,
     document.getElementById('form')
   );

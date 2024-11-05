@@ -6856,6 +6856,46 @@ columns:
     default_function:
     collation:
     comment:
+  user_level_interactions:
+  - *10
+  - *11
+  - *35
+  - *36
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: school_year
+    sql_type_metadata: *3
+    'null': false
+    default:
+    default_function:
+    collation: utf8mb3_unicode_ci
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: interaction
+    sql_type_metadata: *3
+    'null': false
+    default:
+    default_function:
+    collation: utf8mb3_unicode_ci
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: code_version
+    sql_type_metadata: *3
+    'null': true
+    default:
+    default_function:
+    collation: utf8mb3_unicode_ci
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: metadata
+    sql_type_metadata: *20
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - *28
+  - *14
+  - *15
   user_levels:
   - *138
   - *11
@@ -8019,6 +8059,7 @@ primary_keys:
   unit_groups_resources:
   unit_groups_student_resources: id
   user_geos: id
+  user_level_interactions: id
   user_levels: id
   user_ml_models: id
   user_module_task_assignments: id
@@ -8221,6 +8262,7 @@ data_sources:
   unit_groups_resources: true
   unit_groups_student_resources: true
   user_geos: true
+  user_level_interactions: true
   user_levels: true
   user_ml_models: true
   user_module_task_assignments: true
@@ -13370,6 +13412,33 @@ indexes:
     type:
     using: :btree
     comment:
+  user_level_interactions:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: user_level_interactions
+    name: index_user_level_interactions_on_user_id
+    unique: false
+    columns:
+    - user_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: user_level_interactions
+    name: index_user_level_interactions_on_level_id
+    unique: false
+    columns:
+    - level_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
   user_levels:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_levels
@@ -13813,7 +13882,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20241022150616
+version: 20241024180714
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

@@ -19223,7 +19223,11 @@ en:
           description: ''
           student_description: ''
         intro-to-programming-playground:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Level Progression Example 1
+            lesson-2:
+              name: Level Progression Example 2 - Conditionals
           lesson_groups: {}
           name: intro-to-programming-playground
           title: "[PLAYGROUND] Introduction to Programming with Python"
@@ -19512,6 +19516,17 @@ en:
           lesson_groups: {}
           name: codebridge-ascii
           title: 'Explore Ascii Art with Codebridge '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        music-extras-2024:
+          lessons:
+            lesson-1:
+              name: Keep on Jamming
+          lesson_groups: {}
+          name: music-extras-2024
+          title: Keep on Jamming
           description_audience: ''
           description_short: ''
           description: ''

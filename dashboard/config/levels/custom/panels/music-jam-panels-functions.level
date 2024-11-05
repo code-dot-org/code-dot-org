@@ -23,8 +23,8 @@
         "layout": "text-bottom-right"
       }
     ],
-    "offer_browser_tts": "false"
+    "offer_browser_tts": "true"
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:17.796+00:00\",\"changed\":[\"cloned from \\\"music_ai_panels_function_1\\\"\"],\"cloned_from\":\"music_ai_panels_function_1\"},{\"changed_at\":\"2024-10-22 23:47:30 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:17.796+00:00\",\"changed\":[\"cloned from \\\"music_ai_panels_function_1\\\"\"],\"cloned_from\":\"music_ai_panels_function_1\"},{\"changed_at\":\"2024-10-22 23:47:30 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-31 21:05:34 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Panels>
