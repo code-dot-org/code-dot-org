@@ -43,7 +43,7 @@ DialogWithIcon.args = {
   title: 'Dialog with Icon',
   content: 'This dialog has an icon.',
   type: 'withIconFA',
-  icon: {iconName: 'circle-info'}, // Example icon
+  icon: {iconName: 'smile'}, // Example icon
   onClose: () => console.log('Dialog with icon closed'),
 };
 
