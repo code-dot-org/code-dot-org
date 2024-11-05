@@ -79,6 +79,12 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
 
   const onGoBack = () => {
     setDialogPanel('share');
+    // If the project was submitted successfully, the submission status is updated.
+    if (channelId && projectType) {
+      getSubmissionStatus(channelId, projectType).then(response =>
+        setSubmissionStatus(response?.status)
+      );
+    }
   };
 
   const onSubmitClick = () => {
