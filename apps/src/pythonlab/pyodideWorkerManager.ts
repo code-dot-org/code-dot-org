@@ -72,7 +72,10 @@ const setUpPyodideWorker = () => {
         if (loadStartTime) {
           Lab2Registry.getInstance()
             .getMetricsReporter()
-            .reportLoadTime('PyodideLoadTime', Date.now() - loadStartTime);
+            .reportLoadTime(
+              'PythonLab.PyodideLoadTime',
+              Date.now() - loadStartTime
+            );
           loadStartTime = undefined;
         }
         break;
