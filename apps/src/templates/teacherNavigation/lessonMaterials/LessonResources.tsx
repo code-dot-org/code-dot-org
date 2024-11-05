@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import {BodyTwoText, Heading6} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
 import {Resource} from './LessonMaterialTypes';
@@ -92,11 +92,22 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
     );
   };
 
+  const renderNoResourcesRow = () => {
+    return (
+      <div className={styles.rowContainer} data-testid="resource-row">
+        <BodyTwoText className={styles.resourceLabel}>
+          <em>{i18n.noStudentResources()}</em>
+        </BodyTwoText>
+      </div>
+    );
+  };
+
   return (
     <div className={styles.resourcesTable}>
       <div className={styles.topRowForResourcesTable}>
         <Heading6 className={styles.headerText}>{sectionHeaderText}</Heading6>
       </div>
+      {!lessonPlanUrl && resources.length === 0 && renderNoResourcesRow()}
       {renderLessonPlanRow()}
       {resources.map(resource => (
         <ResourceRow
