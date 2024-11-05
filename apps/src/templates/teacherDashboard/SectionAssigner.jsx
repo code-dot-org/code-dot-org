@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import MultipleAssignButton from '@cdo/apps/templates/MultipleAssignButton';
 import {selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
@@ -50,17 +49,11 @@ class SectionAssigner extends Component {
   render() {
     const {
       sections,
-      showAssignButton,
       courseOfferingId,
       courseVersionId,
-      courseId,
       scriptId,
       selectedSectionId,
       forceReload,
-      assignmentName,
-      isAssigningCourse,
-      isStandAloneUnit,
-      participantAudience,
     } = this.props;
     const selectedSection = sections.find(
       section => section.id === selectedSectionId
@@ -84,21 +77,6 @@ class SectionAssigner extends Component {
             courseVersionId={courseVersionId}
             unitId={scriptId}
           />
-          {selectedSection && showAssignButton && (
-            <MultipleAssignButton
-              sectionId={selectedSection.id}
-              courseOfferingId={courseOfferingId}
-              courseVersionId={courseVersionId}
-              courseId={courseId}
-              scriptId={scriptId}
-              assignmentName={assignmentName}
-              sectionName={selectedSection.name}
-              reassignConfirm={this.onReassignConfirm}
-              isAssigningCourse={isAssigningCourse}
-              isStandAloneUnit={isStandAloneUnit}
-              participantAudience={participantAudience}
-            />
-          )}
         </div>
       </div>
     );

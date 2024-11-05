@@ -6,8 +6,6 @@ import {connect} from 'react-redux';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
 import {changeViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Notification, {
   NotificationType,
 } from '@cdo/apps/sharedComponents/Notification';
@@ -16,7 +14,6 @@ import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {isOnTeacherDashboard} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
 import {
@@ -26,7 +23,6 @@ import {
 import i18n from '@cdo/locale';
 
 import {setViewAsUserId} from '../../progressRedux';
-import {updateQueryParam} from '../../utils';
 
 import Announcements from './Announcements';
 
@@ -71,19 +67,12 @@ class UnitOverviewHeader extends Component {
     localeCode: PropTypes.string,
     changeViewType: PropTypes.func.isRequired,
     resetViewAsUserId: PropTypes.func.isRequired,
+    children: PropTypes.node,
   };
 
   componentDidMount() {
     $('#lesson-heading-extras').appendTo(ReactDOM.findDOMNode(this.protected));
   }
-
-  onChangeVersion = versionId => {
-    const version = this.props.versions[versionId];
-    if (versionId !== this.props.courseVersionId && version) {
-      const queryParams = window.location.search || '';
-      window.location.href = `${version.path}${queryParams}`;
-    }
-  };
 
   onDismissVersionWarning = () => {
     // Fire and forget. If this fails, we'll have another chance to
@@ -110,14 +99,12 @@ class UnitOverviewHeader extends Component {
       showCourseUnitVersionWarning,
       showScriptVersionWarning,
       showRedirectWarning,
-      versions,
       showHiddenUnitWarning,
       courseName,
       userId,
       isVerifiedInstructor,
       hasVerifiedResources,
-      changeViewType,
-      resetViewAsUserId,
+      children,
     } = this.props;
 
     const displayVerifiedResources =
@@ -135,21 +122,6 @@ class UnitOverviewHeader extends Component {
     } else if (showScriptVersionWarning) {
       versionWarningDetails = i18n.wrongCourseVersionWarningDetails();
     }
-
-    const viewAsToggleAction = viewType => {
-      if (!isOnTeacherDashboard()) {
-        updateQueryParam('viewAs', viewType);
-      }
-
-      if (viewType === ViewType.Participant) {
-        resetViewAsUserId();
-      }
-      changeViewType(viewType);
-
-      analyticsReporter.sendEvent('unit_overview_toggle_viewAs', {
-        viewType,
-      });
-    };
 
     return (
       <div>
@@ -212,40 +184,7 @@ class UnitOverviewHeader extends Component {
                 {unitTitle}
               </h1>
             </div>
-            <div className={styles.actionRow}>
-              {Object.values(versions).length > 1 && (
-                <AssignmentVersionSelector
-                  onChangeVersion={this.onChangeVersion}
-                  courseVersions={versions}
-                  rightJustifiedPopupMenu={true}
-                  selectedCourseVersionId={this.props.courseVersionId}
-                />
-              )}
-
-              <div className={styles.viewAs}>
-                {
-                  <label htmlFor="viewAs" className={styles.viewAsLabel}>
-                    {i18n.viewPageAs()}
-                  </label>
-                }
-                <SegmentedButtons
-                  id="viewAs"
-                  buttons={[
-                    {
-                      label: i18n.student(),
-                      value: ViewType.Participant,
-                    },
-                    {
-                      label: i18n.teacher(),
-                      value: ViewType.Instructor,
-                    },
-                  ]}
-                  onChange={viewAsToggleAction}
-                  selectedButtonValue={viewAs}
-                  size="s"
-                />
-              </div>
-            </div>
+            {children}
             <div />
             {viewAs === ViewType.Instructor && (
               <SafeMarkdown

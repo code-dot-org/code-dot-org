@@ -282,7 +282,7 @@ const progressSlice = createSlice({
     setLessonExtrasEnabled(state, action: PayloadAction<boolean>) {
       state.lessonExtrasEnabled = action.payload;
     },
-    setViewAsUserId(state, action: PayloadAction<number>) {
+    setViewAsUserId(state, action: PayloadAction<number | null>) {
       state.viewAsUserId = action.payload;
     },
   },

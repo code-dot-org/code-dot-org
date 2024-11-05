@@ -9,9 +9,11 @@
   justify-content: space-between;
   align-items: flex-end;
 }
+
 .title {
   display: inline-block;
 }
+
 .versionWrapper {
   display: flex;
   align-items: baseline;
@@ -47,4 +49,22 @@
 .viewAs {
   display: flex;
   flex-direction: column;
+}
+
+.unitConfirmText {
+  @include main-font-regular;
+  font-size: 12;
+}
+
+.customText {
+  margin: '0px 2px';
+}
+
+.icon {
+  margin: '0px 2px';
+  font-size: 16;
+  // we want our icon text to be a different size than our button text, which
+  // requires we manually offset to get it centered properly
+  position: 'relative';
+  top: 1;
 }

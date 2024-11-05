@@ -42,7 +42,7 @@ interface Resource {
   isRollup: boolean;
 }
 
-interface Version {
+export interface Version {
   id: number;
   key: string;
   version_year: string;

@@ -11,16 +11,12 @@ import Button from '@cdo/apps/legacySharedComponents/Button';
 import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import Assigned from '@cdo/apps/templates/Assigned';
-import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
-import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../../../legacySharedComponents/FontAwesome';
 import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
 
 export const NOT_STARTED = 'NOT_STARTED';
@@ -75,78 +71,23 @@ class UnitOverviewTopRow extends React.Component {
     }
   };
 
-  recordAndNavigateToPdf = (e, firehoseKey, url) => {
-    e.preventDefault();
-    firehoseClient.putRecord(
-      {
-        study: 'pdf-click',
-        study_group: 'script',
-        event: 'open-pdf',
-        data_json: JSON.stringify({
-          name: this.props.scriptName,
-          pdfType: firehoseKey,
-        }),
-      },
-      {
-        includeUserId: true,
-        callback: () => {
-          window.location.href = url;
-        },
-      }
-    );
-  };
-
-  compilePdfDropdownOptions = () => {
-    const {scriptOverviewPdfUrl, scriptResourcesPdfUrl} = this.props;
-
-    const options = [];
-    if (scriptOverviewPdfUrl) {
-      options.push({
-        key: 'lessonPlans',
-        name: i18n.printLessonPlans(),
-        url: scriptOverviewPdfUrl,
-      });
-    }
-    if (scriptResourcesPdfUrl) {
-      options.push({
-        key: 'scriptResources',
-        name: i18n.printHandouts(),
-        url: scriptResourcesPdfUrl,
-      });
-    }
-    return options;
-  };
-
   render() {
     const {
-      sectionsForDropdown,
-      selectedSectionId,
-      currentCourseId,
       unitAllowsHiddenLessons,
       deeperLearningCourse,
       scriptId,
       scriptName,
-      unitTitle,
       viewAs,
       isRtl,
-      teacherResources,
       studentResources,
-      showAssignButton,
       assignedSectionId,
       showCalendar,
       unitCalendarLessons,
       weeklyInstructionalMinutes,
-      isMigrated,
       unitCompleted,
       hasPerLevelResults,
-      courseOfferingId,
-      courseVersionId,
-      publishedState,
-      participantAudience,
       isUnitWithLevels,
     } = this.props;
-
-    const pdfDropdownOptions = this.compilePdfDropdownOptions();
 
     // Adjust styles if locale is RTL
     const hasButtonMargin = studentResources.length > 0;
@@ -160,11 +101,6 @@ class UnitOverviewTopRow extends React.Component {
     } else if (hasPerLevelResults) {
       unitProgress = IN_PROGRESS;
     }
-
-    const displayPrintingOptionsDropwdown =
-      pdfDropdownOptions.length > 0 &&
-      publishedState !== PublishedState.pilot &&
-      publishedState !== PublishedState.in_development;
 
     return (
       <div style={styles.buttonRow} className="unit-overview-top-row">
@@ -201,43 +137,6 @@ class UnitOverviewTopRow extends React.Component {
         )}
 
         <div style={styles.resourcesRow}>
-          {!deeperLearningCourse &&
-            viewAs === ViewType.Instructor &&
-            isMigrated &&
-            teacherResources.length > 0 && (
-              <ResourcesDropdown
-                resources={teacherResources}
-                unitId={scriptId}
-              />
-            )}
-          {displayPrintingOptionsDropwdown &&
-            viewAs === ViewType.Instructor && (
-              <div style={{marginRight: 5}}>
-                <DropdownButton
-                  customText={
-                    <div>
-                      <FontAwesome icon="print" style={styles.icon} />
-                      <span style={styles.customText}>
-                        {i18n.printingOptions()}
-                      </span>
-                    </div>
-                  }
-                  color={Button.ButtonColor.blue}
-                >
-                  {pdfDropdownOptions.map(option => (
-                    <a
-                      key={option.key}
-                      href={option.url}
-                      onClick={e =>
-                        this.recordAndNavigateToPdf(e, option.key, option.url)
-                      }
-                    >
-                      {option.name}
-                    </a>
-                  ))}
-                </DropdownButton>
-              </div>
-            )}
           {showCalendar && viewAs === ViewType.Instructor && (
             <UnitCalendarButton
               lessons={unitCalendarLessons}
@@ -248,20 +147,6 @@ class UnitOverviewTopRow extends React.Component {
         </div>
         {!deeperLearningCourse && viewAs === ViewType.Instructor && (
           <div style={styles.sectionContainer}>
-            <SectionAssigner
-              sections={sectionsForDropdown}
-              selectedSectionId={selectedSectionId}
-              assignmentName={unitTitle}
-              showAssignButton={showAssignButton}
-              courseId={currentCourseId}
-              courseOfferingId={courseOfferingId}
-              courseVersionId={courseVersionId}
-              scriptId={scriptId}
-              forceReload={true}
-              isAssigningCourse={false}
-              isStandAloneUnit={this.props.courseLink === null}
-              participantAudience={participantAudience}
-            />
             {unitAllowsHiddenLessons && (
               <BulkLessonVisibilityToggle lessons={unitCalendarLessons} />
             )}
