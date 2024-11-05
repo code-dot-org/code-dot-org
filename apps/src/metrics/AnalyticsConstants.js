@@ -385,6 +385,11 @@ const EVENTS = {
   FINISH_BUTTON_CERTIFICATE:
     'User Clicks on Finish Button in Finish Congrats Dialog - Certificate',
 
+  // Project submission
+  SHARING_DIALOG_SUBMIT_TO_BE_FEATURED:
+    'User Clicks Submit To Be Featured In Share Dialog',
+  SUBMIT_PROJECT_DIALOG_SUBMIT: 'User Clicks Submit In Submit Project Dialog',
+
   // Export app
   EXPORT_APP: 'User Exports App From Share Advanced Options',
 

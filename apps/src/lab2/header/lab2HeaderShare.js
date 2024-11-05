@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {showShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 
 import Lab2Registry from '../Lab2Registry';
@@ -40,5 +42,13 @@ export function shareLab2Project(id, finishUrl) {
     );
 
     getStore().dispatch(showShareDialog());
+    analyticsReporter.sendEvent(
+      EVENTS.SHARING_DIALOG_OPEN,
+      {
+        lab_type: projectManager.getProjectType(),
+        channel_id: projectManager.getChannelId(),
+      },
+      PLATFORMS.STATSIG
+    );
   });
 }
