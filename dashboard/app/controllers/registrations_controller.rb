@@ -59,7 +59,6 @@ class RegistrationsController < Devise::RegistrationsController
 
     if @user.errors.blank?
       PartialRegistration.persist_attributes(session, @user)
-      session[:new_sign_up] = true if params[:new_sign_up].present?
     else
       if params[:new_sign_up].present?
         render json: {
@@ -313,7 +312,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def begin_sign_up_params
-    params.require(:user).permit(:email, :password, :password_confirmation, :user_type)
+    params.require(:user).permit(:email, :password, :password_confirmation)
   end
 
   # Set age, us_state and gender for the current user if empty - skips CSRF verification because this can be called

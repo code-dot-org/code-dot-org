@@ -166,6 +166,7 @@ class HttpCache
       '__profilin', # Used by rack-mini-profiler
       session_key,
       storage_id,
+      'new_sign_up_user_type',
     ].concat(default_cookies)
 
     {
