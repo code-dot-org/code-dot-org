@@ -275,6 +275,7 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
 const SHARED_ENTRIES = {
   cookieBanner: './src/cookieBanner/cookieBanner.js',
   userHeaderEventLogger: './src/userHeaderEventLogger/userHeaderEventLogger.js',
+  statsigWebAnalytics: './src/metrics/statsigWebAnalytics.js',
 };
 
 // prettier-ignore

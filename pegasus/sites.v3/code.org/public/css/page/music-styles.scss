@@ -79,6 +79,10 @@ ul.featured-artists {
     justify-content: center !important;
     column-gap: 1rem;
   }
+
+  img {
+    background-color: var(--neutral_dark);
+  }
 }
 
 section.student-projects {

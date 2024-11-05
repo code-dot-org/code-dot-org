@@ -7,7 +7,7 @@ Feature: Hamburger dropdown
     And I change the browser window size to 1300 by 768
     Then I wait to see ".header_button"
     Then element "#hamburger-icon" is not visible
-    Then I change the browser window size to 1280 by 1024
+    Then I maximize the browser window
 
   @no_mobile
   @eyes
@@ -31,7 +31,7 @@ Feature: Hamburger dropdown
     And I see "#report-bug"
     And I see no difference for "Signed out small desktop hamburger"
     And I close my eyes
-    Then I change the browser window size to 1280 by 1024
+    Then I maximize the browser window
 
   @no_mobile
   Scenario: Signed out user in English should see hamburger on tablet
@@ -51,7 +51,7 @@ Feature: Hamburger dropdown
     And I see "#legal_entries"
     And I see "#support"
     And I see "#report-bug"
-    Then I change the browser window size to 1280 by 1024
+    Then I maximize the browser window
 
   @only_phone
   Scenario: Signed out user should see Sign in and Create account buttons on code.org mobile
@@ -318,7 +318,7 @@ Feature: Hamburger dropdown
       | Help and support       | https://support.code.org/                       |
       | Report a problem       | https://support.code.org/hc/en-us/requests/new  |
 
-    Then I change the browser window size to 1280 by 1024
+    Then I maximize the browser window
     And I delete the cookie named "_loc_notice"
 
   @chrome
@@ -463,7 +463,7 @@ Feature: Hamburger dropdown
       | Report a problem       | https://support.code.org/hc/en-us/requests/new  |
       | Teacher forum          | https://forum.code.org/                          |
 
-    Then I change the browser window size to 1280 by 1024
+    Then I maximize the browser window
     Then I delete the cookie named "_loc_notice"
 
   @chrome
@@ -488,5 +488,5 @@ Feature: Hamburger dropdown
       | Help and support       | https://support.code.org/                      |
       | Report a problem       | https://support.code.org/hc/en-us/requests/new |
 
-    Then I change the browser window size to 1280 by 1024
+    Then I maximize the browser window
     Then I delete the cookie named "_loc_notice"

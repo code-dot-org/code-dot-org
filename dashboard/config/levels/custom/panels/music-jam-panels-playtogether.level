@@ -12,49 +12,49 @@
     "panels": [
       {
         "text": "Great job! You just wrote your first lines of code.\n",
-        "imageUrl": "https://images.code.org/e6abb66ed54931f4f43ea3caec7f5370-chidi-01.jpeg",
+        "imageUrl": "https://images.code.org/b7883025805d397e9f0feef69b0a57b3-chidi0.jpeg",
         "key": "music_ai_panels_playtogether_3-fa7e7e9c-4ae6-45a7-8248-bef386648cff",
         "layout": "text-bottom-right",
         "fadeInOverPrevious": true
       },
       {
         "text": "I work together with coders to build cool products. I’m a product manager.",
-        "imageUrl": "https://images.code.org/64c03639d53de0dc0c5ceb4d85d789b2-chidi-02.jpeg",
+        "imageUrl": "https://images.code.org/74d909069c1caaa002d76aa8c7c29eff-chidi1.jpeg",
         "key": "music_ai_panels_playtogether_3-b01a9362-2f56-4898-b3d6-983fe3eb598b",
         "fadeInOverPrevious": true,
         "layout": "text-bottom-right"
       },
       {
         "text": "In college, I studied history to understand people.",
-        "imageUrl": "https://images.code.org/65471763043015bfeeff1d8c9050e6ef-chidi-03.jpeg",
+        "imageUrl": "https://images.code.org/5108559116ccf71e328ba85b06313ac4-chidi2.jpeg",
         "key": "music_ai_panels_playtogether_3-3f141e1d-8f98-458f-ab5e-d64387c3b87e",
         "fadeInOverPrevious": true,
         "layout": "text-bottom-center"
       },
       {
         "text": "Now, I study music listeners to learn about what they love, and what they don’t.",
-        "imageUrl": "https://images.code.org/cd880e690670e71a03679391a1bf9beb-chidi-04.jpeg",
+        "imageUrl": "https://images.code.org/d251ed424fe369098be985cc00273a17-chidi3.jpeg",
         "key": "music_ai_panels_playtogether_1-91e352ba-fc4d-4157-96c8-ed0141f3387d",
         "fadeInOverPrevious": true,
         "layout": "text-bottom-center"
       },
       {
         "text": "I use this knowledge, and my imagination, to come up with creative solutions.",
-        "imageUrl": "https://images.code.org/89a8db5bb57edbb061c2aa74b4fabaa7-chidi-05.jpeg",
+        "imageUrl": "https://images.code.org/ea8ea6eef36baaa8eb07faf5d0e7d750-chidi4.jpeg",
         "key": "music_ai_panels_playtogether_1-c6032955-4743-4312-b604-df28a462dd77",
         "fadeInOverPrevious": true,
         "layout": "text-bottom-center"
       },
       {
-        "imageUrl": "https://images.code.org/ce8b78ffa27bf0cd33b3eef72a6727bb-chidi-06.jpeg",
+        "imageUrl": "https://images.code.org/b29c50f7be38ee4340ed52ca6c861129-chidi5.jpeg",
         "text": "Next, you’ll get creative by experimenting with sound combinations. ",
         "key": "musiclab_intro_panels_playtogether_pdx-a5066092-2920-4c8d-89ea-00b7a8531ad0",
         "fadeInOverPrevious": true,
         "layout": "text-bottom-right"
       }
     ],
-    "offer_browser_tts": "false"
+    "offer_browser_tts": "true"
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:16.211+00:00\",\"changed\":[\"cloned from \\\"music_ai_panels_playtogether_1\\\"\"],\"cloned_from\":\"music_ai_panels_playtogether_1\"},{\"changed_at\":\"2024-10-22 23:39:08 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-23 22:42:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 22:53:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 21:38:31 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-30 04:02:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2024-10-30 04:02:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:16.211+00:00\",\"changed\":[\"cloned from \\\"music_ai_panels_playtogether_1\\\"\"],\"cloned_from\":\"music_ai_panels_playtogether_1\"},{\"changed_at\":\"2024-10-22 23:39:08 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-23 22:42:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 22:53:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 21:38:31 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-30 04:02:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2024-10-30 04:02:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2024-10-31 21:03:28 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-11-04 17:53:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

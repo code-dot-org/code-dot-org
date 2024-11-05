@@ -4,4 +4,8 @@ require_relative '../deployment'
 require 'cdo/sauce_connect'
 
 # Start sc, the Sauce Connect Proxy, and keep it running in the background.
-Cdo::SauceConnect.start_sauce_connect(daemonize: true)
+begin
+  Cdo::SauceConnect.start_sauce_connect(daemonize: true)
+rescue
+  exit 1
+end

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-10-22 16:54:57 UTC",
+    "serialized_at": "2024-11-04 20:29:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2868,7 +2868,8 @@
       "key": "2b93218b-21f3-4997-8418-9cdd44244015",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 to choose a data set. Instruct them to do a Three Reads on their chosen data set in their project planning guide.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 to choose a data set. Instruct them to do a Three Reads on their chosen data set in their project planning guide.",
+        "progression_name": "Data Set Choices",
         "tips": [
           {
             "type": "teachingTip",
@@ -3013,7 +3014,8 @@
       "key": "24c3412c-a71e-44a5-86b3-cbb1fc5f531f",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to work with their data and create visualizations."
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to work with their data and create visualizations.",
+        "progression_name": "Data Decisions and Visualizations"
       },
       "seeding_key": {
         "activity_section.key": "24c3412c-a71e-44a5-86b3-cbb1fc5f531f",
@@ -3081,7 +3083,7 @@
       "key": "a3b9d40f-a15e-45e0-9f9b-3f3d0929188d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to work with their data and create visualizations."
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to work with their data and create visualizations."
       },
       "seeding_key": {
         "activity_section.key": "a3b9d40f-a15e-45e0-9f9b-3f3d0929188d",
@@ -3195,7 +3197,8 @@
       "key": "cfa45034-40ec-48cb-ae99-884a0ed8dd9b",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 5 to record their final response and upload their visualization(s). Remind students to describe their data using the sentence starters, answer their data question, and add evidence."
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 3 to record their final response and upload their visualization(s). Remind students to describe their data using the sentence starters, answer their data question, and add evidence.",
+        "progression_name": "Your Data Story"
       },
       "seeding_key": {
         "activity_section.key": "cfa45034-40ec-48cb-ae99-884a0ed8dd9b",
@@ -3237,7 +3240,8 @@
       "key": "d464196a-ee18-4ba2-a14e-da47d1e46411",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 to describe their process through the data cycle and any ethical considerations they took into account throughout the project, such as privacy, bias, or misuse.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Provide any support needed to students as they describe each step of the process through the data cycle. As they are writing about the ethical considerations, which could include privacy, bias or misrepresentation of the data, remind them to think about all aspects of the process, including any ethical concerns they considered when selecting their data set, making decisions with their dataset, creating visualizations, and answering their data questions. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 to describe their process through the data cycle and any ethical considerations they took into account throughout the project, such as privacy, bias, or misuse.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Provide any support needed to students as they describe each step of the process through the data cycle. As they are writing about the ethical considerations, which could include privacy, bias or misrepresentation of the data, remind them to think about all aspects of the process, including any ethical concerns they considered when selecting their data set, making decisions with their dataset, creating visualizations, and answering their data questions. ",
+        "progression_name": "The Data Cycle",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -4393,6 +4397,94 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Data Set Choices"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasci-U1L12-projectL1_pilot2024"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "2b93218b-21f3-4997-8418-9cdd44244015"
+      },
+      "level_keys": [
+        "datasci-U1L12-projectL1_pilot2024"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Decisions and Visualizations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-u1-lesson12-level2"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "24c3412c-a71e-44a5-86b3-cbb1fc5f531f"
+      },
+      "level_keys": [
+        "data-science-u1-lesson12-level2"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Your Data Story"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-u1-lesson12-level3"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "cfa45034-40ec-48cb-ae99-884a0ed8dd9b"
+      },
+      "level_keys": [
+        "data-science-u1-lesson12-level3"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Data Cycle"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-u1-lesson12-level4fr"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "d464196a-ee18-4ba2-a14e-da47d1e46411"
+      },
+      "level_keys": [
+        "data-science-u1-lesson12-level4fr"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "Data Sci U1 Post-Test_2024-pilot"
         ],
@@ -4928,6 +5020,54 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-data-science-2024",
         "activity_section.key": "8b14a7b6-d470-460c-99c6-52c5cc98d618"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasci-U1L12-projectL1_pilot2024",
+        "script_level.level_keys": [
+          "datasci-U1L12-projectL1_pilot2024"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "2b93218b-21f3-4997-8418-9cdd44244015"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-u1-lesson12-level2",
+        "script_level.level_keys": [
+          "data-science-u1-lesson12-level2"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "24c3412c-a71e-44a5-86b3-cbb1fc5f531f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-u1-lesson12-level3",
+        "script_level.level_keys": [
+          "data-science-u1-lesson12-level3"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "cfa45034-40ec-48cb-ae99-884a0ed8dd9b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-u1-lesson12-level4fr",
+        "script_level.level_keys": [
+          "data-science-u1-lesson12-level4fr"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "d464196a-ee18-4ba2-a14e-da47d1e46411"
       }
     },
     {

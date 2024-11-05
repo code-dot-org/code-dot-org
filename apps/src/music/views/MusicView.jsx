@@ -335,6 +335,10 @@ class UnconnectedMusicView extends React.Component {
       levelData?.showAiTemperatureExplanation ||
       AppConfig.getValue('show-ai-temperature-explanation') === 'true';
 
+    MusicRegistry.showAiGenerateAgainHelp =
+      levelData?.showAiGenerateAgainHelp ||
+      AppConfig.getValue('show-ai-generate-again-help') === 'true';
+
     this.props.setStartingPlayheadPosition(1);
 
     Lab2Registry.getInstance()

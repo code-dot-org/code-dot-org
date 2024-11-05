@@ -351,19 +351,6 @@ class ChannelsTest < Minitest::Test
     assert_cannot_publish('applab', channel_id)
   end
 
-  def test_can_publish_when_override_applied
-    stub_project_age(false, false, false)
-
-    stub_user = {
-      name: ' xavier',
-      birthday: 14.years.ago.to_datetime,
-      properties: {sharing_disabled: false}.to_json
-    }
-    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
-
-    assert_can_publish('applab')
-  end
-
   def test_restricted_publish_permissions
     stub_project_age(true, true)
 

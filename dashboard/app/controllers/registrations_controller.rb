@@ -458,7 +458,6 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def edit
     @permission_status = current_user.cap_status
-    cpa_partial_lockout_enabled = !!experiment_value('cpa-partial-lockout', request)
 
     # Get the request location
     location = Geocoder.search(request.ip).try(:first)
@@ -471,7 +470,7 @@ class RegistrationsController < Devise::RegistrationsController
     # The student is in a 'lockout' flow if they are potentially locked out and not unlocked
     @student_in_lockout_flow = underage && !Policies::ChildAccount::ComplianceState.permission_granted?(current_user)
 
-    @personal_account_linking_enabled = Policies::ChildAccount.can_link_new_personal_account?(current_user) && !Policies::ChildAccount.partially_locked_out?(current_user) && cpa_partial_lockout_enabled
+    @personal_account_linking_enabled = Policies::ChildAccount.can_link_new_personal_account?(current_user) && !Policies::ChildAccount.partially_locked_out?(current_user)
 
     # Handle users who aren't locked out, but still need parent permission to link personal accounts.
     if underage || !Policies::ChildAccount.has_required_information?(current_user)

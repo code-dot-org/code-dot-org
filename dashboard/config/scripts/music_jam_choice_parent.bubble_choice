@@ -1,0 +1,8 @@
+name 'music-jam-choice-parent'
+display_name 'Keep Jamming with these New Blocks!'
+description 'Choose from the activities below to learn how to use new blocks. You can do more than one!'
+
+sublevels
+level 'music-jam-loops-choice'
+level 'music-jam-espresso-choice'
+
