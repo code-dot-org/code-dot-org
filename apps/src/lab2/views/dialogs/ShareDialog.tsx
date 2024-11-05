@@ -9,10 +9,12 @@ import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import {ProjectType} from '@cdo/apps/lab2/types';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {SubmissionStatusType} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import experiments from '@cdo/apps/util/experiments';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import trackEvent from '@cdo/apps/util/trackEvent';
 import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -24,13 +26,22 @@ const CopyToClipboardButton: React.FunctionComponent<{
   projectType: ProjectType;
 }> = ({shareUrl, projectType}) => {
   const [copiedToClipboard, setCopiedToClipboard] = useState(false);
+  const channelId = useAppSelector(state => state.lab.channel?.id);
 
   const handleCopyToClipboard = useCallback(() => {
     copyToClipboard(shareUrl, () => {
       setCopiedToClipboard(true);
     });
     trackEvent('share', 'share_copy_url', {value: projectType});
-  }, [shareUrl, projectType]);
+    analyticsReporter.sendEvent(
+      EVENTS.SHARING_LINK_COPY,
+      {
+        lab_type: projectType,
+        channel_id: channelId,
+      },
+      PLATFORMS.STATSIG
+    );
+  }, [shareUrl, projectType, channelId]);
 
   return (
     <Button

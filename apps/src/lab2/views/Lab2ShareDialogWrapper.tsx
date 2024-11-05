@@ -5,6 +5,8 @@ import ShareDialogLegacy from '@cdo/apps/code-studio/components/ShareDialog';
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import popupWindow from '@cdo/apps/code-studio/popup-window';
 import {LABS_USING_NEW_SHARE_DIALOG} from '@cdo/apps/lab2/constants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {isSignedIn as getIsSignedIn} from '@cdo/apps/templates/currentUserRedux';
 import {
   getSubmissionStatus,
@@ -83,6 +85,14 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
 
   const onSubmitClick = () => {
     setDialogPanel('submit');
+    analyticsReporter.sendEvent(
+      EVENTS.SHARING_DIALOG_SUBMIT_TO_BE_FEATURED,
+      {
+        lab_type: projectType,
+        channel_id: channelId,
+      },
+      PLATFORMS.STATSIG
+    );
   };
 
   if (!channelId || !projectType) {
