@@ -316,11 +316,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   private def determine_sign_up_url(user)
-    if session[:isNewSignUp]
+    if session[:new_sign_up]
       if user.student?
-        return '/users/new_sign_up/finish_student_account'
+        return users_new_sign_up_finish_student_account_path
       elsif user.teacher?
-        return '/users/new_sign_up/finish_teacher_account'
+        return users_new_sign_up_finish_teacher_account_path
       end
     end
     # We are in the old sign up flow -> redirect to old finish_sign_up page
