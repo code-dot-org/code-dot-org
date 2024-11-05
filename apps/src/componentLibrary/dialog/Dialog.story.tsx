@@ -1,5 +1,7 @@
 import {Meta, StoryFn} from '@storybook/react';
-import React from 'react';
+import React, {useState} from 'react';
+
+import {Button} from '@cdo/apps/componentLibrary/button';
 
 import Dialog, {DialogProps} from './Dialog';
 
@@ -11,24 +13,63 @@ export default {
 //
 // TEMPLATE
 //
-const SingleTemplate: StoryFn<DialogProps> = args => <Dialog {...args} />;
+const SingleTemplate: StoryFn<DialogProps> = args => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  return (
+    <div>
+      <Button onClick={() => setIsOpen(true)} text="Open Dialog" />
+      {isOpen && (
+        <Dialog
+          {...args}
+          onClose={() => {
+            setIsOpen(false);
+          }}
+        />
+      )}
+    </div>
+  );
+};
 
 const MultipleTemplate: StoryFn<{
   components: DialogProps[];
-}> = args => (
-  <>
-    <p>
-      * Margins on this screen do not represent the component's margins, and are
-      only added to improve Storybook view *
-    </p>
-    <p>Multiple Dialogs:</p>
-    <div style={{display: 'flex', flexDirection: 'column', gap: '20px'}}>
-      {args.components?.map((componentArg, index) => (
-        <Dialog key={index} {...componentArg} />
-      ))}
-    </div>
-  </>
-);
+}> = args => {
+  const [values, setValues] = useState({} as Record<string, boolean>);
+
+  return (
+    <>
+      <p>
+        * Margins on this screen do not represent the component's margins, and
+        are only added to improve Storybook view *
+      </p>
+      <p>Multiple Dialogs:</p>
+      <div style={{display: 'flex', flexDirection: 'column', gap: '20px'}}>
+        {args.components?.map((componentArg, index) => (
+          <div key={index}>
+            <Button
+              key={`button-${index}`}
+              onClick={() =>
+                setValues({...values, [`${index}${componentArg.title}`]: true})
+              }
+              text={`Open ${componentArg.title}`}
+            />
+            {values[`${index}${componentArg.title}`] && (
+              <Dialog
+                {...componentArg}
+                onClose={() =>
+                  setValues({
+                    ...values,
+                    [`${index}${componentArg.title}`]: false,
+                  })
+                }
+              />
+            )}
+          </div>
+        ))}
+      </div>
+    </>
+  );
+};
 
 export const DefaultDialog = SingleTemplate.bind({});
 DefaultDialog.args = {
@@ -44,6 +85,15 @@ DialogWithIcon.args = {
   content: 'This dialog has an icon.',
   type: 'withIconFA',
   icon: {iconName: 'smile'}, // Example icon
+  onClose: () => console.log('Dialog with icon closed'),
+};
+
+export const DialogWithImage = SingleTemplate.bind({});
+DialogWithIcon.args = {
+  title: 'Dialog with Icon',
+  content: 'Dialog with image',
+  type: 'withIconFA',
+  imageUrl: 'https://code.org/images/courses-6-12.png', // Example image
   onClose: () => console.log('Dialog with icon closed'),
 };
 

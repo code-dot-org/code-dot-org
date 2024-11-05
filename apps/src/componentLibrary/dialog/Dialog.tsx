@@ -31,6 +31,12 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
   imageUrl?: string;
 }
 
+// TODO:
+//  * Add tests
+//  * Add accessibility checks
+//  * Add storybook stories
+//  * add colors support
+
 /**
  * ## Production-ready Checklist:
  *  * (?) implementation of component approved by design team;
@@ -78,6 +84,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
     <div role="presentation" className={moduleStyles.dialogOverlay}>
       <div
         role="dialog"
+        aria-modal
         aria-labelledby="dialog-title"
         aria-describedby="dialog-content"
         // tabIndex={-1}  // Make the dialog container focusable
