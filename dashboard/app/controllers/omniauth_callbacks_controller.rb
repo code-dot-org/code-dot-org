@@ -178,7 +178,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       auth_hash = inject_clever_data(auth_hash)
     end
 
-    user = User.from_omniauth(auth_hash, auth_params, session, cookies)
+    user = User.from_omniauth(auth_hash, auth_params, request)
 
     prepare_locale_cookie user
 
@@ -257,7 +257,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     SignUpTracking.log_oauth_callback AuthenticationOption::CLEVER, request
 
     auth_hash = inject_clever_data(auth_hash())
-    user = User.from_omniauth(auth_hash, auth_params, session, cookies)
+    user = User.from_omniauth(auth_hash, auth_params, request)
     prepare_locale_cookie user
 
     # if the registration credentials identify us as an existing user, simply
@@ -458,7 +458,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     flash.notice = I18n.t('auth.signed_in')
 
     # Will only log if the sign_up page session cookie is set, so this is safe to call in all cases
-    SignUpTracking.log_sign_in(user, session, request, cookies)
+    SignUpTracking.log_sign_in(user, request)
 
     sign_in_and_redirect user
   end

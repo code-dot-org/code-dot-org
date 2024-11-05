@@ -216,6 +216,6 @@ module SignUpTracking
       },
       )
 
-    end_sign_up_tracking session if user.persisted?
+    end_sign_up_tracking this_session if user.persisted?
   end
 end

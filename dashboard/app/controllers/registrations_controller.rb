@@ -229,7 +229,7 @@ class RegistrationsController < Devise::RegistrationsController
       )
     end
 
-    SignUpTracking.log_sign_up_result resource, session, cookies
+    SignUpTracking.log_sign_up_result resource, request
   end
 
   #
