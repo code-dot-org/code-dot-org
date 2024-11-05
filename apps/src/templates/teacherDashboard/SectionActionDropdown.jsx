@@ -11,13 +11,13 @@ import PopUpMenu from '@cdo/apps/sharedComponents/PopUpMenu';
 import QuickActionsCell from '@cdo/apps/templates/tables/QuickActionsCell';
 import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import experiments from '@cdo/apps/util/experiments';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import color from '../../util/color';
 import BaseDialog from '../BaseDialog';
+import {showV2TeacherDashboard} from '../teacherNavigation/TeacherNavFlagUtils';
 
 import DialogFooter from './DialogFooter';
 import PrintCertificates from './PrintCertificates';
@@ -81,7 +81,7 @@ class SectionActionDropdown extends Component {
    */
   editRedirectUrl = (sectionId, isPl) => {
     let editSectionUrl;
-    if (experiments.isEnabled('teacher-local-nav-v2')) {
+    if (showV2TeacherDashboard()) {
       editSectionUrl = teacherDashboardUrl(sectionId, '/settings');
     } else {
       editSectionUrl = '/sections/' + sectionId + '/edit';
