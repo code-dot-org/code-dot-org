@@ -76,7 +76,7 @@ const SubmitProjectDialog: React.FunctionComponent<
           id="submission-input"
           value={projectDescription}
           onChange={e => setProjectDescription(e.target.value)}
-          placeholder="Please enter your project description."
+          placeholder={i18n.submitProjectGallery_placeholder()}
           maxLength={150}
         />
         <BodyTwoText className={moduleStyles.bodyTwoText}>
