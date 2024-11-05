@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import Link from '@cdo/apps/componentLibrary/link/Link';
@@ -24,12 +24,18 @@ const SubmitProjectDialog: React.FunctionComponent<
   SubmitProjectDialogProps
 > = ({onClose, onGoBack}) => {
   const [projectDescription, setProjectDescription] = useState<string>('');
+  const [isSubmitButtonDisabled, setIsSubmitButtonDisabled] =
+    useState<boolean>(true);
   const projectType = useAppSelector(state => state.lab.channel?.projectType);
   const channelId = useAppSelector(state => state.lab.channel?.id);
 
+  useEffect(() => {
+    setIsSubmitButtonDisabled(!projectDescription.trim());
+  }, [projectDescription]);
+
   const onSubmit = useCallback(async () => {
     if (channelId && projectType) {
-      // TODO: Disable 'Submit' button.
+      setIsSubmitButtonDisabled(true);
       try {
         const response = await submitProject(
           channelId,
@@ -37,14 +43,14 @@ const SubmitProjectDialog: React.FunctionComponent<
           projectDescription
         );
         console.log('response', response);
-        // Handle successful submission, e.g., show success message or close dialog
+        // Close submit project dialog and display the share dialog.
+        onGoBack();
       } catch (err) {
         console.error(err);
         // TODO: UI to notify user that submission was not successful.
       }
-      // TODO: If response was successful, close submit project dialog and display share dialog.
     }
-  }, [channelId, projectDescription, projectType]);
+  }, [channelId, onGoBack, projectDescription, projectType]);
 
   return (
     <AccessibleDialog
@@ -71,7 +77,7 @@ const SubmitProjectDialog: React.FunctionComponent<
           value={projectDescription}
           onChange={e => setProjectDescription(e.target.value)}
           placeholder="Please enter your project description."
-          maxLength={100}
+          maxLength={150}
         />
         <BodyTwoText className={moduleStyles.bodyTwoText}>
           {i18n.submitProjectGallery_details()}
@@ -100,7 +106,7 @@ const SubmitProjectDialog: React.FunctionComponent<
             type="primary"
             color="white"
             text={i18n.submit()}
-            disabled={!projectDescription.trim()}
+            disabled={isSubmitButtonDisabled}
           />
         </div>
       </div>
