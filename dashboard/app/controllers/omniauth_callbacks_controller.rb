@@ -316,13 +316,15 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   private def determine_sign_up_url(user)
-    if user.student?
-      return '/users/new_sign_up/finish_student_account'
-    elsif user.teacher?
-      return '/users/new_sign_up/finish_teacher_account'
-    else # We are in the old sign up flow -> no user type yet
-      return ''
+    if session[:isNewSignUp]
+      if user.student?
+        return '/users/new_sign_up/finish_student_account'
+      elsif user.teacher?
+        return '/users/new_sign_up/finish_teacher_account'
+      end
     end
+    # We are in the old sign up flow -> redirect to old finish_sign_up page
+    return ''
   end
 
   private def extract_microsoft_data(auth)

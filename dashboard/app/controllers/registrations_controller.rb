@@ -59,6 +59,7 @@ class RegistrationsController < Devise::RegistrationsController
 
     if @user.errors.blank?
       PartialRegistration.persist_attributes(session, @user)
+      session[:isNewSignUp] = true if params[:new_sign_up].present?
     else
       if params[:new_sign_up].present?
         render json: {
