@@ -109,7 +109,7 @@ module RegistrationsControllerTests
       assert_equal User.hash_email(email), created_user.hashed_email
 
       assert_sign_up_tracking(
-        SignUpTracking::NEW_SIGN_UP_GROUP,
+        SignUpTracking::NOT_IN_STUDY_GROUP,
         %w(
           load-new-sign-up-page
           begin-sign-up-success
@@ -141,7 +141,7 @@ module RegistrationsControllerTests
       assert_equal email, created_user.email
 
       assert_sign_up_tracking(
-        SignUpTracking::NEW_SIGN_UP_GROUP,
+        SignUpTracking::NOT_IN_STUDY_GROUP,
         %w(
           load-new-sign-up-page
           begin-sign-up-success
