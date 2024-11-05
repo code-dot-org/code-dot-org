@@ -147,6 +147,7 @@ const ShareDialog: React.FunctionComponent<{
   onSubmitClick,
   submissionStatus,
 }) => {
+  const channelId = useAppSelector(state => state.lab.channel?.id);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -158,10 +159,17 @@ const ShareDialog: React.FunctionComponent<{
     });
   });
 
-  const handleClose = useCallback(
-    () => dispatch(hideShareDialog()),
-    [dispatch]
-  );
+  const handleClose = useCallback(() => {
+    dispatch(hideShareDialog());
+    analyticsReporter.sendEvent(
+      EVENTS.SHARING_CLOSE_ESCAPE,
+      {
+        lab_type: projectType,
+        channel_id: channelId,
+      },
+      PLATFORMS.STATSIG
+    );
+  }, [channelId, dispatch, projectType]);
 
   return (
     <FocusLock>
