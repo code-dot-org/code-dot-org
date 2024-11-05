@@ -28,8 +28,6 @@ import Announcements from './Announcements';
 
 import styles from './unit-overview.module.scss';
 
-const SCRIPT_OVERVIEW_WIDTH = 1100;
-
 /**
  * This component takes some of the HAML generated content on the script overview
  * page, and moves it under our React root. This is done so that we can have React
@@ -134,7 +132,6 @@ class UnitOverviewHeader extends Component {
         {isSignedIn && (
           <Announcements
             announcements={this.props.announcements}
-            width={SCRIPT_OVERVIEW_WIDTH}
             viewAs={viewAs}
             firehoseAnalyticsData={{
               script_id: scriptId,
@@ -143,16 +140,13 @@ class UnitOverviewHeader extends Component {
           />
         )}
         {userId && <ParticipantFeedbackNotification studentId={userId} />}
-        {displayVerifiedResources && (
-          <VerifiedResourcesNotification width={SCRIPT_OVERVIEW_WIDTH} />
-        )}
+        {displayVerifiedResources && <VerifiedResourcesNotification />}
         {displayVersionWarning && (
           <Notification
             type={NotificationType.warning}
             notice=""
             details={i18n.redirectCourseVersionWarningDetails()}
             dismissible={true}
-            width={SCRIPT_OVERVIEW_WIDTH}
             onDismiss={() => onDismissRedirectWarning(courseName || scriptName)}
           />
         )}
@@ -162,7 +156,6 @@ class UnitOverviewHeader extends Component {
             notice={i18n.wrongCourseVersionWarningNotice()}
             details={versionWarningDetails}
             dismissible={true}
-            width={SCRIPT_OVERVIEW_WIDTH}
             onDismiss={this.onDismissVersionWarning}
           />
         )}
@@ -172,13 +165,12 @@ class UnitOverviewHeader extends Component {
             notice={i18n.hiddenUnitWarningNotice()}
             details={i18n.hiddenUnitWarningDetails()}
             dismissible={false}
-            width={SCRIPT_OVERVIEW_WIDTH}
             buttonText={i18n.learnMore()}
             buttonLink="https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses"
           />
         )}
         <div id="lesson">
-          <div id="heading" className={styles.heading}>
+          <div className={styles.heading}>
             <div className={styles.titleWrapper}>
               <h1 className={styles.title} id="script-title">
                 {unitTitle}

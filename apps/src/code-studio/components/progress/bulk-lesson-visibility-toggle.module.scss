@@ -1,7 +1,7 @@
 .container {
-  // Align the top of the buttons with the top of the SectionAssigner dropdown
-  // to its left.
-  padding-top: 38px;
+  display: flex;
+  justify-content: end;
+  padding-right: 89px;
 }
 
 .infoTipIcon {

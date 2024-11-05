@@ -200,74 +200,79 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
     publishedState !== PublishedState.pilot &&
     publishedState !== PublishedState.in_development;
 
-  console.log('lfm', {
-    viewAs,
-    teacherResources,
-    isMigrated,
-  });
-
   return (
     <div className={styles.actionRow}>
-      {confirmationMessageOpen && (
-        <span className={styles.confirmText}>{i18n.assignSuccess()}</span>
-      )}
-      {Object.values(versions).length > 1 && (
-        <AssignmentVersionSelector
-          onChangeVersion={onChangeVersion}
-          courseVersions={versions}
-          rightJustifiedPopupMenu={true}
-          selectedCourseVersionId={courseVersionId}
-        />
-      )}
-      {!deeperLearningCourse &&
-        viewAs === ViewType.Instructor &&
-        isMigrated &&
-        teacherResources.length > 0 && (
-          <ResourcesDropdown resources={teacherResources} unitId={scriptId} />
+      <div className={styles.leftActions}>
+        {confirmationMessageOpen && (
+          <span className={styles.confirmText}>{i18n.assignSuccess()}</span>
         )}
-      {displayPrintingOptionsDropdown && viewAs === ViewType.Instructor && (
-        <div style={{marginRight: 5}}>
-          <DropdownButton
-            customText={
-              <div>
-                <FontAwesomeV6Icon iconName="print" className={styles.icon} />
-                <span className={styles.customText}>
-                  {i18n.printingOptions()}
-                </span>
-              </div>
-            }
-            color={Button.ButtonColor.blue}
-          >
-            {pdfDropdownOptions.map(option => (
-              <a
-                key={option.key}
-                href={option.url}
-                onClick={e =>
-                  recordAndNavigateToPdf(e, option.key, option.url, unitName)
-                }
-              >
-                {option.name}
-              </a>
-            ))}
-          </DropdownButton>
-        </div>
-      )}
+        {Object.values(versions).length > 1 && (
+          <div className={styles.versionSelector}>
+            <AssignmentVersionSelector
+              onChangeVersion={onChangeVersion}
+              courseVersions={versions}
+              rightJustifiedPopupMenu={true}
+              selectedCourseVersionId={courseVersionId}
+            />
+          </div>
+        )}
+        {!deeperLearningCourse &&
+          viewAs === ViewType.Instructor &&
+          isMigrated &&
+          teacherResources.length > 0 && (
+            <div className={styles.teacherResources}>
+              <ResourcesDropdown
+                resources={teacherResources}
+                unitId={scriptId}
+              />
+            </div>
+          )}
+        {displayPrintingOptionsDropdown && viewAs === ViewType.Instructor && (
+          <div className={styles.printingOptions}>
+            <DropdownButton
+              customText={
+                <div>
+                  <FontAwesomeV6Icon iconName="print" className={styles.icon} />
+                  <span className={styles.customText}>
+                    {i18n.printingOptions()}
+                  </span>
+                </div>
+              }
+              color={Button.ButtonColor.blue}
+            >
+              {pdfDropdownOptions.map(option => (
+                <a
+                  key={option.key}
+                  href={option.url}
+                  onClick={e =>
+                    recordAndNavigateToPdf(e, option.key, option.url, unitName)
+                  }
+                >
+                  {option.name}
+                </a>
+              ))}
+            </DropdownButton>
+          </div>
+        )}
 
-      {selectedSection && showAssignButton && (
-        <MultipleAssignButton
-          sectionId={selectedSection.id}
-          courseOfferingId={courseOfferingId}
-          courseVersionId={courseVersionId}
-          courseId={currentCourseId}
-          scriptId={scriptId}
-          assignmentName={unitTitle}
-          sectionName={selectedSection.name}
-          reassignConfirm={onReassignConfirm}
-          isAssigningCourse={false}
-          isStandAloneUnit={courseLink === null}
-          participantAudience={participantAudience}
-        />
-      )}
+        {selectedSection && showAssignButton && (
+          <div className={styles.assignButton}>
+            <MultipleAssignButton
+              sectionId={selectedSection.id}
+              courseOfferingId={courseOfferingId}
+              courseVersionId={courseVersionId}
+              courseId={currentCourseId}
+              scriptId={scriptId}
+              assignmentName={unitTitle}
+              sectionName={selectedSection.name}
+              reassignConfirm={onReassignConfirm}
+              isAssigningCourse={false}
+              isStandAloneUnit={courseLink === null}
+              participantAudience={participantAudience}
+            />
+          </div>
+        )}
+      </div>
 
       <div className={styles.viewAs}>
         {<label className={styles.viewAsLabel}>{i18n.viewPageAs()}</label>}

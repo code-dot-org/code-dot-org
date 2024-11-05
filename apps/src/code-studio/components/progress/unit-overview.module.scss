@@ -38,6 +38,35 @@
   justify-content: space-between;
   flex-direction: row;
   margin-bottom: 10px;
+  width: 100%;
+}
+
+.leftActions {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.assignButton {
+  margin-right: 10px;
+  button {
+    margin: 0;
+  }
+}
+
+.teacherResources {
+  margin-right: 5px;
+}
+
+.printingOptions {
+  margin-right: 10px;
+}
+
+.versionSelector {
+  margin-right: 10px;
+  select {
+    margin-bottom: 0;
+  }
 }
 
 .viewAsLabel {
