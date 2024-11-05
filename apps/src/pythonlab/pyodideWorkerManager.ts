@@ -21,7 +21,6 @@ let callbacks: {[key: number]: (event: PyodideMessage) => void} = {};
 const setUpPyodideWorker = () => {
   // @ts-expect-error because TypeScript does not like this syntax.
   const worker = new Worker(new URL('./pyodideWebWorker.ts', import.meta.url));
-  let loadStartTime: number | undefined;
 
   callbacks = {};
 
@@ -65,18 +64,13 @@ const setUpPyodideWorker = () => {
         break;
       case 'loading_pyodide':
         getStore().dispatch(setLoadedCodeEnvironment(false));
-        loadStartTime = Date.now();
         break;
       case 'loaded_pyodide':
         getStore().dispatch(setLoadedCodeEnvironment(true));
-        if (loadStartTime) {
+        if (message && parseInt(message)) {
           Lab2Registry.getInstance()
             .getMetricsReporter()
-            .reportLoadTime(
-              'PythonLab.PyodideLoadTime',
-              Date.now() - loadStartTime
-            );
-          loadStartTime = undefined;
+            .reportLoadTime('PythonLab.PyodideLoadTime', parseInt(message));
         }
         break;
       default:
