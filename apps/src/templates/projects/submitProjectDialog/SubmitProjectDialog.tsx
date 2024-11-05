@@ -1,9 +1,11 @@
-import React, {useState} from 'react';
+import React, {useCallback, useState} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import Link from '@cdo/apps/componentLibrary/link/Link';
 import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
+import {submitProject} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './submit-project-dialog.module.scss';
@@ -22,11 +24,27 @@ const SubmitProjectDialog: React.FunctionComponent<
   SubmitProjectDialogProps
 > = ({onClose, onGoBack}) => {
   const [projectDescription, setProjectDescription] = useState<string>('');
+  const projectType = useAppSelector(state => state.lab.channel?.projectType);
+  const channelId = useAppSelector(state => state.lab.channel?.id);
 
-  const onSubmit = async () => {
-    // TODO: call on submitProject once it's implemented in SubmitProjectApi.
-    console.log('submit project');
-  };
+  const onSubmit = useCallback(async () => {
+    if (channelId && projectType) {
+      // TODO: Disable 'Submit' button.
+      try {
+        const response = await submitProject(
+          channelId,
+          projectType,
+          projectDescription
+        );
+        console.log('response', response);
+        // Handle successful submission, e.g., show success message or close dialog
+      } catch (err) {
+        console.error(err);
+        // TODO: UI to notify user that submission was not successful.
+      }
+      // TODO: If response was successful, close submit project dialog and display share dialog.
+    }
+  }, [channelId, projectDescription, projectType]);
 
   return (
     <AccessibleDialog
@@ -52,6 +70,8 @@ const SubmitProjectDialog: React.FunctionComponent<
           id="submission-input"
           value={projectDescription}
           onChange={e => setProjectDescription(e.target.value)}
+          placeholder="Please enter your project description."
+          maxLength={100}
         />
         <BodyTwoText className={moduleStyles.bodyTwoText}>
           {i18n.submitProjectGallery_details()}
@@ -62,8 +82,7 @@ const SubmitProjectDialog: React.FunctionComponent<
         <div className={moduleStyles.bottomSectionLink}>
           <Link
             text={i18n.learnMore()}
-            // TODO: Add link once it's available.
-            href=""
+            href="https://support.code.org/hc/en-us/articles/24931009674893--Featured-Project-Gallery"
             className={moduleStyles.link}
             size="m"
           />
