@@ -7,7 +7,8 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 /**
  * Listens for Redux state changes and updates the Lab2MetricsReporter accordingly.
- * Reports errors whenever the pageError state is updated.
+ * Reports errors whenever the pageError state is updated, and reports a LevelLoad
+ * metric when a new level is loaded.
  */
 const MetricsAdapter: React.FunctionComponent = () => {
   const channelId = useAppSelector(state => state.lab.channel?.id);
@@ -53,6 +54,7 @@ const MetricsAdapter: React.FunctionComponent = () => {
     }
   }, [pageError]);
 
+  // Log a LevelLoad metric when a level is loaded.
   const logLoadMetric: Callback<LifecycleEvent.LevelLoadCompleted> = (
     levelProperties,
     _channel,
