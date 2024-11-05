@@ -10,7 +10,7 @@ import styles from './lesson-materials.module.scss';
 
 // lesson plans, standards, and vocabulary are only needed for teacher resources
 type LessonResourcesProps = {
-  unitNumber: number;
+  unitNumber: number | null;
   lessonNumber: number;
   lessonPlanUrl?: string;
   lessonPlanPdfUrl?: string;
