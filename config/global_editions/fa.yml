@@ -22,21 +22,18 @@ header:
         id: header-about
         domain: code.org
         url: /global/fa/about
-      - title: csf
+      - title: header_csf
         id: header-csf
         domain: code.org
         url: /global/fa/csf
-        loc_prefix: header_
-      - title: hour_of_code
+      - title: header_hour_of_code
         id: header-hoc
         domain: code.org
         url: /global/fa/hourofcode
-        loc_prefix: header_
-      - title: videos
+      - title: header_videos
         id: header-videos
         domain: code.org
         url: /global/fa/videos
-        loc_prefix: header_
 
     student:
       - title: my_dashboard
