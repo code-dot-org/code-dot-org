@@ -41,7 +41,7 @@ class HomeController < ApplicationController
       redirect_path = redirect_uri.to_s
 
       Metrics::Events.log_event(
-        session: session,
+        request: request,
         user: current_user,
         event_name: 'Global Edition Region Selected',
         metadata: {

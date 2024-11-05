@@ -93,7 +93,7 @@ module Lti
             lms_name: platform[:name],
           }
           Metrics::Events.log_event(
-            cookies: cookies,
+            request: request,
             event_name: 'lti_dynamic_registration_completed',
             metadata: metadata,
           )
