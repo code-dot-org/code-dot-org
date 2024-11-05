@@ -1402,7 +1402,7 @@ class User < ApplicationRecord
         curr_user_level = user_levels_by_level[level.id]
 
         # If level.id is not present in user_levels_by_level, check if level has contained_levels with present ids
-        if !curr_user_level && !level.contained_levels.empty?
+        if !curr_user_level && !level.contained_levels.empty? && level.type != "BubbleChoice"
           level.contained_levels.each do |contained_level|
             user_levels.push(user_levels_by_level[contained_level.id])
           end

@@ -51,7 +51,6 @@ export default function RubricContent({
   feedbackAdded,
   setFeedbackAdded,
   sectionId,
-  aiEvalStatusMap,
 }) {
   const {lesson} = rubric;
   const rubricLevel = rubric.level;
@@ -90,7 +89,6 @@ export default function RubricContent({
             reloadOnChange={true}
             sectionId={sectionId}
             reportingData={reportingData}
-            aiEvalStatusMap={aiEvalStatusMap}
           />
         </div>
 
@@ -166,7 +164,6 @@ RubricContent.propTypes = {
   feedbackAdded: PropTypes.bool,
   setFeedbackAdded: PropTypes.func,
   sectionId: PropTypes.number,
-  aiEvalStatusMap: PropTypes.object,
 };
 
 export const InfoAlert = ({text, dismissable}) => {

@@ -1,0 +1,51 @@
+{
+  "encrypted": false,
+  "startSources": {
+    "files": {
+      "0": {
+        "id": "0",
+        "name": "main.py",
+        "language": "py",
+        "contents": "print('Hello start!')",
+        "folderId": "1",
+        "active": true,
+        "open": true
+      }
+    },
+    "folders": {
+      "1": {
+        "id": "1",
+        "name": "src",
+        "parentId": "0",
+        "open": true
+      }
+    }
+  },
+  "longInstructions": "##Predict and Run\r\n\r\n**What do you think this program does?**\r\n\r\nTake a look at the code in this program. Write down what you think this program will do. There are no wrong answers!",
+  "hideShareAndRemix": true,
+  "referenceLinks": [
+    "/courses/csa-2023/guides/instantiating-objects"
+  ],
+  "mapReference": "/docs/concepts/html/",
+  "teacherMarkdown": "Teachers should see this extra info.",
+  "predictSettings": {
+    "isPredictLevel": true,
+    "solution": "The program prints \"Hello start!\"",
+    "questionType": "freeResponse",
+    "allowMultipleAttempts": false,
+    "placeholderText": "put your answer here!",
+    "freeResponseHeight": 100,
+    "codeEditableAfterSubmit": true
+  },
+  "aiTutorAvailable": true,
+  "submittable": false,
+  "id": 58264,
+  "helpVideos": [],
+  "type": "Pythonlab",
+  "appName": "pythonlab",
+  "useRestrictedSongs": false,
+  "usesProjects": true,
+  "finishUrl": "/s/allthethings/lessons/50/levels/6",
+  "exampleSolutions": [],
+  "exemplarSources": null
+}

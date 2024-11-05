@@ -1,5 +1,13 @@
-import {PayloadAction, createSlice, createAsyncThunk} from '@reduxjs/toolkit';
+import {
+  PayloadAction,
+  createSelector,
+  createSlice,
+  createAsyncThunk,
+} from '@reduxjs/toolkit';
 
+import {LevelWithProgress} from '@cdo/apps/code-studio/teacherPanelTypes';
+import {computeBubbleStatus} from '@cdo/apps/templates/rubrics/rubricUtils';
+import {RootState} from '@cdo/apps/types/redux';
 interface TeacherEvaluation {
   feedback: string;
   id: number;
@@ -20,14 +28,33 @@ interface HasTeacherFeedbackMap {
   [key: number]: boolean;
 }
 
-interface TeacherRubricState {
+// map from counter name to count
+interface AiEvalStatusCounters {
+  [key: string]: number;
+}
+
+// map from user id to ai eval status
+interface AiEvalStatusMap {
+  [key: number]: string;
+}
+
+export interface TeacherRubricState {
   allTeacherEvaluationData: AllTeacherEvaluationData;
   hasTeacherFeedbackMap: HasTeacherFeedbackMap;
+  aiEvalStatusCounters: AiEvalStatusCounters;
+  aiEvalStatusMap: AiEvalStatusMap;
+}
+
+// map from user id to student progress status
+interface StudentProgressStatusMap {
+  [key: number]: string;
 }
 
 const initialState: TeacherRubricState = {
   allTeacherEvaluationData: [],
   hasTeacherFeedbackMap: {},
+  aiEvalStatusCounters: {},
+  aiEvalStatusMap: {},
 };
 
 const teacherRubricReduxSlice = createSlice({
@@ -48,6 +75,23 @@ const teacherRubricReduxSlice = createSlice({
     },
     setUserHasTeacherFeedback(state, action: PayloadAction<number>) {
       state.hasTeacherFeedbackMap[action.payload] = true;
+    },
+    setAiEvalStatusCounters(
+      state,
+      action: PayloadAction<AiEvalStatusCounters>
+    ) {
+      state.aiEvalStatusCounters = action.payload;
+    },
+    setAiEvalStatusMap(state, action: PayloadAction<AiEvalStatusMap>) {
+      state.aiEvalStatusMap = action.payload;
+    },
+    setUserAiEvalStatus: {
+      reducer(state, action: PayloadAction<{userId: number; status: string}>) {
+        state.aiEvalStatusMap[action.payload.userId] = action.payload.status;
+      },
+      prepare(userId: number, status: string) {
+        return {payload: {userId, status}};
+      },
     },
   },
 });
@@ -84,12 +128,61 @@ export const loadAllTeacherEvaluationData = createAsyncThunk(
   }
 );
 
+export const loadAiEvalStatusForAll = createAsyncThunk(
+  'teacherRubric/loadAiEvalStatusForAll',
+  async (params: {rubricId: number; sectionId: number}, thunkAPI) => {
+    const {rubricId, sectionId} = params;
+
+    const fetchAiEvaluationStatusAll = (
+      rubricId: number,
+      sectionId: number
+    ) => {
+      return fetch(
+        `/rubrics/${rubricId}/ai_evaluation_status_for_all?section_id=${sectionId}`
+      );
+    };
+
+    fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
+      if (response.ok) {
+        response.json().then(data => {
+          thunkAPI.dispatch(setAiEvalStatusMap(data.aiEvalStatusMap));
+          delete data.aiEvalStatusMap;
+          thunkAPI.dispatch(setAiEvalStatusCounters(data));
+        });
+      }
+    });
+  }
+);
+
+export const selectStudentProgressStatusMap = createSelector(
+  [
+    (state: RootState) => state.teacherRubric.hasTeacherFeedbackMap || {},
+    (state: RootState) => state.teacherRubric.aiEvalStatusMap || {},
+    (state: RootState) => state.teacherPanel.levelsWithProgress || [],
+  ],
+  (hasTeacherFeedbackMap, aiEvalStatusMap, levelsWithProgress) => {
+    const statusMap: StudentProgressStatusMap = {};
+    levelsWithProgress.forEach((level: LevelWithProgress) => {
+      const userId = level.userId;
+      const aiEvalStatus = aiEvalStatusMap[userId];
+      const hasFeedback = hasTeacherFeedbackMap[userId];
+      statusMap[userId] = computeBubbleStatus(level, aiEvalStatus, hasFeedback);
+    });
+    return statusMap;
+  }
+);
+
 // For internal use only
 const {setHasTeacherFeedbackMap} = teacherRubricReduxSlice.actions;
 
 // Exported for testing only
-export const {setAllTeacherEvaluationData} = teacherRubricReduxSlice.actions;
+export const {setAllTeacherEvaluationData, setAiEvalStatusCounters} =
+  teacherRubricReduxSlice.actions;
 
 // Standard exports
-export const {setUserHasTeacherFeedback} = teacherRubricReduxSlice.actions;
+export const {
+  setUserHasTeacherFeedback,
+  setAiEvalStatusMap,
+  setUserAiEvalStatus,
+} = teacherRubricReduxSlice.actions;
 export default teacherRubricReduxSlice.reducer;

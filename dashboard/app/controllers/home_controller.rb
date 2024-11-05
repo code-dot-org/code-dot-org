@@ -33,7 +33,7 @@ class HomeController < ApplicationController
     # Query parameter for browser cache to be avoided and load new locale
     redirect_path = "#{redirect_path}?lang=#{params[:locale]}" if params[:locale]
 
-    unless ge_region == helpers.ge_region
+    unless ge_region == request.ge_region
       redirect_uri = URI(redirect_path)
       redirect_params = URI.decode_www_form(redirect_uri.query.to_s).to_h
       redirect_params[Rack::GlobalEdition::REGION_KEY] = ge_region
@@ -41,13 +41,13 @@ class HomeController < ApplicationController
       redirect_path = redirect_uri.to_s
 
       Metrics::Events.log_event(
+        session: session,
         user: current_user,
-        event_name: 'Global Edition Region And Locale Changed',
+        event_name: 'Global Edition Region Selected',
         metadata: {
           country: request.country_code,
-          locale: params[:locale],
           region: ge_region,
-          prevRegion: helpers.ge_region,
+          locale: params[:locale],
         }
       )
     end

@@ -26,9 +26,8 @@ import style from './rubrics.module.scss';
 
 export const RubricErrorContainer = ({isOpen, setIsOpen}) => (
   <div
-    className={classnames(style.rubricContainer, {
-      [style.hiddenRubricContainer]: !isOpen,
-    })}
+    className={style.rubricContainer}
+    style={isOpen ? null : {display: 'none'}}
   >
     <div className={style.rubricHeaderRedesign}>
       <div className={style.rubricHeaderLeftSide}>
@@ -158,6 +157,7 @@ function RubricFloatingActionButton({
     <div id="fab-contained">
       <button
         id="ui-floatingActionButton"
+        aria-label={i18n.openOrCloseTeachingAssistant()}
         className={classes}
         onClick={handleClick}
         type="button"

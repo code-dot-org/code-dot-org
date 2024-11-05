@@ -115,8 +115,10 @@ describe('useSchoolInfo', () => {
         hook.current.setSchoolZip('90210');
       });
       expect(hook.current.schoolZip).toBe('90210');
-      await act(async () => {
+      act(() => {
         hook.current.setSchoolId(NonSchoolOptions.CLICK_TO_ADD);
+      });
+      act(() => {
         hook.current.setSchoolName('Fake School');
       });
       expect(hook.current.schoolId).toBe(NonSchoolOptions.CLICK_TO_ADD);
@@ -311,6 +313,28 @@ describe('useSchoolInfo', () => {
           {'nces Id': '2'},
           PLATFORMS.BOTH
         );
+      });
+
+      it('should clear the school name when CLICK_TO_ADD or NO_SCHOOL_SETTING are selected', () => {
+        act(() => {
+          hook.current.setSchoolId('2');
+        });
+        expect(hook.current.schoolName).toBe('Other School');
+
+        act(() => {
+          hook.current.setSchoolId(NonSchoolOptions.CLICK_TO_ADD);
+        });
+        expect(hook.current.schoolName).toBe('');
+
+        act(() => {
+          hook.current.setSchoolId('1');
+        });
+        expect(hook.current.schoolName).toBe('Cool School');
+
+        act(() => {
+          hook.current.setSchoolId(NonSchoolOptions.NO_SCHOOL_SETTING);
+        });
+        expect(hook.current.schoolName).toBe('');
       });
     });
 

@@ -19,23 +19,47 @@ class ApplicationJobTest < ActiveJob::TestCase
     assert_includes ApplicationJob.ancestors, ActiveJobReporting
   end
 
-  test 'enqueued jobs log PendingJobCount FailedJobCount WaitTime ExecutionTime and TotalTime' do
-    expected_failed_count = 5
-    expected_pending_count = 3
+  test 'enqueued jobs log several metrics' do
+    expected_failed_count = 6
+    expected_pending_count = 4
     expected_workable_count = 2
+    expected_my_failed_count = 5
+    expected_my_pending_count = 3
+    expected_my_workable_count = 1
 
     # Mock these helper methods because mocking the Delayed::Job calls is impossible/complex
-    ApplicationJob.any_instance.stubs(:get_pending_job_count).returns(expected_pending_count)
     ApplicationJob.any_instance.stubs(:get_failed_job_count).returns(expected_failed_count)
+    ApplicationJob.any_instance.stubs(:get_pending_job_count).returns(expected_pending_count)
     ApplicationJob.any_instance.stubs(:get_workable_job_count).returns(expected_workable_count)
+    ApplicationJob.any_instance.stubs(:get_my_failed_job_count).returns(expected_my_failed_count)
+    ApplicationJob.any_instance.stubs(:get_my_pending_job_count).returns(expected_my_pending_count)
+    ApplicationJob.any_instance.stubs(:get_my_workable_job_count).returns(expected_my_workable_count)
 
+    # Splitting this into two assertions because 'includes_metrics' can't match multiple metrics with the same name.
     Cdo::Metrics.expects(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
       all_of(
-        includes_metrics(PendingJobCount: expected_pending_count, FailedJobCount: expected_failed_count, WorkableJobCount: expected_workable_count),
-        includes_dimensions(:PendingJobCount, Environment: CDO.rack_env),
+        includes_metrics(
+          FailedJobCount: expected_failed_count,
+          PendingJobCount: expected_pending_count,
+          WorkableJobCount: expected_workable_count
+        ),
         includes_dimensions(:FailedJobCount, Environment: CDO.rack_env),
+        includes_dimensions(:PendingJobCount, Environment: CDO.rack_env),
         includes_dimensions(:WorkableJobCount, Environment: CDO.rack_env)
+      )
+    )
+    Cdo::Metrics.expects(:push).with(
+      ApplicationJob::METRICS_NAMESPACE,
+      all_of(
+        includes_metrics(
+          FailedJobCount: expected_my_failed_count,
+          PendingJobCount: expected_my_pending_count,
+          WorkableJobCount: expected_my_workable_count
+        ),
+        includes_dimensions(:FailedJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
+        includes_dimensions(:PendingJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
+        includes_dimensions(:WorkableJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob')
       )
     )
 

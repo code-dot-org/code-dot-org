@@ -3,6 +3,7 @@ require 'rack/session/abstract/id'
 require 'ipaddr'
 require 'json'
 require 'country_codes'
+require 'cdo/global_edition'
 
 module Cdo
   module RequestExtension
@@ -126,6 +127,10 @@ module Cdo
 
     def gdpr?
       gdpr_country_code?(country)
+    end
+
+    def ge_region
+      Cdo::GlobalEdition.current_region
     end
 
     # Initialize a private instance of the SessionStore used in Dashboard, so
