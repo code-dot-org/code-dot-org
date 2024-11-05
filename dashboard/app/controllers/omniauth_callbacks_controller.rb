@@ -316,10 +316,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   private def determine_sign_up_url(user)
-    user_type = user.user_type
-    if user_type == User::TYPE_STUDENT
+    if user.student?
       return '/users/new_sign_up/finish_student_account'
-    elsif user_type == User::TYPE_TEACHER
+    elsif user.teacher?
       return '/users/new_sign_up/finish_teacher_account'
     else # We are in the old sign up flow -> no user type yet
       return ''

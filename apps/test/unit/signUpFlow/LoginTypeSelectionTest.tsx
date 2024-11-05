@@ -10,6 +10,7 @@ import {
   EMAIL_SESSION_KEY,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import {navigateToHref} from '@cdo/apps/utils';
+import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
@@ -190,6 +191,7 @@ describe('LoginTypeSelection', () => {
         email: email,
         password: password,
         password_confirmation: password,
+        user_type: UserTypes.STUDENT,
       },
     };
 
@@ -266,6 +268,7 @@ describe('LoginTypeSelection', () => {
         email: email,
         password: password,
         password_confirmation: password,
+        user_type: UserTypes.STUDENT,
       },
     };
 
@@ -321,6 +324,7 @@ describe('LoginTypeSelection', () => {
         email: email,
         password: password,
         password_confirmation: password,
+        user_type: UserTypes.STUDENT,
       },
     };
 

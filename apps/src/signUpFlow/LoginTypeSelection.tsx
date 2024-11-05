@@ -16,6 +16,7 @@ import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {isEmail} from '@cdo/apps/util/formatValidation';
+import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {navigateToHref} from '../utils';
@@ -137,7 +138,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
         email: email,
         password: password,
         password_confirmation: password,
-        user_type: isTeacher ? 'teacher' : 'student',
+        user_type: isTeacher ? UserTypes.TEACHER : UserTypes.STUDENT,
       },
     };
     try {
