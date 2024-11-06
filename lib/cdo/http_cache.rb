@@ -101,6 +101,7 @@ class HttpCache
     hello-world-emoji-2021
     hello-world-space-2022
     hello-world-soccer-2022
+    music-jam-2024
     outbreak
   ).map do |script_name|
     # Most scripts use the default route pattern.
