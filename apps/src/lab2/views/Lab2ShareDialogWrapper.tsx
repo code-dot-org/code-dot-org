@@ -66,7 +66,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   useEffect(() => {
     if (channelId && projectType) {
       getSubmissionStatus(channelId, projectType).then(response =>
-        setSubmissionStatus(response?.status)
+        setSubmissionStatus(response)
       );
     }
   }, [channelId, projectType]);
@@ -82,7 +82,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
     // If the project was submitted successfully, the submission status is updated.
     if (channelId && projectType) {
       getSubmissionStatus(channelId, projectType).then(response =>
-        setSubmissionStatus(response?.status)
+        setSubmissionStatus(response)
       );
     }
   };

@@ -40,12 +40,12 @@ export async function submitProject(
 export async function getSubmissionStatus(
   channelId: string,
   projectType: string
-): Promise<SubmissionStatusResponse | undefined> {
+): Promise<SubmissionStatusType | undefined> {
   try {
     const response = await HttpClient.fetchJson<SubmissionStatusResponse>(
       `/projects/${projectType}/${channelId}/submission_status`
     );
-    return response.value;
+    return response.value.status;
   } catch (error) {
     // TODO: handle signed out user case separately from other unhandled errors.
     return undefined;
