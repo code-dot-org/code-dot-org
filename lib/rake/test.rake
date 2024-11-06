@@ -305,12 +305,6 @@ namespace :test do
       end
     end
 
-    timed_task_with_logging :interpreter do
-      run_tests_if_changed('interpreter', ['apps/src/lib/tools/jsinterpreter/patchInterpreter.js']) do
-        TestRunUtils.run_interpreter_tests
-      end
-    end
-
     desc 'Runs dashboard tests if dashboard might have changed from staging.'
     timed_task_with_logging :dashboard do
       run_tests_if_changed(
