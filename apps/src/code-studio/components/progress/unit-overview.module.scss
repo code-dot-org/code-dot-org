@@ -45,6 +45,9 @@
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+  width: 100%;
+  flex-wrap: wrap;
+  row-gap: 12px;
 }
 
 .assignButton {
@@ -71,7 +74,7 @@
 
 .viewAsLabel {
   @include main-font-semi-bold;
-  font-size: 15;
+  font-size: 16px;
   margin-bottom: 0;
 }
 
