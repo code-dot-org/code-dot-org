@@ -6,7 +6,6 @@ import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './submit-project-dialog.module.scss';
@@ -19,14 +18,14 @@ import moduleStyles from './submit-project-dialog.module.scss';
 export interface SubmitProjectDialogProps {
   onClose: () => void;
   onGoBack: () => void;
+  projectType: string;
+  channelId: string;
 }
 
 const SubmitProjectDialog: React.FunctionComponent<
   SubmitProjectDialogProps
-> = ({onClose, onGoBack}) => {
+> = ({onClose, onGoBack, projectType, channelId}) => {
   const [projectDescription, setProjectDescription] = useState<string>('');
-  const channelId = useAppSelector(state => state.lab.channel?.id);
-  const projectType = useAppSelector(state => state.lab.channel?.projectType);
 
   const onSubmit = async () => {
     // TODO: call on submitProject once it's implemented in SubmitProjectApi.

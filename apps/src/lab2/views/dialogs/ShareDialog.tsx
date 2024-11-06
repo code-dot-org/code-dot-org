@@ -14,7 +14,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {SubmissionStatusType} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import experiments from '@cdo/apps/util/experiments';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import trackEvent from '@cdo/apps/util/trackEvent';
 import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -139,6 +139,7 @@ const ShareDialog: React.FunctionComponent<{
   projectType: ProjectType;
   onSubmitClick: () => void;
   submissionStatus: SubmissionStatusType | undefined;
+  channelId: string;
 }> = ({
   dialogId,
   shareUrl,
@@ -146,8 +147,8 @@ const ShareDialog: React.FunctionComponent<{
   projectType,
   onSubmitClick,
   submissionStatus,
+  channelId,
 }) => {
-  const channelId = useAppSelector(state => state.lab.channel?.id);
   const dispatch = useAppDispatch();
 
   useEffect(() => {

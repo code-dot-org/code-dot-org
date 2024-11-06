@@ -108,11 +108,14 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
         projectType={projectType}
         onSubmitClick={onSubmitClick}
         submissionStatus={submissionStatus}
+        channelId={channelId}
       />
     ) : (
       <SubmitProjectDialog
         onClose={onCloseSubmitProjectDialog}
         onGoBack={onGoBack}
+        projectType={projectType}
+        channelId={channelId}
       />
     );
   }
