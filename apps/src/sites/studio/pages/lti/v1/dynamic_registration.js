@@ -14,12 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const mountPoint = document.createElement('div');
   document.body.appendChild(mountPoint);
   const scriptData = getScriptData('json');
-  const {logoUrl, registrationID} = scriptData;
+  const {logoUrl, registrationID, lmsName} = scriptData;
 
   ReactDOM.render(
     <LtiDynamicRegistrationPage
       logoUrl={logoUrl}
       registrationID={registrationID}
+      lmsName={lmsName}
     />,
     mountPoint
   );

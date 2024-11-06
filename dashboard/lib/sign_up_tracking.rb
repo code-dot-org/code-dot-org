@@ -168,7 +168,7 @@ module SignUpTracking
     return unless user && request
     this_session = request.session
     provider = request.env['omniauth.auth'].provider.to_s
-    if session[:sign_up_tracking_expiration]&.future?
+    if this_session[:sign_up_tracking_expiration]&.future?
       tracking_data = {
         study: STUDY_NAME,
         study_group: study_group(this_session),
@@ -186,7 +186,7 @@ module SignUpTracking
         },
         )
     end
-    end_sign_up_tracking session
+    end_sign_up_tracking this_session
   end
 
   def self.log_sign_up_result(user, request)
