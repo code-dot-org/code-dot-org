@@ -99,6 +99,7 @@ export default class WorkshopTableLoader extends React.Component {
         // While reloading, preserve the height of the previous child component so the refresh is smoother.
         <div
           style={{height: this.childHeight}}
+          // eslint-disable-next-line react/forbid-dom-props
           data-testid={'enrolled-workshops-loader'}
         >
           <Spinner />

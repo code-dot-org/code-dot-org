@@ -108,10 +108,7 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
           size={'xs'}
           disabled={buttonDisabled}
           type={'tertiary'}
-          className={classNames(
-            moduleStyles.versionHistoryButton,
-            darkModeStyles.iconOnlyTertiaryButton
-          )}
+          className={darkModeStyles.iconOnlyTertiaryButton}
         />
       </WithTooltip>
       {(loading || loadError) && (

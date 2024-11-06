@@ -22,6 +22,7 @@ function ManageStudents({
   }, [sectionId, isLoadingSectionData, loadSectionStudentData]);
 
   return (
+    // eslint-disable-next-line react/forbid-dom-props
     <div data-testid={'manage-students-tab'}>
       {isLoadingStudents && <Spinner />}
       {!isLoadingStudents && (

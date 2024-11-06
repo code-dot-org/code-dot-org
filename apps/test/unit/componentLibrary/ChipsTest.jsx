@@ -23,6 +23,7 @@ describe('Design System - Chips', () => {
       />
     );
 
+    // eslint-disable-next-line no-restricted-properties
     const chips = screen.getByTestId('chips-test-chips');
     expect(chips).toBeDefined();
     expect(screen.getByText('Chips label')).toBeDefined();
@@ -38,6 +39,7 @@ describe('Design System - Chips', () => {
       />
     );
 
+    // eslint-disable-next-line no-restricted-properties
     const chips = screen.getByTestId('chips-test-chips');
     expect(chips).toBeDefined();
     expect(screen.queryByText('Chips label')).toBeNull();
@@ -63,6 +65,7 @@ describe('Design System - Chips', () => {
       />
     );
 
+    // eslint-disable-next-line no-restricted-properties
     const chips = screen.getByTestId('chips-test-chips');
     expect(chips).toBeDefined();
 
@@ -159,6 +162,7 @@ describe('Design System - Chips', () => {
       />
     );
 
+    // eslint-disable-next-line no-restricted-properties
     const chips = screen.getByTestId('chips-test-chips');
     expect(chips).toBeDefined();
 
@@ -246,6 +250,7 @@ describe('Design System - Chips', () => {
       />
     );
 
+    // eslint-disable-next-line no-restricted-properties
     const chips = screen.getByTestId('chips-test-chips');
     expect(chips).toBeDefined();
 

@@ -242,6 +242,7 @@ class LoginTypePicker extends Component {
             </Typography>
             <div
               style={style.lmsInfoCardsContainer}
+              // eslint-disable-next-line react/forbid-dom-props
               data-testid={'lms-info-cards-container'}
             >
               {!withClever && (

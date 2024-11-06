@@ -1,32 +1,27 @@
 import React, {useEffect} from 'react';
-import {useSelector} from 'react-redux';
 
-import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
-
-import {LabState} from '../lab2Redux';
-import Lab2Registry from '../Lab2Registry';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {Callback, LifecycleEvent} from '@cdo/apps/lab2/utils';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 /**
  * Listens for Redux state changes and updates the Lab2MetricsReporter accordingly.
- * Reports errors whenever the pageError state is updated.
+ * Reports errors whenever the pageError state is updated, and reports a LevelLoad
+ * metric when a new level is loaded.
  */
 const MetricsAdapter: React.FunctionComponent = () => {
-  const channelId = useSelector(
-    (state: {lab: LabState}) => state.lab.channel?.id
+  const channelId = useAppSelector(state => state.lab.channel?.id);
+  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const currentLevelId = useAppSelector(
+    state => state.progress.currentLevelId || undefined
   );
-  const appName = useSelector(
-    (state: {lab: LabState}) => state.lab.levelProperties?.appName
+  const scriptId = useAppSelector(
+    state => state.progress.scriptId || undefined
   );
-  const currentLevelId = useSelector(
-    (state: {progress: ProgressState}) =>
-      state.progress.currentLevelId || undefined
-  );
-  const scriptId = useSelector(
-    (state: {progress: ProgressState}) => state.progress.scriptId || undefined
-  );
-  const pageError = useSelector(
-    (state: {lab: LabState}) => state.lab.pageError
-  );
+  const pageError = useAppSelector(state => state.lab.pageError);
+
+  const isShareView = useAppSelector(state => state.lab.isShareView);
 
   useEffect(() => {
     // Reset the reporter on level change.
@@ -58,6 +53,28 @@ const MetricsAdapter: React.FunctionComponent = () => {
         .logError(pageError.errorMessage, pageError.error, pageError.details);
     }
   }, [pageError]);
+
+  // Log a LevelLoad metric when a level is loaded.
+  const logLoadMetric: Callback<LifecycleEvent.LevelLoadCompleted> = (
+    levelProperties,
+    _channel,
+    _initialSources,
+    isReadOnly
+  ) => {
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .incrementCounter('LevelLoad', [
+        {
+          name: 'Type',
+          value: levelProperties?.isProjectLevel ? 'Project' : 'Level',
+        },
+        {
+          name: 'Mode',
+          value: isShareView ? 'Share' : isReadOnly ? 'View' : 'Edit',
+        },
+      ]);
+  };
+  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, logLoadMetric);
 
   return null;
 };
