@@ -194,4 +194,22 @@ describe('SectionActionDropdown', () => {
     );
     jest.restoreAllMocks();
   });
+
+  it('sends selected user to the new teacher dashboard roster page', () => {
+    jest
+      .spyOn(TeacherNavFlagUtils, 'showV2TeacherDashboard')
+      .mockImplementation(() => {
+        return true;
+      });
+    const wrapper = shallow(
+      <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[3]} />
+    );
+    const sectionId = wrapper.instance().props.sectionData.id;
+    const expectedUrl = '/teacher_dashboard/sections/' + sectionId + '/roster';
+    expect(wrapper).to.contain('Manage Students');
+    expect(wrapper.find('.manage-students-link').props().href).to.equal(
+      expectedUrl
+    );
+    jest.restoreAllMocks();
+  });
 });
