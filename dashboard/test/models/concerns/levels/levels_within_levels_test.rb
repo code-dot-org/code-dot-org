@@ -116,7 +116,7 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     # can reorder
     second_contained = create :free_response
     level.update!(contained_level_names: [first_contained.name, second_contained.name])
-    assert_equal [first_contained, second_contained], level.child_levels.contained.to_a
+    assert_equal [first_contained, second_contained], level.child_levels.contained
     level.update!(contained_level_names: [second_contained.name, first_contained.name])
     assert_equal [second_contained, first_contained], level.child_levels.contained
 

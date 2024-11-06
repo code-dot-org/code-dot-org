@@ -75,68 +75,43 @@ module Levels
       end
 
       # Create ParentLevelsChildLevel many-to-many relationships based on the
-      # contents of this level's `contained_level_names` property.
-      def setup_contained_levels_for(levels)
+      # contents of the specified levels' `contained_level_names` or `project_template_level_name` properties.
+      # Differentiated by level_kind (either contained or project template)
+      def setup_child_levels_for(levels, level_kind)
         outdated_levels_child_level_ids = []
-        new_levels_contained_child_levels = []
+        new_levels_child_levels = []
 
         levels.each do |level|
-          # if our existing contained levels already match the given names, do nothing
-          next if level.child_levels.contained.map(&:name) == level.contained_level_names
+          # Determine which level names to use based on level_kind
+          level_names = level_kind == ParentLevelsChildLevel::CONTAINED ? level.contained_level_names : [level.project_template_level_name]
+          # Skip if the current level's child levels already match the names
+          next if level.child_levels.send(level_kind).map(&:name) == level_names
 
-          outdated_levels_child_level_ids += level.levels_child_levels.contained.ids
-          Level.where(name: level.contained_level_names).find_each do |contained_level|
-            new_levels_contained_child_levels << ParentLevelsChildLevel.new(
+          # Collect outdated child levels' ids
+          outdated_levels_child_level_ids += level.levels_child_levels.send(level_kind).ids
+
+          next if level_names.blank?
+
+          # Create new relationships for matching names
+          Level.where(name: level_names).find_each do |contained_level|
+            new_levels_child_levels << ParentLevelsChildLevel.new(
               parent_level: level,
               child_level: contained_level,
-              kind: ParentLevelsChildLevel::CONTAINED,
-              position: level.contained_level_names.index(contained_level.name)
+              kind: level_kind,
+              position: level_names.index(contained_level.name)
             )
           end
         end
 
+        # Delete outdated child levels in batches
         outdated_levels_child_level_ids.each_slice(1000) do |ids_batch|
           ParentLevelsChildLevel.where(id: ids_batch).delete_all
         end
 
-        if new_levels_contained_child_levels.present?
-          ParentLevelsChildLevel.import!(new_levels_contained_child_levels, batch_size: 1000)
-        end
+        # Insert new child level relationships in batches
+        ParentLevelsChildLevel.import!(new_levels_child_levels, batch_size: 1000) if new_levels_child_levels.any?
 
-        levels.each do |level|
-          level.levels_child_levels.reset
-          level.child_levels.reset
-        end
-      end
-
-      def setup_project_template_level_for(levels)
-        outdated_levels_child_level_ids = []
-        new_levels_project_template_child_levels = []
-
-        levels.each do |level|
-          # if we already have a project template level which matches the specified name, do nothing.
-          next if level.child_levels.project_template.first&.name == level.project_template_level_name
-
-          # otherwise, update project template level to match
-          outdated_levels_child_level_ids += level.levels_child_levels.project_template.ids
-          next if level.project_template_level_name.blank?
-
-          template_level = Level.find_by_name!(level.project_template_level_name)
-          new_levels_project_template_child_levels << ParentLevelsChildLevel.new(
-            parent_level: level,
-            child_level: template_level,
-            kind: ParentLevelsChildLevel::PROJECT_TEMPLATE,
-          )
-        end
-
-        outdated_levels_child_level_ids.each_slice(1000) do |ids_batch|
-          ParentLevelsChildLevel.where(id: ids_batch).delete_all
-        end
-
-        if new_levels_project_template_child_levels.present?
-          ParentLevelsChildLevel.import!(new_levels_project_template_child_levels, batch_size: 1000)
-        end
-
+        # Reset child level caches for each level
         levels.each do |level|
           level.levels_child_levels.reset
           level.child_levels.reset
@@ -211,11 +186,11 @@ module Levels
     end
 
     def setup_contained_levels
-      self.class.setup_contained_levels_for([self])
+      self.class.setup_child_levels_for([self], ParentLevelsChildLevel::CONTAINED)
     end
 
     def setup_project_template_level
-      self.class.setup_project_template_level_for([self])
+      self.class.setup_child_levels_for([self], ParentLevelsChildLevel::PROJECT_TEMPLATE)
     end
   end
 end
