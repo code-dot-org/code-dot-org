@@ -15,7 +15,7 @@ markdown <<MARKDOWN
 #### This lesson provides an introduction to the Data Science course and professional learning module. It offers a brief overview of key data science concepts and familiarizes you with the structure and flow of the lessons you'll explore throughout the course..
 
 ### 🖥️ **Overview of Unit 1: Introduction to Data Science**
-#### This lesson focuses on building skills in data analysis and visualization using tools like CODAP. You will explore how to transform raw data into meaningful visualizations while addressing ethical considerations, such as data privacy and bias. Each unit equips you to guide students in solving real-world problems through data-driven projects.
+#### This lesson focuses on building skills in data analysis and visualization using tools like CODAP. You will explore how to transform raw data into meaningful visualizations while addressing ethical considerations, such as data privacy and bias. 
 
 ### 📊 **Overview of Unit 2: Data Science and Python**
 #### This lesson prepares you to teach data analysis using Python. You'll explore guiding students through Python basics, data manipulation with Pandas and Matplotlib, and creating visualizations. The unit focuses on data cleaning, analysis, and communicating insights, culminating in a real-world data-driven project.

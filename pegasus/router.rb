@@ -284,6 +284,11 @@ class Documents < Sinatra::Base
       response.headers['X-Frame-Options'] = 'ALLOWALL'
     end
 
+    if @header['embeddable']
+      response.headers['X-Frame-Options'] = 'ALLOWALL'
+      response.headers['Content-Security-Policy'] = 'frame-ancestors *'
+    end
+
     if @header['content-type']
       response.headers['Content-Type'] = @header['content-type']
     end

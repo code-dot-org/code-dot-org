@@ -2501,7 +2501,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     var filtered =
       editor.completer.completions && editor.completer.completions.filtered;
     for (var i = 0; i < (filtered && filtered.length); i++) {
-      // If we have any exact maches in our filtered completions that include
+      // If we have any exact matches in our filtered completions that include
       // this period, allow the completer to stay active:
       if (filtered[i].exactMatch) {
         return;

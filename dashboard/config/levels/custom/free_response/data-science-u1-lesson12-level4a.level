@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-11-04T19:24:22.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Step 1: Dataset Selection",
+    "long_instructions": "####Which dataset did you select for your project, and what about it interested you? Describe how you developed your data question based on the dataset’s attributes and potential insights you were hoping to gain.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-11-04T19:24:22.788+00:00\",\"changed\":[\"cloned from \\\"data-science-u1-lesson12-level3\\\"\"],\"cloned_from\":\"data-science-u1-lesson12-level3\"},{\"changed_at\":\"2024-11-04 19:26:16 +0000\",\"changed\":[\"title\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-04 20:26:56 +0000\",\"changed\":[\"title\",\"long_instructions\",\"teacher_markdown\",\"allow_user_uploads\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-04 20:31:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-04 20:31:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -38,6 +38,7 @@ const AccountCard: React.FunctionComponent<{
   onClick,
   iconList,
 }) => (
+  // eslint-disable-next-line react/forbid-component-props
   <Card data-testid={id}>
     <div className={styles.contentWrapper}>
       <CardHeader

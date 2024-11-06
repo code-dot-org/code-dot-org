@@ -1496,9 +1496,19 @@ FactoryBot.define do
 
   factory :school_info_non_us, class: SchoolInfo do
     country {'GB'}
-    school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
-    full_address {'31 West Bank, London, England'}
     school_name {'Grazebrook'}
+  end
+
+  factory :school_info_us_non_nces, class: SchoolInfo do
+    country {'US'}
+    school_name {'Non NCES School'}
+    zip {'12345'}
+  end
+
+  factory :school_info_us_non_school_setting, class: SchoolInfo do
+    country {'US'}
+    school_type {SchoolInfo::SCHOOL_TYPE_NO_SCHOOL_SETTING}
+    zip {'12345'}
   end
 
   factory :school_info_us, class: SchoolInfo do
