@@ -149,7 +149,7 @@ namespace :build do
         # that may arise when that best practice is not followed.
         unless rack_env?(:development)
           ChatClient.log 'Restarting <b>dashboard</b> Active Job worker(s).'
-          RakeUtils.rake 'build:start_active_job_workers'
+          Dir.chdir('../') {RakeUtils.rake 'build:start_active_job_workers'}
         end
       end
 
