@@ -45,15 +45,21 @@ let pyodideReadyPromise: Promise<void> | null = null;
 // Pyodide defines the globals object as any.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let pyodideGlobals: any | null = null;
+let loadStartTime: number | undefined;
 async function initializePyodide() {
   const promiseWasNull = pyodideReadyPromise === null;
   if (promiseWasNull) {
+    loadStartTime = Date.now();
     pyodideReadyPromise = loadPyodideAndPackages();
     postMessage({type: 'loading_pyodide'});
   }
   await pyodideReadyPromise;
   if (promiseWasNull) {
-    postMessage({type: 'loaded_pyodide'});
+    const loadTime = loadStartTime ? Date.now() - loadStartTime : undefined;
+    postMessage({
+      type: 'loaded_pyodide',
+      message: loadTime,
+    });
   }
   pyodideGlobals = pyodide.globals.toJs();
 }

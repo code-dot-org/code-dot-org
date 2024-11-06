@@ -795,6 +795,7 @@ class UnitEditor extends React.Component {
                   </div>
                 )}
               {!this.props.hasCourse && (
+                // eslint-disable-next-line react/forbid-dom-props
                 <div data-testid="course-version-publishing-editor">
                   <CourseVersionPublishingEditor
                     pilotExperiment={this.state.pilotExperiment}

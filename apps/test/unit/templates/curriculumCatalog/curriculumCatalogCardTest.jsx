@@ -196,6 +196,7 @@ describe('CurriculumCatalogCard', () => {
     const {container} = renderCurriculumCard();
 
     expect(screen.queryByTitle(translationIconTitle)).toBeNull();
+    // eslint-disable-next-line no-restricted-properties
     expect(container.querySelectorAll('i[class*=language]')).toHaveLength(0);
   });
 
@@ -207,6 +208,7 @@ describe('CurriculumCatalogCard', () => {
     });
 
     expect(screen.queryByTitle(translationIconTitle)).toBeNull();
+    // eslint-disable-next-line no-restricted-properties
     expect(container.querySelectorAll('i[class*=language]')).toHaveLength(0);
   });
 
@@ -218,6 +220,7 @@ describe('CurriculumCatalogCard', () => {
     });
 
     screen.getByTitle(translationIconTitle);
+    // eslint-disable-next-line no-restricted-properties
     expect(container.querySelectorAll('i[class*=language]')).toHaveLength(1);
   });
 
@@ -231,6 +234,7 @@ describe('CurriculumCatalogCard', () => {
         }`
       )
     );
+    // eslint-disable-next-line no-restricted-properties
     expect(container.querySelectorAll('i[class*=user]')).toHaveLength(1);
   });
 
@@ -242,6 +246,7 @@ describe('CurriculumCatalogCard', () => {
     });
 
     screen.getByText(new RegExp(`Grade: ${grade}`));
+    // eslint-disable-next-line no-restricted-properties
     expect(container.querySelectorAll('i[class*=user]')).toHaveLength(1);
   });
 
@@ -249,6 +254,7 @@ describe('CurriculumCatalogCard', () => {
     const {container} = renderCurriculumCard();
 
     screen.getByText(defaultProps.duration, {exact: false});
+    // eslint-disable-next-line no-restricted-properties
     expect(container.querySelectorAll('i[class*=clock]')).toHaveLength(1);
   });
 

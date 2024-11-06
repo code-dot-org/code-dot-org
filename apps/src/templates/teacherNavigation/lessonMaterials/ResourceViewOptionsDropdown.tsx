@@ -189,6 +189,7 @@ const ResourceViewOptionsDropdown: React.FC<
   }, [materialType, resource]);
 
   return (
+    // eslint-disable-next-line react/forbid-dom-props
     <div data-testid={'view-options-dropdown'}>
       <ActionDropdown
         name="view-options"

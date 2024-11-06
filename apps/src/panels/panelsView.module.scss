@@ -18,10 +18,12 @@ $text-horizontal-padding: 2.6cqw;
 
 @keyframes slide-in {
   from {
-    margin-top: 2.3cqw;
+    margin-top: $text-offset-y;
+    margin-bottom: -$text-offset-y;
   }
   to {
     margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -50,6 +52,7 @@ $text-horizontal-padding: 2.6cqw;
     position: relative;
     container-name: panel;
     container-type: inline-size;
+    overflow: hidden;
 
     .image {
       position: absolute;
