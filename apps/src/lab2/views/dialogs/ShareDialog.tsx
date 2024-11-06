@@ -24,9 +24,9 @@ import moduleStyles from './share-dialog.module.scss';
 const CopyToClipboardButton: React.FunctionComponent<{
   shareUrl: string;
   projectType: ProjectType;
-}> = ({shareUrl, projectType}) => {
+  channelId: string | undefined;
+}> = ({shareUrl, projectType, channelId}) => {
   const [copiedToClipboard, setCopiedToClipboard] = useState(false);
-  const channelId = useAppSelector(state => state.lab.channel?.id);
 
   const handleCopyToClipboard = useCallback(() => {
     copyToClipboard(shareUrl, () => {
@@ -208,6 +208,7 @@ const ShareDialog: React.FunctionComponent<{
                 <CopyToClipboardButton
                   shareUrl={shareUrl}
                   projectType={projectType}
+                  channelId={channelId}
                 />
                 <SubmitButtonInfo
                   submissionStatus={submissionStatus}
