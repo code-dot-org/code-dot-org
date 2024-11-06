@@ -16,7 +16,6 @@ export async function submitProject(
   projectType: string,
   submissionDescription: string
 ) {
-  console.log('submitProject', submissionDescription);
   try {
     const payload = {
       submissionDescription,

@@ -37,12 +37,7 @@ const SubmitProjectDialog: React.FunctionComponent<
     if (channelId && projectType) {
       setIsSubmitButtonDisabled(true);
       try {
-        const response = await submitProject(
-          channelId,
-          projectType,
-          projectDescription
-        );
-        console.log('response', response);
+        await submitProject(channelId, projectType, projectDescription);
         // Close submit project dialog and display the share dialog.
         onGoBack();
       } catch (err) {
