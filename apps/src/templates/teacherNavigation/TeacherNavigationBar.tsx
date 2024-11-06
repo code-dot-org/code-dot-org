@@ -10,6 +10,8 @@ import {
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import Typography from '@cdo/apps/componentLibrary/typography';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
@@ -108,6 +110,11 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
           unitName: sections[sectionId]?.unitName,
         })
       );
+
+      analyticsReporter.sendEvent(EVENTS.NAVIGATE_TO_SECTION, {
+        sectionId: sectionId,
+        currentPage: currentPathName,
+      });
     }
   };
 

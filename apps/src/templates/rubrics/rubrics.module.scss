@@ -56,6 +56,36 @@
   border-style: solid;
 }
 
+.countOverlay {
+  position: fixed;
+  left: 51px;
+  bottom: 97px;
+
+  border-radius: 100px;
+  border-width: 2px;
+  border-color: $background_gray;
+  border-style: solid;
+
+  display: inline-flex;
+  height: 18px;
+  min-width: 18px;
+  padding: 2px 2px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  background: var(--sentiment-error-50, #E5311A);
+}
+
+.countText {
+  margin-top: 1px;
+  margin-bottom: 0;
+  padding: 0 2px;
+
+  color: var(--light-white, #FFF);
+  font-variant-ligatures: no-common-ligatures;
+}
+
 .rubricContainer {
   position: fixed;
   left: 10px;

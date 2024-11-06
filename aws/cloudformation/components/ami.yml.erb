@@ -108,7 +108,8 @@ frontend_device_name ||= '/dev/sda1'
     AutoScalingGroupTags: [
       {Key: 'aws:cloudformation:stack-id', Value: {Ref: 'AWS::StackId'}},
       {Key: 'aws:cloudformation:logical-id', Value: 'Frontends'}
-    ]
+    ],
+    LatestStackUpdateDateTime: Time.now # Trigger update of this custom Resource (invocation of the Lambda) for each Stack update.
   %>
   Frontends:
     Type: AWS::AutoScaling::AutoScalingGroup

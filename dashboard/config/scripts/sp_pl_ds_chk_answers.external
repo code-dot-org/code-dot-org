@@ -10,24 +10,25 @@ markdown <<MARKDOWN
 
 ##Scenario 1:
 #### An app uses past user behavior to recommend new music playlists tailored to individual tastes.
-
-#### **Answer: Data Science**
+#### **Answer: Data Science-** *Because the app uses past data and algorithms to understand preferences and recommend music, it’s an example of data science in action.*
 
 ## Scenario 2:
 #### A teacher grades students' essays manually based on a rubric without any software assistance.
-#### **Answer: Not Data Science**
+#### **Answer: Not Data Science-** *Since the teacher is grading manually without using data or algorithms, this does not involve data science.*
+
+
 
 ## Scenario 3:
 #### A company analyzes customer purchase history to forecast future product demand and optimize inventory.
-#### **Answer: Data Science**
+#### **Answer: Data Science-** *The company is using data to predict demand and make decisions, which is a core part of data science.*
 
 ## Scenario 4:
 #### A photographer manually edits photos in Photoshop to enhance their quality.
-#### **Answer: Not Data Science**
+#### **Answer: Not Data Science-** *Editing photos by hand does not involve data analysis or algorithms, so it is not data science.*
 
 ##Scenario 5:
 ####A social media platform analyzes user interactions to identify trending topics and suggest relevant content.
-####**Answer: Data Science**
+####**Answer: Data Science-** *By analyzing user data to find trends and suggest content, the platform is using data science techniques.*
 
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 

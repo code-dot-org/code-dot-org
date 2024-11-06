@@ -449,6 +449,35 @@ const EVENTS = {
   BLOCKLY_SETTING_ON: 'on',
   BLOCKLY_SETTING_OFF: 'off',
   BLOCKLY_APP_TYPE_MUSIC: 'music',
+
+  // Teacher Navigation V2
+  NAVIGATE_TO_SECTION: 'Local Nav Class Section Selected',
+  NAVIGATE_TO_PAGE: 'Local Nav Page Clicked',
+  SECTION_LOAD_FAILURE: 'Local Nav Section Load Failure',
+  UNIT_CALENDAR_FAILURE: 'Local Nav Unit Calendar Load Failure',
+  VIEW_UNIT_CALENDAR: 'Local Nav View Unit Calendar',
+  CHANGED_CALENDAR_MINUTES: 'Local Nav Changed Calendar Minutes',
+
+  // Lesson Materials page
+  VIEW_LESSON_MATERIALS: 'Local Nav View Lesson Materials',
+  LESSON_MATERIALS_LESSON_CHANGE: 'Local Nav Lesson Materials Lesson Change',
+  LESSON_MATERIALS_FAILURE: 'Local Nav Lesson Materials Load Failure',
+  LESSON_MATERIALS_DOWNLOAD_ALL_LESSON_PLANS:
+    'Local Nav Download All Lesson Plans',
+  LESSON_MATERIALS_DOWNLOAD_ALL_HANDOUTS: 'Local Nav Download All Handouts',
+  LESSON_MATERIALS_RESOURCE_DROPDOWN_OPTION:
+    'Local Nav Resource Dropdown Option Clicked',
+
+  // Unit Overview
+  TEACHER_NAV_UNIT_OVERVIEW_PAGE_VIEWED:
+    'Teacher Nav Unit Overview Page Viewed',
+  TEACHER_NAV_UNIT_OVERVIEW_FAILED: 'Teacher Nav Unit Overview Load Failure',
+
+  // Course Overview
+  TEACHER_NAV_COURSE_OVERVIEW_PAGE_VIEWED:
+    'Teacher Nav Course Overview Page Viewed',
+  TEACHER_NAV_COURSE_OVERVIEW_FAILED:
+    'Teacher Nav Course Overview Load Failure',
 };
 
 const EVENT_GROUP_NAMES = {

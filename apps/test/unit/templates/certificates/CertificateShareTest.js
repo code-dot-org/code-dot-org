@@ -40,6 +40,7 @@ describe('CertificateShare', () => {
     const image = screen.getByRole('img', {name: defaultImageAlt});
     expect(image.src).toContain('/certificate-image');
 
+    // eslint-disable-next-line no-restricted-properties
     const twoColumnActionBlock = screen.getByTestId('two-column-action-block');
     const announcementImg = within(twoColumnActionBlock).getByTestId(
       'two-column-action-block-img'
@@ -56,6 +57,7 @@ describe('CertificateShare', () => {
 
     screen.findByRole('link', {name: defaultImageAlt});
 
+    // eslint-disable-next-line no-restricted-properties
     expect(screen.queryByTestId('two-column-action-block')).toBeFalsy();
   });
 });

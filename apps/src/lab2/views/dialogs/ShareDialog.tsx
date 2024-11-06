@@ -4,16 +4,20 @@ import React, {useCallback, useEffect, useState} from 'react';
 import FocusLock from 'react-focus-lock';
 
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
+import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import {ProjectType} from '@cdo/apps/lab2/types';
+import {SubmissionStatusType} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import trackEvent from '@cdo/apps/util/trackEvent';
+import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import moduleStyles from './ShareDialog.module.scss';
+import moduleStyles from './share-dialog.module.scss';
 
 const CopyToClipboardButton: React.FunctionComponent<{
   shareUrl: string;
@@ -39,7 +43,7 @@ const CopyToClipboardButton: React.FunctionComponent<{
       color="white"
       size="m"
       onClick={handleCopyToClipboard}
-      className={moduleStyles.copyLinkButton}
+      className={moduleStyles.projectButton}
     />
   );
 };
@@ -78,6 +82,40 @@ const AfeCareerTourBlock: React.FunctionComponent = () => {
   );
 };
 
+const SubmitButtonInfo: React.FunctionComponent<{
+  submissionStatus: SubmissionStatusType | undefined;
+  onSubmitClick: () => void;
+}> = ({submissionStatus, onSubmitClick}) => {
+  if (
+    !experiments.isEnabledAllowingQueryString(experiments.LAB2_SUBMIT_PROJECT)
+  ) {
+    return null;
+  }
+  if (submissionStatus === ProjectSubmissionStatus.CAN_SUBMIT) {
+    return (
+      <Button
+        iconLeft={{iconName: 'award'}}
+        text={i18n.submitProjectGallery_header()}
+        type="secondary"
+        color="white"
+        size="m"
+        onClick={onSubmitClick}
+        className={moduleStyles.projectButton}
+      />
+    );
+  } else if (submissionStatus === ProjectSubmissionStatus.ALREADY_SUBMITTED) {
+    return (
+      <Alert
+        text={i18n.submitted()}
+        type="success"
+        size="s"
+        className={moduleStyles.alert}
+      />
+    );
+  }
+  return null;
+};
+
 /**
  * A new implementation of the project share dialog for Lab2 labs.  Currently only used
  * by Music Lab and Python Lab, and only supports a minimal subset of functionality.
@@ -88,7 +126,16 @@ const ShareDialog: React.FunctionComponent<{
   shareUrl: string;
   finishUrl?: string;
   projectType: ProjectType;
-}> = ({dialogId, shareUrl, finishUrl, projectType}) => {
+  onSubmitClick: () => void;
+  submissionStatus: SubmissionStatusType | undefined;
+}> = ({
+  dialogId,
+  shareUrl,
+  finishUrl,
+  projectType,
+  onSubmitClick,
+  submissionStatus,
+}) => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -142,6 +189,10 @@ const ShareDialog: React.FunctionComponent<{
                 <CopyToClipboardButton
                   shareUrl={shareUrl}
                   projectType={projectType}
+                />
+                <SubmitButtonInfo
+                  submissionStatus={submissionStatus}
+                  onSubmitClick={onSubmitClick}
                 />
               </div>
             </div>

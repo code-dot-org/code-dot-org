@@ -51,8 +51,10 @@ export default function AiAssessmentFeedbackRadio({aiEvalId, setAiFeedbackId}) {
             aria-hidden="true"
           >
             {aiFeedback === THUMBS_UP ? (
+              // eslint-disable-next-line react/forbid-component-props
               <FontAwesome icon="thumbs-up" data-testid="thumbs-up" />
             ) : (
+              // eslint-disable-next-line react/forbid-component-props
               <FontAwesome icon="thumbs-o-up" data-testid="thumbs-o-up" />
             )}
           </span>
@@ -74,8 +76,10 @@ export default function AiAssessmentFeedbackRadio({aiEvalId, setAiFeedbackId}) {
             aria-hidden="true"
           >
             {aiFeedback === THUMBS_DOWN ? (
+              // eslint-disable-next-line react/forbid-component-props
               <FontAwesome icon="thumbs-down" data-testid="thumbs-down" />
             ) : (
+              // eslint-disable-next-line react/forbid-component-props
               <FontAwesome icon="thumbs-o-down" data-testid="thumbs-o-down" />
             )}
           </span>

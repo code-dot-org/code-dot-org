@@ -335,24 +335,11 @@ class UnconnectedMusicView extends React.Component {
       levelData?.showAiTemperatureExplanation ||
       AppConfig.getValue('show-ai-temperature-explanation') === 'true';
 
-    this.props.setStartingPlayheadPosition(1);
+    MusicRegistry.showAiGenerateAgainHelp =
+      levelData?.showAiGenerateAgainHelp ||
+      AppConfig.getValue('show-ai-generate-again-help') === 'true';
 
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .incrementCounter('LevelLoad', [
-        {
-          name: 'Type',
-          value: this.props.isProjectLevel ? 'Project' : 'Level',
-        },
-        {
-          name: 'Mode',
-          value: this.props.isPlayView
-            ? 'Share'
-            : this.props.isReadOnlyWorkspace
-            ? 'View'
-            : 'Edit',
-        },
-      ]);
+    this.props.setStartingPlayheadPosition(1);
   }
 
   // Load the library and initialize the music player, if not already loaded.

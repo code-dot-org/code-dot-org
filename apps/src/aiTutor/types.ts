@@ -70,6 +70,7 @@ export interface ChatContext {
   studentInput: string;
   studentCode?: string;
   actionType?: AITutorTypesValue | undefined;
+  systemPrompt?: string;
 }
 
 export enum Role {

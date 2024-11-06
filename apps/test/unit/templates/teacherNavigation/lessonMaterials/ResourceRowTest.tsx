@@ -30,8 +30,9 @@ describe('ResourceRow', () => {
     screen.getByText('Handout: Handout for teacher');
     screen.getByText('3.2');
 
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('resource-icon-' + RESOURCE_ICONS.LINK.icon);
-
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('view-options-dropdown');
   });
 });

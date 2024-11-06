@@ -104,6 +104,7 @@ export default function LtiSectionSyncDialog({
       PLATFORMS.STATSIG
     );
     return (
+      // eslint-disable-next-line react/forbid-dom-props
       <div data-testid={'disable-roster-sync'}>
         <div>
           <h2 style={styles.dialogHeader}>

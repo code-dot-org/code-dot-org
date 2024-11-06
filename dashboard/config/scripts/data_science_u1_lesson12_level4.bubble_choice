@@ -1,0 +1,9 @@
+name 'data-science-u1-lesson12-level4'
+display_name 'The Data Cycle'
+
+sublevels
+level 'data-science-u1-lesson12-level4a'
+level 'data-science-u1-lesson12-level4b'
+level 'data-science-u1-lesson12-level4c'
+level 'data-science-u1-lesson12-level4d'
+level 'data-science-u1-lesson12-level4e'
