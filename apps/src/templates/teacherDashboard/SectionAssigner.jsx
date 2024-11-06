@@ -12,16 +12,10 @@ import TeacherSectionSelector from './TeacherSectionSelector';
 class SectionAssigner extends Component {
   static propTypes = {
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-    showAssignButton: PropTypes.bool,
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
-    courseId: PropTypes.number,
     scriptId: PropTypes.number,
     forceReload: PropTypes.bool,
-    isAssigningCourse: PropTypes.bool,
-    isStandAloneUnit: PropTypes.bool,
-    participantAudience: PropTypes.string,
-    // Redux provided
     selectSection: PropTypes.func.isRequired,
     selectedSectionId: PropTypes.number,
     assignmentName: PropTypes.string,
@@ -85,7 +79,7 @@ class SectionAssigner extends Component {
 
 const styles = {
   section: {
-    marginBottom: 10,
+    marginBottom: 5,
   },
   content: {
     display: 'flex',

@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
-import {changeViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Notification, {
   NotificationType,
 } from '@cdo/apps/sharedComponents/Notification';
@@ -21,8 +21,6 @@ import {
   onDismissRedirectWarning,
 } from '@cdo/apps/util/dismissVersionRedirect';
 import i18n from '@cdo/locale';
-
-import {setViewAsUserId} from '../../progressRedux';
 
 import Announcements from './Announcements';
 
@@ -63,8 +61,6 @@ class UnitOverviewHeader extends Component {
     isVerifiedInstructor: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
     localeCode: PropTypes.string,
-    changeViewType: PropTypes.func.isRequired,
-    resetViewAsUserId: PropTypes.func.isRequired,
     children: PropTypes.node,
   };
 
@@ -204,26 +200,18 @@ class UnitOverviewHeader extends Component {
 
 export const UnconnectedUnitOverviewHeader = UnitOverviewHeader;
 
-export default connect(
-  state => ({
-    plcHeaderProps: state.plcHeader,
-    announcements: state.announcements || [],
-    courseVersionId: state.progress.courseVersionId,
-    scriptId: state.progress.scriptId,
-    scriptName: state.progress.scriptName,
-    unitTitle: state.progress.unitTitle,
-    unitDescription: state.progress.unitDescription,
-    unitStudentDescription: state.progress.unitStudentDescription,
-    isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
-    viewAs: state.viewAs,
-    isVerifiedInstructor: state.verifiedInstructor.isVerified,
-    hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources,
-    localeCode: state.locales.localeCode,
-  }),
-  dispatch => {
-    return {
-      resetViewAsUserId: () => dispatch(setViewAsUserId(null)),
-      changeViewType: viewAs => dispatch(changeViewType(viewAs, true)),
-    };
-  }
-)(UnitOverviewHeader);
+export default connect(state => ({
+  plcHeaderProps: state.plcHeader,
+  announcements: state.announcements || [],
+  courseVersionId: state.progress.courseVersionId,
+  scriptId: state.progress.scriptId,
+  scriptName: state.progress.scriptName,
+  unitTitle: state.progress.unitTitle,
+  unitDescription: state.progress.unitDescription,
+  unitStudentDescription: state.progress.unitStudentDescription,
+  isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
+  viewAs: state.viewAs,
+  isVerifiedInstructor: state.verifiedInstructor.isVerified,
+  hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources,
+  localeCode: state.locales.localeCode,
+}))(UnitOverviewHeader);

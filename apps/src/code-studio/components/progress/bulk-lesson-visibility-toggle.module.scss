@@ -1,7 +1,9 @@
 .container {
   display: flex;
   justify-content: end;
-  padding-right: 89px;
+  align-items: center;
+  align-self: end;
+  margin-left: 10px;
 }
 
 .infoTipIcon {

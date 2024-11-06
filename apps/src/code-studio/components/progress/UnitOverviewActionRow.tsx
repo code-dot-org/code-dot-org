@@ -1,7 +1,6 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
 
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
@@ -227,10 +226,6 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
               <DropdownButton
                 customText={
                   <div>
-                    <FontAwesomeV6Icon
-                      iconName="print"
-                      className={styles.icon}
-                    />
                     <span className={styles.customText}>
                       {i18n.printingOptions()}
                     </span>
