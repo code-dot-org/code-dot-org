@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import QRCode from 'qrcode.react';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import FocusLock from 'react-focus-lock';
 
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
@@ -150,15 +150,6 @@ const ShareDialog: React.FunctionComponent<{
   channelId,
 }) => {
   const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    trackEvent('share', 'share_open_dialog', {
-      value:
-        dialogId === 'hoc2024'
-          ? 'share_open_dialog_congrats_hoc2024'
-          : projectType,
-    });
-  });
 
   const handleClose = useCallback(() => {
     dispatch(hideShareDialog());
