@@ -12,7 +12,10 @@ import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import MultipleAssignButton from '@cdo/apps/templates/MultipleAssignButton';
 import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import {isOnTeacherDashboard} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
+import {
+  isOnTeacherDashboard,
+  showV2TeacherDashboard,
+} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
@@ -272,24 +275,26 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
           )}
         </div>
 
-        <div className={styles.viewAs}>
-          {<label className={styles.viewAsLabel}>{i18n.viewPageAs()}</label>}
-          <SegmentedButtons
-            buttons={[
-              {
-                label: i18n.student(),
-                value: ViewType.Participant,
-              },
-              {
-                label: i18n.teacher(),
-                value: ViewType.Instructor,
-              },
-            ]}
-            onChange={viewAsToggleAction}
-            selectedButtonValue={viewAs}
-            size="s"
-          />
-        </div>
+        {showV2TeacherDashboard() && (
+          <div className={styles.viewAs}>
+            {<label className={styles.viewAsLabel}>{i18n.viewPageAs()}</label>}
+            <SegmentedButtons
+              buttons={[
+                {
+                  label: i18n.student(),
+                  value: ViewType.Participant,
+                },
+                {
+                  label: i18n.teacher(),
+                  value: ViewType.Instructor,
+                },
+              ]}
+              onChange={viewAsToggleAction}
+              selectedButtonValue={viewAs}
+              size="s"
+            />
+          </div>
+        )}
       </div>
     </div>
   );
