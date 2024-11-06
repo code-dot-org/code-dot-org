@@ -1,6 +1,8 @@
 import React, {useMemo} from 'react';
 
 import {ActionDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   isGDocsUrl,
   gDocsMsOfficeUrl,
@@ -51,6 +53,11 @@ const ResourceViewOptionsDropdown: React.FC<
           onClick: () => {
             if (resource.downloadUrl) {
               openDownloadUrl(resource.downloadUrl);
+
+              analyticsReporter.sendEvent(
+                EVENTS.LESSON_MATERIALS_RESOURCE_DROPDOWN_OPTION,
+                {resourceKey: resource.key, type: 'download-video'}
+              );
             }
           },
         });
@@ -61,6 +68,13 @@ const ResourceViewOptionsDropdown: React.FC<
         icon: {iconName: 'video'},
         onClick: () => {
           openInNewTab(resource.url);
+          analyticsReporter.sendEvent(
+            EVENTS.LESSON_MATERIALS_RESOURCE_DROPDOWN_OPTION,
+            {
+              resourceKey: resource.key,
+              type: 'watch',
+            }
+          );
         },
       });
       return options;
@@ -73,6 +87,13 @@ const ResourceViewOptionsDropdown: React.FC<
         icon: {iconName: 'eye'},
         onClick: () => {
           openInNewTab(resource.url);
+          analyticsReporter.sendEvent(
+            EVENTS.LESSON_MATERIALS_RESOURCE_DROPDOWN_OPTION,
+            {
+              resourceKey: resource.key,
+              type: 'view',
+            }
+          );
         },
       },
     ];
@@ -85,6 +106,13 @@ const ResourceViewOptionsDropdown: React.FC<
         onClick: () => {
           if (resource.downloadUrl) {
             openDownloadUrl(resource.downloadUrl);
+            analyticsReporter.sendEvent(
+              EVENTS.LESSON_MATERIALS_RESOURCE_DROPDOWN_OPTION,
+              {
+                resourceKey: resource.key,
+                type: 'download-lesson-plan',
+              }
+            );
           }
         },
       });
@@ -95,6 +123,13 @@ const ResourceViewOptionsDropdown: React.FC<
         icon: {iconName: 'download'},
         onClick: () => {
           openDownloadUrl(gDocsPdfUrl(resource.url));
+          analyticsReporter.sendEvent(
+            EVENTS.LESSON_MATERIALS_RESOURCE_DROPDOWN_OPTION,
+            {
+              resourceKey: resource.key,
+              type: 'download-google-docs',
+            }
+          );
         },
       });
       options.push({
@@ -103,6 +138,13 @@ const ResourceViewOptionsDropdown: React.FC<
         icon: {iconName: 'download'},
         onClick: () => {
           openDownloadUrl(gDocsMsOfficeUrl(resource.url));
+          analyticsReporter.sendEvent(
+            EVENTS.LESSON_MATERIALS_RESOURCE_DROPDOWN_OPTION,
+            {
+              resourceKey: resource.key,
+              type: 'download-ms-office',
+            }
+          );
         },
       });
       options.push({
@@ -111,6 +153,13 @@ const ResourceViewOptionsDropdown: React.FC<
         icon: {iconName: 'copy'},
         onClick: () => {
           openInNewTab(gDocsCopyUrl(resource.url));
+          analyticsReporter.sendEvent(
+            EVENTS.LESSON_MATERIALS_RESOURCE_DROPDOWN_OPTION,
+            {
+              resourceKey: resource.key,
+              type: 'copy-google-doc',
+            }
+          );
         },
       });
     } else {
@@ -123,6 +172,13 @@ const ResourceViewOptionsDropdown: React.FC<
           onClick: () => {
             if (resource.downloadUrl) {
               openDownloadUrl(resource.downloadUrl);
+              analyticsReporter.sendEvent(
+                EVENTS.LESSON_MATERIALS_RESOURCE_DROPDOWN_OPTION,
+                {
+                  resourceKey: resource.key,
+                  type: 'download-url',
+                }
+              );
             }
           },
         });
@@ -133,6 +189,7 @@ const ResourceViewOptionsDropdown: React.FC<
   }, [materialType, resource]);
 
   return (
+    // eslint-disable-next-line react/forbid-dom-props
     <div data-testid={'view-options-dropdown'}>
       <ActionDropdown
         name="view-options"

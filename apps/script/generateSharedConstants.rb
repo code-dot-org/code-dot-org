@@ -113,6 +113,7 @@ def main
       USER_TYPES
       NON_SCHOOL_OPTIONS
       US_STATES
+      PROJECT_SUBMISSION_STATUS
     ),
     file_type: 'ts'
   )

@@ -10,8 +10,8 @@
     },
     "new_name": null,
     "family_name": "codebridge-ascii",
-    "serialized_at": "2024-10-28 16:39:32 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-11-04 22:02:38 UTC",
+    "published_state": "beta",
     "instruction_type": "self_paced",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -35,7 +35,7 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "Make some Ascii Art",
+      "name": "Lets make ACSII Art",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -90,6 +90,7 @@
       "key": "9a2e723d-e907-407b-9a67-d3075e69bcf3",
       "position": 3,
       "properties": {
+        "progression_name": "ASCII Art"
       },
       "seeding_key": {
         "activity_section.key": "9a2e723d-e907-407b-9a67-d3075e69bcf3",
@@ -104,6 +105,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ascii-art-intro-incubator"
+        ],
         "progression": "The Basics: Print"
       },
       "bonus": false,
@@ -126,6 +130,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ascii-art-print-incubator"
+        ],
         "progression": "The Basics: Print"
       },
       "bonus": false,
@@ -148,6 +155,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ascii-art-three-print-incubator"
+        ],
         "progression": "The Basics: Print"
       },
       "bonus": false,
@@ -170,6 +180,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ascii-art-functioncall-incubator"
+        ],
         "progression": "The Basics: Function "
       },
       "bonus": false,
@@ -192,6 +205,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ascii-art-functionedit-incubator"
+        ],
         "progression": "The Basics: Function "
       },
       "bonus": false,
@@ -214,6 +230,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ascii-art-OL-incubator"
+        ],
+        "progression": "ASCII Art"
       },
       "bonus": false,
       "seeding_key": {
@@ -235,6 +255,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ascii-art-LOL-incubator"
+        ],
+        "progression": "ASCII Art"
       },
       "bonus": false,
       "seeding_key": {
@@ -256,6 +280,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ascii-art-LOLZ-incubator"
+        ],
+        "progression": "ASCII Art"
       },
       "bonus": false,
       "seeding_key": {
@@ -277,6 +305,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ascii-art-makeyourown-incubator"
+        ],
+        "progression": "ASCII Art"
       },
       "bonus": false,
       "seeding_key": {

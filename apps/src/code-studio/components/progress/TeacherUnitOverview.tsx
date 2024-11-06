@@ -6,6 +6,8 @@ import plcHeaderReducer, {
   setPlcHeader,
 } from '@cdo/apps/code-studio/plc/plcHeaderRedux';
 import progress from '@cdo/apps/code-studio/progress';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {registerReducers} from '@cdo/apps/redux';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
@@ -182,7 +184,7 @@ interface UnitData {
   calendarLessons: CalendarLesson[];
 }
 
-interface UnitSummaryResponse {
+export interface UnitSummaryResponse {
   unitData: UnitData;
   plcBreadcrumb: {
     unit_name: string;
@@ -233,6 +235,9 @@ export const initializeRedux = (
     setCalendarData({
       showCalendar: !!unitData.showCalendar,
       calendarLessons: unitData.calendarLessons,
+      versionYear: unitData.version_year
+        ? parseInt(unitData.version_year)
+        : null,
     })
   );
 
@@ -308,6 +313,20 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
       .then(responseJson => {
         initializeRedux(responseJson, dispatch, userType, userId);
         setUnitSummaryResponse(responseJson);
+
+        analyticsReporter.sendEvent(
+          EVENTS.TEACHER_NAV_UNIT_OVERVIEW_PAGE_VIEWED,
+          {
+            unitName: unitName,
+          }
+        );
+      })
+      .catch(error => {
+        console.error('Error loading unit overview', error);
+
+        analyticsReporter.sendEvent(EVENTS.TEACHER_NAV_UNIT_OVERVIEW_FAILED, {
+          unitName,
+        });
       });
   }, [
     unitName,
@@ -370,6 +389,7 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
       userType={userType}
       assignedSectionId={selectedSection.id}
       showCalendar={unitSummaryResponse.unitData.showCalendar}
+      versionYear={unitSummaryResponse.unitData.version_year}
       weeklyInstructionalMinutes={
         unitSummaryResponse.unitData.weeklyInstructionalMinutes
       }

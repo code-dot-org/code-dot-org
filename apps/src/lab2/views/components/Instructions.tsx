@@ -228,7 +228,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               id="instructions-feedback-message"
               className={moduleStyles['message-' + theme]}
             >
-              {offerBrowserTts && useMessage && (
+              {offerBrowserTts && useMessage && !canShowNextButton && (
                 <TextToSpeech text={useMessage} />
               )}
               {useMessage && (

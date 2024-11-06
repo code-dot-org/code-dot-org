@@ -7,5 +7,6 @@ export interface LevelWithProgress {
 }
 
 export interface TeacherPanelState {
+  hasLoadedLevelsWithProgress: boolean;
   levelsWithProgress: LevelWithProgress[];
 }
