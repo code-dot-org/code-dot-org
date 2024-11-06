@@ -15,6 +15,7 @@
   background-color: var(--neutral-black-alpha-90);
 }
 
+// Common dialog styles
 .dialog {
   position: relative;
   display: flex;
@@ -24,7 +25,6 @@
   max-width: 50rem;
   padding: 3.5rem 3.5rem 2.5rem 3.5rem;
   gap: 2rem;
-  background-color: var(--neutral-base-white);
   border-radius: 0.5rem;
   box-shadow: 0 6px 18px 0 rgb(0 0 0 / 0.3);
 }
@@ -75,4 +75,20 @@
   position: absolute;
   inset-block-start: 9px;
   inset-inline-end: 9px;
+}
+
+
+// Dialog colors
+.dialog-light {
+  background-color: var(--neutral-base-white);
+}
+
+.dialog-dark {
+  background-color: var(--neutral-gray-90);
+
+  .dialogTextSection {
+    h2, p {
+      color: var(--neutral-base-white);
+    }
+  }
 }

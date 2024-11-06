@@ -1,8 +1,15 @@
 import classnames from 'classnames';
-import React, {HTMLAttributes, ReactNode, useCallback, useEffect} from 'react';
+import React, {
+  HTMLAttributes,
+  ReactNode,
+  useCallback,
+  useEffect,
+  useRef,
+} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import CloseButton from '@cdo/apps/componentLibrary/closeButton';
+import useFocusTrap from '@cdo/apps/componentLibrary/common/hooks/useFocusTrap';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
@@ -11,14 +18,14 @@ import {BodyTwoText, Heading2} from '@cdo/apps/componentLibrary/typography';
 import moduleStyles from './dialog.module.scss';
 
 export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
-  /** Dialog type*/
-  type?: 'noIcon' | 'withIconFill' | 'withIconFA';
   /** Dialog title */
   title?: string;
   /** Dialog content */
   content?: string | ReactNode;
   /** Whether to show secondary button */
   showSecondaryButton?: boolean;
+  /** Dialog color mode */
+  mode?: 'light' | 'dark';
   /** Custom class name */
   className?: string;
   /** Dialog onClose handler */
@@ -32,10 +39,11 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 // TODO:
+//  * + Add focus trap
 //  * Add tests
 //  * Add accessibility checks
 //  * Add storybook stories
-//  * add colors support
+//  * + add colors support
 
 /**
  * ## Production-ready Checklist:
@@ -52,9 +60,9 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
  */
 const Dialog: React.FunctionComponent<DialogProps> = ({
   title,
-  type = 'noIcon',
   content,
   showSecondaryButton,
+  mode = 'light',
   className,
   onClose,
   closeLabel = 'Close dialog',
@@ -62,6 +70,8 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
   imageUrl,
   ...HTMLAttributes
 }) => {
+  const dialogRef = useRef<HTMLDivElement>(null);
+
   // Handle closing the dialog with Escape key
   const handleKeyDown = useCallback(
     (event: KeyboardEvent) => {
@@ -80,17 +90,19 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
     };
   }, [handleKeyDown]);
 
+  useFocusTrap(dialogRef);
+
   return (
     <div role="presentation" className={moduleStyles.dialogOverlay}>
       <div
         role="dialog"
+        ref={dialogRef}
         aria-modal
         aria-labelledby="dialog-title"
         aria-describedby="dialog-content"
-        // tabIndex={-1}  // Make the dialog container focusable
         className={classnames(
           moduleStyles.dialog,
-          moduleStyles[`dialog-${type}`],
+          moduleStyles[`dialog-${mode}`],
           className
         )}
         {...HTMLAttributes}
@@ -106,14 +118,14 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
           {showSecondaryButton && (
             <Button
               type="secondary"
-              color="black"
+              color={mode === 'light' ? 'black' : 'white'}
               text="Secondary Button"
               onClick={() => null}
             />
           )}
           <Button
             type="primary"
-            color="purple"
+            color={mode === 'light' ? 'purple' : 'white'}
             text="Primary Button"
             onClick={() => null}
           />
@@ -126,6 +138,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
           <CloseButton
             aria-label={closeLabel}
             onClick={onClose}
+            color={mode === 'light' ? 'dark' : 'light'}
             size="l"
             className={moduleStyles.dialogCloseButton}
           />

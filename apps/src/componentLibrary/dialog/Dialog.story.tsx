@@ -75,7 +75,6 @@ export const DefaultDialog = SingleTemplate.bind({});
 DefaultDialog.args = {
   title: 'Default Dialog',
   content: 'This is the content of the default dialog.',
-  type: 'noIcon',
   onClose: () => console.log('Dialog closed'),
 };
 
@@ -83,7 +82,6 @@ export const DialogWithIcon = SingleTemplate.bind({});
 DialogWithIcon.args = {
   title: 'Dialog with Icon',
   content: 'This dialog has an icon.',
-  type: 'withIconFA',
   icon: {iconName: 'smile'}, // Example icon
   onClose: () => console.log('Dialog with icon closed'),
 };
@@ -92,7 +90,6 @@ export const DialogWithImage = SingleTemplate.bind({});
 DialogWithIcon.args = {
   title: 'Dialog with Icon',
   content: 'Dialog with image',
-  type: 'withIconFA',
   imageUrl: 'https://code.org/images/courses-6-12.png', // Example image
   onClose: () => console.log('Dialog with icon closed'),
 };
@@ -102,7 +99,6 @@ DialogWithSecondaryButton.args = {
   title: 'Dialog with Secondary Button',
   content: 'This dialog includes a secondary button.',
   showSecondaryButton: true,
-  type: 'noIcon',
   onClose: () => console.log('Dialog with secondary button closed'),
 };
 
@@ -112,13 +108,11 @@ MultipleDialogs.args = {
     {
       title: 'Dialog 1',
       content: 'Content for dialog 1',
-      type: 'noIcon',
       onClose: () => console.log('Dialog 1 closed'),
     },
     {
       title: 'Dialog 2 with Icon',
       content: 'Content for dialog 2',
-      type: 'withIconFA',
       icon: {iconName: 'circle-check'},
       onClose: () => console.log('Dialog 2 closed'),
     },
@@ -126,8 +120,27 @@ MultipleDialogs.args = {
       title: 'Dialog 3 with Secondary Button',
       content: 'Content for dialog 3',
       showSecondaryButton: true,
-      type: 'noIcon',
       onClose: () => console.log('Dialog 3 closed'),
+    },
+  ],
+};
+
+export const GroupOfDialogColors = MultipleDialogs.bind({});
+GroupOfDialogColors.args = {
+  components: [
+    {
+      title: 'Light Dialog',
+      content: 'Content for dialog 1',
+      mode: 'light',
+      showSecondaryButton: true,
+      onClose: () => console.log('Dialog 1 closed'),
+    },
+    {
+      title: 'Dark Dialog',
+      content: 'Content for dialog 2',
+      mode: 'dark',
+      showSecondaryButton: true,
+      onClose: () => console.log('Dialog 2 closed'),
     },
   ],
 };
