@@ -73,7 +73,7 @@ const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({text}) => {
     <button
       className={classNames(
         moduleStyles.playButton,
-        isPlaying && moduleStyles.playing
+        isPlaying && moduleStyles.playButtonPlaying
       )}
       onClick={playText}
       type="button"

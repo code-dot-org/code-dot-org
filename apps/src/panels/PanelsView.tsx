@@ -36,6 +36,7 @@ interface PanelsProps {
   targetWidth: number;
   targetHeight: number;
   offerBrowserTts: boolean;
+  levelId: string | null;
   resetOnChange?: boolean;
 }
 
@@ -49,6 +50,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   targetWidth,
   targetHeight,
   offerBrowserTts,
+  levelId,
   resetOnChange = true,
 }) => {
   const [currentPanelIndex, setCurrentPanelIndex] = useState(0);
@@ -154,7 +156,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     <div
       id="panels-container"
       className={styles.panelsContainer}
-      key={currentPanelIndex}
+      key={`${levelId || 'default'}-${currentPanelIndex}`}
     >
       <div className={styles.panel} style={{width, height}}>
         {previousPanel && (
@@ -208,6 +210,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
       >
         {showButton && (
           <Button
+            key={`button-${currentPanelIndex}`}
             id="panels-button"
             onClick={handleButtonClick}
             className={classNames(

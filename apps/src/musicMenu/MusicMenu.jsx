@@ -127,6 +127,17 @@ const optionsList = [
     ],
   },
   {
+    name: 'show-ai-generate-again-help',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: "Don't show AI generate again help (default).",
+      },
+      {value: 'true', description: 'Show AI generate again help.'},
+    ],
+  },
+  {
     name: 'BPM',
     type: 'string',
     description: 'Set a specific BPM',

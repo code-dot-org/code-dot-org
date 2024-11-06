@@ -8,18 +8,22 @@ import * as windowUtils from '@cdo/apps/utils';
 
 import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
+const DEFAULT_PROPS = {
+  defaultRedirectUrl: '/home',
+};
+
 describe('SectionsSetUpContainer', () => {
   afterEach(() => {
     sinon.restore();
   });
   it('renders an initial set up section form', () => {
-    const wrapper = shallow(<SectionsSetUpContainer />);
+    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
     expect(wrapper.find('SingleSectionSetUp').length).to.equal(1);
   });
 
   it('renders headers and button', () => {
-    const wrapper = shallow(<SectionsSetUpContainer />);
+    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
     expect(wrapper.find('Heading1').length).to.equal(1);
     expect(wrapper.find('Button').length).to.equal(4);
@@ -29,7 +33,9 @@ describe('SectionsSetUpContainer', () => {
   });
 
   it('renders edit header and save button', () => {
-    const wrapper = shallow(<SectionsSetUpContainer sectionToBeEdited={{}} />);
+    const wrapper = shallow(
+      <SectionsSetUpContainer {...DEFAULT_PROPS} sectionToBeEdited={{}} />
+    );
 
     expect(wrapper.find('Heading1').length).to.equal(1);
     expect(wrapper.find('Button').length).to.equal(3);
@@ -37,7 +43,7 @@ describe('SectionsSetUpContainer', () => {
   });
 
   it('renders curriculum quick assign', () => {
-    const wrapper = shallow(<SectionsSetUpContainer />);
+    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
     expect(wrapper.find('CurriculumQuickAssign').length).to.equal(1);
   });
@@ -50,7 +56,9 @@ describe('SectionsSetUpContainer', () => {
       .withArgs('participantType')
       .returns('student');
 
-    const wrapper = shallow(<SectionsSetUpContainer userCountry={'US'} />);
+    const wrapper = shallow(
+      <SectionsSetUpContainer {...DEFAULT_PROPS} userCountry={'US'} />
+    );
     expect(wrapper.find('Connect(Notification)').exists()).to.equal(true);
   });
 
@@ -62,7 +70,9 @@ describe('SectionsSetUpContainer', () => {
       .withArgs('participantType')
       .returns('student');
 
-    const wrapper = shallow(<SectionsSetUpContainer userCountry={'US'} />);
+    const wrapper = shallow(
+      <SectionsSetUpContainer {...DEFAULT_PROPS} userCountry={'US'} />
+    );
     expect(wrapper.find('Connect(Notification)').exists()).to.equal(false);
   });
 
@@ -74,18 +84,20 @@ describe('SectionsSetUpContainer', () => {
       .withArgs('participantType')
       .returns('student');
 
-    const wrapper = shallow(<SectionsSetUpContainer userCountry={'ES'} />);
+    const wrapper = shallow(
+      <SectionsSetUpContainer {...DEFAULT_PROPS} userCountry={'ES'} />
+    );
     expect(wrapper.find('Connect(Notification)').exists()).to.equal(false);
   });
 
   it('renders coteacher settings', () => {
-    const wrapper = shallow(<SectionsSetUpContainer />);
+    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
     expect(wrapper.find('InfoHelpTip').length).to.equal(1);
   });
 
   it('updates caret direction when Add Coteachers is clicked', () => {
-    const wrapper = shallow(<SectionsSetUpContainer />);
+    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
     expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-right');
     wrapper
@@ -96,7 +108,7 @@ describe('SectionsSetUpContainer', () => {
   });
 
   it('renders advanced settings', () => {
-    const wrapper = shallow(<SectionsSetUpContainer />);
+    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
     wrapper
       .find('Button')
@@ -107,7 +119,7 @@ describe('SectionsSetUpContainer', () => {
   });
 
   it('updates caret direction when Advanced Settings is clicked', () => {
-    const wrapper = shallow(<SectionsSetUpContainer />);
+    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
     expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-right');
     wrapper
@@ -127,7 +139,7 @@ describe('SectionsSetUpContainer', () => {
         reportValidity: reportSpy,
       });
 
-    const wrapper = shallow(<SectionsSetUpContainer />);
+    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
     wrapper
       .find('Button')
@@ -152,7 +164,7 @@ describe('SectionsSetUpContainer', () => {
     fetchSpy.returns(Promise.resolve({ok: true, json: () => {}}));
     const navigateToHrefSpy = sinon.spy(windowUtils, 'navigateToHref');
 
-    const wrapper = shallow(<SectionsSetUpContainer />);
+    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
     wrapper
       .find('Button')
@@ -181,7 +193,9 @@ describe('SectionsSetUpContainer', () => {
     fetchSpy.returns(Promise.resolve({ok: true, json: () => {}}));
     const navigateToHrefSpy = sinon.spy(windowUtils, 'navigateToHref');
 
-    const wrapper = shallow(<SectionsSetUpContainer isUsersFirstSection />);
+    const wrapper = shallow(
+      <SectionsSetUpContainer {...DEFAULT_PROPS} isUsersFirstSection />
+    );
 
     wrapper
       .find('Button')
@@ -216,7 +230,7 @@ describe('SectionsSetUpContainer', () => {
       .returns('student');
     const fetchSpy = sinon.spy(window, 'fetch');
 
-    const wrapper = shallow(<SectionsSetUpContainer />);
+    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
     wrapper
       .find('Button')
@@ -246,7 +260,7 @@ describe('SectionsSetUpContainer', () => {
       .returns('true');
     const fetchSpy = sinon.spy(window, 'fetch');
 
-    const wrapper = shallow(<SectionsSetUpContainer />);
+    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
     const buttons = wrapper.find('Button');
     buttons
@@ -254,5 +268,41 @@ describe('SectionsSetUpContainer', () => {
       .simulate('click', {preventDefault: () => {}});
 
     expect(fetchSpy).to.have.been.called.once;
+  });
+
+  it('redirects to defaultRedirectUrl', async () => {
+    sinon
+      .stub(document, 'querySelector')
+      .withArgs('#sections-set-up-container')
+      .returns({
+        checkValidity: () => true,
+      })
+      .withArgs('meta[name="csrf-token"]')
+      .returns({
+        attributes: {content: {value: null}},
+      });
+    const fetchSpy = sinon.stub(window, 'fetch');
+    fetchSpy.returns(Promise.resolve({ok: true, json: () => {}}));
+    const navigateToHrefSpy = sinon.spy(windowUtils, 'navigateToHref');
+
+    const wrapper = shallow(
+      <SectionsSetUpContainer
+        {...DEFAULT_PROPS}
+        defaultRedirectUrl="/test_redirect_url"
+      />
+    );
+
+    wrapper
+      .find('Button')
+      .last()
+      .simulate('click', {preventDefault: () => {}});
+
+    expect(fetchSpy).to.have.been.called.once;
+
+    await new Promise(resolve => setTimeout(resolve, 0));
+    expect(navigateToHrefSpy).to.have.been.called.once;
+    expect(navigateToHrefSpy.getCall(0).args[0]).to.include(
+      '/test_redirect_url'
+    );
   });
 });

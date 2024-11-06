@@ -20,13 +20,24 @@ services:
       - 6379
 
 steps:
-  - name: info
+  - name: bin/drone/shell
     image: curlimages/curl
     commands:
+      - set +x
       # If running on EC2, get hostname from ec2 metadata
       - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
       - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
-      - echo "Running on $hostname"
+      - |
+        cat <<EOF
+
+        Running on hostname: $hostname
+        
+        To "ssh" into this drone instance, wait until the 'unit-tests' step starts and run:
+        bin/drone/shell $hostname
+
+        You can also open a VSCode tunnel into drone to edit live:
+        bin/drone/vscode $hostname
+        EOF
 
   # We cache a clone of staging in the `cache-staging-clone` pipeline
   - name: get-cached-staging
@@ -142,13 +153,24 @@ services:
       - 6379
 
 steps:
-  - name: info
+  - name: bin/drone/shell
     image: curlimages/curl
     commands:
+      - set +x
       # If running on EC2, get hostname from ec2 metadata
       - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
       - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
-      - echo "Running on $hostname"
+      - |
+        cat <<EOF
+
+        Running on hostname: $hostname
+        
+        To "ssh" into this drone instance, wait until the 'ui-tests' step starts and run:
+        bin/drone/shell $hostname
+
+        You can also open a VSCode tunnel into drone to edit live:
+        bin/drone/vscode $hostname
+        EOF
 
   # We cache a clone of staging in the `cache-staging-clone` pipeline
   - name: get-cached-staging
@@ -294,6 +316,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: bab8b732ced16693123cc378c4e3ac1c60247b54f46e5f1787a9a2c6230ce876
+hmac: 16c25038be5482372acbb1ed7a51b2d78760e80e1ed533cecf424f5e340b5278
 
 ...

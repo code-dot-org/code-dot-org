@@ -19,6 +19,7 @@ function AccessibleDialog({
   fallbackFocus,
   initialFocus = true,
   closeOnClickBackdrop = false,
+  onDeactivate = onClose,
 }) {
   // If these styles are provided by the given stylesheet, use them
   const modalStyle = styles?.modal || defaultStyle.modal;
@@ -36,7 +37,7 @@ function AccessibleDialog({
         <FocusTrap
           focusTrapOptions={{
             initialFocus: initialFocus,
-            onDeactivate: onClose,
+            onDeactivate: onDeactivate,
             clickOutsideDeactivates: closeOnClickBackdrop,
             fallbackFocus: fallbackFocus,
           }}
@@ -72,6 +73,7 @@ AccessibleDialog.propTypes = {
   fallbackFocus: PropTypes.string,
   initialFocus: PropTypes.bool,
   closeOnClickBackdrop: PropTypes.bool,
+  onDeactivate: PropTypes.func,
 };
 
 export default AccessibleDialog;

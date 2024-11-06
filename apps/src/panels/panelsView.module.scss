@@ -8,19 +8,30 @@ $text-vertical-padding: 1.8cqw;
 $text-horizontal-padding: 2.6cqw;
 
 @keyframes fade-in {
-  0%, 50% {
+  from {
     opacity: 0;
   }
-  100% {
+  to{
     opacity: 1;
   }
 }
 
+@keyframes slide-in {
+  from {
+    margin-top: $text-offset-y;
+    margin-bottom: -$text-offset-y;
+  }
+  to {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
 @keyframes delay-pointer-events {
-  0%, 49% {
+  from {
     pointer-events: none;
   }
-  50%, 100% {
+  to {
     pointer-events: initial;
   }
 }
@@ -41,6 +52,7 @@ $text-horizontal-padding: 2.6cqw;
     position: relative;
     container-name: panel;
     container-type: inline-size;
+    overflow: hidden;
 
     .image {
       position: absolute;
@@ -54,7 +66,8 @@ $text-horizontal-padding: 2.6cqw;
       background-position: center;
 
       &Current {
-        animation: fade-in 0.5s;
+        animation: 0.5s ease 0s fade-in;
+        animation-fill-mode: both;
       }
     }
 
@@ -64,7 +77,8 @@ $text-horizontal-padding: 2.6cqw;
       width: 40%;
       position: absolute;
       padding: $text-vertical-padding $text-horizontal-padding;
-      animation: fade-in 1.5s;
+      animation: 0.5s ease 0.5s fade-in, 0.5s ease 0.5s slide-in;
+      animation-fill-mode: both;
       font-size: 1.6cqw;
       line-height: 1.4em;
 
@@ -149,12 +163,16 @@ $text-horizontal-padding: 2.6cqw;
       right: 0;
       height: 38px;
 
+      // After typing, the button will be ready.
       &Ready {
-        animation: fade-in 0.5s;
+        animation: 0.5s ease 0s fade-in, 0.5s ease 0s delay-pointer-events;
+        animation-fill-mode: both;
       }
 
+      // If no typing, the button appears with a delay.
       &Delay {
-        animation: fade-in 3s, delay-pointer-events 3s;
+        animation: 0.5s ease 1.2s fade-in, 0.5s ease 1.2s delay-pointer-events;
+        animation-fill-mode: both;
       }
     }
 

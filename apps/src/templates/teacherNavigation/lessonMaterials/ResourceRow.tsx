@@ -39,6 +39,7 @@ const ResourceRow: React.FC<ResourceRowProps> = ({
   ) : null;
 
   return (
+    // eslint-disable-next-line react/forbid-dom-props
     <div className={styles.rowContainer} data-testid="resource-row">
       <div className={styles.iconAndName}>
         <ResourceIcon resourceType={resource.type} resourceUrl={resource.url} />

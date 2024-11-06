@@ -68,5 +68,7 @@
   "data_transfer_notice": "Data transfer notice:",
   "data_transfer_agreement_teacher": "I agree that Code.org may transfer data (including personal data) from my use of this site (and my students' use) to the United States for the purpose of hosting and processing such data. I understand that Code.org is a US-based not-for-profit website and that the laws governing data collection in the U.S. may differ from the laws in my country.",
   "data_transfer_agreement_student": "I agree that Code.org may transfer data (including personal data) from my use of this site to the United States for the purpose of hosting and processing such data. I understand that Code.org is a US-based not-for-profit website and that the laws governing data collection in the U.S. may differ from the laws in my country.",
-  "visit_privacy_policy": "Visit Code.org's [Privacy Policy](https://www.code.org/privacy) to learn more."
+  "visit_privacy_policy": "Visit Code.org's [Privacy Policy](https://www.code.org/privacy) to learn more.",
+  "error_signing_up_message": "Something went wrong while creating your account. If the issue persists, contact us at [support@code.org](mailto:support@code.org).",
+  "error_signing_up_message_aria_label": "Close error message"
 }

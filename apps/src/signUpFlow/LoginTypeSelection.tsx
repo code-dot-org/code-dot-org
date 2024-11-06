@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
 
-import {Button as NewButton} from '@cdo/apps/componentLibrary/button';
+import Button from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {Heading3, BodyThreeText} from '@cdo/apps/componentLibrary/typography';
-import Button from '@cdo/apps/legacySharedComponents/Button';
+import OldButton from '@cdo/apps/legacySharedComponents/Button';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -77,24 +77,6 @@ const LoginTypeSelection: React.FunctionComponent = () => {
       setCreateAccountButtonDisabled(true);
     }
   }, [passwordIcon, showConfirmPasswordError, confirmPassword, email]);
-
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Enter') {
-        const button = document.getElementById(
-          'createAccountButton'
-        ) as HTMLButtonElement;
-        if (button && !button.disabled) {
-          button.click();
-        }
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
 
   const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
@@ -278,26 +260,26 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             </BodyThreeText>
             {isTeacher && (
               <div className={style.buttonContainer}>
-                <Button
+                <OldButton
                   href="https://support.code.org/hc/en-us/articles/24825250283021-Single-Sign-On-with-Canvas"
                   onClick={sendLMSAnalyticsEvent}
-                  color={Button.ButtonColor.white}
+                  color={OldButton.ButtonColor.white}
                   text={'Canvas'}
                   icon={'arrow-up-right-from-square'}
                   __useDeprecatedTag
                 >
                   <img src={canvas} alt="" />
-                </Button>
-                <Button
+                </OldButton>
+                <OldButton
                   href="https://support.code.org/hc/en-us/articles/26677769411085-Single-Sign-On-with-Schoology"
                   onClick={sendLMSAnalyticsEvent}
-                  color={Button.ButtonColor.white}
+                  color={OldButton.ButtonColor.white}
                   text={'Schoology'}
                   icon={'arrow-up-right-from-square'}
                   __useDeprecatedTag
                 >
                   <img src={schoology} alt="" />
-                </Button>
+                </OldButton>
               </div>
             )}
           </div>
@@ -368,12 +350,13 @@ const LoginTypeSelection: React.FunctionComponent = () => {
               )}
             </div>
           </div>
-          <NewButton
+          <Button
             id="createAccountButton"
             className={style.shortButton}
             text={locale.create_my_account()}
             onClick={submitLoginType}
             disabled={createAccountButtonDisabled}
+            buttonTagTypeAttribute="submit"
           />
         </div>
       </div>

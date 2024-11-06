@@ -88,6 +88,7 @@ describe('LandingPage', () => {
     });
     screen.getByText(i18n.plLandingGettingStartedHeading());
     expect(screen.queryByText(i18n.plLandingStartSurvey())).toBeFalsy();
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('enrolled-workshops-loader');
     expect(
       screen.queryByText(i18n.plLandingSelfPacedProgressHeading())
@@ -101,6 +102,7 @@ describe('LandingPage', () => {
       screen.queryByText(i18n.plLandingGettingStartedHeading())
     ).toBeFalsy();
     screen.getByText(i18n.plLandingStartSurvey());
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('enrolled-workshops-loader');
     screen.getByText(i18n.plLandingSelfPacedProgressHeading());
     screen.getByText(i18n.plLandingStaticPLMidHighHeading());
@@ -112,6 +114,7 @@ describe('LandingPage', () => {
       screen.queryByText(i18n.plLandingGettingStartedHeading())
     ).toBeFalsy();
     screen.getByText(i18n.plLandingStartSurvey());
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('enrolled-workshops-loader');
     screen.getByText(i18n.plLandingSelfPacedProgressHeading());
     screen.getByText(i18n.plLandingStaticPLMidHighHeading());
@@ -126,6 +129,7 @@ describe('LandingPage', () => {
       screen.queryByText(i18n.plLandingGettingStartedHeading())
     ).toBeFalsy();
     expect(screen.queryByText(i18n.plLandingStartSurvey())).toBeFalsy();
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('enrolled-workshops-loader');
     screen.getByText(i18n.plLandingSelfPacedProgressHeading());
     screen.getByText(i18n.plLandingStaticPLMidHighHeading());
@@ -134,6 +138,7 @@ describe('LandingPage', () => {
   it('page shows self-paced progress table if enrolled in self-paced courses', () => {
     renderDefault();
     screen.getByText(i18n.plLandingSelfPacedProgressHeading());
+    // eslint-disable-next-line no-restricted-properties
     expect(screen.getAllByTestId('progress-bar').length).toBe(2);
     expect(screen.getByText(i18n.selfPacedPlCompleted()));
     expect(screen.getAllByText(i18n.selfPacedPlContinueCourse()).length).toBe(
@@ -153,6 +158,7 @@ describe('LandingPage', () => {
   it('page shows enrolled workshops table', () => {
     renderDefault();
 
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('enrolled-workshops-loader');
   });
 

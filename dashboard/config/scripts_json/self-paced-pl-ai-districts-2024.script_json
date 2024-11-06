@@ -2,7 +2,7 @@
   "script": {
     "name": "self-paced-pl-ai-districts-2024",
     "wrapup_video_id": null,
-    "login_required": true,
+    "login_required": false,
     "properties": {
       "content_area": "skills_focused_self_paced_pl",
       "curriculum_umbrella": "AI for teachers selfpaced pl",
@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "self-paced-pl-ai-districts",
-    "serialized_at": "2024-10-29 14:17:17 UTC",
+    "serialized_at": "2024-11-04 18:33:46 UTC",
     "published_state": "stable",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",

@@ -1,12 +1,20 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
+import {Provider} from 'react-redux';
 
+import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {
+  getStore,
+  registerReducers,
+  restoreRedux,
+  stubRedux,
+} from '@cdo/apps/redux';
 import {UnconnectedStudentSelector as StudentSelector} from '@cdo/apps/templates/rubrics/StudentSelector';
+import teacherRubric from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import * as utils from '@cdo/apps/utils';
-
 function setup(jsx) {
   return {
     user: userEvent.setup(),
@@ -31,18 +39,32 @@ describe('StudentSelector', () => {
     sectionId: 1,
     reportingData: reportingData,
     selectUser: selectUserFunc,
-    levelsWithProgress: [],
     students: [STUDENT_1, STUDENT_2],
   };
 
-  beforeEach(() =>
-    jest.spyOn(utils, 'reload').mockClear().mockImplementation()
-  );
-  afterEach(() => utils.reload.mockRestore());
+  let store;
+
+  beforeEach(() => {
+    jest.spyOn(utils, 'reload').mockClear().mockImplementation();
+    stubRedux();
+    registerReducers({
+      teacherRubric,
+      teacherPanel,
+    });
+    store = getStore();
+  });
+  afterEach(() => {
+    utils.reload.mockRestore();
+    restoreRedux();
+  });
 
   it('sends event on Student selection', async () => {
     const sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
-    const {user} = setup(<StudentSelector {...defaultProps} />);
+    const {user} = setup(
+      <Provider store={store}>
+        <StudentSelector {...defaultProps} />
+      </Provider>
+    );
     const dropdown = screen.getByLabelText('Select a student');
     await user.click(dropdown);
     await user.click(screen.getByText('Student 2 FamNameA'));
