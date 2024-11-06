@@ -5,6 +5,7 @@ import {
   createAsyncThunk,
 } from '@reduxjs/toolkit';
 
+import {setLoadedLevelsWithProgressForTest} from '@cdo/apps/code-studio/teacherPanelRedux';
 import {LevelWithProgress} from '@cdo/apps/code-studio/teacherPanelTypes';
 import {computeBubbleStatus} from '@cdo/apps/templates/rubrics/rubricUtils';
 import {RootState} from '@cdo/apps/types/redux';
@@ -43,6 +44,8 @@ export interface TeacherRubricState {
   hasTeacherFeedbackMap: HasTeacherFeedbackMap;
   aiEvalStatusCounters: AiEvalStatusCounters;
   aiEvalStatusMap: AiEvalStatusMap;
+  hasLoadedTeacherFeedback: boolean;
+  hasLoadedAiEvalStatus: boolean;
 }
 
 // map from user id to student progress status
@@ -55,6 +58,8 @@ const initialState: TeacherRubricState = {
   hasTeacherFeedbackMap: {},
   aiEvalStatusCounters: {},
   aiEvalStatusMap: {},
+  hasLoadedTeacherFeedback: false,
+  hasLoadedAiEvalStatus: false,
 };
 
 const teacherRubricReduxSlice = createSlice({
@@ -93,6 +98,12 @@ const teacherRubricReduxSlice = createSlice({
         return {payload: {userId, status}};
       },
     },
+    setLoadedHasTeacherFeedback: state => {
+      state.hasLoadedTeacherFeedback = true;
+    },
+    setLoadedAiEvalStatus: state => {
+      state.hasLoadedAiEvalStatus = true;
+    },
   },
 });
 
@@ -122,6 +133,7 @@ export const loadAllTeacherEvaluationData = createAsyncThunk(
         response.json().then(data => {
           initializeHasTeacherFeedbackMap(data);
           thunkAPI.dispatch(setAllTeacherEvaluationData(data));
+          thunkAPI.dispatch(setLoadedHasTeacherFeedback());
         });
       }
     });
@@ -148,9 +160,19 @@ export const loadAiEvalStatusForAll = createAsyncThunk(
           thunkAPI.dispatch(setAiEvalStatusMap(data.aiEvalStatusMap));
           delete data.aiEvalStatusMap;
           thunkAPI.dispatch(setAiEvalStatusCounters(data));
+          thunkAPI.dispatch(setLoadedAiEvalStatus());
         });
       }
     });
+  }
+);
+
+export const setLoadedStudentStatusForTest = createAsyncThunk(
+  'teacherRubric/setLoadedStudentStatusForTest',
+  async (_, thunkAPI) => {
+    thunkAPI.dispatch(setLoadedHasTeacherFeedback());
+    thunkAPI.dispatch(setLoadedAiEvalStatus());
+    thunkAPI.dispatch(setLoadedLevelsWithProgressForTest());
   }
 );
 
@@ -172,8 +194,38 @@ export const selectStudentProgressStatusMap = createSelector(
   }
 );
 
+export const selectReadyStudentCount = createSelector(
+  selectStudentProgressStatusMap,
+  statusMap =>
+    Object.values(statusMap).filter(status => status === 'READY_TO_REVIEW')
+      .length
+);
+
+export const selectHasLoadedStudentStatus = createSelector(
+  [
+    (state: RootState) => state.teacherRubric.hasLoadedTeacherFeedback,
+    (state: RootState) => state.teacherRubric.hasLoadedAiEvalStatus,
+    (state: RootState) => state.teacherPanel.hasLoadedLevelsWithProgress,
+  ],
+  (
+    hasLoadedTeacherFeedback: boolean,
+    hasLoadedAiEvalStatus: boolean,
+    hasLoadedLevelsWithProgress: boolean
+  ) => {
+    return (
+      hasLoadedTeacherFeedback &&
+      hasLoadedAiEvalStatus &&
+      hasLoadedLevelsWithProgress
+    );
+  }
+);
+
 // For internal use only
-const {setHasTeacherFeedbackMap} = teacherRubricReduxSlice.actions;
+const {
+  setHasTeacherFeedbackMap,
+  setLoadedHasTeacherFeedback,
+  setLoadedAiEvalStatus,
+} = teacherRubricReduxSlice.actions;
 
 // Exported for testing only
 export const {setAllTeacherEvaluationData, setAiEvalStatusCounters} =

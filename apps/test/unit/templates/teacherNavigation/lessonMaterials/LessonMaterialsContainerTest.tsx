@@ -104,8 +104,10 @@ describe('LessonMaterialsContainer', () => {
 
     // Teacher resources, including lesson plan, unit vocab and unit standards
     screen.getByText('Teacher Resources');
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('resource-icon-' + RESOURCE_ICONS.SLIDES.icon);
     screen.getByText('Slides: my slides');
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('resource-icon-' + RESOURCE_ICONS.LESSON_PLAN.icon);
     screen.getByText('Lesson Plan: First lesson');
     // checks that standards and vocab are rendered only once and not rendred in the "student resoruces section"
@@ -114,6 +116,7 @@ describe('LessonMaterialsContainer', () => {
 
     // Student resources
     screen.getByText('Student Resources');
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('resource-icon-' + RESOURCE_ICONS.VIDEO.icon);
     screen.getByText('Video: my linked video');
   });
@@ -143,12 +146,15 @@ describe('LessonMaterialsContainer', () => {
 
     fireEvent.change(selectedLessonInput, {target: {value: '2'}});
 
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('resource-icon-' + RESOURCE_ICONS.LESSON_PLAN.icon);
     screen.getByText('Lesson Plan: Second lesson');
 
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('resource-icon-' + RESOURCE_ICONS.VIDEO.icon);
     screen.getByText('Video: my video resource');
     expect(
+      // eslint-disable-next-line no-restricted-properties
       screen.queryAllByTestId('resource-icon-' + RESOURCE_ICONS.SLIDES.icon)
         .length === 0
     );

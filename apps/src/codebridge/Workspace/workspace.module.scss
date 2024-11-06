@@ -73,3 +73,10 @@
 .lockedFilesBanner {
   margin-bottom: 4px;
 }
+
+.rightHeaderButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 4px;
+  margin: 4px;
+}

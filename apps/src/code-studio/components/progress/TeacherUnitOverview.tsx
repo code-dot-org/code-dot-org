@@ -184,7 +184,7 @@ interface UnitData {
   calendarLessons: CalendarLesson[];
 }
 
-interface UnitSummaryResponse {
+export interface UnitSummaryResponse {
   unitData: UnitData;
   plcBreadcrumb: {
     unit_name: string;
@@ -235,6 +235,9 @@ export const initializeRedux = (
     setCalendarData({
       showCalendar: !!unitData.showCalendar,
       calendarLessons: unitData.calendarLessons,
+      versionYear: unitData.version_year
+        ? parseInt(unitData.version_year)
+        : null,
     })
   );
 
@@ -386,6 +389,7 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
       userType={userType}
       assignedSectionId={selectedSection.id}
       showCalendar={unitSummaryResponse.unitData.showCalendar}
+      versionYear={unitSummaryResponse.unitData.version_year}
       weeklyInstructionalMinutes={
         unitSummaryResponse.unitData.weeklyInstructionalMinutes
       }

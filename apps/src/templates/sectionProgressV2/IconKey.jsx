@@ -67,6 +67,7 @@ export default function IconKey({sectionId}) {
         <div
           onClick={clickListener}
           className={styles.iconKeyTitle}
+          // eslint-disable-next-line react/forbid-dom-props
           data-testid="expandable-container"
           role="button"
           aria-expanded={isOpen}

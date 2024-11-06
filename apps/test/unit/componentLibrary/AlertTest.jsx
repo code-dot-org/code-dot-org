@@ -15,6 +15,7 @@ describe('Design System - Alert', () => {
     const icon = {iconName: 'check-circle'};
     render(<Alert text="Alert text" icon={icon} />);
 
+    // eslint-disable-next-line no-restricted-properties
     const iconElement = screen.getByTestId('font-awesome-v6-icon');
     expect(iconElement).toBeDefined();
     expect(iconElement.className).toContain('fa-check-circle');
@@ -22,21 +23,25 @@ describe('Design System - Alert', () => {
 
   it('Alert - renders default icon for specific types', () => {
     const {rerender} = render(<Alert text="Success Alert" type="success" />);
+    // eslint-disable-next-line no-restricted-properties
     expect(screen.getByTestId('font-awesome-v6-icon').className).toContain(
       'fa-check-circle'
     );
 
     rerender(<Alert text="Danger Alert" type="danger" />);
+    // eslint-disable-next-line no-restricted-properties
     expect(screen.getByTestId('font-awesome-v6-icon').className).toContain(
       'fa-circle-xmark'
     );
 
     rerender(<Alert text="Warning Alert" type="warning" />);
+    // eslint-disable-next-line no-restricted-properties
     expect(screen.getByTestId('font-awesome-v6-icon').className).toContain(
       'fa-exclamation-circle'
     );
 
     rerender(<Alert text="Info Alert" type="info" />);
+    // eslint-disable-next-line no-restricted-properties
     expect(screen.getByTestId('font-awesome-v6-icon').className).toContain(
       'fa-circle-info'
     );
@@ -79,6 +84,7 @@ describe('Design System - Alert', () => {
       />
     );
 
+    // eslint-disable-next-line no-restricted-properties
     const iconElement = container.querySelector('.fa-check-circle');
 
     expect(screen.getByText('Full Alert')).toBeDefined();

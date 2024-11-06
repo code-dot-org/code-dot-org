@@ -86,6 +86,7 @@ function SectionProgressV2({
   }, [expandedLessonIds, unitData]);
 
   return (
+    // eslint-disable-next-line react/forbid-dom-props
     <div className={styles.progressV2Page} data-testid="section-progress-v2">
       {!hideTopHeading && <Heading1>{i18n.progressBeta()}</Heading1>}
       <IconKey

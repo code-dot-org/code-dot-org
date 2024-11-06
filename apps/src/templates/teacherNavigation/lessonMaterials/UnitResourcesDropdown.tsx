@@ -56,6 +56,7 @@ const UnitResourcesDropdown: React.FC<UnitResourcesDropdownProps> = ({
   ];
 
   return (
+    // eslint-disable-next-line react/forbid-dom-props
     <div data-testid={'unit-resources-download-dropdown'}>
       <ActionDropdown
         name="view-options"
