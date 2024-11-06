@@ -17,6 +17,7 @@ import i18n from '@cdo/locale';
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import color from '../../util/color';
 import BaseDialog from '../BaseDialog';
+import {showV2TeacherDashboard} from '../teacherNavigation/TeacherNavFlagUtils';
 
 import DialogFooter from './DialogFooter';
 import PrintCertificates from './PrintCertificates';
@@ -79,7 +80,12 @@ class SectionActionDropdown extends Component {
    * Returns the URL to the correct section to be edited
    */
   editRedirectUrl = (sectionId, isPl) => {
-    let editSectionUrl = '/sections/' + sectionId + '/edit';
+    let editSectionUrl;
+    if (showV2TeacherDashboard()) {
+      editSectionUrl = teacherDashboardUrl(sectionId, '/settings');
+    } else {
+      editSectionUrl = '/sections/' + sectionId + '/edit';
+    }
     editSectionUrl += isPl ? '?redirectToPage=my-professional-learning' : '';
     return editSectionUrl;
   };
