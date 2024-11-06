@@ -134,17 +134,6 @@ class StatsigReporter {
     return Statsig.getExperiment(name).get(parameter, defaultValue);
   }
 
-  findOrCreateStableId() {
-    let stableId = cookies.get(STABLE_ID_KEY);
-    if (!stableId) {
-      stableId = createUuid();
-      cookies.set(STABLE_ID_KEY, stableId, {
-        path: '/',
-      });
-    }
-    return stableId;
-  }
-
   formatUserId(userId) {
     const userIdString = userId.toString() || 'none';
     if (!userId) {
@@ -156,6 +145,17 @@ class StatsigReporter {
       const environment = getEnvironment();
       return `${environment}-${userIdString}`;
     }
+  }
+
+  findOrCreateStableId() {
+    let stableId = cookies.get(STABLE_ID_KEY);
+    if (!stableId) {
+      stableId = createUuid();
+      cookies.set(STABLE_ID_KEY, stableId, {
+        path: '/',
+      });
+    }
+    return stableId;
   }
 
   /**
