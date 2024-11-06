@@ -82,13 +82,13 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:non_compliant_child, {created_at: '2023-06-29T23:59:59MDT'}], true],
       [[:non_compliant_child, {created_at: '2024-06-29T23:59:59MDT'}], false],
       [[:non_compliant_child, {created_at: '2024-07-01T00:00:00MDT'}], false],
-      [[:non_compliant_child, :migrated_imported_from_clever, :without_encrypted_password, {created_at: '2023-06-29T23:59:59MDT'}], false],
-      [[:non_compliant_child, :migrated_imported_from_clever, :without_encrypted_password, {created_at: '2024-06-29T23:59:59MDT'}], false],
-      [[:non_compliant_child, :migrated_imported_from_google_classroom, :without_encrypted_password, {created_at: '2023-06-29T23:59:59MDT'}], false],
-      [[:non_compliant_child, :migrated_imported_from_google_classroom, :without_encrypted_password, {created_at: '2024-06-29T23:59:59MDT'}], false],
-      [[:non_compliant_child, :migrated_imported_from_google_classroom, :without_encrypted_password, {created_at: '2024-07-01T00:00:00MDT'}], false],
-      [[:non_compliant_child, :with_google_authentication_option, :without_encrypted_password, {created_at: '2024-06-29T23:59:59MDT'}], true],
-      [[:non_compliant_child, :with_google_authentication_option, :without_encrypted_password, {created_at: '2024-07-01T00:00:00MDT'}], false],
+      [[:non_compliant_child, :migrated_imported_from_clever, :without_email_auth_option, :without_encrypted_password, {created_at: '2023-06-29T23:59:59MDT'}], false],
+      [[:non_compliant_child, :migrated_imported_from_clever, :without_email_auth_option, :without_encrypted_password, {created_at: '2024-06-29T23:59:59MDT'}], false],
+      [[:non_compliant_child, :migrated_imported_from_google_classroom, :without_email_auth_option, :without_encrypted_password, {created_at: '2023-06-29T23:59:59MDT'}], false],
+      [[:non_compliant_child, :migrated_imported_from_google_classroom, :without_email_auth_option, :without_encrypted_password, {created_at: '2024-06-29T23:59:59MDT'}], false],
+      [[:non_compliant_child, :migrated_imported_from_google_classroom, :without_email_auth_option, :without_encrypted_password, {created_at: '2024-07-01T00:00:00MDT'}], false],
+      [[:non_compliant_child, :with_google_authentication_option, :without_email_auth_option, :without_encrypted_password, {created_at: '2024-06-29T23:59:59MDT'}], true],
+      [[:non_compliant_child, :with_google_authentication_option, :without_email_auth_option, :without_encrypted_password, {created_at: '2024-07-01T00:00:00MDT'}], false],
     ]
     failures = []
     test_matrix.each do |traits, compliance|
