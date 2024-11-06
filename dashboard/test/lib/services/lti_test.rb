@@ -312,29 +312,10 @@ class Services::LtiTest < ActiveSupport::TestCase
     auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
     user = build :student
     user.authentication_options << build(:lti_authentication_option, user: user, authentication_id: auth_id)
-
-    #LtiUserIdentity created after creation of LTI user
     user.save
 
-    refute user.lti_user_identities.empty?
-  end
-
-  test 'create_lti_user_identity should create a unique LtiUserIdentity with multiple LTI auth options' do
-    lti_integration = create :lti_integration
-    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
-    user = build :student
-    user.authentication_options << build(:lti_authentication_option, user: user, authentication_id: auth_id, created_at: 2.hours.ago)
-    user.save
-
-    # Add a second LTI auth option
-    new_auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
-    user.authentication_options << build(:lti_authentication_option, user: user, authentication_id: new_auth_id)
-    user.save
-    second_lti_user_identity = Services::Lti.create_lti_user_identity(user)
-
-    first_lti_user_identity = user.lti_user_identities.first
-    refute_equal first_lti_user_identity.subject, second_lti_user_identity.subject
-    assert_equal user.lti_user_identities.count, 2
+    lti_user_identity = Services::Lti.create_lti_user_identity(user)
+    assert lti_user_identity
   end
 
   test 'create_lti_integration should create an LtiIntegration when given valid inputs' do
@@ -458,16 +439,15 @@ class Services::LtiTest < ActiveSupport::TestCase
 
   test 'should update a section name if it has changed' do
     teacher = create :teacher
-    auth_id = "#{@lti_integration[:issuer]}|#{@lti_integration[:client_id]}|user-id-1"
-    create :lti_authentication_option, user: teacher, authentication_id: auth_id
-    Services::Lti.create_lti_user_identity(teacher)
-    lti_course = create :lti_course, lti_integration: @lti_integration
+    lti_integration = create :lti_integration
+    create :lti_user_identity, lti_integration: lti_integration, user: teacher, subject: 'user-id-1'
+    lti_course = create :lti_course, lti_integration: lti_integration
     section = create :section, user: teacher
 
     create :lti_section, lti_course: lti_course, section: section
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
-    Services::Lti.sync_course_roster(lti_integration: @lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
+    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
 
     # initial names
     expected_section_names = @lms_section_names.map {|name| "#{@course_name}: #{name}"}
@@ -482,7 +462,7 @@ class Services::LtiTest < ActiveSupport::TestCase
     end
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(new_response, @id_token[:iss])
-    Services::Lti.sync_course_roster(lti_integration: @lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
+    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
     new_expected_names = JSON.parse(new_names).map {|name| "#{@course_name}: #{name}"}
     actual_section_names = lti_course.reload.sections.map(&:name)
     assert_empty new_expected_names - actual_section_names
