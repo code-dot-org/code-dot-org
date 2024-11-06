@@ -134,25 +134,19 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
     )
   ) as DropdownSection[];
 
-  const unitTitle = useSelector(
-    (state: {progress: {unitTitle: string}}) => state.progress.unitTitle
-  );
-  const unitName = useSelector(
-    (state: {progress: {scriptName: string}}) => state.progress.scriptName
-  );
-  const scriptId = useSelector(
-    (state: {progress: {scriptId: number}}) => state.progress.scriptId
+  const {unitTitle, unitName, scriptId, deeperLearningCourse} = useAppSelector(
+    state => ({
+      unitTitle: state.progress.unitTitle,
+      unitName: state.progress.scriptName,
+      scriptId: state.progress.scriptId,
+      deeperLearningCourse: state.progress.deeperLearningCourse,
+    })
   );
   const viewAs = useSelector(
-    (state: {viewAs: 'Participant' | 'Instructor'}) => state.viewAs
-  );
+    (state: {viewAs: keyof typeof ViewType}) => state.viewAs
+  ) as string;
   const selectedSectionId = useAppSelector(
     state => state.teacherSections.selectedSectionId
-  );
-
-  const deeperLearningCourse = useSelector(
-    (state: {progress: {deeperLearningCourse: boolean}}) =>
-      state.progress.deeperLearningCourse
   );
 
   const pdfDropdownOptions = compilePdfDropdownOptions(
@@ -253,7 +247,7 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
                         e,
                         option.key,
                         option.url,
-                        unitName
+                        unitName || ''
                       )
                     }
                   >

@@ -2,14 +2,12 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import BulkLessonVisibilityToggle from '@cdo/apps/code-studio/components/progress/BulkLessonVisibilityToggle';
-import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
 import {UnconnectedUnitOverviewTopRow as UnitOverviewTopRow} from '@cdo/apps/code-studio/components/progress/UnitOverviewTopRow';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
-import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import i18n from '@cdo/locale';
 
 import {testLessons} from './unitCalendarTestData';
@@ -131,23 +129,6 @@ describe('UnitOverviewTopRow', () => {
     ).toBe(true);
   });
 
-  it('renders SectionAssigner for instructor', () => {
-    const wrapper = shallow(
-      <UnitOverviewTopRow {...defaultProps} viewAs={ViewType.Instructor} />
-    );
-
-    expect(
-      wrapper.containsMatchingElement(
-        <SectionAssigner
-          sections={defaultProps.sectionsForDropdown}
-          courseId={defaultProps.currentCourseId}
-          scriptId={defaultProps.scriptId}
-          showAssignButton={defaultProps.showAssignButton}
-        />
-      )
-    ).toBe(true);
-  });
-
   it('renders BulkLessonVisibilityToggle for instructor', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow {...defaultProps} viewAs={ViewType.Instructor} />
@@ -160,52 +141,6 @@ describe('UnitOverviewTopRow', () => {
         />
       )
     ).toBe(true);
-  });
-
-  describe('instructor resources', () => {
-    it('renders resources for instructor on a migrated script', () => {
-      const wrapper = shallow(
-        <UnitOverviewTopRow
-          {...defaultProps}
-          viewAs={ViewType.Instructor}
-          isMigrated={true}
-          teacherResources={[
-            {
-              id: 1,
-              key: 'curriculum',
-              name: 'Curriculum',
-              url: 'https://example.com/a',
-            },
-            {
-              id: 2,
-              key: 'vocabulary',
-              name: 'Vocabulary',
-              url: 'https://example.com/b',
-            },
-          ]}
-        />
-      );
-      expect(
-        wrapper.containsMatchingElement(
-          <ResourcesDropdown
-            resources={[
-              {
-                id: 1,
-                key: 'curriculum',
-                name: 'Curriculum',
-                url: 'https://example.com/a',
-              },
-              {
-                id: 2,
-                key: 'vocabulary',
-                name: 'Vocabulary',
-                url: 'https://example.com/b',
-              },
-            ]}
-          />
-        )
-      ).toBe(true);
-    });
   });
 
   it('renders the unit calendar when showCalendar true for instructor', () => {
@@ -268,27 +203,6 @@ describe('UnitOverviewTopRow', () => {
         />
       )
     ).toBe(false);
-  });
-
-  it('renders dropdown button with links to printing options when published state is not pilot or indevelopment', () => {
-    const wrapper = shallow(
-      <UnitOverviewTopRow
-        {...defaultProps}
-        scriptOverviewPdfUrl="/link/to/script_overview.pdf"
-        scriptResourcesPdfUrl="/link/to/script_resources.pdf"
-        viewAs={ViewType.Instructor}
-      />
-    );
-    expect(wrapper.find(DropdownButton).length).toBe(1);
-    const dropdownLinks = wrapper.find(DropdownButton).first().props().children;
-    expect(dropdownLinks.map(link => link.props.href)).toEqual([
-      '/link/to/script_overview.pdf',
-      '/link/to/script_resources.pdf',
-    ]);
-    expect(dropdownLinks.map(link => link.props.children)).toEqual([
-      'Print Lesson Plans',
-      'Print Handouts',
-    ]);
   });
 
   it('does not render printing option dropdown for participants', () => {

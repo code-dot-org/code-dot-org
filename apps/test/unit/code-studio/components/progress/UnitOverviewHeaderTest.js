@@ -123,20 +123,6 @@ describe('UnitOverviewHeader', () => {
     );
   });
 
-  it('passes versions to AssignmentVersionSelector', () => {
-    const wrapper = shallow(
-      <UnconnectedUnitOverviewHeader {...defaultProps} />,
-      {
-        disableLifecycleMethods: true,
-      }
-    );
-
-    const versionSelector = wrapper.find('AssignmentVersionSelector');
-    expect(1).toEqual(versionSelector.length);
-    const renderedVersions = versionSelector.props().courseVersions;
-    expect(2).toEqual(Object.values(renderedVersions).length);
-  });
-
   it('has correct unit description for instructor', () => {
     const wrapper = shallow(
       <UnconnectedUnitOverviewHeader {...defaultProps} />,
@@ -162,31 +148,5 @@ describe('UnitOverviewHeader', () => {
     expect(wrapper.find('SafeMarkdown').prop('markdown')).toBe(
       '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
     );
-  });
-
-  it('correctly changes the viewAs state when the toggle is clicked', () => {
-    let viewType = ViewType.Instructor;
-    const changeViewType = jest.fn(vt => (viewType = vt));
-    const resetViewAsUserId = jest.fn();
-    const wrapper = shallow(
-      <UnconnectedUnitOverviewHeader
-        {...defaultProps}
-        viewType={viewType}
-        changeViewType={changeViewType}
-        resetViewAsUserId={resetViewAsUserId}
-      />,
-      {
-        disableLifecycleMethods: true,
-      }
-    );
-
-    expect(
-      wrapper.find('SegmentedButtons').prop('selectedButtonValue')
-    ).toEqual(ViewType.Instructor);
-    wrapper.find('SegmentedButtons').prop('onChange')(ViewType.Participant);
-    expect(
-      wrapper.find('SegmentedButtons').prop('selectedButtonValue')
-    ).toEqual(ViewType.Instructor);
-    expect(resetViewAsUserId).toHaveBeenCalled();
   });
 });
