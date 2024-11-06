@@ -174,7 +174,8 @@ const LessonMaterialsContainer: React.FC = () => {
         />
         {loadedData?.unitNumber && (
           <UnitResourcesDropdown
-            unitNumber={loadedData.unitNumber || 0}
+            hasNumberedUnits={hasNumberedUnits}
+            unitNumber={loadedData.unitNumber}
             scriptOverviewPdfUrl={loadedData.scriptOverviewPdfUrl}
             scriptResourcesPdfUrl={loadedData.scriptResourcesPdfUrl}
           />

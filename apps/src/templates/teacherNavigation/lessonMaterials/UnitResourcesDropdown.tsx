@@ -8,20 +8,31 @@ import i18n from '@cdo/locale';
 import {RESOURCE_ICONS} from './ResourceIconType';
 
 type UnitResourcesDropdownProps = {
-  unitNumber: number;
+  unitNumber?: number;
+  hasNumberedUnits?: boolean;
   scriptOverviewPdfUrl: string;
   scriptResourcesPdfUrl: string;
 };
 
 const UnitResourcesDropdown: React.FC<UnitResourcesDropdownProps> = ({
   unitNumber,
+  hasNumberedUnits,
   scriptOverviewPdfUrl,
   scriptResourcesPdfUrl,
 }) => {
+  const downloadLessonPlansLabel =
+    hasNumberedUnits && unitNumber
+      ? i18n.downloadUnitXLessonPlans({unitNumber: unitNumber})
+      : i18n.downloadUnitLessonPlans();
+  const downloadHandoutsLabel =
+    hasNumberedUnits && unitNumber
+      ? i18n.downloadUnitXHandouts({unitNumber: unitNumber})
+      : i18n.downloadUnitHandouts();
+
   const dropdownOptions = [
     {
       value: 'download-lesson-plans',
-      label: i18n.downloadUnitLessonPlans({unitNumber: unitNumber}),
+      label: downloadLessonPlansLabel,
       icon: {iconName: RESOURCE_ICONS.LESSON_PLAN.icon},
       onClick: () => {
         window.location.href = scriptOverviewPdfUrl;
@@ -33,7 +44,7 @@ const UnitResourcesDropdown: React.FC<UnitResourcesDropdownProps> = ({
     },
     {
       value: 'download-resources',
-      label: i18n.downloadUnitHandouts({unitNumber: unitNumber}),
+      label: downloadHandoutsLabel,
       icon: {iconName: RESOURCE_ICONS.GOOGLE_DOC.icon},
       onClick: () => {
         window.location.href = scriptResourcesPdfUrl;
