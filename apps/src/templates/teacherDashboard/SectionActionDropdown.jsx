@@ -178,7 +178,11 @@ class SectionActionDropdown extends Component {
             {i18n.sectionViewProgress()}
           </PopUpMenu.Item>
           <PopUpMenu.Item
-            href={teacherDashboardUrl(sectionData.id, '/manage_students')}
+            href={
+              showV2TeacherDashboard()
+                ? teacherDashboardUrl(sectionData.id, '/roster')
+                : teacherDashboardUrl(sectionData.id, '/manage_students')
+            }
             className="manage-students-link"
             hrefOnClick={() => {
               analyticsReporter.sendEvent(
