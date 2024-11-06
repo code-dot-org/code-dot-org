@@ -4,7 +4,7 @@ require_relative '../../shared/test/capture_queries'
 
 # Set up JUnit output for CI
 reporters = [Minitest::Reporters::SpecReporter.new]
-if CI.ci_job_ui_tests?
+if CI::Utils.ci_job_ui_tests?
   reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CI_TEST_REPORTS', nil)}/pegasus")
 end
 # Skip this if the tests are run in RubyMine

@@ -1,7 +1,7 @@
 require 'test_reporter'
 require 'faker'
 
-require_relative '../../lib/cdo/ci'
+require_relative '../../lib/cdo/ci_utils'
 
 if defined? ActiveRecord
   ActiveRecord::Migration&.check_pending!
@@ -13,7 +13,7 @@ Minitest.extensions.delete('rails')
 Minitest.extensions.unshift('rails')
 
 reporters = [CowReporter.new]
-if CI.ci_job_ui_tests?
+if CI::Utils.ci_job_ui_tests?
   reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CI_TEST_REPORTS', nil)}/dashboard")
 end
 # Skip this if the tests are run in RubyMine
