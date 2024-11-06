@@ -20,6 +20,14 @@ type LessonResourcesProps = {
   resources: Resource[];
 };
 
+const renderNoResourcesRow = (
+  <div className={styles.rowContainer} data-testid="resource-row">
+    <BodyTwoText className={styles.resourceLabel}>
+      <em>{i18n.noStudentResources()}</em>
+    </BodyTwoText>
+  </div>
+);
+
 const LessonResources: React.FC<LessonResourcesProps> = ({
   unitNumber,
   resources,
@@ -92,22 +100,12 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
     );
   };
 
-  const renderNoResourcesRow = () => {
-    return (
-      <div className={styles.rowContainer} data-testid="resource-row">
-        <BodyTwoText className={styles.resourceLabel}>
-          <em>{i18n.noStudentResources()}</em>
-        </BodyTwoText>
-      </div>
-    );
-  };
-
   return (
     <div className={styles.resourcesTable}>
       <div className={styles.topRowForResourcesTable}>
         <Heading6 className={styles.headerText}>{sectionHeaderText}</Heading6>
       </div>
-      {!lessonPlanUrl && resources.length === 0 && renderNoResourcesRow()}
+      {!lessonPlanUrl && resources.length === 0 && renderNoResourcesRow}
       {renderLessonPlanRow()}
       {resources.map(resource => (
         <ResourceRow
