@@ -30,6 +30,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.rightHeaderButtons}>
+      <VersionHistoryButton startSource={startSource} />
       {appName === 'pythonlab' && (
         <WithTooltip tooltipProps={feedbackTooltipProps}>
           <Button
@@ -44,7 +45,6 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           />
         </WithTooltip>
       )}
-      <VersionHistoryButton startSource={startSource} />
     </div>
   );
 };
