@@ -77,10 +77,16 @@ describe 'Cdo::ActiveJobBackend' do
   end
 
   describe 'start_n_workers()' do
-    it 'calls run_process with the process names' do
+    it 'invokes run_process with correct process names' do
       Cdo::ActiveJobBackend::Command.any_instance.expects(:run_process).with('delayed_job.3', anything).once
       Cdo::ActiveJobBackend::Command.any_instance.expects(:run_process).with('delayed_job.4', anything).once
       Cdo::ActiveJobBackend.start_n_workers(2, initial_worker_index: 3)
+    end
+  end
+
+  describe 'Command' do
+    it 'invokes valid methods of superclass Delayed::Command' do
+      assert Delayed::Command.method_defined?(:run_process)
     end
   end
 
