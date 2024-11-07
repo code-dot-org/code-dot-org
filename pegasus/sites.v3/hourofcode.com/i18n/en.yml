@@ -59,6 +59,9 @@
     social:
       title: "Register your event for Hour of Code!"
       desc: "Explore how computer science can bring your favorite things to life."
+      v2:
+        title: "One Hour: Ignite. Inspire. Code."
+        desc: "Bring what your children love to life! Start the fun with an activity."
 
   hoc2023_header: "Creativity with AI"
   hoc2023_hero_desc_homepage: "Join millions across the globe in organizing an hour of coding, with or without AI and learning how AI works. Anyone, anywhere can do it. No experience needed."
