@@ -241,6 +241,9 @@ export const READ_ONLY_PROPERTIES = [
 ];
 
 export const SETTABLE_PROPERTIES = [
+  'ALIGN_CENTRE',
+  'ALIGN_LEFT',
+  'ALIGN_RIGHT',
   'assetUrl',
   'behaviorEditor',
   'BROKEN_CONTROL_POINTS',
