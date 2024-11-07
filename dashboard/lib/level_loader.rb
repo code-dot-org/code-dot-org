@@ -96,8 +96,8 @@ class LevelLoader
       # experience of any individual level could add an after_save callback
       # which modifies the DB and which they expect to get run only on
       # levelbuilder. so, just run the callbacks we're sure we need instead.
-      Level.setup_contained_levels_for(changed_levels)
-      Level.setup_project_template_level_for(changed_levels)
+      Level.setup_child_levels_for(changed_levels, ParentLevelsChildLevel::CONTAINED)
+      Level.setup_child_levels_for(changed_levels, ParentLevelsChildLevel::PROJECT_TEMPLATE)
     end
   end
 
