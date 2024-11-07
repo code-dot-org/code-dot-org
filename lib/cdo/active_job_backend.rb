@@ -98,10 +98,8 @@ module Cdo
     # run bin/delayed_job by forking our custom Cdo::DelayedJob::Command subclass
     def self.start_n_workers(n_workers, initial_worker_index:)
       chat_client_log("delayed_job: starting #{n_workers} workers, initial_worker_index=#{initial_worker_index}")
-      pid = fork do
-        Cdo::ActiveJobBackend::Command.new.start_n_workers(n_workers, initial_worker_index: initial_worker_index)
-      end
-      Process.wait(pid) # wait for the workers to start
+
+      Cdo::ActiveJobBackend::Command.new.start_n_workers(n_workers, initial_worker_index: initial_worker_index)
       return n_workers
     end
 
