@@ -16,7 +16,7 @@
 #  unlocked_at      :datetime
 #  time_spent       :integer
 #  deleted_at       :datetime
-#  properties       :text(65535)
+#  properties       :json
 #
 # Indexes
 #

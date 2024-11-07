@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_10_24_180714) do
+ActiveRecord::Schema.define(version: 2024_11_07_142204) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -2287,7 +2287,7 @@ ActiveRecord::Schema.define(version: 2024_10_24_180714) do
     t.datetime "unlocked_at"
     t.integer "time_spent"
     t.datetime "deleted_at"
-    t.text "properties"
+    t.json "properties"
     t.index ["user_id", "script_id", "level_id", "deleted_at"], name: "index_user_levels_unique", unique: true
   end
 
