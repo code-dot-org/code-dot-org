@@ -19,7 +19,7 @@ module Cdo
       n_workers_to_restart_per_batch = (pids.size.to_f / n_batches).ceil
       n_workers_to_restart_per_batch = 1 if n_workers_to_restart_per_batch < 1
 
-      ChatClient.log("delayed_job: starting #{n_workers_to_start} workers, rolling restart in #{n_batches} batches of #{n_workers_to_restart_per_batch}, replacing #{pids.size} existing workers")
+      ChatClient.log("delayed_job: starting #{n_workers_to_start} workers, replacing #{pids.size} existing workers with a rolling restart in #{n_batches} batches of #{n_workers_to_restart_per_batch}")
 
       start_time = Time.now
 
