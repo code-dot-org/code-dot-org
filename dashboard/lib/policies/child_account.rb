@@ -135,30 +135,25 @@ class Policies::ChildAccount
     # Sponsored accounts are always managed by the teacher.
     return false if user.sponsored?
 
-    if user.migrated?
-      # Email + password logins are always personal logins.
-      return true if user.encrypted_password.present?
+    # Email + password logins are always personal logins.
+    return true if user.encrypted_password.present?
 
-      ao_providers = Set.new(user.authentication_options.pluck(:credential_type))
-      return true if ao_providers.empty?
+    providers = user.migrated? ? Set.new(user.authentication_options.pluck(:credential_type)) : Set.new([user.provider])
+    return true if providers.empty?
 
-      # Email and Facebook are always personal logins.
-      return true if ao_providers.intersect?(PERSONAL_LOGIN_TYPES)
+    # Email and Facebook are always personal logins.
+    return true if providers.intersect?(PERSONAL_LOGIN_TYPES)
 
-      # Clever and LTI are never personal logins if no other login types are present.
-      return false if ao_providers.subset?(SCHOOL_OWNED_TYPES)
+    # Clever and LTI are never personal logins if no other login types are present.
+    return false if providers.subset?(SCHOOL_OWNED_TYPES)
 
-      # Google and Microsoft are considered school owned for users who are in sections and/or
-      # if the user was created via a roster sync.
-      if ao_providers.intersect?(CONDITIONALLY_SCHOOL_OWNED_TYPES)
-        return !conditionally_school_managed?(user)
-      end
-
-      return true
-    else
-      return !conditionally_school_managed?(user) if CONDITIONALLY_SCHOOL_OWNED_TYPES.include?(user.provider)
-      SCHOOL_OWNED_TYPES.exclude?(user.provider)
+    # Google and Microsoft are considered school owned for users who are in sections and/or
+    # if the user was created via a roster sync.
+    if providers.intersect?(CONDITIONALLY_SCHOOL_OWNED_TYPES)
+      return !conditionally_school_managed?(user)
     end
+
+    return true
   end
 
   def self.state_policies
