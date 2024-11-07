@@ -7,9 +7,9 @@ Scenario: Teacher can create a school associated account in the new sign up flow
   And I open my eyes to test "Teacher Sign up"
   And I see no difference for "Account Selection Page"
   And I press the last button with text "Sign up as a teacher" to load a new page
-  And I press keys "testemail@code.org" for element "#emailinput"
-  And I press keys "password" for element "#passwordinput"
-  And I press keys "password" for element "#confirmpasswordinput"
+  And I press keys "testemail@code.org" for element "#emailInput"
+  And I press keys "password" for element "#passwordInput"
+  And I press keys "password" for element "#confirmPasswordInput"
   And I see no difference for "Login Type Selection Page"
   And I press the last button with text "Create my account" to load a new page
   And I press keys "myDisplayName" for element "#displayName"
@@ -26,9 +26,9 @@ Scenario: Student can create an account in the new sign up flow
 
   Given I am on "http://studio.code.org/users/new_sign_up/account_type"
   And I press the last button with text "Sign up as a student" to load a new page
-  And I press keys "testemail@code.org" for element "#emailinput"
-  And I press keys "password" for element "#passwordinput"
-  And I press keys "password" for element "#confirmpasswordinput"
+  And I press keys "testemail@code.org" for element "#emailInput"
+  And I press keys "password" for element "#passwordInput"
+  And I press keys "password" for element "#confirmPasswordInput"
   And I press the last button with text "Create my account" to load a new page
   And I press keys "myDisplayName" for element "#displayName"
   And I select the "10" option in dropdown "userAge"
