@@ -7,7 +7,25 @@ describe 'Cdo::ActiveJobBackend' do
     Cdo::ActiveJobBackend.stubs(:chat_client_log)
   end
 
-  describe 'verify_no_workers_older_than!' do
+  describe 'verify_num_workers_running!()' do
+    before do
+      Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_fresh_workers)
+    end
+
+    it 'succeeds when n_workers_to_start matches ps' do
+      assert_equal 5, Cdo::ActiveJobBackend.verify_num_workers_running!(4)
+    end
+
+    it 'exception when n_workers_to_start does not match ps' do
+      error = assert_raises(RuntimeError) do
+        Cdo::ActiveJobBackend.verify_num_workers_running!(10)
+      end
+
+      assert_match(/delayed_job: ERROR, intended to start 10 workers, but only 5 workers are running/, error.message)
+    end
+  end
+
+  describe 'verify_no_workers_older_than!()' do
     it 'succeeds if all workers are fresh' do
       Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_fresh_workers)
 
@@ -114,6 +132,16 @@ describe 'Cdo::ActiveJobBackend' do
         560 01-12:45:40 autofsd
         561 01-12:45:40 /usr/libexec/dasd
         563 01-12:45:40 /usr/sbin/distnoted daemon
+    HEREDOC
+  end
+
+  private def ps_for_fresh_workers_partially_started
+    <<~HEREDOC
+        PID     ELAPSED COMMAND
+      89890       00:23 delayed_job.0
+      89892       00:23 delayed_job.1
+      89894       00:24 delayed_job.2
+      89936       00:06 delayed_job.3
     HEREDOC
   end
 end
