@@ -23,7 +23,7 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
     assert Policies::Lti.lti?(@user)
   end
 
-  test 'reassigns a lti user identity from a roster synced user to an existing user' do
+  test 'reassigns an lti user identity from a roster-synced user to an existing user' do
     roster_synced_teacher = create :teacher
     ao = create :lti_authentication_option
     fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}
