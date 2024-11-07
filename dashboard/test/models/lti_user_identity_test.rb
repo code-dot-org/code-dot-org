@@ -10,6 +10,6 @@ class LtiUserIdentityTest < ActiveSupport::TestCase
     lti_user_identity = create(:lti_user_identity)
     invalid_identity = build(:lti_user_identity, lti_integration_id: lti_user_identity.lti_integration.id, subject: lti_user_identity.subject)
     refute invalid_identity.valid?
-    assert_includes invalid_identity.errors.full_messages, "Subject has already been taken"
+    assert_includes invalid_identity.errors.full_messages, 'Subject has already been taken'
   end
 end
