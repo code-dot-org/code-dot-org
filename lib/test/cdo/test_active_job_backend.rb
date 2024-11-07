@@ -18,61 +18,85 @@ describe 'Cdo::ActiveJobBackend' do
     FileUtils.remove_entry(@pid_dir)
   end
 
-  describe 'restart_workers_internal()' do
-    describe 'batches' do
-      before do
-        Cdo::ActiveJobBackend.expects(:verify_no_workers_older_than!)
+  it 'restart_workers() raises exception at exit if there are stale workers' do
+    Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_5_stale_workers)
+
+    Cdo::ActiveJobBackend.stubs(:stop_workers)
+    Cdo::ActiveJobBackend.stubs(:start_n_workers).returns(5)
+
+    error = assert_raises(RuntimeError) do
+      Cdo::ActiveJobBackend.restart_workers_internal(5, n_batches: 1)
+    end
+
+    assert_match(/delayed_job: ERROR, old workers appear to still be running/, error.message)
+  end
+
+  describe 'restart_workers()' do
+    before do
+      Cdo::ActiveJobBackend.expects(:verify_no_workers_older_than!)
+    end
+
+    it 'can start 5 workers in 1 batch' do
+      sequence = Mocha::Sequence.new('stop then start')
+      Cdo::ActiveJobBackend.expects(:stop_workers).in_sequence(sequence).
+        with {|pids, *| pids == [89890, 89892, 89894, 89936, 89938]}
+      Cdo::ActiveJobBackend.expects(:start_n_workers).returns(5).in_sequence(sequence)
+
+      n_workers_running = Cdo::ActiveJobBackend.restart_workers_internal(5, n_batches: 1)
+      assert_equal 5, n_workers_running
+    end
+
+    it 'can start 5 workers in 2 batches' do
+      sequence = Mocha::Sequence.new('stop then start')
+      Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89890, 89892, 89894]}.in_sequence(sequence)
+      Cdo::ActiveJobBackend.expects(:start_n_workers).with(3, initial_worker_index: 0).returns(3).in_sequence(sequence)
+      Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89936, 89938]}.in_sequence(sequence)
+      Cdo::ActiveJobBackend.expects(:start_n_workers).with(2, initial_worker_index: 3).returns(2).in_sequence(sequence)
+
+      n_workers_running = Cdo::ActiveJobBackend.restart_workers_internal(5, n_batches: 2)
+      assert_equal 5, n_workers_running
+    end
+
+    it 'can start 5 workers when only 4 are running' do
+      Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_4_stale_workers)
+
+      sequence = Mocha::Sequence.new('stop then start')
+      Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89890, 89892,]}.in_sequence(sequence)
+      Cdo::ActiveJobBackend.expects(:start_n_workers).with(2, initial_worker_index: 0).returns(2).in_sequence(sequence)
+      Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89894, 89936]}.in_sequence(sequence)
+      Cdo::ActiveJobBackend.expects(:start_n_workers).with(2, initial_worker_index: 2).returns(2).in_sequence(sequence)
+      Cdo::ActiveJobBackend.expects(:start_n_workers).with(1, initial_worker_index: 4).returns(1).in_sequence(sequence)
+      Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_5_fresh_workers).in_sequence(sequence)
+
+      n_workers_running = Cdo::ActiveJobBackend.restart_workers_internal(5, n_batches: 2)
+      assert_equal 5, n_workers_running
+    end
+
+    it 'can start 4 workers when 5 are running' do
+      Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_5_stale_workers)
+
+      sequence = Mocha::Sequence.new('stop then start')
+      Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89890, 89892, 89894]}.in_sequence(sequence)
+      Cdo::ActiveJobBackend.expects(:start_n_workers).with(3, initial_worker_index: 0).returns(3).in_sequence(sequence)
+      Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89936, 89938]}.in_sequence(sequence)
+      Cdo::ActiveJobBackend.expects(:start_n_workers).with(1, initial_worker_index: 3).returns(2).in_sequence(sequence)
+      Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_4_fresh_workers).in_sequence(sequence)
+
+      n_workers_running = Cdo::ActiveJobBackend.restart_workers_internal(4, n_batches: 2)
+      assert_equal 4, n_workers_running
+    end
+
+    it 'raises exception at exit if too few workers are running' do
+      Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_4_fresh_workers)
+
+      Cdo::ActiveJobBackend.stubs(:stop_workers)
+      Cdo::ActiveJobBackend.stubs(:start_n_workers).returns(5)
+
+      error = assert_raises(RuntimeError) do
+        Cdo::ActiveJobBackend.restart_workers_internal(5, n_batches: 1)
       end
 
-      it 'can start 5 workers in one batch' do
-        sequence = Mocha::Sequence.new('stop then start')
-        Cdo::ActiveJobBackend.expects(:stop_workers).in_sequence(sequence).
-          with {|pids, *| pids == [89890, 89892, 89894, 89936, 89938]}
-        Cdo::ActiveJobBackend.expects(:start_n_workers).returns(5).in_sequence(sequence)
-
-        n_workers_running = Cdo::ActiveJobBackend.restart_workers_internal(5, n_batches: 1)
-        assert_equal 5, n_workers_running
-      end
-
-      it 'can start 5 workers in two batches' do
-        sequence = Mocha::Sequence.new('stop then start')
-        Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89890, 89892, 89894]}.in_sequence(sequence)
-        Cdo::ActiveJobBackend.expects(:start_n_workers).with(3, initial_worker_index: 0).returns(3).in_sequence(sequence)
-        Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89936, 89938]}.in_sequence(sequence)
-        Cdo::ActiveJobBackend.expects(:start_n_workers).with(2, initial_worker_index: 3).returns(2).in_sequence(sequence)
-
-        n_workers_running = Cdo::ActiveJobBackend.restart_workers_internal(5, n_batches: 2)
-        assert_equal 5, n_workers_running
-      end
-
-      it 'can start 5 workers when only 4 are running' do
-        Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_4_stale_workers)
-
-        sequence = Mocha::Sequence.new('stop then start')
-        Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89890, 89892,]}.in_sequence(sequence)
-        Cdo::ActiveJobBackend.expects(:start_n_workers).with(2, initial_worker_index: 0).returns(2).in_sequence(sequence)
-        Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89894, 89936]}.in_sequence(sequence)
-        Cdo::ActiveJobBackend.expects(:start_n_workers).with(2, initial_worker_index: 2).returns(2).in_sequence(sequence)
-        Cdo::ActiveJobBackend.expects(:start_n_workers).with(1, initial_worker_index: 4).returns(1).in_sequence(sequence)
-        Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_5_fresh_workers).in_sequence(sequence)
-
-        n_workers_running = Cdo::ActiveJobBackend.restart_workers_internal(5, n_batches: 2)
-        assert_equal 5, n_workers_running
-      end
-
-      it 'can start 4 workers when 5 are running' do
-        Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_5_stale_workers)
-
-        sequence = Mocha::Sequence.new('stop then start')
-        Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89890, 89892, 89894]}.in_sequence(sequence)
-        Cdo::ActiveJobBackend.expects(:start_n_workers).with(3, initial_worker_index: 0).returns(3).in_sequence(sequence)
-        Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89936, 89938]}.in_sequence(sequence)
-        Cdo::ActiveJobBackend.expects(:start_n_workers).with(1, initial_worker_index: 3).returns(2).in_sequence(sequence)
-        Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_4_fresh_workers).in_sequence(sequence)
-
-        n_workers_running = Cdo::ActiveJobBackend.restart_workers_internal(4, n_batches: 2)
-        assert_equal 4, n_workers_running
-      end
+      assert_match(/delayed_job: ERROR/, error.message)
     end
   end
 
