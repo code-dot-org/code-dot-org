@@ -6,40 +6,56 @@ describe 'Cdo::ActiveJobBackend' do
   before do
     Cdo::ActiveJobBackend.stubs(:chat_client_log)
     Cdo::ActiveJobBackend.stubs(:log)
+    Cdo::ActiveJobBackend.stubs(:before_worker_fork)
+
+    @pid_dir = Dir.mktmpdir
+    Cdo::ActiveJobBackend.stubs(:pid_dir).returns(@pid_dir)
+
+    Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_fresh_workers)
+  end
+
+  after do
+    FileUtils.remove_entry(@pid_dir)
   end
 
   describe 'restart_workers_internal()' do
-    before do
-      Cdo::ActiveJobBackend.stubs(:before_worker_fork)
+    describe 'it stops and starts in batches' do
+      before do
+        Cdo::ActiveJobBackend.expects(:verify_no_workers_older_than!)
+      end
+
+      it 'can restart 5 workers in one batch' do
+        sequence = Mocha::Sequence.new('stop then start')
+        Cdo::ActiveJobBackend.expects(:stop_workers).in_sequence(sequence).
+          with {|pids, *| pids == [89890, 89892, 89894, 89936, 89938]}
+        Cdo::ActiveJobBackend.expects(:start_n_workers).returns(5).in_sequence(sequence)
+
+        n_workers_running = Cdo::ActiveJobBackend.restart_workers_internal(5, n_batches: 1)
+        assert_equal 5, n_workers_running
+      end
+
+      it 'can restart 5 workers in two batches' do
+        sequence = Mocha::Sequence.new('stop then start')
+        Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89890, 89892, 89894]}.in_sequence(sequence)
+        Cdo::ActiveJobBackend.expects(:start_n_workers).with(3, initial_worker_index: 0).returns(3).in_sequence(sequence)
+        Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89936, 89938]}.in_sequence(sequence)
+        Cdo::ActiveJobBackend.expects(:start_n_workers).with(2, initial_worker_index: 3).returns(2).in_sequence(sequence)
+
+        n_workers_running = Cdo::ActiveJobBackend.restart_workers_internal(5, n_batches: 2)
+        assert_equal 5, n_workers_running
+      end
     end
+  end
 
-    it 'can restart 5 workers in one batch' do
-      Cdo::ActiveJobBackend.expects(:start_n_workers).times(1).returns(5)
-      Cdo::ActiveJobBackend.expects(:stop_workers).
-        with {|pids, *| pids == [89890, 89892, 89894, 89936, 89938]}.times(1)
-      Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_fresh_workers)
-      Cdo::ActiveJobBackend.expects(:verify_no_workers_older_than!).times(1)
-
-      n_workers_running = Cdo::ActiveJobBackend.restart_workers_internal(5, n_batches: 1)
-      assert_equal 5, n_workers_running
-    end
-
-    it 'can restart 5 workers in two batches' do
-      Cdo::ActiveJobBackend.expects(:start_n_workers).times(2).returns(3, 2) # first batch starts 3, second batch starts 2
-      Cdo::ActiveJobBackend.expects(:stop_workers).times(2)
-      Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_fresh_workers)
-      Cdo::ActiveJobBackend.expects(:verify_no_workers_older_than!).times(1)
-
-      n_workers_running = Cdo::ActiveJobBackend.restart_workers_internal(5, n_batches: 2)
-      assert_equal 5, n_workers_running
+  describe 'start_n_workers()' do
+    it 'calls run_process with the right worker index in the name' do
+      Cdo::ActiveJobBackend::Command.any_instance.expects(:run_process).with('delayed_job.3', anything).once
+      Cdo::ActiveJobBackend::Command.any_instance.expects(:run_process).with('delayed_job.4', anything).once
+      Cdo::ActiveJobBackend.start_n_workers(2, initial_worker_index: 3)
     end
   end
 
   describe 'verify_num_workers_running!()' do
-    before do
-      Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_fresh_workers)
-    end
-
     it 'succeeds when n_workers_to_start matches ps' do
       assert_equal 5, Cdo::ActiveJobBackend.verify_num_workers_running!(4)
     end
@@ -55,8 +71,6 @@ describe 'Cdo::ActiveJobBackend' do
 
   describe 'verify_no_workers_older_than!()' do
     it 'succeeds if all workers are fresh' do
-      Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_fresh_workers)
-
       assert_silent do
         Cdo::ActiveJobBackend.verify_no_workers_older_than!(Time.now - 60.seconds)
       end
@@ -77,28 +91,26 @@ describe 'Cdo::ActiveJobBackend' do
   describe 'ExistingWorkers' do
     describe 'pids()' do
       it 'returns pids from both ps output and pid files' do
-        Dir.mktmpdir do |temp_dir|
-          Cdo::ActiveJobBackend.stubs(:pid_dir).returns(temp_dir)
-          Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_fresh_workers)
+        pid_file_1 = File.join(@pid_dir, 'delayed_job.1.pid')
+        pid_file_11 = File.join(@pid_dir, 'delayed_job.11.pid')
 
-          # 1000 should not show up in return values because ps wins on pid if it disagrees with pid_file
-          # however, the pidfile should show up for process 89892 from ps so it is deleted:
-          File.write(File.join(temp_dir, 'delayed_job.1.pid'), '1000')
-          File.write(File.join(temp_dir, 'delayed_job.11.pid'), '1001')
+        # 1000 should not show up in return values because ps wins on pid if it disagrees with pid_file
+        # however, the pidfile should show up for process 89892 from ps so it is deleted:
+        File.write(pid_file_1, '1000')
+        File.write(pid_file_11, '1001')
 
-          pids, pid_files = Cdo::ActiveJobBackend::ExistingWorkers.pids
+        pids, pid_files = Cdo::ActiveJobBackend::ExistingWorkers.pids
 
-          assert_equal [89890, 89892, 89894, 89936, 89938, 1001].sort, pids.sort
-          expected_pid_files = {
-            89892 => "#{temp_dir}/delayed_job.1.pid",
-            1001 => "#{temp_dir}/delayed_job.11.pid",
-            89890 => nil,
-            89894 => nil,
-            89936 => nil,
-            89938 => nil
-          }
-          assert_equal expected_pid_files, pid_files
-        end
+        assert_equal [89890, 89892, 89894, 89936, 89938, 1001].sort, pids.sort
+        expected_pid_files = {
+          89892 => pid_file_1,
+          1001 => pid_file_11,
+          89890 => nil,
+          89894 => nil,
+          89936 => nil,
+          89938 => nil
+        }
+        assert_equal expected_pid_files, pid_files
       end
     end
 
