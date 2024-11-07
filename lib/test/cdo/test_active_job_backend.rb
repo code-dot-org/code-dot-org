@@ -85,6 +85,40 @@ describe 'Cdo::ActiveJobBackend' do
   end
 
   describe 'stop_workers()' do
+    before do
+      Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_4_stale_workers)
+      @stale_worker_pids = [89890, 89892, 89894, 89936]
+    end
+
+    it 'SIGTERMs workers first' do
+      sequence = Mocha::Sequence.new('stop_workers')
+      Cdo::ActiveJobBackend.expects(:kill).times(4).with('TERM', anything).in_sequence(sequence)
+      Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_no_workers).in_sequence(sequence)
+
+      Cdo::ActiveJobBackend.stop_workers(@stale_worker_pids, {})
+    end
+
+    it "SIGKILLs workers if they don't exit after SIGTERM" do
+      sequence = Mocha::Sequence.new('stop_workers')
+      Cdo::ActiveJobBackend.expects(:kill).times(4).with('TERM', anything).in_sequence(sequence)
+      Cdo::ActiveJobBackend.expects(:kill).times(4).with('KILL', anything).in_sequence(sequence)
+      Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_no_workers).in_sequence(sequence)
+
+      Cdo::ActiveJobBackend.stop_workers(@stale_worker_pids, {}, timeout_s: 1)
+    end
+
+    it "raises exception if workers don't exit after SIGKILL" do
+      sequence = Mocha::Sequence.new('stop_workers')
+      Cdo::ActiveJobBackend.expects(:kill).times(4).with('TERM', anything).in_sequence(sequence)
+      Cdo::ActiveJobBackend.expects(:kill).times(4).with('KILL', anything).in_sequence(sequence)
+
+      error = assert_raises(Timeout::Error) do
+        Cdo::ActiveJobBackend.stop_workers(@stale_worker_pids, {}, timeout_s: 1)
+      end
+
+      assert_match(/delayed_job: ERROR, not all delayed_job worker processes terminated/, error.message)
+    end
+
     it 'cleans up pid files' do
       Cdo::ActiveJobBackend.stubs(:kill)
       Cdo::ActiveJobBackend.stubs(:wait_for_workers_to_exit)
@@ -223,6 +257,13 @@ describe 'Cdo::ActiveJobBackend' do
       89892 01-06:44:22 delayed_job.1
       89894 01-06:44:22 delayed_job.2
       89936 01-06:44:22 delayed_job.3
+    HEREDOC
+  end
+
+  private def ps_for_no_workers
+    <<~HEREDOC
+      PID     ELAPSED COMMAND
+        1 01-12:45:40 /sbin/launchd
     HEREDOC
   end
 
