@@ -57,6 +57,7 @@ class RegistrationsController < Devise::RegistrationsController
     @user.validate_for_finish_sign_up
 
     if params[:new_sign_up].present?
+      SignUpTracking.begin_sign_up_tracking session
       SignUpTracking.log_load_sign_up session
     end
     SignUpTracking.log_begin_sign_up(@user, session)

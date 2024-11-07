@@ -90,7 +90,7 @@ module RegistrationsControllerTests
     end
 
     test "student in new sign-up" do
-      email = "aaa@example.com"
+      email = "student@example.com"
 
       post '/users/begin_sign_up', params: {
         new_sign_up: true,
@@ -111,9 +111,9 @@ module RegistrationsControllerTests
       assert_sign_up_tracking(
         SignUpTracking::NOT_IN_STUDY_GROUP,
         %w(
-          load-new-sign-up-page
+          load-sign-up-page
           begin-sign-up-success
-          email-load-finish-sign-up-page
+          migrated-load-finish-sign-up-page
           email-sign-up-success
         )
       )
@@ -143,9 +143,9 @@ module RegistrationsControllerTests
       assert_sign_up_tracking(
         SignUpTracking::NOT_IN_STUDY_GROUP,
         %w(
-          load-new-sign-up-page
+          load-sign-up-page
           begin-sign-up-success
-          email-load-finish-sign-up-page
+          migrated-load-finish-sign-up-page
           email-sign-up-success
         )
       )
