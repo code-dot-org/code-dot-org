@@ -87,7 +87,7 @@ DialogWithIcon.args = {
 };
 
 export const DialogWithImage = SingleTemplate.bind({});
-DialogWithIcon.args = {
+DialogWithImage.args = {
   title: 'Dialog with Icon',
   content: 'Dialog with image',
   imageUrl: 'https://code.org/images/courses-6-12.png', // Example image

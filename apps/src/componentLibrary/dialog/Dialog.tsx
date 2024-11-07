@@ -9,6 +9,7 @@ import React, {
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import CloseButton from '@cdo/apps/componentLibrary/closeButton';
+import {useBodyScrollLock} from '@cdo/apps/componentLibrary/common/hooks/useBodyScrollLock';
 import useFocusTrap from '@cdo/apps/componentLibrary/common/hooks/useFocusTrap';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
@@ -40,9 +41,13 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
 
 // TODO:
 //  * + Add focus trap
+// * add story with custom content
+// * add story with custom actions
+// * add story without close button
+// * add support of    aria-labelledby="dialog-title"
+//         aria-describedby="dialog-content"
+// * organize hooks
 //  * Add tests
-//  * Add accessibility checks
-//  * Add storybook stories
 //  * + add colors support
 
 /**
@@ -91,6 +96,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
   }, [handleKeyDown]);
 
   useFocusTrap(dialogRef);
+  useBodyScrollLock(true);
 
   return (
     <div role="presentation" className={moduleStyles.dialogOverlay}>
