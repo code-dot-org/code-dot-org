@@ -135,7 +135,8 @@ module Cdo
       begin
         wait_for_workers_to_exit(pids_still_running, timeout_s)
       rescue Timeout::Error
-        ChatClient.log "ERROR: not all delayed_job worker processes terminated within #{timeout_seconds} seconds, despite sending SIGKILL, going forward anyway"
+        ChatClient.log "ERROR: not all delayed_job worker processes terminated within #{timeout_seconds} seconds despite sending SIGKILL, aborting deploy due to the debugging risk of workers running old code."
+        raise
       end
     ensure
       # delete pid files for workers that have exited, if they exist
