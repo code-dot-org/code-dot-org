@@ -14,14 +14,12 @@ module Cdo
       Process.wait(pid)
     end
 
-    def self.restart_workers_internal(n_workers_to_start, n_batches:)
+    def self.restart_workers_internal(n_workers_to_start, n_batches:, start_time: Time.now, sigkill_timeout_s: 60.seconds)
       pids, pid_file_hash = ExistingWorkers.pids
       n_workers_to_restart_per_batch = (pids.size.to_f / n_batches).ceil
       n_workers_to_restart_per_batch = 1 if n_workers_to_restart_per_batch < 1
 
       chat_client_log("delayed_job: starting #{n_workers_to_start} workers, replacing #{pids.size} existing workers with a rolling restart in #{n_batches} batches of #{n_workers_to_restart_per_batch}")
-
-      start_time = Time.now
 
       # We delete ALL existing delayed_job pid_files in pid_dir (dashboard/tmp/pids)
       # before we even start in order to work around a horrible bug in delayed_job:
@@ -43,7 +41,7 @@ module Cdo
       n_workers_started = 0
       pids.each_slice(n_workers_to_restart_per_batch) do |pids_in_batch|
         # Stop pre-existing delayed_job workers in this batch
-        stop_workers(pids_in_batch, pid_file_hash)
+        stop_workers(pids_in_batch, pid_file_hash, timeout_s: sigkill_timeout_s)
 
         # Start (up to) an equal number of replacement workers
         n_workers = (n_workers_to_start - n_workers_started).clamp(0, pids_in_batch.size)
@@ -58,6 +56,7 @@ module Cdo
       verify_no_workers_older_than!(start_time)
       n_workers_running = verify_num_workers_running!(n_workers_to_start)
       chat_client_log("delayed_job: rolling restart complete, started #{n_workers_running} workers in #{Time.now - start_time}s")
+      n_workers_running
     end
 
     # Warn/Error if we didn't start the intended number of workers
