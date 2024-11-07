@@ -157,9 +157,6 @@ export const WORKSPACE_EVENTS = {
 };
 
 export const READ_ONLY_PROPERTIES = [
-  'ALIGN_CENTRE',
-  'ALIGN_LEFT',
-  'ALIGN_RIGHT',
   'applab_locale',
   'BasicCursor',
   'Block',
