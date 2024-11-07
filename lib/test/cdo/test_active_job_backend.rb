@@ -11,7 +11,7 @@ describe 'Cdo::ActiveJobBackend' do
     @pid_dir = Dir.mktmpdir
     Cdo::ActiveJobBackend.stubs(:pid_dir).returns(@pid_dir)
 
-    Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_fresh_workers)
+    Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_5_fresh_workers)
   end
 
   after do
@@ -19,12 +19,12 @@ describe 'Cdo::ActiveJobBackend' do
   end
 
   describe 'restart_workers_internal()' do
-    describe 'it stops and starts in batches' do
+    describe 'batches' do
       before do
         Cdo::ActiveJobBackend.expects(:verify_no_workers_older_than!)
       end
 
-      it 'can restart 5 workers in one batch' do
+      it 'can start 5 workers in one batch' do
         sequence = Mocha::Sequence.new('stop then start')
         Cdo::ActiveJobBackend.expects(:stop_workers).in_sequence(sequence).
           with {|pids, *| pids == [89890, 89892, 89894, 89936, 89938]}
@@ -34,7 +34,7 @@ describe 'Cdo::ActiveJobBackend' do
         assert_equal 5, n_workers_running
       end
 
-      it 'can restart 5 workers in two batches' do
+      it 'can start 5 workers in two batches' do
         sequence = Mocha::Sequence.new('stop then start')
         Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89890, 89892, 89894]}.in_sequence(sequence)
         Cdo::ActiveJobBackend.expects(:start_n_workers).with(3, initial_worker_index: 0).returns(3).in_sequence(sequence)
@@ -44,11 +44,40 @@ describe 'Cdo::ActiveJobBackend' do
         n_workers_running = Cdo::ActiveJobBackend.restart_workers_internal(5, n_batches: 2)
         assert_equal 5, n_workers_running
       end
+
+      it 'can start 5 workers when only 4 are running' do
+        Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_4_stale_workers)
+
+        sequence = Mocha::Sequence.new('stop then start')
+        Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89890, 89892,]}.in_sequence(sequence)
+        Cdo::ActiveJobBackend.expects(:start_n_workers).with(2, initial_worker_index: 0).returns(2).in_sequence(sequence)
+        Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89894, 89936]}.in_sequence(sequence)
+        Cdo::ActiveJobBackend.expects(:start_n_workers).with(2, initial_worker_index: 2).returns(2).in_sequence(sequence)
+        Cdo::ActiveJobBackend.expects(:start_n_workers).with(1, initial_worker_index: 4).returns(1).in_sequence(sequence)
+        Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_5_fresh_workers).in_sequence(sequence)
+
+        n_workers_running = Cdo::ActiveJobBackend.restart_workers_internal(5, n_batches: 2)
+        assert_equal 5, n_workers_running
+      end
+
+      it 'can start 4 workers when 5 are running' do
+        Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_5_stale_workers)
+
+        sequence = Mocha::Sequence.new('stop then start')
+        Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89890, 89892, 89894]}.in_sequence(sequence)
+        Cdo::ActiveJobBackend.expects(:start_n_workers).with(3, initial_worker_index: 0).returns(3).in_sequence(sequence)
+        Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89936, 89938]}.in_sequence(sequence)
+        Cdo::ActiveJobBackend.expects(:start_n_workers).with(1, initial_worker_index: 3).returns(2).in_sequence(sequence)
+        Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_4_fresh_workers).in_sequence(sequence)
+
+        n_workers_running = Cdo::ActiveJobBackend.restart_workers_internal(4, n_batches: 2)
+        assert_equal 4, n_workers_running
+      end
     end
   end
 
   describe 'start_n_workers()' do
-    it 'calls run_process with the right worker index in the name' do
+    it 'calls run_process with the process names' do
       Cdo::ActiveJobBackend::Command.any_instance.expects(:run_process).with('delayed_job.3', anything).once
       Cdo::ActiveJobBackend::Command.any_instance.expects(:run_process).with('delayed_job.4', anything).once
       Cdo::ActiveJobBackend.start_n_workers(2, initial_worker_index: 3)
@@ -77,7 +106,7 @@ describe 'Cdo::ActiveJobBackend' do
     end
 
     it 'raises an error if old workers are still running' do
-      Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_stale_workers)
+      Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_4_stale_workers)
 
       # Expect an exception due to stale workers
       error = assert_raises(RuntimeError) do
@@ -114,14 +143,13 @@ describe 'Cdo::ActiveJobBackend' do
       end
     end
 
-    it 'correctly parses ps output' do
-      Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_stale_workers)
+    it 'correctly parses complex ps output' do
+      Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(complex_ps_output)
 
       assert_equal [
         # job_id, pid, runtime_seconds
         [0, 89890, 583],   # delayed_job.0
         [1, 89892, 583],   # delayed_job.1
-        [2, 89894, 583],   # delayed_job.2
         [3, 89936, 577],   # delayed_job.3
         [4, 89938, 110662] # delayed_job.4
       ], Cdo::ActiveJobBackend::ExistingWorkers.get_workers_from_ps
@@ -143,7 +171,7 @@ describe 'Cdo::ActiveJobBackend' do
     end
   end
 
-  private def ps_for_fresh_workers
+  private def ps_for_5_fresh_workers
     <<~HEREDOC
         PID     ELAPSED COMMAND
       89890       00:23 delayed_job.0
@@ -154,7 +182,38 @@ describe 'Cdo::ActiveJobBackend' do
     HEREDOC
   end
 
-  private def ps_for_stale_workers
+  private def ps_for_5_stale_workers
+    <<~HEREDOC
+        PID     ELAPSED COMMAND
+      89890 01-06:44:22 delayed_job.0
+      89892 01-06:44:22 delayed_job.1
+      89894 01-06:44:22 delayed_job.2
+      89936 01-06:44:22 delayed_job.3
+      89938 01-06:44:22 delayed_job.4
+    HEREDOC
+  end
+
+  private def ps_for_4_fresh_workers
+    <<~HEREDOC
+        PID     ELAPSED COMMAND
+      89890       00:23 delayed_job.0
+      89892       00:23 delayed_job.1
+      89894       00:24 delayed_job.2
+      89936       00:06 delayed_job.3
+    HEREDOC
+  end
+
+  private def ps_for_4_stale_workers
+    <<~HEREDOC
+        PID     ELAPSED COMMAND
+      89890 01-06:44:22 delayed_job.0
+      89892 01-06:44:22 delayed_job.1
+      89894 01-06:44:22 delayed_job.2
+      89936 01-06:44:22 delayed_job.3
+    HEREDOC
+  end
+
+  private def complex_ps_output
     <<~HEREDOC
         PID     ELAPSED COMMAND
           1 01-12:45:40 /sbin/launchd
@@ -163,7 +222,6 @@ describe 'Cdo::ActiveJobBackend' do
         514 01-12:44:22 /usr/libexec/UserEventAgent (System)
       89890       09:43 delayed_job.0
       89892       09:43 delayed_job.1
-      89894       09:43 delayed_job.2
       39574    03:02:20 /bin/zsh -il
       89936       09:37 delayed_job.3
       89938 01-06:44:22 delayed_job.4
@@ -172,16 +230,6 @@ describe 'Cdo::ActiveJobBackend' do
         560 01-12:45:40 autofsd
         561 01-12:45:40 /usr/libexec/dasd
         563 01-12:45:40 /usr/sbin/distnoted daemon
-    HEREDOC
-  end
-
-  private def ps_for_fresh_workers_partially_started
-    <<~HEREDOC
-        PID     ELAPSED COMMAND
-      89890       00:23 delayed_job.0
-      89892       00:23 delayed_job.1
-      89894       00:24 delayed_job.2
-      89936       00:06 delayed_job.3
     HEREDOC
   end
 end
