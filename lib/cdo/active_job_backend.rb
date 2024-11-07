@@ -19,7 +19,7 @@ module Cdo
       n_workers_to_restart_per_batch = (pids.size.to_f / n_batches).ceil
       n_workers_to_restart_per_batch = 1 if n_workers_to_restart_per_batch < 1
 
-      ChatClient.log("delayed_job: starting #{n_workers_to_start} workers, replacing #{pids.size} existing workers with a rolling restart in #{n_batches} batches of #{n_workers_to_restart_per_batch}")
+      chat_client_log("delayed_job: starting #{n_workers_to_start} workers, replacing #{pids.size} existing workers with a rolling restart in #{n_batches} batches of #{n_workers_to_restart_per_batch}")
 
       start_time = Time.now
 
@@ -57,7 +57,7 @@ module Cdo
       # Verify that our deploy was succesful: enough workers started, and no old workers still running
       verify_no_workers_older_than!(start_time)
       n_workers_running = verify_num_workers_running!(n_workers_to_start)
-      ChatClient.log("delayed_job: rolling restart complete, started #{n_workers_running} workers in #{Time.now - start_time}s")
+      chat_client_log("delayed_job: rolling restart complete, started #{n_workers_running} workers in #{Time.now - start_time}s")
     end
 
     # Warn/Error if we didn't start the intended number of workers
@@ -68,7 +68,7 @@ module Cdo
       if n_workers_running < n_workers_to_start
         worker_failure_rate = (n_workers_to_start - n_workers_running).to_f / n_workers_to_start
         msg = "delayed_job: ERROR, intended to start #{n_workers_to_start} workers, but only #{n_workers_running} workers are running."
-        ChatClient.log(msg)
+        chat_client_log(msg)
         raise msg if worker_failure_rate > ACCEPTABLE_WORKER_FAILURE_RATE
       end
       n_workers_running
@@ -84,7 +84,7 @@ module Cdo
       unless stale_workers.empty?
         stale_worker_msg = stale_workers.map {|_, pid, runtime_seconds| "pid #{pid} (running #{runtime_seconds}s)"}.join(", ")
         msg = "delayed_job: ERROR, old workers appear to still be running, aborting due to the risk of a worker running old code. Deploy started #{s_since_start}s ago, stale workers: #{stale_worker_msg}."
-        ChatClient.log(msg)
+        chat_client_log(msg)
         raise msg
       end
     end
@@ -98,7 +98,7 @@ module Cdo
 
     # run bin/delayed_job by forking our custom Cdo::DelayedJob::Command subclass
     def self.start_n_workers(n_workers, initial_worker_index:)
-      ChatClient.log("delayed_job: starting #{n_workers} workers, initial_worker_index=#{initial_worker_index}")
+      chat_client_log("delayed_job: starting #{n_workers} workers, initial_worker_index=#{initial_worker_index}")
       pid = fork do
         Cdo::ActiveJobBackend::Command.new.start_n_workers(n_workers, initial_worker_index: initial_worker_index)
       end
@@ -137,7 +137,7 @@ module Cdo
     # Gently stops a list of pids by sending TERM first, waiting
     # timeout_s for them to exit gracefully, and then sending KILL
     def self.stop_workers(pids, pid_file_hash, timeout_s: 60.seconds)
-      ChatClient.log "delayed_job: stopping #{pids.size} workers"
+      chat_client_log "delayed_job: stopping #{pids.size} workers"
 
       # Send a TERM to each pid, which tells them to finish the current job and exit
       pids.each {|pid| kill('TERM', pid)}
@@ -145,14 +145,14 @@ module Cdo
       # Wait timeout_s for the processes to exit gracefully
       wait_for_workers_to_exit(pids, timeout_s)
     rescue Timeout::Error
-      ChatClient.log "delayed_job: WARNING, not all workers terminated within #{timeout_s} seconds, sending SIGKILL to remaining processes."
+      chat_client_log "delayed_job: WARNING, not all workers terminated within #{timeout_s} seconds, sending SIGKILL to remaining processes."
       # Send a kill to any remaining processes, which stops them immediately
       pids.each {|pid| kill('KILL', pid)}
       begin
         wait_for_workers_to_exit(pids, timeout_s)
       rescue Timeout::Error
         msg = "delayed_job: ERROR, not all delayed_job worker processes terminated within #{timeout_s} seconds despite sending SIGKILL, aborting deploy due to the debugging risk of workers running old code."
-        ChatClient.log msg
+        chat_client_log msg
         raise Timeout::Error, msg
       end
     ensure
@@ -191,6 +191,10 @@ module Cdo
 
     def self.log_dir
       dashboard_dir('log')
+    end
+
+    def self.chat_client_log(*args)
+      ChatClient.log(*args)
     end
 
     module ExistingWorkers
