@@ -743,6 +743,7 @@ module SharedConstants
     COMPILATION: 'compilation',
     VALIDATION: 'validation',
     GENERAL_CHAT: 'general_chat',
+    COMPLETION: 'completion',
   }.freeze
 
   USER_TYPES = OpenStruct.new(

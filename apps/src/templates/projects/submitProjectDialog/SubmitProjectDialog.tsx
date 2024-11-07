@@ -1,9 +1,12 @@
-import React, {useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import Link from '@cdo/apps/componentLibrary/link/Link';
 import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
+import {submitProject} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './submit-project-dialog.module.scss';
@@ -16,17 +19,40 @@ import moduleStyles from './submit-project-dialog.module.scss';
 export interface SubmitProjectDialogProps {
   onClose: () => void;
   onGoBack: () => void;
+  projectType: string;
+  channelId: string;
 }
 
 const SubmitProjectDialog: React.FunctionComponent<
   SubmitProjectDialogProps
-> = ({onClose, onGoBack}) => {
+> = ({onClose, onGoBack, projectType, channelId}) => {
   const [projectDescription, setProjectDescription] = useState<string>('');
+  const [isSubmitButtonDisabled, setIsSubmitButtonDisabled] =
+    useState<boolean>(true);
 
-  const onSubmit = async () => {
-    // TODO: call on submitProject once it's implemented in SubmitProjectApi.
-    console.log('submit project');
-  };
+  useEffect(() => {
+    setIsSubmitButtonDisabled(!projectDescription.trim());
+  }, [projectDescription]);
+
+  const onSubmit = useCallback(async () => {
+    setIsSubmitButtonDisabled(true);
+    analyticsReporter.sendEvent(
+      EVENTS.SUBMIT_PROJECT_DIALOG_SUBMIT,
+      {
+        lab_type: projectType,
+        channel_id: channelId,
+      },
+      PLATFORMS.STATSIG
+    );
+    try {
+      await submitProject(channelId, projectType, projectDescription);
+      // Close submit project dialog and display the share dialog.
+      onGoBack();
+    } catch (err) {
+      console.error(err);
+      // TODO: UI to notify user that submission was not successful.
+    }
+  }, [channelId, onGoBack, projectDescription, projectType]);
 
   return (
     <AccessibleDialog
@@ -52,6 +78,8 @@ const SubmitProjectDialog: React.FunctionComponent<
           id="submission-input"
           value={projectDescription}
           onChange={e => setProjectDescription(e.target.value)}
+          placeholder={i18n.submitProjectGallery_placeholder()}
+          maxLength={150}
         />
         <BodyTwoText className={moduleStyles.bodyTwoText}>
           {i18n.submitProjectGallery_details()}
@@ -62,8 +90,7 @@ const SubmitProjectDialog: React.FunctionComponent<
         <div className={moduleStyles.bottomSectionLink}>
           <Link
             text={i18n.learnMore()}
-            // TODO: Add link once it's available.
-            href=""
+            href="https://support.code.org/hc/en-us/articles/24931009674893--Featured-Project-Gallery"
             className={moduleStyles.link}
             size="m"
           />
@@ -81,7 +108,7 @@ const SubmitProjectDialog: React.FunctionComponent<
             type="primary"
             color="white"
             text={i18n.submit()}
-            disabled={!projectDescription.trim()}
+            disabled={isSubmitButtonDisabled}
           />
         </div>
       </div>
