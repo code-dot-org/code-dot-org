@@ -77,7 +77,7 @@ module Cdo
     def self.verify_no_workers_older_than!(start_time)
       workers = ExistingWorkers.get_workers_from_ps # array of [job_id, pid, runtime_seconds] tuples
 
-      s_since_start = Time.now - start_time
+      s_since_start = (Time.now - start_time).ceil # `ps -o etime` appears to round up on linux
       stale_workers = workers.select {|_, _, runtime_seconds| runtime_seconds > s_since_start}
 
       unless stale_workers.empty?
