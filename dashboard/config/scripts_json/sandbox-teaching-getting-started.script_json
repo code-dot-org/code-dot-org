@@ -1,0 +1,89 @@
+{
+  "script": {
+    "name": "sandbox-teaching-getting-started",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Pedagogy special topics selfpaced pl",
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2024-11-06 18:19:08 UTC",
+    "published_state": "in_development",
+    "instruction_type": "self_paced",
+    "instructor_audience": "universal_instructor",
+    "participant_audience": "teacher",
+    "seeding_key": {
+      "script.name": "sandbox-teaching-getting-started"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-getting-started"
+      }
+    }
+  ],
+  "lessons": [
+
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

@@ -5,6 +5,8 @@ import ShareDialogLegacy from '@cdo/apps/code-studio/components/ShareDialog';
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import popupWindow from '@cdo/apps/code-studio/popup-window';
 import {LABS_USING_NEW_SHARE_DIALOG} from '@cdo/apps/lab2/constants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {isSignedIn as getIsSignedIn} from '@cdo/apps/templates/currentUserRedux';
 import {
   getSubmissionStatus,
@@ -66,7 +68,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   useEffect(() => {
     if (channelId && projectType) {
       getSubmissionStatus(channelId, projectType).then(response =>
-        setSubmissionStatus(response?.status)
+        setSubmissionStatus(response)
       );
     }
   }, [channelId, projectType]);
@@ -79,17 +81,31 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
 
   const onGoBack = () => {
     setDialogPanel('share');
+    // If the project was submitted successfully, the submission status is updated.
+    if (channelId && projectType) {
+      getSubmissionStatus(channelId, projectType).then(response =>
+        setSubmissionStatus(response)
+      );
+    }
   };
 
   const onSubmitClick = () => {
     setDialogPanel('submit');
+    analyticsReporter.sendEvent(
+      EVENTS.SHARING_DIALOG_SUBMIT_TO_BE_FEATURED,
+      {
+        lab_type: projectType,
+        channel_id: channelId,
+      },
+      PLATFORMS.STATSIG
+    );
   };
 
-  if (!channelId || !projectType) {
+  if (!isDialogOpen || !channelId || !projectType) {
     return null;
   }
 
-  if (LABS_USING_NEW_SHARE_DIALOG.includes(projectType) && isDialogOpen) {
+  if (LABS_USING_NEW_SHARE_DIALOG.includes(projectType)) {
     return dialogPanel === 'share' ? (
       <ShareDialog
         dialogId={shareDialogId}
@@ -98,11 +114,14 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
         projectType={projectType}
         onSubmitClick={onSubmitClick}
         submissionStatus={submissionStatus}
+        channelId={channelId}
       />
     ) : (
       <SubmitProjectDialog
         onClose={onCloseSubmitProjectDialog}
         onGoBack={onGoBack}
+        projectType={projectType}
+        channelId={channelId}
       />
     );
   }

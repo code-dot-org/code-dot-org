@@ -19555,3 +19555,12 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        sandbox-teaching-getting-started:
+          lessons: {}
+          lesson_groups: {}
+          name: sandbox-teaching-getting-started
+          title: Getting Started Sandbox
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
