@@ -192,6 +192,7 @@ module Cdo
 
     def self.chat_client_log(*args)
       ChatClient.log(*args)
+      puts(*args)
     end
 
     def self.log(message)
