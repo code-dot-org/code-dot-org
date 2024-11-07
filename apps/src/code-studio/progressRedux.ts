@@ -467,6 +467,12 @@ function sendReportHelper(
       // Update the progress store by merging in this
       // particular result immediately.
       dispatch(mergeResults({[levelId]: result}));
+      // If the level is the sublevel of a bubble level,
+      // also update the status of the parent level.
+      const currentLevel = getCurrentLevel(getState());
+      if (currentLevel.parentLevelId) {
+        dispatch(mergeResults({[currentLevel.parentLevelId]: result}));
+      }
     }
   });
 }

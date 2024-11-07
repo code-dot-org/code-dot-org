@@ -19492,9 +19492,9 @@ en:
           name: music-jam-2024
           title: 'Music Lab: Jam Session'
           description_audience: ''
-          description_short: ''
-          description: ''
-          student_description: ''
+          description_short: 'Bring music and coding together in this interactive Hour of Code tutorial. '
+          description: 'Bring music and coding together with our Music Lab: Jam Session tutorial! In this fun, self-guided activity, students remix tracks from popular artists like Sabrina Carpenter, Lady Gaga, and Shakira, learning coding basics like sequencing and functions while exploring AI-powered beat creation. Perfect for sparking creativity and confidence!'
+          student_description: 'Ready to mix music and code? In Music Lab: Jam Session, you’ll remix songs from artists like Sabrina Carpenter, Lady Gaga, and Shakira while learning cool coding skills like sequencing and creating beats with AI. It’s a fun way to get creative with coding!'
         music-keyboard-navigation-onboarding:
           lessons: {}
           lesson_groups: {}
@@ -19527,6 +19527,39 @@ en:
           lesson_groups: {}
           name: music-extras-2024
           title: Keep on Jamming
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-equitymodule-unit1:
+          lessons:
+            lesson-1:
+              name: What is Equity in CS?
+            lesson-2:
+              name: Looking at Data
+            lesson-3:
+              name: Reflecting on Personal Experiences
+          lesson_groups: {}
+          name: self-paced-pl-equitymodule-unit1
+          title: Understanding Equity in Computer Science
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-equitymodule-unit2:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-equitymodule-unit2
+          title: Strategies to Promote Equity in Computer Science
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-teaching-getting-started:
+          lessons: {}
+          lesson_groups: {}
+          name: sandbox-teaching-getting-started
+          title: Getting Started Sandbox
           description_audience: ''
           description_short: ''
           description: ''

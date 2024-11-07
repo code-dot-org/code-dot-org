@@ -45,36 +45,38 @@ module SignUpTracking
     DCDO.get('sign_up_split_test', 0)
   end
 
-  def self.log_load_sign_up(session)
-    event_name = new_sign_up_experience?(session) ? 'load-new-sign-up-page' : 'load-sign-up-page'
+  def self.log_load_sign_up(request)
+    this_session = request.session
+    event_name = new_sign_up_experience?(this_session) ? 'load-new-sign-up-page' : 'load-sign-up-page'
     FirehoseClient.instance.put_record(
       :analysis,
       {
         study: STUDY_NAME,
-        study_group: study_group(session),
+        study_group: study_group(this_session),
         event: event_name,
-        data_string: session[:sign_up_uid]
+        data_string: this_session[:sign_up_uid]
       }
     )
 
     Metrics::Events.log_event(
-      session: session,
+      request: request,
       event_name: event_name,
       metadata: {
         study: STUDY_NAME,
-        study_group: study_group(session),
+        study_group: study_group(this_session),
       },
       )
   end
 
-  def self.log_begin_sign_up(user, session)
-    return unless user && session
+  def self.log_begin_sign_up(user, request)
+    return unless user && request
+    this_session = request.session
     result = user.errors.empty? ? 'success' : 'error'
     tracking_data = {
       study: STUDY_NAME,
-      study_group: study_group(session),
+      study_group: study_group(this_session),
       event: "begin-sign-up-#{result}",
-      data_string: session[:sign_up_uid],
+      data_string: this_session[:sign_up_uid],
       data_json: {
         errors: user.errors&.full_messages
       }.to_json
@@ -82,117 +84,122 @@ module SignUpTracking
     FirehoseClient.instance.put_record(:analysis, tracking_data)
 
     Metrics::Events.log_event(
-      session: session,
+      request: request,
       event_name: "begin-sign-up-#{result}",
       metadata: {
         study: STUDY_NAME,
-        study_group: study_group(session),
+        study_group: study_group(this_session),
       },
       )
   end
 
-  def self.log_load_finish_sign_up(session, provider)
+  def self.log_load_finish_sign_up(request, provider)
+    this_session = request.session
     FirehoseClient.instance.put_record(
       :analysis,
       {
         study: STUDY_NAME,
-        study_group: study_group(session),
+        study_group: study_group(this_session),
         event: "#{provider}-load-finish-sign-up-page",
-        data_string: session[:sign_up_uid]
+        data_string: this_session[:sign_up_uid]
       }
     )
 
     Metrics::Events.log_event(
-      session: session,
+      request: request,
       event_name: "#{provider}-load-finish-sign-up",
       metadata: {
         study: STUDY_NAME,
-        study_group: study_group(session),
+        study_group: study_group(this_session),
       },
       )
   end
 
-  def self.log_cancel_finish_sign_up(session, provider)
+  def self.log_cancel_finish_sign_up(request, provider)
+    this_session = request.session
     FirehoseClient.instance.put_record(
       :analysis,
       {
         study: STUDY_NAME,
-        study_group: study_group(session),
+        study_group: study_group(this_session),
         event: "#{provider}-cancel-finish-sign-up",
-        data_string: session[:sign_up_uid]
+        data_string: this_session[:sign_up_uid]
       }
     )
 
     Metrics::Events.log_event(
-      session: session,
+      request: request,
       event_name: "#{provider}-cancel-finish-sign-up",
       metadata: {
         study: STUDY_NAME,
-        study_group: study_group(session),
+        study_group: study_group(this_session),
       },
       )
   end
 
-  def self.log_oauth_callback(provider, session)
-    return unless provider && session
-    event_name = session[:sign_up_tracking_expiration]&.future? ? "#{provider}-signup-callback" : "#{provider}-callback"
+  def self.log_oauth_callback(provider, request)
+    return unless provider && request
+    this_session = request.session
+    event_name = this_session[:sign_up_tracking_expiration]&.future? ? "#{provider}-signup-callback" : "#{provider}-callback"
 
-    if session[:sign_up_tracking_expiration]&.future?
+    if this_session[:sign_up_tracking_expiration]&.future?
       FirehoseClient.instance.put_record(
         :analysis,
         {
           study: STUDY_NAME,
-          study_group: study_group(session),
+          study_group: study_group(this_session),
           event: "#{provider}-callback",
-          data_string: session[:sign_up_uid]
+          data_string: this_session[:sign_up_uid]
         }
       )
     end
 
     Metrics::Events.log_event(
-      session: session,
+      request: request,
       event_name: event_name,
       metadata: {
         study: STUDY_NAME,
-        study_group: study_group(session),
+        study_group: study_group(this_session),
       },
       )
   end
 
-  def self.log_sign_in(user, session, request)
-    return unless user && session && request
+  def self.log_sign_in(user, request)
+    return unless user && request
+    this_session = request.session
     provider = request.env['omniauth.auth'].provider.to_s
-    if session[:sign_up_tracking_expiration]&.future?
+    if this_session[:sign_up_tracking_expiration]&.future?
       tracking_data = {
         study: STUDY_NAME,
-        study_group: study_group(session),
+        study_group: study_group(this_session),
         event: "#{provider}-sign-in",
-        data_string: session[:sign_up_uid]
+        data_string: this_session[:sign_up_uid]
       }
       FirehoseClient.instance.put_record(:analysis, tracking_data)
 
       Metrics::Events.log_event(
-        session: session,
+        request: request,
         event_name: "#{provider}-sign-in",
         metadata: {
           study: STUDY_NAME,
-          study_group: study_group(session),
+          study_group: study_group(this_session),
         },
         )
     end
-    end_sign_up_tracking session
+    end_sign_up_tracking this_session
   end
 
-  def self.log_sign_up_result(user, session)
-    return unless user && session
-    sign_up_type = session[:sign_up_type]
+  def self.log_sign_up_result(user, request)
+    return unless user && request
+    this_session = request.session
+    sign_up_type = this_session[:sign_up_type]
     sign_up_type ||= user.email ? 'email' : 'other'
     result = user.persisted? ? 'success' : 'error'
     tracking_data = {
       study: STUDY_NAME,
-      study_group: study_group(session),
+      study_group: study_group(this_session),
       event: "#{sign_up_type}-sign-up-#{result}",
-      data_string: session[:sign_up_uid],
+      data_string: this_session[:sign_up_uid],
       data_json: {
         detail: user.slice(*USER_ATTRIBUTES_OF_INTEREST),
         errors: user.errors&.full_messages
@@ -201,14 +208,14 @@ module SignUpTracking
     FirehoseClient.instance.put_record(:analysis, tracking_data)
 
     Metrics::Events.log_event(
-      session: session,
+      request: request,
       event_name: "#{sign_up_type}-sign-up-#{result}",
       metadata: {
         study: STUDY_NAME,
-        study_group: study_group(session),
+        study_group: study_group(this_session),
       },
       )
 
-    end_sign_up_tracking session if user.persisted?
+    end_sign_up_tracking this_session if user.persisted?
   end
 end
