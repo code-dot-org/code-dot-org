@@ -19,7 +19,9 @@ module Cdo
       n_workers_to_restart_per_batch = (pids.size.to_f / n_batches).ceil
       n_workers_to_restart_per_batch = 1 if n_workers_to_restart_per_batch < 1
 
-      ChatClient.log("delayed_job: rolling deploy of #{n_workers_to_start} workers, restarting in #{n_batches} batches of #{n_workers_to_restart_per_batch}, replacing #{pids.size} existing workers")
+      ChatClient.log("delayed_job: starting #{n_workers_to_start} workers, rolling restart in #{n_batches} batches of #{n_workers_to_restart_per_batch}, replacing #{pids.size} existing workers")
+
+      start_time = Time.now
 
       # We delete ALL existing delayed_job pid_files in pid_dir (dashboard/tmp/pids)
       # before we even start in order to work around a horrible bug in delayed_job:
@@ -52,24 +54,39 @@ module Cdo
       n_workers = n_workers_to_start - n_workers_started
       n_workers_started += start_n_workers(n_workers, initial_worker_index: n_workers_started) if n_workers > 0
 
-      check_worker_status(n_workers_to_start)
+      # Verify that our deploy was succesful: enough workers started, and no old workers still running
+      verify_no_workers_older_than!(start_time)
+      n_workers_running = verify_num_workers_running!(n_workers_to_start)
+      ChatClient.log("delayed_job: rolling restart complete, started #{n_workers_running} workers in #{Time.now - start_time}s")
     end
 
-    def self.check_worker_status(n_workers_to_start)
-      # We're done, now we're just printing informative messages:
-      pids, _ = ExistingWorkers.pids
-      n_workers_running = pids.size
-      ChatClient.log("delayed_job: rolling deploy done, (re)started #{n_workers_running} workers")
+    # Warn/Error if we didn't start the intended number of workers
+    ACCEPTABLE_WORKER_FAILURE_RATE = 0.01
+    def self.verify_num_workers_running!(n_workers_to_start)
+      n_workers_running = ExistingWorkers.get_workers_from_ps.size
 
-      # Warn/Error if we didn't start the intended number of workers
-      if n_workers_to_start != 0 && n_workers_running == 0
-        msg = "delayed_job: ERROR no workers running after worker restart, expected #{n_workers_to_start} workers"
-        ChatClient.log msg
-        raise Exception.new(msg)
-      elsif n_workers_to_start != n_workers_running
-        ChatClient.log("delayed_job: WARNING, intended to start #{n_workers_to_start} workers, but #{n_workers_running} workers are running. If this is a significant difference, this production deploy may have issues!")
+      if n_workers_running < n_workers_to_start
+        worker_failure_rate = (n_workers_to_start - n_workers_running).to_f / n_workers_to_start
+        msg = "delayed_job: ERROR, intended to start #{n_workers_to_start} workers, but only #{n_workers_running} workers are running."
+        ChatClient.log(msg)
+        raise msg if worker_failure_rate > ACCEPTABLE_WORKER_FAILURE_RATE
       end
       n_workers_running
+    end
+
+    # Verify there are no pids that have been running longer than when we started the restart
+    def self.verify_no_workers_older_than!(start_time)
+      workers = ExistingWorkers.get_workers_from_ps # array of [job_id, pid, runtime_seconds] tuples
+
+      s_since_start = Time.now - start_time
+      stale_workers = workers.select {|_, _, runtime_seconds| runtime_seconds > s_since_start}
+
+      unless stale_workers.empty?
+        stale_worker_msg = stale_workers.map {|_, pid, runtime_seconds| "pid #{pid} (running #{runtime_seconds}s)"}.join(", ")
+        msg = "delayed_job: ERROR, old workers appear to still be running, aborting due to the risk of a worker running old code. Deploy started #{s_since_start}s ago, stale workers: #{stale_worker_msg}."
+        ChatClient.log(msg)
+        raise msg
+      end
     end
 
     # Load rails environment into memory before forking workers so
@@ -119,7 +136,7 @@ module Cdo
 
     # Gently stops a list of pids by sending TERM first, waiting
     # timeout_s for them to exit gracefully, and then sending KILL
-    def self.stop_workers(pids, pid_file_hash, timeout_s: 30.seconds)
+    def self.stop_workers(pids, pid_file_hash, timeout_s: 60.seconds)
       ChatClient.log "delayed_job: stopping #{pids.size} workers"
 
       # Send a TERM to each pid, which tells them to finish the current job and exit
@@ -128,25 +145,19 @@ module Cdo
       # Wait timeout_s for the processes to exit gracefully
       wait_for_workers_to_exit(pids, timeout_s)
     rescue Timeout::Error
-      puts "Timeout reached. Not all processes terminated within #{timeout_seconds} seconds."
+      ChatClient.log "delayed_job: WARNING, not all workers terminated within #{timeout_s} seconds, sending SIGKILL to remaining processes."
       # Send a kill to any remaining processes, which stops them immediately
-      pids_still_running = pids.reject {|pid| process_finished?(pid)}
-      pids_still_running.each {|pid| kill('KILL', pid)}
+      pids.each {|pid| kill('KILL', pid)}
       begin
-        wait_for_workers_to_exit(pids_still_running, timeout_s)
+        wait_for_workers_to_exit(pids, timeout_s)
       rescue Timeout::Error
-        ChatClient.log "ERROR: not all delayed_job worker processes terminated within #{timeout_seconds} seconds despite sending SIGKILL, aborting deploy due to the debugging risk of workers running old code."
-        raise
+        msg = "delayed_job: ERROR, not all delayed_job worker processes terminated within #{timeout_s} seconds despite sending SIGKILL, aborting deploy due to the debugging risk of workers running old code."
+        ChatClient.log msg
+        raise Timeout::Error, msg
       end
     ensure
       # delete pid files for workers that have exited, if they exist
       delete_pid_files(pids, pid_file_hash)
-    end
-
-    def self.process_finished?(pid)
-      Process.wait(pid, Process::WNOHANG).nil?
-    rescue
-      true # no such process = already exited
     end
 
     def self.kill(signal, pid)
@@ -155,9 +166,13 @@ module Cdo
     rescue Errno::ESRCH # no such process = already exited
     end
 
-    def self.wait_for_workers_to_exit(pids, timeout_s)
+    def self.wait_for_workers_to_exit(pids_to_watch, timeout_s)
       Timeout.timeout(timeout_s) do
-        sleep 1 until pids.all? {|pid| process_finished?(pid)}
+        pids_to_watch = all_pids = pids_to_watch.to_set
+        until (all_pids & pids_to_watch).empty?
+          sleep 1
+          all_pids = ExistingWorkers.get_workers_from_ps.to_set {|worker| worker[1]}
+        end
       end
     end
 
