@@ -61,7 +61,7 @@ module Cdo
     end
 
     # Warn/Error if we didn't start the intended number of workers
-    ACCEPTABLE_WORKER_FAILURE_RATE = 0.01
+    ACCEPTABLE_WORKER_FAILURE_RATE = 0.02
     def self.verify_num_workers_running!(n_workers_to_start)
       n_workers_running = ExistingWorkers.get_workers_from_ps.size
 
