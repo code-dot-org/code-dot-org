@@ -17,8 +17,7 @@ Scenario: Teacher can create a school associated account in the new sign up flow
   And I press keys "31513" for element "#uitest-school-zip"
   And I select the "Appling County High School" option in dropdown "uitest-school-dropdown"
   And I see no difference for "Finish Sign Up Teacher"
-  When I press "user_email_preference_opt_in_no"
-  And I press "#signup_finish_submit" using jQuery
+  And I press the last button with text "Go to my account" to load a new page
   And I wait until I see selector "#uitest-accept-section-creation"
   And I close my eyes
 
@@ -31,11 +30,9 @@ Scenario: Student can create an account in the new sign up flow
   And I press keys "password" for element "#uitest-confirm-password"
   And I press the last button with text "Create my account" to load a new page
   And I press keys "myDisplayName" for element "#uitest-display-name"
-  And I select the "10" option in dropdown "userAge"
-  And I select the "Washington" option in dropdown "userState"
+  And I select the "10" option in dropdown "uitest-user-age"
+  And I select the "Washington" option in dropdown "uitest-user-state"
   And I open my eyes to test "Finish Sign Up Student"
   And I see no difference for "Finish Sign Up Student"
-  When I press "user_email_preference_opt_in_no"
-  And I press "#signup_finish_submit" using jQuery
-  And I wait until I see selector "#uitest-accept-section-creation"
+  And I press the last button with text "Go to my account" to load a new page
   And I close my eyes
