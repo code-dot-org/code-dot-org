@@ -196,6 +196,7 @@ class ActivitiesController < ApplicationController
         submitted: params[:submitted] == 'true',
         level_source_id: @level_source.try(:id),
         pairing_user_ids: pairing_user_ids,
+        locale: locale,
         time_spent: time_since_last_milestone
       )
 
@@ -215,6 +216,7 @@ class ActivitiesController < ApplicationController
           submitted: false,
           level_source_id: nil,
           pairing_user_ids: pairing_user_ids,
+          locale: locale,
           time_spent: time_since_last_milestone
         )
       end
