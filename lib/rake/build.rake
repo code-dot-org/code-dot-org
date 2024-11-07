@@ -46,20 +46,11 @@ namespace :build do
   end
 
   desc 'Starts Active Job workers, restarts existing workers (if any) in a rolling fashion to avoid downtime'
-  timed_task_with_logging :start_active_job_workers, [:n_workers, :n_batches] do |_t, args|
-    if args[:n_workers]
-      # Manual invocation like `rake 'build:start_active_job_workers[20]'` or with `rake 'build:start_active_job_workers[20,3]'`
-      # specifying n_workers and optionally n_batches.
-      n_workers = args[:n_workers].to_i
-      n_batches = args[:n_batches] ? args[:n_batches].to_i : 3
-      Cdo::ActiveJobBackend.restart_workers(n_workers_to_start: n_workers, rolling_restart_in_n_batches: n_batches)
-    elsif rack_env?(:production)
-      Cdo::ActiveJobBackend.restart_workers(n_workers_to_start: 150, rolling_restart_in_n_batches: 5)
-    elsif CDO.test_system?
-      Cdo::ActiveJobBackend.restart_workers(n_workers_to_start: 10, rolling_restart_in_n_batches: 2)
-    else
-      Cdo::ActiveJobBackend.restart_workers(n_workers_to_start: 1)
-    end
+  timed_task_with_logging :start_active_job_workers do
+    Cdo::ActiveJobBackend.restart_workers(
+      n_workers_to_start: CDO.active_job_backend_n_workers_to_start,
+      rolling_restart_in_n_batches: CDO.active_job_backend_rolling_restart_in_n_batches,
+    )
   end
 
   desc 'Builds dashboard (install gems, migrate/seed db, compile assets).'
