@@ -167,7 +167,7 @@ module Cdo
       Timeout.timeout(timeout_s) do
         pids_to_watch = all_pids = pids_to_watch.to_set
         until (all_pids & pids_to_watch).empty?
-          sleep 1
+          sleep 0.25
           all_pids = ExistingWorkers.get_workers_from_ps.to_set {|worker| worker[1]}
         end
       end
