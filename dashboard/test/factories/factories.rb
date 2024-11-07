@@ -613,6 +613,12 @@ FactoryBot.define do
       end
     end
 
+    trait :with_lti_authentication_option do
+      after(:create) do |user|
+        create(:lti_authentication_option, user: user)
+      end
+    end
+
     trait :with_puzzles do
       transient do
         num_puzzles {1}

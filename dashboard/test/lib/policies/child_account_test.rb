@@ -500,17 +500,38 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
   test '.personal_account?' do
     # [User traits, Expected result from personal_account?]
     test_matrix = [
-      # Migrated
+      # Personal Accounts
       [[:student], true], # Has email auth option and password by default
-      [[:student, :with_clever_authentication_option, :without_email_auth_option, :without_encrypted_password], false],
-      [[:student, :with_lti_auth, :without_email_auth_option, :without_encrypted_password], false],
       [[:student, :with_facebook_authentication_option, :without_email_auth_option, :without_encrypted_password], true],
       [[:student, :with_google_authentication_option, :without_email_auth_option, :without_encrypted_password], true],
       [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :without_encrypted_password], true],
+
+      # School-managed accounts
+      [[:student, :with_clever_authentication_option, :without_email_auth_option, :without_encrypted_password], false],
+      [[:student, :with_lti_authentication_option, :without_email_auth_option, :without_encrypted_password], false],
+
+      # Conditionally school-managed (when in a section or roster synced)
       [[:student, :with_google_authentication_option, :without_email_auth_option, :without_encrypted_password, {roster_synced: true}], false],
-      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :without_encrypted_password, {roster_synced: true}], false],
       [[:student, :with_google_authentication_option, :without_email_auth_option, :without_encrypted_password, :in_google_section], false],
+      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :without_encrypted_password, {roster_synced: true}], false],
       [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :without_encrypted_password, :in_email_section], false],
+
+      # School-managed accounts that have email logins or passwords, tainting them as personal accounts
+      [[:student, :with_clever_authentication_option, :without_encrypted_password], true],
+      [[:student, :with_clever_authentication_option, :without_email_auth_option], true],
+      [[:student, :with_lti_authentication_option, :without_encrypted_password], true],
+      [[:student, :with_lti_authentication_option, :without_email_auth_option], true],
+
+      # Conditionally school-managed accounts that have email logins or passwords, tainting them as personal accounts
+      [[:student, :with_google_authentication_option, :without_email_auth_option, {roster_synced: true}], true],
+      [[:student, :with_google_authentication_option, :without_encrypted_password, {roster_synced: true}], true],
+      [[:student, :with_google_authentication_option, :without_email_auth_option, :in_google_section], true],
+      [[:student, :with_google_authentication_option, :without_encrypted_password, :in_google_section], true],
+      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, {roster_synced: true}], true],
+      [[:student, :with_microsoft_authentication_option, :without_encrypted_password, {roster_synced: true}], true],
+      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :in_email_section], true],
+      [[:student, :with_microsoft_authentication_option, :without_encrypted_password, :in_email_section], true],
+
       # Unmigrated
       [[:student, :without_email_auth_option, :demigrated], true],
       [[:student, :clever_sso_provider, :without_email_auth_option, :without_encrypted_password, :demigrated], false],
