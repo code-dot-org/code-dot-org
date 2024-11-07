@@ -194,7 +194,7 @@ module Cdo
       # Combines worker info from pid files AND ps output, needs this to be robust
       def self.workers_from_ps_and_pid_files
         workers_from_pid_files = get_workers_from_pid_files # array of [job_id, pid, pid_file] tuples
-        workers_from_ps = get_workers_from_ps               # array of [job_id, pid] tuples
+        workers_from_ps = get_workers_from_ps.map {|job_id, pid, _runtime_seconds| [job_id, pid]}
 
         # Start with workers_from_ps as the base, using pid_file from workers_from_pid_files if it exists
         workers = workers_from_ps.map do |job_id, pid|
@@ -208,20 +208,39 @@ module Cdo
         return workers # array of [job_id, pid, pid_file] tuples
       end
 
-      # Returns an array of [job_id, pid] tuples for lines in `ps` matching `delayed_job.<job_id>`
+      # Returns an array of [job_id, pid, runtime_seconds] tuples for lines
+      # in `ps` matching `delayed_job.<job_id>`
       def self.get_workers_from_ps
         # ps output looks like:
         # 39393 random_command_here
         # 79380 delayed_job.0
         # 79382 delayed_job.2
 
-        # Get list of [job_id, pid] for processes matching `delayed_job.<job_id>`
-        `ps -eo pid,command`.lines.
+        # match delayed_job.<job_id> in ps output
+        match_job_id = ->(cmd) {cmd[/^delayed_job\.(\d+)/, 1]&.to_i}
+
+        # convert ps etime `dd-hh:mm:ss` to seconds
+        to_seconds = lambda do |etime|
+          parts = etime.split(/[:-]/).reverse.map(&:to_i) # => [seconds, minutes, hours, days]
+          parts.zip([1, 60, 3600, 86_400]).sum {|value, factor| value * factor}
+        end
+
+        # Use `ps` to get a list of [job_id, pid, runtime_seconds] for processes matching `delayed_job.<job_id>`
+        ps.lines.
           map(&:strip).
-          map {|line| line.split(/\s+/, 2)}. # split each line of ps into two columns
-          map {|pid, cmd| [cmd[/^delayed_job\.(\d+)/, 1]&.to_i, pid.to_i]}. # match ps lines with delayed_job.NNN
-          reject {|job_id, _| job_id.nil?}. # drop ps lines that aren't about delayed_job
-          sort_by {|job_id, _| job_id}
+          map {|line| line.split(/\s+/, 3)}. # split each line of ps into three columns
+          map {|pid, etime, cmd| [match_job_id[cmd], pid.to_i, to_seconds[etime]]}.
+          reject {|job_id, _pid, _| job_id.nil?}. # drop lines that aren't about delayed_job
+          sort_by {|job_id, _pid, _| job_id}
+      end
+
+      def self.ps
+        `ps -eo pid,etime,command`
+      end
+
+      def self.etime_to_seconds(etime)
+        parts = etime.split(/[:-]/).reverse.map(&:to_i)
+        parts.zip([1, 60, 3600, 86_400]).sum {|value, factor| value * factor}
       end
 
       # Returns an array of [job_id, pid, pid_file] tuples for processes with .pid files
