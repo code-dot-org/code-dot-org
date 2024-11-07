@@ -18,7 +18,7 @@ describe 'Cdo::ActiveJobBackend' do
     FileUtils.remove_entry(@pid_dir)
   end
 
-  it 'restart_workers() raises exception at exit if there are stale workers' do
+  it 'restart_workers(): exception if stale workers at exit' do
     Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_5_stale_workers)
 
     Cdo::ActiveJobBackend.stubs(:stop_workers)
@@ -86,7 +86,7 @@ describe 'Cdo::ActiveJobBackend' do
       assert_equal 4, n_workers_running
     end
 
-    it 'raises exception at exit if too few workers are running' do
+    it 'exception at exit if too few workers are running' do
       Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_4_fresh_workers)
 
       Cdo::ActiveJobBackend.stubs(:stop_workers)
@@ -191,6 +191,20 @@ describe 'Cdo::ActiveJobBackend' do
       end
 
       assert_match (/delayed_job: ERROR, old workers appear to still be running/), error.message
+    end
+
+    it 'works even if linux etime rounds up' do
+      # Linux `ps -o etime` appears to round up to the nearest second, so
+      # delayed_job.0 here might have actually been running for only 0.5s:
+      ps_with_worker_runtime_only_1s = <<~HEREDOC
+          PID     ELAPSED COMMAND
+        89890       00:01 delayed_job.0
+      HEREDOC
+      Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_with_worker_runtime_only_1s)
+
+      assert_silent do
+        Cdo::ActiveJobBackend.verify_no_workers_older_than!(Time.now)
+      end
     end
   end
 
