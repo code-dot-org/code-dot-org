@@ -84,6 +84,19 @@ describe 'Cdo::ActiveJobBackend' do
     end
   end
 
+  describe 'stop_workers()' do
+    it 'cleans up pid files' do
+      Cdo::ActiveJobBackend.stubs(:kill)
+      Cdo::ActiveJobBackend.stubs(:wait_for_workers_to_exit)
+
+      pid_file = File.join(@pid_dir, 'delayed_job.1.pid')
+      File.write(pid_file, '1001')
+
+      Cdo::ActiveJobBackend.stop_workers([1001], {1001 => pid_file})
+      refute File.exist?(pid_file)
+    end
+  end
+
   describe 'verify_num_workers_running!()' do
     it 'succeeds when n_workers_to_start matches ps' do
       assert_equal 5, Cdo::ActiveJobBackend.verify_num_workers_running!(4)
