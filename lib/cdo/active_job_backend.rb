@@ -9,12 +9,12 @@ module Cdo
         # pre-cache Rails environment so each `delayed_job` worker command invocation
         # doesn't take N minutes on production.
         before_worker_fork
-        _rolling_restart(n_workers_to_start, n_batches: rolling_restart_in_n_batches)
+        restart_workers_internal(n_workers_to_start, n_batches: rolling_restart_in_n_batches)
       end
       Process.wait(pid)
     end
 
-    def self._rolling_restart(n_workers_to_start, n_batches:)
+    def self.restart_workers_internal(n_workers_to_start, n_batches:)
       pids, pid_file_hash = ExistingWorkers.pids
       n_workers_to_restart_per_batch = (pids.size.to_f / n_batches).ceil
       n_workers_to_restart_per_batch = 1 if n_workers_to_restart_per_batch < 1
