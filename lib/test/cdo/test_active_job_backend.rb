@@ -163,7 +163,7 @@ describe 'Cdo::ActiveJobBackend' do
 
   describe 'verify_num_workers_running!()' do
     it 'succeeds when n_workers_to_start matches ps' do
-      assert_equal 5, Cdo::ActiveJobBackend.verify_num_workers_running!(4)
+      assert_equal 5, Cdo::ActiveJobBackend.verify_num_workers_running!(5)
     end
 
     it 'exception when n_workers_to_start does not match ps' do
