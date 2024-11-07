@@ -69,47 +69,6 @@ export const getNoUnitAssignedEmptyState = (
   };
 };
 
-export const getNoLessonMaterialsForLegacyCourses = (
-  sectionId: number,
-  courseVersionName: string
-) => {
-  return {
-    headline: i18n.lessonMaterialsAreNotAvailable(),
-    descriptionText: i18n.lessonMaterialsLegacyMessage({
-      courseName: 'courseName',
-    }),
-    imageComponent: (
-      <img src={TeacherDashboardEmptyState} alt={i18n.almostThere()} />
-    ),
-    button: (
-      <LinkButton
-        href={
-          '/teacher_dashboard' +
-          generatePath(
-            LABELED_TEACHER_NAVIGATION_PATHS.courseOverview.absoluteUrl,
-            {
-              sectionId: sectionId,
-              courseVersionName: courseVersionName,
-            }
-          )
-        }
-        text={i18n.assignAUnit()}
-      />
-    ),
-  };
-};
-
-export const getNoLessonMaterialsForThisLesson = () => {
-  return {
-    headline: i18n.lessonMaterialsNone(),
-    descriptionText: null,
-    imageComponent: (
-      <img src={TeacherDashboardEmptyState} alt={i18n.almostThere()} />
-    ),
-    button: null,
-  };
-};
-
 export const getNoUnitAssignedForCalendarOrLessonMaterials = (
   sectionId: number,
   courseVersionName: string,
