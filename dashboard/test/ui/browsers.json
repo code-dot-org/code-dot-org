@@ -21,7 +21,10 @@
     "name": "Firefox",
     "browserName": "firefox",
     "browserVersion": "112",
-    "platformName": "Windows 11"
+    "platformName": "Windows 11",
+    "sauce:options": {
+      "extendedDebugging": true
+    }
   },
   {
     "name": "iPhone",
