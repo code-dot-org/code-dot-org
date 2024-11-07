@@ -7,12 +7,12 @@ Scenario: Teacher can create a school associated account in the new sign up flow
   And I open my eyes to test "Teacher Sign up"
   And I see no difference for "Account Selection Page"
   And I press the last button with text "Sign up as a teacher" to load a new page
-  And I press keys "testemail@code.org" for element "#emailInput"
-  And I press keys "password" for element "#passwordInput"
-  And I press keys "password" for element "#confirmPasswordInput"
+  And I press keys "testemail@code.org" for element "#uitest-email"
+  And I press keys "password" for element "#uitest-password"
+  And I press keys "password" for element "#uitest-confirm-password"
   And I see no difference for "Login Type Selection Page"
   And I press the last button with text "Create my account" to load a new page
-  And I press keys "myDisplayName" for element "#displayName"
+  And I press keys "myDisplayName" for element "#uitest-display-name"
   And I select the "United States" option in dropdown "uitest-country-dropdown"
   And I press keys "31513" for element "#uitest-school-zip"
   And I select the "Appling County High School" option in dropdown "uitest-school-dropdown"
@@ -26,11 +26,11 @@ Scenario: Student can create an account in the new sign up flow
 
   Given I am on "http://studio.code.org/users/new_sign_up/account_type"
   And I press the last button with text "Sign up as a student" to load a new page
-  And I press keys "testemail@code.org" for element "#emailInput"
-  And I press keys "password" for element "#passwordInput"
-  And I press keys "password" for element "#confirmPasswordInput"
+  And I press keys "testemail@code.org" for element "#uitest-email"
+  And I press keys "password" for element "#uitest-password"
+  And I press keys "password" for element "#uitest-confirm-password"
   And I press the last button with text "Create my account" to load a new page
-  And I press keys "myDisplayName" for element "#displayName"
+  And I press keys "myDisplayName" for element "#uitest-display-name"
   And I select the "10" option in dropdown "userAge"
   And I select the "Washington" option in dropdown "userState"
   And I open my eyes to test "Finish Sign Up Student"

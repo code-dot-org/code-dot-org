@@ -285,6 +285,7 @@ const FinishStudentAccount: React.FunctionComponent<{
           <div>
             <TextField
               name="displayName"
+              id="uitest-display-name"
               label={locale.display_name_eg()}
               value={name}
               placeholder={locale.coder()}
