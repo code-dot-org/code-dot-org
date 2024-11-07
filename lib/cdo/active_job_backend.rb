@@ -128,7 +128,7 @@ module Cdo
         Cdo::ActiveJobBackend.before_worker_fork
         n_workers.times do |worker_index|
           process_name = "delayed_job.#{worker_index + initial_worker_index}"
-          puts "\tstarting delayed_job worker: #{process_name}"
+          Cdo::ActiveJobBackend.log "\tstarting delayed_job worker: #{process_name}"
           run_process(process_name, @options)
         end
       end
@@ -161,7 +161,7 @@ module Cdo
     end
 
     def self.kill(signal, pid)
-      puts("\tsending #{signal} to delayed_job worker, pid=#{pid}")
+      log "\tsending #{signal} to delayed_job worker, pid=#{pid}"
       Process.kill(signal, pid)
     rescue Errno::ESRCH # no such process = already exited
     end
@@ -182,7 +182,7 @@ module Cdo
         compact.
         each {|pid_file| FileUtils.rm_f(pid_file)}
     rescue => exception
-      puts "\tException deleting old pid files: #{exception}"
+      log "\tException deleting old pid files: #{exception}"
     end
 
     def self.pid_dir
@@ -195,6 +195,10 @@ module Cdo
 
     def self.chat_client_log(*args)
       ChatClient.log(*args)
+    end
+
+    def self.log(message)
+      puts message
     end
 
     module ExistingWorkers
