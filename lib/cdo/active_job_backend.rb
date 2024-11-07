@@ -126,14 +126,14 @@ module Cdo
       pids.each {|pid| kill('TERM', pid)}
 
       # Wait timeout_s for the processes to exit gracefully
-      wait_for_workers_to_exit(pids, 30.seconds)
+      wait_for_workers_to_exit(pids, timeout_s)
     rescue Timeout::Error
       puts "Timeout reached. Not all processes terminated within #{timeout_seconds} seconds."
       # Send a kill to any remaining processes, which stops them immediately
       pids_still_running = pids.reject {|pid| process_finished?(pid)}
       pids_still_running.each {|pid| kill('KILL', pid)}
       begin
-        wait_for_workers_to_exit(pids_still_running, 30.seconds)
+        wait_for_workers_to_exit(pids_still_running, timeout_s)
       rescue Timeout::Error
         ChatClient.log "ERROR: not all delayed_job worker processes terminated within #{timeout_seconds} seconds, despite sending SIGKILL, going forward anyway"
       end
