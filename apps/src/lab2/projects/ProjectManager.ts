@@ -255,6 +255,10 @@ export default class ProjectManager {
     );
   }
 
+  getProjectType() {
+    return this.lastChannel?.projectType;
+  }
+
   redirectToRemix() {
     this.throwErrorIfDestroyed('redirectToRemix');
     if (!this.lastChannel || !this.lastChannel.projectType) {

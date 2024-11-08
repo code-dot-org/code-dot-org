@@ -3,9 +3,10 @@ import React, {useCallback, useEffect, useState} from 'react';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import Link from '@cdo/apps/componentLibrary/link/Link';
 import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {submitProject} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './submit-project-dialog.module.scss';
@@ -18,32 +19,38 @@ import moduleStyles from './submit-project-dialog.module.scss';
 export interface SubmitProjectDialogProps {
   onClose: () => void;
   onGoBack: () => void;
+  projectType: string;
+  channelId: string;
 }
 
 const SubmitProjectDialog: React.FunctionComponent<
   SubmitProjectDialogProps
-> = ({onClose, onGoBack}) => {
+> = ({onClose, onGoBack, projectType, channelId}) => {
   const [projectDescription, setProjectDescription] = useState<string>('');
   const [isSubmitButtonDisabled, setIsSubmitButtonDisabled] =
     useState<boolean>(true);
-  const projectType = useAppSelector(state => state.lab.channel?.projectType);
-  const channelId = useAppSelector(state => state.lab.channel?.id);
 
   useEffect(() => {
     setIsSubmitButtonDisabled(!projectDescription.trim());
   }, [projectDescription]);
 
   const onSubmit = useCallback(async () => {
-    if (channelId && projectType) {
-      setIsSubmitButtonDisabled(true);
-      try {
-        await submitProject(channelId, projectType, projectDescription);
-        // Close submit project dialog and display the share dialog.
-        onGoBack();
-      } catch (err) {
-        console.error(err);
-        // TODO: UI to notify user that submission was not successful.
-      }
+    setIsSubmitButtonDisabled(true);
+    analyticsReporter.sendEvent(
+      EVENTS.SUBMIT_PROJECT_DIALOG_SUBMIT,
+      {
+        lab_type: projectType,
+        channel_id: channelId,
+      },
+      PLATFORMS.STATSIG
+    );
+    try {
+      await submitProject(channelId, projectType, projectDescription);
+      // Close submit project dialog and display the share dialog.
+      onGoBack();
+    } catch (err) {
+      console.error(err);
+      // TODO: UI to notify user that submission was not successful.
     }
   }, [channelId, onGoBack, projectDescription, projectType]);
 

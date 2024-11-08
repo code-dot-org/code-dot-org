@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-04 18:05:52 UTC",
+    "serialized_at": "2024-11-07 22:00:10 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -686,6 +686,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-lesson2LanguageRoutines"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -708,6 +711,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-planningCal"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -880,15 +886,12 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sp-pl-data-science-ch1-lesson2-level2"
-        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "sp-pl-data-science-ch1-lesson2-level2"
+          "sp-pl-DS_ThreeReadsexlemplar"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -896,7 +899,7 @@
         "activity_section.key": "8f7a84e9-64e3-4445-ab71-28cfc22c62e6"
       },
       "level_keys": [
-        "sp-pl-data-science-ch1-lesson2-level2"
+        "sp-pl-DS_ThreeReadsexlemplar"
       ]
     },
     {
@@ -905,15 +908,12 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sp-pl-data-science-ch1-lesson2-level3"
-        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "sp-pl-data-science-ch1-lesson2-level3"
+          "sp-pl-DS_ThreeReadsexlemplar2"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -921,7 +921,7 @@
         "activity_section.key": "8f7a84e9-64e3-4445-ab71-28cfc22c62e6"
       },
       "level_keys": [
-        "sp-pl-data-science-ch1-lesson2-level3"
+        "sp-pl-DS_ThreeReadsexlemplar2"
       ]
     },
     {
@@ -981,31 +981,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "sp-pl-DS-Ethical-Data-Collection"
-        ],
-        "progression": "Ethical Data Collection"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "sp-pl-DS-Ethical-Data-Collection"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "0511d623-b89d-474e-a917-7030365c7ddc"
-      },
-      "level_keys": [
-        "sp-pl-DS-Ethical-Data-Collection"
-      ]
-    },
-    {
-      "chapter": 26,
-      "position": 15,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "sp-pl-DS-teacher-lesson3"
         ],
         "progression": "Ethical Data Collection"
@@ -1022,6 +997,31 @@
       },
       "level_keys": [
         "sp-pl-DS-teacher-lesson3"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 15,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl-DS-Ethical-Data-Collection"
+        ],
+        "progression": "Ethical Data Collection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS-Ethical-Data-Collection"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "0511d623-b89d-474e-a917-7030365c7ddc"
+      },
+      "level_keys": [
+        "sp-pl-DS-Ethical-Data-Collection"
       ]
     },
     {
@@ -4293,9 +4293,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "sp-pl-data-science-ch1-lesson2-level2",
+        "level.key": "sp-pl-DS_ThreeReadsexlemplar",
         "script_level.level_keys": [
-          "sp-pl-data-science-ch1-lesson2-level2"
+          "sp-pl-DS_ThreeReadsexlemplar"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -4305,9 +4305,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "sp-pl-data-science-ch1-lesson2-level3",
+        "level.key": "sp-pl-DS_ThreeReadsexlemplar2",
         "script_level.level_keys": [
-          "sp-pl-data-science-ch1-lesson2-level3"
+          "sp-pl-DS_ThreeReadsexlemplar2"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -4341,9 +4341,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "sp-pl-DS-Ethical-Data-Collection",
+        "level.key": "sp-pl-DS-teacher-lesson3",
         "script_level.level_keys": [
-          "sp-pl-DS-Ethical-Data-Collection"
+          "sp-pl-DS-teacher-lesson3"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -4353,9 +4353,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "sp-pl-DS-teacher-lesson3",
+        "level.key": "sp-pl-DS-Ethical-Data-Collection",
         "script_level.level_keys": [
-          "sp-pl-DS-teacher-lesson3"
+          "sp-pl-DS-Ethical-Data-Collection"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",

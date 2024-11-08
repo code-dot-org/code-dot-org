@@ -208,6 +208,10 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyInstance
   ) as BlocklyWrapperType;
 
+  blocklyWrapper.ALIGN_CENTRE = blocklyInstance.inputs.Align.CENTRE;
+  blocklyWrapper.ALIGN_LEFT = blocklyInstance.inputs.Align.LEFT;
+  blocklyWrapper.ALIGN_RIGHT = blocklyInstance.inputs.Align.RIGHT;
+
   blocklyWrapper.setInfiniteLoopTrap = function () {
     Blockly.JavaScript.INFINITE_LOOP_TRAP = INFINITE_LOOP_TRAP;
   };
