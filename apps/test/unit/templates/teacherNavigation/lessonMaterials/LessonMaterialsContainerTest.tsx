@@ -314,10 +314,10 @@ describe('LessonMaterialsContainer', () => {
       // check for unit resources dropdown
       screen.getByRole('button', {name: 'View unit options dropdown'});
       screen.getByText(
-        i18n.downloadUnitLessonPlans({unitNumber: mockLessonData.unitNumber})
+        i18n.downloadUnitXLessonPlans({unitNumber: mockLessonData.unitNumber})
       );
       screen.getByText(
-        i18n.downloadUnitHandouts({unitNumber: mockLessonData.unitNumber})
+        i18n.downloadUnitXHandouts({unitNumber: mockLessonData.unitNumber})
       );
 
       // Check for lesson dropdowns
