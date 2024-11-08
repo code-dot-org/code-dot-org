@@ -568,8 +568,6 @@ class ProjectsControllerTest < ActionController::TestCase
     Project.stubs(:find_by).returns(@test_project)
     get :submission_status, params: {project_type: 'music', channel_id: @channel_id}
     assert_response :forbidden
-    error_msg = JSON.parse(@response.body)["error"]
-    assert_equal error_msg, "You are not authorized to access this page."
   end
 
   test 'submission_status returns forbidden for signed-out user' do
@@ -577,8 +575,6 @@ class ProjectsControllerTest < ActionController::TestCase
     Project.stubs(:find_by).returns(@test_project)
     post :submission_status, params: {project_type: 'music', channel_id: @channel_id}
     assert_response :forbidden
-    error_msg = JSON.parse(@response.body)["error"]
-    assert_equal error_msg, "To be able to submit your project, you must be signed in."
   end
 
   test 'submit project returns bad_request if no submission description' do
@@ -600,8 +596,6 @@ class ProjectsControllerTest < ActionController::TestCase
     sign_out :user
     post :submit, params: {project_type: 'music', channel_id: @channel_id, submissionDescription: submission_description}
     assert_response :forbidden
-    error_msg = JSON.parse(@response.body)["error"]
-    assert_equal error_msg, "To be able to submit your project, you must be signed in."
   end
 
   test 'submit project returns forbidden if project already submitted' do

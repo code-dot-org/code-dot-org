@@ -202,8 +202,6 @@ class ProjectsController < ApplicationController
     PROJECT_SUBMISSION_STATUS[:PROJECT_TOO_NEW] => "Submission disabled because project has not existed for required time period."
   }
 
-  SIGN_IN_TO_SUBMIT_PROJECT_MESSAGE = 'To be able to submit your project, you must be signed in.'
-
   # GET /projects/:tab_name
   # Where a valid :tab_name is (nil|public|libraries)
   def index
@@ -528,8 +526,7 @@ class ProjectsController < ApplicationController
     begin
       authorize! :submission_status, project
     rescue CanCan::AccessDenied => exception
-      error = current_user ? exception.message : SIGN_IN_TO_SUBMIT_PROJECT_MESSAGE
-      return render status: :forbidden, json: {error: error}
+      return render status: :forbidden, json: {error: exception.message}
     end
     status = project.submission_status
     render(status: :ok, json: {status: status})
@@ -552,8 +549,7 @@ class ProjectsController < ApplicationController
           message:  "Project submission failed due to unauthorized submission status - user unexpectedly bypassed submission_status restriction in the share dialog and attempted to submit project."
         }
       )
-      error = current_user ? PROJECT_SUBMISSION_ERROR_MAP[project.submission_status] : SIGN_IN_TO_SUBMIT_PROJECT_MESSAGE
-      return render status: :forbidden, json: {error: error}
+      return render status: :forbidden, json: {error: PROJECT_SUBMISSION_ERROR_MAP[project.submission_status]}
     end
     # Publish the project, i.e., make it public.
     begin
