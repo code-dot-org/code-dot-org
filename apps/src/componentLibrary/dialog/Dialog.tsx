@@ -39,13 +39,15 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 // TODO:
-// * Add tests
+// * add support of button props
 // * add documentation about aria attributes and custom content rendering
+// * + Add tests
 // * + Add focus trap
 // * + add story with custom content
 // * + add story with custom actions
 // * + add story without close button
-// * + add support of    aria-labelledby="dialog-title"
+// * + add support of
+//   +     aria-labelledby="dialog-title"
 //   +     aria-describedby="dialog-content"
 // * + organize hooks
 // * + add colors support
@@ -53,8 +55,8 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
 /**
  * ## Production-ready Checklist:
  *  * (?) implementation of component approved by design team;
- *  * (?) has storybook, covered with stories and documentation;
- *  * (?) has tests: test every prop, every state and every interaction that's js related;
+ *  * (✔) has storybook, covered with stories and documentation;
+ *  * (✔) has tests: test every prop, every state and every interaction that's js related;
  *  * (see apps/test/unit/componentLibrary/DialogTest.tsx)
  *  * (?) passes accessibility checks;
  *
