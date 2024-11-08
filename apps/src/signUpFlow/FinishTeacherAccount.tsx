@@ -188,6 +188,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
           <div>
             <TextField
               name="displayName"
+              id="uitest-display-name"
               label={locale.what_do_you_want_to_be_called()}
               className={style.nameInput}
               value={name}
