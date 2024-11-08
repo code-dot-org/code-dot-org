@@ -78,8 +78,8 @@ module Metrics
 
         if user.present?
           user_params[:user_id] = user.id.to_s
-          user_params[:custom_ids][:user_type] = user.user_type if user.user_type
-          user_params[:custom_ids][:enabled_experiments] = enabled_experiments if enabled_experiments
+          user_params[:custom][:user_type] = user.user_type if user.user_type
+          user_params[:custom][:enabled_experiments] = enabled_experiments if enabled_experiments
         end
 
         StatsigUser.new(user_params)
