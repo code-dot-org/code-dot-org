@@ -76,7 +76,7 @@ module Levels
 
       # Create ParentLevelsChildLevel many-to-many relationships based on the
       # contents of the specified levels' `contained_level_names` or `project_template_level_name` properties.
-      # Differentiated by level_kind (either contained or project template)
+      # Differentiated by level_kind (either ParentLevelsChildLevel::CONTAINED or ParentLevelsChildLevel::PROJECT_TEMPLATE)
       def setup_child_levels_for(levels, level_kind)
         outdated_levels_child_level_ids = []
         new_levels_child_levels = []
