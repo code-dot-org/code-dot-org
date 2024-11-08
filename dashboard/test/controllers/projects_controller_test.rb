@@ -36,6 +36,7 @@ class ProjectsControllerTest < ActionController::TestCase
     @section.add_student @navigator
 
     @project_owner = create :student
+    @non_project_owner = create :student
     @test_project = create :project, owner: @project_owner
     @channel_id = @test_project.channel_id
   end
@@ -562,10 +563,38 @@ class ProjectsControllerTest < ActionController::TestCase
     end
   end
 
+  test 'submission status returns forbidden for non-project owner' do
+    sign_in_with_request @non_project_owner
+    Project.stubs(:find_by).returns(@test_project)
+    get :submission_status, params: {project_type: 'music', channel_id: @channel_id}
+    assert_response :forbidden
+  end
+
+  test 'submission_status returns forbidden for signed-out user' do
+    sign_out :user
+    Project.stubs(:find_by).returns(@test_project)
+    post :submission_status, params: {project_type: 'music', channel_id: @channel_id}
+    assert_response :forbidden
+  end
+
   test 'submit project returns bad_request if no submission description' do
     submission_description = ''
     post :submit, params: {project_type: 'music', channel_id: @channel_id, submissionDescription: submission_description}
     assert_response :bad_request
+  end
+
+  test 'submit project returns forbidden for non-project owner' do
+    submission_description = 'test description'
+    sign_in_with_request @non_project_owner
+    post :submit, params: {project_type: 'music', channel_id: @channel_id, submissionDescription: submission_description}
+    assert_response :forbidden
+  end
+
+  test 'submit project returns forbidden for signed-out user' do
+    submission_description = 'test description'
+    sign_out :user
+    post :submit, params: {project_type: 'music', channel_id: @channel_id, submissionDescription: submission_description}
+    assert_response :forbidden
   end
 
   test 'submit project returns forbidden if project already submitted' do
