@@ -2,6 +2,19 @@
 @import 'font';
 @import '@cdo/apps/componentLibrary/common/styles/mixins';
 
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(90 153 212 / 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(90 153 212 / 0);
+  }
+}
 
 .aiDiffContainer {
   position: fixed;
@@ -17,6 +30,27 @@
 
 .hiddenAiDiffPanel {
   display: none;
+}
+
+.pulse {
+  animation: pulse 1.5s 1.7;
+  box-shadow: 0 0 0 0 rgba(90 153 212 / 0.5);
+}
+
+.taOverlay {
+  position: fixed;
+  left: 51px;
+  bottom: 97px;
+
+  height: 18px;
+  width: 28px;
+  background-size: 28px;
+  padding: 0;
+
+  border-width: 2px;
+  border-color: $background_gray;
+  border-radius: 15px;
+  border-style: solid;
 }
 
 .aiDiffHeader {
