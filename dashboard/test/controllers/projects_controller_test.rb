@@ -568,6 +568,8 @@ class ProjectsControllerTest < ActionController::TestCase
     Project.stubs(:find_by).returns(@test_project)
     get :submission_status, params: {project_type: 'music', channel_id: @channel_id}
     assert_response :forbidden
+    error_msg = JSON.parse(@response.body)["error"]
+    assert_equal error_msg, "You are not authorized to access this page."
   end
 
   test 'submission_status returns forbidden for signed-out user' do
@@ -575,6 +577,8 @@ class ProjectsControllerTest < ActionController::TestCase
     Project.stubs(:find_by).returns(@test_project)
     post :submission_status, params: {project_type: 'music', channel_id: @channel_id}
     assert_response :forbidden
+    error_msg = JSON.parse(@response.body)["error"]
+    assert_equal error_msg, "To be able to submit your project, you must be signed in."
   end
 
   test 'submit project returns bad_request if no submission description' do
@@ -586,6 +590,7 @@ class ProjectsControllerTest < ActionController::TestCase
   test 'submit project returns forbidden for non-project owner' do
     submission_description = 'test description'
     sign_in_with_request @non_project_owner
+    Project.stubs(:find_by).returns(@test_project)
     post :submit, params: {project_type: 'music', channel_id: @channel_id, submissionDescription: submission_description}
     assert_response :forbidden
   end
@@ -595,6 +600,8 @@ class ProjectsControllerTest < ActionController::TestCase
     sign_out :user
     post :submit, params: {project_type: 'music', channel_id: @channel_id, submissionDescription: submission_description}
     assert_response :forbidden
+    error_msg = JSON.parse(@response.body)["error"]
+    assert_equal error_msg, "To be able to submit your project, you must be signed in."
   end
 
   test 'submit project returns forbidden if project already submitted' do
@@ -605,16 +612,16 @@ class ProjectsControllerTest < ActionController::TestCase
     Projects.any_instance.stubs(:publish).returns({published_at: Time.now})
     post :submit, params: {project_type: 'music', channel_id: @channel_id, submissionDescription: submission_description}
     assert_response :forbidden
+    error_msg = JSON.parse(@response.body)["error"]
+    assert_equal error_msg, "Once submitted, a project cannot be submitted again."
   end
 
   test 'submit project returns success if project passes all restrictions' do
     submission_description = 'this project rocks'
     sign_in_with_request @project_owner
-    Project.stubs(:find_by).returns(@test_project)
-    @controller.stubs(:send_project_submission).returns(:success)
-    Projects.any_instance.stubs(:publish).returns({published_at: Time.now})
     @test_project.stubs(:submission_status).returns(SharedConstants::PROJECT_SUBMISSION_STATUS[:CAN_SUBMIT])
-    sign_in_with_request @project_owner
+    Project.stubs(:find_by).returns(@test_project)
+    Projects.any_instance.stubs(:publish).returns({published_at: Time.now})
     post :submit, params: {project_type: 'music', channel_id: @channel_id, submissionDescription: submission_description}
     assert_response :success
   end
