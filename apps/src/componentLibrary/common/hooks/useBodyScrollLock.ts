@@ -6,7 +6,7 @@ import {useEffect} from 'react';
  *
  * @param isActive - A boolean indicating whether the body scroll should be locked.
  */
-export const useBodyScrollLock = (isActive: boolean) => {
+const useBodyScrollLock = (isActive: boolean) => {
   useEffect(() => {
     if (isActive) {
       document.body.style.overflow = 'hidden'; // Lock scroll
@@ -20,3 +20,5 @@ export const useBodyScrollLock = (isActive: boolean) => {
     };
   }, [isActive]);
 };
+
+export default useBodyScrollLock;
