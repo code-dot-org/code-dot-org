@@ -1,15 +1,10 @@
 import classnames from 'classnames';
-import React, {
-  HTMLAttributes,
-  ReactNode,
-  useCallback,
-  useEffect,
-  useRef,
-} from 'react';
+import React, {HTMLAttributes, ReactNode, useRef} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import CloseButton from '@cdo/apps/componentLibrary/closeButton';
-import {useBodyScrollLock} from '@cdo/apps/componentLibrary/common/hooks/useBodyScrollLock';
+import useBodyScrollLock from '@cdo/apps/componentLibrary/common/hooks/useBodyScrollLock';
+import useEscapeKeyHandler from '@cdo/apps/componentLibrary/common/hooks/useEscapeKeyHandler';
 import useFocusTrap from '@cdo/apps/componentLibrary/common/hooks/useFocusTrap';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
@@ -21,8 +16,12 @@ import moduleStyles from './dialog.module.scss';
 export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
   /** Dialog title */
   title?: string;
-  /** Dialog content */
-  content?: string | ReactNode;
+  /** Dialog description text */
+  description?: string;
+  /** Dialog Custom content (rendered right after/instead Dialog description) */
+  customContent?: ReactNode;
+  /** Custom bottom content (rendered right after Dialog actions section) */
+  customBottomContent?: ReactNode;
   /** Whether to show secondary button */
   showSecondaryButton?: boolean;
   /** Dialog color mode */
@@ -30,7 +29,7 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
   /** Custom class name */
   className?: string;
   /** Dialog onClose handler */
-  onClose: () => void;
+  onClose?: () => void;
   /** Dialog close button aria label */
   closeLabel?: string;
   /** Dialog icon */
@@ -40,15 +39,16 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 // TODO:
-//  * + Add focus trap
-// * add story with custom content
-// * add story with custom actions
-// * add story without close button
-// * add support of    aria-labelledby="dialog-title"
-//         aria-describedby="dialog-content"
-// * organize hooks
-//  * Add tests
-//  * + add colors support
+// * Add tests
+// * add documentation about aria attributes and custom content rendering
+// * + Add focus trap
+// * + add story with custom content
+// * + add story with custom actions
+// * + add story without close button
+// * + add support of    aria-labelledby="dialog-title"
+//   +     aria-describedby="dialog-content"
+// * + organize hooks
+// * + add colors support
 
 /**
  * ## Production-ready Checklist:
@@ -65,10 +65,12 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
  */
 const Dialog: React.FunctionComponent<DialogProps> = ({
   title,
-  content,
+  description,
   showSecondaryButton,
   mode = 'light',
   className,
+  customContent,
+  customBottomContent,
   onClose,
   closeLabel = 'Close dialog',
   icon,
@@ -77,26 +79,9 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
 }) => {
   const dialogRef = useRef<HTMLDivElement>(null);
 
-  // Handle closing the dialog with Escape key
-  const handleKeyDown = useCallback(
-    (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        onClose();
-      }
-    },
-    [onClose]
-  );
-
-  useEffect(() => {
-    document.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [handleKeyDown]);
-
-  useFocusTrap(dialogRef);
   useBodyScrollLock(true);
+  useFocusTrap(dialogRef);
+  useEscapeKeyHandler(onClose);
 
   return (
     <div role="presentation" className={moduleStyles.dialogOverlay}>
@@ -104,8 +89,8 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
         role="dialog"
         ref={dialogRef}
         aria-modal
-        aria-labelledby="dialog-title"
-        aria-describedby="dialog-content"
+        aria-labelledby="dsco-dialog-title"
+        aria-describedby="dsco-dialog-description"
         className={classnames(
           moduleStyles.dialog,
           moduleStyles[`dialog-${mode}`],
@@ -115,10 +100,16 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
       >
         <div className={moduleStyles.dialogTextSection}>
           {imageUrl && <img src={imageUrl} alt="Dialog" />}
-          <Heading2>{title}</Heading2>
-          <BodyTwoText className={moduleStyles.dialogContent}>
-            {content}
-          </BodyTwoText>
+          <Heading2 id="dsco-dialog-title">{title}</Heading2>
+          {description && (
+            <BodyTwoText
+              id="dsco-dialog-description"
+              className={moduleStyles.dialogContent}
+            >
+              {description}
+            </BodyTwoText>
+          )}
+          {customContent}
         </div>
         <div className={moduleStyles.dialogActionsSection}>
           {showSecondaryButton && (
@@ -136,6 +127,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
             onClick={() => null}
           />
         </div>
+        {customBottomContent}
 
         {icon && (
           <FontAwesomeV6Icon {...icon} className={moduleStyles.dialogIcon} />
