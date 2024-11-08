@@ -57,14 +57,14 @@ const SECTIONS = [
   {
     id: 11,
     name: 'Period 11',
-    course_offering_id: 123,
-    courseVersionId: 2023,
-    courseVersionName: 'csd1-2024',
-    unitName: 'csd1-2024',
+    course_offering_id: 1234,
+    courseVersionId: 20234,
+    courseVersionName: 'csd1-2020',
+    unitName: 'csd1-2020',
     unitSelection: {
-      unitName: 'csd1-2024',
+      unitName: 'csd1-2020',
     },
-    course_display_name: 'CSD1-2024',
+    course_display_name: 'CSD1-2020',
   },
 ];
 
@@ -102,6 +102,7 @@ const NO_SHOW_CALENDAR_UNIT_SUMMARY = {
 
 const LEGACY_UNIT_SUMMARY = {
   ...UNIT_SUMMARY,
+  name: 'csd1-2020',
   version_year: '2020',
 };
 
@@ -229,13 +230,13 @@ describe('UnitCalendar', () => {
   });
 
   it('notifies users that the assigned curriculum is pre-2020', async () => {
-    store.dispatch(setUnitName('csd1-2024'));
+    store.dispatch(setUnitName('csd1-2020'));
     store.dispatch(selectSection(11));
     fetchSpy.mockResolvedValue({
       value: {
         unitData: LEGACY_UNIT_SUMMARY,
         plcBreadcrumb: {
-          unit_name: 'csd1-2024',
+          unit_name: 'csd1-2020',
           course_view_path: 'http://example.com/course',
         },
       },
@@ -248,7 +249,7 @@ describe('UnitCalendar', () => {
 
     screen.getByAltText(i18n.calendarNotAvailable());
     screen.getByText(i18n.calendarNotAvailable());
-    screen.getByText(i18n.calendarLegacyMessage({courseName: 'CSD1-2024'}));
+    screen.getByText(i18n.calendarLegacyMessage({courseName: 'CSD1-2020'}));
     jest.restoreAllMocks();
   });
 });

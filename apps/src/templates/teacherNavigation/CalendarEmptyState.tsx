@@ -21,10 +21,8 @@ export const CalendarEmptyState: React.FC = () => {
 
   const selectedSection = useAppSelector(selectedSectionSelector);
   const versionYear = useAppSelector(state => state.calendar?.versionYear);
-  console.log('versionYear:', versionYear);
   const isLegacyScript = versionYear ? versionYear < 2021 : false;
   const hasCalendar = useAppSelector(state => state.calendar?.showCalendar);
-  console.log('hasCalendar:', hasCalendar);
   const showNoCurriculumAssigned = !selectedSection.courseOfferingId;
   const emptyStateDetails = generateCalendarEmptyState(
     showNoCurriculumAssigned,
@@ -71,9 +69,6 @@ function generateCalendarEmptyState(
   hasCalendar: boolean
 ): EmptyStateContent | null {
   let calendarEmptyState = null;
-
-  console.log('unitName:', unitName);
-  console.log('selectedSection:', selectedSection);
 
   if (showNoCurriculumAssigned) {
     calendarEmptyState = getNoCurriculumAssignedEmptyState();
