@@ -36,7 +36,7 @@ export async function submitProject(
 export async function getSubmissionStatus(
   channelId: string,
   projectType: string
-): Promise<SubmissionStatusType | undefined> {
+): Promise<SubmissionStatusType> {
   const response = await HttpClient.fetchJson<SubmissionStatusResponse>(
     `/projects/${projectType}/${channelId}/submission_status`
   );

@@ -71,20 +71,21 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   useEffect(() => {
     // Only signed-in users can submit projects to be considered for the featured project gallery.
     if (channelId && projectType && isSignedIn) {
-      try {
-        getSubmissionStatus(channelId, projectType).then(response =>
-          setSubmissionStatus(response)
-        );
-      } catch (error) {
-        if (!(error instanceof NetworkError && error.response.status === 403)) {
-          MetricsReporter.logError({
-            event: MetricEvent.SUBMISSION_STATUS_UNEXPECTED_ERROR,
-            errorMessage: 'Unexpected error in getting submission status.',
-            projectType: projectType,
-            channelId: channelId,
-          });
-        }
-      }
+      getSubmissionStatus(channelId, projectType)
+        .then(response => setSubmissionStatus(response))
+        .catch(error => {
+          // Check for and log unexpected non-forbidden errors.
+          if (
+            !(error instanceof NetworkError && error.response.status === 403)
+          ) {
+            MetricsReporter.logError({
+              event: MetricEvent.SUBMISSION_STATUS_UNEXPECTED_ERROR,
+              errorMessage: 'Unexpected error in getting submission status.',
+              projectType: projectType,
+              channelId: channelId,
+            });
+          }
+        });
     }
   }, [channelId, isSignedIn, projectType]);
 
