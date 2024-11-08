@@ -7,6 +7,7 @@ import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
+import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -21,6 +22,7 @@ export default class SelectedStudentInfo extends React.Component {
     selectedUserId: PropTypes.number,
     teacherId: PropTypes.number,
     levelsWithProgress: PropTypes.arrayOf(levelWithProgress),
+    isSortedByFamilyName: PropTypes.bool,
   };
 
   onUnsubmit = userLevelId => {
@@ -41,31 +43,40 @@ export default class SelectedStudentInfo extends React.Component {
       .fail(err => console.error(err));
   };
 
-  nextStudent = () => {
-    const {students, selectedUserId, onSelectUser} = this.props;
+  sortStudents = () => {
+    const {students, isSortedByFamilyName} = this.props;
+    return isSortedByFamilyName
+      ? [...students].sort(stringKeyComparator(['familyName', 'name']))
+      : [...students].sort(stringKeyComparator(['name', 'familyName']));
+  };
 
-    const currentStudentIndex = students.findIndex(
+  nextStudent = () => {
+    const {selectedUserId, onSelectUser} = this.props;
+    const sortedStudents = this.sortStudents();
+
+    const currentStudentIndex = sortedStudents.findIndex(
       student => student.id === selectedUserId
     );
-    if (currentStudentIndex === students.length - 1) {
+    if (currentStudentIndex === sortedStudents.length - 1) {
       onSelectUser(null);
     } else {
-      onSelectUser(students[currentStudentIndex + 1].id);
+      onSelectUser(sortedStudents[currentStudentIndex + 1].id);
     }
   };
 
   previousStudent = () => {
-    const {students, selectedUserId, onSelectUser} = this.props;
+    const {selectedUserId, onSelectUser} = this.props;
+    const sortedStudents = this.sortStudents();
 
-    const currentStudentIndex = students.findIndex(
+    const currentStudentIndex = sortedStudents.findIndex(
       student => student.id === selectedUserId
     );
     if (currentStudentIndex === 0) {
       onSelectUser(null);
     } else if (currentStudentIndex === -1) {
-      onSelectUser(students[students.length - 1].id);
+      onSelectUser(sortedStudents[sortedStudents.length - 1].id);
     } else {
-      onSelectUser(students[currentStudentIndex - 1].id);
+      onSelectUser(sortedStudents[currentStudentIndex - 1].id);
     }
   };
 
