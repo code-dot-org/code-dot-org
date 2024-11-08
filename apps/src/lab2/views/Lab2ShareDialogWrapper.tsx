@@ -7,12 +7,15 @@ import popupWindow from '@cdo/apps/code-studio/popup-window';
 import {LABS_USING_NEW_SHARE_DIALOG} from '@cdo/apps/lab2/constants';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {MetricEvent} from '@cdo/apps/metrics/events';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {isSignedIn as getIsSignedIn} from '@cdo/apps/templates/currentUserRedux';
 import {
   getSubmissionStatus,
   SubmissionStatusType,
 } from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
 import SubmitProjectDialog from '@cdo/apps/templates/projects/submitProjectDialog/SubmitProjectDialog';
+import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {LabState} from '../lab2Redux';
@@ -68,9 +71,20 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   useEffect(() => {
     // Only signed-in users can submit projects to be considered for the featured project gallery.
     if (channelId && projectType && isSignedIn) {
-      getSubmissionStatus(channelId, projectType).then(response =>
-        setSubmissionStatus(response)
-      );
+      try {
+        getSubmissionStatus(channelId, projectType).then(response =>
+          setSubmissionStatus(response)
+        );
+      } catch (error) {
+        if (!(error instanceof NetworkError && error.response.status === 403)) {
+          MetricsReporter.logError({
+            event: MetricEvent.SUBMISSION_STATUS_UNEXPECTED_ERROR,
+            errorMessage: 'Unexpected error in getting submission status.',
+            projectType: projectType,
+            channelId: channelId,
+          });
+        }
+      }
     }
   }, [channelId, isSignedIn, projectType]);
 
@@ -82,11 +96,22 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
 
   const onGoBack = () => {
     setDialogPanel('share');
-    // If the project was submitted successfully, the submission status is updated.
+    // If the project was submitted successfully, the submission status is updated (only for signed-in users).
     if (channelId && projectType && isSignedIn) {
-      getSubmissionStatus(channelId, projectType).then(response =>
-        setSubmissionStatus(response)
-      );
+      try {
+        getSubmissionStatus(channelId, projectType).then(response =>
+          setSubmissionStatus(response)
+        );
+      } catch (error) {
+        if (!(error instanceof NetworkError && error.response.status === 403)) {
+          MetricsReporter.logError({
+            event: MetricEvent.SUBMISSION_STATUS_UNEXPECTED_ERROR,
+            errorMessage: 'Unexpected error in getting submission status.',
+            projectType: projectType,
+            channelId: channelId,
+          });
+        }
+      }
     }
   };
 
