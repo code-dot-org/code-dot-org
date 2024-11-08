@@ -9,6 +9,7 @@ import {ChatTextMessage} from './types';
 
 import style from './ai-differentiation.module.scss';
 
+// Fallback method for browsers that do not support navigator.clipboard
 const copyToClipboard = (text: string) => {
   const textField = document.createElement('textarea');
   textField.innerText = text;
