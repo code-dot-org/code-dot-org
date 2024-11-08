@@ -347,6 +347,60 @@ describe('TeacherPanel', () => {
       expect(selectUserStub).toHaveBeenCalledWith(3, false);
     });
 
+    it('previous button navigates to correct student when sorting by given name', () => {
+      const store = createStore(combineReducers({viewAs, currentUser}), {
+        viewAs: ViewType.Instructor,
+      });
+
+      const selectUserStub = jest.fn();
+
+      const props = {
+        ...DEFAULT_PROPS,
+        viewAs: ViewType.Instructor,
+        students: students,
+        selectUser: selectUserStub,
+      };
+
+      const wrapper = mount(
+        <Provider store={store}>
+          <TeacherPanel {...props} />
+        </Provider>
+      );
+
+      const previousButton = wrapper.find('i').at(2);
+      previousButton.simulate('click');
+      expect(selectUserStub).toHaveBeenCalledWith(3, false);
+    });
+
+    it('previous button navigates to correct student when sorting by family name', () => {
+      const store = createStore(combineReducers({viewAs, currentUser}), {
+        viewAs: ViewType.Instructor,
+        currentUser: {
+          isSortedByFamilyName: true,
+        },
+      });
+
+      const selectUserStub = jest.fn();
+
+      const props = {
+        ...DEFAULT_PROPS,
+        viewAs: ViewType.Instructor,
+        isSortedByFamilyName: true,
+        students: students,
+        selectUser: selectUserStub,
+      };
+
+      const wrapper = mount(
+        <Provider store={store}>
+          <TeacherPanel {...props} />
+        </Provider>
+      );
+
+      const previousButton = wrapper.find('i').at(2);
+      previousButton.simulate('click');
+      expect(selectUserStub).toHaveBeenCalledWith(2, false);
+    });
+
     it('calls selectUser when user is clicked with isAsync true when on overview page', () => {
       const store = createStore(combineReducers({viewAs, currentUser}), {
         viewAs: ViewType.Instructor,
