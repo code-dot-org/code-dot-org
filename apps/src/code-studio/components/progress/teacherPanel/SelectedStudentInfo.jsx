@@ -52,31 +52,31 @@ export default class SelectedStudentInfo extends React.Component {
 
   nextStudent = () => {
     const {selectedUserId, onSelectUser} = this.props;
-    const sortedStudents = this.sortStudents();
+    const students = this.sortStudents();
 
-    const currentStudentIndex = sortedStudents.findIndex(
+    const currentStudentIndex = students.findIndex(
       student => student.id === selectedUserId
     );
-    if (currentStudentIndex === sortedStudents.length - 1) {
+    if (currentStudentIndex === students.length - 1) {
       onSelectUser(null);
     } else {
-      onSelectUser(sortedStudents[currentStudentIndex + 1].id);
+      onSelectUser(students[currentStudentIndex + 1].id);
     }
   };
 
   previousStudent = () => {
     const {selectedUserId, onSelectUser} = this.props;
-    const sortedStudents = this.sortStudents();
+    const students = this.sortStudents();
 
-    const currentStudentIndex = sortedStudents.findIndex(
+    const currentStudentIndex = students.findIndex(
       student => student.id === selectedUserId
     );
     if (currentStudentIndex === 0) {
       onSelectUser(null);
     } else if (currentStudentIndex === -1) {
-      onSelectUser(sortedStudents[sortedStudents.length - 1].id);
+      onSelectUser(students[students.length - 1].id);
     } else {
-      onSelectUser(sortedStudents[currentStudentIndex - 1].id);
+      onSelectUser(students[currentStudentIndex - 1].id);
     }
   };
 
