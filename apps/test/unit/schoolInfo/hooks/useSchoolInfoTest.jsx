@@ -64,10 +64,10 @@ describe('useSchoolInfo', () => {
   });
 
   it('should use initialState instead of sessionStorage if passed', async () => {
-    sessionStorage.setItem(SCHOOL_COUNTRY_SESSION_KEY, 'US');
-    sessionStorage.setItem(SCHOOL_ID_SESSION_KEY, '2');
-    sessionStorage.setItem(SCHOOL_NAME_SESSION_KEY, 'Other School');
-    sessionStorage.setItem(SCHOOL_ZIP_SESSION_KEY, '12345');
+    sessionStorage.setItem(SCHOOL_COUNTRY_SESSION_KEY, 'CA');
+    sessionStorage.setItem(SCHOOL_ID_SESSION_KEY, '');
+    sessionStorage.setItem(SCHOOL_NAME_SESSION_KEY, 'Stored School');
+    sessionStorage.setItem(SCHOOL_ZIP_SESSION_KEY, '');
 
     const {result, waitForNextUpdate} = renderHook(() =>
       useSchoolInfo(initialState)
@@ -78,6 +78,7 @@ describe('useSchoolInfo', () => {
 
     expect(result.current.country).toBe(initialState.country);
     expect(result.current.schoolId).toBe(initialState.schoolId);
+    // initial state has schoolId, so schoolName is empty
     expect(result.current.schoolName).toBe('');
     expect(result.current.schoolZip).toBe(initialState.schoolZip);
   });
