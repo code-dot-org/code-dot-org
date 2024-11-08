@@ -51,10 +51,12 @@ const SubmitProjectDialog: React.FunctionComponent<
       },
       PLATFORMS.STATSIG
     );
+    MetricsReporter.incrementCounter('SubmitProjectDialog.SubmitAttempt');
     try {
       await submitProject(channelId, projectType, projectDescription);
       // Close submit project dialog and display the share dialog.
       onGoBack();
+      MetricsReporter.incrementCounter('SubmitProjectDialog.SubmitSuccess');
     } catch (error) {
       if (!(error instanceof NetworkError && error.response.status === 403)) {
         MetricsReporter.logError({
@@ -64,6 +66,13 @@ const SubmitProjectDialog: React.FunctionComponent<
           projectType: projectType,
           channelId: channelId,
         });
+        MetricsReporter.incrementCounter(
+          'SubmitProjectDialog.SubmitUnexpectedError'
+        );
+      } else {
+        MetricsReporter.incrementCounter(
+          'SubmitProjectDialog.SubmitForbiddenError'
+        );
       }
       setIsSubmitButtonDisabled(false);
       setShowSubmitError(true);
