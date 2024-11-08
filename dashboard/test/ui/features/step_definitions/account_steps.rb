@@ -298,7 +298,7 @@ And(/^eight days pass for user "([^"]*)"$/) do |name|
 end
 
 And(/^one year passes for user "([^"]*)"$/) do |name|
-  pass_time_for_user name, 1.year.ago
+  pass_time_for_user name, 1.year.ago - 1.day
 end
 
 def pass_time_for_user(name, amount_of_time)
@@ -307,7 +307,8 @@ def pass_time_for_user(name, amount_of_time)
   user.created_at = amount_of_time
   user.last_seen_school_info_interstitial = amount_of_time if user.last_seen_school_info_interstitial
   user.save!
-  user.user_school_infos.each do |info|
+  info = user.user_school_infos.where(end_date: nil).order(id: :desc).first
+  if info
     info.last_confirmation_date = amount_of_time
     info.save!
   end
