@@ -5,6 +5,7 @@ import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
 import calendar from '@cdo/apps/code-studio/calendarRedux';
+import progress from '@cdo/apps/code-studio/progressRedux';
 import {
   getStore,
   registerReducers,
@@ -16,7 +17,7 @@ import unitSelection, {setUnitName} from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
-import teacherSectionsRedux, {
+import teacherSections, {
   selectSection,
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -34,6 +35,36 @@ const SECTIONS = [
     unitSelection: {
       unitName: 'csd1-2024',
     },
+  },
+  {
+    id: 9,
+    name: 'Period 9',
+    course_offering_id: null,
+    courseVersionId: null,
+    unitName: null,
+    unitSelection: null,
+  },
+  {
+    id: 10,
+    name: 'Period 10',
+    course_offering_id: 123,
+    courseVersionId: 2023,
+    courseVersionName: 'csd-2024',
+    unitName: null,
+    unitSelection: null,
+    course_display_name: 'CSD',
+  },
+  {
+    id: 11,
+    name: 'Period 11',
+    course_offering_id: 123,
+    courseVersionId: 2023,
+    courseVersionName: 'csd1-2024',
+    unitName: 'csd1-2024',
+    unitSelection: {
+      unitName: 'csd1-2024',
+    },
+    course_display_name: 'CSD1-2024',
   },
 ];
 
@@ -61,11 +92,17 @@ const UNIT_SUMMARY = {
     },
   ],
   showCalendar: true,
+  version_year: '2024',
 };
 
-const NO_SHOW_UNIT_SUMMARY = {
+const NO_SHOW_CALENDAR_UNIT_SUMMARY = {
   ...UNIT_SUMMARY,
   showCalendar: false,
+};
+
+const LEGACY_UNIT_SUMMARY = {
+  ...UNIT_SUMMARY,
+  version_year: '2020',
 };
 
 describe('UnitCalendar', () => {
@@ -79,9 +116,10 @@ describe('UnitCalendar', () => {
     registerReducers({
       locales,
       currentUser,
-      teacherSectionsRedux,
+      teacherSections,
       unitSelection,
       calendar,
+      progress,
     });
 
     store = getStore();
@@ -92,16 +130,6 @@ describe('UnitCalendar', () => {
     store.dispatch(selectSection(1));
     store.dispatch(setUnitName('csd1-2024'));
 
-    // fetchSpy = jest.spyOn(HttpClient, 'fetchJson').mockResolvedValue({
-    //   value: {
-    //     unitData: NO_SHOW_UNIT_SUMMARY,
-    //     plcBreadcrumb: {
-    //       unit_name: 'csd1-2024',
-    //       course_view_path: 'http://example.com/course',
-    //     },
-    //   },
-    //   response: new Response(),
-    // });
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
   });
 
@@ -149,10 +177,9 @@ describe('UnitCalendar', () => {
 
   // Works for SHOW_NO_UNIT_SUMMARY
   it('shows no calendar, when showCalendar is false', async () => {
-    console.log('running no calendar test');
     fetchSpy.mockResolvedValue({
       value: {
-        unitData: NO_SHOW_UNIT_SUMMARY,
+        unitData: NO_SHOW_CALENDAR_UNIT_SUMMARY,
         plcBreadcrumb: {
           unit_name: 'csd1-2024',
           course_view_path: 'http://example.com/course',
@@ -166,6 +193,62 @@ describe('UnitCalendar', () => {
 
     screen.getByAltText(i18n.calendarNotAvailable());
     screen.getByText(i18n.calendarNotAvailable());
+    jest.restoreAllMocks();
+  });
+
+  it('tells users to select a curriculum when no curriculum assigned', async () => {
+    store.dispatch(selectSection(9));
+    store.dispatch(setUnitName(null));
+
+    await act(async () => {
+      renderComponent();
+    });
+
+    screen.getByAltText('blank screen');
+    screen.getByText(i18n.emptySectionHeadline());
+    screen.getByText(i18n.noCurriculumAssigned());
+    screen.getByText(i18n.browseCurriculum());
+    jest.restoreAllMocks();
+  });
+
+  it('tells users to select a unit when no unit assigned', async () => {
+    store.dispatch(selectSection(10));
+    store.dispatch(setUnitName(null));
+
+    await act(async () => {
+      renderComponent();
+    });
+
+    screen.getByAltText(i18n.almostThere());
+    screen.getByText(i18n.almostThere());
+    screen.getByText(
+      i18n.noUnitAssigned({page: 'the calendar', courseName: 'CSD'})
+    );
+    screen.getByText(i18n.assignAUnit());
+    jest.restoreAllMocks();
+  });
+
+  it('notifies users that the assigned curriculum is pre-2020', async () => {
+    store.dispatch(setUnitName('csd1-2024'));
+    store.dispatch(selectSection(11));
+    fetchSpy.mockResolvedValue({
+      value: {
+        unitData: LEGACY_UNIT_SUMMARY,
+        plcBreadcrumb: {
+          unit_name: 'csd1-2024',
+          course_view_path: 'http://example.com/course',
+        },
+      },
+      response: new Response(),
+    });
+
+    await act(async () => {
+      renderComponent();
+    });
+
+    screen.getByAltText(i18n.calendarNotAvailable());
+    screen.getByText(i18n.calendarNotAvailable());
+    screen.getByText(i18n.calendarLegacyMessage({courseName: 'CSD1-2024'}));
     jest.restoreAllMocks();
   });
 });

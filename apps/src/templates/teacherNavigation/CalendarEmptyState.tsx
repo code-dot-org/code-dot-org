@@ -21,8 +21,10 @@ export const CalendarEmptyState: React.FC = () => {
 
   const selectedSection = useAppSelector(selectedSectionSelector);
   const versionYear = useAppSelector(state => state.calendar?.versionYear);
+  console.log('versionYear:', versionYear);
   const isLegacyScript = versionYear ? versionYear < 2021 : false;
   const hasCalendar = useAppSelector(state => state.calendar?.showCalendar);
+  console.log('hasCalendar:', hasCalendar);
   const showNoCurriculumAssigned = !selectedSection.courseOfferingId;
   const emptyStateDetails = generateCalendarEmptyState(
     showNoCurriculumAssigned,
@@ -69,16 +71,9 @@ function generateCalendarEmptyState(
   hasCalendar: boolean
 ): EmptyStateContent | null {
   let calendarEmptyState = null;
-  console.log('logging showNoCurriculumAssigned');
-  console.log(showNoCurriculumAssigned);
-  console.log('logging unitName');
-  console.log(unitName);
-  console.log('logging selectedSection');
-  console.log(selectedSection);
-  console.log('logging isLegacyScript');
-  console.log(isLegacyScript);
-  console.log('logging hasCalendar');
-  console.log(hasCalendar);
+
+  console.log('unitName:', unitName);
+  console.log('selectedSection:', selectedSection);
 
   if (showNoCurriculumAssigned) {
     calendarEmptyState = getNoCurriculumAssignedEmptyState();
@@ -98,11 +93,7 @@ function generateCalendarEmptyState(
       selectedSection.courseDisplayName
     );
   } else if (!hasCalendar) {
-    console.log('logging hasCalendar');
-    console.log(hasCalendar);
     calendarEmptyState = getNoCalendarForThisUnit;
   }
-  console.log('logging calendarEmptyState');
-  console.log(calendarEmptyState);
   return calendarEmptyState;
 }
