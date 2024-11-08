@@ -285,6 +285,7 @@ const FinishStudentAccount: React.FunctionComponent<{
           <div>
             <TextField
               name="displayName"
+              id="uitest-display-name"
               label={locale.display_name_eg()}
               value={name}
               placeholder={locale.coder()}
@@ -299,6 +300,7 @@ const FinishStudentAccount: React.FunctionComponent<{
           <div>
             <SimpleDropdown
               name="userAge"
+              id="uitest-user-age"
               className={style.dropdownContainer}
               labelText={locale.what_is_your_age()}
               size="m"
@@ -316,6 +318,7 @@ const FinishStudentAccount: React.FunctionComponent<{
             <div>
               <SimpleDropdown
                 name="userState"
+                id="uitest-user-state"
                 className={style.dropdownContainer}
                 labelText={locale.what_state_are_you_in()}
                 size="m"

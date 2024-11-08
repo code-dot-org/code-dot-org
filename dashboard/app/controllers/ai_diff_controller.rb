@@ -31,7 +31,7 @@ class AiDiffController < ApplicationController
 
     @unit = Unit.find_by(id: @lesson.script_id)
     @unit_group = @unit.unit_groups.first
-    course_name = CourseOffering.find_by(id: @unit_group.course_version.course_offering_id).display_name
+    course_name = CourseOffering.find_by(id: @unit_group&.course_version&.course_offering_id)&.display_name
     full_unit_name = format("%{course_name} %{unit_name}", course_name: course_name, unit_name: params[:unitDisplayName])
 
     bedrock_rag_response = AiDiffBedrockHelper.request_bedrock_rag_chat(params[:inputText], lesson_name, lesson_num, full_unit_name, session_id)

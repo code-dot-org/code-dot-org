@@ -277,6 +277,18 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
   }, [availableKits, currentValue.instrument]);
   const [currentPreviewTick, setCurrentPreviewTick] = useState(0);
 
+  const previewNote = useCallback(
+    (note: number) => {
+      // Don't preview the note if we're previewing the whole pattern
+      if (currentPreviewTick > 0) {
+        return;
+      }
+
+      MusicRegistry.player.previewNote(note, currentValue.instrument);
+    },
+    [currentValue.instrument, currentPreviewTick]
+  );
+
   const toggleEvent = useCallback(
     (tick: number, note: number) => {
       const index = currentValue.events.findIndex(
@@ -288,12 +300,12 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
       } else {
         // Not found, so add.
         currentValue.events.push({tick, note});
-        MusicRegistry.player.previewNote(note, currentValue.instrument);
+        previewNote(note);
       }
 
       onChange(currentValue);
     },
-    [onChange, currentValue]
+    [onChange, currentValue, previewNote]
   );
 
   const hasEvent = (note: number, tick: number) => {
@@ -539,7 +551,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
   const aiBotImage = getAiBotImage();
 
   return (
-    <div className={styles.patternPanel}>
+    <div className={styles.patternPanel} dir="ltr">
       <LoadingOverlay show={isLoading} />
 
       <div
@@ -591,12 +603,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
                     <div className={styles.nameContainer}>
                       <span
                         className={styles.name}
-                        onClick={() =>
-                          MusicRegistry.player.previewNote(
-                            note || index,
-                            currentValue.instrument
-                          )
-                        }
+                        onClick={() => previewNote(note || index)}
                       >
                         {name}
                       </span>
@@ -679,7 +686,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
                       ['aria-label']: 'Increase',
                     }}
                     hideValue={true}
-                    color="white"
+                    color="aqua"
                   />
                 </div>
               </div>

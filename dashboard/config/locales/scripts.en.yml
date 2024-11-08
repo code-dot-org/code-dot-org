@@ -19556,7 +19556,9 @@ en:
           description: ''
           student_description: ''
         sandbox-teaching-getting-started:
-          lessons: {}
+          lessons:
+            lesson-5:
+              name: Next Steps
           lesson_groups: {}
           name: sandbox-teaching-getting-started
           title: Getting Started Sandbox
@@ -19564,3 +19566,6 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        kt-test-123:
+          lessons: {}
+          lesson_groups: {}
