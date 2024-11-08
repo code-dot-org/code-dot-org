@@ -86,7 +86,6 @@ class HttpCache
     starwarsblocks
     mc
     frozen
-    gumball
     minecraft
     hero
     sports
