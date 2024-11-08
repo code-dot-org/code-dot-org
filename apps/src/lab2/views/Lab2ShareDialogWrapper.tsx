@@ -66,12 +66,13 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   >(undefined);
 
   useEffect(() => {
-    if (channelId && projectType) {
+    // Only signed-in users can submit projects to be considered for the featured project gallery.
+    if (channelId && projectType && isSignedIn) {
       getSubmissionStatus(channelId, projectType).then(response =>
         setSubmissionStatus(response)
       );
     }
-  }, [channelId, projectType]);
+  }, [channelId, isSignedIn, projectType]);
 
   const dispatch = useAppDispatch();
   const onCloseSubmitProjectDialog = useCallback(() => {
@@ -82,7 +83,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   const onGoBack = () => {
     setDialogPanel('share');
     // If the project was submitted successfully, the submission status is updated.
-    if (channelId && projectType) {
+    if (channelId && projectType && isSignedIn) {
       getSubmissionStatus(channelId, projectType).then(response =>
         setSubmissionStatus(response)
       );

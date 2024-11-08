@@ -16,22 +16,18 @@ export async function submitProject(
   projectType: string,
   submissionDescription: string
 ) {
-  try {
-    const payload = {
-      submissionDescription,
-    };
-    const response = await HttpClient.post(
-      `/projects/${projectType}/${channelId}/submit`,
-      JSON.stringify(payload),
-      true,
-      {
-        'Content-Type': 'application/json; charset=UTF-8',
-      }
-    );
-    return response.status;
-  } catch (e) {
-    throw new Error('Project submission error');
-  }
+  const payload = {
+    submissionDescription,
+  };
+  const response = await HttpClient.post(
+    `/projects/${projectType}/${channelId}/submit`,
+    JSON.stringify(payload),
+    true,
+    {
+      'Content-Type': 'application/json; charset=UTF-8',
+    }
+  );
+  return response.status;
 }
 
 /**
@@ -41,13 +37,8 @@ export async function getSubmissionStatus(
   channelId: string,
   projectType: string
 ): Promise<SubmissionStatusType | undefined> {
-  try {
-    const response = await HttpClient.fetchJson<SubmissionStatusResponse>(
-      `/projects/${projectType}/${channelId}/submission_status`
-    );
-    return response.value.status;
-  } catch (error) {
-    // TODO: handle signed out user case separately from other unhandled errors.
-    return undefined;
-  }
+  const response = await HttpClient.fetchJson<SubmissionStatusResponse>(
+    `/projects/${projectType}/${channelId}/submission_status`
+  );
+  return response.value.status;
 }
