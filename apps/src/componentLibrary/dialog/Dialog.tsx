@@ -58,10 +58,10 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
  *  * (see apps/test/unit/componentLibrary/DialogTest.tsx)
  *  * (?) passes accessibility checks;
  *
- * ###  Status: ```WIP```
+ * ###  Status: ```Ready for dev```
  *
  * Design System: Dialog Component.
- * Renders Alert to notify user about something.
+ * Renders Dialog window that user should interact with.
  */
 const Dialog: React.FunctionComponent<DialogProps> = ({
   title,
