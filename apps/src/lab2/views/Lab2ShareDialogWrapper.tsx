@@ -99,20 +99,20 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
     setDialogPanel('share');
     // If the project was submitted successfully, the submission status is updated (only for signed-in users).
     if (channelId && projectType && isSignedIn) {
-      try {
-        getSubmissionStatus(channelId, projectType).then(response =>
-          setSubmissionStatus(response)
-        );
-      } catch (error) {
-        if (!(error instanceof NetworkError && error.response.status === 403)) {
-          MetricsReporter.logError({
-            event: MetricEvent.SUBMISSION_STATUS_UNEXPECTED_ERROR,
-            errorMessage: 'Unexpected error in getting submission status.',
-            projectType: projectType,
-            channelId: channelId,
-          });
-        }
-      }
+      getSubmissionStatus(channelId, projectType)
+        .then(response => setSubmissionStatus(response))
+        .catch(error => {
+          if (
+            !(error instanceof NetworkError && error.response.status === 403)
+          ) {
+            MetricsReporter.logError({
+              event: MetricEvent.SUBMISSION_STATUS_UNEXPECTED_ERROR,
+              errorMessage: 'Unexpected error in getting submission status.',
+              projectType: projectType,
+              channelId: channelId,
+            });
+          }
+        });
     }
   };
 
