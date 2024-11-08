@@ -557,7 +557,8 @@ class ProjectsController < ApplicationController
     end
     # Publish the project, i.e., make it public.
     begin
-      Projects.new(get_storage_id).publish(channel_id, project_type, current_user)
+      storage_id, _ = storage_decrypt_channel_id(channel_id)
+      Projects.new(storage_id).publish(channel_id, project_type, current_user)
     rescue Projects::PublishError => exception
       Honeybadger.notify(
         exception.message,
