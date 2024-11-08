@@ -21,7 +21,7 @@ type LessonResourcesProps = {
 };
 
 const renderNoResourcesRow = (
-  <div className={styles.rowContainer} data-testid="resource-row">
+  <div className={styles.rowContainer}>
     <BodyTwoText className={styles.resourceLabel}>
       <em>{i18n.noStudentResources()}</em>
     </BodyTwoText>
