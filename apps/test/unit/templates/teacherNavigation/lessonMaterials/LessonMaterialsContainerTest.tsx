@@ -16,6 +16,7 @@ describe('LessonMaterialsContainer', () => {
   const mockLessonData = {
     title: 'Unit 3',
     unitNumber: 3,
+    hasNumberedUnits: true,
     lessons: [
       {
         name: 'First lesson',
@@ -86,10 +87,10 @@ describe('LessonMaterialsContainer', () => {
     // check for unit resources dropdown
     screen.getByRole('button', {name: 'View unit options dropdown'});
     screen.getByText(
-      i18n.downloadUnitLessonPlans({unitNumber: mockLessonData.unitNumber})
+      i18n.downloadUnitXLessonPlans({unitNumber: mockLessonData.unitNumber})
     );
     screen.getByText(
-      i18n.downloadUnitHandouts({unitNumber: mockLessonData.unitNumber})
+      i18n.downloadUnitXHandouts({unitNumber: mockLessonData.unitNumber})
     );
 
     // Check for lesson dropdowns
@@ -103,8 +104,10 @@ describe('LessonMaterialsContainer', () => {
 
     // Teacher resources, including lesson plan, unit vocab and unit standards
     screen.getByText('Teacher Resources');
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('resource-icon-' + RESOURCE_ICONS.SLIDES.icon);
     screen.getByText('Slides: my slides');
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('resource-icon-' + RESOURCE_ICONS.LESSON_PLAN.icon);
     screen.getByText('Lesson Plan: First lesson');
     // checks that standards and vocab are rendered only once and not rendred in the "student resoruces section"
@@ -113,8 +116,27 @@ describe('LessonMaterialsContainer', () => {
 
     // Student resources
     screen.getByText('Student Resources');
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('resource-icon-' + RESOURCE_ICONS.VIDEO.icon);
     screen.getByText('Video: my linked video');
+  });
+
+  it('renders "Unit Standards" and "Unit Vocabulary" when hasNumberedUnits is false', () => {
+    const lessonDataWithoutNumberedUnits = {
+      ...mockLessonData,
+      hasNumberedUnits: false,
+    };
+
+    (useLoaderData as jest.Mock).mockReturnValue(
+      lessonDataWithoutNumberedUnits
+    );
+
+    render(<LessonMaterialsContainer />);
+
+    screen.getByText('Unit Standards');
+    screen.getByText('Unit Vocabulary');
+    screen.getByText(i18n.downloadUnitLessonPlans());
+    screen.getByText(i18n.downloadUnitHandouts());
   });
 
   it('renders the resources for the new lesson when lesson is changed', () => {
@@ -124,12 +146,15 @@ describe('LessonMaterialsContainer', () => {
 
     fireEvent.change(selectedLessonInput, {target: {value: '2'}});
 
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('resource-icon-' + RESOURCE_ICONS.LESSON_PLAN.icon);
     screen.getByText('Lesson Plan: Second lesson');
 
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('resource-icon-' + RESOURCE_ICONS.VIDEO.icon);
     screen.getByText('Video: my video resource');
     expect(
+      // eslint-disable-next-line no-restricted-properties
       screen.queryAllByTestId('resource-icon-' + RESOURCE_ICONS.SLIDES.icon)
         .length === 0
     );

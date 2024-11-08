@@ -15,6 +15,13 @@ const rulesToEventuallyReenable = {
   'jsx-a11y/tabindex-no-positive': 'off',
 };
 
+const accessibilityTestingMessage =
+  'Tests should resemble how the user interacts with the application and should not rely on technical details, see https://testing-library.com/docs/queries/about/#priority';
+
+const noDataTestIdMessage =
+  'Attribute data-testid does not meet accessibility guidelines. ' +
+  accessibilityTestingMessage;
+
 // This config defines globals available especially in apps,
 // enables es6, and enables apps-specific plugins and rules.
 // See the root .eslintrc.js for generic eslint linting rules.
@@ -173,6 +180,18 @@ module.exports = {
         ],
       },
     ],
+    'react/forbid-dom-props': [
+      'error',
+      {
+        forbid: [{propName: 'data-testid', message: noDataTestIdMessage}],
+      },
+    ],
+    'react/forbid-component-props': [
+      'error',
+      {
+        forbid: [{propName: 'data-testid', message: noDataTestIdMessage}],
+      },
+    ],
   },
   settings: {
     react: {
@@ -201,6 +220,58 @@ module.exports = {
       files: ['*.story.@(ts|tsx|js|jsx)'],
       rules: {
         'storybook/no-title-property-in-meta': 'error',
+      },
+    },
+    {
+      files: ['test/unit/**'],
+      rules: {
+        'no-restricted-properties': [
+          'error',
+          {
+            object: 'screen',
+            property: 'getByTestId',
+            message: accessibilityTestingMessage,
+          },
+          {
+            object: 'screen',
+            property: 'queryByTestId',
+            message: accessibilityTestingMessage,
+          },
+          {
+            object: 'screen',
+            property: 'getAllByTestId',
+            message: accessibilityTestingMessage,
+          },
+          {
+            object: 'screen',
+            property: 'queryAllByTestId',
+            message: accessibilityTestingMessage,
+          },
+          {
+            object: 'screen',
+            property: 'findByTestId',
+            message: accessibilityTestingMessage,
+          },
+          {
+            object: 'screen',
+            property: 'findAllByTestId',
+            message: accessibilityTestingMessage,
+          },
+          {
+            object: 'container',
+            property: 'querySelector',
+            message: accessibilityTestingMessage,
+          },
+          {
+            object: 'container',
+            property: 'querySelectorAll',
+            message: accessibilityTestingMessage,
+          },
+          {
+            property: 'toHaveClass',
+            message: accessibilityTestingMessage,
+          },
+        ],
       },
     },
   ],

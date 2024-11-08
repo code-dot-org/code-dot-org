@@ -1,4 +1,5 @@
 @import 'color';
+@import '@cdo/apps/componentLibrary/common/styles/primitiveColors.css';
 @import '@cdo/apps/componentLibrary/common/styles/mixins';
 
 //Slider colors for use in JSX/TSX
@@ -11,6 +12,9 @@ $slider-brand-track-disabled-color: $light_gray_100;
 $slider-white-track-fill-color: $light_white;
 $slider-white-track-empty-color: $light_gray_400;
 $slider-white-track-disabled-color: $light_gray_900;
+$slider-aqua-track-fill-color: var(--brand-aqua-50);
+$slider-aqua-track-empty-color: $light_gray_400;
+$slider-aqua-track-disabled-color: var(--brand-aqua-90);
 
 :export {
   sliderBlackTrackFillColor: $slider-black-track-fill-color;
@@ -24,6 +28,11 @@ $slider-white-track-disabled-color: $light_gray_900;
   sliderWhiteTrackFillColor: $slider-white-track-fill-color;
   sliderWhiteTrackEmptyColor: $slider-white-track-empty-color;
   sliderWhiteTrackDisabledColor: $slider-white-track-disabled-color;
+
+  sliderAquaTrackFillColor: $slider-aqua-track-fill-color;
+  sliderAquaTrackEmptyColor: $slider-aqua-track-empty-color;
+  sliderAquaTrackDisabledColor: $slider-aqua-track-disabled-color;
+
 }
 
 // Slider common styles
@@ -368,7 +377,7 @@ $slider-white-track-disabled-color: $light_gray_900;
   }
 }
 
-.slider-white {
+%slider-white {
   .sliderLabelSection {
     color: $light_white;
   }
@@ -450,6 +459,33 @@ $slider-white-track-disabled-color: $light_gray_900;
         input[type='range']::-ms-thumb {
           background-color: $light_black;
           border-color: $neutral_dark90;
+        }
+      }
+    }
+  }
+}
+
+.slider-white {
+  @extend %slider-white;
+}
+
+.slider-aqua {
+  @extend %slider-white;
+
+  .sliderMainContainer {
+    .sliderWrapper {
+      // Hover Styles
+      input[type='range']:hover {
+        &::-webkit-slider-thumb {
+          background-color: $slider-aqua-track-fill-color;
+        }
+
+        &::-moz-range-thumb {
+          background-color: $slider-aqua-track-fill-color;
+        }
+
+        &::-ms-thumb {
+          background-color: $slider-aqua-track-fill-color;
         }
       }
     }

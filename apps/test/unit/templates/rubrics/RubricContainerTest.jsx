@@ -23,12 +23,28 @@ import teacherRubric from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import teacherSections, {
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {
-  RubricAiEvaluationLimits,
-  RubricAiEvaluationStatus,
-  LevelStatus,
-} from '@cdo/generated-scripts/sharedConstants';
+import {RubricAiEvaluationLimits} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
+
+import {
+  stubFetch,
+  studentAlice,
+  levelNotTried,
+  levelSubmitted,
+  notAttemptedJson,
+  notAttemptedJsonAll,
+  readyJson,
+  readyJsonAll,
+  pendingJson,
+  runningJson,
+  successJson,
+  successJsonAll,
+  defaultRubric,
+  noEvals,
+  oneEval,
+  defaultStudentInfo,
+  mockAiEvaluations,
+} from './rubricTestHelper';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   post: jest.fn().mockResolvedValue({
@@ -38,24 +54,7 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
 
 fetch.mockIf(/\/rubrics\/.*/, JSON.stringify(''));
 
-const studentAlice = {id: 11, name: 'Alice'};
 const sectionId = 999;
-const levelNotTried = {
-  id: '123',
-  assessment: null,
-  contained: false,
-  paired: false,
-  partnerNames: null,
-  partnerCount: null,
-  isConceptLevel: false,
-  levelNumber: 4,
-  passed: false,
-  status: LevelStatus.not_tried,
-};
-const levelSubmitted = {
-  ...levelNotTried,
-  status: LevelStatus.submitted,
-};
 
 describe('RubricContainer', () => {
   let store;
@@ -69,49 +68,6 @@ describe('RubricContainer', () => {
         await Promise.resolve();
       });
     }
-  }
-
-  function stubFetch({
-    evalStatusForUser = {},
-    evalStatusForAll = {},
-    aiEvals = [],
-    teacherEvals = [],
-    tourStatus = {},
-    updateTourStatus = {},
-  }) {
-    fetchStub.mockImplementation(url => {
-      // Stubs out getting the AI status for a particular user
-      if (/rubrics\/\d+\/ai_evaluation_status_for_user.*/.test(url)) {
-        return Promise.resolve(new Response(JSON.stringify(evalStatusForUser)));
-      }
-
-      // Stubs out getting the overall AI status, which is part of RubricSettings but
-      // useful to track alongside the user status, here
-      if (/rubrics\/\d+\/ai_evaluation_status_for_all.*/.test(url)) {
-        return Promise.resolve(new Response(JSON.stringify(evalStatusForAll)));
-      }
-
-      // This stubs out polling the AI evaluation list which can be provided by 'data'
-      if (/rubrics\/\d+\/get_ai_evaluations.*/.test(url)) {
-        return Promise.resolve(new Response(JSON.stringify(aiEvals)));
-      }
-
-      if (/rubrics\/\d+\/get_teacher_evaluations_for_all.*/.test(url)) {
-        return Promise.resolve(new Response(JSON.stringify(teacherEvals)));
-      }
-
-      if (/rubrics\/\w+\/get_ai_rubrics_tour_seen/.test(url)) {
-        return Promise.resolve(new Response(JSON.stringify(tourStatus)));
-      }
-
-      if (/rubrics\/\w+\/update_ai_rubrics_tour_seen/.test(url)) {
-        return Promise.resolve(new Response(JSON.stringify(updateTourStatus)));
-      }
-
-      if (/rubrics\/\d+\/run_ai_evaluations_for_user$/.test(url)) {
-        return Promise.resolve(new Response(JSON.stringify({})));
-      }
-    });
   }
 
   beforeEach(() => {
@@ -151,134 +107,6 @@ describe('RubricContainer', () => {
     jest.restoreAllMocks();
   });
 
-  const notAttemptedJson = {
-    status: null,
-    attempted: false,
-    lastAttemptEvaluated: false,
-    csrfToken: 'abcdef',
-  };
-
-  const notAttemptedJsonAll = {
-    attemptedCount: 0,
-    attemptedUnevaluatedCount: 1,
-    csrfToken: 'abcdef',
-    aiEvalStatusMap: {
-      11: 'NOT_STARTED',
-    },
-  };
-
-  const readyJson = {
-    status: null,
-    attempted: true,
-    lastAttemptEvaluated: false,
-    csrfToken: 'abcdef',
-  };
-
-  const readyJsonAll = {
-    attemptedCount: 1,
-    attemptedUnevaluatedCount: 1,
-    csrfToken: 'abcdef',
-    aiEvalStatusMap: {
-      11: 'IN_PROGRESS',
-    },
-  };
-
-  const pendingJson = {
-    attempted: true,
-    lastAttemptEvaluated: false,
-    csrfToken: 'abcdef',
-    status: RubricAiEvaluationStatus.QUEUED,
-  };
-
-  const runningJson = {
-    attempted: true,
-    lastAttemptEvaluated: false,
-    csrfToken: 'abcdef',
-    status: RubricAiEvaluationStatus.RUNNING,
-  };
-
-  const successJson = {
-    attempted: true,
-    lastAttemptEvaluated: true,
-    csrfToken: 'abcdef',
-    status: RubricAiEvaluationStatus.SUCCESS,
-  };
-
-  const successJsonAll = {
-    attemptedCount: 1,
-    attemptedUnevaluatedCount: 0,
-    csrfToken: 'abcdef',
-    aiEvalStatusMap: {
-      11: 'READY_TO_REVIEW',
-    },
-  };
-
-  const defaultRubric = {
-    id: 1,
-    learningGoals: [
-      {
-        id: 1,
-        key: '1',
-        learningGoal: 'goal 1',
-        aiEnabled: false,
-        evidenceLevels: [{understanding: 1, id: 1, teacherDescription: 'test'}],
-      },
-      {
-        id: 2,
-        key: '2',
-        learningGoal: 'goal 2',
-        aiEnabled: true,
-        evidenceLevels: [{understanding: 1, id: 2, teacherDescription: 'test'}],
-      },
-    ],
-    script: {
-      id: 42,
-    },
-    lesson: {
-      position: 3,
-      name: 'Data Structures',
-    },
-    level: {
-      id: 107,
-      name: 'test_level',
-      position: 7,
-    },
-  };
-
-  const noEvals = [
-    {
-      user_name: 'Stilgar',
-      user_id: 1,
-      eval: [],
-    },
-    {
-      user_name: 'Chani',
-      user_id: 1,
-      eval: [],
-    },
-  ];
-
-  const oneEval = [
-    {
-      user_name: studentAlice.name,
-      user_id: studentAlice.id,
-      eval: [
-        {
-          feedback: '',
-          id: studentAlice.id,
-          learning_goal_id: 1587,
-          understanding: 0,
-        },
-      ],
-    },
-  ];
-
-  const defaultStudentInfo = {user_id: 11, name: 'Alice'};
-
-  const mockAiEvaluations = [
-    {id: 2, learning_goal_id: 2, understanding: 0, aiConfidencePassFail: 2},
-  ];
-
   it('switches components when tabs are clicked', async () => {
     stubFetch({
       evalStatusForUser: successJson,
@@ -306,22 +134,30 @@ describe('RubricContainer', () => {
     // approach is difficult because jest-dom can't see the styles in our
     // CSS modules which control element visibility.
 
+    // eslint-disable-next-line no-restricted-properties
     let settings = container.querySelector('.uitest-rubric-settings');
+    // eslint-disable-next-line no-restricted-properties
     let content = container.querySelector('#uitest-rubric-content');
 
+    // eslint-disable-next-line no-restricted-properties
     expect(content).toHaveClass('visibleRubricContent');
+    // eslint-disable-next-line no-restricted-properties
     expect(settings).toHaveClass('settingsHidden');
 
     fireEvent.click(screen.getByText(i18n.rubricTabClassManagement()));
 
+    // eslint-disable-next-line no-restricted-properties
     expect(content).toHaveClass('hiddenRubricContent');
+    // eslint-disable-next-line no-restricted-properties
     expect(settings).toHaveClass('settingsVisible');
 
     fireEvent.click(
       screen.getAllByRole('button', {name: i18n.rubricTabStudent()})[0]
     );
 
+    // eslint-disable-next-line no-restricted-properties
     expect(content).toHaveClass('visibleRubricContent');
+    // eslint-disable-next-line no-restricted-properties
     expect(settings).toHaveClass('settingsHidden');
   });
 
@@ -534,7 +370,10 @@ describe('RubricContainer', () => {
     // 2. User clicks button to run analysis
 
     // Stub out running the assessment and have it return pending status when asked next
-    stubFetch({evalStatusForUser: pendingJson, tourStatus: {seen: true}});
+    fetchStub = stubFetch({
+      evalStatusForUser: pendingJson,
+      tourStatus: {seen: true},
+    });
 
     fireEvent.click(button);
 
@@ -891,6 +730,7 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
+    // eslint-disable-next-line no-restricted-properties
     expect(screen.queryByTestId('info-alert')).not.toBeInTheDocument();
     const button = screen.getByRole('button', {
       name: 'Run AI Assessment for Project',

@@ -348,6 +348,13 @@ FactoryBot.define do
         end
       end
 
+      trait :in_google_section do
+        after(:create) do |user|
+          section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+          section.add_student user
+        end
+      end
+
       factory :student_with_ai_tutor_access do
         after(:create) do |user|
           teacher = create :teacher
@@ -457,7 +464,7 @@ FactoryBot.define do
     end
 
     # We have some tests which want to create student accounts which don't have any authentication setup.
-    # Using this will put the user into an invalid state.
+    # Using this will put the user into an invalid state unless they have another authentication option.
     trait :without_encrypted_password do
       after(:create) do |user|
         user.encrypted_password = nil
@@ -466,11 +473,24 @@ FactoryBot.define do
       end
     end
 
+    # The user factory creates an email authentication option by default. This trait will remove that option.
+    # For testing SSO users who have an email address but not an email authentication option.
+    trait :without_email_auth_option do
+      after(:create) do |user|
+        ao = user.authentication_options.find_by(credential_type: AuthenticationOption::EMAIL)
+        ao&.destroy
+        user.save
+      end
+    end
+
     trait :with_lti_auth do
       after(:create) do |user|
         user.lms_landing_opted_out = true
         user.authentication_options.destroy_all
-        lti_auth = create(:lti_authentication_option, user: user)
+        lti_user_id = create(:lti_user_identity, user: user)
+        user.lti_user_identities << lti_user_id
+        auth_id = lti_user_id.lti_integration.issuer + "|" + lti_user_id.lti_integration.client_id + "|" + lti_user_id.subject
+        lti_auth = create(:lti_authentication_option, user: user, authentication_id: auth_id)
         user.authentication_options << lti_auth
         user.lti_roster_sync_enabled = true
         user.save!
@@ -593,6 +613,12 @@ FactoryBot.define do
             oauth_token: 'some-clever-token'
           }.to_json
         )
+      end
+    end
+
+    trait :with_lti_authentication_option do
+      after(:create) do |user|
+        create(:lti_authentication_option, user: user)
       end
     end
 
@@ -1496,9 +1522,19 @@ FactoryBot.define do
 
   factory :school_info_non_us, class: SchoolInfo do
     country {'GB'}
-    school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
-    full_address {'31 West Bank, London, England'}
     school_name {'Grazebrook'}
+  end
+
+  factory :school_info_us_non_nces, class: SchoolInfo do
+    country {'US'}
+    school_name {'Non NCES School'}
+    zip {'12345'}
+  end
+
+  factory :school_info_us_non_school_setting, class: SchoolInfo do
+    country {'US'}
+    school_type {SchoolInfo::SCHOOL_TYPE_NO_SCHOOL_SETTING}
+    zip {'12345'}
   end
 
   factory :school_info_us, class: SchoolInfo do

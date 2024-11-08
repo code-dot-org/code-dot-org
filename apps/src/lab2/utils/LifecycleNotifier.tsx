@@ -15,7 +15,8 @@ type CallbackArgs = {
   [LifecycleEvent.LevelLoadCompleted]: [
     levelProperties: LevelProperties,
     channel: Channel | undefined,
-    initialSources: ProjectSources | undefined
+    initialSources: ProjectSources | undefined,
+    isReadOnly: boolean | undefined
   ];
 };
 

@@ -84,7 +84,9 @@ export const askAITutor = createAsyncThunk(
     const formattedQuestion = formatQuestionForAITutor(chatContext);
     // We currently use the default system prompt stored on the server,
     // so don't pass in an override here.
-    const systemPrompt = undefined;
+    const systemPrompt = !!chatContext.systemPrompt
+      ? chatContext.systemPrompt
+      : undefined;
     const chatApiResponse = await getChatCompletionMessage(
       formattedQuestion,
       storedMessages,

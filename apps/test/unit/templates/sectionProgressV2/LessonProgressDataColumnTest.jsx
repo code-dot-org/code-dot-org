@@ -122,6 +122,7 @@ describe('LessonProgressDataColumn', () => {
   it('shows progress for all students', () => {
     renderDefault();
 
+    // eslint-disable-next-line no-restricted-properties
     expect(screen.queryAllByTestId(/lesson-data-cell/)).toHaveLength(
       STUDENTS.length
     );

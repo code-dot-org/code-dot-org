@@ -879,6 +879,7 @@ en:
         gen-ai-neural-networks-overview: Activity Overview - How Neural Networks Work
         gen-ai-attention-overview: Activity Overview - Attention is All You Need
         self-paced-gen-ai-retrieval-example: Retrieval Example
+        music_jam_intro: 'Music Lab: Jam Session Intro'
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

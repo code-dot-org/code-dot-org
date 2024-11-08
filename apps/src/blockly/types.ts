@@ -68,6 +68,9 @@ type GoogleBlocklyType = typeof GoogleBlockly;
 
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
+  ALIGN_CENTRE: GoogleBlockly.inputs.Align.CENTRE;
+  ALIGN_LEFT: GoogleBlockly.inputs.Align.LEFT;
+  ALIGN_RIGHT: GoogleBlockly.inputs.Align.RIGHT;
   analyticsData: AnalyticsData;
   showUnusedBlocks: boolean | undefined;
   BlockFieldHelper: {[fieldHelper: string]: string};
@@ -234,6 +237,7 @@ export interface ExtendedBlock extends GoogleBlockly.Block {
 }
 
 export interface ExtendedWorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
+  previousViewWidth: number;
   flyoutParentBlock: GoogleBlockly.Block | null;
   globalVariables: string[];
   noFunctionBlockFrame: boolean;
