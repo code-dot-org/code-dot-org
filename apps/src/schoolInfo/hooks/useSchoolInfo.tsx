@@ -62,9 +62,11 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
 
   const detectedSchoolName = useMemo(
     () =>
-      (initialState.schoolId ? '' : initialState.schoolName) ||
-      sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY) ||
-      '',
+      initialState.schoolId
+        ? ''
+        : initialState.schoolName ||
+          sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY) ||
+          '',
     [initialState.schoolName, initialState.schoolId]
   );
 
@@ -91,12 +93,6 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     setState(prevState => ({
       ...prevState,
       country: value,
-      schoolZip: '',
-      schoolName: '',
-      schoolId:
-        value === US_COUNTRY_CODE
-          ? NonSchoolOptions.SELECT_A_SCHOOL
-          : NonSchoolOptions.CLICK_TO_ADD,
     }));
   };
 
@@ -125,7 +121,6 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     setState(prevState => ({
       ...prevState,
       schoolId: value,
-      schoolName: '',
     }));
   };
 
@@ -141,8 +136,6 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     setState(prevState => ({
       ...prevState,
       schoolZip: value,
-      schoolName: '',
-      schoolId: NonSchoolOptions.SELECT_A_SCHOOL,
     }));
   };
 
