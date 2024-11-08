@@ -42,7 +42,7 @@ class UserLevel < ApplicationRecord
   after_save :after_submit, if: :submitted_or_resubmitted?
   before_save :before_unsubmit, if: ->(ul) {ul.submitted_changed? from: true, to: false}
 
-  validates :locale, inclusion: {in: I18n.available_locales.as_json}, allow_nil: true
+  validates :locale, inclusion: {in: I18n.available_locales.as_json}, allow_nil: true, if: :locale_changed?
 
   # TODO(asher): Consider making these scopes and the methods below more consistent, in tense and in
   # word choice.
