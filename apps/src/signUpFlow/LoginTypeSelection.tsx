@@ -300,6 +300,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
                 value={email}
                 onChange={handleEmailChange}
                 name="emailInput"
+                id="uitest-email"
               />
               {showEmailError && (
                 <div className={style.validationMessage}>
@@ -319,6 +320,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
                 value={password}
                 onChange={handlePasswordChange}
                 name="passwordInput"
+                id="uitest-password"
                 inputType="password"
               />
               <div className={style.validationMessage}>
@@ -336,6 +338,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
                 onChange={handleConfirmPasswordChange}
                 name="confirmPasswordInput"
                 inputType="password"
+                id="uitest-confirm-password"
               />
               {showConfirmPasswordError && (
                 <div className={style.validationMessage}>

@@ -94,7 +94,8 @@ section.student-projects {
 
   .text-wrapper {
     background: var(--neutral_light);
-    padding: 2rem;
+    padding-block: calc(2rem + 8px);
+    padding-inline: 2rem;
   }
 }
 

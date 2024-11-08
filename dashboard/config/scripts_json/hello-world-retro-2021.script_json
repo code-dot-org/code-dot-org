@@ -17,6 +17,7 @@
         }
       ],
       "curriculum_umbrella": "HOC",
+      "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
       "supported_locales": [
@@ -61,7 +62,7 @@
     },
     "new_name": null,
     "family_name": "hello-world-retro",
-    "serialized_at": "2024-02-05 21:41:05 UTC",
+    "serialized_at": "2024-11-07 18:58:51 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

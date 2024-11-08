@@ -24,7 +24,8 @@ interface FieldTuneOptions {
  * "play_tune" block. The UI is rendered by {@link TunePanel}.
  */
 export default class FieldTune extends GoogleBlockly.Field {
-  static fromJson(options: FieldTuneOptions) {
+  static fromJson(_options: GoogleBlockly.FieldConfig) {
+    const options = _options as FieldTuneOptions;
     return new FieldTune(options);
   }
 
