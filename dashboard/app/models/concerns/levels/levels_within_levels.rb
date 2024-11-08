@@ -76,29 +76,30 @@ module Levels
 
       # Create ParentLevelsChildLevel many-to-many relationships based on the
       # contents of the specified levels' `contained_level_names` or `project_template_level_name` properties.
-      # Differentiated by level_kind (either ParentLevelsChildLevel::CONTAINED or ParentLevelsChildLevel::PROJECT_TEMPLATE)
-      def setup_child_levels_for(levels, level_kind)
+      # Differentiated by child_level_kind (either ParentLevelsChildLevel::CONTAINED or ParentLevelsChildLevel::PROJECT_TEMPLATE)
+      def setup_child_levels_for(levels, child_level_kind)
         outdated_levels_child_level_ids = []
         new_levels_child_levels = []
 
         levels.each do |level|
-          # Determine which level names to use based on level_kind
-          level_names = level_kind == ParentLevelsChildLevel::CONTAINED ? level.contained_level_names : [level.project_template_level_name]
+          # Determine which level names to use based on child_level_kind
+          child_level_names = child_level_kind == ParentLevelsChildLevel::CONTAINED ? level.contained_level_names : [level.project_template_level_name]
           # Skip if the current level's child levels already match the names
-          next if level.child_levels.send(level_kind).map(&:name) == level_names
+          next if level.child_levels.send(child_level_kind).map(&:name) == child_level_names
 
           # Collect outdated child levels' ids
-          outdated_levels_child_level_ids += level.levels_child_levels.send(level_kind).ids
+          outdated_levels_child_level_ids += level.levels_child_levels.send(child_level_kind).ids
 
-          next if level_names.blank?
+          next if child_level_names.blank?
 
           # Create new relationships for matching names
-          Level.where(name: level_names).find_each do |contained_level|
+          Level.where(name: child_level_names).find_each do |child_level|
+            position = child_level_names.index(child_level.name) if child_level_kind == ParentLevelsChildLevel::PROJECT_TEMPLATE
             new_levels_child_levels << ParentLevelsChildLevel.new(
               parent_level: level,
-              child_level: contained_level,
-              kind: level_kind,
-              position: level_names.index(contained_level.name)
+              child_level: child_level,
+              kind: child_level_kind,
+              position: position
             )
           end
         end

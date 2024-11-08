@@ -88,6 +88,8 @@ class LevelLoader
       update_columns = Level.columns.map(&:name).map(&:to_sym).
         reject {|column| immutable_level_columns.include? column}
       # Changed levels are too large to import them in batches larger than 100 due to serialized properties.
+      # When performing bulk inserts, it is faster to insert keys in primary key order. Documentation:
+      # https://dev.mysql.com/doc/refman/8.0/en/optimizing-innodb-bulk-data-loading.html
       Level.import! changed_levels.sort_by(&:id), on_duplicate_key_update: update_columns, batch_size: 100
 
       # now we want to run some after_save callbacks, which didn't get run when
