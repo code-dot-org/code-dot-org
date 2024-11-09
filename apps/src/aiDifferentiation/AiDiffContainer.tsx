@@ -12,6 +12,7 @@ import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
 import HttpClient from '../util/HttpClient';
 
+import AiDiffBotMessageFooter from './AiDiffBotMessageFooter';
 import AiDiffChatFooter from './AiDiffChatFooter';
 import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
 import {ChatItem, ChatPrompt} from './types';
@@ -216,7 +217,11 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
                   key={id}
                 />
               ) : (
-                <ChatMessage {...item} key={id} />
+                <ChatMessage {...item} customStyles={style} key={id}>
+                  {item.role === Role.ASSISTANT && (
+                    <AiDiffBotMessageFooter message={item} />
+                  )}
+                </ChatMessage>
               )
             )}
             <img
@@ -229,7 +234,10 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
               }
             />
           </div>
-          <AiDiffChatFooter onSubmit={onMessageSend} />
+          <AiDiffChatFooter
+            onSubmit={onMessageSend}
+            messages={messageHistory}
+          />
         </div>
       </div>
     </Draggable>

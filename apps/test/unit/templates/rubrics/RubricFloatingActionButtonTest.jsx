@@ -1,8 +1,11 @@
-import {render, screen, fireEvent} from '@testing-library/react';
+import {act, render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
+import teacherPanel, {
+  setLevelsWithProgress,
+  setLoadedLevelsWithProgressForTest,
+} from '@cdo/apps/code-studio/teacherPanelRedux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -12,9 +15,31 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import {UnconnectedRubricFloatingActionButton as RubricFloatingActionButton} from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
-import teacherRubric from '@cdo/apps/templates/rubrics/teacherRubricRedux';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import teacherRubric, {
+  setLoadedStudentStatusForTest,
+} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
+import teacherSections, {
+  setStudentsForCurrentSection,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
+
+import {
+  stubFetch,
+  defaultRubric,
+  studentAlice,
+  levelNotTried,
+  notAttemptedJsonAll,
+  successJsonAll,
+  noEvals,
+} from './rubricTestHelper';
+
+async function wait() {
+  for (let _ = 0; _ < 10; _++) {
+    await act(async () => {
+      await Promise.resolve();
+    });
+  }
+}
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   post: jest.fn().mockResolvedValue({
@@ -24,26 +49,12 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
 
 fetch.mockIf(/\/rubrics\/.*/, JSON.stringify(''));
 
+const sectionId = 999;
 const defaultProps = {
-  rubric: {
-    level: {
-      name: 'test-level',
-    },
-    learningGoals: [
-      {
-        id: 1,
-        key: 'abc',
-        learningGoal: 'Learning Goal 1',
-        aiEnabled: true,
-        evidenceLevels: [
-          {id: 1, understanding: 1, teacherDescription: 'lg level 1'},
-        ],
-        tips: 'Tips',
-      },
-    ],
-  },
-  currentLevelName: 'test-level',
+  rubric: defaultRubric,
+  currentLevelName: 'test_level',
   studentLevelInfo: null,
+  notificationsEnabled: true,
 };
 
 describe('RubricFloatingActionButton', () => {
@@ -59,6 +70,7 @@ describe('RubricFloatingActionButton', () => {
     });
     store = getStore();
     sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
+    stubFetch({});
     sessionStorage.clear();
   });
 
@@ -70,6 +82,7 @@ describe('RubricFloatingActionButton', () => {
 
   describe('pulse animation', () => {
     it('renders pulse animation when session storage is empty', () => {
+      store.dispatch(setLoadedStudentStatusForTest());
       render(
         <Provider store={store}>
           <RubricFloatingActionButton {...defaultProps} />
@@ -96,7 +109,27 @@ describe('RubricFloatingActionButton', () => {
       expect(fab.classList.contains('unittest-fab-pulse')).toBe(true);
     });
 
+    it('does not render pulse animation before student status loads', () => {
+      render(
+        <Provider store={store}>
+          <RubricFloatingActionButton {...defaultProps} />
+        </Provider>
+      );
+
+      const fabImage = screen.getByRole('img', {name: 'AI bot'});
+      fireEvent.load(fabImage);
+
+      const taImage = screen.getByRole('img', {name: 'TA overlay'});
+      fireEvent.load(taImage);
+
+      const fab = screen.getByRole('button', {
+        name: i18n.openOrCloseTeachingAssistant(),
+      });
+      expect(fab.classList.contains('unittest-fab-pulse')).toBe(false);
+    });
+
     it('does not render pulse animation when open state is present in session storage', () => {
+      store.dispatch(setLoadedStudentStatusForTest());
       sessionStorage.setItem('RubricFabOpenStateKey', 'false');
       render(
         <Provider store={store}>
@@ -116,6 +149,81 @@ describe('RubricFloatingActionButton', () => {
         name: i18n.openOrCloseTeachingAssistant(),
       });
       expect(fab.classList.contains('unittest-fab-pulse')).toBe(false);
+    });
+  });
+
+  describe('TA icon bubble', () => {
+    beforeEach(() => {
+      const levelsWithProgress = [{...levelNotTried, userId: studentAlice.id}];
+      store.dispatch(setLevelsWithProgress(levelsWithProgress));
+      store.dispatch(setLoadedLevelsWithProgressForTest());
+      store.dispatch(setStudentsForCurrentSection(sectionId, [studentAlice]));
+    });
+
+    it('renders TA overlay when there are no students to review', async () => {
+      stubFetch({
+        evalStatusForAll: notAttemptedJsonAll,
+        teacherEvals: noEvals,
+      });
+
+      render(
+        <Provider store={store}>
+          <RubricFloatingActionButton {...defaultProps} sectionId={sectionId} />
+        </Provider>
+      );
+
+      await wait();
+
+      expect(screen.getByRole('img', {name: 'TA overlay'})).toBeVisible();
+      expect(
+        screen.queryByLabelText(i18n.aiEvaluationsToReview())
+      ).not.toBeInTheDocument();
+    });
+
+    it('renders count bubble when there are students to review', async () => {
+      stubFetch({
+        evalStatusForAll: successJsonAll,
+        teacherEvals: noEvals,
+      });
+
+      render(
+        <Provider store={store}>
+          <RubricFloatingActionButton {...defaultProps} sectionId={sectionId} />
+        </Provider>
+      );
+
+      await wait();
+
+      expect(
+        screen.queryByRole('img', {name: 'TA overlay'})
+      ).not.toBeInTheDocument();
+      const countBubble = screen.getByLabelText(i18n.aiEvaluationsToReview());
+      expect(countBubble).toBeVisible();
+      expect(countBubble.textContent).toBe('1');
+    });
+
+    it('does not render count bubble when notifications are disabled', async () => {
+      stubFetch({
+        evalStatusForAll: successJsonAll,
+        teacherEvals: noEvals,
+      });
+
+      render(
+        <Provider store={store}>
+          <RubricFloatingActionButton
+            {...defaultProps}
+            sectionId={sectionId}
+            notificationsEnabled={false}
+          />
+        </Provider>
+      );
+
+      await wait();
+
+      expect(screen.getByRole('img', {name: 'TA overlay'})).toBeVisible();
+      expect(
+        screen.queryByLabelText(i18n.aiEvaluationsToReview())
+      ).not.toBeInTheDocument();
     });
   });
 

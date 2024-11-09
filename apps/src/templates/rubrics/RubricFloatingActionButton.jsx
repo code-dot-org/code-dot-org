@@ -3,11 +3,17 @@ import PropTypes from 'prop-types';
 import React, {useEffect, useMemo, useState} from 'react';
 import {connect} from 'react-redux';
 
+import {BodyFourText, StrongText} from '@cdo/apps/componentLibrary/typography';
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {
+  selectHasLoadedStudentStatus,
+  selectReadyStudentCount,
+} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import aiFabIcon from '@cdo/static/ai-bot-centered-teal.png';
@@ -68,6 +74,7 @@ function RubricFloatingActionButton({
   reportingData,
   aiEnabled,
   sectionId,
+  notificationsEnabled,
 }) {
   const sessionStorageKey = 'RubricFabOpenStateKey';
   const [isOpen, setIsOpen] = useState(
@@ -82,6 +89,11 @@ function RubricFloatingActionButton({
   const [isTaImageLoaded, setIsTaImageLoaded] = useState(false);
 
   const [internalError, setInternalError] = useState(null);
+
+  const readyStudentCount = useAppSelector(selectReadyStudentCount);
+  const hasLoadedStudentStatus = useAppSelector(selectHasLoadedStudentStatus);
+  const showCountBubble =
+    notificationsEnabled && hasLoadedStudentStatus && readyStudentCount > 0;
 
   const eventData = useMemo(() => {
     return {
@@ -147,8 +159,10 @@ function RubricFloatingActionButton({
   }, [isOpen]);
 
   const fabIcon = aiEnabled ? aiFabIcon : rubricFabIcon;
+  const allImagesLoaded =
+    isFabImageLoaded && (showCountBubble || isTaImageLoaded);
 
-  const showPulse = isFirstSession && isFabImageLoaded && isTaImageLoaded;
+  const showPulse = isFirstSession && allImagesLoaded && hasLoadedStudentStatus;
   const classes = showPulse
     ? classnames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
     : style.floatingActionButton;
@@ -168,16 +182,28 @@ function RubricFloatingActionButton({
           onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
         />
       </button>
-      <div
-        className={style.taOverlay}
-        style={{backgroundImage: `url(${taIcon})`}}
-      >
-        <img
-          src={taIcon}
-          alt="TA overlay"
-          onLoad={() => !isTaImageLoaded && setIsTaImageLoaded(true)}
-        />
-      </div>
+      {showCountBubble ? (
+        <div className={style.countOverlay}>
+          <BodyFourText className={style.countText}>
+            <StrongText>
+              <span aria-label={i18n.aiEvaluationsToReview()}>
+                {readyStudentCount}
+              </span>
+            </StrongText>
+          </BodyFourText>
+        </div>
+      ) : (
+        <div
+          className={style.taOverlay}
+          style={{backgroundImage: `url(${taIcon})`}}
+        >
+          <img
+            src={taIcon}
+            alt="TA overlay"
+            onLoad={() => !isTaImageLoaded && setIsTaImageLoaded(true)}
+          />
+        </div>
+      )}
       {/* TODO: do not hardcode in AI setting */}
       <ErrorBoundary
         fallback={
@@ -211,6 +237,7 @@ RubricFloatingActionButton.propTypes = {
   reportingData: reportingDataShape,
   aiEnabled: PropTypes.bool,
   sectionId: PropTypes.number,
+  notificationsEnabled: PropTypes.bool,
 };
 
 export const UnconnectedRubricFloatingActionButton = RubricFloatingActionButton;

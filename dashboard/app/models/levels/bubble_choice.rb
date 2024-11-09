@@ -138,7 +138,8 @@ class BubbleChoice < DSLDefined
           position: index + 1,
           letter: ALPHABET[index],
           icon: level.try(:icon),
-          uses_lab2: level.uses_lab2?
+          uses_lab2: level.uses_lab2?,
+          parent_level_id: id,
         }
       )
 

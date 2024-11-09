@@ -17,7 +17,7 @@ class HomeController < ApplicationController
   # The terms_and_privacy page gets loaded in an iframe on the signup page, so skip
   # clearing the sign up tracking variables
   skip_before_action :clear_sign_up_session_vars, only: [:terms_and_privacy]
-  skip_before_action :initialize_statsig_session, only: [:health_check]
+  skip_before_action :initialize_statsig_stable_id, only: [:health_check]
 
   def set_locale
     params[:locale], ge_region = params[:locale]&.split('|')
@@ -41,7 +41,7 @@ class HomeController < ApplicationController
       redirect_path = redirect_uri.to_s
 
       Metrics::Events.log_event(
-        session: session,
+        request: request,
         user: current_user,
         event_name: 'Global Edition Region Selected',
         metadata: {

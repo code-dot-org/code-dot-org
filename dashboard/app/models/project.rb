@@ -81,7 +81,6 @@ class Project < ApplicationRecord
   def submission_status
     return SharedConstants::PROJECT_SUBMISSION_STATUS[:ALREADY_SUBMITTED] if published_at
     return SharedConstants::PROJECT_SUBMISSION_STATUS[:PROJECT_TYPE_NOT_ALLOWED] unless SharedConstants::ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    return SharedConstants::PROJECT_SUBMISSION_STATUS[:NOT_PROJECT_OWNER] unless owner
     return SharedConstants::PROJECT_SUBMISSION_STATUS[:SHARING_DISABLED] if owner.sharing_disabled? && SharedConstants::CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
     return SharedConstants::PROJECT_SUBMISSION_STATUS[:RESTRICTED_SHARE_MODE] if Projects.in_restricted_share_mode(channel_id, project_type)
     return SharedConstants::PROJECT_SUBMISSION_STATUS[:OWNER_TOO_NEW] unless owner_existed_long_enough_to_publish?
