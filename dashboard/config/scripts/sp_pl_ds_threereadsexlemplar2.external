@@ -1,0 +1,52 @@
+name 'sp-pl-DS_ThreeReadsexlemplar2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Making Sense of Data: Three Reads Strategy
+
+#### To get a full picture of the **Three Read Strategy**, take a look at sample responses for the next two reads, **quantities** and **questions**.
+
+
+<img src="https://images.code.org/30521e355ab93227d39985fcbfc3b90d-image-1724257607189.png" alt="pizza party spreadsheet" width="350px" style="border-radius:10px; display: block; margin-left: auto; margin-right: auto;">
+
+<div style="clear:both;"></div>
+<br> <br>
+
+
+<table style="border-collapse: collapse; width: 100%;">
+    <tr>
+        <td style="font-size: 20px; font-weight: bold; color: #0093A4; width: 50%; text-align: center;">Read 2: Quantities</td>
+        <td style="font-size: 20px; font-weight: bold; color: #0093A4; width: 50%;text-align: center;">Read 3: Questions</td>
+    </tr>
+        <tr>
+    <td>   &nbsp;                   </td>
+    <td>   &nbsp;                   </td>
+    </tr>
+    <tr >
+        <td style="font-size: 18px; width: 50%; text-align: center;"><b>What quantities do you notice?</b></td>
+        <td style="font-size: 18px; width: 50%;text-align: center;"><b>What question could I answer?</b></td>
+    </tr>
+    <tr>
+        <td style="font-size: 18px; text-align: center;"><i>Sample Response:</i></td>
+        <td style="font-size: 18px; text-align: center;"><i>Sample Response:</i></td>
+    </tr>
+    <tr>
+    <td>   &nbsp;                   </td>
+    <td>   &nbsp;                   </td>
+    </tr>
+    <tr>
+    	<td style="font-size: 18px; width: 50%; padding-right: 25px;">This dataset contains a total of 516 cases, with a sample size of 10 visible here. The three attributes included are: index, number of slices, and favorite type of pizza.<br> The number of pizza slices ranges from 0 to 12. </td>
+        <td style="font-size: 18px ; width: 50%;"> With this data, I could answer:<br>
+1. What is the most popular type of pizza?<br>
+2. What is the average number of slices eaten? <br>
+3. How many people prefer certain types of pizza over others?       </td>
+    </tr>
+</table>
+
+## Debriefing the Activity 
+
+#### Students will work in pairs to assess if their questions are **Relevant, Specific, Actionable, Investigative, and Respectful.** 
+
+#### The process is made for students to learn to take time to analyze data for deeper understanding and can be used as a **formative assessment** of their understanding and ability to create effective questions based on the criteria.
+MARKDOWN

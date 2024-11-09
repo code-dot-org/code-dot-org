@@ -54,6 +54,18 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   }, [availableKits, currentValue.instrument]);
   const [currentPreviewTick, setCurrentPreviewTick] = useState(0);
 
+  const previewNote = useCallback(
+    (note: number) => {
+      // Don't preview the note if we're previewing the whole pattern
+      if (currentPreviewTick > 0) {
+        return;
+      }
+
+      MusicRegistry.player.previewNote(note, currentValue.instrument);
+    },
+    [currentValue.instrument, currentPreviewTick]
+  );
+
   const toggleEvent = useCallback(
     (tick: number, note: number) => {
       const index = currentValue.events.findIndex(
@@ -65,12 +77,12 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
       } else {
         // Not found, so add.
         currentValue.events.push({tick, note});
-        MusicRegistry.player.previewNote(note, currentValue.instrument);
+        previewNote(note);
       }
 
       onChange(currentValue);
     },
-    [onChange, currentValue]
+    [onChange, currentValue, previewNote]
   );
 
   const hasEvent = (note: number, tick: number) => {
@@ -156,12 +168,7 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
             <div className={styles.nameContainer}>
               <span
                 className={styles.name}
-                onClick={() =>
-                  MusicRegistry.player.previewNote(
-                    note || index,
-                    currentValue.instrument
-                  )
-                }
+                onClick={() => previewNote(note || index)}
               >
                 {name}
               </span>
