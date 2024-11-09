@@ -342,7 +342,6 @@ const FinishStudentAccount: React.FunctionComponent<{
             name="userGender"
             label={locale.what_is_your_gender()}
             value={gender}
-            placeholder={locale.female()}
             onChange={e => setGender(e.target.value)}
           />
           {showGDPR && (
