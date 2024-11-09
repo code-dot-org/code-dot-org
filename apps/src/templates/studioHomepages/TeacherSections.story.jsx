@@ -67,7 +67,28 @@ const sections = [
     participantType: ParticipantAudience.student,
   },
 ];
+const ageGatedSections = [
+  {
+    id: 14,
+    name: 'Young students',
+    teacherName: 'Ms. Frizzle',
+    linkToProgress: 'to Progress tab',
+    assignedTitle: 'Course 4',
+    linkToAssigned: 'to Course',
+    studentCount: 22,
+    linkToStudents: 'to Manage Students tab',
+    loginType: 'word',
+    code: 'FJDISO',
+    providerManaged: false,
+    hidden: false,
+    participantType: ParticipantAudience.student,
+    atRiskAgeGated: true,
+  },
+];
+ageGatedSections.push(...sections);
+
 const serverSections = sections.map(serverSectionFromSection);
+const ageGatedServerSections = ageGatedSections.map(serverSectionFromSection);
 
 const store = reduxStore({currentUser, teacherSections}, {});
 store.dispatch(
@@ -80,6 +101,15 @@ store.dispatch(
 export const TeacherAtLeastOneSection = () => {
   withFakeServer({sections: serverSections});
   store.dispatch(setSections(serverSections));
+  return (
+    <Provider store={store}>
+      <TeacherSections />
+    </Provider>
+  );
+};
+export const TeacherAgeGatedSection = () => {
+  withFakeServer({sections: ageGatedServerSections});
+  store.dispatch(setSections(ageGatedServerSections));
   return (
     <Provider store={store}>
       <TeacherSections />

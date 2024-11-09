@@ -531,6 +531,7 @@ class Section < ApplicationRecord
         code_review_expires_at: code_review_expires_at,
         sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
         ai_tutor_enabled: ai_tutor_enabled,
+        at_risk_age_gated: at_risk_age_gated?,
       }
     end
   end
@@ -702,6 +703,12 @@ class Section < ApplicationRecord
 
   def lti?
     lti_section.present?
+  end
+
+  # Are students in this section at risk of being age gated by our Child Account
+  # Policy(CAP)?
+  def at_risk_age_gated?
+    students.any?(&:at_risk_age_gated?)
   end
 
   private def soft_delete_lti_section

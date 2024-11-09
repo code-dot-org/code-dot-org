@@ -11,6 +11,7 @@ import {
 
 export interface Section {
   aiTutorEnabled: boolean;
+  atRiskAgeGated?: boolean;
   anyStudentHasProgress?: boolean;
   code: string;
   codeReviewExpiresAt?: number | null;
@@ -66,6 +67,7 @@ export type ServerOAuthSectionTypeName = OAuthSectionTypeName | 'google_oauth2';
 
 export interface ServerSection {
   ai_tutor_enabled?: boolean;
+  at_risk_age_gated?: boolean;
   code: string;
   course_display_name?: string | null;
   course_id: number | null;
