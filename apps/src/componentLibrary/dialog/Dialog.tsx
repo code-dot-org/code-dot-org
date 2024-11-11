@@ -1,7 +1,12 @@
 import classnames from 'classnames';
-import React, {HTMLAttributes, ReactNode, useRef} from 'react';
+import React, {HTMLAttributes, ReactNode, useMemo, useRef} from 'react';
 
-import {Button} from '@cdo/apps/componentLibrary/button';
+import {
+  Button,
+  ButtonColor,
+  ButtonProps,
+  ButtonType,
+} from '@cdo/apps/componentLibrary/button';
 import CloseButton from '@cdo/apps/componentLibrary/closeButton';
 import useBodyScrollLock from '@cdo/apps/componentLibrary/common/hooks/useBodyScrollLock';
 import useEscapeKeyHandler from '@cdo/apps/componentLibrary/common/hooks/useEscapeKeyHandler';
@@ -22,8 +27,10 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
   customContent?: ReactNode;
   /** Custom bottom content (rendered right after Dialog actions section) */
   customBottomContent?: ReactNode;
-  /** Whether to show secondary button */
-  showSecondaryButton?: boolean;
+  /** Dialog primary button props */
+  primaryButtonProps: ButtonProps;
+  /** Dialog secondary button props */
+  secondaryButtonProps?: ButtonProps;
   /** Dialog color mode */
   mode?: 'light' | 'dark';
   /** Custom class name */
@@ -37,6 +44,14 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
   /** Dialog image url */
   imageUrl?: string;
 }
+
+const getDialogActionButtonDefaultProps = (
+  mode: 'light' | 'dark',
+  type: ButtonType
+) => ({
+  type,
+  color: (mode === 'light' ? 'black' : 'white') as ButtonColor,
+});
 
 // TODO:
 // * add support of button props
@@ -68,7 +83,8 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
 const Dialog: React.FunctionComponent<DialogProps> = ({
   title,
   description,
-  showSecondaryButton,
+  primaryButtonProps,
+  secondaryButtonProps,
   mode = 'light',
   className,
   customContent,
@@ -80,6 +96,15 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
   ...HTMLAttributes
 }) => {
   const dialogRef = useRef<HTMLDivElement>(null);
+
+  const secondaryButtonDefaultProps = useMemo(
+    () => getDialogActionButtonDefaultProps(mode, 'secondary'),
+    [mode]
+  );
+  const primaryButtonDefaultProps = useMemo(
+    () => getDialogActionButtonDefaultProps(mode, 'primary'),
+    [mode]
+  );
 
   useBodyScrollLock(true);
   useFocusTrap(dialogRef);
@@ -114,20 +139,13 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
           {customContent}
         </div>
         <div className={moduleStyles.dialogActionsSection}>
-          {showSecondaryButton && (
+          {secondaryButtonProps && (
             <Button
-              type="secondary"
-              color={mode === 'light' ? 'black' : 'white'}
-              text="Secondary Button"
-              onClick={() => null}
+              {...secondaryButtonDefaultProps}
+              {...secondaryButtonProps}
             />
           )}
-          <Button
-            type="primary"
-            color={mode === 'light' ? 'purple' : 'white'}
-            text="Primary Button"
-            onClick={() => null}
-          />
+          <Button {...primaryButtonDefaultProps} {...primaryButtonProps} />
         </div>
         {customBottomContent}
 
