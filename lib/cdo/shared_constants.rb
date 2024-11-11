@@ -105,6 +105,7 @@ module SharedConstants
     poetry_hoc
     thebadguys
     music
+    pythonlab
   ).freeze
 
   # For privacy reasons, App Lab and Game Lab can only be shared if certain conditions are met. These project types can be shared if: the user is >= 13 years old and their teacher has NOT disabled sharing OR the user is < 13 and their teacher has enabled sharing.
