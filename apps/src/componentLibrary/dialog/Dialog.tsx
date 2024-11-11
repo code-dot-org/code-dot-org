@@ -1,12 +1,7 @@
 import classnames from 'classnames';
-import React, {HTMLAttributes, ReactNode, useMemo, useRef} from 'react';
+import React, {HTMLAttributes, ReactNode, useRef} from 'react';
 
-import {
-  Button,
-  ButtonColor,
-  ButtonProps,
-  ButtonType,
-} from '@cdo/apps/componentLibrary/button';
+import {Button, ButtonProps} from '@cdo/apps/componentLibrary/button';
 import CloseButton from '@cdo/apps/componentLibrary/closeButton';
 import useBodyScrollLock from '@cdo/apps/componentLibrary/common/hooks/useBodyScrollLock';
 import useEscapeKeyHandler from '@cdo/apps/componentLibrary/common/hooks/useEscapeKeyHandler';
@@ -25,7 +20,10 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
   description?: string;
   /** Dialog Custom content (rendered right after/instead Dialog description) */
   customContent?: ReactNode;
-  /** Custom bottom content (rendered right after Dialog actions section) */
+  /** Custom bottom content (rendered right after Dialog actions section).
+   *  If this is rendered when there's no `description` prop - make sure to add `dsco-dialog-description` `id`
+   *  to the element in custom content which will be representing the dialog description. (Used by screen readers
+   *  for dialog's `aria-describedBy` attribute) */
   customBottomContent?: ReactNode;
   /** Dialog primary button props */
   primaryButtonProps: ButtonProps;
@@ -45,31 +43,9 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
   imageUrl?: string;
 }
 
-const getDialogActionButtonDefaultProps = (
-  mode: 'light' | 'dark',
-  type: ButtonType
-) => ({
-  type,
-  color: (mode === 'light' ? 'black' : 'white') as ButtonColor,
-});
-
-// TODO:
-// * add support of button props
-// * add documentation about aria attributes and custom content rendering
-// * + Add tests
-// * + Add focus trap
-// * + add story with custom content
-// * + add story with custom actions
-// * + add story without close button
-// * + add support of
-//   +     aria-labelledby="dialog-title"
-//   +     aria-describedby="dialog-content"
-// * + organize hooks
-// * + add colors support
-
 /**
  * ## Production-ready Checklist:
- *  * (?) implementation of component approved by design team;
+ *  * (✔) implementation of component approved by design team;
  *  * (✔) has storybook, covered with stories and documentation;
  *  * (✔) has tests: test every prop, every state and every interaction that's js related;
  *  * (see apps/test/unit/componentLibrary/DialogTest.tsx)
@@ -97,15 +73,6 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
 }) => {
   const dialogRef = useRef<HTMLDivElement>(null);
 
-  const secondaryButtonDefaultProps = useMemo(
-    () => getDialogActionButtonDefaultProps(mode, 'secondary'),
-    [mode]
-  );
-  const primaryButtonDefaultProps = useMemo(
-    () => getDialogActionButtonDefaultProps(mode, 'primary'),
-    [mode]
-  );
-
   useBodyScrollLock(true);
   useFocusTrap(dialogRef);
   useEscapeKeyHandler(onClose);
@@ -116,7 +83,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
         role="dialog"
         ref={dialogRef}
         aria-modal
-        aria-labelledby="dsco-dialog-title"
+        aria-label={title}
         aria-describedby="dsco-dialog-description"
         className={classnames(
           moduleStyles.dialog,
@@ -127,7 +94,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
       >
         <div className={moduleStyles.dialogTextSection}>
           {imageUrl && <img src={imageUrl} alt="Dialog" />}
-          <Heading2 id="dsco-dialog-title">{title}</Heading2>
+          <Heading2>{title}</Heading2>
           {description && (
             <BodyTwoText
               id="dsco-dialog-description"
@@ -141,11 +108,16 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
         <div className={moduleStyles.dialogActionsSection}>
           {secondaryButtonProps && (
             <Button
-              {...secondaryButtonDefaultProps}
+              type="secondary"
+              color={mode === 'light' ? 'black' : 'white'}
               {...secondaryButtonProps}
             />
           )}
-          <Button {...primaryButtonDefaultProps} {...primaryButtonProps} />
+          <Button
+            type="primary"
+            color={mode === 'light' ? 'purple' : 'white'}
+            {...primaryButtonProps}
+          />
         </div>
         {customBottomContent}
 

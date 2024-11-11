@@ -10,11 +10,8 @@ export default {
   component: Dialog,
 } as Meta;
 
-//
-// TEMPLATE
-//
 const SingleTemplate: StoryFn<DialogProps> = args => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div>
@@ -79,6 +76,10 @@ export const DefaultDialog = SingleTemplate.bind({});
 DefaultDialog.args = {
   title: 'Default Dialog',
   description: 'This is the content of the default dialog.',
+  primaryButtonProps: {
+    text: 'Primary Action',
+    onClick: () => alert('Primary button clicked!'),
+  },
   onClose: () => console.log('Dialog closed'),
 };
 
@@ -86,15 +87,23 @@ export const DialogWithIcon = SingleTemplate.bind({});
 DialogWithIcon.args = {
   title: 'Dialog with Icon',
   description: 'This dialog has an icon.',
-  icon: {iconName: 'smile'}, // Example icon
+  icon: {iconName: 'smile'},
+  primaryButtonProps: {
+    text: 'Primary Action',
+    onClick: () => alert('Primary button clicked!'),
+  },
   onClose: () => console.log('Dialog with icon closed'),
 };
 
 export const DialogWithImage = SingleTemplate.bind({});
 DialogWithImage.args = {
-  title: 'Dialog with Icon',
-  description: 'Dialog with image',
-  imageUrl: 'https://code.org/images/courses-6-12.png', // Example image
+  title: 'Dialog with Image',
+  description: 'This dialog displays an image.',
+  imageUrl: 'https://code.org/images/courses-6-12.png',
+  primaryButtonProps: {
+    text: 'Primary Action',
+    onClick: () => alert('Primary button clicked!'),
+  },
   onClose: () => console.log('Dialog with icon closed'),
 };
 
@@ -102,13 +111,24 @@ export const DialogWithoutCloseButton = SingleTemplate.bind({});
 DialogWithoutCloseButton.args = {
   title: 'Dialog without Close Button',
   description: 'This dialog does not have a close button.',
+  primaryButtonProps: {
+    text: 'Primary Action',
+    onClick: () => alert('Primary button clicked!'),
+  },
 };
 
 export const DialogWithSecondaryButton = SingleTemplate.bind({});
 DialogWithSecondaryButton.args = {
   title: 'Dialog with Secondary Button',
   description: 'This dialog includes a secondary button.',
-  showSecondaryButton: true,
+  primaryButtonProps: {
+    text: 'Primary Action',
+    onClick: () => alert('Primary button clicked!'),
+  },
+  secondaryButtonProps: {
+    text: 'Secondary Action',
+    onClick: () => alert('Secondary button clicked!'),
+  },
   onClose: () => console.log('Dialog with secondary button closed'),
 };
 
@@ -117,13 +137,19 @@ DialogWithCustomContent.args = {
   title: 'Dialog with Custom Content',
   customContent: (
     <div>
-      <p>This is some custom content rendered within the dialog.</p>
+      <p id="dsco-dialog-description">
+        This is some custom content rendered within the dialog.
+      </p>
       <ul>
         <li>Custom item 1</li>
         <li>Custom item 2</li>
       </ul>
     </div>
   ),
+  primaryButtonProps: {
+    text: 'Primary Action',
+    onClick: () => alert('Primary button clicked!'),
+  },
   onClose: () => console.log('Dialog with custom content closed'),
 };
 
@@ -131,6 +157,10 @@ export const DialogWithCustomBottomContent = SingleTemplate.bind({});
 DialogWithCustomBottomContent.args = {
   title: 'Dialog with Custom Bottom Content',
   description: 'This dialog has custom content at the bottom.',
+  primaryButtonProps: {
+    text: 'Primary Action',
+    onClick: () => alert('Primary button clicked!'),
+  },
   customBottomContent: (
     <div>
       <Button
@@ -148,39 +178,34 @@ MultipleDialogs.args = {
     {
       title: 'Dialog 1',
       description: 'Content for dialog 1',
+      primaryButtonProps: {
+        text: 'Primary Action 1',
+        onClick: () => alert('Primary button 1 clicked!'),
+      },
       onClose: () => console.log('Dialog 1 closed'),
     },
     {
       title: 'Dialog 2 with Icon',
       description: 'Content for dialog 2',
       icon: {iconName: 'circle-check'},
+      primaryButtonProps: {
+        text: 'Primary Action 2',
+        onClick: () => alert('Primary button 2 clicked!'),
+      },
       onClose: () => console.log('Dialog 2 closed'),
     },
     {
       title: 'Dialog 3 with Secondary Button',
       description: 'Content for dialog 3',
-      showSecondaryButton: true,
+      primaryButtonProps: {
+        text: 'Primary Action 3',
+        onClick: () => alert('Primary button 3 clicked!'),
+      },
+      secondaryButtonProps: {
+        text: 'Secondary Action',
+        onClick: () => alert('Secondary button clicked!'),
+      },
       onClose: () => console.log('Dialog 3 closed'),
-    },
-  ],
-};
-
-export const GroupOfDialogColors = MultipleDialogs.bind({});
-GroupOfDialogColors.args = {
-  components: [
-    {
-      title: 'Light Dialog',
-      description: 'Content for dialog 1',
-      mode: 'light',
-      showSecondaryButton: true,
-      onClose: () => console.log('Dialog 1 closed'),
-    },
-    {
-      title: 'Dark Dialog',
-      description: 'Content for dialog 2',
-      mode: 'dark',
-      showSecondaryButton: true,
-      onClose: () => console.log('Dialog 2 closed'),
     },
   ],
 };
