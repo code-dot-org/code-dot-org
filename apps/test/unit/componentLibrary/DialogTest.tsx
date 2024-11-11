@@ -10,9 +10,10 @@ describe('Dialog Component', () => {
     title: 'Test Dialog',
     description: 'This is a test description.',
     onClose: jest.fn(),
-    showSecondaryButton: true,
-    mode: 'light',
     closeLabel: 'Close the dialog',
+    primaryButtonProps: {text: 'Primary Button', onClick: jest.fn()},
+    secondaryButtonProps: {text: 'Secondary Button', onClick: jest.fn()},
+    mode: 'light',
   };
 
   it('should render the dialog with title and description', () => {
@@ -36,15 +37,13 @@ describe('Dialog Component', () => {
 
   it('should trigger onClose when the close button is clicked', () => {
     render(<Dialog {...defaultProps} />);
-
-    const closeButton = screen.getByLabelText('Close the dialog');
-    fireEvent.click(closeButton);
+    fireEvent.click(screen.getByLabelText('Close the dialog'));
 
     expect(defaultProps.onClose).toHaveBeenCalledTimes(1);
   });
 
-  it('should not render the secondary button if showSecondaryButton is false', () => {
-    render(<Dialog {...defaultProps} showSecondaryButton={false} />);
+  it('should not render the secondary button if secondaryButtonProps is not provided', () => {
+    render(<Dialog {...defaultProps} secondaryButtonProps={undefined} />);
 
     expect(
       screen.queryByRole('button', {name: 'Secondary Button'})
@@ -96,7 +95,6 @@ describe('Dialog Component', () => {
   // Test for escape key handler
   it('should call onClose when the escape key is pressed', () => {
     render(<Dialog {...defaultProps} />);
-
     fireEvent.keyDown(document, {key: 'Escape', code: 'Escape'});
     expect(defaultProps.onClose).toHaveBeenCalledTimes(1);
   });
