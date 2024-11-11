@@ -8,12 +8,12 @@ import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import Typography from '@cdo/apps/componentLibrary/typography';
+import DCDO from '@cdo/apps/dcdo';
 import {ProjectType} from '@cdo/apps/lab2/types';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {SubmissionStatusType} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import trackEvent from '@cdo/apps/util/trackEvent';
 import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
@@ -97,9 +97,11 @@ const SubmitButtonInfo: React.FunctionComponent<{
   submissionStatus: SubmissionStatusType | undefined;
   onSubmitClick: () => void;
 }> = ({submissionStatus, onSubmitClick}) => {
-  if (
-    !experiments.isEnabledAllowingQueryString(experiments.LAB2_SUBMIT_PROJECT)
-  ) {
+  const lab2SubmitProjectEnabled = DCDO.get(
+    'lab2-submit-project-enabled',
+    true
+  ) as boolean;
+  if (!lab2SubmitProjectEnabled) {
     return null;
   }
   if (submissionStatus === ProjectSubmissionStatus.CAN_SUBMIT) {

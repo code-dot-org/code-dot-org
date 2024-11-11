@@ -61,6 +61,7 @@ class DCDOBase < DynamicConfigBase
       # TODO ACQ-2556 - Remove this after the 2024 HOC launch
       'hoc-2024-nov-launch': DCDO.get('hoc-2024-nov-launch', false),
       'browser-tts-button-enabled': DCDO.get('browser-tts-button-enabled', true),
+      'lab2-submit-project-enabled': DCDO.get('lab2-submit-project-enabled', true),
     }
   end
 end
