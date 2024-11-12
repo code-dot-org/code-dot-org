@@ -51,6 +51,19 @@ export const AgeGatedSectionsModal: React.FC<Props> = ({
       user_id: currentUser.userId,
     });
   }, [currentUser.userId]);
+
+  const startDate = ageGatedSections.find(
+    section => section.atRiskAgeGatedDate
+  )?.atRiskAgeGatedDate;
+
+  const dateOptions: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  };
+  const startDateText =
+    startDate?.toLocaleDateString('en-US', dateOptions) || '???';
+
   return (
     <BaseDialog
       isOpen={isOpen}
@@ -74,7 +87,7 @@ export const AgeGatedSectionsModal: React.FC<Props> = ({
           <hr />
           <Typography semanticTag="p" visualAppearance="body-two">
             {i18n.childAccountPolicy_ageGatedSectionsModal_notice({
-              startDate: 'DAYNE',
+              startDate: startDateText,
             })}
           </Typography>
           <Typography semanticTag="p" visualAppearance="body-two">

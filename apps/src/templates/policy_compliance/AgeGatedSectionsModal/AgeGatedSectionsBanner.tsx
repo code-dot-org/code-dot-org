@@ -36,13 +36,25 @@ export const AgeGatedSectionsBanner: React.FC<Props> = ({
     });
   }, [currentUser.userId, ageGatedSections]);
 
+  const startDate = ageGatedSections.find(
+    section => section.atRiskAgeGatedDate
+  )?.atRiskAgeGatedDate;
+
+  const dateOptions: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  };
+  const startDateText =
+    startDate?.toLocaleDateString('en-US', dateOptions) || '???';
+
   return (
     <div id="uitest-age-gated-sections-banner">
       <Notification
         type={NotificationType.warning}
         notice={i18n.headsUp()}
         details={i18n.childAccountPolicy_ageGatedSectionsWarning({
-          startDate: 'DAYNE',
+          startDate: startDateText,
         })}
         buttonText={i18n.childAccountPolicy_ageGatedSectionsWarning_button()}
         buttonLink={'#'}

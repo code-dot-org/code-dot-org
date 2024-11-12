@@ -2220,7 +2220,7 @@ class User < ApplicationRecord
   end
 
   def at_risk_age_gated?
-    Policies::ChildAccount.compliant?(self, future: true)
+    !Policies::ChildAccount.compliant?(self, future: true)
   end
 
   def has_ever_signed_in?

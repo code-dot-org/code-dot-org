@@ -82,7 +82,7 @@ const ageGatedSections = [
     providerManaged: false,
     hidden: false,
     participantType: ParticipantAudience.student,
-    atRiskAgeGated: true,
+    atRiskAgeGatedDate: new Date('2025-01-01T00:00:00-05:00'),
   },
 ];
 ageGatedSections.push(...sections);

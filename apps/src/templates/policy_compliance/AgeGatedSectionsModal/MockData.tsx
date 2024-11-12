@@ -91,7 +91,7 @@ export const MockAgeGatedSections = [
     providerManaged: false,
     hidden: false,
     participantType: ParticipantAudience.student,
-    atRiskAgeGated: true,
+    atRiskAgeGatedDate: new Date('2025-01-01T00:00:00-05:00'),
     grades: ['3', '4', '5'],
   },
   {
@@ -108,7 +108,7 @@ export const MockAgeGatedSections = [
     providerManaged: false,
     hidden: false,
     participantType: ParticipantAudience.student,
-    atRiskAgeGated: true,
+    atRiskAgeGatedDate: new Date('2025-01-01T00:00:00-05:00'),
     grades: undefined,
   },
   {
@@ -125,7 +125,7 @@ export const MockAgeGatedSections = [
     providerManaged: false,
     hidden: false,
     participantType: ParticipantAudience.student,
-    atRiskAgeGated: true,
+    atRiskAgeGatedDate: new Date('2025-01-01T00:00:00-05:00'),
     grades: undefined,
   },
   {
@@ -142,7 +142,7 @@ export const MockAgeGatedSections = [
     providerManaged: false,
     hidden: false,
     participantType: ParticipantAudience.student,
-    atRiskAgeGated: true,
+    atRiskAgeGatedDate: new Date('2025-01-01T00:00:00-05:00'),
     grades: ['1', '2', '3'],
   },
 ];

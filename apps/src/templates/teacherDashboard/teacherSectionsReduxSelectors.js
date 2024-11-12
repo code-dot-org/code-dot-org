@@ -178,7 +178,9 @@ export const sectionFromServerSection = serverSection => ({
   syncEnabled: serverSection.sync_enabled,
   aiTutorEnabled: serverSection.ai_tutor_enabled,
   anyStudentHasProgress: serverSection.any_student_has_progress,
-  atRiskAgeGated: serverSection.at_risk_age_gated,
+  atRiskAgeGatedDate: serverSection.at_risk_age_gated_date
+    ? new Date(serverSection.at_risk_age_gated_date)
+    : null,
 });
 
 /**
@@ -219,7 +221,7 @@ export function serverSectionFromSection(section) {
     restrict_section: section.restrictSection,
     participant_type: section.participantType,
     ai_tutor_enabled: section.aiTutorEnabled,
-    at_risk_age_gated: section.atRiskAgeGated,
+    at_risk_age_gated_date: section.atRiskAgeGatedDate?.toISOString(),
   };
 }
 
@@ -399,5 +401,5 @@ export function atRiskAgeGatedSections(state) {
   // Only non-archived sections can be at risk.
   const activeSections = sections.filter(section => !section.hidden);
   // Select only the sections which have students at risk.
-  return activeSections.filter(section => section.atRiskAgeGated);
+  return activeSections.filter(section => section.atRiskAgeGatedDate);
 }
