@@ -15,8 +15,8 @@ import {blocklyLocaleMap} from './blocklyLocaleImports';
 // https://github.com/google/blockly/blob/master/msg/json/README.md
 const localeFromCookies = cookies.get('language_');
 const messages =
-  blocklyLocaleMap[localeFromCookies] || blocklyLocaleMap['en-US'];
-
+  blocklyLocaleMap[localeFromCookies.toLocaleLowerCase()] ||
+  blocklyLocaleMap['en-us'];
 GoogleBlockly.setLocale(messages);
 
 window.Blockly = initializeGoogleBlocklyWrapper(GoogleBlockly);
