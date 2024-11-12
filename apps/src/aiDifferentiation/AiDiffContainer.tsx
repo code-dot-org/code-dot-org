@@ -11,6 +11,7 @@ import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
 import HttpClient from '../util/HttpClient';
+import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
 import AiDiffBotMessageFooter from './AiDiffBotMessageFooter';
 import AiDiffChatFooter from './AiDiffChatFooter';
@@ -36,6 +37,8 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
 }) => {
   // TODO: Update to support i18n
   const aiDiffHeaderText = 'AI Teaching Assistant';
+  const aiDiffPositionX = 'aiDiffPositionX';
+  const aiDiffPositionY = 'aiDiffPositionY';
 
   const aiDiffChatMessageEndpoint = '/ai_diff/chat_completion';
 
@@ -45,8 +48,12 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     unitName: unitDisplayName,
   };
 
-  const [positionX, setPositionX] = useState(0);
-  const [positionY, setPositionY] = useState(0);
+  const [positionX, setPositionX] = useState(
+    parseInt(tryGetSessionStorage(aiDiffPositionX, 0)) || 0
+  );
+  const [positionY, setPositionY] = useState(
+    parseInt(tryGetSessionStorage(aiDiffPositionY, 0)) || 0
+  );
 
   const [sessionId, setSessionId] = useState(null);
 
@@ -83,6 +90,14 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     },
     SUGGESTED_PROMPTS,
   ]);
+
+  useEffect(() => {
+    trySetSessionStorage(aiDiffPositionX, String(positionX));
+  }, [positionX]);
+
+  useEffect(() => {
+    trySetSessionStorage(aiDiffPositionY, String(positionY));
+  }, [positionY]);
 
   const onStopHandler: DraggableEventHandler = (e, data) => {
     setPositionX(data.x);
