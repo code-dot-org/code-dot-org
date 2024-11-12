@@ -69,6 +69,10 @@ $text-horizontal-padding: 2.6cqw;
         animation: 0.5s ease 0s fade-in;
         animation-fill-mode: both;
       }
+
+      &Invisible {
+        opacity: 0;
+      }
     }
 
     .text {

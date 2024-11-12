@@ -385,6 +385,11 @@ const EVENTS = {
   FINISH_BUTTON_CERTIFICATE:
     'User Clicks on Finish Button in Finish Congrats Dialog - Certificate',
 
+  // Project submission
+  SHARING_DIALOG_SUBMIT_TO_BE_FEATURED:
+    'User Clicks Submit To Be Featured In Share Dialog',
+  SUBMIT_PROJECT_DIALOG_SUBMIT: 'User Clicks Submit In Submit Project Dialog',
+
   // Export app
   EXPORT_APP: 'User Exports App From Share Advanced Options',
 
@@ -399,6 +404,7 @@ const EVENTS = {
   LTI_UNLINK_MODAL_SHOWN: 'lti_unlink_modal_shown',
   LTI_UNLINK_CLICK: 'lti_unlink_click',
   LTI_UNLINK_CANCEL: 'lti_unlink_cancel',
+  LTI_DYNAMIC_REGISTRATION_COMPLETED: 'lti_dynamic_registration_completed',
 
   // Teacher Homepage
   TEACHER_HOMEPAGE_VISITED: 'Teacher Homepage Visited',

@@ -23,6 +23,7 @@ interface LessonMaterialsData {
   scriptOverviewPdfUrl: string;
   scriptResourcesPdfUrl: string;
   lessons: Lesson[];
+  hasNumberedUnits: boolean;
 }
 
 const lessonMaterialsCachedLoader = _.memoize(
@@ -80,6 +81,10 @@ const createDisplayName = (lessonName: string, lessonPosition: number) => {
 
 const LessonMaterialsContainer: React.FC = () => {
   const loadedData = useLoaderData() as LessonMaterialsData | null;
+  const hasNumberedUnits = useMemo(
+    () => loadedData?.hasNumberedUnits || false,
+    [loadedData]
+  );
   const lessons = useMemo(() => loadedData?.lessons || [], [loadedData]);
   const unitNumber = useMemo(() => loadedData?.unitNumber || 1, [loadedData]);
 
@@ -129,7 +134,7 @@ const LessonMaterialsContainer: React.FC = () => {
 
     return (
       <LessonResources
-        unitNumber={unitNumber}
+        unitNumber={hasNumberedUnits ? unitNumber : null}
         lessonNumber={selectedLesson.position}
         resources={selectedLesson.resources.Teacher || []}
         standardsUrl={selectedLesson.standardsUrl}
@@ -148,7 +153,7 @@ const LessonMaterialsContainer: React.FC = () => {
 
     return (
       <LessonResources
-        unitNumber={unitNumber}
+        unitNumber={hasNumberedUnits ? unitNumber : null}
         lessonNumber={selectedLesson.position}
         resources={selectedLesson.resources.Student || []}
       />
@@ -169,7 +174,8 @@ const LessonMaterialsContainer: React.FC = () => {
         />
         {loadedData?.unitNumber && (
           <UnitResourcesDropdown
-            unitNumber={loadedData.unitNumber || 0}
+            hasNumberedUnits={hasNumberedUnits}
+            unitNumber={loadedData.unitNumber}
             scriptOverviewPdfUrl={loadedData.scriptOverviewPdfUrl}
             scriptResourcesPdfUrl={loadedData.scriptResourcesPdfUrl}
           />

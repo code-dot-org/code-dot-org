@@ -16,6 +16,7 @@ describe('LessonMaterialsContainer', () => {
   const mockLessonData = {
     title: 'Unit 3',
     unitNumber: 3,
+    hasNumberedUnits: true,
     lessons: [
       {
         name: 'First lesson',
@@ -86,10 +87,10 @@ describe('LessonMaterialsContainer', () => {
     // check for unit resources dropdown
     screen.getByRole('button', {name: 'View unit options dropdown'});
     screen.getByText(
-      i18n.downloadUnitLessonPlans({unitNumber: mockLessonData.unitNumber})
+      i18n.downloadUnitXLessonPlans({unitNumber: mockLessonData.unitNumber})
     );
     screen.getByText(
-      i18n.downloadUnitHandouts({unitNumber: mockLessonData.unitNumber})
+      i18n.downloadUnitXHandouts({unitNumber: mockLessonData.unitNumber})
     );
 
     // Check for lesson dropdowns
@@ -118,6 +119,24 @@ describe('LessonMaterialsContainer', () => {
     // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('resource-icon-' + RESOURCE_ICONS.VIDEO.icon);
     screen.getByText('Video: my linked video');
+  });
+
+  it('renders "Unit Standards" and "Unit Vocabulary" when hasNumberedUnits is false', () => {
+    const lessonDataWithoutNumberedUnits = {
+      ...mockLessonData,
+      hasNumberedUnits: false,
+    };
+
+    (useLoaderData as jest.Mock).mockReturnValue(
+      lessonDataWithoutNumberedUnits
+    );
+
+    render(<LessonMaterialsContainer />);
+
+    screen.getByText('Unit Standards');
+    screen.getByText('Unit Vocabulary');
+    screen.getByText(i18n.downloadUnitLessonPlans());
+    screen.getByText(i18n.downloadUnitHandouts());
   });
 
   it('renders the resources for the new lesson when lesson is changed', () => {
@@ -287,6 +306,31 @@ describe('LessonMaterialsContainer', () => {
         'https://videos.code.org/video.mp4',
         '_self'
       );
+    });
+
+    it('shows no student resources if no student resources are provided', () => {
+      render(<LessonMaterialsContainer />);
+
+      // check for unit resources dropdown
+      screen.getByRole('button', {name: 'View unit options dropdown'});
+      screen.getByText(
+        i18n.downloadUnitXLessonPlans({unitNumber: mockLessonData.unitNumber})
+      );
+      screen.getByText(
+        i18n.downloadUnitXHandouts({unitNumber: mockLessonData.unitNumber})
+      );
+
+      // Check for lesson dropdowns
+      const lessonDropdown = screen.getByRole('combobox');
+      screen.getByRole('option', {name: 'Lesson 1 — First lesson'});
+      screen.getByRole('option', {name: 'Lesson 2 — Second lesson'});
+
+      fireEvent.change(lessonDropdown, {
+        target: {value: '2'},
+      });
+
+      screen.getByText('Lesson Plan: Second lesson');
+      screen.getByText(i18n.noStudentResources());
     });
   });
 });

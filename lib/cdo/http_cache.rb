@@ -86,7 +86,6 @@ class HttpCache
     starwarsblocks
     mc
     frozen
-    gumball
     minecraft
     hero
     sports
@@ -101,6 +100,7 @@ class HttpCache
     hello-world-emoji-2021
     hello-world-space-2022
     hello-world-soccer-2022
+    music-jam-2024
     outbreak
   ).map do |script_name|
     # Most scripts use the default route pattern.
@@ -164,8 +164,10 @@ class HttpCache
       'rack.session',
       'remember_user_token',
       '__profilin', # Used by rack-mini-profiler
+      'statsig_stable_id',
       session_key,
       storage_id,
+      'new_sign_up_user_type',
     ].concat(default_cookies)
 
     {

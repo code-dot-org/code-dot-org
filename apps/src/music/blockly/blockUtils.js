@@ -89,7 +89,8 @@ export function installFunctionBlocks(blockMode) {
       generator
     ) =>
       simple2FunctionCallGenerator(
-        generator.getProcedureName(block.getFieldValue('NAME'))
+        generator.getProcedureName(block.getFieldValue('NAME')),
+        block.id
       );
   }
   // Sets the help URL for each function definiton block to the appropriate
@@ -134,9 +135,9 @@ function restoreBlockDefinitions() {
 }
 
 // A helper function to generate the code for a function call to play sounds sequentially.
-function simple2FunctionCallGenerator(functionName) {
+function simple2FunctionCallGenerator(functionName, functionCallBllockId) {
   return `
-    Sequencer.startFunctionContext('${functionName}');
+    Sequencer.startFunctionContext('${functionName}', '${functionCallBllockId}');
     Sequencer.playSequential();
     ${functionName}();
     Sequencer.endSequential();

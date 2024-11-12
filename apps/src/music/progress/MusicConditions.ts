@@ -27,7 +27,13 @@ export const MusicConditions: ConditionNames = {
     name: 'played_sound_in_function',
     valueType: 'string',
     description:
-      'Checks if a sound is playing in a given function. Simple2 only. Ex. Value: chorus',
+      "Checks if a sound is playing in a given function.  The function is identified by name, which doesn't work if it's localized. Simple2 only. Ex. Value: chorus",
+  },
+  PLAYED_SOUND_IN_FUNCTION_BY_ID: {
+    name: 'played_sound_in_function_by_id',
+    valueType: 'string',
+    description:
+      "Checks if a sound is playing in a given function. The function is identified by the calling block's ID.  Simple2 only. Ex. Value: chorus",
   },
   PLAYED_SOUND_IN_ANY_FUNCTION: {
     name: 'played_sound_in_any_function',

@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import QRCode from 'qrcode.react';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import FocusLock from 'react-focus-lock';
 
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
@@ -9,6 +9,8 @@ import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import {ProjectType} from '@cdo/apps/lab2/types';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {SubmissionStatusType} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import experiments from '@cdo/apps/util/experiments';
@@ -22,7 +24,8 @@ import moduleStyles from './share-dialog.module.scss';
 const CopyToClipboardButton: React.FunctionComponent<{
   shareUrl: string;
   projectType: ProjectType;
-}> = ({shareUrl, projectType}) => {
+  channelId: string | undefined;
+}> = ({shareUrl, projectType, channelId}) => {
   const [copiedToClipboard, setCopiedToClipboard] = useState(false);
 
   const handleCopyToClipboard = useCallback(() => {
@@ -30,7 +33,15 @@ const CopyToClipboardButton: React.FunctionComponent<{
       setCopiedToClipboard(true);
     });
     trackEvent('share', 'share_copy_url', {value: projectType});
-  }, [shareUrl, projectType]);
+    analyticsReporter.sendEvent(
+      EVENTS.SHARING_LINK_COPY,
+      {
+        lab_type: projectType,
+        channel_id: channelId,
+      },
+      PLATFORMS.STATSIG
+    );
+  }, [shareUrl, projectType, channelId]);
 
   return (
     <Button
@@ -50,7 +61,7 @@ const CopyToClipboardButton: React.FunctionComponent<{
 
 const AfeCareerTourBlock: React.FunctionComponent = () => {
   const careersUrl =
-    'https://www.amazonfutureengineer.com/careertours/careervideos';
+    'https://www.amazonfutureengineer.com/musicsolo?utm_campaign=Code.Org&utm_medium=Musiclab&utm_source=US&utm_content=Career%20Tours&utm_term=2024';
 
   return (
     <div className={classNames(moduleStyles.block, moduleStyles.blockAfe)}>
@@ -128,6 +139,7 @@ const ShareDialog: React.FunctionComponent<{
   projectType: ProjectType;
   onSubmitClick: () => void;
   submissionStatus: SubmissionStatusType | undefined;
+  channelId: string;
 }> = ({
   dialogId,
   shareUrl,
@@ -135,22 +147,21 @@ const ShareDialog: React.FunctionComponent<{
   projectType,
   onSubmitClick,
   submissionStatus,
+  channelId,
 }) => {
   const dispatch = useAppDispatch();
 
-  useEffect(() => {
-    trackEvent('share', 'share_open_dialog', {
-      value:
-        dialogId === 'hoc2024'
-          ? 'share_open_dialog_congrats_hoc2024'
-          : projectType,
-    });
-  });
-
-  const handleClose = useCallback(
-    () => dispatch(hideShareDialog()),
-    [dispatch]
-  );
+  const handleClose = useCallback(() => {
+    dispatch(hideShareDialog());
+    analyticsReporter.sendEvent(
+      EVENTS.SHARING_CLOSE_ESCAPE,
+      {
+        lab_type: projectType,
+        channel_id: channelId,
+      },
+      PLATFORMS.STATSIG
+    );
+  }, [channelId, dispatch, projectType]);
 
   return (
     <FocusLock>
@@ -189,6 +200,7 @@ const ShareDialog: React.FunctionComponent<{
                 <CopyToClipboardButton
                   shareUrl={shareUrl}
                   projectType={projectType}
+                  channelId={channelId}
                 />
                 <SubmitButtonInfo
                   submissionStatus={submissionStatus}
@@ -221,7 +233,6 @@ const ShareDialog: React.FunctionComponent<{
                   type="primary"
                   color="white"
                   size="m"
-                  className={moduleStyles.doneButton}
                 />
               </div>
             ) : (
@@ -232,7 +243,6 @@ const ShareDialog: React.FunctionComponent<{
                 color="white"
                 size="m"
                 onClick={handleClose}
-                className={moduleStyles.doneButton}
               />
             )}
           </div>

@@ -6,6 +6,7 @@ import {PlaybackEvent} from './PlaybackEvent';
  */
 export interface FunctionEvents {
   name: string;
+  functionCallBlockId?: string;
   uniqueInvocationId: number;
   playbackEvents: PlaybackEvent[];
   calledFunctionIds: number[];

@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.0](https://github.com/code-dot-org/code-dot-org/pull/62334)
+
+- created `hooks` folder
+- added `useBodyScrollLock`, `useDocumentKeydown`, `useEscapeKeyHandler`, `useFocusTrap` hooks
+- updated Readme.md
+
 ## [0.4.0](https://github.com/code-dot-org/code-dot-org/pull/62023)
 
 - created `common/styles/variables.scss` file

@@ -124,6 +124,10 @@ export default class MusicValidator extends Validator {
               name: MusicConditions.PLAYED_SOUND_IN_FUNCTION.name,
               value: eventData.functionContext.name,
             });
+            this.conditionsChecker.addSatisfiedCondition({
+              name: MusicConditions.PLAYED_SOUND_IN_FUNCTION_BY_ID.name,
+              value: eventData.functionContext.functionCallBlockId,
+            });
           }
 
           this.conditionsChecker.addSatisfiedCondition({

@@ -207,6 +207,22 @@ GroupOfDisabledSliders.args = {
       },
     },
     {
+      name: 'slider-aqua-disabled',
+      label: 'Slider Aqua Disabled',
+      color: 'aqua',
+      disabled: true,
+      onChange: () => null,
+      value: 50,
+      leftButtonProps: {
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
+      },
+      rightButtonProps: {
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
+      },
+    },
+    {
       name: 'slider-black-centered-disabled',
       label: 'Slider Black Centered Disabled',
       color: 'black',
@@ -248,6 +264,23 @@ GroupOfDisabledSliders.args = {
       isCentered: true,
       onChange: () => null,
       value: 75,
+      leftButtonProps: {
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
+      },
+      rightButtonProps: {
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
+      },
+    },
+    {
+      name: 'slider-aqua-centered-disabled',
+      label: 'Slider Aqua Centered Disabled',
+      color: 'aqua',
+      disabled: true,
+      isCentered: true,
+      onChange: () => null,
+      value: 65,
       leftButtonProps: {
         icon: {iconName: 'minus', title: 'Decrease'},
         ['aria-label']: 'Decrease',
@@ -309,6 +342,21 @@ GroupOfColorsOfSliders.args = {
       },
     },
     {
+      name: 'slider-aqua',
+      label: 'Slider Aqua',
+      color: 'aqua',
+      onChange: () => null,
+      value: 50,
+      leftButtonProps: {
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
+      },
+      rightButtonProps: {
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
+      },
+    },
+    {
       name: 'slider-black-centered',
       label: 'Slider Black Centered',
       color: 'black',
@@ -347,6 +395,22 @@ GroupOfColorsOfSliders.args = {
       isCentered: true,
       onChange: () => null,
       value: 75,
+      leftButtonProps: {
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
+      },
+      rightButtonProps: {
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
+      },
+    },
+    {
+      name: 'slider-aqua-centered',
+      label: 'Slider Aqua Centered',
+      color: 'aqua',
+      isCentered: true,
+      onChange: () => null,
+      value: 65,
       leftButtonProps: {
         icon: {iconName: 'minus', title: 'Decrease'},
         ['aria-label']: 'Decrease',

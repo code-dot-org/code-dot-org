@@ -42,7 +42,7 @@ export const computeMaterialType = (
     } else {
       return 'GOOGLE_DOC';
     }
-  } else if (resourceType.includes('Video')) {
+  } else if (resourceType?.includes('Video')) {
     return 'VIDEO';
   } else if (resourceType === 'Lesson Plan') {
     return 'LESSON_PLAN';

@@ -36,7 +36,8 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:non_compliant_child, :unknown_us_region], true],
       [[:non_compliant_child, :not_U13], true],
       [[:non_compliant_child, :migrated_imported_from_clever], true],
-      [[:non_compliant_child, :with_lti_auth], true],
+      [[:non_compliant_child, :with_lti_auth], false],
+      [[:non_compliant_child, :with_lti_auth, :without_encrypted_password], true],
       [[:non_compliant_child, {created_at: '2023-06-30T23:59:59MST'}], false],
       [[:non_compliant_child, :skip_validation, {birthday: nil}], true],
       [[:non_compliant_child, :with_interpolated_co], true],
@@ -81,13 +82,13 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:non_compliant_child, {created_at: '2023-06-29T23:59:59MDT'}], true],
       [[:non_compliant_child, {created_at: '2024-06-29T23:59:59MDT'}], false],
       [[:non_compliant_child, {created_at: '2024-07-01T00:00:00MDT'}], false],
-      [[:non_compliant_child, :migrated_imported_from_clever, {created_at: '2023-06-29T23:59:59MDT'}], false],
-      [[:non_compliant_child, :migrated_imported_from_clever, {created_at: '2024-06-29T23:59:59MDT'}], false],
-      [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2023-06-29T23:59:59MDT'}], true],
-      [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2024-06-29T23:59:59MDT'}], true],
-      [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2024-07-01T00:00:00MDT'}], false],
-      [[:non_compliant_child, :with_google_authentication_option, {created_at: '2024-06-29T23:59:59MDT'}], true],
-      [[:non_compliant_child, :with_google_authentication_option, {created_at: '2024-07-01T00:00:00MDT'}], false],
+      [[:non_compliant_child, :migrated_imported_from_clever, :without_email_auth_option, :without_encrypted_password, {created_at: '2023-06-29T23:59:59MDT'}], false],
+      [[:non_compliant_child, :migrated_imported_from_clever, :without_email_auth_option, :without_encrypted_password, {created_at: '2024-06-29T23:59:59MDT'}], false],
+      [[:non_compliant_child, :migrated_imported_from_google_classroom, :without_email_auth_option, :without_encrypted_password, {created_at: '2023-06-29T23:59:59MDT'}], false],
+      [[:non_compliant_child, :migrated_imported_from_google_classroom, :without_email_auth_option, :without_encrypted_password, {created_at: '2024-06-29T23:59:59MDT'}], false],
+      [[:non_compliant_child, :migrated_imported_from_google_classroom, :without_email_auth_option, :without_encrypted_password, {created_at: '2024-07-01T00:00:00MDT'}], false],
+      [[:non_compliant_child, :with_google_authentication_option, :without_email_auth_option, :without_encrypted_password, {created_at: '2024-06-29T23:59:59MDT'}], true],
+      [[:non_compliant_child, :with_google_authentication_option, :without_email_auth_option, :without_encrypted_password, {created_at: '2024-07-01T00:00:00MDT'}], false],
     ]
     failures = []
     test_matrix.each do |traits, compliance|
@@ -496,73 +497,58 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
   end
 
-  describe '.personal_account?' do
-    let(:personal_account?) {Policies::ChildAccount.personal_account?(user)}
+  test '.personal_account?' do
+    # [User traits, Expected result from personal_account?]
+    test_matrix = [
+      # Personal Accounts
+      [[:student], true], # Has email auth option and password by default
+      [[:student, :with_facebook_authentication_option, :without_email_auth_option, :without_encrypted_password], true],
+      [[:student, :with_google_authentication_option, :without_email_auth_option, :without_encrypted_password], true],
+      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :without_encrypted_password], true],
 
-    let(:user_sponsored?) {false}
-    let(:user_migrated?) {false}
-    let(:user_provider) {'email'}
-    let(:user_auth_option_credential_type) {'email'}
-    let(:user_auth_option) {build_stubbed(:authentication_option, credential_type: user_auth_option_credential_type)}
-    let(:user) {build_stubbed(:user, provider: user_provider, authentication_options: [user_auth_option])}
+      # School-managed accounts
+      [[:student, :with_clever_authentication_option, :without_email_auth_option, :without_encrypted_password], false],
+      [[:student, :with_lti_authentication_option, :without_email_auth_option, :without_encrypted_password], false],
 
-    before do
-      user.stubs(:sponsored?).returns(user_sponsored?)
-      user.stubs(:migrated?).returns(user_migrated?)
+      # Conditionally school-managed (when in a section or roster synced)
+      [[:student, :with_google_authentication_option, :without_email_auth_option, :without_encrypted_password, {roster_synced: true}], false],
+      [[:student, :with_google_authentication_option, :without_email_auth_option, :without_encrypted_password, :in_google_section], false],
+      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :without_encrypted_password, {roster_synced: true}], false],
+      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :without_encrypted_password, :in_email_section], false],
+
+      # School-managed accounts that have email logins or passwords, tainting them as personal accounts
+      [[:student, :with_clever_authentication_option, :without_encrypted_password], true],
+      [[:student, :with_clever_authentication_option, :without_email_auth_option], true],
+      [[:student, :with_lti_authentication_option, :without_encrypted_password], true],
+      [[:student, :with_lti_authentication_option, :without_email_auth_option], true],
+
+      # Conditionally school-managed accounts that have email logins or passwords, tainting them as personal accounts
+      [[:student, :with_google_authentication_option, :without_email_auth_option, {roster_synced: true}], true],
+      [[:student, :with_google_authentication_option, :without_encrypted_password, {roster_synced: true}], true],
+      [[:student, :with_google_authentication_option, :without_email_auth_option, :in_google_section], true],
+      [[:student, :with_google_authentication_option, :without_encrypted_password, :in_google_section], true],
+      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, {roster_synced: true}], true],
+      [[:student, :with_microsoft_authentication_option, :without_encrypted_password, {roster_synced: true}], true],
+      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :in_email_section], true],
+      [[:student, :with_microsoft_authentication_option, :without_encrypted_password, :in_email_section], true],
+
+      # Unmigrated
+      [[:student, :without_email_auth_option, :demigrated], true],
+      [[:student, :clever_sso_provider, :without_email_auth_option, :without_encrypted_password, :demigrated], false],
+      [[:student, :facebook_sso_provider, :without_email_auth_option, :without_encrypted_password, :demigrated], true],
+      [[:student, :google_sso_provider, :without_email_auth_option, :without_encrypted_password, :demigrated], true],
+      [[:student, :google_sso_provider, :without_email_auth_option, :without_encrypted_password, :demigrated, :in_google_section], false],
+      [[:student, :microsoft_v2_sso_provider, :without_email_auth_option, :without_encrypted_password, :demigrated], true],
+      [[:student, :microsoft_v2_sso_provider, :without_email_auth_option, :without_encrypted_password, :in_email_section, :demigrated], false],
+    ]
+    failures = []
+    test_matrix.each do |traits, expected_result|
+      user = create(*traits)
+      actual_result = Policies::ChildAccount.personal_account?(user)
+      failure_msg = "Expected personal_account?(#{traits}) to be #{expected_result} but it was #{actual_result}"
+      failures << failure_msg if actual_result != expected_result
     end
-
-    it 'returns true' do
-      _(personal_account?).must_equal true
-    end
-
-    context 'when user provider is Clever' do
-      let(:user_provider) {'clever'}
-
-      it 'returns false' do
-        _(personal_account?).must_equal false
-      end
-    end
-
-    context 'when user provider is LTI v1' do
-      let(:user_provider) {'lti_v1'}
-
-      it 'returns false' do
-        _(personal_account?).must_equal false
-      end
-    end
-
-    context 'when user is migrated' do
-      let(:user_migrated?) {true}
-      let(:user_provider) {'clever'}
-
-      it 'returns true' do
-        _(personal_account?).must_equal true
-      end
-
-      context 'when credential type of user auth option is Clever' do
-        let(:user_auth_option_credential_type) {'clever'}
-
-        it 'returns false' do
-          _(personal_account?).must_equal false
-        end
-      end
-
-      context 'when credential type of user auth option is LTI v1' do
-        let(:user_auth_option_credential_type) {'lti_v1'}
-
-        it 'returns false' do
-          _(personal_account?).must_equal false
-        end
-      end
-    end
-
-    context 'when user is sponsored' do
-      let(:user_sponsored?) {true}
-
-      it 'returns false' do
-        _(personal_account?).must_equal false
-      end
-    end
+    assert failures.empty?, failures.join("\n")
   end
 
   describe '.parent_permission_required?' do
