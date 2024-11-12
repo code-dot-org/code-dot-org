@@ -119,12 +119,12 @@ export default class Simple2Sequencer extends Sequencer {
   /**
    * Starts a new function context.
    */
-  startFunctionContext(functionName: string, functionCallBlockId?: string) {
+  startFunctionContext(functionName: string, procedureID?: string) {
     const uniqueId = this.getUniqueInvocationId();
 
     this.functionMap[uniqueId] = {
       name: functionName,
-      functionCallBlockId,
+      procedureID,
       uniqueInvocationId: uniqueId,
       startMeasure: this.getCurrentMeasure(),
       endMeasure: this.getCurrentMeasure(),
@@ -296,7 +296,7 @@ export default class Simple2Sequencer extends Sequencer {
             ...playbackEvent,
             functionContext: {
               name: functionEvent.name,
-              functionCallBlockId: functionEvent.functionCallBlockId,
+              procedureID: functionEvent.procedureID,
               uniqueInvocationId: functionEvent.uniqueInvocationId,
             },
           };

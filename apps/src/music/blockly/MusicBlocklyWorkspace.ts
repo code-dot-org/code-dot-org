@@ -527,7 +527,6 @@ export default class MusicBlocklyWorkspace {
     allFunctions.sort(compareFunction).forEach(({name, id, parameters}) => {
       blockList.push({
         kind: 'block',
-        id: `${id}-call`,
         type: BLOCK_TYPES.procedureCall,
         extraState: {
           name,

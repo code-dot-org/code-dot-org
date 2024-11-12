@@ -380,7 +380,7 @@
   "calendar": "Calendar",
   "theCalendar": "the calendar",
   "calendarNotAvailable": "The calendar isn't available for this course.",
-  "calendarLegacyMessage": "This class section is assigned a legacy version of {courseName}, which doesn't support the calendar. To access the calendar for this course, assign a version from '20-'21 or later.",
+  "calendarLegacyMessage": "This class section is assigned a legacy version of {courseName}, which doesn't support the calendar. To access the calendar for this course, assign a version from '21-'22 or later.",
   "cancel": "Cancel",
   "cannotDeleteLibrary": "You cannot delete preset libraries",
   "cannotDeleteUsedImage": "You cannot delete images that are currently used in your project",
