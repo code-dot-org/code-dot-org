@@ -66,6 +66,9 @@ Common hooks.
 
 ```tsx
 import {useBodyScrollLock} from '@cdo/apps/componentLibrary/common/hooks';
+// OR
+import useBodyScrollLock from '@cdo/apps/componentLibrary/common/hooks/useBodyScrollLock';
+
 // ...
 // ...
 // ...
