@@ -5,7 +5,6 @@ import Typist from 'react-typist';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
-import usePrevious from '@cdo/apps/util/usePrevious';
 
 import {queryParams} from '../code-studio/utils';
 import FontAwesome from '../legacySharedComponents/FontAwesome';
@@ -54,10 +53,11 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   resetOnChange = true,
 }) => {
   const [currentPanelIndex, setCurrentPanelIndex] = useState(0);
+  const [previousPanelIndex, setPreviousPanelIndex] = useState<
+    number | undefined
+  >(undefined);
   const [typingDone, setTypingDone] = useState(false);
   const {cancel} = useBrowserTextToSpeech();
-
-  const previousPanelIndex = usePrevious(currentPanelIndex);
 
   targetWidth -= horizontalMargin * 2;
   targetHeight -= verticalMargin * 2 + childrenAreaHeight;
@@ -78,21 +78,33 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     return [width, height];
   }, [targetWidth, targetHeight]);
 
+  const changePanel = useCallback(
+    (index: number) => {
+      setPreviousPanelIndex(currentPanelIndex);
+      setCurrentPanelIndex(index);
+    },
+    [currentPanelIndex]
+  );
+
   const handleButtonClick = useCallback(() => {
     if (currentPanelIndex < panels.length - 1) {
-      setCurrentPanelIndex(currentPanelIndex + 1);
+      changePanel(currentPanelIndex + 1);
     } else {
       onContinue(panels[currentPanelIndex].nextUrl);
     }
-  }, [panels, currentPanelIndex, onContinue]);
+  }, [changePanel, panels, currentPanelIndex, onContinue]);
 
-  const handleBubbleClick = (index: number) => {
-    setCurrentPanelIndex(index);
-  };
+  const handleBubbleClick = useCallback(
+    (index: number) => {
+      changePanel(index);
+    },
+    [changePanel]
+  );
 
   // Reset to first panel whenever panels content changes if specified.
   useEffect(() => {
     if (resetOnChange) {
+      setPreviousPanelIndex(undefined);
       setCurrentPanelIndex(0);
     }
   }, [panels, resetOnChange]);
@@ -125,6 +137,9 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     panel.fadeInOverPrevious &&
     previousPanelIndex !== undefined &&
     panels[previousPanelIndex];
+
+  const nextPanel =
+    currentPanelIndex + 1 < panels.length && panels[currentPanelIndex + 1];
 
   const layoutClassMap = {
     'text-top-left': styles.textTopLeft,
@@ -173,6 +188,14 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
             backgroundImage: `url("${panel.imageUrl}")`,
           }}
         />
+        {nextPanel && (
+          <div
+            className={classNames(styles.image, styles.imageInvisible)}
+            style={{
+              backgroundImage: `url("${nextPanel.imageUrl}")`,
+            }}
+          />
+        )}
         {panel.text && (
           <div
             className={classNames(
