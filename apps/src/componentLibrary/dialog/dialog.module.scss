@@ -23,10 +23,14 @@
   align-items: center;
   min-width: 39.375rem;
   max-width: 50rem;
-  padding: 3.5rem 3.5rem 2.5rem 3.5rem;
+  padding: 2.25rem 3.5rem 2.5rem 3.5rem;
   gap: 2rem;
   border-radius: 0.5rem;
   box-shadow: 0 6px 18px 0 rgb(0 0 0 / 0.3);
+
+  &:has(.dialogIcon) {
+    padding-top: 3.5rem;
+  }
 }
 
 .dialogTextSection {
