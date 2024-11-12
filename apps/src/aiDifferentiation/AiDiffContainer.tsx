@@ -52,35 +52,36 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
 
   const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
 
+  const SUGGESTED_PROMPTS = [
+    {
+      label: 'Explain a concept',
+      prompt:
+        'I need an explanation of a concept. You can ask me a follow-up question to find out what concept needs to be explained.',
+    },
+    {
+      label: 'Give an example to use with my class',
+      prompt:
+        'Can I have an example to use with my class? You can ask me a follow-up question to get more details for the kind of example needed.',
+    },
+    {
+      label: 'Write an extension activity for students who finish early',
+      prompt:
+        'Write an extension activity for this lesson for students who finish early',
+    },
+    {
+      label: 'Write an extension activity for students who need extra practice',
+      prompt:
+        'Write an extension activity for this lesson for students who need extra practice',
+    },
+  ];
+
   const [messageHistory, setMessageHistory] = useState<ChatItem[]>([
     {
       role: Role.ASSISTANT,
       chatMessageText: `Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.`,
       status: Status.OK,
     },
-    [
-      {
-        label: 'Explain a concept',
-        prompt:
-          'I need an explanation of a concept. You can ask me a follow-up question to find out what concept needs to be explained.',
-      },
-      {
-        label: 'Give an example to use with my class',
-        prompt:
-          'Can I have an example to use with my class? You can ask me a follow-up question to get more details for the kind of example needed.',
-      },
-      {
-        label: 'Write an extension activity for students who finish early',
-        prompt:
-          'Write an extension activity for this lesson for students who finish early',
-      },
-      {
-        label:
-          'Write an extension activity for students who need extra practice',
-        prompt:
-          'Write an extension activity for this lesson for students who need extra practice',
-      },
-    ],
+    SUGGESTED_PROMPTS,
   ]);
 
   const onStopHandler: DraggableEventHandler = (e, data) => {
@@ -101,6 +102,10 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
 
   const onPromptSelect = (prompt: ChatPrompt) => {
     getAIResponse(prompt.prompt, true);
+  };
+
+  const onSuggestPrompts = () => {
+    setMessageHistory(prevMessages => [...prevMessages, SUGGESTED_PROMPTS]);
   };
 
   const sendChatEvent = (
@@ -246,6 +251,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           </div>
           <AiDiffChatFooter
             onSubmit={onMessageSend}
+            onSuggestPrompts={onSuggestPrompts}
             messages={messageHistory}
           />
         </div>
