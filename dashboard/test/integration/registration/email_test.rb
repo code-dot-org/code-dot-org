@@ -113,7 +113,7 @@ module RegistrationsControllerTests
         %w(
           load-sign-up-page
           begin-sign-up-success
-          migrated-load-finish-sign-up-page
+          email-load-finish-sign-up-page
           email-sign-up-success
         )
       )
@@ -145,7 +145,7 @@ module RegistrationsControllerTests
         %w(
           load-sign-up-page
           begin-sign-up-success
-          migrated-load-finish-sign-up-page
+          email-load-finish-sign-up-page
           email-sign-up-success
         )
       )

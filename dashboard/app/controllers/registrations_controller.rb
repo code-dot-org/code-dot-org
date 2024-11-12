@@ -181,7 +181,7 @@ class RegistrationsController < Devise::RegistrationsController
       if ActiveModel::Type::Boolean.new.cast(params[:new_sign_up])
         session[:user_return_to] ||= params[:user_return_to]
         @user = Services::PartialRegistration::UserBuilder.call(request: request)
-        SignUpTracking.log_load_finish_sign_up request, (@user.provider || 'email')
+        SignUpTracking.log_load_finish_sign_up request, (@user.providers&.first || 'email')
         sign_in @user
       else
         super
