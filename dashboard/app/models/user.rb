@@ -1720,7 +1720,11 @@ class User < ApplicationRecord
 
   def self.send_reset_password_instructions(attributes = {})
     # override of Devise method
-    Services::User::PasswordResetter.call(email: attributes[:email])
+    if RequestStore.store[:current_user]&.admin? & attributes[:username].present?
+      Services::User::PasswordResetter.call(username: attributes[:username])
+    else
+      Services::User::PasswordResetter.call(email: attributes[:email])
+    end
   end
 
   def reset_secrets

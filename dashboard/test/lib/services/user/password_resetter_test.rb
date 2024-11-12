@@ -1,12 +1,35 @@
 require 'test_helper'
 
 class Services::User::PasswordResetterTest < ActiveSupport::TestCase
-  let(:described_instance) {described_class.new(email: email)}
+  let(:reset_via_email) {described_class.new(email: email)}
+  let(:reset_via_username) {described_class.new(username: username)}
 
   let(:email) {Faker::Internet.unique.email}
+  let(:username) {Faker::Internet.unique.username(specifier: 5..19)}
 
-  describe '#call' do
-    subject(:reset_password) {described_instance.call}
+  describe '#call with username' do
+    subject(:reset_password) {reset_via_username.call}
+
+    let(:mail) {ActionMailer::Base.deliveries.first}
+
+    context 'for username with an existing user' do
+      let!(:user) {create(:user, email: email)}
+      before do
+        user.username = username
+        user.save!
+      end
+
+      it 'does not send password reset' do
+        user = reset_password
+
+        _(mail).must_be_nil
+        user.raw_token.wont_be_nil
+      end
+    end
+  end
+
+  describe '#call with email' do
+    subject(:reset_password) {reset_via_email.call}
 
     let(:mail) {ActionMailer::Base.deliveries.first}
 
