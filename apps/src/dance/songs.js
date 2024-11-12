@@ -24,6 +24,7 @@ const DEPRECATED_SONGS = [
   'neverreallyover_katyperry',
   'occidentalview_francescogabbani',
   'oldtownroadremix_lilnasx',
+  'oldtownroadremix_lilnasx_long',
 ];
 
 /**

@@ -218,6 +218,7 @@
     "@magenta/music": "^1.23.1",
     "@microsoft/immersive-reader-sdk": "^1.1.0",
     "@react-bootstrap/pagination": "^1.0.0",
+    "@react-pdf/renderer": "3.4.4",
     "@reduxjs/toolkit": "^1.9.3",
     "@selectize/selectize": "^0.15.2",
     "@statsig/web-analytics": "^3.2.0",

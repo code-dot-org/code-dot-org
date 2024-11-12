@@ -10,10 +10,6 @@ class ProjectsControllerTest < ActionController::TestCase
     ActionDispatch::TestRequest.any_instance.stubs(:user_id).returns(user.id)
   end
 
-  setup_all do
-    @test_project = create :project
-  end
-
   setup do
     sign_in_with_request create :user
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
@@ -38,6 +34,11 @@ class ProjectsControllerTest < ActionController::TestCase
     @section = create :section
     @section.add_student @driver
     @section.add_student @navigator
+
+    @project_owner = create :student
+    @non_project_owner = create :student
+    @test_project = create :project, owner: @project_owner
+    @channel_id = @test_project.channel_id
   end
 
   teardown do
@@ -549,12 +550,12 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'submission status returns appropriate status' do
+    sign_in_with_request @project_owner
+    Project.stubs(:find_by).returns(@test_project)
     channel_id = '123456'
     @controller.stubs(:storage_decrypt_channel_id).returns([123, 456])
-    test_project = {}
-    Project.stubs(:find_by).returns(test_project)
     SharedConstants::PROJECT_SUBMISSION_STATUS.each_value do |status|
-      test_project.stubs(:submission_status).returns(status)
+      @test_project.stubs(:submission_status).returns(status)
       get :submission_status, params: {project_type: 'music', channel_id: channel_id}
       assert_response :success
       response_status = JSON.parse(@response.body)["status"]
@@ -562,32 +563,60 @@ class ProjectsControllerTest < ActionController::TestCase
     end
   end
 
+  test 'submission status returns forbidden for non-project owner' do
+    sign_in_with_request @non_project_owner
+    Project.stubs(:find_by).returns(@test_project)
+    get :submission_status, params: {project_type: 'music', channel_id: @channel_id}
+    assert_response :forbidden
+  end
+
+  test 'submission_status returns forbidden for signed-out user' do
+    sign_out :user
+    Project.stubs(:find_by).returns(@test_project)
+    post :submission_status, params: {project_type: 'music', channel_id: @channel_id}
+    assert_response :forbidden
+  end
+
   test 'submit project returns bad_request if no submission description' do
-    channel_id = '123456'
     submission_description = ''
-    post :submit, params: {project_type: 'music', channel_id: channel_id, submissionDescription: submission_description}
+    post :submit, params: {project_type: 'music', channel_id: @channel_id, submissionDescription: submission_description}
     assert_response :bad_request
   end
 
-  test 'submit project returns success if project passes all restrictions' do
-    channel_id = '123456'
-    @controller.stubs(:storage_decrypt_channel_id).returns([123, 456])
-    submission_description = 'this project rocks'
-    @test_project.stubs(:submission_status).returns(SharedConstants::PROJECT_SUBMISSION_STATUS[:CAN_SUBMIT])
+  test 'submit project returns forbidden for non-project owner' do
+    submission_description = 'test description'
+    sign_in_with_request @non_project_owner
     Project.stubs(:find_by).returns(@test_project)
-    Projects.any_instance.stubs(:publish).returns({})
-    post :submit, params: {project_type: 'music', channel_id: channel_id, submissionDescription: submission_description}
-    assert_response :success
+    post :submit, params: {project_type: 'music', channel_id: @channel_id, submissionDescription: submission_description}
+    assert_response :forbidden
+  end
+
+  test 'submit project returns forbidden for signed-out user' do
+    submission_description = 'test description'
+    sign_out :user
+    post :submit, params: {project_type: 'music', channel_id: @channel_id, submissionDescription: submission_description}
+    assert_response :forbidden
   end
 
   test 'submit project returns forbidden if project already submitted' do
-    channel_id = '123456'
-    @controller.stubs(:storage_decrypt_channel_id).returns([123, 456])
     submission_description = 'this project rocks'
+    sign_in_with_request @project_owner
     @test_project.stubs(:submission_status).returns(SharedConstants::PROJECT_SUBMISSION_STATUS[:ALREADY_SUBMITTED])
     Project.stubs(:find_by).returns(@test_project)
     Projects.any_instance.stubs(:publish).returns({published_at: Time.now})
-    post :submit, params: {project_type: 'music', channel_id: channel_id, submissionDescription: submission_description}
+    post :submit, params: {project_type: 'music', channel_id: @channel_id, submissionDescription: submission_description}
     assert_response :forbidden
+    error_msg = JSON.parse(@response.body)["error"]
+    assert_equal error_msg, "Once submitted, a project cannot be submitted again."
+  end
+
+  test 'submit project returns success if project passes all restrictions' do
+    submission_description = 'this project rocks'
+    sign_in_with_request @project_owner
+    @test_project.stubs(:submission_status).returns(SharedConstants::PROJECT_SUBMISSION_STATUS[:CAN_SUBMIT])
+    Project.stubs(:find_by).returns(@test_project)
+    Projects.any_instance.stubs(:publish).returns({published_at: Time.now})
+    post :submit, params: {project_type: 'music', channel_id: @channel_id, submissionDescription: submission_description}
+    assert_response :success
   end
 end

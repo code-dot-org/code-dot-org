@@ -61,7 +61,7 @@ const CopyToClipboardButton: React.FunctionComponent<{
 
 const AfeCareerTourBlock: React.FunctionComponent = () => {
   const careersUrl =
-    'https://www.amazonfutureengineer.com/careertours/careervideos';
+    'https://www.amazonfutureengineer.com/musicsolo?utm_campaign=Code.Org&utm_medium=Musiclab&utm_source=US&utm_content=Career%20Tours&utm_term=2024';
 
   return (
     <div className={classNames(moduleStyles.block, moduleStyles.blockAfe)}>
@@ -233,7 +233,6 @@ const ShareDialog: React.FunctionComponent<{
                   type="primary"
                   color="white"
                   size="m"
-                  className={moduleStyles.doneButton}
                 />
               </div>
             ) : (
@@ -244,7 +243,6 @@ const ShareDialog: React.FunctionComponent<{
                 color="white"
                 size="m"
                 onClick={handleClose}
-                className={moduleStyles.doneButton}
               />
             )}
           </div>

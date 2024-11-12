@@ -244,7 +244,10 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
               }
             />
           </div>
-          <AiDiffChatFooter onSubmit={onMessageSend} />
+          <AiDiffChatFooter
+            onSubmit={onMessageSend}
+            messages={messageHistory}
+          />
         </div>
       </div>
     </Draggable>
