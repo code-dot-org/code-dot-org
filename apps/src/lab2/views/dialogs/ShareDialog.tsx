@@ -54,7 +54,7 @@ const CopyToClipboardButton: React.FunctionComponent<{
       color="white"
       size="m"
       onClick={handleCopyToClipboard}
-      className={moduleStyles.projectButton}
+      className={moduleStyles.shareDialogButton}
     />
   );
 };
@@ -73,7 +73,7 @@ const AfeCareerTourBlock: React.FunctionComponent = () => {
         {i18n.careerTourTitle()}
       </Typography>
       <img alt="" src="/shared/images/afe/afe-career-tours-0.jpg" />
-      {i18n.careerTourDescription()}
+      <div className={moduleStyles.afeText}>{i18n.careerTourDescription()}</div>
       <LinkButton
         ariaLabel={i18n.careerTourAction()}
         href={careersUrl}
@@ -87,7 +87,7 @@ const AfeCareerTourBlock: React.FunctionComponent = () => {
           iconStyle: 'solid',
           title: 'arrow-up-right-from-square',
         }}
-        className={moduleStyles.fullWidth}
+        className={moduleStyles.shareDialogButton}
       />
     </div>
   );
@@ -111,7 +111,7 @@ const SubmitButtonInfo: React.FunctionComponent<{
         color="white"
         size="m"
         onClick={onSubmitClick}
-        className={moduleStyles.projectButton}
+        className={moduleStyles.shareDialogButton}
       />
     );
   } else if (submissionStatus === ProjectSubmissionStatus.ALREADY_SUBMITTED) {
