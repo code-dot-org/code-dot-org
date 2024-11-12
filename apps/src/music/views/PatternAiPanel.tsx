@@ -686,7 +686,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
                       ['aria-label']: 'Increase',
                     }}
                     hideValue={true}
-                    color="white"
+                    color="aqua"
                   />
                 </div>
               </div>
