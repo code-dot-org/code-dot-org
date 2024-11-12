@@ -187,12 +187,17 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       >
         <div className={classnames(style.aiDiffHeader, 'ai_diff_handle')}>
           <div className={style.aiDiffHeaderLeftSide}>
-            <img
-              src={aiBotOutlineIcon}
-              className={style.aiBotOutlineIcon}
-              alt={aiDiffHeaderText}
-            />
-            <span>{aiDiffHeaderText}</span>
+            <div className={style.aiBotHeader}>
+              <img
+                src={aiBotOutlineIcon}
+                className={style.aiBotOutlineIcon}
+                alt={aiDiffHeaderText}
+              />
+              <div className={style.taOverlayHeader}>
+                <span>{'TA'}</span>
+              </div>
+            </div>
+            <span className={style.aiDiffHeaderText}>{aiDiffHeaderText}</span>
           </div>
           <div className={style.aiDiffHeaderRightSide}>
             <Button
@@ -217,7 +222,12 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
                   key={id}
                 />
               ) : (
-                <ChatMessage {...item} customStyles={style} key={id}>
+                <ChatMessage
+                  {...item}
+                  customStyles={style}
+                  key={id}
+                  isTA={true}
+                >
                   {item.role === Role.ASSISTANT && (
                     <AiDiffBotMessageFooter message={item} />
                   )}
