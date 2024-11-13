@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
@@ -28,6 +29,7 @@ import {
   OAUTH_LOGIN_TYPE_SESSION_KEY,
   USER_RETURN_TO_SESSION_KEY,
   clearSignUpSessionStorage,
+  NEW_SIGN_UP_USER_TYPE,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
@@ -61,6 +63,9 @@ const FinishStudentAccount: React.FunctionComponent<{
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorCreatingAccountMessage, showErrorCreatingAccountMessage] =
     useState(false);
+
+  // Remove oauth user_type cookie if it exists
+  cookies.remove(NEW_SIGN_UP_USER_TYPE);
 
   useEffect(() => {
     // If the user hasn't selected a user type or login type, redirect them back to the incomplete step of signup.
@@ -285,6 +290,7 @@ const FinishStudentAccount: React.FunctionComponent<{
           <div>
             <TextField
               name="displayName"
+              id="uitest-display-name"
               label={locale.display_name_eg()}
               value={name}
               placeholder={locale.coder()}
@@ -299,6 +305,7 @@ const FinishStudentAccount: React.FunctionComponent<{
           <div>
             <SimpleDropdown
               name="userAge"
+              id="uitest-user-age"
               className={style.dropdownContainer}
               labelText={locale.what_is_your_age()}
               size="m"
@@ -316,6 +323,7 @@ const FinishStudentAccount: React.FunctionComponent<{
             <div>
               <SimpleDropdown
                 name="userState"
+                id="uitest-user-state"
                 className={style.dropdownContainer}
                 labelText={locale.what_state_are_you_in()}
                 size="m"
@@ -334,7 +342,6 @@ const FinishStudentAccount: React.FunctionComponent<{
             name="userGender"
             label={locale.what_is_your_gender()}
             value={gender}
-            placeholder={locale.female()}
             onChange={e => setGender(e.target.value)}
           />
           {showGDPR && (

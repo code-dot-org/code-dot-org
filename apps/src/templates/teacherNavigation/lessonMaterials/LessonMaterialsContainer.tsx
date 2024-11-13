@@ -3,6 +3,8 @@ import React, {useState, useMemo, useCallback} from 'react';
 import {useLoaderData} from 'react-router-dom';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
@@ -15,25 +17,40 @@ import styles from './lesson-materials.module.scss';
 
 interface LessonMaterialsData {
   unitId: number;
+  unitName?: string;
   title: string;
   unitNumber: number;
   scriptOverviewPdfUrl: string;
   scriptResourcesPdfUrl: string;
   lessons: Lesson[];
+  hasNumberedUnits: boolean;
 }
 
-const lessonMaterialsCachedLoader = _.memoize(async assignedUnitId =>
-  getAuthenticityToken()
-    .then(token =>
-      fetch(`/dashboardapi/lesson_materials/${assignedUnitId}`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': token,
-        },
+const lessonMaterialsCachedLoader = _.memoize(
+  async (assignedUnitId, unitName) =>
+    getAuthenticityToken()
+      .then(token =>
+        fetch(`/dashboardapi/lesson_materials/${assignedUnitId}`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': token,
+          },
+        })
+      )
+      .then(response => {
+        return response.json();
       })
-    )
-    .then(response => response.json())
+      .then(json => {
+        return {...json, unitName};
+      })
+      .catch(error => {
+        console.error('Error loading lesson materials', error);
+        analyticsReporter.sendEvent(EVENTS.LESSON_MATERIALS_FAILURE, {
+          unitName: unitName,
+        });
+        return null;
+      })
 );
 
 export const lessonMaterialsLoader =
@@ -49,7 +66,10 @@ export const lessonMaterialsLoader =
       return null;
     }
 
-    return lessonMaterialsCachedLoader(sectionData.unitId);
+    return lessonMaterialsCachedLoader(
+      sectionData.unitId,
+      sectionData.unitName
+    );
   };
 
 const createDisplayName = (lessonName: string, lessonPosition: number) => {
@@ -61,6 +81,10 @@ const createDisplayName = (lessonName: string, lessonPosition: number) => {
 
 const LessonMaterialsContainer: React.FC = () => {
   const loadedData = useLoaderData() as LessonMaterialsData | null;
+  const hasNumberedUnits = useMemo(
+    () => loadedData?.hasNumberedUnits || false,
+    [loadedData]
+  );
   const lessons = useMemo(() => loadedData?.lessons || [], [loadedData]);
   const unitNumber = useMemo(() => loadedData?.unitNumber || 1, [loadedData]);
 
@@ -76,8 +100,19 @@ const LessonMaterialsContainer: React.FC = () => {
     }
   }, [lessons]);
 
+  React.useEffect(() => {
+    analyticsReporter.sendEvent(EVENTS.VIEW_LESSON_MATERIALS, {
+      unitName: loadedData?.unitName,
+    });
+  }, [loadedData?.unitName]);
+
   const onDropdownChange = (value: string) => {
     setSelectedLesson(getLessonFromId(Number(value)));
+
+    analyticsReporter.sendEvent(EVENTS.LESSON_MATERIALS_LESSON_CHANGE, {
+      unitName: loadedData?.unitName,
+      lessonId: value,
+    });
   };
 
   const generateLessonDropdownOptions = useCallback(() => {
@@ -99,7 +134,7 @@ const LessonMaterialsContainer: React.FC = () => {
 
     return (
       <LessonResources
-        unitNumber={unitNumber}
+        unitNumber={hasNumberedUnits ? unitNumber : null}
         lessonNumber={selectedLesson.position}
         resources={selectedLesson.resources.Teacher || []}
         standardsUrl={selectedLesson.standardsUrl}
@@ -118,7 +153,7 @@ const LessonMaterialsContainer: React.FC = () => {
 
     return (
       <LessonResources
-        unitNumber={unitNumber}
+        unitNumber={hasNumberedUnits ? unitNumber : null}
         lessonNumber={selectedLesson.position}
         resources={selectedLesson.resources.Student || []}
       />
@@ -139,7 +174,8 @@ const LessonMaterialsContainer: React.FC = () => {
         />
         {loadedData?.unitNumber && (
           <UnitResourcesDropdown
-            unitNumber={loadedData.unitNumber || 0}
+            hasNumberedUnits={hasNumberedUnits}
+            unitNumber={loadedData.unitNumber}
             scriptOverviewPdfUrl={loadedData.scriptOverviewPdfUrl}
             scriptResourcesPdfUrl={loadedData.scriptResourcesPdfUrl}
           />

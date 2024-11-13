@@ -26,6 +26,7 @@ const ResourceIcon: React.FC<ResourceIconProps> = ({
 
   return (
     <div
+      // eslint-disable-next-line react/forbid-dom-props
       data-testid={'resource-icon-' + iconType.icon}
       className={classNames(styles.resourceIconContainer, iconType.class)}
     >

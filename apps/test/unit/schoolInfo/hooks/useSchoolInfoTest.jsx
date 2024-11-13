@@ -78,7 +78,8 @@ describe('useSchoolInfo', () => {
 
     expect(result.current.country).toBe(initialState.country);
     expect(result.current.schoolId).toBe(initialState.schoolId);
-    expect(result.current.schoolName).toBe(initialState.schoolName);
+    // initial state has schoolId, so schoolName is empty
+    expect(result.current.schoolName).toBe('');
     expect(result.current.schoolZip).toBe(initialState.schoolZip);
   });
 
@@ -96,6 +97,27 @@ describe('useSchoolInfo', () => {
     expect(result.current.schoolId).toBe(NonSchoolOptions.SELECT_A_SCHOOL);
     expect(result.current.schoolName).toBe('Stored School');
     expect(result.current.schoolZip).toBe('');
+  });
+
+  it('should return a schoolName if no schoolId is passed', async () => {
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useSchoolInfo({
+        ...initialState,
+        schoolId: '',
+      })
+    );
+    await waitForNextUpdate();
+
+    expect(result.current.schoolName).toBe(initialState.schoolName);
+  });
+
+  it('should not return a schoolName if schoolId is passed', async () => {
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useSchoolInfo(initialState)
+    );
+    await waitForNextUpdate();
+
+    expect(result.current.schoolName).toBe('');
   });
 
   describe('hook state updates', () => {
@@ -127,7 +149,7 @@ describe('useSchoolInfo', () => {
         hook.current.reset();
       });
       expect(hook.current.schoolZip).toBe(initialState.schoolZip);
-      expect(hook.current.schoolName).toBe(initialState.schoolName);
+      expect(hook.current.schoolName).toBe('');
       expect(hook.current.schoolId).toBe(initialState.schoolId);
       expect(hook.current.country).toBe(initialState.country);
     });
@@ -150,15 +172,19 @@ describe('useSchoolInfo', () => {
         expect(schoolCountrySessionStorageCalls[1][1]).toBe('CA');
       });
 
-      it('should retain schoolZip, schoolId, and schoolName on country changes', () => {
+      it('should retain schoolZip, schoolId, and schoolName on country changes', async () => {
         expect(hook.current.country).toBe(initialState.country);
         expect(hook.current.schoolId).toBe(initialState.schoolId);
         expect(hook.current.schoolZip).toBe(initialState.schoolZip);
-        expect(hook.current.schoolName).toBe(initialState.schoolName);
+        expect(hook.current.schoolName).toBe('');
         expect(hook.current.schoolsList).toEqual([
           {value: initialState.schoolId, text: initialState.schoolName},
           {value: '2', text: 'Other School'},
         ]);
+
+        act(() => {
+          hook.current.setSchoolName('Another School');
+        });
 
         act(() => {
           hook.current.setCountry('CA');
@@ -167,7 +193,7 @@ describe('useSchoolInfo', () => {
         expect(hook.current.country).toBe('CA');
         expect(hook.current.schoolId).toBe(initialState.schoolId);
         expect(hook.current.schoolZip).toBe(initialState.schoolZip);
-        expect(hook.current.schoolName).toBe(initialState.schoolName);
+        expect(hook.current.schoolName).toBe('Another School');
         expect(hook.current.schoolsList).toEqual([
           {value: initialState.schoolId, text: initialState.schoolName},
           {value: '2', text: 'Other School'},
@@ -222,11 +248,15 @@ describe('useSchoolInfo', () => {
 
       it('should retain schoolId and schoolName if the schoolZip changes', async () => {
         expect(hook.current.schoolId).toBe(initialState.schoolId);
-        expect(hook.current.schoolName).toBe(initialState.schoolName);
+        expect(hook.current.schoolName).toBe('');
         expect(hook.current.schoolsList).toEqual([
           {value: initialState.schoolId, text: initialState.schoolName},
           {value: '2', text: 'Other School'},
         ]);
+
+        act(() => {
+          hook.current.setSchoolName('Another School');
+        });
 
         await act(async () => {
           hook.current.setSchoolZip('90210');
@@ -234,7 +264,7 @@ describe('useSchoolInfo', () => {
 
         expect(hook.current.schoolZip).toBe('90210');
         expect(hook.current.schoolId).toBe(initialState.schoolId);
-        expect(hook.current.schoolName).toBe(initialState.schoolName);
+        expect(hook.current.schoolName).toBe('Another School');
         expect(hook.current.schoolsList).toEqual([
           {value: initialState.schoolId, text: initialState.schoolName},
           {value: '2', text: 'Other School'},
@@ -314,28 +344,6 @@ describe('useSchoolInfo', () => {
           PLATFORMS.BOTH
         );
       });
-
-      it('should clear the school name when CLICK_TO_ADD or NO_SCHOOL_SETTING are selected', () => {
-        act(() => {
-          hook.current.setSchoolId('2');
-        });
-        expect(hook.current.schoolName).toBe('Other School');
-
-        act(() => {
-          hook.current.setSchoolId(NonSchoolOptions.CLICK_TO_ADD);
-        });
-        expect(hook.current.schoolName).toBe('');
-
-        act(() => {
-          hook.current.setSchoolId('1');
-        });
-        expect(hook.current.schoolName).toBe('Cool School');
-
-        act(() => {
-          hook.current.setSchoolId(NonSchoolOptions.NO_SCHOOL_SETTING);
-        });
-        expect(hook.current.schoolName).toBe('');
-      });
     });
 
     describe('schoolName updates', () => {
@@ -349,9 +357,7 @@ describe('useSchoolInfo', () => {
             ([key]) => key === SCHOOL_NAME_SESSION_KEY
           );
         expect(schoolNameSessionStorageCalls).toHaveLength(2);
-        expect(schoolNameSessionStorageCalls[0][1]).toBe(
-          initialState.schoolName
-        );
+        expect(schoolNameSessionStorageCalls[0][1]).toBe('');
         expect(schoolNameSessionStorageCalls[1][1]).toBe('Super Cool School');
       });
     });

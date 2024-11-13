@@ -35,6 +35,7 @@ export interface RootState {
   aiTutor: AITutorState;
   aichat: AichatState;
   blockly: BlocklyState;
+  calendar: CalendarState;
   codebridgeConsole: CodebridgeConsoleState;
   codebridgeWorkspace: CodebridgeWorkspaceState;
   currentUser: CurrentUserState;
@@ -53,8 +54,7 @@ export interface RootState {
   music: MusicState;
   predictLevel: PredictLevelState;
   progress: ProgressState;
-  teacherSections: TeacherSectionState;
-  calendar: CalendarState;
-  teacherRubric: TeacherRubricState;
   teacherPanel: TeacherPanelState;
+  teacherRubric: TeacherRubricState;
+  teacherSections: TeacherSectionState;
 }

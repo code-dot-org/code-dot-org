@@ -116,11 +116,9 @@
     },
     {
       "name": "CSA Syllabus",
-      "url": "https://docs.google.com/document/d/19G65CZ_Y9njvy6eVgoHNN_at6mP-Ow3bl0C1ZTsUu_8/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1KnhaELLMdLXf1X1JUHFPumLKYQNYM0tp8Bxn1xr46zU/",
       "key": "csa_syllabus",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csa_syllabus"

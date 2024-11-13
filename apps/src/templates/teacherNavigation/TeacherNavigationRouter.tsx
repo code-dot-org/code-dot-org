@@ -6,6 +6,7 @@ import {
   createBrowserRouter,
   RouterProvider,
   Navigate,
+  generatePath,
 } from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
@@ -34,6 +35,7 @@ import LessonMaterialsContainer, {
 import PageLayout from './PageLayout';
 import TeacherNavigationBar from './TeacherNavigationBar';
 import {
+  LABELED_TEACHER_NAVIGATION_PATHS,
   SPECIFIC_SECTION_BASE_URL,
   TEACHER_NAVIGATION_BASE_URL,
   TEACHER_NAVIGATION_PATHS,
@@ -196,13 +198,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.calendar}
-            element={
-              <ElementOrEmptyPage
-                showNoStudents={studentCount === 0}
-                showNoCurriculumAssigned={!anyStudentHasProgress}
-                element={applyV1TeacherDashboardWidth(<UnitCalendar />)}
-              />
-            }
+            element={<UnitCalendar />}
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.courseOverview}
@@ -228,6 +224,13 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               <SectionsSetUpContainer
                 isUsersFirstSection={false}
                 sectionToBeEdited={selectedSection}
+                defaultRedirectUrl={
+                  '/teacher_dashboard' +
+                  generatePath(
+                    LABELED_TEACHER_NAVIGATION_PATHS.progress.absoluteUrl,
+                    {sectionId: sectionId}
+                  )
+                }
               />
             }
           />

@@ -21,6 +21,19 @@
       caption: hoc_s("music_lab.artist.band", markdown: :inline, locals: {artist_name: "Drew Taggart", band_name: "The Chainsmokers"}),
     },
   ]
+  # TODO ACQ-2556 - Clean this up after the 2024 HOC launch
+  if DCDO.get('hoc-2024-nov-launch', false)
+    videos.unshift({
+      code: "6oK8392nq5c",
+      download_path: "//videos.code.org/levelbuilder/music-lab-intro-final-cut-mp4.mp4",
+      caption: hoc_s("music_lab.jam_session.name"),
+    },
+    {
+      code: "_e0el8asWgQ",
+      download_path: "//videos.code.org/music_lab/Music_Lab_Shakira.mp4",
+      caption: hoc_s("music_lab.artist.singer_songwriter", markdown: :inline, locals: {artist_name: "Shakira"}),
+    })
+  end
 
 .carousel-wrapper.video-carousel
   %swiper-container.music-lab-videos{navigation: "true", "navigation-next-el": ".nav-next-music-lab-videos", "navigation-prev-el": ".nav-prev-music-lab-videos", pagination: "true", init: "false", "allow-touch-move": "false"}

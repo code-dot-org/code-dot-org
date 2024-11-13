@@ -77,8 +77,10 @@ import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/googleBl
 import {flyoutCategory as variablesFlyoutCategory} from './customBlocks/googleBlockly/variableBlocks';
 import {
   adjustCalloutsOnViewportChange,
+  bumpRTLBlocks,
   disableOrphans,
   reflowToolbox,
+  storeWorkspaceWidth,
   updateBlockLimits,
 } from './eventHandlers';
 import {
@@ -205,6 +207,10 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   const blocklyWrapper = new (BlocklyWrapper as any)(
     blocklyInstance
   ) as BlocklyWrapperType;
+
+  blocklyWrapper.ALIGN_CENTRE = blocklyInstance.inputs.Align.CENTRE;
+  blocklyWrapper.ALIGN_LEFT = blocklyInstance.inputs.Align.LEFT;
+  blocklyWrapper.ALIGN_RIGHT = blocklyInstance.inputs.Align.RIGHT;
 
   blocklyWrapper.setInfiniteLoopTrap = function () {
     Blockly.JavaScript.INFINITE_LOOP_TRAP = INFINITE_LOOP_TRAP;
@@ -838,6 +844,12 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       .getFlyout()
       ?.getWorkspace()
       ?.addChangeListener(adjustCalloutsOnViewportChange);
+
+    // We store the workspace width for RTL workspaces so that we can move
+    // blocks back to the correct positions after a browser window resize.
+    // See: https://github.com/google/blockly/issues/8637
+    workspace.addChangeListener(storeWorkspaceWidth);
+    window.addEventListener('resize', bumpRTLBlocks);
 
     initializeScrollbarPair(workspace);
 

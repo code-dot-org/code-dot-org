@@ -51,6 +51,7 @@ $ai-rubric-cyan-hover: #37e1db;
   display: flex;
   justify-content: space-around;
   height: 100%;
+  background-color: $neutral_dark;
 
   &Generating {
     pointer-events: none;
@@ -69,27 +70,54 @@ $ai-rubric-cyan-hover: #37e1db;
     display: flex;
     align-items: center;
   }
+
+  .editArea {
+    display: flex;
+  }
+
+  .drumArea {
+    margin-top: 11px;
+  }
+
+  .patternArea {
+    background-color: $dark_black;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: solid 1px $neutral_dark40;
+  }
 }
 
 .select {
   margin-bottom: 0;
+  width: 110px;
+}
+
+.previewControls {
+  width: 110px;
+  margin-left: 17px;
+
+  div {
+    margin: 0;
+  }
 }
 
 .row {
   display: flex;
   align-items: center;
+  height: 23px;
 
   &:hover {
-    background-color: rgba($light_gray_950, 0.2);
+    background-color: rgba($white, 0.02);
     border-radius: 4px;
   }
 }
 
 .nameContainer {
   display: inline-block;
-  width: 120px;
-  vertical-align: middle;
+  width: 105px;
   padding-left: 3px;
+  padding-right: 5px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -102,23 +130,26 @@ $ai-rubric-cyan-hover: #37e1db;
 
 .outerCell {
   display: inline-block;
-  padding: 1px 1px;
-  margin: 2px 1px;
+  padding: 2px 1px;
   box-sizing: border-box;
   cursor: pointer;
   transition: background-color 0s;
   border-radius: 2px;
 
-  &Playing {
-    background-color: $realyellow;
-  }
+  .innerCell {
+    padding: 1px;
 
-  &Scanning {
-    background-color: $ai_rubric_cyan;
-  }
+    &Playing {
+      background-color: $realyellow;
+    }
 
-  &SlowFade {
-    transition: background-color 0.25s;
+    &Scanning {
+      background-color: $ai_rubric_cyan;
+    }
+
+    &SlowFade {
+      transition: background-color 0.25s;
+    }
   }
 
   &Fourth {
@@ -168,8 +199,11 @@ $ai-rubric-cyan-hover: #37e1db;
 }
 
 .temperatureInput {
-  width: 100px;
-  height: 5px;
+  width: 140px;
+
+  button {
+    padding-bottom: 1px !important;
+  }
 }
 
 .temperatureText {
@@ -264,6 +298,7 @@ $ai-rubric-cyan-hover: #37e1db;
   max-width: 300px;
   white-space: pre-line;
   animation: slidein 0.5s;
+  z-index: 1;
 
   &DrawDrums {
     left: 370px;
@@ -275,7 +310,12 @@ $ai-rubric-cyan-hover: #37e1db;
     right: 214px;
   }
 
-  &Generate {
+  &GenerateNoTemperature, &GenerateAgainNoTemperature {
+    top: 195px;
+    right: 216px;
+  }
+
+  &Generate, &GenerateAgain {
     top: 205px;
     right: 216px;
   }
@@ -304,8 +344,13 @@ $ai-rubric-cyan-hover: #37e1db;
     top: 177px;
   }
 
-  &Generate {
-    right: 196px;
+  &GenerateNoTemperature, &GenerateAgainNoTemperature {
+    right: 189px;
+    top: 210px;
+  }
+
+  &Generate, &GenerateAgain {
+    right: 189px;
     top: 221px;
   }
 }

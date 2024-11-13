@@ -17,7 +17,7 @@ class HomeController < ApplicationController
   # The terms_and_privacy page gets loaded in an iframe on the signup page, so skip
   # clearing the sign up tracking variables
   skip_before_action :clear_sign_up_session_vars, only: [:terms_and_privacy]
-  skip_before_action :initialize_statsig_session, only: [:health_check]
+  skip_before_action :initialize_statsig_stable_id, only: [:health_check]
 
   def set_locale
     params[:locale], ge_region = params[:locale]&.split('|')
@@ -41,7 +41,7 @@ class HomeController < ApplicationController
       redirect_path = redirect_uri.to_s
 
       Metrics::Events.log_event(
-        session: session,
+        request: request,
         user: current_user,
         event_name: 'Global Edition Region Selected',
         metadata: {
@@ -215,19 +215,19 @@ class HomeController < ApplicationController
       @homepage_data[:showIncubatorBanner] = show_incubator_banner?
 
       if show_census_banner
-        teachers_school = current_user.school_info.school
-        school_stats = SchoolStatsByYear.where(school_id: teachers_school.id).order(school_year: :desc).first
+        teachers_school = Queries::SchoolInfo.current_school(current_user)
+        school_stats = SchoolStatsByYear.where(school_id: teachers_school[:school_id]).order(school_year: :desc).first
 
         @homepage_data[:censusQuestion] = school_stats.try(:has_high_school_grades?) ? "how_many_20_hours" : "how_many_10_hours"
         @homepage_data[:currentSchoolYear] = current_census_year
         @homepage_data[:existingSchoolInfo] = {
-          id: teachers_school.id,
-          name: teachers_school.name,
+          id: teachers_school[:school_id],
+          name: teachers_school[:school_name],
           country: 'US',
-          zip: teachers_school.zip,
-          type: teachers_school.school_type,
+          zip: teachers_school[:school_zip],
+          type: teachers_school[:school_type],
         }
-        @homepage_data[:ncesSchoolId] = teachers_school.id
+        @homepage_data[:ncesSchoolId] = teachers_school[:school_id]
         @homepage_data[:teacherName] = current_user.name
         @homepage_data[:teacherId] = current_user.id
         @homepage_data[:teacherEmail] = current_user.email

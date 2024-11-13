@@ -23,6 +23,7 @@ describe('Design System - Tags', () => {
       />
     );
 
+    // eslint-disable-next-line no-restricted-properties
     const tags = screen.getByTestId('tags');
     expect(tags).toBeDefined();
     expect(screen.getByText('tag1')).toBeDefined();
@@ -50,6 +51,7 @@ describe('Design System - Tags', () => {
       />
     );
 
+    // eslint-disable-next-line no-restricted-properties
     const tags = screen.getByTestId('tags');
     const tag1 = screen.getByText('tag1');
     const plusOneTag = screen.getByText('+1');
