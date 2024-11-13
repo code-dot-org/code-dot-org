@@ -12,7 +12,7 @@ import i18n from '@cdo/locale';
 import BaseDialog from '../../BaseDialog';
 import {Section} from '../../teacherDashboard/types/teacherSectionTypes';
 
-import styles from '@cdo/apps/templates/policy_compliance/AgeGatedStudentsModal/age-gated-students-modal.module.scss';
+import styles from '@cdo/apps/templates/policy_compliance/AgeGatedSectionsModal/age-gated-sections-modal.module.scss';
 
 interface Props {
   onClose: () => void;
@@ -73,8 +73,7 @@ export const AgeGatedSectionsModal: React.FC<Props> = ({
     >
       <div
         className={styles.modalContainer}
-        data-testid="age-gated-students-modal"
-        id="uitest-age-gated-students-modal"
+        id="uitest-age-gated-sections-modal"
       >
         <div>
           <Typography

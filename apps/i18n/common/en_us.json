@@ -480,7 +480,7 @@
   "childAccountConsentValidMessage": "Thank you for approving your child’s Code.org account! You will receive a confirmation email within 24–48 hours. Please let your child know you’ve approved their account so they can get started learning and coding today!",
   "childAccountPolicy_ageGatedStudentsWarning": "Some students in this section are under 13 and will require parental consent to continue using their personal accounts after 7/1/2024.",
   "childAccountPolicy_ageGatedStudentsWarning_button": "See Students",
-  "childAccountPolicy_ageGatedSectionsWarning": "Some of your sections may have students under 13 using personal account logins. These students will require parental consent to continue using their personal accounts after {startDate}.",
+  "childAccountPolicy_ageGatedSectionsWarning": "Some of your sections have students under 13 using personal account logins. These students will require parental consent to continue using their personal accounts after {startDate}.",
   "childAccountPolicy_ageGatedSectionsWarning_button": "See Sections",
   "childAccountPolicy_ageGatedSectionsModal_header": "Sections Which Require Parental Consent",
   "childAccountPolicy_ageGatedSectionsModal_notice": "The following sections have students under 13 who are using personal account logins. They will require parental consent after {startDate} to continue using Code.org with their personal accounts.",
