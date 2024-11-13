@@ -51,4 +51,4 @@ Scenario: School Info Confirmation Dialog
   And element ".modal" is visible
   Then I wait to see a modal containing text "United States"
   Then element "#uitest-school-zip" has value "31513"
-  Then I wait to see a modal containing text "Appling County High School"
+  Then I wait until element "#uitest-school-dropdown" contains text "Appling County High School"
