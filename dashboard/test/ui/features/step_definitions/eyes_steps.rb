@@ -15,6 +15,13 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
   next if CDO.disable_all_eyes_running
   ensure_eyes_available
 
+  # Wait until the fonts are fully loaded and rendering the page
+  # Hopefully fixes many of the issues with font wiggle due to lazily loading
+  # alternative fonts for symbols and localized glyphs.
+  wait_until do
+    @browser.execute_script('return !!(await document.fonts.ready)') == true
+  end
+
   batch = Applitools::BatchInfo.new(ENV.fetch('BATCH_NAME', nil))
   batch.id = ENV.fetch('BATCH_ID', nil)
   @eyes.batch = batch
