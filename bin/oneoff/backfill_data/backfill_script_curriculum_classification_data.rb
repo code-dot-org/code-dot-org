@@ -35,22 +35,25 @@ def backfill_script_data_categories(file_path, whatif_mode)
       next
     end
 
-    initiative_val = new_values[:new_initiative].to_s
-    content_area_val = new_values[:content_area].to_s
-    topic_tags_val = new_values[:topic_tags].to_s
+    initiative_val = new_values[:new_initiative]
+    content_area_val = new_values[:new_content_area]
+    topic_tags_val = new_values[:new_topic_tags]
 
-    if (!initiative_val.empty? && !$valid_curriculum_umbrella.include?(initiative_val)) ||
-        (!content_area_val.empty? && !$valid_content_area.include?(content_area_val)) ||
-        (!topic_tags_val.empty? && !$valid_topic_tags.include?(topic_tags_val))
+    if (!initiative_val.nil? && !$valid_curriculum_umbrella.include?(initiative_val)) ||
+        (!content_area_val.nil? && !$valid_content_area.include?(content_area_val)) ||
+        (!topic_tags_val.nil? && !(topic_tags_val - $valid_topic_tags).empty?)
       puts "Updates for #{script_name} does not include a valid value for one of the three fields."
       next
     end
 
-    next if whatif_mode
+    if whatif_mode
+      puts "Updates for #{script_name} = [#{initiative_val}] [#{content_area_val}] [#{topic_tags_val}]"
+      next
+    end
 
-    script.curriculum_umbrella = new_values[:new_initiative] unless initiative_val.empty?
-    script.content_area = new_values[:new_content_area] unless content_area_val.empty?
-    script.topic_tags = new_values[:new_topic_tags] unless topic_tags_val.empty?
+    script.curriculum_umbrella = initiative_val unless initiative_val.nil?
+    script.content_area = content_area_val unless content_area_val.nil?
+    script.topic_tags = topic_tags_val unless topic_tags_val.nil?
 
     begin
       script.save!
