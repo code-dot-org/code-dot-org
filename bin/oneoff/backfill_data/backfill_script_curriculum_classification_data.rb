@@ -35,26 +35,25 @@ def backfill_script_data_categories(file_path, whatif_mode)
       next
     end
 
-    if !$valid_curriculum_umbrella.include?(new_values[:new_initiative]) ||
-        !$valid_content_area.include?(new_values[:content_area]) ||
-        !$valid_topic_tags.include?(new_values[:topic_tags])
-      puts "Updates for #{script_name} does not include a valid value for one of the three fields. #{$valid_curriculum_umbrella.inspect} #{$valid_content_area.inspect}"
+    initiative_val = new_values[:new_initiative].to_s
+    content_area_val = new_values[:content_area].to_s
+    topic_tags_val = new_values[:topic_tags].to_s
+
+    if (!initiative_val.empty? && !$valid_curriculum_umbrella.include?(initiative_val)) ||
+        (!content_area_val.empty? && !$valid_content_area.include?(content_area_val)) ||
+        (!topic_tags_val.empty? && !$valid_topic_tags.include?(topic_tags_val))
+      puts "Updates for #{script_name} does not include a valid value for one of the three fields."
       next
     end
 
-    puts "new initiative #{new_values[:new_initiative]}" unless new_values[:new_initiative].to_s.empty?
-    puts "new content area #{new_values[:new_content_area]}" unless new_values[:new_content_area].to_s.empty?
-    puts "new topic tags #{new_values[:new_topic_tags]}" unless new_values[:new_topic_tags].to_s.empty?
-
     next if whatif_mode
 
-    # script.curriculum_umbrella = new_values[:new_initiative] unless new_values[:new_initiative].to_s.empty?
-    # script.content_area = new_values[:new_content_area] unless new_values[:new_content_area].to_s.empty?
-    # script.topic_tags = new_values[:new_topic_tags] unless new_values[:new_topic_tags].to_s.empty?
+    script.curriculum_umbrella = new_values[:new_initiative] unless initiative_val.empty?
+    script.content_area = new_values[:new_content_area] unless content_area_val.empty?
+    script.topic_tags = new_values[:new_topic_tags] unless topic_tags_val.empty?
 
     begin
-      puts "Saving script with updated values"
-      # script.save!
+      script.save!
     rescue Exception => exception
       warn "Skipping #{script.id} - #{script.name} because of error:"
       warn exception.message
@@ -71,4 +70,4 @@ if ARGV.empty? || ARGV.length >2
   return
 end
 
-backfill_script_data_categories(ARGV[0], ARGV.length == 2 && ARGV[2] == "-whatif")
+backfill_script_data_categories(ARGV[0], ARGV.length == 2 && ARGV[1] == "-whatif")
