@@ -94,7 +94,7 @@ module Levels
 
           # Create new relationships for matching names
           Level.where(name: child_level_names).find_each do |child_level|
-            position = child_level_names.index(child_level.name) if child_level_kind == ParentLevelsChildLevel::PROJECT_TEMPLATE
+            position = child_level_names.index(child_level.name) if child_level_kind == ParentLevelsChildLevel::CONTAINED
             new_levels_child_levels << ParentLevelsChildLevel.new(
               parent_level: level,
               child_level: child_level,
