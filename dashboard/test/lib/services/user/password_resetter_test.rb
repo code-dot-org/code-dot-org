@@ -20,9 +20,11 @@ class Services::User::PasswordResetterTest < ActiveSupport::TestCase
       end
 
       it 'does not send password reset' do
+        original_user_id = user.id
         user = reset_password
 
         _(mail).must_be_nil
+        user.id.must_equal original_user_id
         user.raw_token.wont_be_nil
       end
     end
