@@ -535,9 +535,11 @@ async function handleChatCompletionError(
   newUserMessage: ChatMessage,
   dispatch: AppDispatch
 ) {
-  Lab2Registry.getInstance()
-    .getMetricsReporter()
-    .logError('Error in aichat completion request', error as Error);
+  if (!(error instanceof NetworkError && error.response.status === 403)) {
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('Error in aichat completion request', error as Error);
+  }
 
   dispatch(clearChatMessagePending());
   dispatch(addChatEvent({...newUserMessage, status: Status.ERROR}));
