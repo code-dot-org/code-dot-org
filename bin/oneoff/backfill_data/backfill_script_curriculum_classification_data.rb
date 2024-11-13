@@ -7,18 +7,23 @@
 # by curriculum team.
 
 require_relative '../../../dashboard/config/environment'
+require_relative '../../../lib/cdo/shared_constants/curriculum/shared_course_constants'
+
+$valid_curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.to_h.values
+$valid_content_area = Curriculum::SharedCourseConstants::CURRICULUM_CONTENT_AREA.to_h.keys.map(&:to_s)
+$valid_topic_tags = Curriculum::SharedCourseConstants::CURRICULUM_TOPIC_TAGS.to_h.keys.map(&:to_s)
 
 # Take link to CSV file as input
-def backfill_script_data_categories(file_path)
+def backfill_script_data_categories(file_path, whatif_mode)
   raise unless Rails.application.config.levelbuilder_mode
 
   puts "Reading csv from #{file_path}"
   scripts_to_update = CSV.foreach(file_path, headers: true).map do |row|
-    [row["Script name"],
+    [row["Script Name"],
      {
-       new_initiative: row["Initative"],
-      new_content_area: row["Content area"],
-      new_topic_tags: row["Topic tags"]&.split(",")&.map(&:strip)&.reject(&:blank?)
+       new_initiative: row["New Initiative"],
+      new_content_area: row["Content Area"],
+      new_topic_tags: row["Tags"]&.split(",")&.map(&:strip)&.reject(&:blank?)
      }]
   end.to_h
 
@@ -30,17 +35,26 @@ def backfill_script_data_categories(file_path)
       next
     end
 
-    puts "Updating script #{script_name}, #{script.id}"
-    # script.curriculum_umbrella = new_values[:new_initiative] unless new_values[:new_initiative].to_s.empty?
-    # script.content_area = new_values[:new_content_area] unless new_values[:new_content_area].to_s.empty?
-    # script.topic_tags = new_values[:new_topic_tags] unless new_values[:new_topic_tags].to_s.empty?
+    if !$valid_curriculum_umbrella.include?(new_values[:new_initiative]) ||
+        !$valid_content_area.include?(new_values[:content_area]) ||
+        !$valid_topic_tags.include?(new_values[:topic_tags])
+      puts "Updates for #{script_name} does not include a valid value for one of the three fields. #{$valid_curriculum_umbrella.inspect} #{$valid_content_area.inspect}"
+      next
+    end
 
     puts "new initiative #{new_values[:new_initiative]}" unless new_values[:new_initiative].to_s.empty?
     puts "new content area #{new_values[:new_content_area]}" unless new_values[:new_content_area].to_s.empty?
     puts "new topic tags #{new_values[:new_topic_tags]}" unless new_values[:new_topic_tags].to_s.empty?
 
+    next if whatif_mode
+
+    # script.curriculum_umbrella = new_values[:new_initiative] unless new_values[:new_initiative].to_s.empty?
+    # script.content_area = new_values[:new_content_area] unless new_values[:new_content_area].to_s.empty?
+    # script.topic_tags = new_values[:new_topic_tags] unless new_values[:new_topic_tags].to_s.empty?
+
     begin
-      script.save!
+      puts "Saving script with updated values"
+      # script.save!
     rescue Exception => exception
       warn "Skipping #{script.id} - #{script.name} because of error:"
       warn exception.message
@@ -52,8 +66,9 @@ def backfill_script_data_categories(file_path)
   end
 end
 
-if ARGV.length != 1
-  warn "Usage: backfill_script_curriculum_classification_data.rb <path_to_csv_with_data>"
+if ARGV.empty? || ARGV.length >2
+  warn "Usage: backfill_script_curriculum_classification_data.rb <path_to_csv_with_data> -whatif"
   return
 end
-backfill_script_data_categories ARGV[0]
+
+backfill_script_data_categories(ARGV[0], ARGV.length == 2 && ARGV[2] == "-whatif")
