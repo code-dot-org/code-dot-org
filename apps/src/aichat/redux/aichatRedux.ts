@@ -535,6 +535,7 @@ async function handleChatCompletionError(
   newUserMessage: ChatMessage,
   dispatch: AppDispatch
 ) {
+  // Only send log report if not a 403 error.
   if (!(error instanceof NetworkError && error.response.status === 403)) {
     Lab2Registry.getInstance()
       .getMetricsReporter()
