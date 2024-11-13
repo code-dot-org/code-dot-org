@@ -7,7 +7,6 @@ import {UnconnectedUnitOverviewTopRow as UnitOverviewTopRow} from '@cdo/apps/cod
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
-import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import i18n from '@cdo/locale';
 
 import {testLessons} from './unitCalendarTestData';
@@ -39,34 +38,26 @@ describe('UnitOverviewTopRow', () => {
         hasPerLevelResults={false}
       />
     );
-
     expect(
       wrapper.containsMatchingElement(
         <div>
-          <div>
-            <Button
-              __useDeprecatedTag
-              href="/s/test-script/next"
-              text={i18n.tryNow()}
-              size={Button.ButtonSize.large}
-            />
-            <Button
-              __useDeprecatedTag
-              href="//support.code.org"
-              text={i18n.getHelp()}
-              color={Button.ButtonColor.white}
-              size={Button.ButtonSize.large}
-            />
-          </div>
-          <div />
-          <div>
-            <span>
-              <ProgressDetailToggle />
-            </span>
-          </div>
+          <Button
+            __useDeprecatedTag
+            href="/s/test-script/next"
+            text={i18n.tryNow()}
+            size={Button.ButtonSize.large}
+          />
+          <Button
+            __useDeprecatedTag
+            href="//support.code.org"
+            text={i18n.getHelp()}
+            color={Button.ButtonColor.white}
+            size={Button.ButtonSize.large}
+          />
         </div>
       )
     ).toBe(true);
+    expect(wrapper.find('Connect(ProgressDetailToggle)')).toHaveLength(1);
   });
 
   it('does not render "Try Now" if unit has no levels', () => {
