@@ -128,6 +128,22 @@ header.build = function (
     // Only render sign in callout if the course is CSF and the user is
     // not signed in
     if (scriptData.show_sign_in_callout && signedIn === false) {
+      // Additionally, update those urls to return user to level after
+      const currentUrl = window.location.href;
+      const signInButton = document.querySelector('#signin_button');
+      const createAccountButton = document.querySelector(
+        '#create_account_button'
+      );
+      if (signInButton) {
+        signInButton.href = `/users/sign_in?user_return_to=${encodeURIComponent(
+          currentUrl
+        )}`;
+      }
+      if (createAccountButton) {
+        createAccountButton.href = `/users/sign_up?user_return_to=${encodeURIComponent(
+          currentUrl
+        )}`;
+      }
       ReactDOM.render(
         <SignInCalloutWrapper />,
         document.querySelector('.signin_callout_wrapper')
