@@ -68,24 +68,28 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
     SubmissionStatusType | undefined
   >(undefined);
 
+  const fetchSubmissionStatusHandleError = (
+    channelId: string,
+    projectType: string
+  ) => {
+    getSubmissionStatus(channelId, projectType)
+      .then(response => setSubmissionStatus(response))
+      .catch(error => {
+        if (!(error instanceof NetworkError && error.response.status === 403)) {
+          MetricsReporter.logError({
+            event: MetricEvent.SUBMISSION_STATUS_UNEXPECTED_ERROR,
+            errorMessage: 'Unexpected error in getting submission status.',
+            projectType: projectType,
+            channelId: channelId,
+          });
+        }
+      });
+  };
+
   useEffect(() => {
     // Only signed-in users can submit projects to be considered for the featured project gallery.
     if (channelId && projectType && isSignedIn) {
-      getSubmissionStatus(channelId, projectType)
-        .then(response => setSubmissionStatus(response))
-        .catch(error => {
-          // Check for and log unexpected non-forbidden errors.
-          if (
-            !(error instanceof NetworkError && error.response.status === 403)
-          ) {
-            MetricsReporter.logError({
-              event: MetricEvent.SUBMISSION_STATUS_UNEXPECTED_ERROR,
-              errorMessage: 'Unexpected error in getting submission status.',
-              projectType: projectType,
-              channelId: channelId,
-            });
-          }
-        });
+      fetchSubmissionStatusHandleError(channelId, projectType);
     }
   }, [channelId, isSignedIn, projectType]);
 
@@ -99,20 +103,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
     setDialogPanel('share');
     // If the project was submitted successfully, the submission status is updated (only for signed-in users).
     if (channelId && projectType && isSignedIn) {
-      getSubmissionStatus(channelId, projectType)
-        .then(response => setSubmissionStatus(response))
-        .catch(error => {
-          if (
-            !(error instanceof NetworkError && error.response.status === 403)
-          ) {
-            MetricsReporter.logError({
-              event: MetricEvent.SUBMISSION_STATUS_UNEXPECTED_ERROR,
-              errorMessage: 'Unexpected error in getting submission status.',
-              projectType: projectType,
-              channelId: channelId,
-            });
-          }
-        });
+      fetchSubmissionStatusHandleError(channelId, projectType);
     }
   };
 
