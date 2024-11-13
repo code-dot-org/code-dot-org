@@ -77,7 +77,6 @@ module Curriculum
         pedagogy_special_topics_selfpaced_pl: 'Pedagogy special topics selfpaced pl',
         cs_basics_selfpaced_pl: 'CS Basics selfpaced pl',
         pd_for_facilitators: 'PD for Facilitators',
-        pl_workshop_activities: 'PL Workshop activities',
         other: 'Other'
       }
     ).freeze
