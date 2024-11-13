@@ -16,15 +16,19 @@ import {
 } from '../EmptyStateUtils';
 import {LABELED_TEACHER_NAVIGATION_PATHS} from '../TeacherNavigationPaths';
 
-export const CalendarEmptyState: React.FC = () => {
+interface LessonMaterialsEmptyStateProps {
+  showNoCurriculumAssigned: boolean;
+  isLegacyScript: boolean;
+}
+
+export const LessonMaterialsEmptyState: React.FC<
+  LessonMaterialsEmptyStateProps
+> = ({showNoCurriculumAssigned, isLegacyScript}) => {
   const unitName = useSelector(
     (state: {unitSelection: {unitName: string}}) => state.unitSelection.unitName
   );
 
   const selectedSection = useAppSelector(selectedSectionSelector);
-  const versionYear = useAppSelector(state => state.calendar?.versionYear);
-  const isLegacyScript = versionYear ? versionYear < 2021 : false;
-  const showNoCurriculumAssigned = !selectedSection.courseOfferingId;
   const emptyStateDetails = generateLessonMaterialsEmptyState(
     showNoCurriculumAssigned,
     unitName,
@@ -40,16 +44,21 @@ export const CalendarEmptyState: React.FC = () => {
 };
 
 export const getNoLessonMaterialsForLegacyCourses = (
+  courseDisplayName: string,
   sectionId: number,
   courseVersionName: string
 ): EmptyStateContent => {
   return {
     headline: i18n.lessonMaterialsAreNotAvailable(),
     descriptionText: i18n.lessonMaterialsLegacyMessage({
-      courseName: 'courseName',
+      courseName: courseDisplayName,
     }),
     imageComponent: (
-      <img src={NoLessonMaterialsForLegacyCourses} alt={i18n.almostThere()} />
+      <img
+        src={NoLessonMaterialsForLegacyCourses}
+        alt={i18n.almostThere()}
+        width={'215px'}
+      />
     ),
     button: (
       <LinkButton
@@ -63,7 +72,7 @@ export const getNoLessonMaterialsForLegacyCourses = (
             }
           )
         }
-        text={i18n.assignAUnit()}
+        text={i18n.goToCourse()}
       />
     ),
   };
@@ -90,10 +99,15 @@ function generateLessonMaterialsEmptyState(
       selectedSection.courseDisplayName,
       i18n.lessonMaterials()
     );
-  } else if (isLegacyScript && selectedSection.courseDisplayName) {
+  } else if (
+    isLegacyScript &&
+    selectedSection.courseDisplayName &&
+    selectedSection.courseVersionName
+  ) {
     lessonMaterialsEmptyState = getNoLessonMaterialsForLegacyCourses(
+      selectedSection.courseDisplayName,
       selectedSection.id,
-      selectedSection.courseDisplayName
+      selectedSection.courseVersionName
     );
   }
   return lessonMaterialsEmptyState;

@@ -187,12 +187,12 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
             path={TEACHER_NAVIGATION_PATHS.lessonMaterials}
             loader={lessonMaterialsLoader}
             element={
-              <ElementOrEmptyPage
-                showNoStudents={studentCount === 0}
-                showNoUnitAssigned={!selectedSection?.unitId}
-                courseName={selectedSection?.courseDisplayName}
-                showNoCurriculumAssigned={!anyStudentHasProgress}
-                element={<LessonMaterialsContainer />}
+              <LessonMaterialsContainer
+                showNoCurriculumAssigned={
+                  !!selectedSection &&
+                  !selectedSection.courseVersionName &&
+                  !selectedSection.courseOfferingId
+                }
               />
             }
           />
