@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import {BodyTwoText, Heading6} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
 import {Resource} from './LessonMaterialTypes';
@@ -10,7 +10,7 @@ import styles from './lesson-materials.module.scss';
 
 // lesson plans, standards, and vocabulary are only needed for teacher resources
 type LessonResourcesProps = {
-  unitNumber: number;
+  unitNumber: number | null;
   lessonNumber: number;
   lessonPlanUrl?: string;
   lessonPlanPdfUrl?: string;
@@ -19,6 +19,14 @@ type LessonResourcesProps = {
   lessonName?: string;
   resources: Resource[];
 };
+
+const renderNoResourcesRow = (
+  <div className={styles.rowContainer}>
+    <BodyTwoText className={styles.resourceLabel}>
+      <em>{i18n.noStudentResources()}</em>
+    </BodyTwoText>
+  </div>
+);
 
 const LessonResources: React.FC<LessonResourcesProps> = ({
   unitNumber,
@@ -97,6 +105,7 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
       <div className={styles.topRowForResourcesTable}>
         <Heading6 className={styles.headerText}>{sectionHeaderText}</Heading6>
       </div>
+      {!lessonPlanUrl && resources.length === 0 && renderNoResourcesRow}
       {renderLessonPlanRow()}
       {resources.map(resource => (
         <ResourceRow

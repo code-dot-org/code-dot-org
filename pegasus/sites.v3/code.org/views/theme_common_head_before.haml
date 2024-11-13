@@ -15,6 +15,13 @@
 
 %script{src:'https://www.googleoptimize.com/optimize.js?id=OPT-KBX3C3L'}
 
+%script{'data-statsig-api-client-key' => CDO.safe_statsig_api_client_key}
+%script{'data-managed-test-server' => "#{CDO.running_web_application? && CDO.test_system?}"}
+%script{'data-ge-region' => request.ge_region.to_s}
+
+- if request.ge_region
+  %script{src: webpack_asset_path('js/statsigWebAnalytics.js'), 'data-ot-ignore' => ''}
+
 =view :fonts
 -if @header['style_min'] && request.site == 'code.org'
   =inline_css 'style-min.css'

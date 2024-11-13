@@ -1,12 +1,13 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2024-10-28T15:21:52.000Z",
   "level_num": "custom",
   "user_id": 18914,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Finish the joke\r\n\r\nChange up the function **joke_setup()**  to tell another joke.\r\n",
+    "long_instructions": "##Finish the joke\r\n\r\nChange up the function **joke_setup()**  to tell another joke.\r\n\r\n::: details [**Example Joke**]\r\nKnock Knock\r\nWho is there?\r\nOrange \r\nOrange Who?\r\nOrange you glad I didnt say Banana\r\n:::\r\n",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "true",
@@ -27,9 +28,11 @@
       },
       "folders": {
       }
-    }
+    },
+    "reference_links": [
+      "https://kids.niehs.nih.gov/games/riddles/jokes/knock-knock-jokes"
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-10-28 15:27:37 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:30:53 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:31:05 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:31:09 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-28 15:27:37 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:30:53 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:31:05 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:31:09 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-04 19:00:21 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-04 19:32:25 +0000\",\"changed\":[\"predict_settings\",\"reference_links\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-04 21:09:00 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

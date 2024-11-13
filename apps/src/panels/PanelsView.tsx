@@ -1,11 +1,10 @@
 import classNames from 'classnames';
 import markdownToTxt from 'markdown-to-txt';
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import Typist from 'react-typist';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
-import usePrevious from '@cdo/apps/util/usePrevious';
 
 import {queryParams} from '../code-studio/utils';
 import FontAwesome from '../legacySharedComponents/FontAwesome';
@@ -36,7 +35,18 @@ interface PanelsProps {
   targetWidth: number;
   targetHeight: number;
   offerBrowserTts: boolean;
+  levelId: string | null;
   resetOnChange?: boolean;
+  onChangePanel?: (
+    source: 'button' | 'bubble',
+    currentPanel: number,
+    nextPanel: number,
+    timeSpentOnPanelSeconds: number
+  ) => void;
+  onClickContinue?: (
+    currentPanel: number,
+    timeSpentOnPanelSeconds: number
+  ) => void;
 }
 
 /**
@@ -49,13 +59,19 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   targetWidth,
   targetHeight,
   offerBrowserTts,
+  levelId,
   resetOnChange = true,
+  onChangePanel,
+  onClickContinue,
 }) => {
   const [currentPanelIndex, setCurrentPanelIndex] = useState(0);
+  const [previousPanelIndex, setPreviousPanelIndex] = useState<
+    number | undefined
+  >(undefined);
   const [typingDone, setTypingDone] = useState(false);
   const {cancel} = useBrowserTextToSpeech();
 
-  const previousPanelIndex = usePrevious(currentPanelIndex);
+  const lastPanelStartTime = useRef<number>(Date.now());
 
   targetWidth -= horizontalMargin * 2;
   targetHeight -= verticalMargin * 2 + childrenAreaHeight;
@@ -76,21 +92,47 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     return [width, height];
   }, [targetWidth, targetHeight]);
 
+  const changePanel = useCallback(
+    (index: number, source: 'button' | 'bubble') => {
+      if (onChangePanel) {
+        onChangePanel(
+          source,
+          currentPanelIndex,
+          index,
+          (Date.now() - lastPanelStartTime.current) / 1000
+        );
+      }
+      setPreviousPanelIndex(currentPanelIndex);
+      setCurrentPanelIndex(index);
+    },
+    [currentPanelIndex, onChangePanel]
+  );
+
   const handleButtonClick = useCallback(() => {
     if (currentPanelIndex < panels.length - 1) {
-      setCurrentPanelIndex(currentPanelIndex + 1);
+      changePanel(currentPanelIndex + 1, 'button');
     } else {
+      if (onClickContinue) {
+        onClickContinue(
+          currentPanelIndex,
+          (Date.now() - lastPanelStartTime.current) / 1000
+        );
+      }
       onContinue(panels[currentPanelIndex].nextUrl);
     }
-  }, [panels, currentPanelIndex, onContinue]);
+  }, [changePanel, panels, currentPanelIndex, onContinue, onClickContinue]);
 
-  const handleBubbleClick = (index: number) => {
-    setCurrentPanelIndex(index);
-  };
+  const handleBubbleClick = useCallback(
+    (index: number) => {
+      changePanel(index, 'bubble');
+    },
+    [changePanel]
+  );
 
   // Reset to first panel whenever panels content changes if specified.
   useEffect(() => {
     if (resetOnChange) {
+      setPreviousPanelIndex(undefined);
       setCurrentPanelIndex(0);
     }
   }, [panels, resetOnChange]);
@@ -102,11 +144,13 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     }
   }, [currentPanelIndex, panels, resetOnChange]);
 
-  // Cancel any in-progress text-to-speech when the panel changes.
+  // Cancel any in-progress text-to-speech when the panel changes
+  // and reset the last panel start time.
   useEffect(() => {
     if (offerBrowserTts) {
       cancel();
     }
+    lastPanelStartTime.current = Date.now();
   }, [currentPanelIndex, offerBrowserTts, cancel]);
 
   // Reset typing if the panel changes.
@@ -123,6 +167,9 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     panel.fadeInOverPrevious &&
     previousPanelIndex !== undefined &&
     panels[previousPanelIndex];
+
+  const nextPanel =
+    currentPanelIndex + 1 < panels.length && panels[currentPanelIndex + 1];
 
   const layoutClassMap = {
     'text-top-left': styles.textTopLeft,
@@ -154,7 +201,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     <div
       id="panels-container"
       className={styles.panelsContainer}
-      key={currentPanelIndex}
+      key={`${levelId || 'default'}-${currentPanelIndex}`}
     >
       <div className={styles.panel} style={{width, height}}>
         {previousPanel && (
@@ -171,6 +218,14 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
             backgroundImage: `url("${panel.imageUrl}")`,
           }}
         />
+        {nextPanel && (
+          <div
+            className={classNames(styles.image, styles.imageInvisible)}
+            style={{
+              backgroundImage: `url("${nextPanel.imageUrl}")`,
+            }}
+          />
+        )}
         {panel.text && (
           <div
             className={classNames(
@@ -184,7 +239,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
               <div>
                 <div className={styles.invisiblePlaceholder}>{plainText}</div>
                 <Typist
-                  startDelay={1500}
+                  startDelay={750}
                   avgTypingDelay={35}
                   stdTypingDelay={15}
                   cursor={{show: false}}
@@ -208,6 +263,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
       >
         {showButton && (
           <Button
+            key={`button-${currentPanelIndex}`}
             id="panels-button"
             onClick={handleButtonClick}
             className={classNames(

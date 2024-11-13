@@ -121,17 +121,20 @@ describe('UnitEditor', () => {
   describe('Script Editor', () => {
     it('does not show publishing editor if hasCourse is true', () => {
       renderDefault({hasCourse: true});
+      // eslint-disable-next-line no-restricted-properties
       expect(screen.queryByTestId('course-version-publishing-editor')).to.not
         .exist;
     });
 
     it('shows publishing editor if hasCourse is false', () => {
       renderDefault({hasCourse: false});
+      // eslint-disable-next-line no-restricted-properties
       screen.queryByTestId('course-version-publishing-editor');
     });
 
     it('topic tags is a multiple chips component with initial options selected', () => {
       renderDefault({initialTopicTags: ['music_lab', 'ai']});
+      // eslint-disable-next-line no-restricted-properties
       const topicTags = screen.getByTestId('chips-unit-editor-topic-tags');
       expect(within(topicTags).getAllByRole('checkbox').length).to.equal(3);
 
@@ -148,6 +151,7 @@ describe('UnitEditor', () => {
 
     it('selecting topic tag chips updates input element selection state', () => {
       renderDefault({initialTopicTags: ['music_lab', 'ai']});
+      // eslint-disable-next-line no-restricted-properties
       const topicTags = screen.getByTestId('chips-unit-editor-topic-tags');
       expect(within(topicTags).getAllByRole('checkbox').length).to.equal(3);
 

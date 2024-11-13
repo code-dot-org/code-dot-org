@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2024-10-07T22:05:48.000Z",
   "level_num": "custom",
@@ -55,52 +54,22 @@
               "x": 30,
               "y": 30,
               "deletable": false,
-              "movable": false,
-              "next": {
-                "block": {
-                  "type": "play_sounds_together",
-                  "id": "play_sounds_together",
-                  "deletable": false,
-                  "movable": false,
-                  "inputs": {
-                    "code": {
-                      "block": {
-                        "type": "play_sound_at_current_location_simple2",
-                        "id": "J_C.|(UT6D#2=oxs@t-n",
-                        "movable": false,
-                        "fields": {
-                          "sound": "chainsmokers_coldplay_something_just_like_this/vocals_do_do_do_low"
-                        },
-                        "next": {
-                          "block": {
-                            "type": "play_sound_at_current_location_simple2",
-                            "id": "play_sound_at_current_location_simple2",
-                            "movable": false,
-                            "fields": {
-                              "sound": "chainsmokers_coldplay_something_just_like_this/guitar_chime"
-                            },
-                            "next": {
-                              "block": {
-                                "type": "play_pattern_ai_at_current_location_simple2",
-                                "id": "play_pattern_ai_at_current_location_simple2",
-                                "movable": false,
-                                "fields": {
-                                  "pattern_ai": {
-                                    "kit": "drums",
-                                    "length": 2,
-                                    "events": [
+              "movable": false
+            },
+            {
+              "type": "play_pattern_ai_at_current_location_simple2",
+              "id": "play_pattern_ai_at_current_location_simple2",
+              "x": 390,
+              "y": 70,
+              "enabled": false,
+              "fields": {
+                "pattern_ai": {
+                  "length": 2,
+                  "events": [
 
-                                    ],
-                                    "ai": true
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
+                  ],
+                  "ai": true,
+                  "instrument": "drums"
                 }
               }
             }
@@ -174,7 +143,8 @@
     "offer_browser_tts": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:48.554+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-aibeats_3\\\"\"],\"cloned_from\":\"music-ai-skill-aibeats_3\"},{\"changed_at\":\"2024-10-17 21:00:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 21:50:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-21 22:06:13 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-21 22:09:26 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-21 22:10:50 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-22 00:26:32 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-22 00:27:14 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-22 00:27:47 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-22 00:28:26 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:48.554+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-aibeats_3\\\"\"],\"cloned_from\":\"music-ai-skill-aibeats_3\"},{\"changed_at\":\"2024-10-17 21:00:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-17 21:50:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-21 22:06:13 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-21 22:09:26 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-21 22:10:50 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-22 00:26:32 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-22 00:27:14 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-22 00:27:47 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-22 00:28:26 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-11-04 19:25:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-11-04 19:26:11 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

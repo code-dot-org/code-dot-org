@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-11-04T19:26:23.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Step 2: Dataset Decisions",
+    "long_instructions": "####What decisions did you have to make about the data before beginning your analysis? For example, did you need to clean your data by excluding certain data points, combining data categories, or handling missing values? Did you create new attributes and summarize data with the count() function? Explain.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-11-04T19:26:23.836+00:00\",\"changed\":[\"cloned from \\\"data-science-u1-lesson12-level4a\\\"\"],\"cloned_from\":\"data-science-u1-lesson12-level4a\"},{\"changed_at\":\"2024-11-04 19:26:28 +0000\",\"changed\":[\"title\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-04 20:27:22 +0000\",\"changed\":[\"allow_user_uploads\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-04 20:30:44 +0000\",\"changed\":[\"title\",\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-04 20:31:23 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

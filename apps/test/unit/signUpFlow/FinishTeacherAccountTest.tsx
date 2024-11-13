@@ -194,6 +194,84 @@ describe('FinishTeacherAccount', () => {
     fetchStub.restore();
   });
 
+  it('clicking finish sign up button triggers fetch call and shows error if backend error', async () => {
+    const fetchStub = sinon.stub(window, 'fetch');
+    fetchStub.callsFake(() =>
+      Promise.resolve({
+        ok: false,
+        status: 500,
+        json: () => Promise.resolve({success: false}),
+      } as Response)
+    );
+
+    // Declare parameter values and set sessionStorage variables
+    const name = 'FirstName';
+    const email = 'fake@email.com';
+    const finishSignUpParams = {
+      new_sign_up: true,
+      user: {
+        user_type: UserTypes.TEACHER,
+        email: email,
+        name: name,
+        email_preference_opt_in: true,
+        school_info_attributes: {
+          schoolId: NonSchoolOptions.SELECT_A_SCHOOL,
+          country: 'US',
+          schoolName: '',
+          schoolZip: '',
+          schoolsList: [],
+          usIp: true,
+        },
+        country_code: 'US',
+      },
+    };
+    sessionStorage.setItem('email', email);
+
+    await waitFor(() => {
+      renderDefault();
+    });
+
+    // Set up finish sign up button onClick jest function
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    }) as HTMLButtonElement;
+    const handleClick = jest.fn();
+    finishSignUpButton.onclick = handleClick;
+
+    // Fill in fields
+    fireEvent.change(screen.getAllByDisplayValue('')[0], {
+      target: {value: name},
+    });
+    fireEvent.click(screen.getByRole('checkbox'));
+
+    // Click finish sign up button
+    fireEvent.click(finishSignUpButton);
+
+    await waitFor(() => {
+      // Verify the button's click handler was called
+      expect(handleClick).toHaveBeenCalled();
+
+      // Verify the authenticity token was obtained
+      expect(getAuthenticityTokenMock).toHaveBeenCalled;
+
+      // Verify the button's fetch method was called
+      expect(fetchStub.calledTwice).toBe(true);
+      const fetchCall = fetchStub.getCall(1);
+      expect(fetchCall.args[0]).toEqual('/users');
+      expect(fetchCall.args[1]?.body).toEqual(
+        JSON.stringify(finishSignUpParams)
+      );
+
+      // Verify the user is NOT redirected to the finish sign up page
+      expect(navigateToHrefMock).toHaveBeenCalledTimes(0);
+      // Verify the error message is shown. Since the message includes a hyperlinked email, it requires the use of a
+      // SafeMarkdown tag, so the email itself is checked to know if the message shows.
+      screen.getByText('support@code.org');
+    });
+
+    fetchStub.restore();
+  });
+
   it('clicking finish sign up button triggers fetch call and redirects user to home page', async () => {
     const fetchStub = sinon.stub(window, 'fetch');
     fetchStub.callsFake(url => {

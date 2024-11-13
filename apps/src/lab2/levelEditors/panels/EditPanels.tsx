@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
+import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {
@@ -123,6 +124,7 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
             targetHeight={1080}
             offerBrowserTts={false}
             resetOnChange={false}
+            levelId={null}
           />
         </div>
       </div>
@@ -236,6 +238,20 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
           updateImageUrl={imageUrl => {
             updatePanel({...panel, imageUrl: imageUrl});
           }}
+        />
+      </div>
+      <div className={moduleStyles.fieldRow}>
+        <Checkbox
+          checked={!!panel.typing}
+          name="typing"
+          label="Typing? (No markdown support)"
+          size="s"
+          onChange={event =>
+            updatePanel({
+              ...panel,
+              typing: event.target.checked,
+            })
+          }
         />
       </div>
       {last && (

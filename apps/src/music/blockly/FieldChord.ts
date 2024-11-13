@@ -24,7 +24,8 @@ interface FieldChordOptions {
  * "play_chord" block. The UI is rendered by {@link ChordPanel}.
  */
 export default class FieldChord extends GoogleBlockly.Field {
-  static fromJson(options: FieldChordOptions) {
+  static fromJson(_options: GoogleBlockly.FieldConfig) {
+    const options = _options as FieldChordOptions;
     return new FieldChord(options);
   }
 

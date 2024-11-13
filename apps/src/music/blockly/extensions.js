@@ -38,7 +38,7 @@ export const playMultiMutator = {
     const shadowBlockXml = `<shadow type="${BlockTypes.VALUE_SAMPLE}"/>`;
     this.appendValueInput(EXTRA_SOUND_INPUT_PREFIX + this.extraSoundInputCount_)
       .setShadowDom(Blockly.Xml.textToDom(shadowBlockXml))
-      .setAlign(Blockly.Input.Align.RIGHT)
+      .setAlign(Blockly.ALIGN_RIGHT)
       .setCheck(SOUND_VALUE_TYPE)
       .appendField('and');
 

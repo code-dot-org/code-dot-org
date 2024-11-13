@@ -1,15 +1,7 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
-import OverflowTooltip from '@codebridge/components/OverflowTooltip';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
-import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
 import {ProjectType, FolderId} from '@codebridge/types';
-import {
-  getPossibleDestinationFoldersForFolder,
-  validateFileName as globalValidateFileName,
-  validateFolderName,
-  shouldShowFile,
-} from '@codebridge/utils';
+import {shouldShowFile} from '@codebridge/utils';
 import {
   DndContext,
   DragStartEvent,
@@ -22,35 +14,25 @@ import {
 import classNames from 'classnames';
 import React, {useMemo, useState} from 'react';
 
-import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
-import {usePartialApply, PAFunctionArgs} from '@cdo/apps/lab2/hooks';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {
   DndDataContextProvider,
   useDndDataContext,
 } from './DnDDataContextProvider';
-import {Draggable} from './Draggable';
+import {Draggable, NotDraggable} from './Draggable';
 import {Droppable} from './Droppable';
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
-import FileRow from './FileRow';
-import {
-  useFileUploader,
-  useFileUploadErrorCallback,
-  useHandleFileUpload,
-  usePrompts,
-} from './hooks';
+import {FileRow, FileRowProps, FolderRow} from './FileBrowserRow';
+import {useHandleDragEnd} from './hooks';
 import {DragType, DragDataType, DropDataType, setFileType} from './types';
 
 import moduleStyles from './styles/filebrowser.module.scss';
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 type FilesComponentProps = {
   files: ProjectType['files'];
@@ -62,27 +44,8 @@ type FilesComponentProps = {
 
 const InnerFileBrowser = React.memo(
   ({parentId, folders, files, setFileType, appName}: FilesComponentProps) => {
-    const {
-      openConfirmDeleteFolder,
-      openMoveFolderPrompt,
-      openNewFilePrompt,
-      openNewFolderPrompt,
-      openRenameFolderPrompt,
-    } = usePrompts();
-    const {
-      toggleOpenFolder,
-      config: {validMimeTypes},
-    } = useCodebridgeContext();
     const {dragData, dropData} = useDndDataContext();
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-    const handleFileUpload = useHandleFileUpload(files);
-    const fileUploadErrorCallback = useFileUploadErrorCallback();
-
-    const {startFileUpload, FileUploaderComponent} = useFileUploader({
-      callback: handleFileUpload,
-      errorCallback: fileUploadErrorCallback,
-      validMimeTypes,
-    });
 
     const hasValidationFile = !!Object.values(files).find(
       f => f.type === ProjectFileType.VALIDATION
@@ -91,7 +54,6 @@ const InnerFileBrowser = React.memo(
 
     return (
       <>
-        <FileUploaderComponent />
         {Object.values(folders)
           .filter(f => f.parentId === parentId)
           .sort((a, b) => a.name.localeCompare(b.name))
@@ -108,98 +70,7 @@ const InnerFileBrowser = React.memo(
               <Draggable
                 data={{id: f.id, type: DragType.FOLDER, parentId: f.parentId}}
               >
-                <div className={moduleStyles.row}>
-                  <span
-                    className={moduleStyles.title}
-                    onClick={() => toggleOpenFolder(f.id)}
-                  >
-                    <FontAwesomeV6Icon
-                      iconName={f.open ? 'caret-down' : 'caret-right'}
-                      iconStyle={'solid'}
-                      className={moduleStyles.rowIcon}
-                    />
-
-                    <OverflowTooltip
-                      tooltipProps={{
-                        text: f.name,
-                        tooltipId: `folder-tooltip-${f.id}`,
-                        size: 's',
-                        direction: 'onBottom',
-                        className: darkModeStyles.tooltipBottom,
-                      }}
-                      tooltipOverlayClassName={moduleStyles.nameContainer}
-                      className={moduleStyles.nameContainer}
-                    >
-                      <span
-                        className={classNames({
-                          [moduleStyles.acceptingDrop]:
-                            f.id === dropData?.id &&
-                            dragData?.parentId !== f.id,
-                        })}
-                      >
-                        {f.name}
-                      </span>
-                    </OverflowTooltip>
-                  </span>
-                  {!isReadOnly && !dragData?.id && (
-                    <PopUpButton
-                      iconName="ellipsis-v"
-                      className={moduleStyles['button-kebab']}
-                    >
-                      <span className={moduleStyles['button-bar']}>
-                        {Boolean(
-                          getPossibleDestinationFoldersForFolder({
-                            folder: f,
-                            projectFolders: folders,
-                          }).length
-                        ) && (
-                          <PopUpButtonOption
-                            iconName="arrow-right"
-                            labelText={codebridgeI18n.moveFolder()}
-                            clickHandler={() =>
-                              openMoveFolderPrompt({folderId: f.id})
-                            }
-                          />
-                        )}
-                        <PopUpButtonOption
-                          iconName="pencil"
-                          labelText={codebridgeI18n.renameFolder()}
-                          clickHandler={() =>
-                            openRenameFolderPrompt({folderId: f.id})
-                          }
-                        />
-                        <PopUpButtonOption
-                          iconName="folder-plus"
-                          labelText={codebridgeI18n.addSubFolder()}
-                          clickHandler={() =>
-                            openNewFolderPrompt({parentId: f.id})
-                          }
-                        />
-                        <PopUpButtonOption
-                          iconName="plus"
-                          labelText={codebridgeI18n.newFile()}
-                          clickHandler={() =>
-                            openNewFilePrompt({folderId: f.id})
-                          }
-                        />
-
-                        <PopUpButtonOption
-                          iconName="upload"
-                          labelText={codebridgeI18n.uploadFile()}
-                          clickHandler={() => startFileUpload(f.id)}
-                        />
-
-                        <PopUpButtonOption
-                          iconName="trash"
-                          labelText={codebridgeI18n.deleteFolder()}
-                          clickHandler={() =>
-                            openConfirmDeleteFolder({folder: f})
-                          }
-                        />
-                      </span>
-                    </PopUpButton>
-                  )}
-                </div>
+                <FolderRow item={f} enableMenu={!isReadOnly && !dragData?.id} />
                 {f.open && (
                   <ul>
                     <InnerFileBrowser
@@ -220,26 +91,20 @@ const InnerFileBrowser = React.memo(
           .map(f => {
             const isDraggingLocked =
               !isStartMode && f.type === ProjectFileType.LOCKED_STARTER;
-            const fileRowProps = {
-              key: f.id,
-              file: f,
-              isReadOnly,
-              appName,
+            const fileRowProps: FileRowProps = {
+              item: f,
               hasValidationFile,
-              isStartMode,
-              setFileType,
               enableMenu: !dragData?.id || isDraggingLocked,
             };
-            return isDraggingLocked ? (
-              <FileRow {...fileRowProps} />
-            ) : (
-              <Draggable
+            const MaybeDraggable = isDraggingLocked ? NotDraggable : Draggable;
+            return (
+              <MaybeDraggable
                 data={{id: f.id, type: DragType.FILE, parentId: f.folderId}}
                 key={f.id}
                 Component="li"
               >
                 <FileRow {...fileRowProps} />
-              </Draggable>
+              </MaybeDraggable>
             );
           })}
       </>
@@ -248,20 +113,9 @@ const InnerFileBrowser = React.memo(
 );
 
 export const FileBrowser = React.memo(() => {
-  const {project, moveFile, moveFolder, setFileType} = useCodebridgeContext();
+  const {project, setFileType} = useCodebridgeContext();
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
-  const dialogControl = useDialogControl();
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
-  const validationFile = useAppSelector(
-    state => state.lab.levelProperties?.validationFile
-  );
-  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-
-  const validateFileName = usePartialApply(globalValidateFileName, {
-    isStartMode,
-    validationFile,
-    projectFiles: project.files,
-  } satisfies PAFunctionArgs<typeof globalValidateFileName>);
 
   const [dragData, setDragData] = useState<DragDataType | undefined>(undefined);
   const [dropData, setDropData] = useState<DropDataType | undefined>(undefined);
@@ -280,52 +134,7 @@ export const FileBrowser = React.memo(() => {
     [setDragData, setDropData]
   );
 
-  const handleDragEnd = useMemo(
-    () => (e: DragOverEvent) => {
-      if (e?.over && e?.active) {
-        // first, if we're dragging something into the folder which currently contains it, just bow out.
-        if (e.active.data.current?.parentId === e.over.id) {
-          return;
-        }
-        if (e.active.data.current?.type === DragType.FOLDER) {
-          const validationError = validateFolderName({
-            folderName: project.folders[e.active.data.current.id].name,
-            parentId: e.over.id as string,
-            projectFolders: project.folders,
-          });
-          if (validationError) {
-            dialogControl?.showDialog({
-              type: DialogType.GenericAlert,
-              title: validationError,
-            });
-          } else {
-            moveFolder(e.active.data.current.id as string, e.over.id as string);
-          }
-        } else if (e.active.data.current?.type === DragType.FILE) {
-          const validationError = validateFileName({
-            fileName: project.files[e.active.data.current.id].name,
-            folderId: e.over.id as string,
-          });
-          if (validationError) {
-            dialogControl?.showDialog({
-              type: DialogType.GenericAlert,
-              title: validationError,
-            });
-          } else {
-            moveFile(e.active.data.current.id as string, e.over.id as string);
-          }
-        }
-      }
-    },
-    [
-      dialogControl,
-      moveFile,
-      moveFolder,
-      project.files,
-      project.folders,
-      validateFileName,
-    ]
-  );
+  const handleDragEnd = useHandleDragEnd();
 
   const sensors = useSensors(
     useSensor(PointerSensor, {

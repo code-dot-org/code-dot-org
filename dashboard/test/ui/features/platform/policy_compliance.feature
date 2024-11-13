@@ -162,7 +162,7 @@ Feature: Policy Compliance and Parental Permission
     Given I create a teacher who has never signed in named "Amstrad Teacher" after CAP start and go home
 
     # Find the unlocked buttons to connect an account
-    Given I am on "http://studio.code.org/users/edit?cpa-partial-lockout=1"
+    Given I am on "http://studio.code.org/users/edit"
     Then I wait to see "#manage-linked-accounts"
     Then I wait until "form[action=\'/users/auth/google_oauth2?action=connect\'] button" is not disabled
 
@@ -172,7 +172,7 @@ Feature: Policy Compliance and Parental Permission
     Given I create a young student in Colorado who has never signed in named "Coco Student" before CAP start and go home
 
     # Find the locked buttons to connect an account
-    Given I am on "http://studio.code.org/users/edit?cpa-partial-lockout=1"
+    Given I am on "http://studio.code.org/users/edit"
     Then I wait to see "#manage-linked-accounts"
     Then I wait until "form[action=\'/users/auth/google_oauth2?action=connect\'] button" is disabled
 
@@ -190,7 +190,7 @@ Feature: Policy Compliance and Parental Permission
     Then My parent permits my parental request
 
     # Find the now unlocked buttons to connect an account
-    Given I am on "http://studio.code.org/users/edit?cpa-partial-lockout=1"
+    Given I am on "http://studio.code.org/users/edit"
     Then I wait to see "#manage-linked-accounts"
     Then I wait until "form[action=\'/users/auth/google_oauth2?action=connect\'] button" is not disabled
 
@@ -200,7 +200,7 @@ Feature: Policy Compliance and Parental Permission
     Given I create an authorized teacher-associated under-13 sponsored student named "Tandy" after CAP start
 
     # Find the disabled region to provide a personal login
-    Given I am on "http://studio.code.org/users/edit?cpa-partial-lockout=1"
+    Given I am on "http://studio.code.org/users/edit"
     Then I wait to see "#edit_user_create_personal_account"
     Then element "#edit_user_create_personal_account input[type=\'password\']" is disabled
 
@@ -214,7 +214,7 @@ Feature: Policy Compliance and Parental Permission
 
     # Right now, we have to assert that the experiment is active
     # This should be unnecessary in the future, but will not hurt
-    Given I am on "http://studio.code.org/users/edit?cpa-partial-lockout=1"
+    Given I am on "http://studio.code.org/users/edit"
 
     # And now that they are in a non-policy state, they can see the enabled fields
     Then I wait to see "#edit_user_create_personal_account"
@@ -226,7 +226,7 @@ Feature: Policy Compliance and Parental Permission
     Given I create an authorized teacher-associated under-13 sponsored student named "Tandy" after CAP start
 
     # Find the disabled region to provide a personal login
-    Given I am on "http://studio.code.org/users/edit?cpa-partial-lockout=1"
+    Given I am on "http://studio.code.org/users/edit"
     Then I wait to see "#edit_user_create_personal_account"
     Then element "#edit_user_create_personal_account input[type=\'password\']" is disabled
 
@@ -240,7 +240,7 @@ Feature: Policy Compliance and Parental Permission
 
     # Right now, we have to assert that the experiment is active
     # This should be unnecessary in the future, but will not hurt
-    Given I am on "http://studio.code.org/users/edit?cpa-partial-lockout=1"
+    Given I am on "http://studio.code.org/users/edit"
 
     # And now that they are in a non-policy state, they can see the enabled fields
     Then I wait to see "#edit_user_create_personal_account"
@@ -255,7 +255,7 @@ Feature: Policy Compliance and Parental Permission
     Given I create an authorized teacher-associated under-13 sponsored student in Colorado named "Tandy" after CAP start
 
     # Find the disabled region to provide a personal login
-    Given I am on "http://studio.code.org/users/edit?cpa-partial-lockout=1"
+    Given I am on "http://studio.code.org/users/edit"
 
     # Navigate the lockout process via the Account Settings page
     Then I wait to see "#lockout-linked-accounts-form"
@@ -271,7 +271,7 @@ Feature: Policy Compliance and Parental Permission
     Then My parent permits my parental request
 
     # Find the now unlocked region to create a personal login
-    Given I am on "http://studio.code.org/users/edit?cpa-partial-lockout=1"
+    Given I am on "http://studio.code.org/users/edit"
     Then I wait to see "#edit_user_create_personal_account"
     And element "#edit_user_create_personal_account input[type=\'password\']" is enabled
 

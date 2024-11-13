@@ -23,6 +23,25 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
     assert Policies::Lti.lti?(@user)
   end
 
+  test 'reassigns an lti user identity from a roster-synced user to an existing user' do
+    roster_synced_teacher = create :teacher
+    ao = create :lti_authentication_option
+    fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}
+    auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
+    ao.update(authentication_id: auth_id)
+    roster_synced_teacher.authentication_options = [ao]
+    Services::Lti.create_lti_user_identity(roster_synced_teacher)
+    ::PartialRegistration.persist_attributes @session, roster_synced_teacher
+
+    assert_equal 0, @user.lti_user_identities.count
+    refute Policies::Lti.lti?(@user)
+
+    Services::Lti.expects(:create_lti_user_identity).never
+    Services::Lti::AccountLinker.call(user: @user, session: @session)
+    assert_equal 1, @user.reload.lti_user_identities.count
+    assert Policies::Lti.lti?(@user)
+  end
+
   test 'sets the lti_roster_sync_enabled and lms_landing_opted_out properties on the user' do
     partial_lti_teacher = create :teacher
     ao = create :lti_authentication_option

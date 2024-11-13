@@ -54,7 +54,7 @@ class RegistrationsController < Devise::RegistrationsController
   def begin_sign_up
     @user = User.new(begin_sign_up_params)
     @user.validate_for_finish_sign_up
-    SignUpTracking.log_begin_sign_up(@user, session)
+    SignUpTracking.log_begin_sign_up(@user, request)
 
     if @user.errors.blank?
       PartialRegistration.persist_attributes(session, @user)
@@ -127,7 +127,7 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def cancel
     provider = PartialRegistration.get_provider(session) || 'email'
-    SignUpTracking.log_cancel_finish_sign_up(session, provider)
+    SignUpTracking.log_cancel_finish_sign_up(request, provider)
     SignUpTracking.end_sign_up_tracking(session)
 
     PartialRegistration.delete(session)
@@ -228,7 +228,7 @@ class RegistrationsController < Devise::RegistrationsController
       )
     end
 
-    SignUpTracking.log_sign_up_result resource, session
+    SignUpTracking.log_sign_up_result resource, request
   end
 
   #
@@ -457,7 +457,6 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def edit
     @permission_status = current_user.cap_status
-    cpa_partial_lockout_enabled = !!experiment_value('cpa-partial-lockout', request)
 
     # Get the request location
     location = Geocoder.search(request.ip).try(:first)
@@ -470,7 +469,7 @@ class RegistrationsController < Devise::RegistrationsController
     # The student is in a 'lockout' flow if they are potentially locked out and not unlocked
     @student_in_lockout_flow = underage && !Policies::ChildAccount::ComplianceState.permission_granted?(current_user)
 
-    @personal_account_linking_enabled = Policies::ChildAccount.can_link_new_personal_account?(current_user) && !Policies::ChildAccount.partially_locked_out?(current_user) && cpa_partial_lockout_enabled
+    @personal_account_linking_enabled = Policies::ChildAccount.can_link_new_personal_account?(current_user) && !Policies::ChildAccount.partially_locked_out?(current_user)
 
     # Handle users who aren't locked out, but still need parent permission to link personal accounts.
     if underage || !Policies::ChildAccount.has_required_information?(current_user)

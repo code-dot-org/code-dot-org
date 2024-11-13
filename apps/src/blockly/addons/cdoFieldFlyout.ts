@@ -29,10 +29,11 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
   /**
    * Construct a FieldFlyout from a JSON arg object.
    *
-   * @param {Object} options A JSON object with options.
+   * @param {GoogleBlockly.FieldConfig} _options A JSON object with options.
    * @returns {CdoFieldFlyout} The new field instance.
    */
-  static fromJson(options: FieldFlyoutConfig) {
+  static fromJson(_options: GoogleBlockly.FieldConfig) {
+    const options = _options as FieldFlyoutConfig;
     return new CdoFieldFlyout(options.flyoutKey, options);
   }
 

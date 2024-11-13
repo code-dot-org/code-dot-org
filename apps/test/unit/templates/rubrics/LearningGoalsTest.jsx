@@ -430,9 +430,13 @@ describe('LearningGoals - React Testing Library', () => {
       render(<LearningGoals {...feedbackProps} />);
 
       // neither thumb is selected
+      // eslint-disable-next-line no-restricted-properties
       screen.getByTestId('thumbs-o-up');
+      // eslint-disable-next-line no-restricted-properties
       expect(screen.queryByTestId('thumbs-up')).not.toBeInTheDocument();
+      // eslint-disable-next-line no-restricted-properties
       screen.getByTestId('thumbs-o-down');
+      // eslint-disable-next-line no-restricted-properties
       expect(screen.queryByTestId('thumbs-down')).not.toBeInTheDocument();
 
       // checkboxes not visible
@@ -459,10 +463,12 @@ describe('LearningGoals - React Testing Library', () => {
         }
       });
 
+      // eslint-disable-next-line no-restricted-properties
       const thumbsUpButton = screen.getByTestId('thumbs-o-up');
       fireEvent.click(thumbsUpButton);
       await wait();
 
+      // eslint-disable-next-line no-restricted-properties
       screen.getByTestId('thumbs-up');
       expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
 
@@ -505,10 +511,12 @@ describe('LearningGoals - React Testing Library', () => {
         }
       });
 
+      // eslint-disable-next-line no-restricted-properties
       const thumbsUpButton = screen.getByTestId('thumbs-o-down');
       fireEvent.click(thumbsUpButton);
       await wait();
 
+      // eslint-disable-next-line no-restricted-properties
       screen.getByTestId('thumbs-down');
 
       const expectedBody = JSON.stringify({
@@ -553,6 +561,7 @@ describe('LearningGoals - React Testing Library', () => {
       // survey not visible
       expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
 
+      // eslint-disable-next-line no-restricted-properties
       const thumbsUpButton = screen.getByTestId('thumbs-o-down');
       fireEvent.click(thumbsUpButton);
       await wait();
@@ -560,14 +569,15 @@ describe('LearningGoals - React Testing Library', () => {
       // survey is visible
       expect(screen.getAllByRole('checkbox')).toHaveLength(4);
 
+      // eslint-disable-next-line no-restricted-properties
       expect(screen.queryByTestId('ai-assessment-feedback-textarea')).not
         .toBeInTheDocument;
 
       const checkbox = screen.getByRole('checkbox', {name: 'Other'});
       fireEvent.click(checkbox);
 
+      // eslint-disable-next-line no-restricted-properties
       screen.getByTestId('ai-assessment-feedback-textarea');
-
       fetchStub.mockRestore();
     });
 
@@ -599,6 +609,7 @@ describe('LearningGoals - React Testing Library', () => {
       // survey not visible
       expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
 
+      // eslint-disable-next-line no-restricted-properties
       const thumbsUpButton = screen.getByTestId('thumbs-o-down');
       fireEvent.click(thumbsUpButton);
       await wait();
@@ -619,6 +630,7 @@ describe('LearningGoals - React Testing Library', () => {
       fireEvent.click(submitButton);
       await wait();
 
+      // eslint-disable-next-line no-restricted-properties
       expect(screen.queryByTestId('ai-assessment-feedback-textarea')).not
         .toBeInTheDocument;
 

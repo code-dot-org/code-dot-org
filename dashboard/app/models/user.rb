@@ -863,14 +863,14 @@ class User < ApplicationRecord
   end
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
-  def self.from_omniauth(auth, params, session = nil)
+  def self.from_omniauth(auth, params, request = nil)
     omniauth_user = find_by_credential(type: auth.provider, id: auth.uid)
 
     unless omniauth_user
       omniauth_user = create
       initialize_new_oauth_user(omniauth_user, auth, params)
       omniauth_user.save
-      SignUpTracking.log_sign_up_result(omniauth_user, session)
+      SignUpTracking.log_sign_up_result(omniauth_user, request)
     end
 
     omniauth_user.update_oauth_credential_tokens(auth)
@@ -1402,7 +1402,7 @@ class User < ApplicationRecord
         curr_user_level = user_levels_by_level[level.id]
 
         # If level.id is not present in user_levels_by_level, check if level has contained_levels with present ids
-        if !curr_user_level && !level.contained_levels.empty?
+        if !curr_user_level && !level.contained_levels.empty? && level.type != "BubbleChoice"
           level.contained_levels.each do |contained_level|
             user_levels.push(user_levels_by_level[contained_level.id])
           end

@@ -1,3 +1,4 @@
+require 'cdo/global_edition'
 require 'cdo/statsig'
 
 # This is a wrapper for the Statsig SDK.
@@ -11,9 +12,9 @@ require 'cdo/statsig'
 # }
 #
 # Metrics::Events.log_event(event_name: 'some_event_name')
-# Metrics::Events.log_event(user: current_user, event_name: 'some_event_name', metadata: metadata)
-# Metrics::Events.log_event(user: current_user, event_name: 'some_event_name', event_value: 'some_event_value', metadata: metadata)
-# Metrics::Events.log_event(user: current_user, event_name: 'some_event_name', get_enabled_experiments: true)
+# Metrics::Events.log_event(user: current_user, event_name: 'some_event_name', metadata: metadata, request: request)
+# Metrics::Events.log_event(user: current_user, event_name: 'some_event_name', event_value: 'some_event_value', metadata: metadata, request: request)
+# Metrics::Events.log_event(user: current_user, event_name: 'some_event_name', get_enabled_experiments: true, request: request)
 
 module Metrics
   module Events
@@ -26,11 +27,12 @@ module Metrics
       # @event_value - the value of the event (optional)
       # @metadata - a metadata hash with relevant data (optional)
       # @get_enabled_experiments - include list of experiements the user is enrolled in (optional)
-      def log_event(user: nil, event_name:, event_value: nil, metadata: {}, get_enabled_experiments: false, session: nil)
+      # @request - the request hash (optional)
+      def log_event(user: nil, event_name:, event_value: nil, metadata: {}, get_enabled_experiments: false, request: nil)
         event_value = event_name if event_value.nil?
         enabled_experiments = get_enabled_experiments && user.present? ? user.get_active_experiment_names : nil
         managed_test_environment = CDO.running_web_application? && CDO.test_system?
-        statsig_stable_id = session&.dig(:statsig_stable_id)
+        statsig_stable_id = request&.cookies&.[]('statsig_stable_id')
 
         if CDO.rack_env?(:development)
           log_event_to_stdout(user: user, event_name: event_name, event_value: event_value, metadata: metadata, enabled_experiments: enabled_experiments, statsig_stable_id: statsig_stable_id)
@@ -64,32 +66,33 @@ module Metrics
 
       # Builds a StatsigUser object from a user entity
       private def build_statsig_user(user:, enabled_experiments:, statsig_stable_id:)
-        custom_ids = {stableID: statsig_stable_id}
+        user_params = {
+          user_id: '',
+          custom: {
+            geRegion: Cdo::GlobalEdition.current_region,
+          },
+          custom_ids: {
+            stableID: statsig_stable_id,
+          },
+        }
 
         if user.present?
-          custom_ids.merge!(
-            {
-              user_type: user.user_type,
-              enabled_experiments: enabled_experiments,
-            }.compact
-          )
-          StatsigUser.new({'userID' => user.id.to_s, 'custom_ids' => custom_ids})
-        else
-          StatsigUser.new({'userID' => '', 'custom_ids' => custom_ids})
+          user_params[:user_id] = user.id.to_s
+          user_params[:custom_ids][:user_type] = user.user_type if user.user_type
+          user_params[:custom_ids][:enabled_experiments] = enabled_experiments if enabled_experiments
         end
+
+        StatsigUser.new(user_params)
       end
 
       # Logs an event to stdout, useful for development and debugging
       private def log_event_to_stdout(user:, event_name:, event_value:, metadata:, enabled_experiments:, statsig_stable_id:)
-        user_id = user.present? ? user.id : ''
-        user_type = user.present? ? user.user_type : ''
         event_details = {
-          user_id: user_id,
-          custom_ids: {
-            user_type: user_type,
+          **build_statsig_user(
+            user: user,
             enabled_experiments: enabled_experiments,
-            stableID: statsig_stable_id,
-          }.compact,
+            statsig_stable_id: statsig_stable_id,
+          ).serialize(true),
           event_name: event_name,
           event_value: event_value,
           metadata: metadata,

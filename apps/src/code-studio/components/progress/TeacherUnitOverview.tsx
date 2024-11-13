@@ -6,6 +6,8 @@ import plcHeaderReducer, {
   setPlcHeader,
 } from '@cdo/apps/code-studio/plc/plcHeaderRedux';
 import progress from '@cdo/apps/code-studio/progress';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {registerReducers} from '@cdo/apps/redux';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
@@ -18,10 +20,13 @@ import {
   pageTypes,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import {
+  TEACHER_NAVIGATION_PATHS,
+  LABELED_TEACHER_NAVIGATION_PATHS,
+} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import {PeerReviewLessonInfo} from '@cdo/apps/types/progressTypes';
-import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import experiments from '@cdo/apps/util/experiments';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   AppDispatch,
   useAppDispatch,
@@ -179,7 +184,7 @@ interface UnitData {
   calendarLessons: CalendarLesson[];
 }
 
-interface UnitSummaryResponse {
+export interface UnitSummaryResponse {
   unitData: UnitData;
   plcBreadcrumb: {
     unit_name: string;
@@ -187,9 +192,7 @@ interface UnitSummaryResponse {
   };
 }
 
-interface TeacherUnitOverviewProps {
-  // Define any props you need here
-}
+interface TeacherUnitOverviewProps {}
 
 export const initializeRedux = (
   unitSummaryResponse: UnitSummaryResponse,
@@ -232,6 +235,9 @@ export const initializeRedux = (
     setCalendarData({
       showCalendar: !!unitData.showCalendar,
       calendarLessons: unitData.calendarLessons,
+      versionYear: unitData.version_year
+        ? parseInt(unitData.version_year)
+        : null,
     })
   );
 
@@ -253,15 +259,15 @@ export const initializeRedux = (
   // This query param is immediately removed so that it is not included in the links
   // rendered on this page
   // updateQueryParam('completedLessonNumber', undefined);
-  if (userType === 'teacher') {
-    registerReducers({googlePlatformApi});
-    dispatch(loadGooglePlatformApi()).catch(e => console.warn(e));
-  }
+
+  registerReducers({googlePlatformApi});
+  dispatch(loadGooglePlatformApi()).catch(e => console.warn(e));
 };
 
-const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = props => {
+const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
   const [unitSummaryResponse, setUnitSummaryResponse] =
     useState<UnitSummaryResponse | null>(null);
+  const [unitLoaded, setUnitLoaded] = useState<string | null>(null);
 
   const selectedSection = useAppSelector(selectedSectionSelector);
 
@@ -277,34 +283,67 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = props => {
 
   React.useEffect(() => {
     if (!unitName && selectedSection?.unitName) {
-      navigate(selectedSection.unitName, {replace: true});
+      navigate(
+        generatePath(
+          LABELED_TEACHER_NAVIGATION_PATHS.unitOverview.absoluteUrl,
+          {unitName: selectedSection.unitName, sectionId: selectedSection.id}
+        ),
+        {replace: true}
+      );
+      return;
     }
-  });
+  }, [unitName, selectedSection, navigate]);
 
   React.useEffect(() => {
     if (!unitName || !userType || !userId) {
       return;
     }
-    setUnitSummaryResponse(null);
 
-    getAuthenticityToken()
-      .then(token =>
-        fetch(`/dashboardapi/unit_summary/${unitName}`, {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-CSRF-Token': token,
-          },
-        })
-      )
-      .then(response => response.json())
+    if (unitLoaded === unitName) {
+      return;
+    }
+
+    setUnitSummaryResponse(null);
+    setUnitLoaded(unitName);
+
+    HttpClient.fetchJson<UnitSummaryResponse>(
+      `/dashboardapi/unit_summary/${unitName}`
+    )
+      .then(response => response?.value)
       .then(responseJson => {
         initializeRedux(responseJson, dispatch, userType, userId);
         setUnitSummaryResponse(responseJson);
-      });
-  }, [unitName, userType, userId, dispatch]);
 
-  if (!unitSummaryResponse || !selectedSection) {
+        analyticsReporter.sendEvent(
+          EVENTS.TEACHER_NAV_UNIT_OVERVIEW_PAGE_VIEWED,
+          {
+            unitName: unitName,
+          }
+        );
+      })
+      .catch(error => {
+        console.error('Error loading unit overview', error);
+
+        analyticsReporter.sendEvent(EVENTS.TEACHER_NAV_UNIT_OVERVIEW_FAILED, {
+          unitName,
+        });
+      });
+  }, [
+    unitName,
+    userType,
+    userId,
+    dispatch,
+    navigate,
+    selectedSection,
+    unitLoaded,
+    setUnitLoaded,
+  ]);
+
+  if (
+    !unitSummaryResponse ||
+    !unitSummaryResponse.unitData ||
+    unitSummaryResponse.unitData.name !== unitName
+  ) {
     return <Spinner size={'large'} />;
   }
 
@@ -350,6 +389,7 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = props => {
       userType={userType}
       assignedSectionId={selectedSection.id}
       showCalendar={unitSummaryResponse.unitData.showCalendar}
+      versionYear={unitSummaryResponse.unitData.version_year}
       weeklyInstructionalMinutes={
         unitSummaryResponse.unitData.weeklyInstructionalMinutes
       }

@@ -14,11 +14,12 @@ import {
 } from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {reload} from '@cdo/apps/utils';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {reportingDataShape} from './rubricShapes';
+import {selectStudentProgressStatusMap} from './teacherRubricRedux';
 
 import style from './rubrics.module.scss';
 
@@ -31,13 +32,13 @@ function StudentSelector({
   reloadOnChange,
   reportingData,
   sectionId,
-  aiEvalStatusMap,
 
   //from redux
   students,
   selectUser,
   levelsWithProgress,
   hasTeacherFeedbackMap,
+  aiEvalStatusMap,
 }) {
   const handleSelectStudentChange = event => {
     const newUserId = event.value;
@@ -57,9 +58,17 @@ function StudentSelector({
     }
   };
 
+  const studentProgressStatusMap = useAppSelector(
+    selectStudentProgressStatusMap
+  );
+
   if (students.length === 0) {
     return null;
   }
+
+  const getStudentProgressStatusForUser = userId => {
+    return studentProgressStatusMap[userId];
+  };
 
   return (
     <Select
@@ -102,9 +111,7 @@ function StudentSelector({
                   <StudentProgressStatus
                     aiEvalStatus={aiEvalStatusMap[student.id]}
                     hasTeacherFeedback={hasTeacherFeedbackMap[student.id]}
-                    level={levelsWithProgress.find(
-                      userLevel => student.id === userLevel.userId
-                    )}
+                    status={getStudentProgressStatusForUser(student.id)}
                   />
                 )}
               </div>
@@ -143,6 +150,7 @@ export default connect(
     students: state.teacherSections.selectedStudents,
     levelsWithProgress: state.teacherPanel.levelsWithProgress,
     hasTeacherFeedbackMap: state.teacherRubric.hasTeacherFeedbackMap,
+    aiEvalStatusMap: state.teacherRubric.aiEvalStatusMap,
   }),
   dispatch => ({
     selectUser(userId) {
@@ -167,41 +175,7 @@ const STATUS_BUBBLE_TEXT = {
   EVALUATED: i18n.evaluated(),
 };
 
-const computeLevelStatus = level => {
-  if (!level || level.status === LevelStatus.not_tried) {
-    return 'NOT_STARTED';
-  } else if (
-    level.status === LevelStatus.attempted ||
-    level.status === LevelStatus.passed
-  ) {
-    return 'IN_PROGRESS';
-  } else if (
-    level.status === LevelStatus.submitted ||
-    level.status === LevelStatus.perfect ||
-    level.status === LevelStatus.completed_assessment ||
-    level.status === LevelStatus.free_play_complete
-  ) {
-    return 'SUBMITTED';
-  } else {
-    return null;
-  }
-};
-
-function computeBubbleStatus(level, aiEvalStatus, hasTeacherFeedback) {
-  if (hasTeacherFeedback) {
-    return 'EVALUATED';
-  }
-  if (aiEvalStatus === 'READY_TO_REVIEW') {
-    return aiEvalStatus;
-  }
-  if (computeLevelStatus(level) === 'SUBMITTED') {
-    return 'SUBMITTED';
-  }
-  return aiEvalStatus;
-}
-
-function StudentProgressStatus({level, aiEvalStatus, hasTeacherFeedback}) {
-  const status = computeBubbleStatus(level, aiEvalStatus, hasTeacherFeedback);
+function StudentProgressStatus({status}) {
   const bubbleColor = STATUS_BUBBLE_COLOR[status];
   const bubbleText = STATUS_BUBBLE_TEXT[status];
 
@@ -216,7 +190,5 @@ function StudentProgressStatus({level, aiEvalStatus, hasTeacherFeedback}) {
 }
 
 StudentProgressStatus.propTypes = {
-  level: levelWithProgress,
-  aiEvalStatus: PropTypes.string,
-  hasTeacherFeedback: PropTypes.bool,
+  status: PropTypes.string,
 };

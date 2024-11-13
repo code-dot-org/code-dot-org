@@ -3,12 +3,18 @@
 
 .playButton {
   @include remove-button-styles;
+  display: flex;
   position: absolute;
-  top: 6px;
-  right: 6px;
-  opacity: 50%;
+  bottom: 7px;
+  inset-inline-end: 7px;
+  opacity: 35%;
   cursor: pointer;
   transition: opacity 0.2s ease;
+  color: $neutral_dark;
+
+  &Playing {
+    opacity: 100%;
+  }
 
   &:hover {
     opacity: 100%;
@@ -17,8 +23,4 @@
 
 .icon {
   font-size: 15px;
-}
-
-.playing {
-  opacity: 100%;
 }

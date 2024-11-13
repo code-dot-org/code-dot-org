@@ -58,6 +58,7 @@ describe('Design System - Popover Component', () => {
     const icon = screen.getByTitle('check-icon');
 
     expect(icon).toBeInTheDocument();
+    // eslint-disable-next-line no-restricted-properties
     expect(icon).toHaveClass('fa-solid', 'fa-check');
   });
 

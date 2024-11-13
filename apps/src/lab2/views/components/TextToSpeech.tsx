@@ -5,6 +5,7 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import DCDO from '@cdo/apps/dcdo';
 import {useBrowserTextToSpeech} from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
+import currentLocale from '@cdo/apps/util/currentLocale';
 
 import moduleStyles from './TextToSpeech.module.scss';
 
@@ -15,10 +16,13 @@ interface TextToSpeechProps {
 const usePause = queryParams('tts-play-pause') === 'true';
 const playIcon = (queryParams('tts-play-icon') as string) || 'volume';
 const stopIcon = (queryParams('tts-stop-icon') as string) || 'circle-stop';
-const ttsButtonEnabled = DCDO.get(
-  'browser-tts-button-enabled',
-  true
-) as boolean;
+// If the list of enabled locales is set to true, enable all locales.
+const enabledLocales = DCDO.get('browser-tts-button-enabled-locales', []) as
+  | string[]
+  | boolean;
+const ttsButtonEnabled =
+  enabledLocales === true ||
+  (Array.isArray(enabledLocales) && enabledLocales.includes(currentLocale()));
 
 /**
  * TextToSpeech play button.
@@ -73,7 +77,7 @@ const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({text}) => {
     <button
       className={classNames(
         moduleStyles.playButton,
-        isPlaying && moduleStyles.playing
+        isPlaying && moduleStyles.playButtonPlaying
       )}
       onClick={playText}
       type="button"
