@@ -234,6 +234,16 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               />
             }
           />
+          {/* /manage_students is the legacy url for /roster. Redirect to /roster so that old bookmarks continue to work */}
+          <Route
+            path={'manage_students'}
+            element={
+              <Navigate
+                to={'../' + TEACHER_NAVIGATION_PATHS.roster}
+                replace={true}
+              />
+            }
+          />
           {showAITutorTab && (
             <Route
               path={TEACHER_NAVIGATION_PATHS.aiTutorChatMessages}
@@ -249,16 +259,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
             />
           )}
         </Route>
-        {/* /manage_students is the legacy url for /roster. Redirect to /roster so that old bookmarks continue to work */}
-        <Route
-          path={'manage_students'}
-          element={
-            <Navigate
-              to={'../' + TEACHER_NAVIGATION_PATHS.roster}
-              replace={true}
-            />
-          }
-        />
       </Route>
     ),
     [
