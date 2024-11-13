@@ -6,7 +6,7 @@ class Queries::SchoolInfoTest < ActiveSupport::TestCase
   end
 
   test 'when school_info exists with an associated school' do
-    school = create(:school, name: 'Test School', school_type: 'public', id: '1', zip: '12345')
+    school = create(:school, name: 'TEST SCHOOL', school_type: 'public', id: '1', zip: '12345')
     school_info = create(:school_info, school: school)
     user_school_info = create(:user_school_info, user: @user, school_info: school_info)
 
@@ -15,6 +15,7 @@ class Queries::SchoolInfoTest < ActiveSupport::TestCase
     result = Queries::SchoolInfo.current_school(@user)
 
     expected_result = {
+      # nces school name converted from uppercase to titlecase
       school_name: 'Test School',
       school_type: 'public',
       school_id: '1',

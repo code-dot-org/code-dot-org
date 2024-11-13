@@ -10,6 +10,7 @@
   opacity: 35%;
   cursor: pointer;
   transition: opacity 0.2s ease;
+  color: $neutral_dark;
 
   &Playing {
     opacity: 100%;

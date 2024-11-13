@@ -1,0 +1,60 @@
+name 'sp-pl-DS_RSAIR-criteria'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Effective Data Questions
+
+#### In lesson 6, students will complete the **Three Reads** strategy again, but this time focus on improving their questions.
+
+## RSAIR Criteria 
+<br>
+<table border="0" style="width: 100%;">
+    <tr>
+        <td style="width: 20%;"><img src="https://images.code.org/0a3eb5a1b4c4cf6d280431c9595173ab-image-1731084728105.png" alt="check mark icon" width="90%"></td>
+        <td style="width: 80%;"><p style = "font-size:18pt" ><b>Relevant</b> </p><p style= "font-size:14pt">
+        Make sure your question <b>matches what the data is about</b> and <b>addresses something useful.</b>
+        </p></td>
+    </tr>
+    <tr>
+        <td style="width: 20%;"><img src="https://images.code.org/cdf51217adeabfbdd5aadc0f3393ac9a-image-1731084397828.png" alt="target icon" width="90%"></td>
+        <td style="width: 80%;"><p style = "font-size:18pt" ><b>Specific</b> </p><p style= "font-size:14pt">
+        Your questions should be <b>clear and to the point</b> pinpointing exaclty what you want to find out.
+        </p></td>
+    </tr>
+        <tr>
+        <td style="width: 20%;"><img src="https://images.code.org/32a1961b596263b05b84d2079f843bfa-image-1731085078361.png" alt="clapperboard icon" width="90%"></td>
+        <td style="width: 80%;"><p style = "font-size:18pt" ><b>Actionalbe</b> </p><p style= "font-size:14pt">
+        The answer to your question should <b>lead to actions or decisions</b> that can make things better or provide new insights. 
+        </p></td>
+    </tr>
+            <tr>
+        <td style="width: 20%;"><img src="https://images.code.org/2f44723c96786dbbbbbc8ce0ef81841e-image-1731092742839.png" alt="magnifying glass icon" width="90%"></td>
+        <td style="width: 80%;"><p style = "font-size:18pt" ><b>Investigative</b> </p><p style= "font-size:14pt">
+        Your question should be <b>framed in a way that lets you use tools, graphs, or calculations</b> to figure out the answer. 
+        </p></td>
+    </tr>
+                <tr>
+        <td style="width: 20%;"><img src="https://images.code.org/478f278a7577ee301ce75920dfb8c5e3-image-1731093078697.png" alt="shaking hands icon" width="90%"></td>
+        <td style="width: 80%;"><p style = "font-size:18pt" ><b>Respectful</b> </p><p style= "font-size:14pt">
+        Your question should <b>respect people's privacy and feelings</b>. You should avoid asking anything that could make someone uncomfortable.
+        </p></td>
+    </tr>
+
+</table>
+
+<div style="clear:both;"></div>
+<br>
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> Use the criteria to guide your students' questions about a dataset, ensuring they are clear, directly connected to the available data, answerable, and respectful. This approach will help them craft strong data questions that lead to meaningful and responsible insights.
+</p>
+</div>
+
+
+
+## Let's continue to storytelling with data!
+
+
+MARKDOWN

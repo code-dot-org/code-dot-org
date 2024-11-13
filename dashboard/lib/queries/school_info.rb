@@ -13,7 +13,7 @@ class Queries::SchoolInfo
     if existing_school_info.school
       # Return data directly from the associated school if it exists
       {
-        school_name: existing_school_info.school.name,
+        school_name: existing_school_info.school.name.titleize,
         school_type: existing_school_info.school.school_type,
         school_id: existing_school_info.school.id,
         school_zip: existing_school_info.school.zip,

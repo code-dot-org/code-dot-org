@@ -62,10 +62,12 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
 
   const detectedSchoolName = useMemo(
     () =>
-      initialState.schoolName ||
-      sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY) ||
-      '',
-    [initialState.schoolName]
+      initialState.schoolId
+        ? ''
+        : initialState.schoolName ||
+          sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY) ||
+          '',
+    [initialState.schoolName, initialState.schoolId]
   );
 
   const [state, setState] = useState<{
@@ -83,23 +85,60 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
 
   // State hooks
   const setCountry = (value: string) => {
+    analyticsReporter.sendEvent(
+      EVENTS.COUNTRY_SELECTED,
+      {country: value},
+      PLATFORMS.BOTH
+    );
     setState(prevState => ({
       ...prevState,
       country: value,
     }));
   };
+
   const setSchoolId = (value: string) => {
+    if (value === NonSchoolOptions.NO_SCHOOL_SETTING) {
+      analyticsReporter.sendEvent(
+        EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED,
+        {},
+        PLATFORMS.BOTH
+      );
+    } else if (value === NonSchoolOptions.CLICK_TO_ADD) {
+      analyticsReporter.sendEvent(
+        EVENTS.ADD_MANUALLY_CLICKED,
+        {},
+        PLATFORMS.BOTH
+      );
+    } else {
+      analyticsReporter.sendEvent(
+        EVENTS.SCHOOL_SELECTED_FROM_LIST,
+        {
+          'nces Id': value,
+        },
+        PLATFORMS.BOTH
+      );
+    }
     setState(prevState => ({
       ...prevState,
       schoolId: value,
     }));
   };
+
   const setSchoolZip = (value: string) => {
+    if (ZIP_REGEX.test(value)) {
+      analyticsReporter.sendEvent(
+        EVENTS.ZIP_CODE_ENTERED,
+        {zip: value},
+        PLATFORMS.BOTH
+      );
+    }
+
     setState(prevState => ({
       ...prevState,
       schoolZip: value,
     }));
   };
+
   const setSchoolName = (value: string) => {
     setState(prevState => ({
       ...prevState,
@@ -127,16 +166,9 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     []
   );
 
-  const handleSessionStorage = (
-    key: string,
-    value: string,
-    callback?: () => void
-  ) => {
+  const handleSessionStorage = (key: string, value: string) => {
     if (sessionStorage.getItem(key) !== value) {
       sessionStorage.setItem(key, value);
-      if (callback) {
-        callback();
-      }
     }
   };
 
@@ -144,13 +176,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
 
   // Handle country changes
   useEffect(() => {
-    handleSessionStorage(SCHOOL_COUNTRY_SESSION_KEY, country, () => {
-      analyticsReporter.sendEvent(
-        EVENTS.COUNTRY_SELECTED,
-        {country},
-        PLATFORMS.BOTH
-      );
-    });
+    handleSessionStorage(SCHOOL_COUNTRY_SESSION_KEY, country);
   }, [country]);
 
   // Handle schoolZip changes
@@ -161,13 +187,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
       return;
     }
 
-    handleSessionStorage(SCHOOL_ZIP_SESSION_KEY, schoolZip, () => {
-      analyticsReporter.sendEvent(
-        EVENTS.ZIP_CODE_ENTERED,
-        {zip: schoolZip},
-        PLATFORMS.BOTH
-      );
-    });
+    handleSessionStorage(SCHOOL_ZIP_SESSION_KEY, schoolZip);
 
     fetchSchools(schoolZip, data => {
       if (!mounted.current) return;
@@ -177,48 +197,13 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
         .sort((a, b) => a.text.localeCompare(b.text));
 
       setSchoolsList(schools);
-
-      // this will auto select the school from the fetched list of schools if the user is updating their school info
-      if (schools.some(school => school.value === detectedSchoolId)) {
-        setSchoolId(detectedSchoolId);
-      }
     });
-  }, [schoolZip, detectedSchoolId, fetchSchools]);
+  }, [schoolZip, fetchSchools]);
 
   // Handle schoolId changes
   useEffect(() => {
-    handleSessionStorage(SCHOOL_ID_SESSION_KEY, schoolId, () => {
-      if (schoolId === NonSchoolOptions.NO_SCHOOL_SETTING) {
-        setSchoolName('');
-        analyticsReporter.sendEvent(
-          EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED,
-          {},
-          PLATFORMS.BOTH
-        );
-      } else if (schoolId === NonSchoolOptions.CLICK_TO_ADD) {
-        setSchoolName('');
-        analyticsReporter.sendEvent(
-          EVENTS.ADD_MANUALLY_CLICKED,
-          {},
-          PLATFORMS.BOTH
-        );
-      } else {
-        const name = schoolsList.find(
-          school => school.value === schoolId
-        )?.text;
-        if (name) {
-          setSchoolName(name);
-        }
-        analyticsReporter.sendEvent(
-          EVENTS.SCHOOL_SELECTED_FROM_LIST,
-          {
-            'nces Id': schoolId,
-          },
-          PLATFORMS.BOTH
-        );
-      }
-    });
-  }, [schoolId, schoolsList]);
+    handleSessionStorage(SCHOOL_ID_SESSION_KEY, schoolId);
+  }, [schoolId]);
 
   // Handle schoolName changes
   useEffect(() => {

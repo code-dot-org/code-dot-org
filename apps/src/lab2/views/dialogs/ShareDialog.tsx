@@ -233,7 +233,6 @@ const ShareDialog: React.FunctionComponent<{
                   type="primary"
                   color="white"
                   size="m"
-                  className={moduleStyles.doneButton}
                 />
               </div>
             ) : (
@@ -244,7 +243,6 @@ const ShareDialog: React.FunctionComponent<{
                 color="white"
                 size="m"
                 onClick={handleClose}
-                className={moduleStyles.doneButton}
               />
             )}
           </div>

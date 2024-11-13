@@ -388,6 +388,31 @@ describe('LessonMaterialsContainer', () => {
       );
     });
 
+    it('shows no student resources if no student resources are provided', async () => {
+      render(<LessonMaterialsContainer showNoCurriculumAssigned={false} />);
+
+      // check for unit resources dropdown
+      screen.getByRole('button', {name: 'View unit options dropdown'});
+      screen.getByText(
+        i18n.downloadUnitXLessonPlans({unitNumber: mockLessonData.unitNumber})
+      );
+      screen.getByText(
+        i18n.downloadUnitXHandouts({unitNumber: mockLessonData.unitNumber})
+      );
+
+      // Check for lesson dropdowns
+      const lessonDropdown = screen.getByRole('combobox');
+      screen.getByRole('option', {name: 'Lesson 1 — First lesson'});
+      screen.getByRole('option', {name: 'Lesson 2 — Second lesson'});
+
+      fireEvent.change(lessonDropdown, {
+        target: {value: '2'},
+      });
+
+      screen.getByText('Lesson Plan: Second lesson');
+      screen.getByText(i18n.noStudentResources());
+    });
+
     it('notifies users if no curriculum is assigned.', async () => {
       await act(async () => {
         renderDefault(true);
