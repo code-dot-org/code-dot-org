@@ -276,8 +276,7 @@ class UnconnectedMusicView extends React.Component {
           this.props.isReadOnlyWorkspace,
           toolboxData,
           this.props.isRtl,
-          this.props.blockMode,
-          levelData?.addFunctionCallsToToolbox
+          this.props.blockMode
         );
 
     this.props.setShowInstructions(
