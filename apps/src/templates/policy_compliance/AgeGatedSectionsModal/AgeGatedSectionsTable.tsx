@@ -1,16 +1,19 @@
 import {orderBy} from 'lodash';
 import React from 'react';
 import * as Table from 'reactabular-table';
+// @ts-expect-error sortabular doesn't define it's types.
 import * as sort from 'sortabular';
 
 import Link from '@cdo/apps/componentLibrary/link';
 import Typography from '@cdo/apps/componentLibrary/typography';
+import {
+  sortableOptions,
+  tableLayoutStyles,
+} from '@cdo/apps/templates/tables/tableConstants';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
+import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
-
-import {sortableOptions, tableLayoutStyles} from '../../tables/tableConstants';
-import {Section} from '../../teacherDashboard/types/teacherSectionTypes';
 
 interface RowData {
   section: Section;
@@ -34,7 +37,7 @@ export const AgeGatedSectionsTable: React.FC<Props> = ({ageGatedSections}) => {
   const [sortingColumns, setSortingColumns] = React.useState(
     initialSortingColumns
   );
-  const onSort = selectedColumn => {
+  const onSort = (selectedColumn: number) => {
     setSortingColumns(
       sort.byColumn({
         sortingColumns: sortingColumns,

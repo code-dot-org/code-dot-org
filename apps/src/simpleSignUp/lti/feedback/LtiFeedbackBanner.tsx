@@ -6,6 +6,7 @@ import {
   fetchLtiFeedback,
   createLtiFeedback,
 } from '@cdo/apps/redux/lti/ltiFeedbackReducer';
+import {RootState} from '@cdo/apps/types/redux';
 import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
 import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -23,7 +24,7 @@ import FeedbackBanner, {
  * @component
  */
 const LtiFeedbackBanner: React.FC = () => {
-  const currentUser = useSelector(state => state.currentUser);
+  const currentUser = useSelector((state: RootState) => state.currentUser);
   const key = useMemo(
     () => (currentUser ? `lti-fb-${currentUser.uuid}` : ''),
     [currentUser]
