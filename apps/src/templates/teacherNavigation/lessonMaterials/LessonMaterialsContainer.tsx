@@ -96,14 +96,6 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   }, [loadedData]);
   const isLegacyScript = useMemo(() => versionYear < 2021, [versionYear]);
 
-  // const [isLegacyScript, setIsLegacyScript] = useState<boolean>(
-  //   versionYear < 2021
-  // );
-
-  // useEffect(() => {
-  //   setIsLegacyScript(versionYear < 2021);
-  // }, [versionYear]);
-
   const hasEmptyState =
     isLegacyScript || showNoCurriculumAssigned || !loadedData;
 
@@ -203,21 +195,20 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     );
   };
 
+  if (hasEmptyState) {
+    return (
+      <LessonMaterialsEmptyState
+        showNoCurriculumAssigned={showNoCurriculumAssigned}
+        isLegacyScript={isLegacyScript}
+      />
+    );
+  }
+
   return (
     <div>
-      {hasEmptyState && (
-        <LessonMaterialsEmptyState
-          showNoCurriculumAssigned={showNoCurriculumAssigned}
-          isLegacyScript={isLegacyScript}
-        />
-      )}
-      {!hasEmptyState && (
-        <div>
-          {renderHeader()}
-          {renderTeacherResources()}
-          {renderStudentResources()}
-        </div>
-      )}
+      {renderHeader()}
+      {renderTeacherResources()}
+      {renderStudentResources()}
     </div>
   );
 };

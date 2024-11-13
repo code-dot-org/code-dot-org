@@ -59,14 +59,16 @@ jest.mock('react-router-dom', () => ({
   useLoaderData: jest.fn(),
 }));
 
-const renderDefault = (showNoCurriculumAssigned = false) => {
+const renderDefault = async (showNoCurriculumAssigned = false) => {
   const store = getStore();
-  return render(
-    <Provider store={store}>
-      <LessonMaterialsContainer
-        showNoCurriculumAssigned={showNoCurriculumAssigned}
-      />
-    </Provider>
+  await act(async () =>
+    render(
+      <Provider store={store}>
+        <LessonMaterialsContainer
+          showNoCurriculumAssigned={showNoCurriculumAssigned}
+        />
+      </Provider>
+    )
   );
 };
 
@@ -159,8 +161,8 @@ describe('LessonMaterialsContainer', () => {
     jest.clearAllMocks();
   });
 
-  it('renders the component and dropdown with lessons', () => {
-    renderDefault();
+  it('renders the component and dropdown with lessons', async () => {
+    await renderDefault();
 
     // check for unit resources dropdown
     screen.getByRole('button', {name: 'View unit options dropdown'});
@@ -177,8 +179,8 @@ describe('LessonMaterialsContainer', () => {
     screen.getByRole('option', {name: 'Lesson 2 — Second lesson'});
   });
 
-  it('renders the student and teacher resources for the first lesson on render', () => {
-    render(<LessonMaterialsContainer showNoCurriculumAssigned={false} />);
+  it('renders the student and teacher resources for the first lesson on render', async () => {
+    await renderDefault();
 
     // Teacher resources, including lesson plan, unit vocab and unit standards
     screen.getByText('Teacher Resources');
@@ -199,7 +201,7 @@ describe('LessonMaterialsContainer', () => {
     screen.getByText('Video: my linked video');
   });
 
-  it('renders "Unit Standards" and "Unit Vocabulary" when hasNumberedUnits is false', () => {
+  it('renders "Unit Standards" and "Unit Vocabulary" when hasNumberedUnits is false', async () => {
     const lessonDataWithoutNumberedUnits = {
       ...mockLessonData,
       hasNumberedUnits: false,
@@ -209,7 +211,7 @@ describe('LessonMaterialsContainer', () => {
       lessonDataWithoutNumberedUnits
     );
 
-    render(<LessonMaterialsContainer showNoCurriculumAssigned={false} />);
+    await renderDefault();
 
     screen.getByText('Unit Standards');
     screen.getByText('Unit Vocabulary');
@@ -217,8 +219,75 @@ describe('LessonMaterialsContainer', () => {
     screen.getByText(i18n.downloadUnitHandouts());
   });
 
-  it('renders the resources for the new lesson when lesson is changed', () => {
-    render(<LessonMaterialsContainer showNoCurriculumAssigned={false} />);
+  it('shows no student resources if no student resources are provided', async () => {
+    await renderDefault();
+
+    // check for unit resources dropdown
+    screen.getByRole('button', {name: 'View unit options dropdown'});
+    screen.getByText(
+      i18n.downloadUnitXLessonPlans({unitNumber: mockLessonData.unitNumber})
+    );
+    screen.getByText(
+      i18n.downloadUnitXHandouts({unitNumber: mockLessonData.unitNumber})
+    );
+
+    // Check for lesson dropdowns
+    const lessonDropdown = screen.getByRole('combobox');
+    screen.getByRole('option', {name: 'Lesson 1 — First lesson'});
+    screen.getByRole('option', {name: 'Lesson 2 — Second lesson'});
+
+    fireEvent.change(lessonDropdown, {
+      target: {value: '2'},
+    });
+
+    screen.getByText('Lesson Plan: Second lesson');
+    screen.getByText(i18n.noStudentResources());
+  });
+
+  it('notifies users if no curriculum is assigned.', async () => {
+    await act(async () => {
+      renderDefault(true);
+    });
+
+    screen.getByAltText('blank screen');
+    screen.getByText(i18n.emptySectionHeadline());
+    screen.getByText(i18n.noCurriculumAssigned());
+    screen.getByText(i18n.browseCurriculum());
+  });
+
+  it('tells users to select a unit when no unit assigned', async () => {
+    const mockNoUnitData = null;
+    (useLoaderData as jest.Mock).mockReturnValue(mockNoUnitData);
+    store.dispatch(selectSection(10));
+    store.dispatch(setUnitName(null));
+
+    await renderDefault();
+
+    screen.getByAltText(i18n.almostThere());
+    screen.getByText(i18n.almostThere());
+    screen.getByText(
+      i18n.noUnitAssigned({page: 'Lesson Materials', courseName: 'CSD'})
+    );
+    screen.getByText(i18n.assignAUnit());
+  });
+
+  it('notifies users that the assigned curriculum is pre-2020', async () => {
+    const legacyData = {...mockLessonData, versionYear: 2020};
+    (useLoaderData as jest.Mock).mockReturnValue(legacyData);
+    store.dispatch(setUnitName('csd1-2020'));
+    store.dispatch(selectSection(11));
+
+    await renderDefault();
+
+    screen.getByAltText(i18n.almostThere());
+    screen.getByText(i18n.lessonMaterialsAreNotAvailable());
+    screen.getByText(
+      i18n.lessonMaterialsLegacyMessage({courseName: 'CSD1-2020'})
+    );
+  });
+
+  it('renders the resources for the new lesson when lesson is changed', async () => {
+    await renderDefault();
 
     const selectedLessonInput = screen.getAllByRole('combobox')[0];
 
@@ -270,8 +339,8 @@ describe('LessonMaterialsContainer', () => {
       fireEvent.click(actionButton);
     }
 
-    it('opens lesson plan', () => {
-      render(<LessonMaterialsContainer showNoCurriculumAssigned={false} />);
+    it('opens lesson plan', async () => {
+      await renderDefault();
       viewResource('Lesson Plan: First lesson', 'View');
       expect(windowOpenMock).toHaveBeenCalledWith(
         '/s/unit/lessons/1',
@@ -280,8 +349,8 @@ describe('LessonMaterialsContainer', () => {
       );
     });
 
-    it('downloads lesson plan pdf', () => {
-      render(<LessonMaterialsContainer showNoCurriculumAssigned={false} />);
+    it('downloads lesson plan pdf', async () => {
+      await renderDefault();
       viewResource('Lesson Plan: First lesson', 'Download (PDF)');
       expect(windowOpenMock).toHaveBeenCalledWith(
         'https://lesson-plans.code.org/lesson-plan.pdf',
@@ -289,9 +358,8 @@ describe('LessonMaterialsContainer', () => {
       );
     });
 
-    it('opens handout', () => {
-      render(<LessonMaterialsContainer showNoCurriculumAssigned={false} />);
-      // screen.debug(undefined, Infinity);
+    it('opens handout', async () => {
+      await renderDefault();
       viewResource('Handout: my link resource', 'View');
       expect(windowOpenMock).toHaveBeenCalledWith(
         'https://google.com/resource',
@@ -300,8 +368,8 @@ describe('LessonMaterialsContainer', () => {
       );
     });
 
-    it('downloads handout', () => {
-      render(<LessonMaterialsContainer showNoCurriculumAssigned={false} />);
+    it('downloads handout', async () => {
+      await renderDefault();
       viewResource('Handout: my link resource', 'Download');
       expect(windowOpenMock).toHaveBeenCalledWith(
         'https://google.com/resource.pdf',
@@ -309,8 +377,8 @@ describe('LessonMaterialsContainer', () => {
       );
     });
 
-    it('opens slides', () => {
-      render(<LessonMaterialsContainer showNoCurriculumAssigned={false} />);
+    it('opens slides', async () => {
+      await renderDefault();
       viewResource('Slides: my slides', 'View');
       expect(windowOpenMock).toHaveBeenCalledWith(
         'https://docs.google.com/presentation/d/ABC/edit',
@@ -319,8 +387,8 @@ describe('LessonMaterialsContainer', () => {
       );
     });
 
-    it('downloads slides as pdf', () => {
-      render(<LessonMaterialsContainer showNoCurriculumAssigned={false} />);
+    it('downloads slides as pdf', async () => {
+      await renderDefault();
       viewResource('Slides: my slides', 'Download (PDF)');
       expect(windowOpenMock).toHaveBeenCalledWith(
         'https://docs.google.com/presentation/d/ABC/export?format=pdf',
@@ -328,8 +396,8 @@ describe('LessonMaterialsContainer', () => {
       );
     });
 
-    it('downloads slides as microsoft office', () => {
-      render(<LessonMaterialsContainer showNoCurriculumAssigned={false} />);
+    it('downloads slides as microsoft office', async () => {
+      await renderDefault();
       viewResource('Slides: my slides', 'Download (Microsoft Office)');
       expect(windowOpenMock).toHaveBeenCalledWith(
         'https://docs.google.com/presentation/d/ABC/export?format=pptx',
@@ -337,8 +405,8 @@ describe('LessonMaterialsContainer', () => {
       );
     });
 
-    it('makes a copy of slides in google docs', () => {
-      render(<LessonMaterialsContainer showNoCurriculumAssigned={false} />);
+    it('makes a copy of slides in google docs', async () => {
+      await renderDefault();
       viewResource('Slides: my slides', 'Make a copy (Google Docs)');
       expect(windowOpenMock).toHaveBeenCalledWith(
         'https://docs.google.com/presentation/d/ABC/copy',
@@ -347,8 +415,8 @@ describe('LessonMaterialsContainer', () => {
       );
     });
 
-    it('opens unit vocabulary', () => {
-      render(<LessonMaterialsContainer showNoCurriculumAssigned={false} />);
+    it('opens unit vocabulary', async () => {
+      await renderDefault();
       viewResource('Unit 3 Vocabulary', 'View');
       expect(windowOpenMock).toHaveBeenCalledWith(
         'https://studio.code.org/vocab',
@@ -357,8 +425,8 @@ describe('LessonMaterialsContainer', () => {
       );
     });
 
-    it('opens unit standards', () => {
-      render(<LessonMaterialsContainer showNoCurriculumAssigned={false} />);
+    it('opens unit standards', async () => {
+      await renderDefault();
       viewResource('Unit 3 Standards', 'View');
       expect(windowOpenMock).toHaveBeenCalledWith(
         'https://studio.code.org/standards',
@@ -367,8 +435,8 @@ describe('LessonMaterialsContainer', () => {
       );
     });
 
-    it('opens video', () => {
-      render(<LessonMaterialsContainer showNoCurriculumAssigned={false} />);
+    it('opens video', async () => {
+      await renderDefault();
       viewResource('Video: my linked video', 'Watch');
       expect(windowOpenMock).toHaveBeenCalledWith(
         'https://youtu.be/WsXNpY3SXe8',
@@ -378,85 +446,12 @@ describe('LessonMaterialsContainer', () => {
     });
 
     it('downloads video', async () => {
-      await act(async () => {
-        renderDefault();
-      });
+      await renderDefault();
       viewResource('Video: my linked video', 'Download');
       expect(windowOpenMock).toHaveBeenCalledWith(
         'https://videos.code.org/video.mp4',
         '_self'
       );
-    });
-
-    it('shows no student resources if no student resources are provided', async () => {
-      render(<LessonMaterialsContainer showNoCurriculumAssigned={false} />);
-
-      // check for unit resources dropdown
-      screen.getByRole('button', {name: 'View unit options dropdown'});
-      screen.getByText(
-        i18n.downloadUnitXLessonPlans({unitNumber: mockLessonData.unitNumber})
-      );
-      screen.getByText(
-        i18n.downloadUnitXHandouts({unitNumber: mockLessonData.unitNumber})
-      );
-
-      // Check for lesson dropdowns
-      const lessonDropdown = screen.getByRole('combobox');
-      screen.getByRole('option', {name: 'Lesson 1 — First lesson'});
-      screen.getByRole('option', {name: 'Lesson 2 — Second lesson'});
-
-      fireEvent.change(lessonDropdown, {
-        target: {value: '2'},
-      });
-
-      screen.getByText('Lesson Plan: Second lesson');
-      screen.getByText(i18n.noStudentResources());
-    });
-
-    it('notifies users if no curriculum is assigned.', async () => {
-      await act(async () => {
-        renderDefault(true);
-      });
-
-      screen.getByAltText('blank screen');
-      screen.getByText(i18n.emptySectionHeadline());
-      screen.getByText(i18n.noCurriculumAssigned());
-      screen.getByText(i18n.browseCurriculum());
-    });
-
-    it('notifies users that the assigned curriculum is pre-2020', async () => {
-      const legacyData = {...mockLessonData, versionYear: 2020};
-      (useLoaderData as jest.Mock).mockReturnValue(legacyData);
-      store.dispatch(setUnitName('csd1-2020'));
-      store.dispatch(selectSection(11));
-
-      await act(async () => {
-        renderDefault();
-      });
-
-      screen.getByAltText(i18n.almostThere());
-      screen.getByText(i18n.lessonMaterialsAreNotAvailable());
-      screen.getByText(
-        i18n.lessonMaterialsLegacyMessage({courseName: 'CSD1-2020'})
-      );
-    });
-
-    it('tells users to select a unit when no unit assigned', async () => {
-      const mockNoUnitData = null;
-      (useLoaderData as jest.Mock).mockReturnValue(mockNoUnitData);
-      store.dispatch(selectSection(10));
-      store.dispatch(setUnitName(null));
-
-      await act(async () => {
-        renderDefault();
-      });
-
-      screen.getByAltText(i18n.almostThere());
-      screen.getByText(i18n.almostThere());
-      screen.getByText(
-        i18n.noUnitAssigned({page: 'Lesson Materials', courseName: 'CSD'})
-      );
-      screen.getByText(i18n.assignAUnit());
     });
   });
 });
