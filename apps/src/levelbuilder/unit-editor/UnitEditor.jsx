@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import {Chips} from '@cdo/apps/componentLibrary/chips';
+import Link from '@cdo/apps/componentLibrary/link/Link';
 import {
   InstructionType,
   PublishedState,
@@ -34,7 +35,6 @@ import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import MultiCheckboxSelector from '@cdo/apps/templates/MultiCheckboxSelector';
 import color from '@cdo/apps/util/color';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
-import Link from '@cdo/apps/componentLibrary/link/Link';
 
 import {lessonGroupShape} from './shapes';
 
