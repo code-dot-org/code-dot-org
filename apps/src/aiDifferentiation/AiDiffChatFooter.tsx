@@ -46,7 +46,7 @@ const AiDiffChatFooter: React.FC<AiDiffChatFooterProps> = ({
             size="s"
             type="secondary"
             iconLeft={{iconName: 'download'}}
-            onClick={() => null}
+            onClick={() => {}}
             text={commonI18n.aiDifferentiation_download_pdf()}
           />
         </PDFDownloadLink>

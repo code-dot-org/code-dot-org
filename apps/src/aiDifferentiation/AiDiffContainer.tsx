@@ -201,9 +201,11 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       onStop={onStopHandler}
     >
       <div
-        className={classnames(style.aiDiffContainer, {
-          [style.hiddenAiDiffPanel]: !open,
-        })}
+        // eslint-disable-next-line react/forbid-dom-props
+        data-testid="draggable-test-id"
+        id="draggable-id"
+        className={style.aiDiffContainer}
+        style={open ? undefined : {display: 'none'}}
       >
         <div className={classnames(style.aiDiffHeader, 'ai_diff_handle')}>
           <div className={style.aiDiffHeaderLeftSide}>

@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
 import taIcon from '@cdo/static/ai-bot-tag-TA.png';
 import aiFabIcon from '@cdo/static/ai-fab-background.png';
 
@@ -66,6 +67,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     <div id="fab-contained">
       <button
         id="ui-floatingActionButton"
+        aria-label={i18n.openOrCloseTeachingAssistant()}
         className={classes}
         onClick={handleClick}
         type="button"
