@@ -1,9 +1,11 @@
+import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import React, {useCallback} from 'react';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import {TooltipProps, WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import VersionHistoryButton from '@cdo/apps/lab2/views/components/versionHistory/VersionHistoryButton';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 
@@ -42,12 +44,15 @@ const WorkspaceHeaderButtons: React.FunctionComponent<
         type: DialogType.Skip,
         handleConfirm: () => {
           if (skipUrl) {
+            sendCodebridgeAnalyticsEvent(EVENTS.SKIP_TO_PROJECT, appName, {
+              levelPath: window.location.pathname,
+            });
             window.location.href = skipUrl;
           }
         },
       });
     }
-  }, [dialogControl, skipUrl]);
+  }, [appName, dialogControl, skipUrl]);
 
   return (
     <div className={moduleStyles.rightHeaderButtons}>
