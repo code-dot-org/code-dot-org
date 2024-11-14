@@ -34,6 +34,13 @@ export default class WorkshopEnroll extends React.Component {
     workshop_enrollment_status: PropTypes.string,
     previous_courses: PropTypes.arrayOf(PropTypes.string).isRequired,
     collect_demographics: PropTypes.bool,
+    school_info: PropTypes.shape({
+      country: PropTypes.string,
+      school_id: PropTypes.string,
+      school_name: PropTypes.string,
+      school_type: PropTypes.string,
+      school_zip: PropTypes.string,
+    }),
   };
 
   constructor(props) {
@@ -188,6 +195,7 @@ export default class WorkshopEnroll extends React.Component {
                         workshop_subject={this.props.workshop.subject}
                         previous_courses={this.props.previous_courses}
                         collect_demographics={this.props.collect_demographics}
+                        school_info={this.props.school_info}
                       />
                     </div>
                   </div>
