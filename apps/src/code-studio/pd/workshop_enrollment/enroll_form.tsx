@@ -875,12 +875,13 @@ export default function EnrollForm(props: EnrollFormProps) {
       </p>
       <Button
         id="submit"
+        isIconOnly={false}
+        text={'Register'}
         color={buttonColors.purple}
+        style={{color: 'white'}}
         onClick={handleClickRegister}
         disabled={isSubmitting}
-      >
-        Register
-      </Button>
+      />
       {Object.keys(formErrors).length > 0 && (
         <p style={{color: color.bootstrap_v3_error_text}}>
           Form errors found. Please check your responses above.
