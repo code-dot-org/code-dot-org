@@ -1,12 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-//import Select from 'react-select';
 
 import BulkLessonVisibilityToggle from '@cdo/apps/code-studio/components/progress/BulkLessonVisibilityToggle';
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
-import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
@@ -21,6 +19,8 @@ import {showV2TeacherDashboard} from '@cdo/apps/templates/teacherNavigation/Teac
 import i18n from '@cdo/locale';
 
 import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
+
+import StudentSelector from './StudentSelector';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
@@ -58,12 +58,6 @@ class UnitOverviewTopRow extends React.Component {
     unitAllowsHiddenLessons: PropTypes.bool,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
-    students: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired,
-      })
-    ).isRequired,
   };
 
   logTryNowButtonClick = unitProgress => {
@@ -93,7 +87,6 @@ class UnitOverviewTopRow extends React.Component {
       courseOfferingId,
       courseVersionId,
       isUnitWithLevels,
-      //students,
     } = this.props;
 
     // Adjust styles if locale is RTL
@@ -156,7 +149,9 @@ class UnitOverviewTopRow extends React.Component {
           <div style={styles.secondRow}>
             {!deeperLearningCourse && viewAs === ViewType.Instructor && (
               <div style={styles.sectionContainer}>
-                {!showV2TeacherDashboard() && (
+                {showV2TeacherDashboard() ? (
+                  <StudentSelector />
+                ) : (
                   <SectionAssigner
                     sections={sectionsForDropdown}
                     courseOfferingId={courseOfferingId}
@@ -249,30 +244,22 @@ const styles = {
 
 export const UnconnectedUnitOverviewTopRow = UnitOverviewTopRow;
 
-export default connect(
-  (state, ownProps) => ({
-    selectedSectionId: state.teacherSections.selectedSectionId,
-    sectionsForDropdown: sectionsForDropdown(
-      state.teacherSections,
-      ownProps.courseOfferingId,
-      ownProps.courseVersionId,
-      state.progress.scriptId
-    ),
-    deeperLearningCourse: state.progress.deeperLearningCourse,
-    hasPerLevelResults: Object.keys(state.progress.levelResults).length > 0,
-    unitCompleted: !!state.progress.unitCompleted,
-    scriptId: state.progress.scriptId,
-    scriptName: state.progress.scriptName,
-    unitTitle: state.progress.unitTitle,
-    currentCourseId: state.progress.courseId,
-    unitAllowsHiddenLessons: state.hiddenLesson.hideableLessonsAllowed || false,
-    viewAs: state.viewAs,
-    isRtl: state.isRtl,
-    students: state.teacherSections.selectedStudents,
-  }),
-  dispatch => ({
-    selectUser(userId) {
-      dispatch(queryUserProgress(userId));
-    },
-  })
-)(UnitOverviewTopRow);
+export default connect((state, ownProps) => ({
+  selectedSectionId: state.teacherSections.selectedSectionId,
+  sectionsForDropdown: sectionsForDropdown(
+    state.teacherSections,
+    ownProps.courseOfferingId,
+    ownProps.courseVersionId,
+    state.progress.scriptId
+  ),
+  deeperLearningCourse: state.progress.deeperLearningCourse,
+  hasPerLevelResults: Object.keys(state.progress.levelResults).length > 0,
+  unitCompleted: !!state.progress.unitCompleted,
+  scriptId: state.progress.scriptId,
+  scriptName: state.progress.scriptName,
+  unitTitle: state.progress.unitTitle,
+  currentCourseId: state.progress.courseId,
+  unitAllowsHiddenLessons: state.hiddenLesson.hideableLessonsAllowed || false,
+  viewAs: state.viewAs,
+  isRtl: state.isRtl,
+}))(UnitOverviewTopRow);
