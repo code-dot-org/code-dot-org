@@ -130,21 +130,18 @@ header.build = function (
     if (scriptData.show_sign_in_callout && signedIn === false) {
       // Additionally, update those urls to return user to level after
       const currentUrl = window.location.pathname;
-      const signInButton = document.querySelector('#signin_button');
-      const createAccountButton = document.querySelector(
-        '#create_account_button'
-      );
+      const buttons = [
+        document.querySelector('#signin_button'),
+        document.querySelector('#create_account_button'),
+      ];
 
-      const updateButtonUrl = button => {
+      buttons.forEach(button => {
         if (button) {
           const url = new URL(button.href);
           url.searchParams.set('user_return_to', currentUrl);
           button.href = url.toString();
         }
-      };
-
-      updateButtonUrl(signInButton);
-      updateButtonUrl(createAccountButton);
+      });
 
       ReactDOM.render(
         <SignInCalloutWrapper />,
