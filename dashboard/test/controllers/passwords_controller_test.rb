@@ -74,6 +74,15 @@ class PasswordsControllerTest < ActionController::TestCase
     assert_includes(flash[:alert], 'User does not have an email authentication option or does not exist')
   end
 
+  test "create with invalid username informs admin" do
+    sign_in create(:admin)
+    @request.host = CDO.dashboard_hostname
+
+    post :create, params: {user: {username: 'test_username'}}
+    assert_redirected_to '/users/password/new'
+    assert_includes(flash[:alert], 'User does not have an email authentication option or does not exist')
+  end
+
   test "create with blank email says it doesn't work" do
     post :create, params: {user: {email: ''}}
     assert_response :success

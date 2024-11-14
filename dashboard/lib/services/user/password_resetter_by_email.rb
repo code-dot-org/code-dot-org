@@ -3,7 +3,7 @@ module Services
     class PasswordResetterByEmail < Services::Base
       attr_reader :email
 
-      def initialize(email: nil)
+      def initialize(email:)
         @email = email
       end
 

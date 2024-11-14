@@ -10,7 +10,7 @@ class Services::User::PasswordResetterByUsernameTest < ActiveSupport::TestCase
 
     let(:mail) {ActionMailer::Base.deliveries.first}
 
-    context 'for username with an existing user' do
+    context 'when user is persisted' do
       let!(:user) {create(:user)}
       before do
         user.username = username

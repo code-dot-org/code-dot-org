@@ -3,13 +3,12 @@ module Services
     class PasswordResetterByUsername < Services::Base
       attr_reader :username
 
-      def initialize(username: nil)
+      def initialize(username:)
         @username = username
       end
 
       def call
-        user = ::User.find_by(username: username) || ::User.new(username: username)
-        return user if user.errors.present?
+        user = ::User.find_or_initialize_by(username: username)
 
         if user.new_record?
           Cdo::Metrics.put(
