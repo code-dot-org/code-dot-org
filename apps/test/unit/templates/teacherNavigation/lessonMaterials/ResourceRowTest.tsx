@@ -8,7 +8,7 @@ describe('ResourceRow', () => {
   const mockResourceData = {
     key: 'resourceKey1',
     name: 'Handout for teacher',
-    url: 'code.org',
+    url: 'https://wwww.code.org',
     audience: 'Teacher',
     type: 'Handout',
   };
@@ -36,7 +36,7 @@ describe('ResourceRow', () => {
     const link = screen.getByRole('link', {
       name: 'Handout: Handout for teacher',
     }) as HTMLAnchorElement;
-    // expect(link.href).toBe('code.org');
+    expect(link.href).toBe('https://wwww.code.org/');
     expect(link.target).toBe('_blank');
     expect(link.rel).toBe('noopener noreferrer');
   });
