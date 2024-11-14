@@ -13,7 +13,7 @@
       - if current_user&.admin?
         = f.text_field :username, style: "width: 400px", placeholder: t('password.reset_form.username')
 
-      -# = recaptcha_tags unless (current_user && current_user.admin?)
+      = recaptcha_tags unless (current_user && current_user.admin?)
       = show_flashes.html_safe
       %br/
       %button#forgotpassword-button.primary= t('password.reset_form.submit')
