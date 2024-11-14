@@ -71,6 +71,24 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   }, []);
 
   useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Enter') {
+        const button = document.getElementById(
+          'createAccountButton'
+        ) as HTMLButtonElement;
+        if (button && !button.disabled) {
+          button.click();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
+  useEffect(() => {
     if (
       passwordIcon === CHECK_ICON &&
       !showConfirmPasswordError &&
