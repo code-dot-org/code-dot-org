@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class SectionTest < ActiveSupport::TestCase
+  include Minitest::RSpecMocks
   self.use_transactional_test_case = true
   setup_all do
     @student = create :student
@@ -1357,5 +1358,56 @@ class SectionTest < ActiveSupport::TestCase
     CodeReviewGroupMember.create(follower_id: @followers[0].id, code_review_group_id: @group1.id)
     CodeReviewGroupMember.create(follower_id: @followers[1].id, code_review_group_id: @group1.id)
     CodeReviewGroupMember.create(follower_id: @followers[2].id, code_review_group_id: @group2.id)
+  end
+
+  describe '.summarize' do
+    let(:section) {create :section}
+    let(:summarize) {section.summarize}
+    let(:at_risk_age_gated_date) {DateTime.now}
+
+    before do
+      allow(section).to receive(:at_risk_age_gated_date).and_return(at_risk_age_gated_date)
+    end
+
+    it 'has the at_risk_age_gated_date' do
+      _(summarize).must_be_kind_of Hash
+      _(summarize[:at_risk_age_gated_date]).must_equal at_risk_age_gated_date
+    end
+  end
+
+  describe '.at_risk_age_gated_date' do
+    let(:section) {create :section, hidden: archived?}
+    let(:student) {create :student}
+    let(:at_risk) {false}
+    let(:archived?) {false}
+    let(:lockout_date) {DateTime.now}
+    let(:at_risk_age_gated_date) {section.at_risk_age_gated_date}
+
+    before do
+      allow(section).to receive(:students).and_return([student])
+      allow(student).to receive(:at_risk_age_gated?).and_return(at_risk)
+      allow(Policies::ChildAccount).to receive(:state_policy).
+        with(student).and_return({lockout_date: lockout_date})
+    end
+
+    it 'does not return a date' do
+      _(at_risk_age_gated_date).must_equal nil
+    end
+
+    context 'has an at risk student' do
+      let(:at_risk) {true}
+
+      it 'returns the lockout date' do
+        _(at_risk_age_gated_date).must_equal lockout_date
+      end
+
+      context 'the section is archived' do
+        let(:archived?) {true}
+
+        it 'does not return a date' do
+          _(at_risk_age_gated_date).must_equal nil
+        end
+      end
+    end
   end
 end

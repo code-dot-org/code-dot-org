@@ -5,6 +5,7 @@ require 'timecop'
 
 class UserTest < ActiveSupport::TestCase
   include ProjectsTestUtils
+  include Minitest::RSpecMocks
   self.use_transactional_test_case = true
 
   class UsStateCodeTest < ActiveSupport::TestCase
@@ -5520,6 +5521,28 @@ class UserTest < ActiveSupport::TestCase
       it 'does not call CAP compliance removing service' do
         expect_cap_compliance_removing.never
         update_us_state
+      end
+    end
+  end
+
+  describe '.at_risk_age_gated?' do
+    let(:user) {create(:student)}
+    let(:at_risk_age_gated?) {user.at_risk_age_gated?}
+    let(:compliant) {false}
+
+    before do
+      allow(Policies::ChildAccount).to receive(:compliant?).with(user, future: true).and_return(compliant)
+    end
+
+    it 'returns true' do
+      _(at_risk_age_gated?).must_equal true
+    end
+
+    context 'is compliant' do
+      let(:compliant) {true}
+
+      it 'returns false' do
+        _(at_risk_age_gated?).must_equal false
       end
     end
   end
