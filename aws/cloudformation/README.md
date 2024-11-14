@@ -37,7 +37,9 @@ Most .yml files (see Exceptions below) are straight forward to deploy and test :
 - Click the Next button to go to the Parameters page
 - Set "Stack name" to a unique descriptive name for your deploy (a branch?)
 - Fill in any other parameters as appropriate and specific to your particular template which defines them. Some of the params may require research to figure out.
+- Add the tag "created_by" with your email as the value
 - Click "Next" a few times then "Submit" to start your stack creating
+- Remember to come back and delete the stack when you're finished testing
 
 #### Exceptions
 
