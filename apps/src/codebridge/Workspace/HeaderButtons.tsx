@@ -74,7 +74,6 @@ const WorkspaceHeaderButtons: React.FunctionComponent<
           type={'tertiary'}
           color={buttonColors.white}
           text={commonI18n.skipToProject()}
-          // className={darkModeStyles.iconOnlyTertiaryButton}
         >
           {commonI18n.skipToProject()}
         </Button>
