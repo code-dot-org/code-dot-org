@@ -49,6 +49,7 @@ Scenario: School Info Confirmation Dialog
   And element ".modal-body" is visible
   Then I press "#update-button" using jQuery
   And element ".modal" is visible
-  Then I wait to see a modal containing text "United States"
+  Then element "#uitest-country-dropdown" has value "US"
   Then element "#uitest-school-zip" has value "31513"
-  Then I wait to see a modal containing text "Appling County High School"
+  # value is school_id for "Appling County High School"
+  Then element "#uitest-school-dropdown" has value "130006000010"

@@ -5,7 +5,6 @@ import {LinkButton} from '@cdo/apps/componentLibrary/button';
 import emptyDesk from '@cdo/apps/templates/teacherDashboard/images/empty_desk.svg';
 import blankScreen from '@cdo/apps/templates/teacherDashboard/images/no_curriculum_assigned.svg';
 import NoUnitAssigned from '@cdo/apps/templates/teacherNavigation/images/NoUnitAssigned.svg';
-import TeacherDashboardEmptyState from '@cdo/apps/templates/teacherNavigation/images/TeacherDashboardEmptyState.svg';
 import i18n from '@cdo/locale';
 
 import {
@@ -66,47 +65,6 @@ export const getNoUnitAssignedEmptyState = (
         text={i18n.assignAUnit()}
       />
     ),
-  };
-};
-
-export const getNoLessonMaterialsForLegacyCourses = (
-  sectionId: number,
-  courseVersionName: string
-) => {
-  return {
-    headline: i18n.lessonMaterialsAreNotAvailable(),
-    descriptionText: i18n.lessonMaterialsLegacyMessage({
-      courseName: 'courseName',
-    }),
-    imageComponent: (
-      <img src={TeacherDashboardEmptyState} alt={i18n.almostThere()} />
-    ),
-    button: (
-      <LinkButton
-        href={
-          '/teacher_dashboard' +
-          generatePath(
-            LABELED_TEACHER_NAVIGATION_PATHS.courseOverview.absoluteUrl,
-            {
-              sectionId: sectionId,
-              courseVersionName: courseVersionName,
-            }
-          )
-        }
-        text={i18n.assignAUnit()}
-      />
-    ),
-  };
-};
-
-export const getNoLessonMaterialsForThisLesson = () => {
-  return {
-    headline: i18n.lessonMaterialsNone(),
-    descriptionText: null,
-    imageComponent: (
-      <img src={TeacherDashboardEmptyState} alt={i18n.almostThere()} />
-    ),
-    button: null,
   };
 };
 

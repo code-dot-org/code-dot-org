@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import markdownToTxt from 'markdown-to-txt';
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import Typist from 'react-typist';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
@@ -37,6 +37,16 @@ interface PanelsProps {
   offerBrowserTts: boolean;
   levelId: string | null;
   resetOnChange?: boolean;
+  onChangePanel?: (
+    source: 'button' | 'bubble',
+    currentPanel: number,
+    nextPanel: number,
+    timeSpentOnPanelSeconds: number
+  ) => void;
+  onClickContinue?: (
+    currentPanel: number,
+    timeSpentOnPanelSeconds: number
+  ) => void;
 }
 
 /**
@@ -51,6 +61,8 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   offerBrowserTts,
   levelId,
   resetOnChange = true,
+  onChangePanel,
+  onClickContinue,
 }) => {
   const [currentPanelIndex, setCurrentPanelIndex] = useState(0);
   const [previousPanelIndex, setPreviousPanelIndex] = useState<
@@ -58,6 +70,8 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   >(undefined);
   const [typingDone, setTypingDone] = useState(false);
   const {cancel} = useBrowserTextToSpeech();
+
+  const lastPanelStartTime = useRef<number>(Date.now());
 
   targetWidth -= horizontalMargin * 2;
   targetHeight -= verticalMargin * 2 + childrenAreaHeight;
@@ -79,24 +93,38 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   }, [targetWidth, targetHeight]);
 
   const changePanel = useCallback(
-    (index: number) => {
+    (index: number, source: 'button' | 'bubble') => {
+      if (onChangePanel) {
+        onChangePanel(
+          source,
+          currentPanelIndex,
+          index,
+          (Date.now() - lastPanelStartTime.current) / 1000
+        );
+      }
       setPreviousPanelIndex(currentPanelIndex);
       setCurrentPanelIndex(index);
     },
-    [currentPanelIndex]
+    [currentPanelIndex, onChangePanel]
   );
 
   const handleButtonClick = useCallback(() => {
     if (currentPanelIndex < panels.length - 1) {
-      changePanel(currentPanelIndex + 1);
+      changePanel(currentPanelIndex + 1, 'button');
     } else {
+      if (onClickContinue) {
+        onClickContinue(
+          currentPanelIndex,
+          (Date.now() - lastPanelStartTime.current) / 1000
+        );
+      }
       onContinue(panels[currentPanelIndex].nextUrl);
     }
-  }, [changePanel, panels, currentPanelIndex, onContinue]);
+  }, [changePanel, panels, currentPanelIndex, onContinue, onClickContinue]);
 
   const handleBubbleClick = useCallback(
     (index: number) => {
-      changePanel(index);
+      changePanel(index, 'bubble');
     },
     [changePanel]
   );
@@ -116,11 +144,13 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     }
   }, [currentPanelIndex, panels, resetOnChange]);
 
-  // Cancel any in-progress text-to-speech when the panel changes.
+  // Cancel any in-progress text-to-speech when the panel changes
+  // and reset the last panel start time.
   useEffect(() => {
     if (offerBrowserTts) {
       cancel();
     }
+    lastPanelStartTime.current = Date.now();
   }, [currentPanelIndex, offerBrowserTts, cancel]);
 
   // Reset typing if the panel changes.

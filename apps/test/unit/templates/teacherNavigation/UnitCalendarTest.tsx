@@ -135,6 +135,7 @@ describe('UnitCalendar', () => {
   });
 
   afterEach(() => {
+    jest.restoreAllMocks();
     restoreRedux();
   });
 
@@ -152,7 +153,6 @@ describe('UnitCalendar', () => {
     renderComponent();
 
     screen.getByTitle('Loading...');
-    jest.restoreAllMocks();
   });
 
   it('renders calendar with instructional minutes dropdown, week, and calendar when loaded', async () => {
@@ -173,7 +173,6 @@ describe('UnitCalendar', () => {
     screen.getByText(i18n.instructionalMinutesPerWeek());
     screen.getByText('First Lesson');
     screen.getByText('Week 1');
-    jest.restoreAllMocks();
   });
 
   // Works for SHOW_NO_UNIT_SUMMARY
@@ -194,7 +193,6 @@ describe('UnitCalendar', () => {
 
     screen.getByAltText(i18n.calendarNotAvailable());
     screen.getByText(i18n.calendarNotAvailable());
-    jest.restoreAllMocks();
   });
 
   it('tells users to select a curriculum when no curriculum assigned', async () => {
@@ -209,7 +207,6 @@ describe('UnitCalendar', () => {
     screen.getByText(i18n.emptySectionHeadline());
     screen.getByText(i18n.noCurriculumAssigned());
     screen.getByText(i18n.browseCurriculum());
-    jest.restoreAllMocks();
   });
 
   it('tells users to select a unit when no unit assigned', async () => {
@@ -226,7 +223,6 @@ describe('UnitCalendar', () => {
       i18n.noUnitAssigned({page: 'the calendar', courseName: 'CSD'})
     );
     screen.getByText(i18n.assignAUnit());
-    jest.restoreAllMocks();
   });
 
   it('notifies users that the assigned curriculum is pre-2020', async () => {
@@ -250,6 +246,5 @@ describe('UnitCalendar', () => {
     screen.getByAltText(i18n.calendarNotAvailable());
     screen.getByText(i18n.calendarNotAvailable());
     screen.getByText(i18n.calendarLegacyMessage({courseName: 'CSD1-2020'}));
-    jest.restoreAllMocks();
   });
 });

@@ -10,13 +10,17 @@
     "instructions_important": "false",
     "long_instructions": "####Make your own beat\r\n\r\n1. Use the drum beat block to customize your own drum rhythm. \r\n2. Then add that block to your program to hear your music.",
     "hide_share_and_remix": "false",
-    "display_name": "Make your own beat",
+    "display_name": "Try a new block",
     "level_data": {
       "library": "launch2024"
     },
+    "bubble_choice_description": "Challenge yourself to use a new block! The beat block lets you create your own beats. ",
+    "thumbnail_url": "https://images.code.org/83c10a8cb39a0a1209373f5d6761d0d1-music.png",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-29 20:43:12 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-08 18:30:06 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-29 20:43:12 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-08 18:30:06 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-13 20:22:21 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

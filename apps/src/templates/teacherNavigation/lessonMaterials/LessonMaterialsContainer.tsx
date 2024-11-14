@@ -9,6 +9,7 @@ import {getStore} from '@cdo/apps/redux';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
+import {LessonMaterialsEmptyState} from './LessonMaterialsEmptyState';
 import {Lesson} from './LessonMaterialTypes';
 import LessonResources from './LessonResources';
 import UnitResourcesDropdown from './UnitResourcesDropdown';
@@ -24,6 +25,7 @@ interface LessonMaterialsData {
   scriptResourcesPdfUrl: string;
   lessons: Lesson[];
   hasNumberedUnits: boolean;
+  versionYear?: number;
 }
 
 const lessonMaterialsCachedLoader = _.memoize(
@@ -59,9 +61,6 @@ export const lessonMaterialsLoader =
     const selectedSectionId = state.selectedSectionId;
     const sectionData = state.sections[selectedSectionId];
 
-    // NOTE: this page is not working for stand alone courses.
-    // this is because there is no "unitId" in the sectionData for stand alone courses.
-
     if (!selectedSectionId || !sectionData.unitId) {
       return null;
     }
@@ -79,14 +78,26 @@ const createDisplayName = (lessonName: string, lessonPosition: number) => {
   });
 };
 
-const LessonMaterialsContainer: React.FC = () => {
+interface LessonMaterialsContainerProps {
+  showNoCurriculumAssigned: boolean;
+}
+
+const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
+  showNoCurriculumAssigned,
+}) => {
   const loadedData = useLoaderData() as LessonMaterialsData | null;
-  const hasNumberedUnits = useMemo(
-    () => loadedData?.hasNumberedUnits || false,
-    [loadedData]
-  );
-  const lessons = useMemo(() => loadedData?.lessons || [], [loadedData]);
-  const unitNumber = useMemo(() => loadedData?.unitNumber || 1, [loadedData]);
+  const {hasNumberedUnits, lessons, unitNumber, versionYear} = useMemo(() => {
+    return {
+      hasNumberedUnits: loadedData?.hasNumberedUnits || false,
+      lessons: loadedData?.lessons || [],
+      unitNumber: loadedData?.unitNumber || -1,
+      versionYear: loadedData?.versionYear || -1,
+    };
+  }, [loadedData]);
+  const isLegacyScript = useMemo(() => versionYear < 2021, [versionYear]);
+
+  const hasEmptyState =
+    isLegacyScript || showNoCurriculumAssigned || !loadedData;
 
   const getLessonFromId = (lessonId: number): Lesson | null => {
     return lessons.find(lesson => lesson.id === lessonId) || null;
@@ -127,6 +138,30 @@ const LessonMaterialsContainer: React.FC = () => {
     [generateLessonDropdownOptions]
   );
 
+  const renderHeader = () => {
+    return (
+      <div className={styles.lessonMaterialsPageHeader}>
+        <SimpleDropdown
+          labelText={i18n.chooseLesson()}
+          isLabelVisible={false}
+          onChange={event => onDropdownChange(event.target.value)}
+          items={lessonOptions}
+          selectedValue={selectedLesson ? selectedLesson.id.toString() : ''}
+          name={'lessons-in-assigned-unit-dropdown'}
+          size="s"
+        />
+        {loadedData?.unitNumber && (
+          <UnitResourcesDropdown
+            hasNumberedUnits={hasNumberedUnits}
+            unitNumber={loadedData.unitNumber}
+            scriptOverviewPdfUrl={loadedData.scriptOverviewPdfUrl}
+            scriptResourcesPdfUrl={loadedData.scriptResourcesPdfUrl}
+          />
+        )}
+      </div>
+    );
+  };
+
   const renderTeacherResources = () => {
     if (!selectedLesson) {
       return null;
@@ -160,27 +195,18 @@ const LessonMaterialsContainer: React.FC = () => {
     );
   };
 
+  if (hasEmptyState) {
+    return (
+      <LessonMaterialsEmptyState
+        showNoCurriculumAssigned={showNoCurriculumAssigned}
+        isLegacyScript={isLegacyScript}
+      />
+    );
+  }
+
   return (
     <div>
-      <div className={styles.lessonMaterialsPageHeader}>
-        <SimpleDropdown
-          labelText={i18n.chooseLesson()}
-          isLabelVisible={false}
-          onChange={event => onDropdownChange(event.target.value)}
-          items={lessonOptions}
-          selectedValue={selectedLesson ? selectedLesson.id.toString() : ''}
-          name={'lessons-in-assigned-unit-dropdown'}
-          size="s"
-        />
-        {loadedData?.unitNumber && (
-          <UnitResourcesDropdown
-            hasNumberedUnits={hasNumberedUnits}
-            unitNumber={loadedData.unitNumber}
-            scriptOverviewPdfUrl={loadedData.scriptOverviewPdfUrl}
-            scriptResourcesPdfUrl={loadedData.scriptResourcesPdfUrl}
-          />
-        )}
-      </div>
+      {renderHeader()}
       {renderTeacherResources()}
       {renderStudentResources()}
     </div>

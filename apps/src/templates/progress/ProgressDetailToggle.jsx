@@ -87,7 +87,11 @@ class ProgressDetailToggle extends React.Component {
         <button
           type="button"
           value="summary"
-          style={whiteBorder ? styles.whiteBorder : undefined}
+          style={
+            whiteBorder
+              ? {...styles.whiteBorder, ...styles.buttonStyles}
+              : styles.buttonStyles
+          }
         >
           <img
             src={isSummaryView ? images.summaryActive : images.summaryInactive}
@@ -98,7 +102,11 @@ class ProgressDetailToggle extends React.Component {
         <button
           type="button"
           value="detail"
-          style={whiteBorder ? styles.whiteBorder : undefined}
+          style={
+            whiteBorder
+              ? {...styles.whiteBorder, ...styles.buttonStyles}
+              : styles.buttonStyles
+          }
           className="uitest-toggle-detail"
         >
           <img
@@ -117,6 +125,9 @@ const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.white,
+  },
+  buttonStyles: {
+    marginBottom: 5,
   },
   icon: {
     fontSize: 20,

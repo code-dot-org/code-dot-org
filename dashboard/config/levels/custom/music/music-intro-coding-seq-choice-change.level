@@ -10,13 +10,28 @@
     "instructions_important": "false",
     "long_instructions": "####Customize this melody\r\n\r\nChoose new sounds and change the order of the blocks to make this melody your own creation.",
     "hide_share_and_remix": "false",
-    "display_name": "Customize the order",
+    "display_name": "Customize the song",
     "level_data": {
-      "library": "launch2024"
+      "library": "launch2024",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together"
+          ]
+        },
+        "type": "flyout"
+      }
     },
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "bubble_choice_description": "Make modifications to the code to create a unique sequence. ",
+    "thumbnail_url": "https://images.code.org/f3aa4867788fd7dffafb8b463a7da20e-sound-wave.png",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-29 20:40:49 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-08 18:27:19 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-29 20:40:49 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-08 18:27:19 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-12 23:26:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-13 20:15:54 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
