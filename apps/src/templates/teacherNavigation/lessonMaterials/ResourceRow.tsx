@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
 import {Resource} from './LessonMaterialTypes';
@@ -10,16 +11,11 @@ import ResourceViewOptionsDropdown from './ResourceViewOptionsDropdown';
 import styles from './lesson-materials.module.scss';
 
 type ResourceRowProps = {
-  lessonNumber?: number;
   unitNumber: number | null;
   resource: Resource;
 };
 
-const ResourceRow: React.FC<ResourceRowProps> = ({
-  lessonNumber,
-  unitNumber,
-  resource,
-}) => {
+const ResourceRow: React.FC<ResourceRowProps> = ({unitNumber, resource}) => {
   const resourceDisplayText = () => {
     if (!resource.type) {
       return resource.name;

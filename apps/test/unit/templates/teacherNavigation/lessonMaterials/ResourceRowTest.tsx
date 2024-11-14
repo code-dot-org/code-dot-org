@@ -15,12 +15,7 @@ describe('ResourceRow', () => {
 
   const renderDefault = (props = {}) => {
     return render(
-      <ResourceRow
-        lessonNumber={2}
-        unitNumber={3}
-        resource={mockResourceData}
-        {...props}
-      />
+      <ResourceRow unitNumber={3} resource={mockResourceData} {...props} />
     );
   };
 

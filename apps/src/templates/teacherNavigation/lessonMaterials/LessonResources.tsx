@@ -87,7 +87,6 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
       <ResourceRow
         key={`lessonPlan-${lessonNumber}`}
         unitNumber={unitNumber}
-        lessonNumber={lessonNumber}
         resource={{
           key: 'lessonPlanKey',
           name: lessonName || '',
@@ -111,7 +110,6 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
         <ResourceRow
           key={resource.key}
           unitNumber={unitNumber}
-          lessonNumber={lessonNumber}
           resource={resource}
         />
       ))}

@@ -160,6 +160,8 @@ class UnconnectedMusicView extends React.Component {
       hasLoadedInitialSounds: false,
     };
 
+    this.isLevelLoadInProgress = false;
+
     MusicBlocklyWorkspace.setupBlocklyEnvironment(this.props.blockMode);
   }
 
@@ -230,6 +232,12 @@ class UnconnectedMusicView extends React.Component {
   }
 
   async onLevelLoad(levelData, initialSources) {
+    if (this.isLevelLoadInProgress) {
+      // Don't attempt to setup the level if a load is already in progress.
+      return;
+    }
+    this.isLevelLoadInProgress = true;
+
     // Stop playback if needed.
     this.stopSong();
 
@@ -339,6 +347,7 @@ class UnconnectedMusicView extends React.Component {
       AppConfig.getValue('show-ai-generate-again-help') === 'true';
 
     this.props.setStartingPlayheadPosition(1);
+    this.isLevelLoadInProgress = false;
   }
 
   // Load the library and initialize the music player, if not already loaded.

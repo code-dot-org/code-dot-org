@@ -8,7 +8,7 @@
     "encrypted": "false",
     "background": "music-black",
     "instructions_important": "false",
-    "long_instructions": "#### Play Together Again\r\n\r\n- Add two [sounds](#clickable=play-sound-block) in the *first* [play together](#clickable=play-sounds-together-block-workspace) block.\r\n- Add two [sounds](#clickable=play-sound-block) in the *second* [play together](#clickable=id-left:play_sounds_together_block_2) block.\r\n",
+    "long_instructions": "####<i class=\"fa-solid fa-wrench\"></i>  Customize\r\n\r\n1. Drag a [sound](#clickable=play-sound-block---play-sounds-together-block-workspace) from the toolbox.\r\n2. Place it before or after the [play together](#clickable=play-sounds-together-block-workspace) block.\r\n3. Press Run to hear the new sequence.\r\n",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -18,37 +18,37 @@
         "conditions": [
           {
             "name": "played_different_sounds_together_multiple_times",
-            "value": 2
+            "value": 3
           }
         ]
       },
       {
         "key": "music-ai-skill-playtogether_sequence_524d0be3-14c2-4736-bdbf-d709eda13ff1",
-        "message": "Play different sounds in each [play together](#clickable=id-left:play_sounds_together_block_2) block.\n",
+        "message": "Play 3 different sounds in the [play together](#clickable=id-left:play_sounds_together_block_2) block.\n",
         "next": false,
         "conditions": [
           {
             "name": "played_different_sounds_together_multiple_times",
-            "value": 1
+            "value": 2
           }
         ],
         "callout": "id-left:play_sounds_together_block_2"
       },
       {
         "key": "music-ai-skill-playtogether_sequence_3_8db01d98-40e3-4fb3-bcee-0f59b17262bb",
-        "message": "Play different sounds in each [play together](#clickable=play-sounds-together-block-workspace) block.",
+        "message": "Play 3 different sounds in the [play together](#clickable=play-sounds-together-block-workspace) block.",
         "next": false,
         "conditions": [
           {
             "name": "played_sounds_together",
-            "value": 1
+            "value": 2
           }
         ],
         "callout": "play-sound-block-workspace"
       },
       {
         "key": "music-ai-skill-playtogether_36540a11-c67f-47da-bb3a-e2bb6181e9d1",
-        "message": "Nothing has played yet. Add some [sound](#clickable=play-sound-block) blocks into each [play together](#clickable=play-sounds-together-block-workspace) block. ",
+        "message": "Nothing has played yet. Add some [sound](#clickable=play-sound-block) blocks into the [play together](#clickable=play-sounds-together-block-workspace) block. ",
         "next": false,
         "conditions": [
 
@@ -74,13 +74,25 @@
                   "type": "play_sounds_together",
                   "id": "play_sounds_together",
                   "deletable": false,
-                  "movable": false,
-                  "next": {
-                    "block": {
-                      "type": "play_sounds_together_no_next",
-                      "id": "play_sounds_together_block_2",
-                      "deletable": false,
-                      "movable": false
+                  "editable": false,
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
+                        "fields": {
+                          "sound": "shakira_maluma_chantaje/kick_verse_1"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "*oNYg1]h=ZUfTM$BwF@9",
+                            "fields": {
+                              "sound": "shakira_maluma_chantaje/synth_pulse_1"
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 }
@@ -117,45 +129,14 @@
           "synth_main_small"
         ],
         "shakira_maluma_chantaje": [
+          "drums_intro",
           "kick_verse_1",
-          "kick_verse_2",
           "kick_build_1",
-          "kick_build_2",
-          "snap_sample",
-          "snap_sample_full",
-          "percussion",
-          "shaker",
-          "bass_small_1",
-          "bass_small_2",
-          "bass_medium_1",
-          "bass_medium_2",
-          "bass_big_1",
-          "bass_big_2",
-          "ambience",
-          "impact_1",
-          "impact_2",
+          "bass_verse_1",
           "synth_pulse_1",
-          "synth_pulse_2",
-          "synth_accent_1",
-          "synth_accent_2",
           "clippy_synth_1",
-          "clippy_synth_2",
-          "pad_1",
-          "pad_2",
-          "guitar_1",
-          "guitar_2",
-          "intro_swell",
-          "vocals_sample_1",
-          "vocals_sample_2",
-          "vocals_chop",
-          "vocals_maluma_1",
-          "vocals_maluma_2",
-          "vocals_maluma_3",
-          "vocals_maluma_4",
-          "vocals_shakira_1",
-          "vocals_shakira_2",
-          "vocals_shakira_3",
-          "vocals_shakira_maluma_4"
+          "vocals_maluma_chorus_1",
+          "vocals_shakira_chorus_1"
         ]
       }
     },
@@ -165,7 +146,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-11-09T00:12:44.622+00:00\",\"changed\":[\"cloned from \\\"music-jam-playtogether-sequence\\\"\"],\"cloned_from\":\"music-jam-playtogether-sequence\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-11-09T00:12:44.622+00:00\",\"changed\":[\"cloned from \\\"music-jam-playtogether-sequence\\\"\"],\"cloned_from\":\"music-jam-playtogether-sequence\"},{\"changed_at\":\"2024-11-12 23:02:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-12 23:03:08 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-12 23:03:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-12 23:04:29 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-12 23:04:59 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-12 23:06:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-12 23:08:35 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-12 23:09:17 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-12 23:10:28 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-12 23:11:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-12 23:12:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-12 23:29:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-12 23:32:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-13 19:07:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-13 19:09:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-13 19:10:29 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

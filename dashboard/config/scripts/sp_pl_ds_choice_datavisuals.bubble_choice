@@ -1,0 +1,9 @@
+name 'SP-PL-DS-Choice-DataVisuals'
+display_name 'Practice with Data Visuals'
+description 'Choose one of the options below, or try them all!'
+
+sublevels
+level 'sp-pl-DS-geochart'
+level 'dsp-pl-DS-histogram'
+level 'sp-pl-DS-usingFormulas'
+level 'sp-pl-DS-lineGraphs'
