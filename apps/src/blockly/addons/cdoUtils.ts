@@ -795,7 +795,7 @@ export function getAllGeneratedCode(extraCode?: string) {
       if (workspace) {
         Blockly.getGenerator().init(workspace);
         const blocks = workspace.getTopBlocks(true);
-        const blocksCode: GoogleBlockly.Block[] = [];
+        const blocksCode: (string | [string, number])[] = [];
         blocks.forEach(block =>
           blocksCode.push(Blockly.JavaScript.blockToCode(block))
         );
@@ -814,7 +814,7 @@ export function getCodeFromBlockXmlSource(blockXmlString: string) {
   Blockly.Xml.domToBlockSpace(workspace, domBlocks);
   Blockly.getGenerator().init(workspace);
   const blocks = workspace.getTopBlocks(true);
-  const code = [] as string[];
+  const code: (string | [string, number])[] = [];
   blocks.forEach(block => code.push(Blockly.JavaScript.blockToCode(block)));
   const result = Blockly.getGenerator().finish(code.join('\n'));
   workspace.dispose();

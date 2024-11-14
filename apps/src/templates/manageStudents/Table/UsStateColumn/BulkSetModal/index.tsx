@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {ControlLabel, Fade, FormControl, FormGroup} from 'react-bootstrap';
+import {ControlLabel, Fade, FormControl, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';

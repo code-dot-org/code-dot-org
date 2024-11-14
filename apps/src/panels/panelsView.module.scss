@@ -69,10 +69,15 @@ $text-horizontal-padding: 2.6cqw;
         animation: 0.5s ease 0s fade-in;
         animation-fill-mode: both;
       }
+
+      &Invisible {
+        opacity: 0;
+      }
     }
 
     .text {
       background-color: $neutral_light;
+      color: $neutral_dark;
       border-radius: 5px;
       width: 40%;
       position: absolute;

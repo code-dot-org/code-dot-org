@@ -74,10 +74,14 @@ const Video: React.FunctionComponent<VideoProps> = ({
   const [videoChoice, setVideoChoice] = useState<VideoChoiceType>(undefined);
 
   useEffect(() => {
-    testYouTubeAvailable(available =>
-      setVideoChoice(available ? 'youtube' : 'fallback')
-    );
-  }, [setVideoChoice]);
+    if (src) {
+      const noCookie = src.includes('youtube-nocookie.com');
+
+      testYouTubeAvailable(noCookie, available =>
+        setVideoChoice(available ? 'youtube' : 'fallback')
+      );
+    }
+  }, [src]);
 
   const videoJsOptions = {
     autoplay: true,

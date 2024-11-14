@@ -1,0 +1,102 @@
+@import 'color', 'font';
+
+.heading {
+  width: '100%';
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.title {
+  display: inline-block;
+}
+
+.versionWrapper {
+  display: flex;
+  align-items: baseline;
+}
+
+.versionLabel {
+  @include main-font-semi-bold;
+  font-size: 15;
+  color: $charcoal;
+}
+
+.versionDropdown {
+  margin-bottom: 13;
+}
+
+.description {
+  width: 700;
+}
+
+.actionRow {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.leftActions {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  width: 100%;
+  flex-wrap: wrap;
+  row-gap: 12px;
+}
+
+.assignButton {
+  margin-right: 10px;
+  button {
+    margin: 0;
+  }
+}
+
+.teacherResources {
+  margin-right: 5px;
+}
+
+.printingOptions {
+  margin-right: 10px;
+}
+
+.versionSelector {
+  margin-right: 10px;
+  select {
+    margin-bottom: 0;
+  }
+}
+
+.viewAsLabel {
+  @include main-font-semi-bold;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.viewAs {
+  display: flex;
+  flex-direction: column;
+}
+
+.unitConfirmText {
+  @include main-font-regular;
+  font-size: 12;
+}
+
+.customText {
+  margin: '0px 2px';
+}
+
+.icon {
+  margin: '0px 2px';
+  font-size: 16;
+  // we want our icon text to be a different size than our button text, which
+  // requires we manually offset to get it centered properly
+  position: 'relative';
+  top: 1;
+}

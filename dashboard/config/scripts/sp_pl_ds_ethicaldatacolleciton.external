@@ -1,0 +1,25 @@
+name 'sp-pl-DS_EthicalDataColleciton'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Ethical Data Collection 
+
+#### After students analyze several scenarios for ethical considerations, they will engage in a hands-on, unplugged activity that will help them analyze different types of data collection methods. 
+
+<img src="https://images.code.org/451922360b6a18934177ebbebba40f5a-image-1731082977376.png" alt = "icon of paper and postit representing data collection method of automated collection"  width="250px" style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+
+## Data Collection Methods
+
+#### In this activity, students will work and groups. They will get a handout with different data sets, cut them out, and sort them based on data collection method. 
+<br>
+
+#### Explore the full lesson <a href="https://levelbuilder-studio.code.org/s/intro-to-data-science-2024/lessons/4" target="blank" rel="noopener noreferrer">here</a>.
+
+## Let's continue!
+
+
+
+
+
+MARKDOWN

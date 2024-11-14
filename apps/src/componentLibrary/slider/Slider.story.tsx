@@ -12,7 +12,6 @@ export default {
 // TEMPLATE
 //
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
-// eslint-disable-next-line
 const SingleTemplate: StoryFn<SliderProps> = args => {
   const [value, setValue] = useState(args.value);
 

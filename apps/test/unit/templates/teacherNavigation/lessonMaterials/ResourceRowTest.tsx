@@ -15,12 +15,7 @@ describe('ResourceRow', () => {
 
   const renderDefault = (props = {}) => {
     return render(
-      <ResourceRow
-        lessonNumber={2}
-        unitNumber={3}
-        resource={mockResourceData}
-        {...props}
-      />
+      <ResourceRow unitNumber={3} resource={mockResourceData} {...props} />
     );
   };
 
@@ -28,7 +23,6 @@ describe('ResourceRow', () => {
     renderDefault();
 
     screen.getByText('Handout: Handout for teacher');
-    screen.getByText('3.2');
 
     // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('resource-icon-' + RESOURCE_ICONS.LINK.icon);
