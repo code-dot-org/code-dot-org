@@ -100,3 +100,33 @@
   position: 'relative';
   top: 1;
 }
+
+.studentSelector {
+  width: 300px;
+}
+
+.submitStatusText {
+  display: inline;
+  padding-top: 3px;
+  p {
+    margin-bottom: 0;
+  }
+  overflow: hidden;
+  height: 20px;
+  text-overflow: ellipsis;
+}
+
+.studentDropdownOptionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.studentDropdownOption {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+  margin-top: 3px;
+  height: 26px;
+}

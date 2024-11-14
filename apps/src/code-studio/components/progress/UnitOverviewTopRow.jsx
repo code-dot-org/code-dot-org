@@ -22,6 +22,8 @@ import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLesson
 
 import StudentSelector from './StudentSelector';
 
+import style from './unit-overview.module.scss';
+
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
 export const COMPLETED = 'COMPLETED';
@@ -150,7 +152,7 @@ class UnitOverviewTopRow extends React.Component {
             {!deeperLearningCourse && viewAs === ViewType.Instructor && (
               <div style={styles.sectionContainer}>
                 {showV2TeacherDashboard() ? (
-                  <StudentSelector />
+                  <StudentSelector styleName={style.studentSelector} />
                 ) : (
                   <SectionAssigner
                     sections={sectionsForDropdown}
