@@ -7,6 +7,9 @@ import Select, {Option} from 'react-select';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
+import {buildSchoolData} from '@cdo/apps/schoolInfo/utils/buildSchoolData';
+import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs.jsx';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import color from '@cdo/apps/util/color';
 import {isEmail} from '@cdo/apps/util/formatValidation';
@@ -30,13 +33,6 @@ const CSP = 'CS Principles';
 const ADMIN_COUNSELOR = 'Admin/Counselor Workshop';
 
 const VALIDATION_STATE_ERROR = 'error';
-
-const SCHOOL_TYPES_MAPPING = {
-  'Public school': 'public',
-  'Private school': 'private',
-  'Charter school': 'charter',
-  Other: 'other',
-};
 
 const DESCRIBE_ROLES = [
   'School Administrator',
@@ -86,13 +82,11 @@ const ATTENDED_CSF_COURSES_OPTIONS = {
 };
 
 interface SchoolInfoProps {
+  country?: string;
   school_id?: string;
-  school_district_name?: string;
-  school_district_other?: string;
   school_name?: string;
-  school_state?: string;
   school_zip?: string;
-  school_type?: keyof typeof SCHOOL_TYPES_MAPPING;
+  school_type?: string;
 }
 
 interface EnrollFormState {
@@ -136,7 +130,7 @@ type EnrollFormProps = EnrollFormState & {
   workshop_course?: string;
   workshop_id: number;
   workshop_subject?: string;
-  school_info: SchoolInfoProps;
+  school_info?: SchoolInfoProps;
 };
 
 export default function EnrollForm(props: EnrollFormProps) {
@@ -161,14 +155,12 @@ export default function EnrollForm(props: EnrollFormProps) {
     role: props.role,
   });
 
-  const [schoolInfoState, setSchoolInfoState] = useState<SchoolInfoProps>({
-    school_id: props.school_info?.school_id,
-    school_district_name: props.school_info?.school_district_name,
-    school_district_other: props.school_info?.school_district_other,
-    school_name: props.school_info?.school_name,
-    school_state: props.school_info?.school_state,
-    school_zip: props.school_info?.school_zip,
-    school_type: props.school_info?.school_type,
+  const schoolInfo = useSchoolInfo({
+    schoolId: props.school_info?.school_id,
+    country: props.school_info?.country,
+    schoolName: props.school_info?.school_name,
+    schoolZip: props.school_info?.school_zip,
+    schoolType: props.school_info?.school_type,
   });
 
   const [formErrors, setFormErrors] = useState<FormErrors>({});
@@ -180,14 +172,6 @@ export default function EnrollForm(props: EnrollFormProps) {
       ...prevState,
       ...change,
     }));
-  };
-
-  const onSchoolInfoChange = ({
-    school_info,
-  }: {
-    school_info: SchoolInfoProps;
-  }) => {
-    setSchoolInfoState(school_info);
   };
 
   const handleRoleChange = (selection: Option<string> | null) => {
@@ -290,35 +274,22 @@ export default function EnrollForm(props: EnrollFormProps) {
     return processedGrades;
   };
 
-  const getSchoolType = () => {
-    if (!schoolInfoState.school_id && schoolInfoState.school_type) {
-      return SCHOOL_TYPES_MAPPING[schoolInfoState.school_type];
-    }
-  };
-
   const submit = async () => {
     setFormErrors({});
     setSubmissionErrorMessage('');
     setIsSubmitting(true);
-    let schoolInfo = {};
-    if (schoolInfoState.school_id) {
-      schoolInfo = {school_id: schoolInfoState.school_id};
-    } else {
-      schoolInfo = {
-        school_district_name: schoolInfoState.school_district_name,
-        school_district_other: schoolInfoState.school_district_other,
-        school_name: schoolInfoState.school_name,
-        school_state: schoolInfoState.school_state,
-        school_zip: schoolInfoState.school_zip,
-        school_type: getSchoolType(),
-      };
-    }
+
     const params = {
       user_id: props.user_id,
       first_name: formState.first_name,
       last_name: formState.last_name,
       email: formState.email,
-      school_info: schoolInfo,
+      school_info: buildSchoolData({
+        schoolId: schoolInfo.schoolId,
+        country: schoolInfo.country,
+        schoolName: schoolInfo.schoolName,
+        schoolZip: schoolInfo.schoolZip,
+      }),
       role: getRole(),
       describe_role: formState.describe_role,
       grades_teaching: getGradesTeaching(),
@@ -368,7 +339,7 @@ export default function EnrollForm(props: EnrollFormProps) {
     let errors = getErrors();
     const missingRequiredFields = getMissingRequiredFields();
     const schoolInfoErrors =
-      SchoolAutocompleteDropdownWithCustomFields.validate(schoolInfoState);
+      SchoolAutocompleteDropdownWithCustomFields.validate(schoolInfo);
 
     if (
       missingRequiredFields.length ||
@@ -600,11 +571,7 @@ export default function EnrollForm(props: EnrollFormProps) {
               />
             )}
           </FormGroup>
-          <SchoolAutocompleteDropdownWithCustomFields
-            onSchoolInfoChange={onSchoolInfoChange}
-            school_info={schoolInfoState}
-            errors={formErrors}
-          />
+          <SchoolDataInputs includeHeaders={false} {...schoolInfo} />
         </>
       )}
       {(props.workshop_course === CSF ||
