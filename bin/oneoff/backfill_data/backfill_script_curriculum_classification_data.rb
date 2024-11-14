@@ -14,7 +14,7 @@ $valid_content_area = Curriculum::SharedCourseConstants::CURRICULUM_CONTENT_AREA
 $valid_topic_tags = Curriculum::SharedCourseConstants::CURRICULUM_TOPIC_TAGS.to_h.keys.map(&:to_s)
 
 # Take link to CSV file as input
-def backfill_script_data_categories(file_path, whatif_mode)
+def backfill_script_data_categories(file_path, actual_execution)
   raise unless Rails.application.config.levelbuilder_mode
 
   puts "Reading csv from #{file_path}"
@@ -46,7 +46,7 @@ def backfill_script_data_categories(file_path, whatif_mode)
       next
     end
 
-    if whatif_mode
+    unless actual_execution
       puts "Updates for #{script_name} = [#{initiative_val}] [#{content_area_val}] [#{topic_tags_val}]"
       next
     end
@@ -69,8 +69,8 @@ def backfill_script_data_categories(file_path, whatif_mode)
 end
 
 if ARGV.empty? || ARGV.length >2
-  warn "Usage: backfill_script_curriculum_classification_data.rb <path_to_csv_with_data> -whatif"
+  warn "Usage: backfill_script_curriculum_classification_data.rb <path_to_csv_with_data> -for-real"
   return
 end
 
-backfill_script_data_categories(ARGV[0], ARGV.length == 2 && ARGV[1] == "-whatif")
+backfill_script_data_categories(ARGV[0], ARGV.length == 2 && ARGV[1] == "-for-real")
