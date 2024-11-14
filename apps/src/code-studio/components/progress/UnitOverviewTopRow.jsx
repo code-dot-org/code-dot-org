@@ -161,9 +161,11 @@ class UnitOverviewTopRow extends React.Component {
           </div>
         </div>
         <div style={styles.rightButtons}>
-          {unitAllowsHiddenLessons && (
-            <BulkLessonVisibilityToggle lessons={unitCalendarLessons} />
-          )}
+          {!deeperLearningCourse &&
+            viewAs === ViewType.Instructor &&
+            unitAllowsHiddenLessons && (
+              <BulkLessonVisibilityToggle lessons={unitCalendarLessons} />
+            )}
           <span style={styles.detailToggle}>
             <ProgressDetailToggle toggleStudyGroup="unit-overview" />
           </span>
