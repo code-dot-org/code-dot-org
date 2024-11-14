@@ -2,7 +2,7 @@
  * Form to create a workshop enrollment
  */
 import React, {useState} from 'react';
-import {FormGroup, ControlLabel, HelpBlock, Alert} from 'react-bootstrap';
+import {FormGroup, ControlLabel, HelpBlock, Alert} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import Select, {Option} from 'react-select';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
