@@ -8,7 +8,9 @@ markdown <<MARKDOWN
 
 <div style="background-color: #F7F8FA; border-radius: 90px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px; "> In this lesson, your students will use an <a href="url" target="blank" rel="noopener noreferrer">activity guide</a> a to analyze the data story of three different cards.     
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 16px; "> In this lesson, your students will use an <a href="url" target="blank" rel="noopener noreferrer">activity guide</a> a to analyze the data story of three different music data cards similar to the ones below. <br><br> <i>The cards are modeled after <b>Spotify Wrapped</b>, an annual campaign that give users a personalized summary of their music listening habits for the past year.</i>
+
+ 
 </p>
 </div>
 
@@ -19,7 +21,9 @@ markdown <<MARKDOWN
 - #### 2. What data attributes might be associated with this story?
 
 
-![](https://images.code.org/360e9fc582274e496a1330b8dba49e01-image-1721235155263.png)
+<img src="https://images.code.org/21f770ddc3577c930c185ce29618d465-image-1731094397180.png" alt="design process graph of the cycle" width="750px" style="display: block; margin-left: auto; margin-right: auto;">
 
 #### *This module just gives an overview of the lesson. If you would like a deeper dive, click on the activity guide above.*
+
+
 MARKDOWN

@@ -1,8 +1,8 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
 import {
   ObservableProcedureModel,
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
+import {installAllBlocks as installFieldColourBlocks} from '@blockly/field-colour';
 import {LineCursor, NavigationController} from '@blockly/keyboard-navigation';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 import {
@@ -104,6 +104,7 @@ import {
   ExtendedBlocklyOptions,
   ExtendedConnection,
   ExtendedInput,
+  ExtendedJavascriptGenerator,
   ExtendedVariableMap,
   ExtendedWorkspace,
   ExtendedWorkspaceSvg,
@@ -273,26 +274,28 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.wrapReadOnlyProperty(prop);
   });
 
+  // Installs colour_picker, colour_rgb, colour_random, and colour_blend blocks.
+  // These are exclusively provided via the FieldColour plugin as of Blockly v11.
+  installFieldColourBlocks({javascript: javascriptGenerator});
+
+  type registrableFieldType = Pick<typeof GoogleBlockly.Field, 'prototype'>;
   // elements in this list should be structured as follows:
   // [field registry name for field, class name of field being overridden, class to use as override]
-  const fieldOverrides: [
-    string,
-    string,
-    Pick<typeof GoogleBlockly.Field, 'prototype'>
-  ][] = [
+  const fieldOverrides: [string, string, registrableFieldType][] = [
     ['field_variable', 'FieldVariable', CdoFieldVariable],
     ['field_dropdown', 'FieldDropdown', CdoFieldDropdown],
-    ['field_colour', 'FieldColour', CdoFieldColour],
     ['field_number', 'FieldNumber', CdoFieldNumber],
-    // CdoFieldBitmap extends from a JavaScript class without typing.
-    // We know it's a field, so it's safe to cast as unknown.
+    // CdoFieldBitmap and CdoFieldColour extend from plugins.
+    // We know they're fields, so it's safe to cast as unknown.
     [
       'field_bitmap',
       'FieldBitmap',
-      CdoFieldBitmap as unknown as Pick<
-        typeof GoogleBlockly.Field,
-        'prototype'
-      >,
+      CdoFieldBitmap as unknown as registrableFieldType,
+    ],
+    [
+      'field_colour',
+      'FieldColour',
+      CdoFieldColour as unknown as registrableFieldType,
     ],
     ['field_label', 'FieldLabel', CdoFieldLabel],
     ['field_parameter', 'FieldParameter', CdoFieldParameter],
@@ -624,8 +627,12 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   (blocklyWrapper.Flyout as any).configure = function () {};
 
   blocklyWrapper.getGenerator = function () {
-    return this.JavaScript;
+    // Additional methods are added to the generator when initializeGenerator is called,
+    // So it is safe to cast as unknown here.
+    return this.JavaScript as unknown as ExtendedJavascriptGenerator;
   };
+
+  blocklyWrapper.inputTypes = blocklyInstance.inputs.inputTypes;
 
   blocklyWrapper.addEmbeddedWorkspace = function (workspace) {
     this.embeddedWorkspaces.push(workspace.id);
@@ -977,7 +984,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   initializeCss(blocklyWrapper);
 
   blocklyWrapper.Blocks.unknown = UNKNOWN_BLOCK;
-  blocklyWrapper.JavaScript.unknown = () => '/* unknown block */\n';
+  blocklyWrapper.JavaScript.forBlock.unknown = () => '/* unknown block */\n';
 
   blocklyWrapper.cdoUtils = cdoUtils;
   blocklyWrapper.getPointerBlockImageUrl = getPointerBlockImageUrl;

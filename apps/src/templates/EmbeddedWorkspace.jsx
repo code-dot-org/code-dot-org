@@ -41,7 +41,6 @@ export default class EmbeddedWorkspace extends React.Component {
     // Setting state here will trigger an immediate re-render; however,
     // that is unavaoidable given that we cannot know what size our
     // workspace is until it's already in the DOM
-    // eslint-disable-next-line react/no-did-mount-set-state
     this.setState({
       height,
       workspace,

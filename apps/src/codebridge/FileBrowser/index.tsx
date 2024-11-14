@@ -57,44 +57,51 @@ const InnerFileBrowser = React.memo(
         {Object.values(folders)
           .filter(f => f.parentId === parentId)
           .sort((a, b) => a.name.localeCompare(b.name))
-          .map(f => (
-            <Droppable
-              data={{id: f.id}}
-              key={f.id + f.open}
-              Component="li"
-              className={classNames(moduleStyles.droppableArea, {
-                [moduleStyles.acceptingDrop]:
-                  f.id === dropData?.id && dragData?.parentId !== f.id,
-              })}
-            >
-              <Draggable
-                data={{id: f.id, type: DragType.FOLDER, parentId: f.parentId}}
+          .map(f => {
+            const MaybeDraggable = isReadOnly ? NotDraggable : Draggable;
+            return (
+              <Droppable
+                data={{id: f.id}}
+                key={f.id + f.open}
+                Component="li"
+                className={classNames(moduleStyles.droppableArea, {
+                  [moduleStyles.acceptingDrop]:
+                    f.id === dropData?.id && dragData?.parentId !== f.id,
+                })}
               >
-                <FolderRow item={f} enableMenu={!isReadOnly && !dragData?.id} />
-                {f.open && (
-                  <ul>
-                    <InnerFileBrowser
-                      folders={folders}
-                      parentId={f.id}
-                      files={files}
-                      setFileType={setFileType}
-                      appName={appName}
-                    />
-                  </ul>
-                )}
-              </Draggable>
-            </Droppable>
-          ))}
+                <MaybeDraggable
+                  data={{id: f.id, type: DragType.FOLDER, parentId: f.parentId}}
+                >
+                  <FolderRow
+                    item={f}
+                    enableMenu={!isReadOnly && !dragData?.id}
+                  />
+                  {f.open && (
+                    <ul>
+                      <InnerFileBrowser
+                        folders={folders}
+                        parentId={f.id}
+                        files={files}
+                        setFileType={setFileType}
+                        appName={appName}
+                      />
+                    </ul>
+                  )}
+                </MaybeDraggable>
+              </Droppable>
+            );
+          })}
         {Object.values(files)
           .filter(f => f.folderId === parentId && shouldShowFile(f))
           .sort((a, b) => a.name.localeCompare(b.name))
           .map(f => {
             const isDraggingLocked =
-              !isStartMode && f.type === ProjectFileType.LOCKED_STARTER;
+              isReadOnly ||
+              (!isStartMode && f.type === ProjectFileType.LOCKED_STARTER);
             const fileRowProps: FileRowProps = {
               item: f,
               hasValidationFile,
-              enableMenu: !dragData?.id || isDraggingLocked,
+              enableMenu: !isReadOnly && (!dragData?.id || isDraggingLocked),
             };
             const MaybeDraggable = isDraggingLocked ? NotDraggable : Draggable;
             return (

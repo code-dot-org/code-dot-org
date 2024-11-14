@@ -31,7 +31,6 @@ export const SongTitlesToArtistTwitterHandle = {
   highhopes_panicatthedisco: 'PanicAtTheDisco',
   ificanthaveyou_shawnmendes: 'ShawnMendes',
   introtoshamstep_47SOUL: '47soulofficial',
-  oldtownroadremix_lilnasx_long: 'LilNasX',
   starships_nickiminaj: 'NICKIMINAJ',
   sucker_jonasbrothers: 'JonasBrothers',
   // 2020 Songs

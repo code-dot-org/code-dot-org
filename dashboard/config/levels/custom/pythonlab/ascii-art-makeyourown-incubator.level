@@ -10,7 +10,7 @@
     "long_instructions": "##Write your name\r\n\r\nMake a **function** for each letter of your name, and **print** it out! \r\n\r\nYou can use [this website](https://patorjk.com/software/taag/#p=display&f=Big&t=z%0A%0A%0A) to create different letters.\r\n",
     "ai_tutor_available": "false",
     "submittable": "false",
-    "hide_share_and_remix": "true",
+    "hide_share_and_remix": "false",
     "predict_settings": {
       "isPredictLevel": false
     },
@@ -30,6 +30,6 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-28 15:47:55 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:48:28 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:48:29 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:48:31 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:48:32 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:49:15 +0000\",\"changed\":[\"long_instructions\",\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-28 15:47:55 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:48:28 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:48:29 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:48:31 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:48:32 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:49:15 +0000\",\"changed\":[\"long_instructions\",\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-12 18:05:49 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Pythonlab>

@@ -723,7 +723,7 @@ const FormController = props => {
         style={styles.pageButtons}
         items={pageComponents.length}
         activePage={currentPage + 1}
-        onSelect={i => setPage(i - 1)} // eslint-disable-line react/jsx-no-bind
+        onSelect={i => setPage(i - 1)}
       />
     );
 

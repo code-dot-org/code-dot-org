@@ -187,12 +187,12 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
             path={TEACHER_NAVIGATION_PATHS.lessonMaterials}
             loader={lessonMaterialsLoader}
             element={
-              <ElementOrEmptyPage
-                showNoStudents={studentCount === 0}
-                showNoUnitAssigned={!selectedSection?.unitId}
-                courseName={selectedSection?.courseDisplayName}
-                showNoCurriculumAssigned={!anyStudentHasProgress}
-                element={<LessonMaterialsContainer />}
+              <LessonMaterialsContainer
+                showNoCurriculumAssigned={
+                  !!selectedSection &&
+                  !selectedSection.courseVersionName &&
+                  !selectedSection.courseOfferingId
+                }
               />
             }
           />
@@ -234,6 +234,16 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               />
             }
           />
+          {/* /manage_students is the legacy url for /roster. Redirect to /roster so that old bookmarks continue to work */}
+          <Route
+            path={'manage_students'}
+            element={
+              <Navigate
+                to={'../' + TEACHER_NAVIGATION_PATHS.roster}
+                replace={true}
+              />
+            }
+          />
           {showAITutorTab && (
             <Route
               path={TEACHER_NAVIGATION_PATHS.aiTutorChatMessages}
@@ -249,16 +259,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
             />
           )}
         </Route>
-        {/* /manage_students is the legacy url for /roster. Redirect to /roster so that old bookmarks continue to work */}
-        <Route
-          path={'manage_students'}
-          element={
-            <Navigate
-              to={'../' + TEACHER_NAVIGATION_PATHS.roster}
-              replace={true}
-            />
-          }
-        />
       </Route>
     ),
     [

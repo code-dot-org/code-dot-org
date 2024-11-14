@@ -318,15 +318,17 @@ export function sectionsForDropdown(
   courseVersionId,
   unitId
 ) {
-  return sortedSectionsList(state.sections).map(section => ({
-    ...section,
-    isAssigned:
-      (unitId !== null && section.unitId === unitId) ||
-      (courseOfferingId !== null &&
-        section.courseOfferingId === courseOfferingId &&
-        courseVersionId !== null &&
-        section.courseVersionId === courseVersionId),
-  }));
+  return sortedSectionsList(state.sections)
+    .filter(section => !section.hidden)
+    .map(section => ({
+      ...section,
+      isAssigned:
+        (unitId !== null && section.unitId === unitId) ||
+        (courseOfferingId !== null &&
+          section.courseOfferingId === courseOfferingId &&
+          courseVersionId !== null &&
+          section.courseVersionId === courseVersionId),
+    }));
 }
 
 /**

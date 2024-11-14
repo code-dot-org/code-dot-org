@@ -12,3 +12,7 @@ export const showV2TeacherDashboard: () => boolean = _.once(() => {
     experiments.isEnabled('teacher-local-nav-v2')
   );
 });
+
+export const isOnTeacherDashboard: () => boolean = _.once(() =>
+  location.pathname.includes('teacher_dashboard')
+);
