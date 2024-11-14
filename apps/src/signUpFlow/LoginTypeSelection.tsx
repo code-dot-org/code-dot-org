@@ -70,23 +70,11 @@ const LoginTypeSelection: React.FunctionComponent = () => {
     getToken();
   }, []);
 
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Enter') {
-        const button = document.getElementById(
-          'createAccountButton'
-        ) as HTMLButtonElement;
-        if (button && !button.disabled) {
-          button.click();
-        }
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter' && !createAccountButtonDisabled) {
+      submitLoginType();
+    }
+  };
 
   useEffect(() => {
     if (
@@ -320,6 +308,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
                 onChange={handleEmailChange}
                 name="emailInput"
                 id="uitest-email"
+                onKeyDown={handleKeyDown}
               />
               {showEmailError && (
                 <div className={style.validationMessage}>
@@ -341,6 +330,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
                 name="passwordInput"
                 id="uitest-password"
                 inputType="password"
+                onKeyDown={handleKeyDown}
               />
               <div className={style.validationMessage}>
                 <FontAwesomeV6Icon
@@ -358,6 +348,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
                 name="confirmPasswordInput"
                 inputType="password"
                 id="uitest-confirm-password"
+                onKeyDown={handleKeyDown}
               />
               {showConfirmPasswordError && (
                 <div className={style.validationMessage}>

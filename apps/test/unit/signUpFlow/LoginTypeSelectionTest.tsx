@@ -328,15 +328,19 @@ describe('LoginTypeSelection', () => {
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.create_my_account(),
     }) as HTMLButtonElement;
-    const handleClick = jest.fn();
-    finishSignUpButton.onclick = handleClick;
 
+    // Set focus on the password input field
+    confirmPasswordInput.focus();
     // Simulate pressing Enter when button is not enabled
-    fireEvent.keyDown(document, {key: 'Enter', code: 'Enter', charCode: 13});
+    fireEvent.keyDown(confirmPasswordInput, {
+      key: 'Enter',
+      code: 'Enter',
+      charCode: 13,
+    });
 
-    // Verify the button's click handler was never called
+    // Verify the submit function was never called
     await waitFor(() => {
-      expect(handleClick).not.toHaveBeenCalled();
+      expect(fetchSpy).not.toHaveBeenCalled();
     });
 
     // Ensure the button is enabled
@@ -351,13 +355,16 @@ describe('LoginTypeSelection', () => {
       expect(finishSignUpButton).not.toBeDisabled();
     });
 
+    // Set focus on the password input field
+    confirmPasswordInput.focus();
     // Simulate pressing Enter
-    fireEvent.keyDown(document, {key: 'Enter', code: 'Enter', charCode: 13});
+    fireEvent.keyDown(confirmPasswordInput, {
+      key: 'Enter',
+      code: 'Enter',
+      charCode: 13,
+    });
 
     await waitFor(() => {
-      // Verify the button's click handler was called
-      expect(handleClick).toHaveBeenCalled();
-
       // Verify the button's fetch method was called
       expect(fetchSpy).toHaveBeenCalled;
       const fetchCall = fetchSpy.getCall(0);
