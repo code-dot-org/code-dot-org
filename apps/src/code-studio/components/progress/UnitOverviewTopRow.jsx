@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+import Select from 'react-select';
 
 import BulkLessonVisibilityToggle from '@cdo/apps/code-studio/components/progress/BulkLessonVisibilityToggle';
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
+import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
@@ -18,6 +20,7 @@ import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailTog
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {showV2TeacherDashboard} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
 import i18n from '@cdo/locale';
 
 import FontAwesome from '../../../legacySharedComponents/FontAwesome';
@@ -65,6 +68,12 @@ class UnitOverviewTopRow extends React.Component {
     unitAllowsHiddenLessons: PropTypes.bool,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
+    students: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+      })
+    ).isRequired,
   };
 
   logTryNowButtonClick = unitProgress => {
@@ -144,6 +153,7 @@ class UnitOverviewTopRow extends React.Component {
       publishedState,
       participantAudience,
       isUnitWithLevels,
+      students,
     } = this.props;
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
@@ -248,20 +258,77 @@ class UnitOverviewTopRow extends React.Component {
         </div>
         {!deeperLearningCourse && viewAs === ViewType.Instructor && (
           <div style={styles.sectionContainer}>
-            <SectionAssigner
-              sections={sectionsForDropdown}
-              selectedSectionId={selectedSectionId}
-              assignmentName={unitTitle}
-              showAssignButton={showAssignButton}
-              courseId={currentCourseId}
-              courseOfferingId={courseOfferingId}
-              courseVersionId={courseVersionId}
-              scriptId={scriptId}
-              forceReload={true}
-              isAssigningCourse={false}
-              isStandAloneUnit={this.props.courseLink === null}
-              participantAudience={participantAudience}
-            />
+            {showV2TeacherDashboard() ? (
+              <Select
+                name="students"
+                clearable={false}
+                searchable={false}
+                options={students}
+                // aria-label={i18n.selectStudentOption()}
+                // value={selectedUserId || NO_SELECTED_SECTION_VALUE}
+                // onChange={handleSelectStudentChange}
+                // options={(selectedUserId
+                //   ? []
+                //   : [
+                //       {
+                //         value: NO_SELECTED_SECTION_VALUE,
+                //         label: (
+                //           <BodyThreeText className={style.submitStatusText}>
+                //             <EmText>{i18n.selectStudentOption()}</EmText>
+                //           </BodyThreeText>
+                //         ),
+                //       },
+                //     ]
+                // ).concat(
+                //   students.map(student => ({
+                //     value: student.id,
+                //     label: (
+                //       <div className={style.studentDropdownOptionContainer}>
+                //         <div className={style.studentDropdownOption}>
+                //           <BodyThreeText className={style.submitStatusText}>
+                //             {student.familyName
+                //               ? student.familyName.length +
+                //                   student.name.length <
+                //                 MAX_NAME_LENGTH
+                //                 ? `${student.name} ${student.familyName}`
+                //                 : `${student.name} ${student.familyName}`
+                //                     .substring(0, MAX_NAME_LENGTH - 1)
+                //                     .concat('', '...')
+                //               : `${student.name}`}
+                //           </BodyThreeText>
+                //           {!!levelsWithProgress && aiEvalStatusMap && (
+                //             <StudentProgressStatus
+                //               aiEvalStatus={aiEvalStatusMap[student.id]}
+                //               hasTeacherFeedback={
+                //                 hasTeacherFeedbackMap[student.id]
+                //               }
+                //               status={getStudentProgressStatusForUser(
+                //                 student.id
+                //               )}
+                //             />
+                //           )}
+                //         </div>
+                //       </div>
+                //     ),
+                //   }))
+                // )}
+              />
+            ) : (
+              <SectionAssigner
+                sections={sectionsForDropdown}
+                selectedSectionId={selectedSectionId}
+                assignmentName={unitTitle}
+                showAssignButton={showAssignButton}
+                courseId={currentCourseId}
+                courseOfferingId={courseOfferingId}
+                courseVersionId={courseVersionId}
+                scriptId={scriptId}
+                forceReload={true}
+                isAssigningCourse={false}
+                isStandAloneUnit={this.props.courseLink === null}
+                participantAudience={participantAudience}
+              />
+            )}
             {unitAllowsHiddenLessons && (
               <BulkLessonVisibilityToggle lessons={unitCalendarLessons} />
             )}
@@ -330,22 +397,30 @@ const styles = {
 
 export const UnconnectedUnitOverviewTopRow = UnitOverviewTopRow;
 
-export default connect((state, ownProps) => ({
-  selectedSectionId: state.teacherSections.selectedSectionId,
-  sectionsForDropdown: sectionsForDropdown(
-    state.teacherSections,
-    ownProps.courseOfferingId,
-    ownProps.courseVersionId,
-    state.progress.scriptId
-  ),
-  deeperLearningCourse: state.progress.deeperLearningCourse,
-  hasPerLevelResults: Object.keys(state.progress.levelResults).length > 0,
-  unitCompleted: !!state.progress.unitCompleted,
-  scriptId: state.progress.scriptId,
-  scriptName: state.progress.scriptName,
-  unitTitle: state.progress.unitTitle,
-  currentCourseId: state.progress.courseId,
-  unitAllowsHiddenLessons: state.hiddenLesson.hideableLessonsAllowed || false,
-  viewAs: state.viewAs,
-  isRtl: state.isRtl,
-}))(UnitOverviewTopRow);
+export default connect(
+  (state, ownProps) => ({
+    selectedSectionId: state.teacherSections.selectedSectionId,
+    sectionsForDropdown: sectionsForDropdown(
+      state.teacherSections,
+      ownProps.courseOfferingId,
+      ownProps.courseVersionId,
+      state.progress.scriptId
+    ),
+    deeperLearningCourse: state.progress.deeperLearningCourse,
+    hasPerLevelResults: Object.keys(state.progress.levelResults).length > 0,
+    unitCompleted: !!state.progress.unitCompleted,
+    scriptId: state.progress.scriptId,
+    scriptName: state.progress.scriptName,
+    unitTitle: state.progress.unitTitle,
+    currentCourseId: state.progress.courseId,
+    unitAllowsHiddenLessons: state.hiddenLesson.hideableLessonsAllowed || false,
+    viewAs: state.viewAs,
+    isRtl: state.isRtl,
+    students: state.teacherSections.selectedStudents,
+  }),
+  dispatch => ({
+    selectUser(userId) {
+      dispatch(queryUserProgress(userId));
+    },
+  })
+)(UnitOverviewTopRow);
