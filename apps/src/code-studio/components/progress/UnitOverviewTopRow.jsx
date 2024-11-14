@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import Select from 'react-select';
+//import Select from 'react-select';
 
 import BulkLessonVisibilityToggle from '@cdo/apps/code-studio/components/progress/BulkLessonVisibilityToggle';
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
@@ -93,7 +93,7 @@ class UnitOverviewTopRow extends React.Component {
       courseOfferingId,
       courseVersionId,
       isUnitWithLevels,
-      students,
+      //students,
     } = this.props;
 
     // Adjust styles if locale is RTL
