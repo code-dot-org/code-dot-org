@@ -6,6 +6,7 @@
   "level_num": "custom",
   "user_id": 18914,
   "properties": {
+    "skipUrl": "/projects/pythonlab/new",
     "encrypted": "false",
     "long_instructions": "##Functions\r\n\r\nThis code has a function defined and called. \r\n\r\nTry **call the function** a second time.\r\n",
     "ai_tutor_available": "false",

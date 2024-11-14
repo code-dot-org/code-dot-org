@@ -6,6 +6,7 @@
   "level_num": "custom",
   "user_id": 18914,
   "properties": {
+    "skipUrl": "/projects/pythonlab/new",
     "encrypted": "false",
     "long_instructions": "##Write your name\r\n\r\nMake a **function** for each letter of your name, and **print** it out! \r\n\r\nYou can use [this website](https://patorjk.com/software/taag/#p=display&f=Big&t=z%0A%0A%0A) to create different letters.\r\n",
     "ai_tutor_available": "false",
