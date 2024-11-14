@@ -91,7 +91,7 @@ module Middlewares
   end
 
   class RedisSessionStore < ActionDispatch::Session::RedisStore
-    include UnnecessarySessionWritePrevention
-    include DeletedSessionPreservation
+    prepend UnnecessarySessionWritePrevention
+    prepend DeletedSessionPreservation
   end
 end
