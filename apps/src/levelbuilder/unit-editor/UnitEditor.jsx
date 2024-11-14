@@ -34,6 +34,7 @@ import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import MultiCheckboxSelector from '@cdo/apps/templates/MultiCheckboxSelector';
 import color from '@cdo/apps/util/color';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
+import Link from '@cdo/apps/componentLibrary/link/Link';
 
 import {lessonGroupShape} from './shapes';
 
@@ -719,6 +720,12 @@ class UnitEditor extends React.Component {
                     blocks and there will be information about CSTA Standards.
                   </p>
                 </HelpTip>
+                <Link
+                  href="https://github.com/code-dot-org/code-dot-org/wiki/Updating-Publish-State-of-Scripts-or-Courses"
+                  openInNewTab={true}
+                >
+                  More info
+                </Link>
               </label>
               <label>
                 Content Area
