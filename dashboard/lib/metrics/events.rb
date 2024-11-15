@@ -36,6 +36,7 @@ module Metrics
 
         if CDO.rack_env?(:development)
           log_event_to_stdout(user: user, event_name: event_name, event_value: event_value, metadata: metadata, enabled_experiments: enabled_experiments, statsig_stable_id: statsig_stable_id)
+          log_statsig_event_with_cdo_user(user: user, event_name: event_name, event_value: event_value, metadata: metadata, enabled_experiments: enabled_experiments, statsig_stable_id: statsig_stable_id)
         elsif CDO.rack_env?(:production) || managed_test_environment
           log_statsig_event_with_cdo_user(user: user, event_name: event_name, event_value: event_value, metadata: metadata, enabled_experiments: enabled_experiments, statsig_stable_id: statsig_stable_id)
         else
@@ -78,8 +79,8 @@ module Metrics
 
         if user.present?
           user_params[:user_id] = user.id.to_s
-          user_params[:custom][:user_type] = user.user_type if user.user_type
-          user_params[:custom][:enabled_experiments] = enabled_experiments if enabled_experiments
+          user_params[:custom][:userType] = user.user_type if user.user_type
+          user_params[:custom][:enabledExperiments] = enabled_experiments if enabled_experiments
         end
 
         StatsigUser.new(user_params)
