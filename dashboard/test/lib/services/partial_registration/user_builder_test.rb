@@ -219,7 +219,6 @@ class Services::PartialRegistration::UserBuilderTest < ActiveSupport::TestCase
     school_country = 'MX'
     setup_partial_user({user_type: 'teacher', school_info_attributes:
       {
-        schoolId: SharedConstants::NON_SCHOOL_OPTIONS.CLICK_TO_ADD,
         schoolName: school_name,
         country: school_country,
       }}
@@ -240,7 +239,7 @@ class Services::PartialRegistration::UserBuilderTest < ActiveSupport::TestCase
     school_country = 'US'
     setup_partial_user({user_type: 'teacher', school_info_attributes:
       {
-        schoolId: SharedConstants::NON_SCHOOL_OPTIONS.NO_SCHOOL_SETTING,
+        schoolType: SharedConstants::NON_SCHOOL_OPTIONS.NO_SCHOOL_SETTING,
         country: school_country,
       }}
     )
