@@ -102,7 +102,7 @@ export const InfoPanel = React.memo(() => {
           ariaLabel={'Information panel dropdown'}
           size={'xs'}
           type={'tertiary'}
-          className={darkModeStyles.iconOnlyTertiaryButton}
+          className={darkModeStyles.tertiaryButton}
         />
       </div>
     ) : null;

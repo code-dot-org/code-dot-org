@@ -62,7 +62,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
             ariaLabel={commonI18n.feedback()}
             size={'xs'}
             type={'tertiary'}
-            className={darkModeStyles.iconOnlyTertiaryButton}
+            className={darkModeStyles.tertiaryButton}
           />
         </WithTooltip>
       )}
@@ -74,7 +74,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           type={'tertiary'}
           color={buttonColors.white}
           text={commonI18n.skipToProject()}
-          className={darkModeStyles.tertiaryButtonWithIcon}
+          className={darkModeStyles.tertiaryButton}
         >
           {commonI18n.skipToProject()}
         </Button>
