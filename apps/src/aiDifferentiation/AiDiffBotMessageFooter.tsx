@@ -64,6 +64,7 @@ const AiDiffBotMessageFooter: React.FC<Props> = ({message}) => {
               setPdfTimeout(true);
               setTimeout(() => setPdfTimeout(false), CONFIRM_TIMEOUT_MS);
             }}
+            disabled={pdfTimeout}
             color="white"
             size="xs"
             isIconOnly
