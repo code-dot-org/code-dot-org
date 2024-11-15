@@ -29,10 +29,7 @@ export function getSummaryCellFormatters(
   onClickLesson
 ) {
   const mainCellFormatter = (lesson, student) => {
-    if (
-      lessonHasLevels(lesson) &&
-      lessonProgressByStudent?.[student.id]?.[lesson.id]
-    ) {
+    if (lessonHasLevels(lesson) && lessonProgressByStudent?.[student.id]) {
       return (
         <ProgressTableSummaryCell
           studentId={student.id}
