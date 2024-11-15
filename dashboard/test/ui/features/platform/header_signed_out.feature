@@ -1,6 +1,6 @@
 @no_mobile
 @single_session
-Feature: Header navigation bar
+Feature: Header navigation bar - Signed out
   Scenario: Signed out user in English should see 7 header links
     Given I am on "http://code.org/"
     And I dismiss the language selector

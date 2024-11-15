@@ -1,5 +1,5 @@
 @single_session
-Feature: Hamburger dropdown
+Feature: Hamburger dropdown - Signed out
   @no_mobile
   Scenario: Signed out user in English should not see hamburger on large desktop
     Given I am on "http://code.org/"
