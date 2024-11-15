@@ -25,7 +25,6 @@ const Workspace = () => {
   const {config} = useCodebridgeContext();
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
-  const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
   const viewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
   );
@@ -54,7 +53,7 @@ const Workspace = () => {
     <PanelContainer
       id="editor-workspace"
       headerContent={headerContent}
-      rightHeaderContent={<HeaderButtons skipUrl={skipUrl} />}
+      rightHeaderContent={<HeaderButtons />}
       className={moduleStyles.workspace}
       headerClassName={moduleStyles.workspaceHeader}
     >

@@ -14,16 +14,11 @@ import {useCodebridgeContext} from '../codebridgeContext';
 import moduleStyles from './workspace.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
-interface WorkspaceHeaderButtonProps {
-  skipUrl: string | undefined;
-}
-
-const WorkspaceHeaderButtons: React.FunctionComponent<
-  WorkspaceHeaderButtonProps
-> = ({skipUrl}) => {
+const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   const {startSource} = useCodebridgeContext();
 
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
   const dialogControl = useDialogControl();
 
   const feedbackTooltipProps: TooltipProps = {
@@ -71,7 +66,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent<
           />
         </WithTooltip>
       )}
-      {appName === 'pythonlab' && skipUrl && (
+      {skipUrl && (
         <Button
           iconRight={{iconStyle: 'solid', iconName: 'arrow-right'}}
           onClick={onClickSkip}
@@ -79,6 +74,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent<
           type={'tertiary'}
           color={buttonColors.white}
           text={commonI18n.skipToProject()}
+          className={darkModeStyles.tertiaryButtonWithIcon}
         >
           {commonI18n.skipToProject()}
         </Button>
