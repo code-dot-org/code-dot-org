@@ -4,6 +4,7 @@ end
 
 And(/^I maximize the browser window$/) do
   max_width, max_height = @browser.execute_script('return [window.screen.availWidth, window.screen.availHeight];')
+  @browser.manage.window.position = Selenium::WebDriver::Point.new(0, 0)
   @browser.manage.window.resize_to(max_width, max_height)
 end
 
