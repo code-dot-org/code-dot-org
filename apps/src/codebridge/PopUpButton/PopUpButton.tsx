@@ -1,7 +1,9 @@
 import classNames from 'classnames';
-import React, {useState, useCallback} from 'react';
+import React, {useState, useCallback, useRef, useEffect} from 'react';
+import {createPortal} from 'react-dom';
 
 import Button from '@cdo/apps/componentLibrary/button';
+import {updatePositionedElementStyles} from '@cdo/apps/componentLibrary/common/helpers';
 
 import moduleStyles from './PopUpButton.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
@@ -24,11 +26,30 @@ export const PopUpButton = ({
   const [isOpen, setIsOpen] = useState(false);
   const [buttonRect, setButtonRect] = useState<DOMRect>();
   const [offsetParent, setOffsetParent] = useState<DOMRect>();
+  const [dropdownPosition, setDropdownPosition] = useState<HTMLElement | null>(
+    null
+  );
+  const [dropdownStyles, setDropdownStyles] = useState<React.CSSProperties>({});
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   const setIsOpenFalse = useCallback(() => {
     setIsOpen(false);
     document.removeEventListener('click', setIsOpenFalse);
   }, [setIsOpen]);
+
+  const updateDropdownStyles = useCallback(
+    (dropdownPosition: HTMLElement | null) =>
+      updatePositionedElementStyles({
+        nodePosition: dropdownPosition,
+        positionedElementRef: dropdownRef,
+        direction: 'onBottom',
+        setPositionedElementStyles: setDropdownStyles,
+        tailOffset: 0,
+        tailLength: 0,
+        isPositionFixed: true,
+      }),
+    []
+  );
 
   const clickHandler = useCallback(
     (
@@ -43,7 +64,12 @@ export const PopUpButton = ({
       );
       setIsOpen(oldIsOpen => {
         const newIsOpen = !oldIsOpen;
+        const newDropdownPosition = newIsOpen
+          ? (e.target as HTMLElement)
+          : null;
+        setDropdownPosition(newDropdownPosition);
         if (newIsOpen) {
+          updateDropdownStyles(newDropdownPosition);
           // React 17 changed the location where clickhandlers are added, so we want to defer adding the close
           // handler until the next tick of the event loop, otherwise it'll fire immediately and re-close the pop up.'
           setTimeout(
@@ -56,8 +82,24 @@ export const PopUpButton = ({
         return newIsOpen;
       });
     },
-    [setIsOpen, setIsOpenFalse]
+    [setIsOpenFalse, updateDropdownStyles]
   );
+
+  // Effect to update tooltip styles when the tooltip is shown
+  useEffect(() => {
+    const updateDropdownPositionIfShown = () => {
+      if (isOpen) {
+        updateDropdownStyles(dropdownPosition);
+      }
+    };
+
+    updateDropdownPositionIfShown();
+
+    window.addEventListener('resize', updateDropdownPositionIfShown);
+    return () => {
+      window.removeEventListener('resize', updateDropdownPositionIfShown);
+    };
+  }, [isOpen, updateDropdownStyles, dropdownPosition]);
 
   return (
     <>
@@ -71,19 +113,20 @@ export const PopUpButton = ({
         type={'tertiary'}
         id={id}
       />
-      {isOpen && buttonRect && offsetParent && (
-        <div
-          className={moduleStyles['popup-button-menu']}
-          onClick={() => setIsOpen(false)}
-          style={{
-            top:
-              buttonRect.top + buttonRect.height + 5 - (offsetParent.top || 0),
-            [alignment]: buttonRect[alignment] - (offsetParent[alignment] || 0),
-          }}
-        >
-          {children}
-        </div>
-      )}
+      {isOpen &&
+        buttonRect &&
+        offsetParent &&
+        createPortal(
+          <div
+            className={moduleStyles['popup-button-menu']}
+            onClick={() => setIsOpen(false)}
+            style={dropdownStyles}
+            ref={dropdownRef}
+          >
+            {children}
+          </div>,
+          document.body
+        )}
     </>
   );
 };
