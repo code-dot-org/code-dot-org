@@ -1,13 +1,10 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import Select from 'react-select';
 
-import {levelWithProgress} from '@cdo/apps/code-studio/components/progress/teacherPanel/types';
-import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {BodyThreeText, EmText} from '@cdo/apps/componentLibrary/typography';
-import {reload} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import style from './unit-overview.module.scss';
@@ -16,26 +13,17 @@ const NO_SELECTED_SECTION_VALUE = '';
 const MAX_NAME_LENGTH = 20;
 
 function StudentSelector({
-  styleName,
-  selectedUserId,
-  reloadOnChange,
-  sectionId,
-
   //from redux
   students,
-  selectUser,
 }) {
+  const [selectedUserId, setSelectedUserId] = useState(null);
   const handleSelectStudentChange = event => {
     const newUserId = event.value;
+    setSelectedUserId(newUserId);
     updateQueryParam(
       'user_id',
       newUserId === NO_SELECTED_SECTION_VALUE ? undefined : newUserId
     );
-    if (reloadOnChange) {
-      reload();
-    } else {
-      selectUser(newUserId);
-    }
   };
 
   if (students.length === 0) {
@@ -44,7 +32,7 @@ function StudentSelector({
 
   return (
     <Select
-      className={styleName ? styleName : 'uitest-studentselect'}
+      className={'uitest-studentselect'}
       name="students"
       clearable={false}
       searchable={false}
@@ -89,12 +77,6 @@ function StudentSelector({
 }
 
 StudentSelector.propTypes = {
-  styleName: PropTypes.string,
-  selectedUserId: PropTypes.number,
-  reloadOnChange: PropTypes.bool,
-  sectionId: PropTypes.number,
-  aiEvalStatusMap: PropTypes.object,
-
   //from redux
   students: PropTypes.arrayOf(
     PropTypes.shape({
@@ -102,20 +84,10 @@ StudentSelector.propTypes = {
       name: PropTypes.string.isRequired,
     })
   ).isRequired,
-  selectUser: PropTypes.func.isRequired,
-  levelsWithProgress: PropTypes.arrayOf(levelWithProgress),
-  hasTeacherFeedbackMap: PropTypes.object,
 };
 
 export const UnconnectedStudentSelector = StudentSelector;
 
-export default connect(
-  state => ({
-    students: state.teacherSections.selectedStudents,
-  }),
-  dispatch => ({
-    selectUser(userId) {
-      dispatch(queryUserProgress(userId));
-    },
-  })
-)(StudentSelector);
+export default connect(state => ({
+  students: state.teacherSections.selectedStudents,
+}))(StudentSelector);

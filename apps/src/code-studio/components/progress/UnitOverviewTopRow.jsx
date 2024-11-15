@@ -22,8 +22,6 @@ import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLesson
 
 import StudentSelector from './StudentSelector';
 
-import style from './unit-overview.module.scss';
-
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
 export const COMPLETED = 'COMPLETED';
@@ -140,19 +138,21 @@ class UnitOverviewTopRow extends React.Component {
           )}
 
           <div style={styles.resourcesRow}>
-            {showCalendar && viewAs === ViewType.Instructor && (
-              <UnitCalendarButton
-                lessons={unitCalendarLessons}
-                weeklyInstructionalMinutes={weeklyInstructionalMinutes}
-                scriptId={scriptId}
-              />
-            )}
+            {!showV2TeacherDashboard() &&
+              showCalendar &&
+              viewAs === ViewType.Instructor && (
+                <UnitCalendarButton
+                  lessons={unitCalendarLessons}
+                  weeklyInstructionalMinutes={weeklyInstructionalMinutes}
+                  scriptId={scriptId}
+                />
+              )}
           </div>
           <div style={styles.secondRow}>
             {!deeperLearningCourse && viewAs === ViewType.Instructor && (
               <div style={styles.sectionContainer}>
                 {showV2TeacherDashboard() ? (
-                  <StudentSelector styleName={style.studentSelector} />
+                  <StudentSelector />
                 ) : (
                   <SectionAssigner
                     sections={sectionsForDropdown}
@@ -241,6 +241,9 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+  },
+  studentSelector: {
+    width: 300,
   },
 };
 
