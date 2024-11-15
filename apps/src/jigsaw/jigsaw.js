@@ -178,6 +178,13 @@ Jigsaw.init = function (config) {
     studioApp().init(config);
 
     document.getElementById('runButton').style.display = 'none';
+    Blockly.mainBlockSpaceEditor.addChangeListener(function (event) {
+      if (event.type === 'click') {
+        if (event.blockId === 'block1') {
+          Jigsaw.block1Clicked = true;
+        }
+      }
+    });
     Jigsaw.successListener = Blockly.mainBlockSpaceEditor.addChangeListener(
       function (evt) {
         checkForSuccess();

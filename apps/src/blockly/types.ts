@@ -71,6 +71,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   ALIGN_LEFT: GoogleBlockly.inputs.Align.LEFT;
   ALIGN_RIGHT: GoogleBlockly.inputs.Align.RIGHT;
   inputTypes: typeof GoogleBlockly.inputs.inputTypes;
+  createSvgElement: typeof GoogleBlockly.utils.dom.createSvgElement;
   analyticsData: AnalyticsData;
   showUnusedBlocks: boolean | undefined;
   BlockFieldHelper: {[fieldHelper: string]: string};
@@ -151,6 +152,10 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     blockspace: GoogleBlockly.Workspace,
     handler: (e: GoogleBlockly.Events.Abstract) => void
   ) => void;
+  removeChangeListener: (
+    handler: (e: GoogleBlockly.Events.Abstract) => void,
+    blockspace: GoogleBlockly.Workspace
+  ) => void;
   getGenerator: () => ExtendedJavascriptGenerator;
   addEmbeddedWorkspace: (workspace: GoogleBlockly.Workspace) => void;
   isEmbeddedWorkspace: (workspace: GoogleBlockly.Workspace) => boolean;
@@ -224,6 +229,9 @@ export interface ExtendedConnection extends GoogleBlockly.Connection {
 }
 
 export interface ExtendedBlock extends GoogleBlockly.Block {
+  getFillPattern: () => string | undefined;
+  fillPattern?: string;
+  setFillPattern: (pattern: string) => void;
   interpolateMsg: (
     this: ExtendedBlock,
     msg: string,
@@ -234,9 +242,11 @@ export interface ExtendedBlock extends GoogleBlockly.Block {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   setTitleValue: (newValue: any, name: string) => void;
   skipNextBlockGeneration?: boolean;
+  svgPathFill_: SVGElement;
 }
 
 export interface ExtendedWorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
+  defs: SVGElement;
   previousViewWidth: number;
   flyoutParentBlock: GoogleBlockly.Block | null;
   globalVariables: string[];

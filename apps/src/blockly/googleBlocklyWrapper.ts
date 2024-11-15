@@ -80,6 +80,7 @@ import {
   bumpRTLBlocks,
   disableOrphans,
   reflowToolbox,
+  setPathFill,
   storeWorkspaceWidth,
   updateBlockLimits,
 } from './eventHandlers';
@@ -451,6 +452,13 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blockspace.addChangeListener(handler);
   };
 
+  blocklyWrapper.removeChangeListener = function (
+    handler,
+    blockspace = Blockly.getMainWorkspace()
+  ) {
+    blockspace.removeChangeListener(handler);
+  };
+
   const googleBlocklyMixin = blocklyWrapper.BlockSvg.prototype.mixin;
   blocklyWrapper.BlockSvg.prototype.mixin = function (mixinObj) {
     googleBlocklyMixin.call(this, mixinObj, true);
@@ -559,7 +567,21 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   extendedBlock.setTitleValue = function (newValue, name) {
     return this.setFieldValue(newValue, name);
   };
+  /**
+   * Change the fill pattern of a block
+   * @param {string} pattern The id of the pattern
+   */
+  extendedBlock.setFillPattern = function (pattern: string) {
+    this.fillPattern = pattern;
+  };
 
+  /**
+   * Get the fill pattern for the block
+   * @return {string} Pattern name xlink
+   */
+  extendedBlock.getFillPattern = function () {
+    return this.fillPattern;
+  };
   const extendedWorkspaceSvg = blocklyWrapper.WorkspaceSvg
     .prototype as ExtendedWorkspaceSvg;
 
@@ -812,6 +834,12 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       options
     ) as ExtendedWorkspaceSvg;
 
+    workspace.defs = Blockly.createSvgElement(
+      'defs',
+      {id: 'blocklySvgDefs'},
+      workspace.svgGroup_
+    );
+
     blocklyWrapper.grayOutUndeletableBlocks =
       !!options.grayOutUndeletableBlocks;
     blocklyWrapper.topLevelProcedureAutopopulate =
@@ -856,6 +884,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     // blocks back to the correct positions after a browser window resize.
     // See: https://github.com/google/blockly/issues/8637
     workspace.addChangeListener(storeWorkspaceWidth);
+    workspace.addChangeListener(setPathFill);
     window.addEventListener('resize', bumpRTLBlocks);
 
     initializeScrollbarPair(workspace);
@@ -953,6 +982,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   blocklyWrapper.getFunctionEditorWorkspace = function () {
     return blocklyWrapper.functionEditor?.getWorkspace();
   };
+
+  blocklyWrapper.createSvgElement = blocklyWrapper.utils.dom.createSvgElement;
 
   // Google Blockly labs also need to clear separate workspaces for the function editor.
   blocklyWrapper.clearAllStudentWorkspaces = function () {

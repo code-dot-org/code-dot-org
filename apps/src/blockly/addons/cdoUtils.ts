@@ -25,6 +25,7 @@ import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/procedure
 import cdoTheme from '../themes/cdoTheme';
 import {
   BlockColor,
+  ExtendedBlock,
   JsonBlockConfig,
   SerializedFields,
   WorkspaceSerialization,
@@ -237,7 +238,7 @@ export function moveHiddenBlocks(
 }
 
 export function handleColorAndStyle(
-  block: GoogleBlockly.Block,
+  block: ExtendedBlock,
   color: BlockColor,
   style: string
 ) {
