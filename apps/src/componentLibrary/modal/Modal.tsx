@@ -1,86 +1,146 @@
 import classnames from 'classnames';
-import React, {HTMLAttributes, ReactNode} from 'react';
+import React, {HTMLAttributes, ReactNode, useRef} from 'react';
 
-import {Button} from '@cdo/apps/componentLibrary/button';
+import {Button, ButtonProps} from '@cdo/apps/componentLibrary/button';
 import CloseButton from '@cdo/apps/componentLibrary/closeButton';
+import useBodyScrollLock from '@cdo/apps/componentLibrary/common/hooks/useBodyScrollLock';
+import useEscapeKeyHandler from '@cdo/apps/componentLibrary/common/hooks/useEscapeKeyHandler';
+import useFocusTrap from '@cdo/apps/componentLibrary/common/hooks/useFocusTrap';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import {BodyTwoText, Heading2} from '@cdo/apps/componentLibrary/typography';
 
 import moduleStyles from './modal.module.scss';
 
 export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   /** Modal title */
   title?: string;
-  /** Modal image url */
-  modalImageUrl?: string;
-  /** Whether to show image as inline element */
-  isImageInline?: boolean;
-  /** Modal content */
-  content?: string | ReactNode;
-  /** Whether to show secondary button */
-  showSecondaryButton?: boolean;
+  /** Modal description text */
+  description?: string;
+  /** Modal Custom content (rendered right after/instead Modal description) */
+  customContent?: ReactNode;
+  /** Custom bottom content (rendered right after Modal actions section).
+   *  If this is rendered when there's no `description` prop - make sure to add `dsco-dialog-description` `id`
+   *  to the element in custom content which will be representing the dialog description. (Used by screen readers
+   *  for dialog's `aria-describedBy` attribute) */
+  customBottomContent?: ReactNode;
+  /** Modal primary button props */
+  primaryButtonProps: ButtonProps;
+  /** Modal secondary button props */
+  secondaryButtonProps?: ButtonProps;
+  /** Modal color mode */
+  mode?: 'light' | 'dark';
   /** Custom class name */
   className?: string;
   /** Modal onClose handler */
   onClose?: () => void;
   /** Modal close button aria label */
   closeLabel?: string;
-  /** Modal color */
-  color?: 'light' | 'dark';
+  /** Modal icon */
+  icon?: FontAwesomeV6IconProps;
+  /** Modal image url */
+  imageUrl?: string;
 }
+
+// TODO:
+// title
+// image
+// description
+// customContent
+// actions
 
 /**
  * ## Production-ready Checklist:
- *  * (?) implementation of component approved by design team;
- *  * (?) has storybook, covered with stories and documentation;
- *  * (?) has tests: test every prop, every state and every interaction that's js related;
+ *  * (✔) implementation of component approved by design team;
+ *  * (✔) has storybook, covered with stories and documentation;
+ *  * (✔) has tests: test every prop, every state and every interaction that's js related;
  *  * (see apps/test/unit/componentLibrary/ModalTest.tsx)
  *  * (?) passes accessibility checks;
  *
- * ###  Status: ```WIP```
+ * ###  Status: ```Ready for dev```
  *
  * Design System: Modal Component.
- * Renders Alert to notify user about something.
+ * Renders Modal window that user should interact with.
  */
 const Modal: React.FunctionComponent<ModalProps> = ({
   title,
-  color = 'light',
-  content,
-  showSecondaryButton,
+  description,
+  primaryButtonProps,
+  secondaryButtonProps,
+  mode = 'light',
   className,
+  customContent,
+  customBottomContent,
   onClose,
-  closeLabel = 'Close dialog',
+  closeLabel = 'Close modal',
+  icon,
+  imageUrl,
   ...HTMLAttributes
 }) => {
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  useBodyScrollLock(true);
+  useFocusTrap(modalRef);
+  useEscapeKeyHandler(onClose);
+
   return (
-    <div
-      className={classnames(
-        moduleStyles.dialog,
-        moduleStyles[`dialog-${color}`],
-        className
-      )}
-      role="dialog"
-      {...HTMLAttributes}
-    >
-      <div>
-        <span>{title}</span>
-        <span className={moduleStyles.dialogContent}>{content}</span>
-        {showSecondaryButton && (
+    <div role="presentation" className={moduleStyles.dialogOverlay}>
+      <div
+        role="dialog"
+        ref={modalRef}
+        aria-modal
+        aria-label={title}
+        aria-describedby="dsco-dialog-description"
+        className={classnames(
+          moduleStyles.dialog,
+          moduleStyles[`dialog-${mode}`],
+          className
+        )}
+        {...HTMLAttributes}
+      >
+        <div className={moduleStyles.dialogTextSection}>
+          {imageUrl && <img src={imageUrl} alt="modal" />}
+          <Heading2>{title}</Heading2>
+          {description && (
+            <BodyTwoText
+              id="dsco-dialog-description"
+              className={moduleStyles.dialogContent}
+            >
+              {description}
+            </BodyTwoText>
+          )}
+          {customContent}
+        </div>
+        <div className={moduleStyles.dialogActionsSection}>
+          {secondaryButtonProps && (
+            <Button
+              type="secondary"
+              color={mode === 'light' ? 'black' : 'white'}
+              {...secondaryButtonProps}
+            />
+          )}
           <Button
-            type="secondary"
-            color="black"
-            text="Secondary Button"
-            onClick={() => null}
+            type="primary"
+            color={mode === 'light' ? 'purple' : 'white'}
+            {...primaryButtonProps}
+          />
+        </div>
+        {customBottomContent}
+
+        {icon && (
+          <FontAwesomeV6Icon {...icon} className={moduleStyles.dialogIcon} />
+        )}
+        {onClose && (
+          <CloseButton
+            aria-label={closeLabel}
+            onClick={onClose}
+            color={mode === 'light' ? 'dark' : 'light'}
+            size="l"
+            className={moduleStyles.dialogCloseButton}
           />
         )}
-        <Button
-          type="primary"
-          color="purple"
-          text="Primary Button"
-          onClick={() => null}
-        />
       </div>
-      {onClose && (
-        <CloseButton aria-label={closeLabel} onClick={onClose} size="l" />
-      )}
     </div>
   );
 };

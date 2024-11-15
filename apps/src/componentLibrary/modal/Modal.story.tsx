@@ -4,7 +4,7 @@ import React from 'react';
 import Modal, {ModalProps} from './Modal';
 
 export default {
-  title: 'DesignSystem/[WIP]Modal', // eslint-disable-line storybook/no-title-property-in-meta
+  title: 'DesignSystem/Modal', // eslint-disable-line storybook/no-title-property-in-meta
   component: Modal,
 } as Meta;
 
@@ -33,41 +33,68 @@ const MultipleTemplate: StoryFn<{
 export const DefaultModal = SingleTemplate.bind({});
 DefaultModal.args = {
   title: 'Default Modal',
-  content: 'This is the content of the default dialog.',
-  onClose: () => console.log('Modal closed'),
+  description: 'This is the content of the default modal.',
+  primaryButtonProps: {
+    text: 'Close',
+    onClick: () => console.log('Modal closed'),
+  },
 };
 
 export const ModalWithSecondaryButton = SingleTemplate.bind({});
 ModalWithSecondaryButton.args = {
   title: 'Modal with Secondary Button',
-  content: 'This dialog includes a secondary button.',
-  showSecondaryButton: true,
+  description: 'This modal includes a secondary button.',
+  primaryButtonProps: {
+    text: 'Primary Action',
+    onClick: () => console.log('Primary action clicked'),
+  },
+  secondaryButtonProps: {
+    text: 'Secondary Action',
+    onClick: () => console.log('Secondary action clicked'),
+  },
   onClose: () => console.log('Modal with secondary button closed'),
 };
 
 export const ModalWithImage = SingleTemplate.bind({});
 ModalWithImage.args = {
   title: 'Modal with Image',
-  content: 'This dialog includes an image at the top.',
-  modalImageUrl: 'https://via.placeholder.com/150', // Example image URL
-  onClose: () => console.log('Modal with image closed'),
-};
-
-export const InlineImageModal = SingleTemplate.bind({});
-InlineImageModal.args = {
-  title: 'Inline Image Modal',
-  content: 'This dialog shows an inline image.',
-  modalImageUrl: 'https://via.placeholder.com/150', // Example image URL
-  isImageInline: true,
-  onClose: () => console.log('Inline image modal closed'),
+  description: 'This modal includes an image at the top.',
+  imageUrl: 'https://via.placeholder.com/150', // Example image URL
+  primaryButtonProps: {
+    text: 'Close',
+    onClick: () => console.log('Modal with image closed'),
+  },
 };
 
 export const DarkModal = SingleTemplate.bind({});
 DarkModal.args = {
   title: 'Dark Mode Modal',
-  content: 'This dialog uses the dark color theme.',
-  color: 'dark',
-  onClose: () => console.log('Dark mode modal closed'),
+  description: 'This modal uses the dark color theme.',
+  mode: 'dark',
+  primaryButtonProps: {
+    text: 'Close',
+    onClick: () => console.log('Dark mode modal closed'),
+  },
+};
+
+export const ModalWithCustomBottomContent = SingleTemplate.bind({});
+ModalWithCustomBottomContent.args = {
+  title: 'Modal with Custom Bottom Content',
+  description: 'This modal includes custom content at the bottom.',
+  customBottomContent: (
+    <div style={{marginTop: '20px', textAlign: 'center'}}>
+      <button
+        type="button"
+        onClick={() => console.log('Custom action triggered')}
+      >
+        Custom Action
+      </button>
+    </div>
+  ),
+  primaryButtonProps: {
+    text: 'Close',
+    onClick: () => console.log('Modal with custom bottom content closed'),
+  },
 };
 
 export const MultipleModals = MultipleTemplate.bind({});
@@ -75,26 +102,41 @@ MultipleModals.args = {
   components: [
     {
       title: 'Modal 1',
-      content: 'Content for dialog 1',
-      onClose: () => console.log('Modal 1 closed'),
+      description: 'Description for modal 1.',
+      primaryButtonProps: {
+        text: 'Close',
+        onClick: () => console.log('Modal 1 closed'),
+      },
     },
     {
       title: 'Modal 2 with Secondary Button',
-      content: 'Content for dialog 2',
-      showSecondaryButton: true,
-      onClose: () => console.log('Modal 2 closed'),
+      description: 'Description for modal 2.',
+      primaryButtonProps: {
+        text: 'Primary Action',
+        onClick: () => console.log('Primary action for modal 2'),
+      },
+      secondaryButtonProps: {
+        text: 'Secondary Action',
+        onClick: () => console.log('Secondary action for modal 2'),
+      },
     },
     {
       title: 'Modal 3 with Image',
-      content: 'Content for dialog 3 with an image.',
-      modalImageUrl: 'https://via.placeholder.com/150',
-      onClose: () => console.log('Modal 3 closed'),
+      description: 'Description for modal 3 with an image.',
+      imageUrl: 'https://via.placeholder.com/150',
+      primaryButtonProps: {
+        text: 'Close',
+        onClick: () => console.log('Modal 3 closed'),
+      },
     },
     {
       title: 'Modal 4 with Dark Theme',
-      content: 'Content for dialog 4 with dark theme.',
-      color: 'dark',
-      onClose: () => console.log('Modal 4 closed'),
+      description: 'Content for modal 4 with dark theme.',
+      mode: 'dark',
+      primaryButtonProps: {
+        text: 'Close',
+        onClick: () => console.log('Modal 4 closed'),
+      },
     },
   ],
 };
