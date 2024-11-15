@@ -68,7 +68,7 @@ body {
   font-family: var(--main-font);
   font-weight: var(--regular-font-weight);
   font-style: normal;
-  font-size: 14px;
+  font-size: 15px;
   color: var(--neutral_dark);
   margin: 0;
 }
@@ -166,7 +166,7 @@ p {
 }
 
 .body-three {
-  font-size: 0.875rem;
+  font-size: 0.938rem;
   line-height: 1.54;
   margin-bottom: 1em;
 }
