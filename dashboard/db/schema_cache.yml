@@ -534,7 +534,7 @@ columns:
     'null': true
     default:
     default_function:
-    collation: utf8mb4_unicode_ci
+    collation: utf8mb3_unicode_ci
     comment:
   - *23
   - *24
@@ -9388,19 +9388,6 @@ indexes:
   experiments:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: experiments
-    name: index_experiments_on_end_at
-    unique: false
-    columns:
-    - end_at
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where:
-    type:
-    using: :btree
-    comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: experiments
     name: index_experiments_on_max_user_id
     unique: false
     columns:
@@ -9457,6 +9444,19 @@ indexes:
     unique: false
     columns:
     - start_at
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: experiments
+    name: index_experiments_on_end_at
+    unique: false
+    columns:
+    - end_at
     lengths: {}
     orders: {}
     opclasses: {}
@@ -10481,10 +10481,10 @@ indexes:
   parent_levels_child_levels:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: parent_levels_child_levels
-    name: index_parent_levels_child_levels_on_child_level_id
+    name: index_parent_levels_child_levels_on_parent_level_id
     unique: false
     columns:
-    - child_level_id
+    - parent_level_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -10494,10 +10494,10 @@ indexes:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: parent_levels_child_levels
-    name: index_parent_levels_child_levels_on_parent_level_id
+    name: index_parent_levels_child_levels_on_child_level_id
     unique: false
     columns:
-    - parent_level_id
+    - child_level_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -10711,19 +10711,6 @@ indexes:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_attendances
-    name: index_pd_attendances_on_marked_by_user_id
-    unique: false
-    columns:
-    - marked_by_user_id
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where:
-    type:
-    using: :btree
-    comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: pd_attendances
     name: index_pd_attendances_on_pd_enrollment_id
     unique: false
     columns:
@@ -10741,6 +10728,19 @@ indexes:
     unique: false
     columns:
     - teacher_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: pd_attendances
+    name: index_pd_attendances_on_marked_by_user_id
+    unique: false
+    columns:
+    - marked_by_user_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -11602,6 +11602,19 @@ indexes:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_workshop_survey_foorm_submissions
+    name: index_pd_workshop_survey_foorm_submissions_on_user_id
+    unique: false
+    columns:
+    - user_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: pd_workshop_survey_foorm_submissions
     name: index_pd_workshop_survey_foorm_submissions_on_pd_session_id
     unique: false
     columns:
@@ -11619,19 +11632,6 @@ indexes:
     unique: false
     columns:
     - pd_workshop_id
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where:
-    type:
-    using: :btree
-    comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: pd_workshop_survey_foorm_submissions
-    name: index_pd_workshop_survey_foorm_submissions_on_user_id
-    unique: false
-    columns:
-    - user_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -12162,6 +12162,19 @@ indexes:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: projects
+    name: storage_apps_project_type_index
+    unique: false
+    columns:
+    - project_type
+    lengths: 191
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: projects
     name: storage_apps_published_at_index
     unique: false
     columns:
@@ -12180,19 +12193,6 @@ indexes:
     columns:
     - standalone
     lengths: {}
-    orders: {}
-    opclasses: {}
-    where:
-    type:
-    using: :btree
-    comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: projects
-    name: storage_apps_project_type_index
-    unique: false
-    columns:
-    - project_type
-    lengths: 191
     orders: {}
     opclasses: {}
     where:
@@ -12578,19 +12578,6 @@ indexes:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: script_levels
-    name: index_script_levels_on_activity_section_id
-    unique: false
-    columns:
-    - activity_section_id
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where:
-    type:
-    using: :btree
-    comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: script_levels
     name: index_script_levels_on_script_id
     unique: false
     columns:
@@ -12608,6 +12595,19 @@ indexes:
     unique: false
     columns:
     - stage_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: script_levels
+    name: index_script_levels_on_activity_section_id
+    unique: false
+    columns:
+    - activity_section_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -13887,5 +13887,5 @@ database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter
   version:
   - 8
   - 0
-  - 32
-  full_version_string: 8.0.32
+  - 36
+  full_version_string: 8.0.36-0ubuntu0.20.04.1
