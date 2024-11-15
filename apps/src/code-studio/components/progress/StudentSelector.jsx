@@ -7,8 +7,6 @@ import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import i18n from '@cdo/locale';
 
-import style from './unit-overview.module.scss';
-
 const NO_SELECTED_STUDENT_ID = '';
 const MAX_NAME_LENGTH = 20;
 
@@ -56,7 +54,6 @@ function StudentSelector({
 
   return (
     <SimpleDropdown
-      className={style.studentSelect}
       labelText={i18n.viewingProgressFor()}
       aria-label={i18n.selectStudentOption()}
       selectedValue={selectedUserId ? selectedUserId : NO_SELECTED_STUDENT_ID}
