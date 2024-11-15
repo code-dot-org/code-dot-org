@@ -7,8 +7,9 @@ import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import i18n from '@cdo/locale';
 
+import style from './unit-overview.module.scss';
+
 const NO_SELECTED_STUDENT_ID = '';
-const MAX_NAME_LENGTH = 20;
 
 function StudentSelector({
   //from redux
@@ -21,7 +22,7 @@ function StudentSelector({
   );
 
   const handleSelectStudentChange = event => {
-    const newUserId = event.value;
+    const newUserId = event.target.value;
     updateQueryParam(
       'user_id',
       newUserId === NO_SELECTED_STUDENT_ID ? undefined : newUserId
@@ -43,21 +44,18 @@ function StudentSelector({
     students.map(student => ({
       value: student.id,
       text: student.familyName
-        ? student.familyName.length + student.name.length < MAX_NAME_LENGTH
-          ? `${student.name} ${student.familyName}`
-          : `${student.name} ${student.familyName}`
-              .substring(0, MAX_NAME_LENGTH - 1)
-              .concat('', '...')
+        ? `${student.name} ${student.familyName}`
         : `${student.name}`,
     }))
   );
 
   return (
     <SimpleDropdown
+      className={style.studentSelector}
       labelText={i18n.viewingProgressFor()}
       aria-label={i18n.selectStudentOption()}
       selectedValue={selectedUserId ? selectedUserId : NO_SELECTED_STUDENT_ID}
-      onChange={handleSelectStudentChange}
+      onChange={event => handleSelectStudentChange(event)}
       size="s"
       name="students"
       items={student_list}
