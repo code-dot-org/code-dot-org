@@ -11,12 +11,15 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
     let(:mail) {ActionMailer::Base.deliveries.first}
     let!(:user) {create(:user, email: email)}
 
-    it 'returns user with generated reset password tokens and sends an email' do
+    it 'returns user with generated reset password tokens' do
       _reset_password.must_equal user
       _(reset_password.reset_password_token).wont_be_nil
       _(reset_password.reset_password_sent_at).wont_be_nil
       _(reset_password.raw_token).wont_be_nil
+    end
 
+    it 'sends a password reset email' do
+      reset_password
       _(mail).wont_be_nil
       _(mail.to).must_equal [email]
       _(mail.subject).must_equal 'Code.org reset password instructions'
@@ -25,12 +28,15 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
     context 'when account is unmigrated' do
       let!(:user) {create(:user, :demigrated, email: email)}
 
-      it 'returns user with generated reset password tokens and sends an email' do
+      it 'returns user with generated reset password tokens' do
         _reset_password.must_equal user
         _(reset_password.reset_password_token).wont_be_nil
         _(reset_password.reset_password_sent_at).wont_be_nil
         _(reset_password.raw_token).wont_be_nil
+      end
 
+      it 'sends a password reset email' do
+        reset_password
         _(mail).wont_be_nil
         _(mail.to).must_equal [email]
         _(mail.subject).must_equal 'Code.org reset password instructions'
@@ -55,12 +61,15 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
           reset_password
         end
 
-        it 'returns new user instance without reset password tokens and does not send email' do
+        it 'returns new user instance without reset password tokens' do
           _reset_password.must_be_instance_of User
           _(reset_password.reset_password_token).must_be_nil
           _(reset_password.reset_password_sent_at).must_be_nil
           _(reset_password.raw_token).must_be_nil
+        end
 
+        it 'does not send a password reset email' do
+          reset_password
           _(mail).must_be_nil
         end
       end
@@ -72,12 +81,15 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
           user.authentication_options.append(email_auth_option)
         end
 
-        it 'returns user with generated reset password tokens and sends an email' do
+        it 'returns user with generated reset password tokens' do
           _reset_password.must_equal user
           _(reset_password.reset_password_token).wont_be_nil
           _(reset_password.reset_password_sent_at).wont_be_nil
           _(reset_password.raw_token).wont_be_nil
+        end
 
+        it 'sends a password reset email' do
+          reset_password
           _(mail).wont_be_nil
           _(mail.to).must_equal [email]
           _(mail.subject).must_equal 'Code.org reset password instructions'
@@ -105,23 +117,29 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
           reset_password
         end
 
-        it 'returns new user instance without reset password tokens and does not send email' do
+        it 'returns new user instance without reset password tokens' do
           _reset_password.must_be_instance_of User
           _(reset_password.reset_password_token).must_be_nil
           _(reset_password.reset_password_sent_at).must_be_nil
           _(reset_password.raw_token).must_be_nil
+        end
 
+        it 'does not send a password reset email' do
+          reset_password
           _(mail).must_be_nil
         end
       end
 
       context 'when account has email authentication' do
-        it 'returns user with generated reset password tokens and sends an email' do
+        it 'returns user with generated reset password tokens' do
           _reset_password.must_equal user
           _(reset_password.reset_password_token).wont_be_nil
           _(reset_password.reset_password_sent_at).wont_be_nil
           _(reset_password.raw_token).wont_be_nil
+        end
 
+        it 'sends a password reset email' do
+          reset_password
           _(mail).wont_be_nil
           _(mail.to).must_equal [email]
           _(mail.subject).must_equal 'Code.org reset password instructions'
