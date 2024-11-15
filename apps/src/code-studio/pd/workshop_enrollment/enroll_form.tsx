@@ -218,10 +218,14 @@ export default function EnrollForm(props: EnrollFormProps) {
   };
 
   const handleClickRegister = () => {
-    const errors = getRequiredFieldErrors();
-    setFormErrors(errors);
-    if (!Object.keys(errors).length) {
+    if (props.workshop_course === COURSE_BUILD_YOUR_OWN) {
       submit();
+    } else {
+      const errors = getRequiredFieldErrors();
+      setFormErrors(errors);
+      if (!Object.keys(errors).length) {
+        submit();
+      }
     }
   };
 
