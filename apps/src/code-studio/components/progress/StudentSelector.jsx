@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
-import Select from 'react-select';
 
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
-import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import i18n from '@cdo/locale';
 
 import style from './unit-overview.module.scss';
@@ -37,37 +36,34 @@ function StudentSelector({
     return null;
   }
 
+  const student_list = [
+    {
+      value: NO_SELECTED_STUDENT_ID,
+      text: i18n.Me(),
+    },
+  ].concat(
+    students.map(student => ({
+      value: student.id,
+      text: student.familyName
+        ? student.familyName.length + student.name.length < MAX_NAME_LENGTH
+          ? `${student.name} ${student.familyName}`
+          : `${student.name} ${student.familyName}`
+              .substring(0, MAX_NAME_LENGTH - 1)
+              .concat('', '...')
+        : `${student.name}`,
+    }))
+  );
+
   return (
-    <Select
+    <SimpleDropdown
       className={style.studentSelect}
-      name="students"
-      clearable={false}
-      searchable={false}
+      labelText={i18n.viewingProgressFor()}
       aria-label={i18n.selectStudentOption()}
-      value={selectedUserId || NO_SELECTED_STUDENT_ID}
+      selectedValue={selectedUserId ? selectedUserId : NO_SELECTED_STUDENT_ID}
       onChange={handleSelectStudentChange}
-      options={[
-        {
-          value: NO_SELECTED_STUDENT_ID,
-          label: <BodyThreeText>{i18n.Me()}</BodyThreeText>,
-        },
-      ].concat(
-        students.map(student => ({
-          value: student.id,
-          label: (
-            <BodyThreeText>
-              {student.familyName
-                ? student.familyName.length + student.name.length <
-                  MAX_NAME_LENGTH
-                  ? `${student.name} ${student.familyName}`
-                  : `${student.name} ${student.familyName}`
-                      .substring(0, MAX_NAME_LENGTH - 1)
-                      .concat('', '...')
-                : `${student.name}`}
-            </BodyThreeText>
-          ),
-        }))
-      )}
+      size="s"
+      name="students"
+      items={student_list}
     />
   );
 }
