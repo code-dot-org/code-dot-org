@@ -1,5 +1,5 @@
 # Below are rules we don't plan to enable in the forseeable future. Rules we
-# plan to fix (but are currently failing) belong in .rubocop_todo.yml.
+# plan to fix (but are currently failing) belong in .config/rubocop/todo.yml.
 
 Metrics/BlockLength:
   Enabled: false
