@@ -101,32 +101,10 @@
   top: 1;
 }
 
-.studentSelector {
-  width: 300px;
-}
-
-.submitStatusText {
-  display: inline;
-  padding-top: 3px;
-  p {
-    margin-bottom: 0;
-  }
-  overflow: hidden;
-  height: 20px;
-  text-overflow: ellipsis;
-}
-
-.studentDropdownOptionContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.studentDropdownOption {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 5px;
-  margin-top: 3px;
-  height: 26px;
+.studentSelect {
+  width: 320px;
+  height: 32px;
+  padding: 5px 16px;
+  border: solid 1px $neutral_dark40;
+  border-radius: 4px;
 }

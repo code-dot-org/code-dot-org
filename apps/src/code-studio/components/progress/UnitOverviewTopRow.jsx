@@ -152,7 +152,12 @@ class UnitOverviewTopRow extends React.Component {
             {!deeperLearningCourse && viewAs === ViewType.Instructor && (
               <div style={styles.sectionContainer}>
                 {showV2TeacherDashboard() ? (
-                  <StudentSelector />
+                  <div>
+                    <label style={styles.studentSelectorLabel}>
+                      {i18n.viewingProgressFor()}
+                    </label>
+                    <StudentSelector />
+                  </div>
                 ) : (
                   <SectionAssigner
                     sections={sectionsForDropdown}
@@ -242,8 +247,8 @@ const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  studentSelector: {
-    width: 300,
+  studentSelectorLabel: {
+    fontWeight: 600,
   },
 };
 

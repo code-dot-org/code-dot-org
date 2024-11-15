@@ -3,27 +3,34 @@ import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import Select from 'react-select';
 
+import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
-import {BodyThreeText, EmText} from '@cdo/apps/componentLibrary/typography';
+import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
 import style from './unit-overview.module.scss';
 
-const NO_SELECTED_SECTION_VALUE = '';
+const NO_SELECTED_STUDENT_ID = '';
 const MAX_NAME_LENGTH = 20;
 
 function StudentSelector({
   //from redux
   students,
+  selectUser,
 }) {
-  const [selectedUserId, setSelectedUserId] = useState(null);
+  const url_params = new URLSearchParams(window.location.search);
+  const [selectedUserId, setSelectedUserId] = useState(
+    url_params.get('user_id')
+  );
+
   const handleSelectStudentChange = event => {
     const newUserId = event.value;
-    setSelectedUserId(newUserId);
     updateQueryParam(
       'user_id',
-      newUserId === NO_SELECTED_SECTION_VALUE ? undefined : newUserId
+      newUserId === NO_SELECTED_STUDENT_ID ? undefined : newUserId
     );
+    setSelectedUserId(newUserId);
+    selectUser(newUserId);
   };
 
   if (students.length === 0) {
@@ -32,43 +39,32 @@ function StudentSelector({
 
   return (
     <Select
-      className={'uitest-studentselect'}
+      className={style.studentSelect}
       name="students"
       clearable={false}
       searchable={false}
       aria-label={i18n.selectStudentOption()}
-      value={selectedUserId || NO_SELECTED_SECTION_VALUE}
+      value={selectedUserId || NO_SELECTED_STUDENT_ID}
       onChange={handleSelectStudentChange}
-      options={(selectedUserId
-        ? []
-        : [
-            {
-              value: NO_SELECTED_SECTION_VALUE,
-              label: (
-                <BodyThreeText className={style.submitStatusText}>
-                  <EmText>{i18n.selectStudentOption()}</EmText>
-                </BodyThreeText>
-              ),
-            },
-          ]
-      ).concat(
+      options={[
+        {
+          value: NO_SELECTED_STUDENT_ID,
+          label: <BodyThreeText>{i18n.Me()}</BodyThreeText>,
+        },
+      ].concat(
         students.map(student => ({
           value: student.id,
           label: (
-            <div className={style.studentDropdownOptionContainer}>
-              <div className={style.studentDropdownOption}>
-                <BodyThreeText className={style.submitStatusText}>
-                  {student.familyName
-                    ? student.familyName.length + student.name.length <
-                      MAX_NAME_LENGTH
-                      ? `${student.name} ${student.familyName}`
-                      : `${student.name} ${student.familyName}`
-                          .substring(0, MAX_NAME_LENGTH - 1)
-                          .concat('', '...')
-                    : `${student.name}`}
-                </BodyThreeText>
-              </div>
-            </div>
+            <BodyThreeText>
+              {student.familyName
+                ? student.familyName.length + student.name.length <
+                  MAX_NAME_LENGTH
+                  ? `${student.name} ${student.familyName}`
+                  : `${student.name} ${student.familyName}`
+                      .substring(0, MAX_NAME_LENGTH - 1)
+                      .concat('', '...')
+                : `${student.name}`}
+            </BodyThreeText>
           ),
         }))
       )}
@@ -84,10 +80,18 @@ StudentSelector.propTypes = {
       name: PropTypes.string.isRequired,
     })
   ).isRequired,
+  selectUser: PropTypes.func.isRequired,
 };
 
 export const UnconnectedStudentSelector = StudentSelector;
 
-export default connect(state => ({
-  students: state.teacherSections.selectedStudents,
-}))(StudentSelector);
+export default connect(
+  state => ({
+    students: state.teacherSections.selectedStudents,
+  }),
+  dispatch => ({
+    selectUser(userId) {
+      dispatch(queryUserProgress(userId));
+    },
+  })
+)(StudentSelector);
