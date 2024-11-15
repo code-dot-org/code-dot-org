@@ -67,7 +67,6 @@ class SectionProgress extends Component {
   componentDidMount() {
     if (this.props.scriptId) {
       loadUnitProgress(this.props.scriptId, this.props.sectionId)?.then(() => {
-        console.log('loaded section id', this.props.sectionId);
         this.setState(state => ({
           ...state,
           loadedSectionId: this.props.sectionId,
@@ -82,7 +81,6 @@ class SectionProgress extends Component {
       prevProps.sectionId !== this.props.sectionId
     ) {
       loadUnitProgress(this.props.scriptId, this.props.sectionId)?.then(() => {
-        console.log('loaded section id', this.props.sectionId);
         this.setState(state => ({
           ...state,
           loadedSectionId: this.props.sectionId,

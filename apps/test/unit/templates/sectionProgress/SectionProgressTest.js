@@ -67,7 +67,6 @@ describe('SectionProgress', () => {
   it('done loading data does not show loading icon', async () => {
     const wrapper = setUp();
     await setTimeout(() => {}, 50);
-    console.log(wrapper.debug());
 
     expect(wrapper.find('#uitest-spinner').exists()).toEqual(false);
   });
