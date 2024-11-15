@@ -1,0 +1,25 @@
+---
+driver:
+  name: dokken
+provisioner:
+  name: dokken
+transport:
+  name: dokken
+verifier:
+  name: inspec
+platforms:
+  - name: ubuntu-20.04
+    driver:
+      image: dokken/ubuntu-20.04
+      privileged: true
+      #pid_one_command: /usr/lib/systemd/systemd
+      #volumes:
+      #  - /sys/fs/cgroup:/sys/fs/cgroup:ro
+suites:
+  - name: default
+    run_list:
+      - recipe[cdo-tippecanoe]
+    verifier:
+      inspec_tests:
+        - test/integration/default
+    attributes:
