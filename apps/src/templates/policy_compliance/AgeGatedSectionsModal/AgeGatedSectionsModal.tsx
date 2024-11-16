@@ -73,6 +73,8 @@ export const AgeGatedSectionsModal: React.FC<Props> = ({
     >
       <div
         className={styles.modalContainer}
+        // eslint-disable-next-line react/forbid-dom-props
+        data-testid="age-gated-sections-modal"
         id="uitest-age-gated-sections-modal"
       >
         <div>

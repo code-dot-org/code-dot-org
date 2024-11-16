@@ -92,9 +92,9 @@ export const AgeGatedSectionsTable: React.FC<Props> = ({ageGatedSections}) => {
       },
     };
   };
-  const gradesFormatter = (grades: string[] = []) => (
+  const gradesFormatter = (grades: string[]) => (
     <Typography semanticTag="p" visualAppearance="body-two">
-      {grades.join(', ')}
+      {grades && grades.join(', ')}
     </Typography>
   );
 
@@ -140,6 +140,7 @@ export const AgeGatedSectionsTable: React.FC<Props> = ({ageGatedSections}) => {
         <Table.Provider
           columns={columns}
           style={tableLayoutStyles.table}
+          // eslint-disable-next-line react/forbid-component-props
           data-testid="uitest-age-gated-sections-table"
         >
           <Table.Header />
