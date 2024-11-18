@@ -977,14 +977,17 @@ class ManageStudentsTable extends Component {
             </div>
           )}
         </div>
-        <Table.Provider
-          columns={columns}
-          style={tableLayoutStyles.table}
-          id="uitest-manage-students-table"
-        >
-          <Table.Header />
-          <Table.Body rows={sortedRows} rowKey="id" />
-        </Table.Provider>
+        <div style={{overflowX: 'auto', width: '100%'}}>
+          <Table.Provider
+            columns={columns}
+            style={tableLayoutStyles.table}
+            id="uitest-manage-students-table"
+          >
+            <Table.Header />
+            <Table.Body rows={sortedRows} rowKey="id" />
+          </Table.Provider>
+        </div>
+
         <ManageStudentsLoginInfo
           sectionId={sectionId}
           sectionName={sectionName}
