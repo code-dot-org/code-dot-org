@@ -109,6 +109,7 @@ export const PopUpButton = ({
         id={id}
       />
       {isOpen &&
+        // We use a portal so the dropdown can appear above all other elements.
         createPortal(
           <div
             className={moduleStyles['popup-button-menu']}
