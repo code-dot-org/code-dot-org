@@ -60,7 +60,7 @@ export const PopUpButton = ({
     [setIsOpenFalse]
   );
 
-  // Effect to update tooltip styles when the tooltip is shown
+  // Effect to update dropdown position when it is shown.
   useEffect(() => {
     const updateDropdownPositionIfShown = () => {
       if (isOpen) {
