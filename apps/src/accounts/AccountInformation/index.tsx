@@ -142,6 +142,12 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
     }
   };
 
+  /**
+   * Page must be reloaded if student updates their age or state.
+   * These values affect whether or not the student is locked out,
+   * which is passed down to the account settings page components
+   * through script data.
+   */
   const handleReload = () => {
     if (
       isStudent &&
