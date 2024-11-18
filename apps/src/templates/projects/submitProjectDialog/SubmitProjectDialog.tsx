@@ -36,7 +36,7 @@ const SubmitProjectDialog: React.FunctionComponent<
   const [showSubmitError, setShowSubmitError] = useState<boolean>(false);
 
   useEffect(() => {
-    setIsSubmitButtonDisabled(!projectDescription.trim());
+    setIsSubmitButtonDisabled(projectDescription.trim().length < 100);
     setShowSubmitError(false);
   }, [projectDescription]);
 
@@ -86,7 +86,7 @@ const SubmitProjectDialog: React.FunctionComponent<
           'SubmitProjectDialog.SubmitForbiddenError'
         );
       }
-      setIsSubmitButtonDisabled(false);
+      setIsSubmitButtonDisabled(projectDescription.trim().length < 100);
       setShowSubmitError(true);
     }
   }, [

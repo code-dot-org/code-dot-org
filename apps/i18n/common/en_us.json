@@ -2905,7 +2905,7 @@
   "submitProjectGallery_exampleText": "Example text",
   "submitProjectGallery_goBack": "Go back",
   "submitProjectGallery_header": "Submit to be featured",
-  "submitProjectGallery_placeholder": "Please enter your project description.",
+  "submitProjectGallery_placeholder": "Please enter your project description (minimum of 100 characters).",
   "submitProjectGallery_submitDescribeProject": "You can submit your project to be considered for our Featured Projects gallery. If you're interested, please describe the project: ",
   "submitProjectGallery_thanksForSubmission": "Thanks for your submission.",
   "submitProjectGallery_tryAgain": "The project could not be submitted. Please try again later.",
