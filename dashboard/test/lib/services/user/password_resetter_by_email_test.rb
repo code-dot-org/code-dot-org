@@ -25,6 +25,18 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
       _(mail.subject).must_equal 'Code.org reset password instructions'
     end
 
+    it 'tracks PasswordResetEmailSuccessful metric' do
+      expected_env = 'expected_env'
+
+      CDO.expects(:rack_env).returns(expected_env)
+      Cdo::Metrics.
+        expects(:put).
+        with('User', 'PasswordResetEmailSuccessful', 1, {Environment: expected_env}).
+        once
+
+      reset_password
+    end
+
     context 'when account is unmigrated' do
       let!(:user) {create(:user, :demigrated, email: email)}
 
@@ -40,6 +52,18 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
         _(mail).wont_be_nil
         _(mail.to).must_equal [email]
         _(mail.subject).must_equal 'Code.org reset password instructions'
+      end
+
+      it 'tracks PasswordResetEmailSuccessful metric' do
+        expected_env = 'expected_env'
+
+        CDO.expects(:rack_env).returns(expected_env)
+        Cdo::Metrics.
+          expects(:put).
+          with('User', 'PasswordResetEmailSuccessful', 1, {Environment: expected_env}).
+          once
+
+        reset_password
       end
     end
 
@@ -94,6 +118,18 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
           _(mail.to).must_equal [email]
           _(mail.subject).must_equal 'Code.org reset password instructions'
         end
+
+        it 'tracks PasswordResetEmailSuccessful metric' do
+          expected_env = 'expected_env'
+
+          CDO.expects(:rack_env).returns(expected_env)
+          Cdo::Metrics.
+            expects(:put).
+            with('User', 'PasswordResetEmailSuccessful', 1, {Environment: expected_env}).
+            once
+
+          reset_password
+        end
       end
     end
 
@@ -143,6 +179,18 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
           _(mail).wont_be_nil
           _(mail.to).must_equal [email]
           _(mail.subject).must_equal 'Code.org reset password instructions'
+        end
+
+        it 'tracks PasswordResetEmailSuccessful metric' do
+          expected_env = 'expected_env'
+
+          CDO.expects(:rack_env).returns(expected_env)
+          Cdo::Metrics.
+            expects(:put).
+            with('User', 'PasswordResetEmailSuccessful', 1, {Environment: expected_env}).
+            once
+
+          reset_password
         end
       end
     end

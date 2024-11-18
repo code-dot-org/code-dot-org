@@ -1185,6 +1185,11 @@ class User < ApplicationRecord
     login = conditions.delete(:login)
     if login.present?
       return nil if login.size > max_credential_size || login.utf8mb4?
+      Cdo::Metrics.put(
+        'User', 'LoginByUsername', 1, {
+          Environment: CDO.rack_env
+        }
+      )
       # TODO: multi-auth (@eric, before merge!) have to handle this path, and make sure that whatever
       # indexing problems bit us on the users table don't affect the multi-auth table
       ignore_deleted_at_index.where(
@@ -1195,6 +1200,11 @@ class User < ApplicationRecord
       ).first
     elsif (hashed_email = conditions.delete(:hashed_email))
       return nil if hashed_email.size > max_credential_size || hashed_email.utf8mb4?
+      Cdo::Metrics.put(
+        'User', 'LoginByEmail', 1, {
+          Environment: CDO.rack_env
+        }
+      )
       return find_by_hashed_email(hashed_email)
     else
       nil

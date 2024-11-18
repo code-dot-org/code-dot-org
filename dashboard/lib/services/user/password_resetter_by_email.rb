@@ -45,6 +45,11 @@ module Services
       private def send_reset_password_instructions
         raw = user.send(:set_reset_password_token)
         user.send(:send_devise_notification, :reset_password_instructions, raw, {to: email})
+        Cdo::Metrics.put(
+          'User', 'PasswordResetEmailSuccessful', 1, {
+            Environment: CDO.rack_env
+          }
+        )
         raw
       rescue ArgumentError
         user.errors.add :base, I18n.t('password.reset_errors.invalid_email')
