@@ -18,8 +18,7 @@ import {AccountInformationProps} from './types';
 import styles from './style.module.scss';
 import commonStyles from '../common/common.styles.module.scss';
 
-const ACCOUNT_UPDATE_SUCCESS_PARAM = 'account-update-success';
-const SCROLL_POSITION_KEY = 'scrollPosition';
+const ACCOUNT_UPDATE_SUCCESS = 'account-update-success';
 
 export const AccountInformation: React.FC<AccountInformationProps> = ({
   verifiedTeacher,
@@ -92,18 +91,11 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
   );
 
   useEffect(() => {
-    const searchParams = new URLSearchParams(window.location.search);
-    if (searchParams?.has(ACCOUNT_UPDATE_SUCCESS_PARAM)) {
+    const accountUpdateSuccess =
+      sessionStorage.getItem(ACCOUNT_UPDATE_SUCCESS) === String(true);
+    if (accountUpdateSuccess) {
       setShowAccountUpdateSuccess(true);
-      const url = new URL(window.location.href);
-      url.searchParams.delete(ACCOUNT_UPDATE_SUCCESS_PARAM);
-      window.history.replaceState({}, '', url.toString());
-      const scrollPositionString = sessionStorage.getItem(SCROLL_POSITION_KEY);
-      if (scrollPositionString) {
-        const scrollPosition = JSON.parse(scrollPositionString);
-        window.scrollTo(scrollPosition.left, scrollPosition.top);
-        sessionStorage.removeItem(SCROLL_POSITION_KEY);
-      }
+      sessionStorage.removeItem(ACCOUNT_UPDATE_SUCCESS);
     }
   }, []);
 
@@ -153,13 +145,8 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
       isStudent &&
       (age !== userAge || usState !== userProperties?.us_state)
     ) {
-      sessionStorage.setItem(
-        SCROLL_POSITION_KEY,
-        JSON.stringify({top: window.scrollY, left: window.scrollX})
-      );
-      const url = new URL(window.location.href);
-      url.searchParams.set(ACCOUNT_UPDATE_SUCCESS_PARAM, '');
-      window.location.href = url.toString();
+      sessionStorage.setItem(ACCOUNT_UPDATE_SUCCESS, String(true));
+      window.location.reload();
     }
   };
 
