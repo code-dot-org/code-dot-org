@@ -88,6 +88,9 @@ export const PopUpButton = ({
     };
   }, [alignment, buttonRect, isOpen]);
 
+  // We wait to make the dropdown visible until we've calculated the position
+  // it should be in based on its own width and the size of the button.
+  // We do this to avoid the dropdown appearing in the wrong place momentarily.
   const dropdownStyleProps: React.CSSProperties = {
     visibility: updatedStyles ? 'visible' : 'hidden',
     ...dropdownStyles,
