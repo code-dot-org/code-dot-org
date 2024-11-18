@@ -827,6 +827,7 @@ class ManageStudentsTable extends Component {
     );
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
+    const tableStyle = showV2TeacherDashboard() ? styles.v2TableWidth : {};
 
     const decoratedRows = this.props.studentData.map(rowData => ({
       ...rowData,
@@ -979,11 +980,7 @@ class ManageStudentsTable extends Component {
             </div>
           )}
         </div>
-        <div
-          style={
-            showV2TeacherDashboard() ? {overflowX: 'auto', width: '100%'} : {}
-          }
-        >
+        <div style={tableStyle}>
           <Table.Provider
             columns={columns}
             style={tableLayoutStyles.table}
@@ -1045,6 +1042,10 @@ const styles = {
   },
   sectionCodeNotApplicable: {
     ...fontConstants['main-font-bold'],
+  },
+  v2TableWidth: {
+    width: '100%',
+    overflowX: 'auto',
   },
 };
 
