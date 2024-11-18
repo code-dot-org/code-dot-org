@@ -43,6 +43,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
       reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_SHOWN, {
         inSection: currentUser.inSection,
         consentStatus: currentUser.childAccountComplianceState,
+        usState: currentUser.usStateCode,
       });
     }
   }, [show, currentUser.inSection, currentUser.childAccountComplianceState]);
@@ -53,6 +54,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
     reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_CLICKED, {
       inSection: currentUser.inSection,
       consentStatus: currentUser.childAccountComplianceState,
+      usState: currentUser.usStateCode,
     });
   };
 
