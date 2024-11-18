@@ -67,6 +67,8 @@ import experiments from '@cdo/apps/util/experiments';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import {showV2TeacherDashboard} from '../../teacherNavigation/TeacherNavFlagUtils';
+
 const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
   SectionLoginType.word,
   SectionLoginType.picture,
@@ -977,7 +979,11 @@ class ManageStudentsTable extends Component {
             </div>
           )}
         </div>
-        <div style={{overflowX: 'auto', width: '100%'}}>
+        <div
+          style={
+            showV2TeacherDashboard() ? {overflowX: 'auto', width: '100%'} : {}
+          }
+        >
           <Table.Provider
             columns={columns}
             style={tableLayoutStyles.table}
