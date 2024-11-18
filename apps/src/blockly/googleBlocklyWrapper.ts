@@ -97,6 +97,7 @@ import {
 import CdoDarkTheme from './themes/cdoDark';
 import CdoHighContrastTheme from './themes/cdoHighContrast';
 import CdoHighContrastDarkTheme from './themes/cdoHighContrastDark';
+import CdoJigsawTheme from './themes/cdoJigsaw';
 import CdoTheme from './themes/cdoTheme';
 import {
   BlocklyWrapperType,
@@ -417,6 +418,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     [Themes.DARK]: CdoDarkTheme,
     [Themes.HIGH_CONTRAST]: CdoHighContrastTheme,
     [Themes.HIGH_CONTRAST_DARK]: CdoHighContrastDarkTheme,
+    [Themes.JIGSAW]: CdoJigsawTheme,
     [Themes.PROTANOPIA]: CdoProtanopiaTheme,
     [Themes.PROTANOPIA_DARK]: CdoProtanopiaDarkTheme,
     [Themes.DEUTERANOPIA]: CdoDeuteranopiaTheme,
@@ -768,6 +770,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     }
     // We override inject and have extra options we pass in, so we cast to utilize those options here.
     const optOptionsExtended = opt_options as ExtendedBlocklyOptions;
+    blocklyWrapper.isJigsaw = optOptionsExtended.isJigsaw;
     const options = {
       ...optOptionsExtended,
       theme: cdoUtils.getUserTheme(
@@ -864,7 +867,16 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       }
     };
 
-    if (!blocklyWrapper.isToolboxMode && !optOptionsExtended.isBlockEditMode) {
+    // Typically, we need to handle disabling blocks that are not connected to an
+    // appropriate top block. A few exceptions exist.
+    if (
+      // Blocks should not be disabled when editing a toolbox.
+      !blocklyWrapper.isToolboxMode &&
+      // When editing blocks in block pools, we do not need to disable them.
+      !optOptionsExtended.isBlockEditMode &&
+      // Jigsaw blocks are never disabled.
+      !blocklyWrapper.isJigsaw
+    ) {
       workspace.addChangeListener(disableOrphans);
     }
     if (blocklyWrapper.blockLimitMap && blocklyWrapper.blockLimitMap.size > 0) {

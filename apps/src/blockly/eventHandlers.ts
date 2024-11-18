@@ -58,15 +58,13 @@ export function disableOrphans(event: GoogleBlockly.Events.Abstract) {
   }
 
   const eventWorkspace = Blockly.Workspace.getById(blockEvent.workspaceId);
-  const block = eventWorkspace?.getBlockById(
-    blockEvent.blockId
-  ) as ExtendedBlock;
+  const block = eventWorkspace?.getBlockById(blockEvent.blockId);
   if (
     blockEvent.type === Blockly.Events.BLOCK_MOVE ||
     blockEvent.type === Blockly.Events.BLOCK_CREATE ||
     isEnabledEvent
   ) {
-    if (block && !block.getFillPattern()) {
+    if (block) {
       updateBlockEnabled(block);
     }
   } else if (

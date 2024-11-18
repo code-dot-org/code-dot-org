@@ -21,6 +21,7 @@ export enum Themes {
   DARK = 'cdomoderndark',
   HIGH_CONTRAST = 'cdohighcontrast',
   HIGH_CONTRAST_DARK = 'cdohighcontrastdark',
+  JIGSAW = 'jigsaw',
   PROTANOPIA = 'cdoprotanopia',
   PROTANOPIA_DARK = 'cdoprotanopiadark',
   DEUTERANOPIA = 'cdodeuteranopia',

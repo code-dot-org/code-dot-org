@@ -82,6 +82,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   readOnly: boolean;
   grayOutUndeletableBlocks: boolean;
   topLevelProcedureAutopopulate: boolean;
+  isJigsaw: boolean;
   getNewCursor: (type: string) => GoogleBlockly.Cursor;
   LineCursor: typeof GoogleBlockly.BasicCursor;
   version: BlocklyVersion;
@@ -286,6 +287,7 @@ export interface ExtendedBlocklyOptions extends GoogleBlockly.BlocklyOptions {
   disableParamEditing: boolean;
   showUnusedBlocks: boolean | undefined;
   analyticsData: AnalyticsData;
+  isJigsaw: boolean;
 }
 
 export interface ExtendedWorkspace extends GoogleBlockly.Workspace {

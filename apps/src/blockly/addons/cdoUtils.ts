@@ -396,6 +396,12 @@ export function getField(type: string) {
  * @returns {?Blockly.Field}
  */
 export function getUserTheme(themeOption: GoogleBlockly.Theme | undefined) {
+  if (Blockly.isJigsaw) {
+    // Jigsaw uses its own custom theme with an extra large font size.
+    // Blocks use hard-coded colors instead of styles, so switching
+    // palettes is not possible.
+    return Blockly.themes.jigsaw;
+  }
   // Today we only store the theme's base name in localStorage, which never includes 'dark'.
   // Until March, 2024 we stored the full theme name, so we need to convert it now.
   // getBaseName strips the 'dark' suffix from a theme name, if present.

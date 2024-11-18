@@ -2980,6 +2980,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     typeHints: utils.valueOr(config.level.showTypeHints, false),
     isBlocklyRtl:
       getStore().getState().isRtl && config.levelGameName !== 'Jigsaw', // disable RTL for blockly on jigsaw
+    isJigsaw: config.levelGameName === 'Jigsaw',
     analyticsData: {
       appType: config.app,
       scriptName: config.scriptName,
