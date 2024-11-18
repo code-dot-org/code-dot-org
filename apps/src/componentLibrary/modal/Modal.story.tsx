@@ -55,14 +55,27 @@ ModalWithSecondaryButton.args = {
   onClose: () => console.log('Modal with secondary button closed'),
 };
 
-export const ModalWithImage = SingleTemplate.bind({});
-ModalWithImage.args = {
-  title: 'Modal with Image',
-  description: 'This modal includes an image at the top.',
+export const ModalWithImageTopPlacement = SingleTemplate.bind({});
+ModalWithImageTopPlacement.args = {
+  title: 'Modal with Top Image Placement',
+  description: 'This modal includes an image placed at the top.',
   imageUrl: 'https://via.placeholder.com/150', // Example image URL
+  imagePlacement: 'top',
   primaryButtonProps: {
     text: 'Close',
-    onClick: () => console.log('Modal with image closed'),
+    onClick: () => console.log('Modal with image (top placement) closed'),
+  },
+};
+
+export const ModalWithImageInlinePlacement = SingleTemplate.bind({});
+ModalWithImageInlinePlacement.args = {
+  title: 'Modal with Inline Image Placement',
+  description: 'This modal includes an image placed inline with the content.',
+  imageUrl: 'https://via.placeholder.com/150', // Example image URL
+  imagePlacement: 'inline',
+  primaryButtonProps: {
+    text: 'Close',
+    onClick: () => console.log('Modal with image (inline placement) closed'),
   },
 };
 
@@ -121,9 +134,10 @@ MultipleModals.args = {
       },
     },
     {
-      title: 'Modal 3 with Image',
-      description: 'Description for modal 3 with an image.',
+      title: 'Modal 3 with Image (Top Placement)',
+      description: 'Description for modal 3 with an image at the top.',
       imageUrl: 'https://via.placeholder.com/150',
+      imagePlacement: 'top',
       primaryButtonProps: {
         text: 'Close',
         onClick: () => console.log('Modal 3 closed'),
