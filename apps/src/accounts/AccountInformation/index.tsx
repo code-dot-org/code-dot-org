@@ -18,7 +18,7 @@ import {AccountInformationProps} from './types';
 import styles from './style.module.scss';
 import commonStyles from '../common/common.styles.module.scss';
 
-const ACCOUNT_UPDATE_SUCCESS = 'account-update-success';
+export const ACCOUNT_UPDATE_SUCCESS = 'account-update-success';
 
 export const AccountInformation: React.FC<AccountInformationProps> = ({
   verifiedTeacher,
