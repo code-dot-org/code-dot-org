@@ -11,6 +11,12 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
     let(:mail) {ActionMailer::Base.deliveries.first}
     let!(:user) {create(:user, email: email)}
 
+    let(:cdo_rack_env) {'expected_cdo_rack_env'}
+
+    before do
+      CDO.stubs(:rack_env).returns(cdo_rack_env)
+    end
+
     it 'returns user with generated reset password tokens' do
       _reset_password.must_equal user
       _(reset_password.reset_password_token).wont_be_nil
@@ -26,12 +32,9 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
     end
 
     it 'tracks PasswordResetEmailSuccessful metric' do
-      expected_env = 'expected_env'
-
-      CDO.expects(:rack_env).returns(expected_env)
       Cdo::Metrics.
         expects(:put).
-        with('User', 'PasswordResetEmailSuccessful', 1, {Environment: expected_env}).
+        with('User', 'PasswordResetEmailSuccessful', 1, {Environment: cdo_rack_env}).
         once
 
       reset_password
@@ -55,12 +58,9 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
       end
 
       it 'tracks PasswordResetEmailSuccessful metric' do
-        expected_env = 'expected_env'
-
-        CDO.expects(:rack_env).returns(expected_env)
         Cdo::Metrics.
           expects(:put).
-          with('User', 'PasswordResetEmailSuccessful', 1, {Environment: expected_env}).
+          with('User', 'PasswordResetEmailSuccessful', 1, {Environment: cdo_rack_env}).
           once
 
         reset_password
@@ -74,12 +74,9 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
 
       context 'when account does not have email authentication' do
         it 'tracks PasswordResetEmailAuthNotFound metric' do
-          expected_env = 'expected_env'
-
-          CDO.expects(:rack_env).returns(expected_env)
           Cdo::Metrics.
             expects(:put).
-            with('User', 'PasswordResetEmailAuthNotFound', 1, {Environment: expected_env}).
+            with('User', 'PasswordResetEmailAuthNotFound', 1, {Environment: cdo_rack_env}).
             once
 
           reset_password
@@ -120,12 +117,9 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
         end
 
         it 'tracks PasswordResetEmailSuccessful metric' do
-          expected_env = 'expected_env'
-
-          CDO.expects(:rack_env).returns(expected_env)
           Cdo::Metrics.
             expects(:put).
-            with('User', 'PasswordResetEmailSuccessful', 1, {Environment: expected_env}).
+            with('User', 'PasswordResetEmailSuccessful', 1, {Environment: cdo_rack_env}).
             once
 
           reset_password
@@ -142,12 +136,9 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
         end
 
         it 'tracks PasswordResetEmailAuthNotFound metric' do
-          expected_env = 'expected_env'
-
-          CDO.expects(:rack_env).returns(expected_env)
           Cdo::Metrics.
             expects(:put).
-            with('User', 'PasswordResetEmailAuthNotFound', 1, {Environment: expected_env}).
+            with('User', 'PasswordResetEmailAuthNotFound', 1, {Environment: cdo_rack_env}).
             once
 
           reset_password
@@ -182,12 +173,9 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
         end
 
         it 'tracks PasswordResetEmailSuccessful metric' do
-          expected_env = 'expected_env'
-
-          CDO.expects(:rack_env).returns(expected_env)
           Cdo::Metrics.
             expects(:put).
-            with('User', 'PasswordResetEmailSuccessful', 1, {Environment: expected_env}).
+            with('User', 'PasswordResetEmailSuccessful', 1, {Environment: cdo_rack_env}).
             once
 
           reset_password
@@ -198,12 +186,9 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
       let(:user) {nil}
 
       it 'tracks PasswordResetUserNotFound metric' do
-        expected_env = 'expected_env'
-
-        CDO.expects(:rack_env).returns(expected_env)
         Cdo::Metrics.
           expects(:put).
-          with('User', 'PasswordResetUserNotFound', 1, {Environment: expected_env}).
+          with('User', 'PasswordResetUserNotFound', 1, {Environment: cdo_rack_env}).
           once
 
         reset_password
