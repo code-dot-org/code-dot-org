@@ -2,6 +2,9 @@
 
 All notable changes to this component will be documented in this file.
 
+## [2.0.2](https://github.com/code-dot-org/code-dot-org/pull/62481)
+* update `@mixin body-three` font-size to 15px/0.938rem
+
 ## [2.0.1](https://github.com/code-dot-org/code-dot-org/pull/53337)
 * add ```ExtraStrong``` typography element
 
