@@ -6,10 +6,7 @@ import CloseButton from '@cdo/apps/componentLibrary/closeButton';
 import useBodyScrollLock from '@cdo/apps/componentLibrary/common/hooks/useBodyScrollLock';
 import useEscapeKeyHandler from '@cdo/apps/componentLibrary/common/hooks/useEscapeKeyHandler';
 import useFocusTrap from '@cdo/apps/componentLibrary/common/hooks/useFocusTrap';
-import FontAwesomeV6Icon, {
-  FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import {BodyTwoText, Heading2} from '@cdo/apps/componentLibrary/typography';
+import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
 
 import moduleStyles from './modal.module.scss';
 
@@ -28,7 +25,7 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   /** Modal primary button props */
   primaryButtonProps: ButtonProps;
   /** Modal secondary button props */
-  secondaryButtonProps?: ButtonProps;
+  secondaryButtonProps: ButtonProps;
   /** Modal color mode */
   mode?: 'light' | 'dark';
   /** Custom class name */
@@ -37,18 +34,17 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   onClose?: () => void;
   /** Modal close button aria label */
   closeLabel?: string;
-  /** Modal icon */
-  icon?: FontAwesomeV6IconProps;
   /** Modal image url */
   imageUrl?: string;
+  /** Modal image placement */
+  imagePlacement?: 'top' | 'inline';
 }
 
 // TODO:
-// title
-// image
-// description
-// customContent
-// actions
+// always show 2 buttons
+// add content section scroll possibility
+// make sure colors for dark modal image are alright
+// check the final image sizing
 
 /**
  * ## Production-ready Checklist:
@@ -74,8 +70,8 @@ const Modal: React.FunctionComponent<ModalProps> = ({
   customBottomContent,
   onClose,
   closeLabel = 'Close modal',
-  icon,
   imageUrl,
+  imagePlacement = 'top',
   ...HTMLAttributes
 }) => {
   const modalRef = useRef<HTMLDivElement>(null);
@@ -99,9 +95,17 @@ const Modal: React.FunctionComponent<ModalProps> = ({
         )}
         {...HTMLAttributes}
       >
-        <div className={moduleStyles.dialogTextSection}>
+        <div className={moduleStyles.modalTitleSection}>
+          <Heading3>{title}</Heading3>
+        </div>
+        <hr />
+        <div
+          className={classnames(
+            moduleStyles.modalContentSection,
+            moduleStyles[`modalContentSection-${imagePlacement}-imagePlacement`]
+          )}
+        >
           {imageUrl && <img src={imageUrl} alt="modal" />}
-          <Heading2>{title}</Heading2>
           {description && (
             <BodyTwoText
               id="dsco-dialog-description"
@@ -112,14 +116,14 @@ const Modal: React.FunctionComponent<ModalProps> = ({
           )}
           {customContent}
         </div>
-        <div className={moduleStyles.dialogActionsSection}>
-          {secondaryButtonProps && (
-            <Button
-              type="secondary"
-              color={mode === 'light' ? 'black' : 'white'}
-              {...secondaryButtonProps}
-            />
-          )}
+        <hr />
+        <div className={moduleStyles.modalActionsSection}>
+          <Button
+            type="secondary"
+            color={mode === 'light' ? 'black' : 'white'}
+            {...secondaryButtonProps}
+          />
+
           <Button
             type="primary"
             color={mode === 'light' ? 'purple' : 'white'}
@@ -128,16 +132,13 @@ const Modal: React.FunctionComponent<ModalProps> = ({
         </div>
         {customBottomContent}
 
-        {icon && (
-          <FontAwesomeV6Icon {...icon} className={moduleStyles.dialogIcon} />
-        )}
         {onClose && (
           <CloseButton
             aria-label={closeLabel}
             onClick={onClose}
             color={mode === 'light' ? 'dark' : 'light'}
             size="l"
-            className={moduleStyles.dialogCloseButton}
+            className={moduleStyles.modalCloseButton}
           />
         )}
       </div>
