@@ -1,0 +1,23 @@
+{
+  "name": "frontend",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "turbo": "^2.3.0",
+    "typescript": "5.5.4"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "yarn@4.5.1",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
