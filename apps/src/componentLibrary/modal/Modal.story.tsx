@@ -1,5 +1,7 @@
 import {Meta, StoryFn} from '@storybook/react';
-import React from 'react';
+import React, {useState} from 'react';
+
+import {Button} from '@cdo/apps/componentLibrary/button';
 
 import Modal, {ModalProps} from './Modal';
 
@@ -11,39 +13,74 @@ export default {
 //
 // TEMPLATE
 //
-const SingleTemplate: StoryFn<ModalProps> = args => <Modal {...args} />;
+const SingleTemplate: StoryFn<ModalProps> = args => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div>
+      <Button onClick={() => setIsOpen(true)} text="Open Modal" />
+      {isOpen && (
+        <Modal
+          {...args}
+          onClose={
+            args.onClose
+              ? () => {
+                  setIsOpen(false);
+                }
+              : undefined
+          }
+        />
+      )}
+    </div>
+  );
+};
 
 const MultipleTemplate: StoryFn<{
   components: ModalProps[];
-}> = args => (
-  <>
-    <p>
-      * Margins on this screen do not represent the component's margins, and are
-      only added to improve Storybook view *
-    </p>
-    <p>Multiple Modals:</p>
-    <div style={{display: 'flex', flexDirection: 'column', gap: '20px'}}>
-      {args.components?.map((componentArg, index) => (
-        <Modal key={index} {...componentArg} />
-      ))}
-    </div>
-  </>
-);
+}> = args => {
+  const [values, setValues] = useState({} as Record<string, boolean>);
 
+  const handleClose = (index: number, title: string) => {
+    setValues({...values, [`${index}${title}`]: false});
+  };
+
+  return (
+    <>
+      <p>
+        * Margins on this screen do not represent the component's margins, and
+        are only added to improve Storybook view *
+      </p>
+      <p>Multiple Modals:</p>
+      <div style={{display: 'flex', flexDirection: 'column', gap: '20px'}}>
+        {args.components?.map((componentArg, index) => (
+          <div key={index}>
+            <Button
+              onClick={() =>
+                setValues({...values, [`${index}${componentArg.title}`]: true})
+              }
+              text={`Open ${componentArg.title}`}
+            />
+            {values[`${index}${componentArg.title}`] && (
+              <Modal
+                {...componentArg}
+                onClose={() => handleClose(index, componentArg.title || '')}
+              />
+            )}
+          </div>
+        ))}
+      </div>
+    </>
+  );
+};
+
+//
+// STORIES
+//
 export const DefaultModal = SingleTemplate.bind({});
 DefaultModal.args = {
   title: 'Default Modal',
-  description: 'This is the content of the default modal.',
-  primaryButtonProps: {
-    text: 'Close',
-    onClick: () => console.log('Modal closed'),
-  },
-};
-
-export const ModalWithSecondaryButton = SingleTemplate.bind({});
-ModalWithSecondaryButton.args = {
-  title: 'Modal with Secondary Button',
-  description: 'This modal includes a secondary button.',
+  description:
+    'This is a longer description for the default modal. It is designed to test how the modal handles large amounts of text and ensures proper display and scrolling behaviors.',
   primaryButtonProps: {
     text: 'Primary Action',
     onClick: () => console.log('Primary action clicked'),
@@ -52,62 +89,97 @@ ModalWithSecondaryButton.args = {
     text: 'Secondary Action',
     onClick: () => console.log('Secondary action clicked'),
   },
-  onClose: () => console.log('Modal with secondary button closed'),
+  onClose: () => null,
+};
+
+export const ModalWithoutCloseButton = SingleTemplate.bind({});
+ModalWithoutCloseButton.args = {
+  title: 'Modal without Close Button',
+  description:
+    'This modal provides both a primary and a secondary button for user interaction, enabling multiple actions without' +
+    ' a dedicated close button. Users can still dismiss the modal through other contextual actions.',
+  primaryButtonProps: {
+    text: 'Primary Action',
+    onClick: () => console.log('Primary action clicked'),
+  },
+  secondaryButtonProps: {
+    text: 'Secondary Action',
+    onClick: () => console.log('Secondary action clicked'),
+  },
 };
 
 export const ModalWithImageTopPlacement = SingleTemplate.bind({});
 ModalWithImageTopPlacement.args = {
   title: 'Modal with Top Image Placement',
-  description: 'This modal includes an image placed at the top.',
+  description:
+    'This modal includes an image placed at the top. This placement ensures that the visual content is prominent and aligns with the modal content effectively.',
   imageUrl: 'https://via.placeholder.com/150', // Example image URL
   imagePlacement: 'top',
   primaryButtonProps: {
-    text: 'Close',
-    onClick: () => console.log('Modal with image (top placement) closed'),
+    text: 'Primary Action',
+    onClick: () => console.log('Primary action clicked'),
   },
+  secondaryButtonProps: {
+    text: 'Secondary Action',
+    onClick: () => console.log('Secondary action clicked'),
+  },
+  onClose: () => null,
 };
 
 export const ModalWithImageInlinePlacement = SingleTemplate.bind({});
 ModalWithImageInlinePlacement.args = {
   title: 'Modal with Inline Image Placement',
-  description: 'This modal includes an image placed inline with the content.',
+  description:
+    'This modal includes an image placed inline with the content. It demonstrates how visual content can be integrated directly into the text for a cohesive layout.',
   imageUrl: 'https://via.placeholder.com/150', // Example image URL
   imagePlacement: 'inline',
   primaryButtonProps: {
-    text: 'Close',
-    onClick: () => console.log('Modal with image (inline placement) closed'),
+    text: 'Primary Action',
+    onClick: () => console.log('Primary action clicked'),
   },
+  secondaryButtonProps: {
+    text: 'Secondary Action',
+    onClick: () => console.log('Secondary action clicked'),
+  },
+  onClose: () => null,
 };
 
 export const DarkModal = SingleTemplate.bind({});
 DarkModal.args = {
   title: 'Dark Mode Modal',
-  description: 'This modal uses the dark color theme.',
+  description:
+    'This modal uses the dark color theme to create a visually distinct and focused experience for the user.',
   mode: 'dark',
   primaryButtonProps: {
-    text: 'Close',
-    onClick: () => console.log('Dark mode modal closed'),
+    text: 'Primary Action',
+    onClick: () => console.log('Primary action clicked'),
   },
+  secondaryButtonProps: {
+    text: 'Secondary Action',
+    onClick: () => console.log('Secondary action clicked'),
+  },
+  onClose: () => null,
 };
 
 export const ModalWithCustomBottomContent = SingleTemplate.bind({});
 ModalWithCustomBottomContent.args = {
   title: 'Modal with Custom Bottom Content',
-  description: 'This modal includes custom content at the bottom.',
+  description:
+    'This modal includes custom content at the bottom to demonstrate the flexibility of adding additional actions or information.',
   customBottomContent: (
-    <div style={{marginTop: '20px', textAlign: 'center'}}>
-      <button
-        type="button"
-        onClick={() => console.log('Custom action triggered')}
-      >
-        Custom Action
-      </button>
+    <div style={{textAlign: 'center'}}>
+      <Button text="Custom button" onClick={() => null} />
     </div>
   ),
   primaryButtonProps: {
     text: 'Close',
     onClick: () => console.log('Modal with custom bottom content closed'),
   },
+  secondaryButtonProps: {
+    text: 'Secondary Action',
+    onClick: () => console.log('Secondary action clicked'),
+  },
+  onClose: () => null,
 };
 
 export const MultipleModals = MultipleTemplate.bind({});
@@ -115,42 +187,48 @@ MultipleModals.args = {
   components: [
     {
       title: 'Modal 1',
-      description: 'Description for modal 1.',
-      primaryButtonProps: {
-        text: 'Close',
-        onClick: () => console.log('Modal 1 closed'),
-      },
-    },
-    {
-      title: 'Modal 2 with Secondary Button',
-      description: 'Description for modal 2.',
+      description:
+        'Description for modal 1. It includes text content to showcase the structure and behavior of a modal.',
       primaryButtonProps: {
         text: 'Primary Action',
-        onClick: () => console.log('Primary action for modal 2'),
+        onClick: () => console.log('Primary action for modal 1'),
       },
       secondaryButtonProps: {
         text: 'Secondary Action',
-        onClick: () => console.log('Secondary action for modal 2'),
+        onClick: () => console.log('Secondary action for modal 1'),
       },
+      onClose: () => null,
     },
     {
-      title: 'Modal 3 with Image (Top Placement)',
-      description: 'Description for modal 3 with an image at the top.',
+      title: 'Modal 2 with Image (Top Placement)',
+      description:
+        'Description for modal 3 with an image at the top. This demonstrates the visual integration of imagery within a modal.',
       imageUrl: 'https://via.placeholder.com/150',
       imagePlacement: 'top',
       primaryButtonProps: {
-        text: 'Close',
-        onClick: () => console.log('Modal 3 closed'),
+        text: 'Primary Action',
+        onClick: () => console.log('Primary action for modal 1'),
       },
+      secondaryButtonProps: {
+        text: 'Secondary Action',
+        onClick: () => console.log('Secondary action for modal 1'),
+      },
+      onClose: () => null,
     },
     {
-      title: 'Modal 4 with Dark Theme',
-      description: 'Content for modal 4 with dark theme.',
+      title: 'Modal 3 with Dark Theme',
+      description:
+        'Content for modal 4 with dark theme. This modal uses the dark color mode to enhance readability and focus.',
       mode: 'dark',
       primaryButtonProps: {
-        text: 'Close',
-        onClick: () => console.log('Modal 4 closed'),
+        text: 'Primary Action',
+        onClick: () => console.log('Primary action for modal 1'),
       },
+      secondaryButtonProps: {
+        text: 'Secondary Action',
+        onClick: () => console.log('Secondary action for modal 1'),
+      },
+      onClose: () => null,
     },
   ],
 };
