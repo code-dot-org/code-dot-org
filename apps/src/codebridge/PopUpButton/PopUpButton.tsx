@@ -23,7 +23,7 @@ export const PopUpButton = ({
   id,
 }: PopUpButtonProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [buttonRect, setButtonRect] = useState<DOMRect>();
+  const [buttonRef, setButtonRef] = useState<HTMLElement | null>(null);
   const [dropdownStyles, setDropdownStyles] = useState<React.CSSProperties>({});
   const dropdownRef = useRef<HTMLDivElement | null>(null);
   const [updatedStyles, setUpdatedStyles] = useState(false);
@@ -41,7 +41,7 @@ export const PopUpButton = ({
     ) => {
       e.stopPropagation();
       setUpdatedStyles(false);
-      setButtonRect((e.target as HTMLElement).getBoundingClientRect());
+      setButtonRef(e.target as HTMLElement);
       setIsOpen(oldIsOpen => {
         const newIsOpen = !oldIsOpen;
         if (newIsOpen) {
@@ -64,13 +64,14 @@ export const PopUpButton = ({
   useEffect(() => {
     const updateDropdownPositionIfShown = () => {
       if (isOpen) {
-        if (buttonRect && dropdownRef.current) {
+        if (buttonRef && dropdownRef.current) {
           const dropdownRect = dropdownRef.current.getBoundingClientRect();
-          const top = buttonRect.top + buttonRect.height + 5;
+          const buttonRect = buttonRef.getBoundingClientRect();
+          const top = buttonRect.top + buttonRect.height + 5 + window.scrollY;
           const left =
             alignment === 'right'
-              ? buttonRect.right - dropdownRect.width
-              : buttonRect.left;
+              ? buttonRect.right - dropdownRect.width + window.scrollX
+              : buttonRect.left + window.scrollX;
           setDropdownStyles({
             top,
             left,
@@ -86,7 +87,7 @@ export const PopUpButton = ({
     return () => {
       window.removeEventListener('resize', updateDropdownPositionIfShown);
     };
-  }, [alignment, buttonRect, isOpen]);
+  }, [alignment, buttonRef, isOpen]);
 
   // We wait to make the dropdown visible until we've calculated the position
   // it should be in based on its own width and the size of the button.
