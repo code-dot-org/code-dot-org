@@ -1,4 +1,4 @@
-@import 'color', 'font';
+@import "~@code-dot-org/legacy-css/color.scss", "~@code-dot-org/legacy-css/font.scss";
 
 // Typography - Label styles
 @mixin label-common {
