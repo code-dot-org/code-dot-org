@@ -1,4 +1,5 @@
-import {Meta, StoryFn} from '@storybook/react';
+import {Meta, StoryFn, StoryObj} from '@storybook/react';
+import {fn, within, userEvent, expect} from '@storybook/test'
 import React from 'react';
 
 import Button, {ButtonProps, buttonColors} from './Button';
@@ -9,6 +10,7 @@ export default {
   // @ts-ignore-next-line
   component: Button.type,
 } as Meta;
+type Story = StoryObj<typeof Button>;
 
 //
 // TEMPLATE
@@ -35,12 +37,21 @@ const MultipleTemplate: StoryFn<{
   </div>
 );
 
-export const DefaultButton = SingleTemplate.bind({});
-DefaultButton.args = {
-  text: 'Button',
-  onClick: () => null,
-  size: 'm',
-};
+export const DefaultButton: Story = {
+  args: {
+    text: 'Button',
+    onClick: fn(),
+    size: 'm'
+  },
+  play: async ({args, canvasElement}) => {
+    const canvas = within(canvasElement);
+
+    const button = canvas.getByText(args.text!);
+    await userEvent.click(button);
+
+    await expect(args.onClick).toHaveBeenCalled();
+  }
+}
 
 export const DisabledButton = SingleTemplate.bind({});
 DisabledButton.args = {

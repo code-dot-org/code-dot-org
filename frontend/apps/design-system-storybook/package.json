@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "yarn run storybook",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test-storybook": "test-storybook"
   },
   "devDependencies": {
     "@code-dot-org/legacy-css": "workspace:*",
