@@ -1,7 +1,7 @@
 @import "~@code-dot-org/legacy-css/color.scss";
 @import "~@code-dot-org/legacy-css/font.scss";
-@import "@cdo/apps/componentLibrary/common/styles/mixins";
-@import "@cdo/apps/componentLibrary/typography/typography.module";
+@import "@/common/styles/mixins";
+@import "@/typography/typography.module";
 
 // Breadcrumbs common styles
 .breadcrumbs {

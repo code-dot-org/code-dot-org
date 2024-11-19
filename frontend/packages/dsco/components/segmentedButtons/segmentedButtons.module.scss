@@ -1,6 +1,6 @@
 @import "~@code-dot-org/legacy-css/color.scss";
-@import '@cdo/apps/componentLibrary/common/styles/mixins';
-@import '@cdo/apps/componentLibrary/common/styles/colors.css';
+@import '@/common/styles/mixins';
+@import '@/common/styles/colors.css';
 
 .segmentedButtons {
   display: flex;

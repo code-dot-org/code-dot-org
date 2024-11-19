@@ -1,6 +1,6 @@
 @import "~@code-dot-org/legacy-css/color.scss";
-@import '@cdo/apps/componentLibrary/common/styles/primitiveColors.css';
-@import '@cdo/apps/componentLibrary/common/styles/mixins';
+@import '@/common/styles/primitiveColors.css';
+@import '@/common/styles/mixins';
 
 //Slider colors for use in JSX/TSX
 $slider-black-track-fill-color: $light_black;
