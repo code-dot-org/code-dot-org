@@ -12,7 +12,8 @@ import {
 import CustomDropdown, {
   _CustomDropdownOption,
 } from '@/dropdown/_CustomDropdown';
-import i18n from '@cdo/locale';
+// TODO: https://codedotorg.atlassian.net/browse/ACQ-2776
+// import i18n from '@cdo/locale';
 
 import moduleStyles from '@/dropdown/customDropdown.module.scss';
 
@@ -119,14 +120,18 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
           <Button
             type="tertiary"
             color={buttonColors.purple}
-            text={i18n.selectAll()}
+            // TODO: https://codedotorg.atlassian.net/browse/ACQ-2776
+            //text={i18n.selectAll()}
+            text={"Select All"}
             onClick={onSelectAll}
             size={size}
           />
           <Button
             type="tertiary"
             color={buttonColors.purple}
-            text={i18n.clearAll()}
+            // TODO: https://codedotorg.atlassian.net/browse/ACQ-2776
+            //text={i18n.clearAll()}
+            text={"Clear All"}
             onClick={onClearAll}
             size={size}
           />

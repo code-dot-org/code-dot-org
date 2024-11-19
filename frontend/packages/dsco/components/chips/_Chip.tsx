@@ -3,7 +3,8 @@ import React, {useEffect, useRef, memo, HTMLAttributes} from 'react';
 
 import moduleStyles from './chip.module.scss';
 
-const commonI18n = require('@cdo/locale');
+// TODO: https://codedotorg.atlassian.net/browse/ACQ-2776yy
+// const commonI18n = require('@cdo/locale');
 
 interface ChipProps extends HTMLAttributes<HTMLInputElement> {
   /** Chip label */
@@ -69,7 +70,9 @@ const Chip: React.FunctionComponent<ChipProps> = ({
           }}
           onInvalid={e => {
             (e.target as HTMLInputElement).setCustomValidity(
-              commonI18n.chooseAtLeastOne()
+              // TODO: https://codedotorg.atlassian.net/browse/ACQ-2776
+              // commonI18n.chooseAtLeastOne()
+              "At least once"
             );
           }}
           {...HTMLAttributes}
