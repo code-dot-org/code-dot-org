@@ -6,7 +6,7 @@ FROM mcr.microsoft.com/devcontainers/typescript-node:${VARIANT}
 
 # [Optional] Uncomment this section to install additional OS packages.
 # These are required to run playwright properly
- RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
      && apt-get -y install --no-install-recommends \
      xdg-utils git-lfs
 #     gconf-service libxext6 libxfixes3 libxi6 libxrandr2 \
@@ -32,3 +32,7 @@ FROM mcr.microsoft.com/devcontainers/typescript-node:${VARIANT}
 ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
 RUN corepack enable yarn && \
     yarn set version berry
+
+# Install Playwright
+ENV PLAYWRIGHT_BROWSERS_PATH=$HOME/.cache/ms-playwright
+RUN yarn dlx playwright install --with-deps
