@@ -4,7 +4,7 @@ import {
   Tooltip,
   TooltipProps,
   OverlayTriggerProps,
-} from 'react-bootstrap-2'; // TODO: Once we have [DSCO] Tooltip component, replace this import with it
+} from 'react-bootstrap'; // TODO: Once we have [DSCO] Tooltip component, replace this import with it
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
