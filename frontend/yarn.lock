@@ -18,6 +18,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/dsco@workspace:packages/dsco"
   dependencies:
+    "@code-dot-org/legacy-css": "workspace:*"
     "@types/node": "npm:^22.9.0"
     classnames: "npm:^2.5.1"
     clean-package: "npm:^2.2.0"
@@ -41,6 +42,12 @@ __metadata:
     prettier: "npm:^3.2.5"
     turbo: "npm:^2.3.0"
     typescript: "npm:5.5.4"
+  languageName: unknown
+  linkType: soft
+
+"@code-dot-org/legacy-css@workspace:*, @code-dot-org/legacy-css@workspace:packages/legacy-css":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/legacy-css@workspace:packages/legacy-css"
   languageName: unknown
   linkType: soft
 

@@ -18,7 +18,7 @@ export default defineConfig({
         sassPlugin({
             type: 'style',
             filter: /\.module\.scss$/,
-            loadPaths: ["@code-dot-org/css-poc"],
+            loadPaths: ["@code-dot-org/legacy-css"],
             transform: postcssModules({
                 generateScopedName: '[name]__[local]___[hash:base64:5]',
             }),
