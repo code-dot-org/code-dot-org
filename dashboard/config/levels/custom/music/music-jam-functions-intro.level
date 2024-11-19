@@ -162,8 +162,8 @@
         "next": true,
         "conditions": [
           {
-            "name": "played_sound_in_function_by_id",
-            "value": "intro-procedure-call"
+            "name": "played_sound_in_function",
+            "value": "intro-procedure"
           }
         ]
       },

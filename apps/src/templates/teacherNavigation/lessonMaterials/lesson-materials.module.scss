@@ -52,6 +52,9 @@
 
 .resourceLabel {
   margin-bottom: 0 !important;
+  a {
+    color: var(--text-neutral-primary);
+  }
 }
 
 .icon {

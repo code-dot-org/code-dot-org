@@ -56,29 +56,21 @@ class MultipleAssignButton extends React.Component {
       scriptId,
       assignmentName,
       isStandAloneUnit,
-      isRtl,
       sectionsForDropdown,
       participantAudience,
       isAssigningCourse,
       reassignConfirm,
     } = this.props;
 
-    // Adjust styles if locale is RTL
-    const buttonMarginStyle = isRtl
-      ? styles.buttonMarginRTL
-      : styles.buttonMargin;
-
     return (
       <div>
-        <div style={buttonMarginStyle}>
-          <Button
-            color={Button.ButtonColor.brandSecondaryDefault}
-            text={i18n.assignToMultipleSections()}
-            icon="plus"
-            onClick={this.handleClick}
-            className={'uitest-assign-button'}
-          />
-        </div>
+        <Button
+          color={Button.ButtonColor.brandSecondaryDefault}
+          text={i18n.assignToMultipleSections()}
+          icon="plus"
+          onClick={this.handleClick}
+          className={'uitest-assign-button'}
+        />
         {assignmentChoiceDialogOpen && (
           <MultipleSectionsAssigner
             assignmentName={assignmentName}
@@ -98,19 +90,6 @@ class MultipleAssignButton extends React.Component {
     );
   }
 }
-
-const styles = {
-  buttonMargin: {
-    marginLeft: 10,
-    display: 'flex',
-    alignItems: 'center',
-  },
-  buttonMarginRTL: {
-    marginRight: 10,
-    display: 'flex',
-    alignItems: 'center',
-  },
-};
 
 export const UnconnectedMultipleAssignButton = MultipleAssignButton;
 

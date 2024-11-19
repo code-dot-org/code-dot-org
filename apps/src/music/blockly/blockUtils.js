@@ -90,7 +90,7 @@ export function installFunctionBlocks(blockMode) {
     ) =>
       simple2FunctionCallGenerator(
         generator.getProcedureName(block.getFieldValue('NAME')),
-        block.id
+        block.getProcedureModel().id
       );
   }
   // Sets the help URL for each function definiton block to the appropriate

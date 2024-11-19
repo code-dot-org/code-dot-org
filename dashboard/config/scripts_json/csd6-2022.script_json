@@ -26,6 +26,7 @@
           "buttonText": "Learn More"
         }
       ],
+      "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -39,12 +40,15 @@
         "it-IT",
         "az-AZ"
       ],
+      "topic_tags": [
+        "maker"
+      ],
       "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-15 20:57:35 UTC",
+    "serialized_at": "2024-11-19 01:16:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

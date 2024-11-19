@@ -4,15 +4,19 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "CSC",
+      "content_area": "curriculum_k_5",
+      "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
+      "topic_tags": [
+        "maker"
+      ],
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": "grade5-maker",
-    "serialized_at": "2024-09-05 17:02:32 UTC",
+    "serialized_at": "2024-11-19 01:18:45 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

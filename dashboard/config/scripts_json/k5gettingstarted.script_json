@@ -4,7 +4,8 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "curriculum_umbrella": "Foundations of CS",
+      "content_area": "self_paced_pl_k_5",
+      "curriculum_umbrella": "CSF Self Paced PL",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
@@ -13,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-11 20:37:43 UTC",
+    "serialized_at": "2024-11-19 01:18:57 UTC",
     "published_state": null,
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

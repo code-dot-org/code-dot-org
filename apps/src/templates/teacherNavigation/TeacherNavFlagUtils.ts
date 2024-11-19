@@ -9,6 +9,11 @@ import experiments from '@cdo/apps/util/experiments';
 export const showV2TeacherDashboard: () => boolean = _.once(() => {
   return (
     DCDO.get('teacher-local-nav-v2', false) ||
-    experiments.isEnabled('teacher-local-nav-v2')
+    (!DCDO.get('teacher-local-nav-v2-override-experiment-use-only-ff', false) &&
+      experiments.isEnabled('teacher-local-nav-v2'))
   );
 });
+
+export const isOnTeacherDashboard: () => boolean = _.once(() =>
+  location.pathname.includes('teacher_dashboard')
+);

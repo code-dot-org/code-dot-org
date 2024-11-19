@@ -4,8 +4,8 @@
 export interface FunctionContext {
   /** Name of the function.  Possibly localized. */
   name: string;
-  /** ID of the block doing the function call. */
-  functionCallBlockId?: string;
+  /** Procedure ID of the function. */
+  procedureID?: string;
   /** Unique ID corresponding to each invocation */
   uniqueInvocationId: number;
 }

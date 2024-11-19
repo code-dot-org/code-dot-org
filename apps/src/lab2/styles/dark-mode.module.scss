@@ -1,6 +1,6 @@
 @import 'color.scss';
 
-.iconOnlyTertiaryButton {
+.tertiaryButton {
   // We use important here because the disabled, hover, and active styles used by Button
   // are more specific than a single class.
   &:hover, &:active {

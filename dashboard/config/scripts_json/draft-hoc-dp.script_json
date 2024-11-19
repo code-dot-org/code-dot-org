@@ -4,7 +4,8 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "HOC",
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_course": true,
       "is_migrated": true,
       "pilot_experiment": "hoc-ai-dance-party",
@@ -12,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "draft-hoc-dp",
-    "serialized_at": "2023-10-30 15:18:55 UTC",
+    "serialized_at": "2024-11-19 01:17:28 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -856,6 +857,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_video_intro_draft-3"
+        ],
         "progression": "Intro Video"
       },
       "bonus": false,
@@ -878,6 +882,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_drag_dancer_draft-3"
+        ],
         "progression": "Code a Dancer and Moves"
       },
       "bonus": false,
@@ -900,6 +907,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_drag_ai_cosmic_draft-3"
+        ],
         "progression": "Generate with AI "
       },
       "bonus": false,
@@ -922,6 +932,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_drag_ai_sad_draft-3"
+        ],
         "progression": "Generate with AI "
       },
       "bonus": false,
@@ -944,6 +957,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_Drag_ai_happy_debug_draft-3"
+        ],
         "progression": "Generate with AI "
       },
       "bonus": false,
@@ -966,6 +982,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "events_try_keypress_draft-3"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -988,6 +1007,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_key_press_events_1_draft-3"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -1010,6 +1032,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "events_try_at_measure_draft-3"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -1032,6 +1057,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_key_press_events_2_draft-3"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -1054,6 +1082,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_free_play_draft-3"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -1076,6 +1107,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AI Dance Choices_draft-3"
+        ],
         "progression": "Challenge Choices"
       },
       "bonus": false,

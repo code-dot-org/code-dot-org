@@ -1,5 +1,8 @@
 %h2= t('password.reset_form.title')
-= t('password.reset_form.instructions')
+- if current_user&.admin?
+  = "Enter the email address or username associated with the account you want to reset the password for. An email will be sent to the user if you use email to reset."
+- else
+  = t('password.reset_form.instructions')
 %br/
 %br/
 .row
@@ -7,6 +10,9 @@
     = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
       = render "devise/shared/error_messages", resource: resource
       = f.email_field :email, :autofocus => true, style: "width: 400px", placeholder: t('password.reset_form.email')
+      - if current_user&.admin?
+        = f.text_field :username, style: "width: 400px", placeholder: t('password.reset_form.username')
+
       = recaptcha_tags unless (current_user && current_user.admin?)
       = show_flashes.html_safe
       %br/

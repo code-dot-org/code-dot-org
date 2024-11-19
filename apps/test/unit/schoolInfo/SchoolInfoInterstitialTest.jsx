@@ -100,7 +100,8 @@ describe('SchoolInfoInterstitial', () => {
       expect(mockUpdateSchoolInfo).toHaveBeenCalledWith({
         schoolId: '1',
         country: 'US',
-        schoolName: 'Test School',
+        // schoolName is empty when schoolId is passed to useSchoolInfo, regardless of initial state
+        schoolName: '',
         schoolZip: '12345',
       });
 

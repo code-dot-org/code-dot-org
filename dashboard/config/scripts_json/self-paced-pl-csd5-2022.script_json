@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "self_paced_pl_6_8",
       "curriculum_umbrella": "CSD Self Paced PL",
       "has_verified_resources": true,
       "is_course": true,
@@ -14,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "self-paced-pl-csd5",
-    "serialized_at": "2024-01-25 21:29:14 UTC",
+    "serialized_at": "2024-11-19 01:19:32 UTC",
     "published_state": "stable",
     "instruction_type": "self_paced",
     "instructor_audience": "universal_instructor",

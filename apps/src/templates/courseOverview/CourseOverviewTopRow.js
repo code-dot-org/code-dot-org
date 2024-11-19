@@ -6,6 +6,8 @@ import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 
+import {showV2TeacherDashboard} from '../teacherNavigation/TeacherNavFlagUtils';
+
 export default class CourseOverviewTopRow extends Component {
   static propTypes = {
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
@@ -39,7 +41,7 @@ export default class CourseOverviewTopRow extends Component {
         {isInstructor && teacherResources.length > 0 && (
           <ResourcesDropdown resources={teacherResources} unitGroupId={id} />
         )}
-        {isInstructor && (
+        {isInstructor && !showV2TeacherDashboard() && (
           <SectionAssigner
             sections={sectionsForDropdown}
             showAssignButton={showAssignButton}

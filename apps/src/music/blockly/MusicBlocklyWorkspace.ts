@@ -192,18 +192,19 @@ export default class MusicBlocklyWorkspace {
    * @param blockMode Current block mode, such as "simple2" or "advanced"
    */
   compileSong(scope: object, blockMode: ValueOf<typeof BlockMode>) {
-    if (!this.workspace) {
+    const workspace = this.workspace;
+    if (!workspace) {
       this.metricsReporter.logWarning(
         'compileSong called before workspace initialized.'
       );
       return;
     }
-    Blockly.getGenerator().init(this.workspace);
+    Blockly.getGenerator().init(workspace);
 
     this.compiledEvents = {};
     this.triggerIdToStartType = {};
 
-    const topBlocks = this.workspace.getTopBlocks();
+    const topBlocks = workspace.getTopBlocks();
 
     topBlocks.forEach(block => {
       if (blockMode !== BlockMode.SIMPLE2) {
@@ -211,7 +212,7 @@ export default class MusicBlocklyWorkspace {
           this.compiledEvents.whenRunButton = {
             code:
               'var __context = "when_run";\n' +
-              Blockly.JavaScript.workspaceToCode(this.workspace),
+              Blockly.JavaScript.workspaceToCode(workspace),
             args: ['startPosition'],
           };
         }
@@ -220,7 +221,7 @@ export default class MusicBlocklyWorkspace {
           this.compiledEvents.whenRunButton = {
             code:
               'var __context = "when_run";\n' +
-              Blockly.JavaScript.workspaceToCode(this.workspace),
+              Blockly.JavaScript.workspaceToCode(workspace),
           };
         }
       }
@@ -254,7 +255,7 @@ export default class MusicBlocklyWorkspace {
         this.compiledEvents[triggerIdToEvent(id)] = {
           code:
             `var __context = "${id}";\n` +
-            Blockly.JavaScript.workspaceToCode(this.workspace),
+            Blockly.JavaScript.workspaceToCode(workspace),
           args: ['startPosition'],
         };
         // Also save the value of the trigger start field at compile time so we can
@@ -527,7 +528,6 @@ export default class MusicBlocklyWorkspace {
     allFunctions.sort(compareFunction).forEach(({name, id, parameters}) => {
       blockList.push({
         kind: 'block',
-        id: `${id}-call`,
         type: BLOCK_TYPES.procedureCall,
         extraState: {
           name,

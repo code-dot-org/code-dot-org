@@ -14,16 +14,38 @@ markdown <<MARKDOWN
 
 ### **You may have noticed**: 
 
-- #### Variable types: int, str, and list
-- #### concatenation in the print() function
-- #### simple math expressions
+- #### **variable types**: String (str), list, and integer (int)
+
+<img src="https://images.code.org/da314ff9c874057bfd60820b218aa7da-image-1731955353570.png" alt="code snippit in Python of variable declarations" width="275px" style="border-radius:10px; float:left; margin: 10px 10px 5px 0px;">
+
+<div style="clear:both;"></div>
+
+- #### **concatenation** in the print() function 
+####   (*concatenation means joining things together, like two piecs of text or data and uses `+`*)
+
+<img src="https://images.code.org/92c94d70ea193e361b84a90bded1e121-image-1731955461926.png" alt="code snippit in Python of concatination" width="625px" style="border-radius:10px; float:left; margin: 10px 10px 5px 0px;">
+
+<div style="clear:both;"></div>
+
+- #### **math expressions**
+
+<img src="https://images.code.org/a83cca16338ceb4d324b4a5a26c66fde-image-1731955602751.png" alt="code snippit in Python of concatination" width="300px" style="border-radius:10px; float:left; margin: 10px 10px 5px 0px;">
+
+<div style="clear:both;"></div> 
+
+## Analyze and Discuss
+
+#### The goal at this stage isn't for your students to master these concepts yet—those skills will come in later lessons. Instead, the focus is on encouraging your students to analyze and discuss the code, sparking critical thinking about how it works. 
+
+<br>
 
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px; "><strong> Teacher Tip: </strong>The goal at this stage isn't for your students to master these concepts yet—those skills will come in later lessons. Instead, the focus is on encouraging your students to analyze and discuss the code, sparking critical thinking about how it works. 
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 16px; "><strong> Teacher Tip: </strong> Consider doing these level types using whole class instruction or the think/pair/share strategy to encourage discussion. This curriculum is not designed for independent level progressions, but rather, it is designed to foster a collaborate learning environment.
 </p>
 </div>
 
 
-#### 
+
+![]()
 MARKDOWN

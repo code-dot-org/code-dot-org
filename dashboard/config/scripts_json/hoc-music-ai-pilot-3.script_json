@@ -4,14 +4,20 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_course": true,
       "is_migrated": true,
       "pilot_experiment": "hoc-music-ai-pilot-3",
+      "topic_tags": [
+        "ai",
+        "music_lab"
+      ],
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "hoc-music-ai-pilot-3",
-    "serialized_at": "2024-10-02 04:27:44 UTC",
+    "serialized_at": "2024-11-19 01:18:47 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -340,6 +346,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music_ai_panels_aibeatblock_temperature_3"
+        ],
         "progression": "AI Beat Block "
       },
       "bonus": false,
@@ -362,6 +371,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-skill-aibeats-temperature_3"
+        ],
         "progression": "AI Beat Block "
       },
       "bonus": false,

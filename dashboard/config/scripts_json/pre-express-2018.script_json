@@ -13,6 +13,7 @@
           "key": "66984aed-46b1-4a2f-8d2f-c88c9f13ead0"
         }
       ],
+      "content_area": "curriculum_k_5",
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-18/pre-express/{LESSON}",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
@@ -34,7 +35,7 @@
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2022-09-28 14:31:30 UTC",
+    "serialized_at": "2024-11-19 01:19:22 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -4385,6 +4386,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

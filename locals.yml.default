@@ -142,7 +142,10 @@ use_my_apps: true
 # invoke Python via PyCall. These will SEGV if run with the default async
 # adapter, because it uses threads instead of processes.
 #
-# If you enable `delayed_job`, you will need to manually run `bundle exec bin/delayed_job start`
-# from the dashboard/ directory to start the workers.
+# If you enable `delayed_job`, you will need to manually run `bundle exec rake build:start_active_job_workers`
 #
 # active_job_queue_adapter: :delayed_job
+#
+# Number of workers to start when running `rake build:start_active_job_workers`:
+# active_job_backend_n_workers_to_start: 2
+# active_job_backend_rolling_restart_in_n_batches: 1

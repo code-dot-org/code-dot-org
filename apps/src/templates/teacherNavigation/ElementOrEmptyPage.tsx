@@ -59,7 +59,7 @@ const ElementOrEmptyPage: React.FC<ElementOrEmptyPageProps> = ({
       return (
         <NavLink
           key={TEACHER_NAVIGATION_PATHS.roster}
-          to={TEACHER_NAVIGATION_PATHS.roster}
+          to={'../' + TEACHER_NAVIGATION_PATHS.roster}
           className={styles.navLink}
         >
           {i18n.addStudents()}

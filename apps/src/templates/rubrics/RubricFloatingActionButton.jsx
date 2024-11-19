@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {connect} from 'react-redux';
 
 import {BodyFourText, StrongText} from '@cdo/apps/componentLibrary/typography';
@@ -27,6 +27,7 @@ import {
   reportingDataShape,
   studentLevelInfoShape,
 } from './rubricShapes';
+import StudentScoresAlert from './StudentScoresAlert';
 
 import style from './rubrics.module.scss';
 
@@ -75,25 +76,34 @@ function RubricFloatingActionButton({
   aiEnabled,
   sectionId,
   notificationsEnabled,
+  canShowTaScoresAlert,
 }) {
   const sessionStorageKey = 'RubricFabOpenStateKey';
-  const [isOpen, setIsOpen] = useState(
-    JSON.parse(tryGetSessionStorage(sessionStorageKey, false)) || false
-  );
+
+  const initialIsOpen = useMemo(() => {
+    return JSON.parse(tryGetSessionStorage(sessionStorageKey, false)) || false;
+  }, []);
+  const [isOpen, setIsOpen] = useState(initialIsOpen);
+
   // Show the pulse if this is the first time the user has seen the FAB in this
   // session. Depends on other logic which sets the open state in session storage.
   const [isFirstSession] = useState(
-    JSON.parse(tryGetSessionStorage(sessionStorageKey, null)) === null
+    tryGetSessionStorage(sessionStorageKey, null) === null
   );
   const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
   const [isTaImageLoaded, setIsTaImageLoaded] = useState(false);
 
   const [internalError, setInternalError] = useState(null);
 
+  const onLevelForEvaluation = currentLevelName === rubric.level.name;
+
   const readyStudentCount = useAppSelector(selectReadyStudentCount);
   const hasLoadedStudentStatus = useAppSelector(selectHasLoadedStudentStatus);
   const showCountBubble =
-    notificationsEnabled && hasLoadedStudentStatus && readyStudentCount > 0;
+    onLevelForEvaluation &&
+    notificationsEnabled &&
+    hasLoadedStudentStatus &&
+    readyStudentCount > 0;
 
   const eventData = useMemo(() => {
     return {
@@ -108,8 +118,45 @@ function RubricFloatingActionButton({
       ? EVENTS.TA_RUBRIC_CLOSED_FROM_FAB_EVENT
       : EVENTS.TA_RUBRIC_OPENED_FROM_FAB_EVENT;
     analyticsReporter.sendEvent(eventName, eventData);
+    if (!isOpen && showCountBubble) {
+      setSeenTaScores();
+    }
     setIsOpen(!isOpen);
   };
+
+  const [hasSeenAlert, setHasSeenAlert] = useState(!canShowTaScoresAlert);
+  const showScoresAlert =
+    canShowTaScoresAlert && !hasSeenAlert && showCountBubble;
+
+  const [dismissConfirmed, setDismissConfirmed] = useState(false);
+
+  const setSeenTaScores = useCallback(() => {
+    setHasSeenAlert(true);
+
+    fetch(`/api/v1/users/set_seen_ta_scores`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({lesson_id: rubric.lesson.id}),
+    })
+      .then(response => {
+        setDismissConfirmed(true);
+      })
+      .catch(error => {
+        console.error('Error setting seen TA scores:', error);
+      });
+  }, [rubric.lesson.id]);
+
+  const viewScores = () => {
+    setSeenTaScores();
+    setIsOpen(true);
+  };
+
+  // Dismiss the alert if the TA window is open initially.
+  useEffect(() => {
+    if (canShowTaScoresAlert && !hasSeenAlert && initialIsOpen) {
+      setSeenTaScores();
+    }
+  }, [canShowTaScoresAlert, hasSeenAlert, initialIsOpen, setSeenTaScores]);
 
   const logInternalError = (error, componentStack) => {
     console.error(
@@ -183,15 +230,29 @@ function RubricFloatingActionButton({
         />
       </button>
       {showCountBubble ? (
-        <div className={style.countOverlay}>
-          <BodyFourText className={style.countText}>
-            <StrongText>
-              <span aria-label={i18n.aiEvaluationsToReview()}>
-                {readyStudentCount}
-              </span>
-            </StrongText>
-          </BodyFourText>
-        </div>
+        <>
+          <div
+            className={classnames(
+              style.countOverlay,
+              'uitest-count-bubble',
+              dismissConfirmed && 'uitest-dismiss-confirmed'
+            )}
+          >
+            <BodyFourText className={style.countText}>
+              <StrongText>
+                <span aria-label={i18n.aiEvaluationsToReview()}>
+                  {readyStudentCount}
+                </span>
+              </StrongText>
+            </BodyFourText>
+          </div>
+          {showScoresAlert && (
+            <StudentScoresAlert
+              closeAlert={setSeenTaScores}
+              viewScores={viewScores}
+            />
+          )}
+        </>
       ) : (
         <div
           className={style.taOverlay}
@@ -219,7 +280,7 @@ function RubricFloatingActionButton({
           rubric={rubric}
           studentLevelInfo={studentLevelInfo}
           reportingData={reportingData}
-          currentLevelName={currentLevelName}
+          onLevelForEvaluation={onLevelForEvaluation}
           teacherHasEnabledAi={aiEnabled}
           open={isOpen}
           closeRubric={handleClick}
@@ -238,6 +299,7 @@ RubricFloatingActionButton.propTypes = {
   aiEnabled: PropTypes.bool,
   sectionId: PropTypes.number,
   notificationsEnabled: PropTypes.bool,
+  canShowTaScoresAlert: PropTypes.bool,
 };
 
 export const UnconnectedRubricFloatingActionButton = RubricFloatingActionButton;

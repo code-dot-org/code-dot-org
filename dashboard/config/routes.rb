@@ -8,7 +8,11 @@ Dashboard::Application.routes.draw do
   get "/courses", to: redirect(CDO.code_org_url("/students"))
 
   # Redirect studio.code.org/sections/teacher_dashboard/first_section_progress to most recent section
-  get '/teacher_dashboard/sections/first_section_progress', to: "teacher_dashboard#redirect_to_newest_section"
+  get '/teacher_dashboard/sections/first_section_progress', to: "teacher_dashboard#redirect_to_newest_section_progress"
+
+  # Redirect enable and disable experiments to most recent section
+  get '/teacher_dashboard/sections/enable_experiments', to: "teacher_dashboard#enable_experiments"
+  get '/teacher_dashboard/sections/disable_experiments', to: "teacher_dashboard#disable_experiments"
 
   constraints host: CDO.codeprojects_hostname do
     # Routes needed for the footer on weblab share links on codeprojects
@@ -987,6 +991,8 @@ Dashboard::Application.routes.draw do
         post 'users/:user_id/dismiss_census_banner', to: 'users#dismiss_census_banner'
         post 'users/:user_id/dismiss_donor_teacher_banner', to: 'users#dismiss_donor_teacher_banner'
         post 'users/:user_id/dismiss_parent_email_banner', to: 'users#dismiss_parent_email_banner'
+
+        post 'users/set_seen_ta_scores', to: 'users#set_seen_ta_scores'
 
         get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
         get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}

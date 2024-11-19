@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-26 21:55:00 UTC",
+    "serialized_at": "2024-11-19 01:16:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -207,6 +209,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csf_safety_in_my_online_neighborhood2022_2023a"
+        ],
         "progression": "Digital Citizenship + Learn to Drag and drop (can't be cloned)"
       },
       "bonus": false,
@@ -229,6 +234,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HappyMaps-Unplugged2022_2023a"
+        ],
         "progression": "Sequencing "
       },
       "bonus": false,
@@ -251,6 +259,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseAB_video_NewIntro_2023a"
+        ],
         "progression": "Sequencing "
       },
       "bonus": false,
