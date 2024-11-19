@@ -157,16 +157,16 @@ export function setPathFill(e: GoogleBlockly.Events.Abstract) {
     patternBlocks.forEach(block => {
       const pattern = block.getFillPattern();
       if (pattern && block instanceof GoogleBlockly.BlockSvg) {
-        block.svgPathFill_ = Blockly.createSvgElement(
+        block.svgPathFill = Blockly.createSvgElement(
           'path',
           {class: 'blocklyPath'},
           block.getSvgRoot()
         );
-        block.svgPathFill_.setAttribute('fill', 'url(#' + pattern + ')');
+        block.svgPathFill.setAttribute('fill', 'url(#' + pattern + ')');
         const pathDescription = block.pathObject.svgPath.getAttribute('d');
         console.log({pathDescription});
         if (pathDescription) {
-          block.svgPathFill_.setAttribute('d', pathDescription);
+          block.svgPathFill.setAttribute('d', pathDescription);
         }
       }
     });

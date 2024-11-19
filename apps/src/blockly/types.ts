@@ -243,7 +243,7 @@ export interface ExtendedBlock extends GoogleBlockly.Block {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   setTitleValue: (newValue: any, name: string) => void;
   skipNextBlockGeneration?: boolean;
-  svgPathFill_: SVGElement;
+  svgPathFill: SVGElement;
 }
 
 export interface ExtendedWorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
