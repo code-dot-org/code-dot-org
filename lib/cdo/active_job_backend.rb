@@ -18,7 +18,11 @@ module Cdo
         before_worker_fork
         restart_workers_internal(n_workers_to_start, n_batches: rolling_restart_in_n_batches)
       end
-      Process.wait(pid)
+
+      _, status = Process.wait2(pid)
+      unless status.success?
+        raise "Error starting workers, exited with non-zero status: #{status.exitstatus}"
+      end
     end
 
     def self.restart_workers_internal(n_workers_to_start, n_batches:, start_time: Time.now, sigkill_timeout_s: 60.seconds)
