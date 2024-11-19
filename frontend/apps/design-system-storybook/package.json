@@ -1,0 +1,37 @@
+{
+  "name": "@code-dot-org/design-system-storybook",
+  "keywords": [
+    "design-system",
+    "code.org"
+  ],
+  "scripts": {
+    "dev": "yarn run storybook",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "devDependencies": {
+    "@code-dot-org/legacy-css": "workspace:*",
+    "@storybook/addon-essentials": "^8.4.4",
+    "@storybook/addon-interactions": "^8.4.4",
+    "@storybook/addon-styling-webpack": "^1.0.1",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
+    "@storybook/blocks": "^8.4.4",
+    "@storybook/react": "^8.4.4",
+    "@storybook/react-webpack5": "^8.4.4",
+    "@storybook/test": "^8.4.4",
+    "sass-loader": "^16.0.3",
+    "storybook": "^8.4.4"
+  },
+  "private": true,
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/apps/design-system-storybook/#readme",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/apps/design-system-storybook"
+  },
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "packageManager": "yarn@4.5.1"
+}
