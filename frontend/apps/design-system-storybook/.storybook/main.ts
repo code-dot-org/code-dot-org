@@ -19,6 +19,7 @@ const config: StorybookConfig = {
     getAbsolutePath("@storybook/addon-interactions"),
     getAbsolutePath("@storybook/addon-a11y"),
     getAbsolutePath("@storybook/addon-storysource"),
+    getAbsolutePath("storybook-addon-rtl"),
     {
       name: getAbsolutePath("@storybook/addon-styling-webpack"),
       options: {

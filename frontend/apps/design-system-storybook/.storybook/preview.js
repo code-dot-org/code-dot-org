@@ -1,6 +1,7 @@
-import {Preview} from "@storybook/react";
+import {default as RtlPreview} from "storybook-addon-rtl/preview";
 
-const preview: Preview = {
+/** @type { import('@storybook/react').Preview } */
+const preview = {
   parameters: {
     controls: {
       matchers: {
@@ -12,5 +13,6 @@ const preview: Preview = {
 };
 
 export const tags = ['autodocs'];
+export const decorators = [...RtlPreview.decorators]
 
 export default preview;

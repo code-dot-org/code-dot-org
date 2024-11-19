@@ -25,7 +25,8 @@
     "@storybook/test-runner": "^0.19.1",
     "axe-playwright": "^2.0.3",
     "sass-loader": "^16.0.3",
-    "storybook": "^8.4.4"
+    "storybook": "^8.4.4",
+    "storybook-addon-rtl": "^1.0.1"
   },
   "private": true,
   "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/apps/design-system-storybook/#readme",
