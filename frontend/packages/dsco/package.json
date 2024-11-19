@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@code-dot-org/legacy-css": "workspace:*",
+    "@testing-library/jest-dom": "^6.6.3",
     "@types/lodash": "^4",
     "@types/node": "^22.9.0",
     "clean-package": "^2.2.0",
