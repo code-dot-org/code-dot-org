@@ -55,7 +55,7 @@ class RegistrationsController < Devise::RegistrationsController
   def begin_sign_up
     @user = User.new(begin_sign_up_params)
     @user.validate_for_finish_sign_up
-    SignUpTracking.log_begin_sign_up(@user, session)
+    SignUpTracking.log_begin_sign_up(@user, request)
 
     if @user.errors.blank?
       PartialRegistration.persist_attributes(session, @user)
@@ -128,7 +128,7 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def cancel
     provider = PartialRegistration.get_provider(session) || 'email'
-    SignUpTracking.log_cancel_finish_sign_up(session, provider)
+    SignUpTracking.log_cancel_finish_sign_up(request, provider)
     SignUpTracking.end_sign_up_tracking(session)
 
     PartialRegistration.delete(session)
@@ -229,7 +229,7 @@ class RegistrationsController < Devise::RegistrationsController
       )
     end
 
-    SignUpTracking.log_sign_up_result resource, session
+    SignUpTracking.log_sign_up_result resource, request
   end
 
   #

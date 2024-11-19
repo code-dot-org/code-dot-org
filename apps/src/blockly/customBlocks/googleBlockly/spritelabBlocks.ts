@@ -121,7 +121,7 @@ export const blocks = {
     // We set the inputs to align left so that if the flyout is larger than the
     // inputs will be aligned with the left edge of the block.
     this.inputList.forEach(input => {
-      input.setAlign(Blockly.Input.Align.LEFT);
+      input.setAlign(Blockly.ALIGN_LEFT);
     });
 
     // Insert the toggle field at the beginning for the first input row.

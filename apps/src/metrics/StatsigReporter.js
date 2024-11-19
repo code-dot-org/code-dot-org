@@ -51,6 +51,9 @@ class StatsigReporter {
       ? managed_test_environment_element.dataset.managedTestServer === 'true'
       : false;
     this.local_mode = !(isProductionEnvironment() || managed_test_environment);
+    // stable_id is set as a cookie in application_controller.rb. However in a
+    // the rare case we are running outside of the application layout,
+    // set stable_id as a cookie here if it doesn't exist.
     this.stable_id = this.findOrCreateStableId();
     this.options = {
       environment: {tier: getEnvironment()},
@@ -58,6 +61,7 @@ class StatsigReporter {
       disableErrorLogging: true,
       overrideStableID: this.stable_id,
     };
+    this.log(`Statsig Stable ID: ${this.stable_id}`);
 
     this.initialize(this.api_key, this.user, this.options);
   }
@@ -148,8 +152,7 @@ class StatsigReporter {
     if (!stableId) {
       stableId = createUuid();
       cookies.set(STABLE_ID_KEY, stableId, {
-        expires: 400,
-        domain: 'code.org',
+        path: '/',
       });
     }
     return stableId;

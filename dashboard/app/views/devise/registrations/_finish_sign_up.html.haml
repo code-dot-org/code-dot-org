@@ -1,6 +1,6 @@
 - require '../shared/middleware/helpers/experiments'
 - require 'policies/lti'
-- SignUpTracking.log_load_finish_sign_up session, (@user.provider || 'email')
+- SignUpTracking.log_load_finish_sign_up request, (@user.provider || 'email')
 - require 'cpa'
 - require 'geocoder'
 - location = Geocoder.search(request.ip).try(:first)
