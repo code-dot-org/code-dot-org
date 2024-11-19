@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@code-dot-org/legacy-css": "workspace:*",
+    "@storybook/addon-a11y": "^8.4.4",
     "@storybook/addon-essentials": "^8.4.4",
     "@storybook/addon-interactions": "^8.4.4",
     "@storybook/addon-styling-webpack": "^1.0.1",

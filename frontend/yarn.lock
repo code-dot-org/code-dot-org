@@ -405,6 +405,7 @@ __metadata:
   resolution: "@code-dot-org/design-system-storybook@workspace:apps/design-system-storybook"
   dependencies:
     "@code-dot-org/legacy-css": "workspace:*"
+    "@storybook/addon-a11y": "npm:^8.4.4"
     "@storybook/addon-essentials": "npm:^8.4.4"
     "@storybook/addon-interactions": "npm:^8.4.4"
     "@storybook/addon-styling-webpack": "npm:^1.0.1"
@@ -1375,6 +1376,18 @@ __metadata:
   dependencies:
     "@sinonjs/commons": "npm:^3.0.0"
   checksum: 10c0/2e2fb6cc57f227912814085b7b01fede050cd4746ea8d49a1e44d5a0e56a804663b0340ae2f11af7559ea9bf4d087a11f2f646197a660ea3cb04e19efc04aa63
+  languageName: node
+  linkType: hard
+
+"@storybook/addon-a11y@npm:^8.4.4":
+  version: 8.4.4
+  resolution: "@storybook/addon-a11y@npm:8.4.4"
+  dependencies:
+    "@storybook/addon-highlight": "npm:8.4.4"
+    axe-core: "npm:^4.2.0"
+  peerDependencies:
+    storybook: ^8.4.4
+  checksum: 10c0/19e530cdda82757667271334fac47e944d064e639d0e0b027c78052b0ebb385851d19fb650a868ef3e9c390576f6919e5141dbea8f9cbbaf881662c0ba83ef85
   languageName: node
   linkType: hard
 
@@ -2846,6 +2859,13 @@ __metadata:
   dependencies:
     possible-typed-array-names: "npm:^1.0.0"
   checksum: 10c0/d07226ef4f87daa01bd0fe80f8f310982e345f372926da2e5296aecc25c41cab440916bbaa4c5e1034b453af3392f67df5961124e4b586df1e99793a1374bdb2
+  languageName: node
+  linkType: hard
+
+"axe-core@npm:^4.2.0":
+  version: 4.10.2
+  resolution: "axe-core@npm:4.10.2"
+  checksum: 10c0/0e20169077de96946a547fce0df39d9aeebe0077f9d3eeff4896518b96fde857f80b98f0d4279274a7178791744dd5a54bb4f322de45b4f561ffa2586ff9a09d
   languageName: node
   linkType: hard
 
