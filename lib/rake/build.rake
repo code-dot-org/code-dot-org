@@ -47,10 +47,7 @@ namespace :build do
 
   desc 'Starts Active Job workers, restarts existing workers (if any) in a rolling fashion to avoid downtime'
   timed_task_with_logging :start_active_job_workers do
-    Cdo::ActiveJobBackend.restart_workers(
-      n_workers_to_start: CDO.active_job_backend_n_workers_to_start,
-      rolling_restart_in_n_batches: CDO.active_job_backend_rolling_restart_in_n_batches,
-    )
+    Cdo::ActiveJobBackend.restart_workers
   end
 
   desc 'Builds dashboard (install gems, migrate/seed db, compile assets).'
@@ -140,7 +137,9 @@ namespace :build do
         # that may arise when that best practice is not followed.
         unless rack_env?(:development)
           ChatClient.log 'Restarting <b>dashboard</b> Active Job worker(s).'
-          Dir.chdir('../') {RakeUtils.rake 'build:start_active_job_workers'}
+          Dir.chdir(deploy_dir) do
+            RakeUtils.rake_stream_output 'build:start_active_job_workers'
+          end
         end
       end
 
