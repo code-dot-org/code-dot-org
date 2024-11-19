@@ -1404,12 +1404,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 100, partner_level.best_result
   end
 
-  test 'user is created with secret picture and word' do
-    assert @user.secret_picture
-    assert @user.secret_words
-    assert @user.secret_words !~ /SecretWord/ # using the actual word not the object to_s
-  end
-
   test 'students have hashed email not plaintext email' do
     assert @student.email.blank?
     assert @student.hashed_email.present?
@@ -3950,6 +3944,9 @@ class UserTest < ActiveSupport::TestCase
     us_state = 'CO'
     @student.update!(us_state: us_state)
 
+    secret_picture = SecretPicture.random
+    @student.secret_picture = secret_picture
+
     assert_equal(
       {
         id: @student.id,
@@ -3963,8 +3960,8 @@ class UserTest < ActiveSupport::TestCase
         gender_teacher_input: nil,
         birthday: @student.birthday,
         secret_words: @student.secret_words,
-        secret_picture_name: @student.secret_picture.name,
-        secret_picture_path: @student.secret_picture.path,
+        secret_picture_name: secret_picture.name,
+        secret_picture_path: secret_picture.path,
         location: "/v2/users/#{@student.id}",
         age: @student.age,
         sharing_disabled: false,
@@ -5520,6 +5517,60 @@ class UserTest < ActiveSupport::TestCase
       it 'does not call CAP compliance removing service' do
         expect_cap_compliance_removing.never
         update_us_state
+      end
+    end
+  end
+
+  describe 'generation of secret picture on creation' do
+    let(:user) {build(:user)}
+
+    let(:user_is_sponsored) {true}
+
+    before do
+      user.stubs(:sponsored?).returns(user_is_sponsored)
+    end
+
+    it 'secret picture is generated' do
+      _(user.secret_picture_id).must_be_nil
+      user.save! && user.reload
+      _(user.secret_picture).must_be_instance_of SecretPicture
+    end
+
+    context 'when user is not sponsored' do
+      let(:user_is_sponsored) {false}
+
+      it 'secret picture is not generated' do
+        _(user.secret_picture_id).must_be_nil
+        _ {user.save!}.wont_change -> {user.secret_picture_id}
+      end
+    end
+  end
+
+  describe 'generation of secret word on creation' do
+    let(:user) {build(:user)}
+
+    let(:user_is_sponsored) {true}
+
+    before do
+      user.stubs(:sponsored?).returns(user_is_sponsored)
+    end
+
+    it 'secret picture is generated' do
+      _(user.secret_words).must_be_nil
+
+      user.save!
+      user.reload
+
+      _(user.secret_words).wont_be_nil
+      _(user.secret_words).wont_match /SecretWord/ # using the actual word not the object to_s
+    end
+
+    context 'when user is not sponsored' do
+      let(:user_is_sponsored) {false}
+
+      it 'secret word is not generated' do
+        _(user.secret_words).must_be_nil
+        _ {user.save!}.wont_change -> {user.secret_words}
       end
     end
   end
