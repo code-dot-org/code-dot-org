@@ -186,9 +186,12 @@ const FinishStudentAccount: React.FunctionComponent<{
   };
 
   const submitStudentAccount = async () => {
+    if (!!isSubmitting) {
+      return;
+    }
+    setIsSubmitting(true);
     sendFinishEvent();
     showErrorCreatingAccountMessage(false);
-    setIsSubmitting(true);
 
     const signUpParams = {
       new_sign_up: true,
