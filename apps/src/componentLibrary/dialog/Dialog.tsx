@@ -18,12 +18,13 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
   title?: string;
   /** Dialog description text */
   description?: string;
-  /** Dialog Custom content (rendered right after/instead Dialog description) */
-  customContent?: ReactNode;
-  /** Custom bottom content (rendered right after Dialog actions section).
+  /** Dialog Custom content (rendered right after/instead Dialog description)
    *  If this is rendered when there's no `description` prop - make sure to add `dsco-dialog-description` `id`
    *  to the element in custom content which will be representing the dialog description. (Used by screen readers
-   *  for dialog's `aria-describedBy` attribute) */
+   *  for dialog's `aria-describedBy` attribute)
+   *  */
+  customContent?: ReactNode;
+  /** Custom bottom content (rendered right after Dialog actions section). */
   customBottomContent?: ReactNode;
   /** Dialog primary button props */
   primaryButtonProps: ButtonProps;
