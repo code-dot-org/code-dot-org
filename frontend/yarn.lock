@@ -408,6 +408,7 @@ __metadata:
     "@storybook/addon-a11y": "npm:^8.4.4"
     "@storybook/addon-essentials": "npm:^8.4.4"
     "@storybook/addon-interactions": "npm:^8.4.4"
+    "@storybook/addon-storysource": "npm:^8.4.4"
     "@storybook/addon-styling-webpack": "npm:^1.0.1"
     "@storybook/addon-webpack5-compiler-swc": "npm:^1.0.5"
     "@storybook/blocks": "npm:^8.4.4"
@@ -1521,6 +1522,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/addon-storysource@npm:^8.4.4":
+  version: 8.4.4
+  resolution: "@storybook/addon-storysource@npm:8.4.4"
+  dependencies:
+    "@storybook/source-loader": "npm:8.4.4"
+    estraverse: "npm:^5.2.0"
+    tiny-invariant: "npm:^1.3.1"
+  peerDependencies:
+    storybook: ^8.4.4
+  checksum: 10c0/592bbd2ea71fdbb96584eceab44ff11dce9089ef18cfad4016d9b43d505cc1c8f6a19bece35c6b73e8ede3e8b3be57d8eec3e2cc23b7061810fca4a0df89d223
+  languageName: node
+  linkType: hard
+
 "@storybook/addon-styling-webpack@npm:^1.0.1":
   version: 1.0.1
   resolution: "@storybook/addon-styling-webpack@npm:1.0.1"
@@ -1857,6 +1871,20 @@ __metadata:
     typescript:
       optional: true
   checksum: 10c0/aabbfeb09efca705ee23673b62673760bbfa60307ca0f36d562b3541cbd999f943d4c5537971b67bc84ad513f53e82a0be56b418d5777ea499c33c04c7ca935d
+  languageName: node
+  linkType: hard
+
+"@storybook/source-loader@npm:8.4.4":
+  version: 8.4.4
+  resolution: "@storybook/source-loader@npm:8.4.4"
+  dependencies:
+    "@storybook/csf": "npm:^0.1.11"
+    es-toolkit: "npm:^1.22.0"
+    estraverse: "npm:^5.2.0"
+    prettier: "npm:^3.1.1"
+  peerDependencies:
+    storybook: ^8.4.4
+  checksum: 10c0/3f6edd3a0131c23023facd9d79475959bfbd2dbdcd8571326451a55c04e516e032400eb85f2cc796c7df0fcfda35d4fe435bd05e2dfece8c29cc517d5fac6470
   languageName: node
   linkType: hard
 
@@ -4020,6 +4048,18 @@ __metadata:
   version: 1.5.4
   resolution: "es-module-lexer@npm:1.5.4"
   checksum: 10c0/300a469488c2f22081df1e4c8398c78db92358496e639b0df7f89ac6455462aaf5d8893939087c1a1cbcbf20eed4610c70e0bcb8f3e4b0d80a5d2611c539408c
+  languageName: node
+  linkType: hard
+
+"es-toolkit@npm:^1.22.0":
+  version: 1.27.0
+  resolution: "es-toolkit@npm:1.27.0"
+  dependenciesMeta:
+    "@trivago/prettier-plugin-sort-imports@4.3.0":
+      unplugged: true
+    prettier-plugin-sort-re-exports@0.0.1:
+      unplugged: true
+  checksum: 10c0/c2ac707635237252efd8cade7301cdf313926ad6fabf67fdcf04dca37dbd446247b6c2a350f3081515b1e6ce1c8044f7331ed306124483cfdf4e371ddc944b1f
   languageName: node
   linkType: hard
 
@@ -7064,7 +7104,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.2.5":
+"prettier@npm:^3.1.1, prettier@npm:^3.2.5":
   version: 3.3.3
   resolution: "prettier@npm:3.3.3"
   bin:

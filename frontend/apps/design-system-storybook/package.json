@@ -15,6 +15,7 @@
     "@storybook/addon-a11y": "^8.4.4",
     "@storybook/addon-essentials": "^8.4.4",
     "@storybook/addon-interactions": "^8.4.4",
+    "@storybook/addon-storysource": "^8.4.4",
     "@storybook/addon-styling-webpack": "^1.0.1",
     "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
     "@storybook/blocks": "^8.4.4",
