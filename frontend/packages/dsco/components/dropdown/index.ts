@@ -9,11 +9,14 @@ export {dropdownColors} from '@/common/constants';
 
 export {
   ActionDropdown,
-  ActionDropdownProps,
   CheckboxDropdown,
-  CheckboxDropdownProps,
   IconDropdown,
-  IconDropdownProps,
   SimpleDropdown,
-  SimpleDropdownProps,
 };
+
+export type {
+  ActionDropdownProps,
+  CheckboxDropdownProps,
+  IconDropdownProps,
+  SimpleDropdownProps,
+}

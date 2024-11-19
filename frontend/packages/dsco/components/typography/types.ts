@@ -44,4 +44,4 @@ interface TypographyElementProps {
   id?: string;
 }
 
-export {SemanticTag, VisualAppearance, TypographyElementProps};
+export type {SemanticTag, VisualAppearance, TypographyElementProps};
