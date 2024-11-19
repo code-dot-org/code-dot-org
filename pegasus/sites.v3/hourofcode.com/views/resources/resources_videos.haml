@@ -47,8 +47,8 @@
 .carousel-wrapper.video-carousel
   %swiper-container.videos{navigation: "true", "navigation-next-el": ".nav-next-videos", "navigation-prev-el": ".nav-prev-videos", pagination: "true", init: "false", "allow-touch-move": "false"}
     - videos.each do |video|
-      -# Show playlist link for the second video
-      - if video == videos[1]
+      -# Show playlist link for the third video
+      - if video == videos[2]
         %swiper-slide
           %a{href: "https://www.youtube.com/playlist?list=PLzdnOPI1iJNcXMS80NRhQd0NA3po1swJf", target: "_blank", rel: "noopener noreferrer"}
             %figure
