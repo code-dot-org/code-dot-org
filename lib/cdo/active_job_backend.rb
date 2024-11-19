@@ -129,6 +129,9 @@ module Cdo
           :log_dir => Cdo::ActiveJobBackend.log_dir,
         }
         @args = ["start"]
+        [@options[:pid_dir], @options[:log_dir]].each do |dir|
+          FileUtils.mkdir_p(dir)
+        end
       end
 
       # New method that allows us to specify the initial worker index
