@@ -1,4 +1,4 @@
-import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
 /**
  * Possible sizes for most(!) of Design System components

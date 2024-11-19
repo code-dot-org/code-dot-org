@@ -1,7 +1,7 @@
-import useBodyScrollLock from '@cdo/apps/componentLibrary/common/hooks/useBodyScrollLock';
-import useDocumentKeydown from '@cdo/apps/componentLibrary/common/hooks/useDocumentKeydown';
-import useEscapeKeyHandler from '@cdo/apps/componentLibrary/common/hooks/useEscapeKeyHandler';
-import useFocusTrap from '@cdo/apps/componentLibrary/common/hooks/useFocusTrap';
+import useBodyScrollLock from '@/common/hooks/useBodyScrollLock';
+import useDocumentKeydown from '@/common/hooks/useDocumentKeydown';
+import useEscapeKeyHandler from '@/common/hooks/useEscapeKeyHandler';
+import useFocusTrap from '@/common/hooks/useFocusTrap';
 
 export {
   useBodyScrollLock,

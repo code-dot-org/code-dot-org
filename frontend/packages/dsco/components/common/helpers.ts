@@ -1,6 +1,6 @@
 import React, {AriaAttributes} from 'react';
 
-import {ComponentPlacementDirection} from '@cdo/apps/componentLibrary/common/types';
+import {ComponentPlacementDirection} from '@/common/types';
 
 type PrimitiveValue =
   | string
