@@ -5,6 +5,25 @@
     "code.org"
   ],
   "version": "0.0.0-alpha.0",
+  "scripts": {
+    "build": "tsup --dts",
+    "build:fast": "tsup",
+    "dev": "yarn build:fast --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "dependencies": {
+    "classnames": "^2.5.1",
+    "react-bootstrap": "^2.10.5"
+  },
+  "devDependencies": {
+    "clean-package": "2.2.0",
+    "postcss-modules": "^6.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/dsco/#readme",
   "license": "SEE LICENSE IN LICENSE",
   "main": "components/index.ts",
@@ -26,28 +45,9 @@
   "engines": {
     "node": ">=22"
   },
-  "scripts": {
-    "build": "tsup --dts",
-    "build:fast": "tsup",
-    "dev": "yarn build:fast --watch",
-    "clean": "rimraf dist .turbo",
-    "typecheck": "tsc --noEmit",
-    "prepack": "clean-package",
-    "postpack": "clean-package restore"
-  },
   "peerDependencies": {
     "react": ">=16",
     "react-dom": ">=16"
-  },
-  "dependencies": {
-    "classnames": "^2.5.1",
-    "react-bootstrap": "^2.10.5"
-  },
-  "devDependencies": {
-    "clean-package": "2.2.0",
-    "postcss-modules": "^6.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
   },
   "clean-package": "./clean-package.config.js"
 }

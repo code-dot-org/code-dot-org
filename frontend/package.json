@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "@code-dot-org/frontend",
   "private": true,
   "scripts": {
     "build": "turbo build",
@@ -13,11 +13,22 @@
     "typescript": "5.5.4"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   },
   "packageManager": "yarn@4.5.1",
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "version": "0.0.0-alpha.0",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/#readme",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend"
+  },
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  }
 }
