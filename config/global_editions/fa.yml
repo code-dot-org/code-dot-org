@@ -148,6 +148,8 @@ pages:
   - path: /
     components:
       LtiFeedbackBanner: false
+      CurriculumCatalog:
+        forceTranslated: true
   - path: /teacher_dashboard
     components:
       DownloadParentLetterButton: false
