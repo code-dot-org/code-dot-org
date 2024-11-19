@@ -9,7 +9,7 @@ import FontAwesomeV6Icon, {
 
 import moduleStyles from './dialog.module.scss';
 
-export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
+export interface DialogProps extends Omit<HTMLAttributes<HTMLDivElement>, 'content'> {
   /** Dialog type*/
   type?: 'noIcon' | 'withIconFill' | 'withIconFA';
   /** Dialog title */

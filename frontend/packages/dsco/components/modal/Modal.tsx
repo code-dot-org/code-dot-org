@@ -6,7 +6,7 @@ import CloseButton from '@/closeButton';
 
 import moduleStyles from './modal.module.scss';
 
-export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
+export interface ModalProps extends Omit<HTMLAttributes<HTMLDivElement>, 'content'> {
   /** Modal title */
   title?: string;
   /** Modal image url */
