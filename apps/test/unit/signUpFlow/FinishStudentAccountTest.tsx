@@ -308,15 +308,53 @@ describe('FinishStudentAccount', () => {
     expect(screen.queryByText(locale.email_error_message())).toBe(null);
     expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
 
-    // Enter state
+    // Enter parent email
     fireEvent.change(parentEmailInput, {target: {value: 'parent@email.com'}});
 
     // Error does not show and button is enabled when email is entered
     expect(screen.queryByText(locale.email_error_message())).toBe(null);
     expect(finishSignUpButton.getAttribute('aria-disabled')).toBe(null);
 
-    // Clear state
+    // Clear parent email
     fireEvent.change(parentEmailInput, {target: {value: ''}});
+
+    // Error shows and button is disabled with empty email
+    screen.getByText(locale.email_error_message());
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+  });
+
+  it('parentEmail error shows if parent checkbox is selected and parentEmail is an invalid email', async () => {
+    renderDefault();
+    await waitFor(() => {
+      expect(fetchStub.calledOnce).toBe(true);
+    });
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+
+    // Set other required fields
+    const displayNameInput = screen.getAllByDisplayValue('')[1];
+    const stateInput = screen.getAllByRole('combobox')[1];
+    const ageInput = screen.getAllByRole('combobox')[0];
+    fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
+    fireEvent.change(stateInput, {target: {value: 'WA'}});
+    fireEvent.change(ageInput, {target: {value: '6'}});
+
+    // Button is enabled after required fields are filled before parent checkbox is checked
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe(null);
+
+    // Check parent checkbox
+    fireEvent.click(screen.getAllByRole('checkbox')[0]);
+
+    // Error message doesn't show and button is disabled after parent checkbox is checked
+    const parentEmailInput = screen.getAllByDisplayValue('')[1];
+    expect(screen.queryByText(locale.email_error_message())).toBe(null);
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+
+    // Enter parent email
+    fireEvent.change(parentEmailInput, {
+      target: {value: '@invalidparentemail'},
+    });
 
     // Error shows and button is disabled with empty email
     screen.getByText(locale.email_error_message());

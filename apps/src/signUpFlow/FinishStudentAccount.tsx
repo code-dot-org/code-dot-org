@@ -387,7 +387,7 @@ const FinishStudentAccount: React.FunctionComponent<{
               name === '' ||
               age === '' ||
               (usIp && state === '') ||
-              (isParent && parentEmail === '') ||
+              (isParent && (parentEmail === '' || showParentEmailError)) ||
               !gdprValid
             }
             isPending={isSubmitting}
