@@ -34,6 +34,16 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
     analyticsReporter.sendEvent(eventName, payload);
   };
 
+  const defaultEventParams = (
+    parentalPermissionRequest: ParentalPermissionRequest
+  ) => {
+    return {
+      inSection: currentUser.inSection,
+      usState: currentUser.usStateCode,
+      consentStatus: parentalPermissionRequest.consent_status,
+    };
+  };
+
   useEffect(() => {
     currentUser.userId && setShow(true);
   }, [currentUser.userId]);
@@ -75,31 +85,28 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
   const handleModalSubmit = (
     parentalPermissionRequest: ParentalPermissionRequest
   ) => {
-    reportEvent(EVENTS.CAP_PARENT_EMAIL_SUBMITTED, {
-      inSection: currentUser.inSection,
-      usState: currentUser.usStateCode,
-      consentStatus: parentalPermissionRequest.consent_status,
-    });
+    reportEvent(
+      EVENTS.CAP_PARENT_EMAIL_SUBMITTED,
+      defaultEventParams(parentalPermissionRequest)
+    );
   };
 
   const handleModalResend = (
     parentalPermissionRequest: ParentalPermissionRequest
   ) => {
-    reportEvent(EVENTS.CAP_PARENT_EMAIL_RESEND, {
-      inSection: currentUser.inSection,
-      usState: currentUser.usStateCode,
-      consentStatus: parentalPermissionRequest.consent_status,
-    });
+    reportEvent(
+      EVENTS.CAP_PARENT_EMAIL_RESEND,
+      defaultEventParams(parentalPermissionRequest)
+    );
   };
 
   const handleModalUpdate = (
     parentalPermissionRequest: ParentalPermissionRequest
   ) => {
-    reportEvent(EVENTS.CAP_PARENT_EMAIL_UPDATED, {
-      inSection: currentUser.inSection,
-      usState: currentUser.usStateCode,
-      consentStatus: parentalPermissionRequest.consent_status,
-    });
+    reportEvent(
+      EVENTS.CAP_PARENT_EMAIL_UPDATED,
+      defaultEventParams(parentalPermissionRequest)
+    );
   };
 
   return (
