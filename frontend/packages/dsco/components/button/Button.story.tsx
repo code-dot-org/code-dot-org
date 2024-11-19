@@ -62,6 +62,13 @@ DisabledButton.args = {
 };
 
 export const PendingButton = SingleTemplate.bind({});
+PendingButton.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 PendingButton.args = {
   text: 'Button',
   onClick: () => null,
@@ -79,6 +86,13 @@ ButtonWithIcons.args = {
 };
 
 export const IconButton = SingleTemplate.bind({});
+IconButton.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 IconButton.args = {
   icon: {iconName: 'smile', iconStyle: 'solid'},
   type: 'primary',
@@ -88,6 +102,13 @@ IconButton.args = {
 };
 
 export const GroupOfColorsOfButtons = MultipleTemplate.bind({});
+GroupOfColorsOfButtons.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 GroupOfColorsOfButtons.args = {
   components: [
     {

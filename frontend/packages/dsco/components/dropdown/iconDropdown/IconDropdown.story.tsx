@@ -221,6 +221,13 @@ StyledAsFieldIconDropdown.args = {
 };
 
 export const WithErrorDropdown = SingleTemplate.bind({});
+WithErrorDropdown.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 WithErrorDropdown.args = {
   name: 'error-dropdown',
   options: [

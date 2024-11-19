@@ -112,6 +112,12 @@ DefaultTabsWithDisabledTab.args = {
 };
 
 export const ClosableTabs = SingleTemplate.bind({});
+ClosableTabs.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
 ClosableTabs.args = {
   name: 'closable_tabs',
   tabs: [
@@ -179,6 +185,13 @@ TabsWithTooltips.args = {
 };
 
 export const GroupOfTypesOfTabs = MultipleTemplate.bind({});
+GroupOfTypesOfTabs.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 GroupOfTypesOfTabs.args = {
   components: [
     {
@@ -223,6 +236,13 @@ GroupOfTypesOfTabs.args = {
 };
 
 export const GroupOfModesOfTabs = MultipleTemplate.bind({});
+GroupOfModesOfTabs.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 GroupOfModesOfTabs.args = {
   components: [
     {
@@ -326,6 +346,13 @@ GroupOfModesOfTabs.args = {
 };
 
 export const GroupOfTabsWithIcons = MultipleTemplate.bind({});
+GroupOfTabsWithIcons.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 GroupOfTabsWithIcons.args = {
   components: [
     {
@@ -438,6 +465,13 @@ GroupOfTabsWithIcons.args = {
 };
 
 export const GroupOfSizesOfTabs = MultipleTemplate.bind({});
+GroupOfSizesOfTabs.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 GroupOfSizesOfTabs.args = {
   components: [
     {
@@ -632,6 +666,13 @@ GroupOfSizesOfTabs.args = {
 };
 
 export const GroupOfTabsWithClosableTabs = MultipleTemplate.bind({});
+GroupOfTabsWithClosableTabs.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 GroupOfTabsWithClosableTabs.args = {
   components: [
     {

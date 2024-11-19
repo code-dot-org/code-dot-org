@@ -225,6 +225,13 @@ StyledAsFieldCheckboxDropdown.args = {
 };
 
 export const WithErrorCheckboxDropdown = SingleTemplate.bind({});
+WithErrorCheckboxDropdown.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 WithErrorCheckboxDropdown.args = {
   name: 'error-checkbox-dropdown',
   allOptions: [

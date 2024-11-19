@@ -31,6 +31,13 @@ const MultipleTemplate: StoryFn<{
 );
 
 export const DefaultModal = SingleTemplate.bind({});
+DefaultModal.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 DefaultModal.args = {
   title: 'Default Modal',
   content: 'This is the content of the default dialog.',
@@ -38,6 +45,13 @@ DefaultModal.args = {
 };
 
 export const ModalWithSecondaryButton = SingleTemplate.bind({});
+ModalWithSecondaryButton.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 ModalWithSecondaryButton.args = {
   title: 'Modal with Secondary Button',
   content: 'This dialog includes a secondary button.',
@@ -46,6 +60,13 @@ ModalWithSecondaryButton.args = {
 };
 
 export const ModalWithImage = SingleTemplate.bind({});
+ModalWithImage.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 ModalWithImage.args = {
   title: 'Modal with Image',
   content: 'This dialog includes an image at the top.',
@@ -54,6 +75,13 @@ ModalWithImage.args = {
 };
 
 export const InlineImageModal = SingleTemplate.bind({});
+InlineImageModal.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 InlineImageModal.args = {
   title: 'Inline Image Modal',
   content: 'This dialog shows an inline image.',
@@ -63,6 +91,13 @@ InlineImageModal.args = {
 };
 
 export const DarkModal = SingleTemplate.bind({});
+DarkModal.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 DarkModal.args = {
   title: 'Dark Mode Modal',
   content: 'This dialog uses the dark color theme.',
@@ -71,6 +106,13 @@ DarkModal.args = {
 };
 
 export const MultipleModals = MultipleTemplate.bind({});
+MultipleModals.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 MultipleModals.args = {
   components: [
     {

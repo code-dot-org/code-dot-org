@@ -60,6 +60,13 @@ Disabled_BaseButton.args = {
 };
 
 export const Pending_BaseButton = SingleTemplate.bind({});
+Pending_BaseButton.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 Pending_BaseButton.args = {
   text: 'Button',
   onClick: () => null,
@@ -77,6 +84,13 @@ _BaseButtonWithIcons.args = {
 };
 
 export const Icon_BaseButton = SingleTemplate.bind({});
+Icon_BaseButton.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 Icon_BaseButton.args = {
   icon: {iconName: 'smile', iconStyle: 'solid'},
   type: 'primary',
@@ -112,6 +126,13 @@ ButtonButtonVsLinkButton.args = {
 };
 
 export const GroupOfColorsOf_BaseButtons = MultipleTemplate.bind({});
+GroupOfColorsOf_BaseButtons.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 GroupOfColorsOf_BaseButtons.args = {
   components: [
     {

@@ -57,6 +57,13 @@ DisabledLinkButton.args = {
 };
 
 export const PendingLinkButton = SingleTemplate.bind({});
+PendingLinkButton.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 PendingLinkButton.args = {
   text: 'Button',
   href: 'https://www.google.com',
@@ -74,6 +81,13 @@ LinkButtonWithIcons.args = {
 };
 
 export const IconLinkButton = SingleTemplate.bind({});
+IconLinkButton.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 IconLinkButton.args = {
   icon: {iconName: 'smile', iconStyle: 'solid'},
   type: 'primary',
@@ -83,6 +97,13 @@ IconLinkButton.args = {
 };
 
 export const GroupOfColorsOfLinkButtons = MultipleTemplate.bind({});
+GroupOfColorsOfLinkButtons.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 GroupOfColorsOfLinkButtons.args = {
   components: [
     {

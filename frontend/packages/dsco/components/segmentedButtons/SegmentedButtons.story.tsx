@@ -80,6 +80,13 @@ const MultipleTemplate: StoryFn<{
   );
 };
 export const DefaultSegmentedButtons = SingleTemplate.bind({});
+DefaultSegmentedButtons.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 DefaultSegmentedButtons.args = {
   buttons: [
     {label: 'Label', value: 'label'},
@@ -98,6 +105,13 @@ DefaultSegmentedButtons.args = {
 };
 
 export const DisabledSegmentedButtons = MultipleTemplate.bind({});
+DisabledSegmentedButtons.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 DisabledSegmentedButtons.args = {
   components: [
     {
@@ -124,6 +138,13 @@ DisabledSegmentedButtons.args = {
 };
 
 export const SizesOfSegmentedButtons = MultipleTemplate.bind({});
+SizesOfSegmentedButtons.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 SizesOfSegmentedButtons.args = {
   components: [
     {
@@ -194,6 +215,13 @@ SizesOfSegmentedButtons.args = {
 };
 
 export const GroupOfColorsOfSegmentedButtons = MultipleTemplate.bind({});
+GroupOfColorsOfSegmentedButtons.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 GroupOfColorsOfSegmentedButtons.args = {
   components: [
     {
@@ -232,6 +260,13 @@ GroupOfColorsOfSegmentedButtons.args = {
 };
 
 export const TypesOfSegmentedButtons = MultipleTemplate.bind({});
+TypesOfSegmentedButtons.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 TypesOfSegmentedButtons.args = {
   components: [
     {

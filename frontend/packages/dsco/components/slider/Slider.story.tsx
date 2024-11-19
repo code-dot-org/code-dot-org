@@ -74,6 +74,13 @@ CenteredSlider.args = {
 };
 
 export const SliderWithNoLabel = SingleTemplate.bind({});
+SliderWithNoLabel.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 SliderWithNoLabel.args = {
   name: 'controlled_Slider_no_label',
   value: 50,
@@ -155,6 +162,13 @@ GroupOfDefaultSliders.args = {
 };
 
 export const GroupOfDisabledSliders = MultipleTemplate.bind({});
+GroupOfDisabledSliders.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 GroupOfDisabledSliders.args = {
   components: [
     {

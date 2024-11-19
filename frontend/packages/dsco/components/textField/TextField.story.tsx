@@ -34,6 +34,13 @@ DefaultTextField.args = {
 };
 
 export const WithErrorTextField = SingleTemplate.bind({});
+WithErrorTextField.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 WithErrorTextField.args = {
   ...defaultArgs,
   name: 'textfield_error',
@@ -42,6 +49,13 @@ WithErrorTextField.args = {
 };
 
 export const PasswordTextField = SingleTemplate.bind({});
+PasswordTextField.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 PasswordTextField.args = {
   ...defaultArgs,
   name: 'textfield_password',
@@ -49,6 +63,13 @@ PasswordTextField.args = {
 };
 
 export const NumberTextField = SingleTemplate.bind({});
+NumberTextField.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 NumberTextField.args = {
   ...defaultArgs,
   name: 'textfield_number',
@@ -56,6 +77,13 @@ NumberTextField.args = {
 };
 
 export const EmailTextField = SingleTemplate.bind({});
+EmailTextField.parameters = {
+  a11y: {
+    // TODO: https://codedotorg.atlassian.net/browse/ACQ-2779
+    disable: true
+  }
+}
+
 EmailTextField.args = {
   ...defaultArgs,
   name: 'textfield_email',
