@@ -110,7 +110,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
   };
 
   const submitTeacherAccount = async () => {
-    if (!!isSubmitting) {
+    if (isSubmitting) {
       return;
     }
     setIsSubmitting(true);

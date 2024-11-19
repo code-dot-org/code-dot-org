@@ -186,7 +186,7 @@ const FinishStudentAccount: React.FunctionComponent<{
   };
 
   const submitStudentAccount = async () => {
-    if (!!isSubmitting) {
+    if (isSubmitting) {
       return;
     }
     setIsSubmitting(true);
