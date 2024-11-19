@@ -46,7 +46,12 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
         usState: currentUser.usStateCode,
       });
     }
-  }, [show, currentUser.inSection, currentUser.childAccountComplianceState]);
+  }, [
+    show,
+    currentUser.inSection,
+    currentUser.childAccountComplianceState,
+    currentUser.usStateCode,
+  ]);
 
   const handleModalShow = () => {
     setShowModal(true);
