@@ -1,0 +1,147 @@
+@import 'color';
+@import "@cdo/apps/componentLibrary/typography/typography.module";
+@import "@cdo/apps/componentLibrary/common/styles/mixins";
+
+$alert-span-vertical-top-spacing: 2px;
+
+.alert {
+  display: flex;
+  align-items: center;
+  border-radius: 0.25rem;
+
+  .alertContentContainer {
+    display: flex;
+    flex: 1 0 0;
+    align-items: center;
+
+    i {
+      text-align: center;
+    }
+
+    a {
+      color: $light_black;
+    }
+  }
+}
+
+// Types (colors)
+.alert-primary {
+  background-color: $light_secondary_100;
+}
+
+.alert-success {
+  background-color: $light_affirmative_100;
+
+  .alertContentContainer i {
+    color: $light_affirmative_500;
+  }
+}
+
+.alert-danger {
+  background-color: $light_negative_100;
+
+  .alertContentContainer i {
+    color: $light_negative_500;
+  }
+}
+
+.alert-warning {
+  background-color: $light_caution_100;
+
+  .alertContentContainer i {
+    color: $light_caution_500;
+  }
+}
+
+.alert-info {
+  background-color: $light_info_100;
+
+  .alertContentContainer i {
+    color: $light_info_500;
+  }
+}
+
+.alert-gray {
+  background-color: $light_gray_50;
+}
+
+// Sizes
+.alert-l {
+  padding: 0.875rem 1.125rem;
+
+  .alertContentContainer {
+    gap: 0.75rem;
+
+    i {
+      font-size: 1.1875rem;
+      line-height: 125%;
+      width: 1.5rem;
+    }
+
+    span {
+      @include body-one;
+      margin-top: $alert-span-vertical-top-spacing;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.alert-m {
+  padding: 0.75rem 1rem;
+
+  .alertContentContainer {
+    gap: 0.625rem;
+
+    i {
+      font-size: 1rem;
+      line-height: 125%;
+      width: 1.25rem;
+    }
+
+    span {
+      @include body-two;
+      margin-top: $alert-span-vertical-top-spacing;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.alert-s {
+  padding: 0.625rem 0.875rem;
+
+  .alertContentContainer {
+    gap: 0.5rem;
+
+    i {
+      font-size: 0.875rem;
+      line-height: 125%;
+      width: 1.125rem;
+    }
+
+    span {
+      @include body-three;
+      margin-top: $alert-span-vertical-top-spacing;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.alert-xs {
+  padding: 0.5rem 0.75rem;
+
+  .alertContentContainer {
+    gap: 0.5rem;
+
+    i {
+      font-size: 0.8125rem;
+      line-height: 125%;
+      width: 1rem;
+    }
+
+    span {
+      @include body-four;
+      margin-top: $alert-span-vertical-top-spacing;
+      margin-bottom: 0;
+    }
+  }
+}

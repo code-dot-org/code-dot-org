@@ -1,0 +1,69 @@
+@import "color";
+@import "@cdo/apps/componentLibrary/common/styles/mixins";
+
+// Link common styles
+.link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: underline;
+
+
+  &:focus-visible {
+    outline: 2px solid $light_primary_500;
+    border-radius: 0.25rem;
+    outline-offset: 0;
+  }
+
+  &:active:not([aria-disabled="true"]) {
+    text-decoration: none;
+  }
+
+  &-primary {
+    color: $light_secondary_500;
+
+    &:hover, :active, :visited {
+      color: $light_secondary_700;
+    }
+
+    &:focus-visible {
+      color: $light_secondary_500;
+    }
+  }
+
+  &-secondary {
+    color: $light_black;
+
+    &:hover, :active, :visited {
+      color: $light_gray_800;
+    }
+
+    &:focus-visible {
+      color: $light_black;
+    }
+  }
+
+
+  &[aria-disabled="true"] {
+    cursor: not-allowed;
+    color: $light_gray_300;
+  }
+}
+
+// Sizes
+.link-l {
+  @include link-body-one;
+}
+
+.link-m {
+  @include link-body-two;
+}
+
+.link-s {
+  @include link-body-three;
+}
+
+.link-xs {
+  @include link-body-four;
+}
