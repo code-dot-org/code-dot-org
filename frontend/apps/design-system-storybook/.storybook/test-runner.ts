@@ -22,6 +22,7 @@ const config: TestRunnerConfig = {
 
         await checkA11y(page, '#storybook-root', {
             detailedReport: true,
+            verbose: false,
             detailedReportOptions: {
                 html: true,
             },
