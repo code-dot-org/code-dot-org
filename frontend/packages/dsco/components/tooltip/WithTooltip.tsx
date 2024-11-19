@@ -8,7 +8,7 @@ import React, {
 } from 'react';
 import {createPortal} from 'react-dom';
 
-import {updatePositionedElementStyles} from '@cdo/apps/componentLibrary/common/helpers';
+import {updatePositionedElementStyles} from '@/common/helpers';
 
 import Tooltip, {TooltipOverlay, TooltipProps} from './_Tooltip';
 

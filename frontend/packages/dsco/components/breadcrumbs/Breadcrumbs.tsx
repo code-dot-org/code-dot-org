@@ -1,9 +1,9 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import Link, {LinkWithText} from '@cdo/apps/componentLibrary/link';
+import {ComponentSizeXSToL} from '@/common/types';
+import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
+import Link, {LinkWithText} from '@/link';
 
 import moduleStyles from './breadcrumbs.module.scss';
 

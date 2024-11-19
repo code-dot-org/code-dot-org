@@ -1,7 +1,7 @@
 import {Meta, StoryFn} from '@storybook/react';
 import React, {useState} from 'react';
 
-import {TabModel} from '@cdo/apps/componentLibrary/tabs/_Tab';
+import {TabModel} from '@/tabs/_Tab';
 
 import Tabs, {TabsProps} from './index';
 

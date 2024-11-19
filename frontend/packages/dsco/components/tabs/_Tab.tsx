@@ -1,12 +1,12 @@
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
-import CloseButton from '@cdo/apps/componentLibrary/closeButton';
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+import CloseButton from '@/closeButton';
+import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import {TooltipProps, WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
+} from '@/fontAwesomeV6Icon';
+import {TooltipProps, WithTooltip} from '@/tooltip';
 
 import moduleStyles from './tabs.module.scss';
 

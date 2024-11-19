@@ -1,11 +1,11 @@
 import classnames from 'classnames';
 import React, {HTMLAttributes, ReactNode} from 'react';
 
-import {Button} from '@cdo/apps/componentLibrary/button';
-import CloseButton from '@cdo/apps/componentLibrary/closeButton';
+import {Button} from '@/button';
+import CloseButton from '@/closeButton';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+} from '@/fontAwesomeV6Icon';
 
 import moduleStyles from './dialog.module.scss';
 

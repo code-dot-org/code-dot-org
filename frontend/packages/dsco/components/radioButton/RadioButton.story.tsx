@@ -1,7 +1,7 @@
 import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
 
-import Tags from '@cdo/apps/componentLibrary/tags';
+import Tags from '@/tags';
 
 import {
   RadioButton,

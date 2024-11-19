@@ -7,7 +7,7 @@ import React, {
   useState,
 } from 'react';
 
-import {Button, ButtonProps} from '@cdo/apps/componentLibrary/button';
+import {Button, ButtonProps} from '@/button';
 
 import moduleStyles from './slider.module.scss';
 

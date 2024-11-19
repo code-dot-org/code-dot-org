@@ -1,20 +1,20 @@
 import classNames from 'classnames';
 import React, {useCallback, memo, AriaAttributes} from 'react';
 
-import {ButtonProps} from '@cdo/apps/componentLibrary/button';
+import {ButtonProps} from '@/button';
 import {
   DropdownProviderWrapper,
   useDropdownContext,
-} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+} from '@/common/contexts/DropdownContext';
+import {ComponentSizeXSToL} from '@/common/types';
 import CustomDropdown, {
   _CustomDropdownOption,
-} from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
+} from '@/dropdown/_CustomDropdown';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+} from '@/fontAwesomeV6Icon';
 
-import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
+import moduleStyles from '@/dropdown/customDropdown.module.scss';
 
 export interface ActionDropdownOption extends _CustomDropdownOption {
   onClick: () => void;

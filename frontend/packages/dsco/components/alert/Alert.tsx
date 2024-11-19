@@ -1,12 +1,12 @@
 import classnames from 'classnames';
 import React, {HTMLAttributes, useMemo} from 'react';
 
-import CloseButton from '@cdo/apps/componentLibrary/closeButton';
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+import CloseButton from '@/closeButton';
+import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import Link, {LinkProps} from '@cdo/apps/componentLibrary/link';
+} from '@/fontAwesomeV6Icon';
+import Link, {LinkProps} from '@/link';
 
 import moduleStyles from './alert.module.scss';
 

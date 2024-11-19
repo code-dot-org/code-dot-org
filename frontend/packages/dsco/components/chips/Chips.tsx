@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import uniq from 'lodash/uniq';
 import React from 'react';
 
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+import {ComponentSizeXSToL} from '@/common/types';
 
 import Chip from './_Chip';
 

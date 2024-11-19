@@ -3,9 +3,9 @@ import React, {useCallback} from 'react';
 
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+} from '@/fontAwesomeV6Icon';
 
-import moduleStyles from '@cdo/apps/componentLibrary/segmentedButtons/segmentedButtons.module.scss';
+import moduleStyles from '@/segmentedButtons/segmentedButtons.module.scss';
 
 export type SegmentButtonType = 'withLabel' | 'iconOnly' | 'number';
 

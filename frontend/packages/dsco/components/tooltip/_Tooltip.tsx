@@ -4,10 +4,10 @@ import React from 'react';
 import {
   ComponentPlacementDirection,
   ComponentSizeXSToL,
-} from '@cdo/apps/componentLibrary/common/types';
+} from '@/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+} from '@/fontAwesomeV6Icon';
 
 import moduleStyles from './tooltip.module.scss';
 

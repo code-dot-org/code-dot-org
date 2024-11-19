@@ -1,7 +1,7 @@
 import {Meta, StoryFn} from '@storybook/react';
 import React, {useState, useCallback} from 'react';
 
-import {dropdownColors} from '@cdo/apps/componentLibrary/dropdown';
+import {dropdownColors} from '@/dropdown';
 
 import CheckboxDropdown, {CheckboxDropdownProps} from './index';
 

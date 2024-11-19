@@ -1,7 +1,7 @@
 import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
 
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+import {ComponentSizeXSToL} from '@/common/types';
 
 import Checkbox, {CheckboxProps} from './index';
 

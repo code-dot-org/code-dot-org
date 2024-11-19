@@ -6,7 +6,7 @@ import {
   OverlayTriggerProps,
 } from 'react-bootstrap-2'; // TODO: Once we have [DSCO] Tooltip component, replace this import with it
 
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
 import moduleStyles from './tags.module.scss';
 

@@ -1,15 +1,15 @@
 import classnames from 'classnames';
 import React, {ReactNode} from 'react';
 
-import CloseButton from '@cdo/apps/componentLibrary/closeButton';
+import CloseButton from '@/closeButton';
 import {
   ComponentPlacementDirection,
   ComponentSizeXSToL,
-} from '@cdo/apps/componentLibrary/common/types';
+} from '@/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import {BodyTwoText, Heading5} from '@cdo/apps/componentLibrary/typography';
+} from '@/fontAwesomeV6Icon';
+import {BodyTwoText, Heading5} from '@/typography';
 
 import moduleStyles from './popover.module.scss';
 

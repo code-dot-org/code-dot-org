@@ -4,10 +4,10 @@ import React, {HTMLAttributes} from 'react';
 import {
   ComponentSizeXSToL,
   DropdownFormFieldRelatedProps,
-} from '@cdo/apps/componentLibrary/common/types';
+} from '@/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+} from '@/fontAwesomeV6Icon';
 
 import moduleStyles from './simpleDropdown.module.scss';
 

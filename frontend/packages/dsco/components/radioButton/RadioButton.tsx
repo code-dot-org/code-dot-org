@@ -1,9 +1,9 @@
 import classnames from 'classnames';
 import React, {memo, ChangeEvent} from 'react';
 
-import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
-import Typography from '@cdo/apps/componentLibrary/typography';
+import {componentSizeToBodyTextSizeMap} from '@/common/constants';
+import {ComponentSizeXSToL} from '@/common/types';
+import Typography from '@/typography';
 
 import moduleStyles from './radioButton.module.scss';
 

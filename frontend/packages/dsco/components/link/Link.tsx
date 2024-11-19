@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, {HTMLAttributes} from 'react';
 
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+import {ComponentSizeXSToL} from '@/common/types';
 
 import moduleStyles from './link.module.scss';
 

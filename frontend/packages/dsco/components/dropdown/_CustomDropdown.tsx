@@ -8,17 +8,17 @@ import React, {
   KeyboardEvent,
 } from 'react';
 
-import {Button, ButtonProps} from '@cdo/apps/componentLibrary/button';
-import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
-import {useDropdownContext} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
-import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
+import {Button, ButtonProps} from '@/button';
+import {dropdownColors} from '@/common/constants';
+import {useDropdownContext} from '@/common/contexts/DropdownContext';
+import {getAriaPropsFromProps} from '@/common/helpers';
 import {
   ComponentSizeXSToL,
   DropdownColor,
-} from '@cdo/apps/componentLibrary/common/types';
+} from '@/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+} from '@/fontAwesomeV6Icon';
 
 import moduleStyles from './customDropdown.module.scss';
 

@@ -8,7 +8,7 @@ import React, {
   SyntheticEvent,
 } from 'react';
 
-import {updatePositionedElementStyles} from '@cdo/apps/componentLibrary/common/helpers';
+import {updatePositionedElementStyles} from '@/common/helpers';
 
 import Popover, {PopoverProps} from './Popover';
 
