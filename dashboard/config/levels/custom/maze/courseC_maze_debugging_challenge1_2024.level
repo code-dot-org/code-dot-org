@@ -39,7 +39,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-03T21:24:23.559+00:00\",\"changed\":[\"cloned from \\\"courseC_maze_debugging_challenge1_2023\\\"\"],\"cloned_from\":\"courseC_maze_debugging_challenge1_2023\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-03T21:24:23.559+00:00\",\"changed\":[\"cloned from \\\"courseC_maze_debugging_challenge1_2023\\\"\"],\"cloned_from\":\"courseC_maze_debugging_challenge1_2023\"},{\"changed_at\":\"2024-11-06 20:42:54 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 1
@@ -66,38 +66,38 @@
       </xml>
     </toolbox_blocks>
     <solution_blocks>
-      <xml>
-        <block type="when_run" deletable="false" movable="false">
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <block type="when_run" deletable="false" movable="false" x="16" y="16">
           <next>
             <block type="maze_moveForward">
               <next>
                 <block type="maze_turn">
-                  <title name="DIR">turnRight</title>
+                  <field name="DIR">turnRight</field>
                   <next>
                     <block type="maze_moveForward">
                       <next>
                         <block type="maze_moveForward">
                           <next>
                             <block type="maze_turn">
-                              <title name="DIR">turnLeft</title>
+                              <field name="DIR">turnRight</field>
                               <next>
                                 <block type="maze_moveForward">
                                   <next>
                                     <block type="maze_moveForward">
                                       <next>
-                                        <block type="maze_turn">
-                                          <title name="DIR">turnRight</title>
+                                        <block type="maze_moveForward">
                                           <next>
                                             <block type="maze_moveForward">
                                               <next>
-                                                <block type="maze_moveForward">
+                                                <block type="maze_turn">
+                                                  <field name="DIR">turnRight</field>
                                                   <next>
                                                     <block type="maze_moveForward">
                                                       <next>
-                                                        <block type="maze_turn">
-                                                          <title name="DIR">turnLeft</title>
+                                                        <block type="maze_moveForward">
                                                           <next>
-                                                            <block type="maze_moveForward">
+                                                            <block type="maze_turn">
+                                                            <field name="DIR">turnRight</field>
                                                             <next>
                                                             <block type="maze_moveForward"/>
                                                             </next>

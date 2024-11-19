@@ -198,13 +198,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.calendar}
-            element={
-              <ElementOrEmptyPage
-                showNoStudents={studentCount === 0}
-                showNoCurriculumAssigned={!anyStudentHasProgress}
-                element={applyV1TeacherDashboardWidth(<UnitCalendar />)}
-              />
-            }
+            element={<UnitCalendar />}
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.courseOverview}
