@@ -16,10 +16,12 @@
   },
   "dependencies": {
     "classnames": "^2.5.1",
+    "lodash": "^4.17.21",
     "react-bootstrap": "^2.10.5"
   },
   "devDependencies": {
     "@code-dot-org/legacy-css": "workspace:*",
+    "@types/lodash": "^4",
     "@types/node": "^22.9.0",
     "clean-package": "^2.2.0",
     "esbuild-sass-plugin": "^3.3.1",
