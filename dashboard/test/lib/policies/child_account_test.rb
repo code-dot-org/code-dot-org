@@ -102,40 +102,6 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     assert failures.empty?, failures.join("\n")
   end
 
-  describe 'state_policies' do
-    let(:state_policies) {Policies::ChildAccount.state_policies}
-
-    around do |test|
-      Timecop.freeze {test.call}
-    end
-
-    describe 'for Colorado' do
-      let(:co_state_policy) {state_policies['CO']}
-      let(:default_start_date) {DateTime.parse('2023-07-05T23:15:00+00:00')}
-      let(:default_lockout_date) {DateTime.parse('2024-07-01T00:00:00MDT')}
-
-      it 'contains expected max age' do
-        _(co_state_policy[:max_age]).must_equal 12
-      end
-
-      it 'contains expected name' do
-        _(co_state_policy[:name]).must_equal 'CPA'
-      end
-
-      it 'contains expected grace_period_duration' do
-        _(co_state_policy[:grace_period_duration]).must_equal 14.days
-      end
-
-      it 'contains expected default start_date' do
-        _(co_state_policy[:start_date]).must_equal default_start_date
-      end
-
-      it 'contains expected default lockout_date' do
-        _(co_state_policy[:lockout_date]).must_equal default_lockout_date
-      end
-    end
-  end
-
   describe '.grace_period_end_date' do
     let(:grace_period_end_date) {Policies::ChildAccount.grace_period_end_date(user)}
 
@@ -160,7 +126,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
 
     before do
-      Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
+      Policies::ChildAccount::StatePolicies.stubs(:state_policy).with(user).returns(user_state_policy)
     end
 
     it 'returns end date of user grace period based on its start time' do
@@ -232,7 +198,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
 
     before do
-      Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
+      Policies::ChildAccount::StatePolicies.stubs(:state_policy).with(user).returns(user_state_policy)
     end
 
     context 'the user is a teacher' do
@@ -307,7 +273,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       Policies::ChildAccount.stubs(:compliant?).with(user, future: !!future).returns(user_cap_compliant?)
       Policies::ChildAccount.stubs(:grace_period_end_date).with(user, approximate: approximate).returns(user_grace_period_end_date)
       Policies::ChildAccount.stubs(:user_predates_policy?).with(user).returns(user_predates_cap_policy?)
-      Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
+      Policies::ChildAccount::StatePolicies.stubs(:state_policy).with(user).returns(user_state_policy)
     end
 
     it 'returns state policy start date' do
@@ -548,7 +514,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
 
     before do
-      Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
+      Policies::ChildAccount::StatePolicies.stubs(:state_policy).with(user).returns(user_state_policy)
       Policies::ChildAccount.stubs(:personal_account?).with(user).returns(user_account_is_personal?)
     end
 
@@ -587,14 +553,14 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
         _(parent_permission_required?).must_equal false
       end
 
-      context 'they need permission now' do
+      context 'do they need permission now?' do
         let(:future) {false}
         it 'returns false' do
           _(parent_permission_required?).must_equal false
         end
       end
 
-      context 'they need permission in the future' do
+      context 'do they need permission in the future?' do
         let(:future) {true}
         it 'returns true' do
           _(parent_permission_required?).must_equal true

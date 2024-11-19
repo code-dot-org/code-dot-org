@@ -7,7 +7,7 @@ module ChildAccountHelper
     student_lockout_date = Policies::ChildAccount.lockout_date(user, approximate: true, future: true)
 
     if request.params.key?(:show_parental_permission_banner)
-      student_lockout_date ||= Policies::ChildAccount.state_policy(user).try(:[], :lockout_date)
+      student_lockout_date ||= Policies::ChildAccount::StatePolicies.state_policy(user)&.dig(:lockout_date)
     else
       return unless student_lockout_date
       return unless DCDO.get('cap_student_warnings_enabled', false)
@@ -36,7 +36,7 @@ module ChildAccountHelper
     student_lockout_date = Policies::ChildAccount.lockout_date(user, approximate: true, future: true)
 
     if force_display
-      student_lockout_date ||= Policies::ChildAccount.state_policy(user).try(:[], :lockout_date)
+      student_lockout_date ||= Policies::ChildAccount::StatePolicies.state_policy(user)&.dig(:lockout_date)
     else
       return unless student_lockout_date
       return unless DCDO.get('cap_student_warnings_enabled', false)
