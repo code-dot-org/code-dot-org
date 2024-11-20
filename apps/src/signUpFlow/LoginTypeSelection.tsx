@@ -228,7 +228,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <Button
               text={locale.sign_up_clever()}
               onClick={() => selectOauthLoginType('clever')}
-              iconLeft={{iconName: 'brands fa-clever', iconStyle: 'solid'}}
+              iconLeft={{iconName: 'kit fa-clever', iconStyle: 'solid'}}
               className={style.cleverButton}
               buttonTagTypeAttribute="submit"
             />
