@@ -15,6 +15,8 @@ import {
 } from '@cdo/apps/componentLibrary/typography';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
+import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
@@ -50,6 +52,12 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorCreatingAccountMessage, showErrorCreatingAccountMessage] =
     useState(false);
+
+  const isInSchoolRequiredExperiment = statsigReporter.getIsInExperiment(
+    'require_school_in_signup_v1',
+    'requireInfo',
+    false
+  );
 
   // Remove oauth user_type cookie if it exists
   cookies.remove(NEW_SIGN_UP_USER_TYPE);
@@ -268,7 +276,11 @@ const FinishTeacherAccount: React.FunctionComponent<{
               iconStyle: 'solid',
               title: 'arrow-right',
             }}
-            disabled={name === '' || !gdprValid}
+            disabled={
+              name === '' ||
+              !gdprValid ||
+              (isInSchoolRequiredExperiment && schoolInfoInvalid(schoolInfo))
+            }
             isPending={isSubmitting}
           />
         </div>
