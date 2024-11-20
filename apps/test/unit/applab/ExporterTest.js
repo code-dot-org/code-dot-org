@@ -217,7 +217,7 @@ describe('Applab Exporter,', function () {
         sublevelCallback: null,
       },
       isUS: true,
-      send_to_phone_url: 'http://localhost-studio.code.org:3000/sms/send',
+      send_to_phone_url: 'http://studio.code.org.localhost:3000/sms/send',
       teacherMarkdown: null,
       dialog: {
         skipSound: false,

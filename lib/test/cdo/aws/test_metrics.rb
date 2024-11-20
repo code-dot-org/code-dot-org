@@ -7,7 +7,7 @@ class CdoMetricsTest < Minitest::Test
   end
 
   def test_put
-    Cdo::Metrics.put('App Server', 'WorkerBoot', 1, {Host: 'localhost.code.org'})
+    Cdo::Metrics.put('App Server', 'WorkerBoot', 1, {Host: 'code.org.localhost'})
     Cdo::Metrics.flush!
     refute_empty Cdo::Metrics.client.api_requests
     assert_equal(
@@ -16,7 +16,7 @@ class CdoMetricsTest < Minitest::Test
         metric_data: [
           metric_name: 'WorkerBoot',
           dimensions: [
-            name: 'Host', value: 'localhost.code.org'
+            name: 'Host', value: 'code.org.localhost'
           ],
           value: 1.0
         ]

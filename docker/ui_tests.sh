@@ -24,6 +24,13 @@ export CIRCLE_ARTIFACTS=/home/circleci/artifacts
 
 mkdir $CIRCLE_ARTIFACTS
 
+# Most docker images don't resolve *.localhost domains by default. We hardcode
+# our domains in /etc/hosts so sc (the sauce connect proxy tunnel) can find them
+echo "
+127.0.0.1  studio.code.org.localhost
+127.0.0.1  code.org.localhost
+" | sudo tee -a /etc/hosts > /dev/null
+
 # set up locals.yml
 # Need to actually write all the commented out lines also
 echo "
@@ -48,8 +55,8 @@ localize_apps: true
 netsim_redis_groups:
 - master: redis://ui-tests-redis:6379
 no_https_store: true
-override_dashboard: \"localhost-studio.code.org\"
-override_pegasus: \"localhost.code.org\"
+override_dashboard: \"studio.code.org.localhost\"
+override_pegasus: \"code.org.localhost\"
 pegasus_port: 3000
 properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
 saucelabs_authkey: $SAUCE_ACCESS_KEY

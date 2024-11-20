@@ -7,7 +7,7 @@ Welcome! You've found the source code for [the Code.org website](https://code.or
 1. Follow our [setup guide](./SETUP.md) to configure your workstation.
 2. `rake build` to build the application if you have not done so already
 3. `bin/dashboard-server` to launch the development server.
-4. Open your browser to [http://localhost-studio.code.org:3000/](http://localhost-studio.code.org:3000/).
+4. Open your browser to [http://studio.code.org.localhost:3000/](http://studio.code.org.localhost:3000/).
 
 To see a list of all build commands, run `rake` from the repository root.
 
