@@ -1,0 +1,28 @@
+
+
+.actionRow {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  flex-wrap: wrap;
+
+  .versionSelector {
+
+  }
+
+  .teacherResources {
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  .studentResources {
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  .assignButton {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+  }
+}

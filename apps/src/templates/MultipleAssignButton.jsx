@@ -14,8 +14,6 @@ import i18n from '@cdo/locale';
 
 class MultipleAssignButton extends React.Component {
   static propTypes = {
-    sectionId: PropTypes.number.isRequired,
-    sectionName: PropTypes.string,
     courseId: PropTypes.number,
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,

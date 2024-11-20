@@ -94,6 +94,7 @@ class CourseScript extends Component {
       showAssignButton,
       participantAudience,
     } = this.props;
+    const {confirmationMessageOpen} = this.state;
 
     const isHidden = isScriptHiddenForSection(
       hiddenLessonState,
@@ -152,19 +153,20 @@ class CourseScript extends Component {
                   buttonLocationAnalytics={'course-overview-unit'}
                 />
               )}
+            {confirmationMessageOpen && (
+              <span style={styles.confirmText}>{i18n.assignSuccess()}</span>
+            )}
             {!isAssigned &&
               viewAs === ViewType.Instructor &&
               showAssignButton &&
               selectedSection && (
                 <div className={styles.assignButton}>
                   <MultipleAssignButton
-                    sectionId={selectedSection.id}
                     courseOfferingId={courseOfferingId}
                     courseVersionId={courseVersionId}
                     courseId={courseId}
                     scriptId={id}
                     assignmentName={title}
-                    sectionName={selectedSection.name}
                     reassignConfirm={this.onReassignConfirm}
                     isAssigningCourse={false}
                     isStandAloneUnit={false}
@@ -221,6 +223,10 @@ const styles = {
   flex: {
     display: 'flex',
     alignItems: 'center',
+  },
+  confirmText: {
+    marginLeft: 5,
+    marginRight: 5,
   },
 };
 export const UnconnectedCourseScript = CourseScript;

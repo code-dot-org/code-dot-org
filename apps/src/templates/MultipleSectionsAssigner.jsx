@@ -39,34 +39,43 @@ const MultipleSectionsAssigner = ({
   assignToSection,
   updateHiddenScript,
 }) => {
-  let initialSectionsAssigned = [];
-  // check to see if this is coming from the UNIT landing page - if so add courses featuring this unit
-  if (!isAssigningCourse) {
-    if (isStandAloneUnit) {
-      for (let i = 0; i < sections.length; i++) {
-        if (courseVersionId === sections[i].courseVersionId) {
-          initialSectionsAssigned.push(sections[i]);
-        }
-      }
-    } else {
-      for (let i = 0; i < sections.length; i++) {
-        if (scriptId === sections[i].unitId) {
-          initialSectionsAssigned.push(sections[i]);
-        }
-      }
-    }
-  } else if (isAssigningCourse) {
-    // checks to see if this is coming from the COURSE landing page
-    for (let i = 0; i < sections.length; i++) {
-      if (courseId === sections[i].courseId) {
-        initialSectionsAssigned.push(sections[i]);
-      }
-    }
-  }
+  const [currentSectionsAssigned, setCurrentSectionsAssigned] = useState([]);
 
-  const [currentSectionsAssigned, setCurrentSectionsAssigned] = useState(
-    initialSectionsAssigned
-  );
+  const initialSectionsAssigned = React.useMemo(() => {
+    let initialSectionsAssigned = [];
+    // check to see if this is coming from the UNIT landing page - if so add courses featuring this unit
+    if (!isAssigningCourse) {
+      if (isStandAloneUnit) {
+        for (let i = 0; i < sections.length; i++) {
+          if (courseVersionId === sections[i].courseVersionId) {
+            initialSectionsAssigned.push(sections[i]);
+          }
+        }
+      } else {
+        for (let i = 0; i < sections.length; i++) {
+          if (scriptId === sections[i].unitId) {
+            initialSectionsAssigned.push(sections[i]);
+          }
+        }
+      }
+    } else if (isAssigningCourse) {
+      // checks to see if this is coming from the COURSE landing page
+      for (let i = 0; i < sections.length; i++) {
+        if (courseId === sections[i].courseId) {
+          initialSectionsAssigned.push(sections[i]);
+        }
+      }
+    }
+    setCurrentSectionsAssigned(initialSectionsAssigned);
+    return initialSectionsAssigned;
+  }, [
+    isAssigningCourse,
+    isStandAloneUnit,
+    sections,
+    courseId,
+    scriptId,
+    courseVersionId,
+  ]);
 
   const handleChangedCheckbox = currentSection => {
     const isUnchecked = currentSectionsAssigned.some(

@@ -2,9 +2,14 @@ import React from 'react';
 
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import i18n from '@cdo/locale';
 
 import * as utils from '../../utils';
+import MultipleAssignButton from '../MultipleAssignButton';
 import AssignmentVersionSelector from '../teacherDashboard/AssignmentVersionSelector';
+
+import styles from './course-overview.module.scss';
 
 interface CourseVersion {
   id: number;
@@ -14,22 +19,36 @@ interface CourseVersion {
 
 interface CourseOverviewActionRowProps {
   courseId: number;
+  courseOfferingId: number;
   courseVersionId: number;
   versions: CourseVersion[];
   teacherResources: object[];
   studentResources: object[];
   isInstructor: boolean;
   unitGroupId: number;
+  viewAs: keyof typeof ViewType;
+  showAssignButton: boolean;
+  selectedSectionId: number;
+  title: string;
+  participantAudience: string;
 }
 
 const CourseOverviewActionRow: React.FC<CourseOverviewActionRowProps> = ({
   courseId,
   versions,
+  courseOfferingId,
   courseVersionId,
   teacherResources,
   studentResources,
   isInstructor,
+  viewAs,
+  showAssignButton,
+  title,
+  participantAudience,
 }) => {
+  const [confirmationMessageOpen, setConfirmationMessageOpen] =
+    React.useState(false);
+
   const onChangeVersion = React.useCallback(
     (versionId: number) => {
       const version = versions[versionId];
@@ -43,7 +62,7 @@ const CourseOverviewActionRow: React.FC<CourseOverviewActionRowProps> = ({
   );
 
   return (
-    <div>
+    <div className={styles.actionRow}>
       {Object.values(versions).length > 1 && (
         <AssignmentVersionSelector
           onChangeVersion={onChangeVersion}
@@ -53,34 +72,39 @@ const CourseOverviewActionRow: React.FC<CourseOverviewActionRowProps> = ({
         />
       )}
       {isInstructor && teacherResources.length > 0 && (
-        <ResourcesDropdown
-          resources={teacherResources}
-          unitGroupId={courseId}
-        />
+        <div className={styles.teacherResources}>
+          <ResourcesDropdown
+            resources={teacherResources}
+            unitGroupId={courseId}
+          />
+        </div>
       )}
       {!isInstructor && studentResources && studentResources.length > 0 && (
-        <ResourcesDropdown
-          resources={studentResources}
-          unitGroupId={courseId}
-          studentFacing
-        />
+        <div className={styles.studentResources}>
+          <ResourcesDropdown
+            resources={studentResources}
+            unitGroupId={courseId}
+            studentFacing
+          />
+        </div>
       )}
-      {/* 
-      {isTeacher && viewAs === ViewType.Instructor && showAssignButton && (
-        <MultipleAssignButton
-          sectionId={selectedSectionId}
-          courseOfferingId={courseOfferingId}
-          courseVersionId={courseVersionId}
-          courseId={courseId}
-          scriptId={null}
-          assignmentName={title}
-          sectionName={selectedSection.name}
-          reassignConfirm={this.onReassignConfirm}
-          isAssigningCourse={false}
-          isStandAloneUnit={false}
-          participantAudience={participantAudience}
-        />
-      )} */}
+
+      {isInstructor && viewAs === ViewType.Instructor && showAssignButton && (
+        <div className={styles.assignButton}>
+          {confirmationMessageOpen && <span>{i18n.assignSuccess()}</span>}
+          <MultipleAssignButton
+            courseOfferingId={courseOfferingId}
+            courseVersionId={courseVersionId}
+            courseId={courseId}
+            scriptId={null}
+            assignmentName={title}
+            reassignConfirm={() => setConfirmationMessageOpen(true)}
+            isAssigningCourse={true}
+            isStandAloneUnit={false}
+            participantAudience={participantAudience}
+          />
+        </div>
+      )}
     </div>
   );
 };

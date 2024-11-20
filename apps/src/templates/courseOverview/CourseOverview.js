@@ -203,6 +203,10 @@ class CourseOverview extends Component {
           teacherResources={teacherResources}
           studentResources={studentResources}
           isInstructor={true}
+          viewAs={viewAs}
+          showAssignButton={showAssignButton}
+          title={title}
+          participantAudience={participantAudience}
         />
         <SafeMarkdown
           style={styles.description}

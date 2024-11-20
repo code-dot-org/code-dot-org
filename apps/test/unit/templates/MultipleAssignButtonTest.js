@@ -11,7 +11,6 @@ import {
 
 describe('MultipleAssignButtonTest', () => {
   const defaultProps = {
-    sectionId: 0,
     courseId: 1,
     courseOfferingId: 2,
     courseVersionId: 3,
