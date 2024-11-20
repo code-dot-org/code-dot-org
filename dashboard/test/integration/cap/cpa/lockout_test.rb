@@ -29,7 +29,7 @@ module CAP
         end
 
         before do
-          allow(Policies::ChildAccount).to receive(:state_policies).and_return(state_policies)
+          allow(Policies::ChildAccount::StatePolicies).to receive(:state_policies).and_return(state_policies)
 
           sign_in student
         end

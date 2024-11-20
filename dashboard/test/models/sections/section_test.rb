@@ -828,6 +828,7 @@ class SectionTest < ActiveSupport::TestCase
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
         ai_tutor_enabled: false,
+        at_risk_age_gated_date: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -882,6 +883,7 @@ class SectionTest < ActiveSupport::TestCase
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
         ai_tutor_enabled: false,
+        at_risk_age_gated_date: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -941,6 +943,7 @@ class SectionTest < ActiveSupport::TestCase
                              {id: coteacher_section_instructor.id, status: "invited", instructor_name: nil, instructor_email: coteacher_user.email}],
         sync_enabled: nil,
         ai_tutor_enabled: false,
+        at_risk_age_gated_date: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -998,6 +1001,7 @@ class SectionTest < ActiveSupport::TestCase
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
         ai_tutor_enabled: false,
+        at_risk_age_gated_date: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1048,6 +1052,7 @@ class SectionTest < ActiveSupport::TestCase
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
         ai_tutor_enabled: false,
+        at_risk_age_gated_date: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1386,7 +1391,7 @@ class SectionTest < ActiveSupport::TestCase
     before do
       allow(section).to receive(:students).and_return([student])
       allow(student).to receive(:at_risk_age_gated?).and_return(at_risk)
-      allow(Policies::ChildAccount).to receive(:state_policy).
+      allow(Policies::ChildAccount::StatePolicies).to receive(:state_policy).
         with(student).and_return({lockout_date: lockout_date})
     end
 
