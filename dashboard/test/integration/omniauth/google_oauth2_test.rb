@@ -34,6 +34,7 @@ module OmniauthCallbacksControllerTests
         SignUpTracking::CONTROL_GROUP,
         %w(
           google_oauth2-callback
+          google_oauth2-load-finish-sign-up-page
           google_oauth2-sign-up-success
         )
       )
@@ -92,6 +93,7 @@ module OmniauthCallbacksControllerTests
         SignUpTracking::CONTROL_GROUP,
         %w(
           google_oauth2-callback
+          google_oauth2-load-finish-sign-up-page
           google_oauth2-sign-up-success
         )
       )

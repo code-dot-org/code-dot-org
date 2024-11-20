@@ -14,6 +14,7 @@
           "key": "920785dd-41e4-4d34-a3af-3eadbec1c90e"
         }
       ],
+      "content_area": "curriculum_6_8",
       "curriculum_path": "https://curriculum.code.org/csd-19/unit3/{LESSON}",
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
@@ -33,7 +34,7 @@
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2022-09-28 14:31:31 UTC",
+    "serialized_at": "2024-11-19 01:15:51 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -12578,6 +12579,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

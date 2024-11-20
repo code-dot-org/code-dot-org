@@ -8,7 +8,7 @@ right '`result = df[(df["Sales"] > 50) & ((df["Fruit"] == "Apple") | (df["Fruit"
 wrong '`result = df[(df["Sales"] > 50) and (df["Fruit"] == "Apple" or df["Fruit"] == "Banana")]`'
 wrong '`result = df[(df["Sales"] > 50) | ((df["Fruit"] == "Apple") & (df["Fruit"] == "Banana"))]`'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 
 markdown <<MARKDOWN

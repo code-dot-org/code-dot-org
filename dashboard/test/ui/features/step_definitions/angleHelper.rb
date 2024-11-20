@@ -4,7 +4,7 @@ When(/^I show the editor of field "([^"]*)" of block "([^"]*)"$/) do |field, blo
     var workspace = Blockly.getMainWorkspace();
     workspace.hideChaff();
     var selectedBlock = workspace.getBlockById('#{block_id}');
-    selectedBlock.select();
+    Blockly.common.setSelected(selectedBlock);
     selectedBlock.getField('#{field}').showEditor();
   JS
   @browser.execute_script(script)

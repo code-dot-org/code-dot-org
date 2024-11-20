@@ -4,7 +4,9 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_path": "https://docs.google.com/document/d/1K5BE3odBGkcPIOrV38fOqQZD59v30_d_D530Uh8LFDY/edit",
+      "curriculum_umbrella": "9-12 Special topics",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
@@ -16,7 +18,7 @@
     },
     "new_name": "csppostap-2017",
     "family_name": "csppostap",
-    "serialized_at": "2022-03-11 12:07:21 UTC",
+    "serialized_at": "2024-11-19 01:17:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3220,6 +3222,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

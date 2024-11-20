@@ -20,7 +20,6 @@ export default {
 // TEMPLATE
 //
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
-// eslint-disable-next-line
 const SingleTemplate: StoryFn<ToggleProps> = args => <Toggle {...args} />;
 
 const MultipleTemplate: StoryFn<{components: ToggleProps[]}> = args => (

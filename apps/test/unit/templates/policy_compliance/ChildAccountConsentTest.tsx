@@ -45,6 +45,7 @@ describe('ChildAccountConsent', () => {
       permissionGranted: true,
       permissionGrantedDate: permissionGrantedDate,
       studentId: 12345,
+      usState: 'CA',
     };
     const dateOptions: Intl.DateTimeFormatOptions = {
       year: 'numeric',
@@ -68,6 +69,7 @@ describe('ChildAccountConsent', () => {
       expect(sendEventSpy).to.be.calledOnce;
       expect(sendEventSpy).calledWith('CAP Parent Consent Granted', {
         studentId: props.studentId,
+        usState: props.usState,
       });
     });
   });

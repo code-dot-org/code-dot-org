@@ -19,7 +19,6 @@ import {
   setVerified,
   setVerifiedResources,
 } from '@cdo/apps/code-studio/verifiedInstructorRedux';
-import DCDO from '@cdo/apps/dcdo';
 import {registerReducers} from '@cdo/apps/redux';
 import ParentalPermissionBanner from '@cdo/apps/templates/policy_compliance/ParentalPermissionBanner';
 import googlePlatformApi, {
@@ -31,7 +30,7 @@ import {
   setPageType,
   pageTypes,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import experiments from '@cdo/apps/util/experiments';
+import {showV2TeacherDashboard} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
 
 import locales, {setLocaleCode} from '../../../../redux/localesRedux';
@@ -89,9 +88,7 @@ function initPage() {
   store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
   store.dispatch(setPageType(pageTypes.scriptOverview));
 
-  const v2TeacherDashboardEnabled =
-    DCDO.get('teacher-local-nav-v2', false) ||
-    experiments.isEnabled('teacher-local-nav-v2');
+  const v2TeacherDashboardEnabled = showV2TeacherDashboard();
 
   // Don't show the teacher panel if v2 dashboard is enabled
   initCourseProgress(scriptData, !v2TeacherDashboardEnabled);

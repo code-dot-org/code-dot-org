@@ -42,7 +42,7 @@ function RubricContainer({
   rubric,
   studentLevelInfo,
   teacherHasEnabledAi,
-  currentLevelName,
+  onLevelForEvaluation,
   reportingData,
   open,
   closeRubric,
@@ -50,7 +50,6 @@ function RubricContainer({
   loadAllTeacherEvaluationData,
   loadAiEvalStatusForAll,
 }) {
-  const onLevelForEvaluation = currentLevelName === rubric.level.name;
   const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
   const rubricTabSessionKey = 'rubricFABTabSessionKey';
   const rubricPositionX = 'rubricFABPositionX';
@@ -398,7 +397,7 @@ RubricContainer.propTypes = {
   reportingData: reportingDataShape,
   studentLevelInfo: studentLevelInfoShape,
   teacherHasEnabledAi: PropTypes.bool,
-  currentLevelName: PropTypes.string,
+  onLevelForEvaluation: PropTypes.bool,
   closeRubric: PropTypes.func,
   open: PropTypes.bool,
   sectionId: PropTypes.number,

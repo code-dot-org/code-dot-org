@@ -57,7 +57,7 @@ export function setUpBlocklyForMusicLab() {
       },
     };
 
-    Blockly.JavaScript[blockType] = blockConfig.generator;
+    Blockly.JavaScript.forBlock[blockType] = blockConfig.generator;
   }
 
   Blockly.fieldRegistry.register(FIELD_SOUNDS_TYPE, FieldSounds);

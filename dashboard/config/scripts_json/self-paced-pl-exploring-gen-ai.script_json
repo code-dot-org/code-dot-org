@@ -5,11 +5,13 @@
     "login_required": true,
     "properties": {
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true,
+      "version_year": "2024"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-10-24 16:25:06 UTC",
+    "serialized_at": "2024-11-13 16:03:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

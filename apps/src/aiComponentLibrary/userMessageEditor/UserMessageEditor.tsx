@@ -77,6 +77,7 @@ const UserMessageEditor = React.forwardRef<
 
         <div className={moduleStyles.centerSingleItemContainer}>
           <Button
+            aria-label={commonI18n.submit()}
             id="uitest-chat-submit"
             isIconOnly={!showSubmitLabel}
             onClick={() => handleSubmit(userMessage)}

@@ -9,6 +9,7 @@ import {getStore} from '@cdo/apps/redux';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
+import {LessonMaterialsEmptyState} from './LessonMaterialsEmptyState';
 import {Lesson} from './LessonMaterialTypes';
 import LessonResources from './LessonResources';
 import UnitResourcesDropdown from './UnitResourcesDropdown';
@@ -24,6 +25,7 @@ interface LessonMaterialsData {
   scriptResourcesPdfUrl: string;
   lessons: Lesson[];
   hasNumberedUnits: boolean;
+  versionYear?: number;
 }
 
 const lessonMaterialsCachedLoader = _.memoize(
@@ -59,9 +61,6 @@ export const lessonMaterialsLoader =
     const selectedSectionId = state.selectedSectionId;
     const sectionData = state.sections[selectedSectionId];
 
-    // NOTE: this page is not working for stand alone courses.
-    // this is because there is no "unitId" in the sectionData for stand alone courses.
-
     if (!selectedSectionId || !sectionData.unitId) {
       return null;
     }
@@ -72,21 +71,51 @@ export const lessonMaterialsLoader =
     );
   };
 
-const createDisplayName = (lessonName: string, lessonPosition: number) => {
-  return i18n.lessonNumberAndName({
-    lessonNumber: lessonPosition,
-    lessonName: lessonName,
-  });
+// Some lessons are lockable and don't have lesson plans (typically assessments or surveys).
+// In this case, we want to display the lesson name without a number.  See CSP1-2022 for an example.
+const createDisplayName = (
+  lessonName: string,
+  lessonPosition: number,
+  hasLessonPlan: boolean,
+  isLockable: boolean
+) => {
+  if (isLockable && !hasLessonPlan) {
+    return lessonName;
+  } else {
+    return i18n.lessonNumberAndName({
+      lessonNumber: lessonPosition,
+      lessonName: lessonName,
+    });
+  }
 };
 
-const LessonMaterialsContainer: React.FC = () => {
+interface LessonMaterialsContainerProps {
+  showNoCurriculumAssigned: boolean;
+}
+
+const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
+  showNoCurriculumAssigned,
+}) => {
   const loadedData = useLoaderData() as LessonMaterialsData | null;
-  const hasNumberedUnits = useMemo(
-    () => loadedData?.hasNumberedUnits || false,
-    [loadedData]
-  );
-  const lessons = useMemo(() => loadedData?.lessons || [], [loadedData]);
-  const unitNumber = useMemo(() => loadedData?.unitNumber || 1, [loadedData]);
+  const {hasNumberedUnits, lessons, unitNumber, versionYear} = useMemo(() => {
+    return {
+      hasNumberedUnits: loadedData?.hasNumberedUnits || false,
+      lessons: loadedData?.lessons || [],
+      unitNumber: loadedData?.unitNumber || -1,
+      versionYear: loadedData?.versionYear || -1,
+    };
+  }, [loadedData]);
+  const isLegacyScript = useMemo(() => versionYear < 2021, [versionYear]);
+
+  const hasNoLessonsWithLessonPlans = useMemo(() => {
+    return lessons.every(lesson => !lesson.hasLessonPlan);
+  }, [lessons]);
+
+  const hasEmptyState =
+    isLegacyScript ||
+    showNoCurriculumAssigned ||
+    hasNoLessonsWithLessonPlans ||
+    !loadedData;
 
   const getLessonFromId = (lessonId: number): Lesson | null => {
     return lessons.find(lesson => lesson.id === lessonId) || null;
@@ -117,7 +146,12 @@ const LessonMaterialsContainer: React.FC = () => {
 
   const generateLessonDropdownOptions = useCallback(() => {
     return lessons.map((lesson: Lesson) => {
-      const displayName = createDisplayName(lesson.name, lesson.position);
+      const displayName = createDisplayName(
+        lesson.name,
+        lesson.position,
+        lesson.hasLessonPlan,
+        lesson.isLockable
+      );
       return {text: displayName, value: lesson.id.toString()};
     });
   }, [lessons]);
@@ -127,41 +161,8 @@ const LessonMaterialsContainer: React.FC = () => {
     [generateLessonDropdownOptions]
   );
 
-  const renderTeacherResources = () => {
-    if (!selectedLesson) {
-      return null;
-    }
-
+  const renderHeader = () => {
     return (
-      <LessonResources
-        unitNumber={hasNumberedUnits ? unitNumber : null}
-        lessonNumber={selectedLesson.position}
-        resources={selectedLesson.resources.Teacher || []}
-        standardsUrl={selectedLesson.standardsUrl}
-        vocabularyUrl={selectedLesson.vocabularyUrl}
-        lessonPlanUrl={selectedLesson.lessonPlanHtmlUrl}
-        lessonPlanPdfUrl={selectedLesson.lessonPlanPdfUrl}
-        lessonName={selectedLesson.name}
-      />
-    );
-  };
-
-  const renderStudentResources = () => {
-    if (!selectedLesson) {
-      return null;
-    }
-
-    return (
-      <LessonResources
-        unitNumber={hasNumberedUnits ? unitNumber : null}
-        lessonNumber={selectedLesson.position}
-        resources={selectedLesson.resources.Student || []}
-      />
-    );
-  };
-
-  return (
-    <div>
       <div className={styles.lessonMaterialsPageHeader}>
         <SimpleDropdown
           labelText={i18n.chooseLesson()}
@@ -181,6 +182,56 @@ const LessonMaterialsContainer: React.FC = () => {
           />
         )}
       </div>
+    );
+  };
+
+  const renderTeacherResources = () => {
+    if (!selectedLesson) {
+      return null;
+    }
+
+    return (
+      <LessonResources
+        unitNumber={hasNumberedUnits ? unitNumber : null}
+        lessonNumber={selectedLesson.position}
+        resources={selectedLesson.resources.Teacher || []}
+        standardsUrl={selectedLesson.standardsUrl}
+        vocabularyUrl={selectedLesson.vocabularyUrl}
+        lessonPlanUrl={selectedLesson.lessonPlanHtmlUrl}
+        lessonPlanPdfUrl={selectedLesson.lessonPlanPdfUrl}
+        lessonName={selectedLesson.name}
+        hasLessonPlan={selectedLesson.hasLessonPlan}
+      />
+    );
+  };
+
+  const renderStudentResources = () => {
+    if (!selectedLesson) {
+      return null;
+    }
+
+    return (
+      <LessonResources
+        unitNumber={hasNumberedUnits ? unitNumber : null}
+        lessonNumber={selectedLesson.position}
+        resources={selectedLesson.resources.Student || []}
+      />
+    );
+  };
+
+  if (hasEmptyState) {
+    return (
+      <LessonMaterialsEmptyState
+        showNoCurriculumAssigned={showNoCurriculumAssigned}
+        isLegacyScript={isLegacyScript}
+        hasNoLessonsWithLessonPlans={hasNoLessonsWithLessonPlans}
+      />
+    );
+  }
+
+  return (
+    <div>
+      {renderHeader()}
       {renderTeacherResources()}
       {renderStudentResources()}
     </div>

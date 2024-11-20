@@ -16,6 +16,7 @@
           "buttonText": "Learn More"
         }
       ],
+      "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -31,7 +32,7 @@
     },
     "new_name": null,
     "family_name": "interactive-games-animations",
-    "serialized_at": "2024-10-14 21:11:11 UTC",
+    "serialized_at": "2024-11-19 01:18:52 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

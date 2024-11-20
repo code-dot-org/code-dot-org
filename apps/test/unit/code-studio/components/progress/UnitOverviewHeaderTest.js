@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import {UnconnectedUnitOverviewHeader as UnitOverviewHeader} from '@cdo/apps/code-studio/components/progress/UnitOverviewHeader';
+import {UnconnectedUnitOverviewHeader} from '@cdo/apps/code-studio/components/progress/UnitOverviewHeader';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
@@ -27,18 +27,20 @@ const defaultProps = {
     '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
   versions: courseOfferings['1'].course_versions,
   courseVersionId: 1,
+  resetViewAsUserId: jest.fn(),
+  changeViewType: jest.fn(),
 };
 
 describe('UnitOverviewHeader', () => {
   it('renders', () => {
-    shallow(<UnitOverviewHeader {...defaultProps} />, {
+    shallow(<UnconnectedUnitOverviewHeader {...defaultProps} />, {
       disableLifecycleMethods: true,
     });
   });
 
   it('includes a PlcHeader if it has plcHeaderProps', () => {
     const wrapper = shallow(
-      <UnitOverviewHeader
+      <UnconnectedUnitOverviewHeader
         {...defaultProps}
         plcHeaderProps={{
           unitName: 'foo',
@@ -51,16 +53,22 @@ describe('UnitOverviewHeader', () => {
   });
 
   it('does not have a PlcHeader if we have no plcHeaderProps', () => {
-    const wrapper = shallow(<UnitOverviewHeader {...defaultProps} />, {
-      disableLifecycleMethods: true,
-    });
+    const wrapper = shallow(
+      <UnconnectedUnitOverviewHeader {...defaultProps} />,
+      {
+        disableLifecycleMethods: true,
+      }
+    );
     expect(wrapper.find('PlcHeader').length).toEqual(0);
   });
 
   it('has no notifications by default', () => {
-    const wrapper = shallow(<UnitOverviewHeader {...defaultProps} />, {
-      disableLifecycleMethods: true,
-    });
+    const wrapper = shallow(
+      <UnconnectedUnitOverviewHeader {...defaultProps} />,
+      {
+        disableLifecycleMethods: true,
+      }
+    );
     expect(wrapper.find('Announcements').props().announcements.length).toEqual(
       0
     );
@@ -68,7 +76,7 @@ describe('UnitOverviewHeader', () => {
 
   it('includes a single notification default for non-verified instructors', () => {
     const wrapper = shallow(
-      <UnitOverviewHeader
+      <UnconnectedUnitOverviewHeader
         {...defaultProps}
         hasVerifiedResources={true}
         isVerifiedInstructor={false}
@@ -81,7 +89,7 @@ describe('UnitOverviewHeader', () => {
 
   it('has non-verified and provided instructor announcements if necessary', () => {
     const wrapper = shallow(
-      <UnitOverviewHeader
+      <UnconnectedUnitOverviewHeader
         {...defaultProps}
         hasVerifiedResources={true}
         isVerifiedInstructor={false}
@@ -101,7 +109,7 @@ describe('UnitOverviewHeader', () => {
 
   it('has participant announcement if viewing as participant', () => {
     const wrapper = shallow(
-      <UnitOverviewHeader
+      <UnconnectedUnitOverviewHeader
         {...defaultProps}
         hasVerifiedResources={true}
         isVerifiedInstructor={false}
@@ -115,21 +123,13 @@ describe('UnitOverviewHeader', () => {
     );
   });
 
-  it('passes versions to AssignmentVersionSelector', () => {
-    const wrapper = shallow(<UnitOverviewHeader {...defaultProps} />, {
-      disableLifecycleMethods: true,
-    });
-
-    const versionSelector = wrapper.find('AssignmentVersionSelector');
-    expect(1).toEqual(versionSelector.length);
-    const renderedVersions = versionSelector.props().courseVersions;
-    expect(2).toEqual(Object.values(renderedVersions).length);
-  });
-
   it('has correct unit description for instructor', () => {
-    const wrapper = shallow(<UnitOverviewHeader {...defaultProps} />, {
-      disableLifecycleMethods: true,
-    });
+    const wrapper = shallow(
+      <UnconnectedUnitOverviewHeader {...defaultProps} />,
+      {
+        disableLifecycleMethods: true,
+      }
+    );
     expect(wrapper.find('SafeMarkdown').prop('markdown')).toBe(
       '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
     );
@@ -137,7 +137,10 @@ describe('UnitOverviewHeader', () => {
 
   it('has correct unit description for participant', () => {
     const wrapper = shallow(
-      <UnitOverviewHeader {...defaultProps} viewAs={ViewType.Participant} />,
+      <UnconnectedUnitOverviewHeader
+        {...defaultProps}
+        viewAs={ViewType.Participant}
+      />,
       {
         disableLifecycleMethods: true,
       }

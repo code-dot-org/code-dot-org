@@ -10,18 +10,18 @@ import Spinner from '@cdo/apps/sharedComponents/Spinner';
 
 export interface ValidationResultsModalProps {
   onClose: () => void;
-  results: string | undefined;
+  aiResponse: string | undefined;
 }
 
 const ValidationResultsModal: React.FunctionComponent<
   ValidationResultsModalProps
-> = ({onClose, results}) => {
+> = ({onClose, aiResponse}) => {
   return (
     <AccessibleDialog onClose={onClose}>
       <div>
         <Heading3>Results</Heading3>
-        {!results && <Spinner />}
-        {results && <p>{results}</p>}
+        {!aiResponse && <Spinner />}
+        {aiResponse && <p>{aiResponse}</p>}
       </div>
       <hr />
     </AccessibleDialog>

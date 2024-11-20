@@ -1,12 +1,16 @@
 import React, {useCallback, useEffect, useState} from 'react';
 
+import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import Link from '@cdo/apps/componentLibrary/link/Link';
 import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {MetricEvent} from '@cdo/apps/metrics/events';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {submitProject} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
+import {NetworkError} from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './submit-project-dialog.module.scss';
@@ -29,13 +33,28 @@ const SubmitProjectDialog: React.FunctionComponent<
   const [projectDescription, setProjectDescription] = useState<string>('');
   const [isSubmitButtonDisabled, setIsSubmitButtonDisabled] =
     useState<boolean>(true);
+  const [showSubmitError, setShowSubmitError] = useState<boolean>(false);
 
   useEffect(() => {
-    setIsSubmitButtonDisabled(!projectDescription.trim());
+    setIsSubmitButtonDisabled(projectDescription.trim().length < 100);
+    setShowSubmitError(false);
   }, [projectDescription]);
+
+  const metricsReporterIncrementCounter = useCallback(
+    (eventName: string) => {
+      MetricsReporter.incrementCounter(eventName, [
+        {
+          name: 'AppName',
+          value: projectType,
+        },
+      ]);
+    },
+    [projectType]
+  );
 
   const onSubmit = useCallback(async () => {
     setIsSubmitButtonDisabled(true);
+    setShowSubmitError(false);
     analyticsReporter.sendEvent(
       EVENTS.SUBMIT_PROJECT_DIALOG_SUBMIT,
       {
@@ -44,15 +63,39 @@ const SubmitProjectDialog: React.FunctionComponent<
       },
       PLATFORMS.STATSIG
     );
+    metricsReporterIncrementCounter('SubmitProjectDialog.SubmitAttempt');
     try {
       await submitProject(channelId, projectType, projectDescription);
       // Close submit project dialog and display the share dialog.
       onGoBack();
-    } catch (err) {
-      console.error(err);
-      // TODO: UI to notify user that submission was not successful.
+      metricsReporterIncrementCounter('SubmitProjectDialog.SubmitSuccess');
+    } catch (error) {
+      if (!(error instanceof NetworkError && error.response.status === 403)) {
+        MetricsReporter.logError({
+          event: MetricEvent.SUBMIT_PROJECT_UNEXPECTED_ERROR,
+          errorMessage:
+            'Unexpected error in project submission in submit project dialog.',
+          projectType: projectType,
+          channelId: channelId,
+        });
+        metricsReporterIncrementCounter(
+          'SubmitProjectDialog.SubmitUnexpectedError'
+        );
+      } else {
+        metricsReporterIncrementCounter(
+          'SubmitProjectDialog.SubmitForbiddenError'
+        );
+      }
+      setIsSubmitButtonDisabled(projectDescription.trim().length < 100);
+      setShowSubmitError(true);
     }
-  }, [channelId, onGoBack, projectDescription, projectType]);
+  }, [
+    channelId,
+    metricsReporterIncrementCounter,
+    onGoBack,
+    projectDescription,
+    projectType,
+  ]);
 
   return (
     <AccessibleDialog
@@ -86,6 +129,15 @@ const SubmitProjectDialog: React.FunctionComponent<
         </BodyTwoText>
       </div>
       <hr />
+      {showSubmitError && (
+        <div className={moduleStyles.alertContainer}>
+          <Alert
+            text={i18n.submitProjectGallery_tryAgain()}
+            type="danger"
+            size="s"
+          />
+        </div>
+      )}
       <div className={moduleStyles.bottomSection}>
         <div className={moduleStyles.bottomSectionLink}>
           <Link

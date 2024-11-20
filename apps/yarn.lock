@@ -3664,6 +3664,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@blockly/field-colour@npm:^5.0.9":
+  version: 5.0.9
+  resolution: "@blockly/field-colour@npm:5.0.9"
+  peerDependencies:
+    blockly: ^11.0.0
+  checksum: b0f487b6532f67cc1f409018075b3d7242bfb630f452f527e41d4d4ffd37efad9962c82be1a1521e6656336715e1ca35397d0a7019c7633121fefa2a29de20d9
+  languageName: node
+  linkType: hard
+
 "@blockly/field-grid-dropdown@npm:~4.0.9":
   version: 4.0.10
   resolution: "@blockly/field-grid-dropdown@npm:4.0.10"
@@ -9980,6 +9989,7 @@ __metadata:
     "@babel/preset-react": ^7.25.9
     "@blockly/block-shareable-procedures": ~4.0.5
     "@blockly/field-bitmap": ^4.1.0
+    "@blockly/field-colour": ^5.0.9
     "@blockly/field-grid-dropdown": ~4.0.9
     "@blockly/keyboard-navigation": ~0.5.6
     "@blockly/plugin-cross-tab-copy-paste": ~5.0.4

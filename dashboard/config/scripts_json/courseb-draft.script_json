@@ -4,6 +4,8 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_course": true,
       "is_migrated": true,
       "use_legacy_lesson_plans": true,
@@ -11,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "courseb-draft",
-    "serialized_at": "2022-04-08 15:40:38 UTC",
+    "serialized_at": "2024-11-19 01:14:11 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -4569,6 +4571,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

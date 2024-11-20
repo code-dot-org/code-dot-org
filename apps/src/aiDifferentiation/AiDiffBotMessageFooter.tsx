@@ -1,5 +1,5 @@
 import {PDFDownloadLink} from '@react-pdf/renderer';
-import React from 'react';
+import React, {useState} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -24,6 +24,10 @@ interface Props {
 }
 
 const AiDiffBotMessageFooter: React.FC<Props> = ({message}) => {
+  const CONFIRM_TIMEOUT_MS = 1500;
+  const [copyTimeout, setCopyTimeout] = useState(false);
+  const [pdfTimeout, setPdfTimeout] = useState(false);
+
   return (
     <div className={style.messageFeedbackContainer}>
       <div className={style.messageFeedbackLeft}>
@@ -34,26 +38,46 @@ const AiDiffBotMessageFooter: React.FC<Props> = ({message}) => {
             } else {
               copyToClipboard(message.chatMessageText);
             }
+            setCopyTimeout(true);
+            setTimeout(() => setCopyTimeout(false), CONFIRM_TIMEOUT_MS);
           }}
           color="white"
           size="xs"
           isIconOnly
-          icon={{iconStyle: 'regular', iconName: 'copy'}}
+          icon={{
+            iconStyle: 'regular',
+            iconName: copyTimeout ? 'check' : 'copy',
+          }}
           type="primary"
-          className={style.messageFeedbackButton}
+          className={
+            copyTimeout
+              ? style.messageFeedbackConfirm
+              : style.messageFeedbackButton
+          }
         />
         <PDFDownloadLink
           document={<AiDiffPdf messages={[message]} />}
           fileName="ai_differentiation_message.pdf"
         >
           <Button
-            onClick={() => {}}
+            onClick={() => {
+              setPdfTimeout(true);
+              setTimeout(() => setPdfTimeout(false), CONFIRM_TIMEOUT_MS);
+            }}
+            disabled={pdfTimeout}
             color="white"
             size="xs"
             isIconOnly
-            icon={{iconStyle: 'regular', iconName: 'file-export'}}
+            icon={{
+              iconStyle: 'regular',
+              iconName: pdfTimeout ? 'check' : 'file-export',
+            }}
             type="primary"
-            className={style.messageFeedbackButton}
+            className={
+              pdfTimeout
+                ? style.messageFeedbackConfirm
+                : style.messageFeedbackButton
+            }
           />
         </PDFDownloadLink>
       </div>

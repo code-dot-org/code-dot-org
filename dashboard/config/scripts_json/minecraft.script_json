@@ -16,6 +16,7 @@
           "buttonText": "Computer Science Basics for K-5 Teachers "
         }
       ],
+      "content_area": "hoc",
       "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
@@ -65,7 +66,7 @@
     },
     "new_name": null,
     "family_name": "minecraft",
-    "serialized_at": "2024-02-05 21:43:34 UTC",
+    "serialized_at": "2024-11-19 01:19:05 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

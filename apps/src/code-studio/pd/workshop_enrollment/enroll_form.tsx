@@ -2,6 +2,7 @@
  * Form to create a workshop enrollment
  */
 import React, {useState} from 'react';
+// eslint-disable-next-line no-restricted-imports
 import {
   FormGroup,
   Button,
