@@ -1,7 +1,7 @@
 <Music>
   <config><![CDATA[{
   "game_id": 70,
-  "created_at": "2024-10-22T23:17:17.000Z",
+  "created_at": "2024-11-04T07:38:07.000Z",
   "level_num": "custom",
   "user_id": 1196,
   "properties": {
@@ -17,14 +17,26 @@
         "next": true,
         "conditions": [
           {
-            "name": "played_patterns_ai",
+            "name": "played_generated_patterns_ai",
             "value": 1
           }
         ]
       },
       {
+        "key": "music-jam-ai_aa2b5bf0-1d71-4dbe-b835-888f9fde291c",
+        "message": "Click on the blank box in the [play AI drums](#clickable=id-left:play_pattern_ai_at_current_location_simple2) block, choose a few beats, then click \"Generate\".",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_patterns_ai",
+            "value": 1
+          }
+        ],
+        "callout": "id-left:play_pattern_ai_at_current_location_simple2"
+      },
+      {
         "key": "music-ai-skill-sequence_a0f44420-3323-439a-be62-f0aa67dbcbe1",
-        "message": "Click on the blank box in the [play AI drums](#clickable=play-drums-ai-block-workspace) block to generate a new beat. ",
+        "message": "Click on the blank box in the [play AI drums](#clickable=id-left:play_pattern_ai_at_current_location_simple2) block to generate a new beat. ",
         "next": false,
         "conditions": [
           {

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-19 01:19:28 UTC",
+    "serialized_at": "2024-11-19 22:25:42 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -1613,6 +1613,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-lesson3ResourcesPython"
+        ],
         "progression": "Introduction to Pandas and Python"
       },
       "bonus": false,
@@ -1660,6 +1663,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-guidetoProgrammingLevels"
+        ],
         "progression": "Introduction to Pandas and Python"
       },
       "bonus": false,
@@ -1882,6 +1888,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-PL-DS-Investigate_Debrief"
+        ],
         "progression": "Python Basics"
       },
       "bonus": false,
@@ -1979,15 +1988,12 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sp-pl-DS-PanelsExpressions"
-        ],
         "progression": "Python Basics"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "sp-pl-DS-PanelsExpressions"
+          "sp-pl-DS_Python-Lists"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -1995,7 +2001,7 @@
         "activity_section.key": "161778bb-35ef-42a9-aeff-4cf061b03f58"
       },
       "level_keys": [
-        "sp-pl-DS-PanelsExpressions"
+        "sp-pl-DS_Python-Lists"
       ]
     },
     {
@@ -2054,6 +2060,50 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "progression": "Python Basics"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS_cfu-answerExplain"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "161778bb-35ef-42a9-aeff-4cf061b03f58"
+      },
+      "level_keys": [
+        "sp-pl-DS_cfu-answerExplain"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 21,
+      "activity_section_position": 16,
+      "assessment": false,
+      "properties": {
+        "progression": "Python Basics"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS_practiceLevelPedagogy"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "161778bb-35ef-42a9-aeff-4cf061b03f58"
+      },
+      "level_keys": [
+        "sp-pl-DS_practiceLevelPedagogy"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 22,
+      "activity_section_position": 17,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "SP-PL-datascience-U2L2-L8Prac"
         ],
@@ -2074,8 +2124,8 @@
       ]
     },
     {
-      "chapter": 69,
-      "position": 21,
+      "chapter": 71,
+      "position": 23,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2099,8 +2149,8 @@
       ]
     },
     {
-      "chapter": 70,
-      "position": 22,
+      "chapter": 72,
+      "position": 24,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -2124,34 +2174,9 @@
       ]
     },
     {
-      "chapter": 71,
-      "position": 23,
+      "chapter": 73,
+      "position": 25,
       "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "sp-pl-DS-chk-panda"
-        ],
-        "progression": "Introduction to Pandas"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "sp-pl-DS-chk-panda"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "e95d2bbc-31ad-4a09-acd6-4f912b949db0"
-      },
-      "level_keys": [
-        "sp-pl-DS-chk-panda"
-      ]
-    },
-    {
-      "chapter": 72,
-      "position": 24,
-      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2174,9 +2199,9 @@
       ]
     },
     {
-      "chapter": 73,
-      "position": 25,
-      "activity_section_position": 5,
+      "chapter": 74,
+      "position": 26,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2199,9 +2224,9 @@
       ]
     },
     {
-      "chapter": 74,
-      "position": 26,
-      "activity_section_position": 6,
+      "chapter": 75,
+      "position": 27,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2224,9 +2249,9 @@
       ]
     },
     {
-      "chapter": 75,
-      "position": 27,
-      "activity_section_position": 7,
+      "chapter": 76,
+      "position": 28,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2249,9 +2274,9 @@
       ]
     },
     {
-      "chapter": 76,
-      "position": 28,
-      "activity_section_position": 8,
+      "chapter": 77,
+      "position": 29,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2274,9 +2299,9 @@
       ]
     },
     {
-      "chapter": 77,
-      "position": 29,
-      "activity_section_position": 9,
+      "chapter": 78,
+      "position": 30,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2299,20 +2324,17 @@
       ]
     },
     {
-      "chapter": 78,
-      "position": 30,
-      "activity_section_position": 10,
+      "chapter": 79,
+      "position": 31,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-PL-DSU2L3-L7-Choice"
-        ],
         "progression": "Introduction to Pandas"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-PL-DSU2L3-L7-Choice"
+          "sp-pl-DS_cfu-PandasanswerExplain"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -2320,12 +2342,12 @@
         "activity_section.key": "e95d2bbc-31ad-4a09-acd6-4f912b949db0"
       },
       "level_keys": [
-        "SP-PL-DSU2L3-L7-Choice"
+        "sp-pl-DS_cfu-PandasanswerExplain"
       ]
     },
     {
-      "chapter": 79,
-      "position": 31,
+      "chapter": 80,
+      "position": 32,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2349,8 +2371,8 @@
       ]
     },
     {
-      "chapter": 80,
-      "position": 32,
+      "chapter": 81,
+      "position": 33,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -2374,8 +2396,8 @@
       ]
     },
     {
-      "chapter": 81,
-      "position": 33,
+      "chapter": 82,
+      "position": 34,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -2399,8 +2421,8 @@
       ]
     },
     {
-      "chapter": 82,
-      "position": 34,
+      "chapter": 83,
+      "position": 35,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -2424,8 +2446,8 @@
       ]
     },
     {
-      "chapter": 83,
-      "position": 35,
+      "chapter": 84,
+      "position": 36,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -2449,8 +2471,8 @@
       ]
     },
     {
-      "chapter": 84,
-      "position": 36,
+      "chapter": 85,
+      "position": 37,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -2474,8 +2496,8 @@
       ]
     },
     {
-      "chapter": 85,
-      "position": 37,
+      "chapter": 86,
+      "position": 38,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
@@ -2499,8 +2521,8 @@
       ]
     },
     {
-      "chapter": 86,
-      "position": 38,
+      "chapter": 87,
+      "position": 39,
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
@@ -2524,8 +2546,8 @@
       ]
     },
     {
-      "chapter": 87,
-      "position": 39,
+      "chapter": 88,
+      "position": 40,
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
@@ -2549,8 +2571,8 @@
       ]
     },
     {
-      "chapter": 88,
-      "position": 40,
+      "chapter": 89,
+      "position": 41,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2574,8 +2596,8 @@
       ]
     },
     {
-      "chapter": 89,
-      "position": 41,
+      "chapter": 90,
+      "position": 42,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -2599,8 +2621,8 @@
       ]
     },
     {
-      "chapter": 90,
-      "position": 42,
+      "chapter": 91,
+      "position": 43,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -2624,8 +2646,8 @@
       ]
     },
     {
-      "chapter": 91,
-      "position": 43,
+      "chapter": 92,
+      "position": 44,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -2649,8 +2671,8 @@
       ]
     },
     {
-      "chapter": 92,
-      "position": 44,
+      "chapter": 93,
+      "position": 45,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -2674,8 +2696,8 @@
       ]
     },
     {
-      "chapter": 93,
-      "position": 45,
+      "chapter": 94,
+      "position": 46,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -2699,8 +2721,8 @@
       ]
     },
     {
-      "chapter": 94,
-      "position": 46,
+      "chapter": 95,
+      "position": 47,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
@@ -2724,8 +2746,8 @@
       ]
     },
     {
-      "chapter": 95,
-      "position": 47,
+      "chapter": 96,
+      "position": 48,
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
@@ -2749,8 +2771,8 @@
       ]
     },
     {
-      "chapter": 96,
-      "position": 48,
+      "chapter": 97,
+      "position": 49,
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
@@ -2774,8 +2796,8 @@
       ]
     },
     {
-      "chapter": 97,
-      "position": 49,
+      "chapter": 98,
+      "position": 50,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2799,8 +2821,8 @@
       ]
     },
     {
-      "chapter": 98,
-      "position": 50,
+      "chapter": 99,
+      "position": 51,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -2824,8 +2846,8 @@
       ]
     },
     {
-      "chapter": 99,
-      "position": 51,
+      "chapter": 100,
+      "position": 52,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -2849,8 +2871,8 @@
       ]
     },
     {
-      "chapter": 100,
-      "position": 52,
+      "chapter": 101,
+      "position": 53,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -2874,8 +2896,8 @@
       ]
     },
     {
-      "chapter": 101,
-      "position": 53,
+      "chapter": 102,
+      "position": 54,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -2899,8 +2921,8 @@
       ]
     },
     {
-      "chapter": 102,
-      "position": 54,
+      "chapter": 103,
+      "position": 55,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -2924,8 +2946,8 @@
       ]
     },
     {
-      "chapter": 103,
-      "position": 55,
+      "chapter": 104,
+      "position": 56,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
@@ -2949,8 +2971,8 @@
       ]
     },
     {
-      "chapter": 104,
-      "position": 56,
+      "chapter": 105,
+      "position": 57,
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
@@ -2974,8 +2996,8 @@
       ]
     },
     {
-      "chapter": 105,
-      "position": 57,
+      "chapter": 106,
+      "position": 58,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2999,8 +3021,8 @@
       ]
     },
     {
-      "chapter": 106,
-      "position": 58,
+      "chapter": 107,
+      "position": 59,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3024,8 +3046,8 @@
       ]
     },
     {
-      "chapter": 107,
-      "position": 59,
+      "chapter": 108,
+      "position": 60,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -3049,8 +3071,8 @@
       ]
     },
     {
-      "chapter": 108,
-      "position": 60,
+      "chapter": 109,
+      "position": 61,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -3074,8 +3096,8 @@
       ]
     },
     {
-      "chapter": 109,
-      "position": 61,
+      "chapter": 110,
+      "position": 62,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -3099,8 +3121,8 @@
       ]
     },
     {
-      "chapter": 110,
-      "position": 62,
+      "chapter": 111,
+      "position": 63,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -3124,8 +3146,8 @@
       ]
     },
     {
-      "chapter": 111,
-      "position": 63,
+      "chapter": 112,
+      "position": 64,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
@@ -3149,8 +3171,8 @@
       ]
     },
     {
-      "chapter": 112,
-      "position": 64,
+      "chapter": 113,
+      "position": 65,
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
@@ -3174,8 +3196,8 @@
       ]
     },
     {
-      "chapter": 113,
-      "position": 65,
+      "chapter": 114,
+      "position": 66,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3199,8 +3221,8 @@
       ]
     },
     {
-      "chapter": 114,
-      "position": 66,
+      "chapter": 115,
+      "position": 67,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3224,8 +3246,8 @@
       ]
     },
     {
-      "chapter": 115,
-      "position": 67,
+      "chapter": 116,
+      "position": 68,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -3249,8 +3271,8 @@
       ]
     },
     {
-      "chapter": 116,
-      "position": 68,
+      "chapter": 117,
+      "position": 69,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -3274,8 +3296,8 @@
       ]
     },
     {
-      "chapter": 117,
-      "position": 69,
+      "chapter": 118,
+      "position": 70,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -3299,8 +3321,8 @@
       ]
     },
     {
-      "chapter": 118,
-      "position": 70,
+      "chapter": 119,
+      "position": 71,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -3324,8 +3346,8 @@
       ]
     },
     {
-      "chapter": 119,
-      "position": 71,
+      "chapter": 120,
+      "position": 72,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
@@ -3349,8 +3371,8 @@
       ]
     },
     {
-      "chapter": 120,
-      "position": 72,
+      "chapter": 121,
+      "position": 73,
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
@@ -3374,8 +3396,8 @@
       ]
     },
     {
-      "chapter": 121,
-      "position": 73,
+      "chapter": 122,
+      "position": 74,
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
@@ -3399,8 +3421,8 @@
       ]
     },
     {
-      "chapter": 122,
-      "position": 74,
+      "chapter": 123,
+      "position": 75,
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
@@ -3424,8 +3446,8 @@
       ]
     },
     {
-      "chapter": 123,
-      "position": 75,
+      "chapter": 124,
+      "position": 76,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3449,8 +3471,8 @@
       ]
     },
     {
-      "chapter": 124,
-      "position": 76,
+      "chapter": 125,
+      "position": 77,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3474,8 +3496,8 @@
       ]
     },
     {
-      "chapter": 125,
-      "position": 77,
+      "chapter": 126,
+      "position": 78,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -3499,8 +3521,8 @@
       ]
     },
     {
-      "chapter": 126,
-      "position": 78,
+      "chapter": 127,
+      "position": 79,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -3524,8 +3546,8 @@
       ]
     },
     {
-      "chapter": 127,
-      "position": 79,
+      "chapter": 128,
+      "position": 80,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -3549,8 +3571,8 @@
       ]
     },
     {
-      "chapter": 128,
-      "position": 80,
+      "chapter": 129,
+      "position": 81,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -3574,8 +3596,8 @@
       ]
     },
     {
-      "chapter": 129,
-      "position": 81,
+      "chapter": 130,
+      "position": 82,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
@@ -3599,8 +3621,8 @@
       ]
     },
     {
-      "chapter": 130,
-      "position": 82,
+      "chapter": 131,
+      "position": 83,
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
@@ -3624,8 +3646,8 @@
       ]
     },
     {
-      "chapter": 131,
-      "position": 83,
+      "chapter": 132,
+      "position": 84,
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
@@ -3649,8 +3671,8 @@
       ]
     },
     {
-      "chapter": 132,
-      "position": 84,
+      "chapter": 133,
+      "position": 85,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3674,8 +3696,8 @@
       ]
     },
     {
-      "chapter": 133,
-      "position": 85,
+      "chapter": 134,
+      "position": 86,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3699,8 +3721,8 @@
       ]
     },
     {
-      "chapter": 134,
-      "position": 86,
+      "chapter": 135,
+      "position": 87,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -3724,8 +3746,8 @@
       ]
     },
     {
-      "chapter": 135,
-      "position": 87,
+      "chapter": 136,
+      "position": 88,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -3749,8 +3771,8 @@
       ]
     },
     {
-      "chapter": 136,
-      "position": 88,
+      "chapter": 137,
+      "position": 89,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -3774,8 +3796,8 @@
       ]
     },
     {
-      "chapter": 137,
-      "position": 89,
+      "chapter": 138,
+      "position": 90,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -3799,8 +3821,8 @@
       ]
     },
     {
-      "chapter": 138,
-      "position": 90,
+      "chapter": 139,
+      "position": 91,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
@@ -3824,8 +3846,8 @@
       ]
     },
     {
-      "chapter": 139,
-      "position": 91,
+      "chapter": 140,
+      "position": 92,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3849,8 +3871,8 @@
       ]
     },
     {
-      "chapter": 140,
-      "position": 92,
+      "chapter": 141,
+      "position": 93,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3874,8 +3896,8 @@
       ]
     },
     {
-      "chapter": 141,
-      "position": 93,
+      "chapter": 142,
+      "position": 94,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -3899,8 +3921,8 @@
       ]
     },
     {
-      "chapter": 142,
-      "position": 94,
+      "chapter": 143,
+      "position": 95,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -3924,7 +3946,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 144,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3949,7 +3971,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 145,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3974,7 +3996,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 146,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -3999,7 +4021,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 147,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -4024,7 +4046,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 148,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -4820,9 +4842,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "sp-pl-DS-PanelsExpressions",
+        "level.key": "sp-pl-DS_Python-Lists",
         "script_level.level_keys": [
-          "sp-pl-DS-PanelsExpressions"
+          "sp-pl-DS_Python-Lists"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -4847,6 +4869,30 @@
         "level.key": "SP-PL-datascience-U2L2-CFU",
         "script_level.level_keys": [
           "SP-PL-datascience-U2L2-CFU"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "161778bb-35ef-42a9-aeff-4cf061b03f58"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS_cfu-answerExplain",
+        "script_level.level_keys": [
+          "sp-pl-DS_cfu-answerExplain"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "161778bb-35ef-42a9-aeff-4cf061b03f58"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS_practiceLevelPedagogy",
+        "script_level.level_keys": [
+          "sp-pl-DS_practiceLevelPedagogy"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -4883,18 +4929,6 @@
         "level.key": "sp-pl-DS_Pandas",
         "script_level.level_keys": [
           "sp-pl-DS_Pandas"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "e95d2bbc-31ad-4a09-acd6-4f912b949db0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "sp-pl-DS-chk-panda",
-        "script_level.level_keys": [
-          "sp-pl-DS-chk-panda"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -4976,9 +5010,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-PL-DSU2L3-L7-Choice",
+        "level.key": "sp-pl-DS_cfu-PandasanswerExplain",
         "script_level.level_keys": [
-          "SP-PL-DSU2L3-L7-Choice"
+          "sp-pl-DS_cfu-PandasanswerExplain"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",

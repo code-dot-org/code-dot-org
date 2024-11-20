@@ -56,7 +56,6 @@ const defaultProps = {
   rubric: defaultRubric,
   currentLevelName: 'test_level',
   studentLevelInfo: null,
-  notificationsEnabled: true,
 };
 
 describe('RubricFloatingActionButton', () => {
@@ -202,30 +201,6 @@ describe('RubricFloatingActionButton', () => {
       const countBubble = screen.getByLabelText(i18n.aiEvaluationsToReview());
       expect(countBubble).toBeVisible();
       expect(countBubble.textContent).toBe('1');
-    });
-
-    it('does not render count bubble when notifications are disabled', async () => {
-      stubFetch({
-        evalStatusForAll: successJsonAll,
-        teacherEvals: noEvals,
-      });
-
-      render(
-        <Provider store={store}>
-          <RubricFloatingActionButton
-            {...defaultProps}
-            sectionId={sectionId}
-            notificationsEnabled={false}
-          />
-        </Provider>
-      );
-
-      await wait();
-
-      expect(screen.getByRole('img', {name: 'TA overlay'})).toBeVisible();
-      expect(
-        screen.queryByLabelText(i18n.aiEvaluationsToReview())
-      ).not.toBeInTheDocument();
     });
 
     it('does not render count bubble on non-assessment level', async () => {

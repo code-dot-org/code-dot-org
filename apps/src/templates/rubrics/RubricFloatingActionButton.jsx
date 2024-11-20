@@ -75,7 +75,6 @@ function RubricFloatingActionButton({
   reportingData,
   aiEnabled,
   sectionId,
-  notificationsEnabled,
   canShowTaScoresAlert,
 }) {
   const sessionStorageKey = 'RubricFabOpenStateKey';
@@ -100,10 +99,7 @@ function RubricFloatingActionButton({
   const readyStudentCount = useAppSelector(selectReadyStudentCount);
   const hasLoadedStudentStatus = useAppSelector(selectHasLoadedStudentStatus);
   const showCountBubble =
-    onLevelForEvaluation &&
-    notificationsEnabled &&
-    hasLoadedStudentStatus &&
-    readyStudentCount > 0;
+    onLevelForEvaluation && hasLoadedStudentStatus && readyStudentCount > 0;
 
   const eventData = useMemo(() => {
     return {
@@ -298,7 +294,6 @@ RubricFloatingActionButton.propTypes = {
   reportingData: reportingDataShape,
   aiEnabled: PropTypes.bool,
   sectionId: PropTypes.number,
-  notificationsEnabled: PropTypes.bool,
   canShowTaScoresAlert: PropTypes.bool,
 };
 

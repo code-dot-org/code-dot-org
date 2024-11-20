@@ -382,6 +382,24 @@ describe('Enroll Form', () => {
     });
   });
 
+  describe('Build Your Own Workshop Enroll Form', () => {
+    const overrides = {
+      workshop_course: 'Build Your Own Workshop',
+    };
+    beforeEach(() => {
+      enrollForm = renderDefault(overrides);
+    });
+
+    it('does not display form questions', () => {
+      assert(!enrollForm.exists('#role'));
+      assert(!enrollForm.exists('#grades_teaching'));
+      assert(!enrollForm.exists('#describe_role'));
+
+      // Still shows the 'Register' button
+      assert(enrollForm.exists('#submit'));
+    });
+  });
+
   describe('All Enroll Forms', () => {
     const requiredParams = {
       ...baseParams,
