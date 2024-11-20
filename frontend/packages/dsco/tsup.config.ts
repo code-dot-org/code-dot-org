@@ -3,7 +3,7 @@ import {postcssModules, sassPlugin} from 'esbuild-sass-plugin';
 import {glob} from "glob";
 import {resolve} from "node:path"
 
-const entryPoints = glob.sync('./components/**/index.ts', {
+const entryPoints = glob.sync('./src/**/index.ts', {
     posix: true,
 })
 
@@ -23,10 +23,9 @@ export default defineConfig({
                 generateScopedName: '[name]__[local]___[hash:base64:5]',
             }),
             importMapper: (path) => {
-                // Convert any references to @ to the ./components directory
-                return resolve(__dirname, path.replace(/^@\//, './components/'));
+                // Convert any references to @ to the ./src directory
+                return resolve(__dirname, path.replace(/^@\//, './src/'));
             }
         })
-
     ]
 });

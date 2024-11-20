@@ -1,7 +1,7 @@
 const glob = require('glob');
 const {basename, dirname} = require('path');
 
-const entryPoints = glob.sync('./components/**/index.ts', {
+const entryPoints = glob.sync('./src/**/index.ts', {
     posix: true,
     nodir: true
 })

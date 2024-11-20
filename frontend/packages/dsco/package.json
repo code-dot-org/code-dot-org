@@ -6,7 +6,7 @@
   ],
   "version": "0.0.0-alpha.0",
   "scripts": {
-    "build": "tsup --dts",
+    "build": "NODE_OPTIONS='--max-old-space-size=8192' tsup --dts",
     "build:fast": "tsup",
     "dev": "yarn build:fast --watch",
     "clean": "rimraf dist .turbo",
