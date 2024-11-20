@@ -25,6 +25,7 @@ interface Props {
   isOpen: boolean;
   isLoadingStudents: boolean;
   ageGatedStudentsCount?: number;
+  ageGatedStudentsUsState?: string;
 }
 
 const AgeGatedStudentsModal: React.FC<Props> = ({
@@ -32,6 +33,7 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
   isOpen,
   onClose,
   ageGatedStudentsCount = 0,
+  ageGatedStudentsUsState,
 }) => {
   const currentUser = useSelector((state: RootState) => state.currentUser);
   const reportEvent = (eventName: string, payload: object = {}) => {
@@ -45,6 +47,7 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
     reportEvent(EVENTS.CAP_STUDENT_WARNING_LINK_CLICKED, {
       user_id: currentUser.userId,
       number_of_gateable_students: ageGatedStudentsCount,
+      usState: ageGatedStudentsUsState,
     });
   };
 
@@ -52,6 +55,7 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
     reportEvent(EVENTS.CAP_AGE_GATED_MODAL_CLOSED, {
       user_id: currentUser.userId,
       number_of_gateable_students: ageGatedStudentsCount,
+      usState: ageGatedStudentsUsState,
     });
     onClose();
   };
@@ -60,8 +64,9 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
     reportEvent(EVENTS.CAP_AGE_GATED_MODAL_SHOWN, {
       user_id: currentUser.userId,
       number_of_gateable_students: ageGatedStudentsCount,
+      usState: ageGatedStudentsUsState,
     });
-  }, [currentUser.userId, ageGatedStudentsCount]);
+  }, [currentUser.userId, ageGatedStudentsCount, ageGatedStudentsUsState]);
   return (
     <BaseDialog
       isOpen={isOpen}
