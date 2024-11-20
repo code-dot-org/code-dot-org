@@ -15,6 +15,7 @@
           "key": "7264ade6-1bfd-47a2-b1b2-1e17d8afb9a4"
         }
       ],
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -30,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-09 18:28:33 UTC",
+    "serialized_at": "2024-11-19 01:16:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

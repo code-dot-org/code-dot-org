@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_k_5",
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-1718/express/{LESSON}",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
@@ -50,7 +51,7 @@
     },
     "new_name": "express-2017",
     "family_name": "express",
-    "serialized_at": "2022-03-11 12:07:27 UTC",
+    "serialized_at": "2024-11-19 01:17:31 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -8592,7 +8593,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp2",
+        "level.key": "courseE_maze_ramp2",
         "script_level.level_keys": [
           "courseD_scrat_ramp2",
           "courseE_maze_ramp2"
@@ -8605,7 +8606,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_maze_ramp2",
+        "level.key": "courseD_scrat_ramp2",
         "script_level.level_keys": [
           "courseD_scrat_ramp2",
           "courseE_maze_ramp2"
@@ -8722,7 +8723,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_video_ScratLoops",
+        "level.key": "courseCDEF_video_AngryBirdLoops",
         "script_level.level_keys": [
           "courseCDEF_video_AngryBirdLoops",
           "courseD_video_ScratLoops"
@@ -8735,7 +8736,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseCDEF_video_AngryBirdLoops",
+        "level.key": "courseD_video_ScratLoops",
         "script_level.level_keys": [
           "courseCDEF_video_AngryBirdLoops",
           "courseD_video_ScratLoops"
@@ -9072,7 +9073,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_collector_debugging5",
+        "level.key": "courseC_maze_debugging5",
         "script_level.level_keys": [
           "courseC_maze_debugging5",
           "courseD_collector_debugging5"
@@ -9085,7 +9086,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseC_maze_debugging5",
+        "level.key": "courseD_collector_debugging5",
         "script_level.level_keys": [
           "courseC_maze_debugging5",
           "courseD_collector_debugging5"
@@ -12313,6 +12314,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

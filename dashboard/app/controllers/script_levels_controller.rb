@@ -13,6 +13,10 @@ class ScriptLevelsController < ApplicationController
   before_action :set_redirect_override, only: [:show]
   before_action :check_script_id_is_name, only: [:show, :lesson_extras]
 
+  # The TA scores alert will be shown at most once for each lesson. This
+  # is the maximum number of times it will be shown across all lessons.
+  MAX_SHOW_TA_SCORES_ALERT = 3
+
   # Return true if request is one that can be publicly cached.
   def cachable_request?(request)
     script = ScriptLevelsController.get_script(request)
@@ -188,6 +192,7 @@ class ScriptLevelsController < ApplicationController
     ai_rubrics_enabled_for_user = @view_as_user&.verified_teacher? || @view_as_user&.teachers&.any?(&:verified_teacher?)
     if @rubric && ai_rubrics_enabled_for_user
       @rubric_data = {rubric: @rubric.summarize}
+      @rubric_data[:canShowTaScoresAlert] = can_show_ta_scores_alert?
       if @script_level.lesson.rubric && view_as_other
         viewing_user_level = @view_as_user.user_levels.find_by(script: @script_level.script, level: @level)
         @rubric_data[:studentLevelInfo] = {
@@ -626,5 +631,12 @@ class ScriptLevelsController < ApplicationController
     return nil if redirect_script == script
 
     redirect_script
+  end
+
+  private def can_show_ta_scores_alert?
+    return false if LearningGoalTeacherEvaluation.where(teacher_id: current_user.id).where.not(understanding: nil).exists?
+    seen_ta_scores_map = current_user&.seen_ta_scores_map || {}
+    return false if seen_ta_scores_map.keys.length >= MAX_SHOW_TA_SCORES_ALERT
+    !seen_ta_scores_map[@script_level.lesson.id.to_s]
   end
 end

@@ -2,6 +2,7 @@
 
 require 'request_store'
 require 'cdo/global_edition'
+require 'active_support/core_ext/string/filters'
 
 module Rack
   class GlobalEdition

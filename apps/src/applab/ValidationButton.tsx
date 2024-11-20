@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useState} from 'react';
 
-import {AITutorTypes as ActionType} from '@cdo/apps/aiTutor/types';
+import {AITutorTypes as ActionType, Role} from '@cdo/apps/aiTutor/types';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 
 import {askAITutor} from '../aiTutor/redux/aiTutorRedux';
@@ -19,7 +19,7 @@ const ValidationButton: React.FunctionComponent = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [studentCode, setStudentCode] = useState('');
   const storedMessages = useAppSelector(state => state.aiTutor.chatMessages);
-
+  const [aiResponse, setAiResponse] = useState<string | undefined>(undefined);
   const codeDOMElement = document.getElementsByClassName('ace_content');
 
   useEffect(() => {
@@ -27,13 +27,19 @@ const ValidationButton: React.FunctionComponent = () => {
       const studentCode = codeDOMElement[0] as HTMLElement;
       setStudentCode(studentCode.innerText);
     }
-  }, [codeDOMElement]);
+    const mostRecentMessage = storedMessages.at(-1);
+    const aiReponse =
+      mostRecentMessage && mostRecentMessage.role === Role.ASSISTANT
+        ? mostRecentMessage.chatMessageText
+        : undefined;
+    setAiResponse(aiReponse);
+  }, [codeDOMElement, storedMessages]);
 
   const dispatch = useAppDispatch();
 
   const handleSubmit = useCallback(() => {
     const systemPrompt =
-      'For each TODO say only "yes", "no" or "partial" to indicate whether the TODO is complete, incomplete or partially complete. For "partial" explain why in one sentence. Do not write any code.';
+      'For each TODO, output "TODO" with the correct number and say "yes", "no" or "partial" to indicate whether the TODO is complete, incomplete or partially complete. For each explain why in one sentence. Do not write any code.';
     const chatContext = {
       systemPrompt,
       studentInput: `${systemPrompt} ${studentCode}`,
@@ -51,10 +57,6 @@ const ValidationButton: React.FunctionComponent = () => {
   const onClose = () => {
     setModalOpen(false);
   };
-  const results =
-    storedMessages.length > 2
-      ? storedMessages.at(-1)?.chatMessageText
-      : undefined;
   return (
     <>
       <Button
@@ -65,7 +67,7 @@ const ValidationButton: React.FunctionComponent = () => {
         size="s"
       />
       {modalOpen && (
-        <ValidationResultsModal onClose={onClose} results={results} />
+        <ValidationResultsModal onClose={onClose} aiResponse={aiResponse} />
       )}
     </>
   );

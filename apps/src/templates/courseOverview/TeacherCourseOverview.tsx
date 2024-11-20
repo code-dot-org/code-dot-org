@@ -42,7 +42,7 @@ interface Resource {
   isRollup: boolean;
 }
 
-interface Version {
+export interface Version {
   id: number;
   key: string;
   version_year: string;
@@ -116,7 +116,11 @@ const TeacherCourseOverview: React.FC = () => {
   const selectedSection = useAppSelector(selectedSectionSelector);
 
   React.useEffect(() => {
-    if (!selectedSection || !selectedSection?.courseVersionName) {
+    if (
+      !selectedSection ||
+      !selectedSection?.courseVersionName ||
+      parseInt(params.sectionId || '-1') !== selectedSection.id
+    ) {
       return;
     }
     if (!selectedSection.courseId && selectedSection.unitName) {
@@ -168,6 +172,7 @@ const TeacherCourseOverview: React.FC = () => {
     setCourseSummary,
     setIsVerifiedInstructor,
     setHiddenScripts,
+    params.sectionId,
   ]);
 
   const userId = useSelector(

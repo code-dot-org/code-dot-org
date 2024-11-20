@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
       "is_course": true,
@@ -19,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "nevada-standards-aligned-fifth-grade",
-    "serialized_at": "2024-02-16 22:31:17 UTC",
+    "serialized_at": "2024-11-19 01:19:07 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

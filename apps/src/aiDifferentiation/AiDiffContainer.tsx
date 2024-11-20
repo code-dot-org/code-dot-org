@@ -11,6 +11,7 @@ import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
 import HttpClient from '../util/HttpClient';
+import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
 import AiDiffBotMessageFooter from './AiDiffBotMessageFooter';
 import AiDiffChatFooter from './AiDiffChatFooter';
@@ -36,6 +37,8 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
 }) => {
   // TODO: Update to support i18n
   const aiDiffHeaderText = 'AI Teaching Assistant';
+  const aiDiffPositionX = 'aiDiffPositionX';
+  const aiDiffPositionY = 'aiDiffPositionY';
 
   const aiDiffChatMessageEndpoint = '/ai_diff/chat_completion';
 
@@ -45,12 +48,39 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     unitName: unitDisplayName,
   };
 
-  const [positionX, setPositionX] = useState(0);
-  const [positionY, setPositionY] = useState(0);
+  const [positionX, setPositionX] = useState(
+    parseInt(tryGetSessionStorage(aiDiffPositionX, 0)) || 0
+  );
+  const [positionY, setPositionY] = useState(
+    parseInt(tryGetSessionStorage(aiDiffPositionY, 0)) || 0
+  );
 
   const [sessionId, setSessionId] = useState(null);
 
   const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
+
+  const SUGGESTED_PROMPTS = [
+    {
+      label: 'Explain a concept',
+      prompt:
+        'I need an explanation of a concept. You can ask me a follow-up question to find out what concept needs to be explained.',
+    },
+    {
+      label: 'Give an example to use with my class',
+      prompt:
+        'Can I have an example to use with my class? You can ask me a follow-up question to get more details for the kind of example needed.',
+    },
+    {
+      label: 'Write an extension activity for students who finish early',
+      prompt:
+        'Write an extension activity for this lesson for students who finish early',
+    },
+    {
+      label: 'Write an extension activity for students who need extra practice',
+      prompt:
+        'Write an extension activity for this lesson for students who need extra practice',
+    },
+  ];
 
   const [messageHistory, setMessageHistory] = useState<ChatItem[]>([
     {
@@ -58,30 +88,16 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       chatMessageText: `Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.`,
       status: Status.OK,
     },
-    [
-      {
-        label: 'Explain a concept',
-        prompt:
-          'I need an explanation of a concept. You can ask me a follow-up question to find out what concept needs to be explained.',
-      },
-      {
-        label: 'Give an example to use with my class',
-        prompt:
-          'Can I have an example to use with my class? You can ask me a follow-up question to get more details for the kind of example needed.',
-      },
-      {
-        label: 'Write an extension activity for students who finish early',
-        prompt:
-          'Write an extension activity for this lesson for students who finish early',
-      },
-      {
-        label:
-          'Write an extension activity for students who need extra practice',
-        prompt:
-          'Write an extension activity for this lesson for students who need extra practice',
-      },
-    ],
+    SUGGESTED_PROMPTS,
   ]);
+
+  useEffect(() => {
+    trySetSessionStorage(aiDiffPositionX, String(positionX));
+  }, [positionX]);
+
+  useEffect(() => {
+    trySetSessionStorage(aiDiffPositionY, String(positionY));
+  }, [positionY]);
 
   const onStopHandler: DraggableEventHandler = (e, data) => {
     setPositionX(data.x);
@@ -101,6 +117,10 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
 
   const onPromptSelect = (prompt: ChatPrompt) => {
     getAIResponse(prompt.prompt, true);
+  };
+
+  const onSuggestPrompts = () => {
+    setMessageHistory(prevMessages => [...prevMessages, SUGGESTED_PROMPTS]);
   };
 
   const sendChatEvent = (
@@ -181,18 +201,25 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       onStop={onStopHandler}
     >
       <div
-        className={classnames(style.aiDiffContainer, {
-          [style.hiddenAiDiffPanel]: !open,
-        })}
+        // eslint-disable-next-line react/forbid-dom-props
+        data-testid="draggable-test-id"
+        id="draggable-id"
+        className={style.aiDiffContainer}
+        style={open ? undefined : {display: 'none'}}
       >
         <div className={classnames(style.aiDiffHeader, 'ai_diff_handle')}>
           <div className={style.aiDiffHeaderLeftSide}>
-            <img
-              src={aiBotOutlineIcon}
-              className={style.aiBotOutlineIcon}
-              alt={aiDiffHeaderText}
-            />
-            <span>{aiDiffHeaderText}</span>
+            <div className={style.aiBotHeader}>
+              <img
+                src={aiBotOutlineIcon}
+                className={style.aiBotOutlineIcon}
+                alt={aiDiffHeaderText}
+              />
+              <div className={style.taOverlayHeader}>
+                <span>{'TA'}</span>
+              </div>
+            </div>
+            <span className={style.aiDiffHeaderText}>{aiDiffHeaderText}</span>
           </div>
           <div className={style.aiDiffHeaderRightSide}>
             <Button
@@ -217,7 +244,12 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
                   key={id}
                 />
               ) : (
-                <ChatMessage {...item} customStyles={style} key={id}>
+                <ChatMessage
+                  {...item}
+                  customStyles={style}
+                  key={id}
+                  isTA={true}
+                >
                   {item.role === Role.ASSISTANT && (
                     <AiDiffBotMessageFooter message={item} />
                   )}
@@ -236,6 +268,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           </div>
           <AiDiffChatFooter
             onSubmit={onMessageSend}
+            onSuggestPrompts={onSuggestPrompts}
             messages={messageHistory}
           />
         </div>

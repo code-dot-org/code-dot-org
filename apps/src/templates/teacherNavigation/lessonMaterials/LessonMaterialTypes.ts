@@ -12,6 +12,8 @@ export type Lesson = {
     Teacher: Resource[];
     Student: Resource[];
   };
+  hasLessonPlan: boolean;
+  isLockable: boolean;
 };
 
 export type Resource = {

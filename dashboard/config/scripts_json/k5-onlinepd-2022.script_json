@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "self_paced_pl_k_5",
       "curriculum_umbrella": "CSF Self Paced PL",
       "is_course": true,
       "is_migrated": true,
@@ -11,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "k5-onlinepd",
-    "serialized_at": "2022-06-29 17:08:19 UTC",
+    "serialized_at": "2024-11-19 01:18:56 UTC",
     "published_state": "stable",
     "instruction_type": "self_paced",
     "instructor_audience": "universal_instructor",
@@ -5896,6 +5897,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

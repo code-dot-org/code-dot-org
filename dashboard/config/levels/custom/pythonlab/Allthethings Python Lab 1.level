@@ -5,6 +5,7 @@
   "level_num": "custom",
   "user_id": 6959,
   "properties": {
+    "skipUrl": "/projects/pythonlab/new",
     "encrypted": "false",
     "start_sources": {
       "files": {

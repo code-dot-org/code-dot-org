@@ -166,6 +166,7 @@ class User < ApplicationRecord
     failed_attempts
     locked_at
     has_seen_ai_assessments_announcement
+    seen_ta_scores_map
     roster_synced
   )
 
@@ -1184,6 +1185,7 @@ class User < ApplicationRecord
     login = conditions.delete(:login)
     if login.present?
       return nil if login.size > max_credential_size || login.utf8mb4?
+      Cdo::Metrics.put('User', 'LoginByUsername', 1, {Environment: CDO.rack_env})
       # TODO: multi-auth (@eric, before merge!) have to handle this path, and make sure that whatever
       # indexing problems bit us on the users table don't affect the multi-auth table
       ignore_deleted_at_index.where(
@@ -1194,6 +1196,7 @@ class User < ApplicationRecord
       ).first
     elsif (hashed_email = conditions.delete(:hashed_email))
       return nil if hashed_email.size > max_credential_size || hashed_email.utf8mb4?
+      Cdo::Metrics.put('User', 'LoginByEmail', 1, {Environment: CDO.rack_env})
       return find_by_hashed_email(hashed_email)
     else
       nil
@@ -1720,7 +1723,11 @@ class User < ApplicationRecord
 
   def self.send_reset_password_instructions(attributes = {})
     # override of Devise method
-    Services::User::PasswordResetter.call(email: attributes[:email])
+    if attributes[:username].present? && RequestStore.store[:current_user]&.admin?
+      Services::User::PasswordResetterByUsername.call(username: attributes[:username])
+    else
+      Services::User::PasswordResetterByEmail.call(email: attributes[:email])
+    end
   end
 
   def reset_secrets

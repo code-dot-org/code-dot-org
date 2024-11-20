@@ -48,7 +48,7 @@ class LevelLoader
       # level_concept_difficulty) when we bulk-load the level properties.
       new_level_names = level_file_names.
         reject {|name| existing_level_names.include? name}
-      Level.import!(new_level_names.map {|name| {name: name}})
+      Level.import! new_level_names.map {|name| {name: name}}, batch_size: 1000
 
       # Load level properties from disk and build a collection of levels that
       # have changed.
@@ -72,7 +72,7 @@ class LevelLoader
       changed_lcds = changed_levels.filter_map(&:level_concept_difficulty)
       lcd_update_columns = LevelConceptDifficulty.columns.map(&:name).map(&:to_sym).
         reject {|column| immutable_lcd_columns.include? column}
-      LevelConceptDifficulty.import! changed_lcds, on_duplicate_key_update: lcd_update_columns
+      LevelConceptDifficulty.import! changed_lcds, on_duplicate_key_update: lcd_update_columns, batch_size: 1000
 
       # activerecord-import doesn't trigger before_save and before_create hooks
       # for imported models, so we trigger these manually to make sure they're
@@ -87,7 +87,10 @@ class LevelLoader
       immutable_level_columns = %i(id name created_at)
       update_columns = Level.columns.map(&:name).map(&:to_sym).
         reject {|column| immutable_level_columns.include? column}
-      Level.import! changed_levels, on_duplicate_key_update: update_columns
+      # Changed levels are too large to import them in batches larger than 100 due to serialized properties.
+      # When performing bulk inserts, it is faster to insert keys in primary key order. Documentation:
+      # https://dev.mysql.com/doc/refman/8.0/en/optimizing-innodb-bulk-data-loading.html
+      Level.import! changed_levels.sort_by(&:id), on_duplicate_key_update: update_columns, batch_size: 100
 
       # now we want to run some after_save callbacks, which didn't get run when
       # by run_callbacks earlier. it seems too risky to run all after_save
@@ -95,10 +98,8 @@ class LevelLoader
       # experience of any individual level could add an after_save callback
       # which modifies the DB and which they expect to get run only on
       # levelbuilder. so, just run the callbacks we're sure we need instead.
-      changed_levels.each do |level|
-        level.setup_contained_levels
-        level.setup_project_template_level
-      end
+      Level.setup_child_levels_for(changed_levels, ParentLevelsChildLevel::CONTAINED)
+      Level.setup_child_levels_for(changed_levels, ParentLevelsChildLevel::PROJECT_TEMPLATE)
     end
   end
 

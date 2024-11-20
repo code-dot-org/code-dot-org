@@ -3,7 +3,7 @@ require 'cdo/firehose'
 class Api::V1::UsersController < Api::V1::JSONApiController
   before_action :load_user
   skip_before_action :verify_authenticity_token
-  skip_before_action :load_user, only: [:current, :netsim_signed_in, :post_sort_by_family_name, :cached_page_auth_redirect, :post_show_progress_table_v2, :post_ai_rubrics_disabled, :post_has_seen_ai_assessments_announcement, :post_date_progress_table_invitation_last_delayed, :post_has_seen_progress_table_v2_invitation, :get_current_permissions, :post_disable_lti_roster_sync, :update_ai_tutor_access]
+  skip_before_action :load_user, only: [:current, :netsim_signed_in, :post_sort_by_family_name, :cached_page_auth_redirect, :post_show_progress_table_v2, :post_ai_rubrics_disabled, :post_has_seen_ai_assessments_announcement, :post_date_progress_table_invitation_last_delayed, :post_has_seen_progress_table_v2_invitation, :get_current_permissions, :post_disable_lti_roster_sync, :update_ai_tutor_access, :set_seen_ta_scores]
   skip_before_action :clear_sign_up_session_vars, only: [:current]
 
   def load_user
@@ -360,6 +360,17 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   def set_standards_report_info_to_seen
     @user.has_seen_standards_report_info_dialog = true
     @user.save!
+  end
+
+  # POST /api/v1/users/set_seen_ta_scores
+  def set_seen_ta_scores
+    return head :unauthorized unless current_user&.teacher?
+    return head :bad_request if params[:lesson_id].blank?
+    return head :bad_request unless params[:lesson_id].to_i > 0
+    seen_ta_scores_map = current_user.seen_ta_scores_map || {}
+    seen_ta_scores_map[params[:lesson_id].to_i.to_s] = true
+    current_user.update!(seen_ta_scores_map: seen_ta_scores_map)
+    head :no_content
   end
 
   # Expects a param with the key "g-recaptcha-response" that is used
