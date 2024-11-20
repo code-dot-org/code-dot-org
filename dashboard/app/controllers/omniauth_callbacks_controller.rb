@@ -22,7 +22,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # GET /users/auth/clever/callback
   def clever
-    new_sign_up_url = params[:finish_url].presence || ''
     return connect_provider if should_connect_provider?
 
     user = find_user_by_credential
@@ -30,24 +29,22 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     if user
       sign_in_clever user
     else
-      sign_up_clever(new_sign_up_url)
+      sign_up_clever
     end
   end
 
   # GET /users/auth/facebook/callback
   def facebook
-    new_sign_up_url = params[:finish_url].presence || ''
     user = find_user_by_credential
     user&.update_oauth_credential_tokens auth_hash
 
     return link_accounts user if should_link_accounts?
     return connect_provider if should_connect_provider?
-    login(new_sign_up_url)
+    login
   end
 
   # GET /users/auth/google_oauth2/callback
   def google_oauth2
-    new_sign_up_url = params[:finish_url].presence || ''
     user = find_user_by_credential
     user&.update_oauth_credential_tokens auth_hash
 
@@ -60,19 +57,18 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     if user
       sign_in_google_oauth2 user
     else
-      sign_up_google_oauth2(new_sign_up_url)
+      sign_up_google_oauth2
     end
   end
 
   # GET /users/auth/microsoft_v2_auth/callback
   def microsoft_v2_auth
-    new_sign_up_url = params[:finish_url].presence || ''
     user = find_user_by_credential
     user&.update_oauth_credential_tokens auth_hash
 
     return link_accounts user if should_link_accounts?
     return connect_provider if should_connect_provider?
-    login(new_sign_up_url)
+    login
   end
 
   # All remaining providers
@@ -159,7 +155,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     redirect_to edit_user_registration_path
   end
 
-  def login(new_sign_up_url = '')
+  def login
     auth_hash = request.env['omniauth.auth']
     provider = auth_hash.provider.to_s
     session[:sign_up_type] = provider
@@ -199,7 +195,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         email: user.email
     else
       # This is a new registration
-      register_new_user(user, new_sign_up_url)
+      register_new_user(user)
     end
   end
 
@@ -213,7 +209,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     sign_in_user user
   end
 
-  private def sign_up_google_oauth2(new_sign_up_url = '')
+  private def sign_up_google_oauth2
     session[:sign_up_type] = AuthenticationOption::GOOGLE
 
     # For some providers, signups can happen without ever having hit the sign_up page, where
@@ -236,7 +232,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       end
       return redirect_to users_existing_account_path({provider: auth_hash.provider, email: user.email})
     else
-      register_new_user(user, new_sign_up_url)
+      register_new_user(user)
     end
   end
 
@@ -247,7 +243,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     sign_in_user user
   end
 
-  private def sign_up_clever(new_sign_up_url = '')
+  private def sign_up_clever
     session[:sign_up_type] = AuthenticationOption::CLEVER
 
     # For some providers, signups can happen without ever having hit the sign_up page, where
@@ -272,7 +268,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     return redirect_to users_existing_account_path({provider: auth_hash.provider, email: user.email}) if existing_account
 
     # otherwise, this is a new registration
-    register_new_user(user, new_sign_up_url)
+    register_new_user(user)
   end
 
   private def find_user_by_credential
@@ -309,13 +305,26 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  private def register_new_user(user, new_sign_up_url = '')
+  private def register_new_user(user)
     PartialRegistration.persist_attributes(session, user)
 
     @form_data = {
       email: user.email
     }
+    new_sign_up_url = determine_sign_up_url(user)
     render 'omniauth/redirect', layout: false, locals: {new_sign_up_url: new_sign_up_url}
+  end
+
+  private def determine_sign_up_url(user)
+    user_type = cookies['new_sign_up_user_type']
+    cookies.delete('new_sign_up_user_type')
+    if user_type == 'student'
+      return users_new_sign_up_finish_student_account_path
+    elsif user_type == 'teacher'
+      return users_new_sign_up_finish_teacher_account_path
+    end
+    # We are in the old sign up flow -> redirect to old finish_sign_up page
+    return ''
   end
 
   private def extract_microsoft_data(auth)

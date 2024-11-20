@@ -429,15 +429,8 @@ describe('LearningGoals - React Testing Library', () => {
     it('displays no checkboxes when neither thumb is selected', () => {
       render(<LearningGoals {...feedbackProps} />);
 
-      // neither thumb is selected
-      // eslint-disable-next-line no-restricted-properties
-      screen.getByTestId('thumbs-o-up');
-      // eslint-disable-next-line no-restricted-properties
-      expect(screen.queryByTestId('thumbs-up')).not.toBeInTheDocument();
-      // eslint-disable-next-line no-restricted-properties
-      screen.getByTestId('thumbs-o-down');
-      // eslint-disable-next-line no-restricted-properties
-      expect(screen.queryByTestId('thumbs-down')).not.toBeInTheDocument();
+      screen.getByLabelText(i18n.thumbsUpUnselected());
+      screen.getByLabelText(i18n.thumbsDownUnselected());
 
       // checkboxes not visible
       expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
@@ -463,13 +456,11 @@ describe('LearningGoals - React Testing Library', () => {
         }
       });
 
-      // eslint-disable-next-line no-restricted-properties
-      const thumbsUpButton = screen.getByTestId('thumbs-o-up');
+      const thumbsUpButton = screen.getByLabelText(i18n.thumbsUpUnselected());
       fireEvent.click(thumbsUpButton);
       await wait();
 
-      // eslint-disable-next-line no-restricted-properties
-      screen.getByTestId('thumbs-up');
+      screen.getByLabelText(i18n.thumbsUpSelected());
       expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
 
       const expectedBody = JSON.stringify({
@@ -511,13 +502,13 @@ describe('LearningGoals - React Testing Library', () => {
         }
       });
 
-      // eslint-disable-next-line no-restricted-properties
-      const thumbsUpButton = screen.getByTestId('thumbs-o-down');
-      fireEvent.click(thumbsUpButton);
+      const thumbsDownButton = screen.getByLabelText(
+        i18n.thumbsDownUnselected()
+      );
+      fireEvent.click(thumbsDownButton);
       await wait();
 
-      // eslint-disable-next-line no-restricted-properties
-      screen.getByTestId('thumbs-down');
+      screen.getByLabelText(i18n.thumbsDownSelected());
 
       const expectedBody = JSON.stringify({
         learningGoalAiEvaluationId: 2,
@@ -561,9 +552,10 @@ describe('LearningGoals - React Testing Library', () => {
       // survey not visible
       expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
 
-      // eslint-disable-next-line no-restricted-properties
-      const thumbsUpButton = screen.getByTestId('thumbs-o-down');
-      fireEvent.click(thumbsUpButton);
+      const thumbsDownButton = screen.getByLabelText(
+        i18n.thumbsDownUnselected()
+      );
+      fireEvent.click(thumbsDownButton);
       await wait();
 
       // survey is visible
@@ -609,9 +601,10 @@ describe('LearningGoals - React Testing Library', () => {
       // survey not visible
       expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
 
-      // eslint-disable-next-line no-restricted-properties
-      const thumbsUpButton = screen.getByTestId('thumbs-o-down');
-      fireEvent.click(thumbsUpButton);
+      const thumbsDownButton = screen.getByLabelText(
+        i18n.thumbsDownUnselected()
+      );
+      fireEvent.click(thumbsDownButton);
       await wait();
 
       // survey is visible

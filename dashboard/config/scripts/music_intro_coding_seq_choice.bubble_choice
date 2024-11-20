@@ -1,6 +1,6 @@
 name 'music-intro-coding-seq-choice'
-display_name 'Practice'
-description 'Choose a level to complete.'
+display_name 'Choose your challenge!'
+description 'Use your new skills to make music.'
 
 sublevels
 level 'music-intro-coding-seq-choice-change'

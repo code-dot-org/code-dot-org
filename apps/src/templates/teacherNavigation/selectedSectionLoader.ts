@@ -66,8 +66,6 @@ export const setSelectedSectionData = (sectionData: any) => {
     getStore().dispatch(setShowSharingColumn(true));
   }
 
-  // TODO: update sections list with selected section data to ensure consistency.
-
   getStore().dispatch(setUnitName(sectionData.script.name));
   getStore().dispatch(setLoginType(sectionData.login_type));
   getStore().dispatch(setRosterProvider(sectionData.login_type));

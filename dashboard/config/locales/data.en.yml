@@ -880,6 +880,7 @@ en:
         gen-ai-attention-overview: Activity Overview - Attention is All You Need
         self-paced-gen-ai-retrieval-example: Retrieval Example
         music_jam_intro: 'Music Lab: Jam Session Intro'
+        self-paced-pl-data-science: CODAP Tutorial
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

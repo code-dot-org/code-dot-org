@@ -16,6 +16,7 @@
           "buttonText": "Get free resources"
         }
       ],
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -30,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-14 04:02:20 UTC",
+    "serialized_at": "2024-11-19 01:16:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2024-11-08T21:05:23.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "uses_lab2": true,
+    "background": "music-black",
+    "encrypted": "false",
+    "video_key": "music_jam_intro",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "video_full_width": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-11-08T21:05:23.046+00:00\",\"changed\":[\"cloned from \\\"music-jam-video-intro\\\"\"],\"cloned_from\":\"music-jam-video-intro\"}]"
+}]]></config>
+</StandaloneVideo>

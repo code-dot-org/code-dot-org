@@ -16,7 +16,8 @@
           "buttonText": "CS Connections Landing Page"
         }
       ],
-      "curriculum_umbrella": "CSC",
+      "content_area": "curriculum_k_5",
+      "curriculum_umbrella": "CSC K-5",
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
@@ -26,7 +27,7 @@
     },
     "new_name": null,
     "family_name": "csc-starquilts",
-    "serialized_at": "2024-10-21 15:45:22 UTC",
+    "serialized_at": "2024-11-19 01:15:40 UTC",
     "published_state": "sunsetting",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

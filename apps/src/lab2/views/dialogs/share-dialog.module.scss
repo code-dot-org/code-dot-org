@@ -91,10 +91,6 @@
       }
     }
 
-    .doneButton {
-      margin-left: auto;
-    }
-
     .closeButton {
       background-color: initial;
       box-shadow: initial;
@@ -111,7 +107,10 @@
 
   .bottom {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: end;
+    gap: 14px;
+    width: 100%;
   }
 }
 
@@ -119,7 +118,7 @@
   display: contents;
 }
 
-.projectButton {
+.shareDialogButton, .afeText {
   width: 100%;
   margin-top: auto;
 }

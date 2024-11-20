@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {BodyTwoText, StrongText} from '@cdo/apps/componentLibrary/typography';
+import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
 import {Resource} from './LessonMaterialTypes';
@@ -10,16 +10,11 @@ import ResourceViewOptionsDropdown from './ResourceViewOptionsDropdown';
 import styles from './lesson-materials.module.scss';
 
 type ResourceRowProps = {
-  lessonNumber?: number;
   unitNumber: number | null;
   resource: Resource;
 };
 
-const ResourceRow: React.FC<ResourceRowProps> = ({
-  lessonNumber,
-  unitNumber,
-  resource,
-}) => {
+const ResourceRow: React.FC<ResourceRowProps> = ({unitNumber, resource}) => {
   const resourceDisplayText = () => {
     if (!resource.type) {
       return resource.name;
@@ -40,21 +35,15 @@ const ResourceRow: React.FC<ResourceRowProps> = ({
     }
   };
 
-  const resourceNumberingText =
-    lessonNumber && unitNumber ? (
-      <StrongText>
-        <strong>{`${unitNumber}.${lessonNumber} `}</strong>
-      </StrongText>
-    ) : null;
-
   return (
     // eslint-disable-next-line react/forbid-dom-props
     <div className={styles.rowContainer} data-testid="resource-row">
       <div className={styles.iconAndName}>
         <ResourceIcon resourceType={resource.type} resourceUrl={resource.url} />
         <BodyTwoText className={styles.resourceLabel}>
-          {resourceNumberingText}
-          {resourceDisplayText()}
+          <a href={resource.url} target="_blank" rel="noopener noreferrer">
+            {resourceDisplayText()}
+          </a>
         </BodyTwoText>
       </div>
       <ResourceViewOptionsDropdown resource={resource} />

@@ -68,3 +68,9 @@ use_cookie_dcdo: true
 
 # Allows Geolocation to be altered via cookies.
 use_geolocation_override: true
+
+# Number of workers to start when running `rake build:start_active_job_workers`:
+<% if test_system? && chef_managed %>
+active_job_backend_n_workers_to_start: 10
+active_job_backend_rolling_restart_in_n_batches: 2
+<% end -%>

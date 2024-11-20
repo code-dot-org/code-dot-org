@@ -351,7 +351,10 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
    *   dragged.
    */
   onDragEnter(_dragElement: GoogleBlockly.IDraggable) {
-    this.setLidOpen(_dragElement.isDeletable());
+    // BlockSvgs and Bubbles are both draggable elements, but we only care about blocks.
+    if (_dragElement instanceof GoogleBlockly.BlockSvg) {
+      this.setLidOpen(_dragElement.isDeletable());
+    }
   }
 
   /**

@@ -7,5 +7,12 @@ Dashboard::Application.config.session_store Middlewares::RedisSessionStore,
   servers: [CDO.session_store_server || 'redis://localhost:6379/0/session'],
   secure: !CDO.no_https_store && (!Rails.env.development? || CDO.https_development),
   domain: :all,
-  expire_after: 40.days, # Users who interact with the site at least once a month will remain logged in.
-  pool_size: 5 # We arbitrarily use the value this would default to anyway; we just have to specify *something* here to enable pooling in the first place.
+
+  # Users who interact with the site at least once a month will remain logged in.
+  expire_after: 40.days,
+
+  # At 4 connections per thread, up to 5 threads per worker, 48 workers per
+  # server, we expect 960 connections per server for each instance of the
+  # session store we initialize. Currently, that's two: one for Dashboard, one
+  # for Pegasus; see lib/cdo/rack/request.rb
+  pool_size: 4

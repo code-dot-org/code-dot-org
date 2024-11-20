@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
@@ -28,6 +29,7 @@ import {
   OAUTH_LOGIN_TYPE_SESSION_KEY,
   USER_RETURN_TO_SESSION_KEY,
   clearSignUpSessionStorage,
+  NEW_SIGN_UP_USER_TYPE,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
@@ -61,6 +63,9 @@ const FinishStudentAccount: React.FunctionComponent<{
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorCreatingAccountMessage, showErrorCreatingAccountMessage] =
     useState(false);
+
+  // Remove oauth user_type cookie if it exists
+  cookies.remove(NEW_SIGN_UP_USER_TYPE);
 
   useEffect(() => {
     // If the user hasn't selected a user type or login type, redirect them back to the incomplete step of signup.
@@ -181,9 +186,12 @@ const FinishStudentAccount: React.FunctionComponent<{
   };
 
   const submitStudentAccount = async () => {
+    if (isSubmitting) {
+      return;
+    }
+    setIsSubmitting(true);
     sendFinishEvent();
     showErrorCreatingAccountMessage(false);
-    setIsSubmitting(true);
 
     const signUpParams = {
       new_sign_up: true,
@@ -337,7 +345,6 @@ const FinishStudentAccount: React.FunctionComponent<{
             name="userGender"
             label={locale.what_is_your_gender()}
             value={gender}
-            placeholder={locale.female()}
             onChange={e => setGender(e.target.value)}
           />
           {showGDPR && (
@@ -383,7 +390,7 @@ const FinishStudentAccount: React.FunctionComponent<{
               name === '' ||
               age === '' ||
               (usIp && state === '') ||
-              (isParent && parentEmail === '') ||
+              (isParent && (parentEmail === '' || showParentEmailError)) ||
               !gdprValid
             }
             isPending={isSubmitting}
