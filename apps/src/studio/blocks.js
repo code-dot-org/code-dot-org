@@ -377,7 +377,13 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendDummyInput().appendField(commonMsg.when());
       if (isK1) {
         this.appendDummyInput().appendField(
-          new blockly.FieldImageDropdown(this.K1_VALUES),
+          new blockly.FieldImageDropdown(
+            this.K1_VALUES,
+            48,
+            47,
+            undefined,
+            false // Do not use white background as arrow key images are also white.
+          ),
           'VALUE'
         );
       } else {
@@ -1440,7 +1446,13 @@ exports.install = function (blockly, blockInstallOptions) {
 
       if (isK1) {
         this.appendDummyInput().appendField(
-          new blockly.FieldImageDropdown(this.K1_DIR),
+          new blockly.FieldImageDropdown(
+            this.K1_DIR,
+            40,
+            40,
+            undefined,
+            false // Do not use white background as arrow images are also white.
+          ),
           'DIR'
         );
       } else {
@@ -1515,7 +1527,13 @@ exports.install = function (blockly, blockInstallOptions) {
 
       if (isK1) {
         this.appendDummyInput().appendField(
-          new blockly.FieldImageDropdown(this.K1_DIR),
+          new blockly.FieldImageDropdown(
+            this.K1_DIR,
+            skin.dropdownThumbnailWidth,
+            skin.dropdownThumbnailHeight,
+            undefined,
+            false // Do not use white background as arrow images are also white.
+          ),
           'DIR'
         );
       } else {
@@ -2152,7 +2170,11 @@ exports.install = function (blockly, blockInstallOptions) {
       }
 
       if (isK1) {
-        var fieldImageDropdown = new blockly.FieldImageDropdown(this.K1_VALUES);
+        var fieldImageDropdown = new blockly.FieldImageDropdown(
+          this.K1_VALUES,
+          88,
+          46
+        );
         fieldImageDropdown.setValue(this.K1_VALUES[1][1]); // default to normal
         this.appendDummyInput()
           .appendField(msg.speed())
