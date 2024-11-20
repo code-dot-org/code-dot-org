@@ -178,20 +178,19 @@ Jigsaw.init = function (config) {
     studioApp().init(config);
 
     document.getElementById('runButton').style.display = 'none';
-    Blockly.mainBlockSpaceEditor.addChangeListener(function (event) {
-      if (event.type === 'click') {
-        if (event.blockId === 'block1') {
-          Jigsaw.block1Clicked = true;
-        }
-      }
-    });
     Jigsaw.successListener = Blockly.mainBlockSpaceEditor.addChangeListener(
       function (evt) {
+        // Only used by level1, in which the success criteria is clicking on the block
+        // Only effective with Google Blockly.
+        if (evt.type === 'click' && evt.blockId === 'block1') {
+          Jigsaw.block1Clicked = true;
+        }
         checkForSuccess();
       }
     );
 
     // Only used by level1, in which the success criteria is clicking on the block
+    // Only effective with CDO Blockly.
     var block1 = document.querySelectorAll("[block-id='1']")[0];
     if (block1) {
       dom.addMouseDownTouchEvent(block1, function () {

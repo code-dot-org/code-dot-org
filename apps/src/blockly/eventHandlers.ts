@@ -164,7 +164,6 @@ export function setPathFill(e: GoogleBlockly.Events.Abstract) {
         );
         block.svgPathFill.setAttribute('fill', 'url(#' + pattern + ')');
         const pathDescription = block.pathObject.svgPath.getAttribute('d');
-        console.log({pathDescription});
         if (pathDescription) {
           block.svgPathFill.setAttribute('d', pathDescription);
         }
