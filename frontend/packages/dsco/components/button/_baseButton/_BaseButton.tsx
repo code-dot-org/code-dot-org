@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, {memo, useMemo, HTMLAttributes} from 'react';
 
-import {ButtonType, ButtonColor} from '@/button';
+import {ButtonType, ButtonColor} from '@/button/types';
 import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
