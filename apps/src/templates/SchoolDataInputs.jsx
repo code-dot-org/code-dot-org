@@ -37,6 +37,7 @@ export default function SchoolDataInputs({
   setSchoolName,
   setSchoolZip,
   usIp,
+  containerClassName,
   includeHeaders = true,
   markFieldsAsRequired = false,
   fieldNames = {
@@ -89,9 +90,13 @@ export default function SchoolDataInputs({
 
   const labelClassName = schoolZipIsValid ? '' : style.disabledLabel;
 
-  const computedStyleClass = classNames(style.schoolAssociationWrapper, {
-    [style.requiredLabel]: markFieldsAsRequired,
-  });
+  const computedStyleClass = classNames(
+    style.schoolAssociationWrapper,
+    {
+      [style.requiredLabel]: markFieldsAsRequired,
+    },
+    containerClassName
+  );
 
   return (
     <div className={computedStyleClass}>
@@ -212,6 +217,7 @@ SchoolDataInputs.propTypes = {
   includeHeaders: PropTypes.bool,
   markFieldsAsRequired: PropTypes.bool,
   fieldNames: PropTypes.object,
+  containerClassName: PropTypes.string,
   schoolId: PropTypes.string.isRequired,
   country: PropTypes.string.isRequired,
   schoolName: PropTypes.string.isRequired,
