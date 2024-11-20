@@ -40,7 +40,6 @@ const MultipleSectionsAssigner = ({
   updateHiddenScript,
 }) => {
   let initialSectionsAssigned = [];
-
   // check to see if this is coming from the UNIT landing page - if so add courses featuring this unit
   if (!isAssigningCourse) {
     if (isStandAloneUnit) {

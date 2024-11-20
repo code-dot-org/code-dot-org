@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-18 22:02:04 UTC",
+    "serialized_at": "2024-11-19 22:45:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -59,6 +59,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "overview": "##### **Learning Outcomes:**\n\n* ##### I can access data about my grade band and/or state that tell me more about student access and participation in computer science in my region.\n* ##### I understand how issues of access manifest in the computer science classroom.\n* ##### I can identify compelling information that helps me tell a data story to others within my teaching network.\n\n___\n\n##### ⏰ **Suggested time:** <mark>UPDATE</mark>",
+        "student_overview": "##### **Learning Outcomes:**\n\n* ##### I can access data about my grade band and/or state that tell me more about student access and participation in computer science in my region.\n* ##### I understand how issues of access manifest in the computer science classroom.\n* ##### I can identify compelling information that helps me tell a data story to others within my teaching network.\n\n___\n\n##### ⏰ **Suggested time:** <mark>UPDATE</mark>"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -74,6 +76,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "overview": "##### **Learning Outcomes:**\n\n* ##### I have reflected on my own identity and educational experiences.\n* ##### I can use a variety of strategies to get to know the learners in my classroom.\n\n___\n\n##### ⏰ **Suggested time:** <mark>UPDATE</mark>",
+        "student_overview": "##### **Learning Outcomes:**\n\n* ##### I have reflected on my own identity and educational experiences.\n* ##### I can use a variety of strategies to get to know the learners in my classroom.\n\n___\n\n##### ⏰ **Suggested time:** <mark>UPDATE</mark>"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -94,6 +98,30 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-equitymodule-unit1"
       }
+    },
+    {
+      "key": "1bc4712f-8c8a-4387-b3e2-1cc59fb48289",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1bc4712f-8c8a-4387-b3e2-1cc59fb48289",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-equitymodule-unit1"
+      }
+    },
+    {
+      "key": "90e2dc76-4c93-4cd4-ba2e-bb2a3e005dd9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "90e2dc76-4c93-4cd4-ba2e-bb2a3e005dd9",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-equitymodule-unit1"
+      }
     }
   ],
   "activity_sections": [
@@ -106,6 +134,26 @@
         "activity_section.key": "b5506460-f340-4b7f-937c-e32e01627149",
         "lesson_activity.key": "495adbba-18f2-4e91-8fde-bcd4863d26fb"
       }
+    },
+    {
+      "key": "8c8e1f27-3471-4d42-b9ea-4653f3231f9f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8c8e1f27-3471-4d42-b9ea-4653f3231f9f",
+        "lesson_activity.key": "1bc4712f-8c8a-4387-b3e2-1cc59fb48289"
+      }
+    },
+    {
+      "key": "2aa01d53-fc25-446b-9500-5338b6168354",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2aa01d53-fc25-446b-9500-5338b6168354",
+        "lesson_activity.key": "90e2dc76-4c93-4cd4-ba2e-bb2a3e005dd9"
+      }
     }
   ],
   "script_levels": [
@@ -115,6 +163,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-equity-U1L1-features"
+        ]
       },
       "bonus": false,
       "seeding_key": {

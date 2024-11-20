@@ -2503,7 +2503,7 @@ class User < ApplicationRecord
   # In addition, we want to have green bubbles for the levels associated with these
   # channels, so we create level progress.
   def generate_progress_from_storage_id(storage_id, script_name = 'applab-intro')
-    # applab-intro is not seeded in our minimal test env used on test/circle. We
+    # applab-intro is not seeded in our minimal test env used on test/CI. We
     # should be able to handle this gracefully
     script = begin
       Unit.get_from_cache(script_name)
