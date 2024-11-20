@@ -312,7 +312,7 @@ class SourcesTest < FilesApiTestBase
     assert successful?
     response = JSON.parse(last_response.body)
     timestamp1 = response['timestamp'].to_s
-    # this assert passes locally but fails on circle
+    # this assert passes locally but fails on CI
     # assert_equal timestamp1, Time.now.to_s
     version1 = response['versionId']
 

@@ -1,7 +1,7 @@
 @eyes
 Feature: NeighborhoodPainting
 
-@no_circle
+@no_ci
   Scenario: Paint Glomming Shapes
     When I open my eyes to test "Javalab Neighborhood Paint Glomming"
     Given I create a levelbuilder named "Simone"

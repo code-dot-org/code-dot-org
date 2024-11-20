@@ -11,14 +11,6 @@ module TestRunUtils
     end
   end
 
-  def self.run_interpreter_tests
-    Dir.chdir(apps_dir) do
-      ChatClient.wrap('interpreter tests') do
-        RakeUtils.system './test/interpreter/test-on-circle.sh'
-      end
-    end
-  end
-
   def self.run_local_ui_test
     feature_path = File.expand_path(ENV.fetch('feature', nil))
     Dir.chdir(dashboard_dir('test/ui/')) do
