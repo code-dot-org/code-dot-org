@@ -26,6 +26,7 @@ import {
   HIDDEN_VALUE,
   RANDOM_VALUE,
   VISIBLE_VALUE,
+  IMAGE_SIZES,
 } from './constants';
 import i18n from './locale';
 import paramLists from './paramLists';
@@ -379,8 +380,8 @@ exports.install = function (blockly, blockInstallOptions) {
         this.appendDummyInput().appendField(
           new blockly.FieldImageDropdown(
             this.K1_VALUES,
-            48,
-            47,
+            IMAGE_SIZES.K1_ARROW_KEY.width,
+            IMAGE_SIZES.K1_ARROW_KEY.height,
             undefined,
             false // Do not use white background as arrow key images are also white.
           ),
@@ -1372,7 +1373,11 @@ exports.install = function (blockly, blockInstallOptions) {
 
           if (hasLengthInput) {
             this.appendDummyInput().appendField(
-              new blockly.FieldImageDropdown(SimpleMove.DISTANCES),
+              new blockly.FieldImageDropdown(
+                SimpleMove.DISTANCES,
+                IMAGE_SIZES.K1_MOVE_LINE.width,
+                IMAGE_SIZES.K1_MOVE_LINE.height
+              ),
               'DISTANCE'
             );
           }
@@ -1448,8 +1453,8 @@ exports.install = function (blockly, blockInstallOptions) {
         this.appendDummyInput().appendField(
           new blockly.FieldImageDropdown(
             this.K1_DIR,
-            40,
-            40,
+            IMAGE_SIZES.K1_DIR.width,
+            IMAGE_SIZES.K1_DIR.height,
             undefined,
             false // Do not use white background as arrow images are also white.
           ),
@@ -1529,8 +1534,8 @@ exports.install = function (blockly, blockInstallOptions) {
         this.appendDummyInput().appendField(
           new blockly.FieldImageDropdown(
             this.K1_DIR,
-            skin.dropdownThumbnailWidth,
-            skin.dropdownThumbnailHeight,
+            IMAGE_SIZES.K1_DIR.width,
+            IMAGE_SIZES.K1_DIR.height,
             undefined,
             false // Do not use white background as arrow images are also white.
           ),
@@ -1552,7 +1557,11 @@ exports.install = function (blockly, blockInstallOptions) {
       } else {
         if (isK1) {
           this.appendDummyInput().appendField(
-            new blockly.FieldImageDropdown(this.K1_DISTANCE),
+            new blockly.FieldImageDropdown(
+              this.K1_DISTANCE,
+              IMAGE_SIZES.K1_MOVE_LINE.width,
+              IMAGE_SIZES.K1_MOVE_LINE.height
+            ),
             'DISTANCE'
           );
         } else {
@@ -2172,8 +2181,8 @@ exports.install = function (blockly, blockInstallOptions) {
       if (isK1) {
         var fieldImageDropdown = new blockly.FieldImageDropdown(
           this.K1_VALUES,
-          88,
-          46
+          IMAGE_SIZES.K1_SPEEDS.width,
+          IMAGE_SIZES.K1_SPEEDS.height
         );
         fieldImageDropdown.setValue(this.K1_VALUES[1][1]); // default to normal
         this.appendDummyInput()
@@ -3057,8 +3066,8 @@ exports.install = function (blockly, blockInstallOptions) {
       if (isK1) {
         var fieldImageDropdown = new blockly.FieldImageDropdown(
           this.K1_VALUES,
-          34,
-          34
+          IMAGE_SIZES.K1_EMOTIONS.width,
+          IMAGE_SIZES.K1_EMOTIONS.height
         );
         fieldImageDropdown.setValue(this.K1_VALUES[0][1]); // default to normal
         this.appendDummyInput()
@@ -3837,8 +3846,8 @@ function installConditionals(
       if (blockInstallOptions.isK1) {
         const fieldImageDropdown = new blockly.FieldImageDropdown(
           K1_EMOTION_VALUES,
-          34,
-          34
+          IMAGE_SIZES.K1_EMOTIONS.width,
+          IMAGE_SIZES.K1_EMOTIONS.height
         );
         fieldImageDropdown.setValue(K1_EMOTION_VALUES[0][1]); // default to normal
         this.appendDummyInput()
