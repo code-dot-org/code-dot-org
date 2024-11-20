@@ -18,6 +18,7 @@ type LessonResourcesProps = {
   vocabularyUrl?: string;
   lessonName?: string;
   resources: Resource[];
+  hasLessonPlan?: boolean;
 };
 
 const renderNoResourcesRow = (
@@ -37,6 +38,7 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
   lessonName,
   standardsUrl,
   vocabularyUrl,
+  hasLessonPlan,
 }) => {
   // Note that lessonPlanUrl is not needed for student resources
   // and should be null for student resoruces section
@@ -82,6 +84,16 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
 
   const renderLessonPlanRow = () => {
     if (!lessonPlanUrl) return null;
+
+    if (!hasLessonPlan) {
+      return (
+        <div className={styles.rowContainer}>
+          <BodyTwoText className={styles.resourceLabel}>
+            <em>{i18n.noTeacherResources()}</em>
+          </BodyTwoText>
+        </div>
+      );
+    }
 
     return (
       <ResourceRow

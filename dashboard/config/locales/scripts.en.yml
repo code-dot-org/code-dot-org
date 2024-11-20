@@ -19197,6 +19197,10 @@ en:
               name: Additional Output
             lesson-9:
               name: Pre-assessment
+            lesson-10:
+              name: 'Example Project 1: Classroom Light Levels'
+            lesson-11:
+              name: Templates
           lesson_groups: {}
           name: computer-systems-playground
           title: "[PLAYGROUND] Computer Systems and Devices (with micro:bit)"
@@ -19544,8 +19548,30 @@ en:
           title: Understanding Equity in Computer Science
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            ##### **Module 1: Understanding Equity in Computer Science** provides a conceptual foundation for equity. You'll take the time to reflect on your journey and orient yourself toward enacting equity in your classroom. There are no prerequisites for the learning in this module.
+
+            ##### There are three lessons in Module 1:
+
+            * ##### What is Equity in CS?
+            * ##### Looking at Data
+            * ##### Reflecting on Personal Experiences
+
+            ___
+
+            ##### ⏰ **Suggested total time for this module:** <mark>UPDATE</mark>
+          student_description: |-
+            ##### **Module 1: Understanding Equity in Computer Science** provides a conceptual foundation for equity. You'll take the time to reflect on your journey and orient yourself toward enacting equity in your classroom. There are no prerequisites for the learning in this module.
+
+            ##### There are three lessons in Module 1:
+
+            * ##### What is Equity in CS?
+            * ##### Looking at Data
+            * ##### Reflecting on Personal Experiences
+
+            ___
+
+            ##### Suggested total time for this module: <mark>UPDATE</mark>
         self-paced-pl-equitymodule-unit2:
           lessons: {}
           lesson_groups: {}

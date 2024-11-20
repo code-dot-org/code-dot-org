@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "self_paced_pl_k_5",
       "curriculum_umbrella": "CSF Self Paced PL",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -14,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "gettingstarted-k5",
-    "serialized_at": "2024-07-10 19:39:50 UTC",
+    "serialized_at": "2024-11-19 01:18:43 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",

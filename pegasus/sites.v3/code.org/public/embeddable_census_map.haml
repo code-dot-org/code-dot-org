@@ -1,0 +1,19 @@
+---
+theme: responsive
+no_header: true
+no_footer: true
+embeddable: true
+english_only: true
+---
+
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+%link{rel: "stylesheet", href: "https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.css"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/census-map.css"}
+%script{src: webpack_asset_path('js/code.org/public/embeddable_census_map.js'), data: {tileset: CDO.mapbox_access_tileset.to_json}}
+
+#census-map
+
+%script{type: "text/javascript", src: "https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.js"}
+:javascript
+  mapboxgl.accessToken = "#{CDO.mapbox_access_token}";

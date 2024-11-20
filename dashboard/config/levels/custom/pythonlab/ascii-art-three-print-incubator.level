@@ -6,6 +6,7 @@
   "level_num": "custom",
   "user_id": 18914,
   "properties": {
+    "skipUrl": "/projects/pythonlab/new",
     "encrypted": "false",
     "long_instructions": "##Is 3 better than one? \r\n\r\nThis **print()** statement has three quotes on each side of it. This allows you to print output with multiple lines.\r\n\r\nChange up the text and print something different! \r\n",
     "ai_tutor_available": "false",

@@ -51,4 +51,4 @@ Scenario: School Info Confirmation Dialog
   Then element "#uitest-country-dropdown" has value "US"
   Then element "#uitest-school-zip" has value "31513"
   # value is school_id for "Appling County High School"
-  Then element "#uitest-school-dropdown" has value "130006000010"
+  Then I wait until element "#uitest-school-dropdown" has the value "130006000010"

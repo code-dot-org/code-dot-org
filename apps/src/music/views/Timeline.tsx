@@ -31,6 +31,8 @@ const eventVerticalSpace = 2;
 const paddingOffset = 10;
 // Start scrolling the playhead when it's more than this percentage of the way across the timeline area.
 const playheadScrollThreshold = 0.75;
+// How many extra measures to show at the end.
+const extraMeasures = 8;
 
 const getEventHeight = (
   numUniqueRows: number,
@@ -77,10 +79,11 @@ const Timeline: React.FunctionComponent = () => {
       appConfig.getValue('allow-change-starting-playhead-position') ===
         'true') &&
     !isPlaying;
-  const measuresToDisplay = Math.max(
-    MIN_NUM_MEASURES,
-    useMusicSelector(state => state.music.lastMeasure)
-  );
+  const measuresToDisplay =
+    Math.max(
+      MIN_NUM_MEASURES,
+      useMusicSelector(state => state.music.lastMeasure)
+    ) + extraMeasures;
   const loopEnabled = useMusicSelector(state => state.music.loopEnabled);
   const loopStart = useMusicSelector(state => state.music.loopStart);
   const loopEnd = useMusicSelector(state => state.music.loopEnd);

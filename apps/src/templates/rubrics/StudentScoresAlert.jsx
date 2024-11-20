@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -22,7 +23,9 @@ export default function StudentScoresAlert({closeAlert, viewScores}) {
   }
 
   return (
-    <div className={style.dismissableAlert}>
+    <div
+      className={classnames(style.dismissableAlert, 'uitest-dismissible-alert')}
+    >
       <span className={style.dismissableAlertText}>
         <BodyThreeText>
           {i18n.rubricStudentScoresAlert({studentCount, sectionName})}

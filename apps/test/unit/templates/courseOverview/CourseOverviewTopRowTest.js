@@ -1,6 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
+import DCDO from '@cdo/apps/dcdo';
 import CourseOverviewTopRow from '@cdo/apps/templates/courseOverview/CourseOverviewTopRow';
 
 const defaultProps = {
@@ -40,6 +41,15 @@ describe('CourseOverviewTopRow', () => {
       <CourseOverviewTopRow {...defaultProps} isInstructor={false} />
     );
     expect(wrapper.find('Connect(SectionAssigner)').length).toEqual(0);
+  });
+
+  it('does not contain a SectionAssigner if showV2TeacherDashboard is true', () => {
+    DCDO.set('teacher-local-nav-v2', true);
+    const wrapper = shallow(
+      <CourseOverviewTopRow {...defaultProps} isInstructor={false} />
+    );
+    expect(wrapper.find('Connect(SectionAssigner)').length).toEqual(0);
+    DCDO.set('teacher-local-nav-v2', false);
   });
 
   it('renders teacher resource dropdown', () => {

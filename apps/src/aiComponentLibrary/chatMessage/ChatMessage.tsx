@@ -18,6 +18,7 @@ interface ChatMessageProps {
   showProfaneUserMessageToggle?: boolean;
   customStyles?: {[label: string]: string};
   children?: React.ReactNode;
+  isTA?: boolean;
 }
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
@@ -27,6 +28,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   showProfaneUserMessageToggle,
   customStyles,
   children,
+  isTA,
 }) => {
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
 
@@ -71,12 +73,23 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
         <div className={moduleStyles.messageWithChildren}>
           <div className={moduleStyles[`container-${role}`]}>
             {role === Role.ASSISTANT && (
-              <div className={moduleStyles.botIconContainer}>
-                <img
-                  src={aiBotOutlineIcon}
-                  alt={commonI18n.aiChatBotIconAlt()}
-                  className={moduleStyles.botIcon}
-                />
+              <div
+                className={classNames(
+                  isTA && moduleStyles.botIconContainerWithOverlay
+                )}
+              >
+                <div className={classNames(moduleStyles.botIconContainer)}>
+                  <img
+                    src={aiBotOutlineIcon}
+                    alt={commonI18n.aiChatBotIconAlt()}
+                    className={moduleStyles.botIcon}
+                  />
+                </div>
+                {isTA && (
+                  <div className={moduleStyles.botOverlay}>
+                    <span>{'TA'}</span>
+                  </div>
+                )}
               </div>
             )}
             <div

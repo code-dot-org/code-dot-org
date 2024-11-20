@@ -4,16 +4,20 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "Foundations of CS",
       "is_course": true,
       "is_migrated": true,
       "show_calendar": true,
+      "topic_tags": [
+        "maker"
+      ],
       "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "computer-systems-and-devices",
-    "serialized_at": "2024-09-25 17:38:41 UTC",
+    "serialized_at": "2024-11-19 01:13:57 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

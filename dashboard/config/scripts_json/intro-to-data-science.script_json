@@ -4,12 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "Foundations of CS",
-      "is_migrated": true
+      "is_migrated": true,
+      "topic_tags": [
+        "data_science"
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-09-16 15:25:22 UTC",
+    "serialized_at": "2024-11-19 01:18:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

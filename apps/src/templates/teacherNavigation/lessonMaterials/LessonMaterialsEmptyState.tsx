@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux';
 import {generatePath} from 'react-router-dom';
 
 import {LinkButton} from '@cdo/apps/componentLibrary/button';
+import NoLessonMaterialsAvailable from '@cdo/apps/templates/teacherNavigation/images/NoLessonMaterialsAvailable.png';
 import NoLessonMaterialsForLegacyCourses from '@cdo/apps/templates/teacherNavigation/images/NoLessonMaterialsForLegacyCourses.png';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
@@ -19,11 +20,16 @@ import {LABELED_TEACHER_NAVIGATION_PATHS} from '../TeacherNavigationPaths';
 interface LessonMaterialsEmptyStateProps {
   showNoCurriculumAssigned: boolean;
   isLegacyScript: boolean;
+  hasNoLessonsWithLessonPlans: boolean;
 }
 
 export const LessonMaterialsEmptyState: React.FC<
   LessonMaterialsEmptyStateProps
-> = ({showNoCurriculumAssigned, isLegacyScript}) => {
+> = ({
+  showNoCurriculumAssigned,
+  isLegacyScript,
+  hasNoLessonsWithLessonPlans,
+}) => {
   const unitName = useSelector(
     (state: {unitSelection: {unitName: string}}) => state.unitSelection.unitName
   );
@@ -33,7 +39,8 @@ export const LessonMaterialsEmptyState: React.FC<
     showNoCurriculumAssigned,
     unitName,
     selectedSection,
-    isLegacyScript
+    isLegacyScript,
+    hasNoLessonsWithLessonPlans
   );
 
   if (emptyStateDetails === null) {
@@ -78,11 +85,27 @@ export const getNoLessonMaterialsForLegacyCourses = (
   };
 };
 
+export const getNoLessonMaterialsAvailable = (): EmptyStateContent => {
+  return {
+    headline: i18n.lessonMaterialsNotAvailableForUnit(),
+    descriptionText: null,
+    imageComponent: (
+      <img
+        src={NoLessonMaterialsAvailable}
+        alt={i18n.almostThere()}
+        width={'215px'}
+      />
+    ),
+    button: null,
+  };
+};
+
 function generateLessonMaterialsEmptyState(
   showNoCurriculumAssigned: boolean,
   unitName: string,
   selectedSection: Section,
-  isLegacyScript: boolean
+  isLegacyScript: boolean,
+  hasNoLessonsWithLessonPlans: boolean
 ): EmptyStateContent | null {
   let lessonMaterialsEmptyState = null;
 
@@ -109,6 +132,8 @@ function generateLessonMaterialsEmptyState(
       selectedSection.id,
       selectedSection.courseVersionName
     );
+  } else if (hasNoLessonsWithLessonPlans) {
+    lessonMaterialsEmptyState = getNoLessonMaterialsAvailable();
   }
   return lessonMaterialsEmptyState;
 }

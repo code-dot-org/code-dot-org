@@ -9775,6 +9775,19 @@ indexes:
     type:
     using: :btree
     comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: learning_goal_teacher_evaluations
+    name: index_learning_goal_teacher_evaluations_on_teacher_id
+    unique: false
+    columns:
+    - teacher_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
   learning_goals:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: learning_goals
@@ -13882,7 +13895,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20241024180714
+version: 20241116044924
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
