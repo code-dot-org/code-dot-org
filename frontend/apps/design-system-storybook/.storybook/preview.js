@@ -1,4 +1,5 @@
 import {default as RtlPreview} from "storybook-addon-rtl/preview";
+import "./preview.module.scss"
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {
