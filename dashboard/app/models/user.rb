@@ -1185,6 +1185,7 @@ class User < ApplicationRecord
     login = conditions.delete(:login)
     if login.present?
       return nil if login.size > max_credential_size || login.utf8mb4?
+      Cdo::Metrics.put('User', 'LoginByUsername', 1, {Environment: CDO.rack_env})
       # TODO: multi-auth (@eric, before merge!) have to handle this path, and make sure that whatever
       # indexing problems bit us on the users table don't affect the multi-auth table
       ignore_deleted_at_index.where(
@@ -1195,6 +1196,7 @@ class User < ApplicationRecord
       ).first
     elsif (hashed_email = conditions.delete(:hashed_email))
       return nil if hashed_email.size > max_credential_size || hashed_email.utf8mb4?
+      Cdo::Metrics.put('User', 'LoginByEmail', 1, {Environment: CDO.rack_env})
       return find_by_hashed_email(hashed_email)
     else
       nil
@@ -2501,7 +2503,7 @@ class User < ApplicationRecord
   # In addition, we want to have green bubbles for the levels associated with these
   # channels, so we create level progress.
   def generate_progress_from_storage_id(storage_id, script_name = 'applab-intro')
-    # applab-intro is not seeded in our minimal test env used on test/circle. We
+    # applab-intro is not seeded in our minimal test env used on test/CI. We
     # should be able to handle this gracefully
     script = begin
       Unit.get_from_cache(script_name)

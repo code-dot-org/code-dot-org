@@ -53,3 +53,7 @@ statsig_api_client_key: !Secret
 mailjet_api_key: !Secret
 mailjet_secret_key: !Secret
 mailgun_api_key: !Secret
+
+# Number of workers to start when running `rake build:start_active_job_workers`:
+active_job_backend_n_workers_to_start: 150
+active_job_backend_rolling_restart_in_n_batches: 5

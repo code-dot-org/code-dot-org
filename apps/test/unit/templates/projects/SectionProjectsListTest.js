@@ -59,7 +59,7 @@ describe('SectionProjectsList', () => {
   describe('test data', () => {
     // The Date object in PhantomJS does not respect the options to specify the
     // time zone when outputting the date in any localized format. Our unit tests
-    // need to pass in UTC (for CircleCI and staging) as well as any time zones
+    // need to pass in UTC (for CI and staging) as well as any time zones
     // in which developers are running unit tests locally. Therefore, use only
     // timestamps at 11am UTC, since it is the same calendar date in every time zone
     // in the world at that time of day (time zones range from GMT-11 to GMT+12).

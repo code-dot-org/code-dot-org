@@ -15,7 +15,7 @@ export const blocklyLocaleMap = {
   'es-mx': require('blockly/msg/es'),
   'et-ee': require('blockly/msg/et'),
   'eu-es': require('blockly/msg/eu'),
-  'fa-is': require('blockly/msg/fa'),
+  'fa-ir': require('blockly/msg/fa'),
   'fi-fi': require('blockly/msg/fi'),
   'fil-ph': require('blockly/msg/en'), // English provided as broader alternative for Filipino
   'fr-fr': require('blockly/msg/fr'),

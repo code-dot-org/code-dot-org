@@ -71,11 +71,22 @@ export const lessonMaterialsLoader =
     );
   };
 
-const createDisplayName = (lessonName: string, lessonPosition: number) => {
-  return i18n.lessonNumberAndName({
-    lessonNumber: lessonPosition,
-    lessonName: lessonName,
-  });
+// Some lessons are lockable and don't have lesson plans (typically assessments or surveys).
+// In this case, we want to display the lesson name without a number.  See CSP1-2022 for an example.
+const createDisplayName = (
+  lessonName: string,
+  lessonPosition: number,
+  hasLessonPlan: boolean,
+  isLockable: boolean
+) => {
+  if (isLockable && !hasLessonPlan) {
+    return lessonName;
+  } else {
+    return i18n.lessonNumberAndName({
+      lessonNumber: lessonPosition,
+      lessonName: lessonName,
+    });
+  }
 };
 
 interface LessonMaterialsContainerProps {
@@ -96,8 +107,15 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   }, [loadedData]);
   const isLegacyScript = useMemo(() => versionYear < 2021, [versionYear]);
 
+  const hasNoLessonsWithLessonPlans = useMemo(() => {
+    return lessons.every(lesson => !lesson.hasLessonPlan);
+  }, [lessons]);
+
   const hasEmptyState =
-    isLegacyScript || showNoCurriculumAssigned || !loadedData;
+    isLegacyScript ||
+    showNoCurriculumAssigned ||
+    hasNoLessonsWithLessonPlans ||
+    !loadedData;
 
   const getLessonFromId = (lessonId: number): Lesson | null => {
     return lessons.find(lesson => lesson.id === lessonId) || null;
@@ -128,7 +146,12 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
 
   const generateLessonDropdownOptions = useCallback(() => {
     return lessons.map((lesson: Lesson) => {
-      const displayName = createDisplayName(lesson.name, lesson.position);
+      const displayName = createDisplayName(
+        lesson.name,
+        lesson.position,
+        lesson.hasLessonPlan,
+        lesson.isLockable
+      );
       return {text: displayName, value: lesson.id.toString()};
     });
   }, [lessons]);
@@ -177,6 +200,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
         lessonPlanUrl={selectedLesson.lessonPlanHtmlUrl}
         lessonPlanPdfUrl={selectedLesson.lessonPlanPdfUrl}
         lessonName={selectedLesson.name}
+        hasLessonPlan={selectedLesson.hasLessonPlan}
       />
     );
   };
@@ -200,6 +224,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
       <LessonMaterialsEmptyState
         showNoCurriculumAssigned={showNoCurriculumAssigned}
         isLegacyScript={isLegacyScript}
+        hasNoLessonsWithLessonPlans={hasNoLessonsWithLessonPlans}
       />
     );
   }

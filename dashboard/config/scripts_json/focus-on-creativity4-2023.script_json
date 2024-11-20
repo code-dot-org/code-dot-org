@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_6_8",
+      "curriculum_umbrella": "CSD",
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-22 22:14:33 UTC",
+    "serialized_at": "2024-11-19 01:18:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -63,6 +65,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

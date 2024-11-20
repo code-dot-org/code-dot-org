@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": "foundations-gen-ai",
-    "serialized_at": "2024-10-28 17:29:10 UTC",
+    "serialized_at": "2024-11-19 16:34:59 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2036,7 +2036,7 @@
       "position": 1,
       "properties": {
         "description": "There are two options for wrap-ups in this lesson. This first option involves watching a 1-minute video about the nature of intelligence and responding to a prompt, while the second option involves considering a scenario involving data collection and privacy and responding to a prompt. This first option is more abstract addressing the hype around \"intelligence machines\" and how well language models \"learn\", while the second option is more aligned to the real-world ethical considerations of data collection and privacy with opportunities for students to bring their lived-experiences into the discussion. Both wrap-ups can help students construct arguments for the final project in the unit - but for the sake of time, you may only be able to do one. If possible, consider doing the second activity during another lesson so students can reflect and discuss both.\n\nIf you choose this wrap-up, skip or delete the slides associated with Wrap Up 2",
-        "name": "Warp Up - Option 1"
+        "name": "Wrap Up - Option 1"
       },
       "seeding_key": {
         "activity_section.key": "4c91d9ab-c028-40bd-b077-c9881c7c4b67",

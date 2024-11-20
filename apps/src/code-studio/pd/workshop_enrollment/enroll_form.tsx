@@ -2,16 +2,10 @@
  * Form to create a workshop enrollment
  */
 import React, {useState} from 'react';
-// eslint-disable-next-line no-restricted-imports
-import {
-  FormGroup,
-  Button,
-  ControlLabel,
-  HelpBlock,
-  Alert,
-} from 'react-bootstrap';
+import {FormGroup, ControlLabel, HelpBlock, Alert} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import Select, {Option} from 'react-select';
 
+import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import color from '@cdo/apps/util/color';
@@ -21,6 +15,7 @@ import SchoolAutocompleteDropdownWithCustomFields from '../components/schoolAuto
 import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 import QuestionsTable from '../form_components/QuestionsTable';
+import {COURSE_BUILD_YOUR_OWN} from '../workshop_dashboard/workshopConstants';
 
 const OTHER = 'Other';
 const NOT_TEACHING = "I'm not teaching this year";
@@ -223,10 +218,14 @@ export default function EnrollForm(props: EnrollFormProps) {
   };
 
   const handleClickRegister = () => {
-    const errors = getRequiredFieldErrors();
-    setFormErrors(errors);
-    if (!Object.keys(errors).length) {
+    if (props.workshop_course === COURSE_BUILD_YOUR_OWN) {
       submit();
+    } else {
+      const errors = getRequiredFieldErrors();
+      setFormErrors(errors);
+      if (!Object.keys(errors).length) {
+        submit();
+      }
     }
   };
 
@@ -531,74 +530,83 @@ export default function EnrollForm(props: EnrollFormProps) {
 
   return (
     <form id="enroll-form">
-      <p>
-        Fields marked with a<span className="form-required-field"> * </span>
-        are required.
-      </p>
-      <FormGroup>
-        <FieldGroup
-          id="first_name"
-          label="First Name"
-          type="text"
-          required={true}
-          onChange={handleChange}
-          defaultValue={props.first_name}
-          validationState={
-            Object.prototype.hasOwnProperty.call(formErrors, 'first_name')
-              ? VALIDATION_STATE_ERROR
-              : null
-          }
-          errorMessage={formErrors.first_name}
-        />
-        <FieldGroup
-          id="last_name"
-          label="Last Name"
-          type="text"
-          required={true}
-          onChange={handleChange}
-          validationState={
-            Object.prototype.hasOwnProperty.call(formErrors, 'last_name')
-              ? VALIDATION_STATE_ERROR
-              : null
-          }
-          errorMessage={formErrors.last_name}
-        />
-        <FieldGroup
-          id="email"
-          label="Email Address"
-          type="text"
-          required={true}
-          onChange={handleChange}
-          defaultValue={props.email}
-          title={props.email ? 'Email can be changed in account settings' : ''}
-          validationState={
-            Object.prototype.hasOwnProperty.call(formErrors, 'email')
-              ? VALIDATION_STATE_ERROR
-              : null
-          }
-          errorMessage={formErrors.email}
-        />
-        {!props.email && (
-          <FieldGroup
-            id="confirm_email"
-            label="Confirm Email Address"
-            type="text"
-            required={true}
-            onChange={handleChange}
-            validationState={
-              Object.prototype.hasOwnProperty.call(formErrors, 'confirm_email')
-                ? VALIDATION_STATE_ERROR
-                : null
-            }
-            errorMessage={formErrors.confirm_email}
+      {props.workshop_course !== COURSE_BUILD_YOUR_OWN && (
+        <>
+          <p>
+            Fields marked with a<span className="form-required-field"> * </span>
+            are required.
+          </p>
+          <FormGroup>
+            <FieldGroup
+              id="first_name"
+              label="First Name"
+              type="text"
+              required={true}
+              onChange={handleChange}
+              defaultValue={props.first_name}
+              validationState={
+                Object.prototype.hasOwnProperty.call(formErrors, 'first_name')
+                  ? VALIDATION_STATE_ERROR
+                  : null
+              }
+              errorMessage={formErrors.first_name}
+            />
+            <FieldGroup
+              id="last_name"
+              label="Last Name"
+              type="text"
+              required={true}
+              onChange={handleChange}
+              validationState={
+                Object.prototype.hasOwnProperty.call(formErrors, 'last_name')
+                  ? VALIDATION_STATE_ERROR
+                  : null
+              }
+              errorMessage={formErrors.last_name}
+            />
+            <FieldGroup
+              id="email"
+              label="Email Address"
+              type="text"
+              required={true}
+              onChange={handleChange}
+              defaultValue={props.email}
+              title={
+                props.email ? 'Email can be changed in account settings' : ''
+              }
+              validationState={
+                Object.prototype.hasOwnProperty.call(formErrors, 'email')
+                  ? VALIDATION_STATE_ERROR
+                  : null
+              }
+              errorMessage={formErrors.email}
+            />
+            {!props.email && (
+              <FieldGroup
+                id="confirm_email"
+                label="Confirm Email Address"
+                type="text"
+                required={true}
+                onChange={handleChange}
+                validationState={
+                  Object.prototype.hasOwnProperty.call(
+                    formErrors,
+                    'confirm_email'
+                  )
+                    ? VALIDATION_STATE_ERROR
+                    : null
+                }
+                errorMessage={formErrors.confirm_email}
+              />
+            )}
+          </FormGroup>
+          <SchoolAutocompleteDropdownWithCustomFields
+            onSchoolInfoChange={onSchoolInfoChange}
+            school_info={schoolInfoState}
+            errors={formErrors}
           />
-        )}
-      </FormGroup>
-      <SchoolAutocompleteDropdownWithCustomFields
-        onSchoolInfoChange={onSchoolInfoChange}
-        school_info={schoolInfoState}
-        errors={formErrors}
-      />
+        </>
+      )}
       {(props.workshop_course === CSF ||
         props.workshop_course === ADMIN_COUNSELOR) && (
         <FormGroup>
@@ -869,9 +877,15 @@ export default function EnrollForm(props: EnrollFormProps) {
         Regional Partners and facilitators are contractually obliged to treat
         this information with the same level of confidentiality as Code.org.
       </p>
-      <Button id="submit" onClick={handleClickRegister} disabled={isSubmitting}>
-        Register
-      </Button>
+      <Button
+        id="submit"
+        isIconOnly={false}
+        text={'Register'}
+        color={buttonColors.purple}
+        style={{color: 'white'}}
+        onClick={handleClickRegister}
+        disabled={isSubmitting}
+      />
       {Object.keys(formErrors).length > 0 && (
         <p style={{color: color.bootstrap_v3_error_text}}>
           Form errors found. Please check your responses above.

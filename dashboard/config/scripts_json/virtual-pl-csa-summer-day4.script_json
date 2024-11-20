@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "pl_workshop_activities",
       "curriculum_umbrella": "PD Workshop Activity CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -13,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-01 14:47:48 UTC",
+    "serialized_at": "2024-11-19 01:19:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

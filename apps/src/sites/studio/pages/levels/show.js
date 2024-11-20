@@ -16,7 +16,6 @@ import instructions, {
   setTaRubric,
 } from '@cdo/apps/redux/instructions';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
-import experiments from '@cdo/apps/util/experiments';
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 
 $(document).ready(initPage);
@@ -112,9 +111,6 @@ function initPage() {
           PLATFORMS.BOTH
         );
       }
-      const notificationsEnabled = experiments.isEnabled(
-        experiments.TA_NOTIFICATIONS
-      );
       ReactDOM.render(
         <Provider store={getStore()}>
           <RubricFloatingActionButton
@@ -123,7 +119,6 @@ function initPage() {
             reportingData={reportingData}
             currentLevelName={config.level_name}
             aiEnabled={rubric.learningGoals.some(lg => lg.aiEnabled)}
-            notificationsEnabled={notificationsEnabled}
             canShowTaScoresAlert={canShowTaScoresAlert}
           />
         </Provider>,

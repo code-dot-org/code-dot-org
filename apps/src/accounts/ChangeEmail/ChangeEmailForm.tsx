@@ -58,7 +58,7 @@ export const ChangeEmailForm: React.FC<ChangeEmailFormProps> = ({
   };
 
   return (
-    <form className={styles.form}>
+    <div className={styles.form}>
       <TextField
         inputType="email"
         name="user[email]"
@@ -125,6 +125,6 @@ export const ChangeEmailForm: React.FC<ChangeEmailFormProps> = ({
           </div>
         </div>
       )}
-    </form>
+    </div>
   );
 };

@@ -1,0 +1,45 @@
+name 'SP-PL-DS-Investigate_Debrief'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Investigate and Modify Levels 
+
+<img src="https://images.code.org/5de949b2444cea4cd726ff53548b8702-image-1727203455539.png" alt="pandas logo" width="50px" style="border-radius:20px; float:left; margin: 0 0 10px 0px;">
+
+### What did you discover from the modifications you made to the previous code?
+
+#### You might have noticed the variable assignment of `str` to the variable **human_years**. 
+#### This is because in Python, different types of data, like strings (`str`), integers (`int`), and floats (`float`), are handled differently. 
+#### Assigning `str` to **human_years** tells Python that this variable contains text, which is important when combining it with other strings using concatenation.
+
+<img src="https://images.code.org/cf8b1e04b45394b52cf9aae662c1dad0-image-1731962684571.png" alt="directions from investigate level" width="700px" style="border-radius:10px; float: left; margin: 10px 10px 5px 0px;">
+
+<div style="clear:both;"></div>
+
+---
+
+
+
+## Discussion Strategies
+
+#### Investigate and Modify levels are designed to introduce new skills and syntax through exploration, trial-and-error, and using worked examples from pre-supplied code.
+
+<div style="clear:both;"></div>
+
+<img src="https://images.code.org/cac89c0f96d3f6c5fe4d7cf16518b5cc-image-1731964304451.png" alt="directions from investigate level" width="275px" style="border-radius:10px; float:right; margin: 10px 10px 5px 0px;">
+
+- #### **Pair Programming** The student facing levels suggest discussing and working with a partner on these levels. One student acts as the 'driver' and one the 'navigator' and switch roles based on a timer. 
+#### This process is highlighted in <a href="https://www.youtube.com/watch?v=q7d_JtyCq1A" target="blank" rel="noopener noreferrer">this video</a> which you can share with the class. 
+
+
+- #### **Full-Class Programming** Try completing some Investigate and Modify levels as a class, with you as the Driver and students as Navigators. This helps introduce new concepts and highlight common mistakes.
+
+<div style="clear:both;"></div>
+
+
+## Let's continue to variables types!
+
+
+
+MARKDOWN

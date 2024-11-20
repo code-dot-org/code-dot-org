@@ -149,7 +149,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       sl = create(:script_level, levels: [level], script: script)
 
       # Javalab levels should only have one example solution.
-      # Remove scheme (http v https) for assertion b/c these are inconsistent between drone and development
+      # Remove scheme (http v https) for assertion b/c these are inconsistent between CI and development
       # https://github.com/code-dot-org/code-dot-org/blob/986459ab24cb401efa567d0551f23fec6e3d6af3/config.yml.erb#L331
       example_solutions = sl.get_example_solutions(level, @authorized_teacher)
       parsed_url = URI(example_solutions.first)
@@ -167,7 +167,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       sl = create :script_level, levels: [bubble_choice], script: script
 
       # Javalab levels should only have one example solution.
-      # Remove scheme (http v https) for assertion b/c these are inconsistent between drone and development
+      # Remove scheme (http v https) for assertion b/c these are inconsistent between CI and development
       # https://github.com/code-dot-org/code-dot-org/blob/986459ab24cb401efa567d0551f23fec6e3d6af3/config.yml.erb#L331
       example_solutions = sl.get_example_solutions(sublevel, @authorized_teacher)
       parsed_url = URI(example_solutions.first)
