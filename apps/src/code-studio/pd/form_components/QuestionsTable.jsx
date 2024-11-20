@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Radio, ControlLabel, FormGroup, Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {ControlLabel, FormGroup, Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
+import {RadioButton} from '@cdo/apps/componentLibrary/radioButton';
 
 const questionPropType = PropTypes.shape({
   label: PropTypes.string.isRequired,
@@ -39,12 +41,21 @@ class QuestionRow extends React.Component {
 
     return (
       <td key={key + i}>
-        <FormGroup controlId={key} validationState={this.getValidationState()}>
-          <Radio
+        <FormGroup
+          controlId={key}
+          validationState={this.getValidationState()}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <RadioButton
             name={key}
             value={option}
             checked={checked}
             onChange={this.handleChange}
+            size="s"
           />
         </FormGroup>
       </td>
