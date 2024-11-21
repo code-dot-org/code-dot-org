@@ -25,16 +25,17 @@ var jigsawBlockWithDeletableAttr = function (
   }
   // We add a static block ID to the first block in the lesson
   // so that we can validate whether or not it is clicked.
-  const idAttr = type === 'jigsaw_1A' ? ' id="block1"' : '';
   return (
     '<block type="' +
     type +
     '" deletable="' +
     deletable +
     '"' +
-    idAttr +
     ' x="' +
     x +
+    '"' +
+    ' id="' +
+    type +
     '"' +
     ' y="' +
     y +
