@@ -245,7 +245,7 @@ export default function EnrollForm(props: EnrollFormProps) {
     value: string,
     checked: boolean
   ) => {
-    const selected = new Set(formState[key] ?? []);
+    const selected = new Set(formState[key]);
     if (checked) {
       selected.add(value);
     } else {
@@ -261,7 +261,7 @@ export default function EnrollForm(props: EnrollFormProps) {
   ) => {
     handleChange({
       csf_course_experience: {
-        ...(formState.csf_course_experience ?? {}),
+        ...formState.csf_course_experience,
         ...input,
       },
     });
@@ -367,9 +367,8 @@ export default function EnrollForm(props: EnrollFormProps) {
       csf_course_experience: formState.csf_course_experience,
       csf_courses_planned: getCsfCoursesPlanned(),
       explain_csf_course_other: formState.explain_csf_course_other,
-      attended_csf_intro_workshop: formState.attended_csf_intro_workshop
-        ? ATTENDED_CSF_COURSES_OPTIONS[formState.attended_csf_intro_workshop]
-        : undefined,
+      attended_csf_intro_workshop:
+        ATTENDED_CSF_COURSES_OPTIONS[formState.attended_csf_intro_workshop],
       previous_courses: formState.previous_courses,
       csf_intro_intent: formState.csf_intro_intent,
       csf_intro_other_factors: formState.csf_intro_other_factors,
@@ -466,7 +465,7 @@ export default function EnrollForm(props: EnrollFormProps) {
 
       gradesTeachingExplainKeys.forEach(([key, value]) => {
         if (
-          formState.grades_teaching?.some(option => option.includes(value)) &&
+          formState.grades_teaching.some(option => option.includes(value)) &&
           !formState[key]
         ) {
           fields.push(key);
@@ -707,13 +706,13 @@ export default function EnrollForm(props: EnrollFormProps) {
                     | undefined;
                   if (
                     grade.includes(NOT_TEACHING) &&
-                    formState.grades_teaching?.includes(grade)
+                    formState.grades_teaching.includes(grade)
                   ) {
                     stateKey = 'explain_not_teaching';
                   }
                   if (
                     grade.includes(OTHER) &&
-                    formState.grades_teaching?.includes(grade)
+                    formState.grades_teaching.includes(grade)
                   ) {
                     stateKey = 'explain_teaching_other';
                   }
@@ -723,7 +722,7 @@ export default function EnrollForm(props: EnrollFormProps) {
                         size="s"
                         name={grade}
                         label={grade}
-                        checked={!!formState.grades_teaching?.includes(grade)}
+                        checked={formState.grades_teaching.includes(grade)}
                         onChange={e =>
                           handleChecked(
                             'grades_teaching',
@@ -799,9 +798,7 @@ export default function EnrollForm(props: EnrollFormProps) {
                   size="s"
                   name={factor}
                   label={factor}
-                  checked={(formState.csf_intro_other_factors ?? []).includes(
-                    factor
-                  )}
+                  checked={formState.csf_intro_other_factors.includes(factor)}
                   onChange={e =>
                     handleChecked(
                       'csf_intro_other_factors',
@@ -842,7 +839,7 @@ export default function EnrollForm(props: EnrollFormProps) {
                     | undefined;
                   if (
                     course.includes(OTHER) &&
-                    formState.csf_courses_planned?.includes(course)
+                    formState.csf_courses_planned.includes(course)
                   ) {
                     stateKey = 'explain_csf_course_other';
                   }
@@ -852,9 +849,7 @@ export default function EnrollForm(props: EnrollFormProps) {
                         size="s"
                         name={course}
                         label={course}
-                        checked={(formState.csf_courses_planned ?? []).includes(
-                          course
-                        )}
+                        checked={formState.csf_courses_planned.includes(course)}
                         onChange={e =>
                           handleChecked(
                             'csf_courses_planned',
@@ -929,7 +924,7 @@ export default function EnrollForm(props: EnrollFormProps) {
                 size="s"
                 name={course}
                 label={course}
-                checked={(formState.previous_courses ?? []).includes(course)}
+                checked={formState.previous_courses.includes(course)}
                 onChange={e =>
                   handleChecked('previous_courses', course, e.target.checked)
                 }
