@@ -6,6 +6,8 @@ import * as sort from 'sortabular';
 
 import Link from '@cdo/apps/componentLibrary/link';
 import Typography from '@cdo/apps/componentLibrary/typography';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   sortableOptions,
   tableLayoutStyles,
@@ -24,6 +26,9 @@ interface Props {
 }
 
 export const AgeGatedSectionsTable: React.FC<Props> = ({ageGatedSections}) => {
+  const reportEvent = (eventName: string, payload: object = {}) => {
+    analyticsReporter.sendEvent(eventName, payload);
+  };
   const getColumns = () => {
     return [sectionColumn(), gradesColumn()];
   };
@@ -61,7 +66,13 @@ export const AgeGatedSectionsTable: React.FC<Props> = ({ageGatedSections}) => {
       <Link
         href={teacherDashboardUrl(rowData.section.id)}
         onClick={() => {
-          console.log('DAYNE metrics');
+          reportEvent(
+            EVENTS.CAP_AGE_GATED_SECTIONS_TABLE_SECTION_NAME_LINK_CLICKED,
+            {
+              section_id: rowData.section.id,
+              us_state: rowData.section.atRiskAgeGatedUsState,
+            }
+          );
         }}
         openInNewTab={true}
       >

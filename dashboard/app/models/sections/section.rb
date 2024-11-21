@@ -482,6 +482,8 @@ class Section < ApplicationRecord
 
       serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
 
+      at_risk_student = at_risk_age_gated_student
+
       login_type_name = I18n.t(login_type, scope: [:section, :type], default: login_type)
       if login_type == LOGIN_TYPE_LTI_V1
         issuer = lti_course.lti_integration.issuer
@@ -531,7 +533,8 @@ class Section < ApplicationRecord
         code_review_expires_at: code_review_expires_at,
         sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
         ai_tutor_enabled: ai_tutor_enabled,
-        at_risk_age_gated_date: at_risk_age_gated_date,
+        at_risk_age_gated_date: at_risk_student&.at_risk_age_gated_date,
+        at_risk_age_gated_us_state: at_risk_student&.us_state,
       }
     end
   end
@@ -705,16 +708,12 @@ class Section < ApplicationRecord
     lti_section.present?
   end
 
-  # Are students in this section at risk of being age gated by our Child Account
-  # Policy(CAP)?
-  # @return The date the students will be age gated if there are any.
-  def at_risk_age_gated_date
+  # @return The first student we found which is at risk of being age gated.
+  def at_risk_age_gated_student
     # Archived sections are not at risk of being age gated.
     return if hidden
     # Find any student at risk of being age gated and return the date.
-    at_risk_student = students.find(&:at_risk_age_gated_date)
-    return unless at_risk_student
-    at_risk_student.at_risk_age_gated_date
+    students.find(&:at_risk_age_gated_date)
   end
 
   private def soft_delete_lti_section

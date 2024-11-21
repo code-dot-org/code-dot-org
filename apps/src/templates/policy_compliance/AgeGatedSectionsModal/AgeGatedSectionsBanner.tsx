@@ -29,17 +29,18 @@ export const AgeGatedSectionsBanner: React.FC<Props> = ({
     analyticsReporter.sendEvent(eventName, payload);
   };
 
+  const userId = currentUser.userId;
+  const usState = ageGatedSections[0]?.atRiskAgeGatedUsState;
+  const numberOfAgeGatedSections = ageGatedSections.length;
   useEffect(() => {
-    reportEvent(EVENTS.CAP_AGE_GATED_BANNER_SHOWN, {
-      user_id: currentUser.userId,
-      number_of_gateable_sections: ageGatedSections.length,
+    reportEvent(EVENTS.CAP_AGE_GATED_SECTIONS_BANNER_SHOWN, {
+      user_id: userId,
+      number_of_age_gated_sections: numberOfAgeGatedSections,
+      us_state: usState,
     });
-  }, [currentUser.userId, ageGatedSections]);
+  }, [userId, numberOfAgeGatedSections, usState]);
 
-  const startDate = ageGatedSections.find(
-    section => section.atRiskAgeGatedDate
-  )?.atRiskAgeGatedDate;
-
+  const startDate = ageGatedSections[0]?.atRiskAgeGatedDate;
   const dateOptions: Intl.DateTimeFormatOptions = {
     year: 'numeric',
     month: '2-digit',

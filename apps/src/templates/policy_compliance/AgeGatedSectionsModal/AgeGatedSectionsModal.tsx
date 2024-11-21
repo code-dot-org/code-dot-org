@@ -33,24 +33,29 @@ export const AgeGatedSectionsModal: React.FC<Props> = ({
   const helpDocsUrl =
     'https://support.code.org/hc/en-us/articles/15465423491085-How-do-I-obtain-parent-or-guardian-permission-for-student-accounts';
 
+  const userId = currentUser.userId;
+  const usState = ageGatedSections[0]?.atRiskAgeGatedUsState;
   const modalDocumentationClicked = () => {
     reportEvent(EVENTS.CAP_STUDENT_WARNING_LINK_CLICKED, {
-      user_id: currentUser.userId,
+      user_id: userId,
+      us_state: usState,
     });
   };
 
   const modalClosed = () => {
-    reportEvent(EVENTS.CAP_AGE_GATED_MODAL_CLOSED, {
-      user_id: currentUser.userId,
+    reportEvent(EVENTS.CAP_AGE_GATED_SECTIONS_MODAL_CLOSED, {
+      user_id: userId,
+      us_state: usState,
     });
     onClose();
   };
 
   useEffect(() => {
-    reportEvent(EVENTS.CAP_AGE_GATED_MODAL_SHOWN, {
-      user_id: currentUser.userId,
+    reportEvent(EVENTS.CAP_AGE_GATED_SECTIONS_MODAL_SHOWN, {
+      user_id: userId,
+      us_state: usState,
     });
-  }, [currentUser.userId]);
+  }, [userId, usState]);
 
   const startDate = ageGatedSections.find(
     section => section.atRiskAgeGatedDate

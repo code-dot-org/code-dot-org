@@ -181,6 +181,7 @@ export const sectionFromServerSection = serverSection => ({
   atRiskAgeGatedDate: serverSection.at_risk_age_gated_date
     ? new Date(serverSection.at_risk_age_gated_date)
     : null,
+  atRiskAgeGatedUsState: serverSection.at_risk_age_gated_us_state,
 });
 
 /**
@@ -222,6 +223,7 @@ export function serverSectionFromSection(section) {
     participant_type: section.participantType,
     ai_tutor_enabled: section.aiTutorEnabled,
     at_risk_age_gated_date: section.atRiskAgeGatedDate?.toISOString(),
+    at_risk_age_gated_us_state: section.atRiskAgeGatedUsState,
   };
 }
 

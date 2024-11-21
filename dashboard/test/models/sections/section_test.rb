@@ -829,6 +829,7 @@ class SectionTest < ActiveSupport::TestCase
         sync_enabled: nil,
         ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
+        at_risk_age_gated_us_state: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -884,6 +885,7 @@ class SectionTest < ActiveSupport::TestCase
         sync_enabled: nil,
         ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
+        at_risk_age_gated_us_state: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -944,6 +946,7 @@ class SectionTest < ActiveSupport::TestCase
         sync_enabled: nil,
         ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
+        at_risk_age_gated_us_state: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1002,6 +1005,7 @@ class SectionTest < ActiveSupport::TestCase
         sync_enabled: nil,
         ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
+        at_risk_age_gated_us_state: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1053,6 +1057,7 @@ class SectionTest < ActiveSupport::TestCase
         sync_enabled: nil,
         ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
+        at_risk_age_gated_us_state: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1367,47 +1372,56 @@ class SectionTest < ActiveSupport::TestCase
 
   describe '.summarize' do
     let(:section) {create :section}
+    let(:student) {create :student, us_state: at_risk_age_gated_us_state}
     let(:summarize) {section.summarize}
     let(:at_risk_age_gated_date) {DateTime.now}
+    let(:at_risk_age_gated_us_state) {'WA'}
 
     before do
-      allow(section).to receive(:at_risk_age_gated_date).and_return(at_risk_age_gated_date)
+      allow(section).to receive(:at_risk_age_gated_student).and_return(student)
+      allow(student).to receive(:at_risk_age_gated_date).and_return(at_risk_age_gated_date)
     end
 
-    it 'has the at_risk_age_gated_date' do
+    it 'has at_risk_age_gated_date' do
       _(summarize).must_be_kind_of Hash
       _(summarize[:at_risk_age_gated_date]).must_equal at_risk_age_gated_date
     end
+
+    it 'has at_risk_age_gated_us_state' do
+      _(summarize).must_be_kind_of Hash
+      _(summarize[:at_risk_age_gated_us_state]).must_equal at_risk_age_gated_us_state
+    end
   end
 
-  describe '.at_risk_age_gated_date' do
+  describe '.at_risk_age_gated_student' do
     let(:section) {create :section, hidden: archived?}
     let(:student) {create :student}
     let(:archived?) {false}
     let(:student_at_risk_age_gated_date) {nil}
-    let(:at_risk_age_gated_date) {section.at_risk_age_gated_date}
+    let(:at_risk_age_gated_student) {section.at_risk_age_gated_student}
+    let(:at_risk_age_gated_date) {at_risk_age_gated_student&.at_risk_age_gated_date}
 
     before do
       allow(section).to receive(:students).and_return([student])
       allow(student).to receive(:at_risk_age_gated_date).and_return(at_risk_age_gated_date)
     end
 
-    it 'does not return a date' do
-      _(at_risk_age_gated_date).must_equal nil
+    it 'does not return a student' do
+      _(at_risk_age_gated_student).must_equal nil
     end
 
     context 'has an at risk student' do
       let(:student_at_risk_age_gated_date) {DateTime.now}
 
-      it 'returns the lockout date' do
-        _(at_risk_age_gated_date).must_equal student_at_risk_age_gated_date
+      it 'returns the at risk student' do
+        _(at_risk_age_gated_student).must_equal at_risk_age_gated_student
       end
 
       context 'the section is archived' do
         let(:archived?) {true}
 
-        it 'does not return a date' do
-          _(at_risk_age_gated_date).must_equal nil
+        it 'does not return a student' do
+          _(at_risk_age_gated_student).must_equal nil
         end
       end
     end
