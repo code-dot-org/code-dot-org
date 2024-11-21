@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "computer-systems-playground",
-    "serialized_at": "2024-11-19 01:13:57 UTC",
+    "serialized_at": "2024-11-19 21:59:59 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -169,6 +169,36 @@
         "lesson_group.key": "",
         "script.name": "computer-systems-playground"
       }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Example Project 1: Classroom Light Levels",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Templates",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground"
+      }
     }
   ],
   "lesson_activities": [
@@ -252,6 +282,30 @@
       "seeding_key": {
         "lesson_activity.key": "2e4ab2c0-f5cf-490c-b533-c316e38c54ca",
         "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground"
+      }
+    },
+    {
+      "key": "1db82e45-d783-4a32-a83d-5142f61da526",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1db82e45-d783-4a32-a83d-5142f61da526",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground"
+      }
+    },
+    {
+      "key": "eb75410e-0ee6-4188-a383-5c6202a8cd48",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eb75410e-0ee6-4188-a383-5c6202a8cd48",
+        "lesson.key": "lesson-11",
         "lesson_group.key": "",
         "script.name": "computer-systems-playground"
       }
@@ -517,6 +571,116 @@
       "seeding_key": {
         "activity_section.key": "417d7a7e-d317-4a46-96ad-fcc81dfccb20",
         "lesson_activity.key": "2e4ab2c0-f5cf-490c-b533-c316e38c54ca"
+      }
+    },
+    {
+      "key": "4a2dd543-0cce-4603-b81d-7df6f4366934",
+      "position": 1,
+      "properties": {
+        "progression_name": "Example Project 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "4a2dd543-0cce-4603-b81d-7df6f4366934",
+        "lesson_activity.key": "1db82e45-d783-4a32-a83d-5142f61da526"
+      }
+    },
+    {
+      "key": "3fcac565-0d87-4e43-ab73-22a3948355b6",
+      "position": 2,
+      "properties": {
+        "progression_name": "Example Project 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "3fcac565-0d87-4e43-ab73-22a3948355b6",
+        "lesson_activity.key": "1db82e45-d783-4a32-a83d-5142f61da526"
+      }
+    },
+    {
+      "key": "1fcfe57e-b988-4b59-9697-7a86e2d86bba",
+      "position": 3,
+      "properties": {
+        "progression_name": "Template Level"
+      },
+      "seeding_key": {
+        "activity_section.key": "1fcfe57e-b988-4b59-9697-7a86e2d86bba",
+        "lesson_activity.key": "1db82e45-d783-4a32-a83d-5142f61da526"
+      }
+    },
+    {
+      "key": "9d0b9145-75f3-48a5-9d04-3c50e545c13c",
+      "position": 4,
+      "properties": {
+        "progression_name": "Code Snippets"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d0b9145-75f3-48a5-9d04-3c50e545c13c",
+        "lesson_activity.key": "1db82e45-d783-4a32-a83d-5142f61da526"
+      }
+    },
+    {
+      "key": "7a47bbe9-30b2-4d8c-9863-34ae449a2ce1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Template 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "7a47bbe9-30b2-4d8c-9863-34ae449a2ce1",
+        "lesson_activity.key": "eb75410e-0ee6-4188-a383-5c6202a8cd48"
+      }
+    },
+    {
+      "key": "917468af-fc55-4cb1-a623-954e52036771",
+      "position": 2,
+      "properties": {
+        "progression_name": "Template 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "917468af-fc55-4cb1-a623-954e52036771",
+        "lesson_activity.key": "eb75410e-0ee6-4188-a383-5c6202a8cd48"
+      }
+    },
+    {
+      "key": "2d353759-563b-438a-84a4-03ffe02e0dc7",
+      "position": 3,
+      "properties": {
+        "progression_name": "Template 3"
+      },
+      "seeding_key": {
+        "activity_section.key": "2d353759-563b-438a-84a4-03ffe02e0dc7",
+        "lesson_activity.key": "eb75410e-0ee6-4188-a383-5c6202a8cd48"
+      }
+    },
+    {
+      "key": "838952ac-140d-4740-8566-3f1d01f740c8",
+      "position": 4,
+      "properties": {
+        "progression_name": "Template 4"
+      },
+      "seeding_key": {
+        "activity_section.key": "838952ac-140d-4740-8566-3f1d01f740c8",
+        "lesson_activity.key": "eb75410e-0ee6-4188-a383-5c6202a8cd48"
+      }
+    },
+    {
+      "key": "33487519-d603-43d4-989c-5c63b501c2e6",
+      "position": 5,
+      "properties": {
+        "progression_name": "Template 5"
+      },
+      "seeding_key": {
+        "activity_section.key": "33487519-d603-43d4-989c-5c63b501c2e6",
+        "lesson_activity.key": "eb75410e-0ee6-4188-a383-5c6202a8cd48"
+      }
+    },
+    {
+      "key": "f86ea5fc-7c6a-4bd6-a6d4-11c35eb42e11",
+      "position": 6,
+      "properties": {
+        "progression_name": "Template 6"
+      },
+      "seeding_key": {
+        "activity_section.key": "f86ea5fc-7c6a-4bd6-a6d4-11c35eb42e11",
+        "lesson_activity.key": "eb75410e-0ee6-4188-a383-5c6202a8cd48"
       }
     }
   ],
@@ -1170,6 +1334,270 @@
       "level_keys": [
         "Computer Systems Playground - Additional Input Project Level"
       ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Example Project 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Example Project 1.1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "4a2dd543-0cce-4603-b81d-7df6f4366934"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Example Project 1.1"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Example Project 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Example Project 1.2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "3fcac565-0d87-4e43-ab73-22a3948355b6"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Example Project 1.2"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Template Level"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Example Project 1.6"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "1fcfe57e-b988-4b59-9697-7a86e2d86bba"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Example Project 1.6"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Code Snippets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Example Project 1.3"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "9d0b9145-75f3-48a5-9d04-3c50e545c13c"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Example Project 1.3"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Code Snippets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Example Project 1.4"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "9d0b9145-75f3-48a5-9d04-3c50e545c13c"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Example Project 1.4"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Code Snippets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Example Project 1.5"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "9d0b9145-75f3-48a5-9d04-3c50e545c13c"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Example Project 1.5"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Template 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Template 1"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "7a47bbe9-30b2-4d8c-9863-34ae449a2ce1"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Template 1"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Template 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Template 2"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "917468af-fc55-4cb1-a623-954e52036771"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Template 2"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Template 3"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Template 3"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "2d353759-563b-438a-84a4-03ffe02e0dc7"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Template 3"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Template 4"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Template 4"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "838952ac-140d-4740-8566-3f1d01f740c8"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Template 4"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Template 5"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Template 5"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "33487519-d603-43d4-989c-5c63b501c2e6"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Template 5"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Template 6"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Template 6"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "f86ea5fc-7c6a-4bd6-a6d4-11c35eb42e11"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Template 6"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1483,6 +1911,150 @@
         "lesson_group.key": "",
         "script.name": "computer-systems-playground",
         "activity_section.key": "417d7a7e-d317-4a46-96ad-fcc81dfccb20"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Example Project 1.1",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Example Project 1.1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "4a2dd543-0cce-4603-b81d-7df6f4366934"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Example Project 1.2",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Example Project 1.2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "3fcac565-0d87-4e43-ab73-22a3948355b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Example Project 1.6",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Example Project 1.6"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "1fcfe57e-b988-4b59-9697-7a86e2d86bba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Example Project 1.3",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Example Project 1.3"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "9d0b9145-75f3-48a5-9d04-3c50e545c13c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Example Project 1.4",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Example Project 1.4"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "9d0b9145-75f3-48a5-9d04-3c50e545c13c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Example Project 1.5",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Example Project 1.5"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "9d0b9145-75f3-48a5-9d04-3c50e545c13c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Template 1",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Template 1"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "7a47bbe9-30b2-4d8c-9863-34ae449a2ce1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Template 2",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Template 2"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "917468af-fc55-4cb1-a623-954e52036771"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Template 3",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Template 3"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "2d353759-563b-438a-84a4-03ffe02e0dc7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Template 4",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Template 4"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "838952ac-140d-4740-8566-3f1d01f740c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Template 5",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Template 5"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "33487519-d603-43d4-989c-5c63b501c2e6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Template 6",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Template 6"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "f86ea5fc-7c6a-4bd6-a6d4-11c35eb42e11"
       }
     }
   ],

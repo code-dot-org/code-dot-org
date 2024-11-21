@@ -25,12 +25,14 @@ interface Props {
   toggleModal: () => void;
   modalOpen: boolean;
   ageGatedStudentsCount?: number;
+  ageGatedStudentsUsState?: string;
 }
 
 export const AgeGatedStudentsBanner: React.FC<Props> = ({
   toggleModal,
   modalOpen,
   ageGatedStudentsCount = 0,
+  ageGatedStudentsUsState,
 }) => {
   const currentUser = useSelector((state: RootState) => state.currentUser);
   const reportEvent = (eventName: string, payload: object = {}) => {
@@ -41,8 +43,9 @@ export const AgeGatedStudentsBanner: React.FC<Props> = ({
     reportEvent(EVENTS.CAP_AGE_GATED_BANNER_SHOWN, {
       user_id: currentUser.userId,
       number_of_gateable_students: ageGatedStudentsCount,
+      usState: ageGatedStudentsUsState,
     });
-  }, [currentUser.userId, ageGatedStudentsCount]);
+  }, [currentUser.userId, ageGatedStudentsCount, ageGatedStudentsUsState]);
 
   const startDate = new Date('2025/01/01');
   const dateOptions: Intl.DateTimeFormatOptions = {
@@ -71,6 +74,7 @@ export const AgeGatedStudentsBanner: React.FC<Props> = ({
           isOpen={modalOpen}
           onClose={toggleModal}
           ageGatedStudentsCount={ageGatedStudentsCount}
+          ageGatedStudentsUsState={ageGatedStudentsUsState}
         />
       )}
     </div>

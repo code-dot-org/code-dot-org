@@ -88,7 +88,7 @@ namespace :build do
         end
 
         # Allow developers to skip the time-consuming step of seeding the dashboard DB.
-        # Additionally allow skipping when running in CircleCI, as it will be seeded during `rake install`
+        # Additionally allow skipping when running in CI, as it will be seeded during `rake install`
         if (rack_env?(:development) || ENV.fetch('CI', nil)) && CDO.skip_seed_all
           ChatClient.log "Not seeding <b>dashboard</b> due to CDO.skip_seed_all...\n" \
               "Until you manually run 'rake seed:all' or disable this flag, you won't\n" \

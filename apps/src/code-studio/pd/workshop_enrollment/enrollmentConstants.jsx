@@ -17,6 +17,7 @@ const WorkshopPropType = PropTypes.shape({
   }),
   virtual: PropTypes.bool,
   module: PropTypes.string,
+  course_offerings: PropTypes.array,
 });
 
 const FacilitatorPropType = PropTypes.shape({

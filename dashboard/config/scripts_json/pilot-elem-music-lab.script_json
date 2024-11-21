@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "pilot-elem-music-lab",
-    "serialized_at": "2024-11-19 01:19:16 UTC",
+    "serialized_at": "2024-11-19 20:16:42 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -308,7 +308,7 @@
       "key": "82af7be6-581c-47b8-84f5-3ce1e2ea268f",
       "position": 1,
       "properties": {
-        "progression_name": "Predit & Run"
+        "progression_name": "Intro, Predict & Run"
       },
       "seeding_key": {
         "activity_section.key": "82af7be6-581c-47b8-84f5-3ce1e2ea268f",
@@ -319,7 +319,7 @@
       "key": "c3703114-512b-44f0-b107-e72ef8985135",
       "position": 2,
       "properties": {
-        "progression_name": "Investigate & Modify"
+        "progression_name": "Customize"
       },
       "seeding_key": {
         "activity_section.key": "c3703114-512b-44f0-b107-e72ef8985135",
@@ -631,6 +631,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-intro-coding-loops-panel"
+        ],
         "progression": "Predict & Run"
       },
       "bonus": false,
@@ -728,6 +731,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-intro-coding-loops-panel2"
+        ],
         "progression": "Customize"
       },
       "bonus": false,
@@ -775,6 +781,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-intro-coding-loops-modify-verse"
+        ],
         "progression": "Customize"
       },
       "bonus": false,
@@ -872,6 +881,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-intro-coding-loops-make-two-loops"
+        ],
         "progression": "Choices"
       },
       "bonus": false,
@@ -894,6 +906,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-intro-coding-loops-make-sound-loop"
+        ],
         "progression": "Choices"
       },
       "bonus": false,
@@ -916,6 +931,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-intro-coding-loops-panel-placeholder-2"
+        ],
         "progression": "Choices"
       },
       "bonus": false,
@@ -938,10 +956,32 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Intro, Predict & Run"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-events-panel"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "82af7be6-581c-47b8-84f5-3ce1e2ea268f"
+      },
+      "level_keys": [
+        "music-intro-coding-events-panel"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "music-intro-coding-events-try"
         ],
-        "progression": "Predit & Run"
+        "progression": "Intro, Predict & Run"
       },
       "bonus": false,
       "seeding_key": {
@@ -958,65 +998,15 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "music-intro-coding-events-match"
-        ],
-        "progression": "Investigate & Modify"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "music-intro-coding-events-match"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "c3703114-512b-44f0-b107-e72ef8985135"
-      },
-      "level_keys": [
-        "music-intro-coding-events-match"
-      ]
-    },
-    {
       "chapter": 27,
       "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "music-intro-coding-events-panel"
-        ],
-        "progression": "Investigate & Modify"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "music-intro-coding-events-panel"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "c3703114-512b-44f0-b107-e72ef8985135"
-      },
-      "level_keys": [
-        "music-intro-coding-events-panel"
-      ]
-    },
-    {
-      "chapter": 28,
-      "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-intro-coding-events-modify1"
         ],
-        "progression": "Investigate & Modify"
+        "progression": "Customize"
       },
       "bonus": false,
       "seeding_key": {
@@ -1033,15 +1023,15 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 5,
-      "activity_section_position": 4,
+      "chapter": 28,
+      "position": 4,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-intro-coding-events-modify2"
         ],
-        "progression": "Investigate & Modify"
+        "progression": "Customize"
       },
       "bonus": false,
       "seeding_key": {
@@ -1055,6 +1045,31 @@
       },
       "level_keys": [
         "music-intro-coding-events-modify2"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-events-match"
+        ],
+        "progression": "Customize"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-events-match"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "c3703114-512b-44f0-b107-e72ef8985135"
+      },
+      "level_keys": [
+        "music-intro-coding-events-match"
       ]
     },
     {
@@ -1499,9 +1514,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "music-intro-coding-events-try",
+        "level.key": "music-intro-coding-events-panel",
         "script_level.level_keys": [
-          "music-intro-coding-events-try"
+          "music-intro-coding-events-panel"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -1511,26 +1526,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "music-intro-coding-events-match",
+        "level.key": "music-intro-coding-events-try",
         "script_level.level_keys": [
-          "music-intro-coding-events-match"
+          "music-intro-coding-events-try"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "c3703114-512b-44f0-b107-e72ef8985135"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "music-intro-coding-events-panel",
-        "script_level.level_keys": [
-          "music-intro-coding-events-panel"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "c3703114-512b-44f0-b107-e72ef8985135"
+        "activity_section.key": "82af7be6-581c-47b8-84f5-3ce1e2ea268f"
       }
     },
     {
@@ -1550,6 +1553,18 @@
         "level.key": "music-intro-coding-events-modify2",
         "script_level.level_keys": [
           "music-intro-coding-events-modify2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "c3703114-512b-44f0-b107-e72ef8985135"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-events-match",
+        "script_level.level_keys": [
+          "music-intro-coding-events-match"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
