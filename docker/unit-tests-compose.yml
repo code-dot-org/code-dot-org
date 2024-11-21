@@ -20,14 +20,14 @@ version: "3"
 services:
   site:
     # TODO: switch to codedotorg/cdo-ci or other new image
-    image: codedotorg/code-dot-org:1.11.0
+    image: codedotorg/code-dot-org:1.11.1
     user: ${FIXUID:-1000}:${FIXGID:-1000}
     volumes:
-      - ../:/home/circleci/code-dot-org:delegated
-      - rbenv:/home/circleci/.rbenv
+      - ../:/home/ci/code-dot-org:delegated
+      - rbenv:/home/ci/.rbenv
       - mysqldata:/var/lib/mysql
-      - yarncache:/home/circleci/.cache
-      - gcloud_config:/home/circleci/.config/gcloud
+      - yarncache:/home/ci/.cache
+      - gcloud_config:/home/ci/.config/gcloud
     env_file:
       - env.list
     command: /bin/sh -c "docker/unit_tests.sh"

@@ -1628,8 +1628,7 @@ class Unit < ApplicationRecord
       versionYear: unit_group&.version_year || version_year,
     }
     # Only get lessons with lesson plans
-    filtered_lessons = lessons.select(&:has_lesson_plan)
-    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize_for_lesson_materials(user)}
+    summary[:lessons] = lessons.map {|lesson| lesson.summarize_for_lesson_materials(user)}
 
     summary
   end

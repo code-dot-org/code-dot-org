@@ -42,6 +42,12 @@ module SharedConstants
     }
   ).freeze
 
+  USER_LEVEL_INTERACTIONS = OpenStruct.new(
+    {
+      click_help_and_tips: "click_help_and_tips",
+    }
+  ).freeze
+
   # The set of valid login types for a section
   SECTION_LOGIN_TYPE = OpenStruct.new(
     {

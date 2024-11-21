@@ -6,7 +6,12 @@ import {handleWorkspaceResizeOrScroll} from '@cdo/apps/code-studio/callouts';
 
 import BlockSvgLimitIndicator from './addons/blockSvgLimitIndicator';
 import {BLOCK_TYPES} from './constants';
-import {ExtendedBlockSvg, ExtendedWorkspaceSvg} from './types';
+import {
+  ExtendedBlock,
+  ExtendedBlockSvg,
+  ExtendedWorkspace,
+  ExtendedWorkspaceSvg,
+} from './types';
 
 // A custom version of Blockly's Events.disableOrphans. This makes a couple
 // changes to the original function.
@@ -136,6 +141,34 @@ export function storeWorkspaceWidth(e: GoogleBlockly.Events.Abstract) {
     if (workspace?.RTL && workspace?.rendered) {
       workspace.previousViewWidth = workspace?.getMetrics().viewWidth;
     }
+  }
+}
+
+export function setPathFill(e: GoogleBlockly.Events.Abstract) {
+  if (e.type === Blockly.Events.FINISHED_LOADING && e.workspaceId) {
+    const workspace = Blockly.Workspace.getById(
+      `${e.workspaceId}`
+    ) as ExtendedWorkspace;
+    let patternBlocks: ExtendedBlock[] = [];
+    patternBlocks = workspace
+      .getAllBlocks()
+      .map(block => block as ExtendedBlock)
+      .filter(block => block.getFillPattern());
+    patternBlocks.forEach(block => {
+      const pattern = block.getFillPattern();
+      if (pattern && block instanceof GoogleBlockly.BlockSvg) {
+        block.svgPathFill = Blockly.createSvgElement(
+          'path',
+          {class: 'blocklyPath'},
+          block.getSvgRoot()
+        );
+        block.svgPathFill.setAttribute('fill', 'url(#' + pattern + ')');
+        const pathDescription = block.pathObject.svgPath.getAttribute('d');
+        if (pathDescription) {
+          block.svgPathFill.setAttribute('d', pathDescription);
+        }
+      }
+    });
   }
 }
 

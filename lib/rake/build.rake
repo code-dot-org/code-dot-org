@@ -45,11 +45,6 @@ namespace :build do
     end
   end
 
-  desc 'Starts Active Job workers, restarts existing workers (if any) in a rolling fashion to avoid downtime'
-  timed_task_with_logging :start_active_job_workers do
-    Cdo::ActiveJobBackend.restart_workers
-  end
-
   desc 'Builds dashboard (install gems, migrate/seed db, compile assets).'
   timed_task_with_logging dashboard: :package do
     Dir.chdir(dashboard_dir) do
@@ -93,7 +88,7 @@ namespace :build do
         end
 
         # Allow developers to skip the time-consuming step of seeding the dashboard DB.
-        # Additionally allow skipping when running in CircleCI, as it will be seeded during `rake install`
+        # Additionally allow skipping when running in CI, as it will be seeded during `rake install`
         if (rack_env?(:development) || ENV.fetch('CI', nil)) && CDO.skip_seed_all
           ChatClient.log "Not seeding <b>dashboard</b> due to CDO.skip_seed_all...\n" \
               "Until you manually run 'rake seed:all' or disable this flag, you won't\n" \
@@ -137,9 +132,7 @@ namespace :build do
         # that may arise when that best practice is not followed.
         unless rack_env?(:development)
           ChatClient.log 'Restarting <b>dashboard</b> Active Job worker(s).'
-          Dir.chdir(deploy_dir) do
-            RakeUtils.rake_stream_output 'build:start_active_job_workers'
-          end
+          RakeUtils.system_stream_output 'bundle', 'exec', bin_dir('restart-active-job-workers')
         end
       end
 

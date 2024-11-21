@@ -81,6 +81,7 @@
       user_email: current_user.hashed_email,
       in_section: JSON.dump(current_user.student? ? current_user.sections_as_student.present? : nil),
       providers: JSON.dump(current_user.providers.filter_map(&:presence)),
+      us_state: current_user.us_state,
     },
   }
 

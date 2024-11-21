@@ -182,7 +182,7 @@ Feature: Evaluate student code against rubrics using AI
     And I am on "http://studio.code.org/home"
     And I wait until element "#homepage-container" is visible
     And element "#sign_in_or_user" contains text "Teacher_Aiden"
-    And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2?enableExperiments=taNotifications"
+    And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
     And I wait for the lab page to fully load
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
     And I click selector ".teacher-panel td:eq(1)" to load a new page

@@ -4,9 +4,9 @@ import {useSelector} from 'react-redux';
 import UnitCalendarGrid from '@cdo/apps//code-studio/components/progress/UnitCalendarGrid';
 import {setCalendarData} from '@cdo/apps/code-studio/calendarRedux';
 import {
-  initializeRedux,
+  setUnitSummaryReduxData,
   UnitSummaryResponse,
-} from '@cdo/apps/code-studio/components/progress/TeacherUnitOverview';
+} from '@cdo/apps/code-studio/components/progress/UnitSummaryUtils';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -76,7 +76,7 @@ const UnitCalendar: React.FC = () => {
         .then(response => response?.value)
         .then(responseJson => {
           // Initialize Redux state with the new data
-          initializeRedux(responseJson, dispatch, userType, userId);
+          setUnitSummaryReduxData(responseJson, dispatch, userType, userId);
           setIsLoading(false);
 
           analyticsReporter.sendEvent(EVENTS.VIEW_UNIT_CALENDAR, {

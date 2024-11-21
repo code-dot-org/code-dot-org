@@ -64,7 +64,11 @@ class SoundCache {
     const loadPromises: Promise<void>[] = [];
 
     if (paths.length > 0) {
-      this.metricsReporter.incrementCounter('SoundCache.LoadSoundsAttempt');
+      this.metricsReporter.publishMetric(
+        'SoundCache.LoadSoundsCount',
+        paths.length,
+        'Count'
+      );
     }
 
     for (const path of paths) {
@@ -100,7 +104,11 @@ class SoundCache {
         count: failedSounds.length,
         failedSounds,
       });
-      this.metricsReporter.incrementCounter('SoundCache.LoadSoundsError');
+      this.metricsReporter.publishMetric(
+        'SoundCache.FailedSoundsCount',
+        failedSounds.length,
+        'Count'
+      );
     }
   }
 

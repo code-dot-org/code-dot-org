@@ -251,6 +251,7 @@ class CourseOverview extends Component {
             courseOfferingId={courseOfferingId}
             courseVersionId={courseVersionId}
             showAssignButton={showAssignButton}
+            participantAudience={participantAudience}
           />
         ))}
       </div>

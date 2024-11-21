@@ -19197,6 +19197,10 @@ en:
               name: Additional Output
             lesson-9:
               name: Pre-assessment
+            lesson-10:
+              name: 'Example Project 1: Classroom Light Levels'
+            lesson-11:
+              name: Templates
           lesson_groups: {}
           name: computer-systems-playground
           title: "[PLAYGROUND] Computer Systems and Devices (with micro:bit)"
@@ -19581,6 +19585,8 @@ en:
           lessons:
             lesson-5:
               name: Next Steps
+            lesson-6:
+              name: The Student Experience
           lesson_groups: {}
           name: sandbox-teaching-getting-started
           title: Getting Started Sandbox

@@ -8,7 +8,7 @@ $(document).ready(() => {
   analyticsReporter.sendEvent(EVENTS.SIGN_UP_STARTED_EVENT, {}, PLATFORMS.BOTH);
 
   const isInSignupExperiment = statsigReporter.getIsInExperiment(
-    'new_sign_up_v1',
+    'new_sign_up_v2',
     'showNewFlow',
     false
   );
