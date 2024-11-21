@@ -105,6 +105,7 @@ def create_user(name, url: '/api/test/create_user', **user_opts)
     if user_opts[:sso]
       user_opts[:uid] = oauth_uid_for_user_by_name(name)
       user_opts[:sso] = 'google_oauth2' if user_opts[:sso] == 'google'
+      password = nil
     end
 
     # Set the parent email to the user email, if we see it
