@@ -138,6 +138,18 @@ class ActiveSupport::TestCase
     AWS::S3.expects(:upload_to_bucket).never
   end
 
+  # helper method to stub out the source data for a project when we don't want to look in s3
+  def stub_project_source_data(channel_id, code: 'fake-code', version_id: 'fake-version-id')
+    fake_main_json = {source: code}.to_json
+    fake_source_data = {
+      status: 'FOUND',
+      body: StringIO.new(fake_main_json),
+      version_id: version_id,
+      last_modified: DateTime.now
+    }
+    SourceBucket.any_instance.stubs(:get).with(channel_id, "main.json").returns(fake_source_data)
+  end
+
   # Add more helper methods to be used by all tests here...
   include FactoryBot::Syntax::Methods
   include ActiveSupport::Testing::SetupAllAndTeardownAll

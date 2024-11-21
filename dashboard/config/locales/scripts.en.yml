@@ -19585,6 +19585,8 @@ en:
           lessons:
             lesson-5:
               name: Next Steps
+            lesson-6:
+              name: The Student Experience
           lesson_groups: {}
           name: sandbox-teaching-getting-started
           title: Getting Started Sandbox

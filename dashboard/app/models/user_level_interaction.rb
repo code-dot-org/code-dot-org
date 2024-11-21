@@ -20,4 +20,6 @@
 #  index_user_level_interactions_on_user_id   (user_id)
 #
 class UserLevelInteraction < ApplicationRecord
+  belongs_to :user
+  belongs_to :level
 end

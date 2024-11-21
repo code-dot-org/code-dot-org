@@ -43,6 +43,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-25T20:35:37.968+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L3-L4_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L3-L4_2024-pilot\"},{\"changed_at\":\"2024-11-19 21:47:06 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-19 21:54:30 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-25T20:35:37.968+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L3-L4_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L3-L4_2024-pilot\"},{\"changed_at\":\"2024-11-19 21:47:06 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-19 21:54:30 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-20 16:20:27 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-20 16:54:31 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Pythonlab>
