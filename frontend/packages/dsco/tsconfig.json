@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "@code-dot-org/lint-config/typescript/tsconfig.node22.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {

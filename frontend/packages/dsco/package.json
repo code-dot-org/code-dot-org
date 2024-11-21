@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@code-dot-org/legacy-css": "workspace:*",
+    "@code-dot-org/lint-config": "workspace:*",
     "@testing-library/jest-dom": "^6.6.3",
     "@types/lodash": "^4",
     "@types/node": "^22.9.0",
