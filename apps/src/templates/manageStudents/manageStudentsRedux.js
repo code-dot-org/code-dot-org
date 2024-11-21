@@ -894,7 +894,9 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       isSaving: false,
       rowType: RowType.STUDENT,
       userType: student.user_type,
-      atRiskAgeGatedDate: student.at_risk_age_gated_date,
+      atRiskAgeGatedDate: student.at_risk_age_gated_date
+        ? new Date(student.at_risk_age_gated_date)
+        : null,
       childAccountComplianceState: student.child_account_compliance_state,
       latestPermissionRequestSentAt:
         student.latest_permission_request_sent_at &&

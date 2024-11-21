@@ -46,7 +46,7 @@ function TeacherSections({
   };
 
   const shouldDisplayAtRiskAgeGatedWarning = () => {
-    return ageGatedSections.length > 0;
+    return ageGatedSections?.length > 0;
   };
 
   return (
