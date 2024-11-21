@@ -41,10 +41,12 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 // TODO:
-// always show 2 buttons
-// add content section scroll possibility
-// make sure colors for dark modal image are alright
-// check the final image sizing
+// add content section scroll possibility +
+// check aria props
+// alertDialog vs Dialog?
+// always show 2 buttons ?
+// make sure colors for dark modal image are alright ?
+// check the final image sizing ?
 
 /**
  * ## Production-ready Checklist:
