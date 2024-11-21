@@ -103,6 +103,18 @@ async function sendRequest(
   return response;
 }
 
+/**
+ * Performs a GET request to the given endpoint. Use {@link fetchJson}
+ * to automatically unwrap the response JSON as a typed object.
+ */
+async function get(
+  endpoint: string,
+  useAuthenticityToken = false,
+  headers: Record<string, string> = {}
+): Promise<Response> {
+  return sendRequest('GET', endpoint, undefined, useAuthenticityToken, headers);
+}
+
 async function put(
   endpoint: string,
   body?: string,
@@ -140,4 +152,5 @@ export default {
   fetchJson,
   post,
   put,
+  get,
 };
