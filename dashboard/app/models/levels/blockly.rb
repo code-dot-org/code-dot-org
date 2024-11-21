@@ -100,7 +100,9 @@ class Blockly < Level
       # Spelling Bee
       "letters",
       # Artist
-      "artist", "artist_zombie", "elsa", "anna"
+      "artist", "artist_zombie", "elsa", "anna",
+      # Jigsaw
+      "jigsaw"
     ]
   end
 
