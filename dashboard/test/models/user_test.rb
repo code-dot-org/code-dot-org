@@ -5530,7 +5530,7 @@ class UserTest < ActiveSupport::TestCase
       user.stubs(:sponsored?).returns(user_is_sponsored)
     end
 
-    it 'secret picture is generated' do
+    it 'generates secret picture' do
       _(user.secret_picture_id).must_be_nil
       user.save! && user.reload
       _(user.secret_picture).must_be_instance_of SecretPicture
@@ -5539,14 +5539,14 @@ class UserTest < ActiveSupport::TestCase
     context 'when user is not sponsored' do
       let(:user_is_sponsored) {false}
 
-      it 'secret picture is not generated' do
+      it 'does not generate secret picture' do
         _(user.secret_picture_id).must_be_nil
         _ {user.save!}.wont_change -> {user.secret_picture_id}
       end
     end
   end
 
-  describe 'generation of secret word on creation' do
+  describe 'generation of secret words on creation' do
     let(:user) {build(:user)}
 
     let(:user_is_sponsored) {true}
@@ -5555,7 +5555,7 @@ class UserTest < ActiveSupport::TestCase
       user.stubs(:sponsored?).returns(user_is_sponsored)
     end
 
-    it 'secret picture is generated' do
+    it 'generates secret words' do
       _(user.secret_words).must_be_nil
 
       user.save!
@@ -5568,7 +5568,7 @@ class UserTest < ActiveSupport::TestCase
     context 'when user is not sponsored' do
       let(:user_is_sponsored) {false}
 
-      it 'secret word is not generated' do
+      it 'does not generates secret word' do
         _(user.secret_words).must_be_nil
         _ {user.save!}.wont_change -> {user.secret_words}
       end

@@ -280,6 +280,11 @@ FactoryBot.define do
       user_type {User::TYPE_STUDENT}
       birthday {Time.zone.today - 17.years}
 
+      trait :sponsored do
+        encrypted_password {nil}
+        provider {User::PROVIDER_SPONSORED}
+      end
+
       factory :young_student do
         birthday {Time.zone.today - 10.years}
 
@@ -1374,7 +1379,7 @@ FactoryBot.define do
   end
 
   factory :follower do
-    association :student_user, factory: :student
+    association :student_user, factory: %i[student sponsored]
 
     transient do
       section {nil}
