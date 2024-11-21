@@ -4,8 +4,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {COURSE_BUILD_YOUR_OWN} from '../workshop_dashboard/workshopConstants';
-
 import EnrollForm from './enroll_form';
 import {WorkshopPropType, FacilitatorPropType} from './enrollmentConstants';
 import FacilitatorBio from './facilitator_bio';
@@ -41,35 +39,12 @@ export default class WorkshopEnroll extends React.Component {
   constructor(props) {
     super(props);
 
-    if (this.props.workshop.course === COURSE_BUILD_YOUR_OWN) {
-      this.skipEnrollForm();
-    }
-
     this.state = {
       workshopEnrollmentStatus:
         this.props.workshop_enrollment_status ||
         SUBMISSION_STATUSES.UNSUBMITTED,
     };
   }
-
-  skipEnrollForm = () => {
-    const postParams = {
-      user_id: this.props.user_id,
-      first_name: this.props.enrollment.first_name,
-      last_name: this.props.enrollment.last_name,
-      email: this.props.enrollment.email,
-      previous_courses: this.props.previous_courses,
-    };
-    this.submitRequest = $.ajax({
-      method: 'POST',
-      url: `/api/v1/pd/workshops/${this.props.workshop.id}/enrollments`,
-      contentType: 'application/json',
-      data: JSON.stringify(postParams),
-      complete: result => {
-        this.onSubmissionComplete(result);
-      },
-    });
-  };
 
   onSubmissionComplete = result => {
     if (result) {

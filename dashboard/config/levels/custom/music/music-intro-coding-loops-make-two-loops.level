@@ -10,11 +10,33 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "level_data": {
-      "library": "launch2024"
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_pattern_at_current_location_simple2",
+            "play_chord_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Functions": [
+
+          ],
+          "Control": [
+            "repeat_simple2",
+            "play_sounds_together"
+          ]
+        }
+      }
     },
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "long_instructions": "###Experiment with these new blocks! ",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-14 15:40:33 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-14 15:40:33 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-19 20:05:51 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-19 20:06:20 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

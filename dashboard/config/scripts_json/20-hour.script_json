@@ -16,6 +16,7 @@
           "buttonText": "Learn More"
         }
       ],
+      "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
       "is_course": true,
@@ -27,7 +28,7 @@
     },
     "new_name": null,
     "family_name": "20-hour",
-    "serialized_at": "2024-01-05 17:28:13 UTC",
+    "serialized_at": "2024-11-19 01:13:45 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

@@ -1,0 +1,24 @@
+name 'sp-pl-DS-lesson3ResourcesPython'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson Resources
+
+#### Before we dive into the content of the unit, take some time to explore resources that have been provided for you to simplify the teaching process. 
+
+<img src="https://images.code.org/fa5749df8bfc8fb523069811d2f45444-image-1731945025380.png" alt="laptop icon with code" width="250px" style="border-radius:10px; float:right; margin: 20px 60px 40px 40px;">
+
+## Documentation
+
+#### Previous Python coding experience is not necessary for this unit, however, coding experience is helpful.  
+
+#### This <a href = "https://docs.google.com/document/d/12xlUG_K0F8mx-fqJ9OHhe1o49IGNO6RLPv8yO0jDJ9o/edit?usp=sharing" target="blank" rel="noopener noreferrer"><b>Python Documentation Guide</b></a> can help you and your students succeed in this unit.
+
+## Unit Two Guides
+- #### <a href = "https://docs.google.com/document/d/175Tq55HFroHz8RIv6MyEvPGV2bNFRvxm3LizFAcvx20/edit?tab=t.0#heading=h.gqwpeghz4npc" target="blank" rel="noopener noreferrer"><b>Unit 2 Guide</b></a> - student resource that they will fill in each lesson
+- #### <a href = "https://docs.google.com/document/d/1S3LnMEV4V3A8eEA7bXAaYXtGXco2QbtiZSywaR5vIvw/edit?usp=drive_link"><b>Unit 2 Overview</b></a> - teacher resource with information on key terms for each lesson
+- #### <a href = "https://docs.google.com/document/d/1q-bcf53SVePWCeWuTmP0Lp3K2ju3ydH-dXFYHhXX3lk/edit?tab=t.0#heading=h.xe9cnc3216z0"><b>Unit 1 Study Guide</b></a> - student resource to be provided after the last lesson with information on key terms for each lesson
+
+
+MARKDOWN

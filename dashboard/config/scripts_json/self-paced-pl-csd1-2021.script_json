@@ -15,6 +15,7 @@
           "buttonText": null
         }
       ],
+      "content_area": "self_paced_pl_6_8",
       "curriculum_umbrella": "CSD Self Paced PL",
       "has_verified_resources": true,
       "is_migrated": true,
@@ -23,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-25 21:24:38 UTC",
+    "serialized_at": "2024-11-19 01:19:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

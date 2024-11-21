@@ -150,6 +150,7 @@ $(document).ready(() => {
         providers={JSON.parse(
           lockoutLinkedAccountsMountPoint.getAttribute('data-providers')
         )}
+        usState={lockoutLinkedAccountsMountPoint.getAttribute('data-us-state')}
       />,
       lockoutLinkedAccountsMountPoint
     );

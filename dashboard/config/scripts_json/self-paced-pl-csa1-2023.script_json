@@ -4,13 +4,14 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "pl_workshop_activities",
       "curriculum_umbrella": "PD Workshop Activity CSA",
       "is_migrated": true,
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-05 14:08:41 UTC",
+    "serialized_at": "2024-11-19 01:19:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
