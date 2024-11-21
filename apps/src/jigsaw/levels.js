@@ -178,7 +178,7 @@ module.exports = {
       },
     },
     startBlocks:
-      undeletableJigsawBlock('jigsaw_3A', 400, 100) +
+      undeletableJigsawBlock('jigsaw_3A', 380, 80) +
       undeletableJigsawBlock('jigsaw_3B', 100, 220),
   },
 
@@ -206,7 +206,7 @@ module.exports = {
     },
     startBlocks:
       undeletableJigsawBlock('jigsaw_4A', 100, 140) +
-      undeletableJigsawBlock('jigsaw_4B', 400, 200),
+      undeletableJigsawBlock('jigsaw_4B', 380, 180),
   },
 
   5: {
@@ -407,7 +407,7 @@ module.exports = {
     },
     ghost: {
       x: 170,
-      y: 16,
+      y: 56,
     },
     numBlocks: 0,
     requiredBlocks: [],
@@ -476,10 +476,10 @@ module.exports = {
       height: 200,
     },
     ghost: {
-      x: 400,
-      y: 100,
+      x: 380,
+      y: 80,
     },
-    backgroundHSV: [25, 0.57, 0.96],
+    backgroundHSV: [25, 0.87, 0.96],
     numBlocks: 3,
     requiredBlocks: [],
     freePlay: false,
