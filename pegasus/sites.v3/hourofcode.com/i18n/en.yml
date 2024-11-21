@@ -9258,7 +9258,7 @@
   tutorial_carnegiesensabot_string_platforms: "All modern browsers"
   tutorial_robotical4_string_platforms: "All modern browsers"
   tutorial_kinderadd_string_platforms: "Unplugged"
-  tutorial_imagipython_string_platforms: "Chrome, Firefox, Android tablet, iPad, iPhone"
+  tutorial_imagipython_string_platforms: "All modern browsers, Android tablet, iPad, iPhone"
   tutorial_robotical2_string_platforms: "Unplugged"
   tutorial_robotical3_string_platforms: "All modern browsers"
   tutorial_blockscadvirus_string_platforms: "All modern browsers"
