@@ -481,7 +481,7 @@
   "childAccountPolicy_ageGatedStudentsWarning": "Some students in this section are under 13 and will require parental consent to continue using their personal accounts after {startDate}.",
   "childAccountPolicy_ageGatedStudentsWarning_button": "See Students",
   "childAccountPolicy_ageGatedSectionsWarning": "Some of your sections have students under 13 using personal account logins. These students will require parental consent to continue using their personal accounts after {startDate}.",
-  "childAccountPolicy_ageGatedSectionsWarning_button": "See Sections",
+  "childAccountPolicy_ageGatedSectionsWarning_button": "View Sections",
   "childAccountPolicy_ageGatedSectionsModal_header": "Sections Which Require Parental Consent",
   "childAccountPolicy_ageGatedSectionsModal_notice": "The following sections have students under 13 who are using personal account logins. They will require parental consent after {startDate} to continue using Code.org with their personal accounts.",
   "childAccountPolicy_ageGatedSectionsModal_action": "Please visit your sections linked below to see which students will require parental consent.",
