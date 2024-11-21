@@ -25,10 +25,8 @@ interface CourseOverviewActionRowProps {
   teacherResources: object[];
   studentResources: object[];
   isInstructor: boolean;
-  unitGroupId: number;
   viewAs: keyof typeof ViewType;
   showAssignButton: boolean;
-  selectedSectionId: number;
   title: string;
   participantAudience: string;
 }
