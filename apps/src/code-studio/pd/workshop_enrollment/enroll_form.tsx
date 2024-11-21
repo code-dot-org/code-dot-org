@@ -2,7 +2,7 @@
  * Form to create a workshop enrollment
  */
 import classNames from 'classnames';
-import React, {useMemo, useState} from 'react';
+import React, {Fragment, useMemo, useState} from 'react';
 
 import Alert from '@cdo/apps/componentLibrary/alert';
 import {Button} from '@cdo/apps/componentLibrary/button';
@@ -94,26 +94,26 @@ interface SchoolInfoProps {
 }
 
 interface EnrollFormState {
-  attended_csf_intro_workshop?: keyof typeof ATTENDED_CSF_COURSES_OPTIONS;
-  confirm_email?: string;
-  csf_course_experience?: Partial<typeof CSF_COURSES>;
-  csf_courses_planned?: string[];
-  csf_intro_intent?: string;
-  csf_intro_other_factors?: string[];
-  describe_role?: string;
-  email?: string;
-  explain_csf_course_other?: string;
-  explain_not_teaching?: string;
-  explain_teaching_other?: string;
-  first_name?: string;
-  grades_teaching?: string[];
-  last_name?: string;
-  planning_to_teach_ap?: string;
+  attended_csf_intro_workshop: keyof typeof ATTENDED_CSF_COURSES_OPTIONS;
+  confirm_email: string;
+  csf_course_experience: Partial<typeof CSF_COURSES>;
+  csf_courses_planned: string[];
+  csf_intro_intent: string;
+  csf_intro_other_factors: string[];
+  describe_role: string;
+  email: string;
+  explain_csf_course_other: string;
+  explain_not_teaching: string;
+  explain_teaching_other: string;
+  first_name: string;
+  grades_teaching: string[];
+  last_name: string;
+  planning_to_teach_ap: string;
   previous_courses: string[];
-  role?: string;
-  taught_ap_before?: string;
-  years_teaching?: string;
-  years_teaching_cs?: string;
+  role: string;
+  taught_ap_before: string;
+  years_teaching: string;
+  years_teaching_cs: string;
 }
 
 type CombinedFormState = keyof EnrollFormState | 'school_info';
@@ -131,6 +131,8 @@ type EnrollFormProps = {
   collect_demographics?: boolean;
   email?: string;
   first_name?: string;
+  last_name?: string;
+  role?: string;
   onSubmissionComplete: (response?: EnrollmentResponse) => void;
   previous_courses: string[];
   school_info?: SchoolInfoProps;
@@ -138,6 +140,13 @@ type EnrollFormProps = {
   workshop_course?: string;
   workshop_id: number;
   workshop_subject?: string;
+  grades_teaching?: string[];
+  csf_intro_intent?: string;
+  attended_csf_intro_workshop?: string;
+  years_teaching?: string;
+  years_teaching_cs?: string;
+  taught_ap_before?: string;
+  planning_to_teach_ap?: string;
 };
 
 const Label = ({
@@ -180,25 +189,26 @@ const Label = ({
 
 export default function EnrollForm(props: EnrollFormProps) {
   const [formState, setFormState] = useState<EnrollFormState>({
-    attended_csf_intro_workshop: '',
-    csf_course_experience: undefined,
+    attended_csf_intro_workshop: props.attended_csf_intro_workshop ?? '',
+    confirm_email: '',
+    csf_course_experience: {},
     csf_courses_planned: [],
-    csf_intro_intent: '',
+    csf_intro_intent: props.csf_intro_intent ?? '',
     csf_intro_other_factors: [],
     describe_role: '',
-    email: props.email,
+    email: props.email ?? '',
     explain_csf_course_other: '',
     explain_not_teaching: '',
     explain_teaching_other: '',
-    first_name: props.first_name,
-    grades_teaching: [],
-    last_name: '',
-    planning_to_teach_ap: '',
+    first_name: props.first_name ?? '',
+    grades_teaching: props.grades_teaching ?? [],
+    last_name: props.last_name ?? '',
+    planning_to_teach_ap: props.planning_to_teach_ap ?? '',
     previous_courses: [],
-    role: '',
-    taught_ap_before: '',
-    years_teaching: '',
-    years_teaching_cs: '',
+    role: props.role ?? '',
+    taught_ap_before: props.taught_ap_before ?? '',
+    years_teaching: props.years_teaching ?? '',
+    years_teaching_cs: props.years_teaching_cs ?? '',
   });
 
   const schoolInfo = useSchoolInfo({
@@ -420,7 +430,9 @@ export default function EnrollForm(props: EnrollFormProps) {
     }
 
     const missingRequiredFields = requiredFields.filter(
-      field => !formState[field]
+      field =>
+        !formState[field] ||
+        (Array.isArray(formState[field]) && formState[field].length === 0)
     );
     if (missingRequiredFields.length) {
       missingRequiredFields.forEach(f => {
@@ -625,10 +637,13 @@ export default function EnrollForm(props: EnrollFormProps) {
           <div className={styles.school_info_container}>
             <SchoolDataInputs
               includeHeaders={false}
-              // containerClassName={styles.school_info_required}
+              containerClassName={styles.school_info_required}
               {...schoolInfo}
             />
-            <Label errorMessage={formErrors.school_info} />
+            <Label
+              errorMessage={formErrors.school_info}
+              htmlFor="school_info"
+            />
           </div>
         </>
       )}
@@ -673,6 +688,7 @@ export default function EnrollForm(props: EnrollFormProps) {
               text="What grades are you teaching this year? (Select all that
                     apply)"
               errorMessage={formErrors.grades_teaching}
+              htmlFor="grades_teaching"
             >
               <Typography
                 semanticTag="p"
@@ -702,7 +718,7 @@ export default function EnrollForm(props: EnrollFormProps) {
                     stateKey = 'explain_teaching_other';
                   }
                   return (
-                    <>
+                    <Fragment key={grade}>
                       <Checkbox
                         size="s"
                         name={grade}
@@ -733,7 +749,7 @@ export default function EnrollForm(props: EnrollFormProps) {
                           />
                         </Label>
                       )}
-                    </>
+                    </Fragment>
                   );
                 })}
               </fieldset>
@@ -748,20 +764,23 @@ export default function EnrollForm(props: EnrollFormProps) {
             className={getRequiredStyles('csf_intro_intent')}
             text={csfIntroIntentLabel}
             errorMessage={formErrors.csf_intro_intent}
+            htmlFor="csf_intro_intent"
           >
-            <RadioButtonsGroup
-              onChange={e =>
-                handleChange({
-                  csf_intro_intent: e.target.value,
-                })
-              }
-              radioButtons={csfIntroIntentAnswers.map(option => ({
-                value: option,
-                name: option,
-                label: option,
-                size: 's',
-              }))}
-            />
+            <fieldset id="csf_intro_intent">
+              <RadioButtonsGroup
+                onChange={e =>
+                  handleChange({
+                    csf_intro_intent: e.target.value,
+                  })
+                }
+                radioButtons={csfIntroIntentAnswers.map(option => ({
+                  value: option,
+                  name: option,
+                  label: option,
+                  size: 's',
+                }))}
+              />
+            </fieldset>
           </Label>
         )}
       {props.workshop_course === CSF &&
@@ -771,10 +790,12 @@ export default function EnrollForm(props: EnrollFormProps) {
             className={getRequiredStyles('csf_intro_other_factors')}
             text={csfIntroOtherFactorsLabel}
             errorMessage={formErrors.csf_intro_other_factors}
+            htmlFor="csf_intro_other_factors"
           >
-            <fieldset>
+            <fieldset id="csf_intro_other_factors">
               {csfIntroOtherFactorsAnswers.map(factor => (
                 <Checkbox
+                  key={factor}
                   size="s"
                   name={factor}
                   label={factor}
@@ -812,8 +833,9 @@ export default function EnrollForm(props: EnrollFormProps) {
               className={getRequiredStyles('csf_courses_planned')}
               text={coursesPlannedLabel}
               errorMessage={formErrors.csf_courses_planned}
+              htmlFor="csf_courses_planned"
             >
-              <fieldset>
+              <fieldset id="csf_courses_planned">
                 {csfCourses.map(course => {
                   let stateKey:
                     | keyof Pick<EnrollFormState, 'explain_csf_course_other'>
@@ -825,7 +847,7 @@ export default function EnrollForm(props: EnrollFormProps) {
                     stateKey = 'explain_csf_course_other';
                   }
                   return (
-                    <>
+                    <Fragment key={course}>
                       <Checkbox
                         size="s"
                         name={course}
@@ -859,7 +881,7 @@ export default function EnrollForm(props: EnrollFormProps) {
                           />
                         </Label>
                       )}
-                    </>
+                    </Fragment>
                   );
                 })}
               </fieldset>
@@ -869,22 +891,25 @@ export default function EnrollForm(props: EnrollFormProps) {
               className={getRequiredStyles('attended_csf_intro_workshop')}
               text="Have you attended a CS Fundamentals Intro Workshop before?"
               errorMessage={formErrors.attended_csf_intro_workshop}
+              htmlFor="attended_csf_intro_workshop"
             >
-              <RadioButtonsGroup
-                onChange={e =>
-                  handleChange({
-                    attended_csf_intro_workshop: e.target.value,
-                  })
-                }
-                radioButtons={Object.keys(ATTENDED_CSF_COURSES_OPTIONS).map(
-                  option => ({
-                    value: option,
-                    name: option,
-                    label: option,
-                    size: 's',
-                  })
-                )}
-              />
+              <fieldset id="attended_csf_intro_workshop">
+                <RadioButtonsGroup
+                  onChange={e =>
+                    handleChange({
+                      attended_csf_intro_workshop: e.target.value,
+                    })
+                  }
+                  radioButtons={Object.keys(ATTENDED_CSF_COURSES_OPTIONS).map(
+                    option => ({
+                      value: option,
+                      name: option,
+                      label: option,
+                      size: 's',
+                    })
+                  )}
+                />
+              </fieldset>
             </Label>
           </>
         )}
@@ -895,10 +920,12 @@ export default function EnrollForm(props: EnrollFormProps) {
           text="Which computer science courses or activities have you taught in
                 the past?"
           errorMessage={formErrors.previous_courses}
+          htmlFor="previous_courses"
         >
-          <fieldset>
+          <fieldset id="previous_courses">
             {previousCourses.map(course => (
               <Checkbox
+                key={course}
                 size="s"
                 name={course}
                 label={course}
@@ -947,44 +974,50 @@ export default function EnrollForm(props: EnrollFormProps) {
               className={getRequiredStyles('taught_ap_before')}
               text={cspReturningTeachersTaughtAPLabel}
               errorMessage={formErrors.taught_ap_before}
+              htmlFor="taught_ap_before"
             >
-              <RadioButtonsGroup
-                onChange={e =>
-                  handleChange({
-                    taught_ap_before: e.target.value,
-                  })
-                }
-                radioButtons={cspReturningTeachersTaughtAPAnswers.map(
-                  option => ({
-                    value: option,
-                    name: option,
-                    label: option,
-                    size: 's',
-                  })
-                )}
-              />
+              <fieldset id="taught_ap_before">
+                <RadioButtonsGroup
+                  onChange={e =>
+                    handleChange({
+                      taught_ap_before: e.target.value,
+                    })
+                  }
+                  radioButtons={cspReturningTeachersTaughtAPAnswers.map(
+                    option => ({
+                      value: option,
+                      name: option,
+                      label: option,
+                      size: 's',
+                    })
+                  )}
+                />
+              </fieldset>
             </Label>
 
             <Label
               className={getRequiredStyles('planning_to_teach_ap')}
               text={cspReturningTeachersPlanningAPLabel}
               errorMessage={formErrors.planning_to_teach_ap}
+              htmlFor="planning_to_teach_ap"
             >
-              <RadioButtonsGroup
-                onChange={e =>
-                  handleChange({
-                    planning_to_teach_ap: e.target.value,
-                  })
-                }
-                radioButtons={cspReturningTeachersPlanningAPAnswers.map(
-                  option => ({
-                    value: option,
-                    name: option,
-                    label: option,
-                    size: 's',
-                  })
-                )}
-              />
+              <fieldset id="planning_to_teach_ap">
+                <RadioButtonsGroup
+                  onChange={e =>
+                    handleChange({
+                      planning_to_teach_ap: e.target.value,
+                    })
+                  }
+                  radioButtons={cspReturningTeachersPlanningAPAnswers.map(
+                    option => ({
+                      value: option,
+                      name: option,
+                      label: option,
+                      size: 's',
+                    })
+                  )}
+                />
+              </fieldset>
             </Label>
           </>
         )}
@@ -1005,6 +1038,7 @@ export default function EnrollForm(props: EnrollFormProps) {
       </Typography>
       {Object.keys(formErrors).length > 0 && (
         <Alert
+          id="form-errors"
           type="danger"
           text="Form errors found. Please check your responses above."
         />
