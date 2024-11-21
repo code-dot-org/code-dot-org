@@ -1,6 +1,6 @@
 # Several new cops were added to RuboCop bewteen 0.52 and 1.65. Some we may
 # want to disable in the long-term, but right now they're all enabled and the
-# existing violations are captured in .rubocop_todo.yml
+# existing violations are captured in .config/rubocop/todo.yml
 
 Gemspec/AddRuntimeDependency: # new in 1.65
   Enabled: true

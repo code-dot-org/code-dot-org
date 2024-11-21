@@ -62,6 +62,9 @@
       v2:
         title: "One Hour: Ignite. Inspire. Code."
         desc: "Bring what your children love to life! Start the fun with an activity."
+    video_caption:
+      visible: "One Hour Can Make The Invisible Visible"
+      in_a_world: "Make The Invisible Visible | Official Trailer"
 
   hoc2023_header: "Creativity with AI"
   hoc2023_hero_desc_homepage: "Join millions across the globe in organizing an hour of coding, with or without AI and learning how AI works. Anyone, anywhere can do it. No experience needed."
