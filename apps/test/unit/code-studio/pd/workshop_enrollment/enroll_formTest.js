@@ -157,8 +157,8 @@ describe('Enroll Form', () => {
       });
     });
 
-    it('submits when all required params are present', () => {
-      testSuccessfulSubmit(requiredParams);
+    it('submits when all required params are present', async () => {
+      await testSuccessfulSubmit(requiredParams);
     });
   });
 
@@ -199,8 +199,8 @@ describe('Enroll Form', () => {
       });
     });
 
-    it('submits when all required params are present', () => {
-      testSuccessfulSubmit({...requiredParams, ...overrides});
+    it('submits when all required params are present', async () => {
+      await testSuccessfulSubmit({...requiredParams, ...overrides});
     });
   });
 
@@ -241,8 +241,8 @@ describe('Enroll Form', () => {
       });
     });
 
-    it('submits when all required params are present', () => {
-      testSuccessfulSubmit({...requiredParams, ...overrides});
+    it('submits when all required params are present', async () => {
+      await testSuccessfulSubmit({...requiredParams, ...overrides});
     });
   });
 
@@ -283,8 +283,8 @@ describe('Enroll Form', () => {
       });
     });
 
-    it('submits when all required params are present', () => {
-      testSuccessfulSubmit({...requiredParams, ...overrides});
+    it('submits when all required params are present', async () => {
+      await testSuccessfulSubmit({...requiredParams, ...overrides});
     });
   });
 
@@ -316,8 +316,8 @@ describe('Enroll Form', () => {
       refute(enrollForm.exists(getLabelSelector('csf_intro_other_factors')));
     });
 
-    it('submits when all required params are present', () => {
-      testSuccessfulSubmit({...requiredParams, ...overrides});
+    it('submits when all required params are present', async () => {
+      await testSuccessfulSubmit({...requiredParams, ...overrides});
     });
   });
 
@@ -334,8 +334,8 @@ describe('Enroll Form', () => {
       assert(enrollForm.exists(getIdSelector('previous_courses')));
     });
 
-    it('submits when all required params are present', () => {
-      testSuccessfulSubmit({...baseParams, ...overrides});
+    it('submits when all required params are present', async () => {
+      await testSuccessfulSubmit({...baseParams, ...overrides});
     });
   });
 
@@ -393,8 +393,8 @@ describe('Enroll Form', () => {
       });
     });
 
-    it('submits when all required params are present', () => {
-      testSuccessfulSubmit({...requiredParams, ...overrides});
+    it('submits when all required params are present', async () => {
+      await testSuccessfulSubmit({...requiredParams, ...overrides});
     });
   });
 
@@ -439,8 +439,8 @@ describe('Enroll Form', () => {
       );
     });
 
-    it('submits when all required params are present', () => {
-      testSuccessfulSubmit({...baseParams, ...overrides});
+    it('submits when all required params are present', async () => {
+      await testSuccessfulSubmit({...baseParams, ...overrides});
     });
   });
 
