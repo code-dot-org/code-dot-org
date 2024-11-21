@@ -11,7 +11,7 @@ function getAbsolutePath(value) {
 
 const config: StorybookConfig = {
   stories: [
-    "../../../packages/dsco/src/**/*.story.@(ts|tsx)"
+    "../../../packages/dsco/src/**/stories/*.story.@(ts|tsx)"
   ],
   addons: [
     getAbsolutePath("@storybook/addon-webpack5-compiler-swc"),

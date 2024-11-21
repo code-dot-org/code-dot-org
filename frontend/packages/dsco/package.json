@@ -31,6 +31,7 @@
     "postcss-modules": "^6.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "rimraf": "^6.0.1",
     "tsup": "^8.3.5"
   },
   "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/dsco/#readme",
