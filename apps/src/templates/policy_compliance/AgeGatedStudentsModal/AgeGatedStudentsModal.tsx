@@ -6,6 +6,10 @@ import Typography from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import {
+  convertStudentDataToArray,
+  selectAtRiskAgeGatedDate,
+} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {RootState} from '@cdo/apps/types/redux';
 import i18n from '@cdo/locale';
 
@@ -18,12 +22,14 @@ import styles from '@cdo/apps/templates/policy_compliance/AgeGatedStudentsModal/
 interface ReduxState {
   manageStudents: {
     isLoadingStudents?: boolean;
+    studentData?: object;
   };
 }
 interface Props {
   onClose: () => void;
   isOpen: boolean;
   isLoadingStudents: boolean;
+  atRiskAgeGatedDate?: Date;
   ageGatedStudentsCount?: number;
 }
 
@@ -31,6 +37,7 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
   isLoadingStudents,
   isOpen,
   onClose,
+  atRiskAgeGatedDate,
   ageGatedStudentsCount = 0,
 }) => {
   const currentUser = useSelector((state: RootState) => state.currentUser);
@@ -62,6 +69,16 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
       number_of_gateable_students: ageGatedStudentsCount,
     });
   }, [currentUser.userId, ageGatedStudentsCount]);
+
+  const startDate = atRiskAgeGatedDate;
+  const dateOptions: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  };
+  const startDateText =
+    startDate?.toLocaleDateString('en-US', dateOptions) || '???';
+
   return (
     <BaseDialog
       isOpen={isOpen}
@@ -85,7 +102,9 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
           </Typography>
           <hr />
           <Typography semanticTag="p" visualAppearance="body-two">
-            {i18n.childAccountPolicy_studentParentalConsentNotice()}
+            {i18n.childAccountPolicy_studentParentalConsentNotice({
+              startDate: startDateText,
+            })}
           </Typography>
           <Typography semanticTag="p" visualAppearance="body-two">
             <Link
@@ -112,4 +131,7 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
 
 export default connect((state: ReduxState) => ({
   isLoadingStudents: state.manageStudents.isLoadingStudents || false,
+  atRiskAgeGatedDate: selectAtRiskAgeGatedDate(
+    convertStudentDataToArray(state.manageStudents.studentData)
+  ),
 }))(AgeGatedStudentsModal);

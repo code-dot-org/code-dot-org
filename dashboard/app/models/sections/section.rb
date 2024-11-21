@@ -712,9 +712,9 @@ class Section < ApplicationRecord
     # Archived sections are not at risk of being age gated.
     return if hidden
     # Find any student at risk of being age gated and return the date.
-    at_risk_student = students.find(&:at_risk_age_gated?)
+    at_risk_student = students.find(&:at_risk_age_gated_date)
     return unless at_risk_student
-    Policies::ChildAccount::StatePolicies.state_policy(at_risk_student)[:lockout_date]
+    at_risk_student.at_risk_age_gated_date
   end
 
   private def soft_delete_lti_section

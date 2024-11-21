@@ -1383,16 +1383,13 @@ class SectionTest < ActiveSupport::TestCase
   describe '.at_risk_age_gated_date' do
     let(:section) {create :section, hidden: archived?}
     let(:student) {create :student}
-    let(:at_risk) {false}
     let(:archived?) {false}
-    let(:lockout_date) {DateTime.now}
+    let(:student_at_risk_age_gated_date) {nil}
     let(:at_risk_age_gated_date) {section.at_risk_age_gated_date}
 
     before do
       allow(section).to receive(:students).and_return([student])
-      allow(student).to receive(:at_risk_age_gated?).and_return(at_risk)
-      allow(Policies::ChildAccount::StatePolicies).to receive(:state_policy).
-        with(student).and_return({lockout_date: lockout_date})
+      allow(student).to receive(:at_risk_age_gated_date).and_return(at_risk_age_gated_date)
     end
 
     it 'does not return a date' do
@@ -1400,10 +1397,10 @@ class SectionTest < ActiveSupport::TestCase
     end
 
     context 'has an at risk student' do
-      let(:at_risk) {true}
+      let(:student_at_risk_age_gated_date) {DateTime.now}
 
       it 'returns the lockout date' do
-        _(at_risk_age_gated_date).must_equal lockout_date
+        _(at_risk_age_gated_date).must_equal student_at_risk_age_gated_date
       end
 
       context 'the section is archived' do

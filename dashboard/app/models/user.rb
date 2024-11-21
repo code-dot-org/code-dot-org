@@ -2219,15 +2219,15 @@ class User < ApplicationRecord
       sharing_disabled: sharing_disabled?,
       has_ever_signed_in: has_ever_signed_in?,
       ai_tutor_access_denied: !!ai_tutor_access_denied,
-      at_risk_age_gated: at_risk_age_gated?,
+      at_risk_age_gated_date: at_risk_age_gated_date,
       child_account_compliance_state: cap_status,
       latest_permission_request_sent_at: latest_parental_permission_request&.updated_at,
       us_state: us_state,
     }
   end
 
-  def at_risk_age_gated?
-    !Policies::ChildAccount.compliant?(self, future: true)
+  def at_risk_age_gated_date
+    Policies::ChildAccount::StatePolicies.state_policy(self)&.dig(:lockout_date) unless Policies::ChildAccount.compliant?(self, future: true)
   end
 
   def has_ever_signed_in?
