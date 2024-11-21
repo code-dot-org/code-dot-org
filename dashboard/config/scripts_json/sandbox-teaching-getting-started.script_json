@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-08 20:17:28 UTC",
+    "serialized_at": "2024-11-20 22:33:17 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -69,12 +69,27 @@
       }
     },
     {
-      "key": "Navigating Lesson Plans and Resources",
-      "name": "Navigating Lesson Plans and Resources",
+      "key": "lesson-6",
+      "name": "The Student Experience",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-getting-started"
+      }
+    },
+    {
+      "key": "Navigating Lesson Plans and Resources",
+      "name": "Navigating Lesson Plans and Resources",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
       "properties": {
         "overview": "**You will:**\n\n* Locate and use course lesson plans and teacher resources.\n\n**Suggested time:** 20 minutes",
         "student_overview": "**You will:**\n\n* Locate and use course lesson plans and teacher resources.\n\n**Suggested time:** 20 minutes"
@@ -88,10 +103,10 @@
     {
       "key": "Navigating Support",
       "name": "Navigating Support",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 4,
+      "relative_position": 5,
       "properties": {
         "overview": "**You will:**\n\n* Access support while teaching Code.org curricula. \n\n**Suggested time:** 15 minutes",
         "student_overview": "**You will:**\n\n* Access support while teaching Code.org curricula. \n\n**Suggested time:** 15 minutes"
@@ -105,10 +120,10 @@
     {
       "key": "lesson-5",
       "name": "Next Steps",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 5,
+      "relative_position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -141,6 +156,18 @@
       "seeding_key": {
         "lesson_activity.key": "b65e1376-35a0-4236-abbb-f0f02fd87328",
         "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-getting-started"
+      }
+    },
+    {
+      "key": "0eb267c0-98d0-48a9-bd89-d6d1d50e7fd0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0eb267c0-98d0-48a9-bd89-d6d1d50e7fd0",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-getting-started"
       }
@@ -252,8 +279,19 @@
       }
     },
     {
-      "key": "0dd1cb61-d838-43aa-9204-32b75e455789",
+      "key": "87cd60ab-1ed7-4c27-9064-43a32de05f3a",
       "position": 4,
+      "properties": {
+        "progression_name": "Track Student Progress and Provide Feedback"
+      },
+      "seeding_key": {
+        "activity_section.key": "87cd60ab-1ed7-4c27-9064-43a32de05f3a",
+        "lesson_activity.key": "b65e1376-35a0-4236-abbb-f0f02fd87328"
+      }
+    },
+    {
+      "key": "0dd1cb61-d838-43aa-9204-32b75e455789",
+      "position": 5,
       "properties": {
         "progression_name": "Explore the Student View"
       },
@@ -263,14 +301,25 @@
       }
     },
     {
-      "key": "87cd60ab-1ed7-4c27-9064-43a32de05f3a",
-      "position": 5,
+      "key": "b3431d73-40df-41ff-8e45-4efc2a0516c2",
+      "position": 1,
+      "properties": {
+        "progression_name": "Explore the Student View"
+      },
+      "seeding_key": {
+        "activity_section.key": "b3431d73-40df-41ff-8e45-4efc2a0516c2",
+        "lesson_activity.key": "0eb267c0-98d0-48a9-bd89-d6d1d50e7fd0"
+      }
+    },
+    {
+      "key": "b1d8d651-a766-4663-a028-d9df2383c559",
+      "position": 2,
       "properties": {
         "progression_name": "Track Student Progress and Provide Feedback"
       },
       "seeding_key": {
-        "activity_section.key": "87cd60ab-1ed7-4c27-9064-43a32de05f3a",
-        "lesson_activity.key": "b65e1376-35a0-4236-abbb-f0f02fd87328"
+        "activity_section.key": "b1d8d651-a766-4663-a028-d9df2383c559",
+        "lesson_activity.key": "0eb267c0-98d0-48a9-bd89-d6d1d50e7fd0"
       }
     },
     {
@@ -303,6 +352,17 @@
       },
       "seeding_key": {
         "activity_section.key": "0a2b7c4f-72b4-4949-aa4d-ef6e936b0b15",
+        "lesson_activity.key": "b1a38983-ab3e-44ce-8748-27945f0eef02"
+      }
+    },
+    {
+      "key": "79480e7e-77ed-4cb0-bde8-933ff874852b",
+      "position": 4,
+      "properties": {
+        "progression_name": "Teaching Pedagogy and Best Practices"
+      },
+      "seeding_key": {
+        "activity_section.key": "79480e7e-77ed-4cb0-bde8-933ff874852b",
         "lesson_activity.key": "b1a38983-ab3e-44ce-8748-27945f0eef02"
       }
     },
@@ -678,13 +738,10 @@
     },
     {
       "chapter": 14,
-      "position": 8,
+      "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod2-StudentExperience-vid_1"
-        ],
         "progression": "Explore the Student View"
       },
       "bonus": false,
@@ -692,10 +749,10 @@
         "script_level.level_keys": [
           "SP-VPL-21-mod2-StudentExperience-vid_1"
         ],
-        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-getting-started",
-        "activity_section.key": "0dd1cb61-d838-43aa-9204-32b75e455789"
+        "activity_section.key": "b3431d73-40df-41ff-8e45-4efc2a0516c2"
       },
       "level_keys": [
         "SP-VPL-21-mod2-StudentExperience-vid_1"
@@ -703,13 +760,10 @@
     },
     {
       "chapter": 15,
-      "position": 9,
+      "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod2-Task-StudentView_physical-computing_1"
-        ],
         "progression": "Explore the Student View"
       },
       "bonus": false,
@@ -717,10 +771,10 @@
         "script_level.level_keys": [
           "SP-VPL-21-mod2-Task-StudentView_physical-computing_1"
         ],
-        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-getting-started",
-        "activity_section.key": "0dd1cb61-d838-43aa-9204-32b75e455789"
+        "activity_section.key": "b3431d73-40df-41ff-8e45-4efc2a0516c2"
       },
       "level_keys": [
         "SP-VPL-21-mod2-Task-StudentView_physical-computing_1"
@@ -728,13 +782,10 @@
     },
     {
       "chapter": 16,
-      "position": 10,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod2-ProgessAndFeedback-vid_1"
-        ],
         "progression": "Track Student Progress and Provide Feedback"
       },
       "bonus": false,
@@ -742,10 +793,10 @@
         "script_level.level_keys": [
           "SP-VPL-21-mod2-ProgessAndFeedback-vid_1"
         ],
-        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-getting-started",
-        "activity_section.key": "87cd60ab-1ed7-4c27-9064-43a32de05f3a"
+        "activity_section.key": "b1d8d651-a766-4663-a028-d9df2383c559"
       },
       "level_keys": [
         "SP-VPL-21-mod2-ProgessAndFeedback-vid_1"
@@ -753,13 +804,10 @@
     },
     {
       "chapter": 17,
-      "position": 11,
+      "position": 4,
       "activity_section_position": 2,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod2-progress-c4u_physical-computing_1"
-        ],
         "progression": "Track Student Progress and Provide Feedback"
       },
       "bonus": false,
@@ -767,10 +815,10 @@
         "script_level.level_keys": [
           "SP-VPL-21-mod2-progress-c4u_physical-computing_1"
         ],
-        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-getting-started",
-        "activity_section.key": "87cd60ab-1ed7-4c27-9064-43a32de05f3a"
+        "activity_section.key": "b1d8d651-a766-4663-a028-d9df2383c559"
       },
       "level_keys": [
         "SP-VPL-21-mod2-progress-c4u_physical-computing_1"
@@ -778,13 +826,10 @@
     },
     {
       "chapter": 18,
-      "position": 12,
+      "position": 5,
       "activity_section_position": 3,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod2-feedback-c4u_physical-computing_1"
-        ],
         "progression": "Track Student Progress and Provide Feedback"
       },
       "bonus": false,
@@ -792,10 +837,10 @@
         "script_level.level_keys": [
           "SP-VPL-21-mod2-feedback-c4u_physical-computing_1"
         ],
-        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-getting-started",
-        "activity_section.key": "87cd60ab-1ed7-4c27-9064-43a32de05f3a"
+        "activity_section.key": "b1d8d651-a766-4663-a028-d9df2383c559"
       },
       "level_keys": [
         "SP-VPL-21-mod2-feedback-c4u_physical-computing_1"
@@ -953,6 +998,28 @@
     },
     {
       "chapter": 25,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching Pedagogy and Best Practices"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Use_Modify_Create_Overview"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-getting-started",
+        "activity_section.key": "79480e7e-77ed-4cb0-bde8-933ff874852b"
+      },
+      "level_keys": [
+        "Use_Modify_Create_Overview"
+      ]
+    },
+    {
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -977,7 +1044,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1002,7 +1069,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1027,7 +1094,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -1052,7 +1119,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -1077,7 +1144,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 6,
       "activity_section_position": 5,
       "assessment": true,
@@ -1102,7 +1169,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -1127,11 +1194,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "GSSP-PL-DS-UnitStructure-w-lessons"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1311,10 +1381,10 @@
         "script_level.level_keys": [
           "SP-VPL-21-mod2-StudentExperience-vid_1"
         ],
-        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-getting-started",
-        "activity_section.key": "0dd1cb61-d838-43aa-9204-32b75e455789"
+        "activity_section.key": "b3431d73-40df-41ff-8e45-4efc2a0516c2"
       }
     },
     {
@@ -1323,10 +1393,10 @@
         "script_level.level_keys": [
           "SP-VPL-21-mod2-Task-StudentView_physical-computing_1"
         ],
-        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-getting-started",
-        "activity_section.key": "0dd1cb61-d838-43aa-9204-32b75e455789"
+        "activity_section.key": "b3431d73-40df-41ff-8e45-4efc2a0516c2"
       }
     },
     {
@@ -1335,10 +1405,10 @@
         "script_level.level_keys": [
           "SP-VPL-21-mod2-ProgessAndFeedback-vid_1"
         ],
-        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-getting-started",
-        "activity_section.key": "87cd60ab-1ed7-4c27-9064-43a32de05f3a"
+        "activity_section.key": "b1d8d651-a766-4663-a028-d9df2383c559"
       }
     },
     {
@@ -1347,10 +1417,10 @@
         "script_level.level_keys": [
           "SP-VPL-21-mod2-progress-c4u_physical-computing_1"
         ],
-        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-getting-started",
-        "activity_section.key": "87cd60ab-1ed7-4c27-9064-43a32de05f3a"
+        "activity_section.key": "b1d8d651-a766-4663-a028-d9df2383c559"
       }
     },
     {
@@ -1359,10 +1429,10 @@
         "script_level.level_keys": [
           "SP-VPL-21-mod2-feedback-c4u_physical-computing_1"
         ],
-        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-getting-started",
-        "activity_section.key": "87cd60ab-1ed7-4c27-9064-43a32de05f3a"
+        "activity_section.key": "b1d8d651-a766-4663-a028-d9df2383c559"
       }
     },
     {
@@ -1435,6 +1505,18 @@
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-getting-started",
         "activity_section.key": "0a2b7c4f-72b4-4949-aa4d-ef6e936b0b15"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Use_Modify_Create_Overview",
+        "script_level.level_keys": [
+          "Use_Modify_Create_Overview"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-getting-started",
+        "activity_section.key": "79480e7e-77ed-4cb0-bde8-933ff874852b"
       }
     },
     {

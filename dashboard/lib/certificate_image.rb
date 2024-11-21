@@ -349,6 +349,8 @@ class CertificateImage
       'MC_Hour_Of_Code_Certificate_mee_timecraft.png'
     elsif course == 'mee_estate'
       'MC_Hour_Of_Code_Certificate_mee_estate.png'
+    elsif course == ScriptConstants::MUSIC_JAM_2024
+      'music_hoc_certificate.png'
     elsif course == ScriptConstants::OCEANS_NAME
       'oceans_hoc_certificate.png'
     elsif accelerated_course?(course)

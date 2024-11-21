@@ -112,6 +112,19 @@ function TeacherDashboardHeader({
     return '/sections/' + sectionId + '/edit';
   };
 
+  const getAgeGatedStudentsUsState = () => {
+    if (ageGatedStudentsCount > 0) {
+      const ageGatedStudents = filterAgeGatedStudents(
+        convertStudentDataToArray(
+          getStore().getState().manageStudents.studentData
+        )
+      );
+      return ageGatedStudents[0].usState;
+    }
+
+    return null;
+  };
+
   return (
     <div className={dashboardStyles.headerContainer}>
       <div className={dashboardStyles.headerLink}>
@@ -140,6 +153,7 @@ function TeacherDashboardHeader({
           toggleModal={toggleModal}
           modalOpen={modalOpen}
           ageGatedStudentsCount={ageGatedStudentsCount}
+          ageGatedStudentsUsState={getAgeGatedStudentsUsState()}
         />
       )}
       <div className={dashboardStyles.header}>
