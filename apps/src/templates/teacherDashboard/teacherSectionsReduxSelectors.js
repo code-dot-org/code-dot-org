@@ -403,7 +403,8 @@ export function atRiskAgeGatedSections(state) {
   // Convert from a Map to an Array.
   const sections = Object.values(state.sections || {});
   // Only non-archived sections can be at risk.
-  const activeSections = sections.filter(section => !section.hidden);
   // Select only the sections which have students at risk.
-  return activeSections.filter(section => section.atRiskAgeGatedDate);
+  return sections.filter(
+    section => !section.hidden && section.atRiskAgeGatedDate
+  );
 }
