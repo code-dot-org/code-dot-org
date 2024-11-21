@@ -5548,7 +5548,7 @@ class UserTest < ActiveSupport::TestCase
       _(at_risk_age_gated_date).must_equal lockout_date
     end
 
-    context 'is compliant' do
+    context 'when compliant' do
       let(:compliant) {true}
 
       it 'returns nil' do
