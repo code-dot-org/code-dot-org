@@ -188,6 +188,17 @@ const Label = ({
 );
 
 export default function EnrollForm(props: EnrollFormProps) {
+  const roles = useMemo(() => {
+    switch (props.workshop_course) {
+      case CSF:
+        return CSF_ROLES;
+      case ADMIN_COUNSELOR:
+        return ADMIN_COUNSELOR_ROLES;
+      default:
+        return [];
+    }
+  }, [props.workshop_course]);
+
   const [formState, setFormState] = useState<EnrollFormState>({
     attended_csf_intro_workshop: props.attended_csf_intro_workshop ?? '',
     confirm_email: '',
@@ -205,7 +216,7 @@ export default function EnrollForm(props: EnrollFormProps) {
     last_name: props.last_name ?? '',
     planning_to_teach_ap: props.planning_to_teach_ap ?? '',
     previous_courses: [],
-    role: props.role ?? '',
+    role: props.role ?? roles[0],
     taught_ap_before: props.taught_ap_before ?? '',
     years_teaching: props.years_teaching ?? '',
     years_teaching_cs: props.years_teaching_cs ?? '',
@@ -554,19 +565,6 @@ export default function EnrollForm(props: EnrollFormProps) {
   const previousCourses = props.previous_courses.concat([
     "I don't have experience teaching any of these courses",
   ]);
-
-  const getRoles = (course?: string) => {
-    switch (course) {
-      case CSF:
-        return CSF_ROLES;
-      case ADMIN_COUNSELOR:
-        return ADMIN_COUNSELOR_ROLES;
-      default:
-        return [];
-    }
-  };
-
-  const roles = getRoles(props.workshop_course);
 
   return (
     <form id={styles.enroll_form}>
