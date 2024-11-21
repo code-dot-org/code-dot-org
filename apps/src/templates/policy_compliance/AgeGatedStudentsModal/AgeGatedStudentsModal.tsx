@@ -11,6 +11,7 @@ import {
   selectAtRiskAgeGatedDate,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {RootState} from '@cdo/apps/types/redux';
+import {CapLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../../BaseDialog';
@@ -47,8 +48,7 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
     analyticsReporter.sendEvent(eventName, payload);
   };
 
-  const helpDocsUrl =
-    'https://support.code.org/hc/en-us/articles/15465423491085-How-do-I-obtain-parent-or-guardian-permission-for-student-accounts';
+  const helpDocsUrl = CapLinks.PARENTAL_CONSENT_GUIDE_URL;
 
   const modalDocumentationClicked = () => {
     reportEvent(EVENTS.CAP_STUDENT_WARNING_LINK_CLICKED, {
