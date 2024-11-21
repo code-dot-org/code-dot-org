@@ -1,10 +1,7 @@
-// Common site-wide fonts, put here for easy access from all scss files
-
-// Please note (!): use only single quotes (' ') for strings (!) to allow our custom converter to work properly.
-// This file is being transpiled to js object.
-// (So it can be used in jsx/tsx files for inline styles. This is made mostly for legacy.
-// Try to avoid use of inline styles if you're creating new component).
-// Keeping that in mind -
+/*
+   This file is a copy of `shared/css` and is meant for temporary usage to add Font Awesome Pro support.
+   This file will be replaced by the long term font solution: https://codedotorg.atlassian.net/browse/ACQ-2799
+ */
 
 $metropolis-font: 'Metropolis';
 $noto-sans-fonts: 'Noto Sans', 'Noto Sans Math', 'Noto Sans Arabic', 'Noto Sans Armenian', 'Noto Sans Bengali',
