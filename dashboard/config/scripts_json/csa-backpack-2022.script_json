@@ -4,13 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_course": true,
       "is_migrated": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "csa-backpack-2022",
-    "serialized_at": "2022-05-12 23:33:44 UTC",
+    "serialized_at": "2024-11-19 01:15:31 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -714,6 +716,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L8 PainterPlus"
+        ],
         "progression": "Unit 7 Lesson 8"
       },
       "bonus": false,
@@ -961,6 +966,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3 ScenePlus"
+        ],
         "progression": "Unit 7 Lesson 3"
       },
       "bonus": false,
@@ -1457,6 +1465,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

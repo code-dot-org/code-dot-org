@@ -1,15 +1,39 @@
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 
-import {AccountInformation} from '@cdo/apps/accounts/AccountInformation';
+import {
+  AccountInformation,
+  ACCOUNT_UPDATE_SUCCESS,
+} from '@cdo/apps/accounts/AccountInformation';
 
 const mockWindowLocation = {
   href: '',
+  reload: jest.fn(),
 };
 Object.defineProperty(window, 'location', {
   value: mockWindowLocation,
   writable: true,
 });
+
+// Mock sessionStorage
+const mockSessionStorage = (() => {
+  let store = {};
+
+  return {
+    getItem: jest.fn().mockImplementation(key => {
+      return store[key] || null;
+    }),
+    setItem: jest.fn().mockImplementation((key, value) => {
+      store[key] = value;
+    }),
+    removeItem: jest.fn(),
+    clear: () => {
+      store = {};
+    },
+  };
+})();
+
+Object.defineProperty(window, 'sessionStorage', {value: mockSessionStorage});
 
 jest.mock('@cdo/apps/util/AuthenticityTokenStore');
 
@@ -47,6 +71,8 @@ describe('AccountInformation', () => {
     mockFetch = jest.fn();
     window.fetch = mockFetch;
     mockWindowLocation.href = '';
+    mockSessionStorage.setItem.mockReset();
+    mockSessionStorage.getItem.mockReset();
   });
 
   it('renders account information form', () => {
@@ -189,5 +215,59 @@ describe('AccountInformation', () => {
     );
     expect(screen.getByLabelText(/age/i)).toBeDisabled();
     expect(screen.getByLabelText(/state/i)).toBeDisabled();
+  });
+
+  it('reloads the page and sets sessionStorage if student changes their age or state', async () => {
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+    });
+
+    render(
+      <AccountInformation
+        {...defaultProps}
+        isStudent={true}
+        userType={'student'}
+        studentInLockoutFlow={false}
+      />
+    );
+
+    fireEvent.change(screen.getByLabelText(/age/i), {
+      target: {value: '8'},
+    });
+    fireEvent.change(screen.getByLabelText(/state/i), {
+      target: {value: 'CO'},
+    });
+
+    fireEvent.click(
+      screen.getByRole('button', {name: /update account information/i})
+    );
+
+    await waitFor(() => {
+      expect(mockSessionStorage.setItem).toHaveBeenCalledWith(
+        ACCOUNT_UPDATE_SUCCESS,
+        'true'
+      );
+
+      expect(window.location.reload).toHaveBeenCalled();
+    });
+  });
+
+  it('shows the success message when the component mounts if reloading', async () => {
+    mockSessionStorage.getItem.mockReturnValueOnce('true');
+    render(
+      <AccountInformation
+        {...defaultProps}
+        isStudent={true}
+        userType={'student'}
+        studentInLockoutFlow={false}
+      />
+    );
+
+    expect(mockSessionStorage.removeItem).toHaveBeenCalledWith(
+      ACCOUNT_UPDATE_SUCCESS
+    );
+    expect(
+      screen.getByText(/account information successfully updated/i)
+    ).toBeInTheDocument();
   });
 });

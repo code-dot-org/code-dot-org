@@ -132,6 +132,7 @@ class CertificateImageTest < ActiveSupport::TestCase
     create :course_offering, course_versions: [cv], key: 'other', marketing_initiative: 'CSF'
 
     assert CertificateImage.hoc_course?('flappy')
+    assert CertificateImage.hoc_course?('music-jam-2024')
     assert CertificateImage.hoc_course?('oceans')
     assert CertificateImage.hoc_course?('mc')
     assert CertificateImage.hoc_course?('mee')

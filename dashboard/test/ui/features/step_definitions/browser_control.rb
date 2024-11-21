@@ -3,8 +3,7 @@ And(/^I change the browser window size to (\d+) by (\d+)$/) do |length, height|
 end
 
 And(/^I maximize the browser window$/) do
-  max_width, max_height = @browser.execute_script('return [window.screen.availWidth, window.screen.availHeight];')
-  @browser.manage.window.resize_to(max_width, max_height)
+  @browser.manage.window.maximize
 end
 
 # for explanation of js function, see

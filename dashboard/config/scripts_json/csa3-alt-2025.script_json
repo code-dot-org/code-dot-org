@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "CSA",
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-02 22:33:08 UTC",
+    "serialized_at": "2024-11-19 01:15:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4112,6 +4114,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L1_alt-2025"
+        ],
         "progression": "Predict and Run: Attributes"
       },
       "bonus": false,
@@ -4134,6 +4139,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L2_alt-2025"
+        ],
         "progression": "Investigate and Modify: Classes and Attributes"
       },
       "bonus": false,
@@ -4156,6 +4164,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L2-2_alt-2025"
+        ],
         "progression": "Investigate and Modify: Classes and Attributes"
       },
       "bonus": false,
@@ -4178,6 +4189,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L2-3_alt-2025"
+        ],
         "progression": "Investigate and Modify: Classes and Attributes"
       },
       "bonus": false,
@@ -4200,6 +4214,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L3_pilot_alt-2025"
+        ],
         "progression": "Skill Building: Declaring Instance Variables"
       },
       "bonus": false,
@@ -4222,6 +4239,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L4_alt-2025"
+        ],
         "progression": "Investigate and Modify: Refactoring Code"
       },
       "bonus": false,
@@ -4244,6 +4264,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L4-2_alt-2025"
+        ],
         "progression": "Investigate and Modify: Refactoring Code"
       },
       "bonus": false,
@@ -4266,6 +4289,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L5_pilot_alt-2025"
+        ],
         "progression": "Practice: The Food Truck"
       },
       "bonus": false,
@@ -4288,6 +4314,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L6_pilot_alt-2025"
+        ],
         "progression": "Practice: The Food Truck"
       },
       "bonus": false,
@@ -4310,6 +4339,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L7_pilot_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4332,6 +4364,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L1_alt-2025"
+        ],
         "progression": "Investigate and Modify: Decomposition"
       },
       "bonus": false,
@@ -4354,6 +4389,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L1-2_alt-2025"
+        ],
         "progression": "Investigate and Modify: Decomposition"
       },
       "bonus": false,
@@ -4376,6 +4414,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L1-3_alt-2025"
+        ],
         "progression": "Investigate and Modify: Decomposition"
       },
       "bonus": false,
@@ -4398,6 +4439,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L1-4_alt-2025"
+        ],
         "progression": "Investigate and Modify: Decomposition"
       },
       "bonus": false,
@@ -4420,6 +4464,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L2_pilot_alt-2025"
+        ],
         "progression": "Practice: Decomposing a Problem"
       },
       "bonus": false,
@@ -4442,6 +4489,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L3_pilot_alt-2025"
+        ],
         "progression": "Practice: Decomposing a Problem"
       },
       "bonus": false,
@@ -4464,6 +4514,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L4_pilot_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4486,6 +4539,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L9-L1_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4508,6 +4564,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L9-L1_pilot_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4530,6 +4589,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L1_alt-2025"
+        ],
         "progression": "Investigate and Modify: Image Manipulations"
       },
       "bonus": false,
@@ -4552,6 +4614,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L2_alt-2025"
+        ],
         "progression": "Investigate and Modify: Image Manipulations"
       },
       "bonus": false,
@@ -4574,6 +4639,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L3_alt-2025"
+        ],
         "progression": "Investigate and Modify: Image Manipulations"
       },
       "bonus": false,
@@ -4596,6 +4664,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L4_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4618,6 +4689,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L6-L1_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4640,6 +4714,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L1_alt-2025"
+        ],
         "progression": "Investigate and Modify: Private Methods"
       },
       "bonus": false,
@@ -4662,6 +4739,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L2_alt-2025"
+        ],
         "progression": "Investigate and Modify: Private Methods"
       },
       "bonus": false,
@@ -4684,6 +4764,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L3_alt-2025"
+        ],
         "progression": "Investigate and Modify: Private Methods"
       },
       "bonus": false,
@@ -4706,6 +4789,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L4_alt-2025"
+        ],
         "progression": "Practice: Private Methods"
       },
       "bonus": false,
@@ -4728,6 +4814,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L5_alt-2025"
+        ],
         "progression": "Practice: Private Methods"
       },
       "bonus": false,
@@ -4750,6 +4839,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L6_alt-2025"
+        ],
         "progression": "Practice: Private Methods"
       },
       "bonus": false,
@@ -4772,6 +4864,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L7_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4794,6 +4889,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L1_alt-2025"
+        ],
         "progression": "Predict and Run: Object References as Parameters"
       },
       "bonus": false,
@@ -4816,6 +4914,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L2_alt-2025"
+        ],
         "progression": "Investigate and Modify: Object References as Parameters"
       },
       "bonus": false,
@@ -4838,6 +4939,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L3_alt-2025"
+        ],
         "progression": "Investigate and Modify: Object References as Parameters"
       },
       "bonus": false,
@@ -4860,6 +4964,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L4_alt-2025"
+        ],
         "progression": "Investigate and Modify: Object References as Parameters"
       },
       "bonus": false,
@@ -4882,6 +4989,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L5_alt-2025"
+        ],
         "progression": "Practice: Object References as Parameters"
       },
       "bonus": false,
@@ -4904,6 +5014,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L6_alt-2025"
+        ],
         "progression": "Practice: Object References as Parameters"
       },
       "bonus": false,
@@ -4926,6 +5039,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L7_alt-2025"
+        ],
         "progression": "Practice: Object References as Parameters"
       },
       "bonus": false,
@@ -4948,6 +5064,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L8_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4970,6 +5089,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L1_alt-2025"
+        ],
         "progression": "Predict and Run: Accessor Methods"
       },
       "bonus": false,
@@ -4992,6 +5114,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L2_alt-2025"
+        ],
         "progression": "Investigate and Modify: Accessor Methods"
       },
       "bonus": false,
@@ -5014,6 +5139,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L3_alt-2025"
+        ],
         "progression": "Investigate and Modify: Accessor Methods"
       },
       "bonus": false,
@@ -5036,6 +5164,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L4_pilot_alt-2025"
+        ],
         "progression": "Skill Building: Accessor Methods"
       },
       "bonus": false,
@@ -5058,6 +5189,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L5_pilot_alt-2025"
+        ],
         "progression": "Practice: Accessor Methods"
       },
       "bonus": false,
@@ -5080,6 +5214,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L6_alt-2025"
+        ],
         "progression": "Practice: Accessor Methods"
       },
       "bonus": false,
@@ -5102,6 +5239,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L7 Practice_pilot_alt-2025"
+        ],
         "progression": "Practice: Accessor Methods"
       },
       "bonus": false,
@@ -5124,6 +5264,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L8_pilot_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5146,6 +5289,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L1_alt-2025"
+        ],
         "progression": "Predict and Run: Mutator Methods"
       },
       "bonus": false,
@@ -5168,6 +5314,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L2_alt-2025"
+        ],
         "progression": "Investigate and Modify: Mutator Methods"
       },
       "bonus": false,
@@ -5190,6 +5339,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L3_alt-2025"
+        ],
         "progression": "Investigate and Modify: Mutator Methods"
       },
       "bonus": false,
@@ -5212,6 +5364,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L4_pilot_alt-2025"
+        ],
         "progression": "Skill Building: Mutator Methods"
       },
       "bonus": false,
@@ -5234,6 +5389,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L5_pilot_alt-2025"
+        ],
         "progression": "Practice: Mutator Methods"
       },
       "bonus": false,
@@ -5256,6 +5414,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L6_alt-2025"
+        ],
         "progression": "Practice: Mutator Methods"
       },
       "bonus": false,
@@ -5278,6 +5439,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L7 Practice_pilot_alt-2025"
+        ],
         "progression": "Practice: Mutator Methods"
       },
       "bonus": false,
@@ -5300,6 +5464,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L8_pilot_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5322,6 +5489,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L1_alt-2025"
+        ],
         "progression": "Predict and Run: Constructors and Scope"
       },
       "bonus": false,
@@ -5344,6 +5514,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L2_alt-2025"
+        ],
         "progression": "Investigate and Modify: The this Keyword"
       },
       "bonus": false,
@@ -5366,6 +5539,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L3_alt-2025"
+        ],
         "progression": "Investigate and Modify: The this Keyword"
       },
       "bonus": false,
@@ -5388,6 +5564,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L4_alt-2025"
+        ],
         "progression": "Investigate and Modify: The this Keyword"
       },
       "bonus": false,
@@ -5410,6 +5589,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L5_pilot_alt-2025"
+        ],
         "progression": "Practice: The this Keyword"
       },
       "bonus": false,
@@ -5432,6 +5614,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L6_pilot_alt-2025"
+        ],
         "progression": "Practice: The this Keyword"
       },
       "bonus": false,
@@ -5454,6 +5639,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L7_alt-2025"
+        ],
         "progression": "Practice: The this Keyword"
       },
       "bonus": false,
@@ -5476,6 +5664,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L8_pilot_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5498,6 +5689,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L1_alt-2025"
+        ],
         "progression": "Predict and Run: Static Variables and Methods"
       },
       "bonus": false,
@@ -5520,6 +5714,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L2_alt-2025"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -5542,6 +5739,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L3_alt-2025"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -5564,6 +5764,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L4_alt-2025"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -5586,6 +5789,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L5_alt-2025"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -5608,6 +5814,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L6_alt-2025"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -5630,6 +5839,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L7_alt-2025"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -5652,6 +5864,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L8_alt-2025"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -5674,6 +5889,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L9_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,

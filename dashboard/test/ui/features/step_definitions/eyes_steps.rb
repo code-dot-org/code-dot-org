@@ -54,7 +54,7 @@ And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?$/) do |
   # Hopefully fixes many of the issues with font wiggle due to lazily loading
   # alternative fonts for symbols and localized glyphs.
   wait_until do
-    @browser.execute_script('return !!(await document.fonts.ready)') == true
+    @browser.execute_script('return document.fonts.status === "loaded"') == true
   end
 
   if stitch_mode == "none"

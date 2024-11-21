@@ -35,7 +35,7 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
             onClick={clearOutput}
             size={'xs'}
             type={'tertiary'}
-            className={darkModeStyles.iconOnlyTertiaryButton}
+            className={darkModeStyles.tertiaryButton}
           />
         </WithTooltip>
         <SwapLayoutDropdown />

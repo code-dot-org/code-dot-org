@@ -484,6 +484,9 @@ const EVENTS = {
     'Teacher Nav Course Overview Page Viewed',
   TEACHER_NAV_COURSE_OVERVIEW_FAILED:
     'Teacher Nav Course Overview Load Failure',
+
+  // Lab2
+  SKIP_TO_PROJECT: 'User Skipped To Project From Tutorial Level',
 };
 
 const EVENT_GROUP_NAMES = {

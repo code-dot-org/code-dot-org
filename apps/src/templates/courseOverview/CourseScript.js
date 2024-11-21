@@ -10,7 +10,6 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import firehoseClient from '@cdo/apps/metrics/firehose';
-import AssignButton from '@cdo/apps/templates/AssignButton';
 import Assigned from '@cdo/apps/templates/Assigned';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
@@ -18,6 +17,8 @@ import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherS
 import UnassignSectionButton from '@cdo/apps/templates/UnassignSectionButton';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+
+import MultipleAssignButton from '../MultipleAssignButton';
 
 import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
 
@@ -32,6 +33,7 @@ class CourseScript extends Component {
     description: PropTypes.string,
     assignedSectionId: PropTypes.number,
     showAssignButton: PropTypes.bool,
+    participantAudience: PropTypes.string,
     // redux provided
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     selectedSectionId: PropTypes.number,
@@ -90,6 +92,7 @@ class CourseScript extends Component {
       courseVersionId,
       sectionsForDropdown,
       showAssignButton,
+      participantAudience,
     } = this.props;
 
     const isHidden = isScriptHiddenForSection(
@@ -153,16 +156,21 @@ class CourseScript extends Component {
               viewAs === ViewType.Instructor &&
               showAssignButton &&
               selectedSection && (
-                <AssignButton
-                  sectionId={selectedSection.id}
-                  scriptId={id}
-                  courseId={courseId}
-                  courseOfferingId={courseOfferingId}
-                  courseVersionId={courseVersionId}
-                  assignmentName={title}
-                  sectionName={selectedSection.name}
-                  reassignConfirm={this.onReassignConfirm}
-                />
+                <div className={styles.assignButton}>
+                  <MultipleAssignButton
+                    sectionId={selectedSection.id}
+                    courseOfferingId={courseOfferingId}
+                    courseVersionId={courseVersionId}
+                    courseId={courseId}
+                    scriptId={id}
+                    assignmentName={title}
+                    sectionName={selectedSection.name}
+                    reassignConfirm={this.onReassignConfirm}
+                    isAssigningCourse={false}
+                    isStandAloneUnit={false}
+                    participantAudience={participantAudience}
+                  />
+                </div>
               )}
           </span>
         </div>

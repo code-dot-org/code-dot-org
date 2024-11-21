@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -19,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "problem-solving-computing",
-    "serialized_at": "2024-07-11 19:24:12 UTC",
+    "serialized_at": "2024-11-19 01:19:27 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

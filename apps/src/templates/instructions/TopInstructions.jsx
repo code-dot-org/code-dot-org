@@ -15,6 +15,8 @@ import firehoseClient from '@cdo/apps/metrics/firehose';
 import TeacherFeedbackTab from '@cdo/apps/templates/instructions/teacherFeedback/TeacherFeedbackTab';
 import {rubricShape} from '@cdo/apps/templates/rubrics/rubricShapes';
 import StudentRubricView from '@cdo/apps/templates/rubrics/StudentRubricView';
+import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
+import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import commonStyles from '../../commonStyles';
@@ -473,6 +475,11 @@ class TopInstructions extends Component {
   handleHelpTabClick = () => {
     this.handleTabClick(TabType.RESOURCES);
     this.recordEvent('click-help-and-tips-tab');
+    logUserLevelInteraction({
+      levelId: this.props.serverLevelId,
+      scriptId: this.props.serverScriptId,
+      interaction: UserLevelInteractions.click_help_and_tips,
+    });
   };
 
   handleCommentTabClick = () => {

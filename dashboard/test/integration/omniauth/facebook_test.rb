@@ -35,6 +35,7 @@ module OmniauthCallbacksControllerTests
         %w(
           facebook-callback
           facebook-sign-up-error
+          facebook-load-finish-sign-up-page
           facebook-sign-up-success
         )
       )
@@ -95,6 +96,7 @@ module OmniauthCallbacksControllerTests
         %w(
           facebook-callback
           facebook-sign-up-error
+          facebook-load-finish-sign-up-page
           facebook-sign-up-success
         )
       )
