@@ -18,6 +18,7 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import LessonMaterialsContainer from '@cdo/apps/templates/teacherNavigation/lessonMaterials/LessonMaterialsContainer';
 import {RESOURCE_ICONS} from '@cdo/apps/templates/teacherNavigation/lessonMaterials/ResourceIconType';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import * as utils from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
@@ -28,6 +29,7 @@ const SECTIONS = [
     course_offering_id: 123,
     courseVersionId: 2023,
     unitName: 'csd1-2024',
+    unit_id: 100,
     unitSelection: {
       unitName: 'csd1-2024',
     },
@@ -75,6 +77,7 @@ const renderDefault = async (showNoCurriculumAssigned = false) => {
 
 describe('LessonMaterialsContainer', () => {
   let store: Store;
+  let fetchSpy: jest.SpyInstance;
 
   const mockLessonData = {
     title: 'Unit 3',
@@ -192,7 +195,6 @@ describe('LessonMaterialsContainer', () => {
     ],
   };
   beforeEach(() => {
-    (useLoaderData as jest.Mock).mockReturnValue(mockLessonData);
     stubRedux();
 
     registerReducers({
@@ -205,6 +207,13 @@ describe('LessonMaterialsContainer', () => {
     store.dispatch(setUnitName('csd1-2024'));
     store.dispatch(setSections(SECTIONS));
     store.dispatch(selectSection(1));
+
+    fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
+
+    fetchSpy.mockResolvedValue({
+      value: mockLessonData,
+      response: new Response(),
+    });
   });
 
   afterEach(() => {
@@ -258,9 +267,10 @@ describe('LessonMaterialsContainer', () => {
       hasNumberedUnits: false,
     };
 
-    (useLoaderData as jest.Mock).mockReturnValue(
-      lessonDataWithoutNumberedUnits
-    );
+    fetchSpy = jest.spyOn(HttpClient, 'fetchJson').mockResolvedValue({
+      value: lessonDataWithoutNumberedUnits,
+      response: new Response(),
+    });
 
     await renderDefault();
 
@@ -369,7 +379,10 @@ describe('LessonMaterialsContainer', () => {
   });
 
   it('renders empty state when there are no lesson plans in the whole unit', async () => {
-    (useLoaderData as jest.Mock).mockReturnValue(mockLessonDataNoLessonPlans);
+    fetchSpy = jest.spyOn(HttpClient, 'fetchJson').mockResolvedValue({
+      value: mockLessonDataNoLessonPlans,
+      response: new Response(),
+    });
     await renderDefault();
 
     screen.getByText('There are no lesson materials for this unit.');
