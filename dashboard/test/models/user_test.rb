@@ -4829,7 +4829,8 @@ class UserTest < ActiveSupport::TestCase
 
   test 'dependent_students for teacher: does not return students with personal logins' do
     section = create :section
-    create(:follower, section: section)
+    student = create :student
+    create(:follower, section: section, student_user: student)
 
     assert_empty section.teacher.dependent_students
   end
