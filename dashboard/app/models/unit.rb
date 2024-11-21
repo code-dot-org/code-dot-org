@@ -1620,6 +1620,7 @@ class Unit < ApplicationRecord
       title: title_for_display,
       name: name,
       unitNumber: unit_number,
+      unitName: title_for_display,
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
       teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
