@@ -5,7 +5,7 @@
   flex-direction: column;
   max-width: 400px;
   gap: 1.125rem;
-  margin: 1rem 0;
+  margin: 1rem 0 10rem;
 
   .required > span::after,
   .school_info_required label > span::after {
@@ -24,6 +24,7 @@
   textarea,
   fieldset,
   input,
+  label,
   label > div {
     width: 100%;
   }
