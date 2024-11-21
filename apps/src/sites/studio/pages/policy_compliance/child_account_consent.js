@@ -14,11 +14,13 @@ $(document).ready(function () {
     ? new Date(permissionGrantedDateString)
     : undefined;
   const studentId = element.getAttribute('data-student-id');
+  const usState = element.getAttribute('data-us-state');
   ReactDOM.render(
     <ChildAccountConsent
       permissionGranted={permissionGranted}
       permissionGrantedDate={permissionGrantedDate}
       studentId={studentId}
+      usState={usState}
     />,
     element
   );

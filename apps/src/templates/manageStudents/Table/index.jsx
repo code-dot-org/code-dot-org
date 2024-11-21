@@ -67,6 +67,8 @@ import experiments from '@cdo/apps/util/experiments';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import {showV2TeacherDashboard} from '../../teacherNavigation/TeacherNavFlagUtils';
+
 const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
   SectionLoginType.word,
   SectionLoginType.picture,
@@ -825,6 +827,7 @@ class ManageStudentsTable extends Component {
     );
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
+    const tableStyle = showV2TeacherDashboard() ? styles.v2TableWidth : {};
 
     const decoratedRows = this.props.studentData.map(rowData => ({
       ...rowData,
@@ -977,14 +980,17 @@ class ManageStudentsTable extends Component {
             </div>
           )}
         </div>
-        <Table.Provider
-          columns={columns}
-          style={tableLayoutStyles.table}
-          id="uitest-manage-students-table"
-        >
-          <Table.Header />
-          <Table.Body rows={sortedRows} rowKey="id" />
-        </Table.Provider>
+        <div style={tableStyle}>
+          <Table.Provider
+            columns={columns}
+            style={tableLayoutStyles.table}
+            id="uitest-manage-students-table"
+          >
+            <Table.Header />
+            <Table.Body rows={sortedRows} rowKey="id" />
+          </Table.Provider>
+        </div>
+
         <ManageStudentsLoginInfo
           sectionId={sectionId}
           sectionName={sectionName}
@@ -1036,6 +1042,10 @@ const styles = {
   },
   sectionCodeNotApplicable: {
     ...fontConstants['main-font-bold'],
+  },
+  v2TableWidth: {
+    width: '100%',
+    overflowX: 'auto',
   },
 };
 

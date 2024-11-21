@@ -4,12 +4,13 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 17:07:31 UTC",
+    "serialized_at": "2024-11-19 01:16:45 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -252,6 +253,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

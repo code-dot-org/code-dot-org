@@ -4,6 +4,8 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
@@ -11,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csa-frq-practice-2021",
-    "serialized_at": "2023-06-21 20:42:30 UTC",
+    "serialized_at": "2024-11-19 01:15:32 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -268,6 +270,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-frq-2021-WordMatch-PartA"
+        ],
         "progression": "Part A"
       },
       "bonus": false,
@@ -290,6 +295,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-frq-2021-WordMatch-PartB"
+        ],
         "progression": "Part B"
       },
       "bonus": false,
@@ -312,6 +320,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-frq-2021-CombinedTable"
+        ],
         "progression": "Single Part"
       },
       "bonus": false,
@@ -334,6 +345,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-frq-2021-ClubMembers-PartA"
+        ],
         "progression": "Part A"
       },
       "bonus": false,
@@ -356,6 +370,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-frq-2021-ClubMembers-PartB"
+        ],
         "progression": "Part B"
       },
       "bonus": false,
@@ -378,6 +395,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-frq-2021-ArrayResizer-PartA"
+        ],
         "progression": "Part A"
       },
       "bonus": false,
@@ -400,6 +420,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-frq-2021-ArrayResizer-PartB"
+        ],
         "progression": "Part B"
       },
       "bonus": false,
@@ -531,6 +554,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

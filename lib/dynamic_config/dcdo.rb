@@ -62,6 +62,7 @@ class DCDOBase < DynamicConfigBase
       'hoc-2024-nov-launch': DCDO.get('hoc-2024-nov-launch', false),
       # Enabled locales for browser text to speech. Set to an empty array to disable all languages, or true to enable all.
       'browser-tts-button-enabled-locales': DCDO.get('browser-tts-button-enabled-locales', ['en-US']),
+      'lab2-submit-project-enabled': DCDO.get('lab2-submit-project-enabled', true),
     }
   end
 end

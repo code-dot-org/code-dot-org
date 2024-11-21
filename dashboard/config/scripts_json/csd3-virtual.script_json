@@ -4,7 +4,9 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "other",
       "curriculum_path": "https://curriculum.code.org/csd-20/unit3/{LESSON}",
+      "curriculum_umbrella": "Other",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_course": true,
@@ -15,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd3-virtual",
-    "serialized_at": "2023-09-05 19:55:38 UTC",
+    "serialized_at": "2024-11-19 01:16:01 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

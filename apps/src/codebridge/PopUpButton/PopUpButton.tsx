@@ -62,7 +62,7 @@ export const PopUpButton = ({
   return (
     <>
       <Button
-        className={classNames(className, darkModeStyles.iconOnlyTertiaryButton)}
+        className={classNames(className, darkModeStyles.tertiaryButton)}
         size="xs"
         icon={{iconStyle: 'solid', iconName}}
         color="white"

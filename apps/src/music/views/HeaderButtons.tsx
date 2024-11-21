@@ -153,81 +153,83 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
 
   return (
     <div className={moduleStyles.container}>
-      {!readOnlyWorkspace && (
-        <div className={moduleStyles.subContainer}>
-          {!allowPackSelection && packFolder && (
+      <div className={moduleStyles.subContainer}>
+        {!allowPackSelection && packFolder && (
+          <button
+            type="button"
+            className={classNames(
+              moduleStyles.button,
+              moduleStyles.buttonWide,
+              moduleStyles.buttonInteractionDisabled
+            )}
+            disabled={true}
+          >
+            <CurrentPack packFolder={packFolder} noRightPadding={true} />
+          </button>
+        )}
+        {!readOnlyWorkspace && (
+          <>
             <button
+              onClick={onClickStartOver}
               type="button"
               className={classNames(
                 moduleStyles.button,
-                moduleStyles.buttonWide,
-                moduleStyles.buttonInteractionDisabled
+                allowPackSelection && packFolder && moduleStyles.buttonWide
               )}
-              disabled={true}
             >
-              <CurrentPack packFolder={packFolder} noRightPadding={true} />
+              {allowPackSelection && packFolder && (
+                <CurrentPack packFolder={packFolder} noRightPadding={false} />
+              )}
+              <FontAwesome
+                title={musicI18n.startOver()}
+                icon="refresh"
+                className={'icon'}
+              />
             </button>
-          )}
-          <button
-            onClick={onClickStartOver}
-            type="button"
-            className={classNames(
-              moduleStyles.button,
-              allowPackSelection && packFolder && moduleStyles.buttonWide
-            )}
-          >
-            {allowPackSelection && packFolder && (
-              <CurrentPack packFolder={packFolder} noRightPadding={false} />
-            )}
-            <FontAwesome
-              title={musicI18n.startOver()}
-              icon="refresh"
-              className={'icon'}
-            />
-          </button>
-          <button
-            onClick={() => onClickUndoRedo('undo')}
-            type="button"
-            className={classNames(
-              moduleStyles.button,
-              !canUndo && moduleStyles.buttonDisabled
-            )}
-            disabled={!canUndo}
-          >
-            <FontAwesome
-              title={musicI18n.undo()}
-              icon="undo"
-              className={'icon'}
-            />
-          </button>
-          <button
-            onClick={() => onClickUndoRedo('redo')}
-            type="button"
-            className={classNames(
-              moduleStyles.button,
-              !canRedo && moduleStyles.buttonDisabled
-            )}
-            disabled={!canRedo}
-          >
-            <FontAwesome
-              title={musicI18n.redo()}
-              icon="redo"
-              className={'icon'}
-            />
-          </button>
-        </div>
-      )}
-      <button
-        onClick={onFeedbackClicked}
-        type="button"
-        className={classNames(moduleStyles.button)}
-      >
-        <FontAwesome
-          title={musicI18n.feedback()}
-          icon="commenting"
-          className={'icon'}
-        />
-      </button>
+            <button
+              onClick={() => onClickUndoRedo('undo')}
+              type="button"
+              className={classNames(
+                moduleStyles.button,
+                !canUndo && moduleStyles.buttonDisabled
+              )}
+              disabled={!canUndo}
+            >
+              <FontAwesome
+                title={musicI18n.undo()}
+                icon="undo"
+                className={'icon'}
+              />
+            </button>
+            <button
+              onClick={() => onClickUndoRedo('redo')}
+              type="button"
+              className={classNames(
+                moduleStyles.button,
+                !canRedo && moduleStyles.buttonDisabled
+              )}
+              disabled={!canRedo}
+            >
+              <FontAwesome
+                title={musicI18n.redo()}
+                icon="redo"
+                className={'icon'}
+              />
+            </button>
+            <button
+              onClick={onFeedbackClicked}
+              type="button"
+              className={classNames(moduleStyles.button)}
+            >
+              <FontAwesome
+                title={musicI18n.feedback()}
+                icon="commenting"
+                className={'icon'}
+              />
+            </button>
+          </>
+        )}
+      </div>
       {skipUrl && (
         <button
           onClick={onClickSkip}
