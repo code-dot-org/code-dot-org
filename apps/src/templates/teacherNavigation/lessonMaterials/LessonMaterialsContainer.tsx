@@ -5,7 +5,9 @@ import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
+import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import {LessonMaterialsEmptyState} from './LessonMaterialsEmptyState';
@@ -75,6 +77,8 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     useState<LessonMaterialsData | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
+  const selectedSection = useAppSelector(selectedSectionSelector);
+
   React.useEffect(() => {
     const fetchLessonMaterials = async () => {
       const state = getStore().getState().teacherSections;
@@ -101,7 +105,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     };
 
     fetchLessonMaterials();
-  }, []);
+  }, [selectedSection]);
 
   const {hasNumberedUnits, lessons, unitNumber, versionYear} = useMemo(() => {
     return {
