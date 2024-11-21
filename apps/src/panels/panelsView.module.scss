@@ -165,7 +165,7 @@ $text-horizontal-padding: 2.6cqw;
 
     .button {
       position: absolute;
-      right: 0;
+      inset-inline-end: 0;
       height: 38px;
 
       // After typing, the button will be ready.

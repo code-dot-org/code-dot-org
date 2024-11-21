@@ -20,6 +20,7 @@ import LessonMaterialsContainer from '@cdo/apps/templates/teacherNavigation/less
 import {RESOURCE_ICONS} from '@cdo/apps/templates/teacherNavigation/lessonMaterials/ResourceIconType';
 import * as utils from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
+
 const SECTIONS = [
   {
     id: 1,
@@ -89,6 +90,8 @@ describe('LessonMaterialsContainer', () => {
         lessonPlanPdfUrl: 'https://lesson-plans.code.org/lesson-plan.pdf',
         standardsUrl: 'studio.code.org/standards',
         vocabularyUrl: 'studio.code.org/vocab',
+        hasLessonPlan: true,
+        isLockable: false,
         resources: {
           Teacher: [
             {
@@ -124,6 +127,8 @@ describe('LessonMaterialsContainer', () => {
         id: 2,
         position: 2,
         lessonPlanHtmlUrl: 'studio.code.org/lesson2',
+        hasLessonPlan: true,
+        isLockable: false,
         resources: {
           Teacher: [
             {
@@ -137,9 +142,55 @@ describe('LessonMaterialsContainer', () => {
           ],
         },
       },
+      {
+        name: 'Third lesson',
+        id: 3,
+        position: 3,
+        lessonPlanHtmlUrl: 'studio.code.org/lesson2',
+        hasLessonPlan: false,
+        isLockable: true,
+        resources: {
+          Teacher: [],
+          Student: [],
+        },
+      },
     ],
   };
 
+  const mockLessonDataNoLessonPlans = {
+    title: 'Unit 3',
+    unitNumber: 3,
+    hasNumberedUnits: true,
+    versionYear: 2023,
+    lessons: [
+      {
+        name: 'First lesson',
+        id: 1,
+        position: 1,
+        lessonPlanHtmlUrl: '/s/unit/lessons/1',
+        lessonPlanPdfUrl: 'https://lesson-plans.code.org/lesson-plan.pdf',
+        standardsUrl: 'studio.code.org/standards',
+        vocabularyUrl: 'studio.code.org/vocab',
+        hasLessonPlan: false,
+        isLockable: false,
+        resources: {
+          Teacher: [],
+          Student: [],
+        },
+      },
+      {
+        name: 'Second lesson',
+        id: 2,
+        position: 2,
+        lessonPlanHtmlUrl: 'studio.code.org/lesson2',
+        hasLessonPlan: false,
+        isLockable: false,
+        resources: {
+          Teacher: [],
+        },
+      },
+    ],
+  };
   beforeEach(() => {
     (useLoaderData as jest.Mock).mockReturnValue(mockLessonData);
     stubRedux();
@@ -305,6 +356,23 @@ describe('LessonMaterialsContainer', () => {
       screen.queryAllByTestId('resource-icon-' + RESOURCE_ICONS.SLIDES.icon)
         .length === 0
     );
+  });
+
+  it('renders will render message when there is no lesson plan', async () => {
+    await renderDefault();
+
+    const selectedLessonInput = screen.getAllByRole('combobox')[0];
+
+    fireEvent.change(selectedLessonInput, {target: {value: '3'}});
+
+    screen.getByText('No teacher resources available for this lesson');
+  });
+
+  it('renders empty state when there are no lesson plans in the whole unit', async () => {
+    (useLoaderData as jest.Mock).mockReturnValue(mockLessonDataNoLessonPlans);
+    await renderDefault();
+
+    screen.getByText('There are no lesson materials for this unit.');
   });
 
   describe('resource links', () => {

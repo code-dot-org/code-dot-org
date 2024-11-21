@@ -60,18 +60,32 @@ class SectionProgress extends Component {
 
     this.state = {
       reportedInitialRender: false,
+      loadedSectionId: null,
     };
   }
 
   componentDidMount() {
     if (this.props.scriptId) {
-      loadUnitProgress(this.props.scriptId, this.props.sectionId);
+      loadUnitProgress(this.props.scriptId, this.props.sectionId)?.then(() => {
+        this.setState(state => ({
+          ...state,
+          loadedSectionId: this.props.sectionId,
+        }));
+      });
     }
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.scriptId !== this.props.scriptId) {
-      loadUnitProgress(this.props.scriptId, this.props.sectionId);
+    if (
+      prevProps.scriptId !== this.props.scriptId ||
+      prevProps.sectionId !== this.props.sectionId
+    ) {
+      loadUnitProgress(this.props.scriptId, this.props.sectionId)?.then(() => {
+        this.setState(state => ({
+          ...state,
+          loadedSectionId: this.props.sectionId,
+        }));
+      });
     }
 
     if (this.levelDataInitialized() && !this.state.reportedInitialRender) {
@@ -82,7 +96,10 @@ class SectionProgress extends Component {
           scriptId: this.props.scriptId,
         }
       );
-      this.setState({reportedInitialRender: true});
+      this.setState(state => ({
+        ...state,
+        reportedInitialRender: true,
+      }));
     }
 
     if (
@@ -160,8 +177,21 @@ class SectionProgress extends Component {
   };
 
   levelDataInitialized = () => {
-    const {scriptData, isLoadingProgress, isRefreshingProgress} = this.props;
-    return scriptData && !isLoadingProgress && !isRefreshingProgress;
+    const {
+      scriptData,
+      isLoadingProgress,
+      isRefreshingProgress,
+      sectionId,
+      scriptId,
+    } = this.props;
+    const {loadedSectionId} = this.state;
+    return (
+      scriptData &&
+      !isLoadingProgress &&
+      !isRefreshingProgress &&
+      sectionId === loadedSectionId &&
+      scriptData.id === scriptId
+    );
   };
 
   render() {

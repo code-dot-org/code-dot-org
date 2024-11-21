@@ -25,7 +25,7 @@
       },
       {
         "key": "music-ai-skill-playtogether_795b9999-0f45-441c-bd81-23af6c157f81",
-        "message": "Play two different [sounds](#clickable=id-left:play_sound_at_current_location_simple2) in the [play together](#clickable=play-sounds-together-block-workspace) block.",
+        "message": "Play two different [sounds](#clickable=play-sound-block) in the [play together](#clickable=id-up-left:play_sounds_together) block.",
         "next": false,
         "conditions": [
           {
@@ -33,23 +33,11 @@
             "value": 1
           }
         ],
-        "callout": "id-left:play_sound_at_current_location_simple2"
-      },
-      {
-        "key": "music-ai-skill-playtogether_7d85508c-951f-4734-8c97-9c67745a4207",
-        "message": "Add another [sound](#clickable=#clickable=id-left:play_sound_at_current_location_simple2) block into the [play together](#clickable=play-sounds-together-block-workspace) block. ",
-        "next": false,
-        "conditions": [
-          {
-            "name": "played_sounds_together",
-            "value": 1
-          }
-        ],
-        "callout": "play-sound-block---play-sounds-together-block-workspace-up-inside"
+        "callout": "id-up-left:play_sounds_together"
       },
       {
         "key": "music-ai-skill-playtogether_36540a11-c67f-47da-bb3a-e2bb6181e9d1",
-        "message": "No sounds have played yet. Add two [play](#clickable=#clickable=id-left:play_sound_at_current_location_simple2) blocks _into_ the [play together](#clickable=play-sounds-together-block-workspace) block.",
+        "message": "No sounds have played yet. Add two [play](#clickable=play-sound-block) blocks _into_ the [play together](#clickable=play-sounds-together-block-workspace) block.",
         "next": false,
         "conditions": [
 

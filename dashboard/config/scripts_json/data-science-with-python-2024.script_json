@@ -9,11 +9,14 @@
       "is_migrated": true,
       "pilot_experiment": "data-science-pilot-2024",
       "show_calendar": true,
+      "topic_tags": [
+        "data_science"
+      ],
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-10-26 00:33:02 UTC",
+    "serialized_at": "2024-11-19 01:17:17 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

@@ -281,6 +281,7 @@ en:
       title: 'Forgot your password?'
       instructions: "Enter your email address associated with your account below and we'll send you password reset instructions."
       email: 'Email address'
+      username: 'Username'
       submit: 'Submit'
       confirmation: 'If we find your email address in our system, you will receive a password recovery link in a few minutes'
     reset_errors:

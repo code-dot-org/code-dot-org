@@ -42,13 +42,9 @@ export default class FilterHeader extends React.Component {
     // There are two filters which can appear in this header at desktop width.
     // Check explicitly for each.
     let filterGroupGrade = null;
-    let filterGroupHeaderStudentExperience = null;
     if (!this.props.mobileLayout) {
       filterGroupGrade = this.props.filterGroups.find(
         item => item.name === 'grade'
-      );
-      filterGroupHeaderStudentExperience = this.props.filterGroups.find(
-        item => item.name === 'student_experience'
       );
     }
 
@@ -73,16 +69,6 @@ export default class FilterHeader extends React.Component {
                       containerStyle={styles.filterGroupGradeContainer}
                       filterGroup={filterGroupGrade}
                       selection={this.props.selection['grade']}
-                      onUserInput={this.props.onUserInputFilter}
-                    />
-                  )}
-                  {filterGroupHeaderStudentExperience && (
-                    <FilterGroupHeaderSelection
-                      containerStyle={
-                        styles.filterGroupStudentExperienceContainer
-                      }
-                      filterGroup={filterGroupHeaderStudentExperience}
-                      selection={this.props.selection['student_experience']}
                       onUserInput={this.props.onUserInputFilter}
                     />
                   )}

@@ -16,40 +16,50 @@ document.addEventListener('DOMContentLoaded', () => {
   const renderModal = () => {
     // eslint-disable-next-line react/prop-types
     const Modal = ({lockoutDate, inSection}) => {
+      const currentUser = useSelector(state => state.currentUser);
+      if (!currentUser?.userId) return null;
+
+      const defaultEventParams = (parentalPermissionRequest = {}) => ({
+        consentStatus: parentalPermissionRequest?.consent_status,
+        usState: currentUser?.usStateCode,
+      });
+
       const reportEvent = (eventName, payload = {}) => {
         payload.inSection = inSection;
         analyticsReporter.sendEvent(eventName, payload);
       };
 
       const handleClose = parentalPermissionRequest => {
-        reportEvent(EVENTS.CAP_PARENT_EMAIL_MODAL_CLOSED, {
-          consentStatus: parentalPermissionRequest?.consent_status,
-        });
+        reportEvent(
+          EVENTS.CAP_PARENT_EMAIL_MODAL_CLOSED,
+          defaultEventParams(parentalPermissionRequest)
+        );
       };
 
       const handleSubmit = parentalPermissionRequest => {
-        reportEvent(EVENTS.CAP_PARENT_EMAIL_SUBMITTED, {
-          consentStatus: parentalPermissionRequest.consent_status,
-        });
+        reportEvent(
+          EVENTS.CAP_PARENT_EMAIL_SUBMITTED,
+          defaultEventParams(parentalPermissionRequest)
+        );
       };
 
       const handleResend = parentalPermissionRequest => {
-        reportEvent(EVENTS.CAP_PARENT_EMAIL_RESEND, {
-          consentStatus: parentalPermissionRequest.consent_status,
-        });
+        reportEvent(
+          EVENTS.CAP_PARENT_EMAIL_RESEND,
+          defaultEventParams(parentalPermissionRequest)
+        );
       };
 
       const handleUpdate = parentalPermissionRequest => {
-        reportEvent(EVENTS.CAP_PARENT_EMAIL_UPDATED, {
-          consentStatus: parentalPermissionRequest.consent_status,
-        });
+        reportEvent(
+          EVENTS.CAP_PARENT_EMAIL_UPDATED,
+          defaultEventParams(parentalPermissionRequest)
+        );
       };
-
-      const currentUser = useSelector(state => state.currentUser);
-      if (!currentUser?.userId) return null;
 
       reportEvent(EVENTS.CAP_PARENT_EMAIL_MODAL_SHOWN, {
         consentStatus: currentUser?.childAccountComplianceState,
+        usState: currentUser?.usStateCode,
       });
 
       return (
