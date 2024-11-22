@@ -34,7 +34,7 @@ export const AgeGatedStudentsBanner: React.FC<Props> = ({
     reportEvent(EVENTS.CAP_AGE_GATED_BANNER_SHOWN, {
       user_id: currentUser.userId,
       number_of_gateable_students: ageGatedStudentsCount,
-      usState: ageGatedStudentsUsState,
+      us_state: ageGatedStudentsUsState,
     });
   }, [currentUser.userId, ageGatedStudentsCount, ageGatedStudentsUsState]);
 

@@ -47,7 +47,7 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
     reportEvent(EVENTS.CAP_STUDENT_WARNING_LINK_CLICKED, {
       user_id: currentUser.userId,
       number_of_gateable_students: ageGatedStudentsCount,
-      usState: ageGatedStudentsUsState,
+      us_state: ageGatedStudentsUsState,
     });
   };
 
@@ -55,7 +55,7 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
     reportEvent(EVENTS.CAP_AGE_GATED_MODAL_CLOSED, {
       user_id: currentUser.userId,
       number_of_gateable_students: ageGatedStudentsCount,
-      usState: ageGatedStudentsUsState,
+      us_state: ageGatedStudentsUsState,
     });
     onClose();
   };
@@ -64,7 +64,7 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
     reportEvent(EVENTS.CAP_AGE_GATED_MODAL_SHOWN, {
       user_id: currentUser.userId,
       number_of_gateable_students: ageGatedStudentsCount,
-      usState: ageGatedStudentsUsState,
+      us_state: ageGatedStudentsUsState,
     });
   }, [currentUser.userId, ageGatedStudentsCount, ageGatedStudentsUsState]);
   return (

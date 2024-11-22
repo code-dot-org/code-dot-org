@@ -90,7 +90,7 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
         inSection: props.inSection,
         consentStatus: props.permissionStatus,
         requestSent: !!props.pendingEmail,
-        usState: currentUser.usStateCode,
+        us_state: currentUser.usStateCode,
       });
     }
   }, [
@@ -116,19 +116,19 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
       reportEvent(EVENTS.CAP_LOCKOUT_EMAIL_SUBMITTED, {
         inSection: props.inSection,
         consentStatus: parentalPermissionRequest.consent_status,
-        usState: currentUser.usStateCode,
+        us_state: currentUser.usStateCode,
       });
     } else if (parentalPermissionRequest.parent_email === prevPendingEmail) {
       reportEvent(EVENTS.CAP_LOCKOUT_EMAIL_RESEND, {
         inSection: props.inSection,
         consentStatus: parentalPermissionRequest.consent_status,
-        usState: currentUser.usStateCode,
+        us_state: currentUser.usStateCode,
       });
     } else {
       reportEvent(EVENTS.CAP_LOCKOUT_EMAIL_UPDATED, {
         inSection: props.inSection,
         consentStatus: parentalPermissionRequest.consent_status,
-        usState: currentUser.usStateCode,
+        us_state: currentUser.usStateCode,
       });
     }
   }, [
@@ -169,7 +169,7 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
     reportEvent(EVENTS.CAP_LOCKOUT_SIGN_OUT, {
       inSection: props.inSection,
       consentStatus: status,
-      usState: currentUser.usStateCode,
+      us_state: currentUser.usStateCode,
     });
   };
 
