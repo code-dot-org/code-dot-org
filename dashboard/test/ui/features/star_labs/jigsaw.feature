@@ -11,20 +11,20 @@ Scenario: Can't delete blocks or lose them outside the workspace
   Given the workspace has "1" blocks of type "jigsaw_2A"
   And block "jigsaw_2A" is at a location "start_position"
 
-  When I drag block "jigsaw_2A" to offset "2000, 0"
+  When I move block "jigsaw_2A" to right edge of workspace
   Then block "jigsaw_2A" has not been deleted
   And block "jigsaw_2A" is not at location "start_position"
   And block "jigsaw_2A" is visible in the workspace
 
-  When I drag block "jigsaw_2A" to offset "0, 2000"
+  When I move block "jigsaw_2A" to bottom edge of workspace
   Then block "jigsaw_2A" has not been deleted
   And block "jigsaw_2A" is visible in the workspace
 
-  When I drag block "jigsaw_2A" to offset "-2000, 0"
+  When I move block "jigsaw_2A" to left edge of workspace
   Then block "jigsaw_2A" has not been deleted
   And block "jigsaw_2A" is visible in the workspace
 
-  When I drag block "jigsaw_2A" to offset "0, -2000"
+  When I move block "jigsaw_2A" to top edge of workspace
   Then block "jigsaw_2A" has not been deleted
   And block "jigsaw_2A" is visible in the workspace
 

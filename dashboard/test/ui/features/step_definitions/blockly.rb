@@ -359,6 +359,43 @@ def current_block_xml
   JS
 end
 
+When /^I move block "([^"]*)" to (top|left|bottom|right) edge of workspace$/ do |block, edge|
+  block_id = get_block_id(block)
+  script = <<-JS
+    const workspace = Blockly.getMainWorkspace();
+    const viewMetrics = workspace.getMetricsManager().getViewMetrics();
+    const block = workspace.getBlockById('#{block_id}');
+    const boundingRect = block.getBoundingRectangle();
+
+    const blockWidth = boundingRect.right - boundingRect.left;
+    const blockHeight = boundingRect.bottom - boundingRect.top;
+
+    let x, y;
+
+    switch ('#{edge}') {
+      case 'left':
+        x = viewMetrics.left - blockWidth / 2;
+        y = boundingRect.top; // Maintain current top position
+        break;
+      case 'right':
+        x = viewMetrics.left + viewMetrics.width - blockWidth / 2;
+        y = boundingRect.top; // Maintain current top position
+        break;
+      case 'top':
+        x = boundingRect.left; // Maintain current left position
+        y = viewMetrics.top - blockHeight / 2;
+        break;
+      case 'bottom':
+        x = boundingRect.left; // Maintain current left position
+        y = viewMetrics.top + viewMetrics.height - blockHeight / 2;
+        break;
+    }
+
+    block.moveTo(new Blockly.utils.Coordinate(x, y));
+  JS
+  @browser.execute_script(script)
+end
+
 def clear_main_block_space
   wait_until do
     @browser.execute_script("return Blockly && !!Blockly.mainBlockSpace")
