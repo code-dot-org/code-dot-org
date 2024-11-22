@@ -1,7 +1,9 @@
+// Experimental Code.org Frontend Dev Container. Not officially supported at this time.
+
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
 {
-	"name": "Node.js & TypeScript",
+	"name": "Code.org Frontend Development (Experimental)",
 	"build": {
     "dockerfile": "Dockerfile",
 		// Update 'VARIANT' to pick a Node version: 18, 16, 14.
