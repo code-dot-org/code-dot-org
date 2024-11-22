@@ -21,8 +21,6 @@ export interface CustomDialogProps extends HTMLAttributes<HTMLDivElement> {
   children?: ReactNode;
 }
 
-// TODO: update docs re dialog vs customDialog and in most cases use dialog
-
 /**
  * ## Production-ready Checklist:
  *  * (✔) implementation of component approved by design team;
@@ -75,7 +73,7 @@ const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({
   }, [ariaLabel, ariaLabelledBy]);
 
   return (
-    <div role="presentation" className={moduleStyles.dialogOverlay}>
+    <div role="presentation" className={moduleStyles.customDialogOverlay}>
       <div
         role="dialog"
         ref={dialogRef}
@@ -84,8 +82,8 @@ const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({
         aria-labelledby={ariaLabelledBy}
         aria-describedby="dsco-dialog-description"
         className={classnames(
-          moduleStyles.dialog,
-          moduleStyles[`dialog-${mode}`],
+          moduleStyles.customDialog,
+          moduleStyles[`customDialog-${mode}`],
           className
         )}
         {...HTMLAttributes}
@@ -98,7 +96,7 @@ const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({
             onClick={onClose}
             color={mode === 'light' ? 'dark' : 'light'}
             size="l"
-            className={moduleStyles.dialogCloseButton}
+            className={moduleStyles.customDialogCloseButton}
           />
         )}
       </div>

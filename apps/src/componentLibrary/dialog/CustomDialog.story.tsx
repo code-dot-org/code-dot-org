@@ -27,8 +27,12 @@ const SingleTemplate: StoryFn<CustomDialogProps> = args => {
             args.onClose?.();
           }}
         >
-          <div id="dsco-dialog-description">
-            {args.children || 'This is the content of the Custom Dialog.'}
+          <div style={{width: 500, height: 500}}>
+            {args.children || (
+              <div id="dsco-dialog-description">
+                This is the content of the Custom Dialog.
+              </div>
+            )}
           </div>
         </CustomDialog>
       )}
@@ -64,11 +68,13 @@ const MultipleTemplate: StoryFn<{
                   setValues({...values, [`dialog-${index}`]: false})
                 }
               >
-                {componentArg.children || (
-                  <div id="dsco-dialog-description">
-                    This is the content of the Custom Dialog.
-                  </div>
-                )}
+                <div style={{width: 500, height: 500}}>
+                  {componentArg.children || (
+                    <div id="dsco-dialog-description">
+                      This is the content of the Custom Dialog.
+                    </div>
+                  )}
+                </div>
               </CustomDialog>
             )}
           </div>

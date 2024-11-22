@@ -71,7 +71,11 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
 }) => (
   <CustomDialog
     role="alertdialog"
-    className={classnames(moduleStyles[`dialog-${mode}`], className)}
+    className={classnames(
+      moduleStyles.dialog,
+      moduleStyles[`dialog-${mode}`],
+      className
+    )}
     onClose={onClose}
     closeLabel={closeLabel}
     aria-label={title}
