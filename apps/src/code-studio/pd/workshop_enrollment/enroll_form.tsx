@@ -46,13 +46,14 @@ const DESCRIBE_ROLES = [
 ];
 
 const CSF_ROLES = [
+  '',
   'Classroom Teacher',
   'Media Specialist',
   'Tech Teacher',
   'Librarian',
 ].concat(DESCRIBE_ROLES);
 
-const ADMIN_COUNSELOR_ROLES = ['Administrator', 'Counselor', 'Other'];
+const ADMIN_COUNSELOR_ROLES = ['', 'Administrator', 'Counselor', 'Other'];
 
 const GRADES_TEACHING = [
   'Pre-K',
@@ -216,7 +217,7 @@ export default function EnrollForm(props: EnrollFormProps) {
     last_name: props.last_name ?? '',
     planning_to_teach_ap: props.planning_to_teach_ap ?? '',
     previous_courses: [],
-    role: props.role ?? roles[0],
+    role: props.role ?? '',
     taught_ap_before: props.taught_ap_before ?? '',
     years_teaching: props.years_teaching ?? '',
     years_teaching_cs: props.years_teaching_cs ?? '',
