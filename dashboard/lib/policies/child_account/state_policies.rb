@@ -14,7 +14,14 @@ module Policies::ChildAccount::StatePolicies
         grace_period_duration: 14.days.seconds,
         lockout_date: DateTime.parse('2024-07-01T00:00:00MDT'),
         start_date: DateTime.parse('2023-07-05T23:15:00+00:00'),
-      }
+      },
+      'DE' => {
+        name: 'DPDPA',
+        max_age: 12,
+        grace_period_duration: 14.days.seconds,
+        lockout_date: DateTime.parse('2025-01-01T00:00:00-05:00'),
+        start_date: DateTime.parse('2025-01-01T00:00:00-05:00'),
+      },
     }
 
     # Override the configured dates for testing purposes
