@@ -22,6 +22,7 @@
     "format:fix": "prettier --write .",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
+    "test": "turbo test",
     "typecheck": "turbo typecheck"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
