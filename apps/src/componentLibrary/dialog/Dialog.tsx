@@ -74,6 +74,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
     className={classnames(moduleStyles[`dialog-${mode}`], className)}
     onClose={onClose}
     closeLabel={closeLabel}
+    aria-label={title}
     {...HTMLAttributes}
   >
     <div className={moduleStyles.dialogTextSection}>

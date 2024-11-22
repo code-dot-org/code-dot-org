@@ -9,8 +9,6 @@ import useFocusTrap from '@cdo/apps/componentLibrary/common/hooks/useFocusTrap';
 import moduleStyles from './customDialog.module.scss';
 
 export interface CustomDialogProps extends HTMLAttributes<HTMLDivElement> {
-  /** CustomDialog title */
-  title?: string;
   /** CustomDialog color mode */
   mode?: 'light' | 'dark';
   /** CustomDialog Custom class name */
@@ -19,8 +17,6 @@ export interface CustomDialogProps extends HTMLAttributes<HTMLDivElement> {
   onClose?: () => void;
   /** CustomDialog close button aria label */
   closeLabel?: string;
-  /** CustomDialog  isDescriptionProvided, if true - it means that consumer of CustomDialog*/
-  isDescriptionProvided?: boolean;
   /** CustomDialog content */
   children?: ReactNode;
 }
@@ -32,7 +28,7 @@ export interface CustomDialogProps extends HTMLAttributes<HTMLDivElement> {
  *  * (✔) implementation of component approved by design team;
  *  * (✔) has storybook, covered with stories and documentation;
  *  * (✔) has tests: test every prop, every state and every interaction that's js related;
- *  * (see apps/test/unit/componentLibrary/CustomDialog.tsx)
+ *  * (see apps/test/unit/componentLibrary/CustomDialogTest.tsx)
  *  * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```
@@ -41,15 +37,14 @@ export interface CustomDialogProps extends HTMLAttributes<HTMLDivElement> {
  * Renders CustomDialog with content passed through props.
  */
 
-// general close button with 8 8 px padding
 const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({
-  title,
   mode = 'light',
   className,
   onClose,
   closeLabel = 'Close dialog',
-  isDescriptionProvided = false,
   children,
+  ['aria-label']: ariaLabel,
+  ['aria-labelledby']: ariaLabelledBy,
   ...HTMLAttributes
 }) => {
   const dialogRef = useRef<HTMLDivElement>(null);
@@ -70,13 +65,23 @@ const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({
     }
   }, []);
 
+  useEffect(() => {
+    if (!ariaLabel && !ariaLabelledBy) {
+      console.warn(
+        "Warning: CustomDialog component and it's derivatives (Dialog, Modal components) should have" +
+          ' an aria-label or aria-labelledby attribute.'
+      );
+    }
+  }, [ariaLabel, ariaLabelledBy]);
+
   return (
     <div role="presentation" className={moduleStyles.dialogOverlay}>
       <div
         role="dialog"
         ref={dialogRef}
         aria-modal
-        aria-label={title}
+        aria-label={ariaLabel}
+        aria-labelledby={ariaLabelledBy}
         aria-describedby="dsco-dialog-description"
         className={classnames(
           moduleStyles.dialog,
