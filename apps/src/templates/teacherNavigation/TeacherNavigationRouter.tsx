@@ -101,9 +101,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.roster}
-            element={applyV1TeacherDashboardWidth(
-              <ManageStudents studioUrlPrefix={studioUrlPrefix} />
-            )}
+            element={<ManageStudents studioUrlPrefix={studioUrlPrefix} />}
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.loginInfo}

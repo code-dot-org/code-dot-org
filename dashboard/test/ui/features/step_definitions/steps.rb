@@ -469,6 +469,12 @@ When /^I press the last button with text "([^"]*)"( to load a new page)?$/ do |n
   end
 end
 
+When /^I press the last link with text "([^"]*)"( to load a new page)?$/ do |name, load|
+  page_load(load) do
+    @browser.execute_script("$('a:contains(#{name})').simulate('drag', function(){});")
+  end
+end
+
 When /^I press the SVG text "([^"]*)"$/ do |name|
   name_selector = "text:contains(#{name})"
   @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
@@ -490,11 +496,22 @@ When /^I select the "([^"]*)" option in dropdown named "([^"]*)"( to load a new 
   select_dropdown(@browser.find_element(:css, "select[name=#{element_name}]"), option_text, load)
 end
 
-def select_dropdown(element, option_text, load)
+When /^I select the "([^"]*)" option withing the "([^"]*)" group in dropdown "([^"]*)"( to load a new page)?$/ do |option_text, option_group, selector, load|
+  select_element = @browser.find_element(:css, selector)
+  expect(select_element).not_to be_nil
+
+  options = select_element.find_elements(:css, "optgroup[label='#{option_group}'] option")
+  option = options.find {|o| o.text == option_text}
+  expect(option).not_to be_nil
+
+  select_dropdown(select_element, option.property(:value), load, by: :value)
+end
+
+def select_dropdown(element, option_text, load, by: :text)
   element.location_once_scrolled_into_view
   page_load(load) do
     select = Selenium::WebDriver::Support::Select.new(element)
-    select.select_by(:text, option_text)
+    select.select_by(by, option_text)
   end
 end
 
@@ -1246,6 +1263,10 @@ end
 
 And(/^I clear session storage/) do
   @browser.execute_script("sessionStorage.clear(); localStorage.clear();")
+end
+
+And 'I clear local storage' do
+  @browser.execute_script('localStorage.clear();')
 end
 
 When(/^I debug cookies$/) do

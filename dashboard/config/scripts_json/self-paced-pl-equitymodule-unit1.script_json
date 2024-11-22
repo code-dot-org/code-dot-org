@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-19 22:45:49 UTC",
+    "serialized_at": "2024-11-21 22:08:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -163,14 +163,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "self-paced-equity-U1L1-features"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-equity-U1L1-features"
+          "self-paced-equity-U1L1-welcome"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -178,16 +175,16 @@
         "activity_section.key": "b5506460-f340-4b7f-937c-e32e01627149"
       },
       "level_keys": [
-        "self-paced-equity-U1L1-features"
+        "self-paced-equity-U1L1-welcome"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "self-paced-equity-U1L1-features",
+        "level.key": "self-paced-equity-U1L1-welcome",
         "script_level.level_keys": [
-          "self-paced-equity-U1L1-features"
+          "self-paced-equity-U1L1-welcome"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

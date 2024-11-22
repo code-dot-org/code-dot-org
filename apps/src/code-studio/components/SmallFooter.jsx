@@ -179,8 +179,8 @@ export default class SmallFooter extends React.Component {
           {this.props.i18nDropdownInBase && (
             <I18nDropdown
               localeUrl={this.props.localeUrl}
-              selectedLocale={this.props.currentLocale}
-              optionsForLocaleSelect={this.props.localeOptions}
+              selected={this.props.currentLocale}
+              options={this.props.localeOptions}
             />
           )}
           {this.props.copyrightInBase && this.renderCopyright()}

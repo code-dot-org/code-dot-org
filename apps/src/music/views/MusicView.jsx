@@ -465,6 +465,14 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
 
+    // Skip this pair of events to avoid extra compiles when dragging a block out of the toolbox.
+    if (
+      e.type === Blockly.Events.TOOLBOX_ITEM_SELECT ||
+      e.type === Blockly.Events.CREATE
+    ) {
+      return;
+    }
+
     if (e.type === Blockly.Events.CHANGE) {
       if (e.element === 'field' && e.name === TRIGGER_FIELD) {
         this.props.setSelectedTriggerId(
