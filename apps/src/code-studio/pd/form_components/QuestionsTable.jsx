@@ -41,15 +41,7 @@ class QuestionRow extends React.Component {
 
     return (
       <td key={key + i}>
-        <FormGroup
-          controlId={key}
-          validationState={this.getValidationState()}
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
+        <FormGroup controlId={key} validationState={this.getValidationState()}>
           <RadioButton
             name={key}
             value={option}
@@ -108,7 +100,7 @@ export default class QuestionsTable extends React.Component {
     };
 
     return (
-      <FormGroup>
+      <FormGroup bsClass={this.props.className}>
         <ControlLabel>{this.props.label}</ControlLabel>
         <Table striped bordered>
           <thead>
@@ -147,6 +139,7 @@ QuestionsTable.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
   questions: PropTypes.arrayOf(questionPropType).isRequired,
   label: PropTypes.string,
+  className: PropTypes.string,
 };
 
 QuestionsTable.defaultProps = {

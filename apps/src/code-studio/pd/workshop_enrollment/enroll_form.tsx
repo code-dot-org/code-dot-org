@@ -827,6 +827,7 @@ export default function EnrollForm(props: EnrollFormProps) {
                 name: key,
               }))}
               selectedItems={formState.csf_course_experience}
+              className={styles.table}
             />
 
             <Label
