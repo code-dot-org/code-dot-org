@@ -1,0 +1,235 @@
+{
+  "script": {
+    "name": "self-paced-pl-equitymodule-unit1",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "skills_focused_self_paced_pl",
+      "curriculum_umbrella": "Pedagogy special topics selfpaced pl",
+      "is_migrated": true,
+      "version_year": "2024"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2024-11-21 22:08:15 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-equitymodule-unit1"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-equitymodule-unit1"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "What is Equity in CS?",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "##### **Learning Outcomes:**\n\n* ##### I know what content is included in this professional learning experience and I can direct my learning.\n* ##### I understand key terms and concepts related to equity in computer science.\n* ##### I’ve reflected on what equity means in a computer science classroom.\n\n___\n\n##### ⏰ **Suggested time:** <mark>UPDATE</mark>\n",
+        "student_overview": "##### **Learning Outcomes:**\n\n* ##### I know what content is included in this professional learning experience and I can direct my learning.\n* ##### I understand key terms and concepts related to equity in computer science.\n* ##### I’ve reflected on what equity means in a computer science classroom.\n\n___\n\n##### ⏰ **Suggested time:** <mark>UPDATE</mark>\n"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-equitymodule-unit1"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Looking at Data",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "##### **Learning Outcomes:**\n\n* ##### I can access data about my grade band and/or state that tell me more about student access and participation in computer science in my region.\n* ##### I understand how issues of access manifest in the computer science classroom.\n* ##### I can identify compelling information that helps me tell a data story to others within my teaching network.\n\n___\n\n##### ⏰ **Suggested time:** <mark>UPDATE</mark>",
+        "student_overview": "##### **Learning Outcomes:**\n\n* ##### I can access data about my grade band and/or state that tell me more about student access and participation in computer science in my region.\n* ##### I understand how issues of access manifest in the computer science classroom.\n* ##### I can identify compelling information that helps me tell a data story to others within my teaching network.\n\n___\n\n##### ⏰ **Suggested time:** <mark>UPDATE</mark>"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-equitymodule-unit1"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Reflecting on Personal Experiences",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "##### **Learning Outcomes:**\n\n* ##### I have reflected on my own identity and educational experiences.\n* ##### I can use a variety of strategies to get to know the learners in my classroom.\n\n___\n\n##### ⏰ **Suggested time:** <mark>UPDATE</mark>",
+        "student_overview": "##### **Learning Outcomes:**\n\n* ##### I have reflected on my own identity and educational experiences.\n* ##### I can use a variety of strategies to get to know the learners in my classroom.\n\n___\n\n##### ⏰ **Suggested time:** <mark>UPDATE</mark>"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-equitymodule-unit1"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "495adbba-18f2-4e91-8fde-bcd4863d26fb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "495adbba-18f2-4e91-8fde-bcd4863d26fb",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-equitymodule-unit1"
+      }
+    },
+    {
+      "key": "1bc4712f-8c8a-4387-b3e2-1cc59fb48289",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1bc4712f-8c8a-4387-b3e2-1cc59fb48289",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-equitymodule-unit1"
+      }
+    },
+    {
+      "key": "90e2dc76-4c93-4cd4-ba2e-bb2a3e005dd9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "90e2dc76-4c93-4cd4-ba2e-bb2a3e005dd9",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-equitymodule-unit1"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "b5506460-f340-4b7f-937c-e32e01627149",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b5506460-f340-4b7f-937c-e32e01627149",
+        "lesson_activity.key": "495adbba-18f2-4e91-8fde-bcd4863d26fb"
+      }
+    },
+    {
+      "key": "8c8e1f27-3471-4d42-b9ea-4653f3231f9f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8c8e1f27-3471-4d42-b9ea-4653f3231f9f",
+        "lesson_activity.key": "1bc4712f-8c8a-4387-b3e2-1cc59fb48289"
+      }
+    },
+    {
+      "key": "2aa01d53-fc25-446b-9500-5338b6168354",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2aa01d53-fc25-446b-9500-5338b6168354",
+        "lesson_activity.key": "90e2dc76-4c93-4cd4-ba2e-bb2a3e005dd9"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-equity-U1L1-welcome"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-equitymodule-unit1",
+        "activity_section.key": "b5506460-f340-4b7f-937c-e32e01627149"
+      },
+      "level_keys": [
+        "self-paced-equity-U1L1-welcome"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "self-paced-equity-U1L1-welcome",
+        "script_level.level_keys": [
+          "self-paced-equity-U1L1-welcome"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-equitymodule-unit1",
+        "activity_section.key": "b5506460-f340-4b7f-937c-e32e01627149"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

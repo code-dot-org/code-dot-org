@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_10_22_150616) do
+ActiveRecord::Schema.define(version: 2024_11_20_192448) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -81,6 +81,17 @@ ActiveRecord::Schema.define(version: 2024_10_22_150616) do
     t.index ["user_id", "level_id", "script_id"], name: "index_ace_user_level_script"
   end
 
+  create_table "aichat_messages", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.bigint "aichat_thread_id", null: false
+    t.text "external_id", null: false
+    t.integer "role", null: false
+    t.text "content", null: false
+    t.boolean "is_preset", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["aichat_thread_id"], name: "index_aichat_messages_on_aichat_thread_id"
+  end
+
   create_table "aichat_requests", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "level_id"
@@ -106,6 +117,18 @@ ActiveRecord::Schema.define(version: 2024_10_22_150616) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id", "level_id", "script_id"], name: "index_acs_user_level_script"
+  end
+
+  create_table "aichat_threads", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.text "external_id", null: false
+    t.text "llm_version", null: false
+    t.text "title"
+    t.integer "unit_id"
+    t.integer "level_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_aichat_threads_on_user_id"
   end
 
   create_table "assessment_activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -738,7 +761,7 @@ ActiveRecord::Schema.define(version: 2024_10_22_150616) do
     t.integer "ai_confidence"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.text "observations"
+    t.text "observations", collation: "utf8mb4_unicode_ci"
     t.integer "ai_confidence_exact_match"
     t.text "evidence"
     t.index ["learning_goal_id"], name: "index_learning_goal_ai_evaluations_on_learning_goal_id"
@@ -767,6 +790,7 @@ ActiveRecord::Schema.define(version: 2024_10_22_150616) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["learning_goal_id"], name: "index_learning_goal_teacher_evaluations_on_learning_goal_id"
+    t.index ["teacher_id"], name: "index_learning_goal_teacher_evaluations_on_teacher_id"
     t.index ["user_id", "teacher_id"], name: "index_learning_goal_teacher_evaluations_on_user_and_teacher_id"
   end
 
@@ -894,6 +918,7 @@ ActiveRecord::Schema.define(version: 2024_10_22_150616) do
     t.index ["game_id"], name: "index_levels_on_game_id"
     t.index ["level_num"], name: "index_levels_on_level_num"
     t.index ["name"], name: "index_levels_on_name"
+    t.index ["type"], name: "index_levels_on_type"
   end
 
   create_table "levels_script_levels", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2233,6 +2258,21 @@ ActiveRecord::Schema.define(version: 2024_10_22_150616) do
     t.decimal "longitude", precision: 9, scale: 6
     t.index ["indexed_at"], name: "index_user_geos_on_indexed_at"
     t.index ["user_id"], name: "index_user_geos_on_user_id"
+  end
+
+  create_table "user_level_interactions", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "level_id", null: false
+    t.integer "script_id", null: false
+    t.string "school_year", null: false
+    t.string "interaction", null: false
+    t.string "code_version"
+    t.json "metadata"
+    t.datetime "deleted_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["level_id"], name: "index_user_level_interactions_on_level_id"
+    t.index ["user_id"], name: "index_user_level_interactions_on_user_id"
   end
 
   create_table "user_levels", id: { type: :bigint, unsigned: true }, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|

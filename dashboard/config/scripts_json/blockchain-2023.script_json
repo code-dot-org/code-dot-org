@@ -4,6 +4,8 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "9-12 Special topics",
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_course": true,
@@ -15,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "blockchain",
-    "serialized_at": "2024-02-21 19:47:04 UTC",
+    "serialized_at": "2024-11-19 01:13:56 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

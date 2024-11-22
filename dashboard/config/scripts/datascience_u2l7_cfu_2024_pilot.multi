@@ -8,7 +8,7 @@ right 'https://images.code.org/34b6fed08cb8c4444670d609cc57a239-A.png'
 wrong 'https://images.code.org/9b15e24d58cdbe0d222704d5a9d99acf-C.png'
 wrong 'https://images.code.org/570961c062627a4942f8642b63a5d754-D.png'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 
 markdown <<MARKDOWN

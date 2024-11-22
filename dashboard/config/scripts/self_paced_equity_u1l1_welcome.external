@@ -1,0 +1,55 @@
+name 'self-paced-equity-U1L1-welcome'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Welcome!
+
+#### Welcome! Code.org’s Equity in Computer Science professional learning experience is designed to help educators reflect and take action to make their classrooms **diverse**, **accessible**, and **inclusive** for all students.
+___
+
+<div style="display: flex; justify-content: space-between; gap: 10px; margin-top: 20px; margin-bottom: 20px;">
+    <img src="https://images.code.org/98012c4db3f6cd448bacb14a1dfbad1b-image-1732227622374.ORG-117.jpeg" alt="A student sits on the ground with a laptop on their lap. They look up at the camera." style="width: 23%; height: auto; border-radius: 10px;">
+    <img src="https://images.code.org/d58547efd396bd965b67d16d16a025c5-image-1732227528989.jpeg" alt="Two students sit side-by-side with devices on their laps. They have happy expressions on their faces." style="width: 23%; height: auto; border-radius: 10px;">
+    <img src="https://images.code.org/5b4e65375ea9de36e6f75020eb05f404-image-1732227572610.jpeg" alt="A teacher crosses their arms in front of the camera. Their classroom is in the background." style="width: 23%; height: auto; border-radius: 10px;">
+    <img src="https://images.code.org/92942e22a0495e229ef1205c9ec39e8f-image-1732227622371.jpeg" alt="Two students sit at a desk, looking forward at a computer screen. One points at the screen." style="width: 23%; height: auto; border-radius: 10px;">
+</div>
+
+___
+
+## Course Overview
+
+### **What's included in this course?**
+
+#### The first module in this course, **Understanding Equity in Computer Science**, is made up of three lessons:
+
+* #### What is Equity in CS?
+* #### Looking at Data 
+* #### Reflecting on Personal Experiences 
+<br>
+
+#### The second module in this course, **Strategies to Promote Equity in Computer Science**, is made up of four lessons:
+
+* #### Cultivating an Inclusive Classroom Culture
+* #### Bias and Stereotype Threat
+* #### Expanding Access to Computer Science
+* #### Equity in Code.org’s Curriculum
+<br>
+
+<div style="display: flex; align-items: left;">
+
+<a href="code.org" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/b3228ff3b84aeb85ec00b47136800a8f-image-1731959884476.png" style="width: auto; height: 50px;" alt="A piece of paper with lines and a pencil."></a>
+
+<div style="background-color: #FFFFFF; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 0%; margin-right: 0%; padding: 0px 5px 5px 10px;">
+
+<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Activity Guide</b></p>
+<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 0px; font-size: 18px">This professional learning experience has an associated <a href="code.org" target="blank" rel="noopener noreferrer"><b>Activity Guide</b></a>. You are welcome make a digital or physical copy of this resource, which includes key information and spaces to reflect. This is an optional resource.
+</p>
+
+</div>
+</div>
+
+Direct participants to navigate through the module appropriately:
+Feel free to complete as much or as little of this module as is useful for you and your students! Stop, start, and revisit content as you see fit. We hope you'll find these activities useful to start teaching this unit. You'll be able to give Code.org your feedback on the last level of this module.
+
+MARKDOWN

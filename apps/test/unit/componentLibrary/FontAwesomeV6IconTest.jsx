@@ -14,6 +14,7 @@ describe('Design System - FontAwesomeV6Icon', () => {
       />
     );
 
+    // eslint-disable-next-line no-restricted-properties
     const icon = screen.getByTestId('font-awesome-v6-icon');
     expect(icon).toBeDefined();
     expect(icon.classList.contains('fa-solid')).toBe(true);

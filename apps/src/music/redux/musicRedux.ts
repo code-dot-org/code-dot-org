@@ -196,7 +196,10 @@ const musicSlice = createSlice({
       action: PayloadAction<{events: PlaybackEvent[]; lastMeasure: number}>
     ) => {
       state.playbackEvents.push(...action.payload.events);
-      state.lastMeasure = action.payload.lastMeasure;
+      state.lastMeasure = Math.max(
+        state.lastMeasure,
+        action.payload.lastMeasure
+      );
     },
     addOrderedFunctions: (
       state,
@@ -207,7 +210,7 @@ const musicSlice = createSlice({
     setSoundLoadingProgress: (state, action: PayloadAction<number>) => {
       state.soundLoadingProgress = action.payload;
     },
-    setStartPlayheadPosition: (state, action: PayloadAction<number>) => {
+    setStartingPlayheadPosition: (state, action: PayloadAction<number>) => {
       state.startingPlayheadPosition = action.payload;
     },
     moveStartPlayheadPositionForward: state => {
@@ -329,7 +332,7 @@ export const {
   addPlaybackEvents,
   addOrderedFunctions,
   setSoundLoadingProgress,
-  setStartPlayheadPosition,
+  setStartingPlayheadPosition,
   moveStartPlayheadPositionForward,
   moveStartPlayheadPositionBackward,
   setUndoStatus,

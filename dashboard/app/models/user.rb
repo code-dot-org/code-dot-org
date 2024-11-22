@@ -166,6 +166,7 @@ class User < ApplicationRecord
     failed_attempts
     locked_at
     has_seen_ai_assessments_announcement
+    seen_ta_scores_map
     roster_synced
   )
 
@@ -540,9 +541,11 @@ class User < ApplicationRecord
   has_many :teachers, through: :sections_as_student, source: :instructors
 
   belongs_to :secret_picture, optional: true
-  before_create :generate_secret_picture
 
-  before_create :generate_secret_words
+  with_options if: :sponsored? do
+    before_create :generate_secret_picture
+    before_create :generate_secret_words
+  end
 
   before_create :update_default_share_setting
 
@@ -863,14 +866,14 @@ class User < ApplicationRecord
   end
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
-  def self.from_omniauth(auth, params, session = nil)
+  def self.from_omniauth(auth, params, request = nil)
     omniauth_user = find_by_credential(type: auth.provider, id: auth.uid)
 
     unless omniauth_user
       omniauth_user = create
       initialize_new_oauth_user(omniauth_user, auth, params)
       omniauth_user.save
-      SignUpTracking.log_sign_up_result(omniauth_user, session)
+      SignUpTracking.log_sign_up_result(omniauth_user, request)
     end
 
     omniauth_user.update_oauth_credential_tokens(auth)
@@ -1184,6 +1187,7 @@ class User < ApplicationRecord
     login = conditions.delete(:login)
     if login.present?
       return nil if login.size > max_credential_size || login.utf8mb4?
+      Cdo::Metrics.put('User', 'LoginByUsername', 1, {Environment: CDO.rack_env})
       # TODO: multi-auth (@eric, before merge!) have to handle this path, and make sure that whatever
       # indexing problems bit us on the users table don't affect the multi-auth table
       ignore_deleted_at_index.where(
@@ -1194,6 +1198,7 @@ class User < ApplicationRecord
       ).first
     elsif (hashed_email = conditions.delete(:hashed_email))
       return nil if hashed_email.size > max_credential_size || hashed_email.utf8mb4?
+      Cdo::Metrics.put('User', 'LoginByEmail', 1, {Environment: CDO.rack_env})
       return find_by_hashed_email(hashed_email)
     else
       nil
@@ -1402,7 +1407,7 @@ class User < ApplicationRecord
         curr_user_level = user_levels_by_level[level.id]
 
         # If level.id is not present in user_levels_by_level, check if level has contained_levels with present ids
-        if !curr_user_level && !level.contained_levels.empty?
+        if !curr_user_level && !level.contained_levels.empty? && level.type != "BubbleChoice"
           level.contained_levels.each do |contained_level|
             user_levels.push(user_levels_by_level[contained_level.id])
           end
@@ -1720,7 +1725,11 @@ class User < ApplicationRecord
 
   def self.send_reset_password_instructions(attributes = {})
     # override of Devise method
-    Services::User::PasswordResetter.call(email: attributes[:email])
+    if attributes[:username].present? && RequestStore.store[:current_user]&.admin?
+      Services::User::PasswordResetterByUsername.call(username: attributes[:username])
+    else
+      Services::User::PasswordResetterByEmail.call(email: attributes[:email])
+    end
   end
 
   def reset_secrets
@@ -2496,7 +2505,7 @@ class User < ApplicationRecord
   # In addition, we want to have green bubbles for the levels associated with these
   # channels, so we create level progress.
   def generate_progress_from_storage_id(storage_id, script_name = 'applab-intro')
-    # applab-intro is not seeded in our minimal test env used on test/circle. We
+    # applab-intro is not seeded in our minimal test env used on test/CI. We
     # should be able to handle this gracefully
     script = begin
       Unit.get_from_cache(script_name)

@@ -17,6 +17,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
+import {setExtraCopyrightContent} from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 import AppConfig from '../appConfig';
@@ -40,6 +41,7 @@ import {
   setPackId,
   setIsPlaying,
   setCurrentPlayheadPosition,
+  setStartingPlayheadPosition,
   clearSelectedBlockId,
   selectBlockId,
   setShowInstructions,
@@ -60,6 +62,7 @@ import {Key} from '../utils/Notes';
 import SoundUploader from '../utils/SoundUploader';
 
 import Callouts from './Callouts';
+import ImageAttributions from './ImageAttributions';
 import KeyHandler from './KeyHandler';
 import MusicLabView from './MusicLabView';
 
@@ -85,6 +88,8 @@ class UnconnectedMusicView extends React.Component {
     isPlaying: PropTypes.bool,
     setIsPlaying: PropTypes.func,
     setCurrentPlayheadPosition: PropTypes.func,
+    startingPlayheadPosition: PropTypes.number,
+    setStartingPlayheadPosition: PropTypes.func,
     selectedBlockId: PropTypes.string,
     selectBlockId: PropTypes.func,
     setSelectedTriggerId: PropTypes.func,
@@ -103,7 +108,7 @@ class UnconnectedMusicView extends React.Component {
     initialSources: PropTypes.object,
     levelProperties: PropTypes.object,
     longInstructions: PropTypes.string,
-    startingPlayheadPosition: PropTypes.number,
+
     isProjectLevel: PropTypes.bool,
     isReadOnlyWorkspace: PropTypes.bool,
     updateLoadProgress: PropTypes.func,
@@ -155,6 +160,8 @@ class UnconnectedMusicView extends React.Component {
       hasLoadedInitialSounds: false,
     };
 
+    this.isLevelLoadInProgress = false;
+
     MusicBlocklyWorkspace.setupBlocklyEnvironment(this.props.blockMode);
   }
 
@@ -181,8 +188,19 @@ class UnconnectedMusicView extends React.Component {
           });
           this.props.clearCallout();
           this.musicBlocklyWorkspace.dispose();
+
+          // Clear any coypright information in the footer.
+          setExtraCopyrightContent(undefined);
         }
-      });
+      })
+      .addListener(
+        LifecycleEvent.LevelLoadCompleted,
+        ({appName, levelData}, _channel, initialSources) => {
+          if (appName === 'music') {
+            this.onLevelLoad(levelData, initialSources);
+          }
+        }
+      );
   }
 
   async componentDidUpdate(prevProps) {
@@ -211,25 +229,15 @@ class UnconnectedMusicView extends React.Component {
     if (prevProps.updateLoadProgress !== this.props.updateLoadProgress) {
       this.player.setUpdateLoadProgress(this.props.updateLoadProgress);
     }
-
-    // Update components with new level data and new initial sources when
-    // the level changes.
-    if (
-      (!isEqual(prevProps.levelProperties, this.props.levelProperties) ||
-        !isEqual(prevProps.initialSources, this.props.initialSources) ||
-        prevProps.isReadOnlyWorkspace !== this.props.isReadOnlyWorkspace) &&
-      this.props.levelProperties?.appName === 'music'
-    ) {
-      if (this.props.levelProperties?.appName === 'music') {
-        this.onLevelLoad(
-          this.props.levelProperties?.levelData,
-          this.props.initialSources
-        );
-      }
-    }
   }
 
   async onLevelLoad(levelData, initialSources) {
+    if (this.isLevelLoadInProgress) {
+      // Don't attempt to setup the level if a load is already in progress.
+      return;
+    }
+    this.isLevelLoadInProgress = true;
+
     // Stop playback if needed.
     this.stopSong();
 
@@ -276,8 +284,7 @@ class UnconnectedMusicView extends React.Component {
           this.props.isReadOnlyWorkspace,
           toolboxData,
           this.props.isRtl,
-          this.props.blockMode,
-          levelData?.addFunctionCallsToToolbox
+          this.props.blockMode
         );
 
     this.props.setShowInstructions(
@@ -335,22 +342,12 @@ class UnconnectedMusicView extends React.Component {
       levelData?.showAiTemperatureExplanation ||
       AppConfig.getValue('show-ai-temperature-explanation') === 'true';
 
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .incrementCounter('LevelLoad', [
-        {
-          name: 'Type',
-          value: this.props.isProjectLevel ? 'Project' : 'Level',
-        },
-        {
-          name: 'Mode',
-          value: this.props.isPlayView
-            ? 'Share'
-            : this.props.isReadOnlyWorkspace
-            ? 'View'
-            : 'Edit',
-        },
-      ]);
+    MusicRegistry.showAiGenerateAgainHelp =
+      levelData?.showAiGenerateAgainHelp ||
+      AppConfig.getValue('show-ai-generate-again-help') === 'true';
+
+    this.props.setStartingPlayheadPosition(1);
+    this.isLevelLoadInProgress = false;
   }
 
   // Load the library and initialize the music player, if not already loaded.
@@ -374,6 +371,14 @@ class UnconnectedMusicView extends React.Component {
     );
 
     this.props.setIsLoading(false);
+
+    // Share copyright information with the component in the footer.
+    const imageAttributions = this.library.getImageAttributions();
+    if (imageAttributions.length > 0) {
+      setExtraCopyrightContent(
+        <ImageAttributions attributions={this.library.getImageAttributions()} />
+      );
+    }
   };
 
   getIsPlaying = () => {
@@ -457,6 +462,14 @@ class UnconnectedMusicView extends React.Component {
     // Prevent a rapid cycle of workspace resizing from occurring when
     // dragging a block near the bottom of the workspace.
     if (e.type === Blockly.Events.VIEWPORT_CHANGE) {
+      return;
+    }
+
+    // Skip this pair of events to avoid extra compiles when dragging a block out of the toolbox.
+    if (
+      e.type === Blockly.Events.TOOLBOX_ITEM_SELECT ||
+      e.type === Blockly.Events.CREATE
+    ) {
       return;
     }
 
@@ -665,6 +678,8 @@ class UnconnectedMusicView extends React.Component {
     this.player.stopSong();
     this.playingTriggers = [];
 
+    this.musicBlocklyWorkspace?.hideChaff();
+
     this.compileSong();
 
     this.executeCompiledSong();
@@ -723,6 +738,10 @@ class UnconnectedMusicView extends React.Component {
           uiShortcutsEnabled={
             AppConfig.getValue('ui-keyboard-shortcuts-enabled') === 'true'
           }
+          disabled={
+            this.props.levelProperties?.appName !== 'music' ||
+            this.props.isPlayView
+          }
         />
         <MusicLabView
           blocklyDivId={BLOCKLY_DIV_ID}
@@ -738,7 +757,8 @@ class UnconnectedMusicView extends React.Component {
           player={this.player}
           allowPackSelection={
             this.library?.getHasRestrictedPacks() &&
-            !this.props.levelProperties?.levelData?.packId
+            !this.props.levelProperties?.levelData?.packId &&
+            !this.props.isReadOnlyWorkspace
           }
           analyticsReporter={this.analyticsReporter}
           blocklyWorkspace={this.musicBlocklyWorkspace}
@@ -780,6 +800,8 @@ const MusicView = connect(
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),
     setCurrentPlayheadPosition: currentPlayheadPosition =>
       dispatch(setCurrentPlayheadPosition(currentPlayheadPosition)),
+    setStartingPlayheadPosition: startingPlayheadPosition =>
+      dispatch(setStartingPlayheadPosition(startingPlayheadPosition)),
     selectBlockId: blockId => dispatch(selectBlockId(blockId)),
     setSelectedTriggerId: id => dispatch(setSelectedTriggerId(id)),
     clearSelectedTriggerId: () => dispatch(clearSelectedTriggerId()),

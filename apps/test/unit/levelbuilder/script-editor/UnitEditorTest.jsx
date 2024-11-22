@@ -121,19 +121,22 @@ describe('UnitEditor', () => {
   describe('Script Editor', () => {
     it('does not show publishing editor if hasCourse is true', () => {
       renderDefault({hasCourse: true});
+      // eslint-disable-next-line no-restricted-properties
       expect(screen.queryByTestId('course-version-publishing-editor')).to.not
         .exist;
     });
 
     it('shows publishing editor if hasCourse is false', () => {
       renderDefault({hasCourse: false});
+      // eslint-disable-next-line no-restricted-properties
       screen.queryByTestId('course-version-publishing-editor');
     });
 
     it('topic tags is a multiple chips component with initial options selected', () => {
       renderDefault({initialTopicTags: ['music_lab', 'ai']});
+      // eslint-disable-next-line no-restricted-properties
       const topicTags = screen.getByTestId('chips-unit-editor-topic-tags');
-      expect(within(topicTags).getAllByRole('checkbox').length).to.equal(3);
+      expect(within(topicTags).getAllByRole('checkbox').length).to.equal(5);
 
       expect(within(topicTags).getByLabelText('Music lab').checked).to.equal(
         true
@@ -148,8 +151,9 @@ describe('UnitEditor', () => {
 
     it('selecting topic tag chips updates input element selection state', () => {
       renderDefault({initialTopicTags: ['music_lab', 'ai']});
+      // eslint-disable-next-line no-restricted-properties
       const topicTags = screen.getByTestId('chips-unit-editor-topic-tags');
-      expect(within(topicTags).getAllByRole('checkbox').length).to.equal(3);
+      expect(within(topicTags).getAllByRole('checkbox').length).to.equal(5);
 
       expect(within(topicTags).getByLabelText('Maker').checked).to.equal(false);
 
@@ -163,7 +167,7 @@ describe('UnitEditor', () => {
       renderDefault({initialContentArea: 'self_paced_pl_k_5'});
 
       const contentArea = screen.getByLabelText('Content Area');
-      expect(within(contentArea).getAllByRole('option').length).to.equal(11);
+      expect(within(contentArea).getAllByRole('option').length).to.equal(12);
       expect(
         within(contentArea).getByText('K-5 self-paced PL').selected
       ).to.equal(true);
@@ -220,8 +224,8 @@ describe('UnitEditor', () => {
       });
 
       // To update based on the list of topic tags
-      expect(wrapper.find('input').length).to.equal(27);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(14);
+      expect(wrapper.find('input').length).to.equal(29);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(16);
       expect(wrapper.find('textarea').length).to.equal(4);
       expect(wrapper.find('select').length).to.equal(6);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(11);

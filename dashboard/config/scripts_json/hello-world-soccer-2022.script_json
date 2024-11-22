@@ -16,7 +16,9 @@
           "buttonText": "Computer Science Basics for K-5 Teachers "
         }
       ],
+      "content_area": "hoc",
       "curriculum_umbrella": "HOC",
+      "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
       "supported_locales": [
@@ -61,7 +63,7 @@
     },
     "new_name": null,
     "family_name": "hello-world-soccer",
-    "serialized_at": "2024-02-05 21:41:54 UTC",
+    "serialized_at": "2024-11-19 01:18:46 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

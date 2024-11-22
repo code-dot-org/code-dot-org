@@ -1,8 +1,8 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
 import {
   ObservableProcedureModel,
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
+import {installAllBlocks as installFieldColourBlocks} from '@blockly/field-colour';
 import {LineCursor, NavigationController} from '@blockly/keyboard-navigation';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 import {
@@ -77,8 +77,11 @@ import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/googleBl
 import {flyoutCategory as variablesFlyoutCategory} from './customBlocks/googleBlockly/variableBlocks';
 import {
   adjustCalloutsOnViewportChange,
+  bumpRTLBlocks,
   disableOrphans,
   reflowToolbox,
+  setPathFill,
+  storeWorkspaceWidth,
   updateBlockLimits,
 } from './eventHandlers';
 import {
@@ -94,6 +97,7 @@ import {
 import CdoDarkTheme from './themes/cdoDark';
 import CdoHighContrastTheme from './themes/cdoHighContrast';
 import CdoHighContrastDarkTheme from './themes/cdoHighContrastDark';
+import CdoJigsawTheme from './themes/cdoJigsaw';
 import CdoTheme from './themes/cdoTheme';
 import {
   BlocklyWrapperType,
@@ -102,6 +106,7 @@ import {
   ExtendedBlocklyOptions,
   ExtendedConnection,
   ExtendedInput,
+  ExtendedJavascriptGenerator,
   ExtendedVariableMap,
   ExtendedWorkspace,
   ExtendedWorkspaceSvg,
@@ -267,26 +272,28 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.wrapReadOnlyProperty(prop);
   });
 
+  // Installs colour_picker, colour_rgb, colour_random, and colour_blend blocks.
+  // These are exclusively provided via the FieldColour plugin as of Blockly v11.
+  installFieldColourBlocks({javascript: javascriptGenerator});
+
+  type registrableFieldType = Pick<typeof GoogleBlockly.Field, 'prototype'>;
   // elements in this list should be structured as follows:
   // [field registry name for field, class name of field being overridden, class to use as override]
-  const fieldOverrides: [
-    string,
-    string,
-    Pick<typeof GoogleBlockly.Field, 'prototype'>
-  ][] = [
+  const fieldOverrides: [string, string, registrableFieldType][] = [
     ['field_variable', 'FieldVariable', CdoFieldVariable],
     ['field_dropdown', 'FieldDropdown', CdoFieldDropdown],
-    ['field_colour', 'FieldColour', CdoFieldColour],
     ['field_number', 'FieldNumber', CdoFieldNumber],
-    // CdoFieldBitmap extends from a JavaScript class without typing.
-    // We know it's a field, so it's safe to cast as unknown.
+    // CdoFieldBitmap and CdoFieldColour extend from plugins.
+    // We know they're fields, so it's safe to cast as unknown.
     [
       'field_bitmap',
       'FieldBitmap',
-      CdoFieldBitmap as unknown as Pick<
-        typeof GoogleBlockly.Field,
-        'prototype'
-      >,
+      CdoFieldBitmap as unknown as registrableFieldType,
+    ],
+    [
+      'field_colour',
+      'FieldColour',
+      CdoFieldColour as unknown as registrableFieldType,
     ],
     ['field_label', 'FieldLabel', CdoFieldLabel],
     ['field_parameter', 'FieldParameter', CdoFieldParameter],
@@ -401,12 +408,17 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.wrapSettableProperty(property)
   );
 
+  blocklyWrapper.ALIGN_CENTRE = blocklyWrapper.inputs.Align.CENTRE;
+  blocklyWrapper.ALIGN_LEFT = blocklyWrapper.inputs.Align.LEFT;
+  blocklyWrapper.ALIGN_RIGHT = blocklyWrapper.inputs.Align.RIGHT;
+
   // Allows for dynamically setting the workspace theme with workspace.setTheme()
   blocklyWrapper.themes = {
     [Themes.MODERN]: CdoTheme,
     [Themes.DARK]: CdoDarkTheme,
     [Themes.HIGH_CONTRAST]: CdoHighContrastTheme,
     [Themes.HIGH_CONTRAST_DARK]: CdoHighContrastDarkTheme,
+    [Themes.JIGSAW]: CdoJigsawTheme,
     [Themes.PROTANOPIA]: CdoProtanopiaTheme,
     [Themes.PROTANOPIA_DARK]: CdoProtanopiaDarkTheme,
     [Themes.DEUTERANOPIA]: CdoDeuteranopiaTheme,
@@ -440,6 +452,13 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
   blocklyWrapper.addChangeListener = function (blockspace, handler) {
     blockspace.addChangeListener(handler);
+  };
+
+  blocklyWrapper.removeChangeListener = function (
+    handler,
+    blockspace = Blockly.getMainWorkspace()
+  ) {
+    blockspace.removeChangeListener(handler);
   };
 
   const googleBlocklyMixin = blocklyWrapper.BlockSvg.prototype.mixin;
@@ -550,7 +569,21 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   extendedBlock.setTitleValue = function (newValue, name) {
     return this.setFieldValue(newValue, name);
   };
+  /**
+   * Change the fill pattern of a block
+   * @param {string} pattern The id of the pattern
+   */
+  extendedBlock.setFillPattern = function (pattern: string) {
+    this.fillPattern = pattern;
+  };
 
+  /**
+   * Get the fill pattern for the block
+   * @return {string} Pattern name xlink
+   */
+  extendedBlock.getFillPattern = function () {
+    return this.fillPattern;
+  };
   const extendedWorkspaceSvg = blocklyWrapper.WorkspaceSvg
     .prototype as ExtendedWorkspaceSvg;
 
@@ -618,8 +651,12 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   (blocklyWrapper.Flyout as any).configure = function () {};
 
   blocklyWrapper.getGenerator = function () {
-    return this.JavaScript;
+    // Additional methods are added to the generator when initializeGenerator is called,
+    // So it is safe to cast as unknown here.
+    return this.JavaScript as unknown as ExtendedJavascriptGenerator;
   };
+
+  blocklyWrapper.inputTypes = blocklyInstance.inputs.inputTypes;
 
   blocklyWrapper.addEmbeddedWorkspace = function (workspace) {
     this.embeddedWorkspaces.push(workspace.id);
@@ -733,6 +770,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     }
     // We override inject and have extra options we pass in, so we cast to utilize those options here.
     const optOptionsExtended = opt_options as ExtendedBlocklyOptions;
+    blocklyWrapper.isJigsaw = optOptionsExtended.isJigsaw;
     const options = {
       ...optOptionsExtended,
       theme: cdoUtils.getUserTheme(
@@ -799,6 +837,12 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       options
     ) as ExtendedWorkspaceSvg;
 
+    workspace.defs = Blockly.createSvgElement(
+      'defs',
+      {id: 'blocklySvgDefs'},
+      workspace.svgGroup_
+    );
+
     blocklyWrapper.grayOutUndeletableBlocks =
       !!options.grayOutUndeletableBlocks;
     blocklyWrapper.topLevelProcedureAutopopulate =
@@ -823,7 +867,16 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       }
     };
 
-    if (!blocklyWrapper.isToolboxMode && !optOptionsExtended.isBlockEditMode) {
+    // Typically, we need to handle disabling blocks that are not connected to an
+    // appropriate top block. A few exceptions exist.
+    if (
+      // Blocks should not be disabled when editing a toolbox.
+      !blocklyWrapper.isToolboxMode &&
+      // When editing blocks in block pools, we do not need to disable them.
+      !optOptionsExtended.isBlockEditMode &&
+      // Jigsaw blocks are never disabled.
+      !blocklyWrapper.isJigsaw
+    ) {
       workspace.addChangeListener(disableOrphans);
     }
     if (blocklyWrapper.blockLimitMap && blocklyWrapper.blockLimitMap.size > 0) {
@@ -838,6 +891,13 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       .getFlyout()
       ?.getWorkspace()
       ?.addChangeListener(adjustCalloutsOnViewportChange);
+
+    // We store the workspace width for RTL workspaces so that we can move
+    // blocks back to the correct positions after a browser window resize.
+    // See: https://github.com/google/blockly/issues/8637
+    workspace.addChangeListener(storeWorkspaceWidth);
+    workspace.addChangeListener(setPathFill);
+    window.addEventListener('resize', bumpRTLBlocks);
 
     initializeScrollbarPair(workspace);
 
@@ -935,6 +995,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     return blocklyWrapper.functionEditor?.getWorkspace();
   };
 
+  blocklyWrapper.createSvgElement = blocklyWrapper.utils.dom.createSvgElement;
+
   // Google Blockly labs also need to clear separate workspaces for the function editor.
   blocklyWrapper.clearAllStudentWorkspaces = function () {
     // Disable Blockly events to prevent unnecessary event mirroring
@@ -965,7 +1027,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   initializeCss(blocklyWrapper);
 
   blocklyWrapper.Blocks.unknown = UNKNOWN_BLOCK;
-  blocklyWrapper.JavaScript.unknown = () => '/* unknown block */\n';
+  blocklyWrapper.JavaScript.forBlock.unknown = () => '/* unknown block */\n';
 
   blocklyWrapper.cdoUtils = cdoUtils;
   blocklyWrapper.getPointerBlockImageUrl = getPointerBlockImageUrl;

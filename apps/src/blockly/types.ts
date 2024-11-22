@@ -2,6 +2,7 @@ import {
   ObservableParameterModel,
   ObservableProcedureModel,
 } from '@blockly/block-shareable-procedures';
+import {FieldColour} from '@blockly/field-colour';
 import * as GoogleBlockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 
@@ -14,7 +15,6 @@ import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
 import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
 import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
 import CdoFieldButton from './addons/cdoFieldButton';
-import CdoFieldColour from './addons/cdoFieldColour';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldParameter from './addons/cdoFieldParameter';
@@ -65,9 +65,13 @@ interface AnalyticsData {
 }
 
 type GoogleBlocklyType = typeof GoogleBlockly;
-
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
+  ALIGN_CENTRE: GoogleBlockly.inputs.Align.CENTRE;
+  ALIGN_LEFT: GoogleBlockly.inputs.Align.LEFT;
+  ALIGN_RIGHT: GoogleBlockly.inputs.Align.RIGHT;
+  inputTypes: typeof GoogleBlockly.inputs.inputTypes;
+  createSvgElement: typeof GoogleBlockly.utils.dom.createSvgElement;
   analyticsData: AnalyticsData;
   showUnusedBlocks: boolean | undefined;
   BlockFieldHelper: {[fieldHelper: string]: string};
@@ -78,6 +82,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   readOnly: boolean;
   grayOutUndeletableBlocks: boolean;
   topLevelProcedureAutopopulate: boolean;
+  isJigsaw: boolean;
   getNewCursor: (type: string) => GoogleBlockly.Cursor;
   LineCursor: typeof GoogleBlockly.BasicCursor;
   version: BlocklyVersion;
@@ -106,7 +111,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   FieldToggle: typeof CdoFieldToggle;
   FieldFlyout: typeof CdoFieldFlyout;
   FieldBitmap: typeof CdoFieldBitmap;
-  FieldColour: typeof CdoFieldColour;
+  FieldColour: typeof FieldColour;
   FieldVariable: typeof CdoFieldVariable;
   FieldParameter: typeof CdoFieldParameter;
   JavaScript: JavascriptGeneratorType;
@@ -126,7 +131,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   // TODO: better define this type
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   cdoUtils: any;
-  Generator: ExtendedGenerator;
+  Generator: ExtendedCodeGenerator;
   Xml: ExtendedXml;
   Procedures: ExtendedProcedures;
   BlockValueType: {[key: string]: string};
@@ -141,14 +146,18 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   ) => void;
   setInfiniteLoopTrap: () => void;
   clearInfiniteLoopTrap: () => void;
-  getInfiniteLoopTrap: () => string;
+  getInfiniteLoopTrap: () => string | null;
   loopHighlight: (apiName: string, blockId: string) => string;
   getWorkspaceCode: () => string;
   addChangeListener: (
     blockspace: GoogleBlockly.Workspace,
     handler: (e: GoogleBlockly.Events.Abstract) => void
   ) => void;
-  getGenerator: () => JavascriptGeneratorType;
+  removeChangeListener: (
+    handler: (e: GoogleBlockly.Events.Abstract) => void,
+    blockspace: GoogleBlockly.Workspace
+  ) => void;
+  getGenerator: () => ExtendedJavascriptGenerator;
   addEmbeddedWorkspace: (workspace: GoogleBlockly.Workspace) => void;
   isEmbeddedWorkspace: (workspace: GoogleBlockly.Workspace) => boolean;
   findEmptyContainerBlock: (
@@ -221,6 +230,9 @@ export interface ExtendedConnection extends GoogleBlockly.Connection {
 }
 
 export interface ExtendedBlock extends GoogleBlockly.Block {
+  getFillPattern: () => string | undefined;
+  fillPattern?: string;
+  setFillPattern: (pattern: string) => void;
   interpolateMsg: (
     this: ExtendedBlock,
     msg: string,
@@ -231,9 +243,12 @@ export interface ExtendedBlock extends GoogleBlockly.Block {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   setTitleValue: (newValue: any, name: string) => void;
   skipNextBlockGeneration?: boolean;
+  svgPathFill: SVGElement;
 }
 
 export interface ExtendedWorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
+  defs: SVGElement;
+  previousViewWidth: number;
   flyoutParentBlock: GoogleBlockly.Block | null;
   globalVariables: string[];
   noFunctionBlockFrame: boolean;
@@ -272,6 +287,7 @@ export interface ExtendedBlocklyOptions extends GoogleBlockly.BlocklyOptions {
   disableParamEditing: boolean;
   showUnusedBlocks: boolean | undefined;
   analyticsData: AnalyticsData;
+  isJigsaw: boolean;
 }
 
 export interface ExtendedWorkspace extends GoogleBlockly.Workspace {
@@ -279,8 +295,8 @@ export interface ExtendedWorkspace extends GoogleBlockly.Workspace {
 }
 
 type CodeGeneratorType = typeof GoogleBlockly.CodeGenerator;
-export interface ExtendedGenerator extends CodeGeneratorType {
-  xmlToCode: (name: string, domBlocks: Element) => string;
+export interface ExtendedCodeGenerator extends CodeGeneratorType {
+  xmlToCode?: (name: string, domBlocks: Element) => string;
   xmlToBlocks: (name: string, xml: Element) => GoogleBlockly.Block[];
   blockSpaceToCode: (
     name: string,
@@ -293,6 +309,8 @@ export interface ExtendedGenerator extends CodeGeneratorType {
   prefixLines: (text: string, prefix: string) => string;
   nameDB_: GoogleBlockly.Names | undefined;
   variableDB_: GoogleBlockly.Names | undefined;
+  prototype: typeof GoogleBlockly.CodeGenerator.prototype;
+  translateVarName: (name: string) => string;
 }
 
 type XmlType = typeof GoogleBlockly.Xml;
@@ -449,5 +467,16 @@ export type PointerMetadataMap = {
 
 export type BlockColor = [number, number, number];
 
-// Blockly defines this as any.
 export type JavascriptGeneratorType = typeof javascriptGenerator;
+export interface ExtendedJavascriptGenerator
+  extends ExtendedCodeGenerator,
+    JavascriptGeneratorType {
+  nameDB_: GoogleBlockly.Names | undefined;
+  forBlock: Record<
+    string,
+    (
+      block: GoogleBlockly.Block,
+      generator: GoogleBlockly.CodeGenerator
+    ) => string | [string, number] | null
+  >;
+}

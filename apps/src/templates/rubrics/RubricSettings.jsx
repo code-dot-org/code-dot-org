@@ -19,6 +19,7 @@ import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {setAiRubricsDisabled} from '@cdo/apps/templates/currentUserRedux';
+import {setAiEvalStatusMap} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import i18n from '@cdo/locale';
 
 import {UNDERSTANDING_LEVEL_STRINGS_V2, TAB_NAMES} from './rubricHelpers';
@@ -403,6 +404,8 @@ RubricSettings.propTypes = {
   reportingData: reportingDataShape,
   aiRubricsDisabled: PropTypes.bool,
   setAiRubricsDisabled: PropTypes.func.isRequired,
+
+  // Redux provided
   allTeacherEvaluationData: PropTypes.array,
   aiEvalStatusCounters: PropTypes.object,
   setAiEvalStatusMap: PropTypes.func,
@@ -413,9 +416,12 @@ export const UnconnectedRubricSettings = RubricSettings;
 export default connect(
   state => ({
     aiRubricsDisabled: state.currentUser.aiRubricsDisabled,
+    allTeacherEvaluationData: state.teacherRubric.allTeacherEvaluationData,
+    aiEvalStatusCounters: state.teacherRubric.aiEvalStatusCounters,
   }),
   dispatch => ({
     setAiRubricsDisabled: aiRubricsDisabled =>
       dispatch(setAiRubricsDisabled(aiRubricsDisabled)),
+    setAiEvalStatusMap: statusMap => dispatch(setAiEvalStatusMap(statusMap)),
   })
 )(RubricSettings);

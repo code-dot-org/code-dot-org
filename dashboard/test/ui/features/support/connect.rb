@@ -20,24 +20,19 @@ def saucelabs_browser(test_run_name)
   raise "Please define CDO.saucelabs_username" if CDO.saucelabs_username.blank?
   raise "Please define CDO.saucelabs_authkey"  if CDO.saucelabs_authkey.blank?
 
-  is_tunnel = ENV.fetch('CIRCLE_BUILD_NUM', nil)
-  url = "http://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@#{is_tunnel ? 'localhost:4445' : 'ondemand.us-west-1.saucelabs.com:80'}/wd/hub"
-
   capabilities = Selenium::WebDriver::Remote::Capabilities.new($browser_config.except('name'))
 
   sauce_options = {
     name: test_run_name,
     tags: [ENV.fetch('GIT_BRANCH', nil)],
-    build: CDO.circle_run_identifier || ENV.fetch('BUILD', nil),
-    idleTimeout: 60,
-    seleniumVersion: Selenium::WebDriver::VERSION
+    build: ENV.fetch('CI_BUILD_NUMBER', nil) || ENV.fetch('GIT_COMMIT', nil),
+    idleTimeout: 90,
+    seleniumVersion: Selenium::WebDriver::VERSION,
+    username: CDO.saucelabs_username,
+    access_key: CDO.saucelabs_authkey,
+    tunnelIdentifier: CDO.saucelabs_tunnel_name,
   }
 
-  # CDO.saucelabs_tunnel_name is only intended to be used by developers doing
-  # local testing. This alternative name was chosen to make the developer's
-  # locals.yml easier to understand.
-  tunnel_name = CDO.circle_run_identifier || CDO.saucelabs_tunnel_name
-  sauce_options[:tunnelIdentifier] = tunnel_name if tunnel_name
   sauce_options[:priority] = ENV['PRIORITY'].to_i if ENV['PRIORITY']
   capabilities["sauce:options"] ||= {}
   capabilities["sauce:options"].merge!(sauce_options)
@@ -47,7 +42,7 @@ def saucelabs_browser(test_run_name)
   $http_client = SeleniumBrowser::Client.new(read_timeout: 2.minutes)
   with_read_timeout(5.minutes) do
     Selenium::WebDriver.for(:remote,
-      url: url,
+      url: "https://ondemand.us-west-1.saucelabs.com/wd/hub",
       capabilities: capabilities,
       http_client: $http_client
     )

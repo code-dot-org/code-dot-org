@@ -1,5 +1,6 @@
 import {ObservableProcedureModel} from '@blockly/block-shareable-procedures';
 import * as GoogleBlockly from 'blockly/core';
+import {Order} from 'blockly/javascript';
 
 import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
 import CdoFieldFlyout from '@cdo/apps/blockly/addons/cdoFieldFlyout';
@@ -11,7 +12,11 @@ import {
   updatePointerBlockWarning,
 } from '@cdo/apps/blockly/addons/cdoSpritePointer';
 import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
-import {ExtendedBlockSvg, ProcedureBlock} from '@cdo/apps/blockly/types';
+import {
+  ExtendedBlockSvg,
+  ExtendedJavascriptGenerator,
+  ProcedureBlock,
+} from '@cdo/apps/blockly/types';
 import {FALSEY_DEFAULT, readBooleanAttribute} from '@cdo/apps/blockly/utils';
 import {SVG_NS} from '@cdo/apps/constants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
@@ -121,7 +126,7 @@ export const blocks = {
     // We set the inputs to align left so that if the flyout is larger than the
     // inputs will be aligned with the left edge of the block.
     this.inputList.forEach(input => {
-      input.setAlign(Blockly.Input.Align.LEFT);
+      input.setAlign(Blockly.ALIGN_LEFT);
     });
 
     // Insert the toggle field at the beginning for the first input row.
@@ -274,7 +279,14 @@ export const blocks = {
     Blockly.common.defineBlocks(behaviorBlocks);
 
     const generator = Blockly.getGenerator();
-    generator.behavior_definition = function (block: ProcedureBlock) {
+    generator.forBlock.behavior_definition = function (
+      _block: GoogleBlockly.Block,
+      generator: GoogleBlockly.CodeGenerator
+    ): string | [string, number] | null {
+      const block = _block as ProcedureBlock;
+      if (!generator.nameDB_) {
+        return null;
+      }
       // If we don't have a behavior id, generate a random id.
       // This ensures the hidden definition block will generate valid code.
       if (!block.behaviorId) {
@@ -308,8 +320,12 @@ export const blocks = {
 
       // Translate all the inner blocks within the current block into code
       const branch = generator.statementToCode(block, 'STACK');
+      // Sprite Lab behavior blocks do not have return inputs, but this check is included
+      // in case we'd like to support that in the future.
       let returnValue =
-        generator.valueToCode(block, 'RETURN', generator.ORDER_NONE) || '';
+        (block.getInput('RETURN') &&
+          generator.valueToCode(block, 'RETURN', Order.NONE)) ||
+        '';
 
       // Contains the same code as xfix1 if both are present, but applied before the return statement
       let xfix2 = '';
@@ -345,33 +361,46 @@ export const blocks = {
         xfix2 +
         returnValue +
         '}';
-      code = generator.scrub_(block, code);
+      // Once we are on V11, we can remove this cast as scrub_ will no longer be protected.
+      code = (generator as unknown as ExtendedJavascriptGenerator).scrub_(
+        block,
+        code
+      );
       // Add % so as not to collide with helper functions in definitions list.
-      generator.definitions_['%' + funcName] = code;
+      generator.provideFunction_('%' + funcName, code);
       return null;
     };
-    generator.gamelab_behavior_get = function () {
+    generator.forBlock.gamelab_behavior_get = function (
+      _block: GoogleBlockly.Block,
+      generator: GoogleBlockly.CodeGenerator
+    ): string | [string, number] | null {
+      const block = _block as ProcedureBlock;
       // Generating 'undefined' mimics the code for a missing block.
-      const undefinedCode = ['undefined', generator.ORDER_ATOMIC];
+      const undefinedCode: [string, number] = ['undefined', Order.ATOMIC];
       // If we don't have a behavior Id, find on the definition block.
       if (!this.behaviorId) {
-        const procedureModel = this.getProcedureModel();
+        const procedureModel =
+          block.getProcedureModel() as ObservableProcedureModel;
         // If there's no model, fail gracefully.
         if (!procedureModel) {
           return undefinedCode;
         }
         const definitionBlock = Blockly.Procedures.getDefinition(
-          procedureModel.name,
+          procedureModel.getName(),
           Blockly.getHiddenDefinitionWorkspace()
         ) as ProcedureBlock;
-        this.behaviorId = definitionBlock?.behaviorId;
+        block.behaviorId = definitionBlock?.behaviorId;
         // If we somehow still don't have a behavior id, fail gracefully.
         if (!this.behaviorId) {
           return undefinedCode;
         }
       }
-      const name = generator.nameDB_.getName(this.behaviorId, 'PROCEDURE');
-      return [`new Behavior(${name}, [])`, generator.ORDER_ATOMIC];
+      if (block.behaviorId && generator.nameDB_) {
+        const name = generator.nameDB_.getName(block.behaviorId, 'PROCEDURE');
+        return [`new Behavior(${name}, [])`, Order.ATOMIC];
+      } else {
+        return null;
+      }
     };
     generator.forBlock.sprite_parameter_get = generator.forBlock.variables_get;
   },

@@ -7,6 +7,7 @@ import React, {
   useState,
 } from 'react';
 
+import {TICKS_PER_MEASURE} from '../constants';
 import MusicRegistry from '../MusicRegistry';
 import {InstrumentEventValue} from '../player/interfaces/InstrumentEvent';
 import MusicLibrary from '../player/MusicLibrary';
@@ -17,7 +18,7 @@ import PreviewControls from './PreviewControls';
 import styles from './patternPanel.module.scss';
 
 // Generate an array containing tick numbers from 1..16.
-const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);
+const arrayOfTicks = Array.from({length: TICKS_PER_MEASURE}, (_, i) => i + 1);
 
 interface PatternPanelProps {
   initValue: InstrumentEventValue;
@@ -53,6 +54,18 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   }, [availableKits, currentValue.instrument]);
   const [currentPreviewTick, setCurrentPreviewTick] = useState(0);
 
+  const previewNote = useCallback(
+    (note: number) => {
+      // Don't preview the note if we're previewing the whole pattern
+      if (currentPreviewTick > 0) {
+        return;
+      }
+
+      MusicRegistry.player.previewNote(note, currentValue.instrument);
+    },
+    [currentValue.instrument, currentPreviewTick]
+  );
+
   const toggleEvent = useCallback(
     (tick: number, note: number) => {
       const index = currentValue.events.findIndex(
@@ -64,12 +77,12 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
       } else {
         // Not found, so add.
         currentValue.events.push({tick, note});
-        MusicRegistry.player.previewNote(note, currentValue.instrument);
+        previewNote(note);
       }
 
       onChange(currentValue);
     },
-    [onChange, currentValue]
+    [onChange, currentValue, previewNote]
   );
 
   const hasEvent = (note: number, tick: number) => {
@@ -114,6 +127,13 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   }, [setCurrentPreviewTick]);
 
   useEffect(() => {
+    // On unmount.
+    return () => {
+      stopPreview();
+    };
+  }, [stopPreview]);
+
+  useEffect(() => {
     if (!MusicRegistry.player.isInstrumentLoaded(currentValue.instrument)) {
       setIsLoading(true);
       if (MusicRegistry.player.isInstrumentLoading(currentValue.instrument)) {
@@ -148,12 +168,7 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
             <div className={styles.nameContainer}>
               <span
                 className={styles.name}
-                onClick={() =>
-                  MusicRegistry.player.previewNote(
-                    note || index,
-                    currentValue.instrument
-                  )
-                }
+                onClick={() => previewNote(note || index)}
               >
                 {name}
               </span>

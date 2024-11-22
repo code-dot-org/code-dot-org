@@ -1,0 +1,16 @@
+@import 'color';
+//@import '@cdo/apps/componentLibrary/typography/typography.module';
+//@import '@cdo/apps/componentLibrary/common/styles/mixins';
+
+// Dialog common styles
+.dialog {
+  display: flex;
+  min-width: 39.375rem;
+  max-width: 50rem;
+  padding: 2.25rem 3.5rem 2.5rem 3.5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 0.5rem;
+  background: $light_white;
+}

@@ -2,13 +2,13 @@
 @import 'color', 'font', 'typography', 'breakpoints',
   'barlow-semi-condensed-font';
 
-  :root {
-    --swiper-pagination-color: #{$light_primary_500};
-    --swiper-pagination-bullet-size: 1rem;
-    --swiper-pagination-bullet-inactive-color: #{$light_primary_100};
-    --swiper-pagination-bullet-inactive-opacity: 1;
-    --swiper-pagination-bullet-horizontal-gap: 0.5rem;
-  }
+:root {
+  --swiper-pagination-color: #{$light_primary_500};
+  --swiper-pagination-bullet-size: 1rem;
+  --swiper-pagination-bullet-inactive-color: #{$light_primary_100};
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 0.5rem;
+}
 
 .headerContainer {
   margin-top: 50px;
@@ -46,7 +46,6 @@ h1.heading {
 }
 
 .container {
-  margin-bottom: 50px;
   float: left;
   width: 100%;
 }
@@ -119,16 +118,14 @@ p.enterName {
 }
 
 .prevElNav {
-  background: url('//code.org/images/carousel/prev.svg')
-    no-repeat;
+  background: url('//code.org/images/carousel/prev.svg') no-repeat;
   left: 1rem;
   border: 0;
   background-size: contain;
 }
 
 .nextElNav {
-  background: url('//code.org/images/carousel/next.svg')
-    no-repeat;
+  background: url('//code.org/images/carousel/next.svg') no-repeat;
   right: 1rem;
   background-size: contain;
 }

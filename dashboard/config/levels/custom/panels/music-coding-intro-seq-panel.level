@@ -1,0 +1,28 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2024-11-21T19:20:51.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "**<i class=\"fa-regular fa-list-check\"></i> Sequence Matters**\n\nThe computer runs your code <strong>in order</strong> from top to bottom.",
+        "imageUrl": "https://images.code.org/e24fc5edf2d4a510be49be4cf923beb9-select-checkbox-interface-with-glowing-cursor-2024-08-13-16-05-21-utc (1) (1).gif",
+        "key": "music-intro-coding-seq-panel-3ad5bdff-9161-4fad-af85-4095174d23d7",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "**<i class=\"fa-regular fa-face-thinking\"></i> Check out this code!**\n\n1.  What sound do you predict you will hear **first**?  \n2. What do you predict you'll hear **last**?  ",
+        "imageUrl": "https://images.code.org/b6583017c6952d525edb400a770351dc-Untitled 2.jpg",
+        "key": "music-intro-coding-seq-panel-bc024962-11c0-46a8-a581-1b95ac378e08",
+        "layout": "text-top-right"
+      }
+    ],
+    "offer_browser_tts": "true"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-11-21T19:20:51.884+00:00\",\"changed\":[\"cloned from \\\"music-intro-coding-seq-panel\\\"\"],\"cloned_from\":\"music-intro-coding-seq-panel\"}]"
+}]]></config>
+</Panels>

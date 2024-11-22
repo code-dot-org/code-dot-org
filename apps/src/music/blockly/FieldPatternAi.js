@@ -122,6 +122,7 @@ class FieldPatternAi extends GoogleBlockly.Field {
   }
 
   dropdownDispose_() {
+    ReactDOM.unmountComponentAtNode(this.newDiv_);
     this.newDiv_ = null;
   }
 
@@ -175,10 +176,6 @@ class FieldPatternAi extends GoogleBlockly.Field {
     });
 
     this.renderContent();
-  }
-
-  getText() {
-    return this.getValue().kit;
   }
 
   updateSize_() {

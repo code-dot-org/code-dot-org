@@ -56,7 +56,6 @@ const PetitionForm = ({tutorial}) => {
         sendDataToEndpoint(getAgeSafeData(sanitizedData));
       }
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     [data]
   );
 

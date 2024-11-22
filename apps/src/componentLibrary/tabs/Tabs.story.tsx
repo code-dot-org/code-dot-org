@@ -14,7 +14,6 @@ export default {
 // TEMPLATE
 //
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
-// eslint-disable-next-line
 const SingleTemplate: StoryFn<TabsProps> = args => {
   const [openTabs, setOpenTabs] = useState(args.tabs);
   const handleClose = (value: string) =>
@@ -673,6 +672,8 @@ GroupOfTabsWithClosableTabs.args = {
         {
           value: 'tab2',
           text: 'Tab 2',
+          iconLeft: {iconName: 'check', iconStyle: 'solid'},
+          iconRight: {iconName: 'check', iconStyle: 'solid'},
           tabContent: <div>Tab 2 Content</div>,
           isClosable: true,
         },
@@ -686,6 +687,62 @@ GroupOfTabsWithClosableTabs.args = {
       defaultSelectedTabValue: 'tab1',
       onChange: () => null,
       type: 'secondary',
+    },
+    {
+      name: 'primary_tabs_with_closable_tabs_dark',
+      tabs: [
+        {
+          value: 'tab1',
+          text: 'Tab 1',
+          tabContent: <div>Tab 1 Content</div>,
+          isClosable: true,
+        },
+        {
+          value: 'tab2',
+          text: 'Tab 2',
+          tabContent: <div>Tab 2 Content</div>,
+          isClosable: true,
+        },
+        {
+          value: 'tab3',
+          text: 'Tab 3',
+          tabContent: <div>Tab 3 Content</div>,
+          isClosable: true,
+        },
+      ],
+      defaultSelectedTabValue: 'tab1',
+      onChange: () => null,
+      type: 'primary',
+      mode: 'dark',
+    },
+    {
+      name: 'secondary_tabs_with_closable_tabs_dark',
+      tabs: [
+        {
+          value: 'tab1',
+          text: 'Tab 1',
+          tabContent: <div>Tab 1 Content</div>,
+          isClosable: true,
+        },
+        {
+          value: 'tab2',
+          text: 'Tab 2',
+          iconLeft: {iconName: 'check', iconStyle: 'solid'},
+          iconRight: {iconName: 'check', iconStyle: 'solid'},
+          tabContent: <div>Tab 2 Content</div>,
+          isClosable: true,
+        },
+        {
+          value: 'tab3',
+          text: 'Tab 3',
+          tabContent: <div>Tab 3 Content</div>,
+          isClosable: true,
+        },
+      ],
+      defaultSelectedTabValue: 'tab1',
+      onChange: () => null,
+      type: 'secondary',
+      mode: 'dark',
     },
   ],
 };

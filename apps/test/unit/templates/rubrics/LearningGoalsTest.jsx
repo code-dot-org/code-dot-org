@@ -429,11 +429,8 @@ describe('LearningGoals - React Testing Library', () => {
     it('displays no checkboxes when neither thumb is selected', () => {
       render(<LearningGoals {...feedbackProps} />);
 
-      // neither thumb is selected
-      screen.getByTestId('thumbs-o-up');
-      expect(screen.queryByTestId('thumbs-up')).not.toBeInTheDocument();
-      screen.getByTestId('thumbs-o-down');
-      expect(screen.queryByTestId('thumbs-down')).not.toBeInTheDocument();
+      screen.getByLabelText(i18n.thumbsUpUnselected());
+      screen.getByLabelText(i18n.thumbsDownUnselected());
 
       // checkboxes not visible
       expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
@@ -459,11 +456,11 @@ describe('LearningGoals - React Testing Library', () => {
         }
       });
 
-      const thumbsUpButton = screen.getByTestId('thumbs-o-up');
+      const thumbsUpButton = screen.getByLabelText(i18n.thumbsUpUnselected());
       fireEvent.click(thumbsUpButton);
       await wait();
 
-      screen.getByTestId('thumbs-up');
+      screen.getByLabelText(i18n.thumbsUpSelected());
       expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
 
       const expectedBody = JSON.stringify({
@@ -505,11 +502,13 @@ describe('LearningGoals - React Testing Library', () => {
         }
       });
 
-      const thumbsUpButton = screen.getByTestId('thumbs-o-down');
-      fireEvent.click(thumbsUpButton);
+      const thumbsDownButton = screen.getByLabelText(
+        i18n.thumbsDownUnselected()
+      );
+      fireEvent.click(thumbsDownButton);
       await wait();
 
-      screen.getByTestId('thumbs-down');
+      screen.getByLabelText(i18n.thumbsDownSelected());
 
       const expectedBody = JSON.stringify({
         learningGoalAiEvaluationId: 2,
@@ -553,21 +552,24 @@ describe('LearningGoals - React Testing Library', () => {
       // survey not visible
       expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
 
-      const thumbsUpButton = screen.getByTestId('thumbs-o-down');
-      fireEvent.click(thumbsUpButton);
+      const thumbsDownButton = screen.getByLabelText(
+        i18n.thumbsDownUnselected()
+      );
+      fireEvent.click(thumbsDownButton);
       await wait();
 
       // survey is visible
       expect(screen.getAllByRole('checkbox')).toHaveLength(4);
 
+      // eslint-disable-next-line no-restricted-properties
       expect(screen.queryByTestId('ai-assessment-feedback-textarea')).not
         .toBeInTheDocument;
 
       const checkbox = screen.getByRole('checkbox', {name: 'Other'});
       fireEvent.click(checkbox);
 
+      // eslint-disable-next-line no-restricted-properties
       screen.getByTestId('ai-assessment-feedback-textarea');
-
       fetchStub.mockRestore();
     });
 
@@ -599,8 +601,10 @@ describe('LearningGoals - React Testing Library', () => {
       // survey not visible
       expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
 
-      const thumbsUpButton = screen.getByTestId('thumbs-o-down');
-      fireEvent.click(thumbsUpButton);
+      const thumbsDownButton = screen.getByLabelText(
+        i18n.thumbsDownUnselected()
+      );
+      fireEvent.click(thumbsDownButton);
       await wait();
 
       // survey is visible
@@ -619,6 +623,7 @@ describe('LearningGoals - React Testing Library', () => {
       fireEvent.click(submitButton);
       await wait();
 
+      // eslint-disable-next-line no-restricted-properties
       expect(screen.queryByTestId('ai-assessment-feedback-textarea')).not
         .toBeInTheDocument;
 

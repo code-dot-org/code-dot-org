@@ -8,7 +8,11 @@ Dashboard::Application.routes.draw do
   get "/courses", to: redirect(CDO.code_org_url("/students"))
 
   # Redirect studio.code.org/sections/teacher_dashboard/first_section_progress to most recent section
-  get '/teacher_dashboard/sections/first_section_progress', to: "teacher_dashboard#redirect_to_newest_section"
+  get '/teacher_dashboard/sections/first_section_progress', to: "teacher_dashboard#redirect_to_newest_section_progress"
+
+  # Redirect enable and disable experiments to most recent section
+  get '/teacher_dashboard/sections/enable_experiments', to: "teacher_dashboard#enable_experiments"
+  get '/teacher_dashboard/sections/disable_experiments', to: "teacher_dashboard#disable_experiments"
 
   constraints host: CDO.codeprojects_hostname do
     # Routes needed for the footer on weblab share links on codeprojects
@@ -38,6 +42,8 @@ Dashboard::Application.routes.draw do
     get '/user_levels/get_token', to: 'user_levels#get_token'
     get '/user_levels/level_source/:script_id/:level_id', to: 'user_levels#get_level_source'
     get '/user_levels/section_summary/:section_id/:level_id', to: 'user_levels#get_section_response_summary'
+
+    resources :user_level_interactions, only: [:create]
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 
@@ -249,6 +255,9 @@ Dashboard::Application.routes.draw do
     end
 
     get "/gallery", to: redirect("/projects/public")
+
+    get 'projects/:project_type/:channel_id/submission_status', to: 'projects#submission_status'
+    post 'projects/:project_type/:channel_id/submit', to: 'projects#submit'
 
     get 'projects/featured', to: 'projects#featured'
     delete '/featured_projects/:channel_id', to: 'featured_projects#destroy'
@@ -984,6 +993,8 @@ Dashboard::Application.routes.draw do
         post 'users/:user_id/dismiss_census_banner', to: 'users#dismiss_census_banner'
         post 'users/:user_id/dismiss_donor_teacher_banner', to: 'users#dismiss_donor_teacher_banner'
         post 'users/:user_id/dismiss_parent_email_banner', to: 'users#dismiss_parent_email_banner'
+
+        post 'users/set_seen_ta_scores', to: 'users#set_seen_ta_scores'
 
         get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
         get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}

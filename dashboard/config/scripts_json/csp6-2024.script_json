@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -19,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-10-03 05:19:02 UTC",
+    "serialized_at": "2024-11-19 01:17:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1409,7 +1410,7 @@
       "key": "c9f8252f-421d-473a-a36c-ae4a5b3fd17c",
       "position": 1,
       "properties": {
-        "description": "Today we're going to have a chance to practice programming with a lot of the concepts and patterns we've explored over the last two lessons. I encourage you to go through these with a partner, but pay close attention to what each other is doing. You will be choosing one of three apps to help develop today. While the design of each of these apps is complete, it will be your job to use your knowledge of lists in order to make the apps function as intended.\n\nWhichever app you choose, please continue to choose that <strong>same </strong>app on each of the choice levels. There are a total of *five* levels for each app.\n\nIn our next lesson you're going to have to use a lot of these skills on an independent project, and these activities are good practice for what you'll find there! Alright, let's get to it!",
+        "description": "Today we're going to have a chance to practice programming with a lot of the concepts and patterns we've explored over the last two lessons. I encourage you to go through these with a partner, but pay close attention to what each other is doing. You will be choosing one of three apps to help develop today. While the design of each of these apps is complete, it will be your job to use your knowledge of lists in order to make the apps function as intended.\n\nWhichever app you choose, please continue to choose that <strong>same </strong>app on each of the choice levels. There are a total of *ten* levels for each app.\n\nIn our next lesson you're going to have to use a lot of these skills on an independent project, and these activities are good practice for what you'll find there! Alright, let's get to it!",
         "name": "Quick Warm Up",
         "remarks": true,
         "tips": [

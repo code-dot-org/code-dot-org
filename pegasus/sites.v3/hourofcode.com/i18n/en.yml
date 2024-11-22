@@ -59,6 +59,12 @@
     social:
       title: "Register your event for Hour of Code!"
       desc: "Explore how computer science can bring your favorite things to life."
+      v2:
+        title: "One Hour: Ignite. Inspire. Code."
+        desc: "Bring what your children love to life! Start the fun with an activity."
+    video_caption:
+      visible: "One Hour Can Make The Invisible Visible"
+      in_a_world: "Make The Invisible Visible | Official Trailer"
 
   hoc2023_header: "Creativity with AI"
   hoc2023_hero_desc_homepage: "Join millions across the globe in organizing an hour of coding, with or without AI and learning how AI works. Anyone, anywhere can do it. No experience needed."
@@ -1035,6 +1041,7 @@
   minecraft_show:
     title: "Minecraft: The Show Must Go On!"
     desc: "Step into the theater to save the day in The Show Must Go On! Find the missing star, unlock hidden gags, and interact with a cast of mobs. Help the Agent overcome stage fright as you solve fun coding puzzles. Watch your coding skills shine in an epic final performance!"
+    aria_label: "Get started with Minecraft: The Show Must Go On"
 
   afe_page_heading: "Free resources from Amazon Future Engineer"
   afe_page_top_desc: "Enhance your teaching experience with Code.org in partnership with [Amazon Future Engineer](%{afe_url}). Eligible educators from underserved schools can access these benefits at no cost:"
@@ -1274,7 +1281,7 @@
       explore_gen_ai_card:
         title: "Exploring Generative AI"
         desc: "Prepare your students for the future with an engaging curriculum that demystifies generative AI. Through hands-on projects and ethical discussions, students gain the skills to become creators and critical thinkers in an AI-powered world."
-        see_pl: "See professional learrning"
+        see_pl: "See professional learning"
     flexible_units:
       title: "Flexible units in this course"
       desc: "Choose standalone units to fit your classroom needs or combine them for a deeper dive into AI concepts."
@@ -2493,6 +2500,7 @@
     introducing_music_lab: "Introducing Music Lab"
     introducing_music_lab_strong: "Introducing **%{music_lab}**"
     make_music_learn_code: "Make Music, Learn Code"
+    get_started: "Get started with Music Lab!"
     button:
       try_music_lab: "Try Music Lab"
       learn_more: "Learn more"
@@ -2521,6 +2529,7 @@
       desc: "Discover the jobs that bring technology together with music!"
     videos:
       heading: "Watch your favorite artists try Music Lab"
+      heading_2: "Explore Music Lab with artists and industry experts"
     quotes:
       heading: "What teachers and students are saying about Music Lab"
       bryant:
@@ -2578,6 +2587,7 @@
       name: "Music Lab: Jam Session"
       button:
         explore: "Explore Music Lab: Jam Session"
+        explore_short: "Explore Music Lab"
         start: "Start Music Lab: Jam Session"
       banner:
         desc_01: "Learn to code as you remix your favorite artists' tracks and use AI to generate your own beats!"
@@ -8987,7 +8997,7 @@
   tutorial_carnegiesensabot_longdescription: "Learn how to program a virtual EV3 robot to complete the real-world Sensabot challenge in this activity the Carnegie Mellon Robotics Academy."
   tutorial_robotical4_longdescription: "MartyBlocks is put together in a vertical format, which is more common for writing code. Learners will be presented with a larger workspace and greater functionality for controlling Marty and eventually having them interact with the environment. This lesson will familiarize learners with the sections, layout, comparing this new environment with MartyBlocks Jr."
   tutorial_kinderadd_longdescription: "In this lesson, students will use algorithms and moving robots to model mathematical concepts. KIBO will travel along a physical number line to model counting, addition, and subtraction. Students will create algorithms (optionally including repeat loops) to solve problems, just like programmers do at work!"
-  tutorial_imagipython_longdescription: "Join the world's first social network for pre-teens who like to code. Design your first colorful project in minutes with the free imagi app."
+  tutorial_imagipython_longdescription: "Learn Python to create your own colorful pixel art and animations in this 1-hour course!"
   tutorial_robotical2_longdescription: "Learners will create a sequence of steps to allow a partner to travel a route to a goal, making use of the Marty Controller. Each of the directional symbols has an attached movement; in this lesson, learners will be encouraged to experiment with the directional arrows but the focus will be on the forward arrow."
   tutorial_robotical3_longdescription: "Learners will explore the new interface for Marty, where their instructions will stay on the device screen. Learners will be estimating how many steps they think Marty will need to reach a goal."
   tutorial_blockscadvirus_longdescription: "Use a 3D design platform to model a virus and learn about how our bodies use geometry to fight these invaders. "
@@ -9248,7 +9258,7 @@
   tutorial_carnegiesensabot_string_platforms: "All modern browsers"
   tutorial_robotical4_string_platforms: "All modern browsers"
   tutorial_kinderadd_string_platforms: "Unplugged"
-  tutorial_imagipython_string_platforms: "Chrome, Firefox, Android tablet, iPad, Android phone, iPhone"
+  tutorial_imagipython_string_platforms: "All modern browsers, Android tablet, iPad, iPhone"
   tutorial_robotical2_string_platforms: "Unplugged"
   tutorial_robotical3_string_platforms: "All modern browsers"
   tutorial_blockscadvirus_string_platforms: "All modern browsers"
@@ -10896,26 +10906,50 @@
   tutorial_scratchkindness_name: "Spreading Kindness with Scratch and Gitanjali Rao"
   tutorial_showmustgoon_name: "The Show Must Go On"
   tutorial_musiclabjam_name: "Music Lab: Jam Session"
+  tutorial_snackchase_name: "Lyla and Stu's Snack Chase"
+  tutorial_missionhubble_name: "Scott Kelly: Mission to Hubble"
+  tutorial_bubblepopping_name: "The Joy of Bubble Popping"
+  tutorial_rosebudai_name: "AI Text to Game: Platformer"
   tutorial_scratchinventing_longdescription: "Remix our starter project to design your own invention, share the invention's goal or purpose through text and/or a voice recording, and learn about Gitanjali's innovation process."
   tutorial_scratchkindness_longdescription: "Remix our starter project to develop and share a message of kindness, inspired by Gitanjali's innovative approach to anti-bullying efforts for young people around the world."
   tutorial_showmustgoon_longdescription: "Welcome to The Show Must Go On, where your creativity and coding skills take center stage! The big show is in chaos—the Agent has vanished! Use problem-solving and computational thinking to code through fun challenges, unlock surprises, and bring the show to life. Compose a song, choreograph a dance, craft a costume and save the show—all while learning key coding skills in blocks or Python."
   tutorial_musiclabjam_longdescription: "Make music and learn to code with Music Lab: Jam Session! In this self-guided, one-hour activity, students remix tracks from artists like Sabrina Carpenter, Lady Gaga, and Shakira while mastering coding basics such as sequencing, functions, and exploring AI-driven beat creation. This hands-on interactive experience sparks creativity and boosts confidence—leaving students proud of their custom track and the coding skills they've gained."
+  tutorial_snackchase_longdescription: "Code a multiplayer snack chase game with characters from Lyla in the Loop on PBS KIDS."
+  tutorial_missionhubble_longdescription: "Follow along with this tutorial to create a game based on Scott Kelly's first space flight!"
+  tutorial_bubblepopping_longdescription: "Create a bubble popping game featuring the stars of Disney and Pixar's Inside Out 2!"
+  tutorial_rosebudai_longdescription: "Create a platformer game from scratch, by just describing it. No coding knowledge needed. In this lesson we will take you step by step how to ask AI to code your first game. In the end you will have a published game you can share with your friends and family. Can be completed in one hour or spread out over a week to create a game with more detail."
   tutorial_scratchinventing_string_detail_grades: "Grades 2+"
   tutorial_scratchkindness_string_detail_grades: "Grades 2+"
   tutorial_showmustgoon_string_detail_grades: "Grades 2+"
   tutorial_musiclabjam_string_detail_grades: "Grades 3+"
+  tutorial_snackchase_string_detail_grades: "Pre-reader - Grade 5"
+  tutorial_missionhubble_string_detail_grades: "Grades 6+"
+  tutorial_bubblepopping_string_detail_grades: "Grades 2+"
+  tutorial_rosebudai_string_detail_grades: "Grades 2+"
   tutorial_scratchinventing_string_platforms: "All modern browsers"
   tutorial_scratchkindness_string_platforms: "All modern browsers"
   tutorial_showmustgoon_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
   tutorial_musiclabjam_string_platforms: "All modern browsers, Android tablet, iPad"
+  tutorial_snackchase_string_platforms: "All modern browsers, Android tablet, iPad, Game console app"
+  tutorial_missionhubble_string_platforms: "All modern browsers, Android tablet, iPad, Game console app"
+  tutorial_bubblepopping_string_platforms: "All modern browsers, Android tablet, iPad, Game console app"
+  tutorial_rosebudai_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
   tutorial_scratchinventing_string_detail_platforms: ""
   tutorial_scratchkindness_string_detail_platforms: ""
   tutorial_showmustgoon_string_detail_platforms: ""
   tutorial_musiclabjam_string_detail_platforms: ""
+  tutorial_snackchase_string_detail_platforms: ""
+  tutorial_missionhubble_string_detail_platforms: ""
+  tutorial_bubblepopping_string_detail_platforms: ""
+  tutorial_rosebudai_string_detail_platforms: ""
   tutorial_scratchinventing_string_detail_programming_languages: "Blocks"
   tutorial_scratchkindness_string_detail_programming_languages: "Blocks"
   tutorial_showmustgoon_string_detail_programming_languages: "Blocks, Python"
   tutorial_musiclabjam_string_detail_programming_languages: "Blocks"
+  tutorial_snackchase_string_detail_programming_languages: "Blocks"
+  tutorial_missionhubble_string_detail_programming_languages: "Blocks"
+  tutorial_bubblepopping_string_detail_programming_languages: "Blocks"
+  tutorial_rosebudai_string_detail_programming_languages: "JavaScript, Language independent (can be taught in multiple languages)"
 
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"
@@ -11001,6 +11035,7 @@
       heading: "Register your event"
       disclaimer: "Registrations close on %{close_date}"
       desc: "Join millions worldwide in the Hour of Code! Whether you're hosting an event at school, in the community, or online, we invite you to register your event today."
+      disclaimer_refresh: "Having issues seeing the form? Try disabling any extensions, including Ad Blockers, and refresh the page."
       how_to: "Looking for more guidance on how to host an Hour of Code? [Check out our How-To Guide](%{how_to_url})"
     resources:
       heading: "Additional resources for your Hour of Code"

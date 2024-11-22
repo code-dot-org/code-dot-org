@@ -4,7 +4,7 @@ import React, {useContext, useRef, useState} from 'react';
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   Card,
@@ -32,6 +32,11 @@ const LtiNewAccountCard = () => {
       user_type: userType,
     };
     analyticsReporter.sendEvent(
+      EVENTS.SIGN_UP_STARTED_EVENT,
+      {source: 'LTI'},
+      PLATFORMS.BOTH
+    );
+    analyticsReporter.sendEvent(
       'lti_new_account_click',
       eventPayload,
       PLATFORMS.STATSIG
@@ -57,6 +62,7 @@ const LtiNewAccountCard = () => {
   };
 
   return (
+    // eslint-disable-next-line react/forbid-component-props
     <Card data-testid={'new-account-card'}>
       <CardHeader
         title={i18n.ltiLinkAccountNewAccountCardHeaderLabel()}
@@ -73,6 +79,7 @@ const LtiNewAccountCard = () => {
         })}
 
         <form
+          // eslint-disable-next-line react/forbid-dom-props
           data-testid={'new-account-form'}
           action={newAccountUrl}
           ref={finishSignupFormRef}

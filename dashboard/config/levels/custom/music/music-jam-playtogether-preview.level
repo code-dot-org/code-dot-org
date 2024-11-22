@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 70,
-  "created_at": "2024-10-22T23:17:16.000Z",
+  "created_at": "2024-11-04T07:38:07.000Z",
   "level_num": "custom",
   "user_id": 1196,
   "properties": {
@@ -14,7 +14,7 @@
     "validations": [
       {
         "key": "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b",
-        "message": "You can play more than one sound at the same time when you use the [play together](#clickable=play-sounds-together-block-workspace) block.",
+        "message": "You can play more than one sound at the same time when you use the [play together](#clickable=id:play_sounds_together) block.",
         "next": true,
         "conditions": [
           {
@@ -168,10 +168,11 @@
       "packId": "carly_rae_jepsen_call_me_maybe"
     },
     "name_suffix": "_final",
-    "offer_browser_tts": "false",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:16.371+00:00\",\"changed\":[\"cloned from \\\"music-ai-preview-playtogether\\\"\"],\"cloned_from\":\"music-ai-preview-playtogether\"},{\"changed_at\":\"2024-10-22 23:40:36 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:16.371+00:00\",\"changed\":[\"cloned from \\\"music-ai-preview-playtogether\\\"\"],\"cloned_from\":\"music-ai-preview-playtogether\"},{\"changed_at\":\"2024-10-22 23:40:36 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-31 21:04:04 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

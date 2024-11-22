@@ -1,7 +1,7 @@
 {
   "pages": {
-    "/home": "gen-ai-launch-2024",
-    "/student-home": "transformers-sept-2024"
+    "/home": "music-lab-jam-launch-2024",
+    "/student-home": "music-lab-jam-launch-2024"
   },
   "banners": {
     "superhero": {
@@ -37,22 +37,14 @@
       "buttonUrl": "https://greatquestion.co/codedotorg/userresearch",
       "buttonId": "user-research-aug-2024"
     },
-    "transformers-sept-2024": {
-      "image": "/shared/images/banners/transformers_action_poster.png",
-      "title": "Get in the fun! Easy-to-learn code with Transformers One",
-      "body": "Autobots, roll out! In this Transformers One-themed introduction to our Sprite Lab, students learn the basics of computer science by building fun, interactive projects.",
-      "buttonText": "Try it now",
-      "buttonUrl": "https://studio.code.org/s/hello-world-transformers-one-2024/lessons/1/levels/1",
-      "buttonId": "transformers-sept-2024"
-    },
-    "gen-ai-launch-2024": {
-      "dcdo": "gen-ai-launch",
-      "image": "/images/ai/explore-gen-ai-bot-wizard.png",
-      "title": "Exploring Generative AI",
-      "body": "Prepare your students for the future with an engaging curriculum that demystifies generative AI. Through hands-on projects and ethical discussions, students gain the skills to become creators and critical thinkers in an AI-powered world.",
-      "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/curriculum/generative-ai",
-      "buttonId": "gen-ai-launch-2024"
+    "music-lab-jam-launch-2024": {
+      "dcdo": "hoc-2024-nov-launch",
+      "image": "/shared/images/banners/banner-music-lab-jam-launch-2024.png",
+      "title": "Introducing Music Lab: Jam Session",
+      "body": "Make music and learn to code in our new Music Lab activity for Hour of Code! In this self-guided, one-hour activity, students remix tracks from artists like Sabrina Carpenter, Lady Gaga, and Shakira while mastering coding basics such as sequencing, functions, and exploring AI-driven beat creation.",
+      "buttonText": "Explore Music Lab: Jam Session",
+      "buttonUrl": "https://code.org/music",
+      "buttonId": "music-lab-jam-launch-2024"
     }
   }
 }

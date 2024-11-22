@@ -4,20 +4,24 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "AI",
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "9-12 Special topics",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_course": true,
       "is_migrated": true,
       "show_calendar": true,
+      "topic_tags": [
+        "ai"
+      ],
       "tts": true,
       "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "foundations-gen-ai",
-    "serialized_at": "2024-10-18 19:57:14 UTC",
+    "serialized_at": "2024-11-19 16:34:59 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2032,7 +2036,7 @@
       "position": 1,
       "properties": {
         "description": "There are two options for wrap-ups in this lesson. This first option involves watching a 1-minute video about the nature of intelligence and responding to a prompt, while the second option involves considering a scenario involving data collection and privacy and responding to a prompt. This first option is more abstract addressing the hype around \"intelligence machines\" and how well language models \"learn\", while the second option is more aligned to the real-world ethical considerations of data collection and privacy with opportunities for students to bring their lived-experiences into the discussion. Both wrap-ups can help students construct arguments for the final project in the unit - but for the sake of time, you may only be able to do one. If possible, consider doing the second activity during another lesson so students can reflect and discuss both.\n\nIf you choose this wrap-up, skip or delete the slides associated with Wrap Up 2",
-        "name": "Warp Up - Option 1"
+        "name": "Wrap Up - Option 1"
       },
       "seeding_key": {
         "activity_section.key": "4c91d9ab-c028-40bd-b077-c9881c7c4b67",
@@ -2303,7 +2307,7 @@
       "key": "874d7b57-5a1e-427a-801d-28b5a00a4b62",
       "position": 2,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/4f39fb6057e7fee36c657f20c1bf253d-Slide10.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Create a mad-lib using the cards in your group. You can be as silly or as serious as you’d like. Once you’re done, we’ll share a few as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Check in with groups as they use the cards to complete their mad-libs. Identify a few unique stories to share out as a class.\n\t\t<br />\n\t\t<br />As groups are finishing up, bring up the <a href=\"https://studio.code.org/s/gen-ai-foudations-pilot-v1/lessons/9/levels/1\" target=\"_blank\">Mad Lib Generator app</a> and go into the “Generate Mad Lib” screen. This app does not need to be used by students - instead, you can drive this app while projecting to the class.\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/4f39fb6057e7fee36c657f20c1bf253d-Slide10.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Create a mad-lib using the cards in your group. You can be as silly or as serious as you’d like. Once you’re done, we’ll share a few as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Check in with groups as they use the cards to complete their mad-libs. Identify a few unique stories to share out as a class.\n\t\t<br />\n\t\t<br />As groups are finishing up, bring up the Mad Lib Generator app (Level 2 on studio.code.org) and go into the “Generate Mad Lib” screen. This app does not need to be used by students - instead, you can drive this app while projecting to the class.\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "874d7b57-5a1e-427a-801d-28b5a00a4b62",

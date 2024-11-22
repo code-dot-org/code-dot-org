@@ -430,8 +430,8 @@ class LtiV1Controller < ApplicationController
       metadata = {
         lms_name: platform_name,
       }
-      Metrics::Events.log_event_with_session(
-        session: session,
+      Metrics::Events.log_event(
+        request: request,
         event_name: 'lti_portal_registration_completed',
         metadata: metadata,
       )

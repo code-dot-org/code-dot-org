@@ -59,6 +59,12 @@ function createDashboard(environment = 'production'): Dashboard {
       // Overview Section
       createTitleWidget('Overview', 'h1'),
       // -- Performance Overview
+      // ActiveJob metrics
+      createMarkdownWidget(
+        '## **Active Job Metrics**\n*[View in ActiveJob_DelayedJob Dashboard](https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards/dashboard/ActiveJob_DelayedJob)*',
+        24,
+        2
+      ),
       createTitleWidget('Performance', 'h2'),
       createJobPerformanceGraph(environment),
       createBrowserChatPerformanceGraph(environment),

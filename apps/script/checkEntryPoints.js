@@ -83,6 +83,8 @@ const SILENCED = [
   'cookieBanner',
   'userHeaderEventLogger',
   'regionalPartnerMiniContact',
+  'statsigWebAnalytics',
+  'global_edition/region_switch_confirm',
 
   // other entry points
   'blockly',

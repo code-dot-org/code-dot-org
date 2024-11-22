@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+import {useParams} from 'react-router-dom';
 
 import {Heading1, Heading6} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -13,6 +14,7 @@ import {
   getCurrentUnitData,
   loadExpandedLessonsFromLocalStorage,
 } from '../sectionProgress/sectionProgressRedux';
+import {showV2TeacherDashboard} from '../teacherNavigation/TeacherNavFlagUtils';
 import UnitSelectorV2 from '../UnitSelectorV2';
 
 import IconKey from './IconKey';
@@ -33,6 +35,7 @@ function SectionProgressV2({
   loadExpandedLessonsFromLocalStorage,
   hideTopHeading,
 }) {
+  const params = useParams();
   React.useEffect(() => {
     loadExpandedLessonsFromLocalStorage(scriptId, sectionId);
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW, {
@@ -56,6 +59,7 @@ function SectionProgressV2({
   });
 
   React.useEffect(() => {
+    let isMounted = true;
     if (
       (!unitData || unitData.id !== scriptId) &&
       (scriptId !== loadedData.scriptId ||
@@ -63,12 +67,16 @@ function SectionProgressV2({
       !isLoadingProgress &&
       !isRefreshingProgress &&
       sectionId &&
-      scriptId
+      scriptId &&
+      isMounted // only update loaded data if component is still mounted.
     ) {
       loadUnitProgress(scriptId, sectionId).then(() =>
         setLoadedData({scriptId, sectionId})
       );
     }
+    return () => {
+      isMounted = false;
+    };
   }, [
     scriptId,
     sectionId,
@@ -85,7 +93,29 @@ function SectionProgressV2({
       .some(lesson => lesson.levels.some(level => level.isValidated));
   }, [expandedLessonIds, unitData]);
 
+  const isLoading = React.useMemo(() => {
+    if (showV2TeacherDashboard() && parseInt(params.sectionId) !== sectionId) {
+      // If we're in the V2 teacher dashboard, we want to show a loading state if the
+      // redux section does not yet match the URL section.
+      return true;
+    }
+    return (
+      !levelDataInitialized ||
+      isLoadingSectionData ||
+      isLoadingProgress ||
+      isRefreshingProgress
+    );
+  }, [
+    levelDataInitialized,
+    isLoadingSectionData,
+    isLoadingProgress,
+    isRefreshingProgress,
+    params.sectionId,
+    sectionId,
+  ]);
+
   return (
+    // eslint-disable-next-line react/forbid-dom-props
     <div className={styles.progressV2Page} data-testid="section-progress-v2">
       {!hideTopHeading && <Heading1>{i18n.progressBeta()}</Heading1>}
       <IconKey
@@ -102,14 +132,7 @@ function SectionProgressV2({
           <MoreOptionsDropdown />
         </Heading6>
       </div>
-      <ProgressTableV2
-        isSkeleton={
-          !levelDataInitialized ||
-          isLoadingSectionData ||
-          isLoadingProgress ||
-          isRefreshingProgress
-        }
-      />
+      <ProgressTableV2 isSkeleton={isLoading} />
     </div>
   );
 }
