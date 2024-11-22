@@ -33,7 +33,11 @@
   }
 }
 
-
+.dialogCloseButton {
+  position: absolute;
+  inset-block-start: 8px;
+  inset-inline-end: 8px;
+}
 
 // Dialog colors
 .dialog-light {

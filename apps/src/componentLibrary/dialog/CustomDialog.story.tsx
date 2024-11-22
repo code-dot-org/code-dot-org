@@ -64,10 +64,11 @@ const MultipleTemplate: StoryFn<{
                   setValues({...values, [`dialog-${index}`]: false})
                 }
               >
-                <div id="dsco-dialog-description">
-                  {componentArg.children ||
-                    'This is the content of the Custom Dialog.'}
-                </div>
+                {componentArg.children || (
+                  <div id="dsco-dialog-description">
+                    This is the content of the Custom Dialog.
+                  </div>
+                )}
               </CustomDialog>
             )}
           </div>
@@ -102,7 +103,7 @@ CustomDialogWithCustomContent.args = {
   title: 'Dialog with Custom Content',
   children: (
     <div>
-      <p>
+      <p id="dsco-dialog-description">
         This is custom content rendered inside the dialog. You can put anything
         here.
       </p>
@@ -121,13 +122,17 @@ MultipleCustomDialog.args = {
     {
       title: 'Light Mode Dialog',
       mode: 'light',
-      children: 'Content for the light mode dialog.',
+      children: (
+        <p id="dsco-dialog-description">'Content for the light mode dialog.'</p>
+      ),
       onClose: () => console.log('Light mode dialog closed'),
     },
     {
       title: 'Dark Mode Dialog',
       mode: 'dark',
-      children: 'Content for the dark mode dialog.',
+      children: (
+        <p id="dsco-dialog-description">'Content for the dark mode dialog.'</p>
+      ),
       onClose: () => console.log('Dark mode dialog closed'),
     },
     {
@@ -135,7 +140,7 @@ MultipleCustomDialog.args = {
       mode: 'light',
       children: (
         <div>
-          <p>Here is some custom content!</p>
+          <p id="dsco-dialog-description">Here is some custom content!</p>
           <ul>
             <li>Item A</li>
             <li>Item B</li>

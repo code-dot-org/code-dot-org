@@ -1,6 +1,7 @@
 import classnames from 'classnames';
-import React, {HTMLAttributes, ReactNode, useRef} from 'react';
+import React, {HTMLAttributes, ReactNode, useEffect, useRef} from 'react';
 
+import CloseButton from '@cdo/apps/componentLibrary/closeButton';
 import useBodyScrollLock from '@cdo/apps/componentLibrary/common/hooks/useBodyScrollLock';
 import useEscapeKeyHandler from '@cdo/apps/componentLibrary/common/hooks/useEscapeKeyHandler';
 import useFocusTrap from '@cdo/apps/componentLibrary/common/hooks/useFocusTrap';
@@ -16,6 +17,10 @@ export interface CustomDialogProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
   /** CustomDialog onClose handler */
   onClose?: () => void;
+  /** CustomDialog close button aria label */
+  closeLabel?: string;
+  /** CustomDialog  isDescriptionProvided, if true - it means that consumer of CustomDialog*/
+  isDescriptionProvided?: boolean;
   /** CustomDialog content */
   children?: ReactNode;
 }
@@ -42,6 +47,8 @@ const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({
   mode = 'light',
   className,
   onClose,
+  closeLabel = 'Close dialog',
+  isDescriptionProvided = false,
   children,
   ...HTMLAttributes
 }) => {
@@ -51,18 +58,17 @@ const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({
   useFocusTrap(dialogRef);
   useEscapeKeyHandler(onClose);
 
-  // useEffect(() => {
-  //   if (!description && customContent) {
-  //     const hasDescriptionId = dialogRef.current?.querySelector(
-  //       '#dsco-dialog-description'
-  //     );
-  //     if (!hasDescriptionId) {
-  //       console.warn(
-  //         "Warning: When 'description' is not provided, customContent must include an element with ID 'dsco-dialog-description' for accessibility."
-  //       );
-  //     }
-  //   }
-  // }, [description, customContent]);
+  useEffect(() => {
+    const hasDescriptionId = dialogRef.current?.querySelector(
+      '#dsco-dialog-description'
+    );
+    if (!hasDescriptionId) {
+      console.warn(
+        "Warning: CustomDialog component and it's derivatives (Dialog, Modal components) should have an element with" +
+          " id='dsco-dialog-description' to provide a description of dialog for screen readers."
+      );
+    }
+  }, []);
 
   return (
     <div role="presentation" className={moduleStyles.dialogOverlay}>
@@ -80,6 +86,16 @@ const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({
         {...HTMLAttributes}
       >
         {children}
+
+        {onClose && (
+          <CloseButton
+            aria-label={closeLabel}
+            onClick={onClose}
+            color={mode === 'light' ? 'dark' : 'light'}
+            size="l"
+            className={moduleStyles.dialogCloseButton}
+          />
+        )}
       </div>
     </div>
   );
