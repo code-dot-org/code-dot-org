@@ -277,6 +277,8 @@ const SHARED_ENTRIES = {
   cookieBanner: './src/cookieBanner/cookieBanner.js',
   userHeaderEventLogger: './src/userHeaderEventLogger/userHeaderEventLogger.js',
   statsigWebAnalytics: './src/metrics/statsigWebAnalytics.js',
+  'global_edition/region_switch_confirm':
+    './src/globalEdition/regionSwitchConfirm.js',
 };
 
 // prettier-ignore

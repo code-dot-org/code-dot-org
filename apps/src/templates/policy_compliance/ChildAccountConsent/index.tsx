@@ -83,10 +83,16 @@ const ChildAccountConsent: React.FC<ChildAccountConsentProps> = ({
   usState,
 }) => {
   if (permissionGranted && permissionGrantedDate) {
-    reportEvent(EVENTS.CAP_PARENT_CONSENT_GRANTED, {studentId, usState});
+    reportEvent(EVENTS.CAP_PARENT_CONSENT_GRANTED, {
+      studentId,
+      us_state: usState,
+    });
     return permissionGrantedMessage(permissionGrantedDate);
   } else {
-    reportEvent(EVENTS.CAP_PARENT_CONSENT_EXPIRED, {studentId, usState});
+    reportEvent(EVENTS.CAP_PARENT_CONSENT_EXPIRED, {
+      studentId,
+      us_state: usState,
+    });
     return expiredTokenMessage();
   }
 };

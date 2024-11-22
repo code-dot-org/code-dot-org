@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import i18n from '@cdo/locale';
 
@@ -71,6 +72,22 @@ class Incubator extends Component {
                 url: '/projects/pythonlab/new',
                 text: i18n.incubator_codebridge_python_project_button(),
                 color: Button.ButtonColor.neutralDark,
+              },
+            ]}
+          />
+          <TwoColumnActionBlock
+            imageUrl="shared/images/teacher-announcement/incubator-genai-graphic.png"
+            subHeading={i18n.incubator_genai_title()}
+            description={<span>{i18n.incubator_genai_desc()}</span>}
+            marginBottom="20px"
+            buttons={[
+              {
+                url: '/courses/exploring-gen-ai-2024',
+                text: i18n.incubator_genai_course_button(),
+              },
+              {
+                url: pegasus('/curriculum/generative-ai'),
+                text: i18n.incubator_genai_marketing_button(),
               },
             ]}
           />

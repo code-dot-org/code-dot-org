@@ -69,7 +69,7 @@ describe('ChildAccountConsent', () => {
       expect(sendEventSpy).to.be.calledOnce;
       expect(sendEventSpy).calledWith('CAP Parent Consent Granted', {
         studentId: props.studentId,
-        usState: props.usState,
+        us_state: props.usState,
       });
     });
   });

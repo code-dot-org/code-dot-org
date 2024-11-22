@@ -5,6 +5,7 @@ import {
   ThunkAction,
   ThunkDispatch,
 } from '@reduxjs/toolkit';
+import $ from 'jquery';
 import _ from 'lodash';
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';

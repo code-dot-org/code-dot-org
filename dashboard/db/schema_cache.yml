@@ -2820,7 +2820,7 @@ columns:
     'null': true
     default:
     default_function:
-    collation: utf8mb3_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: ai_confidence_exact_match

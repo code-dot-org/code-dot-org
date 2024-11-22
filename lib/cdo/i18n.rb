@@ -53,6 +53,10 @@ module Cdo
         language_name
       end
 
+      def js_locale(locale)
+        locale.to_s.downcase.tr('-', '_')
+      end
+
       def locale_options
         @locale_options ||= available_languages.map do |cdo_language|
           [language_name(cdo_language[:locale_s]), cdo_language[:locale_s]]
