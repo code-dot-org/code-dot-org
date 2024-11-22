@@ -475,10 +475,15 @@ export default function EnrollForm(props: EnrollFormProps) {
         ['explain_teaching_other', OTHER],
       ];
 
+      const relevantFormState: Partial<EnrollFormState> = {
+        explain_not_teaching: formState.explain_not_teaching,
+        explain_teaching_other: formState.explain_teaching_other,
+      };
+
       gradesTeachingExplainKeys.forEach(([key, value]) => {
         if (
           formState.grades_teaching.some(option => option.includes(value)) &&
-          !formState[key]
+          !relevantFormState[key]
         ) {
           fields.push(key);
         }
@@ -507,7 +512,14 @@ export default function EnrollForm(props: EnrollFormProps) {
     }
 
     return fields;
-  }, [formState, props.email, props.workshop_course, props.workshop_subject]);
+  }, [
+    formState.grades_teaching,
+    formState.explain_teaching_other,
+    formState.explain_not_teaching,
+    props.email,
+    props.workshop_course,
+    props.workshop_subject,
+  ]);
 
   const getRequiredStyles = (key: keyof EnrollFormState) =>
     requiredFields.includes(key) ? styles.required : undefined;
