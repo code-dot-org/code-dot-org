@@ -131,33 +131,38 @@ Then /^I scroll the main blockspace to block "(.*?)"$/ do |block_id|
 end
 
 Then /^block "([^"]*)" is visible in the workspace$/ do |block|
-  id_selector = get_id_selector
   block_id = get_block_id(block)
 
   # Check block existence, blockly-way
   steps "Then block \"#{block}\" has not been deleted"
 
-  # Check block position is within visible blockspace
-  # Get block dimensions
-  block_left = @browser.execute_script("return $(\"[#{id_selector}='#{block_id}']\")[0].getBoundingClientRect().left")
-  block_right = @browser.execute_script("return $(\"[#{id_selector}='#{block_id}']\")[0].getBoundingClientRect().right")
-  block_top = @browser.execute_script("return $(\"[#{id_selector}='#{block_id}']\")[0].getBoundingClientRect().top")
-  block_bottom = @browser.execute_script("return $(\"[#{id_selector}='#{block_id}']\")[0].getBoundingClientRect().bottom")
+  script = <<-JS
+    const workspace = Blockly.getMainWorkspace();
+    const block = workspace.getBlockById('#{block_id}');
+    const boundingRect = block.getBoundingRectangle();
+    const viewMetrics = workspace.getMetricsManager().getViewMetrics();
+    const toolboxWidth = workspace.getToolbox() ? workspace.getToolbox().getWidth() : 0;
 
-  # Get blockspace dimensions
-  # blockspaceRect includes the toolbox on the left, but not the headers on the top.
-  block_space_left = @browser.execute_script('return Blockly.mainBlockSpaceEditor.svg_.getBoundingClientRect().left')
-  block_space_right = @browser.execute_script('return Blockly.mainBlockSpaceEditor.svg_.getBoundingClientRect().right')
-  block_space_top = @browser.execute_script('return Blockly.mainBlockSpaceEditor.svg_.getBoundingClientRect().top')
-  block_space_bottom = @browser.execute_script('return Blockly.mainBlockSpaceEditor.svg_.getBoundingClientRect().bottom')
-  toolbox_width = @browser.execute_script('return Blockly.mainBlockSpaceEditor.getToolboxWidth()')
+    return {
+      blockLeft: boundingRect.left,
+      blockRight: boundingRect.right,
+      blockTop: boundingRect.top,
+      blockBottom: boundingRect.bottom,
+      viewLeft: viewMetrics.left + toolboxWidth,
+      viewRight: viewMetrics.left + viewMetrics.width,
+      viewTop: viewMetrics.top,
+      viewBottom: viewMetrics.top + viewMetrics.height
+    };
+  JS
 
-  # Minimum part of block (in pixels) that must be within workspace to be 'visible'
+  dimensions = @browser.execute_script(script)
+
   block_margin = 10
-  expect(block_bottom).to be > block_space_top + block_margin
-  expect(block_top).to be < block_space_bottom - block_margin
-  expect(block_left).to be < block_space_right - block_margin
-  expect(block_right).to be > block_space_left + block_margin + toolbox_width
+
+  expect(dimensions["blockBottom"]).to be > dimensions["viewTop"] + block_margin
+  expect(dimensions["blockTop"]).to be < dimensions["viewBottom"] - block_margin
+  expect(dimensions["blockLeft"]).to be < dimensions["viewRight"] - block_margin
+  expect(dimensions["blockRight"]).to be > dimensions["viewLeft"] + block_margin
 end
 
 Then /^block "([^"]*)" is child of block "([^"]*)"$/ do |child, parent|
