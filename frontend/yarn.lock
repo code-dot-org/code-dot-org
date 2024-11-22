@@ -462,6 +462,7 @@ __metadata:
   resolution: "@code-dot-org/frontend@workspace:."
   dependencies:
     "@storybook/test-runner": "npm:^0.19.1"
+    prettier: "npm:3.3.3"
     rimraf: "npm:^6.0.1"
     turbo: "npm:^2.3.0"
     typescript: "npm:5.5.4"
