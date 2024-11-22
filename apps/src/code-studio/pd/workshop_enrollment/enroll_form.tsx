@@ -571,7 +571,11 @@ export default function EnrollForm(props: EnrollFormProps) {
     <form id={styles.enroll_form}>
       {props.workshop_course !== COURSE_BUILD_YOUR_OWN && (
         <>
-          <Typography semanticTag="p" visualAppearance="body-three">
+          <Typography
+            semanticTag="p"
+            visualAppearance="body-three"
+            className={styles.no_margin}
+          >
             Fields marked with a<span className="form-required-field"> * </span>
             are required.
           </Typography>
@@ -691,7 +695,7 @@ export default function EnrollForm(props: EnrollFormProps) {
               <Typography
                 semanticTag="p"
                 visualAppearance="body-three"
-                className={styles.sub_label}
+                className={styles.no_margin}
               >
                 This workshop is intended for teachers of grades K-5.
               </Typography>
@@ -1052,13 +1056,15 @@ export default function EnrollForm(props: EnrollFormProps) {
           }
         />
       )}
-      <Button
-        id="submit"
-        onClick={handleClickRegister}
-        disabled={isSubmitting}
-        isPending={isSubmitting}
-        text="Register"
-      />
+      <div>
+        <Button
+          id="submit"
+          onClick={handleClickRegister}
+          disabled={isSubmitting}
+          isPending={isSubmitting}
+          text="Register"
+        />
+      </div>
     </form>
   );
 }

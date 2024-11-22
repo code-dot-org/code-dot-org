@@ -15,6 +15,10 @@
     font-size: inherit;
   }
 
+  .no_margin {
+    margin: 0;
+  }
+
   .school_info_container {
     display: flex;
     flex-direction: column;
@@ -42,9 +46,5 @@
       outline-offset: 2px;
       box-shadow: none;
     }
-  }
-
-  .sub_label {
-    margin: 0;
   }
 }
