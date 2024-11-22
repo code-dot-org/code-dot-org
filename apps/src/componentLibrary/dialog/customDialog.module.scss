@@ -1,6 +1,6 @@
 @import '@cdo/apps/componentLibrary/common/styles/primitiveColors.css';
 
-.dialogOverlay {
+.customDialogOverlay {
   position: fixed;
   inset-block-start: 0;
   inset-inline-start: 0;
@@ -16,34 +16,21 @@
 }
 
 // Common dialog styles
-.dialog {
+.customDialog {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 39.375rem;
-  max-width: 50rem;
-  padding: 2.25rem 3.5rem 2.5rem 3.5rem;
-  gap: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 6px 18px 0 rgb(0 0 0 / 0.3);
-
-  &:has(.dialogIcon) {
-    padding-top: 3.5rem;
-  }
 }
 
-.dialogCloseButton {
+.customDialogCloseButton {
   position: absolute;
   inset-block-start: 8px;
   inset-inline-end: 8px;
 }
 
 // Dialog colors
-.dialog-light {
+.customDialog-light {
   background-color: var(--neutral-base-white);
 }
 
-.dialog-dark {
+.customDialog-dark {
   background-color: var(--neutral-gray-90);
 }
