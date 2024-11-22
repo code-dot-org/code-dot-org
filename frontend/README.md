@@ -3,7 +3,7 @@
 This directory contains the codebase powering Code.org's marketing site and UI component library packages.
 
 **Note**: Most of Code.org's Studio product (student experience, curriculum, teacher tools, etc.) is built in the
- top-level `apps` package and is not currently located in this directory. 
+top-level `apps` package and is not currently located in this directory.
 
 ## What's inside?
 
@@ -19,6 +19,14 @@ This directory uses [Turborepo](https://turbo.build/) to manage the monorepo and
 ### Packages
 
 - `packages/dsco`: The Design System for Code.org including its react components and styling
+
+### Getting Started
+
+Initialize the frontend package:
+
+```bash
+yarn install
+```
 
 ### Build
 
@@ -38,12 +46,13 @@ To develop **all** apps and packages, run the following command:
 yarn dev
 ```
 
-To develop a specific set of apps and packages, apply a Turborepo [filter](https://turbo.build/repo/docs/crafting-your-repository/running-tasks#using-filters).
+To develop a specific set of apps and packages, use `yarn workspace [workspace name] [command]`.
+More information on this command [here](https://yarnpkg.com/cli/workspace).
 
 For example, to only run the design system storybook:
 
 ```bash
-yarn dev -- --filter=@code-dot-org/design-system
+yarn workspace @code-dot-org/design-system-storybook dev
 ```
 
 ## Cleaning
