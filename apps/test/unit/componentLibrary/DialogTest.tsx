@@ -19,7 +19,7 @@ describe('Dialog Component', () => {
   it('should render the dialog with title and description', () => {
     render(<Dialog {...defaultProps} />);
 
-    expect(screen.getByRole('dialog')).toBeInTheDocument();
+    expect(screen.getByRole('alertdialog')).toBeInTheDocument();
     expect(screen.getByText('Test Dialog')).toBeInTheDocument();
     expect(screen.getByText('This is a test description.')).toBeInTheDocument();
   });
