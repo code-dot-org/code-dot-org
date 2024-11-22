@@ -10,6 +10,8 @@
     "build:fast": "tsup",
     "dev": "yarn build:fast --watch",
     "clean": "rimraf dist .turbo",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
     "typecheck": "tsc --noEmit",
     "prepack": "clean-package",
     "postpack": "clean-package restore"
@@ -22,23 +24,30 @@
   "devDependencies": {
     "@code-dot-org/legacy-css": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
+    "@eslint/js": "^9.15.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@types/lodash": "^4",
     "@types/node": "^22.9.0",
     "clean-package": "^2.2.0",
     "esbuild-sass-plugin": "^3.3.1",
+    "eslint": "^9.15.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-storybook": "^0.11.1",
     "glob": "^11.0.0",
+    "globals": "^15.12.0",
     "postcss": "^8.4.49",
     "postcss-modules": "^6.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rimraf": "^6.0.1",
-    "tsup": "^8.3.5"
+    "tsup": "^8.3.5",
+    "typescript-eslint": "^8.15.0"
   },
   "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/dsco/#readme",
   "license": "SEE LICENSE IN LICENSE",
   "main": "components/index.ts",
   "sideEffects": false,
+  "type": "module",
   "files": [
     "dist"
   ],
@@ -60,5 +69,5 @@
     "react": ">=16",
     "react-dom": ">=16"
   },
-  "clean-package": "./clean-package.config.js"
+  "clean-package": "./clean-package.config.cjs"
 }

@@ -7,6 +7,7 @@ This package contains the Code.org engineering code style guide for the Code.org
 This package includes:
 
 1. Typescript Configuration Files (tsconfig)
+2. ESLint Configuration Files
 
 ## Typescript Configuration Files (tsconfig)
 
@@ -22,3 +23,27 @@ typescript compilation.
 ### Current Flavors
 
 1. `tsconfig.node[version].json`: A tsconfig targeted for a specific node version.
+
+## ESLint Configuration Files
+
+ESLint [flat config](https://eslint.org/docs/latest/use/configure/configuration-files) style configuration files are available
+in the `eslint` directory for various flavors.
+
+When updating ESLint configuration files in this package, be sure to keep them as general as possible. 
+Consuming packages can override defaults as needed.
+
+### Current Flavors
+
+1. `node`: Recommended node defaults from ESLint
+2. `react`: Recommended react defaults from ESLint
+
+### Usage
+
+Import and spread the shared configuation in your `eslint.config.mjs`:
+
+```js
+import cdoEslint from './eslint/node.mjs';
+
+/** @type {import('eslint').Linter.Config[]} */
+export default [...cdoEslint];
+```
