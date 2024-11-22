@@ -3,5 +3,5 @@
   // See: https://www.npmjs.com/package/@tsconfig/node22
   // Only add global typescript configuration changes that will apply to all packages
   // Specific typescript changes should be made in the consuming package
-  "extends": "@tsconfig/node22/tsconfig.json",
+  "extends": "@tsconfig/node22/tsconfig.json"
 }

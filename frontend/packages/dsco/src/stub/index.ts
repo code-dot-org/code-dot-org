@@ -1,2 +1,2 @@
-export { Stub, Stub as default } from "./Stub";
-export type { StubProps } from "./Stub";
+export {Stub, Stub as default} from './Stub';
+export type {StubProps} from './Stub';

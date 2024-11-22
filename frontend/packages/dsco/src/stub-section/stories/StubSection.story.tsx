@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react';
- 
-import { StubSection } from '../StubSection';
- 
+import type {Meta, StoryObj} from '@storybook/react';
+
+import {StubSection} from '../StubSection';
+
 const meta: Meta<typeof StubSection> = {
   /* 👇 The title prop is optional.
    * See https://storybook.js.org/docs/configure/#configure-story-loading
@@ -10,7 +10,6 @@ const meta: Meta<typeof StubSection> = {
   title: 'Atoms/StubSection',
   component: StubSection,
 };
- 
 
 export default meta;
 type Story = StoryObj<typeof StubSection>;
@@ -18,6 +17,6 @@ type Story = StoryObj<typeof StubSection>;
 export const Empty: Story = {
   args: {
     label: 'Hello World!',
-    backgroundColor: 'white'
-  }
+    backgroundColor: 'white',
+  },
 };
