@@ -66,6 +66,13 @@ const EVENTS = {
   CAP_STUDENT_WARNING_LINK_CLICKED:
     'CAP Teacher Students Warning Modal Documentation Clicked',
   CAP_AGE_GATED_BANNER_SHOWN: 'CAP Teacher Students Banner Shown',
+  CAP_AGE_GATED_SECTIONS_BANNER_SHOWN: 'CAP Teacher Sections Banner Shown',
+  CAP_AGE_GATED_SECTIONS_MODAL_SHOWN:
+    'CAP Teacher Sections Warning Modal Shown',
+  CAP_AGE_GATED_SECTIONS_MODAL_CLOSED:
+    'CAP Teacher Sections Warning Modal Closed',
+  CAP_AGE_GATED_SECTIONS_TABLE_SECTION_NAME_LINK_CLICKED:
+    'CAP Teacher Sections Table Section Name Clicked',
 
   // School Selection Component
   COUNTRY_SELECTED: 'User Selects Country',
