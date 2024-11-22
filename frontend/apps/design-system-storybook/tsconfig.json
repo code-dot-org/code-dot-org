@@ -1,4 +1,4 @@
 {
-  "extends": "@code-dot-org/lint-config/typescript/tsconfig.node22.json",
+  "extends": "@code-dot-org/lint-config/typescript/tsconfig.react.json",
   "include": [".storybook/**/*"]
 }
