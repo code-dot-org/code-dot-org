@@ -3,8 +3,9 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
+    "typecheck": "turbo typecheck",
     "dev": "turbo dev",
-    "lint": "turbo lint",
+    "lint": "turbo lint typecheck",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
