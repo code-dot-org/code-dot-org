@@ -541,9 +541,11 @@ class User < ApplicationRecord
   has_many :teachers, through: :sections_as_student, source: :instructors
 
   belongs_to :secret_picture, optional: true
-  before_create :generate_secret_picture
 
-  before_create :generate_secret_words
+  with_options if: :sponsored? do
+    before_create :generate_secret_picture
+    before_create :generate_secret_words
+  end
 
   before_create :update_default_share_setting
 

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-20 19:43:17 UTC",
+    "serialized_at": "2024-11-21 16:27:39 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -2538,6 +2538,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-U2L4-CFU_matplotlib"
+        ],
         "progression": "Introduction to Matplotlib"
       },
       "bonus": false,
@@ -2560,6 +2563,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_cfu-matPlotLib_Explain"
+        ],
         "progression": "Introduction to Matplotlib"
       },
       "bonus": false,
@@ -2758,31 +2764,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "SP-PL-DS-U2L6-L7"
-        ],
-        "progression": "Assessing and Grouping Data "
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-PL-DS-U2L6-L7"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "3f61926f-2b20-40f5-8e5b-f79f72284d99"
-      },
-      "level_keys": [
-        "SP-PL-DS-U2L6-L7"
-      ]
-    },
-    {
-      "chapter": 97,
-      "position": 49,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "sp-pl-DS-Panels_indexing"
         ],
         "progression": "Assessing and Grouping Data "
@@ -2802,9 +2783,9 @@
       ]
     },
     {
-      "chapter": 98,
-      "position": 50,
-      "activity_section_position": 5,
+      "chapter": 97,
+      "position": 49,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2824,6 +2805,31 @@
       },
       "level_keys": [
         "SP-PL-DS-groupby"
+      ]
+    },
+    {
+      "chapter": 98,
+      "position": 50,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-PL-DS-U2L6-L7"
+        ],
+        "progression": "Assessing and Grouping Data "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-PL-DS-U2L6-L7"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "3f61926f-2b20-40f5-8e5b-f79f72284d99"
+      },
+      "level_keys": [
+        "SP-PL-DS-U2L6-L7"
       ]
     },
     {
@@ -5045,18 +5051,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-PL-DS-U2L6-L7",
-        "script_level.level_keys": [
-          "SP-PL-DS-U2L6-L7"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "3f61926f-2b20-40f5-8e5b-f79f72284d99"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "sp-pl-DS-Panels_indexing",
         "script_level.level_keys": [
           "sp-pl-DS-Panels_indexing"
@@ -5072,6 +5066,18 @@
         "level.key": "SP-PL-DS-groupby",
         "script_level.level_keys": [
           "SP-PL-DS-groupby"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "3f61926f-2b20-40f5-8e5b-f79f72284d99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-PL-DS-U2L6-L7",
+        "script_level.level_keys": [
+          "SP-PL-DS-U2L6-L7"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",

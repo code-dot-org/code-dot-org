@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": ">This level uses **.iloc[]** to access and modify values. Give it a try!\r\n\r\n# iloc[] to Update\r\n\r\n::: details [**✅ Step 1**]\r\n- How do you think you could use `iloc[]` to update the value in the fourth row, second column from \"NaN\" to \"4/16/1992\"?\r\n- Give it a try!\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nPrint the first few lines of the data _again_ to verify that the data was updated.\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nReflect on: *How does `iloc[]` allow us to update specific elements? Why is it important to carefully check for the right row and column when modifying data?*\r\n:::\r\n\r\n",
+    "long_instructions": ">This level uses **.iloc[]** to access and modify values. Give it a try!\r\n\r\n# iloc[] to Update\r\n\r\n::: details [**✅ Step 1**]\r\n- How do you think you could use `iloc[]` to update the value in the fourth row, second column from \"NaN\" to \"4/16/1992\"?\r\n- Give it a try!\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nPrint the first few lines of the data _again_ to verify that the data was updated.\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nReflect on: *How does `iloc[]` allow us to update specific elements? Why is it important to carefully check for the right row and column when modifying data?*\r\n:::\r\n\r\n::: details [**🔎 Show me how**]\r\n![](https://images.code.org/998a3af38d6e8a1a20c2c37ad49acbb9-image-1732222957313.png)\r\n:::\r\n\r\n\r\n",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -43,6 +43,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-07T18:34:24.502+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L6-L7_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L6-L7_2024-pilot\"},{\"changed_at\":\"2024-10-07 18:58:51 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-07T18:34:24.502+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L6-L7_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L6-L7_2024-pilot\"},{\"changed_at\":\"2024-10-07 18:58:51 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-21 21:03:04 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Pythonlab>

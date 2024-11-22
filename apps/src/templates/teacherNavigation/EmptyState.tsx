@@ -5,25 +5,18 @@ import {Heading3, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import styles from './teacher-navigation.module.scss';
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
-export interface EmptyStateContent {
+export interface EmptyStateProps {
   headline: string;
   descriptionText: string | null;
   imageComponent: JSX.Element;
   button: JSX.Element | null;
 }
-
-interface EmptyStateProps {
-  emptyStateDetails: EmptyStateContent;
-}
-
-export const EmptyState: React.FC<EmptyStateProps> = props => {
-  const {emptyStateDetails} = props;
-
-  const imageComponent = emptyStateDetails?.imageComponent;
-  const headline = emptyStateDetails?.headline;
-  const descriptionText = emptyStateDetails?.descriptionText;
-  const button = emptyStateDetails?.button;
-
+export const EmptyState: React.FC<EmptyStateProps> = ({
+  imageComponent,
+  headline,
+  descriptionText,
+  button,
+}) => {
   return (
     <div className={dashboardStyles.emptyClassroomDiv}>
       <div className={dashboardStyles.emptyClassroomDiv}>
