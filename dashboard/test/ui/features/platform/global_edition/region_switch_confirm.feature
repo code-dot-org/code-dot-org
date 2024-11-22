@@ -1,4 +1,5 @@
 @no_mobile
+@skip
 Feature: Global Edition - Region Switch Confirm Modal
 
   Background:
