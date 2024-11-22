@@ -33,7 +33,7 @@
 
   textarea,
   fieldset,
-  input,
+  input:not([type='checkbox']),
   label,
   label > div {
     width: 100%;
