@@ -7,11 +7,13 @@
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": [".next/**", "!.next/cache/**", "dist/**"]
     },
+    "//#format": {},
+    "//#format:fix": {},
     "lint": {
-      "dependsOn": ["^lint", "^prettier", "^typecheck"]
+      "dependsOn": ["^lint", "^prettier", "^typecheck", "//#format"]
     },
     "lint:fix": {
-      "dependsOn": ["^lint:fix", "prettier:fix"]
+      "dependsOn": ["^lint:fix", "prettier:fix", "//#format:fix"]
     },
     "prettier": {
       "dependsOn": ["^prettier"]
