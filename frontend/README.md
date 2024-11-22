@@ -1,6 +1,9 @@
 # Code.org Frontend
 
-This directory represents the frontend codebase powering Code.org with the exception of the Studio `apps` package. 
+This directory contains the codebase powering Code.org's marketing site and UI component library packages.
+
+**Note**: Most of Code.org's Studio product (student experience, curriculum, teacher tools, etc.) is built in the
+ top-level `apps` package and is not currently located in this directory. 
 
 ## What's inside?
 
