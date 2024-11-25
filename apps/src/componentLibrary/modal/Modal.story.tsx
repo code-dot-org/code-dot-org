@@ -80,7 +80,8 @@ export const DefaultModal = SingleTemplate.bind({});
 DefaultModal.args = {
   title: 'Default Modal',
   description:
-    'This is a longer description for the default modal. It is designed to test how the modal handles large amounts of text and ensures proper display and scrolling behaviors.',
+    'This is a longer description for the default modal. It is designed to test how the modal handles large' +
+    ' amounts of text and ensures proper display and scrolling behaviors.',
   primaryButtonProps: {
     text: 'Primary Action',
     onClick: () => console.log('Primary action clicked'),
@@ -88,6 +89,19 @@ DefaultModal.args = {
   secondaryButtonProps: {
     text: 'Secondary Action',
     onClick: () => console.log('Secondary action clicked'),
+  },
+  onClose: () => null,
+};
+
+export const ModalWithoutSecondaryButton = SingleTemplate.bind({});
+ModalWithoutSecondaryButton.args = {
+  title: 'Modal without Secondary Button',
+  description:
+    'This modal provides only a primary button for user interaction. It is useful for scenarios where only one' +
+    ' action is required or desired.',
+  primaryButtonProps: {
+    text: 'Primary Action',
+    onClick: () => console.log('Primary action clicked'),
   },
   onClose: () => null,
 };
@@ -112,8 +126,10 @@ export const ModalWithImageTopPlacement = SingleTemplate.bind({});
 ModalWithImageTopPlacement.args = {
   title: 'Modal with Top Image Placement',
   description:
-    'This modal includes an image placed at the top. This placement ensures that the visual content is prominent and aligns with the modal content effectively.',
-  imageUrl: 'https://via.placeholder.com/150', // Example image URL
+    'This modal includes an image placed at the top. This placement ensures that the visual content is prominent' +
+    ' and aligns with the modal content effectively.',
+  imageUrl:
+    'https://studio.code.org/shared/images/teacher-announcement/incubator-rubrics-pilot-graphic.png', // Example image URL
   imagePlacement: 'top',
   primaryButtonProps: {
     text: 'Primary Action',
@@ -130,8 +146,9 @@ export const ModalWithImageInlinePlacement = SingleTemplate.bind({});
 ModalWithImageInlinePlacement.args = {
   title: 'Modal with Inline Image Placement',
   description:
-    'This modal includes an image placed inline with the content. It demonstrates how visual content can be integrated directly into the text for a cohesive layout.',
-  imageUrl: 'https://via.placeholder.com/150', // Example image URL
+    'This modal includes an image placed inline with the content. It demonstrates how visual content can be' +
+    ' integrated directly into the text for a cohesive layout.',
+  imageUrl: 'https://studio.code.org/blockly/media/dance/placeholder.png', // Example image URL
   imagePlacement: 'inline',
   primaryButtonProps: {
     text: 'Primary Action',
@@ -165,7 +182,8 @@ export const ModalWithCustomBottomContent = SingleTemplate.bind({});
 ModalWithCustomBottomContent.args = {
   title: 'Modal with Custom Bottom Content',
   description:
-    'This modal includes custom content at the bottom to demonstrate the flexibility of adding additional actions or information.',
+    'This modal includes custom content at the bottom to demonstrate the flexibility of adding additional' +
+    ' actions or information.',
   customBottomContent: (
     <div style={{textAlign: 'center'}}>
       <Button text="Custom button" onClick={() => null} />
@@ -202,7 +220,8 @@ MultipleModals.args = {
     {
       title: 'Modal 2 with Image (Top Placement)',
       description:
-        'Description for modal 3 with an image at the top. This demonstrates the visual integration of imagery within a modal.',
+        'Description for modal 3 with an image at the top. This demonstrates the visual integration of imagery' +
+        ' within a modal.',
       imageUrl: 'https://via.placeholder.com/150',
       imagePlacement: 'top',
       primaryButtonProps: {

@@ -25,7 +25,7 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   /** Modal primary button props */
   primaryButtonProps: ButtonProps;
   /** Modal secondary button props */
-  secondaryButtonProps: ButtonProps;
+  secondaryButtonProps?: ButtonProps;
   /** Modal color mode */
   mode?: 'light' | 'dark';
   /** Custom class name */
@@ -42,11 +42,13 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
 
 // TODO:
 // add content section scroll possibility +
-// check aria props
-// alertDialog vs Dialog?
-// always show 2 buttons ?
-// make sure colors for dark modal image are alright ?
-// check the final image sizing ?
+// check aria props +
+// alertDialog vs Dialog +
+// always show 2 buttons - secondary can be optional +
+// make sure colors for dark modal image are alright +
+// check the final image sizing +
+// check if it's possible for inline placement image to stay on the same place +
+// add tests
 
 /**
  * ## Production-ready Checklist:
@@ -83,7 +85,7 @@ const Modal: React.FunctionComponent<ModalProps> = ({
   useEscapeKeyHandler(onClose);
 
   return (
-    <div role="presentation" className={moduleStyles.dialogOverlay}>
+    <div role="presentation" className={moduleStyles.modalOverlay}>
       <div
         role="dialog"
         ref={modalRef}
@@ -92,7 +94,7 @@ const Modal: React.FunctionComponent<ModalProps> = ({
         aria-describedby="dsco-dialog-description"
         className={classnames(
           moduleStyles.dialog,
-          moduleStyles[`dialog-${mode}`],
+          moduleStyles[`modal-${mode}`],
           className
         )}
         {...HTMLAttributes}
@@ -111,7 +113,7 @@ const Modal: React.FunctionComponent<ModalProps> = ({
           {description && (
             <BodyTwoText
               id="dsco-dialog-description"
-              className={moduleStyles.dialogContent}
+              className={moduleStyles.modalDescription}
             >
               {description}
             </BodyTwoText>
@@ -120,12 +122,13 @@ const Modal: React.FunctionComponent<ModalProps> = ({
         </div>
         <hr />
         <div className={moduleStyles.modalActionsSection}>
-          <Button
-            type="secondary"
-            color={mode === 'light' ? 'black' : 'white'}
-            {...secondaryButtonProps}
-          />
-
+          {secondaryButtonProps && (
+            <Button
+              type="secondary"
+              color={mode === 'light' ? 'black' : 'white'}
+              {...secondaryButtonProps}
+            />
+          )}
           <Button
             type="primary"
             color={mode === 'light' ? 'purple' : 'white'}

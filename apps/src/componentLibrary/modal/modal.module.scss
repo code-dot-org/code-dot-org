@@ -1,7 +1,7 @@
 @import '@cdo/apps/componentLibrary/common/styles/primitiveColors.css';
 
-// Dialog common styles
-.dialogOverlay {
+// Modal backdrop common styles
+.modalOverlay {
   position: fixed;
   inset-block-start: 0;
   inset-inline-start: 0;
@@ -16,8 +16,8 @@
   background-color: var(--neutral-black-alpha-90);
 }
 
-// Common dialog styles
-.dialog {
+// Common Modal styles
+.modal {
   position: relative;
   display: flex;
   min-width: 600px;
@@ -83,11 +83,11 @@
   img {
     display: flex;
     height: 240px;
-    padding: 10px;
+    max-width: 100%;
     flex-direction: column;
     align-items: center;
     gap: 0.625rem;
-    align-self: stretch;
+    align-self: center;
 
     border-radius: 0.25rem;
     background: var(--neutral-gray-20);
@@ -105,13 +105,17 @@
     display: flex;
     width: 240px;
     height: 240px;
-    padding: 10px;
     flex-direction: column;
     align-items: center;
     gap: 0.625rem;
 
     border-radius: 0.25rem;
     background: var(--neutral-gray-20);
+  }
+
+  .modalDescription {
+    max-height: 240px;
+    overflow: auto;
   }
 }
 
@@ -129,12 +133,12 @@
   inset-inline-end: 8px;
 }
 
-// Dialog colors
-.dialog-light {
+// Modal colors
+.modal-light {
   background-color: var(--neutral-base-white);
 }
 
-.dialog-dark {
+.modal-dark {
   background-color: var(--neutral-gray-90);
 
   .modalTitleSection h3,
