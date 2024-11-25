@@ -36,6 +36,8 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   closeLabel?: string;
   /** Modal image url */
   imageUrl?: string;
+  /** Modal image alt */
+  imageAlt?: string;
   /** Modal image placement */
   imagePlacement?: 'top' | 'inline';
 }
@@ -75,6 +77,7 @@ const Modal: React.FunctionComponent<ModalProps> = ({
   onClose,
   closeLabel = 'Close modal',
   imageUrl,
+  imageAlt,
   imagePlacement = 'top',
   ...HTMLAttributes
 }) => {
@@ -93,7 +96,7 @@ const Modal: React.FunctionComponent<ModalProps> = ({
         aria-label={title}
         aria-describedby="dsco-dialog-description"
         className={classnames(
-          moduleStyles.dialog,
+          moduleStyles.modal,
           moduleStyles[`modal-${mode}`],
           className
         )}
@@ -109,7 +112,7 @@ const Modal: React.FunctionComponent<ModalProps> = ({
             moduleStyles[`modalContentSection-${imagePlacement}-imagePlacement`]
           )}
         >
-          {imageUrl && <img src={imageUrl} alt="modal" />}
+          {imageUrl && <img src={imageUrl} alt={imageAlt || 'modal-image'} />}
           {description && (
             <BodyTwoText
               id="dsco-dialog-description"

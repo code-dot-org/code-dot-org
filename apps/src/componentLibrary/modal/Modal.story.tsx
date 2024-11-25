@@ -130,6 +130,7 @@ ModalWithImageTopPlacement.args = {
     ' and aligns with the modal content effectively.',
   imageUrl:
     'https://studio.code.org/shared/images/teacher-announcement/incubator-rubrics-pilot-graphic.png', // Example image URL
+  imageAlt: 'Example image placed on top of the modal',
   imagePlacement: 'top',
   primaryButtonProps: {
     text: 'Primary Action',
@@ -149,6 +150,7 @@ ModalWithImageInlinePlacement.args = {
     'This modal includes an image placed inline with the content. It demonstrates how visual content can be' +
     ' integrated directly into the text for a cohesive layout.',
   imageUrl: 'https://studio.code.org/blockly/media/dance/placeholder.png', // Example image URL
+  imageAlt: 'Example image placed alongside modal description',
   imagePlacement: 'inline',
   primaryButtonProps: {
     text: 'Primary Action',

@@ -51,10 +51,11 @@ describe('Modal Component', () => {
       <Modal
         {...defaultProps}
         imageUrl="https://via.placeholder.com/150"
+        imageAlt="Custom Modal Image"
         imagePlacement="inline"
       />
     );
-    const image = screen.getByAltText('modal');
+    const image = screen.getByAltText('Custom Modal Image');
     expect(image).toBeInTheDocument();
     expect(image).toHaveAttribute('src', 'https://via.placeholder.com/150');
   });
