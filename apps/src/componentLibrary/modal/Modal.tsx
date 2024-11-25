@@ -48,7 +48,7 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
 // make sure colors for dark modal image are alright +
 // check the final image sizing +
 // check if it's possible for inline placement image to stay on the same place +
-// add tests
+// add tests +
 
 /**
  * ## Production-ready Checklist:
