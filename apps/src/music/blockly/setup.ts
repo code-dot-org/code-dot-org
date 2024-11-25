@@ -60,6 +60,8 @@ export function setUpBlocklyForMusicLab() {
     Blockly.JavaScript.forBlock[blockType] = blockConfig.generator;
   }
 
+  Blockly.JavaScript.addReservedWords('Sequencer');
+
   Blockly.fieldRegistry.register(FIELD_SOUNDS_TYPE, FieldSounds);
   Blockly.fieldRegistry.register(FIELD_PATTERN_TYPE, FieldPattern);
   Blockly.fieldRegistry.register(FIELD_PATTERN_AI_TYPE, FieldPatternAi);
