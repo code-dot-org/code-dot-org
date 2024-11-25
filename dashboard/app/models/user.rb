@@ -541,9 +541,11 @@ class User < ApplicationRecord
   has_many :teachers, through: :sections_as_student, source: :instructors
 
   belongs_to :secret_picture, optional: true
-  before_create :generate_secret_picture
 
-  before_create :generate_secret_words
+  with_options if: :sponsored? do
+    before_create :generate_secret_picture
+    before_create :generate_secret_words
+  end
 
   before_create :update_default_share_setting
 
@@ -2219,11 +2221,15 @@ class User < ApplicationRecord
       sharing_disabled: sharing_disabled?,
       has_ever_signed_in: has_ever_signed_in?,
       ai_tutor_access_denied: !!ai_tutor_access_denied,
-      at_risk_age_gated: Policies::ChildAccount.parent_permission_required?(self),
+      at_risk_age_gated_date: at_risk_age_gated_date,
       child_account_compliance_state: cap_status,
       latest_permission_request_sent_at: latest_parental_permission_request&.updated_at,
       us_state: us_state,
     }
+  end
+
+  def at_risk_age_gated_date
+    Policies::ChildAccount::StatePolicies.state_policy(self)&.dig(:lockout_date) unless Policies::ChildAccount.compliant?(self, future: true)
   end
 
   def has_ever_signed_in?

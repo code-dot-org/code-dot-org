@@ -1,4 +1,4 @@
-require 'cdo/global_edition'
+require 'cdo/i18n'
 
 module LocaleHelper
   # Symbol of best valid locale code to be used for I18n.locale.
@@ -11,7 +11,7 @@ module LocaleHelper
   end
 
   def locale_dir
-    Dashboard::Application::LOCALES[locale.to_s][:dir] || 'ltr'
+    Cdo::I18n.locale_direction(locale)
   end
 
   # String representing the 2 letter language code.
@@ -22,35 +22,7 @@ module LocaleHelper
 
   # String representing the Locale code for the Blockly client code.
   def js_locale(locale_code = locale)
-    locale_code.to_s.downcase.tr('-', '_')
-  end
-
-  def options_for_locale_select(global_edition: false)
-    options = []
-
-    Dashboard::Application::LOCALES.each do |locale, data|
-      next unless I18n.available_locales.include?(locale.to_sym) && data.is_a?(Hash)
-      name = data[:native]
-      name = (data[:debug] ? "#{name} DBG" : name)
-      options << [name, locale]
-    end
-
-    if global_edition && DCDO.get('global_edition_region_selection_enabled', false)
-      # Adds language options with the switch to the regional (global) version of the platform.
-      Cdo::GlobalEdition::REGIONS.excluding('en', 'root').each do |region|
-        region_locale = Cdo::GlobalEdition.region_locale(region)
-        locale_name = Dashboard::Application::LOCALES.dig(region_locale, :native)
-        options << ["#{locale_name} (global)", [region_locale, region].join('|')] if locale_name
-      end
-    end
-
-    options.sort_by(&:second)
-  end
-
-  def current_locale_option(global_edition: false)
-    return locale unless global_edition
-    # Combines the current locale with the Global Edition region, e.g. "fa-IR|fa".
-    [locale, request.ge_region].select(&:presence).join('|')
+    Cdo::I18n.js_locale(locale_code)
   end
 
   def options_for_locale_code_select

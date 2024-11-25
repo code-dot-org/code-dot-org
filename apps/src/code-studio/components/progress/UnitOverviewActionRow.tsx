@@ -259,13 +259,11 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
           {selectedSection && showAssignButton && (
             <div className={styles.assignButton}>
               <MultipleAssignButton
-                sectionId={selectedSection.id}
                 courseOfferingId={courseOfferingId}
                 courseVersionId={courseVersionId}
                 courseId={currentCourseId}
                 scriptId={scriptId}
                 assignmentName={unitTitle}
-                sectionName={selectedSection.name}
                 reassignConfirm={onReassignConfirm}
                 isAssigningCourse={false}
                 isStandAloneUnit={courseLink === null}

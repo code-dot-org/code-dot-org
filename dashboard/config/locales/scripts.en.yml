@@ -19087,7 +19087,17 @@ en:
               name: Functions
             lesson-5:
               name: Project
-          lesson_groups: {}
+            lesson-6:
+              name: Songwriter's Toolbox
+            lesson-7:
+              name: Producer Power
+            lesson-8:
+              name: Sound Designer’s Studio
+          lesson_groups:
+            lessonGroup-3:
+              display_name: New progression
+            lessonGroup-2:
+              display_name: Original progression
           name: pilot-elem-music-lab
           title: Intro to Programming with Music Lab
           description_audience: ''

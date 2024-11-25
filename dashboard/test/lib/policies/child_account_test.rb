@@ -44,12 +44,14 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:non_compliant_child, :with_interpolated_colorado], true],
       [[:non_compliant_child, :with_interpolated_wa], true],
     ]
+    failures = []
     test_matrix.each do |traits, compliance|
       user = create(*traits)
       actual = Policies::ChildAccount.compliant?(user)
       failure_msg = "Expected compliant?(#{traits}) to be #{compliance} but it was #{actual}"
-      assert_equal compliance, actual, failure_msg
+      failures.append(failure_msg) if compliance != actual
     end
+    assert failures.empty?, failures.join("\n")
   end
 
   test 'show_cap_state_modal?' do
@@ -100,73 +102,6 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     assert failures.empty?, failures.join("\n")
   end
 
-  describe 'state_policies' do
-    let(:state_policies) {Policies::ChildAccount.state_policies}
-    let(:dcdo_cpa_grace_period_duration) {99.days}
-    let(:dcdo_cpa_schedule) {{}}
-
-    around do |test|
-      Timecop.freeze {test.call}
-    end
-
-    before do
-      DCDO.stubs(:get).with('cpa_grace_period_duration', 14.days).returns(dcdo_cpa_grace_period_duration)
-      DCDO.stubs(:get).with('cpa_schedule', {}).returns(dcdo_cpa_schedule)
-    end
-
-    describe 'for Colorado' do
-      let(:co_state_policy) {state_policies['CO']}
-      let(:default_start_date) {DateTime.parse('2023-07-01T00:00:00MDT')}
-      let(:default_lockout_date) {DateTime.parse('2024-07-01T00:00:00MDT')}
-
-      it 'contains expected max age' do
-        _(co_state_policy[:max_age]).must_equal 12
-      end
-
-      it 'contains expected name' do
-        _(co_state_policy[:name]).must_equal 'CPA'
-      end
-
-      it 'contains expected grace_period_duration' do
-        _(co_state_policy[:grace_period_duration]).must_equal dcdo_cpa_grace_period_duration
-      end
-
-      it 'contains expected default start_date' do
-        _(co_state_policy[:start_date]).must_equal default_start_date
-      end
-
-      it 'contains expected default lockout_date' do
-        _(co_state_policy[:lockout_date]).must_equal default_lockout_date
-      end
-
-      context 'when DCDO cpa_schedule with only cpa_new_user_lockout is configured' do
-        let(:dcdo_cpa_schedule) do
-          {
-            'cpa_new_user_lockout' => cpa_new_user_lockout.iso8601
-          }
-        end
-        let(:cpa_new_user_lockout) {default_start_date.ago(100.days)}
-
-        it 'contains DCDO configured start_date' do
-          _(co_state_policy[:start_date]).must_equal cpa_new_user_lockout
-        end
-      end
-
-      context 'when DCDO cpa_schedule with only cpa_all_user_lockout is configured' do
-        let(:dcdo_cpa_schedule) do
-          {
-            'cpa_all_user_lockout' => cpa_all_user_lockout.iso8601
-          }
-        end
-        let(:cpa_all_user_lockout) {default_lockout_date.ago(21.days)}
-
-        it 'contains DCDO configured lockout_date' do
-          _(co_state_policy[:lockout_date]).must_equal cpa_all_user_lockout
-        end
-      end
-    end
-  end
-
   describe '.grace_period_end_date' do
     let(:grace_period_end_date) {Policies::ChildAccount.grace_period_end_date(user)}
 
@@ -191,7 +126,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
 
     before do
-      Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
+      Policies::ChildAccount::StatePolicies.stubs(:state_policy).with(user).returns(user_state_policy)
     end
 
     it 'returns end date of user grace period based on its start time' do
@@ -263,7 +198,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
 
     before do
-      Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
+      Policies::ChildAccount::StatePolicies.stubs(:state_policy).with(user).returns(user_state_policy)
     end
 
     context 'the user is a teacher' do
@@ -320,6 +255,8 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
     let(:user) {build_stubbed(:student)}
     let(:approximate) {true}
+    # Use default value
+    let(:future) {nil}
 
     let(:user_cap_compliant?) {false}
     let(:user_grace_period_end_date) {14.days.since}
@@ -333,10 +270,10 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
 
     before do
-      Policies::ChildAccount.stubs(:compliant?).with(user).returns(user_cap_compliant?)
+      Policies::ChildAccount.stubs(:compliant?).with(user, future: !!future).returns(user_cap_compliant?)
       Policies::ChildAccount.stubs(:grace_period_end_date).with(user, approximate: approximate).returns(user_grace_period_end_date)
       Policies::ChildAccount.stubs(:user_predates_policy?).with(user).returns(user_predates_cap_policy?)
-      Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
+      Policies::ChildAccount::StatePolicies.stubs(:state_policy).with(user).returns(user_state_policy)
     end
 
     it 'returns state policy start date' do
@@ -552,7 +489,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
   end
 
   describe '.parent_permission_required?' do
-    let(:parent_permission_required?) {Policies::ChildAccount.parent_permission_required?(user)}
+    let(:parent_permission_required?) {Policies::ChildAccount.parent_permission_required?(user, future: future)}
 
     # Create, initially, a student that does require parent permission
     let(:user_type) {'student'}
@@ -563,17 +500,21 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     let(:user) {build_stubbed(:user, user_type: user_type, birthday: user_age&.year&.ago)}
 
     # This is the policy: max age of 12 with a lockout date 1 year after the start date
-    let(:user_state_policy_start_date) {DateTime.now}
+    let(:user_state_policy_start_date) {1.second.ago}
     let(:user_state_policy_max_age) {12}
     let(:user_lockout_date) {user_state_policy_start_date + 1.year}
     let(:user_state_policy) {{start_date: user_state_policy_start_date, lockout_date: user_lockout_date, max_age: user_state_policy_max_age}}
+
+    # Use the default `future` flag if we want to know if the student will need
+    # parent permission in the future.
+    let(:future) {nil}
 
     around do |test|
       Timecop.freeze {test.call}
     end
 
     before do
-      Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
+      Policies::ChildAccount::StatePolicies.stubs(:state_policy).with(user).returns(user_state_policy)
       Policies::ChildAccount.stubs(:personal_account?).with(user).returns(user_account_is_personal?)
     end
 
@@ -611,6 +552,20 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       it 'returns false' do
         _(parent_permission_required?).must_equal false
       end
+
+      context 'do they need permission now?' do
+        let(:future) {false}
+        it 'returns false' do
+          _(parent_permission_required?).must_equal false
+        end
+      end
+
+      context 'do they need permission in the future?' do
+        let(:future) {true}
+        it 'returns true' do
+          _(parent_permission_required?).must_equal true
+        end
+      end
     end
 
     context 'when user is not covered by a US State child account policy' do
@@ -626,6 +581,46 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
       it 'returns false' do
         _(parent_permission_required?).must_equal false
+      end
+    end
+  end
+
+  describe '.compliant?' do
+    let(:user) {create(:student)}
+    let(:future) {nil}
+
+    let(:parent_permission_required) {false}
+    let(:compliant) {Policies::ChildAccount.compliant?(user, future: !!future)}
+
+    before do
+      Policies::ChildAccount.stubs(:parent_permission_required?).with(user, future: !!future).returns(parent_permission_required)
+    end
+
+    it 'returns true' do
+      _(compliant).must_equal true
+    end
+
+    context 'permission is required' do
+      let(:parent_permission_required) {true}
+
+      it 'returns false' do
+        _(compliant).must_equal false
+      end
+    end
+
+    context 'in the future' do
+      let(:future) {true}
+
+      it 'returns true' do
+        _(compliant).must_equal true
+      end
+
+      context 'permission is required' do
+        let(:parent_permission_required) {true}
+
+        it 'returns false' do
+          _(compliant).must_equal false
+        end
       end
     end
   end

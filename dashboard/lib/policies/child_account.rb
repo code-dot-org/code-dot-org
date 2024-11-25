@@ -1,5 +1,4 @@
 require 'cdo/shared_constants'
-require 'cpa'
 require 'date'
 
 class Policies::ChildAccount
@@ -41,8 +40,11 @@ class Policies::ChildAccount
   # Is this user compliant with our Child Account Policy(cap)?
   # For students under-13, in Colorado, with a personal email login: we require
   # parent permission before the student can start using their account.
-  def self.compliant?(user)
-    return true unless parent_permission_required?(user)
+  # @param [Boolean] future Set to true if you want to know if the user will be
+  # compliant in the future after CAP goes into affect in their US State.
+  # Defaults to `false`
+  def self.compliant?(user, future: false)
+    return true unless parent_permission_required?(user, future: future)
     ComplianceState.permission_granted?(user)
   end
 
@@ -52,7 +54,7 @@ class Policies::ChildAccount
   # We use Colorado as it is the only start date we have for now
   def self.user_predates_state_collection?(user)
     # The date is the same as when CPA first started.
-    user.created_at < state_policies['CO'][:start_date]
+    user.created_at < StatePolicies.state_policies['CO'][:start_date]
   end
 
   # 'cap-state-modal-rollout' should be a value in the range [0,100]
@@ -68,12 +70,12 @@ class Policies::ChildAccount
   def self.user_predates_policy?(user)
     return false unless parent_permission_required?(user)
 
-    user_state_policy = state_policy(user)
+    user_state_policy = StatePolicies.state_policy(user)
     return false unless user_state_policy
 
     # Due to a leaky bucket issue, roster-synced Google accounts weren't being locked out as intended.
     # Therefore, it was decided to move their locking out to the "all-user lockout" phase.
-    return true if user_state_policy[:name] == Cpa::NAME &&
+    return true if user_state_policy[:name] == StatePolicies.state_policies['CO'][:name] &&
       user.created_at < user_state_policy[:lockout_date] &&
       user.authentication_options.any?(&:google?)
 
@@ -84,7 +86,7 @@ class Policies::ChildAccount
   # @param user [User] the student account
   # @param approximate [Boolean] if true, return an approximate date if the exact date is not known
   def self.grace_period_end_date(user, approximate: false)
-    user_state_policy = state_policy(user)
+    user_state_policy = StatePolicies.state_policy(user)
     return unless user_state_policy
 
     grace_period_duration = user_state_policy[:grace_period_duration]
@@ -99,15 +101,17 @@ class Policies::ChildAccount
   # The date on which the student's account will be locked if the account is not compliant.
   # @param user [User] the student account
   # @param approximate [Boolean] if true, return an approximate date if the exact date is not known
-  def self.lockout_date(user, approximate: false)
-    return if compliant?(user)
+  # @param future [Boolean] return the lockout date for the user even if the CAP
+  # policy for their state hasn't begun yet.
+  def self.lockout_date(user, approximate: false, future: false)
+    return if compliant?(user, future: future)
     return if ComplianceState.locked_out?(user)
 
     # CAP non-compliant "pre-policy" created students can be locked out only after their grace period ends.
     return grace_period_end_date(user, approximate: approximate) if user_predates_policy?(user)
 
     # CAP non-compliant "post-policy" created students should be locked out immediately after the policy goes into effect.
-    state_policy(user).try(:[], :start_date)
+    StatePolicies.state_policy(user)&.dig(:start_date)
   end
 
   # Checks if the user is partially locked out due to current non-compliance with CAP, even
@@ -156,39 +160,12 @@ class Policies::ChildAccount
     return true
   end
 
-  def self.state_policies
-    # The individual US State child account policy configuration
-    # name: the name of the policy
-    # grace_period_duration: the duration of the grace period in seconds.
-    # max_age: the oldest age of the child at which this policy applies.
-    # lockout_date: the date at which we will begin to lockout all CPA users who
-    # are not in compliance with the policy.
-    # start_date: the date on which this policy first went into effect.
-    {
-      'CO' => {
-        name: Cpa::NAME,
-        max_age: 12,
-        grace_period_duration: DCDO.get('cpa_grace_period_duration', Cpa::GRACE_PERIOD_DURATION)&.seconds,
-        lockout_date: DateTime.parse(DCDO.get('cpa_schedule', {})[Cpa::ALL_USER_LOCKOUT] || Cpa::ALL_USER_LOCKOUT_DATE.iso8601),
-        start_date: DateTime.parse(DCDO.get('cpa_schedule', {})[Cpa::NEW_USER_LOCKOUT] || Cpa::NEW_USER_LOCKOUT_DATE.iso8601),
-      }
-    }
-  end
-
-  def self.state_policy(user)
-    # If the country_code is not set, then us_state value was inherited
-    # from the teacher and we don't trust it.
-    return unless user.country_code
-    return unless user.us_state
-    state_policies[user.us_state]
-  end
-
   # Checks if the user will not be old enough by the lockout date
   def self.underage?(user)
     return false unless user.student?
     return false unless user.birthday
 
-    policy = state_policy(user)
+    policy = StatePolicies.state_policy(user)
     return false unless policy
 
     lockout_date = policy.try(:[], :lockout_date)
@@ -200,12 +177,13 @@ class Policies::ChildAccount
 
     # Checks if the student meets the minimum age requirement by the start of the lockout
     # (And thus they are not considered underage during pre-lockout periods)
-    student_birthday = user.birthday.in_time_zone(lockout_date.utc_offset)
+    # We will default to UTC if the timezone is not set.
+    student_birthday = user.birthday.in_time_zone('UTC').in_time_zone(lockout_date.utc_offset)
     return false unless student_birthday.since(min_required_age) > lockout_date
 
     # Check to see if they are old enough at the current date
     # We cannot trust 'user.age' because that is a different time zone and broken for leap years
-    today = Time.zone.today.in_time_zone(lockout_date.utc_offset)
+    today = DateTime.now.in_time_zone(lockout_date.utc_offset)
     student_age = today.year - student_birthday.year
     ((student_birthday + student_age.years > today) ? (student_age - 1) : student_age) <= policy[:max_age]
   end
@@ -227,15 +205,20 @@ class Policies::ChildAccount
 
   # Check if parent permission is required for this account according to our
   # Child Account Policy.
-  def self.parent_permission_required?(user)
+  # @param [Boolean] future Set to true if you want to know if the student will
+  # need parent permission in the future after CAP goes into affect in their
+  # US State. Defaults to `false`.
+  def self.parent_permission_required?(user, future: false)
     return false unless user.student?
 
-    policy = state_policy(user)
+    policy = StatePolicies.state_policy(user)
     # Parent permission is not required for students who are not covered by a US State child account policy.
     return false unless policy
 
     # Parental permission is not required until the policy is in effect.
-    return false if policy[:start_date] > DateTime.now
+    # Skip the date check if we want to know if the student will need parent
+    # permission in the future.
+    return false if !future && policy[:start_date] > DateTime.now
 
     # Parental permission is not required for students
     # whose age cannot be identified or who are older than the maximum age covered by the policy.

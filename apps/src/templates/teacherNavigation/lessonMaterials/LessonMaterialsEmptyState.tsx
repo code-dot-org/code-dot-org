@@ -10,7 +10,7 @@ import i18n from '@cdo/locale';
 
 import {selectedSectionSelector} from '../../teacherDashboard/teacherSectionsReduxSelectors';
 import {Section} from '../../teacherDashboard/types/teacherSectionTypes';
-import {EmptyState, EmptyStateContent} from '../EmptyState';
+import {EmptyState, EmptyStateProps} from '../EmptyState';
 import {
   getNoCurriculumAssignedEmptyState,
   getNoUnitAssignedForCalendarOrLessonMaterials,
@@ -47,14 +47,14 @@ export const LessonMaterialsEmptyState: React.FC<
     return null;
   }
 
-  return <EmptyState emptyStateDetails={emptyStateDetails} />;
+  return <EmptyState {...emptyStateDetails} />;
 };
 
 export const getNoLessonMaterialsForLegacyCourses = (
   courseDisplayName: string,
   sectionId: number,
   courseVersionName: string
-): EmptyStateContent => {
+): EmptyStateProps => {
   return {
     headline: i18n.lessonMaterialsAreNotAvailable(),
     descriptionText: i18n.lessonMaterialsLegacyMessage({
@@ -85,7 +85,7 @@ export const getNoLessonMaterialsForLegacyCourses = (
   };
 };
 
-export const getNoLessonMaterialsAvailable = (): EmptyStateContent => {
+export const getNoLessonMaterialsAvailable = (): EmptyStateProps => {
   return {
     headline: i18n.lessonMaterialsNotAvailableForUnit(),
     descriptionText: null,
@@ -106,7 +106,7 @@ function generateLessonMaterialsEmptyState(
   selectedSection: Section,
   isLegacyScript: boolean,
   hasNoLessonsWithLessonPlans: boolean
-): EmptyStateContent | null {
+): EmptyStateProps | null {
   let lessonMaterialsEmptyState = null;
 
   if (showNoCurriculumAssigned) {

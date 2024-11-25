@@ -280,6 +280,11 @@ FactoryBot.define do
       user_type {User::TYPE_STUDENT}
       birthday {Time.zone.today - 17.years}
 
+      trait :sponsored do
+        encrypted_password {nil}
+        provider {User::PROVIDER_SPONSORED}
+      end
+
       factory :young_student do
         birthday {Time.zone.today - 10.years}
 
@@ -445,7 +450,7 @@ FactoryBot.define do
 
       factory :cpa_non_compliant_student, traits: [:U13, :in_colorado], aliases: %i[non_compliant_child] do
         trait :predates_policy do
-          created_at {Policies::ChildAccount.state_policies.dig('CO', :start_date).ago(1.second)}
+          created_at {Policies::ChildAccount::StatePolicies.state_policies.dig('CO', :start_date).ago(1.second)}
         end
 
         trait :in_grace_period do
@@ -1374,7 +1379,7 @@ FactoryBot.define do
   end
 
   factory :follower do
-    association :student_user, factory: :student
+    association :student_user, factory: %i[student sponsored]
 
     transient do
       section {nil}

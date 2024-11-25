@@ -829,6 +829,9 @@ $small-footer-standard-width: 400px;
 #locale {
   font-family: sans-serif;
   height: 24px;
+  @media screen and (max-width: 1024px) {
+    max-width: 150px;
+  }
 }
 
 .oceans-blue .small-footer-base, .music-black .small-footer-base {
