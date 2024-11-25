@@ -4,15 +4,19 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "is_course": true,
       "is_migrated": true,
+      "topic_tags": [
+        "survey"
+      ],
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "csd-post-survey",
-    "serialized_at": "2022-03-09 20:38:16 UTC",
+    "serialized_at": "2024-11-19 01:16:30 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -150,6 +154,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

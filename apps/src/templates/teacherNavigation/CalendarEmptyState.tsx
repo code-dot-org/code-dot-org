@@ -8,7 +8,7 @@ import i18n from '@cdo/locale';
 import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
 import {Section} from '../teacherDashboard/types/teacherSectionTypes';
 
-import {EmptyState, EmptyStateContent} from './EmptyState';
+import {EmptyState, EmptyStateProps} from './EmptyState';
 import {
   getNoCurriculumAssignedEmptyState,
   getNoUnitAssignedForCalendarOrLessonMaterials,
@@ -36,12 +36,12 @@ export const CalendarEmptyState: React.FC = () => {
     return null;
   }
 
-  return <EmptyState emptyStateDetails={emptyStateDetails} />;
+  return <EmptyState {...emptyStateDetails} />;
 };
 
 export const getNoCalendarForLegacyCourses = (
   courseName: string
-): EmptyStateContent => {
+): EmptyStateProps => {
   return {
     headline: i18n.calendarNotAvailable(),
     descriptionText: i18n.calendarLegacyMessage({courseName: courseName}),
@@ -52,7 +52,7 @@ export const getNoCalendarForLegacyCourses = (
   };
 };
 
-export const getNoCalendarForThisUnit: EmptyStateContent = {
+export const getNoCalendarForThisUnit: EmptyStateProps = {
   headline: i18n.calendarNotAvailable(),
   descriptionText: null,
   imageComponent: (
@@ -67,7 +67,7 @@ function generateCalendarEmptyState(
   selectedSection: Section,
   isLegacyScript: boolean,
   hasCalendar: boolean
-): EmptyStateContent | null {
+): EmptyStateProps | null {
   let calendarEmptyState = null;
 
   if (showNoCurriculumAssigned) {

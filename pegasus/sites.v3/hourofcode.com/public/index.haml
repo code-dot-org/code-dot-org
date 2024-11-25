@@ -68,8 +68,17 @@ layout: wide_index
             =hoc_s("hoc_homepage.host.desc")
           %a.link-button{href: resolve_url('/events')}
             =hoc_s("hoc_homepage.host.button")
-        %figure.flex-1
-          %img.rounded-corners{src: "/images/homepage-students-computer.png", alt: "", style: "width: 100%"}
+        .flex-1{style: "width: 100%"}
+          %figure.video-responsive{style: "max-width: unset"}
+            %div
+              %iframe{allowfullscreen: "true", frameborder: "0", referrerpolicy: "strict-origin-when-cross-origin", src: "https://www.youtube-nocookie.com/embed/sypjpycrR7k"}
+          .video-caption.flex-container.justify-space-between.wrap{style: "margin-top: 0.5rem;"}
+            %figcaption.no-margin-top.no-margin-bottom
+              =hoc_s("hoc_2024.video_caption.visible")
+            %p.no-margin-bottom
+              %i{class: "fa-solid fa-download", style: "color: var(--brand_secondary_default);"}
+              %a{href: "//videos.code.org/hour-of-code-2024.mp4"}
+                =hoc_s(:call_to_action_download_video)
 
   -# Resources
   %section

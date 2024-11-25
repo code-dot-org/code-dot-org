@@ -66,6 +66,13 @@ const EVENTS = {
   CAP_STUDENT_WARNING_LINK_CLICKED:
     'CAP Teacher Students Warning Modal Documentation Clicked',
   CAP_AGE_GATED_BANNER_SHOWN: 'CAP Teacher Students Banner Shown',
+  CAP_AGE_GATED_SECTIONS_BANNER_SHOWN: 'CAP Teacher Sections Banner Shown',
+  CAP_AGE_GATED_SECTIONS_MODAL_SHOWN:
+    'CAP Teacher Sections Warning Modal Shown',
+  CAP_AGE_GATED_SECTIONS_MODAL_CLOSED:
+    'CAP Teacher Sections Warning Modal Closed',
+  CAP_AGE_GATED_SECTIONS_TABLE_SECTION_NAME_LINK_CLICKED:
+    'CAP Teacher Sections Table Section Name Clicked',
 
   // School Selection Component
   COUNTRY_SELECTED: 'User Selects Country',
@@ -487,6 +494,16 @@ const EVENTS = {
 
   // Lab2
   SKIP_TO_PROJECT: 'User Skipped To Project From Tutorial Level',
+
+  // Global Edition - Region Switch Confirm events
+  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_SHOWN:
+    'Global Edition Region Switch Confirm Shown',
+  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_CLOSED:
+    'Global Edition Region Switch Confirm Closed',
+  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_ACCEPTED:
+    'Global Edition Region Switch Confirm Accepted',
+  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_REJECTED:
+    'Global Edition Region Switch Confirm Rejected',
 };
 
 const EVENT_GROUP_NAMES = {

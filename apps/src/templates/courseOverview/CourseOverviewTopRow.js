@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+
+import {showV2TeacherDashboard} from '../teacherNavigation/TeacherNavFlagUtils';
 
 export default class CourseOverviewTopRow extends Component {
   static propTypes = {
@@ -25,8 +26,6 @@ export default class CourseOverviewTopRow extends Component {
       id,
       courseOfferingId,
       courseVersionId,
-      teacherResources,
-      studentResources,
       showAssignButton,
       sectionsForDropdown,
       isInstructor,
@@ -36,10 +35,7 @@ export default class CourseOverviewTopRow extends Component {
 
     return (
       <div style={styles.main} className="course-overview-top-row">
-        {isInstructor && teacherResources.length > 0 && (
-          <ResourcesDropdown resources={teacherResources} unitGroupId={id} />
-        )}
-        {isInstructor && (
+        {isInstructor && !showV2TeacherDashboard() && (
           <SectionAssigner
             sections={sectionsForDropdown}
             showAssignButton={showAssignButton}
@@ -49,13 +45,6 @@ export default class CourseOverviewTopRow extends Component {
             courseVersionId={courseVersionId}
             assignmentName={courseName}
             participantAudience={participantAudience}
-          />
-        )}
-        {!isInstructor && studentResources && studentResources.length > 0 && (
-          <ResourcesDropdown
-            resources={studentResources}
-            unitGroupId={id}
-            studentFacing
           />
         )}
       </div>

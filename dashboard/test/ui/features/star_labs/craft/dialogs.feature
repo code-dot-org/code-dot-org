@@ -1,5 +1,5 @@
 #  @eyes
-# Temporarily skip this test to unblock Drone builds. See ticket for details:
+# Temporarily skip this test to unblock CI builds. See ticket for details:
 # https://codedotorg.atlassian.net/browse/SL-289
 @skip
 @chrome

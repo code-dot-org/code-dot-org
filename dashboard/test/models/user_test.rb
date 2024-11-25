@@ -5,6 +5,7 @@ require 'timecop'
 
 class UserTest < ActiveSupport::TestCase
   include ProjectsTestUtils
+  include Minitest::RSpecMocks
   self.use_transactional_test_case = true
 
   class UsStateCodeTest < ActiveSupport::TestCase
@@ -908,10 +909,18 @@ class UserTest < ActiveSupport::TestCase
     # login by username still works
     user = create :user
     assert_equal user, User.find_for_authentication(login: user.username)
+    Cdo::Metrics.
+      expects(:put).
+      with('User', 'LoginByUsername', 1, includes(:Environment)).
+      once
 
     # login by email still works
     email_user = create :user, email: 'not@an.email'
     assert_equal email_user, User.find_for_authentication(login: 'not@an.email')
+    Cdo::Metrics.
+      expects(:put).
+      with('User', 'LoginByEmail', 1, includes(:Environment)).
+      once
 
     # login by hashed email
     hashed_email_user = create :user, age: 4
@@ -1402,12 +1411,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 100, user_level.best_result
     partner_level = UserLevel.find_by(user: partner, script: script, level: level)
     assert_equal 100, partner_level.best_result
-  end
-
-  test 'user is created with secret picture and word' do
-    assert @user.secret_picture
-    assert @user.secret_words
-    assert @user.secret_words !~ /SecretWord/ # using the actual word not the object to_s
   end
 
   test 'students have hashed email not plaintext email' do
@@ -3950,6 +3953,9 @@ class UserTest < ActiveSupport::TestCase
     us_state = 'CO'
     @student.update!(us_state: us_state)
 
+    secret_picture = SecretPicture.random
+    @student.secret_picture = secret_picture
+
     assert_equal(
       {
         id: @student.id,
@@ -3963,14 +3969,14 @@ class UserTest < ActiveSupport::TestCase
         gender_teacher_input: nil,
         birthday: @student.birthday,
         secret_words: @student.secret_words,
-        secret_picture_name: @student.secret_picture.name,
-        secret_picture_path: @student.secret_picture.path,
+        secret_picture_name: secret_picture.name,
+        secret_picture_path: secret_picture.path,
         location: "/v2/users/#{@student.id}",
         age: @student.age,
         sharing_disabled: false,
         has_ever_signed_in: @student.has_ever_signed_in?,
         ai_tutor_access_denied: !!@student.ai_tutor_access_denied,
-        at_risk_age_gated: false,
+        at_risk_age_gated_date: nil,
         child_account_compliance_state: @student.cap_status,
         latest_permission_request_sent_at: latest_permission_request_sent_at,
         us_state: us_state,
@@ -4824,7 +4830,8 @@ class UserTest < ActiveSupport::TestCase
 
   test 'dependent_students for teacher: does not return students with personal logins' do
     section = create :section
-    create(:follower, section: section)
+    student = create :student
+    create(:follower, section: section, student_user: student)
 
     assert_empty section.teacher.dependent_students
   end
@@ -5520,6 +5527,84 @@ class UserTest < ActiveSupport::TestCase
       it 'does not call CAP compliance removing service' do
         expect_cap_compliance_removing.never
         update_us_state
+      end
+    end
+  end
+
+  describe '.at_risk_age_gated_date' do
+    let(:user) {create(:student)}
+    let(:at_risk_age_gated_date) {user.at_risk_age_gated_date}
+    let(:compliant) {false}
+    let(:lockout_date) {DateTime.now}
+
+    before do
+      allow(Policies::ChildAccount).to receive(:compliant?).with(user, future: true).and_return(compliant)
+      allow(Policies::ChildAccount::StatePolicies).to receive(:state_policy).with(user).and_return({lockout_date: lockout_date})
+    end
+
+    it 'returns the policy lockout date' do
+      _(at_risk_age_gated_date).must_equal lockout_date
+    end
+
+    context 'when compliant' do
+      let(:compliant) {true}
+
+      it 'returns nil' do
+        _(at_risk_age_gated_date).must_equal nil
+      end
+    end
+  end
+
+  describe 'generation of secret picture on creation' do
+    let(:user) {build(:user)}
+
+    let(:user_is_sponsored) {true}
+
+    before do
+      user.stubs(:sponsored?).returns(user_is_sponsored)
+    end
+
+    it 'generates secret picture' do
+      _(user.secret_picture_id).must_be_nil
+      user.save! && user.reload
+      _(user.secret_picture).must_be_instance_of SecretPicture
+    end
+
+    context 'when user is not sponsored' do
+      let(:user_is_sponsored) {false}
+
+      it 'does not generate secret picture' do
+        _(user.secret_picture_id).must_be_nil
+        _ {user.save!}.wont_change -> {user.secret_picture_id}
+      end
+    end
+  end
+
+  describe 'generation of secret words on creation' do
+    let(:user) {build(:user)}
+
+    let(:user_is_sponsored) {true}
+
+    before do
+      user.stubs(:sponsored?).returns(user_is_sponsored)
+    end
+
+    it 'generates secret words' do
+      _(user.secret_words).must_be_nil
+
+      user.save!
+      user.reload
+
+      _(user.secret_words).wont_be_nil
+      _(user.secret_words).wont_match /SecretWord/ # using the actual word not the object to_s
+    end
+
+    context 'when user is not sponsored' do
+      let(:user_is_sponsored) {false}
+
+      it 'does not generates secret word' do
+        _(user.secret_words).must_be_nil
+        _ {user.save!}.wont_change -> {user.secret_words}
       end
     end
   end

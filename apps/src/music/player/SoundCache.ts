@@ -1,5 +1,6 @@
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {fetchSignedCookies} from '@cdo/apps/utils';
 
 import {baseAssetUrlRestricted} from '../constants';
@@ -64,7 +65,11 @@ class SoundCache {
     const loadPromises: Promise<void>[] = [];
 
     if (paths.length > 0) {
-      this.metricsReporter.incrementCounter('SoundCache.LoadSoundsAttempt');
+      this.metricsReporter.publishMetric(
+        'SoundCache.LoadSoundsCount',
+        paths.length,
+        'Count'
+      );
     }
 
     for (const path of paths) {
@@ -100,7 +105,11 @@ class SoundCache {
         count: failedSounds.length,
         failedSounds,
       });
-      this.metricsReporter.incrementCounter('SoundCache.LoadSoundsError');
+      this.metricsReporter.publishMetric(
+        'SoundCache.FailedSoundsCount',
+        failedSounds.length,
+        'Count'
+      );
     }
   }
 
@@ -120,7 +129,7 @@ class SoundCache {
       return;
     }
 
-    const response = await fetch(url);
+    const response = await HttpClient.get(url);
     const arrayBuffer = await response.arrayBuffer();
     const audioBuffer = await this.audioContext.decodeAudioData(arrayBuffer);
     this.audioBuffers[url] = audioBuffer;

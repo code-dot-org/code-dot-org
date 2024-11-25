@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-14 18:22:20 UTC",
+    "serialized_at": "2024-11-19 01:17:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5232,6 +5232,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L0_2024"
+        ],
         "progression": "Example Projects"
       },
       "bonus": false,

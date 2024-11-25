@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "self_paced_pl_9_12",
       "curriculum_umbrella": "CSP Self Paced PL",
       "is_migrated": true,
       "student_detail_progress_view": true,
@@ -11,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-09 18:47:39 UTC",
+    "serialized_at": "2024-11-19 01:19:35 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

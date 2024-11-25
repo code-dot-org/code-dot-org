@@ -1,6 +1,6 @@
 @eyes
 @no_mobile
-@no_circle
+@no_ci
 Feature: Javalab Demo Mode
 
   # Note this only tests showing a captcha to unverified teachers

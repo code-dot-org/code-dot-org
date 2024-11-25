@@ -4,12 +4,14 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSP",
       "is_migrated": true,
       "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-06-25 18:16:38 UTC",
+    "serialized_at": "2024-11-19 01:19:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

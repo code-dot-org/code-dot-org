@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 70,
-  "created_at": "2024-10-22T23:17:16.000Z",
+  "created_at": "2024-11-04T07:38:07.000Z",
   "level_num": "custom",
   "user_id": 1196,
   "properties": {
@@ -14,7 +14,7 @@
     "validations": [
       {
         "key": "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b",
-        "message": "You can play more than one sound at the same time when you use the [play together](#clickable=play-sounds-together-block-workspace) block.",
+        "message": "You can play more than one sound at the same time when you use the [play together](#clickable=id:play_sounds_together) block.",
         "next": true,
         "conditions": [
           {

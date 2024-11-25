@@ -13,6 +13,7 @@
           "key": "a5c79bfe-dc53-48e6-b535-cfbfb3eae114"
         }
       ],
+      "content_area": "curriculum_k_5",
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-18/express/{LESSON}",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
@@ -34,7 +35,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2022-09-28 14:31:26 UTC",
+    "serialized_at": "2024-11-19 01:17:32 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -14638,6 +14639,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

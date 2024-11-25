@@ -4,13 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "Foundations of CS",
       "is_course": true,
       "is_migrated": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "intro-to-programming-playground",
-    "serialized_at": "2024-10-31 00:22:52 UTC",
+    "serialized_at": "2024-11-19 01:18:53 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -155,6 +157,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "IPP_SampleProgression_UMC_1"
+        ],
         "progression": "Use Levels"
       },
       "bonus": false,
@@ -177,6 +182,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "IPP_SampleProgression_UMC_2"
+        ],
         "progression": "Use Levels"
       },
       "bonus": false,
@@ -199,6 +207,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "IPP_SampleProgression_UMC_3"
+        ],
         "progression": "Use Levels"
       },
       "bonus": false,
@@ -221,6 +232,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "IPP_SampleProgression_UMC_4"
+        ],
         "progression": "Use Levels"
       },
       "bonus": false,
@@ -243,6 +257,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "IPP_SampleProgression_UMC_5"
+        ],
         "progression": "Use Levels"
       },
       "bonus": false,
@@ -265,6 +282,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "IPP_SampleProgression_UMC_6"
+        ],
         "progression": "Use Levels"
       },
       "bonus": false,
@@ -287,6 +307,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "IPP_SampleProgression_UMC_7"
+        ],
         "progression": "Use Levels"
       },
       "bonus": false,
@@ -309,6 +332,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "IPP_SampleProgression_UMC_8"
+        ],
         "progression": "Modify Levels"
       },
       "bonus": false,
@@ -331,6 +357,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "IPP_SampleProgression_UMC_9"
+        ],
         "progression": "Modify Levels"
       },
       "bonus": false,
@@ -353,6 +382,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "IPP_SampleProgression_UMC_10"
+        ],
         "progression": "Modify Levels"
       },
       "bonus": false,
@@ -375,6 +407,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "IPP_SampleProgression_UMC_11"
+        ],
         "progression": "Modify Levels"
       },
       "bonus": false,
@@ -397,6 +432,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "IPP_SampleProgression_UMC_assessment"
+        ],
         "progression": "Assessment Level"
       },
       "bonus": false,
@@ -419,6 +457,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "IPP_SampleProgression_UMC_Practice"
+        ],
         "progression": "Practice Student Choice Levels"
       },
       "bonus": false,
@@ -441,6 +482,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "IPP_SampleProgression_UMC_Inspiration"
+        ],
         "progression": "Inspiration Student Choice Levels"
       },
       "bonus": false,
@@ -463,6 +507,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "IPP_SampleProgression_UMC_Debugging"
+        ],
         "progression": "Debugging Student Choice Levels"
       },
       "bonus": false,

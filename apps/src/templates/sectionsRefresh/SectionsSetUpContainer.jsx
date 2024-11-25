@@ -20,6 +20,7 @@ import Notification, {
 } from '@cdo/apps/sharedComponents/Notification';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
 import {navigateToHref} from '@cdo/apps/utils';
+import {CapLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import AdvancedSettingToggles from './AdvancedSettingToggles';
@@ -309,7 +310,7 @@ export default function SectionsSetUpContainer({
             type={NotificationType.warning}
             notice=""
             details={i18n.childAccountPolicy_CreateSectionsWarning()}
-            detailsLink="https://support.code.org/hc/en-us/articles/15465423491085-How-do-I-obtain-parent-or-guardian-permission-for-student-accounts"
+            detailsLink={CapLinks.PARENTAL_CONSENT_GUIDE_URL}
             detailsLinkNewWindow={true}
             detailsLinkText={i18n.childAccountPolicy_LearnMore()}
             dismissible={false}

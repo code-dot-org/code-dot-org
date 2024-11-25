@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_k_5",
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-1718/coursee/{LESSON}",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
@@ -50,7 +51,7 @@
     },
     "new_name": "coursee-2017",
     "family_name": "coursee",
-    "serialized_at": "2022-03-11 12:07:23 UTC",
+    "serialized_at": "2024-11-19 01:14:27 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -6595,7 +6596,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp4",
+        "level.key": "courseE_maze_ramp4",
         "script_level.level_keys": [
           "courseD_scrat_ramp4",
           "courseE_maze_ramp4"
@@ -6608,7 +6609,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_maze_ramp4",
+        "level.key": "courseD_scrat_ramp4",
         "script_level.level_keys": [
           "courseD_scrat_ramp4",
           "courseE_maze_ramp4"
@@ -6725,7 +6726,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp7",
+        "level.key": "courseE_maze_ramp7",
         "script_level.level_keys": [
           "courseD_scrat_ramp7",
           "courseE_maze_ramp7"
@@ -6738,7 +6739,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_maze_ramp7",
+        "level.key": "courseD_scrat_ramp7",
         "script_level.level_keys": [
           "courseD_scrat_ramp7",
           "courseE_maze_ramp7"
@@ -8114,6 +8115,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

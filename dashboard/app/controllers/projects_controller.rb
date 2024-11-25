@@ -779,7 +779,7 @@ class ProjectsController < ApplicationController
                 "project type: #{project_type}"
               ].join("\n")
             },
-            tags: ['project_submission']
+            tags: ['project_submission', project_type]
           }
         }.to_json,
         basic_auth: {username: 'dev@code.org/token', password: Dashboard::Application.config.zendesk_dev_token}

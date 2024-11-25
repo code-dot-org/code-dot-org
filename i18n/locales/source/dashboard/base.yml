@@ -428,6 +428,9 @@ en:
       legal_privacy: "Privacy Policy"
       legal_cookie_notice: "Cookie Notice"
       legal_tos: "Terms of Service"
+      videos: "Videos"
+      hour_of_code: "Hour of Code"
+      csf: "CS Fundamentals"
 
     user:
       classroom: 'Teacher Home Page'
