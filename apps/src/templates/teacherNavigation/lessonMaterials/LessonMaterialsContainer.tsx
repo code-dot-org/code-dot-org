@@ -94,15 +94,19 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
 
       setIsLoading(true);
 
-      const data = await lessonMaterialsCachedLoader(sectionData.unitId);
-      setLessonMaterials(data);
-      setIsLoading(false);
+      const data = await lessonMaterialsCachedLoader(sectionData.unitId).then(
+        data => {
+          setLessonMaterials(data);
+          setIsLoading(false);
 
-      if (data?.unitName) {
-        analyticsReporter.sendEvent(EVENTS.VIEW_LESSON_MATERIALS, {
-          unitName: data.unitName,
-        });
-      }
+          if (data?.unitName) {
+            analyticsReporter.sendEvent(EVENTS.VIEW_LESSON_MATERIALS, {
+              unitName: data.unitName,
+            });
+          }
+        }
+      );
+      console.log(data);
     };
 
     fetchLessonMaterials();
