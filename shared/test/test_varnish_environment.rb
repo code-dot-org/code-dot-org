@@ -2,8 +2,6 @@ require_relative 'test_helper'
 require 'varnish_environment'
 
 describe VarnishEnvironment do
-  include Rack::Test::Methods
-
   let(:app) {VarnishEnvironment.new!}
 
   describe 'helpers' do
