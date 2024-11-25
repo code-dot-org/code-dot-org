@@ -84,7 +84,11 @@ class VarnishEnvironment < Sinatra::Base
       when 'fa'
         return 'fa-IR'
       else
-        language = language.to_s.downcase
+        language = begin
+          language.to_s.downcase
+        rescue ArgumentError
+          ""
+        end
         return nil unless locale = settings.locales_supported.find {|i| i == language || i.split('-').first == language}
         parts = locale.split('-')
         return "#{parts[0].downcase}-#{parts[1].upcase}"
