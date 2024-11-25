@@ -13,7 +13,6 @@ import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 import color from '@cdo/apps/util/color';
-import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import RailsAuthenticityToken from '../lib/util/RailsAuthenticityToken';
@@ -172,8 +171,7 @@ class ManageLinkedAccounts extends React.Component {
     Object.values(SingleSignOnProviders).forEach(provider => {
       if (
         provider === SingleSignOnProviders.lti_v1 &&
-        (!optionsByProvider[provider] ||
-          !experiments.isEnabled(experiments.LTI_ACCOUNT_UNLINKING))
+        !optionsByProvider[provider]
       ) {
         return;
       }
