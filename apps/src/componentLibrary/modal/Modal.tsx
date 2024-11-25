@@ -42,16 +42,6 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   imagePlacement?: 'top' | 'inline';
 }
 
-// TODO:
-// add content section scroll possibility +
-// check aria props +
-// alertDialog vs Dialog +
-// always show 2 buttons - secondary can be optional +
-// make sure colors for dark modal image are alright +
-// check the final image sizing +
-// check if it's possible for inline placement image to stay on the same place +
-// add tests +
-
 /**
  * ## Production-ready Checklist:
  *  * (✔) implementation of component approved by design team;
