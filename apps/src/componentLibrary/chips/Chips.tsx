@@ -31,6 +31,8 @@ export interface ChipsProps {
   size?: ComponentSizeXSToL;
   /** Custom className */
   className?: string;
+  /** Error to display if selection required and none made */
+  requiredMessageText?: string;
 }
 
 /**
@@ -58,6 +60,7 @@ const Chips: React.FunctionComponent<ChipsProps> = ({
   color = 'black',
   size = 'm',
   className,
+  requiredMessageText,
 }) => {
   // NOTE: The `name` will show up in the DOM with an appended `[]`, so Rails
   // natively understands it as an array. Set `required` to `true` if you want
@@ -94,6 +97,7 @@ const Chips: React.FunctionComponent<ChipsProps> = ({
               // are `checked`, or `false` if at least one of the options is
               // `checked`.
               required={required ? values.length === 0 : false}
+              requiredMessageText={requiredMessageText}
               disabled={disabled}
               onCheckedChange={checked => {
                 if (checked) {
