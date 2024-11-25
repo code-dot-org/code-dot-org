@@ -38,6 +38,8 @@ describe('Design System - Checkbox Dropdown Component', () => {
         }
         onSelectAll={handleSelectAll}
         onClearAll={handleClearAll}
+        selectAllText="Select all"
+        clearAllText="Clear all"
         labelText="Dropdown label"
       />
     );
@@ -68,6 +70,8 @@ describe('Design System - Checkbox Dropdown Component', () => {
         onChange={onChange}
         onSelectAll={handleSelectAll}
         onClearAll={handleClearAll}
+        selectAllText="Select all"
+        clearAllText="Clear all"
         labelText="Dropdown2 label"
       />
     );
@@ -117,6 +121,8 @@ describe('Design System - Checkbox Dropdown Component', () => {
         onChange={onChange}
         onSelectAll={handleSelectAll}
         onClearAll={handleClearAll}
+        selectAllText="Select all"
+        clearAllText="Clear all"
         labelText="Dropdown2 label"
       />
     );
@@ -166,6 +172,8 @@ describe('Design System - Checkbox Dropdown Component', () => {
         onChange={onChange}
         onSelectAll={handleSelectAll}
         onClearAll={handleClearAll}
+        selectAllText="Select all"
+        clearAllText="Clear all"
         labelText="Dropdown2 label"
       />
     );
