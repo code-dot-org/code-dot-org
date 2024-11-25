@@ -53,10 +53,6 @@ namespace :seed do
     Donor.setup
   end
 
-  timed_task_with_logging donor_schools: :environment do
-    DonorSchool.setup
-  end
-
   timed_task_with_logging foorm_libraries: :environment do
     Foorm::Library.setup(CURRICULUM_CONTENT_DIR)
   end
