@@ -12,7 +12,6 @@ import {
 import CustomDropdown, {
   _CustomDropdownOption,
 } from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
-import i18n from '@cdo/locale';
 
 import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
 
@@ -57,6 +56,12 @@ export interface CheckboxDropdownProps
       | React.MouseEvent<HTMLButtonElement>
       | React.MouseEvent<HTMLAnchorElement>
   ) => void;
+  /** CheckboxDropdown selectAllText
+   * Text for "Select All" button */
+  selectAllText: string;
+  /** CheckboxDropdown clearAllText
+   * Text for "Clear All" button */
+  clearAllText: string;
 }
 
 const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
@@ -76,6 +81,8 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   helperMessage,
   helperIcon,
   errorMessage,
+  selectAllText,
+  clearAllText,
   styleAsFormField = false,
   ...rest
 }) => {
@@ -119,14 +126,14 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
           <Button
             type="tertiary"
             color={buttonColors.purple}
-            text={i18n.selectAll()}
+            text={selectAllText}
             onClick={onSelectAll}
             size={size}
           />
           <Button
             type="tertiary"
             color={buttonColors.purple}
-            text={i18n.clearAll()}
+            text={clearAllText}
             onClick={onClearAll}
             size={size}
           />

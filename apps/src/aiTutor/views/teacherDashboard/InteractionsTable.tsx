@@ -17,6 +17,7 @@ import styleConstants from '@cdo/apps/styleConstants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {tableLayoutStyles as style} from '@cdo/apps/templates/tables/tableConstants';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 // TODO: Condense use of inline and imported styles
 import interactionsStyle from './interactions-table.module.scss';
@@ -264,6 +265,8 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
           onSelectAll={() =>
             setSelectedStatuses(Object.values(AITutorInteractionStatus))
           }
+          selectAllText={i18n.selectAll()}
+          clearAllText={i18n.clearAll()}
           size="s"
         />
         <CheckboxDropdown
@@ -278,6 +281,8 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
           onSelectAll={() =>
             setSelectedUserIds(studentFilterOptions.map(option => option.value))
           }
+          selectAllText={i18n.selectAll()}
+          clearAllText={i18n.clearAll()}
           size="s"
         />
         <SimpleDropdown
