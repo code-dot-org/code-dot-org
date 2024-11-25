@@ -24,6 +24,13 @@ ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
 RUN corepack enable yarn && \
     yarn set version berry
 
+# Set Global Variables
+ENV IS_DOCKER=true
+
+# Switch to 'node' user
+USER node
+
 # Install Playwright
-ENV PLAYWRIGHT_BROWSERS_PATH=$HOME/.cache/ms-playwright
+ENV PLAYWRIGHT_BROWSERS_PATH=/home/node/.cache/ms-playwright
 RUN yarn dlx playwright install --with-deps
+

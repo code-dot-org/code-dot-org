@@ -9,9 +9,12 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test-storybook": "test-storybook",
+    "eyes-storybook": "eyes-storybook",
+    "puppeteer": "puppeteer",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "@applitools/eyes-storybook": "^3.52.1",
     "@code-dot-org/legacy-css": "workspace:*",
     "@storybook/addon-a11y": "^8.4.4",
     "@storybook/addon-essentials": "^8.4.4",
