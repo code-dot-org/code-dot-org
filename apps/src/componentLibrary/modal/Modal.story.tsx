@@ -180,6 +180,27 @@ DarkModal.args = {
   onClose: () => null,
 };
 
+export const ModalWithCustomContent = SingleTemplate.bind({});
+ModalWithCustomContent.args = {
+  title: 'Modal with Custom Content',
+  customContent: (
+    <div>
+      <p id="dsco-dialog-description">
+        This is some custom content rendered within the modal.
+      </p>
+      <ul>
+        <li>Custom item 1</li>
+        <li>Custom item 2</li>
+      </ul>
+    </div>
+  ),
+  primaryButtonProps: {
+    text: 'Primary Action',
+    onClick: () => console.log('Primary button clicked!'),
+  },
+  onClose: () => null,
+};
+
 export const ModalWithCustomBottomContent = SingleTemplate.bind({});
 ModalWithCustomBottomContent.args = {
   title: 'Modal with Custom Bottom Content',
@@ -224,7 +245,9 @@ MultipleModals.args = {
       description:
         'Description for modal 3 with an image at the top. This demonstrates the visual integration of imagery' +
         ' within a modal.',
-      imageUrl: 'https://via.placeholder.com/150',
+      imageUrl:
+        'https://studio.code.org/shared/images/teacher-announcement/incubator-rubrics-pilot-graphic.png',
+      imageAlt: 'Example image placed on top of the modal',
       imagePlacement: 'top',
       primaryButtonProps: {
         text: 'Primary Action',
