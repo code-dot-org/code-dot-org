@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.7.0] (https://github.com/code-dot-org/code-dot-org/pull/62659)
+- require 'selectAllText' and 'clearAllText' as props
+
 ## [0.6.0] (https://github.com/code-dot-org/code-dot-org/pull/62023)
 
 - added `readOnly` state
