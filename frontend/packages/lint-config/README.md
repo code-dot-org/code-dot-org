@@ -51,7 +51,7 @@ export default [...cdoEslint];
 
 ## Prettier Configuration
 
-The Code.org uses the default prettier configuration with some overrides in the `prettier` directory.
+Code.org uses the default prettier configuration with some overrides in the `prettier` directory.
 
 To use the shared configuration, add the following key to `package.json`:
 
