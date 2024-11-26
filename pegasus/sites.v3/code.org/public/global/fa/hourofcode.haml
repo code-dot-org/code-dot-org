@@ -36,7 +36,7 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s(:hoc_page_lead_activity_heading)
     %p.has-external-link
-      =hoc_s(:"hoc_page.activities.desc", markdown: :inline, locals:{register_activity_url: "https://hourofcode.com/events"})
+      =hoc_s(:"hoc_page.activities.desc", markdown: :inline, locals:{register_url: "https://hourofcode.com/events"})
     = view :"global/fa/hoc_activities_featured"
     %div.centered{style: "margin-top: 2rem"}
       %a.link-button.secondary{href: "https://studio.code.org/catalog?marketingInitiative=hoc"}

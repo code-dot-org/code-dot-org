@@ -1,20 +1,5 @@
 @import '@cdo/apps/componentLibrary/common/styles/primitiveColors.css';
 
-.dialogOverlay {
-  position: fixed;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  width: 100%;
-  height: 100%;
-
-  background-color: var(--neutral-black-alpha-90);
-}
-
 // Common dialog styles
 .dialog {
   position: relative;

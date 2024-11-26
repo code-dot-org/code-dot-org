@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_11_20_192448) do
+ActiveRecord::Schema.define(version: 2024_11_25_202219) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -568,7 +568,7 @@ ActiveRecord::Schema.define(version: 2024_11_20_192448) do
     t.integer "priority", default: 0, null: false
     t.integer "attempts", default: 0, null: false
     t.text "handler", null: false
-    t.text "last_error", size: :medium
+    t.text "last_error", size: :medium, collation: "utf8mb4_unicode_ci"
     t.datetime "run_at"
     t.datetime "locked_at"
     t.datetime "failed_at"

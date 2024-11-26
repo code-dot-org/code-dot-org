@@ -4,6 +4,8 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_course": true,
       "is_migrated": true,
       "pilot_experiment": "hoc-music-ai-pilot-4",
@@ -11,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "hoc-music-ai-pilot-4",
-    "serialized_at": "2024-10-22 22:16:29 UTC",
+    "serialized_at": "2024-11-26 00:01:57 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

@@ -226,13 +226,5 @@ class HomeController < ApplicationController
       @homepage_data[:studentSpecialAnnouncement] = Announcements.get_localized_announcement_for_page("/student-home")
       @homepage_data[:parentalPermissionBanner] = helpers.parental_permission_banner_data(current_user, request)
     end
-
-    if current_user.school_donor_name
-      donor_footer_options = {}
-      donor_footer_options[:donorName] = current_user.school_donor_name
-      donor_footer_options[:logos] = Dir.glob("app/assets/images/donor_logos/#{current_user.school_donor_name}/*").sort
-
-      @homepage_data[:donorFooterOptions] = donor_footer_options
-    end
   end
 end

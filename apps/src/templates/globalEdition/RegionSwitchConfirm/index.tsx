@@ -57,11 +57,11 @@ const RegionSwitchConfirm: React.FC<RegionSwitchConfirmProps> = ({
     }
   }, [show, region, reportEvent]);
 
-  const handleSwitch = () => {
+  const handleAccept = () => {
+    setShow(false);
     reportEvent(EVENTS.GLOBAL_EDITION_REGION_SWITCH_CONFIRM_ACCEPTED, {
       page: region.href,
     });
-    window.location.href = region.href;
   };
 
   const handleReject = () => {
@@ -90,16 +90,19 @@ const RegionSwitchConfirm: React.FC<RegionSwitchConfirmProps> = ({
           })}
         />
 
-        <Button
-          id="global-edition-region-switch-confirm-accept"
-          className="no-mc"
-          text={i18n.globalEdition_regionSwitchConfirm_accept({
-            region: region.name,
-          })}
-          type="primary"
-          size="l"
-          onClick={handleSwitch}
-        />
+        <form action={region.href} method="post">
+          <Button
+            id="global-edition-region-switch-confirm-accept"
+            className="no-mc"
+            text={i18n.globalEdition_regionSwitchConfirm_accept({
+              region: region.name,
+            })}
+            buttonTagTypeAttribute="submit"
+            type="primary"
+            size="l"
+            onClick={handleAccept}
+          />
+        </form>
 
         <Link
           id="global-edition-region-switch-confirm-reject"
