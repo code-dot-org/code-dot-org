@@ -91,7 +91,7 @@ const Modal: React.FunctionComponent<ModalProps> = ({
           moduleStyles[`modalContentSection-${imagePlacement}-imagePlacement`]
         )}
       >
-        {imageUrl && <img src={imageUrl} alt={imageAlt || 'modal-image'} />}
+        {imageUrl && <img src={imageUrl} alt={imageAlt || ''} />}
         {description && (
           <BodyTwoText
             id="dsco-dialog-description"
