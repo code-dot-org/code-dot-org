@@ -243,7 +243,7 @@ MultipleModals.args = {
     {
       title: 'Modal 2 with Image (Top Placement)',
       description:
-        'Description for modal 3 with an image at the top. This demonstrates the visual integration of imagery' +
+        'Description for modal 2 with an image at the top. This demonstrates the visual integration of imagery' +
         ' within a modal.',
       imageUrl:
         'https://studio.code.org/shared/images/teacher-announcement/incubator-rubrics-pilot-graphic.png',
@@ -251,26 +251,26 @@ MultipleModals.args = {
       imagePlacement: 'top',
       primaryButtonProps: {
         text: 'Primary Action',
-        onClick: () => console.log('Primary action for modal 1'),
+        onClick: () => console.log('Primary action for modal 2'),
       },
       secondaryButtonProps: {
         text: 'Secondary Action',
-        onClick: () => console.log('Secondary action for modal 1'),
+        onClick: () => console.log('Secondary action for modal 2'),
       },
       onClose: () => null,
     },
     {
       title: 'Modal 3 with Dark Theme',
       description:
-        'Content for modal 4 with dark theme. This modal uses the dark color mode to enhance readability and focus.',
+        'Content for modal 3 with dark theme. This modal uses the dark color mode to enhance readability and focus.',
       mode: 'dark',
       primaryButtonProps: {
         text: 'Primary Action',
-        onClick: () => console.log('Primary action for modal 1'),
+        onClick: () => console.log('Primary action for modal 3'),
       },
       secondaryButtonProps: {
         text: 'Secondary Action',
-        onClick: () => console.log('Secondary action for modal 1'),
+        onClick: () => console.log('Secondary action for modal 3'),
       },
       onClose: () => null,
     },
