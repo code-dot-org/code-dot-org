@@ -45,7 +45,6 @@
     "validations": {
       "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b": "Those sounds are great together!",
       "music-ai-skill-playtogether_795b9999-0f45-441c-bd81-23af6c157f81": "Play two different [sounds][0] in the [play together][1] block.",
-      "music-ai-skill-playtogether_7d85508c-951f-4734-8c97-9c67745a4207": "Add another [sound][0] block into the [play together][1] block. ",
       "music-ai-skill-playtogether_36540a11-c67f-47da-bb3a-e2bb6181e9d1": "No sounds have played yet. Add two [play][0] blocks _into_ the [play together][1] block."
     }
   },
@@ -62,7 +61,7 @@
     "panels": {
       "music_ai_panels_function-973d8506-2906-4bdf-96c6-e08d64b1e677": "You can use AI (Artificial Intelligence) to generate new beats!",
       "music_ai_panels_aibeatblock-2590f59d-fc81-460c-8499-036f2a1f5b60": "Start by adding four of your own beats. ",
-      "music_ai_panels_aibeatblock-dbb9516c-1147-4f1e-951a-4ef7e00c129f": "A.I. will generate more beats based one what you started. ",
+      "music_ai_panels_aibeatblock-dbb9516c-1147-4f1e-951a-4ef7e00c129f": "A.I. will generate more beats based on what you started. ",
       "music_ai_panels_aibeatblock_1-c7b18f33-4cd4-40e8-8904-42ec59b8c427": "How does it work?\n\nA.I. has been trained on lots of different drum patterns, which helps it predict what comes next. ",
       "music_ai_panels_aibeatblock-6678c7d9-3f09-4960-9113-548c9cfb156e": "Try making your own beat with AI. "
     }
@@ -71,6 +70,7 @@
     "long_instructions": "#### Generate a Beat with A.I.\n\nA.I. will help you create a new beat for your song.\n\n-   Click the [play AI drums][0] block to generate your own beat.  \n-   Press [Run][1]. ",
     "validations": {
       "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b": "That sounds great!",
+      "music-jam-ai_aa2b5bf0-1d71-4dbe-b835-888f9fde291c": "Click on the blank box in the [play AI drums][0] block, choose a few beats, then click \"Generate\".",
       "music-ai-skill-sequence_a0f44420-3323-439a-be62-f0aa67dbcbe1": "Click on the blank box in the [play AI drums][0] block to generate a new beat. ",
       "music-ai-skill-aibeats_2ec51257-daa4-40af-b5d4-4b42a2cfaf11": "No sounds have played yet. "
     }
@@ -88,7 +88,7 @@
     "validations": {
       "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b": "That sounds great!",
       "music-ai-skill-sequence_a0f44420-3323-439a-be62-f0aa67dbcbe1": "Click on the blank box in the [play AI drums][0] block, change the temperature slider, and generate a new beat.",
-      "music-ai-skill-aibeats-temperature_1_1a17f661-6104-4b40-a4b9-aa577b660683": "Choose a few beats in the [play AI drums][0] to get started. Then click \"Generate\". ",
+      "music-ai-skill-aibeats-temperature_1_1a17f661-6104-4b40-a4b9-aa577b660683": "Choose a few beats in the [play AI drums][0] to get started. Then click \"Generate\".",
       "music-ai-skill-aibeats_2ec51257-daa4-40af-b5d4-4b42a2cfaf11": "No sounds have played yet. "
     }
   },
@@ -114,9 +114,9 @@
     "long_instructions": "### Build a Song with Functions\n\nCall [intro][0] and [chorus][1] under [when run][2] to play the sounds in the function.",
     "validations": {
       "music-ai-functions-doubleChorus_2_8596d526-19f0-43f3-bc07-02366a151f2a": "You used both functions! Functions help you reuse code quickly. Great work! ",
-      "music-ai-functions-doubleChorus_2_d72de94c-fc7b-4fa8-a9bf-4c67ec49841c": "Are both function blocks added? Make sure to add the `chorus` block under [when run][0]. ",
-      "music-ai-functions-doubleChorus_2_211ec330-8549-468a-9359-6f58deb212a2": "Almost there! Make sure to add the `intro` block under [when run][0].",
-      "music-ai-functions-chorus_e1d6c731-90ed-4e26-a2cd-040bfc5c373f": "Connect the 'intro' and 'chorus' blocks under [when run][0] to play the sounds in each function."
+      "music-ai-functions-doubleChorus_2_d72de94c-fc7b-4fa8-a9bf-4c67ec49841c": "Are both function blocks added? Make sure to add the [chorus][0] block under [when run][1]. ",
+      "music-ai-functions-doubleChorus_2_211ec330-8549-468a-9359-6f58deb212a2": "Almost there! Make sure to add the [intro][0] block under [when run][1].",
+      "music-ai-functions-chorus_e1d6c731-90ed-4e26-a2cd-040bfc5c373f": "Connect the [intro][0] and [chorus][1] blocks under [when run][2] to play the sounds in each function."
     },
     "function_definitions": {
       "chorus": {
@@ -131,7 +131,7 @@
     "long_instructions": "#### Complete the Song\n\nNow it's your turn. Write your own verse to complete the song. \n\n-   Add sounds to the [verse][0] function. ",
     "validations": {
       "music-ai-skill-function-verse_fc9881f2-7571-49f1-8971-dcab68a657a9": "Great work! You're organizing your code with functions!",
-      "music-ai-skill-function-verse_03ed3be5-172e-4df5-97cb-075d4032388f": "That chorus sounds great! Now, add sounds into the `verse function`. ",
+      "music-ai-skill-function-verse_03ed3be5-172e-4df5-97cb-075d4032388f": "That chorus sounds great! Now, add sounds into the [verse][0] function. ",
       "music-ai-skill-sequence_a0f44420-3323-439a-be62-f0aa67dbcbe1": "Nothing played yet. "
     },
     "function_definitions": {

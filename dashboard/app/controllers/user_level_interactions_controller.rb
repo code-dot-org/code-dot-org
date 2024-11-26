@@ -48,7 +48,7 @@ class UserLevelInteractionsController < ApplicationController
     user_level_interaction_params[:user_id] = current_user.id
     user_level_interaction_params[:school_year] = school_year
     unit = Unit.find(user_level_interaction_params[:script_id])
-    version_year = unit.version_year
+    version_year = unit.get_course_version&.key
     level = Level.find(user_level_interaction_params[:level_id])
     project_data = get_project_and_version_id(user_level_interaction_params[:level_id], user_level_interaction_params[:script_id])
     user_level_interaction_params[:code_version] = project_data[:version_id]

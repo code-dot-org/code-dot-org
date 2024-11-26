@@ -50,11 +50,9 @@ class DCDOBase < DynamicConfigBase
       'music-lab-samples-report': DCDO.get('music-lab-samples-report', true),
       'disable-try-new-progress-view-modal': DCDO.get('disable-try-new-progress-view-modal', false),
       'music-lab-existing-projects-default-sounds': DCDO.get('music-lab-existing-projects-default-sounds', true),
-      'show-age-gated-students-banner': DCDO.get('show-age-gated-students-banner', true),
       'cfu-pin-hide-enabled': DCDO.get('cfu-pin-hide-enabled', false),
       'teacher-local-nav-v2': DCDO.get('teacher-local-nav-v2', false),
       'best-of-stem-2024': DCDO.get('best-of-stem-2024', false),
-      lti_account_unlinking: DCDO.get('lti_account_unlinking', false),
       # TODO ACQ-2556 - Remove this after the 2024 HOC sweepstakes is over
       'hoc-2024-sweepstakes': DCDO.get('hoc-2024-sweepstakes', false),
       # TODO ACQ-2556 - Remove this after the 2024 HOC launch

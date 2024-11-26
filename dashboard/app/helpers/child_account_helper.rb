@@ -10,7 +10,6 @@ module ChildAccountHelper
       student_lockout_date ||= Policies::ChildAccount::StatePolicies.state_policy(user)&.dig(:lockout_date)
     else
       return unless student_lockout_date
-      return unless DCDO.get('cap_student_warnings_enabled', false)
     end
 
     {
@@ -39,7 +38,6 @@ module ChildAccountHelper
       student_lockout_date ||= Policies::ChildAccount::StatePolicies.state_policy(user)&.dig(:lockout_date)
     else
       return unless student_lockout_date
-      return unless DCDO.get('cap_student_warnings_enabled', false)
       return if user.latest_parental_permission_request
     end
 

@@ -2025,7 +2025,7 @@ columns:
     'null': true
     default:
     default_function:
-    collation: utf8mb3_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: run_at
@@ -13908,7 +13908,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20241120192448
+version: 20241125202219
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

@@ -54,27 +54,6 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     assert failures.empty?, failures.join("\n")
   end
 
-  test 'show_cap_state_modal?' do
-    test_matrix = [
-      {rollout: 10, user_id: 9, expected: true},
-      {rollout: 10, user_id: 101, expected: true},
-      {rollout: 10, user_id: 109, expected: true},
-      {rollout: 10, user_id: 110, expected: false},
-      {rollout: 10, user_id: 199, expected: false},
-      {rollout: 20, user_id: 119, expected: true},
-      {rollout: 99, user_id: 198, expected: true},
-      {rollout: 99, user_id: 199, expected: false},
-      {rollout: 100, user_id: 99, expected: true},
-      {rollout: 100, user_id: 1099, expected: true},
-    ]
-    test_matrix.each do |test_case|
-      user = OpenStruct.new({id: test_case[:user_id]})
-      DCDO.stubs(:get).with('cap-state-modal-rollout', 0).returns(test_case[:rollout])
-      actual = Policies::ChildAccount.show_cap_state_modal? user
-      assert_equal test_case[:expected], actual, "Testcase #{test_case} failed"
-    end
-  end
-
   test 'user_predates_policy?' do
     # [User traits, Expected result from compliant?]
     test_matrix = [
