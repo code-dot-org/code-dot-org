@@ -2,7 +2,6 @@ import {fireEvent, render, screen, within} from '@testing-library/react';
 import React from 'react';
 import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
-import {useLoaderData} from 'react-router-dom';
 import {Store} from 'redux';
 
 import {
@@ -79,10 +78,6 @@ const SECTIONS = [
     course_display_name: 'CSD1-2020',
   },
 ];
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  useLoaderData: jest.fn(),
-}));
 
 describe('LessonMaterialsContainer', () => {
   let store: Store;
@@ -353,8 +348,6 @@ describe('LessonMaterialsContainer', () => {
   });
 
   it('tells users to select a unit when no unit assigned', async () => {
-    const mockNoUnitData = null;
-    (useLoaderData as jest.Mock).mockReturnValue(mockNoUnitData);
     store.dispatch(selectSection(10));
     store.dispatch(setUnitName(null));
 
@@ -369,8 +362,6 @@ describe('LessonMaterialsContainer', () => {
   });
 
   it('notifies users that the assigned curriculum is pre-2020', async () => {
-    const legacyData = {...mockLessonData, versionYear: 2020};
-    (useLoaderData as jest.Mock).mockReturnValue(legacyData);
     store.dispatch(setUnitName('csd1-2020'));
     store.dispatch(selectSection(11));
 
