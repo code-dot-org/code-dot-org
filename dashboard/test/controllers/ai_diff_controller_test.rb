@@ -158,7 +158,7 @@ class AiDiffControllerTest < ActionController::TestCase
   test "returns success when experiment is enabled and session_id is present" do
     sign_in @teacher
 
-    @thread = create(:aichat_thread, external_id: @session_id, user: @teacher)
+    @thread = create(:aichat_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, unit_id: @unit_in_course.id, level_id: @lesson.id)
 
     post :chat_completion, params: {
       inputText: "Hello!",

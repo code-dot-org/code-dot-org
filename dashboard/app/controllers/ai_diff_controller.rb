@@ -20,7 +20,7 @@ class AiDiffController < ApplicationController
 
     # get or create thread obj
     begin
-      @thread = session_id ? AichatThread.where(external_id: session_id, user_id: current_user.id).first : AichatThread.create!(
+      @thread = AichatThread.find_or_create_by!(
         user_id: current_user.id,
         external_id: response_body[:session_id],
         llm_version: AiDiffBedrockHelper::MODEL_ID,
