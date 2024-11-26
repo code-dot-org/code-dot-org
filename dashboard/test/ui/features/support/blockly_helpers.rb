@@ -129,4 +129,10 @@ def delete_block(id)
   "blockToDelete.dispose();"
 end
 
+def move_block_to_jigsaw_ghost(id)
+  "var workspace = Blockly.getMainWorkspace();" \
+  "var blockToMove = workspace.getBlockById('#{id}');" \
+  "blockToMove.moveTo(appOptions.level.ghost);"
+end
+
 World(BlocklyHelpers)

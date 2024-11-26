@@ -66,6 +66,11 @@ When /^I connect block "([^"]*)" inside block "([^"]*)"$/ do |from, to|
   @browser.execute_script code
 end
 
+When /^I move block "([^"]*)" to jigsaw ghost$/ do |id|
+  code = move_block_to_jigsaw_ghost(id)
+  @browser.execute_script code
+end
+
 When /^I delete block "([^"]*)"$/ do |id|
   code = delete_block(id)
   @browser.execute_script code

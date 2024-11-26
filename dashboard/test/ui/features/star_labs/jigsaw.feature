@@ -29,6 +29,6 @@ Scenario: Can't delete blocks or lose them outside the workspace
   And block "jigsaw_2A" is visible in the workspace
 
 Scenario: Solving puzzle
-  And I drag "[data-id='jigsaw_2A']" to "rect[fill-opacity='0.2']"
+  And I move block "jigsaw_2A" to jigsaw ghost
   Then I wait to see ".modal"
   And element ".modal .congrats" contains text "You completed Puzzle 1"
