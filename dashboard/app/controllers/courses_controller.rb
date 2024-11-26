@@ -30,6 +30,16 @@ class CoursesController < ApplicationController
   end
 
   def show
+    if experiment.enabled?(current_user, nil, 'teacher-local-nav-v2')
+      if !params[:section_id] && current_user&.last_section_id
+        redirect_to "/teacher_dashboard/sections/#{current_user.last_section_id}/courses/#{@unit_group.name}"
+        return
+      elsif params[:section_id]
+        redirect_to "/teacher_dashboard/sections/#{params[:section_id]}/courses/#{@unit_group.name}"
+        return
+      end
+    end
+
     if !params[:section_id] && current_user&.last_section_id
       redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
       return
