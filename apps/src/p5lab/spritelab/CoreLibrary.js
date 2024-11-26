@@ -70,12 +70,6 @@ export default class CoreLibrary {
       },
       ...commands,
     };
-
-    // Add each command name to the Blockly generator's reserved word list.
-    // This prevents students from overriding commands with their functions.
-    Object.keys(this.commands).forEach(commandName => {
-      Blockly.JavaScript.nameDB_.reservedWords.add(commandName);
-    });
   }
 
   isPreviewFrame() {
