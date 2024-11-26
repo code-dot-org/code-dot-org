@@ -2,7 +2,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import {reduxStore} from '@cdo/storybook/decorators';
+import {reduxStore, withGlobalEdition} from '@cdo/storybook/decorators';
 
 import {
   announcement,
@@ -38,11 +38,12 @@ const serverCourses = [
 
 export default {
   component: TeacherHomepage,
+  decorators: [withGlobalEdition],
 };
 
 const Template = args => {
   withFakeServer(args.fakeServerArgs);
-  return (
+  const ret = (
     <Provider store={reduxStore({teacherSections})}>
       <TeacherHomepage
         announcements={[announcement]}
@@ -51,6 +52,7 @@ const Template = args => {
       />
     </Provider>
   );
+  return ret;
 };
 
 export const NoCoursesNoSections = Template.bind({});
@@ -128,6 +130,23 @@ CoursesSectionsAndJoinedPLSections.args = {
     topPlCourse: topPlCourse,
     joinedStudentSections: joinedStorySections,
     joinedPlSections: joinedPlSections,
+  },
+};
+
+// Render a common form of the component in the Farsi region
+// This uses the withGlobalEdition decorator (see default export)
+export const FarsiGlobalEditionCoursesSections = Template.bind({});
+FarsiGlobalEditionCoursesSections.args = {
+  region: 'fa',
+  fakeServerArgs: {
+    courses: serverCourses,
+    sections: serverSections,
+  },
+  props: {
+    courses: courses,
+    topCourse: topCourse,
+    joinedStudentSections: joinedStorySections,
+    joinedPlSections: [],
   },
 };
 
