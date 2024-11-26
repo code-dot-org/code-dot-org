@@ -1,0 +1,29 @@
+name 'self-paced-equity-U1L1-CFU'
+title 'Check for Understanding'
+description 'Match the correct code to each image.'
+height'300'
+
+
+question 'Inequality'
+answer 'A school does not offer computer science classes. Students interested in computer science must independently have the means to purchase technology and pursue after-school classes or self-directed learning.'
+
+question 'Equality)'
+answer 'A school offers a computer science class or after-school club that all students are free to take, without prerequisites. However, class enrollment dictates that only a fixed number of students can sign up.'
+
+question 'Equity'
+answer 'An elementary school offers computer science to all students, or a middle or high school offers multiple computer science classes at different levels of rigor. The computer science teacher makes a concerted effort to recruit underrepresented students in their classroom (female students, students from underrepresented groups). The CS classroom feels joyful and welcoming for all students.'
+
+question 'Justice'
+answer 'A school district provides introductory classes at the K-5 level to all students to expose them to computer science fundamentals. As students progress through middle and high school, they are encouraged and recruited to join computer science classes that match their interests and readiness level. Computer science classrooms feel joyful and welcoming to all students.'
+
+
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true

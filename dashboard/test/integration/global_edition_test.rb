@@ -3,7 +3,14 @@
 require 'test_helper'
 
 class GlobalEditionTest < ActionDispatch::IntegrationTest
+  include Minitest::RSpecMocks
+
   let(:document) {Nokogiri::HTML(response.body)}
+
+  before do
+    allow(DCDO).to receive(:get).and_call_original
+    allow(DCDO).to receive(:get).with('global_edition_enabled', anything).and_return(true)
+  end
 
   describe 'routing' do
     let(:international_page_path) {'/incubator'}
@@ -22,6 +29,33 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
 
         must_respond_with 200
         _(path).must_equal international_page_path
+      end
+
+      context 'when region locked locale is set via params' do
+        let(:params) {{set_locale: ge_region_locale}}
+        let(:extra_params) {{foo: 'bar'}}
+
+        before do
+          params.merge!(extra_params)
+        end
+
+        it 'redirects to regional page with extra params' do
+          get_international_page
+
+          must_respond_with 302
+          must_redirect_to "#{international_page_path}?#{extra_params.merge(ge_region: ge_region).to_query}"
+
+          follow_redirect!
+
+          must_respond_with 302
+          must_redirect_to "#{regional_page_path}?#{extra_params.to_query}"
+
+          follow_redirect!
+
+          must_respond_with 200
+          _(path).must_equal regional_page_path
+          _(request.params[:foo]).must_equal extra_params[:foo]
+        end
       end
 
       context 'when ge_region param is set' do
@@ -71,7 +105,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
           must_respond_with :success
         end
 
-        context 'if ge_region is unavailable' do
+        context 'if ge_region is invalid' do
           let(:ge_region) {'_'}
 
           it 'stays on international page' do
@@ -127,12 +161,12 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         _ {get_regional_page}.must_change -> {incubator_path}, from: international_page_path, to: regional_page_path
       end
 
-      context 'when ge_region is unavailable' do
+      context 'when ge_region is invalid' do
         let(:ge_region) {'_'}
 
         it 'is not accessible' do
-          actual_error = _ {get_regional_page}.must_raise(ActionController::RoutingError)
-          _(actual_error.message).must_equal %Q[No route matches [GET] "#{regional_page_path}"]
+          get_regional_page
+          must_respond_with 500
         end
       end
     end

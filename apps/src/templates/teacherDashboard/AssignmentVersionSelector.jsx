@@ -85,9 +85,9 @@ export default class AssignmentVersionSelector extends Component {
 
     return (
       <span style={styles.version} id="uitest-version-selector">
-        <div style={styles.dropdownLabel}>
+        <label style={styles.dropdownLabel} htmlFor="assignment-version-year">
           {i18n.assignmentSelectorVersion()}
-        </div>
+        </label>
         <select
           id="assignment-version-year"
           value={selectedCourseVersionId}

@@ -129,58 +129,7 @@ class Documents < Sinatra::Base
   end
 
   before do
-    $log.debug request.url
-
-    Honeybadger.context({url: request.url, locale: request.locale})
-
-    uri = request.path_info.chomp('/')
-    redirect uri unless uri.empty? || request.path_info == uri
-
-    I18n.locale = request.locale
-
-    @config = settings.configs[request.site]
-    @header = {}
-
-    @dirs = []
-
-    if request.site == 'hourofcode.com'
-      @dirs << [File.join(request.site, 'i18n')]
-    end
-
-    if request.site == 'code.org'
-      @dirs << File.join(request.site, 'i18n')
-    end
-
-    @dirs << request.site
-
-    # Implement recursive site-inheritance feature.
-    # Site renders fallback documents from 'base' site defined in config.
-    if @config
-      base = @config[:base]
-      while base
-        @dirs << base
-        base = settings.configs[base][:base]
-      end
-    end
-
-    @actionview ||= begin
-      # Lazily require actionview_sinatra here, because it it turn will require
-      # ActionView::Base, which will in turn run the ActiveSupport load hooks for
-      # the class.
-      #
-      # This can cause some issues for environments that want to load both
-      # Pegasus and Dashboard, since if ActionView is loaded outside the context
-      # of Rails it won't load all functionality, and ActionView won't be
-      # re-initialized when it _does_ get loaded by Rails.
-      #
-      # This is similar to the lazy loading we need to do for Haml:
-      # https://github.com/code-dot-org/code-dot-org/blob/8a49e0f39e1bc98aac462a3eb049d0eeb6af3e06/lib/cdo/pegasus/text_render.rb#L82-L97
-      require 'cdo/pegasus/actionview_sinatra'
-      ActionViewSinatra.create_view(self)
-    end
-
-    update_actionview_assigns
-    @actionview.instance_variable_set(:@_request, request)
+    setup_for(request)
   end
 
   # This will make all instance variables on our sinatra controller also
@@ -314,6 +263,63 @@ class Documents < Sinatra::Base
   end
 
   helpers(Dashboard) do
+    def setup_for(request)
+      instance_variable_set(:@request, request) unless instance_variable_get(:@request)
+
+      $log.debug request.url
+
+      Honeybadger.context({url: request.url, locale: request.locale})
+
+      uri = request.path_info.chomp('/')
+      redirect uri unless uri.empty? || request.path_info == uri
+
+      I18n.locale = request.locale
+
+      @config = settings.configs[request.site]
+      @header = {}
+
+      @dirs = []
+
+      if request.site == 'hourofcode.com'
+        @dirs << [File.join(request.site, 'i18n')]
+      end
+
+      if request.site == 'code.org'
+        @dirs << File.join(request.site, 'i18n')
+      end
+
+      @dirs << request.site
+
+      # Implement recursive site-inheritance feature.
+      # Site renders fallback documents from 'base' site defined in config.
+      if @config
+        base = @config[:base]
+        while base
+          @dirs << base
+          base = settings.configs[base][:base]
+        end
+      end
+
+      @actionview ||= begin
+        # Lazily require actionview_sinatra here, because it it turn will require
+        # ActionView::Base, which will in turn run the ActiveSupport load hooks for
+        # the class.
+        #
+        # This can cause some issues for environments that want to load both
+        # Pegasus and Dashboard, since if ActionView is loaded outside the context
+        # of Rails it won't load all functionality, and ActionView won't be
+        # re-initialized when it _does_ get loaded by Rails.
+        #
+        # This is similar to the lazy loading we need to do for Haml:
+        # https://github.com/code-dot-org/code-dot-org/blob/8a49e0f39e1bc98aac462a3eb049d0eeb6af3e06/lib/cdo/pegasus/text_render.rb#L82-L97
+        require 'cdo/pegasus/actionview_sinatra'
+        ActionViewSinatra.create_view(self)
+      end
+
+      update_actionview_assigns
+      @actionview.instance_variable_set(:@_request, request)
+    end
+
     def content_dir(*paths)
       File.join(settings.views, *paths)
     end

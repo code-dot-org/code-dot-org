@@ -72,11 +72,11 @@ def main
       user_message_text = JSON.parse(row.new_message)["chatMessageText"]
       execution_status = row.execution_status
       selected_model_id = JSON.parse(row.model_customizations)["selectedModelId"]
-      path = ""
+      path = row.level_id
       level = Level.find(row.level_id)
       script_level = level.script_levels.find_by_script_id(row.script_id)
       if script_level
-        # This handles chat requests that occurred on standard levels in a progression
+        # This handles chat requests that occurred on standard levels in a progression.
         path = script_level.path
       else
         # This handles chat requests that occurred on a sublevel
@@ -85,7 +85,7 @@ def main
           pl.script_levels.any? {|sl| sl.script_id == row.script_id}
         end
 
-        if parent_levels_in_script
+        if parent_levels_in_script && !parent_levels_in_script.empty?
           parent_level = parent_levels_in_script.first
           sublevel_position = parent_level.sublevel_position(level)
           path = parent_level.build_script_level_path(

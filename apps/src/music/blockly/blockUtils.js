@@ -1,6 +1,6 @@
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 
-import {BlockMode} from '../constants';
+import {BlockMode, MAX_FUNCTION_CALLS_COUNT} from '../constants';
 
 import {BlockTypes} from './blockTypes';
 import {DOCS_BASE_URL} from './constants';
@@ -137,11 +137,13 @@ function restoreBlockDefinitions() {
 // A helper function to generate the code for a function call to play sounds sequentially.
 function simple2FunctionCallGenerator(functionName, functionCallBllockId) {
   return `
-    Sequencer.startFunctionContext('${functionName}', '${functionCallBllockId}');
-    Sequencer.playSequential();
-    ${functionName}();
-    Sequencer.endSequential();
-    Sequencer.endFunctionContext();
+    if (__functionCallsCount++ < ${MAX_FUNCTION_CALLS_COUNT}) {
+      Sequencer.startFunctionContext('${functionName}', '${functionCallBllockId}');
+      Sequencer.playSequential();
+      ${functionName}();
+      Sequencer.endSequential();
+      Sequencer.endFunctionContext();
+    }
   `;
 }
 

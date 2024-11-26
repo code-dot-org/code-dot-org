@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 17:07:10 UTC",
+    "serialized_at": "2024-11-19 01:13:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -288,6 +290,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

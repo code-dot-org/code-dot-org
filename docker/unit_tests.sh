@@ -7,6 +7,10 @@
 set -e
 
 export CI=true
+export CI_JOB=unit_tests
+export CI_BUILD_NUMBER=${CI_BUILD_NUMBER:-$RANDOM$RANDOM} # determines where test logs are stored in S3.
+export CI_TEST_REPORTS=${CI_TEST_REPORTS:-/home/ci/test_reports}
+
 export RAILS_ENV=test
 export RACK_ENV=test
 export DISABLE_SPRING=1
@@ -43,5 +47,5 @@ set -x
 bundle install --quiet
 bundle exec rake install
 bundle exec rake build
-bundle exec ruby tools/hooks/lint.rb origin/$DRONE_TARGET_BRANCH $DRONE_SOURCE_BRANCH
-bundle exec rake circle:run_tests
+bundle exec ruby tools/hooks/lint.rb origin/$CI_BASE_BRANCH $CI_HEAD_BRANCH
+bundle exec rake ci:run_tests

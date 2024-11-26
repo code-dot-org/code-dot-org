@@ -121,7 +121,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={{}}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           open
         />
@@ -175,7 +175,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           open
         />
@@ -199,7 +199,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={false}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           open
         />
@@ -227,7 +227,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           sectionId={42}
           open
@@ -263,7 +263,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           sectionId={42}
           open
@@ -301,7 +301,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           sectionId={42}
           open
@@ -349,7 +349,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           sectionId={42}
           open
@@ -462,7 +462,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           sectionId={42}
           open
@@ -506,7 +506,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           sectionId={42}
           open
@@ -547,7 +547,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           sectionId={42}
           open
@@ -591,7 +591,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           sectionId={42}
           open
@@ -635,7 +635,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           sectionId={42}
           reportingData={{}}
           open
@@ -677,7 +677,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           sectionId={42}
           open
@@ -719,7 +719,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           sectionId={42}
           open
@@ -763,7 +763,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           sectionId={42}
           open
@@ -800,7 +800,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           open
         />
@@ -839,7 +839,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           open
         />
@@ -882,7 +882,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={{name: 'Grace Hopper'}}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           open
         />
@@ -906,7 +906,7 @@ describe('RubricContainer', () => {
         <RubricContainer
           rubric={defaultRubric}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           canProvideFeedback
           open
@@ -931,7 +931,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={{name: 'Grace Hopper'}}
           teacherHasEnabledAi={true}
-          currentLevelName={'different_level'}
+          onLevelForEvaluation={false}
           reportingData={{}}
           canProvideFeedback
           open
@@ -956,7 +956,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           open
         />
@@ -985,7 +985,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           open
         />
@@ -1013,7 +1013,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'non-assessment-level'}
+          onLevelForEvaluation={false}
           reportingData={{}}
           open
         />
@@ -1041,7 +1041,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={false}
-          currentLevelName={'test-level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           open
         />
@@ -1069,7 +1069,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           open
         />
@@ -1099,7 +1099,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           open
         />
@@ -1147,7 +1147,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           open
         />
@@ -1184,7 +1184,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           open
         />
@@ -1232,7 +1232,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          onLevelForEvaluation={true}
           reportingData={{}}
           open
         />

@@ -305,12 +305,6 @@ namespace :test do
       end
     end
 
-    timed_task_with_logging :interpreter do
-      run_tests_if_changed('interpreter', ['apps/src/lib/tools/jsinterpreter/patchInterpreter.js']) do
-        TestRunUtils.run_interpreter_tests
-      end
-    end
-
     desc 'Runs dashboard tests if dashboard might have changed from staging.'
     timed_task_with_logging :dashboard do
       run_tests_if_changed(
@@ -404,15 +398,17 @@ namespace :test do
       end
     end
 
-    all_tasks = [:apps,
-                 # currently disabled because these tests take too long to run on circle
-                 # :interpreter,
-                 :dashboard,
-                 :dashboard_legacy,
-                 :pegasus,
-                 :shared,
-                 :lib,
-                 :bin]
+    all_tasks = [
+      :apps,
+      # currently disabled because these tests take too long to run on CI
+      # :interpreter,
+      :dashboard,
+      :dashboard_legacy,
+      :pegasus,
+      :shared,
+      :lib,
+      :bin
+    ]
 
     timed_task_with_logging all_but_apps: all_tasks.reject {|t| t == :apps}
 
@@ -428,7 +424,7 @@ timed_task_with_logging test: ['test:changed']
 # Some files are so fundamental to our test runner(s) that changes to them
 # should cause us to run all tests.
 GLOBS_AFFECTING_EVERYTHING = %w(
-  .circleci/config.yml
+  .drone.yml
   lib/rake/test.rake
 )
 

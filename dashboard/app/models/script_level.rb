@@ -725,18 +725,18 @@ class ScriptLevel < ApplicationRecord
         # final state - a string representation of the URL of the exemplar level: studio.code.org/s/<course>/...
         case level
         when Dancelab
-          send("#{'dance'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+          send(:"#{'dance'}_project_view_projects_url", channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         when Poetry
-          send("#{level.standalone_app_name}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+          send(:"#{level.standalone_app_name}_project_view_projects_url", channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         when GamelabJr
-          send("#{level.standalone_app_name_or_default}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+          send(:"#{level.standalone_app_name_or_default}_project_view_projects_url", channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         when Artist
           artist_type = (level.skin == 'elsa' || level.skin == 'anna') ? 'frozen' : 'artist'
-          send("#{artist_type}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+          send(:"#{artist_type}_project_view_projects_url", channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         when Studio # playlab
-          send("#{'playlab'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+          send(:"#{'playlab'}_project_view_projects_url", channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         else
-          send("#{level.game.app}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+          send(:"#{level.game.app}_project_view_projects_url", channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         end
       end
     elsif level.ideal_level_source_id && script # old style 'solutions' for blockly-type levels

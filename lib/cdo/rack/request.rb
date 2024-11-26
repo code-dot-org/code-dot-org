@@ -4,9 +4,12 @@ require 'ipaddr'
 require 'json'
 require 'country_codes'
 require 'cdo/global_edition'
+require 'cdo/i18n'
 
 module Cdo
   module RequestExtension
+    LOCALE_ENV = 'cdo.locale'.freeze
+
     TRUSTED_PROXIES = JSON.parse(File.read(deploy_dir('lib/cdo/trusted_proxies.json')))['ranges'].map do |proxy|
       IPAddr.new(proxy)
     end
@@ -30,7 +33,11 @@ module Cdo
     end
 
     def locale
-      env['cdo.locale'] || 'en-US'
+      env[LOCALE_ENV] || Cdo::I18n::DEFAULT_LOCALE
+    end
+
+    def locale=(value)
+      env[LOCALE_ENV] = value if Cdo::I18n.available_locale?(value)
     end
 
     def referer_site_with_port
@@ -130,16 +137,22 @@ module Cdo
     end
 
     def ge_region
-      Cdo::GlobalEdition.current_region
+      RequestStore.store[Cdo::GlobalEdition::REGION_KEY]
     end
 
     # Initialize a private instance of the SessionStore used in Dashboard, so
     # we can access data stored there (ie, the id of the current user).
     private def dashboard_session_store
-      @dashboard_session_store ||= Dashboard::Application.config.session_store.new(
-        Dashboard::Application,
-        Dashboard::Application.config.session_options
-      )
+      @@dashboard_session_store ||=
+        begin
+          # Configure this instance exactly the same as the primary instance, with one
+          # exception: the number of connections per thread we allow it to maintain.
+          # See dashboard/config/initializers/session_store.rb for more details.
+          options = Dashboard::Application.config.session_options.merge(
+            pool_size: Dashboard::Application.config.session_options.fetch(:secondary_pool_size)
+          )
+          Dashboard::Application.config.session_store.new(Dashboard::Application, options)
+        end
     end
   end
 end

@@ -2025,7 +2025,7 @@ columns:
     'null': true
     default:
     default_function:
-    collation: utf8mb3_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: run_at
@@ -2820,7 +2820,7 @@ columns:
     'null': true
     default:
     default_function:
-    collation: utf8mb3_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: ai_confidence_exact_match
@@ -9775,6 +9775,19 @@ indexes:
     type:
     using: :btree
     comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: learning_goal_teacher_evaluations
+    name: index_learning_goal_teacher_evaluations_on_teacher_id
+    unique: false
+    columns:
+    - teacher_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
   learning_goals:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: learning_goals
@@ -10051,6 +10064,19 @@ indexes:
     unique: false
     columns:
     - level_num
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: levels
+    name: index_levels_on_type
+    unique: false
+    columns:
+    - type
     lengths: {}
     orders: {}
     opclasses: {}
@@ -13882,7 +13908,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20241024180714
+version: 20241125202219
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

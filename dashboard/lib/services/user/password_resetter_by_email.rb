@@ -11,20 +11,12 @@ module Services
         return user if user.errors.present?
 
         if user.new_record?
-          Cdo::Metrics.put(
-            'User', 'PasswordResetUserNotFound', 1, {
-              Environment: CDO.rack_env
-            }
-          )
+          log_user_metric('PasswordResetUserNotFound')
           # Only send if the user has an email auth option OR if the user is unmigrated and has a password login
         elsif user.authentication_options.any?(&:email?) || user.provider.nil?
           user.raw_token = send_reset_password_instructions
         else
-          Cdo::Metrics.put(
-            'User', 'PasswordResetEmailAuthNotFound', 1, {
-              Environment: CDO.rack_env
-            }
-          )
+          log_user_metric('PasswordResetEmailAuthNotFound')
         end
         user
       end
@@ -45,11 +37,16 @@ module Services
       private def send_reset_password_instructions
         raw = user.send(:set_reset_password_token)
         user.send(:send_devise_notification, :reset_password_instructions, raw, {to: email})
+        log_user_metric('PasswordResetEmailSuccessful')
         raw
       rescue ArgumentError
         user.errors.add :base, I18n.t('password.reset_errors.invalid_email')
         user.send(:clear_reset_password_token)
         nil
+      end
+
+      private def log_user_metric(metric_name)
+        Cdo::Metrics.put('User', metric_name, 1, {Environment: CDO.rack_env})
       end
     end
   end

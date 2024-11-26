@@ -178,6 +178,10 @@ export const sectionFromServerSection = serverSection => ({
   syncEnabled: serverSection.sync_enabled,
   aiTutorEnabled: serverSection.ai_tutor_enabled,
   anyStudentHasProgress: serverSection.any_student_has_progress,
+  atRiskAgeGatedDate: serverSection.at_risk_age_gated_date
+    ? new Date(serverSection.at_risk_age_gated_date)
+    : null,
+  atRiskAgeGatedUsState: serverSection.at_risk_age_gated_us_state,
 });
 
 /**
@@ -218,6 +222,8 @@ export function serverSectionFromSection(section) {
     restrict_section: section.restrictSection,
     participant_type: section.participantType,
     ai_tutor_enabled: section.aiTutorEnabled,
+    at_risk_age_gated_date: section.atRiskAgeGatedDate?.toISOString(),
+    at_risk_age_gated_us_state: section.atRiskAgeGatedUsState,
   };
 }
 
@@ -386,3 +392,19 @@ export const studentShape = PropTypes.shape({
   secretPicturePath: PropTypes.string,
   secretWords: PropTypes.string,
 });
+
+/**
+ * @param {object} state - state.teacherSections in redux tree
+ * @return {array} A list of sections which have students at risk of being age
+ * gated by CAP.
+ */
+export function atRiskAgeGatedSections(state) {
+  state = getRoot(state);
+  // Convert from a Map to an Array.
+  const sections = Object.values(state.sections || {});
+  // Only non-archived sections can be at risk.
+  // Select only the sections which have students at risk.
+  return sections.filter(
+    section => !section.hidden && section.atRiskAgeGatedDate
+  );
+}

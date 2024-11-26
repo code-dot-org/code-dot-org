@@ -4,7 +4,7 @@ import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 
 $(document).ready(() => {
   const isInSignupExperiment = statsigReporter.getIsInExperiment(
-    'new_sign_up_v1',
+    'new_sign_up_v2',
     'showNewFlow',
     false
   );

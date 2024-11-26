@@ -229,7 +229,7 @@ class ProjectsController < ApplicationController
   end
 
   def combine_projects_and_featured_projects_data
-    projects = "#{CDO.dashboard_db_name}__projects".to_sym
+    projects = :"#{CDO.dashboard_db_name}__projects"
     project_featured_project_combo_data = DASHBOARD_DB[:featured_projects].
       select(*project_and_featured_project_fields).
       join(projects, id: :storage_app_id, state: 'active').all
@@ -779,7 +779,7 @@ class ProjectsController < ApplicationController
                 "project type: #{project_type}"
               ].join("\n")
             },
-            tags: ['project_submission']
+            tags: ['project_submission', project_type]
           }
         }.to_json,
         basic_auth: {username: 'dev@code.org/token', password: Dashboard::Application.config.zendesk_dev_token}

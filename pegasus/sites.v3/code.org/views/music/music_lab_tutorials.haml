@@ -7,6 +7,8 @@
       desc: hoc_s("music_lab.jam_session.banner.desc_03", locals: {artist_list: "Sabrina Carpenter, Lady Gaga", artist_name: "Shakira"}),
       url: CDO.studio_url("/s/music-jam-2024/reset"),
       button_label: hoc_s("music_lab.jam_session.button.start"),
+      lesson_plan_url: CDO.studio_url("/s/music-jam-2024/lessons/1"),
+      secondary_button_label: hoc_s('call_to_action_view_lesson_plan'),
       new: true
     },
     {
@@ -14,8 +16,10 @@
       title: hoc_s("music_lab.jam_session.block.title"),
       image: "/images/action-blocks/action-block-music-lab-tutorial.png",
       desc: hoc_s("music_lab.jam_session.block.desc"),
-      url: CDO.studio_url("s/music-tutorial-2024"),
-      button_label: hoc_s("music_lab.tutorial.button")
+      url: CDO.studio_url("s/music-tutorial-2024/reset"),
+      button_label: hoc_s("music_lab.tutorial.button"),
+      lesson_plan_url: CDO.studio_url("/s/music-tutorial-2024/lessons/1"),
+      secondary_button_label: hoc_s('call_to_action_view_lesson_plan')
     },
   ]
 
@@ -45,3 +49,5 @@
             .content-footer
               %a.link-button{href: "#{block_item[:url]}"}
                 = block_item[:button_label]
+              %a.link-button.secondary{href: "#{block_item[:lesson_plan_url]}"}
+                = block_item[:secondary_button_label]
