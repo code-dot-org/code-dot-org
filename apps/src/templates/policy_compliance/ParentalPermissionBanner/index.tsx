@@ -39,7 +39,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
   ) => {
     return {
       inSection: currentUser.inSection,
-      usState: currentUser.usStateCode,
+      us_state: currentUser.usStateCode,
       consentStatus: parentalPermissionRequest.consent_status,
     };
   };
@@ -53,7 +53,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
       reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_SHOWN, {
         inSection: currentUser.inSection,
         consentStatus: currentUser.childAccountComplianceState,
-        usState: currentUser.usStateCode,
+        us_state: currentUser.usStateCode,
       });
     }
   }, [
@@ -69,7 +69,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
     reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_CLICKED, {
       inSection: currentUser.inSection,
       consentStatus: currentUser.childAccountComplianceState,
-      usState: currentUser.usStateCode,
+      us_state: currentUser.usStateCode,
     });
   };
 
@@ -84,7 +84,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
 
     reportEvent(EVENTS.CAP_PARENT_EMAIL_MODAL_CLOSED, {
       inSection: currentUser.inSection,
-      usState: currentUser.usStateCode,
+      us_state: currentUser.usStateCode,
       consentStatus,
     });
   };

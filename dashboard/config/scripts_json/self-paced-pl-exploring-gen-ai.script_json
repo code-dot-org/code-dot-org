@@ -4,14 +4,19 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "self_paced_pl_9_12",
+      "curriculum_umbrella": "9-12 Special topics curriculum selfpaced pl",
       "is_migrated": true,
       "student_detail_progress_view": true,
+      "topic_tags": [
+        "ai"
+      ],
       "tts": true,
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-13 16:03:04 UTC",
+    "serialized_at": "2024-11-25 22:43:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

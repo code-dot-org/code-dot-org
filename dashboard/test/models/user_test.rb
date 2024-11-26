@@ -5,6 +5,7 @@ require 'timecop'
 
 class UserTest < ActiveSupport::TestCase
   include ProjectsTestUtils
+  include Minitest::RSpecMocks
   self.use_transactional_test_case = true
 
   class UsStateCodeTest < ActiveSupport::TestCase
@@ -3975,7 +3976,7 @@ class UserTest < ActiveSupport::TestCase
         sharing_disabled: false,
         has_ever_signed_in: @student.has_ever_signed_in?,
         ai_tutor_access_denied: !!@student.ai_tutor_access_denied,
-        at_risk_age_gated: false,
+        at_risk_age_gated_date: nil,
         child_account_compliance_state: @student.cap_status,
         latest_permission_request_sent_at: latest_permission_request_sent_at,
         us_state: us_state,
@@ -5526,6 +5527,30 @@ class UserTest < ActiveSupport::TestCase
       it 'does not call CAP compliance removing service' do
         expect_cap_compliance_removing.never
         update_us_state
+      end
+    end
+  end
+
+  describe '.at_risk_age_gated_date' do
+    let(:user) {create(:student)}
+    let(:at_risk_age_gated_date) {user.at_risk_age_gated_date}
+    let(:compliant) {false}
+    let(:lockout_date) {DateTime.now}
+
+    before do
+      allow(Policies::ChildAccount).to receive(:compliant?).with(user, future: true).and_return(compliant)
+      allow(Policies::ChildAccount::StatePolicies).to receive(:state_policy).with(user).and_return({lockout_date: lockout_date})
+    end
+
+    it 'returns the policy lockout date' do
+      _(at_risk_age_gated_date).must_equal lockout_date
+    end
+
+    context 'when compliant' do
+      let(:compliant) {true}
+
+      it 'returns nil' do
+        _(at_risk_age_gated_date).must_equal nil
       end
     end
   end

@@ -1,5 +1,6 @@
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {fetchSignedCookies} from '@cdo/apps/utils';
 
 import {baseAssetUrlRestricted} from '../constants';
@@ -128,7 +129,7 @@ class SoundCache {
       return;
     }
 
-    const response = await fetch(url);
+    const response = await HttpClient.get(url);
     const arrayBuffer = await response.arrayBuffer();
     const audioBuffer = await this.audioContext.decodeAudioData(arrayBuffer);
     this.audioBuffers[url] = audioBuffer;

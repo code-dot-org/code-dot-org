@@ -99,19 +99,20 @@
         "type": "flyout"
       },
       "library": "launch2024",
-      "packId": "lady_gaga_born_this_way",
+      "packId": "shakira_whenever_wherever",
       "sounds": {
-        "lady_gaga_born_this_way": [
+        "shakira_whenever_wherever": [
           "vocals_chorus_1",
           "vocals_chorus_2",
-          "vocals_chorus_tag",
-          "synth_main_chorus",
-          "synth_main_small",
-          "synth_big_chorus",
-          "synth_plink",
-          "synth_bounce",
-          "piano",
-          "strings"
+          "vocals_chorus_backups_1",
+          "vocals_chorus_backups_2",
+          "drum_beat_chorus",
+          "guitar_chorus_1",
+          "guitar_chorus_2",
+          "acoustic_chorus_1",
+          "acoustic_chorus_2",
+          "organ_chorus_1",
+          "organ_chorus_2"
         ]
       }
     },
@@ -120,7 +121,7 @@
     "use_secondary_finish_button": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:16.784+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-playtogether_sequence_1\\\"\"],\"cloned_from\":\"music-ai-skill-playtogether_sequence_1\"},{\"changed_at\":\"2024-10-22 23:42:40 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-25 20:53:44 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-28 21:00:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-31 21:04:32 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-11-10 22:26:57 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-13 17:25:43 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:16.784+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-playtogether_sequence_1\\\"\"],\"cloned_from\":\"music-ai-skill-playtogether_sequence_1\"},{\"changed_at\":\"2024-10-22 23:42:40 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-25 20:53:44 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-28 21:00:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-31 21:04:32 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-11-10 22:26:57 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-13 17:25:43 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-25 23:12:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

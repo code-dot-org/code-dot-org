@@ -32,7 +32,7 @@ class CreateHeader
       image: "logo_poetry.png"
     },
     music: {
-      url: CDO.studio_url("/s/music-intro-2024/reset")
+      url: CDO.code_org_url("/music")
     },
   }.freeze
 

@@ -1,10 +1,14 @@
 ---
-theme: responsive
 no_header: true
 no_footer: true
 embeddable: true
 english_only: true
 ---
+
+:css
+  .desktop-feature {
+    display: none;
+  }
 
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}

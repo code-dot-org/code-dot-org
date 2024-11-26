@@ -143,7 +143,7 @@ module Cdo
     # Initialize a private instance of the SessionStore used in Dashboard, so
     # we can access data stored there (ie, the id of the current user).
     private def dashboard_session_store
-      @dashboard_session_store ||=
+      @@dashboard_session_store ||=
         begin
           # Configure this instance exactly the same as the primary instance, with one
           # exception: the number of connections per thread we allow it to maintain.
