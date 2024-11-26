@@ -10,7 +10,6 @@
     "build-storybook": "storybook build",
     "test-storybook": "test-storybook",
     "eyes-storybook": "eyes-storybook",
-    "puppeteer": "puppeteer",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
