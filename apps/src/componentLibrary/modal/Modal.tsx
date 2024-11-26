@@ -1,11 +1,8 @@
 import classnames from 'classnames';
-import React, {HTMLAttributes, ReactNode, useRef} from 'react';
+import React, {HTMLAttributes, ReactNode} from 'react';
 
 import {Button, ButtonProps} from '@cdo/apps/componentLibrary/button';
-import CloseButton from '@cdo/apps/componentLibrary/closeButton';
-import useBodyScrollLock from '@cdo/apps/componentLibrary/common/hooks/useBodyScrollLock';
-import useEscapeKeyHandler from '@cdo/apps/componentLibrary/common/hooks/useEscapeKeyHandler';
-import useFocusTrap from '@cdo/apps/componentLibrary/common/hooks/useFocusTrap';
+import CustomDialog from '@cdo/apps/componentLibrary/dialog/CustomDialog';
 import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
 
 import moduleStyles from './modal.module.scss';
@@ -71,76 +68,57 @@ const Modal: React.FunctionComponent<ModalProps> = ({
   imagePlacement = 'top',
   ...HTMLAttributes
 }) => {
-  const modalRef = useRef<HTMLDivElement>(null);
-
-  useBodyScrollLock(true);
-  useFocusTrap(modalRef);
-  useEscapeKeyHandler(onClose);
-
   return (
-    <div role="presentation" className={moduleStyles.modalOverlay}>
-      <div
-        role="dialog"
-        ref={modalRef}
-        aria-modal
-        aria-label={title}
-        aria-describedby="dsco-dialog-description"
-        className={classnames(
-          moduleStyles.modal,
-          moduleStyles[`modal-${mode}`],
-          className
-        )}
-        {...HTMLAttributes}
-      >
-        <div className={moduleStyles.modalTitleSection}>
-          <Heading3>{title}</Heading3>
-        </div>
-        <hr />
-        <div
-          className={classnames(
-            moduleStyles.modalContentSection,
-            moduleStyles[`modalContentSection-${imagePlacement}-imagePlacement`]
-          )}
-        >
-          {imageUrl && <img src={imageUrl} alt={imageAlt || 'modal-image'} />}
-          {description && (
-            <BodyTwoText
-              id="dsco-dialog-description"
-              className={moduleStyles.modalDescription}
-            >
-              {description}
-            </BodyTwoText>
-          )}
-          {customContent}
-        </div>
-        <hr />
-        <div className={moduleStyles.modalActionsSection}>
-          {secondaryButtonProps && (
-            <Button
-              type="secondary"
-              color={mode === 'light' ? 'black' : 'white'}
-              {...secondaryButtonProps}
-            />
-          )}
-          <Button
-            type="primary"
-            color={mode === 'light' ? 'purple' : 'white'}
-            {...primaryButtonProps}
-          />
-        </div>
-        {customBottomContent}
-
-        {onClose && (
-          <CloseButton
-            aria-label={closeLabel}
-            onClick={onClose}
-            color={mode === 'light' ? 'dark' : 'light'}
-            size="l"
-            className={moduleStyles.modalCloseButton}
-          />
-        )}
+    <CustomDialog
+      role="dialog"
+      className={classnames(
+        moduleStyles.modal,
+        moduleStyles[`modal-${mode}`],
+        className
+      )}
+      onClose={onClose}
+      closeLabel={closeLabel}
+      aria-label={title}
+      {...HTMLAttributes}
+    >
+      <div className={moduleStyles.modalTitleSection}>
+        <Heading3>{title}</Heading3>
       </div>
-    </div>
+      <hr />
+      <div
+        className={classnames(
+          moduleStyles.modalContentSection,
+          moduleStyles[`modalContentSection-${imagePlacement}-imagePlacement`]
+        )}
+      >
+        {imageUrl && <img src={imageUrl} alt={imageAlt || 'modal-image'} />}
+        {description && (
+          <BodyTwoText
+            id="dsco-dialog-description"
+            className={moduleStyles.modalDescription}
+          >
+            {description}
+          </BodyTwoText>
+        )}
+        {customContent}
+      </div>
+      <hr />
+      <div className={moduleStyles.modalActionsSection}>
+        {secondaryButtonProps && (
+          <Button
+            type="secondary"
+            color={mode === 'light' ? 'black' : 'white'}
+            {...secondaryButtonProps}
+          />
+        )}
+        <Button
+          type="primary"
+          color={mode === 'light' ? 'purple' : 'white'}
+          {...primaryButtonProps}
+        />
+      </div>
+      {customBottomContent}
+    </CustomDialog>
   );
 };
 
