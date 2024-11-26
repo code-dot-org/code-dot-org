@@ -11,7 +11,7 @@ Dashboard::Application.config.session_store Middlewares::RedisSessionStore,
   # Users who interact with the site at least once a month will remain logged in.
   expire_after: 40.days,
 
-  # Enable pooling by specifying a pool size; we aribtrarily use the value this
+  # Enable pooling by specifying a pool size; we arbitrarily use the value this
   # would default to anyway, for simplicity. In practice, we run with enough
   # parallel worker processes in production that we only use an average of
   # ~1.34 connections per pool, so this could be reduced if desired.
