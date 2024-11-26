@@ -128,8 +128,7 @@ ModalWithImageTopPlacement.args = {
   description:
     'This modal includes an image placed at the top. This placement ensures that the visual content is prominent' +
     ' and aligns with the modal content effectively.',
-  imageUrl:
-    'https://studio.code.org/shared/images/teacher-announcement/incubator-rubrics-pilot-graphic.png', // Example image URL
+  imageUrl: 'https://studio.code.org/shared/images/banners/project-banner.jpg', // Example image URL
   imageAlt: 'Example image placed on top of the modal',
   imagePlacement: 'top',
   primaryButtonProps: {
@@ -246,7 +245,7 @@ MultipleModals.args = {
         'Description for modal 2 with an image at the top. This demonstrates the visual integration of imagery' +
         ' within a modal.',
       imageUrl:
-        'https://studio.code.org/shared/images/teacher-announcement/incubator-rubrics-pilot-graphic.png',
+        'https://studio.code.org/shared/images/banners/project-banner.jpg',
       imageAlt: 'Example image placed on top of the modal',
       imagePlacement: 'top',
       primaryButtonProps: {
