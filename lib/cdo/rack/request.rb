@@ -145,7 +145,7 @@ module Cdo
     private def dashboard_session_store
       @@dashboard_session_store ||= Dashboard::Application.config.session_store.new(
         Dashboard::Application,
-        Dashboard::Application.config.session_options.merge
+        Dashboard::Application.config.session_options
       )
     end
   end
