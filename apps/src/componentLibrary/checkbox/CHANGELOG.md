@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 - rewritten `CheckboxTest` in typescript
 - refactored/optimized `CheckboxTest.tsx`
+- added more tests for `Checkbox` component
 
 ## [0.4.0] (https://github.com/code-dot-org/code-dot-org/pull/60911)
 

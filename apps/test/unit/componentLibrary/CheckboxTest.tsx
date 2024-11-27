@@ -1,5 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import '@testing-library/jest-dom';
 import React, {ChangeEvent, useState} from 'react';
 
 import Checkbox from '@cdo/apps/componentLibrary/checkbox';
@@ -20,7 +21,7 @@ describe('Design System - Checkbox', () => {
       return (
         <Checkbox
           name="test-checkbox"
-          value="test-checkbox"
+          value="test-value"
           label="Checkbox label"
           checked={checked}
           onChange={handleChange}
@@ -33,6 +34,34 @@ describe('Design System - Checkbox', () => {
   };
 
   const getCheckbox = () => screen.getByRole('checkbox') as HTMLInputElement;
+
+  it('renders with correct label', () => {
+    render(
+      <Checkbox
+        name="test-checkbox"
+        value="test-value"
+        label="Checkbox label"
+        checked={false}
+        onChange={() => null}
+      />
+    );
+    const checkbox = getCheckbox();
+    expect(checkbox).toBeInTheDocument();
+    expect(screen.getByText('Checkbox label')).toBeInTheDocument();
+  });
+
+  it('renders without a label', () => {
+    render(
+      <Checkbox
+        name="test-checkbox"
+        value="test-value"
+        checked={false}
+        onChange={() => null}
+      />
+    );
+    expect(getCheckbox()).toBeInTheDocument();
+    expect(screen.queryByText('Checkbox label')).not.toBeInTheDocument();
+  });
 
   it('changes checked state on click', async () => {
     const {user, spyOnChange} = setupCheckbox(false);
@@ -56,12 +85,26 @@ describe('Design System - Checkbox', () => {
 
     const checkbox = getCheckbox();
     expect(checkbox.indeterminate).toBe(true);
+    expect(checkbox.checked).toBe(false);
 
     await user.click(checkbox);
     expect(checkbox.checked).toBe(true);
     expect(checkbox.indeterminate).toBe(false);
     expect(spyOnChange).toHaveBeenCalledTimes(1);
     expect(spyOnChange).toHaveBeenCalledWith(true);
+  });
+
+  it('handles value prop correctly', async () => {
+    const {user, spyOnChange} = setupCheckbox(false);
+
+    const checkbox = getCheckbox();
+    expect(checkbox.checked).toBe(false);
+
+    await user.click(checkbox);
+
+    expect(spyOnChange).toHaveBeenCalledWith(true);
+    expect(checkbox).toHaveAttribute('value', 'test-value');
+    expect(checkbox.checked).toBe(true);
   });
 
   it('does not change state when disabled', async () => {
