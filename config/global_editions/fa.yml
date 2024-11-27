@@ -112,10 +112,6 @@ header:
 footer:
   links:
     studio:
-      - title: privacy_updated
-        url: /privacy
-        domain: code.org
-        style: 'color: #ffa400;'
       - title: privacy
         url: /privacy
         domain: code.org
@@ -124,14 +120,14 @@ footer:
         url: /cookies
         domain: code.org
       - title: tos_short
-        url: /tos'
+        url: /tos
         domain: code.org
     code_org:
       - title: privacy_policy
-        url: /privacy
+        url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
         domain: code.org
       - title: terms
-        url: /tos
+        url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
         domain: code.org
     hour_of_code:
       - title: terms
@@ -145,11 +141,6 @@ footer:
       - title: cookie
         url: /cookies
         target: _blank
-# A subset of locales can be specified with the following structure
-#locale_options:
-#  - ['English', 'en-US']
-#  - ['فارسی', 'fa-IR']
-
 
 # Route matching to influence properties of components
 #pages:

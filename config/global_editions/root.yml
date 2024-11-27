@@ -356,11 +356,12 @@ footer:
       - title: help_support
         url: https://support.code.org
         target: _blank
+        loc_prefix: landing.
         id: support
       - title: store
         url: https://store.code.org
       - title: tos_short
-        url: /tos'
+        url: /tos
         domain: code.org
     code_org:
       - title: privacy_policy
@@ -407,6 +408,7 @@ footer:
         domain: code.org
         target: _blank
       - title: cookie
+        domain: hourofcode.com
         url: /cookies
         target: _blank
 

@@ -1,26 +1,20 @@
 - require 'cdo/footer'
+
 - full_width = local_assigns[:full_width]
-- options = {ge_region: params[:ge_region]}
+- options = {}
+- options[:ge_region] = request.ge_region
+- options[:site] = :studio
+- options[:loc_prefix] = "footer."
 - footer_contents = Cdo::Footer.get_footer_contents(options)
-- locale_options = Cdo::Footer.get_locale_options(options)
+
 .navbar-static-top.footer
   .container{ style: 'padding: 10px;' + (full_width ? 'margin: auto' : '') }
     .row
       .span9{style: (full_width ? 'max-width: 80%;' : '')}
         - piped_spaces = ' | '
-        - privacy_updated = DCDO.get('recent_privacy_policy_update', nil)
-        - links = (footer_contents[:links][:studio] || []).map(&:dup)
-        - links.each_with_index do |link, index|
-          - if privacy_updated && link[:title] == 'privacy'
-            - link[:title] = 'privacy_updated'
-          - if link[:domain] == 'studio.code.org'
-            - link[:url] = CDO.studio_url(link[:url])
-          - elsif link[:domain] == 'code.org'
-            - link[:url] = CDO.code_org_url(link[:url])
-          - else
-            - link[:rel] = "noopener noreferrer nofollow"
-          = link_to t("footer.#{link[:title]}"), link[:url], link.except(:title, :url, :domain)
-          - unless index == links.length - 1
+        - footer_contents.each_with_index do |link, index|
+          = link_to link[:title], link[:url], link.except(:title, :url, :domain)
+          - unless index == footer_contents.length - 1
             .dim!= piped_spaces
         %br/
 
@@ -42,6 +36,7 @@
         -# user input or to persist data without also updating it to enforce UTF-8
         = form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;', enforce_utf8: false) do
           = hidden_field_tag :user_return_to, request.url
+          - options = options_for_select(Cdo::I18n.locale_options, locale)
           = select_tag :locale, options, { onchange: 'this.form.submit();', 'aria-label':  t('footer.locale_select', default: 'Select language') }
         %small.dim
           !="&copy; Code.org, #{Time.now.year}"

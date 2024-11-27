@@ -1,22 +1,25 @@
 - require 'cdo/footer'
-- options = {ge_region: params[:ge_region]}
+
+- options = {}
+- options[:ge_region] = request.ge_region
+- options[:site] = :hour_of_code
+- options[:loc_prefix] = 'footer_menu_'
+- options[:i18n] = method(:hoc_s)
 - footer_contents = Cdo::Footer.get_footer_contents(options)
+
 %footer#pagefooter
   #footer-links
     %ul.hide-responsive-footer-menu
-      - links = (footer_contents[:links][:hour_of_code] || []).map(&:dup)
-      - links.each do |link|
-        - if link[:domain] == 'studio.code.org'
-          - link[:href] = CDO.studio_url(link[:url])
-        - elsif link[:domain] == 'code.org'
-          - link[:href] = codeorg_url(link[:url])
-        - elsif link[:title] == 'cookie'
+      - footer_contents.each do |link|
+        - if link[:domain] == 'hourofcode.com'
           - link[:href] = resolve_url(link[:url])
-        - else
+        - elsif link[:domain].nil?
           - link[:href] = link[:url]
           - link[:rel] = "noopener noreferrer nofollow"
+        - else
+          - link[:href] = link[:url]
         %li
-          %a{link.except(:title, :url, :domain)}= hoc_s("footer_menu_#{link[:title]}")
+          %a{link.except(:title, :url, :domain)}= link[:title]
     #footer-toggle
       %a{href: "#"}
         Code.org

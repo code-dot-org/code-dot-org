@@ -1,24 +1,19 @@
 - require 'cdo/footer'
-- options = {ge_region: params[:ge_region]}
+
+- options = {}
+- options[:ge_region] = request.ge_region
+- options[:site] = :code_org
+- options[:loc_prefix] = 'footer_'
 - footer_contents = Cdo::Footer.get_footer_contents(options)
+
 %footer#pagefooter
   .content
     .left{:style=>"float:left; max-width: 80%;"}
-      - @privacy_updated = DCDO.get('recent_privacy_policy_update', nil)
-      - links = (footer_contents[:links][:code_org] || []).map(&:dup)
-      - links.each_with_index do |link, index|
-        - if @privacy_updated && link[:title] == 'privacy_policy'
-          - link[:title] = 'privacy_policy_updated'
-        - if link[:domain] == 'studio.code.org'
-          - link[:href] = CDO.studio_url(link[:url])
-        - elsif link[:domain] == 'code.org'
-          - link[:href] = CDO.code_org_url(link[:url])
-        - else
-          - link[:href] = link[:url]
-          - link[:rel] = "noopener noreferrer nofollow"
+      - footer_contents.each_with_index do |link, index|
+        - link[:href] = link[:url]
         %a.whitefooterlink{link.except(:title, :url, :domain)}
-          !=I18n.t("footer_#{link[:title]}")
-        - unless index == links.length - 1
+          != link[:title]
+        - unless index == footer_contents.length - 1
           .dim &nbsp; | &nbsp;
 
       %small.dim
