@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import {useSelector} from 'react-redux';
-import {useLoaderData} from 'react-router-dom';
+import {generatePath, useNavigate, useParams} from 'react-router-dom';
 
 import {
   addAnnouncement,
@@ -14,11 +14,12 @@ import {
   setVerifiedResources,
 } from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {getStore} from '@cdo/apps/redux';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
-import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {
@@ -27,6 +28,8 @@ import {
   setUserSignedIn,
 } from '../currentUserRedux';
 import {pageTypes, setPageType} from '../teacherDashboard/teacherSectionsRedux';
+import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
+import {TEACHER_NAVIGATION_PATHS} from '../teacherNavigation/TeacherNavigationPaths';
 
 import CourseOverview from './CourseOverview';
 
@@ -39,7 +42,7 @@ interface Resource {
   isRollup: boolean;
 }
 
-interface Version {
+export interface Version {
   id: number;
   key: string;
   version_year: string;
@@ -72,6 +75,12 @@ interface CourseSummary {
   has_verified_resources: boolean;
 }
 
+interface Response {
+  unit_group: CourseSummary;
+  is_verified_instructor: boolean;
+  hidden_scripts: string[];
+}
+
 interface Announcement {
   key: string;
   notice: string;
@@ -83,55 +92,88 @@ interface Announcement {
   buttonText: string | null;
 }
 
-interface CourseOverviewData {
-  courseSummary: CourseSummary;
-  isVerifiedInstructor: boolean;
-  hiddenScripts: string[];
-}
-
 const courseSummaryCachedLoader = _.memoize(async courseVersionName =>
-  getAuthenticityToken()
-    .then(token =>
-      fetch(`/dashboardapi/course_summary/${courseVersionName}`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': token,
-        },
-      })
-    )
-    .then(response => response.json())
+  HttpClient.fetchJson<Response>(
+    `/dashboardapi/course_summary/${courseVersionName}`
+  ).then(response => response?.value)
 );
 
-export const teacherCourseOverviewLoader =
-  async (): Promise<CourseOverviewData | null> => {
-    const state = getStore().getState().teacherSections;
+const TeacherCourseOverview: React.FC = () => {
+  const [courseSummary, setCourseSummary] =
+    React.useState<CourseSummary | null>(null);
+  const [isVerifiedInstructor, setIsVerifiedInstructor] =
+    React.useState<boolean>(false);
+  const [hiddenScripts, setHiddenScripts] = React.useState<string[] | null>(
+    null
+  );
 
-    const selectedSection = state.sections[state.selectedSectionId];
+  const navigate = useNavigate();
 
-    if (!selectedSection || !selectedSection?.courseVersionName) {
-      return null;
+  const params = useParams();
+
+  const sections = useAppSelector(state => state.teacherSections.sections);
+
+  const selectedSection = useAppSelector(selectedSectionSelector);
+
+  React.useEffect(() => {
+    if (
+      !selectedSection ||
+      !selectedSection?.courseVersionName ||
+      parseInt(params.sectionId || '-1') !== selectedSection.id
+    ) {
+      return;
+    }
+    if (!selectedSection.courseId && selectedSection.unitName) {
+      navigate(
+        generatePath('../' + TEACHER_NAVIGATION_PATHS.unitOverview, {
+          unitName: selectedSection.unitName,
+        }),
+        {replace: true}
+      );
+      return;
     }
 
-    return courseSummaryCachedLoader(selectedSection.courseVersionName).then(
-      response => ({
-        courseSummary: response.unit_group,
-        isVerifiedInstructor: response.is_verified_instructor,
-        hiddenScripts: response.hidden_scripts,
+    if (selectedSection.courseVersionName !== params.courseVersionName) {
+      navigate(
+        generatePath('../' + TEACHER_NAVIGATION_PATHS.courseOverview, {
+          courseVersionName: selectedSection.courseVersionName,
+        }),
+        {replace: true}
+      );
+      return;
+    }
+
+    courseSummaryCachedLoader(selectedSection.courseVersionName)
+      .then(response => {
+        if (response) {
+          setCourseSummary(response.unit_group as CourseSummary);
+          setIsVerifiedInstructor(response.is_verified_instructor);
+          setHiddenScripts(response.hidden_scripts as string[]);
+
+          analyticsReporter.sendEvent(
+            EVENTS.TEACHER_NAV_COURSE_OVERVIEW_PAGE_VIEWED,
+            {
+              courseVersionName: selectedSection.courseVersionName,
+            }
+          );
+        }
       })
-    );
-  };
+      .catch(error => {
+        console.error('Error loading course overview', error);
 
-const TeacherCourseOverview: React.FC = () => {
-  const loadedData = useLoaderData() as CourseOverviewData | null;
-
-  const sections = useSelector(
-    (state: {
-      teacherSections: {
-        sections: {id: number; name: string}[];
-      };
-    }) => Object.values(state.teacherSections.sections)
-  );
+        analyticsReporter.sendEvent(EVENTS.TEACHER_NAV_COURSE_OVERVIEW_FAILED, {
+          courseVersionName: selectedSection.courseVersionName,
+        });
+      });
+  }, [
+    navigate,
+    selectedSection,
+    params.courseVersionName,
+    setCourseSummary,
+    setIsVerifiedInstructor,
+    setHiddenScripts,
+    params.sectionId,
+  ]);
 
   const userId = useSelector(
     (state: {currentUser: {userId: number}}) => state.currentUser.userId
@@ -140,11 +182,10 @@ const TeacherCourseOverview: React.FC = () => {
   const dispatch = useAppDispatch();
 
   React.useEffect(() => {
-    if (!loadedData) {
+    if (!courseSummary) {
       return;
     }
 
-    const courseSummary = loadedData.courseSummary;
     if (courseSummary.has_verified_resources) {
       dispatch(setVerifiedResources());
     }
@@ -156,27 +197,29 @@ const TeacherCourseOverview: React.FC = () => {
     dispatch(setViewType(ViewType.Instructor));
     dispatch(setUserRoleInCourse(CourseRoles.Instructor));
 
-    if (loadedData.isVerifiedInstructor) {
-      dispatch(setVerified());
-    }
-
-    if (loadedData.hiddenScripts) {
-      dispatch(initializeHiddenScripts(loadedData.hiddenScripts));
-    }
-
     const announcements = courseSummary.announcements as Announcement[];
     if (announcements) {
       announcements.forEach(announcement =>
         dispatch(addAnnouncement(announcement))
       );
     }
-  }, [loadedData, dispatch]);
+  }, [courseSummary, dispatch]);
 
-  if (!loadedData) {
+  React.useEffect(() => {
+    if (isVerifiedInstructor) {
+      dispatch(setVerified());
+    }
+  }, [isVerifiedInstructor, dispatch]);
+
+  React.useEffect(() => {
+    if (hiddenScripts) {
+      dispatch(initializeHiddenScripts(hiddenScripts));
+    }
+  }, [hiddenScripts, dispatch]);
+
+  if (!courseSummary) {
     return <Spinner />;
   }
-
-  const {courseSummary} = loadedData;
 
   return (
     <CourseOverview
@@ -188,7 +231,7 @@ const TeacherCourseOverview: React.FC = () => {
       courseVersionId={courseSummary.course_version_id}
       descriptionStudent={courseSummary.description_student}
       descriptionTeacher={courseSummary.description_teacher}
-      sectionsInfo={sections}
+      sectionsInfo={Object.values(sections)}
       teacherResources={courseSummary.teacher_resources}
       studentResources={courseSummary.student_resources}
       scripts={courseSummary.scripts}
@@ -196,7 +239,7 @@ const TeacherCourseOverview: React.FC = () => {
       showVersionWarning={
         !!false && Object.values(courseSummary.course_versions).length > 1
       }
-      showRedirectWarning={false}
+      showRedirectWarning={false} // TODO: https://codedotorg.atlassian.net/browse/TEACH-1374
       redirectToCourseUrl={''}
       showAssignButton={courseSummary.show_assign_button}
       userId={userId}

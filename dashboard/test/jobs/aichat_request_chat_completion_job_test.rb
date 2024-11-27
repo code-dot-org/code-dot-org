@@ -111,7 +111,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
 
     Cdo::Metrics.stubs(:push)
     Cdo::Metrics.expects(:push).with do |namespace, metrics|
-      if namespace == AichatRequestChatCompletionJob::METRICS_NAMESPACE
+      if namespace == SharedConstants::AICHAT_METRICS_NAMESPACE
         reported_metrics << metrics
       end
     end
@@ -162,7 +162,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
 
     Cdo::Metrics.stubs(:push)
     Cdo::Metrics.expects(:push).with do |namespace, metrics|
-      if namespace == AichatRequestChatCompletionJob::METRICS_NAMESPACE
+      if namespace == SharedConstants::AICHAT_METRICS_NAMESPACE
         reported_metrics << metrics
       end
     end

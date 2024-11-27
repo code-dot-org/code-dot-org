@@ -267,7 +267,7 @@ module UsersHelper
     # Therefore, we don't need to show the cap_user_info modal.
     return false if !Policies::ChildAccount.user_predates_state_collection?(user) && user.us_state.present?
     # Is the student a child and using a personal account to access code.org?
-    Policies::ChildAccount.show_cap_state_modal?(user) && user.under_13? && Policies::ChildAccount.personal_account?(user)
+    user.under_13? && Policies::ChildAccount.personal_account?(user)
   end
 
   def lti_user_info_required?(user)
@@ -284,7 +284,9 @@ module UsersHelper
   end
 
   def account_linking_lock_reason(user)
-    return I18n.t('auth.parental_permission_required') unless Policies::ChildAccount.compliant?(user)
+    if !Policies::ChildAccount.compliant?(user) || Policies::ChildAccount::ComplianceState.grace_period?(user)
+      return I18n.t('auth.parental_permission_required')
+    end
 
     nil
   end

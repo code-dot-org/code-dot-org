@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-10-09T19:08:42.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check for Understanding",
+    "long_instructions": "What is algorithmic bias, and how can biased data affect the outcomes of a program? Provide a real-world example to illustrate your point.",
+    "encrypted_solution": "t+95U9Ku3KjTrNBJyR2ost0daz/zOUkcITO67lG4QgkIXffPqsbJs4p1t+sh\ntTUVIxQ5wrnTm/5XGyADd0gOGPJZdYAXtS31SSGXUu+qvh4/hUf4JZZ0ZKOM\na3B0UuZxl6CX3wTM2lkAUS2wynAcGd7rm3IykAXJaec7GDecFyMlYqdXveHJ\nG72pLEJ70X7T8uYSCdRLCIy8xsaPd2oxqSO/AUhw6GLxQJtW7ck/+hDK2XVO\nvNtqUtH9Shm+DmekTs7fu36sB0H51W5DMwsPgIANfFRvEO96oh6kUNsWTm8f\nUeRR0+Hioe/gZATWv28IsMZmo1W27h0MGnX9fu4RsNLZ5hQKN46m1gdjCIW1\nYCNSF/UwSyvdFCMEQIJYT67OwWPo6Dqhp005qkS6zL7XGqmgvyGHAQ2l7QjY\nU8T6U0I=\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-09 19:08:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

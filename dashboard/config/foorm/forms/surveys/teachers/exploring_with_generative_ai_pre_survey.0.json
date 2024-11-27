@@ -13,6 +13,8 @@
         {
           "type": "radiogroup",
           "name": "first_time_teaching_gen_ai",
+          "visible": false,
+          "natalia_comment": "NOTE: Hidden to avoid deleting. Given that the link to the survey was set to allow only one submission by each user, this question is no longer necessary. Removed all conditional logic in subsequent questions too. 10/01/2024",
           "title": "Is this your first time teaching a Code.org Generative AI Unit?",
           "description": "This getting started survey appears at the beginning of each Code.org Generative AI unit. If you are teaching multiple units, please only complete this survey once.",
           "choices": [
@@ -29,19 +31,18 @@
         {
           "type": "html",
           "name": "skip_survey",
-          "visibleIf": "{first_time_teaching_gen_ai} = false",
+          "visible": false,
+          "natalia_comment": "NOTE: Hidden to avoid deleting. Given that the link to the survey was set to allow only one submission by each user, this question is no longer necessary. Removed all conditional logic in subsequent questions too. 10/01/2024",
           "html": "<h2><strong>You can skip this survey</strong></h3>\n<p></p><b><font size=3>If you've already completed this survey when you taught another Code.org Gen AI unit: thank you! You do not need to complete it again.</p>"
         },
         {
           "type": "html",
           "name": "teaching_background_header",
-          "visibleIf": "{first_time_teaching_gen_ai} = true",
           "html": "<h2>Your Background</h1>\n<p><span style='font-size: 12pt;'>We'd like to get to know you. Please share with us a little bit about you and your background.</span></p>"
         },
         {
           "type": "radiogroup",
           "name": "teacher_role",
-          "visibleIf": "{first_time_teaching_gen_ai} = true",
           "title": "Which best describes you?",
           "choices": [
             {
@@ -69,7 +70,6 @@
         {
           "type": "radiogroup",
           "name": "teaching_experience_cs_year_groups",
-          "visibleIf": "{first_time_teaching_gen_ai} = true",
           "title": "How many years have you been teaching Computer Science?",
           "choices": [
             {
@@ -97,7 +97,6 @@
         {
           "type": "radiogroup",
           "name": "experience_teaching_ai",
-          "visibleIf": "{first_time_teaching_gen_ai} = true",
           "title": "Have you taught AI concepts before?",
           "choices": [
             {
@@ -120,13 +119,11 @@
         {
           "type": "html",
           "name": "module_expectations_header",
-          "visibleIf": "{first_time_teaching_gen_ai} = true",
           "html": "<h2>Your Goals and Expectations</h1>\n<p><span style='font-size: 12pt;'>Please share with us what drives you to teach Generative AI and what barriers do you anticipate.</span></p>"
         },
         {
           "type": "checkbox",
           "name": "module_goals",
-          "visibleIf": "{first_time_teaching_gen_ai} = true",
           "title": "What are your primary goals in teaching this unit?",
           "description": "(Please select all that apply)",
           "choices": [
@@ -165,7 +162,6 @@
         {
           "type": "checkbox",
           "name": "module_challenges",
-          "visibleIf": "{first_time_teaching_gen_ai} = true",
           "title": "What challenges do you anticipate in teaching Exploring Generative AI?",
           "description": "(Please select all that apply)",
           "choices": [
@@ -212,7 +208,6 @@
         {
           "type": "checkbox",
           "name": "plans_curriculum_integration",
-          "visibleIf": "{first_time_teaching_gen_ai} = true",
           "title": "How do you plan to integrate the unit into your existing curriculum?",
           "description": "(Please select all that apply)",
           "choices": [

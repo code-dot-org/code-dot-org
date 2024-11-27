@@ -1,0 +1,37 @@
+name 'sp-pl-DS_ThreeReadsexlemplar'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Making Sense of Data: Three Reads Strategy
+
+#### There is not a correct answer for the response to the **Context Read.** The important thing is to get your students thinking critically about data.    
+
+
+<img src="https://images.code.org/30521e355ab93227d39985fcbfc3b90d-image-1724257607189.png" alt="pizza party spreadsheet" width="350px" style="border-radius:10px; float:left; margin: 0 0 40px 40px;">
+
+## Read 1: Context 
+
+#### **What is this data about?**
+#### *Sample Response*
+
+#### This data is from a survey that gathered information on the number of pizza slices people can eat and their favorite types of pizza. 
+
+#### I know that pizza preferences vary widely and that the amount of pizza someone can eat may depend on factors like personal preference, hunger, or even the type of pizza itself. The data shows how these preferences might connect to the number of slices.
+
+
+<div style="clear:both;"></div>
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 16px; "> <b>Teacher Tip:</b> Consider pausing for a discussion between each read. This helps keep the conversation flowing and encourages moving through the reads without getting stuck on any single one.<br>
+<i>Remember to utilize the <b>view student response </b> feature.</i> 
+</p>
+</div>
+
+
+
+<div style="clear:both;"></div>
+
+## Let's take a look at the other two reads - Quantities and Questions!
+MARKDOWN

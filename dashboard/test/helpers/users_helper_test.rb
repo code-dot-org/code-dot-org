@@ -520,9 +520,11 @@ class UsersHelperTest < ActionView::TestCase
     let(:user) {build_stubbed(:user)}
 
     let(:user_cap_compliant?) {true}
+    let(:user_in_grace_period?) {false}
 
     before do
       Policies::ChildAccount.stubs(:compliant?).with(user).returns(user_cap_compliant?)
+      Policies::ChildAccount::ComplianceState.stubs(:grace_period?).with(user).returns(user_in_grace_period?)
     end
 
     it 'returns nil' do
@@ -533,7 +535,15 @@ class UsersHelperTest < ActionView::TestCase
       let(:user_cap_compliant?) {false}
 
       it 'returns lock reason message' do
-        _(account_linking_lock_reason(user)).must_equal 'Uh oh! You must obtain parental permission before creating a linked account.'
+        _(account_linking_lock_reason(user)).must_equal 'Uh oh! You must obtain parental permission before creating a linked account. Please log in to the account you are trying to link and obtain parental consent.'
+      end
+    end
+
+    context 'when user is in grace period' do
+      let(:user_in_grace_period?) {true}
+
+      it 'returns lock reason message' do
+        _(account_linking_lock_reason(user)).must_equal 'Uh oh! You must obtain parental permission before creating a linked account. Please log in to the account you are trying to link and obtain parental consent.'
       end
     end
   end

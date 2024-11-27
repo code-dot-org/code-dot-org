@@ -11,7 +11,7 @@ import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import plcHeaderReducer, {
   setPlcHeader,
 } from '@cdo/apps/code-studio/plc/plcHeaderRedux';
-import progress from '@cdo/apps/code-studio/progress';
+import {initViewAs, initCourseProgress} from '@cdo/apps/code-studio/progress';
 import {setStudentDefaultsSummaryView} from '@cdo/apps/code-studio/progressRedux';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
@@ -30,6 +30,7 @@ import {
   setPageType,
   pageTypes,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {showV2TeacherDashboard} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
 
 import locales, {setLocaleCode} from '../../../../redux/localesRedux';
@@ -80,18 +81,17 @@ function initPage() {
   if (scriptData.student_detail_progress_view) {
     store.dispatch(setStudentDefaultsSummaryView(false));
   }
-  progress.initViewAs(
-    store,
-    scriptData.user_id !== null,
-    scriptData.is_instructor
-  );
+  initViewAs(store, scriptData.user_id !== null, scriptData.is_instructor);
   if (scriptData.is_instructor) {
     initializeStoreWithSections(store, scriptData.sections, scriptData.section);
   }
   store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
   store.dispatch(setPageType(pageTypes.scriptOverview));
 
-  progress.initCourseProgress(scriptData);
+  const v2TeacherDashboardEnabled = showV2TeacherDashboard();
+
+  // Don't show the teacher panel if v2 dashboard is enabled
+  initCourseProgress(scriptData, !v2TeacherDashboardEnabled);
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);

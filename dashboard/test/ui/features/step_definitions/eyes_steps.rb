@@ -50,6 +50,13 @@ end
 And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?$/) do |identifier, stitch_mode|
   next if CDO.disable_all_eyes_running
 
+  # Wait until the fonts are fully loaded and rendering the page
+  # Hopefully fixes many of the issues with font wiggle due to lazily loading
+  # alternative fonts for symbols and localized glyphs.
+  wait_until do
+    @browser.execute_script('return document.fonts.status === "loaded"') == true
+  end
+
   if stitch_mode == "none"
     @eyes.force_full_page_screenshot = false
   else

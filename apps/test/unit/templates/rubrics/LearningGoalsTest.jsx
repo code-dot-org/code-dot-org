@@ -9,6 +9,11 @@ import EditorAnnotator from '@cdo/apps/EditorAnnotator';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
+  singleton as studioApp,
+  stubStudioApp,
+  restoreStudioApp,
+} from '@cdo/apps/StudioApp';
+import {
   THUMBS_UP,
   THUMBS_DOWN,
 } from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
@@ -126,10 +131,15 @@ describe('LearningGoals - React Testing Library', () => {
     scrollToLineStub,
     highlightLineStub,
     clearAnnotationsStub,
-    clearHighlightedLinesStub;
+    clearHighlightedLinesStub,
+    oldEditor;
 
   // Stub out our references to the singleton and editor
   beforeEach(() => {
+    stubStudioApp();
+    oldEditor = studioApp().editor;
+    studioApp().editor = undefined;
+
     let annotatorInstanceStub = sinon.stub();
     annotatorInstanceStub.getCode = sinon.stub().returns(code);
     annotatorStub = sinon
@@ -151,7 +161,18 @@ describe('LearningGoals - React Testing Library', () => {
     clearAnnotationsStub.restore();
     highlightLineStub.restore();
     clearHighlightedLinesStub.restore();
+    studioApp().editor = oldEditor;
+    studioApp().removeAllListeners('afterInit');
+    restoreStudioApp();
   });
+
+  let loadEditor = () => {
+    // Kinda emulate the set editor
+    studioApp().editor = true;
+
+    // Fire the init event from the application backend
+    studioApp().emit('afterInit');
+  };
 
   it('renders EvidenceLevels without canProvideFeedback', () => {
     render(<LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />);
@@ -168,6 +189,8 @@ describe('LearningGoals - React Testing Library', () => {
   });
 
   it('scrolls to the first line of evidence when the learning goal is selected', async () => {
+    loadEditor();
+
     render(
       <LearningGoals
         learningGoals={learningGoals}
@@ -191,6 +214,8 @@ describe('LearningGoals - React Testing Library', () => {
   });
 
   it('does not scroll anywhere when the evidence is blank', async () => {
+    loadEditor();
+
     const myAiEvaluations = [
       {
         ...aiEvaluations[0],
@@ -222,6 +247,8 @@ describe('LearningGoals - React Testing Library', () => {
   });
 
   it('does not fail to render when the evidence is null', async () => {
+    loadEditor();
+
     const myAiEvaluations = [
       {
         ...aiEvaluations[0],
@@ -257,6 +284,7 @@ describe('LearningGoals - React Testing Library', () => {
         aiConfidenceExactMatch: 3,
       },
     ];
+
     it('highlights one bubble', () => {
       render(
         <LearningGoals
@@ -269,6 +297,7 @@ describe('LearningGoals - React Testing Library', () => {
       );
       deprecatedExpect(getSuggestedButtonNames()).to.deep.equal(['Convincing']);
     });
+
     it('shows only one evaluation level in written summary', () => {
       render(
         <LearningGoals
@@ -283,6 +312,7 @@ describe('LearningGoals - React Testing Library', () => {
         'Stella has achieved Convincing Evidence for this learning goal.'
       );
     });
+
     it('shows exact-match confidence level', () => {
       render(
         <LearningGoals
@@ -312,6 +342,7 @@ describe('LearningGoals - React Testing Library', () => {
         ['Convincing', 'Extensive'].sort()
       );
     });
+
     it('shows two evaluation levels in written summary', () => {
       render(
         <LearningGoals
@@ -326,6 +357,7 @@ describe('LearningGoals - React Testing Library', () => {
         'Stella has achieved Extensive or Convincing Evidence for this learning goal.'
       );
     });
+
     it('shows pass-fail confidence level', () => {
       render(
         <LearningGoals
@@ -349,6 +381,8 @@ describe('LearningGoals - React Testing Library', () => {
     annotateLineStub.callsFake((a, b, c, d, e, f, callback) => {
       hoverCallback = callback;
     });
+
+    loadEditor();
 
     render(
       <LearningGoals
@@ -395,11 +429,8 @@ describe('LearningGoals - React Testing Library', () => {
     it('displays no checkboxes when neither thumb is selected', () => {
       render(<LearningGoals {...feedbackProps} />);
 
-      // neither thumb is selected
-      screen.getByTestId('thumbs-o-up');
-      expect(screen.queryByTestId('thumbs-up')).not.toBeInTheDocument();
-      screen.getByTestId('thumbs-o-down');
-      expect(screen.queryByTestId('thumbs-down')).not.toBeInTheDocument();
+      screen.getByLabelText(i18n.thumbsUpUnselected());
+      screen.getByLabelText(i18n.thumbsDownUnselected());
 
       // checkboxes not visible
       expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
@@ -425,11 +456,11 @@ describe('LearningGoals - React Testing Library', () => {
         }
       });
 
-      const thumbsUpButton = screen.getByTestId('thumbs-o-up');
+      const thumbsUpButton = screen.getByLabelText(i18n.thumbsUpUnselected());
       fireEvent.click(thumbsUpButton);
       await wait();
 
-      screen.getByTestId('thumbs-up');
+      screen.getByLabelText(i18n.thumbsUpSelected());
       expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
 
       const expectedBody = JSON.stringify({
@@ -471,11 +502,13 @@ describe('LearningGoals - React Testing Library', () => {
         }
       });
 
-      const thumbsUpButton = screen.getByTestId('thumbs-o-down');
-      fireEvent.click(thumbsUpButton);
+      const thumbsDownButton = screen.getByLabelText(
+        i18n.thumbsDownUnselected()
+      );
+      fireEvent.click(thumbsDownButton);
       await wait();
 
-      screen.getByTestId('thumbs-down');
+      screen.getByLabelText(i18n.thumbsDownSelected());
 
       const expectedBody = JSON.stringify({
         learningGoalAiEvaluationId: 2,
@@ -519,21 +552,24 @@ describe('LearningGoals - React Testing Library', () => {
       // survey not visible
       expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
 
-      const thumbsUpButton = screen.getByTestId('thumbs-o-down');
-      fireEvent.click(thumbsUpButton);
+      const thumbsDownButton = screen.getByLabelText(
+        i18n.thumbsDownUnselected()
+      );
+      fireEvent.click(thumbsDownButton);
       await wait();
 
       // survey is visible
       expect(screen.getAllByRole('checkbox')).toHaveLength(4);
 
+      // eslint-disable-next-line no-restricted-properties
       expect(screen.queryByTestId('ai-assessment-feedback-textarea')).not
         .toBeInTheDocument;
 
       const checkbox = screen.getByRole('checkbox', {name: 'Other'});
       fireEvent.click(checkbox);
 
+      // eslint-disable-next-line no-restricted-properties
       screen.getByTestId('ai-assessment-feedback-textarea');
-
       fetchStub.mockRestore();
     });
 
@@ -565,8 +601,10 @@ describe('LearningGoals - React Testing Library', () => {
       // survey not visible
       expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
 
-      const thumbsUpButton = screen.getByTestId('thumbs-o-down');
-      fireEvent.click(thumbsUpButton);
+      const thumbsDownButton = screen.getByLabelText(
+        i18n.thumbsDownUnselected()
+      );
+      fireEvent.click(thumbsDownButton);
       await wait();
 
       // survey is visible
@@ -585,6 +623,7 @@ describe('LearningGoals - React Testing Library', () => {
       fireEvent.click(submitButton);
       await wait();
 
+      // eslint-disable-next-line no-restricted-properties
       expect(screen.queryByTestId('ai-assessment-feedback-textarea')).not
         .toBeInTheDocument;
 
@@ -628,10 +667,15 @@ describe('LearningGoals - Enzyme', () => {
     scrollToLineStub,
     highlightLineStub,
     clearAnnotationsStub,
-    clearHighlightedLinesStub;
+    clearHighlightedLinesStub,
+    oldEditor;
   const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706, user_id: 1};
 
   function stubAnnotator() {
+    stubStudioApp();
+    oldEditor = studioApp().editor;
+    studioApp().editor = undefined;
+
     // Stub out our references to the singleton and editor
     let annotatorInstanceStub = sinon.stub();
     annotatorInstanceStub.getCode = sinon.stub().returns(code);
@@ -655,16 +699,27 @@ describe('LearningGoals - Enzyme', () => {
     clearAnnotationsStub.restore();
     highlightLineStub.restore();
     clearHighlightedLinesStub.restore();
+    studioApp().editor = oldEditor;
+    studioApp().removeAllListeners('afterInit');
+    restoreStudioApp();
   }
 
-  describe('annotateLines', () => {
-    beforeEach(() => {
-      stubAnnotator();
-    });
-    afterEach(() => {
-      restoreAnnotator();
-    });
+  function loadEditor() {
+    // Kinda emulate the set editor
+    studioApp().editor = true;
 
+    // Fire the init event from the application backend
+    studioApp().emit('afterInit');
+  }
+
+  beforeEach(() => {
+    stubAnnotator();
+  });
+  afterEach(() => {
+    restoreAnnotator();
+  });
+
+  describe('annotateLines', () => {
     it('should do nothing if the AI observation does not reference any lines', () => {
       // The AI tends to misreport the line number, so we shouldn't rely on it
       annotateLines('This is just a basic observation.', observations);
@@ -859,13 +914,6 @@ describe('LearningGoals - Enzyme', () => {
   });
 
   describe('clearAnnotations', () => {
-    beforeEach(() => {
-      stubAnnotator();
-    });
-    afterEach(() => {
-      restoreAnnotator();
-    });
-
     it('should clear annotations and clear highlighted lines', () => {
       clearAnnotations();
       sinon.assert.called(clearAnnotationsStub);
@@ -933,7 +981,7 @@ describe('LearningGoals - Enzyme', () => {
     ).to.equal(true);
   });
 
-  it('renders AiAssessment with the annotated list of evidence', () => {
+  it('renders AiAssessment with the annotated list of evidence only once editor loads', () => {
     const aiEvidence = annotateLines(
       aiEvaluations[0].evidence,
       aiEvaluations[0].observations
@@ -948,6 +996,12 @@ describe('LearningGoals - Enzyme', () => {
         aiEvaluations={aiEvaluations}
       />
     );
+
+    deprecatedExpect(wrapper.find('AiAssessment').props().aiEvidence).to.equal(
+      undefined
+    );
+
+    loadEditor();
 
     deprecatedExpect(
       wrapper.find('AiAssessment').props().aiEvidence

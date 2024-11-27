@@ -1,18 +1,24 @@
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import '@testing-library/jest-dom';
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import FinishTeacherAccount from '@cdo/apps/signUpFlow/FinishTeacherAccount';
 import locale from '@cdo/apps/signUpFlow/locale';
 import {
+  ACCOUNT_TYPE_SESSION_KEY,
+  EMAIL_SESSION_KEY,
   SCHOOL_ID_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
   SCHOOL_ZIP_SESSION_KEY,
-  SELECT_A_SCHOOL,
+  USER_RETURN_TO_SESSION_KEY,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {navigateToHref} from '@cdo/apps/utils';
-import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
+import {
+  UserTypes,
+  NonSchoolOptions,
+} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 jest.mock('@cdo/apps/schoolInfo/utils/fetchSchools');
@@ -33,9 +39,39 @@ describe('FinishTeacherAccount', () => {
     sessionStorage.clear();
   });
 
-  function renderDefault(usIp: boolean = true) {
-    render(<FinishTeacherAccount usIp={usIp} />);
+  function renderDefault(
+    usIp: boolean = true,
+    setAccountType: boolean = true,
+    setLoginType: boolean = true
+  ) {
+    if (setAccountType) {
+      sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, 'teacher');
+    }
+    if (setLoginType) {
+      sessionStorage.setItem(EMAIL_SESSION_KEY, 'fake@email.com');
+    }
+    render(<FinishTeacherAccount usIp={usIp} countryCode={'US'} />);
   }
+
+  it('redirects user back to account type page if they have not selected account type', async () => {
+    await waitFor(() => {
+      renderDefault(true, false, false);
+    });
+
+    expect(navigateToHrefMock).toHaveBeenCalledWith(
+      '/users/new_sign_up/account_type'
+    );
+  });
+
+  it('redirects user back to login type page if they have not selected login type', async () => {
+    await waitFor(() => {
+      renderDefault(true, true, false);
+    });
+
+    expect(navigateToHrefMock).toHaveBeenCalledWith(
+      '/users/new_sign_up/login_type'
+    );
+  });
 
   it('renders finish teacher account page with school zip when usIp is true', () => {
     renderDefault(true);
@@ -84,7 +120,6 @@ describe('FinishTeacherAccount', () => {
   it('school info is tracked in sessionStorage', () => {
     renderDefault();
     const zipCode = '98122';
-    const clickToAddSchool = 'clickToAdd';
     const schoolName = 'Seattle Academy';
 
     // Fill out zip code and add school by name
@@ -92,14 +127,14 @@ describe('FinishTeacherAccount', () => {
       target: {value: zipCode},
     });
     fireEvent.change(screen.getAllByRole('combobox')[1], {
-      target: {value: clickToAddSchool},
+      target: {value: NonSchoolOptions.CLICK_TO_ADD},
     });
     fireEvent.change(screen.getAllByRole('textbox')[2], {
       target: {value: schoolName},
     });
 
     expect(sessionStorage.getItem(SCHOOL_ID_SESSION_KEY)).toBe(
-      clickToAddSchool
+      NonSchoolOptions.CLICK_TO_ADD
     );
     expect(sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY)).toBe(zipCode);
     expect(sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY)).toBe(schoolName);
@@ -111,7 +146,7 @@ describe('FinishTeacherAccount', () => {
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.go_to_my_account(),
     });
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+    expect(finishSignUpButton).toBeDisabled();
   });
 
   it('leaving the displayName field empty shows error message', () => {
@@ -152,11 +187,89 @@ describe('FinishTeacherAccount', () => {
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.go_to_my_account(),
     });
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+    expect(finishSignUpButton).toBeDisabled();
     fireEvent.click(screen.getAllByRole('checkbox')[0]);
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe(null);
+    expect(finishSignUpButton).not.toBeDisabled();
 
     // Restore the original fetch implementation
+    fetchStub.restore();
+  });
+
+  it('clicking finish sign up button triggers fetch call and shows error if backend error', async () => {
+    const fetchStub = sinon.stub(window, 'fetch');
+    fetchStub.callsFake(() =>
+      Promise.resolve({
+        ok: false,
+        status: 500,
+        json: () => Promise.resolve({success: false}),
+      } as Response)
+    );
+
+    // Declare parameter values and set sessionStorage variables
+    const name = 'FirstName';
+    const email = 'fake@email.com';
+    const finishSignUpParams = {
+      new_sign_up: true,
+      user: {
+        user_type: UserTypes.TEACHER,
+        email: email,
+        name: name,
+        email_preference_opt_in: true,
+        school_info_attributes: {
+          schoolId: NonSchoolOptions.SELECT_A_SCHOOL,
+          country: 'US',
+          schoolName: '',
+          schoolZip: '',
+          schoolsList: [],
+          usIp: true,
+        },
+        country_code: 'US',
+      },
+    };
+    sessionStorage.setItem('email', email);
+
+    await waitFor(() => {
+      renderDefault();
+    });
+
+    // Set up finish sign up button onClick jest function
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    }) as HTMLButtonElement;
+    const handleClick = jest.fn();
+    finishSignUpButton.onclick = handleClick;
+
+    // Fill in fields
+    fireEvent.change(screen.getAllByDisplayValue('')[0], {
+      target: {value: name},
+    });
+    fireEvent.click(screen.getByRole('checkbox'));
+
+    // Click finish sign up button
+    fireEvent.click(finishSignUpButton);
+
+    await waitFor(() => {
+      // Verify the button's click handler was called
+      expect(handleClick).toHaveBeenCalled();
+
+      // Verify the authenticity token was obtained
+      expect(getAuthenticityTokenMock).toHaveBeenCalled;
+
+      // Verify the button's fetch method was called
+      expect(fetchStub.calledTwice).toBe(true);
+      const fetchCall = fetchStub.getCall(1);
+      expect(fetchCall.args[0]).toEqual('/users');
+      expect(fetchCall.args[1]?.body).toEqual(
+        JSON.stringify(finishSignUpParams)
+      );
+
+      // Verify the user is NOT redirected to the finish sign up page
+      expect(navigateToHrefMock).toHaveBeenCalledTimes(0);
+      // Verify the error message is shown. Since the message includes a hyperlinked email, it requires the use of a
+      // SafeMarkdown tag, so the email itself is checked to know if the message shows.
+      screen.getByText('support@code.org');
+    });
+
     fetchStub.restore();
   });
 
@@ -188,11 +301,15 @@ describe('FinishTeacherAccount', () => {
         email: email,
         name: name,
         email_preference_opt_in: true,
-        school: SELECT_A_SCHOOL,
-        school_id: SELECT_A_SCHOOL,
-        school_zip: '',
-        school_name: '',
-        school_country: 'US',
+        school_info_attributes: {
+          schoolId: NonSchoolOptions.SELECT_A_SCHOOL,
+          country: 'US',
+          schoolName: '',
+          schoolZip: '',
+          schoolsList: [],
+          usIp: true,
+        },
+        country_code: 'US',
       },
     };
     sessionStorage.setItem('email', email);
@@ -234,6 +351,91 @@ describe('FinishTeacherAccount', () => {
 
       // Verify the user is redirected to the finish sign up page
       expect(navigateToHrefMock).toHaveBeenCalledWith('/home');
+    });
+
+    fetchStub.restore();
+  });
+
+  it('setting redirect url in sessionStorage then clicking finish sign up button triggers fetch call and redirects user to redirect page', async () => {
+    const fetchStub = sinon.stub(window, 'fetch');
+    fetchStub.callsFake(url => {
+      if (typeof url === 'string' && url.includes('/users/gdpr_check')) {
+        return Promise.resolve({
+          ok: true,
+          status: 200,
+          json: () => Promise.resolve({gdpr: false, force_in_eu: false}),
+        } as Response);
+      } else {
+        return Promise.resolve({
+          ok: true,
+          status: 200,
+          json: () => Promise.resolve({success: true}),
+        } as Response);
+      }
+    });
+
+    // Declare parameter values and set sessionStorage variables
+    const name = 'FirstName';
+    const email = 'fake@email.com';
+    const userReturnToUrl = '/sample/url';
+    const finishSignUpParams = {
+      new_sign_up: true,
+      user: {
+        user_type: UserTypes.TEACHER,
+        email: email,
+        name: name,
+        email_preference_opt_in: true,
+        school_info_attributes: {
+          schoolId: NonSchoolOptions.SELECT_A_SCHOOL,
+          country: 'US',
+          schoolName: '',
+          schoolZip: '',
+          schoolsList: [],
+          usIp: true,
+        },
+        country_code: 'US',
+      },
+    };
+    sessionStorage.setItem('email', email);
+    sessionStorage.setItem(USER_RETURN_TO_SESSION_KEY, userReturnToUrl);
+
+    await waitFor(() => {
+      renderDefault();
+    });
+
+    // Set up finish sign up button onClick jest function
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    }) as HTMLButtonElement;
+    const handleClick = jest.fn();
+    finishSignUpButton.onclick = handleClick;
+
+    // Fill in fields
+    fireEvent.change(screen.getAllByDisplayValue('')[0], {
+      target: {value: name},
+    });
+    fireEvent.click(screen.getByRole('checkbox'));
+
+    // Click finish sign up button
+    fireEvent.click(finishSignUpButton);
+
+    await waitFor(() => {
+      // Verify the button's click handler was called
+      expect(handleClick).toHaveBeenCalled();
+
+      // Verify the authenticity token was obtained
+      expect(getAuthenticityTokenMock).toHaveBeenCalled;
+
+      // Verify the button's fetch method was called
+      expect(fetchStub.calledTwice).toBe(true);
+      const fetchCall = fetchStub.getCall(1);
+      expect(fetchCall.args[0]).toEqual('/users');
+      expect(fetchCall.args[1]?.body).toEqual(
+        JSON.stringify(finishSignUpParams)
+      );
+
+      // Verify the user is redirected to the finish sign up page
+      expect(navigateToHrefMock).toHaveBeenCalledWith(userReturnToUrl);
     });
 
     fetchStub.restore();

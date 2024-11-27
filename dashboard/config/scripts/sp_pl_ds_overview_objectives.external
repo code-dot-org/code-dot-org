@@ -6,18 +6,18 @@ markdown <<MARKDOWN
 # Teaching Data Science
 
 
-#### Welcome! This professional learning module is designed to help you prepare to teach Code.org’s **Data Science Course**.
+#### Welcome! This professional learning module is designed to help you prepare to teach Code.org’s **Data Science** content.
 
 <img src="https://images.code.org/830b0690e59be4fa5c2874ed9b88f365-image-1724077617808.png" alt="Image of AI bot and a model card" style="border-radius:0px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0px 0px 0px 0;">
 
-#### This course is designed for 9th - 12th grade students and consists of two cunits: 
+#### The Data Science content is designed for 9th - 12th grade students and consists of two units: 
 - #### ***Unit 1: Introduction to Data Science***
 - #### ***Unit 2: Data Science with Python***
 
-#### You can teach Data Science as a complete unit, or choose to teach individual lessons, offering flexibility to meet your educational needs. 
+#### You can teach Data Science as a complete unit, or choose to teach only one of the parts, offering flexibility to meet your educational needs. 
 
 ## **In this module, you will:** 
-- #### Get an introduction to Teaching Data Science
+- #### Get an introduction to teaching Data Science
 - #### Define and explore foundational concepts of data science
 - #### Utilize Python and Pandas libraries to analyze, manipulate, and visualize data
 - #### Explore Data Science lessons
@@ -25,7 +25,7 @@ markdown <<MARKDOWN
 
 
 
-### **Suggested total time:** 90 minutes
+### **Suggested total time:** 90 minutes (still working on this)
 
 ### **Lesson one suggested time:** 20 minutes
 

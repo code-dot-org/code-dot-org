@@ -1,13 +1,15 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2024-09-30T17:16:40.000Z",
   "level_num": "custom",
   "user_id": 1196,
   "properties": {
+    "offerTts": "true",
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "####Play a Sound\r\n\r\n- Drag the [play](#clickable=play-sound-block) block and connect it under [when run](#clickable=when-run-block). \r\n- Then press [Run](#clickable=run-button).",
+    "long_instructions": "#### Play a Sound\r\n\r\n- Drag the [play](#clickable=play-sound-block) block and connect it under [when run](#clickable=when-run-block). \r\n- Then press [Run](#clickable=run-button).",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -27,7 +29,8 @@
         "next": false,
         "conditions": [
 
-        ]
+        ],
+        "callout": "play-sound-block"
       }
     ],
     "level_data": {
@@ -68,8 +71,7 @@
     "name_suffix": "_3",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-09-30T17:16:40.901+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-sequence_2\\\"\"],\"cloned_from\":\"music-ai-skill-sequence_2\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-30T17:16:40.901+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-sequence_2\\\"\"],\"cloned_from\":\"music-ai-skill-sequence_2\"},{\"changed_at\":\"2024-10-01 17:47:48 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 17:50:22 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 20:42:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

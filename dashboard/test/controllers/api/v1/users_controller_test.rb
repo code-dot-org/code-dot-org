@@ -369,4 +369,34 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
 
     assert_response :unauthorized
   end
+
+  test 'set_seen_ta_scores updates seen_ta_scores_map' do
+    teacher = create :teacher
+    assert_nil teacher.seen_ta_scores_map
+    sign_in(teacher)
+
+    unit = create :unit, :with_lessons
+    lesson = unit.lessons.first
+    params = {lesson_id: lesson.id}
+
+    post :set_seen_ta_scores, params: params
+    assert_response :success
+    assert_equal({lesson.id.to_s => true}, teacher.reload.seen_ta_scores_map)
+  end
+
+  test 'set_seen_ta_scores returns 400 if lesson id is missing' do
+    teacher = create :teacher
+    sign_in(teacher)
+
+    post :set_seen_ta_scores
+    assert_response :bad_request
+  end
+
+  test 'set_seen_ta_scores returns 400 if lesson id is not a number' do
+    teacher = create :teacher
+    sign_in(teacher)
+
+    post :set_seen_ta_scores, params: {lesson_id: 'not_a_number'}
+    assert_response :bad_request
+  end
 end

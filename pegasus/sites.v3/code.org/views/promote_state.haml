@@ -1,7 +1,7 @@
 -require 'state_abbr'
 -data = DB[:cdo_state_promote].where(state_code_s:state).first
 -pass if data.nil?
--statename = get_us_state_from_abbr(state)
+-statename = get_us_state_from_abbr(state, include_dc: true)
 -statename_no_space = statename.gsub(/\s+/, "")
 -petition_url = data[:petition_url_t]
 %script{type: "text/javascript", src: "/shared/js/helpers.js"}

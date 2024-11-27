@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
@@ -21,7 +22,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2024-07-11 16:06:01 UTC",
+    "serialized_at": "2024-11-19 01:14:16 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -117,7 +118,8 @@
         "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nThe internet is filled with all kinds of interesting people, but sometimes, some of them can be mean to each other. With this role play, help your students understand why it's often easier to be mean online than in person, and how to deal with online meanness when they see it.",
         "preparation": "- Review instructional materials.\r\n- Print handout(s) for each student.\r\n- Bring a stuffed animal or toy to class.",
         "purpose": "Common Sense’s Digital Citizenship Curriculum addresses six core topics, based on the latest research on children, media, and technology. This lesson focuses on Cyberbullying, Digital Drama & Hate Speech. Students take on these tough topics and play the active role of upstanders to build positive, supportive online communities and combat online cruelty.\n",
-        "student_overview": "In this lesson, you'll learn about meanness and what to do if you encounter it online."
+        "student_overview": "In this lesson, you'll learn about meanness and what to do if you encounter it online.",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Putting a STOP to Online Meanness",
@@ -137,7 +139,8 @@
         "overview": "In this **context-setting** lesson, students will use a set of symbols to instruct a \"robot\" to stack cups in different patterns. Students will take turns participating as the robot, responding only to the algorithm defined by their peers.",
         "preparation": " - Prepare a stack of 20 paper cups (or paper trapezoids) for each group of 2-3 students.\n - Display the symbols from ***Symbol Key** where students can reference throughout the lesson.\n - (Optional) Print out one ***Cup Stacking Ideas** per group of 2-3 students.\n",
         "purpose": "This unplugged lesson brings the class together as a team with a simple task to complete: get a \"robot\" to stack cups in a specific design. This activity lays the groundwork for the programming that students will do throughout the course as they learn the importance of defining a clearly communicated algorithm.",
-        "student_overview": "In this lesson, you'll pretend your classmates are robots and program them to build patterns of stacked cups."
+        "student_overview": "In this lesson, you'll pretend your classmates are robots and program them to build patterns of stacked cups.",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "My Robotic Friends Jr",
@@ -237,7 +240,8 @@
         "overview": "This **context-setting** lesson builds on the initial \"My Robotic Friends\" activity, featuring larger and more complicated designs. ",
         "preparation": "\n - Prepare a stack of 20 paper cups (or ***paper trapezoids**) for each group of 4 students.\n - Display the ***symbols** where students can reference throughout the lesson.\n - (Optional) Print out one ***Cup Stacking Ideas** per group of 4 students.",
         "purpose": "This lesson serves as a reintroduction to loops, using the now familiar set of \"robot\" programming instructions. Students will develop critical thinking skills by looking for patterns of repetition in the movements of classmates and determining how to simplify those repeated patterns using loops.",
-        "student_overview": "In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems."
+        "student_overview": "In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems.",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "My Loopy Robotic Friends Jr",
@@ -317,7 +321,8 @@
         "overview": "In this **context-setting** lesson, students will learn that events are a great way to add flexibility to a pre-written algorithm.",
         "preparation": "- Print or display the ***Event Controller**.\n- Print one ***assessment** for each student.\n",
         "purpose": "Today, students will learn to distinguish events and actions. The students will see activities interrupted by having a \"button\" pressed on a paper remote. When seeing this event, the class will react with a unique action. Events are widely used in programming and should be easily recognizable after this lesson.",
-        "student_overview": "Play a fun game to learn about events. "
+        "student_overview": "Play a fun game to learn about events. ",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "The Big Event",
@@ -395,7 +400,8 @@
       "properties": {
         "overview": "In this unplugged lesson, students will practice storing, searching, retrieving, modifying and deleting the pattern blocks to simulate what computers do with data. ",
         "preparation": "The data analogy can be made with various objects. Select an alternate from the list below if you don’t have pattern blocks:\n- Toy cars\n- Toy animals\n- Letter tiles\n- Counting bears\n- Unifix cubes\n- Buttons or beads\n- Other small items with sortable attributes\n\n",
-        "purpose": "In this Unplugged lesson, students will use pattern blocks inside a box as an analogy for data inside a computer. Students will practice storing, searching, retrieving, modifying and deleting the (data) pattern blocks. At the end of the lesson, students will create various bar graphs based on the attributes of their (data) pattern blocks. \n"
+        "purpose": "In this Unplugged lesson, students will use pattern blocks inside a box as an analogy for data inside a computer. Students will practice storing, searching, retrieving, modifying and deleting the (data) pattern blocks. At the end of the lesson, students will create various bar graphs based on the attributes of their (data) pattern blocks. \n",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -415,7 +421,8 @@
         "overview": "This **exploratory** lesson introduces the concept of binary which is how computers today store all sorts of information.",
         "preparation": "- (Optional) Watch the ***Lesson in Action** video.\n- Gather markers for the bracelets. Other decorations like beads and pipecleaners are optional.\n- Print one ***worksheet** and one ***assessment** per student.\n- (Optional) Write a short message on the board in binary.",
         "purpose": "In this lesson students will learn how information is represented in a way such that a computer can interpret and store it. When learning binary, students will have the opportunity to write codes and share them with peers as secret messages. This can then be related back to how computers read a program, translate it to binary, use the information in some way, then reply back in a way humans can understand. For example, when we type a sentence into a document then press save, a computer translates the sentence into binary, stores the information, then posts a message indicating the document has been saved.",
-        "student_overview": "Create your very own binary bracelet and learn how computers remember information!"
+        "student_overview": "Create your very own binary bracelet and learn how computers remember information!",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Binary Bracelets",

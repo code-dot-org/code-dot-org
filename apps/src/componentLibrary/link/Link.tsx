@@ -1,11 +1,11 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, {HTMLAttributes} from 'react';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 
 import moduleStyles from './link.module.scss';
 
-export interface LinkBaseProps {
+export interface LinkBaseProps extends HTMLAttributes<HTMLAnchorElement> {
   /** Link id */
   id?: string;
   /** Custom class name */
@@ -15,7 +15,7 @@ export interface LinkBaseProps {
   /** Should the link open in a new tab? */
   openInNewTab?: boolean;
   /** Link destination */
-  href: string;
+  href?: string;
   /** Is the link disabled? */
   disabled?: boolean;
   /** Callback for click event */
@@ -69,26 +69,26 @@ const Link: React.FunctionComponent<LinkProps> = ({
   size = 'm',
   type = 'primary',
   role,
-}) => {
-  return (
-    <a
-      className={classNames(
-        moduleStyles.link,
-        moduleStyles[`link-${type}`],
-        moduleStyles[`link-${size}`],
-        className
-      )}
-      href={!disabled ? href : undefined}
-      id={id}
-      onClick={!disabled ? onClick : undefined}
-      rel={openInNewTab || external ? 'noopener noreferrer' : undefined}
-      target={(openInNewTab || undefined) && '_blank'}
-      role={role}
-      {...(disabled ? {'aria-disabled': true} : {})}
-    >
-      {text || children}
-    </a>
-  );
-};
+  ...HTMLAttributes
+}) => (
+  <a
+    className={classNames(
+      moduleStyles.link,
+      moduleStyles[`link-${type}`],
+      moduleStyles[`link-${size}`],
+      className
+    )}
+    href={!disabled ? href : undefined}
+    id={id}
+    onClick={!disabled ? onClick : undefined}
+    rel={openInNewTab || external ? 'noopener noreferrer' : undefined}
+    target={(openInNewTab || undefined) && '_blank'}
+    role={role}
+    {...(disabled ? {'aria-disabled': true} : {})}
+    {...HTMLAttributes}
+  >
+    {text || children}
+  </a>
+);
 
 export default Link;

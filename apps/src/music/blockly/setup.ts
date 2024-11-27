@@ -10,11 +10,15 @@ import {
   FIELD_SOUNDS_TYPE,
   PLAY_MULTI_MUTATOR,
   FIELD_EFFECTS_EXTENSION,
+  FIELD_SOUNDS_VALIDATOR,
+  FIELD_PATTERNS_VALIDATOR,
 } from './constants';
 import {
   getDefaultTrackNameExtension,
   playMultiMutator,
   effectsFieldExtension,
+  fieldSoundsValidator,
+  fieldPatternsValidator,
 } from './extensions';
 import FieldChord from './FieldChord';
 import FieldPattern from './FieldPattern';
@@ -28,7 +32,6 @@ import {BlockConfig} from './types';
  * Set up the global Blockly environment for Music Lab. This should
  * only be called once per page load, as it configures the global
  * Blockly state.
- * @param {string} blockMode - The block mode to determine whether advanced blocks should be registered.
  */
 export function setUpBlocklyForMusicLab() {
   backupFunctionDefinitons();
@@ -38,6 +41,8 @@ export function setUpBlocklyForMusicLab() {
   );
 
   Blockly.Extensions.register(FIELD_EFFECTS_EXTENSION, effectsFieldExtension);
+  Blockly.Extensions.register(FIELD_SOUNDS_VALIDATOR, fieldSoundsValidator);
+  Blockly.Extensions.register(FIELD_PATTERNS_VALIDATOR, fieldPatternsValidator);
   Blockly.Extensions.registerMutator(PLAY_MULTI_MUTATOR, playMultiMutator);
 
   // Needed for TypeScript to recognize the type of the MUSIC_BLOCKS. Remove
@@ -51,8 +56,10 @@ export function setUpBlocklyForMusicLab() {
       },
     };
 
-    Blockly.JavaScript[blockType] = blockConfig.generator;
+    Blockly.JavaScript.forBlock[blockType] = blockConfig.generator;
   }
+
+  Blockly.JavaScript.addReservedWords('Sequencer');
 
   Blockly.fieldRegistry.register(FIELD_SOUNDS_TYPE, FieldSounds);
   Blockly.fieldRegistry.register(FIELD_PATTERN_TYPE, FieldPattern);
@@ -63,6 +70,4 @@ export function setUpBlocklyForMusicLab() {
   // Rename the new function placeholder text for Music Lab specifically.
   Blockly.Msg['PROCEDURES_DEFNORETURN_PROCEDURE'] =
     musicI18n.blockly_functionNamePlaceholder();
-
-  Blockly.setInfiniteLoopTrap();
 }

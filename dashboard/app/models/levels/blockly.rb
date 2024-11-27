@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 require 'nokogiri'
@@ -98,31 +99,21 @@ class Blockly < Level
       # Karel
       "farmer", "farmer_night", "bee", "bee_night", "collector", "harvester", "planter",
       # Spelling Bee
-      "letters"
-    ]
-  end
-
-  def self.artist_skins
-    [
-      # To be merged with migrated_skins after DCDO check is removed.
+      "letters",
+      # Artist
       "artist", "artist_zombie", "elsa", "anna"
     ]
   end
 
   def uses_google_blockly?
     skin = properties['skin']
-    if self.class.migrated_skins.include?(skin)
-      true
-    elsif self.class.artist_skins.include?(skin)
-      DCDO.get('artist_google_blockly', true)
-    else
-      false
-    end
+    self.class.migrated_skins.include?(skin)
   end
 
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil)
     level_properties = super
     level_properties[:sharedBlocks] = localized_blockly_level_options(script)["sharedBlocks"]
+    level_properties[:levelData] = localized_blockly_level_options_for_lab2(script)["levelData"]
     level_properties
   end
 
@@ -383,6 +374,33 @@ class Blockly < Level
             set_unless_nil(level_options, xml_block_prop, localized_remaining_variable_blocks(level_options[xml_block_prop]))
           end
         end
+      end
+
+      level_options
+    end
+    options.freeze
+  end
+
+  def localized_blockly_level_options_for_lab2(script)
+    options = Rails.cache.fetch("#{cache_key}/#{script.try(:cache_key)}/#{I18n.locale}/localized_blockly_level_options_for_lab2", force: !Unit.should_cache?) do
+      level_options = blockly_level_options.dup
+
+      functions = level_options.
+        dig("levelData", "startSources", "blocks", "blocks")&.
+        filter {|block| block["type"] == "procedures_defnoreturn"}
+
+      functions&.each do |function|
+        function_name = function.dig("fields", "NAME")
+        next unless function_name
+
+        localized_name = I18n.t(
+          "name",
+          scope: [:data, :function_definitions, name, function_name],
+          default: function_name,
+          smart: true
+        )
+
+        function["fields"]["NAME"] = localized_name
       end
 
       level_options

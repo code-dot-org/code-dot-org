@@ -22,8 +22,8 @@ theme: responsive_full_width
 -# Show Curriculum Launch banner if dcdo is true
 = view :curriculum_launch_skinny_banner
 
--# Show Hour of Code 2024 banner if hoc_mode is set to "soon-hoc"
-= view :hoc_skinny_banner
+-# Show Access Report banner if 'access-report-launch' dcdo is true
+= view :access_report_skinny_banner
 
 %section.why-teach-cs.bg-neutral-light
   .wrapper
@@ -52,6 +52,9 @@ theme: responsive_full_width
     %p.centered{style: "margin-bottom: 3rem"}
       =hoc_s(:admins_page_driving_change_desc)
     = view :"administrators/admins_stats"
+
+-# Show Hour of Code 2024 banner if hoc_mode is set to "soon-hoc"
+= view :hoc_skinny_banner
 
 %section.pathways.bg-neutral-dark
   .wrapper

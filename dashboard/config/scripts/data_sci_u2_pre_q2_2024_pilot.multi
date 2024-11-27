@@ -1,0 +1,8 @@
+name 'Data Sci U2 Pre Q2_2024-pilot'
+
+question 'Which of the following programming languages is the most useful for data science and why?'
+wrong 'HTML, as it allows us to interact with and retrieve information from web pages.'
+right 'Python, as its extensive libraries, allows us to display data in tables and graphs.'
+wrong 'C++, which we can use to build an application to analyze our data for us'
+wrong 'Java, as its speed allows us to quickly analyze a very large data set'
+allow_multiple_attempts false

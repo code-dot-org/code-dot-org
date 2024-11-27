@@ -124,7 +124,7 @@ if options[:start_date].nil?
   last_processed_date = Properties.get(LAST_PROCESSED_DATE_PROPERTY)
   if last_processed_date.nil?
     CDO.log.error "--start-date is required on first run of the script"
-    return
+    exit 1
   end
   options[:start_date] = Date.parse(last_processed_date) + 1
 end

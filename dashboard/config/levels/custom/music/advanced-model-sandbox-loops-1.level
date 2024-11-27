@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2024-09-19T21:23:30.000Z",
   "level_num": "custom",
@@ -12,11 +11,164 @@
     "level_data": {
       "blockMode": "Advanced",
       "toolbox": {
+      },
+      "library": "launch2024",
+      "packId": "shakira_maluma_chantaje",
+      "startSources": {
+        "variables": [
+          {
+            "name": "i",
+            "id": "Jzt-l.ao[tU*jVezANa#"
+          }
+        ],
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "for_loop",
+                  "id": "W8U21{D[Lt3xCG/vUJS)",
+                  "fields": {
+                    "VAR": {
+                      "id": "Jzt-l.ao[tU*jVezANa#"
+                    }
+                  },
+                  "inputs": {
+                    "FROM": {
+                      "shadow": {
+                        "type": "math_number",
+                        "id": "8`dHRIW7N):uG^G+k`vY",
+                        "fields": {
+                          "NUM": 1
+                        }
+                      }
+                    },
+                    "TO": {
+                      "shadow": {
+                        "type": "math_number",
+                        "id": "BuwP^c/976._,-q/niZr",
+                        "fields": {
+                          "NUM": 8
+                        }
+                      }
+                    },
+                    "BY": {
+                      "shadow": {
+                        "type": "math_number",
+                        "id": "F#,oB1YTYU#_`Ws[gR-b",
+                        "fields": {
+                          "NUM": 4
+                        }
+                      }
+                    },
+                    "DO": {
+                      "block": {
+                        "type": "play_sound",
+                        "id": "eKB9R{x^x,WNG-}hEBj1",
+                        "fields": {
+                          "sound": "shakira_maluma_chantaje/kick_build_1"
+                        },
+                        "inputs": {
+                          "measure": {
+                            "shadow": {
+                              "type": "math_number",
+                              "id": "a2RVYk_X^~.+UTl8eQE/",
+                              "fields": {
+                                "NUM": 1
+                              }
+                            },
+                            "block": {
+                              "type": "variables_get",
+                              "id": "Q#1Va`*[`FQ8~J@VV5-;",
+                              "extraState": {
+                              },
+                              "fields": {
+                                "VAR": {
+                                  "id": "Jzt-l.ao[tU*jVezANa#"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound",
+                            "id": "Q^`tON,WUKJ=On+ilQbs",
+                            "fields": {
+                              "sound": "shakira_maluma_chantaje/kick_build_2"
+                            },
+                            "inputs": {
+                              "measure": {
+                                "shadow": {
+                                  "type": "math_number",
+                                  "id": "a2RVYk_X^~.+UTl8eQE/",
+                                  "fields": {
+                                    "NUM": 1
+                                  }
+                                },
+                                "block": {
+                                  "type": "math_arithmetic",
+                                  "id": "*pN[5rW=#5ePG9tvL5k[",
+                                  "fields": {
+                                    "OP": "<field name=\"OP\">ADD</field>"
+                                  },
+                                  "inputs": {
+                                    "A": {
+                                      "shadow": {
+                                        "type": "math_number",
+                                        "id": "+Q/#67|MB.e;OCR,II8W",
+                                        "fields": {
+                                          "NUM": 1
+                                        }
+                                      },
+                                      "block": {
+                                        "type": "variables_get",
+                                        "id": "~*`$hITaiaMiw.fZj86L",
+                                        "extraState": {
+                                        },
+                                        "fields": {
+                                          "VAR": {
+                                            "id": "Jzt-l.ao[tU*jVezANa#"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "B": {
+                                      "shadow": {
+                                        "type": "math_number",
+                                        "id": "2B%xWv}/=$P2Boal}xD*",
+                                        "fields": {
+                                          "NUM": 2
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       }
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-19T21:23:30.882+00:00\",\"changed\":[\"cloned from \\\"advanced-model-sandbox-variables-1\\\"\"],\"cloned_from\":\"advanced-model-sandbox-variables-1\"},{\"changed_at\":\"2024-09-19 21:23:33 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-09-19T21:23:30.882+00:00\",\"changed\":[\"cloned from \\\"advanced-model-sandbox-variables-1\\\"\"],\"cloned_from\":\"advanced-model-sandbox-variables-1\"},{\"changed_at\":\"2024-09-19 21:23:33 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-14 15:42:38 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 20:18:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 20:42:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 20:43:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 20:44:01 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 20:47:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 20:48:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 20:52:58 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 20:58:01 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 20:58:25 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 21:41:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

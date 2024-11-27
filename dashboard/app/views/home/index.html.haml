@@ -3,10 +3,6 @@
   = tag 'meta', property: 'og:image', content: CDO.studio_url(CDO.shared_image_url('share/girl_cropped.jpg'), 'https:')
   = tag 'meta', property: 'og:description', content: t('share.description')
 
--if current_user&.school_donor_name
-  - content_for :above_footer_content do
-    = render partial: 'home/donor_footer'
-
 -# Student modal
 - if RaceInterstitialHelper.show?(current_user) || @force_race_interstitial
   = render partial: 'layouts/race_interstitial'
@@ -15,7 +11,7 @@
 - if current_user && current_user.teacher? && !current_user.accepted_latest_terms?
   - current_user.update_user_tos_version_accept()
   = render partial: 'layouts/implicit_new_user_terms_interstitial'
-- elsif InitialSectionCreationInterstitialHelper.show?(current_user)
+- elsif InitialSectionCreationInterstitialHelper.show?(current_user, request.gdpr?)
   = render partial: 'layouts/initial_section_creation_interstitial'
 - elsif @show_section_creation_celebration_dialog
   = render partial: 'layouts/section_creation_celebration_dialog'

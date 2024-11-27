@@ -9,6 +9,7 @@ require 'active_support/inflector'
 require 'active_support/core_ext/hash'
 require 'fileutils'
 require 'require_all'
+require 'ostruct'
 
 require_relative '../../lib/cdo/shared_constants'
 require_relative '../../lib/cdo/shared_constants/curriculum/shared_course_constants'
@@ -83,6 +84,7 @@ def main
       ARTIST_AUTORUN_OPTIONS
       LEVEL_KIND
       LEVEL_STATUS
+      USER_LEVEL_INTERACTIONS
       SECTION_LOGIN_TYPE
       STUDENT_GRADE_LEVELS
       PL_GRADE_VALUE
@@ -107,9 +109,13 @@ def main
       AI_CHAT_MODEL_IDS
       FEATURED_PROJECT_STATUS
       FEATURED_PROJECT_CONSTANTS
+      CAP_LINKS
       LMS_LINKS
       USER_TYPES
-    ), 
+      NON_SCHOOL_OPTIONS
+      US_STATES
+      PROJECT_SUBMISSION_STATUS
+    ),
     file_type: 'ts'
   )
 
@@ -129,6 +135,8 @@ def main
       PARTICIPANT_AUDIENCE
       INSTRUCTOR_AUDIENCE
       CURRICULUM_UMBRELLA
+      CURRICULUM_TOPIC_TAGS
+      CURRICULUM_CONTENT_AREA
       COURSE_OFFERING_CURRICULUM_TYPES
       COURSE_OFFERING_HEADERS
       COURSE_OFFERING_MARKETING_INITIATIVES

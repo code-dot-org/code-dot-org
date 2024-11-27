@@ -1,0 +1,76 @@
+# Below are rules we want to have enabled, but which we want to configure
+# specially rather than using the default configuration.
+
+CustomCops/OnlyAllowedCharacters:
+  Include:
+    - '**/*_mailer.rb'
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+Layout/EmptyLineBetweenDefs:
+  AllowAdjacentOneLineDefs: true
+
+Layout/FirstParameterIndentation:
+  EnforcedStyle: consistent
+
+Layout/MultilineMethodCallBraceLayout:
+  EnforcedStyle: new_line
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/SpaceInsideBlockBraces:
+  EnforcedStyle: no_space
+  SpaceBeforeBlockParameters: false
+
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+
+Naming/RescuedExceptionsVariableName:
+  PreferredName: exception
+
+# This Cop by default uses a custom Include directive which in our
+# project would also include pegasus
+# see https://github.com/rubocop/rubocop-rails/blob/d81af275bba3d06e30156596c2c057cf68f8272b/config/default.yml#L213C11-L213C11
+Rails/AssertNot:
+  Include:
+    - dashboard/**/test/**/*
+
+Rails/Date:
+  EnforcedStyle: strict
+
+Rails/RefuteMethods:
+  EnforcedStyle: refute
+
+Style/AccessModifierDeclarations:
+  EnforcedStyle: inline
+
+Style/EmptyElse:
+  EnforcedStyle: empty
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/FormatStringToken:
+  EnforcedStyle: template
+
+Style/InverseMethods:
+  InverseBlocks:
+    :select: null
+    :select!: null
+
+Style/NumericLiterals:
+  MinDigits: 7
+
+Style/Semicolon:
+  AllowAsExpressionSeparator: true
+
+Style/WordArray:
+  MinSize: 5

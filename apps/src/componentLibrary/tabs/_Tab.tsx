@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
+import CloseButton from '@cdo/apps/componentLibrary/closeButton';
+import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
@@ -23,10 +25,16 @@ export interface TabModel {
   tooltip?: TooltipProps;
   /** Tab icon */
   icon?: FontAwesomeV6IconProps;
+  /** Tab size (e.g. Used for closableButton) */
+  size?: ComponentSizeXSToL;
   /** Tab content */
   tabContent: React.ReactNode;
   /** Is tab disabled */
   disabled?: boolean;
+  /** Is tab closable */
+  isClosable?: boolean;
+  /** Callback when tab is closed */
+  onClose?: (value: string) => void;
 }
 
 interface TabsProps extends TabModel {
@@ -72,7 +80,6 @@ const renderTabButtonContent = (
     </>
   );
 };
-
 const _Tab: React.FunctionComponent<TabsProps> = ({
   isSelected,
   onClick,
@@ -82,12 +89,30 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   iconRight,
   icon,
   tooltip,
+  size,
   tabPanelId,
   tabButtonId,
   disabled = false,
   isIconOnly = false,
+  isClosable = false,
+  onClose = () => {},
 }) => {
   const handleClick = useCallback(() => onClick(value), [onClick, value]);
+  const handleClose = useCallback(() => onClose(value), [onClose, value]);
+  const handleNativeTooltip = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const target = e.currentTarget;
+    // Locate the element that contains the text (if nested inside spans or other elements).
+    const textElement = target.querySelector('span') || target;
+
+    if (textElement.scrollWidth > textElement.clientWidth && !tooltip) {
+      // Set the tooltip text if overflow occurs if the tooltip prop is not passed.
+      target.title = textElement.textContent || '';
+    } else {
+      // Clear tooltip if no overflow.
+      target.title = '';
+    }
+  };
+
   checkTabForErrors(isIconOnly, icon, text);
 
   const buttonContent = renderTabButtonContent(
@@ -110,9 +135,17 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
         isIconOnly && moduleStyles.iconOnlyTab
       )}
       onClick={handleClick}
+      onMouseOver={handleNativeTooltip}
       disabled={disabled}
     >
       {buttonContent}
+      {isClosable && (
+        <CloseButton
+          onClick={handleClose}
+          size={size}
+          aria-label={`Close ${text}`}
+        />
+      )}
     </button>
   );
 

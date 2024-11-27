@@ -26,8 +26,7 @@ class Projects
   #### rather than this middleware class (Projects, plural)
   #### such that we can make use of model associations managed by Rails.
   def get_rails_project(project_id)
-    return @rails_project if @rails_project
-    @rails_project = Project.find(project_id)
+    Project.find(project_id)
   end
 
   def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true, level: nil)
@@ -137,10 +136,8 @@ class Projects
     raise NotFound, "channel `#{channel_id}` not found" if project_query_result.empty?
 
     rails_project = get_rails_project(project_id)
-    if rails_project.apply_project_age_publish_limits?
-      raise PublishError, "User too new to publish channel `#{channel_id}`" unless rails_project.owner_existed_long_enough_to_publish?
-      raise PublishError, "Project too new to publish channel `#{channel_id}`" unless rails_project.existed_long_enough_to_publish?
-    end
+    raise PublishError, "User too new to publish channel `#{channel_id}`" unless rails_project.owner_existed_long_enough_to_publish?
+    raise PublishError, "Project too new to publish channel `#{channel_id}`" unless rails_project.existed_long_enough_to_publish?
 
     project_query_result.update(row)
 

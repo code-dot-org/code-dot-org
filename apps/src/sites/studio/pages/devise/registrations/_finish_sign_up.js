@@ -5,13 +5,11 @@ import ReactDOM from 'react-dom';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/metrics/firehose';
-import {
-  NON_SCHOOL_OPTIONS_ARRAY,
-  SELECT_COUNTRY,
-} from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import {SELECT_COUNTRY} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import {SchoolDataInputsContainer} from '@cdo/apps/templates/SchoolDataInputsContainer';
 import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
@@ -32,7 +30,7 @@ const STUDENT_ONLY_FIELDS = [
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
 const scriptData = getScriptData('signup');
-const {usIp, signUpUID} = scriptData;
+const {usIp, signUpUID, isLTI} = scriptData;
 
 // User type buttons
 const teacherButton = document.getElementById('select-user-type-teacher');
@@ -91,6 +89,7 @@ $(document).ready(() => {
         has_marketing_value = true;
       }
     }
+    const sourceString = isLTI ? 'LTI' : '';
     analyticsReporter.sendEvent(
       EVENTS.SIGN_UP_FINISHED_EVENT,
       {
@@ -98,6 +97,7 @@ $(document).ready(() => {
         'has school': has_school,
         'has marketing value selected': has_marketing_value,
         'has display name': has_display_name,
+        source: sourceString,
       },
       PLATFORMS.BOTH
     );
@@ -108,7 +108,7 @@ $(document).ready(() => {
     const newSchoolIdEl = $(
       'select[name="user[school_info_attributes][school_id]"]'
     );
-    if (NON_SCHOOL_OPTIONS_ARRAY.includes(newSchoolIdEl.val())) {
+    if (Object.values(NonSchoolOptions).includes(newSchoolIdEl.val())) {
       newSchoolIdEl.val('');
       $('input[name="user[school_info_attributes][school_zip]"]').val('');
     }

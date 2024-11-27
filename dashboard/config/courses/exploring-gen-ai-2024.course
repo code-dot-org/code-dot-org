@@ -4,7 +4,7 @@
     "exploring-gen-ai1-2024",
     "exploring-gen-ai2-2024"
   ],
-  "published_state": "in_development",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",

@@ -2,7 +2,7 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import ChangeEmailForm from '@cdo/apps/accounts/ChangeEmailForm';
+import {ChangeEmailForm} from '@cdo/apps/accounts/ChangeEmail/ChangeEmailForm';
 
 import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
@@ -18,7 +18,6 @@ describe('ChangeEmailForm', () => {
     userType: 'student',
     isPasswordRequired: true,
     onChange: () => {},
-    onSubmit: () => {},
   };
 
   describe('the emailOptIn field', () => {
@@ -144,7 +143,7 @@ describe('ChangeEmailForm', () => {
       expect(onChange).not.to.have.been.called;
 
       const changedOptIn = 'no';
-      wrapper.find(OPT_OUT_SELECTOR).simulate('click');
+      wrapper.find(OPT_OUT_SELECTOR).simulate('change');
 
       expect(onChange).to.have.been.calledOnce;
       expect(onChange.firstCall.args[0]).to.deep.equal({
@@ -154,7 +153,7 @@ describe('ChangeEmailForm', () => {
     });
   });
 
-  describe('calls onSubmit', () => {
+  describe('calls onSubmit on pressing Enter key', () => {
     let onSubmit, wrapper;
 
     beforeEach(() => {
@@ -177,16 +176,6 @@ describe('ChangeEmailForm', () => {
       expect(onSubmit).not.to.have.been.called;
 
       wrapper.find(PASSWORD_SELECTOR).simulate('keydown', {key: 'Enter'});
-
-      expect(onSubmit).to.have.been.calledOnce;
-      expect(onSubmit.firstCall.args).to.be.empty;
-    });
-
-    it('when the enter key is pressed on the opt-in field', () => {
-      wrapper.setProps({userType: 'teacher'});
-      expect(onSubmit).not.to.have.been.called;
-
-      wrapper.find(OPT_IN_SELECTOR).simulate('keydown', {key: 'Enter'});
 
       expect(onSubmit).to.have.been.calledOnce;
       expect(onSubmit.firstCall.args).to.be.empty;
@@ -237,70 +226,67 @@ describe('ChangeEmailForm', () => {
     });
   });
 
-  describe('focusOnAnError()', () => {
-    let wrapper, emailSpy, passwordSpy;
+  describe('validation', () => {
+    let wrapper;
+    let newEmailValidation = 'email is required';
+    let currentPasswordValidation = 'password is required';
+    let emailOptInValidation = 'opt in selection is required';
 
     beforeEach(() => {
       wrapper = mount(
-        <ChangeEmailForm {...DEFAULT_PROPS} userType="teacher" />
+        <ChangeEmailForm
+          {...DEFAULT_PROPS}
+          userType="teacher"
+          validationErrors={{
+            newEmail: newEmailValidation,
+            currentPassword: currentPasswordValidation,
+            emailOptIn: emailOptInValidation,
+          }}
+        />
       );
-      emailSpy = sinon.stub(wrapper.find(EMAIL_SELECTOR).getDOMNode(), 'focus');
-      passwordSpy = sinon.stub(
-        wrapper.find(PASSWORD_SELECTOR).getDOMNode(),
-        'focus'
-      );
     });
 
-    afterEach(() => {
-      emailSpy.restore();
-      passwordSpy.restore();
+    it('does not show validation on initial render', () => {
+      expect(wrapper.contains(newEmailValidation)).to.be.false;
+      expect(wrapper.contains(currentPasswordValidation)).to.be.false;
+      expect(wrapper.contains(emailOptInValidation)).to.be.false;
     });
 
-    it('does nothing if there are no validation errors', () => {
-      wrapper.setProps({
-        validationErrors: {},
-      });
+    it('onChange on email input reveals form validation', () => {
+      expect(wrapper.contains(newEmailValidation)).to.be.false;
+      expect(wrapper.contains(currentPasswordValidation)).to.be.false;
+      expect(wrapper.contains(emailOptInValidation)).to.be.false;
 
-      wrapper.instance().focusOnAnError();
-      expect(emailSpy).not.to.have.been.called;
-      expect(passwordSpy).not.to.have.been.called;
+      wrapper
+        .find(EMAIL_SELECTOR)
+        .simulate('change', {target: {value: 'email@mail.com'}});
+
+      expect(wrapper.contains(currentPasswordValidation)).to.be.true;
+      expect(wrapper.contains(emailOptInValidation)).to.be.true;
     });
 
-    it('focuses on the email field if there is an email validation error', () => {
-      wrapper.setProps({
-        validationErrors: {
-          newEmail: 'Something is wrong with the email',
-        },
-      });
+    it('onChange on password input reveals form validation', () => {
+      expect(wrapper.contains(newEmailValidation)).to.be.false;
+      expect(wrapper.contains(currentPasswordValidation)).to.be.false;
+      expect(wrapper.contains(emailOptInValidation)).to.be.false;
 
-      wrapper.instance().focusOnAnError();
-      expect(emailSpy).to.have.been.calledOnce;
-      expect(passwordSpy).not.to.have.been.called;
+      wrapper
+        .find(PASSWORD_SELECTOR)
+        .simulate('change', {target: {value: 'abc123'}});
+
+      expect(wrapper.contains(newEmailValidation)).to.be.true;
+      expect(wrapper.contains(emailOptInValidation)).to.be.true;
     });
 
-    it('focuses on the password field if there is a password validation error', () => {
-      wrapper.setProps({
-        validationErrors: {
-          currentPassword: 'Something is wrong with the password',
-        },
-      });
+    it('onChange on opt-in/out input reveals form validation', () => {
+      expect(wrapper.contains(newEmailValidation)).to.be.false;
+      expect(wrapper.contains(currentPasswordValidation)).to.be.false;
+      expect(wrapper.contains(emailOptInValidation)).to.be.false;
 
-      wrapper.instance().focusOnAnError();
-      expect(emailSpy).not.to.have.been.called;
-      expect(passwordSpy).to.have.been.calledOnce;
-    });
+      wrapper.find(OPT_IN_SELECTOR).simulate('change');
 
-    it('focuses on the email field if there are both email and password validation errors', () => {
-      wrapper.setProps({
-        validationErrors: {
-          newEmail: 'Something is wrong with the email',
-          currentPassword: 'Something is wrong with the password',
-        },
-      });
-
-      wrapper.instance().focusOnAnError();
-      expect(emailSpy).to.have.been.calledOnce;
-      expect(passwordSpy).not.to.have.been.called;
+      expect(wrapper.contains(newEmailValidation)).to.be.true;
+      expect(wrapper.contains(currentPasswordValidation)).to.be.true;
     });
   });
 });

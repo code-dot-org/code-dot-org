@@ -1,8 +1,11 @@
-import {markdownToTxt} from 'markdown-to-txt';
-import React, {useCallback} from 'react';
+import classNames from 'classnames';
+import React, {useState} from 'react';
 
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import {getCurrentLocale} from '@cdo/apps/lab2/projects/utils';
+import DCDO from '@cdo/apps/dcdo';
+import {useBrowserTextToSpeech} from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
+import currentLocale from '@cdo/apps/util/currentLocale';
 
 import moduleStyles from './TextToSpeech.module.scss';
 
@@ -10,32 +13,78 @@ interface TextToSpeechProps {
   text: string;
 }
 
+const usePause = queryParams('tts-play-pause') === 'true';
+const playIcon = (queryParams('tts-play-icon') as string) || 'volume';
+const stopIcon = (queryParams('tts-stop-icon') as string) || 'circle-stop';
+// If the list of enabled locales is set to true, enable all locales.
+const enabledLocales = DCDO.get('browser-tts-button-enabled-locales', []) as
+  | string[]
+  | boolean;
+const ttsButtonEnabled =
+  enabledLocales === true ||
+  (Array.isArray(enabledLocales) && enabledLocales.includes(currentLocale()));
+
 /**
  * TextToSpeech play button.
  */
 const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({text}) => {
-  const playText = useCallback(() => {
-    const currentLocale = getCurrentLocale();
-    const voices = speechSynthesis.getVoices();
-    if (voices.length === 0) {
+  const {isTtsAvailable, speak, cancel, pause, resume} =
+    useBrowserTextToSpeech();
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const playText = () => {
+    if (!isTtsAvailable) {
+      console.log('Browser TextToSpeech unavailable');
       return;
     }
-    const plainText = markdownToTxt(text);
-    const utterance = new SpeechSynthesisUtterance(plainText);
-    utterance.lang = currentLocale;
-    speechSynthesis.cancel();
-    speechSynthesis.speak(utterance);
-  }, [text]);
+
+    if (isPaused) {
+      resume();
+      setIsPaused(false);
+      return;
+    }
+
+    if (isPlaying) {
+      if (usePause) {
+        pause();
+        setIsPaused(true);
+      } else {
+        cancel();
+      }
+      return;
+    }
+
+    const utterance = speak(text);
+    if (utterance) {
+      utterance.addEventListener('start', () => setIsPlaying(true));
+      utterance.addEventListener('end', () => {
+        setIsPaused(false);
+        setIsPlaying(false);
+      });
+      utterance.addEventListener('error', () => {
+        setIsPaused(false);
+        setIsPlaying(false);
+      });
+    }
+  };
+
+  if (!ttsButtonEnabled || !isTtsAvailable) {
+    return null;
+  }
 
   return (
     <button
-      className={moduleStyles.playButton}
+      className={classNames(
+        moduleStyles.playButton,
+        isPlaying && moduleStyles.playButtonPlaying
+      )}
       onClick={playText}
       type="button"
     >
       <FontAwesomeV6Icon
-        iconName={'play'}
-        iconStyle="solid"
+        iconName={isPlaying ? stopIcon : playIcon}
+        iconStyle={'regular'}
         className={moduleStyles.icon}
       />
     </button>

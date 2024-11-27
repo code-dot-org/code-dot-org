@@ -27,14 +27,16 @@ class MailjetDeliveryJobTest < ActiveJob::TestCase
     end
 
     it 'sends email via MailJet with expected arguments' do
-      MailJet.
-        expects(:send_email).
-        with(template_name, contact_email, contact_name, vars: vars, locale: locale).
-        once
+      perform_enqueued_jobs do
+        MailJet.
+          expects(:send_email).
+          with(template_name, contact_email, contact_name, vars: vars, locale: locale).
+          once
 
-      perform_enqueued_jobs {perform_later}
+        perform_later
 
-      assert_performed_jobs 1
+        assert_performed_jobs 1
+      end
     end
 
     context 'when StandardError is raised' do
@@ -45,11 +47,47 @@ class MailjetDeliveryJobTest < ActiveJob::TestCase
       end
 
       it 'rescues from exception with #report_exception' do
-        described_class.any_instance.expects(:report_exception).with(exception).once
+        perform_enqueued_jobs do
+          described_class.any_instance.expects(:report_exception).with(exception).once
 
-        perform_enqueued_jobs {perform_later}
+          perform_later
 
-        assert_performed_jobs 1
+          assert_performed_jobs 1
+        end
+      end
+    end
+
+    context 'when RestClient::TooManyRequests is raised' do
+      let(:exception) {RestClient::TooManyRequests.new}
+
+      before do
+        MailJet.stubs(:send_email).raises(exception)
+      end
+
+      it 'retries job up to 5 times before reporting and raising exception' do
+        perform_enqueued_jobs do
+          described_class.any_instance.expects(:report_exception).with(exception).once
+
+          assert_raises(exception.class) {perform_later}
+
+          assert_performed_jobs 5
+        end
+      end
+
+      context 'once' do
+        before do
+          MailJet.stubs(:send_email).raises(exception).then.returns(nil)
+        end
+
+        it 'retries job once without reporting and raising exception' do
+          perform_enqueued_jobs do
+            described_class.any_instance.expects(:report_exception).with(exception).never
+
+            perform_later
+
+            assert_performed_jobs 2
+          end
+        end
       end
     end
   end

@@ -19,6 +19,10 @@
 import * as GoogleBlockly from 'blockly/core';
 
 import {BLOCK_TYPES} from '../../constants';
+import {
+  getNonFunctionVariableIds,
+  deleteUnusedVariables,
+} from '../cdoVariables';
 
 import {createMinusField} from './field_minus';
 import {createPlusField} from './field_plus';
@@ -123,6 +127,7 @@ export const advancedProceduresBlocks =
         'argument_reporter_finish_editing',
         'argument_report_get_var_models',
       ],
+      mutator: 'argument_reporter_mutator',
     },
   ]);
 
@@ -424,7 +429,7 @@ const procedureDefMutator = {
     );
     argId = argId || GoogleBlockly.utils.idGenerator.genUid();
 
-    this.addVarInput_(name, argId);
+    this.addVarInput_(name, argId, variable);
     if (this.getInput('STACK')) {
       this.moveInputBefore(argId, 'STACK');
     } else {
@@ -444,22 +449,21 @@ const procedureDefMutator = {
    * @private
    */
   removeArg_: function (argId) {
-    // Find the argument name by traversing the connection of the arg input.
-    const argLabel = this.getInput(argId)
-      .connection.targetConnection.getSourceBlock()
-      .getFieldValue('VAR');
+    const argDatum = this.argData_.find(arg => arg.argId === argId);
 
-    // Find other arg blocks in the same stack with the same field value,
-    // then remove them.
-    const matchingArgReporters = this.workspace.getAllBlocks().filter(
-      block =>
-        // Block must be in the same stack (e.g. function definition)
-        block.getRootBlock() === this.getRootBlock() &&
-        block.type === BLOCK_TYPES.argumentReporter &&
-        !block.isShadow() &&
-        block.getFieldValue('VAR') === argLabel
-    );
-    matchingArgReporters.forEach(block => block.dispose());
+    if (argDatum) {
+      // Find other arg blocks in the same stack with the same field value,
+      // then remove them.
+      const matchingArgReporters = this.workspace.getAllBlocks().filter(
+        block =>
+          // Block must be in the same stack (e.g. function definition)
+          block.getRootBlock() === this.getRootBlock() &&
+          block.type === BLOCK_TYPES.argumentReporter &&
+          !block.isShadow() &&
+          block.getVarModels().includes(argDatum.model)
+      );
+      matchingArgReporters.forEach(block => block.dispose());
+    }
 
     // Remove the arg input and, if it was the only one, remove the "with:" label
     if (this.removeInput(argId, true)) {
@@ -476,10 +480,11 @@ const procedureDefMutator = {
    * block.
    * @param {string} name The name of the argument.
    * @param {string} argId The UUID of the argument (different from var ID).
+   * @param {Blockly.VariableModel} variableModel The variable model for the parameter
    * @this {GoogleBlockly.Block}
    * @private
    */
-  addVarInput_: function (name, argId) {
+  addVarInput_: function (name, argId, variableModel) {
     this.appendValueInput(argId)
       .setAlign(GoogleBlockly.inputs.RIGHT)
       .appendField(createMinusField(argId));
@@ -489,10 +494,41 @@ const procedureDefMutator = {
       {type: 'argument_reporter', fields: {VAR: name}},
       this.workspace
     );
+    argBlock.model = variableModel;
     this.getInput(argId).connection.connect(argBlock.outputConnection);
     argBlock.setShadow(true);
   },
 };
+
+const argumentReporterMutator = {
+  /**
+   * Returns the state of this block as a JSON serializable object.
+   * @returns {{params: (!Array<{name: string, id: string}>|undefined),
+   *     hasStatements: (boolean|undefined)}} The state of this block, eg the
+   *     parameters and statements.
+   */
+  saveExtraState: function () {
+    const state = Object.create(null);
+    if (this.model) {
+      state.modelId = this.model.getId();
+    }
+    return state;
+  },
+
+  /**
+   * Applies the given state to this block.
+   * @param {*} state The state to apply to this block, eg the parameters and
+   *     statements.
+   */
+  loadExtraState: function (state) {
+    this.model = this.workspace.getVariableById(state.modelId);
+  },
+};
+
+GoogleBlockly.Extensions.registerMixin(
+  'argument_reporter_mutator',
+  argumentReporterMutator
+);
 
 /**
  * Initializes some private variables for procedure blocks.
@@ -601,7 +637,20 @@ const procedureVars = function () {
       if (!argData) {
         return; // Not on this block.
       }
-      this.getField(argData.argId).setValue(variable.name, false);
+      // Update the name shown on each instance of argument reporter within
+      // this function definition block.
+      const argBlocksInDef = this.workspace
+        .getAllBlocks()
+        .filter(
+          block =>
+            block.getRootBlock() === this &&
+            block.type === BLOCK_TYPES.argumentReporter &&
+            block.getVarModels().includes(variable)
+        );
+      argBlocksInDef.forEach(block => {
+        block.setFieldValue(variable.name, 'VAR');
+        block.model = variable;
+      });
       argData.model = variable;
     },
   };
@@ -619,62 +668,39 @@ GoogleBlockly.Extensions.register('procedure_vars', procedureVars);
  */
 function argumentReporterValidator(newValue) {
   const sourceArgBlock = this.getSourceBlock();
-  const defBlock = sourceArgBlock.getRootBlock();
+  const rootBlock = sourceArgBlock.getRootBlock();
+
+  // Prevent fields from being edited if the block is not within a function definiton.
   if (
-    !Blockly.cdoUtils.isFunctionBlock(defBlock) ||
-    !sourceArgBlock.isShadow()
+    // Ignore unrendered blocks, ie. blocks that are newly created.
+    sourceArgBlock.rendered &&
+    !Blockly.cdoUtils.isFunctionBlock(sourceArgBlock.getRootBlock())
   ) {
-    return;
-  }
-
-  const argName =
-    sourceArgBlock.outputConnection?.targetConnection?.getParentInput()?.name;
-  const workspace = sourceArgBlock.workspace;
-  const argData = defBlock.argData_;
-  const argDatum = defBlock.argData_.find(element => element.argId === argName);
-  const currId = argDatum.model.getId();
-
-  // Replace all whitespace with normal spaces, then trim.
-  newValue = newValue.replace(/[\s\xa0]+/g, ' ').trim();
-  const caselessName = newValue.toLowerCase();
-
-  /**
-   * Returns true if the given argDatum is associated with this field, or has
-   * a different caseless name than the argDatum associated with this field.
-   * @param {{model: GoogleBlockly.VariableModel, argId:string}} argDatum The
-   *     argDatum we want to make sure does not conflict with the argDatum
-   *     associated with this field.
-   * @returns {boolean} True if the given datum does not conflict with the
-   *     datum associated with this field.
-   * @this {GoogleBlockly.FieldTextInput}
-   */
-  const isValidArgDatum = argDatum => {
-    // The field name (aka id) is always equal to the arg id.
-    return (
-      argDatum.argId === argName ||
-      caselessName !== argDatum.model.name.toLowerCase()
-    );
-  };
-
-  if (!newValue || !argData.every(isValidArgDatum)) {
-    GoogleBlockly.Procedures.mutateCallers(sourceArgBlock.getRootBlock());
     return null;
   }
 
-  // Create new vars instead of renaming the old ones, so users can't
-  // accidentally rename/coalesce vars.
-  let model = workspace.getVariable(newValue, '');
-  if (!model) {
-    model = workspace.createVariable(newValue, '');
-  } else if (model.name !== newValue) {
-    // Blockly is case-insensitive so we have to update the var instead of
-    // creating a new one.
-    workspace.renameVariableById(model.getId(), newValue);
+  // Replace all whitespace with normal spaces, then trim.
+  newValue = newValue.replace(/[\s\xa0]+/g, ' ').trim();
+
+  if (!newValue) {
+    return null;
   }
-  if (model.getId() !== currId) {
-    argDatum.model = model;
+
+  const model = getModelForNewValue(sourceArgBlock, newValue);
+  if (
+    sourceArgBlock.isShadow() &&
+    rootBlock.argData_.find(
+      datum =>
+        datum.model === model &&
+        sourceArgBlock.outputConnection.targetConnection.getParentInput()
+          .name !== datum.argId
+    )
+  ) {
+    // Don't allow one argument to be renamed "into" another.
+    return null;
   }
-  GoogleBlockly.Procedures.mutateCallers(sourceArgBlock.getRootBlock());
+
+  updateDefinition(sourceArgBlock, model);
   return newValue;
 }
 
@@ -684,32 +710,45 @@ GoogleBlockly.Extensions.register('argument_reporter_validator', function () {
     const workspace = GoogleBlockly.Workspace.getById(event.workspaceId);
     const eventBlock = workspace.getBlockById(event.blockId);
     if (eventBlock?.type === BLOCK_TYPES.argumentReporter) {
-      switch (event.type) {
+      if (event.type === GoogleBlockly.Events.BLOCK_CHANGE) {
         // For a field value change events, we update other matching blocks within
-        // the stack, and update the warning text. For block change and block move
-        // events, we only need to update the warning text. The fallthrough between
-        // the cases below is deliberate so that we ensure the warning text gets
-        // updated for any of the event types that we care about.
-        case GoogleBlockly.Events.BLOCK_FIELD_INTERMEDIATE_CHANGE:
-          workspace
-            .getAllBlocks()
-            .filter(
-              block =>
-                block.getRootBlock() === eventBlock?.getRootBlock() &&
-                block.type === BLOCK_TYPES.argumentReporter &&
-                block.getFieldValue('VAR') === event.oldValue
-            )
-            .forEach(matchingBlock =>
-              matchingBlock.getField('VAR').setValue(event.newValue, false)
-            );
-        // eslint-disable-next-line no-fallthrough
-        case GoogleBlockly.Events.BLOCK_MOVE:
-        // eslint-disable-next-line no-fallthrough
-        case GoogleBlockly.Events.BLOCK_CHANGE:
-          updateArgReporterWarningText(eventBlock);
-          break;
+        // the same stack.
+        const otherArgBlocksInStack = workspace
+          .getAllBlocks()
+          .filter(
+            block =>
+              block.getRootBlock() === eventBlock.getRootBlock() &&
+              block.type === BLOCK_TYPES.argumentReporter &&
+              block !== eventBlock
+          );
+        // We should update other matching blocks unless some blocks
+        // already use the new variable model.
+        const shouldUpdateOtherBlocks = otherArgBlocksInStack.every(
+          block => !block.getVarModels().includes(eventBlock.model)
+        );
+        if (shouldUpdateOtherBlocks) {
+          // We do this based on the old field value rather than the
+          // variable model, because the event block's variable model has already changed.
+          const blocksToUpdate = otherArgBlocksInStack.filter(
+            block => block.getFieldValue('VAR') === event.oldValue
+          );
+
+          blocksToUpdate.forEach(block => {
+            block.setFieldValue(event.newValue, 'VAR');
+            block.model = eventBlock.model;
+          });
+        }
       }
-    } else if (event.type === GoogleBlockly.Events.FINISHED_LOADING) {
+    }
+    // Update the warning text for argument reporters whenever a block moves
+    // or when the workspace first finishes loading.
+    if (
+      [
+        GoogleBlockly.Events.FINISHED_LOADING,
+        GoogleBlockly.Events.BLOCK_CHANGE,
+        GoogleBlockly.Events.BLOCK_MOVE,
+      ].includes(event.type)
+    ) {
       const argReporterBlocks = GoogleBlockly.getMainWorkspace()
         .getAllBlocks()
         .filter(block => block.type === BLOCK_TYPES.argumentReporter);
@@ -718,28 +757,21 @@ GoogleBlockly.Extensions.register('argument_reporter_validator', function () {
   };
 });
 
+// If a block is disconnected or in the wrong "scope", we add a clickable warning
+// icon to the block with instructive text.
 function updateArgReporterWarningText(block) {
-  const topBlock = block.getRootBlock();
-  if (topBlock.isEnabled()) {
-    if (!Blockly.cdoUtils.isFunctionBlock(topBlock)) {
-      block.setWarningText(
-        'Warning: This block may be used only within a function definition.'
-      );
-    } else {
-      if (
-        !topBlock
-          .getVarModels()
-          .some(varModel => varModel.name === block.getFieldValue('VAR'))
-      ) {
-        const funcName = topBlock.getFieldValue('NAME');
-        const paramName = block.getFieldValue('VAR');
-        block.setWarningText(
-          `The "${funcName}" function does not have a parameter with label "${paramName}".`
-        );
-      } else {
-        block.setWarningText(null);
-      }
-    }
+  const rootBlock = block.getRootBlock();
+  const isConnected = block.outputConnection.isConnected();
+  const isInDefinition = Blockly.cdoUtils.isFunctionBlock(rootBlock);
+  const defHasModel = rootBlock?.argData_
+    ?.map(datum => datum.model)
+    .includes(block.getVarModels()[0]);
+  if (!isConnected || !isInDefinition) {
+    block.setWarningText(Blockly.Msg['PROCEDURES_IFRETURN_WARNING']);
+  } else if (!defHasModel) {
+    // This is intentionally untranslated for now while the feature is being tested internally.
+    let warningText = `Warning: ${block?.model?.name} is not a parameter in this function.`;
+    block.setWarningText(warningText);
   } else {
     block.setWarningText(null);
   }
@@ -747,12 +779,15 @@ function updateArgReporterWarningText(block) {
 
 /**
  * Removes any unused vars that were created as a result of editing.
- * @param {string} _finalName The final value of the field.
+ * @param {string} finalName The final value of the field.
  * @this {GoogleBlockly.FieldTextInput}
  */
-function finishEditing_(_finalName) {
+function finishEditing_(finalName) {
   const sourceArgBlock = this.getSourceBlock();
   const rootBlock = sourceArgBlock.getRootBlock();
+
+  const model = getModelForNewValue(sourceArgBlock, finalName);
+  updateDefinition(sourceArgBlock, model);
 
   if (
     sourceArgBlock === rootBlock ||
@@ -762,6 +797,7 @@ function finishEditing_(_finalName) {
   }
 
   deleteUnusedVariables(sourceArgBlock.workspace);
+  updateArgReporterWarningText(sourceArgBlock);
 }
 
 GoogleBlockly.Extensions.register(
@@ -777,34 +813,96 @@ GoogleBlockly.Extensions.register(
   'argument_report_get_var_models',
   function () {
     this.getVarModels = () => {
-      const varModels = [];
+      if (this.model) {
+        return [this.model];
+      }
+      if (this.isShadow()) {
+        return [
+          this.getRootBlock().argData_.find(
+            argDatum =>
+              argDatum.argId ===
+              this.outputConnection.targetConnection.getParentInput().name
+          ).model,
+        ];
+      }
+      // If we don't have a model yet, fall back on finding one based on the name.
       const foundModel = this.workspace.getVariable(this.getFieldValue('VAR'));
       if (foundModel) {
-        varModels.push(foundModel);
+        return [foundModel];
       }
-      return varModels;
+      console.error(`No model found for argument_reporter block`);
+      return [];
     };
   }
 );
 
-function deleteUnusedVariables(workspace) {
-  // Get all declared variables
-  const allVariables = workspace.getAllVariables();
+export function filterFunctionArgVariables(workspace, flyoutContents) {
+  if (!workspace) {
+    return flyoutContents;
+  }
+  const nonParamVarIds = getNonFunctionVariableIds(workspace);
+  return flyoutContents.filter(toolboxItem => {
+    // If we don't have any variables to show, just show the button to create one.
+    if (
+      !nonParamVarIds.length &&
+      toolboxItem.tagName.toLowerCase() !== 'button'
+    ) {
+      return false;
+    }
 
-  // Get all used variables
-  const usedVariables = Blockly.Variables.allUsedVarModels(workspace);
-
-  // Convert used variables to a set for easy lookup
-  const usedVariableIds = new Set(
-    usedVariables.map(variable => variable.getId())
-  );
-
-  // Find unused variables
-  const unusedVariables = allVariables.filter(
-    variable => !usedVariableIds.has(variable.getId())
-  );
-  unusedVariables.forEach(varToDelete => {
-    console.log(`Deleting unused variable ${varToDelete.name}`);
-    workspace.deleteVariableById(varToDelete.getId());
+    // For non-getter variables, select the first valid variable in the dropdown.
+    if (
+      toolboxItem.tagName.toLowerCase() === 'block' &&
+      toolboxItem.getAttribute('type') !== BLOCK_TYPES.variableGet
+    ) {
+      toolboxItem.firstElementChild?.setAttribute('id', nonParamVarIds[0]);
+    }
+    // Preserve all blocks except getters with invalid variables.
+    return (
+      toolboxItem.getAttribute('type') !== BLOCK_TYPES.variableGet ||
+      nonParamVarIds.includes(toolboxItem.firstElementChild.getAttribute('id'))
+    );
   });
+}
+
+// Finds or creates a variable model for a given name.
+function getModelForNewValue(block, varName) {
+  const workspace = block.workspace;
+  // Create new vars instead of renaming the old ones, so users can't
+  // accidentally rename/coalesce vars.
+  let model = workspace.getVariable(varName, '');
+  if (!model) {
+    model = workspace.createVariable(varName, '');
+  } else if (model.name !== varName) {
+    // Blockly is case-insensitive so we have to update the var instead of
+    // creating a new one.
+    workspace.renameVariableById(model.getId(), varName);
+  }
+  return model;
+}
+
+// If a block is part of a definition, update the argument metadata for the
+// definition block and mutate its callers.
+function updateDefinition(block, model) {
+  const rootBlock = block.getRootBlock();
+  // Update the definition block and its callers.
+  if (Blockly.cdoUtils.isFunctionBlock(rootBlock)) {
+    const defBlock = rootBlock;
+    const argData = defBlock.argData_;
+    const newVarExistsInDef = argData.find(
+      argDatum => argDatum.model === model
+    );
+    // Find the argument data that matches the old variable and update it.
+    if (!newVarExistsInDef) {
+      const argDatum = argData.find(argDatum =>
+        block.getVarModels().includes(argDatum.model)
+      );
+      if (argDatum) {
+        argDatum.model = model;
+        GoogleBlockly.Procedures.mutateCallers(defBlock);
+      }
+    }
+  }
+
+  block.model = model;
 }

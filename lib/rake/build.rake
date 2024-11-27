@@ -4,6 +4,7 @@ require 'cdo/rake_utils'
 require 'cdo/git_utils'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 require 'dynamic_config/dcdo'
+require 'cdo/active_job_backend'
 
 include TimedTaskWithLogging
 
@@ -87,7 +88,7 @@ namespace :build do
         end
 
         # Allow developers to skip the time-consuming step of seeding the dashboard DB.
-        # Additionally allow skipping when running in CircleCI, as it will be seeded during `rake install`
+        # Additionally allow skipping when running in CI, as it will be seeded during `rake install`
         if (rack_env?(:development) || ENV.fetch('CI', nil)) && CDO.skip_seed_all
           ChatClient.log "Not seeding <b>dashboard</b> due to CDO.skip_seed_all...\n" \
               "Until you manually run 'rake seed:all' or disable this flag, you won't\n" \
@@ -97,30 +98,6 @@ namespace :build do
           ChatClient.log 'Seeding <b>dashboard</b>...'
           ChatClient.log 'consider setting "skip_seed_all" in locals.yml if this is taking too long' if rack_env?(:development)
           RakeUtils.rake_stream_output 'seed:default', (rack_env?(:test) ? '--trace' : nil)
-        end
-
-        # Restart Active Job workers before restarting dashboard server so that:
-        # 1. the order of the restarts will be consistent between production and
-        # other environments, and
-        # 2. the server code which is queueing new jobs does not need to be
-        # backward compatible (although the job code itself still does).
-        #
-        # When making breaking changes to a job's api contract, the best
-        # practice is to update the job (in a backward compatible manner) in a
-        # first deploy, then update the code which calls it in a separate
-        # deploy, similarly to how we sequence deploys with database migrations
-        # or seeding changes.
-        #
-        # The sequencing described here is the best for mitigating any issues
-        # that may arise when that best practice is not followed.
-        ChatClient.log 'Restarting <b>dashboard</b> Active Job worker(s).'
-        # Issue a stop command to all workers. Will kill if not stopped within ~20 seconds.
-        RakeUtils.system 'bin/delayed_job', 'stop'
-        # Start new workers
-        if rack_env?(:production)
-          RakeUtils.system 'bin/delayed_job', '-n', '10', 'start'
-        elsif !rack_env?(:development)
-          RakeUtils.system 'bin/delayed_job', 'start'
         end
 
         # Commit dsls.en.yml changes on staging
@@ -137,6 +114,25 @@ namespace :build do
           # generating all curriculum PDFs.
           ChatClient.log "Generating missing pdfs..."
           RakeUtils.rake_stream_output 'curriculum_pdfs:generate_missing_pdfs'
+        end
+
+        # Restart Active Job workers before restarting dashboard server so that:
+        # 1. the order of the restarts will be consistent between production and
+        # other environments, and
+        # 2. the server code which is queueing new jobs does not need to be
+        # backward compatible (although the job code itself still does).
+        #
+        # When making breaking changes to a job's api contract, the best
+        # practice is to update the job (in a backward compatible manner) in a
+        # first deploy, then update the code which calls it in a separate
+        # deploy, similarly to how we sequence deploys with database migrations
+        # or seeding changes.
+        #
+        # The sequencing described here is the best for mitigating any issues
+        # that may arise when that best practice is not followed.
+        unless rack_env?(:development)
+          ChatClient.log 'Restarting <b>dashboard</b> Active Job worker(s).'
+          RakeUtils.system_stream_output 'bundle', 'exec', bin_dir('restart-active-job-workers')
         end
       end
 

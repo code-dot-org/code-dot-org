@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import {BodyTwoText, Heading6} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
 import {Resource} from './LessonMaterialTypes';
@@ -10,23 +10,35 @@ import styles from './lesson-materials.module.scss';
 
 // lesson plans, standards, and vocabulary are only needed for teacher resources
 type LessonResourcesProps = {
-  unitNumber: number;
+  unitNumber: number | null;
   lessonNumber: number;
   lessonPlanUrl?: string;
+  lessonPlanPdfUrl?: string;
   standardsUrl?: string;
   vocabularyUrl?: string;
   lessonName?: string;
   resources: Resource[];
+  hasLessonPlan?: boolean;
 };
+
+const renderNoResourcesRow = (
+  <div className={styles.rowContainer}>
+    <BodyTwoText className={styles.resourceLabel}>
+      <em>{i18n.noStudentResources()}</em>
+    </BodyTwoText>
+  </div>
+);
 
 const LessonResources: React.FC<LessonResourcesProps> = ({
   unitNumber,
   resources,
   lessonNumber,
   lessonPlanUrl,
+  lessonPlanPdfUrl,
   lessonName,
   standardsUrl,
   vocabularyUrl,
+  hasLessonPlan,
 }) => {
   // Note that lessonPlanUrl is not needed for student resources
   // and should be null for student resoruces section
@@ -73,15 +85,25 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
   const renderLessonPlanRow = () => {
     if (!lessonPlanUrl) return null;
 
+    if (!hasLessonPlan) {
+      return (
+        <div className={styles.rowContainer}>
+          <BodyTwoText className={styles.resourceLabel}>
+            <em>{i18n.noTeacherResources()}</em>
+          </BodyTwoText>
+        </div>
+      );
+    }
+
     return (
       <ResourceRow
         key={`lessonPlan-${lessonNumber}`}
         unitNumber={unitNumber}
-        lessonNumber={lessonNumber}
         resource={{
           key: 'lessonPlanKey',
           name: lessonName || '',
           url: lessonPlanUrl,
+          downloadUrl: lessonPlanPdfUrl,
           audience: 'Teacher',
           type: 'Lesson Plan',
         }}
@@ -94,12 +116,12 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
       <div className={styles.topRowForResourcesTable}>
         <Heading6 className={styles.headerText}>{sectionHeaderText}</Heading6>
       </div>
+      {!lessonPlanUrl && resources.length === 0 && renderNoResourcesRow}
       {renderLessonPlanRow()}
       {resources.map(resource => (
         <ResourceRow
           key={resource.key}
           unitNumber={unitNumber}
-          lessonNumber={lessonNumber}
           resource={resource}
         />
       ))}

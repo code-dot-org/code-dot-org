@@ -9,6 +9,7 @@ import {DialogControlContext} from './DialogControlContext';
 import GenericAlertDialog from './GenericAlertDialog';
 import GenericConfirmationDialog from './GenericConfirmationDialog';
 import GenericDialog from './GenericDialog';
+import GenericDropdown from './GenericDropdown';
 import GenericPrompt from './GenericPrompt';
 import SkipDialog from './SkipDialog';
 import StartOverDialog from './StartOverDialog';
@@ -32,6 +33,7 @@ const DialogViews = {
   [DialogType.GenericAlert]: GenericAlertDialog,
   [DialogType.GenericConfirmation]: GenericConfirmationDialog,
   [DialogType.GenericDialog]: GenericDialog,
+  [DialogType.GenericDropdown]: GenericDropdown,
   [DialogType.GenericPrompt]: GenericPrompt,
 };
 

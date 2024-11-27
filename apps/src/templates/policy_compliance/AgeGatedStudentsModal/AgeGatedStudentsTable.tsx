@@ -27,10 +27,10 @@ interface RowData {
 }
 
 interface Props {
-  studentData?: [];
+  students?: object[];
 }
 
-const AgeGatedStudentsTable: React.FC<Props> = ({studentData}) => {
+const AgeGatedStudentsTable: React.FC<Props> = ({students}) => {
   const getColumns = () => {
     const columns = [
       nameColumn(),
@@ -138,14 +138,15 @@ const AgeGatedStudentsTable: React.FC<Props> = ({studentData}) => {
   const columns = getColumns();
   return (
     <div>
-      {studentData && studentData.length !== 0 && (
+      {students && students.length !== 0 && (
         <Table.Provider
           columns={columns}
           style={tableLayoutStyles.table}
+          // eslint-disable-next-line react/forbid-component-props
           data-testid="uitest-age-gated-students-table"
         >
           <Table.Header />
-          <Table.Body rows={studentData} rowKey="id" />
+          <Table.Body rows={students} rowKey="id" />
         </Table.Provider>
       )}
     </div>
@@ -154,7 +155,7 @@ const AgeGatedStudentsTable: React.FC<Props> = ({studentData}) => {
 
 export default connect(
   (state: ReduxState) => ({
-    studentData: filterAgeGatedStudents(
+    students: filterAgeGatedStudents(
       convertStudentDataToArray(state.manageStudents.studentData)
     ),
   }),

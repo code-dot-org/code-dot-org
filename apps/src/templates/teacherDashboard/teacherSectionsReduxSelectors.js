@@ -3,6 +3,31 @@ import PropTypes from 'prop-types';
 
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
+/**
+ * @const {string[]} The only properties that can be updated by the user
+ * when creating or editing a section.
+ */
+export const USER_EDITABLE_SECTION_PROPS = [
+  'name',
+  'loginType',
+  'lessonExtras',
+  'pairingAllowed',
+  'ttsAutoplayEnabled',
+  'participantType',
+  'courseId',
+  'courseOfferingId',
+  'courseVersionId',
+  'unitId',
+  'grades',
+  'hidden',
+  'restrictSection',
+  'codeReviewExpiresAt',
+  'aiTutorEnabled',
+];
+
+/** @const {number} ID for a new section that has not been saved */
+const PENDING_NEW_SECTION_ID = -1;
+
 // Helpers and Selectors
 
 export function getRoot(state) {
@@ -41,7 +66,7 @@ export function sectionUnitName(state, sectionId) {
   return (getRoot(state).sections[sectionId] || {}).courseVersionName;
 }
 
-export function selectedSection(state) {
+export function selectedSectionSelector(state) {
   const selectedSectionId = getRoot(state).selectedSectionId;
   if (selectedSectionId) {
     return getRoot(state).sections[selectedSectionId];
@@ -123,6 +148,8 @@ export const sectionFromServerSection = serverSection => ({
   id: serverSection.id,
   name: serverSection.name,
   courseVersionName: serverSection.courseVersionName,
+  unitName: serverSection.unitName,
+  isAssignedStandaloneCourse: serverSection.isAssignedStandaloneCourse,
   createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
   loginTypeName: serverSection.login_type_name,
@@ -151,6 +178,10 @@ export const sectionFromServerSection = serverSection => ({
   syncEnabled: serverSection.sync_enabled,
   aiTutorEnabled: serverSection.ai_tutor_enabled,
   anyStudentHasProgress: serverSection.any_student_has_progress,
+  atRiskAgeGatedDate: serverSection.at_risk_age_gated_date
+    ? new Date(serverSection.at_risk_age_gated_date)
+    : null,
+  atRiskAgeGatedUsState: serverSection.at_risk_age_gated_us_state,
 });
 
 /**
@@ -191,6 +222,35 @@ export function serverSectionFromSection(section) {
     restrict_section: section.restrictSection,
     participant_type: section.participantType,
     ai_tutor_enabled: section.aiTutorEnabled,
+    at_risk_age_gated_date: section.atRiskAgeGatedDate?.toISOString(),
+    at_risk_age_gated_us_state: section.atRiskAgeGatedUsState,
+  };
+}
+
+export function newSectionData(participantType) {
+  return {
+    id: PENDING_NEW_SECTION_ID,
+    name: '',
+    loginType: undefined,
+    grades: [''],
+    providerManaged: false,
+    lessonExtras: true,
+    pairingAllowed: true,
+    ttsAutoplayEnabled: false,
+    sharingDisabled: false,
+    studentCount: 0,
+    participantType: participantType,
+    code: '',
+    courseId: null,
+    courseOfferingId: null,
+    courseVersionId: null,
+    courseDisplayName: null,
+    unitId: null,
+    unitName: null,
+    isAssignedStandaloneCourse: false,
+    hidden: false,
+    restrictSection: false,
+    aiTutorEnabled: false,
   };
 }
 
@@ -264,15 +324,17 @@ export function sectionsForDropdown(
   courseVersionId,
   unitId
 ) {
-  return sortedSectionsList(state.sections).map(section => ({
-    ...section,
-    isAssigned:
-      (unitId !== null && section.unitId === unitId) ||
-      (courseOfferingId !== null &&
-        section.courseOfferingId === courseOfferingId &&
-        courseVersionId !== null &&
-        section.courseVersionId === courseVersionId),
-  }));
+  return sortedSectionsList(state.sections)
+    .filter(section => !section.hidden)
+    .map(section => ({
+      ...section,
+      isAssigned:
+        (unitId !== null && section.unitId === unitId) ||
+        (courseOfferingId !== null &&
+          section.courseOfferingId === courseOfferingId &&
+          courseVersionId !== null &&
+          section.courseVersionId === courseVersionId),
+    }));
 }
 
 /**
@@ -330,3 +392,19 @@ export const studentShape = PropTypes.shape({
   secretPicturePath: PropTypes.string,
   secretWords: PropTypes.string,
 });
+
+/**
+ * @param {object} state - state.teacherSections in redux tree
+ * @return {array} A list of sections which have students at risk of being age
+ * gated by CAP.
+ */
+export function atRiskAgeGatedSections(state) {
+  state = getRoot(state);
+  // Convert from a Map to an Array.
+  const sections = Object.values(state.sections || {});
+  // Only non-archived sections can be at risk.
+  // Select only the sections which have students at risk.
+  return sections.filter(
+    section => !section.hidden && section.atRiskAgeGatedDate
+  );
+}

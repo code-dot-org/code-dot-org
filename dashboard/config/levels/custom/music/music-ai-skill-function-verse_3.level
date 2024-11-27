@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2024-09-30T17:16:42.000Z",
   "level_num": "custom",
@@ -100,15 +99,14 @@
             {
               "type": "procedures_defnoreturn",
               "id": "L}TeDjTW@]SD^9H0TZY]",
-              "x": 230,
+              "x": 210,
               "y": 30,
-              "movable": false,
               "editable": false,
               "extraState": {
                 "procedureId": "-2An+zu~4y~Tt_0CQn}(",
                 "initialDeleteConfig": true,
                 "initialEditConfig": false,
-                "initialMoveConfig": false
+                "initialMoveConfig": true
               },
               "fields": {
                 "NAME": "verse"
@@ -253,7 +251,8 @@
     "name_suffix": "_3",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-30T17:16:42.796+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-function-verse_2\\\"\"],\"cloned_from\":\"music-ai-skill-function-verse_2\"},{\"changed_at\":\"2024-09-30 21:02:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-09-30T17:16:42.796+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-function-verse_2\\\"\"],\"cloned_from\":\"music-ai-skill-function-verse_2\"},{\"changed_at\":\"2024-09-30 21:02:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 20:06:10 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 20:06:41 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -36,7 +36,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     refute_nil pardot_memory_record
     assert_equal({'db_Opt_In' => 'Yes'}, pardot_memory_record[:data_synced])
 
-    contact_record = ContactRollupsFinal.find_by_email(email_preference.email)
+    contact_record = ContactRollupsProcessed.find_by_email(email_preference.email)
     refute_nil contact_record
     assert_equal 1, contact_record.data['opt_in']
 
@@ -45,7 +45,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     refute_nil pardot_memory_record
     assert_equal({'db_Roles_0' => 'Parent'}, pardot_memory_record[:data_synced])
 
-    contact_record = ContactRollupsFinal.find_by_email(student_with_parent_email.parent_email)
+    contact_record = ContactRollupsProcessed.find_by_email(student_with_parent_email.parent_email)
     refute_nil contact_record
   end
 
@@ -83,7 +83,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     refute_nil pardot_memory_record
     assert_equal({'db_Opt_In' => 'No'}, pardot_memory_record[:data_synced])
 
-    contact_record = ContactRollupsFinal.find_by_email(email)
+    contact_record = ContactRollupsProcessed.find_by_email(email)
     refute_nil contact_record
     assert_equal 0, contact_record.data['opt_in']
   end

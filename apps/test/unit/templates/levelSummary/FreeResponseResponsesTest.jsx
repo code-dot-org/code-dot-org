@@ -1,7 +1,6 @@
-import {render, screen} from '@testing-library/react';
+import {render, screen, within} from '@testing-library/react';
 import React from 'react';
 
-import DCDO from '@cdo/apps/dcdo';
 import FreeResponseResponses from '@cdo/apps/templates/levelSummary/FreeResponseResponses';
 
 const RESPONSES = [
@@ -28,7 +27,6 @@ describe('FreeResponseResponses', () => {
   };
 
   it('renders responses', () => {
-    DCDO.set('cfu-pin-hide-enabled', true);
     renderDefault();
 
     expect(screen.getAllByText(/student response [1-5]/)).toHaveLength(
@@ -40,7 +38,6 @@ describe('FreeResponseResponses', () => {
   });
 
   it('renders responses with names', () => {
-    DCDO.set('cfu-pin-hide-enabled', true);
     renderDefault({showStudentNames: true});
 
     expect(screen.getAllByText(/student response [1-5]/)).toHaveLength(
@@ -52,16 +49,16 @@ describe('FreeResponseResponses', () => {
   });
 
   it('hides responses', () => {
-    DCDO.set('cfu-pin-hide-enabled', true);
     renderDefault();
 
-    screen.getByText('student response 1');
+    const studentResp1 = screen.getByText('student response 1');
+    const studentResp1Parent = studentResp1.parentNode;
 
-    const dropdownButton = screen.getAllByLabelText('Additional options')[0];
-
+    const dropdownButton =
+      within(studentResp1Parent).getByLabelText('Additional options');
     dropdownButton.click();
 
-    const hideResponseButton = screen.getByRole('button', {
+    const hideResponseButton = within(studentResp1Parent).getByRole('button', {
       name: 'Hide response',
     });
     hideResponseButton.click();
@@ -75,11 +72,11 @@ describe('FreeResponseResponses', () => {
   });
 
   it('pins and unpins responses', () => {
-    DCDO.set('cfu-pin-hide-enabled', true);
     renderDefault();
 
     let student1 = screen.getByText('student response 1');
     let student5 = screen.getByText('student response 5');
+    const studentResp5Parent = student5.parentNode;
 
     expect(student1.compareDocumentPosition(student5)).toBe(
       Node.DOCUMENT_POSITION_FOLLOWING
@@ -87,10 +84,11 @@ describe('FreeResponseResponses', () => {
     expect(screen.queryByText('Pinned responses')).toBeNull();
 
     // pin response
-    const dropdownButton = screen.getAllByLabelText('Additional options')[4];
+    const dropdownButton =
+      within(studentResp5Parent).getByLabelText('Additional options');
     dropdownButton.click();
 
-    const pinResponseButton = screen.getByRole('button', {
+    const pinResponseButton = within(studentResp5Parent).getByRole('button', {
       name: 'Pin response',
     });
     pinResponseButton.click();

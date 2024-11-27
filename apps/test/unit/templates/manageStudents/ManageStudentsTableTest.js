@@ -29,11 +29,12 @@ import manageStudents, {
   TransferStatus,
   TransferType,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import NoSectionCodeDialog from '@cdo/apps/templates/manageStudents/NoSectionCodeDialog';
 import ManageStudentsTable, {
   UnconnectedManageStudentsTable,
   sortRows,
-} from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
-import NoSectionCodeDialog from '@cdo/apps/templates/manageStudents/NoSectionCodeDialog';
+  ManageStudentsNotificationFull,
+} from '@cdo/apps/templates/manageStudents/Table';
 import teacherSections, {
   setSections,
   selectSection,
@@ -42,7 +43,6 @@ import experiments from '@cdo/apps/util/experiments';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {ManageStudentsNotificationFull} from '../../../../src/templates/manageStudents/ManageStudentsTable';
 import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 import {allowConsoleWarnings} from '../../../util/throwOnConsole';
 

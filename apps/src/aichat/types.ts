@@ -39,7 +39,7 @@ export interface ModelUpdate extends ChatEvent {
 export interface Notification extends ChatEvent {
   id: number;
   text: string;
-  notificationType: 'error' | 'success';
+  notificationType: 'permissionsError' | 'error' | 'success';
   includeInChatHistory?: boolean;
 }
 

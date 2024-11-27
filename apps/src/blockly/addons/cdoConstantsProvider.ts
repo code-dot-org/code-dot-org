@@ -1,7 +1,15 @@
-import GoogleBlockly, {Connection} from 'blockly/core';
-import {PuzzleTab} from 'blockly/core/renderers/common/constants';
+import * as GoogleBlockly from 'blockly/core';
 
 import {customConnectionBlockTypes} from './cdoConstants';
+
+// TODO: Remove after the resolution of https://github.com/google/blockly/issues/8621
+interface PuzzleTab {
+  type: number;
+  width: number;
+  height: number;
+  pathDown: string;
+  pathUp: string;
+}
 
 export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
   .ConstantProvider {
@@ -26,7 +34,7 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
    * @returns The shape object for the connection.
    * @override
    */
-  shapeFor(connection: Connection) {
+  shapeFor(connection: GoogleBlockly.Connection) {
     const blockTypeShapeMap = {
       [customConnectionBlockTypes.SPRITE]: this.TRI_INPUT_OUTPUT,
       [customConnectionBlockTypes.BEHAVIOR]: this.ROUND_INPUT_OUTPUT,

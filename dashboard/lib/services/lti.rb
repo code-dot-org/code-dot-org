@@ -13,14 +13,12 @@ module Services
       user = ::User.new
       user.provider = ::User::PROVIDER_MIGRATED
       user.user_type = user_type
-      if user_type == ::User::TYPE_TEACHER
+      if user.teacher?
         user.age = '21+'
-        user.name = get_claim_from_list(id_token, Policies::Lti::TEACHER_NAME_KEYS)
         user.lti_roster_sync_enabled = true
-      else
-        user.name = get_claim_from_list(id_token, Policies::Lti::STUDENT_NAME_KEYS)
-        user.family_name = get_claim(id_token, :family_name)
       end
+      assign_user_name(user, id_token)
+
       ao = AuthenticationOption.new(
         authentication_id: Services::Lti::AuthIdGenerator.new(id_token).call,
         credential_type: AuthenticationOption::LTI_V1,
@@ -32,7 +30,7 @@ module Services
     end
 
     def self.create_lti_user_identity(user)
-      auth_option = user.authentication_options.find(&:lti?)
+      auth_option = user.authentication_options.order(created_at: :desc).find_by(credential_type: AuthenticationOption::LTI_V1)
       issuer, client_id, subject = auth_option.authentication_id.split('|')
       lti_integration = Queries::Lti.get_lti_integration(issuer, client_id)
       LtiUserIdentity.create!(user: user, subject: subject, lti_integration: lti_integration)
@@ -60,10 +58,11 @@ module Services
       )
     end
 
-    def self.create_lti_deployment(integration_id, deployment_id)
+    def self.create_lti_deployment(integration_id, deployment_id, deployment_name)
       LtiDeployment.create(
         lti_integration_id: integration_id,
         deployment_id: deployment_id,
+        name: deployment_name,
       )
     end
 
@@ -101,6 +100,7 @@ module Services
 
       user = ::User.new
       user.provider = ::User::PROVIDER_MIGRATED
+      user.roster_synced = true
       user.name = get_claim_from_list(nrps_member_message, Policies::Lti::STUDENT_NAME_KEYS)
 
       if account_type == ::User::TYPE_TEACHER && email_address.present?
@@ -190,6 +190,13 @@ module Services
           nrps_member: nrps_member
         )
         user_was_new = user.new_record?
+
+        # Update name if different from the NRPS response
+        unless user_was_new
+          nrps_member_message = Policies::Lti.issuer_accepts_resource_link?(issuer) ? nrps_member[:message].first : nrps_member
+          assign_user_name(user, nrps_member_message)
+        end
+
         had_changes ||= (user_was_new || user.changed?)
         user.save!
         if user_was_new
@@ -324,6 +331,15 @@ module Services
         new_cta_type: new_cta_type,
         user_type: user_type,
       }
+    end
+
+    def self.assign_user_name(user, nrps_member)
+      if user.teacher?
+        user.name = get_claim_from_list(nrps_member, Policies::Lti::TEACHER_NAME_KEYS)
+      else
+        user.name = get_claim_from_list(nrps_member, Policies::Lti::STUDENT_NAME_KEYS)
+        user.family_name = get_claim(nrps_member, :family_name)
+      end
     end
   end
 end

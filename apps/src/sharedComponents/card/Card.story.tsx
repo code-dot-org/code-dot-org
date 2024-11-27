@@ -21,6 +21,7 @@ type Story = StoryObj<typeof Card>;
 
 export const UserSignupCard: Story = {
   render: () => (
+    // eslint-disable-next-line react/forbid-component-props
     <Card data-testid={'existing-account-card'}>
       <CardHeader title={i18n.ltiLinkAccountExistingAccountCardHeaderLabel()} />
       <CardContent className={cardStyles.cardContent}>

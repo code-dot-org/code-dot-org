@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Customize a Drum Beat\r\n\r\nClick the [AI Beat block](#clickable=play-drums-ai-block) to create custom beats. AI Bot will help you generate a new beat for your song. ",
+    "long_instructions": "#### Customize a Drum Beat\r\n\r\nClick the [AI Beat block](#clickable=play-drums-ai-block-workspace) to create custom beats. AI Bot will help you generate a new beat for your song. ",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -23,18 +23,19 @@
       },
       {
         "key": "music-ai-skill-sequence_a0f44420-3323-439a-be62-f0aa67dbcbe1",
-        "message": "Click on the black box in the [AI Beat Block](#clickable=play-drums-ai-block) to generate a new beat. ",
+        "message": "Click on the black box in the [AI Beat Block](#clickable=play-drums-ai-block-workspace) to generate a new beat. ",
         "next": false,
         "conditions": [
           {
             "name": "played_empty_patterns_ai",
             "value": 1
           }
-        ]
+        ],
+        "callout": "play-drums-ai-block-workspace"
       },
       {
         "key": "music-ai-skill-aibeats_a093489c-c9f7-471d-ab0c-49b734ba8463",
-        "message": "That's a great choice. Now use the [AI Beat Block](#clickable=play-drums-ai-block) to generate a new beat. ",
+        "message": "That's a great choice. Now use the [AI Beat Block](#clickable=play-drums-ai-block-workspace) to generate a new beat. ",
         "next": false,
         "conditions": [
           {
@@ -53,6 +54,7 @@
       }
     ],
     "level_data": {
+      "hideAiTemperature": true,
       "startSources": {
         "blocks": {
           "languageVersion": 0,
@@ -68,11 +70,14 @@
                 "block": {
                   "type": "play_sounds_together",
                   "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
                   "inputs": {
                     "code": {
                       "block": {
                         "type": "play_sound_at_current_location_simple2",
                         "id": "J_C.|(UT6D#2=oxs@t-n",
+                        "movable": false,
                         "fields": {
                           "sound": "chainsmokers_coldplay_something_just_like_this/vocals_do_do_do_low"
                         },
@@ -80,6 +85,7 @@
                           "block": {
                             "type": "play_sound_at_current_location_simple2",
                             "id": "play_sound_at_current_location_simple2",
+                            "movable": false,
                             "fields": {
                               "sound": "chainsmokers_coldplay_something_just_like_this/guitar_chime"
                             },
@@ -87,7 +93,7 @@
                               "block": {
                                 "type": "play_pattern_ai_at_current_location_simple2",
                                 "id": "play_pattern_ai_at_current_location_simple2",
-                                "enabled": true,
+                                "movable": false,
                                 "fields": {
                                   "pattern_ai": {
                                     "kit": "drums",
@@ -178,7 +184,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-09-30T17:16:43.205+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-aibeats_2\\\"\"],\"cloned_from\":\"music-ai-skill-aibeats_2\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-30T17:16:43.205+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-aibeats_2\\\"\"],\"cloned_from\":\"music-ai-skill-aibeats_2\"},{\"changed_at\":\"2024-10-01 22:33:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 22:35:05 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 22:47:29 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 22:49:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 23:04:19 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 23:19:12 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 23:37:34 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

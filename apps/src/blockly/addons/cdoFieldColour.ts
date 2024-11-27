@@ -1,11 +1,24 @@
-import {FieldColour, FieldColourConfig, FieldColourValidator} from 'blockly';
+import {FieldColour} from '@blockly/field-colour';
+import * as GoogleBlockly from 'blockly/core';
+
+import {COLOURS} from '../constants';
+
+interface FieldColourConfig extends GoogleBlockly.FieldConfig {
+  colourOptions?: string[];
+  colourTitles?: string[];
+  columns?: number;
+}
+
+interface FieldColourFromJsonConfig extends FieldColourConfig {
+  colour?: string;
+}
 
 export default class CdoFieldColour extends FieldColour {
   // The colours and columns properties are both private in the parent class, so we create
   // additional properties to track the config values.
   private coloursConfig: string[] | null = null;
   private columnsConfig: number = 0;
-  static COLOURS: string[] = FieldColour.COLOURS;
+  static COLOURS: string[] = COLOURS;
   static TITLES: string[] = [];
   static COLUMNS: number = 7;
   static K1_HEIGHT: number = 35;
@@ -26,8 +39,8 @@ export default class CdoFieldColour extends FieldColour {
    * for a list of properties this parameter supports.
    */
   constructor(
-    value?: string | typeof Blockly.Field.SKIP_SETUP,
-    validator?: FieldColourValidator,
+    value?: string | typeof GoogleBlockly.Field.SKIP_SETUP,
+    validator?: GoogleBlockly.FieldValidator,
     config?: FieldColourConfig,
     isK1?: boolean
   ) {
@@ -48,12 +61,11 @@ export default class CdoFieldColour extends FieldColour {
    * class to manually increase the size of the field.
    * @override
    * */
-  protected override showEditor_() {
+  protected showEditor_() {
     this.setColours(this.coloursConfig || CdoFieldColour.COLOURS);
     this.setColumns(this.columnsConfig || CdoFieldColour.COLUMNS);
     super.showEditor_();
     if (this.isK1) {
-      // @ts-expect-error: Accessing private member 'picker'
       Blockly.utils.dom.addClass(this.picker, 'k1ColourDropdown');
     }
   }
@@ -77,5 +89,10 @@ export default class CdoFieldColour extends FieldColour {
     }
 
     this.positionBorderRect_();
+  }
+
+  static fromJson(_options: GoogleBlockly.FieldConfig) {
+    const options = _options as FieldColourFromJsonConfig;
+    return new CdoFieldColour(options.colour, undefined, options);
   }
 }

@@ -1,0 +1,36 @@
+@import '@cdo/apps/componentLibrary/common/styles/mixins';
+@import '@cdo/apps/componentLibrary/typography/typography.module';
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  gap: 1.125rem;
+  margin: 1rem 0;
+
+  label.input {
+    width: 100%;
+    input,
+    > div {
+      width: 100%;
+    }
+  }
+
+  .alert {
+    margin: 1rem 0;
+  }
+
+  input,
+  select {
+    height: unset;
+  }
+}
+
+button.submit {
+  margin: 1rem 0;
+}
+
+h2.sectionHeader {
+  color: $light_primary_500;
+  margin-bottom: 1rem;
+}

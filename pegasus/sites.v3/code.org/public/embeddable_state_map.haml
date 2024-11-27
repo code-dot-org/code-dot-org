@@ -1,0 +1,24 @@
+---
+theme: responsive
+no_header: true
+no_footer: true
+embeddable: true
+english_only: true
+---
+
+:css
+  .desktop-feature {
+    display: none;
+  }
+
+- fill_color = request.params['fill_color']
+- stroke_color = request.params['stroke_color']
+- hover_color = request.params['hover_color']
+- click_color = request.params['click_color']
+
+%script{:src=>"/js/jquery.placeholder.js"}
+%link{:href=>"/css/promote.css", :rel=>"stylesheet"}
+%link{:href=>"/css/interactive-map.css", :rel=>"stylesheet"}
+
+#interactive-map.section.clear
+  = view :interactive_map, use_url: false, fill_color: fill_color, stroke_color: stroke_color, hover_color: hover_color, click_color: click_color

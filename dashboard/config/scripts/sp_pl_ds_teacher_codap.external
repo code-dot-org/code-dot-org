@@ -5,13 +5,53 @@ description 'description here'
 markdown <<MARKDOWN
 # Data Visualization 
 
-<img src="https://images.code.org/f92ddcafe98db054f57659f0731d2fa1-image-1724349957159.png" alt="Codap bar graph" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
-
-#### There are many ways to visualize data. If you have time to discuss with your class, you may wish to ask what they notice the differences are between the bar charts and the dot plots, and separately when they might use each. 
-
-#### For example, bar charts tend to show all the quantities in one bar, so they are more directly comparable, but dot plots are easier to count directly if your data consists of numbers that can be counted.
 
 
+#### There are many ways to visualize data. If you have time to discuss with your class, you may wish to ask what they notice the differences are between the bar charts and the dot plots and when they might use each. 
+
+---
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td style="text-align: center; padding-bottom: 10px">
+    <img src="https://images.code.org/c8e2e1a6ca32b6e987d8033a4b3e93f1-image-1731425512254.png" alt="Dot Plot Image" width="200">
+  </td>
+  <td style="text-align: center; padding-bottom: 10px;">
+    <img src="https://images.code.org/0c3faaf47fecefab31d4eb9ea5011a61-image-1731425456148.png" alt="Bar Chart Image" width="200">
+  </td>
+  <td style="text-align: center; padding-bottom: 10px">
+    <img src="https://images.code.org/b5dd1ce9a5e6b3d8122a87a21efc7ab0-image-1731425622735.png" alt="Scatter Plot Image" width="200">
+  </td>
+</tr>
+  <tr>
+    <td style="font-size: 18pt; color: #0093A4; text-align: center;"><b>Dot Plot</b></th>
+    <td style="font-size: 18pt; color: #0093A4; text-align: center;"><b>Bar Chart</b></th>
+    <td style="font-size: 18pt; color: #0093A4; text-align: center;"><b>Scatter Plot</b></th>
+  </tr>
+  <tr>
+    <td style="padding: 5px; font-size: 16pt; text-align: left; vertical-align: top;">
+      <ul>
+        <li style="font-size: 14pt">Shows individual data points, making it easy to count.</li>
+        <li style="font-size: 14pt">Great for comparing small datasets.</li>
+        <li style="font-size: 14pt">Useful for spotting outliers.</li>
+      </ul>
+    </td>
+    <td style="padding: 5px; font-size: 16pt; text-align: left; vertical-align: top;">
+      <ul>
+        <li style="font-size: 14pt">Ideal for comparing quantities across categories.</li>
+        <li style="font-size: 14pt">Clearly shows differences between groups.</li>
+        <li style="font-size: 14pt">Easy to read and interpret.</li>
+      </ul>
+    </td>
+    <td style="padding: 5px; font-size: 16pt; text-align: left; vertical-align: top;">
+      <ul>
+        <li style="font-size: 14pt">Displays relationships between two variables.</li>
+        <li style="font-size: 14pt">Helps identify correlations, patterns, or clusters in data.</li>
+        <li style="font-size: 14pt">Useful for spotting trends.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ##
 

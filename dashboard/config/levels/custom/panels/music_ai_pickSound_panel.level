@@ -17,6 +17,6 @@
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-30T18:36:13.184+00:00\",\"changed\":[\"cloned from \\\"music_lab_intro_panels_start2_3\\\"\"],\"cloned_from\":\"music_lab_intro_panels_start2_3\"},{\"changed_at\":\"2024-09-30 18:36:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-30T18:36:13.184+00:00\",\"changed\":[\"cloned from \\\"music_lab_intro_panels_start2_3\\\"\"],\"cloned_from\":\"music_lab_intro_panels_start2_3\"},{\"changed_at\":\"2024-09-30 18:36:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 21:14:38 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Panels>

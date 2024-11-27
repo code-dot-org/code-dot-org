@@ -5,6 +5,7 @@ import {useSelector} from 'react-redux';
 import {AichatLevelProperties, ModelDescription} from '@cdo/apps/aichat/types';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown/SimpleDropdown';
+import Slider, {SliderProps} from '@cdo/apps/componentLibrary/slider/Slider';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -78,7 +79,7 @@ const SetupCustomization: React.FunctionComponent = () => {
 
   const renderChooseAndCompareModels = () => {
     return (
-      <div className={styles.inputContainer}>
+      <div>
         <FieldLabel
           id="selected-model"
           label="Selected model"
@@ -127,12 +128,44 @@ const SetupCustomization: React.FunctionComponent = () => {
     );
   };
 
+  // The reason we're multiplying by 10 and dividing by 10 is because the slider
+  // component adds and subtracts by the step value, and with float math, those values
+  // can end up being slightly off after multiple increments/decrements by 0.1.
+  // This way, we can avoid any issues from funky float math.
+  const sliderProps: SliderProps = {
+    name: 'temperature-slider',
+    value: Math.round(aiCustomizations.temperature * 10),
+    minValue: Math.round(MIN_TEMPERATURE * 10),
+    maxValue: Math.round(MAX_TEMPERATURE * 10),
+    step: Math.round(SET_TEMPERATURE_STEP * 10),
+    hideValue: true,
+    disabled: isDisabled(temperature) || readOnlyWorkspace,
+    onChange: event => {
+      const value = parseInt(event.target.value) / 10;
+      dispatch(
+        setAiCustomizationProperty({
+          property: 'temperature',
+          value: value,
+        })
+      );
+    },
+    className: styles.temperatureSlider,
+    leftButtonProps: {
+      icon: {iconName: 'minus', title: 'Decrease'},
+      ['aria-label']: 'Decrease',
+    },
+    rightButtonProps: {
+      icon: {iconName: 'plus', title: 'Increase'},
+      ['aria-label']: 'Increase',
+    },
+  };
+
   return (
     <div className={styles.verticalFlexContainer}>
       <div className={styles.customizationContainer}>
         {isVisible(selectedModelId) && renderChooseAndCompareModels()}
         {isVisible(temperature) && (
-          <div className={styles.inputContainer}>
+          <>
             <div className={styles.horizontalFlexContainer}>
               <FieldLabel
                 id="temperature"
@@ -141,26 +174,11 @@ const SetupCustomization: React.FunctionComponent = () => {
               />
               {aiCustomizations.temperature}
             </div>
-            <input
-              type="range"
-              min={MIN_TEMPERATURE}
-              max={MAX_TEMPERATURE}
-              step={SET_TEMPERATURE_STEP}
-              value={aiCustomizations.temperature}
-              disabled={isDisabled(temperature) || readOnlyWorkspace}
-              onChange={event =>
-                dispatch(
-                  setAiCustomizationProperty({
-                    property: 'temperature',
-                    value: parseFloat(event.target.value),
-                  })
-                )
-              }
-            />
-          </div>
+            <Slider {...sliderProps} />
+          </>
         )}
         {isVisible(systemPrompt) && (
-          <div className={styles.inputContainer}>
+          <>
             <FieldLabel
               id="system-prompt"
               label="System Prompt"
@@ -180,7 +198,7 @@ const SetupCustomization: React.FunctionComponent = () => {
                 )
               }
             />
-          </div>
+          </>
         )}
       </div>
       <div className={styles.footerButtonContainer}>

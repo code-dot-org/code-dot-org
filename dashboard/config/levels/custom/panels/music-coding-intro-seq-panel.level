@@ -1,0 +1,33 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-11-21T19:20:51.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "**<i class=\"fa-regular fa-list-check\"></i> Sequence Matters**\n\nThe computer runs your code <strong>in order</strong> from top to bottom.",
+        "imageUrl": "https://images.code.org/e24fc5edf2d4a510be49be4cf923beb9-select-checkbox-interface-with-glowing-cursor-2024-08-13-16-05-21-utc (1) (1).gif",
+        "key": "music-intro-coding-seq-panel-3ad5bdff-9161-4fad-af85-4095174d23d7",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "**<i class=\"fa-solid fa-list-check\"></i>** You can make music with code in the sequence you choose. ",
+        "imageUrl": "https://images.code.org/cabe3ba5e668729a398daa9f5f72191f-sequence (1).gif",
+        "key": "music-intro-coding-seq-panel-bc024962-11c0-46a8-a581-1b95ac378e08",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "**<i class=\"fa-solid fa-shuffle\"></i>** You can also change the order of the blocks whenever you want.",
+        "imageUrl": "",
+        "key": "music-coding-intro-seq-panel-776e2ede-79fe-423e-b643-eb359d56b3bf"
+      }
+    ],
+    "offer_browser_tts": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-11-21T19:20:51.884+00:00\",\"changed\":[\"cloned from \\\"music-intro-coding-seq-panel\\\"\"],\"cloned_from\":\"music-intro-coding-seq-panel\"},{\"changed_at\":\"2024-11-23 17:15:08 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

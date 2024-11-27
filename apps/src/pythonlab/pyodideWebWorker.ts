@@ -45,15 +45,21 @@ let pyodideReadyPromise: Promise<void> | null = null;
 // Pyodide defines the globals object as any.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let pyodideGlobals: any | null = null;
+let loadStartTime: number | undefined;
 async function initializePyodide() {
   const promiseWasNull = pyodideReadyPromise === null;
   if (promiseWasNull) {
+    loadStartTime = Date.now();
     pyodideReadyPromise = loadPyodideAndPackages();
     postMessage({type: 'loading_pyodide'});
   }
   await pyodideReadyPromise;
   if (promiseWasNull) {
-    postMessage({type: 'loaded_pyodide'});
+    const loadTime = loadStartTime ? Date.now() - loadStartTime : undefined;
+    postMessage({
+      type: 'loaded_pyodide',
+      message: loadTime,
+    });
   }
   pyodideGlobals = pyodide.globals.toJs();
 }
@@ -64,11 +70,22 @@ initializePyodide();
 onmessage = async event => {
   // make sure loading is done
   await initializePyodide();
-  const {id, python, source} = event.data;
+  const {id, python, source, validationFile} = event.data;
   let results = undefined;
+  let sourceToWrite = source;
+  // Add the validation file to the source if it exists.
+  if (validationFile) {
+    sourceToWrite = {
+      ...source,
+      files: {
+        ...source.files,
+        [validationFile.id]: validationFile,
+      },
+    };
+  }
   try {
-    writeSource(source, DEFAULT_FOLDER_ID, '', pyodide);
-    await importPackagesFromFiles(source, pyodide);
+    writeSource(sourceToWrite, DEFAULT_FOLDER_ID, '', pyodide);
+    await importPackagesFromFiles(sourceToWrite, pyodide);
     results = await pyodide.runPythonAsync(python, {
       filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
     });
@@ -76,15 +93,19 @@ onmessage = async event => {
     postMessage({type: 'error', message: (error as Error).message, id});
   }
   // Clean up environment.
-  await runInternalCode(getCleanupCode(source), id);
+  await runInternalCode(getCleanupCode(sourceToWrite), id);
   // We run setup code at the end to prepare the environment for the next run.
   await runInternalCode(SETUP_CODE, id);
+  // We don't want to send back the validation file as part of the sources,
+  // so we skip adding it to updatedSource.
+  const filenamesToSkipSaving = validationFile ? [validationFile.name] : [];
 
   const updatedSource = getUpdatedSourceAndDeleteFiles(
     source,
     id,
     pyodide,
-    postMessage
+    postMessage,
+    filenamesToSkipSaving
   );
   postMessage({type: 'updated_source', message: updatedSource, id});
   resetGlobals(pyodide, pyodideGlobals);

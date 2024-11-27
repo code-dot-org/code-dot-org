@@ -1,0 +1,26 @@
+name 'SP-PL-DS-pie_charts'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Creating a Pie Chart 
+
+
+## Step 1: Group the data, then count the category 
+
+<img src="https://images.code.org/88c07b6702dbe4b08ff96d4db122f17c-image-1728579200787.png" alt="code for grouping" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
+
+#### ***groupby()*** and **size()*** *work together to prepare the data for the pie chart*
+
+<img src="https://images.code.org/aa0907776a9747c89de7626ca0b28740-image-1728578617328.png" alt="design process graph of the cycle" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+
+## Step 2: Create a pie chart
+
+<img src="https://images.code.org/8f166a45181442c64474a302102d0908-image-1728579503857.png" alt="code for pie chart" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+
+## Let's practice!
+MARKDOWN

@@ -1,0 +1,127 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-10-22T23:17:16.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "instructions_important": "false",
+    "long_instructions": "#### Play Together Again\r\n\r\n- Add two [sounds](#clickable=play-sound-block) in the *first* [play together](#clickable=id-left:play_sounds_together) block.\r\n- Add two [sounds](#clickable=play-sound-block) in the *second* [play together](#clickable=id-left:play_sounds_together_block_2) block.\r\n",
+    "hide_share_and_remix": "true",
+    "validations": [
+      {
+        "key": "music-ai-skill-playtogether_sequence_7e5b311d-9f61-4fdf-8431-5b05e71bcc8e",
+        "message": "Those sounds are great together!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_different_sounds_together_multiple_times",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-playtogether_sequence_524d0be3-14c2-4736-bdbf-d709eda13ff1",
+        "message": "Play different sounds in each [play together](#clickable=id-up-left:play_sounds_together_block_2) block.\n",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_different_sounds_together_multiple_times",
+            "value": 1
+          }
+        ],
+        "callout": "id-up-left:play_sounds_together_block_2"
+      },
+      {
+        "key": "music-ai-skill-playtogether_sequence_3_8db01d98-40e3-4fb3-bcee-0f59b17262bb",
+        "message": "Play different sounds in each [play together](#clickable=id-up-left:play_sounds_together) block.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 1
+          }
+        ],
+        "callout": "id-up-left:play_sounds_together"
+      },
+      {
+        "key": "music-ai-skill-playtogether_36540a11-c67f-47da-bb3a-e2bb6181e9d1",
+        "message": "Nothing has played yet. Add some [sound](#clickable=play-sound-block) blocks into each [play together](#clickable=id-left:play_sounds_together) block. ",
+        "next": false,
+        "conditions": [
+
+        ],
+        "callout": "play-sound-block---id-up-inside:play_sounds_together"
+      }
+    ],
+    "level_data": {
+      "validationTimeout": 6,
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together_no_next",
+                      "id": "play_sounds_together_block_2",
+                      "deletable": false,
+                      "movable": false
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "library": "launch2024",
+      "packId": "shakira_whenever_wherever",
+      "sounds": {
+        "shakira_whenever_wherever": [
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_backups_1",
+          "vocals_chorus_backups_2",
+          "drum_beat_chorus",
+          "guitar_chorus_1",
+          "guitar_chorus_2",
+          "acoustic_chorus_1",
+          "acoustic_chorus_2",
+          "organ_chorus_1",
+          "organ_chorus_2"
+        ]
+      }
+    },
+    "name_suffix": "_final",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:16.784+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-playtogether_sequence_1\\\"\"],\"cloned_from\":\"music-ai-skill-playtogether_sequence_1\"},{\"changed_at\":\"2024-10-22 23:42:40 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-25 20:53:44 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-28 21:00:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-31 21:04:32 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-11-10 22:26:57 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-13 17:25:43 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-25 23:12:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

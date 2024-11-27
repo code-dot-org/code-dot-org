@@ -116,6 +116,7 @@ module ScriptConstants
       # with code_s matching the script name (in quotes) in this list.
 
       nil,
+      MUSIC_JAM_2024 = 'music-jam-2024'.freeze, # 2024 hour of code
       DANCE_AI_2023 = 'dance-ai-2023'.freeze, # 2023 hour of code
       POEM_ART_2021_NAME = 'poem-art-2021'.freeze, # 2021 hour of code
       HELLO_WORLD_FOOD_2021_NAME = 'hello-world-food-2021'.freeze, # 2021 hour of code
@@ -133,6 +134,7 @@ module ScriptConstants
       MINECRAFT_NAME = 'mc'.freeze,
       MINECRAFT_DESIGNER_NAME = 'minecraft'.freeze,
       MINECRAFT_AI_NAME = 'generation-ai'.freeze,
+      MINECRAFT_SHOW_NAME = 'show-must-go-on'.freeze,
       APPLAB_INTRO = 'applab-intro'.freeze,
       HOC_2013_NAME = 'Hour of Code'.freeze, # 2013 hour of code
       FROZEN_NAME = 'frozen'.freeze,
@@ -230,6 +232,7 @@ module ScriptConstants
       MINECRAFT_HERO_NAME,
       MINECRAFT_AQUATIC_NAME,
       MINECRAFT_AI_NAME,
+      MINECRAFT_SHOW_NAME,
     ],
   }.freeze
 
@@ -245,6 +248,7 @@ module ScriptConstants
 
   TRANSLATABLE_PD_PL_UNITS = [
     K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
+    K5_ONLINEPD_2023 = 'k5-onlinepd-2023'.freeze,
     K5_ONLINEPD = 'K5-OnlinePD'.freeze,
     KODEA_PD_2021 = 'kodea-pd-2021'.freeze,
     SELF_PACED_PL_K5_2024_1 = 'self-paced-pl-k5-2024-1'.freeze,
@@ -275,6 +279,7 @@ module ScriptConstants
     VIGENERE = 'vigenere'.freeze,
     ALLTHETHINGS = 'allthethings'.freeze,
     COMPUTER_VISION = 'computer-vision'.freeze,
+    FOUNDATIONS_GEN_AI = 'foundations-gen-ai-2024'.freeze,
     CSD2_2024 = 'csd2-2024'.freeze,
     K5_UNPLUGGED = 'k5-unplugged'.freeze
   ]

@@ -13,7 +13,6 @@ import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 import color from '@cdo/apps/util/color';
-import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import RailsAuthenticityToken from '../lib/util/RailsAuthenticityToken';
@@ -57,6 +56,7 @@ class ManageLinkedAccounts extends React.Component {
     isCleverStudent: PropTypes.bool.isRequired,
     personalAccountLinkingEnabled: PropTypes.bool.isRequired,
     usStateCode: PropTypes.string,
+    age: PropTypes.number,
     lmsName: PropTypes.string,
   };
 
@@ -71,6 +71,16 @@ class ManageLinkedAccounts extends React.Component {
     return (
       authOption.credentialType === SingleSignOnProviders.clever &&
       this.props.isCleverStudent
+    );
+  };
+
+  cannotDisconnectLti = authOption => {
+    return (
+      authOption.credentialType === SingleSignOnProviders.lti_v1 &&
+      _.every(this.props.authenticationOptions, [
+        'credentialType',
+        SingleSignOnProviders.lti_v1,
+      ])
     );
   };
 
@@ -106,6 +116,10 @@ class ManageLinkedAccounts extends React.Component {
       this.cannotDisconnectClever(authOption)
     ) {
       return DISCONNECT_DISABLED_STATUS.ROSTER_SECTION;
+    }
+
+    if (this.cannotDisconnectLti(authOption)) {
+      return DISCONNECT_DISABLED_STATUS.NO_LOGIN_OPTIONS;
     }
 
     // Make sure user has another way to log in if authOption is disconnected
@@ -171,8 +185,7 @@ class ManageLinkedAccounts extends React.Component {
     Object.values(SingleSignOnProviders).forEach(provider => {
       if (
         provider === SingleSignOnProviders.lti_v1 &&
-        (!optionsByProvider[provider] ||
-          !experiments.isEnabled(experiments.LTI_ACCOUNT_UNLINKING))
+        !optionsByProvider[provider]
       ) {
         return;
       }
@@ -230,9 +243,9 @@ class ManageLinkedAccounts extends React.Component {
         {lockedOptions.length > 0 && (
           <>
             <p style={styles.message}>
-              {this.props.usStateCode
+              {this.props.usStateCode && this.props.age
                 ? i18n.manageLinkedAccounts_parentalPermissionRequired()
-                : i18n.manageLinkedAccounts_stateRequired()}
+                : i18n.manageLinkedAccounts_ageAndStateRequired()}
             </p>
             <div style={styles.lockContainer}>
               <table style={{...styles.table, ...styles.lockedTable}}>
@@ -281,6 +294,7 @@ export default connect(state => ({
   personalAccountLinkingEnabled:
     state.manageLinkedAccounts.personalAccountLinkingEnabled,
   usStateCode: state.currentUser.usStateCode,
+  age: state.currentUser.age,
   lmsName: state.manageLinkedAccounts.lmsName,
 }))(ManageLinkedAccounts);
 

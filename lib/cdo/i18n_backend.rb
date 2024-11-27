@@ -1,6 +1,7 @@
 require 'i18n'
 require 'active_support/core_ext/numeric/bytes'
 require 'cdo/honeybadger'
+require 'cdo/i18n'
 require 'cdo/i18n_string_url_tracker'
 
 module Cdo
@@ -185,7 +186,7 @@ module Cdo
     class LazyLoadableBackend < ::I18n::Backend::LazyLoadable
       include Plugins
 
-      LOCALES_MAPPING = YAML.load_file(CDO.dir('dashboard/config/locales.yml')).each_with_object({}) do |(k, v), locales|
+      LOCALES_MAPPING = ::Cdo::I18n::LOCALE_CONFIGS.each_with_object({}) do |(k, v), locales|
         locales[k.to_sym] = v.to_sym if v.is_a?(String)
       end.freeze
 

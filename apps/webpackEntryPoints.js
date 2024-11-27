@@ -63,6 +63,7 @@ const CODE_STUDIO_ENTRIES = {
   'devise/registrations/_finish_sign_up': './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
   'devise/registrations/edit': './src/sites/studio/pages/devise/registrations/edit.js',
   'devise/registrations/account_type': './src/sites/studio/pages/devise/registrations/account_type.js',
+  'followers/student_user_new': './src/sites/studio/pages/followers/student_user_new.js',
   'essential': './src/sites/studio/pages/essential.js',
   'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
   'layouts/_parent_email_banner': './src/sites/studio/pages/layouts/_parent_email_banner.js',
@@ -197,6 +198,7 @@ const PEGASUS_ENTRIES = {
   'code.org/public/transformersone': './src/sites/code.org/pages/public/transformersone.js',
   'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
   'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
+  'code.org/public/yourschoolteststaging': './src/sites/code.org/pages/public/yourschoolteststaging.js',
   'code.org/public/yourschool/thankyou': './src/sites/code.org/pages/public/yourschool/thankyou.js',
   'code.org/views/admins_email_signup_form': './src/sites/code.org/pages/views/admins_email_signup_form.js',
   'code.org/views/share_privacy': './src/sites/code.org/pages/views/share_privacy.js',
@@ -223,6 +225,7 @@ const PEGASUS_ENTRIES = {
   'code.org/public/teach': './src/sites/code.org/pages/public/teach.js',
   'code.org/public/students': './src/sites/code.org/pages/public/students.js',
   'code.org/public/cms-demo': './src/sites/code.org/pages/public/cms-demo.js',
+  'code.org/public/embeddable_census_map': './src/sites/code.org/pages/public/embeddable_census_map.js',
 
   // hourofcode.com
   'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
@@ -273,6 +276,9 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
 const SHARED_ENTRIES = {
   cookieBanner: './src/cookieBanner/cookieBanner.js',
   userHeaderEventLogger: './src/userHeaderEventLogger/userHeaderEventLogger.js',
+  statsigWebAnalytics: './src/metrics/statsigWebAnalytics.js',
+  'global_edition/region_switch_confirm':
+    './src/globalEdition/regionSwitchConfirm.js',
 };
 
 // prettier-ignore

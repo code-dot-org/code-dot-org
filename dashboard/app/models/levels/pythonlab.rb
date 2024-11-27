@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 class Pythonlab < Level
   serialized_attrs %w(
@@ -32,6 +33,7 @@ class Pythonlab < Level
     submittable
     starter_assets
     predict_settings
+    validation_file
   )
 
   validate :has_correct_multiple_choice_answer?
@@ -81,8 +83,7 @@ class Pythonlab < Level
   # Return the validation condition for this level. If the level has a validation file, the condition
   # is that all tests passed. If there is no validation file, there are no conditions.
   def get_validations
-    has_validation = start_sources && start_sources["files"]&.any? {|(_, file)| file["type"] == 'validation'}
-    if has_validation
+    if validation_file
       [{
         conditions: [
           {

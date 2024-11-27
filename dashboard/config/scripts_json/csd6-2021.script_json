@@ -15,6 +15,7 @@
           "buttonText": null
         }
       ],
+      "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -35,7 +36,11 @@
       "supported_locales": [
         "es-MX",
         "it-IT",
-        "sk-SK"
+        "sk-SK",
+        "uk-UA"
+      ],
+      "topic_tags": [
+        "maker"
       ],
       "tts": true,
       "version_year": "2021",
@@ -43,7 +48,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2024-03-05 20:19:01 UTC",
+    "serialized_at": "2024-11-19 01:16:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

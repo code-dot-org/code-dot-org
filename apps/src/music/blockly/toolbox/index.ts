@@ -1,4 +1,4 @@
-import {ToolboxInfo, ToolboxItemInfo} from 'blockly/core/utils/toolbox';
+import * as GoogleBlockly from 'blockly/core';
 
 import {getTypedKeys, ValueOf} from '@cdo/apps/types/utils';
 
@@ -53,7 +53,7 @@ export function getToolbox(
   const allowList = levelToolbox?.blocks;
   const type = levelToolbox?.type;
 
-  const toolbox: ToolboxInfo = {
+  const toolbox: GoogleBlockly.utils.toolbox.ToolboxInfo = {
     kind: type === 'flyout' ? 'flyoutToolbox' : 'categoryToolbox',
     contents: [],
   };
@@ -77,7 +77,7 @@ export function getToolbox(
       continue;
     }
 
-    const categoryContents: ToolboxItemInfo[] = [];
+    const categoryContents: GoogleBlockly.utils.toolbox.ToolboxItemInfo[] = [];
 
     for (const blockName of categoryBlocksMap[category] || []) {
       // Skip if we aren't allowing this block.
