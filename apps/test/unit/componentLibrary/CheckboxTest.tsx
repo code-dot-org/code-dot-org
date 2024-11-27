@@ -11,6 +11,8 @@ describe('Design System - Checkbox', () => {
         name="test-checkbox"
         value="test-checkbox"
         label="Checkbox label"
+        checked={false}
+        onChange={() => null}
       />
     );
 
@@ -24,7 +26,7 @@ describe('Design System - Checkbox', () => {
     const spyOnChange = jest.fn();
 
     let checked = false;
-    const onChange = () => {
+    const onChange = (): void => {
       checked = !checked;
       spyOnChange(checked);
     };
@@ -40,7 +42,7 @@ describe('Design System - Checkbox', () => {
       />
     );
 
-    let checkbox = screen.getByDisplayValue('test-checkbox');
+    let checkbox = screen.getByDisplayValue<HTMLInputElement>('test-checkbox');
     expect(checkbox).toBeDefined();
 
     expect(checkbox.checked).toBe(false);
@@ -96,7 +98,7 @@ describe('Design System - Checkbox', () => {
 
     let checked = false;
     let indeterminate = true;
-    const onChange = () => {
+    const onChange = (): void => {
       if (indeterminate) {
         // Default browser behavior for clicking an indeterminate checkbox.
         indeterminate = false;
@@ -119,7 +121,7 @@ describe('Design System - Checkbox', () => {
       />
     );
 
-    let checkbox = screen.getByDisplayValue('test-checkbox');
+    let checkbox = screen.getByDisplayValue<HTMLInputElement>('test-checkbox');
     expect(checkbox).toBeDefined();
 
     expect(checkbox.checked).toBe(false);
@@ -176,7 +178,7 @@ describe('Design System - Checkbox', () => {
     const spyOnChange = jest.fn();
 
     let checked = false;
-    const onChange = () => {
+    const onChange = (): void => {
       checked = !checked;
       spyOnChange(checked);
     };
@@ -193,7 +195,7 @@ describe('Design System - Checkbox', () => {
       />
     );
 
-    let checkbox = screen.getByDisplayValue('test-checkbox');
+    let checkbox = screen.getByDisplayValue<HTMLInputElement>('test-checkbox');
     expect(checkbox).toBeDefined();
 
     expect(checkbox.checked).toBe(false);
