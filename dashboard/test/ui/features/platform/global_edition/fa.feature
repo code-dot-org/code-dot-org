@@ -6,7 +6,7 @@ Feature: Global Edition - Region Select
 
   Scenario: A teacher should see the correct header links on Pegasus
     Given I create a teacher named "Tessa Teacher" and go home
-    Then I am on "http://code.org/global/fa/about"
+    Then I am on "http://code.org/lang/fa-ir/global/fa/about"
     And I dismiss the language selector
     And I wait to see "#headerlinks"
     And I see "#header-teach"
@@ -22,7 +22,7 @@ Feature: Global Edition - Region Select
 
   Scenario: A student should see the correct header links on Pegasus
     Given I create a student named "Sally Student" and go home
-    Then I am on "http://code.org/global/fa/about"
+    Then I am on "http://code.org/lang/fa-ir/global/fa/about"
     And I dismiss the language selector
     And I wait to see "#headerlinks"
     And I see "#header-teach"
@@ -38,7 +38,7 @@ Feature: Global Edition - Region Select
 
   Scenario: A teacher should see the correct header links on Dashboard
     Given I create a teacher named "Tessa Teacher" and go home
-    Then I am on "http://studio.code.org/global/fa/home"
+    Then I am on "http://studio.code.org/global/fa/home?lang=fa-IR"
     And I dismiss the language selector
     And I wait to see ".headerlinks"
     And I see "#header-student-home"
@@ -50,7 +50,7 @@ Feature: Global Edition - Region Select
 
   Scenario: A student should see the correct header links on Dashboard
     Given I create a student named "Sally Student" and go home
-    Then I am on "http://studio.code.org/global/fa/home"
+    Then I am on "http://studio.code.org/global/fa/home?lang=fa-IR"
     And I dismiss the language selector
     And I wait to see ".headerlinks"
     And I see "#header-student-home"

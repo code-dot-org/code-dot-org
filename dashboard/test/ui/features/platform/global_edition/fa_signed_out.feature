@@ -5,7 +5,7 @@ Feature: Global Edition - Region Select
     And I use a cookie to mock the DCDO key "global_edition_enabled" as "true"
 
   Scenario: Signed out user should see the correct header links on Pegasus
-    Given I am on "http://code.org/global/fa"
+    Given I am on "http://code.org/lang/fa-ir/global/fa"
     And I dismiss the language selector
     And I wait to see "#headerlinks"
     And I see "#header-teach"
@@ -20,7 +20,7 @@ Feature: Global Edition - Region Select
     And element "#header-hoc" has "fa-IR" text from key "nav.header.hour_of_code"
 
   Scenario: Signed out user should see the correct header links on Dashboard
-    Given I am on "http://studio.code.org/global/fa/users/sign_in"
+    Given I am on "http://studio.code.org/global/fa/users/sign_in?lang=fa-IR"
     And I dismiss the language selector
     And I wait to see ".headerlinks"
     And I see "#header-teach"
