@@ -15,7 +15,7 @@ import React, {useState, useEffect} from 'react';
 import {Heading5, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import GlobalRegionWrapper from '@cdo/apps/templates/GlobalRegionWrapper';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import {
   getSimilarRecommendations,
   getStretchRecommendations,
@@ -350,7 +350,7 @@ CurriculumCatalog.propTypes = {
  * ```
  */
 const RegionalCurriculumCatalog = props => (
-  <GlobalRegionWrapper
+  <GlobalEditionWrapper
     component={CurriculumCatalog}
     componentId="CurriculumCatalog"
     props={props}

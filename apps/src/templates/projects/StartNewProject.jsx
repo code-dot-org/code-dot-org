@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import GlobalRegionWrapper from '@cdo/apps/templates/GlobalRegionWrapper';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import i18n from '@cdo/locale';
 
 import Button from '../../legacySharedComponents/Button';
@@ -175,7 +175,7 @@ const styles = {
  * ```
  */
 const RegionalStartNewProject = props => (
-  <GlobalRegionWrapper
+  <GlobalEditionWrapper
     component={StartNewProject}
     componentId="StartNewProject"
     props={props}

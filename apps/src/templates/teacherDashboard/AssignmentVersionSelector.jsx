@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import GlobalRegionWrapper from '@cdo/apps/templates/GlobalRegionWrapper';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import i18n from '@cdo/locale';
 
 import PopUpMenu, {STANDARD_PADDING} from '../../sharedComponents/PopUpMenu';
@@ -184,7 +184,7 @@ const styles = {
  * ```
  */
 const RegionalAssignmentVersionSelector = props => (
-  <GlobalRegionWrapper
+  <GlobalEditionWrapper
     component={AssignmentVersionSelector}
     componentId="AssignmentVersionSelector"
     props={props}

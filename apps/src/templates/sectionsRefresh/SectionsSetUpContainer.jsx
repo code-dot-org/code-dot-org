@@ -18,7 +18,7 @@ import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';
 import Notification, {
   NotificationType,
 } from '@cdo/apps/sharedComponents/Notification';
-import GlobalRegionWrapper from '@cdo/apps/templates/GlobalRegionWrapper';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
 import {navigateToHref} from '@cdo/apps/utils';
 import {CapLinks} from '@cdo/generated-scripts/sharedConstants';
@@ -437,7 +437,7 @@ export default function SectionsSetUpContainer({
       />
 
       {/* Allow the curriculum quick assign region to be configured per-region */}
-      <GlobalRegionWrapper
+      <GlobalEditionWrapper
         component={CurriculumQuickAssign}
         componentId="CurriculumQuickAssign"
         props={{
