@@ -11,6 +11,57 @@ interface GlobalRegionWrapperProps {
   props: object;
 }
 
+/**
+ * Provides a wrapper around an existing component that allows it to be
+ * configured via a Global Edition configuration.
+ *
+ * The global edition configurations are in the config directory at the
+ * root of the repository. For instance: config/global_editions/fa.yml
+ *
+ * Essentially you can take an existing component like <Foo> and then wrap it
+ * as such:
+ *
+ * <GlobalRegionWrapper
+ *   component={Foo}
+ *   componentId="Foo"
+ *   props={{
+ *     bar: "baz",
+ *   }}
+ * />
+ *
+ * Where the props go into the props property of the wrapper. The `componentId`
+ * is the name of the component which is then used to refer to it in the
+ * regional configuration.
+ *
+ * For instance, in the config/global_editions/india.yml (let's say) we could
+ * have:
+ *
+ * ```
+ *   pages:
+ *     - path: /
+ *       components:
+ *         Foo: false
+ * ```
+ *
+ * Which will render an "EmptyComponent" and essentially hide the component when
+ * viewing any page in the "india" region.
+ *
+ * We can, instead, just override properties:
+ *
+ * ```
+ *   pages:
+ *     - path: /
+ *       components:
+ *         Foo:
+ *           bar: chaz
+ * ```
+ *
+ * This means, in this region (as opposed to any other), the component will be
+ * rendered and visible, but with the 'bar' property overriden.
+ *
+ * See the 'pages' section of an existing configuration for more information
+ * on the format of the configuration and its use here.
+ */
 export const GlobalRegionWrapper: React.FunctionComponent<
   GlobalRegionWrapperProps
 > = ({component, componentId, props = {}}) => {

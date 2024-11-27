@@ -74,7 +74,6 @@ describe('OwnedSections', () => {
 
   it('renders an LtiFeedbackBanner', () => {
     const wrapper = shallow(<OwnedSections {...defaultProps} />);
-    console.log(wrapper.debug());
     const globalWrapper = wrapper.find('GlobalRegionWrapper', {
       componentId: 'LtiFeedbackBanner',
     });
@@ -98,7 +97,6 @@ describe('OwnedSections - Farsi Global Edition', () => {
 
   it('does not render an LtiFeedbackBanner', () => {
     const wrapper = shallow(<OwnedSections {...defaultProps} />);
-    console.log(wrapper.debug());
     const globalWrapper = wrapper.find('GlobalRegionWrapper', {
       componentId: 'LtiFeedbackBanner',
     });
