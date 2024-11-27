@@ -1,7 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -153,31 +152,21 @@ function realizeWithStore(store, props = {}) {
 }
 
 describe('TeacherHomepage', () => {
-  const region = 'fa';
+  const region = 'root';
   let store;
   const realize = props => realizeWithStore(store, props);
   let globalRegionsStub;
-  let server;
-  const successResponse = () => [
-    200,
-    {'Content-Type': 'application/json'},
-    JSON.stringify({}),
-  ];
 
   beforeEach(() => {
-    globalRegionsStub = sinon
-      .stub(globalRegions, 'currentGlobalRegion')
-      .returns(region);
+    globalRegionsStub = jest.spyOn(globalRegions, 'currentGlobalRegion');
+    globalRegionsStub.mockImplementation(() => region);
     stubRedux();
     store = getStore();
-    server = sinon.fakeServer.create();
-    server.respondWith('POST', '/dashboardapi/sections', successResponse());
   });
 
   afterEach(() => {
-    server.restore();
     restoreRedux();
-    globalRegionsStub?.restore();
+    globalRegionsStub?.mockClear();
     globalRegionsStub = null;
   });
 
@@ -194,14 +183,17 @@ describe('TeacherHomepage', () => {
   });
 
   it('logs an Amplitude event only on first render', () => {
-    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent');
     sessionStorage.setItem('logged_teacher_session', 'false');
 
     realize();
 
     expect(sessionStorage.getItem('logged_teacher_session')).toBe('true');
-    expect(analyticsSpy.withArgs(EVENTS.TEACHER_LOGIN_EVENT).callCount).toBe(1);
-    expect(analyticsSpy.firstCall.args).toEqual([
+    const calls = analyticsSpy.mock.calls.filter(
+      call => call[0] === EVENTS.TEACHER_LOGIN_EVENT
+    );
+    expect(calls).toHaveLength(1);
+    expect(calls[0]).toEqual([
       EVENTS.TEACHER_LOGIN_EVENT,
       {'user id': 42},
       'Both',
@@ -212,9 +204,12 @@ describe('TeacherHomepage', () => {
 
     realize();
 
-    expect(analyticsSpy.withArgs(EVENTS.TEACHER_LOGIN_EVENT).callCount).toBe(1);
+    const nextCalls = analyticsSpy.mock.calls.filter(
+      call => call[0] === EVENTS.TEACHER_LOGIN_EVENT
+    );
+    expect(nextCalls).toHaveLength(1);
 
-    analyticsSpy.restore();
+    analyticsSpy.mockClear();
   });
 
   it('renders a NpsSurveyBlock if showNpsSurvey is true', () => {
@@ -377,16 +372,15 @@ describe('TeacherHomepage - Farsi Global Edition', () => {
   let globalRegionsStub;
 
   beforeEach(() => {
-    globalRegionsStub = sinon
-      .stub(globalRegions, 'currentGlobalRegion')
-      .returns(region);
+    globalRegionsStub = jest.spyOn(globalRegions, 'currentGlobalRegion');
+    globalRegionsStub.mockImplementation(() => region);
     stubRedux();
     store = getStore();
   });
 
   afterEach(() => {
     restoreRedux();
-    globalRegionsStub?.restore();
+    globalRegionsStub?.mockClear();
     globalRegionsStub = null;
   });
 
