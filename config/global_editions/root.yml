@@ -340,7 +340,6 @@ header:
 
 # The navigation region found at the bottom of each page
 footer:
-  # Remove these links to support pages
   links:
     studio:
       - title: privacy
