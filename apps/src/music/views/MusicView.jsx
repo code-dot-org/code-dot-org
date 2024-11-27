@@ -465,6 +465,14 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
 
+    // Skip this pair of events to avoid extra compiles when dragging a block out of the toolbox.
+    if (
+      e.type === Blockly.Events.TOOLBOX_ITEM_SELECT ||
+      e.type === Blockly.Events.CREATE
+    ) {
+      return;
+    }
+
     if (e.type === Blockly.Events.CHANGE) {
       if (e.element === 'field' && e.name === TRIGGER_FIELD) {
         this.props.setSelectedTriggerId(
@@ -550,7 +558,7 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
 
-    this.sequencer.clear();
+    this.sequencer.clear(this.getPlaybackEvents().length);
     this.musicBlocklyWorkspace.executeTrigger(id, triggerStartPosition);
     const playbackEvents = this.sequencer.getPlaybackEvents();
     this.props.addPlaybackEvents({
@@ -560,6 +568,7 @@ class UnconnectedMusicView extends React.Component {
     this.props.addOrderedFunctions({
       orderedFunctions: this.sequencer.getOrderedFunctions?.() || [],
     });
+
     this.player.playEvents(playbackEvents);
 
     this.playingTriggers.push({

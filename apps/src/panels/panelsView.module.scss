@@ -108,6 +108,16 @@ $text-horizontal-padding: 2.6cqw;
         }
       }
 
+      ol, ul {
+        font-size: 1.6cqw;
+        margin: 0 0 1.1cqw 2.2cqw;
+
+        li {
+          margin-bottom: 1.1cqw;
+          line-height: 1.4em;
+        }
+      }
+
       .invisiblePlaceholder {
         opacity: 0;
       }

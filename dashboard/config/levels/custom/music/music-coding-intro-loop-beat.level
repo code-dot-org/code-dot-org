@@ -1,0 +1,129 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-11-24T17:08:59.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "level_data": {
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "repeat_simple2",
+                        "id": "repeat_simple2",
+                        "movable": false,
+                        "fields": {
+                          "times": 1
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "play_sound_at_current_location_simple2",
+                              "movable": false,
+                              "editable": false,
+                              "fields": {
+                                "sound": "shakira_whenever_wherever/percussion_beat"
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sounds_sequential",
+                            "id": "9$Q(,nxS)LEJk4:7`_2|",
+                            "deletable": false,
+                            "movable": false,
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "0f$iEE@29+lV}F,9InaR",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "fields": {
+                                    "sound": "shakira_whenever_wherever/vocals_verse_1"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "r~(4uz*m`}c|GvDC3~kV",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "fields": {
+                                        "sound": "shakira_whenever_wherever/vocals_verse_2"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "7W,^:+!0KVy^KB^r2MEV",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "fields": {
+                                            "sound": "shakira_whenever_wherever/vocals_verse_3"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "library": "launch2024",
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "packId": "shakira_whenever_wherever",
+      "sounds": {
+        "shakira_whenever_wherever": [
+          "percussion_beat",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3"
+        ]
+      }
+    },
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "long_instructions": "###Loop the beat\r\n1. Change the number of times the drums repeat to keep the beat going.",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-11-24 17:50:22 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:51:56 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:53:27 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:55:30 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 18:02:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

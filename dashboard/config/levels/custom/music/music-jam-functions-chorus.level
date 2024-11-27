@@ -273,7 +273,7 @@
       },
       {
         "key": "music-ai-functions-doubleChorus_2_d72de94c-fc7b-4fa8-a9bf-4c67ec49841c",
-        "message": "Are both function blocks added? Make sure to add the `chorus` block under [when run](#clickable=when-run-block). ",
+        "message": "Are both function blocks added? Make sure to add the [chorus](#clickable=flyout-second-block) block under [when run](#clickable=when-run-block). ",
         "next": false,
         "conditions": [
           {
@@ -284,7 +284,7 @@
       },
       {
         "key": "music-ai-functions-doubleChorus_2_211ec330-8549-468a-9359-6f58deb212a2",
-        "message": "Almost there! Make sure to add the `intro` block under [when run](#clickable=when-run-block).",
+        "message": "Almost there! Make sure to add the [intro](#clickable=flyout-first-block) block under [when run](#clickable=when-run-block).",
         "next": false,
         "conditions": [
           {
@@ -295,7 +295,7 @@
       },
       {
         "key": "music-ai-functions-chorus_e1d6c731-90ed-4e26-a2cd-040bfc5c373f",
-        "message": "Connect the 'intro' and 'chorus' blocks under [when run](#clickable=when-run-block) to play the sounds in each function.",
+        "message": "Connect the [intro](#clickable=flyout-first-block) and [chorus](#clickable=flyout-second-block) blocks under [when run](#clickable=when-run-block) to play the sounds in each function.",
         "next": false,
         "conditions": [
 

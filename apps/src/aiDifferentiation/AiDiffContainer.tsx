@@ -155,6 +155,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       lessonId: lessonId,
       unitDisplayName: unitDisplayName,
       sessionId: sessionId,
+      isPreset: isPreset,
     });
     HttpClient.post(`${aiDiffChatMessageEndpoint}`, body, true, {
       'Content-Type': 'application/json',

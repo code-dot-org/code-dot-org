@@ -29,4 +29,6 @@ export interface CurrentUserState {
   childAccountComplianceState: string | null;
   inSection: boolean | null;
   usStateCode: string | null;
+  uuid: string;
+  isLti: boolean;
 }

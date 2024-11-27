@@ -12,6 +12,7 @@ import {
   ExtendedWorkspace,
   ExtendedWorkspaceSvg,
 } from './types';
+import {updateBlockEnabled, disableOrphanBlocks} from './utils';
 
 // A custom version of Blockly's Events.disableOrphans. This makes a couple
 // changes to the original function.
@@ -39,6 +40,7 @@ export function disableOrphans(event: GoogleBlockly.Events.Abstract) {
   if (
     event.type !== Blockly.Events.BLOCK_CHANGE &&
     event.type !== Blockly.Events.BLOCK_MOVE &&
+    event.type !== Blockly.Events.BLOCK_DRAG &&
     event.type !== Blockly.Events.BLOCK_CREATE
   ) {
     return;
@@ -73,37 +75,7 @@ export function disableOrphans(event: GoogleBlockly.Events.Abstract) {
     block.type === BLOCK_TYPES.procedureDefinition &&
     eventWorkspace
   ) {
-    // When a function definition is moved, we should not suddenly enable
-    // its call blocks.
-    eventWorkspace.getTopBlocks().forEach(block => {
-      if (block.type === BLOCK_TYPES.procedureCall) {
-        block.setEnabled(false);
-      }
-      updateBlockEnabled(block);
-    });
-  }
-}
-
-function updateBlockEnabled(block: GoogleBlockly.Block) {
-  // Changing blocks as part of this event shouldn't be undoable.
-  const initialUndoFlag = Blockly.Events.getRecordUndo();
-  try {
-    Blockly.Events.setRecordUndo(false);
-    const parent = block.getParent();
-    if (parent && parent.isEnabled()) {
-      const children = block.getDescendants(false);
-      for (let i = 0, child; (child = children[i]); i++) {
-        child.setEnabled(true);
-      }
-    } else if (block.outputConnection || block.previousConnection) {
-      let currentBlock: GoogleBlockly.Block | null = block;
-      do {
-        currentBlock.setEnabled(false);
-        currentBlock = currentBlock.getNextBlock();
-      } while (currentBlock);
-    }
-  } finally {
-    Blockly.Events.setRecordUndo(initialUndoFlag);
+    disableOrphanBlocks(eventWorkspace);
   }
 }
 
