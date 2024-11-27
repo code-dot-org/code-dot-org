@@ -1,4 +1,4 @@
-@import 'color';
+@import '@cdo/apps/componentLibrary/common/styles/colors.css';
 @import "@cdo/apps/componentLibrary/typography/typography.module";
 @import "@cdo/apps/componentLibrary/common/styles/mixins";
 
@@ -19,50 +19,50 @@ $alert-span-vertical-top-spacing: 2px;
     }
 
     a {
-      color: $light_black;
+      color: var(--text-neutral-primary);
     }
   }
 }
 
 // Types (colors)
 .alert-primary {
-  background-color: $light_secondary_100;
+  background-color: var(--background-brand-purple-light);
 }
 
 .alert-success {
-  background-color: $light_affirmative_100;
+  background-color: var(--background-success-light);
 
   .alertContentContainer i {
-    color: $light_affirmative_500;
+    color: var(--text-success-primary);
   }
 }
 
 .alert-danger {
-  background-color: $light_negative_100;
+  background-color: var(--sentiment-error-10);
 
   .alertContentContainer i {
-    color: $light_negative_500;
+    color: var(--text-error-primary);
   }
 }
 
 .alert-warning {
-  background-color: $light_caution_100;
+  background-color: var(--background-warning-light);
 
   .alertContentContainer i {
-    color: $light_caution_500;
+    color: var(--text-warning-primary);
   }
 }
 
 .alert-info {
-  background-color: $light_info_100;
+  background-color: var(--background-info-light);
 
   .alertContentContainer i {
-    color: $light_info_500;
+    color: var(--text-info-primary);
   }
 }
 
 .alert-gray {
-  background-color: $light_gray_50;
+  background-color: var(--background-neutral-secondary);
 }
 
 // Sizes
