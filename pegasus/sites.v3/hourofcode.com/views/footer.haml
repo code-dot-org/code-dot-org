@@ -15,7 +15,6 @@
           - link[:href] = resolve_url(link[:url])
         - elsif link[:domain].nil?
           - link[:href] = link[:url]
-          - link[:rel] = "noopener noreferrer nofollow"
         - else
           - link[:href] = link[:url]
         %li
