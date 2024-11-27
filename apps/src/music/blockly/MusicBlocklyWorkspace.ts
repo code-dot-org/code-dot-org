@@ -587,9 +587,10 @@ export default class MusicBlocklyWorkspace {
           const viewWidth = metricsManager.getViewMetrics().width;
 
           const contentRight = contentLeft + contentWidth;
-          const overlapAmount = contentRight - viewWidth + 20; // 20 is the expected margin.
+          const expectedMargin = 20; // Add space between right-most block and flyout
+          const overlapAmount = contentRight - viewWidth + expectedMargin;
 
-          if (contentRight >= viewWidth) {
+          if (contentRight + expectedMargin >= viewWidth) {
             workspace
               .getTopBlocks()
               .forEach(block => block.moveBy(-overlapAmount, 0));
