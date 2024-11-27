@@ -1,4 +1,4 @@
-@import '@cdo/apps/componentLibrary/common/styles/colors.css';
+@import '@cdo/apps/componentLibrary/common/styles/primitiveColors.css';
 @import "@cdo/apps/componentLibrary/typography/typography.module";
 @import "@cdo/apps/componentLibrary/common/styles/mixins";
 
@@ -19,21 +19,21 @@ $alert-span-vertical-top-spacing: 2px;
     }
 
     a {
-      color: var(--text-neutral-primary);
+      color: var(--neutral-base-black);
     }
   }
 }
 
 // Types (colors)
 .alert-primary {
-  background-color: var(--background-brand-purple-light);
+  background-color: var(--brand-purple-10);
 }
 
 .alert-success {
-  background-color: var(--background-success-light);
+  background-color: var(--sentiment-success-10);
 
   .alertContentContainer i {
-    color: var(--text-success-primary);
+    color: var(--sentiment-success-50);
   }
 }
 
@@ -41,28 +41,28 @@ $alert-span-vertical-top-spacing: 2px;
   background-color: var(--sentiment-error-10);
 
   .alertContentContainer i {
-    color: var(--text-error-primary);
+    color: var(--sentiment-error-50);
   }
 }
 
 .alert-warning {
-  background-color: var(--background-warning-light);
+  background-color: var(--sentiment-warning-10);
 
   .alertContentContainer i {
-    color: var(--text-warning-primary);
+    color: var(--sentiment-warning-50);
   }
 }
 
 .alert-info {
-  background-color: var(--background-info-light);
+  background-color: var(--sentiment-information-10);
 
   .alertContentContainer i {
-    color: var(--text-info-primary);
+    color: var(--sentiment-information-50);
   }
 }
 
 .alert-gray {
-  background-color: var(--background-neutral-secondary);
+  background-color: var(--neutral-gray-5);
 }
 
 // Sizes
