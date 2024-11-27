@@ -568,6 +568,7 @@ class UnconnectedMusicView extends React.Component {
     this.props.addOrderedFunctions({
       orderedFunctions: this.sequencer.getOrderedFunctions?.() || [],
     });
+
     this.player.playEvents(playbackEvents);
 
     this.playingTriggers.push({

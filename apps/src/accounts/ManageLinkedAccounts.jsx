@@ -74,6 +74,16 @@ class ManageLinkedAccounts extends React.Component {
     );
   };
 
+  cannotDisconnectLti = authOption => {
+    return (
+      authOption.credentialType === SingleSignOnProviders.lti_v1 &&
+      _.every(this.props.authenticationOptions, [
+        'credentialType',
+        SingleSignOnProviders.lti_v1,
+      ])
+    );
+  };
+
   // Given an array of authentication options, returns a boolean indicating whether or not the user can log in
   userHasLoginOption = authOptions => {
     // If it's the user's last authentication option or all of the user's authentication options are email addresses,
@@ -106,6 +116,10 @@ class ManageLinkedAccounts extends React.Component {
       this.cannotDisconnectClever(authOption)
     ) {
       return DISCONNECT_DISABLED_STATUS.ROSTER_SECTION;
+    }
+
+    if (this.cannotDisconnectLti(authOption)) {
+      return DISCONNECT_DISABLED_STATUS.NO_LOGIN_OPTIONS;
     }
 
     // Make sure user has another way to log in if authOption is disconnected
