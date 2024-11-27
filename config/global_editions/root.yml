@@ -411,10 +411,6 @@ footer:
         url: /cookies
         target: _blank
 
-# A subset of locales can be specified with the following structure
-#locale_options:
-#  - ['English', 'en-US']
-
 # These override specially wrapped components in particular pages.
 #
 # When we navigate to such a page that matches /global/:region<your mask>
