@@ -220,7 +220,11 @@ const FinishTeacherAccount: React.FunctionComponent<{
               </BodyThreeText>
             )}
           </div>
-          <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
+          <SchoolDataInputs
+            {...schoolInfo}
+            includeHeaders={false}
+            markFieldsAsRequired={isInSchoolRequiredExperiment}
+          />
           {showGDPR && (
             <div>
               <BodyThreeText
