@@ -2,7 +2,6 @@ import {fireEvent, render, screen, within} from '@testing-library/react';
 import React from 'react';
 import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
-import {useLoaderData} from 'react-router-dom';
 import {Store} from 'redux';
 
 import {
@@ -18,6 +17,7 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import LessonMaterialsContainer from '@cdo/apps/templates/teacherNavigation/lessonMaterials/LessonMaterialsContainer';
 import {RESOURCE_ICONS} from '@cdo/apps/templates/teacherNavigation/lessonMaterials/ResourceIconType';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import * as utils from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
@@ -28,6 +28,29 @@ const SECTIONS = [
     course_offering_id: 123,
     courseVersionId: 2023,
     unitName: 'csd1-2024',
+    unit_id: 100,
+    unitSelection: {
+      unitName: 'csd1-2024',
+    },
+  },
+  {
+    id: 2,
+    name: 'Period 2',
+    course_offering_id: 123,
+    courseVersionId: 2023,
+    unitName: 'csd1-2024',
+    unit_id: 300,
+    unitSelection: {
+      unitName: 'csd1-2024',
+    },
+  },
+  {
+    id: 3,
+    name: 'Period 2',
+    course_offering_id: 123,
+    courseVersionId: 2023,
+    unitName: 'csd1-2024',
+    unit_id: 400,
     unitSelection: {
       unitName: 'csd1-2024',
     },
@@ -55,26 +78,10 @@ const SECTIONS = [
     course_display_name: 'CSD1-2020',
   },
 ];
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  useLoaderData: jest.fn(),
-}));
-
-const renderDefault = async (showNoCurriculumAssigned = false) => {
-  const store = getStore();
-  await act(async () =>
-    render(
-      <Provider store={store}>
-        <LessonMaterialsContainer
-          showNoCurriculumAssigned={showNoCurriculumAssigned}
-        />
-      </Provider>
-    )
-  );
-};
 
 describe('LessonMaterialsContainer', () => {
   let store: Store;
+  let fetchSpy: jest.SpyInstance;
 
   const mockLessonData = {
     title: 'Unit 3',
@@ -191,8 +198,20 @@ describe('LessonMaterialsContainer', () => {
       },
     ],
   };
+
+  const renderDefault = async (showNoCurriculumAssigned = false) => {
+    await act(async () =>
+      render(
+        <Provider store={store}>
+          <LessonMaterialsContainer
+            showNoCurriculumAssigned={showNoCurriculumAssigned}
+          />
+        </Provider>
+      )
+    );
+  };
+
   beforeEach(() => {
-    (useLoaderData as jest.Mock).mockReturnValue(mockLessonData);
     stubRedux();
 
     registerReducers({
@@ -205,14 +224,20 @@ describe('LessonMaterialsContainer', () => {
     store.dispatch(setUnitName('csd1-2024'));
     store.dispatch(setSections(SECTIONS));
     store.dispatch(selectSection(1));
+
+    fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
   });
 
   afterEach(() => {
+    jest.resetAllMocks();
     restoreRedux();
-    jest.clearAllMocks();
   });
 
   it('renders the component and dropdown with lessons', async () => {
+    fetchSpy.mockResolvedValue({
+      value: mockLessonData,
+      response: new Response(),
+    });
     await renderDefault();
 
     // check for unit resources dropdown
@@ -231,6 +256,11 @@ describe('LessonMaterialsContainer', () => {
   });
 
   it('renders the student and teacher resources for the first lesson on render', async () => {
+    fetchSpy.mockResolvedValue({
+      value: mockLessonData,
+      response: new Response(),
+    });
+
     await renderDefault();
 
     // Teacher resources, including lesson plan, unit vocab and unit standards
@@ -258,9 +288,12 @@ describe('LessonMaterialsContainer', () => {
       hasNumberedUnits: false,
     };
 
-    (useLoaderData as jest.Mock).mockReturnValue(
-      lessonDataWithoutNumberedUnits
-    );
+    store.dispatch(selectSection(2));
+
+    fetchSpy.mockResolvedValue({
+      value: lessonDataWithoutNumberedUnits,
+      response: new Response(),
+    });
 
     await renderDefault();
 
@@ -271,6 +304,10 @@ describe('LessonMaterialsContainer', () => {
   });
 
   it('shows no student resources if no student resources are provided', async () => {
+    fetchSpy.mockResolvedValue({
+      value: mockLessonData,
+      response: new Response(),
+    });
     await renderDefault();
 
     // check for unit resources dropdown
@@ -296,6 +333,10 @@ describe('LessonMaterialsContainer', () => {
   });
 
   it('notifies users if no curriculum is assigned.', async () => {
+    fetchSpy.mockResolvedValue({
+      value: mockLessonData,
+      response: new Response(),
+    });
     await act(async () => {
       renderDefault(true);
     });
@@ -307,8 +348,6 @@ describe('LessonMaterialsContainer', () => {
   });
 
   it('tells users to select a unit when no unit assigned', async () => {
-    const mockNoUnitData = null;
-    (useLoaderData as jest.Mock).mockReturnValue(mockNoUnitData);
     store.dispatch(selectSection(10));
     store.dispatch(setUnitName(null));
 
@@ -323,8 +362,6 @@ describe('LessonMaterialsContainer', () => {
   });
 
   it('notifies users that the assigned curriculum is pre-2020', async () => {
-    const legacyData = {...mockLessonData, versionYear: 2020};
-    (useLoaderData as jest.Mock).mockReturnValue(legacyData);
     store.dispatch(setUnitName('csd1-2020'));
     store.dispatch(selectSection(11));
 
@@ -338,6 +375,10 @@ describe('LessonMaterialsContainer', () => {
   });
 
   it('renders the resources for the new lesson when lesson is changed', async () => {
+    fetchSpy.mockResolvedValue({
+      value: mockLessonData,
+      response: new Response(),
+    });
     await renderDefault();
 
     const selectedLessonInput = screen.getAllByRole('combobox')[0];
@@ -359,6 +400,10 @@ describe('LessonMaterialsContainer', () => {
   });
 
   it('renders will render message when there is no lesson plan', async () => {
+    fetchSpy.mockResolvedValue({
+      value: mockLessonData,
+      response: new Response(),
+    });
     await renderDefault();
 
     const selectedLessonInput = screen.getAllByRole('combobox')[0];
@@ -369,7 +414,11 @@ describe('LessonMaterialsContainer', () => {
   });
 
   it('renders empty state when there are no lesson plans in the whole unit', async () => {
-    (useLoaderData as jest.Mock).mockReturnValue(mockLessonDataNoLessonPlans);
+    fetchSpy.mockResolvedValue({
+      value: mockLessonDataNoLessonPlans,
+      response: new Response(),
+    });
+    store.dispatch(selectSection(3));
     await renderDefault();
 
     screen.getByText('There are no lesson materials for this unit.');

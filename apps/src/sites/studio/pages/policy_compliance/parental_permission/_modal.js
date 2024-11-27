@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const defaultEventParams = (parentalPermissionRequest = {}) => ({
         consentStatus: parentalPermissionRequest?.consent_status,
-        usState: currentUser?.usStateCode,
+        us_state: currentUser?.usStateCode,
       });
 
       const reportEvent = (eventName, payload = {}) => {
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       reportEvent(EVENTS.CAP_PARENT_EMAIL_MODAL_SHOWN, {
         consentStatus: currentUser?.childAccountComplianceState,
-        usState: currentUser?.usStateCode,
+        us_state: currentUser?.usStateCode,
       });
 
       return (

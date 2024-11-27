@@ -1,0 +1,84 @@
+name 'self-paced-equity-U1L1-welcome'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<div style="position: relative; text-align: center; color: white; margin-top: 20px;">
+    <img src="https://images.code.org/a035808b2a48ce2f5885fe702272fbf2-image-1732312298159.51.29 PM.png" alt="Banner Image" style="width: 100%; border-radius: 10px;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; width: 70%; max-width: 800px; border-radius: 10px;">
+        <p style="color: white; line-height: 1; margin-left: 10px; margin-right: 10px; font-size: 40px"><b>Code.org's Equity in Computer Science Module</b></p>
+    </div>
+</div>
+<br>
+
+# Welcome!
+
+___
+
+<div style="display: flex; justify-content: space-between; gap: 10px; margin-top: 20px; margin-bottom: 20px; ">
+    <img src="https://images.code.org/98012c4db3f6cd448bacb14a1dfbad1b-image-1732227622374.ORG-117.jpeg" alt="A student sits on the ground with a laptop on their lap. They look up at the camera." style="width: 23%; height: auto; border-radius: 10px;">
+    <img src="https://images.code.org/d58547efd396bd965b67d16d16a025c5-image-1732227528989.jpeg" alt="Two students sit side-by-side with devices on their laps. They have happy expressions on their faces." style="width: 23%; height: auto; border-radius: 10px;">
+    <img src="https://images.code.org/5b4e65375ea9de36e6f75020eb05f404-image-1732227572610.jpeg" alt="A teacher crosses their arms in front of the camera. Their classroom is in the background." style="width: 23%; height: auto; border-radius: 10px;">
+    <img src="https://images.code.org/92942e22a0495e229ef1205c9ec39e8f-image-1732227622371.jpeg" alt="Two students sit at a desk, looking forward at a computer screen. One points at the screen." style="width: 23%; height: auto; border-radius: 10px;">
+</div>
+
+___
+
+#### Welcome! Code.org’s Equity in Computer Science professional learning experience is designed to help educators reflect and take action to make their classrooms **diverse**, **accessible**, and **inclusive** for all students.
+
+## Course Overview
+
+### **What's included in this course?**
+
+<div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
+    <div style="background-color: #ffffff; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); padding: 15px; border-radius: 10px; width: 45%;">
+    <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="https://images.code.org/7f9f49bb33623ac2d0aefbdf927f49ec-image-1732314462425.png" alt="A icon of a person holding up a lightbulb as if they have an idea." style="width: 80px; height: 80px; margin-bottom: 10px;">
+        </div>
+    <p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Module 1:</b> Understanding Equity in Computer Science (📍 You are here!)</p>
+<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 10px; font-size: 18px">The first module in this course will provide you with a conceptual foundation for equity. You'll reflect on your own personal journeys and orient yourself toward equity in the classroom.</p>
+<br>
+<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Module 1 is made up of three lessons:</b></p>
+
+* #### What is Equity in CS?
+* #### Looking at Data
+* #### Reflecting on Personal Experiences
+    </div>
+
+<div style="background-color: #ffffff; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); padding: 15px; border-radius: 10px; width: 45%;">
+    <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="https://images.code.org/2791d97403ebd52030b55642aa6e8d1d-image-1732314232992.png" alt="An icon of a school house." style="width: 80px; height: 80px; margin-bottom: 10px;">
+    </div>
+        <p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Module 2:</b> Strategies to Promote Equity in Computer Science</p>
+        <p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 10px; font-size: 18px">The second module in this course will get concrete about strategies you can use with your students. This unit is oriented toward resources to bridge professional learning to the classroom.</p>
+
+<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Module 2 is made up of four lessons:</b></p>
+
+* #### Cultivating an Inclusive Classroom Culture
+* #### Bias and Stereotype Threat
+* #### Expanding Access to Computer Science
+* #### Equity in Code.org’s Curriculum
+</div>
+</div>
+
+### **Suggested total time:** <mark>UPDATE</mark>
+
+<br>
+
+<div style="display: flex; align-items: left; border: 1px solid black; border-radius: 20px 20px 20px 20px; padding: 20px 10px 0px 10px">
+
+<a href="code.org" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/b3228ff3b84aeb85ec00b47136800a8f-image-1731959884476.png" style="width: auto; height: 50px;" alt="A piece of paper with lines and a pencil."></a>
+
+<div style="background-color: #FFFFFF;  border-radius: 20px 20px 20px 20px; color: #000000; width: 90%; margin-left: 0%; margin-right: 0%; padding: 0px 5px 5px 0px;">
+
+<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Activity Guide</b></p>
+<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 0px; font-size: 18px">This professional learning experience has an associated <a href="code.org" target="blank" rel="noopener noreferrer"><b>Activity Guide</b></a>. We recommend you make a digital or physical copy of this resource, which includes key information and space to reflect.
+</p>
+
+</div>
+</div>
+
+<br>
+
+### **Click continue to start Module 1!**
+MARKDOWN

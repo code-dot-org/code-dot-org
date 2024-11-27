@@ -459,6 +459,14 @@ Dance.prototype.afterInject_ = function () {
     logger: danceMetricsReporter,
   });
 
+  // Add command names from the Dance Party API to the Blockly generator's
+  // reservered words. This prevents students from overriding commands
+  // with functions.
+  const reservedWords = Object.getOwnPropertyNames(
+    Object.getPrototypeOf(this.nativeAPI)
+  );
+  Blockly.JavaScript.addReservedWords(reservedWords.join());
+
   // Expose an interface for testing
   // Composes the nativeAPI getPerformanceData with our own performance data.
   const nativeAPITestInterface = this.nativeAPI.getTestInterface();

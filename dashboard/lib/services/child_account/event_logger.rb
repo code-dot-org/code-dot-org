@@ -37,7 +37,7 @@ module Services
       end
 
       private def policy
-        @policy ||= Policies::ChildAccount.state_policy(user).try(:[], :name)
+        @policy ||= Policies::ChildAccount::StatePolicies.state_policy(user).try(:[], :name)
       end
     end
   end

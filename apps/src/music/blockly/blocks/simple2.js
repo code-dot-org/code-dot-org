@@ -1,3 +1,4 @@
+import {MAX_LOOP_ITERATIONS_COUNT} from '../../constants';
 import musicI18n from '../../locale';
 import {BlockTypes} from '../blockTypes';
 import {getCodeForSingleBlock} from '../blockUtils';
@@ -42,7 +43,6 @@ export const whenRunSimple2 = {
   generator: ctx => {
     const nextBlock = ctx.nextConnection && ctx.nextConnection.targetBlock();
     let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, false);
-    ctx.skipNextBlockGeneration = true;
     return `
       if (__context == 'when_run') {
         Sequencer.newSequence();
@@ -88,7 +88,6 @@ export const triggeredAtSimple2 = {
     const id = ctx.getFieldValue(TRIGGER_FIELD);
     const nextBlock = ctx.nextConnection && ctx.nextConnection.targetBlock();
     let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, false);
-    ctx.skipNextBlockGeneration = true;
     return `
       if (__context == "${id}") {
         Sequencer.newSequence(startPosition, true);
@@ -397,19 +396,12 @@ export const repeatSimple2 = {
       'repeat_end',
       Blockly.Names.NameType.VARIABLE
     );
-    code += 'var ' + endVar + ' = ' + repeats + ';\n';
-    code +=
-      'for (var ' +
-      loopVar +
-      ' = 0; ' +
-      loopVar +
-      ' < ' +
-      endVar +
-      '; ' +
-      loopVar +
-      '++) {\n' +
-      branch +
-      '}\n';
+    code += `
+      var ${endVar} = ${repeats};
+      for (var ${loopVar} = 0; ${loopVar} < ${endVar} && __loopIterationsCount < ${MAX_LOOP_ITERATIONS_COUNT}; ${loopVar}++, __loopIterationsCount++) {
+        ${branch}
+      }
+    `;
 
     return `
       Sequencer.playSequential();

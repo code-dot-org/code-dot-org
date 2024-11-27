@@ -1,0 +1,35 @@
+name 'self-paced-equity-U1L1-lesson1intro'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Welcome!
+
+## Module 1, Lesson 1: What is Equity in CS?
+
+<div style="display: flex; align-items: flex-start; gap: 20px; margin-top: 20px;">
+    <div style="width: 70%;">
+        <p style="line-height: 1.5; font-size: 18px;">
+            In this lesson, you will:
+        </p>
+        <ul style="margin-left: 20px; line-height: 1.6;">
+            <li style="line-height: 1.5;font-size: 16px;">
+                Become oriented to the structure and content of the course.
+            </li>
+            <li style="line-height: 1.5;font-size: 16px;">
+                Define key concepts related to equity and inclusion in the context of CS education.
+            </li>
+            <li style="line-height: 1.5;font-size: 16px;">
+                Set an intention for learning based in student outcomes.
+            </li>
+        </ul>
+        <p style="font-size: 16px; color: black;">
+        <br>
+        <p style="line-height: 1.5; font-size: 18px;"><strong>Suggested time for this lesson:</strong> <mark>UPDATE</mark>
+        </p>
+    </div>
+    
+    <!-- Image on the right -->
+    <img src="https://images.code.org/4cbb267089510a7a5b3d35ac3aba2899-image-1732315294356.jpeg" alt="A teacher and a student look on to a laptop computer together, smiling." style="width: 30%; height: auto; border-radius: 10px;">
+</div>
+MARKDOWN

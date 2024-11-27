@@ -553,6 +553,8 @@ en:
           description_audience: ''
           lesson_groups: {}
           student_description: Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
+          lessons: {}
+          name: frequency_analysis
         ECSPD3-Unit2:
           title: 'Exploring Computer Science: Unit 2'
           description: Online Professional Development Course
@@ -19087,7 +19089,17 @@ en:
               name: Functions
             lesson-5:
               name: Project
-          lesson_groups: {}
+            lesson-6:
+              name: Songwriter's Toolbox
+            lesson-7:
+              name: Producer Power
+            lesson-8:
+              name: Sound Designer’s Studio
+          lesson_groups:
+            lessonGroup-3:
+              display_name: New progression
+            lessonGroup-2:
+              display_name: Original progression
           name: pilot-elem-music-lab
           title: Intro to Programming with Music Lab
           description_audience: ''

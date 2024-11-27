@@ -29,9 +29,7 @@ import {
 import TextResponses from '../textResponses/TextResponses';
 
 import ElementOrEmptyPage from './ElementOrEmptyPage';
-import LessonMaterialsContainer, {
-  lessonMaterialsLoader,
-} from './lessonMaterials/LessonMaterialsContainer';
+import LessonMaterialsContainer from './lessonMaterials/LessonMaterialsContainer';
 import PageLayout from './PageLayout';
 import TeacherNavigationBar from './TeacherNavigationBar';
 import {
@@ -101,9 +99,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.roster}
-            element={applyV1TeacherDashboardWidth(
-              <ManageStudents studioUrlPrefix={studioUrlPrefix} />
-            )}
+            element={<ManageStudents studioUrlPrefix={studioUrlPrefix} />}
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.loginInfo}
@@ -185,7 +181,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.lessonMaterials}
-            loader={lessonMaterialsLoader}
             element={
               <LessonMaterialsContainer
                 showNoCurriculumAssigned={

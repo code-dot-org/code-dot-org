@@ -130,6 +130,7 @@ describe('AiDiffContainer', () => {
           lessonId: responseEventData.lessonId,
           unitDisplayName: responseEventData.unitName,
           sessionId: null,
+          isPreset: true,
         }),
         true,
         {
@@ -193,6 +194,7 @@ describe('AiDiffContainer', () => {
           lessonId: responseEventData.lessonId,
           unitDisplayName: responseEventData.unitName,
           sessionId: null,
+          isPreset: false,
         }),
         true,
         {
@@ -257,6 +259,7 @@ describe('AiDiffContainer', () => {
           lessonId: responseEventData.lessonId,
           unitDisplayName: responseEventData.unitName,
           sessionId: null,
+          isPreset: false,
         }),
         true,
         {

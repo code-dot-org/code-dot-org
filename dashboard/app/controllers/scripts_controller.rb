@@ -1,3 +1,5 @@
+require 'cdo/i18n'
+
 class ScriptsController < ApplicationController
   include VersionRedirectOverrider
 
@@ -171,7 +173,7 @@ class ScriptsController < ApplicationController
       script: @script ? @script.summarize_for_unit_edit : {},
       has_course: @script&.unit_groups&.any?,
       i18n: @script ? @script.summarize_i18n_for_edit : {},
-      locales: options_for_locale_select,
+      locales: Cdo::I18n.locale_options,
       script_families: Unit.family_names,
       version_year_options: Unit.get_version_year_options,
       is_levelbuilder: current_user.levelbuilder?

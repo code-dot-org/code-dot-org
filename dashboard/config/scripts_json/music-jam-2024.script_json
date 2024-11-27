@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "hoc",
       "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
@@ -30,11 +31,15 @@
         "tr-TR",
         "zh-TW"
       ],
+      "topic_tags": [
+        "ai",
+        "music_lab"
+      ],
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": "music-jam",
-    "serialized_at": "2024-11-14 19:20:50 UTC",
+    "serialized_at": "2024-11-25 21:50:04 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

@@ -168,6 +168,8 @@ const sections = [
         instructor_email: 'teacher@code.org',
       },
     ],
+    at_risk_age_gated_date: undefined,
+    at_risk_age_gated_us_state: undefined,
   },
 ];
 
@@ -503,6 +505,8 @@ describe('teacherSectionsRedux', () => {
         syncEnabled: undefined,
         aiTutorEnabled: undefined,
         anyStudentHasProgress: undefined,
+        atRiskAgeGatedDate: null,
+        atRiskAgeGatedUsState: undefined,
       });
     });
   });
@@ -662,6 +666,8 @@ describe('teacherSectionsRedux', () => {
       restrict_section: false,
       post_milestone_disabled: false,
       ai_tutor_enabled: false,
+      at_risk_age_gated_date: undefined,
+      at_risk_age_gated_us_state: undefined,
     };
 
     function successResponse(customProps = {}) {
@@ -829,6 +835,8 @@ describe('teacherSectionsRedux', () => {
           syncEnabled: undefined,
           aiTutorEnabled: false,
           anyStudentHasProgress: undefined,
+          atRiskAgeGatedDate: null,
+          atRiskAgeGatedUsState: undefined,
         },
       });
     });

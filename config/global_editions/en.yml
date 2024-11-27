@@ -1,7 +1,7 @@
 # This is the configuration for /global/en
 # (which is mirroring the main site at the moment)
 
-locale: en-US
+locales: [en-US]
 
 header:
   # The topbar (which is collapsed into the hamburger in certain contexts)

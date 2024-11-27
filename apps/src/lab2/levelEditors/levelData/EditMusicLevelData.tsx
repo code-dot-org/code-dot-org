@@ -23,7 +23,7 @@ import RawJsonEditor from './RawJsonEditor';
 
 import moduleStyles from './edit-music-level-data.module.scss';
 
-const VALID_LIBRARIES = [DEFAULT_LIBRARY, 'launch2024'];
+const VALID_LIBRARIES = [DEFAULT_LIBRARY, 'launch2024', 'curriculum2024'];
 const RECOMMENDED_LIBRARY = 'launch2024';
 
 const JSON_FIELDS = [['startSources', 'Start Sources']] as const;
