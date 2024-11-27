@@ -1,5 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import '@testing-library/jest-dom';
 import React from 'react';
 
 import CloseButton from '@cdo/apps/componentLibrary/closeButton';
@@ -9,7 +10,8 @@ describe('Design System - CloseButton', () => {
     render(<CloseButton onClick={() => {}} aria-label="default close" />);
 
     const button = screen.getByRole('button');
-    expect(button).toBeDefined();
+    expect(button).toBeInTheDocument();
+    expect(button).toHaveAttribute('aria-label', 'default close');
   });
 
   it('applies custom class name', () => {
@@ -23,7 +25,9 @@ describe('Design System - CloseButton', () => {
     );
 
     const button = screen.getByRole('button');
-    expect(button.classList.contains(className)).toBe(true);
+    // TODO [Design2-197] - Create a visual test for this case instead of checking for class name
+    // eslint-disable-next-line no-restricted-properties
+    expect(button).toHaveClass(className);
   });
 
   it('calls onClick when clicked', async () => {
