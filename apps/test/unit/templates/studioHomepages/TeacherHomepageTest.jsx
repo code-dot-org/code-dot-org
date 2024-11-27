@@ -6,7 +6,6 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import {UnconnectedTeacherHomepage as TeacherHomepage} from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
-import * as globalRegions from '@cdo/apps/util/globalRegions';
 
 import {courses, topCourse, plCourses, topPlCourse} from './homepagesTestData';
 
@@ -152,22 +151,20 @@ function realizeWithStore(store, props = {}) {
 }
 
 describe('TeacherHomepage', () => {
-  const region = 'root';
+  const oldWindowLocation = window.location;
   let store;
   const realize = props => realizeWithStore(store, props);
-  let globalRegionsStub;
 
   beforeEach(() => {
-    globalRegionsStub = jest.spyOn(globalRegions, 'currentGlobalRegion');
-    globalRegionsStub.mockImplementation(() => region);
+    delete window.location;
+    window.location = new URL('https://studio.code.org/home');
     stubRedux();
     store = getStore();
   });
 
   afterEach(() => {
     restoreRedux();
-    globalRegionsStub?.mockClear();
-    globalRegionsStub = null;
+    window.location = oldWindowLocation;
   });
 
   it('shows a Header Banner that says My Dashboard', () => {
@@ -366,22 +363,20 @@ describe('TeacherHomepage', () => {
 });
 
 describe('TeacherHomepage - Farsi Global Edition', () => {
-  const region = 'fa';
+  const oldWindowLocation = window.location;
   let store;
   const realize = props => realizeWithStore(store, props);
-  let globalRegionsStub;
 
   beforeEach(() => {
-    globalRegionsStub = jest.spyOn(globalRegions, 'currentGlobalRegion');
-    globalRegionsStub.mockImplementation(() => region);
+    delete window.location;
+    window.location = new URL('https://studio.code.org/global/fa/home');
     stubRedux();
     store = getStore();
   });
 
   afterEach(() => {
     restoreRedux();
-    globalRegionsStub?.mockClear();
-    globalRegionsStub = null;
+    window.location = oldWindowLocation;
   });
 
   it('does not render a MarketingAnnouncementBanner', () => {

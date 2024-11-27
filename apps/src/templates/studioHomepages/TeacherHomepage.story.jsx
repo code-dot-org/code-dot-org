@@ -43,7 +43,7 @@ export default {
 
 const Template = args => {
   withFakeServer(args.fakeServerArgs);
-  const ret = (
+  return (
     <Provider store={reduxStore({teacherSections})}>
       <TeacherHomepage
         announcements={[announcement]}
@@ -52,7 +52,6 @@ const Template = args => {
       />
     </Provider>
   );
-  return ret;
 };
 
 export const NoCoursesNoSections = Template.bind({});

@@ -12,7 +12,6 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
-import * as globalRegions from '@cdo/apps/util/globalRegions';
 import i18n from '@cdo/locale';
 
 import {courses, topCourse, joinedSections} from './homepagesTestData';
@@ -108,14 +107,13 @@ function realizeWithStore(store, props = {}) {
 }
 
 describe('StudentHomepage', () => {
-  const region = 'root';
+  const oldWindowLocation = window.location;
   let store;
   const realize = props => realizeWithStore(store, props);
-  let globalRegionsStub;
 
   beforeEach(() => {
-    globalRegionsStub = jest.spyOn(globalRegions, 'currentGlobalRegion');
-    globalRegionsStub.mockImplementation(() => region);
+    delete window.location;
+    window.location = new URL('https://studio.code.org/teacher_dashboard');
     stubRedux();
     registerReducers({isRtl});
     store = getStore();
@@ -124,8 +122,7 @@ describe('StudentHomepage', () => {
 
   afterEach(() => {
     restoreRedux();
-    globalRegionsStub?.mockClear();
-    globalRegionsStub = null;
+    window.location = oldWindowLocation;
   });
 
   it('shows a Header Banner that says My Dashboard', () => {
@@ -202,14 +199,13 @@ describe('StudentHomepage', () => {
 });
 
 describe('StudentHomepage - Farsi Global Edition', () => {
-  const region = 'fa';
+  const oldWindowLocation = window.location;
   let store;
   const realize = props => realizeWithStore(store, props);
-  let globalRegionsStub;
 
   beforeEach(() => {
-    globalRegionsStub = jest.spyOn(globalRegions, 'currentGlobalRegion');
-    globalRegionsStub.mockImplementation(() => region);
+    delete window.location;
+    window.location = new URL('https://studio.code.org/teacher_dashboard');
     stubRedux();
     registerReducers({isRtl});
     store = getStore();
@@ -218,8 +214,7 @@ describe('StudentHomepage - Farsi Global Edition', () => {
 
   afterEach(() => {
     restoreRedux();
-    globalRegionsStub?.mockClear();
-    globalRegionsStub = null;
+    window.location = oldWindowLocation;
   });
 
   it('does not render a MarketingAnnouncementBanner', () => {
