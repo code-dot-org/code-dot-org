@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.0]()
+- rewritten `TextFieldTest` in typescript
+- refactored/optimized `TextFieldTest.tsx`
+
 ## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/61754)
 
 - updated `TextField` props to support native HTML Element attributes
