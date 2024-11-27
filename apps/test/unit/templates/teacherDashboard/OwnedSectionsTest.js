@@ -90,10 +90,6 @@ describe('OwnedSections - Farsi Global Edition', () => {
     window.location = new URL(
       'https://studio.code.org/global/fa/teacher_dashboard'
     );
-    console.log(
-      'REGION:',
-      window.location.pathname.match(/^\/global\/(fa)/)?.[1] || 'root'
-    );
   });
 
   afterEach(() => {

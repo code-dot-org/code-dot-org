@@ -3,7 +3,7 @@ import React from 'react';
 import {
   currentGlobalConfiguration,
   RegionConfigurationPageObject,
-} from '@cdo/apps/util/globalRegions';
+} from '@cdo/apps/util/globalEdition';
 
 interface GlobalRegionWrapperProps {
   component: React.FunctionComponent;
