@@ -5,7 +5,7 @@ import reduxThunk from 'redux-thunk';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
-import * as globalRegions from '@cdo/apps/util/globalRegions';
+import * as globalEdition from '@cdo/apps/util/globalEdition';
 
 export const reduxStore = (reducers = {}, state = {}) => {
   return createStore(
@@ -29,7 +29,7 @@ export const withGlobalEdition = (storyFn, context) => {
   const {region} = context.args;
 
   beforeEach(() => {
-    globalRegionsStub = jest.spyOn(globalRegions, 'currentGlobalRegion');
+    globalRegionsStub = jest.spyOn(globalEdition, 'getGlobalEditionRegion');
     globalRegionsStub.mockImplementation(() => region || 'root');
   });
 
