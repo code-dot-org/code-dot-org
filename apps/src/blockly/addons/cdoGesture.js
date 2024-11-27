@@ -37,6 +37,7 @@ export function overrideHandleTouchMove(blocklyWrapper) {
     // If the gesture already went through a bubble, don't set the start block.
     if (!this.startBlock && !this.startBubble) {
       this.startBlock = block;
+      Blockly.common.setSelected(this.startBlock);
 
       // Begin Customization
       // Set up duplication of shadow argument_reporter blocks.

@@ -142,7 +142,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   wrapReadOnlyProperty: (propertyName: string) => void;
   wrapSettableProperty: (propertyName: string) => void;
   overrideFields: (
-    overrides: [string, string, Pick<typeof GoogleBlockly.Field, 'prototype'>][]
+    overrides: [string, string, GoogleBlockly.fieldRegistry.RegistrableField][]
   ) => void;
   setInfiniteLoopTrap: () => void;
   clearInfiniteLoopTrap: () => void;

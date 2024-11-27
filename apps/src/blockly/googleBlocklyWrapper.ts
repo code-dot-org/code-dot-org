@@ -276,7 +276,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   // These are exclusively provided via the FieldColour plugin as of Blockly v11.
   installFieldColourBlocks({javascript: javascriptGenerator});
 
-  type registrableFieldType = Pick<typeof GoogleBlockly.Field, 'prototype'>;
+  type registrableFieldType = GoogleBlockly.fieldRegistry.RegistrableField;
   // elements in this list should be structured as follows:
   // [field registry name for field, class name of field being overridden, class to use as override]
   const fieldOverrides: [string, string, registrableFieldType][] = [
