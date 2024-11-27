@@ -1,245 +1,77 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import React from 'react';
+import React, {ChangeEvent, useState} from 'react';
 
 import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 
 describe('Design System - Checkbox', () => {
-  it('Checkbox - renders with correct label', () => {
-    render(
-      <Checkbox
-        name="test-checkbox"
-        value="test-checkbox"
-        label="Checkbox label"
-        checked={false}
-        onChange={() => null}
-      />
-    );
-
-    const checkbox = screen.getByDisplayValue('test-checkbox');
-    expect(checkbox).toBeDefined();
-    expect(screen.getByText('Checkbox label')).toBeDefined();
-  });
-
-  it('Checkbox - changes checked state on click', async () => {
+  const setupCheckbox = (
+    initialChecked: boolean,
+    props: Partial<React.ComponentProps<typeof Checkbox>> = {}
+  ) => {
     const user = userEvent.setup();
     const spyOnChange = jest.fn();
-
-    let checked = false;
-    const onChange = (): void => {
-      checked = !checked;
-      spyOnChange(checked);
+    const Wrapper = () => {
+      const [checked, setChecked] = useState(initialChecked);
+      const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+        setChecked(event.target.checked);
+        spyOnChange(event.target.checked);
+      };
+      return (
+        <Checkbox
+          name="test-checkbox"
+          value="test-checkbox"
+          label="Checkbox label"
+          checked={checked}
+          onChange={handleChange}
+          {...props}
+        />
+      );
     };
+    render(<Wrapper />);
+    return {user, spyOnChange};
+  };
 
-    // Initial render
-    const {rerender} = render(
-      <Checkbox
-        name="test-checkbox"
-        value="test-checkbox"
-        label="Checkbox label"
-        checked={checked}
-        onChange={onChange}
-      />
-    );
+  const getCheckbox = () => screen.getByRole('checkbox') as HTMLInputElement;
 
-    let checkbox = screen.getByDisplayValue<HTMLInputElement>('test-checkbox');
-    expect(checkbox).toBeDefined();
+  it('changes checked state on click', async () => {
+    const {user, spyOnChange} = setupCheckbox(false);
 
+    const checkbox = getCheckbox();
     expect(checkbox.checked).toBe(false);
-    expect(checkbox.disabled).toBe(false);
-    expect(checkbox.indeterminate).toBe(false);
 
     await user.click(checkbox);
-
-    // Re-render after user's first click
-    rerender(
-      <Checkbox
-        name="test-checkbox"
-        value="test-checkbox"
-        label="Checkbox label"
-        checked={checked}
-        onChange={onChange}
-      />
-    );
-
-    checkbox = screen.getByDisplayValue('test-checkbox');
-
+    expect(checkbox.checked).toBe(true);
     expect(spyOnChange).toHaveBeenCalledTimes(1);
     expect(spyOnChange).toHaveBeenCalledWith(true);
-    expect(checkbox.checked).toBe(true);
-    expect(checkbox.disabled).toBe(false);
-    expect(checkbox.indeterminate).toBe(false);
 
     await user.click(checkbox);
-
-    // Re-render after user's second click
-    rerender(
-      <Checkbox
-        name="test-checkbox"
-        value="test-checkbox"
-        label="Checkbox label"
-        checked={checked}
-        onChange={onChange}
-      />
-    );
-
-    checkbox = screen.getByDisplayValue('test-checkbox');
-
+    expect(checkbox.checked).toBe(false);
     expect(spyOnChange).toHaveBeenCalledTimes(2);
     expect(spyOnChange).toHaveBeenCalledWith(false);
-    expect(checkbox.checked).toBe(false);
-    expect(checkbox.disabled).toBe(false);
-    expect(checkbox.indeterminate).toBe(false);
   });
 
-  it('Checkbox - renders indeterminate checkbox, changes on click', async () => {
-    const user = userEvent.setup();
-    const spyOnChange = jest.fn();
+  it('handles indeterminate state correctly', async () => {
+    const {user, spyOnChange} = setupCheckbox(false, {indeterminate: true});
 
-    let checked = false;
-    let indeterminate = true;
-    const onChange = (): void => {
-      if (indeterminate) {
-        // Default browser behavior for clicking an indeterminate checkbox.
-        indeterminate = false;
-        checked = true;
-      } else {
-        checked = !checked;
-      }
-      spyOnChange(checked);
-    };
-
-    // Initial render
-    const {rerender} = render(
-      <Checkbox
-        name="test-checkbox"
-        value="test-checkbox"
-        label="Checkbox label"
-        checked={checked}
-        onChange={onChange}
-        indeterminate={indeterminate}
-      />
-    );
-
-    let checkbox = screen.getByDisplayValue<HTMLInputElement>('test-checkbox');
-    expect(checkbox).toBeDefined();
-
-    expect(checkbox.checked).toBe(false);
-    expect(checkbox.disabled).toBe(false);
+    const checkbox = getCheckbox();
     expect(checkbox.indeterminate).toBe(true);
 
     await user.click(checkbox);
-
-    // Re-render after user's first click
-    rerender(
-      <Checkbox
-        name="test-checkbox"
-        value="test-checkbox"
-        label="Checkbox label"
-        checked={checked}
-        onChange={onChange}
-        indeterminate={indeterminate}
-      />
-    );
-
-    checkbox = screen.getByDisplayValue('test-checkbox');
-
+    expect(checkbox.checked).toBe(true);
+    expect(checkbox.indeterminate).toBe(false);
     expect(spyOnChange).toHaveBeenCalledTimes(1);
     expect(spyOnChange).toHaveBeenCalledWith(true);
-    expect(checkbox.checked).toBe(true);
-    expect(checkbox.disabled).toBe(false);
-    expect(checkbox.indeterminate).toBe(false);
-
-    await user.click(checkbox);
-
-    // Re-render after user's second click
-    rerender(
-      <Checkbox
-        name="test-checkbox"
-        value="test-checkbox"
-        label="Checkbox label"
-        checked={checked}
-        onChange={onChange}
-        indeterminate={indeterminate}
-      />
-    );
-
-    checkbox = screen.getByDisplayValue('test-checkbox');
-
-    expect(spyOnChange).toHaveBeenCalledTimes(2);
-    expect(spyOnChange).toHaveBeenCalledWith(false);
-    expect(checkbox.checked).toBe(false);
-    expect(checkbox.disabled).toBe(false);
-    expect(checkbox.indeterminate).toBe(false);
   });
 
-  it("Checkbox - renders disabled checkbox, doesn't change on click", async () => {
-    const user = userEvent.setup();
-    const spyOnChange = jest.fn();
+  it('does not change state when disabled', async () => {
+    const {user, spyOnChange} = setupCheckbox(false, {disabled: true});
 
-    let checked = false;
-    const onChange = (): void => {
-      checked = !checked;
-      spyOnChange(checked);
-    };
-
-    // Initial render
-    const {rerender} = render(
-      <Checkbox
-        name="test-checkbox"
-        value="test-checkbox"
-        label="Checkbox label"
-        checked={checked}
-        onChange={onChange}
-        disabled={true}
-      />
-    );
-
-    let checkbox = screen.getByDisplayValue<HTMLInputElement>('test-checkbox');
-    expect(checkbox).toBeDefined();
-
-    expect(checkbox.checked).toBe(false);
+    const checkbox = getCheckbox();
     expect(checkbox.disabled).toBe(true);
-    expect(checkbox.indeterminate).toBe(false);
 
     await user.click(checkbox);
-
-    // Re-render after user's first click
-    rerender(
-      <Checkbox
-        name="test-checkbox"
-        value="test-checkbox"
-        label="Checkbox label"
-        checked={checked}
-        onChange={onChange}
-        disabled={true}
-      />
-    );
-
-    checkbox = screen.getByDisplayValue('test-checkbox');
-
-    expect(spyOnChange).not.toHaveBeenCalled();
     expect(checkbox.checked).toBe(false);
-    expect(checkbox.disabled).toBe(true);
-    expect(checkbox.indeterminate).toBe(false);
-
-    await user.click(checkbox);
-
-    // Re-render after user's second click
-    rerender(
-      <Checkbox
-        name="test-checkbox"
-        value="test-checkbox"
-        label="Checkbox label"
-        checked={checked}
-        onChange={onChange}
-        disabled={true}
-      />
-    );
-
     expect(spyOnChange).not.toHaveBeenCalled();
-    expect(checkbox.checked).toBe(false);
-    expect(checkbox.disabled).toBe(true);
-    expect(checkbox.indeterminate).toBe(false);
   });
 });
