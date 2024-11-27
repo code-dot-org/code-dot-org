@@ -1,14 +1,15 @@
 @no_mobile
-Feature: Global Edition - Region Select
+Feature: Global Edition - Farsi Headers
   Background:
     Given I am on "http://code.org"
     And I use a cookie to mock the DCDO key "global_edition_enabled" as "true"
 
   Scenario: A teacher should see the correct header links on Pegasus
     Given I create a teacher named "Tessa Teacher" and go home
-    Then I am on "http://code.org/lang/fa-ir/global/fa/about"
+    Then I am on "http://code.org/global/fa/about"
     And I dismiss the language selector
-    And I wait to see "#headerlinks"
+    And I select the "فارسی" option in dropdown with class "language-dropdown select" to load a new page
+    Then I wait to see "#headerlinks"
     And I see "#header-teach"
     And element "#header-teach" has "fa-IR" text from key "nav.header.teach"
     And I see "#header-about"
@@ -22,9 +23,10 @@ Feature: Global Edition - Region Select
 
   Scenario: A student should see the correct header links on Pegasus
     Given I create a student named "Sally Student" and go home
-    Then I am on "http://code.org/lang/fa-ir/global/fa/about"
+    Then I am on "http://code.org/global/fa/about"
     And I dismiss the language selector
-    And I wait to see "#headerlinks"
+    And I select the "فارسی" option in dropdown with class "language-dropdown select" to load a new page
+    Then I wait to see "#headerlinks"
     And I see "#header-teach"
     And element "#header-teach" has "fa-IR" text from key "nav.header.teach"
     And I see "#header-about"
@@ -38,9 +40,9 @@ Feature: Global Edition - Region Select
 
   Scenario: A teacher should see the correct header links on Dashboard
     Given I create a teacher named "Tessa Teacher" and go home
-    Then I am on "http://studio.code.org/global/fa/home?lang=fa-IR"
     And I dismiss the language selector
-    And I wait to see ".headerlinks"
+    And I select the "فارسی" option in dropdown "locale" to load a new page
+    Then I wait to see ".headerlinks"
     And I see "#header-student-home"
     And element "#header-student-home" has "fa-IR" text from key "nav.header.my_dashboard"
     And I see "#header-teacher-courses"
@@ -50,9 +52,9 @@ Feature: Global Edition - Region Select
 
   Scenario: A student should see the correct header links on Dashboard
     Given I create a student named "Sally Student" and go home
-    Then I am on "http://studio.code.org/global/fa/home?lang=fa-IR"
     And I dismiss the language selector
-    And I wait to see ".headerlinks"
+    And I select the "فارسی" option in dropdown "locale" to load a new page
+    Then I wait to see ".headerlinks"
     And I see "#header-student-home"
     And element "#header-student-home" has "fa-IR" text from key "nav.header.my_dashboard"
     And I see "#header-student-courses"
