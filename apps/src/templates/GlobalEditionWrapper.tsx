@@ -82,7 +82,7 @@ export const GlobalEditionWrapper: React.FunctionComponent<
     .slice(-1)[0];
 
   // The component is visible if the key does not exist or the value for that
-  // component is explicitly set to 'false'
+  // component is NOT explicitly set to 'false'
   const visible: boolean =
     !pageConfig || pageConfig.components[componentId] !== false;
 
