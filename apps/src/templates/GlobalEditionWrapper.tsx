@@ -5,7 +5,7 @@ import {
   RegionConfigurationPageObject,
 } from '@cdo/apps/util/globalEdition';
 
-interface GlobalRegionWrapperProps {
+interface GlobalEditionWrapperProps {
   component: React.FunctionComponent;
   componentId: string;
   props: object;
@@ -21,7 +21,7 @@ interface GlobalRegionWrapperProps {
  * Essentially you can take an existing component like <Foo> and then wrap it
  * as such:
  *
- * <GlobalRegionWrapper
+ * <GlobalEditionWrapper
  *   component={Foo}
  *   componentId="Foo"
  *   props={{
@@ -62,8 +62,8 @@ interface GlobalRegionWrapperProps {
  * See the 'pages' section of an existing configuration for more information
  * on the format of the configuration and its use here.
  */
-export const GlobalRegionWrapper: React.FunctionComponent<
-  GlobalRegionWrapperProps
+export const GlobalEditionWrapper: React.FunctionComponent<
+  GlobalEditionWrapperProps
 > = ({component, componentId, props = {}}) => {
   const EmptyComponent = () => null;
 
@@ -104,4 +104,4 @@ export const GlobalRegionWrapper: React.FunctionComponent<
   return <GlobalWrappedComponent {...wrappedProps} />;
 };
 
-export default GlobalRegionWrapper;
+export default GlobalEditionWrapper;

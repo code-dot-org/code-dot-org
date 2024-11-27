@@ -9,7 +9,7 @@ import Notification, {
   NotificationType,
 } from '@cdo/apps/sharedComponents/Notification';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
-import GlobalRegionWrapper from '@cdo/apps/templates/GlobalRegionWrapper';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
@@ -83,7 +83,7 @@ export default class StudentHomepage extends Component {
 
           <ProtectedStatefulDiv ref="flashes" />
           {specialAnnouncement && (
-            <GlobalRegionWrapper
+            <GlobalEditionWrapper
               component={MarketingAnnouncementBanner}
               componentId="MarketingAnnouncementBanner"
               props={{

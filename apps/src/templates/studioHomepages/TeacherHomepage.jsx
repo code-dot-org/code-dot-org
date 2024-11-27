@@ -8,7 +8,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Notification from '@cdo/apps/sharedComponents/Notification';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
-import GlobalRegionWrapper from '@cdo/apps/templates/GlobalRegionWrapper';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
@@ -172,7 +172,7 @@ export const UnconnectedTeacherHomepage = ({
         <ProtectedStatefulDiv ref={teacherReminders} />
         {showNpsSurvey && <NpsSurveyBlock />}
         {specialAnnouncement && (
-          <GlobalRegionWrapper
+          <GlobalEditionWrapper
             component={MarketingAnnouncementBanner}
             componentId="MarketingAnnouncementBanner"
             props={{
@@ -261,12 +261,12 @@ export const UnconnectedTeacherHomepage = ({
             isProfessionalLearningCourse={true}
           />
         )}
-        <GlobalRegionWrapper
+        <GlobalEditionWrapper
           component={TeacherResources}
           componentId="TeacherResources"
         />
         {showIncubatorBanner && (
-          <GlobalRegionWrapper
+          <GlobalEditionWrapper
             component={IncubatorBanner}
             componentId="IncubatorBanner"
           />

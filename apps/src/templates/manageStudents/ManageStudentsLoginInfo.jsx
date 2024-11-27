@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import GlobalRegionWrapper from '@cdo/apps/templates/GlobalRegionWrapper';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -87,7 +87,7 @@ class ManageStudentsLoginInfo extends Component {
                 students={this.props.studentData}
               />
             </div>
-            <GlobalRegionWrapper
+            <GlobalEditionWrapper
               component={() => (
                 <SafeMarkdown
                   markdown={i18n
@@ -137,7 +137,7 @@ class ManageStudentsLoginInfo extends Component {
                 students={this.props.studentData}
               />
             </div>
-            <GlobalRegionWrapper
+            <GlobalEditionWrapper
               component={() => (
                 <SafeMarkdown
                   markdown={i18n
@@ -179,7 +179,7 @@ class ManageStudentsLoginInfo extends Component {
                 })
                 .replace(/^\d./, `${++counter}.`)}
             />
-            <GlobalRegionWrapper
+            <GlobalEditionWrapper
               component={() => (
                 <SafeMarkdown
                   markdown={i18n
@@ -221,7 +221,7 @@ class ManageStudentsLoginInfo extends Component {
         {loginType === SectionLoginType.lti_v1 && (
           <LtiLogins sectionProviderName={this.props.sectionProviderName} />
         )}
-        <GlobalRegionWrapper
+        <GlobalEditionWrapper
           component={ParentLetterAndStudentPrivacyInfo}
           componentId="ParentLetterAndStudentPrivacyInfo"
         />

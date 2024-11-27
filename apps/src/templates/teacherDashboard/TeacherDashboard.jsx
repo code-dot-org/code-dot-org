@@ -6,7 +6,7 @@ import {Navigate, Route, Routes, useLocation} from 'react-router-dom';
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import GlobalRegionWrapper from '@cdo/apps/templates/GlobalRegionWrapper';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import ManageStudents from '@cdo/apps/templates/manageStudents/ManageStudents';
 import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
@@ -171,7 +171,7 @@ function TeacherDashboard({
               hasStudents={studentCount > 0}
               hasCurriculumAssigned={anyStudentHasProgress}
               element={
-                <GlobalRegionWrapper
+                <GlobalEditionWrapper
                   component={SectionProgressSelector}
                   componentId="SectionProgressSelector"
                   props={{
