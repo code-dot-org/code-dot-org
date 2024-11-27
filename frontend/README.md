@@ -62,7 +62,7 @@ compare it with baselines. Visual snapshots on pull requests and during the CI b
 
 To run visual snapshots locally, first obtain an [Applitools API Key](https://applitools.com/docs/topics/overview/obtain-api-key.html).
 
-If using devcontainers, add the key to `.devcontainer/frontend/.env`. For everywhere else, assign the API key to the environment variable `APPLITOOLS_API_KEY`.
+Then, assign the API key to `frontend/.env` in the `APPLITOOLS_API_KEY` key. (If this file does not exist, copy it from `frontend/.env.example`)
 
 To run the visual tests:
 
