@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.5.0]()
+## [0.5.0](https://github.com/code-dot-org/code-dot-org/pull/62748)
 
 - rewritten `TabsTest` in typescript
 - refactored/optimized `TabsTest.tsx`
