@@ -3,11 +3,13 @@ Feature: Global Edition - Farsi Headers
   Background:
     Given I am on "http://code.org"
     And I use a cookie to mock the DCDO key "global_edition_enabled" as "true"
+    And I set the language cookie
 
   Scenario: A teacher should see the correct header links on Pegasus
     Given I create a teacher named "Tessa Teacher" and go home
     Then I am on "http://code.org/global/fa/about"
     And I dismiss the language selector
+    And I select the "فارسی" option in dropdown with class "language-dropdown select" to load a new page
     Then I wait to see "#headerlinks"
     And I see "#header-teach"
     And element "#header-teach" has "fa-IR" text from key "nav.header.teach"
@@ -24,6 +26,7 @@ Feature: Global Edition - Farsi Headers
     Given I create a student named "Sally Student" and go home
     Then I am on "http://code.org/global/fa/about"
     And I dismiss the language selector
+    And I select the "فارسی" option in dropdown with class "language-dropdown select" to load a new page
     Then I wait to see "#headerlinks"
     And I see "#header-teach"
     And element "#header-teach" has "fa-IR" text from key "nav.header.teach"
