@@ -25,6 +25,8 @@ import {
   createLogTable,
   createExecutionCountGraph,
   createMarkdownWidget,
+  createOverallChatPerformanceGraph,
+  createOverallSavePerformanceGraph,
 } from './widgetCreators';
 
 const browsers = ['Chrome', 'Firefox', 'Safari'];
@@ -67,8 +69,8 @@ function createDashboard(environment = 'production'): Dashboard {
       ),
       createTitleWidget('Performance', 'h2'),
       createJobPerformanceGraph(environment),
-      createBrowserChatPerformanceGraph(environment),
-      createBrowserSavePerformanceGraph(environment),
+      createOverallChatPerformanceGraph(environment, browsers),
+      createOverallSavePerformanceGraph(environment, browsers),
       createExecutionCountGraph(modelDescriptions, environment, {
         width: 6,
         height: 12,
@@ -80,7 +82,6 @@ function createDashboard(environment = 'production'): Dashboard {
       createBrowserLatencyComparisonGraph(browsers, environment),
       createActiveJobGraph(environment),
       createLatencyComparisonGraph(modelDescriptions, environment),
-      createBrowserLatencyByModelGraph(modelDescriptions, environment),
       createBrowserLatencyComparisonGraph(browsers, environment, 'gauge', {
         width: 24,
         height: 5,
