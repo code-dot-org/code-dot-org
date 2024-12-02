@@ -139,7 +139,7 @@ export function createBrowserLatencyByModelGraph(
     ...commonGraphProps,
     properties: {
       region: REGION,
-      title: `Chat Request Latency by Model - ${browser || 'All Browsers'}`,
+      title: `Chat Request Latency by Model - ${browser}`,
       metrics: models.map<WidgetMetric>(({name, id}) => [
         `${environment}-browser-metrics`,
         'AichatModelResponseTime',
@@ -180,7 +180,7 @@ export function createBrowserChatPerformanceGraph(
     ...commonGraphProps,
     properties: {
       region: REGION,
-      title: `Chat Completion Performance - ${browser || 'All Browsers'}`,
+      title: `Chat Completion Performance - ${browser}`,
       metrics: [
         ...[
           'ChatCompletionRequestInitiated',
@@ -304,7 +304,7 @@ export function createBrowserSavePerformanceGraph(
     ...commonGraphProps,
     properties: {
       region: REGION,
-      title: `Save/Update Performance - ${browser || 'All Browsers'}`,
+      title: `Save/Update Performance - ${browser}`,
       metrics: [
         ...[
           'SaveStarted',
