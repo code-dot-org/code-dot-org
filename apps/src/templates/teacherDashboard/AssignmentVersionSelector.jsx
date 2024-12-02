@@ -1,8 +1,9 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import i18n from '@cdo/locale';
 
 import PopUpMenu, {STANDARD_PADDING} from '../../sharedComponents/PopUpMenu';
@@ -16,117 +17,136 @@ import {assignmentCourseVersionShape} from './shapes';
 const menuItemWidth = _(columnWidths).values().reduce(_.add);
 const menuWidth = menuItemWidth + 2 * STANDARD_PADDING;
 
-export default class AssignmentVersionSelector extends Component {
-  static propTypes = {
-    dropdownStyle: PropTypes.object,
-    onChangeVersion: PropTypes.func.isRequired,
-    selectedCourseVersionId: PropTypes.number,
-    courseVersions: PropTypes.objectOf(assignmentCourseVersionShape),
-    disabled: PropTypes.bool,
-    rightJustifiedPopupMenu: PropTypes.bool,
-  };
+export function AssignmentVersionSelector({
+  dropdownStyle,
+  onChangeVersion,
+  selectedCourseVersionId,
+  courseVersions,
+  courseFilters,
+  disabled,
+  rightJustifiedPopupMenu,
+}) {
+  const selectRef = useRef(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [targetPoint, setTargetPoint] = useState({top: 0, left: 0});
+  const [filteredVersions, setFilteredVersions] = useState([]);
 
-  state = {
-    isMenuOpen: false,
-    targetPoint: {top: 0, left: 0},
-  };
+  // Filter the offerings based on the filters provided
+  useEffect(() => {
+    const languageFilter = courseFilters?.language;
 
-  handleMouseDown = e => {
+    const data = courseVersions;
+
+    if (languageFilter) {
+      for (const [key, versionInfo] of Object.entries(data)) {
+        if (!versionInfo.locale_codes.includes(languageFilter)) {
+          delete data[key];
+        }
+      }
+    }
+
+    setFilteredVersions(data);
+  }, [courseVersions, courseFilters?.language]);
+
+  const handleMouseDown = e => {
     // Prevent the native dropdown menu from opening.
     e.preventDefault();
   };
 
-  handleClick = e => {
+  const handleClick = e => {
     e.stopPropagation();
-    if (!this.state.isMenuOpen) {
-      this.openMenu();
+    if (!isMenuOpen) {
+      openMenu();
     } else {
-      this.closeMenu();
+      closeMenu();
     }
   };
 
-  openMenu() {
-    const rect = this.select.getBoundingClientRect();
-    const targetPoint = {
+  const openMenu = () => {
+    const rect = selectRef.current.getBoundingClientRect();
+    const newTargetPoint = {
       top: rect.bottom + window.pageYOffset,
       left: rect.left + window.pageXOffset,
     };
-    this.setState({
-      isMenuOpen: true,
-      targetPoint,
-    });
-  }
+    setIsMenuOpen(true);
+    setTargetPoint(newTargetPoint);
+  };
 
-  closeMenu = () => this.setState({isMenuOpen: false});
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
-  handleNativeDropdownChange = event => {
+  const handleNativeDropdownChange = event => {
     const version = event.target.value;
-    this.props.onChangeVersion(version.id);
+    onChangeVersion(version.id);
   };
 
-  chooseMenuItem = version => {
-    this.props.onChangeVersion(version.id);
-    this.closeMenu();
+  const chooseMenuItem = version => {
+    onChangeVersion(version.id);
+    closeMenu();
   };
 
-  render() {
-    const {dropdownStyle, courseVersions, disabled, selectedCourseVersionId} =
-      this.props;
+  const popupMenuXOffset = rightJustifiedPopupMenu ? -menuWidth / 2 : 0;
+  const menuOffset = {
+    x: popupMenuXOffset,
+    y: 0,
+  };
 
-    const popupMenuXOffset = this.props.rightJustifiedPopupMenu
-      ? -menuWidth / 2
-      : 0;
-    const menuOffset = {
-      x: popupMenuXOffset,
-      y: 0,
-    };
+  const orderedCourseVersions = _.orderBy(filteredVersions, 'key', 'desc');
 
-    let orderedCourseVersions = _.orderBy(courseVersions, 'key', 'desc');
-
-    return (
-      <span style={styles.version} id="uitest-version-selector">
-        <label style={styles.dropdownLabel} htmlFor="assignment-version-year">
-          {i18n.assignmentSelectorVersion()}
-        </label>
-        <select
-          id="assignment-version-year"
-          value={selectedCourseVersionId}
-          onChange={this.handleNativeDropdownChange}
-          onMouseDown={this.handleMouseDown}
-          onClick={this.handleClick}
-          style={dropdownStyle}
-          disabled={disabled}
-          ref={select => (this.select = select)}
-        >
-          {Object.values(orderedCourseVersions).map(version => (
-            <option key={version.id} value={version.id}>
-              {version.is_recommended
-                ? `${version.version_year} (${i18n.recommended()})`
-                : version.version_year}
-            </option>
-          ))}
-        </select>
-        <PopUpMenu
-          isOpen={this.state.isMenuOpen}
-          targetPoint={this.state.targetPoint}
-          offset={menuOffset}
-          style={styles.popUpMenuStyle}
-          onClose={this.closeMenu}
-        >
-          <AssignmentVersionMenuHeader />
-          {Object.values(orderedCourseVersions).map(version => (
-            <AssignmentVersionMenuItem
-              selectedCourseVersionId={selectedCourseVersionId}
-              courseVersion={version}
-              onClick={() => this.chooseMenuItem(version)}
-              key={version.id}
-            />
-          ))}
-        </PopUpMenu>
-      </span>
-    );
-  }
+  return (
+    <span style={styles.version} id="uitest-version-selector">
+      <label style={styles.dropdownLabel} htmlFor="assignment-version-year">
+        {i18n.assignmentSelectorVersion()}
+      </label>
+      <select
+        id="assignment-version-year"
+        value={selectedCourseVersionId}
+        onChange={handleNativeDropdownChange}
+        onMouseDown={handleMouseDown}
+        onClick={handleClick}
+        style={dropdownStyle}
+        disabled={disabled}
+        ref={selectRef}
+      >
+        {Object.values(orderedCourseVersions).map(version => (
+          <option key={version.id} value={version.id}>
+            {version.is_recommended
+              ? `${version.version_year} (${i18n.recommended()})`
+              : version.version_year}
+          </option>
+        ))}
+      </select>
+      <PopUpMenu
+        isOpen={isMenuOpen}
+        targetPoint={targetPoint}
+        offset={menuOffset}
+        style={styles.popUpMenuStyle}
+        onClose={closeMenu}
+      >
+        <AssignmentVersionMenuHeader />
+        {Object.values(orderedCourseVersions).map(version => (
+          <AssignmentVersionMenuItem
+            selectedCourseVersionId={selectedCourseVersionId}
+            courseVersion={version}
+            onClick={() => chooseMenuItem(version)}
+            key={version.id}
+          />
+        ))}
+      </PopUpMenu>
+    </span>
+  );
 }
+
+AssignmentVersionSelector.propTypes = {
+  dropdownStyle: PropTypes.object,
+  onChangeVersion: PropTypes.func.isRequired,
+  selectedCourseVersionId: PropTypes.number,
+  courseVersions: PropTypes.objectOf(assignmentCourseVersionShape),
+  courseFilters: PropTypes.object,
+  disabled: PropTypes.bool,
+  rightJustifiedPopupMenu: PropTypes.bool,
+};
 
 const styles = {
   version: {
@@ -144,3 +164,31 @@ const styles = {
     width: menuWidth,
   },
 };
+
+/**
+ * This is a version of the course version dropdown that is overridable by a region
+ * configuration.
+ *
+ * This is done via a configuration in, for instance, /config/global_editions/fa.yml
+ * via a paths rule such as:
+ *
+ * ```
+ * pages:
+ *   # All pages
+ *   - path: /
+ *     components:
+ *       LtiFeedbackBanner: false
+ *       AssignmentVersionSelector:
+ *         courseFilters:
+ *           language: fa-IR
+ * ```
+ */
+const RegionalAssignmentVersionSelector = props => (
+  <GlobalEditionWrapper
+    component={AssignmentVersionSelector}
+    componentId="AssignmentVersionSelector"
+    props={props}
+  />
+);
+
+export default RegionalAssignmentVersionSelector;

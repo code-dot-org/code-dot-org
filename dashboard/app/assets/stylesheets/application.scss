@@ -596,10 +596,6 @@ html, body {
   }
 
   .container {
-    html[dir=rtl] & {
-      float: right;
-    }
-
     .row {
       [class*="span"] {
         html[dir=rtl] & {
