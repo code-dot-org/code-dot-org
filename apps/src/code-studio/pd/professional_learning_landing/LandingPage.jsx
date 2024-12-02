@@ -109,7 +109,7 @@ function LandingPage({
   userId,
   lastWorkshopSurveyUrl,
   lastWorkshopSurveyCourse,
-  deeperLearningCourseData,
+  showDeeperLearning,
   currentYearApplicationId,
   hasEnrolledInWorkshop,
   plCoursesStarted,
@@ -169,11 +169,6 @@ function LandingPage({
       fetchFacilitatorData();
     }
 
-    if (userPermissions.includes('program_manager')) {
-      console.log('PROGRAM MANAGER');
-      setWorkshopsAsRegionalPartner([]);
-    }
-
     if (userPermissions.includes('workshop_organizer')) {
       const fetchWorkshopOrganizerData = async () => {
         try {
@@ -197,6 +192,33 @@ function LandingPage({
       };
 
       fetchWorkshopOrganizerData();
+    }
+
+    if (userPermissions.includes('program_manager')) {
+      const fetchRegionalPartnerData = async () => {
+        try {
+          const response = await fetch(
+            `/dashboardapi/v1/pd/workshops_as_organizer_for_pl_page?user_id=${userId}`,
+            {
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+            }
+          );
+
+          if (response.ok) {
+            const jsonData = await response.json();
+            setWorkshopsAsRegionalPartner(
+              jsonData.workshops_as_regional_partner
+            );
+          }
+        } catch (error) {
+          console.error('Error fetching regional partner data:', error);
+        }
+      };
+
+      fetchRegionalPartnerData();
     }
   }, [dispatch, userId, userPermissions]);
 
@@ -366,7 +388,7 @@ function LandingPage({
       });
     });
 
-    if (deeperLearningCourseData?.length >= 1) {
+    if (showDeeperLearning) {
       allResources.push({
         headingText: i18n.plSectionsOnboardingTitle(),
         descriptionText: i18n.plSectionsOnboardingDesc(),
@@ -564,7 +586,7 @@ LandingPage.propTypes = {
   userId: PropTypes.number,
   lastWorkshopSurveyUrl: PropTypes.string,
   lastWorkshopSurveyCourse: PropTypes.string,
-  deeperLearningCourseData: PropTypes.array,
+  showDeeperLearning: PropTypes.bool,
   currentYearApplicationId: PropTypes.number,
   hasEnrolledInWorkshop: PropTypes.bool,
   plCoursesInstructed: PropTypes.array,

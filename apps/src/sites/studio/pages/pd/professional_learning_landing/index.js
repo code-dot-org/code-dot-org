@@ -24,7 +24,7 @@ $(() => {
         lastWorkshopSurveyCourse={
           landingPageData['last_workshop_survey_course']
         }
-        deeperLearningCourseData={landingPageData['summarized_plc_enrollments']}
+        showDeeperLearning={landingPageData['show_deeper_learning']}
         currentYearApplicationId={
           landingPageData['current_year_application_id']
         }

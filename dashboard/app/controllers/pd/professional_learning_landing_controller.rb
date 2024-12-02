@@ -12,16 +12,14 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
     )
     last_enrollment_with_pending_survey = enrollments_with_pending_surveys.max_by {|e| e.workshop.ended_at}
 
-    summarized_plc_enrollments = Plc::UserCourseEnrollment.where(user: current_user).map(&:summarize).sort_by do |enrollment|
-      PLC_COURSE_ORDERING.index(enrollment[:courseName]) || PLC_COURSE_ORDERING.size
-    end
+    show_deeper_learning = Plc::UserCourseEnrollment.where(user: current_user).any?
 
     # Link to the certificate
     @landing_page_data = {
       user_id: current_user.id,
       last_workshop_survey_url: last_enrollment_with_pending_survey.try(:exit_survey_url),
       last_workshop_survey_course: last_enrollment_with_pending_survey.try(:workshop).try(:course),
-      summarized_plc_enrollments: summarized_plc_enrollments,
+      show_deeper_learning: show_deeper_learning,
       current_year_application_id: Pd::Application::TeacherApplication.find_by(user: current_user, application_year: Pd::SharedApplicationConstants::APPLICATION_CURRENT_YEAR)&.id,
       has_enrolled_in_workshop: Pd::Enrollment.for_user(current_user).any?,
       pl_courses_started: current_user.pl_units_started,
