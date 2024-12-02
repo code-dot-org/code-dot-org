@@ -1055,18 +1055,12 @@ export default function EnrollForm(props: EnrollFormProps) {
         />
       )}
       {submissionErrorMessage && (
+        // TODO: use mailto link once Alert DSCO accepts jsx
         <Alert
           type="danger"
-          text={
-            <>
-              Sorry, we were unable to enroll you in this workshop:
-              <strong>
-                {' ' + (submissionErrorMessage || 'Unknown error occurred')}
-              </strong>
-              . Please double check your responses, and if the problem persists,
-              contact <a href="mailto:support@code.org">support@code.org</a>.
-            </>
-          }
+          text={`Sorry, we were unable to enroll you in this workshop: ${
+            submissionErrorMessage || 'Unknown error occurred'
+          }. Please double check your responses, and if the problem persists, contact support@code.org`}
         />
       )}
       <div>
