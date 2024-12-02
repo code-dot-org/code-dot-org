@@ -15,6 +15,8 @@ type PopUpButtonProps = {
   id?: string;
 };
 
+const TOP_PADDING = 5;
+
 export const PopUpButton = ({
   children,
   iconName,
@@ -67,7 +69,8 @@ export const PopUpButton = ({
         if (buttonRef && dropdownRef.current) {
           const dropdownRect = dropdownRef.current.getBoundingClientRect();
           const buttonRect = buttonRef.getBoundingClientRect();
-          const top = buttonRect.top + buttonRect.height + 5 + window.scrollY;
+          const top =
+            buttonRect.top + buttonRect.height + TOP_PADDING + window.scrollY;
           const left =
             alignment === 'right'
               ? buttonRect.right - dropdownRect.width + window.scrollX
