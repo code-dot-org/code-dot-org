@@ -180,7 +180,7 @@ const styles = {
  *       LtiFeedbackBanner: false
  *       AssignmentVersionSelector:
  *         courseFilters:
- *         language: fa-IR
+ *           language: fa-IR
  * ```
  */
 const RegionalAssignmentVersionSelector = props => (
