@@ -11,6 +11,7 @@ import {
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
 import TeacherUnitOverview from '@cdo/apps/code-studio/components/progress/TeacherUnitOverview';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import TeacherCourseOverview from '../courseOverview/TeacherCourseOverview';
@@ -151,7 +152,15 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               <ElementOrEmptyPage
                 showNoStudents={studentCount === 0}
                 showNoCurriculumAssigned={!anyStudentHasProgress}
-                element={<SectionProgressSelector isInV1Navigaton={false} />}
+                element={
+                  <GlobalEditionWrapper
+                    component={SectionProgressSelector}
+                    componentId="SectionProgressSelector"
+                    props={{
+                      isInV1Navigaton: false,
+                    }}
+                  />
+                }
               />
             }
           />

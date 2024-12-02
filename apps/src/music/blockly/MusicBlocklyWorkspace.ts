@@ -503,6 +503,10 @@ export default class MusicBlocklyWorkspace {
     }
     this.workspace.clearUndo();
 
+    // Clear the record of the last executed code so that if the new code
+    // happens to match it, we actually execute it.
+    this.lastExecutedEvents = {};
+
     // Ensure that we have an extensible object for Blockly.
     const codeCopy = JSON.parse(JSON.stringify(code));
 

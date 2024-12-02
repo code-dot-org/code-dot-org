@@ -1,0 +1,32 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-11-27T16:35:22.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "<i class=\"fa-duotone fa-solid fa-list-music\"></i> Music is made of patterns that repeat.\n\nLike a catchy hook or a consistent backbeat.\n",
+        "imageUrl": "https://images.code.org/1541ad72a3f441247988691c81408ac6-pattern.jpg",
+        "key": "music-coding-intro-functions-panel-dd6ade9d-4ac1-4787-89e4-4fa347cf3c12"
+      },
+      {
+        "text": "With a function you can replay sounds you like without adding all of the code over and over. ",
+        "imageUrl": "https://images.code.org/4c51fefca18f29fadad762405aec56d2-function1.jpg",
+        "key": "music-coding-intro-functions-panel-4e9d978e-62cf-45c0-a123-21e2c48cc3db"
+      },
+      {
+        "text": "To use the function, call it from the when run block.",
+        "imageUrl": "https://images.code.org/4c51fefca18f29fadad762405aec56d2-function1.jpg",
+        "key": "music-coding-intro-functions-panel-13c54ec6-1d0b-4bdf-89aa-880a117202f8",
+        "layout": "text-bottom-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-11-27 16:48:44 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-27 16:49:33 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

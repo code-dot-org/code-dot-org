@@ -2100,4 +2100,12 @@ FactoryBot.define do
     script_id {1}
     project_id {1}
   end
+
+  factory :aichat_thread do
+    association :user
+    external_id {"1234"}
+    llm_version {"dummy_llm"}
+    unit_id {1}
+    level_id {1}
+  end
 end
