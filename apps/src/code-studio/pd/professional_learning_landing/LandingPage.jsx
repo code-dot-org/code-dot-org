@@ -106,14 +106,12 @@ const getEnrollSucessWorkshopName = () => {
 };
 
 function LandingPage({
+  userId,
   lastWorkshopSurveyUrl,
   lastWorkshopSurveyCourse,
   deeperLearningCourseData,
   currentYearApplicationId,
   hasEnrolledInWorkshop,
-  workshopsAsFacilitator,
-  workshopsAsOrganizer,
-  workshopsAsRegionalPartner,
   plCoursesStarted,
   userPermissions,
   joinedStudentSections,
@@ -127,20 +125,60 @@ function LandingPage({
     getEnrollSucessWorkshopName()
   );
   const [currentTab, setCurrentTab] = useState(availableTabs[0].value);
+  const [workshopsAsFacilitator, setWorkshopsAsFacilitator] = useState([]);
+  const [workshopsAsOrganizer, setWorkshopsAsOrganizer] = useState([]);
+  const [workshopsAsRegionalPartner, setWorkshopsAsRegionalPartner] = useState(
+    []
+  );
+
   const headerContainerStyles =
     availableTabs.length > 1
       ? style.headerWithTabsContainer
       : style.headerWithoutTabsContainer;
-
   const joinedPlSectionsStyling =
     joinedPlSections?.length > 0 ? '' : style.joinedPlSectionsWithNoSections;
 
-  // Load PL section info into redux
+  // Load PL section and applicable workshop info into redux
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(asyncLoadSectionData());
     dispatch(asyncLoadCoteacherInvite());
-  }, [dispatch]);
+
+    if (userPermissions.includes('facilitator')) {
+      const fetchFacilitatorData = async () => {
+        try {
+          const response = await fetch(
+            `/dashboardapi/v1/pd/workshops_as_facilitator_for_pl_page?user_id=${userId}`,
+            {
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+            }
+          );
+
+          if (response.ok) {
+            const jsonData = await response.json();
+            setWorkshopsAsFacilitator(jsonData.workshops_as_facilitator);
+          }
+        } catch (error) {
+          console.error('Error fetching facilitator data:', error);
+        }
+      };
+
+      fetchFacilitatorData();
+    }
+
+    if (userPermissions.includes('program_manager')) {
+      console.log('PROGRAM MANAGER');
+      setWorkshopsAsOrganizer([]);
+    }
+
+    if (userPermissions.includes('workshop_organizer')) {
+      console.log('WORKSHOP ORGANIZER');
+      setWorkshopsAsRegionalPartner([]);
+    }
+  }, [dispatch, userId, userPermissions]);
 
   const RenderLastWorkshopSurveyBanner = () => (
     <TwoColumnActionBlock
@@ -503,14 +541,12 @@ export default connect(state => ({
 }))(LandingPage);
 
 LandingPage.propTypes = {
+  userId: PropTypes.number,
   lastWorkshopSurveyUrl: PropTypes.string,
   lastWorkshopSurveyCourse: PropTypes.string,
   deeperLearningCourseData: PropTypes.array,
   currentYearApplicationId: PropTypes.number,
   hasEnrolledInWorkshop: PropTypes.bool,
-  workshopsAsFacilitator: PropTypes.array,
-  workshopsAsOrganizer: PropTypes.array,
-  workshopsAsRegionalPartner: PropTypes.array,
   plCoursesInstructed: PropTypes.array,
   plCoursesStarted: PropTypes.array,
   userPermissions: PropTypes.arrayOf(PropTypes.string),
