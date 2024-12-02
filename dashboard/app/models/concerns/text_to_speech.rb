@@ -5,8 +5,6 @@ require 'uri'
 require 'redcarpet'
 require 'redcarpet/render_strip'
 
-TTS_BUCKET = 'cdo-tts'.freeze
-
 class TTSSafe < Redcarpet::Render::StripDown
   def block_code(code, language)
     ''
@@ -37,6 +35,7 @@ TTSSafeScrubber.tags = ['xml']
 module TextToSpeech
   extend ActiveSupport::Concern
 
+  TTS_BUCKET = 'cdo-tts'.freeze
   UPDATED_TTS_PATH_DCDO_KEY = 'updated_tts_path'.freeze
 
   # Pull the VOICES out of the SharedConstants (updating the locale keys to

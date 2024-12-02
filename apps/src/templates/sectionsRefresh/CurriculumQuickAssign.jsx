@@ -30,8 +30,10 @@ export default function CurriculumQuickAssign({
   updateSection,
   sectionCourse,
   initialParticipantType,
+  courseFilters,
 }) {
   const [courseOfferings, setCourseOfferings] = useState(null);
+  const [filteredCourseOfferings, setFilteredCourseOfferings] = useState(null);
   const [decideLater, setDecideLater] = useState(false);
   const [marketingAudience, setMarketingAudience] = useState('');
   const [selectedCourseOffering, setSelectedCourseOffering] = useState();
@@ -57,33 +59,102 @@ export default function CurriculumQuickAssign({
   }, [participantType]);
 
   useEffect(() => {
-    if (!courseOfferings) return;
+    // Filter the offerings based on the filters provided
+    const filterOfferings = data => {
+      const languageFilter = courseFilters?.language;
+
+      if (languageFilter) {
+        // Crawl data and remove any courses / versions that are not available
+        // in the requested language.
+        for (const levelInfo of Object.values(data)) {
+          // For each level (elementary, middle, high, hoc, etc), go through the categories
+          for (const [categoryKey, categoryInfo] of Object.entries(levelInfo)) {
+            // Here, we are listing the category (Course, Module, etc)
+            // Now for each course, we go through the versions and filter out only ones
+            // matching the requested language (CS Fundamentals, Express, etc)
+            if (Array.isArray(categoryInfo)) {
+              for (const courseInfo of categoryInfo) {
+                // These will be the course info blocks which are a tuple of the id and then metadata.
+                courseInfo.course_versions = courseInfo.course_versions.filter(
+                  ([_, versionInfo]) =>
+                    versionInfo.locale_codes.includes(languageFilter)
+                );
+              }
+
+              // Truncate any courses within the category that aren't matching our filter
+              levelInfo[categoryKey] = categoryInfo.filter(
+                courseInfo => courseInfo.course_versions.length > 0
+              );
+              // Get rid the category if there are no courses under it anymore
+              if (levelInfo[categoryKey].length === 0) {
+                delete levelInfo[categoryKey];
+              }
+            } else {
+              for (const [key, unitGroupInfo] of Object.entries(categoryInfo)) {
+                for (const courseInfo of unitGroupInfo) {
+                  // These will be the course info blocks which are a tuple of the id and then metadata.
+                  courseInfo.course_versions =
+                    courseInfo.course_versions.filter(([_, versionInfo]) =>
+                      versionInfo.locale_codes.includes(languageFilter)
+                    );
+                }
+
+                // Truncate any courses within the unit that aren't matching our filter
+                categoryInfo[key] = unitGroupInfo.filter(
+                  courseInfo => courseInfo.course_versions.length > 0
+                );
+                // Get rid of the whole unit group if it has no courses
+                if (categoryInfo[key].length === 0) {
+                  delete categoryInfo[key];
+                }
+              }
+            }
+          }
+        }
+      }
+
+      return data;
+    };
+
+    setFilteredCourseOfferings(filterOfferings(courseOfferings));
+  }, [courseOfferings, courseFilters?.language]);
+
+  useEffect(() => {
+    if (!filteredCourseOfferings) return;
     if (!isNewSection) {
       //  TO DO: refactor for efficiency.  Consider using a flatten-like function (maybe in a helper file?)
       const highData = {
-        ...courseOfferings[MARKETING_AUDIENCE.HIGH][curriculumTypes.course],
-        ...courseOfferings[MARKETING_AUDIENCE.HIGH][
-          curriculumTypes.standalone_unit
-        ],
-        ...courseOfferings[MARKETING_AUDIENCE.HIGH][curriculumTypes.module],
-      };
-      const middleData = {
-        ...courseOfferings[MARKETING_AUDIENCE.MIDDLE][curriculumTypes.course],
-        ...courseOfferings[MARKETING_AUDIENCE.MIDDLE][
-          curriculumTypes.standalone_unit
-        ],
-        ...courseOfferings[MARKETING_AUDIENCE.MIDDLE][curriculumTypes.module],
-      };
-      const elementaryData = {
-        ...courseOfferings[MARKETING_AUDIENCE.ELEMENTARY][
+        ...filteredCourseOfferings[MARKETING_AUDIENCE.HIGH][
           curriculumTypes.course
         ],
-        ...courseOfferings[MARKETING_AUDIENCE.ELEMENTARY][
+        ...filteredCourseOfferings[MARKETING_AUDIENCE.HIGH][
+          curriculumTypes.standalone_unit
+        ],
+        ...filteredCourseOfferings[MARKETING_AUDIENCE.HIGH][
           curriculumTypes.module
         ],
       };
-      const hocData = {...courseOfferings[MARKETING_AUDIENCE.HOC]};
-      const plData = {...courseOfferings[MARKETING_AUDIENCE.PL]};
+      const middleData = {
+        ...filteredCourseOfferings[MARKETING_AUDIENCE.MIDDLE][
+          curriculumTypes.course
+        ],
+        ...filteredCourseOfferings[MARKETING_AUDIENCE.MIDDLE][
+          curriculumTypes.standalone_unit
+        ],
+        ...filteredCourseOfferings[MARKETING_AUDIENCE.MIDDLE][
+          curriculumTypes.module
+        ],
+      };
+      const elementaryData = {
+        ...filteredCourseOfferings[MARKETING_AUDIENCE.ELEMENTARY][
+          curriculumTypes.course
+        ],
+        ...filteredCourseOfferings[MARKETING_AUDIENCE.ELEMENTARY][
+          curriculumTypes.module
+        ],
+      };
+      const hocData = {...filteredCourseOfferings[MARKETING_AUDIENCE.HOC]};
+      const plData = {...filteredCourseOfferings[MARKETING_AUDIENCE.PL]};
 
       const determineSelectedCourseOffering = (startingData, audience) => {
         const headers = Object.keys(startingData);
@@ -113,7 +184,7 @@ export default function CurriculumQuickAssign({
     }
     // added all these dependencies given the eslint warning
   }, [
-    courseOfferings,
+    filteredCourseOfferings,
     isNewSection,
     sectionCourse,
     selectedCourseOffering,
@@ -215,10 +286,10 @@ export default function CurriculumQuickAssign({
         marketingAudience={marketingAudience}
         updateMarketingAudience={setMarketingAudience}
       />
-      {marketingAudience && courseOfferings && (
+      {marketingAudience && filteredCourseOfferings && (
         <SelectedQuickAssignTable
           marketingAudience={marketingAudience}
-          courseOfferings={courseOfferings}
+          courseOfferings={filteredCourseOfferings}
           setSelectedCourseOffering={offering => {
             setDecideLater(false);
             setSelectedCourseOffering(offering);
@@ -245,4 +316,5 @@ CurriculumQuickAssign.propTypes = {
   sectionCourse: PropTypes.object,
   isNewSection: PropTypes.bool,
   initialParticipantType: PropTypes.string,
+  courseFilters: PropTypes.object,
 };

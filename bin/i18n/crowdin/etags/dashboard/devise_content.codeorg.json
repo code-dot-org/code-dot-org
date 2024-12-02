@@ -1,6 +1,6 @@
 {
   "ar-SA": {
-    "/dashboard/devise.yml": "fbc52cb116611e74aad83c622ec6c650"
+    "/dashboard/devise.yml": "fffe6775342b51d4ccaa376c1231d828"
   },
   "az-AZ": {
     "/dashboard/devise.yml": "36d74cfdb344eb7e1fe2f4148023190a"
@@ -27,7 +27,7 @@
     "/dashboard/devise.yml": "5399c759685bf686fc77ee6a2deae8da"
   },
   "de-DE": {
-    "/dashboard/devise.yml": "bfcea129b9cd0a0477f08446d1a20296"
+    "/dashboard/devise.yml": "61629ccf9a4d3044d05a3554530aa459"
   },
   "dv-MV": {
     "/dashboard/devise.yml": "4b31ccdd6b658d745b53539e87b3ab1f"
@@ -42,7 +42,7 @@
     "/dashboard/devise.yml": "f77a25b1e96bb26b0ef04882207a3a49"
   },
   "es-MX": {
-    "/dashboard/devise.yml": "11562ac2220ef2358877a327739086ca"
+    "/dashboard/devise.yml": "ee99f69b5a2659cdcdaf0c8c2fc1ffe4"
   },
   "et-EE": {
     "/dashboard/devise.yml": "d1783db26c3985e2064faa42d4979e0a"
@@ -54,16 +54,16 @@
     "/dashboard/devise.yml": "758742b68bc18ddb9a526eca91da9555"
   },
   "fa-IR": {
-    "/dashboard/devise.yml": "19554f76cca2c8574eba4cf883aa67ed"
+    "/dashboard/devise.yml": "cc82dc7b37feab0ecfe42dc8d91f9921"
   },
   "fi-FI": {
     "/dashboard/devise.yml": "88f361e7e8880c256143cecd4f6d6c03"
   },
   "fil-PH": {
-    "/dashboard/devise.yml": "1c9bf888722d20553469cc15074584d5"
+    "/dashboard/devise.yml": "d0be4b89d4e538ff600b3d46db84ec15"
   },
   "fr-FR": {
-    "/dashboard/devise.yml": "8a72b23ff008b614e235252025029590"
+    "/dashboard/devise.yml": "ca883a1bdcf7da561c4739bc475318eb"
   },
   "ga-IE": {
     "/dashboard/devise.yml": "6e9934b80ea28d44706fc265b20c0abd"
@@ -78,7 +78,7 @@
     "/dashboard/devise.yml": "192c6a6516185117a1a9f18adca17126"
   },
   "hi-IN": {
-    "/dashboard/devise.yml": "8869f118103973ae29de679a95c75949"
+    "/dashboard/devise.yml": "a38e7690a5c8a05c1e5b3a8698da2726"
   },
   "hr-HR": {
     "/dashboard/devise.yml": "a567cf023d82b61959f979aac24282e6"
@@ -90,16 +90,16 @@
     "/dashboard/devise.yml": "499e1c16956cb36db2e16c4806748c3f"
   },
   "id-ID": {
-    "/dashboard/devise.yml": "93b617b2f09d91be771dd9a886f99caf"
+    "/dashboard/devise.yml": "45f148c53e534649c0b262020886b5d8"
   },
   "is-IS": {
     "/dashboard/devise.yml": "3758192babb8061ef1f714716bdc8395"
   },
   "it-IT": {
-    "/dashboard/devise.yml": "77a080305d6b79b0f411b41366ead3f5"
+    "/dashboard/devise.yml": "0f06fd53cdf990510513ef2e068a2b2b"
   },
   "ja-JP": {
-    "/dashboard/devise.yml": "c72b2461db860806aa8239791c691f2f"
+    "/dashboard/devise.yml": "700bc8c3bfb3c0efcc39378507fb6bf6"
   },
   "ka-GE": {
     "/dashboard/devise.yml": "d4da93d01c1e4474f7d914ea9c61bc3e"
@@ -114,7 +114,7 @@
     "/dashboard/devise.yml": "a67164dfb1c18c6d450cba5d32c5fcb6"
   },
   "ko-KR": {
-    "/dashboard/devise.yml": "1f4ac11bf80cbd3a409172c80dd07d4a"
+    "/dashboard/devise.yml": "ec7042d7b9c96ae6aa5a99db711e7742"
   },
   "ku-IQ": {
     "/dashboard/devise.yml": "bcfa9fd0a7cbd2cdc9127120e5b289b4"
@@ -168,7 +168,7 @@
     "/dashboard/devise.yml": "bbad23a18d888478f9970bb77efae3d8"
   },
   "pt-BR": {
-    "/dashboard/devise.yml": "75cab9779d3f512176f7d0d4c69ab5d0"
+    "/dashboard/devise.yml": "ccc86d413309645e134072907029d176"
   },
   "pt-PT": {
     "/dashboard/devise.yml": "db4278e0428503b24dea00e68bef8c07"
@@ -189,7 +189,7 @@
     "/dashboard/devise.yml": "868ef5d74f838b9a85da9265369aa7f4"
   },
   "sk-SK": {
-    "/dashboard/devise.yml": "9fd09ecbfb2d1284c641b78d2cc76887"
+    "/dashboard/devise.yml": "188b196c6d71f5edb1f7df37ca6a5d68"
   },
   "sl-SI": {
     "/dashboard/devise.yml": "ffa66f355fc5e68adca87c3455e50f1d"
@@ -213,7 +213,7 @@
     "/dashboard/devise.yml": "d058669bc9c1e0d990b2c5d84bc8f66a"
   },
   "th-TH": {
-    "/dashboard/devise.yml": "763b0c4b0f95896a6e8d9e47319116ba"
+    "/dashboard/devise.yml": "2e771e7dcf651f38723964ef604aa1e4"
   },
   "tr-TR": {
     "/dashboard/devise.yml": "c0888b62580605a51405198bb67d0b68"
@@ -234,7 +234,7 @@
     "/dashboard/devise.yml": "19b4882c2f2860b3ae01a46bb88cd7ce"
   },
   "zh-TW": {
-    "/dashboard/devise.yml": "955ec5fbc388a9ddddba33c66a62077d"
+    "/dashboard/devise.yml": "b0fe4ddd77a3df40ce288e7c7ff67c12"
   },
   "zu-ZA": {
     "/dashboard/devise.yml": "3544ae2f87c0e4208be3fb12b9943eaa"

@@ -15,6 +15,7 @@ import React, {useState, useEffect} from 'react';
 import {Heading5, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import {
   getSimilarRecommendations,
   getStretchRecommendations,
@@ -39,6 +40,7 @@ const CurriculumCatalog = ({
   isSignedOut,
   isTeacher,
   curriculaTaught,
+  forceTranslated,
   ...props
 }) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
@@ -309,6 +311,7 @@ const CurriculumCatalog = ({
         filteredCurricula={filteredCurricula}
         setFilteredCurricula={setFilteredCurricula}
         isEnglish={isEnglish}
+        forceTranslated={forceTranslated}
         languageNativeName={languageNativeName}
       />
       <div className={style.catalogContentContainer}>
@@ -326,6 +329,32 @@ CurriculumCatalog.propTypes = {
   isSignedOut: PropTypes.bool.isRequired,
   isTeacher: PropTypes.bool.isRequired,
   curriculaTaught: PropTypes.arrayOf(PropTypes.number),
+  forceTranslated: PropTypes.bool,
 };
 
-export default CurriculumCatalog;
+/**
+ * This is a version of the curriculum catalog that is overridable by a regional
+ * configuration.
+ *
+ * This is done via a configuration in, for instance, /config/global_editions/fa.yml
+ * via a paths rule such as:
+ *
+ * ```
+ * pages:
+ *   # Home dashboards
+ *   - path: /
+ *     components:
+ *       LtiFeedbackBanner: false
+ *       CurriculumCatalog:
+ *         forceTranslated: true
+ * ```
+ */
+const RegionalCurriculumCatalog = props => (
+  <GlobalEditionWrapper
+    component={CurriculumCatalog}
+    componentId="CurriculumCatalog"
+    props={props}
+  />
+);
+
+export default RegionalCurriculumCatalog;

@@ -77,6 +77,16 @@ const SECTIONS = [
     },
     course_display_name: 'CSD1-2020',
   },
+  {
+    id: 12,
+    name: 'Period 12',
+    course_offering_id: null,
+    courseVersionId: null,
+    courseVersionName: null,
+    unitName: null,
+    unitSelection: null,
+    course_display_name: null,
+  },
 ];
 
 describe('LessonMaterialsContainer', () => {
@@ -337,6 +347,7 @@ describe('LessonMaterialsContainer', () => {
       value: mockLessonData,
       response: new Response(),
     });
+    store.dispatch(selectSection(12));
     await act(async () => {
       renderDefault(true);
     });

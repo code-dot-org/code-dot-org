@@ -271,6 +271,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
             onSubmit={onMessageSend}
             onSuggestPrompts={onSuggestPrompts}
             messages={messageHistory}
+            waiting={isWaitingForResponse}
           />
         </div>
       </div>
