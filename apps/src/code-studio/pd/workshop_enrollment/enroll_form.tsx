@@ -2,7 +2,7 @@
  * Form to create a workshop enrollment
  */
 import classNames from 'classnames';
-import React, {Fragment, useMemo, useState} from 'react';
+import React, {Fragment, ReactNode, useMemo, useState} from 'react';
 
 import Alert from '@cdo/apps/componentLibrary/alert';
 import {Button} from '@cdo/apps/componentLibrary/button';
@@ -116,10 +116,10 @@ const Label = ({
   errorMessage,
   className = '',
 }: {
-  children?: JSX.Element | JSX.Element[];
-  text?: string | JSX.Element;
+  children?: ReactNode;
+  text?: ReactNode;
   htmlFor?: string;
-  errorMessage?: string | JSX.Element;
+  errorMessage?: ReactNode;
   className?: string;
 }) => (
   <label
