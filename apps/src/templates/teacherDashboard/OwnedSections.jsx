@@ -8,6 +8,7 @@ import {connect} from 'react-redux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import LtiFeedbackBanner from '@cdo/apps/simpleSignUp/lti/feedback/LtiFeedbackBanner';
 import styleConstants from '@cdo/apps/styleConstants';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
@@ -95,7 +96,10 @@ class OwnedSections extends React.Component {
       <div>
         {hasSections && (
           <div>
-            <LtiFeedbackBanner />
+            <GlobalEditionWrapper
+              component={LtiFeedbackBanner}
+              componentId="LtiFeedbackBanner"
+            />
             {this.ownedSectionsTable(false)}
             <div style={styles.buttonContainer}>
               {hiddenSectionIds.length > 0 && (

@@ -14,18 +14,20 @@ interface AiDiffChatFooterProps {
   onSubmit: (msg: string) => void;
   onSuggestPrompts: () => void;
   messages: ChatItem[];
+  waiting: boolean;
 }
 
 const AiDiffChatFooter: React.FC<AiDiffChatFooterProps> = ({
   onSubmit,
   onSuggestPrompts,
   messages,
+  waiting,
 }) => {
   return (
     <div className={style.chatFooter}>
       <UserMessageEditor
         onSubmit={onSubmit}
-        disabled={false}
+        disabled={waiting}
         customPlaceholder={commonI18n.aiDifferentiation_write_message()}
       />
       <div className={style.chatFooterButtons}>

@@ -33,11 +33,11 @@ require 'cdo/shared_constants'
 require 'cdo/shared_constants/curriculum/shared_course_constants'
 require 'ruby-progressbar'
 
-TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
-
 # A sequence of Levels
 class Unit < ApplicationRecord
   self.table_name = 'scripts'
+
+  TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
 
   include ScriptConstants
   include Curriculum::SharedCourseConstants

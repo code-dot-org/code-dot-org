@@ -45,7 +45,11 @@ describe('SectionsSetUpContainer', () => {
   it('renders curriculum quick assign', () => {
     const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
-    expect(wrapper.find('CurriculumQuickAssign').length).to.equal(1);
+    expect(
+      wrapper.find('GlobalEditionWrapper', {
+        componentId: 'CurriculumQuickAssign',
+      }).length
+    ).to.equal(1);
   });
 
   it('renders Child Account Policy Notice for US, student and email sections', () => {
