@@ -1,33 +1,42 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import PropTypes from 'prop-types';
-import React, {useState} from 'react';
+import '@testing-library/jest-dom';
+import React, {useState, ChangeEvent} from 'react';
 
-import TextField from '@cdo/apps/componentLibrary/textField';
+import TextField, {TextFieldProps} from '@cdo/apps/componentLibrary/textField';
 
 describe('Design System - TextField', () => {
-  const renderTextField = props => {
-    const Wrapper = () => {
-      const [value, setValue] = useState(props.value || 'test-textfield');
-      const handleChange = e => {
+  const renderTextField = (props: Partial<TextFieldProps>) => {
+    const Wrapper: React.FC = () => {
+      const [value, setValue] = useState<string>(
+        props.value || 'test-textfield'
+      );
+      const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setValue(e.target.value);
         props.onChange && props.onChange(e);
       };
-      return <TextField {...props} value={value} onChange={handleChange} />;
+      return (
+        <TextField
+          {...props}
+          value={value}
+          name="test-textfield-name"
+          onChange={handleChange}
+        />
+      );
     };
 
-    Wrapper.propTypes = {
-      value: PropTypes.string,
-      onChange: PropTypes.func,
-    };
     return render(<Wrapper />);
   };
 
   it('renders with correct label', () => {
     renderTextField({label: 'TextField label'});
 
-    expect(screen.getByDisplayValue('test-textfield')).toBeDefined();
-    expect(screen.getByText('TextField label')).toBeDefined();
+    const textField =
+      screen.getByDisplayValue<HTMLInputElement>('test-textfield');
+    const label = screen.getByText('TextField label');
+
+    expect(textField).toBeInTheDocument();
+    expect(label).toBeInTheDocument();
   });
 
   it('changes value via keyboard input', async () => {
@@ -36,7 +45,8 @@ describe('Design System - TextField', () => {
 
     renderTextField({label: 'TextField label', onChange: spyOnChange});
 
-    const textField = screen.getByDisplayValue('test-textfield');
+    const textField =
+      screen.getByDisplayValue<HTMLInputElement>('test-textfield');
 
     await user.type(textField, '12');
 
@@ -54,7 +64,8 @@ describe('Design System - TextField', () => {
       onChange: spyOnChange,
     });
 
-    const textField = screen.getByDisplayValue('test-textfield');
+    const textField =
+      screen.getByDisplayValue<HTMLInputElement>('test-textfield');
 
     await user.type(textField, '12');
 
@@ -73,7 +84,8 @@ describe('Design System - TextField', () => {
       onChange: spyOnChange,
     });
 
-    const textField = screen.getByDisplayValue('test-textfield');
+    const textField =
+      screen.getByDisplayValue<HTMLInputElement>('test-textfield');
 
     await user.type(textField, '12');
 
