@@ -403,16 +403,16 @@ export default function EnrollForm(props: EnrollFormProps) {
         }
       );
       setIsSubmitting(false);
-      if (response.ok) {
-        const result = await response.json();
-        if (result.workshop_enrollment_status === 'error') {
-          setSubmissionErrorMessage(result.error_message || 'unknown error');
-        }
-        props.onSubmissionComplete(result);
+      const result = await response.json();
+      if (result.workshop_enrollment_status === 'error') {
+        setSubmissionErrorMessage(
+          result.error_message || 'Unknown error occurred'
+        );
       }
+      props.onSubmissionComplete(result);
     } catch (error) {
       setIsSubmitting(false);
-      setSubmissionErrorMessage('unknown error');
+      setSubmissionErrorMessage('Unknown error occurred');
     }
   };
 
@@ -1058,9 +1058,7 @@ export default function EnrollForm(props: EnrollFormProps) {
         // TODO: use mailto link once Alert DSCO accepts jsx
         <Alert
           type="danger"
-          text={`Sorry, we were unable to enroll you in this workshop: ${
-            submissionErrorMessage || 'Unknown error occurred'
-          }. Please double check your responses, and if the problem persists, contact support@code.org`}
+          text={`Sorry, we were unable to enroll you in this workshop: ${submissionErrorMessage}. Please double check your responses, and if the problem persists, contact support@code.org`}
         />
       )}
       <div>
