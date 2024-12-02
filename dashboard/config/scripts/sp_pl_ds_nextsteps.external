@@ -14,24 +14,24 @@ markdown <<MARKDOWN
 <a class="btn btn-large btn-primary" href="LINK" target="blank" rel="noopener noreferrer">Take the survey</a>
 
 
-## Teach Computer Vision in your class
-#### Explore these curriculum options to get started teaching with and about AI in your class right away. 
+## Teach Data Science in your class
+#### Explore these curriculum options to get started teaching Data Science and other computer science topics in your class right away. 
 
 
 <table width="1000px">
 	<tr> 
-    	<th style="font-size: 16px;"> <b>Computer Vision</b> <br><i>(6th-12th grade)</i></th>
-        <th style="font-size: 16px;"> <b>How AI Works</b> <br> <i>(6th-12th grade)</i></th>
+    	<th style="font-size: 16px;"> <b>Data Science</b> <br><i>(9th-12th grade)</i></th>
+        <th style="font-size: 16px;"> <b>Exploring Generative AI</b> <br> <i>(6th-12th grade)</i></th>
         <th style="font-size: 16px;"> <b>AI and Machine Learning</b> <br> <i>(6th - 12th grade)</i></th>
         <th style="font-size: 16px;"> <b>Coding with AI </b> <br><i>(6th-12th grade)</i></th>
     </tr>
     <tr>
     	<td>
-         <a href="https://code.org/curriculum/coding-with-ai" target="blank" rel="noopener noreferrer">Computer Vision</a> 
+         <a href="LINK" target="blank" rel="noopener noreferrer">Data Science</a> 
         	
         </td>
     	<td>
-         <a href="https://code.org/ai/how-ai-works" target="blank" rel="noopener noreferrer">How AI Works</a> 
+         <a href="https://studio.code.org/courses/exploring-gen-ai-2024" target="blank" rel="noopener noreferrer">How AI Works</a> 
         	
         </td>
         <td>
@@ -45,7 +45,7 @@ markdown <<MARKDOWN
       </tr>
      <tr>
     	<td> <img src="https://images.code.org/0063afa44f459510b53f9134aa102e97-image-1712948564386.png" alt="thumnail for Coding with AI" width="268" style="border-radius:10px;  margin: 0px 10px 0px 0px;"></td>
-    	<td> <img src="https://images.code.org/f6516d0acc1efec8ca7abb3508ddcacb-image-1712948949190.png" alt="thumbnail for How AI Works" width="250" style="border-radius:10px;  margin: 0px 10px 00px 0px;"></td>
+    	<td> <img src="https://images.code.org/34728eb27d78c8e495f99f34d2cc802e-image-1732722817641.png" alt="thumbnail for How AI Works" width="260" style="border-radius:10px;  margin: 0px 10px 00px 0px;"></td>
         <td> <img src="https://images.code.org/d20a870ccc6b04da63380d05bce41d06-image-1712949088162.png" alt="thumbnail for AI and Machine Learning" width="250" style="border-radius:10px;  margin: 0px 10px 00px 0px;"></td>
         <td> <img src="https://images.code.org/ecfe601f4fb5d56cf7795244e4d43d4a-image-1712949346590.png" alt="thumbnail for AI and Ethics" width="270" style="border-radius:10px;  margin: 0px 10px 00px 0px;"></td>
       </tr>
@@ -108,5 +108,5 @@ markdown <<MARKDOWN
 <br>
 </p>
 
-![]()
+
 MARKDOWN

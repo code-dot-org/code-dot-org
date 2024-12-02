@@ -1,0 +1,102 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-11-23T17:19:23.000Z",
+  "level_num": "custom",
+  "user_id": 16899,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "long_instructions": "####Repeating Sounds\r\n\r\n1. Add blocks to play **5 drum <i class=\"fa-solid fa-drum\"></i> sounds**.\r\n2. Then press <i class=\"fa-solid fa-play\"></i> Run.",
+    "level_data": {
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "play_sound_at_current_location_simple2",
+                  "movable": false,
+                  "fields": {
+                    "sound": "hiphop/drum_beat_trap"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "id": "$%^Gz~U0$crxYII3(iH*",
+                      "movable": false,
+                      "fields": {
+                        "sound": "hiphop/drum_beat_trap"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "LM:Y9L_=IhNt9CeMS~Wm",
+                          "movable": false,
+                          "fields": {
+                            "sound": "hiphop/drum_beat_trap"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        }
+      },
+      "library": "launch2024",
+      "sounds": {
+        "mc_hammer_u_cant_touch_this": [
+          "break_it_down",
+          "bass_breakdown",
+          "breakdown_oohs"
+        ],
+        "hiphop": [
+          "drum_beat_trap",
+          "piano_fresh"
+        ]
+      },
+      "packId": "rosa_linn_hallelujah"
+    },
+    "validations": [
+      {
+        "key": "music-intro-coding-loops-try_c514cdbe-6925-4db8-bd3b-22cce5639912",
+        "message": "Validation worked!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 3
+          }
+        ]
+      }
+    ],
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-11-23T17:19:23.417+00:00\",\"changed\":[\"cloned from \\\"music-intro-coding-loops-try\\\"\"],\"cloned_from\":\"music-intro-coding-loops-try\"},{\"changed_at\":\"2024-11-26 17:10:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -1,23 +1,34 @@
 import classnames from 'classnames';
 import React, {HTMLAttributes, ReactNode} from 'react';
 
-import {Button} from '@cdo/apps/componentLibrary/button';
-import CloseButton from '@cdo/apps/componentLibrary/closeButton';
+import {Button, ButtonProps} from '@cdo/apps/componentLibrary/button';
+import CustomDialog from '@cdo/apps/componentLibrary/dialog/CustomDialog';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import {BodyTwoText, Heading2} from '@cdo/apps/componentLibrary/typography';
 
 import moduleStyles from './dialog.module.scss';
 
 export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
-  /** Dialog type*/
-  type?: 'noIcon' | 'withIconFill' | 'withIconFA';
   /** Dialog title */
   title?: string;
-  /** Dialog content */
-  content?: string | ReactNode;
-  /** Whether to show secondary button */
-  showSecondaryButton?: boolean;
+  /** Dialog description text */
+  description?: string;
+  /** Dialog Custom content (rendered right after/instead Dialog description)
+   *  If this is rendered when there's no `description` prop - make sure to add `dsco-dialog-description` `id`
+   *  to the element in custom content which will be representing the dialog description. (Used by screen readers
+   *  for dialog's `aria-describedBy` attribute)
+   *  */
+  customContent?: ReactNode;
+  /** Custom bottom content (rendered right after Dialog actions section). */
+  customBottomContent?: ReactNode;
+  /** Dialog primary button props */
+  primaryButtonProps: ButtonProps;
+  /** Dialog secondary button props */
+  secondaryButtonProps?: ButtonProps;
+  /** Dialog color mode */
+  mode?: 'light' | 'dark';
   /** Custom class name */
   className?: string;
   /** Dialog onClose handler */
@@ -26,65 +37,83 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
   closeLabel?: string;
   /** Dialog icon */
   icon?: FontAwesomeV6IconProps;
+  /** Dialog image url */
+  imageUrl?: string;
 }
 
 /**
  * ## Production-ready Checklist:
- *  * (?) implementation of component approved by design team;
- *  * (?) has storybook, covered with stories and documentation;
- *  * (?) has tests: test every prop, every state and every interaction that's js related;
+ *  * (✔) implementation of component approved by design team;
+ *  * (✔) has storybook, covered with stories and documentation;
+ *  * (✔) has tests: test every prop, every state and every interaction that's js related;
  *  * (see apps/test/unit/componentLibrary/DialogTest.tsx)
  *  * (?) passes accessibility checks;
  *
- * ###  Status: ```WIP```
+ * ###  Status: ```Ready for dev```
  *
  * Design System: Dialog Component.
- * Renders Alert to notify user about something.
+ * Renders Dialog window that user should interact with.
  */
 const Dialog: React.FunctionComponent<DialogProps> = ({
   title,
-  type = 'noIcon',
-  content,
-  showSecondaryButton,
+  description,
+  primaryButtonProps,
+  secondaryButtonProps,
+  mode = 'light',
   className,
+  customContent,
+  customBottomContent,
   onClose,
   closeLabel = 'Close dialog',
   icon,
+  imageUrl,
   ...HTMLAttributes
-}) => {
-  return (
-    <div
-      className={classnames(
-        moduleStyles.dialog,
-        moduleStyles[`dialog-${type}`],
-        className
+}) => (
+  <CustomDialog
+    role="alertdialog"
+    className={classnames(
+      moduleStyles.dialog,
+      moduleStyles[`dialog-${mode}`],
+      className
+    )}
+    onClose={onClose}
+    closeLabel={closeLabel}
+    aria-label={title}
+    {...HTMLAttributes}
+  >
+    <div className={moduleStyles.dialogTextSection}>
+      {imageUrl && <img src={imageUrl} alt="Dialog" />}
+      <Heading2>{title}</Heading2>
+      {description && (
+        <BodyTwoText
+          id="dsco-dialog-description"
+          className={moduleStyles.dialogContent}
+        >
+          {description}
+        </BodyTwoText>
       )}
-      {...HTMLAttributes}
-    >
-      <div>
-        {icon && <FontAwesomeV6Icon {...icon} />}
-        <span>{title}</span>
-        <span className={moduleStyles.dialogContent}>{content}</span>
-        {showSecondaryButton && (
-          <Button
-            type="secondary"
-            color="black"
-            text="Secondary Button"
-            onClick={() => null}
-          />
-        )}
-        <Button
-          type="primary"
-          color="purple"
-          text="Primary Button"
-          onClick={() => null}
-        />
-      </div>
-      {onClose && (
-        <CloseButton aria-label={closeLabel} onClick={onClose} size="l" />
-      )}
+      {customContent}
     </div>
-  );
-};
+    <div className={moduleStyles.dialogActionsSection}>
+      {secondaryButtonProps && (
+        <Button
+          type="secondary"
+          color={mode === 'light' ? 'black' : 'white'}
+          {...secondaryButtonProps}
+        />
+      )}
+      <Button
+        type="primary"
+        color={mode === 'light' ? 'purple' : 'white'}
+        {...primaryButtonProps}
+      />
+    </div>
+    {customBottomContent}
+
+    {icon && (
+      <FontAwesomeV6Icon {...icon} className={moduleStyles.dialogIcon} />
+    )}
+  </CustomDialog>
+);
 
 export default Dialog;

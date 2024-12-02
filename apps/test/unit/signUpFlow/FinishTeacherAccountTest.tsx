@@ -1,4 +1,5 @@
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import '@testing-library/jest-dom';
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
@@ -145,7 +146,7 @@ describe('FinishTeacherAccount', () => {
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.go_to_my_account(),
     });
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+    expect(finishSignUpButton).toBeDisabled();
   });
 
   it('leaving the displayName field empty shows error message', () => {
@@ -186,9 +187,9 @@ describe('FinishTeacherAccount', () => {
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.go_to_my_account(),
     });
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+    expect(finishSignUpButton).toBeDisabled();
     fireEvent.click(screen.getAllByRole('checkbox')[0]);
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe(null);
+    expect(finishSignUpButton).not.toBeDisabled();
 
     // Restore the original fetch implementation
     fetchStub.restore();

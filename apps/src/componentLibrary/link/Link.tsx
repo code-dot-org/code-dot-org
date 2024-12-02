@@ -15,7 +15,7 @@ export interface LinkBaseProps extends HTMLAttributes<HTMLAnchorElement> {
   /** Should the link open in a new tab? */
   openInNewTab?: boolean;
   /** Link destination */
-  href: string;
+  href?: string;
   /** Is the link disabled? */
   disabled?: boolean;
   /** Callback for click event */
@@ -47,7 +47,7 @@ export type LinkProps = LinkWithChildren | LinkWithText;
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/LinkTest.jsx)
+ * * (see apps/test/unit/componentLibrary/LinkTest.tsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```

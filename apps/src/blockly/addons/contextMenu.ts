@@ -301,6 +301,12 @@ const registerTheme = function (name: Themes, label: string, weight: number) {
       );
     },
     preconditionFn: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
+      if (Blockly.isJigsaw) {
+        // Jigsaw uses its own custom theme with an extra large font size.
+        // Blocks use hard-coded colors instead of styles, so switching
+        // palettes is not possible.
+        return MenuOptionStates.HIDDEN;
+      }
       if (isCurrentTheme(name, scope.workspace)) {
         return MenuOptionStates.DISABLED;
       } else {

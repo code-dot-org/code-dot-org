@@ -105,6 +105,7 @@ def create_user(name, url: '/api/test/create_user', **user_opts)
     if user_opts[:sso]
       user_opts[:uid] = oauth_uid_for_user_by_name(name)
       user_opts[:sso] = 'google_oauth2' if user_opts[:sso] == 'google'
+      password = nil
     end
 
     # Set the parent email to the user email, if we see it
@@ -169,14 +170,14 @@ And(/^I create( as a parent)? a (young )?student(?: using (clever|google))?( in 
     user_opts[:user_provided_us_state] = true
   end
 
-  cap_start_date = DateTime.parse('2023-07-01T00:00:00MDT').freeze
-
   if after_cap_start
-    user_opts[:created_at] = cap_start_date
+    raise "cap_lockout_date undefined" unless @cap_lockout_date
+    user_opts[:created_at] = @cap_lockout_date
   end
 
   if before_cap_start
-    user_opts[:created_at] = cap_start_date - 1.second
+    raise "cap_start_date undefined" unless @cap_start_date
+    user_opts[:created_at] = @cap_start_date - 1.second
   end
 
   if parent_created
@@ -223,15 +224,14 @@ And(/^I create a teacher( who has never signed in)? named "([^"]*)"( after CAP s
     sign_in_count: sign_in_count,
   }
 
-  # See Cpa::CREATED_AT_EXCEPTION_DATE
-  cap_start_date = DateTime.parse('2024-05-26T00:00:00MDT')
-
   if after_cap_start
-    user_opts[:created_at] = cap_start_date
+    raise "cap_lockout_date undefined" unless @cap_lockout_date
+    user_opts[:created_at] = @cap_lockout_date
   end
 
   if before_cap_start
-    user_opts[:created_at] = cap_start_date - 1.second
+    raise "cap_start_date undefined" unless @cap_start_date
+    user_opts[:created_at] = @cap_start_date - 1.second
   end
 
   create_user(name, **user_opts)
@@ -242,12 +242,14 @@ And(/^I fill in the sign up form with (in)?valid values for "([^"]*)"$/) do |inv
   password = invalid ? 'Short' : 'ExtraLong'
   email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
   age = "10"
+  us_state = "I live somewhere not listed here"
   steps <<~GHERKIN
     And I type "#{name}" into "#user_name"
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "#{age}" option in dropdown "user_age"
+    And I select the "#{us_state}" option in dropdown "user_us_state"
     And I click ".btn.btn-primary" to load a new page
   GHERKIN
 end

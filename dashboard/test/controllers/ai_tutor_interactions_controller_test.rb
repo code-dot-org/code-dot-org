@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class AiTutorInteractionsControllerTest < ActionController::TestCase
+  include LevelsHelper
   setup do
     @student_with_ai_tutor_access = create :student_with_ai_tutor_access
     @student = create :student
@@ -102,11 +103,11 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     assert_creates(AiTutorInteraction) do
       post :create, params: {
         level_id: @script_level.levels.first.id,
-          script_id: @script_level.script.id,
-          type: SharedConstants::AI_TUTOR_TYPES[:VALIDATION],
-          prompt: "Why is my test failing?",
-          status: SharedConstants::AI_TUTOR_INTERACTION_STATUS[:OK],
-          ai_response: "Because your code is wrong.",
+        script_id: @script_level.script.id,
+        type: SharedConstants::AI_TUTOR_TYPES[:VALIDATION],
+        prompt: "Why is my test failing?",
+        status: SharedConstants::AI_TUTOR_INTERACTION_STATUS[:OK],
+        ai_response: "Because your code is wrong.",
       }
       created_ai_tutor_interaction = AiTutorInteraction.last
       assert created_ai_tutor_interaction.project_id == @project_id.to_s
@@ -247,7 +248,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     end
 
     test 'returns project_id and version_id when all lookups succeed' do
-      result = @controller.find_project_and_version_id(@level.id, @script_id)
+      result = @controller.get_project_and_version_id(@level.id, @script_id)
       assert_equal({project_id: @project_id, version_id: @version_id}, result)
     end
 
@@ -255,40 +256,29 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
       @source_data = {status: 'NOT_FOUND'}
       SourceBucket.any_instance.stubs(:get).with(@channel, "main.json").returns(@source_data)
 
-      result = @controller.find_project_and_version_id(@level.id, @script_id)
+      result = @controller.get_project_and_version_id(@level.id, @script_id)
       assert_equal({project_id: @project_id, version_id: nil}, result)
     end
 
     test 'returns nil for project_id and version_id when channel token is not found' do
       ChannelToken.stubs(:find_channel_token).with(@level, @storage_id, @script_id).returns(nil)
 
-      result = @controller.find_project_and_version_id(@level.id, @script_id)
+      result = @controller.get_project_and_version_id(@level.id, @script_id)
       assert_equal({project_id: nil, version_id: nil}, result)
     end
 
     test 'returns nil for project_id and version_id when level is not found' do
       Level.stubs(:find).with(@level.id).returns(nil)
 
-      result = @controller.find_project_and_version_id(@level.id, @script_id)
+      result = @controller.get_project_and_version_id(@level.id, @script_id)
       assert_equal({project_id: nil, version_id: nil}, result)
     end
 
     test 'returns nil for project_id and version_id when user storage ID is not found' do
       @controller.stubs(:storage_id_for_user_id).with(@user.id).returns(nil)
 
-      result = @controller.find_project_and_version_id(@level.id, @script_id)
+      result = @controller.get_project_and_version_id(@level.id, @script_id)
       assert_equal({project_id: nil, version_id: nil}, result)
     end
-  end
-
-  private def stub_project_source_data(channel_id, code: 'fake-code', version_id: 'fake-version-id')
-    fake_main_json = {source: code}.to_json
-    fake_source_data = {
-      status: 'FOUND',
-      body: StringIO.new(fake_main_json),
-      version_id: version_id,
-      last_modified: DateTime.now
-    }
-    SourceBucket.any_instance.stubs(:get).with(channel_id, "main.json").returns(fake_source_data)
   end
 end

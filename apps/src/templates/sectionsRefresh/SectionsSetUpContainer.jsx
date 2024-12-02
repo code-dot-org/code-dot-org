@@ -18,8 +18,10 @@ import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';
 import Notification, {
   NotificationType,
 } from '@cdo/apps/sharedComponents/Notification';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
 import {navigateToHref} from '@cdo/apps/utils';
+import {CapLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import AdvancedSettingToggles from './AdvancedSettingToggles';
@@ -309,7 +311,7 @@ export default function SectionsSetUpContainer({
             type={NotificationType.warning}
             notice=""
             details={i18n.childAccountPolicy_CreateSectionsWarning()}
-            detailsLink="https://support.code.org/hc/en-us/articles/15465423491085-How-do-I-obtain-parent-or-guardian-permission-for-student-accounts"
+            detailsLink={CapLinks.PARENTAL_CONSENT_GUIDE_URL}
             detailsLinkNewWindow={true}
             detailsLinkText={i18n.childAccountPolicy_LearnMore()}
             dismissible={false}
@@ -434,12 +436,17 @@ export default function SectionsSetUpContainer({
         isNewSection={isNewSection}
       />
 
-      <CurriculumQuickAssign
-        id="uitest-curriculum-quick-assign"
-        isNewSection={isNewSection}
-        updateSection={(key, val) => updateSection(0, key, val)}
-        sectionCourse={sections[0].course || consolidatedCourseData()}
-        initialParticipantType={sections[0].participantType}
+      {/* Allow the curriculum quick assign region to be configured per-region */}
+      <GlobalEditionWrapper
+        component={CurriculumQuickAssign}
+        componentId="CurriculumQuickAssign"
+        props={{
+          id: 'uitest-curriculum-quick-assign',
+          isNewSection: isNewSection,
+          updateSection: (key, val) => updateSection(0, key, val),
+          sectionCourse: sections[0].course || consolidatedCourseData(),
+          initialParticipantType: sections[0].participantType,
+        }}
       />
 
       <div

@@ -1072,7 +1072,7 @@
       "CSD web classes freeplay_2024": {
         "display_name": "Add to your Web Page!",
         "bubble_choice_description": "Use your new knowledge to add to the web page you started in a previous challenge level",
-        "long_instructions": "# Add CSS to Your Webpage\r\n\r\nUse your new knowledge and skills to add to the page you started in Lesson 6 about something you enjoy! The webpage you created for that lesson in Level 11, challenge f has been transferred below - add some CSS classes to your webpage!"
+        "long_instructions": "# Add CSS to Your Webpage\r\n\r\nUse your new knowledge and skills to add to the page you started in Lesson 6 about something you enjoy! The webpage you created for that lesson in Level 12, challenge f has been transferred below - add some CSS classes to your webpage!"
       }
     }
   },
@@ -1215,7 +1215,7 @@
     }
   },
   "https://studio.code.org/s/csd2-2024/lessons/13/levels/7": {
-    "long_instructions": "<img src=\"https://images.code.org/f76a2fe814e5bd440ee7cad7093bb5ee-image-1707427214244.png\" style=\"float: right; width: 400px; margin: 10px;\">\n\n# Match The Image\n\nZoie is trying to style her web page to match the layout in the image to the right. Can you help her?\n\n# Do This\n\nNotice the order, size, alignment, and spacing of the items in the example image.\n\n1.  Adjust the order of the items to match the example.\n2.  Identify any items that are aligned differently from others within the container and apply `align-self` to achieve the same effect.\n3.  Determine which items need to be larger than others and appy `flex-grow` to thesee items, consider their proportion in the example image.\n\n_Make sure you adjust the Preview Window to see if you've matched the image example._\n\n<br>\n\n**Don't forget to refer back to your <a href=\"https://docs.google.com/document/d/1lrkMGcPwjKo4g5uyvVfaXpFb7kRUfdtqcsqLRtaDWYM/edit?usp=sharing\">Flexbox Children Cheat Sheet</a> when needed!**\n\n[][0]",
+    "long_instructions": "<img src=\"https://images.code.org/f76a2fe814e5bd440ee7cad7093bb5ee-image-1707427214244.png\" style=\"float: right; width: 400px; margin: 10px;\">\n\n# Match The Image\n\nZoie is trying to style her web page to match the layout in the image to the right. Can you help her?\n\n# Do This\n\nNotice the order, size, alignment, and spacing of the items in the example image.\n\n1.  Adjust the order of the items to match the example.\n2.  Identify any items that are aligned differently from others within the container and apply `align-self` to achieve the same effect.\n3.  Determine which items need to be larger than others and appy `flex-grow` to these items, consider their proportion in the example image.\n\n_Make sure you adjust the Preview Window to see if you've matched the image example._\n\n<br>\n\n**Don't forget to refer back to your <a href=\"https://docs.google.com/document/d/1lrkMGcPwjKo4g5uyvVfaXpFb7kRUfdtqcsqLRtaDWYM/edit?usp=sharing\">Flexbox Children Cheat Sheet</a> when needed!**\n\n[][0]",
     "mini_rubric": {
       "rubric_key_concept": "Correct application and understanding of `order`, `align-self`, and `flex-grow` properties are demonstrated.",
       "rubric_performance_level_1": "Added an `order` property to child paragraphs and images to match the layout of the image in the instructions. Added an `align-self` property to paragraphs to match the image in the instructions. Added a `flex-grow` property to paragraph(s) to match the image in the instructions.",

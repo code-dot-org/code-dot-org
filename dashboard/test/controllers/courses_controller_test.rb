@@ -362,6 +362,18 @@ class CoursesControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
+  test "show: teacher in teacher-local-nav-v2 experiment is redirected to teacher dashboard if course is in a section" do
+    experiment_course = create :unit_group, name: 'experiment-course', family_name: 'experiment-course', version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    experiment_teacher = create :teacher
+    experiment_section = create :section, user: experiment_teacher, unit_group: experiment_course
+    SingleUserExperiment.find_or_create_by!(min_user_id: experiment_teacher.id, name: 'teacher-local-nav-v2')
+
+    sign_in experiment_teacher
+
+    get :show, params: {course_name: 'experiment-course'}
+    assert_redirected_to "/teacher_dashboard/sections/#{experiment_section.id}/courses/#{experiment_course.name}"
+  end
+
   no_access_msg = "You don&#39;t have access to this course."
 
   test_user_gets_response_for :show, response: :redirect, user: nil,

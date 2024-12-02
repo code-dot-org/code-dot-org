@@ -16,6 +16,7 @@
           "buttonText": "Computer Science Basics for K-5 Teachers "
         }
       ],
+      "content_area": "hoc",
       "curriculum_umbrella": "HOC",
       "hideable_lessons": true,
       "is_course": true,
@@ -62,7 +63,7 @@
     },
     "new_name": null,
     "family_name": "hello-world-space",
-    "serialized_at": "2024-11-07 18:57:27 UTC",
+    "serialized_at": "2024-11-19 01:18:47 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

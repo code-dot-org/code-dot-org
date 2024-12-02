@@ -68,6 +68,7 @@ export default function LockoutLinkedAccounts(props) {
       providers: props.providers,
       inSection: props.inSection,
       consentStatus: props.permissionStatus,
+      us_state: props.usState,
     });
   }, [props]);
 
@@ -87,18 +88,21 @@ export default function LockoutLinkedAccounts(props) {
         providers: props.providers,
         inSection: props.inSection,
         consentStatus: parentalPermissionRequest.consent_status,
+        us_state: props.usState,
       });
     } else if (parentalPermissionRequest.parent_email === prevPendingEmail) {
       reportEvent(EVENTS.CAP_SETTINGS_EMAIL_RESEND, {
         providers: props.providers,
         inSection: props.inSection,
         consentStatus: parentalPermissionRequest.consent_status,
+        us_state: props.usState,
       });
     } else {
       reportEvent(EVENTS.CAP_SETTINGS_EMAIL_UPDATED, {
         providers: props.providers,
         inSection: props.inSection,
         consentStatus: parentalPermissionRequest.consent_status,
+        us_state: props.usState,
       });
     }
   }, [action, prevPendingEmail, parentalPermissionRequest, props]);
@@ -303,6 +307,7 @@ LockoutLinkedAccounts.propTypes = {
   userEmail: PropTypes.string,
   inSection: PropTypes.bool,
   providers: PropTypes.arrayOf(PropTypes.string),
+  usState: PropTypes.string,
 };
 
 const styles = {

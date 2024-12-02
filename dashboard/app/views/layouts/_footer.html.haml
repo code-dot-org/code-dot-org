@@ -1,24 +1,21 @@
+- require 'cdo/footer'
+
 - full_width = local_assigns[:full_width]
+- options = {}
+- options[:ge_region] = request.ge_region
+- options[:site] = :studio
+- options[:loc_prefix] = "footer."
+- footer_contents = Cdo::Footer.get_footer_contents(options)
+
 .navbar-static-top.footer
   .container{ style: 'padding: 10px;' + (full_width ? 'margin: auto' : '') }
     .row
       .span9{style: (full_width ? 'max-width: 80%;' : '')}
         - piped_spaces = ' | '
-        - privacy_updated = DCDO.get('recent_privacy_policy_update', nil)
-        - if privacy_updated
-          = link_to t('footer.privacy_updated'), CDO.code_org_url('/privacy'), style: 'color: #ffa400;'
-        - else
-          = link_to t('footer.privacy'), CDO.code_org_url('/privacy'), style: 'color: #ffa400;'
-        .dim!= piped_spaces
-        = link_to t('footer.cookie_notice'), CDO.code_org_url('/cookies')
-        .dim!= piped_spaces
-        = link_to t('footer.translate'), CDO.code_org_url('/translate')
-        .dim!= piped_spaces
-        = link_to t('landing.help_support'), 'https://support.code.org', target: '_blank', id: "support"
-        .dim!= piped_spaces
-        = link_to t('footer.store'), 'https://store.code.org'
-        .dim!= piped_spaces
-        = link_to t('footer.tos_short'), CDO.code_org_url('/tos')
+        - footer_contents.each_with_index do |link, index|
+          = link_to link[:title], link[:url], link.except(:title, :url, :domain)
+          - unless index == footer_contents.length - 1
+            .dim!= piped_spaces
         %br/
 
         %small.fineprint.dim
@@ -35,11 +32,11 @@
             %img{:src=>"/shared/images/Powered-By_logo-horiz_RGB_REV.png", :alt=>"Powered by AWS Cloud Computing", :style=>"width: 190px"}
 
       .span3{style: 'float: right;' + (full_width ? 'width: 140px; margin-left: 0px' : '')}
-
         -# NOTE UTF-8 is not being enforced for this form. Do not modify it to accept
         -# user input or to persist data without also updating it to enforce UTF-8
         = form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;', enforce_utf8: false) do
           = hidden_field_tag :user_return_to, request.url
-          = select_tag :locale, options_for_select(options_for_locale_select(global_edition: true), current_locale_option(global_edition: true)), { onchange: 'this.form.submit();', 'aria-label':  t('footer.locale_select', default: 'Select language') }
+          - options = options_for_select(Cdo::I18n.locale_options, locale)
+          = select_tag :locale, options, { onchange: 'this.form.submit();', 'aria-label':  t('footer.locale_select', default: 'Select language') }
         %small.dim
           !="&copy; Code.org, #{Time.now.year}"
