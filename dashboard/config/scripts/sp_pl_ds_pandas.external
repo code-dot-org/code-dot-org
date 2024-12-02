@@ -20,7 +20,7 @@ markdown <<MARKDOWN
 
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px; "><strong>Teacher Tip:</strong> <b> <i>Use an analogy to help explain Pandas:</i></b> Imagine you have a big box of index cards, each with information written on it (like names, ages, or favorite colors). Pandas is like a digital organizer that helps you neatly arrange those cards into rows and columns. Once everything is organized, you can easily find, sort, and group your cards in any way you want, all with just a few lines of code.
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 16px; "><strong>Teacher Tip:</strong> <b> <i>Use an analogy to help explain Pandas:</i></b> Imagine you have a big box of index cards, each with information written on it (like names, ages, or favorite colors). Pandas is like a digital organizer that helps you neatly arrange those cards into rows and columns. Once everything is organized, you can easily find, sort, and group your cards in any way you want, all with just a few lines of code.
 </p>
 </div>
 
