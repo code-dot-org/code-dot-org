@@ -62,7 +62,7 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
 
   # Returns non-ended workshops the user is a program manager for.
   def workshops_as_program_manager_for_pl_page
-    workshops_as_program_manager = Pd::Workshop.where(regional_partner: User.find(params[:user_id]).regional_partners).
+    workshops_as_program_manager = Pd::Workshop.where(organizer_id: params[:user_id]).
       order_by_scheduled_start.
       reject {|workshop| workshop.state == Pd::Workshop::STATE_ENDED}.
       map(&:summarize_for_my_pl_page)

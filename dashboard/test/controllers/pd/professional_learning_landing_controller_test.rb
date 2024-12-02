@@ -168,7 +168,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
 
   test_redirect_to_sign_in_for :index
 
-  test 'courses are sorted as expected' do
+  test 'show_deeper_learning is true if user is enrolled in PL courses' do
     prepare_scenario
 
     ['Bills Fandom 101', 'ECS Support', 'CSP Support'].each do |name|
@@ -179,7 +179,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
     load_pl_landing @teacher
 
     response = assigns(:landing_page_data)
-    assert_equal(['CSP Support', 'ECS Support', 'Bills Fandom 101'], response[:summarized_plc_enrollments].pluck(:courseName))
+    assert response[:show_deeper_learning]
   end
 
   test 'id of current year application is passed down' do
@@ -341,17 +341,15 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
   test 'workshops_as_program_manager_for_pl_page returns live workshops user is program manager of' do
     prepare_scenario
     program_manager = create :teacher
-    regional_partner = create :regional_partner
-    program_manager.regional_partners << regional_partner
 
     # Check that no workshops are returned if user isn't the program manager for any
     no_workshops_response = get :workshops_as_program_manager_for_pl_page, params: {user_id: program_manager.id}
     assert_equal [], JSON.parse(no_workshops_response.body)['workshops_as_program_manager']
 
     # Set up workshops the user is the program manager of
-    later_workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSD, sessions: [session_on_day(3)], regional_partner: regional_partner
-    earlier_workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSA, sessions: [session_on_day(1)], regional_partner: regional_partner
-    create :pd_workshop, :ended, regional_partner: regional_partner
+    later_workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSD, sessions: [session_on_day(3)], organizer: program_manager
+    earlier_workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSA, sessions: [session_on_day(1)], organizer: program_manager
+    create :pd_workshop, :ended, organizer: program_manager
 
     # Only returns workshops that are not ended (sorted by start date)
     program_manager_workshops_response = get :workshops_as_program_manager_for_pl_page, params: {user_id: program_manager.id}
