@@ -23,68 +23,27 @@ import {isEmail} from '@cdo/apps/util/formatValidation';
 import QuestionsTable from '../form_components/QuestionsTable';
 import {COURSE_BUILD_YOUR_OWN} from '../workshop_dashboard/workshopConstants';
 
+import {
+  ADMIN_COUNSELOR,
+  ADMIN_COUNSELOR_ROLES,
+  ATTENDED_CSF_COURSES_OPTIONS,
+  CSF,
+  CSF_COURSES,
+  CSF_ROLES,
+  CSP,
+  DEEP_DIVE,
+  DESCRIBE_ROLES,
+  DISTRICT,
+  EXPLAIN,
+  GRADES_TEACHING,
+  INTRO,
+  NOT_TEACHING,
+  OTHER,
+  SUBMISSION_STATUSES,
+} from './constants';
+
 import styles from '@cdo/apps/code-studio/pd/workshop_enrollment/EnrollForm/styles.module.scss';
 import textFieldStyles from '@cdo/apps/componentLibrary/textField/textfield.module.scss';
-
-const OTHER = 'Other';
-const NOT_TEACHING = "I'm not teaching this year";
-const EXPLAIN = '(Please Explain):';
-
-const CSF = 'CS Fundamentals';
-const INTRO = SubjectNames.SUBJECT_CSF_101;
-const DISTRICT = SubjectNames.SUBJECT_CSF_DISTRICT;
-const DEEP_DIVE = SubjectNames.SUBJECT_CSF_201;
-
-const CSP = 'CS Principles';
-const ADMIN_COUNSELOR = 'Admin/Counselor Workshop';
-
-const DESCRIBE_ROLES = [
-  'School Administrator',
-  'District Administrator',
-  'Parent',
-  'Other',
-];
-
-const CSF_ROLES = [
-  '',
-  'Classroom Teacher',
-  'Media Specialist',
-  'Tech Teacher',
-  'Librarian',
-].concat(DESCRIBE_ROLES);
-
-const ADMIN_COUNSELOR_ROLES = ['', 'Administrator', 'Counselor', 'Other'];
-
-const GRADES_TEACHING = [
-  'Pre-K',
-  'Kindergarten',
-  'Grade 1',
-  'Grade 2',
-  'Grade 3',
-  'Grade 4',
-  'Grade 5',
-  'Grade 6-8',
-  'Grade 9-12',
-];
-
-const CSF_COURSES = {
-  courseA: 'Course A',
-  courseB: 'Course B',
-  courseC: 'Course C',
-  courseD: 'Course D',
-  courseE: 'Course E',
-  courseF: 'Course F',
-  express: 'Express',
-  courses14_accelerated: 'Courses 1-4 or Accelerated',
-};
-
-const ATTENDED_CSF_COURSES_OPTIONS: Record<string, string> = {
-  'Yes, I attended a CS Fundamentals Intro workshop this academic year.':
-    'Yes, this year',
-  'Yes, I attended a CS Fundamentals Intro workshop in a previous academic year.':
-    'Yes, prior year',
-  'Nope, I have never attended a CS Fundamentals workshop.': 'No',
-};
 
 interface SchoolInfoProps {
   country?: string;
@@ -404,7 +363,9 @@ export default function EnrollForm(props: EnrollFormProps) {
       );
       setIsSubmitting(false);
       const result = await response.json();
-      if (result.workshop_enrollment_status === 'error') {
+      if (
+        result.workshop_enrollment_status === SUBMISSION_STATUSES.UNKNOWN_ERROR
+      ) {
         setSubmissionErrorMessage(
           result.error_message || 'Unknown error occurred'
         );

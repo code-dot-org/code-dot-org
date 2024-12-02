@@ -4,21 +4,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import {SUBMISSION_STATUSES} from './constants';
 import EnrollForm from './enroll_form';
 import {WorkshopPropType, FacilitatorPropType} from './enrollmentConstants';
 import FacilitatorBio from './facilitator_bio';
 import WorkshopDetails from './workshop_details';
-
-const SUBMISSION_STATUSES = {
-  UNSUBMITTED: 'unsubmitted',
-  DUPLICATE: 'duplicate',
-  OWN: 'own',
-  CLOSED: 'closed',
-  FULL: 'full',
-  NOT_FOUND: 'not found',
-  SUCCESS: 'success',
-  UNKNOWN_ERROR: 'error',
-};
 
 export default class WorkshopEnroll extends React.Component {
   static propTypes = {
