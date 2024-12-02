@@ -171,12 +171,32 @@ function LandingPage({
 
     if (userPermissions.includes('program_manager')) {
       console.log('PROGRAM MANAGER');
-      setWorkshopsAsOrganizer([]);
+      setWorkshopsAsRegionalPartner([]);
     }
 
     if (userPermissions.includes('workshop_organizer')) {
-      console.log('WORKSHOP ORGANIZER');
-      setWorkshopsAsRegionalPartner([]);
+      const fetchWorkshopOrganizerData = async () => {
+        try {
+          const response = await fetch(
+            `/dashboardapi/v1/pd/workshops_as_organizer_for_pl_page?user_id=${userId}`,
+            {
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+            }
+          );
+
+          if (response.ok) {
+            const jsonData = await response.json();
+            setWorkshopsAsOrganizer(jsonData.workshops_as_organizer);
+          }
+        } catch (error) {
+          console.error('Error fetching workshop organizer data:', error);
+        }
+      };
+
+      fetchWorkshopOrganizerData();
     }
   }, [dispatch, userId, userPermissions]);
 
