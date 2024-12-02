@@ -13,6 +13,8 @@ the YAML file, there are several categories that provide context. There is the
 `header` and `footer` sections which deal with the top and bottom navigation
 of the site respectively.
 
+### Header
+
 The `header` is subdivided into `top`, `hamburger` and `help` which are the
 different contexts within the header. The `top` is the main navigation links
 that are visible at the top of the page. The `hamburger` is the three lined
@@ -29,6 +31,45 @@ URL (`/home`, etc).
 The `help` links can specify a `level` property that matches the name of a `Game`
 type (e.g. `Spritelab`) where the entries only appear when within that type of
 level. This is used to provide documentation for that particular level.
+
+### Pages and React Components
+
+Then there is a general `pages` section. This lists a set of filters to modify
+different studio pages.
+
+When we navigate to such a page that matches `/global/:region<your mask>`
+the specifically wrapped components will check this table. Their properties
+will get overriden with those specified here.
+
+This table is checked top to bottom to find the last matching route that
+contains a set of properties. Only those properties are considered. If
+`false` is provided instead of a set of properties, the component is not
+rendered at all.
+
+Ex: (config/global/foo.yml)
+
+```
+pages:
+  - path: /
+    components:
+      MarketingAnnouncementComponent: false
+  - path: /home
+    components:
+      MarketingAnnouncementComponent:
+        announcement:
+          body: This is a Farsi only announcement.
+          buttonId: blah
+          buttonText: FARSI!
+          buttonUrl: /
+          id: farsi-announcement
+          image: /shared/images/teacher-announcement/incubator-announcement.png
+          title: foo
+```
+      
+When we navigate to the /global/foo/home page, any MarketingAnnouncement will
+have its normal announcement replaced with the configured one. Whereas, on any
+other page, the '/' would match, and the `false` indicates the component should
+be removed.
 
 ## Tips for Creating a New Region
 
