@@ -127,7 +127,7 @@ function LandingPage({
   const [currentTab, setCurrentTab] = useState(availableTabs[0].value);
   const [workshopsAsFacilitator, setWorkshopsAsFacilitator] = useState([]);
   const [workshopsAsOrganizer, setWorkshopsAsOrganizer] = useState([]);
-  const [workshopsAsRegionalPartner, setWorkshopsAsRegionalPartner] = useState(
+  const [workshopsAsProgramManager, setWorkshopsAsProgramManager] = useState(
     []
   );
 
@@ -195,10 +195,10 @@ function LandingPage({
     }
 
     if (userPermissions.includes('program_manager')) {
-      const fetchRegionalPartnerData = async () => {
+      const fetchProgramManagerWorkshops = async () => {
         try {
           const response = await fetch(
-            `/dashboardapi/v1/pd/workshops_as_organizer_for_pl_page?user_id=${userId}`,
+            `/dashboardapi/v1/pd/workshops_as_program_manager_for_pl_page?user_id=${userId}`,
             {
               method: 'GET',
               headers: {
@@ -209,16 +209,14 @@ function LandingPage({
 
           if (response.ok) {
             const jsonData = await response.json();
-            setWorkshopsAsRegionalPartner(
-              jsonData.workshops_as_regional_partner
-            );
+            setWorkshopsAsProgramManager(jsonData.workshops_as_program_manager);
           }
         } catch (error) {
-          console.error('Error fetching regional partner data:', error);
+          console.error('Error fetching program manager data:', error);
         }
       };
 
-      fetchRegionalPartnerData();
+      fetchProgramManagerWorkshops();
     }
   }, [dispatch, userId, userPermissions]);
 
@@ -510,9 +508,9 @@ function LandingPage({
           <Heading2>{i18n.plSectionsRegionalPartnerResources()}</Heading2>
           {RenderRegionalPartnerResources()}
         </section>
-        {workshopsAsRegionalPartner?.length > 0 && (
+        {workshopsAsProgramManager?.length > 0 && (
           <WorkshopsTable
-            workshops={workshopsAsRegionalPartner}
+            workshops={workshopsAsProgramManager}
             forMyPlPage={true}
             tableHeader={i18n.inProgressAndUpcomingWorkshops()}
           />
