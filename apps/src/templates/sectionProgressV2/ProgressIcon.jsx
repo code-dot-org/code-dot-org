@@ -30,7 +30,7 @@ export default function ProgressIcon({itemType}) {
 
   return (
     // eslint-disable-next-line react/forbid-dom-props
-    <div data-testid="progress-icon">
+    <div data-testid="progress-icon" id={itemType['iconUiTestId']}>
       {itemType['icon'] !== undefined && (
         <FontAwesome
           id={'uitest-' + itemType['icon']}
