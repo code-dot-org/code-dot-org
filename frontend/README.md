@@ -55,6 +55,23 @@ For example, to only run the design system storybook:
 yarn workspace @code-dot-org/design-system-storybook dev
 ```
 
+### Visual Snapshot Testing (Eyes)
+
+The design system uses [Applitools Eyes](https://applitools.com/platform/eyes/) via their [storybook integration](https://applitools.com/tutorials/sdks/storybook) to take a visual snapshot of a storybook component and
+compare it with baselines. Visual snapshots on pull requests and during the CI build.
+
+To run visual snapshots locally, first obtain an [Applitools API Key](https://applitools.com/docs/topics/overview/obtain-api-key.html).
+
+Then, assign the API key to `frontend/.env` in the `APPLITOOLS_API_KEY` key. (If this file does not exist, copy it from `frontend/.env.example`)
+
+To run the visual tests:
+
+```bash
+yarn workspace @code-dot-org/design-system-storybook eyes-storybook
+```
+
+If differences are detected, follow the [baseline update](https://applitools.com/docs/topics/overview/overview-reviewing-test-results.html) guide to resolve.
+
 ## Cleaning
 
 To remove build artifacts, use the following commmand:
