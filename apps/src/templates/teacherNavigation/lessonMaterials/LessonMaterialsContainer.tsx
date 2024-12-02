@@ -238,7 +238,6 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   if (hasEmptyState) {
     return (
       <LessonMaterialsEmptyState
-        showNoCurriculumAssigned={showNoCurriculumAssigned}
         isLegacyScript={isLegacyScript}
         hasNoLessonsWithLessonPlans={hasNoLessonsWithLessonPlans}
       />

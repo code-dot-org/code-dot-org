@@ -12,14 +12,20 @@ import DCDO from '@cdo/apps/dcdo';
 import {ProjectType} from '@cdo/apps/lab2/types';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {SubmissionStatusType} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import trackEvent from '@cdo/apps/util/trackEvent';
 import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './share-dialog.module.scss';
+
+const TEACHER_FEEDBACK_LINK =
+  'https://docs.google.com/forms/d/e/1FAIpQLSflGeMmY_ff1QllJfpTsWGZdn_xv6dKpPba_evTMwfbvG3FTA/viewform';
+const STUDENT_FEEDBACK_LINK =
+  'https://docs.google.com/forms/d/e/1FAIpQLSeZGNgX4wDvA29stId_Q2toofJN-r12zSP8yBMZ-E9KW5XPWg/viewform';
 
 const CopyToClipboardButton: React.FunctionComponent<{
   shareUrl: string;
@@ -165,6 +171,14 @@ const ShareDialog: React.FunctionComponent<{
     );
   }, [channelId, dispatch, projectType]);
 
+  const feedbackLink = useAppSelector(state => {
+    const {userType, signInState} = state.currentUser;
+    if (signInState !== SignInState.SignedIn) return undefined;
+    return userType === 'teacher'
+      ? TEACHER_FEEDBACK_LINK
+      : STUDENT_FEEDBACK_LINK;
+  });
+
   return (
     <FocusLock>
       <div className={moduleStyles.dialogContainer}>
@@ -217,36 +231,49 @@ const ShareDialog: React.FunctionComponent<{
             )}
           </div>
           <div className={moduleStyles.bottom}>
-            {finishUrl ? (
-              <div className={moduleStyles.contents}>
+            {feedbackLink && finishUrl && (
+              <a
+                href={feedbackLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={moduleStyles.feedbackLink}
+                aria-label={i18n.feedbackHeader()}
+              >
+                {i18n.feedbackHeader()}
+              </a>
+            )}
+            <div className={moduleStyles.buttonGroup}>
+              {finishUrl ? (
+                <div className={moduleStyles.contents}>
+                  <Button
+                    ariaLabel={i18n.keepPlaying()}
+                    text={i18n.keepPlaying()}
+                    type="secondary"
+                    color="white"
+                    size="m"
+                    onClick={handleClose}
+                    className={moduleStyles.keepPlayingButton}
+                  />
+                  <LinkButton
+                    ariaLabel={i18n.finish()}
+                    href={finishUrl}
+                    text={i18n.finish()}
+                    type="primary"
+                    color="white"
+                    size="m"
+                  />
+                </div>
+              ) : (
                 <Button
-                  ariaLabel={i18n.keepPlaying()}
-                  text={i18n.keepPlaying()}
-                  type="secondary"
-                  color="white"
-                  size="m"
-                  onClick={handleClose}
-                  className={moduleStyles.keepPlayingButton}
-                />
-                <LinkButton
-                  ariaLabel={i18n.finish()}
-                  href={finishUrl}
-                  text={i18n.finish()}
+                  ariaLabel={i18n.done()}
+                  text={i18n.done()}
                   type="primary"
                   color="white"
                   size="m"
+                  onClick={handleClose}
                 />
-              </div>
-            ) : (
-              <Button
-                ariaLabel={i18n.done()}
-                text={i18n.done()}
-                type="primary"
-                color="white"
-                size="m"
-                onClick={handleClose}
-              />
-            )}
+              )}
+            </div>
           </div>
           <button
             type="button"
