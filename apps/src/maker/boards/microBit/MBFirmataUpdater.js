@@ -6,6 +6,7 @@ import {
 } from '@cdo/apps/maker/boards/microBit/MicroBitConstants';
 import {
   detectMicroBitVersion,
+  flashHexString,
   getFirmataURLByVersion,
 } from '@cdo/apps/maker/boards/microBit/utils';
 import {setMicroBitFirmataUpdatePercent} from '@cdo/apps/maker/microBitRedux';
@@ -42,14 +43,8 @@ export default class MBFirmataUpdater {
     target.on(DAPLink.EVENT_PROGRESS, progress => {
       this.setPercentUpdateComplete(progress);
     });
-
-    // Intel Hex is currently in ASCII, do a 1-to-1 conversion from chars to bytes
-    let hexAsBytes = new TextEncoder().encode(hexStr);
     try {
-      // Push binary to board
-      await target.connect();
-      await target.flash(hexAsBytes);
-      await target.disconnect();
+      await flashHexString(hexStr);
     } catch (error) {
       console.log(error);
       getStore().dispatch(setMicroBitFirmataUpdatePercent(null));

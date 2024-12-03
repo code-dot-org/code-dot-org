@@ -14,6 +14,7 @@ import {
 } from '@cdo/apps/maker/boards/microBit/MicroBitConstants';
 import {
   detectMicroBitVersion,
+  flashHexString,
   getModifiedMicroPythonHexFile,
 } from '@cdo/apps/maker/boards/microBit/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -94,7 +95,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
 
     const transport = new WebUSB(device);
     const target = new DAPLink(transport);
-    // For now, log progress in dev console.
+    // For now, log flash progress in dev console.
     target.on(DAPLink.EVENT_PROGRESS, progress => {
       if (Math.floor(progress * 100) % 10 === 0) {
         console.log('progress percent', Math.floor(progress * 100));
@@ -107,13 +108,8 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
       pythonCode,
       microBitVersion
     );
-    // Intel Hex is currently in ASCII, do a 1-to-1 conversion from chars to bytes
-    const hexAsBytes = new TextEncoder().encode(hexStrWithFiles);
     try {
-      // Push binary to board
-      await target.connect();
-      await target.flash(hexAsBytes);
-      await target.disconnect();
+      await flashHexString(hexStrWithFiles, target);
     } catch (error) {
       console.log(error);
       return Promise.reject('Failed to send MicroPython program to micro:bit.');

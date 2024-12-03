@@ -1,4 +1,5 @@
 import {MicropythonFsHex} from '@microbit/microbit-fs';
+import {DAPLink} from 'dapjs';
 
 import {
   MICROBIT_FIRMATA_V1_URL,
@@ -67,4 +68,13 @@ export const getModifiedMicroPythonHexFile = async (
   });
   microbitFileSystem.write('main.py', pythonCode);
   return microbitFileSystem.getIntelHex();
+};
+
+export const flashHexString = async (hexString: string, target: DAPLink) => {
+  // Intel Hex is currently in ASCII, do a 1-to-1 conversion from chars to bytes
+  const hexAsBytes = new TextEncoder().encode(hexString);
+  // Push binary to board
+  await target.connect();
+  await target.flash(hexAsBytes);
+  await target.disconnect();
 };
