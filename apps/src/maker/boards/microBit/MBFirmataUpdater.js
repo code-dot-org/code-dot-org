@@ -44,7 +44,7 @@ export default class MBFirmataUpdater {
       this.setPercentUpdateComplete(progress);
     });
     try {
-      await flashHexString(hexStr);
+      await flashHexString(hexStr, target);
     } catch (error) {
       console.log(error);
       getStore().dispatch(setMicroBitFirmataUpdatePercent(null));
