@@ -68,7 +68,12 @@ def main
       rescue Net::SMTPSyntaxError, Net::SMTPFatalError => exception
         Honeybadger.notify(
           exception,
-          error_message: "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{exception.message.to_s.strip}'"
+          error_message: "Unable to deliver #{delivery[:id]} because '#{exception.message.to_s.strip}'",
+          context: {
+            delivery: {
+              id: delivery[:id],
+            }
+          }
         )
         deliverer.reset_connection
         sent_at = 0
@@ -86,7 +91,7 @@ def main
       rescue => exception
         Honeybadger.notify(
           exception,
-          error_message: "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{exception.message.to_s.strip}'",
+          error_message: "Unable to deliver #{delivery[:id]} because '#{exception.message.to_s.strip}'",
           context: {
             delivery: {
               id: delivery[:id],
