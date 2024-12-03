@@ -12,6 +12,14 @@ PUZZLE_SOLUTIONS = {
     And I drag block "turnRight" to block "moveForward"
     And I drag block "moveForward" to block "turnRight"
   },
+  "http://studio.code.org/s/allthethings/lessons/10/levels/1" => %{
+    Then I wait for 3 seconds
+    And I wait until element ".submitButton" is visible
+    And I press ".answerbutton[index=1]" using jQuery
+    And I press ".answerbutton[index=0]" using jQuery
+    And I press ".submitButton:first" using jQuery
+    And I wait to see ".modal"
+  },
 }
 
 def append_noautoplay(url_string)
@@ -26,6 +34,7 @@ Then /^I complete the level on "([^"]*)"$/ do |puzzle_url|
   steps %{
     And I am on "#{append_noautoplay(puzzle_url)}"
     And I wait for the lab page to fully load
+    And I close the instructions overlay if it exists
   }
   steps PUZZLE_SOLUTIONS[puzzle_url]
   steps %{
