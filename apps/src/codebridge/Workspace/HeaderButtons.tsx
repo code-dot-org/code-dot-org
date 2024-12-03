@@ -47,7 +47,6 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
       pythonCode = file.contents;
     }
   }
-  console.log('pythonCode', pythonCode);
 
   const feedbackTooltipProps: TooltipProps = {
     text: commonI18n.feedback(),
@@ -79,6 +78,12 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
 
   const onClickFlash = async () => {
     console.log('Flash file onto micro:bit');
+    if (pythonCode.trim().length === 0) {
+      console.log(
+        'There is no python code from main.py to send to the micro:bit'
+      );
+      return;
+    }
     const device = await navigator.usb.requestDevice({
       filters: [{vendorId: MICROBIT_VENDOR_ID, productId: MICROBIT_PRODUCT_ID}],
     });
