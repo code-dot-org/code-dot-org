@@ -4,10 +4,14 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
   Scenario: Teacher can see the local navigation
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to unit "allthethings"
-    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
-    And I wait for 15 seconds
 
-#    And I complete the level on "http://studio.code.org/s/allthethings/lessons/10/levels/1"
+    And I am on "http://studio.code.org/s/allthethings/lessons/10/levels/1?noautoplay=true"
+    Then I wait for 3 seconds
+    And I wait until element ".submitButton" is visible
+    And I press ".answerbutton[index=1]" using jQuery
+    And I press ".answerbutton[index=0]" using jQuery
+    And I press ".submitButton:first" using jQuery
+    And I wait to see ".modal"
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
