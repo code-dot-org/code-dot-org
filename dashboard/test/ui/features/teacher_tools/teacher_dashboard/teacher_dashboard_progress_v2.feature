@@ -133,7 +133,13 @@ Scenario: Teacher can view lesson progress for when students have completed a le
   And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
 
   # Student completes all the levels in lesson 10 (there is only one level)
-  And I complete the level on "http://studio.code.org/s/allthethings/lessons/10/levels/1"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/10/levels/1?noautoplay=true"
+  Then I wait for 3 seconds
+  And I wait until element ".submitButton" is visible
+  And I press ".answerbutton[index=1]" using jQuery
+  And I press ".answerbutton[index=0]" using jQuery
+  And I press ".submitButton:first" using jQuery
+  And I wait to see ".modal"
 
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
