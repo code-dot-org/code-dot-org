@@ -17,6 +17,7 @@ import {
   getModifiedMicroPythonHexFile,
 } from '@cdo/apps/maker/boards/microBit/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {PythonlabLevelProperties} from '@cdo/apps/pythonlab/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 
@@ -29,6 +30,11 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   const {startSource} = useCodebridgeContext();
 
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const enableMicroBit = useAppSelector(
+    state =>
+      (state.lab.levelProperties as PythonlabLevelProperties | undefined)
+        ?.enableMicroBit || false
+  );
   const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
   const dialogControl = useDialogControl();
   const source = useAppSelector(
@@ -111,15 +117,17 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.rightHeaderButtons}>
-      <Button
-        iconRight={{iconStyle: 'solid', iconName: 'arrow-right-from-arc'}}
-        onClick={onClickFlash}
-        size={'xs'}
-        type={'tertiary'}
-        color={buttonColors.white}
-        text={'Send to micro:bit'}
-        className={darkModeStyles.tertiaryButton}
-      />
+      {enableMicroBit && (
+        <Button
+          iconRight={{iconStyle: 'solid', iconName: 'arrow-right-from-arc'}}
+          onClick={onClickFlash}
+          size={'xs'}
+          type={'tertiary'}
+          color={buttonColors.white}
+          text={'Send to micro:bit'}
+          className={darkModeStyles.tertiaryButton}
+        />
+      )}
       <VersionHistoryButton startSource={startSource} />
       {appName === 'pythonlab' && (
         <WithTooltip tooltipProps={feedbackTooltipProps}>
