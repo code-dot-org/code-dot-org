@@ -27,12 +27,7 @@ export type MessageType =
   | 'loaded_pyodide';
 
 export interface PythonlabLevelProperties extends LevelProperties {
-  /**
-   * Initial AI chat customizations set by the level.
-   * For each field, levelbuilders may define the initial default value,
-   * and visibility (hidden, readonly, or editable).
-   * Visibility is not editable by the student; students can only change
-   * the value if it is set to editable.
-   */
+  // An optional level property that determines whether to display the
+  // 'Send to micro:bit' header button on pythonlab levels.
   enableMicroBit?: boolean;
 }
