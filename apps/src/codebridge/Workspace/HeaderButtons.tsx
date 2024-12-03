@@ -80,7 +80,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
     console.log('Flash file onto micro:bit');
     if (pythonCode.trim().length === 0) {
       console.log(
-        'There is no python code from main.py to send to the micro:bit'
+        'There is no python code from main.py to send to the micro:bit.'
       );
       return;
     }
