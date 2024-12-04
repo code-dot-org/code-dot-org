@@ -25,11 +25,24 @@ class ApplicationJobTest < ActiveJob::TestCase
   setup do
     Delayed::Job.delete_all
 
-    @t = Time.now + 1.day
+    @t = Time.now.utc + 1.day
     populate_jobs_table(@t, 'ApplicationJobTest::TestableJob')
     populate_jobs_table(@t, 'Some::OtherJob')
 
-    ActiveJobMetrics.stubs(:now).returns(@t + 1.minute)
+    @t_offset = 10.seconds
+
+    # Time starts 10 seconds after creating our test jobs
+    ActiveJobMetrics.stubs(:_now_utc).returns(@t + @t_offset)
+
+    @expected_my_failed_count = 1
+    @expected_my_waiting_to_start_count = 1
+    @expected_my_pending_count = 2
+    @expected_my_queued_count = 3
+
+    @expected_failed_count = @expected_my_failed_count * 2
+    @expected_waiting_to_start_count = @expected_my_waiting_to_start_count * 2
+    @expected_pending_count = @expected_my_pending_count * 2
+    @expected_queued_count = @expected_my_queued_count * 2
   end
 
   test 'includes ActiveJobMetrics' do
@@ -40,46 +53,74 @@ class ApplicationJobTest < ActiveJob::TestCase
     assert_includes ApplicationJob.ancestors, ActiveJobReporting
   end
 
+  test 'oldest_pending_job_age_s' do
+    assert_in_delta 10.0, ActiveJobMetrics.oldest_pending_job_age_s, 0.01
+    assert_in_delta 10.0, ApplicationJob.new.oldest_pending_job_age_s, 0.01
+  end
+
+  test 'oldest_waiting_to_start_job_age_s' do
+    assert_in_delta 10.0, ActiveJobMetrics.oldest_waiting_to_start_job_age_s, 0.01
+    assert_in_delta 10.0, ApplicationJob.new.oldest_waiting_to_start_job_age_s, 0.01
+  end
+
+  test 'queued_jobs.count returns the number of queued jobs' do
+    assert_equal @expected_queued_count, ActiveJobMetrics.queued_jobs.count
+    assert_equal @expected_my_queued_count, ApplicationJob.new.queued_jobs.count
+  end
+
+  test 'pending_jobs.count returns the number of pending jobs' do
+    assert_equal @expected_pending_count, ActiveJobMetrics.pending_jobs.count
+    assert_equal @expected_my_pending_count, ApplicationJob.new.pending_jobs.count
+  end
+
+  test 'failed_jobs.count returns the number of failed jobs' do
+    assert_equal @expected_failed_count, ActiveJobMetrics.failed_jobs.count
+    assert_equal @expected_my_failed_count, ApplicationJob.new.failed_jobs.count
+  end
+
+  test 'waiting_to_start_jobs.count returns the number of jobs waiting to start' do
+    assert_equal @expected_waiting_to_start_count, ActiveJobMetrics.waiting_to_start_jobs.count
+    assert_equal @expected_my_waiting_to_start_count, ApplicationJob.new.waiting_to_start_jobs.count
+  end
+
   test 'enqueued jobs log several metrics' do
-    expected_my_failed_count = 1
-    expected_my_waiting_to_start_count = 1
-    expected_my_pending_count = 2
-    expected_my_queued_count = 3
-
-    expected_failed_count = expected_my_failed_count * 2
-    expected_waiting_to_start_count = expected_my_waiting_to_start_count * 2
-    expected_pending_count = expected_my_pending_count * 2
-    expected_queued_count = expected_my_queued_count * 2
-
     # Splitting this into two assertions because 'includes_metrics' can't match multiple metrics with the same name.
     Cdo::Metrics.expects(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
       all_of(
         includes_metrics(
-          QueuedJobCount: expected_queued_count,
-          FailedJobCount: expected_failed_count,
-          PendingJobCount: expected_pending_count,
-          WaitingToStartJobCount: expected_waiting_to_start_count,
+          QueuedJobCount: @expected_queued_count,
+          FailedJobCount: @expected_failed_count,
+          PendingJobCount: @expected_pending_count,
+          WaitingToStartJobCount: @expected_waiting_to_start_count,
+          OldestPendingJobAge: @t_offset,
+          OldestWaitingToStartJobAge: @t_offset,
         ),
         includes_dimensions(:QueuedJobCount, Environment: CDO.rack_env),
         includes_dimensions(:FailedJobCount, Environment: CDO.rack_env),
         includes_dimensions(:PendingJobCount, Environment: CDO.rack_env),
-        includes_dimensions(:WaitingToStartJobCount, Environment: CDO.rack_env)
+        includes_dimensions(:WaitingToStartJobCount, Environment: CDO.rack_env),
+        includes_dimensions(:OldestPendingJobAge, Environment: CDO.rack_env),
+        includes_dimensions(:OldestWaitingToStartJobAge, Environment: CDO.rack_env),
       )
     )
     Cdo::Metrics.expects(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
       all_of(
         includes_metrics(
-          QueuedJobCount: expected_my_queued_count,
-          FailedJobCount: expected_my_failed_count,
-          PendingJobCount: expected_my_pending_count,
-          WaitingToStartJobCount: expected_my_waiting_to_start_count,
+          QueuedJobCount: @expected_my_queued_count,
+          FailedJobCount: @expected_my_failed_count,
+          PendingJobCount: @expected_my_pending_count,
+          WaitingToStartJobCount: @expected_my_waiting_to_start_count,
+          OldestPendingJobAge: @t_offset,
+          OldestWaitingToStartJobAge: @t_offset,
         ),
         includes_dimensions(:QueuedJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
         includes_dimensions(:FailedJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
         includes_dimensions(:PendingJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
-        includes_dimensions(:WaitingToStartJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob')
+        includes_dimensions(:WaitingToStartJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
+        includes_dimensions(:OldestPendingJobAge, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
+        includes_dimensions(:OldestWaitingToStartJobAge, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
       )
     )
 
@@ -184,20 +225,5 @@ class ApplicationJobTest < ActiveJob::TestCase
     rescue => exception
       raise exception, 'Expected error to be squashed'
     end
-  end
-
-  test 'pending_jobs.count returns the number of pending jobs' do
-    assert_equal 4, ActiveJobMetrics.pending_jobs.count
-    assert_equal 2, ApplicationJob.new.pending_jobs.count
-  end
-
-  test 'failed_jobs.count returns the number of failed jobs' do
-    assert_equal 2, ActiveJobMetrics.failed_jobs.count
-    assert_equal 1, ApplicationJob.new.failed_jobs.count
-  end
-
-  test 'waiting_to_start_jobs.count returns the number of jobs waiting to start' do
-    assert_equal 2, ActiveJobMetrics.waiting_to_start_jobs.count
-    assert_equal 1, ApplicationJob.new.waiting_to_start_jobs.count
   end
 end

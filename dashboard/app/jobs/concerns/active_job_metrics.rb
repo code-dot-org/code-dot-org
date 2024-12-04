@@ -54,14 +54,14 @@ module ActiveJobMetrics
   end
 
   # Overridable for testing
-  def self.now
-    Time.now
+  def self._now_utc
+    Time.now.utc
   end
 
   # Pending jobs are those that could be run/running schedule-wise, but have either not yet started
   # or have not yet run to completion (success/failure)
   def self.pending_jobs
-    queued_jobs.where('run_at <= ?', now)
+    queued_jobs.where('run_at <= ?', _now_utc)
   end
 
   def pending_jobs
@@ -77,9 +77,25 @@ module ActiveJobMetrics
     mine(ActiveJobMetrics.waiting_to_start_jobs)
   end
 
-  def self.oldest_job_age_in_seconds(jobs)
+  def self.oldest_job_age_s(jobs)
     oldest_job = jobs.order(:created_at).first
-    oldest_job ? Time.now.utc - oldest_job.created_at : 0
+    oldest_job ? _now_utc - oldest_job.created_at : 0
+  end
+
+  def self.oldest_pending_job_age_s
+    oldest_job_age_s(pending_jobs)
+  end
+
+  def oldest_pending_job_age_s
+    ActiveJobMetrics.oldest_job_age_s(pending_jobs)
+  end
+
+  def self.oldest_waiting_to_start_job_age_s
+    oldest_job_age_s(waiting_to_start_jobs)
+  end
+
+  def oldest_waiting_to_start_job_age_s
+    ActiveJobMetrics.oldest_job_age_s(waiting_to_start_jobs)
   end
 
   def self.report_metrics(job_class, dimensions:)
@@ -114,14 +130,14 @@ module ActiveJobMetrics
       },
       {
         metric_name: 'OldestPendingJobAge',
-        value: oldest_job_age_in_seconds(job_class.pending_jobs),
+        value: job_class.oldest_pending_job_age_s,
         unit: 'Seconds',
         timestamp: Time.now,
         dimensions: dimensions,
       },
       {
         metric_name: 'OldestWaitingToStartJobAge',
-        value: oldest_job_age_in_seconds(job_class.waiting_to_start_jobs),
+        value: job_class.oldest_waiting_to_start_job_age_s,
         unit: 'Seconds',
         timestamp: Time.now,
         dimensions: dimensions,
@@ -132,7 +148,6 @@ module ActiveJobMetrics
   end
 
   def self.report_overall_queue_metrics
-    # QueuedJobs > PendingJobs > WaitingToStartJobs
     ActiveJobMetrics.report_metrics(ActiveJobMetrics, dimensions: [{name: 'Environment', value: CDO.rack_env}])
   end
 
