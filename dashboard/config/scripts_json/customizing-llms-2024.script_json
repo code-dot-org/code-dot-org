@@ -5,7 +5,7 @@
     "login_required": false,
     "properties": {
       "content_area": "curriculum_9_12",
-      "curriculum_umbrella": "9-12 Special topics curriculum selfpaced pl",
+      "curriculum_umbrella": "9-12 Special topics",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": "customizing-llms",
-    "serialized_at": "2024-12-02 22:57:58 UTC",
+    "serialized_at": "2024-12-04 16:10:39 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
