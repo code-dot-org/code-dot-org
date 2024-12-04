@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.8.0] ()
+## [0.8.0] (https://github.com/code-dot-org/code-dot-org/pull/62806)
 
 - rewritten `SimpleDropdownTest` in typescript
 - refactored/optimized `SimpleDropdownTest.tsx`
