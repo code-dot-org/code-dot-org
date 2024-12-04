@@ -108,7 +108,7 @@ def main
   rescue ActiveRecord::RecordNotFound => exception
     Honeybadger.notify(
       exception,
-      error_message: "Error reading level for rollup tables."
+      error_message: "Error reading level '#{level.name}' for rollup tables."
     )
     next
   end
