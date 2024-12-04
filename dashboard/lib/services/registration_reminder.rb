@@ -1,7 +1,8 @@
 class Services::RegistrationReminder
   # Don't send reminders for applications created prior to this date
+  # Application year is ahead of the calendar year, so we need to subtract 1 from the first calendar year
   REMINDER_START_DATE = Date.new(
-    Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR.split('-').first.to_i, 7, 4
+    Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR.split('-').first.to_i - 1, 7, 4
   )
 
   # This method sends enrollment reminder emails for any applications that are eligible for a
