@@ -112,43 +112,43 @@ module ActiveJobMetrics
   end
 
   protected def report_job_count
-    report_generic_queue_metrics
+    ActiveJobMetrics.report_generic_queue_metrics
 
     per_job_class_metrics = [
       {
         metric_name: 'QueuedJobCount',
-        value: my(queued_jobs).count,
+        value: my(ActiveJobMetrics.queued_jobs).count,
         unit: 'Count',
         timestamp: Time.now,
-        dimensions: [{name: 'Environment', value: CDO.rack_env}]
+        dimensions: common_dimensions
       },
       {
         metric_name: 'PendingJobCount',
-        value: my(pending_jobs).count,
+        value: my(ActiveJobMetrics.pending_jobs).count,
         unit: 'Count',
         timestamp: Time.now,
         dimensions: common_dimensions
       },
       {
         metric_name: 'FailedJobCount',
-        value: my(failed_jobs).count,
+        value: my(ActiveJobMetrics.failed_jobs).count,
         unit: 'Count',
         timestamp: Time.now,
         dimensions: common_dimensions
       },
       {
         metric_name: 'WaitingToStartJobCount',
-        value: my(waiting_to_start_jobs).count,
+        value: my(ActiveJobMetrics.waiting_to_start_jobs).count,
         unit: 'Count',
         timestamp: Time.now,
-        dimensions: [{name: 'Environment', value: CDO.rack_env}]
+        dimensions: common_dimensions
       },
     ]
 
     # Push metrics
     Cdo::Metrics.push(METRICS_NAMESPACE, per_job_class_metrics)
-  rescue => exception
-    Honeybadger.notify(exception, error_message: 'Error reporting ActiveJob metrics')
+    #rescue => exception
+    #  Honeybadger.notify(exception, error_message: 'Error reporting ActiveJob metrics')
   end
 
   protected def report_wait_time
