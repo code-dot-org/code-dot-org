@@ -167,42 +167,9 @@ Naming/MethodParameterName:
 Naming/VariableNumber:
   Enabled: false
 
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-Performance/CompareWithBlock:
-  Enabled: false
-
-# Offense count: 1
-# This cop supports unsafe autocorrection (--autocorrect-all).
-Performance/MapCompact:
-  Enabled: false
-
-# Offense count: 28
-# This cop supports safe autocorrection (--autocorrect).
-Performance/StringIdentifierArgument:
-  Enabled: false
-
-# Offense count: 19
-# This cop supports unsafe autocorrection (--autocorrect-all).
-Performance/StringInclude:
-  Enabled: false
-
-# Offense count: 161
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: Include.
-# Include: **/test/**/*.rb
-Rails/ActionControllerTestCase:
-  Enabled: false
-
-# Offense count: 1
-# This cop supports unsafe autocorrection (--autocorrect-all).
-Rails/ApplicationJob:
-  Enabled: false
-
 # Offense count: 2
 # This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: Severity.
-Rails/DeprecatedActiveModelErrorsMethods:
+Performance/MapCompact:
   Enabled: false
 
 # Offense count: 458
@@ -221,26 +188,6 @@ Rails/DynamicFindBy:
 Rails/FilePath:
   Enabled: false
 
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: IgnoreWhereFirst.
-Rails/FindBy:
-  Enabled: false
-
-# Offense count: 70
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: AllowedMethods, AllowedPatterns.
-# AllowedMethods: order, limit, select, lock
-Rails/FindEach:
-  Enabled: false
-
-# Offense count: 118
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: numeric, symbolic
-Rails/HttpStatus:
-  Enabled: false
-
 # Offense count: 91
 Rails/I18nLocaleTexts:
   Enabled: false
@@ -250,18 +197,6 @@ Rails/I18nLocaleTexts:
 # Configuration parameters: Include.
 # Include: app/**/*.rb, config/**/*.rb, db/**/*.rb, lib/**/*.rb
 Rails/Output:
-  Enabled: false
-
-# Offense count: 54
-# This cop supports unsafe autocorrection (--autocorrect-all).
-Rails/Pluck:
-  Enabled: false
-
-# Offense count: 1
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: conservative, aggressive
-Rails/PluckInWhere:
   Enabled: false
 
 # Offense count: 4
