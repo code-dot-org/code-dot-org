@@ -114,6 +114,10 @@ describe('StudentSelector', () => {
       </Provider>
     );
 
+    expect(
+      (screen.getByRole('option', {name: 'Me'}) as HTMLOptionElement).selected
+    ).toBe(true);
+
     screen.getByText('bobby hill');
     screen.getByText('daria morgendorffer');
   });
