@@ -1,10 +1,12 @@
 import {render, screen, fireEvent} from '@testing-library/react';
+import '@testing-library/jest-dom';
 import React from 'react';
 
-import {WithPopover} from '@cdo/apps/componentLibrary/popover';
+import * as helpers from '@cdo/apps/componentLibrary/common/helpers';
+import {WithPopover, PopoverProps} from '@cdo/apps/componentLibrary/popover';
 
 describe('Design System - WithPopover Component', () => {
-  const popoverProps = {
+  const popoverProps: PopoverProps = {
     title: 'Test Popover',
     content: 'This is the content of the popover.',
     onClose: jest.fn(),
@@ -23,23 +25,25 @@ describe('Design System - WithPopover Component', () => {
 
   it('shows popover when showPopover is true', () => {
     render(
-      <WithPopover popoverProps={popoverProps} showPopover={true}>
+      <WithPopover popoverProps={popoverProps} showPopover>
         <button type="button">Btn Text</button>
       </WithPopover>
     );
 
-    const popover = screen.getByText('This is the content of the popover.');
-    expect(popover).toBeInTheDocument();
+    const popoverContent = screen.getByText(
+      'This is the content of the popover.'
+    );
+    expect(popoverContent).toBeInTheDocument();
   });
 
   it('updates popover position on window resize', () => {
     const updatePositionSpy = jest.spyOn(
-      require('@cdo/apps/componentLibrary/common/helpers'),
+      helpers,
       'updatePositionedElementStyles'
     );
 
     render(
-      <WithPopover popoverProps={popoverProps} showPopover={true}>
+      <WithPopover popoverProps={popoverProps} showPopover>
         <button type="button">Btn Text</button>
       </WithPopover>
     );

@@ -1,5 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import '@testing-library/jest-dom';
 import React from 'react';
 
 import Popover from '@cdo/apps/componentLibrary/popover';
@@ -58,8 +59,10 @@ describe('Design System - Popover Component', () => {
     const icon = screen.getByTitle('check-icon');
 
     expect(icon).toBeInTheDocument();
-    // eslint-disable-next-line no-restricted-properties
-    expect(icon).toHaveClass('fa-solid', 'fa-check');
+    expect(icon).toHaveAttribute(
+      'class',
+      expect.stringContaining('fa-solid fa-check')
+    );
   });
 
   it('renders with an image when provided', () => {
@@ -75,6 +78,7 @@ describe('Design System - Popover Component', () => {
     const image = screen.getByRole('img', {name: 'Test Image'});
 
     expect(image).toBeInTheDocument();
+    expect(image).toHaveAttribute('src', 'test-image.png');
   });
 
   it('renders with custom buttons when provided', () => {
@@ -87,7 +91,7 @@ describe('Design System - Popover Component', () => {
       />
     );
 
-    const customButton = screen.getByText('Custom Button');
+    const customButton = screen.getByRole('button', {name: 'Custom Button'});
     expect(customButton).toBeInTheDocument();
   });
 });

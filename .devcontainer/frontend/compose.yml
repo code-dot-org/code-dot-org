@@ -1,0 +1,20 @@
+services:
+  frontend:
+    build:
+      context: ../../
+      dockerfile: .devcontainer/frontend/Dockerfile
+      args:
+        # Update 'VARIANT' to pick a Node version: 18, 16, 14.
+        # Append -bullseye or -buster to pin to an OS version.
+        # Use -bullseye variants on local arm64/Apple Silicon.
+        - VARIANT=20-bullseye
+    # Overrides default command so things don't shut down after the process ends.
+    command: sleep infinity
+    volumes:
+      - ../../../:/workspaces
+    ports:
+      - "3000:3000" # Next.js
+      - "6006:6006" # Storybook
+    env_file:
+      - path: ../../frontend/.env
+        required: false

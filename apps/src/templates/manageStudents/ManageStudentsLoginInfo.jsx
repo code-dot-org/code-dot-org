@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -25,6 +24,7 @@ class ManageStudentsLoginInfo extends Component {
     sectionName: PropTypes.string,
     loginType: PropTypes.oneOf(Object.values(SectionLoginType)).isRequired,
     studentData: PropTypes.array,
+    providePrivacyLetter: PropTypes.bool,
     // The prefix for the code studio url in the current environment,
     // e.g. 'https://studio.code.org' or 'http://localhost-studio.code.org:3000'.
     studioUrlPrefix: PropTypes.string,
@@ -34,8 +34,14 @@ class ManageStudentsLoginInfo extends Component {
   };
 
   render() {
-    const {loginType, sectionId, sectionCode, sectionName, studioUrlPrefix} =
-      this.props;
+    const {
+      loginType,
+      sectionId,
+      sectionCode,
+      sectionName,
+      studioUrlPrefix,
+      providePrivacyLetter,
+    } = this.props;
 
     const ParentLetterAndStudentPrivacyInfo = () => (
       <>
@@ -56,7 +62,12 @@ class ManageStudentsLoginInfo extends Component {
       </>
     );
 
-    let counter = 0;
+    // Keep track of the steps and ensure the string starts with the appropriate
+    // step number (1., 2., 3., and so on)
+    let counter = [0];
+    const renderStep = message => {
+      return message.replace(/^\d./, `${++counter[0]}.`);
+    };
 
     return (
       <div style={styles.explanation}>
@@ -67,16 +78,18 @@ class ManageStudentsLoginInfo extends Component {
         {loginType === SectionLoginType.word && (
           <div>
             <p>{i18n.setUpClassWordIntro()}</p>
-            <p style={styles.listAlign}>{i18n.setUpClassWordPic1()}</p>
+            <p style={styles.listAlign}>
+              {renderStep(i18n.setUpClassWordPic1())}
+            </p>
             <SafeMarkdown
-              markdown={i18n
-                .setUpClassWord2({
+              markdown={renderStep(
+                i18n.setUpClassWord2({
                   printLoginCardLink: teacherDashboardUrl(
                     sectionId,
                     '/login_info'
                   ),
                 })
-                .replace(/^\d./, `${++counter}.`)}
+              )}
             />
             <div style={styles.sublistAlign}>
               <InlineMarkdown markdown={i18n.loginExportInstructions()} />{' '}
@@ -87,24 +100,19 @@ class ManageStudentsLoginInfo extends Component {
                 students={this.props.studentData}
               />
             </div>
-            <GlobalEditionWrapper
-              component={() => (
-                <SafeMarkdown
-                  markdown={i18n
-                    .setUpClass3({
-                      parentLetterLink: teacherDashboardUrl(
-                        sectionId,
-                        '/parent_letter'
-                      ),
-                    })
-                    .replace(/^\d./, `${++counter}.`)}
-                />
-              )}
-              componentId="ClassroomSetUpStep3"
-            />
-            <SafeMarkdown
-              markdown={i18n.setUpClass4().replace(/^\d./, `${++counter}.`)}
-            />
+            {providePrivacyLetter && (
+              <SafeMarkdown
+                markdown={renderStep(
+                  i18n.setUpClass3({
+                    parentLetterLink: teacherDashboardUrl(
+                      sectionId,
+                      '/parent_letter'
+                    ),
+                  })
+                )}
+              />
+            )}
+            <SafeMarkdown markdown={renderStep(i18n.setUpClass4())} />
             <SignInInstructions
               loginType={SectionLoginType.word}
               sectionCode={sectionCode}
@@ -115,14 +123,18 @@ class ManageStudentsLoginInfo extends Component {
         {loginType === SectionLoginType.picture && (
           <div>
             <p>{i18n.setUpClassPicIntro()}</p>
-            <p style={styles.listAlign}>{i18n.setUpClassWordPic1()}</p>
+            <p style={styles.listAlign}>
+              {renderStep(i18n.setUpClassWordPic1())}
+            </p>
             <SafeMarkdown
-              markdown={i18n.setUpClassPic2({
-                printLoginCardLink: teacherDashboardUrl(
-                  sectionId,
-                  '/login_info'
-                ),
-              })}
+              markdown={renderStep(
+                i18n.setUpClassPic2({
+                  printLoginCardLink: teacherDashboardUrl(
+                    sectionId,
+                    '/login_info'
+                  ),
+                })
+              )}
             />
             <div style={styles.sublistAlign}>
               <InlineMarkdown
@@ -137,24 +149,19 @@ class ManageStudentsLoginInfo extends Component {
                 students={this.props.studentData}
               />
             </div>
-            <GlobalEditionWrapper
-              component={() => (
-                <SafeMarkdown
-                  markdown={i18n
-                    .setUpClass3({
-                      parentLetterLink: teacherDashboardUrl(
-                        sectionId,
-                        '/parent_letter'
-                      ),
-                    })
-                    .replace(/^\d./, `${++counter}.`)}
-                />
-              )}
-              componentId="ClassroomSetUpStep3"
-            />
-            <SafeMarkdown
-              markdown={i18n.setUpClass4().replace(/^\d./, `${++counter}.`)}
-            />
+            {providePrivacyLetter && (
+              <SafeMarkdown
+                markdown={renderStep(
+                  i18n.setUpClass3({
+                    parentLetterLink: teacherDashboardUrl(
+                      sectionId,
+                      '/parent_letter'
+                    ),
+                  })
+                )}
+              />
+            )}
+            <SafeMarkdown markdown={renderStep(i18n.setUpClass4())} />
             <SignInInstructions
               loginType={SectionLoginType.picture}
               sectionCode={sectionCode}
@@ -164,47 +171,46 @@ class ManageStudentsLoginInfo extends Component {
         )}
         {loginType === SectionLoginType.email && (
           <div>
-            <p>{i18n.setUpClassEmailIntro()}</p>
+            <p>{renderStep(i18n.setUpClassEmailIntro())}</p>
             <SafeMarkdown
-              markdown={i18n
-                .setUpClassEmail1({
+              markdown={renderStep(
+                i18n.setUpClassEmail1({
                   createAccountLink: `${studioUrlPrefix}/users/sign_up`,
                 })
-                .replace(/^\d./, `${++counter}.`)}
+              )}
             />
             <SafeMarkdown
-              markdown={i18n
-                .setUpClassEmail2({
+              markdown={renderStep(
+                i18n.setUpClassEmail2({
                   joinLink: `${studioUrlPrefix}/join/${sectionCode}`,
                 })
-                .replace(/^\d./, `${++counter}.`)}
-            />
-            <GlobalEditionWrapper
-              component={() => (
-                <SafeMarkdown
-                  markdown={i18n
-                    .setUpClass3({
-                      parentLetterLink: teacherDashboardUrl(
-                        sectionId,
-                        '/parent_letter'
-                      ),
-                    })
-                    .replace(/^\d./, `${++counter}.`)}
-                />
               )}
-              componentId="ClassroomSetUpStep3"
             />
-            <SafeMarkdown
-              markdown={i18n.setUpClass4().replace(/^\d./, `${++counter}.`)}
-            />
+            {providePrivacyLetter && (
+              <SafeMarkdown
+                markdown={renderStep(
+                  i18n.setUpClass3({
+                    parentLetterLink: teacherDashboardUrl(
+                      sectionId,
+                      '/parent_letter'
+                    ),
+                  })
+                )}
+              />
+            )}
+            <SafeMarkdown markdown={renderStep(i18n.setUpClass4())} />
             <SignInInstructions loginType={SectionLoginType.email} />
           </div>
         )}
         {loginType === SectionLoginType.google_classroom && (
           <div>
             <p>{i18n.setUpClassGoogleIntro()}</p>
-            <p style={styles.listAlign}>{i18n.setUpClassGoogle1()}</p>
-            <p style={styles.listAlign}>{i18n.setUpClassGoogle2()}</p>
+            <p style={styles.listAlign}>
+              {renderStep(i18n.setUpClassGoogle1())}
+            </p>
+            <p style={styles.listAlign}>
+              {renderStep(i18n.setUpClassGoogle2())}
+            </p>
             <p>{i18n.setUpClassGoogleFinished()}</p>
             <SignInInstructions loginType={SectionLoginType.google_classroom} />
           </div>
@@ -212,8 +218,12 @@ class ManageStudentsLoginInfo extends Component {
         {loginType === SectionLoginType.clever && (
           <div>
             <p>{i18n.setUpClassCleverIntro()}</p>
-            <p style={styles.listAlign}>{i18n.setUpClassClever1()}</p>
-            <p style={styles.listAlign}>{i18n.setUpClassClever2()}</p>
+            <p style={styles.listAlign}>
+              {renderStep(i18n.setUpClassClever1())}
+            </p>
+            <p style={styles.listAlign}>
+              {renderStep(i18n.setUpClassClever2())}
+            </p>
             <p>{i18n.setUpClassCleverFinished()}</p>
             <SignInInstructions loginType={SectionLoginType.clever} />
           </div>
@@ -221,10 +231,7 @@ class ManageStudentsLoginInfo extends Component {
         {loginType === SectionLoginType.lti_v1 && (
           <LtiLogins sectionProviderName={this.props.sectionProviderName} />
         )}
-        <GlobalEditionWrapper
-          component={ParentLetterAndStudentPrivacyInfo}
-          componentId="ParentLetterAndStudentPrivacyInfo"
-        />
+        {providePrivacyLetter && <ParentLetterAndStudentPrivacyInfo />}
       </div>
     );
   }

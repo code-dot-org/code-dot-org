@@ -4,7 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "content_area": "self_paced_pl_9_12",
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "9-12 Special topics curriculum selfpaced pl",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": "customizing-llms",
-    "serialized_at": "2024-11-19 01:17:16 UTC",
+    "serialized_at": "2024-12-02 22:57:58 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
