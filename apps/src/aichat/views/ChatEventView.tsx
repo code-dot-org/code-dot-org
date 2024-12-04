@@ -57,9 +57,7 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
   const dispatch = useAppDispatch();
 
   if (isChatMessage(event)) {
-    return (
-      <ChatMessage {...event} showProfaneUserMessageToggle={isTeacherView} />
-    );
+    return <ChatMessage {...event} isChatHistoryView={isTeacherView} />;
   }
 
   if (isNotification(event)) {

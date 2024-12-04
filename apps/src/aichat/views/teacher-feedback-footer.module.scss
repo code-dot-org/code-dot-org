@@ -1,0 +1,28 @@
+@import 'color.scss';
+@import 'font.scss';
+@import '@cdo/apps/componentLibrary/typography/typography.module';
+
+.outerContainer {
+  .flaggyContainer {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 4px;
+    justify-content: flex-end;
+    // display: none;
+    // this was doing a hover thing, but that seems to be broken currently.
+    // I think the reason is because the hover used to be
+    // on the outerContainer which was around the container-role
+  }
+
+  &:hover,
+  &:focus {
+    .flaggyContainer {
+      display: flex;
+    }
+  }
+
+  .showAlways {
+    display: flex;
+  }
+}
