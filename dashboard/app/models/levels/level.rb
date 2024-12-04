@@ -97,6 +97,7 @@ class Level < ApplicationRecord
     ai_tutor_available
     offer_browser_tts
     use_secondary_finish_button
+    enable_micro_bit
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
