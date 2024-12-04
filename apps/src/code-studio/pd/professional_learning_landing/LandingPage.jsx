@@ -138,7 +138,7 @@ function LandingPage({
   const joinedPlSectionsStyling =
     joinedPlSections?.length > 0 ? '' : style.joinedPlSectionsWithNoSections;
 
-  // Load PL section and applicable workshop info into redux
+  // Load PL section into redux and fetch applicable workshop info
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(asyncLoadSectionData());
