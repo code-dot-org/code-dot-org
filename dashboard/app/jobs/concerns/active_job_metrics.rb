@@ -53,10 +53,15 @@ module ActiveJobMetrics
     mine(ActiveJobMetrics.queued_jobs)
   end
 
+  # Overridable for testing
+  def self.now
+    Time.now
+  end
+
   # Pending jobs are those that could be run/running schedule-wise, but have either not yet started
   # or have not yet run to completion (success/failure)
   def self.pending_jobs
-    queued_jobs.where('run_at <= ?', Time.now)
+    queued_jobs.where('run_at <= ?', now)
   end
 
   def pending_jobs
