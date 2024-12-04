@@ -1,11 +1,12 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import React from 'react';
+import '@testing-library/jest-dom';
+import React, {ChangeEvent} from 'react';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 
-let dropdownValue;
-let onDropdownChange = value => (dropdownValue = value);
+let dropdownValue = '';
+const onDropdownChange = (value: string) => (dropdownValue = value);
 
 describe('Design System - Dropdown Select Component', () => {
   beforeEach(() => {
@@ -107,7 +108,7 @@ describe('Design System - Dropdown Select Component', () => {
   it('SimpleDropdown - renders with correct text and options, changes selected value on when one is selected', async () => {
     const user = userEvent.setup();
     const spyOnChange = jest.fn();
-    const onChange = e => {
+    const onChange = (e: ChangeEvent<HTMLSelectElement>) => {
       onDropdownChange(e.target.value);
       spyOnChange(e.target.value);
     };
@@ -158,7 +159,7 @@ describe('Design System - Dropdown Select Component', () => {
   it("SimpleDropdown - renders disabled dropdown, doesn't change on click", async () => {
     const user = userEvent.setup();
     const spyOnChange = jest.fn();
-    const onChange = e => {
+    const onChange = (e: ChangeEvent<HTMLSelectElement>) => {
       onDropdownChange(e.target.value);
       spyOnChange(e.target.value);
     };
