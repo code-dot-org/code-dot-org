@@ -1,5 +1,5 @@
 import {MicropythonFsHex} from '@microbit/microbit-fs';
-import {DAPLink} from 'dapjs';
+import {DAPLink, WebUSB} from 'dapjs';
 
 import {
   MICROBIT_FIRMATA_V1_URL,
@@ -8,6 +8,8 @@ import {
   MICROBIT_IDS_V2,
   MICROBIT_MICROPYTHON_V1_URL,
   MICROBIT_MICROPYTHON_V2_URL,
+  MICROBIT_VENDOR_ID,
+  MICROBIT_PRODUCT_ID,
 } from '@cdo/apps/maker/boards/microBit/MicroBitConstants';
 import {MicroBitVersion} from '@cdo/apps/maker/boards/microBit/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -45,13 +47,54 @@ export const getFirmataURLByVersion = (microBitVersion: MicroBitVersion) => {
     : MICROBIT_FIRMATA_V2_URL;
 };
 
+export const flashHexString = async (hexString: string, target: DAPLink) => {
+  // Intel Hex is currently in ASCII, do a 1-to-1 conversion from chars to bytes
+  const hexAsBytes = new TextEncoder().encode(hexString);
+  // Push binary to board
+  await target.connect();
+  await target.flash(hexAsBytes);
+  await target.disconnect();
+};
+
+export const sendPythonCodeToMicroBit = async (pythonCode: string) => {
+  const device = await navigator.usb.requestDevice({
+    filters: [{vendorId: MICROBIT_VENDOR_ID, productId: MICROBIT_PRODUCT_ID}],
+  });
+  const microBitVersion = detectMicroBitVersion(device);
+  if (!microBitVersion) {
+    throw new Error('micro:bit version not detected correctly.');
+  }
+
+  const transport = new WebUSB(device);
+  const target = new DAPLink(transport);
+  // For now, log flash progress in dev console.
+  target.on(DAPLink.EVENT_PROGRESS, progress => {
+    if (Math.floor(progress * 100) % 10 === 0) {
+      console.log('progress percent', Math.floor(progress * 100));
+    }
+    if (progress === 1) {
+      console.log('FLASH COMPLETE');
+    }
+  });
+  const hexStrWithFiles = await getModifiedMicroPythonHexFile(
+    pythonCode,
+    microBitVersion
+  );
+  try {
+    await flashHexString(hexStrWithFiles, target);
+  } catch (error) {
+    console.log(error);
+    return Promise.reject('Failed to send MicroPython program to micro:bit.');
+  }
+};
+
 /* 
 Get modified .hex file that includes: 
 1. An copy of the base MicroPython .hex code file,
 2. A small header which marks a region as a MicroPython script (followed by the length of the script in bytes),
 3. A verbatim copy of user's Python program, complete with comments and any spaces.
 */
-export const getModifiedMicroPythonHexFile = async (
+const getModifiedMicroPythonHexFile = async (
   pythonCode: string,
   microBitVersion: MicroBitVersion
 ) => {
@@ -68,13 +111,4 @@ export const getModifiedMicroPythonHexFile = async (
   });
   microbitFileSystem.write('main.py', pythonCode);
   return microbitFileSystem.getIntelHex();
-};
-
-export const flashHexString = async (hexString: string, target: DAPLink) => {
-  // Intel Hex is currently in ASCII, do a 1-to-1 conversion from chars to bytes
-  const hexAsBytes = new TextEncoder().encode(hexString);
-  // Push binary to board
-  await target.connect();
-  await target.flash(hexAsBytes);
-  await target.disconnect();
 };

@@ -1,4 +1,3 @@
-import {LevelProperties} from '@cdo/apps/lab2/types';
 export interface PyodidePathContent {
   id: number;
   name: string;
@@ -25,9 +24,3 @@ export type MessageType =
   | 'system_error'
   | 'loading_pyodide'
   | 'loaded_pyodide';
-
-export interface PythonlabLevelProperties extends LevelProperties {
-  // An optional level property that determines whether to display the
-  // 'Send to micro:bit' header button on pythonlab levels.
-  enableMicroBit?: boolean;
-}
