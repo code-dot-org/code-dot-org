@@ -5433,6 +5433,7 @@ Studio.paramAsNumber = function (value) {
 };
 
 Studio.adjustScore = function (value) {
+  Studio.scoreText = null;
   Studio.playerScore += value;
 
   Studio.displayFloatingScore(value);

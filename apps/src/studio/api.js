@@ -329,7 +329,13 @@ exports.showDebugInfo = function (value) {
 };
 
 exports.setScoreText = function (id, text) {
-  Studio.queueCmd(id, 'setScoreText', {text: text});
+  if (typeof text === 'number') {
+    Studio.playerScore = text;
+    Studio.scoreText = null;
+  } else {
+    Studio.scoreText = text;
+  }
+  Studio.queueCmd(id, 'displayScore', {});
 };
 
 exports.showCoordinates = function (id) {
