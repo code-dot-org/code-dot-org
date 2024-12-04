@@ -43,8 +43,8 @@ module ActiveJobMetrics
     mine(ActiveJobMetrics.failed_jobs)
   end
 
-  # Queued jobs could include jobs that are scheduled to be run in the future
-  # but aren't valid to start running yet.
+  # Queued jobs includes all jobs that aren't yet complete, including those scheduled
+  # to run in the future, those currently running, and those that are waiting to run
   def self.queued_jobs
     Delayed::Job.where(failed_at: nil)
   end
