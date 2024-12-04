@@ -1,6 +1,8 @@
 class Services::RegistrationReminder
   # Don't send reminders for applications created prior to this date
-  REMINDER_START_DATE = Date.new(2019, 10, 1)
+  REMINDER_START_DATE = Date.new(
+    Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR.split('-').first.to_i, 7, 4
+  )
 
   # This method sends enrollment reminder emails for any applications that are eligible for a
   # reminder.  It is designed to be called repeatedly (e.g. from a cronjob).
