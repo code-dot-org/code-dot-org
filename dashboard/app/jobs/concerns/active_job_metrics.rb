@@ -90,13 +90,6 @@ module ActiveJobMetrics
         timestamp: Time.now,
         dimensions: [{name: 'Environment', value: CDO.rack_env}]
       },
-      {
-        metric_name: 'OldestWorkableJobAge',
-        value: age_in_seconds,
-        unit: 'Seconds',
-        timestamp: Time.now,
-        dimensions: [{name: 'Environment', value: CDO.rack_env}]
-      }
     ]
 
     Cdo::Metrics.push(METRICS_NAMESPACE, generic_metrics)
