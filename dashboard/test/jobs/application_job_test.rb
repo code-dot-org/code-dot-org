@@ -166,12 +166,12 @@ class ApplicationJobTest < ActiveJob::TestCase
     end
   end
 
-  test 'get_pending_job_count returns the number of pending jobs' do
+  test 'pending_jobs.count returns the number of pending jobs' do
     Delayed::Job.expects(:where).with(failed_at: nil).returns(stub(count: 42))
-    assert_equal 42, ApplicationJob.new.get_pending_job_count
+    assert_equal 42, ApplicationJob.new.pending_jobs.count
   end
 
-  test 'get_failed_job_count returns the number of failed jobs' do
+  test 'failed_jobs.count returns the number of failed jobs' do
     failed_jobs_mock = mock('failed_jobs')
     where_mock = mock('where')
 
@@ -179,16 +179,16 @@ class ApplicationJobTest < ActiveJob::TestCase
     where_mock.expects(:not).with(failed_at: nil).returns(failed_jobs_mock)
     failed_jobs_mock.expects(:count).returns(42)
 
-    assert_equal 42, ApplicationJob.new.get_failed_job_count
+    assert_equal 42, ApplicationJob.new.failed_jobs.count
   end
 
-  test 'get_workable_job_count returns the number of workable jobs' do
-    workable_mock = mock('workable_jobs')
+  test 'waiting_to_start_jobs.count returns the number of workable jobs' do
+    workable_mock = mock('waiting_to_start_jobs')
     pending_mock = mock('pending_jobs')
     Delayed::Job.expects(:where).with(failed_at: nil, locked_at: nil).returns(pending_mock)
     pending_mock.expects(:where).with('run_at <= ?', anything).returns(workable_mock)
     workable_mock.expects(:count).returns(42)
 
-    assert_equal 42, ApplicationJob.new.get_workable_job_count
+    assert_equal 42, ApplicationJob.new.waiting_to_start_jobs.count
   end
 end

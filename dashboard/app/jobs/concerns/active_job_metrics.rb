@@ -30,9 +30,17 @@ module ActiveJobMetrics
     ]
   end
 
+  protected def mine(jobs)
+    jobs.where('handler LIKE ?', "%job_class: #{self.class.name}%")
+  end
+
   # Failed jobs are those that have failed at least once.
   def self.failed_jobs
     Delayed::Job.where.not(failed_at: nil)
+  end
+
+  def failed_jobs
+    mine(ActiveJobMetrics.failed_jobs)
   end
 
   # Queued jobs could include jobs that are scheduled to be run in the future
@@ -41,10 +49,18 @@ module ActiveJobMetrics
     Delayed::Job.where(failed_at: nil)
   end
 
+  def queued_jobs
+    mine(ActiveJobMetrics.queued_jobs)
+  end
+
   # Pending jobs are those that could be run/running schedule-wise, but have either not yet started
   # or have not yet run to completion (success/failure)
   def self.pending_jobs
     queued_jobs.where('run_at <= ?', Time.now)
+  end
+
+  def pending_jobs
+    mine(ActiveJobMetrics.pending_jobs)
   end
 
   # Waiting To Start Jobs are those that would be valid to run but are not currently being run (="not locked")
@@ -52,103 +68,74 @@ module ActiveJobMetrics
     pending_jobs.where(locked_at: nil)
   end
 
+  def waiting_to_start_jobs
+    mine(ActiveJobMetrics.waiting_to_start_jobs)
+  end
+
   def self.oldest_job_age_in_seconds(jobs)
     oldest_job = jobs.order(:created_at).first
     oldest_job ? Time.now.utc - oldest_job.created_at : 0
   end
 
-  def self.report_generic_queue_metrics
-    # QueuedJobs > PendingJobs > WaitingToStartJobs
-    generic_metrics = [
+  def self.report_metrics(job_class, dimensions:)
+    metrics = [
       {
         metric_name: 'QueuedJobCount',
-        value: queued_jobs.count,
+        value: job_class.queued_jobs.count,
         unit: 'Count',
         timestamp: Time.now,
-        dimensions: [{name: 'Environment', value: CDO.rack_env}]
+        dimensions: dimensions,
       },
       {
         metric_name: 'PendingJobCount',
-        value: pending_jobs.count,
+        value: job_class.pending_jobs.count,
         unit: 'Count',
         timestamp: Time.now,
-        dimensions: [{name: 'Environment', value: CDO.rack_env}]
+        dimensions: dimensions
       },
       {
         metric_name: 'FailedJobCount',
-        value: failed_jobs.count,
+        value: job_class.failed_jobs.count,
         unit: 'Count',
         timestamp: Time.now,
-        dimensions: [{name: 'Environment', value: CDO.rack_env}]
+        dimensions: dimensions,
       },
       {
         metric_name: 'WaitingToStartJobCount',
-        value: waiting_to_start_jobs.count,
+        value: job_class.waiting_to_start_jobs.count,
         unit: 'Count',
         timestamp: Time.now,
-        dimensions: [{name: 'Environment', value: CDO.rack_env}]
+        dimensions: dimensions,
       },
       {
         metric_name: 'OldestPendingJobAge',
-        value: oldest_job_age_in_seconds(pending_jobs),
+        value: oldest_job_age_in_seconds(job_class.pending_jobs),
         unit: 'Seconds',
         timestamp: Time.now,
-        dimensions: [{name: 'Environment', value: CDO.rack_env}]
+        dimensions: dimensions,
       },
       {
         metric_name: 'OldestWaitingToStartJobAge',
-        value: oldest_job_age_in_seconds(waiting_to_start_jobs),
+        value: oldest_job_age_in_seconds(job_class.waiting_to_start_jobs),
         unit: 'Seconds',
         timestamp: Time.now,
-        dimensions: [{name: 'Environment', value: CDO.rack_env}]
+        dimensions: dimensions,
       },
     ]
 
-    Cdo::Metrics.push(METRICS_NAMESPACE, generic_metrics)
+    Cdo::Metrics.push(METRICS_NAMESPACE, metrics)
   end
 
-  def my(jobs)
-    jobs.where('handler LIKE ?', "%job_class: #{self.class.name}%")
+  def self.report_overall_queue_metrics
+    # QueuedJobs > PendingJobs > WaitingToStartJobs
+    ActiveJobMetrics.report_metrics(ActiveJobMetrics, dimensions: [{name: 'Environment', value: CDO.rack_env}])
   end
 
   protected def report_job_count
-    ActiveJobMetrics.report_generic_queue_metrics
-
-    per_job_class_metrics = [
-      {
-        metric_name: 'QueuedJobCount',
-        value: my(ActiveJobMetrics.queued_jobs).count,
-        unit: 'Count',
-        timestamp: Time.now,
-        dimensions: common_dimensions
-      },
-      {
-        metric_name: 'PendingJobCount',
-        value: my(ActiveJobMetrics.pending_jobs).count,
-        unit: 'Count',
-        timestamp: Time.now,
-        dimensions: common_dimensions
-      },
-      {
-        metric_name: 'FailedJobCount',
-        value: my(ActiveJobMetrics.failed_jobs).count,
-        unit: 'Count',
-        timestamp: Time.now,
-        dimensions: common_dimensions
-      },
-      {
-        metric_name: 'WaitingToStartJobCount',
-        value: my(ActiveJobMetrics.waiting_to_start_jobs).count,
-        unit: 'Count',
-        timestamp: Time.now,
-        dimensions: common_dimensions
-      },
-    ]
-
-    # Push metrics
-    Cdo::Metrics.push(METRICS_NAMESPACE, per_job_class_metrics)
-    #rescue => exception
-    #  Honeybadger.notify(exception, error_message: 'Error reporting ActiveJob metrics')
+    ActiveJobMetrics.report_overall_queue_metrics
+    ActiveJobMetrics.report_metrics(self, dimensions: common_dimensions)
+  rescue => exception
+    Honeybadger.notify(exception, error_message: 'Error reporting ActiveJob metrics')
   end
 
   protected def report_wait_time
