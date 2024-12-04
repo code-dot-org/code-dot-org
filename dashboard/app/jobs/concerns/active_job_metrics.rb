@@ -31,61 +31,73 @@ module ActiveJobMetrics
   end
 
   # Failed jobs are those that have failed at least once.
-  def self.get_failed_jobs
+  def self.failed_jobs
     Delayed::Job.where.not(failed_at: nil)
   end
 
-  def get_my_failed_jobs
-    get_failed_jobs.where('handler LIKE ?', "%job_class: #{self.class.name}%")
-  end
-
-  # Pending jobs are those that have not yet been run.
-  def self.get_pending_jobs
+  # Queued jobs could include jobs that are scheduled to be run in the future
+  # but aren't valid to start running yet.
+  def self.queued_jobs
     Delayed::Job.where(failed_at: nil)
   end
 
-  def get_my_pending_jobs
-    get_pending_jobs.where('handler LIKE ?', "%job_class: #{self.class.name}%")
+  # Pending jobs are those that could be run/running schedule-wise, but have either not yet started
+  # or have not yet run to completion (success/failure)
+  def self.pending_jobs
+    queued_jobs.where('run_at <= ?', Time.now)
   end
 
-  # Workable jobs are those that are not locked and are ready to run.
-  def self.get_workable_jobs
-    Delayed::Job.where(failed_at: nil, locked_at: nil).where('run_at <= ?', Time.now)
+  # Waiting To Start Jobs are those that would be valid to run but are not currently being run (="not locked")
+  def self.waiting_to_start_jobs
+    pending_jobs.where(locked_at: nil)
   end
 
-  def get_my_workable_jobs
-    get_workable_jobs.where('handler LIKE ?', "%job_class: #{self.class.name}%")
+  def self.oldest_job_age_in_seconds(jobs)
+    oldest_job = jobs.order(:created_at).first
+    oldest_job ? Time.now.utc - oldest_job.created_at : 0
   end
 
   def self.report_generic_queue_metrics
-    oldest_job = Delayed::Job.order(:created_at).first
-    age_in_seconds = oldest_job ? Time.now.utc - oldest_job.created_at : 0
-
+    # QueuedJobs > PendingJobs > WaitingToStartJobs
     generic_metrics = [
       {
+        metric_name: 'QueuedJobCount',
+        value: queued_jobs.count,
+        unit: 'Count',
+        timestamp: Time.now,
+        dimensions: [{name: 'Environment', value: CDO.rack_env}]
+      },
+      {
         metric_name: 'PendingJobCount',
-        value: get_pending_jobs.count,
+        value: pending_jobs.count,
         unit: 'Count',
         timestamp: Time.now,
         dimensions: [{name: 'Environment', value: CDO.rack_env}]
       },
       {
         metric_name: 'FailedJobCount',
-        value: get_failed_jobs.count,
+        value: failed_jobs.count,
         unit: 'Count',
         timestamp: Time.now,
         dimensions: [{name: 'Environment', value: CDO.rack_env}]
       },
       {
-        metric_name: 'WorkableJobCount',
-        value: get_workable_jobs.count,
+        metric_name: 'WaitingToStartJobCount',
+        value: waiting_to_start_jobs.count,
         unit: 'Count',
         timestamp: Time.now,
         dimensions: [{name: 'Environment', value: CDO.rack_env}]
       },
       {
-        metric_name: 'OldestJobAge',
-        value: age_in_seconds,
+        metric_name: 'OldestPendingJobAge',
+        value: oldest_job_age_in_seconds(pending_jobs),
+        unit: 'Seconds',
+        timestamp: Time.now,
+        dimensions: [{name: 'Environment', value: CDO.rack_env}]
+      },
+      {
+        metric_name: 'OldestWaitingToStartJobAge',
+        value: oldest_job_age_in_seconds(waiting_to_start_jobs),
         unit: 'Seconds',
         timestamp: Time.now,
         dimensions: [{name: 'Environment', value: CDO.rack_env}]
@@ -93,8 +105,10 @@ module ActiveJobMetrics
     ]
 
     Cdo::Metrics.push(METRICS_NAMESPACE, generic_metrics)
-  rescue => exception
-    Honeybadger.notify(exception, error_message: 'Error reporting ActiveJob metrics')
+  end
+
+  def my(jobs)
+    jobs.where('handler LIKE ?', "%job_class: #{self.class.name}%")
   end
 
   protected def report_job_count
@@ -102,26 +116,33 @@ module ActiveJobMetrics
 
     per_job_class_metrics = [
       {
+        metric_name: 'QueuedJobCount',
+        value: my(queued_jobs).count,
+        unit: 'Count',
+        timestamp: Time.now,
+        dimensions: [{name: 'Environment', value: CDO.rack_env}]
+      },
+      {
         metric_name: 'PendingJobCount',
-        value: get_my_pending_jobs.count,
+        value: my(pending_jobs).count,
         unit: 'Count',
         timestamp: Time.now,
         dimensions: common_dimensions
       },
       {
         metric_name: 'FailedJobCount',
-        value: get_my_failed_jobs.count,
+        value: my(failed_jobs).count,
         unit: 'Count',
         timestamp: Time.now,
         dimensions: common_dimensions
       },
       {
-        metric_name: 'WorkableJobCount',
-        value: get_my_workable_jobs.count,
+        metric_name: 'WaitingToStartJobCount',
+        value: my(waiting_to_start_jobs).count,
         unit: 'Count',
         timestamp: Time.now,
-        dimensions: common_dimensions
-      }
+        dimensions: [{name: 'Environment', value: CDO.rack_env}]
+      },
     ]
 
     # Push metrics
