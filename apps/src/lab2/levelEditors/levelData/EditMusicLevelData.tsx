@@ -88,10 +88,15 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
             ? a.artist.localeCompare(b.artist) || a.name.localeCompare(b.name)
             : 0
         )
-        ?.map(({name, id, artist, bpm}) => ({
-          value: id,
-          text: `[${bpm || DEFAULT_BPM}] ${artist} - ${name}`,
-        })),
+        ?.map(({name, id, artist, bpm, sounds}) => {
+          // Use the pack bpm if present, or the bpm of the first sound that has one.
+          const packTempo =
+            bpm || sounds?.find(sound => sound.bpm)?.bpm || DEFAULT_BPM;
+          return {
+            value: id,
+            text: `[${packTempo}] ${artist} - ${name}`,
+          };
+        }),
     [levelData.library, loadedLibraries]
   );
 
