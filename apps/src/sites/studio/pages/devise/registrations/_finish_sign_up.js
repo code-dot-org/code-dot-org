@@ -41,11 +41,6 @@ let userInRegionalPartnerVariant = experiments.isEnabled(
 );
 
 $(document).ready(() => {
-  analyticsReporter.sendEvent(
-    EVENTS.FINISH_ACCOUNT_PAGE_LOADED,
-    {},
-    PLATFORMS.BOTH
-  );
   const schoolInfoMountPoint = document.getElementById('school-info-inputs');
   let user_type = $('#user_user_type').val();
   init();

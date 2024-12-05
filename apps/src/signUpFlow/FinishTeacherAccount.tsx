@@ -75,7 +75,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
 
     analyticsReporter.sendEvent(
       EVENTS.FINISH_ACCOUNT_PAGE_LOADED,
-      {},
+      {'user type': 'teacher'},
       PLATFORMS.BOTH
     );
 
