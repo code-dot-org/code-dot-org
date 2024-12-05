@@ -330,8 +330,10 @@ exports.showDebugInfo = function (value) {
 
 exports.setScoreText = function (id, text) {
   if (typeof text === 'number') {
-    Studio.playerScore = text;
+    // Resetting the scoreText ensures the new score player score
+    // is used when displayScore updates the play area.
     Studio.scoreText = null;
+    Studio.playerScore = text;
   } else {
     Studio.scoreText = text;
   }
