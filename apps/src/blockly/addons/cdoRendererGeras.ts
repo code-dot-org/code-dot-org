@@ -1,5 +1,4 @@
-import GoogleBlockly from 'blockly/core';
-import {BlockStyle} from 'blockly/core/theme';
+import * as GoogleBlockly from 'blockly/core';
 
 import CdoPathObject from './cdoPathObjectGeras';
 
@@ -9,7 +8,7 @@ export default class CdoRendererGeras extends GoogleBlockly.geras.Renderer {
    * Use our PathObject class instead of the default. Our PathObject has
    * different styles for highlighted and disabled blocks than the geras default.
    */
-  makePathObject(root: SVGElement, style: BlockStyle) {
+  makePathObject(root: SVGElement, style: GoogleBlockly.Theme.BlockStyle) {
     return new CdoPathObject(
       root,
       style,

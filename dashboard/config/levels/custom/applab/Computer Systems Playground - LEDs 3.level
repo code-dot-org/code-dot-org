@@ -74,15 +74,14 @@
       "/courses/csd-2022/guides/counter-patterns-with-event",
       "/maker/setup"
     ],
-    "start_blocks": "var score = 0;\r\nonBoardEvent(buttonA, \"down\", function() {\r\n  score = score + 1;\r\n  // Add in a console print statement below\r\n  \r\n});\r\n",
-    "start_html": "<div id=\"designModeViz\" class=\"appModern\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
+    "start_blocks": "onBoardEvent(buttonA, \"down\", function() {\r\n  // Connect an LED display block below\r\n  \r\n});\r\n\r\n",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-10-01T19:57:18.301+00:00\",\"changed\":[\"cloned from \\\"Computer Systems Playground - LEDs 2\\\"\"],\"cloned_from\":\"Computer Systems Playground - LEDs 2\"},{\"changed_at\":\"2024-10-01 19:57:21 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-01T19:57:18.301+00:00\",\"changed\":[\"cloned from \\\"Computer Systems Playground - LEDs 2\\\"\"],\"cloned_from\":\"Computer Systems Playground - LEDs 2\"},{\"changed_at\":\"2024-10-01 19:57:21 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-02 14:35:22 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-02 15:49:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-02 15:50:26 +0000\",\"changed\":[\"start_blocks\",\"start_html\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-02 15:53:56 +0000\",\"changed\":[\"start_html\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-02 18:16:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 18:49:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 20:52:24 +0000\",\"changed\":[\"start_blocks\",\"start_html\",\"preload_asset_list\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

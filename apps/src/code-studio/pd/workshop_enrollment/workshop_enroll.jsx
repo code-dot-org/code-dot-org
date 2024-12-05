@@ -4,8 +4,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {COURSE_BUILD_YOUR_OWN} from '../workshop_dashboard/workshopConstants';
-
 import EnrollForm from './enroll_form';
 import {WorkshopPropType, FacilitatorPropType} from './enrollmentConstants';
 import FacilitatorBio from './facilitator_bio';
@@ -41,10 +39,6 @@ export default class WorkshopEnroll extends React.Component {
   constructor(props) {
     super(props);
 
-    if (this.props.workshop.course === COURSE_BUILD_YOUR_OWN) {
-      this.skipEnrollForm();
-    }
-
     this.state = {
       workshopEnrollmentStatus:
         this.props.workshop_enrollment_status ||
@@ -52,34 +46,14 @@ export default class WorkshopEnroll extends React.Component {
     };
   }
 
-  skipEnrollForm = () => {
-    const postParams = {
-      user_id: this.props.user_id,
-      first_name: this.props.enrollment.first_name,
-      last_name: this.props.enrollment.last_name,
-      email: this.props.enrollment.email,
-      previous_courses: this.props.previous_courses,
-    };
-    this.submitRequest = $.ajax({
-      method: 'POST',
-      url: `/api/v1/pd/workshops/${this.props.workshop.id}/enrollments`,
-      contentType: 'application/json',
-      data: JSON.stringify(postParams),
-      complete: result => {
-        this.onSubmissionComplete(result);
-      },
-    });
-  };
-
   onSubmissionComplete = result => {
-    if (result.responseJSON) {
+    if (result) {
       this.setState({
-        workshopEnrollmentStatus:
-          result.responseJSON.workshop_enrollment_status,
-        cancelUrl: result.responseJSON.cancel_url,
-        accountExists: result.responseJSON.account_exists,
-        signUpUrl: result.responseJSON.sign_up_url,
-        workshopUrl: result.responseJSON.workshop_url,
+        workshopEnrollmentStatus: result.workshop_enrollment_status,
+        cancelUrl: result.cancel_url,
+        accountExists: result.account_exists,
+        signUpUrl: result.sign_up_url,
+        workshopUrl: result.workshop_url,
       });
     } else {
       this.setState({

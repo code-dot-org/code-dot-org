@@ -24,6 +24,7 @@ class ManageStudentsLoginInfo extends Component {
     sectionName: PropTypes.string,
     loginType: PropTypes.oneOf(Object.values(SectionLoginType)).isRequired,
     studentData: PropTypes.array,
+    providePrivacyLetter: PropTypes.bool,
     // The prefix for the code studio url in the current environment,
     // e.g. 'https://studio.code.org' or 'http://localhost-studio.code.org:3000'.
     studioUrlPrefix: PropTypes.string,
@@ -33,139 +34,17 @@ class ManageStudentsLoginInfo extends Component {
   };
 
   render() {
-    const {loginType, sectionId, sectionCode, sectionName, studioUrlPrefix} =
-      this.props;
+    const {
+      loginType,
+      sectionId,
+      sectionCode,
+      sectionName,
+      studioUrlPrefix,
+      providePrivacyLetter,
+    } = this.props;
 
-    return (
-      <div style={styles.explanation}>
-        <p>{i18n.setUpClass_childAccountPolicyNotice()}</p>
-        {loginType !== SectionLoginType.lti_v1 && (
-          <h2 style={styles.heading}>{i18n.setUpClass()}</h2>
-        )}
-        {loginType === SectionLoginType.word && (
-          <div>
-            <p>{i18n.setUpClassWordIntro()}</p>
-            <p style={styles.listAlign}>{i18n.setUpClassWordPic1()}</p>
-            <SafeMarkdown
-              markdown={i18n.setUpClassWord2({
-                printLoginCardLink: teacherDashboardUrl(
-                  sectionId,
-                  '/login_info'
-                ),
-              })}
-            />
-            <div style={styles.sublistAlign}>
-              <InlineMarkdown markdown={i18n.loginExportInstructions()} />{' '}
-              <LoginExport
-                sectionCode={sectionCode}
-                sectionName={sectionName}
-                sectionLoginType={loginType}
-                students={this.props.studentData}
-              />
-            </div>
-            <SafeMarkdown
-              markdown={i18n.setUpClass3({
-                parentLetterLink: teacherDashboardUrl(
-                  sectionId,
-                  '/parent_letter'
-                ),
-              })}
-            />
-            <p style={styles.listAlign}>{i18n.setUpClass4()}</p>
-            <SignInInstructions
-              loginType={SectionLoginType.word}
-              sectionCode={sectionCode}
-              studioUrlPrefix={studioUrlPrefix}
-            />
-          </div>
-        )}
-        {loginType === SectionLoginType.picture && (
-          <div>
-            <p>{i18n.setUpClassPicIntro()}</p>
-            <p style={styles.listAlign}>{i18n.setUpClassWordPic1()}</p>
-            <SafeMarkdown
-              markdown={i18n.setUpClassPic2({
-                printLoginCardLink: teacherDashboardUrl(
-                  sectionId,
-                  '/login_info'
-                ),
-              })}
-            />
-            <div style={styles.sublistAlign}>
-              <InlineMarkdown
-                markdown={i18n.loginExportInstructions({
-                  articleLink: 'support.code.org',
-                })}
-              />{' '}
-              <LoginExport
-                sectionCode={sectionCode}
-                sectionName={sectionName}
-                sectionLoginType={loginType}
-                students={this.props.studentData}
-              />
-            </div>
-            <SafeMarkdown
-              markdown={i18n.setUpClass3({
-                parentLetterLink: teacherDashboardUrl(
-                  sectionId,
-                  '/parent_letter'
-                ),
-              })}
-            />
-            <p style={styles.listAlign}>{i18n.setUpClass4()}</p>
-            <SignInInstructions
-              loginType={SectionLoginType.picture}
-              sectionCode={sectionCode}
-              studioUrlPrefix={studioUrlPrefix}
-            />
-          </div>
-        )}
-        {loginType === SectionLoginType.email && (
-          <div>
-            <p>{i18n.setUpClassEmailIntro()}</p>
-            <SafeMarkdown
-              markdown={i18n.setUpClassEmail1({
-                createAccountLink: `${studioUrlPrefix}/users/sign_up`,
-              })}
-            />
-            <SafeMarkdown
-              markdown={i18n.setUpClassEmail2({
-                joinLink: `${studioUrlPrefix}/join/${sectionCode}`,
-              })}
-            />
-            <SafeMarkdown
-              markdown={i18n.setUpClass3({
-                parentLetterLink: teacherDashboardUrl(
-                  sectionId,
-                  '/parent_letter'
-                ),
-              })}
-            />
-            <p style={styles.listAlign}>{i18n.setUpClass4()}</p>
-            <SignInInstructions loginType={SectionLoginType.email} />
-          </div>
-        )}
-        {loginType === SectionLoginType.google_classroom && (
-          <div>
-            <p>{i18n.setUpClassGoogleIntro()}</p>
-            <p style={styles.listAlign}>{i18n.setUpClassGoogle1()}</p>
-            <p style={styles.listAlign}>{i18n.setUpClassGoogle2()}</p>
-            <p>{i18n.setUpClassGoogleFinished()}</p>
-            <SignInInstructions loginType={SectionLoginType.google_classroom} />
-          </div>
-        )}
-        {loginType === SectionLoginType.clever && (
-          <div>
-            <p>{i18n.setUpClassCleverIntro()}</p>
-            <p style={styles.listAlign}>{i18n.setUpClassClever1()}</p>
-            <p style={styles.listAlign}>{i18n.setUpClassClever2()}</p>
-            <p>{i18n.setUpClassCleverFinished()}</p>
-            <SignInInstructions loginType={SectionLoginType.clever} />
-          </div>
-        )}
-        {loginType === SectionLoginType.lti_v1 && (
-          <LtiLogins sectionProviderName={this.props.sectionProviderName} />
-        )}
+    const ParentLetterAndStudentPrivacyInfo = () => (
+      <>
         <h2 style={styles.heading}>{i18n.privacyHeading()}</h2>
         <p id="uitest-privacy-text">{i18n.privacyDocExplanation()}</p>
         <DownloadParentLetter
@@ -180,6 +59,179 @@ class ManageStudentsLoginInfo extends Component {
             })}
           />
         </span>
+      </>
+    );
+
+    // Keep track of the steps and ensure the string starts with the appropriate
+    // step number (1., 2., 3., and so on)
+    let counter = [0];
+    const renderStep = message => {
+      return message.replace(/^\d./, `${++counter[0]}.`);
+    };
+
+    return (
+      <div style={styles.explanation}>
+        <p>{i18n.setUpClass_childAccountPolicyNotice()}</p>
+        {loginType !== SectionLoginType.lti_v1 && (
+          <h2 style={styles.heading}>{i18n.setUpClass()}</h2>
+        )}
+        {loginType === SectionLoginType.word && (
+          <div>
+            <p>{i18n.setUpClassWordIntro()}</p>
+            <p style={styles.listAlign}>
+              {renderStep(i18n.setUpClassWordPic1())}
+            </p>
+            <SafeMarkdown
+              markdown={renderStep(
+                i18n.setUpClassWord2({
+                  printLoginCardLink: teacherDashboardUrl(
+                    sectionId,
+                    '/login_info'
+                  ),
+                })
+              )}
+            />
+            <div style={styles.sublistAlign}>
+              <InlineMarkdown markdown={i18n.loginExportInstructions()} />{' '}
+              <LoginExport
+                sectionCode={sectionCode}
+                sectionName={sectionName}
+                sectionLoginType={loginType}
+                students={this.props.studentData}
+              />
+            </div>
+            {providePrivacyLetter && (
+              <SafeMarkdown
+                markdown={renderStep(
+                  i18n.setUpClass3({
+                    parentLetterLink: teacherDashboardUrl(
+                      sectionId,
+                      '/parent_letter'
+                    ),
+                  })
+                )}
+              />
+            )}
+            <SafeMarkdown markdown={renderStep(i18n.setUpClass4())} />
+            <SignInInstructions
+              loginType={SectionLoginType.word}
+              sectionCode={sectionCode}
+              studioUrlPrefix={studioUrlPrefix}
+            />
+          </div>
+        )}
+        {loginType === SectionLoginType.picture && (
+          <div>
+            <p>{i18n.setUpClassPicIntro()}</p>
+            <p style={styles.listAlign}>
+              {renderStep(i18n.setUpClassWordPic1())}
+            </p>
+            <SafeMarkdown
+              markdown={renderStep(
+                i18n.setUpClassPic2({
+                  printLoginCardLink: teacherDashboardUrl(
+                    sectionId,
+                    '/login_info'
+                  ),
+                })
+              )}
+            />
+            <div style={styles.sublistAlign}>
+              <InlineMarkdown
+                markdown={i18n.loginExportInstructions({
+                  articleLink: 'support.code.org',
+                })}
+              />{' '}
+              <LoginExport
+                sectionCode={sectionCode}
+                sectionName={sectionName}
+                sectionLoginType={loginType}
+                students={this.props.studentData}
+              />
+            </div>
+            {providePrivacyLetter && (
+              <SafeMarkdown
+                markdown={renderStep(
+                  i18n.setUpClass3({
+                    parentLetterLink: teacherDashboardUrl(
+                      sectionId,
+                      '/parent_letter'
+                    ),
+                  })
+                )}
+              />
+            )}
+            <SafeMarkdown markdown={renderStep(i18n.setUpClass4())} />
+            <SignInInstructions
+              loginType={SectionLoginType.picture}
+              sectionCode={sectionCode}
+              studioUrlPrefix={studioUrlPrefix}
+            />
+          </div>
+        )}
+        {loginType === SectionLoginType.email && (
+          <div>
+            <p>{renderStep(i18n.setUpClassEmailIntro())}</p>
+            <SafeMarkdown
+              markdown={renderStep(
+                i18n.setUpClassEmail1({
+                  createAccountLink: `${studioUrlPrefix}/users/sign_up`,
+                })
+              )}
+            />
+            <SafeMarkdown
+              markdown={renderStep(
+                i18n.setUpClassEmail2({
+                  joinLink: `${studioUrlPrefix}/join/${sectionCode}`,
+                })
+              )}
+            />
+            {providePrivacyLetter && (
+              <SafeMarkdown
+                markdown={renderStep(
+                  i18n.setUpClass3({
+                    parentLetterLink: teacherDashboardUrl(
+                      sectionId,
+                      '/parent_letter'
+                    ),
+                  })
+                )}
+              />
+            )}
+            <SafeMarkdown markdown={renderStep(i18n.setUpClass4())} />
+            <SignInInstructions loginType={SectionLoginType.email} />
+          </div>
+        )}
+        {loginType === SectionLoginType.google_classroom && (
+          <div>
+            <p>{i18n.setUpClassGoogleIntro()}</p>
+            <p style={styles.listAlign}>
+              {renderStep(i18n.setUpClassGoogle1())}
+            </p>
+            <p style={styles.listAlign}>
+              {renderStep(i18n.setUpClassGoogle2())}
+            </p>
+            <p>{i18n.setUpClassGoogleFinished()}</p>
+            <SignInInstructions loginType={SectionLoginType.google_classroom} />
+          </div>
+        )}
+        {loginType === SectionLoginType.clever && (
+          <div>
+            <p>{i18n.setUpClassCleverIntro()}</p>
+            <p style={styles.listAlign}>
+              {renderStep(i18n.setUpClassClever1())}
+            </p>
+            <p style={styles.listAlign}>
+              {renderStep(i18n.setUpClassClever2())}
+            </p>
+            <p>{i18n.setUpClassCleverFinished()}</p>
+            <SignInInstructions loginType={SectionLoginType.clever} />
+          </div>
+        )}
+        {loginType === SectionLoginType.lti_v1 && (
+          <LtiLogins sectionProviderName={this.props.sectionProviderName} />
+        )}
+        {providePrivacyLetter && <ParentLetterAndStudentPrivacyInfo />}
       </div>
     );
   }

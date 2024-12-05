@@ -18,6 +18,14 @@ def wait_until(timeout = DEFAULT_WAIT_TIMEOUT)
   end
 end
 
+def wait_until_interactable(timeout = DEFAULT_WAIT_TIMEOUT)
+  wait_until(timeout) do
+    yield
+  rescue Selenium::WebDriver::Error::ElementNotInteractableError
+    false
+  end
+end
+
 def wait_short_until(&block)
   wait_until(SHORT_WAIT_TIMEOUT, &block)
 end
@@ -383,11 +391,30 @@ When /^I rotate to (landscape|portrait)$/ do |orientation|
   end
 end
 
+When /^I click on the link reading "([^"]*)"(?: within element "([^"]*)")?(?: to load a new (page|tab))?$/ do |text, parent, load|
+  link = nil
+  wait_until_interactable(5) do
+    context = @browser.find_element(:css, parent) if parent
+    context ||= @browser
+    xpath = ".//a[starts-with(text(), '#{text}')]"
+    link = context.find_element(:xpath, xpath)
+    page_load(load) {link.click}
+  end
+end
+
+Then /^the link reading "([^"]*)"(?: within element "([^"]*)")? goes to "([^"]*)"$/ do |text, parent, url|
+  context = @browser.find_element(:css, parent) if parent
+  context ||= @browser
+  xpath = ".//a[starts-with(text(), '#{text}')]"
+  link = context.find_element(:xpath, xpath)
+  expect(link.attribute("href")).to eq(replace_hostname(url)).or eq(url)
+end
+
 When /^I press "([^"]*)"(?: to load a new (page|tab))?$/ do |button, load|
   wait_short_until do
-    @button = @browser.find_element(id: button)
+    button = @browser.find_element(id: button)
   end
-  page_load(load) {@button.click}
+  page_load(load) {button.click}
 end
 
 When /^I press the child number (.*) of class "([^"]*)"( to load a new page)?$/ do |number, selector, load|
@@ -442,6 +469,12 @@ When /^I press the last button with text "([^"]*)"( to load a new page)?$/ do |n
   end
 end
 
+When /^I press the last link with text "([^"]*)"( to load a new page)?$/ do |name, load|
+  page_load(load) do
+    @browser.execute_script("$('a:contains(#{name})').simulate('drag', function(){});")
+  end
+end
+
 When /^I press the SVG text "([^"]*)"$/ do |name|
   name_selector = "text:contains(#{name})"
   @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
@@ -463,11 +496,22 @@ When /^I select the "([^"]*)" option in dropdown named "([^"]*)"( to load a new 
   select_dropdown(@browser.find_element(:css, "select[name=#{element_name}]"), option_text, load)
 end
 
-def select_dropdown(element, option_text, load)
+When /^I select the "([^"]*)" option withing the "([^"]*)" group in dropdown "([^"]*)"( to load a new page)?$/ do |option_text, option_group, selector, load|
+  select_element = @browser.find_element(:css, selector)
+  expect(select_element).not_to be_nil
+
+  options = select_element.find_elements(:css, "optgroup[label='#{option_group}'] option")
+  option = options.find {|o| o.text == option_text}
+  expect(option).not_to be_nil
+
+  select_dropdown(select_element, option.property(:value), load, by: :value)
+end
+
+def select_dropdown(element, option_text, load, by: :text)
   element.location_once_scrolled_into_view
   page_load(load) do
     select = Selenium::WebDriver::Support::Select.new(element)
-    select.select_by(:text, option_text)
+    select.select_by(by, option_text)
   end
 end
 
@@ -719,7 +763,6 @@ end
 
 Then /^I reopen the congrats dialog unless I see the sharing input/ do
   next if @browser.execute_script("return $('#sharing-dialog-copy-button').length > 0;")
-  puts "reopening congrats dialog"
   individual_steps %{
     And I press "again-button"
     And I wait until element ".congrats" is not visible
@@ -1200,6 +1243,14 @@ And(/^I submit this level$/) do
   GHERKIN
 end
 
+And(/^I submit this gamelab level$/) do
+  steps <<~GHERKIN
+    And I press "runButton"
+    And I wait to see "#submitButton"
+    And I press "submitButton" to load a new page
+  GHERKIN
+end
+
 And(/^I wait until I am on the join page$/) do
   wait_short_until {/^\/join/.match(@browser.execute_script("return location.pathname"))}
 end
@@ -1212,6 +1263,10 @@ end
 
 And(/^I clear session storage/) do
   @browser.execute_script("sessionStorage.clear(); localStorage.clear();")
+end
+
+And 'I clear local storage' do
+  @browser.execute_script('localStorage.clear();')
 end
 
 When(/^I debug cookies$/) do
@@ -1332,6 +1387,12 @@ end
 Then /^I append "([^"]*)" to the URL$/ do |append|
   url = @browser.current_url + append
   @browser.navigate.to url
+end
+
+Then /^I switch to the embedded view of current project(?: with query "(.*)")?$/ do |query|
+  embed_url = @browser.current_url.sub('/edit', '/embed')
+  embed_url = "#{embed_url}?#{query}" if query
+  navigate_to embed_url
 end
 
 Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, class_name|
@@ -1543,4 +1604,9 @@ And(/^I wait until ai assessments announcement is marked as seen$/) do
     response = browser_request(url: '/api/v1/users/current')
     response['has_seen_ai_assessments_announcement']
   end
+end
+
+And(/^I hover over selector "([^"]*)"$/) do |selector|
+  element = @browser.find_element(:css, selector)
+  @browser.action.move_to(element).perform
 end

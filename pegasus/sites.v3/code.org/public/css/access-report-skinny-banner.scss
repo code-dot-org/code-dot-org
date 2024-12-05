@@ -1,0 +1,39 @@
+@import "color", "breakpoints";
+
+.access-report-skinny-banner {
+  background: $light_secondary_100;
+  padding: 2rem;
+
+  .wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    gap: 4rem;
+
+    @media (max-width: 900px) {
+      gap: 2rem;
+    }
+
+    @media (max-width: $width-sm) {
+      padding-block: 2rem;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+    }
+  }
+
+  .text-wrapper {
+    flex: 2;
+
+    @media (max-width: $width-sm) {
+      text-align: center;
+    }
+  }
+
+  img {
+    max-width: 9rem;
+  }
+
+  a.link-button {
+    max-width: 15rem;
+  }
+}

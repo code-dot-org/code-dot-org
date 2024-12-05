@@ -1,0 +1,17 @@
+name 'Data Sci U2 Post Q16_2024-pilot'
+
+question 'Describe a scenario in which you would use the `str.contains()` function in pandas to filter data, and explain why this method is effective for text-based queries.'
+
+right '`str.contains()` is useful for filtering rows in a DataFrame based on whether a specific substring is present within a text column.'
+wrong '`str.contains()` is primarily used for numerical filtering, allowing for the exclusion of outliers based on their string representation.'
+wrong 'This function automatically replaces missing text values with the specified substring, ensuring that all rows contain relevant information.'
+wrong 'It is effective for renaming columns and standardizing text data across a DataFrame.'
+
+
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

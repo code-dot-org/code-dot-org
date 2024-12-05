@@ -35,9 +35,17 @@ module ActiveJobMetrics
     Delayed::Job.where.not(failed_at: nil).count
   end
 
+  def get_my_failed_job_count
+    Delayed::Job.where.not(failed_at: nil).where('handler LIKE ?', "%job_class: #{self.class.name}%").count
+  end
+
   # Pending jobs are those that have not yet been run.
   def get_pending_job_count
     Delayed::Job.where(failed_at: nil).count
+  end
+
+  def get_my_pending_job_count
+    Delayed::Job.where(failed_at: nil).where('handler LIKE ?', "%job_class: #{self.class.name}%").count
   end
 
   # Workable jobs are those that are not locked and are ready to run.
@@ -45,39 +53,65 @@ module ActiveJobMetrics
     Delayed::Job.where(failed_at: nil, locked_at: nil).where('run_at <= ?', Time.now).count
   end
 
+  def get_my_workable_job_count
+    Delayed::Job.where(failed_at: nil, locked_at: nil).where('run_at <= ?', Time.now).where('handler LIKE ?', "%job_class: #{self.class.name}%").count
+  end
+
   protected def report_job_count
-    Cdo::Metrics.push(METRICS_NAMESPACE,
-      # Same metrics as "bin/cron/report_activejob_metrics"
-      [
-        {
-          metric_name: 'PendingJobCount',
-          value: get_pending_job_count,
-          unit: 'Count',
-          timestamp: Time.now,
-          dimensions: [
-            {name: 'Environment', value: CDO.rack_env},
-          ],
-        },
-        {
-          metric_name: 'FailedJobCount',
-          value: get_failed_job_count,
-          unit: 'Count',
-          timestamp: Time.now,
-          dimensions: [
-            {name: 'Environment', value: CDO.rack_env},
-          ],
-        },
-        {
-          metric_name: 'WorkableJobCount',
-          value: get_workable_job_count,
-          unit: 'Count',
-          timestamp: Time.now,
-          dimensions: [
-            {name: 'Environment', value: CDO.rack_env},
-          ],
-        }
-      ]
-    )
+    # Splitting into two pushes because our 'includes_metrics' testing
+    # utility can't match multiple metrics with the same name.
+    # Generic Metrics (similar to "bin/cron/report_activejob_metrics")
+    generic_metrics = [
+      {
+        metric_name: 'PendingJobCount',
+        value: get_pending_job_count,
+        unit: 'Count',
+        timestamp: Time.now,
+        dimensions: [{name: 'Environment', value: CDO.rack_env}]
+      },
+      {
+        metric_name: 'FailedJobCount',
+        value: get_failed_job_count,
+        unit: 'Count',
+        timestamp: Time.now,
+        dimensions: [{name: 'Environment', value: CDO.rack_env}]
+      },
+      {
+        metric_name: 'WorkableJobCount',
+        value: get_workable_job_count,
+        unit: 'Count',
+        timestamp: Time.now,
+        dimensions: [{name: 'Environment', value: CDO.rack_env}]
+      }
+    ]
+
+    per_job_class_metrics = [
+      {
+        metric_name: 'PendingJobCount',
+        value: get_my_pending_job_count,
+        unit: 'Count',
+        timestamp: Time.now,
+        dimensions: common_dimensions
+      },
+      {
+        metric_name: 'FailedJobCount',
+        value: get_my_failed_job_count,
+        unit: 'Count',
+        timestamp: Time.now,
+        dimensions: common_dimensions
+      },
+      {
+        metric_name: 'WorkableJobCount',
+        value: get_my_workable_job_count,
+        unit: 'Count',
+        timestamp: Time.now,
+        dimensions: common_dimensions
+      }
+    ]
+
+    # Push metrics
+    Cdo::Metrics.push(METRICS_NAMESPACE, generic_metrics)
+    Cdo::Metrics.push(METRICS_NAMESPACE, per_job_class_metrics)
   rescue => exception
     Honeybadger.notify(exception, error_message: 'Error reporting ActiveJob metrics')
   end

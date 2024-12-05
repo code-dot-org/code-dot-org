@@ -1,0 +1,33 @@
+name 'SP-PL-DS-Predict_Debrief_Grouping'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Debriefing Predict and Run
+
+#### Remember anything you notice or wonder about the code is fine. The idea is to just start thinking about the code.
+
+![](https://images.code.org/83baf3808a5a354b0c764a0981e72c87-image-1728327137613.png)
+
+
+## 🔎You might have noticed:
+- #### The code prints a color and a number.
+- #### The number might represent the mean mass for a given color.
+
+
+
+## 💡You might Wonder: 
+- #### What other data can be aggregated?
+- #### Can you count the color occurrences by mass?
+
+
+
+<br>
+
+
+
+
+##Let's continue to the **Investigate & Modify** levels.
+
+
+MARKDOWN

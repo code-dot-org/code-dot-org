@@ -84,7 +84,7 @@ function initPage() {
 
   if (hasScriptData('script[data-rubricdata]')) {
     const rubricData = getScriptData('rubricdata');
-    const {rubric, studentLevelInfo} = rubricData;
+    const {rubric, studentLevelInfo, canShowTaScoresAlert} = rubricData;
     const reportingData = {
       unitName: config.script_name,
       courseName: config.course_name,
@@ -119,6 +119,7 @@ function initPage() {
             reportingData={reportingData}
             currentLevelName={config.level_name}
             aiEnabled={rubric.learningGoals.some(lg => lg.aiEnabled)}
+            canShowTaScoresAlert={canShowTaScoresAlert}
           />
         </Provider>,
         rubricFabMountPoint

@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "###Functions in Music Making\r\n\r\n\r\n- Use the [intro](#clickable=toolbox-first-row) function by adding it under [when run](#clickable=when-run-block). \r\n- Press \"Run\" to see how it works. ",
+    "long_instructions": "###Functions in Music Making\r\n\r\n\r\n- Use the [intro](#clickable=flyout-first-block) function by adding it under [when run](#clickable=when-run-block). \r\n- Press \"Run\" to see how it works. ",
     "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
@@ -165,18 +165,18 @@
       },
       {
         "key": "music-ai-functions-chorus_e1d6c731-90ed-4e26-a2cd-040bfc5c373f",
-        "message": "Connect the [intro](#clickable=toolbox-first-row) block under [when run](#clickable=when-run-block) to play the sounds in the function.",
+        "message": "Connect the [intro](#clickable=flyout-first-block) block under [when run](#clickable=when-run-block) to play the sounds in the function.",
         "next": false,
         "conditions": [
 
         ],
-        "callout": "when-run-block"
+        "callout": "flyout-first-block"
       }
     ],
     "name_suffix": "_3",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-30T17:16:42.379+00:00\",\"changed\":[\"cloned from \\\"music-ai-functions-chorus_2\\\"\"],\"cloned_from\":\"music-ai-functions-chorus_2\"},{\"changed_at\":\"2024-10-01 23:47:57 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 23:51:58 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-30T17:16:42.379+00:00\",\"changed\":[\"cloned from \\\"music-ai-functions-chorus_2\\\"\"],\"cloned_from\":\"music-ai-functions-chorus_2\"},{\"changed_at\":\"2024-10-01 23:47:57 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 23:51:58 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-03 19:18:54 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-03 19:20:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-03 19:20:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

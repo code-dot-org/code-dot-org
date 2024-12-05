@@ -1,0 +1,59 @@
+name 'SP-PL-DS-groupby'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Key Concepts
+
+## Indexing operator []
+#### The **indexing operator []** is used to access a column in a DataFrame. 
+
+
+   <table border="1" style="width: 100%; table-layout: fixed;">
+        <tr>
+            <td style="width: 33%; font-size: 14pt; padding: 5px 0;">&nbsp;&nbsp; Select a single column</td>
+            <td style="width: 67%;"><img src="https://images.code.org/ea7a1fdff5ea2a87216a52ac44f8d0c8-image-1732207130484.png" alt="code to select single column using indexing operator" style="width: 50%;"></td>
+        </tr>
+           <tr>
+            <td style="width: 33%; font-size: 14pt;padding: 5px 0;">&nbsp;&nbsp; Select multiple columns</td>
+            <td style="width: 67%;"><img src="https://images.code.org/72b52b3c2e0a496d2597075385450bf5-image-1732207221719.png" alt="code selecting multiple columns with indexing operator" style="width: 90%;"></td>
+        </tr>
+    </table>
+
+---
+
+<img src="https://images.code.org/e3973d571ed8d6cdda0ecc65f1634599-image-1732208181634.png" alt="datahead and console" width="300px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+## .iloc()
+#### **.iloc** stands for integer location.
+#### This is used to access a specific row in the data frame. 
+
+<img src="https://images.code.org/5c7689b55746051a79184636d76cb138-image-1732218170469.png" alt="code snippit using iloc" width="300px" style="border-radius:10px; float:left; margin: 0 0 0px 0px;"> 
+<div style="clear:both;"></div>
+
+<img src="https://images.code.org/657a0c5377577b488385be84e7e74b51-image-1732218960826.png" alt="datahead and console" width="280px" style="border-radius:0px; float:right; margin: 0 0 40px 40px;">
+
+#### **iloc** can also be used to access a specific value but putting the row and column number in the parameter.
+
+<img src="https://images.code.org/d2eeaffe56f282a47cfaf68b6bc1ff80-image-1732219129844.png" alt="code snippit using iloc" width="300px" style="border-radius:10px; float:left; margin: 0 0 0px 0px;">
+
+<div style="clear:both;"></div>
+
+
+---
+<img src="https://images.code.org/253fe9a69868fbcd35f1f45a471684db-image-1732207708028.png" alt="table with columns for city, age, gpa" width="150px" style="border-radius:10px; float:right; margin: 0 0 0px 0px;">
+
+## .groupby()
+
+#### **.groupby()** helps aggregate data based on created groups
+#### Use **.groupby()** to group DataFrame rows based on column values.
+
+<div style="clear:both;"></div>
+
+### **Grouping Functions**
+#### Functions like **sum(), mean(),** and **count()** can be used to calculate values on specific groups of data. 
+
+<img src="https://images.code.org/1728365a69bc0cbe3642efface65f94b-image-1728329251246.png" alt="design process graph of the cycle" width="450px" style="display: block; float:left;">
+
+## Let's try out some of these in a *modify* level!
+MARKDOWN

@@ -5,7 +5,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
   DEFAULT_TOXICITY_THRESHOLD_USER_INPUT = 0.2
   DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT = 0.6
-  METRICS_NAMESPACE = 'GenAICurriculum'.freeze
+  MAX_REQUEST_LOG_LENGTH = 4 * 1024 * 1024
 
   before_enqueue do |job|
     request = job.arguments.first[:request]
@@ -41,8 +41,8 @@ class AichatRequestChatCompletionJob < ApplicationJob
     # Report metrics for the failed job (after_perform doesn't run on failure)
     report_job_finish(request)
 
-    # Raise an exception to notify our system of the failed job.
-    raise "AichatRequestChatCompletionJob failed with unexpected error: #{exception.message}. Context: #{request.to_json}"
+    # Raise an exception to notify our system of the failed job. Make sure not to exceed the delayed_jobs.last_error column size.
+    raise "AichatRequestChatCompletionJob failed with unexpected error: #{exception.message}. Context: #{request.to_json[0..MAX_REQUEST_LOG_LENGTH]}"
   end
 
   def perform(request:, locale:)
@@ -95,7 +95,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
   private def report_job_start(request)
     @start_time = Time.now
-    Cdo::Metrics.push(METRICS_NAMESPACE,
+    Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
       [
         {
           metric_name: "#{self.class.name}.Start",
@@ -114,7 +114,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
   private def report_job_finish(request)
     execution_time = Time.now - @start_time
     status_name = SharedConstants::AI_REQUEST_EXECUTION_STATUS.key(request.execution_status).to_s
-    Cdo::Metrics.push(METRICS_NAMESPACE,
+    Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
       [
         {
           metric_name: "#{self.class.name}.Finish",

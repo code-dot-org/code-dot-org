@@ -30,6 +30,21 @@ class CoursesController < ApplicationController
   end
 
   def show
+    if Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') && current_user.sections_instructed.any? {|s| s.course_id == @unit_group.id}
+      if !params[:section_id] && current_user&.last_section_id
+        redirect_to "/teacher_dashboard/sections/#{current_user.last_section_id}/courses/#{@unit_group.name}"
+        return
+      elsif params[:section_id]
+        redirect_to "/teacher_dashboard/sections/#{params[:section_id]}/courses/#{@unit_group.name}"
+        return
+      end
+    end
+
+    if !params[:section_id] && current_user&.last_section_id
+      redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
+      return
+    end
+
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
     override_redirect = VersionRedirectOverrider.override_course_redirect?(session, @unit_group)
     if !override_redirect && redirect_unit_group = redirect_unit_group(@unit_group)

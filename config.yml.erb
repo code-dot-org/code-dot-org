@@ -398,12 +398,6 @@ cache_assets_in_memory:
 # Contributors should ask a Code.org engineer for this if needed.
 properties_encryption_key: !Secret
 
-start_circle_builds_branch:
-start_circle_builds_token:
-circle_build_num: <%=ENV['CIRCLE_BUILD_NUM']%>
-circle_node_index: <%=ENV['CIRCLE_NODE_INDEX']%>
-circle_run_identifier: <%=circle_build_num ? "CIRCLE-BUILD-#{circle_build_num}-#{circle_node_index}" : nil%>
-
 ignore_eyes_mismatches:
 
 # Keeps from taking eyes snapshots when running feature files
@@ -652,6 +646,10 @@ active_job_queues:
 
 # ActiveJob Queue Adapter
 active_job_queue_adapter: :delayed_job
+
+# Number of workers to start when running `rake build:start_active_job_workers`:
+active_job_backend_n_workers_to_start: 2
+active_job_backend_rolling_restart_in_n_batches: 1
 
 # aiproxy credentials
 aiproxy_api_key: !Secret

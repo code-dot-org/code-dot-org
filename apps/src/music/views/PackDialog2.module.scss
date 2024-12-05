@@ -57,12 +57,23 @@
       align-items: end;
       gap: 10px;
       justify-content: space-between;
-      margin-bottom: 14px;
+      margin-bottom: 7px;
+
+      &Stacked {
+        justify-content: space-around;
+        margin-bottom: 7px;
+        flex-direction: column;
+        align-items: start;
+        gap: 7px;
+        margin-top: 4px;
+      }
     }
 
     .segmentedButtons {
+      flex-shrink: 0;
+
       span {
-        font-size: 12px !important;
+        user-select: none;
       }
     }
 
@@ -98,17 +109,25 @@
           }
 
           &Selected {
-            background-color: $dark_black;
+            background-color: $light_primary_500;
             border-radius: 5px;
+          }
+
+          &:hover {
+            .packImageContainer {
+              transform: scale(1.2, 1.2);
+              transition: 0.1s ease-in-out;
+            }
           }
 
           &ImageContainer {
             width: 30px;
+            height: 30px;
             transform: scale(1, 1);
             transition: 0.1s ease-in-out;
 
             &:hover, &Selected {
-              transform: scale(1.03, 1.03);
+              transform: scale(1.2, 1.2);
               transition: 0.1s ease-in-out;
             }
           }
@@ -172,7 +191,8 @@
 .buttonContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: end;
+  gap: 14px;
   width: 100%;
 
   .skip {

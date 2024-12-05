@@ -4,11 +4,9 @@ import {connect} from 'react-redux';
 
 import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
 import Link from '@cdo/apps/componentLibrary/link';
-import DCDO from '@cdo/apps/dcdo';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {getStore} from '@cdo/apps/redux';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {isProductionEnvironment} from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -44,10 +42,7 @@ function TeacherDashboardHeader({
   const inUSA =
     ['US', 'RD'].includes(currentUser.countryCode) || !!currentUser.usStateCode;
   const showAgeGatedStudentsBanner =
-    inUSA &&
-    currentUser.isTeacher &&
-    ageGatedStudentsCount > 0 &&
-    DCDO.get('show-age-gated-students-banner', !isProductionEnvironment());
+    inUSA && currentUser.isTeacher && ageGatedStudentsCount > 0;
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
@@ -112,6 +107,19 @@ function TeacherDashboardHeader({
     return '/sections/' + sectionId + '/edit';
   };
 
+  const getAgeGatedStudentsUsState = () => {
+    if (ageGatedStudentsCount > 0) {
+      const ageGatedStudents = filterAgeGatedStudents(
+        convertStudentDataToArray(
+          getStore().getState().manageStudents.studentData
+        )
+      );
+      return ageGatedStudents[0].usState;
+    }
+
+    return null;
+  };
+
   return (
     <div className={dashboardStyles.headerContainer}>
       <div className={dashboardStyles.headerLink}>
@@ -140,6 +148,7 @@ function TeacherDashboardHeader({
           toggleModal={toggleModal}
           modalOpen={modalOpen}
           ageGatedStudentsCount={ageGatedStudentsCount}
+          ageGatedStudentsUsState={getAgeGatedStudentsUsState()}
         />
       )}
       <div className={dashboardStyles.header}>

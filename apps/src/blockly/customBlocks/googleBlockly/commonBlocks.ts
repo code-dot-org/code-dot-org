@@ -4,11 +4,12 @@
  * Defines blocks useful in multiple blockly apps
  */
 
-import {Block, CodeGenerator} from 'blockly';
+import * as GoogleBlockly from 'blockly/core';
+import {Order} from 'blockly/javascript';
 
 import {
   BlocklyWrapperType,
-  JavascriptGeneratorType,
+  ExtendedJavascriptGenerator,
 } from '@cdo/apps/blockly/types';
 import i18n from '@cdo/locale';
 
@@ -40,18 +41,18 @@ export const blocks = {
     );
   },
   copyBlockGenerator(
-    generator: JavascriptGeneratorType,
+    generator: ExtendedJavascriptGenerator,
     type1: string,
     type2: string
   ) {
     generator.forBlock[type1] = generator.forBlock[type2];
   },
   defineNewBlockGenerator(
-    generator: JavascriptGeneratorType,
+    generator: ExtendedJavascriptGenerator,
     type: string,
     generatorFunction: (
-      block: Block,
-      generator: CodeGenerator
+      block: GoogleBlockly.Block,
+      generator: GoogleBlockly.CodeGenerator
     ) => [string, number] | string | null
   ) {
     generator.forBlock[type] = generatorFunction;
@@ -103,7 +104,7 @@ export const blocks = {
     }
   },
   // Global function to handle serialization hooks
-  addSerializationHooksToBlock(block: Block) {
+  addSerializationHooksToBlock(block: GoogleBlockly.Block) {
     if (!block.mutationToDom) {
       block.mutationToDom = this.mutationToDom;
     }
@@ -122,12 +123,13 @@ export const blocks = {
   // We need to override this generator in order to continue using the
   // legacy function name from CDO Blockly. Other custom blocks in pools
   // depend on the original name..
-  mathRandomIntGenerator(block: Block, generator: JavascriptGeneratorType) {
+  mathRandomIntGenerator(
+    block: GoogleBlockly.Block,
+    generator: ExtendedJavascriptGenerator
+  ) {
     // Random integer between [X] and [Y].
-    const argument0 =
-      generator.valueToCode(block, 'FROM', generator.ORDER_NONE) || '0';
-    const argument1 =
-      generator.valueToCode(block, 'TO', generator.ORDER_NONE) || '0';
+    const argument0 = generator.valueToCode(block, 'FROM', Order.NONE) || '0';
+    const argument1 = generator.valueToCode(block, 'TO', Order.NONE) || '0';
     const functionName = generator.provideFunction_(
       'math_random_int', // Core Blockly uses 'mathRandomInt'
       `
@@ -143,7 +145,7 @@ export const blocks = {
   `
     );
     const code = `${functionName}(${argument0}, ${argument1})`;
-    return [code, generator.ORDER_FUNCTION_CALL];
+    return [code, Order.FUNCTION_CALL];
   },
   // Creates and returns a 3-column colour field with an increased height/width
   // for menu options and the field itself. Used for the K1 Artist colour picker block.

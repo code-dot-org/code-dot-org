@@ -16,7 +16,7 @@ class ProjectsControllerTest < ActionController::TestCase
     AzureTextToSpeech.stubs(:get_voices).returns({})
   end
 
-  self.use_transactional_test_case = true
+  self.use_transactional_test_case = false
 
   setup_all do
     # Create placeholder levels for the standalone project pages.
@@ -34,6 +34,11 @@ class ProjectsControllerTest < ActionController::TestCase
     @section = create :section
     @section.add_student @driver
     @section.add_student @navigator
+
+    @project_owner = create :student
+    @non_project_owner = create :student
+    @test_project = create :project, owner: @project_owner
+    @channel_id = @test_project.channel_id
   end
 
   teardown do
@@ -542,5 +547,76 @@ class ProjectsControllerTest < ActionController::TestCase
     get :edit, params: {path: "/projects/music/#{channel_id}/edit", key: 'music', channel_id: channel_id}
     assert_response :redirect
     assert_redirected_to "/projects/music/#{channel_id}/view"
+  end
+
+  test 'submission status returns appropriate status' do
+    sign_in_with_request @project_owner
+    Project.stubs(:find_by).returns(@test_project)
+    channel_id = '123456'
+    @controller.stubs(:storage_decrypt_channel_id).returns([123, 456])
+    SharedConstants::PROJECT_SUBMISSION_STATUS.each_value do |status|
+      @test_project.stubs(:submission_status).returns(status)
+      get :submission_status, params: {project_type: 'music', channel_id: channel_id}
+      assert_response :success
+      response_status = JSON.parse(@response.body)["status"]
+      assert_equal response_status, status
+    end
+  end
+
+  test 'submission status returns forbidden for non-project owner' do
+    sign_in_with_request @non_project_owner
+    Project.stubs(:find_by).returns(@test_project)
+    get :submission_status, params: {project_type: 'music', channel_id: @channel_id}
+    assert_response :forbidden
+  end
+
+  test 'submission_status returns forbidden for signed-out user' do
+    sign_out :user
+    Project.stubs(:find_by).returns(@test_project)
+    post :submission_status, params: {project_type: 'music', channel_id: @channel_id}
+    assert_response :forbidden
+  end
+
+  test 'submit project returns bad_request if no submission description' do
+    submission_description = ''
+    post :submit, params: {project_type: 'music', channel_id: @channel_id, submissionDescription: submission_description}
+    assert_response :bad_request
+  end
+
+  test 'submit project returns forbidden for non-project owner' do
+    submission_description = 'test description'
+    sign_in_with_request @non_project_owner
+    Project.stubs(:find_by).returns(@test_project)
+    post :submit, params: {project_type: 'music', channel_id: @channel_id, submissionDescription: submission_description}
+    assert_response :forbidden
+  end
+
+  test 'submit project returns forbidden for signed-out user' do
+    submission_description = 'test description'
+    sign_out :user
+    post :submit, params: {project_type: 'music', channel_id: @channel_id, submissionDescription: submission_description}
+    assert_response :forbidden
+  end
+
+  test 'submit project returns forbidden if project already submitted' do
+    submission_description = 'this project rocks'
+    sign_in_with_request @project_owner
+    @test_project.stubs(:submission_status).returns(SharedConstants::PROJECT_SUBMISSION_STATUS[:ALREADY_SUBMITTED])
+    Project.stubs(:find_by).returns(@test_project)
+    Projects.any_instance.stubs(:publish).returns({published_at: Time.now})
+    post :submit, params: {project_type: 'music', channel_id: @channel_id, submissionDescription: submission_description}
+    assert_response :forbidden
+    error_msg = JSON.parse(@response.body)["error"]
+    assert_equal error_msg, "Once submitted, a project cannot be submitted again."
+  end
+
+  test 'submit project returns success if project passes all restrictions' do
+    submission_description = 'this project rocks'
+    sign_in_with_request @project_owner
+    @test_project.stubs(:submission_status).returns(SharedConstants::PROJECT_SUBMISSION_STATUS[:CAN_SUBMIT])
+    Project.stubs(:find_by).returns(@test_project)
+    Projects.any_instance.stubs(:publish).returns({published_at: Time.now})
+    post :submit, params: {project_type: 'music', channel_id: @channel_id, submissionDescription: submission_description}
+    assert_response :success
   end
 end

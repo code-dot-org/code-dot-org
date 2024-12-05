@@ -33,11 +33,11 @@ require 'cdo/shared_constants'
 require 'cdo/shared_constants/curriculum/shared_course_constants'
 require 'ruby-progressbar'
 
-TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
-
 # A sequence of Levels
 class Unit < ApplicationRecord
   self.table_name = 'scripts'
+
+  TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
 
   include ScriptConstants
   include Curriculum::SharedCourseConstants
@@ -934,10 +934,18 @@ class Unit < ApplicationRecord
     in_initiative?('CSC')
   end
 
+  def foundations_of_cs?
+    under_curriculum_umbrella?('Foundations of CS')
+  end
+
+  def foundations_of_programming?
+    under_curriculum_umbrella?('Foundations of Programming')
+  end
+
   # TODO: (Dani) Update to use new course types framework.
   # Currently this grouping is used to determine whether the script should have # a custom end-of-lesson experience.
   def middle_high?
-    csd? || csp? || csa?
+    csd? || csp? || csa? || foundations_of_cs? || foundations_of_programming?
   end
 
   def requires_verified_instructor?
@@ -1568,7 +1576,7 @@ class Unit < ApplicationRecord
         project_sharing: project_sharing,
         curriculum_umbrella: curriculum_umbrella,
         family_name: family_name,
-        version_year: version_year,
+        version_year: unit_group&.version_year || version_year,
         assigned_section_id: assigned_section_id,
         hasStandards: has_standards_associations?,
         tts: tts?,
@@ -1612,14 +1620,16 @@ class Unit < ApplicationRecord
       title: title_for_display,
       name: name,
       unitNumber: unit_number,
+      unitName: title_for_display,
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
       teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+      hasNumberedUnits: unit_group&.has_numbered_units?,
+      versionYear: unit_group&.version_year || version_year,
     }
     # Only get lessons with lesson plans
-    filtered_lessons = lessons.select(&:has_lesson_plan)
-    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize_for_lesson_materials(user)}
+    summary[:lessons] = lessons.map {|lesson| lesson.summarize_for_lesson_materials(user)}
 
     summary
   end

@@ -19,6 +19,7 @@ describe('Workshop Link Account Page Tests', () => {
     it('should render an existing account card', () => {
       renderDefault();
 
+      // eslint-disable-next-line no-restricted-properties
       const existingAccountCard = screen.getByTestId('existing-account-card');
       const withinExistingAccountCard = within(existingAccountCard);
 
@@ -44,6 +45,7 @@ describe('Workshop Link Account Page Tests', () => {
     it('should render a new account card', async () => {
       renderDefault();
 
+      // eslint-disable-next-line no-restricted-properties
       const newAccountCard = screen.getByTestId('new-account-card');
       const withinNewAccountCard = within(newAccountCard);
 

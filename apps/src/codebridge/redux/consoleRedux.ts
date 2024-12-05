@@ -1,6 +1,6 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
-export interface CodeBridgeConsoleState {
+export interface CodebridgeConsoleState {
   output: ConsoleLog[];
 }
 
@@ -15,7 +15,7 @@ export interface ConsoleLog {
   contents: string;
 }
 
-export const initialState: CodeBridgeConsoleState = {
+export const initialState: CodebridgeConsoleState = {
   output: [],
 };
 

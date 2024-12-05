@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2024-11-15T15:26:20.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "self-paced-pl-data-science",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_24",
+    "encrypted": "false",
+    "long_instructions": "\r\n\r\n## Getting Started with CODAP \r\n\r\n\r\n#### Some of the next few lessons utilize the <a href=\"https://codap.concord.org/for-educators/\" target=\"blank\" rel=\"noopener noreferrer\">CODAP website</a>, a free educational tool for data analysis.\r\n#### Before you continue to the next lessons, take a few minutes to get acquainted with **CODAP** with the **Getting Started tutorials**.\r\n\r\n<img src=\"https://images.code.org/28ae5935bf2c0e8f8dae187639c90789-image-1724348267891.png\" alt=\"design process graph of the cycle\" width=\"250px\" style=\"display: block; margin-left: auto; margin-right: auto;border-radius:10px;\">\r\n\r\n#### 📝***Note:*** *These tutorials will open in a new tab and take about 5 minutes each to complete.*\r\n- #### Getting Started in CODAP,  <a href=\"https://codap.concord.org/app/static/dg/en/cert/index.html#file=examples:Getting%20started%20with%20CODAP\" target=\"blank\" rel=\"noopener noreferrer\">Part 1</a>\r\n- #### Getting Started in CODAP,  <a href=\"https://codap.concord.org/app/static/dg/en/cert/index.html?url=https://concord-consortium.github.io/codap-data/example-documents/src/documents/get_started_2.codap\" target=\"blank\" rel=\"noopener noreferrer\">Part 2</a>\r\n\r\n- #### Check out the <a href=\"https://docs.google.com/document/d/1rvW9lgAsALg8zJHHqaYf0lx60RCAbEb1h_5ldLWNQeo/edit?tab=t.0\" target=\"blank\" rel=\"noopener noreferrer\">CODAP Teacher Guide</a> for more information.\r\n\r\n\r\n#### ➡️*Return back to this training you have completed the tutorials* \r\n\r\n--- \r\n\r\n#### Watch this video for a quick overview of CODAP.\r\n \r\n\r\n\r\n\r\n\r\n\r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-11-15T15:26:20.155+00:00\",\"changed\":[\"cloned from \\\"sp-pl-CV_Video_24\\\"\"],\"cloned_from\":\"sp-pl-CV_Video_24\"},{\"changed_at\":\"2024-11-15 15:29:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-15 15:33:52 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-15 15:37:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-27 17:36:44 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_k_5",
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-1718/coursef/{LESSON}",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
@@ -51,7 +52,7 @@
     },
     "new_name": "coursef-2017",
     "family_name": "coursef",
-    "serialized_at": "2022-03-11 12:07:24 UTC",
+    "serialized_at": "2024-11-19 01:14:33 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -7841,7 +7842,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp4",
+        "level.key": "courseF_maze_ramp4",
         "script_level.level_keys": [
           "courseD_scrat_ramp4",
           "courseF_maze_ramp4"
@@ -7854,7 +7855,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_maze_ramp4",
+        "level.key": "courseD_scrat_ramp4",
         "script_level.level_keys": [
           "courseD_scrat_ramp4",
           "courseF_maze_ramp4"
@@ -9894,6 +9895,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -238,10 +238,13 @@ function extractLevelResults(userProgressResponse) {
  * @param {boolean} scriptData.age_13_required
  * Fetch and store progress for the course overview page.
  */
-progress.initCourseProgress = function (scriptData) {
+progress.initCourseProgress = function (
+  scriptData,
+  shouldRenderTeacherPanel = true
+) {
   const store = getStore();
   initializeStoreWithProgress(store, scriptData, null, true);
-  queryUserProgress(store, scriptData, null);
+  queryUserProgress(store, scriptData, null, shouldRenderTeacherPanel);
 };
 
 /* Set our initial view type (Participant or Instructor) from current user's user_type
@@ -285,7 +288,12 @@ progress.retrieveProgress = function (scriptName, scriptData, currentLevelId) {
  * as appropriate. If the user is not signed in, level progress data is populated
  * from session storage.
  */
-function queryUserProgress(store, scriptData, currentLevelId) {
+function queryUserProgress(
+  store,
+  scriptData,
+  currentLevelId,
+  shouldRenderTeacherPanel = true
+) {
   const userId = clientState.queryParams('user_id');
   store.dispatch(reduxQueryUserProgress(userId)).then(data => {
     const onOverviewPage = !currentLevelId;
@@ -312,11 +320,12 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       (data.isInstructor || data.teacherViewingStudent) &&
       !data.deeperLearningCourse
     ) {
-      const pageType = currentLevelId
-        ? pageTypes.level
-        : pageTypes.scriptOverview;
-
-      renderTeacherPanel(store, scriptData.id, scriptData.name, pageType);
+      if (shouldRenderTeacherPanel) {
+        const pageType = currentLevelId
+          ? pageTypes.level
+          : pageTypes.scriptOverview;
+        renderTeacherPanel(store, scriptData.id, scriptData.name, pageType);
+      }
     }
   });
 }

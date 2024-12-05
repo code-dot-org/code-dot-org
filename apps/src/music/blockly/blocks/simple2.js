@@ -1,3 +1,4 @@
+import {MAX_LOOP_ITERATIONS_COUNT} from '../../constants';
 import musicI18n from '../../locale';
 import {BlockTypes} from '../blockTypes';
 import {getCodeForSingleBlock} from '../blockUtils';
@@ -16,6 +17,8 @@ import {
   TriggerStart,
   FIELD_EFFECTS_EXTENSION,
   FIELD_EFFECT_NAME_OPTIONS,
+  FIELD_SOUNDS_VALIDATOR,
+  FIELD_PATTERNS_VALIDATOR,
 } from '../constants';
 import {
   fieldSoundsDefinition,
@@ -40,7 +43,6 @@ export const whenRunSimple2 = {
   generator: ctx => {
     const nextBlock = ctx.nextConnection && ctx.nextConnection.targetBlock();
     let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, false);
-    ctx.skipNextBlockGeneration = true;
     return `
       if (__context == 'when_run') {
         Sequencer.newSequence();
@@ -86,7 +88,6 @@ export const triggeredAtSimple2 = {
     const id = ctx.getFieldValue(TRIGGER_FIELD);
     const nextBlock = ctx.nextConnection && ctx.nextConnection.targetBlock();
     let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, false);
-    ctx.skipNextBlockGeneration = true;
     return `
       if (__context == "${id}") {
         Sequencer.newSequence(startPosition, true);
@@ -108,6 +109,7 @@ export const playSoundAtCurrentLocationSimple2 = {
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockPlaySoundTooltip(),
     helpUrl: DOCS_BASE_URL + 'play_sample',
+    extensions: [FIELD_SOUNDS_VALIDATOR],
   },
   generator: block =>
     `Sequencer.playSound("${block.getFieldValue(FIELD_SOUNDS_NAME)}", "${
@@ -126,6 +128,7 @@ export const playPatternAtCurrentLocationSimple2 = {
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockPlayPatternTooltip(),
     helpUrl: DOCS_BASE_URL + 'play_pattern',
+    extensions: [FIELD_PATTERNS_VALIDATOR],
   },
   generator: block =>
     `Sequencer.playPattern(${JSON.stringify(
@@ -153,6 +156,7 @@ export const playPatternAiAtCurrentLocationSimple2 = {
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockPlayPatternAiTooltip(),
     helpUrl: DOCS_BASE_URL + 'play_pattern_ai',
+    extensions: [FIELD_PATTERNS_VALIDATOR],
   },
   generator: block =>
     `Sequencer.playPattern(${JSON.stringify(
@@ -269,6 +273,15 @@ export const playSoundsTogether = {
     `,
 };
 
+export const playSoundsTogetherNoNext = {
+  ...playSoundsTogether,
+  definition: {
+    ...playSoundsTogether.definition,
+    type: BlockTypes.PLAY_SOUNDS_TOGETHER_NO_NEXT,
+    nextStatement: undefined,
+  },
+};
+
 export const playSoundsSequential = {
   definition: {
     type: BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
@@ -383,19 +396,12 @@ export const repeatSimple2 = {
       'repeat_end',
       Blockly.Names.NameType.VARIABLE
     );
-    code += 'var ' + endVar + ' = ' + repeats + ';\n';
-    code +=
-      'for (var ' +
-      loopVar +
-      ' = 0; ' +
-      loopVar +
-      ' < ' +
-      endVar +
-      '; ' +
-      loopVar +
-      '++) {\n' +
-      branch +
-      '}\n';
+    code += `
+      var ${endVar} = ${repeats};
+      for (var ${loopVar} = 0; ${loopVar} < ${endVar} && __loopIterationsCount < ${MAX_LOOP_ITERATIONS_COUNT}; ${loopVar}++, __loopIterationsCount++) {
+        ${branch}
+      }
+    `;
 
     return `
       Sequencer.playSequential();

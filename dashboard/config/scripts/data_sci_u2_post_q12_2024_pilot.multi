@@ -1,0 +1,18 @@
+name 'Data Sci U2 Post Q12_2024-pilot'
+
+question 'Why is it critical to correctly identify and handle data types in a pandas DataFrame before proceeding with analysis, and what are the potential consequences of neglecting this step?'
+
+wrong 'Incorrect data types can lead to inefficient memory usage, slowing down computations and potentially causing crashes when working with large datasets.'
+right 'Misidentifying data types may cause data to be improperly processed, leading to incorrect results or errors in calculations, especially in operations like aggregation, filtering, and sorting.'
+wrong 'Failing to handle data types correctly could result in the inability to perform certain analyses or visualizations, as some operations are data type-specific.'
+wrong 'Neglecting data type management could cause irreversible data loss when converting between incompatible types, leading to skewed analysis results.'
+
+
+
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

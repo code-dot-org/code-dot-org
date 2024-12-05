@@ -1,3 +1,5 @@
+require 'cdo/i18n'
+
 module LocaleHelper
   # Symbol of best valid locale code to be used for I18n.locale.
   def locale
@@ -9,7 +11,7 @@ module LocaleHelper
   end
 
   def locale_dir
-    Dashboard::Application::LOCALES[locale.to_s][:dir] || 'ltr'
+    Cdo::I18n.locale_direction(locale)
   end
 
   # String representing the 2 letter language code.
@@ -20,29 +22,7 @@ module LocaleHelper
 
   # String representing the Locale code for the Blockly client code.
   def js_locale(locale_code = locale)
-    locale_code.to_s.downcase.tr('-', '_')
-  end
-
-  def options_for_locale_select
-    options = []
-    Dashboard::Application::LOCALES.each do |locale, data|
-      next unless I18n.available_locales.include?(locale.to_sym) && data.is_a?(Hash)
-      name = data[:native]
-      name = (data[:debug] ? "#{name} DBG" : name)
-      options << [name, locale]
-    end
-    options
-  end
-
-  def options_for_locale_dropdown
-    options = []
-    Dashboard::Application::LOCALES.each do |locale, data|
-      next unless I18n.available_locales.include?(locale.to_sym) && data.is_a?(Hash)
-      name = data[:native]
-      name = (data[:debug] ? "#{name} DBG" : name)
-      options << {value: locale, text: name}
-    end
-    options
+    Cdo::I18n.js_locale(locale_code)
   end
 
   def options_for_locale_code_select

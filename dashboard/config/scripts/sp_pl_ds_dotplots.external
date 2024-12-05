@@ -3,10 +3,60 @@ title 'Dot Plot'
 
 
 markdown <<MARKDOWN
-#Dot Plots
-###Navigate to the CODAP link and create a dot plot with the following steps:
-###1. Click on the Graph icon to create a new graph.
-###2. Drag an attribute into the graph to see a dot plot.
+#Graphs in CODAP
 
-###[School Party Survey Data - CODAP](https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FbmRtgGWIm4yEfQjEOp9c%2Ffile.json)
+> #### Practice building graphs in CODAP. Create at least one. If you have time and want to explore, try creating a dot plot, bar graph and scatter plot.
+
+##CODAP Link
+
+#### Use this link to access CODAP and the school party survey data from previous lessons.
+
+<p style = "font-size: 16pt"> <a href="https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FbmRtgGWIm4yEfQjEOp9c%2Ffile.json" target="blank" rel="noopener noreferrer">School Party Survey Data - CODAP</a></p>
+
+---
+
+<img src="https://images.code.org/c8e2e1a6ca32b6e987d8033a4b3e93f1-image-1731425512254.png" alt="dot plot created in CODAP" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+## Dot Plot
+#### Create a dot plot with the following steps:
+#### 1. Click on the Graph icon to create a new graph.
+#### 2. Drag an attribute into the graph to see a dot plot.
+
+<details><summary style="font-size: 18px;"><strong>🔎 Show Me How 🔎</strong></summary> <img src="https://images.code.org/3cd39edf44e0dc6c67127910b787e636-image-1731532823495.gif">
+</details>
+
+
+<div style="clear:both;"></div>
+
+
+---
+
+<img src="https://images.code.org/0c3faaf47fecefab31d4eb9ea5011a61-image-1731425456148.png" alt="bar chart created in CODAP" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+## Bar Chart
+#### Using the same CODAP link and dot plot plot you previously created, for a bar chart by:
+#### 1. Clicking the Configuration tab on the right of the bar graph.
+#### 2. Select 'Fuse Dots into Bars'
+
+<details><summary style="font-size: 18px;"><strong>🔎 Show Me How 🔎</strong></summary> <img src="https://images.code.org/a343e96165703b6c5f3819af77d15a47-image-1731532933733.gif">
+</details>
+
+<div style="clear:both;"></div>
+
+---
+
+<img src="https://images.code.org/b5dd1ce9a5e6b3d8122a87a21efc7ab0-image-1731425622735.png" alt="bar chart created in CODAP" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+## Scatter Plot
+
+#### Using the same CODAP link and bar chart you previously created, form a scatter plot by:
+#### 1. Selecting a unique attribute not currently used in your graph.
+#### 2. Drag the new attribute into the existing graph axis, replacing "Count".
+
+<details><summary style="font-size: 18px;"><strong>🔎 Show Me How 🔎</strong></summary> <img src="https://images.code.org/dc6b5337afc103094149798c1a6634f1-image-1731533159844.gif">
+</details>
+
+<div style="clear:both;"></div>
+
+
 MARKDOWN

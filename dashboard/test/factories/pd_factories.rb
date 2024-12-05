@@ -505,7 +505,7 @@ FactoryBot.define do
       form_data_hash do
         build(
           :pd_principal_approval_application_hash_common,
-          "approved_#{approved.downcase}".to_sym,
+          :"approved_#{approved.downcase}",
           course: course,
         )
       end

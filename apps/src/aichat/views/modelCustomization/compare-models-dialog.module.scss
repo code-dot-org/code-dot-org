@@ -1,9 +1,20 @@
 @import 'color';
 
+hr {
+  margin: 1rem 0;
+  border-color: $light_gray_200;
+}
+
 .textContainer {
   background-color: $light_gray_50;
   border-radius: 4px;
-  padding: 2px 0;
+}
+
+.modelText {
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .modelDescriptionPanelContainer {
@@ -42,8 +53,9 @@ div.modelComparisonDialog {
   overflow-y: auto;
 }
 
-.fullWidth {
+.compareModelsDropdown {
   width: 100%;
+  display: inline-block;
 }
 
 .headerContainer {

@@ -42,7 +42,7 @@ Parameters:
     Description: Subdomain name for Hour Of Code site.
   InstanceType:
     Type: String
-    Default: <%=INSTANCE_TYPE%>
+    Default: <%=rack_env?(:production) ? 'm7i.12xlarge' : 't3.2xlarge'%>
   Branch:
     Type: String
     Default: <%=branch%>
@@ -203,20 +203,29 @@ Resources:
               - 'comprehend:DetectToxicContent'
             Resource: '*'
           # TODO: Move to dedicated policy for AI TA
-          # AI TA Sagemaker access
+          # AI TA Bedrock access
           - Effect: Allow
             Action:
               - 'bedrock:RetrieveAndGenerate'
-              - 'bedrock:Retrieve' # TODO: scope to custom knowledge base
-              - 'bedrock:InvokeModel' # TODO: scope to allowed models
             Resource: '*'
+          - Effect: Allow
+            Action:
+              - 'bedrock:Retrieve'
+            Resource:
+              # TODO: Deploy KB with Cloudformation and !Ref it here
+              - !Sub 'arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:knowledge-base/1WHRENJ0OA'
+          - Effect: Allow
+            Action:
+              - 'bedrock:InvokeModel'
+            Resource:
+              - 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0'
 
   # ---------------------------------------------
   # Frontend Servers
   # ---------------------------------------------
 
 <% if frontends -%>
-<%=  component 'ami', ami: (ami = commit[0..4]),
+<%=  component 'ami', commit_hash: (commit_hash = commit[0..4]),
   image_id: IMAGE_ID,
   ssh_key_name: SSH_KEY_NAME,
   subnets: subnets(azs(AVAILABILITY_ZONES - ['us-east-1e'])), # us-east-1e doesn't support m5 instance types.
@@ -225,16 +234,16 @@ Resources:
   frontend_volume_size: 64,
   ami_timeout: 'PT120M',
   build_ami: erb_file(BOOTSTRAP_CHEF,
-    resource_id: "AMICreate#{ami}",
+    resource_id: "AMICreate#{commit_hash}",
     node_name: 'ami-$INSTANCE_ID',
     run_list: [CDO.chef_local_mode ? 'recipe[cdo-apps]' : 'role[unmonitored-frontend]'],
-    commit: commit,
+    commit: commit_hash,
     daemon: false
   ),
   frontend_timeout: 'PT50M',
   build_frontend: erb_file(aws_dir('cloudformation/bootstrap_frontend.sh.erb'),
     node_name: 'fe-$INSTANCE_ID',
-    commit: commit
+    commit: commit_hash
   )
 %>
 <% end -%>
@@ -424,7 +433,7 @@ Resources:
         - PolicyName: Daemon
           PolicyDocument:
             Statement:
-              # APIs used by ci:flush_cloudfront_cache task.
+              # APIs used by infra:flush_cloudfront_cache task.
               - Effect: Allow
                 Action:
                   - 'ec2:DescribeInstances'
@@ -446,7 +455,7 @@ Resources:
               - Effect: Allow
                 Action: 'cloudformation:DescribeStackEvents'
                 Resource: !Ref AWS::StackId
-              # Update Stack through `ci:deploy_stack` task.
+              # Update Stack through `infra:deploy_stack` task.
               - Effect: Allow
                 Action:
                   - 'cloudformation:UpdateStack'

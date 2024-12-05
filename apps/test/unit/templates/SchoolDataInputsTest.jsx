@@ -2,11 +2,8 @@ import '@testing-library/jest-dom';
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 
-import {
-  CLICK_TO_ADD,
-  SELECT_A_SCHOOL,
-} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
+import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 describe('SchoolDataInputs', () => {
@@ -99,7 +96,7 @@ describe('SchoolDataInputs', () => {
   });
 
   it('dropdown switches to input box if user clicks to add', () => {
-    renderDefault({country: 'US', schoolId: CLICK_TO_ADD});
+    renderDefault({country: 'US', schoolId: NonSchoolOptions.CLICK_TO_ADD});
     expect(
       screen.getByText(i18n.schoolOrganizationQuestion())
     ).toBeInTheDocument();
@@ -108,7 +105,7 @@ describe('SchoolDataInputs', () => {
   it('goes back to dropdown if user clicks return to results list', () => {
     renderDefault({
       country: 'US',
-      schoolId: SELECT_A_SCHOOL,
+      schoolId: NonSchoolOptions.SELECT_A_SCHOOL,
     });
     expect(screen.getByText(i18n.selectYourSchool())).toBeInTheDocument();
   });

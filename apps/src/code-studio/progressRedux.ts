@@ -11,6 +11,8 @@ import _ from 'lodash';
 
 import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {TestResults} from '@cdo/apps/constants';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import notifyLevelChange from '@cdo/apps/lab2/utils/notifyLevelChange';
 import {
   processServerStudentProgress,
   getLevelResult,
@@ -29,7 +31,6 @@ import {
 } from '@cdo/apps/types/progressTypes';
 import {RootState} from '@cdo/apps/types/redux';
 
-import notifyLevelChange from '../lab2/utils/notifyLevelChange';
 import {getBubbleUrl} from '../templates/progress/BubbleFactory';
 import {AppDispatch} from '../util/reduxHooks';
 import {navigateToHref} from '../utils';
@@ -281,7 +282,7 @@ const progressSlice = createSlice({
     setLessonExtrasEnabled(state, action: PayloadAction<boolean>) {
       state.lessonExtrasEnabled = action.payload;
     },
-    setViewAsUserId(state, action: PayloadAction<number>) {
+    setViewAsUserId(state, action: PayloadAction<number | null>) {
       state.viewAsUserId = action.payload;
     },
   },
@@ -298,6 +299,12 @@ const progressSlice = createSlice({
 
 // Thunks
 type ProgressThunkAction = ThunkAction<void, RootState, undefined, AnyAction>;
+type AsyncProgressThunkAction = ThunkAction<
+  Promise<void>,
+  RootState,
+  undefined,
+  AnyAction
+>;
 
 export const queryUserProgress =
   (userId: string, mergeProgress: boolean = true): ProgressThunkAction =>
@@ -310,7 +317,7 @@ export const queryUserProgress =
 // so we should update the browser and also set this as the new
 // current level.
 export function navigateToLevelId(levelId: string): ProgressThunkAction {
-  return (dispatch, getState) => {
+  return async (dispatch, getState) => {
     const state = getState().progress;
     if (!state.currentLessonId || !state.currentLevelId) {
       return;
@@ -323,11 +330,21 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
     const currentLevel = getCurrentLevel(getState());
 
     if (canChangeLevelInPage(currentLevel, newLevel)) {
+      // If the requested level is the same as the current level, don't do anything.
+      if (state.currentLevelId === levelId) {
+        return;
+      }
       updateBrowserForLevelNavigation(state, newLevel.path, levelId);
       // Notify the Lab2 system that the level is changing.
       notifyLevelChange(currentLevel.id, levelId);
       dispatch(setCurrentLevelId(levelId));
     } else {
+      if (currentLevel?.usesLab2) {
+        // If we are switching from a lab2 level but can't change the level without reloading,
+        // we clean up the project manager (if it exists) to avoid a confusing pop-up to users
+        // if their most recent code has not saved.
+        await Lab2Registry.getInstance().getProjectManager()?.cleanUp();
+      }
       const url = getBubbleUrl(newLevel.path, undefined, undefined, true);
       navigateToHref(url);
     }
@@ -347,9 +364,20 @@ export function navigateToNextLevel(): ProgressThunkAction {
 
 // The user has successfully completed the level and the page
 // will not be reloading. Currently only used by Lab2 labs.
-export function sendSuccessReport(appType: string): ProgressThunkAction {
+export function sendSuccessReport(appType: string): AsyncProgressThunkAction {
   return (dispatch, getState) => {
-    sendReportHelper(appType, TestResults.ALL_PASS, dispatch, getState);
+    return sendReportHelper(appType, TestResults.ALL_PASS, dispatch, getState);
+  };
+}
+
+// Send a report of user progress (e.g., TestResults.LEVEL_ATTEMPTED) on an appType level.
+// Currently only used by Lab2 labs.
+export function sendProgressReport(
+  appType: string,
+  result: TestResults
+): AsyncProgressThunkAction {
+  return (dispatch, getState) => {
+    return sendReportHelper(appType, result, dispatch, getState);
   };
 }
 
@@ -413,11 +441,11 @@ function sendReportHelper(
   const state = getState().progress;
   const levelId = state.currentLevelId;
   if (!state.currentLessonId || !levelId) {
-    return;
+    return Promise.resolve();
   }
   const scriptLevelId = getCurrentScriptLevelId(getState());
   if (!scriptLevelId) {
-    return;
+    return Promise.resolve();
   }
 
   // The server does not appear to use the user ID parameter,
@@ -432,7 +460,7 @@ function sendReportHelper(
     ...extraData,
   };
 
-  fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}`, {
+  return fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}`, {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
@@ -443,6 +471,12 @@ function sendReportHelper(
       // Update the progress store by merging in this
       // particular result immediately.
       dispatch(mergeResults({[levelId]: result}));
+      // If the level is the sublevel of a bubble level,
+      // also update the status of the parent level.
+      const currentLevel = getCurrentLevel(getState());
+      if (currentLevel.parentLevelId) {
+        dispatch(mergeResults({[currentLevel.parentLevelId]: result}));
+      }
     }
   });
 }

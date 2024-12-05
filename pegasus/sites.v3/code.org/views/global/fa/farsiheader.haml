@@ -1,7 +1,12 @@
 :ruby
+  require 'cdo/global_edition'
+  require 'cdo/i18n'
+  require 'cdo/rack/global_edition'
+
   cookie_key = environment_specific_cookie_name '_user_type'
   user_type = request.cookies[cookie_key]
   user_type = "student" if user_type == "student_y"
+  ge_region = 'fa'
 
   hamburger_options = {}
   hamburger_options[:level] = nil
@@ -12,12 +17,15 @@
   hamburger_options[:show_gallery] = true
   hamburger_options[:loc_prefix] = "header_"
   hamburger_options[:page_mode] = request.cookies['pm']
+  hamburger_options[:ge_region] = ge_region
 
   header_contents_options = {}
-  header_contents_options[:user_type] = user_type
+  # Force signed out user for the header, for now
+  header_contents_options[:user_type] = 'signed_out'
   header_contents_options[:language] = request.language
   header_contents_options[:loc_prefix] = "header_"
   header_contents_options[:page_mode] = request.cookies['pm']
+  header_contents_options[:ge_region] = ge_region
 
   require 'cdo/hamburger'
 
@@ -30,9 +38,16 @@
       %img.logo{src: '/images/logo.svg', alt: I18n.t(:code_org_logo_alt)}
     -# rubocop:enable CustomCops/DashboardDbUsage
     %ul#headerlinks
-      - Hamburger.get_farsi_header_contents(header_contents_options).each do |entry|
-        %li
+      - Hamburger.get_header_contents(header_contents_options).each do |entry|
+        %li{class: entry[:class]}
           %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
   .right
+    %ul#ge-region-languages
+      - (Cdo::GlobalEdition.region_locales(ge_region).to_a - [I18n.locale.to_s]).each do |locale|
+        %li
+          %form{method: :post, action: Cdo::I18n.language_change_url(request.fullpath, locale)}
+            %input{type: 'hidden', name: Rack::GlobalEdition::REGION_KEY, value: ge_region}
+            %a.headerlink{href: '#', onclick: 'this.parentNode.submit();'}
+              = I18n.t(:region_language_switch, scope: %i[global_edition], language: Cdo::I18n.language_name(locale) || locale)
     = view :sign_in_or_user
     = view :hamburger, hamburger_options

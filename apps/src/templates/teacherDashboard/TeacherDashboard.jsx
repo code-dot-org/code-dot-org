@@ -1,11 +1,12 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useEffect, useRef} from 'react';
-import {Route, Routes, useLocation} from 'react-router-dom';
+import {Navigate, Route, Routes, useLocation} from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import ManageStudents from '@cdo/apps/templates/manageStudents/ManageStudents';
 import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
@@ -169,7 +170,15 @@ function TeacherDashboard({
             <EmptySectionV1
               hasStudents={studentCount > 0}
               hasCurriculumAssigned={anyStudentHasProgress}
-              element={<SectionProgressSelector isInV1Navigaton={true} />}
+              element={
+                <GlobalEditionWrapper
+                  component={SectionProgressSelector}
+                  componentId="SectionProgressSelector"
+                  props={{
+                    isInV1Navigaton: true,
+                  }}
+                />
+              }
               showProgressPageHeader={true}
             />
           }
@@ -210,6 +219,13 @@ function TeacherDashboard({
             }
           />
         )}
+        {/* '/roster' is the new URL for '/manage_students' in TeacherNavigationRouter. We should redirect to manage students if a user somehow gets sent `/roster' */}
+        <Route
+          path="/roster"
+          element={
+            <Navigate to={TEACHER_DASHBOARD_PATHS.manageStudents} replace />
+          }
+        />
       </Routes>
     </div>
   );

@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Toggle from '@cdo/apps/componentLibrary/toggle';
-import DCDO from '@cdo/apps/dcdo';
 import {PredictQuestionType} from '@cdo/apps/lab2/levelEditors/types';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -21,6 +20,7 @@ const MULTI = 'Multi';
 
 const SummaryResponses = ({
   scriptData,
+  levelNumber,
   // redux
   isRtl,
   viewAs,
@@ -31,12 +31,13 @@ const SummaryResponses = ({
   levels,
 }) => {
   const currentLevel = levels.find(l => l.activeId === currentLevelId);
-  const predictSettings = scriptData.level.properties?.predict_settings;
+  const predictSettings =
+    scriptData.levels[levelNumber].properties?.predict_settings;
   const isFreeResponse =
-    scriptData.level.type === FREE_RESPONSE ||
+    scriptData.levels[levelNumber].type === FREE_RESPONSE ||
     predictSettings?.questionType === PredictQuestionType.FreeResponse;
   const isMulti =
-    scriptData.level.type === MULTI ||
+    scriptData.levels[levelNumber].type === MULTI ||
     predictSettings?.questionType === PredictQuestionType.MultipleChoice;
 
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
@@ -50,30 +51,29 @@ const SummaryResponses = ({
 
   const logEvent = useCallback(
     eventName => {
-      const {level} = scriptData;
       analyticsReporter.sendEvent(
         eventName,
         {
-          levelId: level.id,
-          levelName: level.name,
-          levelType: level.type,
+          levelId: scriptData.levels[levelNumber].id,
+          levelName: scriptData.levels[levelNumber].name,
+          levelType: scriptData.levels[levelNumber].type,
           sectionSelected: !!selectedSection,
           ...scriptData.reportingData,
         },
         PLATFORMS.BOTH
       );
     },
-    [scriptData, selectedSection]
+    [scriptData, levelNumber, selectedSection]
   );
 
   const eventData = useMemo(() => {
     return {
-      levelId: scriptData.level.id,
-      levelName: scriptData.level.name,
+      levelId: scriptData.levels[levelNumber].id,
+      levelName: scriptData.levels[levelNumber].name,
       curriculumUmbrella: scriptData.reportingData.curriculumUmbrella,
       unitId: scriptData.reportingData.unitId,
     };
-  }, [scriptData]);
+  }, [scriptData, levelNumber]);
 
   useEffect(() => {
     logEvent(EVENTS.SUMMARY_PAGE_LOADED);
@@ -132,7 +132,7 @@ const SummaryResponses = ({
             <p>
               <i className="fa fa-user" />
               <span>
-                {scriptData.responses.length}/{students.length}{' '}
+                {scriptData.responses[levelNumber].length}/{students.length}{' '}
                 {i18n.studentsAnswered()}
               </span>
             </p>
@@ -163,7 +163,7 @@ const SummaryResponses = ({
               />
             </div>
           )}
-          {isFreeResponse && DCDO.get('cfu-pin-hide-enabled', false) && (
+          {isFreeResponse && (
             <Toggle
               onChange={toggleNames}
               checked={showStudentNames}
@@ -178,7 +178,7 @@ const SummaryResponses = ({
         {/* Free response visualization */}
         {isFreeResponse && (
           <FreeResponseResponses
-            responses={scriptData.responses}
+            responses={scriptData.responses[levelNumber]}
             showStudentNames={showStudentNames}
             eventData={eventData}
           />
@@ -188,6 +188,7 @@ const SummaryResponses = ({
         {isMulti && (
           <MultiResponses
             scriptData={scriptData}
+            levelNumber={levelNumber}
             showCorrectAnswer={showCorrectAnswer}
           />
         )}
@@ -198,6 +199,7 @@ const SummaryResponses = ({
 
 SummaryResponses.propTypes = {
   scriptData: PropTypes.object,
+  levelNumber: PropTypes.number,
   isRtl: PropTypes.bool,
   viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
   hasSections: PropTypes.bool,

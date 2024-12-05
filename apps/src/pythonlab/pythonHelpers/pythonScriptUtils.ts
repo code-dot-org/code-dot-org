@@ -68,17 +68,14 @@ export function writeSource(
 // Iterate over the pyodide file system and update the source object with any new or updated
 // csv or txt files, or new folders. If we see any other new files, send an error message.
 // In addition, delete every file in the working directory to prepare for the next run.
-// We want a clean working directory for each run.
-// TODO: determine if we want to do the following:
-// - look for deleted folders or files.
-// - send an error message if a non-csv/txt file is updated (this is currently ignored).
-// - process hidden folders (we currently ignore them).
-// Tracked in https://codedotorg.atlassian.net/browse/CT-509
+// We want a clean working directory for each run. We skip sending any skipped files,
+// these are files such as validation that do not need to be saved to the user's project.
 export function getUpdatedSourceAndDeleteFiles(
   source: MultiFileSource,
   id: number,
   pyodide: PyodideInterface,
-  sendMessage: (message: PyodideMessage) => void
+  sendMessage: (message: PyodideMessage) => void,
+  skippedFilenames: string[] = []
 ) {
   const workingDir = pyodide.FS.cwd();
   const directoryData = pyodide.FS.lookupPath(workingDir, {}).node;
@@ -93,7 +90,8 @@ export function getUpdatedSourceAndDeleteFiles(
     DEFAULT_FOLDER_ID,
     id,
     pyodide,
-    sendMessage
+    sendMessage,
+    skippedFilenames
   );
   return newSource;
 }
@@ -105,37 +103,42 @@ function updateAndDeleteSourceWithContents(
   folderId: string,
   id: number,
   pyodide: PyodideInterface,
-  sendMessage: (message: PyodideMessage) => void
+  sendMessage: (message: PyodideMessage) => void,
+  skippedFilenames: string[] = []
 ) {
   contents.forEach(content => {
     const fileExtension = content.name.split('.').pop();
     const fullPath = currentPath + content.name;
     if (pyodide.FS.isFile(content.mode)) {
-      const file = Object.values(source.files).find(
-        f => f.name === content.name && f.folderId === folderId
-      );
-      try {
-        const newContents = pyodide.FS.readFile(fullPath, {
-          encoding: 'utf8',
-        });
-        if (!file) {
-          const newFileId = getNextFileId(Object.values(source.files));
-          source.files[newFileId] = {
-            id: newFileId,
-            folderId,
-            name: content.name,
-            language: fileExtension || '',
-            contents: newContents,
-          };
-        } else {
-          file.contents = newContents;
+      // Only update the source with files that are not skipped.
+      // We still want to delete skipped files below.
+      if (!skippedFilenames.includes(content.name)) {
+        const file = Object.values(source.files).find(
+          f => f.name === content.name && f.folderId === folderId
+        );
+        try {
+          const newContents = pyodide.FS.readFile(fullPath, {
+            encoding: 'utf8',
+          });
+          if (!file) {
+            const newFileId = getNextFileId(Object.values(source.files));
+            source.files[newFileId] = {
+              id: newFileId,
+              folderId,
+              name: content.name,
+              language: fileExtension || '',
+              contents: newContents,
+            };
+          } else {
+            file.contents = newContents;
+          }
+        } catch (e) {
+          sendMessage({
+            type: 'internal_error',
+            message: `Failed to read file ${fullPath}`,
+            id: id,
+          });
         }
-      } catch (e) {
-        sendMessage({
-          type: 'internal_error',
-          message: `Failed to read file ${fullPath}`,
-          id: id,
-        });
       }
       // Delete the file now that we have handled it.
       try {
@@ -176,7 +179,8 @@ function updateAndDeleteSourceWithContents(
         newFolderId,
         id,
         pyodide,
-        sendMessage
+        sendMessage,
+        skippedFilenames
       );
       // Now that we've handled the contents, delete the folder.
       try {

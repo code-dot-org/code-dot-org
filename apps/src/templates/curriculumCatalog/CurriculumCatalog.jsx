@@ -1,7 +1,7 @@
 // The following styles are imported in a very specific order to preserve UI consistency.
 // `HeaderBanner` imports `typography.scss`
-// `CurriculumCatalogCard` imports `phase1-design-system.scss`
-// `typography.scss` has conflicting styles with `phase1-design-system.scss` (specifically for `h4` and `p` elements)
+// `CurriculumCatalogCard` imports `2022-rebrand-update.scss`
+// `typography.scss` has conflicting styles with `2022-rebrand-update.scss` (specifically for `h4` and `p` elements)
 // We are importing them in the specific order they were imported before adding import/order in order to preserve the UI.
 // These are very small changes so this can likely be removed with no issues.
 /* eslint-disable import/order */
@@ -13,8 +13,9 @@ import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
 
 import {Heading5, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import {
   getSimilarRecommendations,
   getStretchRecommendations,
@@ -39,6 +40,7 @@ const CurriculumCatalog = ({
   isSignedOut,
   isTeacher,
   curriculaTaught,
+  forceTranslated,
   ...props
 }) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
@@ -75,7 +77,8 @@ const CurriculumCatalog = ({
       EVENTS.CURRICULUM_CATALOG_ASSIGN_COMPLETED_EVENT,
       {
         curriculum_offering: assignmentData.assignedTitle,
-      }
+      },
+      PLATFORMS.BOTH
     );
   };
 
@@ -308,6 +311,7 @@ const CurriculumCatalog = ({
         filteredCurricula={filteredCurricula}
         setFilteredCurricula={setFilteredCurricula}
         isEnglish={isEnglish}
+        forceTranslated={forceTranslated}
         languageNativeName={languageNativeName}
       />
       <div className={style.catalogContentContainer}>
@@ -325,6 +329,32 @@ CurriculumCatalog.propTypes = {
   isSignedOut: PropTypes.bool.isRequired,
   isTeacher: PropTypes.bool.isRequired,
   curriculaTaught: PropTypes.arrayOf(PropTypes.number),
+  forceTranslated: PropTypes.bool,
 };
 
-export default CurriculumCatalog;
+/**
+ * This is a version of the curriculum catalog that is overridable by a regional
+ * configuration.
+ *
+ * This is done via a configuration in, for instance, /config/global_editions/fa.yml
+ * via a paths rule such as:
+ *
+ * ```
+ * pages:
+ *   # Home dashboards
+ *   - path: /
+ *     components:
+ *       LtiFeedbackBanner: false
+ *       CurriculumCatalog:
+ *         forceTranslated: true
+ * ```
+ */
+const RegionalCurriculumCatalog = props => (
+  <GlobalEditionWrapper
+    component={CurriculumCatalog}
+    componentId="CurriculumCatalog"
+    props={props}
+  />
+);
+
+export default RegionalCurriculumCatalog;

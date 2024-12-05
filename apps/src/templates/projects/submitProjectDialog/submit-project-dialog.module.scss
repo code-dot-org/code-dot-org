@@ -1,0 +1,65 @@
+@import "color", "font";
+
+.submitProjectDialog {
+  max-height: calc(95vh - 100px);
+  display: flex;
+  flex-direction: column;
+  background-color: $light_gray_950;;
+  color: white;
+  padding: 2em 3em;
+
+  hr {
+    margin: 1rem 0;
+    border-color: $light_gray_200;
+  }
+
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    margin-bottom: 20px;
+    flex: 1;
+    background-color: $light_white;
+  }
+
+  .bodyTwoText, .heading3, .link {
+    color: $light_white;
+  }
+
+  .link:hover {
+      color: $brand_secondary_dark;
+  }
+
+  .headerContainer {
+    display: flex;
+    height: 2rem;
+  }
+  
+  .submitProjectTextContainer {
+    display: flex;
+    overflow-y: auto;
+    flex-direction: column;
+    margin-bottom: -10px;
+  }
+  
+  .bottomSection {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .bottomSectionButtons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+  }
+  
+  .bottomSectionLink {
+    display: flex;
+    justify-content: start;
+  }
+
+  .alertContainer {
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+  }
+}

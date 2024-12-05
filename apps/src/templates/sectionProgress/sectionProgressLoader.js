@@ -106,7 +106,7 @@ export function loadUnitProgress(scriptId, sectionId) {
 
   // Combine and transform the data
   requests.push(scriptRequest);
-  Promise.all(requests).then(() => {
+  return Promise.all(requests).then(() => {
     logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressFinished, {
       sectionId,
       scriptId,
@@ -117,7 +117,7 @@ export function loadUnitProgress(scriptId, sectionId) {
     sectionProgress.studentLessonProgressByUnit = {
       ...sectionProgress.studentLessonProgressByUnit,
       [scriptId]: lessonProgressForSection(
-        sectionProgress.studentLevelProgressByUnit[scriptId],
+        sectionProgress.studentLevelProgressByUnit[scriptId] || [],
         sectionProgress.unitDataByUnit[scriptId].lessons
       ),
     };

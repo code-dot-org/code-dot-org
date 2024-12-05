@@ -18,18 +18,6 @@
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
-    "announcements": [
-      {
-        "key": "0c99406c-746f-4883-9593-76e566be61b7",
-        "notice": "Create PT Unit Coming This Fall",
-        "details": "We will be updating the Create PT Unit (Unit 9) based on updates from the College Board and the first round of scoring the new format implemented in the May 2024 AP CS Principles Exam. This unit will become live in the Fall. If you'd like to check out information about the updates implemented last year, click \"Learn More\"",
-        "link": "https://apcentral.collegeboard.org/courses/ap-computer-science-principles/course/frequently-asked-questions/about-create-performance-task-updates",
-        "type": "bullhorn",
-        "visibility": "Teacher-only",
-        "dismissible": true,
-        "buttonText": "Learn More"
-      }
-    ],
     "family_name": "csp",
     "has_numbered_units": true,
     "has_verified_resources": true,

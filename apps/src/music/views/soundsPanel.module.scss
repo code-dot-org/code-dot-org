@@ -11,10 +11,11 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
+    gap: 8px;
 
     .segmentedButtons {
       span {
-        font-size: 12px !important;
+        user-select: none;
       }
     }
   }
@@ -114,13 +115,14 @@
     &Left {
       display: flex;
       align-items: center;
-      width: 200px;
+      width: calc(100% - 30px);
 
       .typeIcon {
         margin-right: 6px;
         margin-left: 4px;
         width: 24px;
         text-align: center;
+        flex-shrink: 0;
       }
 
       .name {

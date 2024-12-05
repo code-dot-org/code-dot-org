@@ -5,12 +5,15 @@ export type Lesson = {
   id: number;
   position: number;
   lessonPlanHtmlUrl: string;
+  lessonPlanPdfUrl: string;
   standardsUrl: string;
   vocabularyUrl: string;
   resources: {
     Teacher: Resource[];
     Student: Resource[];
   };
+  hasLessonPlan: boolean;
+  isLockable: boolean;
 };
 
 export type Resource = {
@@ -41,7 +44,7 @@ export const computeMaterialType = (
     } else {
       return 'GOOGLE_DOC';
     }
-  } else if (resourceType === 'Video') {
+  } else if (resourceType?.includes('Video')) {
     return 'VIDEO';
   } else if (resourceType === 'Lesson Plan') {
     return 'LESSON_PLAN';

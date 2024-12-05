@@ -4,13 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "skills_focused_self_paced_pl",
+      "curriculum_umbrella": "Pedagogy special topics selfpaced pl",
       "is_migrated": true,
       "student_detail_progress_view": true,
+      "topic_tags": [
+        "ai"
+      ],
       "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-10 16:03:59 UTC",
+    "serialized_at": "2024-11-19 01:19:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

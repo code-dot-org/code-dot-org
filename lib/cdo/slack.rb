@@ -167,15 +167,6 @@ class Slack
     return !!result
   end
 
-  # @param room [String] Channel name or id to post the snippet.
-  # @param text [String] Snippet text.
-  def self.snippet(room, text)
-    # omit leading '#' when passing channel names to this API
-    channel = CHANNEL_MAP[room] || room
-    result = post_to_slack("https://slack.com/api/files.upload?channels=#{channel}&content=#{URI.encode_www_form_component(text)}")
-    return !!result
-  end
-
   # @param name [String] Name of the Slack channel to join.
   def self.join_room(name)
     channel = get_channel_id(name)

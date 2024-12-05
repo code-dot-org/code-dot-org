@@ -8,6 +8,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Notification from '@cdo/apps/sharedComponents/Notification';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
@@ -39,7 +40,7 @@ export const UnconnectedTeacherHomepage = ({
   afeEligible,
   joinedStudentSections,
   joinedPlSections,
-  ncesSchoolId,
+  existingSchoolInfo,
   queryStringOpen,
   schoolYear,
   showCensusBanner,
@@ -57,7 +58,6 @@ export const UnconnectedTeacherHomepage = ({
   showIncubatorBanner,
   currentUserId,
 }) => {
-  const censusBanner = useRef(null);
   const teacherReminders = useRef(null);
   const flashes = useRef(null);
 
@@ -79,14 +79,10 @@ export const UnconnectedTeacherHomepage = ({
   const [displayCensusBanner, setDisplayCensusBanner] = useState(
     showCensusBanner && !forceHideCensusBanner
   );
-  const [censusSubmittedSuccessfully, setCensusSubmittedSuccessfully] =
-    useState(null);
   const [censusBannerTeachesSelection, setCensusBannerTeachesSelection] =
     useState(null);
   const [censusBannerInClassSelection, setCensusBannerInClassSelection] =
     useState(null);
-  const [showCensusUnknownError, setShowCensusUnknownError] = useState(false);
-  const [showCensusInvalidError, setShowCensusInvalidError] = useState(false);
 
   useEffect(() => {
     // The component used here is implemented in legacy HAML/CSS rather than React.
@@ -104,26 +100,6 @@ export const UnconnectedTeacherHomepage = ({
   useEffect(() => {
     analyticsReporter.sendEvent(EVENTS.TEACHER_HOMEPAGE_VISITED);
   }, []);
-
-  const handleCensusBannerSubmit = () => {
-    if (censusBanner.current.isValid()) {
-      $.ajax({
-        url: '/dashboardapi/v1/census/CensusTeacherBannerV1',
-        type: 'post',
-        dataType: 'json',
-        data: censusBanner.current.getData(),
-      })
-        .done(() => {
-          setCensusSubmittedSuccessfully(true);
-          dismissCensusBanner(null, null);
-        })
-        .fail(() => {
-          setShowCensusUnknownError(true);
-        });
-    } else {
-      setShowCensusInvalidError(true);
-    }
-  };
 
   const dismissCensusBanner = (onSuccess, onFailure) => {
     $.ajax({
@@ -196,9 +172,13 @@ export const UnconnectedTeacherHomepage = ({
         <ProtectedStatefulDiv ref={teacherReminders} />
         {showNpsSurvey && <NpsSurveyBlock />}
         {specialAnnouncement && (
-          <MarketingAnnouncementBanner
-            announcement={specialAnnouncement}
-            marginBottom="30px"
+          <GlobalEditionWrapper
+            component={MarketingAnnouncementBanner}
+            componentId="MarketingAnnouncementBanner"
+            props={{
+              announcement: specialAnnouncement,
+              marginBottom: '30px',
+            }}
           />
         )}
         {announcement && showAnnouncement && (
@@ -238,19 +218,15 @@ export const UnconnectedTeacherHomepage = ({
         {displayCensusBanner && (
           <div>
             <CensusTeacherBanner
-              ref={censusBanner}
               schoolYear={schoolYear}
-              ncesSchoolId={ncesSchoolId}
+              existingSchoolInfo={existingSchoolInfo}
               question={censusQuestion}
               teaches={censusBannerTeachesSelection}
               inClass={censusBannerInClassSelection}
               teacherId={teacherId}
               teacherName={teacherName}
               teacherEmail={teacherEmail}
-              showInvalidError={showCensusInvalidError}
-              showUnknownError={showCensusUnknownError}
-              submittedSuccessfully={censusSubmittedSuccessfully}
-              onSubmit={() => handleCensusBannerSubmit()}
+              onSubmitSuccess={() => dismissCensusBanner(null, null)}
               onDismiss={() => dismissAndHideCensusBanner()}
               onPostpone={() => postponeCensusBanner()}
               onTeachesChange={event =>
@@ -285,8 +261,16 @@ export const UnconnectedTeacherHomepage = ({
             isProfessionalLearningCourse={true}
           />
         )}
-        <TeacherResources />
-        {showIncubatorBanner && <IncubatorBanner />}
+        <GlobalEditionWrapper
+          component={TeacherResources}
+          componentId="TeacherResources"
+        />
+        {showIncubatorBanner && (
+          <GlobalEditionWrapper
+            component={IncubatorBanner}
+            componentId="IncubatorBanner"
+          />
+        )}
         <ProjectWidgetWithData
           canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
@@ -313,7 +297,13 @@ UnconnectedTeacherHomepage.propTypes = {
   hocLaunch: PropTypes.string,
   joinedStudentSections: shapes.sections,
   joinedPlSections: shapes.sections,
-  ncesSchoolId: PropTypes.string,
+  existingSchoolInfo: PropTypes.shape({
+    country: PropTypes.string,
+    id: PropTypes.string,
+    name: PropTypes.string,
+    zip: PropTypes.string,
+    type: PropTypes.string,
+  }),
   queryStringOpen: PropTypes.string,
   schoolYear: PropTypes.number,
   showCensusBanner: PropTypes.bool.isRequired,

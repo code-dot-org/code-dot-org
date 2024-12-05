@@ -5,18 +5,17 @@ description 'description here'
 markdown <<MARKDOWN
 # Data Science Course Overview
  
-#### The Data Science Course can serve as a standalone unit for 9-12 students that can be integrated seamlessly into any existing Computer Science curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs.
+#### As part of the **Computer Science Foundations** course, the Data Science content can also serve as a standalone unit for 9-12 students that can be integrated seamlessly into existing curriculum, including computer science, math, or science, offering teachers the flexibility to introduce it according to their schedule and educational needs.
 
 #### This course consists of two units. You can choose to teach one or both units, whichever works for your class and schedule.
 
 
-
 ## Unit l: Foundations of Data Science
-#### This unit consists of 13 lessons and takes about three weeks to complete and does not have python programming.
+#### This unit consists of 13 lessons and takes about three weeks to complete and does not have Python programming.
 
-<img src="https://images.code.org/384395754f9060f684fba88efd6d679b-image-1724077977393.png" alt="icon with computer and data symbols" style="border-radius:10px; float: right; ; height: 200px; margin: 50px 00px 50px 20px; ">
+<img src="https://images.code.org/384395754f9060f684fba88efd6d679b-image-1724077977393.png" alt="icon with computer and data symbols" style="border-radius:10px; float: right; ; height: 200px; margin: 10px 00px 0px 20px; ">
 
-#### **Students will;**
+#### **Students will:**
 - #### Understand the **fundamental concepts** of data science
 - #### Engage in hands-on activities that involve data analysis, data manipulation, and data visualizations
 - #### Explore and discuss the ethical implications and responsibilities associated data science
@@ -30,7 +29,7 @@ markdown <<MARKDOWN
 
 #### This unit consists of 13 lessons and takes about 3 weeks to complete and features Python and Pandas in the new Python Lab.
 
-<img src="https://images.code.org/6fd3e81dbbba4b9575faa0cde3cf8372-image-1727728740354.png" alt="icon of computer with python logo" style="border-radius:10px; float: right; ; height: 205px; margin: 50px 0px 50px 20px; ">
+<img src="https://images.code.org/6fd3e81dbbba4b9575faa0cde3cf8372-image-1727728740354.png" alt="icon of computer with python logo" style="border-radius:10px; float: right; ; height: 205px; margin: 10px 0px 50px 20px; ">
 
 ### **Students will:**
 - #### Explore **Python** syntax and foundational programming concepts
@@ -38,7 +37,7 @@ markdown <<MARKDOWN
 - #### Apply techniques for data cleaning, filtering, and statistical analysis to answer data-driven questions.
 - #### Create custom visualizations and effectively communicate insights through a project addressing a real-world issue.
 
-#### <b>Explore Unit Two <a href = "data-science-with-python-2024" target = "blank" rel = "noopener noreferrer"> here </a>
+#### <b>Explore Unit Two <a href = "https://studio.code.org/s/data-science-with-python-2024" target = "blank" rel = "noopener noreferrer"> here </a>
 
 <div style="clear:both;"></div>
 

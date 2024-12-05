@@ -255,6 +255,10 @@ export default class ProjectManager {
     );
   }
 
+  getProjectType() {
+    return this.lastChannel?.projectType;
+  }
+
   redirectToRemix() {
     this.throwErrorIfDestroyed('redirectToRemix');
     if (!this.lastChannel || !this.lastChannel.projectType) {
@@ -360,7 +364,13 @@ export default class ProjectManager {
           forceNewVersion
         );
       } catch (error) {
-        this.onSaveFail('Error saving sources', error as Error);
+        let errorToReport: Error;
+        if (error instanceof Error) {
+          errorToReport = error as Error;
+        } else {
+          errorToReport = new Error('Unknown error occurred');
+        }
+        this.onSaveFail('Error saving sources', errorToReport);
         return;
       }
       this.lastSource = JSON.stringify(this.sourcesToSave);
@@ -421,8 +431,10 @@ export default class ProjectManager {
       this.metricsReporter.logWarning(`${error.message}. Reloading page.`);
       reload();
     } else {
-      // Otherwise, we log the error.
-      this.metricsReporter.logError(errorMessage, error);
+      // Otherwise, we log the error, including the message as details.
+      this.metricsReporter.logError(errorMessage, error, {
+        message: error.message,
+      });
     }
   }
 

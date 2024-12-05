@@ -1,9 +1,12 @@
 import classNames from 'classnames';
+import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
+import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {
   Heading2,
@@ -13,16 +16,20 @@ import {
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {isEmail} from '@cdo/apps/util/formatValidation';
+import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
+
+import {navigateToHref} from '../utils';
 
 import locale from './locale';
 import {
-  IS_PARENT_SESSION_KEY,
-  PARENT_EMAIL_SESSION_KEY,
-  PARENT_EMAIL_OPT_IN_SESSION_KEY,
-  USER_AGE_SESSION_KEY,
-  USER_STATE_SESSION_KEY,
-  USER_GENDER_SESSION_KEY,
+  ACCOUNT_TYPE_SESSION_KEY,
+  EMAIL_SESSION_KEY,
+  OAUTH_LOGIN_TYPE_SESSION_KEY,
+  USER_RETURN_TO_SESSION_KEY,
+  clearSignUpSessionStorage,
+  NEW_SIGN_UP_USER_TYPE,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
@@ -30,8 +37,9 @@ import style from './signUpFlowStyles.module.scss';
 const FinishStudentAccount: React.FunctionComponent<{
   ageOptions: {value: string; text: string}[];
   usIp: boolean;
+  countryCode: string;
   usStateOptions: {value: string; text: string}[];
-}> = ({ageOptions, usIp, usStateOptions}) => {
+}> = ({ageOptions, usIp, countryCode, usStateOptions}) => {
   // Fields
   const [isParent, setIsParent] = useState(false);
   const [parentEmail, setParentEmail] = useState('');
@@ -50,8 +58,26 @@ const FinishStudentAccount: React.FunctionComponent<{
   const [gdprChecked, setGdprChecked] = useState(false);
   const [showGDPR, setShowGDPR] = useState(false);
   const [isGdprLoaded, setIsGdprLoaded] = useState(false);
+  const [userReturnTo, setUserReturnTo] = useState('/home');
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorCreatingAccountMessage, showErrorCreatingAccountMessage] =
+    useState(false);
+
+  // Remove oauth user_type cookie if it exists
+  cookies.remove(NEW_SIGN_UP_USER_TYPE);
 
   useEffect(() => {
+    // If the user hasn't selected a user type or login type, redirect them back to the incomplete step of signup.
+    if (sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === null) {
+      navigateToHref('/users/new_sign_up/account_type');
+    } else if (
+      sessionStorage.getItem(EMAIL_SESSION_KEY) === null &&
+      sessionStorage.getItem(OAUTH_LOGIN_TYPE_SESSION_KEY) === null
+    ) {
+      navigateToHref('/users/new_sign_up/login_type');
+    }
+
     const fetchGdprData = async () => {
       const urlParams = new URLSearchParams(window.location.search);
       const forceInEu = urlParams.get('force_in_eu');
@@ -70,6 +96,11 @@ const FinishStudentAccount: React.FunctionComponent<{
       }
     };
     fetchGdprData();
+
+    const userReturnToHref = sessionStorage.getItem(USER_RETURN_TO_SESSION_KEY);
+    if (userReturnToHref) {
+      setUserReturnTo(userReturnToHref);
+    }
   }, []);
 
   // GDPR is valid if
@@ -93,10 +124,6 @@ const FinishStudentAccount: React.FunctionComponent<{
     );
     const newIsParentCheckedChoice = !isParent;
     setIsParent(newIsParentCheckedChoice);
-    sessionStorage.setItem(
-      IS_PARENT_SESSION_KEY,
-      `${newIsParentCheckedChoice}`
-    );
   };
 
   const onParentEmailChange = (
@@ -104,22 +131,12 @@ const FinishStudentAccount: React.FunctionComponent<{
   ): void => {
     const newParentEmail = e.target.value;
     setParentEmail(newParentEmail);
-    sessionStorage.setItem(PARENT_EMAIL_SESSION_KEY, newParentEmail);
 
     if (!isEmail(newParentEmail)) {
       setShowParentEmailError(true);
     } else {
       setShowParentEmailError(false);
     }
-  };
-
-  const onParentEmailOptInChange = (): void => {
-    const newParentEmailOptInCheckedChoice = !parentEmailOptInChecked;
-    setParentEmailOptInChecked(newParentEmailOptInCheckedChoice);
-    sessionStorage.setItem(
-      PARENT_EMAIL_OPT_IN_SESSION_KEY,
-      `${newParentEmailOptInCheckedChoice}`
-    );
   };
 
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -136,7 +153,6 @@ const FinishStudentAccount: React.FunctionComponent<{
   const onAgeChange = (e: React.ChangeEvent<HTMLSelectElement>): void => {
     const newAge = e.target.value;
     setAge(newAge);
-    sessionStorage.setItem(USER_AGE_SESSION_KEY, newAge);
 
     if (newAge === '') {
       setShowAgeError(true);
@@ -148,19 +164,12 @@ const FinishStudentAccount: React.FunctionComponent<{
   const onStateChange = (e: React.ChangeEvent<HTMLSelectElement>): void => {
     const newState = e.target.value;
     setState(newState);
-    sessionStorage.setItem(USER_STATE_SESSION_KEY, newState);
 
     if (newState === '') {
       setShowStateError(true);
     } else {
       setShowStateError(false);
     }
-  };
-
-  const onGenderChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    const newGender = e.target.value;
-    setGender(newGender);
-    sessionStorage.setItem(USER_GENDER_SESSION_KEY, newGender);
   };
 
   const sendFinishEvent = (): void => {
@@ -176,6 +185,47 @@ const FinishStudentAccount: React.FunctionComponent<{
     );
   };
 
+  const submitStudentAccount = async () => {
+    if (isSubmitting) {
+      return;
+    }
+    setIsSubmitting(true);
+    sendFinishEvent();
+    showErrorCreatingAccountMessage(false);
+
+    const signUpParams = {
+      new_sign_up: true,
+      user: {
+        user_type: UserTypes.STUDENT,
+        email: sessionStorage.getItem(EMAIL_SESSION_KEY),
+        name: name,
+        age: age,
+        gender: gender,
+        us_state: state,
+        country_code: countryCode,
+        parent_email_preference_email: parentEmail,
+        parent_email_preference_opt_in: parentEmailOptInChecked,
+      },
+    };
+    const authToken = await getAuthenticityToken();
+    const response = await fetch('/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': authToken,
+      },
+      body: JSON.stringify(signUpParams),
+    });
+
+    if (response.ok) {
+      clearSignUpSessionStorage(false);
+      navigateToHref(userReturnTo);
+    } else {
+      setIsSubmitting(false);
+      showErrorCreatingAccountMessage(true);
+    }
+  };
+
   return (
     <div>
       <div className={style.finishAccountContainer}>
@@ -183,6 +233,23 @@ const FinishStudentAccount: React.FunctionComponent<{
           <Heading2>{locale.finish_creating_student_account()}</Heading2>
           <BodyTwoText>{locale.tailor_experience()}</BodyTwoText>
         </div>
+        {errorCreatingAccountMessage && (
+          <div className={style.errorSigningUpMessage}>
+            <div className={style.errorMessageWithXMark}>
+              <FontAwesomeV6Icon
+                iconName={'circle-xmark'}
+                className={style.xIcon}
+              />
+              <BodyThreeText className={style.errorMessageText}>
+                <SafeMarkdown markdown={locale.error_signing_up_message()} />
+              </BodyThreeText>
+            </div>
+            <CloseButton
+              onClick={() => showErrorCreatingAccountMessage(false)}
+              aria-label={locale.error_signing_up_message_aria_label()}
+            />
+          </div>
+        )}
         <fieldset className={style.inputContainer}>
           <div className={style.parentInfoContainer}>
             <Checkbox
@@ -216,7 +283,7 @@ const FinishStudentAccount: React.FunctionComponent<{
                     name="parentEmailOptIn"
                     label={locale.email_me_with_updates()}
                     checked={parentEmailOptInChecked}
-                    onChange={onParentEmailOptInChange}
+                    onChange={e => setParentEmailOptInChecked(e.target.checked)}
                     size="s"
                   />
                 </div>
@@ -226,6 +293,7 @@ const FinishStudentAccount: React.FunctionComponent<{
           <div>
             <TextField
               name="displayName"
+              id="uitest-display-name"
               label={locale.display_name_eg()}
               value={name}
               placeholder={locale.coder()}
@@ -240,6 +308,8 @@ const FinishStudentAccount: React.FunctionComponent<{
           <div>
             <SimpleDropdown
               name="userAge"
+              id="uitest-user-age"
+              className={style.dropdownContainer}
               labelText={locale.what_is_your_age()}
               size="m"
               items={ageOptions}
@@ -256,6 +326,8 @@ const FinishStudentAccount: React.FunctionComponent<{
             <div>
               <SimpleDropdown
                 name="userState"
+                id="uitest-user-state"
+                className={style.dropdownContainer}
                 labelText={locale.what_state_are_you_in()}
                 size="m"
                 items={usStateOptions}
@@ -273,8 +345,7 @@ const FinishStudentAccount: React.FunctionComponent<{
             name="userGender"
             label={locale.what_is_your_gender()}
             value={gender}
-            placeholder={locale.female()}
-            onChange={onGenderChange}
+            onChange={e => setGender(e.target.value)}
           />
           {showGDPR && (
             <div>
@@ -308,7 +379,7 @@ const FinishStudentAccount: React.FunctionComponent<{
             className={style.finishSignUpButton}
             color={buttonColors.purple}
             type="primary"
-            onClick={() => sendFinishEvent()}
+            onClick={submitStudentAccount}
             text={locale.go_to_my_account()}
             iconRight={{
               iconName: 'arrow-right',
@@ -319,18 +390,20 @@ const FinishStudentAccount: React.FunctionComponent<{
               name === '' ||
               age === '' ||
               (usIp && state === '') ||
-              (isParent && parentEmail === '') ||
+              (isParent && (parentEmail === '' || showParentEmailError)) ||
               !gdprValid
             }
+            isPending={isSubmitting}
           />
         </div>
       </div>
       <SafeMarkdown
         className={style.tosAndPrivacy}
         markdown={locale.by_signing_up({
-          tosLink: 'code.org/tos',
-          privacyPolicyLink: 'code.org/privacy',
+          tosLink: 'https://code.org/tos',
+          privacyPolicyLink: 'https://code.org/privacy',
         })}
+        openExternalLinksInNewTab={true}
       />
     </div>
   );

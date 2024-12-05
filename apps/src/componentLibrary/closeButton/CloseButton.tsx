@@ -1,21 +1,22 @@
 import classNames from 'classnames';
-import React, {AriaAttributes} from 'react';
+import React, {HTMLAttributes} from 'react';
 
-import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
 import moduleStyles from './closeButton.module.scss';
 
-export interface CloseButtonProps extends AriaAttributes {
+export interface CloseButtonProps extends HTMLAttributes<HTMLButtonElement> {
   /** Close Button onClick */
   onClick: () => void;
   /** Close Button size */
-  size?: Exclude<ComponentSizeXSToL, 's' | 'xs'>;
+  size?: ComponentSizeXSToL;
   /** Close Button Color*/
   color?: 'light' | 'dark';
   /** Close Button Custom class name */
   className?: string;
+  /** Close Button id */
+  id?: string;
   /** Close Button an accessible label indicating invisible label for the Close Button */
   'aria-label': string;
 }
@@ -25,7 +26,7 @@ export interface CloseButtonProps extends AriaAttributes {
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/CloseButtonTest.jsx)
+ * * (see apps/test/unit/componentLibrary/CloseButtonTest.tsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```
@@ -39,28 +40,25 @@ const CloseButton: React.FunctionComponent<CloseButtonProps> = ({
   size = 'm',
   'aria-label': ariaLabel,
   color = 'dark',
+  id,
   className,
-  ...rest
-}) => {
-  const ariaProps = getAriaPropsFromProps(rest);
-
-  return (
-    <button
-      type="button"
-      id="ui-close-dialog"
-      aria-label={ariaLabel}
-      className={classNames(
-        moduleStyles.closeButton,
-        moduleStyles[`closeButton-${color}`],
-        moduleStyles[`closeButton-${size}`],
-        className
-      )}
-      onClick={onClick}
-      {...ariaProps}
-    >
-      <FontAwesomeV6Icon iconName={'close'} />
-    </button>
-  );
-};
+  ...HTMLAttributes
+}) => (
+  <button
+    type="button"
+    id={id}
+    aria-label={ariaLabel}
+    className={classNames(
+      moduleStyles.closeButton,
+      moduleStyles[`closeButton-${color}`],
+      moduleStyles[`closeButton-${size}`],
+      className
+    )}
+    onClick={onClick}
+    {...HTMLAttributes}
+  >
+    <FontAwesomeV6Icon iconName={'close'} />
+  </button>
+);
 
 export default CloseButton;

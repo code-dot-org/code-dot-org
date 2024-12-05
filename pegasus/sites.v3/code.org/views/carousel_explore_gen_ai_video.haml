@@ -1,0 +1,19 @@
+- video_ai_index = 5
+
+- video_download_path = ["//videos.code.org/levelbuilder/gen_ai_input_pretraining_compressed-mp4.mp4", "//videos.code.org/levelbuilder/gen_ai_storage_embeddings_compressed-mp4.mp4", "//videos.code.org/levelbuilder/gen_ai_processing_neuralnets_compressed-mp4.mp4", "//videos.code.org/levelbuilder/gen_ai_attention_compressed-mp4.mp4", "//videos.code.org/levelbuilder/gen_ai_output_probabilities_compressed-mp4.mp4"]
+
+- video_caption = [hoc_s(:gen_ai_vid_input_caption), hoc_s(:gen_ai_vid_storage_caption), hoc_s(:gen_ai_vid_processing_caption), hoc_s(:gen_ai_vid_attention_caption), hoc_s(:gen_ai_vid_output_caption)]
+
+- video_code = ["JO9MgO1Zp3E", "s1fhxAVpYx8", "Z7Mes_Ej69Y", "2RdK6k45koY", "gGK7b7j4BiQ"]
+
+.carousel-wrapper.video-carousel
+  %swiper-container.explore-gen-ai{navigation: "true", "navigation-next-el": ".nav-next-explore-gen-ai", "navigation-prev-el": ".nav-prev-explore-gen-ai", pagination: "true", init: "false", "allow-touch-move": "false"}
+    - video_ai_index.times do |index|
+      %swiper-slide
+        %figure
+          = view :video_with_fallback, video_code: video_code[index], download_path: video_download_path[index]
+          %figcaption.no-margin-bottom
+            = video_caption[index]
+
+  %button.swiper-nav-prev.nav-prev-explore-gen-ai
+  %button.swiper-nav-next.nav-next-explore-gen-ai

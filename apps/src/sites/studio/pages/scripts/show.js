@@ -30,6 +30,7 @@ import {
   setPageType,
   pageTypes,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {showV2TeacherDashboard} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
 
 import locales, {setLocaleCode} from '../../../../redux/localesRedux';
@@ -87,7 +88,10 @@ function initPage() {
   store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
   store.dispatch(setPageType(pageTypes.scriptOverview));
 
-  initCourseProgress(scriptData);
+  const v2TeacherDashboardEnabled = showV2TeacherDashboard();
+
+  // Don't show the teacher panel if v2 dashboard is enabled
+  initCourseProgress(scriptData, !v2TeacherDashboardEnabled);
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);

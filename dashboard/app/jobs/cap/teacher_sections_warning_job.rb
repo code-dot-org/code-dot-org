@@ -3,11 +3,14 @@
 module CAP
   class TeacherSectionsWarningJob < ApplicationJob
     EVENT_NAME = 'cap_teacher_sections_warning'
+    MAILJET_RETRY_LIMIT = 5
 
     rescue_from StandardError, with: :report_exception
 
     def perform
       teachers.find_each do |teacher|
+        next if teacher.email.blank?
+
         cap_section_ids = []
         email_cap_sections = []
 
@@ -19,14 +22,7 @@ module CAP
           }
         end
 
-        MailjetDeliveryJob.perform_later(
-          :cap_section_warning,
-          teacher.email,
-          teacher.name,
-          vars: {
-            capSections: email_cap_sections,
-          }
-        )
+        send_warning_email(teacher.email, teacher.name, email_cap_sections)
 
         Metrics::Events.log_event(
           event_name: EVENT_NAME,
@@ -47,6 +43,23 @@ module CAP
 
     private def teachers
       @teachers ||= User.where(id: cap_affected_sections.select(:user_id))
+    end
+
+    private def send_warning_email(email, name, cap_sections)
+      Retryable.retryable(
+        on: RestClient::TooManyRequests,
+        tries: MAILJET_RETRY_LIMIT,
+        sleep: ->(n) {2 ** n}
+      ) do
+        MailJet.send_email(
+          :cap_section_warning,
+          email,
+          name,
+          vars: {
+            capSections: cap_sections,
+          }
+        )
+      end
     end
   end
 end

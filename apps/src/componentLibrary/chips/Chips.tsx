@@ -73,6 +73,7 @@ const Chips: React.FunctionComponent<ChipsProps> = ({
         moduleStyles[`chips-${size}`],
         className
       )}
+      // eslint-disable-next-line react/forbid-dom-props
       data-testid={`chips-${name}`}
     >
       <fieldset>

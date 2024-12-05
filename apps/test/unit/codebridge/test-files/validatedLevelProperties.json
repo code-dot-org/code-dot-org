@@ -1,0 +1,69 @@
+{
+  "encrypted": false,
+  "longInstructions": "## Python Lab with Validation\r\n\r\nThis level has some built-in validation code.",
+  "hideShareAndRemix": false,
+  "startSources": {
+    "files": {
+      "1": {
+        "id": "1",
+        "name": "main.py",
+        "language": "py",
+        "contents": "print(\"Hello from level 2!\")",
+        "folderId": "0",
+        "active": true,
+        "open": true,
+        "type": "starter"
+      },
+      "2": {
+        "id": "2",
+        "name": "factorial.py",
+        "language": "py",
+        "contents": "def factorial(n):\n    \"\"\"\n    Calculate the factorial of a non-negative integer n.\n    Raises a ValueError for negative integers.\n    \"\"\"\n    if n < 0:\n        raise ValueError(\"Negative integers are not allowed\")\n    if n == 0:\n        return 1\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result\n",
+        "folderId": "0",
+        "active": false,
+        "open": true,
+        "type": "starter"
+      }
+    },
+    "folders": {},
+    "openFiles": [
+      "1",
+      "2"
+    ]
+  },
+  "encryptedExemplarSources": "Cy05mEYW43yx3lpwk/lyQUb95RtJlzypWVniRXbkzhuiv97NDv/P03SQaSFh\n6x9IzrdjmtW1xAEYM0j0Yk8REO6cgNDj+mzDyGdpLL6tA+3n8I9z5UyYCyvc\ncMGAhxmv0MEdFiaXQyTPA7VW0A6bMoWS1BttfNnkB5qC+cL6wBDU60WZR40G\neNVBokg3fhp60oD1ZtCOGPRSceTuQO8I99loaTe03EeB/zpSs7JDhPQNvDT/\ntv8agHxfwFMrb1UJzcG6tO7K40QWiBB9hCBQAIdyPoOV4SHn66Z1XpsBa5k=\n",
+  "aiTutorAvailable": true,
+  "submittable": false,
+  "predictSettings": {
+    "isPredictLevel": false
+  },
+  "validationFile": {
+    "id": "3",
+    "name": "test_factorial.py",
+    "language": "py",
+    "contents": "import unittest\nfrom factorial import factorial\n\nclass TestFactorial(unittest.TestCase):\n\n  def test_factorial_zero(self):\n      \"\"\"Test that factorial of 0 should be 1\"\"\"\n      self.assertEqual(factorial(0), 1, \"Factorial of 0 should be 1\")\n  \n  def test_factorial_positive(self):\n      \"\"\"Test factorial of positive numbers\"\"\"\n      self.assertEqual(factorial(1), 1, \"Factorial of 1 should be 1\")\n      self.assertEqual(factorial(2), 2, \"Factorial of 2 should be 2\")\n      self.assertEqual(factorial(3), 6, \"Factorial of 3 should be 6\")\n      self.assertEqual(factorial(4), 24, \"Factorial of 4 should be 24\")\n      self.assertEqual(factorial(5), 120, \"Factorial of 5 should be 120\")\n  \n  def test_factorial_large_number(self):\n      \"\"\"Test factorial of large numbers\"\"\"\n      self.assertEqual(factorial(10), 3628800, \"Factorial of 10 should be 3628800\")\n  \n  def test_factorial_negative(self):\n      \"\"\"Test factorial of negative numbers\"\"\"\n      with self.assertRaises(ValueError):\n          factorial(-1)",
+    "folderId": "0",
+    "active": false,
+    "open": false,
+    "type": "validation"
+  },
+  "id": 2,
+  "helpVideos": [],
+  "type": "Pythonlab",
+  "appName": "pythonlab",
+  "useRestrictedSongs": false,
+  "usesProjects": true,
+  "finishUrl": "/s/allthethings/lessons/50/levels/3",
+  "validations": [
+    {
+      "conditions": [
+        {
+          "name": "PASSED_ALL_TESTS",
+          "value": "true"
+        }
+      ],
+      "message": "",
+      "next": true
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React, {CSSProperties, useState} from 'react';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -82,6 +83,13 @@ export default function LtiSectionSyncDialog({
             markdown={errorMessage}
           />
         ))}
+        {syncResult.honeybadger_id && (
+          <BodyFourText>
+            {i18n.ltiSectionSyncDialogErrorCode({
+              code: syncResult.honeybadger_id,
+            })}
+          </BodyFourText>
+        )}
       </div>
     );
   };
@@ -96,6 +104,7 @@ export default function LtiSectionSyncDialog({
       PLATFORMS.STATSIG
     );
     return (
+      // eslint-disable-next-line react/forbid-dom-props
       <div data-testid={'disable-roster-sync'}>
         <div>
           <h2 style={styles.dialogHeader}>

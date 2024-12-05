@@ -15,7 +15,6 @@ export default {
 // TEMPLATE
 //
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
-// eslint-disable-next-line
 const SingleTemplate: StoryFn<SimpleDropdownProps> = args => {
   const [value, setValues] = useState('');
   return (
@@ -78,6 +77,20 @@ DefaultDropdown.args = {
   size: 'm',
 };
 
+export const ReadOnlyDropdown = SingleTemplate.bind({});
+ReadOnlyDropdown.args = {
+  name: 'disabled-dropdown',
+  items: [
+    {value: 'option-1', text: 'Option 1'},
+    {value: 'option-2', text: 'Option 2'},
+  ],
+  selectedValue: 'option-1',
+  labelText: 'ReadOnly Dropdown',
+  onChange: args => console.log(args),
+  readOnly: true,
+  size: 'm',
+};
+
 export const DisabledDropdown = SingleTemplate.bind({});
 DisabledDropdown.args = {
   name: 'disabled-dropdown',
@@ -89,6 +102,83 @@ DisabledDropdown.args = {
   labelText: 'Disabled Dropdown',
   onChange: args => console.log(args),
   disabled: true,
+  size: 'm',
+};
+
+export const StyledAsFormFieldSimpleDropdown = SingleTemplate.bind({});
+StyledAsFormFieldSimpleDropdown.args = {
+  name: 'styled-as-field-simple-dropdown',
+  items: [
+    {
+      value: 'option-1',
+      text: 'Option 1 Long Description that should be truncated',
+    },
+    {value: 'option-2', text: 'Option 2'},
+  ],
+  selectedValue: 'option-1',
+  labelText: 'Styled as Field SimpleDropdown',
+  onChange: args => console.log(args),
+  helperMessage: 'Helper message',
+  size: 'm',
+  styleAsFormField: true,
+};
+
+export const WithIconLeftSimpleDropdown = SingleTemplate.bind({});
+WithIconLeftSimpleDropdown.args = {
+  name: 'with-icon-dropdown',
+  items: [
+    {value: 'option-1', text: 'Option 1'},
+    {value: 'option-2', text: 'Option 2'},
+  ],
+  selectedValue: 'option-1',
+  labelText: 'Dropdown with IconLeft',
+  onChange: args => console.log(args),
+  iconLeft: {iconName: 'smile', iconStyle: 'solid'},
+  size: 'm',
+};
+
+export const WithErrorDropdown = SingleTemplate.bind({});
+WithErrorDropdown.args = {
+  name: 'error-dropdown',
+  items: [
+    {value: 'option-1', text: 'Option 1'},
+    {value: 'option-2', text: 'Option 2'},
+  ],
+  selectedValue: 'option-1',
+  labelText: 'Error Dropdown',
+  onChange: args => console.log(args),
+  errorMessage: 'Error message',
+  size: 'm',
+};
+
+export const WithHelperMessageDropdown = SingleTemplate.bind({});
+WithHelperMessageDropdown.args = {
+  name: 'helper-message-dropdown',
+  items: [
+    {value: 'option-1', text: 'Option 1'},
+    {value: 'option-2', text: 'Option 2'},
+  ],
+  selectedValue: 'option-1',
+  labelText: 'Helper Message Dropdown',
+  onChange: args => console.log(args),
+  helperMessage: 'Helper message',
+  size: 'm',
+};
+
+export const WithHelperMessageAndIconDropdown = SingleTemplate.bind({});
+WithHelperMessageAndIconDropdown.args = {
+  name: 'helper-icon-dropdown',
+  items: [
+    {value: 'option-1', text: 'Option 1'},
+    {value: 'option-2', text: 'Option 2'},
+  ],
+  selectedValue: 'option-1',
+  labelText: 'Helper Icon Dropdown',
+  onChange: args => console.log(args),
+  helperIcon: {
+    iconName: 'info-circle',
+  },
+  helperMessage: 'Helper message',
   size: 'm',
 };
 

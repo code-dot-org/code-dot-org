@@ -6,6 +6,7 @@ import 'whatwg-fetch';
 import '../build/locales/en_us/common_locale.js';
 import '../build/locales/en_us/aichat_locale.js';
 import '../build/locales/en_us/applab_locale.js';
+import '../build/locales/en_us/codebridge_locale.js';
 import '../build/locales/en_us/javalab_locale.js';
 import '../build/locales/en_us/signup_locale.js';
 import '../build/locales/en_us/music_locale.js';
@@ -19,6 +20,7 @@ import '../build/locales/en_us/spritelab_locale.js';
 import '../build/locales/en_us/studio_locale.js';
 import '../build/locales/en_us/craft_locale.js';
 import '../build/locales/en_us/flappy_locale.js';
+import '../build/locales/en_us/lab2_locale.js';
 
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import enzyme from 'enzyme'; // eslint-disable-line no-restricted-imports

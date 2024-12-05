@@ -1,8 +1,4 @@
-import GoogleBlockly, {
-  FieldDropdownConfig,
-  FieldDropdownValidator,
-  MenuGeneratorFunction,
-} from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 
 import {
   printerStyleNumberRangeToList,
@@ -11,7 +7,9 @@ import {
 
 import {EMPTY_OPTION} from '../constants';
 
-export type CustomMenuGenerator = CustomMenuOption[] | MenuGeneratorFunction;
+export type CustomMenuGenerator =
+  | CustomMenuOption[]
+  | GoogleBlockly.MenuGeneratorFunction;
 // Blockly's MenuOption can either be [string, string] or [ImageProperties, string]. We
 // will always use [string, string].
 type CustomMenuOption = [string, string];
@@ -23,8 +21,8 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
   // the field element's config attribute to specify a range of menu options.
   constructor(
     menuGenerator?: CustomMenuGenerator,
-    validator?: FieldDropdownValidator,
-    config?: FieldDropdownConfig
+    validator?: GoogleBlockly.FieldDropdownValidator,
+    config?: GoogleBlockly.FieldDropdownConfig
   ) {
     if (!menuGenerator) {
       menuGenerator = [['', '']];
@@ -195,6 +193,37 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     // this.arrow is private in the parent.
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (this as any).arrow = arrow;
+  }
+
+  /**
+   * Get the text from this field to display on the block. May differ from
+   * `getText` due to ellipsis, and other formatting.
+   * @override Handling of text for RTL blocks is customized.
+   * See: https://github.com/google/blockly/issues/8645
+   * @returns Text to display.
+   */
+  protected getDisplayText_(): string {
+    let text = this.getText();
+    if (!text) {
+      // Prevent the field from disappearing if empty.
+      return GoogleBlockly.Field.NBSP;
+    }
+    if (text.length > this.maxDisplayLength) {
+      // Truncate displayed string and add an ellipsis ('...').
+      text = text.substring(0, this.maxDisplayLength - 2) + '…';
+    }
+    // Replace whitespace with non-breaking spaces so the text doesn't collapse.
+    text = text.replace(/\s/g, GoogleBlockly.Field.NBSP);
+    if (this.sourceBlock_ && this.sourceBlock_.RTL) {
+      // Begin CDO Customization:
+      // Add RTL override '\u202E' and then a pop directional formatting '\u202C'.
+      // This approach enforces the RTL direction for the entire text consistently.
+      // The PDF mark ensures the override is localized to this field's text.
+      // Core Blockly instead adds a RTL Mark (text += '\u200F').
+      text = '\u202E' + text + '\u202C';
+      // End CDO Customization
+    }
+    return text;
   }
 }
 

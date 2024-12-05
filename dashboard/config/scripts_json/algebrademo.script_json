@@ -4,14 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_course": true,
+      "is_deprecated": true,
       "is_migrated": true,
-      "version_year": "unversioned",
-      "is_deprecated": true
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "algebrademo",
-    "serialized_at": "2022-04-08 15:40:29 UTC",
+    "serialized_at": "2024-11-19 01:13:53 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1413,6 +1415,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

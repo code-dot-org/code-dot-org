@@ -1,0 +1,41 @@
+{
+  "name": "@code-dot-org/lint-config",
+  "private": true,
+  "keywords": [
+    "linting",
+    "eslint",
+    "typescript",
+    "tsconfig",
+    "prettier",
+    "code.org"
+  ],
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/lint-config/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/lint-config"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write ."
+  },
+  "prettier": "./prettier/index.mjs",
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@tsconfig/node22": "^22.0.0",
+    "eslint": "^9.15.0",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-import-x": "^4.4.3",
+    "eslint-plugin-react": "^7.37.2",
+    "globals": "^15.12.0",
+    "prettier": "3.3.3",
+    "prettier-plugin-packagejson": "^2.5.5",
+    "typescript-eslint": "^8.15.0"
+  }
+}

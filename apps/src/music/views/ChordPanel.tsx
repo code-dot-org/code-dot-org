@@ -116,6 +116,13 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
     setIsPlayingPreview(false);
   }, [setIsPlayingPreview]);
 
+  useEffect(() => {
+    // On unmount.
+    return () => {
+      stopPreview();
+    };
+  }, [stopPreview]);
+
   const onClear = useCallback(() => setSelectedNotes([]), [setSelectedNotes]);
 
   return (

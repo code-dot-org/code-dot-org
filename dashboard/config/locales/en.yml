@@ -163,7 +163,7 @@ en:
     disconnect_successful: "Success! We have disconnected the external account from your Code.org account."
     already_in_use: "Your %{provider} account is already connected to another Code.org account."
     already_linked: "Your %{provider} account is already linked to your Code.org account."
-    parental_permission_required: "Uh oh! You must obtain parental permission before creating a linked account."
+    parental_permission_required: "Uh oh! You must obtain parental permission before creating a linked account. Please log in to the account you are trying to link and obtain parental consent."
     existing_account:
       account_exists: "Good news! You already have a Code.org account that uses %{email}"
       sign_in: "Please sign in to your existing account. Then you will be able to link your %{provider} profile from your Account Settings page."
@@ -281,7 +281,9 @@ en:
       title: 'Forgot your password?'
       instructions: "Enter your email address associated with your account below and we'll send you password reset instructions."
       email: 'Email address'
+      username: 'Username'
       submit: 'Submit'
+      confirmation: 'If we find your email address in our system, you will receive a password recovery link in a few minutes'
     reset_errors:
       captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
@@ -427,6 +429,9 @@ en:
       legal_privacy: "Privacy Policy"
       legal_cookie_notice: "Cookie Notice"
       legal_tos: "Terms of Service"
+      videos: "Videos"
+      hour_of_code: "Hour of Code"
+      csf: "CS Fundamentals"
 
     user:
       classroom: 'Teacher Home Page'
@@ -1516,3 +1521,6 @@ en:
         parent_email_is_own: A request cannot be sent to your own email address
         resend_limit_reached: The limit for resend requests has been reached
   not_applicable_abbreviation: "N/A"
+  global_edition:
+    regions:
+      fa: Farsi

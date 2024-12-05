@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class SectionTest < ActiveSupport::TestCase
+  include Minitest::RSpecMocks
   self.use_transactional_test_case = true
   setup_all do
     @student = create :student
@@ -462,6 +463,8 @@ class SectionTest < ActiveSupport::TestCase
         id: section.id,
         name: section.name,
         courseVersionName: 'somecourse',
+        unitName: nil,
+        isAssignedStandaloneCourse: false,
         login_type: "email",
         grades: nil,
         providerManaged: false,
@@ -505,6 +508,8 @@ class SectionTest < ActiveSupport::TestCase
         id: section.id,
         name: section.name,
         courseVersionName: 'jigsaw',
+        unitName: script.name,
+        isAssignedStandaloneCourse: true,
         login_type: "email",
         grades: nil,
         providerManaged: false,
@@ -552,6 +557,8 @@ class SectionTest < ActiveSupport::TestCase
         id: section.id,
         name: section.name,
         courseVersionName: nil,
+        unitName: nil,
+        isAssignedStandaloneCourse: false,
         login_type: "email",
         grades: nil,
         providerManaged: false,
@@ -599,6 +606,8 @@ class SectionTest < ActiveSupport::TestCase
         id: section.id,
         name: section.name,
         courseVersionName: 'somecourse',
+        unitName: script.name,
+        isAssignedStandaloneCourse: false,
         login_type: "email",
         grades: nil,
         providerManaged: false,
@@ -638,6 +647,8 @@ class SectionTest < ActiveSupport::TestCase
         id: section.id,
         name: section.name,
         courseVersionName: nil,
+        unitName: nil,
+        isAssignedStandaloneCourse: false,
         login_type: "email",
         grades: nil,
         providerManaged: false,
@@ -817,6 +828,8 @@ class SectionTest < ActiveSupport::TestCase
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
         ai_tutor_enabled: false,
+        at_risk_age_gated_date: nil,
+        at_risk_age_gated_us_state: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -871,6 +884,8 @@ class SectionTest < ActiveSupport::TestCase
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
         ai_tutor_enabled: false,
+        at_risk_age_gated_date: nil,
+        at_risk_age_gated_us_state: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -930,6 +945,8 @@ class SectionTest < ActiveSupport::TestCase
                              {id: coteacher_section_instructor.id, status: "invited", instructor_name: nil, instructor_email: coteacher_user.email}],
         sync_enabled: nil,
         ai_tutor_enabled: false,
+        at_risk_age_gated_date: nil,
+        at_risk_age_gated_us_state: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -987,6 +1004,8 @@ class SectionTest < ActiveSupport::TestCase
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
         ai_tutor_enabled: false,
+        at_risk_age_gated_date: nil,
+        at_risk_age_gated_us_state: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1037,6 +1056,8 @@ class SectionTest < ActiveSupport::TestCase
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
         ai_tutor_enabled: false,
+        at_risk_age_gated_date: nil,
+        at_risk_age_gated_us_state: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1347,5 +1368,62 @@ class SectionTest < ActiveSupport::TestCase
     CodeReviewGroupMember.create(follower_id: @followers[0].id, code_review_group_id: @group1.id)
     CodeReviewGroupMember.create(follower_id: @followers[1].id, code_review_group_id: @group1.id)
     CodeReviewGroupMember.create(follower_id: @followers[2].id, code_review_group_id: @group2.id)
+  end
+
+  describe '.summarize' do
+    let(:section) {create :section}
+    let(:student) {create :student, us_state: at_risk_age_gated_us_state}
+    let(:summarize) {section.summarize}
+    let(:at_risk_age_gated_date) {DateTime.now}
+    let(:at_risk_age_gated_us_state) {'WA'}
+
+    before do
+      allow(section).to receive(:at_risk_age_gated_student).and_return(student)
+      allow(student).to receive(:at_risk_age_gated_date).and_return(at_risk_age_gated_date)
+    end
+
+    it 'has at_risk_age_gated_date' do
+      _(summarize).must_be_kind_of Hash
+      _(summarize[:at_risk_age_gated_date]).must_equal at_risk_age_gated_date
+    end
+
+    it 'has at_risk_age_gated_us_state' do
+      _(summarize).must_be_kind_of Hash
+      _(summarize[:at_risk_age_gated_us_state]).must_equal at_risk_age_gated_us_state
+    end
+  end
+
+  describe '.at_risk_age_gated_student' do
+    let(:section) {create :section, hidden: archived?}
+    let(:student) {create :student}
+    let(:archived?) {false}
+    let(:student_at_risk_age_gated_date) {nil}
+    let(:at_risk_age_gated_student) {section.at_risk_age_gated_student}
+    let(:at_risk_age_gated_date) {at_risk_age_gated_student&.at_risk_age_gated_date}
+
+    before do
+      allow(section).to receive(:students).and_return([student])
+      allow(student).to receive(:at_risk_age_gated_date).and_return(at_risk_age_gated_date)
+    end
+
+    it 'does not return a student' do
+      _(at_risk_age_gated_student).must_equal nil
+    end
+
+    context 'has an at risk student' do
+      let(:student_at_risk_age_gated_date) {DateTime.now}
+
+      it 'returns the at risk student' do
+        _(at_risk_age_gated_student).must_equal at_risk_age_gated_student
+      end
+
+      context 'the section is archived' do
+        let(:archived?) {true}
+
+        it 'does not return a student' do
+          _(at_risk_age_gated_student).must_equal nil
+        end
+      end
+    end
   end
 end

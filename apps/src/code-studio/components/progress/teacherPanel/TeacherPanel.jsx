@@ -72,6 +72,7 @@ class TeacherPanel extends React.Component {
     levelsWithProgress: PropTypes.arrayOf(levelWithProgress),
     loadLevelsWithProgress: PropTypes.func.isRequired,
     teacherId: PropTypes.number,
+    isSortedByFamilyName: PropTypes.bool,
     exampleSolutions: PropTypes.array,
     currentLevelId: PropTypes.string,
     selectUser: PropTypes.func.isRequired,
@@ -174,6 +175,7 @@ class TeacherPanel extends React.Component {
       levelsWithProgress,
       pageType,
       teacherId,
+      isSortedByFamilyName,
       exampleSolutions,
       isCurrentLevelLab2,
       lab2ExampleSolutions,
@@ -213,6 +215,7 @@ class TeacherPanel extends React.Component {
               selectedUserId={selectedUserId}
               teacherId={teacherId}
               levelsWithProgress={levelsWithProgress}
+              isSortedByFamilyName={isSortedByFamilyName}
             />
           )}
           {displayLevelExamples && (
@@ -378,6 +381,7 @@ export default connect(
       isLoadingLevelsWithProgress:
         state.teacherPanel.isLoadingLevelsWithProgress,
       teacherId: state.currentUser.userId,
+      isSortedByFamilyName: state.currentUser.isSortedByFamilyName,
       exampleSolutions: state.pageConstants?.exampleSolutions,
       currentLevelId: state.progress.currentLevelId,
       lab2ExampleSolutions: state.lab?.levelProperties?.exampleSolutions,

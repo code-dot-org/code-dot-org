@@ -169,6 +169,7 @@ describe('LTI Section Sync Dialog', () => {
       );
 
       const cancelButton = within(
+        // eslint-disable-next-line no-restricted-properties
         screen.getByTestId('disable-roster-sync')
       ).getByText(i18n.dialogCancel());
 
