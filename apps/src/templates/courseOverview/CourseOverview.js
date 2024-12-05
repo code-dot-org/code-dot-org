@@ -151,6 +151,7 @@ class CourseOverview extends Component {
       !isVerifiedInstructor &&
       hasVerifiedResources;
 
+    console.log('lfm', {showRedirectWarning});
     return (
       <div style={styles.main}>
         {redirectToCourseUrl && !dismissedRedirectDialog(name) && (

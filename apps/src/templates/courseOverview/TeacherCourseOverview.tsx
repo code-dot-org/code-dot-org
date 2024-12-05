@@ -1,7 +1,12 @@
 import _ from 'lodash';
 import React from 'react';
 import {useSelector} from 'react-redux';
-import {generatePath, useNavigate, useParams} from 'react-router-dom';
+import {
+  generatePath,
+  useNavigate,
+  useParams,
+  useSearchParams,
+} from 'react-router-dom';
 
 import {
   addAnnouncement,
@@ -79,6 +84,7 @@ interface Response {
   unit_group: CourseSummary;
   is_verified_instructor: boolean;
   hidden_scripts: string[];
+  show_version_warning: boolean;
 }
 
 interface Announcement {
@@ -106,10 +112,13 @@ const TeacherCourseOverview: React.FC = () => {
   const [hiddenScripts, setHiddenScripts] = React.useState<string[] | null>(
     null
   );
+  const [showVersionWarning, setShowVersionWarning] =
+    React.useState<boolean>(false);
 
   const navigate = useNavigate();
 
   const params = useParams();
+  const [searchParams] = useSearchParams();
 
   const sections = useAppSelector(state => state.teacherSections.sections);
 
@@ -146,9 +155,11 @@ const TeacherCourseOverview: React.FC = () => {
     courseSummaryCachedLoader(selectedSection.courseVersionName)
       .then(response => {
         if (response) {
+          console.log(response);
           setCourseSummary(response.unit_group as CourseSummary);
           setIsVerifiedInstructor(response.is_verified_instructor);
           setHiddenScripts(response.hidden_scripts as string[]);
+          setShowVersionWarning(response.show_version_warning);
 
           analyticsReporter.sendEvent(
             EVENTS.TEACHER_NAV_COURSE_OVERVIEW_PAGE_VIEWED,
@@ -221,6 +232,11 @@ const TeacherCourseOverview: React.FC = () => {
     return <Spinner />;
   }
 
+  console.log('lfm 1', {
+    redirect: searchParams.get('redirect_warning'),
+    r: searchParams.get('redirect_warning') === 'true',
+  });
+
   return (
     <CourseOverview
       name={courseSummary.name}
@@ -237,10 +253,11 @@ const TeacherCourseOverview: React.FC = () => {
       scripts={courseSummary.scripts}
       versions={courseSummary.course_versions}
       showVersionWarning={
-        !!false && Object.values(courseSummary.course_versions).length > 1
+        showVersionWarning &&
+        Object.values(courseSummary.course_versions).length > 1
       }
-      showRedirectWarning={false} // TODO: https://codedotorg.atlassian.net/browse/TEACH-1374
-      redirectToCourseUrl={''}
+      showRedirectWarning={searchParams.get('redirect_warning') === 'true'}
+      redirectToCourseUrl={''} // Only redirects students on BE from unassigned course overview
       showAssignButton={courseSummary.show_assign_button}
       userId={userId}
       userType={UserTypes.TEACHER}
