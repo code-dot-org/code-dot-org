@@ -26,14 +26,6 @@ import {
 
 import styles from './teacher-navigation.module.scss';
 
-// interface SectionsData {
-//   [sectionId: number]: {
-//     name: string;
-//     hidden: boolean;
-//     courseVersionName: string;
-//   };
-// }
-
 const TeacherNavigationBar: React.FunctionComponent = () => {
   const sections = useAppSelector(state => state.teacherSections.sections);
 
