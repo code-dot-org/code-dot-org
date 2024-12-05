@@ -38,6 +38,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   const isLoadingSectionData = useAppSelector(
     state => state.teacherSections.isLoadingSectionData
   );
+
   useEffect(() => {
     const updatedSectionArray = Object.entries(sections)
       .filter(([id, section]) => !section.hidden)
