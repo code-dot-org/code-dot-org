@@ -1,4 +1,11 @@
 class Policies::User
+  ALLOWED_EDUCATOR_TYPES = Set[
+    "teacher".freeze,
+    "school_admin".freeze,
+    "district_admin".freeze,
+    "librarian".freeze,
+  ].freeze
+
   # Returns the user.attributes along with the attributes of select
   # associations.
   def self.user_attributes(user)
