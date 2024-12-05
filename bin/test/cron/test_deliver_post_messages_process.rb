@@ -1,7 +1,7 @@
 require_relative '../test_helper'
-require_relative '../../cron/deliver_poste_messages'
+require_relative '../../cron/deliver_poste_messages_process'
 
-describe DeliverPosteMessages do
+describe DeliverPosteMessagesProcess do
   let(:message_queue_length) {10}
   let(:message_queue) do
     Queue.new.tap do |queue|
@@ -27,10 +27,10 @@ describe DeliverPosteMessages do
   end
 
   context '#main' do
-    let(:main) {DeliverPosteMessages.main}
+    let(:main) {DeliverPosteMessagesProcess.main}
 
     before do
-      DeliverPosteMessages.stubs(:message_queue).returns(message_queue)
+      DeliverPosteMessagesProcess.stubs(:message_queue).returns(message_queue)
     end
 
     it 'sends every email' do
