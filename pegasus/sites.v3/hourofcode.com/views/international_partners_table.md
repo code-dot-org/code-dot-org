@@ -2,6 +2,7 @@
 |---|---|---|---|
 |Americas|The Trust for the Americas|Pierina Nepote Rangel|pnepote@trust-oea.org<br>https://www.thetrustfortheamericas.org/|
 |Antigua and Barbuda|iLabGlobal & Caribbean Tech Genius Foundation|Makŏ Williams|mako@iLabGlobal.com<br>https://ilabglobal.com/<br>http://techgenius.edu.ag/|
+|Argentina|Municipalidad de Córdoba|Alicia La Terza|seceduc.lic.laterza@gmail.com<br>https://cordoba.gob.ar/areas-de-gobierno/secretaria-de-educacion/|
 |Australia|Grok Academy|Lisette Tennant|https://groklearning.com|
 |Botswana|CSEdBotswana|Dr. Ethel Tshukudu|ethel.tshukudu01@gmail.com<br>https://www.csedbotswana.org/|
 |Brasil|Universidade Federal Do Amapá|Simone De Almeida Delphim Leal|leal@unifap.br<br>www.unifap.br|
