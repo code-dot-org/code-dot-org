@@ -105,10 +105,13 @@ Prefer Ruby/Rails/MySQL on the server side and JS/TS/React on the client side. P
 <details>
   <summary>Why?</summary>
 
-  * We have a significant investment in Ruby/Rails that makes it challenging to do a wholesale move to a different platform.  
-  * Ruby/Rails is working well. While other platforms (e.g., Go) may be more optimized/efficient, they don’t outweigh the effort that would be required to move.  
-  * A single Ruby/Rails server-side architecture makes it easier for team members to move between different parts of the code base, and we don't have sections of the code "go dark" when knowledge of an obscure technology choice leaves the project. A good general principle for code.org: given our problem space, we should usually be making pretty boring technology choices.
   * We generally have simple "rails shaped", "mysql shaped" and "react shaped" problems that aren't very exotic and don't significantly benefit from exotic solutions.
+  * We have a significant investment in Ruby/Rails that makes it challenging to do a wholesale move to a different platform.
+  * We get productivity benefits from being a monolith, which means sticking with the same basic language + web framework.
+  * Ruby/Rails is working well. While other platforms (e.g., Go) may be more optimized/efficient, they don’t outweigh the effort that would be required to move.
+  * A single Ruby/Rails server-side architecture makes it easier for team members to move between different parts of the code base.
+  * We don't have sections of the code "go dark" when contributors leave the project taking with them the last knowledge of relatively obscure technology.
+  * A good general principle for code.org: given our problem space, we should usually be making pretty boring technology choices.
 
 </details>
 
