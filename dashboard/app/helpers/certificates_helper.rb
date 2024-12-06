@@ -21,7 +21,7 @@ module CertificatesHelper
     is_prefilled = CertificateImage.prefilled_title_course?(course)
     return CDO.code_org_url("/images/#{CertificateImage.certificate_template_for(course)}", 'https:') if is_prefilled && !name
     encoded = encode_params(name, course, donor)
-    CDO.code_org_url("/certificate_images/#{encoded}.jpg", 'https:')
+    CDO.studio_url("/certificate_images/#{encoded}.jpg", 'https:')
   end
 
   def certificate_print_url(name, course, donor)
