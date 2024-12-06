@@ -12,6 +12,9 @@ import {
   createOpenaiMetricStat,
 } from './alarmHelpers';
 
+const SL_HANDBOOK_LINK =
+  'https://docs.google.com/document/d/1T0Vwwg22isdgsf66mYiRtUZVKaSxHo1PW89HAnW_twk/edit?tab=t.0#heading=h.npwykn5tc2b4';
+
 const modelIds = modelDescriptions.map((model: {id: string}) => model.id);
 
 export const openaiSafetyHighFailureRateConfiguration: PutMetricAlarmInput = {
@@ -20,7 +23,8 @@ export const openaiSafetyHighFailureRateConfiguration: PutMetricAlarmInput = {
 
 *Next Steps*:
 - Check the [GenAICurriculum Dashboard](https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards/dashboard/GenAICurriculum)
-- Check HoneyBadger for "AichatRequestChatCompletionJob" errors`,
+- Check HoneyBadger for **AichatRequestChatCompletionJob** errors
+- Check [Student Learning Tips & Tricks](${SL_HANDBOOK_LINK}) for more details.`,
   ActionsEnabled: true,
   OKActions: [],
   AlarmActions: [SNS_TOPIC],
@@ -79,7 +83,8 @@ export const chatCompletionJobExecutionHighFailureRateConfiguration: PutMetricAl
     
 *Next Steps*:
 - Check the [GenAICurriculum Dashboard](https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards/dashboard/GenAICurriculum)
-- Check HoneyBadger for "AichatRequestChatCompletionJob" errors`,
+- Check HoneyBadger for **AichatRequestChatCompletionJob** errors
+- Check [Student Learning Tips & Tricks](${SL_HANDBOOK_LINK}) for more details.`,
     ActionsEnabled: true,
     OKActions: [],
     AlarmActions: [SNS_TOPIC],
@@ -123,9 +128,10 @@ export const chatCompletionHighBrowserFailureRateConfiguration: PutMetricAlarmIn
 
 *Next Steps:*
 - Check the [GenAICurriculum Dashboard](https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards/dashboard/GenAICurriculum)
-- Check [browser logs](https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#logsV2:log-groups/log-group/production-browser-events/log-events/production) in Cloudwatch
-- If chat completion job failure rates and/or OpenAI failure rates are also elevated, check HoneyBadger for "AichatRequestChatCompletionJob" errors.
-- If not, this is likely a browser-specific and/or ActiveJob related issue. Check the [ActiveJob dashboard](https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards/dashboard/ActiveJob_DelayedJob).`,
+- Check [browser logs](https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#logsV2:log-groups/log-group/production-browser-events/log-events/production) in Cloudwatch (filter by **appName: 'aichat'**)
+- If chat completion job failure rates and/or OpenAI failure rates are also elevated, check HoneyBadger for **AichatRequestChatCompletionJob** errors.
+- If not, this is likely a browser-specific and/or ActiveJob related issue. Check the [ActiveJob dashboard](https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards/dashboard/ActiveJob_DelayedJob).
+- Check [Student Learning Tips & Tricks](${SL_HANDBOOK_LINK}) for more details.`,
     ActionsEnabled: true,
     OKActions: [],
     AlarmActions: [SNS_TOPIC],
