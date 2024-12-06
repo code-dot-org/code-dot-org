@@ -146,7 +146,7 @@ Prefer the conventional Rails way to accomplish a task: it might be better to be
 
 ### Tenet 6: Managed Services that implement an Open Source Protocol / API (vs proprietary managed services or self-hosted open source services)
 
-When making technical selections, prefer managed services that implement an Open Source API. For example, we don’t host our own MySQL instance, but we ALSO don’t use ProprietarySQLDB(TM). Instead, we use a 3rd party managed service that implements the MySQL protocol.
+When making technical selections, prefer managed services that implement an Open Protocol or an Open Source API. For example, we don’t host our own MySQL instance, but we ALSO don’t use ProprietarySQLDB(TM). Instead, we use a 3rd party managed service that implements the MySQL protocol.
 
 <details>
   <summary>Why?</summary>
