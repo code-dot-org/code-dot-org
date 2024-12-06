@@ -8,11 +8,11 @@
 2. If these tenets become outdated, they should either be amended publicly or deleted.
 3. If this file is still in the repo, its rules are still in effect.
 
-The goal of the tenets is not an exhaustive or  current list of technical requirements, but to highlight a set of **core architectural choices we rarely break**  and rarely change. These architectural tenets are intentionally limited: they were mostly true in 2014, are mostly true today, and end up  mostly true in 2034. Think “constitution” not “laws”: its important they are amended to fit the times, but only rarely. Less is more.
+The goal of the tenets is not an exhaustive or  current list of technical requirements, but to highlight a set of **core architectural choices we rarely break**  and rarely change. These architectural tenets are intentionally limited: they were mostly true in 2014, are mostly true today, and might even end up mostly true in 2034. Think “constitution” not “laws”: its important they are amended to fit the times, but only rarely. Less is more.
 
 ## The tenets represent tradeoffs
 
-The tenets may be different than you are familiar with in commercial orgs where unbounded staff growth can often be assumed. They work together so our permanently small team can make technical progress both today AND in the long-term. They balance inherent tradeoffs between “personal dev velocity today”  and “collective dev velocity years from now”.
+The tenets may be different than you are familiar with in commercial orgs where unbounded staff growth can often be assumed. They work together so our permanently small team can make technical progress both today AND in the long-term. They balance inherent tradeoffs between “personal dev velocity today” and “collective dev velocity years from now”.
 
 Examples:
 
@@ -33,10 +33,10 @@ We organize our code as a single “monorepo” in Github vs. having multiple re
 <details>
   <summary>Why?</summary>
 
-  * See the “collective benefit tomorrow” chart, most of those are enabled by the complementary combination of Monorepo+Monolith+CI.  
-    * For example it’s **much** easier to implement integration tests in a monorepo and over the long term things that are easy are things that tend to happen, which gives you “If my PR passes  CI it won’t break code.org”  
   * A monorepo makes it much easier to do large refactors in dynamically typed languages with: it's easy to know that after you built your regex queries, your search found ALL examples that you might break if you make a change.  
   * A monorepo makes it much easier to implement uniform tooling across modules/libraries/systems/folders, which increases the confidence that “After mastering a few key technologies I can work in almost any part of the codebase”.
+  * See the “Collective Benefit Tomorrow” table above, most of those are enabled by the complementary combination of Monorepo+Monolith+CI.  
+    * For example it’s **much** easier to implement integration tests in a monorepo and over the long term things that are easy are things that tend to happen, which gives you “If my PR passes  CI it won’t break code.org”  
 
 </details>
 
@@ -51,17 +51,18 @@ We organize our code as a single “monorepo” in Github vs. having multiple re
 
 ### Tenet 2: Monolith (vs. microservices)
 
-We deploy code.org as a couple monoliths (vs many microservices) following the Rails “[majestic monolith](https://signalvnoise.com/svn3/the-majestic-monolith/)” pattern. Your contributions should extend one of our existing monolith services: dashboard (studio.code.org), our cms (code.org), or our activejob workers NOT create a new service. This list of monoliths should rarely (if ever) change.
+We deploy code.org as a couple monoliths (vs many microservices) following the Rails “[majestic monolith](https://signalvnoise.com/svn3/the-majestic-monolith/)” pattern. Your contributions should extend one of our existing monolith services: dashboard (studio.code.org), our cms (code.org), or our activejob workers. They should NOT create a new service. This list of monoliths should rarely (if ever) change.
 
 <details>
   <summary>Why?</summary>
 
-  * See: [The Majestic Monolith](https://signalvnoise.com/svn3/the-majestic-monolith/) by DHH for why monolith and [Microservices](https://www.youtube.com/watch?v=y8OnoxKotPQ) video by KRAZAM for (hilarious) why not microservices. See also tenet: “The Rails Way”  
-  * A monolith gives us a single uniform predictable deploy step: if I merge this PR here/now, I know my code will be live \_\_\_\_, no matter what part of the codebase I changed.  
+  * See: [The Majestic Monolith](https://signalvnoise.com/svn3/the-majestic-monolith/) by DHH for why monolith and [Microservices](https://www.youtube.com/watch?v=y8OnoxKotPQ) video by KRAZAM for why not microservices.
+  * Also see tenet below: “The Rails Way”.
+  * A monolith gives us a single uniform predictable deploy step: if I merge this PR here/now, I know when and how my code will be deployed, no matter what part of the codebase I changed.  
   * Avoids having to coordinate rollouts, esp in cases where old code may be using a very old or under documented deploy system.  
   * Microservices tend to improve dev productivity when you “horizontally scale” the number of devs and in the short-term to make small changes or new standalone services and when you have firm ownership boundaries, but decrease dev productivity when you want to “vertically scale” a small number of devs and in the long-term when you need to own a lot of code made by people in the past and when you want collective/fuzzy ownership boundaries.  
     * In our situation we have a fixed+small horizontal scale AND we keep old code around for a long-time but still want to make occasional changes to it with confidence AND we prefer collective ownership.  
-  * See the “collective benefit tomorrow” chart, most of those are enabled by the complementary combination of Monorepo+Monolith+CI. E.g. “If my PR passes  CI it won’t break code.org” requires coordination of both testing across repos but ALSO coordinated deployment which can be tricky with microservices.
+  * See the “Collective Benefit Tomorrow” table above, most of those are enabled by the complementary combination of Monorepo+Monolith+CI. E.g. “If my PR passes  CI it won’t break code.org” requires coordination of both testing across repos but ALSO coordinated deployment which can be tricky with microservices.
 
 </details>
 
@@ -74,6 +75,10 @@ We deploy code.org as a couple monoliths (vs many microservices) following the R
 </details>
 
 ### Tenet 3: Continuous Integration of All Parts (vs. only decoupled unit based testing)
+
+TL;DR: for folks working inside existing folders and systems this just means: your work should be covered by UI and/or other integration tests (and they should probably run as part of the main CI build).
+
+If you are extending our main .rake CI system or adding a parallel CI: all work in the code-dot-org repo should be continuously integration tested against its in-repo consumers prior to merging a PR. Litmus test: if somebody is working on a library or service, and they break a downstream user of your lib/service within the repo (whether unit or UI tests), unless it’s very technically challenging, your CI setup must be structured to fail their work prior to PR merge. The easiest way to accomplish this is to tie your build/test loop into the main rake-based CI system.
 
 <details>
   <summary>Why?</summary>
@@ -111,6 +116,7 @@ Most code.org work should be built using Ruby/Rails/MySQL on the server side and
   * We have a significant investment in Ruby/Rails that makes it challenging to do a wholesale move to a different platform.  
   * Ruby/Rails is working well. While other platforms (e.g., Go) may be more optimized/efficient, they don’t outweigh the effort that would be required to move.  
   * A single Ruby/Rails server-side architecture makes it easier for team members to move between different parts of the code base.
+
 </details>
 
 <details>
@@ -137,16 +143,16 @@ Prefer the conventional Rails way to accomplish a task: it might be better to be
 
 ### Tenet 6: Managed Services that implement an Open Source Protocol / API (vs proprietary managed services or self-hosted open source services)
 
-When making technical selections, prefer managed services that implement an Open Source API. For example, we don’t host our own MySQL instance, but we ALSO don’t use TotallyProprietaryDBService. Instead, we use a 3rd party managed service that implements the MySQL protocol.
+When making technical selections, prefer managed services that implement an Open Source API. For example, we don’t host our own MySQL instance, but we ALSO don’t use ProprietarySQLDB(TM). Instead, we use a 3rd party managed service that implements the MySQL protocol.
 
 <details>
   <summary>Why?</summary>
 
-  * Self-hosting many open source servers, especially stateful services like DBs, requires ongoing infra admin work and monitoring attention. We have a small team.  
-  * Developing against an API with an Open Source implementation gives us flexibility:  
-    * …to implement a “local dev” for the service using the open source version  
-    * …to change vendors if need be (cost, availability, in-kind donations, etc)  
-  * Thus the perfect service for us is one that’s both managed and comes in a fully open source variety.
+  * Gives us the best of both worlds:
+    * Self-hosting many open source servers, especially stateful services like DBs, requires ongoing infra admin work and monitoring attention. We have a small team.  
+    * Developing against an API with an Open Source implementation gives us flexibility:  
+      * …to implement a “local dev” for the service using the open source version  
+      * …to change vendors if need be (cost, availability, in-kind donations, etc)  
 
 </details>
 
