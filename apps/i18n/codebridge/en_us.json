@@ -58,6 +58,7 @@
   "runToContinue": "You must run your code before continuing.",
   "runToFinish": "You must run your code before finishing.",
   "runToSubmit": "You must run your code before submitting.",
+  "sendToMicroBit": "Send to micro:bit",
   "stop": "Stop",
   "stopValidation": "Stop validation",
   "systemCodeError": "We're sorry, we hit an issue running your program. Please refresh the page and try again.",

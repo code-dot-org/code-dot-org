@@ -5433,6 +5433,9 @@ Studio.paramAsNumber = function (value) {
 };
 
 Studio.adjustScore = function (value) {
+  // Resetting the scoreText ensures the new score player score
+  // is used when displayScore updates the play area.
+  Studio.scoreText = null;
   Studio.playerScore += value;
 
   Studio.displayFloatingScore(value);
