@@ -126,7 +126,7 @@ Prefer Ruby/Rails/MySQL on the server side and JS/TS/React on the client side. P
   * This tenet will probably have more exceptions and edge cases than most. Its not an exhaustive list, its a "highly preferred list".
     * Be pragmatic, do a good faith attempt to use preferred languages and frameworks, but solve your problems.
     * E.g. we also use cloudformation (etc etc) which could be argued to be kind of like a programming language, but is **totally** not a problem.
-      * OTOH, you don't get to "use Haskell because everything else should be considered lame and fundamentally broken".
+      * OTOH, you don't get to "use Haskell because everything else should be considered lame and fundamentally broken" 😉.
 
 </details>
 
