@@ -2,11 +2,11 @@
 
 **TL;DR:** work done at code.org should live in the code-dot-org monorepo, be deployed as part of one of our existing monoliths (in a container), be integration tested by our central CI system prior to PR merge, use REST for client/server communication, default to "The Rails Way", prefer 3rd party managed services that implement Open Source Protocols/APIS, and be implemented using Ruby/Rails/JS/TS/React/MySQL.
 
-1. If somebody suggests something counter to these tenets, please send them a link to this file.  
-2. If these tenets become outdated, they should either be amended very publicly or deleted.
+1. If somebody proposes a design counter to these tenets, please direct them to [this link](ARCHITECTURE.md#architectural-tenets) to this section of this file.
+2. If these tenets become outdated, they should either be amended publicly or deleted.
 3. If this file is still in the repo, its rules are still in effect.
 
-The goal of the tenets is not an exhaustive or  current list of technical requirements, but to highlight a set of **core architectural choices we rarely break**  and rarely change. These architectural tenets are intentionally limited: they were mostly true in 2014, are mostly true today, and end up  mostly true in 2034\. Think “constitution” not “laws”: they should be amended to fit the times, but only rarely.
+The goal of the tenets is not an exhaustive or  current list of technical requirements, but to highlight a set of **core architectural choices we rarely break**  and rarely change. These architectural tenets are intentionally limited: they were mostly true in 2014, are mostly true today, and end up  mostly true in 2034. Think “constitution” not “laws”: its important they are amended to fit the times, but only rarely. Less is more.
 
 ## The tenets represent tradeoffs
 
@@ -152,3 +152,15 @@ We will move towards deploying our code using containers over further investing 
   * We will still rely on vendor-specific templates for infrastructure configuration (e.g., Cloud Formation)  
   * Scripts can still be helpful to make complex multi-step operations easier/clearer
 </details>
+
+---
+
+### ⬆️ Above ⬆️ this line live the architecutral tenets. They should be kept at the top of the file and edited sparingly.
+
+### ⬇️ Below ⬇️ this line is general architecture information: please edit freely!
+
+---
+
+# Code.org's Overall Architecture...
+
+Overview of our architecture goes here, please fill me in!
