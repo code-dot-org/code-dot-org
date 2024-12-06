@@ -19,7 +19,6 @@ $(() => {
   ReactDOM.render(
     <Provider store={store}>
       <LandingPage
-        userId={landingPageData['user_id']}
         lastWorkshopSurveyUrl={landingPageData['last_workshop_survey_url']}
         lastWorkshopSurveyCourse={
           landingPageData['last_workshop_survey_course']

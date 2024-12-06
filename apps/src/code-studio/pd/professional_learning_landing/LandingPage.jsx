@@ -26,6 +26,7 @@ import {
   asyncLoadCoteacherInvite,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {hiddenPlSectionIds} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
 import {queryParams, updateQueryParam} from '../../utils';
@@ -106,7 +107,6 @@ const getEnrollSucessWorkshopName = () => {
 };
 
 function LandingPage({
-  userId,
   lastWorkshopSurveyUrl,
   lastWorkshopSurveyCourse,
   showDeeperLearning,
@@ -148,11 +148,12 @@ function LandingPage({
       const fetchFacilitatorData = async () => {
         try {
           const response = await fetch(
-            `/dashboardapi/v1/pd/workshops_as_facilitator_for_pl_page?user_id=${userId}`,
+            '/dashboardapi/v1/pd/workshops_as_facilitator_for_pl_page',
             {
               method: 'GET',
               headers: {
                 'Content-Type': 'application/json',
+                'X-CSRF-Token': await getAuthenticityToken(),
               },
             }
           );
@@ -173,7 +174,7 @@ function LandingPage({
       const fetchWorkshopOrganizerData = async () => {
         try {
           const response = await fetch(
-            `/dashboardapi/v1/pd/workshops_as_organizer_for_pl_page?user_id=${userId}`,
+            '/dashboardapi/v1/pd/workshops_as_organizer_for_pl_page',
             {
               method: 'GET',
               headers: {
@@ -198,7 +199,7 @@ function LandingPage({
       const fetchProgramManagerWorkshops = async () => {
         try {
           const response = await fetch(
-            `/dashboardapi/v1/pd/workshops_as_program_manager_for_pl_page?user_id=${userId}`,
+            '/dashboardapi/v1/pd/workshops_as_program_manager_for_pl_page',
             {
               method: 'GET',
               headers: {
@@ -218,7 +219,7 @@ function LandingPage({
 
       fetchProgramManagerWorkshops();
     }
-  }, [dispatch, userId, userPermissions]);
+  }, [dispatch, userPermissions]);
 
   const RenderLastWorkshopSurveyBanner = () => (
     <TwoColumnActionBlock
@@ -581,7 +582,6 @@ export default connect(state => ({
 }))(LandingPage);
 
 LandingPage.propTypes = {
-  userId: PropTypes.number,
   lastWorkshopSurveyUrl: PropTypes.string,
   lastWorkshopSurveyCourse: PropTypes.string,
   showDeeperLearning: PropTypes.bool,

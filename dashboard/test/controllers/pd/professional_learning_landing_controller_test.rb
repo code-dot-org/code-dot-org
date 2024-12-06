@@ -302,9 +302,10 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
   test 'workshops_as_facilitator_for_pl_page returns live facilitated workshops' do
     prepare_scenario
     facilitator = create :facilitator
+    load_pl_landing facilitator
 
     # Check that no workshops are returned if user isn't facilitating any
-    no_workshops_response = get :workshops_as_facilitator_for_pl_page, params: {user_id: facilitator.id}
+    no_workshops_response = get :workshops_as_facilitator_for_pl_page
     assert_equal [], JSON.parse(no_workshops_response.body)['workshops_as_facilitator']
 
     # Set up workshops the user facilitated
@@ -314,7 +315,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
     facilitator.reload
 
     # Only returns workshops that are not ended
-    facilitated_workshops_response = get :workshops_as_facilitator_for_pl_page, params: {user_id: facilitator.id}
+    facilitated_workshops_response = get :workshops_as_facilitator_for_pl_page
     facilitated_workshop_courses = JSON.parse(facilitated_workshops_response.body)['workshops_as_facilitator'].map {|w| w['course']}
     assert_equal [earlier_workshop.course, later_workshop.course], facilitated_workshop_courses
   end
@@ -322,9 +323,10 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
   test 'workshops_as_organizer_for_pl_page returns live organized workshops' do
     prepare_scenario
     workshop_organizer = create :workshop_organizer
+    load_pl_landing workshop_organizer
 
     # Check that no workshops are returned if user isn't organizing any
-    no_workshops_response = get :workshops_as_organizer_for_pl_page, params: {user_id: workshop_organizer.id}
+    no_workshops_response = get :workshops_as_organizer_for_pl_page
     assert_equal [], JSON.parse(no_workshops_response.body)['workshops_as_organizer']
 
     # Set up workshops the user organized
@@ -333,17 +335,18 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
     create :pd_workshop, :ended, organizer: workshop_organizer
 
     # Only returns workshops that are not ended (sorted by start date)
-    organized_workshops_response = get :workshops_as_organizer_for_pl_page, params: {user_id: workshop_organizer.id}
+    organized_workshops_response = get :workshops_as_organizer_for_pl_page
     organized_workshop_courses = JSON.parse(organized_workshops_response.body)['workshops_as_organizer'].map {|w| w['course']}
     assert_equal [earlier_workshop.course, later_workshop.course], organized_workshop_courses
   end
 
   test 'workshops_as_program_manager_for_pl_page returns live workshops user is program manager of' do
     prepare_scenario
-    program_manager = create :teacher
+    program_manager = create :program_manager
+    load_pl_landing program_manager
 
     # Check that no workshops are returned if user isn't the program manager for any
-    no_workshops_response = get :workshops_as_program_manager_for_pl_page, params: {user_id: program_manager.id}
+    no_workshops_response = get :workshops_as_program_manager_for_pl_page
     assert_equal [], JSON.parse(no_workshops_response.body)['workshops_as_program_manager']
 
     # Set up workshops the user is the program manager of
@@ -352,7 +355,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
     create :pd_workshop, :ended, organizer: program_manager
 
     # Only returns workshops that are not ended (sorted by start date)
-    program_manager_workshops_response = get :workshops_as_program_manager_for_pl_page, params: {user_id: program_manager.id}
+    program_manager_workshops_response = get :workshops_as_program_manager_for_pl_page
     program_manager_workshop_courses = JSON.parse(program_manager_workshops_response.body)['workshops_as_program_manager'].map {|w| w['course']}
     assert_equal [earlier_workshop.course, later_workshop.course], program_manager_workshop_courses
   end

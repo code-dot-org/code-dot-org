@@ -16,7 +16,6 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
 
     # Link to the certificate
     @landing_page_data = {
-      user_id: current_user.id,
       last_workshop_survey_url: last_enrollment_with_pending_survey.try(:exit_survey_url),
       last_workshop_survey_course: last_enrollment_with_pending_survey.try(:workshop).try(:course),
       show_deeper_learning: show_deeper_learning,
@@ -39,10 +38,10 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
   # Returns non-ended workshops the user is facilitating.
   def workshops_as_facilitator_for_pl_page
     workshops_as_facilitator =
-      User.find(params[:user_id]).
-        pd_workshops_facilitated&.
-        order_by_scheduled_start&.
-        reject {|workshop| workshop.state == Pd::Workshop::STATE_ENDED}
+      current_user.
+      pd_workshops_facilitated&.
+      order_by_scheduled_start&.
+      reject {|workshop| workshop.state == Pd::Workshop::STATE_ENDED}
     workshops_as_facilitator_with_surveys_completed = Pd::WorkshopSurveyFoormSubmission.where(user: current_user, pd_workshop: workshops_as_facilitator).pluck(:pd_workshop_id).uniq
     summarized_workshops_as_facilitator = workshops_as_facilitator.map do |workshop|
       workshop.summarize_for_my_pl_page.merge({feedback_given: workshops_as_facilitator_with_surveys_completed.include?(workshop.id)})
@@ -52,7 +51,7 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
 
   # Returns non-ended workshops the user is organizing.
   def workshops_as_organizer_for_pl_page
-    workshops_as_organizer = User.find(params[:user_id]).
+    workshops_as_organizer = current_user.
       pd_workshops_organized.
       order_by_scheduled_start.
       reject {|workshop| workshop.state == Pd::Workshop::STATE_ENDED}.
@@ -62,7 +61,7 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
 
   # Returns non-ended workshops the user is a program manager for.
   def workshops_as_program_manager_for_pl_page
-    workshops_as_program_manager = Pd::Workshop.where(organizer_id: params[:user_id]).
+    workshops_as_program_manager = Pd::Workshop.where(organizer_id: current_user.id).
       order_by_scheduled_start.
       reject {|workshop| workshop.state == Pd::Workshop::STATE_ENDED}.
       map(&:summarize_for_my_pl_page)
