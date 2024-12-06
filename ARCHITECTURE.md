@@ -8,7 +8,7 @@
 2. If these tenets become outdated, they should either be amended publicly or deleted.
 3. If this file is still in the repo, its rules are still in effect.
 
-The goal of the tenets is not an exhaustive or  current list of technical requirements, but to highlight a set of **core architectural choices we rarely break**  and rarely change. These architectural tenets are intentionally limited: they were mostly true in 2014, are mostly true today, and might even end up mostly true in 2034. Think “constitution” not “laws”: its important they are amended to fit the times, but only rarely. Less is more.
+The goal of the tenets is not to maintain an exhaustive or  current list of technical requirements, but to highlight a small set of **core architectural choices we rarely break**  and rarely change. These architectural tenets are intentionally limited: they were mostly true in 2014, are mostly true today, and might even end up mostly true in 2034. Think “constitution” not “laws”: its important they are amended to fit the times, but only rarely. Less is more.
 
 ## The tenets represent tradeoffs
 
