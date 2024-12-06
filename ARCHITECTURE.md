@@ -4,7 +4,7 @@
   <b>TL;DR:</b> work done at code.org should live in the code-dot-org monorepo, be deployed in a container as part of one of our existing monoliths, be integration tested by our central CI system prior to PR merge, use REST for client/server communication, default to "The Rails Way", prefer 3rd party managed services that implement Open Source Protocols/APIS, and be implemented using Ruby/Rails/JS/TS/React/MySQL.
 </p>
 
-1. If somebody proposes a design counter to these tenets, please direct them to [this link](ARCHITECTURE.md#architectural-tenets) to this section of this file.
+1. If somebody proposes a design counter to these tenets, please direct them to [this link](ARCHITECTURE.md#architectural-tenets) to this section of this file. Better yet: link them straight to the relevant tenet(s) below.
 2. If these tenets become outdated, they should either be amended publicly or deleted.
 3. If this file is still in the repo, its rules are still in effect.
 
