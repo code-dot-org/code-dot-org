@@ -73,6 +73,12 @@ const FinishTeacherAccount: React.FunctionComponent<{
       navigateToHref('/users/new_sign_up/login_type');
     }
 
+    analyticsReporter.sendEvent(
+      EVENTS.FINISH_ACCOUNT_PAGE_LOADED,
+      {'user type': 'teacher'},
+      PLATFORMS.BOTH
+    );
+
     const fetchGdprData = async () => {
       const urlParams = new URLSearchParams(window.location.search);
       const forceInEu = urlParams.get('force_in_eu');

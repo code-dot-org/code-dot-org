@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2024_12_04_175716) do
+=======
+ActiveRecord::Schema.define(version: 2024_12_03_163649) do
+>>>>>>> staging-next
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1881,6 +1885,7 @@ ActiveRecord::Schema.define(version: 2024_12_04_175716) do
     t.string "validation_type", default: "full", null: false
     t.index ["school_district_id"], name: "fk_rails_951bceb7e3"
     t.index ["school_id"], name: "index_school_infos_on_school_id"
+    t.index ["school_name", "country", "school_type"], name: "index_school_infos_on_school_name_and_country_and_school_type"
   end
 
   create_table "school_stats_by_years", primary_key: ["school_id", "school_year"], charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|

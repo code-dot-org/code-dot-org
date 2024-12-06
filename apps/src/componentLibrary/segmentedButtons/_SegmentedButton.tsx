@@ -31,6 +31,7 @@ export interface SegmentedButtonModel {
   iconRight?: FontAwesomeV6IconProps;
   /** Icon for IconOnly button type */
   icon?: FontAwesomeV6IconProps;
+  /** Button unique id */
   id?: string;
 }
 
