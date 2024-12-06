@@ -5,10 +5,27 @@ describe I18n::Resources::Dashboard::Blocks::SyncOut do
   let(:described_class) {I18n::Resources::Dashboard::Blocks::SyncOut}
   let(:described_instance) {described_class.new}
 
-  let(:malformed_i18n_reporter) {stub}
+  let(:lang_locale) {'expected_locale'}
+  let(:language) {{locale_s: lang_locale}}
 
-  let(:i18n_locale) {'expected_i18n_locale'}
-  let(:language) {{locale_s: i18n_locale}}
+  let(:target_i18n_file_path) {CDO.dir('dashboard/config/locales', "blocks.#{lang_locale}.json")}
+  let(:i18n_file_path) {CDO.dir('i18n/locales', lang_locale, 'dashboard/blocks.json')}
+  let(:crowdin_file_path) {CDO.dir('i18n/crowdin', lang_locale, 'dashboard/blocks.json')}
+  let(:crowdin_file_data) do
+    {
+      'expected_block' => {
+        'options' => {
+          'option_1' => {
+            'expected_key_1' => 'expected_option_1'
+          },
+          'option_2' => {
+            'expected_key_2' => 'expected_option_2'
+          }
+        },
+        'text' => 'expected_block_text',
+      }
+    }
+  end
 
   around do |test|
     FakeFS.with_fresh {test.call}
@@ -21,55 +38,32 @@ describe I18n::Resources::Dashboard::Blocks::SyncOut do
   describe '#process' do
     let(:process_language) {described_instance.process(language)}
 
-    let(:crowdin_locale_dir) {CDO.dir('i18n/crowdin', i18n_locale)}
-    let(:crowdin_file_path) {File.join(crowdin_locale_dir, 'dashboard/blocks.yml')}
-    let(:i18n_backup_file_path) {CDO.dir('i18n/locales/original/dashboard/blocks.yml')}
+    before do
+      FileUtils.mkdir_p(File.dirname(crowdin_file_path))
+      File.write crowdin_file_path, JSON.dump(crowdin_file_data)
+    end
 
-    let(:expect_crowdin_file_restoration) do
-      RedactRestoreUtils.expects(:restore).with(
-        i18n_backup_file_path, crowdin_file_path, crowdin_file_path, %w[blockfield], 'txt'
-      )
-    end
-    let(:expect_mailformed_i18n_reporter_file_processing) do
-      malformed_i18n_reporter.expects(:process_file).with(crowdin_file_path)
-    end
-    let(:expect_mailformed_i18n_reporting) do
-      malformed_i18n_reporter.expects(:report)
+    let(:expect_locale_wrapping) do
+      I18nScriptUtils.expects(:to_dashboard_i18n_data).with(lang_locale, 'blocks', crowdin_file_data).
+        returns({lang_locale => {'data' => {'blocks' => crowdin_file_data}}})
     end
     let(:expect_localization_distribution) do
-      I18nScriptUtils.expects(:sanitize_file_and_write).with(
-        crowdin_file_path, CDO.dir('dashboard/config/locales', "blocks.#{i18n_locale}.yml")
+      I18nScriptUtils.expects(:sanitize_data_and_write).with(
+        {lang_locale => {'data' => {'blocks' => crowdin_file_data}}}, target_i18n_file_path
       )
     end
     let(:expect_crowdin_file_to_i18n_locale_dir_moving) do
-      I18nScriptUtils.expects(:move_file).with(
-        crowdin_file_path, CDO.dir('i18n/locales', i18n_locale, 'dashboard/blocks.yml')
-      )
+      I18nScriptUtils.expects(:move_file).with(crowdin_file_path, i18n_file_path)
     end
     let(:expect_crowdin_resource_dir_removing) do
       I18nScriptUtils.expects(:remove_empty_dir).with(File.dirname(crowdin_file_path))
     end
 
-    before do
-      PegasusLanguages.stubs(:get_crowdin_name_and_locale).returns([{locale_s: i18n_locale}])
-      I18n::Utils::MalformedI18nReporter.stubs(:new).with(i18n_locale).returns(malformed_i18n_reporter)
-
-      FileUtils.mkdir_p(File.dirname(crowdin_file_path))
-      FileUtils.touch(crowdin_file_path)
-
-      FileUtils.mkdir_p(File.dirname(i18n_backup_file_path))
-      FileUtils.touch(i18n_backup_file_path)
-    end
-
-    it 'restores the file and then distributes the localization' do
+    it 'distributes the localization to dashboard' do
       execution_sequence = sequence('execution')
 
-      # Restoration
-      expect_crowdin_file_restoration.in_sequence(execution_sequence)
-      expect_mailformed_i18n_reporter_file_processing.in_sequence(execution_sequence)
-      expect_mailformed_i18n_reporting.in_sequence(execution_sequence)
-
       # Distribution
+      expect_locale_wrapping.in_sequence(execution_sequence)
       expect_localization_distribution.in_sequence(execution_sequence)
       expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
       expect_crowdin_resource_dir_removing.in_sequence(execution_sequence)
@@ -82,39 +76,23 @@ describe I18n::Resources::Dashboard::Blocks::SyncOut do
         FileUtils.rm(crowdin_file_path)
       end
 
-      it 'does not try to process the file' do
-        # Restoration
-        expect_crowdin_file_restoration.never
-        expect_mailformed_i18n_reporter_file_processing.never
-        expect_mailformed_i18n_reporting.never
-
-        # Distribution
-        expect_localization_distribution.never
-        expect_crowdin_file_to_i18n_locale_dir_moving.never
-        expect_crowdin_resource_dir_removing.never
-
+      it 'does not wrap translations with locale, data, blocks' do
+        expect_locale_wrapping.never
         process_language
       end
-    end
 
-    context 'when the i18n backup file does not exist' do
-      before do
-        FileUtils.rm(i18n_backup_file_path)
+      it 'does not distribute the localization' do
+        expect_localization_distribution.never
+        process_language
       end
 
-      it 'distributes the file' do
-        execution_sequence = sequence('execution')
+      it 'does not move Crowdin files to the i18n locale dir' do
+        expect_crowdin_file_to_i18n_locale_dir_moving.never
+        process_language
+      end
 
-        # Restoration
-        expect_crowdin_file_restoration.never
-        expect_mailformed_i18n_reporter_file_processing.never
-        expect_mailformed_i18n_reporting.never
-
-        # Distribution
-        expect_localization_distribution.in_sequence(execution_sequence)
-        expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
-        expect_crowdin_resource_dir_removing.in_sequence(execution_sequence)
-
+      it 'does not try to remove the Crowdin resource dir' do
+        expect_crowdin_resource_dir_removing.never
         process_language
       end
     end
