@@ -33,7 +33,7 @@ We organize our code as a single “monorepo” in Github vs. having multiple re
 <details>
   <summary>Why?</summary>
 
-  * A monorepo makes it much easier to do large refactors in dynamically typed languages with: it's easy to know that after you built your regex queries, your search found ALL examples that you might break if you make a change.  
+  * A monorepo makes it much easier to do large refactors in dynamically typed languages via search/replace: after you craft your regex searches, its good to know you were searching the whole space of potentially affected files.
   * A monorepo makes it much easier to implement uniform tooling across modules/libraries/systems/folders, which increases the confidence that “After mastering a few key technologies I can work in almost any part of the codebase”.
   * See the “Collective Benefit Tomorrow” table above, most of those are enabled by the complementary combination of Monorepo+Monolith+CI.  
     * For example it’s **much** easier to implement integration tests in a monorepo and over the long term things that are easy are things that tend to happen, which gives you “If my PR passes  CI it won’t break code.org”  
