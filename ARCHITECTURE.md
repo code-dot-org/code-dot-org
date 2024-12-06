@@ -100,22 +100,15 @@ If you are extending our main .rake CI system or adding a parallel CI: all work 
 
 ### Tenet 4: Ruby/Rails/React/MySQL (vs infinite language and framework possibilities)
 
-Most code.org work should be built using Ruby/Rails/MySQL on the server side and JS/TS/React on the client side
-
-* Use Ruby on Rails on the server side
-* Use  JS/TS  with React on the client side
-  * May use *short* snippets of inline JS/JQuery without React on the client side, where pragmatic.
-* Use Ruby/Rake for general tooling (infra, build, etc) and nodejs for JS-related tooling.
-  * May use nodejs for general tooling when pragmatic (e.g. better nodejs apis than ruby)
-* Use  MySQL for data storage
-  * May use Redis when ephemerality is acceptable and performance is important
+Prefer Ruby/Rails/MySQL on the server side and JS/TS/React on the client side. Prefer Ruby/Rake for general tooling (infra, build, etc) and nodejs for JS/TS-related tooling. Most code.org work should be implemented with these core technologies.
 
 <details>
   <summary>Why?</summary>
 
   * We have a significant investment in Ruby/Rails that makes it challenging to do a wholesale move to a different platform.  
   * Ruby/Rails is working well. While other platforms (e.g., Go) may be more optimized/efficient, they don’t outweigh the effort that would be required to move.  
-  * A single Ruby/Rails server-side architecture makes it easier for team members to move between different parts of the code base.
+  * A single Ruby/Rails server-side architecture makes it easier for team members to move between different parts of the code base, and we don't have sections of the code "go dark" when knowledge of an obscure technology choice leaves the project. A good general principle for code.org: given our problem space, we should usually be making pretty boring technology choices.
+  * We generally have simple "rails shaped", "mysql shaped" and "react shaped" problems that aren't very exotic and don't significantly benefit from exotic solutions.
 
 </details>
 
@@ -124,6 +117,13 @@ Most code.org work should be built using Ruby/Rails/MySQL on the server side and
 
   * When it is fundamentally impossible to implement a specified feature without using another language, e.g. Javabuilder uses Java because our curriculum goal required running Java code, which inherently requires Java.
   * If it is not feasible to implement a feature in Ruby due to lack of libraries, Python may be invoked from ActiveJob ([howto](https://github.com/code-dot-org/code-dot-org/tree/staging/python)).
+  * May use *short* snippets of inline JS/JQuery *without* React on the client side, where pragmatic.
+  * May use bash or nodejs for general tooling when pragmatic (e.g. better nodejs apis than ruby)
+  * Consider Redis instead of MySQL when performance is important and ephemerality is acceptable (e.g. cache values)
+  * This tenet will probably have more exceptions and edge cases than most. Its not an exhaustive list, its a "highly preferred list".
+    * Be pragmatic, do a good faith attempt to use preferred languages and frameworks, but solve your problems.
+    * E.g. we also use cloudformation (etc etc) which could be argued to be kind of like a programming language, but is **totally** not a problem.
+      * OTOH, you don't get to "use Haskell because everything else should be considered lame and fundamentally broken".
 
 </details>
 
