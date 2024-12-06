@@ -51,7 +51,7 @@ We organize our code as a single “monorepo” in Github vs. having multiple re
 
 ### Tenet 2: Monolith (vs. microservices)
 
-We deploy code.org as a couple monoliths (vs many microservices) following the Rails “[majestic monolith](https://signalvnoise.com/svn3/the-majestic-monolith/)” pattern. Your contributions should extend one of our existing monolith services: dashboard (studio.code.org), our cms (code.org), or our activejob workers. They should NOT create a new service. This list of monoliths should rarely (if ever) change.
+We deploy code.org as a couple monoliths (vs many microservices). Your contributions should extend one of our existing monolith services: dashboard (studio.code.org), our cms (code.org), or our activejob workers. They should NOT create a new service. This list of monoliths should rarely (if ever) change.
 
 <details>
   <summary>Why?</summary>
