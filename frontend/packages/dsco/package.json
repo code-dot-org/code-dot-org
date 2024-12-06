@@ -78,7 +78,7 @@
     "react-dom": ">=16"
   },
   "engines": {
-    "node": ">=22"
+    "node": ">=20"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"

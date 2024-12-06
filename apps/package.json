@@ -217,6 +217,7 @@
     "@dsco_/link": "^1.1.2",
     "@lezer/highlight": "^1.2.0",
     "@magenta/music": "^1.23.1",
+    "@microbit/microbit-fs": "^0.9.2",
     "@microsoft/immersive-reader-sdk": "^1.1.0",
     "@react-bootstrap/pagination": "^1.0.0",
     "@react-pdf/renderer": "3.4.4",

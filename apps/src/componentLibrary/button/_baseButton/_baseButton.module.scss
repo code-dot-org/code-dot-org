@@ -1,4 +1,4 @@
-@import "color";
+@import '@cdo/apps/componentLibrary/common/styles/primitiveColors.css';
 @import "@cdo/apps/componentLibrary/common/styles/mixins";
 
 // Button common styles
@@ -41,7 +41,7 @@ a.button {
   }
 
   &:focus-visible {
-    outline: 2px solid $light_primary_500;
+    outline: 2px solid var(--brand-teal-50);
     outline-offset: 2px;
     border-radius: 0.375rem;
   }
@@ -53,7 +53,7 @@ a.button {
 
   &:disabled, &[aria-disabled="true"] {
     cursor: not-allowed;
-    border-color: $light_gray_200;
+    border-color: var(--neutral-gray-20);
   }
 }
 
@@ -61,58 +61,58 @@ a.button {
 .button-primary,
 a.button-primary {
   &.button-purple {
-    background-color: $light_secondary_500;
-    color: $light_white;
+    background-color: var(--brand-purple-50);
+    color: var(--neutral-base-white);
 
     &:hover {
-      background-color: $light_secondary_700;
+      background-color: var(--brand-purple-70);
     }
 
     &:disabled, &[aria-disabled="true"] {
-      background-color: $light_gray_200;
-      color: $light_white;
+      background-color: var(--neutral-gray-20);
+      color: var(--neutral-base-white);
     }
   }
 
   &.button-black {
-    background-color: $light_black;
-    color: $light_white;
+    background-color: var(--neutral-base-black);
+    color: var(--neutral-base-white);
 
     &:hover {
-      background-color: $light_gray_800;
+      background-color: var(--neutral-gray-80);
     }
 
     &:disabled, &[aria-disabled="true"] {
-      background-color: $light_gray_200;
-      color: $light_white;
+      background-color: var(--neutral-gray-20);
+      color: var(--neutral-base-white);
     }
   }
 
   &.button-white {
-    background-color: $light_white;
-    color: $light_black;
+    background-color: var(--neutral-base-white);
+    color: var(--neutral-base-black);
 
     &:hover {
-      background-color: $light_gray_200;
+      background-color: var(--neutral-gray-20);
     }
 
     &:disabled, &[aria-disabled="true"] {
-      background-color: $light_gray_800;
-      color: $light_gray_900;
+      background-color: var(--neutral-gray-80);
+      color: var(--neutral-gray-90);
     }
   }
 
   &.button-destructive {
-    background-color: $light_negative_500;
-    color: $light_white;
+    background-color: var(--sentiment-error-50);
+    color: var(--neutral-base-white);
 
     &:hover {
-      background-color: $light_negative_700;
+      background-color: var(--sentiment-error-70);
     }
 
     &:disabled, &[aria-disabled="true"] {
-      background-color: $light_gray_200;
-      color: $light_white;
+      background-color: var(--neutral-gray-20);
+      color: var(--neutral-base-white);
     }
   }
 }
@@ -121,114 +121,114 @@ a.button-primary {
 a.button-secondary {
   // ! Warning!! Secondary purple button is deprecated and will be removed soon.
   &.button-purple {
-    border: 1px solid $light_secondary_500;
-    color: $light_secondary_500;
+    border: 1px solid var(--brand-purple-50);
+    color: var(--brand-purple-50);
 
     &:hover {
-      background-color: $light_secondary_100;
-      border: 1px solid $light_secondary_500;
-      color: $light_secondary_500;
+      background-color: var(--brand-purple-10);
+      border: 1px solid var(--brand-purple-50);
+      color: var(--brand-purple-50);
     }
 
     &:active {
       // !important is used here to override the ./apps/style/common.scss line 655 styles
-      border: 1px solid $light_secondary_500 !important;
+      border: 1px solid var(--brand-purple-50) !important;
     }
 
     &:disabled, &[aria-disabled="true"] {
-      border-color: $light_gray_200 !important;
-      color: $light_gray_200;
+      border-color: var(--neutral-gray-20) !important;
+      color: var(--neutral-gray-20);
       background-color: unset;
     }
   }
 
   &.button-black {
-    border: 1px solid $light_black;
-    background-color: $light_white;
-    color: $light_black;
+    border: 1px solid var(--neutral-base-black);
+    background-color: var(--neutral-base-white);
+    color: var(--neutral-base-black);
 
     &:hover {
-      background-color: $light_gray_100;
-      border: 1px solid $light_black;
-      color: $light_black;
+      background-color: var(--neutral-gray-10);
+      border: 1px solid var(--neutral-base-black);
+      color: var(--neutral-base-black);
     }
 
     &:active {
       // !important is used here to override the ./apps/style/common.scss line 655 styles
-      border: 1px solid $light_black !important;
+      border: 1px solid var(--neutral-base-black) !important;
     }
 
     &:disabled, &[aria-disabled="true"] {
-      border-color: $light_gray_200 !important;
-      color: $light_gray_200;
+      border-color: var(--neutral-gray-20) !important;
+      color: var(--neutral-gray-20);
       background-color: unset;
     }
   }
 
   &.button-gray {
-    border: 1px solid $light_gray_400;
-    background-color: $light_white;
-    color: $light_black;
+    border: 1px solid var(--neutral-gray-40);
+    background-color: var(--neutral-base-white);
+    color: var(--neutral-base-black);
 
     &:hover {
-      background-color: $light_gray_100;
-      border: 1px solid $light_gray_400;
-      color: $light_black;
+      background-color: var(--neutral-gray-10);
+      border: 1px solid var(--neutral-gray-40);
+      color: var(--neutral-base-black);
     }
 
     &:active {
       // !important is used here to override the ./apps/style/common.scss line 655 styles
-      border: 1px solid $light_gray_400 !important;
+      border: 1px solid var(--neutral-gray-40) !important;
     }
 
     &:disabled, &[aria-disabled="true"] {
-      border-color: $light_gray_200 !important;
-      color: $light_gray_200;
+      border-color: var(--neutral-gray-20) !important;
+      color: var(--neutral-gray-20);
       background-color: unset;
     }
   }
 
   &.button-white {
-    border: 1px solid $light_white;
-    background-color: $light_black;
-    color: $light_white;
+    border: 1px solid var(--neutral-base-white);
+    background-color: var(--neutral-base-black);
+    color: var(--neutral-base-white);
 
     &:hover {
-      background-color: $light_gray_800;
-      border: 1px solid $light_white;
-      color: $light_white;
+      background-color: var(--neutral-gray-80);
+      border: 1px solid var(--neutral-base-white);
+      color: var(--neutral-base-white);
     }
 
     &:active {
       // !important is used here to override the ./apps/style/common.scss line 655 styles
-      border: 1px solid $light_white !important;
+      border: 1px solid var(--neutral-base-white) !important;
     }
 
     &:disabled, &[aria-disabled="true"] {
-      border-color: $light_gray_800 !important;
-      color: $light_gray_800;
+      border-color: var(--neutral-gray-80) !important;
+      color: var(--neutral-gray-80);
       background-color: unset;
     }
   }
 
   &.button-destructive {
-    border: 1px solid $light_negative_500;
-    color: $light_negative_500;
+    border: 1px solid var(--sentiment-error-50);
+    color: var(--sentiment-error-50);
 
     &:hover {
-      background-color: $light_negative_100;
-      border: 1px solid $light_negative_500;
-      color: $light_negative_500;
+      background-color: var(--sentiment-error-10);
+      border: 1px solid var(--sentiment-error-50);
+      color: var(--sentiment-error-50);
     }
 
     &:active {
       // !important is used here to override the ./apps/style/common.scss line 655 styles
-      border: 1px solid $light_negative_500 !important;
+      border: 1px solid var(--sentiment-error-50) !important;
     }
 
     &:disabled, &[aria-disabled="true"] {
-      border-color: $light_gray_200 !important;
-      color: $light_gray_200;
+      border-color: var(--neutral-gray-20) !important;
+      color: var(--neutral-gray-20);
       background-color: unset;
     }
   }
@@ -237,77 +237,77 @@ a.button-secondary {
 .button-tertiary,
 a.button-tertiary {
   &.button-purple {
-    color: $light_secondary_500;
+    color: var(--brand-purple-50);
 
     &:hover {
-      background-color: $light_secondary_100;
-      color: $light_secondary_500;
+      background-color: var(--brand-purple-10);
+      color: var(--brand-purple-50);
     }
 
     &:active {
-      background-color: $light_secondary_100;
-      color: $light_secondary_700;
+      background-color: var(--brand-purple-10);
+      color: var(--brand-purple-70);
     }
 
     &:disabled, &[aria-disabled="true"] {
-      color: $light_gray_200;
+      color: var(--neutral-gray-20);
       background-color: unset;
     }
   }
 
   &.button-black {
-    color: $light_black;
+    color: var(--neutral-base-black);
 
     &:hover {
-      background-color: $light_gray_200;
-      color: $light_black;
+      background-color: var(--neutral-gray-20);
+      color: var(--neutral-base-black);
     }
 
     &:active {
-      background-color: $light_gray_200;
-      color: $light_gray_800;
+      background-color: var(--neutral-gray-20);
+      color: var(--neutral-gray-80);
     }
 
     &:disabled, &[aria-disabled="true"] {
-      color: $light_gray_200;
+      color: var(--neutral-gray-20);
       background-color: unset;
     }
   }
 
   &.button-white {
-    color: $light_white;
+    color: var(--neutral-base-white);
 
     &:hover {
-      background-color: $light_gray_800;
-      color: $light_white;
+      background-color: var(--neutral-gray-80);
+      color: var(--neutral-base-white);
     }
 
     &:active {
-      background-color: $light_gray_800;
-      color: $light_gray_200;
+      background-color: var(--neutral-gray-80);
+      color: var(--neutral-gray-20);
     }
 
     &:disabled, &[aria-disabled="true"] {
-      color: $light_gray_800;
+      color: var(--neutral-gray-80);
       background-color: unset;
     }
   }
 
   &.button-destructive {
-    color: $light_negative_500;
+    color: var(--sentiment-error-50);
 
     &:hover {
-      background-color: $light_negative_100;
-      color: $light_negative_500;
+      background-color: var(--sentiment-error-10);
+      color: var(--sentiment-error-50);
     }
 
     &:active {
-      background-color: $light_negative_100;
-      color: $light_negative_700;
+      background-color: var(--sentiment-error-10);
+      color: var(--sentiment-error-70);
     }
 
     &:disabled, &[aria-disabled="true"] {
-      color: $light_gray_200;
+      color: var(--neutral-gray-20);
       background-color: unset;
     }
   }

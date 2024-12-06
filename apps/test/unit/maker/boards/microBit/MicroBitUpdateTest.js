@@ -1,12 +1,15 @@
 import MBFirmataUpdater from '@cdo/apps/maker/boards/microBit/MBFirmataUpdater';
 import {
-  MICROBIT_V1,
-  MICROBIT_V2,
   MICROBIT_FIRMATA_V1_URL,
   MICROBIT_FIRMATA_V2_URL,
   MICROBIT_IDS_V1,
   MICROBIT_IDS_V2,
 } from '@cdo/apps/maker/boards/microBit/MicroBitConstants';
+import {MicroBitVersion} from '@cdo/apps/maker/boards/microBit/types';
+import {
+  detectMicroBitVersion,
+  getFirmataURLByVersion,
+} from '@cdo/apps/maker/boards/microBit/utils';
 import microBitReducer, {
   setMicroBitFirmataUpdatePercent,
 } from '@cdo/apps/maker/microBitRedux';
@@ -17,51 +20,52 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 
-describe('MBFirmataUpdater', () => {
-  const mbFirmataUpdater = new MBFirmataUpdater();
+describe('microBit utils functions', () => {
   describe('detectMicroBitVersion function', () => {
     it('returns correct version for micro:bit v1', () => {
       MICROBIT_IDS_V1.forEach(idPrefix => {
         const device = {serialNumber: idPrefix + '1234'};
-        const version = mbFirmataUpdater.detectMicroBitVersion(device);
-        expect(version).toBe(MICROBIT_V1);
+        const version = detectMicroBitVersion(device);
+        expect(version).toBe(MicroBitVersion.V1);
       });
     });
 
     it('returns correct version for micro:bit v2', () => {
       MICROBIT_IDS_V2.forEach(idPrefix => {
         const device = {serialNumber: idPrefix + '1234'};
-        const version = mbFirmataUpdater.detectMicroBitVersion(device);
-        expect(version).toBe(MICROBIT_V2);
+        const version = detectMicroBitVersion(device);
+        expect(version).toBe(MicroBitVersion.V2);
       });
     });
 
     it('returns null for device that is not micro:bit', () => {
       const device = {serialNumber: '88001234'};
-      const version = mbFirmataUpdater.detectMicroBitVersion(device);
+      const version = detectMicroBitVersion(device);
       expect(version).toBeNull();
     });
   });
 
   describe('getFirmataURLByVersion function', () => {
     it('returns correct URL for micro:bit v1', () => {
-      const URL = mbFirmataUpdater.getFirmataURLByVersion(MICROBIT_V1);
+      const URL = getFirmataURLByVersion(MicroBitVersion.V1);
       expect(URL).toBe(MICROBIT_FIRMATA_V1_URL);
     });
 
     it('returns correct URL for micro:bit v2', () => {
-      const URL = mbFirmataUpdater.getFirmataURLByVersion(MICROBIT_V2);
+      const URL = getFirmataURLByVersion(MicroBitVersion.V2);
       expect(URL).toBe(MICROBIT_FIRMATA_V2_URL);
     });
 
     it('throws an error if the micro:bit version is invalid', () => {
-      expect(() => mbFirmataUpdater.getFirmataURLByVersion('v3')).toThrow(
+      expect(() => getFirmataURLByVersion('v3')).toThrow(
         'micro:bit version is invalid.'
       );
     });
   });
-
+});
+describe('MBFirmataUpdater', () => {
   describe('setPercentUpdateComplete function', () => {
+    const mbFirmataUpdater = new MBFirmataUpdater();
     beforeEach(() => {
       stubRedux();
       registerReducers({microBit: microBitReducer});

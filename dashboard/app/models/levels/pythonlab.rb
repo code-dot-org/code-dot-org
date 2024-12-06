@@ -34,6 +34,7 @@ class Pythonlab < Level
     starter_assets
     predict_settings
     validation_file
+    enable_micro_bit
   )
 
   validate :has_correct_multiple_choice_answer?
