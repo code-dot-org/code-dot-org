@@ -29,7 +29,6 @@ import {hiddenPlSectionIds} from '@cdo/apps/templates/teacherDashboard/teacherSe
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
-import {queryParams, updateQueryParam} from '../../utils';
 import {
   COURSE_CSF,
   COURSE_CSD,
@@ -86,26 +85,6 @@ const getAvailableTabs = permissions => {
   return tabs;
 };
 
-const getEnrollSucessWorkshopName = () => {
-  // If sent here from successfully enrolling in a workshop, log WORKSHOP_ENROLLMENT_COMPLETED_EVENT.
-  const urlParams = queryParams();
-  if (urlParams && Object.keys(urlParams).includes('wsCourse')) {
-    const workshopCourseName = urlParams['wsCourse'];
-
-    analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
-      'regional partner': urlParams['rpName'],
-      'workshop course': workshopCourseName,
-      'workshop subject': urlParams['wsSubject'],
-    });
-
-    updateQueryParam('rpName', undefined, false);
-    updateQueryParam('wsCourse', undefined, false);
-    updateQueryParam('wsSubject', undefined, false);
-
-    return workshopCourseName;
-  }
-};
-
 function LandingPage({
   lastWorkshopSurveyUrl,
   lastWorkshopSurveyCourse,
@@ -121,9 +100,11 @@ function LandingPage({
   hiddenPlSectionIds,
 }) {
   const availableTabs = getAvailableTabs(userPermissions);
-  const [enrollSuccessWorkshopName, setEnrollSuccessWorkshopName] = useState(
-    getEnrollSucessWorkshopName()
-  );
+  // The success message will state what workshop the user just enrolled in:
+  // - In the case of Build Your Own workshops, it will state the workshop's name.
+  // - In the case of any other type of workshop, it will state the workshop's course.
+  const [enrollSuccessWorkshopTitle, setEnrollSuccessWorkshopTitle] =
+    useState('');
   const [currentTab, setCurrentTab] = useState(availableTabs[0].value);
   const [workshopsAsFacilitator, setWorkshopsAsFacilitator] = useState([]);
   const [workshopsAsOrganizer, setWorkshopsAsOrganizer] = useState([]);
@@ -138,11 +119,30 @@ function LandingPage({
   const joinedPlSectionsStyling =
     joinedPlSections?.length > 0 ? '' : style.joinedPlSectionsWithNoSections;
 
-  // Load PL section into redux and fetch applicable workshop info
+  // Load PL section into redux, get enrollment confirmation info if sent from the enroll form,
+  // and fetch applicable workshop info.
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(asyncLoadSectionData());
     dispatch(asyncLoadCoteacherInvite());
+
+    const workshopCourse = sessionStorage.getItem('workshopCourse', null);
+    if (workshopCourse) {
+      const workshopName = sessionStorage.getItem('workshopName', null);
+      setEnrollSuccessWorkshopTitle(
+        workshopName ? workshopName : workshopCourse
+      );
+
+      analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
+        'regional partner': sessionStorage.getItem('rpName', null),
+        'workshop course': workshopCourse,
+        'workshop subject': sessionStorage.getItem('workshopSubject', null),
+      });
+
+      ['workshopCourse', 'workshopSubject', 'workshopName', 'rpName'].forEach(
+        sessionKey => sessionStorage.removeItem(sessionKey)
+      );
+    }
 
     if (userPermissions.includes('facilitator')) {
       const fetchFacilitatorData = async () => {
@@ -452,10 +452,10 @@ function LandingPage({
   const RenderMyPlTab = () => {
     return (
       <>
-        {enrollSuccessWorkshopName && (
+        {enrollSuccessWorkshopTitle && (
           <WorkshopEnrollmentCelebrationDialog
-            workshopName={enrollSuccessWorkshopName}
-            onClose={() => setEnrollSuccessWorkshopName(null)}
+            workshopName={enrollSuccessWorkshopTitle}
+            onClose={() => setEnrollSuccessWorkshopTitle('')}
           />
         )}
         {RenderBanner()}
