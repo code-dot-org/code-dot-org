@@ -446,7 +446,7 @@ class Section < ApplicationRecord
           version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
           unit_id: unit_group ? script_id : nil,
           lesson_extras_available: script.try(:lesson_extras_available),
-          text_to_speech_enabled: script.try(:text_to_speech_enabled),
+          text_to_speech_enabled: script.try(:text_to_speech_enabled?),
         },
         any_student_has_progress: any_student_has_progress?
       }
