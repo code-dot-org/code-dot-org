@@ -44,24 +44,24 @@ export interface CheckboxDropdownProps
   checkedOptions: string[];
   /** CheckboxDropdown onChange handler */
   onChange: (args: React.ChangeEvent<HTMLInputElement>) => void;
-  /** CheckboxDropdown onSelectAll handler */
-  onSelectAll: (
-    event:
-      | React.MouseEvent<HTMLButtonElement>
-      | React.MouseEvent<HTMLAnchorElement>
-  ) => void;
-  /** CheckboxDropdown onClearAll handler */
-  onClearAll: (
-    event:
-      | React.MouseEvent<HTMLButtonElement>
-      | React.MouseEvent<HTMLAnchorElement>
-  ) => void;
-  /** CheckboxDropdown selectAllText
-   * Text for "Select All" button */
-  selectAllText: string;
-  /** CheckboxDropdown clearAllText
-   * Text for "Clear All" button */
-  clearAllText: string;
+  /** Click handler and translated button text for the "Select All" button */
+  selectAllConfig?: {
+    onClick: (
+      event:
+        | React.MouseEvent<HTMLButtonElement>
+        | React.MouseEvent<HTMLAnchorElement>
+    ) => void;
+    text: string;
+  };
+  /** Click handler and translated button text for the "Clear All" button */
+  clearAllConfig?: {
+    onClick: (
+      event:
+        | React.MouseEvent<HTMLButtonElement>
+        | React.MouseEvent<HTMLAnchorElement>
+    ) => void;
+    text: string;
+  };
 }
 
 const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
@@ -72,8 +72,8 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   allOptions,
   checkedOptions = [],
   onChange,
-  onSelectAll,
-  onClearAll,
+  selectAllConfig,
+  clearAllConfig,
   disabled = false,
   readOnly = false,
   color = dropdownColors.black,
@@ -81,8 +81,6 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   helperMessage,
   helperIcon,
   errorMessage,
-  selectAllText,
-  clearAllText,
   styleAsFormField = false,
   ...rest
 }) => {
@@ -122,22 +120,28 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
             </li>
           ))}
         </ul>
-        <div className={moduleStyles.bottomButtonsContainer}>
-          <Button
-            type="tertiary"
-            color={buttonColors.purple}
-            text={selectAllText}
-            onClick={onSelectAll}
-            size={size}
-          />
-          <Button
-            type="tertiary"
-            color={buttonColors.purple}
-            text={clearAllText}
-            onClick={onClearAll}
-            size={size}
-          />
-        </div>
+        {(selectAllConfig || clearAllConfig) && (
+          <div className={moduleStyles.bottomButtonsContainer}>
+            {selectAllConfig && (
+              <Button
+                type="tertiary"
+                color={buttonColors.purple}
+                text={selectAllConfig.text}
+                onClick={selectAllConfig.onClick}
+                size={size}
+              />
+            )}
+            {clearAllConfig && (
+              <Button
+                type="tertiary"
+                color={buttonColors.purple}
+                text={clearAllConfig.text}
+                onClick={clearAllConfig.onClick}
+                size={size}
+              />
+            )}
+          </div>
+        )}
       </div>
     </CustomDropdown>
   );

@@ -33,7 +33,7 @@ const SingleTemplate: StoryFn<CheckboxDropdownProps> = args => {
         | React.MouseEvent<HTMLAnchorElement>
     ) => {
       setValues(args.allOptions.map(option => option.value));
-      args.onSelectAll(e);
+      args.selectAllConfig?.onClick(e);
     },
     [args]
   );
@@ -44,7 +44,7 @@ const SingleTemplate: StoryFn<CheckboxDropdownProps> = args => {
         | React.MouseEvent<HTMLAnchorElement>
     ) => {
       setValues([]);
-      args.onClearAll(e);
+      args.clearAllConfig?.onClick(e);
     },
     [args]
   );
@@ -54,8 +54,14 @@ const SingleTemplate: StoryFn<CheckboxDropdownProps> = args => {
       {...args}
       checkedOptions={selectedValues}
       onChange={onChange}
-      onSelectAll={onSelectAll}
-      onClearAll={onClearAll}
+      selectAllConfig={{
+        onClick: onSelectAll,
+        text: 'Select all',
+      }}
+      clearAllConfig={{
+        onClick: onClearAll,
+        text: 'Clear all',
+      }}
     />
   );
 };
@@ -111,7 +117,7 @@ const MultipleTemplate: StoryFn<{
                 option => option.value
               ),
             });
-            componentArg.onSelectAll(e);
+            componentArg.selectAllConfig?.onClick(e);
           };
           const onClearAll = (
             e:
@@ -119,7 +125,7 @@ const MultipleTemplate: StoryFn<{
               | React.MouseEvent<HTMLAnchorElement>
           ) => {
             setValues({...values, [componentArg.name]: []});
-            componentArg.onClearAll(e);
+            componentArg.clearAllConfig?.onClick(e);
           };
 
           return (
@@ -130,8 +136,14 @@ const MultipleTemplate: StoryFn<{
                 values[componentArg.name] || componentArg.checkedOptions
               }
               onChange={onChange}
-              onSelectAll={onSelectAll}
-              onClearAll={onClearAll}
+              selectAllConfig={{
+                onClick: onSelectAll,
+                text: 'Select all',
+              }}
+              clearAllConfig={{
+                onClick: onClearAll,
+                text: 'Clear all',
+              }}
             />
           );
         })}
@@ -152,10 +164,14 @@ DefaultCheckboxDropdown.args = {
   disabled: false,
   color: dropdownColors.black,
   onChange: args => null,
-  onSelectAll: args => null,
-  onClearAll: args => null,
-  selectAllText: 'Select all',
-  clearAllText: 'Clear all',
+  selectAllConfig: {
+    onClick: args => null,
+    text: 'Select all',
+  },
+  clearAllConfig: {
+    onClick: args => null,
+    text: 'Clear all',
+  },
   size: 'm',
 };
 
@@ -169,10 +185,14 @@ ReadOnlyCheckboxDropdown.args = {
   checkedOptions: ['option-1'],
   labelText: 'ReadOnly Dropdown',
   onChange: args => null,
-  onSelectAll: args => null,
-  onClearAll: args => null,
-  selectAllText: 'Select all',
-  clearAllText: 'Clear all',
+  selectAllConfig: {
+    onClick: args => null,
+    text: 'Select all',
+  },
+  clearAllConfig: {
+    onClick: args => null,
+    text: 'Clear all',
+  },
   readOnly: true,
   color: dropdownColors.black,
   size: 'm',
@@ -188,10 +208,14 @@ DisabledCheckboxDropdown.args = {
   checkedOptions: ['option-1'],
   labelText: 'Disabled Dropdown',
   onChange: args => null,
-  onSelectAll: args => null,
-  onClearAll: args => null,
-  selectAllText: 'Select all',
-  clearAllText: 'Clear all',
+  selectAllConfig: {
+    onClick: args => null,
+    text: 'Select all',
+  },
+  clearAllConfig: {
+    onClick: args => null,
+    text: 'Clear all',
+  },
   disabled: true,
   color: dropdownColors.black,
   size: 'm',
@@ -210,10 +234,14 @@ WithDisabledOptionCheckboxDropdown.args = {
   checkedOptions: ['option-1'],
   labelText: 'Dropdown with disabled option',
   onChange: args => null,
-  onSelectAll: args => null,
-  onClearAll: args => null,
-  selectAllText: 'Select all',
-  clearAllText: 'Clear all',
+  selectAllConfig: {
+    onClick: args => null,
+    text: 'Select all',
+  },
+  clearAllConfig: {
+    onClick: args => null,
+    text: 'Clear all',
+  },
   size: 'm',
 };
 
@@ -227,10 +255,14 @@ StyledAsFieldCheckboxDropdown.args = {
   checkedOptions: ['option-1'],
   labelText: 'Helper Message Checkbox Dropdown',
   onChange: args => console.log(args),
-  onSelectAll: args => null,
-  onClearAll: args => null,
-  selectAllText: 'Select all',
-  clearAllText: 'Clear all',
+  selectAllConfig: {
+    onClick: args => null,
+    text: 'Select all',
+  },
+  clearAllConfig: {
+    onClick: args => null,
+    text: 'Clear all',
+  },
   helperMessage: 'Helper message',
   styleAsFormField: true,
   size: 'm',
@@ -246,10 +278,14 @@ WithErrorCheckboxDropdown.args = {
   checkedOptions: ['option-1'],
   labelText: 'Error Checkbox Dropdown',
   onChange: args => console.log(args),
-  onSelectAll: args => null,
-  onClearAll: args => null,
-  selectAllText: 'Select all',
-  clearAllText: 'Clear all',
+  selectAllConfig: {
+    onClick: args => null,
+    text: 'Select all',
+  },
+  clearAllConfig: {
+    onClick: args => null,
+    text: 'Clear all',
+  },
   errorMessage: 'Error message',
   size: 'm',
 };
@@ -264,10 +300,14 @@ WithHelperMessageCheckboxDropdown.args = {
   checkedOptions: ['option-1'],
   labelText: 'Helper Message Checkbox Dropdown',
   onChange: args => console.log(args),
-  onSelectAll: args => null,
-  onClearAll: args => null,
-  selectAllText: 'Select all',
-  clearAllText: 'Clear all',
+  selectAllConfig: {
+    onClick: args => null,
+    text: 'Select all',
+  },
+  clearAllConfig: {
+    onClick: args => null,
+    text: 'Clear all',
+  },
   helperMessage: 'Helper message',
   size: 'm',
 };
@@ -282,10 +322,14 @@ WithHelperMessageAndIconCheckboxDropdown.args = {
   checkedOptions: ['option-1'],
   labelText: 'Helper Icon Checkbox Dropdown',
   onChange: args => console.log(args),
-  onSelectAll: args => null,
-  onClearAll: args => null,
-  selectAllText: 'Select all',
-  clearAllText: 'Clear all',
+  selectAllConfig: {
+    onClick: args => null,
+    text: 'Select all',
+  },
+  clearAllConfig: {
+    onClick: args => null,
+    text: 'Clear all',
+  },
   helperIcon: {
     iconName: 'info-circle',
   },
@@ -306,10 +350,14 @@ ThickAndThinCheckboxDropdowns.args = {
       labelText: 'Thick Dropdown',
       labelType: 'thick',
       onChange: args => null,
-      onSelectAll: args => null,
-      onClearAll: args => null,
-      selectAllText: 'Select all',
-      clearAllText: 'Clear all',
+      selectAllConfig: {
+        onClick: args => null,
+        text: 'Select all',
+      },
+      clearAllConfig: {
+        onClick: args => null,
+        text: 'Clear all',
+      },
       size: 'm',
       disabled: false,
     },
@@ -323,10 +371,14 @@ ThickAndThinCheckboxDropdowns.args = {
       labelText: 'Thin Dropdown',
       labelType: 'thin',
       onChange: args => null,
-      onSelectAll: args => null,
-      onClearAll: args => null,
-      selectAllText: 'Select all',
-      clearAllText: 'Clear all',
+      selectAllConfig: {
+        onClick: args => null,
+        text: 'Select all',
+      },
+      clearAllConfig: {
+        onClick: args => null,
+        text: 'Clear all',
+      },
       size: 'm',
       disabled: false,
     },
@@ -345,10 +397,14 @@ GroupOfCheckboxDropdownColors.args = {
       checkedOptions: ['option-1'],
       labelText: 'White Dropdown',
       onChange: args => null,
-      onSelectAll: args => null,
-      onClearAll: args => null,
-      selectAllText: 'Select all',
-      clearAllText: 'Clear all',
+      selectAllConfig: {
+        onClick: args => null,
+        text: 'Select all',
+      },
+      clearAllConfig: {
+        onClick: args => null,
+        text: 'Clear all',
+      },
       size: 'm',
       disabled: false,
       color: dropdownColors.white,
@@ -362,10 +418,14 @@ GroupOfCheckboxDropdownColors.args = {
       checkedOptions: ['option-1'],
       labelText: 'Black Dropdown',
       onChange: args => null,
-      onSelectAll: args => null,
-      onClearAll: args => null,
-      selectAllText: 'Select all',
-      clearAllText: 'Clear all',
+      selectAllConfig: {
+        onClick: args => null,
+        text: 'Select all',
+      },
+      clearAllConfig: {
+        onClick: args => null,
+        text: 'Clear all',
+      },
       size: 'm',
       color: dropdownColors.black,
       disabled: false,
@@ -379,10 +439,14 @@ GroupOfCheckboxDropdownColors.args = {
       checkedOptions: ['option-1'],
       labelText: 'Gray Dropdown',
       onChange: args => null,
-      onSelectAll: args => null,
-      onClearAll: args => null,
-      selectAllText: 'Select all',
-      clearAllText: 'Clear all',
+      selectAllConfig: {
+        onClick: args => null,
+        text: 'Select all',
+      },
+      clearAllConfig: {
+        onClick: args => null,
+        text: 'Clear all',
+      },
       size: 'm',
       color: dropdownColors.gray,
       disabled: false,
@@ -402,10 +466,14 @@ GroupOfSizesOfCheckboxDropdown.args = {
       checkedOptions: ['option-1'],
       labelText: 'XS Dropdown',
       onChange: args => null,
-      onSelectAll: args => null,
-      onClearAll: args => null,
-      selectAllText: 'Select all',
-      clearAllText: 'Clear all',
+      selectAllConfig: {
+        onClick: args => null,
+        text: 'Select all',
+      },
+      clearAllConfig: {
+        onClick: args => null,
+        text: 'Clear all',
+      },
       size: 'xs',
       disabled: false,
       color: dropdownColors.black,
@@ -419,10 +487,14 @@ GroupOfSizesOfCheckboxDropdown.args = {
       checkedOptions: ['option-1'],
       labelText: 'S Dropdown',
       onChange: args => null,
-      onSelectAll: args => null,
-      onClearAll: args => null,
-      selectAllText: 'Select all',
-      clearAllText: 'Clear all',
+      selectAllConfig: {
+        onClick: args => null,
+        text: 'Select all',
+      },
+      clearAllConfig: {
+        onClick: args => null,
+        text: 'Clear all',
+      },
       size: 's',
       disabled: false,
       color: dropdownColors.black,
@@ -436,10 +508,14 @@ GroupOfSizesOfCheckboxDropdown.args = {
       checkedOptions: ['option-1'],
       labelText: 'M Dropdown',
       onChange: args => null,
-      onSelectAll: args => null,
-      onClearAll: args => null,
-      selectAllText: 'Select all',
-      clearAllText: 'Clear all',
+      selectAllConfig: {
+        onClick: args => null,
+        text: 'Select all',
+      },
+      clearAllConfig: {
+        onClick: args => null,
+        text: 'Clear all',
+      },
       size: 'm',
       disabled: false,
       color: dropdownColors.black,
@@ -453,10 +529,14 @@ GroupOfSizesOfCheckboxDropdown.args = {
       checkedOptions: ['option-1'],
       labelText: 'L Dropdown',
       onChange: args => null,
-      onSelectAll: args => null,
-      onClearAll: args => null,
-      selectAllText: 'Select all',
-      clearAllText: 'Clear all',
+      selectAllConfig: {
+        onClick: args => null,
+        text: 'Select all',
+      },
+      clearAllConfig: {
+        onClick: args => null,
+        text: 'Clear all',
+      },
       size: 'l',
       disabled: false,
       color: dropdownColors.black,
