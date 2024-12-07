@@ -16,6 +16,8 @@ export const ChatEventDescriptions = {
 } as const;
 
 export interface ChatEvent {
+  // Populated from the db when fetching chat events from the backend
+  id?: number;
   // UTC timestamp in milliseconds
   timestamp: number;
   // This field is optional but when it is defined, it must be set to `true`.
@@ -24,11 +26,23 @@ export interface ChatEvent {
   descriptionKey?: keyof typeof ChatEventDescriptions;
 }
 
+// teacher_feedback: [undefined, CLEAN_DISAGREE, PROFANITY_AGREE, PROFANITY_DISAGREE]
+// undefined: They took no action on the message (or they undid their action)
+// CLEAN_DISAGREE: They toggled the flag on on one of the clean messages
+// PROFANITY_AGREE: They thumbs upped a message that was flagged as profanity
+// PROFANITY_DISAGREE: They thumbs downed a message that was flagged as profanity
+export enum TeacherFeedback {
+  CLEAN_DISAGREE = 'clean_disagree', // Flagged a clean message as inappropriate
+  PROFANITY_AGREE = 'profanity_agree', // Thumbs-upped profane message
+  PROFANITY_DISAGREE = 'profanity_disagree', // Thumbs-downed profane message
+}
+
 export interface ChatMessage extends ChatEvent {
   chatMessageText: string;
   role: Role;
   status: ValueOf<typeof AiInteractionStatus>;
   requestId?: number;
+  teacherFeedback?: TeacherFeedback;
 }
 
 export interface ModelUpdate extends ChatEvent {
@@ -63,7 +77,7 @@ export interface ChatCompletionApiResponse {
   flagged_content?: string;
 }
 
-export interface LogChatEventApiResponse {
+export interface ChatEventApiResponse {
   chat_event_id: number;
   chat_event: ChatMessage;
 }

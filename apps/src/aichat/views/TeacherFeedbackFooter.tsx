@@ -3,24 +3,49 @@ import React, {useState} from 'react';
 
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+
+import {submitTeacherFeedback} from '../redux/aichatRedux';
+import {ChatMessage, TeacherFeedback} from '../types';
 
 import moduleStyles from './teacher-feedback-footer.module.scss';
 
 interface Props {
   isProfanityViolation: boolean;
+  chatMessage: ChatMessage;
 }
 
-const TeacherFeedbackFooter: React.FC<Props> = ({isProfanityViolation}) => {
-  const [thumbsUp, setThumbsUp] = useState(false);
-  const [thumbsDown, setThumbsDown] = useState(false);
+const TeacherFeedbackFooter: React.FC<Props> = ({
+  isProfanityViolation,
+  chatMessage,
+}) => {
+  const dispatch = useAppDispatch();
+  const [thumbsUp, setThumbsUp] = useState(
+    chatMessage.teacherFeedback === TeacherFeedback.PROFANITY_AGREE
+  );
+  const [thumbsDown, setThumbsDown] = useState(
+    chatMessage.teacherFeedback === TeacherFeedback.PROFANITY_DISAGREE
+  );
   const handleThumbClick = (thumbsUp: boolean, thumbsDown: boolean) => {
     setThumbsUp(thumbsUp);
     setThumbsDown(thumbsDown);
+    const teacherFeedback = thumbsUp
+      ? TeacherFeedback.PROFANITY_AGREE
+      : thumbsDown
+      ? TeacherFeedback.PROFANITY_DISAGREE
+      : undefined;
+    console.log('sending feedback', {...chatMessage, teacherFeedback});
+    dispatch(submitTeacherFeedback({...chatMessage, teacherFeedback}));
   };
 
-  const [flaggedAsInappropriate, setFlaggedAsInappropriate] = useState(false);
+  const [flaggedAsInappropriate, setFlaggedAsInappropriate] = useState(
+    chatMessage.teacherFeedback === TeacherFeedback.CLEAN_DISAGREE
+  );
   const handleFlagClick = (toggle: boolean) => {
     setFlaggedAsInappropriate(toggle);
+    const teacherFeedback = toggle ? TeacherFeedback.CLEAN_DISAGREE : undefined;
+    console.log('sending feedback', {...chatMessage, teacherFeedback});
+    dispatch(submitTeacherFeedback({...chatMessage, teacherFeedback}));
   };
 
   return (

@@ -36,6 +36,8 @@ class AichatController < ApplicationController
     begin
       request = AichatRequest.create!(
         user_id: current_user.id,
+        # need to remove all these to_jsons and unstringify the values in the DB
+        # if we do that, we need to handle both cases (stringified and not) when reading
         model_customizations: params[:aichatModelCustomizations].to_json,
         stored_messages: messages_for_model.to_json,
         new_message: params[:newMessage].to_json,
@@ -103,7 +105,8 @@ class AichatController < ApplicationController
         script_id: context[:scriptId],
         project_id: project_id,
         request_id: event[:requestId], # Only present if ChatEvent is a ChatMessage, otherwise nil
-        aichat_event: event.to_json
+        # to_json  returns the stringified value of the hash, which we don't want.
+        aichat_event: event
       )
     rescue StandardError => exception
       return render status: :bad_request, json: {error: exception.message}
@@ -115,6 +118,39 @@ class AichatController < ApplicationController
     }
 
     render(status: :ok, json: response_body)
+  end
+
+  # params are eventId: number, feedback?: TeacherFeedback
+  # POST /aichat/submit_teacher_feedback
+  # Update a given chat message with teacher feedback. If feedback is nil, remove any existing feedback.
+  # Also has the side effect of fixing up any chat events that were stored as strings.
+  def submit_teacher_feedback
+    begin
+      params.require([:eventId])
+    rescue ActionController::ParameterMissing
+      return render status: :bad_request, json: {}
+    end
+
+    chat_event_id = params[:eventId]
+    feedback = params[:feedback]
+
+    begin
+      chat_event = AichatEvent.find(chat_event_id)
+      # Parse aichat_event if it's stored as a string
+      chat_event.aichat_event = JSON.parse(chat_event.aichat_event) if chat_event.aichat_event.is_a?(String)
+    rescue ActiveRecord::RecordNotFound
+      return render status: :not_found, json: {}
+    end
+
+    # todo: make sure the user has permission to submit feedback?
+    # Unless that's taken care of in ability?
+    # But I'm not sure if I have to pass aichatContext?
+
+    chat_event.aichat_event.delete('teacherFeedback') if chat_event.aichat_event['teacherFeedback']
+    chat_event.aichat_event['teacherFeedback'] = feedback if feedback
+    chat_event.save!
+
+    render status: :ok, json: {}
   end
 
   # params are studentUserId: number, levelId: number, scriptId: number, (optional) scriptLevelId: number
@@ -149,8 +185,11 @@ class AichatController < ApplicationController
       return render(status: :forbidden, json: {error: "Access denied for student chat history."})
     end
 
-    aichat_events = AichatEvent.where(user_id: student_user_id, level_id: level_id, script_id: script_id).order(:created_at).pluck(:aichat_event).map do |event|
-      JSON.parse(event)
+    aichat_events = AichatEvent.where(user_id: student_user_id, level_id: level_id, script_id: script_id).order(:created_at).map do |event|
+      {
+        chat_event_id: event.id,
+        chat_event: event[:aichat_event].is_a?(String) ? JSON.parse(event[:aichat_event]) : event[:aichat_event]
+      }
     end
     render json: aichat_events
   end

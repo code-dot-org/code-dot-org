@@ -1,8 +1,6 @@
 import classNames from 'classnames';
-import React, {useMemo, useState} from 'react';
+import React from 'react';
 
-import TeacherFeedbackFooter from '@cdo/apps/aichat/views/TeacherFeedbackFooter';
-import Button from '@cdo/apps/componentLibrary/button/Button';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
@@ -21,7 +19,6 @@ interface ChatMessageProps {
   chatMessageText: string;
   role: Role;
   status: string;
-  isChatHistoryView?: boolean;
   customStyles?: {[label: string]: string};
   children?: React.ReactNode;
   isTA?: boolean;
@@ -31,47 +28,16 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   chatMessageText,
   role,
   status,
-  isChatHistoryView,
   customStyles,
   children,
   isTA,
 }) => {
-  const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
-
   const hasDangerStyle =
     status === Status.PROFANITY_VIOLATION ||
     status === Status.USER_INPUT_TOO_LARGE ||
     (role === Role.ASSISTANT && status === Status.ERROR);
 
   const hasWarningStyle = status === Status.PII_VIOLATION;
-
-  const getDisplayText: string = useMemo(() => {
-    switch (status) {
-      case Status.OK:
-      case Status.UNKNOWN:
-        return chatMessageText;
-      case Status.PROFANITY_VIOLATION:
-        if (role === Role.ASSISTANT) {
-          return commonI18n.aiChatInappropriateModelMessage();
-        }
-
-        return role === Role.USER && showProfaneUserMessage
-          ? chatMessageText
-          : commonI18n.aiChatInappropriateUserMessage();
-      case Status.PII_VIOLATION:
-        return commonI18n.aiChatTooPersonalUserMessage();
-      case Status.USER_INPUT_TOO_LARGE:
-        return role === Role.ASSISTANT
-          ? commonI18n.aiChatUserInputTooLargeMessage()
-          : chatMessageText;
-      case Status.ERROR:
-        return role === Role.ASSISTANT
-          ? commonI18n.aiChatResponseError()
-          : chatMessageText;
-      default:
-        return '';
-    }
-  }, [chatMessageText, role, status, showProfaneUserMessage]);
 
   return (
     <>
@@ -111,7 +77,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                   : commonI18n.aiChatMessageUser()
               }
             >
-              <SafeMarkdown markdown={getDisplayText} />
+              <SafeMarkdown markdown={chatMessageText} />
             </div>
           </div>
           <div className={moduleStyles.childContainer}>
@@ -122,7 +88,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                 but getDisplayText is also used above on ln 115 so that would need to be
                 pulled out into a helper... 
                 
-                For now, let's leave it so we can get the rest of the handlers implemented. */}
+                For now, let's leave it so we can get the rest of the handlers implemented.
             {isChatHistoryView &&
               getDisplayText === chatMessageText &&
               status !== Status.PROFANITY_VIOLATION && (
@@ -149,7 +115,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                     />
                   </div>
                 </>
-              )}
+              )} */}
           </div>
         </div>
       </div>

@@ -15,7 +15,8 @@ import {
   ChatEvent,
   ChatMessage,
   DetectToxicityResponse,
-  LogChatEventApiResponse,
+  ChatEventApiResponse,
+  TeacherFeedback,
 } from './types';
 import {extractFieldsToCheckForToxicity} from './utils';
 
@@ -28,6 +29,7 @@ const paths = {
   STUDENT_CHAT_HISTORY_URL: `${ROOT_URL}/student_chat_history`,
   USER_HAS_AICHAT_ACCESS_URL: `${ROOT_URL}/user_has_access`,
   FIND_TOXICITY_URL: `${ROOT_URL}/find_toxicity`,
+  SUBMIT_TEACHER_FEEDBACK_URL: `${ROOT_URL}/submit_teacher_feedback`,
 };
 
 const MAX_POLLING_TIME_MS = 45000;
@@ -67,6 +69,26 @@ export async function postAichatCompletionMessage(
   );
 }
 
+export async function postSubmitTeacherFeedback(
+  eventId: number,
+  feedback: TeacherFeedback
+): Promise<ChatEventApiResponse> {
+  const payload = {
+    eventId,
+    feedback,
+  };
+  const response = await HttpClient.post(
+    `${paths.SUBMIT_TEACHER_FEEDBACK_URL}`,
+    JSON.stringify(payload),
+    true,
+    {
+      'Content-Type': 'application/json; charset=UTF-8',
+    }
+  );
+
+  return await response.json();
+}
+
 /**
  * This function sends a POST request to the aichat log event backend controller, then returns
  * the status of the response and logged event if successful.
@@ -74,7 +96,7 @@ export async function postAichatCompletionMessage(
 export async function postLogChatEvent(
   newChatEvent: ChatEvent,
   aichatContext: AichatContext
-): Promise<LogChatEventApiResponse> {
+): Promise<ChatEventApiResponse> {
   const payload = {
     newChatEvent,
     aichatContext,
@@ -109,10 +131,15 @@ export async function getStudentChatHistory(
   if (scriptLevelId) {
     params.scriptLevelId = scriptLevelId.toString();
   }
-  const response = await HttpClient.fetchJson<ChatEvent[]>(
+  const response = await HttpClient.fetchJson<ChatEventApiResponse[]>(
     paths.STUDENT_CHAT_HISTORY_URL + '?' + new URLSearchParams(params)
   );
-  return response.value;
+
+  // Write the id from the ChatEventApiResponse into each ChatEvent and return ChatEvent[]
+  return response.value.map<ChatEvent>(chatEventApiResponse => ({
+    ...chatEventApiResponse.chat_event,
+    id: chatEventApiResponse.chat_event_id,
+  }));
 }
 
 /**

@@ -26,6 +26,7 @@ import {
   detectToxicityInCustomizations,
   getStudentChatHistory,
   postAichatCompletionMessage,
+  postSubmitTeacherFeedback,
 } from '../aichatApi';
 import ChatEventLogger from '../chatEventLogger';
 import {ModalTypes, saveTypeToAnalyticsEvent} from '../constants';
@@ -45,6 +46,7 @@ import {
   isChatMessage,
   FlaggedField,
   DetectToxicityResponse,
+  ChatCompletionApiResponse,
 } from '../types';
 import {extractFieldsToCheckForToxicity} from '../utils';
 import {
@@ -402,6 +404,38 @@ export const addChatEvent =
     }
   };
 
+// This thunk's callback function submits teacher feedback on a chat message.
+export const submitTeacherFeedback = createAsyncThunk(
+  'aichat/submitTeacherFeedback',
+  async (chatMessage: ChatMessage, thunkAPI) => {
+    try {
+      console.log('chatMessage.id!: ', chatMessage.id!);
+      console.log(
+        'chatMessage.teacherFeedback!: ',
+        chatMessage.teacherFeedback!
+      );
+      await postSubmitTeacherFeedback(
+        chatMessage.id!,
+        chatMessage.teacherFeedback!
+      );
+      // const dispatch = thunkAPI.dispatch as AppDispatch;
+      // dispatch(
+      //   sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_SUCCESS, {
+      //     levelPath: window.location.pathname,
+      //     userMessage: newUserMessageText,
+      //   })
+      // );
+    } catch (error) {
+      // await handleChatCompletionError(error as Error, newUserMessage, dispatch);
+      console.log('Error submitting teacher feedback:', error);
+      console.log('Chat message:', chatMessage);
+      return;
+    }
+    // todo: handle errors from submitTeacherFeedback?
+    // todo: log analytics?
+  }
+);
+
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
 // the user messages.
@@ -430,7 +464,7 @@ export const submitChatContents = createAsyncThunk(
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
 
-    let chatApiResponse;
+    let chatApiResponse: ChatCompletionApiResponse;
     try {
       Lab2Registry.getInstance()
         .getMetricsReporter()

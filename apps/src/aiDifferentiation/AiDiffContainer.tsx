@@ -245,6 +245,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
                   key={id}
                 />
               ) : (
+                // this is probably broken now if AiTutor was using the getDisplayText to modify their text.
                 <ChatMessage
                   {...item}
                   customStyles={style}
