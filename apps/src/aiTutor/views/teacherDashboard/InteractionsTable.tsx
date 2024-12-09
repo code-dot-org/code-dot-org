@@ -261,12 +261,15 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
           labelText="Filter by Status"
           name="filter-statuses"
           onChange={handleStatusFilterChange}
-          onClearAll={() => setSelectedStatuses([])}
-          onSelectAll={() =>
-            setSelectedStatuses(Object.values(AITutorInteractionStatus))
-          }
-          selectAllText={i18n.selectAll()}
-          clearAllText={i18n.clearAll()}
+          selectAllConfig={{
+            onClick: () =>
+              setSelectedStatuses(Object.values(AITutorInteractionStatus)),
+            text: i18n.selectAll(),
+          }}
+          clearAllConfig={{
+            onClick: () => setSelectedStatuses([]),
+            text: i18n.clearAll(),
+          }}
           size="s"
         />
         <CheckboxDropdown
@@ -277,12 +280,17 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
           labelText="Filter by Student"
           name="filter-students"
           onChange={handleStudentFilterChange}
-          onClearAll={() => setSelectedUserIds([])}
-          onSelectAll={() =>
-            setSelectedUserIds(studentFilterOptions.map(option => option.value))
-          }
-          selectAllText={i18n.selectAll()}
-          clearAllText={i18n.clearAll()}
+          selectAllConfig={{
+            onClick: () =>
+              setSelectedUserIds(
+                studentFilterOptions.map(option => option.value)
+              ),
+            text: i18n.selectAll(),
+          }}
+          clearAllConfig={{
+            onClick: () => setSelectedUserIds([]),
+            text: i18n.clearAll(),
+          }}
           size="s"
         />
         <SimpleDropdown
