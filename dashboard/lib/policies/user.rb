@@ -1,5 +1,5 @@
 class Policies::User
-  ALLOWED_EDUCATOR_TYPES = Set[
+  ALLOWED_EDUCATOR_ROLES = Set[
     "teacher".freeze,
     "school_admin".freeze,
     "district_admin".freeze,

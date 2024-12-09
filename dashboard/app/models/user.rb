@@ -168,7 +168,7 @@ class User < ApplicationRecord
     has_seen_ai_assessments_announcement
     seen_ta_scores_map
     roster_synced
-    educator_type
+    educator_role
   )
 
   attr_accessor(
