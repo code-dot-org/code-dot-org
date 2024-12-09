@@ -24,6 +24,7 @@
 #  funding_type        :string(255)
 #  properties          :text(65535)
 #  module              :string(255)
+#  name                :string(255)
 #
 # Indexes
 #

@@ -1,0 +1,46 @@
+{
+  "name": "@code-dot-org/marketing",
+  "version": "0.1.0",
+  "private": true,
+  "keywords": [
+    "code.org"
+  ],
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/apps/marketing/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/apps/marketing"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev --turbopack",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "start": "next start"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "dependencies": {
+    "next": "^15.0.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^15.0.3",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^9.16.0",
+    "eslint-plugin-jest": "^28.9.0",
+    "prettier": "3.3.3",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

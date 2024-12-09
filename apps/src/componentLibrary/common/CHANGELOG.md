@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.1](https://github.com/code-dot-org/code-dot-org/pull/62743)
+
+- updated comments for `colors.css` and `primitiveColors.css` DSCO Variables colors
+
 ## [0.5.0](https://github.com/code-dot-org/code-dot-org/pull/62334)
 
 - created `hooks` folder

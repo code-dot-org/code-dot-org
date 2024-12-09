@@ -1498,11 +1498,11 @@
     "/blockly-mooc/codebridge.json": "d968ecba468576e603f6ddf870935ef6"
   },
   "ro-RO": {
-    "/blockly-mooc/aichat.json": "02f7c76accb031278fc163cd87586538",
+    "/blockly-mooc/aichat.json": "c122db27a499edd7f4066cd29ba33372",
     "/blockly-mooc/ailab.json": "60a7a88b9b41a7f456bbe77e378ea5c6",
     "/blockly-mooc/applab.json": "94d45d11e3831b82a0a72a71c9322eaf",
     "/blockly-mooc/bounce.json": "7f5593fefdb2b835134a67e8ce2fb199",
-    "/blockly-mooc/common.json": "2f29f94a734a7eaab45957c0faadfa6c",
+    "/blockly-mooc/common.json": "bde981541119de665ded95289eed1ca3",
     "/blockly-mooc/craft.json": "7f5593fefdb2b835134a67e8ce2fb199",
     "/blockly-mooc/dance.json": "7f5593fefdb2b835134a67e8ce2fb199",
     "/blockly-mooc/fish.json": "60a7a88b9b41a7f456bbe77e378ea5c6",
@@ -1512,7 +1512,7 @@
     "/blockly-mooc/jigsaw.json": "7f5593fefdb2b835134a67e8ce2fb199",
     "/blockly-mooc/lab2.json": "97715c012e6f1e5c0709b53b1293bb30",
     "/blockly-mooc/maze.json": "7f5593fefdb2b835134a67e8ce2fb199",
-    "/blockly-mooc/music.json": "fe21d42c10a6d23021c6128a01ec033d",
+    "/blockly-mooc/music.json": "dfa8a5e1a9f189ba8ee52122a50e88ef",
     "/blockly-mooc/poetry.json": "6c8a757d6d00d1b217b457e03fac19a3",
     "/blockly-mooc/spritelab.json": "60a7a88b9b41a7f456bbe77e378ea5c6",
     "/blockly-mooc/standaloneVideo.json": "fe21d42c10a6d23021c6128a01ec033d",
