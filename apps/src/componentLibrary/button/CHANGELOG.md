@@ -2,42 +2,49 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.6.0](https://github.com/code-dot-org/code-dot-org/pull/62852)
+
+- rewritten `_BaseButtonTest` in typescript
+- refactored/optimized `_BaseButtonTest.tsx`
+- removed `ButtonTest.jsx` as it turned out to be a set of duplicating tests
+- minor docs update
+
 ## [0.5.1](https://github.com/code-dot-org/code-dot-org/pull/62829)
 
-* updated color variables to use primitiveColors.css
+- updated color variables to use primitiveColors.css
 
 ## [0.5.0](https://github.com/code-dot-org/code-dot-org/pull/59966)
 
-* added `destructive` button color option
+- added `destructive` button color option
 
 ## [0.4.1](https://github.com/code-dot-org/code-dot-org/pull/59610)
 
-* updated BaseButton props to support native HTML element attributes
+- updated BaseButton props to support native HTML element attributes
 
 ## [0.4.0](https://github.com/code-dot-org/code-dot-org/pull/58636)
 
-* added background fill color to secondary black and white buttons
-* added ```gray``` secondary button
-* deprecated ```purple``` secondary button
+- added background fill color to secondary black and white buttons
+- added `gray` secondary button
+- deprecated `purple` secondary button
 
 ## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/58469)
 
-* added support of all `aria-` attributes by `Button` components
+- added support of all `aria-` attributes by `Button` components
 
 ## [0.2.1](https://github.com/code-dot-org/code-dot-org/pull/57764)
 
-* updated link button styles to prevent overrides by application.scss
-* added a transparent border to all buttons, so they are the same height
-* added a subtle hover transition animation
+- updated link button styles to prevent overrides by application.scss
+- added a transparent border to all buttons, so they are the same height
+- added a subtle hover transition animation
 
 ## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/56925)
 
-* implemented component
-* added tests
-* added storybook
-* component is now ```Ready for Dev```
+- implemented component
+- added tests
+- added storybook
+- component is now `Ready for Dev`
 
 ## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/54285)
 
-* created component's skeleton
-* Initial commit
+- created component's skeleton
+- Initial commit
