@@ -261,14 +261,12 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
           labelText="Filter by Status"
           name="filter-statuses"
           onChange={handleStatusFilterChange}
-          selectAllConfig={{
-            onClick: () =>
+          selectAndClearAllConfig={{
+            onSelectAll: () =>
               setSelectedStatuses(Object.values(AITutorInteractionStatus)),
-            text: i18n.selectAll(),
-          }}
-          clearAllConfig={{
-            onClick: () => setSelectedStatuses([]),
-            text: i18n.clearAll(),
+            onClearAll: () => setSelectedStatuses([]),
+            selectAllText: i18n.selectAll(),
+            clearAllText: i18n.clearAll(),
           }}
           size="s"
         />
@@ -280,16 +278,14 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
           labelText="Filter by Student"
           name="filter-students"
           onChange={handleStudentFilterChange}
-          selectAllConfig={{
-            onClick: () =>
+          selectAndClearAllConfig={{
+            onSelectAll: () =>
               setSelectedUserIds(
                 studentFilterOptions.map(option => option.value)
               ),
-            text: i18n.selectAll(),
-          }}
-          clearAllConfig={{
-            onClick: () => setSelectedUserIds([]),
-            text: i18n.clearAll(),
+            onClearAll: () => setSelectedUserIds([]),
+            selectAllText: i18n.selectAll(),
+            clearAllText: i18n.clearAll(),
           }}
           size="s"
         />
