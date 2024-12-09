@@ -168,7 +168,7 @@ As we add APIs for our platform, we will publish them using REST. Client-side ap
 
   * KISS: REST has been a simple and an effective match to our needs.  
   * Our labs and other fat client-side JS apps don’t tend to have the “complex aggregation of dynamic data from many sources” property that benefits from more complex systems like GraphQL.  
-  * Memoization is easily applied to REST-based calls (good for hosting cost and at-scale events like hour of code).
+  * REST APIs inherently support HTTP caching mechanisms (e.g., ETag, Last-Modified, Cache-Control), enabling better performance and reducing load on the server.
 
 </details>
 
