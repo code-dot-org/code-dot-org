@@ -539,7 +539,7 @@ class UnitGroup < ApplicationRecord
   # @param user [User]
   # @return [Boolean] Whether the user has progress in this course.
   def has_progress?(user)
-    return nil unless user
+    return false unless user
     user_unit_ids = user.user_scripts.pluck(:script_id)
     default_unit_group_units.any? {|ugu| user_unit_ids.include?(ugu.script_id)}
   end
@@ -547,7 +547,7 @@ class UnitGroup < ApplicationRecord
   # @param user [User]
   # @return [Boolean] Whether the user has progress on another version of this course.
   def has_older_version_progress?(user)
-    return nil unless user && family_name && version_year
+    return false unless user && family_name && version_year
     user_unit_ids = user.user_scripts.pluck(:script_id)
 
     UnitGroup.all_courses.any? do |course|
@@ -560,7 +560,7 @@ class UnitGroup < ApplicationRecord
 
   # returns whether a unit in this course has version_warning_dismissed.
   def has_dismissed_version_warning?(user)
-    return nil unless user
+    return false unless user
     unit_ids = default_units.pluck(:id)
     user.
       user_scripts.

@@ -1049,8 +1049,8 @@ class Unit < ApplicationRecord
   # @param user [User]
   # @return [Boolean] Whether the user has progress on another version of this unit.
   def has_older_version_progress?(user)
-    return nil unless user && family_name && version_year
-    return nil unless has_other_versions?
+    return false unless user && family_name && version_year
+    return false unless has_other_versions?
 
     user_unit_ids = user.user_scripts.pluck(:script_id)
 

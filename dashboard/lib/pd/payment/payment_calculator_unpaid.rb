@@ -5,7 +5,7 @@ module Pd::Payment
     # @param total_teacher_attendance_days [Integer] total number of teacher days attended.
     # @return [Boolean] whether or not the workshop is qualified for payment.
     protected def qualified?(total_teacher_attendance_days)
-      nil
+      false
     end
   end
 end

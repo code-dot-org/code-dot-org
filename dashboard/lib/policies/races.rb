@@ -39,9 +39,9 @@ class Policies::Races
   def self.any_urm?(races)
     races = normalize(races)
 
-    return nil unless races
-    return nil if races.empty?
-    return nil if (races & ['opt_out', 'nonsense', 'closed_dialog']).any?
+    return false unless races
+    return false if races.empty?
+    return false if (races & ['opt_out', 'nonsense', 'closed_dialog']).any?
     return true if (races & ['black', 'hispanic', 'hawaiian', 'american_indian']).any?
 
     false
