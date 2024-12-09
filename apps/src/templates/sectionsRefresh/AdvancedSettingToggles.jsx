@@ -12,8 +12,6 @@ import style from './sections-refresh.module.scss';
 export default function AdvancedSettingToggles({
   updateSection,
   section,
-  hasLessonExtras,
-  hasTextToSpeech,
   // aiTutorAvailable refers to whether the selected assignment has AI Tutor available,
   // i.e. have we trained AI to answer questions about that specific course or unit.
   aiTutorAvailable,
@@ -80,7 +78,7 @@ export default function AdvancedSettingToggles({
           content={i18n.explainRestrictedSectionEmailToolTip()}
         />
       </div>
-      {hasTextToSpeech && (
+      {section.course?.textToSpeechEnabled && (
         <div className={style.toolTipContainer}>
           <Toggle
             id={'uitest-tts-toggle'}
@@ -94,7 +92,7 @@ export default function AdvancedSettingToggles({
           />
         </div>
       )}
-      {hasLessonExtras && (
+      {section.course?.lessonExtrasAvailable && (
         <div className={style.toolTipContainer}>
           <Toggle
             id={'uitest-lesson-extras-toggle'}
@@ -129,7 +127,5 @@ export default function AdvancedSettingToggles({
 AdvancedSettingToggles.propTypes = {
   section: PropTypes.object.isRequired,
   updateSection: PropTypes.func.isRequired,
-  hasLessonExtras: PropTypes.bool,
-  hasTextToSpeech: PropTypes.bool,
   aiTutorAvailable: PropTypes.bool,
 };

@@ -50,8 +50,8 @@ type Course = {
   courseOfferingId: number | null;
   versionId: number | null;
   unitId: number | null;
-  hasLessonExtras: boolean;
-  hasTextToSpeech: boolean;
+  lessonExtrasAvailable: boolean;
+  textToSpeechEnabled: boolean;
 };
 
 export interface UserEditableSection {

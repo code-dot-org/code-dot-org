@@ -218,8 +218,8 @@ export default function CurriculumQuickAssign({
         courseOfferingId: course.id,
         versionId: courseVersionId,
         unitId: isStandaloneUnit ? null : sectionCourse.unitId,
-        hasLessonExtras: targetUnit?.lesson_extras_available,
-        hasTextToSpeech: targetUnit?.text_to_speech_enabled,
+        lessonExtrasAvailable: targetUnit?.lesson_extras_available,
+        textToSpeechEnabled: targetUnit?.text_to_speech_enabled,
       };
 
       updateCourse(updateSectionData);

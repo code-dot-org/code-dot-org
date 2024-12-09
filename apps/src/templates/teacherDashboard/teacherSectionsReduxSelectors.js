@@ -169,8 +169,8 @@ export const sectionFromServerSection = serverSection => ({
         courseOfferingId: serverSection.course.course_offering_id,
         versionId: serverSection.course.version_id,
         unitId: serverSection.course.unit_id,
-        hasLessonExtras: serverSection.course.lesson_extras_available,
-        hasTextToSpeech: serverSection.course.text_to_speech_enabled,
+        lessonExtrasAvailable: serverSection.course.lesson_extras_available,
+        textToSpeechEnabled: serverSection.course.text_to_speech_enabled,
       }
     : null,
   unitId: serverSection.unit_id,
