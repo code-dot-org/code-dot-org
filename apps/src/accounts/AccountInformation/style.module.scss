@@ -1,5 +1,8 @@
 @import '@cdo/apps/componentLibrary/common/styles/mixins';
 @import '@cdo/apps/componentLibrary/typography/typography.module';
+// TODO - Remove this import once the typography.module is updated to include
+// primitive colors in https://github.com/code-dot-org/code-dot-org/pull/62863
+@import '@cdo/apps/componentLibrary/common/styles/primitiveColors.css';
 
 .accountForm {
   label {
@@ -9,7 +12,7 @@
 
     &.verifiedTeacher {
       font-weight: bold;
-      color: $light_affirmative_500;
+      color: var(--sentiment-success-50);
       margin: 0;
     }
   }
