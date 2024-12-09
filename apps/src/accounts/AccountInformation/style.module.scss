@@ -9,7 +9,7 @@
 
     &.verifiedTeacher {
       font-weight: bold;
-      color: var(--sentiment-success-50);
+      color: $light_affirmative_500;
       margin: 0;
     }
   }
