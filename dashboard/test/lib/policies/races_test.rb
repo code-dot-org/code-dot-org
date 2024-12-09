@@ -2,16 +2,16 @@ require 'test_helper'
 
 class Policies::RacesTest < ActiveSupport::TestCase
   test 'any_urm? with nil' do
-    assert_nil Policies::Races.any_urm?(nil)
+    refute Policies::Races.any_urm?(nil)
   end
 
   test 'any_urm? with empty string' do
-    assert_nil Policies::Races.any_urm?('')
+    refute Policies::Races.any_urm?('')
   end
 
   test 'any_urm? with non-answer responses' do
     %w(opt_out nonsense closed_dialog).each do |response|
-      assert_nil Policies::Races.any_urm?(response)
+      refute Policies::Races.any_urm?(response)
     end
   end
 
