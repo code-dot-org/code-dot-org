@@ -11,7 +11,7 @@ export default {
 } as Meta;
 
 type argsWithOptionalSelectAllAndClearAll = {
-  args: Partial<CheckboxDropdownProps>;
+  props: Omit<CheckboxDropdownProps, 'selectAllAndClearAllConfig'>;
   includeSelectAllAndClearAll?: boolean;
 };
 
@@ -56,7 +56,7 @@ const SingleTemplate: StoryFn<argsWithOptionalSelectAllAndClearAll> = ({
         | React.MouseEvent<HTMLAnchorElement>
     ) => {
       setValues([]);
-      props.clearAllConfig?.onClick(e);
+      props.selectAndClearAllConfig?.onClearAll(e);
     },
     [props]
   );
@@ -132,7 +132,7 @@ const MultipleTemplate: StoryFn<{
                 option => option.value
               ),
             });
-            componentArg.selectAllConfig?.onClick(e);
+            componentArg.selectAndClearAllConfig?.onSelectAll(e);
           };
 
           const onClearAll = (
@@ -141,7 +141,7 @@ const MultipleTemplate: StoryFn<{
               | React.MouseEvent<HTMLAnchorElement>
           ) => {
             setValues({...values, [componentArg.name]: []});
-            componentArg.clearAllConfig?.onClick(e);
+            componentArg.selectAndClearAllConfig?.onClearAll(e);
           };
 
           return (
