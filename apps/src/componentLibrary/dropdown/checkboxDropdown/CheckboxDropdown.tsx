@@ -45,22 +45,19 @@ export interface CheckboxDropdownProps
   /** CheckboxDropdown onChange handler */
   onChange: (args: React.ChangeEvent<HTMLInputElement>) => void;
   /** Click handler and translated button text for the "Select All" button */
-  selectAllConfig?: {
-    onClick: (
+  selectAndClearAllConfig?: {
+    onSelectAll: (
       event:
         | React.MouseEvent<HTMLButtonElement>
         | React.MouseEvent<HTMLAnchorElement>
     ) => void;
-    text: string;
-  };
-  /** Click handler and translated button text for the "Clear All" button */
-  clearAllConfig?: {
-    onClick: (
+    onClearAll: (
       event:
         | React.MouseEvent<HTMLButtonElement>
         | React.MouseEvent<HTMLAnchorElement>
     ) => void;
-    text: string;
+    selectAllText: string;
+    clearAllText: string;
   };
 }
 
@@ -72,8 +69,7 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   allOptions,
   checkedOptions = [],
   onChange,
-  selectAllConfig,
-  clearAllConfig,
+  selectAndClearAllConfig,
   disabled = false,
   readOnly = false,
   color = dropdownColors.black,
@@ -84,6 +80,9 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   styleAsFormField = false,
   ...rest
 }) => {
+  const {onSelectAll, onClearAll, selectAllText, clearAllText} =
+    selectAndClearAllConfig || {};
+
   return (
     <CustomDropdown
       name={name}
@@ -120,26 +119,22 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
             </li>
           ))}
         </ul>
-        {(selectAllConfig || clearAllConfig) && (
+        {selectAndClearAllConfig && (
           <div className={moduleStyles.bottomButtonsContainer}>
-            {selectAllConfig && (
-              <Button
-                type="tertiary"
-                color={buttonColors.purple}
-                text={selectAllConfig.text}
-                onClick={selectAllConfig.onClick}
-                size={size}
-              />
-            )}
-            {clearAllConfig && (
-              <Button
-                type="tertiary"
-                color={buttonColors.purple}
-                text={clearAllConfig.text}
-                onClick={clearAllConfig.onClick}
-                size={size}
-              />
-            )}
+            <Button
+              type="tertiary"
+              color={buttonColors.purple}
+              text={selectAllText}
+              onClick={onSelectAll}
+              size={size}
+            />
+            <Button
+              type="tertiary"
+              color={buttonColors.purple}
+              text={clearAllText}
+              onClick={onClearAll}
+              size={size}
+            />
           </div>
         )}
       </div>
