@@ -30,18 +30,12 @@ const Chip: React.FunctionComponent<ChipProps> = ({
   value,
   checked,
   required,
+  requiredMessageText,
   textThickness,
   disabled,
   onCheckedChange,
-  requiredMessageText,
   ...HTMLAttributes
 }) => {
-  if (required && !requiredMessageText) {
-    console.warn(
-      'For required Chips, an error message is needed to display when no Chip is selected.'
-    );
-  }
-
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {

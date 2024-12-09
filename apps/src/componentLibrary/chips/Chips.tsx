@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import uniq from 'lodash/uniq';
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 
@@ -15,6 +15,8 @@ export interface ChipsProps {
   name: string;
   /** Chips required state */
   required?: boolean;
+  /** Error to display if selection required and none made */
+  requiredMessageText?: string;
   /** Chips disabled state */
   disabled?: boolean;
   /** Chips text type (thickness) */
@@ -31,8 +33,6 @@ export interface ChipsProps {
   size?: ComponentSizeXSToL;
   /** Custom className */
   className?: string;
-  /** Error to display if selection required and none made */
-  requiredMessageText?: string;
 }
 
 /**
@@ -52,6 +52,7 @@ const Chips: React.FunctionComponent<ChipsProps> = ({
   label,
   name,
   required,
+  requiredMessageText,
   disabled,
   options,
   values,
@@ -60,13 +61,20 @@ const Chips: React.FunctionComponent<ChipsProps> = ({
   color = 'black',
   size = 'm',
   className,
-  requiredMessageText,
 }) => {
   // NOTE: The `name` will show up in the DOM with an appended `[]`, so Rails
   // natively understands it as an array. Set `required` to `true` if you want
   // the user to have to select at least one of the options to proceed.
   // You probably want `values` to start out as an empty array.
   const inputName = `${name}[]`;
+
+  useEffect(() => {
+    if (required && !requiredMessageText) {
+      console.warn(
+        'For usages of the Chips component where the "required" prop is set to true, a localized error message to display when no option is selected is needed.'
+      );
+    }
+  }, [required, requiredMessageText]);
 
   return (
     <div
