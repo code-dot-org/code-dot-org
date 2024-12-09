@@ -4,6 +4,7 @@ Feature: App Lab Level Options
 Scenario: Table data in level definition appears in data browser
   Given I am on "http://studio.code.org/s/allthethings/lessons/18/levels/16"
   And I wait for the lab page to fully load
+  And I wait for 1 second
   And I press "dataModeButton"
   And I wait until element "#data-library-container" is visible
   And I wait until element "a:contains(table_name2)" is visible
