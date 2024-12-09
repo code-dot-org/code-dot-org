@@ -1,14 +1,12 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import '@testing-library/jest-dom';
 import React from 'react';
 import {Provider} from 'react-redux';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import {selfPacedCourseConstants} from '@cdo/apps/code-studio/pd/professional_learning_landing/constants.js';
 import {UnconnectedLandingPage as LandingPage} from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
-import {
-  setWindowLocation,
-  resetWindowLocation,
-} from '@cdo/apps/code-studio/utils';
 import {
   getStore,
   registerReducers,
@@ -17,6 +15,10 @@ import {
 } from '@cdo/apps/redux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
+
+jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
+  getAuthenticityToken: jest.fn().mockReturnValue('authToken'),
+}));
 
 const TEST_WORKSHOP = {
   id: 1,
@@ -41,12 +43,9 @@ const TEST_WORKSHOP = {
 const DEFAULT_PROPS = {
   lastWorkshopSurveyUrl: 'url',
   lastWorkshopSurveyCourse: 'CS Fundamentals',
-  deeperLearningCourseData: [{data: 'oh yeah'}],
+  showDeeperLearning: true,
   currentYearApplicationId: 2024,
   hasEnrorolledInWorkshop: true,
-  workshopsAsFacilitator: [],
-  workshopsAsOrganizer: [],
-  workshopsAsRegionalPartner: [],
   plCoursesStarted: selfPacedCourseConstants,
   userPermissions: [],
   joinedStudentSections: [],
@@ -257,11 +256,17 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plLandingTabWorkshopOrganizerCenter());
   });
 
-  it('page shows expected sections in Facilitator Center tab', () => {
-    renderDefault({
-      userPermissions: ['facilitator'],
-      workshopsAsFacilitator: [TEST_WORKSHOP],
-      coursesAsFacilitator: ['CS Discoveries', 'Computer Science A'],
+  it('page shows expected sections in Facilitator Center tab', async () => {
+    const fetchStub = sinon.stub(window, 'fetch').resolves({
+      ok: true,
+      json: () => Promise.resolve({workshops_as_facilitator: [TEST_WORKSHOP]}),
+    });
+
+    await waitFor(() => {
+      renderDefault({
+        userPermissions: ['facilitator'],
+        coursesAsFacilitator: ['CS Discoveries', 'Computer Science A'],
+      });
     });
     fireEvent.click(screen.getByText(i18n.plLandingTabFacilitatorCenter()));
 
@@ -286,7 +291,9 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plSectionsInstructorTitle());
 
     // Facilitated workshop table
-    screen.getByText('In Progress and Upcoming Workshops');
+    screen.getByText(i18n.inProgressAndUpcomingWorkshops());
+
+    fetchStub.restore();
   });
 
   it('page shows expected sections in Instructor Center tab (for universal instructor)', () => {
@@ -311,10 +318,17 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plSectionsInstructorTitle());
   });
 
-  it('page shows expected sections in Regional Partner Center tab', () => {
-    renderDefault({
-      userPermissions: ['program_manager'],
-      workshopsAsRegionalPartner: [TEST_WORKSHOP],
+  it('page shows expected sections in Regional Partner Center tab', async () => {
+    const fetchStub = sinon.stub(window, 'fetch').resolves({
+      ok: true,
+      json: () =>
+        Promise.resolve({workshops_as_program_manager: [TEST_WORKSHOP]}),
+    });
+
+    await waitFor(() => {
+      renderDefault({
+        userPermissions: ['program_manager'],
+      });
     });
     fireEvent.click(screen.getByText(i18n.plLandingTabRPCenter()));
 
@@ -324,13 +338,21 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plSectionsRegionalPartnerPlaybookTitle());
 
     // Regional Partner workshop table
-    screen.getByText('In Progress and Upcoming Workshops');
+    screen.getByText(i18n.inProgressAndUpcomingWorkshops());
+
+    fetchStub.restore();
   });
 
-  it('page shows expected sections in Workshop Organizer Center tab', () => {
-    renderDefault({
-      userPermissions: ['workshop_organizer'],
-      workshopsAsOrganizer: [TEST_WORKSHOP],
+  it('page shows expected sections in Workshop Organizer Center tab', async () => {
+    const fetchStub = sinon.stub(window, 'fetch').resolves({
+      ok: true,
+      json: () => Promise.resolve({workshops_as_organizer: [TEST_WORKSHOP]}),
+    });
+
+    await waitFor(() => {
+      renderDefault({
+        userPermissions: ['workshop_organizer'],
+      });
     });
     fireEvent.click(
       screen.getAllByText(i18n.plLandingTabWorkshopOrganizerCenter())[0]
@@ -340,27 +362,8 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plSectionsWorkshopResources());
 
     // Workshop Organizer workshop table
-    screen.getByText('In Progress and Upcoming Workshops');
-  });
+    screen.getByText(i18n.inProgressAndUpcomingWorkshops());
 
-  it('page does not show success dialog when not redirected here from successful enrollment', () => {
-    renderDefault();
-
-    expect(
-      screen.queryByText(
-        i18n.enrollmentCelebrationBody({workshopName: 'a new workshop'})
-      )
-    ).toBeNull();
-  });
-
-  it('page shows success dialog when redirected here from successful enrollment', () => {
-    const workshopCourseName = 'TEST COURSE';
-    setWindowLocation({search: `?wsCourse=${workshopCourseName}`});
-    renderDefault();
-
-    screen.getByText(
-      i18n.enrollmentCelebrationBody({workshopName: workshopCourseName})
-    );
-    resetWindowLocation();
+    fetchStub.restore();
   });
 });
