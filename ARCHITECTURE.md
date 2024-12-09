@@ -22,7 +22,7 @@ Examples:
 | **“I  can implement features/refactors that require changes across the codebase: even in areas I didn’t know about before (even if nobody knows about them anymore)”** | “I have to work inside the monorepo even if it’d be so much faster to deliver this quarter’s feature goals by spinning out my own repo without the overhead” |
 | **“After mastering a few key technologies I can work in almost any part of the codebase”** | “Even if hotnewframework is the very best option in 2120, it might be best if I use existingokframework from 2115 because we already use it widely and it gets the job done just fine.” |
 
-Historical violations of almost all tenets exist, and are de facto grandfathered in. However, these should not be interpreted as an invitation to follow suit. A strong majority of historical code already adheres to all the tenets, which is part of why they were picked in the first place.
+Historical violations of almost all tenets exist, and are not a priority to fix. However, these should not be interpreted as an invitation to follow suit. A strong majority of historical code already adheres to all the tenets, which is part of why they were picked in the first place.
 
 ---
 
