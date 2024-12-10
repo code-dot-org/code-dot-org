@@ -115,7 +115,7 @@ class ReportAbuseController < ApplicationController
     # and signed in users to report.
     restrict_reporting_to_verified_users = DCDO.get('restrict-abuse-reporting-to-verified', true)
     amount =
-      if current_user&.verified_teacher?
+      if current_user&.verified_teacher? || current_user&.project_validator?
         20
       elsif current_user && !restrict_reporting_to_verified_users
         10
