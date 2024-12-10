@@ -179,6 +179,7 @@ function LandingPage({
               method: 'GET',
               headers: {
                 'Content-Type': 'application/json',
+                'X-CSRF-Token': await getAuthenticityToken(),
               },
             }
           );
@@ -204,6 +205,7 @@ function LandingPage({
               method: 'GET',
               headers: {
                 'Content-Type': 'application/json',
+                'X-CSRF-Token': await getAuthenticityToken(),
               },
             }
           );

@@ -20,7 +20,7 @@ import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSection
 import i18n from '@cdo/locale';
 
 jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
-  getAuthenticityToken: jest.fn().mockReturnValue('authToken'),
+  getAuthenticityToken: jest.fn().mockResolvedValue('authToken'),
 }));
 
 const TEST_WORKSHOP = {
@@ -263,7 +263,7 @@ describe('LandingPage', () => {
     const fetchStub = jest
       .spyOn(window, 'fetch')
       .mockClear()
-      .mockReturnValue({
+      .mockResolvedValue({
         ok: true,
         json: () =>
           Promise.resolve({workshops_as_facilitator: [TEST_WORKSHOP]}),
@@ -329,7 +329,7 @@ describe('LandingPage', () => {
     const fetchStub = jest
       .spyOn(window, 'fetch')
       .mockClear()
-      .mockReturnValue({
+      .mockResolvedValue({
         ok: true,
         json: () =>
           Promise.resolve({workshops_as_program_manager: [TEST_WORKSHOP]}),
@@ -357,7 +357,7 @@ describe('LandingPage', () => {
     const fetchStub = jest
       .spyOn(window, 'fetch')
       .mockClear()
-      .mockReturnValue({
+      .mockResolvedValue({
         ok: true,
         json: () => Promise.resolve({workshops_as_organizer: [TEST_WORKSHOP]}),
       });
