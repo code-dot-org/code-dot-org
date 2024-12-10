@@ -168,12 +168,12 @@ pages:
   - path: /teacher_dashboard
     components:
       DownloadParentLetterButton: false
-      ClassroomSetUpStep3: false
+      ManageStudentsLoginInfo:
+        providePrivacyLetter: false
       SectionProgressSelector:
         showProgressTableV2: true
       ProgressV1OrV2ToggleLink: false
       ProgressFeedbackBanner: false
-      ParentLetterAndStudentPrivacyInfo: false
   # Home dashboards
   - path: /home
     components:

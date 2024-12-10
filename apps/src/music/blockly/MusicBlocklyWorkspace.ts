@@ -573,9 +573,34 @@ export default class MusicBlocklyWorkspace {
     if (this.blockMode) {
       const existingToolbox = getToolbox(this.blockMode, this.toolbox);
       existingToolbox.contents = existingToolbox.contents.concat(blockList);
-      (this.workspace as GoogleBlockly.WorkspaceSvg).updateToolbox(
-        existingToolbox
-      );
+      const workspace = this.workspace as GoogleBlockly.WorkspaceSvg;
+      workspace.updateToolbox(existingToolbox);
+
+      if (workspace.RTL) {
+        // When the flyout is dynamically populated, the flyout width can increase,
+        // thereby overlapping start blocks in RTL. If this happens, we move the
+        // blocks back to the left
+        // Relates to https://github.com/google/blockly/issues/8637
+        const flyout = workspace.getFlyout();
+        const metricsManager = workspace.getMetricsManager();
+        const flyoutWidth = flyout?.getWidth() || 0;
+
+        if (flyoutWidth) {
+          const {left: contentLeft, width: contentWidth} =
+            metricsManager.getContentMetrics();
+          const viewWidth = metricsManager.getViewMetrics().width;
+
+          const contentRight = contentLeft + contentWidth;
+          const expectedMargin = 20; // Add space between right-most block and flyout
+          const overlapAmount = contentRight - viewWidth + expectedMargin;
+
+          if (overlapAmount > 0) {
+            workspace
+              .getTopBlocks()
+              .forEach(block => block.moveBy(-overlapAmount, 0));
+          }
+        }
+      }
     }
   }
 

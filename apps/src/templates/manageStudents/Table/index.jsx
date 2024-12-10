@@ -997,13 +997,18 @@ class ManageStudentsTable extends Component {
           </Table.Provider>
         </div>
 
-        <ManageStudentsLoginInfo
-          sectionId={sectionId}
-          sectionName={sectionName}
-          studentData={studentData}
-          loginType={loginType}
-          sectionCode={this.props.sectionCode}
-          studioUrlPrefix={this.props.studioUrlPrefix}
+        <GlobalEditionWrapper
+          component={ManageStudentsLoginInfo}
+          componentId="ManageStudentsLoginInfo"
+          props={{
+            sectionId: sectionId,
+            sectionName: sectionName,
+            studentData: studentData,
+            loginType: loginType,
+            sectionCode: this.props.sectionCode,
+            studioUrlPrefix: this.props.studioUrlPrefix,
+            providePrivacyLetter: true,
+          }}
         />
       </div>
     );

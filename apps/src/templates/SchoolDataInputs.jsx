@@ -38,6 +38,7 @@ export default function SchoolDataInputs({
   setSchoolZip,
   usIp,
   includeHeaders = true,
+  markFieldsAsRequired = false,
   fieldNames = {
     country: 'user[school_info_attributes][country]',
     ncesSchoolId: 'user[school_info_attributes][school_id]',
@@ -88,8 +89,12 @@ export default function SchoolDataInputs({
 
   const labelClassName = schoolZipIsValid ? '' : style.disabledLabel;
 
+  const computedStyleClass = classNames(style.schoolAssociationWrapper, {
+    [style.requiredLabel]: markFieldsAsRequired,
+  });
+
   return (
-    <div className={style.schoolAssociationWrapper}>
+    <div className={computedStyleClass}>
       {includeHeaders && (
         <div className={style.headerContainer}>
           <Heading2>{i18n.censusHeading()}</Heading2>
@@ -205,6 +210,7 @@ export default function SchoolDataInputs({
 
 SchoolDataInputs.propTypes = {
   includeHeaders: PropTypes.bool,
+  markFieldsAsRequired: PropTypes.bool,
   fieldNames: PropTypes.object,
   schoolId: PropTypes.string.isRequired,
   country: PropTypes.string.isRequired,
