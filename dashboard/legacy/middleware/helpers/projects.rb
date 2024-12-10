@@ -262,9 +262,9 @@ class Projects
 
     increment_amount =
       if JSON.parse(row[:value])['frozen'] && !current_user&.project_validator
-        amount
-      else
         0
+      else
+        amount
       end
 
     new_score = row[:abuse_score] + increment_amount
