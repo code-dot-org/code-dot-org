@@ -20,6 +20,8 @@ class SectionsController < ApplicationController
       return
     end
 
+    puts 'lfm'
+
     @section = existing_section.attributes
 
     @section['course'] = {

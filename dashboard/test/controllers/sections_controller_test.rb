@@ -217,15 +217,21 @@ class SectionsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'redirect to teacher_dashboard from edit if DCDO enabled' do
+  test 'edit has successful response' do
     sign_in @teacher
 
-    section = create(:section, user: @teacher, login_type: 'word')
+    get :edit, params: {id: @word_section.id}
+    assert_response :success
+  end
 
+  test 'redirect to teacher_dashboard from edit if DCDO enabled' do
+    sign_in @teacher
     DCDO.set('teacher_local_nav_v2', true)
 
-    get :edit, params: {id: section.id}
-    assert_redirected_to "/teacher_dashboard/sections/#{section.id}/settings"
+    get :edit, params: {id: @word_section.id}
+    assert_redirected_to "/teacher_dashboard/sections/#{@word_section.id}/settings"
+
+    DCDO.set('teacher_local_nav_v2', nil)
   end
 
   test 'returns forbidden if requested edit section does not belong to teacher' do
