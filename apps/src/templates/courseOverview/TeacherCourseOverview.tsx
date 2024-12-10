@@ -81,7 +81,7 @@ interface CourseSummary {
 }
 
 interface Response {
-  unit_group: CourseSummary;
+  course_summary: CourseSummary;
   is_verified_instructor: boolean;
   hidden_scripts: string[];
   show_version_warning: boolean;
@@ -155,8 +155,7 @@ const TeacherCourseOverview: React.FC = () => {
     courseSummaryCachedLoader(selectedSection.courseVersionName)
       .then(response => {
         if (response) {
-          console.log(response);
-          setCourseSummary(response.unit_group as CourseSummary);
+          setCourseSummary(response.course_summary as CourseSummary);
           setIsVerifiedInstructor(response.is_verified_instructor);
           setHiddenScripts(response.hidden_scripts as string[]);
           setShowVersionWarning(response.show_version_warning);
@@ -231,11 +230,6 @@ const TeacherCourseOverview: React.FC = () => {
   if (!courseSummary) {
     return <Spinner />;
   }
-
-  console.log('lfm 1', {
-    redirect: searchParams.get('redirect_warning'),
-    r: searchParams.get('redirect_warning') === 'true',
-  });
 
   return (
     <CourseOverview
