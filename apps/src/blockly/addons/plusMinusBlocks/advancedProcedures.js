@@ -669,12 +669,13 @@ GoogleBlockly.Extensions.register('procedure_vars', procedureVars);
 function argumentReporterValidator(newValue) {
   const sourceArgBlock = this.getSourceBlock();
   const rootBlock = sourceArgBlock.getRootBlock();
+  const {x, y} = sourceArgBlock.getRelativeToSurfaceXY();
 
   // Prevent fields from being edited if the block is not within a function definiton.
   if (
-    // Ignore unrendered blocks, ie. blocks that are newly created.
-    sourceArgBlock.rendered &&
-    !Blockly.cdoUtils.isFunctionBlock(sourceArgBlock.getRootBlock())
+    !Blockly.cdoUtils.isFunctionBlock(sourceArgBlock.getRootBlock()) &&
+    // Ignore new blocks, ie. those that do not yet have a position.
+    (x || y)
   ) {
     return null;
   }
