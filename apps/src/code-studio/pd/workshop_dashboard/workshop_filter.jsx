@@ -296,6 +296,11 @@ export class WorkshopFilter extends React.Component {
     )}`;
   }
 
+  getDefaultOrderBy() {
+    const workshopState = this.getFiltersFromUrlParams().state;
+    return workshopState === 'Not Started' ? 'date asc' : 'date desc';
+  }
+
   // Updates the URL with the new query params so it can be shared.
   // This will trigger React-Router to pass new props and re-render with the new filters.
   updateLocationAndSetFilters(newFilters) {
@@ -531,6 +536,7 @@ export class WorkshopFilter extends React.Component {
             showStatus
             showOrganizer={this.props.permission.has(WorkshopAdmin)}
             generateCaptionFromWorkshops={this.generateCaptionFromWorkshops}
+            initialOrderBy={this.getDefaultOrderBy()}
           />
         </Row>
       </Grid>

@@ -21,7 +21,6 @@ import SubmissionsDownloadForm from './reports/foorm/submissions_download_form';
 
 const FILTER_API_URL = '/api/v1/pd/workshops/filter';
 const defaultFilters = {
-  date_order: 'desc',
   limit: 5,
 };
 const filterParams = {
@@ -149,6 +148,7 @@ export class WorkshopIndex extends React.Component {
           showSignupUrl
           showOrganizer={showOrganizer}
           moreUrl={this.generateFilterUrl('Not Started')}
+          initialOrderBy="date asc"
         />
         <h2>Past</h2>
         <ServerSortWorkshopTable

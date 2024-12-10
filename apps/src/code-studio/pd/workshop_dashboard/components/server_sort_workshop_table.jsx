@@ -22,11 +22,12 @@ export default class ServerSortWorkshopTable extends React.Component {
     showOrganizer: PropTypes.bool,
     generateCaptionFromWorkshops: PropTypes.func,
     moreUrl: PropTypes.string,
+    initialOrderBy: PropTypes.oneOf(['date desc', 'date asc']),
   };
 
   constructor(props) {
     super(props);
-    this.state = {orderBy: 'date desc'};
+    this.state = {orderBy: props.initialOrderBy || 'date desc'};
   }
 
   handleWorkshopsReceived = workshops => {
