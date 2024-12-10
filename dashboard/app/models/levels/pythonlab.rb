@@ -111,6 +111,16 @@ class Pythonlab < Level
     end
   end
 
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil)
+    level_properties = super
+    level_properties[:serializedMaze] = get_serialized_maze
+    level_properties
+  end
+
+  def get_serialized_maze
+    serialized_maze || project_template_level&.try(:serialized_maze)
+  end
+
   # Copied from javalab.rb
   def parse_maze
     return if serialized_maze.blank? && project_template_level&.try(:serialized_maze).present?
