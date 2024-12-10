@@ -37,3 +37,13 @@ When creating a new component for the design system, setup the following structu
 4. Add `ExampleButton` exports in `package.json` under the `exports` field.
 5. Create `ExampleButton.test.tsx` in the `__tests__` directory and implement jest unit tests.
 6. Create `ExampleButton.story.tsx` using [Storybook Component Story Format](https://storybook.js.org/docs/api/csf) in the `stories` directory.
+
+## Docker
+
+This package uses [Turborepo pruning](https://turbo.build/repo/docs/guides/tools/docker) to produce a minimial docker image that uses standalone nextjs.
+
+To build a docker image, run this command in the `frontend` directory:
+
+```bash
+docker build -f apps/marketing/Dockerfile .
+```
