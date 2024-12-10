@@ -17,6 +17,19 @@
   "license": "SEE LICENSE IN LICENSE",
   "sideEffects": false,
   "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    "./stub-section": {
+      "types": "./dist/stub-section/index.d.ts",
+      "import": "./dist/stub-section/index.js",
+      "require": "./dist/stub-section/index.cjs"
+    },
+    "./stub": {
+      "types": "./dist/stub/index.d.ts",
+      "import": "./dist/stub/index.js",
+      "require": "./dist/stub/index.cjs"
+    }
+  },
   "main": "components/index.ts",
   "files": [
     "dist"
@@ -43,6 +56,7 @@
   "devDependencies": {
     "@code-dot-org/legacy-css": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
+    "@contentful/experiences-sdk-react": "^1.24.0",
     "@eslint/js": "^9.15.0",
     "@swc/core": "^1.9.3",
     "@swc/jest": "^0.2.37",

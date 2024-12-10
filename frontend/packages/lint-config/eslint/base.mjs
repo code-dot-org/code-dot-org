@@ -10,6 +10,7 @@ export default [
   {
     rules: {
       'import-x/no-cycle': 'error',
+      'import-x/no-unresolved': 'off', // https://codedotorg.atlassian.net/browse/ACQ-2875
     },
   },
 ];

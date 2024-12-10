@@ -17,6 +17,7 @@
   ],
   "scripts": {
     "build": "turbo build",
+    "clean": "turbo clean",
     "dev": "turbo dev",
     "format": "prettier --check *",
     "format:fix": "prettier --write .",

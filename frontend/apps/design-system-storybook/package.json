@@ -5,10 +5,12 @@
     "code.org"
   ],
   "scripts": {
+    "clean": "rimraf storybook-static",
     "dev": "yarn run storybook",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test-storybook": "test-storybook",
+    "test:ui:ci": "bash ./scripts/test-storybook.sh",
+    "test:ui:local": "test-storybook --url http://localhost:6006",
     "eyes-storybook": "dotenv-run -- eyes-storybook",
     "typecheck": "tsc --noEmit"
   },
@@ -28,9 +30,12 @@
     "@storybook/test": "^8.4.4",
     "@storybook/test-runner": "^0.19.1",
     "axe-playwright": "^2.0.3",
+    "concurrently": "^9.1.0",
+    "http-server": "^14.1.1",
     "sass-loader": "^16.0.3",
     "storybook": "^8.4.4",
-    "storybook-addon-rtl": "^1.0.1"
+    "storybook-addon-rtl": "^1.0.1",
+    "wait-on": "^8.0.1"
   },
   "private": true,
   "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/apps/design-system-storybook/#readme",

@@ -171,7 +171,7 @@ class ManageStudentsLoginInfo extends Component {
         )}
         {loginType === SectionLoginType.email && (
           <div>
-            <p>{renderStep(i18n.setUpClassEmailIntro())}</p>
+            <p>{i18n.setUpClassEmailIntro()}</p>
             <SafeMarkdown
               markdown={renderStep(
                 i18n.setUpClassEmail1({
