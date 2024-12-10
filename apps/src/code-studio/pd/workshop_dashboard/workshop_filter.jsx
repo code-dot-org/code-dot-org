@@ -36,7 +36,7 @@ import {
 import RegionalPartnerDropdown, {
   RegionalPartnerPropType,
 } from '../components/regional_partner_dropdown';
-import {SelectStyleProps} from '../constants';
+import {SelectStyleProps, DATE_ORDER_ASC, DATE_ORDER_DESC} from '../constants';
 
 import DatePicker from './components/date_picker';
 import ServerSortWorkshopTable from './components/server_sort_workshop_table';
@@ -298,7 +298,7 @@ export class WorkshopFilter extends React.Component {
 
   getDefaultOrderBy() {
     const workshopState = this.getFiltersFromUrlParams().state;
-    return workshopState === 'Not Started' ? 'date asc' : 'date desc';
+    return workshopState === 'Not Started' ? DATE_ORDER_ASC : DATE_ORDER_DESC;
   }
 
   // Updates the URL with the new query params so it can be shared.

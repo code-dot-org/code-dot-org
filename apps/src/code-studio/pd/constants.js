@@ -21,3 +21,6 @@ export const PrivacyDialogMode = utils.makeEnum(
   'TEACHER_APPLICATION',
   'PRINCIPAL_APPROVAL'
 );
+
+export const DATE_ORDER_ASC = 'date asc';
+export const DATE_ORDER_DESC = 'date desc';
