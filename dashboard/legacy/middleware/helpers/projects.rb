@@ -259,7 +259,8 @@ class Projects
 
     row = @table.where(id: project_id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
-
+    # If the project is frozen then it is an active featured project or a curriculum exemplar.
+    # Do not update the abuse score of a frozen project unless the current_user is a project validator.
     increment_amount =
       if JSON.parse(row[:value])['frozen'] && !current_user&.project_validator
         0
