@@ -100,7 +100,7 @@ function LandingPage({
   hiddenPlSectionIds,
 }) {
   const availableTabs = getAvailableTabs(userPermissions);
-  // The success message will state what workshop the user just enrolled in:
+  // The success message will state the title of the workshop the user just enrolled in:
   // - In the case of Build Your Own workshops, it will state the workshop's name.
   // - In the case of any other type of workshop, it will state the workshop's course.
   const [enrollSuccessWorkshopTitle, setEnrollSuccessWorkshopTitle] =

@@ -11,7 +11,7 @@ import style from '@cdo/apps/code-studio/pd/professional_learning_landing/landin
 const CelebrationImage = require('@cdo/static/pd/EnrollmentCelebration.png');
 
 export default function WorkshopEnrollmentCelebrationDialog({
-  workshopName = 'a new workshop',
+  workshopName,
   onClose,
 }) {
   const [isOpen, setIsOpen] = useState(true);

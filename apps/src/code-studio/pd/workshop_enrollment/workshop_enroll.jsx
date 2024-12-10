@@ -132,11 +132,14 @@ export default class WorkshopEnroll extends React.Component {
     // on that page since event logs immediately followed by redirects sometimes do not fire.
     sessionStorage.setItem(
       'rpName',
-      this.props.workshop.regional_partner?.name
+      this.props.workshop.regional_partner?.name || ''
     );
     sessionStorage.setItem('workshopCourse', this.props.workshop.course);
-    sessionStorage.setItem('workshopSubject', this.props.workshop.subject);
-    sessionStorage.setItem('workshopName', this.props.workshop.name);
+    sessionStorage.setItem(
+      'workshopSubject',
+      this.props.workshop.subject || ''
+    );
+    sessionStorage.setItem('workshopName', this.props.workshop.name || '');
 
     navigateToHref('/my-professional-learning');
   }
