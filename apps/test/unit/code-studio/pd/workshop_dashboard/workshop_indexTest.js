@@ -65,4 +65,33 @@ describe('WorkshopIndex', () => {
       });
     });
   });
+
+  it('defaults to ordering by date descending for In Progress and Past workshops', () => {
+    const permission = new Permission([WorkshopAdmin]);
+    const workshopIndex = shallow(<WorkshopIndex permission={permission} />, {
+      context,
+    });
+
+    expect(workshopIndex.find('h2').at(0).text()).to.equal('In Progress');
+    expect(
+      workshopIndex.find('ServerSortWorkshopTable').at(0).props().initialOrderBy
+    ).to.equal('date desc');
+
+    expect(workshopIndex.find('h2').at(2).text()).to.equal('Past');
+    expect(
+      workshopIndex.find('ServerSortWorkshopTable').at(2).props().initialOrderBy
+    ).to.equal('date desc');
+  });
+
+  it('defaults to ordering by date ascending for Not Started workshops', () => {
+    const permission = new Permission([WorkshopAdmin]);
+    const workshopIndex = shallow(<WorkshopIndex permission={permission} />, {
+      context,
+    });
+
+    expect(workshopIndex.find('h2').at(1).text()).to.equal('Not Started');
+    expect(
+      workshopIndex.find('ServerSortWorkshopTable').at(1).props().initialOrderBy
+    ).to.equal('date asc');
+  });
 });
