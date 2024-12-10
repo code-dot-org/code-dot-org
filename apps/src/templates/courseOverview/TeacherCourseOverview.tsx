@@ -85,6 +85,7 @@ interface Response {
   is_verified_instructor: boolean;
   hidden_scripts: string[];
   show_version_warning: boolean;
+  redirect_to_course_url: string | null;
 }
 
 interface Announcement {
@@ -112,6 +113,8 @@ const TeacherCourseOverview: React.FC = () => {
   const [hiddenScripts, setHiddenScripts] = React.useState<string[] | null>(
     null
   );
+  const [redirectToCourseUrl, setRedirectToCourseUrl] =
+    React.useState<string>('');
   const [showVersionWarning, setShowVersionWarning] =
     React.useState<boolean>(false);
 
@@ -159,6 +162,7 @@ const TeacherCourseOverview: React.FC = () => {
           setIsVerifiedInstructor(response.is_verified_instructor);
           setHiddenScripts(response.hidden_scripts as string[]);
           setShowVersionWarning(response.show_version_warning);
+          setRedirectToCourseUrl(response.redirect_to_course_url || '');
 
           analyticsReporter.sendEvent(
             EVENTS.TEACHER_NAV_COURSE_OVERVIEW_PAGE_VIEWED,
@@ -251,7 +255,7 @@ const TeacherCourseOverview: React.FC = () => {
         Object.values(courseSummary.course_versions).length > 1
       }
       showRedirectWarning={searchParams.get('redirect_warning') === 'true'}
-      redirectToCourseUrl={''} // Only redirects students on BE from unassigned course overview
+      redirectToCourseUrl={redirectToCourseUrl}
       showAssignButton={courseSummary.show_assign_button}
       userId={userId}
       userType={UserTypes.TEACHER}
