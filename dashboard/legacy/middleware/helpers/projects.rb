@@ -260,7 +260,14 @@ class Projects
     row = @table.where(id: project_id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
-    new_score = row[:abuse_score] + (JSON.parse(row[:value])['frozen'] ? 0 : amount)
+    increment_amount =
+      if JSON.parse(row[:value])['frozen'] && !current_user&.project_validator
+        amount
+      else
+        0
+      end
+
+    new_score = row[:abuse_score] + increment_amount
 
     update_count = @table.where(id: project_id).exclude(state: 'deleted').update({abuse_score: new_score})
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
