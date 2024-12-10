@@ -1,7 +1,7 @@
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import '@testing-library/jest-dom';
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import {selfPacedCourseConstants} from '@cdo/apps/code-studio/pd/professional_learning_landing/constants.js';
@@ -18,6 +18,10 @@ import {
 } from '@cdo/apps/redux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
+
+jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
+  getAuthenticityToken: jest.fn().mockReturnValue('authToken'),
+}));
 
 const TEST_WORKSHOP = {
   id: 1,
@@ -256,10 +260,14 @@ describe('LandingPage', () => {
   });
 
   it('page shows expected sections in Facilitator Center tab', async () => {
-    const fetchStub = sinon.stub(window, 'fetch').resolves({
-      ok: true,
-      json: () => Promise.resolve({workshops_as_facilitator: [TEST_WORKSHOP]}),
-    });
+    const fetchStub = jest
+      .spyOn(window, 'fetch')
+      .mockClear()
+      .mockReturnValue({
+        ok: true,
+        json: () =>
+          Promise.resolve({workshops_as_facilitator: [TEST_WORKSHOP]}),
+      });
 
     await waitFor(() => {
       renderDefault({
@@ -292,7 +300,7 @@ describe('LandingPage', () => {
     // Facilitated workshop table
     screen.getByText(i18n.inProgressAndUpcomingWorkshops());
 
-    fetchStub.restore();
+    fetchStub.mockRestore();
   });
 
   it('page shows expected sections in Instructor Center tab (for universal instructor)', () => {
@@ -318,11 +326,14 @@ describe('LandingPage', () => {
   });
 
   it('page shows expected sections in Regional Partner Center tab', async () => {
-    const fetchStub = sinon.stub(window, 'fetch').resolves({
-      ok: true,
-      json: () =>
-        Promise.resolve({workshops_as_program_manager: [TEST_WORKSHOP]}),
-    });
+    const fetchStub = jest
+      .spyOn(window, 'fetch')
+      .mockClear()
+      .mockReturnValue({
+        ok: true,
+        json: () =>
+          Promise.resolve({workshops_as_program_manager: [TEST_WORKSHOP]}),
+      });
 
     await waitFor(() => {
       renderDefault({
@@ -339,14 +350,17 @@ describe('LandingPage', () => {
     // Regional Partner workshop table
     screen.getByText(i18n.inProgressAndUpcomingWorkshops());
 
-    fetchStub.restore();
+    fetchStub.mockRestore();
   });
 
   it('page shows expected sections in Workshop Organizer Center tab', async () => {
-    const fetchStub = sinon.stub(window, 'fetch').resolves({
-      ok: true,
-      json: () => Promise.resolve({workshops_as_organizer: [TEST_WORKSHOP]}),
-    });
+    const fetchStub = jest
+      .spyOn(window, 'fetch')
+      .mockClear()
+      .mockReturnValue({
+        ok: true,
+        json: () => Promise.resolve({workshops_as_organizer: [TEST_WORKSHOP]}),
+      });
 
     await waitFor(() => {
       renderDefault({
@@ -363,7 +377,7 @@ describe('LandingPage', () => {
     // Workshop Organizer workshop table
     screen.getByText(i18n.inProgressAndUpcomingWorkshops());
 
-    fetchStub.restore();
+    fetchStub.mockRestore();
   });
 
   it('page does not show success dialog when not redirected here from successful enrollment', () => {
