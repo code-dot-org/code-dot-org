@@ -3,6 +3,8 @@
 require 'request_store'
 require 'uri'
 require 'yaml'
+require 'cdo/git_utils' # Necessary for 'test' environment to load test.erb.yml
+require 'cdo'
 
 module Cdo
   # Lazily loads global configurations for regional pages

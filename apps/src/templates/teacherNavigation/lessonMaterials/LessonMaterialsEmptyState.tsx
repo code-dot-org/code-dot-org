@@ -18,23 +18,19 @@ import {
 import {LABELED_TEACHER_NAVIGATION_PATHS} from '../TeacherNavigationPaths';
 
 interface LessonMaterialsEmptyStateProps {
-  showNoCurriculumAssigned: boolean;
   isLegacyScript: boolean;
   hasNoLessonsWithLessonPlans: boolean;
 }
 
 export const LessonMaterialsEmptyState: React.FC<
   LessonMaterialsEmptyStateProps
-> = ({
-  showNoCurriculumAssigned,
-  isLegacyScript,
-  hasNoLessonsWithLessonPlans,
-}) => {
+> = ({isLegacyScript, hasNoLessonsWithLessonPlans}) => {
   const unitName = useSelector(
     (state: {unitSelection: {unitName: string}}) => state.unitSelection.unitName
   );
 
   const selectedSection = useAppSelector(selectedSectionSelector);
+  const showNoCurriculumAssigned = !selectedSection.courseOfferingId;
   const emptyStateDetails = generateLessonMaterialsEmptyState(
     showNoCurriculumAssigned,
     unitName,

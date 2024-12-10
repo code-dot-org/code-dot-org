@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "This level encourages you to refer to your <a href=\"https://docs.google.com/document/d/12xlUG_K0F8mx-fqJ9OHhe1o49IGNO6RLPv8yO0jDJ9o/edit?usp=sharing\" target=\"blank\" rel=\"noopener noreferrer\"> documentation </a> to help you out.\r\n\r\n# Titles & Labels\r\n\r\n::: details [**✅ Step 1**]\r\nChange the line chart's y-axis to be more descriptive. Rename it *\"Price (US$)\"* instead of *\"price\"*.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nCheck out the [documentation](https://docs.google.com/document/d/12xlUG_K0F8mx-fqJ9OHhe1o49IGNO6RLPv8yO0jDJ9o/edit) to see how to add a title *\"Average Gas Prices on 5/26/2003\"* to the bar chart.\r\n:::\r\n\r\n::: details [**🔎 Hint**]\r\n![](https://images.code.org/c61d151236440ee6881fab5b4be49d23-image-1732120049131.png)\r\n:::\r\n\r\n",
+    "long_instructions": "This level encourages you to refer to your <a href=\"https://docs.google.com/document/d/12xlUG_K0F8mx-fqJ9OHhe1o49IGNO6RLPv8yO0jDJ9o/edit?usp=sharing\" target=\"blank\" rel=\"noopener noreferrer\"> documentation </a> to help you out.\r\n\r\n# Titles & Labels\r\n\r\n::: details [**✅ Step 1**]\r\nChange the line chart's y-axis to be more descriptive. Rename it *\"Price (US$)\"* instead of *\"price\"*.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nCheck out the [documentation](https://docs.google.com/document/d/12xlUG_K0F8mx-fqJ9OHhe1o49IGNO6RLPv8yO0jDJ9o/edit) to see how to add a title *\"Average Gas Prices on 5/26/2003\"* to the bar chart.\r\n:::\r\n\r\n::: details [**🔎 Show me how**]\r\n![](https://images.code.org/c61d151236440ee6881fab5b4be49d23-image-1732120049131.png)\r\n:::\r\n\r\n",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -54,6 +54,6 @@
     },
     "project_template_level_name": "datascience-U2L4-L2-3templ_2024-pilot"
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-02T15:39:15.897+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L4-L2_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L4-L2_2024-pilot\"},{\"changed_at\":\"2024-11-20 16:23:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-20 16:27:37 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-02T15:39:15.897+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L4-L2_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L4-L2_2024-pilot\"},{\"changed_at\":\"2024-11-20 16:23:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-20 16:27:37 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-27 18:54:37 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-27 18:57:41 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Pythonlab>
