@@ -41,7 +41,7 @@ class Pythonlab < Level
   )
 
   validate :has_correct_multiple_choice_answer?
-  before_save :clean_up_predict_settings, :parse_maze
+  before_save :clean_up_predict_settings, :clean_up_mini_app_settings, :parse_maze
 
   def self.create_from_level_builder(params, level_params)
     create!(
@@ -119,6 +119,13 @@ class Pythonlab < Level
 
   def get_serialized_maze
     serialized_maze || project_template_level&.try(:serialized_maze)
+  end
+
+  def clean_up_mini_app_settings
+    if mini_app != 'neighborhood'
+      properties.delete('serialized_maze')
+      properties.delete('start_direction')
+    end
   end
 
   # Copied from javalab.rb
