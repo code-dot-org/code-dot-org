@@ -376,8 +376,7 @@ var projects = (module.exports = {
     if (!channelId) {
       return;
     }
-    const method = score === 0 ? '/delete' : '/buffer';
-    HttpClient.post(`/v3/channels/${channelId}/abuse/${method}`, '', true);
+    HttpClient.post(`/v3/channels/${channelId}/abuse/delete`, '', true);
     assets.patchAll(
       channelId,
       `abuse_score=${score}`,
