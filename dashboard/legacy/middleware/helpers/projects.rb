@@ -290,13 +290,13 @@ class Projects
     0
   end
 
-  def buffer_abuse_score(channel_id, current_user)
+  def buffer_abuse_score(channel_id)
     buffered_abuse_score = -50
     # Reset to 0 first so projects that are featured,
     # unfeatured, then re-featured don't have super low
     # abuse scores.
     reset_abuse(channel_id)
-    increment_abuse(channel_id, buffered_abuse_score, current_user&.project_validator?)
+    increment_abuse(channel_id, buffered_abuse_score)
   end
 
   def content_moderation_disabled?(channel_id)
