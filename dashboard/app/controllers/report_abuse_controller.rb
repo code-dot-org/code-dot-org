@@ -123,6 +123,7 @@ class ReportAbuseController < ApplicationController
         0
       end
     begin
+      # Project validators can update the abuse score on frozen projects while other users cannot.
       value = Projects.new(get_storage_id).increment_abuse(channel_id, amount, current_user&.project_validator?)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       raise ActionController::BadRequest.new, "Bad channel_id"
