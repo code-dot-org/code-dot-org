@@ -85,6 +85,27 @@ const getAvailableTabs = permissions => {
   return tabs;
 };
 
+const getEnrollSucessWorkshopTitle = () => {
+  // If sent here from successfully enrolling in a workshop, log WORKSHOP_ENROLLMENT_COMPLETED_EVENT.
+  const workshopCourse = sessionStorage.getItem('workshopCourse', null);
+  if (!workshopCourse) {
+    return '';
+  } else {
+    const workshopName = sessionStorage.getItem('workshopName', null);
+
+    analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
+      'regional partner': sessionStorage.getItem('rpName', null),
+      'workshop course': workshopCourse,
+      'workshop subject': sessionStorage.getItem('workshopSubject', null),
+    });
+    ['workshopCourse', 'workshopSubject', 'workshopName', 'rpName'].forEach(
+      sessionKey => sessionStorage.removeItem(sessionKey)
+    );
+
+    return workshopName ? workshopName : workshopCourse;
+  }
+};
+
 function LandingPage({
   lastWorkshopSurveyUrl,
   lastWorkshopSurveyCourse,
@@ -103,8 +124,9 @@ function LandingPage({
   // The success message will state the title of the workshop the user just enrolled in:
   // - In the case of Build Your Own workshops, it will state the workshop's name.
   // - In the case of any other type of workshop, it will state the workshop's course.
-  const [enrollSuccessWorkshopTitle, setEnrollSuccessWorkshopTitle] =
-    useState('');
+  const [enrollSuccessWorkshopTitle, setEnrollSuccessWorkshopTitle] = useState(
+    getEnrollSucessWorkshopTitle()
+  );
   const [currentTab, setCurrentTab] = useState(availableTabs[0].value);
   const [workshopsAsFacilitator, setWorkshopsAsFacilitator] = useState([]);
   const [workshopsAsOrganizer, setWorkshopsAsOrganizer] = useState([]);
@@ -119,30 +141,11 @@ function LandingPage({
   const joinedPlSectionsStyling =
     joinedPlSections?.length > 0 ? '' : style.joinedPlSectionsWithNoSections;
 
-  // Load PL section into redux, get enrollment confirmation info if sent from the enroll form,
-  // and fetch applicable workshop info.
+  // Load PL section into redux and fetch applicable workshop info
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(asyncLoadSectionData());
     dispatch(asyncLoadCoteacherInvite());
-
-    const workshopCourse = sessionStorage.getItem('workshopCourse', null);
-    if (workshopCourse) {
-      const workshopName = sessionStorage.getItem('workshopName', null);
-      setEnrollSuccessWorkshopTitle(
-        workshopName ? workshopName : workshopCourse
-      );
-
-      analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
-        'regional partner': sessionStorage.getItem('rpName', null),
-        'workshop course': workshopCourse,
-        'workshop subject': sessionStorage.getItem('workshopSubject', null),
-      });
-
-      ['workshopCourse', 'workshopSubject', 'workshopName', 'rpName'].forEach(
-        sessionKey => sessionStorage.removeItem(sessionKey)
-      );
-    }
 
     if (userPermissions.includes('facilitator')) {
       const fetchFacilitatorData = async () => {
