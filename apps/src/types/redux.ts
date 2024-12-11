@@ -60,6 +60,33 @@ export interface RootState {
   teacherSections: TeacherSectionState;
 }
 
+// Temporary type definition for the result of
+// manageStudentsRedux.js:convertStudentServerData
+interface Student {
+  id: number;
+  name: string;
+  familyName?: string;
+  username: string;
+  email?: string;
+  age?: string;
+  gender?: string;
+  genderTeacherInput?: string;
+  secretWords: string;
+  secretPicturePath: string;
+  loginType: string;
+  sectionId?: number;
+  sharingDisabled: boolean;
+  hasEverSignedIn: boolean;
+  dependsOnThisSectionForLogin: boolean;
+  isEditing: boolean;
+  isSaving: boolean;
+  rowType: string;
+  userType: string;
+  atRiskAgeGatedDate?: Date;
+  childAccountComplianceState?: string;
+  latestPermissionRequestSentAt?: Date;
+  usState?: string;
+}
 interface ManageStudentsState {
-  studentData: object[];
+  studentData: Student[];
 }
