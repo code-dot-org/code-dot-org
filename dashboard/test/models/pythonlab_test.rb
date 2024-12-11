@@ -42,4 +42,30 @@ class PythonlabTest < ActiveSupport::TestCase
     neighborhood_level = Pythonlab.create(neighborhood_data)
     assert_equal template_level.get_serialized_maze, neighborhood_level.get_serialized_maze
   end
+
+  test 'Remove neighborhood settings for non-neighborhood levels' do
+    level_data = {game_id: 72, level_num: "custom", name: "sample_level"}
+    level_data[:properties] = {
+      serialized_maze: "[[{\"tileType\": 0, \"assetId\": 13, \"value\": 0}],[{\"tileType\":1,\"value\":0}]]",
+      start_direction: 1,
+    }
+    level = Pythonlab.create(level_data)
+    assert_nil(level.serialized_maze)
+    assert_nil(level.start_direction)
+  end
+
+  test 'Keeps neighborhood settings for neighborhood levels' do
+    level_data = {game_id: 72, level_num: "custom", name: "sample_level"}
+    serialized_maze = "[[{\"tileType\": 0, \"assetId\": 13, \"value\": 0}],[{\"tileType\":1,\"value\":0}]]"
+    start_direction = 1
+    level_data[:properties] = {
+      mini_app: "neighborhood",
+      serialized_maze: serialized_maze,
+      start_direction: start_direction,
+    }
+    parsed_maze = JSON.parse(serialized_maze)
+    level = Pythonlab.create(level_data)
+    assert_equal(parsed_maze, level.serialized_maze)
+    assert_equal(start_direction, level.start_direction)
+  end
 end
