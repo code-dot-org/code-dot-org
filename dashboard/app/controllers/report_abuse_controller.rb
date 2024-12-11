@@ -109,9 +109,8 @@ class ReportAbuseController < ApplicationController
     # from students so we increase the abuse score enough to block the project
     # with only one report from a verified teacher.
     #
-    # Temporarily ignore anonymous reports and only allow verified teachers
-    # and signed in users to report.
-    restrict_reporting_to_verified_users = DCDO.get('restrict-abuse-reporting-to-verified', true)
+    # If DCDO flag is set to true, only allow verified teacher users to report abuse.
+    restrict_reporting_to_verified_users = DCDO.get('restrict-abuse-reporting-to-verified', false)
     amount =
       if current_user&.verified_teacher?
         20
