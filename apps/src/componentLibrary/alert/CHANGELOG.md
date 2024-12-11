@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 - rewritten `AlertTest` in typescript
 - refactored/optimized `AlertTest.tsx`
-- minor formatting update
+- minor Changelog formatting update
 
 ## [0.2.1](https://github.com/code-dot-org/code-dot-org/pull/62725)
 
