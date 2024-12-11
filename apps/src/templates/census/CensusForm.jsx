@@ -279,14 +279,19 @@ const CensusForm = ({
         'topic_ethical_social'
       ),
       topic_other: state.selectedTopics.includes('topic_other'),
-      topic_other_description: state.selectedTopics.includes(
-        'topic_other_description'
-      ),
+      topic_other_description: state.otherTopicsDesc || undefined,
       topic_do_not_know: state.selectedTopics.includes('topic_do_not_know'),
       class_frequency: submission.followUpFrequency,
-      tell_us_more: submission.followUpMore,
+      tell_us_more: submission.followUpMore || undefined,
       pledged: submission.acceptedPledge,
       share_with_regional_partners: submission.share,
+      country_s: submission.country,
+      nces_school_s: schoolDropdownOption?.value,
+      school_type_s: submission.schoolType,
+      school_state_s: submission.schoolState,
+      school_zip_s: submission.schoolZip,
+      school_name_s: submission.schoolName,
+      opt_in: submission.optIn,
     };
     const queryString = new URLSearchParams(formData).toString();
     const response = await fetch(
