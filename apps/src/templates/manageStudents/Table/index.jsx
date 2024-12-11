@@ -54,6 +54,7 @@ import {
   sortableOptions,
 } from '@cdo/apps/templates/tables/tableConstants';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
+import {updateNeedsReloadFunction} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   selectedSectionSelector,
   syncEnabled,
@@ -143,6 +144,7 @@ class ManageStudentsTable extends Component {
     transferStatus: PropTypes.object,
     setSortByFamilyName: PropTypes.func,
     syncEnabled: PropTypes.bool,
+    updateNeedsReloadFunction: PropTypes.func,
   };
 
   constructor(props) {
@@ -400,6 +402,7 @@ class ManageStudentsTable extends Component {
 
   handleSaveAllClick() {
     this.props.saveAllStudents();
+    this.props.updateNeedsReloadFunction();
 
     analyticsReporter.sendEvent(
       EVENTS.SECTION_STUDENTS_TABLE_SAVE_ALL_CLICKED,
@@ -1172,5 +1175,6 @@ export default connect(
         setSortByFamilyName(isSortedByFamilyName, sectionId, unitName, source)
       );
     },
+    updateNeedsReloadFunction: () => dispatch(updateNeedsReloadFunction()),
   })
 )(ManageStudentsTable);

@@ -108,6 +108,7 @@ export interface TeacherSectionState {
   initialLoginType?: keyof typeof SectionLoginType;
   coteacherInvite?: SectionInstructor;
   coteacherInviteForPl?: SectionInstructor;
+  needsReload?: boolean;
 }
 
 /** @const {null} null used to indicate no section selected */
@@ -157,6 +158,8 @@ const initialState: TeacherSectionState = {
   ltiSyncResult: null,
   isLoadingSectionData: false,
   initialUnitName: null,
+  // used to track if data about the section has changed
+  needsReload: false,
 };
 
 // Maps authentication provider to OAuthSectionTypes for ease of comparison
@@ -177,6 +180,9 @@ const sectionSlice = createSlice({
   name: 'teacherSections',
   initialState,
   reducers: {
+    setNeedsReload(state) {
+      state.needsReload = true;
+    },
     setAuthProviders(state, action: PayloadAction<string[]>) {
       state.providers = action.payload.map(mapProviderToSectionType);
     },
@@ -208,6 +214,9 @@ const sectionSlice = createSlice({
         state.selectedSectionId = NO_SECTION;
         state.selectedSectionName = '';
       }
+    },
+    updateNeedsReload(state) {
+      state.needsReload = true;
     },
     updateSelectedSection(state, action: PayloadAction<ServerSection>) {
       const sectionId = action.payload.id;
@@ -289,6 +298,13 @@ const sectionSlice = createSlice({
           },
         };
       },
+    },
+    sectionHasNewData(state) {
+      console.log('inside sectionHaseNewData');
+      state.needsReload = true;
+    },
+    sectionDoesNotHaveNewData(state) {
+      state.needsReload = false;
     },
     startLoadingSectionData(state) {
       state.isLoadingSectionData = true;
@@ -758,6 +774,11 @@ export const finishEditingSection =
     });
   };
 
+export const updateNeedsReloadFunction = (): SectionThunkAction => dispatch => {
+  console.log('updateNeedsReloadFunction CALLED');
+  dispatch(updateNeedsReload());
+};
+
 /**
  * Removes a section or throws an error if the section does not exist.
  */
@@ -1126,6 +1147,9 @@ export const {
   startLoadingSectionData,
   updateSectionAiTutorEnabled,
   updateSelectedSection,
+  sectionHasNewData,
+  sectionDoesNotHaveNewData,
+  updateNeedsReload,
 } = sectionSlice.actions;
 
 export default sectionSlice.reducer;

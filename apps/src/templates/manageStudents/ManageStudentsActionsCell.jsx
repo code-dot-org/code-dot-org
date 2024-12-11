@@ -8,7 +8,10 @@ import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/metrics/firehose';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/sharedComponents/PopUpMenu';
-import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {
+  asyncLoadSectionData,
+  updateNeedsReloadFunction,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {navigateToHref} from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
@@ -50,6 +53,7 @@ class ManageStudentsActionsCell extends Component {
     saveStudent: PropTypes.func,
     addStudent: PropTypes.func,
     loadSectionData: PropTypes.func,
+    updateNeedsReloadFunction: PropTypes.func,
   };
 
   state = {
@@ -103,6 +107,7 @@ class ManageStudentsActionsCell extends Component {
 
   onRequestDelete = () => {
     this.setState({deleting: true});
+    this.props.updateNeedsReloadFunction();
   };
 
   onCancelDelete = () => {
@@ -153,6 +158,7 @@ class ManageStudentsActionsCell extends Component {
       this.onAdd();
     } else {
       this.props.saveStudent(id);
+      this.props.updateNeedsReloadFunction();
       firehoseClient.putRecord(
         {
           study: 'teacher-dashboard',
@@ -175,6 +181,8 @@ class ManageStudentsActionsCell extends Component {
   onAdd = () => {
     const {id, sectionId} = this.props;
     this.props.addStudent(id);
+    console.log('onAdd inside');
+    this.props.updateNeedsReloadFunction();
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard',
@@ -342,5 +350,6 @@ export default connect(
     loadSectionData(sectionId) {
       dispatch(asyncLoadSectionData(sectionId));
     },
+    updateNeedsReloadFunction: () => dispatch(updateNeedsReloadFunction()),
   })
 )(ManageStudentsActionsCell);

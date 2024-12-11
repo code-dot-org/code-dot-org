@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import {
   Route,
   Outlet,
@@ -6,6 +6,7 @@ import {
   createBrowserRouter,
   RouterProvider,
   Navigate,
+  useLocation,
   generatePath,
 } from 'react-router-dom';
 
@@ -44,6 +45,20 @@ import UnitCalendar from './UnitCalendar';
 
 import styles from './teacher-navigation.module.scss';
 
+const PathChangeHandler: React.FC<{needsReload: boolean}> = ({needsReload}) => {
+  const location = useLocation();
+  const previousLocation = useRef(location.pathname);
+
+  useEffect(() => {
+    if (needsReload && previousLocation.current !== location.pathname) {
+      window.location.reload();
+    }
+    previousLocation.current = location.pathname;
+  }, [needsReload, location.pathname]);
+
+  return null; // This component doesn't render anything.
+};
+
 interface TeacherNavigationRouterProps {
   studioUrlPrefix: string;
   showAITutorTab: boolean;
@@ -67,6 +82,10 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
     [selectedSection]
   );
 
+  const needsReload = useAppSelector(
+    state => state.teacherSections.needsReload
+  );
+
   const studentCount = useAppSelector(
     state => state.teacherSections.selectedStudents.length
   );
@@ -79,10 +98,15 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       <Route
         path={TEACHER_NAVIGATION_SECTIONS_URL}
         element={
-          <div className={styles.pageAndSidebar}>
-            <TeacherNavigationBar />
-            <Outlet />
-          </div>
+          <>
+            <PathChangeHandler
+              needsReload={needsReload ? needsReload : false}
+            />
+            <div className={styles.pageAndSidebar}>
+              <TeacherNavigationBar />
+              <Outlet />
+            </div>
+          </>
         }
       >
         <Route path={SPECIFIC_SECTION_BASE_URL} element={<PageLayout />}>
@@ -266,13 +290,14 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       </Route>
     ),
     [
-      sectionId,
-      studentCount,
-      providerName,
-      anyStudentHasProgress,
-      showAITutorTab,
-      selectedSection,
+      needsReload,
       studioUrlPrefix,
+      providerName,
+      studentCount,
+      anyStudentHasProgress,
+      selectedSection,
+      sectionId,
+      showAITutorTab,
     ]
   );
 

@@ -15,6 +15,7 @@ import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shap
 import {
   assignToSection,
   unassignSection,
+  updateNeedsReloadFunction,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
@@ -38,6 +39,7 @@ const MultipleSectionsAssigner = ({
   unassignSection,
   assignToSection,
   updateHiddenScript,
+  updateNeedsReloadFunction,
 }) => {
   const [currentSectionsAssigned, setCurrentSectionsAssigned] = useState([]);
 
@@ -112,6 +114,9 @@ const MultipleSectionsAssigner = ({
         } else {
           unhideAndAssignUnit(currentSectionsAssigned[i]);
         }
+        // set state to reflect that the page needs to be refreshed
+        // when a user changes tabs (for the calendar, etc)
+        updateNeedsReloadFunction();
       }
     }
 
@@ -277,6 +282,7 @@ MultipleSectionsAssigner.propTypes = {
   unassignSection: PropTypes.func.isRequired,
   assignToSection: PropTypes.func.isRequired,
   updateHiddenScript: PropTypes.func.isRequired,
+  updateNeedsReloadFunction: PropTypes.func.isRequired,
 };
 
 export const UnconnectedMultipleSectionsAssigner = MultipleSectionsAssigner;
@@ -285,4 +291,5 @@ export default connect(state => ({}), {
   assignToSection,
   updateHiddenScript,
   unassignSection,
+  updateNeedsReloadFunction,
 })(MultipleSectionsAssigner);
