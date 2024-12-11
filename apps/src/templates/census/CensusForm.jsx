@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 
@@ -164,7 +163,7 @@ const CensusForm = ({
   // each submitted field that is problematic. The specifics of
   // the problem are not important here since we just need a boolean value
   // of whether there was an error or not.
-  const processError = error => {
+  const processError = errorResponse => {
     const errorMap = {
       submitter_email_address: 'invalidEmail',
       class_frequency: 'frequency',
@@ -181,10 +180,9 @@ const CensusForm = ({
       school_name: 'school',
     };
 
-    const errorJSON = error.responseJSON;
     setErrors(prevState => {
       const updatedErrors = {...prevState};
-      Object.keys(errorJSON).forEach(key => {
+      Object.keys(errorResponse).forEach(key => {
         const errorKey = errorMap[key];
         updatedErrors[errorKey] = true;
       });
@@ -236,7 +234,8 @@ const CensusForm = ({
   const validateFrequency = () =>
     state.showFollowUp && submission.followUpFrequency === '';
 
-  const validateSubmission = () => {
+  const validateSubmission = e => {
+    e.preventDefault();
     const updatedErrors = {...errors};
     updatedErrors.email = validateNotBlank(submission.email);
     updatedErrors.topics = validateTopics();
@@ -253,21 +252,55 @@ const CensusForm = ({
     updatedErrors.optIn = validateNotBlank(submission.optIn);
 
     setErrors(updatedErrors);
-
     if (Object.values(updatedErrors).every(value => value === false)) {
       censusFormSubmit();
     }
   };
 
-  const censusFormSubmit = () => {
-    $.ajax({
-      url: '/dashboardapi/v1/census/CensusYourSchool2017v7',
-      type: 'post',
-      dataType: 'json',
-      data: $('#census-form').serialize(),
-    })
-      .done(processResponse)
-      .fail(processError);
+  const censusFormSubmit = async () => {
+    const formData = {
+      submitter_email_address: submission.email,
+      submitter_name: submission.name,
+      submitter_role: submission.role,
+      how_many_do_hoc: submission.hoc,
+      how_many_after_school: submission.afterSchool,
+      how_many_10_hours: submission.tenHours,
+      how_many_20_hours: submission.twentyHours,
+      other_classes_under_20_hours: submission.otherCS,
+      topic_blocks: state.selectedTopics.includes('topic_blocks'),
+      topic_text: state.selectedTopics.includes('topic_text'),
+      topic_robots: state.selectedTopics.includes('topic_robots'),
+      topic_internet: state.selectedTopics.includes('topic_internet'),
+      topic_security: state.selectedTopics.includes('topic_security'),
+      topic_data: state.selectedTopics.includes('topic_data'),
+      topic_web_design: state.selectedTopics.includes('topic_web_design'),
+      topic_game_design: state.selectedTopics.includes('topic_game_design'),
+      topic_ethical_social: state.selectedTopics.includes(
+        'topic_ethical_social'
+      ),
+      topic_other: state.selectedTopics.includes('topic_other'),
+      topic_other_description: state.selectedTopics.includes(
+        'topic_other_description'
+      ),
+      topic_do_not_know: state.selectedTopics.includes('topic_do_not_know'),
+      class_frequency: submission.followUpFrequency,
+      tell_us_more: submission.followUpMore,
+      pledged: submission.acceptedPledge,
+      share_with_regional_partners: submission.share,
+    };
+    const queryString = new URLSearchParams(formData).toString();
+    const response = await fetch(
+      `/dashboardapi/v1/census/CensusYourSchool2017v7?${queryString}`,
+      {
+        method: 'POST',
+      }
+    );
+    if (response.ok) {
+      processResponse();
+    } else {
+      const result = await response.json();
+      processError(result);
+    }
   };
 
   const topicCheckbox = (name, label) => {
@@ -653,7 +686,7 @@ const CensusForm = ({
         )}
         <Button
           id="submit-button"
-          onClick={() => validateSubmission()}
+          onClick={e => validateSubmission(e)}
           color={Button.ButtonColor.brandSecondaryDefault}
           text={i18n.submit()}
           size={Button.ButtonSize.large}
