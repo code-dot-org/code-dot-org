@@ -32,7 +32,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
   end
 
   test "signed in user can update abuse score without dcdo flag enabled" do
-    DCDO.stubs(:get).with('restrict-abuse-reporting-to-verified', true).returns(false)
+    DCDO.stubs(:get).with('restrict-abuse-reporting-to-verified', false).returns(false)
 
     user = create(:student)
     sign_in user
@@ -48,7 +48,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
   end
 
   test "student can't update abuse score with dcdo flag enabled" do
-    DCDO.stubs(:get).with('restrict-abuse-reporting-to-verified', true).returns(true)
+    DCDO.stubs(:get).with('restrict-abuse-reporting-to-verified', false).returns(true)
 
     user = create(:student)
     sign_in user
