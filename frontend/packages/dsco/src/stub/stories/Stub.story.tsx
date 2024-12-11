@@ -1,5 +1,5 @@
 import type {Meta, StoryObj} from '@storybook/react';
-import { fn , userEvent, within, expect } from '@storybook/test';
+import {fn, userEvent, within, expect} from '@storybook/test';
 
 import {Stub} from '../Stub';
 
@@ -19,12 +19,12 @@ export const Empty: Story = {
   args: {
     label: 'Hello World!',
     backgroundColor: 'white',
-    onClick: fn()
+    onClick: fn(),
   },
   play: async ({args, canvasElement}) => {
     const canvas = within(canvasElement);
     const button = canvas.getByText(args.label);
     await userEvent.click(button);
     await expect(args.onClick).toHaveBeenCalled();
-  }
+  },
 };

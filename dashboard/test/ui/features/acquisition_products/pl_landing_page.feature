@@ -66,6 +66,7 @@ Feature: Professional Learning landing page
 
   Scenario: Regional Partner sees relevant content sections
     Given I am a program manager with a started course
+    And I wait for 2 seconds
     And I am on "http://studio.code.org/my-professional-learning"
 
     # Go to the right My PL page tab
