@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
@@ -71,6 +71,24 @@ const CensusForm = ({
     },
   });
 
+  useEffect(() => {
+    setState(prevState => ({
+      ...prevState,
+      showFollowUp:
+        state.submission.twentyHours === 'SOME' ||
+        state.submission.twentyHours === 'ALL',
+    }));
+  }, [state.submission.twentyHours]);
+
+  useEffect(() => {
+    setState(prevState => ({
+      ...prevState,
+      showPledge:
+        state.submission.role === 'TEACHER' ||
+        state.submission.role === 'ADMINISTRATOR',
+    }));
+  }, [state.submission.role]);
+
   const handleChange = (field, event) => {
     setState(
       {
@@ -78,8 +96,7 @@ const CensusForm = ({
           ...state.submission,
           [field]: event.target.value,
         },
-      },
-      checkShowFollowUp
+      }
     );
   };
 
@@ -93,23 +110,6 @@ const CensusForm = ({
         ...state.submission,
         [field]: event ? event.value : '',
       },
-    });
-  };
-
-  const checkShowFollowUp = () => {
-    const twentyHours = state.submission.twentyHours;
-    setState(
-      {
-        showFollowUp: twentyHours === 'SOME' || twentyHours === 'ALL',
-      },
-      checkShowPledge
-    );
-  };
-
-  const checkShowPledge = () => {
-    const role = state.submission.role;
-    setState({
-      showPledge: role === 'TEACHER' || role === 'ADMINISTRATOR',
     });
   };
 
