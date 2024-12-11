@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.7.0]()
+## [0.7.0](https://github.com/code-dot-org/code-dot-org/pull/62910)
 
 - made `size` prop optional since we have default value for this prop
 - rewritten `CheckboxDropdownTest` in typescript
