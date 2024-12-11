@@ -32,6 +32,7 @@ import {BlocklyState} from '../redux/blockly';
 // We cannot infer the type of our store because we programmatically add to the store
 // with registerReducers.
 export interface RootState {
+  manageStudents: ManageStudentsState;
   aiTutor: AITutorState;
   aichat: AichatState;
   blockly: BlocklyState;
@@ -57,4 +58,8 @@ export interface RootState {
   teacherPanel: TeacherPanelState;
   teacherRubric: TeacherRubricState;
   teacherSections: TeacherSectionState;
+}
+
+interface ManageStudentsState {
+  studentData: object[];
 }
