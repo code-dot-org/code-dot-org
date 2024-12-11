@@ -25,6 +25,18 @@ class ScriptsControllerTest < ActionController::TestCase
     File.stubs(:write)
   end
 
+  test "show: teacher in teacher-local-nav-v2 experiment is redirected to teacher dashboard if unit is in a section" do
+    experiment_unit = create :unit, name: 'experiment-course'
+    experiment_teacher = create :teacher
+    experiment_section = create :section, user: experiment_teacher, unit: experiment_unit
+    SingleUserExperiment.find_or_create_by!(min_user_id: experiment_teacher.id, name: 'teacher-local-nav-v2')
+
+    sign_in experiment_teacher
+
+    get :show, params: {unit_name: 'experiment-course'}
+    assert_redirected_to "/teacher_dashboard/sections/#{experiment_section.id}/unit/#{experiment_unit.name}"
+  end
+
   test "should get index" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
