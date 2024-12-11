@@ -36,10 +36,12 @@ describe('Design System - Checkbox Dropdown Component', () => {
         onChange={e =>
           onCheckboxDropdownChange(e.target.value, e.target.checked)
         }
-        onSelectAll={handleSelectAll}
-        onClearAll={handleClearAll}
-        selectAllText="Select all"
-        clearAllText="Clear all"
+        selectAndClearAllConfig={{
+          onSelectAll: handleSelectAll,
+          onClearAll: handleClearAll,
+          selectAllText: 'Select all',
+          clearAllText: 'Clear all',
+        }}
         labelText="Dropdown label"
       />
     );
@@ -68,10 +70,12 @@ describe('Design System - Checkbox Dropdown Component', () => {
         allOptions={allOptions}
         checkedOptions={selectedValues}
         onChange={onChange}
-        onSelectAll={handleSelectAll}
-        onClearAll={handleClearAll}
-        selectAllText="Select all"
-        clearAllText="Clear all"
+        selectAndClearAllConfig={{
+          onSelectAll: handleSelectAll,
+          onClearAll: handleClearAll,
+          selectAllText: 'Select all',
+          clearAllText: 'Clear all',
+        }}
         labelText="Dropdown2 label"
       />
     );
@@ -119,10 +123,12 @@ describe('Design System - Checkbox Dropdown Component', () => {
         allOptions={allOptions}
         checkedOptions={selectedValues}
         onChange={onChange}
-        onSelectAll={handleSelectAll}
-        onClearAll={handleClearAll}
-        selectAllText="Select all"
-        clearAllText="Clear all"
+        selectAndClearAllConfig={{
+          onSelectAll: handleSelectAll,
+          onClearAll: handleClearAll,
+          selectAllText: 'Select all',
+          clearAllText: 'Clear all',
+        }}
         labelText="Dropdown2 label"
       />
     );
@@ -170,10 +176,12 @@ describe('Design System - Checkbox Dropdown Component', () => {
         allOptions={allOptions}
         checkedOptions={selectedValues}
         onChange={onChange}
-        onSelectAll={handleSelectAll}
-        onClearAll={handleClearAll}
-        selectAllText="Select all"
-        clearAllText="Clear all"
+        selectAndClearAllConfig={{
+          onSelectAll: handleSelectAll,
+          onClearAll: handleClearAll,
+          selectAllText: 'Select all',
+          clearAllText: 'Clear all',
+        }}
         labelText="Dropdown2 label"
       />
     );
