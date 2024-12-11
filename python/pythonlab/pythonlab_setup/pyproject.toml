@@ -16,4 +16,3 @@ testpaths = ["tests"]
 [build-system]
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
-
