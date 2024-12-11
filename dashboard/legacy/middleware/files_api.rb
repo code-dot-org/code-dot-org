@@ -1037,7 +1037,7 @@ class FilesApi < Sinatra::Base
         case rating
         when :adult, :racy
           # Incrementing abuse score by 15 to differentiate from manually reported projects
-          new_score = project.increment_abuse(encrypted_channel_id, 15)
+          new_score = project.increment_abuse(encrypted_channel_id, 15, true)
           FileBucket.new.replace_abuse_score(encrypted_channel_id, s3_prefix, new_score)
           response.headers['x-cdo-content-rating'] = rating.to_s
           cache_for 1.hour
