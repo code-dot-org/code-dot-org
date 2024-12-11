@@ -181,6 +181,8 @@ export interface LevelProperties {
   validationFile?: ProjectFile;
   useSecondaryFinishButton?: boolean;
   enableMicroBit?: boolean;
+  serializedMaze?: MazeCell[][];
+  startDirection?: number;
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -204,6 +206,12 @@ interface VideoData extends VideoLevelData {
   key?: string;
   enable_fallback?: boolean;
   autoplay?: boolean;
+}
+
+export interface MazeCell {
+  tileType: number;
+  value: number;
+  assetId: number;
 }
 
 export enum OptionsToAvoid {
