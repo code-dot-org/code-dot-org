@@ -19,7 +19,7 @@ module I18n
           end
 
           private def i18n_data
-            i18n_data = YAML.load_file(ORIGIN_I18N_FILE_PATH)
+            i18n_data = JSON.load_file(ORIGIN_I18N_FILE_PATH)
 
             # Redacts script markdown data
             i18n_data.dig('en', 'data', 'script', 'name').each_value do |script_i18n_data|

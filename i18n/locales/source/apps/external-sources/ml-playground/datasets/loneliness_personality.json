@@ -1,0 +1,56 @@
+{
+  "name": "Student Survey - Personality",
+  "card": {
+    "description": "A dataset of survey responses gathered by Slovak students aged 18-21 at FSEV UK. Most responses are rankings on a scale from 1 to 5. For example, 'Rank from 1 (strongly disagree) to 5 (strongly agree): I often study or work even in my spare time'. This is a subset of the larger dataset that just focuses on personality statements.",
+    "context": {
+      "potentialUses": "For example, predict someone's personality traits based on other traits.",
+      "potentialMisuses": "Using demographic information from a limited dataset to make assumptions about subgroups of people: for example, asking predictions about which genders are more likely to have which fears."
+    }
+  },
+  "fields": {
+    "Loneliness": {
+      "id": "Loneliness",
+      "description": "I feel lonely in life."
+    },
+    "Prioritising workload": {
+      "id": "Prioritising workload",
+      "description": "I try to do tasks as soon as possible and not leave them until last minute"
+    },
+    "Workaholism": {
+      "id": "Workaholism",
+      "description": "I often study or work even in my spare time."
+    },
+    "Reliability": {
+      "id": "Reliability",
+      "description": "I am reliable at work and always complete all tasks given to me."
+    },
+    "Friends versus money": {
+      "id": "Friends versus money",
+      "description": "I would rather have lots of friends than lots of money."
+    },
+    "Funniness": {
+      "id": "Funniness",
+      "description": "I always try to be the funniest one."
+    },
+    "Judgment calls": {
+      "id": "Judgment calls",
+      "description": "I can tell if people listen to me or not when I talk to them."
+    },
+    "Number of friends": {
+      "id": "Number of friends",
+      "description": "I have lots of friends."
+    },
+    "Waiting": {
+      "id": "Waiting",
+      "description": "I am very patient."
+    },
+    "Socializing": {
+      "id": "Socializing",
+      "description": "I enjoy meeting new people."
+    },
+    "Assertiveness": {
+      "id": "Assertiveness",
+      "description": "I am not afraid to give my opinion if I feel strongly about something."
+    }
+  }
+}

@@ -15,7 +15,7 @@ module I18n
           def process
             LIBRARY_NAME_IN_OUT_MAPPINGS.each do |name_map|
               I18nScriptUtils.write_json_file(
-                CDO.dir(I18N_SOURCE_DIR, DIR_NAME, "#{name_map[:to]}.json"),
+                File.join(I18N_SOURCE_DIR_PATH, "#{name_map[:to]}.json"),
                 get_translation_strings("#{name_map[:from]}.json")
               )
             end

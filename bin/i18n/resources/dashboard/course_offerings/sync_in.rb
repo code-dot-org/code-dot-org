@@ -14,6 +14,8 @@ module I18n
         class SyncIn < I18n::Utils::SyncInBase
           def process
             I18nScriptUtils.write_file(I18N_SOURCE_FILE_PATH, JSON.pretty_generate(i18n_data))
+            target_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "course_offerings", "en.json")
+            I18nScriptUtils.write_file(target_i18n_file_path, JSON.pretty_generate(I18nScriptUtils.to_dashboard_i18n_data('en', 'course_offerings', i18n_data)))
           end
 
           private def i18n_data

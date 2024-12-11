@@ -1,0 +1,36 @@
+{
+  "name": "Shapes V1",
+  "card": {
+    "description": "Extracted features from a visual dataset showing different shapes.",
+    "context": {
+      "potentialUses": "Used to train AI Bot on how to classify shapes.",
+      "potentialMisuses": "Anything other than the purpose above."
+    }
+  },
+  "fields": {
+    "sides": {
+      "id": "sides",
+      "description": "Number of sides the shape has"
+    },
+    "border color": {
+      "id": "border color",
+      "description": "Color of the shape's outline"
+    },
+    "fill color": {
+      "id": "fill color",
+      "description": "Color of the shape's interior"
+    },
+    "size": {
+      "id": "size",
+      "description": "Either big or small"
+    },
+    "background color": {
+      "id": "background color",
+      "description": "Color of the background behind the shape"
+    },
+    "shape": {
+      "id": "shape",
+      "description": "Type of shape"
+    }
+  }
+}

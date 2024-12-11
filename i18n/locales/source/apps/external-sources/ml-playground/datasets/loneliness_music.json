@@ -1,0 +1,92 @@
+{
+  "name": "Student Survey - Music",
+  "card": {
+    "description": "A dataset of survey responses gathered by Slovak students aged 18-21 at FSEV UK. Most responses are rankings on a scale from 1 to 5. For example, 'Rank from 1 (strongly disagree) to 5 (strongly agree): I often study or work even in my spare time'. This is a subset of the larger dataset that just focuses on music.",
+    "context": {
+      "potentialUses": "For example, predict someone's personality traits based on other traits.",
+      "potentialMisuses": "Using demographic information from a limited dataset to make assumptions about subgroups of people: for example, asking predictions about which genders are more likely to have which fears."
+    }
+  },
+  "fields": {
+    "Loneliness": {
+      "id": "Loneliness",
+      "description": "I feel lonely in life."
+    },
+    "Music": {
+      "id": "Music",
+      "description": "I enjoy listening to music"
+    },
+    "Slow songs or fast songs": {
+      "id": "Slow songs or fast songs",
+      "description": "I prefer fast-paced music"
+    },
+    "Dance": {
+      "id": "Dance",
+      "description": "I enjoy dance music"
+    },
+    "Folk": {
+      "id": "Folk",
+      "description": "I enjoy folk music"
+    },
+    "Country": {
+      "id": "Country",
+      "description": "I enjoy country music"
+    },
+    "Classical music": {
+      "id": "Classical music",
+      "description": "I enjoy Classical music"
+    },
+    "Musical": {
+      "id": "Musical",
+      "description": "I enjoy Musicals music"
+    },
+    "Pop": {
+      "id": "Pop",
+      "description": "I enjoy Pop music"
+    },
+    "Rock": {
+      "id": "Rock",
+      "description": "I enjoy Rock music"
+    },
+    "Metal or Hardrock": {
+      "id": "Metal or Hardrock",
+      "description": "I enjoy Metal or Hardrock music"
+    },
+    "Punk": {
+      "id": "Punk",
+      "description": "I enjoy Punk music"
+    },
+    "Hiphop, Rap": {
+      "id": "Hiphop, Rap",
+      "description": "I enjoy Hiphop or Rap music"
+    },
+    "Reggae, Ska": {
+      "id": "Reggae, Ska",
+      "description": "I enjoy Reggae or Ska music"
+    },
+    "Swing, Jazz": {
+      "id": "Swing, Jazz",
+      "description": "I enjoy Swing or Jazz music"
+    },
+    "Rock n roll": {
+      "id": "Rock n roll",
+      "description": "I enjoy Rock n roll music"
+    },
+    "Alternative": {
+      "id": "Alternative",
+      "description": "I enjoy Alternative music"
+    },
+    "Latino": {
+      "id": "Latino",
+      "description": "I enjoy Latino music"
+    },
+    "Techno, Trance": {
+      "id": "Techno, Trance",
+      "description": "I enjoy Techno or Trance music"
+    },
+    "Opera": {
+      "id": "Opera",
+      "description": "I enjoy Opera music"
+    }
+  }
+}

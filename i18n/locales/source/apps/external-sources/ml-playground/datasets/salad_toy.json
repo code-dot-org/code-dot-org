@@ -1,0 +1,52 @@
+{
+  "name": "Salad",
+  "card": {
+    "description": "Survey of customers in a restaurant on whether or not they like certain salad combinations.",
+    "context": {
+      "potentialUses": "Help make recommendations for what kind of salad a new customer should order.",
+      "potentialMisuses": "Anything other than recommendations."
+    }
+  },
+  "fields": {
+    "tomato": {
+      "id": "tomato",
+      "description": "Does the salad include tomato?"
+    },
+    "avocado": {
+      "id": "avocado",
+      "description": "Does the salad include avocado?"
+    },
+    "ranch": {
+      "id": "ranch",
+      "description": "Does the salad include ranch?"
+    },
+    "italian dressing": {
+      "id": "italian dressing",
+      "description": "Does the salad include italian dressing?"
+    },
+    "chicken": {
+      "id": "chicken",
+      "description": "Does the salad include chicken?"
+    },
+    "seeds": {
+      "id": "seeds",
+      "description": "Does the salad include seeds?"
+    },
+    "fruit": {
+      "id": "fruit",
+      "description": "Does the salad include fruit?"
+    },
+    "beans": {
+      "id": "beans",
+      "description": "Does the salad include beans?"
+    },
+    "cheese": {
+      "id": "cheese",
+      "description": "Does the salad include cheese?"
+    },
+    "preference": {
+      "id": "preference",
+      "description": "Do you like or dislike the salad?"
+    }
+  }
+}

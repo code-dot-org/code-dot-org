@@ -1,0 +1,64 @@
+{
+  "name": "Student Survey - Movies",
+  "card": {
+    "description": "A dataset of survey responses gathered by Slovak students aged 18-21 at FSEV UK. Most responses are rankings on a scale from 1 to 5. For example, 'Rank from 1 (strongly disagree) to 5 (strongly agree): I often study or work even in my spare time'. This is a subset of the larger dataset that just focuses on movies.",
+    "context": {
+      "potentialUses": "For example, predict someone's personality traits based on other traits.",
+      "potentialMisuses": "Using demographic information from a limited dataset to make assumptions about subgroups of people: for example, asking predictions about which genders are more likely to have which fears."
+    }
+  },
+  "fields": {
+    "Loneliness": {
+      "id": "Loneliness",
+      "description": "I feel lonely in life."
+    },
+    "Movies": {
+      "id": "Movies",
+      "description": "I enjoy watching movies"
+    },
+    "Horror": {
+      "id": "Horror",
+      "description": "I enjoy horror movies"
+    },
+    "Thriller": {
+      "id": "Thriller",
+      "description": "I enjoy Thriller movies"
+    },
+    "Comedy": {
+      "id": "Comedy",
+      "description": "I enjoy Comedy movies"
+    },
+    "Romantic": {
+      "id": "Romantic",
+      "description": "I enjoy Romantic movies"
+    },
+    "Sci-fi": {
+      "id": "Sci-fi",
+      "description": "I enjoy Sci-fi movies"
+    },
+    "War": {
+      "id": "War",
+      "description": "I enjoy War movies"
+    },
+    "Fantasy/Fairy tales": {
+      "id": "Fantasy/Fairy tales",
+      "description": "I enjoy Fantasy/Fairy tale movies"
+    },
+    "Animated": {
+      "id": "Animated",
+      "description": "I enjoy Animated movies"
+    },
+    "Documentary": {
+      "id": "Documentary",
+      "description": "I enjoy Documentary movies"
+    },
+    "Western": {
+      "id": "Western",
+      "description": "I enjoy Western movies"
+    },
+    "Action": {
+      "id": "Action",
+      "description": "I enjoy Action movies"
+    }
+  }
+}

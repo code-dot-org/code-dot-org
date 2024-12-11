@@ -1,0 +1,52 @@
+{
+  "name": "Poke",
+  "card": {
+    "description": "Survey of customers in a poke shop on whether or not they like certain poke combinations.",
+    "context": {
+      "potentialUses": "Help make recommendations for what kind of poke a new customer should buy.",
+      "potentialMisuses": "Anything other than recommendations."
+    }
+  },
+  "fields": {
+    "avocado": {
+      "id": "avocado",
+      "description": "Does the poke have avocado mixed in?"
+    },
+    "onion": {
+      "id": "onion",
+      "description": "Does the poke have onion mixed in?"
+    },
+    "masago": {
+      "id": "masago",
+      "description": "Does the poke have masago mixed in?"
+    },
+    "wasabi": {
+      "id": "wasabi",
+      "description": "Does the poke have wasabi mixed in?"
+    },
+    "ginger": {
+      "id": "ginger",
+      "description": "Does the poke have ginger mixed in?"
+    },
+    "seaweed": {
+      "id": "seaweed",
+      "description": "Does the poke have seaweed mixed in?"
+    },
+    "furikake": {
+      "id": "furikake",
+      "description": "Does the poke have furikake mixed in?"
+    },
+    "surimi": {
+      "id": "surimi",
+      "description": "Does the poke have surimi mixed in?"
+    },
+    "chili": {
+      "id": "chili",
+      "description": "Does the poke have chili mixed in?"
+    },
+    "preference": {
+      "id": "preference",
+      "description": "Do you like or dislike the poke?"
+    }
+  }
+}

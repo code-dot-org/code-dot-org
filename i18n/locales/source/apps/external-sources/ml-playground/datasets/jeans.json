@@ -1,0 +1,68 @@
+{
+  "name": "Jeans Measurements",
+  "card": {
+    "description": "This dataset contains measurement data about popular brands of jeans.",
+    "context": {
+      "potentialUses": "Predict the price of a pair of jeans based on who they're for, the size of the pockets, etc.",
+      "potentialMisuses": ""
+    }
+  },
+  "fields": {
+    "Brand": {
+      "id": "Brand",
+      "description": "The brand of jeans."
+    },
+    "Style": {
+      "id": "Style",
+      "description": "The fit or style of jeans, e.g. skinny or boot cut."
+    },
+    "Mens or womens": {
+      "id": "Mens or womens",
+      "description": "Whether the jeans were sold to target men or women."
+    },
+    "Cotton contents": {
+      "id": "Cotton contents",
+      "description": "Amount of cotton in the fabric, where 0 means no cotton at all, and 1 means 100% cotton."
+    },
+    "Price in dollars": {
+      "id": "Price in dollars",
+      "description": "The price of the jeans in US dollars."
+    },
+    "Max height of front pocket": {
+      "id": "Max height of front pocket",
+      "description": "The height of the front pocket from its deepest part."
+    },
+    "Min height of front pocket": {
+      "id": "Min height of front pocket",
+      "description": "The height of the front pocket from its most shallow part."
+    },
+    "Front rivet height": {
+      "id": "Front rivet height",
+      "description": "Front pocket openings curve down towards the side of the leg, ending in a rivet. This number measures the distance from the top of the pocket to that rivet."
+    },
+    "Max width of front pocket": {
+      "id": "Max width of front pocket",
+      "description": "The width of the front pocket from its widest part."
+    },
+    "Min width of front pocket": {
+      "id": "Min width of front pocket",
+      "description": "The width of the front pocket from its narrowest part."
+    },
+    "Max width of back pocket": {
+      "id": "Max width of back pocket",
+      "description": "The width of the back pocket from its widest part."
+    },
+    "Min width of back pocket": {
+      "id": "Min width of back pocket",
+      "description": "The width of the back pocket from its narrowest part."
+    },
+    "Max height of back pocket": {
+      "id": "Max height of back pocket",
+      "description": "The height of the back pocket from its deepest part."
+    },
+    "Min height of back pocket": {
+      "id": "Min height of back pocket",
+      "description": "The height of the back pocket from its shallowest part."
+    }
+  }
+}

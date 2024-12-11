@@ -1,0 +1,84 @@
+{
+  "name": "Zoo",
+  "card": {
+    "description": "A small dataset of different animal attributes (whether they have hair, feathers, teeth, and more) used for classification purposes. Almost all features are Yes/No except for Animal Name, Class, and Number of Legs.",
+    "context": {
+      "potentialUses": "There are lots of potential labels here, but one easy investigation to get you started is to try and find which features tend to relate to an animal being venomous.",
+      "potentialMisuses": "This is a dataset of only 100 animals, so there may be lots of animals that aren't reflected by the data. Take it with a grain of salt!"
+    }
+  },
+  "fields": {
+    "Animal Name": {
+      "id": "Animal Name",
+      "description": "Name of the animal."
+    },
+    "Hair": {
+      "id": "Hair",
+      "description": "Does the animal have hair?"
+    },
+    "Feathers": {
+      "id": "Feathers",
+      "description": "Does the animal have feathers?"
+    },
+    "Eggs": {
+      "id": "Eggs",
+      "description": "Does the animal lay eggs?"
+    },
+    "Milk": {
+      "id": "Milk",
+      "description": "Does the animal produce milk?"
+    },
+    "Airborne": {
+      "id": "Airborne",
+      "description": "Does the animal fly?"
+    },
+    "Aquatic": {
+      "id": "Aquatic",
+      "description": "Does the animal live in water?"
+    },
+    "Predator": {
+      "id": "Predator",
+      "description": "Is the animal a predator?"
+    },
+    "Toothed": {
+      "id": "Toothed",
+      "description": "Does the animal have teeth?"
+    },
+    "Backbone": {
+      "id": "Backbone",
+      "description": "Does the animal have a backbone?"
+    },
+    "Breathes": {
+      "id": "Breathes",
+      "description": "Does the animal breathe?"
+    },
+    "Venomous": {
+      "id": "Venomous",
+      "description": "Is the animal venomous?"
+    },
+    "Fins": {
+      "id": "Fins",
+      "description": "Does the animal have fins?"
+    },
+    "Legs": {
+      "id": "Legs",
+      "description": "How many legs does the animal have?"
+    },
+    "Tail": {
+      "id": "Tail",
+      "description": "Does the animal have a tail?"
+    },
+    "Domestic": {
+      "id": "Domestic",
+      "description": "Is the animal domestic?"
+    },
+    "Catsize": {
+      "id": "Catsize",
+      "description": "Is the animal around the size of a cat?"
+    },
+    "Class": {
+      "id": "Class",
+      "description": "What kind of animal is it?"
+    }
+  }
+}

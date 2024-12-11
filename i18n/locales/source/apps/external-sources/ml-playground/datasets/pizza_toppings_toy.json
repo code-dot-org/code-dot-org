@@ -1,0 +1,55 @@
+{
+  "card": {
+    "description": "Survey of customers in a pizza parlor on whether or not they like certain pizza combinations.",
+    "context": {
+      "potentialUses": "Help make recommendations for what kind of pizza a new customer should buy.",
+      "potentialMisuses": "Anything other than pizza recommendations."
+    }
+  },
+  "fields": {
+    "Pepperoni": {
+      "id": "Pepperoni",
+      "description": "Did the pizza have pepperoni?"
+    },
+    "Extra Cheese": {
+      "id": "Extra Cheese",
+      "description": "Did the pizza have extra cheese?"
+    },
+    "Broccoli": {
+      "id": "Broccoli",
+      "description": "Did the pizza have broccoli?"
+    },
+    "Olives": {
+      "id": "Olives",
+      "description": "Did the pizza have olives?"
+    },
+    "Sausage": {
+      "id": "Sausage",
+      "description": "Did the pizza have sausage?"
+    },
+    "Anchovies": {
+      "id": "Anchovies",
+      "description": "Did the pizza have anchovies?"
+    },
+    "Fried Chicken": {
+      "id": "Fried Chicken",
+      "description": "Did the pizza have fried chicken?"
+    },
+    "Peppers": {
+      "id": "Peppers",
+      "description": "Did the pizza have peppers?"
+    },
+    "Ham": {
+      "id": "Ham",
+      "description": "Did the pizza have ham?"
+    },
+    "Bacon": {
+      "id": "Bacon",
+      "description": "Did the pizza have bacon?"
+    },
+    "Preference": {
+      "id": "Preference",
+      "description": "How did you like the pizza?"
+    }
+  }
+}

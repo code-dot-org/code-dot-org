@@ -1,0 +1,39 @@
+{
+  "card": {
+    "description": "Insurance costs along with factors like number of children, location, smoker/nonsmoker status, age, sex, BMI.",
+    "context": {
+      "potentialUses": "Can be used to predict whether or not someone is a smoker based on other insurance information",
+      "potentialMisuses": ""
+    }
+  },
+  "fields": {
+    "age": {
+      "id": "age",
+      "description": "age of primary beneficiary."
+    },
+    "sex": {
+      "id": "sex",
+      "description": "insurance contractor gender: female, male."
+    },
+    "bmi": {
+      "id": "bmi",
+      "description": "Body mass index."
+    },
+    "children": {
+      "id": "children",
+      "description": "Number of children covered by health insurance."
+    },
+    "smoker": {
+      "id": "smoker",
+      "description": "Whether the person smokes or not."
+    },
+    "region": {
+      "id": "region",
+      "description": "the beneficiary's residential area in the US, northeast, southeast, southwest, northwest."
+    },
+    "charges": {
+      "id": "charges",
+      "description": "Individual medical costs billed by health insurance."
+    }
+  }
+}

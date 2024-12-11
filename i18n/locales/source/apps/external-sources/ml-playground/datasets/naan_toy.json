@@ -1,0 +1,52 @@
+{
+  "name": "Naan",
+  "card": {
+    "description": "Survey of customers in an Indian restaurant on whether or not they like certain naan combinations.",
+    "context": {
+      "potentialUses": "Help make recommendations for what kind of naan a new customer should order.",
+      "potentialMisuses": "Anything other than recommendations."
+    }
+  },
+  "fields": {
+    "chicken": {
+      "id": "chicken",
+      "description": "Does the naan have chicken baked in?"
+    },
+    "lamb": {
+      "id": "lamb",
+      "description": "Does the naan have lamb baked in?"
+    },
+    "onion": {
+      "id": "onion",
+      "description": "Does the naan have onion baked in?"
+    },
+    "potatoes": {
+      "id": "potatoes",
+      "description": "Does the naan have potatoes baked in?"
+    },
+    "nuts": {
+      "id": "nuts",
+      "description": "Does the naan have nuts baked in?"
+    },
+    "cherries": {
+      "id": "cherries",
+      "description": "Does the naan have cherries baked in?"
+    },
+    "shaved coconut": {
+      "id": "shaved coconut",
+      "description": "Does the naan have shaved coconut baked in?"
+    },
+    "garlic": {
+      "id": "garlic",
+      "description": "Does the naan have garlic baked in?"
+    },
+    "cheese": {
+      "id": "cheese",
+      "description": "Does the naan have cheese baked in?"
+    },
+    "preference": {
+      "id": "preference",
+      "description": "Do you like or dislike the naan?"
+    }
+  }
+}

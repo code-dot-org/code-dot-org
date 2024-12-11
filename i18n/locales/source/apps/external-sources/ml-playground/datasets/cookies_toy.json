@@ -1,0 +1,40 @@
+{
+  "name": "Cookies",
+  "card": {
+    "description": "Survey of customers in a cookie store on whether or not they like certain cookie combinations.",
+    "context": {
+      "potentialUses": "Help make recommendations for what kind of cookies a new customer should buy.",
+      "potentialMisuses": "Anything other than cookie recommendations."
+    }
+  },
+  "fields": {
+    "chocolate chips": {
+      "id": "chocolate chips",
+      "description": "Does the cookie have chocolate chips?"
+    },
+    "raisins": {
+      "id": "raisins",
+      "description": "Does the cookie have raisins?"
+    },
+    "oatmeal": {
+      "id": "oatmeal",
+      "description": "Does the cookie have oatmeal?"
+    },
+    "m and ms": {
+      "id": "m and ms",
+      "description": "Does the cookie have m & ms?"
+    },
+    "ice cream on top": {
+      "id": "ice cream on top",
+      "description": "Does the cookie have ice cream on top?"
+    },
+    "frosting": {
+      "id": "frosting",
+      "description": "Does the cookie have frosting?"
+    },
+    "preference": {
+      "id": "preference",
+      "description": "Do you like or dislike the cookie?"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Top Songs",
+  "card": {
+    "description": "A random selection of popular songs with and Billboard Top 100 chart information as well as other characteristics.",
+    "context": {
+      "potentialUses": "Predict how big of a hit a song was based on its genre and other factors.",
+      "potentialMisuses": ""
+    }
+  },
+  "fields": {
+    "Genre": {
+      "id": "Genre",
+      "description": "The genre of the song."
+    },
+    "Artist": {
+      "id": "Artist",
+      "description": "The artist's name."
+    },
+    "Title": {
+      "id": "Title",
+      "description": "Title of the song."
+    },
+    "Loudness score": {
+      "id": "Loudness score",
+      "description": "A scoring of the song's loudness, where low negative numbers like -13 mean relatively quiet, and high negative numbers like -5 mean relatively loud."
+    },
+    "Tempo in beats per minute": {
+      "id": "Tempo in beats per minute",
+      "description": "Tempo of the song in beats per minute (BPM). Higher numbers mean faster, more energetic songs."
+    },
+    "Duration in seconds": {
+      "id": "Duration in seconds",
+      "description": "Length of the song in seconds."
+    },
+    "Year": {
+      "id": "Year",
+      "description": "The year the song was released."
+    },
+    "Weeks on the Billboard Top 100": {
+      "id": "Weeks on the Billboard Top 100",
+      "description": "The total number of weeks the songs was listed on the Billboard Top 100."
+    },
+    "Billboard rank peak": {
+      "id": "Billboard rank peak",
+      "description": "The highest position the song reached on the Billboard Top 100."
+    }
+  }
+}

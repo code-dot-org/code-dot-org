@@ -10,6 +10,7 @@ class CreateI18nPullRequests
     I18nScriptUtils.git_add_and_commit(
       [
         "dashboard/config/locales/*.en.yml",
+        "dashboard/config/locales/*/en.json",
         "i18n/locales/source/dashboard"
       ],
       "dashboard i18n sync"

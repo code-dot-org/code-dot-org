@@ -19,8 +19,10 @@ module I18n
             banners.each_value do |banner|
               banner.slice!('title', 'body', 'buttonText')
             end
-
-            I18nScriptUtils.write_json_file(I18N_SOURCE_FILE_PATH, {'banners' => banners})
+            i18n_data = {'banners' => banners}
+            I18nScriptUtils.write_json_file(I18N_SOURCE_FILE_PATH, i18n_data)
+            target_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "marketing_announcements", "en.json")
+            I18nScriptUtils.sanitize_data_and_write(I18nScriptUtils.to_dashboard_i18n_data('en', 'marketing_announcements', i18n_data), target_i18n_file_path)
           end
         end
       end

@@ -41,26 +41,26 @@ module I18n
             end
           end
 
-          # Merging dashboard/config/courses/*.course with courses.yml
+          # Merging dashboard/config/courses/*.course with courses.json
           # These files contain resources used by UnitGroup (used in the landing pages of full courses).
           # https://studio.code.org/courses/csd-2021
           # All other resources used in Unit come from scrip_json files (used in the landing pages for each Unit).
           # https://studio.code.org/s/csd1-2021
           private def prepare
-            i18n_data = YAML.load_file(ORIGIN_I18N_FILE_PATH)
+            i18n_data = I18nScriptUtils.parse_file(ORIGIN_I18N_FILE_PATH)
 
             courses_data = i18n_data.dig('en', 'data')
             courses_data['resources'] ||= {}
             courses_data['resources'].merge!(resources_i18n_data)
 
-            I18nScriptUtils.write_file(I18N_SOURCE_FILE_PATH, I18nScriptUtils.to_crowdin_yaml(i18n_data))
+            I18nScriptUtils.write_json_file(I18N_SOURCE_FILE_PATH, i18n_data)
           end
 
           private def redact
             # Save the original data, for restoration
             I18nScriptUtils.copy_file(I18N_SOURCE_FILE_PATH, I18N_BACKUP_FILE_PATH)
 
-            i18n_data = YAML.load_file(I18N_SOURCE_FILE_PATH)
+            i18n_data = I18nScriptUtils.parse_file(I18N_SOURCE_FILE_PATH)
             # Redact the specific subset of fields within each script that we care about.
             i18n_data.dig('en', 'data', 'course', 'name').each_value do |course_data|
               markdown_data = course_data.slice('description', 'student_description', 'description_student', 'description_teacher')
@@ -69,7 +69,7 @@ module I18n
             end
 
             # Overwrite source file with redacted data
-            I18nScriptUtils.write_file(I18N_SOURCE_FILE_PATH, I18nScriptUtils.to_crowdin_yaml(i18n_data))
+            I18nScriptUtils.write_json_file(I18N_SOURCE_FILE_PATH, i18n_data)
           end
         end
       end

@@ -14,6 +14,11 @@ I18N_LOCALES_DIR = File.join(I18N_DIR, 'locales').freeze
 I18N_SOURCE_DIR = File.join(I18N_LOCALES_DIR, 'source').freeze
 I18N_ORIGINAL_DIR = File.join(I18N_LOCALES_DIR, 'original').freeze
 
+SOURCE_APPS_DIR = File.join(I18N_SOURCE_DIR, 'apps').freeze
+ORIGINAL_APPS_DIR = File.join(I18N_ORIGINAL_DIR, 'apps').freeze
+
+SOURCE_DASHBOARD_DIR = File.join(I18N_SOURCE_DIR, 'dashboard').freeze
+
 class I18nScriptUtils
   CROWDIN_CREDS_PATH = CDO.dir('bin/i18n/crowdin_credentials.yml').freeze
   PROGRESS_BAR_FORMAT = '%t: |%B| %p% %a'.freeze

@@ -1,0 +1,36 @@
+{
+  "name": "Shoes Survey",
+  "card": {
+    "description": "Survey about your preferences to help recommend what kind of shoes you should wear.",
+    "context": {
+      "potentialUses": "Recommend a pair of shoes based on personal questions.",
+      "potentialMisuses": "Anything other than the intended uses."
+    }
+  },
+  "fields": {
+    "spend time": {
+      "id": "spend time",
+      "description": "Where will you spending most of your time today?"
+    },
+    "weather": {
+      "id": "weather",
+      "description": "What is the weather like today?"
+    },
+    "socks": {
+      "id": "socks",
+      "description": "Will you be wearing socks?"
+    },
+    "day": {
+      "id": "day",
+      "description": "How would you describe your day today?"
+    },
+    "notice shoes": {
+      "id": "notice shoes",
+      "description": "Do you care if people notice your shoes?"
+    },
+    "shoe": {
+      "id": "shoe",
+      "description": "What kind of shoes are you planning on wearing today?"
+    }
+  }
+}

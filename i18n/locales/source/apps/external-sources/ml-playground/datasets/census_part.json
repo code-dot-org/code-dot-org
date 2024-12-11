@@ -1,0 +1,67 @@
+{
+  "card": {
+    "description": "Data from the 1994 US census, with income, personal, and job data. Used to predict whether a person's income is over $50,000.",
+    "context": {
+      "potentialUses": "Predict whether a person's income is over or under $50,000, based on their education level and age. Demonstrate racial and gender-based income inequality.",
+      "potentialMisuses": "Using this for something like determining whether or not to give someone a loan could be deeply unfair."
+    }
+  },
+  "fields": {
+    "age": {
+      "id": "age",
+      "description": "The person's age."
+    },
+    "type of employment": {
+      "id": "type of employment",
+      "description": "Type of employment: government, private, self."
+    },
+    "estimated number of people represented": {
+      "id": "estimated number of people represented",
+      "description": "The estimate for how many people in the US this person is representative of."
+    },
+    "education level": {
+      "id": "education level",
+      "description": "Their education level."
+    },
+    "marital status": {
+      "id": "marital status",
+      "description": "Marital status (married, single, divorced)."
+    },
+    "occupation": {
+      "id": "occupation",
+      "description": "What they do for a living."
+    },
+    "relationship": {
+      "id": "relationship",
+      "description": "Relationship description of their marital status."
+    },
+    "race": {
+      "id": "race",
+      "description": "Race (uses 1994 racial categories which excludes a number of distinctions)."
+    },
+    "gender": {
+      "id": "gender",
+      "description": "Gender (uses 1994 Census options, which are binary)."
+    },
+    "capital gains": {
+      "id": "capital gains",
+      "description": "Their reported capital gains for the year (these are monetary gains from things like selling stock instead of income from a job)."
+    },
+    "capital losses": {
+      "id": "capital losses",
+      "description": "Their reported capital losses (for example, if they sold a stock that lost them money)."
+    },
+    "hours of work per week": {
+      "id": "hours of work per week",
+      "description": "Hours they work a week."
+    },
+    "native-country": {
+      "id": "native-country",
+      "description": "Their country of origin."
+    },
+    "income": {
+      "id": "income",
+      "description": "Their income: binary for greater than or less than $50,000."
+    }
+  }
+}

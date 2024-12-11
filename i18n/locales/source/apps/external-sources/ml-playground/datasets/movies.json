@@ -1,0 +1,72 @@
+{
+  "name": "Movie Stats",
+  "card": {
+    "description": "A dataset of movies released from 1986-2016, with box office numbers, ratings, IMDB scores, and more.",
+    "context": {
+      "potentialUses": "For example, determine a movie's box office by its budget or genre.",
+      "potentialMisuses": ""
+    }
+  },
+  "fields": {
+    "Budget": {
+      "id": "Budget",
+      "description": "The budget of the film in USD. Films with no budget data have 0 here."
+    },
+    "Gross": {
+      "id": "Gross",
+      "description": "The movie's revenue in USD."
+    },
+    "Runtime": {
+      "id": "Runtime",
+      "description": "How long the movie is in minutes."
+    },
+    "Score": {
+      "id": "Score",
+      "description": "The IMDb user rating for the movie."
+    },
+    "Company": {
+      "id": "Company",
+      "description": "The production company."
+    },
+    "Country": {
+      "id": "Country",
+      "description": "The movie's country of origin."
+    },
+    "Director": {
+      "id": "Director",
+      "description": "The director of the movie."
+    },
+    "Genre": {
+      "id": "Genre",
+      "description": "The genre of the movie."
+    },
+    "Name": {
+      "id": "Name",
+      "description": "The name of the movie."
+    },
+    "Rating": {
+      "id": "Rating",
+      "description": "The MPAA rating, from G (all ages) to NC-17 (no children under 17)."
+    },
+    "Released": {
+      "id": "Released",
+      "description": "The month it was released in."
+    },
+    "Star": {
+      "id": "Star",
+      "description": "The lead actor or actress."
+    },
+    "Votes": {
+      "id": "Votes",
+      "description": "Number of votes the movie received in IMDB."
+    },
+    "Writer": {
+      "id": "Writer",
+      "description": "The writer of the movie."
+    },
+    "Year": {
+      "id": "Year",
+      "description": "The year it was released in."
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Isaac's Club Survey",
+  "card": {
+    "description": "Isaac and his four siblings asked everyone in their classes to fill out the survey. This led to a lot of data from people across many different groups.",
+    "context": {
+      "potentialUses": "The questions can help recommend a club to join based on your interests and personality.",
+      "potentialMisuses": "The data only came from people in our school and community - be careful about using it in different schools."
+    }
+  },
+  "fields": {
+    "color": {
+      "id": "color",
+      "description": "Which of these colors do you like the most?"
+    },
+    "music": {
+      "id": "music",
+      "description": "Which of these types of music do you like the most?"
+    },
+    "food": {
+      "id": "food",
+      "description": "Which of these types of foods do you like the most?"
+    },
+    "read vs tv": {
+      "id": "read vs tv",
+      "description": "How do you feel about the following statement: \"I would rather read than watch TV\""
+    },
+    "club": {
+      "id": "club",
+      "description": "What is a club you would want to join or are already a part of?"
+    }
+  }
+}

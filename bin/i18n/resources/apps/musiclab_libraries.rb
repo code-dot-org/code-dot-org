@@ -5,6 +5,7 @@ module I18n
     module Apps
       module MusiclabLibraries
         DIR_NAME = 'musiclab_libraries'
+        I18N_SOURCE_DIR_PATH = CDO.dir(SOURCE_APPS_DIR, DIR_NAME)
         # These mappings allow us to pre-translate an updated version of a library
         # before it becomes the published version.
         LIBRARY_NAME_IN_OUT_MAPPINGS = [

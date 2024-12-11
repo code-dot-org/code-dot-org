@@ -1,0 +1,52 @@
+{
+  "name": "Poutine",
+  "card": {
+    "description": "Survey of customers in a diner on whether or not they like certain poutine combinations.",
+    "context": {
+      "potentialUses": "Help make recommendations for what kind of poutine a new customer should order.",
+      "potentialMisuses": "Anything other than recommendations."
+    }
+  },
+  "fields": {
+    "mushrooms": {
+      "id": "mushrooms",
+      "description": "Does the poutine include mushrooms toppings?"
+    },
+    "lobster": {
+      "id": "lobster",
+      "description": "Does the poutine include lobster toppings?"
+    },
+    "pork": {
+      "id": "pork",
+      "description": "Does the poutine include pork toppings?"
+    },
+    "bacon": {
+      "id": "bacon",
+      "description": "Does the poutine include bacon toppings?"
+    },
+    "cheese": {
+      "id": "cheese",
+      "description": "Does the poutine include cheese toppings?"
+    },
+    "gravy": {
+      "id": "gravy",
+      "description": "Does the poutine include gravy toppings?"
+    },
+    "scallions": {
+      "id": "scallions",
+      "description": "Does the poutine include scallions toppings?"
+    },
+    "meat": {
+      "id": "meat",
+      "description": "Does the poutine include meat toppings?"
+    },
+    "bell peppers": {
+      "id": "bell peppers",
+      "description": "Does the poutine include bell peppers toppings?"
+    },
+    "preference": {
+      "id": "preference",
+      "description": "Do you like or dislike the poutine?"
+    }
+  }
+}

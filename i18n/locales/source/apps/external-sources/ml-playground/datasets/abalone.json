@@ -1,0 +1,48 @@
+{
+  "name": "Abalone",
+  "card": {
+    "description": "This dataset contains various attributes of different abalone, a type of marine snails. The goal is to predict the number of rings in the abalone's shell, which is an indicator of its age.",
+    "context": {
+      "potentialUses": "Determine the age of an abalone.",
+      "potentialMisuses": ""
+    }
+  },
+  "fields": {
+    "Sex": {
+      "id": "Sex",
+      "description": "The sex of the abalone: M, F, or I (Infant)."
+    },
+    "Length": {
+      "id": "Length",
+      "description": "Its length at the longest point in millimeters."
+    },
+    "Diameter": {
+      "id": "Diameter",
+      "description": "Its diameter in millimeters."
+    },
+    "Height": {
+      "id": "Height",
+      "description": "Its height with the snail in the shell in millimeters."
+    },
+    "Whole weight": {
+      "id": "Whole weight",
+      "description": "The weight of the entire abalone in grams."
+    },
+    "Shucked weight": {
+      "id": "Shucked weight",
+      "description": "The weight of the snail with the shell removed in grams."
+    },
+    "Viscera weight": {
+      "id": "Viscera weight",
+      "description": "The weight of the viscera, in grams."
+    },
+    "Shell weight": {
+      "id": "Shell weight",
+      "description": "The weight of the shell after being dried, in grams."
+    },
+    "Rings": {
+      "id": "Rings",
+      "description": "The age in years."
+    }
+  }
+}

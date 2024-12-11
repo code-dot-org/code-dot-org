@@ -1,0 +1,164 @@
+{
+  "name": "Nutrition",
+  "card": {
+    "description": "A dataset compiled by the USDA of various food items and their nutritional content: calories, minerals, vitamins, and a whole lot more.",
+    "context": {
+      "potentialUses": "For example, determine how many calories a food has from its nutritional content.",
+      "potentialMisuses": ""
+    }
+  },
+  "fields": {
+    "Category": {
+      "id": "Category",
+      "description": "The general category of food the item belongs to."
+    },
+    "Description": {
+      "id": "Description",
+      "description": "A full description of the item."
+    },
+    "Ash": {
+      "id": "Ash",
+      "description": "Ash content represents the total mineral content in foods. Measured in grams (g)."
+    },
+    "Beta Carotene": {
+      "id": "Beta Carotene",
+      "description": "A type of lipid molecule, measured in milligrams (mg)."
+    },
+    "Carbohydrate": {
+      "id": "Carbohydrate",
+      "description": "Dietary fiber or roughage is the indigestible portion of food derived from plants. It has two main components: soluble fiber and insoluble fiber. Measured in grams (g)."
+    },
+    "Cholesterol": {
+      "id": "Cholesterol",
+      "description": "The total number of kilocalories in this food item. A kilocalorie is a unit of energy of 1000 calories (equal to 1 large calorie)."
+    },
+    "Fiber": {
+      "id": "Fiber",
+      "description": null
+    },
+    "Kilocalories": {
+      "id": "Kilocalories",
+      "description": null
+    },
+    "Lutein and Zeaxanthin": {
+      "id": "Lutein and Zeaxanthin",
+      "description": null
+    },
+    "Lycopene": {
+      "id": "Lycopene",
+      "description": null
+    },
+    "Manganese": {
+      "id": "Manganese",
+      "description": null
+    },
+    "Niacin": {
+      "id": "Niacin",
+      "description": null
+    },
+    "Protein": {
+      "id": "Protein",
+      "description": null
+    },
+    "Retinol": {
+      "id": "Retinol",
+      "description": null
+    },
+    "Riboflavin": {
+      "id": "Riboflavin",
+      "description": null
+    },
+    "Selenium": {
+      "id": "Selenium",
+      "description": null
+    },
+    "Sugar Total": {
+      "id": "Sugar Total",
+      "description": null
+    },
+    "Thiamin": {
+      "id": "Thiamin",
+      "description": null
+    },
+    "Water": {
+      "id": "Water",
+      "description": null
+    },
+    "Fat: Monosaturated Fat": {
+      "id": "Fat: Monosaturated Fat",
+      "description": null
+    },
+    "Fat: Polysaturated Fat": {
+      "id": "Fat: Polysaturated Fat",
+      "description": null
+    },
+    "Fat: Saturated Fat": {
+      "id": "Fat: Saturated Fat",
+      "description": null
+    },
+    "Fat: Total Lipid": {
+      "id": "Fat: Total Lipid",
+      "description": null
+    },
+    "Major Minerals: Calcium": {
+      "id": "Major Minerals: Calcium",
+      "description": null
+    },
+    "Major Minerals: Copper": {
+      "id": "Major Minerals: Copper",
+      "description": null
+    },
+    "Major Minerals: Iron": {
+      "id": "Major Minerals: Iron",
+      "description": null
+    },
+    "Major Minerals: Magnesium": {
+      "id": "Major Minerals: Magnesium",
+      "description": null
+    },
+    "Major Minerals: Phosphorus": {
+      "id": "Major Minerals: Phosphorus",
+      "description": null
+    },
+    "Major Minerals: Potassium": {
+      "id": "Major Minerals: Potassium",
+      "description": null
+    },
+    "Major Minerals: Sodium": {
+      "id": "Major Minerals: Sodium",
+      "description": null
+    },
+    "Major Minerals: Zinc": {
+      "id": "Major Minerals: Zinc",
+      "description": null
+    },
+    "Vitamins: Vitamin A - IU": {
+      "id": "Vitamins: Vitamin A - IU",
+      "description": null
+    },
+    "Vitamins: Vitamin A - RAE": {
+      "id": "Vitamins: Vitamin A - RAE",
+      "description": null
+    },
+    "Vitamins: Vitamin B12": {
+      "id": "Vitamins: Vitamin B12",
+      "description": null
+    },
+    "Vitamins: Vitamin B6": {
+      "id": "Vitamins: Vitamin B6",
+      "description": null
+    },
+    "Vitamins: Vitamin C": {
+      "id": "Vitamins: Vitamin C",
+      "description": null
+    },
+    "Vitamins: Vitamin E": {
+      "id": "Vitamins: Vitamin E",
+      "description": null
+    },
+    "Vitamins: Vitamin K": {
+      "id": "Vitamins: Vitamin K",
+      "description": null
+    }
+  }
+}

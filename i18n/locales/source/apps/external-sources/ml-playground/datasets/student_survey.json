@@ -1,0 +1,612 @@
+{
+  "name": "Student Lifestyle Survey",
+  "card": {
+    "description": "A dataset of survey responses gathered by Slovak students at FSEV UK. Questions were asked about music, culture, their own phobias, and their demographic information. Most responses are rankings on a scale from 1 to 5. For example, the question 'Do you enjoy listening to music?' offered a scale from 1 (Strongly disagree) to 5 (Strongly agree). This dataset has a huge amount of questions to explore.",
+    "context": {
+      "potentialUses": "For example, determine if someone might like a certain type of music based on their other tastes.",
+      "potentialMisuses": "Using demographic information from a limited dataset to make assumptions about subgroups of people: for example, asking predictions about which genders are more likely to have which fears."
+    }
+  },
+  "fields": {
+    "Music": {
+      "id": "Music",
+      "description": "I enjoy listening to music"
+    },
+    "Slow songs or fast songs": {
+      "id": "Slow songs or fast songs",
+      "description": "I prefer fast-paced music"
+    },
+    "Dance": {
+      "id": "Dance",
+      "description": "I enjoy dance music"
+    },
+    "Folk": {
+      "id": "Folk",
+      "description": "I enjoy folk music"
+    },
+    "Country": {
+      "id": "Country",
+      "description": "I enjoy country music"
+    },
+    "Classical music": {
+      "id": "Classical music",
+      "description": "I enjoy Classical music"
+    },
+    "Musical": {
+      "id": "Musical",
+      "description": "I enjoy Musicals music"
+    },
+    "Pop": {
+      "id": "Pop",
+      "description": "I enjoy Pop music"
+    },
+    "Rock": {
+      "id": "Rock",
+      "description": "I enjoy Rock music"
+    },
+    "Metal or Hardrock": {
+      "id": "Metal or Hardrock",
+      "description": "I enjoy Metal or Hardrock music"
+    },
+    "Punk": {
+      "id": "Punk",
+      "description": "I enjoy Punk music"
+    },
+    "Hiphop, Rap": {
+      "id": "Hiphop, Rap",
+      "description": "I enjoy Hiphop or Rap music"
+    },
+    "Reggae, Ska": {
+      "id": "Reggae, Ska",
+      "description": "I enjoy Reggae or Ska music"
+    },
+    "Swing, Jazz": {
+      "id": "Swing, Jazz",
+      "description": "I enjoy Swing or Jazz music"
+    },
+    "Rock n roll": {
+      "id": "Rock n roll",
+      "description": "I enjoy Rock n roll music"
+    },
+    "Alternative": {
+      "id": "Alternative",
+      "description": "I enjoy Alternative music"
+    },
+    "Latino": {
+      "id": "Latino",
+      "description": "I enjoy Latino music"
+    },
+    "Techno, Trance": {
+      "id": "Techno, Trance",
+      "description": "I enjoy Techno or Trance music"
+    },
+    "Opera": {
+      "id": "Opera",
+      "description": "I enjoy Opera music"
+    },
+    "Movies": {
+      "id": "Movies",
+      "description": "I enjoy watching movies"
+    },
+    "Horror": {
+      "id": "Horror",
+      "description": "I enjoy horror movies"
+    },
+    "Thriller": {
+      "id": "Thriller",
+      "description": "I enjoy Thriller movies"
+    },
+    "Comedy": {
+      "id": "Comedy",
+      "description": "I enjoy Comedy movies"
+    },
+    "Romantic": {
+      "id": "Romantic",
+      "description": "I enjoy Romantic movies"
+    },
+    "Sci-fi": {
+      "id": "Sci-fi",
+      "description": "I enjoy Sci-fi movies"
+    },
+    "War": {
+      "id": "War",
+      "description": "I enjoy War movies"
+    },
+    "Fantasy/Fairy tales": {
+      "id": "Fantasy/Fairy tales",
+      "description": "I enjoy Fantasy/Fairy tale movies"
+    },
+    "Animated": {
+      "id": "Animated",
+      "description": "I enjoy Animated movies"
+    },
+    "Documentary": {
+      "id": "Documentary",
+      "description": "I enjoy Documentary movies"
+    },
+    "Western": {
+      "id": "Western",
+      "description": "I enjoy Western movies"
+    },
+    "Action": {
+      "id": "Action",
+      "description": "I enjoy Action movies"
+    },
+    "History": {
+      "id": "History",
+      "description": "I like history"
+    },
+    "Psychology": {
+      "id": "Psychology",
+      "description": "I like Psychology"
+    },
+    "Politics": {
+      "id": "Politics",
+      "description": "I like Politics"
+    },
+    "Mathematics": {
+      "id": "Mathematics",
+      "description": "I like Mathematics"
+    },
+    "Physics": {
+      "id": "Physics",
+      "description": "I like Physics"
+    },
+    "Internet": {
+      "id": "Internet",
+      "description": "I like to use the Internet"
+    },
+    "PC": {
+      "id": "PC",
+      "description": "I like to use PCs"
+    },
+    "Economy Management": {
+      "id": "Economy Management",
+      "description": "I like Economy Management"
+    },
+    "Biology": {
+      "id": "Biology",
+      "description": "I like Biology"
+    },
+    "Chemistry": {
+      "id": "Chemistry",
+      "description": "I like Chemistry"
+    },
+    "Reading": {
+      "id": "Reading",
+      "description": "I like to Reading"
+    },
+    "Geography": {
+      "id": "Geography",
+      "description": "I like Geography"
+    },
+    "Foreign languages": {
+      "id": "Foreign languages",
+      "description": "I like Foreign languages"
+    },
+    "Medicine": {
+      "id": "Medicine",
+      "description": "I like Medicine"
+    },
+    "Law": {
+      "id": "Law",
+      "description": "I like Law"
+    },
+    "Cars": {
+      "id": "Cars",
+      "description": "I like Cars"
+    },
+    "Art exhibitions": {
+      "id": "Art exhibitions",
+      "description": "I like Art exhibitions"
+    },
+    "Religion": {
+      "id": "Religion",
+      "description": "I like Religion"
+    },
+    "Countryside, outdoors": {
+      "id": "Countryside, outdoors",
+      "description": "I like the Countryside, outdoors"
+    },
+    "Dancing": {
+      "id": "Dancing",
+      "description": "I like Dancing"
+    },
+    "Musical instruments": {
+      "id": "Musical instruments",
+      "description": "I like Musical instruments"
+    },
+    "Writing": {
+      "id": "Writing",
+      "description": "I like Writing"
+    },
+    "Passive sport": {
+      "id": "Passive sport",
+      "description": "I like Passive sports"
+    },
+    "Active sport": {
+      "id": "Active sport",
+      "description": "I like Active sport"
+    },
+    "Gardening": {
+      "id": "Gardening",
+      "description": "I like Gardening"
+    },
+    "Celebrities": {
+      "id": "Celebrities",
+      "description": "I like Celebrities"
+    },
+    "Shopping": {
+      "id": "Shopping",
+      "description": "I like Shopping"
+    },
+    "Science and technology": {
+      "id": "Science and technology",
+      "description": "I like Science and technology"
+    },
+    "Theatre": {
+      "id": "Theatre",
+      "description": "I like Theatre"
+    },
+    "Fun with friends": {
+      "id": "Fun with friends",
+      "description": "I like having Fun with friends"
+    },
+    "Adrenaline sports": {
+      "id": "Adrenaline sports",
+      "description": "I like Adrenaline sports"
+    },
+    "Pets": {
+      "id": "Pets",
+      "description": "I like Pets"
+    },
+    "Flying": {
+      "id": "Flying",
+      "description": "I am afraid of flying"
+    },
+    "Storm": {
+      "id": "Storm",
+      "description": "I am afraid of Storms"
+    },
+    "Darkness": {
+      "id": "Darkness",
+      "description": "I am afraid of Darkness"
+    },
+    "Heights": {
+      "id": "Heights",
+      "description": "I am afraid of Heights"
+    },
+    "Spiders": {
+      "id": "Spiders",
+      "description": "I am afraid of Spiders"
+    },
+    "Snakes": {
+      "id": "Snakes",
+      "description": "I am afraid of Snakes"
+    },
+    "Rats": {
+      "id": "Rats",
+      "description": "I am afraid of Rats"
+    },
+    "Ageing": {
+      "id": "Ageing",
+      "description": "I am afraid of Ageing"
+    },
+    "Dangerous dogs": {
+      "id": "Dangerous dogs",
+      "description": "I am afraid of Dangerous dogs"
+    },
+    "Fear of public speaking": {
+      "id": "Fear of public speaking",
+      "description": "I am afraid of  public speaking"
+    },
+    "Smoking": {
+      "id": "Smoking",
+      "description": "Smoking habits"
+    },
+    "Alcohol": {
+      "id": "Alcohol",
+      "description": "Drinking habits"
+    },
+    "Healthy eating": {
+      "id": "Healthy eating",
+      "description": "I live a very healthy lifestyle"
+    },
+    "Daily events": {
+      "id": "Daily events",
+      "description": "I take notice of what goes on around me."
+    },
+    "Prioritising workload": {
+      "id": "Prioritising workload",
+      "description": "I try to do tasks as soon as possible and not leave them until last minute."
+    },
+    "Writing notes": {
+      "id": "Writing notes",
+      "description": "I always make a list so I don't forget anything."
+    },
+    "Workaholism": {
+      "id": "Workaholism",
+      "description": "I often study or work even in my spare time."
+    },
+    "Thinking ahead": {
+      "id": "Thinking ahead",
+      "description": "I look at things from all different angles before I go ahead."
+    },
+    "Final judgement": {
+      "id": "Final judgement",
+      "description": "I believe that bad people will suffer one day and good people will be rewarded."
+    },
+    "Reliability": {
+      "id": "Reliability",
+      "description": "I am reliable at work and always complete all tasks given to me."
+    },
+    "Keeping promises": {
+      "id": "Keeping promises",
+      "description": "I always keep my promises."
+    },
+    "Loss of interest": {
+      "id": "Loss of interest",
+      "description": "I can fall for someone very quickly and then completely lose interest."
+    },
+    "Friends versus money": {
+      "id": "Friends versus money",
+      "description": "I would rather have lots of friends than lots of money."
+    },
+    "Funniness": {
+      "id": "Funniness",
+      "description": "I always try to be the funniest one."
+    },
+    "Fake": {
+      "id": "Fake",
+      "description": "I can be two faced sometimes."
+    },
+    "Criminal damage": {
+      "id": "Criminal damage",
+      "description": "I damaged things in the past when angry."
+    },
+    "Decision making": {
+      "id": "Decision making",
+      "description": "I take my time to make decisions."
+    },
+    "Elections": {
+      "id": "Elections",
+      "description": "I always try to vote in elections."
+    },
+    "Self-criticism": {
+      "id": "Self-criticism",
+      "description": "I often think about and regret the decisions I make."
+    },
+    "Judgment calls": {
+      "id": "Judgment calls",
+      "description": "I can tell if people listen to me or not when I talk to them."
+    },
+    "Hypochondria": {
+      "id": "Hypochondria",
+      "description": "I am a hypochondriac."
+    },
+    "Empathy": {
+      "id": "Empathy",
+      "description": "I am emphatetic person."
+    },
+    "Eating to survive": {
+      "id": "Eating to survive",
+      "description": "I eat because I have to. I don't enjoy food and eat as fast as I can."
+    },
+    "Giving": {
+      "id": "Giving",
+      "description": "I try to give as much as I can to other people at Christmas."
+    },
+    "Compassion to animals": {
+      "id": "Compassion to animals",
+      "description": "I don't like seeing animals suffering."
+    },
+    "Borrowed stuff": {
+      "id": "Borrowed stuff",
+      "description": "I look after things I have borrowed from others."
+    },
+    "Loneliness": {
+      "id": "Loneliness",
+      "description": "I feel lonely in life."
+    },
+    "Cheating in school": {
+      "id": "Cheating in school",
+      "description": "I used to cheat at school."
+    },
+    "Health": {
+      "id": "Health",
+      "description": "I worry about my health."
+    },
+    "Changing the past": {
+      "id": "Changing the past",
+      "description": "I wish I could change the past because of the things I have done."
+    },
+    "God": {
+      "id": "God",
+      "description": "I believe in God."
+    },
+    "Dreams": {
+      "id": "Dreams",
+      "description": "I always have good dreams."
+    },
+    "Charity": {
+      "id": "Charity",
+      "description": "I always give to charity."
+    },
+    "Number of friends": {
+      "id": "Number of friends",
+      "description": "I have lots of friends."
+    },
+    "Punctuality": {
+      "id": "Punctuality",
+      "description": "Timekeeping."
+    },
+    "Lying": {
+      "id": "Lying",
+      "description": "Do you lie to others?"
+    },
+    "Waiting": {
+      "id": "Waiting",
+      "description": "I am very patient."
+    },
+    "New environment": {
+      "id": "New environment",
+      "description": "I can quickly adapt to a new environment."
+    },
+    "Mood swings": {
+      "id": "Mood swings",
+      "description": "My moods change quickly."
+    },
+    "Appearence and gestures": {
+      "id": "Appearence and gestures",
+      "description": "I am well mannered and I look after my appearance."
+    },
+    "Socializing": {
+      "id": "Socializing",
+      "description": "I enjoy meeting new people."
+    },
+    "Achievements": {
+      "id": "Achievements",
+      "description": "I always let other people know about my achievements."
+    },
+    "Responding to a serious letter": {
+      "id": "Responding to a serious letter",
+      "description": "I think carefully before answering any important letters."
+    },
+    "Children": {
+      "id": "Children",
+      "description": "I enjoy childrens' company."
+    },
+    "Assertiveness": {
+      "id": "Assertiveness",
+      "description": "I am not afraid to give my opinion if I feel strongly about something."
+    },
+    "Getting angry": {
+      "id": "Getting angry",
+      "description": "I can get angry very easily."
+    },
+    "Knowing the right people": {
+      "id": "Knowing the right people",
+      "description": "I always make sure I connect with the right people."
+    },
+    "Public speaking": {
+      "id": "Public speaking",
+      "description": "I have to be well prepared before public speaking."
+    },
+    "Unpopularity": {
+      "id": "Unpopularity",
+      "description": "I will find a fault in myself if people don't like me."
+    },
+    "Life struggles": {
+      "id": "Life struggles",
+      "description": "I cry when I feel down or things don't go the right way."
+    },
+    "Happiness in life": {
+      "id": "Happiness in life",
+      "description": "I am 100% happy with my life."
+    },
+    "Energy levels": {
+      "id": "Energy levels",
+      "description": "I am always full of life and energy."
+    },
+    "Small - big dogs": {
+      "id": "Small - big dogs",
+      "description": "I prefer big dangerous dogs to smaller, calmer dogs."
+    },
+    "Personality": {
+      "id": "Personality",
+      "description": "I believe all my personality traits are positive."
+    },
+    "Finding lost valuables": {
+      "id": "Finding lost valuables",
+      "description": "If I find something the doesn't belong to me I will hand it in."
+    },
+    "Getting up": {
+      "id": "Getting up",
+      "description": "I find it very difficult to get up in the morning."
+    },
+    "Interests or hobbies": {
+      "id": "Interests or hobbies",
+      "description": "I have many different hobbies and interests."
+    },
+    "Parents' advice": {
+      "id": "Parents' advice",
+      "description": "I always listen to my parents' advice."
+    },
+    "Questionnaires or polls": {
+      "id": "Questionnaires or polls",
+      "description": "I enjoy taking part in surveys."
+    },
+    "Internet usage": {
+      "id": "Internet usage",
+      "description": "How much time do you spend online?"
+    },
+    "Finances": {
+      "id": "Finances",
+      "description": "I save all the money I can."
+    },
+    "Shopping centres": {
+      "id": "Shopping centres",
+      "description": "I enjoy going to large shopping centres."
+    },
+    "Branded clothing": {
+      "id": "Branded clothing",
+      "description": "I prefer branded clothing to non branded."
+    },
+    "Entertainment spending": {
+      "id": "Entertainment spending",
+      "description": "I spend a lot of money on  partying and socializing."
+    },
+    "Spending on looks": {
+      "id": "Spending on looks",
+      "description": "I spend a lot of money on my appearance."
+    },
+    "Spending on gadgets": {
+      "id": "Spending on gadgets",
+      "description": "I spend a lot of money on gadgets."
+    },
+    "Spending on healthy eating": {
+      "id": "Spending on healthy eating",
+      "description": "I will hapilly pay more money for good, quality or healthy food."
+    },
+    "Age": {
+      "id": "Age",
+      "description": "Age"
+    },
+    "Height": {
+      "id": "Height",
+      "description": "Height"
+    },
+    "Weight": {
+      "id": "Weight",
+      "description": "Weight"
+    },
+    "Number of siblings": {
+      "id": "Number of siblings",
+      "description": "Number of siblings"
+    },
+    "Gender": {
+      "id": "Gender",
+      "description": "Gender"
+    },
+    "Left - right handed": {
+      "id": "Left - right handed",
+      "description": "Left - right handed"
+    },
+    "Education": {
+      "id": "Education",
+      "description": "Highest education achieved:"
+    },
+    "Only child": {
+      "id": "Only child",
+      "description": "I am the only child"
+    },
+    "Village - town": {
+      "id": "Village - town",
+      "description": "I spent most of my childhood in a: village or city."
+    },
+    "House - block of flats": {
+      "id": "House - block of flats",
+      "description": "I lived most of my childhood in a: house or block of flats (apartments)."
+    }
+  }
+}

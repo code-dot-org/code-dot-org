@@ -1,0 +1,32 @@
+{
+  "name": "Kim's Club Survey",
+  "card": {
+    "description": "Kim asked her older sister what questions she should put in the survey, then sent the survey in an email to her sister's friends at the private university where she goes to school.",
+    "context": {
+      "potentialUses": "The questions can help recommend a club to join based on your interests and personality.",
+      "potentialMisuses": "The data only came from people in our school and community - be careful about using it in different schools."
+    }
+  },
+  "fields": {
+    "activity": {
+      "id": "activity",
+      "description": "Which of these activities did you do within the last month?"
+    },
+    "pet you own": {
+      "id": "pet you own",
+      "description": "Which of these pets do you own?"
+    },
+    "favorite movie": {
+      "id": "favorite movie",
+      "description": "Which of these movies do you like the most?"
+    },
+    "lunch food": {
+      "id": "lunch food",
+      "description": "Which of these foods would you eat for lunch?"
+    },
+    "club": {
+      "id": "club",
+      "description": "What is a club you would want to join or are already a part of?"
+    }
+  }
+}
