@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 
@@ -45,59 +44,53 @@ const CensusForm = ({
     otherTopicsDesc: '',
     schoolName: prefillData.schoolName ?? '',
     schoolYear: initialSchoolYear,
-    submission: {
-      name: prefillData.userName ?? '',
-      email: prefillData.userEmail ?? '',
-      role: prefillData.isTeacher ? 'TEACHER' : '',
-      country: prefillData.schoolCountry ?? 'United States',
-      hoc: '',
-      schoolName: prefillData.schoolName ?? '',
-      schoolCity: '',
-      schoolState: prefillData.schoolState ?? '',
-      schoolZip: prefillData.schoolZip ?? '',
-      schoolType: prefillData.schoolType ?? '',
-      afterSchool: '',
-      tenHours: '',
-      twentyHours: '',
-      otherCS: false,
-      followUpFrequency: '',
-      followUpMore: '',
-      acceptedPledge: false,
-      share: '',
-      optIn: '',
-    },
-    errors: {
-      invalidEmail: false,
-    },
+  });
+  const [submission, setSubmission] = useState({
+    name: prefillData.userName ?? '',
+    email: prefillData.userEmail ?? '',
+    role: prefillData.isTeacher ? 'TEACHER' : '',
+    country: prefillData.schoolCountry ?? 'United States',
+    hoc: '',
+    schoolName: prefillData.schoolName ?? '',
+    schoolCity: '',
+    schoolState: prefillData.schoolState ?? '',
+    schoolZip: prefillData.schoolZip ?? '',
+    schoolType: prefillData.schoolType ?? '',
+    afterSchool: '',
+    tenHours: '',
+    twentyHours: '',
+    otherCS: false,
+    followUpFrequency: '',
+    followUpMore: '',
+    acceptedPledge: false,
+    share: '',
+    optIn: '',
+  });
+  const [errors, setErrors] = useState({
+    invalidEmail: false,
   });
 
   useEffect(() => {
     setState(prevState => ({
       ...prevState,
       showFollowUp:
-        state.submission.twentyHours === 'SOME' ||
-        state.submission.twentyHours === 'ALL',
+        submission.twentyHours === 'SOME' || submission.twentyHours === 'ALL',
     }));
-  }, [state.submission.twentyHours]);
+  }, [submission.twentyHours]);
 
   useEffect(() => {
     setState(prevState => ({
       ...prevState,
       showPledge:
-        state.submission.role === 'TEACHER' ||
-        state.submission.role === 'ADMINISTRATOR',
+        submission.role === 'TEACHER' || submission.role === 'ADMINISTRATOR',
     }));
-  }, [state.submission.role]);
+  }, [submission.role]);
 
   const handleChange = (field, event) => {
-    setState(
-      {
-        submission: {
-          ...state.submission,
-          [field]: event.target.value,
-        },
-      }
-    );
+    setSubmission(prevState => ({
+      ...prevState,
+      [field]: event.target.value,
+    }));
   };
 
   const handleSchoolDropdownChange = (field, event) => {
@@ -105,30 +98,24 @@ const CensusForm = ({
   };
 
   const handleDropdownChange = (field, event) => {
-    setState({
-      submission: {
-        ...state.submission,
-        [field]: event ? event.value : '',
-      },
-    });
+    setSubmission(prevState => ({
+      ...prevState,
+      [field]: event ? event.value : '',
+    }));
   };
 
   const togglePledge = () => {
-    setState({
-      submission: {
-        ...state.submission,
-        acceptedPledge: !state.submission.acceptedPledge,
-      },
-    });
+    setSubmission(prevState => ({
+      ...prevState,
+      acceptedPledge: !prevState.acceptedPledge,
+    }));
   };
 
   const toggleOtherCS = () => {
-    setState({
-      submission: {
-        ...state.submission,
-        otherCS: !state.submission.otherCS,
-      },
-    });
+    setSubmission(prevState => ({
+      ...prevState,
+      otherCS: !prevState.otherCS,
+    }));
   };
 
   const toggleTopics = option => {
@@ -140,15 +127,17 @@ const CensusForm = ({
   };
 
   const selectOption = option => {
-    setState({
-      selectedTopics: state.selectedTopics.concat(option),
-    });
+    setState(prevState => ({
+      ...prevState,
+      selectedTopics: [...prevState.selectedTopics, option],
+    }));
   };
 
   const clearOption = option => {
-    setState({
-      selectedTopics: _.without(state.selectedTopics, option),
-    });
+    setState(prevState => ({
+      ...prevState,
+      selectedTopics: prevState.selectedTopics.filter(opt => opt !== option),
+    }));
   };
 
   const updateOtherTopicsDesc = event => {
@@ -164,7 +153,7 @@ const CensusForm = ({
       selectOption('topic_other_b');
     }
 
-    setState({otherTopicsDesc: description});
+    setState(prevState => ({...prevState, otherTopicsDesc: description}));
   };
 
   const processResponse = () => {
@@ -193,28 +182,28 @@ const CensusForm = ({
     };
 
     const errorJSON = error.responseJSON;
-    Object.keys(errorJSON).map(key => {
-      const errorKey = errorMap[key];
-      let newErrors = state.errors;
-      newErrors[errorKey] = true;
-      setState({
-        errors: newErrors,
+    setErrors(prevState => {
+      const updatedErrors = {...prevState};
+      Object.keys(errorJSON).forEach(key => {
+        const errorKey = errorMap[key];
+        updatedErrors[errorKey] = true;
       });
+      return updatedErrors;
     });
   };
 
   const getSchoolId = () => {
     if (schoolDropdownOption) {
       return schoolDropdownOption.value;
-    } else if (prefillData && prefillData['schoolId']) {
-      return prefillData['schoolId'];
+    } else if (prefillData && prefillData.schoolId) {
+      return prefillData.schoolId;
     } else {
       return '';
     }
   };
 
   const validateSchoolDropdown = () => {
-    if (state.submission.country === 'United States') {
+    if (submission.country === 'United States') {
       if (getSchoolId()) {
         return false;
       } else {
@@ -226,7 +215,6 @@ const CensusForm = ({
   };
 
   const validateSchool = () => {
-    const {submission} = state;
     if (submission.country === 'United States' && getSchoolId() === '-1') {
       return (
         validateNotBlank(submission.schoolName) ||
@@ -240,69 +228,46 @@ const CensusForm = ({
     }
   };
 
-  const validateNotBlank = questionField => {
-    return questionField === '';
-  };
+  const validateNotBlank = questionField => questionField === '';
 
-  const validateTopics = () => {
-    return state.showFollowUp && state.selectedTopics.length === 0;
-  };
+  const validateTopics = () =>
+    state.showFollowUp && state.selectedTopics.length === 0;
 
-  const validateFrequency = () => {
-    return state.showFollowUp && state.submission.followUpFrequency === '';
-  };
+  const validateFrequency = () =>
+    state.showFollowUp && submission.followUpFrequency === '';
 
   const validateSubmission = () => {
-    setState(
-      {
-        errors: {
-          ...state.errors,
-          email: validateNotBlank(state.submission.email),
-          topics: validateTopics(),
-          frequency: validateFrequency(),
-          country: validateNotBlank(state.submission.country),
-          nces: validateSchoolDropdown(),
-          school: validateSchool(),
-          role: validateNotBlank(state.submission.role),
-          hoc: validateNotBlank(state.submission.hoc),
-          afterSchool: validateNotBlank(state.submission.afterSchool),
-          tenHours: validateNotBlank(state.submission.tenHours),
-          twentyHours: validateNotBlank(state.submission.twentyHours),
-          share: validateNotBlank(state.submission.share),
-          optIn: validateNotBlank(state.submission.optIn),
-        },
-      },
-      censusFormSubmit
-    );
+    const updatedErrors = {...errors};
+    updatedErrors.email = validateNotBlank(submission.email);
+    updatedErrors.topics = validateTopics();
+    updatedErrors.frequency = validateFrequency();
+    updatedErrors.country = validateNotBlank(submission.country);
+    updatedErrors.nces = validateSchoolDropdown();
+    updatedErrors.school = validateSchool();
+    updatedErrors.role = validateNotBlank(submission.role);
+    updatedErrors.hoc = validateNotBlank(submission.hoc);
+    updatedErrors.afterSchool = validateNotBlank(submission.afterSchool);
+    updatedErrors.tenHours = validateNotBlank(submission.tenHours);
+    updatedErrors.twentyHours = validateNotBlank(submission.twentyHours);
+    updatedErrors.share = validateNotBlank(submission.share);
+    updatedErrors.optIn = validateNotBlank(submission.optIn);
+
+    setErrors(updatedErrors);
+
+    if (Object.values(updatedErrors).every(value => value === false)) {
+      censusFormSubmit();
+    }
   };
 
   const censusFormSubmit = () => {
-    const {errors} = state;
-    if (
-      !errors.email &&
-      !errors.topics &&
-      !errors.frequency &&
-      !errors.school &&
-      !errors.nces &&
-      !errors.role &&
-      !errors.hoc &&
-      !errors.afterSchool &&
-      !errors.tenHours &&
-      !errors.twentyHours &&
-      !errors.country &&
-      !errors.share &&
-      !errors.optIn
-    ) {
-      $.ajax({
-        url: '/dashboardapi/v1/census/CensusYourSchool2017v7',
-        type: 'post',
-        dataType: 'json',
-        data: $('#census-form').serialize(),
-      })
-        .done(processResponse)
-        .fail(processError.bind(this));
-      event.preventDefault();
-    }
+    $.ajax({
+      url: '/dashboardapi/v1/census/CensusYourSchool2017v7',
+      type: 'post',
+      dataType: 'json',
+      data: $('#census-form').serialize(),
+    })
+      .done(processResponse)
+      .fail(processError);
   };
 
   const topicCheckbox = (name, label) => {
@@ -319,24 +284,10 @@ const CensusForm = ({
     );
   };
 
-  const {showFollowUp, showPledge, submission, errors} = state;
-  const showErrorMsg = !!(
-    errors.email ||
-    errors.topics ||
-    errors.frequency ||
-    errors.school ||
-    errors.role ||
-    errors.hoc ||
-    errors.afterSchool ||
-    errors.tenHours ||
-    errors.twentyHours ||
-    errors.country ||
-    errors.nces ||
-    errors.share ||
-    errors.optIn
-  );
+  const {showFollowUp, showPledge} = state;
+  const showErrorMsg = Object.values(errors).some(value => value === true);
   const US = submission.country === 'United States';
-  let schoolId = prefillData['schoolId'] || '';
+  let schoolId = prefillData.schoolId ?? '';
   if (schoolDropdownOption) {
     schoolId = undefined;
   }
@@ -415,7 +366,7 @@ const CensusForm = ({
             </div>
             <select
               name="how_many_do_hoc"
-              value={state.submission.hoc}
+              value={submission.hoc}
               onChange={handleChange.bind(this, 'hoc')}
               style={styles.dropdown}
             >
@@ -437,7 +388,7 @@ const CensusForm = ({
             </div>
             <select
               name="how_many_after_school"
-              value={state.submission.afterSchool}
+              value={submission.afterSchool}
               onChange={handleChange.bind(this, 'afterSchool')}
               style={styles.dropdown}
             >
@@ -459,7 +410,7 @@ const CensusForm = ({
             </div>
             <select
               name="how_many_10_hours"
-              value={state.submission.tenHours}
+              value={submission.tenHours}
               onChange={handleChange.bind(this, 'tenHours')}
               style={styles.dropdown}
             >
@@ -481,7 +432,7 @@ const CensusForm = ({
             </div>
             <select
               name="how_many_20_hours"
-              value={state.submission.twentyHours}
+              value={submission.twentyHours}
               onChange={handleChange.bind(this, 'twentyHours')}
               style={styles.dropdown}
             >
@@ -548,7 +499,7 @@ const CensusForm = ({
               )}
               <select
                 name="class_frequency"
-                value={state.submission.followUpFrequency}
+                value={submission.followUpFrequency}
                 onChange={handleChange.bind(this, 'followUpFrequency')}
                 style={styles.wideDropdown}
               >
@@ -566,7 +517,7 @@ const CensusForm = ({
               <textarea
                 type="text"
                 name="tell_us_more"
-                value={state.submission.followUpMore}
+                value={submission.followUpMore}
                 onChange={handleChange.bind(this, 'followUpMore')}
                 style={styles.textArea}
               />
@@ -583,7 +534,7 @@ const CensusForm = ({
           )}
           <select
             name="submitter_role"
-            value={state.submission.role}
+            value={submission.role}
             onChange={handleChange.bind(this, 'role')}
             style={styles.wideDropdown}
           >
@@ -609,7 +560,7 @@ const CensusForm = ({
             <input
               type="text"
               name="submitter_email_address"
-              value={state.submission.email}
+              value={submission.email}
               onChange={handleChange.bind(this, 'email')}
               placeholder={i18n.yourEmailPlaceholder()}
               style={styles.input}
@@ -627,7 +578,7 @@ const CensusForm = ({
             </span>
             <select
               name="share_with_regional_partners"
-              value={state.submission.share}
+              value={submission.share}
               onChange={handleChange.bind(this, 'share')}
               style={styles.dropdown}
             >
@@ -657,7 +608,7 @@ const CensusForm = ({
 
           <select
             name="opt_in"
-            value={state.submission.optIn}
+            value={submission.optIn}
             onChange={handleChange.bind(this, 'optIn')}
             style={styles.dropdown}
           >
@@ -676,7 +627,7 @@ const CensusForm = ({
             <input
               type="text"
               name="submitter_name"
-              value={state.submission.name}
+              value={submission.name}
               onChange={handleChange.bind(this, 'name')}
               placeholder={i18n.yourName()}
               style={styles.input}
