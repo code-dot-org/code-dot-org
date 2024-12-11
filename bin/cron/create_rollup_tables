@@ -54,7 +54,6 @@ def main
   LevelGroup.find_each do |level|
     level.pages.each_with_index do |page, page_index|
       page.levels.each_with_index do |contained_level, position_index|
-        next unless contained_level.type == 'Multi'
         next if contained_levels.
           any? {|existing_contained_level| existing_contained_level[:level_id] == contained_level.id}
 
@@ -68,6 +67,7 @@ def main
           contained_level_text: sanitize_string_for_db(contained_question)
         }
 
+        next unless contained_level.type == 'Multi'
         answers = contained_level.properties['answers']
         answers.each_with_index do |answer, answer_number|
           contained_level_answers << {
@@ -83,8 +83,6 @@ def main
 
   Level.find_each do |level|
     level.contained_levels.each_with_index do |contained_level, index|
-      next unless contained_level.type == 'Multi'
-
       contained_question = get_contained_question(contained_level)
       contained_levels << {
         level_id: level.id,
@@ -95,6 +93,7 @@ def main
         contained_level_text: sanitize_string_for_db(contained_question)
       }
 
+      next unless contained_level.type == 'Multi'
       answers = contained_level.properties['answers']
       answers.each_with_index do |answer, answer_number|
         contained_level_answers << {
