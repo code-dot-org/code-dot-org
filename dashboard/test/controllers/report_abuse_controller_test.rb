@@ -99,19 +99,16 @@ class ReportAbuseControllerTest < ActionController::TestCase
     assert_equal 0, JSON.parse(response.body)['abuse_score']
   end
 
-  test "can't reset nor buffer abuse score as signed-out user" do
+  test "can't reset abuse score as signed-out user" do
     response = get :show_abuse, params: {channel_id: @channel_id}
     assert response.ok?
     assert_equal 0, JSON.parse(response.body)['abuse_score']
 
     response = delete :reset_abuse, params: {channel_id: @channel_id}
     assert response.unauthorized?
-
-    response = post :buffer_abuse, params: {channel_id: @channel_id}
-    assert response.unauthorized?
   end
 
-  test "can't reset nor buffer abuse score as student user" do
+  test "can't reset abuse score as student user" do
     response = get :show_abuse, params: {channel_id: @channel_id}
     assert response.ok?
     assert_equal 0, JSON.parse(response.body)['abuse_score']
@@ -120,9 +117,6 @@ class ReportAbuseControllerTest < ActionController::TestCase
     sign_in user
 
     response = delete :reset_abuse, params: {channel_id: @channel_id}
-    assert response.unauthorized?
-
-    response = post :buffer_abuse, params: {channel_id: @channel_id}
     assert response.unauthorized?
   end
 
@@ -137,20 +131,6 @@ class ReportAbuseControllerTest < ActionController::TestCase
     response = delete :reset_abuse, params: {channel_id: @channel_id}
     assert response.ok?
     assert_equal 0, JSON.parse(response.body)['abuse_score']
-  end
-
-  test "can buffer abuse score as project_validator" do
-    response = get :show_abuse, params: {channel_id: @channel_id}
-    assert response.ok?
-    assert_equal 0, JSON.parse(response.body)['abuse_score']
-
-    user = create(:project_validator)
-    sign_in user
-
-    response = post :buffer_abuse, params: {channel_id: @channel_id}
-    assert response.ok?
-    buffered_score = -50
-    assert_equal buffered_score, JSON.parse(response.body)['abuse_score']
   end
 
   test "base64 error" do

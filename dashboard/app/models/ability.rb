@@ -506,7 +506,6 @@ class Ability
       can :manage, LevelSource
       # let them change abuse scores
       can :destroy_abuse, :all
-      can :buffer_abuse, :all
       can :update_file_abuse, :all
     end
 

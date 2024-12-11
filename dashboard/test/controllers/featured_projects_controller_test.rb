@@ -16,14 +16,14 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
   end
 
   test 'project validators can bookmark a project as a featured project' do
-    @controller.stubs(:buffer_abuse_score).returns(nil)
+    @controller.stubs(:reset_abuse_score).returns(nil)
     sign_in @project_validator
     put :bookmark, params: {channel_id: @project_new.channel_id}
     assert_response :success
   end
 
   test 'project validators can feature projects' do
-    @controller.stubs(:buffer_abuse_score).returns(nil)
+    @controller.stubs(:reset_abuse_score).returns(nil)
     sign_in @project_validator
     put :feature, params: {channel_id: @project_new.channel_id}
     assert_response :success
@@ -66,7 +66,7 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
   end
 
   test 'bookmarking a never featured project creates a new featured project' do
-    @controller.stubs(:buffer_abuse_score).returns(nil)
+    @controller.stubs(:reset_abuse_score).returns(nil)
     sign_in @project_validator
     put :bookmark, params: {channel_id: @project_new_2.channel_id}
     assert FeaturedProject.last.project_id == @project_new_2.id
@@ -75,7 +75,7 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
   end
 
   test 'featuring a currently unfeatured project should update the correct featured project' do
-    @controller.stubs(:buffer_abuse_score).returns(nil)
+    @controller.stubs(:reset_abuse_score).returns(nil)
     sign_in @project_validator
     refute @archived_featured_project.active?
     put :feature, params: {channel_id: @project_archived.channel_id}

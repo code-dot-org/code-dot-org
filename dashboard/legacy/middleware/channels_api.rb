@@ -331,15 +331,6 @@ class ChannelsApi < Sinatra::Base
   #
 
   #
-  # POST /v3/channels/<channel-id>/buffer_abuse_score
-  #
-  # Set an abuse score to -50 to buffer against false
-  # reporting. Used for featured projects.
-  #
-  # API endpoint removed. Functionality moved to ReportAbuseController.
-  #
-
-  #
   # DELETE /v3/channels/<channel-id>/abuse
   #
   # Clear an abuse score. Requires project_validator permission

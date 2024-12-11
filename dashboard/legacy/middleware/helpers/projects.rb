@@ -268,16 +268,16 @@ class Projects
     new_score
   end
 
-  def reset_abuse(channel_id, new_score = 0)
+  def reset_abuse(channel_id)
     _owner, project_id = storage_decrypt_channel_id(channel_id)
 
     row = @table.where(id: project_id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
-    update_count = @table.where(id: project_id).exclude(state: 'deleted').update({abuse_score: new_score})
+    update_count = @table.where(id: project_id).exclude(state: 'deleted').update({abuse_score: 0})
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
-    new_score
+    0
   end
 
   def content_moderation_disabled?(channel_id)

@@ -1184,7 +1184,6 @@ Dashboard::Application.routes.draw do
     get '/v3/channels/:channel_id/abuse', to: 'report_abuse#show_abuse'
     delete '/v3/channels/:channel_id/abuse', to: 'report_abuse#reset_abuse'
     post '/v3/channels/:channel_id/abuse/delete', to: 'report_abuse#reset_abuse'
-    post '/v3/channels/:channel_id/abuse/buffer', to: 'report_abuse#buffer_abuse'
     patch '/v3/(:endpoint)/:encrypted_channel_id', constraints: {endpoint: /(animations|assets|sources|files|libraries)/}, to: 'report_abuse#update_file_abuse'
 
     post '/browser_events/put_logs', to: 'browser_events#put_logs'
