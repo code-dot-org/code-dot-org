@@ -12,8 +12,11 @@
     },
     "//#format": {},
     "//#format:fix": {},
+    "release:dryrun": {
+      "dependsOn": ["lint", "test", "build"]
+    },
     "lint": {
-      "dependsOn": ["^lint", "^prettier", "^typecheck", "//#format"]
+      "dependsOn": ["^lint", "prettier", "typecheck", "//#format"]
     },
     "lint:fix": {
       "dependsOn": ["^lint:fix", "prettier:fix", "//#format:fix"]

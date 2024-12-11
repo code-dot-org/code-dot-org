@@ -26,6 +26,9 @@
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "dependencies": {
+    "@code-dot-org/dsco": "workspace:*",
+    "@contentful/experiences-sdk-react": "^1.24.0",
+    "contentful": "^11.2.5",
     "next": "^15.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -41,6 +44,6 @@
     "typescript": "^5"
   },
   "engines": {
-    "node": ">=22"
+    "node": ">=20"
   }
 }

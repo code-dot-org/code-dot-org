@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2024_12_04_175716) do
-=======
-ActiveRecord::Schema.define(version: 2024_12_03_163649) do
->>>>>>> staging-next
+ActiveRecord::Schema.define(version: 2024_12_10_181552) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"

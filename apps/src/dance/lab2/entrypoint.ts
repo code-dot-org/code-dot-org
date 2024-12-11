@@ -1,10 +1,15 @@
-import {OptionsToAvoid, Lab2EntryPoint, Theme} from '@cdo/apps/lab2/types';
+import {lazy} from 'react';
 
-import DanceView from './views/DanceView';
+import {Lab2EntryPoint, Theme} from '@cdo/apps/lab2/types';
 
 export const DanceEntryPoint: Lab2EntryPoint = {
   backgroundMode: false,
   theme: Theme.LIGHT,
-  view: OptionsToAvoid.UseHardcodedView_WARNING_Bloats_Lab2_Bundle,
-  hardcodedView: DanceView,
+  view: lazy(() =>
+    import(/* webpackChunkName: "danceLab2" */ './index.js').then(
+      ({DanceView}) => ({
+        default: DanceView,
+      })
+    )
+  ),
 };
