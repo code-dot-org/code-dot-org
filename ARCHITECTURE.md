@@ -134,6 +134,8 @@ Prefer Ruby/Rails/MySQL on the server side and JS/TS/React on the client side. P
 
 Prefer the conventional Rails way to accomplish a task: it might be better to be 100% conventional than get a 10% gain by deviating from convention. This is not a “don’t do it”, more like a “think twice if you really need to before doing it”.
 
+General thoughts on the Rails approach can be found at https://rubyonrails.org/doctrine with more specific advice for "how do to X the rails way" at https://guides.rubyonrails.org/. If you're not familiar with Rails, a course or a book might be helpful.
+
 <details>
   <summary>Why?</summary>
 
