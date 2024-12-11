@@ -180,6 +180,7 @@ export interface LevelProperties {
   offerBrowserTts?: boolean;
   validationFile?: ProjectFile;
   useSecondaryFinishButton?: boolean;
+  enableMicroBit?: boolean;
 }
 
 // Level configuration data used by project-backed labs that don't require
