@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import _ from 'lodash';
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {matchPath, useLocation} from 'react-router-dom';
 
 import {Heading1} from '@cdo/apps/componentLibrary/typography';
@@ -35,13 +35,14 @@ const PageHeader: React.FC = () => {
     state => state.teacherSections.isLoadingSectionData
   );
   const [ageGatedModalOpen, setAgeGatedModalOpen] = useState(false);
-  const toggleAgeGatedModal = () => {
+  const toggleAgeGatedModal = useCallback(() => {
     setAgeGatedModalOpen(!ageGatedModalOpen);
-  };
+  }, [ageGatedModalOpen]);
   const selectedSection = useAppSelector(selectedSectionSelector);
   const dispatch = useAppDispatch();
   useEffect(() => {
-    dispatch(loadSectionStudentData(selectedSection.id));
+    if (selectedSection?.id)
+      dispatch(loadSectionStudentData(selectedSection.id));
   }, [dispatch, selectedSection?.id]);
   const studentData = useAppSelector(
     state => state.manageStudents?.studentData
