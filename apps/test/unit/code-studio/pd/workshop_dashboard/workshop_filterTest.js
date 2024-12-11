@@ -1,4 +1,10 @@
-import WorkshopFilter from '@cdo/apps/code-studio/pd/workshop_dashboard/workshop_filter';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
+import Permission, {
+  WorkshopAdmin,
+} from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
+import {UnconnectedWorkshopFilter as WorkshopFilter} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshop_filter';
 
 describe('WorkshopFilter component', () => {
   it('can create and combine subject options', () => {
@@ -58,5 +64,80 @@ describe('WorkshopFilter component', () => {
         WorkshopFilter.combineSubjectOptions(testCase.current, testCase.legacy)
       ).toEqual(testCase.expected);
     });
+  });
+
+  it('uses date ascending ordering for Not Started workshops', () => {
+    const ajaxStub = jest.spyOn($, 'ajax').mockReturnValue({
+      done: successCallback => {
+        successCallback();
+
+        return {fail: () => {}};
+      },
+    });
+    const permission = new Permission([WorkshopAdmin]);
+
+    const workshopFilter = shallow(
+      <WorkshopFilter
+        permission={permission}
+        location={{query: {state: 'Not Started'}}}
+        regionalPartnerFilter={{value: 'all', label: 'All'}}
+      />
+    );
+
+    expect(
+      workshopFilter.find('ServerSortWorkshopTable').props().initialOrderBy
+    ).toEqual('date asc');
+
+    ajaxStub.mockRestore();
+  });
+
+  it('uses date descending ordering for In Progress workshops', () => {
+    const ajaxStub = jest.spyOn($, 'ajax').mockReturnValue({
+      done: successCallback => {
+        successCallback();
+
+        return {fail: () => {}};
+      },
+    });
+    const permission = new Permission([WorkshopAdmin]);
+
+    const workshopFilter = shallow(
+      <WorkshopFilter
+        permission={permission}
+        location={{query: {state: 'In Progress'}}}
+        regionalPartnerFilter={{value: 'all', label: 'All'}}
+      />
+    );
+
+    expect(
+      workshopFilter.find('ServerSortWorkshopTable').props().initialOrderBy
+    ).toEqual('date desc');
+
+    ajaxStub.mockRestore();
+  });
+
+  it('uses date descending ordering for Past workshops', () => {
+    const ajaxStub = jest.spyOn($, 'ajax').mockReturnValue({
+      done: successCallback => {
+        successCallback();
+
+        return {fail: () => {}};
+      },
+    });
+    const permission = new Permission([WorkshopAdmin]);
+
+    const workshopFilter = shallow(
+      <WorkshopFilter
+        permission={permission}
+        location={{query: {state: 'Ended'}}}
+        regionalPartnerFilter={{value: 'all', label: 'All'}}
+      />
+    );
+
+    expect(
+      workshopFilter.find('ServerSortWorkshopTable').props().initialOrderBy
+    ).toEqual('date desc');
+
+    ajaxStub.mockRestore();
   });
 });

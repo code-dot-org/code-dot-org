@@ -550,3 +550,5 @@ export default connect(state => ({
   showRegionalPartnerDropdown:
     state.regionalPartners.regionalPartners.length > 1,
 }))(WorkshopFilter);
+
+export {WorkshopFilter as UnconnectedWorkshopFilter};
