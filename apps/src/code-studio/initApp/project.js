@@ -370,33 +370,23 @@ var projects = (module.exports = {
   /**
    * Allows admin user to reset abuse score to 0 and then saves the project.
    */
-  adminResetAbuseScore(score = 0) {
+  adminResetAbuseScore() {
     const channelId = this.getCurrentId();
     if (!channelId) {
       return;
     }
     HttpClient.post(`/v3/channels/${channelId}/abuse/delete`, '', true);
-    assets.patchAll(
-      channelId,
-      `abuse_score=${score}`,
-      null,
-      function (err, result) {
-        if (err) {
-          throw err;
-        }
+    assets.patchAll(channelId, 'abuse_score=0', null, function (err, result) {
+      if (err) {
+        throw err;
       }
-    );
-    files.patchAll(
-      channelId,
-      `abuse_score=${score}`,
-      null,
-      function (err, result) {
-        if (err) {
-          throw err;
-        }
-        $('.admin-abuse-score').text(score);
+    });
+    files.patchAll(channelId, 'abuse_score=0', null, function (err, result) {
+      if (err) {
+        throw err;
       }
-    );
+      $('.admin-abuse-score').text(0);
+    });
   },
 
   /**

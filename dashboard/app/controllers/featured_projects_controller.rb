@@ -18,7 +18,7 @@ class FeaturedProjectsController < ApplicationController
     return render_404 unless project_id
     @featured_project = FeaturedProject.find_or_create_by!(project_id: project_id)
     @featured_project.update! unfeatured_at: nil, featured_at: DateTime.now
-    # Set the featured project's abuse score to -50.
+    # Set the featured project's abuse score to 0.
     reset_abuse_score
     freeze_featured_project(project_id)
   end
@@ -42,9 +42,9 @@ class FeaturedProjectsController < ApplicationController
   # Featured projects are selected internally for their
   # quality, so we can be reasonably confident that they
   # are not abusive. We reset their abuse score to 0.
-  def reset_abuse_score(score = 0)
+  def reset_abuse_score
     project = Project.find_by_channel_id(params[:channel_id])
-    project.update! abuse_score: score
+    project.update! abuse_score: 0
     reset_file_abuse_score('assets')
     reset_file_abuse_score('files')
   end
