@@ -44,9 +44,9 @@ export default class Neighborhood {
   }
 
   afterInject(
-    level: LevelProperties, // TODO: better type?
+    level: LevelProperties,
     skin: Record<string, string>,
-    config: LevelProperties, // TODO: better type
+    config: {skinId: string; level: LevelProperties},
     playAudio: (name: string, options: Record<string, unknown>) => void,
     playAudioOnFailure: () => void,
     loadAudio: (filenames: string[], name: string[]) => void,
@@ -61,8 +61,10 @@ export default class Neighborhood {
     if (!level.serializedMaze) {
       return;
     }
+    console.log({level, config});
     this.controller = new MazeController(level, skin, config, {
-      // todo: We may not need these, does the neighborhood ever make noise?
+      // TODO: Either get rid of these methods or support audio in Neighborhood.
+      // https://codedotorg.atlassian.net/browse/CT-942
       methods: {
         playAudio,
         playAudioOnFailure,
@@ -86,7 +88,7 @@ export default class Neighborhood {
     this.signals = [];
     this.nextSignalIndex = 0;
 
-    //Expose an interface for testing
+    // Expose an interface for testing
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).__TestInterface.setSpeedSliderValue = (value: number) => {
       this.speedSlider!.setValue(value);
