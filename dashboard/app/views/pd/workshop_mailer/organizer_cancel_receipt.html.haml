@@ -7,8 +7,11 @@
   This is an email notifying you that
   = @enrollment.full_name
   has canceled their registration for your
-  = @workshop.course
-  = @workshop.subject
+  - if @workshop.course == Pd::Workshop::COURSE_BUILD_YOUR_OWN
+    = @workshop.name.presence || Pd::Workshop::COURSE_BUILD_YOUR_OWN
+  - else
+    = @workshop.course
+    = @workshop.subject
   = link_to 'workshop', CDO.studio_url("/pd/workshop_dashboard/workshops/#{@workshop.id}", CDO.default_scheme)
   on
   = @workshop.sessions.first.formatted_date

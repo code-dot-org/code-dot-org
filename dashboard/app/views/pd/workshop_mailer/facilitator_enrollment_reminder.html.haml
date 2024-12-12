@@ -14,8 +14,11 @@
 
 %p
   This is a reminder about your upcoming Code.org
-  = @workshop.course_name
-  = @workshop.subject
+  - if @workshop.course == Pd::Workshop::COURSE_BUILD_YOUR_OWN
+    = @workshop.name.presence || Pd::Workshop::COURSE_BUILD_YOUR_OWN
+  - else
+    = @workshop.course_name
+    = @workshop.subject
   workshop.
 
 - if @workshop.course == Pd::Workshop::COURSE_CSP

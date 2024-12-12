@@ -3,6 +3,8 @@
     font-family: Metropolis, sans-serif;
   }
 
+- workshop_title = @workshop.name.presence || @workshop.course
+
 %p
   Hi
   = @workshop.organizer.name
@@ -10,7 +12,7 @@
 
 %p
   Your
-  = link_to "#{@workshop.course} workshop", CDO.studio_url("/pd/workshop_dashboard/workshops/#{@workshop.id}", CDO.default_scheme)
+  = link_to "#{workshop_title} workshop", CDO.studio_url("/pd/workshop_dashboard/workshops/#{@workshop.id}", CDO.default_scheme)
   on
   = @workshop.sessions.first.formatted_date
   is still open in the dashboard. Please login now to close it.

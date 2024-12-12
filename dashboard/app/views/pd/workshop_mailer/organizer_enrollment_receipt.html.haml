@@ -10,8 +10,11 @@
 %p
   = @enrollment.full_name
   signed up for your
-  = @workshop.course
-  = @workshop.subject
+  - if @workshop.course == Pd::Workshop::COURSE_BUILD_YOUR_OWN
+    = @workshop.name.presence || Pd::Workshop::COURSE_BUILD_YOUR_OWN
+  - else
+    = @workshop.course
+    = @workshop.subject
   = link_to 'workshop', @workshop.workshop_dashboard_url
   on
   = @workshop.sessions.first.formatted_date
