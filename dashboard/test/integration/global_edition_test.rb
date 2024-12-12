@@ -171,30 +171,56 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         _ {get_regional_page}.must_change -> {incubator_path}, from: international_page_path, to: regional_page_path
       end
 
-      context 'when not region locked locale is set via params' do
+      context 'on locale change via params' do
         let(:params) {{set_locale: locale}}
         let(:extra_params) {{foo: 'bar'}}
 
-        let(:locale) {'en-US'}
+        let(:locale)
 
         before do
           params.merge!(extra_params)
         end
 
-        it 'redirects to international page with extra params' do
-          get_regional_page
+        context 'when locale is available in region' do
+          let(:locale) {'en-US'}
 
-          expect(Metrics::Events).to have_received(:log_event).with(
-            event_name: 'Global Edition Region Selected',
-            request: anything,
-            metadata: {
-              region: nil,
-              locale: locale,
-            }
-          ).once
+          it 'changes region page language' do
+            get_regional_page
 
-          must_respond_with 302
-          must_redirect_to "#{regional_page_path}?#{extra_params.to_query}&ge_region"
+            expect(Metrics::Events).not_to have_received(:log_event).with(
+              event_name: 'Global Edition Region Selected',
+              request: anything,
+              metadata: anything,
+            )
+
+            must_respond_with 302
+            must_redirect_to "#{regional_page_path}?#{extra_params.to_query}"
+
+            follow_redirect!
+
+            must_respond_with 200
+            _(request.fullpath).must_equal "#{regional_page_path}?#{extra_params.to_query}"
+          end
+        end
+
+        context 'when locale is not available in region' do
+          let(:locale) {'uk-UA'}
+
+          it 'redirects to international page' do
+            get_regional_page
+
+            expect(Metrics::Events).to have_received(:log_event).with(
+              event_name: 'Global Edition Region Selected',
+              request: anything,
+              metadata: {
+                region: nil,
+                locale: locale,
+              }
+            ).once
+
+            must_respond_with 302
+            must_redirect_to "#{regional_page_path}?#{extra_params.to_query}&ge_region"
+          end
         end
       end
 
