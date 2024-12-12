@@ -34,7 +34,6 @@ const TeacherFeedbackFooter: React.FC<Props> = ({
       : thumbsDown
       ? TeacherFeedback.PROFANITY_DISAGREE
       : undefined;
-    console.log('sending feedback', {...chatMessage, teacherFeedback});
     dispatch(submitTeacherFeedback({...chatMessage, teacherFeedback}));
   };
 
@@ -44,7 +43,6 @@ const TeacherFeedbackFooter: React.FC<Props> = ({
   const handleFlagClick = (toggle: boolean) => {
     setFlaggedAsInappropriate(toggle);
     const teacherFeedback = toggle ? TeacherFeedback.CLEAN_DISAGREE : undefined;
-    console.log('sending feedback', {...chatMessage, teacherFeedback});
     dispatch(submitTeacherFeedback({...chatMessage, teacherFeedback}));
   };
 

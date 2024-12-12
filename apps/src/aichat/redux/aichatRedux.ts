@@ -409,22 +409,18 @@ export const submitTeacherFeedback = createAsyncThunk(
   'aichat/submitTeacherFeedback',
   async (chatMessage: ChatMessage, thunkAPI) => {
     try {
-      console.log('chatMessage.id!: ', chatMessage.id!);
-      console.log(
-        'chatMessage.teacherFeedback!: ',
-        chatMessage.teacherFeedback!
-      );
       await postSubmitTeacherFeedback(
         chatMessage.id!,
         chatMessage.teacherFeedback!
       );
-      // const dispatch = thunkAPI.dispatch as AppDispatch;
+      const dispatch = thunkAPI.dispatch as AppDispatch;
       // dispatch(
       //   sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_SUCCESS, {
       //     levelPath: window.location.pathname,
       //     userMessage: newUserMessageText,
       //   })
       // );
+      dispatch(updateChatMessage(chatMessage));
     } catch (error) {
       // await handleChatCompletionError(error as Error, newUserMessage, dispatch);
       console.log('Error submitting teacher feedback:', error);
@@ -669,6 +665,30 @@ const aichatSlice = createSlice({
       const {index, messageListKey} = modelUpdateMessageInfo;
       state[messageListKey].splice(index, 1);
     },
+    updateChatMessage: (state, action: PayloadAction<ChatMessage>) => {
+      // This causes the whole ChatWorkspace to re-render (i think?), and
+      // scrolls the thing down to the bottom...
+      // state.studentChatHistory = state.studentChatHistory.map(message =>
+      //   message.id === action.payload.id ? action.payload : message
+      // );
+
+      // Noo, I thought this might mitigate but it does the same thing :(
+      const {id} = action.payload;
+      if (!id) {
+        return;
+      }
+      const chatHistory = state['studentChatHistory'];
+
+      const indexToUpdate = chatHistory.findIndex(
+        message => isChatMessage(message) && message.id === id
+      );
+
+      if (indexToUpdate < 0) {
+        return;
+      }
+
+      state['studentChatHistory'][indexToUpdate] = action.payload;
+    },
     clearChatMessages: state => {
       state.chatEventsPast = [];
       state.chatEventsCurrent = [];
@@ -888,6 +908,7 @@ export const {
   clearChatMessages,
   endSave,
   removeUpdateMessage,
+  updateChatMessage,
   resetToDefaultAiCustomizations,
   setAiCustomizationProperty,
   setModelCardProperty,
