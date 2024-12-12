@@ -32,6 +32,7 @@ import {BlocklyState} from '../redux/blockly';
 // We cannot infer the type of our store because we programmatically add to the store
 // with registerReducers.
 export interface RootState {
+  manageStudents: ManageStudentsState;
   aiTutor: AITutorState;
   aichat: AichatState;
   blockly: BlocklyState;
@@ -57,4 +58,35 @@ export interface RootState {
   teacherPanel: TeacherPanelState;
   teacherRubric: TeacherRubricState;
   teacherSections: TeacherSectionState;
+}
+
+// Temporary type definition for the result of
+// manageStudentsRedux.js:convertStudentServerData
+interface Student {
+  id: number;
+  name: string;
+  familyName?: string;
+  username: string;
+  email?: string;
+  age?: string;
+  gender?: string;
+  genderTeacherInput?: string;
+  secretWords: string;
+  secretPicturePath: string;
+  loginType: string;
+  sectionId?: number;
+  sharingDisabled: boolean;
+  hasEverSignedIn: boolean;
+  dependsOnThisSectionForLogin: boolean;
+  isEditing: boolean;
+  isSaving: boolean;
+  rowType: string;
+  userType: string;
+  atRiskAgeGatedDate?: Date;
+  childAccountComplianceState?: string;
+  latestPermissionRequestSentAt?: Date;
+  usState?: string;
+}
+interface ManageStudentsState {
+  studentData: Student[];
 }
