@@ -108,13 +108,10 @@ class ReportAbuseController < ApplicationController
     # Reports of abuse from verified teachers are more reliable than reports
     # from students so we increase the abuse score enough to block the project
     # with only one report from a verified teacher.
-    #
-    # If DCDO flag is set to true, only allow verified teacher users to report abuse.
-    restrict_reporting_to_verified_users = DCDO.get('restrict-abuse-reporting-to-verified', false)
     amount =
       if current_user&.verified_teacher?
         20
-      elsif current_user && !restrict_reporting_to_verified_users
+      elsif current_user && !restrict_reporting_to_verified_teachers
         10
       else
         0
@@ -145,6 +142,11 @@ class ReportAbuseController < ApplicationController
     end
 
     abuse_score
+  end
+
+  def restrict_reporting_to_verified_teachers
+    # If DCDO flag is set to true, only allow verified teacher users to report abuse.
+    DCDO.get('restrict-abuse-reporting-to-verified', false)
   end
 
   private def send_abuse_report(name, email, age, abuse_url, username)
