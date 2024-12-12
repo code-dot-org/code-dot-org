@@ -17,6 +17,7 @@ const SIGNAL_CHECK_TIME = 200;
 
 export default class Neighborhood {
   private controller: typeof MazeController | null;
+  // TODO: unused?
   private numRows: number | null;
   private seenFirstSignal: boolean;
   private onOutputMessage: (message: string) => void;
@@ -46,23 +47,31 @@ export default class Neighborhood {
   }
 
   afterInject(
-    level: LevelProperties,
+    level: LevelProperties, // TODO: better type?
     skin: Record<string, string>,
-    config: LevelProperties
+    config: LevelProperties, // TODO: better type
+    playAudio: (name: string, options: Record<string, unknown>) => void,
+    playAudioOnFailure: () => void,
+    loadAudio: (filenames: string[], name: string[]) => void,
+    getTestResults: (
+      levelComplete: boolean,
+      options: {
+        executionError: {error: Error; lineNumber: number};
+        allowTopBlocks: boolean;
+      }
+    ) => void
   ) {
     if (!level.serializedMaze) {
       return;
     }
     this.numRows = level.serializedMaze.length;
     this.controller = new MazeController(level, skin, config, {
+      // todo: We may not need these, does the neighborhood ever make noise?
       methods: {
-        // TODO: make new methods that don't rely on studio app
-        // playAudio: (sound, options) => {
-        //   studioApp.playAudio(sound, {...options, noOverlap: true});
-        // },
-        // playAudioOnFailure: studioApp.playAudioOnFailure.bind(studioApp),
-        // loadAudio: studioApp.loadAudio.bind(studioApp),
-        // getTestResults: studioApp.getTestResults.bind(studioApp),
+        playAudio,
+        playAudioOnFailure,
+        loadAudio,
+        getTestResults,
       },
     });
     // 'svgMaze' is a magic value that we use throughout our code-dot-org and maze code to
@@ -81,10 +90,11 @@ export default class Neighborhood {
     this.signals = [];
     this.nextSignalIndex = 0;
 
-    // Expose an interface for testing
-    // window.__TestInterface.setSpeedSliderValue = value => {
-    //   this.speedSlider.setValue(value);
-    // };
+    //Expose an interface for testing
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (window as any).__TestInterface.setSpeedSliderValue = (value: number) => {
+      this.speedSlider!.setValue(value);
+    };
   }
 
   handleSignal(signal: NeighborhoodSignal) {
