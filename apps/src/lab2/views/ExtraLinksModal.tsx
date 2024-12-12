@@ -141,15 +141,8 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
       );
       setAbuseScore(0);
     } catch (e) {
-      console.log('Error resetting abuse score to 0.');
-    }
-  };
-
-  const onReportAbuse = async () => {
-    try {
-      utils.navigateToHref('/report_abuse');
-    } catch (e) {
-      console.log('Error reporting abuse on project.');
+      // Set abuse score to number < 0 so that error message will be displayed to the admin user.
+      setAbuseScore(-1);
     }
   };
 
@@ -205,7 +198,6 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
         featuredProjectStatus={featuredProjectStatus}
         onBookmark={onBookmark}
         onResetAbuseScore={onResetAbuseScore}
-        onReportAbuse={onReportAbuse}
         abuseScore={abuseScore}
       />
     </AccessibleDialog>
@@ -338,21 +330,24 @@ const RemixAncestry: React.FunctionComponent<{
 };
 
 const AbuseScoreInfo: React.FunctionComponent<{
-  abuseScore: number | undefined;
+  abuseScore: number;
   onResetAbuseScore: () => void;
-  onReportAbuse: () => void;
-}> = ({abuseScore, onResetAbuseScore, onReportAbuse}) => {
-  if (abuseScore === undefined) {
-    return null;
+}> = ({abuseScore, onResetAbuseScore}) => {
+  let msg = '';
+  if (abuseScore < 0) {
+    msg = 'There was an error resetting abuse score to 0. Please try again.';
+  } else if (abuseScore < 15) {
+    msg = 'Safe to share project.';
+  } else {
+    msg = 'This project is blocked from sharing';
   }
-  const msg =
-    abuseScore <= 15
-      ? 'Safe to share project.'
-      : 'This project is blocked from sharing';
+  const onReportAbuse = async () => {
+    utils.navigateToHref('/report_abuse');
+  };
 
   return (
     <>
-      Abuse score: {abuseScore}
+      Abuse score: {abuseScore >= 0 ? abuseScore : ''}
       <ul>
         <li>{msg}</li>
       </ul>
@@ -381,7 +376,6 @@ interface ProjectLinkDataProps {
   featuredProjectStatus?: string;
   onBookmark: () => void;
   onResetAbuseScore: () => void;
-  onReportAbuse: () => void;
   abuseScore?: number;
 }
 
@@ -391,7 +385,6 @@ const ProjectLinkData: React.FunctionComponent<ProjectLinkDataProps> = ({
   featuredProjectStatus,
   onBookmark,
   onResetAbuseScore,
-  onReportAbuse,
   abuseScore,
 }) => {
   if (!projectLinkData) {
@@ -427,13 +420,14 @@ const ProjectLinkData: React.FunctionComponent<ProjectLinkDataProps> = ({
                 onBookmark={onBookmark}
               />
             </li>
-            <li>
-              <AbuseScoreInfo
-                abuseScore={abuseScore}
-                onResetAbuseScore={onResetAbuseScore}
-                onReportAbuse={onReportAbuse}
-              />
-            </li>
+            {abuseScore !== undefined && (
+              <li>
+                <AbuseScoreInfo
+                  abuseScore={abuseScore}
+                  onResetAbuseScore={onResetAbuseScore}
+                />
+              </li>
+            )}
           </>
         )}
       </ul>
