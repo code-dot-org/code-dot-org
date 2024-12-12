@@ -174,4 +174,3 @@ class Painter:
       paint (int): The amount of paint that should be in the painter's bucket.
     """
     self.remainingPaint = paint
-
