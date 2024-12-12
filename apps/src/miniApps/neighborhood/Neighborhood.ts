@@ -61,7 +61,6 @@ export default class Neighborhood {
     if (!level.serializedMaze) {
       return;
     }
-    console.log({level, config});
     this.controller = new MazeController(level, skin, config, {
       // TODO: Either get rid of these methods or support audio in Neighborhood.
       // https://codedotorg.atlassian.net/browse/CT-942
