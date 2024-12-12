@@ -115,7 +115,7 @@ class ReportAbuseController < ApplicationController
     # and signed in users to report.
     restrict_reporting_to_verified_users = DCDO.get('restrict-abuse-reporting-to-verified', true)
     amount =
-      if current_user&.verified_teacher?
+      if current_user&.verified_teacher? || current_user&.project_validator?
         20
       elsif current_user && !restrict_reporting_to_verified_users
         10
@@ -123,7 +123,8 @@ class ReportAbuseController < ApplicationController
         0
       end
     begin
-      value = Projects.new(get_storage_id).increment_abuse(channel_id, amount)
+      # Project validators can update the abuse score on frozen projects while other users cannot.
+      value = Projects.new(get_storage_id).increment_abuse(channel_id, amount, current_user&.project_validator?)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       raise ActionController::BadRequest.new, "Bad channel_id"
     end
