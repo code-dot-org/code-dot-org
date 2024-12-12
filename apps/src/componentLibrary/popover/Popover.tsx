@@ -43,7 +43,7 @@ export interface PopoverProps {
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/PopoverTest.jsx, apps/test/unit/componentLibrary/WithPopoverTest.jsx);
+ * * (see apps/test/unit/componentLibrary/PopoverTest.tsx, apps/test/unit/componentLibrary/WithPopoverTest.tsx);
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready For Dev```

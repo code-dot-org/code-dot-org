@@ -254,13 +254,23 @@ class Projects
     return true
   end
 
-  def increment_abuse(channel_id, amount = 10)
+  def increment_abuse(channel_id, amount, override_frozen = false)
     _owner, project_id = storage_decrypt_channel_id(channel_id)
 
     row = @table.where(id: project_id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
+    # If the project is frozen then it is an active featured project or a curriculum exemplar.
+    # Do not update the abuse score of a frozen project unless override_frozen is true.
+    # This flag is set to true if the current_user is a project validator or if the project's
+    # thumbnail image was flagged by image moderation.
+    increment_amount =
+      if JSON.parse(row[:value])['frozen'] && !override_frozen
+        0
+      else
+        amount
+      end
 
-    new_score = row[:abuse_score] + (JSON.parse(row[:value])['frozen'] ? 0 : amount)
+    new_score = row[:abuse_score] + increment_amount
 
     update_count = @table.where(id: project_id).exclude(state: 'deleted').update({abuse_score: new_score})
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0

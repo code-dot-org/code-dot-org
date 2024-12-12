@@ -82,14 +82,6 @@ def main
   end
 
   Level.find_each do |level|
-    begin
-    # The RecordNotFound exception happens when a Level does not belong to any ScriptLevel.
-    # The NoMethodError exception happens when a ScriptLevel does not have a Script.
-    # TODO(asher): Fix the corrupt data on staging, eliminating the need for this rescue clause.
-    rescue ActiveRecord::RecordNotFound, NoMethodError
-      next
-    end
-
     level.contained_levels.each_with_index do |contained_level, index|
       next unless contained_level.type == 'Multi'
 
@@ -113,6 +105,12 @@ def main
         }
       end
     end
+  rescue ActiveRecord::RecordNotFound => exception
+    Honeybadger.notify(
+      exception,
+      error_message: "Error reading level '#{level.name}' for rollup tables."
+    )
+    next
   end
 
   contained_levels.map {|row| row[:contained_level_id]}.each do |contained_level_id|

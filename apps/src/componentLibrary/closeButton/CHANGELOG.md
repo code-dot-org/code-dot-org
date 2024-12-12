@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.0](https://github.com/code-dot-org/code-dot-org/pull/62717)
+- rewritten `CloseButtonTest` in typescript
+- refactored/optimized `CloseButtonTest.tsx`
+
 ## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/61754)
 
 - updated `CloseButton` props to support native HTML Div element attributes

@@ -6,7 +6,7 @@ import {Dashboard} from 'cloudwatch-dashboard-types';
 import {exit} from 'process';
 
 import modelDescriptions from '../../../../../../apps/static/aichat/modelDescriptions.json';
-import {DASHBOARD_NAME, REGION} from '../constants';
+import {BROWSERS, DASHBOARD_NAME, REGION} from '../constants';
 
 import {
   createActiveJobGraph,
@@ -25,9 +25,9 @@ import {
   createLogTable,
   createExecutionCountGraph,
   createMarkdownWidget,
+  createOverallChatPerformanceGraph,
+  createOverallSavePerformanceGraph,
 } from './widgetCreators';
-
-const browsers = ['Chrome', 'Firefox', 'Safari'];
 
 function createDashboard(environment = 'production'): Dashboard {
   const modelWidgets = modelDescriptions
@@ -45,14 +45,12 @@ function createDashboard(environment = 'production'): Dashboard {
     ])
     .flat();
 
-  const browserMetrics = browsers
-    .map(browser => [
-      createTitleWidget(browser, 'h2'),
-      createBrowserChatPerformanceGraph(environment, browser),
-      createBrowserSavePerformanceGraph(environment, browser),
-      createBrowserLatencyByModelGraph(modelDescriptions, environment, browser),
-    ])
-    .flat();
+  const browserMetrics = BROWSERS.map(browser => [
+    createTitleWidget(browser, 'h2'),
+    createBrowserChatPerformanceGraph(environment, browser),
+    createBrowserSavePerformanceGraph(environment, browser),
+    createBrowserLatencyByModelGraph(modelDescriptions, environment, browser),
+  ]).flat();
 
   return {
     widgets: [
@@ -67,8 +65,8 @@ function createDashboard(environment = 'production'): Dashboard {
       ),
       createTitleWidget('Performance', 'h2'),
       createJobPerformanceGraph(environment),
-      createBrowserChatPerformanceGraph(environment),
-      createBrowserSavePerformanceGraph(environment),
+      createOverallChatPerformanceGraph(environment, BROWSERS),
+      createOverallSavePerformanceGraph(environment, BROWSERS),
       createExecutionCountGraph(modelDescriptions, environment, {
         width: 6,
         height: 12,
@@ -77,11 +75,10 @@ function createDashboard(environment = 'production'): Dashboard {
       createLogTable('warning', environment),
       // -- Latency Overview
       createTitleWidget('Latency', 'h2'),
-      createBrowserLatencyComparisonGraph(browsers, environment),
+      createBrowserLatencyComparisonGraph(BROWSERS, environment),
       createActiveJobGraph(environment),
       createLatencyComparisonGraph(modelDescriptions, environment),
-      createBrowserLatencyByModelGraph(modelDescriptions, environment),
-      createBrowserLatencyComparisonGraph(browsers, environment, 'gauge', {
+      createBrowserLatencyComparisonGraph(BROWSERS, environment, 'gauge', {
         width: 24,
         height: 5,
       }),
