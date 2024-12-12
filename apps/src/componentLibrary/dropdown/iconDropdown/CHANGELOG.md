@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.5.0]()
+## [0.5.0](https://github.com/code-dot-org/code-dot-org/pull/62926)
 
 - made `size` prop optional since we have default value for this prop
 - rewritten `IconDropdownTest` in typescript
