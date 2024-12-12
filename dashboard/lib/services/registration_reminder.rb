@@ -66,6 +66,7 @@ class Services::RegistrationReminder
       SQL
       where(pd_applications: {application_year: Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR}).
       where(pd_enrollments: {id: nil}).
+      where.not(pd_workshops: {deleted_at: nil}).
       distinct
   end
 end

@@ -167,6 +167,22 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
     assert_equal 0, Services::RegistrationReminder.applications_needing_second_reminder.count
   end
 
+  test 'applications_needing_first_reminder omits applications to deleted workshops' do
+    workshop = create :pd_workshop, deleted_at: 1.day.ago
+    application = create :pd_teacher_application, pd_workshop_id: workshop.id
+    create :pd_application_email, application: application, email_type: 'accepted', sent_at: 2.weeks.ago
+    create :pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.week.ago
+    assert_equal 0, Services::RegistrationReminder.applications_needing_second_reminder.count
+  end
+
+  test 'applications_needing_second_reminder omits applications to deleted workshops' do
+    workshop = create :pd_workshop, deleted_at: 1.day.ago
+    application = create :pd_teacher_application, pd_workshop_id: workshop.id
+    create :pd_application_email, application: application, email_type: 'accepted', sent_at: 2.weeks.ago
+    create :pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.week.ago
+    assert_equal 0, Services::RegistrationReminder.applications_needing_second_reminder.count
+  end
+
   test 'applications_needing_second_reminder includes eligible applications' do
     # This application meets all the requirements: A registration email, a reminder email at least
     # a week old, and no second reminder or enrollment.
