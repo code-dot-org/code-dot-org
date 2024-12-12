@@ -82,7 +82,6 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
   useEffect(() => {
     setIsLoading(true);
     fetchExtraLinksData(levelId, channelId).then(data => {
-      console.log('data', data);
       setExtraLinksData(data);
       setIsLoading(false);
     });
