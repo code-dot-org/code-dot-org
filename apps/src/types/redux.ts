@@ -87,6 +87,10 @@ interface Student {
   latestPermissionRequestSentAt?: Date;
   usState?: string;
 }
+
+// Temporary type definition for manageStudentsRedux.js:initialState
+// `state.manageStudents`
 interface ManageStudentsState {
   studentData: Student[];
+  isLoadingStudents: boolean;
 }
