@@ -1,8 +1,6 @@
 require 'net/http'
 require 'uri'
 
-SSL_HOSTNAME_MISMATCH_REGEX = /does not match the server certificate/
-
 # Helper which fetches the specified URL, optionally caching and following redirects.
 module ProxyHelper
   def render_proxied_url(

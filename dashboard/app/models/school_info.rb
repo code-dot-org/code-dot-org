@@ -20,8 +20,9 @@
 #
 # Indexes
 #
-#  fk_rails_951bceb7e3              (school_district_id)
-#  index_school_infos_on_school_id  (school_id)
+#  fk_rails_951bceb7e3                                            (school_district_id)
+#  index_school_infos_on_school_id                                (school_id)
+#  index_school_infos_on_school_name_and_country_and_school_type  (school_name,country,school_type)
 #
 
 class SchoolInfo < ApplicationRecord

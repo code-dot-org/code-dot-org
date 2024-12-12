@@ -11,6 +11,7 @@ import {
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
 import TeacherUnitOverview from '@cdo/apps/code-studio/components/progress/TeacherUnitOverview';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import TeacherCourseOverview from '../courseOverview/TeacherCourseOverview';
@@ -29,9 +30,7 @@ import {
 import TextResponses from '../textResponses/TextResponses';
 
 import ElementOrEmptyPage from './ElementOrEmptyPage';
-import LessonMaterialsContainer, {
-  lessonMaterialsLoader,
-} from './lessonMaterials/LessonMaterialsContainer';
+import LessonMaterialsContainer from './lessonMaterials/LessonMaterialsContainer';
 import PageLayout from './PageLayout';
 import TeacherNavigationBar from './TeacherNavigationBar';
 import {
@@ -153,7 +152,15 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               <ElementOrEmptyPage
                 showNoStudents={studentCount === 0}
                 showNoCurriculumAssigned={!anyStudentHasProgress}
-                element={<SectionProgressSelector isInV1Navigaton={false} />}
+                element={
+                  <GlobalEditionWrapper
+                    component={SectionProgressSelector}
+                    componentId="SectionProgressSelector"
+                    props={{
+                      isInV1Navigaton: false,
+                    }}
+                  />
+                }
               />
             }
           />
@@ -183,7 +190,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.lessonMaterials}
-            loader={lessonMaterialsLoader}
             element={
               <LessonMaterialsContainer
                 showNoCurriculumAssigned={

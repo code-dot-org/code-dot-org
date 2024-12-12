@@ -6,7 +6,7 @@ import {Button} from '@cdo/apps/componentLibrary/button';
 import Dialog, {DialogProps} from './Dialog';
 
 export default {
-  title: 'DesignSystem/Dialog', // eslint-disable-line storybook/no-title-property-in-meta
+  title: 'DesignSystem/Dialog/Dialog', // eslint-disable-line storybook/no-title-property-in-meta
   component: Dialog,
 } as Meta;
 

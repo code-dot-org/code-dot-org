@@ -1,4 +1,4 @@
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {render, screen} from '@testing-library/react';
 import React from 'react';
 
 import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
@@ -13,12 +13,12 @@ const defaultProps = {
 
 describe('AssignmentVersionSelector', () => {
   it('an option and AssignmentVersionMenuItem for each course version', () => {
-    const wrapper = shallow(<AssignmentVersionSelector {...defaultProps} />);
-    expect(wrapper.find('option').length).toEqual(2);
-    expect(wrapper.find('AssignmentVersionMenuItem').length).toEqual(2);
-    expect(wrapper.find('option').map(option => option.text())).toEqual([
-      '2018 (Recommended)',
-      '2017',
-    ]);
+    render(<AssignmentVersionSelector {...defaultProps} />);
+
+    // Renders all options
+    expect(screen.getByRole('option', {name: '2017'})).toBeInTheDocument();
+    expect(
+      screen.getByRole('option', {name: '2018 (Recommended)'})
+    ).toBeInTheDocument();
   });
 });

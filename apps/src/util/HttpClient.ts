@@ -12,6 +12,11 @@ export type GetResponse<ResponseType> = {
   response: Response;
 };
 
+// Narrow the type of an error to NetworkError
+export function isNetworkError(error: unknown): error is NetworkError {
+  return error instanceof NetworkError;
+}
+
 /**
  * Error thrown by these functions when the response is not ok, which includes a
  * reference to the response object.

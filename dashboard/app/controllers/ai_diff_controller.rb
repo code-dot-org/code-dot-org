@@ -7,6 +7,7 @@ class AiDiffController < ApplicationController
   # lessonId:
   # unitDisplayName:
   # sessionId:
+  # isPreset:
   # POST /ai_diff/chat_completion
   def chat_completion
     unless has_required_params?
@@ -16,6 +17,45 @@ class AiDiffController < ApplicationController
     session_id = params[:sessionId].presence
 
     response_body = get_response_body(session_id)
+
+    # get or create thread obj
+    begin
+      @thread = AichatThread.find_or_create_by!(
+        user_id: current_user.id,
+        external_id: response_body[:session_id],
+        llm_version: AiDiffBedrockHelper::MODEL_ID,
+        unit_id: @unit.id,
+        level_id: @lesson.id,
+      )
+    rescue StandardError => exception
+      return render status: :bad_request, json: {error: exception.message}
+    end
+
+    # Add user message to thread
+    begin
+      AichatMessage.create!(
+        aichat_thread_id: @thread.id,
+        external_id: @thread.external_id,
+        role: :user,
+        content: params[:inputText],
+        is_preset: params[:isPreset],
+      )
+    rescue StandardError => exception
+      return render status: :bad_request, json: {error: exception.message}
+    end
+
+    # Add response message to thread
+    begin
+      AichatMessage.create!(
+        aichat_thread_id: @thread.id,
+        external_id: @thread.external_id,
+        role: :assistant,
+        content: response_body[:chat_message_text],
+        is_preset: params[:isPreset],
+      )
+    rescue StandardError => exception
+      return render status: :bad_request, json: {error: exception.message}
+    end
 
     render(status: :ok, json: response_body)
   end
@@ -48,7 +88,7 @@ class AiDiffController < ApplicationController
 
   private def has_required_params?
     begin
-      params.require([:inputText, :lessonId, :unitDisplayName])
+      params.require([:inputText, :lessonId, :unitDisplayName, :isPreset])
     rescue ActionController::ParameterMissing
       return false
     end

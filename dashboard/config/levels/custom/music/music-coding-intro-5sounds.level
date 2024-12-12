@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2024-11-23T17:19:23.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "encrypted": "false",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
-    "long_instructions": "####<i class=\"fa-solid fa-wrench\"></i> Customize\r\n\r\n1. Add blocks to play **5 drum <i class=\"fa-solid fa-drum\"></i> sounds**.\r\n2. Then press <i class=\"fa-solid fa-play\"></i> Run.",
+    "long_instructions": "####Repeating Sounds\r\n\r\n1. Add blocks to play **5 drum <i class=\"fa-solid fa-drum\"></i> sounds**.\r\n2. Then press <i class=\"fa-solid fa-play\"></i> Run.",
     "level_data": {
       "startSources": {
         "blocks": {
@@ -92,10 +93,10 @@
     ],
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
+    "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-11-23T17:19:23.417+00:00\",\"changed\":[\"cloned from \\\"music-intro-coding-loops-try\\\"\"],\"cloned_from\":\"music-intro-coding-loops-try\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-11-23T17:19:23.417+00:00\",\"changed\":[\"cloned from \\\"music-intro-coding-loops-try\\\"\"],\"cloned_from\":\"music-intro-coding-loops-try\"},{\"changed_at\":\"2024-11-26 17:10:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

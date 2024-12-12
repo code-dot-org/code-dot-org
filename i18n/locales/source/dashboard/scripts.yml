@@ -552,6 +552,8 @@ en:
           description_audience: ''
           lesson_groups: {}
           student_description: Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
+          lessons: {}
+          name: frequency_analysis
         ECSPD3-Unit2:
           title: 'Exploring Computer Science: Unit 2'
           description: Online Professional Development Course
@@ -18011,7 +18013,17 @@ en:
               name: Functions
             lesson-5:
               name: Project
-          lesson_groups: {}
+            lesson-6:
+              name: Songwriter's Toolbox
+            lesson-7:
+              name: Producer Power
+            lesson-8:
+              name: Sound Designer’s Studio
+          lesson_groups:
+            lessonGroup-3:
+              display_name: New progression
+            lessonGroup-2:
+              display_name: Original progression
           name: pilot-elem-music-lab
           title: Intro to Programming with Music Lab
           description_audience: ''
@@ -18121,6 +18133,10 @@ en:
               name: Additional Output
             lesson-9:
               name: Pre-assessment
+            lesson-10:
+              name: 'Example Project 1: Classroom Light Levels'
+            lesson-11:
+              name: Templates
           lesson_groups: {}
           name: computer-systems-playground
           title: "[PLAYGROUND] Computer Systems and Devices (with micro:bit)"
@@ -18466,8 +18482,8 @@ en:
           title: Understanding Equity in Computer Science
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "##### **Module 1: Understanding Equity in Computer Science** provides a conceptual foundation for equity. You'll take the time to reflect on your journey and orient yourself toward enacting equity in your classroom. There are no prerequisites for the learning in this module.\n\n##### There are three lessons in Module 1:\n\n-   ##### What is Equity in CS?\n-   ##### Looking at Data\n-   ##### Reflecting on Personal Experiences\n\n* * *\n\n##### ⏰ **Suggested total time for this module:** <mark>UPDATE</mark>"
+          student_description: "##### **Module 1: Understanding Equity in Computer Science** provides a conceptual foundation for equity. You'll take the time to reflect on your journey and orient yourself toward enacting equity in your classroom. There are no prerequisites for the learning in this module.\n\n##### There are three lessons in Module 1:\n\n-   ##### What is Equity in CS?\n-   ##### Looking at Data\n-   ##### Reflecting on Personal Experiences\n\n* * *\n\n##### Suggested total time for this module: <mark>UPDATE</mark>"
         self-paced-pl-equitymodule-unit2:
           lessons: {}
           lesson_groups: {}
@@ -18481,6 +18497,8 @@ en:
           lessons:
             lesson-5:
               name: Next Steps
+            lesson-6:
+              name: The Student Experience
           lesson_groups: {}
           name: sandbox-teaching-getting-started
           title: Getting Started Sandbox

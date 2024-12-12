@@ -62,7 +62,7 @@ const Console: React.FunctionComponent = () => {
     <PanelContainer
       id="codebridge-console"
       className={moduleStyles.consoleContainer}
-      headerContent={'Console'}
+      headerContent={codebridgeI18n.consoleHeader()}
       rightHeaderContent={
         <RightButtons clearOutput={() => clearOutput(true)} />
       }

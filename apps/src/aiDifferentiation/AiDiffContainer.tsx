@@ -155,6 +155,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       lessonId: lessonId,
       unitDisplayName: unitDisplayName,
       sessionId: sessionId,
+      isPreset: isPreset,
     });
     HttpClient.post(`${aiDiffChatMessageEndpoint}`, body, true, {
       'Content-Type': 'application/json',
@@ -270,6 +271,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
             onSubmit={onMessageSend}
             onSuggestPrompts={onSuggestPrompts}
             messages={messageHistory}
+            waiting={isWaitingForResponse}
           />
         </div>
       </div>
