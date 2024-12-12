@@ -5,6 +5,7 @@ import {Heading3, StrongText} from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import * as utils from '@cdo/apps/utils';
 import {FeaturedProjectStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {ExtraLinksLevelData, ExtraLinksProjectData} from '../types';
@@ -144,6 +145,14 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
     }
   };
 
+  const onReportAbuse = async () => {
+    try {
+      utils.navigateToHref('/report_abuse');
+    } catch (e) {
+      console.log('Error reporting abuse on project.');
+    }
+  };
+
   return isOpen ? (
     <AccessibleDialog onClose={onClose}>
       <Heading3>Extra links</Heading3>
@@ -196,6 +205,7 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
         featuredProjectStatus={featuredProjectStatus}
         onBookmark={onBookmark}
         onResetAbuseScore={onResetAbuseScore}
+        onReportAbuse={onReportAbuse}
         abuseScore={abuseScore}
       />
     </AccessibleDialog>
@@ -330,7 +340,8 @@ const RemixAncestry: React.FunctionComponent<{
 const AbuseScoreInfo: React.FunctionComponent<{
   abuseScore: number | undefined;
   onResetAbuseScore: () => void;
-}> = ({abuseScore, onResetAbuseScore}) => {
+  onReportAbuse: () => void;
+}> = ({abuseScore, onResetAbuseScore, onReportAbuse}) => {
   if (abuseScore === undefined) {
     return null;
   }
@@ -352,6 +363,14 @@ const AbuseScoreInfo: React.FunctionComponent<{
           onClick={onResetAbuseScore}
         />
       </div>
+      <div>
+        <Button
+          size="xs"
+          text={'Report abuse'}
+          onClick={onReportAbuse}
+          className={moduleStyles.bottomButton}
+        />
+      </div>
     </>
   );
 };
@@ -362,6 +381,7 @@ interface ProjectLinkDataProps {
   featuredProjectStatus?: string;
   onBookmark: () => void;
   onResetAbuseScore: () => void;
+  onReportAbuse: () => void;
   abuseScore?: number;
 }
 
@@ -371,6 +391,7 @@ const ProjectLinkData: React.FunctionComponent<ProjectLinkDataProps> = ({
   featuredProjectStatus,
   onBookmark,
   onResetAbuseScore,
+  onReportAbuse,
   abuseScore,
 }) => {
   if (!projectLinkData) {
@@ -410,6 +431,7 @@ const ProjectLinkData: React.FunctionComponent<ProjectLinkDataProps> = ({
               <AbuseScoreInfo
                 abuseScore={abuseScore}
                 onResetAbuseScore={onResetAbuseScore}
+                onReportAbuse={onReportAbuse}
               />
             </li>
           </>
