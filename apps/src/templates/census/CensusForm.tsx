@@ -1,5 +1,4 @@
-import PropTypes from 'prop-types';
-import React, {useMemo, useState} from 'react';
+import React, {ChangeEvent, CSSProperties, useMemo, useState} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
@@ -7,7 +6,7 @@ import i18n from '@cdo/locale';
 import CountryAutocompleteDropdown from '../CountryAutocompleteDropdown';
 import SchoolNotFound from '../SchoolNotFound';
 
-import {styles} from './censusFormStyles';
+import {styles as formStyles} from './censusFormStyles';
 import {
   howManyStudents,
   roleOptions,
@@ -17,32 +16,78 @@ import {
 } from './censusQuestions';
 import SchoolAutocompleteDropdownWithLabel from './SchoolAutocompleteDropdownWithLabel';
 
-export const censusFormPrefillDataShape = PropTypes.shape({
-  userName: PropTypes.string,
-  userEmail: PropTypes.string,
-  isTeacher: PropTypes.bool,
-  schoolCountry: PropTypes.string,
-  schoolId: PropTypes.string,
-  schoolType: PropTypes.string,
-  schoolName: PropTypes.string,
-  schoolState: PropTypes.string,
-  schoolZip: PropTypes.string,
-});
+const styles = formStyles as Record<string, CSSProperties>;
 
-const CensusForm = ({
+interface Option {
+  value: string;
+  label: string;
+}
+
+interface CensusFormProps {
+  onSchoolDropdownChange: (arg: Option) => void;
+  schoolDropdownOption?: Option;
+  initialSchoolYear?: number;
+  prefillData?: CensusFormPrefill;
+}
+
+interface CensusFormPrefill {
+  userName?: string;
+  userEmail?: string;
+  isTeacher?: boolean;
+  schoolCountry?: string;
+  schoolId?: string;
+  schoolType?: string;
+  schoolName?: string;
+  schoolState?: string;
+  schoolZip?: string;
+}
+
+interface CensusFormState {
+  showFollowUp: boolean;
+  showPledge: boolean;
+  selectedHowMuchCS: string[];
+  selectedTopics: string[];
+  otherTopicsDesc: string;
+  schoolYear?: number;
+}
+
+interface CensusSubmission {
+  name: string;
+  email: string;
+  role: string;
+  country: string;
+  hoc: string;
+  schoolName: string;
+  schoolCity: string;
+  schoolState: string;
+  schoolZip: string;
+  schoolType: string;
+  afterSchool: string;
+  tenHours: string;
+  twentyHours: string;
+  otherCS: boolean;
+  followUpFrequency: string;
+  followUpMore: string;
+  acceptedPledge: boolean;
+  share: string;
+  optIn: string;
+}
+
+export const CensusForm: React.FC<CensusFormProps> = ({
   onSchoolDropdownChange,
   schoolDropdownOption,
   initialSchoolYear,
   prefillData = {},
 }) => {
-  const [state, setState] = useState({
+  const [state, setState] = useState<CensusFormState>({
+    showFollowUp: false,
+    showPledge: false,
     selectedHowMuchCS: [],
     selectedTopics: [],
     otherTopicsDesc: '',
-    schoolName: prefillData.schoolName ?? '',
     schoolYear: initialSchoolYear,
   });
-  const [submission, setSubmission] = useState({
+  const [submission, setSubmission] = useState<CensusSubmission>({
     name: prefillData.userName ?? '',
     email: prefillData.userEmail ?? '',
     role: prefillData.isTeacher ? 'TEACHER' : '',
@@ -63,7 +108,7 @@ const CensusForm = ({
     share: '',
     optIn: '',
   });
-  const [errors, setErrors] = useState({
+  const [errors, setErrors] = useState<Record<string, boolean>>({
     invalidEmail: false,
   });
 
@@ -77,21 +122,26 @@ const CensusForm = ({
     [submission.role]
   );
 
-  const handleChange = (field, event) => {
+  const handleChange = (
+    field: string,
+    event: ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
     setSubmission(prevState => ({
       ...prevState,
       [field]: event.target.value,
     }));
   };
 
-  const handleSchoolDropdownChange = (field, event) => {
-    onSchoolDropdownChange(event);
+  const handleSchoolDropdownChange = (_: string, option: Option) => {
+    onSchoolDropdownChange(option);
   };
 
-  const handleDropdownChange = (field, event) => {
+  const handleDropdownChange = (field: string, option: Option) => {
     setSubmission(prevState => ({
       ...prevState,
-      [field]: event ? event.value : '',
+      [field]: option ? option.value : '',
     }));
   };
 
@@ -109,7 +159,7 @@ const CensusForm = ({
     }));
   };
 
-  const toggleTopics = option => {
+  const toggleTopics = (option: string) => {
     if (state.selectedTopics.includes(option)) {
       clearOption(option);
     } else {
@@ -117,21 +167,21 @@ const CensusForm = ({
     }
   };
 
-  const selectOption = option => {
+  const selectOption = (option: string) => {
     setState(prevState => ({
       ...prevState,
       selectedTopics: [...prevState.selectedTopics, option],
     }));
   };
 
-  const clearOption = option => {
+  const clearOption = (option: string) => {
     setState(prevState => ({
       ...prevState,
       selectedTopics: prevState.selectedTopics.filter(opt => opt !== option),
     }));
   };
 
-  const updateOtherTopicsDesc = event => {
+  const updateOtherTopicsDesc = (event: ChangeEvent<HTMLInputElement>) => {
     const description = event.target.value;
     const emptyDescription = '' === description;
 
@@ -155,7 +205,9 @@ const CensusForm = ({
   // each submitted field that is problematic. The specifics of
   // the problem are not important here since we just need a boolean value
   // of whether there was an error or not.
-  const processError = errorResponse => {
+  const processError = (
+    errorResponse: Record<keyof typeof errorMap, string>
+  ) => {
     const errorMap = {
       submitter_email_address: 'invalidEmail',
       class_frequency: 'frequency',
@@ -175,7 +227,7 @@ const CensusForm = ({
     setErrors(prevState => {
       const updatedErrors = {...prevState};
       Object.keys(errorResponse).forEach(key => {
-        const errorKey = errorMap[key];
+        const errorKey = errorMap[key as keyof typeof errorMap];
         updatedErrors[errorKey] = true;
       });
       return updatedErrors;
@@ -218,7 +270,7 @@ const CensusForm = ({
     }
   };
 
-  const validateNotBlank = questionField => questionField === '';
+  const validateNotBlank = (questionField?: string) => questionField === '';
 
   const validateTopics = () =>
     showFollowUp && state.selectedTopics.length === 0;
@@ -226,7 +278,7 @@ const CensusForm = ({
   const validateFrequency = () =>
     showFollowUp && submission.followUpFrequency === '';
 
-  const validateSubmission = e => {
+  const validateSubmission = (e: MouseEvent) => {
     e.preventDefault();
     const updatedErrors = {...errors};
     updatedErrors.email = validateNotBlank(submission.email);
@@ -250,41 +302,45 @@ const CensusForm = ({
   };
 
   const censusFormSubmit = async () => {
-    const formData = {
-      submitter_email_address: submission.email,
-      submitter_name: submission.name,
-      submitter_role: submission.role,
-      how_many_do_hoc: submission.hoc,
-      how_many_after_school: submission.afterSchool,
-      how_many_10_hours: submission.tenHours,
-      how_many_20_hours: submission.twentyHours,
-      other_classes_under_20_hours: submission.otherCS,
-      topic_blocks: state.selectedTopics.includes('topic_blocks'),
-      topic_text: state.selectedTopics.includes('topic_text'),
-      topic_robots: state.selectedTopics.includes('topic_robots'),
-      topic_internet: state.selectedTopics.includes('topic_internet'),
-      topic_security: state.selectedTopics.includes('topic_security'),
-      topic_data: state.selectedTopics.includes('topic_data'),
-      topic_web_design: state.selectedTopics.includes('topic_web_design'),
-      topic_game_design: state.selectedTopics.includes('topic_game_design'),
-      topic_ethical_social: state.selectedTopics.includes(
-        'topic_ethical_social'
-      ),
-      topic_other: state.selectedTopics.includes('topic_other'),
-      topic_other_description: state.otherTopicsDesc || undefined,
-      topic_do_not_know: state.selectedTopics.includes('topic_do_not_know'),
-      class_frequency: submission.followUpFrequency,
-      tell_us_more: submission.followUpMore || undefined,
-      pledged: submission.acceptedPledge,
-      share_with_regional_partners: submission.share,
-      country_s: submission.country,
-      nces_school_s: schoolDropdownOption?.value,
-      school_type_s: submission.schoolType,
-      school_state_s: submission.schoolState,
-      school_zip_s: submission.schoolZip,
-      school_name_s: submission.schoolName,
-      opt_in: submission.optIn,
-    };
+    const formData: Record<string, string> = Object.fromEntries(
+      Object.entries({
+        submitter_email_address: submission.email,
+        submitter_name: submission.name,
+        submitter_role: submission.role,
+        how_many_do_hoc: submission.hoc,
+        how_many_after_school: submission.afterSchool,
+        how_many_10_hours: submission.tenHours,
+        how_many_20_hours: submission.twentyHours,
+        other_classes_under_20_hours: submission.otherCS,
+        topic_blocks: state.selectedTopics.includes('topic_blocks'),
+        topic_text: state.selectedTopics.includes('topic_text'),
+        topic_robots: state.selectedTopics.includes('topic_robots'),
+        topic_internet: state.selectedTopics.includes('topic_internet'),
+        topic_security: state.selectedTopics.includes('topic_security'),
+        topic_data: state.selectedTopics.includes('topic_data'),
+        topic_web_design: state.selectedTopics.includes('topic_web_design'),
+        topic_game_design: state.selectedTopics.includes('topic_game_design'),
+        topic_ethical_social: state.selectedTopics.includes(
+          'topic_ethical_social'
+        ),
+        topic_other: state.selectedTopics.includes('topic_other'),
+        topic_other_description: state.otherTopicsDesc || undefined,
+        topic_do_not_know: state.selectedTopics.includes('topic_do_not_know'),
+        class_frequency: submission.followUpFrequency,
+        tell_us_more: submission.followUpMore || undefined,
+        pledged: submission.acceptedPledge,
+        share_with_regional_partners: submission.share,
+        country_s: submission.country,
+        nces_school_s: schoolDropdownOption?.value,
+        school_type_s: submission.schoolType,
+        school_state_s: submission.schoolState,
+        school_zip_s: submission.schoolZip,
+        school_name_s: submission.schoolName,
+        opt_in: submission.optIn,
+      })
+        .filter(([, value]) => value !== undefined)
+        .map(([key, value]) => [key, String(value)])
+    );
     const queryString = new URLSearchParams(formData).toString();
     const response = await fetch(
       `/dashboardapi/v1/census/CensusYourSchool2017v7?${queryString}`,
@@ -300,7 +356,7 @@ const CensusForm = ({
     }
   };
 
-  const topicCheckbox = (name, label) => {
+  const topicCheckbox = (name: string, label: string) => {
     return (
       <label>
         <input
@@ -316,7 +372,7 @@ const CensusForm = ({
 
   const showErrorMsg = Object.values(errors).some(value => value === true);
   const US = submission.country === 'United States';
-  let schoolId = prefillData.schoolId ?? '';
+  let schoolId: string | undefined = prefillData.schoolId ?? '';
   if (schoolDropdownOption) {
     schoolId = undefined;
   }
@@ -330,7 +386,7 @@ const CensusForm = ({
       <h2 style={styles.formHeading}>{i18n.yourSchoolTellUs()}</h2>
       <form id="census-form">
         <CountryAutocompleteDropdown
-          onChange={e => handleDropdownChange('country', e)}
+          onChange={(option: Option) => handleDropdownChange('country', option)}
           value={submission.country}
           showRequiredIndicator
           showErrorMsg={errors.country}
@@ -371,10 +427,12 @@ const CensusForm = ({
             </label>
           </div>
         )}
-        <div style={styles.question}>
-          Please answer the questions below about the {initialSchoolYear}-
-          {initialSchoolYear + 1} school year.
-        </div>
+        {initialSchoolYear && (
+          <div style={styles.question}>
+            Please answer the questions below about the {initialSchoolYear}-
+            {initialSchoolYear + 1} school year.
+          </div>
+        )}
         <div style={styles.question}>
           How much{' '}
           <span style={{fontWeight: 'bold'}}>
@@ -544,7 +602,6 @@ const CensusForm = ({
                 {i18n.censusFollowUpTellUsMore()}
               </div>
               <textarea
-                type="text"
                 name="tell_us_more"
                 value={submission.followUpMore}
                 onChange={e => handleChange('followUpMore', e)}
@@ -682,7 +739,7 @@ const CensusForm = ({
         )}
         <Button
           id="submit-button"
-          onClick={e => validateSubmission(e)}
+          onClick={(e: MouseEvent) => validateSubmission(e)}
           color={Button.ButtonColor.brandSecondaryDefault}
           text={i18n.submit()}
           size={Button.ButtonSize.large}
@@ -692,12 +749,3 @@ const CensusForm = ({
     </div>
   );
 };
-
-CensusForm.propTypes = {
-  prefillData: censusFormPrefillDataShape,
-  initialSchoolYear: PropTypes.number,
-  schoolDropdownOption: PropTypes.object,
-  onSchoolDropdownChange: PropTypes.func,
-};
-
-export const UnconnectedCensusForm = CensusForm;
