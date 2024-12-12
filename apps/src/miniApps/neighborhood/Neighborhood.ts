@@ -17,8 +17,6 @@ const SIGNAL_CHECK_TIME = 200;
 
 export default class Neighborhood {
   private controller: typeof MazeController | null;
-  // TODO: unused?
-  private numRows: number | null;
   private seenFirstSignal: boolean;
   private onOutputMessage: (message: string) => void;
   private onNewlineMessage: () => void;
@@ -35,7 +33,6 @@ export default class Neighborhood {
     statusMessagePrefix: string
   ) {
     this.controller = null;
-    this.numRows = null;
     this.seenFirstSignal = false;
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;
@@ -64,7 +61,6 @@ export default class Neighborhood {
     if (!level.serializedMaze) {
       return;
     }
-    this.numRows = level.serializedMaze.length;
     this.controller = new MazeController(level, skin, config, {
       // todo: We may not need these, does the neighborhood ever make noise?
       methods: {
