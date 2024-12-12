@@ -339,7 +339,7 @@ const CensusForm = ({
       <h2 style={styles.formHeading}>{i18n.yourSchoolTellUs()}</h2>
       <form id="census-form">
         <CountryAutocompleteDropdown
-          onChange={handleDropdownChange.bind('country')}
+          onChange={e => handleDropdownChange('country', e)}
           value={submission.country}
           showRequiredIndicator
           showErrorMsg={errors.country}
@@ -374,7 +374,7 @@ const CensusForm = ({
                 type="text"
                 name="school_name_s"
                 value={submission.schoolName}
-                onChange={handleChange.bind(this, 'schoolName')}
+                onChange={e => handleChange('schoolName', e)}
                 style={styles.input}
               />
             </label>
@@ -405,7 +405,7 @@ const CensusForm = ({
             <select
               name="how_many_do_hoc"
               value={submission.hoc}
-              onChange={handleChange.bind(this, 'hoc')}
+              onChange={e => handleChange('hoc', e)}
               style={styles.dropdown}
             >
               {howManyStudents.map((role, index) => (
@@ -427,7 +427,7 @@ const CensusForm = ({
             <select
               name="how_many_after_school"
               value={submission.afterSchool}
-              onChange={handleChange.bind(this, 'afterSchool')}
+              onChange={e => handleChange('afterSchool', e)}
               style={styles.dropdown}
             >
               {howManyStudents.map((role, index) => (
@@ -449,7 +449,7 @@ const CensusForm = ({
             <select
               name="how_many_10_hours"
               value={submission.tenHours}
-              onChange={handleChange.bind(this, 'tenHours')}
+              onChange={e => handleChange('tenHours', e)}
               style={styles.dropdown}
             >
               {howManyStudents.map((role, index) => (
@@ -471,7 +471,7 @@ const CensusForm = ({
             <select
               name="how_many_20_hours"
               value={submission.twentyHours}
-              onChange={handleChange.bind(this, 'twentyHours')}
+              onChange={e => handleChange('twentyHours', e)}
               style={styles.dropdown}
             >
               {howManyStudents.map((role, index) => (
@@ -519,7 +519,7 @@ const CensusForm = ({
                   type="text"
                   name="topic_other_description"
                   value={state.otherTopicsDesc}
-                  onChange={updateOtherTopicsDesc.bind(this)}
+                  onChange={updateOtherTopicsDesc}
                   style={styles.inputInline}
                 />
               </div>
@@ -538,7 +538,7 @@ const CensusForm = ({
               <select
                 name="class_frequency"
                 value={submission.followUpFrequency}
-                onChange={handleChange.bind(this, 'followUpFrequency')}
+                onChange={e => handleChange('followUpFrequency', e)}
                 style={styles.wideDropdown}
               >
                 {frequencyOptions.map((role, index) => (
@@ -556,7 +556,7 @@ const CensusForm = ({
                 type="text"
                 name="tell_us_more"
                 value={submission.followUpMore}
-                onChange={handleChange.bind(this, 'followUpMore')}
+                onChange={e => handleChange('followUpMore', e)}
                 style={styles.textArea}
               />
             </label>
@@ -573,7 +573,7 @@ const CensusForm = ({
           <select
             name="submitter_role"
             value={submission.role}
-            onChange={handleChange.bind(this, 'role')}
+            onChange={e => handleChange('role', e)}
             style={styles.wideDropdown}
           >
             {roleOptions.map((role, index) => (
@@ -599,7 +599,7 @@ const CensusForm = ({
               type="text"
               name="submitter_email_address"
               value={submission.email}
-              onChange={handleChange.bind(this, 'email')}
+              onChange={e => handleChange('email', e)}
               placeholder={i18n.yourEmailPlaceholder()}
               style={styles.input}
             />
@@ -617,7 +617,7 @@ const CensusForm = ({
             <select
               name="share_with_regional_partners"
               value={submission.share}
-              onChange={handleChange.bind(this, 'share')}
+              onChange={e => handleChange('share', e)}
               style={styles.dropdown}
             >
               <option value="" disabled>
@@ -647,7 +647,7 @@ const CensusForm = ({
           <select
             name="opt_in"
             value={submission.optIn}
-            onChange={handleChange.bind(this, 'optIn')}
+            onChange={e => handleChange('optIn', e)}
             style={styles.dropdown}
           >
             <option value="" disabled>
@@ -666,7 +666,7 @@ const CensusForm = ({
               type="text"
               name="submitter_name"
               value={submission.name}
-              onChange={handleChange.bind(this, 'name')}
+              onChange={e => handleChange('name', e)}
               placeholder={i18n.yourName()}
               style={styles.input}
             />
@@ -679,7 +679,7 @@ const CensusForm = ({
                 type="checkbox"
                 name="pledged"
                 checked={submission.acceptedPledge}
-                onChange={() => togglePledge()}
+                onChange={togglePledge}
               />
               <span style={styles.pledge}>{pledge}</span>
             </label>
