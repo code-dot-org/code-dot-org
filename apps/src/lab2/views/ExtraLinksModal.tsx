@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import {Heading3, StrongText} from '@cdo/apps/componentLibrary/typography';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -36,7 +36,10 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
   const [deleteError, setDeleteError] = useState('');
   const [featuredProjectStatus, setFeaturedProjectStatus] = useState<
     string | undefined
-  >('');
+  >(projectLinkData?.project_info?.featured_status);
+  const [abuseScore, setAbuseScore] = useState<number | undefined>(
+    projectLinkData?.project_info?.abuse_score
+  );
 
   const channelId: string | undefined = useAppSelector(
     state => state.lab.channel && state.lab.channel.id
@@ -53,6 +56,12 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
   useEffect(() => {
     if (projectLinkData?.project_info) {
       setFeaturedProjectStatus(projectLinkData?.project_info.featured_status);
+    }
+  }, [projectLinkData]);
+
+  useEffect(() => {
+    if (projectLinkData?.project_info?.abuse_score) {
+      setAbuseScore(projectLinkData.project_info.abuse_score);
     }
   }, [projectLinkData]);
 
@@ -121,6 +130,20 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
     }
   };
 
+  const onResetAbuseScore = async () => {
+    try {
+      await HttpClient.post(
+        `/v3/channels/${channelId}/abuse/delete`,
+        '',
+        true,
+        {contentType: 'application/json;charset=UTF-8'}
+      );
+      setAbuseScore(0);
+    } catch (e) {
+      console.log('Error resetting abuse score to 0.');
+    }
+  };
+
   return isOpen ? (
     <AccessibleDialog onClose={onClose}>
       <Heading3>Extra links</Heading3>
@@ -172,6 +195,8 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
         projectLinkData={projectLinkData}
         featuredProjectStatus={featuredProjectStatus}
         onBookmark={onBookmark}
+        onResetAbuseScore={onResetAbuseScore}
+        abuseScore={abuseScore}
       />
     </AccessibleDialog>
   ) : null;
@@ -204,8 +229,7 @@ const CloneLevelButton: React.FunctionComponent<CloneLevelButtonProps> = ({
   return (
     <div>
       <Button
-        size={Button.ButtonSize.small}
-        color={Button.ButtonColor.purple}
+        size="xs"
         onClick={() => setShowCloneField(!showCloneField)}
         text={showCloneField ? 'Cancel Clone' : 'Clone'}
       />
@@ -217,11 +241,7 @@ const CloneLevelButton: React.FunctionComponent<CloneLevelButtonProps> = ({
             value={clonedLevelName}
             onChange={event => setClonedLevelName(event.target.value)}
           />
-          <Button
-            onClick={handleClone}
-            text={'Clone'}
-            size={Button.ButtonSize.small}
-          />
+          <Button onClick={handleClone} text={'Clone'} size="xs" />
           {cloneError && (
             <p className={moduleStyles.errorMessage}>{cloneError}</p>
           )}
@@ -253,19 +273,16 @@ const DeleteLevelButton: React.FunctionComponent<DeleteLevelButtonProps> = ({
   return (
     <div>
       <Button
-        size={Button.ButtonSize.small}
+        size="xs"
         text={showDeleteConfirm ? 'Cancel Delete' : 'Delete'}
-        color={Button.ButtonColor.red}
+        color={buttonColors.destructive}
         onClick={() => setShowDeleteConfirm(!showDeleteConfirm)}
+        className={moduleStyles.bottomButton}
       />
       {showDeleteConfirm && (
         <div>
           {'Are you sure you want to delete this level? '}
-          <Button
-            onClick={handleDelete}
-            text={'Confirm Delete'}
-            size={Button.ButtonSize.small}
-          />
+          <Button onClick={handleDelete} text={'Confirm Delete'} size="xs" />
           {deleteError && (
             <p className={moduleStyles.errorMessage}>{deleteError}</p>
           )}
@@ -286,12 +303,7 @@ const FeaturedProjectInfo: React.FunctionComponent<
     return (
       <>
         <div>Not a featured project</div>
-        <Button
-          size={Button.ButtonSize.small}
-          color={Button.ButtonColor.purple}
-          onClick={onBookmark}
-          text={'Bookmark as featured'}
-        />
+        <Button size="xs" onClick={onBookmark} text={'Bookmark as featured'} />
       </>
     );
   }
@@ -315,11 +327,42 @@ const RemixAncestry: React.FunctionComponent<{
   );
 };
 
+const AbuseScoreInfo: React.FunctionComponent<{
+  abuseScore: number | undefined;
+  onResetAbuseScore: () => void;
+}> = ({abuseScore, onResetAbuseScore}) => {
+  if (abuseScore === undefined) {
+    return null;
+  }
+  const msg =
+    abuseScore <= 15
+      ? 'Safe to share project.'
+      : 'This project is blocked from sharing';
+
+  return (
+    <>
+      Abuse score: {abuseScore}
+      <ul>
+        <li>{msg}</li>
+      </ul>
+      <div>
+        <Button
+          size="xs"
+          text={'Reset abuse score to 0'}
+          onClick={onResetAbuseScore}
+        />
+      </div>
+    </>
+  );
+};
+
 interface ProjectLinkDataProps {
   projectLinkData?: ExtraLinksProjectData;
   isStandaloneProject: boolean;
   featuredProjectStatus?: string;
   onBookmark: () => void;
+  onResetAbuseScore: () => void;
+  abuseScore?: number;
 }
 
 const ProjectLinkData: React.FunctionComponent<ProjectLinkDataProps> = ({
@@ -327,6 +370,8 @@ const ProjectLinkData: React.FunctionComponent<ProjectLinkDataProps> = ({
   isStandaloneProject,
   featuredProjectStatus,
   onBookmark,
+  onResetAbuseScore,
+  abuseScore,
 }) => {
   if (!projectLinkData) {
     return null;
@@ -336,8 +381,6 @@ const ProjectLinkData: React.FunctionComponent<ProjectLinkDataProps> = ({
   if (!ownerInfo || !projectInfo) {
     return null;
   }
-  const remixList = projectInfo.remix_ancestry;
-
   return (
     <>
       <StrongText>Project Info</StrongText>
@@ -353,13 +396,20 @@ const ProjectLinkData: React.FunctionComponent<ProjectLinkDataProps> = ({
             <li>
               Remix ancestry:
               <ul>
-                <RemixAncestry remixList={remixList} />
+                <RemixAncestry remixList={projectInfo.remix_ancestry} />
               </ul>
             </li>
+            <li>Project submitted: {projectInfo.is_published_project}</li>
             <li>
               <FeaturedProjectInfo
                 featuredProjectStatus={featuredProjectStatus}
                 onBookmark={onBookmark}
+              />
+            </li>
+            <li>
+              <AbuseScoreInfo
+                abuseScore={abuseScore}
+                onResetAbuseScore={onResetAbuseScore}
               />
             </li>
           </>
