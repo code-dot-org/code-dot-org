@@ -175,32 +175,28 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         let(:params) {{set_locale: locale}}
         let(:extra_params) {{foo: 'bar'}}
 
-        let(:locale)
+        let(:locale) {'en-US'}
 
         before do
           params.merge!(extra_params)
         end
 
-        context 'when locale is available in region' do
-          let(:locale) {'en-US'}
+        it 'changes region page language' do
+          get_regional_page
 
-          it 'changes region page language' do
-            get_regional_page
+          expect(Metrics::Events).not_to have_received(:log_event).with(
+            event_name: 'Global Edition Region Selected',
+            request: anything,
+            metadata: anything,
+          )
 
-            expect(Metrics::Events).not_to have_received(:log_event).with(
-              event_name: 'Global Edition Region Selected',
-              request: anything,
-              metadata: anything,
-            )
+          must_respond_with 302
+          must_redirect_to "#{regional_page_path}?#{extra_params.to_query}"
 
-            must_respond_with 302
-            must_redirect_to "#{regional_page_path}?#{extra_params.to_query}"
+          follow_redirect!
 
-            follow_redirect!
-
-            must_respond_with 200
-            _(request.fullpath).must_equal "#{regional_page_path}?#{extra_params.to_query}"
-          end
+          must_respond_with 200
+          _(request.fullpath).must_equal "#{regional_page_path}?#{extra_params.to_query}"
         end
 
         context 'when locale is not available in region' do
