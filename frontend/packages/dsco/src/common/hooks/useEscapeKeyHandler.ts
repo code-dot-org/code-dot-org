@@ -9,16 +9,16 @@ import useDocumentKeydown from './useDocumentKeydown';
  * @param callback - The optional function to call when the Escape key is pressed.
  */
 const useEscapeKeyHandler = (callback?: () => void) => {
-    const handleKeyDown = useCallback(
-        (event: KeyboardEvent) => {
-            if (event.key === 'Escape' && callback) {
-                callback();
-            }
-        },
-        [callback]
-    );
+  const handleKeyDown = useCallback(
+    (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && callback) {
+        callback();
+      }
+    },
+    [callback],
+  );
 
-    useDocumentKeydown(callback && handleKeyDown);
+  useDocumentKeydown(callback && handleKeyDown);
 };
 
 export default useEscapeKeyHandler;

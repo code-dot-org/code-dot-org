@@ -1,10 +1,7 @@
 import {render, screen} from '@testing-library/react';
-import React from 'react';
 import '@testing-library/jest-dom';
 
-import FontAwesomeV6Icon, {
-  FontAwesomeV6IconProps,
-} from '@/fontAwesomeV6Icon';
+import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
 describe('Design System - FontAwesomeV6Icon', () => {
   const defaultProps: FontAwesomeV6IconProps = {

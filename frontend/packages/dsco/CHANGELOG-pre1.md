@@ -7,11 +7,13 @@ component/entity. All of that Changelogs will be combined into one in this file 
 ## `componentLibrary/closeButton`
 
 ## [0.4.1](https://github.com/code-dot-org/code-dot-org/pull/62914)
+
 - updated color variables to use `primitiveColors.css`
 
 ## [0.4.0](https://github.com/code-dot-org/code-dot-org/pull/62717)
+
 - rewritten `CloseButtonTest` in typescript
-- refactored/optimized `CloseButtonTest.tsx`
+- refactored/optimized `CloseButton.test.tsx`
 
 ## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/61754)
 
@@ -130,7 +132,6 @@ component/entity. All of that Changelogs will be combined into one in this file 
 - added storybook
 - added tests
 
-
 ## `componentLibrary/typography`
 
 ## [2.0.2](https://github.com/code-dot-org/code-dot-org/pull/62837)
@@ -139,7 +140,7 @@ component/entity. All of that Changelogs will be combined into one in this file 
 
 ## [2.0.1](https://github.com/code-dot-org/code-dot-org/pull/53337)
 
-- add ```ExtraStrong``` typography element
+- add `ExtraStrong` typography element
 
 ## [2.0.0](https://github.com/code-dot-org/code-dot-org/pull/52531)
 

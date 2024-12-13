@@ -137,6 +137,6 @@ export const updatePositionedElementStyles = ({
       tailOffset,
       tailLength,
       isPositionFixed,
-    })
+    }),
   );
 };

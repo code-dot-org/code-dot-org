@@ -11,7 +11,7 @@ const useFocusTrap = (containerRef: React.RefObject<HTMLElement>) => {
       // Focus on the dialog container or the first focusable element inside
       const focusableElements =
         containerRef.current.querySelectorAll<HTMLElement>(
-          'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+          'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])',
         );
 
       const firstElement = focusableElements[0];
@@ -32,7 +32,7 @@ const useFocusTrap = (containerRef: React.RefObject<HTMLElement>) => {
 
       const focusableElements =
         containerRef.current.querySelectorAll<HTMLElement>(
-          'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+          'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])',
         );
 
       const focusable = Array.from(focusableElements);

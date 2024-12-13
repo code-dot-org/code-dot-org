@@ -4,7 +4,7 @@ import React from 'react';
 import CloseButton, {CloseButtonProps} from '../index';
 
 export default {
-  title: 'DesignSystem/CloseButton', // eslint-disable-line storybook/no-title-property-in-meta
+  title: 'DesignSystem/CloseButton',
   component: CloseButton,
 } as Meta;
 

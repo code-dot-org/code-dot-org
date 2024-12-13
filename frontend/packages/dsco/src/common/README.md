@@ -23,8 +23,7 @@ Common mixins.
 Usage example:
 
 ```scss
-@import "@code-dot-org/dsco/common/styles/mixins";
-
+@import '@code-dot-org/dsco/common/styles/mixins';
 
 .custom-link-text {
   @include link-body-three; // (include mixin styles)
@@ -38,7 +37,7 @@ Usage example:
 
 Common constants.
 
-```ts 
+```ts
 import {componentSizeToBodyTextSizeMap} from '@code-dot-org/dsco/common/constants';
 // ...
 // ...
@@ -50,13 +49,13 @@ const bodyTextSize = componentSizeToBodyTextSizeMap[size];
 
 Common types.
 
-```ts 
+```ts
 import {ComponentSizeXSToL} from '@code-dot-org/dsco/common/types';
 // ...
 // ...
 // ...
 type ComponentProps = {
-    size?: ComponentSizeXSToL;
+  size?: ComponentSizeXSToL;
 };
 ```
 
@@ -84,6 +83,6 @@ import {DropdownContext} from '@code-dot-org/dsco/common/contexts';
 // ...
 
 <DropdownContext.Provider value={dropdownContextValue}>
-    {children}
-</DropdownContext.Provider>
+  {children}
+</DropdownContext.Provider>;
 ```

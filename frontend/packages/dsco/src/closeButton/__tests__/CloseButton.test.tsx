@@ -1,7 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
-import React from 'react';
 
 import CloseButton from '@/closeButton';
 
@@ -21,12 +20,12 @@ describe('Design System - CloseButton', () => {
         aria-label="custom className close"
         onClick={() => {}}
         className={className}
-      />
+      />,
     );
 
     const button = screen.getByRole('button');
     // TODO [Design2-197] - Create a visual test for this case instead of checking for class name
-    // eslint-disable-next-line no-restricted-properties
+
     expect(button).toHaveClass(className);
   });
 
@@ -35,7 +34,7 @@ describe('Design System - CloseButton', () => {
     const handleClick = jest.fn();
 
     render(
-      <CloseButton aria-label="Close to test onClick" onClick={handleClick} />
+      <CloseButton aria-label="Close to test onClick" onClick={handleClick} />,
     );
 
     const button = screen.getByRole('button');

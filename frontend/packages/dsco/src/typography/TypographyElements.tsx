@@ -94,7 +94,7 @@ const typographyElementsToGenerate: TypographyElementToGenerateTemplate[] = [
 
 // Generates a set of components(Typography Elements) based on the data in typographyElementsToGenerate
 const generateComponents = (
-  componentsToGenerate: TypographyElementToGenerateTemplate[]
+  componentsToGenerate: TypographyElementToGenerateTemplate[],
 ): {[key: string]: React.FunctionComponent<TypographyElementProps>} =>
   componentsToGenerate.reduce((acc, componentTemplateData) => {
     const {displayName, semanticTag, defaultVisualAppearance} =

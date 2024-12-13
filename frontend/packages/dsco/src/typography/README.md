@@ -6,6 +6,7 @@ At some point it will be moved to (https://github.com/code-dot-org/dsco_), howev
 remain the same, and we'll just need to update the import statements once it's in that library.
 
 ### Why there's semanticTag and visualAppearance props?
+
 We're using `semanticTag` prop to define the semantic tag of the element we're going to render (h1, h2, ..., h6, p, strong,
 em, figcaption ), and `visualAppearance` prop to define the components styles based on our Design system styling.
 
@@ -14,7 +15,8 @@ Short explanation is that we in order to use semantic tags correctly we might wa
 The long explanation [can be found here](https://github.com/code-dot-org/code-dot-org/pull/51116#discussion_r1159915772)
 
 ### Additional styling / rewriting existing styles of the components
-Since we're using scss modules and classnames inside, **to overwrite the styles of the components, you need to make sure 
+
+Since we're using scss modules and classnames inside, **to overwrite the styles of the components, you need to make sure
 overwriting styles has highest styles priority**.
 
 Here are some examples:
@@ -26,7 +28,7 @@ Here are some examples:
             Some Heading
         </Heading1>
     </div>
-// 1. (Recomended) We can use scss module for 
+// 1. (Recomended) We can use scss module for
 //      a) set a classname for a parent element and update h1 in that style
 
 //     <style>
@@ -66,13 +68,9 @@ Here are some examples:
 
 ```
 
-***Always relly on css selector priority, not the order of stylesheets being loaded.*** (Since order of stylesheets load can be changed almost randomly [example here](https://codedotorg.slack.com/archives/C0T0PNTM3/p1710363328926969))
-
-
-
+**_Always relly on css selector priority, not the order of stylesheets being loaded._** (Since order of stylesheets load can be changed almost randomly [example here](https://codedotorg.slack.com/archives/C0T0PNTM3/p1710363328926969))
 
 ## Consuming This Package
-
 
 ```javascript
 import {Heading1, BodyTwoText, StrongText} from './../componentLibrary/typography';
