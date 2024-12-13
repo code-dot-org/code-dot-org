@@ -2,17 +2,21 @@
 name = 'pythonlab_setup'
 version = '0.1.0'
 requires-python = '>=3.12'
-
 dependencies = [
   'matplotlib >=3',
   'requests >=2',
 ]
 
-[tool.pytest.ini_options]
-testpaths = ['tests']
+[dependency-groups]
+dev = [
+  'pytest >=8',
+]
 
 [tool.uv.scripts]
 test = 'pytest'
+
+[tool.pytest.ini_options]
+testpaths = ['tests']
 
 [build-system]
 requires = ['hatchling']

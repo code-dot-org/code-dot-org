@@ -2,14 +2,18 @@
 name = 'unittest_runner'
 version = '0.1.0'
 requires-python = '>=3.12'
-
 dependencies = []
 
-[tool.pytest.ini_options]
-testpaths = ['tests']
+[dependency-groups]
+dev = [
+  'pytest >=8',
+]
 
 [tool.uv.scripts]
 test = 'pytest'
+
+[tool.pytest.ini_options]
+testpaths = ['tests']
 
 [build-system]
 requires = ['hatchling']
