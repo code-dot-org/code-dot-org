@@ -347,6 +347,8 @@ export interface ExtraLinksProjectData {
     is_featured_project: boolean;
     featured_status: string;
     remix_ancestry: string[];
+    is_published_project: 'yes' | 'no';
+    abuse_score: number;
   };
   meesage?: string;
 }
