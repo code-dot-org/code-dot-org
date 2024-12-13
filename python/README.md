@@ -35,7 +35,6 @@ Common commands:
 - `uv run ____`: run `____` inside the repo's python virtualenv. like: `bundle exec ____`
   - example: `uv run ipython`: start ipython
   - example: `uv run pytest`: run pytest in the current dir
-  - example: `uv run test`: run [tool.uv.scripts] alias for test, like package.json scripts
 - `source .venv/bin/activate`: activate the python virtual environment created by uv (see `uv venv activate` for exact command)
 
 ## pycall.rb: how to invoke python code from rails
@@ -165,22 +164,16 @@ repo-wide.
 
 #### Testing python packages
 
-Python packages should be testable by running `uv run test` from the package's main directory.
-Most likely you want to configure your project to use pytest on the tests/ sub-directory
-when `uv run test` is invoked.
+Python packages should be testable by running `uv run pytest` from the package's main directory.
 
-To do so, configure pyproject.toml ike this:
-
+Most likely you want to configure your project to use pytest on the tests/ sub-dir by configuring pyproject.toml like:
 ```
-[tool.uv.scripts]
-test = 'pytest'
-
 [tool.pytest.ini_options]
 testpaths = ['tests']
 ```
 
 
-Our CI system will automatically run `uv run test` against every directory that contains a pyproject.toml. By default `uv run test` will do nothing, you must configure `[tool.uv.scripts]` to define a test script.
+Our CI system will automatically run `uv run pytest` against every directory that contains a pyproject.toml.
 
 #### Linting python packages
 

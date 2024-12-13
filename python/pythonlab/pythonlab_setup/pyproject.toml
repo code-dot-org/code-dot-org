@@ -12,9 +12,6 @@ dev = [
   'pytest >=8',
 ]
 
-[tool.uv.scripts]
-test = 'pytest'
-
 [tool.pytest.ini_options]
 testpaths = ['tests']
 

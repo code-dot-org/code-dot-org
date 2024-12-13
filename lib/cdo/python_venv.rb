@@ -12,7 +12,7 @@ module PythonVenv
               '--dev'
             end
 
-    pdm 'sync', flags, *args
+    uv 'sync', flags, *args
   end
 
   def self.lint(*args)
@@ -33,6 +33,10 @@ module PythonVenv
 
   def self.run(*args)
     uv 'run', *args
+  end
+
+  def self.pytest(*args)
+    run 'pytest', *args
   end
 
   def self.uv(*args)
