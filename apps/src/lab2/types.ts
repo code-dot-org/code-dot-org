@@ -178,9 +178,12 @@ export interface LevelProperties {
   finishUrl?: string;
   finishDialog?: string;
   offerBrowserTts?: boolean;
-  validationFile?: ProjectFile;
   useSecondaryFinishButton?: boolean;
+  // Python Lab/Codebridge specific properties
+  validationFile?: ProjectFile;
   enableMicroBit?: boolean;
+  serializedMaze?: MazeCell[][];
+  startDirection?: number;
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -204,6 +207,13 @@ interface VideoData extends VideoLevelData {
   key?: string;
   enable_fallback?: boolean;
   autoplay?: boolean;
+}
+
+// Python Lab specific property
+export interface MazeCell {
+  tileType: number;
+  value: number;
+  assetId: number;
 }
 
 export enum OptionsToAvoid {

@@ -16,7 +16,7 @@ Feature: Lesson materials page - Eyes
 
     Then I wait until element "#ui-test-teacher-sidebar" is visible
 
-    Then I click selector "a:contains('Lesson Materials')" once I see it
+    Then I click selector "#ui-test-teacher-sidebar a:contains('Lesson Materials')" once I see it
 
     Then I wait until element "h1:contains('Lesson Materials')" is visible
     Then I wait until element "h6:contains('Teacher Resources')" is visible

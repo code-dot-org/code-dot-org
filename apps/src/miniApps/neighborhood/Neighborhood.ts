@@ -1,11 +1,12 @@
 import {tiles, MazeController} from '@code-dot-org/maze';
 
-import javalabMsg from '@cdo/javalab/locale';
+import javalabMsg from '@cdo/apps/javalab/locale';
+import {LevelProperties} from '@cdo/apps/lab2/types';
+import * as timeoutList from '@cdo/apps/lib/util/timeoutList';
+import Slider from '@cdo/apps/slider';
 
-import {NeighborhoodSignalType, STATUS_MESSAGE_PREFIX} from '../constants';
-
-const timeoutList = require('@cdo/apps/lib/util/timeoutList');
-const Slider = require('@cdo/apps/slider');
+import {NeighborhoodSignalType} from './constants';
+import {NeighborhoodSignal} from './types';
 
 const Direction = tiles.Direction;
 
@@ -15,25 +16,59 @@ const ANIMATED_STEPS = [NeighborhoodSignalType.MOVE];
 const SIGNAL_CHECK_TIME = 200;
 
 export default class Neighborhood {
-  constructor(onOutputMessage, onNewlineMessage, setIsRunning) {
+  private controller: typeof MazeController | null;
+  private seenFirstSignal: boolean;
+  private onOutputMessage: (message: string) => void;
+  private onNewlineMessage: () => void;
+  private setIsRunning: (isRunning: boolean) => void;
+  private statusMessagePrefix: string;
+  private speedSlider: Slider | null;
+  private signals: NeighborhoodSignal[];
+  private nextSignalIndex: number;
+
+  constructor(
+    onOutputMessage: (message: string) => void,
+    onNewlineMessage: () => void,
+    setIsRunning: (isRunning: boolean) => void,
+    statusMessagePrefix: string
+  ) {
     this.controller = null;
-    this.numRows = null;
     this.seenFirstSignal = false;
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;
     this.setIsRunning = setIsRunning;
+    this.statusMessagePrefix = statusMessagePrefix;
+    this.speedSlider = null;
+    this.signals = [];
+    this.nextSignalIndex = -1;
   }
 
-  afterInject(level, skin, config, studioApp) {
-    this.numRows = level.serializedMaze.length;
+  afterInject(
+    level: LevelProperties,
+    skin: Record<string, string>,
+    config: {skinId: string; level: LevelProperties},
+    playAudio: (name: string, options: Record<string, unknown>) => void,
+    playAudioOnFailure: () => void,
+    loadAudio: (filenames: string[], name: string[]) => void,
+    getTestResults: (
+      levelComplete: boolean,
+      options: {
+        executionError: {error: Error; lineNumber: number};
+        allowTopBlocks: boolean;
+      }
+    ) => void
+  ) {
+    if (!level.serializedMaze) {
+      return;
+    }
     this.controller = new MazeController(level, skin, config, {
+      // TODO: Either get rid of these methods or support audio in Neighborhood.
+      // https://codedotorg.atlassian.net/browse/CT-942
       methods: {
-        playAudio: (sound, options) => {
-          studioApp.playAudio(sound, {...options, noOverlap: true});
-        },
-        playAudioOnFailure: studioApp.playAudioOnFailure.bind(studioApp),
-        loadAudio: studioApp.loadAudio.bind(studioApp),
-        getTestResults: studioApp.getTestResults.bind(studioApp),
+        playAudio,
+        playAudioOnFailure,
+        loadAudio,
+        getTestResults,
       },
     });
     // 'svgMaze' is a magic value that we use throughout our code-dot-org and maze code to
@@ -45,24 +80,28 @@ export default class Neighborhood {
     this.controller.initWithSvg(svg);
 
     const slider = document.getElementById('slider');
+    if (!slider) {
+      return;
+    }
     this.speedSlider = new Slider(10, 35, 130, slider);
     this.signals = [];
     this.nextSignalIndex = 0;
 
     // Expose an interface for testing
-    window.__TestInterface.setSpeedSliderValue = value => {
-      this.speedSlider.setValue(value);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (window as any).__TestInterface.setSpeedSliderValue = (value: number) => {
+      this.speedSlider!.setValue(value);
     };
   }
 
-  handleSignal(signal) {
+  handleSignal(signal: NeighborhoodSignal) {
     // add next signal to our queue of signals
     this.signals.push(signal);
     // if this is the first signal, send a starting painter message
     if (!this.seenFirstSignal) {
       this.seenFirstSignal = true;
       this.onOutputMessage(
-        `${STATUS_MESSAGE_PREFIX} ${javalabMsg.startingPainter()}`
+        `${this.statusMessagePrefix} ${javalabMsg.startingPainter()}`
       );
       this.onNewlineMessage();
     }
@@ -101,54 +140,54 @@ export default class Neighborhood {
     }
   }
 
-  mazeCommand(signal, timeForSignal) {
+  mazeCommand(signal: NeighborhoodSignal, timeForSignal: number) {
     switch (signal.value) {
       case NeighborhoodSignalType.MOVE: {
-        const {direction, id} = signal.detail;
+        const {direction, id} = signal.detail!;
         this.controller.animatedMove(
-          Direction[direction.toUpperCase()],
+          Direction[direction!.toUpperCase()],
           timeForSignal,
           id
         );
         break;
       }
       case NeighborhoodSignalType.INITIALIZE_PAINTER: {
-        const {direction, x, y, id} = signal.detail;
+        const {direction, x, y, id} = signal.detail!;
         this.controller.addPegman(
           id,
-          parseInt(x),
-          parseInt(y),
-          Direction[direction.toUpperCase()]
+          parseInt(x!),
+          parseInt(y!),
+          Direction[direction!.toUpperCase()]
         );
         break;
       }
       case NeighborhoodSignalType.TAKE_PAINT: {
-        const {id} = signal.detail;
+        const {id} = signal.detail!;
         this.controller.subtype.takePaint(id);
         break;
       }
       case NeighborhoodSignalType.PAINT: {
-        const {id, color} = signal.detail;
+        const {id, color} = signal.detail!;
         this.controller.subtype.addPaint(id, color);
         break;
       }
       case NeighborhoodSignalType.REMOVE_PAINT: {
-        const {id} = signal.detail;
+        const {id} = signal.detail!;
         this.controller.subtype.removePaint(id);
         break;
       }
       case NeighborhoodSignalType.TURN_LEFT: {
-        const {id} = signal.detail;
+        const {id} = signal.detail!;
         this.controller.subtype.turnLeft(id);
         break;
       }
       case NeighborhoodSignalType.SHOW_PAINTER: {
-        const {id} = signal.detail;
+        const {id} = signal.detail!;
         this.controller.showPegman(id);
         break;
       }
       case NeighborhoodSignalType.HIDE_PAINTER: {
-        const {id} = signal.detail;
+        const {id} = signal.detail!;
         this.controller.hidePegman(id);
         break;
       }
@@ -166,7 +205,7 @@ export default class Neighborhood {
     }
   }
 
-  getAnimationTime(signal) {
+  getAnimationTime(signal: NeighborhoodSignal) {
     return ANIMATED_STEPS.includes(signal.value) ? ANIMATED_STEP_SPEED : 0;
   }
 
@@ -204,6 +243,6 @@ export default class Neighborhood {
   getPegmanSpeedMultiplier() {
     // The slider goes from 0 to 1. We scale the speed slider value to be between
     // 2 (slowest) and 0 (fastest).
-    return -2 * this.speedSlider.getValue() + 2;
+    return -2 * this.speedSlider!.getValue() + 2;
   }
 }

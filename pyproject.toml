@@ -6,6 +6,7 @@ dependencies = [
   # Register local python packages from /python in 3 places: this list, 
   # in [tool.uv.sources] and in [tool.uv.workspace]
   'pycdo',
+  'neighborhood',
   'pythonlab_setup',
   'unittest_runner',
   ## Do not add dependencies here, add them to a pyproject.toml in a /python sub-dir ##
@@ -22,6 +23,7 @@ dev = [
 
 [tool.uv.sources]
 pycdo = { workspace = true }
+neighborhood = { workspace = true }
 pythonlab_setup = { workspace = true }
 unittest_runner = { workspace = true }
 
@@ -30,6 +32,7 @@ members = [
   'python/pycdo',
   'python/pythonlab/pythonlab_setup',
   'python/pythonlab/unittest_runner',
+  'python/pythonlab/neighborhood',
 ]
 
 [tool.ruff]
