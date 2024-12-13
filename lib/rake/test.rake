@@ -402,7 +402,7 @@ namespace :test do
         'python',
         [
           'pyproject.toml',
-          'pdm.lock',
+          'uv.lock',
           'python/**/*',
           'lib/cdo/python_venv.py',
           'Gemfile',
