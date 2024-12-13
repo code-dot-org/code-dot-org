@@ -4,6 +4,7 @@ requires-python = ">=3.12"
 [manifest]
 members = [
     "code-dot-org",
+    "neighborhood",
     "pycdo",
     "pythonlab-setup",
     "unittest-runner",
@@ -122,6 +123,7 @@ name = "code-dot-org"
 version = "1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "neighborhood" },
     { name = "pycdo" },
     { name = "pythonlab-setup" },
     { name = "unittest-runner" },
@@ -138,6 +140,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "neighborhood", editable = "python/pythonlab/neighborhood" },
     { name = "pycdo", editable = "python/pycdo" },
     { name = "pythonlab-setup", editable = "python/pythonlab/pythonlab_setup" },
     { name = "unittest-runner", editable = "python/pythonlab/unittest_runner" },
@@ -520,6 +523,21 @@ sdist = { url = "https://files.pythonhosted.org/packages/99/5b/a36a337438a14116b
 wheels = [
     { url = "https://files.pythonhosted.org/packages/8f/8e/9ad090d3553c280a8060fbf6e24dc1c0c29704ee7d1c372f0c174aa59285/matplotlib_inline-0.1.7-py3-none-any.whl", hash = "sha256:df192d39a4ff8f21b1895d72e6a13f5fcc5099f00fa84384e0ea28c2cc0653ca", size = 9899 },
 ]
+
+[[package]]
+name = "neighborhood"
+version = "0.1.0"
+source = { editable = "python/pythonlab/neighborhood" }
+
+[package.dev-dependencies]
+dev = [
+    { name = "pytest" },
+]
+
+[package.metadata]
+
+[package.metadata.requires-dev]
+dev = [{ name = "pytest", specifier = ">=8" }]
 
 [[package]]
 name = "numpy"
