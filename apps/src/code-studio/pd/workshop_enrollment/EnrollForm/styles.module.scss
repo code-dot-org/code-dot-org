@@ -1,4 +1,4 @@
-@import 'color';
+@import '@cdo/apps/componentLibrary/common/styles/colors.css';
 
 #enroll_form {
   display: flex;
@@ -10,7 +10,7 @@
   .required > span::after,
   .school_info_required label > span::after {
     content: '*';
-    color: $light_negative_500;
+    color: var(--text-error-primary);
     margin-left: 0.2em;
     font-size: inherit;
   }
@@ -48,7 +48,7 @@
     resize: vertical;
 
     &:focus-visible {
-      outline: 2px solid $light_primary_500;
+      outline: 2px solid var(--borders-brand-teal-primary);
       outline-offset: 2px;
       box-shadow: none;
     }
