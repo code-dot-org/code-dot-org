@@ -25,18 +25,6 @@ class ScriptsControllerTest < ActionController::TestCase
     File.stubs(:write)
   end
 
-  test "show: teacher in teacher-local-nav-v2 experiment is redirected to teacher dashboard if unit is in a section" do
-    experiment_unit = create :unit, name: 'experiment-course'
-    experiment_teacher = create :teacher
-    experiment_section = create :section, user: experiment_teacher, unit: experiment_unit
-    SingleUserExperiment.find_or_create_by!(min_user_id: experiment_teacher.id, name: 'teacher-local-nav-v2')
-
-    sign_in experiment_teacher
-
-    get :show, params: {unit_name: 'experiment-course'}
-    assert_redirected_to "/teacher_dashboard/sections/#{experiment_section.id}/unit/#{experiment_unit.name}"
-  end
-
   test "should get index" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
@@ -295,6 +283,20 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:facilitator)
     get :show, params: {id: @pl_coursez_2017.name}
     assert_response :ok
+  end
+
+  test "show: teacher in teacher-local-nav-v2 experiment is redirected to teacher dashboard if unit is in a section" do
+    experiment_course = create :unit_group, name: 'experiment-course'
+    experiment_script = create :script, name: 'experiment-script'
+    create :unit_group_unit, unit_group: experiment_course, script: experiment_script, position: 1
+    experiment_teacher = create :teacher
+    experiment_section = create :section, user: experiment_teacher, unit_group: experiment_course
+    SingleUserExperiment.find_or_create_by!(min_user_id: experiment_teacher.id, name: 'teacher-local-nav-v2')
+
+    sign_in experiment_teacher
+
+    get :show, params: {id: experiment_script.name}
+    assert_redirected_to "/teacher_dashboard/sections/#{experiment_section.id}/unit/#{experiment_script.name}"
   end
 
   test "should not get edit on production" do
