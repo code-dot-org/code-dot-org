@@ -190,8 +190,8 @@ RUN curl -SsL https://github.com/boxboat/fixuid/releases/download/v0.4/fixuid-0.
     mkdir -p /etc/fixuid && \
     printf "user: ${USER}\ngroup: ${GROUP}\n" > /etc/fixuid/config.yml
 
-# install pdm for managing our python dependencies
-RUN pip install --system --prefix=/usr/local pdm
+# install uv for managing our python dependencies
+RUN curl -LsSf https://astral.sh/uv/install.sh | XDG_BIN_HOME=/usr/local/bin UV_NO_MODIFY_PATH=1 sh
 
 # install sc, the sauce connect proxy for running UI tests
 RUN mkdir sauce_connect && \
