@@ -1,3 +1,3 @@
-describe command('which pdm') do
+describe command('which uv') do
   its('exit_status') {should eq 0}
 end
