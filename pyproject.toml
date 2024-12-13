@@ -4,6 +4,8 @@ requires-python = "==3.12.*"
 dependencies = [
     # Register local python packages from /python here, and in dev-dependencies below:
     "pycdo @ file:///${PROJECT_ROOT}/python/pycdo",
+    "pythonlab_setup @ file:///${PROJECT_ROOT}/python/pythonlab/pythonlab_setup",
+    "unittest_runner @ file:///${PROJECT_ROOT}/python/pythonlab/unittest_runner",
 
     ## Do not add dependencies here, add them to a pyproject.toml in /python ##
 ]
@@ -14,6 +16,8 @@ dev = [
     # Adding -e in --dev mode will make changes to /python/*py available without needing
     # to run `pdm install` first.
     "-e file:///${PROJECT_ROOT}/python/pycdo#egg=pycdo",
+    "-e file:///${PROJECT_ROOT}/python/pythonlab/pythonlab_setup",
+    "-e file:///${PROJECT_ROOT}/python/pythonlab/unittest_runner",
 
     "coverage",
     "ipython",

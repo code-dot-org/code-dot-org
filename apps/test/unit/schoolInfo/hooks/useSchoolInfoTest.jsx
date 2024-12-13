@@ -41,7 +41,7 @@ describe('useSchoolInfo', () => {
     country: US_COUNTRY_CODE,
     schoolId: '1',
     schoolName: 'Cool School',
-    schoolZip: '00000',
+    schoolZip: '99999',
   };
 
   beforeEach(() => {

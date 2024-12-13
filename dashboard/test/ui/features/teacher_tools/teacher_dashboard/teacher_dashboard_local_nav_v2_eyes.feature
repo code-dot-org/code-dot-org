@@ -2,8 +2,8 @@
 @eyes
 Feature: Using the V2 teacher dashboard local navigation - Eyes
 
-  Scenario: Teacher can see the local navigation
-    When I open my eyes to test "teacher local nav v2"
+  Scenario: Local navigation on Progress v2
+    When I open my eyes to test "teacher local nav v2 - progress"
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to unit "allthethings"
 
