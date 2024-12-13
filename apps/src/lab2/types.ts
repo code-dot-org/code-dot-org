@@ -178,8 +178,9 @@ export interface LevelProperties {
   finishUrl?: string;
   finishDialog?: string;
   offerBrowserTts?: boolean;
-  validationFile?: ProjectFile;
   useSecondaryFinishButton?: boolean;
+  // Python Lab/Codebridge specific properties
+  validationFile?: ProjectFile;
   enableMicroBit?: boolean;
   serializedMaze?: MazeCell[][];
   startDirection?: number;
@@ -208,6 +209,7 @@ interface VideoData extends VideoLevelData {
   autoplay?: boolean;
 }
 
+// Python Lab specific property
 export interface MazeCell {
   tileType: number;
   value: number;
