@@ -115,6 +115,12 @@ type EnrollFormProps = {
   planning_to_teach_ap?: string;
 };
 
+/**
+ * This Label component is necessary to apply the same label and
+ * error message elements that TextField DSCO component has to other
+ * inputs that don't yet have a label or error message prop, such
+ * as textarea, RadioButtonsGroup, and Checkbox.
+ */
 const Label = ({
   children,
   text,
