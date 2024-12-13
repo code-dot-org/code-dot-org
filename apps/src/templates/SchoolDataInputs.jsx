@@ -26,6 +26,8 @@ const SEARCH_DEFAULTS = [
 
 const COUNTRIES_US_FIRST = getCountriesUsFirst();
 
+export const SCHOOL_INFO_ID = 'school_info';
+
 export default function SchoolDataInputs({
   schoolId,
   country,
@@ -99,7 +101,7 @@ export default function SchoolDataInputs({
   );
 
   return (
-    <div className={computedStyleClass}>
+    <div id={SCHOOL_INFO_ID} className={computedStyleClass}>
       {includeHeaders && (
         <div className={style.headerContainer}>
           <Heading2>{i18n.censusHeading()}</Heading2>

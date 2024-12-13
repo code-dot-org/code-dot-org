@@ -16,7 +16,9 @@ import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
 import {buildSchoolData} from '@cdo/apps/schoolInfo/utils/buildSchoolData';
 import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
-import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs.jsx';
+import SchoolDataInputs, {
+  SCHOOL_INFO_ID,
+} from '@cdo/apps/templates/SchoolDataInputs.jsx';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 
@@ -87,6 +89,10 @@ type EnrollmentResponse = {
   workshop_enrollment_status: string;
 };
 
+/**
+ * not all props are passed down from the parent WorkshopEnroll component
+ * but they are used in unit tests to set initial state
+ */
 type EnrollFormProps = {
   collect_demographics?: boolean;
   email?: string;
@@ -617,7 +623,7 @@ export default function EnrollForm(props: EnrollFormProps) {
             />
             <Label
               errorMessage={formErrors.school_info}
-              htmlFor="school_info"
+              htmlFor={SCHOOL_INFO_ID}
             />
           </div>
         </>
