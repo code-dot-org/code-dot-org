@@ -5,34 +5,19 @@ import {Table, Button, Modal} from 'react-bootstrap'; // eslint-disable-line no-
 import ReactTooltip from 'react-tooltip';
 
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
-import i18n from '@cdo/locale';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 
 import * as utils from '../../../utils';
-import WorkshopTableLoader from '../workshop_dashboard/components/workshop_table_loader';
 import {workshopShape} from '../workshop_dashboard/types.js';
 import {
   DATE_FORMAT,
   TIME_FORMAT,
 } from '../workshop_dashboard/workshopConstants';
 
-class EnrolledWorkshops extends React.Component {
-  render() {
-    return (
-      <WorkshopTableLoader
-        queryUrl="/api/v1/pd/workshops_user_enrolled_in"
-        hideNoWorkshopsMessage={true}
-        tableHeader={i18n.myWorkshops()}
-      >
-        <WorkshopsTable tableHeader={i18n.myWorkshops()} />
-      </WorkshopTableLoader>
-    );
-  }
-}
-
-class WorkshopsTable extends React.Component {
+export default class LandingPageWorkshopsTable extends React.Component {
   static propTypes = {
     workshops: PropTypes.arrayOf(workshopShape),
-    forMyPlPage: PropTypes.bool,
+    isLoading: PropTypes.bool,
     tableHeader: PropTypes.string,
   };
 
@@ -103,53 +88,16 @@ class WorkshopsTable extends React.Component {
   };
 
   renderWorkshopActionButtons(workshop) {
-    if (this.props.forMyPlPage) {
-      return (
-        <Button
-          onClick={() =>
-            utils.windowOpen(`/pd/workshop_dashboard/workshops/${workshop.id}`)
-          }
-          style={styles.button}
-        >
-          Workshop Details
-        </Button>
-      );
-    } else {
-      return (
-        <div>
-          {workshop.state === 'Not Started' &&
-            workshop.pre_workshop_survey_url &&
-            this.renderPreWorkshopSurveyButton(workshop)}
-          {workshop.state === 'Ended' && (
-            <Button
-              onClick={() => this.openCertificate(workshop)}
-              style={styles.button}
-              disabled={!workshop.attended}
-            >
-              Print certificate
-            </Button>
-          )}
-          <Button
-            onClick={() =>
-              utils.windowOpen(
-                `/pd/workshop_enrollment/${workshop.enrollment_code}`
-              )
-            }
-            style={styles.button}
-          >
-            Workshop details
-          </Button>
-          {workshop.state === 'Not Started' && (
-            <Button
-              onClick={() => this.showCancelModal(workshop.enrollment_code)}
-              style={styles.button}
-            >
-              Cancel enrollment
-            </Button>
-          )}
-        </div>
-      );
-    }
+    return (
+      <Button
+        onClick={() =>
+          utils.windowOpen(`/pd/workshop_dashboard/workshops/${workshop.id}`)
+        }
+        style={styles.button}
+      >
+        Workshop Details
+      </Button>
+    );
   }
 
   renderWorkshopsTable() {
@@ -165,7 +113,7 @@ class WorkshopsTable extends React.Component {
             <th>Date</th>
             <th>Time</th>
             <th>Location</th>
-            {this.props.forMyPlPage && <th>Status</th>}
+            <th>Status</th>
             <th style={{width: '20%'}} />
           </tr>
         </thead>
@@ -205,13 +153,24 @@ class WorkshopsTable extends React.Component {
             <p>{workshop.location_address}</p>
           </div>
         </td>
-        {this.props.forMyPlPage && <td>{workshop.status}</td>}
+        <td>{workshop.status}</td>
         <td>{this.renderWorkshopActionButtons(workshop)}</td>
       </tr>
     );
   }
 
   render() {
+    console.log(this.props);
+
+    if (this.props.isLoading) {
+      return (
+        // While reloading, preserve the height of the previous child component so the refresh is smoother.
+        <div style={{height: this.childHeight}}>
+          <Spinner />
+        </div>
+      );
+    }
+
     return (
       <div>
         <Modal
@@ -249,5 +208,3 @@ const styles = {
     width: '100%',
   },
 };
-
-export {EnrolledWorkshops, WorkshopsTable};
