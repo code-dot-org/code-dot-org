@@ -17,7 +17,7 @@ import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.mod
 
 export interface CheckboxDropdownOption extends _CustomDropdownOption {}
 
-export interface CheckboxDropdownProps
+ interface BaseCheckboxDropdownProps
   extends DropdownFormFieldRelatedProps,
     AriaAttributes {
   /** CheckboxDropdown name.
@@ -45,21 +45,29 @@ export interface CheckboxDropdownProps
   /** CheckboxDropdown onChange handler */
   onChange: (args: React.ChangeEvent<HTMLInputElement>) => void;
   /** Click handler and translated button text for the "Select All" button */
-  selectAndClearAllConfig?: {
-    onSelectAll: (
-      event:
-        | React.MouseEvent<HTMLButtonElement>
-        | React.MouseEvent<HTMLAnchorElement>
-    ) => void;
-    onClearAll: (
-      event:
-        | React.MouseEvent<HTMLButtonElement>
-        | React.MouseEvent<HTMLAnchorElement>
-    ) => void;
-    selectAllText: string;
-    clearAllText: string;
-  };
 }
+
+interface CheckboxDropdownWithoutControlProps extends BaseCheckboxDropdownProps {
+  type: 'withoutControls';
+}
+
+interface CheckboxDropdownWithControlsProps extends BaseCheckboxDropdownProps {
+  type: 'withControls';
+  onSelectAll: (
+      event:
+          | React.MouseEvent<HTMLButtonElement>
+          | React.MouseEvent<HTMLAnchorElement>
+  ) => void;
+  onClearAll: (
+      event:
+          | React.MouseEvent<HTMLButtonElement>
+          | React.MouseEvent<HTMLAnchorElement>
+  ) => void;
+  selectAllText: string;
+  clearAllText: string;
+}
+
+export type CheckboxDropdownProps = CheckboxDropdownWithoutControlProps | CheckboxDropdownWithControlsProps;
 
 const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   name,
@@ -69,7 +77,6 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   allOptions,
   checkedOptions = [],
   onChange,
-  selectAndClearAllConfig,
   disabled = false,
   readOnly = false,
   color = dropdownColors.black,
@@ -80,8 +87,33 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   styleAsFormField = false,
   ...rest
 }) => {
-  const {onSelectAll, onClearAll, selectAllText, clearAllText} =
-    selectAndClearAllConfig || {};
+  const getControls = () => {
+    switch (rest.type) {
+      case "withControls": {
+        const {selectAllText, onSelectAll, onClearAll, clearAllText} = rest;
+
+        return (
+            <div className={moduleStyles.bottomButtonsContainer}>
+              <Button
+                  type="tertiary"
+                  color={buttonColors.purple}
+                  text={selectAllText}
+                  onClick={onSelectAll}
+                  size={size}
+              />
+              <Button
+                  type="tertiary"
+                  color={buttonColors.purple}
+                  text={clearAllText}
+                  onClick={onClearAll}
+                  size={size}
+              />
+            </div>
+        )
+      }
+      default: return undefined;
+    }
+  }
 
   return (
     <CustomDropdown
@@ -119,24 +151,7 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
             </li>
           ))}
         </ul>
-        {selectAndClearAllConfig && (
-          <div className={moduleStyles.bottomButtonsContainer}>
-            <Button
-              type="tertiary"
-              color={buttonColors.purple}
-              text={selectAllText}
-              onClick={onSelectAll}
-              size={size}
-            />
-            <Button
-              type="tertiary"
-              color={buttonColors.purple}
-              text={clearAllText}
-              onClick={onClearAll}
-              size={size}
-            />
-          </div>
-        )}
+        {getControls()}
       </div>
     </CustomDropdown>
   );

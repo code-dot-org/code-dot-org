@@ -10,21 +10,12 @@ export default {
   component: CheckboxDropdown.type,
 } as Meta;
 
-type argsWithOptionalSelectAllAndClearAll = {
-  props: Omit<CheckboxDropdownProps, 'selectAllAndClearAllConfig'>;
-  includeSelectAllAndClearAll?: boolean;
-};
-
 //
 // TEMPLATE
 //
-const SingleTemplate: StoryFn<argsWithOptionalSelectAllAndClearAll> = ({
-  props,
-  includeSelectAllAndClearAll = true,
-}) => {
-  const [selectedValues, setValues] = useState(
-    props.checkedOptions as string[]
-  );
+const SingleTemplate: StoryFn<CheckboxDropdownProps> = args => {
+
+  const [selectedValues, setValues] = useState(args.checkedOptions as string[]);
   const onChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       if (e.target.checked) {
@@ -32,23 +23,23 @@ const SingleTemplate: StoryFn<argsWithOptionalSelectAllAndClearAll> = ({
       } else {
         setValues(selectedValues.filter(value => value !== e.target.value));
       }
-      props.onChange(e);
+      args.onChange(e);
     },
-    [props, selectedValues, setValues]
+    [args, selectedValues, setValues]
   );
-
   const onSelectAll = useCallback(
     (
       e:
         | React.MouseEvent<HTMLButtonElement>
         | React.MouseEvent<HTMLAnchorElement>
     ) => {
-      setValues(props.allOptions.map(option => option.value));
-      props.selectAndClearAllConfig?.onSelectAll(e);
+      setValues(args.allOptions.map(option => option.value));
+      if (args.type === 'withControls') {
+        args.onSelectAll(e);
+      }
     },
-    [props]
+    [args]
   );
-
   const onClearAll = useCallback(
     (
       e:
@@ -56,28 +47,32 @@ const SingleTemplate: StoryFn<argsWithOptionalSelectAllAndClearAll> = ({
         | React.MouseEvent<HTMLAnchorElement>
     ) => {
       setValues([]);
-      props.selectAndClearAllConfig?.onClearAll(e);
-    },
-    [props]
-  );
-
-  const selectAndClearAllConfig = includeSelectAllAndClearAll
-    ? {
-        onSelectAll,
-        onClearAll,
-        selectAllText: 'Select all',
-        clearAllText: 'Clear all',
+      if (args.type === 'withControls') {
+        args.onClearAll(e);
       }
-    : undefined;
-
-  return (
-    <CheckboxDropdown
-      {...props}
-      checkedOptions={selectedValues}
-      onChange={onChange}
-      selectAndClearAllConfig={selectAndClearAllConfig}
-    />
+    },
+    [args]
   );
+
+  if (args.type === 'withControls') {
+    return (
+        <CheckboxDropdown
+            {...args}
+            checkedOptions={selectedValues}
+            onChange={onChange}
+            onSelectAll={onSelectAll}
+            onClearAll={onClearAll}
+        />
+    );
+  } else {
+    return (
+        <CheckboxDropdown
+            {...args}
+            checkedOptions={selectedValues}
+            onChange={onChange}
+        />
+    );
+  }
 };
 
 const MultipleTemplate: StoryFn<{
@@ -120,7 +115,6 @@ const MultipleTemplate: StoryFn<{
             }
             componentArg.onChange(e);
           };
-
           const onSelectAll = (
             e:
               | React.MouseEvent<HTMLButtonElement>
@@ -132,34 +126,46 @@ const MultipleTemplate: StoryFn<{
                 option => option.value
               ),
             });
-            componentArg.selectAndClearAllConfig?.onSelectAll(e);
+            if (componentArg.type === 'withControls') {
+              componentArg.onSelectAll(e);
+            }
           };
-
           const onClearAll = (
             e:
               | React.MouseEvent<HTMLButtonElement>
               | React.MouseEvent<HTMLAnchorElement>
           ) => {
             setValues({...values, [componentArg.name]: []});
-            componentArg.selectAndClearAllConfig?.onClearAll(e);
+            if (componentArg.type === 'withControls') {
+              componentArg.onClearAll(e);
+            }
           };
 
-          return (
-            <CheckboxDropdown
-              key={`${componentArg.name}`}
-              {...componentArg}
-              checkedOptions={
-                values[componentArg.name] || componentArg.checkedOptions
-              }
-              onChange={onChange}
-              selectAndClearAllConfig={{
-                onSelectAll,
-                onClearAll,
-                selectAllText: 'Select all',
-                clearAllText: 'Clear all',
-              }}
-            />
-          );
+          if (componentArg.type === 'withControls') {
+            return (
+                <CheckboxDropdown
+                    key={`${componentArg.name}`}
+                    {...componentArg}
+                    checkedOptions={
+                        values[componentArg.name] || componentArg.checkedOptions
+                    }
+                    onChange={onChange}
+                    onSelectAll={onSelectAll}
+                    onClearAll={onClearAll}
+                />
+            );
+          } else {
+            return (
+                <CheckboxDropdown
+                    key={`${componentArg.name}`}
+                    {...componentArg}
+                    checkedOptions={
+                        values[componentArg.name] || componentArg.checkedOptions
+                    }
+                    onChange={onChange}
+                />
+            );
+          }
         })}
       </div>
     </>
@@ -168,157 +174,147 @@ const MultipleTemplate: StoryFn<{
 
 export const DefaultCheckboxDropdown = SingleTemplate.bind({});
 DefaultCheckboxDropdown.args = {
-  props: {
-    name: 'default-dropdown',
-    allOptions: [
-      {value: 'option-1', label: 'Option 1'},
-      {value: 'option-2', label: 'Option 2'},
-    ],
-    labelText: 'Default Dropdown',
-    checkedOptions: ['option-1'],
-    disabled: false,
-    color: dropdownColors.black,
-    onChange: args => null,
-    size: 'm',
-  },
+  name: 'default-dropdown',
+  allOptions: [
+    {value: 'option-1', label: 'Option 1'},
+    {value: 'option-2', label: 'Option 2'},
+  ],
+  labelText: 'Default Dropdown',
+  checkedOptions: ['option-1'],
+  disabled: false,
+  color: dropdownColors.black,
+  onChange: args => null,
+  onSelectAll: args => null,
+  onClearAll: args => null,
+  size: 'm',
 };
 
 export const NoSelectOrClearAllCheckboxDropdown = SingleTemplate.bind({});
 NoSelectOrClearAllCheckboxDropdown.args = {
-  props: {
-    name: 'no-select-all-or-clear-all-dropdown',
-    allOptions: [
-      {value: 'option-1', label: 'Option 1'},
-      {value: 'option-2', label: 'Option 2'},
-    ],
-    labelText: 'No Select All or Clear All Dropdown',
-    checkedOptions: ['option-1'],
-    disabled: false,
-    color: dropdownColors.black,
-    onChange: args => null,
-    size: 'm',
-  },
-  includeSelectAllAndClearAll: false,
+  name: 'no-select-all-or-clear-all-dropdown',
+  type: 'withoutControls',
+  allOptions: [
+    {value: 'option-1', label: 'Option 1'},
+    {value: 'option-2', label: 'Option 2'},
+  ],
+  labelText: 'No Select All or Clear All Dropdown',
+  checkedOptions: ['option-1'],
+  disabled: false,
+  color: dropdownColors.black,
+  onChange: args => null,
+  size: 'm',
 };
 
 export const ReadOnlyCheckboxDropdown = SingleTemplate.bind({});
 ReadOnlyCheckboxDropdown.args = {
-  props: {
-    name: 'readOnly-dropdown',
-    allOptions: [
-      {value: 'option-1', label: 'Option 1'},
-      {value: 'option-2', label: 'Option 2'},
-    ],
-    checkedOptions: ['option-1'],
-    labelText: 'ReadOnly Dropdown',
-    onChange: args => null,
-    readOnly: true,
-    color: dropdownColors.black,
-    size: 'm',
-  },
+  name: 'readOnly-dropdown',
+  allOptions: [
+    {value: 'option-1', label: 'Option 1'},
+    {value: 'option-2', label: 'Option 2'},
+  ],
+  checkedOptions: ['option-1'],
+  labelText: 'ReadOnly Dropdown',
+  onChange: args => null,
+  onSelectAll: args => null,
+  onClearAll: args => null,
+  readOnly: true,
+  color: dropdownColors.black,
+  size: 'm',
 };
 
 export const DisabledCheckboxDropdown = SingleTemplate.bind({});
 DisabledCheckboxDropdown.args = {
-  props: {
-    name: 'disabled-dropdown',
-    allOptions: [
-      {value: 'option-1', label: 'Option 1'},
-      {value: 'option-2', label: 'Option 2'},
-    ],
-    checkedOptions: ['option-1'],
-    labelText: 'Disabled Dropdown',
-    onChange: args => null,
-    disabled: true,
-    color: dropdownColors.black,
-    size: 'm',
-  },
+  name: 'disabled-dropdown',
+  allOptions: [
+    {value: 'option-1', label: 'Option 1'},
+    {value: 'option-2', label: 'Option 2'},
+  ],
+  checkedOptions: ['option-1'],
+  labelText: 'Disabled Dropdown',
+  onChange: args => null,
+  onSelectAll: args => null,
+  onClearAll: args => null,
+  disabled: true,
+  color: dropdownColors.black,
+  size: 'm',
 };
 
 export const WithDisabledOptionCheckboxDropdown = SingleTemplate.bind({});
 WithDisabledOptionCheckboxDropdown.args = {
-  props: {
-    name: 'withDisabledOption-dropdown',
-    allOptions: [
-      {value: 'option-1', label: 'Option 1', isOptionDisabled: true},
-      {value: 'option-2', label: 'Option 2'},
-      {value: 'option-3', label: 'Option 3'},
-    ],
-    disabled: false,
-    color: dropdownColors.black,
-    checkedOptions: ['option-1'],
-    labelText: 'Dropdown with disabled option',
-    onChange: args => null,
-    size: 'm',
-  },
+  name: 'withDisabledOption-dropdown',
+  allOptions: [
+    {value: 'option-1', label: 'Option 1', isOptionDisabled: true},
+    {value: 'option-2', label: 'Option 2'},
+    {value: 'option-3', label: 'Option 3'},
+  ],
+  disabled: false,
+  color: dropdownColors.black,
+  checkedOptions: ['option-1'],
+  labelText: 'Dropdown with disabled option',
+  onChange: args => null,
+  onSelectAll: args => null,
+  onClearAll: args => null,
+  size: 'm',
 };
 
 export const StyledAsFieldCheckboxDropdown = SingleTemplate.bind({});
 StyledAsFieldCheckboxDropdown.args = {
-  props: {
-    name: 'styled-as-field-checkbox-dropdown',
-    allOptions: [
-      {value: 'option-1', label: 'Option 1'},
-      {value: 'option-2', label: 'Option 2'},
-    ],
-    checkedOptions: ['option-1'],
-    labelText: 'Helper Message Checkbox Dropdown',
-    onChange: args => console.log(args),
-    helperMessage: 'Helper message',
-    styleAsFormField: true,
-    size: 'm',
-  },
+  name: 'styled-as-field-checkbox-dropdown',
+  allOptions: [
+    {value: 'option-1', label: 'Option 1'},
+    {value: 'option-2', label: 'Option 2'},
+  ],
+  checkedOptions: ['option-1'],
+  labelText: 'Helper Message Checkbox Dropdown',
+  onChange: args => console.log(args),
+  helperMessage: 'Helper message',
+  styleAsFormField: true,
+  size: 'm',
 };
 
 export const WithErrorCheckboxDropdown = SingleTemplate.bind({});
 WithErrorCheckboxDropdown.args = {
-  props: {
-    name: 'error-checkbox-dropdown',
-    allOptions: [
-      {value: 'option-1', label: 'Option 1'},
-      {value: 'option-2', label: 'Option 2'},
-    ],
-    checkedOptions: ['option-1'],
-    labelText: 'Error Checkbox Dropdown',
-    onChange: args => console.log(args),
-    errorMessage: 'Error message',
-    size: 'm',
-  },
+  name: 'error-checkbox-dropdown',
+  allOptions: [
+    {value: 'option-1', label: 'Option 1'},
+    {value: 'option-2', label: 'Option 2'},
+  ],
+  checkedOptions: ['option-1'],
+  labelText: 'Error Checkbox Dropdown',
+  onChange: args => console.log(args),
+  errorMessage: 'Error message',
+  size: 'm',
 };
 
 export const WithHelperMessageCheckboxDropdown = SingleTemplate.bind({});
 WithHelperMessageCheckboxDropdown.args = {
-  props: {
-    name: 'helper-message-checkbox-dropdown',
-    allOptions: [
-      {value: 'option-1', label: 'Option 1'},
-      {value: 'option-2', label: 'Option 2'},
-    ],
-    checkedOptions: ['option-1'],
-    labelText: 'Helper Message Checkbox Dropdown',
-    onChange: args => console.log(args),
-    helperMessage: 'Helper message',
-    size: 'm',
-  },
+  name: 'helper-message-checkbox-dropdown',
+  allOptions: [
+    {value: 'option-1', label: 'Option 1'},
+    {value: 'option-2', label: 'Option 2'},
+  ],
+  checkedOptions: ['option-1'],
+  labelText: 'Helper Message Checkbox Dropdown',
+  onChange: args => console.log(args),
+  helperMessage: 'Helper message',
+  size: 'm',
 };
 
 export const WithHelperMessageAndIconCheckboxDropdown = SingleTemplate.bind({});
 WithHelperMessageAndIconCheckboxDropdown.args = {
-  props: {
-    name: 'helper-icon-checkbox-dropdown',
-    allOptions: [
-      {value: 'option-1', label: 'Option 1'},
-      {value: 'option-2', label: 'Option 2'},
-    ],
-    checkedOptions: ['option-1'],
-    labelText: 'Helper Icon Checkbox Dropdown',
-    onChange: args => console.log(args),
-    helperIcon: {
-      iconName: 'info-circle',
-    },
-    helperMessage: 'Helper message',
-    size: 'm',
+  name: 'helper-icon-checkbox-dropdown',
+  allOptions: [
+    {value: 'option-1', label: 'Option 1'},
+    {value: 'option-2', label: 'Option 2'},
+  ],
+  checkedOptions: ['option-1'],
+  labelText: 'Helper Icon Checkbox Dropdown',
+  onChange: args => console.log(args),
+  helperIcon: {
+    iconName: 'info-circle',
   },
+  helperMessage: 'Helper message',
+  size: 'm',
 };
 
 export const ThickAndThinCheckboxDropdowns = MultipleTemplate.bind({});
@@ -326,6 +322,7 @@ ThickAndThinCheckboxDropdowns.args = {
   components: [
     {
       name: 'thick-dropdown',
+      type: 'withControls',
       allOptions: [
         {value: 'option-1', label: 'Option 1'},
         {value: 'option-2', label: 'Option 2'},
@@ -334,11 +331,16 @@ ThickAndThinCheckboxDropdowns.args = {
       labelText: 'Thick Dropdown',
       labelType: 'thick',
       onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
       size: 'm',
       disabled: false,
     },
     {
       name: 'thin-dropdown',
+      type: 'withControls',
       allOptions: [
         {value: 'option-1', label: 'Option 1'},
         {value: 'option-2', label: 'Option 2'},
@@ -347,6 +349,10 @@ ThickAndThinCheckboxDropdowns.args = {
       labelText: 'Thin Dropdown',
       labelType: 'thin',
       onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
       size: 'm',
       disabled: false,
     },
@@ -358,6 +364,7 @@ GroupOfCheckboxDropdownColors.args = {
   components: [
     {
       name: 'default-dropdown-white',
+      type: 'withControls',
       allOptions: [
         {value: 'option-1', label: 'Option 1'},
         {value: 'option-2', label: 'Option 2'},
@@ -365,12 +372,17 @@ GroupOfCheckboxDropdownColors.args = {
       checkedOptions: ['option-1'],
       labelText: 'White Dropdown',
       onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
       size: 'm',
       disabled: false,
       color: dropdownColors.white,
     },
     {
       name: 'default-dropdown-black',
+      type: 'withControls',
       allOptions: [
         {value: 'option-1', label: 'Option 1'},
         {value: 'option-2', label: 'Option 2'},
@@ -378,12 +390,17 @@ GroupOfCheckboxDropdownColors.args = {
       checkedOptions: ['option-1'],
       labelText: 'Black Dropdown',
       onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
       size: 'm',
       color: dropdownColors.black,
       disabled: false,
     },
     {
       name: 'default-dropdown-gray',
+      type: 'withControls',
       allOptions: [
         {value: 'option-1', label: 'Option 1'},
         {value: 'option-2', label: 'Option 2'},
@@ -391,6 +408,10 @@ GroupOfCheckboxDropdownColors.args = {
       checkedOptions: ['option-1'],
       labelText: 'Gray Dropdown',
       onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
       size: 'm',
       color: dropdownColors.gray,
       disabled: false,
@@ -403,6 +424,7 @@ GroupOfSizesOfCheckboxDropdown.args = {
   components: [
     {
       name: 'default-dropdown-xs',
+      type: 'withControls',
       allOptions: [
         {value: 'option-1', label: 'Option 1'},
         {value: 'option-2', label: 'Option 2'},
@@ -410,12 +432,17 @@ GroupOfSizesOfCheckboxDropdown.args = {
       checkedOptions: ['option-1'],
       labelText: 'XS Dropdown',
       onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
       size: 'xs',
       disabled: false,
       color: dropdownColors.black,
     },
     {
       name: 'default-dropdown-s',
+      type: 'withControls',
       allOptions: [
         {value: 'option-1', label: 'Option 1'},
         {value: 'option-2', label: 'Option 2'},
@@ -423,12 +450,17 @@ GroupOfSizesOfCheckboxDropdown.args = {
       checkedOptions: ['option-1'],
       labelText: 'S Dropdown',
       onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
       size: 's',
       disabled: false,
       color: dropdownColors.black,
     },
     {
       name: 'default-dropdown-m',
+      type: 'withControls',
       allOptions: [
         {value: 'option-1', label: 'Option 1'},
         {value: 'option-2', label: 'Option 2'},
@@ -436,12 +468,17 @@ GroupOfSizesOfCheckboxDropdown.args = {
       checkedOptions: ['option-1'],
       labelText: 'M Dropdown',
       onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
       size: 'm',
       disabled: false,
       color: dropdownColors.black,
     },
     {
       name: 'default-dropdown-white',
+      type: 'withControls',
       allOptions: [
         {value: 'option-1', label: 'Option 1'},
         {value: 'option-2', label: 'Option 2'},
@@ -449,6 +486,10 @@ GroupOfSizesOfCheckboxDropdown.args = {
       checkedOptions: ['option-1'],
       labelText: 'L Dropdown',
       onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
       size: 'l',
       disabled: false,
       color: dropdownColors.black,

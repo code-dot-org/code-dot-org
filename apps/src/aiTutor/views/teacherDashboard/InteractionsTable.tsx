@@ -254,6 +254,7 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
     <div className={interactionsStyle.interactionsElement}>
       <div className={interactionsStyle.filterDropdowns}>
         <CheckboxDropdown
+          type={'withControls'}
           allOptions={statusOptions}
           checkedOptions={selectedStatuses}
           className={interactionsStyle.interactionsElement}
@@ -271,6 +272,7 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
           size="s"
         />
         <CheckboxDropdown
+          type={'withControls'}
           allOptions={studentFilterOptions}
           checkedOptions={selectedUserIds}
           className={interactionsStyle.interactionsElement}
