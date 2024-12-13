@@ -85,18 +85,28 @@ export default class WorkshopDetails extends React.Component {
     );
   }
 
-  selfPacedPLTopics() {
+  buildYourOwnWSDetails() {
     return (
-      <div className="row">
-        <div className="span2" style={styles.label}>
-          <strong>Topics:</strong>
+      <>
+        {this.props.workshop.name && (
+          <div className="row">
+            <div className="span2" style={styles.label}>
+              <strong>Workshop Name:</strong>
+            </div>
+            <div className="span2">{this.props.workshop.name}</div>
+          </div>
+        )}
+        <div className="row">
+          <div className="span2" style={styles.label}>
+            <strong>Topics:</strong>
+          </div>
+          <div className="span2">
+            {this.props.workshop.course_offerings.map(topic => (
+              <div key={topic.key}>{topic.display_name}</div>
+            ))}
+          </div>
         </div>
-        <div className="span2">
-          {this.props.workshop.course_offerings.map(topic => (
-            <div key={topic.key}>{topic.display_name}</div>
-          ))}
-        </div>
-      </div>
+      </>
     );
   }
 
@@ -163,7 +173,7 @@ export default class WorkshopDetails extends React.Component {
         {this.sessionDates()}
         {this.location()}
         {this.props.workshop.course === COURSE_BUILD_YOUR_OWN
-          ? this.selfPacedPLTopics()
+          ? this.buildYourOwnWSDetails()
           : this.courseAndSubject()}
         {this.fee()}
         {this.regionalPartner()}
