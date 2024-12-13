@@ -33,7 +33,7 @@ const getPreviewComponent = (
   }
 };
 
-export const PreviewContainer = () => {
+export const FilePreview = () => {
   const {
     project: {files},
     config: {previewFileTypes, PreviewComponents},
