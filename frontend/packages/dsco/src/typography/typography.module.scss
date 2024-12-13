@@ -1,5 +1,5 @@
-@import './../common/styles/primitiveColors.css';
-@import "./../common/styles/font";
+@import '@/common/styles/primitiveColors.css';
+@import '@/common/styles/font';
 
 /* This file is being copied and adopted to shared/css/typography.scss
    Updating styles in this file will require a manual sync of the that file.
@@ -9,18 +9,23 @@
 //  Once we move Typography to DSCO_ - make sure we delete apps/fonts/ folder,
 //  since that folder is only needed for scss modules
 @font-face {
-  font-family: "Barlow Semi Condensed Semibold";
+  font-family: 'Barlow Semi Condensed Semibold';
   font-style: normal;
   font-weight: 600;
-  src: url("/fonts/barlowSemiCondensed/BarlowSemiCondensed-SemiBold.ttf") format("truetype"),
-  local("?");
+  src:
+    url('/fonts/barlowSemiCondensed/BarlowSemiCondensed-SemiBold.ttf')
+      format('truetype'),
+    local('?');
 }
 
 @font-face {
-  font-family: "Barlow Semi Condensed Medium";
+  font-family: 'Barlow Semi Condensed Medium';
   font-style: normal;
   font-weight: 500;
-  src: url("/fonts/barlowSemiCondensed/BarlowSemiCondensed-Medium.ttf") format("truetype"), local("?");
+  src:
+    url('/fonts/barlowSemiCondensed/BarlowSemiCondensed-Medium.ttf')
+      format('truetype'),
+    local('?');
 }
 
 html {
@@ -124,7 +129,7 @@ html {
   @include heading-common;
   @include main-font-semi-bold;
   font-size: 1.25rem;
-  line-height: 1.40;
+  line-height: 1.4;
 }
 
 @mixin heading-xs {
