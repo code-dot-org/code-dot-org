@@ -7,14 +7,18 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useCodebridgeContext} from '../codebridgeContext';
 
-import moduleStyles from './workspace.module.scss';
+import moduleStyles from './output.module.scss';
 
 const Output: React.FunctionComponent = () => {
   const miniApp = useAppSelector(state => state.lab.levelProperties?.miniApp);
   const {config} = useCodebridgeContext();
   const isVertical = config.activeGridLayout === 'vertical';
   if (!miniApp) {
-    return <Console />;
+    return (
+      <div className={moduleStyles.outputContainer}>
+        <Console />
+      </div>
+    );
   }
 
   return (
