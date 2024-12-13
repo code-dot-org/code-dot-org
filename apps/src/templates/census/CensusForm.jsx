@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useEffect, useState} from 'react';
+import React, {useMemo, useState} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
@@ -36,8 +36,6 @@ const CensusForm = ({
   prefillData = {},
 }) => {
   const [state, setState] = useState({
-    showFollowUp: false,
-    showPledge: false,
     selectedHowMuchCS: [],
     selectedTopics: [],
     otherTopicsDesc: '',
@@ -69,21 +67,15 @@ const CensusForm = ({
     invalidEmail: false,
   });
 
-  useEffect(() => {
-    setState(prevState => ({
-      ...prevState,
-      showFollowUp:
-        submission.twentyHours === 'SOME' || submission.twentyHours === 'ALL',
-    }));
-  }, [submission.twentyHours]);
+  const showFollowUp = useMemo(
+    () => submission.twentyHours === 'SOME' || submission.twentyHours === 'ALL',
+    [submission.twentyHours]
+  );
 
-  useEffect(() => {
-    setState(prevState => ({
-      ...prevState,
-      showPledge:
-        submission.role === 'TEACHER' || submission.role === 'ADMINISTRATOR',
-    }));
-  }, [submission.role]);
+  const showPledge = useMemo(
+    () => submission.role === 'TEACHER' || submission.role === 'ADMINISTRATOR',
+    [submission.role]
+  );
 
   const handleChange = (field, event) => {
     setSubmission(prevState => ({
@@ -229,10 +221,10 @@ const CensusForm = ({
   const validateNotBlank = questionField => questionField === '';
 
   const validateTopics = () =>
-    state.showFollowUp && state.selectedTopics.length === 0;
+    showFollowUp && state.selectedTopics.length === 0;
 
   const validateFrequency = () =>
-    state.showFollowUp && submission.followUpFrequency === '';
+    showFollowUp && submission.followUpFrequency === '';
 
   const validateSubmission = e => {
     e.preventDefault();
@@ -322,7 +314,6 @@ const CensusForm = ({
     );
   };
 
-  const {showFollowUp, showPledge} = state;
   const showErrorMsg = Object.values(errors).some(value => value === true);
   const US = submission.country === 'United States';
   let schoolId = prefillData.schoolId ?? '';
