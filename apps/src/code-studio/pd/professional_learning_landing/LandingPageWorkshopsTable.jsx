@@ -198,8 +198,6 @@ export default class LandingPageWorkshopsTable extends React.Component {
   }
 
   render() {
-    console.log(this.props);
-
     if (this.props.isLoading) {
       return (
         // While reloading, preserve the height of the previous child component so the refresh is smoother.
