@@ -46,7 +46,7 @@ def get_contained_question(contained_level)
 end
 
 def main
-  level_types = ['Multi', 'Match', 'EvaluationMulti']
+  answer_level_types = ['Multi', 'Match', 'EvaluationMulti']
 
   # Build the data for the tables.
   contained_levels = []
@@ -69,7 +69,7 @@ def main
           contained_level_text: sanitize_string_for_db(contained_question)
         }
 
-        next unless level_types.include? contained_level.type
+        next unless answer_level_types.include? contained_level.type
         answers = contained_level.properties['answers']
         answers.each_with_index do |answer, answer_number|
           contained_level_answers << {
@@ -95,7 +95,7 @@ def main
         contained_level_text: sanitize_string_for_db(contained_question)
       }
 
-      next unless level_types.include? contained_level.type
+      next unless answer_level_types.include? contained_level.type
       answers = contained_level.properties['answers']
       answers.each_with_index do |answer, answer_number|
         contained_level_answers << {
