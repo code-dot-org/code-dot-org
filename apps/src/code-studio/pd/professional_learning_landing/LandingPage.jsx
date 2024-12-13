@@ -515,6 +515,7 @@ function LandingPage({
           workshops={workshopsAsParticipant}
           isLoading={loadingWorkshopsAsParticipant}
           tableHeader={i18n.myWorkshops()}
+          participantView
         />
         <section>
           <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>

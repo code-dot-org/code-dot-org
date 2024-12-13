@@ -19,6 +19,7 @@ export default class LandingPageWorkshopsTable extends React.Component {
     workshops: PropTypes.arrayOf(workshopShape),
     isLoading: PropTypes.bool,
     tableHeader: PropTypes.string,
+    participantView: PropTypes.bool,
   };
 
   state = {
@@ -88,16 +89,53 @@ export default class LandingPageWorkshopsTable extends React.Component {
   };
 
   renderWorkshopActionButtons(workshop) {
-    return (
-      <Button
-        onClick={() =>
-          utils.windowOpen(`/pd/workshop_dashboard/workshops/${workshop.id}`)
-        }
-        style={styles.button}
-      >
-        Workshop Details
-      </Button>
-    );
+    if (!!this.props.participantView) {
+      return (
+        <div>
+          {workshop.state === 'Not Started' &&
+            workshop.pre_workshop_survey_url &&
+            this.renderPreWorkshopSurveyButton(workshop)}
+          {workshop.state === 'Ended' && (
+            <Button
+              onClick={() => this.openCertificate(workshop)}
+              style={styles.button}
+              disabled={!workshop.attended}
+            >
+              Print certificate
+            </Button>
+          )}
+          <Button
+            onClick={() =>
+              utils.windowOpen(
+                `/pd/workshop_enrollment/${workshop.enrollment_code}`
+              )
+            }
+            style={styles.button}
+          >
+            Workshop details
+          </Button>
+          {workshop.state === 'Not Started' && (
+            <Button
+              onClick={() => this.showCancelModal(workshop.enrollment_code)}
+              style={styles.button}
+            >
+              Cancel enrollment
+            </Button>
+          )}
+        </div>
+      );
+    } else {
+      return (
+        <Button
+          onClick={() =>
+            utils.windowOpen(`/pd/workshop_dashboard/workshops/${workshop.id}`)
+          }
+          style={styles.button}
+        >
+          Workshop Details
+        </Button>
+      );
+    }
   }
 
   renderWorkshopsTable() {
@@ -113,7 +151,7 @@ export default class LandingPageWorkshopsTable extends React.Component {
             <th>Date</th>
             <th>Time</th>
             <th>Location</th>
-            <th>Status</th>
+            {!this.props.participantView && <th>Status</th>}
             <th style={{width: '20%'}} />
           </tr>
         </thead>
@@ -153,7 +191,7 @@ export default class LandingPageWorkshopsTable extends React.Component {
             <p>{workshop.location_address}</p>
           </div>
         </td>
-        <td>{workshop.status}</td>
+        {!this.props.participantView && <td>{workshop.status}</td>}
         <td>{this.renderWorkshopActionButtons(workshop)}</td>
       </tr>
     );

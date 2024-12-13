@@ -36,7 +36,7 @@ describe('LandingPageWorkshopsTable', () => {
 
   it('Clicking cancel enrollment cancels the enrollment', () => {
     const workshopsTable = shallow(
-      <LandingPageWorkshopsTable workshops={workshops} />
+      <LandingPageWorkshopsTable workshops={workshops} participantView />
     );
 
     // We expect there to be a table with 4 rows in the body, three of which have two buttons
@@ -58,7 +58,7 @@ describe('LandingPageWorkshopsTable', () => {
 
   it('Clicking "Print Certificate" opens the certificate in a new tab if user attended workshop', function () {
     const workshopsTable = shallow(
-      <LandingPageWorkshopsTable workshops={workshops} />
+      <LandingPageWorkshopsTable workshops={workshops} participantView />
     );
 
     // Click the "Print Certificate" button
@@ -79,7 +79,7 @@ describe('LandingPageWorkshopsTable', () => {
 
   it('"Print Certificate" button is disabled if user did not attend workshop', function () {
     const workshopsTable = shallow(
-      <LandingPageWorkshopsTable workshops={workshops} />
+      <LandingPageWorkshopsTable workshops={workshops} participantView />
     );
 
     // Get disabled "Print Certificate" React Button component
@@ -94,7 +94,7 @@ describe('LandingPageWorkshopsTable', () => {
 
   it('Pre-survey link button shown in workshops that have not started', function () {
     const workshopsTable = shallow(
-      <LandingPageWorkshopsTable workshops={workshops} />
+      <LandingPageWorkshopsTable workshops={workshops} participantView />
     );
 
     workshopsTable
@@ -109,7 +109,7 @@ describe('LandingPageWorkshopsTable', () => {
 
   it('Pre-survey link button not shown in ended workshop', function () {
     const workshopsTable = shallow(
-      <LandingPageWorkshopsTable workshops={workshops} />
+      <LandingPageWorkshopsTable workshops={workshops} participantView />
     );
 
     const preWorkshopSurveyButton = workshopsTable
@@ -127,7 +127,7 @@ describe('LandingPageWorkshopsTable', () => {
     );
 
     const workshopsTable = shallow(
-      <LandingPageWorkshopsTable workshops={workshops} />
+      <LandingPageWorkshopsTable workshops={workshops} participantView />
     );
 
     const preWorkshopSurveyButton = workshopsTable
@@ -139,9 +139,12 @@ describe('LandingPageWorkshopsTable', () => {
     expect(preWorkshopSurveyButton.props().disabled).to.be.true;
   });
 
-  it('shows Status column and only has Workshop Details button when forMyPlPage is true', function () {
+  it('shows Status column and only has Workshop Details button when not in a participant view', function () {
     const workshopsTable = shallow(
-      <LandingPageWorkshopsTable workshops={workshops} forMyPlPage={true} />
+      <LandingPageWorkshopsTable
+        workshops={workshops}
+        participantView={false}
+      />
     );
 
     expect(workshopsTable.find('thead tr').text()).to.contain('Status');

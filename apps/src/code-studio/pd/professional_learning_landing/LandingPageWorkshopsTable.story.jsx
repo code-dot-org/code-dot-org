@@ -48,7 +48,14 @@ const Template = args => {
   return <LandingPageWorkshopsTable {...args} />;
 };
 
-export const Default = Template.bind({});
-Default.args = {
+export const ParticipantView = Template.bind({});
+ParticipantView.args = {
   workshops: workshops,
+  participantView: true,
+};
+
+export const OrganizerView = Template.bind({});
+OrganizerView.args = {
+  workshops: workshops,
+  participantView: false,
 };
