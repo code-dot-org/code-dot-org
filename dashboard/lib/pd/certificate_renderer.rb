@@ -12,14 +12,17 @@ module Pd
     #
     # @param [Pd::Enrollment] a teacher's workshop enrollment
     def self.render_workshop_certificate(enrollment)
+      workshop = enrollment.workshop
+      workshop_title = workshop.name.presence || workshop.course_name
+
       CertificateImage.create_workshop_certificate_image(
         dashboard_dir('app', 'assets', 'images', 'pd_workshop_certificate_generic.png'),
         [
           *teacher_name(enrollment),
-          *pd_hours(enrollment.workshop),
-          *workshop_dates(enrollment.workshop),
-          *course_name(enrollment.workshop),
-          *facilitators(enrollment.workshop)
+          *pd_hours(workshop),
+          *workshop_dates(workshop),
+          *course_info(workshop_title, workshop.friendly_subject),
+          *facilitators(workshop)
         ]
       )
     end
@@ -40,23 +43,30 @@ module Pd
       ]
     end
 
-    private_class_method def self.course_name(workshop)
-      [
+    private_class_method def self.course_info(workshop_title, subject)
+      course_info_text = [
         {
-          string: workshop.course_name,
+          string: workshop_title,
           y: -30,
           pointsize: 70,
           width: 1600,
           height: 100,
-        },
-        {
-          string: workshop.friendly_subject,
-          y: 65,
-          pointsize: 60,
-          width: 1600,
-          height: 100,
         }
       ]
+
+      if subject
+        course_info_text.push(
+          {
+            string: subject,
+            y: 65,
+            pointsize: 60,
+            width: 1600,
+            height: 100,
+          }
+        )
+      end
+
+      course_info_text
     end
 
     private_class_method def self.pd_hours(workshop)
