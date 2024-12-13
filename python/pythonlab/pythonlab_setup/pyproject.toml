@@ -1,27 +1,19 @@
 [project]
-name = "pythonlab_setup"
-version = "0.1.0"
-requires-python = "==3.12.*"
+name = 'pythonlab_setup'
+version = '0.1.0'
+requires-python = '>=3.12'
 
 dependencies = [
-    "matplotlib",
-    "requests",
-]
-
-[tool.pdm.dev-dependencies]
-dev = [
-    "coverage",
-    "ipython",
-    "pytest >=8",
-    "pytest-mock",
-    "ruff",
+  'matplotlib >=3',
+  'requests >=2',
 ]
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+testpaths = ['tests']
 
-[tool.pdm]
+[tool.uv.scripts]
+test = 'pytest'
 
 [build-system]
-requires = ["pdm-backend"]
-build-backend = "pdm.backend"
+requires = ['hatchling']
+build-backend = 'hatchling.build'

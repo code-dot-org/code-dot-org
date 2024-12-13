@@ -1,33 +1,24 @@
 [project]
-name = "pycdo"
-version = "0.1.0"
-description = "python equivalent of lib/cdo"
+name = 'pycdo'
+version = '0.1.0'
+description = 'python equivalent of lib/cdo'
 authors = [
-    { name = "Code.org Python Devs", email = "python-devs@code.org" }
+    { name = 'Code.org Python Devs', email = 'python-devs@code.org' }
 ]
-requires-python = "==3.12.*"
+requires-python = '>=3.12'
 
 dependencies = [
-    "boto3",
-    "numpy",
-    "openai",
-]
-
-[tool.pdm.dev-dependencies]
-dev = [
-    "coverage",
-    "ipython",
-    "pytest >=8",
-    "pytest-mock",
-    "ruff",
+  'boto3 >=1',
+  'numpy >=2',
+  'openai >=1',
 ]
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+testpaths = ['tests']
 
-[tool.pdm]
+[tool.uv.scripts]
+test = 'pytest'
 
 [build-system]
-requires = ["pdm-backend"]
-build-backend = "pdm.backend"
-
+requires = ['hatchling']
+build-backend = 'hatchling.build'
