@@ -121,13 +121,13 @@ wheels = [
 name = "code-dot-org"
 version = "1.0"
 source = { virtual = "." }
-
-[package.dev-dependencies]
 dependencies = [
     { name = "pycdo" },
     { name = "pythonlab-setup" },
     { name = "unittest-runner" },
 ]
+
+[package.dev-dependencies]
 dev = [
     { name = "coverage" },
     { name = "ipython" },
@@ -137,13 +137,13 @@ dev = [
 ]
 
 [package.metadata]
-
-[package.metadata.requires-dev]
-dependencies = [
+requires-dist = [
     { name = "pycdo", editable = "python/pycdo" },
     { name = "pythonlab-setup", editable = "python/pythonlab/pythonlab_setup" },
     { name = "unittest-runner", editable = "python/pythonlab/unittest_runner" },
 ]
+
+[package.metadata.requires-dev]
 dev = [
     { name = "coverage", specifier = ">=7" },
     { name = "ipython", specifier = ">=8" },
