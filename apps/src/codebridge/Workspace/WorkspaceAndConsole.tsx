@@ -1,4 +1,3 @@
-import Console from '@codebridge/Console';
 import Workspace from '@codebridge/Workspace';
 import {debounce} from 'lodash';
 import React, {useEffect, useMemo} from 'react';
@@ -6,6 +5,8 @@ import React, {useEffect, useMemo} from 'react';
 import globalStyleConstants from '@cdo/apps/styleConstants';
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 import color from '@cdo/apps/util/color';
+
+import Output from './Output';
 
 import moduleStyles from './workspace.module.scss';
 
@@ -84,7 +85,7 @@ const WorkspaceAndConsole: React.FunctionComponent = () => {
         style={{position: 'static', backgroundColor: color.light_gray_950}}
       />
       <div style={{height: consoleHeight}}>
-        <Console />
+        <Output />
       </div>
     </div>
   );

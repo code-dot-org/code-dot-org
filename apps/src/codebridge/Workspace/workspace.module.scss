@@ -80,3 +80,16 @@
   gap: 4px;
   margin: 4px;
 }
+
+.outputContainer {
+  display: flex;
+  height: 100%;
+
+  &.vertical {
+    flex-direction: column;
+  }
+
+  &.horizontal {
+    flex-direction: row;
+  }
+}

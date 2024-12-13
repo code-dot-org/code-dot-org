@@ -21,8 +21,8 @@ import {FilePreview} from '@cdo/apps/codebridge/FilePreview';
 import './styles/small-footer-dark-overrides.scss';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 
-import Console from './Console';
 import Workspace from './Workspace';
+import Output from './Workspace/Output';
 import WorkspaceAndConsole from './Workspace/WorkspaceAndConsole';
 
 import moduleStyles from './styles/cdoIDE.module.scss';
@@ -75,7 +75,7 @@ export const Codebridge = React.memo(
       'preview-container': FilePreview,
       'info-panel': config.Instructions || InfoPanel,
       workspace: Workspace,
-      console: Console,
+      output: Output,
       'workspace-and-console': WorkspaceAndConsole,
     };
 

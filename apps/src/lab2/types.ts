@@ -181,6 +181,7 @@ export interface LevelProperties {
   validationFile?: ProjectFile;
   useSecondaryFinishButton?: boolean;
   enableMicroBit?: boolean;
+  miniApp?: string;
 }
 
 // Level configuration data used by project-backed labs that don't require
