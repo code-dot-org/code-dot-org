@@ -278,7 +278,7 @@ describe('useSchoolInfo', () => {
 
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
           EVENTS.ZIP_CODE_ENTERED,
-          {zip: '90210'},
+          {country: 'US', zip: '90210'},
           PLATFORMS.BOTH
         );
       });
