@@ -85,9 +85,8 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
     assert_equal 0, Services::RegistrationReminder.applications_needing_first_reminder.count
   end
 
-  test 'applications_needing_first_reminder omits applications prior to October 2019' do
-    # This application was created before these reminder emails were added
-    application = create :pd_teacher_application, created_at: DateTime.new(2019, 9, 30)
+  test 'applications_needing_first_reminder omits applications prior to year before current app year' do
+    application = create :pd_teacher_application, application_year: Pd::Application::ActiveApplicationModels::APPLICATION_PRIOR_YEAR
     create :pd_application_email, application: application, email_type: 'accepted', sent_at: 1.week.ago
     assert_equal 0, Services::RegistrationReminder.applications_needing_first_reminder.count
   end
@@ -161,9 +160,28 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
     assert_equal 0, Services::RegistrationReminder.applications_needing_second_reminder.count
   end
 
-  test 'applications_needing_second_reminder omits applications prior to October 2019' do
-    # This application was created before we added these notifications
-    application = create :pd_teacher_application, created_at: DateTime.new(2019, 9, 30)
+  test 'applications_needing_second_reminder omits applications prior to application year' do
+    application = create :pd_teacher_application, application_year: Pd::Application::ActiveApplicationModels::APPLICATION_PRIOR_YEAR
+    create :pd_application_email, application: application, email_type: 'accepted', sent_at: 2.weeks.ago
+    create :pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.week.ago
+    assert_equal 0, Services::RegistrationReminder.applications_needing_second_reminder.count
+  end
+
+  test 'applications_needing_first_reminder omits applications to deleted workshops' do
+    workshop = create :pd_workshop, deleted_at: 1.day.ago
+    application_hash = build :pd_teacher_application_hash, regional_partner_id: create(:regional_partner).id
+    application_hash[:pd_workshop_id] = workshop.id
+    application = create :pd_teacher_application, form_data: application_hash.to_json
+    create :pd_application_email, application: application, email_type: 'accepted', sent_at: 2.weeks.ago
+    create :pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.week.ago
+    assert_equal 0, Services::RegistrationReminder.applications_needing_second_reminder.count
+  end
+
+  test 'applications_needing_second_reminder omits applications to deleted workshops' do
+    workshop = create :pd_workshop, deleted_at: 1.day.ago
+    application_hash = build :pd_teacher_application_hash, regional_partner_id: create(:regional_partner).id
+    application_hash[:pd_workshop_id] = workshop.id
+    application = create :pd_teacher_application, form_data: application_hash.to_json
     create :pd_application_email, application: application, email_type: 'accepted', sent_at: 2.weeks.ago
     create :pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.week.ago
     assert_equal 0, Services::RegistrationReminder.applications_needing_second_reminder.count

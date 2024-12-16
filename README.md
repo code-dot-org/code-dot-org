@@ -20,6 +20,7 @@ Here's a quick overview of the major landmarks:
 
 ### Documentation
 
+* [ARCHITECTURE](./ARCHITECTURE.md): in particular please review and adhere to our [Architectural Tenets](ARCHITECTURE.md#architectural-tenets).
 * [SETUP](./SETUP.md): Instructions to get everything up and running.
 * [TESTING](./TESTING.md): How to be sure nothing broke.
 * [STYLEGUIDE](./STYLEGUIDE.md): Our code style conventions.

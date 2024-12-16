@@ -4814,6 +4814,7 @@ columns:
     default_function:
     collation: utf8mb3_unicode_ci
     comment:
+  - *43
   pd_workshops_facilitators:
   - *92
   - *11
@@ -13923,10 +13924,10 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20241203163649
+version: 20241210181552
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
   - 0
-  - 32
-  full_version_string: 8.0.32
+  - 39
+  full_version_string: 8.0.39

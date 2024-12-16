@@ -1,4 +1,4 @@
-@import "color.scss";
+@import '@cdo/apps/componentLibrary/common/styles/primitiveColors.css';
 @import "font.scss";
 @import "@cdo/apps/componentLibrary/common/styles/mixins";
 @import "@cdo/apps/componentLibrary/typography/typography.module";
@@ -13,28 +13,28 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    color: $light-black;
+    color: var(--neutral-base-black);
     font-feature-settings: 'liga' off, 'clig' off;
     text-decoration: none;
     border-radius: 4px;
 
     // Current location styles
     &:last-child {
-      color: $light_primary_500;
+      color: var(--brand-teal-50);
       cursor: default;
     }
 
     // Hover, Pressed, Visited styles
     &:hover, :active, :visited {
       &:not(:last-child) {
-        color: $light_gray_800;
+        color: var(--neutral-gray-80);
       }
     }
 
     // Focus styles
     &:focus-visible {
-      color: $light_black;
-      outline: 2px solid $light_primary_500;
+      color: var(--neutral-base-black);
+      outline: 2px solid var(--brand-teal-50);
       outline-offset: 2px;
     }
   }
@@ -45,7 +45,7 @@
     justify-content: center;
     align-items: center;
 
-    color: $light_black_opacity-70;
+    color: var(--neutral-black-alpha-70);
   }
 
 }

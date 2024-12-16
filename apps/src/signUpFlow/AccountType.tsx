@@ -37,7 +37,7 @@ const AccountType: React.FunctionComponent = () => {
     analyticsReporter.sendEvent(
       EVENTS.SIGN_UP_STARTED_EVENT,
       {},
-      PLATFORMS.STATSIG
+      PLATFORMS.BOTH
     );
   }, []);
 
@@ -47,7 +47,7 @@ const AccountType: React.FunctionComponent = () => {
       {
         'account type': accountType,
       },
-      PLATFORMS.STATSIG
+      PLATFORMS.BOTH
     );
     sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, accountType);
     navigateToHref(studio('/users/new_sign_up/login_type'));
@@ -57,7 +57,7 @@ const AccountType: React.FunctionComponent = () => {
     analyticsReporter.sendEvent(
       EVENTS.CURRICULUM_FREE_DIALOG_BUTTON_CLICKED,
       {},
-      PLATFORMS.STATSIG
+      PLATFORMS.BOTH
     );
   };
 

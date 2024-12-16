@@ -97,10 +97,10 @@ export const ALL_LEDS = allLeds;
 
 export const MICROBIT_FIRMATA_V1_URL = `${DOWNLOAD_PREFIX}microbit-firmata-v1-ver1.2.hex`;
 export const MICROBIT_FIRMATA_V2_URL = `${DOWNLOAD_PREFIX}microbit-firmata-v2-ver1.2.hex`;
+export const MICROBIT_MICROPYTHON_V1_URL = `${DOWNLOAD_PREFIX}microbit-micropython-v1-ver1.hex`;
+export const MICROBIT_MICROPYTHON_V2_URL = `${DOWNLOAD_PREFIX}microbit-micropython-v2-ver1.hex`;
 export const MICROBIT_IDS_V1 = ['9900', '9901'];
 export const MICROBIT_IDS_V2 = ['9903', '9904', '9905', '9906'];
-export const MICROBIT_V1 = 'v1';
-export const MICROBIT_V2 = 'v2';
 
 // Any USB device (including a micro:bit) will identify itself on connection to the
 // host computer through three numbers: Vendor ID, Product ID, and serial number.
