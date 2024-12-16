@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 ## [0.4.0](https://github.com/code-dot-org/code-dot-org/pull/62925)
 
 - rewritten `RadioButtonTest`, `RadioButtonGroupTest` in typescript
-- refactored/optimized `RadioButtonTest.tsx`, `RadioButtonGroupTest.tsx`.
+- refactored/optimized `RadioButtonTest.tsx`, `RadioButtonGroupTest.tsx`
 - minor Changelog formatting update
 
 ## [0.3.1](https://github.com/code-dot-org/code-dot-org/pull/61173)
