@@ -17,7 +17,7 @@ import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.mod
 
 export interface CheckboxDropdownOption extends _CustomDropdownOption {}
 
- interface BaseCheckboxDropdownProps
+interface BaseCheckboxDropdownProps
   extends DropdownFormFieldRelatedProps,
     AriaAttributes {
   /** CheckboxDropdown name.
@@ -44,30 +44,32 @@ export interface CheckboxDropdownOption extends _CustomDropdownOption {}
   checkedOptions: string[];
   /** CheckboxDropdown onChange handler */
   onChange: (args: React.ChangeEvent<HTMLInputElement>) => void;
-  /** Click handler and translated button text for the "Select All" button */
 }
 
-interface CheckboxDropdownWithoutControlProps extends BaseCheckboxDropdownProps {
-  type: 'withoutControls';
+interface CheckboxDropdownWithoutControlProps
+  extends BaseCheckboxDropdownProps {
+  showControls: false;
 }
 
 interface CheckboxDropdownWithControlsProps extends BaseCheckboxDropdownProps {
-  type: 'withControls';
+  showControls: true;
   onSelectAll: (
-      event:
-          | React.MouseEvent<HTMLButtonElement>
-          | React.MouseEvent<HTMLAnchorElement>
+    event:
+      | React.MouseEvent<HTMLButtonElement>
+      | React.MouseEvent<HTMLAnchorElement>
   ) => void;
   onClearAll: (
-      event:
-          | React.MouseEvent<HTMLButtonElement>
-          | React.MouseEvent<HTMLAnchorElement>
+    event:
+      | React.MouseEvent<HTMLButtonElement>
+      | React.MouseEvent<HTMLAnchorElement>
   ) => void;
   selectAllText: string;
   clearAllText: string;
 }
 
-export type CheckboxDropdownProps = CheckboxDropdownWithoutControlProps | CheckboxDropdownWithControlsProps;
+export type CheckboxDropdownProps =
+  | CheckboxDropdownWithoutControlProps
+  | CheckboxDropdownWithControlsProps;
 
 const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   name,
@@ -85,35 +87,35 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   helperIcon,
   errorMessage,
   styleAsFormField = false,
+
   ...rest
 }) => {
   const getControls = () => {
-    switch (rest.type) {
-      case "withControls": {
-        const {selectAllText, onSelectAll, onClearAll, clearAllText} = rest;
+    if (rest.showControls) {
+      const {selectAllText, onSelectAll, onClearAll, clearAllText} = rest;
 
-        return (
-            <div className={moduleStyles.bottomButtonsContainer}>
-              <Button
-                  type="tertiary"
-                  color={buttonColors.purple}
-                  text={selectAllText}
-                  onClick={onSelectAll}
-                  size={size}
-              />
-              <Button
-                  type="tertiary"
-                  color={buttonColors.purple}
-                  text={clearAllText}
-                  onClick={onClearAll}
-                  size={size}
-              />
-            </div>
-        )
-      }
-      default: return undefined;
+      return (
+        <div className={moduleStyles.bottomButtonsContainer}>
+          <Button
+            type="tertiary"
+            color={buttonColors.purple}
+            text={selectAllText}
+            onClick={onSelectAll}
+            size={size}
+          />
+          <Button
+            type="tertiary"
+            color={buttonColors.purple}
+            text={clearAllText}
+            onClick={onClearAll}
+            size={size}
+          />
+        </div>
+      );
+    } else {
+      return undefined;
     }
-  }
+  };
 
   return (
     <CustomDropdown
