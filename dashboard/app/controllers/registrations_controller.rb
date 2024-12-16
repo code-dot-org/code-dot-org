@@ -136,7 +136,7 @@ class RegistrationsController < Devise::RegistrationsController
     SignUpTracking.end_sign_up_tracking(session)
 
     PartialRegistration.delete(session)
-    redirect_to new_user_registration_path
+    redirect_to users_new_sign_up_account_type_path
   end
 
   #
