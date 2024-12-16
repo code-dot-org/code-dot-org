@@ -93,6 +93,7 @@ export class WorkshopForm extends React.Component {
     facilitatorCourses: PropTypes.arrayOf(PropTypes.string).isRequired,
     workshop: PropTypes.shape({
       id: PropTypes.number.isRequired,
+      name: PropTypes.string,
       facilitators: PropTypes.array.isRequired,
       location_name: PropTypes.string.isRequired,
       location_address: PropTypes.string,
@@ -134,6 +135,7 @@ export class WorkshopForm extends React.Component {
     let initialState = {
       errors: [],
       shouldValidate: false,
+      name: '',
       facilitators: [],
       location_name: '',
       location_address: '',
@@ -163,6 +165,7 @@ export class WorkshopForm extends React.Component {
       initialState = _.merge(
         initialState,
         _.pick(props.workshop, [
+          'name',
           'facilitators',
           'location_name',
           'location_address',
@@ -828,8 +831,9 @@ export class WorkshopForm extends React.Component {
   handleCourseChange = event => {
     const course = this.handleFieldChange(event);
 
-    // clear facilitators, subject, module, funding, participant type, and email reminders
+    // clear name, facilitators, subject, module, funding, participant type, and email reminders
     this.setState({
+      name: '',
       facilitators: [],
       subject: null,
       fee: null,
@@ -890,6 +894,7 @@ export class WorkshopForm extends React.Component {
 
   save(notify = false) {
     const workshop_data = {
+      name: this.state.name,
       facilitators: this.prepareFacilitatorsForApi(this.state.facilitators),
       location_name: this.state.location_name,
       location_address: this.state.location_address,
@@ -1068,6 +1073,11 @@ export class WorkshopForm extends React.Component {
           validation.style.course_offerings = 'error';
           validation.help.course_offerings = 'Required.';
         }
+        if (this.state.name === '') {
+          validation.isValid = false;
+          validation.style.name = 'error';
+          validation.help.name = 'Required.';
+        }
         if (this.state.participant_group_type === '') {
           validation.isValid = false;
           validation.style.participant_group_type = 'error';
@@ -1114,6 +1124,26 @@ export class WorkshopForm extends React.Component {
             readOnly={this.props.readOnly}
           />
           <br />
+          {this.state.course === COURSE_BUILD_YOUR_OWN && (
+            <Row>
+              <Col sm={4}>
+                <FormGroup validationState={validation.style.name}>
+                  <ControlLabel>Workshop Name</ControlLabel>
+                  <FormControl
+                    type="text"
+                    value={this.state.name || ''}
+                    id="name"
+                    name="name"
+                    onChange={this.handleFieldChange}
+                    maxLength={255}
+                    style={this.getInputStyle()}
+                    disabled={this.props.readOnly}
+                  />
+                  <HelpBlock>{validation.help.name}</HelpBlock>
+                </FormGroup>
+              </Col>
+            </Row>
+          )}
           <Row>
             <Col sm={4}>
               <FormGroup validationState={validation.style.location_name}>

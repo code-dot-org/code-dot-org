@@ -320,6 +320,7 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
 
   private def workshop_params(can_update_regional_partner = true)
     allowed_params = [
+      :name,
       :location_name,
       :location_address,
       :capacity,
