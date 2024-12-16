@@ -100,13 +100,13 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     if (value === NonSchoolOptions.NO_SCHOOL_SETTING) {
       analyticsReporter.sendEvent(
         EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED,
-        {},
+        {country: country},
         PLATFORMS.BOTH
       );
     } else if (value === NonSchoolOptions.CLICK_TO_ADD) {
       analyticsReporter.sendEvent(
         EVENTS.ADD_MANUALLY_CLICKED,
-        {},
+        {country: country},
         PLATFORMS.BOTH
       );
     } else {
@@ -114,6 +114,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
         EVENTS.SCHOOL_SELECTED_FROM_LIST,
         {
           'nces Id': value,
+          country: country,
         },
         PLATFORMS.BOTH
       );
@@ -128,7 +129,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     if (ZIP_REGEX.test(value)) {
       analyticsReporter.sendEvent(
         EVENTS.ZIP_CODE_ENTERED,
-        {zip: value},
+        {zip: value, country: country},
         PLATFORMS.BOTH
       );
     }
