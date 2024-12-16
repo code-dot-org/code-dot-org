@@ -21,6 +21,7 @@ export default class AnimationPreview extends React.Component {
       PlayBehavior.NEVER_PLAY,
     ]),
     onPreviewLoad: PropTypes.func,
+    isFocused: PropTypes.bool,
   };
 
   state = {
@@ -43,6 +44,22 @@ export default class AnimationPreview extends React.Component {
     } else if (
       nextProps.playBehavior !== PlayBehavior.ALWAYS_PLAY &&
       this.timeout_
+    ) {
+      this.stopAndResetAnimation();
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    if (
+      !prevProps.isFocused &&
+      this.props.isFocused &&
+      this.props.playBehavior !== PlayBehavior.NEVER_PLAY
+    ) {
+      this.advanceFrame();
+    } else if (
+      prevProps.isFocused &&
+      !this.props.isFocused &&
+      this.props.playBehavior !== PlayBehavior.NEVER_PLAY
     ) {
       this.stopAndResetAnimation();
     }
@@ -171,6 +188,12 @@ export default class AnimationPreview extends React.Component {
     }
 
     return (
+      /*
+        The behavior managed by the onMouseOver and onMouseOut handlers is replicated on focus and blur
+        in the componentDidUpdate lifecycle method for accessibility purposes.
+        This div is never actually focused, so using native onFocus and onBlur handlers is . 
+        We include no-op onFocus and onBlur handlers to suppress a11y linter errors.
+      */
       <div
         ref="root"
         style={containerStyle}
@@ -184,6 +207,8 @@ export default class AnimationPreview extends React.Component {
             ? this.onMouseOut
             : null
         }
+        onFocus={() => {}}
+        onBlur={() => {}}
       >
         <div style={cropStyle}>
           {
