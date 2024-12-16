@@ -12507,6 +12507,21 @@ indexes:
     type:
     using: :btree
     comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: school_infos
+    name: index_school_infos_on_school_name_and_country_and_school_type
+    unique: false
+    columns:
+    - school_name
+    - country
+    - school_type
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
   school_stats_by_years:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: school_stats_by_years
@@ -13908,10 +13923,10 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20241125202219
+version: 20241203163649
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
   - 0
-  - 32
-  full_version_string: 8.0.32
+  - 39
+  full_version_string: 8.0.39

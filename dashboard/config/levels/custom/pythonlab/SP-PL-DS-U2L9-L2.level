@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "> Explore how the `unstack()` and different grouping parameters affect the structure and readability of stacked bar charts. \r\n\r\n# Preparing Chart \r\n\r\n::: details [**✅ Step 1**]\r\nRun the code to see the stacked bar chart from Level 1.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\n- Modify the code by removing `.unstack()` from the end of the `grouped_data`. \r\n- Thisnk about: *What role does `unstack()` play in creating a stacked bar chart?*\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\n- How could you modify the code to show creature sightings by **region** instead of by year? \r\n- Give it a try!\r\n:::\r\n",
+    "long_instructions": "> Explore how the `unstack()` and different grouping parameters affect the structure and readability of stacked bar charts. \r\n\r\n# Preparing Chart \r\n\r\n::: details [**✅ Step 1**]\r\nRun the code to see the stacked bar chart from Level 1.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\n- Modify the code by removing `.unstack()` from the end of the `grouped_data`. \r\n- Thisnk about: *What role does `unstack()` play in creating a stacked bar chart?*\r\n:::\r\n\r\n::: details [**🔎 Show me how**]\r\n![](https://images.code.org/23750426d7ccff506802a815da51a094-image-1732642551397.png)\r\n:::\r\n\r\n\r\n::: details [**✅ Step 3**]\r\n- How could you modify the code to show creature sightings by **region** instead of by year? \r\n- Give it a try!\r\n:::\r\n\r\n",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -43,6 +43,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-10T14:35:04.287+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L8-L2_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L8-L2_2024-pilot\"},{\"changed_at\":\"2024-10-10 14:58:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-10T14:35:04.287+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L8-L2_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L8-L2_2024-pilot\"},{\"changed_at\":\"2024-10-10 14:58:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-26 17:36:23 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Pythonlab>

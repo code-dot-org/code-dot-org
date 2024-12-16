@@ -9,7 +9,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Template 1\r\n\r\n**Single event with single if-statement** ",
+    "long_instructions": "# Template 1\r\n\r\n**Single event with single if-statement** \r\n\r\n<details open>\r\n  <summary>Hello</summary>\r\n  World!\r\n</details>\r\n\r\n<details>\r\n  <summary>Goodbye</summary>\r\n  Cruel World!\r\n</details>",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -99,14 +99,14 @@
       "divideOperator": null
     },
     "palette_category_at_start": "microbit",
+    "slider_speed": "0.2",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "slider_speed": "0.2"
+    ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-11-19T21:49:29.176+00:00\",\"changed\":[\"cloned from \\\"Computer Systems Playground - Example Project 1.2\\\"\"],\"cloned_from\":\"Computer Systems Playground - Example Project 1.2\"},{\"changed_at\":\"2024-11-19 21:49:32 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-19 22:00:44 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-22 22:24:26 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-11-19T21:49:29.176+00:00\",\"changed\":[\"cloned from \\\"Computer Systems Playground - Example Project 1.2\\\"\"],\"cloned_from\":\"Computer Systems Playground - Example Project 1.2\"},{\"changed_at\":\"2024-11-19 21:49:32 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-19 22:00:44 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-22 22:24:26 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-11-27 18:56:04 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

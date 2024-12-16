@@ -53,6 +53,8 @@ export const MAX_LOOP_ITERATIONS_COUNT = 1000;
 
 export const MAX_NUMBER_EVENTS = 1000;
 
+export const MAX_FUNCTION_BOUNDS_RENDER_DEPTH = 10;
+
 export const DEFAULT_PATTERN: InstrumentEventValue = {
   instrument: 'drums',
   length: DEFAULT_PATTERN_LENGTH,

@@ -18,6 +18,7 @@ import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';
 import Notification, {
   NotificationType,
 } from '@cdo/apps/sharedComponents/Notification';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
 import {navigateToHref} from '@cdo/apps/utils';
 import {CapLinks} from '@cdo/generated-scripts/sharedConstants';
@@ -435,12 +436,17 @@ export default function SectionsSetUpContainer({
         isNewSection={isNewSection}
       />
 
-      <CurriculumQuickAssign
-        id="uitest-curriculum-quick-assign"
-        isNewSection={isNewSection}
-        updateSection={(key, val) => updateSection(0, key, val)}
-        sectionCourse={sections[0].course || consolidatedCourseData()}
-        initialParticipantType={sections[0].participantType}
+      {/* Allow the curriculum quick assign region to be configured per-region */}
+      <GlobalEditionWrapper
+        component={CurriculumQuickAssign}
+        componentId="CurriculumQuickAssign"
+        props={{
+          id: 'uitest-curriculum-quick-assign',
+          isNewSection: isNewSection,
+          updateSection: (key, val) => updateSection(0, key, val),
+          sectionCourse: sections[0].course || consolidatedCourseData(),
+          initialParticipantType: sections[0].participantType,
+        }}
       />
 
       <div
