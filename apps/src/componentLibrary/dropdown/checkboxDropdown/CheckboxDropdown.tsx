@@ -1,4 +1,4 @@
-import React, {AriaAttributes, memo, MouseEvent} from 'react';
+import React, {AriaAttributes, memo, MouseEvent, useCallback} from 'react';
 
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox';
@@ -87,10 +87,9 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   helperIcon,
   errorMessage,
   styleAsFormField = false,
-
   ...rest
 }) => {
-  const getControls = () => {
+  const getControls = useCallback(() => {
     if (rest.showControls) {
       const {selectAllText, onSelectAll, onClearAll, clearAllText} = rest;
 
@@ -115,7 +114,7 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
     } else {
       return undefined;
     }
-  };
+  }, [rest, size]);
 
   return (
     <CustomDropdown
