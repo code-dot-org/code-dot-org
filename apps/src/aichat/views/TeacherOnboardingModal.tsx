@@ -5,11 +5,10 @@ import Link from '@cdo/apps/componentLibrary/link/Link';
 import {
   BodyOneText,
   BodyTwoText,
-  EmText,
   Heading3,
-  StrongText,
 } from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
 import aichatI18n from '../locale';
@@ -23,7 +22,6 @@ import moduleStyles from './onboarding-modal.module.scss';
 export interface TeacherOnboardingModalProps {
   onClose: () => void;
 }
-
 const TeacherOnboardingModal: React.FunctionComponent<
   TeacherOnboardingModalProps
 > = ({onClose}) => {
@@ -47,27 +45,30 @@ const TeacherOnboardingModal: React.FunctionComponent<
           <ul>
             <li>
               <BodyTwoText>
-                <StrongText>Instructions</StrongText>: Clear directions and
-                goals for each level.
-              </BodyTwoText>
-            </li>
-            <BodyTwoText>
-              <StrongText>Model Customizations </StrongText>
-              <EmText>(optional)</EmText>: Clear directions and goals for each
-              level.
-            </BodyTwoText>
-            <li>
-              <BodyTwoText>
-                <StrongText>AI Chat</StrongText>: The area where students can
-                interact directly with the chatbot they've created.
+                <SafeMarkdown
+                  markdown={aichatI18n.teacherOnboardingModal_instructionsBullet()}
+                />
               </BodyTwoText>
             </li>
             <li>
               <BodyTwoText>
-                <StrongText>User View </StrongText>
-                <EmText>(optional)</EmText>: Allows students to use their
-                chatbot as a user, without the instructions or customization
-                visible.
+                <SafeMarkdown
+                  markdown={aichatI18n.teacherOnboardingModal_modelCustomizationBullet()}
+                />
+              </BodyTwoText>
+            </li>
+            <li>
+              <BodyTwoText>
+                <SafeMarkdown
+                  markdown={aichatI18n.teacherOnboardingModal_aiChatBullet()}
+                />
+              </BodyTwoText>
+            </li>
+            <li>
+              <BodyTwoText>
+                <SafeMarkdown
+                  markdown={aichatI18n.teacherOnboardingModal_userViewBullet()}
+                />
               </BodyTwoText>
             </li>
           </ul>

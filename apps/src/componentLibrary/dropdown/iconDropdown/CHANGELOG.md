@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file.
 - rewritten `IconDropdownTest` in typescript
 - refactored/optimized `IconDropdownTest.tsx`
 
+## [0.4.1](https://github.com/code-dot-org/code-dot-org/pull/62917)
+
+- updated color variables to use `primitiveColors.css`
+
 ## [0.4.0](https://github.com/code-dot-org/code-dot-org/pull/62023)
 
 - added `readOnly` state
