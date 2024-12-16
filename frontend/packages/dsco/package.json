@@ -43,6 +43,7 @@
     "lint:fix": "eslint --fix .",
     "prepack": "clean-package",
     "postpack": "clean-package restore",
+    "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "test": "jest",
     "typecheck": "tsc --noEmit"
