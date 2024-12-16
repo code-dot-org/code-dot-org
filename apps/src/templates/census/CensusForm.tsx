@@ -205,25 +205,24 @@ export const CensusForm: React.FC<CensusFormProps> = ({
   // each submitted field that is problematic. The specifics of
   // the problem are not important here since we just need a boolean value
   // of whether there was an error or not.
+  const errorMap = {
+    submitter_email_address: 'invalidEmail',
+    class_frequency: 'frequency',
+    nces_school_s: 'nces',
+    submitter_role: 'role',
+    how_many_do_hoc: 'hoc',
+    how_many_after_school: 'afterSchool',
+    how_many_10_hours: 'tenHours',
+    how_many_20_hours: 'twentyHours',
+    country: 'country',
+    school_type: 'school',
+    state: 'school',
+    zip: 'school',
+    school_name: 'school',
+  };
   const processError = (
     errorResponse: Record<keyof typeof errorMap, string>
   ) => {
-    const errorMap = {
-      submitter_email_address: 'invalidEmail',
-      class_frequency: 'frequency',
-      nces_school_s: 'nces',
-      submitter_role: 'role',
-      how_many_do_hoc: 'hoc',
-      how_many_after_school: 'afterSchool',
-      how_many_10_hours: 'tenHours',
-      how_many_20_hours: 'twentyHours',
-      country: 'country',
-      school_type: 'school',
-      state: 'school',
-      zip: 'school',
-      school_name: 'school',
-    };
-
     setErrors(prevState => {
       const updatedErrors = {...prevState};
       Object.keys(errorResponse).forEach(key => {
@@ -679,32 +678,34 @@ export const CensusForm: React.FC<CensusFormProps> = ({
         </div>
 
         <div>
-          {errors.optIn && (
-            <div style={styles.errors}>
-              Required. Please let us know if we can email you.
-            </div>
-          )}
-          <span style={styles.share}>
-            Can we email you about updates to our courses, local opportunities,
-            or other computer science news? &nbsp;
-            <a href="/privacy" target="_blank">
-              (See our privacy policy)
-            </a>
-          </span>
+          <label>
+            {errors.optIn && (
+              <div style={styles.errors}>
+                Required. Please let us know if we can email you.
+              </div>
+            )}
+            <span style={styles.share}>
+              Can we email you about updates to our courses, local
+              opportunities, or other computer science news? &nbsp;
+              <a href="/privacy" target="_blank">
+                (See our privacy policy)
+              </a>
+            </span>
 
-          <select
-            name="opt_in"
-            value={submission.optIn}
-            onChange={e => handleChange('optIn', e)}
-            style={styles.dropdown}
-          >
-            <option value="" disabled>
-              {i18n.yesNo()}
-            </option>
-            <option value="true">{i18n.yes()}</option>
-            <option value="false">{i18n.no()}</option>
-          </select>
-          <span style={styles.asterisk}> *</span>
+            <select
+              name="opt_in"
+              value={submission.optIn}
+              onChange={e => handleChange('optIn', e)}
+              style={styles.dropdown}
+            >
+              <option value="" disabled>
+                {i18n.yesNo()}
+              </option>
+              <option value="true">{i18n.yes()}</option>
+              <option value="false">{i18n.no()}</option>
+            </select>
+            <span style={styles.asterisk}> *</span>
+          </label>
         </div>
 
         <div>
