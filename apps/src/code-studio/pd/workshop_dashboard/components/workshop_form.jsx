@@ -117,6 +117,7 @@ export class WorkshopForm extends React.Component {
       }),
       module: PropTypes.string,
       course_offerings: PropTypes.array,
+      participant_group_type: PropTypes.string,
     }),
     onSaved: PropTypes.func,
     today: PropTypes.instanceOf(Date),
@@ -155,6 +156,7 @@ export class WorkshopForm extends React.Component {
       suppress_email: false,
       third_party_provider: null,
       course_offerings: [],
+      participant_group_type: '',
     };
 
     if (props.workshop) {
@@ -179,6 +181,7 @@ export class WorkshopForm extends React.Component {
           'suppress_email',
           'third_party_provider',
           'course_offerings',
+          'participant_group_type',
         ])
       );
       initialState.sessions = this.prepareSessionsForForm(
@@ -825,7 +828,7 @@ export class WorkshopForm extends React.Component {
   handleCourseChange = event => {
     const course = this.handleFieldChange(event);
 
-    // clear facilitators, subject, module, funding, and email reminders
+    // clear facilitators, subject, module, funding, participant type, and email reminders
     this.setState({
       facilitators: [],
       subject: null,
@@ -835,6 +838,7 @@ export class WorkshopForm extends React.Component {
       suppress_email: false,
       module: null,
       course_offerings: [],
+      participant_group_type: '',
     });
     this.loadAvailableFacilitators(course);
     if (course === COURSE_BUILD_YOUR_OWN) {
@@ -907,6 +911,7 @@ export class WorkshopForm extends React.Component {
       ),
       regional_partner_id: this.state.regional_partner_id,
       course_offerings: this.state.course_offerings,
+      participant_group_type: this.state.participant_group_type,
     };
 
     if (this.state.organizer) {
@@ -1057,14 +1062,17 @@ export class WorkshopForm extends React.Component {
         validation.style.course = 'error';
         validation.help.course = 'Required.';
       }
-      if (
-        this.state.course &&
-        this.state.course === COURSE_BUILD_YOUR_OWN &&
-        this.state.course_offerings.length === 0
-      ) {
-        validation.isValid = false;
-        validation.style.course_offerings = 'error';
-        validation.help.course_offerings = 'Required.';
+      if (this.state.course && this.state.course === COURSE_BUILD_YOUR_OWN) {
+        if (this.state.course_offerings.length === 0) {
+          validation.isValid = false;
+          validation.style.course_offerings = 'error';
+          validation.help.course_offerings = 'Required.';
+        }
+        if (this.state.participant_group_type === '') {
+          validation.isValid = false;
+          validation.style.participant_group_type = 'error';
+          validation.help.participant_group_type = 'Required.';
+        }
       }
       if (this.shouldRenderSubject() && !this.state.subject) {
         validation.isValid = false;
