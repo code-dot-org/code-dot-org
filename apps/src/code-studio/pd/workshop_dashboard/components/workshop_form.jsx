@@ -1068,11 +1068,6 @@ export class WorkshopForm extends React.Component {
         validation.help.course = 'Required.';
       }
       if (this.state.course && this.state.course === COURSE_BUILD_YOUR_OWN) {
-        if (this.state.course_offerings.length === 0) {
-          validation.isValid = false;
-          validation.style.course_offerings = 'error';
-          validation.help.course_offerings = 'Required.';
-        }
         if (this.state.name === '') {
           validation.isValid = false;
           validation.style.name = 'error';
@@ -1082,6 +1077,11 @@ export class WorkshopForm extends React.Component {
           validation.isValid = false;
           validation.style.participant_group_type = 'error';
           validation.help.participant_group_type = 'Required.';
+        }
+        if (this.state.course_offerings.length === 0) {
+          validation.isValid = false;
+          validation.style.course_offerings = 'error';
+          validation.help.course_offerings = 'Required.';
         }
       }
       if (this.shouldRenderSubject() && !this.state.subject) {
