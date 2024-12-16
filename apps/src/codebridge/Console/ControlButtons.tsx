@@ -108,7 +108,7 @@ const ControlButtons: React.FunctionComponent = () => {
     <div className={moduleStyles.controlButtons}>
       {isRunning ? (
         <Button
-          text={'Stop'}
+          text={codebridgeI18n.stop()}
           onClick={handleStop}
           color={'destructive'}
           iconLeft={{iconStyle: 'solid', iconName: 'square'}}
@@ -130,7 +130,7 @@ const ControlButtons: React.FunctionComponent = () => {
         >
           <Button
             id="uitest-codebridge-run"
-            text={'Run'}
+            text={codebridgeI18n.run()}
             onClick={handleRun}
             disabled={!!disabledCodeActionsTooltip}
             iconLeft={{iconStyle: 'solid', iconName: 'play'}}

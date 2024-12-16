@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 ## [0.7.0] (https://github.com/code-dot-org/code-dot-org/pull/62659)
 - move selectAll and clearAll button config into a single optional prop
 
+## [0.6.1] (https://github.com/code-dot-org/code-dot-org/pull/62917)
+
+- updated color variables to use `primitiveColors.css`
+
 ## [0.6.0] (https://github.com/code-dot-org/code-dot-org/pull/62023)
 
 - added `readOnly` state

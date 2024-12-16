@@ -10,7 +10,7 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/2df9050dff40b9e5fa362d87339c5ceb-image-1724862949854.png" alt="notnull() chart example" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
 
-#### In this lesson, students learn to filter data attributes to exclude entries that contain null values and learn how to filter by examining the value of string data within an entry. 
+#### In this lesson, students learn to filter data attributes to exclude entries that contain **null values** and learn how to filter by examining the **value of string data** within an entry. 
 
 #### Additionally, they combine many of the previous filtering techniques that they have learned throughout the unit and combine them with the use of multiple **logical operators** in order to create focused and precise subsets of data.
 

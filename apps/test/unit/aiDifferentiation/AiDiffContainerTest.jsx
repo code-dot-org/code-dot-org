@@ -130,6 +130,7 @@ describe('AiDiffContainer', () => {
           lessonId: responseEventData.lessonId,
           unitDisplayName: responseEventData.unitName,
           sessionId: null,
+          isPreset: true,
         }),
         true,
         {
@@ -165,6 +166,10 @@ describe('AiDiffContainer', () => {
     expect(submit_btn).toBeEnabled();
     fireEvent.click(submit_btn);
 
+    //After click, but before server response, user message editor should be disabled
+    expect(submit_btn).not.toBeEnabled();
+    expect(textbox).not.toBeEnabled();
+
     const responseEventData = {
       lessonId: 2,
       lessonName: 'test_lesson',
@@ -193,6 +198,7 @@ describe('AiDiffContainer', () => {
           lessonId: responseEventData.lessonId,
           unitDisplayName: responseEventData.unitName,
           sessionId: null,
+          isPreset: false,
         }),
         true,
         {
@@ -218,6 +224,9 @@ describe('AiDiffContainer', () => {
     expect(
       screen.getAllByLabelText(i18n.aiChatMessageBot())[1]
     ).toHaveTextContent("Beep boop I'm a bot");
+
+    //User message editor should be enabled once we have a server response
+    expect(submit_btn).not.toBeEnabled();
   });
 
   it('Selecting a prompt does nothing if there are more recent messages', async () => {
@@ -257,6 +266,7 @@ describe('AiDiffContainer', () => {
           lessonId: responseEventData.lessonId,
           unitDisplayName: responseEventData.unitName,
           sessionId: null,
+          isPreset: false,
         }),
         true,
         {

@@ -1,13 +1,15 @@
 class MusiclabController < ApplicationController
   ANALYTICS_KEY = CDO.amplitude_api_key
   NUM_MINI_PLAYER_PROJECTS = 5
-  # Hard-coded list of channel IDs for the mini player if DCDO flag is set to `true`
+  # The hard-coded list of channel IDs for the mini player if the 'get_channel_ids_from_featured_projects_gallery'
+  # DCDO flag is set to `false`. If the DCDO flag is set to `true`, then the channel IDs are randomly selected from
+  # the set of active music lab featured projects. See get_selected_channel_ids below.
   CHANNELS = %w(
-    syBuoFelbGB3eOmNVoQGrWMXEk0l1EhkIX6c08ujq6s
-    Ehnks69B0Whcn_YQQNCK4GUHAPU3WSG2jfilvQF1kfo
-    6Xc53NIhwFxjjwsSaoj_eSiRbbXr97BYQ3W_7vIaAwY
-    NwTkJSskTswEOtgy6TbaJ-8SonhhSxojrJjlJLBko4w
-    I3HQObQN0jiadlMqjleet5VEwQaFwGYHG6Ehxodbg7U
+    RSDgNPmToACl-JRTVYAcTCbF46lyXXPRWOsHISyu3kc
+    q0wDQmka3QRjS0EIH46XtSIQ_zJfhayM71YEqOAahao
+    RSDgNPmToACl-JRTVYAcTCkE2DNnP529dBPfRByevCY
+    pYNY-IR4sQxUR4CDNGxoNsTpYDympRPq9f0j6R06mec
+    pYNY-IR4sQxUR4CDNGxoNrN_O4luFYm_Sxg6DnQUxyw
   )
 
   def menu

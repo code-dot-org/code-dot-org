@@ -98,6 +98,7 @@
       position: absolute;
       top: 0;
       right: 0;
+      color: $neutral_dark30;
 
       &Icon {
         font-size: 24px;
@@ -107,10 +108,19 @@
 
   .bottom {
     display: flex;
-    flex-direction: row;
-    justify-content: end;
-    gap: 14px;
-    width: 100%;
+    align-items: center;
+
+    .feedbackLink {
+      display: flex;
+      color: $neutral_light;
+      text-decoration: underline;
+    }
+
+    .buttonGroup {
+      display: flex;
+      gap: 14px;
+      margin-inline-start: auto;
+    }
   }
 }
 

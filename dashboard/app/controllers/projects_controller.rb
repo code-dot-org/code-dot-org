@@ -229,7 +229,7 @@ class ProjectsController < ApplicationController
   end
 
   def combine_projects_and_featured_projects_data
-    projects = "#{CDO.dashboard_db_name}__projects".to_sym
+    projects = :"#{CDO.dashboard_db_name}__projects"
     project_featured_project_combo_data = DASHBOARD_DB[:featured_projects].
       select(*project_and_featured_project_fields).
       join(projects, id: :storage_app_id, state: 'active').all
@@ -645,20 +645,23 @@ class ProjectsController < ApplicationController
     owner_info['name'] = User.find_channel_owner(src_channel_id).try(:username)
     project_info['is_featured_project'] = FeaturedProject.exists?(storage_app_id: project_info['id'])
 
+    project = Project.find_by_channel_id(src_channel_id)
     remix_ancestry = Projects.remix_ancestry(src_channel_id, depth: 5)
     project_info['remix_ancestry'] = []
-    project_type = Project.find_by_channel_id(src_channel_id)['project_type']
+    project_type = project.project_type
     if remix_ancestry.present?
       remix_ancestry.each do |channel_id|
         project_info['remix_ancestry'] << "/projects/#{project_type}/#{channel_id}/view"
       end
     end
     if project_info['is_featured_project']
-      project = FeaturedProject.find_by project_id: project_info['id']
-      project_info['featured_status'] = project.status
+      featured_project = FeaturedProject.find_by project_id: project_info['id']
+      project_info['featured_status'] = featured_project.status
     else
       project_info['featured_status'] = 'n/a'
     end
+    project_info['abuse_score'] = project['abuse_score']
+    project_info['is_published_project'] = project['published_at'] ? 'yes' : 'no'
     return render json: {owner_info: owner_info, project_info: project_info}
   end
 

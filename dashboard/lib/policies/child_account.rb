@@ -57,14 +57,6 @@ class Policies::ChildAccount
     user.created_at < StatePolicies.state_policies['CO'][:start_date]
   end
 
-  # 'cap-state-modal-rollout' should be a value in the range [0,100]
-  # If the value is 10, 10% of users will see the modal
-  # If the value is 50, 50% of users will see the modal
-  def self.show_cap_state_modal?(user)
-    return false unless user&.id
-    (user.id % 100) < DCDO.get('cap-state-modal-rollout', 0)
-  end
-
   # Checks if a user is affected by a state policy but was created prior to the
   # policy going into effect.
   def self.user_predates_policy?(user)

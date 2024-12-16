@@ -99,7 +99,7 @@
           "name": "interest_learning_cs",
           "title": "How interested are you in learning computer science?",
           "rateMax": 7,
-          "minRateDescription": "Very uninterested",
+          "minRateDescription": "Not interested at all",
           "maxRateDescription": "Very interested"
         },
         {
@@ -107,7 +107,7 @@
           "name": "interest_teaching_cs",
           "title": "How interested are you in teaching computer science?",
           "rateMax": 7,
-          "minRateDescription": "Very uninterested",
+          "minRateDescription": "Not interested at all",
           "maxRateDescription": "Very interested"
         },
         {
@@ -115,7 +115,7 @@
           "name": "confidence_to_teache",
           "title": "How confident do you feel in your ability to teach computer science effectively right now?",
           "rateMax": 7,
-          "minRateDescription": "Very unconfident",
+          "minRateDescription": "Not confident at all",
           "maxRateDescription": "Very confident"
         },
         {
@@ -124,7 +124,7 @@
           "title": "How necessary is it for students to learn computer science?",
           "rateMax": 7,
           "minRateDescription": "Very unnecessary",
-          "maxRateDescription": "Very necessary"
+          "maxRateDescription": "Not necessary at all"
         }
       ]
     },

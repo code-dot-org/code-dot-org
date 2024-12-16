@@ -1223,10 +1223,10 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     }
 
     .generated-code-container {
-      margin: 25px 10px 25px -80px;
+      margin: 25px 10px 25px 0;
 
       html[dir="rtl"] & {
-        margin: 25px -80px 25px 10px;
+        margin: 25px 0 25px 10px;
       }
     }
   }

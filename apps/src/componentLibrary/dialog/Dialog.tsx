@@ -1,11 +1,8 @@
 import classnames from 'classnames';
-import React, {HTMLAttributes, ReactNode, useRef} from 'react';
+import React, {HTMLAttributes, ReactNode} from 'react';
 
 import {Button, ButtonProps} from '@cdo/apps/componentLibrary/button';
-import CloseButton from '@cdo/apps/componentLibrary/closeButton';
-import useBodyScrollLock from '@cdo/apps/componentLibrary/common/hooks/useBodyScrollLock';
-import useEscapeKeyHandler from '@cdo/apps/componentLibrary/common/hooks/useEscapeKeyHandler';
-import useFocusTrap from '@cdo/apps/componentLibrary/common/hooks/useFocusTrap';
+import CustomDialog from '@cdo/apps/componentLibrary/dialog/CustomDialog';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
@@ -71,72 +68,52 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
   icon,
   imageUrl,
   ...HTMLAttributes
-}) => {
-  const dialogRef = useRef<HTMLDivElement>(null);
-
-  useBodyScrollLock(true);
-  useFocusTrap(dialogRef);
-  useEscapeKeyHandler(onClose);
-
-  return (
-    <div role="presentation" className={moduleStyles.dialogOverlay}>
-      <div
-        role="dialog"
-        ref={dialogRef}
-        aria-modal
-        aria-label={title}
-        aria-describedby="dsco-dialog-description"
-        className={classnames(
-          moduleStyles.dialog,
-          moduleStyles[`dialog-${mode}`],
-          className
-        )}
-        {...HTMLAttributes}
-      >
-        <div className={moduleStyles.dialogTextSection}>
-          {imageUrl && <img src={imageUrl} alt="Dialog" />}
-          <Heading2>{title}</Heading2>
-          {description && (
-            <BodyTwoText
-              id="dsco-dialog-description"
-              className={moduleStyles.dialogContent}
-            >
-              {description}
-            </BodyTwoText>
-          )}
-          {customContent}
-        </div>
-        <div className={moduleStyles.dialogActionsSection}>
-          {secondaryButtonProps && (
-            <Button
-              type="secondary"
-              color={mode === 'light' ? 'black' : 'white'}
-              {...secondaryButtonProps}
-            />
-          )}
-          <Button
-            type="primary"
-            color={mode === 'light' ? 'purple' : 'white'}
-            {...primaryButtonProps}
-          />
-        </div>
-        {customBottomContent}
-
-        {icon && (
-          <FontAwesomeV6Icon {...icon} className={moduleStyles.dialogIcon} />
-        )}
-        {onClose && (
-          <CloseButton
-            aria-label={closeLabel}
-            onClick={onClose}
-            color={mode === 'light' ? 'dark' : 'light'}
-            size="l"
-            className={moduleStyles.dialogCloseButton}
-          />
-        )}
-      </div>
+}) => (
+  <CustomDialog
+    role="alertdialog"
+    className={classnames(
+      moduleStyles.dialog,
+      moduleStyles[`dialog-${mode}`],
+      className
+    )}
+    onClose={onClose}
+    closeLabel={closeLabel}
+    aria-label={title}
+    {...HTMLAttributes}
+  >
+    <div className={moduleStyles.dialogTextSection}>
+      {imageUrl && <img src={imageUrl} alt="Dialog" />}
+      <Heading2>{title}</Heading2>
+      {description && (
+        <BodyTwoText
+          id="dsco-dialog-description"
+          className={moduleStyles.dialogContent}
+        >
+          {description}
+        </BodyTwoText>
+      )}
+      {customContent}
     </div>
-  );
-};
+    <div className={moduleStyles.dialogActionsSection}>
+      {secondaryButtonProps && (
+        <Button
+          type="secondary"
+          color={mode === 'light' ? 'black' : 'white'}
+          {...secondaryButtonProps}
+        />
+      )}
+      <Button
+        type="primary"
+        color={mode === 'light' ? 'purple' : 'white'}
+        {...primaryButtonProps}
+      />
+    </div>
+    {customBottomContent}
+
+    {icon && (
+      <FontAwesomeV6Icon {...icon} className={moduleStyles.dialogIcon} />
+    )}
+  </CustomDialog>
+);
 
 export default Dialog;

@@ -33,6 +33,12 @@ if CDO.use_cookie_dcdo
   use Rack::CookieDCDO
 end
 
+if CDO.use_geolocation_override
+  # Apply the remote_addr middleware to allow pretending to be at a particular IP
+  require 'cdo/rack/geolocation_override'
+  use Rack::GeolocationOverride
+end
+
 require 'cdo/rack/global_edition'
 use Rack::GlobalEdition
 

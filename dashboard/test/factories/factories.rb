@@ -1864,8 +1864,6 @@ FactoryBot.define do
     association :teacher
   end
 
-  factory :donor_school
-
   factory :contact_rollups_raw do
     sequence(:email) {|n| "contact_#{n}@example.domain"}
     sequence(:sources) {|n| "dashboard.table_#{n}"}
@@ -2099,5 +2097,13 @@ FactoryBot.define do
     level_id {1}
     script_id {1}
     project_id {1}
+  end
+
+  factory :aichat_thread do
+    association :user
+    external_id {"1234"}
+    llm_version {"dummy_llm"}
+    unit_id {1}
+    level_id {1}
   end
 end

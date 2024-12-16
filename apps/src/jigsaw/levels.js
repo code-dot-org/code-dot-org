@@ -217,7 +217,7 @@ module.exports = {
       width: 200,
       height: 200,
     },
-    backgroundHSV: [209, 0.57, 0.6],
+    backgroundHSV: [209, 0.66, 0.59],
     ghost: {
       x: 400,
       y: 100,
@@ -246,7 +246,7 @@ module.exports = {
       width: 200,
       height: 200,
     },
-    backgroundHSV: [25, 0.57, 0.96],
+    backgroundHSV: [25, 0.87, 0.96],
     ghost: {
       x: 400,
       y: 100,
