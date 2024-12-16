@@ -56,7 +56,7 @@ const labeledGridLayouts = {
     gridLayoutRows: '1fr',
     gridLayoutColumns: '340px minmax(0, 1fr)',
     gridLayout: `
-  "info-panel workspace-and-console"
+  "info-panel workspace-and-output"
   `,
   },
   vertical: {

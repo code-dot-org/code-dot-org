@@ -23,7 +23,7 @@ import {ProjectSources} from '@cdo/apps/lab2/types';
 
 import Workspace from './Workspace';
 import Output from './Workspace/Output';
-import WorkspaceAndConsole from './Workspace/WorkspaceAndConsole';
+import WorkspaceAndOutput from './Workspace/WorkspaceAndOutput';
 
 import moduleStyles from './styles/cdoIDE.module.scss';
 
@@ -76,7 +76,7 @@ export const Codebridge = React.memo(
       'info-panel': config.Instructions || InfoPanel,
       workspace: Workspace,
       output: Output,
-      'workspace-and-console': WorkspaceAndConsole,
+      'workspace-and-output': WorkspaceAndOutput,
     };
 
     let gridLayout: string;

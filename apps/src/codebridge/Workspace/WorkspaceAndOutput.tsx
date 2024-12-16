@@ -22,7 +22,7 @@ const PANEL_TOP_COORDINATE = 80;
 // We may want to investigate more general solution for this, such as a panel manager component.
 // We also will want resizing to be accessible, and the HeightResizer component only works with mouse and touch
 // events.
-const WorkspaceAndConsole: React.FunctionComponent = () => {
+const WorkspaceAndOutput: React.FunctionComponent = () => {
   // Default console height is 200px.
   const [consoleHeight, setConsoleHeight] = React.useState(200);
   const [columnHeight, setColumnHeight] = React.useState(800);
@@ -74,7 +74,7 @@ const WorkspaceAndConsole: React.FunctionComponent = () => {
   );
 
   return (
-    <div className={moduleStyles.workspaceAndConsole}>
+    <div className={moduleStyles.workspaceAndOutput}>
       <div style={{height: editorHeight}}>
         <Workspace />
       </div>
@@ -91,4 +91,4 @@ const WorkspaceAndConsole: React.FunctionComponent = () => {
   );
 };
 
-export default WorkspaceAndConsole;
+export default WorkspaceAndOutput;
