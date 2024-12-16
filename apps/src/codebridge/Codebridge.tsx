@@ -72,7 +72,7 @@ export const Codebridge = React.memo(
     const ComponentMap = {
       'file-browser': FileBrowser,
       'side-bar': SideBar,
-      'preview-container': FilePreview,
+      'file-preview': FilePreview,
       'info-panel': config.Instructions || InfoPanel,
       workspace: Workspace,
       output: Output,

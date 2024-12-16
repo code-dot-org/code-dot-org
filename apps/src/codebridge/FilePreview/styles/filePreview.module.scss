@@ -1,8 +1,8 @@
 @import 'color.scss';
 
-.previewContainer {
+.filePreview {
   height: 100%;
-  grid-area: preview-container;
+  grid-area: file-preview;
   background-color: $darkest_gray;
   color: $white;
 }

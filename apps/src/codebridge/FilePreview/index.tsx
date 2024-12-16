@@ -8,7 +8,7 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
 import {HTMLPreview} from './HTMLPreview';
 
-import moduleStyles from './styles/previewContainer.module.scss';
+import moduleStyles from './styles/filePreview.module.scss';
 
 const fileTypeMap: {
   [key: string]: PreviewComponent;
@@ -73,7 +73,7 @@ export const FilePreview = () => {
       id="editor-workspace"
       headerContent={headerContent}
       rightHeaderContent={<SwapLayoutDropdown />}
-      className={moduleStyles.previewContainer}
+      className={moduleStyles.filePreview}
     >
       <select
         onChange={e => {
