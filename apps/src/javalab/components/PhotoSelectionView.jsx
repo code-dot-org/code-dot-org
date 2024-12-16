@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import color from '@cdo/apps/util/color';
 
 const photoInputId = 'photoInput';
@@ -19,24 +20,19 @@ export default function PhotoSelectionView({
   };
 
   return (
-    <div style={{...styles.container, ...style}}>
-      <label
-        htmlFor={photoInputId}
-        className="fa fa-camera"
-        style={styles.label}
-      >
-        <input
-          id={photoInputId}
-          className="uitest-hidden-uploader"
-          type="file"
-          accept="image/*"
-          capture="camera"
-          hidden={true}
-          onChange={onInputChange}
-        />
-      </label>
+    <label htmlFor={photoInputId} style={{...styles.container, ...style}}>
+      <input
+        id={photoInputId}
+        className="uitest-hidden-uploader"
+        type="file"
+        accept="image/*"
+        capture="camera"
+        hidden={true}
+        onChange={onInputChange}
+      />
+      <FontAwesomeV6Icon iconName="camera" style={styles.camera} />
       <div style={styles.prompt}>{promptText}</div>
-    </div>
+    </label>
   );
 }
 
@@ -62,10 +58,11 @@ const styles = {
     padding: 20,
     backgroundColor: color.black,
   },
-  label: {
+  camera: {
     fontSize: 48,
   },
   prompt: {
     textColor: color.white,
+    textAlign: 'center',
   },
 };
