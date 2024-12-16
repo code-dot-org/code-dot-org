@@ -27,7 +27,6 @@ export default function SchoolZipSearch({fieldNames, schoolZip, setSchoolZip}) {
           label={i18n.enterYourSchoolZip()}
           onChange={e => handleZipChange(e.target.value)}
           value={schoolZip}
-          placeholder="00000"
         />
         {schoolZip && !schoolZipIsValid && (
           <BodyThreeText className={style.errorMessage}>
