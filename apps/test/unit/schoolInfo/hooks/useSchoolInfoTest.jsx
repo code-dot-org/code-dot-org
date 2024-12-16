@@ -41,7 +41,7 @@ describe('useSchoolInfo', () => {
     country: US_COUNTRY_CODE,
     schoolId: '1',
     schoolName: 'Cool School',
-    schoolZip: '00000',
+    schoolZip: '99999',
   };
 
   beforeEach(() => {
@@ -278,7 +278,7 @@ describe('useSchoolInfo', () => {
 
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
           EVENTS.ZIP_CODE_ENTERED,
-          {zip: '90210'},
+          {country: 'US', zip: '90210'},
           PLATFORMS.BOTH
         );
       });
@@ -320,7 +320,7 @@ describe('useSchoolInfo', () => {
 
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
           EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED,
-          {},
+          {country: 'US'},
           PLATFORMS.BOTH
         );
 
@@ -330,7 +330,7 @@ describe('useSchoolInfo', () => {
 
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
           EVENTS.ADD_MANUALLY_CLICKED,
-          {},
+          {country: 'US'},
           PLATFORMS.BOTH
         );
 
@@ -340,7 +340,7 @@ describe('useSchoolInfo', () => {
 
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
           EVENTS.SCHOOL_SELECTED_FROM_LIST,
-          {'nces Id': '2'},
+          {'nces Id': '2', country: 'US'},
           PLATFORMS.BOTH
         );
       });

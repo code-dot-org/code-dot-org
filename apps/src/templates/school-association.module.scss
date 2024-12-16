@@ -52,6 +52,12 @@
   gap: 1.125rem;
 }
 
+.schoolAssociationWrapper.requiredLabel label {
+  span::after {
+    content: '*';
+  }
+}
+
 .disabledLabel {
   span {
     color: $light_gray_300 !important;
