@@ -202,19 +202,19 @@ class HomeController < ApplicationController
       @homepage_data[:showIncubatorBanner] = show_incubator_banner?
 
       if show_census_banner
-        teachers_school = Queries::SchoolInfo.current_school(current_user)
-        school_stats = SchoolStatsByYear.where(school_id: teachers_school[:school_id]).order(school_year: :desc).first
+        teachers_school = current_user.school_info_school
+        school_stats = SchoolStatsByYear.where(school_id: teachers_school.id).order(school_year: :desc).first
 
         @homepage_data[:censusQuestion] = school_stats.try(:has_high_school_grades?) ? "how_many_20_hours" : "how_many_10_hours"
         @homepage_data[:currentSchoolYear] = current_census_year
         @homepage_data[:existingSchoolInfo] = {
-          id: teachers_school[:school_id],
-          name: teachers_school[:school_name],
+          id: teachers_school.id,
+          name: teachers_school.name,
           country: 'US',
-          zip: teachers_school[:school_zip],
-          type: teachers_school[:school_type],
+          zip: teachers_school.zip,
+          type: teachers_school.school_type,
         }
-        @homepage_data[:ncesSchoolId] = teachers_school[:school_id]
+        @homepage_data[:ncesSchoolId] = teachers_school.id
         @homepage_data[:teacherName] = current_user.name
         @homepage_data[:teacherId] = current_user.id
         @homepage_data[:teacherEmail] = current_user.email

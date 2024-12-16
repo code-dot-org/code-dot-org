@@ -2,6 +2,7 @@ import React, {useEffect, useRef} from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import aichatI18n from '../locale';
 import {ChatEvent} from '../types';
 
 import ChatEventView from './ChatEventView';
@@ -61,7 +62,7 @@ const WaitingAnimation: React.FunctionComponent<{shouldDisplay: boolean}> = ({
     return (
       <img
         src="/blockly/media/aichat/typing-animation.gif"
-        alt={'Waiting for response'}
+        alt={aichatI18n.chatEventDescriptions_waitForResponse()}
         className={moduleStyles.waitingForResponse}
       />
     );
