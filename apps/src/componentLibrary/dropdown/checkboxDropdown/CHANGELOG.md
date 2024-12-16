@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file.
 
 ## [0.6.0](https://github.com/code-dot-org/code-dot-org/pull/62023)
 
+
 - added `readOnly` state
 - added `styleAsFormField` support
 - added `helperMessage`, `helperIcon`, `errorMessage` support
