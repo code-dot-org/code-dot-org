@@ -75,7 +75,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
 
     analyticsReporter.sendEvent(
       EVENTS.FINISH_ACCOUNT_PAGE_LOADED,
-      {'user type': 'teacher'},
+      {'user type': 'teacher', country: countryCode},
       PLATFORMS.BOTH
     );
 
@@ -102,7 +102,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
     if (userReturnToHref) {
       setUserReturnTo(userReturnToHref);
     }
-  }, []);
+  }, [countryCode, usIp]);
 
   // GDPR is valid if
   // 1. The fetch call has completed AND
@@ -177,6 +177,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
         'has school': hasSchool,
         'has marketing value selected': true,
         'has display name': !showNameError,
+        country: countryCode,
       },
       PLATFORMS.BOTH
     );
