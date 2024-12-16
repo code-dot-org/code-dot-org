@@ -31,17 +31,16 @@ describe('Design System - Checkbox Dropdown Component', () => {
     render(
       <CheckboxDropdown
         name="test1-dropdown"
+        showControls
         allOptions={allOptions}
         checkedOptions={selectedValues}
         onChange={e =>
           onCheckboxDropdownChange(e.target.value, e.target.checked)
         }
-        selectAndClearAllConfig={{
-          onSelectAll: handleSelectAll,
-          onClearAll: handleClearAll,
-          selectAllText: 'Select all',
-          clearAllText: 'Clear all',
-        }}
+        onSelectAll={handleSelectAll}
+        onClearAll={handleClearAll}
+        selectAllText="Select all"
+        clearAllText="Clear all"
         labelText="Dropdown label"
       />
     );
@@ -67,15 +66,14 @@ describe('Design System - Checkbox Dropdown Component', () => {
     const DropdownToRender = () => (
       <CheckboxDropdown
         name="test2-dropdown"
+        showControls
         allOptions={allOptions}
         checkedOptions={selectedValues}
         onChange={onChange}
-        selectAndClearAllConfig={{
-          onSelectAll: handleSelectAll,
-          onClearAll: handleClearAll,
-          selectAllText: 'Select all',
-          clearAllText: 'Clear all',
-        }}
+        onSelectAll={handleSelectAll}
+        onClearAll={handleClearAll}
+        selectAllText="Select all"
+        clearAllText="Clear all"
         labelText="Dropdown2 label"
       />
     );
@@ -119,16 +117,15 @@ describe('Design System - Checkbox Dropdown Component', () => {
     const DropdownToRender = () => (
       <CheckboxDropdown
         name="test2-dropdown"
+        showControls
         disabled={true}
         allOptions={allOptions}
         checkedOptions={selectedValues}
         onChange={onChange}
-        selectAndClearAllConfig={{
-          onSelectAll: handleSelectAll,
-          onClearAll: handleClearAll,
-          selectAllText: 'Select all',
-          clearAllText: 'Clear all',
-        }}
+        onSelectAll={handleSelectAll}
+        onClearAll={handleClearAll}
+        selectAllText="Select all"
+        clearAllText="Clear all"
         labelText="Dropdown2 label"
       />
     );
@@ -172,16 +169,15 @@ describe('Design System - Checkbox Dropdown Component', () => {
     const DropdownToRender = () => (
       <CheckboxDropdown
         name="test2-dropdown"
+        showControls
         disabled={true}
         allOptions={allOptions}
         checkedOptions={selectedValues}
         onChange={onChange}
-        selectAndClearAllConfig={{
-          onSelectAll: handleSelectAll,
-          onClearAll: handleClearAll,
-          selectAllText: 'Select all',
-          clearAllText: 'Clear all',
-        }}
+        onSelectAll={handleSelectAll}
+        onClearAll={handleClearAll}
+        selectAllText="Select all"
+        clearAllText="Clear all"
         labelText="Dropdown2 label"
       />
     );
@@ -217,5 +213,35 @@ describe('Design System - Checkbox Dropdown Component', () => {
     expect(option1.checked).toBe(false);
     expect(option2.checked).toBe(false);
     expect(option3.checked).toBe(false);
+  });
+
+  it('Checkbox Dropdown - renders with no Select all and Clear all controls', async () => {
+    const DropdownToRender = () => (
+      <CheckboxDropdown
+        name="test2-dropdown"
+        showControls={false}
+        disabled={true}
+        allOptions={allOptions}
+        checkedOptions={selectedValues}
+        onChange={() => {}}
+        labelText="Dropdown2 label"
+      />
+    );
+
+    render(<DropdownToRender />);
+
+    const label = screen.getByText('Dropdown2 label');
+    const option1 = screen.getByDisplayValue('option-1');
+    const option2 = screen.getByDisplayValue('option-2');
+    const option3 = screen.getByDisplayValue('option-3');
+    const selectAll = screen.queryByText('Select all');
+    const clearAll = screen.queryByText('Clear all');
+
+    expect(label).toBeDefined();
+    expect(option1).toBeDefined();
+    expect(option2).toBeDefined();
+    expect(option3).toBeDefined();
+    expect(selectAll).toBeNull();
+    expect(clearAll).toBeNull();
   });
 });
