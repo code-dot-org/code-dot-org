@@ -28,8 +28,9 @@ const allOptions: IconDropdownOption[] = [
 
 describe('Design System - Icon Dropdown Component', () => {
   const TestIconDropdown: React.FC<Partial<IconDropdownProps>> = props => {
-    const [selectedOption, setSelectedOption] =
-      useState<IconDropdownOption | null>(props.selectedOption || null);
+    const [selectedOption, setSelectedOption] = useState<IconDropdownOption>(
+      props.selectedOption || ({} as IconDropdownOption)
+    );
 
     const handleChange = (option: IconDropdownOption) => {
       setSelectedOption(option);
@@ -40,7 +41,7 @@ describe('Design System - Icon Dropdown Component', () => {
       <IconDropdown
         name="test-dropdown"
         options={allOptions}
-        selectedOption={selectedOption!}
+        selectedOption={selectedOption}
         onChange={handleChange}
         {...props}
         labelText={props.labelText || 'Icon Dropdown Component'}
