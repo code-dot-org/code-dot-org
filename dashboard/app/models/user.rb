@@ -117,6 +117,7 @@ class User < ApplicationRecord
   #     brute-force password attempts
   #   roster_synced: Indicates if the user was created during a roster sync operation from an LMS. Implies that the user
   #     is a school-managed account.
+  #   educator_role: Indicates the role of the educator, e.g. 'teacher', 'school_admin', 'district_admin', etc.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
