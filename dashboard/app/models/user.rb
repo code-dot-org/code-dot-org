@@ -2433,15 +2433,6 @@ class User < ApplicationRecord
     teacher? && users_school && (next_census_display.nil? || Time.zone.today >= next_census_display.to_date)
   end
 
-  # Returns the name of the donor for the donor teacher banner and donor footer, or nil if none.
-  # Donors are associated with certain schools, captured in DonorSchool and populated from a Pegasus gsheet
-  def school_donor_name
-    school_id = school_info_school&.id
-    donor_name = DonorSchool.find_by(nces_id: school_id)&.name if school_id
-
-    donor_name
-  end
-
   # Removes PII and other information from the user and marks the user as having been purged.
   # WARNING: This (permanently) destroys data and cannot be undone.
   # WARNING: This does not purge the user, only marks them as such.

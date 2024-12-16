@@ -1,4 +1,4 @@
-@import "color.scss";
+@import '@cdo/apps/componentLibrary/common/styles/primitiveColors.css';
 @import "font.scss";
 @import "@cdo/apps/componentLibrary/common/styles/mixins";
 @import "@cdo/apps/componentLibrary/typography/typography.module";
@@ -14,9 +14,9 @@
 
     .chip {
       display: inline-block;
-      background-color: $light_white;
-      border: 1px solid $light_black;
-      color: $light_black;
+      background-color: var(--neutral-base-white);
+      border: 1px solid var(--neutral-base-black);
+      color: var(--neutral-base-black);
       min-width: 30px;
       text-align: center;
       border-radius: 100px;
@@ -37,58 +37,58 @@
 
       // Checked styles
       &:has(input[type="checkbox"]:checked) {
-        border: 1px solid $light_primary_500;
-        background-color: $light_primary_500;
-        color: $light_white;
+        border: 1px solid var(--brand-teal-50);
+        background-color: var(--brand-teal-50);
+        color: var(--neutral-base-white);
       }
 
       // Hover styles
       &:hover {
-        background-color: $light_gray_100;
+        background-color: var(--neutral-gray-10);
 
         &:has(input[type="checkbox"]:checked) {
-          background-color: $light_primary_700;
+          background-color: var(--brand-teal-70);
         }
       }
 
       // Pressed styles
       &:active {
-        background-color: $light_primary_100;
-        outline: $light_primary_500 solid 2px;
+        background-color: var(--neutral-gray-10);
+        outline: var(--brand-teal-50) solid 2px;
         outline-offset: -2px;
 
         &:has(input[type="checkbox"]:checked) {
-          background-color: $light_primary_700;
-          outline: $light_primary_500 solid 2px;
+          background-color: var(--brand-teal-70);
+          outline: var(--brand-teal-50) solid 2px;
           outline-offset: -2px;
         }
       }
 
       // Focus styles
       &:has(input[type="checkbox"]:focus-visible) {
-        outline: 2px solid $light_primary_500;
+        outline: 2px solid var(--brand-teal-50);
         outline-offset: 2px;
       }
 
       //Disabled styles
       &:has(input[type="checkbox"]:disabled) {
-        color: $light_gray_200;
-        border-color: $light_gray_200;
+        color: var(--neutral-gray-20);
+        border-color: var(--neutral-gray-20);
 
         &:hover {
           cursor: not-allowed;
-          background-color: $light_white;
+          background-color: var(--neutral-base-white);
         }
 
         &:active {
-          background-color: $light_white;
+          background-color: var(--neutral-base-white);
           outline: none;
         }
       }
 
       &:has(input[type="checkbox"]:disabled:checked) {
-        background-color: $light_gray_200;
-        color: $light_white;
+        background-color: var(--neutral-gray-20);;
+        color: var(--neutral-base-white);
       }
     }
   }
@@ -102,7 +102,7 @@
 .chips-black {
   fieldset {
     .chip {
-      border-color: $light_black;
+      border-color: var(--neutral-base-black);
     }
   }
 }
@@ -110,7 +110,7 @@
 .chips-gray {
   fieldset {
     .chip {
-      border-color: $light_gray_400;
+      border-color: var(--neutral-gray-40);
     }
   }
 }

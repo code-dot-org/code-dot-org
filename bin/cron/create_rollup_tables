@@ -46,6 +46,8 @@ def get_contained_question(contained_level)
 end
 
 def main
+  answer_level_types = ['Multi', 'Match', 'EvaluationMulti']
+
   # Build the data for the tables.
   contained_levels = []
   contained_level_answers = []
@@ -54,7 +56,6 @@ def main
   LevelGroup.find_each do |level|
     level.pages.each_with_index do |page, page_index|
       page.levels.each_with_index do |contained_level, position_index|
-        next unless contained_level.type == 'Multi'
         next if contained_levels.
           any? {|existing_contained_level| existing_contained_level[:level_id] == contained_level.id}
 
@@ -68,6 +69,7 @@ def main
           contained_level_text: sanitize_string_for_db(contained_question)
         }
 
+        next unless answer_level_types.include? contained_level.type
         answers = contained_level.properties['answers']
         answers.each_with_index do |answer, answer_number|
           contained_level_answers << {
@@ -82,17 +84,7 @@ def main
   end
 
   Level.find_each do |level|
-    begin
-    # The RecordNotFound exception happens when a Level does not belong to any ScriptLevel.
-    # The NoMethodError exception happens when a ScriptLevel does not have a Script.
-    # TODO(asher): Fix the corrupt data on staging, eliminating the need for this rescue clause.
-    rescue ActiveRecord::RecordNotFound, NoMethodError
-      next
-    end
-
     level.contained_levels.each_with_index do |contained_level, index|
-      next unless contained_level.type == 'Multi'
-
       contained_question = get_contained_question(contained_level)
       contained_levels << {
         level_id: level.id,
@@ -103,6 +95,7 @@ def main
         contained_level_text: sanitize_string_for_db(contained_question)
       }
 
+      next unless answer_level_types.include? contained_level.type
       answers = contained_level.properties['answers']
       answers.each_with_index do |answer, answer_number|
         contained_level_answers << {
@@ -113,6 +106,12 @@ def main
         }
       end
     end
+  rescue ActiveRecord::RecordNotFound => exception
+    Honeybadger.notify(
+      exception,
+      error_message: "Error reading level '#{level.name}' for rollup tables."
+    )
+    next
   end
 
   contained_levels.map {|row| row[:contained_level_id]}.each do |contained_level_id|

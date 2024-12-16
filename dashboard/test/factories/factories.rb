@@ -1864,8 +1864,6 @@ FactoryBot.define do
     association :teacher
   end
 
-  factory :donor_school
-
   factory :contact_rollups_raw do
     sequence(:email) {|n| "contact_#{n}@example.domain"}
     sequence(:sources) {|n| "dashboard.table_#{n}"}
