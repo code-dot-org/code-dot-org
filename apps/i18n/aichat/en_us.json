@@ -8,7 +8,7 @@
   "aiCustomizations_modelCardInfo": "Model card information",
   "aiCustomizations_retrieval": "Retrieval",
   "aiCustomizations_selectedModel": "Selected model",
-  "aiCustomizations_systemPrompt": "System Prompt",
+  "aiCustomizations_systemPrompt": "System prompt",
   "aiCustomizations_temperature": "Temperature",
   "chatComponentsHeader": "AI Chat Components",
   "chatEventDescriptions_copyChat": "The user copied the chat history.",
