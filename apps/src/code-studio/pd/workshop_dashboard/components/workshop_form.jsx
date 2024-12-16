@@ -61,6 +61,7 @@ import CourseSelect from './CourseSelect';
 import FacilitatorListFormPart from './facilitator_list_form_part';
 import ModuleSelect from './ModuleSelect';
 import OrganizerFormPart from './organizer_form_part';
+import ParticipantGroupTypeSelect from './ParticipantGroupTypeSelect';
 import SessionListFormPart from './session_list_form_part';
 import SubjectSelect from './SubjectSelect';
 
@@ -1141,6 +1142,15 @@ export class WorkshopForm extends React.Component {
                   />
                   <HelpBlock>{validation.help.name}</HelpBlock>
                 </FormGroup>
+              </Col>
+              <Col sm={4}>
+                <ParticipantGroupTypeSelect
+                  participantGroupType={this.state.participant_group_type}
+                  validation={validation}
+                  readOnly={this.props.readOnly}
+                  inputStyle={this.getInputStyle()}
+                  onChange={this.handleFieldChange}
+                />
               </Col>
             </Row>
           )}

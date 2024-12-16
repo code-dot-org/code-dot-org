@@ -290,5 +290,15 @@ module Pd
       'CSP',
       'CSA'
     ]
+
+    PARTICIPANT_GROUP_TYPES = {
+      DISTRICT: 'District',
+      MULTI_DISTRICT: 'Multi-district',
+      REGIONAL: 'Regional',
+      NATIONAL: 'National',
+      FACILITATOR: 'Facilitator',
+      TRAIN_TRAINER: 'Train the trainer',
+      OTHER: 'Other'
+    }
   end
 end
