@@ -1,4 +1,4 @@
-import React, {AriaAttributes, memo, MouseEvent, useCallback} from 'react';
+import React, {AriaAttributes, memo, MouseEvent} from 'react';
 
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox';
@@ -89,33 +89,6 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   styleAsFormField = false,
   ...rest
 }) => {
-  const getControls = useCallback(() => {
-    if (rest.showControls) {
-      const {selectAllText, onSelectAll, onClearAll, clearAllText} = rest;
-
-      return (
-        <div className={moduleStyles.bottomButtonsContainer}>
-          <Button
-            type="tertiary"
-            color={buttonColors.purple}
-            text={selectAllText}
-            onClick={onSelectAll}
-            size={size}
-          />
-          <Button
-            type="tertiary"
-            color={buttonColors.purple}
-            text={clearAllText}
-            onClick={onClearAll}
-            size={size}
-          />
-        </div>
-      );
-    } else {
-      return undefined;
-    }
-  }, [rest, size]);
-
   return (
     <CustomDropdown
       name={name}
@@ -152,7 +125,24 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
             </li>
           ))}
         </ul>
-        {getControls()}
+        {rest.showControls && (
+          <div className={moduleStyles.bottomButtonsContainer}>
+            <Button
+              type="tertiary"
+              color={buttonColors.purple}
+              text={rest.selectAllText}
+              onClick={rest.onSelectAll}
+              size={size}
+            />
+            <Button
+              type="tertiary"
+              color={buttonColors.purple}
+              text={rest.clearAllText}
+              onClick={rest.onClearAll}
+              size={size}
+            />
+          </div>
+        )}
       </div>
     </CustomDropdown>
   );
