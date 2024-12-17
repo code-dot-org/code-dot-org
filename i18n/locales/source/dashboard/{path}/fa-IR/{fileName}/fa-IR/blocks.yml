@@ -1,0 +1,3112 @@
+---
+en:
+  data:
+    blocks:
+      AmysBlocks_addTarget:
+        text: "[TARGET][0] [OPT][1] [SPRITE][2] "
+        options:
+          OPT:
+            '"follows"': را دنبال می کند
+            '"avoids"': اجتناب می کند
+      AmysBlocks_goldilocks:
+        text: |-
+           if [CONDITION][0][SPRITE][1]
+          [STATEMENT][2]
+        options:
+          CONDITION:
+            '"too much"': خیلی زیاد
+            '"just right"': درست است
+            '"too little"': خیلی کم
+      AmysBlocks_goldilocksElse:
+        text: |-
+           if too much[SPRITE][0]
+          [STATEMENT][1]اگر درست باشد
+          [STATEMENT3][2]اگر خیلی کم باشد
+          [STATEMENT2][3]
+      AmysBlocks_makeNumSprites:
+        text: "ساخت [NUM][0] [ANIMATION_NAME][1] جن جدید [LOCATION][2]"
+      AmysBlocks_playerBehaviors:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): حرکت NSEW با کلیدهای جهت دار
+      AmysBlocks_setPromptWithChoices:
+        text: "درخواست کاربر [QUESTION][0] برای متغیر [VAR][1] با گزینه‌های [A][2][B][3][C][4]"
+      AmysBlocks_spriteSayVar:
+        text: "[SPRITE][0]say[TEXT1][1]"
+      BadGuys_makeNewBadGuysSprite:
+        text: "ساختن جدید [ANIMATION_NAME][0] در [LOCATION][1]"
+      BadGuys_setSizeAll_dropdown:
+        text: "همه اندازه اسپرایت ها را روی [SIZE][0] تنظیم کنید"
+        options:
+          SIZE:
+            '0.50': فوق العاده کوچک
+            '0.75': کوچک
+            '1.00': متوسط
+            '2.00': بزرگ
+            '3.00': فوق العاده بزرگ
+      BadGuys_setSize_dropdown:
+        text: "اندازه [SPRITE][0] را روی [SIZE][1] تنظیم کنید"
+        options:
+          SIZE:
+            '0.50': فوق العاده کوچک
+            '0.75': کوچک
+            '1.00': متوسط
+            '2.00': بزرگ
+            '3.00': فوق العاده بزرگ
+      Dancelab_ai:
+        text: "[IMAGE][0]generate [VALUE][1] effect"
+      Dancelab_alternateMoves:
+        text: "[GROUP][0] alternate every [N][1] measures \nبین [MOVE1][2] و [MOVE2][3]"
+        options:
+          GROUP:
+            sprites: همه
+            '"ALIEN"': بیگانگان
+            '"BEAR"': خرس ها
+            '"CAT"': گربه ها
+            '"DOG"': سگ ها
+            '"DUCK"': اردک ها
+            '"FROG"': قورباغه ها
+            '"MOOSE"': گوزن
+            '"PINEAPPLE"': آناناس
+            '"ROBOT"': روبات ها
+            '"SHARK"': کوسه ها
+            '"SLOTH"': تنبل ها
+            '"UNICORN"': تک شاخ ها
+          MOVE1:
+            MOVES.Roll: رول بدن
+            MOVES.ClapHigh: دست زدن بالا
+            MOVES.Dab: داب
+            MOVES.DoubleJam: دو برابر کردن
+            MOVES.Drop: رها کردن
+            MOVES.Floss: نخ دندان
+            MOVES.Fresh: تازه
+            MOVES.Clown: گانگنام
+            MOVES.Kick: ستاره
+            MOVES.ThisOrThat: این یا آن
+            MOVES.Thriller: زامبی
+            MOVES.Rest: هیچ کدام
+          MOVE2:
+            MOVES.Roll: رول بدن
+            MOVES.ClapHigh: دست زدن بالا
+            MOVES.Dab: داب
+            MOVES.DoubleJam: دو برابر کردن
+            MOVES.Drop: رها کردن
+            MOVES.Floss: نخ دندان
+            MOVES.Fresh: تازه
+            MOVES.Clown: گانگنام
+            MOVES.Kick: ستاره
+            MOVES.ThisOrThat: این یا آن
+            MOVES.Thriller: زامبی
+            MOVES.Rest: هیچ کدام
+      Dancelab_atTimestamp:
+        text: "after [TIMESTAMP][0] [UNIT][1]"
+        options:
+          UNIT:
+            '"measures"': اقدامات
+            '"seconds"': ثانیه
+      Dancelab_atTimestampNotAfter:
+        text: "at [TIMESTAMP][0] [UNIT][1]"
+        options:
+          UNIT:
+            '"measures"': اقدامات
+            '"seconds"': ثانیه
+      Dancelab_changeColorBy:
+        text: "change [COLOR][0] [METHOD][1] by [AMOUNT][2]"
+        options:
+          METHOD:
+            '"hue"': رنگ
+            '"saturation"': اشباع
+            '"brightness"': روشنایی
+      Dancelab_changeMoveEachLR:
+        text: "[GROUP][0] do [MOVE][1] [DIR][2] forever"
+        options:
+          GROUP:
+            sprites: همه
+            '"ALIEN"': بیگانگان
+            '"BEAR"': خرس ها
+            '"CAT"': گربه ها
+            '"DOG"': سگ ها
+            '"DUCK"': اردک ها
+            '"FROG"': قورباغه ها
+            '"MOOSE"': گوزن
+            '"PINEAPPLE"': آناناس
+            '"ROBOT"': روبات ها
+            '"SHARK"': کوسه ها
+            '"SLOTH"': تنبل ها
+            '"UNICORN"': تک شاخ ها
+          MOVE:
+            '"next"': "(بعدی)"
+            '"prev"': "(قبلی)"
+            '"rand"': "(تصادفی)"
+            MOVES.Roll: رول بدن
+            MOVES.ClapHigh: دست زدن بالا
+            MOVES.Dab: داب
+            MOVES.DoubleJam: دو برابر کردن
+            MOVES.Drop: رها کردن
+            MOVES.Floss: نخ دندان
+            MOVES.Fresh: تازه
+            MOVES.Clown: گانگنام
+            MOVES.Kick: ستاره
+            MOVES.ThisOrThat: این یا آن
+            MOVES.Thriller: زامبی
+            MOVES.Rest: هیچ کدام
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "[GROUP][0] do [MOVE][1] [DIR][2] forever"
+        options:
+          GROUP:
+            '"CAT"': گربه ها
+            '"SLOTH"': تنبل ها
+          MOVE:
+            MOVES.Roll: رول بدن
+            MOVES.ClapHigh: دست زدن بالا
+            MOVES.Dab: داب
+            MOVES.DoubleJam: دو برابر کردن
+            MOVES.Drop: رها کردن
+            MOVES.Floss: نخ دندان
+            MOVES.Fresh: تازه
+            MOVES.Clown: گانگنام
+            MOVES.Kick: ستاره
+            MOVES.ThisOrThat: این یا آن
+            MOVES.Thriller: زامبی
+            MOVES.Rest: هیچ کدام
+            '"next"': "(بعدی)"
+            '"prev"': "(قبلی)"
+            '"rand"': "(تصادفی)"
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        text: "[SPRITE][0] do [MOVE][1] [DIR][2] forever"
+        options:
+          MOVE:
+            '"next"': "(بعدی)"
+            '"prev"': "(قبلی)"
+            '"rand"': "(تصادفی)"
+            MOVES.Roll: رول بدن
+            MOVES.ClapHigh: دست زدن بالا
+            MOVES.Dab: داب
+            MOVES.DoubleJam: دو برابر کردن
+            MOVES.Drop: رها کردن
+            MOVES.Floss: نخ دندان
+            MOVES.Fresh: تازه
+            MOVES.Clown: گانگنام
+            MOVES.Kick: ستاره
+            MOVES.ThisOrThat: این یا آن
+            MOVES.Thriller: زامبی
+            MOVES.Rest: هیچ کدام
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changePropBy:
+        text: "change [SPRITE][0] [PROPERTY][1] by [VAL][2]"
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"width"': عرض
+            '"height"': ارتفاع
+            '"rotation"': چرخش
+            '"x"': موقعیت افقی
+            '"y"': موقعیت عمودی
+      Dancelab_changePropEachBy:
+        text: "change [GROUP][0] [PROPERTY][1] by [VAL][2]"
+        options:
+          GROUP:
+            sprites: همه
+            '"ALIEN"': بیگانگان
+            '"BEAR"': خرس ها
+            '"CAT"': گربه ها
+            '"DOG"': سگ ها
+            '"DUCK"': اردک ها
+            '"FROG"': قورباغه ها
+            '"MOOSE"': گوزن
+            '"PINEAPPLE"': آناناس
+            '"ROBOT"': روبات ها
+            '"SHARK"': کوسه ها
+            '"SLOTH"': تنبل ها
+            '"UNICORN"': تک شاخ ها
+          PROPERTY:
+            '"scale"': اندازه
+            '"width"': عرض
+            '"height"': ارتفاع
+            '"rotation"': چرخش
+            '"x"': موقعیت افقی
+            '"y"': موقعیت عمودی
+      Dancelab_doMoveEachLR:
+        text: "[GROUP][0] do [MOVE][1] [DIR][2] once"
+        options:
+          GROUP:
+            sprites: همه
+            '"ALIEN"': بیگانگان
+            '"BEAR"': خرس ها
+            '"CAT"': گربه ها
+            '"DOG"': سگ ها
+            '"DUCK"': اردک ها
+            '"FROG"': قورباغه ها
+            '"MOOSE"': گوزن
+            '"PINEAPPLE"': آناناس
+            '"ROBOT"': روبات ها
+            '"SHARK"': کوسه ها
+            '"SLOTH"': تنبل ها
+            '"UNICORN"': تک شاخ ها
+          MOVE:
+            '"rand"': "(تصادفی)"
+            MOVES.XBend: خم شدن
+            MOVES.Roll: رول بدن
+            MOVES.XClapSide: دست زدن
+            MOVES.ClapHigh: دست زدن بالا
+            MOVES.Dab: داب
+            MOVES.XFever: دیسکو
+            MOVES.DoubleJam: دو برابر کردن
+            MOVES.Drop: رها کردن
+            MOVES.Floss: نخ دندان
+            MOVES.Fresh: تازه
+            MOVES.Clown: گانگنام
+            MOVES.XHeadHips: سر + باسن
+            MOVES.XHop: هاپ
+            MOVES.XHighKick: لگد زدن
+            MOVES.XKnee: زانو
+            MOVES.XKneel: زانو بزن
+            MOVES.XOle: اوله
+            MOVES.XArmsSide: رسیدن
+            MOVES.XSlide: اسلاید
+            MOVES.Kick: ستاره
+            MOVES.XArmsUp: کشش
+            MOVES.ThisOrThat: این یا آن
+            MOVES.Thriller: زامبی
+            MOVES.Rest: هیچ کدام
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        text: "[SPRITE][0] do [MOVE][1] [DIR][2] once"
+        options:
+          MOVE:
+            '"rand"': "(تصادفی)"
+            MOVES.XBend: خم شدن
+            MOVES.Roll: رول بدن
+            MOVES.XClapSide: دست زدن
+            MOVES.ClapHigh: دست زدن بالا
+            MOVES.Dab: داب
+            MOVES.XFever: دیسکو
+            MOVES.DoubleJam: دو برابر کردن
+            MOVES.Drop: رها کردن
+            MOVES.Floss: نخ دندان
+            MOVES.Fresh: تازه
+            MOVES.Clown: گانگنام
+            MOVES.XHeadHips: سر + باسن
+            MOVES.XHop: هاپ
+            MOVES.XHighKick: لگد زدن
+            MOVES.XKnee: زانو
+            MOVES.XKneel: زانو بزن
+            MOVES.XOle: اوله
+            MOVES.XArmsSide: رسیدن
+            MOVES.XSlide: اسلاید
+            MOVES.Kick: ستاره
+            MOVES.XArmsUp: کشش
+            MOVES.ThisOrThat: این یا آن
+            MOVES.Thriller: زامبی
+            MOVES.Rest: هیچ کدام
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_eval:
+        text: "eval [CODE][0]"
+      Dancelab_everySeconds:
+        text: 'repeat every [N][0] [UNIT][1] '
+        options:
+          UNIT:
+            '"measures"': اقدامات
+            '"seconds"': ثانیه
+      Dancelab_everyVerseChorus:
+        text: 'every [UNIT][0] '
+        options:
+          UNIT:
+            '"verse"': آیه
+            '"chorus"': گروه کر
+      Dancelab_getEnergy:
+        text: "get [RANGE][0]"
+        options:
+          RANGE:
+            '"low"': صدای بم
+            '"mid"': اواسط
+            '"high"': سه برابر شدن
+      Dancelab_getProp:
+        text: "[SPRITE][0] [PROPERTY][1]"
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"width"': عرض
+            '"height"': ارتفاع
+            '"rotation"': چرخش
+            '"x"': موقعیت افقی
+            '"y"': موقعیت عمودی
+            '"tint"': رنگ
+      Dancelab_getTime:
+        text: "زمان فعلی در [UNIT][0]"
+        options:
+          UNIT:
+            '"measures"': اقدامات
+            '"seconds"': ثانیه
+      Dancelab_ifDanceIs:
+        text: |-
+          if [SPRITE][0] is doing [DANCE][1]
+           [DO1][2] [DO2][3]
+        options:
+          DANCE:
+            MOVES.ClapHigh: دست زدن بالا
+            MOVES.Clown: گانگنام
+            MOVES.Dab: داب
+            MOVES.DoubleJam: دو برابر کردن
+            MOVES.Drop: رها کردن
+            MOVES.Floss: نخ دندان
+            MOVES.Fresh: تازه
+            MOVES.Roll: رول بدن
+            MOVES.Kick: ستاره
+            MOVES.ThisOrThat: این یا آن
+            MOVES.Thriller: زامبی
+            MOVES.Rest: هیچ کدام
+      Dancelab_ifTime:
+        text: |-
+          if [UNIT][0] is [OP][1] [N][2]
+           [DO1][3] [DO2][4]
+        options:
+          UNIT:
+            '"measures"': اقدامات
+            '"seconds"': ثانیه
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
+      Dancelab_jumpTo:
+        text: "[SPRITE][0] پرش به [LOCATION][1]"
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": بالا
+            "{x: 200, y: 300}": پایین
+            "{x: 100, y: 200}": سمت چپ
+            "{x: 300, y: 200}": درست است
+            "{x: 200, y: 200}": مرکز
+            "{x: 100, y: 100}": بالا سمت چپ
+            "{x: 300, y: 100}": بالا سمت راست
+            "{x: 100, y: 300}": پایین سمت چپ
+            "{x: 300, y: 300}": پایین سمت راست
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": تصادفی
+      Dancelab_jumpToEach:
+        text: "پرش [GROUP][0] به [LOCATION][1]"
+        options:
+          GROUP:
+            sprites: همه
+            '"ALIEN"': بیگانگان
+            '"BEAR"': خرس ها
+            '"CAT"': گربه ها
+            '"DOG"': سگ ها
+            '"DUCK"': اردک ها
+            '"FROG"': قورباغه ها
+            '"MOOSE"': گوزن
+            '"PINEAPPLE"': آناناس
+            '"ROBOT"': روبات ها
+            '"SHARK"': کوسه ها
+            '"SLOTH"': تنبل ها
+            '"UNICORN"': تک شاخ ها
+          LOCATION:
+            "{x: 200, y: 100}": بالا
+            "{x: 200, y: 300}": پایین
+            "{x: 100, y: 200}": سمت چپ
+            "{x: 300, y: 200}": درست است
+            "{x: 200, y: 200}": مرکز
+            "{x: 100, y: 100}": بالا سمت چپ
+            "{x: 300, y: 100}": بالا سمت راست
+            "{x: 100, y: 300}": پایین سمت چپ
+            "{x: 300, y: 300}": پایین سمت راست
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": تصادفی
+      Dancelab_layoutSprites:
+        text: "طرح بندی [GROUP][0] به عنوان یک [FORMAT][1]"
+        options:
+          GROUP:
+            sprites: همه
+            '"ALIEN"': بیگانگان
+            '"BEAR"': خرس ها
+            '"CAT"': گربه ها
+            '"DOG"': سگ ها
+            '"DUCK"': اردک ها
+            '"FROG"': قورباغه ها
+            '"MOOSE"': گوزن
+            '"PINEAPPLE"': آناناس
+            '"ROBOT"': روبات ها
+            '"SHARK"': کوسه ها
+            '"SLOTH"': تنبل ها
+            '"UNICORN"': تک شاخ ها
+          FORMAT:
+            '"border"': مرز
+            '"inner"': داخل مربع
+            '"diamond"': الماس
+            '"circle"': دایره
+            '"grid"': شبکه
+            '"top"': ردیف بالا
+            '"row"': ردیف
+            '"bottom"': ردیف پایین
+            '"left"': ستون سمت چپ
+            '"column"': ستون
+            '"right"': ستون سمت راست
+            '"x"': متقاطع
+            '"plus"': به علاوه
+            '"spiral"': مارپیچ
+            '"infinity"': خط بی نهایت
+            '"random"': تصادفی
+      Dancelab_makeAnonymousDanceSprite:
+        text: "یک [COSTUME][0] جدید در [LOCATION][1] بسازید"
+        options:
+          COSTUME:
+            '"ALIEN"': بیگانه
+            '"BEAR"': خرس
+            '"CAT"': گربه
+            '"DOG"': سگ
+            '"DUCK"': اردک
+            '"FROG"': قورباغه
+            '"MOOSE"': گوزن
+            '"PINEAPPLE"': آناناس
+            '"ROBOT"': ربات
+            '"SHARK"': کوسه
+            '"SLOTH"': تنبلی
+            '"UNICORN"': اسب شاخدار
+          LOCATION:
+            "{x: 200, y: 100}": بالا
+            "{x: 200, y: 300}": پایین
+            "{x: 100, y: 200}": سمت چپ
+            "{x: 300, y: 200}": درست است
+            "{x: 200, y: 200}": مرکز
+            "{x: 100, y: 100}": بالا سمت چپ
+            "{x: 300, y: 100}": بالا سمت راست
+            "{x: 100, y: 300}": پایین سمت چپ
+            "{x: 300, y: 300}": پایین سمت راست
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": تصادفی
+      Dancelab_makeNewDanceSprite:
+        text: |-
+          make a new [COSTUME][0]
+           به نام [NAME][1] در [LOCATION][2]
+        options:
+          COSTUME:
+            '"ALIEN"': بیگانه
+            '"BEAR"': خرس
+            '"CAT"': گربه
+            '"DOG"': سگ
+            '"DUCK"': اردک
+            '"FROG"': قورباغه
+            '"MOOSE"': گوزن
+            '"PINEAPPLE"': آناناس
+            '"ROBOT"': ربات
+            '"SHARK"': کوسه
+            '"SLOTH"': تنبلی
+            '"UNICORN"': اسب شاخدار
+          LOCATION:
+            "{x: 200, y: 100}": بالا
+            "{x: 200, y: 300}": پایین
+            "{x: 100, y: 200}": سمت چپ
+            "{x: 300, y: 200}": درست است
+            "{x: 200, y: 200}": مرکز
+            "{x: 100, y: 100}": بالا سمت چپ
+            "{x: 300, y: 100}": بالا سمت راست
+            "{x: 100, y: 300}": پایین سمت چپ
+            "{x: 300, y: 300}": پایین سمت راست
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": تصادفی
+      Dancelab_makeNewDanceSpriteGroup:
+        text: |-
+          make [N][0] new [COSTUME][1]
+           در یک [LAYOUT][2]
+        options:
+          'N':
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
+          COSTUME:
+            '"ALIEN"': بیگانگان
+            '"BEAR"': خرس ها
+            '"CAT"': گربه ها
+            '"DOG"': سگ ها
+            '"DUCK"': اردک ها
+            '"FROG"': قورباغه ها
+            '"MOOSE"': گوزن
+            '"PINEAPPLE"': آناناس
+            '"ROBOT"': روبات ها
+            '"SHARK"': کوسه ها
+            '"SLOTH"': تنبل ها
+            '"UNICORN"': تک شاخ ها
+          LAYOUT:
+            '"border"': مرز
+            '"inner"': داخل مربع
+            '"diamond"': الماس
+            '"circle"': دایره
+            '"grid"': شبکه
+            '"top"': ردیف بالا
+            '"row"': ردیف
+            '"bottom"': ردیف پایین
+            '"left"': ستون سمت چپ
+            '"column"': ستون
+            '"right"': ستون سمت راست
+            '"x"': متقاطع
+            '"plus"': به علاوه
+            '"spiral"': مارپیچ
+            '"infinity"': خط بی نهایت
+            '"random"': تصادفی
+      Dancelab_mixColors:
+        text: "mix [COLOR1][0] and [COLOR2][1]"
+      Dancelab_nMeasures:
+        text: "[N][0] اندازه گیری می کند"
+      Dancelab_onPointerDown:
+        text: در نشانگر پایین
+      Dancelab_onPointerDrag:
+        text: در کشیدن اشاره گر
+      Dancelab_onPointerUp:
+        text: در اشاره گر به بالا
+      Dancelab_randomColor:
+        text: رنگ تصادفی
+      Dancelab_setBackground:
+        text: "تنظیم رنگ پس زمینه [COLOR][0]"
+      Dancelab_setBackgroundEffect:
+        text: |-
+          تنظیم افکت پس زمینه
+          [EFFECT][0] [PALETTE][1]
+        options:
+          EFFECT:
+            '"none"': هیچ کدام
+            ? "['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]"
+            : "(تصادفی)"
+            '"circles"': حلقه ها
+            '"color_cycle"': رنگ ها
+            '"diamonds"': الماس
+            '"disco_ball"': توپ دیسکو
+            '"fireworks"': آتش بازی
+            '"swirl"': هیپنو
+            '"kaleidoscope"': کلیدوسکوپ
+            '"lasers"': کف رقص لیزری
+            '"splatter"': پاشیدن رنگ
+            '"rainbow"': رنگین کمان
+            '"snowflakes"': برف
+            '"text"': نام آهنگ
+            '"galaxy"': فضا
+            '"sparkles"': می درخشد
+            '"spiral"': مارپیچ
+            '"disco"': مربع ها
+            '"stars"': ستاره ها
+          PALETTE:
+            '"rave"': سیاه و سفید
+            '"cool"': باحال
+            '"electronic"': الکترونیکی
+            '"iceCream"': بستنی
+            '"default"': نور
+            '"neon"': نئون
+            '"tropical"': گرمسیری
+            '"vintage"': قدیمی
+            '"warm"': گرم
+      Dancelab_setBackgroundEffectWithPalette:
+        text: |-
+          تنظیم افکت پس زمینه
+          [PALETTE][0] [EFFECT][1]
+        options:
+          EFFECT:
+            '"none"': هیچ کدام
+            '"rand"': "(تصادفی)"
+            '"circles"': حلقه ها
+            '"quads"': زوایای
+            '"color_cycle"': رنگ ها
+            '"diamonds"': الماس
+            '"disco_ball"': توپ دیسکو
+            '"fireworks"': آتش بازی
+            '"flowers"': گل
+            '"growing_stars"': ستاره های در حال رشد
+            '"higher_power"': قدرت بالاتر
+            '"swirl"': هیپنو
+            '"kaleidoscope"': کلیدوسکوپ
+            '"lasers"': کف رقص لیزری
+            '"splatter"': پاشیدن رنگ
+            '"rainbow"': رنگین کمان
+            '"ripples_random"': امواج تصادفی
+            '"ripples"': امواج
+            '"snowflakes"': برف
+            '"text"': نام آهنگ
+            '"squiggles"': قیچی می کند
+            '"galaxy"': فضا
+            '"sparkles"': می درخشد
+            '"spiral"': مارپیچ
+            '"disco"': مربع ها
+            '"stars"': ستاره ها
+            '"music_wave"': امواج
+          PALETTE:
+            '"rave"': سیاه و سفید
+            '"cool"': باحال
+            '"electronic"': الکترونیکی
+            '"iceCream"': بستنی
+            '"default"': نور
+            '"neon"': نئون
+            '"tropical"': گرمسیری
+            '"vintage"': قدیمی
+            '"warm"': گرم
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          تنظیم افکت پس زمینه
+          [PALETTE][0] [EFFECT][1]
+        options:
+          EFFECT:
+            '"none"': هیچ کدام
+            '"rand"': "(تصادفی)"
+            '"quads"': زوایای
+            '"blooming_petals"': گلبرگ های شکوفه
+            '"circles"': حلقه ها
+            '"clouds"': ابرها
+            '"color_cycle"': رنگ ها
+            '"diamonds"': الماس
+            '"disco_ball"': توپ دیسکو
+            '"fireworks"': آتش بازی
+            '"flowers"': گل
+            '"frosted_grid"': شبکه مات
+            '"growing_stars"': ستاره های در حال رشد
+            '"higher_power"': قدرت بالاتر
+            '"swirl"': هیپنو
+            '"kaleidoscope"': کلیدوسکوپ
+            '"lasers"': کف رقص لیزری
+            '"splatter"': پاشیدن رنگ
+            '"rainbow"': رنگین کمان
+            '"ripples_random"': امواج تصادفی
+            '"ripples"': امواج
+            '"snowflakes"': برف
+            '"text"': نام آهنگ
+            '"galaxy"': فضا
+            '"sparkles"': می درخشد
+            '"spiral"': مارپیچ
+            '"disco"': مربع ها
+            '"squiggles"': قیچی می کند
+            '"starburst"': انفجار ستاره
+            '"stars"': ستاره ها
+            '"music_wave"': امواج
+          PALETTE:
+            '"autumn"': پاییز
+            '"rave"': سیاه و سفید
+            '"cool"': باحال
+            '"electronic"': الکترونیکی
+            '"grayscale"': مقیاس خاکستری
+            '"iceCream"': بستنی
+            '"default"': نور
+            '"neon"': نئون
+            '"ocean"': اقیانوس
+            '"rainbow"': رنگین کمان
+            '"roses"': گل رز
+            '"sky"': Sky
+            '"spring"': بهار
+            '"summer"': تابستان
+            '"sunrise"': طلوع آفتاب
+            '"sunset"': غروب آفتاب
+            '"tropical"': گرمسیری
+            '"twinkling"': چشمک زدن
+            '"vintage"': قدیمی
+            '"warm"': گرم
+            '"winter"': زمستان
+      Dancelab_setDanceSpeed:
+        text: "سرعت رقص [SPRITE][0] را روی [SPEED][1] تنظیم کنید"
+        options:
+          SPEED:
+            '1': عادی
+            '2': سریع
+            '4': بسیار سریع
+            '0.5': کند
+            '0.25': بسیار کند
+      Dancelab_setDanceSpeedEach:
+        text: "سرعت رقص [GROUP][0] را روی [SPEED][1] تنظیم کنید"
+        options:
+          GROUP:
+            sprites: همه
+            '"ALIEN"': بیگانگان
+            '"BEAR"': خرس ها
+            '"CAT"': گربه ها
+            '"DOG"': سگ ها
+            '"DUCK"': اردک ها
+            '"FROG"': قورباغه ها
+            '"MOOSE"': گوزن
+            '"PINEAPPLE"': آناناس
+            '"ROBOT"': روبات ها
+            '"SHARK"': کوسه ها
+            '"SLOTH"': تنبل ها
+            '"UNICORN"': تک شاخ ها
+          SPEED:
+            '1': عادی
+            '2': سریع
+            '4': بسیار سریع
+            '0.5': کند
+            '0.25': بسیار کند
+      Dancelab_setForegroundEffect:
+        text: "تنظیم جلوه پیش زمینه [EFFECT][0]"
+        options:
+          EFFECT:
+            '"none"': هیچ کدام
+            ? "['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]"
+            : "(تصادفی)"
+            '"bubbles"': حباب ها
+            '"confetti"': کانفتی
+            '"hearts_red"': قلب ها
+            '"music_notes"': نت های موسیقی
+            '"pineapples"': آناناس
+            '"pizzas"': پیتزا
+            '"smiling_poop"': مدفوع
+            '"rain"': باران
+            '"floating_rainbows"': رنگین کمان ها
+            '"smile_face"': لبخند می زند
+            '"spotlight"': کانون توجه
+            '"color_lights"': چراغ های صحنه
+            '"raining_tacos"': تاکوها
+      Dancelab_setForegroundEffectExtended:
+        text: "تنظیم جلوه پیش زمینه [EFFECT][0]"
+        options:
+          EFFECT:
+            '"none"': هیچ کدام
+            '"rand"': "(تصادفی)"
+            '"bubbles"': حباب ها
+            '"hearts_colorful"': قلب های رنگارنگ
+            '"confetti"': کانفتی
+            '"emojis"': ایموجی ها
+            '"hearts_red"': قلب ها
+            '"music_notes"': نت های موسیقی
+            '"paint_drip"': قطره رنگ
+            '"pineapples"': آناناس
+            '"pizzas"': پیتزا
+            '"smiling_poop"': مدفوع
+            '"rain"': باران
+            '"floating_rainbows"': رنگین کمان ها
+            '"smile_face"': لبخند می زند
+            '"spotlight"': کانون توجه
+            '"color_lights"': چراغ های صحنه
+            '"exploding_stars"': انفجار ستاره
+            '"raining_tacos"': تاکوها
+      Dancelab_setProp:
+        text: 'set [SPRITE][0] [PROPERTY][1] to [VAL][2] '
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"width"': عرض
+            '"height"': ارتفاع
+            '"rotation"': چرخش
+            '"x"': موقعیت افقی
+            '"y"': موقعیت عمودی
+      Dancelab_setPropEach:
+        text: "set [GROUP][0] [PROPERTY][1] to [VAL][2]"
+        options:
+          GROUP:
+            sprites: همه
+            '"ALIEN"': بیگانگان
+            '"BEAR"': خرس ها
+            '"CAT"': گربه ها
+            '"DOG"': سگ ها
+            '"DUCK"': اردک ها
+            '"FROG"': قورباغه ها
+            '"MOOSE"': گوزن
+            '"PINEAPPLE"': آناناس
+            '"ROBOT"': روبات ها
+            '"SHARK"': کوسه ها
+            '"SLOTH"': تنبل ها
+            '"UNICORN"': تک شاخ ها
+          PROPERTY:
+            '"scale"': اندازه
+            '"width"': عرض
+            '"height"': ارتفاع
+            '"rotation"': چرخش
+            '"x"': موقعیت افقی
+            '"y"': موقعیت عمودی
+            '"tint"': رنگ
+      Dancelab_setPropRandom:
+        text: "randomize [SPRITE][0] [PROPERTY][1]"
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"width"': عرض
+            '"height"': ارتفاع
+            '"rotation"': چرخش
+            '"x"': موقعیت افقی
+            '"y"': موقعیت عمودی
+            '"tint"': رنگ
+      Dancelab_setPropRandomEach:
+        text: "randomize [GROUP][0] [PROPERTY][1]"
+        options:
+          GROUP:
+            sprites: همه
+            '"ALIEN"': بیگانگان
+            '"BEAR"': خرس ها
+            '"CAT"': گربه ها
+            '"DOG"': سگ ها
+            '"DUCK"': اردک ها
+            '"FROG"': قورباغه ها
+            '"MOOSE"': گوزن
+            '"PINEAPPLE"': آناناس
+            '"ROBOT"': روبات ها
+            '"SHARK"': کوسه ها
+            '"SLOTH"': تنبل ها
+            '"UNICORN"': تک شاخ ها
+          PROPERTY:
+            '"scale"': اندازه
+            '"width"': عرض
+            '"height"': ارتفاع
+            '"rotation"': چرخش
+            '"x"': موقعیت افقی
+            '"y"': موقعیت عمودی
+            '"tint"': رنگ
+      Dancelab_setTint:
+        text: "set [SPRITE][0] tint to [VAL][1]"
+      Dancelab_setTintEach:
+        text: "set [THIS][0] tint to [VAL][1]"
+        options:
+          THIS:
+            sprites: همه
+            '"ALIEN"': بیگانگان
+            '"BEAR"': خرس ها
+            '"CAT"': گربه ها
+            '"DOG"': سگ ها
+            '"DUCK"': اردک ها
+            '"FROG"': قورباغه ها
+            '"MOOSE"': گوزن
+            '"PINEAPPLE"': آناناس
+            '"ROBOT"': روبات ها
+            '"SHARK"': کوسه ها
+            '"SLOTH"': تنبل ها
+            '"UNICORN"': تک شاخ ها
+      Dancelab_setTintEachInline:
+        text: "set [THIS][0] tint to [VAL][1]"
+        options:
+          THIS:
+            sprites: همه
+            '"ALIEN"': بیگانگان
+            '"BEAR"': خرس ها
+            '"CAT"': گربه ها
+            '"DOG"': سگ ها
+            '"DUCK"': اردک ها
+            '"FROG"': قورباغه ها
+            '"MOOSE"': گوزن
+            '"PINEAPPLE"': آناناس
+            '"ROBOT"': روبات ها
+            '"SHARK"': کوسه ها
+            '"SLOTH"': تنبل ها
+            '"UNICORN"': تک شاخ ها
+      Dancelab_setTintInline:
+        text: "set [SPRITE][0] tint to [VAL][1]"
+      Dancelab_setVisible:
+        text: "[SPRITE][0] قابل مشاهده را روی [VISIBILITY][1] تنظیم کنید"
+        options:
+          VISIBILITY:
+            'true': قابل مشاهده است
+            'false': نامرئی
+      Dancelab_setVisibleEach:
+        text: "قابلیت مشاهده [THIS][0] را روی [VISIBILITY][1] تنظیم کنید"
+        options:
+          THIS:
+            sprites: همه
+            '"ALIEN"': بیگانگان
+            '"BEAR"': خرس ها
+            '"CAT"': گربه ها
+            '"DOG"': سگ ها
+            '"DUCK"': اردک ها
+            '"FROG"': قورباغه ها
+            '"MOOSE"': گوزن
+            '"PINEAPPLE"': آناناس
+            '"ROBOT"': روبات ها
+            '"SHARK"': کوسه ها
+            '"SLOTH"': تنبل ها
+            '"UNICORN"': تک شاخ ها
+          VISIBILITY:
+            'true': قابل مشاهده است
+            'false': نامرئی
+      Dancelab_startMapping:
+        text: "[SPRITE][0] [PROPERTY][1] را به دنبال [RANGE][2] شروع می‌کند"
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"width"': عرض
+            '"height"': ارتفاع
+            '"rotation"': چرخش
+            '"x"': موقعیت افقی
+            '"y"': موقعیت عمودی
+            '"tint"': رنگ
+          RANGE:
+            '"bass"': صدای بم
+            '"mid"': اواسط
+            '"treble"': سه برابر شدن
+      Dancelab_startMappingEach:
+        text: "[GROUP][0] شروع [PROPERTY][1] به دنبال [RANGE][2]"
+        options:
+          GROUP:
+            sprites: همه
+            '"ALIEN"': بیگانگان
+            '"BEAR"': خرس ها
+            '"CAT"': گربه ها
+            '"DOG"': سگ ها
+            '"DUCK"': اردک ها
+            '"FROG"': قورباغه ها
+            '"MOOSE"': گوزن
+            '"PINEAPPLE"': آناناس
+            '"ROBOT"': روبات ها
+            '"SHARK"': کوسه ها
+            '"SLOTH"': تنبل ها
+            '"UNICORN"': تک شاخ ها
+          PROPERTY:
+            '"scale"': اندازه
+            '"width"': عرض
+            '"height"': ارتفاع
+            '"rotation"': چرخش
+            '"x"': موقعیت افقی
+            '"y"': موقعیت عمودی
+            '"tint"': رنگ
+          RANGE:
+            '"bass"': صدای بم
+            '"mid"': اواسط
+            '"treble"': سه برابر شدن
+      Dancelab_stopMapping:
+        text: "[SPRITE][0] [PROPERTY][1] [RANGE] را دنبال می‌کند[2]"
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"width"': عرض
+            '"height"': ارتفاع
+            '"rotation"': چرخش
+            '"x"': موقعیت افقی
+            '"y"': موقعیت عمودی
+            '"direction"': جهت حرکت
+            '"tint"': رنگ
+          RANGE:
+            '"bass"': صدای بم
+            '"mid"': اواسط
+            '"treble"': سه برابر شدن
+      Dancelab_stopMappingEach:
+        text: "[GROUP][0] stop [PROPERTY][1] following [RANGE][2]"
+        options:
+          GROUP:
+            sprites: همه
+            '"ALIEN"': بیگانگان
+            '"BEAR"': خرس ها
+            '"CAT"': گربه ها
+            '"DOG"': سگ ها
+            '"DUCK"': اردک ها
+            '"FROG"': قورباغه ها
+            '"MOOSE"': گوزن
+            '"PINEAPPLE"': آناناس
+            '"ROBOT"': روبات ها
+            '"SHARK"': کوسه ها
+            '"SLOTH"': تنبل ها
+            '"UNICORN"': تک شاخ ها
+          PROPERTY:
+            '"scale"': اندازه
+            '"width"': عرض
+            '"height"': ارتفاع
+            '"rotation"': چرخش
+            '"x"': موقعیت افقی
+            '"y"': موقعیت عمودی
+            '"direction"': جهت حرکت
+            '"tint"': رنگ
+          RANGE:
+            '"bass"': صدای بم
+            '"mid"': اواسط
+            '"treble"': سه برابر شدن
+      Dancelab_translateStrings:
+        text: "translate [STRING][0]"
+        options:
+          STRING:
+            '"music_wave"': امواج
+            '"ripples"': امواج
+            '"ripples_random"': امواج تصادفی
+            '"quads"': زوایای
+            '"flowers"': گل
+            '"popsicles"': بستنی
+            '"squiggles"': قیچی می کند
+            '"growing_stars"': ستاره های در حال رشد
+            '"emojis"': ایموجی ها
+            '"hearts_colorful"': قلب ها
+            '"paint_drio"': قطره رنگ
+            '"exploding_stars"': انفجار ستاره
+            '"row_top"': ردیف بالا
+            '"row_bottom"': ردیف پایین
+            '"column_left"': ستون سمت چپ
+            '"column_right"': ستون سمت راست
+            '"diamond"': الماس
+            '"mural"': نقاشی دیواری
+            '"safari"': سافاری
+            '"network"': شبکه
+            '"highway"': بزرگراه
+            '"stream"': جریان
+            '"tile"': کاشی
+            '"shadow"': سایه
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
+      Dancelab_whenKey:
+        text: "هنگامی که [KEY][0] فشار داده شد"
+        options:
+          KEY:
+            '"up"': بالا
+            '"left"': سمت چپ
+            '"down"': پایین
+            '"right"': درست است
+            '"space"': فضا
+            '"enter"': وارد کنید
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
+      Dancelab_whenPeak:
+        text: "when [RANGE][0] peak"
+        options:
+          RANGE:
+            '0': صدای بم
+            '1': اواسط
+            '2': سه برابر شدن
+      Dancelab_whenSetup:
+        text: راه اندازی
+      Dancelab_whenSetup2:
+        text: راه اندازی
+      Dancelab_whenSetupSong:
+        text: 'setup [SONG][0] '
+        options:
+          SONG:
+            '"macklemore90"': مکلمور - نمی تواند ما را نگه دارد
+            '"hammer"': "MC Hammer - U Can't Touch This"
+            '"peas"': نخود سیاه چشم - من احساس کردم
+      DansBlocks_borderGPT:
+        text: "Generate Border [DESCRIPTION][0]"
+      DansBlocks_getMicroscope:
+        text: "Microscope has [INPUT1][0]"
+        options:
+          INPUT1:
+            '1': آب لیمو
+            '3': جوش شیرین
+            '5': هر دو
+      DansBlocks_gravity_test:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            new Behavior(fall_gravity_behavior, []): سقوط_گرانش
+      DansBlocks_jump_gravity:
+        text: "[SPRITE][0] بپرد"
+      DansBlocks_setForegroundEffect2:
+        text: "[Don't Use] do [EFFECT][0] effect"
+        options:
+          EFFECT:
+            '"bubbles"': حباب ها
+            '"confetti"': کانفتی
+            '"hearts"': قلب ها
+            '"emojis"': ایموجی های شاد
+            '"rain"': باران
+            '"starburst"': انفجار ستاره
+            '"glass"': شیشه شکستن
+            '"twinkling"': چشمک زدن
+      DansBlocks_setMicroscope:
+        text: "Set Microscope to [INPUT1][0]"
+        options:
+          INPUT1:
+            '1': آب لیمو
+            '3': جوش شیرین
+            '5': هر دو
+      DansBlocks_testRectangle:
+        text: 'make rectangle x: [X][0] y: [Y][1] w: [W][2] h: [H][3] color: [COLOR][4]'
+      DansBlocks_testShowVariable:
+        text: 'نمایش این عدد: [SOMENUMBER][0] در اندازه [SOMESIZE][1] در [COLOR][2]'
+        options:
+          OPT:
+            '"large"': بزرگ
+            '"small"': کوچک
+          COLOR:
+            '"blue"': آبی
+            '"red"': قرمز
+      FunctionBlocks_addEightBlock:
+        text: افزودن هشت
+      FunctionBlocks_addFiveBlock:
+        text: addFive
+      FunctionBlocks_addFourBlock:
+        text: افزودن چهار
+      FunctionBlocks_addNineBlock:
+        text: addNine
+      FunctionBlocks_addOneBlock:
+        text: addOne
+      FunctionBlocks_addSevenBlock:
+        text: addSeven
+      FunctionBlocks_addSixBlock:
+        text: addSix
+      FunctionBlocks_addThreeBlock:
+        text: addThree
+      FunctionBlocks_addTwoBlock:
+        text: addTwo
+      FunctionBlocks_communicate:
+        text: "ارتباط [VAR1][0] با [SPRITE1COSTUME][1]"
+      FunctionBlocks_makeManipulative2:
+        text: "make [NUM][0] new [ANIMATION_NAME][1] sprites  [BEHAVIOR][2]"
+      FunctionBlocks_representManipulative:
+        text: "نشان دهنده [NUM][0] [ANIMATION_NAME][1] جن جدید است"
+      FunctionBlocks_representManipulative_test:
+        text: "[آزمایش] نشان دهنده [NUM][0] جن جدید [ANIMATION_NAME][1] است"
+      FunctionBlocks_spriteSayVar:
+        text: "[SPRITE][0]say[TEXT1][1]"
+      GameDev_collide:
+        text: "colliding [SPRITE][0] [INTERACTION][1] [TARGET][2]"
+        options:
+          INTERACTION:
+            '"bounceOff"': پرش می کند
+            '"bounce"': برآمدگی ها
+            '"collide"': توسط مسدود شده است
+            '"displace"': هل می دهد
+      GameDev_getVelocity:
+        text: "[SPRITE][0] [PROPERTY][1]"
+        options:
+          PROPERTY:
+            '"velocityX"': سرعت افقی
+            '"velocityY"': سرعت عمودی
+      GameDev_gravity:
+        text: "[SPRITE][0] با [VELOCITY][1] گرانش سقوط می کند"
+        options:
+          VELOCITY:
+            "-0.25": پایین
+            "-0.5": متوسط
+            "-1": بالا
+      GameDev_playSoundOptions:
+        text: "پخش صدا [SOUND][0]"
+        options:
+          SOUND:
+            "'sound://category_digital/boing_2.mp3'": بوینگ
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": حباب
+            "'sound://category_collect/clicky_crunch.mp3'": کروچیدن
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": چنگ
+            "'sound://category_digital/jump_7.mp3'": پرش
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": طلسم جادویی
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": پاپ
+            "'sound://category_transition/star_dust_particle_10.mp3'": گرد و غبار ستاره ای
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": ضربه تن
+            "'sound://category_collect/trill_stings.mp3'": تریل
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": twinkle
+      GameDev_playerJump:
+        text: "بازیکن را وادار کنید [STRENGTH][0] بپرد"
+        options:
+          STRENGTH:
+            '10': کوچک
+            '13': متوسط
+            '17': بزرگ
+      GameDev_removeGroup:
+        text: "set [SPRITE][0] type to [GROUP][1]"
+        options:
+          GROUP:
+            '"players"': بازیکن
+            '"walls"': محیط زیست
+      GameDev_setGroup:
+        text: "set [SPRITE][0] type to [GROUP][1]"
+        options:
+          GROUP:
+            '"players"': بازیکن
+            '"walls"': محیط زیست
+      GameDev_setVelocity:
+        text: "set [SPRITE][0] [PROPERTY][1] to [VALUE][2]"
+        options:
+          PROPERTY:
+            '"velocityX"': سرعت افقی
+            '"velocityY"': سرعت عمودی
+      GameDev_spriteType:
+        text: "[GROUP][0]"
+        options:
+          GROUP:
+            '"players"': بازیکن
+            '"walls"': محیط زیست
+      gamelab_addBehaviorSimple:
+        text: "sprite [SPRITE][0] begins [BEHAVIOR][1]"
+      gamelab_addTarget:
+        text: "[SPRITE][0] gets target [TARGET][1] to [OPT][2]"
+        options:
+          OPT:
+            '"follow"': دنبال کردن
+            '"avoid"': اجتناب کنید
+      gamelab_allSpritesWithAnimation:
+        text: "[ANIMATION][0]"
+      gamelab_atTime:
+        text: "at [N][0] [UNIT][1]"
+        options:
+          UNIT:
+            '"seconds"': ثانیه
+            '"frames"': قاب ها
+      gamelab_avoidingTargets:
+        text: اجتناب از اهداف
+      gamelab_beginCollectingData:
+        text: "شروع به جمع‌آوری داده‌ها [BREAK][0] مقدار [VALUE][1] با برچسب [LABEL][2]"
+      gamelab_behaviorPicker:
+        text: "[BEHAVIOR][0]"
+      gamelab_bitmap:
+        text: "[GRID][0]"
+      gamelab_bounceOff:
+        text: "[SPRITE][0] bounces off [TARGET][1]"
+      gamelab_changePropBy:
+        text: "change [SPRITE][0] [PROPERTY][1] by [VAL][2]"
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"rotation"': چرخش
+            '"x"': موقعیت x
+            '"y"': موقعیت y
+            '"direction"': جهت حرکت
+            '"speed"': سرعت
+      gamelab_checkTouching:
+        text: "[CONDITION][0] [SPRITE1][1] [SPRITE2][2] را لمس می‌کند"
+        options:
+          CONDITION:
+            '"when"': چه زمانی
+            '"while"': در حالی که
+      gamelab_clickedOn:
+        text: "وقتی [SPRITE][0] کلیک کرد"
+      gamelab_clickedSpritePointer:
+        text: "[SPRITE][0]"
+      gamelab_collectibleBehaviors:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): چرخیدن درست
+            new Behavior(spinning_left, []): چرخیدن به چپ
+            new Behavior(fluttering, []): بال زدن
+            new Behavior(jittering, []): لرزان
+            new Behavior(wobbling, []): تکان خوردن
+            new Behavior(wandering, []): سرگردان
+            new Behavior(patrolling, []): گشت زنی
+            new Behavior(moving_west_and_looping, []): حرکت به سمت غرب و حلقه زدن
+            new Behavior(moving_east_and_looping, []): حرکت به سمت شرق و حلقه زدن
+            new Behavior(moving_north_and_looping, []): حرکت به سمت شمال و حلقه زدن
+            new Behavior(moving_south_and_looping, []): حرکت به سمت جنوب و حلقه زدن
+      gamelab_comment:
+        text: 'comment: [COMMENT][0]'
+      gamelab_costumeImage:
+        text: "[COSTUME][0]"
+      gamelab_countByAnimation:
+        text: "number of [SPRITE][0]"
+      gamelab_createNewSprite:
+        text: "یک جن جدید بسازید \n called [NAME][0] \n با لباس [COSTUME][1] \n در [LOCATION][2]"
+      gamelab_destroy:
+        text: "remove [THIS][0]"
+      gamelab_draggable:
+        text: قابل کشیدن
+      gamelab_drawLine:
+        text: "draw line [COLOR][0]  [LOC1][1]  [LOC2][2]"
+      gamelab_edgesDisplace:
+        text: "لبه ها مانع از حرکت [SPRITE][0] می شوند"
+      gamelab_everyInterval:
+        text: 'repeat every [N][0] [UNIT][1] '
+        options:
+          UNIT:
+            '"seconds"': ثانیه
+            '"frames"': قاب ها
+      gamelab_followingTargets:
+        text: دنبال اهداف
+      gamelab_getAllSprites:
+        text: همه جن
+      gamelab_getCostume:
+        text: "جن با لباس [SPRITE][0]"
+      gamelab_getProp:
+        text: "[SPRITE][0] [PROPERTY][1]"
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"rotation"': چرخش
+            '"x"': موقعیت x
+            '"y"': موقعیت y
+            '"direction"': جهت حرکت
+            '"tint"': رنگ
+            '"speed"': سرعت
+      gamelab_getThisSprite:
+        text: "[CHOICE][0] sprite"
+        options:
+          CHOICE:
+            '"this"': این
+            '"other"': دیگر
+      gamelab_getTime:
+        text: "time in [UNIT][0]"
+        options:
+          UNIT:
+            '"seconds"': ثانیه
+            '"frames"': قاب ها
+      gamelab_glideTo:
+        text: "[SPRITE][0] به [LOCATION][1] سر خوردن"
+      gamelab_hideTitleScreen:
+        text: صفحه عنوان را پنهان کنید
+      gamelab_hideVariable:
+        text: "hide variable [VAR][0]"
+      gamelab_ifVarEquals:
+        text: |-
+          if [NUM][0] =[VAL][1]
+          [STATEMENT][2]
+      gamelab_int10:
+        text: "[VALUE][0]"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      gamelab_isCostumeEqual:
+        text: "[SPRITE][0] لباس [COSTUME][1] است"
+      gamelab_isKeyPressed:
+        text: "[KEY][0] فشار داده شده است"
+        options:
+          KEY:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': درست است
+            '"space"': فضا
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
+      gamelab_isTouchingEdges:
+        text: "[SPRITE][0] لبه‌ها را لمس می‌کند"
+      gamelab_isTouchingSprite:
+        text: "[SPRITE][0] is touching [TARGET][1]"
+      gamelab_jumpTo:
+        text: "[SPRITE][0] پرش به [LOCATION][1]"
+      gamelab_keyPressed:
+        text: "[CONDITION][0] [KEY][1] فشار داده شد"
+        options:
+          CONDITION:
+            '"when"': چه زمانی
+            '"while"': در حالی که
+          KEY:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': درست است
+            '"space"': فضا
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
+      gamelab_layoutGrid:
+        text: طرح‌بندی sprites به‌عنوان یک شبکه
+      gamelab_layoutSprites:
+        text: "طرح بندی [GROUP][0] به عنوان یک [FORMAT][1]"
+        options:
+          FORMAT:
+            '"border"': مرز
+            '"circle"': دایره
+            '"grid"': شبکه
+            '"top"': ردیف بالا
+            '"row"': ردیف
+            '"bottom"': ردیف پایین
+            '"left"': ستون سمت چپ
+            '"column"': ستون
+            '"right"': ستون سمت راست
+      gamelab_locationAt:
+        text: 'location x: [X][0] y: [Y][1]'
+      gamelab_locationModifier:
+        text: "[DISTANCE][0] پیکسل [DIRECTION][1] از [LOCATION][2]"
+        options:
+          DIRECTION:
+            '"North"': شمال
+            '"East"': شرق
+            '"South"': جنوب
+            '"West"': غرب
+      gamelab_locationMouse:
+        text: مکان ماوس
+      gamelab_locationOf:
+        text: "مکان [SPRITE][0]"
+      gamelab_location_picker:
+        text: "[LOCATION][0]"
+      gamelab_makeBurst:
+        text: "ایجاد جلوه [EFFECT][0] با [NUM][1] [ANIMATION_NAME][2] جن"
+        options:
+          EFFECT:
+            '"burst"': ترکیدن
+            '"pop"': پاپ
+            '"rain"': باران
+            '"spiral"': مارپیچ
+      gamelab_makeNewSpriteAnon:
+        text: "ساختن جدید [ANIMATION_NAME][0] در [LOCATION][1]"
+      gamelab_makeNewSpriteGroup:
+        text: "ایجاد [N][0] جدید [GROUP][1] در [FORMAT][2]"
+        options:
+          FORMAT:
+            '"border"': مرز
+            '"circle"': دایره
+            '"grid"': شبکه
+            '"top"': ردیف بالا
+            '"row"': ردیف
+            '"bottom"': ردیف پایین
+            '"left"': ستون سمت چپ
+            '"column"': ستون
+            '"right"': ستون سمت راست
+      gamelab_makeNumSprites:
+        text: "[NUM][0] [ANIMATION_NAME][1] جن جدید بسازید"
+      gamelab_makeNumSpritesNear:
+        text: "ساخت [NUM][0] [ANIMATION_NAME][1] جن جدید در نزدیکی [LOCATION][2]"
+      gamelab_makeProjectile:
+        text: "ایجاد پرتابه \n[ANIMATION_NAME][0] از [LOCATION][1] با سرعت [SPEED][2]جهت[DIRECTION][3]"
+        options:
+          DIRECTION:
+            '0': درست است
+            '90': پایین
+            '180': سمت چپ
+            '270': بالا
+      gamelab_makeSpritesGrid:
+        text: 'ساختن [ANIMATION_NAME][0] اسپرایت با استفاده از شبکه: [GRID][1]'
+      gamelab_makeSpritesGridInput:
+        text: "ساختن [ANIMATION_NAME][0] اسپرایت با استفاده از شبکه [GRID][1]"
+      gamelab_makeSpritesWithSize:
+        text: "make [NUM][0] new [SIZE][1] [COSTUME][2] sprites"
+        options:
+          SIZE:
+            '30': کوچک
+            '50': متوسط
+            '100': بزرگ
+      gamelab_mirrorSprite:
+        text: "[SPRITE][0] face [DIRECTION][1]"
+        options:
+          DIRECTION:
+            '"right"': درست است
+            '"left"': سمت چپ
+      gamelab_mouseLocation:
+        text: مکان ماوس
+      gamelab_moveBackward:
+        text: "حرکت [SPRITE][0] [DISTANCE][1] پیکسل به عقب"
+      gamelab_moveForward:
+        text: "حرکت [SPRITE][0] [DISTANCE][1] پیکسل به جلو"
+      gamelab_moveInDirection:
+        text: "حرکت [SPRITE][0] [DISTANCE][1] پیکسل [DIRECTION][2]"
+        options:
+          DIRECTION:
+            '"North"': شمال
+            '"East"': شرق
+            '"South"': جنوب
+            '"West"': غرب
+      gamelab_moveToward:
+        text: "حرکت [SPRITE][0] پیکسل [DISTANCE][1] به سمت [TARGET][2]"
+      gamelab_newSpritePointer:
+        text: "[SPRITE][0]"
+      gamelab_objectSpritePointer:
+        text: "[SPRITE][0]"
+      gamelab_patrollingUpDown:
+        text: گشت زنی بالا و پایین
+      gamelab_playSound:
+        text: "پخش صدا [SOUND][0]"
+      gamelab_playSoundOptions:
+        text: "پخش صدا [SOUND][0]"
+        options:
+          SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": لهجه
+            "'sound://category_digital/boing_2.mp3'": بوینگ
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": پاپ
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": twinkle
+            "'sound://category_app/app_button_1.mp3'": دکمه
+            "'sound://category_collect/clicky_crunch.mp3'": کروچیدن
+            "'sound://category_swish/quick_swing.mp3'": تاب
+            "'sound://category_nature/summer_night_loop.mp3'": شب تابستان
+            "'sound://category_background/ocean_waves.mp3'": امواج اقیانوس
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": موج ساحل
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": حباب
+            "'sound://category_animals/bear.mp3'": خرس
+            "'sound://category_animals/cat.mp3'": گربه
+            "'sound://category_animals/cow.mp3'": گاو
+            "'sound://category_animals/pig.mp3'": خوک
+            "'sound://category_animals/sheep.mp3'": گوسفند
+            "'sound://category_animals/goat.mp3'": بز
+            "'sound://category_animals/chicken.mp3'": مرغ
+            "'sound://category_animals/rooster.mp3'": خروس
+            "'sound://category_animals/elephant.mp3'": فیل
+            "'sound://category_animals/dolphin.mp3'": دلفین
+            "'sound://category_nature/thunderstorm_1.mp3'": رعد و برق
+            "'sound://category_animals/chick.mp3'": جوجه
+            "'sound://category_animals/dog.mp3'": سگ
+            "'sound://category_animals/tiger.mp3'": ببر
+            "'sound://category_collect/trill_stings.mp3'": تریل
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": چنگ
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": ضربه بزنید
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": ضربه تن
+            "'sound://category_transition/trippy_robotic_transition.mp3'": انتقال رباتیک
+            "'sound://category_transition/star_dust_particle_10.mp3'": گرد و غبار ستاره ای
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": کشتی بیگانه
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": طلسم جادویی
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": انتخاب کنید
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": باس عجیب و غریب
+            "'sound://category_digital/jump_7.mp3'": پرش
+      gamelab_playSoundOptionsSoccer:
+        text: "پخش صدا [SOUND][0]"
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": هورن
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": تشویق
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": شعار دادن
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": تشویق کردن
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": لگد زدن
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": دو سوت
+            "'sound://category_sports/One_Whistle_SFX.mp3'": سوت زدن
+      gamelab_playSoundOptionsSpace:
+        text: "پخش صدا [SOUND][0]"
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": سیاه چاله
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": خوشه گلوله
+            "'sound://category_space/Carina_SFX.mp3'": کارینا
+            "'sound://category_space/Cassiopeia_SFX.mp3'": کاسیوپیا
+            "'sound://category_space/Crab_nebula_SFX.mp3'": سحابی خرچنگ
+            "'sound://category_space/Galactic_center_SFX.mp3'": مرکز کهکشانی
+            "'sound://category_space/Launch_SFX.mp3'": راه اندازی
+            "'sound://category_space/Lift_Off.mp3'": بلند کردن
+            "'sound://category_space/Pillars_SFX.mp3'": ستون ها
+            "'sound://category_space/Southern_ring_SFX.mp3'": حلقه جنوبی
+            "'sound://category_space/Supernova_SFX.mp3'": ابرنواختر
+            "'sound://category_space/Tycho_SFX.mp3'": تیکو
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": کهکشان گردابی
+      gamelab_playSpeech:
+        text: "پخش گفتار [SOUND][0]"
+      gamelab_playerBehaviors:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): حرکت با کلیدهای جهت دار
+            new Behavior(driving_with_arrow_keys, []): رانندگی با کلیدهای جهت دار
+            draggable(): قابل کشیدن
+      gamelab_pointInDirection:
+        text: "نقطه [SPRITE][0] [DIRECTION][1]"
+        options:
+          DIRECTION:
+            '"North"': شمال
+            '"East"': شرق
+            '"South"': جنوب
+            '"West"': غرب
+      gamelab_printText:
+        text: "print [TEXT][0]"
+      gamelab_randColor:
+        text: رنگ تصادفی
+      gamelab_randomColor:
+        text: رنگ تصادفی
+      gamelab_randomLocation:
+        text: مکان تصادفی
+      gamelab_removeAllBehaviors:
+        text: "[SPRITE][0] همه چیز را متوقف می کند"
+      gamelab_removeBehaviorSimple:
+        text: "sprite [SPRITE][0] stops [BEHAVIOR][1]"
+      gamelab_removeTint:
+        text: "حذف رنگ از [THIS][0]"
+      gamelab_repeatForever:
+        text: برای همیشه تکرار کن
+      gamelab_resetTimer:
+        text: تنظیم مجدد تایمر
+      gamelab_setAnimation:
+        text: "تغییر لباس [THIS][0] به [ANIMATION][1]"
+      gamelab_setBackground:
+        text: "تنظیم رنگ پس زمینه [COLOR][0]"
+      gamelab_setBackgroundImage:
+        text: "پس زمینه را روی [IMG][0] تنظیم کنید"
+        options:
+          IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': غار
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شهر
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': چمن پیوسته
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': دادگاه
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': بیابان
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': جاده کویری
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': زمین کشاورزی
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': چمن شناور
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': جلوی خانه
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': کهکشان
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': شبکه
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'آشپزخانه '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': اتاق نشیمن
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': چمنزار
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': نمای پارک
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': درختان کاج
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': رنگین کمان
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': علمی تخیلی
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': زمین فوتبال
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': مرحله
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': ستاره ها
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': مترو
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': خورشید و رنگین کمان
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': باران های آفتابی
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': زمین تنیس
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': جزیره درختی
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': زیرزمینی
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': زیر آب
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': زمستان
+            undefined: هیچ کدام
+      gamelab_setBackgroundImageAs:
+        text: "پس زمینه را روی [IMG][0] تنظیم کنید"
+      gamelab_setDefaultSpriteSize:
+        text: "اندازه پیش‌فرض جدید sprite را روی [SIZE][0] تنظیم کنید"
+        options:
+          SIZE:
+            '25': فوق العاده کوچک
+            '50': کوچک
+            '75': متوسط
+            '100': بزرگ
+      gamelab_setForegroundEffect:
+        text: "do [EFFECT][0] effect"
+        options:
+          EFFECT:
+            '"bubbles"': حباب ها
+            '"confetti"': کانفتی
+            '"hearts"': قلب ها
+            '"emojis"': ایموجی های شاد
+            '"rain"': باران
+            '"starburst"': انفجار ستاره
+            '"glass"': شیشه شکستن
+            '"twinkling"': چشمک زدن
+      gamelab_setPrompt:
+        text: "درخواست کاربر [QUESTION][0] برای متغیر [VAR][1]"
+      gamelab_setPromptWith2Choices:
+        text: "درخواست کاربر [QUESTION][0] برای متغیر [VAR][1] با گزینه‌های [A][2][B][3]"
+      gamelab_setPromptWithChoices:
+        text: "درخواست کاربر [QUESTION][0] برای متغیر [VAR][1] با گزینه‌های [A][2][B][3][C][4]"
+      gamelab_setProp:
+        text: "set [SPRITE][0] [PROPERTY][1] to [VAL][2]"
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"rotation"': چرخش
+            '"x"': موقعیت x
+            '"y"': موقعیت y
+            '"direction"': جهت حرکت
+            '"speed"': سرعت
+      gamelab_setProp_dropdown:
+        text: "set [SPRITE][0] [PROPERTY][1] to [SIZE][2]"
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+          SIZE:
+            '25': فوق العاده کوچک
+            '50': کوچک
+            '75': متوسط
+            '100': بزرگ
+      gamelab_setSizes:
+        text: "set [SPRITE][0] [PROPERTY][1] to [N][2]%"
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"width"': عرض
+            '"height"': ارتفاع
+      gamelab_setSpeed_dropdown:
+        text: "سرعت [SPRITE][0] را روی [SIZE][1] تنظیم کنید"
+        options:
+          SIZE:
+            '1': بسیار کند
+            '3': کند
+            '5': عادی
+            '7': سریع
+            '9': سریع فوق العاده
+      gamelab_setTint:
+        text: "تغییر رنگ [THIS][0] به [COLOR][1]"
+      gamelab_setupScoreboard:
+        text: "قرعه کشی تابلوی امتیاز \n[SPRITE1COSTUME][0]score[VAR1][1][SPRITE2COSTUME][2]score[VAR2][3]target[SPRITE3COSTUME][4]"
+      gamelab_setupSim:
+        text: |-
+          شبیه سازی راه اندازی با
+          [SPRITE1N][0][SPRITE1COSTUME][1]speed[SPRITE1SPEED][2]
+          [SPRITE2N][3][SPRITE2COSTUME][4]speed[SPRITE2SPEED][5]
+          جمع آوری
+          [SPRITE3N][6][SPRITE3COSTUME][7]
+      gamelab_showTitleScreen:
+        text: "نمایش صفحه عنوان [BREAK][0] عنوان [TITLE][1] زیرنویس [SUBTITLE][2]"
+      gamelab_showVariable:
+        text: "نشان دادن متغیر [VAR][0] در [LOCATION][1]"
+      gamelab_spriteClicked:
+        text: "[CONDITION][0] [SPRITE][1] کلیک کرد"
+        options:
+          CONDITION:
+            '"when"': چه زمانی
+            '"while"': در حالی که
+      gamelab_spriteSay:
+        text: "[SPRITE][0] say [SPEECH][1]"
+      gamelab_spriteSayTime:
+        text: "[SPRITE][0]say[TEXT1][1]for[NUM][2]seconds"
+      gamelab_spriteThink:
+        text: "[SPRITE][0] فکر کنید [SPEECH][1]"
+      gamelab_spriteThinkTime:
+        text: "[SPRITE][0]think[TEXT1][1]for[NUM][2]seconds"
+      gamelab_spriteThink_fables2:
+        text: "[SPRITE][0] think [THOUGHT][1]"
+        options:
+          THOUGHT:
+            '"Hmm..."': هوم...
+            '"Time to make friends with the sheep."': زمان دوستی با گوسفندان است.
+            '"She''ll never recognize me now."': اون الان هیچوقت منو نمیشناسه
+            '"This costume keeps me warm."': این لباس مرا گرم نگه می دارد.
+            '"I am actually a wolf."': من در واقع یک گرگ هستم.
+      gamelab_spriteThink_fables3:
+        text: "[SPRITE][0] think [THOUGHT][1]"
+        options:
+          THOUGHT:
+            '"Hmm..."': هوم...
+            '"I''m feeling sleepy."': من احساس خواب آلودگی میکنم
+            '"No one could ever beat me."': هیچ کس هرگز نتوانست مرا شکست دهد.
+            '"I''ve done this race before."': من قبلا این مسابقه را انجام داده ام.
+            '"My feet are bigger than Turtle''s feet."': پاهای من از پاهای لاک پشت بزرگتر است.
+      gamelab_spriteThink_fables4:
+        text: "[SPRITE][0] think [THOUGHT][1]"
+        options:
+          THOUGHT:
+            '"Hmm..."': هوم...
+            '"I''m so hungry."': من خیلی گرسنه ام
+            '"I''m a visitor in this town."': من یک بازدید کننده در این شهر هستم.
+            '"If we share, we''ll all have something to eat. "': اگر به اشتراک بگذاریم، همه ما چیزی برای خوردن خواهیم داشت.
+            '"I''ll trick everyone into giving me their food."': من همه را فریب می دهم تا غذایشان را به من بدهند.
+      gamelab_startAvoiding:
+        text: "[SPRITE][0] begins avoiding [TARGET][1]"
+      gamelab_startFollowing:
+        text: "[SPRITE][0] begins following [TARGET][1]"
+      gamelab_startGliding:
+        text: "[SPRITE][0] starts gliding"
+      gamelab_stopAvoiding:
+        text: "[SPRITE][0] اجتناب از دیگر جن ها را متوقف می کند"
+      gamelab_stopCollectingData:
+        text: جمع آوری داده ها را متوقف کنید
+      gamelab_stopFollowing:
+        text: "[SPRITE][0] دیگر اسپرایت ها را دنبال نمی کند"
+      gamelab_stopGliding:
+        text: "[SPRITE][0] stops gliding"
+      gamelab_subjectSpritePointer:
+        text: "[SPRITE][0]"
+      gamelab_textJoin:
+        text: "[LEFT_QUOTE][0][TEXT1][1][RIGHT_QUOTE][2][TEXT2][3]"
+      gamelab_textVariableJoin:
+        text: "[VAR][0][TEXT2][1]"
+      gamelab_toggleBehaviorSimple:
+        text: "sprite [SPRITE][0] [TOGGLE][1] [BEHAVIOR][2]"
+        options:
+          TOGGLE:
+            '"begins"': آغاز می شود
+            '"stops"': متوقف می شود
+      gamelab_tumbling:
+        text: غلت زدن
+      gamelab_turn:
+        text: "چرخش [SPRITE][0] [DIRECTION][1] [N][2] درجه"
+        options:
+          DIRECTION:
+            '"right"': درست است
+            '"left"': سمت چپ
+      gamelab_updateTitleWithColor:
+        text: "نمایش صفحه عنوان [BREAK][0] عنوان [TITLE][1] رنگ [COLOR][2]"
+      gamelab_whenAllPromptsAnswered:
+        text: وقتی همه درخواست ها پاسخ دادند
+      gamelab_whenDownArrow:
+        text: هنگامی که فلش پایین فشار داده می شود
+      gamelab_whenKey:
+        text: "هنگامی که [KEY][0] فشار داده شد"
+        options:
+          KEY:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': درست است
+            '"space"': فضا
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_whenLeftArrow:
+        text: وقتی فلش چپ فشار داده شد
+      gamelab_whenPromptAnswered:
+        text: "وقتی [VAR][0] پاسخ داد"
+      gamelab_whenRightArrow:
+        text: هنگامی که فلش سمت راست فشار داده شده است
+      gamelab_whenSpriteCreated:
+        text: "هنگامی که [SPRITE][0] ایجاد شد"
+      gamelab_whenTouching:
+        text: "when [SPRITE1][0] touches [SPRITE2][1]"
+      gamelab_whenUpArrow:
+        text: هنگامی که فلش بالا فشار داده می شود
+      gamelab_whileDownArrow:
+        text: در حالی که فلش پایین فشار داده شده است
+      gamelab_whileKey:
+        text: "در حالی که [KEY][0] فشار داده شده است"
+        options:
+          KEY:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': درست است
+            '"space"': فضا
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_whileLeftArrow:
+        text: در حالی که فلش چپ فشار داده شده است
+      gamelab_whileRightArrow:
+        text: در حالی که فلش سمت راست فشار داده شده است
+      gamelab_whileTouching:
+        text: "while [SPRITE1][0] is touching [SPRITE2][1]"
+      gamelab_whileUpArrow:
+        text: در حالی که فلش بالا فشار داده شده است
+      gamelab_withPercentChance:
+        text: |-
+          اگر [NUM][0]% احتمال دارد
+          [STATEMENT][1]
+      gamelab_withPercentChanceDropdown:
+        text: |-
+           [NUM][0] شانس
+           [STATEMENT][1]
+        options:
+          NUM:
+            '10': بسیار پایین
+            '25': پایین
+            '50': 50/50
+            '75': بالا
+            '90': بسیار بالا
+      gamelab_xLocationOf:
+        text: "x coordinate of [SPRITE][0]"
+      gamelab_yLocationOf:
+        text: "y coordinate of [SPRITE][0]"
+      KatiesBlocks_changeVelocity:
+        text: "[SPRITE][0] پرش [PROPERTY][1] و [PROPERTY][2]"
+        options:
+          PROPERTY:
+            '"velocityX"': کوتاه
+            '"velocityY"': طولانی
+      KatiesBlocks_collide:
+        text: "[SPRITE][0] blocks [TARGET][1]"
+      KatiesBlocks_glideTo:
+        text: "[SPRITE][0] به [LOCATION][1] سر خوردن"
+      KatiesBlocks_goldilocks:
+        text: |-
+           if [CONDITION][0][SPRITE][1]
+          [STATEMENT][2]
+        options:
+          CONDITION:
+            '"solid"': جامد
+            '"liquid"': مایع
+            '"gas"': گاز
+      KatiesBlocks_katieCollide:
+        text: "[SPRITE][0] collides [TARGET][1]"
+      KatiesBlocks_katiePushes:
+        text: "[SPRITE][0] bumps [TARGET][1]"
+      KatiesBlocks_makeNumSpritesNear:
+        text: "ساخت [NUM][0] [ANIMATION_NAME][1] جن جدید در نزدیکی [LOCATION][2]"
+      KatiesBlocks_setVelocity:
+        text: "set [SPRITE][0] [PROPERTY][1] to [VAL][2]"
+        options:
+          PROPERTY:
+            '"velocityX"': سرعتX
+            '"velocityY"': سرعتY
+            '"rotationSpeed"': سرعت چرخش
+      KatiesBlocks_spriteBirdSay:
+        text: "[SPRITE][0] says [SPEECH][1]"
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': منقار من نوک تیز و برای یافتن حشرات در پوست درختان قوی است.
+            '"I have a beak like a scoop to catch fish."': من منقاری مثل قاشق برای گرفتن ماهی دارم.
+      KatiesBlocks_tumbling:
+        text: غلت زدن
+      Mikelab_addBehaviorSimple:
+        text: "sprite [SPRITE][0] begins [BEHAVIOR][1]"
+      Mikelab_addTrainingData:
+        text: 'افزودن داده‌های آموزشی: [NAME][0]،[LOCATION][1]'
+        options:
+          NAME:
+            "{x: 201, y: 100}": شی
+            "{x: 200, y: 100}": ماهی
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": ماهی
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": ماهی نیست
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": my-label
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": برچسب من نیست
+      Mikelab_allSpritesWithAnimation:
+        text: "[ANIMATION][0]"
+      Mikelab_beginDataCollection:
+        text: "درخواست کاربر [QUESTION][0] برای متغیر [VAR][1] با گزینه‌های [A][2][B][3][C][4]"
+      Mikelab_changeAnim:
+        text: "[SPRITE][0] را روی لباس [COSTUME][1] تنظیم کنید"
+      Mikelab_changePropBy:
+        text: "change [PROPERTY][0] of [SPRITE][1] by [VAL][2]"
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"rotation"': چرخش
+            '"x"': موقعیت x
+            '"y"': موقعیت y
+            '"direction"': جهت حرکت
+      Mikelab_checkAnim:
+        text: "[SPRITE][0] is a [COSTUME][1]"
+      Mikelab_createNewSprite:
+        text: "make a new [COSTUME][0] \n به نام [NAME][1] در [LOCATION][2]"
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": بالا
+            "{x: 200, y: 300}": پایین
+            "{x: 100, y: 200}": سمت چپ
+            "{x: 300, y: 200}": درست است
+            "{x: 200, y: 200}": مرکز
+            "{x: 100, y: 100}": بالا سمت چپ
+            "{x: 300, y: 100}": بالا سمت راست
+            "{x: 100, y: 300}": پایین سمت چپ
+            "{x: 300, y: 300}": پایین سمت راست
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": تصادفی
+      Mikelab_destroy:
+        text: "remove [SPRITE][0]"
+      Mikelab_displace:
+        text: "[TARGET][0] [SPRITE][1] را از حرکت مسدود می‌کند"
+      Mikelab_eval:
+        text: "eval [CODE][0]"
+      Mikelab_getAnim:
+        text: "لباس [SPRITE][0]"
+      Mikelab_getNext:
+        text: دریافت شی بعدی
+      Mikelab_getProp:
+        text: "[SPRITE][0]'s [PROPERTY][1]"
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"rotation"': چرخش
+            '"x"': موقعیت x
+            '"y"': موقعیت y
+            '"direction"': جهت حرکت
+      Mikelab_groupChangeAnim:
+        text: "change [SELECT][0] [COSTUME][1] into [COSTUME2][2]"
+        options:
+          SELECT:
+            '"all"': همه
+            '"this"': این
+      Mikelab_groupChangePropBy:
+        text: "change [PROPERTY][0] of [SELECT][1] [COSTUME][2] by [VAL][3]"
+        options:
+          SELECT:
+            '"all"': همه
+            '"this"': این
+          PROPERTY:
+            '"scale"': اندازه
+            '"rotation"': چرخش
+            '"x"': موقعیت x
+            '"y"': موقعیت y
+            '"direction"': جهت حرکت
+      Mikelab_groupCreateNewSprite:
+        text: "یک [COSTUME][0] جدید در [LOCATION][1] بسازید"
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": بالا
+            "{x: 200, y: 300}": پایین
+            "{x: 100, y: 200}": سمت چپ
+            "{x: 300, y: 200}": درست است
+            "{x: 200, y: 200}": مرکز
+            "{x: 100, y: 100}": بالا سمت چپ
+            "{x: 300, y: 100}": بالا سمت راست
+            "{x: 100, y: 300}": پایین سمت چپ
+            "{x: 300, y: 300}": پایین سمت راست
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": تصادفی
+      Mikelab_groupDestroy:
+        text: "remove [SELECT][0] [COSTUME][1]"
+        options:
+          SELECT:
+            '"all"': همه
+            '"this"': این
+      Mikelab_groupDisplace:
+        text: "همه [COSTUME][0] مانع حرکت [COSTUME2][1] می‌شوند"
+      Mikelab_groupEdgesDisplace:
+        text: "لبه‌ها مانع حرکت [COSTUME][0] می‌شوند"
+      Mikelab_groupGetProp:
+        text: "[SELECT][0] [COSTUME][1]'s [PROPERTY][2]"
+        options:
+          SELECT:
+            '"average"': متوسط
+            '"this"': این
+          PROPERTY:
+            '"scale"': اندازه
+            '"rotation"': چرخش
+            '"x"': موقعیت x
+            '"y"': موقعیت y
+            '"direction"': جهت حرکت
+      Mikelab_groupRemoveAllBehaviors:
+        text: "stop [SELECT][0] [COSTUME][1] behaviors"
+        options:
+          SELECT:
+            '"all"': همه
+            '"this"': این
+      Mikelab_groupRemoveBehaviorSimple:
+        text: "[SELECT][0] [COSTUME][1] stops [BEHAVIOR][2]"
+        options:
+          SELECT:
+            '"all"': همه
+            '"this"': این
+      Mikelab_groupRemoveTint:
+        text: "حذف رنگ از [SELECT][0] [COSTUME][1]"
+        options:
+          SELECT:
+            '"all"': همه
+            '"this"': این
+      Mikelab_groupSetProp:
+        text: "set [PROPERTY][0] of [SELECT][1] [COSTUME][2] to [VAL][3]"
+        options:
+          SELECT:
+            '"all"': همه
+            '"this"': این
+          PROPERTY:
+            '"scale"': اندازه
+            '"rotation"': چرخش
+            '"x"': موقعیت x
+            '"y"': موقعیت y
+            '"direction"': جهت حرکت
+      Mikelab_groupSetTint:
+        text: "change color of [SELECT][0] [COSTUME][1] to [COLOR][2]"
+        options:
+          SELECT:
+            '"all"': همه
+            '"this"': این
+      Mikelab_groupWhenClickedOn:
+        text: "وقتی [COSTUME][0] کلیک کرد"
+      Mikelab_groupWhenXTouchesY:
+        text: "when[COSTUME][0] touches [COSTUME2][1]"
+      Mikelab_groupWhileClicked:
+        text: "هنگام کلیک کردن روی [COSTUME][0]"
+      Mikelab_groupWhileTouchingAny:
+        text: |-
+          while[COSTUME][0] is touching [COSTUME2][1]
+          [STATEMENT][2]
+      Mikelab_hasBehavior:
+        text: "[SPRITE][0] در حال حاضر [BEHAVIOR][1] است"
+      Mikelab_hideFish:
+        text: "remove [TRASH][0]"
+        options:
+          TRASH:
+            object: شی
+            fish: ماهی
+      Mikelab_ifDanceIs:
+        text: |-
+          if [SPRITE][0] is doing [DANCE][1]
+           [DO1][2] [DO2][3]
+        options:
+          DANCE:
+            MOVES.ClapHigh: دست زدن بالا
+            MOVES.Clown: گانگنام
+            MOVES.Dab: داب
+            MOVES.DoubleJam: دو برابر کردن
+            MOVES.Drop: رها کردن
+            MOVES.Floss: نخ دندان
+            MOVES.Fresh: تازه
+            MOVES.Roll: رول بدن
+            MOVES.Kick: ستاره
+            MOVES.ThisOrThat: این یا آن
+            MOVES.Thriller: زامبی
+            MOVES.Rest: هیچ کدام
+      Mikelab_ifLabel:
+        text: |-
+          if [DANCE][0]
+           do [DO1][1] else [DO2][2]
+        options:
+          DANCE:
+            MOVES.ClapHigh: ماهی
+            MOVES.Clown: my-label
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          if recognize object as [DANCE][0]
+           do [DO1][1] else [DO2][2]
+        options:
+          DANCE:
+            MOVES.ClapHigh: ماهی
+            MOVES.Clown: my-label
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          if recognize object as [DANCE][0]
+           do [DO1][1]
+        options:
+          DANCE:
+            MOVES.ClapHigh: ماهی
+            MOVES.Clown: برچسب من نیست
+      Mikelab_isAnim:
+        text: "لباس [SPRITE][0] [COSTUME][1] است"
+      Mikelab_joinText:
+        text: "[TEXT][0] [NEXT][1]"
+      Mikelab_locationAt:
+        text: 'location x: [X][0] y: [Y][1]'
+      Mikelab_location_picker:
+        text: "[LOCATION][0]"
+      Mikelab_poemTextJoin:
+        text: "[TEXT1][0] [VAR][1] [TEXT2][2]"
+        options:
+          TEXT1:
+            '"Balancing on the "': '"تعادل بر روی"'
+            '"A chubby cat "': '"یک گربه چاق"'
+            '"The "': '""'
+          TEXT2:
+            '" fence"': '"حصار"'
+            '""': '""'
+            '" breeze blows"': '"نسیم می وزد"'
+      Mikelab_randomColor:
+        text: رنگ تصادفی
+      Mikelab_removeAllBehaviors:
+        text: "sprite[SPRITE][0] همه رفتارها را متوقف می کند"
+      Mikelab_removeBehaviorSimple:
+        text: "sprite [SPRITE][0] stops [BEHAVIOR][1]"
+      Mikelab_removeTint:
+        text: "حذف رنگ از [SPRITE][0]"
+      Mikelab_repeatUntilComplete:
+        text: برای همیشه تکرار کن
+      Mikelab_sendBad:
+        text: حرکت شی به چپ
+      Mikelab_sendGood:
+        text: حرکت شی به سمت راست
+      Mikelab_setBG:
+        text: "پس زمینه را روی [BG][0] تنظیم کنید"
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شهر
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': چمن پیوسته
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': جاده کویری
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': زمین کشاورزی
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': چمن شناور
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': جلوی خانه
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'آشپزخانه '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': اتاق نشیمن
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': چمنزار
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': نمای پارک
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': درختان کاج
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': زمین فوتبال
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': مرحله
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': مترو
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': خورشید و رنگین کمان
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': باران های آفتابی
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': زمین تنیس
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': جزیره درختی
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': زیرزمینی
+      Mikelab_setProp:
+        text: "[PROPERTY][0] از [SPRITE][1] را روی [VAL][2] تنظیم کنید"
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"rotation"': چرخش
+            '"x"': موقعیت x
+            '"y"': موقعیت y
+            '"direction"': جهت حرکت
+      Mikelab_setTint:
+        text: "تغییر رنگ [SPRITE][0] به [COLOR][1]"
+      Mikelab_setupLevel:
+        text: |-
+          سطح راه اندازی با
+          [A1][0][A2][1][A3][2][A4][3]
+          [A5][4][A6][5][A7][6][A8][7]
+          [B1][8][B2][9][B3][10][B4][11]
+          [B5][12][B6][13][B7][14][B8][15]
+      Mikelab_setupOutbreak:
+        text: |-
+          تنظیم شیوع
+          population:[SPRITE2N][0]
+          [TOGGLE][1]virus
+      Mikelab_setupSim:
+        text: |-
+          شبیه سازی راه اندازی با
+          [SPRITE1N][0][SPRITE1COSTUME][1]speed[SPRITE1SPEED][2]
+          [SPRITE2N][3][SPRITE2COSTUME][4]speed[SPRITE2SPEED][5]
+          جمع آوری
+          [SPRITE3N][6][SPRITE3COSTUME][7]
+      Mikelab_showScoreboard:
+        text: "برچسب تابلوی امتیاز [LABEL][0] رنگ متن [TEXTCOLOR][1] رنگ [COLOR][2] مقدار [VALUE][3] گوشه [CORNER][4]"
+        options:
+          CORNER:
+            '"right"': درست است
+            '"left"': سمت چپ
+      Mikelab_showText:
+        text: "show text [TEXT][0] [PREPOSITION][1] [SPRITE][2]"
+        options:
+          PREPOSITION:
+            '"above"': بالا
+            '"below"': زیر
+      Mikelab_sprite:
+        text: "جدید [COSTUME][0] جن در [LOCATION][1]"
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": بالا
+            "{x: 200, y: 300}": پایین
+            "{x: 100, y: 200}": سمت چپ
+            "{x: 300, y: 200}": درست است
+            "{x: 200, y: 200}": مرکز
+            "{x: 100, y: 100}": بالا سمت چپ
+            "{x: 300, y: 100}": بالا سمت راست
+            "{x: 100, y: 300}": پایین سمت چپ
+            "{x: 300, y: 300}": پایین سمت راست
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": تصادفی
+      Mikelab_whenClickedOn:
+        text: "وقتی [SPRITE][0] کلیک کرد"
+      Mikelab_whenKeyPressed:
+        text: "هنگامی که [KEY][0] فشار داده شد"
+        options:
+          KEY:
+            '"up"': فلش بالا
+            '"down"': فلش پایین
+            '"left"': فلش سمت چپ
+            '"right"': فلش سمت راست
+            '"space"': فاصله
+            '"w"': دبلیو
+            '"a"': A
+            '"s"': اس
+            '"d"': D
+      Mikelab_whenKeyReleased:
+        text: "هنگامی که [KEY][0] منتشر شد"
+        options:
+          KEY:
+            '"up"': فلش بالا
+            '"down"': فلش پایین
+            '"left"': فلش سمت چپ
+            '"right"': فلش سمت راست
+            '"space"': فاصله
+            '"w"': دبلیو
+            '"a"': A
+            '"s"': اس
+            '"d"': D
+      Mikelab_whenMouseClicked:
+        text: وقتی ماوس کلیک کرد
+      Mikelab_whenMouseReleased:
+        text: وقتی ماوس آزاد شد
+      Mikelab_whenTouchesAny:
+        text: "وقتی [SPRITE][0] هر جن را لمس می کند"
+      Mikelab_whenYesNoClicked:
+        text: "وقتی [KEY][0] کلیک کرد"
+        options:
+          KEY:
+            '"yes"': 'بله'
+            '"no"': 'نه'
+      Mikelab_whileClicked:
+        text: "هنگام کلیک کردن روی [SPRITE][0]"
+      Mikelab_whileKeyPressed:
+        text: "در حالی که [KEY][0] فشرده می ماند"
+        options:
+          KEY:
+            '"up"': فلش بالا
+            '"down"': فلش پایین
+            '"left"': فلش سمت چپ
+            '"right"': فلش سمت راست
+            '"space"': فاصله
+      Mikelab_whileTouchingAny:
+        text: |-
+          در حالی که [SPRITE][0] هر جن را لمس می کند
+          [STATEMENT][1]
+      Mikelab_worldSeconds:
+        text: تعداد ثانیه
+      Mikelab_xLocationOf:
+        text: "x coordinate of [SPRITE][0]"
+      Mikelab_yLocationOf:
+        text: "y coordinate of [SPRITE][0]"
+      Outbreak_beginCongregating:
+        text: هیولاها شروع به تجمع می کنند
+      Outbreak_beginQuarantining:
+        text: هیولاها زمانی که بیمار می شوند قرنطینه را آغاز می کنند
+      Outbreak_beginSocialDistancing:
+        text: هیولاها فاصله گذاری اجتماعی را آغاز می کنند
+      Outbreak_beginWandering:
+        text: هیولاها شروع به سرگردانی می کنند
+      Outbreak_beginWearingMasks:
+        text: هیولاها شروع به پوشیدن ماسک می کنند
+      Outbreak_layoutBorder:
+        text: چیدمان هیولاها در یک حاشیه
+      Outbreak_layoutClusters:
+        text: "هیولاهای چیدمان در خوشه های [NUM][0]"
+      Outbreak_layoutGrid:
+        text: هیولاها را به صورت شبکه ای چیدمان کنید
+      Outbreak_layoutRandom:
+        text: هیولاها را به طور تصادفی چیدمان کنید
+      Outbreak_setSpeed:
+        text: "سرعت هیولا را روی [VAL][0] تنظیم کنید"
+      Outbreak_setupOutbreak:
+        text: "راه اندازی شهر هیولاها با[COUNT][0]هیولا"
+      Outbreak_stopMoving:
+        text: هیولاها از حرکت می ایستند
+      ParticlesBlocks_getMicroscope:
+        text: "Microscope has [INPUT1][0]"
+        options:
+          INPUT1:
+            '1': آب لیمو
+            '3': جوش شیرین
+            '5': هر دو
+      ParticlesBlocks_setMicroscope:
+        text: "Set Microscope to [INPUT1][0]"
+        options:
+          INPUT1:
+            '1': آب لیمو
+            '3': جوش شیرین
+            '5': هر دو
+      ParticlesBlocks_statesOfMatter:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): جامد
+            new Behavior(liquid, []): مایع
+            new Behavior(wandering, []): گاز
+      ParticlesBlocks_statesOfMatter2:
+        text: "[COSTUME][0] را روی رفتار [BEHAVIOR][1] تنظیم کنید"
+        options:
+          BEHAVIOR:
+            '"solid"': 'ذره جامد '
+            '"liquid"': ذره مایع
+            '"gas"': ذره گاز
+      ParticlesBlocks_statesOfMatter_testing:
+        text: "[آزمایش] [COSTUME][0] را روی رفتار [BEHAVIOR][1] تنظیم کنید"
+        options:
+          BEHAVIOR:
+            '"solid"': 'ذره جامد '
+            '"liquid"': ذره مایع
+            '"gas"': ذره گاز
+      Poetry_addFrame:
+        text: "قاب را روی [BRUSH][0] تنظیم کنید"
+        options:
+          BRUSH:
+            '"bamboo"': بامبو
+            '"beaded"': مهره دار شده
+            '"brick"': آجر
+            '"decorative"': تزئینی
+            '"donuts"': دونات
+            '"fire"': آتش
+            '"flowers"': گل ها
+            '"gilded"': طلاکاری شده
+            '"hearts"': قلب ها
+            '"iceCream"': بستنی
+            '"leaves"': برگ
+            '"metal"': قاب فلزی
+            '"pawPrints"': چاپ پنجه
+            '"rainbow"': رنگین کمان
+            '"stars"': ستاره ها
+            '"swirls"': می چرخد
+            '"waves"': امواج
+            '"wood"': قاب چوبی
+            '"zigzag"': zig-zag
+      Poetry_addLine:
+        text: "add line [LINE][0]"
+      Poetry_addTextHighlight:
+        text: "add text highlight [COLOR][0]"
+      Poetry_animateText:
+        text: متن متحرک
+      Poetry_destroy:
+        text: "remove [ANIMATION_NAME][0]"
+      Poetry_glideTo:
+        text: "[SPRITE][0] به [LOCATION][1] سر خوردن"
+      Poetry_hideText:
+        text: مخفی کردن متن
+      Poetry_makeBurst:
+        text: "ایجاد جلوه [EFFECT][0] با [NUM][1] [ANIMATION_NAME][2] جن"
+        options:
+          EFFECT:
+            '"burst"': ترکیدن
+            '"pop"': پاپ
+            '"rain"': باران
+            '"spiral"': مارپیچ
+      Poetry_makeNewSpriteAnon:
+        text: "ساختن جدید [ANIMATION_NAME][0] در [LOCATION][1]"
+      Poetry_makeNumSprites:
+        text: "[NUM][0] [ANIMATION_NAME][1] جن جدید بسازید"
+      Poetry_playMusic:
+        text: "play music [SOUND][0]"
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': روشن
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': آرام
+            '"sound://category_nature/steady_campfire_loop.mp3"': آتش کمپ
+            '"sound://category_nature/rain_loop.mp3"': نم نم باران
+            '"sound://category_background/fire_burning.mp3"': کنار آتش
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': جنگل
+            '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': چنگ
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': خالی از سکنه
+            '"sound://category_background/inside_plane.mp3"': زمزمه
+            '"sound://category_loops/red_flag_loop1.mp3"': ماموریت
+            '"sound://category_nature/summer_night_loop.mp3"': شب
+            '"sound://category_background/ocean_waves.mp3"': اقیانوس
+            '"sound://category_background/rain_thunderstorm_calm.mp3"': بارانی
+            '"sound://category_background/rainforest_ambient_sound.mp3"': جنگل بارانی
+            '"sound://category_background/repitition.mp3"': سواری
+            '"sound://category_background/wavering_wind.mp3"': خواب آلود
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': کند
+            '"sound://category_background/waterfall.mp3"': آبشار
+      Poetry_playSound:
+        text: "پخش صدا [SOUND][0]"
+        options:
+          SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': زنگ
+            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': شکستن
+            '"sound://category_digital/boing_2.mp3"': بوینگ
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': حباب
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': پچ پچ کردن
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': باد کردن
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': شکست بخورد
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': بال زدن
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': پرش
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': نور
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': پوف
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': اسکن کنید
+            '"sound://category_background/typewriter.mp3"': ماشین تحریر
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': پر جنب و جوش
+            '"sound://category_achievements/peaceful_win_1.mp3"': برنده شوید
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': چرخیدن
+            '"sound://category_achievements/peaceful_win_6.mp3"': زنگ های بادی
+      Poetry_playSoundOptionsSpace:
+        text: "پخش صدا [SOUND][0]"
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": سیاه چاله
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": خوشه گلوله
+            "'sound://category_space/Carina_SFX.mp3'": کارینا
+            "'sound://category_space/Cassiopeia_SFX.mp3'": کاسیوپیا
+            "'sound://category_space/Crab_nebula_SFX.mp3'": سحابی خرچنگ
+            "'sound://category_space/Galactic_center_SFX.mp3'": مرکز کهکشانی
+            "'sound://category_space/Launch_SFX.mp3'": راه اندازی
+            "'sound://category_space/Lift_Off.mp3'": بلند کردن
+            "'sound://category_space/Pillars_SFX.mp3'": ستون ها
+            "'sound://category_space/Southern_ring_SFX.mp3'": حلقه جنوبی
+            "'sound://category_space/Supernova_SFX.mp3'": ابرنواختر
+            "'sound://category_space/Tycho_SFX.mp3'": تیکو
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": کهکشان گردابی
+      Poetry_setAuthor:
+        text: "set author [AUTHOR][0]"
+      Poetry_setBackground:
+        text: "تنظیم پس‌زمینه روی [COLOR][0]"
+      Poetry_setBackgroundEffect:
+        text: "پس زمینه را روی [EFFECT][0] [PALETTE][1] تنظیم کنید"
+        options:
+          EFFECT:
+            '"blooming"': شکوفه دادن
+            '"bubbles"': حباب ها
+            '"clouds"': ابری
+            '"confetti"': کانفتی
+            '"darkCircles"': محو شدن
+            '"fadeColors"': مات شده
+            '"hearts"': قلب ها
+            '"space"': سرعت فوق العاده
+            '"rain"': باران
+            '"ripples"': موج دار
+            '"colors"': جابجایی
+            '"stars"': ستاره دار
+            '"squiggles"': موج دار
+          PALETTE:
+            '"autumn"': پاییز
+            '"sunrise"': سپیده دم
+            '"sunset"': غروب
+            '"grayscale"': خاکستری ها
+            '"ocean"': اقیانوس
+            '"rainbow"': رنگین کمان
+            '"roses"': گل رز
+            '"sky"': sky
+            '"spring"': بهار
+            '"summer"': تابستان
+            '"winter"': زمستان
+      Poetry_setBackgroundImageAs:
+        text: "پس زمینه را روی [IMG][0] تنظیم کنید"
+      Poetry_setFont:
+        text: "set font [FONT][0]"
+        options:
+          FONT:
+            '"Arial"': آریال
+            '"Arial Black"': آریال مشکی
+            '"Courier"': پیک
+            '"Cursive"': دست خط
+            '"Impact"': تاثیر
+            '"Georgia"': گرجستان
+            '"Times"': بار
+      Poetry_setFontColor:
+        text: "تنظیم رنگ متن [FILL][0]"
+      Poetry_setForegroundEffect:
+        text: "do [EFFECT][0] effect"
+        options:
+          EFFECT:
+            '"bubbles"': حباب ها
+            '"confetti"': کانفتی
+            '"hearts"': قلب ها
+            '"emojis"': ایموجی های شاد
+            '"rain"': باران
+            '"starburst"': انفجار ستاره
+            '"glass"': شیشه شکستن
+            '"twinkling"': چشمک زدن
+      Poetry_setPrompt:
+        text: "prompt user [LEFT_QUOTE][0][NAME][1][RIGHT_QUOTE][2] for variable [VAR][3]"
+      Poetry_setPromptWithChoices:
+        text: "درخواست کاربر [LEFT_QUOTE][0][TEXT][1][RIGHT_QUOTE][2] برای متغیر [VAR][3] با انتخاب‌های [LEFT_QUOTE_A][4][A][5][RIGHT_QUOTE_A][6] [LEFT_QUOTE_B ][7][B][8][RIGHT_QUOTE_B][9] [LEFT_QUOTE_C][10][C][11][RIGHT_QUOTE_C][12]"
+      Poetry_setSize:
+        text: "اندازه [SPRITE][0] را روی [VAL][1] تنظیم کنید"
+      Poetry_setTextEffect:
+        text: "set text effect [EFFECT][0]"
+        options:
+          EFFECT:
+            '"fade"': محو شدن
+            '"flyLeft"': از سمت چپ پرواز کن
+            '"flyRight"': از سمت راست پرواز کن
+            '"flyTop"': از بالا پرواز کن
+            '"flyBottom"': از پایین پرواز کن
+            '"typewriter"': ماشین تحریر
+      Poetry_setTitle:
+        text: "set title [TITLE][0]"
+      Poetry_showText:
+        text: نمایش متن
+      Poetry_startBehavior:
+        text: 'sprite [ANIMATION_NAME][0] begins [BEHAVIOR][1] '
+        options:
+          BEHAVIOR:
+            '"fluttering"': بال زدن
+            '"growing"': در حال رشد
+            '"jittering"': لرزان
+            '"moving_north_and_looping"': حلقه شمال
+            '"moving_south_and_looping"': در حال چرخش به سمت جنوب
+            '"moving_east_and_looping"': حلقه به شرق
+            '"moving_west_and_looping"': حلقه غرب
+            '"shrinking"': کوچک شدن
+            '"spinning_left"': چرخیدن به چپ
+            '"spinning_right"': چرخیدن درست
+            '"swimming_left_and_right"': swimming
+            '"wandering"': سرگردان
+            '"wobbling"': تکان خوردن
+      Poetry_stopBehavior:
+        text: 'sprite [ANIMATION_NAME][0] stops [BEHAVIOR][1] '
+        options:
+          BEHAVIOR:
+            '"fluttering"': بال زدن
+            '"growing"': در حال رشد
+            '"jittering"': لرزان
+            '"moving_north_and_looping"': حلقه شمال
+            '"moving_south_and_looping"': در حال چرخش به سمت جنوب
+            '"moving_east_and_looping"': حلقه به شرق
+            '"moving_west_and_looping"': حلقه غرب
+            '"shrinking"': کوچک شدن
+            '"spinning_left"': چرخیدن به چپ
+            '"spinning_right"': چرخیدن درست
+            '"swimming_left_and_right"': swimming
+            '"wandering"': سرگردان
+            '"wobbling"': تکان خوردن
+            '"all"': "--همه رفتارها--"
+      Poetry_stringValue:
+        text: "[LEFT_QUOTE][0][TEXT][1][RIGHT_QUOTE][2]"
+      Poetry_textConcat:
+        text: "[LEFT_QUOTE][0][TEXT1][1][TEXT2][2][RIGHT_QUOTE][3]"
+      Poetry_textVariableJoin:
+        text: "[VAR][0][TEXT2][1]"
+      Poetry_whenLineShows:
+        text: "when line [N][0] shows"
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+      Poetry_whenPromptAnswered:
+        text: "وقتی [VAR][0] پاسخ داد"
+      RyanLab_moveForward:
+        text: حرکت رو به جلو
+      RyanLab_readSound:
+        text: با صدا بخوانید
+      RyanLab_readToConsole:
+        text: خواندن به کنسول
+      RyanLab_turnLeft:
+        text: به چپ بپیچید
+      RyanLab_turnRight:
+        text: به راست بپیچید
+      Vector_createSpriteWith:
+        text: |-
+          جن ایجاد کنید
+          do[STATEMENT][0]
+      Vector_log:
+        text: "log message [MESSAGE][0]"
+      Vector_positionCenter:
+        text: مرکز
+      Vector_push:
+        text: "تنظیم سرعت [VECTOR][0]"
+      Vector_randomLocation:
+        text: مکان تصادفی
+      Vector_setColor:
+        text: "رنگ را روی [COLOR][0] تنظیم کنید"
+      Vector_setSize:
+        text: "تنظیم عرض [WIDTH][0] ارتفاع [HEIGHT][1]"
+      Vector_teleportTo:
+        text: "تنظیم موقعیت [POSITION][0]"
+      Vector_vectorNorth:
+        text: شمال
+      Vector_where:
+        text: "هر اسپرایت که در آن [PROPERTY][0] برابر است با [VALUE][1] انجام دهید[STATEMENT][2]"
+        options:
+          PROPERTY:
+            "'shapeColor'": رنگ
+      aalab_layoutSprites:
+        text: "چیدمان هیولاها به صورت [FORMAT][0]"
+        options:
+          FORMAT:
+            '"grid"': شبکه
+            '"border"': مرز
+            '"row"': ردیف
+            '"random"': تصادفی
+      aalab_levelFailure:
+        text: "دانشجو [STATE][0] با کلید [KEY][1]"
+        options:
+          STATE:
+            '0': عبور می کند
+            '3': شکست می خورد
+      aalab_setSpeed:
+        text: "سرعت هیولا را روی [VAL][0] تنظیم کنید"
+      aalab_setupSim:
+        text: "راه اندازی شهر هیولاها با[COUNT][0]هیولا"
+      aalab_someGraduallyStartIntervention:
+        text: "[PORTION][0] هیولا [RATE][1] [BEHAVIOR][2]"
+        options:
+          PORTION:
+            '1': همه
+            '0.75': بیشتر
+            '0.5': نیمی از
+            '0.25': تعداد کمی
+          RATE:
+            '"immediately"': بلافاصله
+            '"quickly"': به سرعت
+            '"gradually"': به تدریج
+            '"slowly"': به آرامی
+          BEHAVIOR:
+            '"wandering"': سرگردان تصادفی
+            '"congregating"': اجتماع کردن
+            '"quarantining"': قرنطینه در هنگام بیماری
+            '"avoiding"': تعیین فاصله از سایر افراد در جامعه
+            '"none"': بی حرکت ماندن
+      aalab_someStartIntervention:
+        text: "[PORTION][0] هیولا شروع می‌شود [BEHAVIOR][1]"
+        options:
+          PORTION:
+            '1': همه
+            '0.75': بیشتر
+            '0.5': نیمی از
+            '0.25': تعداد کمی
+          BEHAVIOR:
+            '"wandering"': سرگردان تصادفی
+            '"congregating"': اجتماع کردن
+            '"quarantining"': قرنطینه در هنگام بیماری
+            '"avoiding"': تعیین فاصله از سایر افراد در جامعه
+            '"none"': بی حرکت ماندن
+      aalab_spriteSayChoices:
+        text: "[SPRITE][0] say [SPEECH][1]"
+        options:
+          SPEECH:
+            '"I have spoken."': من صحبت کرده ام.
+            '"Bounty hunting is a complicated profession."': شکار جایزه یک حرفه پیچیده است.
+            '"I will initiate self-destruct."': من خود تخریبی را آغاز خواهم کرد.
+            '"This is the way."': این راه است.
+            '"People get built different. We don’t need to figure it out, we just need to respect it."': مردم متفاوت ساخته می شوند. ما نیازی به کشف آن نداریم، فقط باید به آن احترام بگذاریم.
+            '"You don’t need a mirror to look good. You’re beautiful on the inside."': برای خوب به نظر رسیدن نیازی به آینه ندارید. تو از درون زیبا هستی
+            '"Sometimes life is scary and dark. That is why we must find the light."': گاهی زندگی ترسناک و تاریک است. به همین دلیل است که ما باید نور را پیدا کنیم.
+            '"Everything small is just a smaller version of something big."': هر چیز کوچک فقط یک نسخه کوچکتر از چیزی بزرگ است.
+            '"Suckin’ at something is the first step to being sorta good at something."': مکیدن چیزی اولین قدم برای خوب بودن در چیزی است.
+            '"Life happens wherever you are, whether you make it or not."': زندگی هر جا که باشی اتفاق می افتد، چه بسازی چه نسازی.
+            '"You can’t knock me down!"': شما نمی توانید من را زمین گیر کنید!
+            '"Roar!"': غرش!
+            '"My first girlfriend turned into the moon."': اولین دوست دخترم به ماه تبدیل شد.
+            '"True humility is the only antidote to shame."': تواضع واقعی تنها پادزهر شرم است.
+            '"You are stronger and wiser and freer than you have ever been."': تو قوی تر و عاقل تر و آزادتر از همیشه هستی.
+            '"You have to try every time. You can''t quit because you''re afraid you might fail."': شما باید هر بار تلاش کنید. شما نمی توانید دست از کار بکشید زیرا می ترسید شکست بخورید.
+      aalab_startIntervention:
+        text: "monsters begin [BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            wandering: سرگردان تصادفی
+            '"congregating"': اجتماع کردن
+            '"quarantining"': قرنطینه در هنگام بیماری
+            '"avoiding"': تعیین فاصله از سایر افراد در جامعه
+            '"none"': بی حرکت ماندن
+      adaptations_adaptationBehaviors:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): چرخیدن درست
+            new Behavior(spinning_left, []): چرخیدن به چپ
+            new Behavior(fluttering, []): بال زدن
+            new Behavior(jittering, []): لرزان
+            new Behavior(wobbling, []): تکان خوردن
+            new Behavior(wandering, []): سرگردان
+            new Behavior(patrolling, []): گشت زنی
+      adaptations_location_picker:
+        text: "در:[LOCATION][0]"
+      adaptations_makeNumSpritesNear:
+        text: "ساخت [NUM][0] [ANIMATION_NAME][1] جن جدید در نزدیکی [LOCATION][2]"
+      adaptations_spriteBirdSay:
+        text: "[SPRITE][0] says [SPEECH][1]"
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': منقار من نوک تیز و برای یافتن حشرات در پوست درختان قوی است.
+            '"I have a beak like a scoop to catch fish."': من منقاری مثل قاشق برای گرفتن ماهی دارم.
+      adaptations_startFollowing:
+        text: "[SPRITE][0] begins following [TARGET][1]"
+      adaptations_toggleBehaviorSimple:
+        text: "sprite [SPRITE][0] [TOGGLE][1] [BEHAVIOR][2]"
+        options:
+          TOGGLE:
+            '"begins"': آغاز می شود
+            '"stops"': متوقف می شود
+      binary_drawBin:
+        text: "draw binary [BIN][0]"
+      binary_drawBinScreen:
+        text: |-
+          کشیدن صفحه
+           [B1][0]
+           [B2][1]
+           [B3][2]
+           [B4][3]
+           [B5][4]
+           [B6][5]
+           [B7][6]
+           [B8][7]
+      binary_drawDec:
+        text: "رسم اعشاری [DEC][0]"
+      binary_drawPixelHere:
+        text: "set pixel [VAL][0]"
+        options:
+          VAL:
+            '0': 'خاموش'
+            '1': 'در'
+            '"toggle"': تغییر دهید
+      binary_drawString:
+        text: "draw string [STR][0]"
+      binary_goTo:
+        text: "پرش به [LOC][0]"
+      binary_goToHome:
+        text: پرش به سمت چپ بالا
+      binary_gridSize:
+        text: "set grid size [SIZE][0]"
+      binary_move:
+        text: "move [DIR][0]"
+        options:
+          DIR:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': درست است
+      binary_whenKey:
+        text: "هنگامی که [KEY][0] فشار داده شد"
+        options:
+          KEY:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': درست است
+            '"space"': فضا
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      craft_ifPath:
+        text: |-
+          مسیر اگر [DIR][0]
+          [STATEMENT][1]
+        options:
+          DIR:
+            "'ahead'": جلوتر
+            "'right'": به سمت راست
+            "'left'": به سمت چپ
+      craft_ifStandingOn:
+        text: |-
+          اگر روی [TYPE][0] ایستاده است
+          [STATEMENT][1]
+        options:
+          TYPE:
+            "'blueCoralBlock'": مرجان آبی
+            "'redCoralBlock'": مرجان قرمز
+            "'sand'": شن و ماسه
+            "'wool_blue'": آب عمیق
+            "'planksOak'": تخته های بلوط
+            "'seaLantern'": فانوس دریایی
+      craft_ifStandingOnLimit:
+        text: |-
+          اگر روی [TYPE][0] ایستاده است
+          [STATEMENT][1]
+        options:
+          TYPE:
+            "'sand'": شن و ماسه
+            "'darkPrismarine'": منشوری تیره
+            "'seaLantern'": فانوس دریایی
+      craft_log:
+        text: "log message [MESSAGE][0]"
+      craft_moveForward:
+        text: حرکت رو به جلو
+      craft_placeBlock:
+        text: "place [blockType][0]"
+        options:
+          blockType:
+            '"strippedOak"': بلوط کنده شده
+            '"strippedDarkOak"': بلوط تیره کنده شده
+            '"stoneBricks"': آجر سنگی
+            '"mossyStoneBricks"': آجرهای سنگی خزه ای
+            '"crackedStoneBricks"': آجرهای سنگی ترک خورده
+            '"chiseledStoneBricks"': آجر سنگ تزئینی
+            '"blueCoralBlock"': بلوک مرجانی آبی
+            '"pinkCoralBlock"': بلوک مرجانی صورتی
+            '"magentaCoralBlock"': بلوک مرجانی سرخابی
+            '"redCoralBlock"': بلوک مرجانی قرمز
+            '"yellowCoralBlock"': بلوک مرجانی زرد
+            '"blueDeadCoralBlock"': بلوک مرجانی مرده آبی
+            '"pinkDeadCoralBlock"': بلوک مرجانی مرده صورتی
+            '"magentaDeadCoralBlock"': بلوک مرجانی مرده سرخابی
+            '"readDeadCoralBlock"': بلوک مرجانی مرده قرمز
+            '"yellowDeadCoralBlock"': بلوک مرجانی مرده زرد
+            '"prismarine"': منشوری
+            '"darkPrismarine"': منشوری تیره
+            '"seaLantern"': فانوس دریایی
+            '"packedIce"': یخ بسته بندی شده
+            '"blueIce"': یخ آبی
+            '"blackConcrete"': بتن سیاه
+            '"seaGrass"': علف دریا
+            '"kelp"': کلپ
+            '"polishedGranite"': گرانیت صیقلی
+      craft_placePrismarine:
+        text: محل منشور
+      craft_placeTorch:
+        text: مشعل را قرار دهید
+      craft_repeatUntilConduit:
+        text: |-
+          تکرار کنید تا مجرای کامل شود
+          [STATEMENT][0]
+      craft_repeatUntilGoal:
+        text: |-
+          تکرار تا رسیدن به هدف
+          [STATEMENT][0]
+      craft_spawnEntity:
+        text: "spawn [ENTITY][0]"
+        options:
+          ENTITY:
+            '"cod"': کد
+            '"dolphin"': دلفین
+            '"salmon"': ماهی قزل آلا
+            '"seaTurtle"': لاک پشت دریایی
+            '"squid"': ماهی مرکب
+            '"tropicalFish"': ماهی گرمسیری
+      craft_turn:
+        text: "turn [DIR][0]"
+        options:
+          DIR:
+            right: درست ↻
+            left: left ↺
+      ecosystems_catchMe:
+        text: "catch [THIS][0]"
+      ecosystems_eat:
+        text: "eat [THIS][0]"
+      ecosystems_goldilocks:
+        text: |-
+           if [CONDITION][0][SPRITE][1]
+          [STATEMENT][2]
+        options:
+          CONDITION:
+            '"too much"': خیلی زیاد
+            '"just right"': درست است
+            '"too little"': خیلی کم
+      ecosystems_int10:
+        text: "[VALUE][0]"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      ecosystems_location_picker:
+        text: "در:[LOCATION][0]"
+      ecosystems_makeNewSpriteBetween:
+        text: 'ایجاد [N][0] جدید [GROUP][1] بین مکان x: [X][2] y: [Y][3]'
+      ecosystems_makeNumSpritesAtLocation:
+        text: "ساخت [NUM][0] [ANIMATION_NAME][1] جن جدید در [LOCATION_GENERATOR][2]"
+      ecosystems_makeNumSpritesWithinRange:
+        text: "ساخت [NUM][0] [ANIMATION_NAME][1] اسپرایت جدید در [RANGE][2]"
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": بالا
+            "{x1:0, x2:400, y1:150, y2:250}": وسط
+            "{x1:0, x2:400, y1:0, y2:200}": پایین
+      ecosystems_randomLocationWithinRange:
+        text: "x min[X1][0]x max[X2][1]y min[Y1][2]y max[Y2][3]"
+      ecosystems_randomLocationWithinSelectedRange:
+        text: "[RANGE][0]"
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": بالا
+            "{x1:0, x2:400, y1:0, y2:200}": پایین
+      storylab_clearHeadings:
+        text: عناوین روشن
+      storylab_printText:
+        text: "print [TEXT][0]"
+      storylab_setForegroundEffect2:
+        text: "do [EFFECT][0] effect"
+        options:
+          EFFECT:
+            '"bubbles"': حباب ها
+            '"confetti"': کانفتی
+            '"hearts"': قلب ها
+            '"rain"': باران
+            '"starburst"': انفجار ستاره
+            '"twinkling"': چشمک زدن
+      storylab_setHeading:
+        text: "تنظیم عنوان [HEADING][0]"
+      storylab_setPromptWithChoice:
+        text: "درخواست کاربر [QUESTION][0] برای متغیر [VAR][1] با انتخاب [A][2]"
+      storylab_setSubheading:
+        text: "تنظیم عنوان فرعی [SUBHEADING][0]"
+      transformers_playSoundOptions:
+        text: "پخش صدا [SOUND][0]"
+        options:
+          SOUND:
+            "'sound://category_transformers/transforming1.mp3'": اشکال
+            "'sound://category_transformers/transforming2.mp3'": استاتیک
+            "'sound://category_transformers/transforming3.mp3'": پیچ و تاب
+            "'sound://category_transformers/transforming4.mp3'": وزوز
+            "'sound://category_transformers/transforming5.mp3'": سنتز کنید
+            "'sound://category_transformers/transforming6.mp3'": Fuzz
+            "'sound://category_transformers/transforming7.mp3'": برقی
+            "'sound://category_transformers/transforming8.mp3'": نبض
+            "'sound://category_transformers/transforming9.mp3'": سایبرنتیک
+            "'sound://category_transformers/transforming10.mp3'": زاپ
+            "'sound://category_transformers/transforming11.mp3'": تبدیل کنید
+            "'sound://category_transformers/transforming12.mp3'": رباتیک
+            "'sound://category_transformers/transforming13.mp3'": پینگ کنید
+            "'sound://category_transformers/transforming14.mp3'": نبض
+            "'sound://category_transformers/transforming15.mp3'": سقوط
+      transformers_setAllTransformersSize:
+        text: "همه اندازه اسپرایت ها را روی [SIZE][0] تنظیم کنید"
+        options:
+          SIZE:
+            '0': تصادفی
+            '0.50': کوچک
+            '0.75': متوسط
+            '1.00': بزرگ
+            '2.00': فوق العاده بزرگ
+      transformers_setTransformersSize:
+        text: "اندازه [SPRITE][0] را روی [SIZE][1] تنظیم کنید"
+        options:
+          SIZE:
+            '0': تصادفی
+            '0.50': کوچک
+            '0.75': متوسط
+            '1.00': بزرگ
+            '2.00': فوق العاده بزرگ
