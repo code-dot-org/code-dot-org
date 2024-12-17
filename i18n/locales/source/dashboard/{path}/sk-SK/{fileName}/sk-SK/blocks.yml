@@ -1,0 +1,3112 @@
+---
+en:
+  data:
+    blocks:
+      AmysBlocks_addTarget:
+        text: "[TARGET][0] [OPT][1] [SPRITE][2] "
+        options:
+          OPT:
+            '"follows"': nasleduje
+            '"avoids"': vyhnúť
+      AmysBlocks_goldilocks:
+        text: |-
+           ak [CONDITION][0][SPRITE][1]
+          [STATEMENT][2]
+        options:
+          CONDITION:
+            '"too much"': príliš
+            '"just right"': práve správne
+            '"too little"': príliš málo
+      AmysBlocks_goldilocksElse:
+        text: |-
+           ak príliš[Sprite][0]
+          [VYSLAVENIE][1] iné, ak práve správne
+          [STATEMENT3][2] iné, ak príliš málo
+          [STATEMENT2][3]
+      AmysBlocks_makeNumSprites:
+        text: "[NUM][0] nové [ANIMATION_NAME][1] sprites [LOCATION][2]"
+      AmysBlocks_playerBehaviors:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): Presun NSEW pomocou klávesov so šípkami
+      AmysBlocks_setPromptWithChoices:
+        text: "Upozornenie používateľa [QUESTION][0] pre premennú [VAR][1] s voľbami [A][2][B][3][C][4]"
+      AmysBlocks_spriteSayVar:
+        text: "[SPRITE][0]say[TEXT1][1]"
+      BadGuys_makeNewBadGuysSprite:
+        text: "Vytvorenie nového [ANIMATION_NAME][0] sprite na [LOCATION][1]"
+      BadGuys_setSizeAll_dropdown:
+        text: "Nastaviť všetky sprites na [VELIKOSŤ][0]"
+        options:
+          SIZE:
+            '0.50': extra malé
+            '0.75': Malé
+            '1.00': Stredná
+            '2.00': Veľký
+            '3.00': extra veľké
+      BadGuys_setSize_dropdown:
+        text: "nastaviť [SPRITE][0] na [VELIKOSŤ][1]"
+        options:
+          SIZE:
+            '0.50': extra malé
+            '0.75': Malé
+            '1.00': Stredná
+            '2.00': Veľký
+            '3.00': extra veľké
+      Dancelab_ai:
+        text: "[IMAGE][0]generate [VALUE][1] efekt"
+      Dancelab_alternateMoves:
+        text: "[GROUP][0] alternatívne každé [N][1] meranie \nmedzi [MOVE1][2] a [MOVE2][3]"
+        options:
+          GROUP:
+            sprites: Všetko
+            '"ALIEN"': mimozemšťania
+            '"BEAR"': medvede
+            '"CAT"': Mačky
+            '"DOG"': Psy
+            '"DUCK"': kačice
+            '"FROG"': Žaby
+            '"MOOSE"': Moose
+            '"PINEAPPLE"': ananásy
+            '"ROBOT"': Roboti
+            '"SHARK"': Žraloky
+            '"SLOTH"': Slots
+            '"UNICORN"': Jednorožec
+          MOVE1:
+            MOVES.Roll: Body roll
+            MOVES.ClapHigh: Clap vysoká
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Dvojnásobne dole
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Čerstvé
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Hviezda
+            MOVES.ThisOrThat: To alebo to
+            MOVES.Thriller: Zombie
+            MOVES.Rest: Žiadne
+          MOVE2:
+            MOVES.Roll: Body roll
+            MOVES.ClapHigh: Clap vysoká
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Dvojnásobne dole
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Čerstvé
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Hviezda
+            MOVES.ThisOrThat: To alebo to
+            MOVES.Thriller: Zombie
+            MOVES.Rest: Žiadne
+      Dancelab_atTimestamp:
+        text: "po [TIMESTAMP][0] [UNIT][1]"
+        options:
+          UNIT:
+            '"measures"': opatrenia
+            '"seconds"': sekundy
+      Dancelab_atTimestampNotAfter:
+        text: "[TIMESTAMP][0] [UNIT][1]"
+        options:
+          UNIT:
+            '"measures"': opatrenia
+            '"seconds"': sekundy
+      Dancelab_changeColorBy:
+        text: "Zmeniť [farba][0] [metóda][1] [počet][2]"
+        options:
+          METHOD:
+            '"hue"': Hue
+            '"saturation"': saturácia
+            '"brightness"': jasu
+      Dancelab_changeMoveEachLR:
+        text: "[GROUP][0] do [MOVE][1] [DIR][2] navždy"
+        options:
+          GROUP:
+            sprites: Všetko
+            '"ALIEN"': mimozemšťania
+            '"BEAR"': medvede
+            '"CAT"': Mačky
+            '"DOG"': Psy
+            '"DUCK"': kačice
+            '"FROG"': Žaby
+            '"MOOSE"': Moose
+            '"PINEAPPLE"': ananásy
+            '"ROBOT"': Roboti
+            '"SHARK"': Žraloky
+            '"SLOTH"': Slots
+            '"UNICORN"': Jednorožec
+          MOVE:
+            '"next"': "(ďalej)"
+            '"prev"': "(predošlý)"
+            '"rand"': "(náhodné)"
+            MOVES.Roll: Body roll
+            MOVES.ClapHigh: Clap vysoká
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Dvojnásobne dole
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Čerstvé
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Hviezda
+            MOVES.ThisOrThat: To alebo to
+            MOVES.Thriller: Zombie
+            MOVES.Rest: Žiadne
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "[GROUP][0] do [MOVE][1] [DIR][2] navždy"
+        options:
+          GROUP:
+            '"CAT"': Mačky
+            '"SLOTH"': Slots
+          MOVE:
+            MOVES.Roll: Body roll
+            MOVES.ClapHigh: Clap vysoká
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Dvojnásobne dole
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Čerstvé
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Hviezda
+            MOVES.ThisOrThat: To alebo to
+            MOVES.Thriller: Zombie
+            MOVES.Rest: Žiadne
+            '"next"': "(ďalej)"
+            '"prev"': "(predošlý)"
+            '"rand"': "(náhodné)"
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        text: "[SPRITE][0] do [MOVE][1] [DIR][2] navždy"
+        options:
+          MOVE:
+            '"next"': "(ďalej)"
+            '"prev"': "(predošlý)"
+            '"rand"': "(náhodné)"
+            MOVES.Roll: Body roll
+            MOVES.ClapHigh: Clap vysoká
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Dvojnásobne dole
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Čerstvé
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Hviezda
+            MOVES.ThisOrThat: To alebo to
+            MOVES.Thriller: Zombie
+            MOVES.Rest: Žiadne
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changePropBy:
+        text: "zmeniť [SPRITE][0] [PROPERTY][1] [VAL][2]"
+        options:
+          PROPERTY:
+            '"scale"': Veľkosť
+            '"width"': Šírka
+            '"height"': výška
+            '"rotation"': rotácia
+            '"x"': Horizontálna pozícia
+            '"y"': Vertikálna pozícia
+      Dancelab_changePropEachBy:
+        text: "Change [GROUP][0] [PROPERTY][1] by [VAL][2]"
+        options:
+          GROUP:
+            sprites: Všetko
+            '"ALIEN"': mimozemšťania
+            '"BEAR"': medvede
+            '"CAT"': Mačky
+            '"DOG"': Psy
+            '"DUCK"': kačice
+            '"FROG"': Žaby
+            '"MOOSE"': Moose
+            '"PINEAPPLE"': ananásy
+            '"ROBOT"': Roboti
+            '"SHARK"': Žraloky
+            '"SLOTH"': Slots
+            '"UNICORN"': Jednorožec
+          PROPERTY:
+            '"scale"': Veľkosť
+            '"width"': Šírka
+            '"height"': výška
+            '"rotation"': rotácia
+            '"x"': Horizontálna pozícia
+            '"y"': Vertikálna pozícia
+      Dancelab_doMoveEachLR:
+        text: "[GROUP][0] do [MOVE][1] [DIR][2] raz"
+        options:
+          GROUP:
+            sprites: Všetko
+            '"ALIEN"': mimozemšťania
+            '"BEAR"': medvede
+            '"CAT"': Mačky
+            '"DOG"': Psy
+            '"DUCK"': kačice
+            '"FROG"': Žaby
+            '"MOOSE"': Moose
+            '"PINEAPPLE"': ananásy
+            '"ROBOT"': Roboti
+            '"SHARK"': Žraloky
+            '"SLOTH"': Slots
+            '"UNICORN"': Jednorožec
+          MOVE:
+            '"rand"': "(náhodné)"
+            MOVES.XBend: Bend
+            MOVES.Roll: Body roll
+            MOVES.XClapSide: Clap
+            MOVES.ClapHigh: Clap vysoká
+            MOVES.Dab: Dab
+            MOVES.XFever: Disco
+            MOVES.DoubleJam: Dvojnásobne dole
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Čerstvé
+            MOVES.Clown: Gangnam
+            MOVES.XHeadHips: Hlava + Hips
+            MOVES.XHop: Hop
+            MOVES.XHighKick: Kick
+            MOVES.XKnee: Koleno
+            MOVES.XKneel: Kolená
+            MOVES.XOle: Ole.
+            MOVES.XArmsSide: Dosiahnuť
+            MOVES.XSlide: Slide
+            MOVES.Kick: Hviezda
+            MOVES.XArmsUp: Stretch
+            MOVES.ThisOrThat: To alebo to
+            MOVES.Thriller: Zombie
+            MOVES.Rest: Žiadne
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        text: "[SPRITE][0] do [MOVE][1] [DIR][2] raz"
+        options:
+          MOVE:
+            '"rand"': "(náhodné)"
+            MOVES.XBend: Bend
+            MOVES.Roll: Body roll
+            MOVES.XClapSide: Clap
+            MOVES.ClapHigh: Clap vysoká
+            MOVES.Dab: Dab
+            MOVES.XFever: Disco
+            MOVES.DoubleJam: Dvojnásobne dole
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Čerstvé
+            MOVES.Clown: Gangnam
+            MOVES.XHeadHips: Hlava + Hips
+            MOVES.XHop: Hop
+            MOVES.XHighKick: Kick
+            MOVES.XKnee: Koleno
+            MOVES.XKneel: Kolená
+            MOVES.XOle: Ole.
+            MOVES.XArmsSide: Dosiahnuť
+            MOVES.XSlide: Slide
+            MOVES.Kick: Hviezda
+            MOVES.XArmsUp: Stretch
+            MOVES.ThisOrThat: To alebo to
+            MOVES.Thriller: Zombie
+            MOVES.Rest: Žiadne
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_eval:
+        text: "hodnotenie [KÓD][0]"
+      Dancelab_everySeconds:
+        text: 'opakujte každý [N][0] [UNIT][1] '
+        options:
+          UNIT:
+            '"measures"': opatrenia
+            '"seconds"': sekundy
+      Dancelab_everyVerseChorus:
+        text: 'každý [jednotka][0] '
+        options:
+          UNIT:
+            '"verse"': verzia
+            '"chorus"': Chór
+      Dancelab_getEnergy:
+        text: "získať [RANGE][0]"
+        options:
+          RANGE:
+            '"low"': bas
+            '"mid"': stred
+            '"high"': Treble
+      Dancelab_getProp:
+        text: "[SPRITE][0] [PROPERTY][1]"
+        options:
+          PROPERTY:
+            '"scale"': Veľkosť
+            '"width"': Šírka
+            '"height"': výška
+            '"rotation"': rotácia
+            '"x"': Horizontálna pozícia
+            '"y"': Vertikálna pozícia
+            '"tint"': odtieň
+      Dancelab_getTime:
+        text: "aktuálny čas v [UNIT][0]"
+        options:
+          UNIT:
+            '"measures"': opatrenia
+            '"seconds"': sekundy
+      Dancelab_ifDanceIs:
+        text: |-
+          ak [SPRITE][0] robí [TANCE][1]
+           [DO1][2] [DO2][3]
+        options:
+          DANCE:
+            MOVES.ClapHigh: Clap vysoká
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Dvojnásobne dole
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Čerstvé
+            MOVES.Roll: Body roll
+            MOVES.Kick: Hviezda
+            MOVES.ThisOrThat: To alebo to
+            MOVES.Thriller: Zombie
+            MOVES.Rest: Žiadne
+      Dancelab_ifTime:
+        text: |-
+          ak [UNIT][0] je [OP][1] [N][2]
+           [DO1][3] [DO2][4]
+        options:
+          UNIT:
+            '"measures"': opatrenia
+            '"seconds"': sekundy
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
+      Dancelab_jumpTo:
+        text: "[SPRITE][0] skok na [LOCATION][1]"
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": Top
+            "{x: 200, y: 300}": Dole
+            "{x: 100, y: 200}": ľavá
+            "{x: 300, y: 200}": pravda
+            "{x: 200, y: 200}": Centrum
+            "{x: 100, y: 100}": hornej ľavej
+            "{x: 300, y: 100}": vpravo hore
+            "{x: 100, y: 300}": spodnej ľavej
+            "{x: 300, y: 300}": vpravo dole
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": náhodné
+      Dancelab_jumpToEach:
+        text: "skok [skupina][0] na [miesto][1]"
+        options:
+          GROUP:
+            sprites: Všetko
+            '"ALIEN"': mimozemšťania
+            '"BEAR"': medvede
+            '"CAT"': Mačky
+            '"DOG"': Psy
+            '"DUCK"': kačice
+            '"FROG"': Žaby
+            '"MOOSE"': Moose
+            '"PINEAPPLE"': ananásy
+            '"ROBOT"': Roboti
+            '"SHARK"': Žraloky
+            '"SLOTH"': Slots
+            '"UNICORN"': Jednorožec
+          LOCATION:
+            "{x: 200, y: 100}": Top
+            "{x: 200, y: 300}": Dole
+            "{x: 100, y: 200}": ľavá
+            "{x: 300, y: 200}": pravda
+            "{x: 200, y: 200}": Centrum
+            "{x: 100, y: 100}": hornej ľavej
+            "{x: 300, y: 100}": vpravo hore
+            "{x: 100, y: 300}": spodnej ľavej
+            "{x: 300, y: 300}": vpravo dole
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": náhodné
+      Dancelab_layoutSprites:
+        text: "rozloženie [GROUP][0] ako [FORMAT][1]"
+        options:
+          GROUP:
+            sprites: Všetko
+            '"ALIEN"': mimozemšťania
+            '"BEAR"': medvede
+            '"CAT"': Mačky
+            '"DOG"': Psy
+            '"DUCK"': kačice
+            '"FROG"': Žaby
+            '"MOOSE"': Moose
+            '"PINEAPPLE"': ananásy
+            '"ROBOT"': Roboti
+            '"SHARK"': Žraloky
+            '"SLOTH"': Slots
+            '"UNICORN"': Jednorožec
+          FORMAT:
+            '"border"': hranice
+            '"inner"': Vnútri námestia
+            '"diamond"': diamant
+            '"circle"': kruh
+            '"grid"': sieť
+            '"top"': vrchný riadok
+            '"row"': riadok
+            '"bottom"': spodný riadok
+            '"left"': ľavý stĺpec
+            '"column"': stĺpec
+            '"right"': pravý stĺpec
+            '"x"': kríž-kríž
+            '"plus"': plus
+            '"spiral"': špirála
+            '"infinity"': nekonečná čiara
+            '"random"': náhodné
+      Dancelab_makeAnonymousDanceSprite:
+        text: "Vytvorte nový [COSTUME][0] na [LOCATION][1]"
+        options:
+          COSTUME:
+            '"ALIEN"': mimozemšťan
+            '"BEAR"': medveď
+            '"CAT"': mačka
+            '"DOG"': pes
+            '"DUCK"': Duck
+            '"FROG"': Žaby
+            '"MOOSE"': Moose
+            '"PINEAPPLE"': ananás
+            '"ROBOT"': Robot
+            '"SHARK"': Žralok
+            '"SLOTH"': Sloth
+            '"UNICORN"': Jednorožec
+          LOCATION:
+            "{x: 200, y: 100}": Top
+            "{x: 200, y: 300}": Dole
+            "{x: 100, y: 200}": ľavá
+            "{x: 300, y: 200}": pravda
+            "{x: 200, y: 200}": Centrum
+            "{x: 100, y: 100}": hornej ľavej
+            "{x: 300, y: 100}": vpravo hore
+            "{x: 100, y: 300}": spodnej ľavej
+            "{x: 300, y: 300}": vpravo dole
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": náhodné
+      Dancelab_makeNewDanceSprite:
+        text: |-
+          Vytvorenie nového kostýmu [0]
+           nazývané [NAME][1] v [LOCATION][2]
+        options:
+          COSTUME:
+            '"ALIEN"': mimozemšťan
+            '"BEAR"': medveď
+            '"CAT"': mačka
+            '"DOG"': pes
+            '"DUCK"': Duck
+            '"FROG"': Žaby
+            '"MOOSE"': Moose
+            '"PINEAPPLE"': ananás
+            '"ROBOT"': Robot
+            '"SHARK"': Žralok
+            '"SLOTH"': Sloth
+            '"UNICORN"': Jednorožec
+          LOCATION:
+            "{x: 200, y: 100}": Top
+            "{x: 200, y: 300}": Dole
+            "{x: 100, y: 200}": ľavá
+            "{x: 300, y: 200}": pravda
+            "{x: 200, y: 200}": Centrum
+            "{x: 100, y: 100}": hornej ľavej
+            "{x: 300, y: 100}": vpravo hore
+            "{x: 100, y: 300}": spodnej ľavej
+            "{x: 300, y: 300}": vpravo dole
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": náhodné
+      Dancelab_makeNewDanceSpriteGroup:
+        text: |-
+          Make [N][0] new [KOSTÝM][1]
+           v [LAYOUT][2]
+        options:
+          'N':
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
+          COSTUME:
+            '"ALIEN"': mimozemšťania
+            '"BEAR"': medvede
+            '"CAT"': Mačky
+            '"DOG"': Psy
+            '"DUCK"': kačice
+            '"FROG"': Žaby
+            '"MOOSE"': Moose
+            '"PINEAPPLE"': ananásy
+            '"ROBOT"': Roboti
+            '"SHARK"': Žraloky
+            '"SLOTH"': Slots
+            '"UNICORN"': Jednorožec
+          LAYOUT:
+            '"border"': hranice
+            '"inner"': Vnútri námestia
+            '"diamond"': diamant
+            '"circle"': kruh
+            '"grid"': sieť
+            '"top"': vrchný riadok
+            '"row"': riadok
+            '"bottom"': spodný riadok
+            '"left"': ľavý stĺpec
+            '"column"': stĺpec
+            '"right"': pravý stĺpec
+            '"x"': kríž-kríž
+            '"plus"': plus
+            '"spiral"': špirála
+            '"infinity"': nekonečná čiara
+            '"random"': náhodné
+      Dancelab_mixColors:
+        text: "mix [COLOR1][0] a [COLOR2][1]"
+      Dancelab_nMeasures:
+        text: "[N][0] opatrenia"
+      Dancelab_onPointerDown:
+        text: Poinštrovať dole
+      Dancelab_onPointerDrag:
+        text: Poinštalovať Drag
+      Dancelab_onPointerUp:
+        text: Poinštrovať nahor
+      Dancelab_randomColor:
+        text: Náhodné farby
+      Dancelab_setBackground:
+        text: "nastaviť farbu pozadia [farba][0]"
+      Dancelab_setBackgroundEffect:
+        text: |-
+          nastaviť efekt pozadia
+          [EFFECT][0] [PALETTE][1]
+        options:
+          EFFECT:
+            '"none"': Žiadne
+            ? "['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]"
+            : "(náhodné)"
+            '"circles"': Kruhy
+            '"color_cycle"': Farby
+            '"diamonds"': Diamanty
+            '"disco_ball"': Disco lopta
+            '"fireworks"': Fireworks
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoscope
+            '"lasers"': Laserová tanečná podlaha
+            '"splatter"': Paint Splatter
+            '"rainbow"': Rainbow
+            '"snowflakes"': Sneh
+            '"text"': Názvy piesní
+            '"galaxy"': Vesmír
+            '"sparkles"': Sparkles
+            '"spiral"': Spirála
+            '"disco"': Štvorce
+            '"stars"': Hviezdy
+          PALETTE:
+            '"rave"': Čierna a biela
+            '"cool"': Cool
+            '"electronic"': Elektronické
+            '"iceCream"': zmrzlina
+            '"default"': Svetlo
+            '"neon"': Neón
+            '"tropical"': Tropické
+            '"vintage"': Vintage
+            '"warm"': Teplo
+      Dancelab_setBackgroundEffectWithPalette:
+        text: |-
+          nastaviť efekt pozadia
+          [PALETTE][0] [EFEKT][1]
+        options:
+          EFFECT:
+            '"none"': Žiadne
+            '"rand"': "(náhodné)"
+            '"circles"': Kruhy
+            '"quads"': Uhol
+            '"color_cycle"': Farby
+            '"diamonds"': Diamanty
+            '"disco_ball"': Disco lopta
+            '"fireworks"': Fireworks
+            '"flowers"': Kvety
+            '"growing_stars"': Rastúce hviezdy
+            '"higher_power"': Vyššia moc
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoscope
+            '"lasers"': Laserová tanečná podlaha
+            '"splatter"': Paint Splatter
+            '"rainbow"': Rainbow
+            '"ripples_random"': Náhodné Ripples
+            '"ripples"': Ripples
+            '"snowflakes"': Sneh
+            '"text"': Názvy piesní
+            '"squiggles"': Squiggles
+            '"galaxy"': Vesmír
+            '"sparkles"': Sparkles
+            '"spiral"': Spirála
+            '"disco"': Štvorce
+            '"stars"': Hviezdy
+            '"music_wave"': Vlny
+          PALETTE:
+            '"rave"': Čierna a biela
+            '"cool"': Cool
+            '"electronic"': Elektronické
+            '"iceCream"': zmrzlina
+            '"default"': Svetlo
+            '"neon"': Neón
+            '"tropical"': Tropické
+            '"vintage"': Vintage
+            '"warm"': Teplo
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          nastaviť efekt pozadia
+          [PALETTE][0] [EFEKT][1]
+        options:
+          EFFECT:
+            '"none"': Žiadne
+            '"rand"': "(náhodné)"
+            '"quads"': Uhol
+            '"blooming_petals"': Kvitnúce päty
+            '"circles"': Kruhy
+            '"clouds"': Oblačky
+            '"color_cycle"': Farby
+            '"diamonds"': Diamanty
+            '"disco_ball"': Disco lopta
+            '"fireworks"': Fireworks
+            '"flowers"': Kvety
+            '"frosted_grid"': Frostová sieť
+            '"growing_stars"': Rastúce hviezdy
+            '"higher_power"': Vyššia moc
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoscope
+            '"lasers"': Laserová tanečná podlaha
+            '"splatter"': Paint Splatter
+            '"rainbow"': Rainbow
+            '"ripples_random"': Náhodné Ripples
+            '"ripples"': Ripples
+            '"snowflakes"': Sneh
+            '"text"': Názvy piesní
+            '"galaxy"': Vesmír
+            '"sparkles"': Sparkles
+            '"spiral"': Spirála
+            '"disco"': Štvorce
+            '"squiggles"': Squiggles
+            '"starburst"': Starburst
+            '"stars"': Hviezdy
+            '"music_wave"': Vlny
+          PALETTE:
+            '"autumn"': Jeseň
+            '"rave"': Čierna a biela
+            '"cool"': Cool
+            '"electronic"': Elektronické
+            '"grayscale"': Grayscale
+            '"iceCream"': zmrzlina
+            '"default"': Svetlo
+            '"neon"': Neón
+            '"ocean"': Oceán
+            '"rainbow"': Rainbow
+            '"roses"': Ruže
+            '"sky"': Sky
+            '"spring"': Jar
+            '"summer"': Summer
+            '"sunrise"': Východ slnka
+            '"sunset"': Západ slnka
+            '"tropical"': Tropické
+            '"twinkling"': Twinkle
+            '"vintage"': Vintage
+            '"warm"': Teplo
+            '"winter"': Zima
+      Dancelab_setDanceSpeed:
+        text: "nastaviť [SPRITE][0] tancovaciu rýchlosť na [SPEED][1]"
+        options:
+          SPEED:
+            '1': normálne
+            '2': Rýchlo
+            '4': Veľmi rýchlo
+            '0.5': pomaly
+            '0.25': Veľmi pomaly
+      Dancelab_setDanceSpeedEach:
+        text: "nastaviť [GROUP][0] tancovaciu rýchlosť na [SPEED][1]"
+        options:
+          GROUP:
+            sprites: Všetko
+            '"ALIEN"': mimozemšťania
+            '"BEAR"': medvede
+            '"CAT"': Mačky
+            '"DOG"': Psy
+            '"DUCK"': kačice
+            '"FROG"': Žaby
+            '"MOOSE"': Moose
+            '"PINEAPPLE"': ananásy
+            '"ROBOT"': Roboti
+            '"SHARK"': Žraloky
+            '"SLOTH"': Slots
+            '"UNICORN"': Jednorožec
+          SPEED:
+            '1': normálne
+            '2': Rýchlo
+            '4': Veľmi rýchlo
+            '0.5': pomaly
+            '0.25': Veľmi pomaly
+      Dancelab_setForegroundEffect:
+        text: "nastaviť efekt vpredu [EFFECT][0]"
+        options:
+          EFFECT:
+            '"none"': Žiadne
+            ? "['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]"
+            : "(náhodné)"
+            '"bubbles"': Bubliny
+            '"confetti"': Konfety
+            '"hearts_red"': Srdce
+            '"music_notes"': Hudobné poznámky
+            '"pineapples"': Ananásy
+            '"pizzas"': Pizza
+            '"smiling_poop"': Poop
+            '"rain"': Dážď
+            '"floating_rainbows"': Rainbows
+            '"smile_face"': Úsmev
+            '"spotlight"': Spotlight
+            '"color_lights"': Stage svetlá
+            '"raining_tacos"': Tacos
+      Dancelab_setForegroundEffectExtended:
+        text: "nastaviť efekt vpredu [EFFECT][0]"
+        options:
+          EFFECT:
+            '"none"': Žiadne
+            '"rand"': "(náhodné)"
+            '"bubbles"': Bubliny
+            '"hearts_colorful"': Farebné srdcia
+            '"confetti"': Konfety
+            '"emojis"': Emojis
+            '"hearts_red"': Srdce
+            '"music_notes"': Hudobné poznámky
+            '"paint_drip"': Farba kvapka
+            '"pineapples"': Ananásy
+            '"pizzas"': Pizza
+            '"smiling_poop"': Poop
+            '"rain"': Dážď
+            '"floating_rainbows"': Rainbows
+            '"smile_face"': Úsmev
+            '"spotlight"': Spotlight
+            '"color_lights"': Stage svetlá
+            '"exploding_stars"': Starburst
+            '"raining_tacos"': Tacos
+      Dancelab_setProp:
+        text: 'nastaviť [SPRITE][0] [PROPERTY][1] na [VAL][2] '
+        options:
+          PROPERTY:
+            '"scale"': Veľkosť
+            '"width"': Šírka
+            '"height"': výška
+            '"rotation"': rotácia
+            '"x"': Horizontálna pozícia
+            '"y"': Vertikálna pozícia
+      Dancelab_setPropEach:
+        text: "nastaviť [GROUP][0] [PROPERTY][1] na [VAL][2]"
+        options:
+          GROUP:
+            sprites: Všetko
+            '"ALIEN"': mimozemšťania
+            '"BEAR"': medvede
+            '"CAT"': Mačky
+            '"DOG"': Psy
+            '"DUCK"': kačice
+            '"FROG"': Žaby
+            '"MOOSE"': Moose
+            '"PINEAPPLE"': ananásy
+            '"ROBOT"': Roboti
+            '"SHARK"': Žraloky
+            '"SLOTH"': Slots
+            '"UNICORN"': Jednorožec
+          PROPERTY:
+            '"scale"': Veľkosť
+            '"width"': Šírka
+            '"height"': výška
+            '"rotation"': rotácia
+            '"x"': Horizontálna pozícia
+            '"y"': Vertikálna pozícia
+            '"tint"': odtieň
+      Dancelab_setPropRandom:
+        text: "náhodné [SPRITE][0] [PROPERTY][1]"
+        options:
+          PROPERTY:
+            '"scale"': Veľkosť
+            '"width"': Šírka
+            '"height"': výška
+            '"rotation"': rotácia
+            '"x"': Horizontálna pozícia
+            '"y"': Vertikálna pozícia
+            '"tint"': odtieň
+      Dancelab_setPropRandomEach:
+        text: "náhodné [GROUP][0] [PROPERTY][1]"
+        options:
+          GROUP:
+            sprites: Všetko
+            '"ALIEN"': mimozemšťania
+            '"BEAR"': medvede
+            '"CAT"': Mačky
+            '"DOG"': Psy
+            '"DUCK"': kačice
+            '"FROG"': Žaby
+            '"MOOSE"': Moose
+            '"PINEAPPLE"': ananásy
+            '"ROBOT"': Roboti
+            '"SHARK"': Žraloky
+            '"SLOTH"': Slots
+            '"UNICORN"': Jednorožec
+          PROPERTY:
+            '"scale"': Veľkosť
+            '"width"': Šírka
+            '"height"': výška
+            '"rotation"': rotácia
+            '"x"': Horizontálna pozícia
+            '"y"': Vertikálna pozícia
+            '"tint"': odtieň
+      Dancelab_setTint:
+        text: "nastaviť [SPRITE][0] odtieň na [VAL][1]"
+      Dancelab_setTintEach:
+        text: "nastaviť [TOTO][0] odtieň na [VAL][1]"
+        options:
+          THIS:
+            sprites: Všetko
+            '"ALIEN"': mimozemšťania
+            '"BEAR"': medvede
+            '"CAT"': Mačky
+            '"DOG"': Psy
+            '"DUCK"': kačice
+            '"FROG"': Žaby
+            '"MOOSE"': Moose
+            '"PINEAPPLE"': ananásy
+            '"ROBOT"': Roboti
+            '"SHARK"': Žraloky
+            '"SLOTH"': Slots
+            '"UNICORN"': Jednorožec
+      Dancelab_setTintEachInline:
+        text: "nastaviť [TOTO][0] odtieň na [VAL][1]"
+        options:
+          THIS:
+            sprites: Všetko
+            '"ALIEN"': mimozemšťania
+            '"BEAR"': medvede
+            '"CAT"': Mačky
+            '"DOG"': Psy
+            '"DUCK"': kačice
+            '"FROG"': Žaby
+            '"MOOSE"': Moose
+            '"PINEAPPLE"': ananásy
+            '"ROBOT"': Roboti
+            '"SHARK"': Žraloky
+            '"SLOTH"': Slots
+            '"UNICORN"': Jednorožec
+      Dancelab_setTintInline:
+        text: "nastaviť [SPRITE][0] odtieň na [VAL][1]"
+      Dancelab_setVisible:
+        text: "nastaviť [SPRITE][0] viditeľné na [VISIBILITY][1]"
+        options:
+          VISIBILITY:
+            'true': Viditeľné
+            'false': Neviditeľné
+      Dancelab_setVisibleEach:
+        text: "nastaviť [THIS][0] viditeľnosť na [VISIBILITY][1]"
+        options:
+          THIS:
+            sprites: Všetko
+            '"ALIEN"': mimozemšťania
+            '"BEAR"': medvede
+            '"CAT"': Mačky
+            '"DOG"': Psy
+            '"DUCK"': kačice
+            '"FROG"': Žaby
+            '"MOOSE"': Moose
+            '"PINEAPPLE"': ananásy
+            '"ROBOT"': Roboti
+            '"SHARK"': Žraloky
+            '"SLOTH"': Slots
+            '"UNICORN"': Jednorožec
+          VISIBILITY:
+            'true': Viditeľné
+            'false': Neviditeľné
+      Dancelab_startMapping:
+        text: "[SPRITE][0] začína [PROPERTY][1] po [RANGE][2]"
+        options:
+          PROPERTY:
+            '"scale"': Veľkosť
+            '"width"': Šírka
+            '"height"': výška
+            '"rotation"': rotácia
+            '"x"': Horizontálna pozícia
+            '"y"': Vertikálna pozícia
+            '"tint"': odtieň
+          RANGE:
+            '"bass"': bas
+            '"mid"': stred
+            '"treble"': Treble
+      Dancelab_startMappingEach:
+        text: "[GROUP][0] začnite [PROPERTY][1] po [RANGE][2]"
+        options:
+          GROUP:
+            sprites: Všetko
+            '"ALIEN"': mimozemšťania
+            '"BEAR"': medvede
+            '"CAT"': Mačky
+            '"DOG"': Psy
+            '"DUCK"': kačice
+            '"FROG"': Žaby
+            '"MOOSE"': Moose
+            '"PINEAPPLE"': ananásy
+            '"ROBOT"': Roboti
+            '"SHARK"': Žraloky
+            '"SLOTH"': Slots
+            '"UNICORN"': Jednorožec
+          PROPERTY:
+            '"scale"': Veľkosť
+            '"width"': Šírka
+            '"height"': výška
+            '"rotation"': rotácia
+            '"x"': Horizontálna pozícia
+            '"y"': Vertikálna pozícia
+            '"tint"': odtieň
+          RANGE:
+            '"bass"': bas
+            '"mid"': stred
+            '"treble"': Treble
+      Dancelab_stopMapping:
+        text: "[SPRITE][0] zastaví [PROPERTY][1] po [RANGE][2]"
+        options:
+          PROPERTY:
+            '"scale"': Veľkosť
+            '"width"': Šírka
+            '"height"': výška
+            '"rotation"': rotácia
+            '"x"': Horizontálna pozícia
+            '"y"': Vertikálna pozícia
+            '"direction"': smer pohybu
+            '"tint"': odtieň
+          RANGE:
+            '"bass"': bas
+            '"mid"': stred
+            '"treble"': Treble
+      Dancelab_stopMappingEach:
+        text: "[GROUP][0] stop [PROPERTY][1] po [RANGE][2]"
+        options:
+          GROUP:
+            sprites: Všetko
+            '"ALIEN"': mimozemšťania
+            '"BEAR"': medvede
+            '"CAT"': Mačky
+            '"DOG"': Psy
+            '"DUCK"': kačice
+            '"FROG"': Žaby
+            '"MOOSE"': Moose
+            '"PINEAPPLE"': ananásy
+            '"ROBOT"': Roboti
+            '"SHARK"': Žraloky
+            '"SLOTH"': Slots
+            '"UNICORN"': Jednorožec
+          PROPERTY:
+            '"scale"': Veľkosť
+            '"width"': Šírka
+            '"height"': výška
+            '"rotation"': rotácia
+            '"x"': Horizontálna pozícia
+            '"y"': Vertikálna pozícia
+            '"direction"': smer pohybu
+            '"tint"': odtieň
+          RANGE:
+            '"bass"': bas
+            '"mid"': stred
+            '"treble"': Treble
+      Dancelab_translateStrings:
+        text: "Preložiť [STRING][0]"
+        options:
+          STRING:
+            '"music_wave"': Vlny
+            '"ripples"': Ripples
+            '"ripples_random"': Náhodné Ripples
+            '"quads"': Uhol
+            '"flowers"': Kvety
+            '"popsicles"': Popsicles
+            '"squiggles"': Squiggles
+            '"growing_stars"': Rastúce hviezdy
+            '"emojis"': Emojis
+            '"hearts_colorful"': Srdce
+            '"paint_drio"': Farba kvapka
+            '"exploding_stars"': Starburst
+            '"row_top"': vrchný riadok
+            '"row_bottom"': spodný riadok
+            '"column_left"': ľavý stĺpec
+            '"column_right"': pravý stĺpec
+            '"diamond"': diamant
+            '"mural"': Mural
+            '"safari"': Safari
+            '"network"': Sieť
+            '"highway"': diaľnica
+            '"stream"': Stream
+            '"tile"': dlaždice
+            '"shadow"': Tieň
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
+      Dancelab_whenKey:
+        text: "keď [KLÁČ][0] stlačený"
+        options:
+          KEY:
+            '"up"': up
+            '"left"': ľavá
+            '"down"': dole
+            '"right"': pravda
+            '"space"': vesmír
+            '"enter"': Vstúpiť
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
+      Dancelab_whenPeak:
+        text: "keď [RANGE][0] vrchol"
+        options:
+          RANGE:
+            '0': bas
+            '1': stred
+            '2': Treble
+      Dancelab_whenSetup:
+        text: nastavenia
+      Dancelab_whenSetup2:
+        text: nastavenia
+      Dancelab_whenSetupSong:
+        text: 'Nastavenie [Piesne][0] '
+        options:
+          SONG:
+            '"macklemore90"': Macklemore - Nemôžem nás držať
+            '"hammer"': "MC Hammer - You Can't Touch This"
+            '"peas"': The Black Eyed Peas - Mám pocit
+      DansBlocks_borderGPT:
+        text: "Vytvorenie okraja [OPIS][0]"
+      DansBlocks_getMicroscope:
+        text: "Mikroskop má [INPUT1][0]"
+        options:
+          INPUT1:
+            '1': Citrónová šťava
+            '3': Soda na pečenie
+            '5': Obe.
+      DansBlocks_gravity_test:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            new Behavior(fall_gravity_behavior, []): Fall_Gravity
+      DansBlocks_jump_gravity:
+        text: "urobiť [SPRITE][0] skok"
+      DansBlocks_setForegroundEffect2:
+        text: "[Nepoužívajte] do [EFFECT][0] efekt"
+        options:
+          EFFECT:
+            '"bubbles"': bubliny
+            '"confetti"': konfety
+            '"hearts"': Srdce
+            '"emojis"': šťastné emojis
+            '"rain"': Dážď
+            '"starburst"': Starburst
+            '"glass"': Rozbité sklo
+            '"twinkling"': Twinkle
+      DansBlocks_setMicroscope:
+        text: "Nastaviť mikroskop na [INPUT1][0]"
+        options:
+          INPUT1:
+            '1': Citrónová šťava
+            '3': Soda na pečenie
+            '5': Obe.
+      DansBlocks_testRectangle:
+        text: 'Vytvorte obdĺžnik x: [X][0] y: [Y][1] w: [W][2] h: [H][3] farba: [Farba][4]'
+      DansBlocks_testShowVariable:
+        text: 'Zobraziť toto číslo: [SOMENUMBER][0] vo veľkosti [SOMESIZE][1] vo farbe [COLOR][2]'
+        options:
+          OPT:
+            '"large"': Veľký
+            '"small"': Malé
+          COLOR:
+            '"blue"': modrá
+            '"red"': červená
+      FunctionBlocks_addEightBlock:
+        text: pridanie
+      FunctionBlocks_addFiveBlock:
+        text: addFive
+      FunctionBlocks_addFourBlock:
+        text: addFour
+      FunctionBlocks_addNineBlock:
+        text: addNine
+      FunctionBlocks_addOneBlock:
+        text: addOne
+      FunctionBlocks_addSevenBlock:
+        text: addSeven
+      FunctionBlocks_addSixBlock:
+        text: addSix
+      FunctionBlocks_addThreeBlock:
+        text: pridanie tri
+      FunctionBlocks_addTwoBlock:
+        text: addTwo
+      FunctionBlocks_communicate:
+        text: "Komunikácia [VAR1][0] s [SPRITE1COSTUME][1]"
+      FunctionBlocks_makeManipulative2:
+        text: "Make [NUM][0] new [ANIMATION_NAME][1] sprites [BEHAVIOR][2]"
+      FunctionBlocks_representManipulative:
+        text: "predstavuje [NUM][0] nové [ANIMATION_NAME][1] sprites"
+      FunctionBlocks_representManipulative_test:
+        text: "[testing] predstavuje [NUM][0] nové [ANIMATION_NAME][1] sprites"
+      FunctionBlocks_spriteSayVar:
+        text: "[SPRITE][0]say[TEXT1][1]"
+      GameDev_collide:
+        text: "kolízie [SPRITE][0] [INTERAKCIA][1] [CEL][2]"
+        options:
+          INTERACTION:
+            '"bounceOff"': Bounce off
+            '"bounce"': bumps
+            '"collide"': Je blokovaný
+            '"displace"': tlačí
+      GameDev_getVelocity:
+        text: "[SPRITE][0] [PROPERTY][1]"
+        options:
+          PROPERTY:
+            '"velocityX"': Horizontálna rýchlosť
+            '"velocityY"': Vertikálna rýchlosť
+      GameDev_gravity:
+        text: "[SPRITE][0] padá s [VELOCITY][1] gravitácia"
+        options:
+          VELOCITY:
+            "-0.25": nízka
+            "-0.5": Stredná
+            "-1": Vysoká
+      GameDev_playSoundOptions:
+        text: "prehrávanie zvuku [ZVUK][0]"
+        options:
+          SOUND:
+            "'sound://category_digital/boing_2.mp3'": Boing
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": Bublina
+            "'sound://category_collect/clicky_crunch.mp3'": Crunch
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": harfa
+            "'sound://category_digital/jump_7.mp3'": skákať
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": Magické kúzlo
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": Pop
+            "'sound://category_transition/star_dust_particle_10.mp3'": Star prach
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": tonálny hit
+            "'sound://category_collect/trill_stings.mp3'": trill
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": twinkle
+      GameDev_playerJump:
+        text: "aby hráč urobil [STRENGTH][0] skok"
+        options:
+          STRENGTH:
+            '10': Malé
+            '13': Stredná
+            '17': Veľký
+      GameDev_removeGroup:
+        text: "nastaviť [SPRITE][0] typ na [GROUP][1]"
+        options:
+          GROUP:
+            '"players"': Hráči
+            '"walls"': životné prostredie
+      GameDev_setGroup:
+        text: "nastaviť [SPRITE][0] typ na [GROUP][1]"
+        options:
+          GROUP:
+            '"players"': Hráči
+            '"walls"': životné prostredie
+      GameDev_setVelocity:
+        text: "nastaviť [SPRITE][0] [PROPERTY][1] na [HODNOTU][2]"
+        options:
+          PROPERTY:
+            '"velocityX"': Horizontálna rýchlosť
+            '"velocityY"': Vertikálna rýchlosť
+      GameDev_spriteType:
+        text: "[GROUP][0]"
+        options:
+          GROUP:
+            '"players"': Hráči
+            '"walls"': životné prostredie
+      gamelab_addBehaviorSimple:
+        text: "sprite [sprite][0] začína [behavior][1]"
+      gamelab_addTarget:
+        text: "[SPRITE][0] dostane cieľ [TARGET][1] na [OPT][2]"
+        options:
+          OPT:
+            '"follow"': nasledovať
+            '"avoid"': vyhnúť
+      gamelab_allSpritesWithAnimation:
+        text: "[ANIMÁCIA][0]"
+      gamelab_atTime:
+        text: "pri [N][0] [UNIT][1]"
+        options:
+          UNIT:
+            '"seconds"': sekundy
+            '"frames"': rámy
+      gamelab_avoidingTargets:
+        text: Vyhýbanie sa cieľom
+      gamelab_beginCollectingData:
+        text: "začnite zbierať údaje [BREAK][0] hodnota [VALUE][1] s označením [LABEL][2]"
+      gamelab_behaviorPicker:
+        text: "[BEHAVIOR][0]"
+      gamelab_bitmap:
+        text: "[GRID][0]"
+      gamelab_bounceOff:
+        text: "[SPRITE][0] odbočí [TARGET][1]"
+      gamelab_changePropBy:
+        text: "zmeniť [SPRITE][0] [PROPERTY][1] [VAL][2]"
+        options:
+          PROPERTY:
+            '"scale"': Veľkosť
+            '"rotation"': rotácia
+            '"x"': X pozícia
+            '"y"': Y pozícia
+            '"direction"': smer pohybu
+            '"speed"': Rýchlosť
+      gamelab_checkTouching:
+        text: "[CONDITION][0] [SPRITE1][1] dotýka sa [SPRITE2][2]"
+        options:
+          CONDITION:
+            '"when"': kedy
+            '"while"': Kým
+      gamelab_clickedOn:
+        text: "keď [SPRITE][0] kliknete"
+      gamelab_clickedSpritePointer:
+        text: "[SPRITE][0]"
+      gamelab_collectibleBehaviors:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): Spinning vpravo
+            new Behavior(spinning_left, []): Spinning vľavo
+            new Behavior(fluttering, []): fluttering
+            new Behavior(jittering, []): jittering
+            new Behavior(wobbling, []): Wobbling
+            new Behavior(wandering, []): putovanie
+            new Behavior(patrolling, []): Patrola
+            new Behavior(moving_west_and_looping, []): Pohyb na západ a prechádzka
+            new Behavior(moving_east_and_looping, []): Pohyb na východ a prechádzka
+            new Behavior(moving_north_and_looping, []): Pohybujú sa na sever a krútia
+            new Behavior(moving_south_and_looping, []): pohybujúce sa na juh a looping
+      gamelab_comment:
+        text: 'Komentár: [Komentár][0]'
+      gamelab_costumeImage:
+        text: "[COSTUME][0]"
+      gamelab_countByAnimation:
+        text: "počet [Sprite][0]"
+      gamelab_createNewSprite:
+        text: "Vytvorenie nového spritu \n názov [NAME][0] \n Oblečenie [Oblečenie] [1] \n [Umiestnenie] [2]"
+      gamelab_destroy:
+        text: "odstrániť [TOTO][0]"
+      gamelab_draggable:
+        text: byť drahý
+      gamelab_drawLine:
+        text: "kreslenie línie [farba][0] [LOC1][1] [LOC2][2]"
+      gamelab_edgesDisplace:
+        text: "okraje blok [SPRITE][0] z pohybu"
+      gamelab_everyInterval:
+        text: 'opakujte každý [N][0] [UNIT][1] '
+        options:
+          UNIT:
+            '"seconds"': sekundy
+            '"frames"': rámy
+      gamelab_followingTargets:
+        text: Nasledujúce ciele
+      gamelab_getAllSprites:
+        text: všetky sprites
+      gamelab_getCostume:
+        text: "Sprites s kostýmom [Sprite][0]"
+      gamelab_getProp:
+        text: "[SPRITE][0] [PROPERTY][1]"
+        options:
+          PROPERTY:
+            '"scale"': Veľkosť
+            '"rotation"': rotácia
+            '"x"': X pozícia
+            '"y"': Y pozícia
+            '"direction"': smer pohybu
+            '"tint"': odtieň
+            '"speed"': Rýchlosť
+      gamelab_getThisSprite:
+        text: "[VÝBER][0] sprite"
+        options:
+          CHOICE:
+            '"this"': Toto
+            '"other"': Ostatné
+      gamelab_getTime:
+        text: "Čas v [UNIT][0]"
+        options:
+          UNIT:
+            '"seconds"': sekundy
+            '"frames"': rámy
+      gamelab_glideTo:
+        text: "[SPRITE][0] prejdite na [LOKÁCIA][1]"
+      gamelab_hideTitleScreen:
+        text: Skryť názov obrazovky
+      gamelab_hideVariable:
+        text: "skrytá premenná [VAR][0]"
+      gamelab_ifVarEquals:
+        text: |-
+          ak [NUM][0] = [VAL][1]
+          [STATEMENT][2]
+      gamelab_int10:
+        text: "[VALUE][0]"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      gamelab_isCostumeEqual:
+        text: "[SPRITE][0] Kostým je [KOSTÝM][1]"
+      gamelab_isKeyPressed:
+        text: "[KLÁČ] [0] je stlačený"
+        options:
+          KEY:
+            '"up"': up
+            '"down"': dole
+            '"left"': ľavá
+            '"right"': pravda
+            '"space"': vesmír
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
+      gamelab_isTouchingEdges:
+        text: "[SPRITE][0] sa dotýka okrajov"
+      gamelab_isTouchingSprite:
+        text: "[SPRITE][0] sa dotýka [TARGET][1]"
+      gamelab_jumpTo:
+        text: "[SPRITE][0] skok na [LOCATION][1]"
+      gamelab_keyPressed:
+        text: "[CONDITION][0] [KLÁČ][1] stlačený"
+        options:
+          CONDITION:
+            '"when"': kedy
+            '"while"': Kým
+          KEY:
+            '"up"': up
+            '"down"': dole
+            '"left"': ľavá
+            '"right"': pravda
+            '"space"': vesmír
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
+      gamelab_layoutGrid:
+        text: Layout sprites ako sieť
+      gamelab_layoutSprites:
+        text: "rozloženie [GROUP][0] ako [FORMAT][1]"
+        options:
+          FORMAT:
+            '"border"': hranice
+            '"circle"': kruh
+            '"grid"': sieť
+            '"top"': vrchný riadok
+            '"row"': riadok
+            '"bottom"': spodný riadok
+            '"left"': ľavý stĺpec
+            '"column"': stĺpec
+            '"right"': pravý stĺpec
+      gamelab_locationAt:
+        text: 'umiestnenie x: [X][0] y: [Y][1]'
+      gamelab_locationModifier:
+        text: "[VZDALENOSŤ][0] pixely [ÚVOD][1] [LOKÁCIA][2]"
+        options:
+          DIRECTION:
+            '"North"': Sever
+            '"East"': Východ
+            '"South"': Južná
+            '"West"': Západ
+      gamelab_locationMouse:
+        text: umiestnenie myši
+      gamelab_locationOf:
+        text: "umiestnenie [SPRITE][0]"
+      gamelab_location_picker:
+        text: "[LOCATION][0]"
+      gamelab_makeBurst:
+        text: "vytvoriť efekt [EFFECT][0] s efektom [NUM][1] [ANIMATION_NAME][2]"
+        options:
+          EFFECT:
+            '"burst"': Burst
+            '"pop"': Pop
+            '"rain"': Dážď
+            '"spiral"': špirála
+      gamelab_makeNewSpriteAnon:
+        text: "Vytvorenie nového [ANIMATION_NAME][0] sprite na [LOCATION][1]"
+      gamelab_makeNewSpriteGroup:
+        text: "Vytvorte [N][0] novú [GROUP][1] v [FORMATE][2]"
+        options:
+          FORMAT:
+            '"border"': hranice
+            '"circle"': kruh
+            '"grid"': sieť
+            '"top"': vrchný riadok
+            '"row"': riadok
+            '"bottom"': spodný riadok
+            '"left"': ľavý stĺpec
+            '"column"': stĺpec
+            '"right"': pravý stĺpec
+      gamelab_makeNumSprites:
+        text: "vytvárať [NUM][0] nové [ANIMATION_NAME][1] sprity"
+      gamelab_makeNumSpritesNear:
+        text: "[NUM][0] nové [ANIMATION_NAME][1] sprites v blízkosti [LOCATION][2]"
+      gamelab_makeProjectile:
+        text: "Vytvorenie projektilu \n[ANIMATION_NAME][0] z [LOCATION][1] s rýchlosťou [SPEED][2] smerom [DIRECTION][3]"
+        options:
+          DIRECTION:
+            '0': pravda
+            '90': dole
+            '180': ľavá
+            '270': up
+      gamelab_makeSpritesGrid:
+        text: 'Make [ANIMATION_NAME][0] sprites pomocou mriežky: [GRID][1]'
+      gamelab_makeSpritesGridInput:
+        text: "urobiť [ANIMATION_NAME][0] sprites pomocou mriežky [GRID][1]"
+      gamelab_makeSpritesWithSize:
+        text: "Make [NUM][0] new [SIZE][1] [COSTUME][2] sprites"
+        options:
+          SIZE:
+            '30': Malé
+            '50': Stredná
+            '100': Veľký
+      gamelab_mirrorSprite:
+        text: "[SPRITE][0] tvár [Smer][1]"
+        options:
+          DIRECTION:
+            '"right"': pravda
+            '"left"': ľavá
+      gamelab_mouseLocation:
+        text: umiestnenie myši
+      gamelab_moveBackward:
+        text: "pohyb [SPRITE][0] [DISTANCE][1] pixelov dozadu"
+      gamelab_moveForward:
+        text: "pohyb [SPRITE][0] [DISTANCE][1] pixelov dopredu"
+      gamelab_moveInDirection:
+        text: "pohyb [SPRITE][0] [DISTANCE][1] pixely [DIREKCIA][2]"
+        options:
+          DIRECTION:
+            '"North"': Sever
+            '"East"': Východ
+            '"South"': Južná
+            '"West"': Západ
+      gamelab_moveToward:
+        text: "pohyb [SPRITE][0] pixelov [DISTANCE][1] smerom k [TARGET][2]"
+      gamelab_newSpritePointer:
+        text: "[SPRITE][0]"
+      gamelab_objectSpritePointer:
+        text: "[SPRITE][0]"
+      gamelab_patrollingUpDown:
+        text: Patrola hore a dole
+      gamelab_playSound:
+        text: "prehrávanie zvuku [ZVUK][0]"
+      gamelab_playSoundOptions:
+        text: "prehrávanie zvuku [ZVUK][0]"
+        options:
+          SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": prízvuk
+            "'sound://category_digital/boing_2.mp3'": Boing
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": Pop
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": twinkle
+            "'sound://category_app/app_button_1.mp3'": Tlačidlo
+            "'sound://category_collect/clicky_crunch.mp3'": Crunch
+            "'sound://category_swish/quick_swing.mp3'": Swing
+            "'sound://category_nature/summer_night_loop.mp3'": Letná noc
+            "'sound://category_background/ocean_waves.mp3'": Oceánové vlny
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": Pláž Ripple
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": Bublina
+            "'sound://category_animals/bear.mp3'": medveď
+            "'sound://category_animals/cat.mp3'": mačka
+            "'sound://category_animals/cow.mp3'": krava
+            "'sound://category_animals/pig.mp3'": prasa
+            "'sound://category_animals/sheep.mp3'": ovce
+            "'sound://category_animals/goat.mp3'": koza
+            "'sound://category_animals/chicken.mp3'": kurča
+            "'sound://category_animals/rooster.mp3'": Rooster
+            "'sound://category_animals/elephant.mp3'": Slon
+            "'sound://category_animals/dolphin.mp3'": delfín
+            "'sound://category_nature/thunderstorm_1.mp3'": búrka
+            "'sound://category_animals/chick.mp3'": Chick
+            "'sound://category_animals/dog.mp3'": pes
+            "'sound://category_animals/tiger.mp3'": Tiger
+            "'sound://category_collect/trill_stings.mp3'": trill
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": harfa
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": tap
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": tonálny hit
+            "'sound://category_transition/trippy_robotic_transition.mp3'": Robotický prechod
+            "'sound://category_transition/star_dust_particle_10.mp3'": Star prach
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": Mimozemská loď
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": Magické kúzlo
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": Vyberte
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": Podivný bas
+            "'sound://category_digital/jump_7.mp3'": skákať
+      gamelab_playSoundOptionsSoccer:
+        text: "prehrávanie zvuku [ZVUK][0]"
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": airhorn
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": Applause
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": spev
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": Hry
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": Kick
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": dva whistle
+            "'sound://category_sports/One_Whistle_SFX.mp3'": whistle
+      gamelab_playSoundOptionsSpace:
+        text: "prehrávanie zvuku [ZVUK][0]"
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": Čierna diera
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": Bullet Cluster
+            "'sound://category_space/Carina_SFX.mp3'": Carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": Krávová hmlovina
+            "'sound://category_space/Galactic_center_SFX.mp3'": Galaktické centrum
+            "'sound://category_space/Launch_SFX.mp3'": spustenie
+            "'sound://category_space/Lift_Off.mp3'": zdvihnite
+            "'sound://category_space/Pillars_SFX.mp3'": pilier
+            "'sound://category_space/Southern_ring_SFX.mp3'": južný prsteň
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": Hviezdna galaxia
+      gamelab_playSpeech:
+        text: "prehrávanie reči [ZVUK][0]"
+      gamelab_playerBehaviors:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): Pohyb pomocou klávesov so šípkami
+            new Behavior(driving_with_arrow_keys, []): Jazda so šípkami
+            draggable(): byť drahý
+      gamelab_pointInDirection:
+        text: "bod [SPRITE][0] [ÚVOD][1]"
+        options:
+          DIRECTION:
+            '"North"': Sever
+            '"East"': Východ
+            '"South"': Južná
+            '"West"': Západ
+      gamelab_printText:
+        text: "Tlač [TEXT][0]"
+      gamelab_randColor:
+        text: Náhodné farby
+      gamelab_randomColor:
+        text: Náhodné farby
+      gamelab_randomLocation:
+        text: Náhodné umiestnenie
+      gamelab_removeAllBehaviors:
+        text: "[SPRITE][0] zastaví všetko"
+      gamelab_removeBehaviorSimple:
+        text: "sprite [sprite][0] zastaví [behavior][1]"
+      gamelab_removeTint:
+        text: "Odstráňte farbu z [TOTO][0]"
+      gamelab_repeatForever:
+        text: Opakovať navždy
+      gamelab_resetTimer:
+        text: Reset časovač
+      gamelab_setAnimation:
+        text: "Zmeniť [TOTO][0] kostým na [ANIMÁCIA][1]"
+      gamelab_setBackground:
+        text: "nastaviť farbu pozadia [farba][0]"
+      gamelab_setBackgroundImage:
+        text: "nastaviť pozadie na [IMG][0]"
+        options:
+          IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': jaskyňa
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': mesto
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': Kontinuálna tráva
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': súd
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': púšť
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': púštna cesta
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': Poľnohospodárska pôda
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': Plávajúca tráva
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': pred domom
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaxie
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': sieť
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': obývacia izba
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': Meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': Pohľad na park
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': Pine stromy
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': Rainbow
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': Futbalové ihrisko
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': etapy
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': hviezdy
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': Metro
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': Slnko a dúha
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': Slnečné sprchy
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tenisový kurt
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': Stromový ostrov
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': Podzemné
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': pod vodou
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
+            undefined: žiadna
+      gamelab_setBackgroundImageAs:
+        text: "nastaviť pozadie na [IMG][0]"
+      gamelab_setDefaultSpriteSize:
+        text: "nastaviť novú predvolenú veľkosť sprite na [VELIKOSŤ][0]"
+        options:
+          SIZE:
+            '25': extra malé
+            '50': Malé
+            '75': Stredná
+            '100': Veľký
+      gamelab_setForegroundEffect:
+        text: "do [EFFECT][0] efekt"
+        options:
+          EFFECT:
+            '"bubbles"': bubliny
+            '"confetti"': konfety
+            '"hearts"': Srdce
+            '"emojis"': šťastné emojis
+            '"rain"': Dážď
+            '"starburst"': Starburst
+            '"glass"': Rozbité sklo
+            '"twinkling"': Twinkle
+      gamelab_setPrompt:
+        text: "Upozornenie používateľa [QUESTION][0] pre premennú [VAR][1]"
+      gamelab_setPromptWith2Choices:
+        text: "Upozornenie používateľa [QUESTION][0] pre premennú [VAR][1] s voľbami [A][2][B][3]"
+      gamelab_setPromptWithChoices:
+        text: "Upozornenie používateľa [QUESTION][0] pre premennú [VAR][1] s voľbami [A][2][B][3][C][4]"
+      gamelab_setProp:
+        text: "nastaviť [SPRITE][0] [PROPERTY][1] na [VAL][2]"
+        options:
+          PROPERTY:
+            '"scale"': Veľkosť
+            '"rotation"': rotácia
+            '"x"': X pozícia
+            '"y"': Y pozícia
+            '"direction"': smer pohybu
+            '"speed"': Rýchlosť
+      gamelab_setProp_dropdown:
+        text: "nastaviť [SPRITE][0] [PROPERTY][1] na [VELIKOST][2]"
+        options:
+          PROPERTY:
+            '"scale"': Veľkosť
+          SIZE:
+            '25': extra malé
+            '50': Malé
+            '75': Stredná
+            '100': Veľký
+      gamelab_setSizes:
+        text: "nastaviť [SPRITE][0] [PROPERTY][1] na [N][2]%"
+        options:
+          PROPERTY:
+            '"scale"': Veľkosť
+            '"width"': Šírka
+            '"height"': výška
+      gamelab_setSpeed_dropdown:
+        text: "nastaviť [SPRITE][0] rýchlosť na [VELIKOSŤ][1]"
+        options:
+          SIZE:
+            '1': extra pomaly
+            '3': pomaly
+            '5': normálne
+            '7': Rýchlo
+            '9': extra rýchlo
+      gamelab_setTint:
+        text: "Zmena farby [TOTO][0] na [Farba][1]"
+      gamelab_setupScoreboard:
+        text: "Zobraziť scoreboard \n[SPRITE1COSTUME][0]score[VAR1][1][SPRITE2COSTUME][2]score[VAR2][3]target[SPRITE3COSTUME][4]"
+      gamelab_setupSim:
+        text: |-
+          Simulácia s
+          [SPRITE1N][0][SPRITE1COSTUME][1]speed[SPRITE1SPEED][2]
+          [SPRITE2N][3][SPRITE2COSTUME][4]speed[SPRITE2SPEED][5]
+          Zbieranie
+          [SPRITE3N][6][SPRITE3COSTUME][7]
+      gamelab_showTitleScreen:
+        text: "Show title screen [BREAK][0] title [TITLE][1] subtitle [SUBTITLE][2]"
+      gamelab_showVariable:
+        text: "Zobraziť premennú [VAR][0] v [LOCATION][1]"
+      gamelab_spriteClicked:
+        text: "[CONDITION][0] [SPRITE][1] klikol"
+        options:
+          CONDITION:
+            '"when"': kedy
+            '"while"': Kým
+      gamelab_spriteSay:
+        text: "[SPRITE][0] povedať [HOVOR][1]"
+      gamelab_spriteSayTime:
+        text: "[SPRITE][0]say[TEXT1][1] for[NUM][2]seconds"
+      gamelab_spriteThink:
+        text: "[Sprite][0] mysli [hovorí][1]"
+      gamelab_spriteThinkTime:
+        text: "[SPRITE][0]think[TEXT1][1]for[NUM][2]seconds"
+      gamelab_spriteThink_fables2:
+        text: "[Sprite][0] mysli [Myslel][1]"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"Time to make friends with the sheep."': Je čas priateliať sa s ovcami.
+            '"She''ll never recognize me now."': Už ma nikdy nepozná.
+            '"This costume keeps me warm."': Tento kostým ma udržuje v teple.
+            '"I am actually a wolf."': Ja som vlastne vlk.
+      gamelab_spriteThink_fables3:
+        text: "[Sprite][0] mysli [Myslel][1]"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m feeling sleepy."': Cítim sa ospalý.
+            '"No one could ever beat me."': Nikto ma nikdy nemohol poraziť.
+            '"I''ve done this race before."': Tento závod som už absolvoval.
+            '"My feet are bigger than Turtle''s feet."': Moje nohy sú väčšie ako nohy Turtle.
+      gamelab_spriteThink_fables4:
+        text: "[Sprite][0] mysli [Myslel][1]"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m so hungry."': Som tak hladný.
+            '"I''m a visitor in this town."': Som návštevník v tomto meste.
+            '"If we share, we''ll all have something to eat. "': "Ak sa podelíme, budeme mať všetci niečo k jedlu."
+            '"I''ll trick everyone into giving me their food."': "Podvediem každého, aby mi dal svoje jedlo."
+      gamelab_startAvoiding:
+        text: "[SPRITE][0] začína vyhýbať sa [TARGET][1]"
+      gamelab_startFollowing:
+        text: "[SPRITE][0] začína nasledovať [TARGET][1]"
+      gamelab_startGliding:
+        text: "[SPRITE][0] začína lietať"
+      gamelab_stopAvoiding:
+        text: "[SPRITE][0] prestane vyhýbať sa iným spritom"
+      gamelab_stopCollectingData:
+        text: Zastaviť zhromažďovanie dát
+      gamelab_stopFollowing:
+        text: "[SPRITE][0] prestane nasledovať ďalšie sprites"
+      gamelab_stopGliding:
+        text: "[SPRITE][0] prestane lietať"
+      gamelab_subjectSpritePointer:
+        text: "[SPRITE][0]"
+      gamelab_textJoin:
+        text: "[LEFT_QUOTE][0][TEXT1][1][RIGHT_QUOTE][2][TEXT2][3]"
+      gamelab_textVariableJoin:
+        text: "[VAR][0][TEXT2][1]"
+      gamelab_toggleBehaviorSimple:
+        text: "sprite [SPRITE][0] [TOGGLE][1] [BEHAVIOR][2]"
+        options:
+          TOGGLE:
+            '"begins"': Začína
+            '"stops"': Zastaví
+      gamelab_tumbling:
+        text: Tumbling
+      gamelab_turn:
+        text: "otočiť [SPRITE][0] [DIRECTION][1] [N][2] stupňov"
+        options:
+          DIRECTION:
+            '"right"': pravda
+            '"left"': ľavá
+      gamelab_updateTitleWithColor:
+        text: "Show title screen [BREAK][0] title [TITLE][1] farba [COLOR][2]"
+      gamelab_whenAllPromptsAnswered:
+        text: Keď všetky výzvy odpovedajú
+      gamelab_whenDownArrow:
+        text: keď sa stlačí šípka dole
+      gamelab_whenKey:
+        text: "keď [KLÁČ][0] stlačený"
+        options:
+          KEY:
+            '"up"': up
+            '"down"': dole
+            '"left"': ľavá
+            '"right"': pravda
+            '"space"': vesmír
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_whenLeftArrow:
+        text: Po stlačení ľavej šípky
+      gamelab_whenPromptAnswered:
+        text: "keď [VAR][0] odpovedal"
+      gamelab_whenRightArrow:
+        text: Po stlačení pravého šípka
+      gamelab_whenSpriteCreated:
+        text: "keď [SPRITE][0] vytvoril"
+      gamelab_whenTouching:
+        text: "keď [SPRITE1][0] dotkne [SPRITE2][1]"
+      gamelab_whenUpArrow:
+        text: Ak je šípka stlačená
+      gamelab_whileDownArrow:
+        text: Ako stlačiť šíp dole
+      gamelab_whileKey:
+        text: "zatiaľ čo [KLÁČ] [0] stlačený"
+        options:
+          KEY:
+            '"up"': up
+            '"down"': dole
+            '"left"': ľavá
+            '"right"': pravda
+            '"space"': vesmír
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_whileLeftArrow:
+        text: ľavá šípka stlačená
+      gamelab_whileRightArrow:
+        text: Pravá šípka stlačená
+      gamelab_whileTouching:
+        text: "kým [SPRITE1][0] sa dotýka [SPRITE2][1]"
+      gamelab_whileUpArrow:
+        text: Stlačená šípka Up
+      gamelab_withPercentChance:
+        text: |-
+          ak [NUM][0]% pravdepodobnosť
+          [STATEMENT][1]
+      gamelab_withPercentChanceDropdown:
+        text: |-
+           [Číslo][0] šanca
+           [STATEMENT][1]
+        options:
+          NUM:
+            '10': Veľmi nízka
+            '25': nízka
+            '50': 50/50
+            '75': Vysoká
+            '90': Veľmi vysoká
+      gamelab_xLocationOf:
+        text: "x súradnica [SPRITE][0]"
+      gamelab_yLocationOf:
+        text: "y súradnice [SPRITE][0]"
+      KatiesBlocks_changeVelocity:
+        text: "[SPRITE][0] jump [PROPERTY][1] a [PROPERTY][2]"
+        options:
+          PROPERTY:
+            '"velocityX"': krátke
+            '"velocityY"': dlho
+      KatiesBlocks_collide:
+        text: "[SPRITE][0] bloky [TARGET][1]"
+      KatiesBlocks_glideTo:
+        text: "[SPRITE][0] prejdite na [LOKÁCIA][1]"
+      KatiesBlocks_goldilocks:
+        text: |-
+           ak [CONDITION][0][SPRITE][1]
+          [STATEMENT][2]
+        options:
+          CONDITION:
+            '"solid"': pevné
+            '"liquid"': kvapalina
+            '"gas"': plyn
+      KatiesBlocks_katieCollide:
+        text: "[SPRITE][0] kolízie [TARGET][1]"
+      KatiesBlocks_katiePushes:
+        text: "[SPRITE][0] náraz [TARGET][1]"
+      KatiesBlocks_makeNumSpritesNear:
+        text: "[NUM][0] nové [ANIMATION_NAME][1] sprites v blízkosti [LOCATION][2]"
+      KatiesBlocks_setVelocity:
+        text: "nastaviť [SPRITE][0] [PROPERTY][1] na [VAL][2]"
+        options:
+          PROPERTY:
+            '"velocityX"': RýchlosťX
+            '"velocityY"': Rýchlosť
+            '"rotationSpeed"': Rotačná rýchlosť
+      KatiesBlocks_spriteBirdSay:
+        text: "[SPRITE][0] hovorí [HOVOR][1]"
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': Môj hrot je špicatý a silný na nájdenie hmyzu v kôre stromu.
+            '"I have a beak like a scoop to catch fish."': Mám hrot ako lopatka na chytanie rýb.
+      KatiesBlocks_tumbling:
+        text: Tumbling
+      Mikelab_addBehaviorSimple:
+        text: "sprite [sprite][0] začína [behavior][1]"
+      Mikelab_addTrainingData:
+        text: 'pridať údaje o tréningu: [NAME][0], [LOCATION][1]'
+        options:
+          NAME:
+            "{x: 201, y: 100}": objekt
+            "{x: 200, y: 100}": Ryby
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": Ryby
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": Nie ryby
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": my-label
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": Nie moja značka
+      Mikelab_allSpritesWithAnimation:
+        text: "[ANIMÁCIA][0]"
+      Mikelab_beginDataCollection:
+        text: "Upozornenie používateľa [QUESTION][0] pre premennú [VAR][1] s voľbami [A][2][B][3][C][4]"
+      Mikelab_changeAnim:
+        text: "nastaviť [SPRITE][0] na kostým [COSTUME][1]"
+      Mikelab_changePropBy:
+        text: "zmena [PROPERTY][0] [SPRITE][1] [VAL][2]"
+        options:
+          PROPERTY:
+            '"scale"': Veľkosť
+            '"rotation"': rotácia
+            '"x"': X pozícia
+            '"y"': Y pozícia
+            '"direction"': smer pohybu
+      Mikelab_checkAnim:
+        text: "[Sprite][0] je [kostým][1]"
+      Mikelab_createNewSprite:
+        text: "Vytvorenie nového kostýmu [0] \n nazývané [NAME][1] v [LOCATION][2]"
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": Top
+            "{x: 200, y: 300}": Dole
+            "{x: 100, y: 200}": ľavá
+            "{x: 300, y: 200}": pravda
+            "{x: 200, y: 200}": Centrum
+            "{x: 100, y: 100}": hornej ľavej
+            "{x: 300, y: 100}": vpravo hore
+            "{x: 100, y: 300}": spodnej ľavej
+            "{x: 300, y: 300}": vpravo dole
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Náhodné
+      Mikelab_destroy:
+        text: "odstrániť [SPRITE][0]"
+      Mikelab_displace:
+        text: "[TARGET][0] blokuje [SPRITE][1] z pohybu"
+      Mikelab_eval:
+        text: "hodnotenie [KÓD][0]"
+      Mikelab_getAnim:
+        text: "[SPRITE][0] kostým"
+      Mikelab_getNext:
+        text: získať ďalší objekt
+      Mikelab_getProp:
+        text: "[SPRITE][0] [Vlastnosti][1]"
+        options:
+          PROPERTY:
+            '"scale"': Veľkosť
+            '"rotation"': rotácia
+            '"x"': X pozícia
+            '"y"': Y pozícia
+            '"direction"': smer pohybu
+      Mikelab_groupChangeAnim:
+        text: "zmeniť [VYBERTE][0] [KOSTÚM][1] na [KOSTÚM2][2]"
+        options:
+          SELECT:
+            '"all"': Všetko
+            '"this"': Toto
+      Mikelab_groupChangePropBy:
+        text: "zmena [PROPERTY][0] [SELECT][1] [COSTUME][2] [VAL][3]"
+        options:
+          SELECT:
+            '"all"': Všetko
+            '"this"': Toto
+          PROPERTY:
+            '"scale"': Veľkosť
+            '"rotation"': rotácia
+            '"x"': X pozícia
+            '"y"': Y pozícia
+            '"direction"': smer pohybu
+      Mikelab_groupCreateNewSprite:
+        text: "Vytvorte nový [COSTUME][0] na [LOCATION][1]"
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": Top
+            "{x: 200, y: 300}": Dole
+            "{x: 100, y: 200}": ľavá
+            "{x: 300, y: 200}": pravda
+            "{x: 200, y: 200}": Centrum
+            "{x: 100, y: 100}": hornej ľavej
+            "{x: 300, y: 100}": vpravo hore
+            "{x: 100, y: 300}": spodnej ľavej
+            "{x: 300, y: 300}": vpravo dole
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Náhodné
+      Mikelab_groupDestroy:
+        text: "odstrániť [VYBERTE][0] [KOSTÝM][1]"
+        options:
+          SELECT:
+            '"all"': Všetko
+            '"this"': Toto
+      Mikelab_groupDisplace:
+        text: "all [COSTUME][0] blok [COSTUME2][1] z pohybujúceho sa"
+      Mikelab_groupEdgesDisplace:
+        text: "okraje blok [COSTUME][0] z pohybu"
+      Mikelab_groupGetProp:
+        text: "[VYBRAŤ][0] [KOSTÝM][1] [NÁKLAD][2]"
+        options:
+          SELECT:
+            '"average"': Priemerné
+            '"this"': Toto
+          PROPERTY:
+            '"scale"': Veľkosť
+            '"rotation"': rotácia
+            '"x"': X pozícia
+            '"y"': Y pozícia
+            '"direction"': smer pohybu
+      Mikelab_groupRemoveAllBehaviors:
+        text: "stop [VYBERTE][0] [KOSTÚM][1] správanie"
+        options:
+          SELECT:
+            '"all"': Všetko
+            '"this"': Toto
+      Mikelab_groupRemoveBehaviorSimple:
+        text: "[VYBRAŤ][0] [KOSTÝM][1] zastaví [POBYT][2]"
+        options:
+          SELECT:
+            '"all"': Všetko
+            '"this"': Toto
+      Mikelab_groupRemoveTint:
+        text: "Odstráňte farbu z [VYBAŤ][0] [KOSTÝM][1]"
+        options:
+          SELECT:
+            '"all"': Všetko
+            '"this"': Toto
+      Mikelab_groupSetProp:
+        text: "set [PROPERTY][0] of [SELECT][1] [COSTUME][2] to [VAL][3]"
+        options:
+          SELECT:
+            '"all"': Všetko
+            '"this"': Toto
+          PROPERTY:
+            '"scale"': Veľkosť
+            '"rotation"': rotácia
+            '"x"': X pozícia
+            '"y"': Y pozícia
+            '"direction"': smer pohybu
+      Mikelab_groupSetTint:
+        text: "Zmeniť farbu [VYBAŤ][0] [KOSTÚM][1] na [Farba][2]"
+        options:
+          SELECT:
+            '"all"': Všetko
+            '"this"': Toto
+      Mikelab_groupWhenClickedOn:
+        text: "Po kliknutí [COSTUME][0]"
+      Mikelab_groupWhenXTouchesY:
+        text: "keď sa [COSTUME][0] dotkne [COSTUME2][1]"
+      Mikelab_groupWhileClicked:
+        text: "Po kliknutí na [COSTUME][0]"
+      Mikelab_groupWhileTouchingAny:
+        text: |-
+          Kým [KOSTUME][0] sa dotýka [KOSTUME2][1]
+          [STATEMENT][2]
+      Mikelab_hasBehavior:
+        text: "[SPRITE][0] je aktuálne [VEDENIE][1]"
+      Mikelab_hideFish:
+        text: "odstrániť [TRASH][0]"
+        options:
+          TRASH:
+            object: objekt
+            fish: Ryby
+      Mikelab_ifDanceIs:
+        text: |-
+          ak [SPRITE][0] robí [TANCE][1]
+           [DO1][2] [DO2][3]
+        options:
+          DANCE:
+            MOVES.ClapHigh: Clap vysoká
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Dvojnásobne dole
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Čerstvé
+            MOVES.Roll: Body roll
+            MOVES.Kick: Hviezda
+            MOVES.ThisOrThat: To alebo to
+            MOVES.Thriller: Zombie
+            MOVES.Rest: Žiadne
+      Mikelab_ifLabel:
+        text: |-
+          if [DANCE][0]
+           [DO1][1] iné [DO2][2]
+        options:
+          DANCE:
+            MOVES.ClapHigh: Ryby
+            MOVES.Clown: my-label
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          Ak rozpoznáte objekt ako [DANCE][0]
+           [DO1][1] iné [DO2][2]
+        options:
+          DANCE:
+            MOVES.ClapHigh: Ryby
+            MOVES.Clown: my-label
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          Ak rozpoznáte objekt ako [DANCE][0]
+           do [DO1][1]
+        options:
+          DANCE:
+            MOVES.ClapHigh: Ryby
+            MOVES.Clown: Nie moja značka
+      Mikelab_isAnim:
+        text: "[SPRITE][0] kostým je [KOSTÝM][1]"
+      Mikelab_joinText:
+        text: "[TEXT][0] [NEXT][1]"
+      Mikelab_locationAt:
+        text: 'umiestnenie x: [X][0] y: [Y][1]'
+      Mikelab_location_picker:
+        text: "[LOCATION][0]"
+      Mikelab_poemTextJoin:
+        text: "[TEXT1][0] [VAR][1] [TEXT2][2]"
+        options:
+          TEXT1:
+            '"Balancing on the "': '"Rovnováha na"'
+            '"A chubby cat "': '"špinavá mačka"'
+            '"The "': '"The"'
+          TEXT2:
+            '" fence"': '" plot"'
+            '""': '""'
+            '" breeze blows"': '"Briezové údery"'
+      Mikelab_randomColor:
+        text: Náhodné farby
+      Mikelab_removeAllBehaviors:
+        text: "Sprite[SPRITE][0] zastaví všetky správanie"
+      Mikelab_removeBehaviorSimple:
+        text: "sprite [sprite][0] zastaví [behavior][1]"
+      Mikelab_removeTint:
+        text: "Odstráňte farbu z [SPRITE][0]"
+      Mikelab_repeatUntilComplete:
+        text: Opakovať navždy
+      Mikelab_sendBad:
+        text: Presun objektu doľava
+      Mikelab_sendGood:
+        text: Presun objektu doprava
+      Mikelab_setBG:
+        text: "nastaviť pozadie na [BG][0]"
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': mesto
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': Kontinuálna tráva
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': púštna cesta
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': Poľnohospodárska pôda
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': Plávajúca tráva
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': pred domom
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': obývacia izba
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': Meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': Pohľad na park
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': Pine stromy
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': Futbalové ihrisko
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': etapy
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': Metro
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': Slnko a dúha
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': Slnečné sprchy
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tenisový kurt
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': Stromový ostrov
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': Podzemné
+      Mikelab_setProp:
+        text: "nastaviť [PROPERTY][0] z [SPRITE][1] na [VAL][2]"
+        options:
+          PROPERTY:
+            '"scale"': Veľkosť
+            '"rotation"': rotácia
+            '"x"': X pozícia
+            '"y"': Y pozícia
+            '"direction"': smer pohybu
+      Mikelab_setTint:
+        text: "Zmena farby [SPRITE][0] na [COLOR][1]"
+      Mikelab_setupLevel:
+        text: |-
+          Nastavenie úrovne s
+          [A1][0][A2][1][A3][2][A4][3]
+          [A5][4][A6][5][A7][6][A8][7]
+          [B1][8][B2][9][B3][10][B4][11]
+          [B5][12][B6][13][B7][14][B8][15]
+      Mikelab_setupOutbreak:
+        text: |-
+          Výbuchové nastavenia
+          populácia:[SPRITE2N][0]
+          [TOGGLE][1]virus
+      Mikelab_setupSim:
+        text: |-
+          Simulácia s
+          [SPRITE1N][0][SPRITE1COSTUME][1]speed[SPRITE1SPEED][2]
+          [SPRITE2N][3][SPRITE2COSTUME][4]speed[SPRITE2SPEED][5]
+          Zbieranie
+          [SPRITE3N][6][SPRITE3COSTUME][7]
+      Mikelab_showScoreboard:
+        text: "scoreboard label [LABEL][0] text farba [TEXTCOLOR][1] farba [COLOR][2] hodnota [VALUE][3] roh [CORNER][4]"
+        options:
+          CORNER:
+            '"right"': pravda
+            '"left"': ľavá
+      Mikelab_showText:
+        text: "zobraziť text [TEXT][0] [PREPOSITION][1] [SPRITE][2]"
+        options:
+          PREPOSITION:
+            '"above"': Nad
+            '"below"': nižšie
+      Mikelab_sprite:
+        text: "Nový [COSTUME][0] sprite na [LOCATION][1]"
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": Top
+            "{x: 200, y: 300}": Dole
+            "{x: 100, y: 200}": ľavá
+            "{x: 300, y: 200}": pravda
+            "{x: 200, y: 200}": Centrum
+            "{x: 100, y: 100}": hornej ľavej
+            "{x: 300, y: 100}": vpravo hore
+            "{x: 100, y: 300}": spodnej ľavej
+            "{x: 300, y: 300}": vpravo dole
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Náhodné
+      Mikelab_whenClickedOn:
+        text: "keď [SPRITE][0] kliknete"
+      Mikelab_whenKeyPressed:
+        text: "keď [KLÁČ][0] stlačený"
+        options:
+          KEY:
+            '"up"': Nahor šípka
+            '"down"': dole šípka
+            '"left"': ľavá šípka
+            '"right"': pravá šípka
+            '"space"': medzerník
+            '"w"': W
+            '"a"': A
+            '"s"': S
+            '"d"': D
+      Mikelab_whenKeyReleased:
+        text: "keď [KLEJ][0] prepustený"
+        options:
+          KEY:
+            '"up"': Nahor šípka
+            '"down"': dole šípka
+            '"left"': ľavá šípka
+            '"right"': pravá šípka
+            '"space"': medzerník
+            '"w"': W
+            '"a"': A
+            '"s"': S
+            '"d"': D
+      Mikelab_whenMouseClicked:
+        text: Keď myš klikne
+      Mikelab_whenMouseReleased:
+        text: Keď sa myš uvoľní
+      Mikelab_whenTouchesAny:
+        text: "keď [SPRITE][0] sa dotkne akéhokoľvek sprite"
+      Mikelab_whenYesNoClicked:
+        text: "Po kliknutí [KLÁČ] [0]"
+        options:
+          KEY:
+            '"yes"': 'áno'
+            '"no"': 'Nie'
+      Mikelab_whileClicked:
+        text: "pri kliknutí na [SPRITE][0]"
+      Mikelab_whileKeyPressed:
+        text: "Zatiaľ čo [KLÍČ][0] zostáva stlačený"
+        options:
+          KEY:
+            '"up"': Nahor šípka
+            '"down"': dole šípka
+            '"left"': ľavá šípka
+            '"right"': pravá šípka
+            '"space"': medzerník
+      Mikelab_whileTouchingAny:
+        text: |-
+          kým [SPRITE][0] sa dotýka akéhokoľvek sprite
+          [STATEMENT][1]
+      Mikelab_worldSeconds:
+        text: Počet sekúnd
+      Mikelab_xLocationOf:
+        text: "x súradnica [SPRITE][0]"
+      Mikelab_yLocationOf:
+        text: "y súradnice [SPRITE][0]"
+      Outbreak_beginCongregating:
+        text: Monštrá sa začínajú zhromažďovať
+      Outbreak_beginQuarantining:
+        text: "Monštrá začínajú karanténu, keď sú chorí"
+      Outbreak_beginSocialDistancing:
+        text: Monštrá začínajú sociálne vzdialenosti
+      Outbreak_beginWandering:
+        text: Monštrá začínajú putovať
+      Outbreak_beginWearingMasks:
+        text: Monštrá začínajú nosiť masky
+      Outbreak_layoutBorder:
+        text: Monštrá v hraniciach
+      Outbreak_layoutClusters:
+        text: "rozloženie monštier v zväzkoch [NUM][0]"
+      Outbreak_layoutGrid:
+        text: Monsters ako mriežka
+      Outbreak_layoutRandom:
+        text: Monsters náhodne
+      Outbreak_setSpeed:
+        text: "nastaviť monster rýchlosť na [VAL][0]"
+      Outbreak_setupOutbreak:
+        text: "Nastavenie Monster Town s [COUNT][0] monsters"
+      Outbreak_stopMoving:
+        text: Monštrá prestali pohybovať
+      ParticlesBlocks_getMicroscope:
+        text: "Mikroskop má [INPUT1][0]"
+        options:
+          INPUT1:
+            '1': Citrónová šťava
+            '3': Soda na pečenie
+            '5': Obe.
+      ParticlesBlocks_setMicroscope:
+        text: "Nastaviť mikroskop na [INPUT1][0]"
+        options:
+          INPUT1:
+            '1': Citrónová šťava
+            '3': Soda na pečenie
+            '5': Obe.
+      ParticlesBlocks_statesOfMatter:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): pevné
+            new Behavior(liquid, []): kvapalina
+            new Behavior(wandering, []): plyn
+      ParticlesBlocks_statesOfMatter2:
+        text: "Nastaviť [COSTUME][0] na [behavior][1] správanie"
+        options:
+          BEHAVIOR:
+            '"solid"': 'pevné častice '
+            '"liquid"': tekuté častice
+            '"gas"': plynové častice
+      ParticlesBlocks_statesOfMatter_testing:
+        text: "[Testovanie] Nastaviť [KOSTÝM][0] na [PODIV][1] správanie"
+        options:
+          BEHAVIOR:
+            '"solid"': 'pevné častice '
+            '"liquid"': tekuté častice
+            '"gas"': plynové častice
+      Poetry_addFrame:
+        text: "nastaviť rám na [BRUSH][0]"
+        options:
+          BRUSH:
+            '"bamboo"': bambus
+            '"beaded"': Beaded
+            '"brick"': Brick
+            '"decorative"': dekoratívne
+            '"donuts"': Donut
+            '"fire"': oheň
+            '"flowers"': Kvety
+            '"gilded"': zlato
+            '"hearts"': Srdce
+            '"iceCream"': zmrzlina
+            '"leaves"': listy
+            '"metal"': kovový rám
+            '"pawPrints"': Tlačiareň
+            '"rainbow"': Rainbow
+            '"stars"': hviezdy
+            '"swirls"': Swirls
+            '"waves"': Vlny
+            '"wood"': Drevený rám
+            '"zigzag"': zig-zag
+      Poetry_addLine:
+        text: "pridať riadok [LINE][0]"
+      Poetry_addTextHighlight:
+        text: "pridať text zvýraznenia [farba][0]"
+      Poetry_animateText:
+        text: animovaný text
+      Poetry_destroy:
+        text: "odstrániť [ANIMATION_NAME][0]"
+      Poetry_glideTo:
+        text: "[SPRITE][0] prejdite na [LOKÁCIA][1]"
+      Poetry_hideText:
+        text: skryť text
+      Poetry_makeBurst:
+        text: "vytvoriť efekt [EFFECT][0] s efektom [NUM][1] [ANIMATION_NAME][2]"
+        options:
+          EFFECT:
+            '"burst"': Burst
+            '"pop"': Pop
+            '"rain"': Dážď
+            '"spiral"': špirála
+      Poetry_makeNewSpriteAnon:
+        text: "Vytvorenie nového [ANIMATION_NAME][0] sprite na [LOCATION][1]"
+      Poetry_makeNumSprites:
+        text: "vytvárať [NUM][0] nové [ANIMATION_NAME][1] sprity"
+      Poetry_playMusic:
+        text: "hudba [Zvuk][0]"
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': Jasný
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Pokoj.
+            '"sound://category_nature/steady_campfire_loop.mp3"': ohňostroj
+            '"sound://category_nature/rain_loop.mp3"': drizzle
+            '"sound://category_background/fire_burning.mp3"': ohňostroj
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': lesy
+            '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': harfy
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': posadnutý
+            '"sound://category_background/inside_plane.mp3"': hum
+            '"sound://category_loops/red_flag_loop1.mp3"': misie
+            '"sound://category_nature/summer_night_loop.mp3"': noc
+            '"sound://category_background/ocean_waves.mp3"': oceán
+            '"sound://category_background/rain_thunderstorm_calm.mp3"': Rainy
+            '"sound://category_background/rainforest_ambient_sound.mp3"': Dážďový les
+            '"sound://category_background/repitition.mp3"': Jazdenie
+            '"sound://category_background/wavering_wind.mp3"': spánku
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': pomaly
+            '"sound://category_background/waterfall.mp3"': Vodopády
+      Poetry_playSound:
+        text: "prehrávanie zvuku [ZVUK][0]"
+        options:
+          SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': Bell
+            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': prestávka
+            '"sound://category_digital/boing_2.mp3"': Boing
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bublina
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': chatter
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': deflate
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': zlyhanie
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': flutter
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': skákať
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': svetlo
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': Pof
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': scan
+            '"sound://category_background/typewriter.mp3"': Tlačiareň
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': vibrantné
+            '"sound://category_achievements/peaceful_win_1.mp3"': win
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': whirl
+            '"sound://category_achievements/peaceful_win_6.mp3"': veterné zvony
+      Poetry_playSoundOptionsSpace:
+        text: "prehrávanie zvuku [ZVUK][0]"
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": Čierna diera
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": Bullet Cluster
+            "'sound://category_space/Carina_SFX.mp3'": Carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": Krávová hmlovina
+            "'sound://category_space/Galactic_center_SFX.mp3'": Galaktické centrum
+            "'sound://category_space/Launch_SFX.mp3'": spustenie
+            "'sound://category_space/Lift_Off.mp3'": zdvihnite
+            "'sound://category_space/Pillars_SFX.mp3'": pilier
+            "'sound://category_space/Southern_ring_SFX.mp3'": južný prsteň
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": Hviezdna galaxia
+      Poetry_setAuthor:
+        text: "Zoznam autorov [AUTHOR][0]"
+      Poetry_setBackground:
+        text: "nastaviť pozadie na [farba][0]"
+      Poetry_setBackgroundEffect:
+        text: "nastaviť pozadie na [EFFECT][0] [PALETTE][1]"
+        options:
+          EFFECT:
+            '"blooming"': Kvitnú
+            '"bubbles"': bubliny
+            '"clouds"': oblaky
+            '"confetti"': konfety
+            '"darkCircles"': vyblednutím
+            '"fadeColors"': Frost
+            '"hearts"': Srdce
+            '"space"': Hyper rýchlosť
+            '"rain"': Dážď
+            '"ripples"': Rippling
+            '"colors"': posunutie
+            '"stars"': hviezdy
+            '"squiggles"': vlny
+          PALETTE:
+            '"autumn"': jeseň
+            '"sunrise"': Dawn
+            '"sunset"': zatmenie
+            '"grayscale"': Gray
+            '"ocean"': oceán
+            '"rainbow"': Rainbow
+            '"roses"': Ruže
+            '"sky"': obloha
+            '"spring"': jar
+            '"summer"': leto
+            '"winter"': zima
+      Poetry_setBackgroundImageAs:
+        text: "nastaviť pozadie na [IMG][0]"
+      Poetry_setFont:
+        text: "nastaviť písmo [FONT][0]"
+        options:
+          FONT:
+            '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Kurier
+            '"Cursive"': Rukopis
+            '"Impact"': Dopad
+            '"Georgia"': Gruzínsko
+            '"Times"': Times
+      Poetry_setFontColor:
+        text: "nastaviť farbu textu [FILL][0]"
+      Poetry_setForegroundEffect:
+        text: "do [EFFECT][0] efekt"
+        options:
+          EFFECT:
+            '"bubbles"': bubliny
+            '"confetti"': konfety
+            '"hearts"': Srdce
+            '"emojis"': šťastné emojis
+            '"rain"': Dážď
+            '"starburst"': Starburst
+            '"glass"': Rozbité sklo
+            '"twinkling"': Twinkle
+      Poetry_setPrompt:
+        text: "pop-up používateľ [LEFT_QUOTE][0][NAME][1][RIGHT_QUOTE][2] pre premennú [VAR][3]"
+      Poetry_setPromptWithChoices:
+        text: "vyzve používateľa [LEFT_QUOTE][0][TEXT][1][RIGHT_QUOTE][2] pre premennú [VAR][3] s voľbami [LEFT_QUOTE_A][4][A][5][RIGHT_QUOTE_A][6] [LEFT_QUOTE_B][7][B][8][RIGHT_QUOTE_B][9] [LEFT_QUOTE_C][10][C][11][RIGHT_QUOTE_C][12]"
+      Poetry_setSize:
+        text: "nastaviť [SPRITE][0] na [VAL][1]"
+      Poetry_setTextEffect:
+        text: "nastaviť textový efekt [EFFECT][0]"
+        options:
+          EFFECT:
+            '"fade"': fade
+            '"flyLeft"': Lietať zľava
+            '"flyRight"': Lietať vpravo
+            '"flyTop"': Lietať zhora
+            '"flyBottom"': Lietať zdola
+            '"typewriter"': Tlačiareň
+      Poetry_setTitle:
+        text: "nastaviť názov [TITLE][0]"
+      Poetry_showText:
+        text: Zobraziť text
+      Poetry_startBehavior:
+        text: 'sprite [ANIMATION_NAME][0] začína [OBVEDOVANIE][1] '
+        options:
+          BEHAVIOR:
+            '"fluttering"': fluttering
+            '"growing"': rastúce
+            '"jittering"': jittering
+            '"moving_north_and_looping"': Loading sever
+            '"moving_south_and_looping"': Loading južne
+            '"moving_east_and_looping"': Loading východ
+            '"moving_west_and_looping"': Prechádzka západ
+            '"shrinking"': zúženie
+            '"spinning_left"': Spinning vľavo
+            '"spinning_right"': Spinning vpravo
+            '"swimming_left_and_right"': plávanie
+            '"wandering"': putovanie
+            '"wobbling"': Wobbling
+      Poetry_stopBehavior:
+        text: 'sprite [ANIMATION_NAME][0] zastaví [POBYT][1] '
+        options:
+          BEHAVIOR:
+            '"fluttering"': fluttering
+            '"growing"': rastúce
+            '"jittering"': jittering
+            '"moving_north_and_looping"': Loading sever
+            '"moving_south_and_looping"': Loading južne
+            '"moving_east_and_looping"': Loading východ
+            '"moving_west_and_looping"': Prechádzka západ
+            '"shrinking"': zúženie
+            '"spinning_left"': Spinning vľavo
+            '"spinning_right"': Spinning vpravo
+            '"swimming_left_and_right"': plávanie
+            '"wandering"': putovanie
+            '"wobbling"': Wobbling
+            '"all"': "-Všetky správanie..."
+      Poetry_stringValue:
+        text: "[LEFT_QUOTE][0][TEXT][1][RIGHT_QUOTE][2]"
+      Poetry_textConcat:
+        text: "[LEFT_QUOTE][0][TEXT1][1][TEXT2][2][RIGHT_QUOTE][3]"
+      Poetry_textVariableJoin:
+        text: "[VAR][0][TEXT2][1]"
+      Poetry_whenLineShows:
+        text: "keď sa zobrazí čiara [N][0]"
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+      Poetry_whenPromptAnswered:
+        text: "keď [VAR][0] odpovedal"
+      RyanLab_moveForward:
+        text: Prejdite dopredu
+      RyanLab_readSound:
+        text: Čítať so zvukom
+      RyanLab_readToConsole:
+        text: Prečítajte si konzolu
+      RyanLab_turnLeft:
+        text: Otočiť doľava
+      RyanLab_turnRight:
+        text: otočiť vpravo
+      Vector_createSpriteWith:
+        text: |-
+          Vytvorenie spritu
+          do[STATEMENT][0]
+      Vector_log:
+        text: "Záznamová správa [ZÁZAVA][0]"
+      Vector_positionCenter:
+        text: Centrum
+      Vector_push:
+        text: "nastaviť rýchlosť [VECTOR][0]"
+      Vector_randomLocation:
+        text: Náhodné umiestnenie
+      Vector_setColor:
+        text: "nastaviť farbu na [farba][0]"
+      Vector_setSize:
+        text: "nastaviť šírku [WIDTH][0] výšku [HEIGHT][1]"
+      Vector_teleportTo:
+        text: "nastaviť pozíciu [pozícia][0]"
+      Vector_vectorNorth:
+        text: sever
+      Vector_where:
+        text: "každý sprite kde [PROPERTY][0] je [VALUE][1] do[STATEMENT][2]"
+        options:
+          PROPERTY:
+            "'shapeColor'": farba
+      aalab_layoutSprites:
+        text: "rozloženie monštier ako [FORMAT][0]"
+        options:
+          FORMAT:
+            '"grid"': sieť
+            '"border"': hranice
+            '"row"': riadok
+            '"random"': náhodné
+      aalab_levelFailure:
+        text: "študent [STATE][0] wtih kľúč [KEY][1]"
+        options:
+          STATE:
+            '0': prechod
+            '3': zlyhania
+      aalab_setSpeed:
+        text: "nastaviť monster rýchlosť na [VAL][0]"
+      aalab_setupSim:
+        text: "Nastavenie Monster Town s [COUNT][0] monsters"
+      aalab_someGraduallyStartIntervention:
+        text: "[PORTION][0] monštrá [RATE][1] začínajú [OBVEDOVANIE][2]"
+        options:
+          PORTION:
+            '1': Všetko
+            '0.75': Väčšina
+            '0.5': polovica
+            '0.25': málo
+          RATE:
+            '"immediately"': okamžite
+            '"quickly"': Rýchlo
+            '"gradually"': Postupne
+            '"slowly"': Pomaly
+          BEHAVIOR:
+            '"wandering"': Chodiť náhodne
+            '"congregating"': Zhromažďovanie
+            '"quarantining"': Karanténa pri chorobe
+            '"avoiding"': Sociálna vzdialenosť
+            '"none"': zostať stáť
+      aalab_someStartIntervention:
+        text: "[PORTION][0] monštrá začínajú [POBYT][1]"
+        options:
+          PORTION:
+            '1': Všetko
+            '0.75': Väčšina
+            '0.5': polovica
+            '0.25': málo
+          BEHAVIOR:
+            '"wandering"': Chodiť náhodne
+            '"congregating"': Zhromažďovanie
+            '"quarantining"': Karanténa pri chorobe
+            '"avoiding"': Sociálna vzdialenosť
+            '"none"': zostať stáť
+      aalab_spriteSayChoices:
+        text: "[SPRITE][0] povedať [HOVOR][1]"
+        options:
+          SPEECH:
+            '"I have spoken."': Ja som hovoril.
+            '"Bounty hunting is a complicated profession."': Poľovníctvo je komplikované povolanie.
+            '"I will initiate self-destruct."': Budem iniciovať sebazničenie.
+            '"This is the way."': Toto je cesta.
+            '"People get built different. We don’t need to figure it out, we just need to respect it."': "Ľudia sú postavení inak. Nepotrebujeme to pochopiť, stačí to rešpektovať."
+            '"You don’t need a mirror to look good. You’re beautiful on the inside."': "Nepotrebujete zrkadlo, aby ste vyzerali dobre. Ty si krásna zvnútra."
+            '"Sometimes life is scary and dark. That is why we must find the light."': Niekedy je život strašidelný a temný. Preto musíme nájsť svetlo.
+            '"Everything small is just a smaller version of something big."': Všetko malé je len menšia verzia niečoho veľkého.
+            '"Suckin’ at something is the first step to being sorta good at something."': "Sušenie niečím je prvým krokom k tomu, aby ste boli v niečom dobrí."
+            '"Life happens wherever you are, whether you make it or not."': "Život sa deje kdekoľvek sa nachádzate, bez ohľadu na to, či ho dosiahnete alebo nie."
+            '"You can’t knock me down!"': Nemôžete ma pokaziť!
+            '"Roar!"': Roar!
+            '"My first girlfriend turned into the moon."': Moja prvá priateľka sa zmenila na Mesiac.
+            '"True humility is the only antidote to shame."': Skutočná pokora je jediným protijedom k hanbe.
+            '"You are stronger and wiser and freer than you have ever been."': "Ste silnejší, múdrejší a slobodnejší, než ste kedy boli."
+            '"You have to try every time. You can''t quit because you''re afraid you might fail."': "Musíte sa snažiť zakaždým. Nemôžeš odísť, lebo sa bojíš zlyhania."
+      aalab_startIntervention:
+        text: "monštrá začínajú [VEDENIE][0]"
+        options:
+          BEHAVIOR:
+            wandering: Chodiť náhodne
+            '"congregating"': Zhromažďovanie
+            '"quarantining"': Karanténa pri chorobe
+            '"avoiding"': Sociálna vzdialenosť
+            '"none"': zostať stáť
+      adaptations_adaptationBehaviors:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): Spinning vpravo
+            new Behavior(spinning_left, []): Spinning vľavo
+            new Behavior(fluttering, []): fluttering
+            new Behavior(jittering, []): jittering
+            new Behavior(wobbling, []): Wobbling
+            new Behavior(wandering, []): putovanie
+            new Behavior(patrolling, []): Patrola
+      adaptations_location_picker:
+        text: "na:[MÍSTO][0]"
+      adaptations_makeNumSpritesNear:
+        text: "[NUM][0] nové [ANIMATION_NAME][1] sprites v blízkosti [LOCATION][2]"
+      adaptations_spriteBirdSay:
+        text: "[SPRITE][0] hovorí [HOVOR][1]"
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': Môj hrot je špicatý a silný na nájdenie hmyzu v kôre stromu.
+            '"I have a beak like a scoop to catch fish."': Mám hrot ako lopatka na chytanie rýb.
+      adaptations_startFollowing:
+        text: "[SPRITE][0] začína nasledovať [TARGET][1]"
+      adaptations_toggleBehaviorSimple:
+        text: "sprite [SPRITE][0] [TOGGLE][1] [BEHAVIOR][2]"
+        options:
+          TOGGLE:
+            '"begins"': Začína
+            '"stops"': Zastaví
+      binary_drawBin:
+        text: "Draw binárne [BIN][0]"
+      binary_drawBinScreen:
+        text: |-
+          nakresliť obrazovku
+           [B1][0]
+           [B2][1]
+           [B3][2]
+           [B4][3]
+           [B5][4]
+           [B6][5]
+           [B7][6]
+           [B8][7]
+      binary_drawDec:
+        text: "kreslenie desatinné [DEC][0]"
+      binary_drawPixelHere:
+        text: "nastaviť pixel [VAL][0]"
+        options:
+          VAL:
+            '0': 'off'
+            '1': 'Na'
+            '"toggle"': Toggle
+      binary_drawString:
+        text: "kreslenie reťazca [STR][0]"
+      binary_goTo:
+        text: "Skok na [LOC][0]"
+      binary_goToHome:
+        text: skákať hore doľava
+      binary_gridSize:
+        text: "nastaviť veľkosť mriežky [Veľkosť][0]"
+      binary_move:
+        text: "pohyb [DIR][0]"
+        options:
+          DIR:
+            '"up"': up
+            '"down"': dole
+            '"left"': ľavá
+            '"right"': pravda
+      binary_whenKey:
+        text: "keď [KLÁČ][0] stlačený"
+        options:
+          KEY:
+            '"up"': up
+            '"down"': dole
+            '"left"': ľavá
+            '"right"': pravda
+            '"space"': vesmír
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      craft_ifPath:
+        text: |-
+          ak cesta [DIR][0]
+          [STATEMENT][1]
+        options:
+          DIR:
+            "'ahead'": dopredu
+            "'right'": Na pravej strane
+            "'left'": doľava
+      craft_ifStandingOn:
+        text: |-
+          ak stojí na [TYPE][0]
+          [STATEMENT][1]
+        options:
+          TYPE:
+            "'blueCoralBlock'": Modrý koral
+            "'redCoralBlock'": červený koral
+            "'sand'": piesok
+            "'wool_blue'": Hlboká voda
+            "'planksOak'": Oak plank
+            "'seaLantern'": morská lampa
+      craft_ifStandingOnLimit:
+        text: |-
+          ak stojí na [TYPE][0]
+          [STATEMENT][1]
+        options:
+          TYPE:
+            "'sand'": piesok
+            "'darkPrismarine'": Temný prismarián
+            "'seaLantern'": morská lampa
+      craft_log:
+        text: "Záznamová správa [ZÁZAVA][0]"
+      craft_moveForward:
+        text: Prejdite dopredu
+      craft_placeBlock:
+        text: "miesto [blockType][0]"
+        options:
+          blockType:
+            '"strippedOak"': Strihaný dub
+            '"strippedDarkOak"': Striptýzovaný tmavý dub
+            '"stoneBricks"': kamenné tehly
+            '"mossyStoneBricks"': "Názov: mossy stone bricks"
+            '"crackedStoneBricks"': Prasknuté kamenné cihly
+            '"chiseledStoneBricks"': Dekoratívny kameň
+            '"blueCoralBlock"': Modrý koralový blok
+            '"pinkCoralBlock"': Ružový koralový blok
+            '"magentaCoralBlock"': Magenta koralový blok
+            '"redCoralBlock"': Červený koralový blok
+            '"yellowCoralBlock"': žltý koralový blok
+            '"blueDeadCoralBlock"': modrý mŕtvy koralový blok
+            '"pinkDeadCoralBlock"': Ružový mŕtvy koralový blok
+            '"magentaDeadCoralBlock"': Magenta mŕtvy koralový blok
+            '"readDeadCoralBlock"': Červený mŕtvy koralový blok
+            '"yellowDeadCoralBlock"': Žltý mŕtvy koralový blok
+            '"prismarine"': Prismarín
+            '"darkPrismarine"': Temný prismarián
+            '"seaLantern"': morská lampa
+            '"packedIce"': balený ľad
+            '"blueIce"': modrý ľad
+            '"blackConcrete"': Čierny betón
+            '"seaGrass"': morská tráva
+            '"kelp"': kelp
+            '"polishedGranite"': vylepšený granit
+      craft_placePrismarine:
+        text: Miesto Prismary
+      craft_placeTorch:
+        text: umiestniť torch
+      craft_repeatUntilConduit:
+        text: |-
+          Opakujte až do dokončenia potrubia
+          [STATEMENT][0]
+      craft_repeatUntilGoal:
+        text: |-
+          Opakovať až do cieľa
+          [STATEMENT][0]
+      craft_spawnEntity:
+        text: "spawn [ENTITY][0]"
+        options:
+          ENTITY:
+            '"cod"': cod
+            '"dolphin"': delfín
+            '"salmon"': losos
+            '"seaTurtle"': morská korytnačka
+            '"squid"': squid
+            '"tropicalFish"': Tropické ryby
+      craft_turn:
+        text: "otočiť [DIR][0]"
+        options:
+          DIR:
+            right: pravá
+            left: ľavá
+      ecosystems_catchMe:
+        text: "catch [THIS][0]"
+      ecosystems_eat:
+        text: "Jedlo [TOTO] [0]"
+      ecosystems_goldilocks:
+        text: |-
+           ak [CONDITION][0][SPRITE][1]
+          [STATEMENT][2]
+        options:
+          CONDITION:
+            '"too much"': príliš
+            '"just right"': práve správne
+            '"too little"': príliš málo
+      ecosystems_int10:
+        text: "[VALUE][0]"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      ecosystems_location_picker:
+        text: "na:[MÍSTO][0]"
+      ecosystems_makeNewSpriteBetween:
+        text: 'urobiť [N][0] novú [GRUPU][1] medzi umiestnením x: [X][2] y: [Y][3]'
+      ecosystems_makeNumSpritesAtLocation:
+        text: "vytvárať [NUM][0] nové [ANIMATION_NAME][1] sprity na [LOCATION_GENERATOR][2]"
+      ecosystems_makeNumSpritesWithinRange:
+        text: "vytvárať [NUM][0] nové [ANIMATION_NAME][1] sprity na [RANGE][2]"
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Top
+            "{x1:0, x2:400, y1:150, y2:250}": Stredná
+            "{x1:0, x2:400, y1:0, y2:200}": Spodná
+      ecosystems_randomLocationWithinRange:
+        text: "x min[X1][0]x max[X2][1]y min[Y1][2]y max[Y2][3]"
+      ecosystems_randomLocationWithinSelectedRange:
+        text: "[RANGE][0]"
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Top
+            "{x1:0, x2:400, y1:0, y2:200}": Spodná
+      storylab_clearHeadings:
+        text: jasné hlavičky
+      storylab_printText:
+        text: "Tlač [TEXT][0]"
+      storylab_setForegroundEffect2:
+        text: "do [EFFECT][0] efekt"
+        options:
+          EFFECT:
+            '"bubbles"': bubliny
+            '"confetti"': konfety
+            '"hearts"': Srdce
+            '"rain"': Dážď
+            '"starburst"': Starburst
+            '"twinkling"': Twinkle
+      storylab_setHeading:
+        text: "nastaviť hlavičku [HEADING][0]"
+      storylab_setPromptWithChoice:
+        text: "Upozornenie používateľa [QUESTION][0] pre premennú [VAR][1] s voľbou [A][2]"
+      storylab_setSubheading:
+        text: "nastaviť položku [SUBHEADING][0]"
+      transformers_playSoundOptions:
+        text: "prehrávanie zvuku [ZVUK][0]"
+        options:
+          SOUND:
+            "'sound://category_transformers/transforming1.mp3'": Glitch
+            "'sound://category_transformers/transforming2.mp3'": Statické
+            "'sound://category_transformers/transforming3.mp3'": Warp
+            "'sound://category_transformers/transforming4.mp3'": Buzz
+            "'sound://category_transformers/transforming5.mp3'": Syntetizácia
+            "'sound://category_transformers/transforming6.mp3'": Fuzz
+            "'sound://category_transformers/transforming7.mp3'": Elektrický
+            "'sound://category_transformers/transforming8.mp3'": Pulz
+            "'sound://category_transformers/transforming9.mp3'": Cybernetic
+            "'sound://category_transformers/transforming10.mp3'": Zap
+            "'sound://category_transformers/transforming11.mp3'": Transformácia
+            "'sound://category_transformers/transforming12.mp3'": Robotic
+            "'sound://category_transformers/transforming13.mp3'": Ping
+            "'sound://category_transformers/transforming14.mp3'": Pulz
+            "'sound://category_transformers/transforming15.mp3'": Crash
+      transformers_setAllTransformersSize:
+        text: "Nastaviť všetky sprites na [VELIKOSŤ][0]"
+        options:
+          SIZE:
+            '0': náhodné
+            '0.50': Malé
+            '0.75': Stredná
+            '1.00': Veľký
+            '2.00': extra veľké
+      transformers_setTransformersSize:
+        text: "nastaviť [SPRITE][0] na [VELIKOSŤ][1]"
+        options:
+          SIZE:
+            '0': náhodné
+            '0.50': Malé
+            '0.75': Stredná
+            '1.00': Veľký
+            '2.00': extra veľké
