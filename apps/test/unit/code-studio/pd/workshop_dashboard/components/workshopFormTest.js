@@ -561,7 +561,7 @@ describe('WorkshopForm test', () => {
     expect(wrapper.find('#suppress_email')).to.have.lengthOf(0);
   });
 
-  it('selecting Build Your Own Workshop shows and requires name and pl topics', () => {
+  it('selecting Build Your Own Workshop shows and requires name, participant group type, and pl topics', () => {
     const server = sinon.fakeServer.create();
     server.respondWith(
       'GET',
@@ -597,14 +597,17 @@ describe('WorkshopForm test', () => {
     );
     server.respond();
 
-    // Verify the name field and topics dropdown doesn't show up until Build Your Own is selected
+    // Verify the name field, participant group type dropdown, and topics dropdown don't show up until
+    // Build Your Own is selected as the course.
     expect(wrapper.find('#name').exists()).to.equal(false);
+    expect(wrapper.find('#participant-group-type').exists()).to.equal(false);
     expect(wrapper.find('#course_offerings').exists()).to.equal(false);
     const courseField = wrapper.find('#course').first();
     courseField.simulate('change', {
       target: {name: 'course', value: COURSE_BUILD_YOUR_OWN},
     });
     assert(wrapper.find('#name').exists());
+    assert(wrapper.find('#participant-group-type').exists());
     assert(wrapper.find('#course_offerings').exists());
 
     // Set other fields required to publish any workshop
@@ -631,7 +634,15 @@ describe('WorkshopForm test', () => {
       target: {name: 'capacity', value: 'Fake workshop name'},
     });
 
-    // Fill in topics (user can select either the label or checkbox, so we expect 2 for each here)
+    // Fill in participant group type (user can select either the label or checkbox, so we expect 2 for each here)
+    const participantGroupTypeDropdown = wrapper
+      .find('#participant-group-type')
+      .first();
+    participantGroupTypeDropdown.simulate('change', {
+      target: {name: 'participant-group-type', value: 'Regional'},
+    });
+
+    // Fill in topics
     const plTopicsDropdown = wrapper.find('#dropdownMenuButton').first();
     plTopicsDropdown.simulate('click');
     expect(wrapper.find({name: 'myPlTestTopic'})).to.have.lengthOf(2);
