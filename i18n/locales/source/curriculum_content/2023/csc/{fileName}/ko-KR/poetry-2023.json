@@ -1,0 +1,699 @@
+{
+  "resources": {
+    "_the_forest_for_the_trees_by_rena_priest/poetry/2023": {
+      "name": "",
+      "url": ""
+    },
+    "all_standards/poetry/2023": {
+      "name": " ",
+      "url": ""
+    },
+    "coding_with_poetry_vocabulary/poetry/2023": {
+      "name": " ",
+      "url": ""
+    },
+    "cs_connections_landing_page/poetry/2023": {
+      "name": "",
+      "url": "",
+      "type": ""
+    },
+    "csc_extended_connections_book_list/poetry/2023": {
+      "name": "",
+      "url": "",
+      "type": ""
+    },
+    "helpful_hints_for_teachers_and_learners/poetry/2023": {
+      "name": "",
+      "url": "",
+      "type": ""
+    },
+    "resource_list_for_all_lessons/poetry/2023": {
+      "name": "",
+      "url": ""
+    }
+  },
+  "lessons": {
+    "https://studio.code.org/s/poetry-2023/lessons/1": {
+      "name": "",
+      "overview": "   ",
+      "preparation": " ",
+      "purpose": "  ",
+      "student_overview": "  ",
+      "lesson_activities": {
+        "281ef28f-2969-4c60-80a4-8bdad8662658": {
+          "name": "",
+          "activity_sections": {
+            "4060fc38-c2a6-47ad-a35e-dd308ad03d85": {
+              "tips": [
+                "      "
+              ]
+            }
+          }
+        },
+        "7387ce3c-05c0-477a-a59c-d72b1e06f2a2": {
+          "name": "",
+          "activity_sections": {
+            "62511971-1d68-4159-9949-a2c4fdceab41": {
+              "description": " "
+            },
+            "b1356ec2-4bf3-4426-a00a-334dafc5c7f5": {
+              "description": "   "
+            },
+            "539ab093-d297-428c-9ac2-d4e5d72b9ee2": {
+              "description": "  "
+            },
+            "7c92a266-7632-40a2-86d1-981fcd2c89ff": {
+              "description": "       "
+            },
+            "182b31a3-ea9b-4bd5-b846-a259ce445d39": {
+              "description": "   "
+            },
+            "382ab49b-35e9-40bd-9684-36a4c83dbd90": {
+              "tips": [
+                "  "
+              ]
+            }
+          }
+        },
+        "c54ef9e6-6b5a-481e-b77d-7e446171e8b0": {
+          "name": "",
+          "activity_sections": {
+            "1090d899-8702-44e4-8973-dfc66eaf2a4e": {
+              "name": "",
+              "description": " "
+            },
+            "0838e4f8-8a88-4048-98c4-1a035464dc06": {
+              "description": "    "
+            },
+            "5b6dd0fc-9786-4553-b7f6-44b6bb5ef3f0": {
+              "tips": [
+                "              "
+              ]
+            },
+            "9613f996-b728-45e2-b767-e6b742c6c9b6": {
+              "name": "",
+              "description": "   ",
+              "progression_name": ""
+            },
+            "f49370af-c4f2-49b8-a4b9-3b0e0f1400e5": {
+              "description": "    ",
+              "progression_name": ""
+            },
+            "211c41db-9e93-4c86-9ecb-e6718e94e39e": {
+              "description": "  ",
+              "progression_name": ""
+            },
+            "9b5c4d0c-a964-42af-93f5-922938a36096": {
+              "description": "  ",
+              "progression_name": ""
+            },
+            "1e4ba2cc-5710-4088-b840-9e099e6ed70d": {
+              "description": "   ",
+              "progression_name": ""
+            },
+            "45ae5705-dca5-4b77-a2f5-fd53b9ce3bb1": {
+              "description": "   ",
+              "progression_name": ""
+            },
+            "e714d4ed-82d3-42a3-8d94-2f236df2f267": {
+              "description": "     ",
+              "progression_name": ""
+            }
+          }
+        },
+        "ce713f16-6392-4922-b661-50dbf0853e80": {
+          "name": "",
+          "activity_sections": {
+            "a74e9248-707c-43ca-bc03-c4b024a9cd2a": {
+              "description": " "
+            },
+            "8832acb1-6add-4178-9e8b-736a6e045e44": {
+              "name": " ",
+              "description": "  "
+            },
+            "de9f9de3-8721-41e9-a96b-5ca3bb25041f": {
+              "description": "   "
+            },
+            "8af5669d-aefe-47b8-b6d4-ec370642078a": {
+              "name": "",
+              "description": " "
+            }
+          }
+        },
+        "aad4dda1-507b-42a5-a62c-1aac5671cb91": {
+          "name": "",
+          "activity_sections": {
+            "ca01b961-e407-42c4-9abc-fb3990df39d3": {
+              "description": "   "
+            },
+            "3ffbf11a-4e50-40ff-b781-f003016c72c6": {
+              "tips": [
+                "   "
+              ]
+            }
+          }
+        }
+      },
+      "objectives": {
+        "1bd88170-e38e-4c5b-bd62-8107acd68567": {
+          "description": ""
+        },
+        "4b7b140c-b345-48c6-b81b-eea3c37f2a0b": {
+          "description": ""
+        },
+        "a39a475f-a7c2-402f-abef-87340f6e4a45": {
+          "description": ""
+        }
+      },
+      "resources": {
+        "_the_forest_for_the_trees_by_rena_priest_1/poetry/2023": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "coding_with_poetry_lesson_1/poetry/2023": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "helpful_hints_1/poetry/2023": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "poem_art_1_-_introduction/poetry/2023": {
+          "name": " ",
+          "url": "",
+          "type": ""
+        },
+        "poem_art_2_-_events/poetry/2023": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "poem_art_3_-_imagery/poetry/2023": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "poem_art_4_-_celebration/poetry/2023": {
+          "name": " ",
+          "url": "",
+          "type": ""
+        }
+      },
+      "vocabularies": {
+        "code/poetry/2023": {
+          "word": "",
+          "definition": ""
+        },
+        "event/poetry/2023": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poetry/2023": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poetry/2023": {
+          "word": "",
+          "definition": ""
+        },
+        "poem/poetry/2023": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poetry/2023": {
+          "word": "",
+          "definition": ""
+        }
+      }
+    },
+    "https://studio.code.org/s/poetry-2023/lessons/2": {
+      "name": "",
+      "overview": "  ",
+      "preparation": "",
+      "purpose": "  ",
+      "student_overview": "    ",
+      "lesson_activities": {
+        "f3ff3f84-baa4-4480-9970-252a7478e738": {
+          "name": "",
+          "activity_sections": {
+            "08a4766f-c941-4770-9bb4-019389604584": {
+              "name": "",
+              "description": "   "
+            },
+            "aa2b8af4-d941-4f4b-8b5c-2b0462df453e": {
+              "description": "    "
+            },
+            "8e76a45c-4ef0-49db-9839-ed7e5323a7f1": {
+              "description": "    "
+            },
+            "1d723fa3-6aec-4dd5-a864-ee117b0272e8": {
+              "description": "   "
+            },
+            "9173de11-3a80-4f69-9fd1-fbeefc15e9b8": {
+              "tips": [
+                "    "
+              ]
+            }
+          }
+        },
+        "e9cbffab-836c-44c6-91e3-fe51eb49cd13": {
+          "name": "",
+          "activity_sections": {
+            "6f6494f4-88eb-4f26-8063-c4a204ccf341": {
+              "name": "",
+              "description": " "
+            },
+            "0ec77c09-d672-48e6-a663-43cfa09f39ce": {
+              "description": " ",
+              "tips": [
+                "      "
+              ]
+            },
+            "ebbed86c-9d52-42cd-ba0b-658476a564df": {
+              "name": "",
+              "description": "   "
+            },
+            "e650d5df-ec03-4080-870f-70516508f4ec": {
+              "description": "        "
+            },
+            "34ce2240-3936-4e06-9ed1-7f877e98d742": {
+              "description": "   "
+            },
+            "63a8df80-5449-402f-ada3-514840f5b47c": {
+              "name": "",
+              "description": ""
+            },
+            "2f14b146-337f-4c9b-85d4-b5032d0b6291": {
+              "name": "",
+              "description": ""
+            },
+            "8c133a86-8097-4356-9f81-1caa501a07d8": {
+              "progression_name": ""
+            },
+            "5e0ddc43-3c1c-4f35-a143-0363caba2bf7": {
+              "tips": [
+                "  "
+              ]
+            },
+            "b0fcdd5c-80a1-43e0-a3c6-29a6f915cd9b": {
+              "name": "",
+              "description": " "
+            },
+            "0bc81311-f866-41f7-b704-dc3dfa994528": {
+              "description": "    "
+            },
+            "3a652598-cf63-4947-a18d-e061b8ea0b78": {
+              "description": "            "
+            },
+            "bf6156f8-6307-4af9-8f3a-53c3633a1002": {
+              "name": "",
+              "description": "  "
+            },
+            "665743fa-bed1-498f-bfb5-feb2b6baf6c0": {
+              "tips": [
+                " "
+              ]
+            }
+          }
+        },
+        "48e777fe-4e61-4b4e-bfdd-d69fb9869eaa": {
+          "name": "",
+          "activity_sections": {
+            "2522adc1-9ff5-4d94-a789-85795f238c16": {
+              "name": "",
+              "description": "   "
+            }
+          }
+        },
+        "9484e482-4713-4747-84d0-fba065c7e4a1": {
+          "name": "",
+          "activity_sections": {
+            "0b16d8e7-63c6-4878-b0ee-42865e00697e": {
+              "description": "   "
+            },
+            "054b2bd3-82cc-4bf9-ba4e-bf62fe02f01d": {
+              "tips": [
+                "   "
+              ]
+            }
+          }
+        }
+      },
+      "objectives": {
+        "2dfe199c-6e82-4979-a24f-0b20d8b14f2f": {
+          "description": ""
+        },
+        "521bc123-9d0a-4588-9b39-a3cc94229a64": {
+          "description": ""
+        },
+        "db6ecf8b-0374-46ea-b6cd-d59ac77879a1": {
+          "description": ""
+        }
+      },
+      "resources": {
+        "coding_with_poetry_lesson_1/poetry/2023": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "coding_with_poetry_rubric/poetry/2023": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "helpful_hints/poetry/2023": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "write_your_own_poem/poetry/2023": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "write_your_own_poem_-_topics/poetry/2023": {
+          "name": "",
+          "url": "",
+          "type": ""
+        }
+      },
+      "vocabularies": {
+        "code/poetry/2023": {
+          "word": "",
+          "definition": ""
+        },
+        "event/poetry/2023": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poetry/2023": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poetry/2023": {
+          "word": "",
+          "definition": ""
+        },
+        "poem/poetry/2023": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poetry/2023": {
+          "word": "",
+          "definition": ""
+        }
+      }
+    },
+    "https://studio.code.org/s/poetry-2023/lessons/3": {
+      "name": "",
+      "overview": "  ",
+      "preparation": "",
+      "purpose": " ",
+      "student_overview": " ",
+      "lesson_activities": {
+        "1bf99ed8-87aa-4bc1-b29e-77d8836cbff5": {
+          "name": "",
+          "activity_sections": {
+            "591d5554-8192-45e8-8148-90ea3dccb6e7": {
+              "name": "",
+              "description": "  "
+            },
+            "66f92999-a212-4c76-b50c-fcc7d3523965": {
+              "description": "    ",
+              "tips": [
+                "   "
+              ]
+            }
+          }
+        },
+        "5094fb3f-4b22-4fde-9664-3bbbd94ece74": {
+          "name": " ",
+          "activity_sections": {
+            "0a0328fe-b3d8-4eb3-a67a-7eac98b6d926": {
+              "name": "",
+              "description": "  ",
+              "progression_name": " "
+            },
+            "dbc698a1-7ac4-4226-9347-749ad12885ac": {
+              "description": "    "
+            },
+            "58facfa2-d6e2-48c8-8a9b-42e9e3e95730": {
+              "description": "              ",
+              "progression_name": ""
+            },
+            "30967762-dd16-47ae-abe1-bb00b79e54a9": {
+              "description": "    ",
+              "tips": [
+                "       "
+              ],
+              "progression_name": ""
+            },
+            "b35a631f-1839-403e-a41b-8277cd6549a3": {
+              "description": "   "
+            },
+            "fc96158a-2f7c-4e47-bc0d-81b5bf26d50a": {
+              "tips": [
+                "    "
+              ]
+            }
+          }
+        },
+        "8dd85242-85ec-4172-8516-b3124c3ec790": {
+          "name": "",
+          "activity_sections": {
+            "d3503af6-3a1d-4a6d-b190-6b97bf23302a": {
+              "name": "",
+              "description": "      "
+            },
+            "e273d1cc-0e4c-425b-944b-1d8c9644d003": {
+              "description": " "
+            }
+          }
+        },
+        "7934c32a-f4ba-48b1-8c92-903075552224": {
+          "name": "",
+          "activity_sections": {
+            "30cd25ec-ad85-427d-abca-dff52d31f7d2": {
+              "description": "   "
+            },
+            "8176cab2-0a34-487c-9c38-86d7118c2b7f": {
+              "tips": [
+                "   "
+              ]
+            }
+          }
+        }
+      },
+      "objectives": {
+        "079c5cd4-3be3-44f1-9cf1-800dc8a2a86c": {
+          "description": ""
+        },
+        "4903767c-89c4-4fbf-8879-93cf977803ae": {
+          "description": " "
+        },
+        "73f2fb47-8d56-4635-80b1-72a57c3c51d5": {
+          "description": ""
+        },
+        "9524e34c-35ef-4735-9404-b7ca08d80257": {
+          "description": ""
+        }
+      },
+      "resources": {
+        "coding_with_poetry_lesson_1/poetry/2023": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "enter_your_own_poem/poetry/2023": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "helpful_hints/poetry/2023": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "poem_art_celebration_video_optional_/poetry/2023": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "poem_art_events_video_optional_/poetry/2023": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "poem_art_video_optional_/poetry/2023": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "time_capsule_checklist/poetry/2023": {
+          "name": "",
+          "url": "",
+          "type": ""
+        }
+      },
+      "vocabularies": {
+        "poem/poetry/2023": {
+          "word": "",
+          "definition": ""
+        }
+      }
+    },
+    "https://studio.code.org/s/poetry-2023/lessons/4": {
+      "name": "",
+      "overview": "   ",
+      "preparation": "  ",
+      "purpose": "  ",
+      "student_overview": " ",
+      "lesson_activities": {
+        "62058ba3-874c-4aae-9d67-8bed1cf236ae": {
+          "name": "",
+          "activity_sections": {
+            "f5e7a9c3-7a9a-4db0-9a3e-495f67c98443": {
+              "name": "",
+              "description": ""
+            },
+            "713a05d9-fdad-4eac-afc9-97eeff0a5197": {
+              "description": "        "
+            },
+            "870d6b26-f55f-4667-809d-cf9e4979df7c": {
+              "description": "  ",
+              "tips": [
+                "    "
+              ],
+              "progression_name": ""
+            }
+          }
+        },
+        "6974a2ee-1e66-4ea4-8a37-6e1f5eebdc42": {
+          "name": "",
+          "activity_sections": {
+            "2c69b8bf-8ba9-4254-a5f5-10f0822ffd95": {
+              "name": "",
+              "description": ""
+            },
+            "30f7aa3d-9d66-44f6-8e3a-ede490c45c89": {
+              "description": "  "
+            },
+            "769c5b1f-880d-48aa-ae0c-ce18a62d0aba": {
+              "description": "  "
+            },
+            "1539968b-8ef6-4d84-ad50-d47083975ba2": {
+              "name": "",
+              "description": ""
+            },
+            "0f923259-48aa-46b2-a124-89658cb23f04": {
+              "description": "     "
+            },
+            "2f6b0e78-8580-4da8-bf5f-f425eff9b958": {
+              "description": " ",
+              "progression_name": ""
+            },
+            "e363b2bd-99ee-4dc0-8f7c-c8c25f623381": {
+              "description": "    ",
+              "tips": [
+                " "
+              ]
+            },
+            "6703dc75-a394-4e9c-8d1c-061fb3d53cf2": {
+              "name": "",
+              "description": "   "
+            },
+            "31a7ae8f-4773-4e68-8656-773b19c9bb69": {
+              "description": "    "
+            },
+            "78bb242f-03a6-4b70-9013-41e95836f0b2": {
+              "description": "   "
+            },
+            "3f1e4652-e9d2-4fa5-944a-1f5fe9e9a5b0": {
+              "progression_name": ""
+            },
+            "36325512-9851-4e3b-9cdc-52c5d78cc8d7": {
+              "name": "",
+              "tips": [
+                "  "
+              ]
+            },
+            "5e611050-c614-4775-b1c1-db1c4c3fd75f": {
+              "description": "     "
+            }
+          }
+        },
+        "bc06844e-05f4-4090-94f2-c46dece69e6f": {
+          "name": "",
+          "activity_sections": {
+            "105d9bbe-d1e0-4bd9-a553-35e9b5a29939": {
+              "name": "",
+              "description": ""
+            },
+            "3ef7e9e0-bacf-4a7d-b44d-ad0ecdb52ad1": {
+              "description": "  "
+            },
+            "031f9d52-aa34-4bce-bbd4-dcf00712d6aa": {
+              "description": " "
+            }
+          }
+        },
+        "e57a4ee9-956b-410e-8d3e-b321b0abe71c": {
+          "name": "",
+          "activity_sections": {
+            "178accb4-abd2-426b-b492-35d076276c1c": {
+              "description": "   "
+            },
+            "eeb26e7a-97c3-449c-8215-a88977a6e8f8": {
+              "tips": [
+                "   "
+              ]
+            }
+          }
+        }
+      },
+      "objectives": {
+        "2ef99265-af55-4a2d-8719-58d4451f0610": {
+          "description": ""
+        },
+        "a4fa2434-b9c5-4e36-819b-50398d230730": {
+          "description": ""
+        }
+      },
+      "resources": {
+        "_optional_student_url_sharing_document/poetry/2023": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "coding_with_poetry_lesson_1/poetry/2023": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "poem_app_example/poetry/2023": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "share_your_app_/poetry/2023": {
+          "name": "",
+          "url": "",
+          "type": ""
+        }
+      },
+      "vocabularies": {
+        "constructive_feedback/poetry/2023": {
+          "word": "",
+          "definition": ""
+        },
+        "poetry_circle/poetry/2023": {
+          "word": "",
+          "definition": ""
+        }
+      }
+    }
+  }
+}
