@@ -1,0 +1,40 @@
+---
+en:
+  data:
+    block_categories:
+      Actions: Akcie
+      Advanced: Pokročilý
+      Behaviors: Správanie
+      'Behaviors ': 'Správanie '
+      Brushes: Kefy
+      Category: Kategória
+      Color: Farba
+      Comment: Komentár
+      Comments: Komentáre
+      Conditionals: Podmienené podmienky
+      Dancers: Tanečníci
+      Default: Predvolený
+      Effects: Účinky
+      Events: Udalosti
+      Functions: Funkcie
+      'Functions ': 'Funkcie '
+      Game/Score: Hra/skóre
+      Games/Score: Hry/skóre
+      Groups: Skupiny
+      Input: Vstup
+      Location: Miesto
+      Locations: Miesta
+      Logic: Logika
+      Loops: Slučky
+      Math: Matika
+      Numbers: Čísla
+      Picker: Zberač
+      Prebuilt: Predpripravené
+      Properties: Vlastnosti
+      Shapes: Tvary
+      Sprites: Skřítci
+      Text: Text
+      Variables: Premenné
+      'Variables ': 'Premenné '
+      'Variables  ': 'Premenné  '
+      World: Svet
