@@ -1,8 +1,8 @@
 import Console from '@codebridge/Console';
-import Preview from '@codebridge/Preview/Preview';
 import classNames from 'classnames';
 import React from 'react';
 
+import MiniAppPreview from '@cdo/apps/codebridge/MiniAppPreview/MiniAppPreview';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useCodebridgeContext} from '../codebridgeContext';
@@ -28,7 +28,7 @@ const Output: React.FunctionComponent = () => {
         isVertical ? moduleStyles.vertical : moduleStyles.horizontal
       )}
     >
-      <Preview />
+      <MiniAppPreview />
       <Console />
     </div>
   );

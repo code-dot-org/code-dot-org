@@ -5,9 +5,9 @@ import React from 'react';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
-import moduleStyles from './preview.module.scss';
+import moduleStyles from './mini-app-preview.module.scss';
 
-const Preview: React.FunctionComponent = () => {
+const MiniAppPreview: React.FunctionComponent = () => {
   const {config} = useCodebridgeContext();
   const isHorizontal = config.activeGridLayout === 'horizontal';
   return (
@@ -27,4 +27,4 @@ const Preview: React.FunctionComponent = () => {
   );
 };
 
-export default Preview;
+export default MiniAppPreview;
