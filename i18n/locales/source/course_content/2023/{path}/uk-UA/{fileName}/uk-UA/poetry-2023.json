@@ -1,0 +1,150 @@
+{
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/1": {
+    "short_instructions": "Коли ви читаєте цей вірш, який колір спадає вам на думку? Знайдіть фон, колір тексту та текстовий ефект, який відповідає почуттю цього вірша.",
+    "long_instructions": "Коли ви читаєте цей вірш, які почуття у вас виникають? Який колір відповідає цьому почуттю? - Підключіть блоки з панелі інструментів під <code style=\"color:black; background-color:#FFBD46\">час запуску</code>, щоб створити свою програму. - Знайдіть **фон** і **текстовий ефект**, які відповідають **настрою** цього вірша. - Змініть **кольори** ваших ефектів або тексту. - Натисніть \"Виконати\", щоб анімувати вірш.",
+    "authored_hints": {
+      "add_background_effect": "Знайдіть фоновий блок на зразок цього: [blockly block][0] і знайдіть блок з текстовим ефектом, як цей: [blockly block][1] З'єднайте ці блоки у розділі `when run` у вашій робочій області.",
+      "add_more_effects": "Додайте більше кольорів або ефектів, щоб створити настрій цього вірша. [blockly block][0]"
+    },
+    "callouts": {
+      "poetry_background": "Знайдіть блоки коду тут. ",
+      "run_button": "Протестуйте свою анімацію за допомогою цієї кнопки. "
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/2": {
+    "short_instructions": "Чи відповідали звуки та зображення настрою вірша? ",
+    "contained levels": [
+      {
+        "long_instructions": "<img src=\"https://images.code.org/752a37250030ee9b5acaea2143dca2fa-image-1634928264031.png\" style=\"max-width: 75px; float:left; padding-left:10px; padding-right:10px; padding-top:10px\"> ## Прогнозування Прочитайте вірш. Які звуки та образи спадають на думку? Після того, як ви наберете відповідь, натисніть \"Run\", щоб подивитися і послухати анімацію вірша. "
+      }
+    ]
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/3": {
+    "short_instructions": "Додайте звуки до програми, щоб змінити відчуття від вірша під час читання. ",
+    "long_instructions": "Додавання **звуків** та **музики** до вашої програми може змінити відчуття вірша під час читання. - Додайте новий звуковий або музичний блок до вашого коду. - Знайдіть звуки або музику, які відповідають настрою вірша. ",
+    "authored_hints": {
+      "poetry_sound_hint": "Знайди цей блок: [blockly block][0] або цей блок: [blockly block][1] Підключіть його у розділі `при виконанні` у вашій робочій області.",
+      "more_code": "Додайте більше ефектів і кольорів, які підходять до обраного вами звуку. [blockly block][0]"
+    },
+    "callouts": {
+      "poetry_sound": "Новий блок!",
+      "poetry_music": "Новий блок!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/4": {
+    "short_instructions": "Давайте використаємо події для зміни анімації, коли у вірші згадується щось нове. ",
+    "long_instructions": "Використовуйте **події**, щоб змінити анімацію, коли у вірші згадується щось нове. - Знайдіть **рядок** у вірші, де змінюється настрій або з'являється щось нове. - Додайте **кольори** або **ефекти**, щоб вони відповідали новому **рядку** у вірші. - Переконайтеся, що ефект змінюється, коли потрібний рядок з'являється на екрані. ",
+    "authored_hints": {
+      "do_effect_hint": "Цей новий блок `do effect` додасть новий ефект один раз. [blockly block][0] Ви можете накласти декілька `do effect`ів один на одного, щоб ефект тривав довше. [blockly block][1]",
+      "background_effect_hint": "Ви можете додати інші ефекти під блоком події за допомогою коду, який виглядає наступним чином: [blockly block][0]",
+      "more_events_hint": "Ви можете використовувати більше однієї події у своїй програмі. Спробуйте використати дві події з різними ефектами, щоб відповідати новим рядкам у вірші. [blockly block][0] [blockly block][1] [blockly block][0] [blockly block][1]."
+    },
+    "callouts": {
+      "poetry_event": "Новий блок!",
+      "poetry_foreground": "Новий блок!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/5": {
+    "short_instructions": "Які образи спадають на думку?",
+    "contained levels": [
+      {
+        "long_instructions": "<img src=\"https://images.code.org/752a37250030ee9b5acaea2143dca2fa-image-1634928264031.png\" style=\"max-width: 75px; float:left; padding-left:10px; padding-right:10px; padding-top:10px\"> ## Прогнозування Прочитайте вірш. Які образи спадають на думку? Після того, як ви наберете відповідь, натисніть \"Виконати\", щоб переглянути анімацію вірша. "
+      }
+    ]
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/6": {
+    "short_instructions": "Автори використовують образи, щоб намалювати картину в уяві читача. Ви можете додати спрайти, щоб проілюструвати свій вірш. ",
+    "long_instructions": "Поети використовують слова, щоб намалювати картину в уяві читача. Додайте **спрайти**, щоб відповідати образам, які спадають вам на думку, коли ви читаєте вірш. - Додайте до коду блок <code style=\"color:black; background-color:#F79EA5\">зі спрайтами make new</code>. - Виберіть костюм для свого спрайта. Додаткове завдання:_ Підключіть блок <code style=\"color:black; background-color:#F79EA5\">make new sprite</code> до події, щоб новий спрайт з'являвся, коли у вірші з'являється новий образ. ",
+    "authored_hints": {
+      "location_hint": "Кожен спрайт має **локацію**. Ви можете встановити місце розташування, натиснувши кнопку на цьому блоці: [blockly block][0] - Натисніть кнопку [][1] на блоці розташування, а потім виберіть нову позицію для спрайта на екрані. - Натисніть кнопку \"Виконати\", коли ваш код буде завершено.",
+      "remove_hint": "Ви можете видалити спрайт на певному номері рядка. Ви можете додати новий спрайт на його місце: [blockly block][0]."
+    },
+    "callouts": {
+      "poetry_sprite": "Новий блок!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/7": {
+    "short_instructions": "Спрайти можуть виконувати певні дії або поведінку знову і знову під час роботи програми.",
+    "long_instructions": "Спрайти можуть виконувати певні дії або **поведінку** знову і знову під час роботи програми. - Додайте до свого коду блок <code style=\"color:black; background-color:#F79EA5\">початку спрайту</code>. - Дослідіть різні варіанти поведінки спрайтів. - Виберіть поведінку, яка відповідає вашому віршу. Додаткове завдання:_ Додайте блок <code style=\"color:black; background-color:#F79EA5\">початку спрайту</code> до **події**!",
+    "authored_hints": {
+      "add_behavior": "Додайте до коду блок `sprite starts`. Переконайтеся, що ви вже створили спрайт, якому надаєте поведінку. [blockly block][0]"
+    },
+    "callouts": {
+      "poetry_sprite_begins": "Новий блок!",
+      "poetry_sprite_stops": "Новий блок!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/8": {
+    "short_instructions": "Ви можете змінити розмір вже створеного спрайта. ",
+    "long_instructions": "Ви можете змінити **розмір** вже створеного спрайта. - Змініть розмір спрайта за допомогою нового блоку <code style=\"color:black; background-color:#F79EA5\">встановлення розміру</code>. - Переконайтеся, що ви вибрали розмір, відмінний від 100.",
+    "authored_hints": {
+      "size hint": "Знайдіть цей блок і клацніть на `150`. [blockly block][0] Що станеться, якщо число `25`? [blockly block][1]"
+    },
+    "callouts": {
+      "poetry_set_sprite": "Новий блок!",
+      "poetry_remove_sprite": "Новий блок!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/9": {
+    "long_instructions": "Свобода чистого аркуша! - Ілюструйте вірш так, як вам подобається, і діліться ним з друзями. - Скористайтеся випадаючим меню \"Вибрати вірш\" у верхньому лівому куті, щоб вибрати вірш або введіть свій власний!",
+    "callouts": {
+      "poetry_new_block": "Новий блок!",
+      "poetry_selector": "Виберіть будь-який вірш або напишіть свій!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/2/levels/1": {
+    "dsls": {
+      "markdown": "##Сплануй свій вірш\n\n<div>\n<img style=\" float: left; width:25%; padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\" />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>Час планувати власний вірш.</strong>\n</h4>\n\n>Вам слід включити: > - Щось, що ви любите робити. > - Важливу для вас людину. > - Деякі з ваших улюблених речей. **Готовий почати планувати? Скористайся <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\" target=\"_blank\">цим ресурсом</a>. **Шукаєш тему? Скористайся <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\" target=\"_blank\">цим ресурсом</a>.\n\n</div>\n"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/3/levels/1": {
+    "short_instructions": "Зашифруй свій власний вірш!",
+    "long_instructions": "**Закодуй свій вірш!** Тепер настав час оживити твій вірш. Введіть свій власний вірш, а потім додайте код! Підказка: Перейдіть на наступний рівень, щоб переглянути будь-які навички кодування._."
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/3/levels/2": {
+    "dsls": {
+      "description": "Виберіть одну з вправ нижче, щоб освіжити в пам'яті, як додати код до вашого вірша-капсули часу! Ви можете вибрати кілька варіантів і зробити більше одного!",
+      "display_name": "Перевірте свої навички кодування!"
+    },
+    "sublevels": {
+      "csc_timecapsule_review1_ -l3": {
+        "display_name": "Додайте фон",
+        "short_instructions": "Коли ви читаєте цей вірш, що спадає вам на думку? Знайдіть фон, який відповідає настрою цього вірша.",
+        "long_instructions": "**Давайте створимо фон для нашого вірша!** - підключіть <code style=\"color:black; background-color:#B3B2FB\">встановлений фон,</code> під яким буде блокуватись під <code style=\"color:black; background-color:#FFBD46\">час запуску</code>. - Щоб вибрати інше тло, перейдіть на вкладку \"Тло\" над областю відтворення. - Коли закінчите, натисніть \"Запустити\". Бонус: Спробуйте різні фони, рамки та ефекти."
+      },
+      "csc_timecapsule_review2_ -l3": {
+        "display_name": "Задати колір тексту",
+        "short_instructions": "Тепер додайте колір тексту до вашого вірша.",
+        "long_instructions": "**Давайте змінимо колір тексту нашого вірша!\" - Підключіть блок <code style=\"color:black; background-color:#B3B2FB\">із заданим кольором тексту</code> під <code style=\"color:black; background-color:#FFBD46\">час запуску</code>. - Виберіть колір, який ви можете бачити на фоні. - Закінчивши, натисніть \"Виконати\".\r\n"
+      },
+      "csc_timecapsule_review3_ -l3": {
+        "display_name": "Встановити ефект тексту",
+        "short_instructions": "Встановіть текстовий ефект для вашого вірша.",
+        "long_instructions": "**Знайдемо текстовий ефект, який відповідатиме настрою нашого вірша! - Підключіть <code style=\"color:black; background-color:#B3B2FB\">встановлений</code> блок <code style=\"color:black; background-color:#B3B2FB\">текстового ефекту</code> під пунктом \" <code style=\"color:black; background-color:#FFBD46\">Виконати</code>\". - Закінчивши, натисніть \"Виконати\".\r\n"
+      },
+      "csc_timecapsule_review4_ -l3": {
+        "display_name": "Виберіть звук",
+        "short_instructions": "Додайте звуки до програми, щоб змінити відчуття від вірша під час читання.",
+        "long_instructions": "**Давай знайдемо звук, який відповідає настрою нашого вірша про капсулу часу!** - Підключіть <code style=\"color:black; background-color:#B3B2FB\">звук відтворення</code> або <code style=\"color:black; background-color:#B3B2FB\">музичний</code> блок під <code style=\"color:black; background-color:#FFBD46\">час запуску</code>. - Виберіть звук або музику, яка відповідає настрою вірша. - Коли закінчите, натисніть \"Запустити\".\r\n\r\n"
+      },
+      "csc_timecapsule_review5_ -l3": {
+        "display_name": "Додати подію",
+        "short_instructions": "Використовуйте події для зміни анімації, коли у вірші згадується щось нове.\r\n",
+        "long_instructions": "**Додаймо блок події, щоб змінити тло, текстовий ефект або звук відповідно до рядка нашого вірша! Перетягніть блок <code style=\"color:black; background-color:#6AF36C\">\"Коли з'являється ря</code> док\" до робочої області. - Підключіть <code style=\"color:black; background-color:#B3B2FB\">встановлене тло</code>, <code style=\"color:black; background-color:#B3B2FB\">текстовий ефект</code> або блок <code style=\"color:black; background-color:#B3B2FB\">відтворення звуку</code> під ним. - Закінчивши, натисніть \"Виконати\".\r\n"
+      },
+      "csc_timecapsule_review6_ -l3": {
+        "display_name": "Додайте спрайт",
+        "short_instructions": "Додайте спрайт, щоб проілюструвати свій вірш-капсулу часу. Спрайти можуть виконувати певні дії або поведінку знову і знову під час роботи програми.\r\n",
+        "long_instructions": "**Давайте додамо спрайт і дамо йому поведінку!** - Підключіть блок <code style=\"color:black; background-color:#F79EA5\">make new sprite</code> під блоком під <code style=\"color:black; background-color:#FFBD46\">час запуску</code>. - Потім підключіть блок <code style=\"color:black; background-color:#F79EA5\">початку спрайту</code> і виберіть поведінку. - Коли закінчите, натисніть \"Запустити\". Бонус: Додайте блок подій, щоб змусити спрайт з'являтися або зникати з певним рядком._."
+      }
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/4/levels/1": {
+    "long_instructions": "Ви закінчили, і настав час поділитися своїм віршем! Чудова робота! - Переконайтеся, що весь ваш код працює так, як ви очікуєте. - Додайте останні штрихи."
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/4/levels/2": {
+    "dsls": {
+      "markdown": "##Поділіться своїм віршованим додатком <img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53 PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\n**Тепер, коли ви зашифрували свій вірш, настав час поділитися ним! Переглядаючи проект однокласників, подумайте про \"сяйво\", \"зростання\" та \"запитання\", які ви можете написати для свого партнера: - \"сяйво\" - це те, що вони зробили добре - \"зростання\" - це те, що вони можуть змінити або покращити - \"запитання\" - це те, про що ви хотіли б дізнатися більше.\n</div>\n\n**Готові розпочати? ** Використовуйте <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\" target=\"_blank\">цей ресурс</a>, щоб поділитися відгуками зі своїм партнером.\n\n"
+    }
+  }
+}
