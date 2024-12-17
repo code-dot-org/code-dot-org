@@ -1,0 +1,109 @@
+---
+en:
+  data:
+    variable_names:
+      "???": "???"
+      Actor_1_Counter: Actor_1_Counter
+      Actor_2_Counter: Actor_2_Counter
+      Blue: Modrá
+      Green: Zelená
+      Red: Červená
+      actor: herec
+      adjective: prídavné meno
+      age: vek
+      animal1score: animal1score
+      animal1speed: animal1speed
+      animal2score: animal2score
+      animal2speed: animal2speed
+      answer: odpoveď
+      armlength: dĺžka ramena
+      binary: binárne
+      birds: vtáky
+      bit: bit
+      blue1: blue1
+      blue2: blue2
+      body-part: časti tela
+      bodylength: dĺžka tela
+      buttonHeight: buttonHeight
+      buttonMargin: buttonMargin
+      buttonWidth: buttonWidth
+      cat_score: cat_score
+      cat_speed: cat_speed
+      cats: mačky
+      centerToPadLeft: centerToPadLeft
+      choice: výber
+      circ: cir
+      codeName: codeName
+      color: farba
+      controllerHeight: controllerHeight
+      controllerWidth: controllerWidth
+      count: počítať
+      counter: pult
+      counter2: počítadlo2
+      currentActor: currentActor
+      direction: smer
+      dog_score: dog_score
+      dog_speed: dog_speed
+      dogs: psy
+      dragons: draci
+      enemy_speed: enemy_speed
+      energy: energia
+      firstName: meno
+      fishCaught: fishCaught
+      footlength: dĺžka nohy
+      gather: zhromaždiť
+      green1: zelená1
+      green2: zelená2
+      guess: hádajte
+      height: výška
+      honey: med
+      i: i
+      left: vľavo
+      legangle: legangle
+      leglength: dĺžka nôh
+      length: dĺžka
+      level: úroveň
+      marginX: marginX
+      marginY: marginY
+      meal: jedlo
+      myName: myName
+      name: názov
+      nectar: nektár
+      nectars: nektáre
+      number: číslo
+      object: objekt
+      padYOffset: padYOffset
+      parts: diely
+      planet: planéta
+      player_score: player_score
+      points: body
+      punchLine: punchLine
+      random: náhodné
+      red1: red1
+      red2: red2
+      repeat: opakovať
+      repetitions: opakovania
+      right: vpravo
+      score: skóre
+      score1: skóre1
+      score2: score2
+      screenHeight: screenHeight
+      screenWidth: screenWidth
+      set sides: nastaviť strany
+      setupSimScore1: setupSimScore1
+      setupSimScore2: setupSimScore2
+      shout: kričať
+      sides: strany
+      size: veľkosť
+      speed: rýchlosť
+      startX: startX
+      startY: startY
+      test_var: test_var
+      time: čas
+      type: typ
+      variable: premenná
+      width: šírka
+      wizard: sprievodca
+      x: x
+      your var 1: váš var 1
+      your var 2: váš var 2
