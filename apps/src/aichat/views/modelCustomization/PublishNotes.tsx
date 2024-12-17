@@ -14,6 +14,7 @@ import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Ic
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
+import aichatI18n from '../../locale';
 import {ModelCardInfo} from '../../types';
 
 import {MODEL_CARD_FIELDS_LABELS_ICONS} from './constants';
@@ -54,8 +55,8 @@ const PublishNotes: React.FunctionComponent = () => {
   };
 
   const [alertText, type]: [string, AlertProps['type']] = hasFilledOutModelCard
-    ? ['Ready to publish', 'success']
-    : ['In order to publish, you must fill out a model card', 'warning'];
+    ? [aichatI18n.modelCard_publishSuccess(), 'success']
+    : [aichatI18n.modelCard_publishWarning(), 'warning'];
 
   return (
     <div
@@ -114,7 +115,7 @@ const PublishNotes: React.FunctionComponent = () => {
       <div className={modelCustomizationStyles.footerButtonContainer}>
         <Button
           id="uitest-publish-notes-save"
-          text="Save"
+          text={aichatI18n.modelCustomizationSaveButtonText()}
           iconLeft={
             saveInProgress && currentSaveType === 'saveModelCard'
               ? spinnerIconProps
