@@ -1,0 +1,1523 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+en:
+  errors:
+    messages:
+      not_saved: ''
+      too_young: ''
+      teacher_must_accept_terms: '  '
+      pair_programmer: ' '
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: " "
+            unlock_token:
+              invalid: ""
+            lockout_flow: ""
+      messages:
+        blank: ""
+        blank_plural: ""
+        invalid: ""
+        invalid_plural: ""
+    attributes:
+      user:
+        name: ''
+        name_example: ''
+        email: ''
+        parent_email: ''
+        personal_email: ""
+        personal_email_markdown: ""
+        username: ''
+        password: ''
+        verified_teacher: ''
+        password_confirmation: ''
+        current_password: ''
+        locale: ''
+        age: ''
+        gender: ''
+        gender_student_input: ''
+        gender_teacher_input: ''
+        edit_header: ''
+        ai_settings_header: ''
+        finish_sign_up_header: ''
+        finish_sign_up_header_account_information: ''
+        finish_sign_up_header_error: ''
+        finish_sign_up_subheader: ''
+        finish_sign_up_subheader_markdown: ''
+        finish_sign_up_subheader_provider: ''
+        finish_sign_up_subheader_provider_markdown: ''
+        required: ""
+        reset_password_token: ""
+        error:
+          future: ""
+        user_type: ''
+        us_state: ''
+        ai_rubrics_disabled: ''
+
+  beta: ""
+  hello: ""
+  welcome_back: ""
+  your_professional_learning_plan: ""
+  see_your_learning_plan: ""
+  submit: ""
+  unsubmit: ""
+  previous_page: ""
+  next_page: ""
+  next_level: ""
+  next_resource: ""
+  done_with_module: ""
+  cancel: ""
+  to_close: ""
+  okay: ""
+  type_here: ""
+  or: ""
+  heading_x_of_y: ""
+  join_section:
+    code:
+      title: ''
+      placeholder: ""
+      instructions: " "
+      instructions_short: ""
+      submit: ''
+  add_hint_form:
+    placeholder: ''
+    submit: ''
+  appname: ""
+  stage: ""
+  stage_number: ""
+  puzzle: ""
+  trophies: ""
+  courses: ''
+  courses_page:
+    title_student: ""
+    title_teacher: ""
+  unplugged_activity: ''
+  of: ""
+  more: ""
+  less: ""
+  try_hoc: " "
+  try_k8intro: ""
+  k8intro: ""
+  already_started: "  "
+  demos: " "
+  continue: ''
+  prize: ''
+  more_info: ''
+  auth:
+    continue_with: ''
+    sign_in_with: ''
+    signed_in: ''
+    signed_out_markdown: ''
+    sign_out_of_markdown: ''
+    already_signedup: ''
+    notyet_signedup: ""
+    google_oauth2: ''
+    twitter: ''
+    facebook: ''
+    windowslive: ''
+    microsoft_v2_auth: ''
+    clever: ''
+    powerschool: ''
+    forgot_password: ''
+    migration_success: ' '
+    demigration_success: ''
+    need_confirmation: ""
+    need_unlock: ""
+    not_linked: " "
+    use_clever: " "
+    invalid_provider: ""
+    migration_required: " "
+    unable_to_connect_provider: " "
+    disconnect_successful: " "
+    already_in_use: ""
+    already_linked: ""
+    parental_permission_required: "  "
+    existing_account:
+      account_exists: " "
+      sign_in: " "
+      sign_up: "  "
+  signup_form:
+    email_signup: ''
+    student_count: ''
+    teacher_count: ''
+    overview: ''
+    overview_markdown: ''
+    hoc_already_signed_up_heading: ''
+    hoc_already_signed_up_content: '  '
+    hoc_already_signed_up_content_post_hoc: '   '
+    hoc_already_signed_up_content_post_hoc_markdown: '   '
+    teacher_educator_guide: ''
+    title: ""
+    school_name: ''
+    school_address: ''
+    address_placeholder: ''
+    gender: ''
+    birthday: ''
+    age: ''
+    select_age: ''
+    user_type: ''
+    submit: ''
+    go_to_account: ''
+    create_new_account: ''
+    teacher: ''
+    valid_username: ""
+    invalid_username: ""
+    taken_username: ""
+    valid_password: ""
+    invalid_password: ""
+    mismatch_password: ""
+    student_consent: ""
+    agree_us_data_transfer_student: ''
+    agree_us_data_transfer_teacher: ''
+    data_collection_us: ""
+    visit_privacy: ''
+    student_terms_markdown: "  "
+    user_type_button: ""
+    user_type_label: ""
+    user_type_student: ""
+    user_type_student_desc: ""
+    user_type_student_ability_1: ""
+    user_type_student_ability_2: ""
+    user_type_teacher: ""
+    user_type_teacher_desc: ""
+    user_type_teacher_ability_1: ""
+    user_type_teacher_ability_2: ""
+    user_type_teacher_ability_3: ""
+    user_type_teacher_ability_4: ""
+    field_is_required: ""
+    accept_terms: ""
+    error: ""
+    email_preference_question: ""
+    email_preference_privacy: ""
+    email_preference_yes: ""
+    email_preference_no: ""
+    email_preference_required: ""
+    share_teacher_email_reg_partner_question: ""
+    share_teacher_email_reg_partner_preference_yes: ""
+    share_teacher_email_reg_partner_preference_no: ""
+    share_teacher_email_reg_partner_preference_required: ""
+    parent_account_checkbox: ""
+    parent_account_email_progress_permission: ""
+    parent_account_email_label: ""
+    us_state: ''
+    us_state_dropdown_options:
+      other: ""
+  school_info:
+    title: ''
+    school_country: ''
+    select_school_type: ''
+    charter: ''
+    private: ''
+    public: ''
+    homeschool: ''
+    after_school: ''
+    other: ''
+    state: ''
+    district: ''
+    other_district_not_listed: ''
+    district_name: ''
+    school: ''
+    other_school_not_listed: ''
+    school_name: ''
+    school_zip: ''
+    school_address: ''
+    school_organization_name: ''
+    school_organization_zip: ''
+    select_state: ''
+  signin_form:
+    title: ' '
+    login: ''
+    login_username: ''
+    password: ''
+    remember: ''
+    submit: ''
+  signin:
+    try_heading: ''
+    try_hoc: ''
+    try_20hours: ''
+  signinsection:
+    welcome: ''
+    name: ''
+    picture: ''
+    words: ''
+    login: ''
+    invalid_login: ''
+    pair_programming: ''
+    student_privacy_markdown: ""
+  password:
+    reset_form:
+      title: ''
+      instructions: ""
+      email: ''
+      username: ''
+      submit: ''
+      confirmation: ''
+    reset_errors:
+      captcha_required: ''
+      invalid_email: ' '
+    change_form:
+      title: ''
+      new_password: ''
+      confirm_password: ''
+      submit: ''
+  welcome_email:
+    subject: ''
+    body: |+
+      
+      
+      
+      
+        
+      
+      
+  parent_mailer:
+    student_associated_subject: ''
+    parent_email_added_subject: ''
+    parent_permission_request_subject: ""
+    parent_permission_reminder_subject: ""
+    parent_permission_confirmation_subject: ""
+  teacher_mailer:
+    new_teacher_subject: ''
+    delete_teacher_subject: ' '
+    verified_teacher_subject: ' '
+  section:
+    your_section:
+      one: ''
+      other: ''
+    code_with_teacher: ''
+    confirm:
+      remove: ''
+    default_name: ''
+    remove: ''
+    type:
+      picture: ''
+      word: ''
+      email: ''
+      google_classroom: ''
+      clever: ''
+      lti_v1: ''
+  follower:
+    invite_sent: ''
+    added_teacher: ''
+    registered:  ""
+    captcha_required: ''
+    already_exists: ''
+    error:
+      signed_in: ''
+      username_not_found: ''
+      username_in_use: ''
+      no_teacher: " "
+      section_not_found: ""
+      blank_code: ""
+      cant_join_own_section: ""
+      provider_managed_section: " "
+      restricted_section: " "
+      full_section: " "
+      not_participant_type: ""
+    mail:
+      student_disassociated:
+        subject: ""
+  reports:
+    error:
+      access_denied: ""
+  crud:
+    new_model: ''
+    show: ''
+    edit: ''
+    edit_model: ''
+    update: ''
+    submit: ''
+    destroy: ''
+    back: ''
+    confirm: ''
+    created: ''
+    updated: ''
+    destroyed: ''
+    access_denied: ''
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: ""
+        personal_login_created_email: ' '
+        personal_login_created_username: ' '
+  nav:
+    header:
+      finished_hoc: ""
+      sign_in_to_save: ''
+      my_dashboard: ""
+      course_catalog: ""
+      project_gallery: ""
+      schools: ""
+      districts: ""
+      sections: ""
+      help_support: ""
+      report_bug: ""
+      report_abuse: ""
+      teacher_community: ""
+      professional_learning: ""
+      documentation: ""
+      tutorials: ""
+      app_lab_documentation: ""
+      app_lab_tutorials: ""
+      game_lab_documentation: ""
+      game_lab_tutorials: ""
+      music_lab_documentation: ""
+      sprite_lab_documentation: ""
+      sprite_lab_tutorials: ""
+      web_lab_documentation: ""
+      educate_overview: ""
+      educate_elementary: ""
+      educate_middle: ""
+      educate_high: ""
+      educate_hoc: ""
+      educate_partner: ""
+      educate_beyond: ""
+      educate_inspire: ""
+      educate_community: ""
+      educate_requirements: ""
+      educate_tools: ""
+      about_us: ""
+      about_leadership: ""
+      about_donors: ""
+      about_partners: ""
+      about_team: ""
+      about_news: ""
+      about_evaluation: ""
+      about_jobs: ""
+      about_contact: ""
+      about_faqs: ""
+      learn: ""
+      stats: ""
+      help_us: ""
+      donate: ""
+      teach: ""
+      about: ""
+      incubator: ""
+      legal: ""
+      legal_privacy: ""
+      legal_cookie_notice: ""
+      legal_tos: ""
+      videos: ""
+      hour_of_code: ""
+      csf: ""
+
+    user:
+      classroom: ''
+      district_dashboard: ''
+      label: ''
+      stats: ''
+      my_projects: ''
+      settings: ''
+      logout: ''
+      signin: ''
+      signup: ''
+      create_account: ''
+      create_account_low_cap: ''
+      already_registered: ''
+      pair_programming: ''
+      team: ''
+      driver: ''
+      navigator: ''
+      create: ''
+      new_project: ""
+      new_project_low_cap: ""
+      algebra_game: ''
+      applab: ''
+      artist: ''
+      artist_k1: ''
+      basketball: ''
+      bounce: ''
+      calc: ''
+      dance: ''
+      eval: ''
+      flappy: ''
+      frozen: ''
+      gamelab: ''
+      gamelab_jr: ''
+      gumball: ''
+      iceage: ''
+      infinity: ''
+      makerlab: ''
+      minecraft_adventurer: ''
+      minecraft_aquatic: ''
+      minecraft_codebuilder: ' '
+      minecraft_designer: ''
+      minecraft_hero: ''
+      music: ''
+      playlab: ''
+      playlab_k1: ''
+      poetry: ''
+      poetry_hoc: ''
+      scratch: ''
+      sports: ''
+      spritelab: ''
+      starwars: ''
+      starwarsblocks: ''
+      starwarsblocks_hour: ''
+      thebadguys: ''
+      loading: ''
+      weblab: ''
+      view_all: ''
+
+    popup:
+      progress_for_user: ""
+      progress: ''
+      close: ''
+      mastery: ''
+      puzzle_map: ''
+      prizes: ''
+      prize_earned: ' '
+      prize_us_only: ''
+      prizes_link: ''
+  teacher:
+    answer: ""
+    dashboard: ''
+    for_teachers_only: ""
+    title:
+      one: ''
+      other: ''
+    remove: ''
+    confirm:
+      remove: ''
+    students:
+      dashboard: ''
+    user_not_found: ''
+    student_teacher_disassociated: ''
+    panel:
+      answer_viewer: ''
+      student: ''
+      viewing_solution: ''
+      try_it_yourself: ''
+      section: ''
+      example: ''
+      example_with_number: ''
+      submitted_on: ''
+      last_updated: ''
+      unsubmit: ''
+      worked_with: ''
+      update_lock_settings: ''
+      clear_response: ''
+    student_code_view_diabled: ''
+  user:
+    email_confirm_needed: ''
+    email_confirm_needed_required: ''
+    email_confirm_wrong_email: ''
+    email_resend_confirm: ''
+    new_email_hint: ''
+    new_password_hint: ""
+    current_password_hint: ''
+    delete: ''
+    delete_text: ""
+    delete_text_teacher_managed_note: " "
+    delete_text_teacher_note: ""
+    delete_confirm: ''
+    deleted_user: ''
+    no_password_because_oauth: ''
+    no_password_because_sponsored: ''
+    create_personal_login: ''
+    create_personal_login_under_13_info: ''
+    create_personal_login_under_13_username: ""
+    create_personal_login_under_13_parent_email: ''
+    create_personal_login_info: ''
+    create_personal_login_state_required: ' '
+    create_personal_login_parental_permission_required: ' '
+    create_personal_login_link_account: ''
+    create_personal_login_terms: " "
+    create_personal_login_terms_markdown: " "
+    create_personal_login_email_note: "   "
+    create_personal_login_email_note_markdown: '   '
+    enter_new_login_info: ''
+    confirm_secret_words: ''
+    parent_email_label: ""
+    parent_email_hint: ""
+    enter_parent_email: ""
+    update: ""
+    update_field_parent_permission_required: ''
+    account_successfully_updated: ""
+    auth_option_saved: ""
+    auth_option_saved_no_email: ""
+    update_email: ""
+    for_parents_and_guardians: ""
+    link_a_parent_email: " "
+    parent_guardian_email_label: ""
+    remove_parent_email_label: ""
+    none: ""
+    only_one_parent_email_supported_warning: ""
+    encrypted: ""
+  user_level:
+    completed: ''
+    tried: ''
+  home:
+    title: ""
+    all_courses: ""
+    lesson_plans: ""
+    signin_message: ""
+    student_reg_link: ''
+    teacher_reg_link: ''
+    signin_directions: ''
+    teacher_dashboard: ""
+    teacher_student_count_one: ""
+    teacher_student_count: ""
+    teacher_averages: ""
+    teacher_print_certificates: ''
+    teacher_read_blog: ""
+    classroom: ""
+    student_progress: ""
+    student_stats: ""
+    student_left_off: ''
+    student_finished: " "
+    local_school: ""
+    online: ""
+    see_details: ""
+    view_course: ""
+    prize_info: ' '
+    tryfirst: ''
+    trynow: ''
+    add_hint_help: ''
+    20hour_overview: ' '
+    test_videos_help: ''
+    try_beta_courses: ' '
+    use_as_teacher: ''
+    heading_elementary_markdown: "\n\n"
+    your_gallery: ""
+    no_primary_course: ""
+    choose_next_course: ""
+    print_certificate: ""
+  certificate_sponsor_message: ""
+  certificate_hour_of_code: ""
+  move_students:
+    new_section_dne: " "
+    section_code_cant_be_current_section: ""
+    current_section_dne: " "
+    student_ids_not_entered: ""
+    student_not_found: ""
+    all_students_must_be_in_current_section: ""
+    already_enrolled_in_new_section: ""
+    third_party_login: ""
+    not_correct_participant_type: ""
+  share:
+    title: ""
+    description: " "
+    try_hour_of_code: ''
+  gender:
+    male: ''
+    female: ''
+    non_binary: ''
+    not_listed: ''
+    none: ''
+  user_type:
+    student: ''
+    teacher: ''
+  footer:
+    thanks: ''
+    help_from_html: ''
+    help_from_html_old: ''
+    art_from_html: '         '
+    art_from_html_old: '                '
+    code_from_html: ''
+    powered_by_aws: ''
+    built_on_github: ''
+    trademark: ' '
+    copyright: ''
+    more: ''
+    feedback: ''
+    translate: ''
+    support: ''
+    support_url: ''
+    tos_short: ''
+    tos: ''
+    privacy: ''
+    privacy_updated: ''
+    secure: ''
+    report_abuse: ''
+    built_on_code_studio: ''
+    make_my_own_app: ''
+    how_it_works: ''
+    try_hour_of_code: ''
+    store: ''
+    cookie_notice: ''
+    view_code: ''
+    locale_select: ""
+  reference_area:
+    title: ''
+    subtitle: ''
+    teacher: ''
+    teacher_no_solution: ''
+    auth_error: ''
+    submit: ''
+    direction: ''
+  video:
+    tab: ''
+    notes: ' '
+    notes_coming_soon: ''
+    autoplay_option: ''
+    download: ''
+    show_notes: ''
+    show_video: ''
+    label: ''
+  compatibility:
+    upgrade:
+      unsupported_message: "  "
+      link: ""
+      applab_unsupported_tablet: " "
+      gamelab_unsupported_tablet: " "
+      weblab_unsupported_locale_storage: "  "
+  deprecation:
+    algebra_lab: "     "
+  slow_loading: ''
+  try_reloading: ''
+  next_stage: ' '
+  download_pdf: ''
+  lesson_plan: ''
+  view_lesson_plan: ''
+  pdf_download: ''
+  download_coming_soon: ''
+  video_coming_soon: ''
+  share_code:
+    title: ""
+    bounce_og_title: ""
+    flappy_og_title: ""
+    studio_og_title: ""
+    check_out_what_i_made: ""
+    og_description: ""
+    phone_number_not_allowed: " "
+    address_not_allowed: " "
+    email_not_allowed: " "
+    profanity_not_allowed: " "
+  builder:
+    created: ""
+    destroyed: ""
+    manage: ""
+    view: ""
+    back: ""
+    success: ""
+    level:
+      create: ""
+      current: ""
+      unused: ""
+  upsell:
+    applab:
+      title: ''
+      body: " "
+      body_short: ""
+      audience: ''
+      cta: ''
+      image_alt: ''
+    applab-intro:
+      image_alt: ' '
+    aquatic:
+      title: ""
+      image_alt: ''
+    artist:
+      image_alt: ''
+    conditionals:
+      image_alt: ''
+    course1:
+      image_alt: ''
+    course2:
+      image_alt: ''
+    course3:
+      image_alt: ''
+    course4:
+      image_alt: ''
+    coursea:
+      image_alt: ''
+    courseb:
+      image_alt: ''
+    coursec:
+      image_alt: ''
+    coursed:
+      image_alt: ''
+    coursee:
+      image_alt: ''
+    coursef:
+      image_alt: ''
+    dance-2019:
+      title: ''
+      image_alt: ''
+    dance-2022:
+      image_alt: ''
+    dance:
+      title: ''
+      image_alt: ''
+    donate:
+      image_alt: ''
+    elementary:
+      image_alt: ''
+    express:
+      image_alt: ''
+    flappy:
+      title: ''
+      body: ' '
+      image_alt: ''
+    frozen:
+      title: ""
+      image_alt: ' '
+    gallery:
+      title: ""
+      body: ""
+      image_alt: ''
+    gamelab:
+      title: ""
+      body: ""
+      audience: ""
+      cta: ""
+      image_alt: ''
+    hello-world-food:
+      image_alt: ''
+    hello-world:
+      title: ''
+      body: ''
+    hero:
+      title: ""
+      body: " "
+      image_alt: ''
+    hoc-encryption:
+      title: ""
+      body: ""
+      image_alt: ''
+    hoc:
+      title: ''
+      body: ' '
+      image_alt: ''
+    hourofcode:
+      image_alt: ''
+    hoc2014:
+      try_new_tutorial: ''
+      try_frozen: ''
+    infinity:
+      title: ""
+      body: ""
+      image_alt: ''
+    map:
+      image_alt: ''
+    mc_escape:
+      image_alt: ''
+    mc:
+      image_alt: ''
+    minecraft:
+      title: ""
+      body: ""
+      image_alt: ''
+    minecraft2016:
+      title: ""
+      body: ""
+    oceans:
+      image_alt: ''
+    playlab:
+      image_alt: ''
+    poem-art:
+      title: ''
+      body: ' '
+      image_alt: ''
+    pre-express-2017:
+      image_alt: ''
+    pre-express-2018:
+      image_alt: ''
+    pre-express-2019:
+      image_alt: ''
+    pre-express:
+      image_alt: ''
+    sports:
+      title: ""
+      body: ""
+      image_alt: ''
+    starwars:
+      title: ""
+      image_alt: ''
+    text-compression:
+      title: ""
+      body: ""
+      image_alt: ''
+    weblab:
+      title: ""
+      body: " "
+      audience: ""
+      cta: ""
+      image_alt: ''
+    widgets:
+      title: ""
+      body: " "
+      audience: ""
+      cta: ""
+    unplugged_conditionals:
+      title: ""
+      body: ""
+    unplugged:
+      title: ""
+      audience: ""
+      body: "  "
+      body_short: ""
+    20-hour:
+      title: ''
+      body: '  '
+      body_short: ''
+  landing:
+    prerelease_tutorial: "  "
+    report_bug: ""
+    support: ""
+    support_url: ""
+    help_resources: ""
+    help_support: ""
+    documentation: ""
+    tutorials: ""
+  free_response:
+    placeholder: ""
+  multi:
+    wrong_title: ""
+    wrong_body: "  "
+    correct_title: ""
+    correct_body: ""
+    toofew_title: ""
+    toofew_body: ""
+  multi-submittable:
+    wrong_title: ""
+    wrong_body: ""
+    correct_title: ""
+    correct_body: ""
+    toofew_title: ""
+    toofew_body: ""
+  level_group:
+    wrong_title: ""
+    wrong_body: ""
+    correct_title: ""
+    correct_body: ""
+    hide_survey_last_answer: "    "
+    survey_submission_thankyou: "  "
+  level_group-submittable:
+    wrong_title: ""
+    wrong_body: ""
+    correct_title: ""
+    correct_body: ""
+    unsubmit-title: ""
+    unsubmit-body: "  "
+    submit-incomplete-title: ""
+    submit-incomplete-body: "    "
+    submit-complete-title: ""
+    submit-complete-body: "  "
+  level_summary:
+    correct_answer: ""
+  match:
+    wrong_title: ""
+    wrong_body: "  "
+    correct_title: ""
+    correct_body: ""
+  contract_match:
+    wrong_title: ""
+    badname: ""
+    badname_case: " "
+    badrange: ""
+    baddomainsize: ""
+    baddomainname: ""
+    baddomaintype: ""
+  text_match:
+    placeholder: ""
+    open_response_title: ""
+    open_response_body: ""
+    correct_title: ""
+    correct_body: ""
+  lesson_extras:
+    bonus_level: ""
+  dialog:
+    ok: ""
+    startover_title: ""
+    startover_body: ""
+    startover_ok: ""
+    startover_cancel: ""
+  time:
+    hour: ''
+    day: ''
+    week: ''
+  age_interstitial:
+    age: ""
+    header: ""
+    warning: " "
+    disclaimer: ''
+    sign_out_markdown: ''
+  terms_interstitial:
+    title: ""
+    intro_desc: "    "
+    intro_desc_markdown: "    "
+    intro_instructions: "  "
+    tos: ""
+    privacy: ""
+    privacy_notice: ""
+    accept_label: ''
+    accept_label_markdown: ""
+    accept_tos: ""
+    accept_new_tos: ""
+    accept: ""
+    print: ""
+    reminder_desc: '  '
+    reminder_desc_markdown: "  "
+    review_terms: ""
+  school_info_interstitial:
+    title: ""
+    message: ""
+    message_with_suggestion: ""
+    save: ""
+  race_interstitial:
+    title: " "
+    message: ""
+    races:
+      white: ""
+      black: ""
+      hispanic: ""
+      asian: ""
+      hawaiian: ""
+      american_indian: ""
+      other: ""
+      opt_out: ""
+    submit: ""
+    decline: ""
+  zendesk_too_young_message: ' '
+  zendesk_too_young_message_markdown: ' '
+  progress:
+    not_started: ""
+    in_progress: ""
+    completed_too_many_blocks: ""
+    completed_perfect: ""
+    furthest_level_attempted: ""
+    assessment: ""
+    submitted: ""
+  studio:
+    courses_working_on: ""
+    completed_courses: ""
+    all_courses: ""
+  project:
+    projects: ""
+    create: ""
+    create_a_project: ''
+    new: ""
+    exit: ""
+    project_gallery: ""
+    publish: ""
+    unpublish: ""
+    share_title: ""
+    share_copy_link: ""
+    share_embed_description: ""
+    share_u13_warning: " "
+    embed: ""
+    advanced_share: ""
+    no_projects: " "
+    name: ""
+    updated: ""
+    project_type: ""
+    help_text: ""
+    need_help: ""
+    thumbnail_help: "  "
+    saved: ""
+    not_saved: ""
+    view_all: ''
+    edit_project: ''
+    sharing_disabled: " "
+    abuse:
+      tos: ""
+      policy_violation: " "
+      contact_us: ""
+      go_to_code_studio: ''
+      report_abuse_form:
+        intro: ' '
+        validation:
+          email: ''
+          age: ''
+          abuse_type: ''
+          abuse_detail: ''
+          captcha: ''
+        abusive_url: ''
+        abuse_type:
+          question: ''
+          harassment: ''
+          offensive: ''
+          infringement: ''
+          other: ''
+        detail: ''
+        acknowledge: ''
+  peer_review:
+    accepted:
+      name: ''
+      description_markdown: ''
+    rejected:
+      name: ''
+      description_markdown: ''
+    escalated:
+      name: ''
+      description: ''
+    instructor_feedback: ''
+    peer_feedback: ''
+    outdated: ''
+    review_in_progress: ''
+    link_to_submitted_review: ''
+    reviews_unavailable: ''
+    review_count: ''
+    must_be_enrolled: ''
+    no_reviews_at_this_moment_notice: ''
+    review_submitted: ''
+    review_new_submission: ''
+    peer_review: ''
+  external_links:
+    disclaimer: ""
+    leaving_domain: ""
+    disclaimer_text: "  "
+  hoc_download:
+    title: ''
+    capsule_title: ''
+    capsule_desc: ''
+    instructions_headline: ''
+    instructions: '    '
+    minecraft_name: ''
+    starwars_blocks_name: ' '
+    starwars_javascript_name: ' '
+    download_message: ''
+    download_in_Albanian: ''
+    download_in_Arabic: ''
+    download_in_Azerbaijani: ''
+    download_in_Basque: ''
+    download_in_Bosnian: ''
+    download_in_Bulgarian: ''
+    download_in_Catalan: ''
+    download_in_Chinese-Taiwan: ''
+    download_in_Chinese: ''
+    download_in_Croatian: ''
+    download_in_Czech: ''
+    download_in_Danish: ''
+    download_in_Dutch: ''
+    download_in_English: ''
+    download_in_Finnish: ''
+    download_in_French: ''
+    download_in_German: ''
+    download_in_Greek: ''
+    download_in_Hebrew: ''
+    download_in_Hungarian: ''
+    download_in_Icelandic: ''
+    download_in_Indonesian: ''
+    download_in_Irish: ''
+    download_in_Italian: ''
+    download_in_Japanese: ''
+    download_in_Korean: ''
+    download_in_Latvian: ''
+    download_in_Lithuanian: ''
+    download_in_Norwegian: ''
+    download_in_Norwegian-Nynorsk: ''
+    download_in_Polish: ''
+    download_in_Portuguese-Brazil: ''
+    download_in_Portuguese: ''
+    download_in_Romanian: ''
+    download_in_Russian: ''
+    download_in_Serbian: ''
+    download_in_Slovenian: ''
+    download_in_Spanish: ''
+    download_in_Swedish: ''
+    download_in_Turkish: ''
+    download_in_Ukrainian: ''
+    download_in_Vietnamese: ''
+    windows: ''
+    mac: ''
+  plc:
+    preview_assignments:
+      content_focus_header: ''
+      practice_focus_header: ''
+      content_focus_strong: ''
+      practice_focus_strong: ''
+      choose_different_focus_area: ''
+      other_focus_areas_available: ''
+      confirm_focus_areas: ''
+  locked_stage: ' '
+  hidden_stage: " "
+  hidden_script: " "
+  no_course_access_student: " "
+  no_course_access_teacher: " "
+  no_script_access_student: " "
+  no_script_access_teacher: " "
+  no_level_access_student: " "
+  no_level_access_teacher: " "
+  no_exemplar: ""
+  no_exemplar_access_student: " "
+  no_exemplar_access_teacher: " "
+  return_unit_overview: ''
+  return_course_overview: ''
+  view_all_units: ''
+  view_teacher_guide: ''
+  pd:
+    survey:
+      number_teachers: ''
+      response_count: ''
+      facilitator_effectiveness: ''
+      teacher_engagement: ''
+      overall_success: ''
+      how_much_learned_s: ''
+      how_motivating_s: ''
+      how_clearly_presented_s: ''
+      how_interesting_s: ''
+      how_often_given_feedback_s: ''
+      how_comfortable_asking_questions_s: ''
+      how_often_taught_new_things_s: ""
+      how_much_participated_s: ''
+      how_often_talk_about_ideas_outside_s: ''
+      how_often_lost_track_of_time_s: ''
+      how_excited_before_s: ''
+      overall_how_interested_s: ''
+      more_prepared_than_before_s: ''
+      know_where_to_go_for_help_s: ''
+      suitable_for_my_experience_s: ''
+      would_recommend_s: ''
+      part_of_community_s: ''
+      things_facilitator_did_well_s: ''
+      things_facilitator_could_improve_s: ''
+      things_you_liked_s: ''
+      things_you_would_change_s: ''
+      anything_else_s: ''
+    form_labels:
+      first_name: ''
+      first_name_preferred: ''
+      last_name: ''
+      email: ''
+      email_alternate: ''
+      gender: ''
+      school: ''
+      school_name: ''
+      school_city: ''
+      school_city_district: ''
+      school_country: ''
+      school_department_region: ''
+      colombian_school_city: ''
+      colombian_chilean_school_department: ''
+      colombian_school_municipality: ''
+      colombian_chilean_school_name: ''
+      chilean_school_commune: ''
+      chilean_school_id: ''
+      ages: ''
+      subjects: ''
+      resources: ''
+      robotics: ''
+      workshop_organizer: ''
+      workshop_facilitator: ''
+      workshop_course: ''
+      email_opt_in: ''
+      legal_opt_in: '   '
+    form_entries:
+      gender:
+        male: ''
+        female: ''
+        non_binary: ''
+        not_listed: ''
+        none: ''
+      school_country:
+        antigua_and_barbuda: ''
+        australia: ''
+        barbados: ''
+        belize: ''
+        botswana: ''
+        brazil: ''
+        cambodia: ''
+        canada: ''
+        chile: ''
+        colombia: ''
+        dominican_republic: ''
+        ecuador: ''
+        egypt: ''
+        india: ''
+        indonesia: ''
+        israel: ''
+        italy: ''
+        jamaica: ''
+        kenya: ''
+        kosovo: ''
+        malaysia: ''
+        maldives: ''
+        malta: ''
+        mexico: ''
+        mongolia: ''
+        new_zealand: ''
+        paraguay: ''
+        peru: ''
+        philippines: ''
+        portugal: ''
+        puerto_rico: ''
+        romania: ''
+        slovakia: ''
+        south_africa: ''
+        south_korea: ''
+        spain: ''
+        sri_lanka: ''
+        thailand: ''
+        trinidad_and_tobago: ''
+        uruguay: ''
+        uzbekistan: ''
+        vietnam: ''
+      ages:
+        ages_under_6: ''
+        ages_7_8: ''
+        ages_9_10: ''
+        ages_11_12: ''
+        ages_13_14: ''
+        ages_15_16: ''
+        ages_17_18: ''
+        ages_19_over: ''
+      subjects:
+        cs: ''
+        ict: ''
+        math: ''
+        science: ''
+        history: ''
+        la: ''
+        efl: ''
+        music: ''
+        art: ''
+        other: ""
+        na: ''
+      resources:
+        bootstrap: ''
+        codecademy: ''
+        csfirst: ''
+        khan: ''
+        kodable: ''
+        lightbot: ''
+        scratch: ''
+        tynker: ''
+        other: ""
+        na: ''
+      robotics:
+        grok: ''
+        kodable: ''
+        lego: ''
+        microbit: ''
+        ozobot: ''
+        sphero: ''
+        raspberry: ''
+        wonder: ''
+        other: ""
+        na: ''
+      workshop_course:
+        csf_af: ''
+        csf_express: ''
+        csd: ''
+        csp: ''
+        csa: ''
+        other: ''
+        not_applicable: ""
+      email_opt_in:
+        opt_in_yes: ''
+        opt_in_no: ''
+    international_opt_in:
+      title: ''
+      intro: " "
+      instructions: ""
+      thanks_markdown: "  "
+      facilitator_not_listed: ""
+      facilitator_not_applicable: ""
+      organizer_not_listed: ""
+    logged_out:
+      heading: ''
+      body: ' '
+    not_teacher:
+      body_markdown: '  '
+      more_markdown: ''
+    no_teacher_email:
+      body_markdown: ' '
+  courses_category: ''
+  course_offering:
+    headers:
+      favorites: ''
+      labs_and_skills: ''
+      minecraft: ''
+      hello_world: ''
+      popular_media: ''
+      sports: ''
+      express: ''
+      csf: ''
+      csc: ''
+      year_long: ''
+      csa_labs: ''
+      self_paced: ''
+      teacher_led: ''
+      collections: ''
+      workshops_k5: ''
+      summer_workshops_612: ''
+      virtual_academic_year_workshops_612: ''
+      unsupported: ''
+  cookie_banner:
+    message: ''
+    more_information: ""
+    accept: ''
+  page_not_found_title: ""
+  page_not_found_header: ' '
+  page_not_found_description: "  "
+  page_not_found_button: ""
+  copy: ''
+  confirm: ''
+  maker:
+    google_oauth:
+      login_with_google: ''
+      enter_code: ''
+      copy_code: ''
+      error_token_expired: ' '
+      error_wrong_provider: ' '
+      error_invalid_user: ' '
+      error_no_code: ''
+      confirm_login: ''
+    setup_page_title: ''
+  parent_email_banner:
+    text: ""
+    link_your_email: ""
+    not_now: ""
+  behaviors:
+    this_sprite: ""
+  unit_prefix: ""
+  code_org_logo_alt: ""
+  teacher_feedback: ""
+  lesson_lock:
+    error:
+      no_updates: ""
+      missing_params: ""
+      cannot_view_locked_answers: ""
+      forbidden: ""
+  reset_predict_progress_button: ""
+  pixelation:
+    raw_format: ""
+    raw_format_alt: ""
+    readable_format: ""
+    readable_format_alt: ""
+    save_image: ""
+    actual_size: ""
+    image_file_format_header: ""
+    image_file_format_width: " "
+    image_file_format_height: " "
+    image_file_format_bits_per_pixel: " "
+    image_file_format_data_a: ""
+    image_file_format_data_b: ""
+    image_width: ""
+    image_height: ""
+    bits_per_pixel_header: ""
+    binary: ""
+    hexadecimal: ""
+    pixel_format_header: ""
+  course_deprecated:
+    title: " "
+    curriculum: ""
+    project_type: ""
+    button: ""
+    projects_button: ""
+  hoc_tutorial_email_subject: ""
+  hoc_tutorial_email_content:
+    dear_teacher: ""
+    intro_step_by_step_guide: "  "
+    sign_up_step: " "
+    create_classroom_section: "  "
+    pick_perfect_activity: " "
+    plan_like_pro: "   "
+    let_fun_begin: "    "
+    hip_hip_hooray: "   "
+    more_adventures_await: "  "
+    explore_course: ""
+    learn_about_ai: ""
+    thank_you: " "
+    founder: ""
+    your_friends: ""
+  lti:
+    account_linking:
+      account_not_found: ""
+      admin_not_allowed: ""
+      connect_button: ""
+      connect_with: ""
+      connect_with_email: ""
+      backend_error: "  "
+      go_back: ""
+      invalid_credentials: ""
+      linking_page_header: ""
+      linking_page_description: ""
+      sign_in_and_connect: ""
+      successfully_linked: ""
+      successfully_unlinked: ""
+    create_integration_success: ""
+    dynamic_registration_title: ""
+    error:
+      integration_exists: ""
+      missing_params: " "
+      missing_email: ""
+      unsupported_lms_type: ""
+      unsupported_message_type: ""
+      unsupported_message_type_desc: |+
+         
+        
+        
+      missing_tool_config: ''
+    iframe_title: ""
+    sign_up:
+      warning1:
+        " "
+      warning2:
+        ""
+    integration:
+      client_id: ""
+      email: ""
+      name: ""
+      navigate_home: ""
+      navigate_registration: ""
+      lms_selector: ""
+      exists_body: " "
+      exists_error: " "
+      exists_header: ""
+      form_header: ""
+      form_instructions: " "
+      form_instructions_2: ""
+      form_instructions_3: " "
+      guide_instructions: "  "
+      mailer_confirmation_subject: ""
+      mailer_confirmation_body: "   "
+      mailer_confirmation_signature: ""
+      privacy_policy: "  "
+      success_body: "  "
+      success_header: ""
+      register: ""
+    upgrade_to_teacher_account:
+      error:
+        missing_email: " "
+  certificates:
+    alt_text_with_name: ""
+    alt_text_no_name: ""
+    one_hour_of_code: ""
+  child_account:
+    parental_permission_request:
+      errors:
+        already_granted: ""
+        daily_limit_reached: ""
+        invalid_parent_email: ""
+        parent_email_is_own: ""
+        resend_limit_reached: ""
+  not_applicable_abbreviation: ""
+  global_edition:
+    regions:
+      fa: ""
