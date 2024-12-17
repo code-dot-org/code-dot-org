@@ -1,0 +1,3122 @@
+{
+  "https://studio.code.org/s/allthethings/lessons/2/levels/1": {
+    "short_instructions": "돼지에게 가기 위해 서쪽으로 이동하게 해 줄 수 있습니까?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/2": {
+    "short_instructions": "나를 돼지에게 데려가! '반복' 루프를 사용해야 합니다.",
+    "long_instructions": "나를 돼지에게 데려가!\\ '반복' 루프를 사용해야 합니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/3": {
+    "short_instructions": "장난꾸러기 돼지 잡는 거 좀 도와줄 수 있니? 'when run' 블록 아래에 몇 개의 'move forward' 블록을 쌓고 \"run\"을 누릅니다. ",
+    "long_instructions": "장난꾸러기 돼지 잡는 거 좀 도와줄 수 있니? 'when run' 블록 아래에 몇 개의 'move forward' 블록을 쌓고 \"run\"을 누릅니다. ",
+    "authored_hints": {
+      "2-3_Maze_1_a": "'move forward' 블록을 사용하려면 도구 모음 영역에서 작업 공간으로 블록을 끌어서 'when run' 블록에 연결하십시오."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/4": {
+    "short_instructions": "\"반복\" 블록을 사용하여 퍼즐을 빠르게 풀세요...",
+    "authored_hints": {
+      "4-5_Maze_4_a": "반복을 어디에 넣어야 할지 어렵다면 모든 것을 코딩하고 패턴을 찾아보십시오."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/5": {
+    "short_instructions": "'if' 블록을 사용하면 언제 턴할지 결정하는 데 도움이 됩니다. ",
+    "long_instructions": "'if' 블록을 사용하면 언제 턴할지 결정하는 데 도움이 됩니다. "
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/6": {
+    "short_instructions": "새를 충돌시킬 수 있는 추가 블록이 하나 더 있습니다. 도구 상자로 다시 끌어다 놓습니다.",
+    "long_instructions": "_\"이 돼지가 내 깃털을 흔들고 있어.\" _ 새를 충돌시킬 수 있는 추가 블록이 하나 더 있습니다.\\ 회색 블록에서 고리를 풀고 도구 상자로 다시 드래그하여 버리십시오.",
+    "authored_hints": {
+      "courseC_maze_programming3_a": "먼저 코드를 실행하여 어디가 잘못되었는지 확인하십시오.",
+      "courseC_maze_programming3_b": "[][0] 코드 중간에서 블록을 삭제하려면 모든 블록을 작업 공간의 다른 부분으로 드래그합니다. 삭제하려는 블록을 툴박스로 다시 드래그합니다. 마지막으로 다른 블록을 원래 있던 곳에 다시 놓습니다."
+    },
+    "callouts": {
+      "courseC_maze_programming3_2": "추가 블록을 도구 상자로 끌어다 놓을 수 있습니다.",
+      "courseC_maze_programming3_3": "이 블록은 돌이므로 버릴 수 없습니다."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/7": {
+    "short_instructions": "나를 동쪽으로 움직여 돼지에게 데려가라!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/1": {
+    "short_instructions": "남자의 다리를 한 줄로 그린다"
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/2": {
+    "short_instructions": "안녕하세요, 저는 아티스트입니다. 거의 모든 것을 그릴 수 있도록 코드를 작성할 수 있습니다. 몇 개의 블록을 사용하여 그림의 회색 선 위에 그리도록 합니다. (각 줄의 길이는 100픽셀입니다)",
+    "long_instructions": "안녕하세요, 저는 아티스트입니다. 거의 모든 것을 그릴 수 있도록 코드를 작성할 수 있습니다. 몇 개의 블록을 사용하여 그림의 회색 선 위에 그리도록 합니다. (각 줄의 길이는 100픽셀입니다)",
+    "authored_hints": {
+      "2-3_Artist_1_new_a": "블록을 사용하여 '100픽셀 앞으로 이동'하도록 하면 자동으로 선을 그립니다.",
+      "2-3_Artist_1_new_b": "모퉁이를 돌기 어려우신가요? '90도 우회전' 블록을 사용합니다."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/3": {
+    "short_instructions": "이제 함수를 루프 안에 넣어 이 세 개의 사각형을 그립니다.",
+    "long_instructions": "이제 함수를 루프 안에 넣어 이 세 개의 사각형을 그립니다.",
+    "authored_hints": {
+      "2-3_Artist_Functions_4_a": "아티스트는 이 디자인을 완성하기 위해 각 사각형 사이를 120도 회전해야 합니다."
+    },
+    "function_definitions": {
+      "draw a square": {
+        "name": "사각형을 그립니다."
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/4": {
+    "short_instructions": "숫자 블록을 'set length' 블록과 'repeat _ times' 블록으로 끌어 50픽셀 삼각형 세트를 그립니다. ",
+    "long_instructions": "숫자 블록을 'set length' 블록과 'repeat _ times' 블록으로 끌어 50픽셀 삼각형 세트를 그립니다. "
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/5": {
+    "short_instructions": "다음은 새로운 유형의 블록입니다. 이를 'function' 블록이라고 합니다. \"편집\"을 클릭 한 다음 100 픽셀 변의 정사각형을 그리기위한 코드로 채우십시오. 함수 편집이 완료되면 \"닫기\"를 클릭하여 프로그램으로 돌아갑니다.",
+    "long_instructions": "다음은 새로운 유형의 블록입니다. 이를 'function' 블록이라고 합니다. \"편집\"을 클릭 한 다음 100 픽셀 변의 정사각형을 그리기위한 코드로 채우십시오. 함수 편집이 완료되면 \"닫기\"를 클릭하여 프로그램으로 돌아갑니다.",
+    "callouts": {
+      "NEW_Course_4_Artist_Functions_3_1": "사각형을 만들도록 새 함수를 편집하려면 여기를 클릭하십시오."
+    },
+    "function_definitions": {
+      "draw a square": {
+        "name": "사각형을 그립니다."
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/6": {
+    "short_instructions": "다른 함수 내부에서 함수를 호출 할 수 있습니다! \"shape\" 함수를 기본으로 사용하여 길이가 50픽셀부터 시작하여 마지막보다 각각 20픽셀씩 큰 3개의 집 모양을 만듭니다. 카운터 루프를 사용하는 것이 도움이 될 수 있습니다. ",
+    "function_definitions": {
+      "draw a shape": {
+        "name": "도형 그리기",
+        "parameters": {
+          "sides": "측면",
+          "length": "길이"
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/9": {
+    "short_instructions": "이제 함수를 루프 안에 넣어 이 세 개의 사각형을 그립니다.",
+    "long_instructions": "이제 함수를 루프 안에 넣어 이 세 개의 사각형을 그립니다.",
+    "authored_hints": {
+      "2-3_Artist_Functions_4_a": "아티스트는 이 디자인을 완성하기 위해 각 사각형 사이를 120도 회전해야 합니다."
+    },
+    "function_definitions": {
+      "draw a square": {
+        "name": "사각형을 그립니다."
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/4/levels/1": {
+    "short_instructions": "나를 꽃으로 옮기고, 꿀을 얻고, 그런 다음 나를 벌집으로 옮기고, 꿀을 만드세요"
+  },
+  "https://studio.code.org/s/allthethings/lessons/4/levels/3": {
+    "short_instructions": "이번에는 루프를 사용하여 모든 꿀을 모으십시오."
+  },
+  "https://studio.code.org/s/allthethings/lessons/4/levels/4": {
+    "short_instructions": "보라색 꽃에 꿀이 없는 경우 꿀을 수집하지 않도록 주의하십시오. 먼저 'if nectar' 블록을 사용하여 넥타가 1과 같은지 확인해야 합니다.",
+    "long_instructions": "이 마법의 보라색 꽃이 변합니다! 퍼즐을 시도할 때마다 보라색 꽃은 1개의 꿀을 가질 수도 있고 전혀 가질 수 없습니다... 그러나 코드를 실행할 때까지 숫자를 알 수 없습니다! 보라색 꽃에 꿀이 없는 경우 꿀을 수집하지 않도록 주의하십시오. 먼저 'if nectar' 블록을 사용하여 넥타가 1과 같은지 확인해야 합니다.",
+    "callouts": {
+      "Bee_Cond_5_1a": "보라색 꽃은 1 또는 0 꿀을 가질 수 있습니다 ... 하지만 코드를 실행하기 전까지는 알 수 없습니다!"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/4/levels/5": {
+    "short_instructions": "보라색 꽃에는 꿀이 1개 또는 0개 있을 수 있지만 어느 쪽인지 모릅니다! 보라색 꽃에 꿀이 없는 경우 꿀을 수집하지 않도록 주의하십시오. if 블록을 사용하여 넥타가 1과 같은지 확인합니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/4/levels/6": {
+    "short_instructions": "함수는 작업을 수행하는 코드 블록입니다. 'get 5' 함수를 사용하여 한 번에 5개의 꿀을 얻습니다.",
+    "long_instructions": "함수는 작업을 수행하는 코드 블록입니다. 'get 5' 함수를 사용하여 한 번에 5개의 꿀을 얻습니다.",
+    "function_definitions": {
+      "get 5": {
+        "name": "얻기 5"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/5/levels/3": {
+    "short_instructions": "개가 1에서 100까지의 모든 숫자를 말하게 합시다. 'for' 루프와 counter 블록을 사용하여 루프가 실행될 때마다 counter 변수를 말합니다.",
+    "long_instructions": "개가 1에서 100까지의 모든 숫자를 말하게 합시다. 'for' 루프와 counter 블록을 사용하여 루프가 실행될 때마다 counter 변수를 말합니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/5/levels/4": {
+    "short_instructions": "이제 우리는 현재 점프에 비해 너무 높은 깃발을 가지고 있습니다! 여러 점프 높이를 가질 수 있도록 \"위쪽\" 화살표와 \"아래쪽\" 화살표를 모두 사용합시다. jump 함수에 \"height\"라는 매개변수를 추가해야 합니다. 위쪽 화살표는 개가 200픽셀만 점프하도록 하고 아래쪽 화살표를 사용하면 100픽셀만 점프해야 합니다. ",
+    "long_instructions": "이제 우리는 현재 점프에 비해 너무 높은 깃발을 가지고 있습니다! 여러 점프 높이를 가질 수 있도록 \"위쪽\" 화살표와 \"아래쪽\" 화살표를 모두 사용합시다. jump 함수에 'height'라는 매개변수를 추가해야 합니다. - 위쪽 화살표를 사용하면 개가 200픽셀만 점프해야 합니다. - 아래쪽 화살표를 사용하면 100픽셀만 점프할 수 있습니다. ",
+    "authored_hints": {
+      "Course_4_Play_Lab_Params_2_a": "jump 함수에서 \"편집\"을 클릭하고 'height' 매개변수를 사용하도록 업데이트해야 합니다."
+    },
+    "callouts": {
+      "Course_4 _Play_Lab_Params_2_1": "\"편집\"을 클릭하여 height 매개변수를 사용하도록 이 함수를 업데이트합니다."
+    },
+    "function_definitions": {
+      "jump": {
+        "name": "뛰다",
+        "description": "주인공이 '높이' 픽셀 위로 점프합니다."
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/5/levels/5": {
+    "display_name": "Playlab 무료 플레이"
+  },
+  "https://studio.code.org/s/allthethings/lessons/6/levels/1": {
+    "short_instructions": "와, 저거 봐! 이 구멍에 얼마나 많은 흙이 필요한지 모르겠습니다.\\ 땅이 평평해질 때까지 '채우기'블록을 계속 사용하는 프로그램을 작성할 수 있습니까?  ",
+    "long_instructions": "와, 저거 봐! 이 구멍에 얼마나 많은 흙이 필요한지 모르겠습니다.\\ 땅이 평평해질 때까지 '채우기'블록을 계속 사용하는 프로그램을 작성할 수 있습니까?  "
+  },
+  "https://studio.code.org/s/allthethings/lessons/6/levels/2": {
+    "short_instructions": "와우, 정말 깊은 구멍을 찾았어요! 얼마나 많은 흙 삽이 필요한지 모르겠습니다. 땅이 평평해질 때까지 그것을 채우는 프로그램을 작성할 수 있습니까? 힌트: 이번에는 while 루프를 사용해 보세요.",
+    "authored_hints": {
+      "first_hint": "이것이 첫 번째 힌트입니다. _some_ **basic** '마크업'이 있습니다.",
+      "second_hint": "이것이 두 번째 힌트입니다. 힌트 비디오가 있습니다.",
+      "last_hint": "이것이 세 번째이자 마지막 힌트입니다. 특별한 것이 없습니다."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/6/levels/3": {
+    "short_instructions": "와우, 정말 깊은 구멍을 찾았어요! 얼마나 많은 흙 삽이 필요한지 모르겠습니다. 땅이 평평해질 때까지 그것을 채우는 프로그램을 작성할 수 있습니까? 힌트: 이번에는 while 루프를 사용해 보세요.",
+    "authored_hints": {
+      "first_hint": "이것이 첫 번째 힌트입니다. _some_ **basic** '마크업'이 있습니다.",
+      "second_hint": "이것이 두 번째 힌트입니다. 이미지가 있습니다. [][0]",
+      "last_hint": "이것이 세 번째이자 마지막 힌트입니다. 특별한 것이 없습니다."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/7/levels/1": {
+    "short_instructions": "\"when click\" 블록에 블록을 첨부한 다음 \"Run\"을 누릅니다. 화면을 클릭하거나 탭하여 Flappy를 대상으로 이동합니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/8/levels/1": {
+    "short_instructions": "\"when left arrow\" 블록에 블록을 연결하고 \"Run\"을 누릅니다. 왼쪽 화살표를 사용하여 라켓을 움직여 결승 목표에 도달합니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/9/levels/1": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "/script_assets/k_1_images/unplugged_images/up.png",
+          "correct": false
+        },
+        {
+          "text": "/script_assets/k_1_images/unplugged_images/down.png",
+          "correct": true
+        },
+        {
+          "text": "/script_assets/k_1_images/unplugged_images/left.png",
+          "correct": false
+        },
+        {
+          "text": "/script_assets/k_1_images/unplugged_images/right.png",
+          "correct": false
+        }
+      ],
+      "content1": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png",
+      "questions": [
+        {
+          "text": "어떤 화살이 Flurb를 보물로 데려갈까요?"
+        }
+      ],
+      "title": "객관식"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/9/levels/2": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "3비트",
+          "correct": false
+        },
+        {
+          "text": "4비트",
+          "correct": false
+        },
+        {
+          "text": "5비트",
+          "correct": false
+        },
+        {
+          "text": "6비트",
+          "correct": false
+        },
+        {
+          "text": "7비트",
+          "correct": true
+        },
+        {
+          "text": "12비트",
+          "correct": false
+        }
+      ],
+      "questions": [
+        {
+          "text": "표준 QWERTY 키보드에는 화면에 문자를 배치할 수 있는 47개의 키가 있습니다. 이러한 각 키는 \"Shift\"키를 동시에 눌러 두 번째 문자를 표시 할 수도 있습니다 (이 질문에서는 다른 모든 키가 무시된다고 가정합니다). 이 키보드에서 입력할 수 있는 모든 것을 인코딩하는 데 몇 비트가 필요합니까?"
+        }
+      ],
+      "title": "평가: 텍스트 인코딩"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/9/levels/3": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "파랑",
+          "correct": false
+        },
+        {
+          "text": "녹색",
+          "correct": false
+        },
+        {
+          "text": "청록",
+          "correct": false
+        },
+        {
+          "text": "황색",
+          "correct": false
+        },
+        {
+          "text": "물론 리얼 오렌지",
+          "correct": true
+        },
+        {
+          "text": "빨강",
+          "correct": false
+        }
+      ],
+      "questions": [
+        {
+          "text": "가장 좋아하는 색은 무엇입니까?"
+        }
+      ],
+      "title": "제출 가능한 객관식"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/9/levels/4": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "함수의 매개 변수 호출! [](https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png)",
+          "correct": false
+        },
+        {
+          "text": "함수의 매개 변수 정의하기! [](https://images.code.org/ed7e88443a6c04022684aacf0c2a0692-image-1506699220170.png)",
+          "correct": true
+        },
+        {
+          "text": "화면 주위로 거북이를 움직이세요! [](https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png)",
+          "correct": false
+        },
+        {
+          "text": "거북이의 방향을 잡습니다! [](https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png)",
+          "correct": false
+        },
+        {
+          "text": "펜 속성 설정! [](https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png)",
+          "correct": false
+        },
+        {
+          "text": "해당 사항 없음",
+          "correct": false
+        }
+      ],
+      "markdown": "'randomNumber'의 다양한 용도를 고려하십시오. 각 대답은 사용법을 설명하고 코드 예제를 보여줍니다. 다음 중 'randomNumber'의 유효한 사용이 아닌 것은 무엇입니까?\n\n",
+      "teacher_markdown": "대답은 함수의 매개 변수를 정의하는 것과 해당 함수를 호출하는 것의 차이점에 있습니다. 'randomNumber'는 값(숫자)을 반환하므로 숫자 값을 제공하는 위치에서 사용할 수 있습니다. 예를 들어, 숫자 매개 변수가 있는 함수를 정의하지 않습니다. 이것은 말이 되지 않습니다: 'function drawShape(50){ ... }` &lt;-- don't do this. 대신 다음과 같이 명명 된 매개 변수로 함수를 * 정의 * 정의합니다 : 'function drawShape(size){ ... }' 그런 다음 해당 매개 변수에 대한 값을 제공하여 다음과 같이 * 호출 *합니다 : 'drawShape(50);' 이 질문의 경우 *call* 함수에 대한 해당 값 대신 randomNumber 를 사용하고 있습니다. 'drawShape( 무작위 숫자(25,75) );'\n\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/9/levels/5": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "아무 일도 일어나지 않을 것입니다.",
+          "correct": false,
+          "feedback": "잘못 된. 텀블위드가 텀블링하기 시작할 것입니다."
+        },
+        {
+          "text": "텀블위드가 화면 상단으로 떠오릅니다.",
+          "correct": false,
+          "feedback": "잘못 된. 텀블위드가 텀블링하기 시작할 것입니다."
+        },
+        {
+          "text": "텀블위드가 텀블링하기 시작할 것입니다.",
+          "correct": true,
+          "feedback": "맞는!"
+        },
+        {
+          "text": "텀블위드가 깜박이고 꺼집니다.",
+          "correct": false,
+          "feedback": "잘못 된. 텀블위드가 텀블링하기 시작할 것입니다."
+        }
+      ],
+      "questions": [
+        {
+          "text": "아래 코드를 자세히 살펴보십시오. \"실행\"을 클릭하면 어떻게 됩니까?"
+        }
+      ]
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/10/levels/1": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "라인 2",
+          "correct": true
+        },
+        {
+          "text": "라인 3",
+          "correct": true
+        },
+        {
+          "text": "라인 4",
+          "correct": false
+        },
+        {
+          "text": "라인 5",
+          "correct": false
+        }
+      ],
+      "markdown": "이 질문은 사각형 그리드의 로봇을 사용합니다. 로봇은 처음에 그리드의 오른쪽을 향하는 삼각형으로 표시됩니다. 로봇은 다음 지침에 따라 움직입니다. | 지시 | 설명 | |--------------------|--------| |'앞으로 나아가다' | 로봇이 향하는 방향으로 한 칸 앞으로 이동합니다 | |'오른쪽으로 회전' | 로봇은 제자리에서 시계 방향으로 90도 회전합니다(즉, 제자리에서 우회전). | |'왼쪽으로 회전' | 로봇은 제자리에서 시계 반대 방향으로 90도 회전합니다(즉, 제자리에서 좌회전합니다). | |'N번 반복' | 괄호 {} 사이에 포함된 명령 블록이 n번 반복됩니다. |   화살표로 표시된 대로 아래 그리드의 둘레로 로봇을 이동하기 위한 다음의 잘못된 프로그램을 고려하십시오. ! [](https://images.code.org/4d3177070d1585fc6ad3f9091dd53d76-image-1579897739915.png) ! [](/script_assets/CSP/instruction_gifs/U3L02-rightSquare.png)\n\n",
+      "questions": [
+        {
+          "text": "프로그램이 의도한 대로 작동하려면 어떤 코드 줄을 제거해야 합니까? 고르다 <u>2</u> 답변"
+        }
+      ]
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/11/levels/1": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "/script_assets/k_1_images/move_blocks/EN.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/move_blocks/ENE.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/move_blocks/WW.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/move_blocks/WSS.png"
+        }
+      ],
+      "content2": "퍼즐과 블록을 맞추세요",
+      "questions": [
+        {
+          "text": "/script_assets/k_1_images/maze_images/maze_EN.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/maze_images/maze_WW.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/maze_images/maze_WSS.png"
+        }
+      ],
+      "title": "매칭"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/12/levels/2": {
+    "long_instructions": "가르치는 _computer science_ 수학이나 읽기와 같은 다른 과목을 가르치는 것과 다른가요? 이 전략 목록을 읽고 컴퓨터 과학을 가르칠 때와 다른 과목을 가르칠 때 마주하게 될 몇 가지 차이점에 대해 아래에 의견을 제시하십시오. [이 워크시트][0]은 교사 대시보드의 \"수업 계획 및 리소스\" 타일에서도 사용할 수 있습니다. [이미지][1]\n\n</br>",
+    "placeholder": "컴퓨터 과학을 가르치는 것은 다음과 같은 방식으로 다른 과목을 가르치는 것과 다를 것이라고 생각합니다.",
+    "title": "컴퓨터 과학을 가르치기 위한 전략"
+  },
+  "https://studio.code.org/s/allthethings/lessons/13/levels/1": {
+    "dsls": {
+      "content1": "여기에 설명",
+      "markdown": "\n## 오늘은 사용법과 생성 방법을 배워보겠습니다: **함수** 함수를 생성하면 자신만의 블록을 만들 수 있습니다! 함수에는 두 부분이 있습니다 : * 내부에서 실행하려는 모든 코드가있는 새로 명명 된 블록을 만듭니다. <xml> <block type=\"procedures_defnoreturn\" editable=\"false\"> <mutation/>\n    <title name=\"NAME\">꿀만 얻을 수 있습니다.</title>\n    <statement name=\"STACK\"> <block type=\"bee_ifFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\"> <block type=\"maze_nectar\" deletable=\"false\"/> </statement> </block> </statement> </block> </xml> * 생성한 함수를 실행하기 위해 사용하거나 호출하는 단일 녹색 블록 자체입니다. <xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"/> <block type=\"procedures_callnoreturn\" id=\"callMe\"> <mutation name=\"get only nectar\"/> </block> </xml> 기능에 익숙해지고, 편집하는 방법을 배우고, 자신만의 기능을 만들 준비를 하세요!\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/14/levels/1": {
+    "short_instructions": "인터넷 시뮬레이터를 사용하여 메시지를 릴레이할 수 있는 프로토콜을 개발, 문서화 및 테스트합니다. 자세한 지침은 워크시트를 참조하십시오.  ",
+    "long_instructions": "## 조정 및 이진 메시지 활동 **프로토콜 개발** 인터넷 시뮬레이터를 사용하여 메시지를 전달할 수 있는 프로토콜을 개발하십시오(예: 한 구성원이 메시지를 보내고 다른 구성원이 동일한 메시지를 다시 보내는 경우). 귀하 또는 교사는 교환을 시작하기 위해 \"시작\"이라고 말하지만 그렇지 않으면 모든 커뮤니케이션은 위젯을 통해 이루어져야 합니다. 작업할 때 다음 사항을 고려하십시오. - 교환이 언제 시작되는지 어떻게 알 수 있습니까? - 메시지를 보내거나 받을 차례가 누구에게 있는지 어떻게 알 수 있습니까? - 행동을 어떻게 조율할 것인가? 제공된 워크시트에 프로토콜을 문서화하고 인터넷 시뮬레이터를 사용하여 프로토콜을 테스트합니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/14/levels/2": {
+    "short_instructions": "이 활동을 위해 그룹의 다른 사람들과 함께 라우터에 연결하십시오. 이제 인터넷 시뮬레이터는 받는 사람 및 보낸 사람 주소를 넣을 수 있는 위치를 제공하므로 비트를 수동으로 입력할 필요가 없습니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/14/levels/3": {
+    "short_instructions": "패킷이 커질수록 드롭될 가능성이 높아지는 네트워크를 통해 파비콘을 파트너에게 전송하십시오."
+  },
+  "https://studio.code.org/s/allthethings/lessons/14/levels/4": {
+    "short_instructions": "이 버전의 인터넷 시뮬레이터에서는 DNS(Domain Name System)가 제공되며 연결된 모든 컴퓨터의 IP 주소를 알고 있습니다. GET [hostname] 형식으로 DNS 서비스 주소에 메시지를 보냅니다. <yourRouterNumber>.15를 사용하여 학생의 주소를 가져옵니다.",
+    "long_instructions": "## DNS의 필요성 이 버전의 인터넷 시뮬레이터에서는 DNS(Domain Name System)가 제공되며 연결된 모든 컴퓨터의 IP 주소를 알고 있습니다. 연결된 다른 컴퓨터의 호스트 이름만 볼 수 있습니다.\\ [][0] DNS의 주소는 항상 \\<yourRouterNumber>.15. 'GET [hostname]' 프로토콜(예: 'GET Bob2')을 사용하여 DNS에 메시지를 보내 다른 학생의 주소를 가져옵니다. DNS 탭의 메모 섹션에서 응답을 추적할 수 있습니다.\\ [][1]"
+  },
+  "https://studio.code.org/s/allthethings/lessons/14/levels/5": {
+    "short_instructions": "수퍼 유저 모드에서 NetSim을로드했습니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/16/levels/1": {
+    "short_instructions": "텍스트에서 패턴(반복되는 단어 또는 구)을 찾습니다. 보이는 패턴을 오른쪽의 사전에 입력하십시오. 사전에 항목을 입력하면 항목의 기호가 패턴 대신 텍스트에 삽입됩니다.",
+    "long_instructions": "텍스트에서 패턴(반복되는 단어 또는 구)을 찾습니다. 보이는 패턴을 오른쪽의 사전에 입력하십시오. 사전에 항목을 입력하면 항목의 기호가 패턴 대신 텍스트에 삽입됩니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/17/levels/1": {
+    "short_instructions": "3x5 문자 'A'를 만듭니다. 위젯이 잘못된 치수로 설정되었습니다. 첫 번째 작업은 두 번째 바이트를 5에 대한 8비트 이진 코드로 설정하는 것입니다. 0000 0101. 그런 다음 픽셀 데이터를 입력하기 시작합니다.",
+    "long_instructions": "<img style=\"float:right; margin:0 20px\" src=\"https://code.org/images/cspunit1/letterA.png\" width=\"150\"> # 작업 1: 3x5 글자 'A' 만들기 픽셀화 위젯을 사용하여 표시된 3x5 글자 'A'(오른쪽)를 다시 만드는 것으로 시작합니다. 이미지는 내부적으로 *잘못된* 치수로 설정됩니다. 첫 번째 작업은 두 번째 바이트를 5에 대한 8비트 이진 코드로 설정하는 것입니다. 0000 0101. 그런 다음 픽셀 데이터를 입력하여 A를 만들 수 있습니다.\n            "
+  },
+  "https://studio.code.org/s/allthethings/lessons/17/levels/2": {
+    "short_instructions": "Maddie가 만든 4x2 이미지로 시작하지만 마지막 두 사각형은 생략했습니다. 어떤 두 가지 색상이 누락되었는지 파악하고 인코딩하여 이미지를 마무리합니다.",
+    "long_instructions": "# 색상 픽셀화: 작업 1 **지시 사항:** - Maddie가 만든 4x2 이미지로 시작하지만 마지막 두 사각형은 생략했습니다. - 어떤 두 가지 색상이 누락되었는지 파악하고 인코딩하여 이미지를 마무리합니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/17/levels/3": {
+    "short_instructions": "비디오에서 Maddie가 만든 4x4 이미지로 시작합니다. 당신의 임무는 픽셀당 12비트를 사용하여 4x4 그리드를 색상으로 채우는 것입니다. 요구 사항은 다음과 같습니다. 행 1 - 빨간색 음영으로 채웁니다. 행 2 - 녹색 음영. 행 3 - 파란색 음영. 행 4 - 회색 음영.",
+    "long_instructions": "# 픽셀화: 작업 3 <img src = \"https://code.org/images/cspunit1/ColorTask3.png\" style=\"float:right; margin:0 20px\" width=200> ** 사용법 : ** 비디오에서 Maddie가 만든 4x4 이미지로 시작합니다. 당신의 임무는 pixel_당 _12비트를 사용하여 4x4 그리드를 색상으로 채우는 것입니다. 결과는 오른쪽에 표시된 이미지와 비슷해야 합니다(정확히는 아님). 요구 사항은 다음과 같습니다. - 행 1 - 빨간색 음영으로 채웁니다. - 행 2 - 녹색 음영. - 행 3 - 파란색 음영. - 행 4 - 회색 음영."
+  },
+  "https://studio.code.org/s/allthethings/lessons/17/levels/4": {
+    "short_instructions": "이 픽셀화 수준은 'hide_encoding_controls' 옵션의 사용을 보여줍니다. 이 수준은 이미지 데이터를 16진수로 표시하며 다시 이진수로 변경할 수 없습니다.",
+    "long_instructions": "# 픽셀화: AllTheThings 4 이 픽셀화 수준은 'hide_encoding_controls' 옵션의 사용을 보여줍니다. 이 수준은 이미지 데이터를 16진수로 표시하며 다시 이진수로 변경할 수 없습니다.\n            "
+  },
+  "https://studio.code.org/s/allthethings/lessons/17/levels/5": {
+    "short_instructions": "이 픽셀화 수준은 \"슬라이더 숨기기\" 옵션의 사용을 보여줍니다. 너비 및 높이 슬라이더는 사용할 수 없으며 너비 및 높이 필드는 편집할 수 없습니다.",
+    "long_instructions": "# 픽셀화: AllTheThings 5 이 픽셀화 수준은 \"슬라이더 숨기기\" 옵션의 사용을 보여줍니다. 너비 및 높이 슬라이더는 사용할 수 없으며 너비 및 높이 필드는 편집할 수 없습니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/1": {
+    "short_instructions": "거북이의 시작 위치 위와 왼쪽에 1x1 사각형을 그립니다. 전체 지침을 보려면 클릭하십시오.",
+    "long_instructions": "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" style=\"float:right\"> 4개의 거북이 명령어만 주어지면 App Lab에서 코드를 작성하여 아래 각 챌린지에서 그림을 완성하세요. 목표는 제공된 명령만 사용하여 가능한 한 효율적으로 문제를 해결하는 코드를 작성하는 것입니다. \"효율적\"이라는 말은 무슨 뜻인가요? 컴퓨터 과학에서는 실제로 당신이 말하는 것에 따라 여러 가지 다른 것을 의미 할 수 있습니다. 이러한 문제를 해결하고, 최선이라고 생각하는 방식으로 해결하려고 노력하고, 마지막에 효율성에 대해 질문할 것입니다. <img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" style=\"float:right\"> # 이 작업을 수행합니다. 거북이의 앞뒤로 1 x 1 정사각형을 가능한 한 효율적으로 그립니다. 프로그램은 거북이가 원래 방향을 향하여 원래 위치에서 중지해야 합니다. 해결책이 있다고 생각되면 마침 버튼을 클릭하십시오 - 프로그램을 실행하면 나타납니다.",
+    "teacher_markdown": "4개의 명령으로만 작업해야 한다는 제약 조건이 중요합니다. (참조: \"요점은 무엇입니까?\" 아래.) 학생들이 프로그래밍에 대한 사전 지식을 가지고 수업에 들어온다면 코드 줄 수를 줄이기 위해 이러한 제약 조건을 벗어나려고 할 수 있습니다. 제공된 4개 이상의 명령을 사용하거나 'moveForward(150)'와 같은 명령과 함께 매개변수를 사용하는 학생을 발견하면 문제를 해결하지 않고 있음을 알려야 합니다. 문제는 제공된 4개의 명령만 사용하여 이미지를 만드는 것입니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/2": {
+    "short_instructions": "turnAround라는 함수를 정의합니다. 함수를 호출한 다음 거북이를 앞으로 이동합니다. (전체 지침을 보려면 클릭)",
+    "long_instructions": "# 이렇게 하기: 거북이를 회전시키는 'turnAround'라는 함수를 **정의**합니다. 함수를 **call** 정의한 후에는 예상대로 작동하는지 확인한 다음 아래와 같이 turtle을 앞으로 이동합니다. [][0] **기억하세요** 일반적으로, 함수 정의 _위에_ 코드 줄로 함수를 호출합니다 - 이것은 먼저 함수를 정의하는 코드를 작성하고 _그런 다음_ 호출하기 위해 줄을 추가하기 때문에 역방향으로 작업하는 것처럼 느껴질 수 있습니다. 다음은 비디오의 'moveTwice' 예제입니다. turnAround: [][1]에 대해 비슷한 작업을 수행해야합니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/3": {
+    "short_instructions": "루프와 난수를 사용하여 여기에 표시된 것과 유사한 별이 빛나는 밤하늘의 이미지를 생성할 것입니다. 땅과 하늘(단 두 개의 거대한 점)을 생성하기 위한 몇 가지 시작 코드를 제공했으며, 이 프로젝트에 코드를 추가하여 별, 풀, 달을 만들 것입니다. 모든 효과는 거북이 점, 선 및 색상을 영리하게 적용한 것입니다. 시작하려면 함께 제공되는 워크시트에 제안된 일련의 단계를 따르십시오. ",
+    "long_instructions": "루프와 난수를 사용하여 여기에 표시된 것과 유사한 별이 빛나는 밤하늘의 이미지를 생성할 것입니다. 땅과 하늘(단 두 개의 거대한 점)을 생성하기 위한 몇 가지 시작 코드를 제공했으며, 이 프로젝트에 코드를 추가하여 별, 풀, 달을 만들 것입니다. 모든 효과는 거북이 점, 선 및 색상을 영리하게 적용한 것입니다. 시작하려면 함께 제공되는 워크시트에 제안된 일련의 단계를 따르십시오. <img src=\"https://images.code.org/0f42e475e7600ac33d31bdf5dee70726-image-1459547325746.gif\" style=\"width: 250px\">"
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/4": {
+    "short_instructions": "\"Under the Sea\" 장면에 대한 시작 코드가 제공되었으며, 여기에는 불가사리, 해초 및 물고기에 대한 세 가지 기능이 각각 하나씩 포함되어 있습니다. 장면에 더 많은 변형을 추가할 수 있도록 매개변수를 허용하는 이러한 함수의 버전을 만듭니다. 학생용 워크시트는 자세한 내용과 지침을 제공합니다.",
+    "long_instructions": "\"Under the Sea\" 장면에 대한 시작 코드가 제공되었으며, 여기에는 불가사리, 해초 및 물고기에 대한 세 가지 기능이 각각 하나씩 포함되어 있습니다. 장면에 더 많은 변형을 추가할 수 있도록 매개변수를 허용하는 이러한 함수의 버전을 만듭니다. 학생용 워크시트는 자세한 내용과 지침을 제공합니다. <img src=\"https://levelbuilder-studio.code.org/script_assets/k_1_images/instruction_gifs/csp/U3L08%20-%20Under%20the%20sea.gif\" style=\"width: 250px\">"
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/5": {
+    "short_instructions": "클릭할 때 거북이를 움직이는 버튼을 추가합니다. (전체 지침을 보려면 클릭)",
+    "long_instructions": "# applab 레벨을 테스트하려면 로그인하십시오 (설계상 applab 레벨은 로그인 한 경우에만 작동합니다. 일반적으로 우리는 사람들이 로그인하도록 하지만 이것은 전체 스크립트에만 적용할 수 있으며 allthethings 스크립트에 대해 수행하는 것은 성가실 수 있습니다. # 첫 번째 인터랙티브 앱! <img src='https://images.code.org/3fad83213ae72073251c4d5abc1f048a-image-1444060521578.png' style='float: right; width: 250px'> 앱 사용자와 상호 작용하고 응답할 수 있는 명령인 **UI 컨트롤**(사용자 인터페이스 컨트롤)이라는 새로운 명령 그룹이 도구 상자에 추가되었습니다. 간단하게 하기 위해 두 가지 명령어로 시작하겠습니다: - 'onEvent'는 발생하는 이벤트(예: 버튼 클릭)에 대한 응답으로 함수를 실행할 수 있게 해줍니다. - 'button'은 화면에 버튼을 놓습니다 # 이 작업을 수행하면 아래와 같이 작은 앱을 복제할 수 있으며, 버튼 클릭으로 거북이를 움직입니다. 다음 세 가지 작업을 수행합니다: - 'button' 추가 - 'onEvent' 블록 추가 - onEvent 함수 블록 내에 'moveForward' 추가 여기 해야 할 일이 있습니다 - 이 동영상을 필요한 만큼 여러 번 시청할 수 있습니다. <img src=\"https://images.code.org/1cdc8cfbcef2a43f84b11ebdf14aed0c-image-1444061731350.gif\" style=\"border: solid 1px black; width: 500px; margin: auto\">"
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/6": {
+    "short_instructions": "image 명령을 사용하여 프로그램의 텍스트 레이블을 이미지로 바꿉니다. (전체 지침을 보려면 클릭)",
+    "long_instructions": "# 새로운 요소 및 이벤트: 이미지 <img src=\"https://images.code.org/a84297658be45dc78bc401d387d10436-image-1444663322356.21.25 AM.png\" style=\"float: right; width: 120px\"> 이미지는 응용 프로그램을 시각적으로 더 즐겁고 상호 작용적으로 만듭니다. 'image' 명령을 사용하여 응용 프로그램에 이미지를 추가할 수 있습니다. 지금은 앱에 '이미지' 요소를 추가하기만 하면 되고(기본 이미지 링크는 Code.org 로고임) 아직 고유한 이미지를 선택하는 것에 대해 걱정하지 마십시오. 바로 다음 연습에서 이 작업을 수행할 것입니다! # 이 작업을 수행합니다. <img src=\"https://images.code.org/8df7b1b56c71de7ad9770646bd7f8792-image-1444336140877.gif\" style=\"float: right; width: 250px\"> - **프로그램 수정** - 'textLabel'을 'image'로 변경하여 선택한 이벤트에 따라 이미지가 화면에서 무작위로 이동하도록 합니다. - **팁:** 텍스트 레이블의 ID를 재사용하는 경우 프로그램을 작동시키기 위해 한 줄의 코드만 변경하면 됩니다! 프로그램이 작동하면 이미지에 대한 설명적이고 의미 있는 ID를 선택하고 이벤트 처리기에서 적절하게 변경하는 것이 좋습니다.\n\n<br>"
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/7": {
+    "short_instructions": "이 수준은 제출할 수 있습니다. 테스트 전용입니다!",
+    "long_instructions": "이 수준은 제출할 수 있습니다. 테스트 전용입니다! applab 레벨을 테스트하려면 로그인하십시오(설계상 applab 레벨은 로그인한 경우에만 작동합니다. 일반적으로 우리는 사람들이 로그인하도록 하지만 이것은 전체 스크립트에만 적용할 수 있으며 allthethings 스크립트에 대해 수행하는 것은 성가실 수 있습니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/8": {
+    "short_instructions": "applab 레벨을 테스트하려면 로그인하십시오(설계상 applab 레벨은 로그인한 경우에만 작동합니다. 일반적으로 우리는 사람들이 로그인하도록 하지만 이것은 전체 스크립트에만 적용할 수 있으며 allthethings 스크립트에 대해 수행하는 것은 성가실 수 있습니다.",
+    "long_instructions": "applab 레벨을 테스트하려면 로그인하십시오(설계상 applab 레벨은 로그인한 경우에만 작동합니다. 일반적으로 우리는 사람들이 로그인하도록 하지만 이것은 전체 스크립트에만 적용할 수 있으며 allthethings 스크립트에 대해 수행하는 것은 성가실 수 있습니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/9": {
+    "short_instructions": "applab 레벨을 테스트하려면 로그인하십시오(설계상 applab 레벨은 로그인한 경우에만 작동합니다. 일반적으로 우리는 사람들이 로그인하도록 하지만 이것은 전체 스크립트에만 적용할 수 있으며 allthethings 스크립트에 대해 수행하는 것은 성가실 수 있습니다.",
+    "long_instructions": "applab 레벨을 테스트하려면 로그인하십시오(설계상 applab 레벨은 로그인한 경우에만 작동합니다. 일반적으로 우리는 사람들이 로그인하도록 하지만 이는 전체 스크립트에만 적용할 수 있으며 모든 스크립트에 대해 수행하는 것은 성가신 일입니다). . 긴 지시 사항의 끝입니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/10": {
+    "short_instructions": "템플릿 #1로 뒷받침됩니다. applab 레벨을 테스트하려면 로그인하십시오(설계상 applab 레벨은 로그인한 경우에만 작동합니다. 일반적으로 우리는 사람들이 로그인하도록 하지만 이것은 전체 스크립트에만 적용할 수 있으며 allthethings 스크립트에 대해 수행하는 것은 성가실 수 있습니다. ",
+    "long_instructions": "템플릿 #1로 뒷받침됩니다. applab 레벨을 테스트하려면 로그인하십시오(설계상 applab 레벨은 로그인한 경우에만 작동합니다. 일반적으로 우리는 사람들이 로그인하도록 하지만 이것은 전체 스크립트에만 적용할 수 있으며 allthethings 스크립트에 대해 수행하는 것은 성가실 수 있습니다. "
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/11": {
+    "short_instructions": "템플릿 #2로 뒷받침됩니다. applab 레벨을 테스트하려면 로그인하십시오(설계상 applab 레벨은 로그인한 경우에만 작동합니다. 일반적으로 우리는 사람들이 로그인하도록 하지만 이것은 전체 스크립트에만 적용할 수 있으며 allthethings 스크립트에 대해 수행하는 것은 성가실 수 있습니다.",
+    "long_instructions": "템플릿 #2로 뒷받침됩니다. applab 레벨을 테스트하려면 로그인하십시오(설계상 applab 레벨은 로그인한 경우에만 작동합니다. 일반적으로 우리는 사람들이 로그인하도록 하지만 이것은 전체 스크립트에만 적용할 수 있으며 allthethings 스크립트에 대해 수행하는 것은 성가실 수 있습니다.",
+    "teacher_markdown": "이 가격 인하는 승인된 교사에게만 눈에 띄게 **오로지** 적용되어야 합니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/12": {
+    "short_instructions": "이 레벨은 \"U3 Digital Assistant Target\"에서 복제되었습니다.",
+    "long_instructions": "# applab 레벨을 테스트하려면 로그인하십시오 (설계상 applab 레벨은 로그인 한 경우에만 작동합니다. 일반적으로 우리는 사람들이 로그인하도록 하지만 이것은 전체 스크립트에만 적용할 수 있으며 allthethings 스크립트에 대해 수행하는 것은 성가실 수 있습니다. # 디지털 비서 소개 **디지털 비서는 마술처럼 보일 수 있지만, 텍스트를 구문 분석하거나 처리**하여 단어 조합을 찾아 무엇을 응답할지 결정하는 정교한 컴퓨터 프로그램일 뿐입니다. 다음 몇 가지 단원에 걸쳐 **내용에 따라 답변할 내용을 결정함으로써 사용자의 질문에 \"지능적으로\" 응답하는 자신만의 디지털 비서를 구축하게 됩니다. 이제 **데모 디지털 비서**인 Movie Bot을 탐색하게 되며, 이 프로그램은 빌드할 프로그램의 종류를 나타냅니다. 아래 프롬프트 중 일부를 시도해 보고 직접 시도해 보십시오. 이 프로그램이 할 수 있는 것과 할 수 없는 것의 한계를 빠르게 찾을 수 있습니다. # 이 작업을 수행하십시오 **Movie Bot을 실행합니다. _'여기에 질문 입력'_ 입력에 다음 프롬프트를 각각 입력하고 'Enter'**를 누르십시오. - '도움말' - '최고의 PG 코미디 영화는 무엇입니까?' - \"다음에 어떤 PG 코미디 영화를 봐야 할까요?\" - '최고의 로맨스 영화를 알려주실 수 있나요?' - '나는 WatCH a MovIE를 원!!' - '켄터키의 수도는 어디인가요?' - 놀아요! Movie Bot에 대해 더 많은 질문을 하고 응답하는 데 어떤 논리를 사용하는지 예측합니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/13": {
+    "short_instructions": "applab 레벨을 테스트하려면 로그인하십시오(설계상 applab 레벨은 로그인한 경우에만 작동합니다. 일반적으로 우리는 사람들이 로그인하도록 하지만 이것은 전체 스크립트에만 적용할 수 있으며 allthethings 스크립트에 대해 수행하는 것은 성가실 수 있습니다.",
+    "long_instructions": "applab 레벨을 테스트하려면 로그인하십시오(설계상 applab 레벨은 로그인한 경우에만 작동합니다. 일반적으로 우리는 사람들이 로그인하도록 하지만 이것은 전체 스크립트에만 적용할 수 있으며 allthethings 스크립트에 대해 수행하는 것은 성가실 수 있습니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/14": {
+    "dsls": {
+      "markdown": "# Markdown에서 포함된 비디오 테스트: 이 수준_do Markdown에서 iframe을 allow_하지 않는지 테스트하기 위해 존재합니다. 다음 수평 규칙 사이에는 [이 링크] (https://www.youtube.com/embed/l_a0ecZ2Oe0)를 포함하려는 html iframe이 포함 된 줄이 있습니다. --- <iframe width=\"560\" height = \"315\" src=\"https://www.youtube.com/embed/l_a0ecZ2Oe0\" frameborder=\"0\" allowfullscreen></iframe> --- 모든 것이 올바르게 작동하고 있다면, 두 수평 규칙 사이에 어떤 내용도 보이지 않아야 **됩니다**.\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/15": {
+    "contained levels": [
+      {
+        "long_instructions": "내 무료 응답 마크다운 지침"
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/16": {
+    "short_instructions": "applab 레벨을 테스트하려면 로그인하십시오(설계상 applab 레벨은 로그인한 경우에만 작동합니다. 일반적으로 우리는 사람들이 로그인하도록 하지만 이것은 전체 스크립트에만 적용할 수 있으며 allthethings 스크립트에 대해 수행하는 것은 성가실 수 있습니다.",
+    "long_instructions": "applab 레벨을 테스트하려면 로그인하십시오(설계상 applab 레벨은 로그인한 경우에만 작동합니다. 일반적으로 우리는 사람들이 로그인하도록 하지만 이것은 전체 스크립트에만 적용할 수 있으며 allthethings 스크립트에 대해 수행하는 것은 성가실 수 있습니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/18": {
+    "short_instructions": "거북이의 시작 위치 위와 왼쪽에 1x1 사각형을 그립니다. 전체 지침을 보려면 클릭하십시오.",
+    "long_instructions": "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" style=\"float:right\"> 4개의 거북이 명령어만 주어지면 App Lab에서 코드를 작성하여 아래 각 챌린지에서 그림을 완성하세요. 목표는 제공된 명령만 사용하여 가능한 한 효율적으로 문제를 해결하는 코드를 작성하는 것입니다. \"효율적\"이라는 말은 무슨 뜻인가요? 컴퓨터 과학에서는 실제로 당신이 말하는 것에 따라 여러 가지 다른 것을 의미 할 수 있습니다. 이러한 문제를 해결하고, 최선이라고 생각하는 방식으로 해결하려고 노력하고, 마지막에 효율성에 대해 질문할 것입니다. <img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" style=\"float:right\"> # 이 작업을 수행합니다. 거북이의 앞뒤로 1 x 1 정사각형을 가능한 한 효율적으로 그립니다. 프로그램은 거북이가 원래 방향을 향하여 원래 위치에서 중지해야 합니다. 해결책이 있다고 생각되면 마침 버튼을 클릭하십시오 - 프로그램을 실행하면 나타납니다.",
+    "teacher_markdown": "4개의 명령으로만 작업해야 한다는 제약 조건이 중요합니다. (참조: \"요점은 무엇입니까?\" 아래.) 학생들이 프로그래밍에 대한 사전 지식을 가지고 수업에 들어온다면 코드 줄 수를 줄이기 위해 이러한 제약 조건을 벗어나려고 할 수 있습니다. 제공된 4개 이상의 명령을 사용하거나 'moveForward(150)'와 같은 명령과 함께 매개변수를 사용하는 학생을 발견하면 문제를 해결하지 않고 있음을 알려야 합니다. 문제는 제공된 4개의 명령만 사용하여 이미지를 만드는 것입니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/19": {
+    "short_instructions": "거북이의 시작 위치 위와 왼쪽에 1x1 사각형을 그립니다. 전체 지침을 보려면 클릭하십시오.",
+    "long_instructions": "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" style=\"float:right\"> 4개의 거북이 명령어만 주어지면 App Lab에서 코드를 작성하여 아래 각 챌린지에서 그림을 완성하세요. 목표는 제공된 명령만 사용하여 가능한 한 효율적으로 문제를 해결하는 코드를 작성하는 것입니다. \"효율적\"이라는 말은 무슨 뜻인가요? 컴퓨터 과학에서는 실제로 당신이 말하는 것에 따라 여러 가지 다른 것을 의미 할 수 있습니다. 이러한 문제를 해결하고, 최선이라고 생각하는 방식으로 해결하려고 노력하고, 마지막에 효율성에 대해 질문할 것입니다. <img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" style=\"float:right\"> # 이 작업을 수행합니다. 거북이의 앞뒤로 1 x 1 정사각형을 가능한 한 효율적으로 그립니다. 프로그램은 거북이가 원래 방향을 향하여 원래 위치에서 중지해야 합니다. 해결책이 있다고 생각되면 마침 버튼을 클릭하십시오 - 프로그램을 실행하면 나타납니다.",
+    "teacher_markdown": "4개의 명령으로만 작업해야 한다는 제약 조건이 중요합니다. (참조: \"요점은 무엇입니까?\" 아래.) 학생들이 프로그래밍에 대한 사전 지식을 가지고 수업에 들어온다면 코드 줄 수를 줄이기 위해 이러한 제약 조건을 벗어나려고 할 수 있습니다. 제공된 4개 이상의 명령을 사용하거나 'moveForward(150)'와 같은 명령과 함께 매개변수를 사용하는 학생을 발견하면 문제를 해결하지 않고 있음을 알려야 합니다. 문제는 제공된 4개의 명령만 사용하여 이미지를 만드는 것입니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/20": {
+    "short_instructions": "거북이의 시작 위치 위와 왼쪽에 1x1 사각형을 그립니다. 전체 지침을 보려면 클릭하십시오.",
+    "long_instructions": "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" style=\"float:right\"> 4개의 거북이 명령어만 주어지면 App Lab에서 코드를 작성하여 아래 각 챌린지에서 그림을 완성하세요. 목표는 제공된 명령만 사용하여 가능한 한 효율적으로 문제를 해결하는 코드를 작성하는 것입니다. \"효율적\"이라는 말은 무슨 뜻인가요? 컴퓨터 과학에서는 실제로 당신이 말하는 것에 따라 여러 가지 다른 것을 의미 할 수 있습니다. 이러한 문제를 해결하고, 최선이라고 생각하는 방식으로 해결하려고 노력하고, 마지막에 효율성에 대해 질문할 것입니다. <img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" style=\"float:right\"> # 이 작업을 수행합니다. 거북이의 앞뒤로 1 x 1 정사각형을 가능한 한 효율적으로 그립니다. 프로그램은 거북이가 원래 방향을 향하여 원래 위치에서 중지해야 합니다. 해결책이 있다고 생각되면 마침 버튼을 클릭하십시오 - 프로그램을 실행하면 나타납니다.",
+    "teacher_markdown": "4개의 명령으로만 작업해야 한다는 제약 조건이 중요합니다. (참조: \"요점은 무엇입니까?\" 아래.) 학생들이 프로그래밍에 대한 사전 지식을 가지고 수업에 들어온다면 코드 줄 수를 줄이기 위해 이러한 제약 조건을 벗어나려고 할 수 있습니다. 제공된 4개 이상의 명령을 사용하거나 'moveForward(150)'와 같은 명령과 함께 매개변수를 사용하는 학생을 발견하면 문제를 해결하지 않고 있음을 알려야 합니다. 문제는 제공된 4개의 명령만 사용하여 이미지를 만드는 것입니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/21": {
+    "long_instructions": "<img src=\"https://images.code.org/117a2a8e098760173f16048fde721295-image-1479829058899.gif\" style=\"float: right; width: 150px\"> ## 시도해 보세요 -- Text Password Checker **핵심 아이디어**: '=='를 사용하여 문자열과 숫자를 비교할 수 있습니다. - 이벤트 핸들러에서 if-statement를 사용하여 사용자가 UI 요소에 입력하는 텍스트를 비교해 보겠습니다. **설정:** - 디자인 모드의 설정에 유의하십시오 - 빨간색 자물쇠와 녹색 \"잠금 해제\"의 두 가지 이미지가 있습니다. - 녹색 \"잠금 해제\"는 시작 시 _숨겨짐_입니다. ## 이 작업을 수행합니다: **이벤트 핸들러에 if-statement를 추가하여 비밀번호를 확인하고 비밀번호가 올바른 경우에만 \"unlock\"을 표시합니다** - *password\\_input* 텍스트 상자에서 가져온 텍스트와 비밀번호로 사용하려는 문자열을 비교하기 위해 '=='를 사용할 수 있습니다. 사용해야 하는 부울 표현식은 다음과 같아야 합니다: [][0] - 사용자가 올바른 비밀번호를 입력하면 녹색 \"unlock\"을 **표시**하고 빨간색 잠금을 **숨깁니다**. - 이미지를 숨기고 표시하는 코드를 제공했습니다. if 문을 추가하기만 하면 됩니다. - 그렇지 않으면 아무 작업도 수행하지 않습니다. 다시 시도할 수 있습니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/22": {
+    "long_instructions": "# 단어 검색입니다 화면 왼쪽에서 \"실행\"을 클릭하여 단어 검색을 시작합니다. 팀과 함께 작업하면서 그리드에서 다음 단어를 찾습니다. 모든 방향으로 수평, 수직 또는 대각선일 수 있습니다. - 정의 - 준비 - 시도 - 반영 - 문제 - 해결 - 컴퓨터 - 과학 단어를 찾으면(또는 교사가 시간을 호출하면) \"완료\"를 클릭하여 다음 활동으로 이동합니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/19/levels/3": {
+    "long_instructions": "# 카운터 변수는 몇 개입니까? 카운터 변수('x = x + 1' , 'x = x - 1' , 'x = x + 0.5' 등)를 사용하여 장면에 애니메이션을 적용할 수 있습니다. 장면이 점점 커지고 복잡해지기 시작하면 어떻게 될까요? 이 애니메이션을 시청하세요. 파트너와 함께: - 이 장면을 만드는 데 필요한 카운터 변수의 수를 결정합니다 - 카운터 변수의 이름을 결정합니다 - **이 장면의 첫 번째 프레임에 변수의 Labels-Values-Connectors** 다이어그램을 그립니다. 값을 정확하게 맞추는 것에 대해 걱정하지 마십시오. - 다른 그룹과 답을 공유하고 학급과 아이디어를 공유할 준비를 합니다**"
+  },
+  "https://studio.code.org/s/allthethings/lessons/19/levels/4": {
+    "display_name": "프로젝트 - 마무리 작업",
+    "long_instructions": "# 마무리 손질 이제 게임의 기초를 다졌으니 몇 가지 마무리 터치를 추가할 차례입니다. 더 나은 게임을 만들려면 최소 두 가지 이상 개선해 보세요. 아래 목록을 사용하여 도움을 받거나 원하는 개선 사항을 직접 제시할 수 있습니다. - 플레이어가 화면 가장자리를 벗어나지 않도록 하는 방법을 찾으십시오. - 플레이어가 수집하거나 피할 수 있는 다른 포인트 값의 가치가 있는 다른 아이템을 추가하십시오. - 변수를 만들어 플레이어의 생명력 수를 추적한 다음, 생명이 소진되면 게임을 종료합니다. - 게임 배경에서 움직이는 스프라이트를 추가합니다. - 점수가 더 높아지거나 게임이 끝날 때 전환할 다른 배경을 만드세요. - 게임을 끝낼 수 있는 방법을 제공합니다. 게임을 종료할 수 있는 가능한 이벤트는 점수가 특정 값에 도달하거나 게임을 계속 진행하기 위한 생명의 양이 소진될 수 있습니다. - 게임에 플랫폼이 있는 경우 게임의 개체가 어떤 식으로든 이러한 플랫폼과 상호 작용하도록 합니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/20/levels/1": {
+    "dsls": {
+      "markdown": "## 환영합니다! <img style=\"float:left; margin:0 20px\" src=\"//code.org/images/edquote1.png\" height=\"910\" width=\"400\">\n\n<p><strong>Code.org의 K-5 컴퓨터 과학 입문 온라인 전문 개발 과정에 오신 것을 환영합니다.</strong> </p>\n\n<p>Code.org의 전문성 개발 프로그램은 컴퓨터 과학을 교실에 통합할 수 있도록 준비하고 교사로서의 성장을 지원합니다. 이 온라인 과정은 일부 교사가 교실에서 자료를 사용하기에 충분할 수 있지만 추가 전문성 개발을 원하는 경우 K-5 교육자를 위해 미국에서 주최하는 워크샵을 참조하십시오. 이들은 노련한 컴퓨터 과학 교육자가 가르치는 고품질 워크샵입니다. </p>\n\n<p><a href=\"http://code.org/professional-development-workshops\">여기에서 워크숍에 등록하세요.</a>.</p>\n\n<p>이 온라인 과정에서 비디오를 보고, 기사를 읽고, 온라인 활동을 하고, 컴퓨터 과학의 기초와 Code.org의 온라인 학습 시스템을 사용하는 방법에 대해 다른 교사와 토론하게 됩니다. 우리는 여러분이 컴퓨터 과학을 가르치는 흥분을 경험할 수 있도록 컴퓨터 프로그램을 스스로 작성하는 방법을 탐구할 수 있도록 하고자 합니다.</p>\n\n<p>PD 프로그램 동안과 그 이후에도 언제든지 Code.org 와 참여 교육자 커뮤니티는 항상 지원을 받을 것입니다. <a href=\"http://support.code.org\">http://support.code.org</a>.</p>\n\n</br>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/20/levels/2": {
+    "dsls": {
+      "markdown": "## 컴퓨터 과학 교육 컴퓨터 과학이 학생들의 기본 기술이라고 생각하십니까? 그 이유는 무엇입니까?\n\n<div id=\"discourse-comments\"></div>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/21/levels/2": {
+    "short_instructions": "블록 요소로서 유효한 Blockly 블록을 나타내는 XML을 포함할 수 있어야 합니다. [블록 블록][0] 또한 [blockly block][1]과 같이 Blockly XML을 인라인 요소로 지원합니다. 입력 형식의 차이점은 이 형식은 단락 내에 포함되는 반면 이전 형식은 자체 텍스트 블록에 있다는 것입니다. 출력의 차이는 비슷합니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/21/levels/3": {
+    "short_instructions": "3개의 '서쪽으로 이동' 블록과 1개의 '옥수수 따기' 블록을 사용하여 이 퍼즐을 풀어보세요.",
+    "long_instructions": "[blockly block][0] **three** 번 사용하여 수확기를 옥수수로 가져오세요! [blockly block][1]을 사용하여 옥수수를 따는 것을 잊지 마세요!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/23/levels/1": {
+    "short_instructions": "길을 따라 나를 바보 돼지에게 데려가라. TNT를 피하지 않으면 깃털이 날아갑니다! 힌트: 그는 내 남쪽에 있다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/23/levels/2": {
+    "sublevels": {
+      "K-1 Happy Maps Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/up.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/down.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/left.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/right.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png",
+          "questions": [
+            {
+              "text": "어떤 화살이 Flurb를 보물로 데려갈까요?"
+            }
+          ],
+          "title": "객관식"
+        }
+      },
+      "Multi Horizontal Scroll Test": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "3비트",
+              "correct": false
+            },
+            {
+              "text": "4비트",
+              "correct": false
+            },
+            {
+              "text": "5비트",
+              "correct": false
+            },
+            {
+              "text": "6비트",
+              "correct": false
+            },
+            {
+              "text": "7비트",
+              "correct": true
+            },
+            {
+              "text": "12비트",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "표준 QWERTY 키보드에는 화면에 문자를 배치할 수 있는 47개의 키가 있습니다. 이러한 각 키는 \"Shift\"키를 동시에 눌러 두 번째 문자를 표시 할 수도 있습니다 (이 질문에서는 다른 모든 키가 무시된다고 가정합니다). 이 키보드에서 입력할 수 있는 모든 것을 인코딩하는 데 몇 비트가 필요합니까?"
+            }
+          ],
+          "title": "평가: 텍스트 인코딩"
+        }
+      },
+      "Choose 2 Test": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "라인 2",
+              "correct": true
+            },
+            {
+              "text": "라인 3",
+              "correct": true
+            },
+            {
+              "text": "라인 4",
+              "correct": false
+            },
+            {
+              "text": "라인 5",
+              "correct": false
+            }
+          ],
+          "markdown": "이 질문은 사각형 그리드의 로봇을 사용합니다. 로봇은 처음에 그리드의 오른쪽을 향하는 삼각형으로 표시됩니다. 로봇은 다음 지침에 따라 움직입니다. | 지시 | 설명 | |--------------------|--------| |'앞으로 나아가다' | 로봇이 향하는 방향으로 한 칸 앞으로 이동합니다 | |'오른쪽으로 회전' | 로봇은 제자리에서 시계 방향으로 90도 회전합니다(즉, 제자리에서 우회전). | |'왼쪽으로 회전' | 로봇은 제자리에서 시계 반대 방향으로 90도 회전합니다(즉, 제자리에서 좌회전합니다). | |'N번 반복' | 괄호 {} 사이에 포함된 명령 블록이 n번 반복됩니다. |   화살표로 표시된 대로 아래 그리드의 둘레로 로봇을 이동하기 위한 다음의 잘못된 프로그램을 고려하십시오. ! [](https://images.code.org/4d3177070d1585fc6ad3f9091dd53d76-image-1579897739915.png) ! [](/script_assets/CSP/instruction_gifs/U3L02-rightSquare.png)\n\n",
+          "questions": [
+            {
+              "text": "프로그램이 의도한 대로 작동하려면 어떤 코드 줄을 제거해야 합니까? 고르다 <u>2</u> 답변"
+            }
+          ]
+        }
+      },
+      "K-1 Plant a Seed Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/poke-hole.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/dirty-teeth.png",
+              "correct": true
+            }
+          ],
+          "content1": "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png",
+          "questions": [
+            {
+              "text": "이 알고리즘의 시작 부분에서 어떤 단계를 거쳐야 합니까?"
+            }
+          ],
+          "title": "객관식"
+        }
+      },
+      "K-1 Plant a Seed Multi 2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/brush-teeth.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/cover-seed.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/water-pot.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png",
+          "questions": [
+            {
+              "text": "이 알고리즘의 빈칸을 채워야 하는 단계는 무엇입니까?"
+            }
+          ],
+          "title": "객관식"
+        }
+      },
+      "K-1 Artist 1 Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/artist_images/W-S-S.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/artist_images/E-S-S.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/artist_images/S-E-E.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/artist_images/E-S.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500",
+          "questions": [
+            {
+              "text": "어떤 블록이 이 퍼즐을 풀까요?"
+            }
+          ],
+          "title": "객관식"
+        }
+      },
+      "ECSPD1 computational thinker": {
+        "dsls": {
+          "markdown": "# ECS 커리큘럼에 대해 반성하고 계신가요? 과정의 초기 단원을 검토한 후 Exploring Computer Science의 커리큘럼 목표 중 눈에 띄는 몇 가지 목표는 무엇입니까?\n"
+        }
+      },
+      "sample external 2": {
+        "dsls": {
+          "markdown": "### Sample external 2 .external 파일에 저장된 일부 명령 텍스트의 두 번째 샘플입니다. 여기에 몇 가지 추가 텍스트가 있는데, 이를 LevelGroup 에서 볼 때 줄 바꿈을 얻을 수 있기를 바라며, 이를 사용하여 일반 임베디드 레벨 중 몇 가지 지침을 표시할 것입니다.\n\n"
+        }
+      },
+      "ECSPD your goals_test": {
+        "long_instructions": "__Optional: ECS 수업의 목표는 무엇입니까?__ *이러한 목표는 시간이 지남에 따라 변경될 예정이며, 이러한 목표를 향해 어떻게 진행되고 있는지 확인할 수 있도록 과정을 진행하면서 이 답변을 다시 검토할 것입니다.*\r\n",
+        "title": "목표 문서화"
+      },
+      "K-1 Maze Loops Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r3_N.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r3_NN.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r4_N.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/move_blocks/NNNequals.png, 300",
+          "questions": [
+            {
+              "text": "어떤 반복 블록이 동일합니까?"
+            }
+          ],
+          "title": "객관식"
+        }
+      },
+      "K-1 Maze Loops Multi 2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r3_S.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r3_ES.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r3_SE.png",
+              "correct": true
+            }
+          ],
+          "content1": "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240",
+          "questions": [
+            {
+              "text": "올바른 반복 블록을 선택합니다."
+            }
+          ],
+          "title": "객관식"
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/25/levels/1": {
+    "short_instructions": "목재는 매우 중요한 자원입니다. 많은 것들이 그것으로 만들어집니다. 나무로 걸어가 \"블록 파괴\" 명령을 사용하여 나무를 자르십시오."
+  },
+  "https://studio.code.org/s/allthethings/lessons/25/levels/2": {
+    "display_name": "프리플레이",
+    "short_instructions": "**프리플레이:** 혼자서 탐험할 시간입니다!",
+    "long_instructions": "**무료 플레이:** 이제 당신에게 달렸습니다! 에이전트의 코드를 사용하여 이 세계를 탐험하세요.",
+    "authored_hints": {
+      "MC_HOC_2017_13_Cole_a": "요원에게 광산 수레 트랙을 만들어 세계를 탐험하게 해 보세요!"
+    },
+    "function_definitions": {
+      "function 1": {
+        "name": "기능 1"
+      },
+      "function 2": {
+        "name": "기능 2"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/25/levels/3": {
+    "long_instructions": "바다 랜턴으로 가십시오."
+  },
+  "https://studio.code.org/s/allthethings/lessons/26/levels/1": {
+    "dsls": {
+      "title": "시험 평가 1"
+    },
+    "sublevels": {
+      "csp_unit_assessment_overview": {
+        "dsls": {
+          "content1": "여기에 설명",
+          "markdown": "# CS 원칙 챕터 평가 시작하기 전에 필요한 모든 것을 갖추고 평가를 탐색하는 방법을 알 수 있도록 아래 정보를 주의 깊게 읽으십시오. ## 필요한 것들 * **스크래치 용지와 연필** * 종이에 스크래치 작업을 하고 싶을 수 있는 몇 가지 질문이 있습니다. ## 시험 응시 방법 * 각 질문을 읽고 제공된 선택 항목에서 가장 좋은 답변을 선택하십시오 * 모든 선택 사항은 자동으로 저장되지만 원하는 경우 변경할 수 있습니다. * 주황색 버튼 \"다음 페이지\" 및 \"이전 페이지\"를 사용하여 테스트에서 앞뒤로 이동합니다. 앞으로 가든 뒤로 가든 응답이 저장됩니다. ! [](https://images.code.org/9e697f11d15376aa513dea510dd464d3-image-1463597394595.png) * 화면 상단의 말풍선을 사용하여 탐색할 수도 있습니다. * 노란색 - 페이지를 방문했지만 아직 모든 질문에 답변하지 않았음을 의미합니다. * 녹색 - 페이지의 모든 질문에 답변했음을 의미합니다. ! [](https://images.code.org/51c792652b3e922665221bba16a8c37c-image-1463598805414.png) * 테스트를 제출할 준비가 되면 마지막 페이지로 이동하면 보라색 \"제출\" 버튼이 표시됩니다. \"제출\"을 클릭하면 시험이 교사에게 전송됩니다. ! [](https://images.code.org/194d1918efc8ce3f8621de4e6b2558f3-image-1463597268503.png) * 테스트를 \"취소\"할 수도 있습니다. **드문 경우에만 이 작업을 수행해야 합니다** - 시험을 제출할 때 교사는 시험이 제출된 시간을 볼 수 있습니다. * **제출을 취소하고 다시 제출해도 괜찮다는 것을 선생님에게 분명히 하십시오 - 해야 할 과제 이후에 제출했다는 이유로 전체 시험이 무효화되는 것을 원하지 않습니다. ! [](https://images.code.org/ab068a26c8a230a0180f6f9c5c8d45bf-image-1463600680236.png) ## 행운을 빕니다!\n",
+          "teacher_markdown": "### 주의: 이 평가의 정의와 그렇지 않은 것 * 이 평가는 **AP의 \"스타일\"로 설계되었습니다** 객관식 평가. * 즉, 이 시점 이전에 다룬 수업에 대한 질문이 **아님**을 의미합니다. 오히려, 질문은 이론적으로 다루어진 근본적인 AP 학습 목표와 관련이 있습니다. * 학생들이 질문에 답하기 위해 배운 내용에서 약간의 외삽을 수행해야 할 수도 있음을 **의미합니다. * 질문이 \"어렵다\"는 것을 의미하며, 특히 처음 노출되는 경우 더욱 그렇습니다. 따라서 전반적으로 **주의해서 사용하십시오** * 이 평가에 어떤 지분을 부여해야 하는지에 대한 판단을 사용하십시오. * 학생을 채점하기 위해 이 평가를 사용할 필요는 없습니다. * 단순히 정답률을 취하는 것과는 다른 방식으로 학생을 채점할 수 있습니다. * 지식 탐구 측면에서 수업의 정신을 유지할 수 있는 방식으로 사용해야 합니다. * 학생들이 낙담할까 봐 걱정된다면, 이 평가를 조사할 기회로 재구성하십시오 -- 학생들이 질문을 시도하게 하고, 답을 조사하고, 그들이 틀린 것을 바꾸거나, 그들 자신의 질문 세트를 개발하게 하십시오. --- #### F.A.Q. -- 평가를 준비하고, 관리하고, 검토하는 방법 다음이 포함된 **[F.A.Q. 문서 바로가기](https://docs.google.com/document/d/1zEpD1PFt6ec2S8ourxuMH0HD6tiyRvqAGUKGDCOt-qs/edit#heading=h.kewgp6z8qdde)**를 참조하십시오: * 평가를 준비, 관리, 검토하는 방법에 대한 스크린샷 * 일반적인 문제/문제 해결 #### 학생 답변서를 보고 검토하는 방법에 대한 간략한 요약 1. [교사 대시보드](https://code.org/teacher-dashboard#/)로 이동 2. CS 원칙 섹션 3을 선택합니다. Text Responses(텍스트 응답), Assessments(평가) 등을 포함한 여러 보라색 탭이 표시됩니다. 4. **평가/설문 조사**를 클릭합니다. 5. 코스 선택기 드롭다운에서 **이 평가가 표시된 단위를 선택합니다(예: 단원 1: 인터넷)** 6. 평가를 *제출*한 모든 학생에 대해 두 개의 표가 표시됩니다: * 첫 번째 표는 제출한 모든 학생의 정답률을 요약한 요약 보기이며, 제출된 날짜의 타임스탬프를 포함합니다. * 두 번째 표는 각 학생이 제출한 각 질문에 대한 각 답변의 포괄적인 목록입니다. 이 두 표 위에는 **다운로드(또는 csv로 내보내기)** 버튼이 있어 답변을 스프레드시트(권장)로 처리할 수 있습니다. 7. 학생이 시험 제출을 취소할 수 있도록 허용해야 하는 경우, 학생이 시험의 마지막 페이지로 이동하여 \"제출 취소\"를 누르도록 지시하십시오. **제출 취소에 대한 참고 사항:** 시험 제출 취소에 대한 명확한 규칙을 학생들과 함께 만들어야 합니다. 학생은 이것이 시험이 끝난 후 답안을 변경하는 좋은 방법이라고 생각할 수 있지만(예: 부정행위) 학생이 시험을 제출한 시점의 타임스탬프가 표시됩니다. 특정 시간 이후에는 시험을 채점하거나 채점하는 것을 고려하지 않겠다는 것을 간단히 설정하는 것이 좋습니다. 지정된 기한 전에 제출하지 않은 경우 받지 못한 것과 같습니다.\n"
+        }
+      },
+      "PS U3 Q1-1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "자연어의 모호성은 컴퓨터를 제어하기 위한 프로그래밍 언어를 만들어야 합니다.",
+              "correct": true
+            },
+            {
+              "text": "자연어의 단어 수와 비교할 때 프로그래밍 언어에서 정의된 단어의 수는 매우 적습니다.",
+              "correct": true
+            },
+            {
+              "text": "프로그래밍 언어에서 정의된 단어의 수는 자연어의 단어 수와 거의 같습니다.",
+              "correct": false
+            },
+            {
+              "text": "일반적으로 프로그래밍 언어로 작성된 명령을 해석하는 방법에는 여러 가지가 있습니다.",
+              "correct": false
+            }
+          ],
+          "markdown": "프로그래밍 언어는 일상 대화에서 사용하는 \"자연스러운\" 언어와 몇 가지 유사점과 차이점이 있습니다. 프로그래밍 언어에 대한 두 개의 **true** 문을 선택합니다.\n"
+        }
+      },
+      "PS U3 Q1-2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "https://images.code.org/d2fb6af7fc9d8b79eefd9b66232eb1a8-image-1459374904942.png",
+              "correct": false
+            },
+            {
+              "text": "https://images.code.org/c59d71ecac547d755d63a3f8fca56843-image-1459376262204.png",
+              "correct": true
+            },
+            {
+              "text": "https://images.code.org/3e341ed57ac366663807df24b2a7e329-image-1459376286013.png",
+              "correct": false
+            },
+            {
+              "text": "https://images.code.org/d658fb7f959603138c39ed5f7666fd63-image-1459376301845.png",
+              "correct": false
+            },
+            {
+              "text": "https://images.code.org/841ec4583e3d9f0b41d1b51b496ef94b-image-1459376320683.png",
+              "correct": false
+            }
+          ],
+          "markdown": "이 질문과 다음 질문은 사각형 그리드에서 로봇을 사용합니다. 로봇은 처음에 그리드의 오른쪽을 향하는 삼각형으로 표시됩니다. 로봇은 다음 지침에 따라 움직입니다. | **지시사항** | **설명** | |-----------------|-----------------| | MOVE_FORWARD() |로봇은 자신이 향하는 방향으로 한 칸 앞으로 움직입니다.| | ROTATE_RIGHT() |로봇은 제자리에서 시계 방향으로 90도 회전합니다(즉, 제자리에서 우회전).| | ROTATE_LEFT() |로봇은 시계 반대 방향으로 제자리에서 90도 회전합니다(즉, 제자리에서 좌회전).| | N번 반복 |괄호 { } 사이에 포함 된 명령 블록은 n 번 반복됩니다. 위에서 설명한 의사 코드의 명령을 사용하는 다음 프로그램을 고려하십시오. 4회 반복 { MOVE_FORWARD() MOVE_FORWARD() MOVE_FORWARD() ROTATE_RIGHT() MOVE_FORWARD() ROTATE_RIGHT() MOVE_FORWARD() ROTATE_RIGHT() } 다음 이미지 중 위 코드를 실행한 로봇의 경로와 종료 위치를 보여주는 이미지는 무엇입니까? 로봇의 시작 위치는 로봇이 동일한 위치에서 시작하고 끝나지 않는 경우 점선 삼각형으로 표시됩니다.\n\n\n",
+          "title": "사각형 격자 속의 로봇 1부"
+        }
+      },
+      "PS U3 Q1-3": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "3호선과 4호선",
+              "correct": true
+            },
+            {
+              "text": "5, 6, 7, 8, 9호선",
+              "correct": false
+            },
+            {
+              "text": "8호선과 9호선",
+              "correct": false
+            },
+            {
+              "text": "라인 9",
+              "correct": false
+            }
+          ],
+          "markdown": "아래 그림과 같이 그리드 둘레 주위로 로봇을 이동하기 위한 다음의 잘못된 프로그램을 고려하십시오. 위의 질문에서 설명한 의사 코드를 계속 참조해야합니다. ! [](https://images.code.org/a442a51dc20d85327f74693a0e03a876-image-1459378505362.png)\n"
+        }
+      },
+      "PS U3 Q1-4": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "함수는 재사용 가능한 프로그래밍 추상화입니다.",
+              "correct": false
+            },
+            {
+              "text": "함수는 프로그램 작성 및 유지 관리의 복잡성을 줄이는 데 도움이 됩니다.",
+              "correct": false
+            },
+            {
+              "text": "함수는 동일한 프로그램 내에서 다른 함수를 호출할 수 없습니다.",
+              "correct": true
+            },
+            {
+              "text": "함수는 문제를 논리적 청크로 나누는 데 도움이 됩니다.",
+              "correct": false
+            },
+            {
+              "text": "일단 정의되면 함수는 프로그램의 다른 부분에서 여러 번 호출될 수 있습니다.",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "다음 중 프로그래밍의 함수에 대해 옳지 않은 것은?"
+            }
+          ]
+        }
+      },
+      "PS U3 Q1-5": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "함수 이름은 함수를 실행하는 데 걸리는 시간을 나타내야 합니다.",
+              "correct": false
+            },
+            {
+              "text": "유사한 동작을 가진 두 함수에는 두 함수 간의 관계를 나타내기 위해 동일한 이름을 지정해야 합니다.",
+              "correct": false
+            },
+            {
+              "text": "함수 이름은 함수가 수행하는 작업을 나타낼 수 있도록 가능한 한 설명적이어야 합니다.",
+              "correct": true
+            },
+            {
+              "text": "함수 이름은 알파벳순으로 구성해야 합니다.",
+              "correct": false
+            },
+            {
+              "text": "함수 이름은 실행되어야 하는 순서를 나타내는 숫자로 시작해야 합니다.",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "함수의 중요한 명명 규칙 중 하나는 무엇입니까?"
+            }
+          ]
+        }
+      },
+      "PS U3 Q1-6": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "함수는 프로그램이 진행되는 동안 이름을 변경할 수 있습니다.",
+              "correct": false
+            },
+            {
+              "text": "프로그램이 실행되는 동안 함수에서 코드를 동적으로 추가하거나 제거할 수 있습니다.",
+              "correct": false
+            },
+            {
+              "text": "함수는 프로그램에서 호출되는 위치에 따라 다른 이름을 사용하여 호출할 수 있습니다.",
+              "correct": false
+            },
+            {
+              "text": "코드가 동일한 한 두 함수에 동일한 이름을 지정할 수 있습니다.",
+              "correct": false
+            },
+            {
+              "text": "단일 프로그램의 두 함수는 이름은 다르지만 동일한 코드를 포함할 수 있습니다.",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "함수에 대한 다음 설명 중 TRUE인 것은 무엇입니까?"
+            }
+          ]
+        }
+      },
+      "sample external 1": {
+        "dsls": {
+          "markdown": "### Sample external .external 파일에 저장된 일부 지침 텍스트의 첫 번째 샘플입니다.\n\n"
+        }
+      },
+      "PS U3 Q1-7": {
+        "dsls": {
+          "answers": [
+            "여기에 답변을 입력하십시오."
+          ],
+          "content1": "여기에 프롬프트를 입력하십시오.",
+          "markdown": "하향식 디자인 전략을 사용하여 만들고 싶을 수 있는 추가 기능을 생각해 보십시오. **하향식 디자인 전략:** 1. 큰 그림을 보세요... 2. 하위 작업 식별... 3. 해당 하위 작업을 더 작은 하위 작업으로 나눕니다. 4. 이미 액세스할 수 있는 명령에 도달할 때까지 계속 진행하십시오. 첫 번째 예는 다음과 같습니다. > 함수 이름: drawSnowflake() <br> 설명/근거: 6개의 뾰족한 눈송이를 그립니다.\n\n"
+        }
+      },
+      "sample external 2": {
+        "dsls": {
+          "markdown": "### Sample external 2 .external 파일에 저장된 일부 명령 텍스트의 두 번째 샘플입니다. 여기에 몇 가지 추가 텍스트가 있는데, 이를 LevelGroup 에서 볼 때 줄 바꿈을 얻을 수 있기를 바라며, 이를 사용하여 일반 임베디드 레벨 중 몇 가지 지침을 표시할 것입니다.\n\n"
+        }
+      },
+      "ECSPD your goals": {
+        "long_instructions": "ECS 수업의 목표는 __What입니까?__ *이러한 목표는 시간이 지남에 따라 변경될 수 있으며, 이러한 목표를 향해 어떻게 진행되고 있는지 확인할 수 있도록 과정을 진행하면서 귀하의 응답을 다시 검토할 것입니다.*\n",
+        "title": "목표 문서화"
+      },
+      "PS U3 Q1-8": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "drawStar;",
+              "correct": false
+            },
+            {
+              "text": "drawStar();",
+              "correct": true
+            },
+            {
+              "text": "![](https://images.code.org/f7d07331ddd6ff10e6825e42a286cf6b-image-1579899560773.png) ",
+              "correct": false
+            },
+            {
+              "text": "function drawStar;",
+              "correct": false
+            },
+            {
+              "text": "함수 drawStar()",
+              "correct": false
+            }
+          ],
+          "markdown": "다음 중 drawStar 함수를 _**호출**_하는 것은 무엇입니까?\n\n\n"
+        }
+      },
+      "PS U3 Q1-9": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매개 변수는 함수가 실행되는 횟수를 결정합니다.",
+              "correct": false
+            },
+            {
+              "text": "매개 변수를 사용하면 함수에서 보다 유연하고 일반화된 동작을 수행할 수 있습니다.",
+              "correct": true
+            },
+            {
+              "text": "매개변수는 해결하려는 문제의 경계를 정의하는 데 도움이 되기 때문에 프로그래머 팀에 유용합니다",
+              "correct": false
+            },
+            {
+              "text": "매개 변수는 함수 내에서 작업의 순서를 변경합니다.",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "프로그래밍할 때 매개변수가 유용한 이유는 무엇입니까?"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/27/levels/1": {
+    "long_instructions": "이 모듈에서는 인터넷에서 정보가 다른 장소로 이동하는 방법과 그 과정의 주요 단계에 대해 배웠습니다. **패킷이 어떻게 구성되는지에 대해 학생들을 위한 수업 계획을 작성하십시오.** ### 이 과제를 검토하는 방법 이 과제는 다음 루브릭을 사용하여 2명의 동료가 동료 검토합니다: - 수업에는 강의가 포함됩니다. - 수업에는 네트워크 시뮬레이터 활동이 포함됩니다.",
+    "title": "수업 계획 제출: 라우팅 및 패킷"
+  },
+  "https://studio.code.org/s/allthethings/lessons/27/levels/2": {
+    "long_instructions": "## DNS와 확장성 도메인 네임 시스템에 대해 다음과 같이 설명하십시오 - DNS가 해결한 문제는 무엇입니까? - DNS는 수십억 명의 사용자가 수십억 개의 웹 페이지에 액세스할 수 있도록 월드 와이드 웹 확장에 어떻게 도움이 됩니까?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/27/levels/3": {
+    "long_instructions": "이 프로그램이 하는 일은 무엇이라고 생각하십니까?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/27/levels/4": {
+    "long_instructions": "## 이중화 네트워크에 이중화를 구축하면 어떤 이점이 있습니까? 이중화 구축과 관련하여 발생할 수 있는 문제는 무엇입니까?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/28/levels/1": {
+    "dsls": {
+      "title": "샘플 CSP 평가"
+    },
+    "sublevels": {
+      "CSP PD Example Question 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "이진 메시지 보내기 단위",
+              "lesson": "바이너리 메시지 보내기"
+            },
+            {
+              "text": "인코딩 번호 단위",
+              "lesson": "번호 인코딩 및 전송"
+            }
+          ],
+          "questions": [
+            {
+              "text": "어떤 단원을 먼저 가르칠 것인가"
+            }
+          ]
+        }
+      },
+      "CSP PD Example Question 2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "나는 그들에게 쓰게 할 것이다.",
+              "lesson": "학생 작문을 위한 전략"
+            },
+            {
+              "text": "나는 그들이 동료들로부터 배우게 할 것입니다",
+              "lesson": "동료 학습 지원"
+            }
+          ],
+          "questions": [
+            {
+              "text": "학생들을 어떻게 가르칠 것인가?"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/1": {
+    "short_instructions": "나를 녹색의 악으로 인도하소서! (TNT를 조심하세요)"
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/2": {
+    "short_instructions": "나를 녹색의 악으로 인도하소서! (TNT를 조심하세요)"
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/3": {
+    "short_instructions": "침착하게 나쁜 돼지를 찾도록 도와주세요. 그렇지 않으면 화가 날 수 있습니다!",
+    "authored_hints": {
+      "2-3_Maze_6_a": "이 퍼즐을 푸는 방법에는 두 가지가 있습니다!"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/5": {
+    "short_instructions": "이제 반복 블록을 사용하여 셀을 셸로 만듭니다.",
+    "long_instructions": "이제 반복 블록을 사용하여 셀을 셸로 만듭니다.",
+    "function_definitions": {
+      "draw 3 hexagons": {
+        "name": "3 육각형 그리기"
+      },
+      "draw 4 hexagons": {
+        "name": "Draw 4 육각형"
+      },
+      "draw 5 hexagons": {
+        "name": "5 육각형 그리기"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/6": {
+    "short_instructions": "루프를 사용하여 해당 모양을 계속해서 반복할 때 어떤 일이 발생하는지 보고 싶으십니까?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/7": {
+    "short_instructions": "친애하는 사람. 나 좀비. 합니다... 가져오기... 해바라기에."
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/8": {
+    "short_instructions": "좀비를 해바라기에게 데려가되 씹는 사람을 피하세요!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/9": {
+    "short_instructions": "합니다... 가져오기... 해바라기에."
+  },
+  "https://studio.code.org/s/allthethings/lessons/30/levels/1": {
+    "sublevels": {
+      "test anonymous student survey fun": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의함",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "중립의",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "컴퓨터 과학은 재미있습니다."
+            }
+          ]
+        }
+      },
+      "test anonymous student survey educational": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "예",
+              "correct": true
+            },
+            {
+              "text": "아니요",
+              "correct": true
+            },
+            {
+              "text": "아마",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "컴퓨터 과학이 교육적이라고 생각하십니까?"
+            }
+          ]
+        }
+      },
+      "test_anonymous_student_survey_why_class": {
+        "long_instructions": "왜 이 수업을 하고 계신가요? 적어도 두 가지 이유를 제시하십시오."
+      },
+      "test_anonymous_student_survey_next_class": {
+        "long_instructions": "이 수업이 끝나면 다음에 무엇을 할 것인가?"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lockable/1/levels/1": {
+    "dsls": {
+      "title": "사전 설문조사"
+    },
+    "sublevels": {
+      "pre-assessment survey heading1": {
+        "dsls": {
+          "markdown": "먼저, 일반적으로 학교 공부에 대해 몇 가지 질문이 있습니다.\n"
+        }
+      },
+      "pre-assessment survey q1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "약간 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "약간 동의한다",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의함",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "나는 학교 숙제를 할 수 있는 능력이 있다"
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "약간 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "약간 동의한다",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의함",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "나는 우리 학교의 다른 아이들보다 학교 공부를 더 잘합니다."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q3": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "약간 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "약간 동의한다",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의함",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "저는 학교를 아주 잘합니다."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q4": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "약간 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "약간 동의한다",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의함",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "노력하면 학교에서 가장 어려운 문제를 어떻게 풀어야 할지 알 수 있습니다."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q5": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "약간 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "약간 동의한다",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의함",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "나는 학교 공부를 좋아한다."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q6": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "약간 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "약간 동의한다",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의함",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "나는 내 학교 공부가 재미있다고 생각한다."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q7": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "약간 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "약간 동의한다",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의함",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "나는 학교에서의 시간을 즐긴다."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q8": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "약간 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "약간 동의한다",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의함",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "저는 학교 공부를 잘하는 것이 중요합니다."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey heading2": {
+        "dsls": {
+          "markdown": "또한 컴퓨터 과학에 대해 어떻게 생각하는지 알고 싶습니다.  \n"
+        }
+      },
+      "pre-assessment survey q9": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "약간 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "약간 동의한다",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의함",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "저는 컴퓨터 과학을 배울 수 있는 능력이 있습니다."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q10": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "약간 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "약간 동의한다",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의함",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "저는 제가 우리 학교의 다른 아이들보다 컴퓨터 과학을 더 잘할 것이라고 생각합니다."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q11": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "약간 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "약간 동의한다",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의함",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "저는 컴퓨터 과학을 아주 잘할 것이라고 생각합니다."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q12": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "약간 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "약간 동의한다",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의함",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "노력하면 컴퓨터 과학 수업에서 가장 어려운 문제를 푸는 방법을 알아낼 수 있을 것 같습니다."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q13": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "약간 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "약간 동의한다",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의함",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "저는 컴퓨터 과학을 좋아합니다."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q14": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "약간 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "약간 동의한다",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의함",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "저는 컴퓨터 과학이 흥미롭다고 생각합니다."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q15": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "약간 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "약간 동의한다",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의함",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "저는 컴퓨터 과학 활동을 하는 것을 좋아합니다(또는 좋아할 것이라고 생각합니다)."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q16": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "약간 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "약간 동의한다",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의함",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "저는 컴퓨터 과학을 잘하는 것을 중요하게 생각합니다."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q17": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "약간 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "약간 동의한다",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의함",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "저와 같은 아이들은 컴퓨터 과학을 합니다."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q18": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "약간 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "약간 동의한다",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의함",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "저는 학교의 다른 아이들보다 컴퓨터 과학을 더 좋아합니다(또는 좋아할 것이라고 생각합니다)."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q19": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "약간 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "약간 동의한다",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의함",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "언젠가는 컴퓨터 과학자가 될 수 있을 것 같아요."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q20": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "약간 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "약간 동의한다",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의함",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "여가 시간에는 컴퓨터 공학을 합니다."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q21": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "약간 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "약간 동의한다",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의함",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "저는 일상 생활에서 컴퓨터 과학 기술을 사용합니다."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q22": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "약간 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "약간 동의한다",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의함",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "컴퓨터 과학은 실생활의 대부분의 측면에 적용됩니다. "
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q23": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "매우 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "맞지 않다",
+              "correct": true
+            },
+            {
+              "text": "약간 동의하지 않음",
+              "correct": true
+            },
+            {
+              "text": "약간 동의한다",
+              "correct": true
+            },
+            {
+              "text": "동의하다",
+              "correct": true
+            },
+            {
+              "text": "매우 동의함",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "컴퓨터 과학을 배우는 것은 다른 학교 과목에서도 도움이 됩니다."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q24A": {
+        "long_instructions": "일상 생활에서 어떤 컴퓨터 공학 기술을 사용하십니까? "
+      },
+      "pre-assessment survey heading3": {
+        "dsls": {
+          "markdown": "이제 컴퓨터 과학에 대한 귀하의 이전 경험에 대해 듣고 싶습니다. \n"
+        }
+      },
+      "pre-assessment survey q24": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "예",
+              "correct": true
+            },
+            {
+              "text": "아니요",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "현재 컴퓨터 과학 수업을 듣기 전에 학교에서 다른 컴퓨터 과학 수업을 들은 적이 있습니까?"
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q25A": {
+        "long_instructions": "그렇다면, 현재 컴퓨터 과학 수업 전에 어떤 컴퓨터 과학 과정을 수강했습니까? "
+      },
+      "pre-assessment survey q26": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "예",
+              "correct": true
+            },
+            {
+              "text": "아니요",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "컴퓨터 과학 활동이나 학교 밖 시간(예: 방과 후 프로그램, 온라인, 캠프 또는 여름 프로그램)에 참여한 적이 있습니까?"
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q27": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "우리 학교의 방과 후 프로그램",
+              "correct": true
+            },
+            {
+              "text": "다른 곳의 방과 후 프로그램(예: Boys and Girls Club 등)",
+              "correct": true
+            },
+            {
+              "text": "온라인 프로그램",
+              "correct": true
+            },
+            {
+              "text": "여름 프로그램/캠프",
+              "correct": true
+            },
+            {
+              "text": "다른",
+              "correct": true
+            },
+            {
+              "text": "N/A",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "만약 그렇다면, 이전에 학교 시간 외에 컴퓨터 과학 수업이나 프로그램을 어디에서 들었습니까? 두 개 이상의 프로그램에 참여한 적이 있는 경우 가장 많은 시간을 보낸 프로그램을 선택하십시오."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q28": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "8",
+              "correct": true
+            },
+            {
+              "text": "9",
+              "correct": true
+            },
+            {
+              "text": "10",
+              "correct": true
+            },
+            {
+              "text": "11",
+              "correct": true
+            },
+            {
+              "text": "12",
+              "correct": true
+            },
+            {
+              "text": "다른",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "당신은 몇 학년에 있습니까?"
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q29": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "남성",
+              "correct": true
+            },
+            {
+              "text": "여성",
+              "correct": true
+            },
+            {
+              "text": "다른",
+              "correct": true
+            },
+            {
+              "text": "대답하지 않는 것을 선호합니다.",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "나는 내 성별을 다음과 같이 밝힌다."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q30": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "아메리칸 인디언 또는 알래스카 원주민",
+              "correct": true
+            },
+            {
+              "text": "동양인",
+              "correct": true
+            },
+            {
+              "text": "흑인 또는 아프리카계 미국인",
+              "correct": true
+            },
+            {
+              "text": "히스패닉 또는 라틴계/라틴계",
+              "correct": true
+            },
+            {
+              "text": "하와이 원주민 또는 기타 태평양 섬 주민",
+              "correct": true
+            },
+            {
+              "text": "하얀",
+              "correct": true
+            },
+            {
+              "text": "두 개 이상의 레이스",
+              "correct": true
+            },
+            {
+              "text": "다른",
+              "correct": true
+            },
+            {
+              "text": "대답하지 않는 것을 선호합니다.",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "다음 중 귀하의 인종 및/또는 민족 정체성을 가장 잘 나타내는 것은 무엇입니까?"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/32/levels/1": {
+    "long_instructions": "멋진 웹 페이지를 만드세요! 1. 우리가 시작하도록 제공된 웹 페이지를 보십시오. 개선해 봅시다! 2. style.css의 본문 스타일에 background-color 속성을 추가하여 페이지 배경색을 'darkcyan'으로 만듭니다. 3. style.css의 신체 스타일에 text-align 속성을 추가하여 이미지와 텍스트를 가로로 중앙에 배치합니다 4. 영감을 주는 해시태그를 포함하도록 index.html 변경 5. style.css에서 p 스타일에 색상 속성을 추가하여 영감을 주는 해시태그를 흰색 6으로 만듭니다. style.css의 p 스타일에 font-size 속성을 추가하여 영감을 주는 해시태그를 정말 크게 만드세요! (24px 및 3em을 시도하고 어떤 일이 발생하는지 확인하십시오.)"
+  },
+  "https://studio.code.org/s/allthethings/lessons/33/levels/1": {
+    "sublevels": {
+      "K-1 Happy Maps Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/up.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/down.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/left.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/right.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png",
+          "questions": [
+            {
+              "text": "어떤 화살이 Flurb를 보물로 데려갈까요?"
+            }
+          ],
+          "title": "객관식"
+        }
+      },
+      "Multi Horizontal Scroll Test": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "3비트",
+              "correct": false
+            },
+            {
+              "text": "4비트",
+              "correct": false
+            },
+            {
+              "text": "5비트",
+              "correct": false
+            },
+            {
+              "text": "6비트",
+              "correct": false
+            },
+            {
+              "text": "7비트",
+              "correct": true
+            },
+            {
+              "text": "12비트",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "표준 QWERTY 키보드에는 화면에 문자를 배치할 수 있는 47개의 키가 있습니다. 이러한 각 키는 \"Shift\"키를 동시에 눌러 두 번째 문자를 표시 할 수도 있습니다 (이 질문에서는 다른 모든 키가 무시된다고 가정합니다). 이 키보드에서 입력할 수 있는 모든 것을 인코딩하는 데 몇 비트가 필요합니까?"
+            }
+          ],
+          "title": "평가: 텍스트 인코딩"
+        }
+      },
+      "Choose 2 Test": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "라인 2",
+              "correct": true
+            },
+            {
+              "text": "라인 3",
+              "correct": true
+            },
+            {
+              "text": "라인 4",
+              "correct": false
+            },
+            {
+              "text": "라인 5",
+              "correct": false
+            }
+          ],
+          "markdown": "이 질문은 사각형 그리드의 로봇을 사용합니다. 로봇은 처음에 그리드의 오른쪽을 향하는 삼각형으로 표시됩니다. 로봇은 다음 지침에 따라 움직입니다. | 지시 | 설명 | |--------------------|--------| |'앞으로 나아가다' | 로봇이 향하는 방향으로 한 칸 앞으로 이동합니다 | |'오른쪽으로 회전' | 로봇은 제자리에서 시계 방향으로 90도 회전합니다(즉, 제자리에서 우회전). | |'왼쪽으로 회전' | 로봇은 제자리에서 시계 반대 방향으로 90도 회전합니다(즉, 제자리에서 좌회전합니다). | |'N번 반복' | 괄호 {} 사이에 포함된 명령 블록이 n번 반복됩니다. |   화살표로 표시된 대로 아래 그리드의 둘레로 로봇을 이동하기 위한 다음의 잘못된 프로그램을 고려하십시오. ! [](https://images.code.org/4d3177070d1585fc6ad3f9091dd53d76-image-1579897739915.png) ! [](/script_assets/CSP/instruction_gifs/U3L02-rightSquare.png)\n\n",
+          "questions": [
+            {
+              "text": "프로그램이 의도한 대로 작동하려면 어떤 코드 줄을 제거해야 합니까? 고르다 <u>2</u> 답변"
+            }
+          ]
+        }
+      },
+      "CSD U3 drawSprites placement match": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48 AM.png,300px"
+            },
+            {
+              "text": "https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09 AM.png"
+            },
+            {
+              "text": "https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00 AM.png"
+            },
+            {
+              "text": "https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28 AM.png"
+            }
+          ],
+          "content1": "코드를 생성할 이미지와 일치시킵니다.",
+          "questions": [
+            {
+              "text": "https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08 AM.png"
+            },
+            {
+              "text": "https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21 AM.png"
+            },
+            {
+              "text": "https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12 AM.png"
+            },
+            {
+              "text": "https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34 AM.png"
+            }
+          ],
+          "title": "drawSprites"
+        }
+      },
+      "CSD U3 - conditionals - Matching_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "dog.rotation &lt; cat.rotation"
+            },
+            {
+              "text": "개.x &lt; cat.x"
+            },
+            {
+              "text": "dog.scale > cat.scale"
+            },
+            {
+              "text": "dog.x > cat.x"
+            },
+            {
+              "text": "dog.x == cat.x"
+            }
+          ],
+          "content1": "부울 표현식을 영어 설명과 일치시킵니다.",
+          "questions": [
+            {
+              "text": "강아지 스프라이트의 회전이 고양이 스프라이트의 회전보다 작은가요?"
+            },
+            {
+              "text": "개 스프라이트의 x가 고양이 스프라이트의 x보다 작습니까?"
+            },
+            {
+              "text": "개 스프라이트의 스케일이 고양이 스프라이트의 스케일보다 크나요?"
+            },
+            {
+              "text": "개 스프라이트의 x가 고양이 스프라이트의 x보다 큽니까?"
+            },
+            {
+              "text": "개 스프라이트의 x가 고양이 스프라이트의 x와 같습니까?"
+            }
+          ],
+          "title": "매칭: 비교 연산자"
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/36/levels/1": {
+    "long_instructions": "모든 것을 갖춘 테스트 수준.",
+    "behavior_names": {
+      "swimming left and right": "왼쪽과 오른쪽으로 수영하기",
+      "shrinking": "축소",
+      "patrolling": "patrolling",
+      "wandering": "방랑",
+      "growing": "성장",
+      "jittering": "지터링",
+      "moving east": "동쪽으로 이동",
+      "moving north": "북쪽으로 이동",
+      "moving south": "남쪽으로 이동",
+      "moving west": "서쪽으로 이동",
+      "spinning right": "오른쪽으로 회전하기"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 움직입니다. 스프라이트가 순찰하는 방향을 변경하려면 \"이동 방향\"을 변경합니다"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/36/levels/2": {
+    "short_instructions": "텀블위드를 어떤 종류의 물고기로든 바꾸세요!",
+    "long_instructions": "어항을 만들어 봅시다! [blockly block][0]을 클릭하여 텀블위드 스프라이트를 모든 종류의 물고기로 변경합니다. 이 스프라이트의 의상도 [blockly block][1]에서 업데이트해야 합니다.",
+    "teacher_markdown": "이 강의에는 _Swimming Fish_라는 **미니 프로젝트**가 포함되어 있습니다. 이 진행 상황은 여러분과 학생들에게 이전에 있었던 과정의 내용과는 매우 다르게 느껴질 수 있습니다. 이러한 레벨에는 시작하기 전에 탐색할 수 있는 몇 가지 새로운 특성이 있습니다. - 학생들이 한 레벨에서 작성한 코드는 자동으로 다른 레벨로 전송됩니다. 이를 통해 학생들은 점진적으로 구축하고 학습하면서 아이디어를 반복할 수 있습니다. - 이 레벨은 더 개방적인 창의성을 허용합니다. 학생들이 각 과제를 완료했을 때 스스로 결정할 수 있도록 힘을 실어주세요. 정답은 없습니다! - 이 진행 단계에 대한 예제 솔루션을 사용할 수 있으며, 오른쪽에 있는 교사 패널을 열어 볼 수 있습니다. 이 레벨은 다음 조건이 충족되었는지 확인하여 학생의 코드를 검증합니다. - 학생은 활성 행동을 가진 물고기 스프라이트를 하나 이상 가지고 있어야 합니다.",
+    "behavior_names": {
+      "swimming left and right": "왼쪽과 오른쪽으로 수영하기",
+      "shrinking": "축소",
+      "patrolling": "patrolling",
+      "wandering": "방랑",
+      "growing": "성장",
+      "jittering": "지터링",
+      "moving east": "동쪽으로 이동",
+      "moving north": "북쪽으로 이동",
+      "moving south": "남쪽으로 이동",
+      "moving west": "서쪽으로 이동",
+      "spinning right": "오른쪽으로 회전하기"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 움직입니다. 스프라이트가 순찰하는 방향을 변경하려면 \"이동 방향\"을 변경합니다"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/36/levels/3": {
+    "long_instructions": "이것은 모달 함수 편집기를 테스트하는 데 사용되는 모든 것 수준입니다.",
+    "function_definitions": {
+      "set background": {
+        "name": "배경 설정"
+      }
+    },
+    "behavior_names": {
+      "spinning left": "왼쪽으로 회전",
+      "growing": "성장",
+      "jittering": "지터링",
+      "spinning right": "오른쪽으로 회전하기",
+      "shrinking": "축소",
+      "moving south": "남쪽으로 이동",
+      "moving west": "서쪽으로 이동",
+      "swimming left and right": "왼쪽과 오른쪽으로 수영하기",
+      "wandering": "방랑",
+      "moving east": "동쪽으로 이동",
+      "moving north": "북쪽으로 이동",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "화살표 키로 이동",
+      "wobbling": "흔들리기",
+      "driving with arrow keys": "화살표 키로 운전",
+      "moving east and looping": "동쪽으로 이동하여 루핑",
+      "fluttering": "두리안",
+      "moving west and looping": "서쪽으로 이동하여 순환",
+      "moving north and looping": "북쪽으로 이동하여 루핑",
+      "moving south and looping": "남쪽으로 이동하여 루핑"
+    },
+    "behavior_descriptions": {
+      "rotate a sprite to its left": "스프라이트를 왼쪽으로 회전시킵니다.",
+      "change the size of a sprite": "스프라이트의 크기 변경",
+      "randomly change the size of a sprite": "스프라이트의 크기를 임의로 변경",
+      "rotate a sprite to its right": "스프라이트를 오른쪽으로 회전시킵니다.",
+      "move a sprite downwards across the screen": "화면에서 스프라이트를 아래쪽으로 이동",
+      "move a sprite to the left across the screen": "화면을 가로질러 스프라이트를 왼쪽으로 이동",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "스프라이트를 수평으로 이동하고, 화면 가장자리에 닿으면 방향을 반대로 합니다.",
+      "move a sprite, changing its direction randomly": "스프라이트를 이동하여 방향을 무작위로 변경합니다.",
+      "move a sprite to the right across the screen": "스프라이트를 화면에서 오른쪽으로 이동",
+      "move a sprite upwards across the screen": "화면에서 스프라이트를 위쪽으로 이동합니다.",
+      "move a sprite across the screen, reversing direction if it touches the edges": "화면을 가로질러 스프라이트를 이동하고, 가장자리에 닿으면 방향을 반전합니다.",
+      "move a sprite if the user is pressing the arrow keys": "사용자가 화살표 키를 누르는 경우 스프라이트 이동",
+      "randomly set the rotation of a sprite": "스프라이트의 회전을 임의로 설정합니다.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "스프라이트를 화면을 가로질러 오른쪽으로 이동합니다. 화면 오른쪽에서 벗어나면 다시 화면 왼쪽으로 이동합니다.",
+      "randomly change the vertical position of a sprite": "스프라이트의 수직 위치를 무작위로 변경합니다.",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "화면을 가로질러 스프라이트를 왼쪽으로 이동합니다. 화면 왼쪽에서 꺼지면 다시 화면 오른쪽으로 이동합니다.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "화면을 가로질러 스프라이트를 위로 이동합니다. 화면 상단에서 벗어나면 다시 화면 하단으로 이동합니다."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/36/levels/4": {
+    "long_instructions": "이것은 다양한 블록을 사용하는 모든 것 스프라이트 랩 레벨입니다",
+    "behavior_names": {
+      "spinning left": "왼쪽으로 회전",
+      "growing": "성장",
+      "jittering": "지터링",
+      "spinning right": "오른쪽으로 회전하기",
+      "shrinking": "축소",
+      "moving south": "남쪽으로 이동",
+      "moving west": "서쪽으로 이동",
+      "swimming left and right": "왼쪽과 오른쪽으로 수영하기",
+      "wandering": "방랑",
+      "moving east": "동쪽으로 이동",
+      "moving north": "북쪽으로 이동",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "화살표 키로 이동",
+      "wobbling": "흔들리기",
+      "driving with arrow keys": "화살표 키로 운전",
+      "moving east and looping": "동쪽으로 이동하여 루핑",
+      "fluttering": "두리안",
+      "moving west and looping": "서쪽으로 이동하여 순환",
+      "moving north and looping": "북쪽으로 이동하여 루핑",
+      "moving south and looping": "남쪽으로 이동하여 루핑"
+    },
+    "behavior_descriptions": {
+      "rotate a sprite to its left": "스프라이트를 왼쪽으로 회전시킵니다.",
+      "change the size of a sprite": "스프라이트의 크기 변경",
+      "randomly change the size of a sprite": "스프라이트의 크기를 임의로 변경",
+      "rotate a sprite to its right": "스프라이트를 오른쪽으로 회전시킵니다.",
+      "move a sprite downwards across the screen": "화면에서 스프라이트를 아래쪽으로 이동",
+      "move a sprite to the left across the screen": "화면을 가로질러 스프라이트를 왼쪽으로 이동",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "스프라이트를 수평으로 이동하고, 화면 가장자리에 닿으면 방향을 반대로 합니다.",
+      "move a sprite, changing its direction randomly": "스프라이트를 이동하여 방향을 무작위로 변경합니다.",
+      "move a sprite to the right across the screen": "스프라이트를 화면에서 오른쪽으로 이동",
+      "move a sprite upwards across the screen": "화면에서 스프라이트를 위쪽으로 이동합니다.",
+      "move a sprite across the screen, reversing direction if it touches the edges": "화면을 가로질러 스프라이트를 이동하고, 가장자리에 닿으면 방향을 반전합니다.",
+      "move a sprite if the user is pressing the arrow keys": "사용자가 화살표 키를 누르는 경우 스프라이트 이동",
+      "randomly set the rotation of a sprite": "스프라이트의 회전을 임의로 설정합니다.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "스프라이트를 화면을 가로질러 오른쪽으로 이동합니다. 화면 오른쪽에서 벗어나면 다시 화면 왼쪽으로 이동합니다.",
+      "randomly change the vertical position of a sprite": "스프라이트의 수직 위치를 무작위로 변경합니다.",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "화면을 가로질러 스프라이트를 왼쪽으로 이동합니다. 화면 왼쪽에서 꺼지면 다시 화면 오른쪽으로 이동합니다.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "화면을 가로질러 스프라이트를 위로 이동합니다. 화면 상단에서 벗어나면 다시 화면 하단으로 이동합니다."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/37/levels/1": {
+    "long_instructions": "이 무스를 춤추게 해보자! ''dancer1' do \"Floss\" forever' 블록을 'at 4 measure' 블록에 클릭하여 두 번째 소절부터 치실을 사용하기 시작하게 합니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/37/levels/2": {
+    "long_instructions": "이 무스를 춤추게 해보자! ''dancer1' do \"Floss\" forever' 블록을 'at 4 measure' 블록에 클릭하여 두 번째 소절부터 치실을 사용하기 시작하게 합니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/37/levels/4": {
+    "short_instructions": "**A.I.가 만드는 효과를 커스터마이징할 수 있습니다!** 블록의 이모티콘을 클릭합니다. 그런 다음 '재생성', '코드 사용' 또는 '다시 시작'을 선택합니다.",
+    "long_instructions": "**A.I.가 여러분을 도와줍니다. 생성하는 효과를 사용자 지정할 수 있습니다!** - 이모티콘을 클릭하여 다음 중 하나를 시도해 보세요. <img src=\"https://images.code.org/101001680b5a4de2d752a6b3b59a116f-image-1699478528416.jpg\" style=\" margin-right: 5px;  height: 20px;\">'재생' A.I.는 동일한 이모티콘을 기반으로 다른 효과를 추천합니다. - '코드 사용': A.I.가 작성한 코드를 사용하고 커스터마이징하세요! - <img src=\"https://images.code.org/3e2c74fbae82198ebc3264ecaf3a823e-image-1699478492041.jpg\" style=\" margin-right: 5px;  height: 15px;\">'다시 시작': 새로운 효과를 생성하려면 세 개의 새로운 이모티콘을 선택합니다. ",
+    "authored_hints": {
+      "Hint1": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> 작업 공간의 [blockly block][0] 블록에서 이모티콘을 클릭하여 효과를 사용자 지정합니다. ",
+      "HintEdit": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> A.I.가 작성한 코드를 사용하려면 토글을 하여 코드를 표시한 다음 '코드 사용'을 클릭합니다. 블록은 작업 공간의 [blockly block][0] 블록을 대체합니다. ",
+      "Hint2": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> **아직도 멈췄나요?** 효과를 사용자 정의하는 방법을 보려면 비디오를 시청하십시오. "
+    },
+    "callouts": {
+      "ai_dance_callout_draft_level_6": "여기를 클릭하세요."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/38/levels/1": {
+    "long_instructions": "이 레벨에는 교사가 학생들에게 피드백을 제공할 수 있어야 하는 미니 루브릭이 연결되어 있습니다. applab 레벨을 테스트하려면 로그인하십시오(설계상 applab 레벨은 로그인한 경우에만 작동합니다. 일반적으로 우리는 사람들이 로그인하도록 하지만 이것은 전체 스크립트에만 적용할 수 있으며 allthethings 스크립트에 대해 수행하는 것은 성가실 수 있습니다.",
+    "mini_rubric": {
+      "rubric_key_concept": "이것이 이 미니 루브릭의 핵심 개념입니다.",
+      "rubric_performance_level_1": "당신은 잘했습니다!",
+      "rubric_performance_level_2": "당신은 잘했습니다.",
+      "rubric_performance_level_3": "당신은 괜찮았습니다.",
+      "rubric_performance_level_4": "당신은 아무것도 하지 않았습니다."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/38/levels/2": {
+    "long_instructions": "이 레벨에는 교사가 학생들에게 피드백을 제공할 수 있어야 하는 미니 루브릭이 연결되어 있습니다. weblab 레벨을 테스트하려면 로그인하십시오(설계상 weblab 레벨은 로그인한 경우에만 작동합니다. 일반적으로 우리는 사람들이 로그인하도록 하지만 이것은 전체 스크립트에만 적용할 수 있으며 allthethings 스크립트에 대해 수행하는 것은 성가실 수 있습니다.",
+    "mini_rubric": {
+      "rubric_key_concept": "이것은 정말 긴 핵심 개념이 될 것입니다. 이것은 정말 긴 핵심 개념이 될 것입니다. 이것은 정말 긴 핵심 개념이 될 것입니다. 이것은 정말 긴 핵심 개념이 될 것입니다. 이것은 정말 긴 핵심 개념이 될 것입니다. 이것은 정말 긴 핵심 개념이 될 것입니다. 이것은 정말 긴 핵심 개념이 될 것입니다. 이것은 정말 긴 핵심 개념이 될 것입니다. 이것은 정말 긴 핵심 개념이 될 것입니다. 이것은 정말 긴 핵심 개념이 될 것입니다. 이것은 정말 긴 핵심 개념이 될 것입니다. 이것은 정말 긴 핵심 개념이 될 것입니다.",
+      "rubric_performance_level_1": "초과하기 위해 해야 할 일.",
+      "rubric_performance_level_2": "만나기 위해 해야 할 일들.",
+      "rubric_performance_level_3": "접근하기 위해 해야 할 일.",
+      "rubric_performance_level_4": "당신은 정말로 아무것도 하지 않았습니다."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/38/levels/3": {
+    "long_instructions": "실행: 이 수준에는 교사가 학생들에게 피드백을 제공할 수 있어야 하는 미니 루브릭이 연결되어 있습니다. gamelab 레벨을 테스트하려면 로그인하세요(설계상 gamelab 레벨은 로그인한 경우에만 작동합니다. 일반적으로 우리는 사람들이 로그인하도록 하지만 이것은 전체 스크립트에만 적용할 수 있으며 allthethings 스크립트에 대해 수행하는 것은 성가실 수 있습니다.",
+    "mini_rubric": {
+      "rubric_key_concept": "핵심 개념",
+      "rubric_performance_level_1": "x, y 및 z를 수행했습니다.",
+      "rubric_performance_level_2": "x와 y를 수행했다",
+      "rubric_performance_level_3": "x 또는 y를 수행했나요?",
+      "rubric_performance_level_4": "x, y 또는 z를 수행하지 않았습니다."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/39/levels/1": {
+    "dsls": {
+      "content1": "여기에 설명",
+      "markdown": "<h2>\n이 외부 레벨은 언플러그드로 표시되어야 합니다.\n</h2>\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/39/levels/2": {
+    "dsls": {
+      "content1": "여기에 설명",
+      "markdown": "<h2>\n이 외부 레벨은 플러그가 뽑힌 것으로 표시되어서는 안 됩니다.\n</h2>\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/40/levels/1": {
+    "dsls": {
+      "description": "BubbleChoice 수준입니다. 배운 것을 연습하기 위해 아래 활동 중 하나를 선택한다!",
+      "display_name": "버블 선택: 모든 선택"
+    },
+    "sublevels": {
+      "AllTheThings_StandaloneVideo": {
+      },
+      "Web Lab 1": {
+        "long_instructions": "멋진 웹 페이지를 만드세요! 1. 우리가 시작하도록 제공된 웹 페이지를 보십시오. 개선해 봅시다! 2. style.css의 본문 스타일에 background-color 속성을 추가하여 페이지 배경색을 'darkcyan'으로 만듭니다. 3. style.css의 신체 스타일에 text-align 속성을 추가하여 이미지와 텍스트를 가로로 중앙에 배치합니다 4. 영감을 주는 해시태그를 포함하도록 index.html 변경 5. style.css에서 p 스타일에 색상 속성을 추가하여 영감을 주는 해시태그를 흰색 6으로 만듭니다. style.css의 p 스타일에 font-size 속성을 추가하여 영감을 주는 해시태그를 정말 크게 만드세요! (24px 및 3em을 시도하고 어떤 일이 발생하는지 확인하십시오.)"
+      },
+      "Overworld Chop Tree - allthethings": {
+        "short_instructions": "목재는 매우 중요한 자원입니다. 많은 것들이 그것으로 만들어집니다. 나무로 걸어가 \"블록 파괴\" 명령을 사용하여 나무를 자르십시오."
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/1": {
+    "teacher_markdown": "원래 레벨에 대한 교사 마크다운.",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/up.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/down.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/left.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/right.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png",
+          "questions": [
+            {
+              "text": "어떤 화살이 Flurb를 보물로 데려갈까요?"
+            }
+          ],
+          "title": "객관식"
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/2": {
+    "teacher_markdown": "원래 레벨에 대한 교사 가격 인하",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "0",
+              "correct": false,
+              "feedback": "아니요, 1 - 1입니다."
+            },
+            {
+              "text": "1",
+              "correct": false,
+              "feedback": "아니요, 1 * 1입니다."
+            },
+            {
+              "text": "2",
+              "correct": true,
+              "feedback": "네, 당신은 천재입니다!"
+            },
+            {
+              "text": "4",
+              "correct": false,
+              "feedback": "아니, 그것은 가깝지도 않습니다."
+            }
+          ],
+          "content1": "다음은 몇 가지 정보입니다.",
+          "markdown": "**markdown** _여기_ 테스트\n",
+          "questions": [
+            {
+              "text": "1 + 1은 무엇입니까?"
+            }
+          ],
+          "title": "포함된 다중"
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/3": {
+    "short_instructions": "다음은 몇 가지 지침입니다. ",
+    "teacher_markdown": "원래 레벨에 대한 교사 Markdown",
+    "contained levels": [
+      {
+        "long_instructions": "_당신은_ 무슨 일이 일어날 것이라고 생각합니까? "
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/4": {
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "라인 2",
+              "correct": true
+            },
+            {
+              "text": "라인 3",
+              "correct": true
+            },
+            {
+              "text": "라인 4",
+              "correct": false
+            },
+            {
+              "text": "라인 5",
+              "correct": false
+            }
+          ],
+          "markdown": "이 질문은 사각형 그리드의 로봇을 사용합니다. 로봇은 처음에 그리드의 오른쪽을 향하는 삼각형으로 표시됩니다. 로봇은 다음 지침에 따라 움직입니다. | 지시 | 설명 | |--------------------|--------| |'앞으로 나아가다' | 로봇이 향하는 방향으로 한 칸 앞으로 이동합니다 | |'오른쪽으로 회전' | 로봇은 제자리에서 시계 방향으로 90도 회전합니다(즉, 제자리에서 우회전). | |'왼쪽으로 회전' | 로봇은 제자리에서 시계 반대 방향으로 90도 회전합니다(즉, 제자리에서 좌회전합니다). | |'N번 반복' | 괄호 {} 사이에 포함된 명령 블록이 n번 반복됩니다. | 화살표로 표시된 대로 아래 그리드의 둘레로 로봇을 이동하기 위한 다음의 잘못된 프로그램을 고려하십시오. ! [](https://images.code.org/4d3177070d1585fc6ad3f9091dd53d76-image-1579897739915.png) ! [](/script_assets/CSP/instruction_gifs/U3L02-rightSquare.png)\n\n",
+          "questions": [
+            {
+              "text": "프로그램이 의도한 대로 작동하려면 어떤 코드 줄을 제거해야 합니까? 고르다 <u>2</u> 답변"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/5": {
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "라인 2",
+              "correct": true
+            },
+            {
+              "text": "라인 3",
+              "correct": true
+            },
+            {
+              "text": "라인 4",
+              "correct": false
+            },
+            {
+              "text": "라인 5",
+              "correct": false
+            }
+          ],
+          "markdown": "\n\n화살표로 표시된 대로 아래 그리드의 둘레로 로봇을 이동하기 위한 다음의 잘못된 프로그램을 고려하십시오. ''' 1행: 4 번 반복 { 2 행 : 3번 줄 앞으로 이동: 오른쪽 4 줄 회전 : 4 번 반복 { 5 행 : 앞으로 이동 } 6행: Rotate Right } ``` ![](/script_assets/csp/instruction_gifs/U3L02-rightSquare.png)\n",
+          "questions": [
+            {
+              "text": "프로그램이 의도한 대로 작동하려면 어떤 코드 줄을 제거해야 합니까? **2개** 답변 선택"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/6": {
+    "teacher_markdown": "오리지널 레벨 교사 마크다운",
+    "contained levels": [
+      {
+        "long_instructions": "내 무료 응답 마크다운 지침"
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/7": {
+    "teacher_markdown": "원래 레벨에 대한 교사 가격 인하",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "0",
+              "correct": false,
+              "feedback": "아니요, 1 - 1입니다."
+            },
+            {
+              "text": "1",
+              "correct": false,
+              "feedback": "아니요, 1 * 1입니다."
+            },
+            {
+              "text": "2",
+              "correct": true,
+              "feedback": "네, 당신은 천재입니다!"
+            },
+            {
+              "text": "4",
+              "correct": false,
+              "feedback": "아니, 그것은 가깝지도 않습니다."
+            }
+          ],
+          "content1": "다음은 몇 가지 정보입니다.",
+          "markdown": "**markdown** _여기_ 테스트\n",
+          "questions": [
+            {
+              "text": "1 + 1은 무엇입니까?"
+            }
+          ],
+          "title": "포함된 다중"
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/8": {
+    "dsls": {
+      "markdown": "# 빅데이터의 미래 [![](https://images.code.org/ff14c09d2036ff65be8af3dd63d2da24-image-1571251950161.52.16 AM.png)](https://www.youtube.com/watch?v=l_a0ecZ2Oe0) [출처](http://www.fwthinking.com/video/clips/future-big-data-video/)\n\n\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/9": {
+    "short_instructions": "다음은 몇 가지 지침입니다. ",
+    "teacher_markdown": "원래 레벨에 대한 교사 Markdown",
+    "contained levels": [
+      {
+        "long_instructions": "내 무료 응답 마크다운 지침"
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/10": {
+    "teacher_markdown": "원래 레벨에 대한 교사 가격 인하",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "0",
+              "correct": false,
+              "feedback": "아니요, 1 - 1입니다."
+            },
+            {
+              "text": "1",
+              "correct": false,
+              "feedback": "아니요, 1 * 1입니다."
+            },
+            {
+              "text": "2",
+              "correct": true,
+              "feedback": "네, 당신은 천재입니다!"
+            },
+            {
+              "text": "4",
+              "correct": false,
+              "feedback": "아니, 그것은 가깝지도 않습니다."
+            }
+          ],
+          "content1": "다음은 몇 가지 정보입니다.",
+          "markdown": "**markdown** _여기_ 테스트\n",
+          "questions": [
+            {
+              "text": "1 + 1은 무엇입니까?"
+            }
+          ],
+          "title": "포함된 다중"
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/43/levels/1": {
+    "short_instructions": "다음은 이 테스트 AI 랩 수준에 대한 몇 가지 간단한 지침입니다.",
+    "dynamic_instructions": {
+      "dataDisplayFeatures": "따라서 **하나 이상의 열을 선택하십시오**. 그들은 예측을 할 것입니다.",
+      "selectTrainer": "따라서 교육을 설정합니다."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/43/levels/2": {
+    "short_instructions": "거북이의 시작 위치 위와 왼쪽에 1x1 사각형을 그립니다. 전체 지침을 보려면 클릭하십시오.",
+    "long_instructions": "AI 지원 수준으로, 1을 의미합니다.) 추가 옵션인 \"A.I. 관리\"가 있습니다. 모델\"을 설정 톱니바퀴 2.) 툴박스의 데이터 섹션에 getPrediction 블록이 있습니다"
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/1": {
+    "long_instructions": "이것은 샘플 Java Lab 레벨입니다.",
+    "teacher_markdown": "교사는 이 추가 정보를 볼 수 있습니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/2": {
+    "long_instructions": "## 콘솔 전용 레벨 콘솔 전용 레벨에는 (Theater, Neighborhood 등과 달리) 시각화 공간이 없어야 합니다. 또한 명령 공간은 왼쪽 열 전체를 차지해야 합니다. 콘솔 전용 레벨에는 항상 지침이 있습니다. Java Lab 독립 실행형 레벨은 극장 레벨입니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/3": {
+    "long_instructions": "이것은 샘플 Java Lab Neighborhood 레벨입니다.",
+    "teacher_markdown": "교사는 이 추가 정보를 볼 수 있습니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/4": {
+    "long_instructions": "\n## 극장에 오신 것을 환영합니다! 자산 관리자로 가서 자신의 이미지를 업로드하십시오. 에서 사진 <https: code.org about team> 페이지는 훌륭한 옵션이 될 것입니다! [][0] 이미지 업로드가 완료되면 코드를 살펴보고 샘플 텍스트를 이미지 이름으로 바꿉니다. [][1] 그게 다야! 볼륨을 높이고 \"실행\"을 클릭하고 창작물이 생명을 얻는 것을 지켜보십시오!",
+    "teacher_markdown": "교사는 이 추가 정보를 볼 수 있습니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/5": {
+    "display_name": "낱말 찾기",
+    "long_instructions": "# The Neighborhood Set-up Widget 이 위젯은 The Neighborhood의 특정 레이아웃을 표시하기 위해 레벨에 복사할 수 있는 JSON 문자열을 생성합니다. 1. 슬라이더를 사용하여 이웃의 크기를 선택합니다. 2. 타일을 클릭하여 선택합니다. 3. 드롭다운에서 카테고리를 선택하고 타일을 클릭하여 이미지를 선택한 타일로 설정합니다. 많은 이미지가 1x1보다 큽니다. 이러한 경우 각 개별 타일을 선택하여 하나씩 배치해야 합니다. 마지막 단계는 출력을 복사하여 Levelbuilder 의 레벨에 있는 해당 필드에 붙여넣는 것입니다. ## 기존 레벨 1을 편집합니다. levelbuilder 2의 필드에서 JSON 문자열을 복사합니다. [this one][0]과 같은 한 줄 변환기에 데이터를 붙여넣습니다. 3. 변환기에서 문자열을 복사합니다. 4. \"수동\" 버튼을 클릭합니다. 5. 문자열에 붙여넣습니다. 6. 각 타일을 클릭하면 평소와 같이 편집할 수 있습니다. "
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/6": {
+    "long_instructions": "이것은 샘플 Java Lab 레벨입니다.",
+    "teacher_markdown": "교사는 이 추가 정보를 볼 수 있습니다.",
+    "contained levels": [
+      {
+        "long_instructions": "내 무료 응답 마크다운 지침"
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/7": {
+    "long_instructions": "이것은 샘플 Java Lab Neighborhood 레벨입니다.",
+    "teacher_markdown": "교사는 이 추가 정보를 볼 수 있습니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/9": {
+    "long_instructions": "이것은 샘플 Java Lab 레벨입니다.",
+    "teacher_markdown": "교사는 이 추가 정보를 볼 수 있습니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/10": {
+    "long_instructions": "## 샘플 프롬프터 레벨 이 레벨은 극장에 있는 프롬프터의 예를 보여줍니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/11": {
+    "long_instructions": "이것은 유효성 검증 테스트가 있는 샘플 Java Lab 레벨입니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/12": {
+    "long_instructions": "이것은 유효성 검사를 통과한 Java Lab 레벨입니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/45/levels/3": {
+    "long_instructions": "이것은 자동으로 채워진 'PROCEDURES' 카테고리를 포함하고 모달 함수 편집기가 없는 Poetry 레벨입니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/45/levels/4": {
+    "long_instructions": "이것은 자동으로 채워진 'PROCEDURES' 카테고리를 포함하고 모달 함수 편집기를 사용하는 Poetry 레벨입니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/2": {
+    "long_instructions": "먼저 한 소리를 들려주세요.",
+    "validations": {
+      "Music Level 1_391b0b44-af8d-4559-a985-d5b643aed908": "수고하셨습니다.",
+      "Music Level 1_c0da3b0b-c4d6-490c-8bfb-4faf4188ff32": "한 소리만 들려주세요."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/3": {
+    "long_instructions": "둘째, 동시에 세 가지 소리를 재생하십시오.",
+    "validations": {
+      "Music Level 2_b4505750-86bb-40d7-8c31-ca015980d7ee": "수고하셨습니다.",
+      "Music Level 2_f5ef3af6-0010-4e06-937c-d35b5cb8e0be": "두 개의 소리를 연주한 것은 좋지만 다른 소리를 연주해야 합니다.",
+      "Music Level 2_3e35e104-7422-4fb8-80e1-b9da580384f2": "한 가지 소리를 재생한 것은 좋지만 두 개를 더 재생해야 합니다.",
+      "Music Level 2_dc4dddf1-5e9d-4664-b9a1-00d73e728a06": "세 가지 소리를 함께 재생해 주세요."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/4": {
+    "long_instructions": "모든 것을 시도하십시오!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/1": {
+    "long_instructions": "## 예시 사용법 역사적 인물과 대화할 수 있는 챗봇입니다. ### 이 작업을 수행하십시오. 질문을 입력하고 <code style=\"color:white; background-color:#7435b2\">계속하다</code> 단추. 에이다 러브레이스에 대해 무엇을 알 수 있나요?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/2": {
+    "long_instructions": "# AI Chat 2 ## 샘플 지침 이것은 문법과 구두점을 도와 글쓰기를 향상시키는 데 도움이 되는 챗봇입니다. ### 이렇게 하려면 수정하고 싶은 단락을 입력하고 <code style=\"color:white; background-color:#7435b2\">계속하다</code> 단추."
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/3": {
+    "long_instructions": "프로젝트 템플릿 지원 레벨 #1"
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/4": {
+    "long_instructions": "프로젝트 템플릿 지원 레벨 #2"
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/5": {
+    "long_instructions": "프로젝트 템플릿 지원 레벨 #3"
+  },
+  "https://studio.code.org/s/allthethings/lessons/48/levels/1": {
+    "long_instructions": "# 장면 만들기 - 스프라이트 배경이 준비되면 스프라이트를 추가할 차례입니다. # 이것을하십시오 1. 애니메이션 탭에서 최소 2개의 스프라이트 애니메이션을 추가하거나 그립니다. 2. 최소 2개의 스프라이트를 만들고 각각에 애니메이션을 할당합니다. 3. 사용하고자 하는 스프라이트 프로퍼티의 값을 설정합니다. - 각 sprite._ 4에 최소 1개의 스프라이트 속성(예: 회전, 크기 조정, 색조 또는 도구 상자의 기타)을 사용하는 _Try. 모든 스프라이트를 화면에 그립니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/48/levels/2": {
+    "display_name": "도전: 장면 확장",
+    "long_instructions": "# 장면 검토: 원하는 모든 것이 포함되었는지 확인하기 위해 장면을 마지막으로 한 번 더 확인하십시오. # 이것을하십시오 1. 그린 장면을 계획과 비교합니다. 2. 마지막으로 변경합니다. 3. 당신이 가장 자랑스러워하는 것은 무엇인가요?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/49/levels/1": {
+    "long_instructions": "이 무스를 춤추게 해보자! ''dancer1' do \"Floss\" forever' 블록을 'at 4 measure' 블록에 클릭하여 두 번째 소절부터 치실을 사용하기 시작하게 합니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/49/levels/2": {
+    "long_instructions": "이 무스를 춤추게 해보자! ''dancer1' do \"Floss\" forever' 블록을 'at 4 measure' 블록에 클릭하여 두 번째 소절부터 치실을 사용하기 시작하게 합니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/1": {
+    "long_instructions": "## Python Lab에 오신 것을 환영합니다. Run 버튼을 누르고 무슨 일이 일어나는지 확인하십시오.",
+    "teacher_markdown": "교사는 이 추가 정보를 볼 수 있습니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/2": {
+    "long_instructions": "## Python Lab with Validation 이 레벨에는 몇 가지 내장 검증 코드가 있습니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/3": {
+    "long_instructions": "## 프로젝트 지원 레벨 이 레벨은 진행 중인 레벨 4의 프로젝트를 공유합니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/4": {
+    "long_instructions": "## 프로젝트 지원 레벨 이 레벨은 진행 중인 레벨 3의 프로젝트를 공유합니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/5": {
+    "long_instructions": "## 예측 및 실행 **이 프로그램이 어떤 역할을 한다고 생각하십니까?** 이 프로그램의 코드를 살펴보세요. 이 프로그램이 무엇을 할 것이라고 생각하는지 적어 보십시오. 오답은 없습니다!",
+    "teacher_markdown": "교사는 이 추가 정보를 볼 수 있습니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/6": {
+    "long_instructions": "## 예측 및 실행 **이 프로그램이 어떤 역할을 한다고 생각하십니까?** 이 프로그램의 코드를 살펴보세요. 다음 중 프로그램이 인쇄할 내용과 일치하는 것은 무엇입니까?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/7": {
+    "long_instructions": "## Submittable Level 다음은 submittable 레벨의 샘플입니다!",
+    "teacher_markdown": "교사는 이 추가 정보를 볼 수 있습니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/1": {
+    "long_instructions": "**html** 페이지를 추가하고 오른쪽 창에서 미리 봅니다. **css** 페이지를 추가합니다(그리고 html에 링크하십시오). 파일 브라우저를 사용하여 파일을 추가/이름 바꾸기/삭제하거나 폴더를 추가/이름 바꾸기/삭제합니다(계층적으로 포함!)"
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/2": {
+    "long_instructions": "## Web Lab 2 기초 나만의 웹페이지를 만들어보세요!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/1": {
+    "long_instructions": "모든 것을 시도하십시오!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/2": {
+    "long_instructions": "## 예시 사용법 역사적 인물과 대화할 수 있는 챗봇입니다. ### 이렇게 하기 질문을 입력하고 '제출'(#7435b2) 버튼을 누릅니다. 에이다 러브레이스에 대해 무엇을 알 수 있나요?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/3": {
+    "long_instructions": "## Python Lab에 오신 것을 환영합니다. Run 버튼을 누르고 무슨 일이 일어나는지 확인하십시오."
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/4": {
+    "long_instructions": "**html** 페이지를 추가하고 오른쪽 창에서 미리 봅니다. **css** 페이지를 추가합니다(그리고 html에 링크하십시오). 파일 브라우저를 사용하여 파일을 추가/이름 바꾸기/삭제하거나 폴더를 추가/이름 바꾸기/삭제합니다(계층적으로 포함!)"
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/5": {
+    "long_instructions": "이 무스를 춤추게 해보자! ''dancer1' do \"Floss\" forever' 블록을 'at 4 measure' 블록에 클릭하여 두 번째 소절부터 치실을 사용하기 시작하게 합니다."
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/6": {
+    "panels": {
+      "musiclab_intro_panels_start-421d64b2-c4db-42cb-ac1f-de66a4d22fa7": "#### Project Beats에 오신 것을 환영합니다! Project Beats를 사용하면 코드를 사용하여 음악을 믹싱, 리믹스 및 연주할 수도 있습니다. 코드나 음악에 대해 잘 모르더라도 걱정하지 마세요! 약간의 시간과 호기심만 있으면 자신만의 창작물을 만들기 시작할 수 있습니다."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/8": {
+    "dsls": {
+      "description": "이 버블 초이스 레벨은 현재 lab2에 없지만 여기에 있는 모든 하위 레벨은 Lab2 레벨이어야 합니다",
+      "display_name": "Lab2 BubbleChoice Showcase"
+    },
+    "sublevels": {
+      "AI Chat Sublevel": {
+        "long_instructions": "# AI Chat 2 ## 샘플 지침 이것은 문법과 구두점을 도와 글쓰기를 향상시키는 데 도움이 되는 챗봇입니다. ### 수정하고 싶은 문단을 입력하고 '제출'(#7435b2) 버튼을 눌러주세요."
+      },
+      "Music Sublevel": {
+        "validations": {
+          "Music Sublevel_20cb71d4-b13c-4494-8ca0-a234414ec12d": "수고하셨습니다.",
+          "Music Sublevel_e826dcbb-1947-42a8-b66f-aa676119b013": "한 소리만 들려주세요."
+        }
+      },
+      "Python Lab Sublevel": {
+        "long_instructions": "## Python Lab Basics 새 코드를 추가해 보세요."
+      },
+      "Weblab2 Sublevel": {
+        "long_instructions": "## Web Lab 2 기초 나만의 웹페이지를 만들어보세요!"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/53/levels/1": {
+    "dsls": {
+      "title": "활동 가이드 Levelgroup"
+    },
+    "sublevels": {
+      "test-single-multi-retriable-in-levelgroup": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "아무 일도 일어나지 않을 것입니다.",
+              "correct": false,
+              "feedback": "잘못 된. 텀블위드가 텀블링하기 시작할 것입니다."
+            },
+            {
+              "text": "텀블위드가 화면 상단으로 떠오릅니다.",
+              "correct": false,
+              "feedback": "잘못 된. 텀블위드가 텀블링하기 시작할 것입니다."
+            },
+            {
+              "text": "텀블위드가 텀블링하기 시작할 것입니다.",
+              "correct": true,
+              "feedback": "맞는!"
+            },
+            {
+              "text": "텀블위드가 깜박이고 꺼집니다.",
+              "correct": false,
+              "feedback": "잘못 된. 텀블위드가 텀블링하기 시작할 것입니다."
+            }
+          ],
+          "questions": [
+            {
+              "text": "아래 코드를 자세히 살펴보십시오. \"실행\"을 클릭하면 어떻게 됩니까?"
+            }
+          ]
+        }
+      },
+      "test-free-response-retriable-in-levelgroup": {
+        "long_instructions": "이 프로그램이 하는 일은 무엇이라고 생각하십니까?"
+      }
+    }
+  }
+}
