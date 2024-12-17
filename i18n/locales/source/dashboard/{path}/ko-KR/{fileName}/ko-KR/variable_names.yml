@@ -1,0 +1,109 @@
+---
+en:
+  data:
+    variable_names:
+      "???": "???"
+      Actor_1_Counter: Actor_1_Counter
+      Actor_2_Counter: Actor_2_Counter
+      Blue: 블루
+      Green: 녹색
+      Red: 레드
+      actor: 배우
+      adjective: adjective
+      age: 나이
+      animal1score: animal1score
+      animal1speed: 동물 1 속도
+      animal2score: animal2score
+      animal2speed: animal2speed
+      answer: 대답
+      armlength: 팔 길이
+      binary: 바이너리
+      birds: 새들
+      bit: 비트
+      blue1: blue1
+      blue2: blue2
+      body-part: 신체 부분
+      bodylength: 보디 롱
+      buttonHeight: buttonHeight
+      buttonMargin: buttonMargin
+      buttonWidth: buttonWidth
+      cat_score: cat_score
+      cat_speed: cat_speed
+      cats: 고양이
+      centerToPadLeft: centerToPadLeft
+      choice: 선택
+      circ: 서커스
+      codeName: codeName
+      color: 색상
+      controllerHeight: controllerHeight
+      controllerWidth: controllerWidth
+      count: 카운트
+      counter: 카운터
+      counter2: 카운터2
+      currentActor: currentActor
+      direction: 방향
+      dog_score: dog_score
+      dog_speed: dog_speed
+      dogs: 개
+      dragons: 드래곤
+      enemy_speed: enemy_speed
+      energy: 에너지
+      firstName: firstName
+      fishCaught: fishCaught
+      footlength: footlength
+      gather: 모으세요
+      green1: green1
+      green2: green2
+      guess: 추측
+      height: 높이
+      honey: 달콤한
+      i: i
+      left: 왼쪽
+      legangle: 레건글
+      leglength: 다리 길이
+      length: 길이
+      level: 레벨
+      marginX: marginX
+      marginY: marginY
+      meal: 식사
+      myName: myName
+      name: 이름
+      nectar: 넥타
+      nectars: 넥타
+      number: 숫자
+      object: 객체
+      padYOffset: padYOffset
+      parts: 부품
+      planet: 행성
+      player_score: player_score
+      points: 포인트
+      punchLine: punchLine
+      random: random
+      red1: red1
+      red2: 레드2
+      repeat: 반복
+      repetitions: 반복
+      right: 옳다
+      score: 점수
+      score1: score1
+      score2: score2
+      screenHeight: screenHeight
+      screenWidth: screenWidth
+      set sides: 세트 페이지
+      setupSimScore1: setupSimScore1
+      setupSimScore2: setupSimScore2
+      shout: 비명
+      sides: 측면
+      size: 크기
+      speed: 속도
+      startX: startX
+      startY: startY
+      test_var: test_var
+      time: 시간
+      type: 유형
+      variable: 변수
+      width: 폭
+      wizard: 마법사
+      x: x
+      your var 1: 당신의 var 1
+      your var 2: 당신의 var 2
