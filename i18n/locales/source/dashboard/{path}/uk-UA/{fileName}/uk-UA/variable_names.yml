@@ -1,0 +1,109 @@
+---
+en:
+  data:
+    variable_names:
+      "???": "???"
+      Actor_1_Counter: Actor_1_Counter
+      Actor_2_Counter: Actor_2_Counter
+      Blue: Синій
+      Green: Зелений
+      Red: Червоний
+      actor: актор
+      adjective: прикметник
+      age: вік
+      animal1score: animal1score
+      animal1speed: тварина1швидкість
+      animal2score: animal2score
+      animal2speed: тварина2швидкість
+      answer: відповідь
+      armlength: Довжина витягнутої руки
+      binary: двійковий
+      birds: Птахів
+      bit: біт
+      blue1: blue1
+      blue2: blue2
+      body-part: Частина-тіло
+      bodylength: Довжина тіла
+      buttonHeight: Висота кнопки
+      buttonMargin: buttonMargin (Поле)
+      buttonWidth: ширина кнопки
+      cat_score: cat_score
+      cat_speed: cat_speed
+      cats: Кішки
+      centerToPadLeft: centerToPadLeft
+      choice: вибір
+      circ: циркулярний
+      codeName: "Ім'я коду"
+      color: колір
+      controllerHeight: Висота контролера
+      controllerWidth: Ширина контролера
+      count: рахувати
+      counter: Лічильник
+      counter2: лічильник 2
+      currentActor: Актор
+      direction: напрям
+      dog_score: dog_score
+      dog_speed: dog_speed
+      dogs: Собаки
+      dragons: Дракони
+      enemy_speed: enemy_speed
+      energy: енергія
+      firstName: "Ім'я"
+      fishCaught: рибаСпійманий
+      footlength: довжина стопи
+      gather: Зібрати
+      green1: зелений1
+      green2: зелений2
+      guess: Думаю
+      height: зріст
+      honey: мед
+      i: i
+      left: Ліворуч
+      legangle: кут для ніг
+      leglength: Довжина ноги
+      length: Довжина
+      level: рівень
+      marginX: marginX
+      marginY: marginY
+      meal: їжа
+      myName: myName
+      name: "Ім'я"
+      nectar: Нектар
+      nectars: Нектарів
+      number: число
+      object: "об'єкт"
+      padYOffset: padYOffset
+      parts: Частини
+      planet: планета
+      player_score: player_score
+      points: Очок
+      punchLine: Лінія удару
+      random: Випадкових
+      red1: червоний1
+      red2: червоний2
+      repeat: повторити
+      repetitions: Повторень
+      right: Праворуч
+      score: забити
+      score1: оцінка 1
+      score2: оцінка 2
+      screenHeight: Висота екрану
+      screenWidth: Ширина екрану
+      set sides: Встановити бортики
+      setupSimScore1: setupSimScore1
+      setupSimScore2: setupSimScore2
+      shout: крик
+      sides: Сторони
+      size: розмір
+      speed: швидкість
+      startX: startX
+      startY: startY
+      test_var: test_var
+      time: Час
+      type: тип
+      variable: Змінної
+      width: Ширина
+      wizard: чарівник
+      x: x
+      your var 1: Ваш VAR 1
+      your var 2: Твій VAR 2
