@@ -1,0 +1,150 @@
+{
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/1": {
+    "short_instructions": "وقتی این شعر را می خوانی چه رنگی به ذهنت می رسد؟ پس زمینه، رنگ متن و افکت متن را پیدا کنید که با احساس این شعر مطابقت داشته باشد.",
+    "long_instructions": "_وقتی این شعر رو میخونی چه حسی بهت دست میده؟ چه رنگی با آن احساس مطابقت دارد؟_ - بلوک ها را از جعبه ابزار در <code style=\"color:black; background-color:#FFBD46\">هنگام اجرا</code> وصل کنید تا برنامه خود را بسازید. - **پس زمینه** و *افکت متن** را پیدا کنید که با **حال** این شعر مطابقت داشته باشد. - **رنگ**های افکت یا متن خود را تغییر دهید. - روی Run کلیک کنید تا شعر متحرک شود.",
+    "authored_hints": {
+      "add_background_effect": "یک بلوک پس‌زمینه مانند این پیدا کنید: [blockly block][0] و یک بلوک جلوه متنی مانند این پیدا کنید: [blockly block][1] این بلوک‌ها را در «when run» در Workspace خود وصل کنید.",
+      "add_more_effects": "برای کمک به ایجاد حال و هوای این شعر، رنگ ها یا افکت های بیشتری اضافه کنید. [مسدود کردن] [0]"
+    },
+    "callouts": {
+      "poetry_background": "بلوک های کد را در اینجا پیدا کنید. ",
+      "run_button": "انیمیشن خود را با این دکمه تست کنید. "
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/2": {
+    "short_instructions": "آیا صداها و تصاویر با حال و هوای شعر مطابقت داشت؟ ",
+    "contained levels": [
+      {
+        "long_instructions": "<img src=\"https://images.code.org/752a37250030ee9b5acaea2143dca2fa-image-1634928264031.png\" style=\"max-width: 75px; float:left; padding-left:10px; padding-right:10px; padding-top:10px\"> ## پیش بینی شعر را بخوانید. چه صداها و تصاویری به ذهن می رسد؟ پس از اینکه پاسخ خود را تایپ کردید، برای تماشا و گوش دادن به انیمیشن شعر، \"Run\" را فشار دهید. "
+      }
+    ]
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/3": {
+    "short_instructions": "صداهایی را به برنامه خود اضافه کنید تا حس شعر را در حین خواندن تغییر دهید. ",
+    "long_instructions": "افزودن **صداها** و **موسیقی** به برنامه شما می تواند حس شعر را هنگام خواندن آن تغییر دهد. - یک بلوک صدا یا موسیقی جدید به کد خود اضافه کنید. - صداها یا موسیقی هایی را پیدا کنید که با حال و هوای شعر مطابقت دارند. ",
+    "authored_hints": {
+      "poetry_sound_hint": "این بلوک را پیدا کنید: [blockly block][0] یا این بلوک: [blockly block][1] آن را در «when run» در Workspace خود وصل کنید.",
+      "more_code": "افکت‌ها و رنگ‌های بیشتری را اضافه کنید تا با صدایی که انتخاب کرده‌اید هماهنگ شوید. [مسدود کردن] [0]"
+    },
+    "callouts": {
+      "poetry_sound": "بلوک جدید!",
+      "poetry_music": "بلوک جدید!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/4": {
+    "short_instructions": "بیایید از رویدادها برای تغییر انیمیشن زمانی که شعر چیز جدیدی را ذکر می کند استفاده کنیم. ",
+    "long_instructions": "از **رویدادها** برای تغییر انیمیشن خود زمانی که شعر به چیز جدیدی اشاره می کند استفاده کنید. - یک **خط** در شعر پیدا کنید که در آن حال و هوا عوض می شود یا چیز جدیدی معرفی می شود. - اضافه کردن **رنگ** یا *افکت** برای مطابقت با یک *خط** جدید در شعر. - مطمئن شوید که وقتی خط مورد نظر روی صفحه ظاهر می شود، افکت تغییر می کند. ",
+    "authored_hints": {
+      "do_effect_hint": "این بلوک جدید \"do effect\" یک بار یک افکت جدید اضافه می کند. [blockly block][0] می‌توانید بیش از یک «افکت انجام دهید» را روی هم قرار دهید تا اثر طولانی‌تر بماند. [مسدود کردن] [1]",
+      "background_effect_hint": "می‌توانید جلوه‌های دیگری را تحت یک بلوک رویداد با کدی که به این شکل است اضافه کنید: [blockly block][0]",
+      "more_events_hint": "شما می توانید از بیش از یک رویداد در برنامه خود استفاده کنید. سعی کنید از دو رویداد با جلوه های مختلف برای مطابقت با سطرهای جدید در شعر استفاده کنید. [blockly block][0] [blockly block][1]"
+    },
+    "callouts": {
+      "poetry_event": "بلوک جدید!",
+      "poetry_foreground": "بلوک جدید!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/5": {
+    "short_instructions": "چه تصاویری به ذهن می رسد؟",
+    "contained levels": [
+      {
+        "long_instructions": "<img src=\"https://images.code.org/752a37250030ee9b5acaea2143dca2fa-image-1634928264031.png\" style=\"max-width: 75px; float:left; padding-left:10px; padding-right:10px; padding-top:10px\"> ## پیش بینی شعر را بخوانید. چه تصاویری به ذهن می رسد؟ بعد از اینکه پاسخ خود را تایپ کردید، برای تماشای انیمیشن شعر، \"Run\" را فشار دهید. "
+      }
+    ]
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/6": {
+    "short_instructions": "نویسندگان از تصاویر برای ترسیم تصویری در ذهن خواننده استفاده می کنند. برای نشان دادن شعر خود می توانید اسپرایت اضافه کنید. ",
+    "long_instructions": "شاعران از کلمات برای ترسیم تصویری در ذهن خواننده استفاده می کنند. برای همراهی با تصاویری که هنگام خواندن شعر به ذهن شما می رسد، **Sprites** را اضافه کنید. - یک بلوک <code style=\"color:black; background-color:#F79EA5\">جدید sprite</code> به کد خود اضافه کنید. - یک لباس برای جن خود انتخاب کنید. _چالش اضافی:_ یک بلوک <code style=\"color:black; background-color:#F79EA5\">جن جدید</code> را به یک رویداد وصل کنید تا زمانی که تصویر جدیدی در شعر معرفی می شود، یک اسپرایت جدید ظاهر شود. ",
+    "authored_hints": {
+      "location_hint": "هر جن یک **موقعیت** دارد. می‌توانید مکان را با کلیک کردن روی پین روی این بلوک تنظیم کنید: [blockly block][0] - روی پین [][1] در بلوک مکان کلیک کنید سپس یک موقعیت جدید برای اسپرایت خود در صفحه انتخاب کنید. - پس از اتمام کد، دکمه \"Run\" را فشار دهید.",
+      "remove_hint": "می توانید یک اسپرایت را در یک شماره خط مشخص حذف کنید. می‌توانید یک اسپرایت جدید به جای آن اضافه کنید: [blockly block][0]"
+    },
+    "callouts": {
+      "poetry_sprite": "بلوک جدید!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/7": {
+    "short_instructions": "Sprites می تواند اعمال یا رفتارهای خاصی را بارها و بارها در حین اجرای برنامه انجام دهد.",
+    "long_instructions": "Sprites می تواند اعمال یا رفتارهای خاصی را در حین اجرای برنامه بارها و بارها انجام دهد. - یک بلوک <code style=\"color:black; background-color:#F79EA5\">شروع sprite</code> به کد خود اضافه کنید. - رفتارهای جن مختلف را کاوش کنید. - رفتاری را انتخاب کنید که با شعر شما مطابقت داشته باشد. _چالش اضافی:_ یک بلوک <code style=\"color:black; background-color:#F79EA5\">Sprite starts</code> را به یک **رویداد** اضافه کنید!",
+    "authored_hints": {
+      "add_behavior": "یک بلوک 'sprite starts' به کد خود اضافه کنید. مطمئن شوید که اسپرایتی را که به آن رفتار می کنید، قبلا ساخته اید. [مسدود کردن] [0]"
+    },
+    "callouts": {
+      "poetry_sprite_begins": "بلوک جدید!",
+      "poetry_sprite_stops": "بلوک جدید!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/8": {
+    "short_instructions": "می توانید اندازه اسپرایتی را که قبلا ساخته اید تغییر دهید. ",
+    "long_instructions": "می‌توانید **اندازه** اسپرایتی را که قبلاً ساخته‌اید تغییر دهید. - اندازه اسپرایت خود را با استفاده از بلوک <code style=\"color:black; background-color:#F79EA5\">اندازه مجموعه</code> جدید تغییر دهید. - حتما سایز دیگری غیر از 100 انتخاب کنید.",
+    "authored_hints": {
+      "size hint": "این بلوک را پیدا کنید و روی '150' کلیک کنید. [blockly block][0] وقتی عدد «25» باشد چه اتفاقی می‌افتد؟ [مسدود کردن] [1]"
+    },
+    "callouts": {
+      "poetry_set_sprite": "بلوک جدید!",
+      "poetry_remove_sprite": "بلوک جدید!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/9": {
+    "long_instructions": "آزادی یک صفحه خالی! - یک شعر را هر طور که دوست دارید به تصویر بکشید و آن را با دوستان خود به اشتراک بگذارید. - از منوی کشویی \"انتخاب شعر\" در بالا سمت چپ برای انتخاب یک شعر یا وارد کردن شعر خود استفاده کنید!",
+    "callouts": {
+      "poetry_new_block": "بلوک جدید!",
+      "poetry_selector": "هر شعری را انتخاب کنید یا شعر خود را وارد کنید!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/2/levels/1": {
+    "dsls": {
+      "markdown": "## شعر خود را برنامه ریزی کنید\n\n<div>\n<img style=\" float: left; width:25%; padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\" />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>وقت آن است که برای شعر خود برنامه ریزی کنید.</strong>\n</h4>\n\n> شما باید موارد زیر را در نظر بگیرید: > - کاری که دوست دارید انجام دهید. > - کسی که برای شما مهم است. > - برخی از چیزهای مورد علاقه شما. **آماده ای برای شروع برنامه ریزی؟** از <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\" target=\"_blank\">این منبع</a>استفاده کنید. **به دنبال موضوعی هستید؟** از <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\" target=\"_blank\">این منبع</a>استفاده کنید.\n\n</div>\n"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/3/levels/1": {
+    "short_instructions": "شعر خودت را کد کن!",
+    "long_instructions": "** شعر خود را کد کنید! ** اکنون زمان آن است که شعر خود را متحرک کنید. شعر خود را وارد کنید و سپس کد خود را اضافه کنید! _نکته: برای بررسی هر گونه مهارت کدنویسی به سطح بعدی بروید._"
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/3/levels/2": {
+    "dsls": {
+      "description": "از میان فعالیت های زیر انتخاب کنید تا حافظه خود را در مورد نحوه افزودن کد به شعر کپسول زمان خود تجدید کنید! شما می توانید چندین گزینه را انتخاب کنید و بیش از یک انجام دهید!",
+      "display_name": "مهارت های کدنویسی خود را مرور کنید!"
+    },
+    "sublevels": {
+      "csc_timecapsule_review1_ -l3": {
+        "display_name": "پس زمینه اضافه کنید",
+        "short_instructions": "وقتی این شعر را می خوانی چه چیزی به ذهنت می رسد؟ پس زمینه ای را پیدا کنید که با حال و هوای این شعر مطابقت داشته باشد.",
+        "long_instructions": "**بیایید به شعرمان پس‌زمینه بدهیم!** - یک <code style=\"color:black; background-color:#B3B2FB\">پس‌زمینه تنظیمی را وصل کنید تا</code> <code style=\"color:black; background-color:#FFBD46\">هنگام اجرا،</code>آن را مسدود کنید. - برای انتخاب پس‌زمینه متفاوت، روی تب Backgrounds در بالای منطقه بازی کلیک کنید. - وقتی کارتان تمام شد، روی «Run» کلیک کنید. _پاداش: پس زمینه ها، فریم ها و جلوه های مختلف را امتحان کنید._"
+      },
+      "csc_timecapsule_review2_ -l3": {
+        "display_name": "تنظیم رنگ متن",
+        "short_instructions": "حالا یک رنگ متن به شعر خود اضافه کنید.",
+        "long_instructions": "** بیایید رنگ متن شعر خود را تغییر دهیم! ** - یک بلوک <code style=\"color:black; background-color:#B3B2FB\">رنگ متن تنظیم شده</code> را <code style=\"color:black; background-color:#FFBD46\">در هنگام اجرا</code>وصل کنید. - رنگی را انتخاب کنید که بتوانید در پس زمینه ببینید. - وقتی کارتان تمام شد، روی «Run» کلیک کنید.\r\n"
+      },
+      "csc_timecapsule_review3_ -l3": {
+        "display_name": "تنظیم افکت متن",
+        "short_instructions": "یک افکت متن برای شعر خود تنظیم کنید.",
+        "long_instructions": "**بیایید یک افکت متنی پیدا کنیم که با حال و هوای شعرمان مطابقت داشته باشد!** - یک بلوک <code style=\"color:black; background-color:#B3B2FB\">افکت متنی</code> را در <code style=\"color:black; background-color:#FFBD46\">هنگام اجرا</code>وصل کنید. - وقتی کارتان تمام شد، روی «Run» کلیک کنید.\r\n"
+      },
+      "csc_timecapsule_review4_ -l3": {
+        "display_name": "یک صدا را انتخاب کنید",
+        "short_instructions": "صداهایی را به برنامه خود اضافه کنید تا حس شعر را در حین خواندن تغییر دهید.",
+        "long_instructions": "**بیایید صدایی پیدا کنیم که با احساس شعر کپسول زمان ما مطابقت داشته باشد!** - <code style=\"color:black; background-color:#B3B2FB\">صدای پخش را</code> وصل کنید یا بلوک <code style=\"color:black; background-color:#B3B2FB\">موسیقی را</code> در <code style=\"color:black; background-color:#FFBD46\">هنگام اجرا</code>در زیر پخش کنید. - صدا یا موسیقی متناسب با احساس شعر را انتخاب کنید. - وقتی کارتان تمام شد، روی «Run» کلیک کنید.\r\n\r\n"
+      },
+      "csc_timecapsule_review5_ -l3": {
+        "display_name": "یک رویداد اضافه کنید",
+        "short_instructions": "هنگامی که شعر چیز جدیدی را ذکر می کند، از رویدادها برای تغییر انیمیشن استفاده کنید.\r\n",
+        "long_instructions": "** بیایید یک بلوک رویداد اضافه کنیم تا پس‌زمینه، جلوه متن یا صدا را برای مطابقت با یک خط در شعر خود تغییر دهیم!** - <code style=\"color:black; background-color:#6AF36C\">زمانی که خط بلوک را نشان می‌دهد</code> را به فضای کاری بکشید. - یک <code style=\"color:black; background-color:#B3B2FB\">پس زمینه تنظیم شده را</code>وصل کنید، <code style=\"color:black; background-color:#B3B2FB\">جلوه متن را تنظیم کنید</code>، یا بلوک <code style=\"color:black; background-color:#B3B2FB\">صوتی را در زیر پخش کنید</code> . - وقتی کارتان تمام شد، روی «Run» کلیک کنید.\r\n"
+      },
+      "csc_timecapsule_review6_ -l3": {
+        "display_name": "یک اسپرایت اضافه کنید",
+        "short_instructions": "برای نشان دادن شعر کپسول زمان خود یک جن اضافه کنید. Sprites می تواند اعمال یا رفتارهای خاصی را بارها و بارها در حین اجرای برنامه انجام دهد.\r\n",
+        "long_instructions": "**بیایید یک sprite اضافه کنیم و رفتاری به آن بدهیم!** - یک بلوک <code style=\"color:black; background-color:#F79EA5\">جدید sprite را</code> در <code style=\"color:black; background-color:#FFBD46\">هنگام اجرا</code>وصل کنید. - سپس یک بلوک <code style=\"color:black; background-color:#F79EA5\">Sprite Begs را</code> متصل کرده و یک رفتار را انتخاب کنید. - وقتی کارتان تمام شد، روی «Run» کلیک کنید. _پاداش: یک بلوک رویداد اضافه کنید تا sprite با یک خط خاص نمایش داده یا ناپدید شود._"
+      }
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/4/levels/1": {
+    "long_instructions": "_تموم شدی و نوبت به اشتراک گذاشتن شعره! کار عالی!_ - مطمئن شوید که همه کد شما همانطور که انتظار دارید کار می کند. - اضافه کردن تمام لمس."
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/4/levels/2": {
+    "dsls": {
+      "markdown": "##اپلیکیشن شعر خود را به اشتراک بگذارید <img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53 PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\n**اکنون که شعر خود را رمزگذاری کرده اید، وقت آن است که آن را به اشتراک بگذارید!** همانطور که پروژه همکلاسی های خود را مشاهده می کنید به یک \"درخشش\"، \"رشد\" و یک \"سوال\" فکر کنید که می توانید برای شریک زندگی خود بنویسید: - \"درخشش\" چیزی است که آنها به خوبی انجام دادند - \"رشد\" چیزی است که می توانند تغییر یا بهبود دهند - \"سوال\" چیزی است که شما می خواهید درباره آن بیشتر بدانید.\n</div>\n\n**آماده ای برای شروع؟** از <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\" target=\"_blank\">این منبع</a> برای به اشتراک گذاشتن بازخورد با شریک زندگی خود استفاده کنید.\n\n"
+    }
+  }
+}
