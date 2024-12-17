@@ -1,0 +1,1147 @@
+---
+en:
+  data:
+    course:
+      name:
+        csp-2017:
+          assignment_family_title: Principios de la informática
+          title: Principios de la informática (2017-2018)
+          version_title: "'17-'18"
+          description_student: "En el otoño de 2016, el College Board lanzó su curso AP® más nuevo, Principios de Ciencias de la Computación AP. El curso presenta a los estudiantes los conceptos fundamentales de la informática y los desafía a explorar cómo la informática y la tecnología pueden impactar el mundo. El Programa AP diseñó los Principios de Ciencias de la Computación de AP con el objetivo de crear líderes en los campos de la ciencia de la computación y atraer e involucrar a aquellos que tradicionalmente están subrepresentados con herramientas informáticas esenciales y oportunidades multidisciplinarias."
+          description_teacher: "En el otoño de 2016, el College Board lanzó su curso AP® más nuevo, Principios de Ciencias de la Computación AP. El curso presenta a los estudiantes los conceptos fundamentales de la informática y los desafía a explorar cómo la informática y la tecnología pueden impactar el mundo. El Programa AP diseñó los Principios de Ciencias de la Computación de AP con el objetivo de crear líderes en los campos de la ciencia de la computación y atraer e involucrar a aquellos que tradicionalmente están subrepresentados con herramientas informáticas esenciales y oportunidades multidisciplinarias."
+          description_short: Aprenda conceptos fundamentales de la informática.
+        csd-2017:
+          assignment_family_title: Descubrimientos en la ciencia informática
+          title: "Descubrimientos informáticos ('17-'18)"
+          version_title: "'17-'18"
+          description_student: "Computer Science Discoveries (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y utilizar la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión."
+          description_teacher: "Computer Science Discoveries (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y utilizar la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión."
+          description_short: Un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos.
+        allthethingscourse:
+          title: Curso de todas las cosas
+          description_short: Este es un curso para todas las cosas.
+          description_student: Este es un curso para todo y tiene una descripción más larga para los estudiantes.
+          description_teacher: Este es un curso para todo y tiene una descripción más larga para los profesores.
+        csd-2018:
+          assignment_family_title: Descubrimientos en la ciencia informática
+          title: Descubrimientos informáticos (2018-2019)
+          version_title: "'18-'19"
+          description_short: Un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos.
+          description_student: "Computer Science Discoveries (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y utilizar la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión."
+          description_teacher: "Computer Science Discoveries (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y utilizar la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión."
+        csp-2018:
+          assignment_family_title: Principios de la informática
+          title: Principios de la informática (2018-2019)
+          version_title: "'18-'19"
+          description_short: Aprenda conceptos fundamentales de la informática.
+          description_student: "En el otoño de 2016, el College Board lanzó su curso AP® más nuevo, Principios de Ciencias de la Computación AP. El curso presenta a los estudiantes los conceptos fundamentales de la informática y los desafía a explorar cómo la informática y la tecnología pueden impactar el mundo. El Programa AP diseñó los Principios de Ciencias de la Computación de AP con el objetivo de crear líderes en los campos de la ciencia de la computación y atraer e involucrar a aquellos que tradicionalmente están subrepresentados con herramientas informáticas esenciales y oportunidades multidisciplinarias."
+          description_teacher: "En el otoño de 2016, el College Board lanzó su curso AP® más nuevo, Principios de Ciencias de la Computación AP. El curso presenta a los estudiantes los conceptos fundamentales de la informática y los desafía a explorar cómo la informática y la tecnología pueden impactar el mundo. El Programa AP diseñó los Principios de Ciencias de la Computación de AP con el objetivo de crear líderes en los campos de la ciencia de la computación y atraer e involucrar a aquellos que tradicionalmente están subrepresentados con herramientas informáticas esenciales y oportunidades multidisciplinarias."
+        csp-2019:
+          title: Principios de la informática (2019-2020)
+          version_title: "'19-'20"
+          description_short: Aprenda conceptos fundamentales de la informática.
+          description_student: "En el otoño de 2016, el College Board lanzó su curso AP® más nuevo, Principios de Ciencias de la Computación AP. El curso presenta a los estudiantes los conceptos fundamentales de la informática y los desafía a explorar cómo la informática y la tecnología pueden impactar el mundo. El Programa AP diseñó los Principios de Ciencias de la Computación de AP con el objetivo de crear líderes en los campos de la ciencia de la computación y atraer e involucrar a aquellos que tradicionalmente están subrepresentados con herramientas informáticas esenciales y oportunidades multidisciplinarias."
+          description_teacher: "En el otoño de 2016, el College Board lanzó su curso AP® más nuevo, Principios de Ciencias de la Computación AP. El curso presenta a los estudiantes los conceptos fundamentales de la informática y los desafía a explorar cómo la informática y la tecnología pueden impactar el mundo. El Programa AP diseñó los Principios de Ciencias de la Computación de AP con el objetivo de crear líderes en los campos de la ciencia de la computación y atraer e involucrar a aquellos que tradicionalmente están subrepresentados con herramientas informáticas esenciales y oportunidades multidisciplinarias."
+        csd-2019:
+          title: Descubrimientos informáticos (2019-2020)
+          version_title: "'19-'20"
+          description_short: Un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos.
+          description_student: "Computer Science Discoveries (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y utilizar la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión."
+          description_teacher: "Computer Science Discoveries (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y utilizar la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión."
+        csd-pilot:
+          title: Curso piloto de CSD
+          description_short: "(Versión piloto) Un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos."
+          description_student: "Computer Science Discoveries (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y utilizar la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión."
+          description_teacher: "(Versión piloto) Computer Science Discoveries (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y utilizar la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión."
+        time4cs-control:
+          title: Tiempo4CS (Control)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+        time4cs-experiment:
+          title: Time4CS (Experimento)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+        csp-2020:
+          title: Principios de la informática (2020-21)
+          version_title: "'20-'21"
+          description_short: Aprenda conceptos fundamentales de la informática.
+          description_student: "En 2016, el College Board lanzó su curso AP® más nuevo, Principios de Ciencias de la Computación AP. Para el año escolar 2020-21 realizaron actualizaciones significativas en el marco del curso. CSP presenta a los estudiantes los conceptos fundamentales de la informática y los desafía a explorar cómo la computación y la tecnología pueden impactar el mundo. El Programa AP diseñó los Principios de Ciencias de la Computación de AP con el objetivo de crear líderes en los campos de la ciencia de la computación y atraer e involucrar a aquellos que tradicionalmente están subrepresentados con herramientas informáticas esenciales y oportunidades multidisciplinarias."
+          description_teacher: "En 2016, el College Board lanzó su curso AP® más nuevo, Principios de Ciencias de la Computación AP. Para el año escolar 2020-21 realizaron actualizaciones significativas en el marco del curso. CSP presenta a los estudiantes los conceptos fundamentales de la informática y los desafía a explorar cómo la computación y la tecnología pueden impactar el mundo. El Programa AP diseñó los Principios de Ciencias de la Computación de AP con el objetivo de crear líderes en los campos de la ciencia de la computación y atraer e involucrar a aquellos que tradicionalmente están subrepresentados con herramientas informáticas esenciales y oportunidades multidisciplinarias."
+        csd-2020:
+          title: Descubrimientos informáticos (2020-21)
+          version_title: "'20-'21"
+          description_short: Un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos.
+          description_student: "Computer Science Discoveries (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y utilizar la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión."
+          description_teacher: "Computer Science Discoveries (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y utilizar la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión."
+        csp-2021:
+          title: Principios de la informática (2021-2022)
+          description_short: Aprenda conceptos fundamentales de la informática.
+          description_student: CSP presenta a los estudiantes los conceptos fundamentales de la informática y los desafía a explorar cómo la computación y la tecnología pueden impactar el mundo. El Programa AP diseñó los Principios de Ciencias de la Computación de AP con el objetivo de crear líderes en los campos de la ciencia de la computación y atraer e involucrar a aquellos que tradicionalmente están subrepresentados con herramientas informáticas esenciales y oportunidades multidisciplinarias.
+          description_teacher: |-
+            CSP presenta a los estudiantes los conceptos fundamentales de la informática y los desafía a explorar cómo la computación y la tecnología pueden impactar el mundo. El Programa AP diseñó los Principios de Ciencias de la Computación de AP con el objetivo de crear líderes en los campos de la ciencia de la computación y atraer e involucrar a aquellos que tradicionalmente están subrepresentados con herramientas informáticas esenciales y oportunidades multidisciplinarias.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarte a comenzar a enseñar los principios de CS. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Haz clic aquí</a> para obtener más información sobre las oportunidades de aprendizaje profesional en tu región o <a href="https://code.org/educate/professional-development-online" target="blank" rel="noopener noreferrer">Haz clic aquí</a> para obtener más información sobre una opción en línea a tu propio ritmo.
+            
+            - Puede encontrar la _Guía curricular_, el _Vocabulario del curso_ y otros recursos para ayudarlo a implementar este currículo en el menú de Recursos para docentes a continuación.
+          version_title: "'21-'22"
+        csd-2021:
+          title: Descubrimientos informáticos (2021-2022)
+          description_short: Un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos.
+          description_student: |-
+            Computer Science Discoveries (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y utilizar la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Está interesado en enseñar CS Discoveries?** Hay desarrollo profesional disponible para ayudarlo a comenzar a enseñar CS Discoveries. [Haga clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en su región o [haga clic aquí][1] para obtener más información sobre una opción en línea a su propio ritmo.
+          description_teacher: |-
+            Computer Science Discoveries (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y utilizar la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarte a comenzar a enseñar CS Discoveries. [Haz clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en tu región o [haz clic aquí][1] para obtener más información sobre una opción en línea a tu propio ritmo.
+            
+            - Este curso es modular y puede impartirse en diferentes configuraciones según las necesidades de cada aula. Consulte la _Guía de implementación de CSD_ en el menú de Recursos para docentes a continuación para conocer las diferentes opciones.
+            
+            - Puede encontrar la _Guía del plan de estudios_, la _Guía de introducción_, la _Guía de evaluación_ y muchos otros recursos para ayudarlo a implementar este plan de estudios en el menú de Recursos para docentes a continuación.
+          version_title: "'21-'22"
+        csa-pilot:
+          title: Programa piloto de la CSA
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        mike-test:
+          title: Fundamentos de la informática
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-csd-2021:
+          title: Enseñando descubrimientos de informática
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al curso en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar CS Discoveries! Después de completar este curso en línea, **estarás listo para comenzar a enseñar el curso Descubrimientos en Ciencias de la Computación de Code.org** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** este curso a su propio ritmo está diseñado para ponerlo en el asiento del conductor y brindarle control sobre su propio aprendizaje. Se dan tiempos sugeridos para cada módulo y lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para profesores nuevos en Code.org y CS Discoveries. Sin embargo, puede **interactuar con el contenido en el orden que mejor se adapte a sus necesidades**. Recomendamos a todos los profesores **comenzar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de comenzar."
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al curso en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar CS Discoveries! Después de completar este curso en línea, **estarás listo para comenzar a enseñar el curso Descubrimientos en Ciencias de la Computación de Code.org** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** este curso a su propio ritmo está diseñado para ponerlo en el asiento del conductor y brindarle control sobre su propio aprendizaje. Se dan tiempos sugeridos para cada módulo y lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para profesores nuevos en Code.org y CS Discoveries. Sin embargo, puede **interactuar con el contenido en el orden que mejor se adapte a sus necesidades**. Recomendamos a todos los profesores **comenzar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de comenzar."
+          version_title: "'21 - '22"
+        self-paced-pl-csp-2021:
+          title: Enseñanza de los principios de informática
+          description_short: ''
+          description_student: "## Bienvenido\n\n##### ¡Bienvenido a los módulos en línea gratuitos y a su propio ritmo de Code.org para que los educadores comiencen a enseñar los principios de CS! Después de completar estos módulos en línea, estará listo para comenzar a enseñar el curso Principios de Ciencias de la Computación de Code.org con sus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n##### **Ve a tu propio ritmo**: Estos módulos a su propio ritmo están diseñados para ponerlo al volante y brindarle control sobre su propio aprendizaje. Se dan tiempos sugeridos para cada módulo y lección. Sin embargo, le animamos a que interactúe con el contenido a su propio ritmo.\n\n### Elige tu contenido\n\n##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para docentes nuevos en Code.org y CS Principles. Sin embargo, puedes interactuar con el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los profesores que comiencen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de comenzar."
+          description_teacher: "## Bienvenido\n\n##### ¡Bienvenido a los módulos en línea gratuitos y a su propio ritmo de Code.org para que los educadores comiencen a enseñar los principios de CS! Después de completar estos módulos en línea, estará listo para comenzar a enseñar el curso Principios de Ciencias de la Computación de Code.org con sus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n##### **Ve a tu propio ritmo**: Estos módulos a su propio ritmo están diseñados para ponerlo al volante y brindarle control sobre su propio aprendizaje. Se dan tiempos sugeridos para cada módulo y lección. Sin embargo, le animamos a que interactúe con el contenido a su propio ritmo.\n\n### Elige tu contenido\n\n##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para docentes nuevos en Code.org y CS Principles. Sin embargo, puedes interactuar con el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los profesores que comiencen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de comenzar."
+          version_title: "'21-'22"
+        csa-pilot-facilitator:
+          title: Facilitadores del programa piloto CSA
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csp-2022:
+          title: Principios de la informática (2022-2023)
+          description_short: Aprenda conceptos fundamentales de la informática.
+          description_student: CSP presenta a los estudiantes los conceptos fundamentales de la informática y los desafía a explorar cómo la computación y la tecnología pueden impactar el mundo. El Programa AP diseñó los Principios de Ciencias de la Computación de AP con el objetivo de crear líderes en los campos de la ciencia de la computación y atraer e involucrar a aquellos que tradicionalmente están subrepresentados con herramientas informáticas esenciales y oportunidades multidisciplinarias.
+          description_teacher: |-
+            CSP presenta a los estudiantes los conceptos fundamentales de la informática y los desafía a explorar cómo la computación y la tecnología pueden impactar el mundo. El Programa AP diseñó los Principios de Ciencias de la Computación de AP con el objetivo de crear líderes en los campos de la ciencia de la computación y atraer e involucrar a aquellos que tradicionalmente están subrepresentados con herramientas informáticas esenciales y oportunidades multidisciplinarias.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarte a comenzar a enseñar los principios de CS. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Haz clic aquí</a> para obtener más información sobre las oportunidades de aprendizaje profesional en tu región o <a href="https://code.org/educate/professional-development-online" target="blank" rel="noopener noreferrer">Haz clic aquí</a> para obtener más información sobre una opción en línea a tu propio ritmo.
+            
+            - Puede encontrar la _Guía curricular_, el _Vocabulario del curso_ y otros recursos para ayudarlo a implementar este currículo en el menú de Recursos para docentes a continuación.
+          version_title: "'22-'23"
+        csa-2022:
+          title: "Ciencias de la Computación A ('22-'23)"
+          description_short: Aprenda habilidades de ingeniería de software y programación Java.
+          description_student: "Ciencias de la Computación A (CSA) introduce a los estudiantes a la ingeniería de software y a la programación y diseño orientado a objetos utilizando el lenguaje de programación Java. Este plan de estudios cubre una amplia gama de temas, incluido el diseño de soluciones a problemas, el uso de estructuras de datos para organizar grandes conjuntos de datos, el desarrollo e implementación de algoritmos para procesar datos y descubrir nueva información, el análisis de posibles soluciones y las implicaciones éticas y sociales de los sistemas informáticos."
+          description_teacher: |-
+            Ciencias de la Computación A (CSA) introduce a los estudiantes a la ingeniería de software y a la programación y diseño orientado a objetos utilizando el lenguaje de programación Java. Este plan de estudios cubre una amplia gama de temas, incluido el diseño de soluciones a problemas, el uso de estructuras de datos para organizar grandes conjuntos de datos, el desarrollo e implementación de algoritmos para procesar datos y descubrir nueva información, el análisis de posibles soluciones y las implicaciones éticas y sociales de los sistemas informáticos.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarlo a comenzar a enseñar CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Haga clic aquí</a> para obtener más información sobre las oportunidades de aprendizaje profesional en su región.
+            
+            - Puede encontrar la _Guía curricular_, el _Vocabulario del curso_ y otros recursos para ayudarlo a implementar este currículo en el menú Recursos para docentes a continuación.
+          version_title: "'22-'23"
+        csa-pilot-extra:
+          title: Proyecto piloto de las unidades 7 y 8 de la CSA
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        vpl-csd-summer-pilot-2022:
+          title: 'Taller virtual de verano de CS Discoveries '
+          description_short: ''
+          description_student: "**Vas a:**\n\n- Prepárate para enseñar CS Discoveries.\n- Practique conceptos clave en el plan de estudios CS Discoveries.\n- Crezca en su comprensión de la educación informática equitativa. \n- Desarrollar empatía por la experiencia del estudiante. \n- Forma parte de una red de profesores que realizan un trabajo similar."
+          description_teacher: "**Los participantes:**\n\n- Prepárate para enseñar CS Discoveries.\n- Practique conceptos clave en el plan de estudios CS Discoveries.\n- Crezca en su comprensión de la educación informática equitativa. \n- Desarrollar empatía por la experiencia del estudiante. \n- Forma parte de una red de profesores que realizan un trabajo similar."
+          version_title: ''
+        csa-async-2022:
+          title: Módulos de introducción CSA
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'22"
+        vpl-csd-summer-pilot-ci-2022:
+          title: Investigación sobre el plan de estudios de CS Discoveries
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'21-'22"
+        self-paced-pl-csa-2022:
+          title: Módulos de introducción a la CSA
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'22-'23"
+        csd-2022:
+          title: Descubrimientos informáticos (2022-2023)
+          description_short: Un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos.
+          description_student: |-
+            Computer Science Discoveries (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y utilizar la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Está interesado en enseñar CS Discoveries?** Hay desarrollo profesional disponible para ayudarlo a comenzar a enseñar CS Discoveries. [Haga clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en su región o [haga clic aquí][1] para obtener más información sobre una opción en línea a su propio ritmo.
+          description_teacher: |-
+            Computer Science Discoveries (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y utilizar la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarte a comenzar a enseñar CS Discoveries. [Haz clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en tu región o [haz clic aquí][1] para obtener más información sobre una opción en línea a tu propio ritmo.
+            
+            - Este curso tiene una implementación flexible y puede ser impartido en diferentes configuraciones en función de las necesidades de cada aula. Consulte la [Guía de implementación de CSD][2] para obtener más información
+            
+            - Puedes acceder a la [Guía del plan de estudios][3] y a la [Guía de inicio][4] para obtener más información sobre el curso y comenzar.
+          version_title: "'22-'23"
+        self-paced-pl-csd-2022:
+          title: "Enseñanza de informática: descubrimientos 22-23"
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al curso en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar CS Discoveries! Después de completar este curso en línea, **estarás listo para comenzar a enseñar el curso Descubrimientos en Ciencias de la Computación de Code.org** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** este curso a su propio ritmo está diseñado para ponerlo en el asiento del conductor y brindarle control sobre su propio aprendizaje. Se dan tiempos sugeridos para cada módulo y lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para profesores nuevos en Code.org y CS Discoveries. Sin embargo, puede **interactuar con el contenido en el orden que mejor se adapte a sus necesidades**. Recomendamos a todos los profesores **comenzar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de comenzar."
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al curso en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar CS Discoveries! Después de completar este curso en línea, **estarás listo para comenzar a enseñar el curso Descubrimientos en Ciencias de la Computación de Code.org** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** este curso a su propio ritmo está diseñado para ponerlo en el asiento del conductor y brindarle control sobre su propio aprendizaje. Se dan tiempos sugeridos para cada módulo y lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para profesores nuevos en Code.org y CS Discoveries. Sin embargo, puede **interactuar con el contenido en el orden que mejor se adapte a sus necesidades**. Recomendamos a todos los profesores **comenzar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de comenzar."
+          version_title: "'22-'23"
+        self-paced-pl-csp-2022:
+          title: Enseñanza de los principios de informática
+          description_short: ''
+          description_student: "## Bienvenido\n\n##### ¡Bienvenido a los módulos en línea gratuitos y a su propio ritmo de Code.org para que los educadores comiencen a enseñar los principios de CS! Después de completar estos módulos en línea, estará listo para comenzar a enseñar el curso Principios de Ciencias de la Computación de Code.org con sus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n##### **Ve a tu propio ritmo**: Estos módulos a su propio ritmo están diseñados para ponerlo al volante y brindarle control sobre su propio aprendizaje. Se dan tiempos sugeridos para cada módulo y lección. Sin embargo, le animamos a que interactúe con el contenido a su propio ritmo.\n\n### Elige tu contenido\n\n##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para docentes nuevos en Code.org y CS Principles. Sin embargo, puedes interactuar con el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los profesores que comiencen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de comenzar."
+          description_teacher: "## Bienvenido\n\n##### ¡Bienvenido a los módulos en línea gratuitos y a su propio ritmo de Code.org para que los educadores comiencen a enseñar los principios de CS! Después de completar estos módulos en línea, estará listo para comenzar a enseñar el curso Principios de Ciencias de la Computación de Code.org con sus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n##### **Ve a tu propio ritmo**: Estos módulos a su propio ritmo están diseñados para ponerlo al volante y brindarle control sobre su propio aprendizaje. Se dan tiempos sugeridos para cada módulo y lección. Sin embargo, le animamos a que interactúe con el contenido a su propio ritmo.\n\n### Elige tu contenido\n\n##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para docentes nuevos en Code.org y CS Principles. Sin embargo, puedes interactuar con el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los profesores que comiencen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de comenzar."
+          version_title: "'22-'23"
+        vpl-csd-ayw-pilot-2022:
+          title: Talleres virtuales del año académico de CS Discoveries
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csa-validation-pilot-2022:
+          title: Piloto de validación de informática (22-23)
+          description_short: Aprenda habilidades de ingeniería de software y programación Java.
+          description_student: "Ciencias de la Computación A (CSA) introduce a los estudiantes a la ingeniería de software y a la programación y diseño orientado a objetos utilizando el lenguaje de programación Java. Este plan de estudios cubre una amplia gama de temas, incluido el diseño de soluciones a problemas, el uso de estructuras de datos para organizar grandes conjuntos de datos, el desarrollo e implementación de algoritmos para procesar datos y descubrir nueva información, el análisis de posibles soluciones y las implicaciones éticas y sociales de los sistemas informáticos."
+          description_teacher: "Ciencias de la Computación A (CSA) introduce a los estudiantes a la ingeniería de software y a la programación y diseño orientado a objetos utilizando el lenguaje de programación Java. Este plan de estudios cubre una amplia gama de temas, incluido el diseño de soluciones a problemas, el uso de estructuras de datos para organizar grandes conjuntos de datos, el desarrollo e implementación de algoritmos para procesar datos y descubrir nueva información, el análisis de posibles soluciones y las implicaciones éticas y sociales de los sistemas informáticos."
+          version_title: "'22-'23"
+        csa-2023:
+          title: "Ciencias de la Computación A ('23-'24)"
+          description_short: Aprenda habilidades de ingeniería de software y programación Java.
+          description_student: "Ciencias de la Computación A (CSA) introduce a los estudiantes a la ingeniería de software y a la programación y diseño orientado a objetos utilizando el lenguaje de programación Java. Este plan de estudios cubre una amplia gama de temas, incluido el diseño de soluciones a problemas, el uso de estructuras de datos para organizar grandes conjuntos de datos, el desarrollo e implementación de algoritmos para procesar datos y descubrir nueva información, el análisis de posibles soluciones y las implicaciones éticas y sociales de los sistemas informáticos."
+          description_teacher: |-
+            Ciencias de la Computación A (CSA) introduce a los estudiantes a la ingeniería de software y a la programación y diseño orientado a objetos utilizando el lenguaje de programación Java. Este plan de estudios cubre una amplia gama de temas, incluido el diseño de soluciones a problemas, el uso de estructuras de datos para organizar grandes conjuntos de datos, el desarrollo e implementación de algoritmos para procesar datos y descubrir nueva información, el análisis de posibles soluciones y las implicaciones éticas y sociales de los sistemas informáticos.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarlo a comenzar a enseñar CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Haga clic aquí</a> para obtener más información sobre las oportunidades de aprendizaje profesional en su región.
+            
+            - Puede encontrar el _Programa de estudios_, el _Vocabulario del curso_ y otros recursos para ayudarle a implementar este currículo en el menú Recursos para docentes a continuación.
+          version_title: "'23-'24"
+        self-paced-pl-physical-computing-2022:
+          title: Enseñanza de la creación de aplicaciones con dispositivos (Circuit Playground)
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad de Creación de Aplicaciones con Dispositivos de Code.org** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en la unidad Creación de aplicaciones con dispositivos. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar a crear aplicaciones con dispositivos. "
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad de Creación de Aplicaciones con Dispositivos de Code.org** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en la unidad Creación de aplicaciones con dispositivos. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar a crear aplicaciones con dispositivos. "
+          version_title: "'22 - '23"
+        csp-2023:
+          title: "Principios de informática '23-'24"
+          description_short: Aprenda conceptos fundamentales de la informática.
+          description_student: CSP presenta a los estudiantes los conceptos fundamentales de la informática y los desafía a explorar cómo la computación y la tecnología pueden impactar el mundo. El Programa AP diseñó los Principios de Ciencias de la Computación de AP con el objetivo de crear líderes en los campos de la ciencia de la computación y atraer e involucrar a aquellos que tradicionalmente están subrepresentados con herramientas informáticas esenciales y oportunidades multidisciplinarias.
+          description_teacher: |-
+            CSP presenta a los estudiantes los conceptos fundamentales de la informática y los desafía a explorar cómo la computación y la tecnología pueden impactar el mundo. El Programa AP diseñó los Principios de Ciencias de la Computación de AP con el objetivo de crear líderes en los campos de la ciencia de la computación y atraer e involucrar a aquellos que tradicionalmente están subrepresentados con herramientas informáticas esenciales y oportunidades multidisciplinarias.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarte a comenzar a enseñar los principios de CS. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Haz clic aquí</a> para obtener más información sobre las oportunidades de aprendizaje profesional en tu región o <a href="https://code.org/educate/professional-development-online" target="blank" rel="noopener noreferrer">Haz clic aquí</a> para obtener más información sobre una opción en línea a tu propio ritmo.
+            
+            - Puede encontrar el _Programa de estudios_, el _Vocabulario del curso_ y otros recursos para ayudarlo a implementar este plan de estudios en el menú de Recursos para docentes a continuación.
+          version_title: "'23-'24"
+        self-paced-pl-csa-2023:
+          title: Módulos de introducción a la CSA
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: '2023'
+        tess-testing-focus-on-creativity-2023:
+          title: tess-testing-centrado-en-la-creatividad-coleccion-2023
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csd-2023:
+          title: Descubrimientos informáticos (2023-2024)
+          description_short: Un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos.
+          description_student: |-
+            Computer Science Discoveries (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y utilizar la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Está interesado en enseñar CS Discoveries?** Hay desarrollo profesional disponible para ayudarlo a comenzar a enseñar CS Discoveries. [Haga clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en su región o [haga clic aquí][1] para obtener más información sobre una opción en línea a su propio ritmo.
+          description_teacher: |-
+            Computer Science Discoveries (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y utilizar la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarte a comenzar a enseñar CS Discoveries. [Haz clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en tu región o [haz clic aquí][1] para obtener más información sobre una opción en línea a tu propio ritmo.
+            
+            - Este curso tiene una implementación flexible y puede ser impartido en diferentes configuraciones en función de las necesidades de cada aula. Consulte la [Guía de implementación de CSD][2] para obtener más información
+            
+            - Puede acceder al [Programa del curso][3] y a la [Guía de inicio][4] para obtener más información sobre el curso y comenzar.
+          version_title: "'23-'24"
+        focus-on-creativity-2023:
+          title: "Centrados en la creatividad '23-'24 (Descubrimientos de la informática)"
+          description_short: Una colección de unidades de descubrimiento de ciencias de la computación que se centra en ser creativo y crear con la informática.
+          description_student: |-
+            Focus on Creativity es una colección de unidades de Computer Science Discoveries (CS Discoveries) que permite a los estudiantes ser creativos mientras aprenden a crear sitios web, animaciones y juegos, y aplicaciones para dispositivos. Los estudiantes crean artefactos auténticos y se involucran con la informática no sólo como medio para la creatividad, sino también para la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Está interesado en enseñar CS Discoveries?** Hay desarrollo profesional disponible para ayudarlo a comenzar a enseñar CS Discoveries. [Haga clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en su región o [haga clic aquí][1] para obtener más información sobre una opción en línea a su propio ritmo.
+          description_teacher: |-
+            Focus on Creativity es una colección de unidades de cursos de Computer Science Discoveries (CS Discoveries) que permiten a los estudiantes ser creativos mientras aprenden a crear sitios web, animaciones y juegos, y aplicaciones para dispositivos. Los estudiantes crean artefactos auténticos y se involucran con la informática no sólo como medio para la creatividad, sino también para la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarte a comenzar a enseñar CS Discoveries. [Haz clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en tu región o [haz clic aquí][1] para obtener más información sobre una opción en línea a tu propio ritmo.
+            
+            - Puede acceder a la [Guía de inicio][2] para obtener más información sobre cómo comenzar.
+          version_title: "'23-24"
+        focus-on-hardware-2023:
+          title: "Enfoque en el hardware '23-'24 (Descubrimientos de CS)"
+          description_short: Una colección de unidades de descubrimiento de ciencias de la computación que exploran cómo funcionan las computadoras y los dispositivos físicos más pequeños.
+          description_student: |-
+            Focus on Hardware es una colección de unidades de Computer Science Discoveries (CS Discoveries) que permite a los estudiantes utilizar datos y dispositivos físicos para resolver problemas. Los estudiantes crean artefactos auténticos y utilizan la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Está interesado en enseñar CS Discoveries?** Hay desarrollo profesional disponible para ayudarlo a comenzar a enseñar CS Discoveries. [Haga clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en su región o [haga clic aquí][1] para obtener más información sobre una opción en línea a su propio ritmo.
+          description_teacher: |-
+            Focus on Hardware es una colección de unidades del curso Computer Science Discoveries (CS Discoveries) que permite a los estudiantes utilizar datos y dispositivos físicos para resolver problemas. Los estudiantes crean artefactos auténticos y utilizan la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarte a comenzar a enseñar CS Discoveries. [Haz clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en tu región o [haz clic aquí][1] para obtener más información sobre una opción en línea a tu propio ritmo.
+            
+            - Puede acceder a la [Guía de inicio][2] para obtener más información sobre cómo comenzar.
+          version_title: "'23-'24"
+        focus-on-data-2023:
+          title: "Enfoque en los datos '23-'24 (Descubrimientos de CS)"
+          description_short: 'Una colección de unidades de Computer Science Discovery que se centra en los datos: cómo los utilizan las computadoras y cómo se utilizan en la sociedad. '
+          description_student: |-
+            Focus on Data es una colección de unidades de Computer Science Discoveries (CS Discoveries) que permite a los estudiantes utilizar datos para resolver problemas. Los estudiantes crean artefactos auténticos y utilizan la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Está interesado en enseñar CS Discoveries?** Hay desarrollo profesional disponible para ayudarlo a comenzar a enseñar CS Discoveries. [Haga clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en su región o [haga clic aquí][1] para obtener más información sobre una opción en línea a su propio ritmo.
+          description_teacher: |-
+            Focus on Data es una colección de unidades del curso Computer Science Discoveries (CSD) que permite a los estudiantes utilizar datos para resolver problemas. Los estudiantes crean artefactos auténticos y utilizan la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarte a comenzar a enseñar CS Discoveries. [Haz clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en tu región o [haz clic aquí][1] para obtener más información sobre una opción en línea a tu propio ritmo.
+            
+            - Puede acceder a la [Guía de inicio][2] para obtener más información sobre cómo comenzar.
+          version_title: "'23-'24"
+        focus-on-design-with-purpose-2023:
+          title: "Centrados en el diseño con propósito '23-'24 (Descubrimientos de CS)"
+          description_short: Una colección de unidades de descubrimiento de ciencias de la computación que se centra en el proceso de diseño y en escuchar a los usuarios para resolver problemas del mundo real.
+          description_student: |-
+            Focus on Design with Purpose es una colección de unidades de Computer Science Discoveries (CS Discoveries) que permite a los estudiantes pensar en las necesidades de los usuarios al diseñar sitios web y aplicaciones para dispositivos. Los estudiantes crean artefactos auténticos y utilizan la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Está interesado en enseñar CS Discoveries?** Hay desarrollo profesional disponible para ayudarlo a comenzar a enseñar CS Discoveries. [Haga clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en su región o [haga clic aquí][1] para obtener más información sobre una opción en línea a su propio ritmo.
+          description_teacher: |-
+            Focus on Design with Purpose es una colección de unidades de curso de Computer Science Discoveries (CS Discoveries) que permite a los estudiantes pensar en las necesidades de los usuarios al diseñar sitios web y aplicaciones para dispositivos. Los estudiantes crean artefactos auténticos y utilizan la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarte a comenzar a enseñar CS Discoveries. [Haz clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en tu región o [haz clic aquí][1] para obtener más información sobre una opción en línea a tu propio ritmo.
+            
+            - Puede acceder a la [Guía de inicio][2] para obtener más información sobre cómo comenzar.
+          version_title: "'23-'24"
+        focus-on-coding-2023:
+          title: "Centrados en la codificación '23-'24 (Descubrimientos de CS)"
+          description_short: Una colección de unidades de descubrimiento de ciencias de la computación que se centra en las habilidades de codificación y programación.
+          description_student: |-
+            Focus on Coding es una colección de unidades de cursos de Computer Science Discoveries (CS Discoveries) que permiten a los estudiantes desarrollar sus habilidades de codificación en desarrollo web, juegos y animación, y creación de aplicaciones para dispositivos. Los estudiantes crean artefactos auténticos y utilizan la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Está interesado en enseñar CS Discoveries?** Hay desarrollo profesional disponible para ayudarlo a comenzar a enseñar CS Discoveries. [Haga clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en su región o [haga clic aquí][1] para obtener más información sobre una opción en línea a su propio ritmo.
+          description_teacher: |-
+            Focus on Coding es una colección de unidades de cursos de Computer Science Discoveries (CS Discoveries) que permiten a los estudiantes desarrollar sus habilidades de codificación en desarrollo web, juegos y animación, y creación de aplicaciones para dispositivos. Los estudiantes crean artefactos auténticos y utilizan la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarte a comenzar a enseñar CS Discoveries. [Haz clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en tu región o [haz clic aquí][1] para obtener más información sobre una opción en línea a tu propio ritmo.
+            
+            - Puede acceder a la [Guía de inicio][2] para obtener más información sobre cómo comenzar.
+          version_title: "'23-'24"
+        focus-on-impact-in-society-2023:
+          title: "Enfoque en el impacto en la sociedad '23-'24 (Descubrimientos de CS)"
+          description_short: Una colección de unidades de descubrimiento de la ciencia informática que se centran en el impacto de la tecnología en la sociedad.
+          description_student: |-
+            Focus on Impact in Society es una colección de unidades de Computer Science Discoveries (CS Discoveries) que permite a los estudiantes pensar en la informática como una herramienta para resolver problemas mientras consideran los impactos sociales más amplios de varios aspectos de la informática. Los estudiantes crean artefactos auténticos y utilizan la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Está interesado en enseñar CS Discoveries?** Hay desarrollo profesional disponible para ayudarlo a comenzar a enseñar CS Discoveries. [Haga clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en su región o [haga clic aquí][1] para obtener más información sobre una opción en línea a su propio ritmo.
+          description_teacher: |-
+            Focus on Impact in Society es una colección de unidades de curso de Computer Science Discoveries (CS Discoveries) que permite a los estudiantes pensar en la informática como una herramienta para resolver problemas mientras consideran los impactos sociales más amplios de varios aspectos de la informática. Los estudiantes crean artefactos auténticos y utilizan la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarte a comenzar a enseñar CS Discoveries. [Haz clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en tu región o [haz clic aquí][1] para obtener más información sobre una opción en línea a tu propio ritmo.
+            
+            - Puede acceder a la [Guía de inicio][2] para obtener más información sobre cómo comenzar.
+          version_title: "'23-'24"
+        vpl-csd-summer-ci-2023:
+          title: Investigación sobre el plan de estudios de CS Discoveries
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'23-'24"
+        self-paced-pl-physical-computing-2023:
+          title: " Enseñanza de la creación de aplicaciones con dispositivos (Circuit Playground)"
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad de Creación de Aplicaciones con Dispositivos de Code.org** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en la unidad Creación de aplicaciones con dispositivos. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar a crear aplicaciones con dispositivos. "
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad de Creación de Aplicaciones con Dispositivos de Code.org** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en la unidad Creación de aplicaciones con dispositivos. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar a crear aplicaciones con dispositivos. "
+          version_title: "'23 - '24"
+        self-paced-pl-csd-2023:
+          title: Enseñando descubrimientos de informática
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al curso en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar CS Discoveries! Después de completar este curso en línea, **estarás listo para comenzar a enseñar el curso Descubrimientos en Ciencias de la Computación de Code.org** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** este curso a su propio ritmo está diseñado para ponerlo en el asiento del conductor y brindarle control sobre su propio aprendizaje. Se dan tiempos sugeridos para cada módulo y lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para profesores nuevos en Code.org y CS Discoveries. Sin embargo, puede **interactuar con el contenido en el orden que mejor se adapte a sus necesidades**. Recomendamos a todos los profesores **comenzar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de comenzar."
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al curso en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar CS Discoveries! Después de completar este curso en línea, **estarás listo para comenzar a enseñar el curso Descubrimientos en Ciencias de la Computación de Code.org** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** este curso a su propio ritmo está diseñado para ponerlo en el asiento del conductor y brindarle control sobre su propio aprendizaje. Se dan tiempos sugeridos para cada módulo y lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para profesores nuevos en Code.org y CS Discoveries. Sin embargo, puede **interactuar con el contenido en el orden que mejor se adapte a sus necesidades**. Recomendamos a todos los profesores **comenzar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de comenzar."
+          version_title: "'23-'24"
+        self-paced-pl-microbit-2023:
+          title: "Enseñanza de la creación de aplicaciones con dispositivos (micro:bit)"
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad de Creación de Aplicaciones con Dispositivos de Code.org** con tus estudiantes usando micro:bits.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en la unidad Creación de aplicaciones con dispositivos. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar a crear aplicaciones con dispositivos. "
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad de Creación de Aplicaciones con Dispositivos de Code.org** con tus estudiantes usando micro:bits.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en la unidad Creación de aplicaciones con dispositivos. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar a crear aplicaciones con dispositivos. "
+          version_title: "'23-'24"
+        pl-csd-summer-2023:
+          title: Curso presencial de PL de CSD
+          description_short: ''
+          description_student: "**Vas a:**\n\n- Prepárate para enseñar CS Discoveries.\n- Practique conceptos clave en el plan de estudios CS Discoveries.\n- Crezca en su comprensión de la educación informática equitativa. \n- Desarrollar empatía por la experiencia del estudiante. \n- Forma parte de una red de profesores que realizan un trabajo similar."
+          description_teacher: "**Los participantes:**\n\n- Prepárate para enseñar CS Discoveries.\n- Practique conceptos clave en el plan de estudios CS Discoveries.\n- Crecer en su comprensión de una educación informática equitativa. \n- Desarrollar empatía por la experiencia del estudiante. \n- Forma parte de una red de profesores que realizan un trabajo similar."
+          version_title: ''
+        virtual-pl-csd-summer-2023:
+          title: Curso virtual de taller de PL de CSD
+          description_short: ''
+          description_student: "**Vas a:**\n\n- Prepárate para enseñar CS Discoveries.\n- Practique conceptos clave en el plan de estudios CS Discoveries.\n- Crezca en su comprensión de la educación informática equitativa. \n- Desarrollar empatía por la experiencia del estudiante. \n- Forma parte de una red de profesores que realizan un trabajo similar."
+          description_teacher: "**Los participantes:**\n\n- Prepárate para enseñar CS Discoveries.\n- Practique conceptos clave en el plan de estudios CS Discoveries.\n- Crecer en su comprensión de una educación informática equitativa. \n- Desarrollar empatía por la experiencia del estudiante. \n- Forma parte de una red de profesores que realizan un trabajo similar."
+          version_title: ''
+        self-paced-pl-csp-2023:
+          title: Enseñanza de los principios de informática
+          description_short: ''
+          description_student: "## Bienvenido\n\n##### ¡Bienvenido a los módulos en línea gratuitos y a su propio ritmo de Code.org para que los educadores comiencen a enseñar los principios de CS! Después de completar estos módulos en línea, estará listo para comenzar a enseñar el curso Principios de Ciencias de la Computación de Code.org con sus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n##### **Ve a tu propio ritmo**: Estos módulos a su propio ritmo están diseñados para ponerlo al volante y brindarle control sobre su propio aprendizaje. Se dan tiempos sugeridos para cada módulo y lección. Sin embargo, le animamos a que interactúe con el contenido a su propio ritmo.\n\n### Elige tu contenido\n\n##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para docentes nuevos en Code.org y CS Principles. Sin embargo, puedes interactuar con el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los profesores que comiencen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de comenzar."
+          description_teacher: "## Bienvenido\n\n##### ¡Bienvenido a los módulos en línea gratuitos y a su propio ritmo de Code.org para que los educadores comiencen a enseñar los principios de CS! Después de completar estos módulos en línea, estará listo para comenzar a enseñar el curso Principios de Ciencias de la Computación de Code.org con sus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n##### **Ve a tu propio ritmo**: Estos módulos a su propio ritmo están diseñados para ponerlo al volante y brindarle control sobre su propio aprendizaje. Se dan tiempos sugeridos para cada módulo y lección. Sin embargo, le animamos a que interactúe con el contenido a su propio ritmo.\n\n### Elige tu contenido\n\n##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para docentes nuevos en Code.org y CS Principles. Sin embargo, puedes interactuar con el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los profesores que comiencen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de comenzar."
+          version_title: 22-23
+        self-paced-pl-aiml-2023:
+          title: 'Preparación para enseñar IA y aprendizaje automático '
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la unidad Creación de IA y aprendizaje automático de Code.org** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en la unidad de IA y aprendizaje automático. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para la IA y el aprendizaje automático. "
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la unidad Creación de IA y aprendizaje automático de Code.org** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en la unidad de IA y aprendizaje automático. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para la IA y el aprendizaje automático. "
+          version_title: ''
+        vpl-csp-2023:
+          title: Curso virtual de taller de principios de CS PL 23-24
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: '2023'
+        vpl-csa-2023:
+          title: Aprendizaje profesional virtual de la CSA
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: '2023'
+        vpl-csd-2023:
+          title: Aprendizaje profesional virtual del CSD
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: '2023'
+        virtual-pl-csa-summer-2024:
+          title: Aprendizaje profesional virtual de verano de la CSA 2024-2025
+          description_short: ''
+          description_student: "**Vas a:**\n\n-Prepárate para enseñar CS A.\n- Practicar conceptos clave en el currículo de CS A.\n- Crezca en su comprensión de la educación informática equitativa. \n- Desarrollar empatía por la experiencia del estudiante. \n- Forma parte de una red de profesores que realizan un trabajo similar."
+          description_teacher: "**Los participantes:**\n\n-Prepárese para enseñar CSA.\n- Practicar conceptos clave en el currículo de CSA.\n- Crecer en su comprensión de una educación informática equitativa. \n- Desarrollar empatía por la experiencia del estudiante. \n- Forma parte de una red de profesores que realizan un trabajo similar."
+          version_title: ''
+        virtual-pl-csp-summer-2024:
+          title: Curso virtual de taller de principios de CS PL
+          description_short: ''
+          description_student: "**Vas a:**\n\n- Prepararse para enseñar Principios de CS.\n- Practicar conceptos clave en el currículo de Principios de CS.\n- Crezca en su comprensión de la educación informática equitativa. \n- Desarrollar empatía por la experiencia del estudiante. \n- Forma parte de una red de profesores que realizan un trabajo similar."
+          description_teacher: "**Los participantes:**\n\n- Prepararse para enseñar Principios de CS.\n- Practicar conceptos clave en el currículo de Principios de CS.\n- Crecer en su comprensión de una educación informática equitativa. \n- Desarrollar empatía por la experiencia del estudiante. \n- Forma parte de una red de profesores que realizan un trabajo similar."
+          version_title: ''
+        self-paced-pl-csd-unit1-2023:
+          title: Enseñanza de la resolución de problemas y la informática
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 1 de CSD de Code.org: Resolución de problemas y computación** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en CSD Unidad 1: Resolución de problemas y computación. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar resolución de problemas y computación. "
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 1 de CSD de Code.org: Resolución de problemas y computación** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en CSD Unidad 1: Resolución de problemas y computación. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar resolución de problemas y computación. "
+          version_title: "'23-'24"
+        self-paced-pl-csd-unit2-2023:
+          title: Enseñanza del desarrollo web
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 2 de CSD de Code.org: Desarrollo web** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en CSD Unidad 2: Desarrollo web. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar desarrollo web. "
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 2 de CSD de Code.org: Desarrollo web** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en CSD Unidad 2: Desarrollo web. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar desarrollo web. "
+          version_title: "'23-'24"
+        self-paced-pl-csd-unit3-2023:
+          title: Enseñanza de juegos y animaciones interactivas
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 3 de CSD de Code.org: Animaciones y juegos interactivos** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en CSD Unidad 3: Animaciones y juegos interactivos. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar animaciones y juegos interactivos. "
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 3 de CSD de Code.org: Animaciones y juegos interactivos** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en CSD Unidad 3: Animaciones y juegos interactivos. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar animaciones y juegos interactivos. "
+          version_title: "'23-'24"
+        self-paced-pl-csd-unit4-2023:
+          title: Enseñando el proceso de diseño
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 4 de CSD de Code.org: El proceso de diseño** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en CSD Unidad 4: El proceso de diseño. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar el proceso de diseño. "
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 4 de CSD de Code.org: El proceso de diseño** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en CSD Unidad 4: El proceso de diseño. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar el proceso de diseño. "
+          version_title: "'23-'24"
+        self-paced-pl-csd-unit5-2023:
+          title: Enseñanza de datos y sociedad
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 5 de CSD de Code.org: Datos y sociedad** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en CSD Unidad 5: Datos y sociedad. Sin embargo, puede **interactuar con el contenido en el orden que mejor se adapte a sus necesidades.** Si ya está familiarizado con la plataforma Code.org, puede optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar datos y sociedad. "
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 5 de CSD de Code.org: Datos y sociedad** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en CSD Unidad 5: Datos y sociedad. Sin embargo, puede **interactuar con el contenido en el orden que mejor se adapte a sus necesidades.** Si ya está familiarizado con la plataforma Code.org, puede optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar datos y sociedad. "
+          version_title: "'23-'24"
+        web-dev-2024:
+          title: desarrollo web 2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csd-2024:
+          title: Descubrimientos informáticos (2024-2025)
+          description_short: Un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos.
+          description_student: "Computer Science Discoveries (CS Discoveries) es un curso introductorio de informática que le permite crear artefactos auténticos y utilizar la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión."
+          description_teacher: |-
+            Computer Science Discoveries (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y utilizar la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarte a comenzar a enseñar CS Discoveries. [Haz clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en tu región o [haz clic aquí][1] para obtener más información sobre una opción en línea a tu propio ritmo.
+            
+            - Este curso tiene una implementación flexible y puede ser impartido en diferentes configuraciones en función de las necesidades de cada aula. Consulte la [Guía de implementación de CSD][2] para obtener más información
+            
+            - Puede acceder al [Programa del curso][3] y a la [Guía de inicio][4] para obtener más información sobre el curso y comenzar.
+          version_title: "'24-'25"
+        melissasandbox-2024:
+          title: k5-maker-sandbox-2024
+          description_short: Caja de arena para Melissa Toohey
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-k5-2024:
+          title: Fundamentos de informática para profesores de primaria y secundaria
+          description_short: ''
+          description_student: ''
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores se familiaricen con los conceptos básicos de la informática! Después de completar esta experiencia de aprendizaje profesional, **se sentirá cómodo con los conceptos básicos de codificación de los grados K-5**.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos en la enseñanza de informática y Code.org. Sin embargo, puedes interactuar con el contenido en el orden que mejor se adapte a tus necesidades. Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir la descripción general. "
+          version_title: ''
+        csp-2024:
+          title: "Principios de informática '24-'25"
+          description_short: Aprenda conceptos fundamentales de la informática.
+          description_student: CSP presenta a los estudiantes los conceptos fundamentales de la informática y los desafía a explorar cómo la computación y la tecnología pueden impactar el mundo. El Programa AP diseñó los Principios de Ciencias de la Computación de AP con el objetivo de crear líderes en los campos de la ciencia de la computación y atraer e involucrar a aquellos que tradicionalmente están subrepresentados con herramientas informáticas esenciales y oportunidades multidisciplinarias.
+          description_teacher: |-
+            CSP presenta a los estudiantes los conceptos fundamentales de la informática y los desafía a explorar cómo la computación y la tecnología pueden impactar el mundo. El Programa AP diseñó los Principios de Ciencias de la Computación de AP con el objetivo de crear líderes en los campos de la ciencia de la computación y atraer e involucrar a aquellos que tradicionalmente están subrepresentados con herramientas informáticas esenciales y oportunidades multidisciplinarias.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarte a comenzar a enseñar los principios de CS. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Haz clic aquí</a> para obtener más información sobre las oportunidades de aprendizaje profesional en tu región o <a href="https://code.org/educate/professional-development-online" target="blank" rel="noopener noreferrer">Haz clic aquí</a> para obtener más información sobre una opción en línea a tu propio ritmo.
+            
+            - Puede encontrar el _Programa de estudios_, el _Vocabulario del curso_ y otros recursos para ayudarlo a implementar este plan de estudios en el menú de Recursos para docentes a continuación.
+          version_title: "'24-'25"
+        self-paced-pl-microbit-2024:
+          title: "Enseñanza de la creación de aplicaciones con dispositivos (micro:bit)"
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 6 de CSD de Code.org: Creación de aplicaciones con dispositivos (micro:bit)** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en la Unidad 6: Creación de aplicaciones con dispositivos (micro:bit). Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar resolución de problemas y computación. "
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 6 de CSD de Code.org: Creación de aplicaciones con dispositivos (micro:bit)** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en la Unidad 6: Creación de aplicaciones con dispositivos (micro:bit). Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar resolución de problemas y computación. "
+          version_title: "'24 - '25"
+        k5-maker-pilot-2024:
+          title: Aprendizaje profesional a su propio ritmo para K-5 Maker
+          description_short: "Módulo de aprendizaje profesional para CSF Maker con curso micro:bit."
+          description_student: "#### El curso micro:bit cierra la brecha entre el mundo digital y el físico, y permite a los estudiantes transferir sus programas informáticos a aplicaciones del mundo real.\n\n#### **En este módulo, usted:**\n\n- #### Prepárese para enseñar conceptos básicos de codificación como eventos, bucles, condicionales, variables y funciones.\n- #### Obtenga experiencia práctica sobre cómo el hardware y el software pueden funcionar juntos.\n- #### Practique los conceptos clave incluidos en la unidad.\n- #### Prepárese para enseñar cualquiera de los cursos de CS Fundamentals Maker con micro:bit.\n\n#### **Tiempo total sugerido:** 150 minutos\n\n#### **Paso adicional:** Debido a que actualmente estamos probando esta unidad, primero debe inscribirse en la prueba piloto para poder ver las unidades curriculares. <strong><a href=\"http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot\" target=\"blank\" rel=\"noopener noreferrer\">Haga clic aquí para inscribirse en la prueba piloto</a></strong>"
+          description_teacher: "#### El curso micro:bit cierra la brecha entre el mundo digital y el físico, y permite a los estudiantes transferir sus programas informáticos a aplicaciones del mundo real.\n\n#### **En este módulo, usted:**\n\n- #### Prepárese para enseñar conceptos básicos de codificación como eventos, bucles, condicionales, variables y funciones.\n- #### Obtenga experiencia práctica sobre cómo el hardware y el software pueden funcionar juntos.\n- #### Practique los conceptos clave incluidos en la unidad.\n- #### Prepárese para enseñar cualquiera de los cursos de CS Fundamentals Maker con micro:bit.\n\n#### **Tiempo total sugerido:** 150 minutos\n\n#### **Paso adicional:** Debido a que actualmente estamos probando esta unidad, primero debe inscribirse en la prueba piloto para poder ver las unidades curriculares. <strong><a href=\"http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot\" target=\"blank\" rel=\"noopener noreferrer\">Haga clic aquí para inscribirse en la prueba piloto</a></strong>"
+          version_title: ''
+        foundations-of-cs-beta-2024:
+          title: Fundamentos de la informática BETA
+          description_short: ''
+          description_student: |-
+            ¡Bienvenido a Fundamentos de la informática! Este apasionante curso es tu puerta de entrada al poderoso mundo de la informática. Ya sea que tengas curiosidad sobre cómo funcionan las aplicaciones o quieras saber más sobre el impacto de la tecnología en la sociedad, este curso tiene algo para ti. A lo largo del semestre, aprenderá los conceptos básicos de programación, profundizará en cómo funciona Internet e incluso creará sus propios proyectos que podrían resolver problemas del mundo real.
+            
+            ⚠️ **Nota:** Esta es una versión beta del plan de estudios Fundamentos de CS que consta principalmente de contenido de nuestros planes de estudio existentes Descubrimientos en Ciencias de la Computación y Principios en Ciencias de la Computación. Como tal, verá las etiquetas CSD y CSP en guías de actividades, recursos y presentaciones de diapositivas. ¡Este no será el caso en la versión final del plan de estudios!
+          description_teacher: "El curso Fundamentos de la informática (FCS) es una introducción integral al amplio campo de la informática. Diseñado para estudiantes de secundaria, este curso integra conceptos fundamentales con experiencia práctica para fomentar una comprensión profunda de la informática, sus capacidades y sus impactos. El plan de estudios está estructurado para alinearse con los requisitos estatales y los estándares CSTA, ofreciendo una base sólida en informática que prepara a los estudiantes para estudios posteriores y futuras carreras en tecnología."
+          version_title: "'24-'25"
+        self-paced-pl-csd-2024:
+          title: Enseñando descubrimientos de informática
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al curso en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar CS Discoveries! Después de completar este curso en línea, **estarás listo para comenzar a enseñar el curso Descubrimientos en Ciencias de la Computación de Code.org** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** este curso a su propio ritmo está diseñado para ponerlo en el asiento del conductor y brindarle control sobre su propio aprendizaje. Se dan tiempos sugeridos para cada módulo y lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para profesores nuevos en Code.org y CS Discoveries. Sin embargo, puede **interactuar con el contenido en el orden que mejor se adapte a sus necesidades**. Recomendamos a todos los profesores **comenzar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de comenzar."
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al curso en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar CS Discoveries! Después de completar este curso en línea, **estarás listo para comenzar a enseñar el curso Descubrimientos en Ciencias de la Computación de Code.org** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** este curso a su propio ritmo está diseñado para ponerlo en el asiento del conductor y brindarle control sobre su propio aprendizaje. Se dan tiempos sugeridos para cada módulo y lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para profesores nuevos en Code.org y CS Discoveries. Sin embargo, puede **interactuar con el contenido en el orden que mejor se adapte a sus necesidades**. Recomendamos a todos los profesores **comenzar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de comenzar."
+          version_title: "'24 - '25"
+        self-paced-pl-csd-unit1-2024:
+          title: Enseñanza de la resolución de problemas y la informática
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 1 de CSD de Code.org: Resolución de problemas y computación** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en CSD Unidad 1: Resolución de problemas y computación. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar resolución de problemas y computación. "
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 1 de CSD de Code.org: Resolución de problemas y computación** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en CSD Unidad 1: Resolución de problemas y computación. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar resolución de problemas y computación. "
+          version_title: "'24-'25"
+        self-paced-pl-csd-unit2-2024:
+          title: Enseñanza del desarrollo web
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 2 de CSD de Code.org: Desarrollo web** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en CSD Unidad 2: Desarrollo web. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar resolución de problemas y computación. "
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 2 de CSD de Code.org: Desarrollo web** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en CSD Unidad 2: Desarrollo web. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar resolución de problemas y computación. "
+          version_title: "'24 - '25"
+        self-paced-pl-csd-unit3-2024:
+          title: Enseñanza de juegos y animaciones interactivas
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 3 de CSD de Code.org: Animaciones y juegos interactivos** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en CSD Unidad 3: Animaciones y juegos interactivos. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar resolución de problemas y computación. "
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 3 de CSD de Code.org: Animaciones y juegos interactivos** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en CSD Unidad 3: Animaciones y juegos interactivos. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar resolución de problemas y computación. "
+          version_title: "'24 - '25"
+        self-paced-pl-csd-unit5-2024:
+          title: Enseñanza de datos y sociedad
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 5 de CSD de Code.org: Datos y sociedad** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en CSD Unidad 5: Datos y sociedad. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar resolución de problemas y computación. "
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 5 de CSD de Code.org: Datos y sociedad** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en CSD Unidad 5: Datos y sociedad. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar resolución de problemas y computación. "
+          version_title: "'24 - '25"
+        self-paced-pl-physical-computing-2024:
+          title: Enseñanza de la creación de aplicaciones con dispositivos (Circuit Playground)
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 6 de CSD de Code.org: Creación de aplicaciones con dispositivos (Circuit Playground)** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en la Unidad 6: Creación de aplicaciones con dispositivos (Circuit Playground). Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar resolución de problemas y computación. "
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 6 de CSD de Code.org: Creación de aplicaciones con dispositivos (Circuit Playground)** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en la Unidad 6: Creación de aplicaciones con dispositivos (Circuit Playground). Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar resolución de problemas y computación. "
+          version_title: "'24 - '25"
+        pl-csd-summer-2024:
+          title: Taller presencial de PL de CSD 2024
+          description_short: ''
+          description_student: |-
+            **Vas a**:
+            
+            - Prepárate para enseñar CS Discoveries.
+            - Practique conceptos clave en el plan de estudios CS Discoveries.
+            - Crezca en su comprensión de la educación informática equitativa.
+            - Desarrollar empatía por la experiencia del estudiante.
+            - Forma parte de una red de profesores que realizan un trabajo similar.
+          description_teacher: |-
+            **Vas a**:
+            
+            - Prepárate para enseñar CS Discoveries.
+            - Practique conceptos clave en el plan de estudios CS Discoveries.
+            - Crezca en su comprensión de la educación informática equitativa.
+            - Desarrollar empatía por la experiencia del estudiante.
+            - Forma parte de una red de profesores que realizan un trabajo similar.
+          version_title: "'24-'25"
+        virtual-pl-csd-summer-2024:
+          title: Curso virtual de taller de PL de CSD
+          description_short: ''
+          description_student: "**Vas a:**\n\n- Prepárate para enseñar CS Discoveries.\n- Practique conceptos clave en el plan de estudios CS Discoveries.\n- Crezca en su comprensión de la educación informática equitativa. \n- Desarrollar empatía por la experiencia del estudiante. \n- Forma parte de una red de profesores que realizan un trabajo similar."
+          description_teacher: "**Los participantes:**\n\n- Prepárate para enseñar CS Discoveries.\n- Practique conceptos clave en el plan de estudios CS Discoveries.\n- Crecer en su comprensión de una educación informática equitativa. \n- Desarrollar empatía por la experiencia del estudiante. \n- Forma parte de una red de profesores que realizan un trabajo similar."
+          version_title: "'24-'25"
+        vpl-csd-2024:
+          title: "Aprendizaje profesional virtual del CSD '24-'25"
+          description_short: ''
+          description_student: "##### **Vas a:**\n\n- ##### Prepárate para enseñar CS Discoveries.\n- ##### Practique conceptos clave en el plan de estudios CS Discoveries.\n- ##### Aumente su comprensión de la educación informática equitativa.\n- ##### Desarrollar empatía por la experiencia del estudiante.\n- ##### Forma parte de una red de profesores que realizan un trabajo similar al tuyo."
+          description_teacher: "##### **Los participantes:**\n\n- ##### Prepárate para enseñar CS Discoveries.\n- ##### Practique conceptos clave en el plan de estudios CS Discoveries.\n- ##### Crecer en su comprensión de la educación equitativa en informática.\n- ##### Desarrollar empatía por la experiencia del estudiante.\n- ##### Forma parte de una red de profesores que realizan un trabajo similar al tuyo."
+          version_title: '2024'
+        vpl-csa-2024:
+          title: Aprendizaje profesional virtual de la CSA 2024-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: '2024'
+        self-paced-pl-csa-2024:
+          title: self-paced-pl-csa-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        vpl-csp-2024:
+          title: Curso virtual de taller de principios de CS PL
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: '2024'
+        self-paced-pl-csp-2024:
+          title: Enseñanza de los principios de informática
+          description_short: ''
+          description_student: "## Bienvenido\n\n##### ¡Bienvenido a los módulos en línea gratuitos y a su propio ritmo de Code.org para que los educadores comiencen a enseñar los principios de CS! Después de completar estos módulos en línea, estará listo para comenzar a enseñar el curso Principios de Ciencias de la Computación de Code.org con sus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n##### **Ve a tu propio ritmo**: Estos módulos a su propio ritmo están diseñados para ponerlo al volante y brindarle control sobre su propio aprendizaje. Se dan tiempos sugeridos para cada módulo y lección. Sin embargo, le animamos a que interactúe con el contenido a su propio ritmo.\n\n### Elige tu contenido\n\n##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para docentes nuevos en Code.org y CS Principles. Sin embargo, puedes interactuar con el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los profesores que comiencen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de comenzar."
+          description_teacher: "## Bienvenido\n\n##### ¡Bienvenido a los módulos en línea gratuitos y a su propio ritmo de Code.org para que los educadores comiencen a enseñar los principios de CS! Después de completar estos módulos en línea, estará listo para comenzar a enseñar el curso Principios de Ciencias de la Computación de Code.org con sus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n##### **Ve a tu propio ritmo**: Estos módulos a su propio ritmo están diseñados para ponerlo al volante y brindarle control sobre su propio aprendizaje. Se dan tiempos sugeridos para cada módulo y lección. Sin embargo, le animamos a que interactúe con el contenido a su propio ritmo.\n\n### Elige tu contenido\n\n##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para docentes nuevos en Code.org y CS Principles. Sin embargo, puedes interactuar con el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los profesores que comiencen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de comenzar."
+          version_title: ''
+        csf-sandbox-2024:
+          title: csf-sandbox-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-aiml-2024:
+          title: Enseñanza de la IA y el aprendizaje automático
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 7 de CSD de Code.org: IA y aprendizaje automático** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en CSD Unidad 7: IA y aprendizaje automático. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar resolución de problemas y computación. "
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 7 de CSD de Code.org: IA y aprendizaje automático** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en CSD Unidad 7: IA y aprendizaje automático. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar resolución de problemas y computación. "
+          version_title: "'24 - '25"
+        self-paced-pl-csd-unit4-2024:
+          title: Enseñando el proceso de diseño
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 4 de CSD de Code.org: El proceso de diseño** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en CSD Unidad 4: El proceso de diseño. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar resolución de problemas y computación. "
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad 4 de CSD de Code.org: El proceso de diseño** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en CSD Unidad 4: El proceso de diseño. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar resolución de problemas y computación. "
+          version_title: "'24 - '25"
+        self-paced-pl-ai-101-2024:
+          title: Aprendizaje profesional a su propio ritmo de IA 101 para educadores
+          description_short: ''
+          description_student: "## ¡Bienvenido!\n\nBienvenido al curso en línea a su propio ritmo de Code.org para que los educadores comiencen con la IA.\n\nEsta es una serie de aprendizaje en línea gratuita y fundamental para cualquier docente o educador interesado en el innovador mundo de la inteligencia artificial (IA) y su potencial transformador en la educación.\n\nEn esta serie de cinco partes, desmitificaremos la IA, exploraremos la implementación responsable, abordaremos los sesgos y mostraremos cómo el aprendizaje impulsado por IA puede revolucionar los resultados de los estudiantes.\n\nÚnase a nosotros en este viaje de exploración y empoderamiento, y descubra el futuro de la enseñanza con y sobre IA.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** este curso a su propio ritmo está diseñado para ponerlo en el asiento del conductor y brindarle control sobre su propio aprendizaje. Se dan tiempos sugeridos para cada módulo y lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para profesores nuevos en IA. Sin embargo, puedes interactuar con el contenido en el orden que mejor se adapte a tus necesidades."
+          description_teacher: "## ¡Bienvenido!\n\nBienvenido al curso en línea a su propio ritmo de Code.org para que los educadores comiencen con la IA.\n\nEsta es una serie de aprendizaje en línea gratuita y fundamental para cualquier docente o educador interesado en el innovador mundo de la inteligencia artificial (IA) y su potencial transformador en la educación.\n\nEn esta serie de cinco partes, desmitificaremos la IA, exploraremos la implementación responsable, abordaremos los sesgos y mostraremos cómo el aprendizaje impulsado por IA puede revolucionar los resultados de los estudiantes.\n\nÚnase a nosotros en este viaje de exploración y empoderamiento, y descubra el futuro de la enseñanza con y sobre IA.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** este curso a su propio ritmo está diseñado para ponerlo en el asiento del conductor y brindarle control sobre su propio aprendizaje. Se dan tiempos sugeridos para cada módulo y lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para profesores nuevos en IA. Sin embargo, puedes interactuar con el contenido en el orden que mejor se adapte a tus necesidades."
+          version_title: ''
+        lorisandbox:
+          title: lorisandbox
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        sandbox-pl-cv:
+          title: sandbox-pl-cv
+          description_short: 'Sandbox para la enseñanza con visión artificial a su propio ritmo PL '
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csa-2024:
+          title: "Ciencias de la Computación A ('24-'25)"
+          description_short: Aprenda habilidades de ingeniería de software y programación Java.
+          description_student: "Ciencias de la Computación A (CSA) introduce a los estudiantes a la ingeniería de software y a la programación y diseño orientado a objetos utilizando el lenguaje de programación Java. Este plan de estudios cubre una amplia gama de temas, incluido el diseño de soluciones a problemas, el uso de estructuras de datos para organizar grandes conjuntos de datos, el desarrollo e implementación de algoritmos para procesar datos y descubrir nueva información, el análisis de posibles soluciones y las implicaciones éticas y sociales de los sistemas informáticos."
+          description_teacher: |-
+            Ciencias de la Computación A (CSA) introduce a los estudiantes a la ingeniería de software y a la programación y diseño orientado a objetos utilizando el lenguaje de programación Java. Este plan de estudios cubre una amplia gama de temas, incluido el diseño de soluciones a problemas, el uso de estructuras de datos para organizar grandes conjuntos de datos, el desarrollo e implementación de algoritmos para procesar datos y descubrir nueva información, el análisis de posibles soluciones y las implicaciones éticas y sociales de los sistemas informáticos.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarlo a comenzar a enseñar CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Haga clic aquí</a> para obtener más información sobre las oportunidades de aprendizaje profesional en su región.
+            
+            - Puede encontrar el _Programa de estudios_, el _Vocabulario del curso_ y otros recursos para ayudarle a implementar este currículo en el menú Recursos para docentes a continuación.
+          version_title: "'24-'25"
+        focus-on-coding-2024:
+          title: "Centrados en la codificación '24-'25 (Descubrimientos de CS)"
+          description_short: Una colección de unidades de descubrimiento de ciencias de la computación que se centra en las habilidades de codificación y programación.
+          description_student: |-
+            Focus on Coding es una colección de unidades de cursos de Computer Science Discoveries (CS Discoveries) que permiten a los estudiantes desarrollar sus habilidades de codificación en desarrollo web, juegos y animación, y creación de aplicaciones para dispositivos. Los estudiantes crean artefactos auténticos y utilizan la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Está interesado en enseñar CS Discoveries?** Hay desarrollo profesional disponible para ayudarlo a comenzar a enseñar CS Discoveries. [Haga clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en su región o [haga clic aquí][1] para obtener más información sobre una opción en línea a su propio ritmo.
+          description_teacher: |-
+            Focus on Coding es una colección de unidades de cursos de Computer Science Discoveries (CS Discoveries) que permiten a los estudiantes desarrollar sus habilidades de codificación en desarrollo web, juegos y animación, y creación de aplicaciones para dispositivos. Los estudiantes crean artefactos auténticos y utilizan la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarte a comenzar a enseñar CS Discoveries. [Haz clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en tu región o [haz clic aquí][1] para obtener más información sobre una opción en línea a tu propio ritmo.
+            
+            - Puede acceder a la [Guía de inicio][2] para obtener más información sobre cómo comenzar.
+          version_title: "'24-'25"
+        focus-on-creativity-2024:
+          title: "Centrados en la creatividad '24-'25 (Descubrimientos de la informática) ('24-'25)"
+          description_short: Una colección de unidades de descubrimiento de ciencias de la computación que se centra en ser creativo y crear con la informática.
+          description_student: |-
+            Focus on Creativity es una colección de unidades de Computer Science Discoveries (CS Discoveries) que permite a los estudiantes ser creativos mientras aprenden a crear sitios web, animaciones y juegos, y aplicaciones para dispositivos. Los estudiantes crean artefactos auténticos y se involucran con la informática no sólo como medio para la creatividad, sino también para la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Está interesado en enseñar CS Discoveries?** Hay desarrollo profesional disponible para ayudarlo a comenzar a enseñar CS Discoveries. [Haga clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en su región o [haga clic aquí][1] para obtener más información sobre una opción en línea a su propio ritmo.
+          description_teacher: |-
+            Focus on Creativity es una colección de unidades de cursos de Computer Science Discoveries (CS Discoveries) que permiten a los estudiantes ser creativos mientras aprenden a crear sitios web, animaciones y juegos, y aplicaciones para dispositivos. Los estudiantes crean artefactos auténticos y se involucran con la informática no sólo como medio para la creatividad, sino también para la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarte a comenzar a enseñar CS Discoveries. [Haz clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en tu región o [haz clic aquí][1] para obtener más información sobre una opción en línea a tu propio ritmo.
+            
+            - Puede acceder a la [Guía de inicio][2] para obtener más información sobre cómo comenzar.
+          version_title: "'24-'25"
+        focus-on-hardware-2024:
+          title: "Enfoque en el hardware '24-'25 (Descubrimientos de CS)"
+          description_short: Una colección de unidades de descubrimiento de ciencias de la computación que exploran cómo funcionan las computadoras y los dispositivos físicos más pequeños.
+          description_student: |-
+            Focus on Hardware es una colección de unidades de Computer Science Discoveries (CS Discoveries) que permite a los estudiantes utilizar datos y dispositivos físicos para resolver problemas. Los estudiantes crean artefactos auténticos y utilizan la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Está interesado en enseñar CS Discoveries?** Hay desarrollo profesional disponible para ayudarlo a comenzar a enseñar CS Discoveries. [Haga clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en su región o [haga clic aquí][1] para obtener más información sobre una opción en línea a su propio ritmo.
+          description_teacher: |-
+            Focus on Hardware es una colección de unidades del curso Computer Science Discoveries (CS Discoveries) que permite a los estudiantes utilizar datos y dispositivos físicos para resolver problemas. Los estudiantes crean artefactos auténticos y utilizan la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarte a comenzar a enseñar CS Discoveries. [Haz clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en tu región o [haz clic aquí][1] para obtener más información sobre una opción en línea a tu propio ritmo.
+            
+            - Puede acceder a la [Guía de inicio][2] para obtener más información sobre cómo comenzar.
+          version_title: "'24-'25"
+        focus-on-design-with-purpose-2024:
+          title: "Centrados en el diseño con propósito '24-'25 (Descubrimientos de CS)"
+          description_short: Una colección de unidades de descubrimiento de ciencias de la computación que se centra en el proceso de diseño y en escuchar a los usuarios para resolver problemas del mundo real.
+          description_student: |-
+            Focus on Design with Purpose es una colección de unidades de Computer Science Discoveries (CS Discoveries) que permite a los estudiantes pensar en las necesidades de los usuarios al diseñar sitios web y aplicaciones para dispositivos. Los estudiantes crean artefactos auténticos y utilizan la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Está interesado en enseñar CS Discoveries?** Hay desarrollo profesional disponible para ayudarlo a comenzar a enseñar CS Discoveries. [Haga clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en su región o [haga clic aquí][1] para obtener más información sobre una opción en línea a su propio ritmo.
+          description_teacher: |-
+            Focus on Design with Purpose es una colección de unidades de curso de Computer Science Discoveries (CS Discoveries) que permite a los estudiantes pensar en las necesidades de los usuarios al diseñar sitios web y aplicaciones para dispositivos. Los estudiantes crean artefactos auténticos y utilizan la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarte a comenzar a enseñar CS Discoveries. [Haz clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en tu región o [haz clic aquí][1] para obtener más información sobre una opción en línea a tu propio ritmo.
+            
+            - Puede acceder a la [Guía de inicio][2] para obtener más información sobre cómo comenzar.
+          version_title: "'24-'25"
+        focus-on-impact-in-society-2024:
+          title: "Enfoque en el impacto en la sociedad '24-'25 (Descubrimientos de CS)"
+          description_short: Una colección de unidades de descubrimiento de la ciencia informática que se centran en el impacto de la tecnología en la sociedad.
+          description_student: |-
+            Focus on Impact in Society es una colección de unidades de Computer Science Discoveries (CS Discoveries) que permite a los estudiantes pensar en la informática como una herramienta para resolver problemas mientras consideran los impactos sociales más amplios de varios aspectos de la informática. Los estudiantes crean artefactos auténticos y utilizan la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Está interesado en enseñar CS Discoveries?** Hay desarrollo profesional disponible para ayudarlo a comenzar a enseñar CS Discoveries. [Haga clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en su región o [haga clic aquí][1] para obtener más información sobre una opción en línea a su propio ritmo.
+          description_teacher: |-
+            Focus on Impact in Society es una colección de unidades de curso de Computer Science Discoveries (CS Discoveries) que permite a los estudiantes pensar en la informática como una herramienta para resolver problemas mientras consideran los impactos sociales más amplios de varios aspectos de la informática. Los estudiantes crean artefactos auténticos y utilizan la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarte a comenzar a enseñar CS Discoveries. [Haz clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en tu región o [haz clic aquí][1] para obtener más información sobre una opción en línea a tu propio ritmo.
+            
+            - Puede acceder a la [Guía de inicio][2] para obtener más información sobre cómo comenzar.
+          version_title: "'24-'25"
+        focus-on-data-2024:
+          title: "Enfoque en los datos '24-'25 (Descubrimientos de CS)"
+          description_short: 'Una colección de unidades de Computer Science Discovery que se centra en los datos: cómo los utilizan las computadoras y cómo se utilizan en la sociedad. '
+          description_student: |-
+            Focus on Data es una colección de unidades de Computer Science Discoveries (CS Discoveries) que permite a los estudiantes utilizar datos para resolver problemas. Los estudiantes crean artefactos auténticos y utilizan la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Está interesado en enseñar CS Discoveries?** Hay desarrollo profesional disponible para ayudarlo a comenzar a enseñar CS Discoveries. [Haga clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en su región o [haga clic aquí][1] para obtener más información sobre una opción en línea a su propio ritmo.
+          description_teacher: |-
+            Focus on Data es una colección de unidades del curso Computer Science Discoveries (CSD) que permite a los estudiantes utilizar datos para resolver problemas. Los estudiantes crean artefactos auténticos y utilizan la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarte a comenzar a enseñar CS Discoveries. [Haz clic aquí][0] para obtener más información sobre las oportunidades de aprendizaje profesional en tu región o [haz clic aquí][1] para obtener más información sobre una opción en línea a tu propio ritmo.
+            
+            - Puede acceder a la [Guía de inicio][2] para obtener más información sobre cómo comenzar.
+          version_title: "'24-'25"
+        self-paced-foundations-cs-2024:
+          title: Fundamentos de la enseñanza de la informática
+          description_short: ''
+          description_student: "## ¡Bienvenido!\n\n##### ¡Bienvenido al curso en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar <a href=\"https://studio.code.org/courses/foundations-of-cs-beta-2024\" target=\"blank\" rel=\"noopener noreferrer\">**Fundamentos de la informática**</a>! Después de completar este curso en línea, estará listo para comenzar a enseñar el curso **Fundamentos de la informática** de Code.org con sus estudiantes.\n\n### **Encuentra el aprendizaje que funcione para ti**\n\n- ##### **Comience con Introducción a la enseñanza de los fundamentos de la informática:** Esta sección le presentará este curso y le ayudará a personalizar su ruta de aprendizaje.\n- ##### **Vaya a su propio ritmo:** Este curso a su propio ritmo está diseñado para ponerlo en el asiento del conductor y darle control sobre su propio aprendizaje. Se dan tiempos sugeridos para cada módulo y lección. Sin embargo, le animamos a que interactúe con el contenido a su propio ritmo.\n- ##### **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en Fundamentos de Ciencias de la Computación. Sin embargo, puedes interactuar con el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los profesores que comiencen con la breve unidad de bienvenida para aprender más sobre este curso de aprendizaje profesional antes de comenzar."
+          description_teacher: "## ¡Bienvenido!\n\n##### ¡Bienvenido al curso en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar <a href=\"https://studio.code.org/courses/foundations-of-cs-beta-2024\" target=\"blank\" rel=\"noopener noreferrer\">**Fundamentos de la informática**</a>! Después de completar este curso en línea, estará listo para comenzar a enseñar el curso **Fundamentos de la informática** de Code.org con sus estudiantes.\n\n### **Encuentra el aprendizaje que funcione para ti**\n\n- ##### **Comience con Introducción a la enseñanza de los fundamentos de la informática:** Esta sección le presentará este curso y le ayudará a personalizar su ruta de aprendizaje.\n- ##### **Vaya a su propio ritmo:** Este curso a su propio ritmo está diseñado para ponerlo en el asiento del conductor y darle control sobre su propio aprendizaje. Se dan tiempos sugeridos para cada módulo y lección. Sin embargo, le animamos a que interactúe con el contenido a su propio ritmo.\n- ##### **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en Fundamentos de Ciencias de la Computación. Sin embargo, puedes interactuar con el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los profesores que comiencen con la breve unidad de bienvenida para aprender más sobre este curso de aprendizaje profesional antes de comenzar."
+          version_title: "'24-'25"
+        self-paced-pl-computer-vision:
+          title: visión por computadora a su propio ritmo
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-coding-with-ai:
+          title: codificación pl a tu propio ritmo con inteligencia artificial
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        3-5gamedesign-2024:
+          title: Preparación para enseñar diseño de juegos a nivel elemental
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores se familiaricen con el diseño de juegos elemental! Después de completar esta experiencia de aprendizaje profesional, **se sentirá cómodo con los conceptos básicos de diseño de juegos para estudiantes de escuela primaria**.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos en la enseñanza de informática y Code.org. Sin embargo, puedes interactuar con el contenido en el orden que mejor se adapte a tus necesidades. Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir la descripción general. "
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores se familiaricen con el diseño de juegos elemental! Después de completar esta experiencia de aprendizaje profesional, **se sentirá cómodo con los conceptos básicos de diseño de juegos para estudiantes de escuela primaria**.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos en la enseñanza de informática y Code.org. Sin embargo, puedes interactuar con el contenido en el orden que mejor se adapte a tus necesidades. Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir la descripción general. "
+          version_title: ''
+        microbitmakermodule-2024:
+          title: "Preparándose para enseñar Maker con micro:bit"
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores se familiaricen con Maker con micro:bit! Después de completar esta experiencia de aprendizaje profesional, **se sentirá cómodo con los conceptos básicos de codificación y creación**.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos en la enseñanza de informática y Code.org. Sin embargo, puedes interactuar con el contenido en el orden que mejor se adapte a tus necesidades. Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir la descripción general. "
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores se familiaricen con Maker con micro:bit! Después de completar esta experiencia de aprendizaje profesional, **se sentirá cómodo con los conceptos básicos de codificación y creación**.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos en la enseñanza de informática y Code.org. Sin embargo, puedes interactuar con el contenido en el orden que mejor se adapte a tus necesidades. Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir la descripción general. "
+          version_title: ''
+        elementaryai-2024:
+          title: Preparándose para enseñar cómo toma decisiones la IA
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores se familiaricen con la inteligencia artificial (IA) y el aprendizaje automático! Después de completar esta experiencia de aprendizaje profesional, **se sentirá cómodo con los conceptos básicos de inteligencia artificial y aprendizaje automático**.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos en la enseñanza de informática y Code.org. Sin embargo, puedes interactuar con el contenido en el orden que mejor se adapte a tus necesidades. Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir la descripción general. "
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores se familiaricen con la inteligencia artificial (IA) y el aprendizaje automático! Después de completar esta experiencia de aprendizaje profesional, **se sentirá cómodo con los conceptos básicos de inteligencia artificial y aprendizaje automático**.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos en la enseñanza de informática y Code.org. Sin embargo, puedes interactuar con el contenido en el orden que mejor se adapte a tus necesidades. Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir la descripción general. "
+          version_title: ''
+        self-paced-pl-computer-vision-2024:
+          title: Enseñanza de la visión por computadora
+          description_short: ''
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad de Visión Computacional de Code.org** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en Computer Vision. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar visión artificial."
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad de Visión Computacional de Code.org** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en Computer Vision. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar visión artificial. "
+          version_title: "'24-'25"
+        self-paced-pl-coding-with-ai-2024:
+          title: Enseñando codificación con IA
+          description_short: ''
+          description_student: "## Bienvenido\n\n#### ¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad de codificación con IA de Code.org** con tus estudiantes.\n\n### **Encuentra el aprendizaje que funcione para ti**\n\n- #### **Vaya a su propio ritmo:** Esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- #### **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos en Code.org y Coding with AI. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar codificación con IA."
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito y a su propio ritmo de Code.org para que los educadores comiencen a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás listo para comenzar a enseñar la Unidad de codificación con IA de Code.org** con tus estudiantes.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en Coding with AI. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir Primeros pasos con Code.org y pasar directamente a Preparación para enseñar codificación con IA."
+          version_title: "'24-'25"
+        data-science-2024:
+          title: "[PILOTO] Ciencia de datos"
+          description_short: Explore el mundo de la ciencia de datos utilizando herramientas de visualización de datos para analizar e interpretar fenómenos del mundo real.
+          description_student: "Este plan de estudios de ciencia de datos presenta a los estudiantes los principios y habilidades fundamentales de la ciencia de datos. Los estudiantes aprenderán a hacer preguntas de datos efectivas, recopilar y limpiar conjuntos de datos y crear visualizaciones atractivas utilizando herramientas como CODAP (Unidad 1) y Python (Unidad 2). A medida que los estudiantes progresan, aplican sus habilidades de programación y análisis a conjuntos de datos del mundo real, adquiriendo experiencia con técnicas esenciales de análisis de datos, como agrupación, filtrado y cálculos estadísticos. El plan de estudios culmina con proyectos que resaltan la importancia de las prácticas de datos éticos, la narración de datos y la creación de conocimientos prácticos a partir de conjuntos de datos complejos."
+          description_teacher: "La ciencia de datos construye una base sólida en el análisis y visualización de datos para los estudiantes, utilizando herramientas de programación como CODAP en la Unidad 1 y Python en la Unidad 2 para profundizar sus habilidades analíticas. A través de lecciones y proyectos estructurados, los estudiantes aprenderán a utilizar herramientas de ciencia de datos para transformar datos sin procesar en visualizaciones significativas. Las unidades enfatizan consideraciones éticas, guiando a los estudiantes a través de discusiones y actividades enfocadas en la privacidad de los datos, el sesgo y los impactos sociales de las decisiones basadas en datos. Al final de cada unidad, los estudiantes estarán preparados para investigar y resolver problemas del mundo real utilizando un enfoque integral basado en datos, que culminará en un proyecto que mostrará su capacidad para crear historias de datos convincentes."
+          version_title: "'24-'25"
+        tesselementaryai-2024:
+          title: tesselementaryai-2024
+          description_short: Prueba de solución para empezar
+          description_student: Prueba de solución para empezar
+          description_teacher: Prueba de solución para empezar
+          version_title: ''
+        csa-alt-2025:
+          title: "Ciencias de la Computación A ('25-'26)"
+          description_short: Aprenda habilidades de ingeniería de software y programación Java.
+          description_student: "Ciencias de la Computación A (CSA) introduce a los estudiantes a la ingeniería de software y a la programación y diseño orientado a objetos utilizando el lenguaje de programación Java. Este plan de estudios cubre una amplia gama de temas, incluido el diseño de soluciones a problemas, el uso de estructuras de datos para organizar grandes conjuntos de datos, el desarrollo e implementación de algoritmos para procesar datos y descubrir nueva información, el análisis de posibles soluciones y las implicaciones éticas y sociales de los sistemas informáticos."
+          description_teacher: |-
+            **Esta versión del plan de estudios de CSA sigue la secuencia descrita en el CED de CSA de AP.**
+            
+            Ciencias de la Computación A (CSA) introduce a los estudiantes a la ingeniería de software y a la programación y diseño orientado a objetos utilizando el lenguaje de programación Java. Este plan de estudios cubre una amplia gama de temas, incluido el diseño de soluciones a problemas, el uso de estructuras de datos para organizar grandes conjuntos de datos, el desarrollo e implementación de algoritmos para procesar datos y descubrir nueva información, el análisis de posibles soluciones y las implicaciones éticas y sociales de los sistemas informáticos.
+          version_title: "'25-'26"
+        sandbox-csf-2025:
+          title: sandbox-csf-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csa-2025:
+          title: "Ciencias de la Computación A ('25-'26)"
+          description_short: Aprenda habilidades de ingeniería de software y programación Java.
+          description_student: "Ciencias de la Computación A (CSA) introduce a los estudiantes a la ingeniería de software y a la programación y diseño orientado a objetos utilizando el lenguaje de programación Java. Este plan de estudios cubre una amplia gama de temas, incluido el diseño de soluciones a problemas, el uso de estructuras de datos para organizar grandes conjuntos de datos, el desarrollo e implementación de algoritmos para procesar datos y descubrir nueva información, el análisis de posibles soluciones y las implicaciones éticas y sociales de los sistemas informáticos."
+          description_teacher: |-
+            Ciencias de la Computación A (CSA) introduce a los estudiantes a la ingeniería de software y a la programación y diseño orientado a objetos utilizando el lenguaje de programación Java. Este plan de estudios cubre una amplia gama de temas, incluido el diseño de soluciones a problemas, el uso de estructuras de datos para organizar grandes conjuntos de datos, el desarrollo e implementación de algoritmos para procesar datos y descubrir nueva información, el análisis de posibles soluciones y las implicaciones éticas y sociales de los sistemas informáticos.
+            
+            **¿Sabías?**
+            
+            - Hay desarrollo profesional disponible para ayudarlo a comenzar a enseñar CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Haga clic aquí</a> para obtener más información sobre las oportunidades de aprendizaje profesional en su región.
+            
+            - Puede encontrar el _Programa de estudios_, el _Vocabulario del curso_ y otros recursos para ayudarle a implementar este currículo en el menú Recursos para docentes a continuación.
+          version_title: "'25-'26"
+        csa-pilot-2025:
+          title: "Ciencias de la Computación A (Piloto '24-'25 - Marco 2025)"
+          description_short: Aprenda habilidades de ingeniería de software y programación Java.
+          description_student: "Ciencias de la Computación A (CSA) introduce a los estudiantes a la ingeniería de software y a la programación y diseño orientado a objetos utilizando el lenguaje de programación Java. Este plan de estudios cubre una amplia gama de temas, incluido el diseño de soluciones a problemas, el uso de estructuras de datos para organizar grandes conjuntos de datos, el desarrollo e implementación de algoritmos para procesar datos y descubrir nueva información, el análisis de posibles soluciones y las implicaciones éticas y sociales de los sistemas informáticos."
+          description_teacher: "Ciencias de la Computación A (CSA) introduce a los estudiantes a la ingeniería de software y a la programación y diseño orientado a objetos utilizando el lenguaje de programación Java. Este plan de estudios cubre una amplia gama de temas, incluido el diseño de soluciones a problemas, el uso de estructuras de datos para organizar grandes conjuntos de datos, el desarrollo e implementación de algoritmos para procesar datos y descubrir nueva información, el análisis de posibles soluciones y las implicaciones éticas y sociales de los sistemas informáticos."
+          version_title: "'24-'25"
+        exploring-gen-ai-2024:
+          title: Explorando la IA generativa
+          description_short: 'Aprenda los conceptos básicos de la IA generativa: cómo funciona la IA y cómo utilizarla. '
+          description_student: Aprenda cómo funciona la IA y cómo utilizar la IA generativa
+          description_teacher: "Explorando la IA generativa es un plan de estudios de dos unidades que explora cómo funciona la IA y cómo utilizar la IA generativa. Los estudiantes participan en actividades prácticas que desentrañan la caja negra de la IA generativa a través de actividades centradas en los estudiantes y debates en clase, respaldados por una serie de videos que desmitifican la IA generativa para una amplia audiencia. Con una base sólida, los estudiantes aprenden a personalizar modelos de lenguaje utilizando el nuevo laboratorio AI Chat, que les proporciona las herramientas para seleccionar modelos de lenguaje, aplicar indicaciones del sistema y seleccionar información de recuperación para personalizar su chatbot. Los estudiantes crean chatbots para resolver una variedad de problemas e interrogan la validez de las respuestas y el uso apropiado de los chatbots en la sociedad."
+          version_title: "'24-'25"
+        csd-ayw1-debugging:
+          title: "Taller nº 1 del año académico del CSD: depuración"
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        sandbox-data-science-pl:
+          title: sandbox-data-science-pl
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csd-summer-puertorico-2024:
+          title: Descubrimientos de Ciencias de la Computación - Taller de 5 Dias 2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        creativity-with-ai-2024:
+          title: Creatividad con AI Pilot
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'24-'25"
+        self-paced-exploring-gen-ai-2024:
+          title: "Explorando la IA generativa: aprendizaje profesional a su propio ritmo"
+          description_short: "## ¡Bienvenido! \n##### Este módulo de aprendizaje profesional está diseñado para ayudarlo a prepararse para enseñar el curso Explorando IA Generativa de Code.org.\n\n##### Exploring Generative AI está diseñado como un curso independiente para estudiantes de 8.º a 12.º grado que se puede integrar sin problemas en cualquier plan de estudios existente, ofreciendo a los docentes la flexibilidad de introducirlo de acuerdo con su horario y necesidades educativas. \n\n### Encuentra el aprendizaje que funcione para ti\n* **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n* **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en la unidad de IA generativa. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir la sección Primeros pasos con Code.org y pasar directamente a la Unidad Explorando la IA Generativa. "
+          description_student: "## ¡Bienvenido!\n\n##### Este módulo de aprendizaje profesional está diseñado para ayudarlo a prepararse para enseñar el curso Explorando IA Generativa de Code.org.\n\n##### Exploring Generative AI está diseñado como un curso independiente para estudiantes de 8.º a 12.º grado que se puede integrar sin problemas en cualquier plan de estudios existente, ofreciendo a los docentes la flexibilidad de introducirlo de acuerdo con su horario y necesidades educativas.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en la unidad de IA generativa. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir la sección Primeros pasos con Code.org y pasar directamente a la Unidad Explorando la IA Generativa. "
+          description_teacher: "## ¡Bienvenido!\n\n##### Este módulo de aprendizaje profesional está diseñado para ayudarlo a prepararse para enseñar el curso Explorando IA Generativa de Code.org.\n\n##### Exploring Generative AI está diseñado como un curso independiente para 8 a 12 estudiantes que se puede integrar sin problemas en cualquier plan de estudios existente, ofreciendo a los docentes la flexibilidad de introducirlo según su horario y necesidades educativas.\n\n### Encuentra el aprendizaje que funcione para ti\n\n- **Vaya a su propio ritmo:** esta experiencia de aprendizaje a su propio ritmo está diseñada para brindarle control sobre su propio aprendizaje. Se dan horarios sugeridos para cada lección.  Sin embargo, le recomendamos que interactúe con el contenido a su propio ritmo.\n\n- **Elige tu contenido:** El contenido está organizado en la progresión sugerida para profesores nuevos tanto en Code.org como en la unidad de IA generativa. Sin embargo, puedes **interactuar con el contenido en el orden que mejor se adapte a tus necesidades.** Si ya estás familiarizado con la plataforma Code.org, puedes optar por omitir la sección Primeros pasos con Code.org y pasar directamente a la Unidad Explorando la IA Generativa. "
+          version_title: ''
+        self-paced-pl-equitymodule-2024:
+          title: La equidad de Code.org en la informática
+          description_short: ''
+          description_student: "##### ¡Bienvenido! Este curso general K-12, independiente del currículo, se centra en los conceptos fundamentales y las aplicaciones concretas de la equidad en la informática. No es necesario tener conocimientos previos de equidad o informática para participar en este curso. Damos la bienvenida a estudiantes adultos de todos los grados y contextos de enseñanza para que se unan a nuestra comunidad de educadores con mentalidad de equidad.\n\n* * *\n\n##### **Encuentra el aprendizaje que funcione para ti:**\n\n- ##### **Vaya a su propio ritmo:** Este curso a su propio ritmo está diseñado para ponerlo en el asiento del conductor y brindarle control sobre su aprendizaje. Se proporcionan horarios sugeridos para cada módulo y lección. Sin embargo, le animamos a que interactúe con el contenido a su propio ritmo.\n\n- ##### **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para docentes nuevos en equidad en informática. Sin embargo, puedes interactuar con el contenido en el orden que mejor se adapte a tus necesidades."
+          description_teacher: "##### ¡Bienvenido! Este curso general K-12, independiente del currículo, se centra en los conceptos fundamentales y las aplicaciones concretas de la equidad en la informática. No es necesario tener conocimientos previos de equidad o informática para participar en este curso. Damos la bienvenida a estudiantes adultos de todos los grados y contextos de enseñanza para que se unan a nuestra comunidad de educadores con mentalidad de equidad.\n\n* * *\n\n##### **Encuentra el aprendizaje que funcione para ti:**\n\n- ##### **Vaya a su propio ritmo:** Este curso a su propio ritmo está diseñado para ponerlo en el asiento del conductor y brindarle control sobre su aprendizaje. Se proporcionan horarios sugeridos para cada módulo y lección. Sin embargo, le animamos a que interactúe con el contenido a su propio ritmo.\n\n- ##### **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para docentes nuevos en equidad en informática. Sin embargo, puedes interactuar con el contenido en el orden que mejor se adapte a tus necesidades."
+          version_title: ''
+        melissasandbox-2025:
+          title: melissasandbox-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+    resources:
+      curriculum/csd/2017:
+        name: Plan de estudios
+        url: "https://curriculum.code.org/csd-1718/"
+      teacher_forum_6/csd/2017:
+        name: Foro de profesores
+        url: "https://forum.code.org/c/csd"
+      curriculum/csd/2018:
+        name: Plan de estudios
+        url: "https://curriculum.code.org/csd-18/"
+      teacher_forum_6/csd/2018:
+        name: Foro de profesores
+        url: "https://forum.code.org/c/csd"
+      curriculum/csd/2019:
+        name: Plan de estudios
+        url: "https://curriculum.code.org/csd-19/"
+      teacher_forum/csd/2019:
+        name: Foro de profesores
+        url: "https://forum.code.org/c/csd"
+      curriculum/csd/2020:
+        name: Plan de estudios
+        url: "https://curriculum.code.org/csd-20/"
+      teacher_forum/csd/2020:
+        name: Foro de profesores
+        url: "https://forum.code.org/c/csd"
+      all_code/csd/2021:
+        name: Todo el código
+        url: "/cursos/csd-2021/codigo"
+      all_resources_1/csd/2021:
+        name: Todos los recursos
+        url: "/cursos/csd-2021/recursos"
+      all_standards_1/csd/2021:
+        name: Todas las normas
+        url: "/cursos/csd-2021/estandares"
+      all_vocabulary_1/csd/2021:
+        name: Todo el vocabulario
+        url: "/cursos/csd-2021/vocabulario"
+      csd_curriculum_guide/csd/2021:
+        name: Guía curricular del CSD
+        url: "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview"
+      csd_guide_to_assessment/csd/2021:
+        name: Guía de evaluación del CSD
+        url: "https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview"
+      csd_guide_to_debugging/csd/2021:
+        name: Guía de depuración de CSD
+        url: "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview"
+      csd_guide_to_differentiation/csd/2021:
+        name: Guía de diferenciación de CSD
+        url: "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview"
+      csd_guide_to_using_resources/csd/2021:
+        name: Guía del CSD para el uso de recursos
+        url: "https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview"
+      csd_implementation_guide/csd/2021:
+        name: Guía de implementación del CSD
+        url: "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview"
+      getting_started_with_csd/csd/2021:
+        name: Introducción a CSD
+        url: "https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview"
+      all_code_5/csd/2022:
+        name: Todo el código
+        url: "/cursos/csd-2022/código"
+      all_resources_7/csd/2022:
+        name: Todos los recursos
+        url: "/cursos/csd-2022/recursos"
+      all_standards_7/csd/2022:
+        name: Todas las normas
+        url: "/cursos/csd-2022/estandares"
+      all_vocabulary_7/csd/2022:
+        name: Todo el vocabulario
+        url: "/courses/csd-2022/vocab"
+      csd_changelog_22-_23/csd/2022:
+        name: Registro de cambios de CSD 2022-2023
+        url: "https://docs.google.com/document/d/1GR3VaThoqXY6XBeVCHcYvZtaQFn47jPpmLNRQB4IK7Y/preview"
+      csd_curriculum_guide/csd/2022:
+        name: Guía curricular del CSD
+        url: "https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview"
+      csd_guide_to_assessment/csd/2022:
+        name: Guía de evaluación del CSD
+        url: "https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview"
+      csd_guide_to_debugging/csd/2022:
+        name: Guía de depuración de CSD
+        url: "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview"
+      csd_guide_to_differentiation/csd/2022:
+        name: Guía de diferenciación de CSD
+        url: "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview"
+      csd_guide_to_using_resources/csd/2022:
+        name: Guía del CSD para el uso de recursos
+        url: "https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview"
+      csd_implementation_guide/csd/2022:
+        name: Guía de implementación del CSD
+        url: "https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview"
+      csd_learning_frameworks/csd/2022:
+        name: Marcos de aprendizaje de la CSD
+        url: "https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/preview"
+      csd_programming_levels_guide/csd/2022:
+        name: Guía de niveles de programación CSD
+        url: "https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview"
+      all_code_2/csd/2023:
+        name: Todo el código
+        url: "/cursos/csd-2023/codigo"
+      all_resources_2/csd/2023:
+        name: Todos los recursos
+        url: "/cursos/csd-2023/recursos"
+      all_standards_2/csd/2023:
+        name: Todas las normas
+        url: "/cursos/csd-2023/estandares"
+      all_vocabulary_2/csd/2023:
+        name: Todo el vocabulario
+        url: "/cursos/csd-2023/vocabulario"
+      csd_changelog_23-_24/csd/2023:
+        name: Registro de cambios de CSD 2023-2024
+        url: "https://docs.google.com/document/d/1p5wN0AlEUoKZ0WpcBryjkxLyQKsAr4k6zWqI91faksI/view"
+      csd_course_standards_csta_alignment/csd/2023:
+        name: Estándares del curso CSD Alineación con CSTA
+        url: "https://docs.google.com/spreadsheets/d/1mSkUykxhOhSviA7wmo5Ejh3vYgLJDtG46rCm_92607g/edit?usp=sharing"
+      csd_guide_to_assessment/csd/2023:
+        name: Guía de evaluación del CSD
+        url: "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view"
+      csd_guide_to_code_org_values_and_philosophy/csd/2023:
+        name: Guía CSD sobre los valores y la filosofía de Code.org
+        url: "https://docs.google.com/document/d/1Ql3w7D_cWFZVPzRA-2yjuxjCaRP-lneiRGZPpmg81tc/view"
+      csd_guide_to_curriculum_videos/csd/2023:
+        name: Guía de vídeos curriculares del CSD
+        url: "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view"
+      csd_guide_to_differentiation_1/csd/2023:
+        name: Guía de diferenciación de CSD
+        url: "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view"
+      csd_guide_to_getting_started/csd/2023:
+        name: Guía de CSD para empezar
+        url: "https://docs.google.com/document/d/1qRtKnXUl5G_FONrIsJ7Ql-aDYEaEwPOzLV_BhFa4O8A/view"
+      csd_guide_to_learning_tools/csd/2023:
+        name: Guía de herramientas de aprendizaje del CSD
+        url: "https://docs.google.com/document/d/1zp_bREstY53dyXoby8MCidBD1iVUoMMGbz5c-kTsL7E/view"
+      csd_guide_to_teaching_and_learning_strategies/csd/2023:
+        name: Guía de estrategias de enseñanza y aprendizaje del CSD
+        url: "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view"
+      csd_guide_to_using_resources_1/csd/2023:
+        name: Guía del CSD para el uso de recursos
+        url: "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view"
+      csd_implementation_guide_1/csd/2023:
+        name: Guía de implementación del CSD
+        url: "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view"
+      csd_learning_frameworks_1/csd/2023:
+        name: Marcos de aprendizaje de la CSD
+        url: "https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view"
+      csd_syllabus/csd/2023:
+        name: Programa de estudios del CSD
+        url: "https://docs.google.com/document/d/1wqoDRuGVb8ZNoVjikkq1ZflA_C57r-YHmn3awpJmSJQ/view"
+      all_code_6/csd/2024:
+        name: Todo el código
+        url: "/cursos/csd-2024/codigo"
+      all_resources_8/csd/2024:
+        name: Todos los recursos
+        url: "/cursos/csd-2024/recursos"
+      all_standards_8/csd/2024:
+        name: Todas las normas
+        url: "/cursos/csd-2024/estandares"
+      all_vocabulary_8/csd/2024:
+        name: Todo el vocabulario
+        url: "/cursos/csd-2024/vocabulario"
+      csd_changelog_24-25/csd/2024:
+        name: Registro de cambios de CSD 24-25
+        url: "https://docs.google.com/document/d/1DN6WF64Jy3cr1hkeDySNAujMhb9yQZlJvt3ls8OCvRw/edit#heading=h.ydx1g8n6vyu8"
+      csd_course_standards_csta_alignment/csd/2024:
+        name: Estándares del curso CSD Alineación con CSTA
+        url: "https://docs.google.com/spreadsheets/d/1mSkUykxhOhSviA7wmo5Ejh3vYgLJDtG46rCm_92607g/edit?usp=sharing"
+      csd_guide_to_assessment_1/csd/2024:
+        name: Guía de evaluación del CSD
+        url: "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view"
+      csd_guide_to_code_org_values_and_philosophy/csd/2024:
+        name: Guía CSD sobre los valores y la filosofía de Code.org
+        url: "https://docs.google.com/document/d/1Ql3w7D_cWFZVPzRA-2yjuxjCaRP-lneiRGZPpmg81tc/view"
+      csd_guide_to_curriculum_videos_1/csd/2024:
+        name: Guía de vídeos curriculares del CSD
+        url: "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view"
+      csd_guide_to_differentiation_1/csd/2024:
+        name: Guía de diferenciación de CSD
+        url: "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view"
+      csd_guide_to_getting_started/csd/2024:
+        name: Guía de CSD para empezar
+        url: "https://docs.google.com/document/d/1qRtKnXUl5G_FONrIsJ7Ql-aDYEaEwPOzLV_BhFa4O8A/view"
+      csd_guide_to_learning_tools/csd/2024:
+        name: Guía de herramientas de aprendizaje del CSD
+        url: "https://docs.google.com/document/d/1zp_bREstY53dyXoby8MCidBD1iVUoMMGbz5c-kTsL7E/view"
+      csd_guide_to_teaching_and_learning_strategies_1/csd/2024:
+        name: Guía de estrategias de enseñanza y aprendizaje del CSD
+        url: "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view"
+      csd_guide_to_using_resources_1/csd/2024:
+        name: Guía del CSD para el uso de recursos
+        url: "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view"
+      csd_implementation_guide/csd/2024:
+        name: Guía de implementación del CSD
+        url: "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view"
+      csd_learning_frameworks/csd/2024:
+        name: Marcos de aprendizaje de la CSD
+        url: "https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view"
+      csd_syllabus/csd/2024:
+        name: Programa de estudios del CSD
+        url: "https://docs.google.com/document/d/1wqoDRuGVb8ZNoVjikkq1ZflA_C57r-YHmn3awpJmSJQ/view"
