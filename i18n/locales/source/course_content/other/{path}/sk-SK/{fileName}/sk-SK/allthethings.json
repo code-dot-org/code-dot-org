@@ -1,0 +1,3122 @@
+{
+  "https://studio.code.org/s/allthethings/lessons/2/levels/1": {
+    "short_instructions": "Môžete ma prinútiť, aby som sa presunul na západ a dostal sa k prasaťu?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/2": {
+    "short_instructions": "Dostaňte ma k prasaťu! Nezabudnite používať slučky `repeat`.",
+    "long_instructions": "Dostaňte ma k prasaťu!\\ Nezabudnite používať slučky `repeat`."
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/3": {
+    "short_instructions": "Pomôžete mi chytiť neposlušné prasa? Pod blok `kedy beží` naskladajte niekoľko blokov `posunúť vpred` a stlačte tlačidlo \"Spustiť\". ",
+    "long_instructions": "Pomôžete mi chytiť neposlušné prasa? Pod blok `kedy beží` naskladajte niekoľko blokov `posunúť vpred` a stlačte tlačidlo \"Spustiť\". ",
+    "authored_hints": {
+      "2-3_Maze_1_a": "Ak chcete použiť blok `posunúť vpred`, pretiahnite ho z oblasti panela nástrojov do pracovného priestoru a pripojte ho k bloku `kedy sa spustí`."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/4": {
+    "short_instructions": "Na rýchle vyriešenie hádanky použite blok \"repeat\"...",
+    "authored_hints": {
+      "4-5_Maze_4_a": "Ak sa vám nedarí zistiť, kam umiestniť opakovanie, skúste všetko zakódovať a hľadať vzor."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/5": {
+    "short_instructions": "Použite blok `if`, ktorý mi pomôže rozhodnúť sa, kedy sa otočiť. ",
+    "long_instructions": "Použite blok `if`, ktorý mi pomôže rozhodnúť sa, kedy sa otočiť. "
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/6": {
+    "short_instructions": "Existuje jeden blok navyše, ktorý spôsobí pád vtáka. Vyhoďte ho tak, že ho potiahnete späť do súpravy nástrojov.",
+    "long_instructions": "_\"Toto prasa mi škrípe perie.\"_ Je tu ešte jeden blok navyše, ktorý spôsobí pád vtáka.Odhoďte ho tak, že ho odpojíte od sivých blokov a potiahnete ho späť do škatule s náradím.",
+    "authored_hints": {
+      "courseC_maze_programming3_a": "Najskôr skúste kód spustiť, aby ste zistili, kde je chyba.",
+      "courseC_maze_programming3_b": "[][0] Ak chcete odstrániť blok uprostred kódu, presuňte všetky bloky do inej časti pracovného priestoru. Blok, ktorý chcete odstrániť, potiahnite späť do súboru nástrojov. Nakoniec vráťte ostatné bloky na svoje miesto."
+    },
+    "callouts": {
+      "courseC_maze_programming3_2": "Prebytočné bloky môžete pretiahnuť do súpravy nástrojov a vyhodiť ich.",
+      "courseC_maze_programming3_3": "Tieto bloky sú kamenné a nemožno ich vyhodiť."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/7": {
+    "short_instructions": "Presuňte ma na východ, aby som sa dostal k prasaťu!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/1": {
+    "short_instructions": "Nakreslite nohu muža jednou čiarou"
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/2": {
+    "short_instructions": "Ahoj, som umelec. Môžete napísať kód, aby som nakreslil takmer čokoľvek. Použite niekoľko blokov, aby som nakreslil sivé čiary na obrázku. (Každý riadok má dĺžku 100 pixelov)",
+    "long_instructions": "Ahoj, som umelec. Môžete napísať kód, aby som nakreslil takmer čokoľvek. Použite niekoľko blokov, aby som nakreslil sivé čiary na obrázku. (Každý riadok má dĺžku 100 pixelov)",
+    "authored_hints": {
+      "2-3_Artist_1_new_a": "Ak použijete blok, aby som sa posunul o 100 pixelov, automaticky nakreslím čiaru.",
+      "2-3_Artist_1_new_b": "Máte problémy s otočením rohu? Použite blok `otočiť doprava o 90 stupňov`."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/3": {
+    "short_instructions": "Teraz vložte funkciu do slučky, ktorá nakreslí tieto tri štvorce.",
+    "long_instructions": "Teraz vložte funkciu do slučky, ktorá nakreslí tieto tri štvorce.",
+    "authored_hints": {
+      "2-3_Artist_Functions_4_a": "Na dokončenie tohto návrhu sa musí umelec medzi jednotlivými štvorcami otočiť o 120 stupňov."
+    },
+    "function_definitions": {
+      "draw a square": {
+        "name": "nakresliť štvorec"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/4": {
+    "short_instructions": "Potiahnite blok s číslom do bloku `nastaviť dĺžku` a bloku `opakovať _ krát`, aby ste nakreslili sadu trojuholníkov s veľkosťou 50 pixelov. ",
+    "long_instructions": "Potiahnite blok s číslom do bloku `nastaviť dĺžku` a do bloku `opakovať _ krát`, aby ste nakreslili sadu trojuholníkov s veľkosťou 50 pixelov. "
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/5": {
+    "short_instructions": "Tu je nový typ bloku. Nazýva sa `funkčný` blok. Kliknite na tlačidlo \"upraviť\" a vyplňte kód pre kreslenie štvorca so stranou 100 pixelov. Po skončení úprav funkcie kliknite na tlačidlo \"Zavrieť\" a vráťte sa do programu.",
+    "long_instructions": "Tu je nový typ bloku. Nazýva sa `funkčný` blok. Kliknite na tlačidlo \"upraviť\" a vyplňte kód pre kreslenie štvorca so stranou 100 pixelov. Po skončení úprav funkcie kliknite na tlačidlo \"Zavrieť\" a vráťte sa do programu.",
+    "callouts": {
+      "NEW_Course_4_Artist_Functions_3_1": "Kliknutím sem upravte novú funkciu tak, aby vytvorila štvorec."
+    },
+    "function_definitions": {
+      "draw a square": {
+        "name": "nakresliť štvorec"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/6": {
+    "short_instructions": "Funkcie môžete volať zvnútra iných funkcií! Pomocou funkcie \"shape\" vytvorte 3 tvary domčekov, každý o 20 pixelov väčší ako posledný, s dĺžkou od 50 pixelov. Pomôcť by mohlo použitie slučky počítadla. ",
+    "function_definitions": {
+      "draw a shape": {
+        "name": "nakresliť tvar",
+        "parameters": {
+          "sides": "strany",
+          "length": "dĺžka"
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/9": {
+    "short_instructions": "Teraz vložte funkciu do slučky, ktorá nakreslí tieto tri štvorce.",
+    "long_instructions": "Teraz vložte funkciu do slučky, ktorá nakreslí tieto tri štvorce.",
+    "authored_hints": {
+      "2-3_Artist_Functions_4_a": "Na dokončenie tohto návrhu sa musí umelec medzi jednotlivými štvorcami otočiť o 120 stupňov."
+    },
+    "function_definitions": {
+      "draw a square": {
+        "name": "nakresliť štvorec"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/4/levels/1": {
+    "short_instructions": "Presuň ma ku kvetu, získaj nektár, potom ma presuň k plástom a vyrob med."
+  },
+  "https://studio.code.org/s/allthethings/lessons/4/levels/3": {
+    "short_instructions": "Tentoraz použite slučku na zozbieranie všetkého nektáru."
+  },
+  "https://studio.code.org/s/allthethings/lessons/4/levels/4": {
+    "short_instructions": "Dávajte pozor, aby ste nezbierali nektár z fialového kvetu, ak ho nemá. Najprv musíte skontrolovať, či je nektár rovný 1 pomocou bloku `if nektár`.",
+    "long_instructions": "Tieto čarovné fialové kvety sa menia! Pri každom pokuse o vyriešenie hádanky môžu mať fialové kvety buď 1 nektár, alebo žiadny... ale počet sa dozviete až po spustení kódu! Dávajte pozor, aby ste nezbierali nektár z fialového kvetu, ak ho nemá. Najprv musíte skontrolovať, či je nektár rovný 1 pomocou bloku `if nektár`.",
+    "callouts": {
+      "Bee_Cond_5_1a": "Fialové kvety môžu mať 1 alebo 0 nektáru... ale to sa nedozviete, kým nespustíte kód!"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/4/levels/5": {
+    "short_instructions": "Fialové kvety môžu mať 1 alebo 0 nektáru, ale neviete, ktorý z nich! Dávajte pozor, aby ste nezbierali nektár z fialového kvetu, ak ho nemá. Pomocou bloku if skontrolujte, či je nektár rovný 1."
+  },
+  "https://studio.code.org/s/allthethings/lessons/4/levels/6": {
+    "short_instructions": "Funkcie sú bloky kódu, ktoré vykonávajú určitú úlohu. Pomocou funkcie `get 5` získate naraz 5 nektárov.",
+    "long_instructions": "Funkcie sú bloky kódu, ktoré vykonávajú určitú úlohu. Pomocou funkcie `get 5` získate naraz 5 nektárov.",
+    "function_definitions": {
+      "get 5": {
+        "name": "získať 5"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/5/levels/3": {
+    "short_instructions": "Nechajte psa hovoriť každé číslo od 1 do 100. Použite cyklus `for` a blok počítadla, aby ste pri každom spustení cyklu hovorili o premennej počítadla.",
+    "long_instructions": "Nechajte psa hovoriť každé číslo od 1 do 100. Použite cyklus `for` a blok počítadla, aby ste pri každom spustení cyklu hovorili o premennej počítadla."
+  },
+  "https://studio.code.org/s/allthethings/lessons/5/levels/4": {
+    "short_instructions": "Teraz máme vlajky, ktoré sú príliš vysoké na náš súčasný skok! Použime šípky \"hore\" aj \"dole\", aby sme mohli mať viacero výšok skoku. Do našej funkcie skoku musíme pridať parameter s názvom \"height\". Šípka nahor by mala spôsobiť, že pes poskočí o 200 pixelov, a šípka nadol by mala spôsobiť, že poskočí len o 100 pixelov. ",
+    "long_instructions": "Teraz máme vlajky, ktoré sú príliš vysoké na náš súčasný skok! Použime šípky \"hore\" aj \"dole\", aby sme mohli mať viacero výšok skoku. Do našej funkcie skoku musíme pridať parameter s názvom `výška`. - Šípka nahor by mala spôsobiť, že pes skočí o 200 pixelov - šípka nadol by mala spôsobiť, že skočí len o 100 pixelov. ",
+    "authored_hints": {
+      "Course_4_Play_Lab_Params_2_a": "Musíte kliknúť na \"upraviť\" funkciu skoku a aktualizovať ju tak, aby používala parameter `výška`."
+    },
+    "callouts": {
+      "Course_4 _Play_Lab_Params_2_1": "Kliknutím na tlačidlo \"upraviť\" aktualizujte túto funkciu tak, aby používala parameter výšky."
+    },
+    "function_definitions": {
+      "jump": {
+        "name": "skok",
+        "description": "Spôsobí, že hlavná postava vyskočí o \"výšku\" pixelov"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/5/levels/5": {
+    "display_name": "Playlab Free Play"
+  },
+  "https://studio.code.org/s/allthethings/lessons/6/levels/1": {
+    "short_instructions": "Páni, pozrite sa na to! Neviem, koľko plných lôpt zeminy táto diera potrebuje.\\ Môžete napísať program, ktorý bude používať blok `fill`, kým nebude zemina rovná?  ",
+    "long_instructions": "Páni, pozrite sa na to! Neviem, koľko plných lôpt zeminy táto diera potrebuje.\\ Môžete napísať program, ktorý bude používať blok `fill`, kým nebude zemina rovná?  "
+  },
+  "https://studio.code.org/s/allthethings/lessons/6/levels/2": {
+    "short_instructions": "Páni, našiel som naozaj hlbokú dieru! Neviem, koľko plných lôpt špiny potrebuje. Dokážete napísať program, ktorý ju vyplní, kým sa zem nevyrovná? Tip: Tentoraz skúste použiť cyklus while.",
+    "authored_hints": {
+      "first_hint": "Toto je prvá nápoveda. Má _niektoré_ **základné** `označenie`",
+      "second_hint": "Toto je druhá nápoveda. Obsahuje video s nápovedou.",
+      "last_hint": "Toto je tretia a posledná nápoveda. Nemá nič špeciálne."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/6/levels/3": {
+    "short_instructions": "Páni, našiel som naozaj hlbokú dieru! Neviem, koľko plných lôpt špiny potrebuje. Dokážete napísať program, ktorý ju vyplní, kým sa zem nevyrovná? Tip: Tentoraz skúste použiť cyklus while.",
+    "authored_hints": {
+      "first_hint": "Toto je prvá nápoveda. Má _niektoré_ **základné** `označenie`",
+      "second_hint": "Toto je druhá nápoveda. Má obrázok. [][0]",
+      "last_hint": "Toto je tretia a posledná nápoveda. Nemá nič špeciálne."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/7/levels/1": {
+    "short_instructions": "Pripojte blok k bloku \"when click\" a potom stlačte tlačidlo \"Run\". Kliknutím alebo ťuknutím na obrazovku presuniete Flappyho k cieľu."
+  },
+  "https://studio.code.org/s/allthethings/lessons/8/levels/1": {
+    "short_instructions": "Pripojte blok k bloku \"when left arrow\" a stlačte tlačidlo \"Run\". Pohybujte pádlom pomocou šípky vľavo, aby ste dosiahli cieľ."
+  },
+  "https://studio.code.org/s/allthethings/lessons/9/levels/1": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "/script_assets/k_1_images/unplugged_images/up.png",
+          "correct": false
+        },
+        {
+          "text": "/script_assets/k_1_images/unplugged_images/down.png",
+          "correct": true
+        },
+        {
+          "text": "/script_assets/k_1_images/unplugged_images/left.png",
+          "correct": false
+        },
+        {
+          "text": "/script_assets/k_1_images/unplugged_images/right.png",
+          "correct": false
+        }
+      ],
+      "content1": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png",
+      "questions": [
+        {
+          "text": "Ktorý šíp dostane Flurba k pokladu?"
+        }
+      ],
+      "title": "Viacnásobný výber"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/9/levels/2": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "3 bity",
+          "correct": false
+        },
+        {
+          "text": "4 bity",
+          "correct": false
+        },
+        {
+          "text": "5 bitov",
+          "correct": false
+        },
+        {
+          "text": "6 bitov",
+          "correct": false
+        },
+        {
+          "text": "7 bitov",
+          "correct": true
+        },
+        {
+          "text": "12 bitov",
+          "correct": false
+        }
+      ],
+      "questions": [
+        {
+          "text": "Štandardná klávesnica QWERTY má 47 klávesov, ktoré môžu umiestňovať znaky na obrazovku. Každá z týchto kláves môže zobraziť aj druhý znak, ak súčasne podržíte kláves \"Shift\" (predpokladajme, že všetky ostatné klávesy sú v tejto otázke ignorované). Koľko bitov by ste potrebovali na zakódovanie všetkého, čo sa dá na tejto klávesnici napísať?"
+        }
+      ],
+      "title": "Hodnotenie: Kódovanie textu"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/9/levels/3": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "modrá",
+          "correct": false
+        },
+        {
+          "text": "zelená",
+          "correct": false
+        },
+        {
+          "text": "teal",
+          "correct": false
+        },
+        {
+          "text": "žltá",
+          "correct": false
+        },
+        {
+          "text": "skutočný pomaranč, samozrejme",
+          "correct": true
+        },
+        {
+          "text": "červená",
+          "correct": false
+        }
+      ],
+      "questions": [
+        {
+          "text": "Aká je vaša obľúbená farba?"
+        }
+      ],
+      "title": "Odosielateľný Viacnásobný výber"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/9/levels/4": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "Volanie parametrov funkcie ![](https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png)",
+          "correct": false
+        },
+        {
+          "text": "Definovanie parametrov funkcie ![](https://images.code.org/ed7e88443a6c04022684aacf0c2a0692-image-1506699220170.png)",
+          "correct": true
+        },
+        {
+          "text": "Pohyb korytnačky po obrazovke ![](https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png)",
+          "correct": false
+        },
+        {
+          "text": "Orientácia smeru korytnačky ![](https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png)",
+          "correct": false
+        },
+        {
+          "text": "Setting pen properties ![](https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png)",
+          "correct": false
+        },
+        {
+          "text": "Žiadne z vyššie uvedených",
+          "correct": false
+        }
+      ],
+      "markdown": "Zvážte tieto rôzne spôsoby použitia príkazu `randomNumber`. Každá odpoveď opisuje použitie a uvádza príklad kódu. Ktorý z nasledujúcich spôsobov NIE JE platným použitím príkazu `randomNumber`\n\n",
+      "teacher_markdown": "Odpoveď poukazuje na rozdiel medzi definovaním parametrov funkcie a volaním tejto funkcie. Keďže `randomNumber` vracia hodnotu (číslo), možno ho použiť na miestach, kde by ste inak zadali číselnú hodnotu. Napríklad nedefinujete funkciu s číselným parametrom. Toto nedáva zmysel: `function drawShape(50){ ... }` &lt;-- toto nerobte. Namiesto toho *definujete* funkciu s pomenovaným parametrom takto: `funkcia drawShape(size){ ... }` a potom ju *vyvoláte* a zadáte hodnotu tohto parametra takto: V prípade tejto otázky použijeme namiesto hodnoty pre *vyvolanie* funkcie hodnotu randomNumber. `drawShape( randomNumber(25,75) );`\n\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/9/levels/5": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "Nič sa nestane.",
+          "correct": false,
+          "feedback": "Nesprávne. Bubnová tráva sa začne valiť."
+        },
+        {
+          "text": "Bubienok sa vznesie na vrch obrazovky.",
+          "correct": false,
+          "feedback": "Nesprávne. Bubnová tráva sa začne valiť."
+        },
+        {
+          "text": "Bubnová tráva sa začne valiť.",
+          "correct": true,
+          "feedback": "Správne!"
+        },
+        {
+          "text": "Bubienok bude blikať a vypínať sa.",
+          "correct": false,
+          "feedback": "Nesprávne. Bubnová tráva sa začne valiť."
+        }
+      ],
+      "questions": [
+        {
+          "text": "Pozrite sa pozorne na nasledujúci kód. Čo sa stane po kliknutí na tlačidlo \"Spustiť\"?"
+        }
+      ]
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/10/levels/1": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "Riadok 2",
+          "correct": true
+        },
+        {
+          "text": "Riadok 3",
+          "correct": true
+        },
+        {
+          "text": "Riadok 4",
+          "correct": false
+        },
+        {
+          "text": "Riadok 5",
+          "correct": false
+        }
+      ],
+      "markdown": "Táto otázka využíva robota v sieti štvorcov. Robot je znázornený ako trojuholník, ktorý je na začiatku otočený smerom k pravej strane mriežky. Robot sa pohybuje podľa nasledujúcich pokynov. | Inštrukcie | Vysvetlenie | |--------------------|--------| |`Posun vpred` | Robot sa posunie o jedno políčko vpred v smere, ktorým je otočený |`Otočiť doprava` | Robot sa otočí na mieste o 90 stupňov v smere hodinových ručičiek (t. j. vykoná otočku na mieste doprava). |`Rotate left`` | Robot sa otočí na mieste o 90 stupňov proti smeru hodinových ručičiek (t. j. vykoná otočku na mieste doľava). |`REPEAT n TIMES`` | Blok inštrukcií obsiahnutý medzi zátvorkami {} sa opakuje n-krát. | Uvažujme nasledujúci nesprávny program, ktorého cieľom je pohybovať robotom po obvode mriežky nižšie, ako je naznačené šípkami. ![](https://images.code.org/4d3177070d1585fc6ad3f9091dd53d76-image-1579897739915.png) ![](/script_assets/csp/instruction_gifs/U3L02-rightSquare.png)\n\n",
+      "questions": [
+        {
+          "text": "Ktoré riadky kódu by sa mali odstrániť, aby program fungoval tak, ako má? Vyberte <u>dve</u> odpovede"
+        }
+      ]
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/11/levels/1": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "/script_assets/k_1_images/move_blocks/EN.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/move_blocks/ENE.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/move_blocks/WW.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/move_blocks/WSS.png"
+        }
+      ],
+      "content2": "Zodpovedajú hádanky a bloky",
+      "questions": [
+        {
+          "text": "/script_assets/k_1_images/maze_images/maze_EN.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/maze_images/maze_WW.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/maze_images/maze_WSS.png"
+        }
+      ],
+      "title": "Zodpovedajúce"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/12/levels/2": {
+    "long_instructions": "Je vyučovanie _počítačovej vedy_ iné ako vyučovanie iných predmetov, napríklad matematiky alebo čítania? Prečítajte si tento zoznam stratégií a vyjadrite sa k niektorým rozdielom, s ktorými sa podľa vás stretnete pri vyučovaní informatiky v porovnaní s inými predmetmi. [Tento pracovný list][0] je k dispozícii aj na paneli učiteľa v dlaždici \"Plány hodín a zdroje\". [obrázok][1]\n\n</br>",
+    "placeholder": "Myslím si, že vyučovanie informatiky sa bude líšiť od vyučovania iných predmetov v týchto smeroch: ...",
+    "title": "Stratégie vyučovania informatiky"
+  },
+  "https://studio.code.org/s/allthethings/lessons/13/levels/1": {
+    "dsls": {
+      "content1": "popis tu",
+      "markdown": "\n## Dnes sa naučíte používať a vytvárať: **funkcie** Vytvorenie funkcie vám umožní vytvárať vlastné bloky! Funkcia má dve časti: * Vytvorenie bloku s novým názvom, ktorý obsahuje všetok kód, ktorý chcete spustiť. <xml> <block type=\"procedures_defnoreturn\" editable=\"false\"> <mutation/>\n    <title name=\"NAME\">získať len nektár</title>\n    <statement name=\"STACK\"> <block type=\"bee_ifFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\"> <block type=\"maze_nectar\" deletable=\"false\"/> </statement> </block> </statement> </block> </xml> * Samotný zelený blok, ktorý použijete alebo zavoláte na spustenie vytvorenej funkcie. <xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"/> <block type=\"procedures_callnoreturn\" id=\"callMe\"> <mutation name=\"get only nectar\"/> </block> </xml> Pripravte sa na zoznámenie sa s funkciami, naučte sa ich upravovať a vytvárať vlastné!\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/14/levels/1": {
+    "short_instructions": "Vypracujte, zdokumentujte a otestujte protokol, ktorý vám umožní používať simulátor internetu na prenos správy. Podrobnejšie pokyny nájdete v pracovnom liste.  ",
+    "long_instructions": "## Koordinácia a binárne správy Aktivita **Vypracujte svoj protokol** Vypracujte protokol, ktorý vám umožní použiť internetový simulátor na odovzdávanie správy, t. j. jeden člen pošle správu a druhý člen pošle rovnakú správu späť. Vy alebo učiteľ poviete \"Go\", aby ste začali výmenu, ale inak musí všetka komunikácia prebiehať prostredníctvom widgetu. Pri práci zvážte: - Ako zistíte, kedy sa má výmena začať? - Ako zistíte, kto je na rade s odoslaním alebo prijatím správy? - Ako budete koordinovať svoje činnosti? Zdokumentujte svoj protokol na priloženom pracovnom liste a otestujte ho pomocou internetového simulátora."
+  },
+  "https://studio.code.org/s/allthethings/lessons/14/levels/2": {
+    "short_instructions": "Pri tejto aktivite sa pripojte k smerovaču spolu s ostatnými členmi skupiny. Simulátor internetu teraz poskytuje miesto, kam môžete vložiť adresy Komu a Od, aby ste nemuseli zadávať tieto údaje ručne."
+  },
+  "https://studio.code.org/s/allthethings/lessons/14/levels/3": {
+    "short_instructions": "Preneste svoju favicon partnerovi cez sieť, v ktorej je pravdepodobnosť prerušenia paketu tým väčšia, čím je väčší."
+  },
+  "https://studio.code.org/s/allthethings/lessons/14/levels/4": {
+    "short_instructions": "V tejto verzii simulátora internetu je k dispozícii systém názvov domén (DNS), ktorý pozná IP adresy všetkých pripojených počítačov. Ak chcete získať adresu študenta, pošlite službu DNS na adresu <yourRouterNumber>.15 v tvare GET [názov hostiteľa].",
+    "long_instructions": "## Potreba DNS V tejto verzii simulátora internetu je k dispozícii systém názvov domén (DNS), ktorý pozná IP adresy všetkých pripojených počítačov. Môžete vidieť iba názvy hostiteľov iných pripojených počítačov.\\ [][0] Adresa DNS je vždy \\<yourRouterNumber>.15. Odoslanie správy s protokolom `GET [hostname]`, napríklad `GET Bob2`, do DNS na získanie adresy iného študenta. Odpovede môžete sledovať v časti Poznámky na karte DNS.\\ [][1]"
+  },
+  "https://studio.code.org/s/allthethings/lessons/14/levels/5": {
+    "short_instructions": "Nahrali ste NetSim v režime superužívateľa."
+  },
+  "https://studio.code.org/s/allthethings/lessons/16/levels/1": {
+    "short_instructions": "Hľadajte v texte vzory (opakujúce sa slová alebo frázy). Zobrazené vzory zadajte do slovníka vpravo. Pri zadávaní položiek do slovníka sa namiesto vzoru do textu vloží symbol položky.",
+    "long_instructions": "Hľadajte v texte vzory (opakujúce sa slová alebo frázy). Zobrazené vzory zadajte do slovníka vpravo. Pri zadávaní položiek do slovníka sa namiesto vzoru do textu vloží symbol položky."
+  },
+  "https://studio.code.org/s/allthethings/lessons/17/levels/1": {
+    "short_instructions": "Vytvorte písmeno \"A\" 3x5. Widget je nastavený s nesprávnymi rozmermi. Vašou prvou úlohou je nastaviť druhý bajt na 8-bitový binárny kód pre 5: 0000 0101. Potom začnite zadávať údaje o pixeloch.",
+    "long_instructions": "<img style=\"float:right; margin:0 20px\" src=\"https://code.org/images/cspunit1/letterA.png\" width=\"150\"> # Úloha 1: Vytvorte písmeno \"A\" v tvare 3x5 Začnite tým, že sa pokúsite vytvoriť písmeno \"A\" v tvare 3x5 (vpravo) pomocou miniaplikácie. Obrázok je na začiatku nastavený s nesprávnymi rozmermi. Vašou prvou úlohou je nastaviť druhý bajt na 8-bitový binárny kód pre 5: 0000 0101. Potom môžete začať zadávať údaje o pixeloch, aby ste vytvorili písmeno A.\n            "
+  },
+  "https://studio.code.org/s/allthethings/lessons/17/levels/2": {
+    "short_instructions": "Začneme obrázkom 4x2, ktorý vytvárala Maddie, ale vynechali sme posledné dva štvorce. Dokončite obrázok zistením, ktoré dve farby chýbajú, a zakódujte ich.",
+    "long_instructions": "# Farebná pixelizácia: Úloha 1 **Ukážky:** - Začíname s obrázkom 4x2, ktorý vytvárala Maddie, ale vynechali sme posledné dva štvorce. - Dokončite obrázok tak, že zistíte, ktoré dve farby chýbajú, a zakódujte ich."
+  },
+  "https://studio.code.org/s/allthethings/lessons/17/levels/3": {
+    "short_instructions": "Začneme obrázkom 4x4, ktorý Maddie vytvorila vo videu. Vašou úlohou je vyplniť mriežku 4x4 farbami pomocou 12 bitov na pixel. Tu sú požiadavky: Riadok 1 - vyplňte odtieňmi červenej. Riadok 2 - odtiene zelenej. Riadok 3 - odtiene modrej. Riadok 4 - odtiene sivej.",
+    "long_instructions": "# Pixelácia: Úloha 3 <img src = \"https://code.org/images/cspunit1/ColorTask3.png\" style=\"float:right; margin:0 20px\" width=200> **Pokyny:** Začneme obrázkom 4x4, ktorý Maddie vytvorila vo videu. Vašou úlohou je vyplniť mriežku 4x4 farbami pomocou _12 bitov na pixel_. Výsledok by mal vyzerať podobne (ale nie presne) ako obrázok vpravo. Tu sú požiadavky: - Riadok 1 - vyplňte odtieňmi červenej. - Riadok 2 - odtiene zelenej. - Riadok 3 - odtiene modrej. - Riadok 4 - odtiene sivej."
+  },
+  "https://studio.code.org/s/allthethings/lessons/17/levels/4": {
+    "short_instructions": "Táto úroveň pixelácie demonštruje použitie možnosti `hide_encoding_controls`. Všimnite si, že úroveň zobrazuje obrazové údaje v hexadecimálnej sústave a neumožňuje ich zmeniť späť na binárnu sústavu.",
+    "long_instructions": "# Pixelácia: AllTheThings 4 Táto úroveň pixelácie demonštruje použitie možnosti `hide_encoding_controls`. Všimnite si, že úroveň zobrazuje obrazové údaje v hexadecimálnej sústave a neumožňuje ich zmeniť späť na binárnu sústavu.\n            "
+  },
+  "https://studio.code.org/s/allthethings/lessons/17/levels/5": {
+    "short_instructions": "Táto úroveň pixelácie demonštruje použitie možnosti \"Skryť posuvníky\". Všimnite si, že posuvníky šírky a výšky nie sú k dispozícii a polia šírky a výšky nie je možné upravovať.",
+    "long_instructions": "# Pixelácia: AllTheThings 5 Táto úroveň pixelácie demonštruje použitie možnosti \"Skryť posuvníky\". Všimnite si, že posuvníky šírky a výšky nie sú k dispozícii a polia šírky a výšky nie je možné upravovať."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/1": {
+    "short_instructions": "Nakreslite štvorec 1x1 nad a naľavo od východiskovej pozície korytnačky. Kliknutím zobrazíte úplné pokyny.",
+    "long_instructions": "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" style=\"float:right\"> Ak máte k dispozícii len 4 príkazy korytnačky, napíšte v aplikácii App Lab kód na dokončenie výkresov v každej z nižšie uvedených úloh. Vaším cieľom je napísať kód, ktorý vyrieši problém čo najefektívnejšie, len pomocou poskytnutých príkazov. Čo znamená \"efektívny\"? V informatike môže v skutočnosti znamenať niekoľko rôznych vecí v závislosti od toho, o čom hovoríte. Pracujte na týchto výzvach, pokúste sa ich vyriešiť spôsobom, ktorý považujete za najlepší, a na konci sa vás opýtame na efektívnosť. <img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" style=\"float:right\"> # Do This: Čo najefektívnejšie nakreslite štvorec 1 x 1 vpredu a vľavo od korytnačky. Program by sa mal zastaviť s korytnačkou v pôvodnej polohe, otočenou pôvodným smerom. Keď si myslíte, že ste našli riešenie, kliknite na tlačidlo Dokončiť - zobrazí sa po spustení programu.",
+    "teacher_markdown": "Dôležité je obmedzenie práce len so 4 príkazmi. (Pozri: \"O čo ide?\" nižšie.) Ak študenti prídu na hodinu s predchádzajúcimi znalosťami programovania, môžu sa pokúsiť ísť mimo týchto obmedzení, aby znížili počet riadkov kódu. Ak vidíte, že študenti používajú príkazy nad rámec 4 uvedených príkazov alebo používajú parametre týchto príkazov, ako napr: `posunutie vpred(150)`, mali by ste im povedať, že neriešia úlohu; úlohou je vytvoriť obrázky len pomocou 4 uvedených príkazov."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/2": {
+    "short_instructions": "Definujte funkciu turnAround. Vyvolajte funkciu a potom posuňte korytnačku dopredu. (Kliknutím zobrazíte úplné pokyny)",
+    "long_instructions": "# Do This: **Definujte** funkciu s názvom `turnAround`, ktorá otočí korytnačku. Po definovaní funkcie ju **vyvolajte**, aby ste sa uistili, že funguje podľa vašich predstáv, a potom posuňte korytnačku dopredu, ako je znázornené nižšie. [][0] **Pamätajte si**, že typicky voláte funkciu v riadkoch kódu _nad_ definíciou funkcie - to vo vás môže vyvolať pocit, že pracujete opačne, pretože najprv napíšete kód na definovanie funkcie a _potom_ pridáte riadok na jej volanie. Tu je príklad `moveTwice` z videa. Niečo podobné by ste mali urobiť aj pre turnAround: [][1]"
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/3": {
+    "short_instructions": "Pomocou slučiek a náhodných čísel vygenerujete obrázok hviezdnej nočnej oblohy podobný tomu, ktorý je zobrazený tu. Poskytli sme vám štartovací kód na vytvorenie zeme a oblohy (len dve obrovské bodky), do tohto projektu pridáte kód na vytvorenie hviezd, trávy a mesiaca. Všetky efekty sú šikovné aplikácie korytnačích bodov, čiar a farieb. Ak chcete začať, postupujte podľa krokov navrhnutých v priloženom pracovnom liste. ",
+    "long_instructions": "Pomocou slučiek a náhodných čísel vygenerujete obrázok hviezdnej nočnej oblohy podobný tomu, ktorý je zobrazený tu. Poskytli sme vám štartovací kód na vytvorenie zeme a oblohy (len dve obrovské bodky), do tohto projektu pridáte kód na vytvorenie hviezd, trávy a mesiaca. Všetky efekty sú šikovné aplikácie korytnačích bodov, čiar a farieb. Ak chcete začať, postupujte podľa krokov navrhnutých v priloženom pracovnom liste. <img src=\"https://images.code.org/0f42e475e7600ac33d31bdf5dee70726-image-1459547325746.gif\" style=\"width: 250px\">"
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/4": {
+    "short_instructions": "Dostali ste štartovací kód pre scénu \"Pod morom\", ktorá obsahuje tri funkcie, po jednej pre morské hviezdice, morskú trávu a ryby. Vytvorte verzie týchto funkcií, ktoré prijímajú parametre, aby ste mohli scénu viac variovať. V pracovnom liste pre žiakov nájdete viac podrobností a usmernení.",
+    "long_instructions": "Dostali ste štartovací kód pre scénu \"Pod morom\", ktorá obsahuje tri funkcie, po jednej pre morské hviezdice, morskú trávu a ryby. Vytvorte verzie týchto funkcií, ktoré prijímajú parametre, aby ste mohli scénu viac variovať. V pracovnom liste pre žiakov nájdete viac podrobností a usmernení. <img src=\"https://levelbuilder-studio.code.org/script_assets/k_1_images/instruction_gifs/csp/U3L08%20-%20Under%20the%20sea.gif\" style=\"width: 250px\">"
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/5": {
+    "short_instructions": "Pridajte tlačidlo, ktoré po kliknutí presunie korytnačku. (Kliknutím zobrazíte úplné pokyny)",
+    "long_instructions": "# Prosím, prihláste sa, aby ste mohli otestovať úrovne applabu (Podľa návrhu fungujú úrovne applabu len vtedy, ak ste prihlásení. Za normálnych okolností nútime ľudí prihlásiť sa, ale to je možné len pre celý skript a bolo by to nepríjemné pre skript allthethings). # Vaša prvá interaktívna aplikácia! <img src='https://images.code.org/3fad83213ae72073251c4d5abc1f048a-image-1444060521578.png' style='float: right; width: 250px'> Do súboru nástrojov bola pridaná nová skupina príkazov s názvom **UI Controls** (Ovládacie prvky používateľského rozhrania), čo sú príkazy, ktoré vám umožňujú komunikovať s používateľom aplikácie a reagovať na neho. Aby to bolo jednoduché, začneme len s dvoma príkazmi: - `onEvent`, ktorý umožňuje spustiť funkciu v reakcii na nejakú udalosť (napríklad kliknutie na tlačidlo) - `button`, ktorý umiestni tlačidlo na obrazovku # Urobte to Zreplikujete malú aplikáciu, znázornenú nižšie, ktorá spôsobí, že sa korytnačka pohne kliknutím na tlačidlo. Urobíte tri veci: - pridáte `button` - pridáte blok `onEvent` - pridáte `moveForward` do bloku funkcie onEvent Tu je to, čo by ste mali urobiť - môžete sa na to vrátiť a pozrieť si to toľkokrát, koľkokrát budete potrebovať, aby ste to urobili správne. <img src=\"https://images.code.org/1cdc8cfbcef2a43f84b11ebdf14aed0c-image-1444061731350.gif\" style=\"border: solid 1px black; width: 500px; margin: auto\">"
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/6": {
+    "short_instructions": "Pomocou príkazu image môžete nahradiť textový štítok v programe obrázkom. (Kliknutím zobrazíte úplné pokyny)",
+    "long_instructions": "# Nové prvky a udalosti: Obrázky <img src=\"https://images.code.org/a84297658be45dc78bc401d387d10436-image-1444663322356.21.25 AM.png\" style=\"float: right; width: 120px\"> Vďaka obrázkom sú aplikácie vizuálne príjemnejšie a interaktívnejšie. Obrázky môžete do aplikácie pridať pomocou príkazu `image`. Zatiaľ len pridajte do aplikácie prvok `image` (predvoleným odkazom na obrázok je logo Code.org) a zatiaľ si nerobte starosti s výberom jedinečného obrázka. Urobíme to hneď v ďalšom cvičení! # Do This: <img src=\"https://images.code.org/8df7b1b56c71de7ad9770646bd7f8792-image-1444336140877.gif\" style=\"float: right; width: 250px\"> - Upravte** program - zmeňte `textLabel` na `obrázok` tak, aby sa obrázok náhodne pohyboval po obrazovke na základe udalosti, ktorú ste vybrali. - **Tip:** Ak opätovne použijete ID svojho textového štítku, budete musieť zmeniť iba jediný riadok kódu, aby váš program fungoval! Keď už budete mať program funkčný, pravdepodobne je dobré zvoliť pre obrázok popisné a zmysluplné ID a vykonať príslušné zmeny v obsluhe udalosti.\n\n<br>"
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/7": {
+    "short_instructions": "Túto úroveň je možné predložiť. Len na testovanie!",
+    "long_instructions": "Túto úroveň je možné predložiť. Len na testovanie! Ak chcete otestovať úrovne applabu, prihláste sa (úrovne applabu fungujú podľa návrhu len vtedy, ak ste prihlásení. Za normálnych okolností nútime ľudí prihlásiť sa, ale to je možné len pre celý skript a bolo by to nepríjemné pre skript allthethings)."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/8": {
+    "short_instructions": "Ak chcete otestovať úrovne applabu, prihláste sa (úrovne applabu fungujú podľa návrhu len vtedy, ak ste prihlásení. Za normálnych okolností nútime ľudí prihlásiť sa, ale to je možné len pre celý skript a bolo by to nepríjemné pre skript allthethings).",
+    "long_instructions": "Ak chcete otestovať úrovne applabu, prihláste sa (úrovne applabu fungujú podľa návrhu len vtedy, ak ste prihlásení. Za normálnych okolností nútime ľudí prihlásiť sa, ale to je možné len pre celý skript a bolo by to nepríjemné pre skript allthethings)."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/9": {
+    "short_instructions": "Ak chcete otestovať úrovne applabu, prihláste sa (úrovne applabu fungujú podľa návrhu len vtedy, ak ste prihlásení. Za normálnych okolností nútime ľudí prihlásiť sa, ale to je možné len pre celý skript a bolo by to nepríjemné pre skript allthethings).",
+    "long_instructions": "Ak chcete otestovať úrovne applabu, prihláste sa (úrovne applabu fungujú podľa návrhu len vtedy, ak ste prihlásení. Za normálnych okolností nútime ľudí prihlásiť sa, ale to je možné len pre celý skript a bolo by to nepríjemné pre skript allthethings). . . . . . . . . . . . . . . . . . . Koniec pokynov, ktoré sú dlhé."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/10": {
+    "short_instructions": "Podporené šablónou č. 1. Ak chcete otestovať úrovne applabu, prihláste sa (úrovne applabu fungujú podľa návrhu len vtedy, ak ste prihlásení. Za normálnych okolností nútime ľudí prihlásiť sa, ale to je možné len pre celý skript a bolo by to nepríjemné pre skript allthethings). ",
+    "long_instructions": "Podporené šablónou č. 1. Ak chcete otestovať úrovne applabu, prihláste sa (úrovne applabu fungujú podľa návrhu len vtedy, ak ste prihlásení. Za normálnych okolností nútime ľudí prihlásiť sa, ale to je možné len pre celý skript a bolo by to nepríjemné pre skript allthethings). "
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/11": {
+    "short_instructions": "Podporené šablónou č. 2. Ak chcete otestovať úrovne applabu, prihláste sa (úrovne applabu fungujú podľa návrhu len vtedy, ak ste prihlásení. Za normálnych okolností nútime ľudí prihlásiť sa, ale to je možné len pre celý skript a bolo by to nepríjemné pre skript allthethings).",
+    "long_instructions": "Podporené šablónou č. 2. Ak chcete otestovať úrovne applabu, prihláste sa (úrovne applabu fungujú podľa návrhu len vtedy, ak ste prihlásení. Za normálnych okolností nútime ľudí prihlásiť sa, ale to je možné len pre celý skript a bolo by to nepríjemné pre skript allthethings).",
+    "teacher_markdown": "Toto označenie by malo byť viditeľné **len** pre oprávnených učiteľov."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/12": {
+    "short_instructions": "Táto úroveň je klonovaná z \"U3 Digital Assistant Target\"",
+    "long_instructions": "# Prosím, prihláste sa, aby ste mohli otestovať úrovne applabu (Podľa návrhu fungujú úrovne applabu len vtedy, ak ste prihlásení. Za normálnych okolností nútime ľudí prihlásiť sa, ale to je možné len pre celý skript a bolo by to nepríjemné pre skript allthethings). # Úvod do digitálneho asistenta **Aj keď sa digitálni asistenti môžu zdať ako kúzla, sú to len zložité počítačové programy, ktoré analyzujú alebo spracúvajú text** a hľadajú kombinácie slov, aby sa rozhodli, na čo odpovedať. Počas niekoľkých nasledujúcich lekcií **vytvoríte vlastného digitálneho asistenta, ktorý bude \"inteligentne\" odpovedať na otázku používateľa** tým, že na základe obsahu otázky rozhodne, čo má odpovedať. Teraz budete **preskúmavať ukážku digitálneho asistenta**, Movie Bot, ktorý predstavuje typ programu, na ktorom budete stavať. Vyskúšajte niektoré z nižšie uvedených podnetov a tiež svoje vlastné. Rýchlo zistíte, čo tento program dokáže a čo nie. # Urobte toto **Spustite Movie Bot. Do políčka _'zadajte otázku tu'_ zadajte každú z nasledujúcich možností a stlačte 'enter'** - 'help' - 'Ktorý je najlepší komediálny film PG vôbec?' - 'Aký PG komediálny film by som si mal pozrieť najbližšie?' - 'Mohli by ste mi, prosím, povedať najlepší romantický film?' - 'ČAKÁM NA FILM!!!' - 'Aké je hlavné mesto štátu Kentucky?' - Hrajte sa! Položte Movie Botovi ďalšie otázky a predpovedajte, akú logiku používa na odpovede"
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/13": {
+    "short_instructions": "Ak chcete otestovať úrovne applabu, prihláste sa (úrovne applabu fungujú podľa návrhu len vtedy, ak ste prihlásení. Za normálnych okolností nútime ľudí prihlásiť sa, ale to je možné len pre celý skript a bolo by to nepríjemné pre skript allthethings).",
+    "long_instructions": "Ak chcete otestovať úrovne applabu, prihláste sa (úrovne applabu fungujú podľa návrhu len vtedy, ak ste prihlásení. Za normálnych okolností nútime ľudí prihlásiť sa, ale to je možné len pre celý skript a bolo by to nepríjemné pre skript allthethings)."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/14": {
+    "dsls": {
+      "markdown": "# Testovanie vloženého videa v Markdown Táto úroveň slúži na testovanie, či v našom Markdown nie sú povolené iframy. Medzi týmito horizontálnymi pravidlami sa nachádza riadok obsahujúci html iframe, ktorý sa pokúša vložiť [tento odkaz](https://www.youtube.com/embed/l_a0ecZ2Oe0): --- <iframe width=\"560\" height = \"315\" src=\"https://www.youtube.com/embed/l_a0ecZ2Oe0\" frameborder=\"0\" allowfullscreen></iframe> --- Ak všetko funguje správne, medzi týmito dvoma horizontálnymi pravidlami by sa nemal **zobraziť** žiadny obsah.\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/15": {
+    "contained levels": [
+      {
+        "long_instructions": "Pokyny na označenie mojej voľnej odpovede"
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/16": {
+    "short_instructions": "Ak chcete otestovať úrovne applabu, prihláste sa (úrovne applabu fungujú podľa návrhu len vtedy, ak ste prihlásení. Za normálnych okolností nútime ľudí prihlásiť sa, ale to je možné len pre celý skript a bolo by to nepríjemné pre skript allthethings).",
+    "long_instructions": "Ak chcete otestovať úrovne applabu, prihláste sa (úrovne applabu fungujú podľa návrhu len vtedy, ak ste prihlásení. Za normálnych okolností nútime ľudí prihlásiť sa, ale to je možné len pre celý skript a bolo by to nepríjemné pre skript allthethings)."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/18": {
+    "short_instructions": "Nakreslite štvorec 1x1 nad a naľavo od východiskovej pozície korytnačky. Kliknutím zobrazíte úplné pokyny.",
+    "long_instructions": "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" style=\"float:right\"> Ak máte k dispozícii len 4 príkazy korytnačky, napíšte v aplikácii App Lab kód na dokončenie výkresov v každej z nižšie uvedených úloh. Vaším cieľom je napísať kód, ktorý vyrieši problém čo najefektívnejšie, len pomocou poskytnutých príkazov. Čo znamená \"efektívny\"? V informatike môže v skutočnosti znamenať niekoľko rôznych vecí v závislosti od toho, o čom hovoríte. Pracujte na týchto výzvach, pokúste sa ich vyriešiť spôsobom, ktorý považujete za najlepší, a na konci sa vás opýtame na efektívnosť. <img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" style=\"float:right\"> # Do This: Čo najefektívnejšie nakreslite štvorec 1 x 1 vpredu a vľavo od korytnačky. Program by sa mal zastaviť s korytnačkou v pôvodnej polohe, otočenou pôvodným smerom. Keď si myslíte, že ste našli riešenie, kliknite na tlačidlo Dokončiť - zobrazí sa po spustení programu.",
+    "teacher_markdown": "Dôležité je obmedzenie práce len so 4 príkazmi. (Pozri: \"O čo ide?\" nižšie.) Ak študenti prídu na hodinu s predchádzajúcimi znalosťami programovania, môžu sa pokúsiť ísť mimo týchto obmedzení, aby znížili počet riadkov kódu. Ak vidíte, že študenti používajú príkazy nad rámec 4 uvedených príkazov alebo používajú parametre týchto príkazov, ako napr: `posunutie vpred(150)`, mali by ste im povedať, že neriešia úlohu; úlohou je vytvoriť obrázky len pomocou 4 uvedených príkazov."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/19": {
+    "short_instructions": "Nakreslite štvorec 1x1 nad a naľavo od východiskovej pozície korytnačky. Kliknutím zobrazíte úplné pokyny.",
+    "long_instructions": "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" style=\"float:right\"> Ak máte k dispozícii len 4 príkazy korytnačky, napíšte v aplikácii App Lab kód na dokončenie výkresov v každej z nižšie uvedených úloh. Vaším cieľom je napísať kód, ktorý vyrieši problém čo najefektívnejšie, len pomocou poskytnutých príkazov. Čo znamená \"efektívny\"? V informatike môže v skutočnosti znamenať niekoľko rôznych vecí v závislosti od toho, o čom hovoríte. Pracujte na týchto výzvach, pokúste sa ich vyriešiť spôsobom, ktorý považujete za najlepší, a na konci sa vás opýtame na efektívnosť. <img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" style=\"float:right\"> # Do This: Čo najefektívnejšie nakreslite štvorec 1 x 1 vpredu a vľavo od korytnačky. Program by sa mal zastaviť s korytnačkou v pôvodnej polohe, otočenou pôvodným smerom. Keď si myslíte, že ste našli riešenie, kliknite na tlačidlo Dokončiť - zobrazí sa po spustení programu.",
+    "teacher_markdown": "Dôležité je obmedzenie práce len so 4 príkazmi. (Pozri: \"O čo ide?\" nižšie.) Ak študenti prídu na hodinu s predchádzajúcimi znalosťami programovania, môžu sa pokúsiť ísť mimo týchto obmedzení, aby znížili počet riadkov kódu. Ak vidíte, že študenti používajú príkazy nad rámec 4 uvedených príkazov alebo používajú parametre týchto príkazov, ako napr: `posunutie vpred(150)`, mali by ste im povedať, že neriešia úlohu; úlohou je vytvoriť obrázky len pomocou 4 uvedených príkazov."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/20": {
+    "short_instructions": "Nakreslite štvorec 1x1 nad a naľavo od východiskovej pozície korytnačky. Kliknutím zobrazíte úplné pokyny.",
+    "long_instructions": "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" style=\"float:right\"> Ak máte k dispozícii len 4 príkazy korytnačky, napíšte v aplikácii App Lab kód na dokončenie výkresov v každej z nižšie uvedených úloh. Vaším cieľom je napísať kód, ktorý vyrieši problém čo najefektívnejšie, len pomocou poskytnutých príkazov. Čo znamená \"efektívny\"? V informatike môže v skutočnosti znamenať niekoľko rôznych vecí v závislosti od toho, o čom hovoríte. Pracujte na týchto výzvach, pokúste sa ich vyriešiť spôsobom, ktorý považujete za najlepší, a na konci sa vás opýtame na efektívnosť. <img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" style=\"float:right\"> # Do This: Čo najefektívnejšie nakreslite štvorec 1 x 1 vpredu a vľavo od korytnačky. Program by sa mal zastaviť s korytnačkou v pôvodnej polohe, otočenou pôvodným smerom. Keď si myslíte, že ste našli riešenie, kliknite na tlačidlo Dokončiť - zobrazí sa po spustení programu.",
+    "teacher_markdown": "Dôležité je obmedzenie práce len so 4 príkazmi. (Pozri: \"O čo ide?\" nižšie.) Ak študenti prídu na hodinu s predchádzajúcimi znalosťami programovania, môžu sa pokúsiť ísť mimo týchto obmedzení, aby znížili počet riadkov kódu. Ak vidíte, že študenti používajú príkazy nad rámec 4 uvedených príkazov alebo používajú parametre týchto príkazov, ako napr: `posunutie vpred(150)`, mali by ste im povedať, že neriešia úlohu; úlohou je vytvoriť obrázky len pomocou 4 uvedených príkazov."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/21": {
+    "long_instructions": "<img src=\"https://images.code.org/117a2a8e098760173f16048fde721295-image-1479829058899.gif\" style=\"float: right; width: 150px\"> ## Vyskúšajte to -- Kontrola textových hesiel **Kľúčová myšlienka**: Pomocou `==` môžete porovnávať reťazce aj čísla. - Použime príkaz if v obsluhe udalosti na porovnanie textu, ktorý používateľ zadá do prvku používateľského rozhrania. **Nastavenie:** - Všimnite si nastavenie v režime návrhu - Sú tu dva obrázky: červený zámok a zelený \"unlock\". - Zelený \"unlock\" je na začiatku _skrytý_. ## Urobte toto: **Pridajte do obsluhy udalosti príkaz if na kontrolu hesla a zobrazenie \"odomknutia\" len v prípade, že je heslo správne** - Môžete použiť `==` na porovnanie textu získaného z textového poľa *heslo\\_vstup* a reťazca, ktorý chcete použiť ako heslo. Logický výraz, ktorý by ste mali použiť, by mal vyzerať takto: [Ak používateľ zadal správne heslo, potom sa **zobrazí** zelený \"unlock\" a **skryje** červený zámok. - Poskytli sme kód na skrytie a zobrazenie obrázkov. Stačí pridať príkaz if. - Inak nerobte nič. Môžu to skúsiť znova."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/22": {
+    "long_instructions": "# Je to hľadanie slov Na ľavej strane obrazovky kliknite na \"Spustiť\" a spustite hľadanie slov. V tíme nájdite v tabuľke nasledujúce slová. Môžu byť horizontálne, vertikálne alebo diagonálne v ľubovoľnom smere. - DEFINE - PREPARE - TRY - REFLECT - PROBLEM - SOLVE - COMPUTER - SCIENCE Po nájdení slov (alebo keď učiteľ zavolá čas) kliknite na tlačidlo \"Finish\" a prejdite na ďalšiu aktivitu."
+  },
+  "https://studio.code.org/s/allthethings/lessons/19/levels/3": {
+    "long_instructions": "# Koľko premenných počítadla? Na animáciu scény môžete použiť premenné s počítadlom (`x = x + 1` , `x = x - 1` , `x = x + 0,5` atď.). Čo sa stane, keď sa scény začnú zväčšovať a komplikovať? Pozrite si túto animáciu. S partnerom: - Rozhodnite, koľko premenných počítadla budete potrebovať na vytvorenie tejto scény - Rozhodnite, ako pomenujete premenné počítadla - **Nakreslite schému premenných Počítadlo - Hodnoty - Spojnice** na prvom snímku tejto scény. Nebojte sa o presné hodnoty. - Podeľte sa o svoju odpoveď s inou skupinou **a buďte pripravení podeliť sa o svoje nápady s triedou**"
+  },
+  "https://studio.code.org/s/allthethings/lessons/19/levels/4": {
+    "display_name": "Projekt - Dokončovacie úpravy",
+    "long_instructions": "# Dokončovacie úpravy Teraz, keď máte základ svojej hry, je čas pridať niektoré dokončovacie úpravy. Ak chcete svoju hru ešte vylepšiť, skúste v nej vykonať aspoň dve vylepšenia. Môžete použiť nasledujúci zoznam, ktorý vám pomôže, alebo si môžete vymyslieť vlastné vylepšenia, ktoré by ste chceli vykonať. - Nájdite spôsob, ako zabrániť tomu, aby váš hráč vychádzal z okrajov obrazovky. - Pridajte rôzne predmety, ktoré má váš hráč zbierať alebo sa im vyhýbať a ktoré majú rôznu bodovú hodnotu. - Vytvorte premennú, ktorá bude sledovať, koľko má váš hráč životov, a potom hru ukončite, keď sa životy vyčerpajú. - Pridajte sprity, ktoré sa pohybujú na pozadí hry. - Vytvorte ďalšie pozadie, na ktoré sa prepnete, keď sa skóre ešte zvýši alebo keď sa hra skončí. - Dajte svojej hre spôsob ukončenia. Prípadným ukončením hry môže byť dosiahnutie určitej hodnoty skóre alebo vyčerpanie počtu životov na udržanie hry. - Ak má vaša hra plošiny, skúste zabezpečiť, aby objekty v hre nejakým spôsobom interagovali s týmito plošinami."
+  },
+  "https://studio.code.org/s/allthethings/lessons/20/levels/1": {
+    "dsls": {
+      "markdown": "## Vitajte! <img style=\"float:left; margin:0 20px\" src=\"//code.org/images/edquote1.png\" height=\"910\" width=\"400\">\n\n<p><strong>Vitajte v online kurze profesionálneho rozvoja Code.org pre žiakov od 5 rokov Úvod do informatiky.</strong> </p>\n\n<p>Program profesionálneho rozvoja Code.org vás pripraví na začlenenie informatiky do vašej triedy a podporí váš rast ako učiteľa. Tento online kurz môže niektorým učiteľom stačiť na to, aby začali používať naše materiály vo svojich triedach, ale ak máte záujem o ďalší odborný rozvoj, pozrite si naše semináre pre pedagógov K-5, ktoré sa konajú v Spojených štátoch. Ide o vysokokvalitné semináre, ktoré vedú skúsení učitelia informatiky. </p>\n\n<p>Zaregistrujte <a href=\"http://code.org/professional-development-workshops\">sa na workshop tu.</a></p>\n\n<p>Počas tohto online kurzu budete sledovať videá, čítať články, vykonávať online aktivity a diskutovať s ostatnými učiteľmi o základoch informatiky a o tom, ako používať online vzdelávací systém Code.org. Chceme vám umožniť, aby ste si sami vyskúšali písanie počítačových programov, aby ste mohli zažiť vzrušujúce vyučovanie informatiky.</p>\n\n<p>Počas programu PD a kedykoľvek po ňom bude Code.org a naša komunita angažovaných pedagógov vždy k dispozícii pre podporu na <a href=\"http://support.code.org\">http://support.code.org</a>.</p>\n\n</br>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/20/levels/2": {
+    "dsls": {
+      "markdown": "## Vzdelávanie v oblasti informatiky Považujete informatiku za základnú zručnosť pre svojich študentov? Prečo alebo prečo nie?\n\n<div id=\"discourse-comments\"></div>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/21/levels/2": {
+    "short_instructions": "Ako blokový prvok by sme mali byť schopní zahrnúť XML reprezentujúce platný blok alebo bloky Blockly. [blockly block][0] Podporujeme aj Blockly XML ako inline element, napríklad takto: [blockly block][1]. Rozdiel vo vstupnom formáte spočíva v tom, že tento je vložený do odseku, zatiaľ čo predchádzajúci je vo vlastnom textovom bloku. Rozdiel vo výkone je porovnateľný."
+  },
+  "https://studio.code.org/s/allthethings/lessons/21/levels/3": {
+    "short_instructions": "Na vyriešenie tejto hádanky použite tri bloky `posunúť na západ` a jeden blok `zbierať kukuricu`.",
+    "long_instructions": "Použite [blockly block][0] **trikrát**, aby ste dostali kombajn ku kukurici! Nezabudnite použiť [blockly block][1] na zber kukurice!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/23/levels/1": {
+    "short_instructions": "Nájdi cestu a zaveď ma k hlúpemu prasaťu. Vyhnite sa TNT, inak bude perie lietať! Tip: Je na juh odo mňa."
+  },
+  "https://studio.code.org/s/allthethings/lessons/23/levels/2": {
+    "sublevels": {
+      "K-1 Happy Maps Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/up.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/down.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/left.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/right.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png",
+          "questions": [
+            {
+              "text": "Ktorý šíp dostane Flurba k pokladu?"
+            }
+          ],
+          "title": "Viacnásobný výber"
+        }
+      },
+      "Multi Horizontal Scroll Test": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "3 bity",
+              "correct": false
+            },
+            {
+              "text": "4 bity",
+              "correct": false
+            },
+            {
+              "text": "5 bitov",
+              "correct": false
+            },
+            {
+              "text": "6 bitov",
+              "correct": false
+            },
+            {
+              "text": "7 bitov",
+              "correct": true
+            },
+            {
+              "text": "12 bitov",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "Štandardná klávesnica QWERTY má 47 klávesov, ktoré môžu umiestňovať znaky na obrazovku. Každá z týchto kláves môže zobraziť aj druhý znak, ak súčasne podržíte kláves \"Shift\" (predpokladajme, že všetky ostatné klávesy sú v tejto otázke ignorované). Koľko bitov by ste potrebovali na zakódovanie všetkého, čo sa dá na tejto klávesnici napísať?"
+            }
+          ],
+          "title": "Hodnotenie: Kódovanie textu"
+        }
+      },
+      "Choose 2 Test": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Riadok 2",
+              "correct": true
+            },
+            {
+              "text": "Riadok 3",
+              "correct": true
+            },
+            {
+              "text": "Riadok 4",
+              "correct": false
+            },
+            {
+              "text": "Riadok 5",
+              "correct": false
+            }
+          ],
+          "markdown": "Táto otázka využíva robota v sieti štvorcov. Robot je znázornený ako trojuholník, ktorý je na začiatku otočený smerom k pravej strane mriežky. Robot sa pohybuje podľa nasledujúcich pokynov. | Inštrukcie | Vysvetlenie | |--------------------|--------| |`Posun vpred` | Robot sa posunie o jedno políčko vpred v smere, ktorým je otočený |`Otočiť doprava` | Robot sa otočí na mieste o 90 stupňov v smere hodinových ručičiek (t. j. vykoná otočku na mieste doprava). |`Rotate left`` | Robot sa otočí na mieste o 90 stupňov proti smeru hodinových ručičiek (t. j. vykoná otočku na mieste doľava). |`REPEAT n TIMES`` | Blok inštrukcií obsiahnutý medzi zátvorkami {} sa opakuje n-krát. | Uvažujme nasledujúci nesprávny program, ktorého cieľom je pohybovať robotom po obvode mriežky nižšie, ako je naznačené šípkami. ![](https://images.code.org/4d3177070d1585fc6ad3f9091dd53d76-image-1579897739915.png) ![](/script_assets/csp/instruction_gifs/U3L02-rightSquare.png)\n\n",
+          "questions": [
+            {
+              "text": "Ktoré riadky kódu by sa mali odstrániť, aby program fungoval tak, ako má? Vyberte <u>dve</u> odpovede"
+            }
+          ]
+        }
+      },
+      "K-1 Plant a Seed Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/poke-hole.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/dirty-teeth.png",
+              "correct": true
+            }
+          ],
+          "content1": "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png",
+          "questions": [
+            {
+              "text": "Ktorý krok by mal byť na začiatku tohto algoritmu?"
+            }
+          ],
+          "title": "Viacnásobný výber"
+        }
+      },
+      "K-1 Plant a Seed Multi 2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/brush-teeth.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/cover-seed.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/water-pot.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png",
+          "questions": [
+            {
+              "text": "Ktorý krok by mal vyplniť prázdne miesto pre tento algoritmus?"
+            }
+          ],
+          "title": "Viacnásobný výber"
+        }
+      },
+      "K-1 Artist 1 Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/artist_images/W-S-S.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/artist_images/E-S-S.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/artist_images/S-E-E.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/artist_images/E-S.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500",
+          "questions": [
+            {
+              "text": "Ktoré bloky vyriešia túto hádanku?"
+            }
+          ],
+          "title": "Viacnásobný výber"
+        }
+      },
+      "ECSPD1 computational thinker": {
+        "dsls": {
+          "markdown": "# Reflexia učebných osnov ECS? Ktoré z učebných cieľov kurzu Exploring Computer Science vás zaujali po preštudovaní úvodných jednotiek kurzu?\n"
+        }
+      },
+      "sample external 2": {
+        "dsls": {
+          "markdown": "### Ukážka externého 2 Toto je druhá ukážka nejakého textu inštrukcií, ktorý je uložený v externom súbore. Tu je nejaký dodatočný text, aby sme mohli dúfať, že sa nám podarí získať nejaké riadkovanie, keď ho budeme zobrazovať v našej skupine LevelGroup, ktorá ho spotrebuje na zobrazenie niektorých pokynov medzi bežnými vloženými úrovňami.\n\n"
+        }
+      },
+      "ECSPD your goals_test": {
+        "long_instructions": "__Optional: Aké sú vaše ciele pre triedu ECS?__ *Tieto ciele sa budú časom meniť a k tejto vašej odpovedi sa budeme v priebehu kurzu vracať, aby sme mohli skontrolovať, ako sa nám darí napĺňať tieto ciele.*\r\n",
+        "title": "Dokumentácia vašich cieľov"
+      },
+      "K-1 Maze Loops Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r3_N.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r3_NN.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r4_N.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/move_blocks/NNNequals.png, 300",
+          "questions": [
+            {
+              "text": "Ktorý opakovací blok je rovnaký?"
+            }
+          ],
+          "title": "Viacnásobný výber"
+        }
+      },
+      "K-1 Maze Loops Multi 2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r3_S.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r3_ES.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r3_SE.png",
+              "correct": true
+            }
+          ],
+          "content1": "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240",
+          "questions": [
+            {
+              "text": "Vyberte správny opakovací blok."
+            }
+          ],
+          "title": "Viacnásobný výber"
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/25/levels/1": {
+    "short_instructions": "Drevo je veľmi dôležitý zdroj. Vyrába sa z neho veľa vecí. Prejdite k stromu a príkazom \"destroy block\" ho pokráťte."
+  },
+  "https://studio.code.org/s/allthethings/lessons/25/levels/2": {
+    "display_name": "Voľná hra",
+    "short_instructions": "**Voľná hra:** Čas na vlastné objavovanie!",
+    "long_instructions": "**Freeplay:** Teraz je to na vás! Pomocou kódu agenta môžete tento svet preskúmať.",
+    "authored_hints": {
+      "MC_HOC_2017_13_Cole_a": "Skúste dať agentovi postaviť dráhy pre minikáry, aby ste mohli preskúmať svet!"
+    },
+    "function_definitions": {
+      "function 1": {
+        "name": "funkcia 1"
+      },
+      "function 2": {
+        "name": "funkcia 2"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/25/levels/3": {
+    "long_instructions": "Dostaňte sa k morskej lampe."
+  },
+  "https://studio.code.org/s/allthethings/lessons/26/levels/1": {
+    "dsls": {
+      "title": "Hodnotenie testu 1"
+    },
+    "sublevels": {
+      "csp_unit_assessment_overview": {
+        "dsls": {
+          "content1": "popis tu",
+          "markdown": "# CS Principles Chapter Assessment Pozorne si prečítajte nižšie uvedené informácie, aby ste mali všetko potrebné ešte pred začiatkom a vedeli, ako sa v hodnotení orientovať. ## Veci, ktoré budete potrebovať * **Skrabací papier a ceruzka** * Existuje niekoľko otázok, pri ktorých si možno budete chcieť urobiť niekoľko poznámok na papier. ## Ako urobiť test * Prečítajte si každú otázku a vyberte najlepšiu odpoveď z ponúkaných možností * Každý výber, ktorý urobíte, sa automaticky uloží, ale ak chcete, môžete ho zmeniť. * Pomocou oranžových tlačidiel \"Ďalšia strana\" a \"Predchádzajúca strana\" môžete v teste postupovať dopredu a dozadu. Vaše odpovede sa uložia bez ohľadu na to, či idete dopredu alebo dozadu. ![](https://images.code.org/9e697f11d15376aa513dea510dd464d3-image-1463597394595.png) * Navigovať môžete aj pomocou bublín v hornej časti obrazovky. * Žltá - znamená, že ste navštívili stránku, ale ešte ste neodpovedali na všetky otázky. * Zelená - znamená, že ste odpovedali na všetky otázky na stránke. ![](https://images.code.org/51c792652b3e922665221bba16a8c37c-image-1463598805414.png) * Keď ste pripravení odoslať test, prejdite na POSLEDNÚ stránku a uvidíte fialové tlačidlo \"Odoslať\". Po kliknutí na tlačidlo \"Odoslať\" sa test odošle vášmu učiteľovi. ![](https://images.code.org/194d1918efc8ce3f8621de4e6b2558f3-image-1463597268503.png) * Upozorňujeme, že test je možné aj \"zrušiť\". Mali by ste to robiť **len vo výnimočných prípadoch** - pri odosielaní testu učiteľ vidí čas jeho odoslania. * **Uistite sa**, že ste si s učiteľom vyjasnili, že je v poriadku test odhlásiť a poslať ho znova - nechcete predsa, aby bol celý váš test neplatný, pretože ste ho odovzdali až po tom, čo ste ho mali mať hotový. ![](https://images.code.org/ab068a26c8a230a0180f6f9c5c8d45bf-image-1463600680236.png) ## Veľa šťastia!\n",
+          "teacher_markdown": "### POZOR: Čo je a čo nie je toto hodnotenie * Toto hodnotenie je **navrhnuté v štýle hodnotenia AP** s výberom odpovede. * To znamená, že otázky sa netýkajú konkrétne** učiva prebraného pred týmto bodom. Otázky sa skôr týkajú základných vzdelávacích cieľov AP, ktoré boli teoreticky riešené. * To **znamená, že** študenti môžu potrebovať extrapoláciu z toho, čo sa naučili, aby odpovedali na otázky. * Znamená to, že** otázky môžu byť \"ťažké\", najmä pre tých, ktorí sa im vystavujú po prvýkrát. Takže celkovo: **Používajte s opatrnosťou** * Posúďte, akú hodnotu priradiť tomuto hodnoteniu. * Toto hodnotenie nemusíte používať na hodnotenie žiakov, ani na... * Žiakov môžete známkovať aj iným spôsobom, ako len na základe % správnosti. * Dbajte na to, aby ste ho používali spôsobom, ktorý zachová ducha triedy z hľadiska skúmania vedomostí. * Ak ste nervózni, že to študentov odradí, možno preformulujte toto hodnotenie ako príležitosť na skúmanie - nechajte študentov vyskúšať si otázky, potom ísť skúmať odpovede a zmeniť to, čo urobili zle, alebo vytvoriť vlastný súbor otázok. --- #### F.A.Q. -- Ako pripraviť, administrovať a kontrolovať hodnotenie Pozrite si náš priebežný **[F.A.Q. dokument tu](https://docs.google.com/document/d/1zEpD1PFt6ec2S8ourxuMH0HD6tiyRvqAGUKGDCOt-qs/edit#heading=h.kewgp6z8qdde)**, ktorý obsahuje: * snímky obrazovky o tom, ako pripraviť, spravovať a skontrolovať hodnotenia * rieši bežné otázky/problémy #### Stručný prehľad o tom, ako vidieť/kontrolovať odpovede žiakov 1. Prejdite na [Teacher Dashboard](https://code.org/teacher-dashboard#/) 2. Vyberte si oddiel Princípy CS 3. Zobrazí sa niekoľko fialových kariet vrátane kariet Textové odpovede, Hodnotenia atď. 4. Kliknite na **Ocenenia/výskumy** 5. Z rozbaľovacieho zoznamu pre výber kurzu **vyberte jednotku, v ktorej sa toto hodnotenie objavilo (napr. jednotka 1: Internet)** 6. Pre všetkých študentov, ktorí *odovzdali* svoje hodnotenie, sa zobrazia dve tabuľky: * Prvá tabuľka je súhrnným zobrazením, v ktorom sú zhrnuté percentá správnych odpovedí všetkých študentov, ktorí odovzdali hodnotenie, vrátane časovej pečiatky, kedy ho odovzdali * Druhá tabuľka je komplexným zoznamom každej odpovede na každú otázku, ktorú odovzdal každý študent Nad oboma týmito tabuľkami sa nachádza tlačidlo **Stiahnuť (alebo exportovať) ako csv** - umožňuje vám spracovať odpovede v tabuľkovom procesore (odporúčame). 7. Ak potrebujete študentovi umožniť ODOSLAŤ test, nasmerujte ho, aby prešiel na poslednú stranu testu a stlačil tlačidlo \"Odoslať\". **POZNÁMKA O ODOSLANÍ:** Mali by ste so študentmi jasne stanoviť pravidlá týkajúce sa odhlasovania testu. Študenti si môžu myslieť, že je to dobrý spôsob, ako zmeniť odpoveď po skončení testu (t. j. podvádzať), ale uvidíte časovú pečiatku, kedy študent test odoslal. Navrhujeme, aby ste jednoducho stanovili, že po určitom čase nebudete uvažovať o hodnotení alebo klasifikácii žiadnych testov. Ak nebola predložená do stanoveného termínu, je to, akoby ste ju nedostali.\n"
+        }
+      },
+      "PS U3 Q1-1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Nejednoznačnosť prirodzeného jazyka si vyžaduje vytvorenie programovacích jazykov na ovládanie počítača.",
+              "correct": true
+            },
+            {
+              "text": "V porovnaní s počtom slov v prirodzenom jazyku je počet definovaných slov v programovacom jazyku veľmi malý.",
+              "correct": true
+            },
+            {
+              "text": "Počet definovaných slov v programovacom jazyku je približne rovnaký ako počet slov v prirodzenom jazyku.",
+              "correct": false
+            },
+            {
+              "text": "Interpretácia inštrukcie napísanej v programovacom jazyku sa dá spravidla vykonať mnohými spôsobmi.",
+              "correct": false
+            }
+          ],
+          "markdown": "Programovacie jazyky majú niektoré podobnosti a rozdiely s \"prirodzeným\" jazykom, ktorý používate v každodennej reči. Vyberte dve **pravdivé** tvrdenia o programovacích jazykoch:\n"
+        }
+      },
+      "PS U3 Q1-2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "https://images.code.org/d2fb6af7fc9d8b79eefd9b66232eb1a8-image-1459374904942.png",
+              "correct": false
+            },
+            {
+              "text": "https://images.code.org/c59d71ecac547d755d63a3f8fca56843-image-1459376262204.png",
+              "correct": true
+            },
+            {
+              "text": "https://images.code.org/3e341ed57ac366663807df24b2a7e329-image-1459376286013.png",
+              "correct": false
+            },
+            {
+              "text": "https://images.code.org/d658fb7f959603138c39ed5f7666fd63-image-1459376301845.png",
+              "correct": false
+            },
+            {
+              "text": "https://images.code.org/841ec4583e3d9f0b41d1b51b496ef94b-image-1459376320683.png",
+              "correct": false
+            }
+          ],
+          "markdown": "Táto a nasledujúca otázka používajú robota v mriežke štvorcov. Robot je znázornený ako trojuholník, ktorý je na začiatku otočený smerom k pravej strane mriežky. Robot sa pohybuje podľa nasledujúcich pokynov. | **Inštrukcia** | **Vysvetlenie** | |-----------------|-----------------| | MOVE_FORWARD() |Robot sa posunie o jedno políčko dopredu v smere, ktorým je otočený.| | ROTATE_RIGHT() |Robot sa otočí na mieste o 90 stupňov v smere hodinových ručičiek (t.j, | ROTATE_LEFT() |Robot sa otočí o 90 stupňov proti smeru hodinových ručičiek (t. j. otočí sa o 90 stupňov doľava).| | REPEAT n TIMES |Blok inštrukcií obsiahnutý medzi zátvorkami { } sa zopakuje n-krát.| Uvažujme nasledujúci program, ktorý používa príkazy z vyššie opísaného pseudokódu. OPAKOVAŤ 4 KRÁT { MOVE_FORWARD() MOVE_FORWARD() MOVE_FORWARD() ROTATE_RIGHT() MOVE_FORWARD() ROTATE_RIGHT() MOVE_FORWARD() ROTATE_RIGHT() } Ktorý z nasledujúcich obrázkov znázorňuje dráhu a koncovú polohu robota, ktorá bude výsledkom vykonania uvedeného kódu? Počiatočná poloha robota je znázornená ako bodkovaný trojuholník pre prípady, keď robot nezačne a neskončí na tom istom mieste.\n\n\n",
+          "title": "Roboty v štvorcovej sieti Časť 1"
+        }
+      },
+      "PS U3 Q1-3": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Riadok 3 a riadok 4",
+              "correct": true
+            },
+            {
+              "text": "Riadky 5, 6, 7, 8 a 9",
+              "correct": false
+            },
+            {
+              "text": "Riadok 8 a riadok 9",
+              "correct": false
+            },
+            {
+              "text": "Riadok 9",
+              "correct": false
+            }
+          ],
+          "markdown": "Uvažujme nasledujúci nesprávny program, ktorý je určený na pohyb robota po obvode mriežky, ako je naznačené na nasledujúcom obrázku. Všimnite si, že by ste sa mali stále odvolávať na pseudokód opísaný v otázke vyššie. ![](https://images.code.org/a442a51dc20d85327f74693a0e03a876-image-1459378505362.png)\n"
+        }
+      },
+      "PS U3 Q1-4": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Funkcie sú opakovane použiteľné programové abstrakcie.",
+              "correct": false
+            },
+            {
+              "text": "Funkcie pomáhajú znížiť zložitosť písania a údržby programov.",
+              "correct": false
+            },
+            {
+              "text": "Funkcie nemôžu volať iné funkcie v rámci toho istého programu.",
+              "correct": true
+            },
+            {
+              "text": "Funkcie pomáhajú rozdeliť problém na logické časti.",
+              "correct": false
+            },
+            {
+              "text": "Po definovaní funkcie ju možno zavolať mnohokrát z rôznych častí programu.",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "Ktorá z nasledujúcich možností NIE JE pravdivá o funkciách v programovaní?"
+            }
+          ]
+        }
+      },
+      "PS U3 Q1-5": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "V názve funkcie by malo byť uvedené, ako dlho trvá jej spustenie.",
+              "correct": false
+            },
+            {
+              "text": "Dve funkcie s podobným správaním by mali mať rovnaké názvy, aby sa naznačil ich vzťah.",
+              "correct": false
+            },
+            {
+              "text": "Názov funkcie by mal byť čo najvýstižnejší, aby naznačoval, čo funkcia robí.",
+              "correct": true
+            },
+            {
+              "text": "Názvy funkcií by mali byť usporiadané abecedne.",
+              "correct": false
+            },
+            {
+              "text": "Názov funkcie by mal začínať číslom, ktoré označuje poradie, v akom sa má vykonať.",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "Aká je dôležitá konvencia pomenovania funkcií?"
+            }
+          ]
+        }
+      },
+      "PS U3 Q1-6": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Funkcia môže v priebehu programu meniť názvy.",
+              "correct": false
+            },
+            {
+              "text": "Kód je možné dynamicky pridávať alebo odstraňovať z funkcie počas behu programu.",
+              "correct": false
+            },
+            {
+              "text": "Funkcie sa môžu volať rôznymi názvami v závislosti od toho, kde v programe sa volajú.",
+              "correct": false
+            },
+            {
+              "text": "Dve funkcie môžu mať rovnaké názvy, ak je ich kód totožný.",
+              "correct": false
+            },
+            {
+              "text": "Dve funkcie v jednom programe môžu mať rôzne názvy, ale môžu obsahovať identický kód.",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Ktoré z nasledujúcich tvrdení o funkciách je pravdivé"
+            }
+          ]
+        }
+      },
+      "sample external 1": {
+        "dsls": {
+          "markdown": "### Ukážka externého Toto je prvá ukážka nejakého textu inštrukcií, ktorý je uložený v súbore .external.\n\n"
+        }
+      },
+      "PS U3 Q1-7": {
+        "dsls": {
+          "answers": [
+            "Tu zadajte odpoveď"
+          ],
+          "content1": "Tu zadajte výzvu",
+          "markdown": "Použite stratégiu návrhu zhora nadol a navrhnite ďalšie funkcie, ktoré možno budete chcieť vytvoriť. **Stratégia návrhu zhora nadol:** 1. Pozrite sa na celkový obraz... 2. Identifikujte čiastkovú úlohu... 3. Rozdeľte túto čiastkovú úlohu na menšie čiastkové úlohy... 4. Pokračujte, kým sa nedostanete k príkazom, ku ktorým už máte prístup. Tu je príklad prvej funkcie: > Názov funkcie: drawSnowflake() <br> Opis/odôvodnenie: Nakreslite snehovú vločku so 6 hrotmi\n\n"
+        }
+      },
+      "sample external 2": {
+        "dsls": {
+          "markdown": "### Ukážka externého 2 Toto je druhá ukážka nejakého textu inštrukcií, ktorý je uložený v externom súbore. Tu je nejaký dodatočný text, aby sme mohli dúfať, že sa nám podarí získať nejaké riadkovanie, keď ho budeme zobrazovať v našej skupine LevelGroup, ktorá ho spotrebuje na zobrazenie niektorých pokynov medzi bežnými vloženými úrovňami.\n\n"
+        }
+      },
+      "ECSPD your goals": {
+        "long_instructions": "__Aké sú vaše ciele v triede ECS?__ *Tieto ciele sa budú časom meniť a k tejto vašej odpovedi sa budeme v priebehu kurzu vracať, aby sme mohli skontrolovať, ako sa nám darí napĺňať tieto ciele.*\n",
+        "title": "Dokumentácia vašich cieľov"
+      },
+      "PS U3 Q1-8": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "drawStar;",
+              "correct": false
+            },
+            {
+              "text": "drawStar();",
+              "correct": true
+            },
+            {
+              "text": "![](https://images.code.org/f7d07331ddd6ff10e6825e42a286cf6b-image-1579899560773.png) ",
+              "correct": false
+            },
+            {
+              "text": "funkcia drawStar;",
+              "correct": false
+            },
+            {
+              "text": "funkcia drawStar()",
+              "correct": false
+            }
+          ],
+          "markdown": "Ktorá z nasledujúcich možností _**vyvolá**_ funkciu drawStar?\n\n\n"
+        }
+      },
+      "PS U3 Q1-9": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Parametre určujú počet spustení funkcie.",
+              "correct": false
+            },
+            {
+              "text": "Parametre umožňujú flexibilnejšie a všeobecnejšie správanie funkcií.",
+              "correct": true
+            },
+            {
+              "text": "Parametre sú užitočné pre tímy programátorov, pretože pomáhajú definovať hranice problému, ktorý sa snažia vyriešiť.",
+              "correct": false
+            },
+            {
+              "text": "Parametre menia poradie operácií v rámci funkcie.",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "Prečo sú parametre pri programovaní užitočné?"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/27/levels/1": {
+    "long_instructions": "V tomto module ste sa dozvedeli o tom, ako sa informácie prenášajú z miesta na miesto na internete, a o hlavných krokoch na tejto ceste. **Napíšte pre svojich žiakov plán vyučovacej hodiny o tom, ako sa vytvárajú balíky.** ### Ako sa táto úloha hodnotí Túto úlohu hodnotia 2 kolegovia pomocou nasledujúcej rubriky: - Lekcia obsahuje prednášku - Lekcia obsahuje aktivitu na sieťovom simulátore",
+    "title": "Odoslať plán vyučovacej hodiny: Smerovanie a pakety"
+  },
+  "https://studio.code.org/s/allthethings/lessons/27/levels/2": {
+    "long_instructions": "## DNS a škálovateľnosť Vlastnými slovami vysvetlite nasledujúce informácie o systéme názvov domén - Aký problém rieši DNS? - Ako DNS pomáha celosvetovému webu rozšíriť sa tak, aby miliardy používateľov mali prístup k miliardám webových stránok?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/27/levels/3": {
+    "long_instructions": "Čo si myslíte, že tento program robí?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/27/levels/4": {
+    "long_instructions": "## Redundancia Aké sú výhody zabudovania redundancie do siete? Aké sú potenciálne problémy s redundanciou budov?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/28/levels/1": {
+    "dsls": {
+      "title": "Vzorové hodnotenie CSP"
+    },
+    "sublevels": {
+      "CSP PD Example Question 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Jednotka odosielania binárnych správ",
+              "lesson": "Odosielanie binárnych správ"
+            },
+            {
+              "text": "Jednotka kódovacích čísel",
+              "lesson": "Kódovanie a odosielanie čísel"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Ktorú jednotku budete učiť ako prvú"
+            }
+          ]
+        }
+      },
+      "CSP PD Example Question 2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Donútim ich napísať",
+              "lesson": "Stratégie pre písanie študentov"
+            },
+            {
+              "text": "Budem ich učiť od rovesníkov",
+              "lesson": "Podpora vzájomného učenia"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Ako budete študentov učiť?"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/1": {
+    "short_instructions": "Veď ma k zelenému zlu! (Pozor na TNT)"
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/2": {
+    "short_instructions": "Veď ma k zelenému zlu! (Pozor na TNT)"
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/3": {
+    "short_instructions": "Zachovajte pokoj a pomôžte mi nájsť to zlé prasa. Inak by som sa mohol nahnevať!",
+    "authored_hints": {
+      "2-3_Maze_6_a": "Túto hádanku môžete vyriešiť dvoma spôsobmi!"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/5": {
+    "short_instructions": "Teraz použite blok opakovania, aby sa z bunky stala škrupina.",
+    "long_instructions": "Teraz použite blok opakovania, aby sa z bunky stala škrupina.",
+    "function_definitions": {
+      "draw 3 hexagons": {
+        "name": "nakreslite 3 šesťuholníky"
+      },
+      "draw 4 hexagons": {
+        "name": "nakreslite 4 šesťuholníky"
+      },
+      "draw 5 hexagons": {
+        "name": "nakreslite 5 šesťuholníkov"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/6": {
+    "short_instructions": "Chcete vidieť, čo sa stane, keď tento tvar opakujeme stále dokola pomocou slučky?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/7": {
+    "short_instructions": "Vážená osoba. Ja zombie. Musí... sa... dostať... k slnečnici."
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/8": {
+    "short_instructions": "Dostaňte zombie k slnečnici, ale vyhnite sa chomperovi!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/9": {
+    "short_instructions": "Musí... sa... dostať... k slnečnici."
+  },
+  "https://studio.code.org/s/allthethings/lessons/30/levels/1": {
+    "sublevels": {
+      "test anonymous student survey fun": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Neutrálne",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Informatika je zábava."
+            }
+          ]
+        }
+      },
+      "test anonymous student survey educational": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Áno",
+              "correct": true
+            },
+            {
+              "text": "Nie",
+              "correct": true
+            },
+            {
+              "text": "Možno",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Myslíte si, že informatika je vzdelávacia?"
+            }
+          ]
+        }
+      },
+      "test_anonymous_student_survey_why_class": {
+        "long_instructions": "Prečo robíte túto triedu? Uveďte aspoň dva dôvody."
+      },
+      "test_anonymous_student_survey_next_class": {
+        "long_instructions": "Čo budete robiť po tejto hodine?"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lockable/1/levels/1": {
+    "dsls": {
+      "title": "Pred prieskumom"
+    },
+    "sublevels": {
+      "pre-assessment survey heading1": {
+        "dsls": {
+          "markdown": "Najprv máme pre vás niekoľko otázok týkajúcich sa vašej školskej práce vo všeobecnosti.\n"
+        }
+      },
+      "pre-assessment survey q1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Mám schopnosť robiť si školské úlohy"
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "V škole mi to ide lepšie ako väčšine ostatných detí."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q3": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "V škole som veľmi dobrý."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q4": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Ak sa snažím, dokážem vyriešiť aj tie najťažšie problémy v škole."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q5": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Mám rád svoju školskú prácu."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q6": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Myslím, že moja práca v škole je zaujímavá."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q7": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "V škole sa mi páči."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q8": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Je pre mňa dôležité, aby som bol dobrý v škole."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey heading2": {
+        "dsls": {
+          "markdown": "Chceme tiež vedieť, čo si myslíte o informatike.  \n"
+        }
+      },
+      "pre-assessment survey q9": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Mám schopnosť učiť sa informatiku."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q10": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Myslím, že budem lepší v informatike ako väčšina ostatných detí v mojej škole."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q11": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Myslím, že budem veľmi dobrý v informatike."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q12": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Myslím, že ak sa budem snažiť, dokážem vyriešiť aj tie najťažšie problémy na hodinách informatiky."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q13": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Mám rád informatiku."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q14": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Myslím si, že informatika je zaujímavá."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q15": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Rád (alebo si myslím, že rád) robím aktivity v oblasti informatiky."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q16": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Je pre mňa dôležité byť dobrý v informatike."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q17": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Deti ako ja sa venujú informatike."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q18": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Informatiku mám (alebo si myslím, že budem mať) radšej ako ostatné deti v mojej škole."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q19": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Myslím, že by som sa jedného dňa mohol stať počítačovým vedcom."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q20": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Vo voľnom čase sa venujem informatike."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q21": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "V každodennom živote využívam počítačové zručnosti."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q22": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Informatika sa vzťahuje na väčšinu aspektov skutočného života. "
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q23": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Rozhodne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne nesúhlasím",
+              "correct": true
+            },
+            {
+              "text": "Mierne súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Súhlasím",
+              "correct": true
+            },
+            {
+              "text": "Rozhodne súhlasím",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Učenie sa informatiky mi pomáha v ostatných školských predmetoch."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q24A": {
+        "long_instructions": "Aké zručnosti v oblasti informatiky využívate v každodennom živote? "
+      },
+      "pre-assessment survey heading3": {
+        "dsls": {
+          "markdown": "Teraz chceme počuť o vašich predchádzajúcich skúsenostiach s informatikou. \n"
+        }
+      },
+      "pre-assessment survey q24": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Áno",
+              "correct": true
+            },
+            {
+              "text": "Nie",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Navštevovali ste pred súčasnou hodinou informatiky v škole nejaké iné hodiny informatiky?"
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q25A": {
+        "long_instructions": "Ak áno, aký kurz (kurzy) informatiky ste absolvovali pred súčasným kurzom informatiky? "
+      },
+      "pre-assessment survey q26": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Áno",
+              "correct": true
+            },
+            {
+              "text": "Nie",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Zúčastnili ste sa niekedy aktivít alebo programov v oblasti informatiky niekde mimo vyučovania (napríklad v mimoškolskom programe, online, v tábore alebo letnom programe)?"
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q27": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Mimoškolský program v mojej škole",
+              "correct": true
+            },
+            {
+              "text": "Program po škole niekde inde (napr. klub chlapcov a dievčat atď.)",
+              "correct": true
+            },
+            {
+              "text": "Online program",
+              "correct": true
+            },
+            {
+              "text": "Letný program/tábor",
+              "correct": true
+            },
+            {
+              "text": "Iné",
+              "correct": true
+            },
+            {
+              "text": "NEUPLATŇUJE SA",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Ak áno, kde ste predtým navštevovali hodiny informatiky alebo program mimo vyučovania? Ak ste sa zúčastnili na viacerých programoch, vyberte program, v ktorom ste strávili najviac času."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q28": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "8",
+              "correct": true
+            },
+            {
+              "text": "9",
+              "correct": true
+            },
+            {
+              "text": "10",
+              "correct": true
+            },
+            {
+              "text": "11",
+              "correct": true
+            },
+            {
+              "text": "12",
+              "correct": true
+            },
+            {
+              "text": "Iné",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "V ktorom ročníku ste?"
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q29": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Muži",
+              "correct": true
+            },
+            {
+              "text": "Ženy",
+              "correct": true
+            },
+            {
+              "text": "Iné",
+              "correct": true
+            },
+            {
+              "text": "Radšej neodpovedať",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Svoje pohlavie identifikujem ako:"
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q30": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Americký indián alebo pôvodný obyvateľ Aljašky",
+              "correct": true
+            },
+            {
+              "text": "Ázijské",
+              "correct": true
+            },
+            {
+              "text": "Čierny alebo Afroameričan",
+              "correct": true
+            },
+            {
+              "text": "Hispánci alebo Latinoameričania/Latinoameričanky",
+              "correct": true
+            },
+            {
+              "text": "Pôvodný obyvateľ Havaja alebo iných tichomorských ostrovov",
+              "correct": true
+            },
+            {
+              "text": "Biela",
+              "correct": true
+            },
+            {
+              "text": "Dve alebo viac pretekov",
+              "correct": true
+            },
+            {
+              "text": "Iné",
+              "correct": true
+            },
+            {
+              "text": "Radšej neodpovedať",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Ktorá z nasledujúcich možností najlepšie vystihuje vašu rasovú a/alebo etnickú identitu?"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/32/levels/1": {
+    "long_instructions": "Vytvorte si úžasnú webovú stránku! 1. Pozrite si webovú stránku, ktorú sme vám poskytli na začiatok. Zlepšime to! 2. Pridajte atribút background-color do štýlu tela v style.css, aby farba pozadia stránky bola \"darkcyan\" 3. Pridajte atribút text-align do štýlu body v style.css, aby ste obrázok a text vycentrovali horizontálne. 4. Zmena index.html tak, aby obsahoval inšpiratívny hashtag 5. Pridajte atribút color do štýlu p v style.css, aby bol inšpiratívny hashtag biely 6. Pridajte atribút font-size do štýlu p v style.css, aby bol váš inšpiratívny hashtag naozaj veľký! (Skúste 24px a 3em a uvidíte, čo sa stane.)"
+  },
+  "https://studio.code.org/s/allthethings/lessons/33/levels/1": {
+    "sublevels": {
+      "K-1 Happy Maps Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/up.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/down.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/left.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/right.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png",
+          "questions": [
+            {
+              "text": "Ktorý šíp dostane Flurba k pokladu?"
+            }
+          ],
+          "title": "Viacnásobný výber"
+        }
+      },
+      "Multi Horizontal Scroll Test": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "3 bity",
+              "correct": false
+            },
+            {
+              "text": "4 bity",
+              "correct": false
+            },
+            {
+              "text": "5 bitov",
+              "correct": false
+            },
+            {
+              "text": "6 bitov",
+              "correct": false
+            },
+            {
+              "text": "7 bitov",
+              "correct": true
+            },
+            {
+              "text": "12 bitov",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "Štandardná klávesnica QWERTY má 47 klávesov, ktoré môžu umiestňovať znaky na obrazovku. Každá z týchto kláves môže zobraziť aj druhý znak, ak súčasne podržíte kláves \"Shift\" (predpokladajme, že všetky ostatné klávesy sú v tejto otázke ignorované). Koľko bitov by ste potrebovali na zakódovanie všetkého, čo sa dá na tejto klávesnici napísať?"
+            }
+          ],
+          "title": "Hodnotenie: Kódovanie textu"
+        }
+      },
+      "Choose 2 Test": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Riadok 2",
+              "correct": true
+            },
+            {
+              "text": "Riadok 3",
+              "correct": true
+            },
+            {
+              "text": "Riadok 4",
+              "correct": false
+            },
+            {
+              "text": "Riadok 5",
+              "correct": false
+            }
+          ],
+          "markdown": "Táto otázka využíva robota v sieti štvorcov. Robot je znázornený ako trojuholník, ktorý je na začiatku otočený smerom k pravej strane mriežky. Robot sa pohybuje podľa nasledujúcich pokynov. | Inštrukcie | Vysvetlenie | |--------------------|--------| |`Posun vpred` | Robot sa posunie o jedno políčko vpred v smere, ktorým je otočený |`Otočiť doprava` | Robot sa otočí na mieste o 90 stupňov v smere hodinových ručičiek (t. j. vykoná otočku na mieste doprava). |`Rotate left`` | Robot sa otočí na mieste o 90 stupňov proti smeru hodinových ručičiek (t. j. vykoná otočku na mieste doľava). |`REPEAT n TIMES`` | Blok inštrukcií obsiahnutý medzi zátvorkami {} sa opakuje n-krát. | Uvažujme nasledujúci nesprávny program, ktorého cieľom je pohybovať robotom po obvode mriežky nižšie, ako je naznačené šípkami. ![](https://images.code.org/4d3177070d1585fc6ad3f9091dd53d76-image-1579897739915.png) ![](/script_assets/csp/instruction_gifs/U3L02-rightSquare.png)\n\n",
+          "questions": [
+            {
+              "text": "Ktoré riadky kódu by sa mali odstrániť, aby program fungoval tak, ako má? Vyberte <u>dve</u> odpovede"
+            }
+          ]
+        }
+      },
+      "CSD U3 drawSprites placement match": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48 AM.png,300px"
+            },
+            {
+              "text": "https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09 AM.png"
+            },
+            {
+              "text": "https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00 AM.png"
+            },
+            {
+              "text": "https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28 AM.png"
+            }
+          ],
+          "content1": "Priraďte kód k obrázku, ktorý vytvorí.",
+          "questions": [
+            {
+              "text": "https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08 AM.png"
+            },
+            {
+              "text": "https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21 AM.png"
+            },
+            {
+              "text": "https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12 AM.png"
+            },
+            {
+              "text": "https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34 AM.png"
+            }
+          ],
+          "title": "drawSprites"
+        }
+      },
+      "CSD U3 - conditionals - Matching_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "dog.rotation &lt; cat.rotation"
+            },
+            {
+              "text": "dog.x &lt; cat.x"
+            },
+            {
+              "text": "dog.scale > cat.scale"
+            },
+            {
+              "text": "dog.x > cat.x"
+            },
+            {
+              "text": "dog.x == cat.x"
+            }
+          ],
+          "content1": "Priradenie logického výrazu k anglickému opisu.",
+          "questions": [
+            {
+              "text": "Je rotácia špritu psa menšia ako rotácia špritu mačky?"
+            },
+            {
+              "text": "Je x špritu psa menšie ako x špritu mačky?"
+            },
+            {
+              "text": "Je mierka šprita psa väčšia ako mierka šprita mačky?"
+            },
+            {
+              "text": "Je x špritu psa väčšie ako x špritu mačky?"
+            },
+            {
+              "text": "Je x špritu psa rovné x špritu mačky?"
+            }
+          ],
+          "title": "Zodpovedajúce: Operátory porovnávania"
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/36/levels/1": {
+    "long_instructions": "Úroveň testovania všetkých vecí.",
+    "behavior_names": {
+      "swimming left and right": "plávanie vľavo a vpravo",
+      "shrinking": "zmenšovanie",
+      "patrolling": "hliadkovanie",
+      "wandering": "putovanie",
+      "growing": "pestovanie",
+      "jittering": "jittering",
+      "moving east": "pohyb na východ",
+      "moving north": "pohyb na sever",
+      "moving south": "presun na juh",
+      "moving west": "pohyb na západ",
+      "spinning right": "točenie vpravo"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Pohybuje sa tam a späť jedným smerom. Ak chcete zmeniť smer, ktorým sa šprint pohybuje, zmeňte jeho \"smer pohybu\"."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/36/levels/2": {
+    "short_instructions": "Zmeňte tumbleweed na akýkoľvek druh ryby!",
+    "long_instructions": "Vytvorme akvárium! Kliknutím na tlačidlo [blockly block][0] zmeníte šprint tumbleweed na ľubovoľný druh ryby. Nezabudnite tiež aktualizovať kostým tohto špritu v [blockly block][1].",
+    "teacher_markdown": "Táto lekcia obsahuje **miniprojekt** s názvom _Plavanie rýb_. Tento postup môže byť pre vás aj vašich študentov veľmi odlišný od toho, čo bolo predtým v kurze. Tieto úrovne majú niektoré nové vlastnosti, ktoré si možno budete chcieť pred začiatkom preskúmať. - Kód, ktorý vaši študenti napíšu v jednej úrovni, sa automaticky prenesie do ostatných úrovní. To im umožňuje postupne budovať a zdokonaľovať svoje nápady podľa toho, ako sa učia. - Tieto úrovne umožňujú otvorenejšiu tvorivosť. Umožnite žiakom, aby sami určili, kedy splnili jednotlivé úlohy. Neexistuje jediná správna odpoveď! - Pre tento krok postupu sú k dispozícii vzorové riešenia, ktoré si môžete pozrieť po otvorení panela učiteľa vpravo. Táto úroveň overí kód študenta tak, že skontroluje, či boli splnené nasledujúce podmienky: - Študent musí mať aspoň jednu rybu s aktívnym správaním.",
+    "behavior_names": {
+      "swimming left and right": "plávanie vľavo a vpravo",
+      "shrinking": "zmenšovanie",
+      "patrolling": "hliadkovanie",
+      "wandering": "putovanie",
+      "growing": "pestovanie",
+      "jittering": "jittering",
+      "moving east": "pohyb na východ",
+      "moving north": "pohyb na sever",
+      "moving south": "presun na juh",
+      "moving west": "pohyb na západ",
+      "spinning right": "točenie vpravo"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Pohybuje sa tam a späť jedným smerom. Ak chcete zmeniť smer, ktorým sa šprint pohybuje, zmeňte jeho \"smer pohybu\"."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/36/levels/3": {
+    "long_instructions": "Toto je úroveň allthethings, ktorá sa používa na testovanie editora modálnych funkcií.",
+    "function_definitions": {
+      "set background": {
+        "name": "nastaviť pozadie"
+      }
+    },
+    "behavior_names": {
+      "spinning left": "otáčanie vľavo",
+      "growing": "pestovanie",
+      "jittering": "jittering",
+      "spinning right": "točenie vpravo",
+      "shrinking": "zmenšovanie",
+      "moving south": "presun na juh",
+      "moving west": "pohyb na západ",
+      "swimming left and right": "plávanie vľavo a vpravo",
+      "wandering": "putovanie",
+      "moving east": "pohyb na východ",
+      "moving north": "pohyb na sever",
+      "patrolling": "hliadkovanie",
+      "moving with arrow keys": "pohyb pomocou klávesov so šípkami",
+      "wobbling": "kývanie",
+      "driving with arrow keys": "riadenie pomocou klávesov so šípkami",
+      "moving east and looping": "pohyb na východ a smyčka",
+      "fluttering": "trepotanie",
+      "moving west and looping": "pohyb na západ a smyčka",
+      "moving north and looping": "pohyb na sever a smyčka",
+      "moving south and looping": "pohyb na juh a smyčka"
+    },
+    "behavior_descriptions": {
+      "rotate a sprite to its left": "otočiť sprite doľava",
+      "change the size of a sprite": "zmeniť veľkosť spritu",
+      "randomly change the size of a sprite": "náhodne zmeniť veľkosť spritu",
+      "rotate a sprite to its right": "otočiť sprite doprava",
+      "move a sprite downwards across the screen": "presunúť sprite smerom nadol po obrazovke",
+      "move a sprite to the left across the screen": "presunúť sprite doľava cez obrazovku",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "presunúť šprint horizontálne, pričom sa zmení smer, ak sa dotkne okrajov obrazovky.",
+      "move a sprite, changing its direction randomly": "presunúť sprite a náhodne meniť jeho smer.",
+      "move a sprite to the right across the screen": "posunúť šprint napravo po obrazovke.",
+      "move a sprite upwards across the screen": "presunúť sprite nahor po obrazovke.",
+      "move a sprite across the screen, reversing direction if it touches the edges": "presunúť šprint po obrazovke a zmeniť smer, ak sa dotkne okrajov.",
+      "move a sprite if the user is pressing the arrow keys": "presunúť sprite, ak používateľ stláča klávesy so šípkami.",
+      "randomly set the rotation of a sprite": "náhodne nastaviť rotáciu spritu",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Presunutie špritu doprava po obrazovke. Keď sa dostane mimo pravej strany obrazovky, posuňte ho späť na ľavú stranu obrazovky.",
+      "randomly change the vertical position of a sprite": "náhodne zmeniť vertikálnu polohu spritu",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Presunutie špritu doľava po obrazovke. Keď sa dostane mimo ľavej strany obrazovky, vráťte ho späť na pravú stranu obrazovky.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Presunutie špritu nahor po obrazovke. Keď sa dostane mimo hornej časti obrazovky, posuňte ho späť do dolnej časti obrazovky."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/36/levels/4": {
+    "long_instructions": "Toto je úroveň Allthethings Sprite Lab, ktorá používa rôzne bloky",
+    "behavior_names": {
+      "spinning left": "otáčanie vľavo",
+      "growing": "pestovanie",
+      "jittering": "jittering",
+      "spinning right": "točenie vpravo",
+      "shrinking": "zmenšovanie",
+      "moving south": "presun na juh",
+      "moving west": "pohyb na západ",
+      "swimming left and right": "plávanie vľavo a vpravo",
+      "wandering": "putovanie",
+      "moving east": "pohyb na východ",
+      "moving north": "pohyb na sever",
+      "patrolling": "hliadkovanie",
+      "moving with arrow keys": "pohyb pomocou klávesov so šípkami",
+      "wobbling": "kývanie",
+      "driving with arrow keys": "riadenie pomocou klávesov so šípkami",
+      "moving east and looping": "pohyb na východ a smyčka",
+      "fluttering": "trepotanie",
+      "moving west and looping": "pohyb na západ a smyčka",
+      "moving north and looping": "pohyb na sever a smyčka",
+      "moving south and looping": "pohyb na juh a smyčka"
+    },
+    "behavior_descriptions": {
+      "rotate a sprite to its left": "otočiť sprite doľava",
+      "change the size of a sprite": "zmeniť veľkosť spritu",
+      "randomly change the size of a sprite": "náhodne zmeniť veľkosť spritu",
+      "rotate a sprite to its right": "otočiť sprite doprava",
+      "move a sprite downwards across the screen": "presunúť sprite smerom nadol po obrazovke",
+      "move a sprite to the left across the screen": "presunúť sprite doľava cez obrazovku",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "presunúť šprint horizontálne, pričom sa zmení smer, ak sa dotkne okrajov obrazovky.",
+      "move a sprite, changing its direction randomly": "presunúť sprite a náhodne meniť jeho smer.",
+      "move a sprite to the right across the screen": "posunúť šprint napravo po obrazovke.",
+      "move a sprite upwards across the screen": "presunúť sprite nahor po obrazovke.",
+      "move a sprite across the screen, reversing direction if it touches the edges": "presunúť šprint po obrazovke a zmeniť smer, ak sa dotkne okrajov.",
+      "move a sprite if the user is pressing the arrow keys": "presunúť sprite, ak používateľ stláča klávesy so šípkami.",
+      "randomly set the rotation of a sprite": "náhodne nastaviť rotáciu spritu",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Presunutie špritu doprava po obrazovke. Keď sa dostane mimo pravej strany obrazovky, posuňte ho späť na ľavú stranu obrazovky.",
+      "randomly change the vertical position of a sprite": "náhodne zmeniť vertikálnu polohu spritu",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Presunutie špritu doľava po obrazovke. Keď sa dostane mimo ľavej strany obrazovky, vráťte ho späť na pravú stranu obrazovky.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Presunutie špritu nahor po obrazovke. Keď sa dostane mimo hornej časti obrazovky, posuňte ho späť do dolnej časti obrazovky."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/37/levels/1": {
+    "long_instructions": "Nechajte tohto losa tancovať! Kliknutím na blok `\"dancer1\" do \"Floss\" forever` na blok \"at 4 measures\" ho prinútite začať flossing v druhom takte."
+  },
+  "https://studio.code.org/s/allthethings/lessons/37/levels/2": {
+    "long_instructions": "Nechajte tohto losa tancovať! Kliknutím na blok `\"dancer1\" do \"Floss\" forever` na blok \"at 4 measures\" ho prinútite začať flossing v druhom takte."
+  },
+  "https://studio.code.org/s/allthethings/lessons/37/levels/4": {
+    "short_instructions": "** Efekt, ktorý vytvorí umelá inteligencia, si môžete prispôsobiť!** Kliknite na emotikony na bloku. Potom buď `Regenerovať`, `Použiť kód` alebo `Začať odznova`.",
+    "long_instructions": "**A.I. vám pomôže začať. Efekt, ktorý vytvorí, si môžete prispôsobiť!** - Kliknutím na emotikony vyskúšajte jeden z nich: - <img src=\"https://images.code.org/101001680b5a4de2d752a6b3b59a116f-image-1699478528416.jpg\" style=\" margin-right: 5px;  height: 20px;\">`Regenerovať` A.I. odporučí iný efekt na základe tých istých emotikonov. - `Použiť kód` Použite kód, ktorý napíše A.I., a prispôsobte si ho! - <img src=\"https://images.code.org/3e2c74fbae82198ebc3264ecaf3a823e-image-1699478492041.jpg\" style=\" margin-right: 5px;  height: 15px;\">`Začať odznova` Vyberte tri nové emotikony a vygenerujte nový efekt. ",
+    "authored_hints": {
+      "Hint1": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> Efekt prispôsobte kliknutím na emotikony na bloku [blockly block][0] v pracovnom priestore. ",
+      "HintEdit": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> Ak chcete použiť kód, ktorý napíše A.I., prepnite na zobrazenie kódu a potom kliknite na `Použiť kód`. Bloky nahradia blok [blockly block][0] vo vašom pracovnom priestore. ",
+      "Hint2": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> **Stále ste sa zasekli?** Pozrite si video a zistite, ako si môžete tento efekt prispôsobiť. "
+    },
+    "callouts": {
+      "ai_dance_callout_draft_level_6": "Kliknite sem."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/38/levels/1": {
+    "long_instructions": "K tejto úrovni je priradená mini rubrika, na základe ktorej by učitelia mali byť schopní poskytnúť žiakom spätnú väzbu. Ak chcete otestovať úrovne applabu, prihláste sa (úrovne applabu fungujú podľa návrhu len vtedy, ak ste prihlásení. Za normálnych okolností nútime ľudí prihlásiť sa, ale to je možné len pre celý skript a bolo by to nepríjemné pre skript allthethings).",
+    "mini_rubric": {
+      "rubric_key_concept": "To je kľúčový koncept tejto minitabuľky.",
+      "rubric_performance_level_1": "Počínali ste si skvele!",
+      "rubric_performance_level_2": "Počínali ste si dobre.",
+      "rubric_performance_level_3": "Zvládli ste to dobre.",
+      "rubric_performance_level_4": "Nič ste neurobili."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/38/levels/2": {
+    "long_instructions": "K tejto úrovni je priradená mini rubrika, na základe ktorej by učitelia mali byť schopní poskytnúť žiakom spätnú väzbu. Ak chcete otestovať úrovne weblabu, prihláste sa (úrovne weblabu fungujú len vtedy, ak ste prihlásení. Za normálnych okolností nútime ľudí prihlásiť sa, ale to je možné len pre celý skript a bolo by to nepríjemné pre skript allthethings).",
+    "mini_rubric": {
+      "rubric_key_concept": "Toto bude naozaj dlhý kľúčový koncept. Toto bude naozaj dlhý kľúčový koncept. Toto bude naozaj dlhý kľúčový koncept. Toto bude naozaj dlhý kľúčový koncept. Toto bude naozaj dlhý kľúčový koncept. Toto bude naozaj dlhý kľúčový koncept. Toto bude naozaj dlhý kľúčový koncept. Toto bude naozaj dlhý kľúčový koncept. Toto bude naozaj dlhý kľúčový koncept. Toto bude naozaj dlhý kľúčový koncept. Toto bude naozaj dlhý kľúčový koncept. Toto bude naozaj dlhý kľúčový koncept.",
+      "rubric_performance_level_1": "Veci, ktoré musíte urobiť, aby ste prekročili.",
+      "rubric_performance_level_2": "Veci, ktoré musíte urobiť, aby ste sa stretli.",
+      "rubric_performance_level_3": "Veci, ktoré musíte urobiť, aby ste sa priblížili.",
+      "rubric_performance_level_4": "V skutočnosti ste nič neurobili."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/38/levels/3": {
+    "long_instructions": "Spustiť Táto úroveň je spojená s mini rubrikou, na základe ktorej by učitelia mali byť schopní poskytnúť žiakom spätnú väzbu. Ak chcete otestovať úrovne gamelabu, prihláste sa (Úrovne gamelabu fungujú len vtedy, ak ste prihlásení. Za normálnych okolností nútime ľudí prihlásiť sa, ale to je možné len pre celý skript a bolo by to nepríjemné pre skript allthethings).",
+    "mini_rubric": {
+      "rubric_key_concept": "Kľúčový koncept",
+      "rubric_performance_level_1": "Urobil x, y a z.",
+      "rubric_performance_level_2": "Urobili x a y",
+      "rubric_performance_level_3": "Urobil x alebo y",
+      "rubric_performance_level_4": "Neurobil x, y alebo z"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/39/levels/1": {
+    "dsls": {
+      "content1": "popis tu",
+      "markdown": "<h2>\nTáto externá úroveň by sa mala zobraziť ako odpojená.\n</h2>\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/39/levels/2": {
+    "dsls": {
+      "content1": "popis tu",
+      "markdown": "<h2>\nTáto externá úroveň by sa nemala zobrazovať ako odpojená.\n</h2>\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/40/levels/1": {
+    "dsls": {
+      "description": "Toto je úroveň BubbleChoice. Vyberte si jednu z nižšie uvedených aktivít a precvičte si, čo ste sa naučili!",
+      "display_name": "Bublinová voľba: Všetky možnosti"
+    },
+    "sublevels": {
+      "AllTheThings_StandaloneVideo": {
+      },
+      "Web Lab 1": {
+        "long_instructions": "Vytvorte si úžasnú webovú stránku! 1. Pozrite si webovú stránku, ktorú sme vám poskytli na začiatok. Zlepšime to! 2. Pridajte atribút background-color do štýlu tela v style.css, aby farba pozadia stránky bola \"darkcyan\" 3. Pridajte atribút text-align do štýlu body v style.css, aby ste obrázok a text vycentrovali horizontálne. 4. Zmena index.html tak, aby obsahoval inšpiratívny hashtag 5. Pridajte atribút color do štýlu p v style.css, aby bol inšpiratívny hashtag biely 6. Pridajte atribút font-size do štýlu p v style.css, aby bol váš inšpiratívny hashtag naozaj veľký! (Skúste 24px a 3em a uvidíte, čo sa stane.)"
+      },
+      "Overworld Chop Tree - allthethings": {
+        "short_instructions": "Drevo je veľmi dôležitý zdroj. Vyrába sa z neho veľa vecí. Prejdite k stromu a príkazom \"destroy block\" ho pokráťte."
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/1": {
+    "teacher_markdown": "Označenie učiteľa pre pôvodnú úroveň.",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/up.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/down.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/left.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/right.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png",
+          "questions": [
+            {
+              "text": "Ktorý šíp dostane Flurba k pokladu?"
+            }
+          ],
+          "title": "Viacnásobný výber"
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/2": {
+    "teacher_markdown": "Označenie učiteľa pre pôvodnú úroveň",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "0",
+              "correct": false,
+              "feedback": "Nie, je to 1 - 1."
+            },
+            {
+              "text": "1",
+              "correct": false,
+              "feedback": "Nie, je to 1 * 1."
+            },
+            {
+              "text": "2",
+              "correct": true,
+              "feedback": "Áno, ste génius!"
+            },
+            {
+              "text": "4",
+              "correct": false,
+              "feedback": "Nie, to nie je ani zďaleka pravda."
+            }
+          ],
+          "content1": "Tu je niekoľko informácií.",
+          "markdown": "Test **markdown** _zde_\n",
+          "questions": [
+            {
+              "text": "Čo je 1 + 1?"
+            }
+          ],
+          "title": "Obsahuje viacero"
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/3": {
+    "short_instructions": "Tu je niekoľko pokynov. ",
+    "teacher_markdown": "Učiteľ Markdown pre pôvodnú úroveň",
+    "contained levels": [
+      {
+        "long_instructions": "Čo si myslíte, že sa stane? "
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/4": {
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Riadok 2",
+              "correct": true
+            },
+            {
+              "text": "Riadok 3",
+              "correct": true
+            },
+            {
+              "text": "Riadok 4",
+              "correct": false
+            },
+            {
+              "text": "Riadok 5",
+              "correct": false
+            }
+          ],
+          "markdown": "Táto otázka využíva robota v sieti štvorcov. Robot je znázornený ako trojuholník, ktorý je na začiatku otočený smerom k pravej strane mriežky. Robot sa pohybuje podľa nasledujúcich pokynov. | Inštrukcie | Vysvetlenie | |--------------------|--------| |`Posun vpred` | Robot sa posunie o jedno políčko vpred v smere, ktorým je otočený |`Otočiť doprava` | Robot sa otočí na mieste o 90 stupňov v smere hodinových ručičiek (t. j. vykoná otočku na mieste doprava). |`Rotate left`` | Robot sa otočí na mieste o 90 stupňov proti smeru hodinových ručičiek (t. j. vykoná otočku na mieste doľava). |`REPEAT n TIMES`` | Blok inštrukcií obsiahnutý medzi zátvorkami {} sa opakuje n-krát. | Uvažujme nasledujúci nesprávny program, ktorého cieľom je pohybovať robotom po obvode mriežky nižšie, ako je naznačené šípkami. ![](https://images.code.org/4d3177070d1585fc6ad3f9091dd53d76-image-1579897739915.png) ![](/script_assets/csp/instruction_gifs/U3L02-rightSquare.png)\n\n",
+          "questions": [
+            {
+              "text": "Ktoré riadky kódu by sa mali odstrániť, aby program fungoval tak, ako má? Vyberte <u>dve</u> odpovede"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/5": {
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Riadok 2",
+              "correct": true
+            },
+            {
+              "text": "Riadok 3",
+              "correct": true
+            },
+            {
+              "text": "Riadok 4",
+              "correct": false
+            },
+            {
+              "text": "Riadok 5",
+              "correct": false
+            }
+          ],
+          "markdown": "\n\nUvažujme nasledujúci nesprávny program, ktorý má za úlohu pohybovať robotom po obvode mriežky nižšie, ako je vyznačené šípkami. ``` Riadok 1: Opakujte 4 krát { Riadok 2: Presun vpred Riadok 3: Otáčanie pravého riadku 4: Opakujte 4 krát { Riadok 5: Posun vpred } Riadok 6: Otáčanie doprava } ``` ![](/script_assets/csp/instruction_gifs/U3L02-rightSquare.png)\n",
+          "questions": [
+            {
+              "text": "Ktoré riadky kódu by sa mali odstrániť, aby program fungoval tak, ako má? Vyberte **dve** odpovede"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/6": {
+    "teacher_markdown": "Pôvodná úroveň učiteľského označenia",
+    "contained levels": [
+      {
+        "long_instructions": "Pokyny na označenie mojej voľnej odpovede"
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/7": {
+    "teacher_markdown": "Označenie učiteľa pre pôvodnú úroveň",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "0",
+              "correct": false,
+              "feedback": "Nie, je to 1 - 1."
+            },
+            {
+              "text": "1",
+              "correct": false,
+              "feedback": "Nie, je to 1 * 1."
+            },
+            {
+              "text": "2",
+              "correct": true,
+              "feedback": "Áno, ste génius!"
+            },
+            {
+              "text": "4",
+              "correct": false,
+              "feedback": "Nie, to nie je ani zďaleka pravda."
+            }
+          ],
+          "content1": "Tu je niekoľko informácií.",
+          "markdown": "Test **markdown** _zde_\n",
+          "questions": [
+            {
+              "text": "Čo je 1 + 1?"
+            }
+          ],
+          "title": "Obsahuje viacero"
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/8": {
+    "dsls": {
+      "markdown": "# Budúcnosť veľkých dát [![](https://images.code.org/ff14c09d2036ff65be8af3dd63d2da24-image-1571251950161.52.16 AM.png)](https://www.youtube.com/watch?v=l_a0ecZ2Oe0) [Zdroj](http://www.fwthinking.com/video/clips/future-big-data-video/)\n\n\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/9": {
+    "short_instructions": "Tu je niekoľko pokynov. ",
+    "teacher_markdown": "Učiteľ Markdown pre pôvodnú úroveň",
+    "contained levels": [
+      {
+        "long_instructions": "Pokyny na označenie mojej voľnej odpovede"
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/10": {
+    "teacher_markdown": "Označenie učiteľa pre pôvodnú úroveň",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "0",
+              "correct": false,
+              "feedback": "Nie, je to 1 - 1."
+            },
+            {
+              "text": "1",
+              "correct": false,
+              "feedback": "Nie, je to 1 * 1."
+            },
+            {
+              "text": "2",
+              "correct": true,
+              "feedback": "Áno, ste génius!"
+            },
+            {
+              "text": "4",
+              "correct": false,
+              "feedback": "Nie, to nie je ani zďaleka pravda."
+            }
+          ],
+          "content1": "Tu je niekoľko informácií.",
+          "markdown": "Test **markdown** _zde_\n",
+          "questions": [
+            {
+              "text": "Čo je 1 + 1?"
+            }
+          ],
+          "title": "Obsahuje viacero"
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/43/levels/1": {
+    "short_instructions": "Tu je niekoľko krátkych pokynov pre tento test AI Lab level.",
+    "dynamic_instructions": {
+      "dataDisplayFeatures": "Takže **vyberte jeden alebo viac stĺpcov**. Budú predpovedať.",
+      "selectTrainer": "Pripravte si teda školenie."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/43/levels/2": {
+    "short_instructions": "Nakreslite štvorec 1x1 nad a naľavo od východiskovej pozície korytnačky. Kliknutím zobrazíte úplné pokyny.",
+    "long_instructions": "Toto je úroveň s umelou inteligenciou, čo znamená, že 1.) K dispozícii je ďalšia možnosť \"Spravovať A.I. Modely\" v kolónke nastavení 2.) V sekcii Data súboru nástrojov sa nachádza blok getPrediction"
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/1": {
+    "long_instructions": "Toto je ukážka úrovne Java Lab.",
+    "teacher_markdown": "Učitelia by mali vidieť tieto dodatočné informácie."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/2": {
+    "long_instructions": "## Úroveň len pre konzolu Úroveň len pre konzolu by nemala mať žiadny priestor na vizualizáciu (na rozdiel od Divadla, Okolia atď.). Okrem toho by mal priestor pre inštrukcie zaberať celý ľavý stĺpec. Úroveň len pre konzolu bude vždy obsahovať pokyny. Samostatné úrovne Java Lab budú mať podobu divadelných úrovní."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/3": {
+    "long_instructions": "Toto je ukážka úrovne Java Lab Neighborhood.",
+    "teacher_markdown": "Učitelia by mali vidieť tieto dodatočné informácie."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/4": {
+    "long_instructions": "\n## Vitajte v divadle! Prejdite do správcu aktív a nahrajte svoj obrázok. Váš obrázok zo stránky <https: code.org about team> by bol skvelou voľbou! [][0] Po dokončení nahrávania obrázka sa pozrite na kód a nahraďte vzorový text názvom svojho obrázka. [][1] To je všetko! Zvýšte hlasitosť, kliknite na \"Spustiť\" a sledujte (a počujte), ako váš výtvor ožíva!",
+    "teacher_markdown": "Učitelia by mali vidieť tieto dodatočné informácie."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/5": {
+    "display_name": "Vyhľadávanie slov",
+    "long_instructions": "# Widget nastavenia susedstva Tento widget vytvára reťazec JSON, ktorý možno skopírovať do úrovne na zobrazenie konkrétneho rozloženia susedstva. 1. Pomocou posuvníka vyberte veľkosť Okolia. 2. Kliknutím na dlaždicu ju vyberte. 3. Vyberte kategóriu z rozbaľovacieho zoznamu a kliknutím na dlaždicu nastavte obrázok na vybranú dlaždicu. Mnohé obrázky sú väčšie ako 1x1. V týchto prípadoch je potrebné vybrať jednotlivé dlaždice a umiestniť ich jednu po druhej. Posledným krokom je skopírovanie výstupu a jeho vloženie do príslušného poľa v úrovni v nástroji Levelbuilder. ## Upravte existujúcu úroveň 1. Skopírujte reťazec JSON z poľa v programe levelbuilder 2. Údaje vložte do jednoriadkového konvertora, ako je [tento][0]. 3. Skopírujte reťazec z konvertora. 4. Kliknite na tlačidlo \"Manuálne\". 5. Vložte reťazec. 6. Kliknutím na každú dlaždicu ju môžete upraviť ako zvyčajne. "
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/6": {
+    "long_instructions": "Toto je ukážka úrovne Java Lab.",
+    "teacher_markdown": "Učitelia by mali vidieť tieto dodatočné informácie.",
+    "contained levels": [
+      {
+        "long_instructions": "Pokyny na označenie mojej voľnej odpovede"
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/7": {
+    "long_instructions": "Toto je ukážka úrovne Java Lab Neighborhood.",
+    "teacher_markdown": "Učitelia by mali vidieť tieto dodatočné informácie."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/9": {
+    "long_instructions": "Toto je ukážka úrovne Java Lab.",
+    "teacher_markdown": "Učitelia by mali vidieť tieto dodatočné informácie."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/10": {
+    "long_instructions": "## Ukážka úrovne promptera Táto úroveň zobrazuje príklad promptera v divadle."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/11": {
+    "long_instructions": "Toto je ukážka úrovne Java Lab s overovacími testami."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/12": {
+    "long_instructions": "Ide o úroveň Java Lab s úspešným overením."
+  },
+  "https://studio.code.org/s/allthethings/lessons/45/levels/3": {
+    "long_instructions": "Toto je úroveň poézie, ktorá zahŕňa automaticky vyplnenú kategóriu `PROCEDURES` a neobsahuje žiadny modálny editor funkcií."
+  },
+  "https://studio.code.org/s/allthethings/lessons/45/levels/4": {
+    "long_instructions": "Toto je úroveň poézie, ktorá obsahuje automaticky vyplnenú kategóriu `PROCEDURES` a používa editor modálnych funkcií."
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/2": {
+    "long_instructions": "Najprv prehrajte jeden zvuk.",
+    "validations": {
+      "Music Level 1_391b0b44-af8d-4559-a985-d5b643aed908": "Pekná práca.",
+      "Music Level 1_c0da3b0b-c4d6-490c-8bfb-4faf4188ff32": "Prehrajte jeden zvuk."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/3": {
+    "long_instructions": "Po druhé, zahrajte tri zvuky súčasne.",
+    "validations": {
+      "Music Level 2_b4505750-86bb-40d7-8c31-ca015980d7ee": "Pekná práca.",
+      "Music Level 2_f5ef3af6-0010-4e06-937c-d35b5cb8e0be": "Je dobré, že ste zahrali dva zvuky, ale musíte zahrať ešte jeden.",
+      "Music Level 2_3e35e104-7422-4fb8-80e1-b9da580384f2": "Je dobré, že ste zahrali jeden zvuk, ale musíte zahrať ďalšie dva.",
+      "Music Level 2_dc4dddf1-5e9d-4664-b9a1-00d73e728a06": "Zahrajte tri zvuky spolu."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/4": {
+    "long_instructions": "Vyskúšajte všetko!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/1": {
+    "long_instructions": "## Ukážka pokynov Toto je chatovací bot, ktorý vám umožňuje hovoriť s historickými osobnosťami. ### Do This Zadajte otázku a stlačte tlačidlo <code style=\"color:white; background-color:#7435b2\">Continue (Pokračovať)</code>. Čo sa môžete dozvedieť o Ade Lovelace?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/2": {
+    "long_instructions": "# AI Chat 2 ## Ukážka pokynov Toto je chatovací bot, ktorý vám pomôže s gramatikou a interpunkciou, aby ste zlepšili svoje písanie. ### Do This Zadajte odsek, ktorý chcete opraviť, a stlačte tlačidlo <code style=\"color:white; background-color:#7435b2\">Continue</code>."
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/3": {
+    "long_instructions": "Šablóna projektu Podložená úroveň č. 1"
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/4": {
+    "long_instructions": "Projektová šablóna Podložená úroveň č. 2"
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/5": {
+    "long_instructions": "Projektová šablóna podporená úrovňou č. 3"
+  },
+  "https://studio.code.org/s/allthethings/lessons/48/levels/1": {
+    "long_instructions": "# Vytvorenie scény - Sprity Keď máte vytvorené pozadie, je čas pridať sprity. # Urobte toto 1. Na karte Animácie pridajte alebo nakreslite aspoň 2 animácie šprintov. 2. Vytvorte aspoň 2 sprajty a každému z nich priraďte animáciu. 3. Nastavte hodnotu pre všetky vlastnosti spritu, ktoré chcete použiť. - _Snažte sa použiť aspoň 1 vlastnosť špritu (napríklad rotáciu, mierku, odtieň alebo iné vlastnosti zo súboru nástrojov) s každým šprintom._ 4. Nakreslite všetky svoje sprity na obrazovku."
+  },
+  "https://studio.code.org/s/allthethings/lessons/48/levels/2": {
+    "display_name": "Výzva: Rozšírenie scény",
+    "long_instructions": "# Preskúmajte svoju scénu Naposledy si scénu skontrolujte a uistite sa, že ste do nej zahrnuli všetko, čo ste chceli. # Urobte toto 1. Porovnajte scénu, ktorú ste nakreslili, so svojím plánom. 2. Vykonajte posledné zmeny. 3. Na čo ste najviac hrdý?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/49/levels/1": {
+    "long_instructions": "Nechajte tohto losa tancovať! Kliknutím na blok `\"dancer1\" do \"Floss\" forever` na blok \"at 4 measures\" ho prinútite začať flossing v druhom takte."
+  },
+  "https://studio.code.org/s/allthethings/lessons/49/levels/2": {
+    "long_instructions": "Nechajte tohto losa tancovať! Kliknutím na blok `\"dancer1\" do \"Floss\" forever` na blok \"at 4 measures\" ho prinútite začať flossing v druhom takte."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/1": {
+    "long_instructions": "## Vitajte v Python Lab Stlačte tlačidlo Spustiť a uvidíte, čo sa stane.",
+    "teacher_markdown": "Učitelia by mali vidieť tieto dodatočné informácie."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/2": {
+    "long_instructions": "## Python Lab s validáciou Táto úroveň má zabudovaný validačný kód."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/3": {
+    "long_instructions": "## Úroveň podporovaná projektom Táto úroveň má spoločný projekt s úrovňou 4 v postupe."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/4": {
+    "long_instructions": "## Úroveň podporovaná projektom Táto úroveň má spoločný projekt s úrovňou 3 v postupe."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/5": {
+    "long_instructions": "## Predpovedaj a spusti **Čo si myslíte, že robí tento program?** Pozrite sa na kód tohto programu. Napíšte, čo si myslíte, že tento program urobí. Neexistujú žiadne nesprávne odpovede!",
+    "teacher_markdown": "Učitelia by mali vidieť tieto dodatočné informácie."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/6": {
+    "long_instructions": "## Predpovedaj a spusti **Čo si myslíte, že robí tento program?** Pozrite sa na kód tohto programu. Ktorá z nasledujúcich možností zodpovedá tomu, čo program vypíše?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/7": {
+    "long_instructions": "## Submittable Level Tu je ukážka úrovne submittable!",
+    "teacher_markdown": "Učitelia by mali vidieť tieto dodatočné informácie."
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/1": {
+    "long_instructions": "Pridajte stránky **html** a zobrazte ich náhľad v pravom paneli. Pridajte stránky **css** (a prepojte ich s html). Pomocou prehliadača súborov môžete pridávať/premenovávať/odstraňovať súbory alebo pridávať/premenovávať/odstraňovať priečinky (aj hierarchicky!)"
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/2": {
+    "long_instructions": "## Základy Web Lab 2 Vytvorte si vlastnú webovú stránku!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/1": {
+    "long_instructions": "Vyskúšajte všetko!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/2": {
+    "long_instructions": "## Ukážka pokynov Toto je chatovací bot, ktorý vám umožňuje hovoriť s historickými osobnosťami. ### Do This Zadajte otázku a stlačte tlačidlo `Submit`(#7435b2). Čo sa môžete dozvedieť o Ade Lovelace?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/3": {
+    "long_instructions": "## Vitajte v Python Lab Stlačte tlačidlo Spustiť a uvidíte, čo sa stane."
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/4": {
+    "long_instructions": "Pridajte stránky **html** a zobrazte ich náhľad v pravom paneli. Pridajte stránky **css** (a prepojte ich s html). Pomocou prehliadača súborov môžete pridávať/premenovávať/odstraňovať súbory alebo pridávať/premenovávať/odstraňovať priečinky (aj hierarchicky!)"
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/5": {
+    "long_instructions": "Nechajte tohto losa tancovať! Kliknutím na blok `\"dancer1\" do \"Floss\" forever` na blok \"at 4 measures\" ho prinútite začať flossing v druhom takte."
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/6": {
+    "panels": {
+      "musiclab_intro_panels_start-421d64b2-c4db-42cb-ac1f-de66a4d22fa7": "#### Vitajte v projekte Beats! Projekt Beats vám umožňuje mixovať, remixovať a dokonca predvádzať hudbu pomocou kódu. Nebojte sa, ak sa nevyznáte v kóde alebo dokonca v hudbe! Všetko, čo potrebujete, je trochu času a zvedavosti, aby ste mohli začať vytvárať svoje vlastné výtvory."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/8": {
+    "dsls": {
+      "description": "Táto úroveň Bubble Choice momentálne NIE JE na Lab2, ale všetky podúrovne by mali byť na Lab2.",
+      "display_name": "Ukážka Lab2 BubbleChoice"
+    },
+    "sublevels": {
+      "AI Chat Sublevel": {
+        "long_instructions": "# AI Chat 2 ## Ukážka pokynov Toto je chatovací bot, ktorý vám pomôže s gramatikou a interpunkciou, aby ste zlepšili svoje písanie. ### Do This Napíšte odsek, ktorý chcete opraviť, a stlačte tlačidlo `Submit`(#7435b2)."
+      },
+      "Music Sublevel": {
+        "validations": {
+          "Music Sublevel_20cb71d4-b13c-4494-8ca0-a234414ec12d": "Pekná práca.",
+          "Music Sublevel_e826dcbb-1947-42a8-b66f-aa676119b013": "Prehrajte jeden zvuk."
+        }
+      },
+      "Python Lab Sublevel": {
+        "long_instructions": "## Python Lab Basics Skúste pridať nový kód."
+      },
+      "Weblab2 Sublevel": {
+        "long_instructions": "## Základy Web Lab 2 Vytvorte si vlastnú webovú stránku!"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/53/levels/1": {
+    "dsls": {
+      "title": "Sprievodca aktivitami Levelgroup"
+    },
+    "sublevels": {
+      "test-single-multi-retriable-in-levelgroup": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Nič sa nestane.",
+              "correct": false,
+              "feedback": "Nesprávne. Bubnová tráva sa začne valiť."
+            },
+            {
+              "text": "Bubienok sa vznesie na vrch obrazovky.",
+              "correct": false,
+              "feedback": "Nesprávne. Bubnová tráva sa začne valiť."
+            },
+            {
+              "text": "Bubnová tráva sa začne valiť.",
+              "correct": true,
+              "feedback": "Správne!"
+            },
+            {
+              "text": "Bubienok bude blikať a vypínať sa.",
+              "correct": false,
+              "feedback": "Nesprávne. Bubnová tráva sa začne valiť."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Pozrite sa pozorne na nasledujúci kód. Čo sa stane po kliknutí na tlačidlo \"Spustiť\"?"
+            }
+          ]
+        }
+      },
+      "test-free-response-retriable-in-levelgroup": {
+        "long_instructions": "Čo si myslíte, že tento program robí?"
+      }
+    }
+  }
+}
