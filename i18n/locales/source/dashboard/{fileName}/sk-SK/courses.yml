@@ -1,0 +1,1147 @@
+---
+en:
+  data:
+    course:
+      name:
+        csp-2017:
+          assignment_family_title: Základy informatiky
+          title: "Základy informatiky ('17-'18)"
+          version_title: "'17-'18"
+          description_student: "Na jeseň 2016 spustila College Board svoj najnovší kurz AP®, AP Zásady počítačovej vedy. Kurz zoznamuje študentov so základnými konceptmi informatiky a vyzýva ich, aby preskúmali, ako môže počítačová technológia ovplyvniť svet. Program AP navrhol AP Princípy počítačovej vedy s cieľom vytvoriť lídrov v oblastiach počítačovej vedy a prilákať a zapojiť tých, ktorí sú tradične nedostatočne zastúpení, s nevyhnutnými počítačovými nástrojmi a multidisciplinárnymi príležitosťami."
+          description_teacher: "Na jeseň 2016 spustila College Board svoj najnovší kurz AP®, AP Zásady počítačovej vedy. Kurz zoznamuje študentov so základnými konceptmi informatiky a vyzýva ich, aby preskúmali, ako môže počítačová technológia ovplyvniť svet. Program AP navrhol AP Princípy počítačovej vedy s cieľom vytvoriť lídrov v oblastiach počítačovej vedy a prilákať a zapojiť tých, ktorí sú tradične nedostatočne zastúpení, s nevyhnutnými počítačovými nástrojmi a multidisciplinárnymi príležitosťami."
+          description_short: Zoznámte sa so základnými konceptmi informatiky.
+        csd-2017:
+          assignment_family_title: Objavy v informatike
+          title: "Objavy v informatike ('17-'18)"
+          version_title: "'17-'18"
+          description_student: "Objavy počítačovej vedy (CS Discoveries) sú úvodným kurzom počítačovej vedy, ktorý umožňuje študentom vytvárať autentické artefakty a zapájať sa do počítačovej vedy ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu."
+          description_teacher: "Objavy počítačovej vedy (CS Discoveries) sú úvodným kurzom počítačovej vedy, ktorý umožňuje študentom vytvárať autentické artefakty a zapájať sa do počítačovej vedy ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu."
+          description_short: "Úvodný kurz informatiky, ktorý umožňuje študentom vytvárať autentické artefakty."
+        allthethingscourse:
+          title: vsetkyveciakurz
+          description_short: Toto je kurz pre všetky veci
+          description_student: Toto je kurz pre všetky veci a má dlhší popis pre študentov.
+          description_teacher: Toto je kurz pre všetky veci a má dlhší popis pre učiteľov
+        csd-2018:
+          assignment_family_title: Objavy v informatike
+          title: "Objavy v informatike ('18-'19)"
+          version_title: "'18-'19"
+          description_short: "Úvodný kurz informatiky, ktorý umožňuje študentom vytvárať autentické artefakty."
+          description_student: "Objavy počítačovej vedy (CS Discoveries) sú úvodným kurzom počítačovej vedy, ktorý umožňuje študentom vytvárať autentické artefakty a zapájať sa do počítačovej vedy ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu."
+          description_teacher: "Objavy počítačovej vedy (CS Discoveries) sú úvodným kurzom počítačovej vedy, ktorý umožňuje študentom vytvárať autentické artefakty a zapájať sa do počítačovej vedy ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu."
+        csp-2018:
+          assignment_family_title: Základy informatiky
+          title: "Základy informatiky ('18-'19)"
+          version_title: "'18-'19"
+          description_short: Zoznámte sa so základnými konceptmi informatiky.
+          description_student: "Na jeseň 2016 spustila College Board svoj najnovší kurz AP®, AP Zásady počítačovej vedy. Kurz zoznamuje študentov so základnými konceptmi informatiky a vyzýva ich, aby preskúmali, ako môže počítačová technológia ovplyvniť svet. Program AP navrhol AP Princípy počítačovej vedy s cieľom vytvoriť lídrov v oblastiach počítačovej vedy a prilákať a zapojiť tých, ktorí sú tradične nedostatočne zastúpení, s nevyhnutnými počítačovými nástrojmi a multidisciplinárnymi príležitosťami."
+          description_teacher: "Na jeseň 2016 spustila College Board svoj najnovší kurz AP®, AP Zásady počítačovej vedy. Kurz zoznamuje študentov so základnými konceptmi informatiky a vyzýva ich, aby preskúmali, ako môže počítačová technológia ovplyvniť svet. Program AP navrhol AP Princípy počítačovej vedy s cieľom vytvoriť lídrov v oblastiach počítačovej vedy a prilákať a zapojiť tých, ktorí sú tradične nedostatočne zastúpení, s nevyhnutnými počítačovými nástrojmi a multidisciplinárnymi príležitosťami."
+        csp-2019:
+          title: "Základy informatiky ('19-'20)"
+          version_title: "'19-'20"
+          description_short: Zoznámte sa so základnými konceptmi informatiky.
+          description_student: "Na jeseň 2016 spustila College Board svoj najnovší kurz AP®, AP Zásady počítačovej vedy. Kurz zoznamuje študentov so základnými konceptmi informatiky a vyzýva ich, aby preskúmali, ako môže počítačová technológia ovplyvniť svet. Program AP navrhol AP Princípy počítačovej vedy s cieľom vytvoriť lídrov v oblastiach počítačovej vedy a prilákať a zapojiť tých, ktorí sú tradične nedostatočne zastúpení, s nevyhnutnými počítačovými nástrojmi a multidisciplinárnymi príležitosťami."
+          description_teacher: "Na jeseň 2016 spustila College Board svoj najnovší kurz AP®, AP Zásady počítačovej vedy. Kurz zoznamuje študentov so základnými konceptmi informatiky a vyzýva ich, aby preskúmali, ako môže počítačová technológia ovplyvniť svet. Program AP navrhol AP Princípy počítačovej vedy s cieľom vytvoriť lídrov v oblastiach počítačovej vedy a prilákať a zapojiť tých, ktorí sú tradične nedostatočne zastúpení, s nevyhnutnými počítačovými nástrojmi a multidisciplinárnymi príležitosťami."
+        csd-2019:
+          title: "Objavy v informatike ('19-'20)"
+          version_title: "'19-'20"
+          description_short: "Úvodný kurz informatiky, ktorý umožňuje študentom vytvárať autentické artefakty."
+          description_student: "Objavy počítačovej vedy (CS Discoveries) sú úvodným kurzom počítačovej vedy, ktorý umožňuje študentom vytvárať autentické artefakty a zapájať sa do počítačovej vedy ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu."
+          description_teacher: "Objavy počítačovej vedy (CS Discoveries) sú úvodným kurzom počítačovej vedy, ktorý umožňuje študentom vytvárať autentické artefakty a zapájať sa do počítačovej vedy ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu."
+        csd-pilot:
+          title: CSD pilotný kurz
+          description_short: "(Pilotná verzia) Úvodný kurz informatiky, ktorý umožňuje študentom vytvárať autentické artefakty."
+          description_student: "Objavy počítačovej vedy (CS Discoveries) sú úvodným kurzom počítačovej vedy, ktorý umožňuje študentom vytvárať autentické artefakty a zapájať sa do počítačovej vedy ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu."
+          description_teacher: "(Pilotná verzia) Objavy v informatike (CS Discoveries) je úvodný kurz informatiky, ktorý umožňuje študentom vytvárať autentické artefakty a zapájať sa do informatiky ako prostriedku pre kreativitu, komunikáciu, riešenie problémov a zábavu."
+        time4cs-control:
+          title: Time4CS (Ovládanie)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+        time4cs-experiment:
+          title: Time4CS (Experiment)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+        csp-2020:
+          title: "Základy informatiky ('20-'21)"
+          version_title: "'20-'21"
+          description_short: Zoznámte sa so základnými konceptmi informatiky.
+          description_student: "V roku 2016 spustila College Board svoj najnovší kurz AP®, AP Zásady počítačovej vedy. Pre školský rok 2020-21 vykonali významné aktualizácie rámca kurzu. CSP zoznamuje študentov so základnými konceptmi informatiky a vyzýva ich, aby preskúmali, ako môže počítačová technika a technológia ovplyvniť svet. Program AP navrhol AP Princípy počítačovej vedy s cieľom vytvoriť lídrov v oblastiach počítačovej vedy a prilákať a zapojiť tých, ktorí sú tradične nedostatočne zastúpení, s nevyhnutnými počítačovými nástrojmi a multidisciplinárnymi príležitosťami."
+          description_teacher: "V roku 2016 spustila College Board svoj najnovší kurz AP®, AP Zásady počítačovej vedy. Pre školský rok 2020-21 vykonali významné aktualizácie rámca kurzu. CSP zoznamuje študentov so základnými konceptmi informatiky a vyzýva ich, aby preskúmali, ako môže počítačová technika a technológia ovplyvniť svet. Program AP navrhol AP Princípy počítačovej vedy s cieľom vytvoriť lídrov v oblastiach počítačovej vedy a prilákať a zapojiť tých, ktorí sú tradične nedostatočne zastúpení, s nevyhnutnými počítačovými nástrojmi a multidisciplinárnymi príležitosťami."
+        csd-2020:
+          title: "Objavy v informatike ('20-'21)"
+          version_title: "'20-'21"
+          description_short: "Úvodný kurz informatiky, ktorý umožňuje študentom vytvárať autentické artefakty."
+          description_student: "Objavy počítačovej vedy (CS Discoveries) sú úvodným kurzom počítačovej vedy, ktorý umožňuje študentom vytvárať autentické artefakty a zapájať sa do počítačovej vedy ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu."
+          description_teacher: "Objavy počítačovej vedy (CS Discoveries) sú úvodným kurzom počítačovej vedy, ktorý umožňuje študentom vytvárať autentické artefakty a zapájať sa do počítačovej vedy ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu."
+        csp-2021:
+          title: "Zásady informatiky ('21-'22)"
+          description_short: Zoznámte sa so základnými konceptmi informatiky.
+          description_student: "CSP zoznamuje študentov so základnými konceptmi informatiky a vyzýva ich, aby preskúmali, ako môže počítačová technika a technológia ovplyvniť svet. Program AP navrhol AP Princípy počítačovej vedy s cieľom vytvoriť lídrov v oblastiach počítačovej vedy a prilákať a zapojiť tých, ktorí sú tradične nedostatočne zastúpení, s nevyhnutnými počítačovými nástrojmi a multidisciplinárnymi príležitosťami."
+          description_teacher: |-
+            CSP zoznamuje študentov so základnými konceptmi informatiky a vyzýva ich, aby preskúmali, ako môže počítačová technika a technológia ovplyvniť svet. Program AP navrhol AP Princípy počítačovej vedy s cieľom vytvoriť lídrov v oblastiach počítačovej vedy a prilákať a zapojiť tých, ktorí sú tradične nedostatočne zastúpení, s nevyhnutnými počítačovými nástrojmi a multidisciplinárnymi príležitosťami.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť zásady počítačových vied. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Kliknite sem</a>, aby ste sa dozvedeli viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti, alebo <a href="https://code.org/educate/professional-development-online" target="blank" rel="noopener noreferrer">kliknite sem</a>, aby ste sa dozvedeli viac o možnosti online vzdelávania vlastným tempom.
+            
+            Môžete nájsť _Curriculum Guide_, _Course Vocab_ a ďalšie zdroje, ktoré vám pomôžu implementovať tento učebný plán v ponuke Učiteľské zdroje nižšie.
+          version_title: "'21-'22"
+        csd-2021:
+          title: "Objavy v informatike ('21-'22)"
+          description_short: "Úvodný kurz informatiky, ktorý umožňuje študentom vytvárať autentické artefakty."
+          description_student: |-
+            Objavy počítačovej vedy (CS Discoveries) sú úvodným kurzom počítačovej vedy, ktorý umožňuje študentom vytvárať autentické artefakty a zapájať sa do počítačovej vedy ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            **Zaujíma vás vyučovanie CS Discoveries?** Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o profesionálnych vzdelávacích príležitostiach vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti online vzdelávania vlastným tempom.
+          description_teacher: |-
+            Objavy počítačovej vedy (CS Discoveries) sú úvodným kurzom počítačovej vedy, ktorý umožňuje študentom vytvárať autentické artefakty a zapájať sa do počítačovej vedy ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti samostatného online vzdelávania.
+            
+            Tento kurz je modulárny a môže sa vyučovať v rôznych konfiguráciách na základe potrieb každej triedy. Pozrite si _CSD Implementation Guide_ v ponuke Zdroje pre učiteľov nižšie, aby ste sa dozvedeli o rôznych možnostiach.
+            
+            Môžete nájsť _Príručku k učebnému plánu_, _Príručku pre začiatočníkov_, _Príručku k hodnoteniu_ a mnoho ďalších zdrojov, ktoré vám pomôžu implementovať tento učebný plán v ponuke učiteľských zdrojov nižšie.
+          version_title: "'21-'22"
+        csa-pilot:
+          title: Pilot CSA
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        mike-test:
+          title: Základy informatiky
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-csd-2021:
+          title: Učenie CS Objavov
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online kurze Code.org pre učiteľov, ktorý si môžete študovať vlastným tempom a začať učiť CS Discoveries! Po dokončení tohto online kurzu **budete pripravení začať učiť kurz Počítačové vedy Discoveries od Code.org** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Tento kurz s vlastným tempom je navrhnutý tak, aby ťa postavil do pozície vodiča a dal ti kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každý modul a lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah tohto profesionálneho vzdelávacieho kurzu je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CS Discoveries. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Odporúčame všetkým učiteľom, aby **začali s krátkou úvodnou jednotkou** a dozvedeli sa viac o tomto profesionálnom vzdelávacom kurze predtým, ako začnú."
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online kurze Code.org pre učiteľov, ktorý si môžete študovať vlastným tempom a začať učiť CS Discoveries! Po dokončení tohto online kurzu **budete pripravení začať učiť kurz Počítačové vedy Discoveries od Code.org** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Tento kurz s vlastným tempom je navrhnutý tak, aby ťa postavil do pozície vodiča a dal ti kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každý modul a lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah tohto profesionálneho vzdelávacieho kurzu je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CS Discoveries. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Odporúčame všetkým učiteľom, aby **začali s krátkou úvodnou jednotkou** a dozvedeli sa viac o tomto profesionálnom vzdelávacom kurze predtým, ako začnú."
+          version_title: "'21 - '22"
+        self-paced-pl-csp-2021:
+          title: Učenie základov informatiky
+          description_short: ''
+          description_student: "## Vitajte\n\n##### Vitajte na bezplatných online moduloch Code.org, ktoré si môžete študovať vlastným tempom, aby ste začali učiť zásady počítačovej vedy! Po dokončení týchto online modulov budete pripravení začať učiť kurz Princípy počítačovej vedy od Code.org so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\nChoďte vlastným tempom Tieto samostatne riadené moduly sú navrhnuté tak, aby vás postavili do pozície vodiča a dali vám kontrolu nad vlastným učením. Navrhnuté časy sú uvedené pre každý modul a lekciu. Odporúčame vám, aby ste sa zapojili do obsahu vlastným tempom.\n\nVyberte si svoj obsah\n\nObsah týchto profesionálnych vzdelávacích modulov je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CS Principles. Môžete sa však zapojiť do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám. Odporúčame všetkým učiteľom, aby začali s krátkou úvodnou jednotkou, aby sa dozvedeli viac o týchto profesionálnych vzdelávacích moduloch predtým, ako začnú."
+          description_teacher: "## Vitajte\n\n##### Vitajte na bezplatných online moduloch Code.org, ktoré si môžete študovať vlastným tempom, aby ste začali učiť zásady počítačovej vedy! Po dokončení týchto online modulov budete pripravení začať učiť kurz Princípy počítačovej vedy od Code.org so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\nChoďte vlastným tempom Tieto samostatne riadené moduly sú navrhnuté tak, aby vás postavili do pozície vodiča a dali vám kontrolu nad vlastným učením. Navrhnuté časy sú uvedené pre každý modul a lekciu. Odporúčame vám, aby ste sa zapojili do obsahu vlastným tempom.\n\nVyberte si svoj obsah\n\nObsah týchto profesionálnych vzdelávacích modulov je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CS Principles. Môžete sa však zapojiť do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám. Odporúčame všetkým učiteľom, aby začali s krátkou úvodnou jednotkou, aby sa dozvedeli viac o týchto profesionálnych vzdelávacích moduloch predtým, ako začnú."
+          version_title: "'21-'22"
+        csa-pilot-facilitator:
+          title: Facilitátori pilotného programu CSA
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csp-2022:
+          title: "Zásady informatiky ('22-'23)"
+          description_short: Zoznámte sa so základnými konceptmi informatiky.
+          description_student: "CSP zoznamuje študentov so základnými konceptmi informatiky a vyzýva ich, aby preskúmali, ako môže počítačová technika a technológia ovplyvniť svet. Program AP navrhol AP Princípy počítačovej vedy s cieľom vytvoriť lídrov v oblastiach počítačovej vedy a prilákať a zapojiť tých, ktorí sú tradične nedostatočne zastúpení, s nevyhnutnými počítačovými nástrojmi a multidisciplinárnymi príležitosťami."
+          description_teacher: |-
+            CSP zoznamuje študentov so základnými konceptmi informatiky a vyzýva ich, aby preskúmali, ako môže počítačová technika a technológia ovplyvniť svet. Program AP navrhol AP Princípy počítačovej vedy s cieľom vytvoriť lídrov v oblastiach počítačovej vedy a prilákať a zapojiť tých, ktorí sú tradične nedostatočne zastúpení, s nevyhnutnými počítačovými nástrojmi a multidisciplinárnymi príležitosťami.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť zásady počítačových vied. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Kliknite sem</a>, aby ste sa dozvedeli viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti, alebo <a href="https://code.org/educate/professional-development-online" target="blank" rel="noopener noreferrer">kliknite sem</a>, aby ste sa dozvedeli viac o možnosti online vzdelávania vlastným tempom.
+            
+            Môžete nájsť _Curriculum Guide_, _Course Vocab_ a ďalšie zdroje, ktoré vám pomôžu implementovať tento učebný plán v ponuke Učiteľské zdroje nižšie.
+          version_title: "'22-'23"
+        csa-2022:
+          title: "Informatika A ('22-'23)"
+          description_short: Učte sa programovanie v Jave a zručnosti softvérového inžinierstva.
+          description_student: "Informatika A (CSA) zoznamuje študentov so softvérovým inžinierstvom a objektovo orientovaným programovaním a dizajnom pomocou programovacieho jazyka Java. Tento učebný plán pokrýva široké spektrum tém, vrátane návrhu riešení problémov, využitia dátových štruktúr na organizovanie veľkých súborov údajov, vývoja a implementácie algoritmov na spracovanie údajov a objavovanie nových informácií, analýzy potenciálnych riešení a etických a sociálnych dôsledkov výpočtových systémov."
+          description_teacher: |-
+            Informatika A (CSA) zoznamuje študentov so softvérovým inžinierstvom a objektovo orientovaným programovaním a dizajnom pomocou programovacieho jazyka Java. Tento učebný plán pokrýva široké spektrum tém, vrátane návrhu riešení problémov, využitia dátových štruktúr na organizovanie veľkých súborov údajov, vývoja a implementácie algoritmov na spracovanie údajov a objavovanie nových informácií, analýzy potenciálnych riešení a etických a sociálnych dôsledkov výpočtových systémov.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Kliknite sem</a> a dozviete sa viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti.
+            
+            Môžete nájsť _Príručku k učebnému plánu_, _Slovník kurzu_ a ďalšie zdroje, ktoré vám pomôžu implementovať tento učebný plán v ponuke Učiteľské zdroje nižšie.
+          version_title: "'22-'23"
+        csa-pilot-extra:
+          title: Pilot jednotiek CSA 7 a 8
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        vpl-csd-summer-pilot-2022:
+          title: 'CS Objavy Virtuálny Letný Workshop '
+          description_short: ''
+          description_student: "Budete:\n\nPripravte sa na vyučovanie CS Discoveries.\nPrecvičte kľúčové koncepty v učebnom pláne CS Discoveries.\nRastite vo svojom porozumení spravodlivej vzdelávacej oblasti v oblasti počítačových vied. \nRozvíjajte empatiu pre študentský zážitok. \nStaňte sa súčasťou siete učiteľov, ktorí vykonávajú podobnú prácu."
+          description_teacher: "Účastníci budú:\n\nPripravte sa na vyučovanie CS Discoveries.\nPrecvičte kľúčové koncepty v učebnom pláne CS Discoveries.\nRastite vo svojom porozumení spravodlivej vzdelávacej oblasti v oblasti počítačových vied. \nRozvíjajte empatiu pre študentský zážitok. \nStaňte sa súčasťou siete učiteľov, ktorí vykonávajú podobnú prácu."
+          version_title: ''
+        csa-async-2022:
+          title: Začínajúce moduly CSA
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'22"
+        vpl-csd-summer-pilot-ci-2022:
+          title: CS Objavy Osnovy Vyšetrovanie
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'21-'22"
+        self-paced-pl-csa-2022:
+          title: Moduly pre začiatočníkov CSA
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'22-'23"
+        csd-2022:
+          title: "Objavy v informatike ('22-'23)"
+          description_short: "Úvodný kurz informatiky, ktorý umožňuje študentom vytvárať autentické artefakty."
+          description_student: |-
+            Objavy počítačovej vedy (CS Discoveries) sú úvodným kurzom počítačovej vedy, ktorý umožňuje študentom vytvárať autentické artefakty a zapájať sa do počítačovej vedy ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            **Zaujíma vás vyučovanie CS Discoveries?** Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o profesionálnych vzdelávacích príležitostiach vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti online vzdelávania vlastným tempom.
+          description_teacher: |-
+            Objavy počítačovej vedy (CS Discoveries) sú úvodným kurzom počítačovej vedy, ktorý umožňuje študentom vytvárať autentické artefakty a zapájať sa do počítačovej vedy ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti samostatného online vzdelávania.
+            
+            Tento kurz má flexibilnú implementáciu a môže sa vyučovať v rôznych konfiguráciách na základe potrieb každej triedy. Pozrite si [CSD Implementation Guide][2] pre viac informácií
+            
+            Môžete si pozrieť [Curriculum Guide][3] a [Getting Started Guide][4], aby ste sa dozvedeli viac o kurze a začali.
+          version_title: "'22-'23"
+        self-paced-pl-csd-2022:
+          title: Učenie CS Discoveries 22-23
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online kurze Code.org pre učiteľov, ktorý si môžete študovať vlastným tempom a začať učiť CS Discoveries! Po dokončení tohto online kurzu **budete pripravení začať učiť kurz Počítačové vedy Discoveries od Code.org** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Tento kurz s vlastným tempom je navrhnutý tak, aby ťa postavil do pozície vodiča a dal ti kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každý modul a lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah tohto profesionálneho vzdelávacieho kurzu je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CS Discoveries. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Odporúčame všetkým učiteľom, aby **začali s krátkou úvodnou jednotkou** a dozvedeli sa viac o tomto profesionálnom vzdelávacom kurze predtým, ako začnú."
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online kurze Code.org pre učiteľov, ktorý si môžete študovať vlastným tempom a začať učiť CS Discoveries! Po dokončení tohto online kurzu **budete pripravení začať učiť kurz Počítačové vedy Discoveries od Code.org** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Tento kurz s vlastným tempom je navrhnutý tak, aby ťa postavil do pozície vodiča a dal ti kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každý modul a lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah tohto profesionálneho vzdelávacieho kurzu je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CS Discoveries. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Odporúčame všetkým učiteľom, aby **začali s krátkou úvodnou jednotkou** a dozvedeli sa viac o tomto profesionálnom vzdelávacom kurze predtým, ako začnú."
+          version_title: "'22-'23"
+        self-paced-pl-csp-2022:
+          title: Učenie základov informatiky
+          description_short: ''
+          description_student: "## Vitajte\n\n##### Vitajte na bezplatných online moduloch Code.org, ktoré si môžete študovať vlastným tempom, aby ste začali učiť zásady počítačovej vedy! Po dokončení týchto online modulov budete pripravení začať učiť kurz Princípy počítačovej vedy od Code.org so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\nChoďte vlastným tempom Tieto samostatne riadené moduly sú navrhnuté tak, aby vás postavili do pozície vodiča a dali vám kontrolu nad vlastným učením. Navrhnuté časy sú uvedené pre každý modul a lekciu. Odporúčame vám, aby ste sa zapojili do obsahu vlastným tempom.\n\nVyberte si svoj obsah\n\nObsah týchto profesionálnych vzdelávacích modulov je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CS Principles. Môžete sa však zapojiť do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám. Odporúčame všetkým učiteľom, aby začali s krátkou úvodnou jednotkou, aby sa dozvedeli viac o týchto profesionálnych vzdelávacích moduloch predtým, ako začnú."
+          description_teacher: "## Vitajte\n\n##### Vitajte na bezplatných online moduloch Code.org, ktoré si môžete študovať vlastným tempom, aby ste začali učiť zásady počítačovej vedy! Po dokončení týchto online modulov budete pripravení začať učiť kurz Princípy počítačovej vedy od Code.org so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\nChoďte vlastným tempom Tieto samostatne riadené moduly sú navrhnuté tak, aby vás postavili do pozície vodiča a dali vám kontrolu nad vlastným učením. Navrhnuté časy sú uvedené pre každý modul a lekciu. Odporúčame vám, aby ste sa zapojili do obsahu vlastným tempom.\n\nVyberte si svoj obsah\n\nObsah týchto profesionálnych vzdelávacích modulov je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CS Principles. Môžete sa však zapojiť do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám. Odporúčame všetkým učiteľom, aby začali s krátkou úvodnou jednotkou, aby sa dozvedeli viac o týchto profesionálnych vzdelávacích moduloch predtým, ako začnú."
+          version_title: "'22-'23"
+        vpl-csd-ayw-pilot-2022:
+          title: CS Objavy Virtuálne Akadémia Rok Workshopy
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csa-validation-pilot-2022:
+          title: "Informatika A Pilot Validácie ('22-'23)"
+          description_short: Učte sa programovanie v Jave a zručnosti softvérového inžinierstva.
+          description_student: "Informatika A (CSA) zoznamuje študentov so softvérovým inžinierstvom a objektovo orientovaným programovaním a dizajnom pomocou programovacieho jazyka Java. Tento učebný plán pokrýva široké spektrum tém, vrátane návrhu riešení problémov, využitia dátových štruktúr na organizovanie veľkých súborov údajov, vývoja a implementácie algoritmov na spracovanie údajov a objavovanie nových informácií, analýzy potenciálnych riešení a etických a sociálnych dôsledkov výpočtových systémov."
+          description_teacher: "Informatika A (CSA) zoznamuje študentov so softvérovým inžinierstvom a objektovo orientovaným programovaním a dizajnom pomocou programovacieho jazyka Java. Tento učebný plán pokrýva široké spektrum tém, vrátane návrhu riešení problémov, využitia dátových štruktúr na organizovanie veľkých súborov údajov, vývoja a implementácie algoritmov na spracovanie údajov a objavovanie nových informácií, analýzy potenciálnych riešení a etických a sociálnych dôsledkov výpočtových systémov."
+          version_title: "'22-'23"
+        csa-2023:
+          title: "Informatika A ('23-'24)"
+          description_short: Učte sa programovanie v Jave a zručnosti softvérového inžinierstva.
+          description_student: "Informatika A (CSA) zoznamuje študentov so softvérovým inžinierstvom a objektovo orientovaným programovaním a dizajnom pomocou programovacieho jazyka Java. Tento učebný plán pokrýva široké spektrum tém, vrátane návrhu riešení problémov, využitia dátových štruktúr na organizovanie veľkých súborov údajov, vývoja a implementácie algoritmov na spracovanie údajov a objavovanie nových informácií, analýzy potenciálnych riešení a etických a sociálnych dôsledkov výpočtových systémov."
+          description_teacher: |-
+            Informatika A (CSA) zoznamuje študentov so softvérovým inžinierstvom a objektovo orientovaným programovaním a dizajnom pomocou programovacieho jazyka Java. Tento učebný plán pokrýva široké spektrum tém, vrátane návrhu riešení problémov, využitia dátových štruktúr na organizovanie veľkých súborov údajov, vývoja a implementácie algoritmov na spracovanie údajov a objavovanie nových informácií, analýzy potenciálnych riešení a etických a sociálnych dôsledkov výpočtových systémov.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Kliknite sem</a> a dozviete sa viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti.
+            
+            Môžete nájsť _Syllabus_, _Course Vocab_ a ďalšie zdroje, ktoré vám pomôžu implementovať tento učebný plán v menu Zdroje pre učiteľov nižšie.
+          version_title: "'23-'24"
+        self-paced-pl-physical-computing-2022:
+          title: Učenie vytvárania aplikácií s zariadeniami (Circuit Playground)
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť jednotku Vytváranie aplikácií s zariadeniami od Code.org** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n**Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a v jednotke Tvorba aplikácií s zariadeniami. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na výučbu vytvárania aplikácií s zariadeniami. "
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť jednotku Vytváranie aplikácií s zariadeniami od Code.org** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n**Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a v jednotke Tvorba aplikácií s zariadeniami. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na výučbu vytvárania aplikácií s zariadeniami. "
+          version_title: "'22 - '23"
+        csp-2023:
+          title: "Zásady informatiky '23-'24"
+          description_short: Zoznámte sa so základnými konceptmi informatiky.
+          description_student: "CSP zoznamuje študentov so základnými konceptmi informatiky a vyzýva ich, aby preskúmali, ako môže počítačová technika a technológia ovplyvniť svet. Program AP navrhol AP Princípy počítačovej vedy s cieľom vytvoriť lídrov v oblastiach počítačovej vedy a prilákať a zapojiť tých, ktorí sú tradične nedostatočne zastúpení, s nevyhnutnými počítačovými nástrojmi a multidisciplinárnymi príležitosťami."
+          description_teacher: |-
+            CSP zoznamuje študentov so základnými konceptmi informatiky a vyzýva ich, aby preskúmali, ako môže počítačová technika a technológia ovplyvniť svet. Program AP navrhol AP Princípy počítačovej vedy s cieľom vytvoriť lídrov v oblastiach počítačovej vedy a prilákať a zapojiť tých, ktorí sú tradične nedostatočne zastúpení, s nevyhnutnými počítačovými nástrojmi a multidisciplinárnymi príležitosťami.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť zásady počítačových vied. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Kliknite sem</a>, aby ste sa dozvedeli viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti, alebo <a href="https://code.org/educate/professional-development-online" target="blank" rel="noopener noreferrer">kliknite sem</a>, aby ste sa dozvedeli viac o možnosti online vzdelávania vlastným tempom.
+            
+            Môžete nájsť _Syllabus_, _Course Vocab_ a ďalšie zdroje, ktoré vám pomôžu implementovať tento učebný plán v ponuke Zdroje pre učiteľov nižšie.
+          version_title: "'23-'24"
+        self-paced-pl-csa-2023:
+          title: Moduly pre začiatočníkov CSA
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: '2023'
+        tess-testing-focus-on-creativity-2023:
+          title: tess-testovanie-zameranie-na-kreativitu-zbierka-2023
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csd-2023:
+          title: "Objavy v informatike ('23-'24)"
+          description_short: "Úvodný kurz informatiky, ktorý umožňuje študentom vytvárať autentické artefakty."
+          description_student: |-
+            Objavy počítačovej vedy (CS Discoveries) sú úvodným kurzom počítačovej vedy, ktorý umožňuje študentom vytvárať autentické artefakty a zapájať sa do počítačovej vedy ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            **Zaujíma vás vyučovanie CS Discoveries?** Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o profesionálnych vzdelávacích príležitostiach vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti online vzdelávania vlastným tempom.
+          description_teacher: |-
+            Objavy počítačovej vedy (CS Discoveries) sú úvodným kurzom počítačovej vedy, ktorý umožňuje študentom vytvárať autentické artefakty a zapájať sa do počítačovej vedy ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti samostatného online vzdelávania.
+            
+            Tento kurz má flexibilnú implementáciu a môže sa vyučovať v rôznych konfiguráciách na základe potrieb každej triedy. Pozrite si [CSD Implementation Guide][2] pre viac informácií
+            
+            Môžete si pozrieť [Osnovu kurzu][3] a [Sprievodcu začiatkom][4], aby ste sa dozvedeli viac o kurze a začali.
+          version_title: "'23-'24"
+        focus-on-creativity-2023:
+          title: "Zamerajte sa na kreativitu '23-'24 (CS Objavy)"
+          description_short: "Kolekcia jednotiek objavovania informatiky, ktorá sa zameriava na kreativitu a tvorbu s počítačom."
+          description_student: |-
+            Zamerajte sa na kreativitu, čo je zbierka jednotiek objavov v oblasti informatiky (CS Discoveries), ktorá umožňuje študentom byť kreatívnymi, keď sa učia vytvárať webové stránky, animácie, hry a aplikácie pre zariadenia. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky nielen ako prostriedku na kreativitu, ale aj na komunikáciu, riešenie problémov a zábavu.
+            
+            **Zaujíma vás vyučovanie CS Discoveries?** Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o profesionálnych vzdelávacích príležitostiach vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti online vzdelávania vlastným tempom.
+          description_teacher: |-
+            Zameranie na kreativitu je zbierka jednotiek kurzu Objavy v informatike (CS Discoveries), ktorá umožňuje študentom byť kreatívnymi, keď sa učia vytvárať webové stránky, animácie a hry a aplikácie pre zariadenia. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky nielen ako prostriedku na kreativitu, ale aj na komunikáciu, riešenie problémov a zábavu.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti samostatného online vzdelávania.
+            
+            Môžete sa prihlásiť do [Príručky na začiatok][2], aby ste sa dozvedeli viac o tom, ako začať.
+          version_title: "'23-24"
+        focus-on-hardware-2023:
+          title: "Zameranie na hardvér '23-'24 (CS Objavy)"
+          description_short: "Zbierka jednotiek objavovania informatiky, ktoré skúmajú, ako fungujú počítače a menšie fyzické zariadenia."
+          description_student: |-
+            Zameranie na hardvér je zbierka jednotiek objavov v oblasti informatiky (CS Discoveries), ktorá umožňuje študentom používať dáta a fyzické zariadenia na riešenie problémov. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            **Zaujíma vás vyučovanie CS Discoveries?** Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o profesionálnych vzdelávacích príležitostiach vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti online vzdelávania vlastným tempom.
+          description_teacher: |-
+            Zameranie na hardvér je zbierka jednotiek kurzu Objavy v informatike (CS Discoveries), ktorá umožňuje študentom používať dáta a fyzické zariadenia na riešenie problémov. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti samostatného online vzdelávania.
+            
+            Môžete sa prihlásiť do [Príručky na začiatok][2], aby ste sa dozvedeli viac o tom, ako začať.
+          version_title: "'23-'24"
+        focus-on-data-2023:
+          title: "Zamerajte sa na dáta '23-'24 (CS Objavy)"
+          description_short: 'Zbierka jednotiek objavovania informatiky, ktorá sa zameriava na dáta: ako ich počítače používajú a ako sa používajú v spoločnosti. '
+          description_student: |-
+            Zameranie na dáta je zbierka jednotiek objavov v oblasti informatiky (CS Discoveries), ktorá umožňuje študentom používať dáta na riešenie problémov. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            **Zaujíma vás vyučovanie CS Discoveries?** Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o profesionálnych vzdelávacích príležitostiach vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti online vzdelávania vlastným tempom.
+          description_teacher: |-
+            Zameranie na dáta je zbierka jednotiek kurzu objavov v oblasti informatiky (CSD), ktorá umožňuje študentom využívať dáta na riešenie problémov. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti samostatného online vzdelávania.
+            
+            Môžete sa prihlásiť do [Príručky na začiatok][2], aby ste sa dozvedeli viac o tom, ako začať.
+          version_title: "'23-'24"
+        focus-on-design-with-purpose-2023:
+          title: "Zamerajte sa na dizajn s cieľom '23-'24 (CS Objavy)"
+          description_short: "Kolekcia jednotiek objavovania informatiky, ktorá sa zameriava na proces návrhu a počúvanie používateľov na riešenie reálnych problémov."
+          description_student: |-
+            Zamerajte sa na dizajn s cieľom, čo je zbierka jednotiek objavov v oblasti informatiky (CS Discoveries), ktorá posilňuje študentov, aby premýšľali o potrebách používateľov pri navrhovaní webových stránok a aplikácií pre zariadenia. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            **Zaujíma vás vyučovanie CS Discoveries?** Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o profesionálnych vzdelávacích príležitostiach vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti online vzdelávania vlastným tempom.
+          description_teacher: |-
+            Zamerajte sa na dizajn s cieľom, čo je zbierka jednotiek kurzu Počítačové vedy (CS Discoveries), ktorá posilňuje študentov, aby premýšľali o potrebách používateľov pri navrhovaní webových stránok a aplikácií pre zariadenia. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti samostatného online vzdelávania.
+            
+            Môžete sa prihlásiť do [Príručky na začiatok][2], aby ste sa dozvedeli viac o tom, ako začať.
+          version_title: "'23-'24"
+        focus-on-coding-2023:
+          title: "Zamerajte sa na kódovanie '23-'24 (Objavy v informatike)"
+          description_short: "Kolekcia jednotiek objavovania informatiky, ktorá sa zameriava na zručnosti v oblasti kódovania a programovania."
+          description_student: |-
+            Zameranie na kódovanie je zbierka jednotiek kurzu Objavy v informatike (CS Discoveries), ktorá posilňuje študentov v budovaní ich kódovacích zručností v oblasti webového vývoja, hier a animácie a vytvárania aplikácií pre zariadenia. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            **Zaujíma vás vyučovanie CS Discoveries?** Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o profesionálnych vzdelávacích príležitostiach vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti online vzdelávania vlastným tempom.
+          description_teacher: |-
+            Zameranie na kódovanie je zbierka jednotiek kurzu Objavy v informatike (CS Discoveries), ktorá posilňuje študentov v budovaní ich kódovacích zručností v oblasti webového vývoja, hier a animácie a vytvárania aplikácií pre zariadenia. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti samostatného online vzdelávania.
+            
+            Môžete sa prihlásiť do [Príručky na začiatok][2], aby ste sa dozvedeli viac o tom, ako začať.
+          version_title: "'23-'24"
+        focus-on-impact-in-society-2023:
+          title: "Zamerajte sa na dopad v spoločnosti '23-'24 (CS Discoveries)"
+          description_short: "Zbierka jednotiek objavovania informatiky, ktoré sa zameriavajú na vplyv technológie na spoločnosť."
+          description_student: |-
+            Zameranie na dopad v spoločnosti je zbierka jednotiek objavov v oblasti informatiky (CS Discoveries), ktorá posilňuje študentov, aby uvažovali o informatike ako o nástroji na riešenie problémov, pričom zohľadňujú širšie sociálne dopady rôznych aspektov informatiky. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            **Zaujíma vás vyučovanie CS Discoveries?** Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o profesionálnych vzdelávacích príležitostiach vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti online vzdelávania vlastným tempom.
+          description_teacher: |-
+            Zameranie na dopad v spoločnosti je zbierka jednotiek kurzu Objavy v informatike (CS Discoveries), ktorá posilňuje študentov, aby uvažovali o informatike ako o nástroji na riešenie problémov, pričom zohľadňujú širšie sociálne dopady rôznych aspektov informatiky. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti samostatného online vzdelávania.
+            
+            Môžete sa prihlásiť do [Príručky na začiatok][2], aby ste sa dozvedeli viac o tom, ako začať.
+          version_title: "'23-'24"
+        vpl-csd-summer-ci-2023:
+          title: CS Objavy Osnovy Vyšetrovanie
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'23-'24"
+        self-paced-pl-physical-computing-2023:
+          title: " Učenie vytvárania aplikácií s zariadeniami (Circuit Playground)"
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť jednotku Vytváranie aplikácií s zariadeniami od Code.org** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n**Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a v jednotke Tvorba aplikácií s zariadeniami. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na výučbu vytvárania aplikácií s zariadeniami. "
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť jednotku Vytváranie aplikácií s zariadeniami od Code.org** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n**Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a v jednotke Tvorba aplikácií s zariadeniami. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na výučbu vytvárania aplikácií s zariadeniami. "
+          version_title: "'23 - '24"
+        self-paced-pl-csd-2023:
+          title: Učenie CS Objavov
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online kurze Code.org pre učiteľov, ktorý si môžete študovať vlastným tempom a začať učiť CS Discoveries! Po dokončení tohto online kurzu **budete pripravení začať učiť kurz Počítačové vedy Discoveries od Code.org** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Tento kurz s vlastným tempom je navrhnutý tak, aby ťa postavil do pozície vodiča a dal ti kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každý modul a lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah tohto profesionálneho vzdelávacieho kurzu je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CS Discoveries. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Odporúčame všetkým učiteľom, aby **začali s krátkou úvodnou jednotkou** a dozvedeli sa viac o tomto profesionálnom vzdelávacom kurze predtým, ako začnú."
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online kurze Code.org pre učiteľov, ktorý si môžete študovať vlastným tempom a začať učiť CS Discoveries! Po dokončení tohto online kurzu **budete pripravení začať učiť kurz Počítačové vedy Discoveries od Code.org** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Tento kurz s vlastným tempom je navrhnutý tak, aby ťa postavil do pozície vodiča a dal ti kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každý modul a lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah tohto profesionálneho vzdelávacieho kurzu je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CS Discoveries. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Odporúčame všetkým učiteľom, aby **začali s krátkou úvodnou jednotkou** a dozvedeli sa viac o tomto profesionálnom vzdelávacom kurze predtým, ako začnú."
+          version_title: "'23-'24"
+        self-paced-pl-microbit-2023:
+          title: "Učenie vytvárania aplikácií s zariadeniami (micro:bit)"
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť jednotku Vytváranie aplikácií s zariadeniami od Code.org** so svojimi študentmi pomocou micro:bitov.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n**Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a v jednotke Tvorba aplikácií s zariadeniami. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na výučbu vytvárania aplikácií s zariadeniami. "
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť jednotku Vytváranie aplikácií s zariadeniami od Code.org** so svojimi študentmi pomocou micro:bitov.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n**Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a v jednotke Tvorba aplikácií s zariadeniami. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na výučbu vytvárania aplikácií s zariadeniami. "
+          version_title: "'23-'24"
+        pl-csd-summer-2023:
+          title: CSD Osobný PL Workshop Kurz
+          description_short: ''
+          description_student: "Budete:\n\nPripravte sa na vyučovanie CS Discoveries.\nPrecvičte kľúčové koncepty v učebnom pláne CS Discoveries.\nRastite vo svojom porozumení spravodlivej vzdelávacej oblasti v oblasti počítačových vied. \nRozvíjajte empatiu pre študentský zážitok. \nStaňte sa súčasťou siete učiteľov, ktorí vykonávajú podobnú prácu."
+          description_teacher: "Účastníci budú:\n\nPripravte sa na vyučovanie CS Discoveries.\nPrecvičte kľúčové koncepty v učebnom pláne CS Discoveries.\nRásť v ich porozumení spravodlivej vzdelávacej oblasti CS. \nRozvíjajte empatiu pre študentský zážitok. \nStaňte sa súčasťou siete učiteľov, ktorí vykonávajú podobnú prácu."
+          version_title: ''
+        virtual-pl-csd-summer-2023:
+          title: CSD Virtuálny PL Workshop Kurz
+          description_short: ''
+          description_student: "Budete:\n\nPripravte sa na vyučovanie CS Discoveries.\nPrecvičte kľúčové koncepty v učebnom pláne CS Discoveries.\nRastite vo svojom porozumení spravodlivej vzdelávacej oblasti v oblasti počítačových vied. \nRozvíjajte empatiu pre študentský zážitok. \nStaňte sa súčasťou siete učiteľov, ktorí vykonávajú podobnú prácu."
+          description_teacher: "Účastníci budú:\n\nPripravte sa na vyučovanie CS Discoveries.\nPrecvičte kľúčové koncepty v učebnom pláne CS Discoveries.\nRásť v ich porozumení spravodlivej vzdelávacej oblasti CS. \nRozvíjajte empatiu pre študentský zážitok. \nStaňte sa súčasťou siete učiteľov, ktorí vykonávajú podobnú prácu."
+          version_title: ''
+        self-paced-pl-csp-2023:
+          title: Učenie základov informatiky
+          description_short: ''
+          description_student: "## Vitajte\n\n##### Vitajte na bezplatných online moduloch Code.org, ktoré si môžete študovať vlastným tempom, aby ste začali učiť zásady počítačovej vedy! Po dokončení týchto online modulov budete pripravení začať učiť kurz Princípy počítačovej vedy od Code.org so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\nChoďte vlastným tempom Tieto samostatne riadené moduly sú navrhnuté tak, aby vás postavili do pozície vodiča a dali vám kontrolu nad vlastným učením. Navrhnuté časy sú uvedené pre každý modul a lekciu. Odporúčame vám, aby ste sa zapojili do obsahu vlastným tempom.\n\nVyberte si svoj obsah\n\nObsah týchto profesionálnych vzdelávacích modulov je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CS Principles. Môžete sa však zapojiť do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám. Odporúčame všetkým učiteľom, aby začali s krátkou úvodnou jednotkou, aby sa dozvedeli viac o týchto profesionálnych vzdelávacích moduloch predtým, ako začnú."
+          description_teacher: "## Vitajte\n\n##### Vitajte na bezplatných online moduloch Code.org, ktoré si môžete študovať vlastným tempom, aby ste začali učiť zásady počítačovej vedy! Po dokončení týchto online modulov budete pripravení začať učiť kurz Princípy počítačovej vedy od Code.org so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\nChoďte vlastným tempom Tieto samostatne riadené moduly sú navrhnuté tak, aby vás postavili do pozície vodiča a dali vám kontrolu nad vlastným učením. Navrhnuté časy sú uvedené pre každý modul a lekciu. Odporúčame vám, aby ste sa zapojili do obsahu vlastným tempom.\n\nVyberte si svoj obsah\n\nObsah týchto profesionálnych vzdelávacích modulov je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CS Principles. Môžete sa však zapojiť do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám. Odporúčame všetkým učiteľom, aby začali s krátkou úvodnou jednotkou, aby sa dozvedeli viac o týchto profesionálnych vzdelávacích moduloch predtým, ako začnú."
+          version_title: 22-23
+        self-paced-pl-aiml-2023:
+          title: 'Príprava na vyučovanie AI a strojového učenia '
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť jednotku Tvorba AI a strojového učenia od Code.org** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n**Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a v jednotke Ai a strojového učenia. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na AI a strojové učenie. "
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť jednotku Tvorba AI a strojového učenia od Code.org** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n**Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a v jednotke Ai a strojového učenia. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na AI a strojové učenie. "
+          version_title: ''
+        vpl-csp-2023:
+          title: CS Princípy Virtuálny PL Workshop Kurz 23-24
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: '2023'
+        vpl-csa-2023:
+          title: CSA Virtuálne profesionálne vzdelávanie
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: '2023'
+        vpl-csd-2023:
+          title: CSD Virtuálne profesionálne vzdelávanie
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: '2023'
+        virtual-pl-csa-summer-2024:
+          title: "CSA Virtuálne letné profesionálne vzdelávanie '24-'25"
+          description_short: ''
+          description_student: "Budete:\n\nPripravte sa učiť CS A.\nPrecvičte kľúčové koncepty v učebnom pláne CS A.\nRastite vo svojom porozumení spravodlivej vzdelávacej oblasti v oblasti počítačových vied. \nRozvíjajte empatiu pre študentský zážitok. \nStaňte sa súčasťou siete učiteľov, ktorí vykonávajú podobnú prácu."
+          description_teacher: "Účastníci budú:\n\nPripravte sa učiť CSA.\nPrecvičte kľúčové koncepty v učebnom pláne CSA.\nRásť v ich porozumení spravodlivej vzdelávacej oblasti CS. \nRozvíjajte empatiu pre študentský zážitok. \nStaňte sa súčasťou siete učiteľov, ktorí vykonávajú podobnú prácu."
+          version_title: ''
+        virtual-pl-csp-summer-2024:
+          title: CS Princípy Virtuálny PL Workshop Kurz
+          description_short: ''
+          description_student: "Budete:\n\nPripravte sa učiť zásady počítačových vied.\nPrecvičte si kľúčové koncepty v učebnom pláne CS Principles.\nRastite vo svojom porozumení spravodlivej vzdelávacej oblasti v oblasti počítačových vied. \nRozvíjajte empatiu pre študentský zážitok. \nStaňte sa súčasťou siete učiteľov, ktorí vykonávajú podobnú prácu."
+          description_teacher: "Účastníci budú:\n\nPripravte sa učiť zásady počítačových vied.\nPrecvičte si kľúčové koncepty v učebnom pláne CS Principles.\nRásť v ich porozumení spravodlivej vzdelávacej oblasti CS. \nRozvíjajte empatiu pre študentský zážitok. \nStaňte sa súčasťou siete učiteľov, ktorí vykonávajú podobnú prácu."
+          version_title: ''
+        self-paced-pl-csd-unit1-2023:
+          title: Učenie riešenia problémov a počítačového myslenia
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 1 - Riešenie problémov a počítačové myslenie** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n**Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CSD Unit 1 - Riešenie problémov a počítačové myslenie. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie riešenia problémov a počítačového myslenia. "
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 1 - Riešenie problémov a počítačové myslenie** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n**Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CSD Unit 1 - Riešenie problémov a počítačové myslenie. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie riešenia problémov a počítačového myslenia. "
+          version_title: "'23-'24"
+        self-paced-pl-csd-unit2-2023:
+          title: Učenie webového vývoja
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 2 - Web Development** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CSD Unit 2 - Web Development. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na výučbu webového vývoja. "
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 2 - Web Development** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CSD Unit 2 - Web Development. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na výučbu webového vývoja. "
+          version_title: "'23-'24"
+        self-paced-pl-csd-unit3-2023:
+          title: Učenie interaktívnych animácií a hier
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 3 - Interaktívne animácie a hry** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CSD Unit 3 - Interaktívne animácie a hry. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie interaktívnych animácií a hier. "
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 3 - Interaktívne animácie a hry** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CSD Unit 3 - Interaktívne animácie a hry. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie interaktívnych animácií a hier. "
+          version_title: "'23-'24"
+        self-paced-pl-csd-unit4-2023:
+          title: Učenie dizajnového procesu
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 4 - Proces navrhovania** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CSD Unit 4 - Proces návrhu. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie Procesu návrhu. "
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 4 - Proces navrhovania** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CSD Unit 4 - Proces návrhu. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie Procesu návrhu. "
+          version_title: "'23-'24"
+        self-paced-pl-csd-unit5-2023:
+          title: Učenie o dátach a spoločnosti
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 5 - Dáta a spoločnosť** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n**Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CSD Unit 5 - Dáta a spoločnosť. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie dát a spoločnosti. "
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 5 - Dáta a spoločnosť** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n**Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CSD Unit 5 - Dáta a spoločnosť. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie dát a spoločnosti. "
+          version_title: "'23-'24"
+        web-dev-2024:
+          title: web-dev-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csd-2024:
+          title: "Objavy v informatike ('24-'25)"
+          description_short: "Úvodný kurz informatiky, ktorý umožňuje študentom vytvárať autentické artefakty."
+          description_student: "Objavy počítačovej vedy (CS Discoveries) sú úvodným kurzom počítačovej vedy, ktorý vám umožňuje vytvárať autentické artefakty a zapájať sa do počítačovej vedy ako prostriedku pre kreativitu, komunikáciu, riešenie problémov a zábavu."
+          description_teacher: |-
+            Objavy počítačovej vedy (CS Discoveries) sú úvodným kurzom počítačovej vedy, ktorý umožňuje študentom vytvárať autentické artefakty a zapájať sa do počítačovej vedy ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti samostatného online vzdelávania.
+            
+            Tento kurz má flexibilnú implementáciu a môže sa vyučovať v rôznych konfiguráciách na základe potrieb každej triedy. Pozrite si [CSD Implementation Guide][2] pre viac informácií
+            
+            Môžete si pozrieť [Osnovu kurzu][3] a [Sprievodcu začiatkom][4], aby ste sa dozvedeli viac o kurze a začali.
+          version_title: "'24-'25"
+        melissasandbox-2024:
+          title: k5-maker-sandbox-2024
+          description_short: pieskovisko pre melissu toohey
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-k5-2024:
+          title: Základy informatiky pre učiteľov K-5
+          description_short: ''
+          description_student: ''
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré je samostatne riadené a určené pre pedagógov, aby sa oboznámili so základmi informatiky! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete sa cítiť pohodlne s základnými konceptmi kódovania pre 1. až 5. ročník**.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v učení informatiky a Code.org. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť prehľad. "
+          version_title: ''
+        csp-2024:
+          title: "Princípy informatiky '24-'25"
+          description_short: Zoznámte sa so základnými konceptmi informatiky.
+          description_student: "CSP zoznamuje študentov so základnými konceptmi informatiky a vyzýva ich, aby preskúmali, ako môže počítačová technika a technológia ovplyvniť svet. Program AP navrhol AP Princípy počítačovej vedy s cieľom vytvoriť lídrov v oblastiach počítačovej vedy a prilákať a zapojiť tých, ktorí sú tradične nedostatočne zastúpení, s nevyhnutnými počítačovými nástrojmi a multidisciplinárnymi príležitosťami."
+          description_teacher: |-
+            CSP zoznamuje študentov so základnými konceptmi informatiky a vyzýva ich, aby preskúmali, ako môže počítačová technika a technológia ovplyvniť svet. Program AP navrhol AP Princípy počítačovej vedy s cieľom vytvoriť lídrov v oblastiach počítačovej vedy a prilákať a zapojiť tých, ktorí sú tradične nedostatočne zastúpení, s nevyhnutnými počítačovými nástrojmi a multidisciplinárnymi príležitosťami.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť zásady počítačových vied. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Kliknite sem</a>, aby ste sa dozvedeli viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti, alebo <a href="https://code.org/educate/professional-development-online" target="blank" rel="noopener noreferrer">kliknite sem</a>, aby ste sa dozvedeli viac o možnosti online vzdelávania vlastným tempom.
+            
+            Môžete nájsť _Syllabus_, _Course Vocab_ a ďalšie zdroje, ktoré vám pomôžu implementovať tento učebný plán v ponuke Zdroje pre učiteľov nižšie.
+          version_title: "'24-'25"
+        self-paced-pl-microbit-2024:
+          title: "Učenie vytvárania aplikácií s zariadeniami (micro:bit)"
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 6 - Tvorba aplikácií s zariadeniami (micro:bit)** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a v jednotke 6 - Tvorba aplikácií s zariadeniami (micro:bit). Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie riešenia problémov a počítačového myslenia. "
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 6 - Tvorba aplikácií s zariadeniami (micro:bit)** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a v jednotke 6 - Tvorba aplikácií s zariadeniami (micro:bit). Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie riešenia problémov a počítačového myslenia. "
+          version_title: "'24 - '25"
+        k5-maker-pilot-2024:
+          title: K-5 Maker Samostatné profesionálne vzdelávanie
+          description_short: "Profesionálny vzdelávací modul pre kurz CSF Maker s micro:bit."
+          description_student: "Kurz micro:bit prekonáva priepasť medzi digitálnym a fyzickým svetom a umožňuje študentom prenášať svoje počítačové programy do reálnych aplikácií.\n\nV tomto module budete:\n\n#### Pripravte sa na vyučovanie základných konceptov programovania, ako sú udalosti, cykly, podmienky, premenné a funkcie.\nZískajte praktické skúsenosti v tom, ako môžu hardvér a softvér spolupracovať.\n#### Precvičte kľúčové koncepty zahrnuté v jednotke.\n#### Pripravte sa učiť akýkoľvek z kurzov CS Fundamentals Maker s micro:bit.\n\nNavrhovaný celkový čas: 150 minút\n\n#### **Extra krok:** Pretože momentálne testujeme túto jednotku, najprv sa musíte zaregistrovať do pilotného programu, aby ste videli učebné jednotky. <strong><a href=\"http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot\" target=\"blank\" rel=\"noopener noreferrer\">Kliknite sem, aby ste sa zaregistrovali do pilotného programu</a> </strong>"
+          description_teacher: "Kurz micro:bit prekonáva priepasť medzi digitálnym a fyzickým svetom a umožňuje študentom prenášať svoje počítačové programy do reálnych aplikácií.\n\nV tomto module budete:\n\n#### Pripravte sa na vyučovanie základných konceptov programovania, ako sú udalosti, cykly, podmienky, premenné a funkcie.\nZískajte praktické skúsenosti v tom, ako môžu hardvér a softvér spolupracovať.\n#### Precvičte kľúčové koncepty zahrnuté v jednotke.\n#### Pripravte sa učiť akýkoľvek z kurzov CS Fundamentals Maker s micro:bit.\n\nNavrhovaný celkový čas: 150 minút\n\n#### **Extra krok:** Pretože momentálne testujeme túto jednotku, najprv sa musíte zaregistrovať do pilotného programu, aby ste videli učebné jednotky. <strong><a href=\"http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot\" target=\"blank\" rel=\"noopener noreferrer\">Kliknite sem, aby ste sa zaregistrovali do pilotného programu</a> </strong>"
+          version_title: ''
+        foundations-of-cs-beta-2024:
+          title: Základy počítačovej vedy BETA
+          description_short: ''
+          description_student: |-
+            Vitajte na základoch informatiky! Tento vzrušujúci kurz je vašou bránou do mocného sveta informatiky. Či už vás zaujíma, ako aplikácie fungujú, alebo chcete vedieť viac o vplyve technológie na spoločnosť, tento kurz má niečo pre vás. Počas semestra sa naučíte základy programovania, ponoríte sa do toho, ako funguje internet, a dokonca vytvoríte vlastné projekty, ktoré by mohli riešiť problémy v reálnom svete.
+            
+            ⚠️ **Poznámka:** Toto je beta verzia osnovy pre základy informatiky, ktorá sa primárne skladá z obsahu našich existujúcich osnov pre objavovanie informatiky a princípy informatiky. Ako také, uvidíte štítky CSD a CSP na sprievodcoch aktivít, zdrojoch a prezentáciách. Toto nebude platiť v konečnej verzii učebného plánu!
+          description_teacher: "Základy informatiky (FCS) je komplexný úvod do rozsiahlej oblasti informatiky. Navrhnutý pre študentov stredných škôl, tento kurz integruje základné koncepty s praktickými skúsenosťami, aby podporil hlboké porozumenie počítačom, ich schopnostiam a ich dopadom. Študijný plán je štruktúrovaný tak, aby bol v súlade s požiadavkami štátu a štandardmi CSTA, a poskytuje pevný základ v informatike, ktorý pripravuje študentov na ďalšie štúdium a budúce kariéry v technológii."
+          version_title: "'24-'25"
+        self-paced-pl-csd-2024:
+          title: Učenie CS Objavov
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online kurze Code.org pre učiteľov, ktorý si môžete študovať vlastným tempom a začať učiť CS Discoveries! Po dokončení tohto online kurzu **budete pripravení začať učiť kurz Počítačové vedy Discoveries od Code.org** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Tento kurz s vlastným tempom je navrhnutý tak, aby ťa postavil do pozície vodiča a dal ti kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každý modul a lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah tohto profesionálneho vzdelávacieho kurzu je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CS Discoveries. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Odporúčame všetkým učiteľom, aby **začali s krátkou úvodnou jednotkou** a dozvedeli sa viac o tomto profesionálnom vzdelávacom kurze predtým, ako začnú."
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online kurze Code.org pre učiteľov, ktorý si môžete študovať vlastným tempom a začať učiť CS Discoveries! Po dokončení tohto online kurzu **budete pripravení začať učiť kurz Počítačové vedy Discoveries od Code.org** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Tento kurz s vlastným tempom je navrhnutý tak, aby ťa postavil do pozície vodiča a dal ti kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každý modul a lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah tohto profesionálneho vzdelávacieho kurzu je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CS Discoveries. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Odporúčame všetkým učiteľom, aby **začali s krátkou úvodnou jednotkou** a dozvedeli sa viac o tomto profesionálnom vzdelávacom kurze predtým, ako začnú."
+          version_title: "'24 - '25"
+        self-paced-pl-csd-unit1-2024:
+          title: Učenie riešenia problémov a počítačového myslenia
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 1 - Riešenie problémov a počítačové myslenie** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n**Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CSD Unit 1 - Riešenie problémov a počítačové myslenie. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie riešenia problémov a počítačového myslenia. "
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 1 - Riešenie problémov a počítačové myslenie** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n**Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CSD Unit 1 - Riešenie problémov a počítačové myslenie. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie riešenia problémov a počítačového myslenia. "
+          version_title: "'24-'25"
+        self-paced-pl-csd-unit2-2024:
+          title: Učenie webového vývoja
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 2 - Web Development** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CSD Unit 2 - Web Development. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie riešenia problémov a počítačového myslenia. "
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 2 - Web Development** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CSD Unit 2 - Web Development. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie riešenia problémov a počítačového myslenia. "
+          version_title: "'24 - '25"
+        self-paced-pl-csd-unit3-2024:
+          title: Učenie interaktívnych animácií a hier
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 3 - Interaktívne animácie a hry** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CSD Unit 3 - Interaktívne animácie a hry. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie riešenia problémov a počítačového myslenia. "
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 3 - Interaktívne animácie a hry** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CSD Unit 3 - Interaktívne animácie a hry. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie riešenia problémov a počítačového myslenia. "
+          version_title: "'24 - '25"
+        self-paced-pl-csd-unit5-2024:
+          title: Učenie o dátach a spoločnosti
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 5 - Dáta a spoločnosť** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n**Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CSD Unit 5 - Dáta a spoločnosť. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie riešenia problémov a počítačového myslenia. "
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 5 - Dáta a spoločnosť** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n**Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CSD Unit 5 - Dáta a spoločnosť. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie riešenia problémov a počítačového myslenia. "
+          version_title: "'24 - '25"
+        self-paced-pl-physical-computing-2024:
+          title: Učenie vytvárania aplikácií s zariadeniami (Circuit Playground)
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 6 od Code.org - Tvorba aplikácií s zariadeniami (Circuit Playground)** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a v jednotke 6 - Tvorba aplikácií s zariadeniami (Circuit Playground). Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie riešenia problémov a počítačového myslenia. "
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 6 od Code.org - Tvorba aplikácií s zariadeniami (Circuit Playground)** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a v jednotke 6 - Tvorba aplikácií s zariadeniami (Circuit Playground). Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie riešenia problémov a počítačového myslenia. "
+          version_title: "'24 - '25"
+        pl-csd-summer-2024:
+          title: CSD Osobný PL Workshop Kurz 2024
+          description_short: ''
+          description_student: |-
+            Vy budete
+            
+            Pripravte sa na vyučovanie CS Discoveries.
+            Precvičte kľúčové koncepty v učebnom pláne CS Discoveries.
+            Rastite vo svojom porozumení spravodlivej vzdelávacej oblasti v oblasti počítačových vied.
+            Rozvíjajte empatiu pre študentský zážitok.
+            Staňte sa súčasťou siete učiteľov, ktorí vykonávajú podobnú prácu.
+          description_teacher: |-
+            Vy budete
+            
+            Pripravte sa na vyučovanie CS Discoveries.
+            Precvičte kľúčové koncepty v učebnom pláne CS Discoveries.
+            Rastite vo svojom porozumení spravodlivej vzdelávacej oblasti v oblasti počítačových vied.
+            Rozvíjajte empatiu pre študentský zážitok.
+            Staňte sa súčasťou siete učiteľov, ktorí vykonávajú podobnú prácu.
+          version_title: "'24-'25"
+        virtual-pl-csd-summer-2024:
+          title: CSD Virtuálny PL Workshop Kurz
+          description_short: ''
+          description_student: "Budete:\n\nPripravte sa na vyučovanie CS Discoveries.\nPrecvičte kľúčové koncepty v učebnom pláne CS Discoveries.\nRastite vo svojom porozumení spravodlivej vzdelávacej oblasti v oblasti počítačových vied. \nRozvíjajte empatiu pre študentský zážitok. \nStaňte sa súčasťou siete učiteľov, ktorí vykonávajú podobnú prácu."
+          description_teacher: "Účastníci budú:\n\nPripravte sa na vyučovanie CS Discoveries.\nPrecvičte kľúčové koncepty v učebnom pláne CS Discoveries.\nRásť v ich porozumení spravodlivej vzdelávacej oblasti CS. \nRozvíjajte empatiu pre študentský zážitok. \nStaňte sa súčasťou siete učiteľov, ktorí vykonávajú podobnú prácu."
+          version_title: "'24-'25"
+        vpl-csd-2024:
+          title: "CSD Virtuálne profesionálne vzdelávanie '24-'25"
+          description_short: ''
+          description_student: "##### **Budeš:**\n\nPripravte sa učiť CS Discoveries.\nCvičte kľúčové koncepty v učebnom pláne CS Discoveries.\nRastite vo svojom porozumení spravodlivej vzdelanosti v oblasti počítačových vied.\nRozvíjajte empatiu pre študentský zážitok.\nStaňte sa súčasťou siete učiteľov, ktorí vykonávajú podobnú prácu."
+          description_teacher: "##### **Účastníci budú:**\n\nPripravte sa učiť CS Discoveries.\nCvičte kľúčové koncepty v učebnom pláne CS Discoveries.\nRásť v ich porozumení spravodlivej vzdelávacej oblasti CS.\nRozvíjajte empatiu pre študentský zážitok.\nStaňte sa súčasťou siete učiteľov, ktorí vykonávajú podobnú prácu."
+          version_title: '2024'
+        vpl-csa-2024:
+          title: "CSA Virtuálne profesionálne vzdelávanie '24-'25"
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: '2024'
+        self-paced-pl-csa-2024:
+          title: self-paced-pl-csa-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        vpl-csp-2024:
+          title: CS Princípy Virtuálny PL Workshop Kurz
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: '2024'
+        self-paced-pl-csp-2024:
+          title: Učenie základov informatiky
+          description_short: ''
+          description_student: "## Vitajte\n\n##### Vitajte na bezplatných online moduloch Code.org, ktoré si môžete študovať vlastným tempom, aby ste začali učiť zásady počítačovej vedy! Po dokončení týchto online modulov budete pripravení začať učiť kurz Princípy počítačovej vedy od Code.org so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\nChoďte vlastným tempom Tieto samostatne riadené moduly sú navrhnuté tak, aby vás postavili do pozície vodiča a dali vám kontrolu nad vlastným učením. Navrhnuté časy sú uvedené pre každý modul a lekciu. Odporúčame vám, aby ste sa zapojili do obsahu vlastným tempom.\n\nVyberte si svoj obsah\n\nObsah týchto profesionálnych vzdelávacích modulov je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CS Principles. Môžete sa však zapojiť do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám. Odporúčame všetkým učiteľom, aby začali s krátkou úvodnou jednotkou, aby sa dozvedeli viac o týchto profesionálnych vzdelávacích moduloch predtým, ako začnú."
+          description_teacher: "## Vitajte\n\n##### Vitajte na bezplatných online moduloch Code.org, ktoré si môžete študovať vlastným tempom, aby ste začali učiť zásady počítačovej vedy! Po dokončení týchto online modulov budete pripravení začať učiť kurz Princípy počítačovej vedy od Code.org so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\nChoďte vlastným tempom Tieto samostatne riadené moduly sú navrhnuté tak, aby vás postavili do pozície vodiča a dali vám kontrolu nad vlastným učením. Navrhnuté časy sú uvedené pre každý modul a lekciu. Odporúčame vám, aby ste sa zapojili do obsahu vlastným tempom.\n\nVyberte si svoj obsah\n\nObsah týchto profesionálnych vzdelávacích modulov je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CS Principles. Môžete sa však zapojiť do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám. Odporúčame všetkým učiteľom, aby začali s krátkou úvodnou jednotkou, aby sa dozvedeli viac o týchto profesionálnych vzdelávacích moduloch predtým, ako začnú."
+          version_title: ''
+        csf-sandbox-2024:
+          title: csf-sandbox-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-aiml-2024:
+          title: Učenie AI a strojového učenia
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 7 - AI a strojové učenie** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CSD Unit 7 - AI a strojové učenie. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie riešenia problémov a počítačového myslenia. "
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 7 - AI a strojové učenie** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CSD Unit 7 - AI a strojové učenie. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie riešenia problémov a počítačového myslenia. "
+          version_title: "'24 - '25"
+        self-paced-pl-csd-unit4-2024:
+          title: Učenie dizajnového procesu
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 4 - Proces navrhovania** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CSD Unit 4 - Proces návrhu. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie riešenia problémov a počítačového myslenia. "
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť CSD jednotku 4 - Proces navrhovania** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a CSD Unit 4 - Proces návrhu. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie riešenia problémov a počítačového myslenia. "
+          version_title: "'24 - '25"
+        self-paced-pl-ai-101-2024:
+          title: AI 101 Samostatné profesionálne vzdelávanie pre pedagógov
+          description_short: ''
+          description_student: "## Vitajte!\n\nVitajte na samoštudijnom online kurze Code.org pre pedagógov, ktorí sa chcú začať zaoberať umelou inteligenciou.\n\nToto je bezplatná, základná online vzdelávacia séria pre každého učiteľa alebo vzdelávateľa, ktorý má záujem o prelomový svet umelej inteligencie (AI) a jej transformačný potenciál vo vzdelávaní.\n\nV tejto päťdielnej sérii demystifikujeme AI, preskúmame zodpovednú implementáciu, zaoberáme sa predsudkami a predvedieme, ako môže učenie poháňané AI revolučne zmeniť výsledky študentov.\n\nPridajte sa k nám na tejto ceste objavovania a posilňovania a odomknite budúcnosť vyučovania s umelou inteligenciou a o nej.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Tento kurz s vlastným tempom je navrhnutý tak, aby ťa postavil do pozície vodiča a dal ti kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každý modul a lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah tohto profesionálneho vzdelávacieho kurzu je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v oblasti AI. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.**"
+          description_teacher: "## Vitajte!\n\nVitajte na samoštudijnom online kurze Code.org pre pedagógov, ktorí sa chcú začať zaoberať umelou inteligenciou.\n\nToto je bezplatná, základná online vzdelávacia séria pre každého učiteľa alebo vzdelávateľa, ktorý má záujem o prelomový svet umelej inteligencie (AI) a jej transformačný potenciál vo vzdelávaní.\n\nV tejto päťdielnej sérii demystifikujeme AI, preskúmame zodpovednú implementáciu, zaoberáme sa predsudkami a predvedieme, ako môže učenie poháňané AI revolučne zmeniť výsledky študentov.\n\nPridajte sa k nám na tejto ceste objavovania a posilňovania a odomknite budúcnosť vyučovania s umelou inteligenciou a o nej.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Tento kurz s vlastným tempom je navrhnutý tak, aby ťa postavil do pozície vodiča a dal ti kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každý modul a lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah tohto profesionálneho vzdelávacieho kurzu je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v oblasti AI. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.**"
+          version_title: ''
+        lorisandbox:
+          title: lorisandbox
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        sandbox-pl-cv:
+          title: sandbox-pl-cv
+          description_short: 'Pieskovisko pre vyučovanie s počítačovým videním samostatným tempom PL '
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csa-2024:
+          title: "Informatika A ('24-'25)"
+          description_short: Učte sa programovanie v Jave a zručnosti softvérového inžinierstva.
+          description_student: "Informatika A (CSA) zoznamuje študentov so softvérovým inžinierstvom a objektovo orientovaným programovaním a dizajnom pomocou programovacieho jazyka Java. Tento učebný plán pokrýva široké spektrum tém, vrátane návrhu riešení problémov, využitia dátových štruktúr na organizovanie veľkých súborov údajov, vývoja a implementácie algoritmov na spracovanie údajov a objavovanie nových informácií, analýzy potenciálnych riešení a etických a sociálnych dôsledkov výpočtových systémov."
+          description_teacher: |-
+            Informatika A (CSA) zoznamuje študentov so softvérovým inžinierstvom a objektovo orientovaným programovaním a dizajnom pomocou programovacieho jazyka Java. Tento učebný plán pokrýva široké spektrum tém, vrátane návrhu riešení problémov, využitia dátových štruktúr na organizovanie veľkých súborov údajov, vývoja a implementácie algoritmov na spracovanie údajov a objavovanie nových informácií, analýzy potenciálnych riešení a etických a sociálnych dôsledkov výpočtových systémov.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Kliknite sem</a> a dozviete sa viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti.
+            
+            Môžete nájsť _Syllabus_, _Course Vocab_ a ďalšie zdroje, ktoré vám pomôžu implementovať tento učebný plán v menu Zdroje pre učiteľov nižšie.
+          version_title: "'24-'25"
+        focus-on-coding-2024:
+          title: "Zamerajte sa na kódovanie '24-'25 (Objavy v informatike)"
+          description_short: "Kolekcia jednotiek objavovania informatiky, ktorá sa zameriava na zručnosti v oblasti kódovania a programovania."
+          description_student: |-
+            Zameranie na kódovanie je zbierka jednotiek kurzu Objavy v informatike (CS Discoveries), ktorá posilňuje študentov v budovaní ich kódovacích zručností v oblasti webového vývoja, hier a animácie a vytvárania aplikácií pre zariadenia. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            **Zaujíma vás vyučovanie CS Discoveries?** Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o profesionálnych vzdelávacích príležitostiach vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti online vzdelávania vlastným tempom.
+          description_teacher: |-
+            Zameranie na kódovanie je zbierka jednotiek kurzu Objavy v informatike (CS Discoveries), ktorá posilňuje študentov v budovaní ich kódovacích zručností v oblasti webového vývoja, hier a animácie a vytvárania aplikácií pre zariadenia. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti samostatného online vzdelávania.
+            
+            Môžete sa prihlásiť do [Príručky na začiatok][2], aby ste sa dozvedeli viac o tom, ako začať.
+          version_title: "'24-'25"
+        focus-on-creativity-2024:
+          title: "Zamerajte sa na kreativitu '24-'25 (CS Objavy)  ('24-'25)"
+          description_short: "Kolekcia jednotiek objavovania informatiky, ktorá sa zameriava na kreativitu a tvorbu s počítačom."
+          description_student: |-
+            Zamerajte sa na kreativitu, čo je zbierka jednotiek objavov v oblasti informatiky (CS Discoveries), ktorá umožňuje študentom byť kreatívnymi, keď sa učia vytvárať webové stránky, animácie, hry a aplikácie pre zariadenia. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky nielen ako prostriedku na kreativitu, ale aj na komunikáciu, riešenie problémov a zábavu.
+            
+            **Zaujíma vás vyučovanie CS Discoveries?** Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o profesionálnych vzdelávacích príležitostiach vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti online vzdelávania vlastným tempom.
+          description_teacher: |-
+            Zameranie na kreativitu je zbierka jednotiek kurzu Objavy v informatike (CS Discoveries), ktorá umožňuje študentom byť kreatívnymi, keď sa učia vytvárať webové stránky, animácie a hry a aplikácie pre zariadenia. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky nielen ako prostriedku na kreativitu, ale aj na komunikáciu, riešenie problémov a zábavu.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti samostatného online vzdelávania.
+            
+            Môžete sa prihlásiť do [Príručky na začiatok][2], aby ste sa dozvedeli viac o tom, ako začať.
+          version_title: "'24-'25"
+        focus-on-hardware-2024:
+          title: "Zameranie na hardvér '24-'25 (CS Objavy)"
+          description_short: "Zbierka jednotiek objavovania informatiky, ktoré skúmajú, ako fungujú počítače a menšie fyzické zariadenia."
+          description_student: |-
+            Zameranie na hardvér je zbierka jednotiek objavov v oblasti informatiky (CS Discoveries), ktorá umožňuje študentom používať dáta a fyzické zariadenia na riešenie problémov. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            **Zaujíma vás vyučovanie CS Discoveries?** Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o profesionálnych vzdelávacích príležitostiach vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti online vzdelávania vlastným tempom.
+          description_teacher: |-
+            Zameranie na hardvér je zbierka jednotiek kurzu Objavy v informatike (CS Discoveries), ktorá umožňuje študentom používať dáta a fyzické zariadenia na riešenie problémov. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti samostatného online vzdelávania.
+            
+            Môžete sa prihlásiť do [Príručky na začiatok][2], aby ste sa dozvedeli viac o tom, ako začať.
+          version_title: "'24-'25"
+        focus-on-design-with-purpose-2024:
+          title: "Zamerajte sa na dizajn s cieľom '24-'25 (CS Objavy)"
+          description_short: "Kolekcia jednotiek objavovania informatiky, ktorá sa zameriava na proces návrhu a počúvanie používateľov na riešenie reálnych problémov."
+          description_student: |-
+            Zamerajte sa na dizajn s cieľom, čo je zbierka jednotiek objavov v oblasti informatiky (CS Discoveries), ktorá posilňuje študentov, aby premýšľali o potrebách používateľov pri navrhovaní webových stránok a aplikácií pre zariadenia. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            **Zaujíma vás vyučovanie CS Discoveries?** Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o profesionálnych vzdelávacích príležitostiach vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti online vzdelávania vlastným tempom.
+          description_teacher: |-
+            Zamerajte sa na dizajn s cieľom, čo je zbierka jednotiek kurzu Počítačové vedy (CS Discoveries), ktorá posilňuje študentov, aby premýšľali o potrebách používateľov pri navrhovaní webových stránok a aplikácií pre zariadenia. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti samostatného online vzdelávania.
+            
+            Môžete sa prihlásiť do [Príručky na začiatok][2], aby ste sa dozvedeli viac o tom, ako začať.
+          version_title: "'24-'25"
+        focus-on-impact-in-society-2024:
+          title: "Zamerajte sa na dopad v spoločnosti '24-'25 (CS Objavy)"
+          description_short: "Zbierka jednotiek objavovania informatiky, ktoré sa zameriavajú na vplyv technológie na spoločnosť."
+          description_student: |-
+            Zameranie na dopad v spoločnosti je zbierka jednotiek objavov v oblasti informatiky (CS Discoveries), ktorá posilňuje študentov, aby uvažovali o informatike ako o nástroji na riešenie problémov, pričom zohľadňujú širšie sociálne dopady rôznych aspektov informatiky. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            **Zaujíma vás vyučovanie CS Discoveries?** Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o profesionálnych vzdelávacích príležitostiach vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti online vzdelávania vlastným tempom.
+          description_teacher: |-
+            Zameranie na dopad v spoločnosti je zbierka jednotiek kurzu Objavy v informatike (CS Discoveries), ktorá posilňuje študentov, aby uvažovali o informatike ako o nástroji na riešenie problémov, pričom zohľadňujú širšie sociálne dopady rôznych aspektov informatiky. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti samostatného online vzdelávania.
+            
+            Môžete sa prihlásiť do [Príručky na začiatok][2], aby ste sa dozvedeli viac o tom, ako začať.
+          version_title: "'24-'25"
+        focus-on-data-2024:
+          title: "Zamerajte sa na dáta '24-'25 (CS Objavy)"
+          description_short: 'Zbierka jednotiek objavovania informatiky, ktorá sa zameriava na dáta: ako ich počítače používajú a ako sa používajú v spoločnosti. '
+          description_student: |-
+            Zameranie na dáta je zbierka jednotiek objavov v oblasti informatiky (CS Discoveries), ktorá umožňuje študentom používať dáta na riešenie problémov. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            **Zaujíma vás vyučovanie CS Discoveries?** Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o profesionálnych vzdelávacích príležitostiach vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti online vzdelávania vlastným tempom.
+          description_teacher: |-
+            Zameranie na dáta je zbierka jednotiek kurzu objavov v oblasti informatiky (CSD), ktorá umožňuje študentom využívať dáta na riešenie problémov. Študenti vytvárajú autentické artefakty a zapájajú sa do informatiky ako prostriedku na kreativitu, komunikáciu, riešenie problémov a zábavu.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CS Discoveries. [Kliknite sem][0] a dozviete sa viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti alebo [kliknite sem][1] a dozviete sa viac o možnosti samostatného online vzdelávania.
+            
+            Môžete sa prihlásiť do [Príručky na začiatok][2], aby ste sa dozvedeli viac o tom, ako začať.
+          version_title: "'24-'25"
+        self-paced-foundations-cs-2024:
+          title: Učenie základov informatiky
+          description_short: ''
+          description_student: "## Vitajte!\n\n##### Vitajte na bezplatnom online kurze Code.org pre učiteľov, aby sa začali učiť <a href=\"https://studio.code.org/courses/foundations-of-cs-beta-2024\" target=\"blank\" rel=\"noopener noreferrer\">**Základy počítačovej vedy**</a>! Po dokončení tohto online kurzu budete pripravení začať učiť kurz **Základy informatiky** od Code.org so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n##### **Začnite s Úvodom do výučby základov informatiky:** Táto časť vás oboznámi s týmto kurzom a pomôže vám prispôsobiť si svoju vzdelávaciu cestu.\n-   ##### **Choď vlastným tempom:** Tento kurz s vlastným tempom je navrhnutý tak, aby ťa postavil do pozície vodiča a dal ti kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každý modul a lekciu. Odporúčame vám, aby ste sa zapojili do obsahu vlastným tempom.\n##### **Vyberte si svoj obsah:** Obsah tohto profesionálneho vzdelávacieho kurzu je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a Základoch informatiky. Môžete sa však zapojiť do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám. Odporúčame všetkým učiteľom, aby začali s krátkou úvodnou jednotkou, aby sa dozvedeli viac o tomto profesijnom vzdelávacom kurze predtým, ako začnú."
+          description_teacher: "## Vitajte!\n\n##### Vitajte na bezplatnom online kurze Code.org pre učiteľov, aby sa začali učiť <a href=\"https://studio.code.org/courses/foundations-of-cs-beta-2024\" target=\"blank\" rel=\"noopener noreferrer\">**Základy počítačovej vedy**</a>! Po dokončení tohto online kurzu budete pripravení začať učiť kurz **Základy informatiky** od Code.org so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n##### **Začnite s Úvodom do výučby základov informatiky:** Táto časť vás oboznámi s týmto kurzom a pomôže vám prispôsobiť si svoju vzdelávaciu cestu.\n-   ##### **Choď vlastným tempom:** Tento kurz s vlastným tempom je navrhnutý tak, aby ťa postavil do pozície vodiča a dal ti kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každý modul a lekciu. Odporúčame vám, aby ste sa zapojili do obsahu vlastným tempom.\n##### **Vyberte si svoj obsah:** Obsah tohto profesionálneho vzdelávacieho kurzu je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a Základoch informatiky. Môžete sa však zapojiť do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám. Odporúčame všetkým učiteľom, aby začali s krátkou úvodnou jednotkou, aby sa dozvedeli viac o tomto profesijnom vzdelávacom kurze predtým, ako začnú."
+          version_title: "'24-'25"
+        self-paced-pl-computer-vision:
+          title: samoštudijný-pl-počítačové-videnie
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-coding-with-ai:
+          title: samoštudijné-pl-kódovanie-s-ai
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        3-5gamedesign-2024:
+          title: Príprava na výučbu základného dizajnu hier
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní na Code.org, kde sa učitelia môžu oboznámiť so základným dizajnom hier! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete sa cítiť pohodlne s základnými konceptmi dizajnu hier pre žiakov základnej školy**.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v učení informatiky a Code.org. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť prehľad. "
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní na Code.org, kde sa učitelia môžu oboznámiť so základným dizajnom hier! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete sa cítiť pohodlne s základnými konceptmi dizajnu hier pre žiakov základnej školy**.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v učení informatiky a Code.org. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť prehľad. "
+          version_title: ''
+        microbitmakermodule-2024:
+          title: "Príprava na vyučovanie Maker s micro:bit"
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré je samostatné a určené pre pedagógov, aby sa oboznámili s Makerom a micro:bitom! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete sa cítiť pohodlne s základnými konceptmi kódovania a výroby**.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v učení informatiky a Code.org. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť prehľad. "
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré je samostatné a určené pre pedagógov, aby sa oboznámili s Makerom a micro:bitom! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete sa cítiť pohodlne s základnými konceptmi kódovania a výroby**.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v učení informatiky a Code.org. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť prehľad. "
+          version_title: ''
+        elementaryai-2024:
+          title: "Príprava na vyučovanie, ako AI robí rozhodnutia"
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré je samostatne riadené a určené pre pedagógov, aby sa oboznámili s umelou inteligenciou (AI) a strojovým učením! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete sa cítiť pohodlne s základnými konceptmi AI a strojového učenia**.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v učení informatiky a Code.org. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť prehľad. "
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré je samostatne riadené a určené pre pedagógov, aby sa oboznámili s umelou inteligenciou (AI) a strojovým učením! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete sa cítiť pohodlne s základnými konceptmi AI a strojového učenia**.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v učení informatiky a Code.org. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť prehľad. "
+          version_title: ''
+        self-paced-pl-computer-vision-2024:
+          title: Učenie počítačového videnia
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť jednotku Počítačového videnia od Code.org** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n**Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a Počítačovej vízii. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie počítačového videnia."
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť jednotku Počítačového videnia od Code.org** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n**Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a Počítačovej vízii. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie počítačového videnia. "
+          version_title: "'24-'25"
+        self-paced-pl-coding-with-ai-2024:
+          title: Učenie programovania s AI
+          description_short: ''
+          description_student: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí sa chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť jednotku Kódovania s AI od Code.org** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n#### **Choďte vlastným tempom:** Táto samostatná vzdelávacia skúsenosť je navrhnutá tak, aby vám poskytla kontrolu nad vaším vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n#### **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a programovaní s AI. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie programovania s AI."
+          description_teacher: "## Vitajte\n\nVitajte na bezplatnom online vzdelávaní Code.org, ktoré si môžete prispôsobiť vlastnému tempu, pre pedagógov, ktorí chcú začať učiť s Code.org! Po dokončení tejto profesionálnej vzdelávacej skúsenosti, **budete pripravení začať učiť jednotku Kódovania s AI od Code.org** so svojimi študentmi.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n-   **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a Kódovaní s AI. Môžete sa však **zapájať do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na Prípravu na vyučovanie programovania s AI."
+          version_title: "'24-'25"
+        data-science-2024:
+          title: "[PILOT] Dátová veda"
+          description_short: Preskúmajte svet dátovej vedy pomocou nástrojov na vizualizáciu dát na analýzu a interpretáciu javov v reálnom svete.
+          description_student: "Tento učebný plán v oblasti dátovej vedy zoznamuje študentov so základnými princípmi a zručnosťami v oblasti dátovej vedy. Študenti sa naučia, ako klásť efektívne otázky o dátach, zbierať a čistiť súbory údajov a vytvárať presvedčivé vizualizácie pomocou nástrojov ako CODAP (Jednotka 1) a Python (Jednotka 2). Ako študenti postupujú, uplatňujú svoje programovacie a analytické zručnosti na reálnych dátových sadách, získavajú skúsenosti s nevyhnutnými technikami analýzy dát, ako sú skupinovanie, filtrovanie a štatistické výpočty. Kurikulum vyvrcholí projektmi, ktoré zdôrazňujú dôležitosť etických praktík s dátami, rozprávania príbehov pomocou dát a vytvárania akčných poznatkov z komplexných súborov dát."
+          description_teacher: "Data Science buduje silný základ v analýze a vizualizácii údajov pre študentov, pričom využíva programovacie nástroje ako CODAP v jednotke 1 a Python v jednotke 2 na prehlbovanie ich analytických zručností. Prostredníctvom štruktúrovaných lekcií a projektov sa študenti naučia, ako používať nástroje dátovej vedy na transformáciu surových údajov na zmysluplné vizualizácie. Jednotky zdôrazňujú etické úvahy, vedú študentov diskusiami a aktivitami zameranými na ochranu údajov, zaujatosti a spoločenské dopady rozhodnutí založených na údajoch. Na konci každej jednotky budú študenti pripravení skúmať a riešiť problémy zo skutočného sveta pomocou komplexného prístupu založeného na údajoch, ktorý vyvrcholí projektom, ktorý predvedie ich schopnosť vytvárať presvedčivé príbehy z údajov."
+          version_title: "'24-'25"
+        tesselementaryai-2024:
+          title: tesselementaryai-2024
+          description_short: testovanie opravy pre začiatok
+          description_student: testovanie opravy pre začiatok
+          description_teacher: testovanie opravy pre začiatok
+          version_title: ''
+        csa-alt-2025:
+          title: "Informatika A ('25-'26)"
+          description_short: Učte sa programovanie v Jave a zručnosti softvérového inžinierstva.
+          description_student: "Informatika A (CSA) zoznamuje študentov so softvérovým inžinierstvom a objektovo orientovaným programovaním a dizajnom pomocou programovacieho jazyka Java. Tento učebný plán pokrýva široké spektrum tém, vrátane návrhu riešení problémov, využitia dátových štruktúr na organizovanie veľkých súborov údajov, vývoja a implementácie algoritmov na spracovanie údajov a objavovanie nových informácií, analýzy potenciálnych riešení a etických a sociálnych dôsledkov výpočtových systémov."
+          description_teacher: |-
+            Táto verzia učebného plánu CSA sleduje sekvenciu uvedenú v AP CSA CED.
+            
+            Informatika A (CSA) zoznamuje študentov so softvérovým inžinierstvom a objektovo orientovaným programovaním a dizajnom pomocou programovacieho jazyka Java. Tento učebný plán pokrýva široké spektrum tém, vrátane návrhu riešení problémov, využitia dátových štruktúr na organizovanie veľkých súborov údajov, vývoja a implementácie algoritmov na spracovanie údajov a objavovanie nových informácií, analýzy potenciálnych riešení a etických a sociálnych dôsledkov výpočtových systémov.
+          version_title: "'25-'26"
+        sandbox-csf-2025:
+          title: sandbox-csf-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csa-2025:
+          title: "Informatika A ('25-'26)"
+          description_short: Učte sa programovanie v Jave a zručnosti softvérového inžinierstva.
+          description_student: "Informatika A (CSA) zoznamuje študentov so softvérovým inžinierstvom a objektovo orientovaným programovaním a dizajnom pomocou programovacieho jazyka Java. Tento učebný plán pokrýva široké spektrum tém, vrátane návrhu riešení problémov, využitia dátových štruktúr na organizovanie veľkých súborov údajov, vývoja a implementácie algoritmov na spracovanie údajov a objavovanie nových informácií, analýzy potenciálnych riešení a etických a sociálnych dôsledkov výpočtových systémov."
+          description_teacher: |-
+            Informatika A (CSA) zoznamuje študentov so softvérovým inžinierstvom a objektovo orientovaným programovaním a dizajnom pomocou programovacieho jazyka Java. Tento učebný plán pokrýva široké spektrum tém, vrátane návrhu riešení problémov, využitia dátových štruktúr na organizovanie veľkých súborov údajov, vývoja a implementácie algoritmov na spracovanie údajov a objavovanie nových informácií, analýzy potenciálnych riešení a etických a sociálnych dôsledkov výpočtových systémov.
+            
+            Vedeli ste?
+            
+            Profesionálny rozvoj je k dispozícii, aby vám pomohol začať učiť CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Kliknite sem</a> a dozviete sa viac o príležitostiach profesionálneho vzdelávania vo vašej oblasti.
+            
+            Môžete nájsť _Syllabus_, _Course Vocab_ a ďalšie zdroje, ktoré vám pomôžu implementovať tento učebný plán v menu Zdroje pre učiteľov nižšie.
+          version_title: "'25-'26"
+        csa-pilot-2025:
+          title: "Informatika A ('24-'25 Pilot -- Rámec 2025)"
+          description_short: Učte sa programovanie v Jave a zručnosti softvérového inžinierstva.
+          description_student: "Informatika A (CSA) zoznamuje študentov so softvérovým inžinierstvom a objektovo orientovaným programovaním a dizajnom pomocou programovacieho jazyka Java. Tento učebný plán pokrýva široké spektrum tém, vrátane návrhu riešení problémov, využitia dátových štruktúr na organizovanie veľkých súborov údajov, vývoja a implementácie algoritmov na spracovanie údajov a objavovanie nových informácií, analýzy potenciálnych riešení a etických a sociálnych dôsledkov výpočtových systémov."
+          description_teacher: "Informatika A (CSA) zoznamuje študentov so softvérovým inžinierstvom a objektovo orientovaným programovaním a dizajnom pomocou programovacieho jazyka Java. Tento učebný plán pokrýva široké spektrum tém, vrátane návrhu riešení problémov, využitia dátových štruktúr na organizovanie veľkých súborov údajov, vývoja a implementácie algoritmov na spracovanie údajov a objavovanie nových informácií, analýzy potenciálnych riešení a etických a sociálnych dôsledkov výpočtových systémov."
+          version_title: "'24-'25"
+        exploring-gen-ai-2024:
+          title: Preskúmanie generatívnej AI
+          description_short: 'Naučte sa základy generatívnej AI: ako AI funguje a ako používať generatívnu AI. '
+          description_student: "Zoznámte sa s tým, ako funguje AI a ako používa generatívnu AI"
+          description_teacher: "Preskúmanie generatívnej AI je dvojjednotkový učebný plán, ktorý skúma, ako AI funguje a ako používať generatívnu AI. Študenti sa zúčastňujú praktických aktivít, ktoré odhaľujú čiernu skrinku generatívnej AI prostredníctvom aktivít zameraných na študentov a diskusií v triede, zakotvených vo video sérii, ktorá demystifikuje generatívnu AI pre široké publikum. S pevným základom sa študenti učia prispôsobovať jazykové modely pomocou novej AI Chat laboratória, ktoré poskytuje študentom nástroje na výber jazykových modelov, aplikáciu systémových výziev a kuráciu informačných zdrojov na prispôsobenie ich chatbotu. Študenti vytvárajú chatboty na riešenie rôznych problémov a skúmajú platnosť odpovedí a vhodné využitie chatbotov v spoločnosti."
+          version_title: "'24-'25"
+        csd-ayw1-debugging:
+          title: "CSD akademický rok workshop č. 1 - ladenie"
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        sandbox-data-science-pl:
+          title: sandbox-dáta-vedy-pl
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csd-summer-puertorico-2024:
+          title: Descubrimientos de Ciencias de la Computación - Taller de 5 Dias 2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        creativity-with-ai-2024:
+          title: Kreativita s AI Pilotom
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'24-'25"
+        self-paced-exploring-gen-ai-2024:
+          title: Preskúmanie generatívneho AI samostatného profesionálneho vzdelávania
+          description_short: "## Vitajte! \nTento profesionálny vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu kurzu Exploring Generative AI od Code.org.\n\n##### Preskúmanie generatívnej AI je navrhnuté ako samostatný kurz pre študentov 8. až 12. ročníka, ktorý sa dá bezproblémovo integrovať do akéhokoľvek existujúceho učebného plánu, pričom učiteľom ponúka flexibilitu zaviesť ho podľa svojho rozvrhu a vzdelávacích potrieb. \n\nNájdite učenie, ktoré vám vyhovuje\n* **Choďte vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby vám poskytla kontrolu nad vaším vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n* **Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a jednotke Generative AI. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na jednotku Preskúmanie generatívnej AI. "
+          description_student: "## Vitajte!\n\nTento profesionálny vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu kurzu Exploring Generative AI od Code.org.\n\n##### Preskúmanie generatívnej AI je navrhnuté ako samostatný kurz pre študentov 8. až 12. ročníka, ktorý sa dá bezproblémovo integrovať do akéhokoľvek existujúceho učebného plánu, pričom učiteľom ponúka flexibilitu zaviesť ho podľa svojho rozvrhu a vzdelávacích potrieb.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n**Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a jednotke Generative AI. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na jednotku Preskúmanie generatívnej AI. "
+          description_teacher: "## Vitajte!\n\nTento profesionálny vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu kurzu Exploring Generative AI od Code.org.\n\n##### Preskúmanie generatívnej AI je navrhnuté ako samostatný kurz pre 8-12 študentov, ktorý sa dá bezproblémovo integrovať do akéhokoľvek existujúceho učebného plánu, pričom učiteľom ponúka flexibilitu zaviesť ho podľa svojho rozvrhu a vzdelávacích potrieb.\n\nNájdite učenie, ktoré vám vyhovuje\n\n-   **Choď vlastným tempom:** Táto samostatná učebná skúsenosť je navrhnutá tak, aby ti dala kontrolu nad tvojím vlastným učením. Navrhnuté časy sú uvedené pre každú lekciu.  Odporúčame vám, aby ste **sa zapojili do obsahu vlastným tempom.**\n\n**Vyberte si svoj obsah:** Obsah je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v Code.org a jednotke Generative AI. Avšak môžete **interagovať s obsahom v poradí, ktoré najlepšie vyhovuje vašim potrebám.** Ak ste už oboznámení s platformou Code.org, môžete sa rozhodnúť preskočiť Úvod do Code.org a prejsť priamo na jednotku Preskúmanie generatívnej AI. "
+          version_title: ''
+        self-paced-pl-equitymodule-2024:
+          title: Rovnosť v informatike na Code.org
+          description_short: ''
+          description_student: "Vitajte! Tento kurz K-12, ktorý nie je viazaný na žiadny konkrétny učebný plán, sa zameriava na základné koncepty a konkrétne aplikácie spravodlivosti v informatike. Na absolvovanie tohto kurzu nepotrebujete predchádzajúce znalosti z ekonómie alebo informatiky. Vítame dospelých študentov zo všetkých ročníkov a vyučovacích kontextov, aby sa pripojili k našej komunite učiteľov zameraných na rovnosť.\n\n* * *\n\nNájdite učenie, ktoré vám vyhovuje:\n\n-   ##### **Choďte vlastným tempom:** Tento kurz s vlastným tempom je navrhnutý tak, aby vás postavil do pozície vodiča a dal vám kontrolu nad vaším učením. Navrhnuté časy sú poskytnuté pre každý modul a lekciu. Odporúčame vám, aby ste sa zapojili do obsahu vlastným tempom.\n\n##### **Vyberte si svoj obsah:** Obsah tohto profesionálneho vzdelávacieho kurzu je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v oblasti rovnosti v informatike. Môžete sa však zapojiť do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám."
+          description_teacher: "Vitajte! Tento kurz K-12, ktorý nie je viazaný na žiadny konkrétny učebný plán, sa zameriava na základné koncepty a konkrétne aplikácie spravodlivosti v informatike. Na absolvovanie tohto kurzu nepotrebujete predchádzajúce znalosti z ekonómie alebo informatiky. Vítame dospelých študentov zo všetkých ročníkov a vyučovacích kontextov, aby sa pripojili k našej komunite učiteľov zameraných na rovnosť.\n\n* * *\n\nNájdite učenie, ktoré vám vyhovuje:\n\n-   ##### **Choďte vlastným tempom:** Tento kurz s vlastným tempom je navrhnutý tak, aby vás postavil do pozície vodiča a dal vám kontrolu nad vaším učením. Navrhnuté časy sú poskytnuté pre každý modul a lekciu. Odporúčame vám, aby ste sa zapojili do obsahu vlastným tempom.\n\n##### **Vyberte si svoj obsah:** Obsah tohto profesionálneho vzdelávacieho kurzu je usporiadaný v navrhovanom postupe pre učiteľov, ktorí sú noví v oblasti rovnosti v informatike. Môžete sa však zapojiť do obsahu v poradí, ktoré najlepšie vyhovuje vašim potrebám."
+          version_title: ''
+        melissasandbox-2025:
+          title: melissasandbox-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+    resources:
+      curriculum/csd/2017:
+        name: Učebný plán
+        url: "https://curriculum.code.org/csd-1718/"
+      teacher_forum_6/csd/2017:
+        name: Fórum učiteľov
+        url: "https://forum.code.org/c/csd"
+      curriculum/csd/2018:
+        name: Učebný plán
+        url: "https://curriculum.code.org/csd-18/"
+      teacher_forum_6/csd/2018:
+        name: Fórum učiteľov
+        url: "https://forum.code.org/c/csd"
+      curriculum/csd/2019:
+        name: Učebný plán
+        url: "https://curriculum.code.org/csd-19/"
+      teacher_forum/csd/2019:
+        name: Fórum učiteľov
+        url: "https://forum.code.org/c/csd"
+      curriculum/csd/2020:
+        name: Učebný plán
+        url: "https://curriculum.code.org/csd-20/"
+      teacher_forum/csd/2020:
+        name: Fórum učiteľov
+        url: "https://forum.code.org/c/csd"
+      all_code/csd/2021:
+        name: Všetok kód
+        url: "/kurzy/csd-2021/kód"
+      all_resources_1/csd/2021:
+        name: Všetky zdroje
+        url: "/kurzy/csd-2021/zdroje"
+      all_standards_1/csd/2021:
+        name: Všetky normy
+        url: "/kurzy/csd-2021/štandardy"
+      all_vocabulary_1/csd/2021:
+        name: Všetka slovná zásoba
+        url: "/courses/csd-2021/vocab"
+      csd_curriculum_guide/csd/2021:
+        name: CSD učebný plán
+        url: "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview"
+      csd_guide_to_assessment/csd/2021:
+        name: CSD Príručka k hodnoteniu
+        url: "https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview"
+      csd_guide_to_debugging/csd/2021:
+        name: CSD Príručka na ladenie
+        url: "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview"
+      csd_guide_to_differentiation/csd/2021:
+        name: CSD Príručka k diferenciácii
+        url: "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview"
+      csd_guide_to_using_resources/csd/2021:
+        name: CSD Príručka k používaniu zdrojov
+        url: "https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview"
+      csd_implementation_guide/csd/2021:
+        name: Príručka na implementáciu CSD
+        url: "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview"
+      getting_started_with_csd/csd/2021:
+        name: Začiatok s CSD
+        url: "https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview"
+      all_code_5/csd/2022:
+        name: Všetok kód
+        url: "/kurzy/csd-2022/kód"
+      all_resources_7/csd/2022:
+        name: Všetky zdroje
+        url: "/kurzy/csd-2022/zdroje"
+      all_standards_7/csd/2022:
+        name: Všetky normy
+        url: "/kurzy/csd-2022/štandardy"
+      all_vocabulary_7/csd/2022:
+        name: Všetka slovná zásoba
+        url: "/courses/csd-2022/vocab"
+      csd_changelog_22-_23/csd/2022:
+        name: "CSD Zoznam zmien '22-'23"
+        url: "https://docs.google.com/document/d/1GR3VaThoqXY6XBeVCHcYvZtaQFn47jPpmLNRQB4IK7Y/preview"
+      csd_curriculum_guide/csd/2022:
+        name: CSD učebný plán
+        url: "https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview"
+      csd_guide_to_assessment/csd/2022:
+        name: CSD Príručka k hodnoteniu
+        url: "https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview"
+      csd_guide_to_debugging/csd/2022:
+        name: CSD Príručka na ladenie
+        url: "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview"
+      csd_guide_to_differentiation/csd/2022:
+        name: CSD Príručka k diferenciácii
+        url: "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview"
+      csd_guide_to_using_resources/csd/2022:
+        name: CSD Príručka k používaniu zdrojov
+        url: "https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview"
+      csd_implementation_guide/csd/2022:
+        name: Príručka na implementáciu CSD
+        url: "https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview"
+      csd_learning_frameworks/csd/2022:
+        name: CSD vzdelávacie rámce
+        url: "https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/preview"
+      csd_programming_levels_guide/csd/2022:
+        name: Sprievodca úrovňami programovania CSD
+        url: "https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview"
+      all_code_2/csd/2023:
+        name: Všetok kód
+        url: "/kurzy/csd-2023/kód"
+      all_resources_2/csd/2023:
+        name: Všetky zdroje
+        url: "/kurzy/csd-2023/zdroje"
+      all_standards_2/csd/2023:
+        name: Všetky normy
+        url: "/kurzy/csd-2023/štandardy"
+      all_vocabulary_2/csd/2023:
+        name: Všetka slovná zásoba
+        url: "/courses/csd-2023/vocab"
+      csd_changelog_23-_24/csd/2023:
+        name: "CSD Zoznam zmien '23-'24"
+        url: "https://docs.google.com/document/d/1p5wN0AlEUoKZ0WpcBryjkxLyQKsAr4k6zWqI91faksI/view"
+      csd_course_standards_csta_alignment/csd/2023:
+        name: Štandardy kurzu CSD Zladenie CSTA
+        url: "https://docs.google.com/spreadsheets/d/1mSkUykxhOhSviA7wmo5Ejh3vYgLJDtG46rCm_92607g/edit?usp=sharing"
+      csd_guide_to_assessment/csd/2023:
+        name: CSD Príručka k hodnoteniu
+        url: "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view"
+      csd_guide_to_code_org_values_and_philosophy/csd/2023:
+        name: CSD Príručka k hodnotám a filozofii Code.org
+        url: "https://docs.google.com/document/d/1Ql3w7D_cWFZVPzRA-2yjuxjCaRP-lneiRGZPpmg81tc/view"
+      csd_guide_to_curriculum_videos/csd/2023:
+        name: CSD Príručka k videám o učebných osnovách
+        url: "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view"
+      csd_guide_to_differentiation_1/csd/2023:
+        name: CSD Príručka k diferenciácii
+        url: "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view"
+      csd_guide_to_getting_started/csd/2023:
+        name: CSD Sprievodca začiatkom
+        url: "https://docs.google.com/document/d/1qRtKnXUl5G_FONrIsJ7Ql-aDYEaEwPOzLV_BhFa4O8A/view"
+      csd_guide_to_learning_tools/csd/2023:
+        name: CSD Príručka k učebným nástrojom
+        url: "https://docs.google.com/document/d/1zp_bREstY53dyXoby8MCidBD1iVUoMMGbz5c-kTsL7E/view"
+      csd_guide_to_teaching_and_learning_strategies/csd/2023:
+        name: CSD Príručka k vyučovacím a učebným stratégiám
+        url: "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view"
+      csd_guide_to_using_resources_1/csd/2023:
+        name: CSD Príručka k používaniu zdrojov
+        url: "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view"
+      csd_implementation_guide_1/csd/2023:
+        name: Príručka na implementáciu CSD
+        url: "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view"
+      csd_learning_frameworks_1/csd/2023:
+        name: CSD vzdelávacie rámce
+        url: "https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view"
+      csd_syllabus/csd/2023:
+        name: CSD Sylabus
+        url: "https://docs.google.com/document/d/1wqoDRuGVb8ZNoVjikkq1ZflA_C57r-YHmn3awpJmSJQ/view"
+      all_code_6/csd/2024:
+        name: Všetok kód
+        url: "/kurzy/csd-2024/kód"
+      all_resources_8/csd/2024:
+        name: Všetky zdroje
+        url: "/kurzy/csd-2024/zdroje"
+      all_standards_8/csd/2024:
+        name: Všetky normy
+        url: "/kurzy/csd-2024/štandardy"
+      all_vocabulary_8/csd/2024:
+        name: Všetka slovná zásoba
+        url: "/courses/csd-2024/vocab"
+      csd_changelog_24-25/csd/2024:
+        name: CSD Zoznam zmien 24-25
+        url: "https://docs.google.com/document/d/1DN6WF64Jy3cr1hkeDySNAujMhb9yQZlJvt3ls8OCvRw/edit#heading=h.ydx1g8n6vyu8"
+      csd_course_standards_csta_alignment/csd/2024:
+        name: Štandardy kurzu CSD Zladenie CSTA
+        url: "https://docs.google.com/spreadsheets/d/1mSkUykxhOhSviA7wmo5Ejh3vYgLJDtG46rCm_92607g/edit?usp=sharing"
+      csd_guide_to_assessment_1/csd/2024:
+        name: CSD Príručka k hodnoteniu
+        url: "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view"
+      csd_guide_to_code_org_values_and_philosophy/csd/2024:
+        name: CSD Príručka k hodnotám a filozofii Code.org
+        url: "https://docs.google.com/document/d/1Ql3w7D_cWFZVPzRA-2yjuxjCaRP-lneiRGZPpmg81tc/view"
+      csd_guide_to_curriculum_videos_1/csd/2024:
+        name: CSD Príručka k videám o učebných osnovách
+        url: "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view"
+      csd_guide_to_differentiation_1/csd/2024:
+        name: CSD Príručka k diferenciácii
+        url: "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view"
+      csd_guide_to_getting_started/csd/2024:
+        name: CSD Sprievodca začiatkom
+        url: "https://docs.google.com/document/d/1qRtKnXUl5G_FONrIsJ7Ql-aDYEaEwPOzLV_BhFa4O8A/view"
+      csd_guide_to_learning_tools/csd/2024:
+        name: CSD Príručka k učebným nástrojom
+        url: "https://docs.google.com/document/d/1zp_bREstY53dyXoby8MCidBD1iVUoMMGbz5c-kTsL7E/view"
+      csd_guide_to_teaching_and_learning_strategies_1/csd/2024:
+        name: CSD Príručka k vyučovacím a učebným stratégiám
+        url: "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view"
+      csd_guide_to_using_resources_1/csd/2024:
+        name: CSD Príručka k používaniu zdrojov
+        url: "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view"
+      csd_implementation_guide/csd/2024:
+        name: Príručka na implementáciu CSD
+        url: "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view"
+      csd_learning_frameworks/csd/2024:
+        name: CSD vzdelávacie rámce
+        url: "https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view"
+      csd_syllabus/csd/2024:
+        name: CSD Sylabus
+        url: "https://docs.google.com/document/d/1wqoDRuGVb8ZNoVjikkq1ZflA_C57r-YHmn3awpJmSJQ/view"
