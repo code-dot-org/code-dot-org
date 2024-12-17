@@ -1,0 +1,631 @@
+{
+  "lessons": {
+    "https://studio.code.org/s/allthethings/lessons/1": {
+      "name": "Jigsaw",
+      "lesson_activities": {
+        "adf2e1d7-848e-4b2e-9f60-a190c85c82ba": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "758f6dfd-efa4-4432-bdab-61708582e703": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/2": {
+      "name": "Bludisko",
+      "lesson_activities": {
+        "83fafdc5-ad91-43a1-a3f6-b7312346a3ab": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "940ce820-1018-4306-a9cc-2d70a1d16e41": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/3": {
+      "name": "Umelec",
+      "lesson_activities": {
+        "6aec6572-d76b-45c3-b69e-c140c8e5077e": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "e65be58a-fc08-43c1-a879-52e2ba7dfbbc": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/4": {
+      "name": "Bee",
+      "lesson_activities": {
+        "1c529a06-0eb8-49b1-ab18-608c6c63de01": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "c6346316-104c-4255-b03a-1a55f159b27e": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/5": {
+      "name": "PlayLab",
+      "lesson_activities": {
+        "4f5887f4-1526-473b-bd29-1a6b60c9849a": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "17f64bfd-db2e-4f35-b687-f06b1437a578": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/6": {
+      "name": "Farmár",
+      "lesson_activities": {
+        "4914687d-6ea0-486d-b5d2-833db8f1260e": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "d6258d5c-615a-495e-99d7-a0765c03d5b0": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/7": {
+      "name": "Flappy",
+      "lesson_activities": {
+        "6a90aeea-2071-4871-9dd3-9b8738c69423": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "400a4116-d58d-457c-b165-df7a562bc8a9": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/8": {
+      "name": "Bounce",
+      "lesson_activities": {
+        "d79baf7b-176a-4cc0-8bb6-93d974793855": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "64f72ab6-9c30-47fd-9dfe-25b305d765f1": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/9": {
+      "name": "Multi",
+      "lesson_activities": {
+        "e1194726-0b93-4ebe-a524-a36051b19654": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "fcd19b9e-936c-4fbc-875b-b01da1125ceb": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/10": {
+      "name": "Multi2",
+      "lesson_activities": {
+        "94a5ed09-24e4-4733-afd4-24ff516ec2db": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "975c00c4-8c70-48c9-9ff0-79038e32a6cb": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/11": {
+      "name": "Zápas",
+      "lesson_activities": {
+        "236d8f94-151e-4c5e-98d9-255293ad71fa": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "11a7d616-9354-4643-8da9-325a7dce0a40": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/12": {
+      "name": "TextMatch",
+      "lesson_activities": {
+        "05418fbe-29fd-46d9-b2a3-3f9c552a09d9": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "30d6b016-3b7e-4a7b-95a4-f5d1e8d427df": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/13": {
+      "name": "Vložené bloky",
+      "lesson_activities": {
+        "99aa9251-89ad-4f11-ad8b-54cc32286b72": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "53d74d4f-e011-4a0d-9364-5ca5e2c47958": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/14": {
+      "name": "Netsim",
+      "lesson_activities": {
+        "348ae6bb-4dfd-4be5-b00f-f3cf2ea5d0bd": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "3c380ed9-37c5-49d5-b10c-91e2092b8331": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/15": {
+      "name": "Počítadlo kilometrov",
+      "lesson_activities": {
+        "3c7a5185-6a3b-41cd-a9d2-ba274e436816": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "4f4bbd0c-72d2-41de-87ff-1ea70d4b51b9": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/16": {
+      "name": "Kompresia textu",
+      "lesson_activities": {
+        "fb982e59-8b24-4b0a-9bda-5ff9658d7c11": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "09620e8f-0bbc-427e-86cf-c104836c7d0e": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/17": {
+      "name": "Pixelácia",
+      "lesson_activities": {
+        "8f2a0453-ef6a-45f7-a702-53af16c82074": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "278f54e3-6314-4384-b2c5-f0bd2c5b3316": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/18": {
+      "name": "AppLab",
+      "lesson_activities": {
+        "c4f2cf1c-f8f2-4e01-b627-750d01ac7fae": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "767ff1bc-7b0e-4d55-b3b6-af47ffe5b927": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/19": {
+      "name": "Gamelab",
+      "lesson_activities": {
+        "17074694-5220-4c93-8128-70e3af715344": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "5a6be280-b236-4483-bf8a-b733a9819c76": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/20": {
+      "name": "Online PD",
+      "lesson_activities": {
+        "e056b1c0-3ffe-4fca-89aa-094da2060f3f": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "c2450371-d625-425c-9010-a678a4e821c4": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/21": {
+      "name": "Podrobnosti o označovaní",
+      "lesson_activities": {
+        "8a8b1b99-3128-4adc-8ced-333285da77b3": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "671ca5d7-c719-427a-8bbd-9865063d1ae1": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/22": {
+      "name": "Štúdio",
+      "lesson_activities": {
+        "2e329f95-3c8d-482a-83ca-d21564c9f4c6": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "1676e72c-32b1-487f-ae83-615ae586cfe6": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/23": {
+      "name": "Viacstranové hodnotenie",
+      "lesson_activities": {
+        "f8c96c1a-f122-4c14-b110-20157785406c": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "630c859b-bafb-41b2-bd08-88baadad9911": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/24": {
+      "name": "Hviezdne vojny",
+      "lesson_activities": {
+        "f34d7f79-ff9c-49c8-93c9-bf0ecb5faffb": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "f8404b94-56ac-43d0-950d-faef14a9861d": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/25": {
+      "name": "Minecraft",
+      "lesson_activities": {
+        "9da9391a-f33f-4c48-a573-a0ee6858b111": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "689df908-27f4-4fa6-be67-84738bab51ce": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/26": {
+      "name": "Bohaté dlhé hodnotenie",
+      "lesson_activities": {
+        "c91cb0fd-6857-46b3-9b26-daab7f2be908": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "3ba53585-c2f5-409c-98d5-c42f29048400": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/27": {
+      "name": "Bezplatná odpoveď",
+      "lesson_activities": {
+        "44ef4c93-b89f-4a4d-bf38-4d376fcfee12": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "e39b746e-7160-4df7-87c2-c370d042e3da": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/28": {
+      "name": "Vzorové hodnotenie PLC",
+      "lesson_activities": {
+        "72d1f168-1a5e-4015-9f4e-767aadf1d12a": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "5e078dbb-061c-45b0-87cb-710ce3dacb35": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/29": {
+      "name": "Vymenené úrovne",
+      "lesson_activities": {
+        "245481d9-3ff6-4f2c-9147-8af79d8c98d5": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "40e74dbd-d44a-468e-9e17-a710d06bc3d3": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/30": {
+      "name": "Anonymný študentský prieskum",
+      "lesson_activities": {
+        "a0bfcf67-8e9c-4792-96ac-3f13d1ee67cb": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "563b23ac-78bf-47bd-9f1c-0f659ed70504": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/31": {
+      "name": "Kryptografia s verejným kľúčom",
+      "lesson_activities": {
+        "37a8e94b-7199-462b-aec7-10c55e8feba6": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "c76e2942-c4b8-4476-9db0-c812cf733357": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/32": {
+      "name": "Webové laboratórium",
+      "lesson_activities": {
+        "ac3d127a-ec6f-4d0f-9fc6-e8750ed9ee10": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "4cb04806-94ab-4f40-bb2c-faedb2bf65a4": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/33": {
+      "name": "Hodnotenie na jednej strane",
+      "lesson_activities": {
+        "f1a32532-fa4e-4094-b179-db7504e3fbf1": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "a23ecea1-cbbf-40f7-b671-f7fdf630e0de": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/34": {
+      "name": "Samostatné video",
+      "lesson_activities": {
+        "26b60f43-a34f-4e95-bb23-21495b5757c3": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "02227414-aacb-4809-b4b8-5298f366e12a": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/35": {
+      "name": "Odkaz na učebné osnovy",
+      "lesson_activities": {
+        "5511f790-bf8a-4094-aed2-b0cf6058b87b": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "89b1bba7-1e98-4a84-925a-782730854930": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/36": {
+      "name": "Sprite Lab",
+      "lesson_activities": {
+        "c8fb0fe2-b420-42b8-b4d3-540d9c3b0d79": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "872c7778-bb1a-45ac-8703-f5d94a96b137": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/37": {
+      "name": "Tanečné laboratórium",
+      "lesson_activities": {
+        "8bb15d3d-31b7-422a-b8c7-fa150f172044": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "328b7727-4728-47a6-897c-34ceaf790e67": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/38": {
+      "name": "Mini Rubric",
+      "lesson_activities": {
+        "b17d58c5-9439-455e-ae90-b73257ae8260": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "6a18c702-737b-4fe2-85c4-b07a94a8757b": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/39": {
+      "name": "Externé zariadenia voliteľne zobrazené ako odpojené",
+      "lesson_activities": {
+        "7bdacd27-cfa5-415b-aa1e-63d93c0032ac": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "8937b784-e6d8-412d-9a17-d8cc006f7f66": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/40": {
+      "name": "Výber bubliny",
+      "lesson_activities": {
+        "e974a735-db1b-4b89-85a1-a50a4942e445": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "227a335b-9c1e-4750-a303-e84dd5f3934b": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/41": {
+      "name": "Obsiahnuté úrovne",
+      "lesson_activities": {
+        "5347fb67-2f83-4286-9613-89dea87db66b": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "dac2f35d-ed12-4c9f-ad45-2b6a68d94244": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/42": {
+      "name": "ML Fish",
+      "lesson_activities": {
+        "b9c84d52-3377-4e35-985e-96dd083f81fa": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "ac2fe180-8771-4d1e-8fdc-78f6a2a8fb0a": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/43": {
+      "name": "Laboratórium umelej inteligencie",
+      "lesson_activities": {
+        "6d8b34e5-23aa-4678-a6b3-e60b1eae6ec9": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "09aa01de-4f4a-4216-adce-a977bde99c54": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/44": {
+      "name": "Java Lab",
+      "lesson_activities": {
+        "5f5dea02-fd61-4c99-8095-a0e2e5de2471": {
+          "name": "Úrovne",
+          "activity_sections": {
+            "0ee3a474-4b22-4c52-874a-32bb0ff17112": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/45": {
+      "name": "Poézia",
+      "lesson_activities": {
+        "bd958217-a2d9-423d-a515-78757692b268": {
+          "activity_sections": {
+            "b68acb29-b590-46e0-82a1-ade0d51c420f": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/46": {
+      "name": "Hudba",
+      "lesson_activities": {
+        "e58ff15e-708f-4cd0-97cc-260c9929b0ca": {
+          "activity_sections": {
+            "f9c9c7a9-9f2c-48e1-867b-94d010f2795a": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/47": {
+      "name": "AI Chat",
+      "lesson_activities": {
+        "df85eaeb-e712-4d23-a0de-da19f1c0ef96": {
+          "activity_sections": {
+            "84daf7f5-b7c6-4c69-9aa8-ca2417519231": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/48": {
+      "name": "Rubriky AI",
+      "lesson_activities": {
+        "6b12d6f3-6c14-4c9d-aaab-4052da94fe1a": {
+          "activity_sections": {
+            "b3608bf0-72c8-4abc-8ed2-f66fbde0eb82": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/49": {
+      "name": "Tanečné laboratórium2",
+      "lesson_activities": {
+        "fdc0f83f-442b-47e4-8f5a-8ca827acf9e2": {
+          "activity_sections": {
+            "c34e51d8-607b-4436-854d-f77eb3240711": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/50": {
+      "name": "Laboratórium Python",
+      "lesson_activities": {
+        "5688685c-b8bf-4563-b285-04a9cce9bb6e": {
+          "activity_sections": {
+            "465bc905-13b5-487c-8fd6-8043676ee607": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/51": {
+      "name": "Webové laboratórium 2",
+      "lesson_activities": {
+        "13a31209-c280-4f4d-8278-511b4f88ab7e": {
+          "activity_sections": {
+            "b26e8309-b1a7-486a-9490-96d4ddd8b9aa": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/52": {
+      "name": "Ukážka Lab2",
+      "lesson_activities": {
+        "2f85210c-bfe7-4eea-9d53-fe10cdf3b0dc": {
+          "activity_sections": {
+            "94cf3670-cb1d-45cc-9491-c754494a2399": {
+            }
+          }
+        }
+      }
+    },
+    "https://studio.code.org/s/allthethings/lessons/53": {
+      "name": "Sprievodca aktivitami Levelgroup",
+      "lesson_activities": {
+        "e109ba15-02bd-458f-9adf-31f75dc9d531": {
+          "activity_sections": {
+            "781a45ef-23bb-4d6c-905a-a421acc0752b": {
+            }
+          }
+        }
+      }
+    }
+  }
+}
