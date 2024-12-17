@@ -12,6 +12,7 @@ import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
 import {
   getCurrentScriptLevelId,
   getLevelPropertiesPath,
+  getUserAppOptionsPath,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {
@@ -52,6 +53,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   );
 
   const levelPropertiesPath = useSelector(getLevelPropertiesPath);
+  const userAppOptionsPath = useSelector(getUserAppOptionsPath);
 
   const dispatch = useAppDispatch();
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
@@ -80,6 +82,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
           scriptId,
           scriptLevelId,
           levelPropertiesPath,
+          userAppOptionsPath,
           channelId,
         })
       );
@@ -105,6 +108,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     scriptId,
     scriptLevelId,
     levelPropertiesPath,
+    userAppOptionsPath,
     dispatch,
     userId,
   ]);

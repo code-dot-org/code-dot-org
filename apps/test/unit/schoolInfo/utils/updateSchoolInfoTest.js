@@ -21,17 +21,21 @@ describe('updateSchoolInfo', () => {
   const schoolName = 'Test School';
   const schoolZip = '12345';
 
+  const expectedResult = {
+    user: {
+      school_info_attributes: {
+        school_id: schoolId,
+      },
+    },
+  };
+
   beforeEach(() => {
     jest.clearAllMocks();
   });
 
   it('should call fetch with the correct arguments and handle successful update', async () => {
     const mockSchoolData = {
-      user: {
-        school_info_attributes: {
-          school_id: schoolId,
-        },
-      },
+      school_id: schoolId,
     };
 
     mockBuildSchoolData.mockReturnValueOnce(mockSchoolData);
@@ -54,17 +58,13 @@ describe('updateSchoolInfo', () => {
         'Content-Type': 'application/json',
         'X-CSRF-Token': 'authenticity-token',
       },
-      body: JSON.stringify(mockSchoolData),
+      body: JSON.stringify(expectedResult),
     });
   });
 
   it('should throw an error when the fetch response is not OK', async () => {
     const mockSchoolData = {
-      user: {
-        school_info_attributes: {
-          school_id: schoolId,
-        },
-      },
+      school_id: schoolId,
     };
 
     mockBuildSchoolData.mockReturnValueOnce(mockSchoolData);

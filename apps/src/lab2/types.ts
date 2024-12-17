@@ -17,6 +17,14 @@ import {lab2EntryPoints} from '../../lab2EntryPoints';
 
 export {Theme};
 
+/// ------ USER APP OPTIONS ------ ///
+
+// Partial definition of the UserAppOptions structure, only defining the
+// pieces we need at the moment.
+export interface PartialUserAppOptions {
+  isInstructor: boolean;
+}
+
 /// ------ PROJECTS ------ ///
 
 /** Identifies a project. Corresponds to the "value" JSON column for the entry in the projects table. */
