@@ -1,0 +1,835 @@
+---
+en:
+  data:
+    progressions:
+      '"If/Else" with the Bee': '"اگر/دیگر" با زنبور'
+      "(Optional) Eliza Widget": "(اختیاری) ویجت الیزا"
+      "(Optional) GAN Guess Widget": "(اختیاری) GAN Guess Widget"
+      8-Bit Binary Number Widget: ویجت اعداد باینری 8 بیتی
+      AI Lab and Isaac's Data: آزمایشگاه هوش مصنوعی و داده های آیزاک
+      AI Lab and Kim's Data: آزمایشگاه هوش مصنوعی و داده های کیم
+      AI Machine Learning - Video: یادگیری ماشین هوش مصنوعی - ویدئو
+      'AI for Oceans: Fish vs Not Fish': 'هوش مصنوعی برای اقیانوس ها: ماهی در مقابل ماهی نیست'
+      'AI for Oceans: Types of Fish': 'هوش مصنوعی برای اقیانوس ها: انواع ماهی'
+      'AI: Impact on Society - Video': 'AI: تاثیر بر جامعه - ویدئو'
+      'AI: Training Data & Bias - Video': 'AI: داده های آموزشی و تعصب - ویدئو'
+      Accelerometer Events: رویدادهای شتاب سنج
+      Add Content and HTML: اضافه کردن محتوا و HTML
+      Add Content and Structure to Your Page: محتوا و ساختار را به صفحه خود اضافه کنید
+      Add Movement: حرکت را اضافه کنید
+      Add Sprites: Sprites را اضافه کنید
+      Add Style: اضافه کردن سبک
+      Add Style to Your Page: به صفحه خود سبک اضافه کنید
+      Add Style to Your User's Page: به صفحه کاربر خود سبک اضافه کنید
+      Add Text: اضافه کردن متن
+      Add a Welcome Screen: یک صفحه خوش آمدید اضافه کنید
+      Adding Images: افزودن تصاویر
+      Adding New Screens: افزودن صفحات جدید
+      Adding Pages: افزودن صفحات
+      Adding Screens: افزودن صفحه نمایش
+      Alien Defender: مدافع بیگانه
+      Alternative Datasets: مجموعه داده های جایگزین
+      Analog Sensors: سنسورهای آنالوگ
+      Animate Your Scene: صحنه خود را متحرک کنید
+      Animating Sprites: متحرک سازی جن ها
+      Animation and Game Templates: انیمیشن و قالب های بازی
+      App Lab Intro - Video: معرفی آزمایشگاه برنامه - ویدیو
+      'App Project: Bugs and Features': 'پروژه اپلیکیشن: اشکالات و ویژگی ها'
+      'App Project: Linking Screens': 'پروژه اپلیکیشن: پیوند دادن صفحه نمایش ها'
+      'App Project: Screen Design': 'پروژه اپلیکیشن: طراحی صفحه نمایش'
+      'App Project: Screen Import': 'پروژه اپلیکیشن: وارد کردن صفحه نمایش'
+      'App: Choose a Kid''s Movie': 'برنامه: یک فیلم کودک را انتخاب کنید'
+      'App: Friend Finder': 'برنامه: دوست یاب'
+      'App: Guess the Number': 'برنامه: عدد را حدس بزنید'
+      'App: How Many Countries': 'برنامه: چند کشور'
+      'App: Improved Pet App': 'برنامه: برنامه بهبود یافته حیوانات خانگی'
+      'App: Is It Your Birthday?': 'برنامه: آیا این روز تولد شماست؟'
+      'App: My Famous Birthday': 'برنامه: تولد معروف من'
+      'App: National Parks': 'برنامه: پارک های ملی'
+      'App: Outfit Picker': 'برنامه: انتخاب کننده لباس'
+      'App: Pet Chooser': 'برنامه: انتخابگر حیوانات خانگی'
+      'App: Stamp Notebook': 'برنامه: دفترچه مهر'
+      'App: Story Creator': 'برنامه: خالق داستان'
+      'App: The Fastest Finger': 'برنامه: سریعترین انگشت'
+      'App: Where Should I Live?': 'برنامه: کجا باید زندگی کنم؟'
+      Arrays: آرایه ها
+      Artist Intro with JR Hildebrand: معرفی هنرمند با JR Hildebrand
+      Artist Intro with JR Hildebrande: معرفی هنرمند با JR Hildebrande
+      Artist Project: پروژه هنرمند
+      'Artist: Variables': 'هنرمند: متغیرها'
+      Assessment: ارزیابی
+      Assessment Level: سطح ارزیابی
+      Attribution: انتساب
+      Back and Forth: عقب و جلو
+      Balance an Ecosystem: تعادل یک اکوسیستم
+      Basic Conditionals: شرایط اولیه
+      Bass, Mid, and Treble: باس، وسط، و تربل
+      Be a Super Digital Citizen: یک شهروند سوپر دیجیتال باشید
+      Begin planning your project: برنامه ریزی پروژه خود را شروع کنید
+      Begin planning your project_2018: برنامه ریزی پروژه خود را آغاز کنید_2018
+      Behaviors: رفتارها
+      Binary Bracelets - Student Resources: دستبند باینری - منابع دانشجویی
+      Binary Bracelets - Unplugged Activity: دستبندهای باینری - فعالیت بدون برق
+      Binary Number Widget: ویجت اعداد باینری
+      Binary Numbers: اعداد باینری
+      Binary and Data: باینری و داده
+      Blank Space Stories - Student Resources: داستان های فضای خالی - منابع دانشجویی
+      Board Events: رویدادهای هیئت
+      Board Input and Output: ورودی و خروجی برد
+      Book Recommender App: برنامه توصیه کننده کتاب
+      Book Recommender Model Card: کارت مدل توصیه کننده کتاب
+      Book Summary: خلاصه کتاب
+      Boolean Comparison: مقایسه بولی
+      Booleans and Comparison Operators: بولی ها و عملگرهای مقایسه
+      Build a Platform Jumper: یک پلتفرم جامپر بسازید
+      Build a Screen: یک صفحه نمایش بسازید
+      Building a UI with Design Mode: ساخت UI با حالت طراحی
+      Building an App: ساخت اپلیکیشن
+      'Bunny ': 'اسم حیوان دست اموز '
+      Bunny Jumper: بانی جامپر
+      Button Circuits: مدارهای دکمه ای
+      Buttons and Switch: دکمه ها و سوئیچ
+      COCO Dataset: مجموعه داده COCO
+      CS Discoveries Post-Course Survey: نظرسنجی پس از دوره اکتشافات CS
+      CS Discoveries Post-course Survey: بررسی پس از دوره اکتشافات CS
+      CSD U3 Interactive Card Exemplar: نمونه کارت تعاملی CSD U3
+      CSD U3 platform intro: معرفی پلتفرم CSD U3
+      'CSD: For Loop': 'CSD: برای حلقه'
+      CSS Classes: کلاس های CSS
+      CSS Text Properties: ویژگی های متن CSS
+      CSS and Style Sheets: CSS و Style Sheets
+      Cake Defender: کیک مدافع
+      Cake Survey: نظرسنجی کیک
+      Captioned Scene Example: نمونه صحنه زیرنویس شده
+      'Career Explorations: The Sports Industry': 'کاوش های شغلی: صنعت ورزش'
+      'Career Spotlight: Creative Technologist': 'کانون توجه شغلی: فناوری خلاق'
+      'Career Spotlight: Healthcare': 'کانون توجه شغلی: مراقبت های بهداشتی'
+      Challenge: چالش
+      Challenge Levels: سطوح چالش
+      Challenge/Practice: چالش/تمرین
+      'Challenge: Add More Inputs': 'چالش: افزودن ورودی های بیشتر'
+      'Challenge: Checking for Multiple Conditions': 'چالش: بررسی شرایط چندگانه'
+      'Challenge: Draw an Image': 'چالش: یک تصویر بکشید'
+      'Challenge: Extend Your Scene': 'چالش: صحنه خود را گسترش دهید'
+      'Challenge: Lists': 'چالش: لیست ها'
+      'Challenge: Making Sense of Sensors': 'چالش: ایجاد حس حسگرها'
+      'Challenge: RGB Colors': 'چالش: رنگ های RGB'
+      'Challenge: Updating Variables': 'چالش: به روز رسانی متغیرها'
+      Challenges: چالش ها
+      Change: تغییر دهید
+      Change a sound: یک صدا را تغییر دهید
+      Changing Screens: تغییر صفحه نمایش
+      Changing Sensor Scale: تغییر مقیاس سنسور
+      Check For Understanding: برای درک را بررسی کنید
+      Check Your Work: کار خود را بررسی کنید
+      Check for Understanding: برای تفاهم بررسی کنید
+      Check-In Survey: بررسی ورود
+      Checking for a Winner: بررسی یک برنده
+      Choice: انتخاب
+      'Choice Level: Add Effects': 'سطح انتخاب: افکت ها را اضافه کنید'
+      'Choice Levels: Customize Your App': 'سطوح انتخاب: برنامه خود را سفارشی کنید'
+      Choose Your Own Adventure: ماجراجویی خود را انتخاب کنید
+      Choosing Good IDs: انتخاب شناسه های خوب
+      'Circuit Playground: Buzzer': 'زمین بازی مداری: زنگ'
+      'Circuit Playground: Color LEDs': 'زمین بازی مداری: ال ای دی های رنگی'
+      'Circuit Playground: Introduction': 'زمین بازی مداری: مقدمه'
+      'Circuit Playground: LEDs': 'زمین بازی مداری: ال ای دی ها'
+      Circuits and Logic: مدارها و منطق
+      Club Datasets: مجموعه داده های باشگاه
+      Code My Poem: کد شعر من
+      Code Prediction: پیش بینی کد
+      Code Your Own Flappy Game: کد بازی Flappy خود را
+      Code Your Page: صفحه خود را کد کنید
+      Coding with Algorithms and Sequences: کد نویسی با الگوریتم ها و دنباله ها
+      Coding with Conditionals: کدنویسی با شرایط
+      Coding with Loops: کد نویسی با حلقه ها
+      Collector Game: بازی کلکسیونر
+      Collision Detection: تشخیص برخورد
+      Collision Detection Review: بررسی تشخیص برخورد
+      Collisions: برخوردها
+      Collisions in Games: برخورد در بازی ها
+      Color LEDs: ال ای دی های رنگی
+      Combining Projects: ترکیب پروژه ها
+      Combining Representations: ترکیب نمایندگی ها
+      'Conditionals with Cards - Student Resources ': 'شرایط با کارت - منابع دانشجویی '
+      Conditionals with Cards - Unplugged Activity: شرایط با کارت - فعالیت Unplugged
+      Conditionals with Cards - Video: شرایط با کارت - ویدئو
+      'Conditionals: If Statements': 'شرایط: اگر بیانیه ها'
+      'Conditionals: If and If/Else Statements': 'شرایط: بیانیه های If و If/Else'
+      Continuing your CS Journey: به سفر CS خود ادامه دهید
+      Control Your Player: بازیکن خود را کنترل کنید
+      Course E Artist Project: پروژه Course E Artist
+      Course E Sprite Lab Project: پروژه دوره E Sprite Lab
+      'Course E: Play Lab Project': 'دوره E: Play Lab Project'
+      Course F Artist Project: پروژه کورس F Artist
+      Course F Sprite Lab Project: پروژه دوره F Sprite Lab
+      'Course F: Artist Project': 'دوره F: پروژه هنرمند'
+      'Course F: Artist Project - Revise': 'دوره F: پروژه هنرمند - تجدید نظر'
+      'Course F: Play Lab Project': 'دوره F: Play Lab Project'
+      'Course F: Play Lab Project - Revise': 'دوره F: Play Lab Project - Revise'
+      Crack Random Substitution: کرک تعویض تصادفی
+      Crack a Caesar Cipher: کرک رمز سزار
+      Create Your Own Animation: انیمیشن خود را بسازید
+      Create Your Robot Face: چهره ربات خود را بسازید
+      Create Your Sprites: Sprites خود را ایجاد کنید
+      Create a Background: یک پس زمینه ایجاد کنید
+      Create a Google Form: یک فرم گوگل ایجاد کنید
+      Create a Story: یک داستان بسازید
+      Create an App in App Lab: یک برنامه در App Lab ایجاد کنید
+      Create your project: پروژه خود را ایجاد کنید
+      Creating Sprites: ایجاد Sprites
+      Creative Commons Search: جستجوی Creative Commons
+      Creativity + Code with Event-based Programs: خلاقیت + کد با برنامه های مبتنی بر رویداد
+      Cropping Widget: ویجت برش
+      Custom notes & beats: یادداشت ها و ضربات سفارشی
+      Customize: سفارشی کردن
+      Customize Your App: برنامه خود را سفارشی کنید
+      Customizing Sprites: سفارشی کردن Sprites
+      Customizing Your App: سفارشی کردن برنامه شما
+      Dance Crews: گروه رقص
+      Data Visualization: تجسم داده ها
+      De-bugging with the Step Button: رفع اشکال با دکمه Step
+      Debugging: اشکال زدایی
+      Debugging with Watchers: اشکال زدایی با Watchers
+      Debugging with the Step Button: اشکال زدایی با دکمه Step
+      Demo - Bug Grab: نسخه ی نمایشی - گرفتن اشکال
+      'Demo App: Interactive Card': 'برنامه نمایشی: کارت تعاملی'
+      Demo Apps: برنامه های آزمایشی
+      Design Mode: حالت طراحی
+      Design Mode Elements: عناصر حالت طراحی
+      Design Your Game: بازی خود را طراحی کنید
+      Design Your Prototype: نمونه اولیه خود را طراحی کنید
+      Design a Screen for your App: یک صفحه برای اپلیکیشن خود طراحی کنید
+      Design an AI App - AI Lab: طراحی یک اپلیکیشن هوش مصنوعی - آزمایشگاه هوش مصنوعی
+      Design an AI App - App Lab: طراحی یک اپلیکیشن هوش مصنوعی - App Lab
+      Designing Screens with Code: طراحی صفحه نمایش با کد
+      Designing for Accessibility: طراحی برای دسترسی
+      Designing for Accessibility - Student Discussion: طراحی برای دسترسی - بحث دانشجویی
+      Digital Sharing - Discussion Questions: اشتراک گذاری دیجیتال - سوالات بحث
+      Digital Sharing - Unplugged Activity: اشتراک گذاری دیجیتال - فعالیت بدون برق
+      Digital Sharing - Video: اشتراک گذاری دیجیتال - ویدئو
+      Div & Flex Exploration: Div & Flex Exploration
+      Dogger Example: مثال داگر
+      Draw Your Background: پس زمینه خود را ترسیم کنید
+      Draw a Background: یک پس زمینه بکشید
+      Drawing: طراحی
+      Drawing Shapes: رسم اشکال
+      Driver Alert System: سیستم هشدار راننده
+      Ecosystems Simulation: شبیه سازی اکوسیستم ها
+      Ecosystems Video: ویدئوی اکوسیستم ها
+      Editing Images: ویرایش تصاویر
+      Emotion Machine Example: مثال ماشین احساس
+      End of Course Projects: پروژه های پایان دوره
+      End-Of-Unit Assessment: ارزیابی پایان واحد
+      End-Of-Unit Survey: نظرسنجی پایان واحد
+      End-of-Unit Survey: نظرسنجی پایان واحد
+      Escape Room Example: مثال اتاق فرار
+      Ethics Exploration: کاوش اخلاق
+      Event Types: انواع رویداد
+      Events: رویدادها
+      Events Challenge: چالش رویدادها
+      Events and Linking Screens: رویدادها و صفحه های پیوند دادن
+      Events and Properties: رویدادها و خواص
+      Example: مثال
+      Example Animated Scene: نمونه صحنه متحرک
+      Example App Types: نمونه ای از انواع برنامه ها
+      'Example App: Zoo Classification': 'برنامه مثال: طبقه بندی باغ وحش'
+      Example Apps: برنامه های مثال
+      Example Projects: پروژه های نمونه
+      Example projects: پروژه های نمونه
+      Exemplar Personal Websites: وب سایت های شخصی نمونه
+      Expanding Personal Website: گسترش وب سایت شخصی
+      Expanding Your Website: گسترش وب سایت شما
+      Experiment with Web Lab: با آزمایشگاه وب آزمایش کنید
+      Exploration: اکتشاف
+      Exploration Level: سطح اکتشاف
+      Exploration level: سطح اکتشاف
+      'Exploration: Adding Style': 'کاوش: اضافه کردن سبک'
+      'Exploration: Clicker Game': 'کاوش: بازی کلیکر'
+      'Exploration: For Loops': 'کاوش: برای حلقه ها'
+      'Exploration: Rikki''s Poster': 'کاوش: پوستر ریکی'
+      'Exploration: Sample Apps': 'کاوش: نمونه برنامه ها'
+      'Exploration: Sample Programs': 'کاوش: نمونه برنامه ها'
+      'Exploration: Sample Project': 'کاوش: نمونه پروژه'
+      Explore HTML: HTML را کاوش کنید
+      Explore a Digital Book Cover Example: نمونه جلد کتاب دیجیتال را کاوش کنید
+      Explore!: کاوش کنید!
+      Exploring CS in Entertainment: کاوش CS در سرگرمی
+      Exploring more CSS: کاوش بیشتر در CSS
+      Extension choices: انتخاب های پسوند
+      Extra: اضافی
+      Extra Challenge: چالش اضافی
+      'Extra Challenge: Sound Board': 'چالش اضافی: تابلو صدا'
+      Field Collector App: برنامه جمع آوری میدان
+      Final Dance Party Project: پروژه پارتی رقص نهایی
+      Final Personal Website: وب سایت شخصی نهایی
+      Final Project: پروژه نهایی
+      Final Room Escape App: برنامه فرار از اتاق نهایی
+      Find the Wizard: جادوگر را پیدا کنید
+      Finish a Screen: یک صفحه را تمام کنید
+      Finish the Prototype: نمونه اولیه را تمام کنید
+      Finishing Functions: توابع تکمیل
+      Finishing Touches: پایان کار
+      Flyer Game: بازی پرواز
+      Flyer Game Example: مثال بازی فلایر
+      Follow the Algorithm - Unplugged Activity: الگوریتم - Unplugged Activity را دنبال کنید
+      Follow the Mouse: ماوس را دنبال کنید
+      Fonts and Style: فونت و سبک
+      Food Chain Setup: راه اندازی زنجیره غذایی
+      FoodFight: مبارزه با غذا
+      For Loop Fun - Unplugged Activity: برای Loop Fun - Unplugged Activity
+      For Loops: برای حلقه ها
+      For Loops and Color LEDs: برای حلقه ها و LED های رنگی
+      For Loops and Repeat Blocks: برای حلقه ها و بلوک های تکراری
+      Formatting HTML: قالب بندی HTML
+      Free Play: بازی رایگان
+      Free Play - Landmarks: بازی رایگان - نقاط دیدنی
+      'Free Play: Make a Scene': 'بازی رایگان: یک صحنه بسازید'
+      'Free Play: Make an Interactive Scene': 'بازی رایگان: یک صحنه تعاملی بسازید'
+      From Data to Visualization: از داده تا تجسم
+      Fruit and Veggie Explorer: کاوشگر میوه و سبزیجات
+      Functions: توابع
+      Functions Review: بررسی توابع
+      Functions with Parameters: توابع با پارامترها
+      Garden Image Files: فایل های تصویر باغ
+      Geometric Sun: خورشید هندسی
+      Get In Formation: وارد شکل گیری شوید
+      Getters and Setters: گیرندگان و ستترها
+      Getting Loopy - Student Handout: Loopy - جزوه دانش آموزی
+      Getting Properties: دریافت خواص
+      Graph Paper Programming - Student Resources: برنامه نویسی مقاله گراف - منابع دانشجویی
+      Graph Paper Programming - Unplugged Activity: برنامه نویسی کاغذ گراف - فعالیت بدون برق
+      Graph Paper Programming - Video: برنامه نویسی کاغذ گراف - ویدئو
+      Green Glass Door: درب شیشه ای سبز
+      Guess The Number: عدد را حدس بزنید
+      HTML Tags: تگ های HTML
+      Happy Loops - Student Resources: حلقه های شاد - منابع دانشجویی
+      Happy Loops - Unplugged Activity: Happy Loops - Unplugged Activity
+      'Happy Maps - Student Resources ': 'نقشه های شاد - منابع دانشجویی '
+      Hardware and Software: سخت افزار و نرم افزار
+      Hardware and Software Skits - Student Reminder: مجموعه های سخت افزاری و نرم افزاری - یادآوری دانش آموز
+      Headings: سرفصل ها
+      Headings in HTML: سرفصل ها در HTML
+      Hello World: سلام دنیا
+      How to Create a Simple Function: چگونه یک تابع ساده ایجاد کنیم
+      How to Make a Sprite: چگونه یک اسپرایت بسازیم
+      Human Device Interaction: تعامل با دستگاه انسانی
+      Hyperlinks: هایپرلینک ها
+      Ice Age Loops: حلقه های عصر یخبندان
+      If Statements: اگر بیانیه ها
+      If-Else Statements: بیانیه های If-Else
+      If... then... Conditional Statements: اگر ... پس ... اظهارات مشروط
+      Images and Sounds: تصاویر و صداها
+      Images in HTML: تصاویر در HTML
+      Import Your Model: مدل خود را وارد کنید
+      Import a Model: وارد کردن یک مدل
+      Importing Screens: وارد کردن صفحه نمایش
+      Importing Your Model: وارد کردن مدل شما
+      Improve Your Game: بازی خود را بهبود بخشید
+      Improved Shoe Recommender: توصیه کننده کفش بهبود یافته
+      Incorporate Feedback: بازخورد را در نظر بگیرید
+      Innovation Research: تحقیقات نوآوری
+      Input Examples: نمونه های ورودی
+      Input with If-Else: با If-Else وارد کنید
+      Inspiration!: الهام بخش!
+      InspirationalArtwork: اثر هنری الهام بخش
+      Interactive Art: هنر تعاملی
+      Interactive Card: کارت تعاملی
+      Interactive Card Examples: نمونه کارت های تعاملی
+      Interactive Characters: شخصیت های تعاملی
+      Interactive Maps Intro Video: ویدیوی معرفی نقشه های تعاملی
+      Interactive Pet: حیوان خانگی تعاملی
+      Intro: مقدمه
+      Intro Video: ویدیوی معرفی
+      Intro to Design Mode: مقدمه ای بر حالت طراحی
+      Intro to Flyer Game: معرفی بازی Flyer
+      Intro to For Loops: معرفی For Loops
+      Intro to Side Scrollers: مقدمه ای برای پیشینیان جانبی
+      Intro to Sprites: معرفی Sprites
+      Intro to Variables: مقدمه ای بر متغیرها
+      Introducing Events: معرفی رویدادها
+      Introducing Sprite Lab: معرفی Sprite Lab
+      Introduction: مقدمه
+      Introduction to Arrays: مقدمه ای بر آرایه ها
+      Introduction to Game Lab: معرفی آزمایشگاه بازی
+      Introduction to Variables: مقدمه ای بر متغیرها
+      Introduction to Variables - Part 1: مقدمه ای بر متغیرها - قسمت 1
+      Investigate: تحقیق کنید
+      Isaac's Survey Data: داده های نظرسنجی ایزاک
+      Iteration and Parameters: تکرار و پارامترها
+      Jam Session: جلسه جام جم
+      JuiceMind Assessment: ارزیابی JuiceMind
+      Keep On Dancing!: به رقصیدن ادامه دهید!
+      Keeping Data Secret: مخفی نگه داشتن داده ها
+      Key Press & At Measure Events: فشار دادن کلید و اندازه گیری رویدادها
+      Keyboard Input: ورودی صفحه کلید
+      Kim's Survey: نظرسنجی کیم
+      Kim's Survey Data: داده های نظرسنجی کیم
+      LED Apps: برنامه های LED
+      Layout Properties: ویژگی های طرح بندی
+      Layout with CSS: چیدمان با CSS
+      Learning from Simulations: یادگیری از شبیه سازی
+      Lesson Extra: درس اضافی
+      Lesson Extras: درس اضافی
+      Lesson Overview: نمای کلی درس
+      Level Overview: نمای کلی سطح
+      Levels: سطوح
+      Light Show: نمایش نور
+      Linking Pages: پیوند دادن صفحات
+      Linking Screens: پیوند دادن صفحه نمایش ها
+      Lists: لیست ها
+      Lists in HTML: لیست ها در HTML
+      Looking for Patterns: به دنبال الگوها
+      Looping: حلقه زدن
+      Loops with the Artist: حلقه با هنرمند
+      Make Dancer & Dance Move: حرکت رقص و رقص را ایجاد کنید
+      Make Your Sprites: جن خود را بسازید
+      Make a Prediction: پیش بینی کنید
+      Make an Interactive Card: یک کارت تعاملی بسازید
+      Make it Interactive: آن را تعاملی کنید
+      Make it Your Own: آن را از آن خود کنید
+      Making Music: ساخت موسیقی
+      Making Scenes: ساخت صحنه
+      Making Songs: ساخت آهنگ
+      Making Sounds: ساخت صداها
+      Making an Interactive Card: ساخت کارت تعاملی
+      'Maze Intro: Programming with Blocks': 'معرفی ماز: برنامه نویسی با بلاک ها'
+      Measures: اقدامات
+      MediaPipe Image Classification: طبقه بندی تصویر MediaPipe
+      MediaPipe Object Detection: MediaPipe Object Detection
+      MediaPipe Object Detection and Image Files: تشخیص اشیاء MediaPipe و فایل های تصویری
+      Medical Dataset Model Cards: کارت های مدل مجموعه داده های پزشکی
+      Medical Priority App: برنامه اولویت پزشکی
+      Mid-Module Survey: نظرسنجی میان ماژول
+      'Minecraft: Hero''s Journey': 'Minecraft: سفر قهرمان'
+      'Mini-Project: About Me': 'مینی پروژه: درباره من'
+      'Mini-Project: Alien Dance Moves': 'مینی پروژه: حرکات رقص بیگانه'
+      'Mini-Project: Alien Dance Party': 'مینی پروژه: مهمانی رقص بیگانه'
+      'Mini-Project: Clicker Game': 'مینی پروژه: بازی کلیکر'
+      'Mini-Project: Collector Game': 'مینی پروژه: بازی کلکسیونر'
+      'Mini-Project: Create a Virtual Pet': 'مینی پروژه: یک حیوان خانگی مجازی ایجاد کنید'
+      'Mini-Project: Outbreak Simulator': 'مینی پروژه: شبیه ساز شیوع بیماری'
+      'Mini-Project: Royal Battle': 'مینی پروژه: نبرد سلطنتی'
+      "Mini-Project: Snowflake #1": "مینی پروژه: دانه برف شماره 1"
+      "Mini-Project: Snowflake #2": "مینی پروژه: دانه برف شماره 2"
+      'Mini-Project: Sticker Art': 'مینی پروژه: هنر استیکر'
+      'Mini-Project: Swimming Fish': 'مینی پروژه: ماهی شنا'
+      'Mini-Project: Swimming Fish (continued)': 'مینی پروژه: ماهی شنا (ادامه دارد)'
+      'Mini-Project: User Input Programs': 'مینی پروژه: برنامه های ورودی کاربر'
+      'Mini-Project: Virtual Pet': 'مینی پروژه: حیوان خانگی مجازی'
+      'Mini-project: Chase Game': 'مینی پروژه: بازی تعقیب و گریز'
+      'Mini-project: Flappy Game': 'مینی پروژه: بازی شل و ول'
+      'Mini-project: Interactive Poster': 'مینی پروژه: پوستر تعاملی'
+      'Mini-project: Jorge the Dog': 'مینی پروژه: خورخه سگ'
+      'Mini-project: Sticker Art': 'مینی پروژه: هنر استیکر'
+      'Mini-project: Sticker Design': 'مینی پروژه: طراحی استیکر'
+      Modify simulation variables: تغییر متغیرهای شبیه سازی
+      Modifying Arrays: اصلاح آرایه ها
+      Modifying and Creating Arrays: اصلاح و ایجاد آرایه ها
+      More Buttons: دکمه های بیشتر
+      More Input: ورودی بیشتر
+      More Parameters: پارامترهای بیشتر
+      Motorcycle: موتور سیکلت
+      Move It Move it Video  - Unplugged Activity: Move it Move it Video - Unplugged Activity
+      Move It, Move It - Student Resources: حرکت کن، حرکت کن - منابع دانشجویی
+      Movement with the Counter Pattern: حرکت با الگوی شمارنده
+      Multi-Screen Apps: برنامه های چند صفحه ای
+      Multiframe Animations: انیمیشن های چند فریمی
+      Musical Arrays: آرایه های موسیقی
+      My Loopy Robotic Friend - Student Resources: My Loopy Robotic Friend - Student Resources
+      My Loopy Robotic Friends - Unplugged Activity: My Loopy Robotic Friends - Unplugged Activity
+      My Online Neighborhood: محله آنلاین من
+      My Robotic Friend - Student Resources: My Robotic Friend - Student Resources
+      My Robotic Friends - Unplugged Activity: دوستان رباتیک من - فعالیت Unplugged
+      My Time Capsule: کپسول زمان من
+      Naming Variables: نام گذاری متغیرها
+      Nested Loops with the Bee: حلقه های تو در تو با زنبور
+      New Challenge Introduction: معرفی چالش جدید
+      New Shapes: اشکال جدید
+      Next Steps: مراحل بعدی
+      Noisy Image Widget: ویجت تصویر نویزدار
+      Orientation: جهت گیری
+      Outro: Outro
+      Overview: نمای کلی
+      'Overview: Design Mode': 'نمای کلی: حالت طراحی'
+      'Overview: If Statements': 'نمای کلی: اگر بیانیه ها'
+      'Overview: Images': 'نمای کلی: تصاویر'
+      'Overview: onEvent': 'نمای کلی: onEvent'
+      'Overview: setPosition': 'نمای کلی: setPosition'
+      Pair Programming: برنامه نویسی جفت
+      Pattern Block Data - Resource Reminder: داده های بلوک الگو - یادآور منبع
+      Pattern Block Data - Unplugged Activity: داده های بلوک الگو - فعالیت بدون پلاگین
+      Personal Career Exploration: کاوش شغلی شخصی
+      Pet Recommender: پیشنهاد دهنده حیوانات خانگی
+      Physical Design Prototypes: نمونه های اولیه طراحی فیزیکی
+      Picturing Data: داده های تصویری
+      Pizza Party Data: داده های مهمانی پیتزا
+      Pizza Recommendations: توصیه های پیتزا
+      Plan Your Project: پروژه خود را برنامه ریزی کنید
+      Plan Your Scene: صحنه خود را برنامه ریزی کنید
+      Plane Jumper: پرش هواپیما
+      Planning: برنامه ریزی
+      Planning Your Book Cover: برنامه ریزی جلد کتاب
+      Platform Jumper - Background and Variables: پلتفرم جامپر - پس زمینه و متغیرها
+      Platform Jumper - Items: پلت فرم بلوز - آیتم ها
+      Platform Jumper - Platforms: پلت فرم بلوز - سکوها
+      Platform Jumper - Player: پلت فرم بلوز - بازیکن
+      Platform Jumper Review: بررسی پلتفرم جامپر
+      Play AI Drums: AI Drums بازی کنید
+      Play Sound: پخش صدا
+      Play Together: بازی با هم
+      Play a sound: یک صدا پخش کنید
+      Play live: پخش زنده
+      Play more sounds: صداهای بیشتری پخش کنید
+      Play together: با هم بازی کنید
+      Player Controls: کنترل های پخش کننده
+      Playing Notes: پخش یادداشت ها
+      Playing with Notes: بازی با نت ها
+      Plotting Shapes in Game Lab: رسم اشکال در آزمایشگاه بازی
+      Polling Events: رویدادهای رای گیری
+      Post-Course Survey Instructions: دستورالعمل های نظرسنجی پس از دوره
+      Post-Module Survey: نظرسنجی پس از ماژول
+      Practice: تمرین کنید
+      Practice Levels: سطوح تمرین
+      Practicing Block-Based Coding: تمرین کدگذاری مبتنی بر بلوک
+      'Practicing CS Skills ': 'تمرین مهارت های CS '
+      Pre-Assessment: پیش ارزیابی
+      Pre-Module Survey: نظرسنجی قبل از ماژول
+      Predict: پیش بینی کنید
+      Predict - Introduction to Game Lab: پیش بینی - مقدمه ای بر آزمایشگاه بازی
+      Prediction: پیش بینی
+      Prepare for your presentation: برای ارائه خود آماده شوید
+      Prepare for your presentation_2018: برای ارائه خود آماده شوید_2018
+      Problem Solving: حل مسئله
+      Problem Solving Process for Programming: فرآیند حل مسئله برای برنامه نویسی
+      Programming with Rey and BB-8: برنامه نویسی با Rey و BB-8
+      Programs that Repeat: برنامه هایی که تکرار می شوند
+      Project: پروژه
+      Project - Background and Variables: پروژه - پس زمینه و متغیرها
+      Project - Finishing Touches: پروژه - کارهای پایانی
+      Project - Sprites and Interactions: پروژه - ارواح و تعاملات
+      Project Guide: راهنمای پروژه
+      Project Work: کار پروژه
+      Properties: خواص
+      Prototype Components: اجزای نمونه اولیه
+      Prototype an Innovation: نمونه اولیه یک نوآوری
+      Publishing Your Website: انتشار وب سایت شما
+      'Putting it All Together ': 'قرار دادن آن همه با هم '
+      QR Code Exploration: کاوش کد QR
+      Quarter Notes: یادداشت های ربع
+      Quick Check: بررسی سریع
+      RGB Exploration: کاوش RGB
+      RGB Widget: RGB Widget
+      Random Numbers: اعداد تصادفی
+      Raspado Recommender: توصیه کننده راسپادو
+      Reading Sensors: حسگرهای خواندن
+      Recognizing Expressions: شناخت عبارات
+      Recognizing Fish: شناخت ماهی
+      Recognizing Fish Features: شناخت ویژگی های ماهی
+      Recognizing Shapes: شناخت اشکال
+      Reflection: انعکاس
+      Relay Programming - Unplugged Activity: برنامه نویسی رله - فعالیت بدون برق
+      Repeat: تکرار کنید
+      Repeat Blocks: تکرار بلوک ها
+      Repeat Blocks with BB-8: بلوک ها را با BB-8 تکرار کنید
+      Repeat Blocks with the Artist: بلوک ها را با هنرمند تکرار کنید
+      Repeat Unit Statements: بیانیه های واحد را تکرار کنید
+      Repeat Until Statements: تکرار تا بیانیه ها
+      Representing Images: بازنمایی تصاویر
+      Responding to Board Events: پاسخگویی به رویدادهای هیئت مدیره
+      Responding to User Input: پاسخ به ورودی کاربر
+      Review: بررسی کنید
+      Review - Choice Level: بررسی - سطح انتخاب
+      Review Shape Blocks: بررسی بلوک های شکل
+      Review Your Animated Scene: صحنه متحرک خود را مرور کنید
+      Review Your App: برنامه خود را مرور کنید
+      Review Your Game: بازی خود را مرور کنید
+      Review Your Page: صفحه خود را مرور کنید
+      Review Your Scene: صحنه خود را مرور کنید
+      'Review: CSS': 'بررسی: CSS'
+      'Review: HTML': 'بررسی: HTML'
+      Revise Artist Project: بازنگری پروژه هنرمند
+      Revise Sprite Lab Project: پروژه Sprite Lab را بازبینی کنید
+      Revisiting the Counter Pattern: بازبینی الگوی شمارنده
+      Robot Doodle: ربات دودل
+      Run a simulation: شبیه سازی را اجرا کنید
+      Safari App: اپلیکیشن سافاری
+      Safari Model: مدل سافاری
+      Same Game: همین بازی
+      Sample App: نمونه برنامه
+      Sample Apps for Good: نمونه برنامه های خوب
+      Sample Game: نمونه بازی
+      Sample Games: بازی های نمونه
+      Sample Personal Web Pages: نمونه صفحات وب شخصی
+      Sample Personal Websites: نمونه وب سایت های شخصی
+      Sample Platform Jumper Game: نمونه بازی پلتفرم جامپر
+      Sample Program: نمونه برنامه
+      Sample Programs: نمونه برنامه ها
+      Sample Web Page: نمونه صفحه وب
+      Sample Web Pages: نمونه صفحات وب
+      Sample Website: وب سایت نمونه
+      Scoring & Scoreboard: امتیازدهی و جدول امتیاز
+      Screen Design: طراحی صفحه نمایش
+      Sensor Events: رویدادهای حسگر
+      Sensor Experiment: آزمایش حسگر
+      Sensors to Colors: حسگرها به رنگ ها
+      Set Up Sprites: Sprites را تنظیم کنید
+      Setting Properties: تنظیم ویژگی ها
+      Setup: راه اندازی
+      Shapes and Parameters: اشکال و پارامترها
+      Shapes and the Draw Loop: شکل ها و حلقه Draw
+      Share Out: به اشتراک بگذارید
+      Share Your App: برنامه خود را به اشتراک بگذارید
+      Share Your Pages: صفحات خود را به اشتراک بگذارید
+      Share Your Simulation: شبیه سازی خود را به اشتراک بگذارید
+      Share Your Stylesheets: برگه های سبک خود را به اشتراک بگذارید
+      Sharing Your Book Cover: جلد کتاب خود را به اشتراک بگذارید
+      Sharing Your Poem: شعر خود را به اشتراک بگذارید
+      Shoe Recommendation Survey: نظرسنجی توصیه کفش
+      Shoe Recommender: توصیه کننده کفش
+      Side Scroller: اسکرول کناری
+      Side Scroller Example: Side Scroller مثال
+      Simple Circuits: مدارهای ساده
+      Skill Building: مهارت‌سازی
+      Skill Building - Map Setup: مهارت‌سازی - راه‌اندازی نقشه
+      Skill Building Levels: سطوح مهارت‌سازی
+      Skill-Building: مهارت سازی
+      Sliders: لغزنده
+      Smart Bike - Blinkers: دوچرخه هوشمند - چشمک زن
+      Social Sleuth: کارشناس اجتماعی
+      Solution 1 - Fishing Zone: راه حل 1 - منطقه ماهیگیری
+      Solution 2 - Fishing Season: راه حل 2 - فصل ماهیگیری
+      Solution 3 - Fishing Limits: راه حل 3 - محدودیت های ماهیگیری
+      Solving Healthcare Issues with Computer Vision: حل مسائل بهداشت و درمان با بینایی کامپیوتر
+      Songwriting - Functions Unplugged Activity: آهنگسازی - عملکردهای Unplugged Activity
+      'Songwriting - Functions Video ': 'Songwriting - Functions Video '
+      Songwriting - Student Resources: ترانه سرایی - منابع دانشجویی
+      Speed it Up, Slow it Down: سرعت آن را افزایش دهید، آن را کاهش دهید
+      Sprite Interactions: تعاملات جن
+      Sprite Interactions Review: بررسی تعاملات Sprite
+      Sprite Lab Example Project: پروژه نمونه آزمایشگاه Sprite
+      Sprite Lab Project: پروژه Sprite Lab
+      Sprite Movement: جنبش جن
+      Sprite Properties: Sprite Properties
+      Sprite Scenes: صحنه های جن
+      Sprite Velocity: سرعت اسپرایت
+      Sprites and Backgrounds: جن و پس زمینه
+      Sprites and the Draw Loop: Sprites و حلقه Draw
+      Star Chaser: تعقیب ستاره
+      Star Quilts Video: ویدیو لحاف ستاره
+      Student Post-Survey: پس از نظرسنجی دانشجویی
+      Student Pre-Survey: پیش نظرسنجی دانش آموزی
+      Styling Text: استایل دادن به متن
+      Styling with Classes: یک ظاهر طراحی شده با کلاس ها
+      Styling your Website: طراحی وب سایت شما
+      Teach A.I. a new word: یک کلمه جدید به هوش مصنوعی آموزش دهید
+      Teach AI a New Word: یک کلمه جدید به هوش مصنوعی آموزش دهید
+      Teachable Machine: ماشین قابل آموزش
+      Teaching and Learning Strategies: راهبردهای آموزش و یادگیری
+      'Technique: Frequency Analysis': 'تکنیک: تجزیه و تحلیل فرکانس'
+      Terminology Recap: خلاصه اصطلاحات
+      Text Compression: فشرده سازی متن
+      The Accelerometer: شتاب سنج
+      The Animation Tab: تب انیمیشن
+      The Artist in Code Studio: هنرمند در استودیو کد
+      The Big Event - Student Resources: رویداد بزرگ - منابع دانشجویی
+      The Big Event - Unplugged Activity: رویداد بزرگ - فعالیت Unplugged
+      'The Big Event Jr. - Student Resources ': 'رویداد بزرگ جونیور - منابع دانشجویی '
+      The Body Element: عنصر بدن
+      The Buzzer: زنگ
+      The Collector: کلکسیونر
+      The Counter Pattern: الگوی شمارنده
+      The Draw Loop: حلقه قرعه کشی
+      The Food Chain: زنجیره غذایی
+      The Harvester: دروگر
+      The Internet - Student Resources: اینترنت - منابع دانشجویی
+      The Internet - Unplugged Activity: اینترنت - فعالیت Unplugged
+      The Power of Words - Unplugged Activity: قدرت کلمات - فعالیت Unplugged
+      The Right App - Student Resource: برنامه مناسب - منبع دانشجویی
+      The Right App - Unplugged Activity: برنامه مناسب - فعالیت Unplugged
+      The Search for Pixel: جستجوی پیکسل
+      Title, Author, Background: عنوان، نویسنده، پیشینه
+      Top Websites: وب سایت های برتر
+      Tour of Design Mode: تور حالت طراحی
+      Train AI to Clean the Ocean: آموزش هوش مصنوعی برای پاکسازی اقیانوس
+      Train a Model in AI Lab: آموزش یک مدل در آزمایشگاه هوش مصنوعی
+      Train an AI to Clean the Ocean: یک هوش مصنوعی برای پاکسازی اقیانوس آموزش دهید
+      Triggers: محرک ها
+      UI Element Properties: ویژگی های عنصر UI
+      Ultimate Shoe Recommender: پیشنهاد دهنده نهایی کفش
+      Unit 5 Lesson 1 Overview: نمای کلی واحد 5 درس 1
+      Unplugged Activity: فعالیت Unplugged
+      Unplugged Activity - Hardware and Software Skits: Unplugged Activity - سخت افزار و نرم افزار Skits
+      Updating Your Prototype: به روز رسانی نمونه اولیه شما
+      Upload Your Images: تصاویر خود را آپلود کنید
+      Use AI: از هوش مصنوعی استفاده کنید
+      User Interface: رابط کاربری
+      Using Accelerometer Events: استفاده از رویدادهای شتاب سنج
+      Using Arrays: استفاده از آرایه ها
+      Using Getters and Setters: استفاده از Getters و Setter
+      Using HTML Tags: استفاده از تگ های HTML
+      Using Random Numbers: استفاده از اعداد تصادفی
+      Using Training Data: استفاده از داده های آموزشی
+      Using the Grid: با استفاده از Grid
+      Using the LED: با استفاده از LED
+      Using the Repeat Block: با استفاده از بلوک تکرار
+      Using the Switch: با استفاده از سوئیچ
+      Variables: متغیرها
+      Velocity: سرعت
+      Velocity and the Counter Pattern: سرعت و الگوی شمارنده
+      Velocity and the Counter Pattern Review: بررسی سرعت و الگوی شمارنده
+      Video: ویدئو
+      Video - Encryption and Public Keys: ویدئو - رمزگذاری و کلیدهای عمومی
+      Video - Events: ویدئو - رویدادها
+      Video - Functions: ویدئو - توابع
+      Video - If Statements: ویدئو - اگر اظهارات
+      Video - Introduction to Arrays: ویدئو - مقدمه ای بر آرایه ها
+      'Video - Maze Intro: Programming with Blocks': 'ویدیو - معرفی ماز: برنامه نویسی با بلاک ها'
+      Video - Parameters: ویدئو - پارامترها
+      Video - Repeat Blocks: ویدئو - تکرار بلوک
+      Video - The Counter Pattern: ویدئو - الگوی شمارنده
+      Video - Variables: ویدئو - متغیرها
+      Video Introduction: معرفی ویدیو
+      'Video:  Debugging with the Step Button': 'ویدئو:  اشکال زدایی با دکمه Step'
+      'Video:  Minecraft - The Agent': 'ویدئو:  Minecraft - The Agent'
+      'Video:  Text  and Prompts': 'ویدئو:  متن و درخواست'
+      'Video: "If/Else"': 'ویدئو: "اگر/دیگر"'
+      'Video: "If/Else" Statements': 'ویدئو: بیانیه های "اگر/دیگر".'
+      'Video: AI: What is Machine Learning?': 'ویدئو: AI: یادگیری ماشینی چیست؟'
+      'Video: Amazon and Data': 'ویدئو: آمازون و دیتا'
+      'Video: Animal Adaptations Introduction': 'ویدئو: مقدمه سازگاری با حیوانات'
+      'Video: Artist Intro with JR Hildebrand': 'ویدئو: معرفی هنرمند با JR Hildebrand'
+      'Video: Artist Intro with JR Hildebrande': 'ویدئو: معرفی هنرمند با JR Hildebrande'
+      'Video: Booleans': 'ویدئو: بولین ها'
+      'Video: CS Matters': 'ویدئو: مسائل CS'
+      'Video: Circuits and Logic': 'ویدئو: مدارها و منطق'
+      'Video: Code Your Own Flappy Game': 'ویدئو: کد بازی Flappy خود را'
+      'Video: Conditional Statements': 'ویدئو: اظهارات مشروط'
+      'Video: Conditionals': 'ویدئو: شرایط'
+      'Video: Conditionals: If Statements': 'ویدئو: شرایط: اگر بیانیه ها'
+      'Video: Conditionals: If and If/Else Statements': 'ویدئو: شرایط: بیانیه های If و If/Else'
+      'Video: Dance Party Events': 'ویدئو: رویدادهای مهمانی رقص'
+      'Video: Dance Party Measures': 'ویدئو: اقدامات حزب رقص'
+      'Video: Dance Party Party On!': 'ویدئو: پارتی رقص روشن شد!'
+      'Video: Dance Party Properties': 'ویدئو: ویژگی های مهمانی رقص'
+      'Video: Dance Party Warm Up': 'ویدئو: گرم کردن مهمانی رقص'
+      'Video: De-bugging with the Step Button': 'ویدئو: رفع اشکال با دکمه Step'
+      'Video: Debugging': 'ویدئو: اشکال زدایی'
+      'Video: Debugging with Scrat ': 'ویدئو: اشکال زدایی با Scrat '
+      'Video: Debugging with the Step Button': 'ویدئو: اشکال زدایی با دکمه Step'
+      'Video: Drawing in Game Lab - Part 1': 'ویدئو: نقاشی در آزمایشگاه بازی - قسمت 1'
+      'Video: Drawing in Game Lab - Part 2': 'ویدئو: نقاشی در آزمایشگاه بازی - قسمت 2'
+      'Video: Events': 'ویدئو: رویدادها'
+      'Video: Events in App Lab': 'ویدئو: رویدادها در App Lab'
+      'Video: Follow The Digital Trail': 'ویدئو: دنباله دیجیتال را دنبال کنید'
+      'Video: For Loops': 'ویدئو: برای حلقه ها'
+      'Video: Functions': 'ویدئو: توابع'
+      'Video: Getting Loopy': 'ویدئو: Loopy شدن'
+      'Video: Happy Maps - Unplugged Activity': 'ویدئو: Happy Maps - Unplugged Activity'
+      'Video: Harvesting with Conditionals': 'ویدئو: برداشت با شرایط'
+      'Video: Hello World: Do What You Want': 'ویدئو: سلام دنیا: آنچه را که می خواهید انجام دهید'
+      'Video: Hello World: Programming with Events': 'ویدئو: سلام دنیا: برنامه نویسی با رویدادها'
+      'Video: Hello World: Welcome to Sprite Lab': 'ویدئو: سلام دنیا: به آزمایشگاه Sprite خوش آمدید'
+      'Video: How Search Works': 'ویدئو: جستجو چگونه کار می کند'
+      'Video: How to Create a Simple Function': 'ویدئو: چگونه یک تابع ساده ایجاد کنیم'
+      'Video: How to Make a Sprite': 'ویدئو: چگونه یک اسپرایت بسازیم'
+      'Video: IOSP Model': 'ویدئو: مدل IOSP'
+      'Video: Ice Age Loops': 'ویدئو: حلقه های عصر یخبندان'
+      'Video: If/Else Statements': 'ویدئو: اظهارات اگر/دیگر'
+      'Video: Impact on Society': 'ویدئو: تاثیر بر جامعه'
+      'Video: Impacts on Society': 'ویدئو: تأثیرات بر جامعه'
+      'Video: Intro to CSS': 'ویدئو: معرفی CSS'
+      'Video: Intro to CSS - Part 1': 'ویدئو: Intro to CSS - Part 1'
+      'Video: Intro to CSS - Part 2': 'ویدئو: Intro to CSS - Part 2'
+      'Video: Intro to CSS Part 2': 'ویدئو: مقدمه CSS قسمت 2'
+      'Video: Intro to Design Mode': 'ویدئو: مقدمه ای بر حالت طراحی'
+      'Video: Intro to Web Lab - Part 1': 'ویدئو: مقدمه ای بر آزمایشگاه وب - قسمت 1'
+      'Video: Intro to Web Lab - Part 2': 'ویدئو: مقدمه ای بر آزمایشگاه وب - قسمت 2'
+      'Video: Introducing Sprite Lab': 'ویدئو: معرفی Sprite Lab'
+      'Video: Introduction to Arrays': 'ویدئو: مقدمه ای بر آرایه ها'
+      'Video: Introduction to Play Lab': 'ویدئو: معرفی Play Lab'
+      'Video: Introduction to Sprites': 'ویدئو: معرفی Sprites'
+      'Video: Introduction to Variables': 'ویدئو: مقدمه ای بر متغیرها'
+      'Video: Introduction to the Draw Loop': 'ویدئو: مقدمه ای بر حلقه Draw'
+      'Video: Loops in Artist': 'ویدئو: حلقه ها در Artist'
+      'Video: Loops with the Artist': 'ویدئو: حلقه با هنرمند'
+      'Video: Lots of Sprites': 'ویدئو: بسیاری از جن'
+      'Video: Managing Disagreement': 'ویدئو: مدیریت اختلاف نظر'
+      'Video: Maze Intro - Programming with Blocks': 'ویدئو: Maze Intro - برنامه نویسی با بلوک'
+      'Video: Maze Intro - Programming with Blocks ': 'ویدئو: Maze Intro - برنامه نویسی با بلوک '
+      'Video: Maze Intro: Programming with Blocks': 'ویدئو: معرفی ماز: برنامه نویسی با بلاک ها'
+      'Video: Measures': 'ویدئو: اقدامات'
+      'Video: Minecraft - Congratulations': 'ویدئو: Minecraft - تبریک می گویم'
+      'Video: Minecraft - Functions': 'ویدئو: Minecraft - Functions'
+      'Video: Minecraft - Repeat Loops': 'ویدئو: Minecraft - تکرار حلقه ها'
+      'Video: Minecraft - The Agent': 'ویدئو: Minecraft - The Agent'
+      'Video: Minecraft: Voyage Aquatic Conditionals': 'ویدئو: Minecraft: شرایط آبی سفر'
+      'Video: Minecraft: Voyage Aquatic Congratulations': 'ویدئو: Minecraft: سفر آبی تبریک'
+      'Video: Minecraft: Voyage Aquatic Introduction': 'ویدئو: Minecraft: معرفی Voyage Aquatic'
+      'Video: Minecraft: Voyage Aquatic Repeat Until': 'ویدئو: Minecraft: Voyage Aquatic تکرار تا'
+      'Video: Nested Loops': 'ویدئو: حلقه های تو در تو'
+      'Video: Nested Loops with the Bee': 'ویدئو: حلقه های تو در تو با زنبور'
+      'Video: Netflix and Data': 'ویدئو: نتفلیکس و دیتا'
+      'Video: Outbreak Simulator: Events': 'ویدئو: شبیه ساز شیوع بیماری: رویدادها'
+      'Video: Outbreak Simulator: Free Play': 'ویدئو: شبیه ساز شیوع بیماری: بازی رایگان'
+      'Video: Outbreak Simulator: Introduction': 'ویدئو: شبیه ساز شیوع بیماری: مقدمه'
+      'Video: Outbreak Simulator: Thinking Like a Scientist': 'ویدئو: شبیه ساز شیوع بیماری: فکر کردن مانند یک دانشمند'
+      'Video: Pair Programming': 'ویدئو: برنامه نویسی جفت'
+      'Video: Pair Programming ': 'ویدئو: برنامه نویسی جفت '
+      'Video: Problem Solving Process': 'ویدئو: فرآیند حل مسئله'
+      'Video: Programming with Blocks': 'ویدئو: برنامه نویسی با بلاک ها'
+      'Video: Programming with Rey and BB-8': 'ویدئو: برنامه نویسی با Rey و BB-8'
+      'Video: Properties': 'ویدئو: خواص'
+      'Video: Publishing Your Website': 'ویدئو: انتشار وب سایت شما'
+      'Video: Repeat Blocks': 'ویدئو: تکرار بلوک ها'
+      'Video: Repeat Blocks with BB-8': 'ویدئو: بلوک ها را با BB-8 تکرار کنید'
+      'Video: Repeat Blocks with the Artist': 'ویدئو: بلوک ها را با هنرمند تکرار کنید'
+      'Video: Repeat Until Blocks': 'ویدئو: تکرار تا بلوک'
+      'Video: Repeat Until Statements': 'ویدئو: تکرار تا بیانیه ها'
+      'Video: Sprite Movement': 'ویدئو: جنبش جن'
+      'Video: Sprites in Action': 'ویدئو: Sprites in Action'
+      'Video: Star Wars Project': 'ویدئو: پروژه جنگ ستارگان'
+      'Video: Teamwork': 'ویدئو: کار تیمی'
+      'Video: Text and Prompts': 'ویدئو: متن و درخواست'
+      'Video: The Animation Tab': 'ویدئو: تب انیمیشن'
+      'Video: The Artist in Code Studio': 'ویدئو: هنرمند در استودیو کد'
+      'Video: The Big Event - Unplugged Activity': 'ویدئو: رویداد بزرگ - فعالیت Unplugged'
+      'Video: The Collector': 'ویدئو: کلکسیونر'
+      'Video: The Harvester': 'ویدئو: دروگر'
+      'Video: Training Data & Bias': 'ویدئو: داده های آموزشی و تعصب'
+      'Video: Training Data and Bias': 'ویدئو: داده های آموزشی و تعصب'
+      'Video: Unplugged Variables in Envelopes': 'ویدئو: متغیرهای قطع شده در پاکت ها'
+      'Video: Using the Repeat Block': 'ویدئو: با استفاده از بلوک تکرار'
+      'Video: Variables in Artist': 'ویدئو: متغیرها در Artist'
+      'Video: Velocity': 'ویدئو: سرعت'
+      'Video: Warm Up': 'ویدئو: گرم کردن'
+      'Video: Waze and Data': 'ویدئو: Waze و Data'
+      'Video: What Makes a Computer, a Computer?': 'ویدئو: چه چیزی یک کامپیوتر، یک کامپیوتر را می سازد؟'
+      'Video: What is Machine Learning?': 'ویدئو: یادگیری ماشینی چیست؟'
+      'Video: While Loops with the Farmer': 'ویدئو: در حالی که حلقه با کشاورز'
+      'Video: Wrap-up': 'ویدئو: جمع بندی'
+      Visualizing Data: تجسم داده ها
+      Warm Up: گرم کردن
+      WeTube Video Recommendations (2.0): توصیه های ویدیویی WeTube (2.0)
+      WeTube Video Recommendations (Beta): توصیه‌های ویدیویی WeTube (بتا)
+      Website Project: پروژه وب سایت
+      Welcome and Introduction: خوش آمدید و معرفی
+      Welcome to Monster Town: به شهر هیولاها خوش آمدید
+      What Is a Time Capsule?: کپسول زمان چیست؟
+      Where'd They Go?: کجا رفتند؟
+      While Loops with the Farmer: در حالی که حلقه با کشاورز
+      'Widget: Text Compression': 'ویجت: فشرده سازی متن'
+      Wrap Up: بسته بندی کنید
+      Wrap-up: جمع بندی
+      Written Voice Simulator Widget: ویجت شبیه ساز صدای نوشته شده
+      'You Choose: Improve Your App': 'شما انتخاب کنید: برنامه خود را بهبود بخشید'
+      'You Choose: Restaurant Recommendations': 'شما انتخاب کنید: توصیه های رستوران'
+      Your Personal Website: وب سایت شخصی شما
+      Your Team Project: پروژه تیم شما
+      Zoo Predictions: پیش بینی باغ وحش
+      "[For Teachers] Mad Lib Widget": "[برای معلمان] ویجت Mad Lib"
+      getNumber: getNumber
+      getProperty: getProperty
+      getText vs getNumber: getText در مقابل getNumber
+      isTouching: isTouching
+      setProperty: setProperty
