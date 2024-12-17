@@ -1,0 +1,40 @@
+---
+en:
+  data:
+    block_categories:
+      Actions: 작업
+      Advanced: 고급
+      Behaviors: 동작
+      'Behaviors ': '동작 '
+      Brushes: 브러쉬
+      Category: 범주
+      Color: 색
+      Comment: 주석
+      Comments: 코멘트
+      Conditionals: 조건부
+      Dancers: 댄서
+      Default: 기본값
+      Effects: 효과
+      Events: 이벤트
+      Functions: 함수
+      'Functions ': '함수 '
+      Game/Score: 게임/점수
+      Games/Score: 게임/점수
+      Groups: 그룹
+      Input: 입력
+      Location: 위치
+      Locations: 위치
+      Logic: 논리학
+      Loops: 루프
+      Math: 수학
+      Numbers: 숫자
+      Picker: 선택
+      Prebuilt: 사전 구축
+      Properties: 속성
+      Shapes: 셰이프
+      Sprites: 스프 라이트
+      Text: 문자 메시지
+      Variables: 변수
+      'Variables ': '변수 '
+      'Variables  ': '변수  '
+      World: 세계
