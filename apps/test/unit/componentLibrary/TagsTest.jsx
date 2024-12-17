@@ -41,11 +41,7 @@ describe('Design System - Tags', () => {
           {
             label: '+1',
             tooltipId: 'tag2',
-            tooltipContent: (
-              <>
-                <p>tag2</p> <p>test</p>
-              </>
-            ),
+            tooltipContent: 'tag2 test',
           },
         ]}
       />

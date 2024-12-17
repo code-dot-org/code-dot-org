@@ -123,11 +123,7 @@ GroupOfSizesOfTags.args = {
             title: 'check',
             placement: 'left',
           },
-          tooltipContent: (
-            <>
-              <p>Science M,</p> <p>English M</p>
-            </>
-          ),
+          tooltipContent: 'Science M, English M',
         },
         {
           tooltipId: 'englishM',
@@ -155,11 +151,7 @@ GroupOfSizesOfTags.args = {
             title: 'check',
             placement: 'left',
           },
-          tooltipContent: (
-            <>
-              <p>Science L,</p> <p>English L</p>
-            </>
-          ),
+          tooltipContent: 'Science L, English L',
         },
         {
           tooltipId: 'englishL',
