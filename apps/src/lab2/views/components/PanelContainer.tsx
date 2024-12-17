@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, {useContext} from 'react';
 
-import {Heading1} from '@cdo/apps/componentLibrary/typography';
+import {Heading2} from '@cdo/apps/componentLibrary/typography';
 
 import {ThemeContext} from '../ThemeWrapper';
 
@@ -65,7 +65,7 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
               {leftHeaderContent}
             </div>
           )}
-          <Heading1
+          <Heading2
             className={classNames(
               'panelContainerHeaderItemText',
               moduleStyles.panelContainerHeaderItem,
@@ -75,7 +75,7 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
             visualAppearance={'body-three'}
           >
             {headerContent}
-          </Heading1>
+          </Heading2>
           {rightHeaderContent && (
             <div
               className={classNames(
