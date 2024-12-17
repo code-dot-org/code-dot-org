@@ -2429,7 +2429,7 @@ class User < ApplicationRecord
 
   def show_census_teacher_banner?
     # Must have an NCES school to show the banner
-    users_school = try(:school_info).try(:school)
+    users_school = school_info_school
     teacher? && users_school && (next_census_display.nil? || Time.zone.today >= next_census_display.to_date)
   end
 

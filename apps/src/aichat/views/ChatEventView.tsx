@@ -6,6 +6,7 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {modelDescriptions} from '../constants';
+import aichatI18n from '../locale';
 import {removeUpdateMessage} from '../redux/aichatRedux';
 import {timestampToLocalTime} from '../redux/utils';
 import {
@@ -40,11 +41,18 @@ function formatModelUpdateText(update: ModelUpdate): string {
     )?.name;
   }
 
-  const updatedText = updatedToText
-    ? `has been updated to ${updatedToText}.`
-    : 'has been updated.';
+  const modelUpdateText = updatedToText
+    ? aichatI18n.modelUpdateText({
+        fieldLabel: fieldLabel,
+        updatedText: updatedToText.toString(),
+        timestamp: timestampToLocalTime(timestamp),
+      })
+    : aichatI18n.modelUpdateText2({
+        fieldLabel: fieldLabel,
+        timestamp: timestampToLocalTime(timestamp),
+      });
 
-  return `${fieldLabel} ${updatedText} ${timestampToLocalTime(timestamp)}`;
+  return modelUpdateText;
 }
 
 /**
