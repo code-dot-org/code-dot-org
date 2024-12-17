@@ -1,0 +1,40 @@
+---
+en:
+  data:
+    block_categories:
+      Actions: Comportamiento
+      Advanced: Avanzado
+      Behaviors: Comportamientos
+      'Behaviors ': 'Comportamientos '
+      Brushes: Pinceles
+      Category: Categoría
+      Color: Color
+      Comment: Comentario
+      Comments: Comentarios
+      Conditionals: Condicionales
+      Dancers: Bailarines
+      Default: Por defecto
+      Effects: Efectos
+      Events: Eventos
+      Functions: Funciones
+      'Functions ': 'Funciones '
+      Game/Score: Juego/Puntuación
+      Games/Score: Juegos/Puntuación
+      Groups: Grupos
+      Input: Aporte
+      Location: Ubicación
+      Locations: Ubicaciones
+      Logic: Lógica
+      Loops: Bucles
+      Math: Matemáticas
+      Numbers: Números
+      Picker: Recogedor
+      Prebuilt: Preconstruido
+      Properties: Propiedades
+      Shapes: Formas
+      Sprites: Sprites
+      Text: Texto
+      Variables: Variables
+      'Variables ': 'Variables '
+      'Variables  ': 'Variables  '
+      World: Mundo
