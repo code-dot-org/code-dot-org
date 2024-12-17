@@ -6,6 +6,14 @@
   align-items: center;
   padding: 20px;
   background-color: $black;
+
+  // We hide the input element because we use the label to trigger the file picker
+  // We use opacity 0 and height 0 rather than hidden so the input is still tabbable.
+  input[type="file"] {
+    opacity: 0;
+    height: 0;
+    line-height: 0;
+  }
 }
 
 .camera {
@@ -19,6 +27,3 @@
   margin-top: 4px;
 }
 
-.hiddenInput {
-  opacity: 0;
-}

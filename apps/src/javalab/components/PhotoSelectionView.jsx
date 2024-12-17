@@ -29,10 +29,7 @@ export default function PhotoSelectionView({
     >
       <input
         id={photoInputId}
-        className={classNames(
-          'uitest-hidden-uploader',
-          moduleStyles.hiddenInput
-        )}
+        className={classNames('uitest-hidden-uploader')}
         type="file"
         accept="image/*"
         capture="camera"
