@@ -167,10 +167,9 @@ function LandingPage({
           },
         });
 
+        setLoadingWorkshopsAsParticipant(false);
         if (response.ok) {
           const jsonData = await response.json();
-          console.log('jsonData', jsonData);
-          setLoadingWorkshopsAsParticipant(false);
           setWorkshopsAsParticipant(jsonData);
         }
       } catch (error) {
@@ -194,9 +193,9 @@ function LandingPage({
             }
           );
 
+          setLoadingWorkshopsAsFacilitator(false);
           if (response.ok) {
             const jsonData = await response.json();
-            setLoadingWorkshopsAsFacilitator(false);
             setWorkshopsAsFacilitator(jsonData.workshops_as_facilitator);
           }
         } catch (error) {
@@ -222,9 +221,9 @@ function LandingPage({
             }
           );
 
+          setLoadingWorkshopsAsOrganizer(false);
           if (response.ok) {
             const jsonData = await response.json();
-            setLoadingWorkshopsAsOrganizer(false);
             setWorkshopsAsOrganizer(jsonData.workshops_as_organizer);
           }
         } catch (error) {
@@ -250,9 +249,9 @@ function LandingPage({
             }
           );
 
+          setLoadingWorkshopsAsProgramManager(false);
           if (response.ok) {
             const jsonData = await response.json();
-            setLoadingWorkshopsAsProgramManager(false);
             setWorkshopsAsProgramManager(jsonData.workshops_as_program_manager);
           }
         } catch (error) {
@@ -538,6 +537,7 @@ function LandingPage({
           workshops={workshopsAsFacilitator}
           isLoading={loadingWorkshopsAsFacilitator}
           tableHeader={i18n.inProgressAndUpcomingWorkshops()}
+          participantView={false}
         />
       </>
     );
@@ -559,6 +559,7 @@ function LandingPage({
           workshops={workshopsAsProgramManager}
           isLoading={loadingWorkshopsAsProgramManager}
           tableHeader={i18n.inProgressAndUpcomingWorkshops()}
+          participantView={false}
         />
       </>
     );
@@ -583,6 +584,7 @@ function LandingPage({
           workshops={workshopsAsOrganizer}
           isLoading={loadingWorkshopsAsOrganizer}
           tableHeader={i18n.inProgressAndUpcomingWorkshops()}
+          participantView={false}
         />
       </>
     );

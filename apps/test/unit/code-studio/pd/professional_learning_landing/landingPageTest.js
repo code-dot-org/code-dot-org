@@ -132,7 +132,7 @@ describe('LandingPage', () => {
     expect(screen.queryByText(i18n.plLandingStartSurvey())).toBeFalsy();
     await waitFor(() => {
       screen.getByText(i18n.myWorkshops());
-      screen.getByText('Address 111');
+      screen.getByText(TEST_WORKSHOP.location_address);
       screen.getByText(i18n.plLandingSelfPacedProgressHeading());
       screen.getByText(i18n.plLandingStaticPLMidHighHeading());
     });
@@ -173,7 +173,7 @@ describe('LandingPage', () => {
 
     await waitFor(() => {
       screen.getByText(i18n.myWorkshops());
-      screen.getByText('Address 111');
+      screen.getByText(TEST_WORKSHOP.location_address);
     });
     fetchStub.mockRestore();
   });
