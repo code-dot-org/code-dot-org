@@ -1,0 +1,699 @@
+{
+  "resources": {
+    "_the_forest_for_the_trees_by_rena_priest/poetry/2023": {
+      "name": "\"El bosque por los árboles\" de Rena Priest",
+      "url": "<https: poets.org lesson-plan teach-poem-forest-trees-rena-priest>"
+    },
+    "all_standards/poetry/2023": {
+      "name": "Estándares en la codificación con poesía ",
+      "url": "<https: studio.code.org s poetry-2023 standards>"
+    },
+    "coding_with_poetry_vocabulary/poetry/2023": {
+      "name": "Vocabulario en Codificación con Poesía ",
+      "url": "<https: studio.code.org s poetry-2023 vocab>"
+    },
+    "cs_connections_landing_page/poetry/2023": {
+      "name": "Página de aterrizaje de CS Connections",
+      "url": "<https: code.org educate csc>",
+      "type": "Recurso"
+    },
+    "csc_extended_connections_book_list/poetry/2023": {
+      "name": "Lista de libros de conexiones extendidas de CSC",
+      "url": "<https: docs.google.com document d 14azofbay5riq109ruupi8bbzrvj1kithqa3mh7t428y template preview>",
+      "type": "Recurso"
+    },
+    "helpful_hints_for_teachers_and_learners/poetry/2023": {
+      "name": "Consejos útiles para profesores y alumnos",
+      "url": "<https: docs.google.com presentation d 1rsjhxo9zmtylrt160kvavdyekr4wt2fvsgbrphr4hs0 template preview>",
+      "type": "Recurso"
+    },
+    "resource_list_for_all_lessons/poetry/2023": {
+      "name": "Lista de recursos para todas las lecciones",
+      "url": "<https: studio.code.org s poetry-2023 resources>"
+    }
+  },
+  "lessons": {
+    "https://studio.code.org/s/poetry-2023/lessons/1": {
+      "name": "Animar un poema Introducción",
+      "overview": "En esta lección integrada de CS y ELA para nuevos programadores, los estudiantes animarán un poema con código para ilustrar el estado de ánimo de un poema. Primero, los estudiantes leerán y detectarán el estado de ánimo de un poema famoso. Luego, encontrarán los efectos e imágenes correspondientes para ayudar a ilustrar el estado de ánimo del poema. Finalmente, los estudiantes usarán eventos (código) para ilustrar un cambio en el estado de ánimo o animar nuevas imágenes en un poema.",
+      "preparation": "- Juegue a través de los niveles y revise las diapositivas de la lección - Decida el ritmo entre el tiempo de trabajo del estudiante y la instrucción de todo el grupo. - Considere explorar las actividades de preparación recomendadas antes de comenzar ([enlace][0]). - Considera estas opciones de extensión relacionadas ([enlace][1]) para explorar después de la última lección. ##### Opcional: - [Opcional] Revisa esta **[guía del profesor para la depuración][2]** para estar preparado para ayudar a los estudiantes a encontrar y corregir errores en su código. - [Opcional] **Programación en parejas** - Decida si desea que los estudiantes participen en la programación en parejas. Mira este [video][3] y visita esta página de [Soporte][4] para obtener más información.",
+      "purpose": "El propósito de esta lección es enseñar a los estudiantes cómo crear arte de poemas mediante el uso de código para animar el estado de ánimo de un poema. Esto proporciona una experiencia de aprendizaje atractiva e interactiva que integra las artes del lenguaje y la informática. Al combinar el análisis de la poesía con la codificación, la lección tiene como objetivo ayudar a los estudiantes a desarrollar una comprensión más profunda del impacto emocional del lenguaje y expresar este impacto a través del arte visual.",
+      "student_overview": "La poesía es hacer arte con palabras. Usarás código para agregar efectos visuales e imágenes para animar un poema. ",
+      "lesson_activities": {
+        "281ef28f-2969-4c60-80a4-8bdad8662658": {
+          "name": "Preparación recomendada",
+          "activity_sections": {
+            "4060fc38-c2a6-47ad-a35e-dd308ad03d85": {
+              "tips": [
+                "**Artes del Lenguaje en Inglés:** Para prepararse para este módulo y crear una comprensión compartida de la poesía juntos, recomendamos comenzar leyendo poesía juntos: Lean algunos poemas juntos como clase y practiquen nombrar el estado de ánimo de cada poema. Anime a los alumnos a compartir su interpretación, incluso si es diferente a la de otra persona. Asegúrese de que todos los estudiantes estén familiarizados con la estructura de un poema antes de la Lección 2, en la que los estudiantes escribirán sus propios poemas. **Ciencias de la Computación:** Como calentamiento para la herramienta, los estudiantes pueden agregar arte y animación a un poema clásico en esta actividad de la Hora del Código [Arte del Poema][0] (55 minutos)! Además, en este módulo los estudiantes utilizarán bloques de eventos para programar cambios en líneas importantes del poema. Para comenzar a desarrollar habilidades con eventos, intenta [Construir un juego de Flappy][1] (60 minutos). "
+              ]
+            }
+          }
+        },
+        "7387ce3c-05c0-477a-a59c-d72b1e06f2a2": {
+          "name": "Calentamiento",
+          "activity_sections": {
+            "62511971-1d68-4159-9949-a2c4fdceab41": {
+              "description": "#### Preparando el escenario Dé la bienvenida a los estudiantes a la clase y presente la actividad del día. <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Monitor**: Mostrar diapositiva \"Calentamiento\""
+            },
+            "b1356ec2-4bf3-4426-a00a-334dafc5c7f5": {
+              "description": "Hoy vamos a usar nuestra creatividad mientras aprendemos a programar. Hay muchas maneras de ser creativo. ¿Cuáles son algunas de las formas en que te gusta ser creativo? "
+            },
+            "539ab093-d297-428c-9ac2-d4e5d72b9ee2": {
+              "description": "Aliente a los alumnos a compartir las formas en que expresan su creatividad, como con el arte, la danza, la música o la escritura. Como pregunta de seguimiento, pregunte a los alumnos qué utilizan para inspirar su creatividad. <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Monitor**: Mostrar la diapositiva \"Discutir\""
+            },
+            "7c92a266-7632-40a2-86d1-981fcd2c89ff": {
+              "description": "¿Sabías que la informática puede ser muy creativa? De hecho, se puede hacer arte con código. Como recordatorio, el código es un conjunto de instrucciones que una computadora puede entender. Al igual que elegir qué colores de pintura usar, elegir qué código escribir también puede ser una oportunidad para expresar tu creatividad. Hoy vamos a usar la poesía para inspirar nuestra programación creativa. ¿Alguien sabe lo que es la poesía? ¿Tienes un poema o poeta favorito? "
+            },
+            "182b31a3-ea9b-4bd5-b846-a259ce445d39": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Monitor**: Muestre un par de diapositivas de poesía **Lean poesía juntos:** Lean algunos poemas juntos como clase y practiquen nombrar el estado de ánimo de cada poema. Anime a los alumnos a compartir su interpretación, incluso si es diferente a la de otra persona. Asegúrese de que todos los estudiantes estén familiarizados con la estructura de un poema antes de la Lección 2, en la que los estudiantes escribirán sus propios poemas."
+            },
+            "382ab49b-35e9-40bd-9684-36a4c83dbd90": {
+              "tips": [
+                "La codificación con la poesía <a href=\"https://docs.google.com/presentation/d/1k0VP9so-gmAHq9mSOTxiZ98pX7gNfN6TutBeoDa3pxY/template/preview\" target=\"_blank\">Diapositivas</a> Presentar varios poemas. Estos poemas están incluidos en la progresión del nivel y los alumnos podrán añadir su propio código para animarlos. Elija un par de antemano para leer en voz alta como clase."
+              ]
+            }
+          }
+        },
+        "c54ef9e6-6b5a-481e-b77d-7e446171e8b0": {
+          "name": "Actividad Principal",
+          "activity_sections": {
+            "1090d899-8702-44e4-8973-dfc66eaf2a4e": {
+              "name": "Arte Poemario",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Monitor**: Mostrar diapositiva \"Todos los niveles\""
+            },
+            "0838e4f8-8a88-4048-98c4-1a035464dc06": {
+              "description": "Mira cuidadosamente cada video que aparezca antes de comenzar. Vuelve al video si necesitas un repaso. Lee algunos poemas para elegir el que más te guste. Piensa en el estado de ánimo del poema y encuentra efectos que coincidan con el estado de ánimo. "
+            },
+            "5b6dd0fc-9786-4553-b7f6-44b6bb5ef3f0": {
+              "tips": [
+                "#### Apoyo general Al final de esta actividad, los estudiantes tendrán un poema animado que representa su interpretación visual del poema que eligieron. Esta lección está diseñada para dar a los estudiantes la oportunidad de jugar con su código y encontrar los efectos visuales que más les gusten. Mientras recorren el salón, anime a los estudiantes a: - **Tómese su tiempo:** La mayoría de los niveles requieren que los estudiantes encuentren los efectos perfectos para que coincidan con su interpretación del estado de ánimo del poema. Se recomienda encarecidamente mantenerse en un nivel y jugar con su código. - **Encuentra un poema que te guste:** El poema que se muestra para un estudiante en un nuevo nivel es solo una sugerencia. Hay un menú desplegable de poemas con poemas precargados en la parte superior del espacio de juego. Pida a los alumnos que lean algunas y que encuentren una que les hable. A continuación, pueden empezar a animar el poema que eligieron con código. - **Mostrar un nivel completado:** Cualquier burbuja de nivel que sea completamente verde significa que el estudiante completó con éxito todos los requisitos para ese nivel. Pida a un estudiante que haga clic en una burbuja verde para mostrar lo que creó. Para los momentos en que un estudiante se siente atascado: - **Lea las instrucciones:** Las instrucciones son viñetas sobre cómo completar el nivel. Si un estudiante se siente atascado, pídale que le lea las instrucciones en voz alta y pídale que repita lo que dicen las instrucciones con sus propias palabras. - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Los estudiantes también pueden hacer clic en este ícono de texto a voz para escuchar las instrucciones leídas en voz alta. - <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Busca pistas**: La mayoría de los niveles incluyen al menos una pista con detalles más explícitos sobre cómo pasar el nivel. - **Celebra los errores:** Obtener un error en tu código es una parte natural del proceso de codificación. Si el programa no está haciendo lo que esperaban, pídale al estudiante que primero le diga lo que quiere que suceda, haga clic en ejecutar para observar lo que realmente está sucediendo y luego busque el lugar en su código que causó la discrepancia. Recuerde celebrar la búsqueda y corrección de errores. Tener un error significa que los estudiantes están haciendo un gran trabajo construyendo un programa más complejo. "
+              ]
+            },
+            "9613f996-b728-45e2-b767-e6b742c6c9b6": {
+              "name": "Soporte Nivel por Nivel",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Monitor**: Mostrar la diapositiva \"Video de introducción\" **Nivel 1:** Anime a los estudiantes a leer el poema. Luego pida a los alumnos que encuentren un color o efecto de fondo que coincida con el tono del poema que eligieron. ",
+              "progression_name": "Desarrollo de habilidades"
+            },
+            "f49370af-c4f2-49b8-a4b9-3b0e0f1400e5": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Monitor**: Mostrar la diapositiva \"Nivel 2 y 5 - Observar\" **Nivel 2:** En este ejemplo, los estudiantes deben leer el poema por su cuenta primero y luego presionar Ejecutar. Puede preguntarle al estudiante si el sonido y los efectos que eligió el programador coincidían con el estado de ánimo del poema. Pida a los alumnos que expliquen su respuesta. ",
+              "progression_name": "Ejemplo"
+            },
+            "211c41db-9e93-4c86-9ecb-e6718e94e39e": {
+              "description": "**Nivel 3:** Este nivel introduce el sonido. Los estudiantes pueden usar auriculares si los tienen. ",
+              "progression_name": "Desarrollo de habilidades"
+            },
+            "9b5c4d0c-a964-42af-93f5-922938a36096": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Monitor**: Mostrar diapositiva \"Video de eventos\" **Nivel 4:** Pida a los estudiantes que lean el poema y encuentren la línea donde cambia el estado de ánimo del poema o si hay una nueva imagen que el poeta introduce. Utilice el bloque de eventos para añadir los efectos correspondientes a los versos identificados del poema.",
+              "progression_name": "Desarrollo de habilidades"
+            },
+            "1e4ba2cc-5710-4088-b840-9e099e6ed70d": {
+              "description": "**Nivel 5:** En este ejemplar, los estudiantes deben leer el poema por su cuenta primero, luego presionar Ejecutar. Pregúntele al estudiante si las imágenes coincidían con las palabras del poema. Pídales que expliquen su respuesta. ",
+              "progression_name": "Ejemplo"
+            },
+            "45ae5705-dca5-4b77-a2f5-fd53b9ce3bb1": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Monitor**: Mostrar diapositiva \"Vídeo de imágenes\" **Niveles 6, 7, 8:** Consulte \"Celebrar errores\" en la sección Soporte general. Anime a los estudiantes a crear programas con más de una transición con sus bloques de eventos. ",
+              "progression_name": "Desarrollo de habilidades"
+            },
+            "e714d4ed-82d3-42a3-8d94-2f236df2f267": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Monitor**: Mostrar la diapositiva \"Video de felicitaciones\" <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Monitor**: Mostrar la diapositiva \"Nivel 9 - Juego libre\" **Nivel 9:** Anime a los estudiantes a leer todos los poemas en el menú desplegable para encontrar uno que les guste. Dígales a los estudiantes que pueden compartir lo que ganen en este nivel final con sus amigos y familiares. ¡Ahora es el momento de juntar todas las habilidades de codificación y ELA! ",
+              "progression_name": "Juego libre"
+            }
+          }
+        },
+        "ce713f16-6392-4922-b661-50dbf0853e80": {
+          "name": "Conclusión",
+          "activity_sections": {
+            "a74e9248-707c-43ca-bc03-c4b024a9cd2a": {
+              "description": "Si te gustó aprender a programar hoy, puedes seguir aprendiendo visitando code.org/learn. Si quieres compartir lo que has hecho con tus amigos y familiares, haz clic en el botón \"Compartir\" y envía el enlace a quien quieras."
+            },
+            "8832acb1-6add-4178-9e8b-736a6e045e44": {
+              "name": "(Opcional) Evaluación: Verifique la comprensión",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Monitor**: Mostrar la diapositiva \"Repartir dos notas adhesivas\" Reparta dos notas adhesivas por estudiante. "
+            },
+            "de9f9de3-8721-41e9-a96b-5ca3bb25041f": {
+              "description": "Tienes dos notas adhesivas. En uno, escribe una cosa que hayas aprendido sobre programación hoy. En el segundo, escribe una cosa que hayas aprendido hoy sobre la poesía. "
+            },
+            "8af5669d-aefe-47b8-b6d4-ec370642078a": {
+              "name": "Látigo",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Monitor**: Mostrar la diapositiva \"Whiparound\" **Comenta:** ¿_What más esperas aprender sobre programación y ciencias de la computación?_"
+            }
+          }
+        },
+        "aad4dda1-507b-42a5-a62c-1aac5671cb91": {
+          "name": "Oportunidades de extensión",
+          "activity_sections": {
+            "ca01b961-e407-42c4-9abc-fb3990df39d3": {
+              "description": "Este módulo es una excelente introducción a la informática a través de la lente de la ciencia. Estas son algunas opciones para seguir aprendiendo más sobre los conceptos de CS presentados en este módulo. Recomendamos buscar estas extensiones después de completar la Lección 3 de este módulo. "
+            },
+            "3ffbf11a-4e50-40ff-b781-f003016c72c6": {
+              "tips": [
+                "**Contenido de ELA:**\\ Lea un libro para continuar desarrollando la comprensión del estado de ánimo y el lenguaje figurado: - <a href=\"https://www.amazon.com/My-Blue-Happy-Jessica-Young/dp/0763651257\" target=\"_blank\">\"Mi azul es feliz\"</a> Libro ilustrado que explica cómo los sentimientos se pueden asociar con diferentes colores y cómo diferentes personas pueden tener diferentes perspectivas sobre el mismo color. - <a href=\"https://www.amazon.com/s?k=feelings+in+color&crid=3CGPI36E1RPV8&sprefix=feelings+in+color%2Caps%2C667&ref=nb_sb_noss_1\" target=\"_blank\">\"Sentimientos en color\"</a> es un libro de poesía que se divide en secciones de color. Cada color representa un sentimiento, y esa sección contiene poemas con un tema determinado. - <a href=\"https://www.amazon.com/Red-Sings-Treetops-Colors-Sidman/dp/0547014945/ref=sr_1_1?crid=H9ZK0W8DBKC5&keywords=red+sings+from+treetops&qid=1685390186&sprefix=red+sings+%2Caps%2C296&sr=8-1\" target=\"_blank\">\"El rojo canta desde las copas de los árboles\"</a> es un libro ilustrado de Joyce Sidman (una poeta galardonada) que conecta los colores de las diferentes estaciones con nuestros sentidos. **Conceptos de Ciencias de la Computación:** - Para continuar explorando eventos, los estudiantes pueden <a href=\"https://studio.code.org/s/coursed-2023/lessons/7\" target=\"_blank\">Construye un juego de Star Wars.</a> - <a href=\"http://studio.code.org/s/csc-bookcovers-2023\" target=\"_blank\">Portadas de libros CSC</a> también conecta la informática con los estándares ELA. Los estudiantes programarán la portada de un libro interactivo centrándose en los personajes y el escenario. - <a href=\"http://studio.code.org/s/csc-timecapsule-2023\" target=\"_blank\">Cápsula del tiempo CSC </a>El módulo utiliza la poesía y la informática para conectarse con los estudios sociales. Los estudiantes codificarán poemas cortos que representen un momento específico en el tiempo, como una cápsula del tiempo."
+              ]
+            }
+          }
+        }
+      },
+      "objectives": {
+        "1bd88170-e38e-4c5b-bd62-8107acd68567": {
+          "description": "Representar el lenguaje figurado y literal en un texto."
+        },
+        "4b7b140c-b345-48c6-b81b-eea3c37f2a0b": {
+          "description": "Usa el código para animar cambios en el estado de ánimo de un poema."
+        },
+        "a39a475f-a7c2-402f-abef-87340f6e4a45": {
+          "description": "Usa bloques de eventos para desencadenar una acción que ocurra en líneas específicas del poema."
+        }
+      },
+      "resources": {
+        "_the_forest_for_the_trees_by_rena_priest_1/poetry/2023": {
+          "name": "\"El bosque por los árboles\" de Rena Priest",
+          "url": "<https: poets.org lesson-plan teach-poem-forest-trees-rena-priest>",
+          "type": "Recurso"
+        },
+        "coding_with_poetry_lesson_1/poetry/2023": {
+          "name": "Codificando con poesía",
+          "url": "<https: docs.google.com presentation d 1k0vp9so-gmahq9msotxiz98px7gnfn6tutbeoda3pxy template preview>",
+          "type": "Diapositivas"
+        },
+        "helpful_hints_1/poetry/2023": {
+          "name": "Consejos útiles",
+          "url": "<https: docs.google.com presentation d 1rsjhxo9zmtylrt160kvavdyekr4wt2fvsgbrphr4hs0 template preview>",
+          "type": "Diapositivas"
+        },
+        "poem_art_1_-_introduction/poetry/2023": {
+          "name": "Poema Arte 1 - Introducción ",
+          "url": "<https: www.youtube.com watch?v=\"uvwUWTTjIXo&amp;list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&amp;index=2\">",
+          "type": "Video"
+        },
+        "poem_art_2_-_events/poetry/2023": {
+          "name": "Poema Arte 2 - Eventos",
+          "url": "<https: www.youtube.com watch?v=\"XGwYYUEb6jQ&amp;list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&amp;index=3\">",
+          "type": "Video"
+        },
+        "poem_art_3_-_imagery/poetry/2023": {
+          "name": "Poema Arte 3 - Imágenes",
+          "url": "<https: www.youtube.com watch?v=\"doy1aIuV-5U&amp;list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&amp;index=4\">",
+          "type": "Video"
+        },
+        "poem_art_4_-_celebration/poetry/2023": {
+          "name": "Poema Arte 4 - Celebración ",
+          "url": "<https: www.youtube.com watch?v=\"Q-76vz8i8mo&amp;list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&amp;index=5\">",
+          "type": "Video"
+        }
+      },
+      "vocabularies": {
+        "code/poetry/2023": {
+          "word": "Código",
+          "definition": "(v) para escribir instrucciones para una computadora."
+        },
+        "event/poetry/2023": {
+          "word": "Evento",
+          "definition": "Una acción que hace que algo suceda."
+        },
+        "line/poetry/2023": {
+          "word": "Línea",
+          "definition": "(poesía) - una subdivisión de un poema dispuesto en una fila que termina en el margen derecho."
+        },
+        "mood/poetry/2023": {
+          "word": "Humor",
+          "definition": "La expresión de un sentimiento, atmósfera o emoción en el arte o la escritura."
+        },
+        "poem/poetry/2023": {
+          "word": "Poema",
+          "definition": "Líneas de escritura que usan palabras para crear imágenes, sentimientos e ideas en la mente del lector."
+        },
+        "program/poetry/2023": {
+          "word": "Programa",
+          "definition": "Una serie de pasos que se han codificado en algo que puede ser ejecutado por una máquina."
+        }
+      }
+    },
+    "https://studio.code.org/s/poetry-2023/lessons/2": {
+      "name": "Escribiendo mi poema",
+      "overview": "En esta lección, los estudiantes planearán y escribirán su propio poema. Los estudiantes reflexionarán sobre sus experiencias personales y de vida para seleccionar una idea importante para un poema corto que puedan animar. En la próxima lección, los estudiantes codificarán sus poemas, por lo que es importante que hayan redactado un poema corto.",
+      "preparation": "- Revisa las diapositivas de la lección. - Imprime un folleto **Escribe tu propio poema** (<a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\n    \" target=\"_blank\">Raíces de oración</a> \\| <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\" target=\"_blank\">Temas</a>) para cada alumno. - Considere estas opciones de extensión relacionadas ([enlace][0]) para explorar después de la última lección.",
+      "purpose": "Al combinar la escritura de poesía con la codificación, la lección tiene como objetivo ayudar a los estudiantes a desarrollar una comprensión más profunda del proceso creativo y a expresar sus ideas y emociones a través del lenguaje y la tecnología. A medida que los estudiantes toman decisiones sobre la elección de palabras, se les anima a planificar cómo usar su código de manera creativa y significativa para crear una representación visual del impacto emocional de su poema. ",
+      "student_overview": "Hoy escribirás tu propio poema. A medida que planifiques, piensa en qué temas son importantes para ti. ¿Qué quieres compartir con los lectores?. En la próxima clase codificarás tu poema. Empieza a pensar en qué fondos, efectos de texto, sonidos, sprites y eventos puedes usar.",
+      "lesson_activities": {
+        "f3ff3f84-baa4-4480-9970-252a7478e738": {
+          "name": "Calentar",
+          "activity_sections": {
+            "08a4766f-c941-4770-9bb4-019389604584": {
+              "name": "Escribir un poema",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Monitor**: Mostrar diapositiva de \"Calentamiento\" **Objetivo de discusión**: Utiliza esta actividad de calentamiento para activar los conocimientos previos y discutir por qué escribimos poesía. Esta discusión debe preparar a los alumnos para escribir sus propios poemas más adelante en la lección."
+            },
+            "aa2b8af4-d941-4f4b-8b5c-2b0462df453e": {
+              "description": "La última vez, aprendimos a detectar el estado de ánimo de un poema y a usar un código para animarlo. En esa actividad, elegiste el poema de otro autor para animar. Hoy, vas a escribir tus propios poemas y pensar en qué bloques usarías para animar las palabras de tu poema en la pantalla. En la próxima clase, podrás animar tu poema utilizando lo que sabes sobre efectos de codificación, sprites y eventos. Antes de comenzar a escribir nuestros propios poemas, pensemos en la actividad que hicimos la clase pasada. - _Why escribimos poesía?_ - _What Cuáles son algunos de tus poemas favoritos de la última lección?_ - _What hace un buen poema?_"
+            },
+            "8e76a45c-4ef0-49db-9839-ed7e5323a7f1": {
+              "description": "**Objetivo de la discusión:** Anime a los estudiantes a encontrar respuestas como \"la poesía es hacer arte con palabras\" o \"escribimos poesía para expresar un sentimiento\". Mientras discuten lo que a los estudiantes les gusta de ciertos poemas, aliente a los estudiantes a hablar sobre la forma en que el poema los hizo sentir o qué imágenes les vinieron a la mente mientras leían el poema. Mientras discuten lo que hace que un poema sea bueno, pregunte a los estudiantes si los poemas deben rimar o tener una cierta longitud. ¿Puede un buen poema hacerte reír? Busca respuestas como \"un buen poema es aquel que usa tu imaginación\" o \"un buen poema te hace sentir algo\"."
+            },
+            "1d723fa3-6aec-4dd5-a864-ee117b0272e8": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Monitor**: Mostrar la diapositiva \"Discutir\" **Discutir:** _What Cuáles son los pros y los contras de usar la informática para crear un poema?_ **Objetivo de la discusión:** El propósito de esta pregunta de calentamiento es cambiar el pensamiento de los estudiantes hacia la informática y este proyecto específico. Los estudiantes deben activar los conocimientos previos de la Lección 1: la informática es una herramienta poderosa para codificar un poema porque puede agregar complejidad y detalles para darle vida realmente. Leer un poema se convierte en una experiencia inmersiva cuando se utiliza la informática."
+            },
+            "9173de11-3a80-4f69-9fd1-fbeefc15e9b8": {
+              "tips": [
+                "Dé a los estudiantes 10 segundos de **tiempo de reflexión** antes de permitir respuestas. Esto permitirá que más estudiantes participen y las respuestas pueden ser más reflexivas. Pida a los estudiantes que **giren y hablen** para compartir ideas iniciales. Esto permitirá que todos los estudiantes participen en la discusión en lugar de solo unos pocos. "
+              ]
+            }
+          }
+        },
+        "e9cbffab-836c-44c6-91e3-fe51eb49cd13": {
+          "name": "Actividad",
+          "activity_sections": {
+            "6f6494f4-88eb-4f26-8063-c4a204ccf341": {
+              "name": "Rúbrica de revisión",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Monitor**: Mostrar diapositiva \"Codificación con Rúbrica de poesía\""
+            },
+            "0ec77c09-d672-48e6-a663-43cfa09f39ce": {
+              "description": "Vas a crear tu poema y darle vida con código. Antes de empezar, echemos un vistazo a la rúbrica para ver qué incluirá tu proyecto.",
+              "tips": [
+                "En esta lección, usarás el método <a href=\"https://docs.google.com/document/d/13CJlIIV2CFu9D6-oxAm99PZ6EqNnDUZwFZCEW9fSMaE/template/preview\" target=\"_blank\">rúbrica</a> para evaluar los proyectos de sus estudiantes. Las rúbricas son herramientas valiosas que aportan coherencia y claridad al proceso de evaluación. Al describir criterios específicos y niveles de desempeño, las rúbricas garantizan que todos los estudiantes sean evaluados de manera justa y objetiva. Te animamos a que compartas la rúbrica con tus estudiantes antes de que comiencen sus proyectos. Esto les ayuda a comprender las expectativas y a trabajar para cumplir con los criterios descritos. Además, a medida que califique su trabajo, consulte la rúbrica de manera coherente, de modo que cada aspecto del proyecto se evalúe en función del mismo conjunto de estándares. Al adoptar este enfoque, promueve la equidad, proporciona comentarios significativos a los estudiantes y los ayuda a identificar áreas de crecimiento y mejora."
+              ]
+            },
+            "ebbed86c-9d52-42cd-ba0b-658476a564df": {
+              "name": "Lluvia de ideas",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Monitor**: \"Planea tu poema: Raíz de oración\" o \"Planea tu poema: Diapositiva \"Temas\""
+            },
+            "e650d5df-ec03-4080-870f-70516508f4ec": {
+              "description": "Ahora que tenemos algo de inspiración, usaremos un organizador gráfico para planificar nuestros poemas. Encontrarás un compañero que te ayude a hacer una lluvia de ideas sobre lo que dirá tu poema. Recuerda que un poema se compone de varios versos que pueden rimar pero no tienen por qué hacerlo. Usa las raíces de las oraciones o los temas de poesía para comenzar. Cuando hagas una lluvia de ideas, es útil anotar tantas ideas como se te ocurran. Luego, cuando todas tus ideas estén en papel, elige las mejores y utilízalas en tu versión final. Empecemos. A la cuenta de tres, encontrarás a tu pareja y comenzarás. 1…2…3."
+            },
+            "34ce2240-3936-4e06-9ed1-7f877e98d742": {
+              "description": "**Haz esto**: Entregue a cada alumno un volante de Escribe mi propio poema. Pida a los alumnos que se emparejen con un compañero y lean el volante. Los estudiantes deben discutir con su compañero cómo van a responder las preguntas antes de comenzar a escribir. **_Sentence Tallos:_** Pida a los estudiantes que respondan las 8 raíces de las oraciones. **_Poetry Temas:_** Pida a los estudiantes que elijan 1 tema y redacten un poema en las líneas a continuación."
+            },
+            "63a8df80-5449-402f-ada3-514840f5b47c": {
+              "name": "Raíces de oración",
+              "description": "- _I encanta to..._ - _I sentirse feliz when..._ - _Someone is..._ especial - _My momento favorito del día is..._ - _My lugar favorito is..._ - _I saber cómo to..._ - _I quieres learn..._ - _One día, will..._"
+            },
+            "2f14b146-337f-4c9b-85d4-b5032d0b6291": {
+              "name": "Temas de poesía",
+              "description": "_You puede escribir sobre:_ 1. _The mejor día ever_ 2. _A feliz memory_ 3. _A triste memory_ 4. _Your favorito food_ 5. _A dream_ 6. _A tema de tu choice_"
+            },
+            "8c133a86-8097-4356-9f81-1caa501a07d8": {
+              "progression_name": "Actividad desconectada"
+            },
+            "5e0ddc43-3c1c-4f35-a143-0363caba2bf7": {
+              "tips": [
+                "A medida que los estudiantes discuten en parejas, camine por el salón y observe cómo interactúan entre sí. Asegúrese de que los estudiantes se escuchen activamente unos a otros y planifiquen una respuesta a cada pregunta. Recuerde a los alumnos que esta actividad sirve como base para sus poemas."
+              ]
+            },
+            "b0fcdd5c-80a1-43e0-a3c6-29a6f915cd9b": {
+              "name": "Escribe tu propio poema",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Monitor**: Mostrar la diapositiva \"Escribe tu propio poema\""
+            },
+            "0bc81311-f866-41f7-b704-dc3dfa994528": {
+              "description": "Ahora es el momento de que escribamos nuestros propios poemas. Usa un par de las ideas que hiciste y escribe un poema que tenga entre tres y ocho líneas. Usa un lenguaje descriptivo para pintar una imagen en la mente del lector. Tómate 15 minutos para escribir tu poema. El temporizador comienza ahora."
+            },
+            "3a652598-cf63-4947-a18d-e061b8ea0b78": {
+              "description": "**Haz esto**: Pida a los alumnos que pasen su volante a la última página. Seleccionarán un par de ideas de su sesión de lluvia de ideas para usarlas en su poema. Los estudiantes deben pensar en un título y alrededor de 8 líneas de poema. Después, los estudiantes comenzarán a pensar en cómo codificarán su poema para darle vida. Considerarán las habilidades que aprendieron en la Lección 1 y cómo las aplicarán a su propio poema corto. **Circula:** Mientras los estudiantes escriben sus poemas, circule por la sala para ver quién podría necesitar ayuda adicional para comenzar. Estas son algunas sugerencias orientativas para ayudar a un estudiante que se siente atascado: - Elija uno de los temas. ¿Podrías describir algunas de las cosas que te vienen a la mente cuando piensas en el tema? Otras indicaciones: - Cuéntame sobre una ocasión en la que aprendiste algo de la manera más difícil. - Escribe una oda a algo que te guste. - Escribe un poema desde la perspectiva de tu mascota. Anime a un estudiante que está atascado a escribir todas las palabras que le vengan a la mente. Pueden editar más tarde. **Reagrupe:** Pida a los estudiantes que hagan una pausa y asegúrense de darle un título a su poema antes de continuar. <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Monitor**: Muestre diapositivas de \"Ejemplo\" **Haga esto:** Pida a los estudiantes que se refieran a los poemas de ejemplo escritos en su folleto y en las diapositivas si se sienten atascados. "
+            },
+            "bf6156f8-6307-4af9-8f3a-53c3633a1002": {
+              "name": "Efectos del poema",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Monitor**: Mostrar diapositivas de \"Dale vida a tu poema\" - _What **fondo** podría ir con tu poema?_ - _What **efectos de texto** podrían ir con tu poema?_ - _What **sonidos** podrían ir con tu poema?_ - _What **sprites** podrían ir con tu poema?_ **Haz esto:** Dale a los estudiantes 5 minutos para hacer una lluvia de ideas sobre los diferentes efectos visuales y de audio que podrían agregar a sus poemas. Anímelos a anotar esos efectos junto al verso correspondiente de su poema."
+            },
+            "665743fa-bed1-498f-bfb5-feb2b6baf6c0": {
+              "tips": [
+                "Pida a los alumnos que lean su poema unas cuantas veces para ayudarles a imaginar cómo se vería con los efectos visuales y las imágenes. Si los alumnos tienen problemas para pensar en palabras o frases para animar, pídales que reflexionen sobre los ejemplos que vieron en la lección anterior."
+              ]
+            }
+          }
+        },
+        "48e777fe-4e61-4b4e-bfdd-d69fb9869eaa": {
+          "name": "Envolver",
+          "activity_sections": {
+            "2522adc1-9ff5-4d94-a789-85795f238c16": {
+              "name": "Reflexión",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Monitor**: Mostrar la diapositiva \"Reflexionar\" **Reflexionar:** - _Read tu poema a un partner._ - _Discuss los fondos, efectos de texto, sonidos y sprites que planeas use._ - _Look de vuelta a the_ <a href=\"https://docs.google.com/document/d/13CJlIIV2CFu9D6-oxAm99PZ6EqNnDUZwFZCEW9fSMaE/template/preview\" target=\"_blank\">rúbrica</a> _to asegúrate de que tu poema cumpla con todos los requirements._ **Objetivo de la discusión:** Para la próxima lección, los estudiantes deben tener un poema corto revisado por pares para usar en su aplicación de poemas digitales. El objetivo de la discusión es asegurarse de que los estudiantes hayan planeado los fondos, los efectos de texto, los sonidos y los sprites que planean usar en su código. Es posible que los estudiantes quieran hacer pequeños repasos después de hablar con su compañero."
+            }
+          }
+        },
+        "9484e482-4713-4747-84d0-fba065c7e4a1": {
+          "name": "Oportunidades de extensión",
+          "activity_sections": {
+            "0b16d8e7-63c6-4878-b0ee-42865e00697e": {
+              "description": "Este módulo es una gran introducción a la informática a través de la lente de la poesía. Estas son algunas opciones para seguir aprendiendo más sobre los conceptos de CS presentados en este módulo. Recomendamos buscar estas extensiones después de completar la Lección 4 de este módulo. "
+            },
+            "054b2bd3-82cc-4bf9-ba4e-bf62fe02f01d": {
+              "tips": [
+                "**Contenido de ELA:**\\ Lea un libro para continuar desarrollando la comprensión del estado de ánimo y el lenguaje figurado: - <a href=\"https://www.amazon.com/My-Blue-Happy-Jessica-Young/dp/0763651257\" target=\"_blank\">\"Mi azul es feliz\"</a> Libro ilustrado que explica cómo los sentimientos se pueden asociar con diferentes colores y cómo diferentes personas pueden tener diferentes perspectivas sobre el mismo color. - <a href=\"https://www.amazon.com/s?k=feelings+in+color&crid=3CGPI36E1RPV8&sprefix=feelings+in+color%2Caps%2C667&ref=nb_sb_noss_1\" target=\"_blank\">\"Sentimientos en color\"</a> es un libro de poesía que se divide en secciones de color. Cada color representa un sentimiento, y esa sección contiene poemas con un tema determinado. - <a href=\"https://www.amazon.com/Red-Sings-Treetops-Colors-Sidman/dp/0547014945/ref=sr_1_1?crid=H9ZK0W8DBKC5&keywords=red+sings+from+treetops&qid=1685390186&sprefix=red+sings+%2Caps%2C296&sr=8-1\" target=\"_blank\">\"El rojo canta desde las copas de los árboles\"</a> es un libro ilustrado de Joyce Sidman (una poeta galardonada) que conecta los colores de las diferentes estaciones con nuestros sentidos. **Conceptos de Ciencias de la Computación:** - Para continuar explorando eventos, los estudiantes pueden <a href=\"https://studio.code.org/s/coursed-2023/lessons/7\" target=\"_blank\">Construye un juego de Star Wars.</a> - <a href=\"http://studio.code.org/s/csc-bookcovers-2023\" target=\"_blank\">Portadas de libros CSC</a> también conecta la informática con los estándares ELA. Los estudiantes programarán la portada de un libro interactivo centrándose en los personajes y el escenario. - <a href=\"http://studio.code.org/s/csc-timecapsule-2023\" target=\"_blank\">Cápsula del tiempo CSC </a>El módulo utiliza la poesía y la informática para conectarse con los estudios sociales. Los estudiantes codificarán poemas cortos que representen un momento específico en el tiempo, como una cápsula del tiempo."
+              ]
+            }
+          }
+        }
+      },
+      "objectives": {
+        "2dfe199c-6e82-4979-a24f-0b20d8b14f2f": {
+          "description": "Explique cómo los efectos visuales, los sonidos y las imágenes mejoran la experiencia del espectador con un poema."
+        },
+        "521bc123-9d0a-4588-9b39-a3cc94229a64": {
+          "description": "Planear y escribir sus propios poemas."
+        },
+        "db6ecf8b-0374-46ea-b6cd-d59ac77879a1": {
+          "description": "Desarrollar habilidades de pensamiento crítico y resolución de problemas al requerir que los estudiantes tomen decisiones sobre cómo representar su poema usando el código y el arte."
+        }
+      },
+      "resources": {
+        "coding_with_poetry_lesson_1/poetry/2023": {
+          "name": "Codificando con poesía",
+          "url": "<https: docs.google.com presentation d 1k0vp9so-gmahq9msotxiz98px7gnfn6tutbeoda3pxy template preview>",
+          "type": "Diapositivas"
+        },
+        "coding_with_poetry_rubric/poetry/2023": {
+          "name": "Rúbrica de codificación con poesía",
+          "url": "<https: docs.google.com document d 13cjliiv2cfu9d6-oxam99pz6eqnnduzwfzcew9fsmae template preview>",
+          "type": "Rúbrica"
+        },
+        "helpful_hints/poetry/2023": {
+          "name": "Consejos útiles",
+          "url": "<https: docs.google.com presentation d 1rsjhxo9zmtylrt160kvavdyekr4wt2fvsgbrphr4hs0 template preview>",
+          "type": "Diapositivas"
+        },
+        "write_your_own_poem/poetry/2023": {
+          "name": "Escribe tu propio poema - Raíces de oraciones",
+          "url": "<https: docs.google.com document d 1b6w_lonibuhydlycp3rawed5ielgm6loqajwg-hlih0 template preview>",
+          "type": "Folleto"
+        },
+        "write_your_own_poem_-_topics/poetry/2023": {
+          "name": "Escribe tu propio poema - Temas",
+          "url": "<https: docs.google.com document d 1v-dawoiuk0xt7nytzx3aet4my-jc-hx4vy21kl4spoe template preview>",
+          "type": "Folleto"
+        }
+      },
+      "vocabularies": {
+        "code/poetry/2023": {
+          "word": "Código",
+          "definition": "(v) para escribir instrucciones para una computadora."
+        },
+        "event/poetry/2023": {
+          "word": "Evento",
+          "definition": "Una acción que hace que algo suceda."
+        },
+        "line/poetry/2023": {
+          "word": "Línea",
+          "definition": "(poesía) - una subdivisión de un poema dispuesto en una fila que termina en el margen derecho."
+        },
+        "mood/poetry/2023": {
+          "word": "Humor",
+          "definition": "La expresión de un sentimiento, atmósfera o emoción en el arte o la escritura."
+        },
+        "poem/poetry/2023": {
+          "word": "Poema",
+          "definition": "Líneas de escritura que usan palabras para crear imágenes, sentimientos e ideas en la mente del lector."
+        },
+        "program/poetry/2023": {
+          "word": "Programa",
+          "definition": "Una serie de pasos que se han codificado en algo que puede ser ejecutado por una máquina."
+        }
+      }
+    },
+    "https://studio.code.org/s/poetry-2023/lessons/3": {
+      "name": "Codificando mi poema",
+      "overview": "En esta lección integrada de CS y ELA, los estudiantes trabajarán en sus computadoras para animar sus poemas con código. En la lección 1, los estudiantes usaron un menú desplegable de poemas para elegir el poema que querían animar. En esta lección, los estudiantes ingresarán sus propios poemas en el espacio de juego y luego usarán bloques de código para agregar fondos, efectos, sonidos y sprites.",
+      "preparation": "- Juegue a través de los niveles y revise las diapositivas de la lección con anticipación para prepararse para las secciones de codificación y discusión de la lección. - Asegúrese de que los estudiantes tengan su folleto Escribe tu propio poema de la clase pasada. - Imprime uno**<a href=\"https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/template/preview\" target=\"_blank\">Lista de verificación de poemas</a>** para cada estudiante. - Considere estas opciones de extensión relacionadas ([enlace][0]) para explorar después de la última lección. #### Opcional - Considere la necesidad de auriculares si los estudiantes planean agregar sonidos a sus proyectos. - Crea tu propia aplicación de poemas como ejemplo para los estudiantes.",
+      "purpose": "Los estudiantes podrán personalizar sus poemas eligiendo qué efectos quieren agregar a sus programas. Seleccionarán sus proyectos de acuerdo con sus propios intereses y experiencias personales.",
+      "student_overview": "Hoy en día, podrás personalizar tu poema eligiendo los efectos que quieres añadir a tu cápsula del tiempo. ",
+      "lesson_activities": {
+        "1bf99ed8-87aa-4bc1-b29e-77d8836cbff5": {
+          "name": "Calentar",
+          "activity_sections": {
+            "591d5554-8192-45e8-8148-90ea3dccb6e7": {
+              "name": "Leer ejemplos de poemas",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Monitor**: Mostrar la diapositiva \"En el patio de recreo\" **_On el Playground_**\\ _By Jared K._ _Up la escalera, uno por uno,\\ El tobogán espera, vamos a divertirnos un poco.\\ Columpiándose, colgando, sintiéndose fuerte,\\ Estamos en las barras de mono, ¡vamos! \\ Sintiendo la brisa en nuestro cabello,\\ En el patio de recreo sin care._ <i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Monitor**: Mostrar la diapositiva \"Leer e imaginar\" **Discutir**: _What fondos, efectos de texto, sonidos y sprites podrían acompañar a este poema?_"
+            },
+            "66f92999-a212-4c76-b50c-fcc7d3523965": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Monitor**: Mostrar la diapositiva del \"Club de Robótica\" **_Robotics Club_**\\ _By Melissa M._ _In club de robótica construimos y creamos,\\ Con engranajes y cables, innovamos.\\ Codificamos y jugamos con infinito deleite,\\ Y vemos cómo nuestras máquinas cobran vida.\\ Aprendemos, jugamos, entendemos,\\ ¡El futuro de la tecnología está en nuestras manos!_ <i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Monitor**: Mostrar la diapositiva \"Leer e imaginar\" **Discutir**: _What fondos, efectos de texto, sonidos y sprites podrían acompañar a este poema?_ **Objetivo de la discusión**: El propósito de este calentamiento es mostrar a los estudiantes dos ejemplos de poemas cortos que se pueden visualizar fácilmente. ",
+              "tips": [
+                "Opcional: Los dos poemas que aparecen en las diapositivas son ejemplos de estudiantes para usar con su clase. En lugar de usar los poemas proporcionados, puede insertar su propio poema original o usar ejemplos de estudiantes de la lección anterior. Trate de elegir poemas que tengan palabras o frases que los estudiantes puedan visualizar fácilmente."
+              ]
+            }
+          }
+        },
+        "5094fb3f-4b22-4fde-9664-3bbbd94ece74": {
+          "name": "Actividad Principal ",
+          "activity_sections": {
+            "0a0328fe-b3d8-4eb3-a67a-7eac98b6d926": {
+              "name": "Codifica y anima tu poema",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Monitor**: Mostrar diapositiva de \"Preparación\" ",
+              "progression_name": "Juego libre "
+            },
+            "dbc698a1-7ac4-4226-9347-749ad12885ac": {
+              "description": "Ahora es el momento de empezar a codificar nuestros poemas. Vas a tomar el poema que escribiste la clase pasada y codificarlo como una aplicación. A medida que agregue bloques a su programa, consulte su folleto completo para ver qué palabras o frases desea mejorar con efectos visuales, imágenes y sonido. Si necesitas recordar cómo agregar bloques específicos, ve al nivel de elección en esta lección para refrescar tus habilidades. A medida que trabajas, asegúrate de hacer referencia a tu <a href=\"https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/template/preview\" target=\"_blank\">Lista de verificación de codificación de poemas</a> para asegurarse de que la aplicación cumple todos los requisitos."
+            },
+            "58facfa2-d6e2-48c8-8a9b-42e9e3e95730": {
+              "description": "**Haz esto**: Pida a los estudiantes que se muevan a sus computadoras e inicien sesión. Los estudiantes ahora programarán su propio poema. Los estudiantes deben usar su folleto **\\*Escribe tu propio poema** (<a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\n\" target=\"_blank\">Raíces de oración</a> \\| <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\" target=\"_blank\">Temas</a>) y **\\*<a href=\"https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/template/preview\" target=\"_blank\">Codificar tu propio poema Lista de verificación</a>** Como guía a medida que agregan su texto, fondos, efectos, sonidos y eventos. Usarán las habilidades que aprendieron del tutorial de la Lección 1 para mejorar sus propios poemas. Circular por la sala para apoyar a los estudiantes. Anímelos a presionar \"Ejecutar\" cada vez que agreguen un bloque y anote si necesitan agregar otros efectos, sprites o eventos para que coincidan mejor con su poema. <i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Monitor**: Mostrar la diapositiva \"Nivel 1 - Codificar mi poema\" **Consejos de depuración**: **Nivel 1**: Para escribir sus poemas, los estudiantes deberán hacer clic en la opción \"Ingrese el suyo\" en el menú desplegable de poemas. Los estudiantes completarán el texto de su poema que escribieron la clase pasada. Escribirán su título, su propio nombre o apodo, y cada línea de su poema corto. Pida a los estudiantes que vean el corto <a href=\"https://www.youtube.com/watch?v=oKPgbzdpTSA\" target=\"_blank\">vídeo</a> Explicación antes de comenzar. Preguntas orientadoras para impulsar más a los estudiantes: - Veo que agregaste X a tu código, ¿qué coincide eso dentro de tu poema? - Me gusta mucho la forma en que escribiste sobre X. ¿Qué efecto o sprite coincidiría con esa imagen o sentimiento del poema que escribiste? Preguntas orientadoras para los estudiantes que necesitan ayuda para depurar: - Dígame qué quiere que haga su programa. Presione \"Ejecutar\". - ¿Qué está haciendo actualmente? - ¿Dónde crees que está el error en tu código?",
+              "progression_name": "Codificar mi poema"
+            },
+            "30967762-dd16-47ae-abe1-bb00b79e54a9": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Monitor**: Mostrar la diapositiva \"Nivel 2 - Nivel de elección\" **Nivel 2 - Nivel de elección**: El nivel 2 es un nivel de elección en el que los estudiantes revisarán las habilidades de la lección 1 para agregar fondos, efectos de texto, sonidos, sprites, eventos y comportamientos de sprites. Los estudiantes también tienen la opción de volver a la Lección 1 y volver a ver cualquiera de los videos. Una vez que los estudiantes hayan terminado de revisar sus habilidades, anímelos a hacer clic en la burbuja de progreso blanca y verde en la parte superior de la pantalla para volver a su poema en el nivel 1.",
+              "tips": [
+                "Aquí hay algunos consejos que deberían ayudar a los estudiantes, independientemente del nivel en el que estén trabajando: - **Colabore con los vecinos:** Anime a los estudiantes a comunicarse con un vecino cuando se queden atascados. Dependiendo de la edad y la capacidad de sus estudiantes, podría considerar dividir formalmente su clase en parejas para completar el tutorial usando la programación en parejas. - **Lee las instrucciones:** Las instrucciones son viñetas sobre cómo completar el nivel. Si un estudiante se siente atascado, pídale que le lea las instrucciones en voz alta y pídale que repita lo que dicen las instrucciones con sus propias palabras. - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Los estudiantes también pueden hacer clic en este ícono de texto a voz para escuchar las instrucciones leídas en voz alta. - <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Busca pistas**: La mayoría de los niveles incluyen al menos una pista con detalles más explícitos sobre cómo pasar el nivel. - **Celebra los errores:** Obtener un error en tu código es una parte natural del proceso de codificación. Si el programa no está haciendo lo que esperaban, pídale al estudiante que primero le diga lo que quiere que suceda, haga clic en ejecutar para observar lo que realmente está sucediendo y luego busque el lugar en su código que causó la discrepancia. Recuerde celebrar la búsqueda y corrección de errores. Tener un error significa que los estudiantes están haciendo un gran trabajo construyendo un programa más complejo. "
+              ],
+              "progression_name": "Revisión - Nivel de elección"
+            },
+            "b35a631f-1839-403e-a41b-8277cd6549a3": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Monitor**: Mostrar la diapositiva \"Participación de socios y revisiones finales\" **Haz esto**: Antes de la próxima clase, los estudiantes deben mostrar su trabajo a un compañero. Después de una breve discusión, los estudiantes tienen la oportunidad de terminar su poema y hacer las últimas revisiones."
+            },
+            "fc96158a-2f7c-4e47-bc0d-81b5bf26d50a": {
+              "tips": [
+                "Al ver los proyectos de los demás, los estudiantes pueden resolver desafíos, inspirarse con nuevas ideas y mejorar sus propios proyectos. Hágales saber a los alumnos quién compartirá primero y facilite que los compañeros se turnen. Circula durante el intercambio en pareja para escuchar las conversaciones. Considere compartir un comentario significativo que escuche con todo el grupo después. Identifique a los estudiantes que se beneficiarían de apoyo adicional."
+              ]
+            }
+          }
+        },
+        "8dd85242-85ec-4172-8516-b3124c3ec790": {
+          "name": "Envolver",
+          "activity_sections": {
+            "d3503af6-3a1d-4a6d-b190-6b97bf23302a": {
+              "name": "Reflexión",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Monitor**: Mostrar la diapositiva \"Compartir\" **Haga esto:** Elija a un voluntario para que presente su programa a la clase. Después de que el estudiante presente su poema, pregunte a la clase: - _What efectos agregó este codificador para que coincida con el poema que escribió_How - ¿ estos efectos agregaron o cambiaron el sentimiento del poema?_ - _Did algo que les sorprenda?_ **Objetivo de la discusión:** Pida a los estudiantes que establezcan conexiones entre ciertas palabras o frases que transmitan un estado de ánimo particular y los efectos que el programador eligió agregar a la atmósfera del poema. Analice si algún efecto, elección de color o sonido fue sorprendente para la clase. Dé al voluntario la oportunidad de explicar por qué podría haber elegido un color/efecto en lugar de otro. Tengan una discusión sobre cómo el arte puede ser interpretado de muchas maneras. <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Monitor**: Mostrar la diapositiva \"¡Bien hecho, programadores!\""
+            },
+            "e273d1cc-0e4c-425b-944b-1d8c9644d003": {
+              "description": "¡Bien hecho, programadores! La próxima vez, daremos los toques finales a nuestras aplicaciones de poemas y nos las presentaremos unos a otros."
+            }
+          }
+        },
+        "7934c32a-f4ba-48b1-8c92-903075552224": {
+          "name": "Oportunidades de extensión",
+          "activity_sections": {
+            "30cd25ec-ad85-427d-abca-dff52d31f7d2": {
+              "description": "Este módulo es una gran introducción a la informática a través de la lente de la poesía. Estas son algunas opciones para seguir aprendiendo más sobre los conceptos de CS presentados en este módulo. Recomendamos buscar estas extensiones después de completar la Lección 4 de este módulo. "
+            },
+            "8176cab2-0a34-487c-9c38-86d7118c2b7f": {
+              "tips": [
+                "**Contenido de ELA:**\\ Lea un libro para continuar desarrollando la comprensión del estado de ánimo y el lenguaje figurado: - <a href=\"https://www.amazon.com/My-Blue-Happy-Jessica-Young/dp/0763651257\" target=\"_blank\">\"Mi azul es feliz\"</a> Libro ilustrado que explica cómo los sentimientos se pueden asociar con diferentes colores y cómo diferentes personas pueden tener diferentes perspectivas sobre el mismo color. - <a href=\"https://www.amazon.com/s?k=feelings+in+color&crid=3CGPI36E1RPV8&sprefix=feelings+in+color%2Caps%2C667&ref=nb_sb_noss_1\" target=\"_blank\">\"Sentimientos en color\"</a> es un libro de poesía que se divide en secciones de color. Cada color representa un sentimiento, y esa sección contiene poemas con un tema determinado. - <a href=\"https://www.amazon.com/Red-Sings-Treetops-Colors-Sidman/dp/0547014945/ref=sr_1_1?crid=H9ZK0W8DBKC5&keywords=red+sings+from+treetops&qid=1685390186&sprefix=red+sings+%2Caps%2C296&sr=8-1\" target=\"_blank\">\"El rojo canta desde las copas de los árboles\"</a> es un libro ilustrado de Joyce Sidman (una poeta galardonada) que conecta los colores de las diferentes estaciones con nuestros sentidos. **Conceptos de Ciencias de la Computación:** - Para continuar explorando eventos, los estudiantes pueden <a href=\"https://studio.code.org/s/coursed-2023/lessons/7\" target=\"_blank\">Construye un juego de Star Wars.</a> - <a href=\"http://studio.code.org/s/csc-bookcovers-2023\" target=\"_blank\">Portadas de libros CSC</a> también conecta la informática con los estándares ELA. Los estudiantes programarán la portada de un libro interactivo centrándose en los personajes y el escenario. - <a href=\"http://studio.code.org/s/csc-timecapsule-2023\" target=\"_blank\">Cápsula del tiempo CSC </a>El módulo utiliza la poesía y la informática para conectarse con los estudios sociales. Los estudiantes codificarán poemas cortos que representen un momento específico en el tiempo, como una cápsula del tiempo."
+              ]
+            }
+          }
+        }
+      },
+      "objectives": {
+        "079c5cd4-3be3-44f1-9cf1-800dc8a2a86c": {
+          "description": "Establezca conexiones entre el texto y una presentación visual de ese texto, identificando dónde las representaciones visuales reflejan descripciones específicas en el texto."
+        },
+        "4903767c-89c4-4fbf-8879-93cf977803ae": {
+          "description": "Describir cómo los elementos visuales y multimedia contribuyen al significado, el tono o la belleza de un texto. "
+        },
+        "73f2fb47-8d56-4635-80b1-72a57c3c51d5": {
+          "description": "Elija imágenes, sonidos o efectos apropiados para mejorar la elección de palabras en sus poemas."
+        },
+        "9524e34c-35ef-4735-9404-b7ca08d80257": {
+          "description": "Anima su poema usando bloques que establecen el fondo, los efectos de texto, los sprites, los sonidos y los eventos."
+        }
+      },
+      "resources": {
+        "coding_with_poetry_lesson_1/poetry/2023": {
+          "name": "Codificando con poesía",
+          "url": "<https: docs.google.com presentation d 1k0vp9so-gmahq9msotxiz98px7gnfn6tutbeoda3pxy template preview>",
+          "type": "Diapositivas"
+        },
+        "enter_your_own_poem/poetry/2023": {
+          "name": "Escribe tu propio poema",
+          "url": "<https: www.youtube.com watch?v=\"oKPgbzdpTSA\">",
+          "type": "Video"
+        },
+        "helpful_hints/poetry/2023": {
+          "name": "Consejos útiles",
+          "url": "<https: docs.google.com presentation d 1rsjhxo9zmtylrt160kvavdyekr4wt2fvsgbrphr4hs0 template preview>",
+          "type": "Diapositivas"
+        },
+        "poem_art_celebration_video_optional_/poetry/2023": {
+          "name": "Video de celebración de Poem Art (opcional)",
+          "url": "<https: www.youtube.com watch?v=\"Q-76vz8i8mo\">",
+          "type": "Video"
+        },
+        "poem_art_events_video_optional_/poetry/2023": {
+          "name": "Video de Eventos de Arte Poemario (opcional)",
+          "url": "<https: youtu.be xgwyyueb6jq>",
+          "type": "Video"
+        },
+        "poem_art_video_optional_/poetry/2023": {
+          "name": "Video de arte de poema (opcional)",
+          "url": "<https: www.youtube.com watch?v=\"uvwUWTTjIXo\">",
+          "type": "Video"
+        },
+        "time_capsule_checklist/poetry/2023": {
+          "name": "Codifica tu lista de verificación de poemas",
+          "url": "<https: docs.google.com document d 14m3wibwjg-yukvrchzkfunamqaqhua7-qxyps738k_0 template preview>",
+          "type": "Folleto"
+        }
+      },
+      "vocabularies": {
+        "poem/poetry/2023": {
+          "word": "Poema",
+          "definition": "Líneas de escritura que usan palabras para crear imágenes, sentimientos e ideas en la mente del lector."
+        }
+      }
+    },
+    "https://studio.code.org/s/poetry-2023/lessons/4": {
+      "name": "Círculo de Poesía",
+      "overview": "En esta lección, los estudiantes se turnarán para compartir su aplicación de poemas con sus compañeros. Los estudiantes comienzan discutiendo la importancia de dar y recibir retroalimentación. Luego, los estudiantes realizan un intercambio de poesía en pareja compartiendo sus aplicaciones de poemas con un compañero y dando y recibiendo comentarios. Finalmente, toda la clase tendrá un Círculo de Poesía seguido de una discusión sobre el estado de ánimo y el tono, así como los efectos visuales, del poema de un estudiante voluntario.",
+      "preparation": "- Preparar una computadora por estudiante. - Prepare una copia de la **<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">Comparte tu aplicación</a>** Folleto por alumno. - Asegúrese de que los alumnos tengan a mano una copia de su poema original para esta lección. - Divida la clase en parejas para la actividad Poesía en parejas-Compartir. - Considere estas opciones de extensión relacionadas ([enlace][0]) para explorar después de esta lección. ##### Opcional - Especialmente para la enseñanza a distancia: Determine si necesita configurar un documento digital o un espacio en línea compartido para publicar la URL de la aplicación de cada estudiante (consulte la plantilla del profesor en \"Enlaces\"). ",
+      "purpose": "Compartir sus proyectos de arte de poemas con sus compañeros es un aspecto importante del proceso creativo. Permite a los estudiantes recibir comentarios, colaborar con otros, reflexionar sobre su propio trabajo y celebrar sus logros. Al compartir su trabajo con otros, los estudiantes pueden crecer y mejorar como pensadores creativos y desarrollar importantes habilidades de comunicación e interpersonales.",
+      "student_overview": "¡Comparte tus nuevas aplicaciones de poemas con tus amigos! ",
+      "lesson_activities": {
+        "62058ba3-874c-4aae-9d67-8bed1cf236ae": {
+          "name": "Calentamiento",
+          "activity_sections": {
+            "f5e7a9c3-7a9a-4db0-9a3e-495f67c98443": {
+              "name": "Prepárate",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Pantalla:** Muestra la diapositiva \"Agenda de hoy\". _Poetry Circle_ - _Get tu poema animado ready_ - _Share con tu partner_ - _Share con el class_ - _Discuss el poems_ del otro"
+            },
+            "713a05d9-fdad-4eac-afc9-97eeff0a5197": {
+              "description": "La última clase, dimos vida a nuestros propios poemas con código. Hoy compartiremos nuestro trabajo con nuestros compañeros de clase. Primero, juegue a través de su propia aplicación para asegurarse de que funcione de la manera que espera. Tienes 5 minutos para dar los toques finales a tu aplicación. Cinco minutos es tiempo suficiente para hacer pequeños cambios o depurar el código que escribió. Intenta resistir la tentación de reescribir grandes partes de tu código. Cuando se acabe el temporizador, espere las instrucciones para el siguiente paso. Voy a iniciar el temporizador ahora. "
+            },
+            "870d6b26-f55f-4667-809d-cf9e4979df7c": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Pantalla:** Muestra la diapositiva \"Preparándose\". <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Haga esto:** Configure un temporizador de 5 minutos o use el que se proporciona en la diapositiva \"Preparación\". Asegúrese de que los estudiantes: - Vayan al Nivel 1 (este código se transfiere de la Lección 3, Nivel 1) - Haga clic en \"Ejecutar\" y reproduzca su aplicación - Realice cambios de última hora - Amplíe su espacio de juego haciendo clic y arrastrando los tres puntos a la derecha de su espacio de juego (vea el gif en la diapositiva) ",
+              "tips": [
+                "**Para la enseñanza a distancia:** Esta actividad requiere trabajo en pareja. Si los estudiantes no pueden cambiar físicamente de computadora, necesitará un documento compartido con enlaces al proyecto de cada estudiante. Dígales a los estudiantes que una URL es una dirección web a un sitio web; esta URL te llevará a una versión que se puede compartir de tu aplicación Poem. Dirija a los estudiantes que hagan clic en el botón \"Compartir\" en el último nivel y publiquen el enlace en su LMS u otro espacio compartido, como el \"<a href=\"https://docs.google.com/document/d/1DNcBWminB8MmyLQC4fIWrLZ8uI9HR7d4W3HuuclIpB0/template/preview\" target=\"_blank\">Documento de uso compartido de URL de estudiantes</a>”. Los estudiantes pueden seguir agregando más a sus proyectos incluso después de haber compartido el enlace de su proyecto."
+              ],
+              "progression_name": "Juego libre"
+            }
+          }
+        },
+        "6974a2ee-1e66-4ea4-8a37-6e1f5eebdc42": {
+          "name": "Actividad Principal",
+          "activity_sections": {
+            "2c69b8bf-8ba9-4254-a5f5-10f0822ffd95": {
+              "name": "¿Por qué es importante la retroalimentación?",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Pantalla:** Muestra la diapositiva \"¿Qué es la retroalimentación constructiva?\"."
+            },
+            "30f7aa3d-9d66-44f6-8e3a-ede490c45c89": {
+              "description": "Hoy vamos a compartir juntos nuestras aplicaciones de poemas. Mientras jugamos a las aplicaciones de los demás, queremos pensar en comentarios constructivos que puedan ayudar al programador de aplicaciones a mejorar aún más su aplicación. "
+            },
+            "769c5b1f-880d-48aa-ae0c-ce18a62d0aba": {
+              "description": "**Discutir:** - _What es la retroalimentación constructiva?_ - _Why es importante presentar nuestros poemas y obtener retroalimentación?_ - _How muestras respeto cuando alguien está presentando?_ **Objetivo de la discusión:** Asegúrese de que los estudiantes entiendan que la retroalimentación constructiva es respetuosa, útil y específica. Anime a los estudiantes a discutir cómo las oportunidades de retroalimentación les dan espacio para reflexionar y mejorar tanto su poema como su código. "
+            },
+            "1539968b-8ef6-4d84-ad50-d47083975ba2": {
+              "name": "Modelado de la retroalimentación constructiva",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Pantalla:** Muestra la diapositiva \"Modelado de comentarios constructivos\"."
+            },
+            "0f923259-48aa-46b2-a124-89658cb23f04": {
+              "description": "Cuando nos emparejemos, probarás la aplicación de poemas de tu pareja. Luego, les escribirás comentarios sobre lo que pensaste sobre la aplicación. Recuerde que sus comentarios deben ser constructivos y respetuosos. A medida que juegues a través de la aplicación, pensarás en un \"resplandor\", un \"crecimiento\" y una \"pregunta\" que puedes escribir para tu pareja. Un \"resplandor\" es algo que hicieron bien, un \"crecimiento\" es algo que pueden cambiar o mejorar, y una \"pregunta\" es algo sobre lo que quieres saber más. Por ejemplo, puedes usar las siguientes raíces de oración: - **Resplandor:** \"Me gustó que incluyeras...\" - **Crecer:** \"¿Has intentado...\" - **Pregunta:** \"¿Puedes contarme más sobre...\""
+            },
+            "2f6b0e78-8580-4da8-bf5f-f425eff9b958": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Pantalla:** Mostrar la diapositiva \"Aplicación de ejemplo\" **Haga esto:** Abra el proyecto de ejemplo **\\*<a href=\"https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo\" target=\"_blank\">enlace</a>** en otra ventana. Tenga a mano una copia del folleto \"Comparta su aplicación\" para mostrarles a los estudiantes cómo deben completar su brillo, crecimiento y pregunta.",
+              "progression_name": "Ejemplo"
+            },
+            "e363b2bd-99ee-4dc0-8f7c-c8c25f623381": {
+              "description": "Permítame modelar un ejemplo de cómo probará la aplicación y escribirá comentarios. Mientras juego con este ejemplo, me doy cuenta de que el poeta ha usado varios sprites y bloques de comportamiento. Veo que el sprite de la nube cubre al sprite del sol y luego se aleja flotando. También veo un duende de caballo y un duende de avión aparecer más adelante en el poema. - Un \"resplandor\" que tengo para ti es: _\"Me gusta que incluyas imágenes que coincidan con el texto del poema\". _ También me doy cuenta de que el codificador tiene un marco pero no tiene color de fondo ni de texto. - Un \"crecimiento\" que tengo para ti es: _\"¿Has intentado agregar código para cambiar el fondo y el color del texto?\" _ Por último, me doy cuenta de que se está tocando música de \"arpas\" y se reproduce un sonido de \"aleteo\" en la línea 4. - Una \"pregunta\" que todavía tengo es: _\"¿Cómo decidiste qué música y sonidos incluir?\" _ ",
+              "tips": [
+                "También puede proporcionar ejemplos y no ejemplos de comentarios: - **Útil:** \"Noto un error con uno de sus efectos. ¿Has intentado agregar un bloque de \"Sprite Stops Growing\"?\" - **Específico:** \"Me gusta que incluyas un bloque de evento que hace que el sprite de la ensalada aparezca en la línea 3.\" - _Non-ejemplo:_ \"No me gusta tu sprite de cebra.\""
+              ]
+            },
+            "6703dc75-a394-4e9c-8d1c-061fb3d53cf2": {
+              "name": "Poesía Pair-Compartir",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Pantalla:** Muestra la diapositiva \"Prueba la aplicación de tu pareja\". **Haz esto:** Distribuye un **\\*<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">Folleto Compartir la aplicación</a>** Por alumno. Lea las indicaciones de \"Modelado de comentarios constructivos\" del folleto. Asegúrese de que los estudiantes entiendan cómo dar comentarios respetuosos a sus compañeros de clase. "
+            },
+            "31a7ae8f-4773-4e68-8656-773b19c9bb69": {
+              "description": "Ahora vas a compartir tus aplicaciones. A medida que juegue a través de la aplicación de su pareja, observará las elecciones que hizo y escribirá comentarios para ellos en su folleto. Cuando usted y su pareja hayan terminado de probar las aplicaciones del otro y escribir comentarios en su folleto, compartirá sus comentarios con su pareja. Tienes 10 minutos para probar su aplicación y escribir cualquier comentario, iniciaré el temporizador ahora. "
+            },
+            "78bb242f-03a6-4b70-9013-41e95836f0b2": {
+              "description": "**Haz esto:** Configura un temporizador de 10 minutos, o usa el que está en la diapositiva \"Prueba la aplicación de tu pareja\". Divida la clase en grupos de dos. Pida a cada estudiante que cambie de asiento (o computadora) con su compañero, juegue a través de la aplicación de su compañero, escriba comentarios y comparta sus comentarios con su compañero después de completar el folleto. "
+            },
+            "3f1e4652-e9d2-4fa5-944a-1f5fe9e9a5b0": {
+              "progression_name": "Compartir tu poema"
+            },
+            "36325512-9851-4e3b-9cdc-52c5d78cc8d7": {
+              "name": "Círculo de Poesía",
+              "tips": [
+                "Cómo mostrar el trabajo de los estudiantes desde el Panel del profesor: Si ha iniciado sesión y sus estudiantes están en su sección de clase, puede navegar hasta el Nivel 1, abrir su Panel de profesor y buscar el nombre del estudiante para acceder a su trabajo. <a href=\"https://support.code.org/hc/en-us/articles/360047703872-How-do-I-view-a-student-s-code-on-an-individual-level-\" target=\"_blank\">Haga clic aquí para obtener más información sobre el Panel de Profesores</a>."
+              ]
+            },
+            "5e611050-c614-4775-b1c1-db1c4c3fd75f": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Mostrar la diapositiva del \"Círculo de Poesía\" **Haz Esto:** Lee la diapositiva del Círculo de Poesía en voz alta. Pida a un estudiante que se ofrezca como voluntario para compartir su aplicación de poemas con la clase. Proyecte la aplicación de poemas del estudiante voluntario y haga que el estudiante voluntario lea su poema original en voz alta. <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Pantalla:** Muestra la diapositiva \"Discusión en clase\". **Comenta:** Para el público: - _How contribuyeron las imágenes o el audio al estado de ánimo del poema?_ - _What similitudes o diferencias notas entre tu aplicación de poemas y la aplicación del presentador?_ - _What es un resplandor, un crecimiento y una pregunta que tienes para el presentador?_ Para el poeta/programador: - _What fue tu parte favorita de la codificación de tu poema?_ - _Is Hay algo que aún necesites depurar o cambiar?_ **Objetivo de la discusión:**  Este es un resumen final de la Unidad de Codificación con Poesía. Los estudiantes deben comprender cómo la elección de palabras específicas moldea el significado o el tono de un poema. También deben ser capaces de establecer conexiones entre el contenido del poema y los efectos visuales y sonoros utilizados. [Opcional] **Haz esto:** Si tienes tiempo, pide que más estudiantes voluntarios compartan sus aplicaciones y repitan la discusión en clase. "
+            }
+          }
+        },
+        "bc06844e-05f4-4090-94f2-c46dece69e6f": {
+          "name": "Conclusión",
+          "activity_sections": {
+            "105d9bbe-d1e0-4bd9-a553-35e9b5a29939": {
+              "name": "Celebrar",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Pantalla:** Mostrar la diapositiva \"Celebrar\""
+            },
+            "3ef7e9e0-bacf-4a7d-b44d-ad0ecdb52ad1": {
+              "description": "¡Gracias a todos por compartir sus aplicaciones de poemas y sus comentarios con sus compañeros de clase! Es hora de hacer una reverencia. ¡Buen trabajo, programadores!"
+            },
+            "031f9d52-aa34-4bce-bbd4-dcf00712d6aa": {
+              "description": "**Haga esto:** Haga que todos los estudiantes se pongan de pie y hagan una reverencia, den a todos un aplauso (o chasquidos suaves). "
+            }
+          }
+        },
+        "e57a4ee9-956b-410e-8d3e-b321b0abe71c": {
+          "name": "Oportunidades de extensión",
+          "activity_sections": {
+            "178accb4-abd2-426b-b492-35d076276c1c": {
+              "description": "Este módulo es una gran introducción a la informática a través de la lente de la poesía. Estas son algunas opciones para seguir aprendiendo más sobre los conceptos de CS presentados en este módulo. Recomendamos buscar estas extensiones después de completar la Lección 4 de este módulo. "
+            },
+            "eeb26e7a-97c3-449c-8215-a88977a6e8f8": {
+              "tips": [
+                "**Contenido de ELA:**\\ Lea un libro para continuar desarrollando la comprensión del estado de ánimo y el lenguaje figurado: - <a href=\"https://www.amazon.com/My-Blue-Happy-Jessica-Young/dp/0763651257\" target=\"_blank\">\"Mi azul es feliz\"</a> Libro ilustrado que explica cómo los sentimientos se pueden asociar con diferentes colores y cómo diferentes personas pueden tener diferentes perspectivas sobre el mismo color. - <a href=\"https://www.amazon.com/s?k=feelings+in+color&crid=3CGPI36E1RPV8&sprefix=feelings+in+color%2Caps%2C667&ref=nb_sb_noss_1\" target=\"_blank\">\"Sentimientos en color\"</a> es un libro de poesía que se divide en secciones de color. Cada color representa un sentimiento, y esa sección contiene poemas con un tema determinado. - <a href=\"https://www.amazon.com/Red-Sings-Treetops-Colors-Sidman/dp/0547014945/ref=sr_1_1?crid=H9ZK0W8DBKC5&keywords=red+sings+from+treetops&qid=1685390186&sprefix=red+sings+%2Caps%2C296&sr=8-1\" target=\"_blank\">\"El rojo canta desde las copas de los árboles\"</a> es un libro ilustrado de Joyce Sidman (una poeta galardonada) que conecta los colores de las diferentes estaciones con nuestros sentidos. **Conceptos de Ciencias de la Computación:** - Para continuar explorando eventos, los estudiantes pueden <a href=\"https://studio.code.org/s/coursed-2023/lessons/7\" target=\"_blank\">Construye un juego de Star Wars.</a> - <a href=\"http://studio.code.org/s/csc-bookcovers-2023\" target=\"_blank\">Portadas de libros CSC</a> también conecta la informática con los estándares ELA. Los estudiantes programarán la portada de un libro interactivo centrándose en los personajes y el escenario. - <a href=\"http://studio.code.org/s/csc-timecapsule-2023\" target=\"_blank\">Cápsula del tiempo CSC </a>El módulo utiliza la poesía y la informática para conectarse con los estudios sociales. Los estudiantes codificarán poemas cortos que representen un momento específico en el tiempo, como una cápsula del tiempo."
+              ]
+            }
+          }
+        }
+      },
+      "objectives": {
+        "2ef99265-af55-4a2d-8719-58d4451f0610": {
+          "description": "Comprender el poder de poder escribir programas para animar texto"
+        },
+        "a4fa2434-b9c5-4e36-819b-50398d230730": {
+          "description": "Compartir sus aplicaciones entre sí"
+        }
+      },
+      "resources": {
+        "_optional_student_url_sharing_document/poetry/2023": {
+          "name": "[Opcional] Documento de uso compartido de URL de estudiantes",
+          "url": "<https: docs.google.com document d 1dncbwminb8mmylqc4fiwrlz8ui9hr7d4w3huuclipb0 template preview>",
+          "type": "Recurso"
+        },
+        "coding_with_poetry_lesson_1/poetry/2023": {
+          "name": "Codificando con poesía",
+          "url": "<https: docs.google.com presentation d 1k0vp9so-gmahq9msotxiz98px7gnfn6tutbeoda3pxy template preview>",
+          "type": "Diapositivas"
+        },
+        "poem_app_example/poetry/2023": {
+          "name": "Ejemplo de aplicación Poem",
+          "url": "<https: studio.code.org projects poetry_hoc j3txdxnhz0xesh4xjk_rt9bubhycplirikty_pg_byo>",
+          "type": "Recurso"
+        },
+        "share_your_app_/poetry/2023": {
+          "name": "¡Comparte tu aplicación!",
+          "url": "<https: docs.google.com document d 1ko4sneivym0grxxjb6nzvyauxxpi6rzqkdifrzqf1ls template preview>",
+          "type": "Folleto"
+        }
+      },
+      "vocabularies": {
+        "constructive_feedback/poetry/2023": {
+          "word": "Comentarios constructivos",
+          "definition": "Comentarios respetuosos que ayudan a alguien a mejorar su trabajo"
+        },
+        "poetry_circle/poetry/2023": {
+          "word": "Círculo de Poesía",
+          "definition": "Un espacio seguro y creativo para probar nuevos poemas y obtener comentarios constructivos de los demás."
+        }
+      }
+    }
+  }
+}
