@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.3.1]()
+## [0.3.1](https://github.com/code-dot-org/code-dot-org/pull/62996)
 
 - allowed `text` prop to be `string | React.ReactNode`
 
