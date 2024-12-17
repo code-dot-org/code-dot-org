@@ -1,0 +1,109 @@
+---
+en:
+  data:
+    variable_names:
+      "???": "???"
+      Actor_1_Counter: Actor_1_Counter
+      Actor_2_Counter: Actor_2_Counter
+      Blue: Azul
+      Green: Verde
+      Red: Rojo
+      actor: actor
+      adjective: adjetivo
+      age: edad
+      animal1score: puntuaciónAnimal1
+      animal1speed: velocidadAnimal1
+      animal2score: puntuaciónAnimal2
+      animal2speed: velocidad2animal
+      answer: respuesta
+      armlength: longitud del brazo
+      binary: binario
+      birds: pájaros
+      bit: bit
+      blue1: blue1
+      blue2: blue2
+      body-part: parte del cuerpo
+      bodylength: longituddelcuerpo
+      buttonHeight: alturaDelBotón
+      buttonMargin: buttonMargin
+      buttonWidth: anchoBotón
+      cat_score: cat_score
+      cat_speed: cat_speed
+      cats: gatos
+      centerToPadLeft: centerToPadLeft
+      choice: elección
+      circ: circ
+      codeName: codeName
+      color: color
+      controllerHeight: controllerHeight
+      controllerWidth: controllerWidth
+      count: contar
+      counter: contador
+      counter2: counter2
+      currentActor: actorActual
+      direction: dirección
+      dog_score: dog_score
+      dog_speed: dog_speed
+      dogs: perros
+      dragons: dragones
+      enemy_speed: enemy_speed
+      energy: energía
+      firstName: firstName
+      fishCaught: pez atrapado
+      footlength: longitud del pie
+      gather: reunir
+      green1: green1
+      green2: green2
+      guess: adivinar
+      height: altura
+      honey: miel
+      i: i
+      left: izquierda
+      legangle: legangle
+      leglength: longitud de pierna
+      length: longitud
+      level: nivel
+      marginX: marginX
+      marginY: margenY
+      meal: meal
+      myName: myName
+      name: nombre
+      nectar: néctar
+      nectars: néctares
+      number: número
+      object: objeto
+      padYOffset: padYOffset
+      parts: partes
+      planet: planet
+      player_score: puntuación_del_jugador
+      points: puntos
+      punchLine: línea de golpe
+      random: random
+      red1: red1
+      red2: red2
+      repeat: repetir
+      repetitions: repeticiones
+      right: derecho
+      score: puntuación
+      score1: puntuación1
+      score2: puntuación2
+      screenHeight: alturaDePantalla
+      screenWidth: screenWidth
+      set sides: establecer lados
+      setupSimScore1: setupSimScore1
+      setupSimScore2: setupSimScore2
+      shout: gritar
+      sides: lados
+      size: tamaño
+      speed: velocidad
+      startX: iniciarX
+      startY: iniciarY
+      test_var: test_var
+      time: tiempo
+      type: tipo
+      variable: variable
+      width: ancho
+      wizard: mago
+      x: x
+      your var 1: tu var 1
+      your var 2: tu var 2
