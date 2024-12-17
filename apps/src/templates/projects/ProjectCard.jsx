@@ -1,12 +1,11 @@
 /* eslint-disable react/jsx-no-target-blank */
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import fontConstants from '@cdo/apps/fontConstants';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
-import color from '../../util/color';
 import {UnlocalizedTimeAgo} from '../TimeAgo';
 
 import {getProjectCardImageUrl} from './projectUtils';
@@ -35,19 +34,21 @@ export default class ProjectCard extends React.Component {
       ? `/projects/${type}/${channel}/edit`
       : `/projects/${type}/${channel}`;
 
-    let thumbnailStyle = styles.thumbnail;
-    if (this.props.showFullThumbnail) {
-      thumbnailStyle = {...thumbnailStyle, ...styles.fullThumbnail};
-    }
-
     const shouldShowPublicDetails =
       isPublicGallery && isDetailView && projectData.publishedAt;
-    const noTimeOnCardStyle = shouldShowPublicDetails ? {} : styles.noTime;
 
     return (
       <div className={style.card}>
-        <a href={studio(url)} target={isPublicGallery ? '_blank' : undefined}>
-          <div style={thumbnailStyle}>
+        <a
+          className={style.link}
+          href={studio(url)}
+          target={isPublicGallery ? '_blank' : undefined}
+        >
+          <div
+            className={classNames(style.thumbnail, {
+              [style.fullThumbnail]: this.props.showFullThumbnail,
+            })}
+          >
             <img
               src={getProjectCardImageUrl(projectData.thumbnailUrl, type)}
               alt={i18n.projectThumbnail()}
@@ -55,13 +56,19 @@ export default class ProjectCard extends React.Component {
           </div>
 
           <div
-            style={styles.title}
-            className={`ui-project-name-${projectData.type}`}
+            className={classNames(
+              style.title,
+              `ui-project-name-${projectData.type}`
+            )}
           >
             {projectData.name}
           </div>
 
-          <div style={noTimeOnCardStyle}>
+          <div
+            className={classNames({
+              [style.noTime]: !shouldShowPublicDetails,
+            })}
+          >
             {isPublicGallery && projectData.studentName && (
               <span className={style.firstInitial}>
                 {i18n.by()}:&nbsp;
@@ -105,47 +112,3 @@ export default class ProjectCard extends React.Component {
     );
   }
 }
-
-const styles = {
-  title: {
-    paddingLeft: 15,
-    paddingRight: 10,
-    paddingTop: 18,
-    paddingBottom: 5,
-    fontSize: 16,
-    ...fontConstants['main-font-semi-bold'],
-    color: color.neutral_dark,
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
-    height: 18,
-    boxSizing: 'content-box',
-  },
-  titleLink: {
-    color: color.neutral_dark,
-    textDecoration: 'none',
-  },
-  thumbnail: {
-    width: 214,
-    height: 150,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    overflow: 'hidden',
-  },
-  fullThumbnail: {
-    height: 214,
-  },
-  noTime: {
-    paddingBottom: 10,
-  },
-  checkboxSpan: {
-    flex: '1',
-    verticalAlign: 'middle',
-  },
-  header: {
-    height: 40,
-    display: 'flex',
-    alignItems: 'center',
-  },
-};
