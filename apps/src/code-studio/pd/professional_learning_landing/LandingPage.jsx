@@ -534,13 +534,11 @@ function LandingPage({
           {RenderFacilitatorResources()}
         </section>
         {RenderOwnedPlSections()}
-        {workshopsAsFacilitator?.length > 0 && (
-          <LandingPageWorkshopsTable
-            workshops={workshopsAsFacilitator}
-            isLoading={loadingWorkshopsAsFacilitator}
-            tableHeader={i18n.inProgressAndUpcomingWorkshops()}
-          />
-        )}
+        <LandingPageWorkshopsTable
+          workshops={workshopsAsFacilitator}
+          isLoading={loadingWorkshopsAsFacilitator}
+          tableHeader={i18n.inProgressAndUpcomingWorkshops()}
+        />
       </>
     );
   };
@@ -557,13 +555,11 @@ function LandingPage({
           <Heading2>{i18n.plSectionsRegionalPartnerResources()}</Heading2>
           {RenderRegionalPartnerResources()}
         </section>
-        {workshopsAsProgramManager?.length > 0 && (
-          <LandingPageWorkshopsTable
-            workshops={workshopsAsProgramManager}
-            isLoading={loadingWorkshopsAsProgramManager}
-            tableHeader={i18n.inProgressAndUpcomingWorkshops()}
-          />
-        )}
+        <LandingPageWorkshopsTable
+          workshops={workshopsAsProgramManager}
+          isLoading={loadingWorkshopsAsProgramManager}
+          tableHeader={i18n.inProgressAndUpcomingWorkshops()}
+        />
       </>
     );
   };
@@ -583,13 +579,11 @@ function LandingPage({
             solidBorder={true}
           />
         </section>
-        {workshopsAsOrganizer?.length > 0 && (
-          <LandingPageWorkshopsTable
-            workshops={workshopsAsOrganizer}
-            isLoading={loadingWorkshopsAsOrganizer}
-            tableHeader={i18n.inProgressAndUpcomingWorkshops()}
-          />
-        )}
+        <LandingPageWorkshopsTable
+          workshops={workshopsAsOrganizer}
+          isLoading={loadingWorkshopsAsOrganizer}
+          tableHeader={i18n.inProgressAndUpcomingWorkshops()}
+        />
       </>
     );
   };
