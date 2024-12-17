@@ -1,0 +1,150 @@
+{
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/1": {
+    "short_instructions": "Cuando lees este poema, ¿qué color te viene a la mente? Encuentra un fondo, color de texto y efecto de texto que coincidan con la sensación de este poema.",
+    "long_instructions": "Cuando lees este poema, ¿qué sentimiento te provoca? ¿Qué color coincide con ese sentimiento?_ - Conecta bloques de la caja de herramientas debajo <code style=\"color:black; background-color:#FFBD46\">cuando se ejecute</code> para construir tu programa. - Encuentra un **fondo** y un **efecto de texto** que coincidan con el **ánimo** de este poema. - Cambia los **colores** de tus efectos o texto. - Haz clic en \"Ejecutar\" para animar el poema.",
+    "authored_hints": {
+      "add_background_effect": "Encuentra un bloque de fondo como este: [blockly block][0] y encuentra un bloque de efecto de texto como este: [blockly block][1] Conecta estos bloques bajo `cuando se ejecute` en tu Espacio de Trabajo.",
+      "add_more_effects": "Agrega más colores o efectos para ayudar a crear el ambiente de este poema. [blockly block][0]"
+    },
+    "callouts": {
+      "poetry_background": "Encuentra bloques de código aquí. ",
+      "run_button": "Prueba tu animación con este botón. "
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/2": {
+    "short_instructions": "¿Coinciden los sonidos y las imágenes con el estado de ánimo del poema? ",
+    "contained levels": [
+      {
+        "long_instructions": "<img src=\"https://images.code.org/752a37250030ee9b5acaea2143dca2fa-image-1634928264031.png\" style=\"max-width: 75px; float:left; padding-left:10px; padding-right:10px; padding-top:10px\"> ## Predecir Lee el poema. ¿Qué sonidos e imágenes te vienen a la mente? Después de escribir tu respuesta, presiona \"Ejecutar\" para ver y escuchar la animación del poema. "
+      }
+    ]
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/3": {
+    "short_instructions": "Agrega sonidos a tu programa para cambiar cómo se siente el poema mientras lo lees. ",
+    "long_instructions": "Agregar **sonidos** y **música** a tu programa puede cambiar cómo se siente el poema mientras lo lees. - Agrega un nuevo bloque de sonido o música a tu código. - Encuentra sonidos o música que coincidan con el estado de ánimo del poema. ",
+    "authored_hints": {
+      "poetry_sound_hint": "Encuentra este bloque: [blockly block][0] o este bloque: [blockly block][1] Conéctalo bajo `cuando se ejecute` en tu Espacio de Trabajo.",
+      "more_code": "Agrega más efectos y colores para acompañar el sonido que elegiste. [blockly block][0]"
+    },
+    "callouts": {
+      "poetry_sound": "¡Nuevo bloque!",
+      "poetry_music": "¡Nuevo bloque!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/4": {
+    "short_instructions": "Utilicemos eventos para cambiar la animación cuando el poema mencione algo nuevo. ",
+    "long_instructions": "Utiliza **eventos** para cambiar tu animación cuando el poema mencione algo nuevo. - Encuentra una **línea** en el poema donde cambia el estado de ánimo o se introduce algo nuevo. - Agrega **colores** o **efectos** para coincidir con una nueva **línea** en el poema. - Asegúrate de que el efecto cambie cuando la línea que deseas aparezca en la pantalla. ",
+    "authored_hints": {
+      "do_effect_hint": "Este nuevo bloque `do effect` añadirá un nuevo efecto una vez. [blockly block][0] Puedes apilar más de un `do effect` uno encima del otro para que el efecto dure más tiempo. [blockly block][1]",
+      "background_effect_hint": "Puedes agregar otros efectos bajo un bloque de evento con un código que se vea así: [blockly block][0]",
+      "more_events_hint": "Puedes usar más de un evento en tu programa. Intenta usar dos eventos con diferentes efectos para coincidir con nuevas líneas en el poema. [blockly block][0] [blockly block][1]"
+    },
+    "callouts": {
+      "poetry_event": "¡Nuevo bloque!",
+      "poetry_foreground": "¡Nuevo bloque!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/5": {
+    "short_instructions": "¿Qué imágenes vienen a la mente?",
+    "contained levels": [
+      {
+        "long_instructions": "<img src=\"https://images.code.org/752a37250030ee9b5acaea2143dca2fa-image-1634928264031.png\" style=\"max-width: 75px; float:left; padding-left:10px; padding-right:10px; padding-top:10px\"> ## Predecir Lee el poema. ¿Qué imágenes vienen a la mente? Después de escribir tu respuesta, presiona \"Ejecutar\" para ver la animación del poema. "
+      }
+    ]
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/6": {
+    "short_instructions": "Los autores utilizan imágenes para pintar un cuadro en la mente del lector. Puedes agregar sprites para ilustrar tu poema. ",
+    "long_instructions": "Los poetas usan palabras para pintar una imagen en la mente del lector. Agrega **sprites** para acompañar las imágenes que te vienen a la mente cuando lees el poema. - Agrega un <code style=\"color:black; background-color:#F79EA5\">hacer nuevo sprite</code> bloque a tu código. - Elige un disfraz para tu sprite. _Reto Extra:_ Conecta un <code style=\"color:black; background-color:#F79EA5\">hacer nuevo sprite</code> bloque a un evento para hacer que aparezca un nuevo sprite cuando se introduce una nueva imagen en el poema. ",
+    "authored_hints": {
+      "location_hint": "Cada sprite tiene una **ubicación**. Puedes establecer la ubicación haciendo clic en el pin de este bloque: [blockly block][0] - Haz clic en el pin [][1] en el bloque de ubicación y luego elige una nueva posición para tu sprite en la pantalla. - Presiona el botón \"Ejecutar\" cuando tu código esté terminado.",
+      "remove_hint": "Puedes eliminar un sprite en un número de línea determinado. Puedes agregar un nuevo sprite para ocupar su lugar: [blockly block][0]"
+    },
+    "callouts": {
+      "poetry_sprite": "¡Nuevo bloque!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/7": {
+    "short_instructions": "Los sprites pueden realizar ciertas acciones o comportamientos una y otra vez mientras se ejecuta el programa.",
+    "long_instructions": "Los sprites pueden realizar ciertas acciones o **comportamientos** una y otra vez mientras se ejecuta el programa. - Agrega un <code style=\"color:black; background-color:#F79EA5\">sprite begins</code> bloque a tu código. - Explora diferentes comportamientos de los sprites. - Elige un comportamiento que coincida con tu poema. _Reto Extra:_ ¡Agrega un <code style=\"color:black; background-color:#F79EA5\">sprite begins</code> bloque a un **evento**!",
+    "authored_hints": {
+      "add_behavior": "Agrega un bloque `sprite begins` a tu código. Asegúrate de que ya hayas creado el sprite al que le estás dando un comportamiento. [blockly block][0]"
+    },
+    "callouts": {
+      "poetry_sprite_begins": "¡Nuevo bloque!",
+      "poetry_sprite_stops": "¡Nuevo bloque!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/8": {
+    "short_instructions": "Puedes cambiar el tamaño de un sprite que ya hiciste. ",
+    "long_instructions": "Puedes cambiar el **tamaño** de un sprite que ya hiciste. - Cambia el tamaño de tu sprite usando el nuevo <code style=\"color:black; background-color:#F79EA5\">establecer tamaño</code> bloque. - Asegúrate de elegir un tamaño diferente a 100.",
+    "authored_hints": {
+      "size hint": "Encuentra este bloque y haz clic en el `150`. [blockly block][0] ¿Qué sucede cuando el número es `25`? [blockly block][1]"
+    },
+    "callouts": {
+      "poetry_set_sprite": "¡Nuevo bloque!",
+      "poetry_remove_sprite": "¡Nuevo bloque!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/9": {
+    "long_instructions": "¡La libertad de una página en blanco! - Ilustra un poema como desees y compártelo con tus amigos. - Usa el menú desplegable \"Seleccionar poema\" en la esquina superior izquierda para seleccionar un poema o ingresa el tuyo propio!",
+    "callouts": {
+      "poetry_new_block": "¡Nuevo bloque!",
+      "poetry_selector": "¡Selecciona cualquier poema o ingresa el tuyo!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/2/levels/1": {
+    "dsls": {
+      "markdown": "##Planifica tu poema\n\n<div>\n<img style=\" float: left; width:25%; padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\" />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>Es hora de planear tu propio poema.</strong>\n</h4>\n\n>Debes incluir: > - Algo que amas hacer. > - Alguien importante para ti. > - Algunas de tus cosas favoritas. **¿Listo para empezar a planear?** Usa <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\" target=\"_blank\">este recurso</a>. **¿Buscando un tema?** Usa <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\" target=\"_blank\">este recurso</a>.\n\n</div>\n"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/3/levels/1": {
+    "short_instructions": "¡Codifica tu propio poema!",
+    "long_instructions": "¡Codifica tu poema! Ahora es el momento de animar tu poema. ¡Ingresa tu propio poema y luego agrega tu código! _Sugerencia: Ve al siguiente nivel para revisar cualquier habilidad de codificación."
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/3/levels/2": {
+    "dsls": {
+      "description": "¡Elige entre las actividades a continuación para refrescar tu memoria sobre cómo agregar código a tu poema de cápsula del tiempo! ¡Puedes elegir múltiples opciones y hacer más de uno!",
+      "display_name": "¡Revisa tus habilidades de codificación!"
+    },
+    "sublevels": {
+      "csc_timecapsule_review1_ -l3": {
+        "display_name": "Agrega un fondo",
+        "short_instructions": "Cuando lees este poema, ¿qué te viene a la mente? Encuentra un fondo que coincida con el estado de ánimo de este poema.",
+        "long_instructions": "¡Démosle un fondo a nuestro poema! - Conecta un <code style=\"color:black; background-color:#B3B2FB\">bloque de establecer fondo</code> debajo de <code style=\"color:black; background-color:#FFBD46\">cuando se ejecute</code>. - Para elegir un fondo diferente, haz clic en la pestaña de Fondos arriba del área de juego. - Cuando termines, haz clic en \"Ejecutar\". _Bonus: Prueba diferentes fondos, marcos y efectos."
+      },
+      "csc_timecapsule_review2_ -l3": {
+        "display_name": "Establecer el color del texto",
+        "short_instructions": "Ahora agrega un color de texto a tu poema.",
+        "long_instructions": "**¡Cambiemos el color del texto de nuestro poema!** - Conecta un bloque <code style=\"color:black; background-color:#B3B2FB\">establecer color de texto</code> debajo de <code style=\"color:black; background-color:#FFBD46\">cuando se ejecute</code>. - Elige un color que puedas ver contra el fondo. - Cuando termines, haz clic en \"Ejecutar\".\r\n"
+      },
+      "csc_timecapsule_review3_ -l3": {
+        "display_name": "Establecer efecto de texto",
+        "short_instructions": "Establece un efecto de texto para tu poema.",
+        "long_instructions": "¡Busquemos un efecto de texto que coincida con el estado de ánimo de nuestro poema! - Conecta un bloque <code style=\"color:black; background-color:#B3B2FB\">efecto de texto</code> debajo de <code style=\"color:black; background-color:#FFBD46\">cuando se ejecute</code>. - Cuando termines, haz clic en \"Ejecutar\".\r\n"
+      },
+      "csc_timecapsule_review4_ -l3": {
+        "display_name": "Elige un sonido",
+        "short_instructions": "Agrega sonidos a tu programa para cambiar cómo se siente el poema mientras lo lees.",
+        "long_instructions": "**¡Busquemos un sonido que coincida con el sentimiento de nuestro poema de cápsula del tiempo!** - Conecta un <code style=\"color:black; background-color:#B3B2FB\">reproducir sonido</code> o <code style=\"color:black; background-color:#B3B2FB\">reproducir música</code> bloque debajo de <code style=\"color:black; background-color:#FFBD46\">cuando se ejecute</code>. - Elige un sonido o música que coincida con el sentimiento del poema. - Cuando termines, haz clic en \"Ejecutar\".\r\n\r\n"
+      },
+      "csc_timecapsule_review5_ -l3": {
+        "display_name": "Agregar un evento",
+        "short_instructions": "Utiliza eventos para cambiar la animación cuando el poema menciona algo nuevo.\r\n",
+        "long_instructions": "**¡Agreguemos un bloque de evento para cambiar un fondo, efecto de texto o sonido para que coincida con una línea de nuestro poema!** - Arrastra un <code style=\"color:black; background-color:#6AF36C\">cuando se muestre la línea</code> bloque al espacio de trabajo. - Conecta un <code style=\"color:black; background-color:#B3B2FB\">establecer fondo</code>, <code style=\"color:black; background-color:#B3B2FB\">establecer efecto de texto</code> o <code style=\"color:black; background-color:#B3B2FB\">reproducir sonido</code> bloque debajo. - Cuando termines, haz clic en \"Ejecutar\".\r\n"
+      },
+      "csc_timecapsule_review6_ -l3": {
+        "display_name": "Agregar un sprite",
+        "short_instructions": "Agrega un sprite para ilustrar tu poema de cápsula del tiempo. Los sprites pueden realizar ciertas acciones o comportamientos una y otra vez mientras se ejecuta el programa.\r\n",
+        "long_instructions": "**¡Agreguemos un sprite y le daremos un comportamiento!** - Conecta un <code style=\"color:black; background-color:#F79EA5\">crear nuevo sprite</code> bloque debajo de <code style=\"color:black; background-color:#FFBD46\">cuando se ejecute</code>. - Luego, conecta un <code style=\"color:black; background-color:#F79EA5\">el sprite comienza</code> bloque y elige un comportamiento. - Cuando termines, haz clic en \"Ejecutar\". _Bonus: Agrega un bloque de evento para hacer que el sprite aparezca o desaparezca con una línea específica."
+      }
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/4/levels/1": {
+    "long_instructions": "¡Has terminado y es hora de compartir tu poema! ¡Gran trabajo! - Asegúrate de que todo tu código funcione como esperas. - Agrega los toques finales."
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/4/levels/2": {
+    "dsls": {
+      "markdown": "Comparte tu poema App <img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53 PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\n**Ahora que has codificado tu poema, ¡es hora de compartirlo!** Mientras ves el proyecto de tus compañeros, piensa en un \"brillo\", un \"crecimiento\" y una \"pregunta\" que puedes escribir para tu compañero: - Un \"brillo\" es algo que hicieron bien - Un \"crecimiento\" es algo que pueden cambiar o mejorar - Una \"pregunta\" es algo sobre lo que quieres saber más\n</div>\n\n¿Listo para empezar? Usa <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\" target=\"_blank\">este recurso</a> para compartir comentarios con tu pareja.\n\n"
+    }
+  }
+}
