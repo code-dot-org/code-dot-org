@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.8.1](https://github.com/code-dot-org/code-dot-org/pull/62917)
+
+- updated color variables to use `primitiveColors.css`
+
 ## [0.8.0](https://github.com/code-dot-org/code-dot-org/pull/62806)
 
 - rewritten `SimpleDropdownTest` in typescript

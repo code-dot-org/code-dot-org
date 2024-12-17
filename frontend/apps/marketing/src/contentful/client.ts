@@ -1,12 +1,27 @@
 import {createClient} from 'contentful';
 
-export default createClient({
-  // your space id
+/**
+ * For values and documentation, please refer to .env.example
+ */
+const clientProps = {
   space: process.env.CONTENTFUL_SPACE_ID!,
-  // your environment id
   environment: process.env.CONTENTFUL_ENV_ID,
-  // Supported values: 'preview.contentful.com' or 'cdn.contentful.com',
   host: process.env.CONTENTFUL_API_HOST,
-  // needs to be access token if host = 'cdn.contentful.com' and preview token if 'preview.contentful.com'
   accessToken: process.env.CONTENTFUL_TOKEN!,
-});
+};
+
+/**
+ * Check if all the required environment variables are available.
+ * If not, the client will not be created.
+ */
+const isEnvironmentAvailable = Object.values(clientProps).every(
+  value => !!value,
+);
+
+if (!isEnvironmentAvailable) {
+  console.warn(
+    'Contentful client is not available, no content will be fetched from Contentful.',
+  );
+}
+
+export default isEnvironmentAvailable ? createClient(clientProps) : undefined;

@@ -23,6 +23,7 @@
     "format:fix": "prettier --write .",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
+    "release:dryrun": "turbo release:dryrun",
     "test": "turbo test",
     "typecheck": "turbo typecheck"
   },
