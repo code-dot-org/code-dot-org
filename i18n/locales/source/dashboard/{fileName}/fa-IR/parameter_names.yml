@@ -1,0 +1,25 @@
+---
+en:
+  data:
+    parameter_names:
+      "???": "???"
+      actor: بازیگر
+      color: رنگ
+      counter: شمارنده
+      dir: دیر
+      direction: جهت
+      height: ارتفاع
+      honey: عسل
+      left: چپ
+      length: طول
+      min: دقیقه
+      nectar units: واحدهای شهد
+      nectars: شهد
+      numOctagons: numOctagons
+      points: نقاط
+      radius: شعاع
+      sides: طرف
+      size: اندازه
+      speed: سرعت
+      theGuess: حدس بزنید
+      width: عرض
