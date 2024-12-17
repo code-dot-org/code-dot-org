@@ -1,0 +1,150 @@
+{
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/1": {
+    "short_instructions": " ",
+    "long_instructions": " ",
+    "authored_hints": {
+      "add_background_effect": "",
+      "add_more_effects": ""
+    },
+    "callouts": {
+      "poetry_background": " ",
+      "run_button": " "
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/2": {
+    "short_instructions": " ",
+    "contained levels": [
+      {
+        "long_instructions": "   "
+      }
+    ]
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/3": {
+    "short_instructions": " ",
+    "long_instructions": " ",
+    "authored_hints": {
+      "poetry_sound_hint": "",
+      "more_code": ""
+    },
+    "callouts": {
+      "poetry_sound": "",
+      "poetry_music": ""
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/4": {
+    "short_instructions": " ",
+    "long_instructions": " ",
+    "authored_hints": {
+      "do_effect_hint": "",
+      "background_effect_hint": "",
+      "more_events_hint": " "
+    },
+    "callouts": {
+      "poetry_event": "",
+      "poetry_foreground": ""
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/5": {
+    "short_instructions": "",
+    "contained levels": [
+      {
+        "long_instructions": "   "
+      }
+    ]
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/6": {
+    "short_instructions": "  ",
+    "long_instructions": "  ",
+    "authored_hints": {
+      "location_hint": " ",
+      "remove_hint": " "
+    },
+    "callouts": {
+      "poetry_sprite": ""
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/7": {
+    "short_instructions": "",
+    "long_instructions": "",
+    "authored_hints": {
+      "add_behavior": " "
+    },
+    "callouts": {
+      "poetry_sprite_begins": "",
+      "poetry_sprite_stops": ""
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/8": {
+    "short_instructions": " ",
+    "long_instructions": "",
+    "authored_hints": {
+      "size hint": ""
+    },
+    "callouts": {
+      "poetry_set_sprite": "",
+      "poetry_remove_sprite": ""
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/9": {
+    "long_instructions": "",
+    "callouts": {
+      "poetry_new_block": "",
+      "poetry_selector": ""
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/2/levels/1": {
+    "dsls": {
+      "markdown": "\n\n<div>\n\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n\n</h4>\n\n\n\n</div>\n"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/3/levels/1": {
+    "short_instructions": "",
+    "long_instructions": "  "
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/3/levels/2": {
+    "dsls": {
+      "description": " ",
+      "display_name": ""
+    },
+    "sublevels": {
+      "csc_timecapsule_review1_ -l3": {
+        "display_name": "",
+        "short_instructions": " ",
+        "long_instructions": " "
+      },
+      "csc_timecapsule_review2_ -l3": {
+        "display_name": "",
+        "short_instructions": "",
+        "long_instructions": "\r\n"
+      },
+      "csc_timecapsule_review3_ -l3": {
+        "display_name": "",
+        "short_instructions": "",
+        "long_instructions": "\r\n"
+      },
+      "csc_timecapsule_review4_ -l3": {
+        "display_name": "",
+        "short_instructions": "",
+        "long_instructions": "\r\n\r\n"
+      },
+      "csc_timecapsule_review5_ -l3": {
+        "display_name": "",
+        "short_instructions": "\r\n",
+        "long_instructions": "\r\n"
+      },
+      "csc_timecapsule_review6_ -l3": {
+        "display_name": "",
+        "short_instructions": " \r\n",
+        "long_instructions": " "
+      }
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/4/levels/1": {
+    "long_instructions": " "
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/4/levels/2": {
+    "dsls": {
+      "markdown": "\n<div style= \"width: 60%\"> \n\n\n</div>\n\n\n\n"
+    }
+  }
+}
