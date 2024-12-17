@@ -1,0 +1,40 @@
+---
+en:
+  data:
+    block_categories:
+      Actions: اقدامات
+      Advanced: پیشرفته
+      Behaviors: رفتارها
+      'Behaviors ': 'رفتارها '
+      Brushes: برس ها
+      Category: دسته بندی
+      Color: رنگ
+      Comment: نظر دهید
+      Comments: نظرات
+      Conditionals: شرایط
+      Dancers: رقصنده ها
+      Default: پیش فرض
+      Effects: جلوه ها
+      Events: رویدادها
+      Functions: توابع
+      'Functions ': 'توابع '
+      Game/Score: بازی/امتیاز
+      Games/Score: بازی/امتیاز
+      Groups: گروه ها
+      Input: ورودی
+      Location: مکان
+      Locations: مکان ها
+      Logic: منطق
+      Loops: حلقه ها
+      Math: ریاضی
+      Numbers: اعداد
+      Picker: انتخابگر
+      Prebuilt: از پیش ساخته شده است
+      Properties: خواص
+      Shapes: اشکال
+      Sprites: جن
+      Text: متن
+      Variables: متغیرها
+      'Variables ': 'متغیرها '
+      'Variables  ': 'متغیرها  '
+      World: جهان
