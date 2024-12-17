@@ -4216,3 +4216,15 @@ a {
 .cm-editor {
   height: 100%;
 }
+
+[dir="rtl"] {
+  [data-markdown] {
+    [style*="float: left"] {
+      float: right !important;
+    }
+
+    [style*="float: right"] {
+      float: left !important;
+    }
+  }
+}
