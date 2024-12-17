@@ -45,33 +45,22 @@ export default class ProjectCard extends React.Component {
     const noTimeOnCardStyle = shouldShowPublicDetails ? {} : styles.noTime;
 
     return (
-      <div className="project_card">
-        <div className={style.card}>
+      <div className={style.card}>
+        <a href={studio(url)} target={isPublicGallery ? '_blank' : undefined}>
           <div style={thumbnailStyle}>
-            <a
-              href={studio(url)}
-              style={{width: '100%'}}
-              target={isPublicGallery ? '_blank' : undefined}
-            >
-              <img
-                src={getProjectCardImageUrl(projectData.thumbnailUrl, type)}
-                className={style.image}
-                alt={i18n.projectThumbnail()}
-              />
-            </a>
+            <img
+              src={getProjectCardImageUrl(projectData.thumbnailUrl, type)}
+              alt={i18n.projectThumbnail()}
+            />
           </div>
-          <a
-            style={styles.titleLink}
-            href={studio(url)}
-            target={isPublicGallery ? '_blank' : undefined}
+
+          <div
+            style={styles.title}
+            className={`ui-project-name-${projectData.type}`}
           >
-            <div
-              style={styles.title}
-              className={`ui-project-name-${projectData.type}`}
-            >
-              {projectData.name}
-            </div>
-          </a>
+            {projectData.name}
+          </div>
+
           <div style={noTimeOnCardStyle}>
             {isPublicGallery && projectData.studentName && (
               <span className={style.firstInitial}>
@@ -111,7 +100,7 @@ export default class ProjectCard extends React.Component {
               />
             </div>
           )}
-        </div>
+        </a>
       </div>
     );
   }
