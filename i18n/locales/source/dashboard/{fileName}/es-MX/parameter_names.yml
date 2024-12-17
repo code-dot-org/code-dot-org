@@ -1,0 +1,25 @@
+---
+en:
+  data:
+    parameter_names:
+      "???": "???"
+      actor: actor
+      color: color
+      counter: encimera
+      dir: dir
+      direction: dirección
+      height: altura
+      honey: Miel
+      left: izquierda
+      length: longitud
+      min: min
+      nectar units: unidades de néctar
+      nectars: néctares
+      numOctagons: numOctágonos
+      points: agujas
+      radius: radio
+      sides: lados
+      size: tamaño
+      speed: velocidad
+      theGuess: La suposición
+      width: ancho
