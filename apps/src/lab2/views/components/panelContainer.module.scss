@@ -31,10 +31,21 @@ $default-spacing: 2px;
   border-bottom: 1px $light_gray_200 solid;
 }
 
+.panelContainerHeaderItem-light {
+  color: $neutral_dark;
+}
+
+.panelContainerHeaderItem-dark {
+  color: $neutral_white;
+}
+
+
 .panelContainerHeaderItem {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  margin: 0;
+  font-size: 13px;
 
   &Text {
     width: 100%;
