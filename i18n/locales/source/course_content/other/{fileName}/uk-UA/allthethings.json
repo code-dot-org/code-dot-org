@@ -1,0 +1,3122 @@
+{
+  "https://studio.code.org/s/allthethings/lessons/2/levels/1": {
+    "short_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/2": {
+    "short_instructions": " ",
+    "long_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/3": {
+    "short_instructions": "  ",
+    "long_instructions": "  ",
+    "authored_hints": {
+      "2-3_Maze_1_a": ""
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/4": {
+    "short_instructions": "",
+    "authored_hints": {
+      "4-5_Maze_4_a": ""
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/5": {
+    "short_instructions": " ",
+    "long_instructions": " "
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/6": {
+    "short_instructions": " ",
+    "long_instructions": "",
+    "authored_hints": {
+      "courseC_maze_programming3_a": "",
+      "courseC_maze_programming3_b": "  "
+    },
+    "callouts": {
+      "courseC_maze_programming3_2": "",
+      "courseC_maze_programming3_3": ""
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/7": {
+    "short_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/1": {
+    "short_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/2": {
+    "short_instructions": "   ",
+    "long_instructions": "   ",
+    "authored_hints": {
+      "2-3_Artist_1_new_a": "",
+      "2-3_Artist_1_new_b": " "
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/3": {
+    "short_instructions": "",
+    "long_instructions": "",
+    "authored_hints": {
+      "2-3_Artist_Functions_4_a": ""
+    },
+    "function_definitions": {
+      "draw a square": {
+        "name": ""
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/4": {
+    "short_instructions": " ",
+    "long_instructions": " "
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/5": {
+    "short_instructions": "   ",
+    "long_instructions": "   ",
+    "callouts": {
+      "NEW_Course_4_Artist_Functions_3_1": ""
+    },
+    "function_definitions": {
+      "draw a square": {
+        "name": ""
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/6": {
+    "short_instructions": "   ",
+    "function_definitions": {
+      "draw a shape": {
+        "name": "",
+        "parameters": {
+          "sides": "",
+          "length": ""
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/9": {
+    "short_instructions": "",
+    "long_instructions": "",
+    "authored_hints": {
+      "2-3_Artist_Functions_4_a": ""
+    },
+    "function_definitions": {
+      "draw a square": {
+        "name": ""
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/4/levels/1": {
+    "short_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/4/levels/3": {
+    "short_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/4/levels/4": {
+    "short_instructions": " ",
+    "long_instructions": "   ",
+    "callouts": {
+      "Bee_Cond_5_1a": ""
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/4/levels/5": {
+    "short_instructions": "  "
+  },
+  "https://studio.code.org/s/allthethings/lessons/4/levels/6": {
+    "short_instructions": " ",
+    "long_instructions": " ",
+    "function_definitions": {
+      "get 5": {
+        "name": ""
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/5/levels/3": {
+    "short_instructions": " ",
+    "long_instructions": " "
+  },
+  "https://studio.code.org/s/allthethings/lessons/5/levels/4": {
+    "short_instructions": "    ",
+    "long_instructions": "   ",
+    "authored_hints": {
+      "Course_4_Play_Lab_Params_2_a": ""
+    },
+    "callouts": {
+      "Course_4 _Play_Lab_Params_2_1": ""
+    },
+    "function_definitions": {
+      "jump": {
+        "name": "",
+        "description": ""
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/5/levels/5": {
+    "display_name": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/6/levels/1": {
+    "short_instructions": "   ",
+    "long_instructions": "   "
+  },
+  "https://studio.code.org/s/allthethings/lessons/6/levels/2": {
+    "short_instructions": "    ",
+    "authored_hints": {
+      "first_hint": " ",
+      "second_hint": " ",
+      "last_hint": " "
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/6/levels/3": {
+    "short_instructions": "    ",
+    "authored_hints": {
+      "first_hint": " ",
+      "second_hint": " ",
+      "last_hint": " "
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/7/levels/1": {
+    "short_instructions": " "
+  },
+  "https://studio.code.org/s/allthethings/lessons/8/levels/1": {
+    "short_instructions": " "
+  },
+  "https://studio.code.org/s/allthethings/lessons/9/levels/1": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "",
+          "correct": false
+        },
+        {
+          "text": "",
+          "correct": true
+        },
+        {
+          "text": "",
+          "correct": false
+        },
+        {
+          "text": "",
+          "correct": false
+        }
+      ],
+      "content1": "",
+      "questions": [
+        {
+          "text": ""
+        }
+      ],
+      "title": ""
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/9/levels/2": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "",
+          "correct": false
+        },
+        {
+          "text": "",
+          "correct": false
+        },
+        {
+          "text": "",
+          "correct": false
+        },
+        {
+          "text": "",
+          "correct": false
+        },
+        {
+          "text": "",
+          "correct": true
+        },
+        {
+          "text": "",
+          "correct": false
+        }
+      ],
+      "questions": [
+        {
+          "text": "  "
+        }
+      ],
+      "title": " "
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/9/levels/3": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "",
+          "correct": false
+        },
+        {
+          "text": "",
+          "correct": false
+        },
+        {
+          "text": "",
+          "correct": false
+        },
+        {
+          "text": "",
+          "correct": false
+        },
+        {
+          "text": "",
+          "correct": true
+        },
+        {
+          "text": "",
+          "correct": false
+        }
+      ],
+      "questions": [
+        {
+          "text": ""
+        }
+      ],
+      "title": ""
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/9/levels/4": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "",
+          "correct": false
+        },
+        {
+          "text": "",
+          "correct": true
+        },
+        {
+          "text": "",
+          "correct": false
+        },
+        {
+          "text": "",
+          "correct": false
+        },
+        {
+          "text": "",
+          "correct": false
+        },
+        {
+          "text": "",
+          "correct": false
+        }
+      ],
+      "markdown": "  \n\n",
+      "teacher_markdown": "    \n\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/9/levels/5": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "",
+          "correct": false,
+          "feedback": " "
+        },
+        {
+          "text": "",
+          "correct": false,
+          "feedback": " "
+        },
+        {
+          "text": "",
+          "correct": true,
+          "feedback": ""
+        },
+        {
+          "text": "",
+          "correct": false,
+          "feedback": " "
+        }
+      ],
+      "questions": [
+        {
+          "text": " "
+        }
+      ]
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/10/levels/1": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "",
+          "correct": true
+        },
+        {
+          "text": "",
+          "correct": true
+        },
+        {
+          "text": "",
+          "correct": false
+        },
+        {
+          "text": "",
+          "correct": false
+        }
+      ],
+      "markdown": "  \n\n",
+      "questions": [
+        {
+          "text": " "
+        }
+      ]
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/11/levels/1": {
+    "dsls": {
+      "answers": [
+        {
+          "text": ""
+        },
+        {
+          "text": ""
+        },
+        {
+          "text": ""
+        },
+        {
+          "text": ""
+        }
+      ],
+      "content2": "",
+      "questions": [
+        {
+          "text": ""
+        },
+        {
+          "text": ""
+        },
+        {
+          "text": ""
+        },
+        {
+          "text": ""
+        }
+      ],
+      "title": ""
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/12/levels/2": {
+    "long_instructions": " \n\n</br>",
+    "placeholder": "",
+    "title": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/13/levels/1": {
+    "dsls": {
+      "content1": "",
+      "markdown": "\n \n    <title name=\"NAME\"></title>\n    \n        <title name=\"LOC\"></title>\n         \n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/14/levels/1": {
+    "short_instructions": "   ",
+    "long_instructions": "   "
+  },
+  "https://studio.code.org/s/allthethings/lessons/14/levels/2": {
+    "short_instructions": " "
+  },
+  "https://studio.code.org/s/allthethings/lessons/14/levels/3": {
+    "short_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/14/levels/4": {
+    "short_instructions": " ",
+    "long_instructions": "   "
+  },
+  "https://studio.code.org/s/allthethings/lessons/14/levels/5": {
+    "short_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/16/levels/1": {
+    "short_instructions": "  ",
+    "long_instructions": "  "
+  },
+  "https://studio.code.org/s/allthethings/lessons/17/levels/1": {
+    "short_instructions": "    ",
+    "long_instructions": "     \n            "
+  },
+  "https://studio.code.org/s/allthethings/lessons/17/levels/2": {
+    "short_instructions": " ",
+    "long_instructions": " "
+  },
+  "https://studio.code.org/s/allthethings/lessons/17/levels/3": {
+    "short_instructions": "      ",
+    "long_instructions": "    "
+  },
+  "https://studio.code.org/s/allthethings/lessons/17/levels/4": {
+    "short_instructions": " ",
+    "long_instructions": "  \n            "
+  },
+  "https://studio.code.org/s/allthethings/lessons/17/levels/5": {
+    "short_instructions": " ",
+    "long_instructions": "  "
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/1": {
+    "short_instructions": " ",
+    "long_instructions": "       ",
+    "teacher_markdown": "    "
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/2": {
+    "short_instructions": "  ",
+    "long_instructions": "   "
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/3": {
+    "short_instructions": "    ",
+    "long_instructions": "   "
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/4": {
+    "short_instructions": "  ",
+    "long_instructions": "  "
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/5": {
+    "short_instructions": " ",
+    "long_instructions": "    "
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/6": {
+    "short_instructions": " ",
+    "long_instructions": "     \n\n<br>"
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/7": {
+    "short_instructions": " ",
+    "long_instructions": "   "
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/8": {
+    "short_instructions": " ",
+    "long_instructions": " "
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/9": {
+    "short_instructions": " ",
+    "long_instructions": "  "
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/10": {
+    "short_instructions": "   ",
+    "long_instructions": "   "
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/11": {
+    "short_instructions": "  ",
+    "long_instructions": "  ",
+    "teacher_markdown": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/12": {
+    "short_instructions": "",
+    "long_instructions": "       "
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/13": {
+    "short_instructions": " ",
+    "long_instructions": " "
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/14": {
+    "dsls": {
+      "markdown": " \n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/15": {
+    "contained levels": [
+      {
+        "long_instructions": ""
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/16": {
+    "short_instructions": " ",
+    "long_instructions": " "
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/18": {
+    "short_instructions": " ",
+    "long_instructions": "       ",
+    "teacher_markdown": "    "
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/19": {
+    "short_instructions": " ",
+    "long_instructions": "       ",
+    "teacher_markdown": "    "
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/20": {
+    "short_instructions": " ",
+    "long_instructions": "       ",
+    "teacher_markdown": "    "
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/21": {
+    "long_instructions": "    "
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/22": {
+    "long_instructions": "  "
+  },
+  "https://studio.code.org/s/allthethings/lessons/19/levels/3": {
+    "long_instructions": "     "
+  },
+  "https://studio.code.org/s/allthethings/lessons/19/levels/4": {
+    "display_name": "",
+    "long_instructions": "   "
+  },
+  "https://studio.code.org/s/allthethings/lessons/20/levels/1": {
+    "dsls": {
+      "markdown": "\n\n<p> </p>\n\n<p>   </p>\n\n<p></p>\n\n<p> </p>\n\n<p></p>\n\n</br>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/20/levels/2": {
+    "dsls": {
+      "markdown": " \n\n<div id=\"discourse-comments\"></div>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/21/levels/2": {
+    "short_instructions": "  "
+  },
+  "https://studio.code.org/s/allthethings/lessons/21/levels/3": {
+    "short_instructions": "",
+    "long_instructions": " "
+  },
+  "https://studio.code.org/s/allthethings/lessons/23/levels/1": {
+    "short_instructions": "   "
+  },
+  "https://studio.code.org/s/allthethings/lessons/23/levels/2": {
+    "sublevels": {
+      "K-1 Happy Maps Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            }
+          ],
+          "content1": "",
+          "questions": [
+            {
+              "text": ""
+            }
+          ],
+          "title": ""
+        }
+      },
+      "Multi Horizontal Scroll Test": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "  "
+            }
+          ],
+          "title": " "
+        }
+      },
+      "Choose 2 Test": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            }
+          ],
+          "markdown": "  \n\n",
+          "questions": [
+            {
+              "text": " "
+            }
+          ]
+        }
+      },
+      "K-1 Plant a Seed Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "content1": "",
+          "questions": [
+            {
+              "text": ""
+            }
+          ],
+          "title": ""
+        }
+      },
+      "K-1 Plant a Seed Multi 2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": false
+            }
+          ],
+          "content1": "",
+          "questions": [
+            {
+              "text": ""
+            }
+          ],
+          "title": ""
+        }
+      },
+      "K-1 Artist 1 Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            }
+          ],
+          "content1": "",
+          "questions": [
+            {
+              "text": ""
+            }
+          ],
+          "title": ""
+        }
+      },
+      "ECSPD1 computational thinker": {
+        "dsls": {
+          "markdown": " \n"
+        }
+      },
+      "sample external 2": {
+        "dsls": {
+          "markdown": " \n\n"
+        }
+      },
+      "ECSPD your goals_test": {
+        "long_instructions": " \r\n",
+        "title": ""
+      },
+      "K-1 Maze Loops Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            }
+          ],
+          "content1": "",
+          "questions": [
+            {
+              "text": ""
+            }
+          ],
+          "title": ""
+        }
+      },
+      "K-1 Maze Loops Multi 2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "content1": "",
+          "questions": [
+            {
+              "text": ""
+            }
+          ],
+          "title": ""
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/25/levels/1": {
+    "short_instructions": "  "
+  },
+  "https://studio.code.org/s/allthethings/lessons/25/levels/2": {
+    "display_name": "",
+    "short_instructions": "",
+    "long_instructions": " ",
+    "authored_hints": {
+      "MC_HOC_2017_13_Cole_a": ""
+    },
+    "function_definitions": {
+      "function 1": {
+        "name": ""
+      },
+      "function 2": {
+        "name": ""
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/25/levels/3": {
+    "long_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/26/levels/1": {
+    "dsls": {
+      "title": ""
+    },
+    "sublevels": {
+      "csp_unit_assessment_overview": {
+        "dsls": {
+          "content1": "",
+          "markdown": "   \n",
+          "teacher_markdown": "                \n"
+        }
+      },
+      "PS U3 Q1-1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            }
+          ],
+          "markdown": " \n"
+        }
+      },
+      "PS U3 Q1-2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            }
+          ],
+          "markdown": "    \n\n\n",
+          "title": ""
+        }
+      },
+      "PS U3 Q1-3": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            }
+          ],
+          "markdown": " \n"
+        }
+      },
+      "PS U3 Q1-4": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "PS U3 Q1-5": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "PS U3 Q1-6": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "sample external 1": {
+        "dsls": {
+          "markdown": "\n\n"
+        }
+      },
+      "PS U3 Q1-7": {
+        "dsls": {
+          "answers": [
+            ""
+          ],
+          "content1": "",
+          "markdown": "       <br>  \n\n"
+        }
+      },
+      "sample external 2": {
+        "dsls": {
+          "markdown": " \n\n"
+        }
+      },
+      "ECSPD your goals": {
+        "long_instructions": "\n",
+        "title": ""
+      },
+      "PS U3 Q1-8": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": " ",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            }
+          ],
+          "markdown": "\n\n\n"
+        }
+      },
+      "PS U3 Q1-9": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/27/levels/1": {
+    "long_instructions": "",
+    "title": " "
+  },
+  "https://studio.code.org/s/allthethings/lessons/27/levels/2": {
+    "long_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/27/levels/3": {
+    "long_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/27/levels/4": {
+    "long_instructions": " "
+  },
+  "https://studio.code.org/s/allthethings/lessons/28/levels/1": {
+    "dsls": {
+      "title": ""
+    },
+    "sublevels": {
+      "CSP PD Example Question 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "lesson": ""
+            },
+            {
+              "text": "",
+              "lesson": ""
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "CSP PD Example Question 2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "lesson": ""
+            },
+            {
+              "text": "",
+              "lesson": ""
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/1": {
+    "short_instructions": " "
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/2": {
+    "short_instructions": " "
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/3": {
+    "short_instructions": " ",
+    "authored_hints": {
+      "2-3_Maze_6_a": ""
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/5": {
+    "short_instructions": "",
+    "long_instructions": "",
+    "function_definitions": {
+      "draw 3 hexagons": {
+        "name": ""
+      },
+      "draw 4 hexagons": {
+        "name": ""
+      },
+      "draw 5 hexagons": {
+        "name": ""
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/6": {
+    "short_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/7": {
+    "short_instructions": "  "
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/8": {
+    "short_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/9": {
+    "short_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/30/levels/1": {
+    "sublevels": {
+      "test anonymous student survey fun": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "test anonymous student survey educational": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "test_anonymous_student_survey_why_class": {
+        "long_instructions": " "
+      },
+      "test_anonymous_student_survey_next_class": {
+        "long_instructions": ""
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lockable/1/levels/1": {
+    "dsls": {
+      "title": ""
+    },
+    "sublevels": {
+      "pre-assessment survey heading1": {
+        "dsls": {
+          "markdown": "\n"
+        }
+      },
+      "pre-assessment survey q1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q3": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q4": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q5": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q6": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q7": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q8": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey heading2": {
+        "dsls": {
+          "markdown": "  \n"
+        }
+      },
+      "pre-assessment survey q9": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q10": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q11": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q12": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q13": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q14": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q15": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q16": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q17": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q18": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q19": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q20": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q21": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q22": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": " "
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q23": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q24A": {
+        "long_instructions": " "
+      },
+      "pre-assessment survey heading3": {
+        "dsls": {
+          "markdown": " \n"
+        }
+      },
+      "pre-assessment survey q24": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q25A": {
+        "long_instructions": " "
+      },
+      "pre-assessment survey q26": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q27": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": " "
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q28": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q29": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q30": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/32/levels/1": {
+    "long_instructions": "          "
+  },
+  "https://studio.code.org/s/allthethings/lessons/33/levels/1": {
+    "sublevels": {
+      "K-1 Happy Maps Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            }
+          ],
+          "content1": "",
+          "questions": [
+            {
+              "text": ""
+            }
+          ],
+          "title": ""
+        }
+      },
+      "Multi Horizontal Scroll Test": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "  "
+            }
+          ],
+          "title": " "
+        }
+      },
+      "Choose 2 Test": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            }
+          ],
+          "markdown": "  \n\n",
+          "questions": [
+            {
+              "text": " "
+            }
+          ]
+        }
+      },
+      "CSD U3 drawSprites placement match": {
+        "dsls": {
+          "answers": [
+            {
+              "text": ""
+            },
+            {
+              "text": ""
+            },
+            {
+              "text": ""
+            },
+            {
+              "text": ""
+            }
+          ],
+          "content1": "",
+          "questions": [
+            {
+              "text": ""
+            },
+            {
+              "text": ""
+            },
+            {
+              "text": ""
+            },
+            {
+              "text": ""
+            }
+          ],
+          "title": ""
+        }
+      },
+      "CSD U3 - conditionals - Matching_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": ""
+            },
+            {
+              "text": ""
+            },
+            {
+              "text": ""
+            },
+            {
+              "text": ""
+            },
+            {
+              "text": ""
+            }
+          ],
+          "content1": "",
+          "questions": [
+            {
+              "text": ""
+            },
+            {
+              "text": ""
+            },
+            {
+              "text": ""
+            },
+            {
+              "text": ""
+            },
+            {
+              "text": ""
+            }
+          ],
+          "title": " "
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/36/levels/1": {
+    "long_instructions": "",
+    "behavior_names": {
+      "swimming left and right": "",
+      "shrinking": "",
+      "patrolling": "",
+      "wandering": "",
+      "growing": "",
+      "jittering": "",
+      "moving east": "",
+      "moving north": "",
+      "moving south": "",
+      "moving west": "",
+      "spinning right": ""
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": " "
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/36/levels/2": {
+    "short_instructions": "",
+    "long_instructions": "  ",
+    "teacher_markdown": "      ",
+    "behavior_names": {
+      "swimming left and right": "",
+      "shrinking": "",
+      "patrolling": "",
+      "wandering": "",
+      "growing": "",
+      "jittering": "",
+      "moving east": "",
+      "moving north": "",
+      "moving south": "",
+      "moving west": "",
+      "spinning right": ""
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": " "
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/36/levels/3": {
+    "long_instructions": "",
+    "function_definitions": {
+      "set background": {
+        "name": ""
+      }
+    },
+    "behavior_names": {
+      "spinning left": "",
+      "growing": "",
+      "jittering": "",
+      "spinning right": "",
+      "shrinking": "",
+      "moving south": "",
+      "moving west": "",
+      "swimming left and right": "",
+      "wandering": "",
+      "moving east": "",
+      "moving north": "",
+      "patrolling": "",
+      "moving with arrow keys": "",
+      "wobbling": "",
+      "driving with arrow keys": "",
+      "moving east and looping": "",
+      "fluttering": "",
+      "moving west and looping": "",
+      "moving north and looping": "",
+      "moving south and looping": ""
+    },
+    "behavior_descriptions": {
+      "rotate a sprite to its left": "",
+      "change the size of a sprite": "",
+      "randomly change the size of a sprite": "",
+      "rotate a sprite to its right": "",
+      "move a sprite downwards across the screen": "",
+      "move a sprite to the left across the screen": "",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "",
+      "move a sprite, changing its direction randomly": "",
+      "move a sprite to the right across the screen": "",
+      "move a sprite upwards across the screen": "",
+      "move a sprite across the screen, reversing direction if it touches the edges": "",
+      "move a sprite if the user is pressing the arrow keys": "",
+      "randomly set the rotation of a sprite": "",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": " ",
+      "randomly change the vertical position of a sprite": "",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": " ",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": " "
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/36/levels/4": {
+    "long_instructions": "",
+    "behavior_names": {
+      "spinning left": "",
+      "growing": "",
+      "jittering": "",
+      "spinning right": "",
+      "shrinking": "",
+      "moving south": "",
+      "moving west": "",
+      "swimming left and right": "",
+      "wandering": "",
+      "moving east": "",
+      "moving north": "",
+      "patrolling": "",
+      "moving with arrow keys": "",
+      "wobbling": "",
+      "driving with arrow keys": "",
+      "moving east and looping": "",
+      "fluttering": "",
+      "moving west and looping": "",
+      "moving north and looping": "",
+      "moving south and looping": ""
+    },
+    "behavior_descriptions": {
+      "rotate a sprite to its left": "",
+      "change the size of a sprite": "",
+      "randomly change the size of a sprite": "",
+      "rotate a sprite to its right": "",
+      "move a sprite downwards across the screen": "",
+      "move a sprite to the left across the screen": "",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "",
+      "move a sprite, changing its direction randomly": "",
+      "move a sprite to the right across the screen": "",
+      "move a sprite upwards across the screen": "",
+      "move a sprite across the screen, reversing direction if it touches the edges": "",
+      "move a sprite if the user is pressing the arrow keys": "",
+      "randomly set the rotation of a sprite": "",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": " ",
+      "randomly change the vertical position of a sprite": "",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": " ",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": " "
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/37/levels/1": {
+    "long_instructions": " "
+  },
+  "https://studio.code.org/s/allthethings/lessons/37/levels/2": {
+    "long_instructions": " "
+  },
+  "https://studio.code.org/s/allthethings/lessons/37/levels/4": {
+    "short_instructions": " ",
+    "long_instructions": "  ",
+    "authored_hints": {
+      "Hint1": " ",
+      "HintEdit": "  ",
+      "Hint2": " "
+    },
+    "callouts": {
+      "ai_dance_callout_draft_level_6": ""
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/38/levels/1": {
+    "long_instructions": "  ",
+    "mini_rubric": {
+      "rubric_key_concept": "",
+      "rubric_performance_level_1": "",
+      "rubric_performance_level_2": "",
+      "rubric_performance_level_3": "",
+      "rubric_performance_level_4": ""
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/38/levels/2": {
+    "long_instructions": "  ",
+    "mini_rubric": {
+      "rubric_key_concept": "           ",
+      "rubric_performance_level_1": "",
+      "rubric_performance_level_2": "",
+      "rubric_performance_level_3": "",
+      "rubric_performance_level_4": ""
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/38/levels/3": {
+    "long_instructions": "  ",
+    "mini_rubric": {
+      "rubric_key_concept": "",
+      "rubric_performance_level_1": "",
+      "rubric_performance_level_2": "",
+      "rubric_performance_level_3": "",
+      "rubric_performance_level_4": ""
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/39/levels/1": {
+    "dsls": {
+      "content1": "",
+      "markdown": "<h2>\n\n</h2>\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/39/levels/2": {
+    "dsls": {
+      "content1": "",
+      "markdown": "<h2>\n\n</h2>\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/40/levels/1": {
+    "dsls": {
+      "description": " ",
+      "display_name": " "
+    },
+    "sublevels": {
+      "AllTheThings_StandaloneVideo": {
+      },
+      "Web Lab 1": {
+        "long_instructions": "          "
+      },
+      "Overworld Chop Tree - allthethings": {
+        "short_instructions": "  "
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/1": {
+    "teacher_markdown": "",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            }
+          ],
+          "content1": "",
+          "questions": [
+            {
+              "text": ""
+            }
+          ],
+          "title": ""
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/2": {
+    "teacher_markdown": "",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": false,
+              "feedback": ""
+            },
+            {
+              "text": "",
+              "correct": false,
+              "feedback": ""
+            },
+            {
+              "text": "",
+              "correct": true,
+              "feedback": ""
+            },
+            {
+              "text": "",
+              "correct": false,
+              "feedback": ""
+            }
+          ],
+          "content1": "",
+          "markdown": "\n",
+          "questions": [
+            {
+              "text": ""
+            }
+          ],
+          "title": ""
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/3": {
+    "short_instructions": " ",
+    "teacher_markdown": "",
+    "contained levels": [
+      {
+        "long_instructions": " "
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/4": {
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            }
+          ],
+          "markdown": "  \n\n",
+          "questions": [
+            {
+              "text": " "
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/5": {
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": true
+            },
+            {
+              "text": "",
+              "correct": false
+            },
+            {
+              "text": "",
+              "correct": false
+            }
+          ],
+          "markdown": "\n\n      \n",
+          "questions": [
+            {
+              "text": " "
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/6": {
+    "teacher_markdown": "",
+    "contained levels": [
+      {
+        "long_instructions": ""
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/7": {
+    "teacher_markdown": "",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": false,
+              "feedback": ""
+            },
+            {
+              "text": "",
+              "correct": false,
+              "feedback": ""
+            },
+            {
+              "text": "",
+              "correct": true,
+              "feedback": ""
+            },
+            {
+              "text": "",
+              "correct": false,
+              "feedback": ""
+            }
+          ],
+          "content1": "",
+          "markdown": "\n",
+          "questions": [
+            {
+              "text": ""
+            }
+          ],
+          "title": ""
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/8": {
+    "dsls": {
+      "markdown": "\n\n\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/9": {
+    "short_instructions": " ",
+    "teacher_markdown": "",
+    "contained levels": [
+      {
+        "long_instructions": ""
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/10": {
+    "teacher_markdown": "",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": false,
+              "feedback": ""
+            },
+            {
+              "text": "",
+              "correct": false,
+              "feedback": ""
+            },
+            {
+              "text": "",
+              "correct": true,
+              "feedback": ""
+            },
+            {
+              "text": "",
+              "correct": false,
+              "feedback": ""
+            }
+          ],
+          "content1": "",
+          "markdown": "\n",
+          "questions": [
+            {
+              "text": ""
+            }
+          ],
+          "title": ""
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/43/levels/1": {
+    "short_instructions": "",
+    "dynamic_instructions": {
+      "dataDisplayFeatures": " ",
+      "selectTrainer": ""
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/43/levels/2": {
+    "short_instructions": " ",
+    "long_instructions": "   "
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/1": {
+    "long_instructions": "",
+    "teacher_markdown": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/2": {
+    "long_instructions": "   "
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/3": {
+    "long_instructions": "",
+    "teacher_markdown": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/4": {
+    "long_instructions": "\n   ",
+    "teacher_markdown": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/5": {
+    "display_name": "",
+    "long_instructions": "                    "
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/6": {
+    "long_instructions": "",
+    "teacher_markdown": "",
+    "contained levels": [
+      {
+        "long_instructions": ""
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/7": {
+    "long_instructions": "",
+    "teacher_markdown": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/9": {
+    "long_instructions": "",
+    "teacher_markdown": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/10": {
+    "long_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/11": {
+    "long_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/12": {
+    "long_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/45/levels/3": {
+    "long_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/45/levels/4": {
+    "long_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/2": {
+    "long_instructions": "",
+    "validations": {
+      "Music Level 1_391b0b44-af8d-4559-a985-d5b643aed908": "",
+      "Music Level 1_c0da3b0b-c4d6-490c-8bfb-4faf4188ff32": ""
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/3": {
+    "long_instructions": "",
+    "validations": {
+      "Music Level 2_b4505750-86bb-40d7-8c31-ca015980d7ee": "",
+      "Music Level 2_f5ef3af6-0010-4e06-937c-d35b5cb8e0be": "",
+      "Music Level 2_3e35e104-7422-4fb8-80e1-b9da580384f2": "",
+      "Music Level 2_dc4dddf1-5e9d-4664-b9a1-00d73e728a06": ""
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/4": {
+    "long_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/1": {
+    "long_instructions": " "
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/2": {
+    "long_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/3": {
+    "long_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/4": {
+    "long_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/5": {
+    "long_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/48/levels/1": {
+    "long_instructions": "      "
+  },
+  "https://studio.code.org/s/allthethings/lessons/48/levels/2": {
+    "display_name": " ",
+    "long_instructions": "     "
+  },
+  "https://studio.code.org/s/allthethings/lessons/49/levels/1": {
+    "long_instructions": " "
+  },
+  "https://studio.code.org/s/allthethings/lessons/49/levels/2": {
+    "long_instructions": " "
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/1": {
+    "long_instructions": "",
+    "teacher_markdown": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/2": {
+    "long_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/3": {
+    "long_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/4": {
+    "long_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/5": {
+    "long_instructions": "  ",
+    "teacher_markdown": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/6": {
+    "long_instructions": " "
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/7": {
+    "long_instructions": "",
+    "teacher_markdown": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/1": {
+    "long_instructions": "  "
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/2": {
+    "long_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/1": {
+    "long_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/2": {
+    "long_instructions": " "
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/3": {
+    "long_instructions": ""
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/4": {
+    "long_instructions": "  "
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/5": {
+    "long_instructions": " "
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/6": {
+    "panels": {
+      "musiclab_intro_panels_start-421d64b2-c4db-42cb-ac1f-de66a4d22fa7": "   "
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/8": {
+    "dsls": {
+      "description": "",
+      "display_name": ""
+    },
+    "sublevels": {
+      "AI Chat Sublevel": {
+        "long_instructions": ""
+      },
+      "Music Sublevel": {
+        "validations": {
+          "Music Sublevel_20cb71d4-b13c-4494-8ca0-a234414ec12d": "",
+          "Music Sublevel_e826dcbb-1947-42a8-b66f-aa676119b013": ""
+        }
+      },
+      "Python Lab Sublevel": {
+        "long_instructions": ""
+      },
+      "Weblab2 Sublevel": {
+        "long_instructions": ""
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/53/levels/1": {
+    "dsls": {
+      "title": ""
+    },
+    "sublevels": {
+      "test-single-multi-retriable-in-levelgroup": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "",
+              "correct": false,
+              "feedback": " "
+            },
+            {
+              "text": "",
+              "correct": false,
+              "feedback": " "
+            },
+            {
+              "text": "",
+              "correct": true,
+              "feedback": ""
+            },
+            {
+              "text": "",
+              "correct": false,
+              "feedback": " "
+            }
+          ],
+          "questions": [
+            {
+              "text": " "
+            }
+          ]
+        }
+      },
+      "test-free-response-retriable-in-levelgroup": {
+        "long_instructions": ""
+      }
+    }
+  }
+}
