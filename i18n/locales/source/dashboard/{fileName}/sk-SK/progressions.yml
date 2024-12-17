@@ -1,0 +1,835 @@
+---
+en:
+  data:
+    progressions:
+      '"If/Else" with the Bee': '"Ak/Else" s včelou'
+      "(Optional) Eliza Widget": "(Voliteľné) Eliza Widget"
+      "(Optional) GAN Guess Widget": "(Voliteľné) GAN Guess Widget"
+      8-Bit Binary Number Widget: Widget 8-bitového binárneho čísla
+      AI Lab and Isaac's Data: AI Lab a Isaacove dáta
+      AI Lab and Kim's Data: AI laboratórium a Kimove dáta
+      AI Machine Learning - Video: AI Strojové učenie - Video
+      'AI for Oceans: Fish vs Not Fish': 'AI pre oceány: Rybka vs Nie Rybka'
+      'AI for Oceans: Types of Fish': 'AI pre oceány: Druhy rýb'
+      'AI: Impact on Society - Video': 'AI: Dopad na spoločnosť - Video'
+      'AI: Training Data & Bias - Video': 'AI: Tréningové dáta a predsudky - Video'
+      Accelerometer Events: Akcelerometerové udalosti
+      Add Content and HTML: Pridať obsah a HTML
+      Add Content and Structure to Your Page: Pridajte obsah a štruktúru na svoju stránku
+      Add Movement: Pridať pohyb
+      Add Sprites: Pridať sprity
+      Add Style: Pridať štýl
+      Add Style to Your Page: Pridajte štýl na svoju stránku
+      Add Style to Your User's Page: Pridajte štýl na stránku používateľa
+      Add Text: Pridať text
+      Add a Welcome Screen: Pridať uvítaciu obrazovku
+      Adding Images: Pridávanie obrázkov
+      Adding New Screens: Pridávanie nových obrazoviek
+      Adding Pages: Pridávanie stránok
+      Adding Screens: Pridávanie obrazoviek
+      Alien Defender: Mimozemský obranca
+      Alternative Datasets: Alternatívne súbory dát
+      Analog Sensors: Analógové senzory
+      Animate Your Scene: Animujte svoju scénu
+      Animating Sprites: Animovanie spriteov
+      Animation and Game Templates: Animácie a herné šablóny
+      App Lab Intro - Video: Úvod do App Lab - Video
+      'App Project: Bugs and Features': 'Projekt aplikácie: Chyby a funkcie'
+      'App Project: Linking Screens': 'Projekt aplikácie: Prepojenie obrazoviek'
+      'App Project: Screen Design': 'Projekt aplikácie: Návrh obrazovky'
+      'App Project: Screen Import': 'Projekt aplikácie: Import obrazovky'
+      'App: Choose a Kid''s Movie': 'Aplikácia Vyberte si detský film'
+      'App: Friend Finder': 'Aplikácia Hľadanie priateľov'
+      'App: Guess the Number': 'Aplikácia Uhádni číslo'
+      'App: How Many Countries': 'Aplikácia Koľko krajín'
+      'App: Improved Pet App': 'Aplikácia Vylepšená aplikácia pre domácich miláčikov'
+      'App: Is It Your Birthday?': 'Aplikácia Je to tvojich narodeniny?'
+      'App: My Famous Birthday': 'Aplikácia Moje slávne narodeniny'
+      'App: National Parks': 'Aplikácia Národné parky'
+      'App: Outfit Picker': 'Aplikácia Výber oblečenia'
+      'App: Pet Chooser': 'Aplikácia Výber domáceho maznáčika'
+      'App: Stamp Notebook': 'Aplikácia Pečiatkový zápisník'
+      'App: Story Creator': 'Aplikácia Tvorca príbehov'
+      'App: The Fastest Finger': 'Aplikácia Najrýchlejší prst'
+      'App: Where Should I Live?': 'Aplikácia Kde by som mal žiť?'
+      Arrays: Polia
+      Artist Intro with JR Hildebrand: Úvod umelca s JR Hildebrand
+      Artist Intro with JR Hildebrande: Úvod umelca s JR Hildebrandom
+      Artist Project: Projekt umelca
+      'Artist: Variables': 'Umelec: Premenné'
+      Assessment: Hodnotenie
+      Assessment Level: Hodnotiaca úroveň
+      Attribution: Pripisovanie
+      Back and Forth: Tam a späť
+      Balance an Ecosystem: Vyvážiť ekosystém
+      Basic Conditionals: Základné podmienky
+      Bass, Mid, and Treble: "Bas, Stred, a Výšky"
+      Be a Super Digital Citizen: Buď super digitálnym občanom
+      Begin planning your project: Začnite plánovať svoj projekt
+      Begin planning your project_2018: Začnite plánovať svoj projekt_2018
+      Behaviors: Správanie
+      Binary Bracelets - Student Resources: Binárne náramky - Zdroje pre študentov
+      Binary Bracelets - Unplugged Activity: Binárne náramky - Odpojená aktivita
+      Binary Number Widget: Binárny číslicový widget
+      Binary Numbers: Binárne čísla
+      Binary and Data: Binárne a dáta
+      Blank Space Stories - Student Resources: Príbehy prázdneho miesta - Zdroje pre študentov
+      Board Events: Rada udalostí
+      Board Input and Output: Vstup a výstup dosky
+      Book Recommender App: Aplikácia na odporúčanie kníh
+      Book Recommender Model Card: Karta modelu odporúčania kníh
+      Book Summary: Zhrnutie knihy
+      Boolean Comparison: Boolean porovnanie
+      Booleans and Comparison Operators: Booleany a porovnávacie operátory
+      Build a Platform Jumper: Vytvorte platformový skokan
+      Build a Screen: Postavte obrazovku
+      Building a UI with Design Mode: Vytváranie používateľského rozhrania s režimom návrhu
+      Building an App: Vytváranie aplikácie
+      'Bunny ': 'Zajac '
+      Bunny Jumper: Zajac skokan
+      Button Circuits: Tlačidlové obvody
+      Buttons and Switch: Tlačidlá a prepínač
+      COCO Dataset: COCO Dataset
+      CS Discoveries Post-Course Survey: Prieskum po kurze CS Discoveries
+      CS Discoveries Post-course Survey: Prieskum po kurze CS Discoveries
+      CSD U3 Interactive Card Exemplar: CSD U3 Interaktívna karta Exemplar
+      CSD U3 platform intro: Úvod do platformy CSD U3
+      'CSD: For Loop': 'CSD: Pre cyklus'
+      CSS Classes: CSS triedy
+      CSS Text Properties: CSS textové vlastnosti
+      CSS and Style Sheets: CSS a štýlové listy
+      Cake Defender: Obranár torty
+      Cake Survey: Prieskum tort
+      Captioned Scene Example: Príklad scény s titulkami
+      'Career Explorations: The Sports Industry': 'Kariérne prieskumy: Športový priemysel'
+      'Career Spotlight: Creative Technologist': 'Kariérne zameranie: Kreatívny technológ'
+      'Career Spotlight: Healthcare': 'Kariérne zameranie: Zdravotná starostlivosť'
+      Challenge: Výzva
+      Challenge Levels: Úrovne výziev
+      Challenge/Practice: Výzva/Prax
+      'Challenge: Add More Inputs': 'Výzva: Pridať viac vstupov'
+      'Challenge: Checking for Multiple Conditions': 'Výzva: Kontrola viacerých podmienok'
+      'Challenge: Draw an Image': 'Výzva: Nakresliť obrázok'
+      'Challenge: Extend Your Scene': 'Výzva: Rozšírte svoju scénu'
+      'Challenge: Lists': 'Výzva: Zoznamy'
+      'Challenge: Making Sense of Sensors': 'Výzva: Zmysel senzorov'
+      'Challenge: RGB Colors': 'Výzva: RGB farby'
+      'Challenge: Updating Variables': 'Výzva: Aktualizácia premenných'
+      Challenges: Výzvy
+      Change: Zmeniť
+      Change a sound: Zmeniť zvuk
+      Changing Screens: Zmena obrazoviek
+      Changing Sensor Scale: Zmena rozsahu senzora
+      Check For Understanding: Skontrolujte porozumenie
+      Check Your Work: Skontrolujte svoju prácu
+      Check for Understanding: Skontrolujte porozumenie
+      Check-In Survey: Prieskum pri registrácii
+      Checking for a Winner: Kontrola víťaza
+      Choice: Voľba
+      'Choice Level: Add Effects': 'Úroveň voľby: Pridať efekty'
+      'Choice Levels: Customize Your App': 'Úrovne výberu: Prispôsobte si svoju aplikáciu'
+      Choose Your Own Adventure: Vyberte si svoju vlastnú dobrodružnú cestu
+      Choosing Good IDs: Výber dobrých ID
+      'Circuit Playground: Buzzer': 'Obvodové ihrisko: Bzučák'
+      'Circuit Playground: Color LEDs': 'Obvodové ihrisko: Farba LED'
+      'Circuit Playground: Introduction': 'Obvodové ihrisko: Úvod'
+      'Circuit Playground: LEDs': 'Obvodové ihrisko: LED diódy'
+      Circuits and Logic: Obvody a logika
+      Club Datasets: Klubové súbory
+      Code My Poem: Kód môjho básne
+      Code Prediction: Predikcia kódu
+      Code Your Own Flappy Game: Napíš si vlastnú Flappy hru
+      Code Your Page: Kódujte svoju stránku
+      Coding with Algorithms and Sequences: Kódovanie s algoritmami a sekvenciami
+      Coding with Conditionals: Kódovanie s podmienkami
+      Coding with Loops: Kódovanie s cyklami
+      Collector Game: Zberateľská hra
+      Collision Detection: Detekcia kolízií
+      Collision Detection Review: Prehľad detekcie kolízií
+      Collisions: Kolízie
+      Collisions in Games: Kolízie v hrách
+      Color LEDs: Farba LED
+      Combining Projects: Kombinovanie projektov
+      Combining Representations: Kombinovanie reprezentácií
+      'Conditionals with Cards - Student Resources ': 'Podmienky s kartami - Študentské zdroje '
+      Conditionals with Cards - Unplugged Activity: Podmienky s kartami - Aktivita bez elektriny
+      Conditionals with Cards - Video: Podmienky s kartami - Video
+      'Conditionals: If Statements': 'Podmienky: Ak vyhlásenia'
+      'Conditionals: If and If/Else Statements': 'Podmienky: Ak a Ak/Else vyhlásenia'
+      Continuing your CS Journey: Pokračovanie vašej cesty v oblasti informatiky
+      Control Your Player: Ovládajte svojho hráča
+      Course E Artist Project: Kurz E Projekt umelca
+      Course E Sprite Lab Project: Kurz E Sprite Lab Projekt
+      'Course E: Play Lab Project': 'Kurz E: Hrajte projekt laboratória'
+      Course F Artist Project: Kurz F Projekt umelca
+      Course F Sprite Lab Project: Kurz F Sprite Lab Projekt
+      'Course F: Artist Project': 'Kurz F: Projekt umelca'
+      'Course F: Artist Project - Revise': 'Kurz F: Projekt umelca - Revízia'
+      'Course F: Play Lab Project': 'Kurz F: Hrajte projekt laboratória'
+      'Course F: Play Lab Project - Revise': 'Kurz F: Hrajte Lab Projekt - Revízia'
+      Crack Random Substitution: Náhodná substitúcia
+      Crack a Caesar Cipher: Rozlúštiť Cézarovu šifru
+      Create Your Own Animation: Vytvorte si vlastnú animáciu
+      Create Your Robot Face: Vytvorte si tvár robota
+      Create Your Sprites: Vytvorte svoje sprity
+      Create a Background: Vytvoriť pozadie
+      Create a Google Form: Vytvorte formulár Google
+      Create a Story: Vytvorte príbeh
+      Create an App in App Lab: Vytvorte aplikáciu v App Lab
+      Create your project: Vytvorte svoj projekt
+      Creating Sprites: Vytváranie spriteov
+      Creative Commons Search: Hľadanie Creative Commons
+      Creativity + Code with Event-based Programs: Kreativita + Kód s programami založenými na udalostiach
+      Cropping Widget: Orezávací widget
+      Custom notes & beats: Vlastné poznámky a rytmy
+      Customize: Prispôsobiť
+      Customize Your App: Prispôsobte si svoju aplikáciu
+      Customizing Sprites: Prispôsobenie spriteov
+      Customizing Your App: Prispôsobenie vašej aplikácie
+      Dance Crews: Tanečné skupiny
+      Data Visualization: Vizualizácia údajov
+      De-bugging with the Step Button: Ladenie pomocou tlačidla krok
+      Debugging: Ladenie
+      Debugging with Watchers: Ladenie s pozorovateľmi
+      Debugging with the Step Button: Ladenie pomocou tlačidla krok
+      Demo - Bug Grab: Demo - Chyba Grab
+      'Demo App: Interactive Card': 'Demo aplikácia: Interaktívna karta'
+      Demo Apps: Demonštračné aplikácie
+      Design Mode: Návrhový režim
+      Design Mode Elements: Návrhový režim prvkov
+      Design Your Game: Navrhnite svoju hru
+      Design Your Prototype: Navrhnite svoj prototyp
+      Design a Screen for your App: Navrhnite obrazovku pre svoju aplikáciu
+      Design an AI App - AI Lab: Navrhnite aplikáciu AI - AI laboratórium
+      Design an AI App - App Lab: Navrhnite aplikáciu AI - App Lab
+      Designing Screens with Code: Navrhovanie obrazoviek s kódom
+      Designing for Accessibility: Navrhovanie pre prístupnosť
+      Designing for Accessibility - Student Discussion: Navrhovanie pre prístupnosť - Diskusia študentov
+      Digital Sharing - Discussion Questions: Digitálne zdieľanie - Diskusné otázky
+      Digital Sharing - Unplugged Activity: Digitálne zdieľanie - Odpojená aktivita
+      Digital Sharing - Video: Digitálne zdieľanie - Video
+      Div & Flex Exploration: Prieskum Div & Flex
+      Dogger Example: Pes príklad
+      Draw Your Background: Nakreslite si pozadie
+      Draw a Background: Nakreslite pozadie
+      Drawing: Kreslenie
+      Drawing Shapes: Kreslenie tvarov
+      Driver Alert System: Systém upozornenia vodiča
+      Ecosystems Simulation: Simulácia ekosystémov
+      Ecosystems Video: Ekosystémy Video
+      Editing Images: Úprava obrázkov
+      Emotion Machine Example: Príklad emocionálneho stroja
+      End of Course Projects: Koniec projektov kurzu
+      End-Of-Unit Assessment: Hodnotenie na konci jednotky
+      End-Of-Unit Survey: Prieskum na konci jednotky
+      End-of-Unit Survey: Prieskum na konci jednotky
+      Escape Room Example: Úniková miestnosť Príklad
+      Ethics Exploration: Preskúmanie etiky
+      Event Types: Typy udalostí
+      Events: Udalosti
+      Events Challenge: Výzva udalostí
+      Events and Linking Screens: Udalosti a prepojené obrazovky
+      Events and Properties: Udalosti a vlastnosti
+      Example: Príklad
+      Example Animated Scene: Príklad animovanej scény
+      Example App Types: Príklady typov aplikácií
+      'Example App: Zoo Classification': 'Príklad aplikácie: Klasifikácia ZOO'
+      Example Apps: Príklad aplikácií
+      Example Projects: Príkladové projekty
+      Example projects: Príkladové projekty
+      Exemplar Personal Websites: Príklady osobných webových stránok
+      Expanding Personal Website: Rozširovanie osobnej webovej stránky
+      Expanding Your Website: Rozširovanie vašej webovej stránky
+      Experiment with Web Lab: Experimentujte s Web Labom
+      Exploration: Prieskum
+      Exploration Level: Úroveň prieskumu
+      Exploration level: Úroveň prieskumu
+      'Exploration: Adding Style': 'Prieskum: Pridanie štýlu'
+      'Exploration: Clicker Game': 'Prieskum: Hra s kliknutím'
+      'Exploration: For Loops': 'Prieskum: Pre slučky'
+      'Exploration: Rikki''s Poster': 'Prieskum: Rikkiho plagát'
+      'Exploration: Sample Apps': 'Prieskum: Ukážkové aplikácie'
+      'Exploration: Sample Programs': 'Prieskum: Ukážkové programy'
+      'Exploration: Sample Project': 'Prieskum: Ukážkový projekt'
+      Explore HTML: Explore HTML
+      Explore a Digital Book Cover Example: Preskúmajte príklad digitálneho obalu knihy
+      Explore!: Preskúmajte!
+      Exploring CS in Entertainment: Preskúmanie informatiky v zábave
+      Exploring more CSS: Preskúmanie ďalšieho CSS
+      Extension choices: Možnosti rozšírenia
+      Extra: Extra
+      Extra Challenge: Extra výzva
+      'Extra Challenge: Sound Board': 'Extra výzva: Zvuková doska'
+      Field Collector App: Aplikácia pre zberateľov polí
+      Final Dance Party Project: Konečný projekt tanečnej párty
+      Final Personal Website: Osobná webová stránka
+      Final Project: Záverečný projekt
+      Final Room Escape App: Konečná aplikácia na únik z miestnosti
+      Find the Wizard: Nájdite čarodejníka
+      Finish a Screen: Dokončiť obrazovku
+      Finish the Prototype: Dokončiť prototyp
+      Finishing Functions: Dokončovanie funkcií
+      Finishing Touches: Dokončovacie úpravy
+      Flyer Game: Herný leták
+      Flyer Game Example: Príklad letáku hry
+      Follow the Algorithm - Unplugged Activity: Nasledujte algoritmus - aktivita bez zapojenia
+      Follow the Mouse: Nasleduj myš
+      Fonts and Style: Písma a štýl
+      Food Chain Setup: Nastavenie potravinového reťazca
+      FoodFight: JedloBitka
+      For Loop Fun - Unplugged Activity: Zábava s cyklom For - Aktivita bez elektriny
+      For Loops: Pre slučky
+      For Loops and Color LEDs: Pre slučky a farebné LED diódy
+      For Loops and Repeat Blocks: Prechody a opakované bloky
+      Formatting HTML: Formatting HTML
+      Free Play: Voľná hra
+      Free Play - Landmarks: Voľná hra - Pamiatky
+      'Free Play: Make a Scene': 'Voľná hra: Urobte scénu'
+      'Free Play: Make an Interactive Scene': 'Voľná hra: Vytvorte interaktívnu scénu'
+      From Data to Visualization: Od dát k vizualizácii
+      Fruit and Veggie Explorer: Prieskumník ovocia a zeleniny
+      Functions: Funkcie
+      Functions Review: Prehľad funkcií
+      Functions with Parameters: Funkcie s parametrami
+      Garden Image Files: Súbory obrázkov záhrady
+      Geometric Sun: Geometrické slnko
+      Get In Formation: Získajte formáciu
+      Getters and Setters: Získavače a nastavovače
+      Getting Loopy - Student Handout: Získavanie slučiek - Príloha pre študentov
+      Getting Properties: Získavanie vlastností
+      Graph Paper Programming - Student Resources: Programovanie na grafovom papieri - Zdroje pre študentov
+      Graph Paper Programming - Unplugged Activity: Programovanie na grafovom papieri - Aktivita bez elektriny
+      Graph Paper Programming - Video: Programovanie na grafovom papieri - Video
+      Green Glass Door: Zelené sklenené dvere
+      Guess The Number: Uhádni číslo
+      HTML Tags: HTML značky
+      Happy Loops - Student Resources: Šťastné slučky - Zdroje pre študentov
+      Happy Loops - Unplugged Activity: Šťastné slučky - Odpojená aktivita
+      'Happy Maps - Student Resources ': 'Šťastné mapy - Zdroje pre študentov '
+      Hardware and Software: Hardvér a softvér
+      Hardware and Software Skits - Student Reminder: Hardware a softvérové scénky - pripomienka pre študentov
+      Headings: Nadpisy
+      Headings in HTML: Nadpisy v HTML
+      Hello World: Ahoj svet
+      How to Create a Simple Function: Ako vytvoriť jednoduchú funkciu
+      How to Make a Sprite: Ako si vyrobiť Sprite
+      Human Device Interaction: Interakcia človeka s prístrojom
+      Hyperlinks: Hypertextové odkazy
+      Ice Age Loops: Doba ľadová slučky
+      If Statements: Ak vyhlásenia
+      If-Else Statements: Ak-Potom Vyhlásenia
+      If... then... Conditional Statements: Ak... potom... Podmienečné vyhlásenia
+      Images and Sounds: Obrázky a zvuky
+      Images in HTML: Obrázky v HTML
+      Import Your Model: Importujte svoj model
+      Import a Model: Importovať model
+      Importing Screens: Importovanie obrazoviek
+      Importing Your Model: Importovanie vášho modelu
+      Improve Your Game: Zlepšite svoju hru
+      Improved Shoe Recommender: Vylepšený odporúčateľ obuvi
+      Incorporate Feedback: Zohľadnite spätnú väzbu
+      Innovation Research: Inovačný výskum
+      Input Examples: Príklady vstupu
+      Input with If-Else: Vstup s podmienkou If-Else
+      Inspiration!: Inšpirácia!
+      InspirationalArtwork: InšpiratívneDielo
+      Interactive Art: Interaktívne umenie
+      Interactive Card: Interaktívna karta
+      Interactive Card Examples: Interaktívne príklady kariet
+      Interactive Characters: Interaktívne postavy
+      Interactive Maps Intro Video: Úvodné video interaktívnych máp
+      Interactive Pet: Interaktívne domáce zviera
+      Intro: Úvod
+      Intro Video: Úvodné video
+      Intro to Design Mode: Úvod do režimu návrhu
+      Intro to Flyer Game: Úvod do hry leták
+      Intro to For Loops: Úvod do cyklov For
+      Intro to Side Scrollers: Úvod do bočných posúvačov
+      Intro to Sprites: Úvod do spriteov
+      Intro to Variables: Úvod do premenných
+      Introducing Events: Predstavujeme podujatia
+      Introducing Sprite Lab: Predstavujeme Sprite Lab
+      Introduction: Úvod
+      Introduction to Arrays: Úvod do polí
+      Introduction to Game Lab: Úvod do herného laboratória
+      Introduction to Variables: Úvod do premenných
+      Introduction to Variables - Part 1: Úvod do premenných - Časť 1
+      Investigate: Vyšetriť
+      Isaac's Survey Data: Izákove prieskumné údaje
+      Iteration and Parameters: Iterácia a parametre
+      Jam Session: Jam Session
+      JuiceMind Assessment: Hodnotenie JuiceMind
+      Keep On Dancing!: Pokračujte v tanci!
+      Keeping Data Secret: Udržiavanie údajov v tajnosti
+      Key Press & At Measure Events: Stlačenie klávesy a udalosti merania
+      Keyboard Input: Vstup z klávesnice
+      Kim's Survey: Kimova anketa
+      Kim's Survey Data: Kimove prieskumové údaje
+      LED Apps: LED aplikácie
+      Layout Properties: Vlastnosti rozloženia
+      Layout with CSS: Rozloženie s CSS
+      Learning from Simulations: Učenie zo simulácií
+      Lesson Extra: Lekcia Extra
+      Lesson Extras: Doplnky lekcie
+      Lesson Overview: Prehľad lekcie
+      Level Overview: Prehľad úrovne
+      Levels: Úrovne
+      Light Show: Svetelná show
+      Linking Pages: Prepojené stránky
+      Linking Screens: Prepojenie obrazoviek
+      Lists: Zoznamy
+      Lists in HTML: Zoznamy v HTML
+      Looking for Patterns: Hľadanie vzorov
+      Looping: Smyčkovanie
+      Loops with the Artist: Smyčky s umelcom
+      Make Dancer & Dance Move: Urobte tanečníka a tanečný pohyb
+      Make Your Sprites: Vytvorte si svoje sprity
+      Make a Prediction: Urobte predpoveď
+      Make an Interactive Card: Vytvorte interaktívnu kartu
+      Make it Interactive: Urobte to interaktívne
+      Make it Your Own: Urobte si to po svojom
+      Making Music: Tvorba hudby
+      Making Scenes: Tvorba scén
+      Making Songs: Tvorba piesní
+      Making Sounds: Vytváranie zvukov
+      Making an Interactive Card: Vytváranie interaktívnej karty
+      'Maze Intro: Programming with Blocks': 'Úvod do bludiska: Programovanie s blokmi'
+      Measures: Opatrenia
+      MediaPipe Image Classification: Klasifikácia obrázkov MediaPipe
+      MediaPipe Object Detection: Detekcia objektov MediaPipe
+      MediaPipe Object Detection and Image Files: Detekcia objektov MediaPipe a obrazové súbory
+      Medical Dataset Model Cards: Modelové karty medicínskych dátových súborov
+      Medical Priority App: Aplikácia lekárskej priority
+      Mid-Module Survey: Prieskum v polovici modulu
+      'Minecraft: Hero''s Journey': 'Minecraft: Hrdinova cesta'
+      'Mini-Project: About Me': 'Mini-Project: O mne'
+      'Mini-Project: Alien Dance Moves': 'Mini-Project: Mimozemské tanečné pohyby'
+      'Mini-Project: Alien Dance Party': 'Mini-Project: Mimozemská tanečná párty'
+      'Mini-Project: Clicker Game': 'Mini-Project: Hra s kliknutím'
+      'Mini-Project: Collector Game': 'Mini-Project: Zberateľská hra'
+      'Mini-Project: Create a Virtual Pet': 'Mini-Project: Vytvorte virtuálneho domáceho maznáčika'
+      'Mini-Project: Outbreak Simulator': 'Mini-Project: Simulátor epidémie'
+      'Mini-Project: Royal Battle': 'Mini-Project: Kráľovská bitka'
+      "Mini-Project: Snowflake #1": "Mini-Project: Snehová vločka #1"
+      "Mini-Project: Snowflake #2": "Mini-Project: Snehová vločka #2"
+      'Mini-Project: Sticker Art': 'Mini-Project: Nálepka Art'
+      'Mini-Project: Swimming Fish': 'Mini-Project: Plávajúce ryby'
+      'Mini-Project: Swimming Fish (continued)': 'Mini-Project: Plávajúce ryby (pokračovanie)'
+      'Mini-Project: User Input Programs': 'Mini-Project: Používateľské vstupné programy'
+      'Mini-Project: Virtual Pet': 'Mini-Project: Virtuálny maznáčik'
+      'Mini-project: Chase Game': 'Mini-projekt: Hra na naháňačku'
+      'Mini-project: Flappy Game': 'Mini-projekt: Flappy hra'
+      'Mini-project: Interactive Poster': 'Mini-projekt: Interaktívny plagát'
+      'Mini-project: Jorge the Dog': 'Mini-projekt: Jorge pes'
+      'Mini-project: Sticker Art': 'Mini-projekt: Nálepka Art'
+      'Mini-project: Sticker Design': 'Mini-projekt: Návrh nálepky'
+      Modify simulation variables: Upraviť simulačné premenné
+      Modifying Arrays: Úprava polí
+      Modifying and Creating Arrays: Upravenie a vytváranie polí
+      More Buttons: Viac tlačidiel
+      More Input: Viac vstupu
+      More Parameters: Viac parametrov
+      Motorcycle: Motocykel
+      Move It Move it Video  - Unplugged Activity: Presuň to Presuň to Video - Odpojená aktivita
+      Move It, Move It - Student Resources: "Presuň to, presuň to - Študentské zdroje"
+      Movement with the Counter Pattern: Pohyb s protikladným vzorom
+      Multi-Screen Apps: Aplikácie s viacerými obrazovkami
+      Multiframe Animations: Viacfázové animácie
+      Musical Arrays: Hudobné pole
+      My Loopy Robotic Friend - Student Resources: Môj slučkový robotický priateľ - Zdroje pre študentov
+      My Loopy Robotic Friends - Unplugged Activity: Moji blázniví robotickí priatelia - Odpojená aktivita
+      My Online Neighborhood: Moja online susedstvo
+      My Robotic Friend - Student Resources: Môj robotický priateľ - Zdroje pre študentov
+      My Robotic Friends - Unplugged Activity: Moji robotickí priatelia - Odpojená aktivita
+      My Time Capsule: Moja časová kapsula
+      Naming Variables: Pomenovanie premenných
+      Nested Loops with the Bee: Vnorene cykly s včelou
+      New Challenge Introduction: Nová výzva Úvod
+      New Shapes: Nové tvary
+      Next Steps: Ďalšie kroky
+      Noisy Image Widget: Hlučný obrázkový widget
+      Orientation: Orientácia
+      Outro: Záver
+      Overview: Prehľad
+      'Overview: Design Mode': 'Prehľad: Návrhový režim'
+      'Overview: If Statements': 'Prehľad: Ak vyhlásenia'
+      'Overview: Images': 'Prehľad: Obrázky'
+      'Overview: onEvent': 'Prehľad: onEvent'
+      'Overview: setPosition': 'Prehľad: setPosition'
+      Pair Programming: Párové programovanie
+      Pattern Block Data - Resource Reminder: Vzorový blok dát - pripomienka zdrojov
+      Pattern Block Data - Unplugged Activity: Blok vzoru - Odpojená aktivita
+      Personal Career Exploration: Osobné kariérne preskúmanie
+      Pet Recommender: Odporúčateľ domácich zvierat
+      Physical Design Prototypes: Fyzikálne dizajnové prototypy
+      Picturing Data: Zobrazovanie údajov
+      Pizza Party Data: Pizze párty dáta
+      Pizza Recommendations: Odporúčania na pizzu
+      Plan Your Project: Naplánujte si projekt
+      Plan Your Scene: Naplánujte si scénu
+      Plane Jumper: Skokan na lietadle
+      Planning: Plánovanie
+      Planning Your Book Cover: Plánovanie obálky vašej knihy
+      Platform Jumper - Background and Variables: Platform Jumper - Pozadie a premenné
+      Platform Jumper - Items: Platformový skokan - Položky
+      Platform Jumper - Platforms: Platformový skokan - Platformy
+      Platform Jumper - Player: Platformový skokan - Hráč
+      Platform Jumper Review: Recenzia platformového skákača
+      Play AI Drums: Hraj AI bicie
+      Play Sound: Prehrať zvuk
+      Play Together: Hrajte spolu
+      Play a sound: Prehraj zvuk
+      Play live: Hraj naživo
+      Play more sounds: Hraj viac zvukov
+      Play together: Hrajte spolu
+      Player Controls: Ovládanie hráča
+      Playing Notes: Hranie poznámok
+      Playing with Notes: Hranie s poznámkami
+      Plotting Shapes in Game Lab: Kreslenie tvarov v Game Lab
+      Polling Events: Hlasovacie udalosti
+      Post-Course Survey Instructions: Pokyny k prieskumu po kurze
+      Post-Module Survey: Prieskum po module
+      Practice: Cvičenie
+      Practice Levels: Úrovne praxe
+      Practicing Block-Based Coding: Cvičenie kódovania založeného na blokoch
+      'Practicing CS Skills ': 'Cvičenie zručností v oblasti počítačových vied '
+      Pre-Assessment: Predbežné hodnotenie
+      Pre-Module Survey: Predmodulový prieskum
+      Predict: Predpovedať
+      Predict - Introduction to Game Lab: Predikcia - Úvod do herného laboratória
+      Prediction: Predikcia
+      Prepare for your presentation: Pripravte sa na svoju prezentáciu
+      Prepare for your presentation_2018: Pripravte sa na svoju prezentáciu_2018
+      Problem Solving: Riešenie problémov
+      Problem Solving Process for Programming: Proces riešenia problémov pre programovanie
+      Programming with Rey and BB-8: Programovanie s Rey a BB-8
+      Programs that Repeat: "Programy, ktoré sa opakujú"
+      Project: Projekt
+      Project - Background and Variables: Projekt - Pozadie a premenné
+      Project - Finishing Touches: Projekt - Dokončovacie úpravy
+      Project - Sprites and Interactions: Projekt - Sprity a interakcie
+      Project Guide: Príručka projektu
+      Project Work: Projektová práca
+      Properties: Vlastnosti
+      Prototype Components: Prototypové komponenty
+      Prototype an Innovation: Prototyp inovácií
+      Publishing Your Website: Publikovanie vašej webovej stránky
+      'Putting it All Together ': 'Zosúlaďovanie všetkého dohromady '
+      QR Code Exploration: Prieskum QR kódov
+      Quarter Notes: Štvrťové noty
+      Quick Check: Rýchla kontrola
+      RGB Exploration: RGB Prieskum
+      RGB Widget: RGB Widget
+      Random Numbers: Náhodné čísla
+      Raspado Recommender: Raspado odporúčateľ
+      Reading Sensors: Čítanie senzorov
+      Recognizing Expressions: Rozpoznávanie výrazov
+      Recognizing Fish: Rozpoznávanie rýb
+      Recognizing Fish Features: Rozpoznávanie rysov rýb
+      Recognizing Shapes: Rozpoznávanie tvarov
+      Reflection: Reflexia
+      Relay Programming - Unplugged Activity: Programovanie relé - Aktivita bez pripojenia
+      Repeat: Opakovať
+      Repeat Blocks: Opakovať bloky
+      Repeat Blocks with BB-8: Opakujte bloky s BB-8
+      Repeat Blocks with the Artist: Opakovať bloky s umelcom
+      Repeat Unit Statements: Opakovať jednotkové vyhlásenia
+      Repeat Until Statements: "Opakuj, kým sú splnené podmienky"
+      Representing Images: Zobrazovanie obrázkov
+      Responding to Board Events: Odpovedanie na udalosti predstavenstva
+      Responding to User Input: Reagovanie na vstup používateľa
+      Review: Recenzia
+      Review - Choice Level: Recenzia - Úroveň voľby
+      Review Shape Blocks: Hodnotenie tvarových blokov
+      Review Your Animated Scene: Skontrolujte svoju animovanú scénu
+      Review Your App: Skontrolujte svoju aplikáciu
+      Review Your Game: Skontrolujte svoju hru
+      Review Your Page: Skontrolujte svoju stránku
+      Review Your Scene: Skontrolujte svoju scénu
+      'Review: CSS': 'Recenzia: CSS'
+      'Review: HTML': 'Recenzia: HTML'
+      Revise Artist Project: Revidovať projekt umelca
+      Revise Sprite Lab Project: Revidovať projekt Sprite Lab
+      Revisiting the Counter Pattern: Opätovné preskúmanie vzoru počítania
+      Robot Doodle: Robot Doodle
+      Run a simulation: Spustiť simuláciu
+      Safari App: Safari aplikácia
+      Safari Model: Model Safari
+      Same Game: Rovnaká hra
+      Sample App: Ukážková aplikácia
+      Sample Apps for Good: Ukážkové aplikácie pre dobro
+      Sample Game: Ukážková hra
+      Sample Games: Ukážkové hry
+      Sample Personal Web Pages: Ukážkové osobné webové stránky
+      Sample Personal Websites: Ukážkové osobné webové stránky
+      Sample Platform Jumper Game: Ukážková platformová skákačka
+      Sample Program: Ukážkový program
+      Sample Programs: Ukážkové programy
+      Sample Web Page: Ukážková webová stránka
+      Sample Web Pages: Ukážkové webové stránky
+      Sample Website: Ukážková webová stránka
+      Scoring & Scoreboard: Skóre a tabuľa so skóre
+      Screen Design: Návrh obrazovky
+      Sensor Events: Senzorové udalosti
+      Sensor Experiment: Senzorový experiment
+      Sensors to Colors: Senzory na farby
+      Set Up Sprites: Nastaviť sprity
+      Setting Properties: Nastavenie vlastností
+      Setup: Nastavenie
+      Shapes and Parameters: Tvar a parametre
+      Shapes and the Draw Loop: Tvar a slučka kreslenia
+      Share Out: Zdieľať von
+      Share Your App: Zdieľajte svoju aplikáciu
+      Share Your Pages: Zdieľajte svoje stránky
+      Share Your Simulation: Zdieľajte svoju simuláciu
+      Share Your Stylesheets: Zdieľajte svoje štýlové listy
+      Sharing Your Book Cover: Zdieľanie vašej obálky knihy
+      Sharing Your Poem: Zdieľanie vašej básne
+      Shoe Recommendation Survey: Prieskum odporúčaní obuvi
+      Shoe Recommender: Odporúčateľ topánok
+      Side Scroller: Bočný posúvač
+      Side Scroller Example: Príklad bočného posúvača
+      Simple Circuits: Jednoduché obvody
+      Skill Building: Budovanie zručností
+      Skill Building - Map Setup: Budovanie zručností - Nastavenie mapy
+      Skill Building Levels: Úrovne budovania zručností
+      Skill-Building: Budovanie zručností
+      Sliders: Posuvníky
+      Smart Bike - Blinkers: Inteligentný bicykel - Blikače
+      Social Sleuth: Sociálny detektív
+      Solution 1 - Fishing Zone: Riešenie 1 - Rybárska zóna
+      Solution 2 - Fishing Season: Riešenie 2 - Rybolovná sezóna
+      Solution 3 - Fishing Limits: Riešenie 3 - Limity rybolovu
+      Solving Healthcare Issues with Computer Vision: Riešenie problémov v zdravotnej starostlivosti pomocou počítačového videnia
+      Songwriting - Functions Unplugged Activity: Písanie piesní - Funkcie odpojené Aktivity
+      'Songwriting - Functions Video ': 'Písanie piesní - Funkcie Video '
+      Songwriting - Student Resources: Písanie piesní - Zdroje pre študentov
+      Speed it Up, Slow it Down: "Zrýchli to, spomaľ to"
+      Sprite Interactions: Interakcie so Sprite
+      Sprite Interactions Review: Prehľad interakcií so Sprite
+      Sprite Lab Example Project: Príklad projektu Sprite Lab
+      Sprite Lab Project: Projekt Sprite Lab
+      Sprite Movement: Pohyb Sprite
+      Sprite Properties: Vlastnosti Sprite
+      Sprite Scenes: Scény Sprite
+      Sprite Velocity: Rýchlosť Sprite
+      Sprites and Backgrounds: Sprity a pozadia
+      Sprites and the Draw Loop: Sprity a slučka kreslenia
+      Star Chaser: Hvězdný prenasledovateľ
+      Star Quilts Video: Hvězdne prikrývky Video
+      Student Post-Survey: Prieskum po študentoch
+      Student Pre-Survey: Prieskum pred štúdiom
+      Styling Text: Štylizovanie textu
+      Styling with Classes: Štylovanie s triedami
+      Styling your Website: Štylovanie vašej webovej stránky
+      Teach A.I. a new word: Nauč A.I. nové slovo
+      Teach AI a New Word: Naučte AI nové slovo
+      Teachable Machine: Učiteľský stroj
+      Teaching and Learning Strategies: Učebné a vyučovacie stratégie
+      'Technique: Frequency Analysis': 'Technique: Analýza frekvencie'
+      Terminology Recap: Rekapitulácia terminológie
+      Text Compression: Kompresia textu
+      The Accelerometer: Akcelerometer
+      The Animation Tab: Záložka Animácia
+      The Artist in Code Studio: Umelec v Code Studio
+      The Big Event - Student Resources: Veľká udalosť - Študentské zdroje
+      The Big Event - Unplugged Activity: Veľká udalosť - Akcia bez elektriny
+      'The Big Event Jr. - Student Resources ': 'Veľká udalosť Jr. - Študentské zdroje '
+      The Body Element: Telo elementu
+      The Buzzer: Bzučiak
+      The Collector: Zberateľ
+      The Counter Pattern: Proti vzor
+      The Draw Loop: Kresliaca slučka
+      The Food Chain: Potravinový reťazec
+      The Harvester: Zberač
+      The Internet - Student Resources: Internet - Študentské zdroje
+      The Internet - Unplugged Activity: Internet - Odpojená aktivita
+      The Power of Words - Unplugged Activity: Sila slov - Odpojená aktivita
+      The Right App - Student Resource: Správna aplikácia - Zdroje pre študentov
+      The Right App - Unplugged Activity: Správna aplikácia - Odpojená aktivita
+      The Search for Pixel: Hľadanie Pixel
+      Title, Author, Background: "Názov, Autor, Pozadie"
+      Top Websites: Najlepšie webové stránky
+      Tour of Design Mode: Prehliadka režimu návrhu
+      Train AI to Clean the Ocean: Naučte AI čistiť oceán
+      Train a Model in AI Lab: Naučte model v AI Lab
+      Train an AI to Clean the Ocean: Naučte AI čistiť oceán
+      Triggers: Spúšťače
+      UI Element Properties: Vlastnosti prvkov používateľského rozhrania
+      Ultimate Shoe Recommender: Konečný odporúčateľ obuvi
+      Unit 5 Lesson 1 Overview: "Prehľad lekcie 1, jednotka 5"
+      Unplugged Activity: Odpojená aktivita
+      Unplugged Activity - Hardware and Software Skits: Odpojená aktivita - Hardvérové a softvérové scénky
+      Updating Your Prototype: Aktualizácia vášho prototypu
+      Upload Your Images: Nahrajte svoje obrázky
+      Use AI: Použite AI
+      User Interface: Používateľské rozhranie
+      Using Accelerometer Events: Používanie udalostí akcelerometra
+      Using Arrays: Používanie polí
+      Using Getters and Setters: Používanie getterov a setterov
+      Using HTML Tags: Používanie HTML značiek
+      Using Random Numbers: Používanie náhodných čísel
+      Using Training Data: Používanie tréningových údajov
+      Using the Grid: Používanie mriežky
+      Using the LED: Používanie LED
+      Using the Repeat Block: Používanie opakovaného bloku
+      Using the Switch: Používanie prepínača
+      Variables: Premenné
+      Velocity: Rýchlosť
+      Velocity and the Counter Pattern: Rýchlosť a proti vzor
+      Velocity and the Counter Pattern Review: Rýchlosť a prehľad proti vzoru
+      Video: Video
+      Video - Encryption and Public Keys: Video - Šifrovanie a verejné kľúče
+      Video - Events: Video - Udalosti
+      Video - Functions: Video - Funkcie
+      Video - If Statements: Video - Ak vyhlásenia
+      Video - Introduction to Arrays: Video - Úvod do polí
+      'Video - Maze Intro: Programming with Blocks': 'Video - Úvod do bludiska: Programovanie s blokmi'
+      Video - Parameters: Video - Parametre
+      Video - Repeat Blocks: Video - Opakovať bloky
+      Video - The Counter Pattern: Video - Proti vzor
+      Video - Variables: Video - Premenné
+      Video Introduction: Video Úvod
+      'Video:  Debugging with the Step Button': 'Video:  Ladenie pomocou tlačidla krok'
+      'Video:  Minecraft - The Agent': 'Video:  Minecraft - Agent'
+      'Video:  Text  and Prompts': 'Video:  Text a výzvy'
+      'Video: "If/Else"': 'Video: Ak/Else'
+      'Video: "If/Else" Statements': 'Video: "Ak/Else" vyhlásenia'
+      'Video: AI: What is Machine Learning?': 'Video: AI: Čo je strojové učenie?'
+      'Video: Amazon and Data': 'Video: Amazon a Dáta'
+      'Video: Animal Adaptations Introduction': 'Video: Prispôsobenie zvierat Úvod'
+      'Video: Artist Intro with JR Hildebrand': 'Video: Úvod umelca s JR Hildebrand'
+      'Video: Artist Intro with JR Hildebrande': 'Video: Úvod umelca s JR Hildebrandom'
+      'Video: Booleans': 'Video: Booleany'
+      'Video: CS Matters': 'Video: CS Záleží'
+      'Video: Circuits and Logic': 'Video: Obvody a logika'
+      'Video: Code Your Own Flappy Game': 'Video: Napíš si vlastnú Flappy hru'
+      'Video: Conditional Statements': 'Video: Podmienečné vyhlásenia'
+      'Video: Conditionals': 'Video: Podmienky'
+      'Video: Conditionals: If Statements': 'Video: Podmienky: Ak vyhlásenia'
+      'Video: Conditionals: If and If/Else Statements': 'Video: Podmienky: Ak a Ak/Else vyhlásenia'
+      'Video: Dance Party Events': 'Video: Tanečné párty udalosti'
+      'Video: Dance Party Measures': 'Video: Tanečná párty opatrenia'
+      'Video: Dance Party Party On!': 'Video: Tanečná párty pokračuje!'
+      'Video: Dance Party Properties': 'Video: Tanečná párty vlastnosti'
+      'Video: Dance Party Warm Up': 'Video: Tanečná párty na zahriatie'
+      'Video: De-bugging with the Step Button': 'Video: Ladenie pomocou tlačidla krok'
+      'Video: Debugging': 'Video: Ladenie'
+      'Video: Debugging with Scrat ': 'Video: Ladenie so Scratom '
+      'Video: Debugging with the Step Button': 'Video: Ladenie pomocou tlačidla krok'
+      'Video: Drawing in Game Lab - Part 1': 'Video: Kreslenie v Game Lab - Časť 1'
+      'Video: Drawing in Game Lab - Part 2': 'Video: Kreslenie v Game Lab - Časť 2'
+      'Video: Events': 'Video: Udalosti'
+      'Video: Events in App Lab': 'Video: Udalosti v App Lab'
+      'Video: Follow The Digital Trail': 'Video: Sledujte digitálnu stopu'
+      'Video: For Loops': 'Video: Pre slučky'
+      'Video: Functions': 'Video: Funkcie'
+      'Video: Getting Loopy': 'Video: Získavanie slučiek'
+      'Video: Happy Maps - Unplugged Activity': 'Video: Šťastné mapy - Odpojená aktivita'
+      'Video: Harvesting with Conditionals': 'Video: Zber s podmienkami'
+      'Video: Hello World: Do What You Want': 'Video: Ahoj svet Rob, čo chceš'
+      'Video: Hello World: Programming with Events': 'Video: Ahoj svet Programovanie s udalosťami'
+      'Video: Hello World: Welcome to Sprite Lab': 'Video: Ahoj svet Vitajte v Sprite Labe'
+      'Video: How Search Works': 'Video: Ako funguje vyhľadávanie'
+      'Video: How to Create a Simple Function': 'Video: Ako vytvoriť jednoduchú funkciu'
+      'Video: How to Make a Sprite': 'Video: Ako si vyrobiť Sprite'
+      'Video: IOSP Model': 'Video: IOSP model'
+      'Video: Ice Age Loops': 'Video: Doba ľadová slučky'
+      'Video: If/Else Statements': 'Video: Ak/Else vyhlásenia'
+      'Video: Impact on Society': 'Video: Dopad na spoločnosť'
+      'Video: Impacts on Society': 'Video: Dopady na spoločnosť'
+      'Video: Intro to CSS': 'Video: Úvod do CSS'
+      'Video: Intro to CSS - Part 1': 'Video: Úvod do CSS - Časť 1'
+      'Video: Intro to CSS - Part 2': 'Video: Úvod do CSS - Časť 2'
+      'Video: Intro to CSS Part 2': 'Video: Úvod do CSS Časť 2'
+      'Video: Intro to Design Mode': 'Video: Úvod do režimu návrhu'
+      'Video: Intro to Web Lab - Part 1': 'Video: Úvod do Web Lab - Časť 1'
+      'Video: Intro to Web Lab - Part 2': 'Video: Úvod do Web Lab - Časť 2'
+      'Video: Introducing Sprite Lab': 'Video: Predstavujeme Sprite Lab'
+      'Video: Introduction to Arrays': 'Video: Úvod do polí'
+      'Video: Introduction to Play Lab': 'Video: Úvod do Play Lab'
+      'Video: Introduction to Sprites': 'Video: Úvod do spriteov'
+      'Video: Introduction to Variables': 'Video: Úvod do premenných'
+      'Video: Introduction to the Draw Loop': 'Video: Úvod do slučky kreslenia'
+      'Video: Loops in Artist': 'Video: Smyčky v umelcovi'
+      'Video: Loops with the Artist': 'Video: Smyčky s umelcom'
+      'Video: Lots of Sprites': 'Video: Veľa Sprite'
+      'Video: Managing Disagreement': 'Video: Riešenie nesúhlasov'
+      'Video: Maze Intro - Programming with Blocks': 'Video: Bludisko Úvod - Programovanie s blokmi'
+      'Video: Maze Intro - Programming with Blocks ': 'Video: Bludisko Úvod - Programovanie s blokmi '
+      'Video: Maze Intro: Programming with Blocks': 'Video: Úvod do bludiska: Programovanie s blokmi'
+      'Video: Measures': 'Video: Opatrenia'
+      'Video: Minecraft - Congratulations': 'Video: Minecraft - Gratulujeme'
+      'Video: Minecraft - Functions': 'Video: Minecraft - Funkcie'
+      'Video: Minecraft - Repeat Loops': 'Video: Minecraft - Opakujúce sa slučky'
+      'Video: Minecraft - The Agent': 'Video: Minecraft - Agent'
+      'Video: Minecraft: Voyage Aquatic Conditionals': 'Video: Minecraft: Cestovanie vodných podmienok'
+      'Video: Minecraft: Voyage Aquatic Congratulations': 'Video: Minecraft: Cesta vodná Gratulujeme'
+      'Video: Minecraft: Voyage Aquatic Introduction': 'Video: Minecraft: Cesta vodná Úvod'
+      'Video: Minecraft: Voyage Aquatic Repeat Until': 'Video: Minecraft: Cesta vodná Opakovať až do'
+      'Video: Nested Loops': 'Video: Vnorene cykly'
+      'Video: Nested Loops with the Bee': 'Video: Vnorene cykly s včelou'
+      'Video: Netflix and Data': 'Video: Netflix a dáta'
+      'Video: Outbreak Simulator: Events': 'Video: Simulátor epidémie: Udalosti'
+      'Video: Outbreak Simulator: Free Play': 'Video: Simulátor epidémie: Voľná hra'
+      'Video: Outbreak Simulator: Introduction': 'Video: Simulátor epidémie: Úvod'
+      'Video: Outbreak Simulator: Thinking Like a Scientist': 'Video: Simulátor epidémie: Premýšľanie ako vedec'
+      'Video: Pair Programming': 'Video: Párové programovanie'
+      'Video: Pair Programming ': 'Video: Párové programovanie '
+      'Video: Problem Solving Process': 'Video: Proces riešenia problémov'
+      'Video: Programming with Blocks': 'Video: Programovanie s blokmi'
+      'Video: Programming with Rey and BB-8': 'Video: Programovanie s Rey a BB-8'
+      'Video: Properties': 'Video: Vlastnosti'
+      'Video: Publishing Your Website': 'Video: Publikovanie vašej webovej stránky'
+      'Video: Repeat Blocks': 'Video: Opakovať bloky'
+      'Video: Repeat Blocks with BB-8': 'Video: Opakujte bloky s BB-8'
+      'Video: Repeat Blocks with the Artist': 'Video: Opakovať bloky s umelcom'
+      'Video: Repeat Until Blocks': 'Video: Opakuj, kým bloky'
+      'Video: Repeat Until Statements': 'Video: Opakuj, kým sú splnené podmienky'
+      'Video: Sprite Movement': 'Video: Pohyb Sprite'
+      'Video: Sprites in Action': 'Video: Sprity v akcii'
+      'Video: Star Wars Project': 'Video: Projekt Hviezdne vojny'
+      'Video: Teamwork': 'Video: Tímová práca'
+      'Video: Text and Prompts': 'Video: Text a výzvy'
+      'Video: The Animation Tab': 'Video: Záložka Animácia'
+      'Video: The Artist in Code Studio': 'Video: Umelec v Code Studio'
+      'Video: The Big Event - Unplugged Activity': 'Video: Veľká udalosť - Akcia bez elektriny'
+      'Video: The Collector': 'Video: Zberateľ'
+      'Video: The Harvester': 'Video: Zberač'
+      'Video: Training Data & Bias': 'Video: Tréningové dáta a predsudky'
+      'Video: Training Data and Bias': 'Video: Tréningové dáta a predsudky'
+      'Video: Unplugged Variables in Envelopes': 'Video: Odpojené premenné v obálkach'
+      'Video: Using the Repeat Block': 'Video: Používanie opakovaného bloku'
+      'Video: Variables in Artist': 'Video: Premenné v umelcovi'
+      'Video: Velocity': 'Video: Rýchlosť'
+      'Video: Warm Up': 'Video: Zahriatie'
+      'Video: Waze and Data': 'Video: Waze a dáta'
+      'Video: What Makes a Computer, a Computer?': 'Video: Čo robí počítač počítačom?'
+      'Video: What is Machine Learning?': 'Video: Čo je strojové učenie?'
+      'Video: While Loops with the Farmer': 'Video: Cykly While s farmárom'
+      'Video: Wrap-up': 'Video: Zhrnutie'
+      Visualizing Data: Vizualizácia údajov
+      Warm Up: Zahriatie
+      WeTube Video Recommendations (2.0): Odporúčania videí WeTube (2.0)
+      WeTube Video Recommendations (Beta): Odporúčania videí WeTube (Beta)
+      Website Project: Webový projekt
+      Welcome and Introduction: Vitajte a úvod
+      Welcome to Monster Town: Vitajte v Meste monštier
+      What Is a Time Capsule?: Čo je časová kapsula?
+      Where'd They Go?: Kam sa podeli?
+      While Loops with the Farmer: Cykly While s farmárom
+      'Widget: Text Compression': 'Widget Kompresia textu'
+      Wrap Up: Zhrnutie
+      Wrap-up: Zhrnutie
+      Written Voice Simulator Widget: Písaný hlasový simulátor widget
+      'You Choose: Improve Your App': 'Vyberte si: Zlepšite svoju aplikáciu'
+      'You Choose: Restaurant Recommendations': 'Vyberte si: Odporúčania reštaurácií'
+      Your Personal Website: Vaša osobná webová stránka
+      Your Team Project: Váš tímový projekt
+      Zoo Predictions: Predikcie zoo
+      "[For Teachers] Mad Lib Widget": "[Pre učiteľov] Mad Lib Widget"
+      getNumber: získaťČíslo
+      getProperty: získaťVlastnosť
+      getText vs getNumber: getText vs getNumber
+      isTouching: dotýka sa
+      setProperty: nastaviťVlastnosť
