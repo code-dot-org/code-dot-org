@@ -1,0 +1,3122 @@
+{
+  "https://studio.code.org/s/allthethings/lessons/2/levels/1": {
+    "short_instructions": "¿Puedes hacer que me mueva hacia el oeste para llegar al cerdo?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/2": {
+    "short_instructions": "¡Llévame al cerdo! Asegúrate de usar bucles de 'repetición'.",
+    "long_instructions": "¡Llévame al cerdo!\\ Asegúrate de usar bucles de 'repetición'."
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/3": {
+    "short_instructions": "¿Puedes ayudarme a atrapar al cerdo travieso? Apila un par de bloques de \"avanzar\" debajo del bloque \"cuando se ejecute\" y presione \"Ejecutar\". ",
+    "long_instructions": "¿Puedes ayudarme a atrapar al cerdo travieso? Apila un par de bloques de \"avanzar\" debajo del bloque \"cuando se ejecute\" y presione \"Ejecutar\". ",
+    "authored_hints": {
+      "2-3_Maze_1_a": "Para usar un bloque 'avanzar', arrástrelo desde el área de la barra de herramientas al espacio de trabajo y conéctelo al bloque 'cuando se ejecute'."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/4": {
+    "short_instructions": "Usa el bloque de \"repetición\" para resolver el rompecabezas rápidamente...",
+    "authored_hints": {
+      "4-5_Maze_4_a": "Si tienes dificultades para averiguar dónde colocar la repetición, intenta codificar todo y buscar un patrón."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/5": {
+    "short_instructions": "Usa el bloque 'si' para ayudarme a decidir cuándo girar. ",
+    "long_instructions": "Usa el bloque 'si' para ayudarme a decidir cuándo girar. "
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/6": {
+    "short_instructions": "Hay un bloque extra que va a hacer que el pájaro se estrelle. Deséchalo arrastrándolo de nuevo a la caja de herramientas.",
+    "long_instructions": "_\"Este cerdo me está erizando las plumas\". _ Hay un bloque extra que va a hacer que el pájaro se estrelle.\\ Tíralo desenganchándolo de los bloques grises y arrastrándolo de vuelta a la caja de herramientas.",
+    "authored_hints": {
+      "courseC_maze_programming3_a": "Intente ejecutar el código primero para ver dónde falla.",
+      "courseC_maze_programming3_b": "[][0] Para eliminar un bloque desde el centro de su código, arrastre todos los bloques a otra parte del espacio de trabajo. Arrastre el bloque que desea eliminar de nuevo a la caja de herramientas. Finalmente, vuelva a colocar sus otros bloques donde pertenecen."
+    },
+    "callouts": {
+      "courseC_maze_programming3_2": "Puede arrastrar bloques adicionales a la caja de herramientas para desecharlos.",
+      "courseC_maze_programming3_3": "Estos bloques son de piedra y no se pueden tirar."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/2/levels/7": {
+    "short_instructions": "¡Muéveme al Este para llevarme al cerdo!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/1": {
+    "short_instructions": "Dibuja el pie del hombre con una línea"
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/2": {
+    "short_instructions": "Hola, soy un artista. Puedes escribir código para hacerme dibujar casi cualquier cosa. Usa unos pocos bloques para hacerme dibujar sobre las líneas grises de la imagen. (Cada línea tiene 100 píxeles de largo)",
+    "long_instructions": "Hola, soy un artista. Puedes escribir código para hacerme dibujar casi cualquier cosa. Usa unos pocos bloques para hacerme dibujar sobre las líneas grises de la imagen. (Cada línea tiene 100 píxeles de largo)",
+    "authored_hints": {
+      "2-3_Artist_1_new_a": "Si usas el bloque para que 'avance 100 píxeles', dibujaré una línea automáticamente.",
+      "2-3_Artist_1_new_b": "¿Tienes problemas para doblar la esquina? Utilice el bloque 'girar a la derecha 90 grados'."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/3": {
+    "short_instructions": "Ahora, pon la función dentro de un bucle para dibujar estos tres cuadrados.",
+    "long_instructions": "Ahora, pon la función dentro de un bucle para dibujar estos tres cuadrados.",
+    "authored_hints": {
+      "2-3_Artist_Functions_4_a": "El artista necesita girar 120 grados entre cada cuadrado para completar este diseño."
+    },
+    "function_definitions": {
+      "draw a square": {
+        "name": "Dibuja un cuadrado"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/4": {
+    "short_instructions": "Arrastre un bloque numérico tanto al bloque 'establecer longitud' como al bloque 'repetir _ veces' para dibujar un conjunto de triángulos de 50 píxeles. ",
+    "long_instructions": "Arrastre un bloque numérico al bloque 'establecer longitud' y al bloque 'repetir _ veces' para dibujar un conjunto de triángulos de 50 píxeles. "
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/5": {
+    "short_instructions": "Aquí hay un nuevo tipo de bloque. Se denomina bloque de 'función'. Haga clic en \"editar\" y luego rellénelo con el código para dibujar un cuadrado con lados de 100 píxeles. Cuando hayas terminado de editar la función, haz clic en \"Cerrar\" para volver a tu programa.",
+    "long_instructions": "Aquí hay un nuevo tipo de bloque. Se denomina bloque de 'función'. Haga clic en \"editar\" y luego rellénelo con el código para dibujar un cuadrado con lados de 100 píxeles. Cuando hayas terminado de editar la función, haz clic en \"Cerrar\" para volver a tu programa.",
+    "callouts": {
+      "NEW_Course_4_Artist_Functions_3_1": "Haga clic aquí para editar la nueva función para que cree un cuadrado."
+    },
+    "function_definitions": {
+      "draw a square": {
+        "name": "Dibuja un cuadrado"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/6": {
+    "short_instructions": "¡Puede llamar a funciones desde dentro de otras funciones! Usando su función de \"forma\" como base, cree 3 formas de casa, cada una 20 píxeles más grande que la última, comenzando con 50 píxeles de longitud. El uso de un bucle de contador puede ser útil. ",
+    "function_definitions": {
+      "draw a shape": {
+        "name": "Dibuja una forma",
+        "parameters": {
+          "sides": "Lados",
+          "length": "largura"
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/9": {
+    "short_instructions": "Ahora, pon la función dentro de un bucle para dibujar estos tres cuadrados.",
+    "long_instructions": "Ahora, pon la función dentro de un bucle para dibujar estos tres cuadrados.",
+    "authored_hints": {
+      "2-3_Artist_Functions_4_a": "El artista necesita girar 120 grados entre cada cuadrado para completar este diseño."
+    },
+    "function_definitions": {
+      "draw a square": {
+        "name": "Dibuja un cuadrado"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/4/levels/1": {
+    "short_instructions": "Muéveme a la flor, toma el néctar, luego muéveme al panal y haz miel"
+  },
+  "https://studio.code.org/s/allthethings/lessons/4/levels/3": {
+    "short_instructions": "Esta vez, usa un lazo para recoger todo el néctar."
+  },
+  "https://studio.code.org/s/allthethings/lessons/4/levels/4": {
+    "short_instructions": "Tenga cuidado de no recolectar néctar de una flor morada si no tiene ninguno. Primero debes comprobar si el néctar es igual a 1 utilizando el bloque 'if nectar'.",
+    "long_instructions": "¡Estas mágicas flores moradas cambian! Cada vez que intentas el rompecabezas, las flores moradas pueden tener 1 néctar o ninguno... ¡Pero no sabrás el número hasta que ejecutes el código! Tenga cuidado de no recolectar néctar de una flor morada si no tiene ninguno. Primero debes comprobar si el néctar es igual a 1 utilizando el bloque 'if nectar'.",
+    "callouts": {
+      "Bee_Cond_5_1a": "Las flores moradas pueden tener 1 o 0 néctar... ¡Pero no lo sabrás hasta que ejecutes el código!"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/4/levels/5": {
+    "short_instructions": "Las flores moradas pueden tener 1 o 0 néctar, ¡pero no sabes cuál! Tenga cuidado de no recolectar néctar de una flor morada si no tiene ninguno. Compruebe si el néctar es igual a 1 utilizando el bloque if."
+  },
+  "https://studio.code.org/s/allthethings/lessons/4/levels/6": {
+    "short_instructions": "Las funciones son bloques de código que realizan una tarea. Utilice la función 'obtener 5' para obtener 5 néctares a la vez.",
+    "long_instructions": "Las funciones son bloques de código que realizan una tarea. Utilice la función 'obtener 5' para obtener 5 néctares a la vez.",
+    "function_definitions": {
+      "get 5": {
+        "name": "Consigue 5"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/5/levels/3": {
+    "short_instructions": "Hagamos que el perro diga todos los números del 1 al 100. Utilice un bucle 'for' y el bloque de contador para decir la variable de contador cada vez que se ejecute el bucle.",
+    "long_instructions": "Hagamos que el perro diga todos los números del 1 al 100. Utilice un bucle 'for' y el bloque de contador para decir la variable de contador cada vez que se ejecute el bucle."
+  },
+  "https://studio.code.org/s/allthethings/lessons/5/levels/4": {
+    "short_instructions": "¡Ahora tenemos banderas que son demasiado altas para nuestro salto actual! Usemos las flechas \"arriba\" y \"abajo\" para que podamos tener múltiples alturas de salto. Necesitamos agregar un parámetro a nuestra función de salto llamado \"altura\". La flecha hacia arriba debe hacer que el perro salte 200 píxeles y la flecha hacia abajo debe hacer que salte solo 100 píxeles. ",
+    "long_instructions": "¡Ahora tenemos banderas que son demasiado altas para nuestro salto actual! Usemos las flechas \"arriba\" y \"abajo\" para que podamos tener múltiples alturas de salto. Necesitamos agregar un parámetro a nuestra función de salto llamado 'height'. - La flecha hacia arriba debe hacer que el perro salte 200 píxeles - La flecha hacia abajo debe hacer que salte solo 100 píxeles. ",
+    "authored_hints": {
+      "Course_4_Play_Lab_Params_2_a": "Deberá hacer clic en \"editar\" en la función de salto y actualizarla para que use el parámetro 'altura'."
+    },
+    "callouts": {
+      "Course_4 _Play_Lab_Params_2_1": "Haga clic en \"editar\" para actualizar esta función de modo que utilice el parámetro de altura."
+    },
+    "function_definitions": {
+      "jump": {
+        "name": "saltar",
+        "description": "Hace que el personaje principal salte píxeles de 'altura'"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/5/levels/5": {
+    "display_name": "Juego gratis de Playlab"
+  },
+  "https://studio.code.org/s/allthethings/lessons/6/levels/1": {
+    "short_instructions": "¡Vaya, mira eso! No sé cuántas paladas de tierra necesita este agujero.\\ ¿Puedes escribir un programa que siga usando el bloque de 'relleno' hasta que el suelo esté nivelado?  ",
+    "long_instructions": "¡Vaya, mira eso! No sé cuántas paladas de tierra necesita este agujero.\\ ¿Puedes escribir un programa que siga usando el bloque de 'relleno' hasta que el suelo esté nivelado?  "
+  },
+  "https://studio.code.org/s/allthethings/lessons/6/levels/2": {
+    "short_instructions": "¡Vaya, encontré un agujero realmente profundo! No sé cuántas paladas de tierra necesita. ¿Puedes escribir un programa que lo llene hasta que el suelo esté nivelado? Indirecta: Intente usar el bucle while esta vez.",
+    "authored_hints": {
+      "first_hint": "Esta es la primera pista. It has _some_ **basic** `markup`",
+      "second_hint": "Esta es la segunda pista. Tiene un video de pistas.",
+      "last_hint": "Esta es la tercera y última pista. No tiene nada especial."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/6/levels/3": {
+    "short_instructions": "¡Vaya, encontré un agujero realmente profundo! No sé cuántas paladas de tierra necesita. ¿Puedes escribir un programa que lo llene hasta que el suelo esté nivelado? Indirecta: Intente usar el bucle while esta vez.",
+    "authored_hints": {
+      "first_hint": "Esta es la primera pista. It has _some_ **basic** `markup`",
+      "second_hint": "Esta es la segunda pista. Tiene una imagen. [][0]",
+      "last_hint": "Esta es la tercera y última pista. No tiene nada especial."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/7/levels/1": {
+    "short_instructions": "Adjunte un bloque al bloque \"al hacer clic\", luego presione \"Ejecutar\". Haz clic o toca la pantalla para mover a Flappy al objetivo."
+  },
+  "https://studio.code.org/s/allthethings/lessons/8/levels/1": {
+    "short_instructions": "Adjunte un bloque al bloque \"cuando la flecha esté a la izquierda\" y presione \"Ejecutar\". Mueva la paleta con la flecha izquierda para llegar al objetivo final."
+  },
+  "https://studio.code.org/s/allthethings/lessons/9/levels/1": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "/script_assets/k_1_images/unplugged_images/up.png",
+          "correct": false
+        },
+        {
+          "text": "/script_assets/k_1_images/unplugged_images/down.png",
+          "correct": true
+        },
+        {
+          "text": "/script_assets/k_1_images/unplugged_images/left.png",
+          "correct": false
+        },
+        {
+          "text": "/script_assets/k_1_images/unplugged_images/right.png",
+          "correct": false
+        }
+      ],
+      "content1": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png",
+      "questions": [
+        {
+          "text": "¿Qué flecha lleva al Flurb al tesoro?"
+        }
+      ],
+      "title": "Opción múltiple"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/9/levels/2": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "3 bits",
+          "correct": false
+        },
+        {
+          "text": "4 bits",
+          "correct": false
+        },
+        {
+          "text": "5 bits",
+          "correct": false
+        },
+        {
+          "text": "6 bits",
+          "correct": false
+        },
+        {
+          "text": "7 bits",
+          "correct": true
+        },
+        {
+          "text": "12 bits",
+          "correct": false
+        }
+      ],
+      "questions": [
+        {
+          "text": "El teclado QWERTY estándar tiene 47 teclas que pueden colocar caracteres en la pantalla. Cada una de estas teclas también puede mostrar un segundo carácter manteniendo presionada la tecla \"Shift\" al mismo tiempo (suponga que todas las demás teclas se ignoran en esta pregunta). ¿Cuántos bits necesitaría para codificar todo lo que se puede escribir en este teclado?"
+        }
+      ],
+      "title": "Evaluación: Codificación de texto"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/9/levels/3": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "azul",
+          "correct": false
+        },
+        {
+          "text": "verde",
+          "correct": false
+        },
+        {
+          "text": "cerceta",
+          "correct": false
+        },
+        {
+          "text": "amarillo",
+          "correct": false
+        },
+        {
+          "text": "Naranja real, por supuesto",
+          "correct": true
+        },
+        {
+          "text": "rojo",
+          "correct": false
+        }
+      ],
+      "questions": [
+        {
+          "text": "¿Cuál es tu color favorito?"
+        }
+      ],
+      "title": "Envío Opción múltiple"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/9/levels/4": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "Llamando a los parámetros de una función ! [](https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png)",
+          "correct": false
+        },
+        {
+          "text": "Definición de los parámetros de una función ! [](https://images.code.org/ed7e88443a6c04022684aacf0c2a0692-image-1506699220170.png)",
+          "correct": true
+        },
+        {
+          "text": "¡Moviendo la tortuga por la pantalla! [](https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png)",
+          "correct": false
+        },
+        {
+          "text": "¡Orientando la dirección de la tortuga! [](https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png)",
+          "correct": false
+        },
+        {
+          "text": "¡Configuración de las propiedades del lápiz! [](https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png)",
+          "correct": false
+        },
+        {
+          "text": "Ninguna de las anteriores",
+          "correct": false
+        }
+      ],
+      "markdown": "Considere estos diversos usos de 'randomNumber'. Cada respuesta describe el uso y muestra un ejemplo de código. ¿Cuál de los siguientes NO es un uso válido de 'randomNumber'\n\n",
+      "teacher_markdown": "La respuesta se refiere a la diferencia entre definir los parámetros de una función y llamar a esa función. Dado que 'randomNumber' devuelve un valor (un número), se puede usar en lugares donde de otro modo proporcionaría un valor numérico. Por ejemplo, no se define una función con un parámetro numérico. Esto no tiene sentido: 'function drawShape(50){ ... }` &lt;-- don't do this. En su lugar, *define* la función con un parámetro con nombre como este: 'function drawShape(size){ ... }' y luego *llámalo*, proporcionando un valor para ese parámetro de la siguiente manera: 'drawShape(50);' En el caso de esta pregunta, estamos usando randomNumber en lugar de ese valor para la función *call*. 'drawShape( númeroaleatorio(25,75) );'\n\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/9/levels/5": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "No pasará nada.",
+          "correct": false,
+          "feedback": "Incorrecto. La planta rodadora comenzará a caer."
+        },
+        {
+          "text": "La planta rodadora flotará hasta la parte superior de la pantalla.",
+          "correct": false,
+          "feedback": "Incorrecto. La planta rodadora comenzará a caer."
+        },
+        {
+          "text": "La planta rodadora comenzará a caer.",
+          "correct": true,
+          "feedback": "¡Correcto!"
+        },
+        {
+          "text": "La planta rodadora parpadeará y se apagará.",
+          "correct": false,
+          "feedback": "Incorrecto. La planta rodadora comenzará a caer."
+        }
+      ],
+      "questions": [
+        {
+          "text": "Fíjate bien en el código que aparece a continuación. ¿Qué sucederá después de hacer clic en \"Ejecutar\"?"
+        }
+      ]
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/10/levels/1": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "Línea 2",
+          "correct": true
+        },
+        {
+          "text": "Línea 3",
+          "correct": true
+        },
+        {
+          "text": "Línea 4",
+          "correct": false
+        },
+        {
+          "text": "Línea 5",
+          "correct": false
+        }
+      ],
+      "markdown": "Esta pregunta utiliza un robot en una cuadrícula de cuadrados. El robot se representa como un triángulo, que inicialmente mira hacia el lado derecho de la cuadrícula. El robot se mueve de acuerdo con las siguientes instrucciones. | Instrucción | Explicación | |--------------------|--------| |'Avanzar' | El robot se mueve un cuadrado hacia adelante en la dirección en la que está mirando | |'Girar a la derecha' | El robot gira en su lugar 90 grados en el sentido de las agujas del reloj (es decir, hace un giro a la derecha en el lugar). | |'Girar a la izquierda' | El robot gira en su lugar 90 grados en sentido contrario a las agujas del reloj (es decir, hace un giro a la izquierda en el lugar). | |'REPETIR n VECES' | El bloque de instrucciones contenido entre las llaves {} se repite n veces. |   Considere el siguiente programa incorrecto, que está destinado a mover el robot alrededor del perímetro de la cuadrícula de abajo, como lo indican las flechas. ! [](https://images.code.org/4d3177070d1585fc6ad3f9091dd53d76-image-1579897739915.png) ! [](/script_assets/csp/instruction_gifs/U3L02-rightSquare.png)\n\n",
+      "questions": [
+        {
+          "text": "¿Qué líneas de código se deben eliminar para que el programa funcione según lo previsto? Escoger <u>Dos</u> Respuestas"
+        }
+      ]
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/11/levels/1": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "/script_assets/k_1_images/move_blocks/EN.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/move_blocks/ENE.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/move_blocks/WW.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/move_blocks/WSS.png"
+        }
+      ],
+      "content2": "Combina los rompecabezas y los bloques",
+      "questions": [
+        {
+          "text": "/script_assets/k_1_images/maze_images/maze_EN.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/maze_images/maze_WW.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/maze_images/maze_WSS.png"
+        }
+      ],
+      "title": "Cotejo"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/12/levels/2": {
+    "long_instructions": "¿Enseñar _computer science_ es diferente a enseñar otras materias como matemáticas o lectura? Lee esta lista de estrategias y comenta a continuación algunas de las diferencias que crees que encontrarás al enseñar informática en comparación con otras materias. [Esta hoja de trabajo][0] también está disponible en el Panel del profesor en el mosaico \"Planes de lección y recursos\". [imagen][1]\n\n</br>",
+    "placeholder": "Creo que enseñar ciencias de la computación será diferente a enseñar otras materias de estas maneras: ...",
+    "title": "Estrategias para la enseñanza de la informática"
+  },
+  "https://studio.code.org/s/allthethings/lessons/13/levels/1": {
+    "dsls": {
+      "content1": "Descripción aquí",
+      "markdown": "\n## Hoy vas a aprender a usar y crear: **funciones** ¡Crear una función te permite hacer tus propios bloques! Hay dos partes en una función: * Crear un bloque con nombre nuevo que tenga todo el código que desea ejecutar dentro de él. <xml> <block type=\"procedures_defnoreturn\" editable=\"false\"> <mutation/>\n    <title name=\"NAME\">Consigue solo néctar</title>\n    <statement name=\"STACK\"> <block type=\"bee_ifFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\"> <block type=\"maze_nectar\" deletable=\"false\"/> </statement> </block> </statement> </block> </xml> * El único bloque verde que utiliza, o llama, para ejecutar la función que ha creado. <xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"/> <block type=\"procedures_callnoreturn\" id=\"callMe\"> <mutation name=\"get only nectar\"/> </block> </xml> ¡Prepárese para familiarizarse con las funciones, aprender a editarlas y crear las suyas propias!\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/14/levels/1": {
+    "short_instructions": "Desarrolle, documente y pruebe un protocolo que le permita usar el Simulador de Internet para retransmitir un mensaje. Consulte la hoja de trabajo para obtener instrucciones más detalladas.  ",
+    "long_instructions": "## Coordinación y Actividad de Mensajes Binarios **Desarrolle su Protocolo** Desarrolle un protocolo que le permita utilizar el Simulador de Internet para transmitir un mensaje, es decir, un miembro envía un mensaje y el otro miembro envía el mismo mensaje de vuelta. Usted o un profesor dirán \"Ir\" para comenzar el intercambio, pero de lo contrario, toda la comunicación debe ser a través del widget. Mientras trabajas, considera: - ¿Cómo sabrás cuándo se supone que debe comenzar el intercambio? - ¿Cómo sabrás a quién le toca enviar o recibir el mensaje? - ¿Cómo coordinará sus acciones? Documente su protocolo en la hoja de trabajo proporcionada y pruebe su protocolo usando el Simulador de Internet"
+  },
+  "https://studio.code.org/s/allthethings/lessons/14/levels/2": {
+    "short_instructions": "Para esta actividad, conéctese a un enrutador con los demás de su grupo. El Simulador de Internet ahora proporciona un lugar para que usted coloque las direcciones de destino y de, para que no tenga que escribir los bits manualmente."
+  },
+  "https://studio.code.org/s/allthethings/lessons/14/levels/3": {
+    "short_instructions": "Transfiera su favicon a un socio a través de una red en la que cuanto más grande crezca un paquete, más probable es que se descarte."
+  },
+  "https://studio.code.org/s/allthethings/lessons/14/levels/4": {
+    "short_instructions": "En esta versión del Simulador de Internet, se proporciona un Sistema de Nombres de Dominio (DNS) y conoce las direcciones IP de todos los ordenadores conectados. Envíe un mensaje en el formulario GET [nombre de host] al servicio DNS en la dirección <yourRouterNumber>.15 para obtener la dirección de un estudiante.",
+    "long_instructions": "## La necesidad de DNS En esta versión del Simulador de Internet, se proporciona un Sistema de Nombres de Dominio (DNS) y conoce las direcciones IP de todas las computadoras conectadas. Solo puede ver los nombres de host de otras computadoras conectadas.\\ [][0] La dirección del DNS siempre es \\<yourRouterNumber>.15. Envíe un mensaje con el protocolo 'GET [nombre de host]', por ejemplo 'GET Bob2', al DNS para obtener la dirección de otro estudiante. Puede realizar un seguimiento de las respuestas en la sección Notas en la pestaña DNS.\\ [][1]"
+  },
+  "https://studio.code.org/s/allthethings/lessons/14/levels/5": {
+    "short_instructions": "Ha cargado NetSim en modo superusuario."
+  },
+  "https://studio.code.org/s/allthethings/lessons/16/levels/1": {
+    "short_instructions": "Busca patrones (palabras o frases repetidas) en el texto. Ingresa los patrones que ves en el diccionario de la derecha. A medida que escribe entradas en el diccionario, el símbolo de la entrada se inserta en el texto en lugar del patrón.",
+    "long_instructions": "Busca patrones (palabras o frases repetidas) en el texto. Ingresa los patrones que ves en el diccionario de la derecha. A medida que escribe entradas en el diccionario, el símbolo de la entrada se inserta en el texto en lugar del patrón."
+  },
+  "https://studio.code.org/s/allthethings/lessons/17/levels/1": {
+    "short_instructions": "Haz una letra 'A' de 3x5. El widget está configurado con las dimensiones incorrectas. La primera tarea es establecer el segundo byte en el código binario de 8 bits para 5: 0000 0101. A continuación, comience a introducir los datos de píxeles.",
+    "long_instructions": "<img style=\"float:right; margin:0 20px\" src=\"https://code.org/images/cspunit1/letterA.png\" width=\"150\"> # Tarea 1: Haz una letra 'A' de 3x5 Comienza intentando recrear la letra \"A\" de 3x5 representada (a la derecha) usando el widget de pixelación. La imagen se configura inicialmente con las dimensiones *incorrectas*. La primera tarea es establecer el segundo byte en el código binario de 8 bits para 5: 0000 0101. A continuación, puede empezar a introducir datos de píxeles para hacer la A.\n            "
+  },
+  "https://studio.code.org/s/allthethings/lessons/17/levels/2": {
+    "short_instructions": "Comenzamos con la imagen 4x2 que Maddie estaba creando, pero hemos dejado fuera los dos últimos cuadrados. Termina la imagen averiguando qué dos colores faltan y codifícalos.",
+    "long_instructions": "# Pixelación de color: Tarea 1 **Instrucciones:** - Comenzamos con la imagen de 4x2 que Maddie estaba creando, pero hemos omitido los dos últimos cuadrados. - Termina la imagen averiguando qué dos colores faltan y codúncialos."
+  },
+  "https://studio.code.org/s/allthethings/lessons/17/levels/3": {
+    "short_instructions": "Comenzamos con la imagen 4x4 que Maddie creó en el video. Su tarea es llenar una cuadrícula de 4x4 con colores usando 12 bits por píxel. Estos son los requisitos: Fila 1 - rellene con tonos de rojo. Fila 2 - tonos de verde. Fila 3 - tonos de azul. Fila 4 - tonos de gris.",
+    "long_instructions": "# Pixelación: Tarea 3 <img src = \"https://code.org/images/cspunit1/ColorTask3.png\" style=\"float:right; margin:0 20px\" width=200> **Instrucciones:** Comenzamos con la imagen 4x4 que Maddie creó en el video. Su tarea es llenar una cuadrícula de 4x4 con colores usando _12 bits por pixel_. El resultado debería parecerse (pero no exactamente) a la imagen que se muestra a la derecha. Estos son los requisitos: - Fila 1 - rellene con tonos rojos. - Fila 2 - tonos de verde. - Fila 3 - tonos de azul. - Fila 4 - tonos de gris."
+  },
+  "https://studio.code.org/s/allthethings/lessons/17/levels/4": {
+    "short_instructions": "Este nivel de pixelación demuestra el uso de la opción 'hide_encoding_controls'. Tenga en cuenta que el nivel muestra los datos de la imagen en hexadecimal y no le permite volver a cambiarlos a binarios.",
+    "long_instructions": "# Pixelación: AllTheThings 4 Este nivel de pixelación demuestra el uso de la opción 'hide_encoding_controls'. Tenga en cuenta que el nivel muestra los datos de la imagen en hexadecimal y no le permite volver a cambiarlos a binarios.\n            "
+  },
+  "https://studio.code.org/s/allthethings/lessons/17/levels/5": {
+    "short_instructions": "Este nivel de pixelación demuestra el uso de la opción \"Ocultar controles deslizantes\". Tenga en cuenta que los controles deslizantes de anchura y altura no están disponibles, y que los campos de anchura y altura no se pueden editar.",
+    "long_instructions": "# Pixelación: AllTheThings 5 Este nivel de pixelación demuestra el uso de la opción \"Ocultar controles deslizantes\". Tenga en cuenta que los controles deslizantes de anchura y altura no están disponibles, y que los campos de anchura y altura no se pueden editar."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/1": {
+    "short_instructions": "Dibuja un cuadrado de 1x1 encima y a la izquierda de la posición inicial de la tortuga. Haga clic para ver las instrucciones completas.",
+    "long_instructions": "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" style=\"float:right\"> Con solo 4 comandos de tortuga, escribe código en App Lab para completar los dibujos en cada uno de los desafíos a continuación. Su objetivo es escribir código que resuelva el problema de la manera más eficiente posible utilizando solo los comandos proporcionados. ¿Qué significa \"eficiente\"? En informática, en realidad, puede significar varias cosas diferentes dependiendo de lo que estés hablando. Trabaja en estos desafíos, trata de resolverlos de la manera que creas que es mejor y al final te preguntaremos sobre la eficiencia. <img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" style=\"float:right\"> # Haz lo siguiente: Dibuja un cuadrado de 1 x 1 al frente y a la izquierda de la tortuga de la manera más eficiente posible. El programa debe detenerse con la tortuga en su posición original, mirando hacia su dirección original. Una vez que creas que tienes una solución, haz clic en el botón Finalizar: aparecerá una vez que ejecutes el programa.",
+    "teacher_markdown": "La restricción de trabajar con solo 4 comandos es importante. (Véase: \"¿Cuál es el punto?\" a continuación). Si los estudiantes llegan a la clase con conocimientos previos de programación, pueden intentar salir de estas restricciones para reducir el número de líneas de código. Si ve que los estudiantes usan comandos más allá de los 4 proporcionados, o usan parámetros con esos comandos como: 'moveForward(150)', debe decirles que no están resolviendo el problema; El problema es crear las imágenes usando solo los 4 comandos proporcionados."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/2": {
+    "short_instructions": "Defina una función denominada turnAround. Llame a la función y luego mueva la tortuga hacia adelante. (Haga clic para ver las instrucciones completas)",
+    "long_instructions": "# Haz esto: **Define** una función llamada 'turnAround' que da la vuelta a la tortuga. Una vez que hayas definido la función, llámalala para asegurarte de que funciona como esperas y luego mueve la tortuga hacia adelante, como se muestra a continuación. [][0] **Recuerda** típicamente, llamas a una función en líneas de código _en_ la definición de la función - esto podría hacerte sentir como si estuvieras trabajando a la inversa, ya que primero escribes el código para definir la función y _luego_ añades una línea para llamarla. Aquí está el ejemplo de 'moveTwice' del video. Deberías hacer algo similar para turnAround: [][1]"
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/3": {
+    "short_instructions": "Vas a usar bucles y números aleatorios para generar una imagen del cielo nocturno estrellado similar a la que se muestra aquí. Te hemos dado un código de inicio para generar el suelo y el cielo (solo dos puntos gigantes), agregarás código a este proyecto para hacer las estrellas, la hierba y la luna. Todos los efectos son aplicaciones inteligentes de puntos, líneas y colores de tortuga. Para comenzar, siga la serie de pasos sugeridos en la hoja de trabajo adjunta. ",
+    "long_instructions": "Vas a usar bucles y números aleatorios para generar una imagen del cielo nocturno estrellado similar a la que se muestra aquí. Te hemos dado un código de inicio para generar el suelo y el cielo (solo dos puntos gigantes), agregarás código a este proyecto para hacer las estrellas, la hierba y la luna. Todos los efectos son aplicaciones inteligentes de puntos, líneas y colores de tortuga. Para comenzar, siga la serie de pasos sugeridos en la hoja de trabajo adjunta. <img src=\"https://images.code.org/0f42e475e7600ac33d31bdf5dee70726-image-1459547325746.gif\" style=\"width: 250px\">"
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/4": {
+    "short_instructions": "Se le ha proporcionado un código de inicio para una escena \"Bajo el mar\" que incluye tres funciones, una para la estrella de mar, otra para el pasto marino y otra para los peces. Cree versiones de estas funciones que acepten parámetros que le permitan agregar más variación a su escena. La hoja de trabajo del estudiante proporciona más detalles y orientación.",
+    "long_instructions": "Se le ha proporcionado un código de inicio para una escena \"Bajo el mar\" que incluye tres funciones, una para la estrella de mar, otra para el pasto marino y otra para los peces. Cree versiones de estas funciones que acepten parámetros que le permitan agregar más variación a su escena. La hoja de trabajo del estudiante proporciona más detalles y orientación. <img src=\"https://levelbuilder-studio.code.org/script_assets/k_1_images/instruction_gifs/csp/U3L08%20-%20Under%20the%20sea.gif\" style=\"width: 250px\">"
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/5": {
+    "short_instructions": "Agregue un botón que mueva la tortuga cuando se haga clic. (Haga clic para ver las instrucciones completas)",
+    "long_instructions": "# Inicie sesión para probar los niveles de applab (por diseño, los niveles de applab solo funcionan si se ha iniciado sesión. Normalmente, hacemos que las personas inicien sesión, pero esto solo se puede aplicar para un script completo y sería molesto hacerlo para el script allthethings). # ¡Tu primera aplicación interactiva! <img src='https://images.code.org/3fad83213ae72073251c4d5abc1f048a-image-1444060521578.png' style='float: right; width: 250px'> Se ha agregado un nuevo grupo de comandos a la caja de herramientas llamado **Controles de interfaz de usuario** (controles de interfaz de usuario), que son comandos que le permiten interactuar con el usuario de su aplicación y responder a él. Para simplificarlo, comenzaremos con solo dos comandos: - 'onEvent' que le permite ejecutar una función en respuesta a algún evento que ocurre (como un clic en un botón) - 'button' que pone un botón en la pantalla # Haz esto Replicará la pequeña aplicación, que se muestra a continuación, que hace que la tortuga se mueva con un clic de botón. Harás tres cosas: - Añadir un 'botón' - Añadir un bloque 'onEvent' - Añadir 'moveForward' dentro del bloque de funciones onEvent Esto es lo que debes hacer - Puedes volver a verlo tantas veces como necesites para hacerlo bien. <img src=\"https://images.code.org/1cdc8cfbcef2a43f84b11ebdf14aed0c-image-1444061731350.gif\" style=\"border: solid 1px black; width: 500px; margin: auto\">"
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/6": {
+    "short_instructions": "Utilice el comando image para reemplazar la etiqueta de texto del programa por una imagen. (Haga clic para ver las instrucciones completas)",
+    "long_instructions": "# Nuevos Elementos y Eventos: Imágenes <img src=\"https://images.code.org/a84297658be45dc78bc401d387d10436-image-1444663322356.21.25 AM.png\" style=\"float: right; width: 120px\"> Las imágenes hacen que las aplicaciones sean más agradables visualmente e interactivas. Puede agregar imágenes a su aplicación usando el comando 'image'. Por ahora, simplemente agregue un elemento de 'imagen' a su aplicación (el enlace de imagen predeterminado es el logotipo Code.org) y no se preocupe por elegir una imagen única todavía. ¡Lo haremos en el próximo ejercicio! # Haz lo siguiente: <img src=\"https://images.code.org/8df7b1b56c71de7ad9770646bd7f8792-image-1444336140877.gif\" style=\"float: right; width: 250px\"> - **Modificar** el programa: cambie la 'etiqueta de texto' a una 'imagen' para que la imagen se mueva aleatoriamente por la pantalla en función del evento que eligió. - **Consejo:** Si reutilizas el ID de tu etiqueta de texto, ¡solo tendrás que cambiar una sola línea de código para que tu programa funcione! Sin embargo, una vez que tenga su programa funcionando, probablemente sea una buena idea elegir un ID descriptivo y significativo para su imagen y realizar los cambios apropiados en el controlador de eventos.\n\n<br>"
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/7": {
+    "short_instructions": "Este nivel es submittable. ¡Solo para pruebas!",
+    "long_instructions": "Este nivel es submittable. ¡Solo para pruebas! Inicie sesión para probar los niveles de applab (por diseño, los niveles de applab solo funcionan si se ha iniciado sesión. Normalmente, hacemos que las personas inicien sesión, pero esto solo se puede aplicar para un script completo y sería molesto hacerlo para el script allthethings)."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/8": {
+    "short_instructions": "Inicie sesión para probar los niveles de applab (por diseño, los niveles de applab solo funcionan si se ha iniciado sesión. Normalmente, hacemos que las personas inicien sesión, pero esto solo se puede aplicar para un script completo y sería molesto hacerlo para el script allthethings).",
+    "long_instructions": "Inicie sesión para probar los niveles de applab (por diseño, los niveles de applab solo funcionan si se ha iniciado sesión. Normalmente, hacemos que las personas inicien sesión, pero esto solo se puede aplicar para un script completo y sería molesto hacerlo para el script allthethings)."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/9": {
+    "short_instructions": "Inicie sesión para probar los niveles de applab (por diseño, los niveles de applab solo funcionan si se ha iniciado sesión. Normalmente, hacemos que las personas inicien sesión, pero esto solo se puede aplicar para un script completo y sería molesto hacerlo para el script allthethings).",
+    "long_instructions": "Inicie sesión para probar los niveles de applab (por diseño, los niveles de applab solo funcionan si se ha iniciado sesión. Normalmente, hacemos que las personas inicien sesión, pero esto solo se puede hacer cumplir para un script completo y sería molesto hacerlo para el script de todas las cosas). . Fin de las instrucciones que son largas."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/10": {
+    "short_instructions": "Respaldado por una plantilla #1. Inicie sesión para probar los niveles de applab (por diseño, los niveles de applab solo funcionan si se ha iniciado sesión. Normalmente, hacemos que las personas inicien sesión, pero esto solo se puede aplicar para un script completo y sería molesto hacerlo para el script allthethings). ",
+    "long_instructions": "Respaldado por una plantilla #1. Inicie sesión para probar los niveles de applab (por diseño, los niveles de applab solo funcionan si se ha iniciado sesión. Normalmente, hacemos que las personas inicien sesión, pero esto solo se puede aplicar para un script completo y sería molesto hacerlo para el script allthethings). "
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/11": {
+    "short_instructions": "Respaldado por una plantilla #2. Inicie sesión para probar los niveles de applab (por diseño, los niveles de applab solo funcionan si se ha iniciado sesión. Normalmente, hacemos que las personas inicien sesión, pero esto solo se puede aplicar para un script completo y sería molesto hacerlo para el script allthethings).",
+    "long_instructions": "Respaldado por una plantilla #2. Inicie sesión para probar los niveles de applab (por diseño, los niveles de applab solo funcionan si se ha iniciado sesión. Normalmente, hacemos que las personas inicien sesión, pero esto solo se puede aplicar para un script completo y sería molesto hacerlo para el script allthethings).",
+    "teacher_markdown": "Esta rebaja debe ser visible **sólo** para los profesores autorizados."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/12": {
+    "short_instructions": "Este nivel clonado de \"U3 Digital Assistant Target\"",
+    "long_instructions": "# Inicie sesión para probar los niveles de applab (por diseño, los niveles de applab solo funcionan si se ha iniciado sesión. Normalmente, hacemos que las personas inicien sesión, pero esto solo se puede aplicar para un script completo y sería molesto hacerlo para el script allthethings). # Introducción al Asistente Digital **Si bien los asistentes digitales pueden parecer mágicos, son solo programas informáticos elaborados que analizan o procesan texto** en busca de combinaciones de palabras para tomar decisiones sobre qué responder. A lo largo de las próximas lecciones, **vas a construir tu propio asistente digital que responde de forma \"inteligente\" a la pregunta de un usuario**, tomando una decisión sobre qué responder en función de los contenidos. Ahora **explorará un asistente digital de demostración**, Movie Bot, que representa el tipo de programa con el que se construirá. Pruebe algunas de las indicaciones a continuación y también pruebe las suyas propias. Encontrarás rápidamente los límites de lo que este programa puede y no puede hacer. # Haz esto **Run Movie Bot. En la entrada _'ingrese su pregunta aquí'_, escriba cada una de las siguientes indicaciones y presione 'enter'** - 'ayuda' - '¿Cuál es la mejor película de comedia PG de todos los tiempos?' - '¿Qué película de comedia PG debería ver a continuación?' - '¿Podría decirme cuál es la mejor película romántica?' - 'I waNT To WatCH a MovIE!!' - '¿Cuál es la capital de Kentucky?' - ¡Juega! Haga más preguntas a Movie Bot y haga una predicción sobre qué lógica está usando para responder"
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/13": {
+    "short_instructions": "Inicie sesión para probar los niveles de applab (por diseño, los niveles de applab solo funcionan si se ha iniciado sesión. Normalmente, hacemos que las personas inicien sesión, pero esto solo se puede aplicar para un script completo y sería molesto hacerlo para el script allthethings).",
+    "long_instructions": "Inicie sesión para probar los niveles de applab (por diseño, los niveles de applab solo funcionan si se ha iniciado sesión. Normalmente, hacemos que las personas inicien sesión, pero esto solo se puede aplicar para un script completo y sería molesto hacerlo para el script allthethings)."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/14": {
+    "dsls": {
+      "markdown": "# Probar video incrustado en Markdown Este nivel existe para probar que no _do allow_ iframes en nuestro markdown. Entre las siguientes reglas horizontales hay una línea que contiene un iframe html que está intentando incrustar [este enlace](https://www.youtube.com/embed/l_a0ecZ2Oe0): --- <iframe width=\"560\" height = \"315\" src=\"https://www.youtube.com/embed/l_a0ecZ2Oe0\" frameborder=\"0\" allowfullscreen></iframe> --- Si todo funciona correctamente, **no** debería ver ningún contenido entre las dos reglas horizontales.\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/15": {
+    "contained levels": [
+      {
+        "long_instructions": "Mis instrucciones de rebajas de respuesta gratuita"
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/16": {
+    "short_instructions": "Inicie sesión para probar los niveles de applab (por diseño, los niveles de applab solo funcionan si se ha iniciado sesión. Normalmente, hacemos que las personas inicien sesión, pero esto solo se puede aplicar para un script completo y sería molesto hacerlo para el script allthethings).",
+    "long_instructions": "Inicie sesión para probar los niveles de applab (por diseño, los niveles de applab solo funcionan si se ha iniciado sesión. Normalmente, hacemos que las personas inicien sesión, pero esto solo se puede aplicar para un script completo y sería molesto hacerlo para el script allthethings)."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/18": {
+    "short_instructions": "Dibuja un cuadrado de 1x1 encima y a la izquierda de la posición inicial de la tortuga. Haga clic para ver las instrucciones completas.",
+    "long_instructions": "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" style=\"float:right\"> Con solo 4 comandos de tortuga, escribe código en App Lab para completar los dibujos en cada uno de los desafíos a continuación. Su objetivo es escribir código que resuelva el problema de la manera más eficiente posible utilizando solo los comandos proporcionados. ¿Qué significa \"eficiente\"? En informática, en realidad, puede significar varias cosas diferentes dependiendo de lo que estés hablando. Trabaja en estos desafíos, trata de resolverlos de la manera que creas que es mejor y al final te preguntaremos sobre la eficiencia. <img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" style=\"float:right\"> # Haz lo siguiente: Dibuja un cuadrado de 1 x 1 al frente y a la izquierda de la tortuga de la manera más eficiente posible. El programa debe detenerse con la tortuga en su posición original, mirando hacia su dirección original. Una vez que creas que tienes una solución, haz clic en el botón Finalizar: aparecerá una vez que ejecutes el programa.",
+    "teacher_markdown": "La restricción de trabajar con solo 4 comandos es importante. (Véase: \"¿Cuál es el punto?\" a continuación). Si los estudiantes llegan a la clase con conocimientos previos de programación, pueden intentar salir de estas restricciones para reducir el número de líneas de código. Si ve que los estudiantes usan comandos más allá de los 4 proporcionados, o usan parámetros con esos comandos como: 'moveForward(150)', debe decirles que no están resolviendo el problema; El problema es crear las imágenes usando solo los 4 comandos proporcionados."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/19": {
+    "short_instructions": "Dibuja un cuadrado de 1x1 encima y a la izquierda de la posición inicial de la tortuga. Haga clic para ver las instrucciones completas.",
+    "long_instructions": "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" style=\"float:right\"> Con solo 4 comandos de tortuga, escribe código en App Lab para completar los dibujos en cada uno de los desafíos a continuación. Su objetivo es escribir código que resuelva el problema de la manera más eficiente posible utilizando solo los comandos proporcionados. ¿Qué significa \"eficiente\"? En informática, en realidad, puede significar varias cosas diferentes dependiendo de lo que estés hablando. Trabaja en estos desafíos, trata de resolverlos de la manera que creas que es mejor y al final te preguntaremos sobre la eficiencia. <img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" style=\"float:right\"> # Haz lo siguiente: Dibuja un cuadrado de 1 x 1 al frente y a la izquierda de la tortuga de la manera más eficiente posible. El programa debe detenerse con la tortuga en su posición original, mirando hacia su dirección original. Una vez que creas que tienes una solución, haz clic en el botón Finalizar: aparecerá una vez que ejecutes el programa.",
+    "teacher_markdown": "La restricción de trabajar con solo 4 comandos es importante. (Véase: \"¿Cuál es el punto?\" a continuación). Si los estudiantes llegan a la clase con conocimientos previos de programación, pueden intentar salir de estas restricciones para reducir el número de líneas de código. Si ve que los estudiantes usan comandos más allá de los 4 proporcionados, o usan parámetros con esos comandos como: 'moveForward(150)', debe decirles que no están resolviendo el problema; El problema es crear las imágenes usando solo los 4 comandos proporcionados."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/20": {
+    "short_instructions": "Dibuja un cuadrado de 1x1 encima y a la izquierda de la posición inicial de la tortuga. Haga clic para ver las instrucciones completas.",
+    "long_instructions": "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" style=\"float:right\"> Con solo 4 comandos de tortuga, escribe código en App Lab para completar los dibujos en cada uno de los desafíos a continuación. Su objetivo es escribir código que resuelva el problema de la manera más eficiente posible utilizando solo los comandos proporcionados. ¿Qué significa \"eficiente\"? En informática, en realidad, puede significar varias cosas diferentes dependiendo de lo que estés hablando. Trabaja en estos desafíos, trata de resolverlos de la manera que creas que es mejor y al final te preguntaremos sobre la eficiencia. <img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" style=\"float:right\"> # Haz lo siguiente: Dibuja un cuadrado de 1 x 1 al frente y a la izquierda de la tortuga de la manera más eficiente posible. El programa debe detenerse con la tortuga en su posición original, mirando hacia su dirección original. Una vez que creas que tienes una solución, haz clic en el botón Finalizar: aparecerá una vez que ejecutes el programa.",
+    "teacher_markdown": "La restricción de trabajar con solo 4 comandos es importante. (Véase: \"¿Cuál es el punto?\" a continuación). Si los estudiantes llegan a la clase con conocimientos previos de programación, pueden intentar salir de estas restricciones para reducir el número de líneas de código. Si ve que los estudiantes usan comandos más allá de los 4 proporcionados, o usan parámetros con esos comandos como: 'moveForward(150)', debe decirles que no están resolviendo el problema; El problema es crear las imágenes usando solo los 4 comandos proporcionados."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/21": {
+    "long_instructions": "<img src=\"https://images.code.org/117a2a8e098760173f16048fde721295-image-1479829058899.gif\" style=\"float: right; width: 150px\"> ## Lo intentas -- Text Password Checker **Idea clave**: Puede usar '==' para comparar cadenas y números. - Usemos una instrucción if en un controlador de eventos para comparar el texto que un usuario ingresa en un elemento de la interfaz de usuario. **La configuración:** - Tenga en cuenta la configuración en el modo de diseño - Hay dos imágenes: un candado rojo y un \"desbloqueo\" verde. - El \"desbloqueo\" verde está _oculto_ al principio. ## Haga esto: **Agregue una declaración if al controlador de eventos para verificar la contraseña y mostrar el \"desbloqueo\" solo si la contraseña es correcta** - Puede usar '==' para comparar el texto que obtiene del cuadro de texto *contraseña\\_input* y una cadena que desea usar como contraseña. La expresión booleana que debe usar debería verse así: [][0] - Si el usuario ingresó la contraseña correcta, **muestre** el \"desbloqueo\" verde y **oculte** el candado rojo. - Hemos proporcionado el código para ocultar y mostrar las imágenes. Sólo tienes que añadir la declaración if. - De lo contrario, no hacer nada. Pueden volver a intentarlo."
+  },
+  "https://studio.code.org/s/allthethings/lessons/18/levels/22": {
+    "long_instructions": "# Es una sopa de letras En el lado izquierdo de la pantalla, haga clic en \"Ejecutar\" para iniciar la búsqueda de palabras. Trabajando con un equipo, encuentre las siguientes palabras en la cuadrícula. Pueden ser horizontales, verticales o diagonales en cualquier dirección. - DEFINIR - PREPARAR - INTENTAR - REFLEXIONAR - RESOLVER - INFORMÁTICA - CIENCIAS Una vez que hayas encontrado las palabras (o tu profesor llame al tiempo), haz clic en \"Finalizar\" para pasar a la siguiente actividad."
+  },
+  "https://studio.code.org/s/allthethings/lessons/19/levels/3": {
+    "long_instructions": "# ¿Cuántas variables de contador? Puede utilizar variables de contador ('x = x + 1' , 'x = x - 1' , 'x = x + 0,5', etc.) para animar una escena. ¿Qué pasa cuando las escenas empiezan a ser más grandes y complicadas? Mira esta animación. Con un compañero: - Decida cuántas variables de contador necesitaría para crear esta escena - Decida cómo nombraría sus variables de contador - **Dibuje un diagrama de Etiquetas-Valores-Conectores** de sus variables en el primer fotograma de esta escena. No se preocupe por obtener los valores exactamente correctos. - Comparta su respuesta con otro grupo **y esté listo para compartir sus ideas con la clase**"
+  },
+  "https://studio.code.org/s/allthethings/lessons/19/levels/4": {
+    "display_name": "Proyecto - Toques finales",
+    "long_instructions": "# Toques finales Ahora que tienes la base de tu juego, es hora de agregar algunos toques finales. Para hacer que tu juego sea aún mejor, intenta hacer al menos dos mejoras. Puede usar la lista a continuación para ayudarlo, o puede idear sus propias mejoras que le gustaría hacer. - Encuentra una manera de evitar que tu jugador se salga de los bordes de la pantalla. - Añade un objeto diferente para que tu jugador lo recoja o lo evite y que valga diferentes valores de puntos. - Haz una variable para llevar un registro de cuántas vidas tiene tu jugador, y luego termina el juego cuando se agoten las vidas. - Añade sprites que se muevan en el fondo de tu juego. - Crea otro fondo para cambiar cuando la puntuación sea aún más alta o cuando termine el juego. - Dale a tu juego una forma de terminar. Los posibles eventos para terminar el juego podrían ser que la puntuación alcance un cierto valor o que se agote la cantidad de vidas para mantener el juego en funcionamiento. - Si tu juego tiene plataformas, intenta hacer que los objetos de tu juego interactúen con estas plataformas de alguna manera."
+  },
+  "https://studio.code.org/s/allthethings/lessons/20/levels/1": {
+    "dsls": {
+      "markdown": "## ¡Bienvenidos! <img style=\"float:left; margin:0 20px\" src=\"//code.org/images/edquote1.png\" height=\"910\" width=\"400\">\n\n<p><strong>Bienvenido al curso de desarrollo profesional en línea K-5 Introducción a las Ciencias de la Computación de Code.org.</strong> </p>\n\n<p>El programa de desarrollo profesional de Code.org te prepara para integrar las ciencias de la computación en tu aula y apoya tu crecimiento como profesor. Este curso en línea puede ser suficiente para que algunos maestros comiencen a usar nuestros materiales en sus aulas, pero si está buscando un mayor desarrollo profesional, consulte nuestros talleres organizados en los Estados Unidos para educadores de K-5. Se trata de talleres de alta calidad impartidos por educadores experimentados en informática. </p>\n\n<p><a href=\"http://code.org/professional-development-workshops\">Inscríbete en un taller aquí</a>.</p>\n\n<p>Durante este curso en línea, verá videos, leerá artículos, realizará actividades en línea y discutirá con otros maestros sobre los conceptos básicos de la informática y cómo usar el sistema de aprendizaje en línea de Code.org. Queremos que explores la escritura de programas informáticos por tu cuenta para que puedas experimentar la emoción de enseñar informática.</p>\n\n<p>Durante el programa de desarrollo profesional y en cualquier momento posterior, Code.org y nuestra comunidad de educadores comprometidos siempre estarán presentes para brindar apoyo en <a href=\"http://support.code.org\">http://support.code.org</a>.</p>\n\n</br>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/20/levels/2": {
+    "dsls": {
+      "markdown": "## Educación en Ciencias de la Computación ¿Ve la informática como una habilidad fundamental para sus estudiantes? ¿Por qué sí o por qué no?\n\n<div id=\"discourse-comments\"></div>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/21/levels/2": {
+    "short_instructions": "Como elemento de bloque, deberíamos poder incluir XML que represente un bloque o bloques Blockly válidos. [bloque de bloques][0] También admitimos Blockly XML como un elemento en línea como este: [bloque de bloque][1]. La diferencia en el formato de entrada es que este está incrustado dentro de un párrafo, mientras que el anterior está en un bloque de texto propio. La diferencia en la producción es comparable."
+  },
+  "https://studio.code.org/s/allthethings/lessons/21/levels/3": {
+    "short_instructions": "Usa tres bloques de 'mover hacia el oeste' y un bloque de 'recoger maíz' para resolver este rompecabezas.",
+    "long_instructions": "¡Usa [blockly block][0] **tres** veces para llevar la cosechadora al maíz! ¡No olvides usar [bloque de bloques][1] para recoger el maíz."
+  },
+  "https://studio.code.org/s/allthethings/lessons/23/levels/1": {
+    "short_instructions": "Traza el camino y llévame hasta el cerdo tonto. ¡Evita el TNT o las plumas volarán por los aires! Indirecta: Está al sur de mí."
+  },
+  "https://studio.code.org/s/allthethings/lessons/23/levels/2": {
+    "sublevels": {
+      "K-1 Happy Maps Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/up.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/down.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/left.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/right.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png",
+          "questions": [
+            {
+              "text": "¿Qué flecha lleva al Flurb al tesoro?"
+            }
+          ],
+          "title": "Opción múltiple"
+        }
+      },
+      "Multi Horizontal Scroll Test": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "3 bits",
+              "correct": false
+            },
+            {
+              "text": "4 bits",
+              "correct": false
+            },
+            {
+              "text": "5 bits",
+              "correct": false
+            },
+            {
+              "text": "6 bits",
+              "correct": false
+            },
+            {
+              "text": "7 bits",
+              "correct": true
+            },
+            {
+              "text": "12 bits",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "El teclado QWERTY estándar tiene 47 teclas que pueden colocar caracteres en la pantalla. Cada una de estas teclas también puede mostrar un segundo carácter manteniendo presionada la tecla \"Shift\" al mismo tiempo (suponga que todas las demás teclas se ignoran en esta pregunta). ¿Cuántos bits necesitaría para codificar todo lo que se puede escribir en este teclado?"
+            }
+          ],
+          "title": "Evaluación: Codificación de texto"
+        }
+      },
+      "Choose 2 Test": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Línea 2",
+              "correct": true
+            },
+            {
+              "text": "Línea 3",
+              "correct": true
+            },
+            {
+              "text": "Línea 4",
+              "correct": false
+            },
+            {
+              "text": "Línea 5",
+              "correct": false
+            }
+          ],
+          "markdown": "Esta pregunta utiliza un robot en una cuadrícula de cuadrados. El robot se representa como un triángulo, que inicialmente mira hacia el lado derecho de la cuadrícula. El robot se mueve de acuerdo con las siguientes instrucciones. | Instrucción | Explicación | |--------------------|--------| |'Avanzar' | El robot se mueve un cuadrado hacia adelante en la dirección en la que está mirando | |'Girar a la derecha' | El robot gira en su lugar 90 grados en el sentido de las agujas del reloj (es decir, hace un giro a la derecha en el lugar). | |'Girar a la izquierda' | El robot gira en su lugar 90 grados en sentido contrario a las agujas del reloj (es decir, hace un giro a la izquierda en el lugar). | |'REPETIR n VECES' | El bloque de instrucciones contenido entre las llaves {} se repite n veces. |   Considere el siguiente programa incorrecto, que está destinado a mover el robot alrededor del perímetro de la cuadrícula de abajo, como lo indican las flechas. ! [](https://images.code.org/4d3177070d1585fc6ad3f9091dd53d76-image-1579897739915.png) ! [](/script_assets/csp/instruction_gifs/U3L02-rightSquare.png)\n\n",
+          "questions": [
+            {
+              "text": "¿Qué líneas de código se deben eliminar para que el programa funcione según lo previsto? Escoger <u>Dos</u> Respuestas"
+            }
+          ]
+        }
+      },
+      "K-1 Plant a Seed Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/poke-hole.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/dirty-teeth.png",
+              "correct": true
+            }
+          ],
+          "content1": "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png",
+          "questions": [
+            {
+              "text": "¿Qué paso debe seguir al principio de este algoritmo?"
+            }
+          ],
+          "title": "Opción múltiple"
+        }
+      },
+      "K-1 Plant a Seed Multi 2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/brush-teeth.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/cover-seed.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/water-pot.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png",
+          "questions": [
+            {
+              "text": "¿Qué paso debería llenar el espacio en blanco para este algoritmo?"
+            }
+          ],
+          "title": "Opción múltiple"
+        }
+      },
+      "K-1 Artist 1 Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/artist_images/W-S-S.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/artist_images/E-S-S.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/artist_images/S-E-E.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/artist_images/E-S.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500",
+          "questions": [
+            {
+              "text": "¿Qué bloques resuelven este rompecabezas?"
+            }
+          ],
+          "title": "Opción múltiple"
+        }
+      },
+      "ECSPD1 computational thinker": {
+        "dsls": {
+          "markdown": "# ¿Reflexionando sobre el plan de estudios de ECS? Después de revisar las unidades iniciales del curso, ¿cuáles son algunos de los objetivos curriculares de Explorando las Ciencias de la Computación que le llamaron la atención?\n"
+        }
+      },
+      "sample external 2": {
+        "dsls": {
+          "markdown": "### Ejemplo externo 2 Este es un segundo ejemplo de algún texto de instrucciones que se almacena en un archivo .external. Aquí hay algo de texto adicional para que, con suerte, podamos obtener un ajuste de línea a medida que vemos esto en nuestro LevelGroup, que lo consumirá para mostrar algunas instrucciones entre los niveles incrustados regulares.\n\n"
+        }
+      },
+      "ECSPD your goals_test": {
+        "long_instructions": "__Opcional: ¿Cuáles son tus metas para tu clase de ECS?__ *Estas metas cambiarán con el tiempo, y revisaremos esta tu respuesta a medida que avancemos en el curso para que podamos verificar cómo estamos progresando hacia esas metas.*\r\n",
+        "title": "Documentar tus objetivos"
+      },
+      "K-1 Maze Loops Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r3_N.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r3_NN.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r4_N.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/move_blocks/NNNequals.png, 300",
+          "questions": [
+            {
+              "text": "¿Qué bloque de repetición es el mismo?"
+            }
+          ],
+          "title": "Opción múltiple"
+        }
+      },
+      "K-1 Maze Loops Multi 2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r3_S.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r3_ES.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/move_blocks/r3_SE.png",
+              "correct": true
+            }
+          ],
+          "content1": "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240",
+          "questions": [
+            {
+              "text": "Elija el bloque de repetición correcto."
+            }
+          ],
+          "title": "Opción múltiple"
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/25/levels/1": {
+    "short_instructions": "La madera es un recurso muy importante. De ella se hacen muchas cosas. Camina hacia el árbol y usa el comando \"destruir bloque\" para cortarlo."
+  },
+  "https://studio.code.org/s/allthethings/lessons/25/levels/2": {
+    "display_name": "Juego libre",
+    "short_instructions": "**Freeplay:** ¡Es hora de explorar por tu cuenta!",
+    "long_instructions": "**Juego libre:** ¡Ahora depende de ti! Usa el código del agente para ayudarte a explorar este mundo.",
+    "authored_hints": {
+      "MC_HOC_2017_13_Cole_a": "¡Intenta que el agente construya algunas pistas de vagonetas para que puedas explorar el mundo!"
+    },
+    "function_definitions": {
+      "function 1": {
+        "name": "Función 1"
+      },
+      "function 2": {
+        "name": "Función 2"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/25/levels/3": {
+    "long_instructions": "Llega a la linterna marina."
+  },
+  "https://studio.code.org/s/allthethings/lessons/26/levels/1": {
+    "dsls": {
+      "title": "Evaluación de la prueba 1"
+    },
+    "sublevels": {
+      "csp_unit_assessment_overview": {
+        "dsls": {
+          "content1": "Descripción aquí",
+          "markdown": "# Principios de CS Capítulo Evaluación Lea atentamente la siguiente información para que tenga todo lo que necesita antes de comenzar y sepa cómo navegar por la evaluación. ## Cosas que necesitas * **Papel y lápiz para rascar** * Hay algunas preguntas para las que es posible que quieras hacer un trabajo de borrador en papel. ## Cómo realizar la prueba * Lea cada pregunta y seleccione la mejor respuesta de las opciones proporcionadas * Cada selección que haga se guarda automáticamente, pero puede cambiarla si lo desea. * Utilice los botones naranjas \"Página siguiente\" y \"Página anterior\" para avanzar y retroceder en la prueba. Sus respuestas se guardarán ya sea que avance o retroceda. ! [](https://images.code.org/9e697f11d15376aa513dea510dd464d3-image-1463597394595.png) * También puede navegar usando las burbujas en la parte superior de la pantalla. * Amarillo: significa que has visitado una página pero aún no has respondido a todas las preguntas. * Verde: significa que has respondido a todas las preguntas de una página. ! [](https://images.code.org/51c792652b3e922665221bba16a8c37c-image-1463598805414.png) * Cuando esté listo para enviar su prueba, vaya a la ÚLTIMA página y verá un botón púrpura \"Enviar\". Una vez que haga clic en \"enviar\", la prueba se enviará a su profesor. ! [](https://images.code.org/194d1918efc8ce3f8621de4e6b2558f3-image-1463597268503.png) * Tenga en cuenta que también es posible \"cancelar el envío\" de su prueba. Solo debes hacer esto en casos excepcionales: cuando envíes la prueba, tu profesor verá la hora en que se entregó. * **Asegúrate** de que tu profesor tiene claro que está bien anular la entrega y volver a enviarla: no quieres que se invalide todo tu examen porque lo entregaste después de que se suponía que debías hacerlo. ! [](https://images.code.org/ab068a26c8a230a0180f6f9c5c8d45bf-image-1463600680236.png) ## ¡Buena suerte!\n",
+          "teacher_markdown": "### PRECAUCIÓN: Qué es y qué no es esta evaluación * Esta evaluación está **diseñada para ser al \"estilo\" de las evaluaciones de opción múltiple AP**. * Eso significa que las preguntas **no** se refieren específicamente a las lecciones cubiertas antes de este punto. Más bien, las preguntas se relacionan con los objetivos de aprendizaje subyacentes de AP que teóricamente se han abordado. * Significa ** que los estudiantes podrían necesitar hacer alguna extrapolación de lo que han aprendido para responder a las preguntas. **Sí significa** que las preguntas pueden ser \"difíciles\", especialmente para la primera exposición. Así que, en general, **ÚSELO CON PRECAUCIÓN** * Use su juicio sobre lo que está en juego adjuntar a esta evaluación. * No tiene que usar esta evaluación para calificar a los estudiantes, o... * Puede calificar a los estudiantes de una manera diferente a simplemente tomar el % correcto. * Asegúrese de usar de una manera que mantenga el espíritu de la clase en términos de investigación del conocimiento. * Si está nervioso de que los estudiantes se desanimen, entonces tal vez reformule esta evaluación como una oportunidad para investigar: deje que los estudiantes prueben las preguntas, luego investiguen las respuestas y cambien lo que hicieron mal, o desarrollen su propio conjunto de preguntas. --- #### F.A.Q. -- Cómo preparar, administrar y revisar las evaluaciones Por favor, consulte nuestro **[documento F.A.Q. aquí](https://docs.google.com/document/d/1zEpD1PFt6ec2S8ourxuMH0HD6tiyRvqAGUKGDCOt-qs/edit#heading=h.kewgp6z8qdde)** que contiene: * capturas de pantalla sobre cómo preparar, administrar y revisar las evaluaciones * aborda problemas/problemas comunes #### Resumen rápido de cómo ver / revisar las respuestas de los estudiantes 1. Ve a tu [Panel de control del profesor](https://code.org/teacher-dashboard#/) 2. Seleccione la sección 3 de los Principios de CS. Verá una serie de pestañas moradas que incluyen Respuestas de texto, Evaluaciones, etc. 4. Haga clic en **Evaluaciones/Encuestas** 5. En el menú desplegable del selector de cursos, **seleccione la unidad en la que apareció esta evaluación (por ejemplo, Unidad 1: The Internet)** 6. Para todos los estudiantes que han *enviado* su evaluación, verá dos tablas: * La primera tabla es una vista de resumen que resume el porcentaje de aciertos de todos los estudiantes que la enviaron, incluida la marca de tiempo en la que se enviaron * La segunda tabla es una lista completa de cada respuesta a cada pregunta enviada por cada estudiante Encima de ambas tablas hay un botón **Descargar (o exportar) como csv**, que le permite procesar las respuestas en una hoja de cálculo (recomendado). 7. Si necesita permitir que un estudiante ANULE la entrega de su examen, indíquele al estudiante que navegue a la última página de la prueba y presione \"Cancelar envío\". **NOTA sobre NO ENVIAR:** Debe establecer reglas claras con sus estudiantes sobre cómo cancelar la entrega de una prueba. Los estudiantes pueden pensar que esta es una buena manera de cambiar una respuesta después de que termine la prueba (es decir, hacer trampa), pero verá una marca de tiempo de cuándo el estudiante envió la prueba. Se sugiere que simplemente establezca que no considerará calificar o calificar ninguna prueba después de un tiempo en particular. Si no se envió antes de la fecha límite especificada, es como si no lo recibiera.\n"
+        }
+      },
+      "PS U3 Q1-1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Las ambigüedades en el lenguaje natural requieren la creación de lenguajes de programación para controlar una computadora.",
+              "correct": true
+            },
+            {
+              "text": "En comparación con el número de palabras en un lenguaje natural, el número de palabras definidas en un lenguaje de programación es muy pequeño.",
+              "correct": true
+            },
+            {
+              "text": "El número de palabras definidas en un lenguaje de programación es aproximadamente el mismo que el número de palabras en un lenguaje natural.",
+              "correct": false
+            },
+            {
+              "text": "Por lo general, hay muchas formas posibles de interpretar una instrucción escrita en un lenguaje de programación.",
+              "correct": false
+            }
+          ],
+          "markdown": "Los lenguajes de programación tienen algunas similitudes y diferencias con el lenguaje \"natural\" que se utiliza en el habla cotidiana. Seleccione dos afirmaciones **verdaderas** sobre lenguajes de programación:\n"
+        }
+      },
+      "PS U3 Q1-2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "https://images.code.org/d2fb6af7fc9d8b79eefd9b66232eb1a8-image-1459374904942.png",
+              "correct": false
+            },
+            {
+              "text": "https://images.code.org/c59d71ecac547d755d63a3f8fca56843-image-1459376262204.png",
+              "correct": true
+            },
+            {
+              "text": "https://images.code.org/3e341ed57ac366663807df24b2a7e329-image-1459376286013.png",
+              "correct": false
+            },
+            {
+              "text": "https://images.code.org/d658fb7f959603138c39ed5f7666fd63-image-1459376301845.png",
+              "correct": false
+            },
+            {
+              "text": "https://images.code.org/841ec4583e3d9f0b41d1b51b496ef94b-image-1459376320683.png",
+              "correct": false
+            }
+          ],
+          "markdown": "Esta pregunta y la siguiente utilizan un robot en una cuadrícula de cuadrados. El robot se representa como un triángulo, que inicialmente está orientado hacia el lado derecho de la cuadrícula. El robot se mueve de acuerdo con las siguientes instrucciones. | **Instrucción** | **Explicación** | |-----------------|-----------------| | MOVE_FORWARD() |El robot se mueve un cuadrado hacia adelante en la dirección en la que está mirando. | ROTATE_RIGHT() |El robot gira en su lugar 90 grados en el sentido de las agujas del reloj (es decir, hace un giro a la derecha en el lugar).| | ROTATE_LEFT() |El robot gira en su lugar 90 grados en sentido contrario a las agujas del reloj (es decir, hace un giro a la izquierda en el lugar).| | REPETIR n VECES |El bloque de instrucciones contenido entre las llaves { } se repite n veces.| Considere el siguiente programa que utiliza comandos del pseudocódigo descrito anteriormente. REPETIR 4 VECES { MOVE_FORWARD() MOVE_FORWARD() MOVE_FORWARD() ROTATE_RIGHT() MOVE_FORWARD() ROTATE_RIGHT() MOVE_FORWARD() ROTATE_RIGHT() } ¿Cuál de las siguientes imágenes muestra la ruta y la ubicación final del robot que resultará de ejecutar el código anterior? La ubicación inicial del robot se muestra como un triángulo punteado para los casos en que el robot no comienza y termina en la misma ubicación.\n\n\n",
+          "title": "Robots en una cuadrícula de cuadrado Parte 1"
+        }
+      },
+      "PS U3 Q1-3": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Línea 3 y Línea 4",
+              "correct": true
+            },
+            {
+              "text": "Líneas 5, 6, 7, 8 y 9",
+              "correct": false
+            },
+            {
+              "text": "Línea 8 y Línea 9",
+              "correct": false
+            },
+            {
+              "text": "Línea 9",
+              "correct": false
+            }
+          ],
+          "markdown": "Considere el siguiente programa incorrecto, que está destinado a mover el robot alrededor del perímetro de una cuadrícula, como se indica en el dibujo a continuación. Tenga en cuenta que aún debe consultar el pseudocódigo descrito en la pregunta anterior. ! [](https://images.code.org/a442a51dc20d85327f74693a0e03a876-image-1459378505362.png)\n"
+        }
+      },
+      "PS U3 Q1-4": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Las funciones son abstracciones de programación reutilizables.",
+              "correct": false
+            },
+            {
+              "text": "Las funciones ayudan a reducir la complejidad de escribir y mantener programas.",
+              "correct": false
+            },
+            {
+              "text": "Las funciones no pueden realizar llamadas a otras funciones dentro del mismo programa.",
+              "correct": true
+            },
+            {
+              "text": "Las funciones ayudan a dividir un problema en fragmentos lógicos.",
+              "correct": false
+            },
+            {
+              "text": "Una vez definida, una función puede ser llamada muchas veces desde diferentes partes de un programa.",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "¿Cuál de las siguientes afirmaciones NO es cierta sobre las funciones en la programación?"
+            }
+          ]
+        }
+      },
+      "PS U3 Q1-5": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "El nombre de una función debe indicar cuánto tiempo tarda en ejecutarse.",
+              "correct": false
+            },
+            {
+              "text": "Dos funciones con comportamiento similar deben recibir nombres idénticos para indicar la relación entre ellas.",
+              "correct": false
+            },
+            {
+              "text": "El nombre de una función debe ser lo más descriptivo posible para indicar lo que hace la función.",
+              "correct": true
+            },
+            {
+              "text": "Los nombres de las funciones deben organizarse alfabéticamente.",
+              "correct": false
+            },
+            {
+              "text": "El nombre de la función debe comenzar con un número que indique el orden en el que debe ejecutarse.",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "¿Cuál es una convención de nomenclatura importante de las funciones?"
+            }
+          ]
+        }
+      },
+      "PS U3 Q1-6": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Una función puede cambiar de nombre a lo largo de un programa.",
+              "correct": false
+            },
+            {
+              "text": "El código se puede agregar o eliminar dinámicamente de una función mientras se ejecuta el programa.",
+              "correct": false
+            },
+            {
+              "text": "Las funciones se pueden llamar con diferentes nombres dependiendo de en qué parte del programa se llamen.",
+              "correct": false
+            },
+            {
+              "text": "Dos funciones pueden recibir nombres idénticos siempre que su código sea idéntico.",
+              "correct": false
+            },
+            {
+              "text": "Dos funciones de un mismo programa pueden tener nombres diferentes pero contener código idéntico.",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "¿Cuál de las siguientes afirmaciones sobre las funciones es TRUE"
+            }
+          ]
+        }
+      },
+      "sample external 1": {
+        "dsls": {
+          "markdown": "### Ejemplo externo Esta es una primera muestra de algún texto de instrucciones que se almacena en un archivo .external.\n\n"
+        }
+      },
+      "PS U3 Q1-7": {
+        "dsls": {
+          "answers": [
+            "Ingresa la respuesta aquí"
+          ],
+          "content1": "Ingrese el mensaje aquí",
+          "markdown": "Utilice la estrategia de diseño de arriba hacia abajo para crear funciones adicionales que desee crear. **Estrategia de diseño de arriba hacia abajo:** 1. Mira el panorama general... 2. Identifique una subtarea... 3. Divida esa subtarea en subtareas más pequeñas... 4. Continúe hasta que se quede con los comandos a los que ya tiene acceso. Aquí hay un ejemplo para el primero: > Nombre de la función: drawSnowflake() <br> Descripción/Justificación: Dibuja un copo de nieve de 6 puntas\n\n"
+        }
+      },
+      "sample external 2": {
+        "dsls": {
+          "markdown": "### Ejemplo externo 2 Este es un segundo ejemplo de algún texto de instrucciones que se almacena en un archivo .external. Aquí hay algo de texto adicional para que, con suerte, podamos obtener un ajuste de línea a medida que vemos esto en nuestro LevelGroup, que lo consumirá para mostrar algunas instrucciones entre los niveles incrustados regulares.\n\n"
+        }
+      },
+      "ECSPD your goals": {
+        "long_instructions": "__What son tus metas para tu clase de ECS?__ *Estas metas cambiarán con el tiempo, y revisaremos esta tu respuesta a medida que avanzamos en el curso para que podamos verificar cómo estamos progresando hacia esas metas.*\n",
+        "title": "Documentar tus objetivos"
+      },
+      "PS U3 Q1-8": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "drawStar;",
+              "correct": false
+            },
+            {
+              "text": "drawStar();",
+              "correct": true
+            },
+            {
+              "text": "![](https://images.code.org/f7d07331ddd6ff10e6825e42a286cf6b-image-1579899560773.png) ",
+              "correct": false
+            },
+            {
+              "text": "función drawStar;",
+              "correct": false
+            },
+            {
+              "text": "función drawStar()",
+              "correct": false
+            }
+          ],
+          "markdown": "¿Cuál de las siguientes _**llamará**_ a la función drawStar?\n\n\n"
+        }
+      },
+      "PS U3 Q1-9": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Los parámetros determinan el número de veces que se ejecutará la función.",
+              "correct": false
+            },
+            {
+              "text": "Los parámetros permiten comportamientos más flexibles y generalizados en las funciones.",
+              "correct": true
+            },
+            {
+              "text": "Los parámetros son útiles para los equipos de programadores porque ayudan a definir los límites del problema que están tratando de resolver",
+              "correct": false
+            },
+            {
+              "text": "Los parámetros cambian el orden de las operaciones dentro de una función.",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "¿Por qué son útiles los parámetros a la hora de programar?"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/27/levels/1": {
+    "long_instructions": "En este módulo, aprendió cómo se transporta la información de un lugar a otro en Internet y los pasos principales en el camino. **Escriba un plan de lección para sus estudiantes sobre cómo se construyen los paquetes.** ### Cómo se revisa esta tarea Esta tarea es revisada por pares por 2 pares, utilizando la siguiente rúbrica: - La lección incluye una conferencia - La lección incluye una actividad en el simulador de red",
+    "title": "Envíe un plan de lección: Enrutamiento y paquetes"
+  },
+  "https://studio.code.org/s/allthethings/lessons/27/levels/2": {
+    "long_instructions": "## DNS y escalabilidad En sus propias palabras, explique lo siguiente sobre el Sistema de Nombres de Dominio: - ¿Qué problema resuelve el DNS? - ¿Cómo ayuda el DNS a que la World Wide Web se amplíe para que miles de millones de usuarios puedan acceder a miles de millones de páginas web?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/27/levels/3": {
+    "long_instructions": "¿Qué crees que hace este programa?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/27/levels/4": {
+    "long_instructions": "## Redundancia: ¿Cuáles son los beneficios de crear redundancia en una red? ¿Cuáles son los posibles problemas con la redundancia de edificios?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/28/levels/1": {
+    "dsls": {
+      "title": "Ejemplo de evaluación de CSP"
+    },
+    "sublevels": {
+      "CSP PD Example Question 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "La unidad de envío de mensajes binarios",
+              "lesson": "Envío de mensajes binarios"
+            },
+            {
+              "text": "La unidad de codificación de números",
+              "lesson": "Codificación y envío de números"
+            }
+          ],
+          "questions": [
+            {
+              "text": "¿Qué unidad enseñará primero?"
+            }
+          ]
+        }
+      },
+      "CSP PD Example Question 2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Les haré escribir",
+              "lesson": "Estrategias para la escritura de los estudiantes"
+            },
+            {
+              "text": "Haré que aprendan de sus compañeros",
+              "lesson": "Apoyo al aprendizaje entre pares"
+            }
+          ],
+          "questions": [
+            {
+              "text": "¿Cómo enseñarás a los estudiantes?"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/1": {
+    "short_instructions": "¡Guíame a la maldad verde! (Cuidado con el TNT)"
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/2": {
+    "short_instructions": "¡Guíame a la maldad verde! (Cuidado con el TNT)"
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/3": {
+    "short_instructions": "Mantén la calma y ayúdame a encontrar al cerdo malo. ¡De lo contrario, podría enojarme!",
+    "authored_hints": {
+      "2-3_Maze_6_a": "¡Hay dos formas de resolver este rompecabezas!"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/5": {
+    "short_instructions": "Ahora usa un bloque de repetición para hacer que la celda sea una cáscara.",
+    "long_instructions": "Ahora usa un bloque de repetición para hacer que la celda sea una cáscara.",
+    "function_definitions": {
+      "draw 3 hexagons": {
+        "name": "Dibuja 3 hexágonos"
+      },
+      "draw 4 hexagons": {
+        "name": "Dibuja 4 hexágonos"
+      },
+      "draw 5 hexagons": {
+        "name": "Dibuja 5 hexágonos"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/6": {
+    "short_instructions": "¿Quieres ver qué sucede cuando repetimos esa forma una y otra vez usando un bucle?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/7": {
+    "short_instructions": "Querida persona. Yo zombie. Mosto... Obtener... al girasol."
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/8": {
+    "short_instructions": "¡Lleva al zombi al girasol, pero evita el masticador!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/29/levels/9": {
+    "short_instructions": "Mosto... Obtener... al girasol."
+  },
+  "https://studio.code.org/s/allthethings/lessons/30/levels/1": {
+    "sublevels": {
+      "test anonymous student survey fun": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "La informática es divertida."
+            }
+          ]
+        }
+      },
+      "test anonymous student survey educational": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Sí",
+              "correct": true
+            },
+            {
+              "text": "No",
+              "correct": true
+            },
+            {
+              "text": "Quizás",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "¿Crees que la informática es educativa?"
+            }
+          ]
+        }
+      },
+      "test_anonymous_student_survey_why_class": {
+        "long_instructions": "¿Por qué estás haciendo esta clase? Da al menos dos razones."
+      },
+      "test_anonymous_student_survey_next_class": {
+        "long_instructions": "¿Qué harás a continuación después de esta clase?"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lockable/1/levels/1": {
+    "dsls": {
+      "title": "Encuesta previa"
+    },
+    "sublevels": {
+      "pre-assessment survey heading1": {
+        "dsls": {
+          "markdown": "Primero, tenemos algunas preguntas para ti sobre tu trabajo escolar en general.\n"
+        }
+      },
+      "pre-assessment survey q1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Tengo la capacidad de hacer mis tareas escolares"
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Soy mejor en las tareas escolares que la mayoría de los otros niños de mi escuela."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q3": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Soy muy bueno en la escuela."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q4": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Puedo descubrir cómo resolver los problemas más difíciles en la escuela si lo intento."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q5": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Me gustan mis tareas escolares."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q6": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Creo que mis tareas escolares son interesantes."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q7": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Disfruto de mi tiempo en la escuela."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q8": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Es importante para mí ser bueno en mis tareas escolares."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey heading2": {
+        "dsls": {
+          "markdown": "También queremos saber lo que piensas sobre la informática.  \n"
+        }
+      },
+      "pre-assessment survey q9": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Tengo la capacidad de aprender ciencias de la computación."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q10": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Creo que seré mejor en informática que la mayoría de los otros niños de mi escuela."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q11": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Creo que seré muy bueno en informática."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q12": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Creo que podré descubrir cómo resolver los problemas más difíciles en mi clase de informática si lo intento."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q13": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Me gusta la informática."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q14": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Creo que la informática es interesante."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q15": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Me gusta (o creo que me gustará) hacer actividades de informática."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q16": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Para mí es importante ser bueno en informática."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q17": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Los niños como yo estudiamos informática."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q18": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Me gustan (o creo que me gustarán) las ciencias de la computación más que a otros niños de mi escuela."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q19": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Creo que algún día podría convertirme en informático."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q20": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Hago informática en mi tiempo libre."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q21": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Utilizo las habilidades de informática en mi vida diaria."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q22": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "La informática se aplica a la mayoría de los aspectos de la vida real. "
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q23": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Totalmente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Discrepar",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente en desacuerdo",
+              "correct": true
+            },
+            {
+              "text": "Ligeramente de acuerdo",
+              "correct": true
+            },
+            {
+              "text": "Convenir",
+              "correct": true
+            },
+            {
+              "text": "Totalmente de acuerdo",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Aprender informática me ayuda en mis otras materias escolares."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q24A": {
+        "long_instructions": "¿Qué habilidades informáticas utilizas en tu vida diaria? "
+      },
+      "pre-assessment survey heading3": {
+        "dsls": {
+          "markdown": "Ahora queremos conocer tus experiencias previas con la informática. \n"
+        }
+      },
+      "pre-assessment survey q24": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Sí",
+              "correct": true
+            },
+            {
+              "text": "No",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Antes de tu clase actual de informática, ¿habías tomado alguna otra clase de informática en la escuela?"
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q25A": {
+        "long_instructions": "En caso afirmativo, ¿qué curso(s) de informática había tomado antes de su clase actual de informática? "
+      },
+      "pre-assessment survey q26": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Sí",
+              "correct": true
+            },
+            {
+              "text": "No",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "¿Alguna vez ha participado en actividades o programas de ciencias de la computación en algún lugar fuera del horario escolar (como en un programa después de la escuela, en línea o en un campamento o programa de verano)?"
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q27": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Programa después de la escuela en mi escuela",
+              "correct": true
+            },
+            {
+              "text": "Programa después de la escuela en otro lugar (por ejemplo, Boys and Girls Club, etc.)",
+              "correct": true
+            },
+            {
+              "text": "Programa en línea",
+              "correct": true
+            },
+            {
+              "text": "Programa de verano/campamento",
+              "correct": true
+            },
+            {
+              "text": "Otro",
+              "correct": true
+            },
+            {
+              "text": "N/A",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "En caso afirmativo, ¿dónde tomó anteriormente una clase o programa de ciencias de la computación fuera del horario escolar? Si ha participado en más de un programa, seleccione el programa en el que ha pasado la mayor parte de su tiempo."
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q28": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "8",
+              "correct": true
+            },
+            {
+              "text": "9",
+              "correct": true
+            },
+            {
+              "text": "10",
+              "correct": true
+            },
+            {
+              "text": "11",
+              "correct": true
+            },
+            {
+              "text": "12",
+              "correct": true
+            },
+            {
+              "text": "Otro",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "¿En qué grado estás?"
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q29": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Masculino",
+              "correct": true
+            },
+            {
+              "text": "Hembra",
+              "correct": true
+            },
+            {
+              "text": "Otro",
+              "correct": true
+            },
+            {
+              "text": "Prefiero no contestar",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Identifico mi género como:"
+            }
+          ]
+        }
+      },
+      "pre-assessment survey q30": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Indio americano o nativo de Alaska",
+              "correct": true
+            },
+            {
+              "text": "Asiático",
+              "correct": true
+            },
+            {
+              "text": "Negro o afroamericano",
+              "correct": true
+            },
+            {
+              "text": "Hispano o Latino/Latina",
+              "correct": true
+            },
+            {
+              "text": "Nativo de Hawái u otras islas del Pacífico",
+              "correct": true
+            },
+            {
+              "text": "Blanco",
+              "correct": true
+            },
+            {
+              "text": "Dos o más carreras",
+              "correct": true
+            },
+            {
+              "text": "Otro",
+              "correct": true
+            },
+            {
+              "text": "Prefiero no contestar",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "¿Cuál de las siguientes opciones representa mejor su identidad racial y/o étnica?"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/32/levels/1": {
+    "long_instructions": "¡Haz una página web increíble! 1. Mira la página web que te dimos para empezar. ¡Vamos a mejorarlo! 2. Agregue un atributo de color de fondo en el estilo del cuerpo en style.css para hacer que el color de fondo de la página sea 'darkcyan' 3. Agregue un atributo text-align al estilo del cuerpo en style.css para centrar la imagen y el texto horizontalmente 4. Cambia index.html para incluir un hashtag inspirador 5. Agregue un atributo de color al estilo p en style.css para hacer que el hashtag inspirador sea blanco 6. ¡Agrega un atributo de tamaño de fuente al estilo p en style.css para hacer que tu hashtag inspirador sea REALMENTE GRANDE! (Pruebe 24px y 3em y vea qué sucede)."
+  },
+  "https://studio.code.org/s/allthethings/lessons/33/levels/1": {
+    "sublevels": {
+      "K-1 Happy Maps Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/up.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/down.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/left.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/right.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png",
+          "questions": [
+            {
+              "text": "¿Qué flecha lleva al Flurb al tesoro?"
+            }
+          ],
+          "title": "Opción múltiple"
+        }
+      },
+      "Multi Horizontal Scroll Test": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "3 bits",
+              "correct": false
+            },
+            {
+              "text": "4 bits",
+              "correct": false
+            },
+            {
+              "text": "5 bits",
+              "correct": false
+            },
+            {
+              "text": "6 bits",
+              "correct": false
+            },
+            {
+              "text": "7 bits",
+              "correct": true
+            },
+            {
+              "text": "12 bits",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "El teclado QWERTY estándar tiene 47 teclas que pueden colocar caracteres en la pantalla. Cada una de estas teclas también puede mostrar un segundo carácter manteniendo presionada la tecla \"Shift\" al mismo tiempo (suponga que todas las demás teclas se ignoran en esta pregunta). ¿Cuántos bits necesitaría para codificar todo lo que se puede escribir en este teclado?"
+            }
+          ],
+          "title": "Evaluación: Codificación de texto"
+        }
+      },
+      "Choose 2 Test": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Línea 2",
+              "correct": true
+            },
+            {
+              "text": "Línea 3",
+              "correct": true
+            },
+            {
+              "text": "Línea 4",
+              "correct": false
+            },
+            {
+              "text": "Línea 5",
+              "correct": false
+            }
+          ],
+          "markdown": "Esta pregunta utiliza un robot en una cuadrícula de cuadrados. El robot se representa como un triángulo, que inicialmente mira hacia el lado derecho de la cuadrícula. El robot se mueve de acuerdo con las siguientes instrucciones. | Instrucción | Explicación | |--------------------|--------| |'Avanzar' | El robot se mueve un cuadrado hacia adelante en la dirección en la que está mirando | |'Girar a la derecha' | El robot gira en su lugar 90 grados en el sentido de las agujas del reloj (es decir, hace un giro a la derecha en el lugar). | |'Girar a la izquierda' | El robot gira en su lugar 90 grados en sentido contrario a las agujas del reloj (es decir, hace un giro a la izquierda en el lugar). | |'REPETIR n VECES' | El bloque de instrucciones contenido entre las llaves {} se repite n veces. |   Considere el siguiente programa incorrecto, que está destinado a mover el robot alrededor del perímetro de la cuadrícula de abajo, como lo indican las flechas. ! [](https://images.code.org/4d3177070d1585fc6ad3f9091dd53d76-image-1579897739915.png) ! [](/script_assets/csp/instruction_gifs/U3L02-rightSquare.png)\n\n",
+          "questions": [
+            {
+              "text": "¿Qué líneas de código se deben eliminar para que el programa funcione según lo previsto? Escoger <u>Dos</u> Respuestas"
+            }
+          ]
+        }
+      },
+      "CSD U3 drawSprites placement match": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48 AM.png,300px"
+            },
+            {
+              "text": "https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09 AM.png"
+            },
+            {
+              "text": "https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00 AM.png"
+            },
+            {
+              "text": "https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28 AM.png"
+            }
+          ],
+          "content1": "Haga coincidir el código con la imagen que producirá.",
+          "questions": [
+            {
+              "text": "https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08 AM.png"
+            },
+            {
+              "text": "https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21 AM.png"
+            },
+            {
+              "text": "https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12 AM.png"
+            },
+            {
+              "text": "https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34 AM.png"
+            }
+          ],
+          "title": "drawSprites"
+        }
+      },
+      "CSD U3 - conditionals - Matching_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "perro.rotación &lt; cat.rotation"
+            },
+            {
+              "text": "perro.x &lt; cat.x"
+            },
+            {
+              "text": "dog.scale > cat.scale"
+            },
+            {
+              "text": "perro.x > gato.x"
+            },
+            {
+              "text": "perro.x == gato.x"
+            }
+          ],
+          "content1": "Haga coincidir la expresión booleana con la descripción en inglés.",
+          "questions": [
+            {
+              "text": "¿La rotación del sprite del perro es menor que la rotación del sprite del gato?"
+            },
+            {
+              "text": "¿Es la x del sprite del perro menor que la x del sprite del gato?"
+            },
+            {
+              "text": "¿Es la escala del sprite del perro mayor que la escala del sprite del gato?"
+            },
+            {
+              "text": "¿Es la x del sprite del perro mayor que la x del sprite del gato?"
+            },
+            {
+              "text": "¿Es la x del sprite del perro igual a la x del sprite del gato?"
+            }
+          ],
+          "title": "Cotejo: Operadores de comparación"
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/36/levels/1": {
+    "long_instructions": "Nivel de prueba de todas las cosas.",
+    "behavior_names": {
+      "swimming left and right": "Natación a izquierda y derecha",
+      "shrinking": "Reducción",
+      "patrolling": "Patrullando",
+      "wandering": "errante",
+      "growing": "creciente",
+      "jittering": "jittering",
+      "moving east": "Moviéndose hacia el este",
+      "moving north": "Hacia el norte",
+      "moving south": "Hacia el sur",
+      "moving west": "Moviéndose hacia el oeste",
+      "spinning right": "girando a la derecha"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Se mueve hacia adelante y hacia atrás en una dirección. Para cambiar la dirección en la que patrulla un sprite, cambia su \"dirección de movimiento\""
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/36/levels/2": {
+    "short_instructions": "¡Convierte la planta rodadora en cualquier tipo de pez!",
+    "long_instructions": "¡Vamos a hacer una pecera! Cambia el sprite de la planta rodadora en cualquier tipo de pez haciendo clic en [bloque de bloques][0]. Asegúrate también de actualizar el traje de este sprite en [bloque de bloque][1].",
+    "teacher_markdown": "Esta lección contiene un **mini-proyecto** llamado _Swimming Fish_. Esta progresión puede parecer muy diferente de lo que ha venido anteriormente en el curso, tanto para ti como para tus estudiantes. Estos niveles tienen algunas características nuevas que es posible que desee explorar antes de comenzar. - El código que tus estudiantes escriban en un nivel se transferirá automáticamente a los otros niveles. Esto les permite construir gradualmente e iterar sobre sus ideas a medida que aprenden. - Estos niveles permiten una creatividad más abierta. Empodere a sus estudiantes para que determinen por sí mismos cuándo han completado cada tarea. ¡No hay una respuesta correcta! - Hay ejemplos de soluciones disponibles para este paso de la progresión que se pueden ver abriendo el panel del profesor a la derecha. Este nivel validará el código de un estudiante comprobando que se han cumplido las siguientes condiciones: - El estudiante debe tener al menos un sprite de pez con un comportamiento activo.",
+    "behavior_names": {
+      "swimming left and right": "Natación a izquierda y derecha",
+      "shrinking": "Reducción",
+      "patrolling": "Patrullando",
+      "wandering": "errante",
+      "growing": "creciente",
+      "jittering": "jittering",
+      "moving east": "Moviéndose hacia el este",
+      "moving north": "Hacia el norte",
+      "moving south": "Hacia el sur",
+      "moving west": "Moviéndose hacia el oeste",
+      "spinning right": "girando a la derecha"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Se mueve hacia adelante y hacia atrás en una dirección. Para cambiar la dirección en la que patrulla un sprite, cambia su \"dirección de movimiento\""
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/36/levels/3": {
+    "long_instructions": "Este es un nivel de allthethings que se utiliza para probar el editor de funciones modales.",
+    "function_definitions": {
+      "set background": {
+        "name": "Establecer fondo"
+      }
+    },
+    "behavior_names": {
+      "spinning left": "girando a la izquierda",
+      "growing": "creciente",
+      "jittering": "jittering",
+      "spinning right": "girando a la derecha",
+      "shrinking": "Reducción",
+      "moving south": "Hacia el sur",
+      "moving west": "Moviéndose hacia el oeste",
+      "swimming left and right": "Natación a izquierda y derecha",
+      "wandering": "errante",
+      "moving east": "Moviéndose hacia el este",
+      "moving north": "Hacia el norte",
+      "patrolling": "Patrullando",
+      "moving with arrow keys": "Moverse con las teclas de flecha",
+      "wobbling": "Bamboleo",
+      "driving with arrow keys": "Conducir con las teclas de flecha",
+      "moving east and looping": "moviéndose hacia el este y en bucle",
+      "fluttering": "Revoloteando",
+      "moving west and looping": "Moviéndose hacia el oeste y en bucle",
+      "moving north and looping": "Moviéndose hacia el norte y dando vueltas",
+      "moving south and looping": "Moviéndose hacia el sur y dando vueltas"
+    },
+    "behavior_descriptions": {
+      "rotate a sprite to its left": "Girar un sprite a su izquierda",
+      "change the size of a sprite": "Cambiar el tamaño de un sprite",
+      "randomly change the size of a sprite": "Cambiar aleatoriamente el tamaño de un sprite",
+      "rotate a sprite to its right": "Girar un sprite a su derecha",
+      "move a sprite downwards across the screen": "Mover un sprite hacia abajo por la pantalla",
+      "move a sprite to the left across the screen": "Mover un sprite a la izquierda por la pantalla",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "Mueve un sprite horizontalmente, invirtiendo la dirección si toca los bordes de la pantalla",
+      "move a sprite, changing its direction randomly": "Mueve un sprite, cambiando su dirección aleatoriamente",
+      "move a sprite to the right across the screen": "Mover un sprite a la derecha por la pantalla",
+      "move a sprite upwards across the screen": "Mover un sprite hacia arriba por la pantalla",
+      "move a sprite across the screen, reversing direction if it touches the edges": "Mueve un sprite por la pantalla, invirtiendo la dirección si toca los bordes",
+      "move a sprite if the user is pressing the arrow keys": "Mover un sprite si el usuario está presionando las teclas de flecha",
+      "randomly set the rotation of a sprite": "Establecer aleatoriamente la rotación de un sprite",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Mueve un sprite a la derecha por la pantalla. Cuando salga del lado derecho de la pantalla, muévalo de nuevo al lado izquierdo de la pantalla.",
+      "randomly change the vertical position of a sprite": "Cambiar aleatoriamente la posición vertical de un sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Mueve un sprite hacia la izquierda por la pantalla. Cuando salga del lado izquierdo de la pantalla, muévalo de nuevo al lado derecho de la pantalla.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Mueve un sprite hacia arriba por la pantalla. Cuando salga de la parte superior de la pantalla, muévalo de nuevo a la parte inferior de la pantalla."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/36/levels/4": {
+    "long_instructions": "Este es un nivel de Sprite Lab que utiliza una variedad de bloques",
+    "behavior_names": {
+      "spinning left": "girando a la izquierda",
+      "growing": "creciente",
+      "jittering": "jittering",
+      "spinning right": "girando a la derecha",
+      "shrinking": "Reducción",
+      "moving south": "Hacia el sur",
+      "moving west": "Moviéndose hacia el oeste",
+      "swimming left and right": "Natación a izquierda y derecha",
+      "wandering": "errante",
+      "moving east": "Moviéndose hacia el este",
+      "moving north": "Hacia el norte",
+      "patrolling": "Patrullando",
+      "moving with arrow keys": "Moverse con las teclas de flecha",
+      "wobbling": "Bamboleo",
+      "driving with arrow keys": "Conducir con las teclas de flecha",
+      "moving east and looping": "moviéndose hacia el este y en bucle",
+      "fluttering": "Revoloteando",
+      "moving west and looping": "Moviéndose hacia el oeste y en bucle",
+      "moving north and looping": "Moviéndose hacia el norte y dando vueltas",
+      "moving south and looping": "Moviéndose hacia el sur y dando vueltas"
+    },
+    "behavior_descriptions": {
+      "rotate a sprite to its left": "Girar un sprite a su izquierda",
+      "change the size of a sprite": "Cambiar el tamaño de un sprite",
+      "randomly change the size of a sprite": "Cambiar aleatoriamente el tamaño de un sprite",
+      "rotate a sprite to its right": "Girar un sprite a su derecha",
+      "move a sprite downwards across the screen": "Mover un sprite hacia abajo por la pantalla",
+      "move a sprite to the left across the screen": "Mover un sprite a la izquierda por la pantalla",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "Mueve un sprite horizontalmente, invirtiendo la dirección si toca los bordes de la pantalla",
+      "move a sprite, changing its direction randomly": "Mueve un sprite, cambiando su dirección aleatoriamente",
+      "move a sprite to the right across the screen": "Mover un sprite a la derecha por la pantalla",
+      "move a sprite upwards across the screen": "Mover un sprite hacia arriba por la pantalla",
+      "move a sprite across the screen, reversing direction if it touches the edges": "Mueve un sprite por la pantalla, invirtiendo la dirección si toca los bordes",
+      "move a sprite if the user is pressing the arrow keys": "Mover un sprite si el usuario está presionando las teclas de flecha",
+      "randomly set the rotation of a sprite": "Establecer aleatoriamente la rotación de un sprite",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Mueve un sprite a la derecha por la pantalla. Cuando salga del lado derecho de la pantalla, muévalo de nuevo al lado izquierdo de la pantalla.",
+      "randomly change the vertical position of a sprite": "Cambiar aleatoriamente la posición vertical de un sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Mueve un sprite hacia la izquierda por la pantalla. Cuando salga del lado izquierdo de la pantalla, muévalo de nuevo al lado derecho de la pantalla.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Mueve un sprite hacia arriba por la pantalla. Cuando salga de la parte superior de la pantalla, muévalo de nuevo a la parte inferior de la pantalla."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/37/levels/1": {
+    "long_instructions": "¡Vamos a poner a bailar a este alce! Haz clic en el bloque \"bailarín1\" do \"Floss\" para siempre\" en el bloque \"a 4 compases\" para que empiece a usar hilo dental en el segundo compás."
+  },
+  "https://studio.code.org/s/allthethings/lessons/37/levels/2": {
+    "long_instructions": "¡Vamos a poner a bailar a este alce! Haz clic en el bloque \"bailarín1\" do \"Floss\" para siempre\" en el bloque \"a 4 compases\" para que empiece a usar hilo dental en el segundo compás."
+  },
+  "https://studio.code.org/s/allthethings/lessons/37/levels/4": {
+    "short_instructions": "**¡Puedes personalizar el efecto que crea la IA!** Haz clic en los emojis del bloque. A continuación, \"Regenerar\", \"Usar código\" o \"Empezar de nuevo\".",
+    "long_instructions": "**La IA te ayuda a empezar. ¡Puedes personalizar el efecto que crea!** - Haz clic en los emojis para probar uno de estos: - <img src=\"https://images.code.org/101001680b5a4de2d752a6b3b59a116f-image-1699478528416.jpg\" style=\" margin-right: 5px;  height: 20px;\">La IA de 'Regenerate' recomendará un efecto diferente basado en los mismos emojis. - 'Usar código': ¡Usa el código que escribe la IA y personalízalo! - <img src=\"https://images.code.org/3e2c74fbae82198ebc3264ecaf3a823e-image-1699478492041.jpg\" style=\" margin-right: 5px;  height: 15px;\">'Empezar de nuevo': Elige tres emojis nuevos para generar un nuevo efecto. ",
+    "authored_hints": {
+      "Hint1": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> Personaliza el efecto haciendo clic en emojis en el bloque [bloque de bloques][0] en el espacio de trabajo. ",
+      "HintEdit": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> Si desea utilizar el código que escribe la IA, cambie para mostrar el código y luego haga clic en 'Usar código'. Los bloques reemplazarán al bloque [bloque de bloque][0] en tu espacio de trabajo. ",
+      "Hint2": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> **¿Sigues atascado?** Mira el video para ver cómo puedes personalizar el efecto. "
+    },
+    "callouts": {
+      "ai_dance_callout_draft_level_6": "Haga clic aquí."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/38/levels/1": {
+    "long_instructions": "Este nivel tiene una mini rúbrica asociada sobre la que los profesores deberían poder dar su opinión a los estudiantes. Inicie sesión para probar los niveles de applab (por diseño, los niveles de applab solo funcionan si se ha iniciado sesión. Normalmente, hacemos que las personas inicien sesión, pero esto solo se puede aplicar para un script completo y sería molesto hacerlo para el script allthethings).",
+    "mini_rubric": {
+      "rubric_key_concept": "Este es el concepto clave de esta mini rúbrica.",
+      "rubric_performance_level_1": "¡Lo hiciste muy bien!",
+      "rubric_performance_level_2": "Lo hiciste bien.",
+      "rubric_performance_level_3": "Lo hiciste bien.",
+      "rubric_performance_level_4": "No hiciste nada."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/38/levels/2": {
+    "long_instructions": "Este nivel tiene una mini rúbrica asociada sobre la que los profesores deberían poder dar su opinión a los estudiantes. Inicie sesión para probar los niveles de weblab (por diseño, los niveles de weblab solo funcionan si se ha iniciado sesión. Normalmente, hacemos que las personas inicien sesión, pero esto solo se puede aplicar para un script completo y sería molesto hacerlo para el script allthethings).",
+    "mini_rubric": {
+      "rubric_key_concept": "Este va a ser un concepto clave muy largo. Este va a ser un concepto clave muy largo. Este va a ser un concepto clave muy largo. Este va a ser un concepto clave muy largo. Este va a ser un concepto clave muy largo. Este va a ser un concepto clave muy largo. Este va a ser un concepto clave muy largo. Este va a ser un concepto clave muy largo. Este va a ser un concepto clave muy largo. Este va a ser un concepto clave muy largo. Este va a ser un concepto clave muy largo. Este va a ser un concepto clave muy largo.",
+      "rubric_performance_level_1": "Las cosas que tienes que hacer para superarte.",
+      "rubric_performance_level_2": "Las cosas que tienes que hacer para reunirte.",
+      "rubric_performance_level_3": "Las cosas que tienes que hacer para acercarte.",
+      "rubric_performance_level_4": "Realmente no hiciste nada."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/38/levels/3": {
+    "long_instructions": "Ejecutar Este nivel tiene una mini rúbrica asociada sobre la que los profesores deberían poder dar su opinión a los estudiantes. Inicie sesión para probar los niveles de gamelab (por diseño, los niveles de gamelab solo funcionan si se inicia sesión. Normalmente, hacemos que las personas inicien sesión, pero esto solo se puede aplicar para un script completo y sería molesto hacerlo para el script allthethings).",
+    "mini_rubric": {
+      "rubric_key_concept": "Concepto clave",
+      "rubric_performance_level_1": "Hizo x, y y z.",
+      "rubric_performance_level_2": "¿X e Y",
+      "rubric_performance_level_3": "¿Hizo x o y",
+      "rubric_performance_level_4": "No hizo x, y o z"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/39/levels/1": {
+    "dsls": {
+      "content1": "Descripción aquí",
+      "markdown": "<h2>\nEste nivel externo debería mostrarse como desenchufado.\n</h2>\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/39/levels/2": {
+    "dsls": {
+      "content1": "Descripción aquí",
+      "markdown": "<h2>\nEste nivel externo no debe mostrarse como desenchufado.\n</h2>\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/40/levels/1": {
+    "dsls": {
+      "description": "Este es un nivel BubbleChoice. ¡Elige una de las siguientes actividades para practicar lo que has aprendido!",
+      "display_name": "Elección de burbujas: Todas las opciones"
+    },
+    "sublevels": {
+      "AllTheThings_StandaloneVideo": {
+      },
+      "Web Lab 1": {
+        "long_instructions": "¡Haz una página web increíble! 1. Mira la página web que te dimos para empezar. ¡Vamos a mejorarlo! 2. Agregue un atributo de color de fondo en el estilo del cuerpo en style.css para hacer que el color de fondo de la página sea 'darkcyan' 3. Agregue un atributo text-align al estilo del cuerpo en style.css para centrar la imagen y el texto horizontalmente 4. Cambia index.html para incluir un hashtag inspirador 5. Agregue un atributo de color al estilo p en style.css para hacer que el hashtag inspirador sea blanco 6. ¡Agrega un atributo de tamaño de fuente al estilo p en style.css para hacer que tu hashtag inspirador sea REALMENTE GRANDE! (Pruebe 24px y 3em y vea qué sucede)."
+      },
+      "Overworld Chop Tree - allthethings": {
+        "short_instructions": "La madera es un recurso muy importante. De ella se hacen muchas cosas. Camina hacia el árbol y usa el comando \"destruir bloque\" para cortarlo."
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/1": {
+    "teacher_markdown": "Reducción del profesor para el nivel original.",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/up.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/down.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/left.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/right.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png",
+          "questions": [
+            {
+              "text": "¿Qué flecha lleva al Flurb al tesoro?"
+            }
+          ],
+          "title": "Opción múltiple"
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/2": {
+    "teacher_markdown": "Calificación del profesor para el nivel original",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "0",
+              "correct": false,
+              "feedback": "No, eso es 1 - 1."
+            },
+            {
+              "text": "1",
+              "correct": false,
+              "feedback": "No, eso es 1 * 1."
+            },
+            {
+              "text": "2",
+              "correct": true,
+              "feedback": "¡Sí, eres un genio!"
+            },
+            {
+              "text": "4",
+              "correct": false,
+              "feedback": "No, eso ni siquiera está cerca."
+            }
+          ],
+          "content1": "Aquí hay algo de información.",
+          "markdown": "Test **markdown** _here_\n",
+          "questions": [
+            {
+              "text": "¿Qué es 1 + 1?"
+            }
+          ],
+          "title": "Multi contenido"
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/3": {
+    "short_instructions": "Aquí hay algunas instrucciones. ",
+    "teacher_markdown": "Teacher Markdown para el nivel original",
+    "contained levels": [
+      {
+        "long_instructions": "¿Qué crees que va a pasar? "
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/4": {
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Línea 2",
+              "correct": true
+            },
+            {
+              "text": "Línea 3",
+              "correct": true
+            },
+            {
+              "text": "Línea 4",
+              "correct": false
+            },
+            {
+              "text": "Línea 5",
+              "correct": false
+            }
+          ],
+          "markdown": "Esta pregunta utiliza un robot en una cuadrícula de cuadrados. El robot se representa como un triángulo, que inicialmente mira hacia el lado derecho de la cuadrícula. El robot se mueve de acuerdo con las siguientes instrucciones. | Instrucción | Explicación | |--------------------|--------| |'Avanzar' | El robot se mueve un cuadrado hacia adelante en la dirección en la que está mirando | |'Girar a la derecha' | El robot gira en su lugar 90 grados en el sentido de las agujas del reloj (es decir, hace un giro a la derecha en el lugar). | |'Girar a la izquierda' | El robot gira en su lugar 90 grados en sentido contrario a las agujas del reloj (es decir, hace un giro a la izquierda en el lugar). | |'REPETIR n VECES' | El bloque de instrucciones contenido entre las llaves {} se repite n veces. | Considere el siguiente programa incorrecto, que está destinado a mover el robot alrededor del perímetro de la cuadrícula de abajo, como lo indican las flechas. ! [](https://images.code.org/4d3177070d1585fc6ad3f9091dd53d76-image-1579897739915.png) ! [](/script_assets/csp/instruction_gifs/U3L02-rightSquare.png)\n\n",
+          "questions": [
+            {
+              "text": "¿Qué líneas de código se deben eliminar para que el programa funcione según lo previsto? Escoger <u>Dos</u> Respuestas"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/5": {
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Línea 2",
+              "correct": true
+            },
+            {
+              "text": "Línea 3",
+              "correct": true
+            },
+            {
+              "text": "Línea 4",
+              "correct": false
+            },
+            {
+              "text": "Línea 5",
+              "correct": false
+            }
+          ],
+          "markdown": "\n\nConsidere el siguiente programa incorrecto, que está destinado a mover el robot alrededor del perímetro de la cuadrícula de abajo, como lo indican las flechas. ''' Línea 1: REPETIR 4 VECES { Línea 2: Avance de la línea 3: Girar a la derecha línea 4: REPETIR 4 VECES { Línea 5: Avanzar } Línea 6: Rotate Right } ``` ![](/script_assets/csp/instruction_gifs/U3L02-rightSquare.png)\n",
+          "questions": [
+            {
+              "text": "¿Qué líneas de código se deben eliminar para que el programa funcione según lo previsto? Selecciona **dos** respuestas"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/6": {
+    "teacher_markdown": "Nivel Original Teacher Markdown",
+    "contained levels": [
+      {
+        "long_instructions": "Mis instrucciones de rebajas de respuesta gratuita"
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/7": {
+    "teacher_markdown": "Calificación del profesor para el nivel original",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "0",
+              "correct": false,
+              "feedback": "No, eso es 1 - 1."
+            },
+            {
+              "text": "1",
+              "correct": false,
+              "feedback": "No, eso es 1 * 1."
+            },
+            {
+              "text": "2",
+              "correct": true,
+              "feedback": "¡Sí, eres un genio!"
+            },
+            {
+              "text": "4",
+              "correct": false,
+              "feedback": "No, eso ni siquiera está cerca."
+            }
+          ],
+          "content1": "Aquí hay algo de información.",
+          "markdown": "Test **markdown** _here_\n",
+          "questions": [
+            {
+              "text": "¿Qué es 1 + 1?"
+            }
+          ],
+          "title": "Multi contenido"
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/8": {
+    "dsls": {
+      "markdown": "# El futuro del Big Data [![](https://images.code.org/ff14c09d2036ff65be8af3dd63d2da24-image-1571251950161.52.16 AM.png)](https://www.youtube.com/watch?v=l_a0ecZ2Oe0) [Fuente](http://www.fwthinking.com/video/clips/future-big-data-video/)\n\n\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/9": {
+    "short_instructions": "Aquí hay algunas instrucciones. ",
+    "teacher_markdown": "Teacher Markdown para el nivel original",
+    "contained levels": [
+      {
+        "long_instructions": "Mis instrucciones de rebajas de respuesta gratuita"
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/10": {
+    "teacher_markdown": "Calificación del profesor para el nivel original",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "0",
+              "correct": false,
+              "feedback": "No, eso es 1 - 1."
+            },
+            {
+              "text": "1",
+              "correct": false,
+              "feedback": "No, eso es 1 * 1."
+            },
+            {
+              "text": "2",
+              "correct": true,
+              "feedback": "¡Sí, eres un genio!"
+            },
+            {
+              "text": "4",
+              "correct": false,
+              "feedback": "No, eso ni siquiera está cerca."
+            }
+          ],
+          "content1": "Aquí hay algo de información.",
+          "markdown": "Test **markdown** _here_\n",
+          "questions": [
+            {
+              "text": "¿Qué es 1 + 1?"
+            }
+          ],
+          "title": "Multi contenido"
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/43/levels/1": {
+    "short_instructions": "A continuación, se muestran algunas instrucciones breves para esta prueba de nivel de laboratorio de IA.",
+    "dynamic_instructions": {
+      "dataDisplayFeatures": "Por lo tanto, **elija una o más columnas**. Ellos harán la predicción.",
+      "selectTrainer": "Por lo tanto, configure la capacitación."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/43/levels/2": {
+    "short_instructions": "Dibuja un cuadrado de 1x1 encima y a la izquierda de la posición inicial de la tortuga. Haga clic para ver las instrucciones completas.",
+    "long_instructions": "Este es un nivel habilitado para IA, lo que significa 1.) Hay una opción adicional \"Administrar I.A. Modelos\" en el engranaje de configuración 2.) Hay un bloque getPrediction en la sección Datos de la caja de herramientas"
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/1": {
+    "long_instructions": "Este es un ejemplo de nivel de Java Lab.",
+    "teacher_markdown": "Los profesores deberían ver esta información adicional."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/2": {
+    "long_instructions": "## Nivel solo para consola Un nivel solo para consola no debe tener espacio de visualización (a diferencia de Teatro, Vecindario, etc.). Además, el espacio de instrucciones debe ocupar toda la columna de la izquierda. Un nivel solo para consola siempre tendrá instrucciones. Los niveles independientes de Java Lab serán niveles de teatro."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/3": {
+    "long_instructions": "Este es un ejemplo de nivel de vecindad de Java Lab.",
+    "teacher_markdown": "Los profesores deberían ver esta información adicional."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/4": {
+    "long_instructions": "\n## ¡Bienvenidos al teatro! Dirígete al administrador de activos y sube una imagen tuya. Tu imagen de la <https: code.org about team> ¡Sería una gran opción! [][0] Una vez que hayas terminado de subir tu imagen, echa un vistazo al código y reemplaza el texto de muestra con el nombre de tu imagen. [][1] ¡Eso es todo! ¡Sube el volumen, haz clic en \"Ejecutar\" y observa (y escucha) cómo tu creación cobra vida!",
+    "teacher_markdown": "Los profesores deberían ver esta información adicional."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/5": {
+    "display_name": "Sopa de letras",
+    "long_instructions": "# El widget de configuración del vecindario Este widget crea una cadena JSON que se puede copiar a un nivel para mostrar un diseño específico de El vecindario. 1. Utilice el control deslizante para seleccionar el tamaño de la vecindad. 2. Haga clic en un mosaico para seleccionarlo. 3. Elija una categoría del menú desplegable y haga clic en un mosaico para establecer la imagen en el mosaico seleccionado. Muchas imágenes son más grandes que 1x1. En estos casos, deberá seleccionar cada ficha individual y colocarlas una por una. El paso final es copiar la salida y pegarla en el campo apropiado en un nivel en Levelbuilder. ## Editar un nivel 1 existente. Copie la cadena JSON del campo en levelbuilder 2. Pega los datos en un convertidor de una línea como [este][0]. 3. Copie la cadena del convertidor. 4. Haga clic en el botón \"Manual\". 5. Pega la cadena. 6. Haga clic en cada mosaico para editarlo como de costumbre. "
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/6": {
+    "long_instructions": "Este es un ejemplo de nivel de Java Lab.",
+    "teacher_markdown": "Los profesores deberían ver esta información adicional.",
+    "contained levels": [
+      {
+        "long_instructions": "Mis instrucciones de rebajas de respuesta gratuita"
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/7": {
+    "long_instructions": "Este es un ejemplo de nivel de vecindad de Java Lab.",
+    "teacher_markdown": "Los profesores deberían ver esta información adicional."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/9": {
+    "long_instructions": "Este es un ejemplo de nivel de Java Lab.",
+    "teacher_markdown": "Los profesores deberían ver esta información adicional."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/10": {
+    "long_instructions": "## Ejemplo de nivel de prompter Este nivel muestra un ejemplo del prompter en el teatro."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/11": {
+    "long_instructions": "Este es un ejemplo de nivel de Java Lab con pruebas de validación."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/12": {
+    "long_instructions": "Se trata de un nivel de Java Lab con validación de paso."
+  },
+  "https://studio.code.org/s/allthethings/lessons/45/levels/3": {
+    "long_instructions": "Se trata de un nivel de poesía que incluye la categoría 'PROCEDIMIENTOS' rellenada automáticamente y no hay editor de funciones modales."
+  },
+  "https://studio.code.org/s/allthethings/lessons/45/levels/4": {
+    "long_instructions": "Se trata de un nivel de poesía que incluye la categoría 'PROCEDIMIENTOS' rellenada automáticamente y utiliza el editor de funciones modales."
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/2": {
+    "long_instructions": "Primero, reproduzca un sonido.",
+    "validations": {
+      "Music Level 1_391b0b44-af8d-4559-a985-d5b643aed908": "Buen trabajo.",
+      "Music Level 1_c0da3b0b-c4d6-490c-8bfb-4faf4188ff32": "Por favor, reproduzca un sonido."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/3": {
+    "long_instructions": "En segundo lugar, reproduzca tres sonidos al mismo tiempo.",
+    "validations": {
+      "Music Level 2_b4505750-86bb-40d7-8c31-ca015980d7ee": "Buen trabajo.",
+      "Music Level 2_f5ef3af6-0010-4e06-937c-d35b5cb8e0be": "Es bueno que hayas tocado dos sonidos, pero necesitas tocar otro.",
+      "Music Level 2_3e35e104-7422-4fb8-80e1-b9da580384f2": "Es bueno que hayas tocado un sonido, pero necesitas tocar dos más.",
+      "Music Level 2_dc4dddf1-5e9d-4664-b9a1-00d73e728a06": "Por favor, reproduzca tres sonidos juntos."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/4": {
+    "long_instructions": "¡Pruébalo todo!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/1": {
+    "long_instructions": "## Instrucciones de muestra Este es un bot de chat que le permite hablar con figuras históricas. ### Haga este tipo en una pregunta y presione el botón <code style=\"color:white; background-color:#7435b2\">Continuar</code> botón. ¿Qué puedes aprender sobre Ada Lovelace?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/2": {
+    "long_instructions": "# AI Chat 2 ## Instrucciones de muestra Este es un bot de chat que te ayuda con la gramática y la puntuación para mejorar tu escritura. ### Haga esto Escriba en un párrafo que le gustaría revisar y presione el botón <code style=\"color:white; background-color:#7435b2\">Continuar</code> botón."
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/3": {
+    "long_instructions": "Plantilla de proyecto respaldada por el nivel #1"
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/4": {
+    "long_instructions": "Plantilla de proyecto respaldada por el nivel #2"
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/5": {
+    "long_instructions": "Plantilla de proyecto respaldada por el nivel #3"
+  },
+  "https://studio.code.org/s/allthethings/lessons/48/levels/1": {
+    "long_instructions": "# Crea tu escena - Sprites Con tu fondo en su lugar, es hora de agregar tus sprites. # Haz esto 1. Agregue o dibuje al menos 2 animaciones de sprites en la pestaña Animación. 2. Crea al menos 2 sprites y asigna a cada uno una animación. 3. Establezca el valor de las propiedades de sprite que desee usar. - _Try usar al menos 1 propiedad de sprite (como rotación, escala, tinte o cualquier otra en la caja de herramientas) con cada sprite._ 4. Dibuja todos tus sprites en la pantalla."
+  },
+  "https://studio.code.org/s/allthethings/lessons/48/levels/2": {
+    "display_name": "Desafiar: Amplíe su escena",
+    "long_instructions": "# Revisa tu escena Revisa tu escena por última vez para asegurarte de que has incluido todo lo que quieres. # Haz esto 1. Compara la escena que dibujaste con tu plan. 2. Realice los últimos cambios. 3. ¿De qué te sientes más orgulloso?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/49/levels/1": {
+    "long_instructions": "¡Vamos a poner a bailar a este alce! Haz clic en el bloque \"bailarín1\" do \"Floss\" para siempre\" en el bloque \"a 4 compases\" para que empiece a usar hilo dental en el segundo compás."
+  },
+  "https://studio.code.org/s/allthethings/lessons/49/levels/2": {
+    "long_instructions": "¡Vamos a poner a bailar a este alce! Haz clic en el bloque \"bailarín1\" do \"Floss\" para siempre\" en el bloque \"a 4 compases\" para que empiece a usar hilo dental en el segundo compás."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/1": {
+    "long_instructions": "## Bienvenido a Python Lab Presione el botón Ejecutar y vea qué sucede.",
+    "teacher_markdown": "Los profesores deberían ver esta información adicional."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/2": {
+    "long_instructions": "## Python Lab con validación: Este nivel tiene un código de validación incorporado."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/3": {
+    "long_instructions": "## Nivel respaldado por el proyecto Este nivel comparte un proyecto con el nivel 4 en la progresión."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/4": {
+    "long_instructions": "## Nivel respaldado por el proyecto: Este nivel comparte un proyecto con el nivel 3 en la progresión."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/5": {
+    "long_instructions": "## Predecir y ejecutar **¿Qué crees que hace este programa?** Echa un vistazo al código de este programa. Escribe lo que crees que hará este programa. ¡No hay respuestas incorrectas!",
+    "teacher_markdown": "Los profesores deberían ver esta información adicional."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/6": {
+    "long_instructions": "## Predecir y ejecutar **¿Qué crees que hace este programa?** Echa un vistazo al código de este programa. ¿Cuál de las siguientes opciones coincide con lo que imprimirá el programa?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/7": {
+    "long_instructions": "## Nivel de submittable ¡Aquí hay un ejemplo de nivel de submittable!",
+    "teacher_markdown": "Los profesores deberían ver esta información adicional."
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/1": {
+    "long_instructions": "Agregue páginas **html** y obtenga una vista previa de ellas en el panel derecho. Añade páginas **css** (y vincúlalas a tu html). Utilice el explorador de archivos para agregar/renombrar/eliminar archivos, o para agregar/renombrar/eliminar carpetas (¡incluso jerárquicamente!)"
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/2": {
+    "long_instructions": "## Web Lab 2 Conceptos básicos ¡Crea tu propia página web!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/1": {
+    "long_instructions": "¡Pruébalo todo!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/2": {
+    "long_instructions": "## Instrucciones de muestra Este es un bot de chat que le permite hablar con figuras históricas. ### Haga esto Escriba en una pregunta y presione el botón 'Enviar' (#7435b2). ¿Qué puedes aprender sobre Ada Lovelace?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/3": {
+    "long_instructions": "## Bienvenido a Python Lab Presione el botón Ejecutar y vea qué sucede."
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/4": {
+    "long_instructions": "Agregue páginas **html** y obtenga una vista previa de ellas en el panel derecho. Añade páginas **css** (y vincúlalas a tu html). Utilice el explorador de archivos para agregar/renombrar/eliminar archivos, o para agregar/renombrar/eliminar carpetas (¡incluso jerárquicamente!)"
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/5": {
+    "long_instructions": "¡Vamos a poner a bailar a este alce! Haz clic en el bloque \"bailarín1\" do \"Floss\" para siempre\" en el bloque \"a 4 compases\" para que empiece a usar hilo dental en el segundo compás."
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/6": {
+    "panels": {
+      "musiclab_intro_panels_start-421d64b2-c4db-42cb-ac1f-de66a4d22fa7": "#### ¡Bienvenidos a Project Beats! Project Beats te permite mezclar, remezclar e incluso interpretar música usando código. ¡No te preocupes si no sabes mucho de código, o incluso de música! Todo lo que necesitas es un poco de tiempo y algo de curiosidad para empezar a hacer tus propias creaciones."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/8": {
+    "dsls": {
+      "description": "Este nivel de Bubble Choice NO está actualmente en lab2, pero todos los subniveles aquí deberían ser niveles Lab2",
+      "display_name": "Escaparate de Lab2 BubbleChoice"
+    },
+    "sublevels": {
+      "AI Chat Sublevel": {
+        "long_instructions": "# AI Chat 2 ## Instrucciones de muestra Este es un bot de chat que te ayuda con la gramática y la puntuación para mejorar tu escritura. ### Haga esto Escriba en un párrafo que le gustaría revisar y presione el botón 'Enviar' (#7435b2)."
+      },
+      "Music Sublevel": {
+        "validations": {
+          "Music Sublevel_20cb71d4-b13c-4494-8ca0-a234414ec12d": "Buen trabajo.",
+          "Music Sublevel_e826dcbb-1947-42a8-b66f-aa676119b013": "Por favor, reproduzca un sonido."
+        }
+      },
+      "Python Lab Sublevel": {
+        "long_instructions": "## Conceptos básicos de Python Lab Intente agregar código nuevo."
+      },
+      "Weblab2 Sublevel": {
+        "long_instructions": "## Web Lab 2 Conceptos básicos ¡Crea tu propia página web!"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/53/levels/1": {
+    "dsls": {
+      "title": "Guía de actividades Levelgroup"
+    },
+    "sublevels": {
+      "test-single-multi-retriable-in-levelgroup": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "No pasará nada.",
+              "correct": false,
+              "feedback": "Incorrecto. La planta rodadora comenzará a caer."
+            },
+            {
+              "text": "La planta rodadora flotará hasta la parte superior de la pantalla.",
+              "correct": false,
+              "feedback": "Incorrecto. La planta rodadora comenzará a caer."
+            },
+            {
+              "text": "La planta rodadora comenzará a caer.",
+              "correct": true,
+              "feedback": "¡Correcto!"
+            },
+            {
+              "text": "La planta rodadora parpadeará y se apagará.",
+              "correct": false,
+              "feedback": "Incorrecto. La planta rodadora comenzará a caer."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Fíjate bien en el código que aparece a continuación. ¿Qué sucederá después de hacer clic en \"Ejecutar\"?"
+            }
+          ]
+        }
+      },
+      "test-free-response-retriable-in-levelgroup": {
+        "long_instructions": "¿Qué crees que hace este programa?"
+      }
+    }
+  }
+}
