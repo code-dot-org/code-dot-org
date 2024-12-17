@@ -1,0 +1,40 @@
+---
+en:
+  data:
+    block_categories:
+      Actions: ""
+      Advanced: ""
+      Behaviors: ""
+      'Behaviors ': ' '
+      Brushes: ""
+      Category: ""
+      Color: ""
+      Comment: ""
+      Comments: ""
+      Conditionals: ""
+      Dancers: ""
+      Default: ""
+      Effects: ""
+      Events: ""
+      Functions: ""
+      'Functions ': ' '
+      Game/Score: ""
+      Games/Score: ""
+      Groups: ""
+      Input: ""
+      Location: ""
+      Locations: ""
+      Logic: ""
+      Loops: ""
+      Math: ""
+      Numbers: ""
+      Picker: ""
+      Prebuilt: ""
+      Properties: ""
+      Shapes: ""
+      Sprites: ""
+      Text: ""
+      Variables: ""
+      'Variables ': ' '
+      'Variables  ': '  '
+      World: ""
