@@ -1,0 +1,109 @@
+---
+en:
+  data:
+    variable_names:
+      "???": "???"
+      Actor_1_Counter: Actor_1_Counter
+      Actor_2_Counter: Actor_2_Counter
+      Blue: آبی
+      Green: سبز
+      Red: قرمز
+      actor: بازیگر
+      adjective: صفت
+      age: سن
+      animal1score: حیوان 1 امتیاز
+      animal1speed: animal1speed
+      animal2score: حیوان 2 امتیاز
+      animal2speed: animal2speed
+      answer: پاسخ دهید
+      armlength: طول بازو
+      binary: باینری
+      birds: پرندگان
+      bit: بیت
+      blue1: آبی 1
+      blue2: آبی2
+      body-part: قسمت بدن
+      bodylength: طول بدن
+      buttonHeight: ارتفاع دکمه
+      buttonMargin: دکمه حاشیه
+      buttonWidth: پهنای دکمه
+      cat_score: cat_score
+      cat_speed: cat_speed
+      cats: گربه ها
+      centerToPadLeft: centerToPadLeft
+      choice: انتخاب
+      circ: دور
+      codeName: کد نام
+      color: رنگ
+      controllerHeight: ارتفاع کنترل کننده
+      controllerWidth: controllerWidth
+      count: شمارش
+      counter: شمارنده
+      counter2: شمارنده 2
+      currentActor: بازیگر فعلی
+      direction: جهت
+      dog_score: dog_score
+      dog_speed: سگ_سرعت
+      dogs: سگ ها
+      dragons: اژدها
+      enemy_speed: enemy_speed
+      energy: انرژی
+      firstName: نام اول
+      fishCaught: ماهی صید شده
+      footlength: طول پا
+      gather: جمع آوری کنید
+      green1: سبز 1
+      green2: سبز 2
+      guess: حدس بزن
+      height: ارتفاع
+      honey: عسل
+      i: i
+      left: سمت چپ
+      legangle: لگانگل
+      leglength: طول ساق
+      length: طول
+      level: سطح
+      marginX: حاشیه ایکس
+      marginY: حاشیه
+      meal: وعده غذایی
+      myName: myname
+      name: نام
+      nectar: شهد
+      nectars: شهد
+      number: شماره
+      object: شی
+      padYOffset: padYOffset
+      parts: قطعات
+      planet: سیاره
+      player_score: بازیکن_ امتیاز
+      points: امتیاز
+      punchLine: پانچ لاین
+      random: تصادفی
+      red1: قرمز1
+      red2: قرمز2
+      repeat: تکرار کن
+      repetitions: تکرارها
+      right: درست است
+      score: نمره
+      score1: امتیاز 1
+      score2: امتیاز 2
+      screenHeight: ارتفاع صفحه نمایش
+      screenWidth: پهنای صفحه نمایش
+      set sides: طرفین را تنظیم کنید
+      setupSimScore1: setupSimScore1
+      setupSimScore2: setupSimScore2
+      shout: فریاد بزن
+      sides: طرفین
+      size: اندازه
+      speed: سرعت
+      startX: startX
+      startY: startY
+      test_var: test_var
+      time: زمان
+      type: نوع
+      variable: متغیر
+      width: عرض
+      wizard: جادوگر
+      x: x
+      your var 1: var 1 شما
+      your var 2: var 2 شما
