@@ -151,3 +151,16 @@ test and run your package in its own virtualenv, as well as in the repo-wide vir
    pyimport 'myfeature'
    myfeature.testmefunc()
    ```
+
+#### Testing python packages
+
+Python packages should be testable by running `pdm run pytest` from the package's main directory.
+By configuring pytest in pyproject.toml, tests may be located in a sub-directory like 'tests', see
+[pycdo/pyproject.toml](pycdo/pyproject.toml) for an example.
+
+
+Our CI system will automatically run `pytest` against every directory that contains a pyproject.toml.
+
+#### Linting python packages
+
+All .py files in python/ will be automatically linted using Ruff, both at commit and in CI.

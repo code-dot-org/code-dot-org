@@ -13,4 +13,10 @@ export default [
     ...pluginReact.configs.flat['jsx-runtime'],
     settings: {react: {version: 'detect'}},
   },
+  {
+    files: ['**/*.cjs'],
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
+    },
+  },
 ];
