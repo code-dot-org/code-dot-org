@@ -1,0 +1,1523 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+en:
+  errors:
+    messages:
+      not_saved: 'لطفا خطاهای زیر را اصلاح کنید:'
+      too_young: 'این محتوا دارای محدودیت سنی است و برای دانش‌آموزان جوان‌تر در دسترس نیست.'
+      teacher_must_accept_terms: 'این محتوا دارای محدودیت سنی است و برای دانش‌آموزان جوان‌تر در دسترس نیست. از معلم خود بخواهید که شرایط خدمات به روز شده را بپذیرد تا به شما امکان دسترسی به این محتوا را بدهد. معلم شما می تواند این کار را با وارد شدن به Code Studio و کلیک کردن روی دکمه "بازبینی شرایط به روز شده" در بالای صفحه اصلی Code Studio انجام دهد.'
+      pair_programmer: 'شما در حال حاضر در حال برنامه نویسی با دانش آموزی هستید که به این محتوا دسترسی ندارد. برای دسترسی به این محتوا، برنامه‌نویسی جفتی را متوقف کنید و دوباره امتحان کنید.'
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: "نامعتبر است توجه داشته باشید که هر پیوند فقط یک بار برای بازنشانی رمز عبور شما قابل استفاده است و فقط آخرین پیوند ارسال شده کار خواهد کرد."
+            unlock_token:
+              invalid: "نامعتبر است یا منقضی شده است، احتمالاً به این دلیل که قفل حساب شما قبلاً باز شده است."
+            lockout_flow: "نمی‌توان به‌روزرسانی کرد زیرا ابتدا به اجازه والدین یا قیم نیاز دارید."
+      messages:
+        blank: "مورد نیاز است"
+        blank_plural: "مورد نیاز هستند"
+        invalid: "نامعتبر است"
+        invalid_plural: "نامعتبر هستند"
+    attributes:
+      user:
+        name: 'نام نمایشی'
+        name_example: 'نام نمایشی (مثلاً Cool Coder یا Jane S.)'
+        email: 'ایمیل'
+        parent_email: 'ایمیل والدین/سرپرست'
+        personal_email: "آدرس ایمیل شخصی <a href=\"%{url}\">(اگر آدرس ایمیل ندارید اینجا را کلیک کنید)</a>"
+        personal_email_markdown: "آدرس ایمیل شخصی [(اگر آدرس ایمیل ندارید اینجا را کلیک کنید)](%{url})"
+        username: 'نام کاربری'
+        password: 'رمز عبور'
+        verified_teacher: 'معلم تایید شده'
+        password_confirmation: 'تایید رمز عبور'
+        current_password: 'رمز عبور فعلی'
+        locale: 'زبان'
+        age: 'سن'
+        gender: 'جنسیت'
+        gender_student_input: 'جنسیت'
+        gender_teacher_input: 'جنسیت'
+        edit_header: 'ویرایش جزئیات حساب'
+        ai_settings_header: 'تنظیمات هوش مصنوعی'
+        finish_sign_up_header: 'ساخت اکانت خود را تمام کنید'
+        finish_sign_up_header_account_information: 'لطفاً اطلاعات زیر را تکمیل کنید تا ایجاد حساب کاربری خود را تکمیل کنید.'
+        finish_sign_up_header_error: 'لطفا خطاهای زیر را اصلاح کنید:'
+        finish_sign_up_subheader: 'اطلاعات زیر را پر کنید تا ایجاد یک حساب Code.org برای <strong>%{email}</strong> به پایان برسد.'
+        finish_sign_up_subheader_markdown: 'اطلاعات زیر را پر کنید تا ایجاد یک حساب Code.org برای **%{email}** به پایان برسد.'
+        finish_sign_up_subheader_provider: 'اطلاعات زیر را تکمیل کنید تا ایجاد یک حساب Code.org با <strong>%{provider}</strong> برای <strong>%{email}</strong> به پایان برسد.'
+        finish_sign_up_subheader_provider_markdown: 'اطلاعات زیر را تکمیل کنید تا ایجاد یک حساب Code.org با **%{provider}** برای **%{email}** به پایان برسد.'
+        required: "مورد نیاز"
+        reset_password_token: "پیوند بازنشانی رمز عبور که دنبال کرده اید"
+        error:
+          future: نمی تواند در آینده باشد
+        user_type: 'نوع حساب'
+        us_state: 'ایالت'
+        ai_rubrics_disabled: 'ویژگی Rubric AI را غیرفعال کنید'
+
+  beta: "beta"
+  hello: "سلام دنیا"
+  welcome_back: "خوش آمدید، %{name}"
+  your_professional_learning_plan: "برنامه یادگیری حرفه ای شما"
+  see_your_learning_plan: "برنامه یادگیری خود را ببینید"
+  submit: ارسال کنید
+  unsubmit: لغو ارسال
+  previous_page: صفحه قبلی
+  next_page: صفحه بعدی
+  next_level: سطح بعدی
+  next_resource: منبع بعدی
+  done_with_module: با این ماژول آموزشی انجام شد
+  cancel: "لغو کنید"
+  to_close: بستن
+  okay: "باشه"
+  type_here: "اینجا تایپ کنید"
+  or: "یا"
+  heading_x_of_y: "%{heading} (صفحه %{x} از %{y})"
+  join_section:
+    code:
+      title: 'به بخشی در Code.org بپیوندید'
+      placeholder: "کد بخش (ABCDEF)"
+      instructions: "لطفاً کد 6 حرفی را وارد کنید که معلمتان با شما به اشتراک گذاشته است (مثال: \"ABCDEF\") برای پیوستن به بخش آنها."
+      instructions_short: "کد بخش 6 حرفی خود را وارد کنید"
+      submit: 'بپیوندید'
+  add_hint_form:
+    placeholder: 'لطفا راهنمایی خود را در اینجا وارد کنید'
+    submit: 'اشاره اضافه کنید'
+  appname: "Code.org"
+  stage: "مرحله"
+  stage_number: "درس %{number}"
+  puzzle: "پازل"
+  trophies: "غنائم"
+  courses: 'دوره ها'
+  courses_page:
+    title_student: "علوم کامپیوتر را یاد بگیرید"
+    title_teacher: "آموزش علوم کامپیوتر"
+  unplugged_activity: 'فعالیت Unplugged'
+  of: "از"
+  more: "بیشتر"
+  less: "کمتر"
+  try_hoc: "ساعت کد را امتحان کنید، اینجا را کلیک کنید >> "
+  try_k8intro: "دوره مقدماتی K-8 ما برای علوم کامپیوتر (15-25 ساعت) را امتحان کنید"
+  k8intro: "K-8 دوره مقدماتی علوم کامپیوتر (15-25 ساعت)"
+  already_started: "از قبل شروع شده؟ رزومه اینجا >> "
+  demos: "مدیر: همه دموها"
+  continue: 'ادامه دهید'
+  prize: 'جایزه'
+  more_info: 'اطلاعات بیشتر'
+  auth:
+    continue_with: 'ادامه با %{provider}'
+    sign_in_with: 'با %{provider} وارد شوید'
+    signed_in: 'وارد شده است!'
+    signed_out_markdown: '### شما از [Code.org] (%{url}) خارج شدید.'
+    sign_out_of_markdown: '#### برای ورود به سیستم از %{provider} استفاده کردید. [اینجا](%{url}) را کلیک کنید تا از %{provider} خارج شوید.'
+    already_signedup: 'قبلا ثبت نام کرده اید؟'
+    notyet_signedup: "هنوز ملحق نشده اید؟"
+    google_oauth2: 'گوگل'
+    twitter: 'Twitter'
+    facebook: 'فیس بوک'
+    windowslive: 'Microsoft'
+    microsoft_v2_auth: 'Microsoft'
+    clever: 'باهوش'
+    powerschool: 'مدرسه برق'
+    forgot_password: 'رمز عبور خود را فراموش کرده اید؟'
+    migration_success: 'موفقیت! شما به تجربه حساب جدید ما به روز شده اید.'
+    demigration_success: 'تجربه حساب جدید اکنون در حساب شما غیرفعال شده است.'
+    need_confirmation: "دستورالعمل های تأیید را دریافت نکردید؟"
+    need_unlock: "دستورالعمل باز کردن قفل را دریافت نکردید؟"
+    not_linked: "متأسفیم، حساب Code.org شما به %{provider} مرتبط نیست. شما باید با تایپ رمز عبور خود در زیر وارد شوید."
+    use_clever: "متأسفیم، حساب Code.org شما به %{provider} مرتبط نیست. لطفاً به جای آن از طریق درگاه هوشمند خود وارد شوید."
+    invalid_provider: "متأسفیم، حساب‌های %{provider} را نمی‌توان به حساب‌های Code.org مرتبط کرد."
+    migration_required: "متأسفیم، نمی‌توانیم حساب‌هایی را که هنوز از تجربه حساب قدیمی استفاده می‌کنند، متصل یا قطع کنیم. لطفاً به تجربه حساب جدید به‌روزرسانی کنید."
+    unable_to_connect_provider: "اتصال حساب Code.org به حساب %{provider} شما امکان پذیر نیست. لطفا دوباره امتحان کنید."
+    disconnect_successful: "موفقیت! ما ارتباط حساب خارجی را با حساب Code.org شما قطع کرده ایم."
+    already_in_use: "حساب %{provider} شما قبلاً به حساب Code.org دیگری متصل است."
+    already_linked: "حساب %{provider} شما قبلاً به حساب Code.org شما پیوند داده شده است."
+    parental_permission_required: "اوه اوه قبل از ایجاد یک حساب پیوندی، باید اجازه والدین را دریافت کنید. لطفاً به حسابی که می‌خواهید پیوند دهید وارد شوید و رضایت والدین را دریافت کنید."
+    existing_account:
+      account_exists: "خبر خوب! شما قبلاً یک حساب Code.org دارید که از %{email} استفاده می‌کند."
+      sign_in: "لطفاً وارد حساب کاربری فعلی خود شوید. سپس می‌توانید نمایه %{provider} خود را از صفحه تنظیمات حساب خود پیوند دهید."
+      sign_up: "ایمیل شما نیست؟ آیا می خواهید یک حساب کاربری جدید با ایمیل دیگری ایجاد کنید؟ همچنین اگر بخواهید حساب جدیدی ایجاد کنید، می‌توانید نمایه %{provider} خود را از صفحه تنظیمات حساب خود پیوند دهید."
+  signup_form:
+    email_signup: 'با آدرس ایمیل خود ثبت نام کنید'
+    student_count: '%{count} دانش‌آموز قبلاً ثبت‌نام کرده‌اند.'
+    teacher_count: '%{count} معلم قبلاً ثبت نام کرده اند.'
+    overview: 'برای پیگیری پیشرفت خود یا مدیریت کلاس درس خود، برای یک حساب کاربری ثبت نام کنید. <a href="/">شما می توانید درس ها و سطوح مختلف را بدون حساب مرور کنید</a>، اما برای ذخیره پیشرفت و پروژه های خود باید ثبت نام کنید.'
+    overview_markdown: 'برای پیگیری پیشرفت خود یا پیشرفت فرزندتان یا مدیریت کلاس درس خود، برای یک حساب کاربری ثبت نام کنید. [شما می توانید درس ها و سطوح مختلف را مرور کنید](/) بدون حساب، اما برای ذخیره پیشرفت و پروژه های خود باید ثبت نام کنید.'
+    hoc_already_signed_up_heading: 'بدون ورود به سیستم شروع کنید'
+    hoc_already_signed_up_content: 'شما برای آموزش یک ساعت کد ثبت نام کرده اید! شما و دانش آموزانتان برای شرکت در این رویداد نیازی به ورود به استودیو کد ندارید. برای شروع، <a href="%{learn_url}">یک برنامه آموزشی</a> را برای کلاس درس خود انتخاب کنید و پیوند را با آنها به اشتراک بگذارید.<br/><br/>اگر از Hour of Code لذت بردید و می‌خواهید بیشتر بروید، می توانید یک رمز عبور تنظیم کنید و یک حساب Code Studio در زیر ایجاد کنید تا دانش آموزان خود را در هر یک از <a href="%{educate_url}">دوره های طولانی تر</a> ثبت نام کنید.'
+    hoc_already_signed_up_content_post_hoc: 'از میزبانی Hour of Code سپاسگزاریم. برای ورود به Code Studio، باید یک رمز عبور برای حساب خود تنظیم کنید. این به شما امکان می دهد پیشرفت خود را ذخیره کنید و کلاس درس خود را مدیریت کنید. شما می توانید دوره هایی را به دانش آموزان اختصاص دهید و پیشرفت آنها را پیگیری کنید. <a href="%{studio_url}">همچنین می‌توانید بدون ایجاد حساب کاربری به مرور درس‌ها و سطوح مختلف ادامه دهید.'
+    hoc_already_signed_up_content_post_hoc_markdown: 'از میزبانی Hour of Code سپاسگزاریم. برای ورود به Code Studio، باید یک رمز عبور برای حساب خود تنظیم کنید. این به شما امکان می دهد پیشرفت خود را ذخیره کنید و کلاس درس خود را مدیریت کنید. شما می توانید دوره هایی را به دانش آموزان اختصاص دهید و پیشرفت آنها را پیگیری کنید. [همچنین می توانید به مرور درس ها و سطوح مختلف ادامه دهید] (%{studio_url}) بدون ایجاد حساب.'
+    teacher_educator_guide: 'راهنمای مربی را ببینید'
+    title: "برای Code.org ثبت نام کنید"
+    school_name: 'نام مدرسه (اختیاری)'
+    school_address: 'آدرس مدرسه (اختیاری)'
+    address_placeholder: 'آدرس، شهر، ایالت، پست'
+    gender: 'جنسیت (اختیاری)'
+    birthday: 'تولد (اختیاری)'
+    age: 'سن'
+    select_age: 'سن را انتخاب کنید'
+    user_type: 'آیا شما دانش آموز هستید یا معلم؟'
+    submit: 'ثبت نام کنید'
+    go_to_account: 'برو به حساب من'
+    create_new_account: 'ایجاد حساب کاربری جدید'
+    teacher: 'آیا شما معلم هستید؟'
+    valid_username: "در دسترس است!"
+    invalid_username: "نام کاربری باید حداقل 5 کاراکتر باشد"
+    taken_username: "نام کاربری قبلاً گرفته شده است"
+    valid_password: "رمز عبور معتبر!"
+    invalid_password: "رمز عبور باید حداقل 6 کاراکتر باشد"
+    mismatch_password: "دو رمز عبوری که وارد کردید مطابقت ندارند"
+    student_consent: "تأیید می کنم که از والدین یا قیم قانونی خود برای استفاده از خدمات Code.org مجوز دارم."
+    agree_us_data_transfer_student: '**من موافقت می کنم که Code.org ممکن است داده ها (از جمله داده های شخصی) را از استفاده من از این سایت به ایالات متحده** به منظور میزبانی و پردازش این داده ها منتقل کند.'
+    agree_us_data_transfer_teacher: '**من موافقت می کنم که Code.org ممکن است داده ها (از جمله داده های شخصی) را از استفاده من (و استفاده دانش آموزانم) از این سایت به ایالات متحده** به منظور میزبانی و پردازش چنین داده هایی منتقل کند.'
+    data_collection_us: "من می دانم که Code.org یک وب سایت غیرانتفاعی مستقر در ایالات متحده است و قوانین مربوط به جمع آوری داده ها در ایالات متحده ممکن است با قوانین کشور من متفاوت باشد."
+    visit_privacy: 'برای کسب اطلاعات بیشتر، از [خط‌مشی رازداری] (%{privacy_url}) Code.org دیدن کنید.'
+    student_terms_markdown: "آدرس‌های ایمیل به شکلی ذخیره نمی‌شوند که به ما امکان تماس با دانشجویان را بدهد. دانش‌آموزان هرگز ایمیلی از Code.org دریافت نخواهند کرد مگر برای بازیابی رمز عبور. برای اطلاعات بیشتر به [سیاست حفظ حریم خصوصی] (http://code.org/privacy) ما مراجعه کنید."
+    user_type_button: "نوع حساب را به روز کنید"
+    user_type_label: "نوع حساب"
+    user_type_student: "دانشجو"
+    user_type_student_desc: "تمام دوره ها و فعالیت های ما را کاوش کنید، به علاوه:"
+    user_type_student_ability_1: "پیشرفت و پروژه های خود را ذخیره کنید"
+    user_type_student_ability_2: "به بخش کلاس درس معلم خود بپیوندید"
+    user_type_teacher: "معلم"
+    user_type_teacher_desc: "همه چیزهایی که دانش آموزان به آنها دسترسی دارند، به علاوه:"
+    user_type_teacher_ability_1: "ایجاد بخش های کلاس درس"
+    user_type_teacher_ability_2: "کار دانش آموزان را تعیین و پیگیری کنید"
+    user_type_teacher_ability_3: "در آموزش حرفه ای ثبت نام کنید"
+    user_type_teacher_ability_4: "در انجمن معلمان ما تعامل داشته باشید"
+    field_is_required: "مورد نیاز است"
+    accept_terms: "برای ایجاد یک حساب کاربری باید موافقت کنید."
+    error: "خطایی رخ داد."
+    email_preference_question: "آیا می‌توانیم درباره به‌روزرسانی‌های دوره‌های آموزشی، فرصت‌های محلی یا سایر اخبار علوم رایانه به شما ایمیل بزنیم؟ (تقریبا یک بار در ماه)"
+    email_preference_privacy: "(به سیاست حفظ حریم خصوصی ما مراجعه کنید)"
+    email_preference_yes: "بله"
+    email_preference_no: "خیر"
+    email_preference_required: "شما باید یک اولویت ایمیل را مشخص کنید."
+    share_teacher_email_reg_partner_question: "آیا می‌خواهید اطلاعات تماس شما را با [شریک منطقه‌ای Code.org](%{cdo_regional_partner_desc}) در ایالت شما به اشتراک بگذاریم تا آنها در مورد توسعه، منابع و رویدادهای حرفه‌ای محلی به شما اطلاع دهند؟"
+    share_teacher_email_reg_partner_preference_yes: "بله"
+    share_teacher_email_reg_partner_preference_no: "خیر"
+    share_teacher_email_reg_partner_preference_required: "شما باید یک اولویت ایمیل را مشخص کنید."
+    parent_account_checkbox: "من یک والدین / قیم هستم که از طرف فرزندم ثبت نام می کنم"
+    parent_account_email_progress_permission: "آیا می‌توانیم به‌روزرسانی‌های گاه به گاه در مورد پیشرفت‌ها و پروژه‌های فرزندتان و به‌روزرسانی‌هایی درباره دوره و علوم رایانه‌اش به شما ایمیل کنیم؟ [(به خط مشی رازداری ما مراجعه کنید)](%{privacy_policy_url})"
+    parent_account_email_label: "ایمیل والدین/سرپرست"
+    us_state: 'ایالت'
+    us_state_dropdown_options:
+      other: "من در جایی زندگی می کنم که در اینجا ذکر نشده است"
+  school_info:
+    title: 'اطلاعات مدرسه (اختیاری)'
+    school_country: 'کشور مدرسه'
+    select_school_type: 'نوع مدرسه'
+    charter: 'منشور'
+    private: 'خصوصی'
+    public: 'عمومی'
+    homeschool: 'مدرسه خانگی'
+    after_school: 'بعد از مدرسه'
+    other: 'دیگر'
+    state: 'ایالت'
+    district: 'ناحیه'
+    other_district_not_listed: 'منطقه دیگری که در بالا ذکر نشده است'
+    district_name: 'نام منطقه'
+    school: 'مدرسه'
+    other_school_not_listed: 'مدرسه دیگری که در بالا ذکر نشده است'
+    school_name: 'نام مدرسه'
+    school_zip: 'کد پستی مدرسه'
+    school_address: 'آدرس مدرسه'
+    school_organization_name: 'نام مدرسه/سازمان'
+    school_organization_zip: 'کد پستی مدرسه/سازمان'
+    select_state: 'حالت را انتخاب کنید'
+  signin_form:
+    title: 'قبلاً یک حساب کاربری دارید؟ وارد شوید'
+    login: 'ایمیل'
+    login_username: 'ایمیل یا نام کاربری'
+    password: 'رمز عبور'
+    remember: 'مرا به خاطر بسپار'
+    submit: 'وارد شوید'
+  signin:
+    try_heading: 'آیا می خواهید بدون ورود به سیستم کدنویسی را امتحان کنید؟'
+    try_hoc: 'ابتدا یک ساعت کد را امتحان کنید'
+    try_20hours: '20 ساعت مقدمه علوم کامپیوتر ما را امتحان کنید'
+  signinsection:
+    welcome: 'به %{section_name} خوش آمدید'
+    name: 'نام خود را انتخاب کنید'
+    picture: 'حالا عکس مخفی خود را پیدا کنید'
+    words: 'حالا کلمات مخفی خود را وارد کنید'
+    login: 'وارد شوید'
+    invalid_login: 'ورود نامعتبر است، لطفا دوباره امتحان کنید'
+    pair_programming: 'من یک شریک در کامپیوترم دارم'
+    student_privacy_markdown: "درباره اینکه چرا نام کامل خود را نمی‌بینید [اینجا] (%{student_privacy_blog}) بیشتر بیاموزید."
+  password:
+    reset_form:
+      title: 'رمز عبور خود را فراموش کرده اید؟'
+      instructions: "آدرس ایمیل مرتبط با حساب خود را در زیر وارد کنید و ما دستورالعمل های بازنشانی رمز عبور را برای شما ارسال می کنیم."
+      email: 'آدرس ایمیل'
+      username: 'نام کاربری'
+      submit: 'ارسال کنید'
+      confirmation: 'اگر آدرس ایمیل شما را در سیستم خود پیدا کنیم، چند دقیقه دیگر لینک بازیابی رمز عبور را دریافت خواهید کرد'
+    reset_errors:
+      captcha_required: 'لطفاً CAPTCHA را برای بازنشانی رمز عبور خود پر کنید.'
+      invalid_email: 'به نظر می رسد ممکن است با یک آدرس ایمیل نامعتبر ثبت نام کرده باشید. لطفاً برای دریافت پیوند بازیابی رمز عبور به support@code.org ایمیل بزنید.'
+    change_form:
+      title: 'رمز عبور خود را تغییر دهید'
+      new_password: 'رمز عبور جدید'
+      confirm_password: 'رمز عبور جدید را تایید کنید'
+      submit: 'رمز عبورم را عوض کن'
+  welcome_email:
+    subject: 'به کلاس من بپیوندید (در Code.org)'
+    body: |
+      برای ثبت نام در آموزش های علوم کامپیوتر در Code.org روی لینک زیر کلیک کنید (با من به عنوان "معلم" شما):
+      
+      %{link}
+      
+      این آموزش ها سرگرم کننده، از نظر بصری جذاب هستند و مفاهیم اولیه علوم کامپیوتر را با استفاده از یک تجربه ساده، هدایت شده و بازی مانند آموزش می دهند. کدنویسی را از بیل گیتس، مارک زاکربرگ، انگری بردز و گیاهان در مقابل یاد بگیرید. زامبی ها! :-)
+      
+      %{name}
+  parent_mailer:
+    student_associated_subject: 'اطلاعات ورود به سایت Code.org'
+    parent_email_added_subject: 'به Code.org خوش آمدید!'
+    parent_permission_request_subject: "رضایت والدین برای دسترسی فرزندتان به Code.org لازم است"
+    parent_permission_reminder_subject: "یادآوری، رضایت والدین برای دسترسی فرزندتان به Code.org لازم است"
+    parent_permission_confirmation_subject: "از اینکه دسترسی فرزندتان به Code.org را تأیید کردید متشکریم!"
+  teacher_mailer:
+    new_teacher_subject: 'به Code.org خوش آمدید!'
+    delete_teacher_subject: 'اطلاعیه Code.org: حساب شما حذف شده است'
+    verified_teacher_subject: 'منابع تأیید شده معلم باز شده است: دسترسی Code.org شما آماده است!'
+  section:
+    your_section:
+      one: 'بخش شما:'
+      other: 'بخش های شما:'
+    code_with_teacher: '%{section_code} با %{teacher_name}'
+    confirm:
+      remove: 'آیا مطمئن هستید که می خواهید از این بخش خارج شوید؟'
+    default_name: 'بخش بدون عنوان'
+    remove: '(حذف بخش)'
+    type:
+      picture: 'رمز عبور تصویر'
+      word: 'کلمات مخفی'
+      email: 'ایمیل'
+      google_classroom: 'Google Classroom'
+      clever: 'باهوش'
+      lti_v1: 'LMS'
+  follower:
+    invite_sent: 'دعوت نامه ارسال شد'
+    added_teacher: '%{name} به عنوان معلم شما اضافه شد'
+    registered:  "شما با موفقیت به %{section_name} پیوستید."
+    captcha_required: 'لطفاً برای پیوستن به این بخش، CAPTCHA را پر کنید.'
+    already_exists: 'شما قبلاً به بخش %{section_name} پیوسته‌اید.'
+    error:
+      signed_in: 'لطفا قبل از ادامه از سیستم خارج شوید'
+      username_not_found: 'نام کاربری %{username} یافت نشد'
+      username_in_use: '%{username} قبلاً گرفته شده است، لطفاً دیگری انتخاب کنید'
+      no_teacher: "کسی که با \"%{teacher_email_or_code}\" وارد شده است، یافت نشد. لطفاً از آنها بخواهید در اینجا ثبت نام کنند و سپس دوباره آنها را اضافه کنید"
+      section_not_found: "بخشی با کد \"%{section_code}\" یافت نشد."
+      blank_code: "لطفا یک کد بخش وارد کنید"
+      cant_join_own_section: "متأسفیم، شما نمی توانید به بخش خود بپیوندید."
+      provider_managed_section: "این بخش توسط ارائه دهنده دیگری مدیریت می شود و نمی توان به آن ملحق شد. لطفاً از معلم خود بخواهید که شما را از طریق %{provider} اضافه کند و بخش او را مجدداً همگام‌سازی کند."
+      restricted_section: "ما نتوانستیم شما را به بخش %{section_code} اضافه کنیم زیرا قفل است. لطفا برای کمک با معلم خود تماس بگیرید."
+      full_section: "ما نتوانستیم شما را به بخش %{section_code} اضافه کنیم زیرا در حال حاضر %{section_capacity} دانش‌آموز در آن وجود دارد. لطفا برای کمک با معلم خود تماس بگیرید."
+      not_participant_type: "ما نتوانستیم شما را به بخش %{section_code} اضافه کنیم زیرا نوع شرکت کننده برای بخش را ندارید."
+    mail:
+      student_disassociated:
+        subject: "اعلان Code.org: %{student_name} دیگر به عنوان دانش آموز شما مرتبط نیست."
+  reports:
+    error:
+      access_denied: "شما به آمار این شخص دسترسی ندارید"
+  crud:
+    new_model: '%{model} جدید'
+    show: 'نمایش دهید'
+    edit: 'ویرایش کنید'
+    edit_model: 'ویرایش %{model}'
+    update: 'به روز رسانی'
+    submit: 'ارسال کنید'
+    destroy: 'نابود کردن'
+    back: 'برگشت'
+    confirm: 'مطمئنی؟'
+    created: '%{model} با موفقیت ایجاد شد.'
+    updated: '%{model} با موفقیت به روز شد.'
+    destroyed: '%{model} با موفقیت حذف شد.'
+    access_denied: 'شما به این %{model} دسترسی ندارید.'
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: "آدرس ایمیلی که ارائه کردید با آدرس ایمیل این حساب مطابقت ندارد"
+        personal_login_created_email: 'شما با موفقیت یک ورود به سیستم شخصی ایجاد کردید. اکنون می توانید با ایمیل و رمز عبور وارد حساب کاربری خود شوید'
+        personal_login_created_username: 'شما با موفقیت یک ورود به سیستم شخصی ایجاد کردید. اکنون می توانید با نام کاربری (%{username}) و رمز عبور وارد حساب خود شوید'
+  nav:
+    header:
+      finished_hoc: "من تمام کردم!"
+      sign_in_to_save: 'برای ذخیره پیشرفت وارد سیستم شوید'
+      my_dashboard: "داشبورد من"
+      course_catalog: "کاتالوگ دوره"
+      project_gallery: "پروژه ها"
+      schools: "مدارس"
+      districts: "ولسوالی ها"
+      sections: "بخش ها"
+      help_support: "کمک و پشتیبانی"
+      report_bug: "یک مشکل را گزارش کنید"
+      report_abuse: "گزارش تخلف"
+      teacher_community: "انجمن معلمان"
+      professional_learning: "یادگیری حرفه ای"
+      documentation: "مستندات"
+      tutorials: "آموزش ها"
+      app_lab_documentation: "مستندات آزمایشگاه برنامه"
+      app_lab_tutorials: "آموزش آزمایشگاه اپلیکیشن"
+      game_lab_documentation: "مستندات آزمایشگاه بازی"
+      game_lab_tutorials: "آموزش آزمایشگاه بازی"
+      music_lab_documentation: "مستندات آزمایشگاه موسیقی"
+      sprite_lab_documentation: "مستندات آزمایشگاه Sprite"
+      sprite_lab_tutorials: "آموزش Sprite Lab"
+      web_lab_documentation: "مستندات آزمایشگاه وب"
+      educate_overview: "بررسی اجمالی مربی"
+      educate_elementary: "دبستان"
+      educate_middle: "Middle School"
+      educate_high: "دبیرستان"
+      educate_hoc: "ساعت کد"
+      educate_partner: "با ما شریک شوید"
+      educate_beyond: "فراتر از Code.org"
+      educate_inspire: "الهام بخشیدن به یک دانش آموز"
+      educate_community: "انجمن آنلاین"
+      educate_requirements: "الزامات فنی"
+      educate_tools: "ابزارها و فیلم ها"
+      about_us: "درباره ما"
+      about_leadership: "رهبری"
+      about_donors: "اهداکنندگان"
+      about_partners: "شرکا"
+      about_team: "تیم کامل"
+      about_news: "اتاق خبر"
+      about_evaluation: "ارزیابی"
+      about_jobs: "مشاغل"
+      about_contact: "تماس با ما"
+      about_faqs: "سوالات متداول"
+      learn: "یاد بگیرید"
+      stats: "آمار"
+      help_us: "به ما کمک کنید"
+      donate: "اهدا کنید"
+      teach: "آموزش دهید"
+      about: "درباره"
+      incubator: "دستگاه جوجه کشی"
+      legal: "حریم خصوصی و حقوقی"
+      legal_privacy: "سیاست حفظ حریم خصوصی"
+      legal_cookie_notice: "اطلاعیه کوکی"
+      legal_tos: "شرایط خدمات"
+      videos: "ویدیوها"
+      hour_of_code: "ساعت کد"
+      csf: "اصول CS"
+
+    user:
+      classroom: 'صفحه اصلی معلم'
+      district_dashboard: 'داشبورد ناحیه'
+      label: 'سلام %{username}'
+      stats: 'استودیو کد'
+      my_projects: 'پروژه های من'
+      settings: 'تنظیمات حساب'
+      logout: 'از سیستم خارج شوید'
+      signin: 'وارد شوید'
+      signup: 'یک حساب کاربری ایجاد کنید'
+      create_account: 'ایجاد حساب کاربری'
+      create_account_low_cap: 'ایجاد حساب کاربری'
+      already_registered: 'قبلا ثبت نام کرده اید؟'
+      pair_programming: 'برنامه نویسی جفت'
+      team: 'تیم'
+      driver: 'وارد شده است'
+      navigator: 'شریک'
+      create: 'ایجاد کنید'
+      new_project: "پروژه جدید"
+      new_project_low_cap: "پروژه جدید"
+      algebra_game: 'جبر'
+      applab: 'آزمایشگاه برنامه'
+      artist: 'هنرمند'
+      artist_k1: 'هنرمند (پیش خوان)'
+      basketball: 'بسکتبال'
+      bounce: 'پرش'
+      calc: 'محاسبه'
+      dance: 'مهمانی رقص'
+      eval: 'ارزشیابی'
+      flappy: 'شل و ول'
+      frozen: 'منجمد شده'
+      gamelab: 'آزمایشگاه بازی'
+      gamelab_jr: 'آزمایشگاه بازی (بتا)'
+      gumball: 'دنیای شگفت انگیز Gumball'
+      iceage: 'عصر یخبندان'
+      infinity: 'بی نهایت'
+      makerlab: 'کیت ابزار ساز'
+      minecraft_adventurer: 'ماجراجوی Minecraft'
+      minecraft_aquatic: 'Minecraft Aquatic'
+      minecraft_codebuilder: 'Minecraft: اتصال کد'
+      minecraft_designer: 'ماین کرافت'
+      minecraft_hero: 'قهرمان Minecraft'
+      music: 'آزمایشگاه موسیقی'
+      playlab: 'Play Lab'
+      playlab_k1: 'Play Lab (پیش‌خوان)'
+      poetry: 'شعر'
+      poetry_hoc: 'هنر شعر'
+      scratch: 'خراش'
+      sports: 'ورزش'
+      spritelab: 'آزمایشگاه اسپرایت'
+      starwars: 'جنگ ستارگان'
+      starwarsblocks: 'جنگ ستارگان (بلوک)'
+      starwarsblocks_hour: 'جنگ ستارگان (بلوک)'
+      thebadguys: 'بچه های بد'
+      loading: 'در حال بارگیری...'
+      weblab: 'آزمایشگاه وب'
+      view_all: 'مشاهده تمامی پروژه ها...'
+
+    popup:
+      progress_for_user: "پیشرفت %{name}"
+      progress: 'پیشرفت شما'
+      close: 'بستن'
+      mastery: 'مفاهیم'
+      puzzle_map: 'مراحل'
+      prizes: 'همه %{total_trophies} جام ها را جمع آوری کنید و جوایز را ببرید!'
+      prize_earned: 'همه %{total_trophies} جایزه جمع آوری شد. جایزه برد!'
+      prize_us_only: '(فقط دانشجویان ایالات متحده)'
+      prizes_link: 'اطلاعات بیشتر'
+  teacher:
+    answer: پاسخ دهید
+    dashboard: 'داشبورد معلم'
+    for_teachers_only: فقط برای معلمان
+    title:
+      one: 'معلم شما:'
+      other: 'معلمان شما:'
+    remove: '(حذف معلم)'
+    confirm:
+      remove: 'آیا مطمئنید که می خواهید این معلم را حذف کنید؟'
+    students:
+      dashboard: 'به داشبورد معلم بروید'
+    user_not_found: 'معلم پیدا نشد.'
+    student_teacher_disassociated: 'شما بخش %{section_code} را با %{teacher_name} ترک کرده‌اید.'
+    panel:
+      answer_viewer: 'پانل معلم'
+      student: 'دانشجو'
+      viewing_solution: 'مشاهده راه حل'
+      try_it_yourself: 'خودتان آن را امتحان کنید'
+      section: 'بخش'
+      example: 'راه حل مثال'
+      example_with_number: 'راه حل مثال %{solution_number}'
+      submitted_on: 'ارسال شده در:'
+      last_updated: 'آخرین به روز رسانی:'
+      unsubmit: 'لغو ارسال'
+      worked_with: 'کار شده با'
+      update_lock_settings: 'تنظیمات قفل را در اینجا به روز کنید.'
+      clear_response: 'پاسخ روشن'
+    student_code_view_diabled: 'کد دانش آموز برای این فعالیت قابل مشاهده نیست.'
+  user:
+    email_confirm_needed: 'آدرس ایمیل تایید نشده است:'
+    email_confirm_needed_required: 'آدرس ایمیل شما %{email} تایید نشده است:'
+    email_confirm_wrong_email: '(آدرس ایمیل اشتباه است؟)'
+    email_resend_confirm: 'مجدداً دستورالعمل‌های تأیید را ارسال کنید'
+    new_email_hint: '(مطمئن شوید که می توانید ایمیل ها را به این آدرس ایمیل دریافت کنید)'
+    new_password_hint: "(اگر نمی خواهید آن را تغییر دهید خالی بگذارید)"
+    current_password_hint: '(برای تایید تغییرات شما به رمز عبور فعلی شما نیاز داریم)'
+    delete: 'حذف اکانت'
+    delete_text: "با حذف حساب شما، تمام اطلاعات و پیشرفت مرتبط با این حساب پاک می شود."
+    delete_text_teacher_managed_note: "شما اجازه حذف این حساب را ندارید زیرا توسط معلم شما مدیریت می شود. قبل از اینکه بتوانید حساب خود را حذف کنید، معلم(های) شما باید شما را از بخش های خود حذف کنند."
+    delete_text_teacher_note: "لطفا توجه داشته باشید: حذف اکانت شما اکانت دانش آموزان شما را حذف نمی کند."
+    delete_confirm: 'آیا مطمئن هستید که می خواهید حساب خود را حذف کنید؟'
+    deleted_user: 'کاربر حذف شده'
+    no_password_because_oauth: 'بدون رمز عبور زیرا با ارائه دهنده شخص ثالث وارد سیستم می شوید.'
+    no_password_because_sponsored: 'برای مدیریت رمز عبور به معلم خود مراجعه کنید.'
+    create_personal_login: 'یک رمز عبور شخصی برای ورود ایجاد کنید'
+    create_personal_login_under_13_info: 'اگر می‌خواهید حتی پس از پایان سال تحصیلی به استفاده از حساب Code.org خود ادامه دهید، از والدین/سرپرست خود بخواهید که به شما کمک کنند تا ورود به سیستم شخصی خود را در زیر ایجاد کنید.'
+    create_personal_login_under_13_username: "نام کاربری (از نام واقعی خود استفاده نکنید!)"
+    create_personal_login_under_13_parent_email: 'آدرس ایمیل والدین/سرپرست'
+    create_personal_login_info: 'اگر می‌خواهید حتی پس از پایان سال تحصیلی به استفاده از حساب Code.org خود ادامه دهید، می‌توانید لاگین خود را در زیر ایجاد کنید.'
+    create_personal_login_state_required: 'اوه اوه لطفاً قبل از ایجاد یک لاگین شخصی، وضعیت خود را ارائه دهید.'
+    create_personal_login_parental_permission_required: 'اوه اوه قبل از ایجاد یک لاگین شخصی باید اجازه والدین را دریافت کنید.'
+    create_personal_login_link_account: 'همچنین می‌توانید به جای آن، در بخش «مدیریت حساب‌های پیوندی» به یک حساب شخصی متصل شوید.'
+    create_personal_login_terms: "با ایجاد یک ورود به سیستم شخصی، موافقت می‌کنم که به <a href='%{terms_of_service_url}', target='_blank'>شرایط خدمات</a> Code.org پایبند باشم. تأیید می‌کنم که اجازه والدین یا قیم قانونی خود را برای استفاده از خدمات Code.org حتی بدون معلم دارم."
+    create_personal_login_terms_markdown: "با ایجاد یک ورود به سیستم شخصی، موافقت می‌کنم که به Code.org [شرایط خدمات] (%{terms_of_service_url}) متعهد باشم. تأیید می‌کنم که اجازه والدین یا قیم قانونی خود را برای استفاده از خدمات Code.org حتی بدون معلم دارم."
+    create_personal_login_email_note: "توجه: آدرس‌های ایمیل به شکلی ذخیره نمی‌شوند که به ما امکان تماس با دانشجویان را بدهد. دانش‌آموزان هرگز ایمیلی از Code.org دریافت نخواهند کرد مگر برای بازیابی رمز عبور. برای اطلاعات بیشتر به <a href='%{privacy_policy_url}', target='_blank'>خط مشی رازداری</a> ما مراجعه کنید."
+    create_personal_login_email_note_markdown: 'توجه: آدرس‌های ایمیل به شکلی ذخیره نمی‌شوند که به ما امکان تماس با دانشجویان را بدهد. دانش‌آموزان هرگز ایمیلی از Code.org دریافت نخواهند کرد مگر برای بازیابی رمز عبور. برای اطلاعات بیشتر به [خط‌مشی رازداری] (%{privacy_policy_url}) ما مراجعه کنید.'
+    enter_new_login_info: 'اطلاعات ورود جدید خود را وارد کنید'
+    confirm_secret_words: 'با وارد کردن کلمات مخفی فعلی خود، تأیید کنید که این شما هستید'
+    parent_email_label: "ایمیل والدین/سرپرست (اختیاری)"
+    parent_email_hint: "(این می تواند برای بازیابی رمز عبور استفاده شود)"
+    enter_parent_email: "آدرس ایمیل والدین یا قیم خود را وارد کنید (برای بازیابی رمز عبور)"
+    update: "به روز رسانی حساب"
+    update_field_parent_permission_required: '(قبل از به روز رسانی این فیلد باید اجازه والدین را دریافت کنید)'
+    account_successfully_updated: "حساب با موفقیت به روز شد."
+    auth_option_saved: "شما با موفقیت حساب %{provider} خود را با ایمیل %{email} مرتبط کردید."
+    auth_option_saved_no_email: "شما با موفقیت حساب %{provider} خود را پیوند دادید."
+    update_email: "به روز رسانی"
+    for_parents_and_guardians: "برای والدین و سرپرستان"
+    link_a_parent_email: "یک آدرس ایمیل والدین/سرپرست را به این حساب پیوند دهید تا از پیشرفت‌ها و پروژه‌های فرزندتان به‌روز بمانید. همچنین می توانید از این آدرس ایمیل برای بازیابی رمز عبور استفاده کنید."
+    parent_guardian_email_label: "ایمیل والدین/سرپرست"
+    remove_parent_email_label: "حذف کنید"
+    none: "هیچ کدام"
+    only_one_parent_email_supported_warning: "توجه: ما در حال حاضر فقط می‌توانیم از یک آدرس ایمیل والدین/سرپرست برای هر حساب دانش‌آموز پشتیبانی کنیم."
+    encrypted: "رمزگذاری شده است"
+  user_level:
+    completed: 'تکمیل شد'
+    tried: 'تلاش کرد'
+  home:
+    title: "استودیو کد"
+    all_courses: "مروری بر دروس 1، 2 و 3"
+    lesson_plans: "برنامه های درسی"
+    signin_message: "قبلا ثبت نام کرده اید؟ %{link}"
+    student_reg_link: 'ثبت نام دانشجو'
+    teacher_reg_link: 'معلم ثبت نام کنید'
+    signin_directions: 'از یک حساب برای پیگیری پیشرفت استفاده کنید.<br/> معلمان، کل کلاس خود را پیگیری کنید.'
+    teacher_dashboard: داشبورد پیشرفت را ببینید
+    teacher_student_count_one: "شما %{count} دانش آموز دارید."
+    teacher_student_count: "شما %{count} دانش آموز دارید."
+    teacher_averages: "دانش‌آموزان شما به‌طور متوسط ​​%{trophy_average} از %{trophy_max} جایزه‌های «تسلط بر مفهوم» را کسب کرده‌اند."
+    teacher_print_certificates: 'چاپ گواهینامه برای دانش آموزانی که این دوره را به پایان می رساند'
+    teacher_read_blog: اخبار و به‌روزرسانی‌های مواد ما را در وبلاگ آموزشی ما بخوانید
+    classroom: کلاس درس شما
+    student_progress: پیشرفت یادگیری شما
+    student_stats: "شما %{trophy_count} از %{trophy_max} جایزه \"Concept Mastery\" را به دست آورده اید."
+    student_left_off: 'جایی که ترک کردید:'
+    student_finished: "شما تمام آموزش های Code.org را تکمیل کرده اید. کلاس دیگری %{online_link} یا در %{local_school_link} انتخاب کنید."
+    local_school: مدرسه محلی
+    online: آنلاین
+    see_details: جزئیات را ببینید
+    view_course: مشاهده دوره
+    prize_info: 'جوایز برای شرکت (فقط معلمان مدارس دولتی ایالات متحده): تا 1000 دلار پاداش در کلاس درس.'
+    tryfirst: 'یا، می توانید ابتدا آن را امتحان کنید و بعداً ثبت نام کنید:'
+    trynow: 'اکنون امتحان کنید'
+    add_hint_help: 'لطفاً به ما کمک کنید تا نکات هوشمندی را به آموزش های Code.org اضافه کنیم'
+    20hour_overview: 'این دوره 20 ساعته به معرفی مفاهیم اصلی علوم کامپیوتر و برنامه نویسی می پردازد. این دوره برای استفاده در کلاس های درس برای کلاس های K-8 طراحی شده است، اما یادگیری آن در تمام سنین سرگرم کننده است.'
+    test_videos_help: 'پخش کننده ویدیوی جدید ما را در مدرسه خود آزمایش کنید'
+    try_beta_courses: 'جدید! دوره های بتا ما را برای دانش آموزان K-5 امتحان کنید'
+    use_as_teacher: 'از این سایت به عنوان معلم استفاده کنید'
+    heading_elementary_markdown: "## دوره های 20 ساعته برای\n\n# مبانی علوم کامپیوتر (همه سنین)"
+    your_gallery: گالری
+    no_primary_course: "دوره کد استودیو را امتحان کنید"
+    choose_next_course: "یک دوره کد استودیو را با انتخاب یکی از موارد زیر امتحان کنید"
+    print_certificate: "چاپ گواهی"
+  certificate_sponsor_message: "%{sponsor_name} این هدیه سخاوتمندانه را برای حمایت مالی از یادگیری شما ارائه کرد."
+  certificate_hour_of_code: "ساعت کد"
+  move_students:
+    new_section_dne: "متأسفیم، اما بخش %{new_section_code} وجود ندارد. لطفاً کد بخش دیگری را وارد کنید."
+    section_code_cant_be_current_section: "بخش فعلی نمی تواند با بخش جدید یکسان باشد."
+    current_section_dne: "متأسفیم، اما بخش %{current_section_code} وجود ندارد. لطفاً کد بخش دیگری را وارد کنید."
+    student_ids_not_entered: "لطفا student_ids را ارائه دهید."
+    student_not_found: "یک یا چند دانش آموز پیدا نشد."
+    all_students_must_be_in_current_section: "همه دانش آموزان باید در حال حاضر در بخش شما ثبت نام کنند."
+    already_enrolled_in_new_section: "شما نمی توانید این دانش آموزان را جابجا کنید زیرا آنها در حال حاضر در بخش جدید هستند."
+    third_party_login: "شما نمی توانید دانش آموزان را به بخشی که با ابزار شخص ثالث همگام سازی شده است منتقل کنید."
+    not_correct_participant_type: "شما نمی توانید این کاربران را جابجا کنید زیرا آنها مجوز شرکت در بخش جدید را ندارند."
+  share:
+    title: "در Code Studio یاد بگیرید"
+    description: "هر کسی می تواند علوم کامپیوتر را یاد بگیرد. با کد بازی، برنامه و هنر بسازید."
+    try_hour_of_code: 'یک ساعت کد را امتحان کنید!'
+  gender:
+    male: 'مرد'
+    female: 'زن'
+    non_binary: 'غیر باینری'
+    not_listed: 'عبارت ترجیحی فهرست نشده است'
+    none: 'ترجیح می دهید پاسخ ندهید'
+  user_type:
+    student: 'دانشجو'
+    teacher: 'معلم'
+  footer:
+    thanks: 'ما از <a href="https://code.org/about/donors"> اهداکنندگان</a>، <a href="https://code.org/about/partners">شریک</a> خود تشکر می کنیم ، <a href="https://code.org/about/team">تیم گسترده</a> ما، و بازیگران ویدیویی ما برای حمایت آنها در ایجاد Code Studio.'
+    help_from_html: 'ما به ویژه می خواهیم مهندسانی از آمازون، گوگل و مایکروسافت را که به ایجاد این مواد کمک کردند، بشناسیم.'
+    help_from_html_old: 'مهندسان آمازون، گوگل و مایکروسافت به ساخت این مواد کمک کردند.'
+    art_from_html: 'Minecraft&#8482; &کپی %{current_year} مایکروسافت. تمامی حقوق محفوظ است.<br />جنگ ستارگان&#8482; &کپی %{current_year} دیزنی و لوکاس فیلم. تمامی حقوق محفوظ است.<br />Frozen&#8482; &کپی %{current_year} دیزنی. تمامی حقوق محفوظ است.<br />عصر یخبندان&#8482; &کپی %{current_year} فاکس قرن بیستم. تمامی حقوق محفوظ است.<br />انگری برد&#8482; &کپی 2009-%{current_year} Rovio Entertainment Ltd. تمامی حقوق محفوظ است.<br />گیاهان در مقابل زامبی ها&#8482; &کپی %{current_year} Electronic Arts Inc. تمامی حقوق محفوظ است.<br />DreamWorks The Bad Guys &copy; %{current_year} DreamWorks Animation LLC. تمامی حقوق محفوظ است.<br />Paramount Pictures Transformers One &copy; %{current_year} پارامونت پیکچرز. تمامی حقوق محفوظ است.'
+    art_from_html_old: 'Minecraft&#8482; &کپی %{current_year} مایکروسافت. تمامی حقوق محفوظ است. جنگ ستارگان&#8482; &کپی %{current_year} دیزنی و لوکاس فیلم. تمامی حقوق محفوظ است. منجمد&#8482; &کپی %{current_year} دیزنی. تمامی حقوق محفوظ است. عصر یخبندان&#8482; &کپی %{current_year} فاکس قرن بیستم. تمامی حقوق محفوظ است. پرندگان خشمگین&#8482; &کپی 2009-%{current_year} Rovio Entertainment Ltd. تمامی حقوق محفوظ است. گیاهان در مقابل زامبی ها&#8482; &کپی %{current_year} Electronic Arts Inc. تمامی حقوق محفوظ است. DreamWorks The Bad Guys &copy; %{current_year} DreamWorks Animation LLC. تمامی حقوق محفوظ است. Paramount Pictures Transformers One &copy; %{current_year} پارامونت پیکچرز. تمامی حقوق محفوظ است.'
+    code_from_html: 'Code.org از p5.play استفاده می کند که تحت مجوز <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a> است. .'
+    powered_by_aws: 'خدمات وب آمازون و آرم "Powered by AWS" علائم تجاری Amazon.com, Inc. یا شرکت های وابسته آن در ایالات متحده و/یا سایر کشورها هستند.'
+    built_on_github: 'ساخته شده در GitHub از مایکروسافت'
+    trademark: '&کپی Code.org، %{current_year}. Code.org&reg;، آرم CODE، Hour of Code&reg; و %{cs_discoveries} علائم تجاری Code.org هستند.'
+    copyright: 'حق چاپ'
+    more: 'بیشتر'
+    feedback: 'بازخورد ارائه دهید'
+    translate: 'برای ترجمه مطالب ما داوطلب شوید'
+    support: 'پشتیبانی کنید'
+    support_url: 'http://support.code.org'
+    tos_short: 'شرایط'
+    tos: 'شرایط خدمات'
+    privacy: 'سیاست حفظ حریم خصوصی'
+    privacy_updated: 'سیاست حفظ حریم خصوصی (به روز شده)'
+    secure: 'نسخه امن'
+    report_abuse: 'گزارش تخلف'
+    built_on_code_studio: 'ساخته شده در Code Studio'
+    make_my_own_app: 'برنامه خودم را بسازم'
+    how_it_works: 'چگونه کار می کند (مشاهده کد)'
+    try_hour_of_code: 'یک ساعت کد را امتحان کنید!'
+    store: 'فروشگاه'
+    cookie_notice: 'اطلاعیه کوکی'
+    view_code: 'مشاهده کد'
+    locale_select: "زبان را انتخاب کنید"
+  reference_area:
+    title: 'به کمک نیاز دارید؟'
+    subtitle: 'این ویدیوها و نکات را ببینید'
+    teacher: 'راه حل را ببینید'
+    teacher_no_solution: 'دست از دیدن راه حل بردارید'
+    auth_error: 'شما مجاز به دیدن راه حل نیستید.'
+    submit: 'به روز رسانی مکان هنرمند'
+    direction: 'جهت شروع (بر حسب درجه)'
+  video:
+    tab: 'ویدئو.'
+    notes: 'ویدیو نیست؟ نمایش یادداشت ها'
+    notes_coming_soon: 'یادداشت های این ویدیو به زودی.'
+    autoplay_option: 'پخش خودکار ویدیوها'
+    download: 'دانلود ویدیو'
+    show_notes: 'نمایش یادداشت ها'
+    show_video: 'نمایش ویدیو'
+    label: 'ویدئو'
+  compatibility:
+    upgrade:
+      unsupported_message: "مرورگر شما پشتیبانی نمی شود. لطفاً مرورگر خود را به [یکی از مرورگرهای پشتیبانی شده ما] (%{supported_browsers_url}) ارتقا دهید. می توانید سعی کنید صفحه را مشاهده کنید، اما انتظار دارید عملکرد خراب شود."
+      link: "بیشتر بدانید"
+      applab_unsupported_tablet: "App Lab روی رایانه رومیزی یا لپ تاپ با ماوس و صفحه کلید بهترین کار را دارد. ممکن است با استفاده از این ابزار در دستگاه فعلی خود با مشکلاتی مواجه شوید."
+      gamelab_unsupported_tablet: "Game Lab روی رایانه رومیزی یا لپ تاپ با ماوس و صفحه کلید بهترین کار را دارد. ممکن است با استفاده از این ابزار در دستگاه فعلی خود با مشکلاتی مواجه شوید."
+      weblab_unsupported_locale_storage: "ممکن است با استفاده از Web Lab در حالت مرور خصوصی با مشکلاتی مواجه شوید. لطفا پروژه خود را در حالت عادی بارگیری مجدد کنید. با عرض پوزش برای ناراحتی."
+  deprecation:
+    algebra_lab: "CS در برنامه درسی و محتوا جبر در حال منسوخ شدن است.  ظرف چند ماه آینده، این آزمایشگاه دیگر در دسترس نخواهد بود.  لطفاً [Bootstrap: جبر](%{bootstrap_algebra_url}) در عوض. [بیشتر بیاموزید](%{cs_algebra_url})."
+  slow_loading: 'این بیشتر از حد معمول طول میکشه...'
+  try_reloading: 'سعی کنید صفحه را دوباره بارگیری کنید'
+  next_stage: 'تمام شد! ادامه به درس بعدی'
+  download_pdf: 'طرح درس باز'
+  lesson_plan: 'طرح درس'
+  view_lesson_plan: 'مشاهده طرح درس'
+  pdf_download: 'PDF را دانلود کنید'
+  download_coming_soon: 'فعالیت قابل دانلود به زودی.'
+  video_coming_soon: 'ویدیو به زودی!'
+  share_code:
+    title: "روی Run کلیک کنید تا برنامه من را در عمل ببینید"
+    bounce_og_title: "بازی Bounce من را بررسی کنید"
+    flappy_og_title: "بازی Flappy من را بررسی کنید"
+    studio_og_title: "برنامه Play Lab من را بررسی کنید"
+    check_out_what_i_made: "ببین چی درست کردم"
+    og_description: "من خودم کد را با Code.org نوشتم"
+    phone_number_not_allowed: "به نظر می رسد یک شماره تلفن در آن وجود دارد. سعی کنید متن را تغییر دهید."
+    address_not_allowed: "به نظر می رسد یک آدرس در آن وجود دارد. سعی کنید متن را تغییر دهید."
+    email_not_allowed: "به نظر می رسد یک ایمیل در آن وجود دارد. سعی کنید متن را تغییر دهید."
+    profanity_not_allowed: "به نظر می رسد در آن فحاشی وجود دارد. سعی کنید متن را تغییر دهید."
+  builder:
+    created: "شما یک اسکریپت جدید ایجاد کردید."
+    destroyed: "شما یک فیلمنامه را نابود کردید."
+    manage: "ساخت سطوح"
+    view: "مشاهده کنید"
+    back: "بازگشت به اسکریپت ها"
+    success: "شما با موفقیت بلوک ها را ویرایش کردید."
+    level:
+      create: "سطح جدیدی ایجاد کنید"
+      current: "سطوح فعلی"
+      unused: "سطوح استفاده نشده"
+  upsell:
+    applab:
+      title: 'آزمایشگاه برنامه'
+      body: "App Lab یک محیط برنامه نویسی است که در آن می توانید اپلیکیشن های ساده بسازید. یک برنامه، کد با بلوک یا جاوا اسکریپت طراحی کنید تا کار کند، سپس برنامه خود را در چند ثانیه به اشتراک بگذارید."
+      body_short: "یک برنامه، کد با بلوک یا جاوا اسکریپت طراحی کنید تا کار کند، سپس برنامه خود را در چند ثانیه به اشتراک بگذارید."
+      audience: 'سن 13+'
+      cta: 'یاد بگیرید چگونه'
+      image_alt: 'یک خرگوش بنفش با یک کوله پشتی با موتور موشک.'
+    applab-intro:
+      image_alt: 'یک دست در حال ضربه زدن به مرکز صفحه نمایش گوشی هوشمند است. نور و برق از صفحه نمایش بیرون می آید.'
+    aquatic:
+      title: "ماین کرافت"
+      image_alt: 'استیو و الکس از Minecraft به شما نگاه می کنند.'
+    artist:
+      image_alt: 'یک فرد کارتونی که یک مداد بزرگ در دست دارد و یک مثلث می کشد.'
+    conditionals:
+      image_alt: 'دو دست در حال به هم زدن دسته ای از ورق های بازی.'
+    course1:
+      image_alt: 'زنبور کثیف Code.org و ماهی پرتقال در مقابل کد ایستاده اند.'
+    course2:
+      image_alt: 'کلاژی از پازل های Code.org که یک جادوگر سبز، هنرمند و ماهی نارنجی را نشان می دهد.'
+    course3:
+      image_alt: 'کلاژی از پازل های Code.org که یک بازی، زامبی و نینجا را نشان می دهد.'
+    course4:
+      image_alt: 'کلاژی از پازل‌های Code.org که فوتبال، حیوانات خانگی و یک هنرمند را نشان می‌دهد.'
+    coursea:
+      image_alt: 'کلاژی از پازل های Code.org که یک فیل و یک سنجاب را نشان می دهد.'
+    courseb:
+      image_alt: 'کلاژی از پازل‌های Code.org که یک کاشف، سنگ‌های قیمتی و یک گل را نشان می‌دهد.'
+    coursec:
+      image_alt: 'کلاژی از پازل های Code.org که یک سنجاب، اعداد باینری و یک پرنده قرمز از بازی پرندگان خشمگین را نشان می دهد.'
+    coursed:
+      image_alt: 'کلاژی از پازل های Code.org که یک زنبور، گل، عسل و یک خوک سبز را از بازی پرندگان خشمگین نشان می دهد.'
+    coursee:
+      image_alt: 'کلاژی از پازل های Code.org که فردی را نشان می دهد که بیل، کدو تنبل، باغ و گاو در دست دارد.'
+    coursef:
+      image_alt: 'کلاژی از پازل های Code.org که اشکال هندسی رنگارنگ، یک دزد دریایی قرمز و یک هنرمند را نشان می دهد.'
+    dance-2019:
+      title: 'مهمانی رقص'
+      image_alt: 'یک گربه شاد، تنبل و کوسه در حال رقصیدن.'
+    dance-2022:
+      image_alt: 'یک بیگانه سبز رنگ و یک ربات در حال رقص با زحل در پس زمینه.'
+    dance:
+      title: 'مهمانی رقص'
+      image_alt: 'یک گربه باحال و یک کوسه شاد در حال رقصیدن در یک مهمانی.'
+    donate:
+      image_alt: 'کودکی که به صفحه لپ تاپ اشاره می کند که پازل Code.org را نشان می دهد.'
+    elementary:
+      image_alt: 'یک زنبور عسل و یک سنجاب که در مزرعه ای مقابل رنگین کمان ایستاده اند.'
+    express:
+      image_alt: 'زامبی Plants vs Zombies و گیاه ایستاده در کنار Flappy Bird.'
+    flappy:
+      title: 'کد شل و ول'
+      body: 'آیا می خواهید بازی خود را در کمتر از 10 دقیقه بنویسید؟ آموزش Flappy Code ما را امتحان کنید!'
+      image_alt: 'پرنده زردی که بین لوله های سبز پرواز می کند.'
+    frozen:
+      title: "منجمد شده"
+      image_alt: 'آنا و السا از فیلم فروزن. بین آنها تصویری از آنا است که با استفاده از اسکیت های یخ خود شکل زیبایی را در یخ می کشد.'
+    gallery:
+      title: "گالری"
+      body: "گالری از تصاویر برنامه و هنرمند ایجاد شده توسط کاربران ما را مشاهده کنید"
+      image_alt: 'هنرمندی که دایره های زیادی می کشد و گربه، خفاش و روح در یک زمین تعطیلات زمستانی ایستاده است.'
+    gamelab:
+      title: "آزمایشگاه بازی"
+      body: "Game Lab یک محیط برنامه نویسی است که در آن می توانید انیمیشن ها و بازی های ساده ای را با اشیاء و شخصیت هایی که با یکدیگر تعامل دارند بسازید."
+      audience: "سن 13+"
+      cta: "یاد بگیرید چگونه"
+      image_alt: 'بسیاری از مردم و حیوانات کارتونی که در یک پیاده رو ایستاده اند و لبخند می زنند.'
+    hello-world-food:
+      image_alt: 'بسیاری از حیوانات، بیگانگان و ایموجی ها در حال چرخش به دور زمین هستند.'
+    hello-world:
+      title: 'سلام دنیا'
+      body: 'از بین چهار تم سرگرم کننده برای کدنویسی شخصیت های تعاملی در دنیایی که ایجاد می کنید، انتخاب کنید.'
+    hero:
+      title: "ماین کرافت"
+      body: "Minecraft برای Hour of Code با یک فعالیت کاملاً جدید بازگشته است! سفر در Minecraft با کد."
+      image_alt: 'یک گولم آهنی از Minecraft که در مقابل نمای بالای آنا در حال حل یک پازل ایستاده است.'
+    hoc-encryption:
+      title: "رمزگذاری ساده"
+      body: "دانش آموزان تکنیک هایی را برای ایجاد و شکستن پیام های رمزگذاری شده یاد خواهند گرفت."
+      image_alt: 'نمودار میله ای از بسامد حروف در زبان انگلیسی.'
+    hoc:
+      title: 'ماز کلاسیک'
+      body: 'اصول اولیه علوم کامپیوتر را امتحان کنید. میلیون ها نفر به آن ضربه زده اند.'
+      image_alt: 'کلاژی از تصاویر که کد، مارک زاکربرگ و پرندگان خشمگین را نشان می دهد.'
+    hourofcode:
+      image_alt: 'کلاژی از تصاویر که کد، مارک زاکربرگ و پرندگان خشمگین را نشان می دهد.'
+    hoc2014:
+      try_new_tutorial: 'آموزش جدید Hour of Code ما را در نسخه بتا امتحان کنید'
+      try_frozen: 'هنرمند با آنا و السا، از فروزن'
+    infinity:
+      title: "Infinity Play Lab"
+      body: "از Play Lab برای ایجاد یک داستان یا بازی با بازی شخصیت های Disney Infinity استفاده کنید."
+      image_alt: 'پنج شخصیت از Froze، Tangled و Big Hero 6 کنار هم ایستاده اند.'
+    map:
+      image_alt: 'تصویر خاکستری از ایالات متحده با حدود 20 ایالت که با رنگ بنفش برجسته شده است.'
+    mc_escape:
+      image_alt: 'یک شخصیت Minecraft که کلاه بالایی و مونوکل بر سر دارد در حالی که صندوق گنج پر از زمرد را باز می کند.'
+    mc:
+      image_alt: 'آنا و استیو از Minecraft در مقابل یک پازل Code.org Minecraft ایستاده اند.'
+    minecraft:
+      title: "ماین کرافت"
+      body: "دنیای Minecraft را از طریق کد کاوش کنید."
+      image_alt: 'آنا و استیو از Minecraft در مقابل یک پازل Code.org Minecraft ایستاده اند.'
+    minecraft2016:
+      title: "ماین کرافت"
+      body: "حیوانات و دیگر موجودات Minecraft را در نسخه خود Minecraft برنامه ریزی کنید."
+    oceans:
+      image_alt: 'روباتی در اقیانوس که موجودات دریایی مختلف را اسکن می کند.'
+    playlab:
+      image_alt: 'یک کلاژ تصویری که گربه آبی، سگ احمق و راسوی ماقبل تاریخ را نشان می‌دهد.'
+    poem-art:
+      title: 'هنر شعر'
+      body: 'خودت را بیان کن! از کد برای ایجاد شعرهای متحرک استفاده کنید.'
+      image_alt: 'یک ماهی مرکب هیپستر که روی صحنه اجرا می کند.'
+    pre-express-2017:
+      image_alt: 'سگ و اسب شاخدار در مقابل درختی که از قطعات پازل ساخته شده است ایستاده اند.'
+    pre-express-2018:
+      image_alt: 'سگ و اسب شاخدار در مقابل درختی که از قطعات پازل ساخته شده است ایستاده اند.'
+    pre-express-2019:
+      image_alt: 'سگ و اسب شاخدار در مقابل درختی که از قطعات پازل ساخته شده است ایستاده اند.'
+    pre-express:
+      image_alt: 'سگ و اسب شاخدار در مقابل درختی که از قطعات پازل ساخته شده است ایستاده اند.'
+    sports:
+      title: "ورزش"
+      body: "یک بازی بسکتبال بسازید یا ورزش ها را با هم ترکیب کنید."
+      image_alt: 'نشان‌های NBA و WNBA در کنار توپ فوتبال، توپ فوتبال، هاکی و بسکتبال نمایش داده می‌شوند.'
+    starwars:
+      title: "جنگ ستارگان"
+      image_alt: 'R2-D2، Leia، Rey، و BB-8 در یک بیابان ایستاده اند.'
+    text-compression:
+      title: "فشرده سازی متن"
+      body: "در این درس، دانش آموزان از ابزارک فشرده سازی متن برای فشرده سازی متن با جایگزینی الگوها با نمادها استفاده می کنند."
+      image_alt: 'فشرده سازی متن با جایگزینی کل کلمات با یک نماد واحد.'
+    weblab:
+      title: "آزمایشگاه وب (بتا)"
+      body: "Web Lab یک محیط برنامه نویسی است که در آن می توانید صفحات وب ساده را با استفاده از HTML و CSS ایجاد کنید. صفحات وب خود را طراحی کنید و سایت خود را در چند ثانیه به اشتراک بگذارید."
+      audience: "سن 13+"
+      cta: "یاد بگیرید چگونه"
+      image_alt: 'صفحه کامپیوتری که کد HTML را نمایش می دهد.'
+    widgets:
+      title: "ابزارک ها"
+      body: "دانش‌آموزان می‌توانند با استفاده از این ابزارهای دیجیتال مفاهیم را از دوره اصول علوم کامپیوتر ما به صورت عملی کشف کنند. از ویجت ها به تنهایی استفاده کنید یا یک درس تک مفهومی برای کلاس خود ایجاد کنید."
+      audience: "سن 14+"
+      cta: "یاد بگیرید چگونه"
+    unplugged_conditionals:
+      title: "شرایط"
+      body: "با استفاده از یک دسته کارت، در مورد الگوریتم‌ها و عبارات شرطی در این فعالیت «unplugged» بیاموزید."
+    unplugged:
+      title: "درس های بدون برق"
+      audience: "سن 4+"
+      body: "ما لیستی از دروس بدون پلاگین را برای شما جمع آوری کرده ایم تا در کلاس درس خود از آنها استفاده کنید. حالا شما می توانید مبانی علوم کامپیوتر را آموزش دهید، چه کامپیوتر در کلاس خود داشته باشید چه نداشته باشید! سعی کنید از این درس ها به عنوان یک دوره مستقل یا به عنوان دروس مکمل برای هر دوره علوم کامپیوتر استفاده کنید."
+      body_short: "اگر کامپیوتر ندارید، این درس های بدون برق را در کلاس درس خود امتحان کنید."
+    20-hour:
+      title: 'دوره تسریع شده'
+      body: 'این دوره 20 ساعته مفاهیم اصلی علوم کامپیوتر و برنامه نویسی در دوره های 2-4 را پوشش می دهد. این دوره برای استفاده در سنین 10 تا 18 سال طراحی شده است. برای تجربه کامل تر، دوره های 2-4 را بررسی کنید!'
+      body_short: 'علوم کامپیوتر پایه را در نسخه تسریع شده دروس 2-4 بیاموزید.'
+  landing:
+    prerelease_tutorial: "این آموزش به صورت **بتا** است.  با دریافت بازخورد و بهبودها، این موضوع در معرض بازنگری است."
+    report_bug: "گزارش اشکال"
+    support: "کمک بگیرید"
+    support_url: "//support.code.org"
+    help_resources: "راهنما و منابع"
+    help_support: "کمک و پشتیبانی"
+    documentation: "مستندات"
+    tutorials: "آموزش ها"
+  free_response:
+    placeholder: "پاسخ خود را اینجا وارد کنید"
+  multi:
+    wrong_title: "پاسخ نادرست"
+    wrong_body: "پاسخی که وارد کرده اید صحیح نیست.  لطفا دوباره امتحان کنید!"
+    correct_title: "صحیح"
+    correct_body: "این پاسخ صحیح است."
+    toofew_title: "پاسخ های خیلی کم"
+    toofew_body: "لطفاً قبل از ارسال دو پاسخ را انتخاب کنید."
+  multi-submittable:
+    wrong_title: "متشکرم"
+    wrong_body: "با تشکر از شما برای ارسال پاسخ."
+    correct_title: "متشکرم"
+    correct_body: "با تشکر از شما برای ارسال پاسخ."
+    toofew_title: "پاسخ های خیلی کم"
+    toofew_body: "لطفاً قبل از ارسال دو پاسخ را انتخاب کنید."
+  level_group:
+    wrong_title: "متشکرم"
+    wrong_body: "با تشکر از شما برای ارسال پاسخ."
+    correct_title: "متشکرم"
+    correct_body: "با تشکر از شما برای ارسال پاسخ."
+    hide_survey_last_answer: "این نظرسنجی ناشناس است.  لطفاً برای نتایج جمع‌آوری شده به داشبورد معلم مراجعه کنید.  توجه داشته باشید که نتایج تنها در صورتی قابل مشاهده است که حداقل پنج دانشجو نظرسنجی را ارسال کنند."
+    survey_submission_thankyou: "با تشکر از شما برای ارسال این نظرسنجی! نظرسنجی پاک شده است تا پاسخ های شما ناشناس بماند. توجه داشته باشید که معلم شما همچنان می‌تواند پاسخ‌ها را برای کل کلاس ببیند، اما بدون نام پیوست."
+  level_group-submittable:
+    wrong_title: "متشکرم"
+    wrong_body: "با تشکر از شما برای ارسال پاسخ."
+    correct_title: "متشکرم"
+    correct_body: "با تشکر از شما برای ارسال پاسخ."
+    unsubmit-title: "ارزیابی خود را ارسال نکنید"
+    unsubmit-body: "لغو ارسال ارزیابی شما، زمان و تاریخ ارسال را بازنشانی می کند.  مطمئنی؟"
+    submit-incomplete-title: "ارزیابی خود را ارسال کنید"
+    submit-incomplete-body: "چند سوال رو ناقص گذاشتی  شما نمی توانید ارزیابی خود را پس از ارسال آن ویرایش کنید.  مطمئنی؟"
+    submit-complete-title: "ارزیابی خود را ارسال کنید"
+    submit-complete-body: "شما نمی توانید ارزیابی خود را پس از ارسال آن ویرایش کنید.  مطمئنی؟"
+  level_summary:
+    correct_answer: "پاسخ صحیح"
+  match:
+    wrong_title: "راه حل نادرست"
+    wrong_body: "راه حلی که وارد کرده اید صحیح نیست.  لطفا دوباره امتحان کنید!"
+    correct_title: "صحیح"
+    correct_body: "این پاسخ صحیح است."
+  contract_match:
+    wrong_title: "پاسخ نادرست"
+    badname: "نام قرارداد شما اشتباه است."
+    badname_case: "نام توابع به حروف بزرگ و کوچک حساس هستند. سعی کنید نام قرارداد خود را تغییر دهید."
+    badrange: "محدوده قرارداد شما اشتباه است."
+    baddomainsize: "قرارداد شما دارای تعداد مناسبی از موارد در دامنه نیست."
+    baddomainname: "نام یک یا چند مورد از دامنه شما اشتباه است."
+    baddomaintype: "یک یا چند مورد از دامنه شما دارای نوع اشتباه است یا ترتیب آنها اشتباه است."
+  text_match:
+    placeholder: "پاسخ خود را اینجا وارد کنید"
+    open_response_title: "با تشکر"
+    open_response_body: "با تشکر از پاسخ شما!"
+    correct_title: "صحیح"
+    correct_body: "این پاسخ صحیح است."
+  lesson_extras:
+    bonus_level: "سطح پاداش"
+  dialog:
+    ok: "باشه"
+    startover_title: "آیا مطمئن هستید که می خواهید از نو شروع کنید؟"
+    startover_body: "با این کار سطح به حالت شروع بازنشانی می‌شود و تمام داده‌هایی که اضافه یا تغییر داده‌اید بازنشانی می‌کند."
+    startover_ok: "شروع دوباره"
+    startover_cancel: "لغو کنید"
+  time:
+    hour: '1 ساعت'
+    day: 'روز'
+    week: 'هفته'
+  age_interstitial:
+    age: سن شما
+    header: به روز رسانی اطلاعات حساب
+    warning: "ما در حال به روز رسانی تجربیات خود هستیم تا حتی حفاظت از حریم خصوصی قوی تری برای شما فراهم کنیم. برای انجام این کار، به کاربران موجود نیاز داریم که سن خود را در اینجا وارد کنند."
+    disclaimer: 'Code.org هرگز این اطلاعات را اجاره نمی دهد، نمی فروشد یا با اشخاص ثالث به اشتراک نمی گذارد.'
+    sign_out_markdown: 'اگر نمی‌خواهید سن خود را ارائه کنید، می‌توانید [از سیستم خارج شوید](%{url}).'
+  terms_interstitial:
+    title: "شرایط خدمات و سیاست حفظ حریم خصوصی به روز شده است"
+    intro_desc: "ما شرایط خدمات و خط مشی رازداری خود را همانطور که در زیر نشان داده شده است به روز کردیم. تغییرات از 24 آگوست 2016 اعمال می شود.  بزرگ‌ترین تغییر: ما <i>دیگر آدرس‌های ایمیل برای حساب‌های دانش‌آموز را در Code Studio ذخیره نمی‌کنیم.</i> این یک معامله بزرگ برای ما است و امیدواریم استاندارد جدیدی را برای حفظ حریم خصوصی دانش‌آموزان در فناوری آموزشی ایجاد کند. خلاصه ای از سایر تغییرات را از طریق ایمیل برای شما ارسال کرده ایم."
+    intro_desc_markdown: "ما شرایط خدمات و خط مشی رازداری خود را همانطور که در زیر نشان داده شده است به روز کردیم. تغییرات از 24 آگوست 2016 اعمال می شود.  بزرگ‌ترین تغییر: *دیگر آدرس‌های ایمیل برای حساب‌های دانش‌آموز را در Code Studio ذخیره نمی‌کنیم.* این یک معامله بزرگ برای ما است، و امیدواریم استاندارد جدیدی برای حفظ حریم خصوصی دانش‌آموزان در فناوری آموزشی ایجاد کند. خلاصه ای از سایر تغییرات را از طریق ایمیل برای شما ارسال کرده ایم."
+    intro_instructions: "شما باید این شرایط جدید را برای دانش‌آموزان زیر 13 سال در کلاس خود بپذیرید تا به آخرین ویژگی‌های Code Studio دسترسی کامل داشته باشید.  هنگام ثبت حساب برای دانش آموز زیر 13 سال، از شما خواسته می شود تا تأیید کنید که مدرسه شما رضایت والدین را برای جمع آوری اطلاعات شخصی دانش آموز برای استفاده و بهره مندی از مدرسه، از جمله برنامه های آموزشی مانند Code Studio دارد."
+    tos: "شرایط خدمات"
+    privacy: "سیاست حفظ حریم خصوصی"
+    privacy_notice: "اطلاعیه حفظ حریم خصوصی"
+    accept_label: 'من با <a href="%{tos_url}" target="_blank">شرایط خدمات</a> و <a href="%{privacy_url}" target="_blank">خط‌مشی رازداری</a> موافقم .'
+    accept_label_markdown: "من با [شرایط خدمات](%{tos_url}) و [خط‌مشی رازداری] (%{privacy_url}) موافق هستم."
+    accept_tos: "با ثبت‌نام در Code.org، با [شرایط خدمات](%{tos_url}) و [خط‌مشی رازداری] (%{privacy_url}) ما موافقت می‌کنید و تصدیق می‌کنید که طی چند روز آینده یک سری ایمیل‌های ورودی دریافت خواهید کرد. هفته ها"
+    accept_new_tos: "با ثبت نام در Code.org، با [شرایط خدمات] (%{tos_url}) و [خط‌مشی رازداری] (%{privacy_url}) ما موافقت می‌کنید."
+    accept: "قبول کنید"
+    print: "چاپ کنید"
+    reminder_desc: 'ما <a href="%{tos_url}" target="_blank">شرایط خدمات</a> و <a href="%{privacy_url}" target="_blank">خط‌مشی رازداری</a> خود را به‌روزرسانی کرده‌ایم . لطفاً قبل از پذیرش این موارد را با دقت بخوانید. توجه داشته باشید که ابزار آموزش جاوا اسکریپت ما ممکن است قبل از پذیرش صریح شرایط به‌روز شده برای دانش‌آموزان شما در دسترس نباشد.'
+    reminder_desc_markdown: "ما [شرایط خدمات] (%{tos_url}) و [خط‌مشی رازداری] (%{privacy_url}) خود را به‌روزرسانی کرده‌ایم. لطفاً قبل از پذیرش این موارد را با دقت بخوانید. توجه داشته باشید که ابزار آموزش جاوا اسکریپت ما ممکن است قبل از پذیرش صریح شرایط به‌روز شده برای دانش‌آموزان شما در دسترس نباشد."
+    review_terms: "شرایط به روز شده را مرور کنید"
+  school_info_interstitial:
+    title: "ما می خواهیم علوم کامپیوتر را برای هر دانش آموز بیاوریم - به ما کمک کنید پیشرفت خود را پیگیری کنیم!"
+    message: "لطفا اطلاعات مدرسه خود را در زیر وارد کنید."
+    message_with_suggestion: "لطفاً بررسی کنید که اطلاعات زیر صحیح است یا در صورت لزوم به روز رسانی کنید."
+    save: "ذخیره کنید"
+  race_interstitial:
+    title: "اختیاری: به ما کمک کنید پیشرفت خود را در جهت بهبود تنوع در علوم کامپیوتر پیگیری کنیم"
+    message: "لطفاً نژاد یا قومیت خود را به ما بگویید (همه موارد مربوط را بررسی کنید)"
+    races:
+      white: "سفید"
+      black: "سیاه پوست یا آفریقایی آمریکایی"
+      hispanic: "اسپانیایی یا لاتین"
+      asian: "آسیایی"
+      hawaiian: "بومی هاوایی یا سایر ساکنان جزایر اقیانوس آرام"
+      american_indian: "سرخپوست آمریکایی/بومی آلاسکا"
+      other: "دیگر"
+      opt_out: "ترجیح می دهم نگوییم"
+    submit: "ارسال کنید"
+    decline: "بستن"
+  zendesk_too_young_message: 'با عرض پوزش، کاربران جوانتر ممکن است وارد سایت پشتیبانی ما نشوند. می توانید <a href="http://support.code.org">support.code.org</a> را بدون ورود به سیستم مرور کنید یا از والدین یا معلم خود بخواهید که برای شما با ما تماس بگیرند.'
+  zendesk_too_young_message_markdown: 'با عرض پوزش، کاربران جوانتر ممکن است وارد سایت پشتیبانی ما نشوند. می توانید بدون ورود به سیستم [support.code.org](http://support.code.org) را مرور کنید یا از والدین یا معلم خود بخواهید که برای شما با ما تماس بگیرند.'
+  progress:
+    not_started: شروع نشده است
+    in_progress: در حال انجام است
+    completed_too_many_blocks: تکمیل شد، بلوک های زیادی وجود دارد
+    completed_perfect: تکمیل شده، کامل
+    furthest_level_attempted: دورترین سطح تلاش شده است
+    assessment: ارزیابی
+    submitted: ارائه شده است
+  studio:
+    courses_working_on: "دوره هایی که روی آنها کار می کنید"
+    completed_courses: "دوره های تکمیل شده"
+    all_courses: "همه دوره ها"
+  project:
+    projects: "پروژه ها"
+    create: "ایجاد پروژه"
+    create_a_project: 'ایجاد یک پروژه جدید:'
+    new: "ایجاد جدید"
+    exit: "بازگشت به دوره"
+    project_gallery: "پروژه ها"
+    publish: "منتشر کنید"
+    unpublish: "لغو انتشار"
+    share_title: پروژه خود را به اشتراک بگذارید
+    share_copy_link: "لینک را کپی کنید:"
+    share_embed_description: "می توانید کد جاسازی شده را در یک صفحه HTML قرار دهید تا پروژه در یک صفحه وب نمایش داده شود."
+    share_u13_warning: "قبل از اشتراک گذاری از معلم خود بپرسید. فقط با دیگران در مدرسه خود به اشتراک بگذارید."
+    embed: "جاسازی کنید"
+    advanced_share: "نمایش گزینه های پیشرفته"
+    no_projects: "شما در حال حاضر هیچ پروژه ای ندارید. برای شروع پروژه بر روی یکی از دکمه های بالا کلیک کنید."
+    name: "نام"
+    updated: "به روز شد"
+    project_type: "نوع پروژه"
+    help_text: "برای شروع یک پروژه جدید، روی <strong>ایجاد برنامه</strong> یا <strong>چیزی ترسیم کنید</strong> در زیر کلیک کنید!<br/>می‌توانید هرزمان خواستید برگردید و روی پروژه‌های خود کار کنید."
+    need_help: "این دوره ها را امتحان کنید تا به شما در شروع پروژه جدید کمک کنند"
+    thumbnail_help: "تصویر کوچک صحیح پروژه خود را نمی بینید؟ برنامه خود را اجرا کنید تا یک تصویر کوچک جدید ایجاد کنید. توجه داشته باشید که ممکن است چند ساعت طول بکشد تا تصویر کوچک در همه جا بازخوانی شود."
+    saved: "ذخیره شد"
+    not_saved: "ذخیره نشده است"
+    view_all: 'مشاهده پروژه های من'
+    edit_project: 'ویرایش پروژه'
+    sharing_disabled: "با عرض پوزش، این پروژه برای اشتراک گذاری در دسترس نیست. اگر این پروژه شما یا پروژه یکی از دانش آموزان شماست، لطفاً برای مشاهده پروژه به حساب خود <a href='https://studio.code.org/users/sign_in'>وارد شوید</a>."
+    abuse:
+      tos: "این پروژه به دلیل نقض <a href='http://code.org/tos'>شرایط خدمات</a> Code.org گزارش شده است و نمی توان آن را با دیگران به اشتراک گذاشت."
+      policy_violation: "این پروژه حاوی اطلاعاتی است که نمی توان با دیگران به اشتراک گذاشت. لطفاً با مالک برنامه تماس بگیرید تا محتویات برنامه خود را اصلاح کند."
+      contact_us: "اگر فکر می کنید این یک خطا است، لطفاً <a href='https://code.org/contact'>با ما تماس بگیرید.</a>"
+      go_to_code_studio: 'به Code Studio بروید'
+      report_abuse_form:
+        intro: 'اگر هنگام استفاده از برنامه‌های ساخته‌شده در Code Studio با محتوای توهین‌آمیز، تهدید، آزار سایبری، آزار و اذیت یا نمونه‌ای از نقض حق نسخه‌برداری برای محتوایی که متعلق به خود هستید، مواجه شده‌اید، لطفاً فرم زیر را پر کنید. ما گزارش شما را بسیار جدی خواهیم گرفت، بر اساس آن بررسی خواهیم کرد و اقدامات لازم را انجام خواهیم داد.'
+        validation:
+          email: 'لطفا یک آدرس ایمیل ارائه دهید'
+          age: 'لطفا یک سن مشخص کنید'
+          abuse_type: 'لطفاً پاسخ دهید که چگونه این محتوا شرایط خدمات را نقض می کند'
+          abuse_detail: 'لطفاً جزئیات مربوط به محتوایی را که گزارش می کنید ارائه دهید'
+          captcha: 'لطفاً CAPTCHA را برای گزارش این محتوا پر کنید.'
+        abusive_url: 'URL محتوای گزارش شده'
+        abuse_type:
+          question: 'چگونه این محتوا %{link_start}شرایط خدمات%{link_end} را نقض می‌کند؟'
+          harassment: 'تهدید، زورگویی سایبری، آزار و اذیت'
+          offensive: 'محتوای توهین آمیز'
+          infringement: 'نقض حق چاپ'
+          other: 'دیگر'
+        detail: 'لطفاً در مورد محتوایی که گزارش می کنید تا حد امکان جزئیات بیشتری ارائه دهید.'
+        acknowledge: 'با ارسال این اطلاعات، تصدیق می‌کنید که مطابق با شرایط %{link_start_privacy}خط‌مشی رازداری%{link_end} و %{link_start_tos}شرایط خدمات%{link_end} رسیدگی می‌شود.'
+  peer_review:
+    accepted:
+      name: 'پذیرفته شد'
+      description_markdown: '**بله**، این ارسال **شرایط لازم را دارد'
+    rejected:
+      name: 'رد شد'
+      description_markdown: '**خیر**، این ارسال ** شرایط لازم را ندارد'
+    escalated:
+      name: 'تشدید شد'
+      description: 'من از یک مربی می خواهم که این ارسال را بررسی کند'
+    instructor_feedback: 'بازخورد مربی'
+    peer_feedback: 'بازخورد همتایان'
+    outdated: 'این بازخورد برای نسخه ارسال شده قبلی اضافه شده است'
+    review_in_progress: 'آماده بررسی'
+    link_to_submitted_review: 'پیوند به بررسی ارسال شده'
+    reviews_unavailable: 'مرورها در حال حاضر در دسترس نیستند'
+    review_count: 'باید %{review_count} نظر را برای این واحد تکمیل کنید'
+    must_be_enrolled: 'برای بررسی همتایان باید در این دوره ثبت نام کنید'
+    no_reviews_at_this_moment_notice: 'در حال حاضر هیچ نظری وجود ندارد، لطفاً به زودی دوباره بررسی کنید'
+    review_submitted: 'بررسی همتایان شما ارسال شد'
+    review_new_submission: 'یک ارسال جدید را بررسی کنید'
+    peer_review: 'بررسی همتایان'
+  external_links:
+    disclaimer: سلب مسئولیت
+    leaving_domain: شما اکنون این دامنه را به سایتی می سپارید که توسط Code.org اداره نمی شود.
+    disclaimer_text: "این سایت ممکن است سیاست های حفظ حریم خصوصی متفاوتی با Code.org داشته باشد. ما این منابع شخص ثالث را انتخاب کرده ایم زیرا فکر می کنیم برای شما مفید خواهند بود. در حالی که ما مستقیماً مسئول محتوای این وب‌سایت نیستیم، لطفاً در صورتی که محتوا را ناپسند می‌دانید، یا اگر سایت پیوند شده دیگر در دسترس نیست، <a href='%{support_url}'>با پشتیبانی تماس بگیرید</a>."
+  hoc_download:
+    title: 'ساعت دانلود کد'
+    capsule_title: 'اینترنت داری؟'
+    capsule_desc: 'از [%{app_name}](%{url}) آنلاین و مبتنی بر وب استفاده کنید.'
+    instructions_headline: 'اینترنت ندارید؟'
+    instructions: 'دستورالعمل‌ها برای معلمان: اگر سرویس اینترنت ضعیفی دارید، این آموزش‌های Hour of Code برای دانلود و نصب برای استفاده آفلاین در دسترس هستند. زبان و پلتفرم خود را انتخاب کنید، آن را دانلود و بر روی تمام کامپیوترهای کلاس خود نصب کنید. ممکن است بخواهید از یک درایو USB برای یک بار دانلود و نصب بر روی همه رایانه ها استفاده کنید. توجه: دانش آموزان نمی توانند وارد Code Studio شوند، پیشرفت را ذخیره کنند یا گواهینامه ها را چاپ کنند. معلمان ممکن است گواهینامه ها را زودتر از موعد چاپ کنند [اینجا] (%{url}).'
+    minecraft_name: 'Minecraft Hour Of Code'
+    starwars_blocks_name: 'جنگ ستارگان: ساخت کهکشان با کد (بلوک)'
+    starwars_javascript_name: 'جنگ ستارگان: ساخت کهکشان با کد (جاوا اسکریپت)'
+    download_message: 'دانلود %{app_name} برای استفاده آفلاین (136 مگابایت)'
+    download_in_Albanian: 'دانلود به زبان آلبانیایی:'
+    download_in_Arabic: 'دانلود به زبان عربی:'
+    download_in_Azerbaijani: 'دانلود به زبان آذربایجانی:'
+    download_in_Basque: 'دانلود به زبان باسکی:'
+    download_in_Bosnian: 'دانلود به زبان بوسنیایی:'
+    download_in_Bulgarian: 'دانلود به زبان بلغاری:'
+    download_in_Catalan: 'دانلود به زبان کاتالان:'
+    download_in_Chinese-Taiwan: 'دانلود به زبان چینی تایوان:'
+    download_in_Chinese: 'دانلود به زبان چینی:'
+    download_in_Croatian: 'دانلود به زبان کرواتی:'
+    download_in_Czech: 'دانلود به زبان چک:'
+    download_in_Danish: 'دانلود به زبان دانمارکی:'
+    download_in_Dutch: 'دانلود به زبان هلندی:'
+    download_in_English: 'دانلود به زبان انگلیسی:'
+    download_in_Finnish: 'دانلود به زبان فنلاندی:'
+    download_in_French: 'دانلود به زبان فرانسه:'
+    download_in_German: 'دانلود به زبان آلمانی:'
+    download_in_Greek: 'دانلود به زبان یونانی:'
+    download_in_Hebrew: 'دانلود به زبان عبری:'
+    download_in_Hungarian: 'دانلود به زبان مجارستانی:'
+    download_in_Icelandic: 'دانلود به زبان ایسلندی:'
+    download_in_Indonesian: 'دانلود به زبان اندونزیایی:'
+    download_in_Irish: 'دانلود به زبان ایرلندی:'
+    download_in_Italian: 'دانلود به زبان ایتالیایی:'
+    download_in_Japanese: 'دانلود به زبان ژاپنی:'
+    download_in_Korean: 'دانلود به زبان کره ای:'
+    download_in_Latvian: 'دانلود به زبان لتونی:'
+    download_in_Lithuanian: 'دانلود به زبان لیتوانیایی:'
+    download_in_Norwegian: 'دانلود به زبان نروژی:'
+    download_in_Norwegian-Nynorsk: 'دانلود به زبان نروژی-نینورسک:'
+    download_in_Polish: 'دانلود به زبان لهستانی:'
+    download_in_Portuguese-Brazil: 'دانلود به زبان پرتغالی برزیل:'
+    download_in_Portuguese: 'دانلود به زبان پرتغالی:'
+    download_in_Romanian: 'دانلود به زبان رومانیایی:'
+    download_in_Russian: 'دانلود به زبان روسی:'
+    download_in_Serbian: 'دانلود به زبان صربی:'
+    download_in_Slovenian: 'دانلود به زبان اسلوونیایی:'
+    download_in_Spanish: 'دانلود به زبان اسپانیایی:'
+    download_in_Swedish: 'دانلود به زبان سوئدی:'
+    download_in_Turkish: 'دانلود به زبان ترکی:'
+    download_in_Ukrainian: 'دانلود به زبان اوکراینی:'
+    download_in_Vietnamese: 'دانلود به ویتنامی:'
+    windows: 'Windows (64-bit)'
+    mac: 'Mac OS X'
+  plc:
+    preview_assignments:
+      content_focus_header: 'منطقه تمرکز محتوا'
+      practice_focus_header: 'منطقه تمرکز تمرین'
+      content_focus_strong: 'بر اساس پاسخ های خودارزیابی شما، یک حوزه تمرکز محتوا را برای شما انتخاب کردیم.'
+      practice_focus_strong: 'بر اساس پاسخ های خودارزیابی شما، ما یک حوزه تمرکز تمرین آموزشی را برای شما انتخاب کردیم.'
+      choose_different_focus_area: 'اگر فکر می‌کنید که به شما کمک می‌کند تا برای آموزش بهتر آماده شوید، می‌توانید حوزه تمرکز متفاوتی را انتخاب کنید.'
+      other_focus_areas_available: 'مهم نیست که چه حوزه تمرکزی را انتخاب می کنید، همه منابع دیگر همچنان برای مرجع در دسترس خواهند بود.'
+      confirm_focus_areas: 'مناطق فوکوس را تأیید کنید'
+  locked_stage: 'محتویات این درس قابل مشاهده نیست زیرا این درس در حال حاضر قفل است. معلم شما می‌تواند قفل این درس را زمانی باز کند که زمان کار بر روی آن باشد یا پاسخ‌های شما را مرور کند.'
+  hidden_stage: "معلمت انتظار نداشت تو اینجا باشی. لطفاً از معلم خود بپرسید که در کدام درس باید شرکت کنید."
+  hidden_script: "معلمت انتظار نداشت تو اینجا باشی. لطفاً از معلم خود بپرسید که در کدام واحد باید باشید."
+  no_course_access_student: "شما به این دوره دسترسی ندارید لطفاً از استاد خود بپرسید که در کدام درس باید شرکت کنید."
+  no_course_access_teacher: "شما به این دوره دسترسی ندارید اگر فکر می کنید باید به این دوره دسترسی داشته باشید، لطفاً به support@code.org بنویسید تا بتوانیم وضعیت را برطرف کنیم."
+  no_script_access_student: "شما به این واحد دسترسی ندارید. لطفاً از معلم خود بپرسید که در کدام واحد باید باشید."
+  no_script_access_teacher: "شما به این واحد دسترسی ندارید. اگر فکر می کنید باید به این واحد دسترسی داشته باشید، لطفاً به support@code.org بنویسید تا بتوانیم وضعیت را برطرف کنیم."
+  no_level_access_student: "شما به این سطح دسترسی ندارید. لطفاً از معلم خود بپرسید که در کدام سطح باید باشید."
+  no_level_access_teacher: "شما به این سطح دسترسی ندارید. اگر فکر می کنید باید به این سطح دسترسی داشته باشید، لطفاً به support@code.org بنویسید تا بتوانیم وضعیت را برطرف کنیم."
+  no_exemplar: "هیچ نمونه ای برای این سطح وجود ندارد."
+  no_exemplar_access_student: "دانش آموزان نمی توانند به کد نمونه دسترسی داشته باشند. لطفاً از معلم خود بپرسید که در کدام سطح باید باشید."
+  no_exemplar_access_teacher: "فقط معلمان تأیید شده می توانند به کد نمونه دسترسی داشته باشند. اگر می خواهید یک معلم تأیید شده شوید، لطفاً به support@code.org بنویسید."
+  return_unit_overview: 'به نمای کلی واحد بروید'
+  return_course_overview: 'به نمای کلی دوره بروید'
+  view_all_units: 'مشاهده تمامی واحدها'
+  view_teacher_guide: 'مشاهده راهنمای معلم'
+  pd:
+    survey:
+      number_teachers: 'تعداد معلمان حاضر'
+      response_count: 'تعداد پاسخ های نظرسنجی'
+      facilitator_effectiveness: 'اثربخشی تسهیل کننده (از 5)'
+      teacher_engagement: 'مشارکت معلم (از 5)'
+      overall_success: 'امتیاز کلی موفقیت (از 6)'
+      how_much_learned_s: 'به طور کلی، چقدر از کارگاه خود در مورد علوم کامپیوتر یاد گرفته اید؟'
+      how_motivating_s: 'در طول کارگاه، فعالیت هایی که این برنامه انجام دادید چقدر انگیزه بخش بود؟'
+      how_clearly_presented_s: 'برای این کارگاه، مجری شما چقدر به وضوح اطلاعاتی را که باید یاد بگیرید ارائه کرد؟'
+      how_interesting_s: 'مجری شما چقدر چیزهایی را که در کارگاه یاد گرفتید جالب کرد؟'
+      how_often_given_feedback_s: 'هر چند وقت یک بار تسهیل کننده به شما بازخوردی داد که به شما در یادگیری کمک کرد؟'
+      how_comfortable_asking_questions_s: 'چقدر راحت از تسهیلگر خود درباره چیزهایی که در کارگاه او یاد می‌گرفتید می‌پرسیدید؟'
+      how_often_taught_new_things_s: "چند بار مجری شما چیزهایی را به شما یاد داد که قبل از شرکت در این کارگاه نمی دانستید؟"
+      how_much_participated_s: 'در طول کارگاه خود چقدر شرکت کردید؟'
+      how_often_talk_about_ideas_outside_s: 'وقتی در کارگاه‌های Code.org نیستید، چقدر درباره ایده‌های کارگاه‌ها صحبت می‌کنید؟'
+      how_often_lost_track_of_time_s: 'چند بار آنقدر روی فعالیت های کارگاه Code.org متمرکز شدید که زمان را از دست دادید؟'
+      how_excited_before_s: 'قبل از کارگاه، چقدر از رفتن به کارگاه Code.org خود هیجان زده بودید؟'
+      overall_how_interested_s: 'به طور کلی، چقدر به کارگاه حضوری Code.org علاقه مند بودید؟'
+      more_prepared_than_before_s: 'نسبت به قبل از آمدنم احساس آمادگی بیشتری برای آموزش مطالب مطرح شده در این کارگاه دارم.'
+      know_where_to_go_for_help_s: 'من می دانم در صورت نیاز به کمک برای آموزش این مطالب کجا باید بروم.'
+      suitable_for_my_experience_s: 'این پیشرفت حرفه ای برای سطح تجربه من با آموزش CS مناسب بود.'
+      would_recommend_s: 'من این پیشرفت حرفه ای را به دیگران توصیه می کنم.'
+      part_of_community_s: 'احساس می کنم عضوی از جامعه معلمان هستم.'
+      things_facilitator_did_well_s: 'دو کاری که مجری شما به خوبی انجام داد چه بود؟'
+      things_facilitator_could_improve_s: 'دو کاری که تسهیل گر(های) شما می توانستند بهتر انجام دهند چه بود؟'
+      things_you_liked_s: 'دو مورد از فعالیت هایی که در این کارگاه انجام دادید چه بود و چرا؟'
+      things_you_would_change_s: 'دو چیزی که در مورد فعالیت هایی که در این کارگاه انجام دادید را تغییر می دهید چیست؟'
+      anything_else_s: 'آیا چیز دیگری وجود دارد که بخواهید در مورد تجربه خود در این کارگاه به ما بگویید؟'
+    form_labels:
+      first_name: 'نام'
+      first_name_preferred: 'نام ترجیحی'
+      last_name: 'نام خانوادگی'
+      email: 'ایمیل'
+      email_alternate: 'ایمیل جایگزین'
+      gender: 'هویت جنسیتی'
+      school: 'مدرسه'
+      school_name: 'نام مدرسه'
+      school_city: 'شهر مدرسه'
+      school_city_district: 'شهر/منطقه مدرسه'
+      school_country: 'کشور مدرسه'
+      school_department_region: 'دپارتمان/منطقه مدرسه'
+      colombian_school_city: 'شهر مدرسه'
+      colombian_chilean_school_department: 'دپارتمان/منطقه مدرسه'
+      colombian_school_municipality: 'شهرداری مدرسه'
+      colombian_chilean_school_name: 'نام مدرسه'
+      chilean_school_commune: 'کمون'
+      chilean_school_id: 'شناسه مدرسه'
+      ages: 'امسال چه سنی را تدریس می کنید؟'
+      subjects: 'امسال کدام درس را تدریس می کنید؟'
+      resources: 'از کدام یک از منابع آموزشی CS زیر استفاده می کنید؟'
+      robotics: 'از کدام یک از منابع روباتیک زیر استفاده می کنید؟'
+      workshop_organizer: 'برگزار کننده کارگاه'
+      workshop_facilitator: 'مجری کارگاه'
+      workshop_course: 'دوره کارگاهی'
+      email_opt_in: 'آیا می‌توانیم درباره برنامه بین‌المللی Code.org، به‌روزرسانی‌های دوره‌های ما یا سایر اخبار علوم رایانه به شما ایمیل بزنیم؟'
+      legal_opt_in: 'با ارسال این فرم، موافقت می‌کنید که به Code.org اجازه دهید اطلاعاتی در مورد نحوه استفاده شما از Code.org و منابع یادگیری حرفه‌ای را با شرکای بین‌المللی Code.org در کشورتان به اشتراک بگذارد. اطلاعات تماس شما (مانند نام و آدرس ایمیل)، اطلاعاتی که در مورد مدرسه خود ارائه می‌دهید، دوره‌ها/واحدهایی که استفاده می‌کنید و داده‌های جمع‌آوری شده درباره این دوره‌ها (مانند تعداد دانش‌آموزانی که از هر دوره استفاده می‌کنند) را با این شرکا به اشتراک می‌گذاریم. ). ما هیچ گونه اطلاعاتی در مورد دانش آموزان فردی با شرکای خود به اشتراک نمی گذاریم: تمام اطلاعات دانش آموز شناسایی و جمع می شود. شرکای بین‌المللی و تسهیل‌کننده‌های ما طبق قرارداد موظفند با این اطلاعات با همان سطح محرمانه بودن Code.org رفتار کنند.'
+    form_entries:
+      gender:
+        male: 'مرد'
+        female: 'زن'
+        non_binary: 'غیر باینری'
+        not_listed: 'عبارت ترجیحی فهرست نشده است'
+        none: 'ترجیح می دهید پاسخ ندهید'
+      school_country:
+        antigua_and_barbuda: 'آنتیگوا و باربودا'
+        australia: 'استرالیا'
+        barbados: 'باربادوس'
+        belize: 'بلیز'
+        botswana: 'بوتسوانا'
+        brazil: 'برزیل'
+        cambodia: 'کامبوج'
+        canada: 'کانادا'
+        chile: 'شیلی'
+        colombia: 'کلمبیا'
+        dominican_republic: 'جمهوری دومینیکن'
+        ecuador: 'اکوادور'
+        egypt: 'مصر'
+        india: 'هندوستان'
+        indonesia: 'اندونزی'
+        israel: 'اسرائیل'
+        italy: 'ایتالیا'
+        jamaica: 'جامائیکا'
+        kenya: 'کنیا'
+        kosovo: 'کوزوو'
+        malaysia: 'مالزی'
+        maldives: 'مالدیو'
+        malta: 'مالت'
+        mexico: 'مکزیک'
+        mongolia: 'مغولستان'
+        new_zealand: 'نیوزلند'
+        paraguay: 'پاراگوئه'
+        peru: 'پرو'
+        philippines: 'فیلیپین'
+        portugal: 'پرتغال'
+        puerto_rico: 'پورتوریکو'
+        romania: 'رومانی'
+        slovakia: 'اسلواکی'
+        south_africa: 'آفریقای جنوبی'
+        south_korea: 'کره جنوبی'
+        spain: 'اسپانیا'
+        sri_lanka: 'سریلانکا'
+        thailand: 'تایلند'
+        trinidad_and_tobago: 'ترینیداد و توباگو'
+        uruguay: 'اروگوئه'
+        uzbekistan: 'ازبکستان'
+        vietnam: 'ویتنام'
+      ages:
+        ages_under_6: '< 6 ساله'
+        ages_7_8: '7-8 ساله'
+        ages_9_10: '9-10 ساله'
+        ages_11_12: '11-12 ساله'
+        ages_13_14: '13-14 ساله'
+        ages_15_16: '15-16 ساله'
+        ages_17_18: '17-18 ساله'
+        ages_19_over: '19+ سال'
+      subjects:
+        cs: 'علوم کامپیوتر'
+        ict: 'ICT'
+        math: 'ریاضی'
+        science: 'علم'
+        history: 'تاریخ / مطالعات اجتماعی'
+        la: 'هنرهای زبان'
+        efl: 'انگلیسی به عنوان یک زبان خارجی'
+        music: 'موسیقی'
+        art: 'هنر'
+        other: "دیگر"
+        na: 'قابل اجرا نیست'
+      resources:
+        bootstrap: 'بوت استرپ'
+        codecademy: 'CodeCademy'
+        csfirst: 'Google CS اول'
+        khan: 'آکادمی خان'
+        kodable: 'کد پذیر'
+        lightbot: 'لایت بات'
+        scratch: 'خراش'
+        tynker: 'تینکر'
+        other: "دیگر"
+        na: 'قابل اجرا نیست'
+      robotics:
+        grok: 'گروک یادگیری'
+        kodable: 'کد پذیر'
+        lego: 'آموزش لگو'
+        microbit: 'میکروبیت'
+        ozobot: 'Ozobot'
+        sphero: 'کروی'
+        raspberry: 'رزبری پای'
+        wonder: 'کارگاه شگفت انگیز'
+        other: "دیگر"
+        na: 'قابل اجرا نیست'
+      workshop_course:
+        csf_af: 'اصول CS (دوره های AF)'
+        csf_express: 'CS Fundamentals (Pre-Express یا Express)'
+        csd: 'اکتشافات CS'
+        csp: 'اصول CS'
+        csa: 'CS A'
+        other: 'دیگر'
+        not_applicable: "قابل اجرا نیست"
+      email_opt_in:
+        opt_in_yes: 'بله'
+        opt_in_no: 'خیر'
+    international_opt_in:
+      title: 'حضور در کارگاه'
+      intro: "از اینکه برای آموزش برنامه درسی Code.org وقت گذاشتید متشکریم. ماموریت ما برای ارائه فرصت های آموزش علوم کامپیوتر به همه کودکان در تمام مدارس در سراسر جهان بدون شما امکان پذیر نخواهد بود."
+      instructions: "لطفاً فرم زیر را پر کنید تا نشان دهید که 1) در یک کارگاه آموزشی که توسط یکی از شرکای بین المللی Code.org برگزار می شود شرکت کرده اید، و 2) موافقت می کنید که اطلاعات خود را با شریک بین المللی ما در کشور خود به اشتراک بگذارید تا آنها بتوانند در حمایت از شما کمک کنند. سفر به عنوان معلم علوم کامپیوتر"
+      thanks_markdown: "با تشکر از شما برای ارسال! ما مشتاقانه منتظر حمایت شما هستیم تا با برنامه درسی و ابزار Code.org آشنا شوید. لطفاً با نوشتن برای ما در [support@code.org](%{support_email_url}) یا با ارسال پست در [تالار گفتمان معلمان] (%{teacher_forum_url}) سوالات و بازخورد خود را با ما به اشتراک بگذارید!"
+      facilitator_not_listed: "تسهیل کننده من در لیست نیست"
+      facilitator_not_applicable: "قابل اجرا نیست"
+      organizer_not_listed: "سازمان دهنده من در لیست نیست"
+    logged_out:
+      heading: 'از علاقه شما به برنامه آموزش حرفه ای متشکریم!'
+      body: 'برای شروع، ابتدا باید به حساب Code.org خود وارد شوید. اگر می‌خواهید قبل از شروع برنامه، اطلاعات بیشتری درباره برنامه داشته باشید، لطفاً <a href="%{url}">نمای کلی برنامه یادگیری حرفه‌ای</a> را بررسی کنید.'
+    not_teacher:
+      body_markdown: 'از علاقه شما به برنامه آموزش حرفه ای Code.org متشکریم! شما در حال حاضر به یک حساب دانشجویی وارد شده اید. لطفاً یک حساب معلم ایجاد کنید یا [به تنظیمات کاربر خود بروید](%{user_settings}) تا حساب خود را از دانش آموز به معلم ارتقا دهید.'
+      more_markdown: 'اگر می‌خواهید قبل از شروع برنامه‌تان اطلاعات بیشتری درباره برنامه داشته باشید، لطفاً [نمایش کلی برنامه یادگیری حرفه‌ای] (%{pl_overview}) را بررسی کنید.'
+    no_teacher_email:
+      body_markdown: 'حساب شما آدرس ایمیل ندارد. لطفاً [به تنظیمات حساب خود مراجعه کنید](%{user_registration}) تا قبل از تکمیل این فرم آدرس ایمیل خود را اضافه کنید.'
+  courses_category: 'دوره های کامل'
+  course_offering:
+    headers:
+      favorites: 'موارد دلخواه'
+      labs_and_skills: 'آزمایشگاه ها و مهارت ها'
+      minecraft: 'ماین کرافت'
+      hello_world: 'سلام دنیا'
+      popular_media: 'رسانه محبوب'
+      sports: 'ورزش'
+      express: 'اکسپرس'
+      csf: 'اصول CS'
+      csc: 'اتصالات CS'
+      year_long: 'سال طولانی'
+      csa_labs: 'آزمایشگاه های CSA'
+      self_paced: 'خود گام'
+      teacher_led: 'معلم به رهبری'
+      collections: 'مجموعه ها'
+      workshops_k5: 'کارگاه های آموزشی K-5'
+      summer_workshops_612: '6-12 کارگاه تابستانی'
+      virtual_academic_year_workshops_612: '6-12 کارگاه مجازی سال تحصیلی'
+      unsupported: 'پشتیبانی نمی شود'
+  cookie_banner:
+    message: 'با ادامه مرور سایت ما یا کلیک کردن روی "موافقم"، با ذخیره کوکی ها در رایانه یا دستگاه خود موافقت می کنید.'
+    more_information: "به سیاست حفظ حریم خصوصی Code.org مراجعه کنید."
+    accept: 'موافقم'
+  page_not_found_title: "صفحه یافت نشد"
+  page_not_found_header: '404: صفحه یافت نشد'
+  page_not_found_description: "صفحه مورد نظر شما در این آدرس وجود ندارد. آدرس وب را بررسی کنید و دوباره ارسال کنید. یا به صفحه اصلی ما برگردید."
+  page_not_found_button: "به خانه برگرد"
+  copy: 'کپی کنید'
+  confirm: 'تایید کنید'
+  maker:
+    google_oauth:
+      login_with_google: 'با Google وارد برنامه Maker App شوید'
+      enter_code: 'لطفاً کد ارائه شده را هنگام ورود از طریق Google در مرورگر پیش فرض خود وارد کنید.'
+      copy_code: 'لطفاً برای ورود به Code.org این کد را کپی و در Maker App قرار دهید.'
+      error_token_expired: 'توکن منقضی شده است. لطفاً برای یک توکن جدید دوباره وارد شوید.'
+      error_wrong_provider: 'ارائه دهنده اشتباه لطفا مطمئن شوید که با گوگل وارد شده اید.'
+      error_invalid_user: 'شناسه کاربری نامعتبر است. لطفاً دوباره وارد سیستم شوید.'
+      error_no_code: 'لطفا کد ورود خود را وارد کنید'
+      confirm_login: 'برای ورود با حساب Google خود، "تأیید" را انتخاب کنید.'
+    setup_page_title: 'تنظیم ساز'
+  parent_email_banner:
+    text: "**آیا شما والدین یا قیم هستید؟** ایمیل خود را به این حساب پیوند دهید تا از پیشرفت ها و پروژه های فرزندتان مطلع شوید!"
+    link_your_email: "ایمیل خود را پیوند دهید"
+    not_now: "الان نه"
+  behaviors:
+    this_sprite: "این جن"
+  unit_prefix: "واحد %{n}"
+  code_org_logo_alt: "Code.org صفحه اصلی"
+  teacher_feedback: "بازخورد معلم"
+  lesson_lock:
+    error:
+      no_updates: "به روز رسانی برای انجام وجود ندارد"
+      missing_params: "باید شناسه کاربر، سطح و واحد ارائه شود"
+      cannot_view_locked_answers: "در حالت قفل نمی توان پاسخ ها را مشاهده کرد"
+      forbidden: "کاربر نمی تواند وضعیت قفل شدن دانش آموز را به روز کند"
+  reset_predict_progress_button: "حذف پاسخ"
+  pixelation:
+    raw_format: "فرمت خام"
+    raw_format_alt: "مشاهده بیت ها بدون هیچ گونه قالب بندی"
+    readable_format: "فرمت قابل خواندن"
+    readable_format_alt: "مشاهده بیت های جدا شده با پیکسل"
+    save_image: "ذخیره تصویر"
+    actual_size: "اندازه واقعی"
+    image_file_format_header: "فرمت فایل تصویری"
+    image_file_format_width: "عرض: 1 بایت"
+    image_file_format_height: "قد: 1 بایت"
+    image_file_format_bits_per_pixel: "بیت در هر پیکسل: 1 بایت"
+    image_file_format_data_a: "n بیت داده پیکسل"
+    image_file_format_data_b: "n = عرض * ارتفاع * بیت در هر پیکسل"
+    image_width: "عرض تصویر"
+    image_height: "ارتفاع تصویر"
+    bits_per_pixel_header: "بیت در هر پیکسل"
+    binary: "باینری"
+    hexadecimal: "هگزادسیمال"
+    pixel_format_header: "فرمت پیکسل"
+  course_deprecated:
+    title: "سر بالا! این %{path_type} دیگر در دسترس نیست، اما Code.org گزینه‌های جدیدتری برای شما در دسترس است."
+    curriculum: "برنامه درسی"
+    project_type: "نوع پروژه"
+    button: "مشاهده دوره های جایگزین"
+    projects_button: "به پروژه ها بروید"
+  hoc_tutorial_email_subject: "با آموزش Code.org ساعت کد را تکان دهید!"
+  hoc_tutorial_email_content:
+    dear_teacher: "%{teacher_name} عزیز،"
+    intro_step_by_step_guide: "ما بسیار هیجان زده هستیم که شما با استفاده از فعالیت ها و آموزش های رایگان Code.org یک رویداد Hour of Code برگزار می کنید! ما مفتخریم که مربیانی مانند شما دانش آموزان را با دنیای هیجان انگیز کدنویسی آشنا می کنند. در اینجا یک راهنمای گام به گام برای اطمینان از موفقیت آمیز رویداد Hour of Code آورده شده است:"
+    sign_up_step: "**ثبت نام** (اختیاری... اما عالی!): یک حساب رایگان Code.org برای دسترسی به داشبورد شخصی ایجاد کنید تا بتوانید ساعت کد کلاس درس خود را مدیریت کنید! [اینجا ثبت نام کنید](%{url})."
+    create_classroom_section: "**یک بخش کلاس درس ایجاد کنید** (همچنین اختیاری... اما فوق العاده مفید!): ایجاد یک بخش کلاس به شما امکان می دهد پیشرفت دانش آموزان خود را ردیابی کنید، کار آنها را مشاهده کنید و حتی بازخورد آنها را ارسال کنید! [بخش خود را در اینجا تنظیم کنید](%{section_setup_url}). و برای همه تازه‌کارهای ما، در اینجا یک [راهنمای مفید] (%{guide_url}) برای کمک به شما وجود دارد!"
+    pick_perfect_activity: "**فعالیت کامل را انتخاب کنید**: [بهترین آموزش ساعت کد را انتخاب کنید](%{url}) برای رویداد خود. گزینه ها را بررسی کنید و آموزش انتخابی خود را به بخش خود اختصاص دهید تا دانش آموزان شما دقیقا بدانند از کجا شروع کنند."
+    plan_like_pro: "**مثل یک حرفه ای برنامه ریزی کنید**: بسیاری از آموزش‌های ما با [طرح درس] (%{lesson_plan_url}) ارائه می‌شوند. این مانند یک دستور العمل مخفی برای موفقیت است! قبل از رویداد بزرگ، برنامه درسی خود را بررسی کنید."
+    let_fun_begin: "**اجازه دهید سرگرمی شروع شود!**: با هدایت طرح درس، سفر خود را به دنیای کدنویسی آغاز کنید. به یاد داشته باشید: نیازی نیست همه پاسخ ها را داشته باشید! اشتیاق شما و کنجکاوی مشترک با دانش آموزانتان به همه کمک می کند تا با هم یاد بگیرند."
+    hip_hip_hooray: "**هیپ، هیپ، هورا!**: وقتی ساعت به پایان رسید، بیایید از آن کدنویسان جوان باهوش تجلیل کنیم. گواهی ها، برچسب ها یا حتی یک دور تشویق - همه اینها مهم است. [گواهینامه های قابل چاپ] ما را در اینجا بیابید (%{url})."
+    more_adventures_await: "**ماجراهای بیشتری در انتظار شماست**: آیا کدنویس جدیدی را که تشنه اطلاعات بیشتر هستند، مشاهده کردید؟ آنها را با برنامه های درسی علوم کامپیوتر بیشتری در Code.org معرفی کنید!"
+    explore_course: "گنجینه دوره های رایگان ما را کاوش کنید"
+    learn_about_ai: "با هوش مصنوعی آشنا شوید"
+    thank_you: "از شما برای حمایت از آموزش علوم کامپیوتر سپاسگزاریم. تیم ما برای شما و دانش آموزانتان یک ساعت رمز فراموش نشدنی آرزو می کند!"
+    founder: "موسس، Code.org"
+    your_friends: "دوستان شما در Code.org"
+  lti:
+    account_linking:
+      account_not_found: "حساب پیدا نشد"
+      admin_not_allowed: "ادمین ها نمی توانند حساب های LTI را پیوند دهند"
+      connect_button: "ارتباط با %{provider}"
+      connect_with: "ارتباط با..."
+      connect_with_email: "با ورود به سیستم شخصی ارتباط برقرار کنید"
+      backend_error: "اوه! هنگام تلاش برای پیوند دادن حساب شما با خطایی مواجه شدیم. لطفاً سعی کنید Code.org را دوباره از LMS خود راه اندازی کنید."
+      go_back: "به عقب برگرد"
+      invalid_credentials: "اعتبارنامه نامعتبر است"
+      linking_page_header: "حساب %{provider} خود را به حساب Code.org موجود خود پیوند دهید"
+      linking_page_description: "روش ورود به سیستم را که معمولاً برای دسترسی به Code.org استفاده می کنید، انتخاب کنید"
+      sign_in_and_connect: "وارد شوید و متصل شوید"
+      successfully_linked: "شما با موفقیت حساب Code.org خود را پیوند دادید!"
+      successfully_unlinked: "شما با موفقیت حساب Code.org خود را لغو کردید."
+    create_integration_success: "ادغام LTI شما با موفقیت ایجاد شد"
+    dynamic_registration_title: "Code.org ثبت نام پویا"
+    error:
+      integration_exists: "یکپارچه سازی Lti از قبل برای این شناسه مشتری وجود دارد"
+      missing_params: "پارامتر(های) مورد نیاز: School/District name, Client ID, LMS, Email"
+      missing_email: "ایمیل مورد نیاز است"
+      unsupported_lms_type: "نوع پلت فرم LMS پشتیبانی نشده"
+      unsupported_message_type: نوع پیام LTI پشتیبانی نشده است
+      unsupported_message_type_desc: |
+        متاسفم! به نظر می‌رسد که می‌خواهید یکپارچه‌سازی Code.org را از طریق %{message_type} راه‌اندازی کنید.
+        این در حال حاضر پشتیبانی نمی شود.
+        لطفاً سعی کنید Code.org را دوباره از یک [روش پشتیبانی شده] (%{supported_methods_url}) راه اندازی کنید.
+      missing_tool_config: 'پیکربندی ابزار LTI شما فیلد "%{field}" لازم را ندارد'
+    iframe_title: "باز کردن Code.org در برگه جدید"
+    sign_up:
+      warning1:
+        "به نظر می رسد شما از یکپارچه سازی Code.org برای %{provider} استفاده می کنید! **با استفاده از ایمیل زیر یک حساب کاربری جدید برای شما ایجاد می کند. برای دسترسی مجدد به این حساب جدید، **حتماً از طریق ادغام %{provider} وارد شوید**!"
+      warning2:
+        اگر یک حساب موجود با این ایمیل دارید (مثلاً حساب Google، هوشمند یا شخصی)، **می توانید از طریق آن روش ها به ورود به حساب موجود خود ادامه دهید**.
+    integration:
+      client_id: "شناسه مشتری LMS"
+      email: "ایمیل شما"
+      name: "نام مدرسه یا منطقه"
+      navigate_home: "بازگشت به Code.org"
+      navigate_registration: "بازگشت به ثبت نام"
+      lms_selector: "از چه LMS استفاده می کنید؟"
+      exists_body: "به نظر می رسد LMS شما از قبل در سیستم ما است. شما باید بتوانید به نصب و استفاده از ادغام LTI ما ادامه دهید."
+      exists_error: "امکان ایجاد ثبت نام وجود ندارد: یکپارچه سازی ابزار LTI در حال حاضر در سیستم ما وجود دارد."
+      exists_header: "به نظر می رسد شما قبلا ثبت نام کرده اید!"
+      form_header: "LMS خود را با Code.org ثبت کنید"
+      form_instructions: "لطفاً از این فرم برای ثبت سیستم مدیریت یادگیری (LMS) خود در Code.org استفاده کنید. این به شما امکان می دهد ادغام LTI ما را روی LMS خود نصب کنید."
+      form_instructions_2: "راهنمای کامل برای به دست آوردن شناسه مشتری LMS، با استفاده از ادغام های LMS/LTI، و لیست ما از سیستم های مدیریت یادگیری پشتیبانی شده [در اینجا قابل مشاهده است](%{install_instructions})."
+      form_instructions_3: "LMS خود را در لیست ما نمی بینید یا در نصب خود با مشکل مواجه می شوید؟ برای راهنمایی بیشتر، [راهنماهای] (%{lms_guides})، یا [با ما تماس بگیرید] (%{contact_us}) ما را بررسی کنید"
+      guide_instructions: "راهنماهای کامل نصب و ادغام LTI ما [در اینجا قابل مشاهده است](%{lms_guides}). درگیر مسائل؟ برای پشتیبانی بیشتر می توانید [با ما تماس بگیرید](%{contact_us})."
+      mailer_confirmation_subject: "Code.org درخواست ثبت نام LMS شما را تکمیل کرده است"
+      mailer_confirmation_body: "خبر عالی! ما LMS شما را در Code.org ثبت کرده ایم. اکنون باید بتوانید از ادغام های Code.org LMS ما استفاده کنید. لطفاً [راهنماهای ادغام LMS] (%{integration_guide_url}) را مرور و به اشتراک بگذارید، یا [پیشنهادهای دوره] ما را مرور کنید (%{course_offering_url})."
+      mailer_confirmation_signature: "متشکرم، و خوش آمدید!"
+      privacy_policy: "حریم خصوصی شما برای ما بسیار مهم است. اطلاعات شخصی شما برای اهداف بازاریابی استفاده نخواهد شد. لطفاً برای اطلاعات بیشتر به [خط‌مشی رازداری اینجا] (%{privacy_policy}) ما مراجعه کنید."
+      success_body: "خبر عالی! LMS شما در Code.org ثبت شده است و می توانید به نصب و استفاده از یکپارچه سازی LMS خود ادامه دهید. به زودی باید یک ایمیل تأیید دریافت کنید."
+      success_header: "از اینکه LMS خود را ثبت کردید متشکریم!"
+      register: "ثبت LMS"
+    upgrade_to_teacher_account:
+      error:
+        missing_email: "عدم وجود پارامتر مورد نیاز: ایمیل"
+  certificates:
+    alt_text_with_name: "گواهی برای %{student_name} برای اتمام %{course_name}"
+    alt_text_no_name: "گواهی پایان %{course_name}"
+    one_hour_of_code: "یک ساعت کد"
+  child_account:
+    parental_permission_request:
+      errors:
+        already_granted: اجازه والدین قبلاً داده شده است
+        daily_limit_reached: به سقف درخواست روزانه رسیده است
+        invalid_parent_email: آدرس ایمیل والدین/سرپرست نامعتبر است
+        parent_email_is_own: درخواستی را نمی توان به آدرس ایمیل خود ارسال کرد
+        resend_limit_reached: حداکثر درخواست ارسال مجدد رسیده است
+  not_applicable_abbreviation: "N/A"
+  global_edition:
+    regions:
+      fa: فارسی
