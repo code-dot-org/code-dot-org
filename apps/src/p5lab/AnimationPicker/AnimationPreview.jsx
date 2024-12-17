@@ -193,7 +193,7 @@ export default class AnimationPreview extends React.Component {
       /*
         The behavior managed by the onMouseOver and onMouseOut handlers is replicated on focus and blur
         in the componentDidUpdate lifecycle method for accessibility purposes.
-        This div is never actually focused, so using native onFocus and onBlur handlers is . 
+        This div is never actually focused, so using native onFocus and onBlur handlers doesn't work without substantial changes. 
         We include no-op onFocus and onBlur handlers to suppress a11y linter errors.
       */
       <div
