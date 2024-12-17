@@ -1,0 +1,3091 @@
+---
+en:
+  data:
+    blocks:
+      AmysBlocks_addTarget:
+        text: " "
+        options:
+          OPT:
+            '"follows"': ""
+            '"avoids"': ""
+      AmysBlocks_goldilocks:
+        text: |
+           
+        options:
+          CONDITION:
+            '"too much"': ""
+            '"just right"': ""
+            '"too little"': ""
+      AmysBlocks_goldilocksElse:
+        text: |+
+           
+          
+          
+      AmysBlocks_makeNumSprites:
+        text: ""
+      AmysBlocks_playerBehaviors:
+        text: ""
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): ""
+      AmysBlocks_setPromptWithChoices:
+        text: ""
+      AmysBlocks_spriteSayVar:
+        text: ""
+      BadGuys_makeNewBadGuysSprite:
+        text: ""
+      BadGuys_setSizeAll_dropdown:
+        text: ""
+        options:
+          SIZE:
+            '0.50': ""
+            '0.75': ""
+            '1.00': ""
+            '2.00': ""
+            '3.00': ""
+      BadGuys_setSize_dropdown:
+        text: ""
+        options:
+          SIZE:
+            '0.50': ""
+            '0.75': ""
+            '1.00': ""
+            '2.00': ""
+            '3.00': ""
+      Dancelab_ai:
+        text: ""
+      Dancelab_alternateMoves:
+        text: " \n"
+        options:
+          GROUP:
+            sprites: ""
+            '"ALIEN"': ""
+            '"BEAR"': ""
+            '"CAT"': ""
+            '"DOG"': ""
+            '"DUCK"': ""
+            '"FROG"': ""
+            '"MOOSE"': ""
+            '"PINEAPPLE"': ""
+            '"ROBOT"': ""
+            '"SHARK"': ""
+            '"SLOTH"': ""
+            '"UNICORN"': ""
+          MOVE1:
+            MOVES.Roll: ""
+            MOVES.ClapHigh: ""
+            MOVES.Dab: ""
+            MOVES.DoubleJam: ""
+            MOVES.Drop: ""
+            MOVES.Floss: ""
+            MOVES.Fresh: ""
+            MOVES.Clown: ""
+            MOVES.Kick: ""
+            MOVES.ThisOrThat: ""
+            MOVES.Thriller: ""
+            MOVES.Rest: ""
+          MOVE2:
+            MOVES.Roll: ""
+            MOVES.ClapHigh: ""
+            MOVES.Dab: ""
+            MOVES.DoubleJam: ""
+            MOVES.Drop: ""
+            MOVES.Floss: ""
+            MOVES.Fresh: ""
+            MOVES.Clown: ""
+            MOVES.Kick: ""
+            MOVES.ThisOrThat: ""
+            MOVES.Thriller: ""
+            MOVES.Rest: ""
+      Dancelab_atTimestamp:
+        text: ""
+        options:
+          UNIT:
+            '"measures"': ""
+            '"seconds"': ""
+      Dancelab_atTimestampNotAfter:
+        text: ""
+        options:
+          UNIT:
+            '"measures"': ""
+            '"seconds"': ""
+      Dancelab_changeColorBy:
+        text: ""
+        options:
+          METHOD:
+            '"hue"': ""
+            '"saturation"': ""
+            '"brightness"': ""
+      Dancelab_changeMoveEachLR:
+        text: ""
+        options:
+          GROUP:
+            sprites: ""
+            '"ALIEN"': ""
+            '"BEAR"': ""
+            '"CAT"': ""
+            '"DOG"': ""
+            '"DUCK"': ""
+            '"FROG"': ""
+            '"MOOSE"': ""
+            '"PINEAPPLE"': ""
+            '"ROBOT"': ""
+            '"SHARK"': ""
+            '"SLOTH"': ""
+            '"UNICORN"': ""
+          MOVE:
+            '"next"': ""
+            '"prev"': ""
+            '"rand"': ""
+            MOVES.Roll: ""
+            MOVES.ClapHigh: ""
+            MOVES.Dab: ""
+            MOVES.DoubleJam: ""
+            MOVES.Drop: ""
+            MOVES.Floss: ""
+            MOVES.Fresh: ""
+            MOVES.Clown: ""
+            MOVES.Kick: ""
+            MOVES.ThisOrThat: ""
+            MOVES.Thriller: ""
+            MOVES.Rest: ""
+          DIR:
+            '1': ""
+            "-1": ""
+      Dancelab_changeMoveEachLR_slothcat:
+        text: ""
+        options:
+          GROUP:
+            '"CAT"': ""
+            '"SLOTH"': ""
+          MOVE:
+            MOVES.Roll: ""
+            MOVES.ClapHigh: ""
+            MOVES.Dab: ""
+            MOVES.DoubleJam: ""
+            MOVES.Drop: ""
+            MOVES.Floss: ""
+            MOVES.Fresh: ""
+            MOVES.Clown: ""
+            MOVES.Kick: ""
+            MOVES.ThisOrThat: ""
+            MOVES.Thriller: ""
+            MOVES.Rest: ""
+            '"next"': ""
+            '"prev"': ""
+            '"rand"': ""
+          DIR:
+            '1': ""
+            "-1": ""
+      Dancelab_changeMoveLR:
+        text: ""
+        options:
+          MOVE:
+            '"next"': ""
+            '"prev"': ""
+            '"rand"': ""
+            MOVES.Roll: ""
+            MOVES.ClapHigh: ""
+            MOVES.Dab: ""
+            MOVES.DoubleJam: ""
+            MOVES.Drop: ""
+            MOVES.Floss: ""
+            MOVES.Fresh: ""
+            MOVES.Clown: ""
+            MOVES.Kick: ""
+            MOVES.ThisOrThat: ""
+            MOVES.Thriller: ""
+            MOVES.Rest: ""
+          DIR:
+            '1': ""
+            "-1": ""
+      Dancelab_changePropBy:
+        text: ""
+        options:
+          PROPERTY:
+            '"scale"': ""
+            '"width"': ""
+            '"height"': ""
+            '"rotation"': ""
+            '"x"': ""
+            '"y"': ""
+      Dancelab_changePropEachBy:
+        text: ""
+        options:
+          GROUP:
+            sprites: ""
+            '"ALIEN"': ""
+            '"BEAR"': ""
+            '"CAT"': ""
+            '"DOG"': ""
+            '"DUCK"': ""
+            '"FROG"': ""
+            '"MOOSE"': ""
+            '"PINEAPPLE"': ""
+            '"ROBOT"': ""
+            '"SHARK"': ""
+            '"SLOTH"': ""
+            '"UNICORN"': ""
+          PROPERTY:
+            '"scale"': ""
+            '"width"': ""
+            '"height"': ""
+            '"rotation"': ""
+            '"x"': ""
+            '"y"': ""
+      Dancelab_doMoveEachLR:
+        text: ""
+        options:
+          GROUP:
+            sprites: ""
+            '"ALIEN"': ""
+            '"BEAR"': ""
+            '"CAT"': ""
+            '"DOG"': ""
+            '"DUCK"': ""
+            '"FROG"': ""
+            '"MOOSE"': ""
+            '"PINEAPPLE"': ""
+            '"ROBOT"': ""
+            '"SHARK"': ""
+            '"SLOTH"': ""
+            '"UNICORN"': ""
+          MOVE:
+            '"rand"': ""
+            MOVES.XBend: ""
+            MOVES.Roll: ""
+            MOVES.XClapSide: ""
+            MOVES.ClapHigh: ""
+            MOVES.Dab: ""
+            MOVES.XFever: ""
+            MOVES.DoubleJam: ""
+            MOVES.Drop: ""
+            MOVES.Floss: ""
+            MOVES.Fresh: ""
+            MOVES.Clown: ""
+            MOVES.XHeadHips: ""
+            MOVES.XHop: ""
+            MOVES.XHighKick: ""
+            MOVES.XKnee: ""
+            MOVES.XKneel: ""
+            MOVES.XOle: ""
+            MOVES.XArmsSide: ""
+            MOVES.XSlide: ""
+            MOVES.Kick: ""
+            MOVES.XArmsUp: ""
+            MOVES.ThisOrThat: ""
+            MOVES.Thriller: ""
+            MOVES.Rest: ""
+          DIR:
+            '1': ""
+            "-1": ""
+      Dancelab_doMoveLR:
+        text: ""
+        options:
+          MOVE:
+            '"rand"': ""
+            MOVES.XBend: ""
+            MOVES.Roll: ""
+            MOVES.XClapSide: ""
+            MOVES.ClapHigh: ""
+            MOVES.Dab: ""
+            MOVES.XFever: ""
+            MOVES.DoubleJam: ""
+            MOVES.Drop: ""
+            MOVES.Floss: ""
+            MOVES.Fresh: ""
+            MOVES.Clown: ""
+            MOVES.XHeadHips: ""
+            MOVES.XHop: ""
+            MOVES.XHighKick: ""
+            MOVES.XKnee: ""
+            MOVES.XKneel: ""
+            MOVES.XOle: ""
+            MOVES.XArmsSide: ""
+            MOVES.XSlide: ""
+            MOVES.Kick: ""
+            MOVES.XArmsUp: ""
+            MOVES.ThisOrThat: ""
+            MOVES.Thriller: ""
+            MOVES.Rest: ""
+          DIR:
+            '1': ""
+            "-1": ""
+      Dancelab_eval:
+        text: ""
+      Dancelab_everySeconds:
+        text: ' '
+        options:
+          UNIT:
+            '"measures"': ""
+            '"seconds"': ""
+      Dancelab_everyVerseChorus:
+        text: ' '
+        options:
+          UNIT:
+            '"verse"': ""
+            '"chorus"': ""
+      Dancelab_getEnergy:
+        text: ""
+        options:
+          RANGE:
+            '"low"': ""
+            '"mid"': ""
+            '"high"': ""
+      Dancelab_getProp:
+        text: ""
+        options:
+          PROPERTY:
+            '"scale"': ""
+            '"width"': ""
+            '"height"': ""
+            '"rotation"': ""
+            '"x"': ""
+            '"y"': ""
+            '"tint"': ""
+      Dancelab_getTime:
+        text: ""
+        options:
+          UNIT:
+            '"measures"': ""
+            '"seconds"': ""
+      Dancelab_ifDanceIs:
+        text: |-
+          
+           
+        options:
+          DANCE:
+            MOVES.ClapHigh: ""
+            MOVES.Clown: ""
+            MOVES.Dab: ""
+            MOVES.DoubleJam: ""
+            MOVES.Drop: ""
+            MOVES.Floss: ""
+            MOVES.Fresh: ""
+            MOVES.Roll: ""
+            MOVES.Kick: ""
+            MOVES.ThisOrThat: ""
+            MOVES.Thriller: ""
+            MOVES.Rest: ""
+      Dancelab_ifTime:
+        text: |-
+          
+           
+        options:
+          UNIT:
+            '"measures"': ""
+            '"seconds"': ""
+          OP:
+            '">"': ""
+            '"<"': ""
+            '"="': ""
+      Dancelab_jumpTo:
+        text: ""
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": ""
+            "{x: 200, y: 300}": ""
+            "{x: 100, y: 200}": ""
+            "{x: 300, y: 200}": ""
+            "{x: 200, y: 200}": ""
+            "{x: 100, y: 100}": ""
+            "{x: 300, y: 100}": ""
+            "{x: 100, y: 300}": ""
+            "{x: 300, y: 300}": ""
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ""
+      Dancelab_jumpToEach:
+        text: ""
+        options:
+          GROUP:
+            sprites: ""
+            '"ALIEN"': ""
+            '"BEAR"': ""
+            '"CAT"': ""
+            '"DOG"': ""
+            '"DUCK"': ""
+            '"FROG"': ""
+            '"MOOSE"': ""
+            '"PINEAPPLE"': ""
+            '"ROBOT"': ""
+            '"SHARK"': ""
+            '"SLOTH"': ""
+            '"UNICORN"': ""
+          LOCATION:
+            "{x: 200, y: 100}": ""
+            "{x: 200, y: 300}": ""
+            "{x: 100, y: 200}": ""
+            "{x: 300, y: 200}": ""
+            "{x: 200, y: 200}": ""
+            "{x: 100, y: 100}": ""
+            "{x: 300, y: 100}": ""
+            "{x: 100, y: 300}": ""
+            "{x: 300, y: 300}": ""
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": ""
+      Dancelab_layoutSprites:
+        text: ""
+        options:
+          GROUP:
+            sprites: ""
+            '"ALIEN"': ""
+            '"BEAR"': ""
+            '"CAT"': ""
+            '"DOG"': ""
+            '"DUCK"': ""
+            '"FROG"': ""
+            '"MOOSE"': ""
+            '"PINEAPPLE"': ""
+            '"ROBOT"': ""
+            '"SHARK"': ""
+            '"SLOTH"': ""
+            '"UNICORN"': ""
+          FORMAT:
+            '"border"': ""
+            '"inner"': ""
+            '"diamond"': ""
+            '"circle"': ""
+            '"grid"': ""
+            '"top"': ""
+            '"row"': ""
+            '"bottom"': ""
+            '"left"': ""
+            '"column"': ""
+            '"right"': ""
+            '"x"': ""
+            '"plus"': ""
+            '"spiral"': ""
+            '"infinity"': ""
+            '"random"': ""
+      Dancelab_makeAnonymousDanceSprite:
+        text: ""
+        options:
+          COSTUME:
+            '"ALIEN"': ""
+            '"BEAR"': ""
+            '"CAT"': ""
+            '"DOG"': ""
+            '"DUCK"': ""
+            '"FROG"': ""
+            '"MOOSE"': ""
+            '"PINEAPPLE"': ""
+            '"ROBOT"': ""
+            '"SHARK"': ""
+            '"SLOTH"': ""
+            '"UNICORN"': ""
+          LOCATION:
+            "{x: 200, y: 100}": ""
+            "{x: 200, y: 300}": ""
+            "{x: 100, y: 200}": ""
+            "{x: 300, y: 200}": ""
+            "{x: 200, y: 200}": ""
+            "{x: 100, y: 100}": ""
+            "{x: 300, y: 100}": ""
+            "{x: 100, y: 300}": ""
+            "{x: 300, y: 300}": ""
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ""
+      Dancelab_makeNewDanceSprite:
+        text: |-
+          
+           
+        options:
+          COSTUME:
+            '"ALIEN"': ""
+            '"BEAR"': ""
+            '"CAT"': ""
+            '"DOG"': ""
+            '"DUCK"': ""
+            '"FROG"': ""
+            '"MOOSE"': ""
+            '"PINEAPPLE"': ""
+            '"ROBOT"': ""
+            '"SHARK"': ""
+            '"SLOTH"': ""
+            '"UNICORN"': ""
+          LOCATION:
+            "{x: 200, y: 100}": ""
+            "{x: 200, y: 300}": ""
+            "{x: 100, y: 200}": ""
+            "{x: 300, y: 200}": ""
+            "{x: 200, y: 200}": ""
+            "{x: 100, y: 100}": ""
+            "{x: 300, y: 100}": ""
+            "{x: 100, y: 300}": ""
+            "{x: 300, y: 300}": ""
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ""
+      Dancelab_makeNewDanceSpriteGroup:
+        text: |-
+          
+           
+        options:
+          'N':
+            '2': ''
+            '3': ''
+            '4': ''
+            '5': ''
+            '6': ''
+            '7': ''
+            '8': ''
+            '9': ''
+            '10': ''
+            '11': ''
+            '12': ''
+            '13': ''
+            '14': ''
+            '15': ''
+            '16': ''
+            '17': ''
+            '18': ''
+            '19': ''
+            '20': ''
+            '21': ''
+            '22': ''
+            '23': ''
+            '24': ''
+            '25': ''
+            '26': ''
+            '27': ''
+            '28': ''
+            '29': ''
+            '30': ''
+            '31': ''
+            '32': ''
+            '33': ''
+            '34': ''
+            '35': ''
+            '36': ''
+            '37': ''
+            '38': ''
+            '39': ''
+            '40': ''
+          COSTUME:
+            '"ALIEN"': ""
+            '"BEAR"': ""
+            '"CAT"': ""
+            '"DOG"': ""
+            '"DUCK"': ""
+            '"FROG"': ""
+            '"MOOSE"': ""
+            '"PINEAPPLE"': ""
+            '"ROBOT"': ""
+            '"SHARK"': ""
+            '"SLOTH"': ""
+            '"UNICORN"': ""
+          LAYOUT:
+            '"border"': ""
+            '"inner"': ""
+            '"diamond"': ""
+            '"circle"': ""
+            '"grid"': ""
+            '"top"': ""
+            '"row"': ""
+            '"bottom"': ""
+            '"left"': ""
+            '"column"': ""
+            '"right"': ""
+            '"x"': ""
+            '"plus"': ""
+            '"spiral"': ""
+            '"infinity"': ""
+            '"random"': ""
+      Dancelab_mixColors:
+        text: ""
+      Dancelab_nMeasures:
+        text: ""
+      Dancelab_onPointerDown:
+        text: ""
+      Dancelab_onPointerDrag:
+        text: ""
+      Dancelab_onPointerUp:
+        text: ""
+      Dancelab_randomColor:
+        text: ""
+      Dancelab_setBackground:
+        text: ""
+      Dancelab_setBackgroundEffect:
+        text: |
+          
+        options:
+          EFFECT:
+            '"none"': ""
+            ? "['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]"
+            : ""
+            '"circles"': ""
+            '"color_cycle"': ""
+            '"diamonds"': ""
+            '"disco_ball"': ""
+            '"fireworks"': ""
+            '"swirl"': ""
+            '"kaleidoscope"': ""
+            '"lasers"': ""
+            '"splatter"': ""
+            '"rainbow"': ""
+            '"snowflakes"': ""
+            '"text"': ""
+            '"galaxy"': ""
+            '"sparkles"': ""
+            '"spiral"': ""
+            '"disco"': ""
+            '"stars"': ""
+          PALETTE:
+            '"rave"': ""
+            '"cool"': ""
+            '"electronic"': ""
+            '"iceCream"': ""
+            '"default"': ""
+            '"neon"': ""
+            '"tropical"': ""
+            '"vintage"': ""
+            '"warm"': ""
+      Dancelab_setBackgroundEffectWithPalette:
+        text: |
+          
+        options:
+          EFFECT:
+            '"none"': ""
+            '"rand"': ""
+            '"circles"': ""
+            '"quads"': ""
+            '"color_cycle"': ""
+            '"diamonds"': ""
+            '"disco_ball"': ""
+            '"fireworks"': ""
+            '"flowers"': ""
+            '"growing_stars"': ""
+            '"higher_power"': ""
+            '"swirl"': ""
+            '"kaleidoscope"': ""
+            '"lasers"': ""
+            '"splatter"': ""
+            '"rainbow"': ""
+            '"ripples_random"': ""
+            '"ripples"': ""
+            '"snowflakes"': ""
+            '"text"': ""
+            '"squiggles"': ""
+            '"galaxy"': ""
+            '"sparkles"': ""
+            '"spiral"': ""
+            '"disco"': ""
+            '"stars"': ""
+            '"music_wave"': ""
+          PALETTE:
+            '"rave"': ""
+            '"cool"': ""
+            '"electronic"': ""
+            '"iceCream"': ""
+            '"default"': ""
+            '"neon"': ""
+            '"tropical"': ""
+            '"vintage"': ""
+            '"warm"': ""
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |
+          
+        options:
+          EFFECT:
+            '"none"': ""
+            '"rand"': ""
+            '"quads"': ""
+            '"blooming_petals"': ""
+            '"circles"': ""
+            '"clouds"': ""
+            '"color_cycle"': ""
+            '"diamonds"': ""
+            '"disco_ball"': ""
+            '"fireworks"': ""
+            '"flowers"': ""
+            '"frosted_grid"': ""
+            '"growing_stars"': ""
+            '"higher_power"': ""
+            '"swirl"': ""
+            '"kaleidoscope"': ""
+            '"lasers"': ""
+            '"splatter"': ""
+            '"rainbow"': ""
+            '"ripples_random"': ""
+            '"ripples"': ""
+            '"snowflakes"': ""
+            '"text"': ""
+            '"galaxy"': ""
+            '"sparkles"': ""
+            '"spiral"': ""
+            '"disco"': ""
+            '"squiggles"': ""
+            '"starburst"': ""
+            '"stars"': ""
+            '"music_wave"': ""
+          PALETTE:
+            '"autumn"': ""
+            '"rave"': ""
+            '"cool"': ""
+            '"electronic"': ""
+            '"grayscale"': ""
+            '"iceCream"': ""
+            '"default"': ""
+            '"neon"': ""
+            '"ocean"': ""
+            '"rainbow"': ""
+            '"roses"': ""
+            '"sky"': ""
+            '"spring"': ""
+            '"summer"': ""
+            '"sunrise"': ""
+            '"sunset"': ""
+            '"tropical"': ""
+            '"twinkling"': ""
+            '"vintage"': ""
+            '"warm"': ""
+            '"winter"': ""
+      Dancelab_setDanceSpeed:
+        text: ""
+        options:
+          SPEED:
+            '1': ""
+            '2': ""
+            '4': ""
+            '0.5': ""
+            '0.25': ""
+      Dancelab_setDanceSpeedEach:
+        text: ""
+        options:
+          GROUP:
+            sprites: ""
+            '"ALIEN"': ""
+            '"BEAR"': ""
+            '"CAT"': ""
+            '"DOG"': ""
+            '"DUCK"': ""
+            '"FROG"': ""
+            '"MOOSE"': ""
+            '"PINEAPPLE"': ""
+            '"ROBOT"': ""
+            '"SHARK"': ""
+            '"SLOTH"': ""
+            '"UNICORN"': ""
+          SPEED:
+            '1': ""
+            '2': ""
+            '4': ""
+            '0.5': ""
+            '0.25': ""
+      Dancelab_setForegroundEffect:
+        text: ""
+        options:
+          EFFECT:
+            '"none"': ""
+            ? "['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]"
+            : ""
+            '"bubbles"': ""
+            '"confetti"': ""
+            '"hearts_red"': ""
+            '"music_notes"': ""
+            '"pineapples"': ""
+            '"pizzas"': ""
+            '"smiling_poop"': ""
+            '"rain"': ""
+            '"floating_rainbows"': ""
+            '"smile_face"': ""
+            '"spotlight"': ""
+            '"color_lights"': ""
+            '"raining_tacos"': ""
+      Dancelab_setForegroundEffectExtended:
+        text: ""
+        options:
+          EFFECT:
+            '"none"': ""
+            '"rand"': ""
+            '"bubbles"': ""
+            '"hearts_colorful"': ""
+            '"confetti"': ""
+            '"emojis"': ""
+            '"hearts_red"': ""
+            '"music_notes"': ""
+            '"paint_drip"': ""
+            '"pineapples"': ""
+            '"pizzas"': ""
+            '"smiling_poop"': ""
+            '"rain"': ""
+            '"floating_rainbows"': ""
+            '"smile_face"': ""
+            '"spotlight"': ""
+            '"color_lights"': ""
+            '"exploding_stars"': ""
+            '"raining_tacos"': ""
+      Dancelab_setProp:
+        text: ' '
+        options:
+          PROPERTY:
+            '"scale"': ""
+            '"width"': ""
+            '"height"': ""
+            '"rotation"': ""
+            '"x"': ""
+            '"y"': ""
+      Dancelab_setPropEach:
+        text: ""
+        options:
+          GROUP:
+            sprites: ""
+            '"ALIEN"': ""
+            '"BEAR"': ""
+            '"CAT"': ""
+            '"DOG"': ""
+            '"DUCK"': ""
+            '"FROG"': ""
+            '"MOOSE"': ""
+            '"PINEAPPLE"': ""
+            '"ROBOT"': ""
+            '"SHARK"': ""
+            '"SLOTH"': ""
+            '"UNICORN"': ""
+          PROPERTY:
+            '"scale"': ""
+            '"width"': ""
+            '"height"': ""
+            '"rotation"': ""
+            '"x"': ""
+            '"y"': ""
+            '"tint"': ""
+      Dancelab_setPropRandom:
+        text: ""
+        options:
+          PROPERTY:
+            '"scale"': ""
+            '"width"': ""
+            '"height"': ""
+            '"rotation"': ""
+            '"x"': ""
+            '"y"': ""
+            '"tint"': ""
+      Dancelab_setPropRandomEach:
+        text: ""
+        options:
+          GROUP:
+            sprites: ""
+            '"ALIEN"': ""
+            '"BEAR"': ""
+            '"CAT"': ""
+            '"DOG"': ""
+            '"DUCK"': ""
+            '"FROG"': ""
+            '"MOOSE"': ""
+            '"PINEAPPLE"': ""
+            '"ROBOT"': ""
+            '"SHARK"': ""
+            '"SLOTH"': ""
+            '"UNICORN"': ""
+          PROPERTY:
+            '"scale"': ""
+            '"width"': ""
+            '"height"': ""
+            '"rotation"': ""
+            '"x"': ""
+            '"y"': ""
+            '"tint"': ""
+      Dancelab_setTint:
+        text: ""
+      Dancelab_setTintEach:
+        text: ""
+        options:
+          THIS:
+            sprites: ""
+            '"ALIEN"': ""
+            '"BEAR"': ""
+            '"CAT"': ""
+            '"DOG"': ""
+            '"DUCK"': ""
+            '"FROG"': ""
+            '"MOOSE"': ""
+            '"PINEAPPLE"': ""
+            '"ROBOT"': ""
+            '"SHARK"': ""
+            '"SLOTH"': ""
+            '"UNICORN"': ""
+      Dancelab_setTintEachInline:
+        text: ""
+        options:
+          THIS:
+            sprites: ""
+            '"ALIEN"': ""
+            '"BEAR"': ""
+            '"CAT"': ""
+            '"DOG"': ""
+            '"DUCK"': ""
+            '"FROG"': ""
+            '"MOOSE"': ""
+            '"PINEAPPLE"': ""
+            '"ROBOT"': ""
+            '"SHARK"': ""
+            '"SLOTH"': ""
+            '"UNICORN"': ""
+      Dancelab_setTintInline:
+        text: ""
+      Dancelab_setVisible:
+        text: ""
+        options:
+          VISIBILITY:
+            'true': ""
+            'false': ""
+      Dancelab_setVisibleEach:
+        text: ""
+        options:
+          THIS:
+            sprites: ""
+            '"ALIEN"': ""
+            '"BEAR"': ""
+            '"CAT"': ""
+            '"DOG"': ""
+            '"DUCK"': ""
+            '"FROG"': ""
+            '"MOOSE"': ""
+            '"PINEAPPLE"': ""
+            '"ROBOT"': ""
+            '"SHARK"': ""
+            '"SLOTH"': ""
+            '"UNICORN"': ""
+          VISIBILITY:
+            'true': ""
+            'false': ""
+      Dancelab_startMapping:
+        text: ""
+        options:
+          PROPERTY:
+            '"scale"': ""
+            '"width"': ""
+            '"height"': ""
+            '"rotation"': ""
+            '"x"': ""
+            '"y"': ""
+            '"tint"': ""
+          RANGE:
+            '"bass"': ""
+            '"mid"': ""
+            '"treble"': ""
+      Dancelab_startMappingEach:
+        text: ""
+        options:
+          GROUP:
+            sprites: ""
+            '"ALIEN"': ""
+            '"BEAR"': ""
+            '"CAT"': ""
+            '"DOG"': ""
+            '"DUCK"': ""
+            '"FROG"': ""
+            '"MOOSE"': ""
+            '"PINEAPPLE"': ""
+            '"ROBOT"': ""
+            '"SHARK"': ""
+            '"SLOTH"': ""
+            '"UNICORN"': ""
+          PROPERTY:
+            '"scale"': ""
+            '"width"': ""
+            '"height"': ""
+            '"rotation"': ""
+            '"x"': ""
+            '"y"': ""
+            '"tint"': ""
+          RANGE:
+            '"bass"': ""
+            '"mid"': ""
+            '"treble"': ""
+      Dancelab_stopMapping:
+        text: ""
+        options:
+          PROPERTY:
+            '"scale"': ""
+            '"width"': ""
+            '"height"': ""
+            '"rotation"': ""
+            '"x"': ""
+            '"y"': ""
+            '"direction"': ""
+            '"tint"': ""
+          RANGE:
+            '"bass"': ""
+            '"mid"': ""
+            '"treble"': ""
+      Dancelab_stopMappingEach:
+        text: ""
+        options:
+          GROUP:
+            sprites: ""
+            '"ALIEN"': ""
+            '"BEAR"': ""
+            '"CAT"': ""
+            '"DOG"': ""
+            '"DUCK"': ""
+            '"FROG"': ""
+            '"MOOSE"': ""
+            '"PINEAPPLE"': ""
+            '"ROBOT"': ""
+            '"SHARK"': ""
+            '"SLOTH"': ""
+            '"UNICORN"': ""
+          PROPERTY:
+            '"scale"': ""
+            '"width"': ""
+            '"height"': ""
+            '"rotation"': ""
+            '"x"': ""
+            '"y"': ""
+            '"direction"': ""
+            '"tint"': ""
+          RANGE:
+            '"bass"': ""
+            '"mid"': ""
+            '"treble"': ""
+      Dancelab_translateStrings:
+        text: ""
+        options:
+          STRING:
+            '"music_wave"': ""
+            '"ripples"': ""
+            '"ripples_random"': ""
+            '"quads"': ""
+            '"flowers"': ""
+            '"popsicles"': ""
+            '"squiggles"': ""
+            '"growing_stars"': ""
+            '"emojis"': ""
+            '"hearts_colorful"': ""
+            '"paint_drio"': ""
+            '"exploding_stars"': ""
+            '"row_top"': ""
+            '"row_bottom"': ""
+            '"column_left"': ""
+            '"column_right"': ""
+            '"diamond"': ""
+            '"mural"': ""
+            '"safari"': ""
+            '"network"': ""
+            '"highway"': ""
+            '"stream"': ""
+            '"tile"': ""
+            '"shadow"': ""
+            '"s"': ""
+            '"t"': ""
+            '"u"': ""
+            '"v"': ""
+            '"w"': ""
+            '"x"': ""
+            '"y"': ''
+            '"z"': ""
+            '"0"': ''
+            '"1"': ''
+            '"2"': ''
+            '"3"': ''
+            '"4"': ''
+            '"5"': ''
+            '"6"': ''
+            '"7"': ''
+            '"8"': ''
+            '"9"': ''
+      Dancelab_whenKey:
+        text: ""
+        options:
+          KEY:
+            '"up"': ""
+            '"left"': ""
+            '"down"': ""
+            '"right"': ""
+            '"space"': ""
+            '"enter"': ""
+            '"a"': ""
+            '"b"': ""
+            '"c"': ""
+            '"d"': ""
+            '"e"': ""
+            '"f"': ""
+            '"g"': ""
+            '"h"': ""
+            '"i"': ""
+            '"j"': ""
+            '"k"': ""
+            '"l"': ""
+            '"m"': ""
+            '"n"': ''
+            '"o"': ""
+            '"p"': ""
+            '"q"': ""
+            '"r"': ""
+            '"s"': ""
+            '"t"': ""
+            '"u"': ""
+            '"v"': ""
+            '"w"': ""
+            '"x"': ""
+            '"y"': ''
+            '"z"': ""
+            '"0"': ''
+            '"1"': ''
+            '"2"': ''
+            '"3"': ''
+            '"4"': ''
+            '"5"': ''
+            '"6"': ''
+            '"7"': ''
+            '"8"': ''
+            '"9"': ''
+      Dancelab_whenPeak:
+        text: ""
+        options:
+          RANGE:
+            '0': ""
+            '1': ""
+            '2': ""
+      Dancelab_whenSetup:
+        text: ""
+      Dancelab_whenSetup2:
+        text: ""
+      Dancelab_whenSetupSong:
+        text: ' '
+        options:
+          SONG:
+            '"macklemore90"': ""
+            '"hammer"': ""
+            '"peas"': ""
+      DansBlocks_borderGPT:
+        text: ""
+      DansBlocks_getMicroscope:
+        text: ""
+        options:
+          INPUT1:
+            '1': ""
+            '3': ""
+            '5': ""
+      DansBlocks_gravity_test:
+        text: ""
+        options:
+          BEHAVIOR:
+            new Behavior(fall_gravity_behavior, []): ""
+      DansBlocks_jump_gravity:
+        text: ""
+      DansBlocks_setForegroundEffect2:
+        text: ""
+        options:
+          EFFECT:
+            '"bubbles"': ""
+            '"confetti"': ""
+            '"hearts"': ""
+            '"emojis"': ""
+            '"rain"': ""
+            '"starburst"': ""
+            '"glass"': ""
+            '"twinkling"': ""
+      DansBlocks_setMicroscope:
+        text: ""
+        options:
+          INPUT1:
+            '1': ""
+            '3': ""
+            '5': ""
+      DansBlocks_testRectangle:
+        text: ''
+      DansBlocks_testShowVariable:
+        text: ''
+        options:
+          OPT:
+            '"large"': ""
+            '"small"': ""
+          COLOR:
+            '"blue"': ""
+            '"red"': ""
+      FunctionBlocks_addEightBlock:
+        text: ""
+      FunctionBlocks_addFiveBlock:
+        text: ""
+      FunctionBlocks_addFourBlock:
+        text: ""
+      FunctionBlocks_addNineBlock:
+        text: ""
+      FunctionBlocks_addOneBlock:
+        text: ""
+      FunctionBlocks_addSevenBlock:
+        text: ""
+      FunctionBlocks_addSixBlock:
+        text: ""
+      FunctionBlocks_addThreeBlock:
+        text: ""
+      FunctionBlocks_addTwoBlock:
+        text: ""
+      FunctionBlocks_communicate:
+        text: ""
+      FunctionBlocks_makeManipulative2:
+        text: ""
+      FunctionBlocks_representManipulative:
+        text: ""
+      FunctionBlocks_representManipulative_test:
+        text: ""
+      FunctionBlocks_spriteSayVar:
+        text: ""
+      GameDev_collide:
+        text: ""
+        options:
+          INTERACTION:
+            '"bounceOff"': ""
+            '"bounce"': ""
+            '"collide"': ""
+            '"displace"': ""
+      GameDev_getVelocity:
+        text: ""
+        options:
+          PROPERTY:
+            '"velocityX"': ""
+            '"velocityY"': ""
+      GameDev_gravity:
+        text: ""
+        options:
+          VELOCITY:
+            "-0.25": ""
+            "-0.5": ""
+            "-1": ""
+      GameDev_playSoundOptions:
+        text: ""
+        options:
+          SOUND:
+            "'sound://category_digital/boing_2.mp3'": ""
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": ""
+            "'sound://category_collect/clicky_crunch.mp3'": ""
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": ""
+            "'sound://category_digital/jump_7.mp3'": ""
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": ""
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": ""
+            "'sound://category_transition/star_dust_particle_10.mp3'": ""
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": ""
+            "'sound://category_collect/trill_stings.mp3'": ""
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": ""
+      GameDev_playerJump:
+        text: ""
+        options:
+          STRENGTH:
+            '10': ""
+            '13': ""
+            '17': ""
+      GameDev_removeGroup:
+        text: ""
+        options:
+          GROUP:
+            '"players"': ""
+            '"walls"': ""
+      GameDev_setGroup:
+        text: ""
+        options:
+          GROUP:
+            '"players"': ""
+            '"walls"': ""
+      GameDev_setVelocity:
+        text: ""
+        options:
+          PROPERTY:
+            '"velocityX"': ""
+            '"velocityY"': ""
+      GameDev_spriteType:
+        text: ""
+        options:
+          GROUP:
+            '"players"': ""
+            '"walls"': ""
+      gamelab_addBehaviorSimple:
+        text: ""
+      gamelab_addTarget:
+        text: ""
+        options:
+          OPT:
+            '"follow"': ""
+            '"avoid"': ""
+      gamelab_allSpritesWithAnimation:
+        text: ""
+      gamelab_atTime:
+        text: ""
+        options:
+          UNIT:
+            '"seconds"': ""
+            '"frames"': ""
+      gamelab_avoidingTargets:
+        text: ""
+      gamelab_beginCollectingData:
+        text: ""
+      gamelab_behaviorPicker:
+        text: ""
+      gamelab_bitmap:
+        text: ""
+      gamelab_bounceOff:
+        text: ""
+      gamelab_changePropBy:
+        text: ""
+        options:
+          PROPERTY:
+            '"scale"': ""
+            '"rotation"': ""
+            '"x"': ""
+            '"y"': ""
+            '"direction"': ""
+            '"speed"': ""
+      gamelab_checkTouching:
+        text: ""
+        options:
+          CONDITION:
+            '"when"': ""
+            '"while"': ""
+      gamelab_clickedOn:
+        text: ""
+      gamelab_clickedSpritePointer:
+        text: ""
+      gamelab_collectibleBehaviors:
+        text: ""
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): ""
+            new Behavior(spinning_left, []): ""
+            new Behavior(fluttering, []): ""
+            new Behavior(jittering, []): ""
+            new Behavior(wobbling, []): ""
+            new Behavior(wandering, []): ""
+            new Behavior(patrolling, []): ""
+            new Behavior(moving_west_and_looping, []): ""
+            new Behavior(moving_east_and_looping, []): ""
+            new Behavior(moving_north_and_looping, []): ""
+            new Behavior(moving_south_and_looping, []): ""
+      gamelab_comment:
+        text: ''
+      gamelab_costumeImage:
+        text: ""
+      gamelab_countByAnimation:
+        text: ""
+      gamelab_createNewSprite:
+        text: " \n  \n  \n "
+      gamelab_destroy:
+        text: ""
+      gamelab_draggable:
+        text: ""
+      gamelab_drawLine:
+        text: ""
+      gamelab_edgesDisplace:
+        text: ""
+      gamelab_everyInterval:
+        text: ' '
+        options:
+          UNIT:
+            '"seconds"': ""
+            '"frames"': ""
+      gamelab_followingTargets:
+        text: ""
+      gamelab_getAllSprites:
+        text: ""
+      gamelab_getCostume:
+        text: ""
+      gamelab_getProp:
+        text: ""
+        options:
+          PROPERTY:
+            '"scale"': ""
+            '"rotation"': ""
+            '"x"': ""
+            '"y"': ""
+            '"direction"': ""
+            '"tint"': ""
+            '"speed"': ""
+      gamelab_getThisSprite:
+        text: ""
+        options:
+          CHOICE:
+            '"this"': ""
+            '"other"': ""
+      gamelab_getTime:
+        text: ""
+        options:
+          UNIT:
+            '"seconds"': ""
+            '"frames"': ""
+      gamelab_glideTo:
+        text: ""
+      gamelab_hideTitleScreen:
+        text: ""
+      gamelab_hideVariable:
+        text: ""
+      gamelab_ifVarEquals:
+        text: |
+          
+      gamelab_int10:
+        text: ""
+        options:
+          VALUE:
+            '1': ''
+            '2': ''
+            '3': ''
+            '4': ''
+            '5': ''
+            '6': ''
+            '7': ''
+            '8': ''
+            '9': ''
+            '10': ''
+      gamelab_isCostumeEqual:
+        text: ""
+      gamelab_isKeyPressed:
+        text: ""
+        options:
+          KEY:
+            '"up"': ""
+            '"down"': ""
+            '"left"': ""
+            '"right"': ""
+            '"space"': ""
+            '"a"': ""
+            '"b"': ""
+            '"c"': ""
+            '"d"': ""
+            '"e"': ""
+            '"f"': ""
+            '"g"': ""
+            '"h"': ""
+            '"i"': ""
+            '"j"': ""
+            '"k"': ""
+            '"l"': ""
+            '"m"': ""
+            '"n"': ''
+            '"o"': ""
+            '"p"': ""
+            '"q"': ""
+            '"r"': ""
+            '"s"': ""
+            '"t"': ""
+            '"u"': ""
+            '"v"': ""
+            '"w"': ""
+            '"x"': ""
+            '"y"': ''
+            '"z"': ""
+      gamelab_isTouchingEdges:
+        text: ""
+      gamelab_isTouchingSprite:
+        text: ""
+      gamelab_jumpTo:
+        text: ""
+      gamelab_keyPressed:
+        text: ""
+        options:
+          CONDITION:
+            '"when"': ""
+            '"while"': ""
+          KEY:
+            '"up"': ""
+            '"down"': ""
+            '"left"': ""
+            '"right"': ""
+            '"space"': ""
+            '"a"': ""
+            '"b"': ""
+            '"c"': ""
+            '"d"': ""
+            '"e"': ""
+            '"f"': ""
+            '"g"': ""
+            '"h"': ""
+            '"i"': ""
+            '"j"': ""
+            '"k"': ""
+            '"l"': ""
+            '"m"': ""
+            '"n"': ''
+            '"o"': ""
+            '"p"': ""
+            '"q"': ""
+            '"r"': ""
+            '"s"': ""
+            '"t"': ""
+            '"u"': ""
+            '"v"': ""
+            '"w"': ""
+            '"x"': ""
+            '"y"': ''
+            '"z"': ""
+      gamelab_layoutGrid:
+        text: ""
+      gamelab_layoutSprites:
+        text: ""
+        options:
+          FORMAT:
+            '"border"': ""
+            '"circle"': ""
+            '"grid"': ""
+            '"top"': ""
+            '"row"': ""
+            '"bottom"': ""
+            '"left"': ""
+            '"column"': ""
+            '"right"': ""
+      gamelab_locationAt:
+        text: ''
+      gamelab_locationModifier:
+        text: ""
+        options:
+          DIRECTION:
+            '"North"': ""
+            '"East"': ""
+            '"South"': ""
+            '"West"': ""
+      gamelab_locationMouse:
+        text: ""
+      gamelab_locationOf:
+        text: ""
+      gamelab_location_picker:
+        text: ""
+      gamelab_makeBurst:
+        text: ""
+        options:
+          EFFECT:
+            '"burst"': ""
+            '"pop"': ""
+            '"rain"': ""
+            '"spiral"': ""
+      gamelab_makeNewSpriteAnon:
+        text: ""
+      gamelab_makeNewSpriteGroup:
+        text: ""
+        options:
+          FORMAT:
+            '"border"': ""
+            '"circle"': ""
+            '"grid"': ""
+            '"top"': ""
+            '"row"': ""
+            '"bottom"': ""
+            '"left"': ""
+            '"column"': ""
+            '"right"': ""
+      gamelab_makeNumSprites:
+        text: ""
+      gamelab_makeNumSpritesNear:
+        text: ""
+      gamelab_makeProjectile:
+        text: " \n"
+        options:
+          DIRECTION:
+            '0': ""
+            '90': ""
+            '180': ""
+            '270': ""
+      gamelab_makeSpritesGrid:
+        text: ''
+      gamelab_makeSpritesGridInput:
+        text: ""
+      gamelab_makeSpritesWithSize:
+        text: ""
+        options:
+          SIZE:
+            '30': ""
+            '50': ""
+            '100': ""
+      gamelab_mirrorSprite:
+        text: ""
+        options:
+          DIRECTION:
+            '"right"': ""
+            '"left"': ""
+      gamelab_mouseLocation:
+        text: ""
+      gamelab_moveBackward:
+        text: ""
+      gamelab_moveForward:
+        text: ""
+      gamelab_moveInDirection:
+        text: ""
+        options:
+          DIRECTION:
+            '"North"': ""
+            '"East"': ""
+            '"South"': ""
+            '"West"': ""
+      gamelab_moveToward:
+        text: ""
+      gamelab_newSpritePointer:
+        text: ""
+      gamelab_objectSpritePointer:
+        text: ""
+      gamelab_patrollingUpDown:
+        text: ""
+      gamelab_playSound:
+        text: ""
+      gamelab_playSoundOptions:
+        text: ""
+        options:
+          SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": ""
+            "'sound://category_digital/boing_2.mp3'": ""
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": ""
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": ""
+            "'sound://category_app/app_button_1.mp3'": ""
+            "'sound://category_collect/clicky_crunch.mp3'": ""
+            "'sound://category_swish/quick_swing.mp3'": ""
+            "'sound://category_nature/summer_night_loop.mp3'": ""
+            "'sound://category_background/ocean_waves.mp3'": ""
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": ""
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": ""
+            "'sound://category_animals/bear.mp3'": ""
+            "'sound://category_animals/cat.mp3'": ""
+            "'sound://category_animals/cow.mp3'": ""
+            "'sound://category_animals/pig.mp3'": ""
+            "'sound://category_animals/sheep.mp3'": ""
+            "'sound://category_animals/goat.mp3'": ""
+            "'sound://category_animals/chicken.mp3'": ""
+            "'sound://category_animals/rooster.mp3'": ""
+            "'sound://category_animals/elephant.mp3'": ""
+            "'sound://category_animals/dolphin.mp3'": ""
+            "'sound://category_nature/thunderstorm_1.mp3'": ""
+            "'sound://category_animals/chick.mp3'": ""
+            "'sound://category_animals/dog.mp3'": ""
+            "'sound://category_animals/tiger.mp3'": ""
+            "'sound://category_collect/trill_stings.mp3'": ""
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": ""
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": ""
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": ""
+            "'sound://category_transition/trippy_robotic_transition.mp3'": ""
+            "'sound://category_transition/star_dust_particle_10.mp3'": ""
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": ""
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": ""
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": ""
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": ""
+            "'sound://category_digital/jump_7.mp3'": ""
+      gamelab_playSoundOptionsSoccer:
+        text: ""
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": ""
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": ""
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": ""
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": ""
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": ""
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": ""
+            "'sound://category_sports/One_Whistle_SFX.mp3'": ""
+      gamelab_playSoundOptionsSpace:
+        text: ""
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": ""
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": ""
+            "'sound://category_space/Carina_SFX.mp3'": ""
+            "'sound://category_space/Cassiopeia_SFX.mp3'": ""
+            "'sound://category_space/Crab_nebula_SFX.mp3'": ""
+            "'sound://category_space/Galactic_center_SFX.mp3'": ""
+            "'sound://category_space/Launch_SFX.mp3'": ""
+            "'sound://category_space/Lift_Off.mp3'": ""
+            "'sound://category_space/Pillars_SFX.mp3'": ""
+            "'sound://category_space/Southern_ring_SFX.mp3'": ""
+            "'sound://category_space/Supernova_SFX.mp3'": ""
+            "'sound://category_space/Tycho_SFX.mp3'": ""
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": ""
+      gamelab_playSpeech:
+        text: ""
+      gamelab_playerBehaviors:
+        text: ""
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): ""
+            new Behavior(driving_with_arrow_keys, []): ""
+            draggable(): ""
+      gamelab_pointInDirection:
+        text: ""
+        options:
+          DIRECTION:
+            '"North"': ""
+            '"East"': ""
+            '"South"': ""
+            '"West"': ""
+      gamelab_printText:
+        text: ""
+      gamelab_randColor:
+        text: ""
+      gamelab_randomColor:
+        text: ""
+      gamelab_randomLocation:
+        text: ""
+      gamelab_removeAllBehaviors:
+        text: ""
+      gamelab_removeBehaviorSimple:
+        text: ""
+      gamelab_removeTint:
+        text: ""
+      gamelab_repeatForever:
+        text: ""
+      gamelab_resetTimer:
+        text: ""
+      gamelab_setAnimation:
+        text: ""
+      gamelab_setBackground:
+        text: ""
+      gamelab_setBackgroundImage:
+        text: ""
+        options:
+          IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': ""
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': ""
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': ""
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': ""
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': ' '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': ""
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ""
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': ""
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': ""
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': ""
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ""
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ""
+            undefined: ""
+      gamelab_setBackgroundImageAs:
+        text: ""
+      gamelab_setDefaultSpriteSize:
+        text: ""
+        options:
+          SIZE:
+            '25': ""
+            '50': ""
+            '75': ""
+            '100': ""
+      gamelab_setForegroundEffect:
+        text: ""
+        options:
+          EFFECT:
+            '"bubbles"': ""
+            '"confetti"': ""
+            '"hearts"': ""
+            '"emojis"': ""
+            '"rain"': ""
+            '"starburst"': ""
+            '"glass"': ""
+            '"twinkling"': ""
+      gamelab_setPrompt:
+        text: ""
+      gamelab_setPromptWith2Choices:
+        text: ""
+      gamelab_setPromptWithChoices:
+        text: ""
+      gamelab_setProp:
+        text: ""
+        options:
+          PROPERTY:
+            '"scale"': ""
+            '"rotation"': ""
+            '"x"': ""
+            '"y"': ""
+            '"direction"': ""
+            '"speed"': ""
+      gamelab_setProp_dropdown:
+        text: ""
+        options:
+          PROPERTY:
+            '"scale"': ""
+          SIZE:
+            '25': ""
+            '50': ""
+            '75': ""
+            '100': ""
+      gamelab_setSizes:
+        text: ""
+        options:
+          PROPERTY:
+            '"scale"': ""
+            '"width"': ""
+            '"height"': ""
+      gamelab_setSpeed_dropdown:
+        text: ""
+        options:
+          SIZE:
+            '1': ""
+            '3': ""
+            '5': ""
+            '7': ""
+            '9': ""
+      gamelab_setTint:
+        text: ""
+      gamelab_setupScoreboard:
+        text: " \n"
+      gamelab_setupSim:
+        text: |+
+          
+          
+          
+          
+      gamelab_showTitleScreen:
+        text: ""
+      gamelab_showVariable:
+        text: ""
+      gamelab_spriteClicked:
+        text: ""
+        options:
+          CONDITION:
+            '"when"': ""
+            '"while"': ""
+      gamelab_spriteSay:
+        text: ""
+      gamelab_spriteSayTime:
+        text: ""
+      gamelab_spriteThink:
+        text: ""
+      gamelab_spriteThinkTime:
+        text: ""
+      gamelab_spriteThink_fables2:
+        text: ""
+        options:
+          THOUGHT:
+            '"Hmm..."': ""
+            '"Time to make friends with the sheep."': ""
+            '"She''ll never recognize me now."': ""
+            '"This costume keeps me warm."': ""
+            '"I am actually a wolf."': ""
+      gamelab_spriteThink_fables3:
+        text: ""
+        options:
+          THOUGHT:
+            '"Hmm..."': ""
+            '"I''m feeling sleepy."': ""
+            '"No one could ever beat me."': ""
+            '"I''ve done this race before."': ""
+            '"My feet are bigger than Turtle''s feet."': ""
+      gamelab_spriteThink_fables4:
+        text: ""
+        options:
+          THOUGHT:
+            '"Hmm..."': ""
+            '"I''m so hungry."': ""
+            '"I''m a visitor in this town."': ""
+            '"If we share, we''ll all have something to eat. "': ""
+            '"I''ll trick everyone into giving me their food."': ""
+      gamelab_startAvoiding:
+        text: ""
+      gamelab_startFollowing:
+        text: ""
+      gamelab_startGliding:
+        text: ""
+      gamelab_stopAvoiding:
+        text: ""
+      gamelab_stopCollectingData:
+        text: ""
+      gamelab_stopFollowing:
+        text: ""
+      gamelab_stopGliding:
+        text: ""
+      gamelab_subjectSpritePointer:
+        text: ""
+      gamelab_textJoin:
+        text: ""
+      gamelab_textVariableJoin:
+        text: ""
+      gamelab_toggleBehaviorSimple:
+        text: ""
+        options:
+          TOGGLE:
+            '"begins"': ""
+            '"stops"': ""
+      gamelab_tumbling:
+        text: ""
+      gamelab_turn:
+        text: ""
+        options:
+          DIRECTION:
+            '"right"': ""
+            '"left"': ""
+      gamelab_updateTitleWithColor:
+        text: ""
+      gamelab_whenAllPromptsAnswered:
+        text: ""
+      gamelab_whenDownArrow:
+        text: ""
+      gamelab_whenKey:
+        text: ""
+        options:
+          KEY:
+            '"up"': ""
+            '"down"': ""
+            '"left"': ""
+            '"right"': ""
+            '"space"': ""
+            '"a"': ""
+            '"w"': ""
+            '"s"': ""
+            '"d"': ""
+      gamelab_whenLeftArrow:
+        text: ""
+      gamelab_whenPromptAnswered:
+        text: ""
+      gamelab_whenRightArrow:
+        text: ""
+      gamelab_whenSpriteCreated:
+        text: ""
+      gamelab_whenTouching:
+        text: ""
+      gamelab_whenUpArrow:
+        text: ""
+      gamelab_whileDownArrow:
+        text: ""
+      gamelab_whileKey:
+        text: ""
+        options:
+          KEY:
+            '"up"': ""
+            '"down"': ""
+            '"left"': ""
+            '"right"': ""
+            '"space"': ""
+            '"a"': ""
+            '"w"': ""
+            '"s"': ""
+            '"d"': ""
+      gamelab_whileLeftArrow:
+        text: ""
+      gamelab_whileRightArrow:
+        text: ""
+      gamelab_whileTouching:
+        text: ""
+      gamelab_whileUpArrow:
+        text: ""
+      gamelab_withPercentChance:
+        text: |
+          
+      gamelab_withPercentChanceDropdown:
+        text: |-
+           
+           
+        options:
+          NUM:
+            '10': ""
+            '25': ""
+            '50': 50/50
+            '75': ""
+            '90': ""
+      gamelab_xLocationOf:
+        text: ""
+      gamelab_yLocationOf:
+        text: ""
+      KatiesBlocks_changeVelocity:
+        text: ""
+        options:
+          PROPERTY:
+            '"velocityX"': ""
+            '"velocityY"': ""
+      KatiesBlocks_collide:
+        text: ""
+      KatiesBlocks_glideTo:
+        text: ""
+      KatiesBlocks_goldilocks:
+        text: |
+           
+        options:
+          CONDITION:
+            '"solid"': ""
+            '"liquid"': ""
+            '"gas"': ""
+      KatiesBlocks_katieCollide:
+        text: ""
+      KatiesBlocks_katiePushes:
+        text: ""
+      KatiesBlocks_makeNumSpritesNear:
+        text: ""
+      KatiesBlocks_setVelocity:
+        text: ""
+        options:
+          PROPERTY:
+            '"velocityX"': ""
+            '"velocityY"': ""
+            '"rotationSpeed"': ""
+      KatiesBlocks_spriteBirdSay:
+        text: ""
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': ""
+            '"I have a beak like a scoop to catch fish."': ""
+      KatiesBlocks_tumbling:
+        text: ""
+      Mikelab_addBehaviorSimple:
+        text: ""
+      Mikelab_addTrainingData:
+        text: ''
+        options:
+          NAME:
+            "{x: 201, y: 100}": ""
+            "{x: 200, y: 100}": ""
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": ""
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": ""
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ""
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": ""
+      Mikelab_allSpritesWithAnimation:
+        text: ""
+      Mikelab_beginDataCollection:
+        text: ""
+      Mikelab_changeAnim:
+        text: ""
+      Mikelab_changePropBy:
+        text: ""
+        options:
+          PROPERTY:
+            '"scale"': ""
+            '"rotation"': ""
+            '"x"': ""
+            '"y"': ""
+            '"direction"': ""
+      Mikelab_checkAnim:
+        text: ""
+      Mikelab_createNewSprite:
+        text: " \n "
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": ""
+            "{x: 200, y: 300}": ""
+            "{x: 100, y: 200}": ""
+            "{x: 300, y: 200}": ""
+            "{x: 200, y: 200}": ""
+            "{x: 100, y: 100}": ""
+            "{x: 300, y: 100}": ""
+            "{x: 100, y: 300}": ""
+            "{x: 300, y: 300}": ""
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ""
+      Mikelab_destroy:
+        text: ""
+      Mikelab_displace:
+        text: ""
+      Mikelab_eval:
+        text: ""
+      Mikelab_getAnim:
+        text: ""
+      Mikelab_getNext:
+        text: ""
+      Mikelab_getProp:
+        text: ""
+        options:
+          PROPERTY:
+            '"scale"': ""
+            '"rotation"': ""
+            '"x"': ""
+            '"y"': ""
+            '"direction"': ""
+      Mikelab_groupChangeAnim:
+        text: ""
+        options:
+          SELECT:
+            '"all"': ""
+            '"this"': ""
+      Mikelab_groupChangePropBy:
+        text: ""
+        options:
+          SELECT:
+            '"all"': ""
+            '"this"': ""
+          PROPERTY:
+            '"scale"': ""
+            '"rotation"': ""
+            '"x"': ""
+            '"y"': ""
+            '"direction"': ""
+      Mikelab_groupCreateNewSprite:
+        text: ""
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": ""
+            "{x: 200, y: 300}": ""
+            "{x: 100, y: 200}": ""
+            "{x: 300, y: 200}": ""
+            "{x: 200, y: 200}": ""
+            "{x: 100, y: 100}": ""
+            "{x: 300, y: 100}": ""
+            "{x: 100, y: 300}": ""
+            "{x: 300, y: 300}": ""
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ""
+      Mikelab_groupDestroy:
+        text: ""
+        options:
+          SELECT:
+            '"all"': ""
+            '"this"': ""
+      Mikelab_groupDisplace:
+        text: ""
+      Mikelab_groupEdgesDisplace:
+        text: ""
+      Mikelab_groupGetProp:
+        text: ""
+        options:
+          SELECT:
+            '"average"': ""
+            '"this"': ""
+          PROPERTY:
+            '"scale"': ""
+            '"rotation"': ""
+            '"x"': ""
+            '"y"': ""
+            '"direction"': ""
+      Mikelab_groupRemoveAllBehaviors:
+        text: ""
+        options:
+          SELECT:
+            '"all"': ""
+            '"this"': ""
+      Mikelab_groupRemoveBehaviorSimple:
+        text: ""
+        options:
+          SELECT:
+            '"all"': ""
+            '"this"': ""
+      Mikelab_groupRemoveTint:
+        text: ""
+        options:
+          SELECT:
+            '"all"': ""
+            '"this"': ""
+      Mikelab_groupSetProp:
+        text: ""
+        options:
+          SELECT:
+            '"all"': ""
+            '"this"': ""
+          PROPERTY:
+            '"scale"': ""
+            '"rotation"': ""
+            '"x"': ""
+            '"y"': ""
+            '"direction"': ""
+      Mikelab_groupSetTint:
+        text: ""
+        options:
+          SELECT:
+            '"all"': ""
+            '"this"': ""
+      Mikelab_groupWhenClickedOn:
+        text: ""
+      Mikelab_groupWhenXTouchesY:
+        text: ""
+      Mikelab_groupWhileClicked:
+        text: ""
+      Mikelab_groupWhileTouchingAny:
+        text: |
+          
+      Mikelab_hasBehavior:
+        text: ""
+      Mikelab_hideFish:
+        text: ""
+        options:
+          TRASH:
+            object: ""
+            fish: ""
+      Mikelab_ifDanceIs:
+        text: |-
+          
+           
+        options:
+          DANCE:
+            MOVES.ClapHigh: ""
+            MOVES.Clown: ""
+            MOVES.Dab: ""
+            MOVES.DoubleJam: ""
+            MOVES.Drop: ""
+            MOVES.Floss: ""
+            MOVES.Fresh: ""
+            MOVES.Roll: ""
+            MOVES.Kick: ""
+            MOVES.ThisOrThat: ""
+            MOVES.Thriller: ""
+            MOVES.Rest: ""
+      Mikelab_ifLabel:
+        text: |-
+          
+           
+        options:
+          DANCE:
+            MOVES.ClapHigh: ""
+            MOVES.Clown: ""
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          
+           
+        options:
+          DANCE:
+            MOVES.ClapHigh: ""
+            MOVES.Clown: ""
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          
+           
+        options:
+          DANCE:
+            MOVES.ClapHigh: ""
+            MOVES.Clown: ""
+      Mikelab_isAnim:
+        text: ""
+      Mikelab_joinText:
+        text: ""
+      Mikelab_locationAt:
+        text: ''
+      Mikelab_location_picker:
+        text: ""
+      Mikelab_poemTextJoin:
+        text: ""
+        options:
+          TEXT1:
+            '"Balancing on the "': ''
+            '"A chubby cat "': ''
+            '"The "': ''
+          TEXT2:
+            '" fence"': ''
+            '""': ''
+            '" breeze blows"': ''
+      Mikelab_randomColor:
+        text: ""
+      Mikelab_removeAllBehaviors:
+        text: ""
+      Mikelab_removeBehaviorSimple:
+        text: ""
+      Mikelab_removeTint:
+        text: ""
+      Mikelab_repeatUntilComplete:
+        text: ""
+      Mikelab_sendBad:
+        text: ""
+      Mikelab_sendGood:
+        text: ""
+      Mikelab_setBG:
+        text: ""
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': ' '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': ""
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': ""
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': ""
+      Mikelab_setProp:
+        text: ""
+        options:
+          PROPERTY:
+            '"scale"': ""
+            '"rotation"': ""
+            '"x"': ""
+            '"y"': ""
+            '"direction"': ""
+      Mikelab_setTint:
+        text: ""
+      Mikelab_setupLevel:
+        text: |+
+          
+          
+          
+          
+      Mikelab_setupOutbreak:
+        text: |+
+          
+          
+      Mikelab_setupSim:
+        text: |+
+          
+          
+          
+          
+      Mikelab_showScoreboard:
+        text: ""
+        options:
+          CORNER:
+            '"right"': ""
+            '"left"': ""
+      Mikelab_showText:
+        text: ""
+        options:
+          PREPOSITION:
+            '"above"': ""
+            '"below"': ""
+      Mikelab_sprite:
+        text: ""
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": ""
+            "{x: 200, y: 300}": ""
+            "{x: 100, y: 200}": ""
+            "{x: 300, y: 200}": ""
+            "{x: 200, y: 200}": ""
+            "{x: 100, y: 100}": ""
+            "{x: 300, y: 100}": ""
+            "{x: 100, y: 300}": ""
+            "{x: 300, y: 300}": ""
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ""
+      Mikelab_whenClickedOn:
+        text: ""
+      Mikelab_whenKeyPressed:
+        text: ""
+        options:
+          KEY:
+            '"up"': ""
+            '"down"': ""
+            '"left"': ""
+            '"right"': ""
+            '"space"': ""
+            '"w"': ""
+            '"a"': ""
+            '"s"': ""
+            '"d"': ""
+      Mikelab_whenKeyReleased:
+        text: ""
+        options:
+          KEY:
+            '"up"': ""
+            '"down"': ""
+            '"left"': ""
+            '"right"': ""
+            '"space"': ""
+            '"w"': ""
+            '"a"': ""
+            '"s"': ""
+            '"d"': ""
+      Mikelab_whenMouseClicked:
+        text: ""
+      Mikelab_whenMouseReleased:
+        text: ""
+      Mikelab_whenTouchesAny:
+        text: ""
+      Mikelab_whenYesNoClicked:
+        text: ""
+        options:
+          KEY:
+            '"yes"': ''
+            '"no"': ''
+      Mikelab_whileClicked:
+        text: ""
+      Mikelab_whileKeyPressed:
+        text: ""
+        options:
+          KEY:
+            '"up"': ""
+            '"down"': ""
+            '"left"': ""
+            '"right"': ""
+            '"space"': ""
+      Mikelab_whileTouchingAny:
+        text: |
+          
+      Mikelab_worldSeconds:
+        text: ""
+      Mikelab_xLocationOf:
+        text: ""
+      Mikelab_yLocationOf:
+        text: ""
+      Outbreak_beginCongregating:
+        text: ""
+      Outbreak_beginQuarantining:
+        text: ""
+      Outbreak_beginSocialDistancing:
+        text: ""
+      Outbreak_beginWandering:
+        text: ""
+      Outbreak_beginWearingMasks:
+        text: ""
+      Outbreak_layoutBorder:
+        text: ""
+      Outbreak_layoutClusters:
+        text: ""
+      Outbreak_layoutGrid:
+        text: ""
+      Outbreak_layoutRandom:
+        text: ""
+      Outbreak_setSpeed:
+        text: ""
+      Outbreak_setupOutbreak:
+        text: ""
+      Outbreak_stopMoving:
+        text: ""
+      ParticlesBlocks_getMicroscope:
+        text: ""
+        options:
+          INPUT1:
+            '1': ""
+            '3': ""
+            '5': ""
+      ParticlesBlocks_setMicroscope:
+        text: ""
+        options:
+          INPUT1:
+            '1': ""
+            '3': ""
+            '5': ""
+      ParticlesBlocks_statesOfMatter:
+        text: ""
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): ""
+            new Behavior(liquid, []): ""
+            new Behavior(wandering, []): ""
+      ParticlesBlocks_statesOfMatter2:
+        text: ""
+        options:
+          BEHAVIOR:
+            '"solid"': ' '
+            '"liquid"': ""
+            '"gas"': ""
+      ParticlesBlocks_statesOfMatter_testing:
+        text: ""
+        options:
+          BEHAVIOR:
+            '"solid"': ' '
+            '"liquid"': ""
+            '"gas"': ""
+      Poetry_addFrame:
+        text: ""
+        options:
+          BRUSH:
+            '"bamboo"': ""
+            '"beaded"': ""
+            '"brick"': ""
+            '"decorative"': ""
+            '"donuts"': ""
+            '"fire"': ""
+            '"flowers"': ""
+            '"gilded"': ""
+            '"hearts"': ""
+            '"iceCream"': ""
+            '"leaves"': ""
+            '"metal"': ""
+            '"pawPrints"': ""
+            '"rainbow"': ""
+            '"stars"': ""
+            '"swirls"': ""
+            '"waves"': ""
+            '"wood"': ""
+            '"zigzag"': ""
+      Poetry_addLine:
+        text: ""
+      Poetry_addTextHighlight:
+        text: ""
+      Poetry_animateText:
+        text: ""
+      Poetry_destroy:
+        text: ""
+      Poetry_glideTo:
+        text: ""
+      Poetry_hideText:
+        text: ""
+      Poetry_makeBurst:
+        text: ""
+        options:
+          EFFECT:
+            '"burst"': ""
+            '"pop"': ""
+            '"rain"': ""
+            '"spiral"': ""
+      Poetry_makeNewSpriteAnon:
+        text: ""
+      Poetry_makeNumSprites:
+        text: ""
+      Poetry_playMusic:
+        text: ""
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': ""
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': ""
+            '"sound://category_nature/steady_campfire_loop.mp3"': ""
+            '"sound://category_nature/rain_loop.mp3"': ""
+            '"sound://category_background/fire_burning.mp3"': ""
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': ""
+            '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': ""
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': ""
+            '"sound://category_background/inside_plane.mp3"': ""
+            '"sound://category_loops/red_flag_loop1.mp3"': ""
+            '"sound://category_nature/summer_night_loop.mp3"': ""
+            '"sound://category_background/ocean_waves.mp3"': ""
+            '"sound://category_background/rain_thunderstorm_calm.mp3"': ""
+            '"sound://category_background/rainforest_ambient_sound.mp3"': ""
+            '"sound://category_background/repitition.mp3"': ""
+            '"sound://category_background/wavering_wind.mp3"': ""
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': ""
+            '"sound://category_background/waterfall.mp3"': ""
+      Poetry_playSound:
+        text: ""
+        options:
+          SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': ""
+            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': ""
+            '"sound://category_digital/boing_2.mp3"': ""
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': ""
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': ""
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': ""
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': ""
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': ""
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': ""
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ""
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': ""
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': ""
+            '"sound://category_background/typewriter.mp3"': ""
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': ""
+            '"sound://category_achievements/peaceful_win_1.mp3"': ""
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': ""
+            '"sound://category_achievements/peaceful_win_6.mp3"': ""
+      Poetry_playSoundOptionsSpace:
+        text: ""
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": ""
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": ""
+            "'sound://category_space/Carina_SFX.mp3'": ""
+            "'sound://category_space/Cassiopeia_SFX.mp3'": ""
+            "'sound://category_space/Crab_nebula_SFX.mp3'": ""
+            "'sound://category_space/Galactic_center_SFX.mp3'": ""
+            "'sound://category_space/Launch_SFX.mp3'": ""
+            "'sound://category_space/Lift_Off.mp3'": ""
+            "'sound://category_space/Pillars_SFX.mp3'": ""
+            "'sound://category_space/Southern_ring_SFX.mp3'": ""
+            "'sound://category_space/Supernova_SFX.mp3'": ""
+            "'sound://category_space/Tycho_SFX.mp3'": ""
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": ""
+      Poetry_setAuthor:
+        text: ""
+      Poetry_setBackground:
+        text: ""
+      Poetry_setBackgroundEffect:
+        text: ""
+        options:
+          EFFECT:
+            '"blooming"': ""
+            '"bubbles"': ""
+            '"clouds"': ""
+            '"confetti"': ""
+            '"darkCircles"': ""
+            '"fadeColors"': ""
+            '"hearts"': ""
+            '"space"': ""
+            '"rain"': ""
+            '"ripples"': ""
+            '"colors"': ""
+            '"stars"': ""
+            '"squiggles"': ""
+          PALETTE:
+            '"autumn"': ""
+            '"sunrise"': ""
+            '"sunset"': ""
+            '"grayscale"': ""
+            '"ocean"': ""
+            '"rainbow"': ""
+            '"roses"': ""
+            '"sky"': ""
+            '"spring"': ""
+            '"summer"': ""
+            '"winter"': ""
+      Poetry_setBackgroundImageAs:
+        text: ""
+      Poetry_setFont:
+        text: ""
+        options:
+          FONT:
+            '"Arial"': ""
+            '"Arial Black"': ""
+            '"Courier"': ""
+            '"Cursive"': ""
+            '"Impact"': ""
+            '"Georgia"': ""
+            '"Times"': ""
+      Poetry_setFontColor:
+        text: ""
+      Poetry_setForegroundEffect:
+        text: ""
+        options:
+          EFFECT:
+            '"bubbles"': ""
+            '"confetti"': ""
+            '"hearts"': ""
+            '"emojis"': ""
+            '"rain"': ""
+            '"starburst"': ""
+            '"glass"': ""
+            '"twinkling"': ""
+      Poetry_setPrompt:
+        text: ""
+      Poetry_setPromptWithChoices:
+        text: ""
+      Poetry_setSize:
+        text: ""
+      Poetry_setTextEffect:
+        text: ""
+        options:
+          EFFECT:
+            '"fade"': ""
+            '"flyLeft"': ""
+            '"flyRight"': ""
+            '"flyTop"': ""
+            '"flyBottom"': ""
+            '"typewriter"': ""
+      Poetry_setTitle:
+        text: ""
+      Poetry_showText:
+        text: ""
+      Poetry_startBehavior:
+        text: ' '
+        options:
+          BEHAVIOR:
+            '"fluttering"': ""
+            '"growing"': ""
+            '"jittering"': ""
+            '"moving_north_and_looping"': ""
+            '"moving_south_and_looping"': ""
+            '"moving_east_and_looping"': ""
+            '"moving_west_and_looping"': ""
+            '"shrinking"': ""
+            '"spinning_left"': ""
+            '"spinning_right"': ""
+            '"swimming_left_and_right"': ""
+            '"wandering"': ""
+            '"wobbling"': ""
+      Poetry_stopBehavior:
+        text: ' '
+        options:
+          BEHAVIOR:
+            '"fluttering"': ""
+            '"growing"': ""
+            '"jittering"': ""
+            '"moving_north_and_looping"': ""
+            '"moving_south_and_looping"': ""
+            '"moving_east_and_looping"': ""
+            '"moving_west_and_looping"': ""
+            '"shrinking"': ""
+            '"spinning_left"': ""
+            '"spinning_right"': ""
+            '"swimming_left_and_right"': ""
+            '"wandering"': ""
+            '"wobbling"': ""
+            '"all"': ""
+      Poetry_stringValue:
+        text: ""
+      Poetry_textConcat:
+        text: ""
+      Poetry_textVariableJoin:
+        text: ""
+      Poetry_whenLineShows:
+        text: ""
+        options:
+          'N':
+            '0': ""
+            '1': ''
+            '2': ''
+            '3': ''
+            '4': ''
+            '5': ''
+            '6': ''
+            '7': ''
+            '8': ''
+            '9': ''
+            '10': ''
+            '11': ''
+            '12': ''
+            '13': ''
+            '14': ''
+            '15': ''
+      Poetry_whenPromptAnswered:
+        text: ""
+      RyanLab_moveForward:
+        text: ""
+      RyanLab_readSound:
+        text: ""
+      RyanLab_readToConsole:
+        text: ""
+      RyanLab_turnLeft:
+        text: ""
+      RyanLab_turnRight:
+        text: ""
+      Vector_createSpriteWith:
+        text: |
+          
+      Vector_log:
+        text: ""
+      Vector_positionCenter:
+        text: ""
+      Vector_push:
+        text: ""
+      Vector_randomLocation:
+        text: ""
+      Vector_setColor:
+        text: ""
+      Vector_setSize:
+        text: ""
+      Vector_teleportTo:
+        text: ""
+      Vector_vectorNorth:
+        text: ""
+      Vector_where:
+        text: ""
+        options:
+          PROPERTY:
+            "'shapeColor'": ""
+      aalab_layoutSprites:
+        text: ""
+        options:
+          FORMAT:
+            '"grid"': ""
+            '"border"': ""
+            '"row"': ""
+            '"random"': ""
+      aalab_levelFailure:
+        text: ""
+        options:
+          STATE:
+            '0': ""
+            '3': ""
+      aalab_setSpeed:
+        text: ""
+      aalab_setupSim:
+        text: ""
+      aalab_someGraduallyStartIntervention:
+        text: ""
+        options:
+          PORTION:
+            '1': ""
+            '0.75': ""
+            '0.5': ""
+            '0.25': ""
+          RATE:
+            '"immediately"': ""
+            '"quickly"': ""
+            '"gradually"': ""
+            '"slowly"': ""
+          BEHAVIOR:
+            '"wandering"': ""
+            '"congregating"': ""
+            '"quarantining"': ""
+            '"avoiding"': ""
+            '"none"': ""
+      aalab_someStartIntervention:
+        text: ""
+        options:
+          PORTION:
+            '1': ""
+            '0.75': ""
+            '0.5': ""
+            '0.25': ""
+          BEHAVIOR:
+            '"wandering"': ""
+            '"congregating"': ""
+            '"quarantining"': ""
+            '"avoiding"': ""
+            '"none"': ""
+      aalab_spriteSayChoices:
+        text: ""
+        options:
+          SPEECH:
+            '"I have spoken."': ""
+            '"Bounty hunting is a complicated profession."': ""
+            '"I will initiate self-destruct."': ""
+            '"This is the way."': ""
+            '"People get built different. We don’t need to figure it out, we just need to respect it."': " "
+            '"You don’t need a mirror to look good. You’re beautiful on the inside."': " "
+            '"Sometimes life is scary and dark. That is why we must find the light."': " "
+            '"Everything small is just a smaller version of something big."': ""
+            '"Suckin’ at something is the first step to being sorta good at something."': ""
+            '"Life happens wherever you are, whether you make it or not."': ""
+            '"You can’t knock me down!"': ""
+            '"Roar!"': ""
+            '"My first girlfriend turned into the moon."': ""
+            '"True humility is the only antidote to shame."': ""
+            '"You are stronger and wiser and freer than you have ever been."': ""
+            '"You have to try every time. You can''t quit because you''re afraid you might fail."': " "
+      aalab_startIntervention:
+        text: ""
+        options:
+          BEHAVIOR:
+            wandering: ""
+            '"congregating"': ""
+            '"quarantining"': ""
+            '"avoiding"': ""
+            '"none"': ""
+      adaptations_adaptationBehaviors:
+        text: ""
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): ""
+            new Behavior(spinning_left, []): ""
+            new Behavior(fluttering, []): ""
+            new Behavior(jittering, []): ""
+            new Behavior(wobbling, []): ""
+            new Behavior(wandering, []): ""
+            new Behavior(patrolling, []): ""
+      adaptations_location_picker:
+        text: ""
+      adaptations_makeNumSpritesNear:
+        text: ""
+      adaptations_spriteBirdSay:
+        text: ""
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': ""
+            '"I have a beak like a scoop to catch fish."': ""
+      adaptations_startFollowing:
+        text: ""
+      adaptations_toggleBehaviorSimple:
+        text: ""
+        options:
+          TOGGLE:
+            '"begins"': ""
+            '"stops"': ""
+      binary_drawBin:
+        text: ""
+      binary_drawBinScreen:
+        text: |-
+          
+           
+           
+           
+           
+           
+           
+           
+           
+      binary_drawDec:
+        text: ""
+      binary_drawPixelHere:
+        text: ""
+        options:
+          VAL:
+            '0': ''
+            '1': ''
+            '"toggle"': ""
+      binary_drawString:
+        text: ""
+      binary_goTo:
+        text: ""
+      binary_goToHome:
+        text: ""
+      binary_gridSize:
+        text: ""
+      binary_move:
+        text: ""
+        options:
+          DIR:
+            '"up"': ""
+            '"down"': ""
+            '"left"': ""
+            '"right"': ""
+      binary_whenKey:
+        text: ""
+        options:
+          KEY:
+            '"up"': ""
+            '"down"': ""
+            '"left"': ""
+            '"right"': ""
+            '"space"': ""
+            '"a"': ""
+            '"w"': ""
+            '"s"': ""
+            '"d"': ""
+      craft_ifPath:
+        text: |
+          
+        options:
+          DIR:
+            "'ahead'": ""
+            "'right'": ""
+            "'left'": ""
+      craft_ifStandingOn:
+        text: |
+          
+        options:
+          TYPE:
+            "'blueCoralBlock'": ""
+            "'redCoralBlock'": ""
+            "'sand'": ""
+            "'wool_blue'": ""
+            "'planksOak'": ""
+            "'seaLantern'": ""
+      craft_ifStandingOnLimit:
+        text: |
+          
+        options:
+          TYPE:
+            "'sand'": ""
+            "'darkPrismarine'": ""
+            "'seaLantern'": ""
+      craft_log:
+        text: ""
+      craft_moveForward:
+        text: ""
+      craft_placeBlock:
+        text: ""
+        options:
+          blockType:
+            '"strippedOak"': ""
+            '"strippedDarkOak"': ""
+            '"stoneBricks"': ""
+            '"mossyStoneBricks"': ""
+            '"crackedStoneBricks"': ""
+            '"chiseledStoneBricks"': ""
+            '"blueCoralBlock"': ""
+            '"pinkCoralBlock"': ""
+            '"magentaCoralBlock"': ""
+            '"redCoralBlock"': ""
+            '"yellowCoralBlock"': ""
+            '"blueDeadCoralBlock"': ""
+            '"pinkDeadCoralBlock"': ""
+            '"magentaDeadCoralBlock"': ""
+            '"readDeadCoralBlock"': ""
+            '"yellowDeadCoralBlock"': ""
+            '"prismarine"': ""
+            '"darkPrismarine"': ""
+            '"seaLantern"': ""
+            '"packedIce"': ""
+            '"blueIce"': ""
+            '"blackConcrete"': ""
+            '"seaGrass"': ""
+            '"kelp"': ""
+            '"polishedGranite"': ""
+      craft_placePrismarine:
+        text: ""
+      craft_placeTorch:
+        text: ""
+      craft_repeatUntilConduit:
+        text: |
+          
+      craft_repeatUntilGoal:
+        text: |
+          
+      craft_spawnEntity:
+        text: ""
+        options:
+          ENTITY:
+            '"cod"': ""
+            '"dolphin"': ""
+            '"salmon"': ""
+            '"seaTurtle"': ""
+            '"squid"': ""
+            '"tropicalFish"': ""
+      craft_turn:
+        text: ""
+        options:
+          DIR:
+            right: ""
+            left: ""
+      ecosystems_catchMe:
+        text: ""
+      ecosystems_eat:
+        text: ""
+      ecosystems_goldilocks:
+        text: |
+           
+        options:
+          CONDITION:
+            '"too much"': ""
+            '"just right"': ""
+            '"too little"': ""
+      ecosystems_int10:
+        text: ""
+        options:
+          VALUE:
+            '0': ''
+            '1': ''
+            '2': ''
+            '3': ''
+            '4': ''
+            '5': ''
+            '6': ''
+            '7': ''
+            '8': ''
+            '9': ''
+            '10': ''
+      ecosystems_location_picker:
+        text: ""
+      ecosystems_makeNewSpriteBetween:
+        text: ''
+      ecosystems_makeNumSpritesAtLocation:
+        text: ""
+      ecosystems_makeNumSpritesWithinRange:
+        text: ""
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": ""
+            "{x1:0, x2:400, y1:150, y2:250}": ""
+            "{x1:0, x2:400, y1:0, y2:200}": ""
+      ecosystems_randomLocationWithinRange:
+        text: ""
+      ecosystems_randomLocationWithinSelectedRange:
+        text: ""
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": ""
+            "{x1:0, x2:400, y1:0, y2:200}": ""
+      storylab_clearHeadings:
+        text: ""
+      storylab_printText:
+        text: ""
+      storylab_setForegroundEffect2:
+        text: ""
+        options:
+          EFFECT:
+            '"bubbles"': ""
+            '"confetti"': ""
+            '"hearts"': ""
+            '"rain"': ""
+            '"starburst"': ""
+            '"twinkling"': ""
+      storylab_setHeading:
+        text: ""
+      storylab_setPromptWithChoice:
+        text: ""
+      storylab_setSubheading:
+        text: ""
+      transformers_playSoundOptions:
+        text: ""
+        options:
+          SOUND:
+            "'sound://category_transformers/transforming1.mp3'": ""
+            "'sound://category_transformers/transforming2.mp3'": ""
+            "'sound://category_transformers/transforming3.mp3'": ""
+            "'sound://category_transformers/transforming4.mp3'": ""
+            "'sound://category_transformers/transforming5.mp3'": ""
+            "'sound://category_transformers/transforming6.mp3'": ""
+            "'sound://category_transformers/transforming7.mp3'": ""
+            "'sound://category_transformers/transforming8.mp3'": ""
+            "'sound://category_transformers/transforming9.mp3'": ""
+            "'sound://category_transformers/transforming10.mp3'": ""
+            "'sound://category_transformers/transforming11.mp3'": ""
+            "'sound://category_transformers/transforming12.mp3'": ""
+            "'sound://category_transformers/transforming13.mp3'": ""
+            "'sound://category_transformers/transforming14.mp3'": ""
+            "'sound://category_transformers/transforming15.mp3'": ""
+      transformers_setAllTransformersSize:
+        text: ""
+        options:
+          SIZE:
+            '0': ""
+            '0.50': ""
+            '0.75': ""
+            '1.00': ""
+            '2.00': ""
+      transformers_setTransformersSize:
+        text: ""
+        options:
+          SIZE:
+            '0': ""
+            '0.50': ""
+            '0.75': ""
+            '1.00': ""
+            '2.00': ""
