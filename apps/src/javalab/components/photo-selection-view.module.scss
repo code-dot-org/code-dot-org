@@ -1,0 +1,24 @@
+@import 'color';
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: $black;
+}
+
+.camera {
+  font-size: 48px;
+}
+
+.prompt {
+  color: $white;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.hiddenInput {
+  opacity: 0;
+}
