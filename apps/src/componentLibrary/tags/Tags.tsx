@@ -51,7 +51,6 @@ const Tags: React.FunctionComponent<TagsProps> = ({
         ariaLabel={ariaLabel}
         icon={icon}
         tooltipContent={tooltipContent}
-        size={size}
       />
     ))}
   </div>

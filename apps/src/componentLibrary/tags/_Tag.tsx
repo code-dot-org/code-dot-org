@@ -1,6 +1,5 @@
 import React, {memo} from 'react';
 
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 
@@ -32,8 +31,6 @@ export interface TagProps {
    *  Icon object consists of icon(icon name/style, title for screenReader,
    *  and the placement of the icon (left or right))*/
   icon?: TagIconProps;
-  /** Tag size. (Currently used for setting tooltip size) */
-  size?: Exclude<ComponentSizeXSToL, 'xs'>;
 }
 
 const Tag: React.FunctionComponent<TagProps> = ({
@@ -41,7 +38,6 @@ const Tag: React.FunctionComponent<TagProps> = ({
   tooltipContent,
   tooltipId,
   icon,
-  size,
 }) => {
   return (
     <WithTooltip
@@ -49,7 +45,6 @@ const Tag: React.FunctionComponent<TagProps> = ({
         direction: 'onTop',
         text: tooltipContent,
         tooltipId,
-        size,
       }}
     >
       <div
