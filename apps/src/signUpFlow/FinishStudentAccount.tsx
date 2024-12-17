@@ -129,6 +129,11 @@ const FinishStudentAccount: React.FunctionComponent<{
       PLATFORMS.BOTH
     );
     const newIsParentCheckedChoice = !isParent;
+    // If the user unchecks the parent checkbox, clear the parent email field
+    if (!newIsParentCheckedChoice) {
+      setParentEmail('');
+      setShowParentEmailError(false);
+    }
     setIsParent(newIsParentCheckedChoice);
   };
 
