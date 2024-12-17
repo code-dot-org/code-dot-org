@@ -50,16 +50,18 @@ export default class AnimationPreview extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
+    // Only start/stop animations via focus if there is no playBehavior set.
+    // The playBehavior props sets the animation to always play or never play.
     if (
       !prevProps.isFocused &&
       this.props.isFocused &&
-      this.props.playBehavior !== PlayBehavior.NEVER_PLAY
+      !this.props.playBehavior
     ) {
       this.advanceFrame();
     } else if (
       prevProps.isFocused &&
       !this.props.isFocused &&
-      this.props.playBehavior !== PlayBehavior.NEVER_PLAY
+      !this.props.playBehavior
     ) {
       this.stopAndResetAnimation();
     }
