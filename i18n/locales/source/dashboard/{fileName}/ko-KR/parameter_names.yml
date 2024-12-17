@@ -1,0 +1,25 @@
+---
+en:
+  data:
+    parameter_names:
+      "???": "???"
+      actor: 배우
+      color: 색상
+      counter: 카운터
+      dir: Dir
+      direction: 방향
+      height: 높이
+      honey: 달콤한
+      left: 왼쪽
+      length: 길이
+      min: min
+      nectar units: 넥타어 유닛
+      nectars: 넥타
+      numOctagons: numOctagons
+      points: 포인트
+      radius: 라디오
+      sides: 측면
+      size: 크기
+      speed: 속도
+      theGuess: TheGuess
+      width: 폭
