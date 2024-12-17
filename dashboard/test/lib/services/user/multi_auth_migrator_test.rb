@@ -17,22 +17,62 @@ class Services::User::MultiAuthMigratorTest < ActiveSupport::TestCase
     context 'when already migrated' do
       let(:provider) {'migrated'}
 
-      it 'returns true' do
+      it 'is still migrated' do
         _(migrate).must_equal true
+        _(user.migrated?).must_equal true
       end
     end
 
     context 'when sponsored' do
       let(:provider) {'sponsored'}
 
-      it 'is still sponsored' do
+      it 'is migrated and still sponsored' do
         migrate
+        _(user.migrated?).must_equal true
         _(user.sponsored?).must_equal true
       end
 
       it 'does not add an auth option' do
         migrate
         _(user.authentication_options).must_be_empty
+      end
+    end
+
+    context 'when Google' do
+      let(:user) {build(:user, :google_sso_provider)}
+
+      it 'migrates the user' do
+        migrate
+        _(user.migrated?).must_equal true
+      end
+
+      it 'creates the correct auth option' do
+        migrate
+        _(user.authentication_options.first.credential_type).must_equal AuthenticationOption::GOOGLE
+        _(user.authentication_options.first.data).wont_be_nil
+      end
+
+      it 'sets legacy auth fields to nil' do
+        migrate
+        _(user.uid).must_be_nil
+        _(user.oauth_token).must_be_nil
+        _(user.oauth_token_expiration).must_be_nil
+        _(user.oauth_refresh_token).must_be_nil
+      end
+    end
+
+    context 'when Clever' do
+      let(:user) {build(:user, :clever_sso_provider)}
+
+      it 'migrates the user' do
+        migrate
+        _(user.migrated?).must_equal true
+      end
+
+      it 'creates the correct auth option' do
+        migrate
+        _(user.authentication_options.first.credential_type).must_equal AuthenticationOption::CLEVER
+        _(user.authentication_options.first.data).wont_be_nil
       end
     end
 
