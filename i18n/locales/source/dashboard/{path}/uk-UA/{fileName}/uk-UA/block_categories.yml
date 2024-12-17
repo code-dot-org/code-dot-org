@@ -1,0 +1,40 @@
+---
+en:
+  data:
+    block_categories:
+      Actions: Дії
+      Advanced: Розширений
+      Behaviors: Поведінка
+      'Behaviors ': 'Поведінка '
+      Brushes: Пензлі
+      Category: Категорія
+      Color: Колір
+      Comment: Коментар
+      Comments: Коментарі
+      Conditionals: Умови
+      Dancers: Танцюристи
+      Default: За замовчуванням
+      Effects: Ефекти
+      Events: Події
+      Functions: Функції
+      'Functions ': 'Функції '
+      Game/Score: Гра/Рахунок
+      Games/Score: Ігри/Рахунок
+      Groups: Групи
+      Input: Вхід
+      Location: Місцезнаходження
+      Locations: Місця
+      Logic: Логіка
+      Loops: Цикли
+      Math: Математика
+      Numbers: Числа
+      Picker: Вибірник
+      Prebuilt: Попередньо зібраний
+      Properties: Властивості
+      Shapes: Форми
+      Sprites: Спрайти
+      Text: Текст
+      Variables: Змінні
+      'Variables ': 'Змінні '
+      'Variables  ': 'Змінні  '
+      World: Світ
