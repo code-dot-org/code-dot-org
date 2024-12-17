@@ -291,14 +291,13 @@ module Pd
       'CSA'
     ]
 
-    PARTICIPANT_GROUP_TYPES = {
-      DISTRICT: 'District',
-      MULTI_DISTRICT: 'Multi-district',
-      REGIONAL: 'Regional',
-      NATIONAL: 'National',
-      FACILITATOR: 'Facilitator',
-      TRAIN_TRAINER: 'Train the trainer',
-      OTHER: 'Other'
-    }
+    PARTICIPANT_GROUP_TYPES = [
+      'District',
+      'Multi-district',
+      'Regional',
+      'National',
+      'Facilitator',
+      'Train the trainer'
+    ].freeze
   end
 end

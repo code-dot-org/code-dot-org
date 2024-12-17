@@ -36,6 +36,7 @@ import {
   VirtualOnlySubjects,
   NotFundedSubjects,
   MustSuppressEmailSubjects,
+  ParticipantGroupTypes,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
@@ -61,7 +62,6 @@ import CourseSelect from './CourseSelect';
 import FacilitatorListFormPart from './facilitator_list_form_part';
 import ModuleSelect from './ModuleSelect';
 import OrganizerFormPart from './organizer_form_part';
-import ParticipantGroupTypeSelect from './ParticipantGroupTypeSelect';
 import SessionListFormPart from './session_list_form_part';
 import SubjectSelect from './SubjectSelect';
 
@@ -1074,7 +1074,7 @@ export class WorkshopForm extends React.Component {
           validation.style.name = 'error';
           validation.help.name = 'Required.';
         }
-        if (this.state.participant_group_type === '') {
+        if (!this.state.participant_group_type) {
           validation.isValid = false;
           validation.style.participant_group_type = 'error';
           validation.help.participant_group_type = 'Required.';
@@ -1144,13 +1144,30 @@ export class WorkshopForm extends React.Component {
                 </FormGroup>
               </Col>
               <Col sm={4}>
-                <ParticipantGroupTypeSelect
-                  participantGroupType={this.state.participant_group_type}
-                  validation={validation}
-                  readOnly={this.props.readOnly}
-                  inputStyle={this.getInputStyle()}
-                  onChange={this.handleFieldChange}
-                />
+                <FormGroup
+                  validationState={validation.style.participant_group_type}
+                >
+                  <ControlLabel>Participant Group Type</ControlLabel>
+                  <FormControl
+                    id="participant-group-type"
+                    name="participant_group_type"
+                    componentClass="select"
+                    value={this.state.participant_group_type}
+                    onChange={this.handleFieldChange}
+                    style={this.getInputStyle()}
+                    disabled={this.props.readOnly}
+                  >
+                    {this.state.participant_group_type ? null : <option />}
+                    {ParticipantGroupTypes.map((groupType, i) => (
+                      <option key={i} value={groupType}>
+                        {groupType}
+                      </option>
+                    ))}
+                  </FormControl>
+                  <HelpBlock>
+                    {validation.help.participant_group_type}
+                  </HelpBlock>
+                </FormGroup>
               </Col>
             </Row>
           )}
