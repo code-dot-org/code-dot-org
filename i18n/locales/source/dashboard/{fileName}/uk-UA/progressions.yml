@@ -1,0 +1,835 @@
+---
+en:
+  data:
+    progressions:
+      '"If/Else" with the Bee': '"Якщо/Інакше" з Бджолою'
+      "(Optional) Eliza Widget": "(Необов'язково) Віджет Елізи"
+      "(Optional) GAN Guess Widget": "(Необов'язково) Віджет здогадок GAN"
+      8-Bit Binary Number Widget: Віджет 8-бітного двійкового числа
+      AI Lab and Isaac's Data: Лабораторія штучного інтелекту та дані Айзека
+      AI Lab and Kim's Data: Лабораторія штучного інтелекту та дані Кіма
+      AI Machine Learning - Video: Машинне навчання ШІ - відео
+      'AI for Oceans: Fish vs Not Fish': 'ШІ для океанів: Риба vs не риба'
+      'AI for Oceans: Types of Fish': 'ШІ для океанів: Види риб'
+      'AI: Impact on Society - Video': 'ШІ: Вплив на суспільство - відео'
+      'AI: Training Data & Bias - Video': 'ШІ: Навчальні дані та упередженість - відео'
+      Accelerometer Events: Події з акселерометром
+      Add Content and HTML: Додавання вмісту та HTML
+      Add Content and Structure to Your Page: Додайте вміст і структуру до своєї сторінки
+      Add Movement: Додати рух
+      Add Sprites: Додавання спрайтів
+      Add Style: Додати стиль
+      Add Style to Your Page: Додайте стиль до своєї сторінки
+      Add Style to Your User's Page: Додавання стилю на сторінку користувача
+      Add Text: Додати текст
+      Add a Welcome Screen: Додавання вітального екрану
+      Adding Images: Додавання зображень
+      Adding New Screens: Додавання нових екранів
+      Adding Pages: Додавання сторінок
+      Adding Screens: Додавання екранів
+      Alien Defender: Чужий захисник
+      Alternative Datasets: Альтернативні набори даних
+      Analog Sensors: Аналогові датчики
+      Animate Your Scene: Анімуйте свою сцену
+      Animating Sprites: Анімаційні спрайти
+      Animation and Game Templates: Анімаційні та ігрові шаблони
+      App Lab Intro - Video: Вступ до App Lab - Відео
+      'App Project: Bugs and Features': 'Проект "Додаток": Баги та особливості'
+      'App Project: Linking Screens': 'Проект "Додаток": Екрани зв''язування'
+      'App Project: Screen Design': 'Проект "Додаток": Дизайн екрану'
+      'App Project: Screen Import': 'Проект "Додаток": Імпорт екрану'
+      'App: Choose a Kid''s Movie': 'Додаток: Оберіть дитячий фільм'
+      'App: Friend Finder': 'Додаток: Пошук друзів'
+      'App: Guess the Number': 'Додаток: Вгадай число'
+      'App: How Many Countries': 'Додаток: Скільки країн'
+      'App: Improved Pet App': 'Додаток: Покращений додаток для домашніх улюбленців'
+      'App: Is It Your Birthday?': 'Додаток: У тебе день народження?'
+      'App: My Famous Birthday': 'Додаток: Мій знаменитий день народження'
+      'App: National Parks': 'Додаток: Національні парки'
+      'App: Outfit Picker': 'Додаток: Підбирач екіпіровки'
+      'App: Pet Chooser': 'Додаток: Вибір домашнього улюбленця'
+      'App: Stamp Notebook': 'Додаток: Блокнот для марок'
+      'App: Story Creator': 'Додаток: Творець історій'
+      'App: The Fastest Finger': 'Додаток: Найшвидший палець'
+      'App: Where Should I Live?': 'Додаток: Де мені жити?'
+      Arrays: Масиви
+      Artist Intro with JR Hildebrand: Вступне слово артиста з JR Hildebrand
+      Artist Intro with JR Hildebrande: Вступне слово артиста з JR Hildebrande
+      Artist Project: Мистецький проект
+      'Artist: Variables': 'Художник: Змінні'
+      Assessment: Оцінка
+      Assessment Level: Рівень оцінювання
+      Attribution: Атрибуція
+      Back and Forth: Вперед і назад
+      Balance an Ecosystem: Збалансувати екосистему
+      Basic Conditionals: Базові умовні речення
+      Bass, Mid, and Treble: "Низькі, середні та високі частоти"
+      Be a Super Digital Citizen: Будьте суперцифровим громадянином
+      Begin planning your project: Почніть планувати свій проект
+      Begin planning your project_2018: Почніть планувати свій проект_2018
+      Behaviors: Поведінка
+      Binary Bracelets - Student Resources: Бінарні браслети - Ресурси для студентів
+      Binary Bracelets - Unplugged Activity: Бінарні браслети - активність без розетки
+      Binary Number Widget: Віджет двійкових чисел
+      Binary Numbers: Двійкові числа
+      Binary and Data: Двійкові та дані
+      Blank Space Stories - Student Resources: Історії про порожній простір - Студентські ресурси
+      Board Events: Події правління
+      Board Input and Output: Вхід і вихід плати
+      Book Recommender App: "Додаток \"Книжкові рекомендації"
+      Book Recommender Model Card: Модельна картка книжкової рекомендації
+      Book Summary: Короткий зміст книги
+      Boolean Comparison: Булеве порівняння
+      Booleans and Comparison Operators: Булеві оператори та оператори порівняння
+      Build a Platform Jumper: Створіть перемичку для платформи
+      Build a Screen: Створіть екран
+      Building a UI with Design Mode: Створення інтерфейсу з режимом проектування
+      Building an App: Створення програми
+      'Bunny ': 'Зайчик. '
+      Bunny Jumper: Зайчик-стрибунець
+      Button Circuits: Кнопкові схеми
+      Buttons and Switch: Кнопки та перемикач
+      COCO Dataset: Набір даних COCO
+      CS Discoveries Post-Course Survey: Опитування після завершення курсу CS Discoveries
+      CS Discoveries Post-course Survey: Опитування після завершення курсу CS Discoveries
+      CSD U3 Interactive Card Exemplar: Зразок інтерактивної картки CSD U3
+      CSD U3 platform intro: Вступ до платформи CSD U3
+      'CSD: For Loop': 'CSD: Для Loop'
+      CSS Classes: Класи CSS
+      CSS Text Properties: Властивості тексту CSS
+      CSS and Style Sheets: CSS та таблиці стилів
+      Cake Defender: Захисник для тортів
+      Cake Survey: Опитування про торти
+      Captioned Scene Example: Приклад сцени з субтитрами
+      'Career Explorations: The Sports Industry': 'Дослідження кар''єри: Спортивна індустрія'
+      'Career Spotlight: Creative Technologist': 'Кар''єра в центрі уваги: Креативний технолог'
+      'Career Spotlight: Healthcare': 'Кар''єра в центрі уваги: Охорона здоров''я'
+      Challenge: Виклик
+      Challenge Levels: Рівні виклику
+      Challenge/Practice: Виклик/практика
+      'Challenge: Add More Inputs': 'Виклик: Додайте більше матеріалів'
+      'Challenge: Checking for Multiple Conditions': 'Виклик: Перевірка на наявність декількох умов'
+      'Challenge: Draw an Image': 'Виклик: Намалюй зображення'
+      'Challenge: Extend Your Scene': 'Виклик: Розширюйте свою сцену'
+      'Challenge: Lists': 'Виклик: Списки'
+      'Challenge: Making Sense of Sensors': 'Виклик: Як зрозуміти сенс датчиків'
+      'Challenge: RGB Colors': 'Виклик: Кольори RGB'
+      'Challenge: Updating Variables': 'Виклик: Оновлення змінних'
+      Challenges: Виклики
+      Change: Зміна
+      Change a sound: Змінити звук
+      Changing Screens: Зміна екранів
+      Changing Sensor Scale: Зміна шкали датчика
+      Check For Understanding: Перевірте розуміння
+      Check Your Work: Перевірте свою роботу
+      Check for Understanding: Перевірте розуміння
+      Check-In Survey: Опитування при реєстрації
+      Checking for a Winner: Перевірка переможця
+      Choice: Вибір
+      'Choice Level: Add Effects': 'Рівень вибору: Додавання ефектів'
+      'Choice Levels: Customize Your App': 'Рівні вибору: Налаштуйте свій додаток'
+      Choose Your Own Adventure: Обери свою власну пригоду
+      Choosing Good IDs: Вибір хороших ідентифікаторів
+      'Circuit Playground: Buzzer': 'Круговий ігровий майданчик: Дзвінок.'
+      'Circuit Playground: Color LEDs': 'Круговий ігровий майданчик: Кольорові світлодіоди'
+      'Circuit Playground: Introduction': 'Круговий ігровий майданчик: Вступ'
+      'Circuit Playground: LEDs': 'Круговий ігровий майданчик: Світлодіоди'
+      Circuits and Logic: Схеми та логіка
+      Club Datasets: Клубні набори даних
+      Code My Poem: Зашифруй мій вірш
+      Code Prediction: Кодове передбачення
+      Code Your Own Flappy Game: Створіть свою власну гру
+      Code Your Page: Закодуйте свою сторінку
+      Coding with Algorithms and Sequences: Кодування за допомогою алгоритмів та послідовностей
+      Coding with Conditionals: Кодування з використанням умовних знаків
+      Coding with Loops: Кодування за допомогою циклів
+      Collector Game: Гра для колекціонерів
+      Collision Detection: Виявлення зіткнень
+      Collision Detection Review: Огляд виявлення зіткнень
+      Collisions: Зіткнення
+      Collisions in Games: Зіткнення в іграх
+      Color LEDs: Кольорові світлодіоди
+      Combining Projects: "Об'єднання проектів"
+      Combining Representations: "Об'єднання представництв"
+      'Conditionals with Cards - Student Resources ': 'Умови з картками - Ресурси для студентів '
+      Conditionals with Cards - Unplugged Activity: Умовні речення з картками - непідключена діяльність
+      Conditionals with Cards - Video: Умовні речення з картками - відео
+      'Conditionals: If Statements': 'Умовно: Якщо Висловлювання'
+      'Conditionals: If and If/Else Statements': 'Умовно: Оператори If та If/Else'
+      Continuing your CS Journey: Продовження вашої подорожі CS
+      Control Your Player: Керування програвачем
+      Course E Artist Project: Курс E Художній проект
+      Course E Sprite Lab Project: Лабораторний проект з курсу E Sprite
+      'Course E: Play Lab Project': 'Курс Е: Проект Play Lab'
+      Course F Artist Project: Курс F Художній проект
+      Course F Sprite Lab Project: Лабораторний проект зі спрайтів курсу F
+      'Course F: Artist Project': 'Курс F: Мистецький проект'
+      'Course F: Artist Project - Revise': 'Курс F: Художній проект - Перегляд'
+      'Course F: Play Lab Project': 'Курс F: Проект Play Lab'
+      'Course F: Play Lab Project - Revise': 'Курс F: Проект Play Lab - Перегляд'
+      Crack Random Substitution: Випадкова заміна тріщин
+      Crack a Caesar Cipher: Розгадати шифр Цезаря
+      Create Your Own Animation: Створіть власну анімацію
+      Create Your Robot Face: Створіть своє обличчя робота
+      Create Your Sprites: Створюйте свої спрайти
+      Create a Background: Створіть фон
+      Create a Google Form: Створіть Google форму
+      Create a Story: Створіть історію
+      Create an App in App Lab: Створіть додаток в App Lab
+      Create your project: Створіть свій проект
+      Creating Sprites: Створення спрайтів
+      Creative Commons Search: Пошук на Вікісховищі
+      Creativity + Code with Event-based Programs: Творчість + код з програмами на основі подій
+      Cropping Widget: Віджет обрізання
+      Custom notes & beats: Користувацькі ноти та біти
+      Customize: Налаштувати
+      Customize Your App: Налаштуйте свій додаток
+      Customizing Sprites: Налаштування спрайтів
+      Customizing Your App: Налаштування програми
+      Dance Crews: Танцювальні колективи
+      Data Visualization: Візуалізація даних
+      De-bugging with the Step Button: "Деактивація прослуховування за допомогою кнопки \"Крок"
+      Debugging: Налагодження
+      Debugging with Watchers: Налагодження за допомогою спостерігачів
+      Debugging with the Step Button: "Налагодження за допомогою кнопки \"Крок"
+      Demo - Bug Grab: Демонстрація - Захоплення помилок
+      'Demo App: Interactive Card': 'Демо-додаток: Інтерактивна картка'
+      Demo Apps: Демонстраційні програми
+      Design Mode: Режим проектування
+      Design Mode Elements: Елементи режиму проектування
+      Design Your Game: Створіть свою гру
+      Design Your Prototype: Створіть свій прототип
+      Design a Screen for your App: Створіть екран для свого додатку
+      Design an AI App - AI Lab: Створіть додаток зі штучним інтелектом - AI Lab
+      Design an AI App - App Lab: Створіть додаток зі штучним інтелектом - App Lab
+      Designing Screens with Code: Проектування екранів за допомогою коду
+      Designing for Accessibility: Проектування для доступності
+      Designing for Accessibility - Student Discussion: Проектування для доступності - студентська дискусія
+      Digital Sharing - Discussion Questions: Цифровий обмін - питання для обговорення
+      Digital Sharing - Unplugged Activity: Цифровий обмін - активність без розетки
+      Digital Sharing - Video: Цифровий обмін - Відео
+      Div & Flex Exploration: Div & Flex Exploration
+      Dogger Example: Приклад догера
+      Draw Your Background: Намалюйте свій фон
+      Draw a Background: Намалюйте фон
+      Drawing: Малюнок
+      Drawing Shapes: Малювання фігур
+      Driver Alert System: Система оповіщення водія
+      Ecosystems Simulation: Моделювання екосистем
+      Ecosystems Video: Відео про екосистеми
+      Editing Images: Редагування зображень
+      Emotion Machine Example: Приклад машини емоцій
+      End of Course Projects: Проекти на завершення курсу
+      End-Of-Unit Assessment: Кінцева оцінка роботи підрозділу
+      End-Of-Unit Survey: Опитування в кінці роботи підрозділу
+      End-of-Unit Survey: Кінцеве опитування підрозділу
+      Escape Room Example: Приклад квест-кімнати
+      Ethics Exploration: Дослідження етики
+      Event Types: Типи подій
+      Events: Події
+      Events Challenge: Виклик подій
+      Events and Linking Screens: "Екрани подій та зв'язків"
+      Events and Properties: Події та властивості
+      Example: Приклад
+      Example Animated Scene: Приклад анімованої сцени
+      Example App Types: Приклади типів додатків
+      'Example App: Zoo Classification': 'Приклад програми: Класифікація зоопарків'
+      Example Apps: Приклади програм
+      Example Projects: Приклади проектів
+      Example projects: Приклади проектів
+      Exemplar Personal Websites: Зразкові персональні веб-сайти
+      Expanding Personal Website: Розширення персонального сайту
+      Expanding Your Website: Розширення вашого веб-сайту
+      Experiment with Web Lab: Експериментуйте з Web Lab
+      Exploration: Розвідка
+      Exploration Level: Рівень розвідки
+      Exploration level: Рівень розвідки
+      'Exploration: Adding Style': 'Розвідка: Додавання стилю'
+      'Exploration: Clicker Game': 'Розвідка: Гра-клікер'
+      'Exploration: For Loops': 'Розвідка: Для петель'
+      'Exploration: Rikki''s Poster': 'Розвідка: Постер Ріккі'
+      'Exploration: Sample Apps': 'Розвідка: Приклади програм'
+      'Exploration: Sample Programs': 'Розвідка: Приклади програм'
+      'Exploration: Sample Project': 'Розвідка: Приклад проекту'
+      Explore HTML: Вивчення HTML
+      Explore a Digital Book Cover Example: Ознайомтеся з прикладом обкладинки цифрової книги
+      Explore!: Досліджуйте!
+      Exploring CS in Entertainment: Вивчаємо CS у сфері розваг
+      Exploring more CSS: Вивчаємо більше про CSS
+      Extension choices: Варіанти розширення
+      Extra: Додатково
+      Extra Challenge: Додатковий виклик
+      'Extra Challenge: Sound Board': 'Додатковий виклик: Звукова дошка'
+      Field Collector App: Додаток для польового збирача
+      Final Dance Party Project: Фінальний проект танцювальної вечірки
+      Final Personal Website: Остаточний персональний веб-сайт
+      Final Project: Фінальний проект
+      Final Room Escape App: Додаток для втечі з фінальної кімнати
+      Find the Wizard: Знайти чарівника
+      Finish a Screen: Завершити екран
+      Finish the Prototype: Завершити роботу над прототипом
+      Finishing Functions: Фінішні функції
+      Finishing Touches: Останні штрихи
+      Flyer Game: Гра з флаєрами
+      Flyer Game Example: Приклад гри з флаєрами
+      Follow the Algorithm - Unplugged Activity: Дотримуйтесь алгоритму - відключена активність
+      Follow the Mouse: Слідкуйте за мишкою
+      Fonts and Style: Шрифти та стиль
+      Food Chain Setup: Налаштування харчового ланцюга
+      FoodFight: FoodFight
+      For Loop Fun - Unplugged Activity: Для циклічних розваг - активності без розетки
+      For Loops: Для петель
+      For Loops and Color LEDs: Для петель і кольорових світлодіодів
+      For Loops and Repeat Blocks: Для циклів і блоків повторів
+      Formatting HTML: Форматування HTML
+      Free Play: Вільна гра
+      Free Play - Landmarks: Вільна гра - орієнтири
+      'Free Play: Make a Scene': 'Вільна гра: Зробіть сцену'
+      'Free Play: Make an Interactive Scene': 'Вільна гра: Створіть інтерактивну сцену'
+      From Data to Visualization: Від даних до візуалізації
+      Fruit and Veggie Explorer: Дослідник фруктів та овочів
+      Functions: Функції
+      Functions Review: Огляд функцій
+      Functions with Parameters: Функції з параметрами
+      Garden Image Files: Файли зображень саду
+      Geometric Sun: Геометричне сонце
+      Get In Formation: Станьте в стрій
+      Getters and Setters: Отримувачі та отримувачі
+      Getting Loopy - Student Handout: Getting Loopy - роздатковий матеріал для студентів
+      Getting Properties: Отримання властивостей
+      Graph Paper Programming - Student Resources: Програмування на графічному папері - Ресурси для студентів
+      Graph Paper Programming - Unplugged Activity: Програмування на графічному папері - діяльність без підключення до мережі
+      Graph Paper Programming - Video: Програмування на графічному папері - відео
+      Green Glass Door: Зелені скляні двері
+      Guess The Number: Вгадай число
+      HTML Tags: Теги HTML
+      Happy Loops - Student Resources: Happy Loops - Студентські ресурси
+      Happy Loops - Unplugged Activity: Happy Loops - активність без розетки
+      'Happy Maps - Student Resources ': 'Happy Maps - Студентські ресурси '
+      Hardware and Software: Апаратне та програмне забезпечення
+      Hardware and Software Skits - Student Reminder: "Апаратне та програмне забезпечення - пам'ятка для студентів"
+      Headings: Заголовки
+      Headings in HTML: Заголовки в HTML
+      Hello World: "Привіт, світ."
+      How to Create a Simple Function: Як створити просту функцію
+      How to Make a Sprite: Як зробити спрайт
+      Human Device Interaction: Взаємодія людини з пристроєм
+      Hyperlinks: Гіперпосилання
+      Ice Age Loops: Петлі льодовикового періоду
+      If Statements: Якщо Висловлювання
+      If-Else Statements: Оператори умовного переходу If-Ese
+      If... then... Conditional Statements: Якщо... то... Умовні оператори
+      Images and Sounds: Зображення та звуки
+      Images in HTML: Зображення в HTML
+      Import Your Model: Імпортуйте свою модель
+      Import a Model: Імпортувати модель
+      Importing Screens: Імпорт екранів
+      Importing Your Model: Імпорт вашої моделі
+      Improve Your Game: Покращуйте свою гру
+      Improved Shoe Recommender: Покращена рекомендація щодо взуття
+      Incorporate Feedback: "Включити зворотній зв'язок"
+      Innovation Research: Інноваційні дослідження
+      Input Examples: Приклади вхідних даних
+      Input with If-Else: Введення з допомогою If-Else
+      Inspiration!: Натхнення!
+      InspirationalArtwork: InspirationalArtwork
+      Interactive Art: Інтерактивне мистецтво
+      Interactive Card: Інтерактивна картка
+      Interactive Card Examples: Приклади інтерактивних карток
+      Interactive Characters: Інтерактивні персонажі
+      Interactive Maps Intro Video: Вступне відео про інтерактивні карти
+      Interactive Pet: Інтерактивний домашній улюбленець
+      Intro: Вступ
+      Intro Video: Вступне відео
+      Intro to Design Mode: Вступ до режиму проектування
+      Intro to Flyer Game: "Вступ до гри \"Флаєр"
+      Intro to For Loops: Вступ до циклів For
+      Intro to Side Scrollers: Вступ до бічних скролерів
+      Intro to Sprites: Вступ до спрайтів
+      Intro to Variables: Вступ до змінних
+      Introducing Events: Представляємо події
+      Introducing Sprite Lab: Представляємо Sprite Lab
+      Introduction: Вступ
+      Introduction to Arrays: Вступ до масивів
+      Introduction to Game Lab: Вступ до Game Lab
+      Introduction to Variables: Вступ до змінних
+      Introduction to Variables - Part 1: Вступ до змінних - Частина 1
+      Investigate: Розслідувати
+      Isaac's Survey Data: Дані опитування Айзека
+      Iteration and Parameters: Ітерації та параметри
+      Jam Session: Джем-сейшн
+      JuiceMind Assessment: Оцінка JuiceMind
+      Keep On Dancing!: Танцюй далі!
+      Keeping Data Secret: Зберігання даних у таємниці
+      Key Press & At Measure Events: Натискання клавіші та вимірювання подій
+      Keyboard Input: Введення з клавіатури
+      Kim's Survey: Опитування Кім
+      Kim's Survey Data: Дані опитування Кім
+      LED Apps: Світлодіодні програми
+      Layout Properties: Властивості макета
+      Layout with CSS: Верстка за допомогою CSS
+      Learning from Simulations: Навчання на симуляціях
+      Lesson Extra: Додатковий урок
+      Lesson Extras: Додаткові матеріали до уроку
+      Lesson Overview: Огляд уроку
+      Level Overview: Огляд рівнів
+      Levels: Рівні
+      Light Show: Світлове шоу
+      Linking Pages: "Зв'язування сторінок"
+      Linking Screens: "Екрани зв'язування"
+      Lists: Списки
+      Lists in HTML: Списки в HTML
+      Looking for Patterns: У пошуках закономірностей
+      Looping: Зациклення
+      Loops with the Artist: Цикли з художником
+      Make Dancer & Dance Move: Змусьте танцюриста і танець рухатися
+      Make Your Sprites: Створіть свої спрайти
+      Make a Prediction: Зробіть прогноз
+      Make an Interactive Card: Створіть інтерактивну картку
+      Make it Interactive: Зробіть його інтерактивним
+      Make it Your Own: Зробіть його своїм
+      Making Music: Створення музики
+      Making Scenes: Створення сцен
+      Making Songs: Створення пісень
+      Making Sounds: Створення звуків
+      Making an Interactive Card: Створення інтерактивної картки
+      'Maze Intro: Programming with Blocks': 'Вступ до лабіринту: Програмування за допомогою блоків'
+      Measures: Заходи
+      MediaPipe Image Classification: Класифікація зображень MediaPipe
+      MediaPipe Object Detection: "Виявлення об'єктів MediaPipe"
+      MediaPipe Object Detection and Image Files: "Виявлення об'єктів MediaPipe та файли зображень"
+      Medical Dataset Model Cards: Модельні картки набору медичних даних
+      Medical Priority App: "Додаток \"Медичний пріоритет"
+      Mid-Module Survey: Середньомодульне опитування
+      'Minecraft: Hero''s Journey': 'Майнкрафт: Подорож героя'
+      'Mini-Project: About Me': 'Міні-проект: Про мене'
+      'Mini-Project: Alien Dance Moves': 'Міні-проект: Інопланетні танцювальні рухи'
+      'Mini-Project: Alien Dance Party': 'Міні-проект: Інопланетна танцювальна вечірка'
+      'Mini-Project: Clicker Game': 'Міні-проект: Гра-клікер'
+      'Mini-Project: Collector Game': 'Міні-проект: Гра для колекціонерів'
+      'Mini-Project: Create a Virtual Pet': 'Міні-проект: Створіть віртуального улюбленця'
+      'Mini-Project: Outbreak Simulator': 'Міні-проект: Симулятор спалаху'
+      'Mini-Project: Royal Battle': 'Міні-проект: Королівська Битва'
+      "Mini-Project: Snowflake #1": "Міні-проект: Сніжинка №1"
+      "Mini-Project: Snowflake #2": "Міні-проект: Сніжинка №2"
+      'Mini-Project: Sticker Art': 'Міні-проект: Мистецтво наклейок'
+      'Mini-Project: Swimming Fish': 'Міні-проект: Плаваюча риба'
+      'Mini-Project: Swimming Fish (continued)': 'Міні-проект: Плаваюча риба (продовження)'
+      'Mini-Project: User Input Programs': 'Міні-проект: Програми введення даних користувачем'
+      'Mini-Project: Virtual Pet': 'Міні-проект: Віртуальний домашній улюбленець'
+      'Mini-project: Chase Game': 'Міні-проект: Гра переслідування'
+      'Mini-project: Flappy Game': 'Міні-проект: Flappy Game'
+      'Mini-project: Interactive Poster': 'Міні-проект: Інтерактивний постер'
+      'Mini-project: Jorge the Dog': 'Міні-проект: Хорхе Пес'
+      'Mini-project: Sticker Art': 'Міні-проект: Мистецтво наклейок'
+      'Mini-project: Sticker Design': 'Міні-проект: Дизайн наклейок'
+      Modify simulation variables: Змінити змінні моделювання
+      Modifying Arrays: Модифікація масивів
+      Modifying and Creating Arrays: Модифікація та створення масивів
+      More Buttons: Більше кнопок
+      More Input: Більше вхідних даних
+      More Parameters: Більше параметрів
+      Motorcycle: Мотоцикл.
+      Move It Move it Video  - Unplugged Activity: Move It Move it Video - Активність без розетки
+      Move It, Move It - Student Resources: "Ворушися, ворушися - Студентські ресурси"
+      Movement with the Counter Pattern: Рух із зустрічним візерунком
+      Multi-Screen Apps: Багатоекранні програми
+      Multiframe Animations: Багатокадрові анімації
+      Musical Arrays: Музичні масиви
+      My Loopy Robotic Friend - Student Resources: Мій циклічний друг-робот - Ресурси для студентів
+      My Loopy Robotic Friends - Unplugged Activity: Мої друзі-роботи-петлі - активність без розетки
+      My Online Neighborhood: Моє онлайн сусідство
+      My Robotic Friend - Student Resources: Мій друг-робот - Ресурси для студентів
+      My Robotic Friends - Unplugged Activity: Мої друзі-роботи - активність без розетки
+      My Time Capsule: Моя капсула часу
+      Naming Variables: Іменування змінних
+      Nested Loops with the Bee: Закільцьовані петлі з бджілкою
+      New Challenge Introduction: Вступ до нового виклику
+      New Shapes: Нові форми
+      Next Steps: Наступні кроки
+      Noisy Image Widget: Віджет шумного зображення
+      Orientation: Орієнтація
+      Outro: Аутро
+      Overview: Огляд
+      'Overview: Design Mode': 'Огляд: Режим проектування'
+      'Overview: If Statements': 'Огляд: Якщо Висловлювання'
+      'Overview: Images': 'Огляд: Зображення'
+      'Overview: onEvent': 'Огляд: onEvent'
+      'Overview: setPosition': 'Опис: setPosition'
+      Pair Programming: Парне програмування
+      Pattern Block Data - Resource Reminder: Дані блоку шаблонів - нагадування про ресурс
+      Pattern Block Data - Unplugged Activity: Дані блоку шаблонів - Відключена активність
+      Personal Career Exploration: "Дослідження особистої кар'єри"
+      Pet Recommender: Рекомендація для домашніх тварин
+      Physical Design Prototypes: Прототипи фізичного дизайну
+      Picturing Data: Зображення даних
+      Pizza Party Data: Дані про вечірку піци
+      Pizza Recommendations: Рекомендації щодо піци
+      Plan Your Project: Сплануйте свій проект
+      Plan Your Scene: Сплануйте сцену
+      Plane Jumper: Стрибун з літака
+      Planning: Планування
+      Planning Your Book Cover: Планування обкладинки книги
+      Platform Jumper - Background and Variables: Перемичка платформи - фон та змінні
+      Platform Jumper - Items: Перемичка для платформи - Елементи
+      Platform Jumper - Platforms: Перемичка для платформи - Платформи
+      Platform Jumper - Player: Платформний перемичка - Плеєр
+      Platform Jumper Review: Огляд платформних перемичок
+      Play AI Drums: Грайте на барабанах зі штучним інтелектом
+      Play Sound: Відтворити звук
+      Play Together: Граємо разом
+      Play a sound: Увімкни звук.
+      Play live: Грай наживо
+      Play more sounds: Відтворити більше звуків
+      Play together: Граємо разом
+      Player Controls: Керування програвачем
+      Playing Notes: Граючи ноти
+      Playing with Notes: Гра з нотами
+      Plotting Shapes in Game Lab: Побудова фігур в ігровій лабораторії
+      Polling Events: Опитування Події
+      Post-Course Survey Instructions: Інструкція з проведення опитування після курсу
+      Post-Module Survey: Післямодульне опитування
+      Practice: Практика
+      Practice Levels: Рівні практики
+      Practicing Block-Based Coding: Практикуємо блокове кодування
+      'Practicing CS Skills ': 'Практика навичок КС '
+      Pre-Assessment: Попередня оцінка
+      Pre-Module Survey: Передмодульне опитування
+      Predict: Передбачити
+      Predict - Introduction to Game Lab: Predict - вступ до Game Lab
+      Prediction: Прогнозування
+      Prepare for your presentation: Підготуйтеся до презентації
+      Prepare for your presentation_2018: Підготовка до презентації_2018
+      Problem Solving: Вирішення проблем
+      Problem Solving Process for Programming: "Процес розв'язування задач на програмування"
+      Programming with Rey and BB-8: Програмування за допомогою Rey та BB-8
+      Programs that Repeat: "Програми, що повторюються"
+      Project: Проект
+      Project - Background and Variables: Проект - Передумови та змінні
+      Project - Finishing Touches: Проект - останні штрихи
+      Project - Sprites and Interactions: Проект - Спрайти та взаємодії
+      Project Guide: Посібник проекту
+      Project Work: Проектна робота
+      Properties: Властивості
+      Prototype Components: Компоненти прототипу
+      Prototype an Innovation: Прототипуйте інновацію
+      Publishing Your Website: Публікація вашого веб-сайту
+      'Putting it All Together ': 'Збираємо все докупи '
+      QR Code Exploration: Дослідження QR-кодів
+      Quarter Notes: Квартальні нотатки
+      Quick Check: Швидка перевірка
+      RGB Exploration: RGB Exploration
+      RGB Widget: Віджет RGB
+      Random Numbers: Випадкові числа
+      Raspado Recommender: Raspado Recommender
+      Reading Sensors: Датчики зчитування
+      Recognizing Expressions: Розпізнавання виразів
+      Recognizing Fish: Розпізнавання риби
+      Recognizing Fish Features: Розпізнавання ознак риби
+      Recognizing Shapes: Розпізнавання форм
+      Reflection: Рефлексія
+      Relay Programming - Unplugged Activity: Програмування реле - активність без підключення до мережі
+      Repeat: Повторити
+      Repeat Blocks: Повторювані блоки
+      Repeat Blocks with BB-8: Повторні блоки з BB-8
+      Repeat Blocks with the Artist: Повторні блоки з художником
+      Repeat Unit Statements: Повторювати виписки одиниць виміру
+      Repeat Until Statements: "Повторювати, поки не з'являться твердження"
+      Representing Images: Представлення зображень
+      Responding to Board Events: Реагування на події правління
+      Responding to User Input: Реагування на вхідні дані користувача
+      Review: Огляд
+      Review - Choice Level: Огляд - рівень вибору
+      Review Shape Blocks: Огляд фігурних блоків
+      Review Your Animated Scene: Перегляньте свою анімовану сцену
+      Review Your App: Перегляньте свій додаток
+      Review Your Game: Перегляньте свою гру
+      Review Your Page: Перегляньте свою сторінку
+      Review Your Scene: Перегляньте свою сцену
+      'Review: CSS': 'Рецензія: CSS'
+      'Review: HTML': 'Рецензія: HTML'
+      Revise Artist Project: "Переглянути проект \"Художник"
+      Revise Sprite Lab Project: Перегляд проекту Sprite Lab
+      Revisiting the Counter Pattern: Повертаючись до шаблону лічильника
+      Robot Doodle: Робот Дудл
+      Run a simulation: Запустіть симуляцію
+      Safari App: Додаток Safari
+      Safari Model: Модель Safari
+      Same Game: Та сама гра
+      Sample App: Приклад програми
+      Sample Apps for Good: Приклади додатків на благо
+      Sample Game: Приклад гри
+      Sample Games: Приклади ігор
+      Sample Personal Web Pages: Приклади персональних веб-сторінок
+      Sample Personal Websites: Приклади персональних веб-сайтів
+      Sample Platform Jumper Game: Зразок гри-стрибунця на платформі
+      Sample Program: Приклад програми
+      Sample Programs: Приклади програм
+      Sample Web Page: Приклад веб-сторінки
+      Sample Web Pages: Приклади веб-сторінок
+      Sample Website: Зразок веб-сайту
+      Scoring & Scoreboard: Підрахунок очок і табло
+      Screen Design: Дизайн екрану
+      Sensor Events: Події датчиків
+      Sensor Experiment: Сенсорний експеримент
+      Sensors to Colors: Датчики до кольорів
+      Set Up Sprites: Налаштування спрайтів
+      Setting Properties: Налаштування властивостей
+      Setup: Налаштування
+      Shapes and Parameters: Форми та параметри
+      Shapes and the Draw Loop: Фігури та цикл малювання
+      Share Out: Поділіться
+      Share Your App: Поділіться своїм додатком
+      Share Your Pages: Поділіться своїми сторінками
+      Share Your Simulation: Поділіться своєю симуляцією
+      Share Your Stylesheets: Поділіться своїми таблицями стилів
+      Sharing Your Book Cover: Поділіться обкладинкою своєї книги
+      Sharing Your Poem: Поділіться своїм віршем
+      Shoe Recommendation Survey: Опитування щодо рекомендацій по взуттю
+      Shoe Recommender: Рекомендації щодо взуття
+      Side Scroller: Бічний скролер
+      Side Scroller Example: Приклад бічного скролера
+      Simple Circuits: Прості схеми
+      Skill Building: Розвиток навичок
+      Skill Building - Map Setup: Розвиток навичок - Налаштування мапи
+      Skill Building Levels: Рівні розвитку навичок
+      Skill-Building: Розвиток навичок
+      Sliders: Повзунки
+      Smart Bike - Blinkers: Розумний велосипед - мигалки
+      Social Sleuth: Соціальний детектив
+      Solution 1 - Fishing Zone: Рішення 1 - Рибальська зона
+      Solution 2 - Fishing Season: Рішення 2 - Рибальський сезон
+      Solution 3 - Fishing Limits: Рішення 3 - Ліміти на вилов риби
+      Solving Healthcare Issues with Computer Vision: "Вирішення проблем охорони здоров'я за допомогою комп'ютерного зору"
+      Songwriting - Functions Unplugged Activity: Написання пісень - діяльність без функцій
+      'Songwriting - Functions Video ': 'Написання пісень - Відео про функції '
+      Songwriting - Student Resources: Написання пісень - Студентські ресурси
+      Speed it Up, Slow it Down: "Прискорити, уповільнити"
+      Sprite Interactions: Взаємодія зі спрайтами
+      Sprite Interactions Review: Огляд взаємодії спрайтів між собою
+      Sprite Lab Example Project: Приклад проекту Sprite Lab
+      Sprite Lab Project: Проект Sprite Lab
+      Sprite Movement: Рух спрайтів
+      Sprite Properties: Властивості спрайтів
+      Sprite Scenes: Сцени зі спрайтами
+      Sprite Velocity: Швидкість спрайту
+      Sprites and Backgrounds: Спрайти та фони
+      Sprites and the Draw Loop: Спрайти та цикл малювання
+      Star Chaser: Мисливець за зірками
+      Star Quilts Video: "Відео \"Зоряні ковдри"
+      Student Post-Survey: Пост-опитування студентів
+      Student Pre-Survey: Попереднє опитування студентів
+      Styling Text: Стилізація тексту
+      Styling with Classes: Стилізація за допомогою класів
+      Styling your Website: Стилізація вашого веб-сайту
+      Teach A.I. a new word: Навчіть АІ новому слову
+      Teach AI a New Word: Навчіть АІ нового слова
+      Teachable Machine: Навчальна машина
+      Teaching and Learning Strategies: Стратегії викладання та навчання
+      'Technique: Frequency Analysis': 'Техніка: Частотний аналіз'
+      Terminology Recap: Підсумок термінології
+      Text Compression: Стиснення тексту
+      The Accelerometer: Акселерометр
+      The Animation Tab: "Вкладка \"Анімація"
+      The Artist in Code Studio: "Студія \"Художник у коді"
+      The Big Event - Student Resources: Велика подія - Студентські ресурси
+      The Big Event - Unplugged Activity: Велика подія - активність без розетки
+      'The Big Event Jr. - Student Resources ': 'The Big Event Jr. - Студентські ресурси '
+      The Body Element: Елемент тіла
+      The Buzzer: "\"Дзвінок"
+      The Collector: Колекціонер
+      The Counter Pattern: Шаблон зустрічного руху
+      The Draw Loop: Цикл малювання
+      The Food Chain: Харчовий ланцюг
+      The Harvester: Жниварка.
+      The Internet - Student Resources: Інтернет - Ресурси для студентів
+      The Internet - Unplugged Activity: Інтернет - активність без розетки
+      The Power of Words - Unplugged Activity: Сила слова - активність без розетки
+      The Right App - Student Resource: Правильний додаток - студентський ресурс
+      The Right App - Unplugged Activity: Правильний додаток - активність без відключення
+      The Search for Pixel: У пошуках пікселя
+      Title, Author, Background: "Назва, автор, передісторія"
+      Top Websites: Найкращі веб-сайти
+      Tour of Design Mode: Екскурсія режимом проектування
+      Train AI to Clean the Ocean: Навчіть ШІ очищати океан
+      Train a Model in AI Lab: Навчіть модель в AI Lab
+      Train an AI to Clean the Ocean: Навчіть штучний інтелект очищати океан
+      Triggers: Тригери
+      UI Element Properties: Властивості елементів інтерфейсу
+      Ultimate Shoe Recommender: Ultimate Shoe Recommender
+      Unit 5 Lesson 1 Overview: Розділ 5 Урок 1 Огляд
+      Unplugged Activity: Активність без підключення до мережі
+      Unplugged Activity - Hardware and Software Skits: Діяльність без підключення до мережі - сценки з апаратним та програмним забезпеченням
+      Updating Your Prototype: Оновлення вашого прототипу
+      Upload Your Images: Завантажте свої зображення
+      Use AI: Використовуйте ШІ
+      User Interface: Інтерфейс користувача
+      Using Accelerometer Events: Використання подій акселерометра
+      Using Arrays: Використання масивів
+      Using Getters and Setters: Використання геттерів і сеттерів
+      Using HTML Tags: Використання тегів HTML
+      Using Random Numbers: Використання випадкових чисел
+      Using Training Data: Використання навчальних даних
+      Using the Grid: Використання сітки
+      Using the LED: Використання світлодіода
+      Using the Repeat Block: Використання блоку повторення
+      Using the Switch: Використання перемикача
+      Variables: Змінні
+      Velocity: Швидкість
+      Velocity and the Counter Pattern: Швидкість і зустрічний візерунок
+      Velocity and the Counter Pattern Review: Швидкість та огляд контр-шаблонів
+      Video: Відео
+      Video - Encryption and Public Keys: Відео - Шифрування та відкриті ключі
+      Video - Events: Відео - Події
+      Video - Functions: Відео - Функції
+      Video - If Statements: Відео - Оператори умовного переходу
+      Video - Introduction to Arrays: Відео - Вступ до масивів
+      'Video - Maze Intro: Programming with Blocks': 'Відео - Maze Intro: Програмування за допомогою блоків'
+      Video - Parameters: Відео - Параметри
+      Video - Repeat Blocks: Відео - Блоки повторів
+      Video - The Counter Pattern: Відео - Візерунок лічильника
+      Video - Variables: Відео - Змінні
+      Video Introduction: Відео-вступ
+      'Video:  Debugging with the Step Button': 'Відео:  Налагодження за допомогою кнопки "Крок'
+      'Video:  Minecraft - The Agent': 'Відео:  Minecraft - Агент'
+      'Video:  Text  and Prompts': 'Відео:  Текст і підказки'
+      'Video: "If/Else"': 'Відео: "If/Else"'
+      'Video: "If/Else" Statements': 'Відео: Оператори "Якщо/Інакше"'
+      'Video: AI: What is Machine Learning?': 'Відео: ШІ: Що таке машинне навчання?'
+      'Video: Amazon and Data': 'Відео: Amazon і дані'
+      'Video: Animal Adaptations Introduction': 'Відео: Адаптація тварин Вступ Вступ'
+      'Video: Artist Intro with JR Hildebrand': 'Відео: Вступне слово артиста з JR Hildebrand'
+      'Video: Artist Intro with JR Hildebrande': 'Відео: Вступне слово артиста з JR Hildebrande'
+      'Video: Booleans': 'Відео: Booleans'
+      'Video: CS Matters': 'Відео: CS має значення'
+      'Video: Circuits and Logic': 'Відео: Схеми та логіка'
+      'Video: Code Your Own Flappy Game': 'Відео: Створіть свою власну гру'
+      'Video: Conditional Statements': 'Відео: Умовні оператори'
+      'Video: Conditionals': 'Відео: Умовні позначення'
+      'Video: Conditionals: If Statements': 'Відео: Умовно: Якщо Висловлювання'
+      'Video: Conditionals: If and If/Else Statements': 'Відео: Умовно: Оператори If та If/Else'
+      'Video: Dance Party Events': 'Відео: Танцювальні вечірки'
+      'Video: Dance Party Measures': 'Відео: Заходи на танцювальній вечірці'
+      'Video: Dance Party Party On!': 'Відео: Танцювальна вечірка Party On!'
+      'Video: Dance Party Properties': 'Відео: Властивості танцювальної вечірки'
+      'Video: Dance Party Warm Up': 'Відео: Розминка для танцювальної вечірки'
+      'Video: De-bugging with the Step Button': 'Відео: Деактивація прослуховування за допомогою кнопки "Крок'
+      'Video: Debugging': 'Відео: Налагодження'
+      'Video: Debugging with Scrat ': 'Відео: Налагодження за допомогою Scrat '
+      'Video: Debugging with the Step Button': 'Відео: Налагодження за допомогою кнопки "Крок'
+      'Video: Drawing in Game Lab - Part 1': 'Відео: Малювання в ігровій лабораторії - частина 1'
+      'Video: Drawing in Game Lab - Part 2': 'Відео: Малювання в ігровій лабораторії - частина 2'
+      'Video: Events': 'Відео: Події'
+      'Video: Events in App Lab': 'Відео: Події в App Lab'
+      'Video: Follow The Digital Trail': 'Відео: Пройдіть по цифровому сліду'
+      'Video: For Loops': 'Відео: Для петель'
+      'Video: Functions': 'Відео: Функції'
+      'Video: Getting Loopy': 'Відео: Getting Loopy'
+      'Video: Happy Maps - Unplugged Activity': 'Відео: Щасливі карти - активність без розетки'
+      'Video: Harvesting with Conditionals': 'Відео: Збирання врожаю за допомогою кондиціонерів'
+      'Video: Hello World: Do What You Want': 'Відео: Привіт, світе: Роби, що хочеш.'
+      'Video: Hello World: Programming with Events': 'Відео: Привіт, світе: Програмування за допомогою подій'
+      'Video: Hello World: Welcome to Sprite Lab': 'Відео: Привіт, світе: Ласкаво просимо до Sprite Lab'
+      'Video: How Search Works': 'Відео: Як працює пошук'
+      'Video: How to Create a Simple Function': 'Відео: Як створити просту функцію'
+      'Video: How to Make a Sprite': 'Відео: Як зробити спрайт'
+      'Video: IOSP Model': 'Відео: Модель IOSP'
+      'Video: Ice Age Loops': 'Відео: Петлі льодовикового періоду'
+      'Video: If/Else Statements': 'Відео: Оператори якщо/інакше'
+      'Video: Impact on Society': 'Відео: Вплив на суспільство'
+      'Video: Impacts on Society': 'Відео: Вплив на суспільство'
+      'Video: Intro to CSS': 'Відео: Вступ до CSS'
+      'Video: Intro to CSS - Part 1': 'Відео: Вступ до CSS - Частина 1'
+      'Video: Intro to CSS - Part 2': 'Відео: Вступ до CSS - Частина 2'
+      'Video: Intro to CSS Part 2': 'Відео: Вступ до CSS Частина 2'
+      'Video: Intro to Design Mode': 'Відео: Вступ до режиму проектування'
+      'Video: Intro to Web Lab - Part 1': 'Відео: Вступ до веб-лабораторії - Частина 1'
+      'Video: Intro to Web Lab - Part 2': 'Відео: Вступ до веб-лабораторії - частина 2'
+      'Video: Introducing Sprite Lab': 'Відео: Представляємо Sprite Lab'
+      'Video: Introduction to Arrays': 'Відео: Вступ до масивів'
+      'Video: Introduction to Play Lab': 'Відео: Вступ до Play Lab'
+      'Video: Introduction to Sprites': 'Відео: Вступ до спрайтів'
+      'Video: Introduction to Variables': 'Відео: Вступ до змінних'
+      'Video: Introduction to the Draw Loop': 'Відео: Вступ до циклу малювання'
+      'Video: Loops in Artist': 'Відео: Цикли в програмі Artist'
+      'Video: Loops with the Artist': 'Відео: Цикли з художником'
+      'Video: Lots of Sprites': 'Відео: Багато спрайтів'
+      'Video: Managing Disagreement': 'Відео: Управління розбіжностями'
+      'Video: Maze Intro - Programming with Blocks': 'Відео: Maze Intro - Програмування за допомогою блоків'
+      'Video: Maze Intro - Programming with Blocks ': 'Відео: Maze Intro - Програмування за допомогою блоків '
+      'Video: Maze Intro: Programming with Blocks': 'Відео: Вступ до лабіринту: Програмування за допомогою блоків'
+      'Video: Measures': 'Відео: Заходи'
+      'Video: Minecraft - Congratulations': 'Відео: Minecraft - Вітаємо'
+      'Video: Minecraft - Functions': 'Відео: Minecraft - Функції'
+      'Video: Minecraft - Repeat Loops': 'Відео: Minecraft - Повторні цикли'
+      'Video: Minecraft - The Agent': 'Відео: Minecraft - Агент'
+      'Video: Minecraft: Voyage Aquatic Conditionals': 'Відео: Майнкрафт: Voyage Aquatic Conditionals'
+      'Video: Minecraft: Voyage Aquatic Congratulations': 'Відео: Майнкрафт: Водне привітання Voyage Aquatic'
+      'Video: Minecraft: Voyage Aquatic Introduction': 'Відео: Майнкрафт: Водна подорож Вступ до водної подорожі'
+      'Video: Minecraft: Voyage Aquatic Repeat Until': 'Відео: Майнкрафт: Voyage Aquatic Повторювати до'
+      'Video: Nested Loops': 'Відео: Вкладені цикли'
+      'Video: Nested Loops with the Bee': 'Відео: Закільцьовані петлі з бджілкою'
+      'Video: Netflix and Data': 'Відео: Netflix і дані'
+      'Video: Outbreak Simulator: Events': 'Відео: Симулятор спалаху: Події'
+      'Video: Outbreak Simulator: Free Play': 'Відео: Симулятор спалаху: Вільна гра'
+      'Video: Outbreak Simulator: Introduction': 'Відео: Симулятор спалаху: Вступ'
+      'Video: Outbreak Simulator: Thinking Like a Scientist': 'Відео: Симулятор спалаху: Мислити як науковець'
+      'Video: Pair Programming': 'Відео: Парне програмування'
+      'Video: Pair Programming ': 'Відео: Парне програмування '
+      'Video: Problem Solving Process': 'Відео: Процес вирішення проблем'
+      'Video: Programming with Blocks': 'Відео: Програмування за допомогою блоків'
+      'Video: Programming with Rey and BB-8': 'Відео: Програмування за допомогою Rey та BB-8'
+      'Video: Properties': 'Відео: Властивості'
+      'Video: Publishing Your Website': 'Відео: Публікація вашого веб-сайту'
+      'Video: Repeat Blocks': 'Відео: Повторювані блоки'
+      'Video: Repeat Blocks with BB-8': 'Відео: Повторні блоки з BB-8'
+      'Video: Repeat Blocks with the Artist': 'Відео: Повторні блоки з художником'
+      'Video: Repeat Until Blocks': 'Відео: Повторювати, поки не заблокується'
+      'Video: Repeat Until Statements': 'Відео: Повторювати, поки не з''являться твердження'
+      'Video: Sprite Movement': 'Відео: Рух спрайтів'
+      'Video: Sprites in Action': 'Відео: Спрайти в дії'
+      'Video: Star Wars Project': 'Відео: Проект "Зоряні війни'
+      'Video: Teamwork': 'Відео: Командна робота'
+      'Video: Text and Prompts': 'Відео: Текст і підказки'
+      'Video: The Animation Tab': 'Відео: Вкладка "Анімація'
+      'Video: The Artist in Code Studio': 'Відео: Студія "Художник у коді'
+      'Video: The Big Event - Unplugged Activity': 'Відео: Велика подія - активність без розетки'
+      'Video: The Collector': 'Відео: Колекціонер'
+      'Video: The Harvester': 'Відео: Жниварка.'
+      'Video: Training Data & Bias': 'Відео: Навчальні дані та упередженість'
+      'Video: Training Data and Bias': 'Відео: Навчальні дані та упередженість'
+      'Video: Unplugged Variables in Envelopes': 'Відео: Змінні в конвертах без підключення'
+      'Video: Using the Repeat Block': 'Відео: Використання блоку повторення'
+      'Video: Variables in Artist': 'Відео: Змінні в Artist'
+      'Video: Velocity': 'Відео: Швидкість'
+      'Video: Warm Up': 'Відео: Розминка.'
+      'Video: Waze and Data': 'Відео: Waze і дані'
+      'Video: What Makes a Computer, a Computer?': 'Відео: Що робить комп''ютер комп''ютером?'
+      'Video: What is Machine Learning?': 'Відео: Що таке машинне навчання?'
+      'Video: While Loops with the Farmer': 'Відео: Під час кругообігу з фермером'
+      'Video: Wrap-up': 'Відео: Підсумок'
+      Visualizing Data: Візуалізація даних
+      Warm Up: Розминка.
+      WeTube Video Recommendations (2.0): Рекомендації щодо відео на YouTube (2.0)
+      WeTube Video Recommendations (Beta): Рекомендації до відео на YouTube (бета-версія)
+      Website Project: Проект веб-сайту
+      Welcome and Introduction: Привітання та вступ
+      Welcome to Monster Town: Ласкаво просимо до Міста Монстрів
+      What Is a Time Capsule?: Що таке капсула часу?
+      Where'd They Go?: Куди вони пішли?
+      While Loops with the Farmer: Під час кругообігу з фермером
+      'Widget: Text Compression': 'Віджет: Стиснення тексту'
+      Wrap Up: Закінчуємо.
+      Wrap-up: Підсумок
+      Written Voice Simulator Widget: Віджет симулятора письмового мовлення
+      'You Choose: Improve Your App': 'Вибирати тобі: Покращити свій додаток'
+      'You Choose: Restaurant Recommendations': 'Вибирати тобі: Рекомендації щодо ресторанів'
+      Your Personal Website: Ваш особистий сайт
+      Your Team Project: Проєкт вашої команди
+      Zoo Predictions: Прогнози для зоопарків
+      "[For Teachers] Mad Lib Widget": "[Для вчителів] Віджет Mad Lib"
+      getNumber: getNumber
+      getProperty: getProperty
+      getText vs getNumber: getText vs getNumber
+      isTouching: isTouching
+      setProperty: setProperty
