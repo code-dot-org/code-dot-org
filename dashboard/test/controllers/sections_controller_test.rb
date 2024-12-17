@@ -226,12 +226,12 @@ class SectionsControllerTest < ActionController::TestCase
 
   test 'redirect to teacher_dashboard from edit if DCDO enabled' do
     sign_in @teacher
-    DCDO.set('teacher_local_nav_v2', true)
+    DCDO.set('teacher-local-nav-v2', true)
 
     get :edit, params: {id: @word_section.id}
     assert_redirected_to "/teacher_dashboard/sections/#{@word_section.id}/settings"
 
-    DCDO.set('teacher_local_nav_v2', nil)
+    DCDO.set('teacher-local-nav-v2', nil)
   end
 
   test 'returns forbidden if requested edit section does not belong to teacher' do
