@@ -1,0 +1,150 @@
+{
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/1": {
+    "short_instructions": "Keď si prečítate túto báseň, aká farba sa vám vybaví? Nájdite pozadie, farbu textu a efekt textu, ktorý zodpovedá pocitu z tejto básne.",
+    "long_instructions": "_Keď si prečítate túto báseň, aký máte pocit? Aká farba zodpovedá tomuto pocitu?_ - Pripojte bloky zo súpravy nástrojov pod <code style=\"color:black; background-color:#FFBD46\">Keď spustíte</code>, zostavte svoj program. - Nájdite **pozadie** a **textový efekt**, ktoré zodpovedajú **nálade** tejto básne. - Zmeňte **farby** efektov alebo textu. - Kliknutím na tlačidlo \"Spustiť\" báseň animujte.",
+    "authored_hints": {
+      "add_background_effect": "Nájdite blok pozadia, ako je tento: [blockly block][0] a nájdite blok s textovým efektom, ako je tento: [Spojte tieto bloky pod položkou `kedy spustiť` vo vašom pracovnom priestore.",
+      "add_more_effects": "Pridajte ďalšie farby alebo efekty, ktoré pomôžu vytvoriť náladu tejto básne. [blockly block][0]"
+    },
+    "callouts": {
+      "poetry_background": "Bloky kódu nájdete tu. ",
+      "run_button": "Pomocou tohto tlačidla otestujte svoju animáciu. "
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/2": {
+    "short_instructions": "Zodpovedali zvuky a obrazy nálade básne? ",
+    "contained levels": [
+      {
+        "long_instructions": "<img src=\"https://images.code.org/752a37250030ee9b5acaea2143dca2fa-image-1634928264031.png\" style=\"max-width: 75px; float:left; padding-left:10px; padding-right:10px; padding-top:10px\"> ## Predpovedať Prečítajte si báseň. Aké zvuky a obrazy sa vám vybavia? Po zadaní odpovede stlačte tlačidlo \"Spustiť\", aby ste si pozreli a vypočuli animáciu básne. "
+      }
+    ]
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/3": {
+    "short_instructions": "Pridajte do programu zvuky, aby ste zmenili pocit z básne počas jej čítania. ",
+    "long_instructions": "Pridaním **zvukov** a **hudby** do programu môžete zmeniť pocit z básne počas jej čítania. - Pridajte do svojho kódu nový zvukový alebo hudobný blok. - Nájdite zvuky alebo hudbu, ktoré zodpovedajú nálade básne. ",
+    "authored_hints": {
+      "poetry_sound_hint": "Nájdite tento blok: [blockly block][0] alebo tento blok: [blockly block][1] Pripojte ho v časti `kedy spustiť` vo vašom pracovnom priestore.",
+      "more_code": "K vybranému zvuku môžete pridať ďalšie efekty a farby. [blockly block][0]"
+    },
+    "callouts": {
+      "poetry_sound": "Nový blok!",
+      "poetry_music": "Nový blok!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/4": {
+    "short_instructions": "Pomocou udalostí zmeníme animáciu, keď sa v básni spomenie niečo nové. ",
+    "long_instructions": "Pomocou **udalostí** môžete zmeniť animáciu, keď sa v básni spomenie niečo nové. - Nájdite v básni **riadok**, v ktorom sa zmení nálada alebo sa predstaví niečo nové. - Pridajte **farby** alebo **efekty**, ktoré zodpovedajú novému **riadku** v básni. - Uistite sa, že sa efekt zmení, keď sa na obrazovke objaví požadovaný riadok. ",
+    "authored_hints": {
+      "do_effect_hint": "Tento nový blok `do effect` raz pridá nový efekt. [blockly block][0] Môžete poskladať viac ako jeden `do effect` na seba, aby efekt trval dlhšie. [blockly block][1]",
+      "background_effect_hint": "Ďalšie efekty môžete pridať pod blok udalostí pomocou kódu, ktorý vyzerá takto: [blockly block][0]",
+      "more_events_hint": "V programe môžete použiť viac ako jednu udalosť. Skúste použiť dve udalosti s rôznymi účinkami, ktoré sa hodia k novým riadkom básne. [blockly block][0] [blockly block][1]"
+    },
+    "callouts": {
+      "poetry_event": "Nový blok!",
+      "poetry_foreground": "Nový blok!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/5": {
+    "short_instructions": "Aké obrazy sa vám vybavia?",
+    "contained levels": [
+      {
+        "long_instructions": "<img src=\"https://images.code.org/752a37250030ee9b5acaea2143dca2fa-image-1634928264031.png\" style=\"max-width: 75px; float:left; padding-left:10px; padding-right:10px; padding-top:10px\"> ## Predpovedať Prečítajte si báseň. Aké obrazy sa vám vybavia? Po zadaní odpovede stlačte tlačidlo \"Spustiť\" a pozrite si animáciu básne. "
+      }
+    ]
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/6": {
+    "short_instructions": "Autori používajú obrazotvornosť, aby čitateľovi vytvorili obraz. Na ilustráciu básne môžete pridať sprites. ",
+    "long_instructions": "Básnici používajú slová, aby čitateľovi vytvorili obraz. Pridajte **sprites** k obrazom, ktoré vám pri čítaní básne napadnú. - Do kódu pridajte blok <code style=\"color:black; background-color:#F79EA5\">make new sprite</code>. - Vyberte si kostým pre svojho šprita. Dodatočná úloha: _Pripojte blok <code style=\"color:black; background-color:#F79EA5\">make new sprite</code> k udalosti, aby sa nový sprite objavil, keď sa v básni objaví nový obrázok. ",
+    "authored_hints": {
+      "location_hint": "Každý šprint má **miesto**. Umiestnenie môžete nastaviť kliknutím na kolík na tomto bloku: [Kliknite na kolík [][1] na bloku umiestnenia a potom vyberte novú pozíciu pre svoj šprint na obrazovke. - Po dokončení kódu stlačte tlačidlo \"Spustiť\".",
+      "remove_hint": "Môžete odstrániť sprite na určitom čísle riadku. Na jeho miesto môžete pridať nový šprint: [blockly block][0]"
+    },
+    "callouts": {
+      "poetry_sprite": "Nový blok!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/7": {
+    "short_instructions": "Sprity môžu počas behu programu opakovane vykonávať určité činnosti alebo správanie.",
+    "long_instructions": "Sprity môžu počas behu programu opakovane vykonávať určité činnosti alebo **chovanie**. - Pridajte do svojho kódu blok <code style=\"color:black; background-color:#F79EA5\">Sprite begins</code>. - Preskúmajte rôzne správania spritu. - Vyberte si správanie, ktoré zodpovedá vašej básni. Dodatočná úloha:_ Pridajte blok <code style=\"color:black; background-color:#F79EA5\">sprite begins</code> do **udalosti**!",
+    "authored_hints": {
+      "add_behavior": "Pridajte do svojho kódu blok `sprite begins`. Uistite sa, že ste už vytvorili sprite, ktorému dávate správanie. [blockly block][0]"
+    },
+    "callouts": {
+      "poetry_sprite_begins": "Nový blok!",
+      "poetry_sprite_stops": "Nový blok!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/8": {
+    "short_instructions": "Môžete zmeniť veľkosť už vytvoreného šprintu. ",
+    "long_instructions": "Môžete zmeniť **veľkosť** už vytvoreného špritu. - Zmeňte veľkosť svojho spritu pomocou nového bloku <code style=\"color:black; background-color:#F79EA5\">set size</code>. - Uistite sa, že ste zvolili inú veľkosť ako 100.",
+    "authored_hints": {
+      "size hint": "Nájdite tento blok a kliknite na `150`. [blockly block][0] Čo sa stane, keď je číslo `25`? [blockly block][1]"
+    },
+    "callouts": {
+      "poetry_set_sprite": "Nový blok!",
+      "poetry_remove_sprite": "Nový blok!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/1/levels/9": {
+    "long_instructions": "Sloboda prázdnej stránky! - Ilustrujte báseň, ako sa vám páči, a podeľte sa o ňu so svojimi priateľmi. - Pomocou rozbaľovacej ponuky \"Vybrať báseň\" v ľavom hornom rohu vyberte báseň alebo zadajte vlastnú!",
+    "callouts": {
+      "poetry_new_block": "Nový blok!",
+      "poetry_selector": "Vyberte si ľubovoľnú báseň alebo zadajte svoju vlastnú!"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/2/levels/1": {
+    "dsls": {
+      "markdown": "##Naplánujte si báseň\n\n<div>\n<img style=\" float: left; width:25%; padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\" />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>Je čas naplánovať si vlastnú báseň.</strong>\n</h4>\n\n>Mali by ste uviesť: > - Niečo, čo radi robíte. > - Niekoho, kto je pre vás dôležitý. > - Niektoré z vašich obľúbených vecí. **Pripravení začať plánovať?** Použite <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\" target=\"_blank\">tento zdroj</a>. **Hľadáte tému? ** Použite <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\" target=\"_blank\">tento zdroj</a>.\n\n</div>\n"
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/3/levels/1": {
+    "short_instructions": "Zakódujte si vlastnú báseň!",
+    "long_instructions": "**Okódujte svoju báseň!** Teraz je čas na animáciu básne. Zadajte vlastnú báseň a potom pridajte svoj kód! _Nápoveda: Prejdite na ďalšiu úroveň a skontrolujte si všetky zručnosti v oblasti kódovania._"
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/3/levels/2": {
+    "dsls": {
+      "description": "Vyberte si z nižšie uvedených aktivít a osviežte si pamäť, ako pridať kód do básne o časovej kapsule! Môžete si vybrať viacero možností a urobiť viac ako jednu!",
+      "display_name": "Overte si svoje kódovacie zručnosti!"
+    },
+    "sublevels": {
+      "csc_timecapsule_review1_ -l3": {
+        "display_name": "Pridanie pozadia",
+        "short_instructions": "Čo sa vám vybaví pri čítaní tejto básne? Nájdite pozadie, ktoré zodpovedá nálade tejto básne.",
+        "long_instructions": "**Dajme našej básni pozadie!** - Pripojte <code style=\"color:black; background-color:#B3B2FB\">nastavené pozadie,</code> pod ktorým sa <code style=\"color:black; background-color:#B3B2FB\">bude</code> blokovať <code style=\"color:black; background-color:#FFBD46\">pri spustení</code>. - Ak chcete vybrať iné pozadie, kliknite na kartu Pozadie nad hracou plochou. - Po dokončení kliknite na tlačidlo \"Spustiť\". _Bonus: Vyskúšajte rôzne pozadia, rámy a efekty._"
+      },
+      "csc_timecapsule_review2_ -l3": {
+        "display_name": "Nastavenie farby textu",
+        "short_instructions": "Teraz pridajte do básne farbu textu.",
+        "long_instructions": "**Zmeníme farbu textu našej básne!** - Pripojte blok s <code style=\"color:black; background-color:#B3B2FB\">nastavenou farbou textu</code> pri <code style=\"color:black; background-color:#FFBD46\">spustení</code>. - Vyberte farbu, ktorá je viditeľná na pozadí. - Po dokončení kliknite na tlačidlo \"Spustiť\".\r\n"
+      },
+      "csc_timecapsule_review3_ -l3": {
+        "display_name": "Nastavenie efektu textu",
+        "short_instructions": "Nastavte textový efekt pre svoju báseň.",
+        "long_instructions": "**Najdeme textový efekt, ktorý zodpovedá nálade našej básne!** - Pripojte blok s <code style=\"color:black; background-color:#B3B2FB\">nastaveným textovým efektom</code> <code style=\"color:black; background-color:#FFBD46\">pri spustení</code>. - Po dokončení kliknite na tlačidlo \"Spustiť\".\r\n"
+      },
+      "csc_timecapsule_review4_ -l3": {
+        "display_name": "Výber zvuku",
+        "short_instructions": "Pridajte do programu zvuky, aby ste zmenili pocit z básne počas jej čítania.",
+        "long_instructions": "**Najdime zvuk, ktorý zodpovedá pocitu z našej básne o časovej kapsule!** - Pripojte blok <code style=\"color:black; background-color:#B3B2FB\">prehrávania zvuku</code> alebo <code style=\"color:black; background-color:#B3B2FB\">prehrávania hudby</code> <code style=\"color:black; background-color:#FFBD46\">pri spustení</code>. - Vyberte zvuk alebo hudbu, ktoré zodpovedajú pocitu z básne. - Po dokončení kliknite na tlačidlo \"Spustiť\".\r\n\r\n"
+      },
+      "csc_timecapsule_review5_ -l3": {
+        "display_name": "Pridanie udalosti",
+        "short_instructions": "Pomocou udalostí môžete zmeniť animáciu, keď sa v básni spomenie niečo nové.\r\n",
+        "long_instructions": "**Pridáme blok udalostí, ktorý zmení pozadie, textový efekt alebo zvuk tak, aby zodpovedal riadku v našej básni!** - Potiahnite blok <code style=\"color:black; background-color:#6AF36C\">When Line shows</code> do pracovného priestoru. - Pod ňu pripojte blok <code style=\"color:black; background-color:#B3B2FB\">nastaviť pozadie</code>, <code style=\"color:black; background-color:#B3B2FB\">nastaviť textový efekt</code> alebo <code style=\"color:black; background-color:#B3B2FB\">prehrať zvuk</code>. - Po dokončení kliknite na tlačidlo \"Spustiť\".\r\n"
+      },
+      "csc_timecapsule_review6_ -l3": {
+        "display_name": "Pridanie spritu",
+        "short_instructions": "Pridajte šprint na ilustráciu básne o časovej kapsule. Sprity môžu počas behu programu opakovane vykonávať určité činnosti alebo správanie.\r\n",
+        "long_instructions": "**Pridáme sprite a dáme mu správanie!** - Pripojte blok <code style=\"color:black; background-color:#F79EA5\">make new sprite</code> pri <code style=\"color:black; background-color:#FFBD46\">spustení</code>. - Potom pripojte blok <code style=\"color:black; background-color:#F79EA5\">sprite begins</code> a vyberte správanie. - Keď ste hotoví, kliknite na tlačidlo Run (Spustiť). _Bonus: Pridajte blok udalostí, aby sa sprite zobrazil alebo zmizol s určitým riadkom._"
+      }
+    }
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/4/levels/1": {
+    "long_instructions": "_Skončili ste a je čas podeliť sa o svoju báseň! Skvelá práca!_ - Uistite sa, že všetok váš kód funguje tak, ako by ste očakávali. - Pridajte všetky dokončovacie úpravy."
+  },
+  "https://studio.code.org/s/poetry-2023/lessons/4/levels/2": {
+    "dsls": {
+      "markdown": "##Share Your Poem App <img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53 PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\n**Keď ste svoju báseň zakódovali, je čas sa o ňu podeliť!** Pri prezeraní projektu svojich spolužiakov premýšľajte o \"žiari\", \"rastie\" a \"otázke\", ktorú môžete napísať pre svojho partnera: - \"žiari\" je niečo, čo urobil dobre - \"rastie\" je niečo, čo môže zmeniť alebo zlepšiť - \"otázka\" je niečo, o čom sa chcete dozvedieť viac\n</div>\n\n**Pripravení začať?** Použite <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\" target=\"_blank\">tento zdroj</a> na zdieľanie spätnej väzby so svojím partnerom.\n\n"
+    }
+  }
+}
