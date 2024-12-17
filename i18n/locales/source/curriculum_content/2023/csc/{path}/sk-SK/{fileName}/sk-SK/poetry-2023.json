@@ -1,0 +1,699 @@
+{
+  "resources": {
+    "_the_forest_for_the_trees_by_rena_priest/poetry/2023": {
+      "name": "\"Les pre stromy\" od Rena Priest",
+      "url": "<https: poets.org lesson-plan teach-poem-forest-trees-rena-priest>"
+    },
+    "all_standards/poetry/2023": {
+      "name": "Štandardy v kódovaní s poéziou ",
+      "url": "<https: studio.code.org s poetry-2023 standards>"
+    },
+    "coding_with_poetry_vocabulary/poetry/2023": {
+      "name": "Slovník v kódovaní s poéziou ",
+      "url": "<https: studio.code.org s poetry-2023 vocab>"
+    },
+    "cs_connections_landing_page/poetry/2023": {
+      "name": "CS Connections Landing Page",
+      "url": "<https: code.org educate csc>",
+      "type": "Zdroje"
+    },
+    "csc_extended_connections_book_list/poetry/2023": {
+      "name": "Zoznam kníh CSC Extended Connections",
+      "url": "<https: docs.google.com document d 14azofbay5riq109ruupi8bbzrvj1kithqa3mh7t428y template preview>",
+      "type": "Zdroje"
+    },
+    "helpful_hints_for_teachers_and_learners/poetry/2023": {
+      "name": "Užitočné tipy pre učiteľov a študentov",
+      "url": "<https: docs.google.com presentation d 1rsjhxo9zmtylrt160kvavdyekr4wt2fvsgbrphr4hs0 template preview>",
+      "type": "Zdroje"
+    },
+    "resource_list_for_all_lessons/poetry/2023": {
+      "name": "Zoznam zdrojov pre všetky lekcie",
+      "url": "<https: studio.code.org s poetry-2023 resources>"
+    }
+  },
+  "lessons": {
+    "https://studio.code.org/s/poetry-2023/lessons/1": {
+      "name": "Animovať úvod k básni",
+      "overview": "V tejto integrované hodine CS a ELA pre nových programátorov budú študenti animovať báseň pomocou kódu, aby ilustrovali náladu básne. Najprv študenti prečítajú a zistia náladu slávnej básne. Potom nájdu zodpovedajúce účinky a obrázky, ktoré pomôžu ilustrovať náladu básne. Nakoniec študenti použijú udalosti (kód), aby ilustrovali zmenu nálady alebo oživili nové obrazy v básni.",
+      "preparation": "- Prejdite cez úrovne a prezrite si prezentácie lekcií - Rozhodnite sa o tempe medzi časom práce študentov a inštrukciou pre celú skupinu. - Zvážte preskúmanie odporúčaných prípravných aktivít pred začiatkom ([link][0]). - Zvážte tieto súvisiace rozšírené možnosti ([link][1]), ktoré môžete preskúmať po poslednej lekcii. ##### Voliteľné: - [Voliteľné] Prezrite si tento **[učiteľský sprievodca na odstraňovanie chýb][2]**, aby ste boli pripravení pomôcť študentom nájsť a opraviť chyby v ich kóde. - [Voliteľné] **Párové programovanie** - Rozhodnite sa, či chcete, aby sa študenti zapojili do párového programovania. Sledujte toto [video][3] a navštívte túto [podporu][4] stránku pre viac informácií.",
+      "purpose": "Účelom tejto lekcie je naučiť študentov, ako vytvoriť umelecké dielo vo forme básne pomocou kódu na animáciu nálady básne. Toto poskytuje zaujímavý a interaktívny zážitok z učenia, ktorý integruje jazykové umenia a počítačové vedy. Kombinovaním analýzy poézie s kódovaním má lekcia za cieľ pomôcť študentom rozvinúť hlbšie porozumenie emocionálnemu dopadu jazyka a vyjadriť tento dopad prostredníctvom vizuálneho umenia.",
+      "student_overview": "Poezia je umenie s slovami. Použijete kód na pridanie vizuálnych efektov a obrázkov na animáciu básne. ",
+      "lesson_activities": {
+        "281ef28f-2969-4c60-80a4-8bdad8662658": {
+          "name": "Odporúčaná príprava",
+          "activity_sections": {
+            "4060fc38-c2a6-47ad-a35e-dd308ad03d85": {
+              "tips": [
+                "**Anglický jazyk a umenie:** Aby sme sa pripravili na tento modul a vytvorili spoločné porozumenie poézii, odporúčame začať tým, že si spolu prečítame poéziu: Prečítajte si niekoľko básní spolu ako trieda a precvičte si pomenovanie nálady každej básne. Povzbudzujte študentov, aby zdieľali svoj výklad, aj keď sa líši od výkladu niekoho iného. Uistite sa, že všetci študenti sú oboznámení so štruktúrou básne pred Lekciou 2, v ktorej študenti napíšu svoje vlastné básne. **Informatika:** Ako rozcvičku k nástroju môžu študenti pridať umenie a animáciu k klasickej básni v tejto [Básnickej umeleckej][0] (55 minút) aktivite Hodiny kódu! Okrem toho v tomto module študenti použijú bloky udalostí na programovanie zmien na dôležitých riadkoch v básni. Aby ste začali budovať zručnosti s udalosťami, skúste [Vytvoriť hru Flappy][1] (60 minút). "
+              ]
+            }
+          }
+        },
+        "7387ce3c-05c0-477a-a59c-d72b1e06f2a2": {
+          "name": "Zahriatie",
+          "activity_sections": {
+            "62511971-1d68-4159-9949-a2c4fdceab41": {
+              "description": "#### Nastavenie scény Privítajte študentov v triede a predstavte dnešnú aktivitu. <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť**: Zobraziť snímku \"Zahriatie\""
+            },
+            "b1356ec2-4bf3-4426-a00a-334dafc5c7f5": {
+              "description": "Dnes budeme používať našu kreativitu, zatiaľ čo sa učíme kódovať. Existuje veľa spôsobov, ako byť kreatívny. Aké sú niektoré spôsoby, ako sa rád/rada prejavuješ kreatívne? "
+            },
+            "539ab093-d297-428c-9ac2-d4e5d72b9ee2": {
+              "description": "Povzbudzujte študentov, aby sa podelili o spôsoby, ako vyjadrujú kreativitu, napríklad prostredníctvom umenia, tanca, hudby alebo písania. Ako doplňujúcu otázku sa opýtajte študentov, čo používajú na inšpiráciu svojej kreativity. <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť**: Zobraziť snímku „Diskusia“"
+            },
+            "7c92a266-7632-40a2-86d1-981fcd2c89ff": {
+              "description": "Vedeli ste, že informatika môže byť veľmi kreatívna? V skutočnosti môžete vytvárať umenie s kódom. Na pripomenutie, kód je súbor pokynov, ktoré počítač môže pochopiť. Rovnako ako pri výbere farieb farby, aj výber kódu, ktorý napíšete, môže byť príležitosťou na vyjadrenie vašej kreativity! Dnes použijeme poéziu na inšpirovanie našej kreatívnej kódovania. Vie niekto, čo je poézia? Máte obľúbenú báseň alebo básnika? "
+            },
+            "182b31a3-ea9b-4bd5-b846-a259ce445d39": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť**: Ukážte niekoľko slajdov s poéziou **Čítajte poéziu spoločne:** Prečítajte si niekoľko básní spoločne ako trieda a precvičte si pomenovanie nálady každej básne. Povzbudzujte študentov, aby zdieľali svoj výklad, aj keď sa líši od výkladu niekoho iného. Uistite sa, že všetci študenti sú oboznámení so štruktúrou básne pred Lekciou 2, v ktorej študenti napíšu svoje vlastné básne."
+            },
+            "382ab49b-35e9-40bd-9684-36a4c83dbd90": {
+              "tips": [
+                "Funkcia Kódovanie s poéziou <a href=\"https://docs.google.com/presentation/d/1k0VP9so-gmAHq9mSOTxiZ98pX7gNfN6TutBeoDa3pxY/template/preview\" target=\"_blank\">slides</a> obsahuje niekoľko básní. Tieto básne sú zahrnuté v postupe úrovne a študenti budú môcť pridať svoj vlastný kód na ich animáciu. Vyberte si pár vopred, aby ste ho prečítali nahlas ako trieda."
+              ]
+            }
+          }
+        },
+        "c54ef9e6-6b5a-481e-b77d-7e446171e8b0": {
+          "name": "Hlavná činnosť",
+          "activity_sections": {
+            "1090d899-8702-44e4-8973-dfc66eaf2a4e": {
+              "name": "Básnické umenie",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť**: Zobraziť snímku „Všetky úrovne“"
+            },
+            "0838e4f8-8a88-4048-98c4-1a035464dc06": {
+              "description": "Starostlivo sledujte každé video, ktoré sa objaví predtým, ako začnete. Vráťte sa k videu, ak potrebujete osvieženie. Prečítajte si niekoľko básní, aby ste si vybrali tú, ktorá sa vám najviac páči. Premýšľajte o nálade básne a nájdite efekty, ktoré zodpovedajú nálade. "
+            },
+            "5b6dd0fc-9786-4553-b7f6-44b6bb5ef3f0": {
+              "tips": [
+                "#### Všeobecná podpora Na konci tejto aktivity budú mať študenti animovanú báseň, ktorá predstavuje ich vizuálnu interpretáciu básne, ktorú si vybrali. Táto lekcia je navrhnutá tak, aby študentom poskytla príležitosť experimentovať so svojím kódom a nájsť vizuálne efekty, ktoré sa im najviac páčia. Pri obchádzaní miestnosti povzbudzujte študentov, aby: - **Nerobte si starosti:** Väčšina úrovní vyžaduje, aby študenti našli dokonalé efekty, ktoré zodpovedajú ich interpretácii nálady básne. Zostať na úrovni a majstrovať svoj kód je veľmi povzbudzované. - **Nájdite báseň, ktorá sa vám páči:** Báseň, ktorá sa zobrazuje študentovi na novej úrovni, je len návrh. Na vrchu herného priestoru je rozbaľovacia ponuka s prednahratými básňami. Požiadajte študentov, aby si prečítali niekoľko a našli jeden, ktorý ich oslovuje. Potom môžu začať animovať báseň, ktorú si vybrali pomocou kódu. - **Predveďte dokončenú úroveň:** Akákoľvek úroveň bubliny, ktorá je úplne zelená, znamená, že študent úspešne splnil všetky požiadavky pre túto úroveň. Požiadajte študenta, aby klikol na zelenú bublinu, aby ukázal, čo vytvoril. Pre časy, keď sa študent cíti zaseknutý: - **Prečítajte si pokyny:** Pokyny sú bodové body, ako dokončiť úroveň. Ak sa študent cíti zaseknutý, požiadajte ho, aby vám nahlas prečítal pokyny a aby vám zopakoval, čo pokyny hovoria vlastnými slovami. - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Študenti môžu tiež kliknúť na túto ikonu text-to-speech, aby počuli pokyny prečítané nahlas. - <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Hľadajte nápovedy**: Väčšina úrovní obsahuje aspoň jednu nápovedu s explicitnejšími podrobnosťami o tom, ako prejsť úrovňou. - **Oslávte chyby:** Získanie chyby vo vašom kóde je prirodzenou súčasťou procesu programovania. Ak program nerobí to, čo očakávali, požiadajte študenta, aby vám najprv povedal, čo chce, aby sa stalo, kliknite na spustiť, aby ste pozorovali, čo sa skutočne deje, a potom nájdite miesto v ich kóde, ktoré spôsobilo nesúlad. Nezabudnite osláviť nájdenie chýb a opravu chýb. Získanie chyby znamená, že študenti robia skvelú prácu pri vytváraní zložitejšieho programu. "
+              ]
+            },
+            "9613f996-b728-45e2-b767-e6b742c6c9b6": {
+              "name": "Podpora po úrovniach",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť**: Zobrazte snímku \"Úvodné video\" **Úroveň 1:** Povzbudzujte študentov, aby si prečítali báseň. Potom požiadajte študentov, aby našli farbu pozadia alebo efekt, ktorý zodpovedá tónu básne, ktorú si vybrali. ",
+              "progression_name": "Budovanie zručností"
+            },
+            "f49370af-c4f2-49b8-a4b9-3b0e0f1400e5": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť**: Zobrazte snímku \"Úroveň 2 a 5 - Pozorujte\" **Úroveň 2:** V tomto príklade by si študenti mali najprv prečítať báseň sami, a potom stlačiť Spustiť. Môžete sa opýtať študenta, či zvuk a efekty, ktoré si programátor vybral, zodpovedali nálade básne. Požiadajte študentov, aby podrobnejšie vysvetlili svoju odpoveď. ",
+              "progression_name": "Príklad"
+            },
+            "211c41db-9e93-4c86-9ecb-e6718e94e39e": {
+              "description": "**Úroveň 3:** Táto úroveň zavádza zvuk. Študenti môžu používať slúchadlá, ak ich majú. ",
+              "progression_name": "Budovanie zručností"
+            },
+            "9b5c4d0c-a964-42af-93f5-922938a36096": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť**: Zobrazte snímku \"Video udalostí\" **Úroveň 4:** Požiadajte študentov, aby si prečítali báseň a našli riadok, kde sa nálada básne mení, alebo ak existuje nový obraz, ktorý básnik predstavuje. Použite blok udalostí na pridanie zodpovedajúcich efektov k identifikovaným riadkom básne.",
+              "progression_name": "Budovanie zručností"
+            },
+            "1e4ba2cc-5710-4088-b840-9e099e6ed70d": {
+              "description": "**Úroveň 5:** V tomto príklade by si študenti mali najprv prečítať báseň sami, a potom stlačiť Spustiť. Opýtajte sa študenta, či obrázky zodpovedali slovám básne. Požiadajte ich, aby podrobnejšie vysvetlili svoju odpoveď. ",
+              "progression_name": "Príklad"
+            },
+            "45ae5705-dca5-4b77-a2f5-fd53b9ce3bb1": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť**: Zobrazte snímku \"Imagery Video\" **Úrovne 6, 7, 8:** Pozrite si \"Oslavte chyby\" v sekcii Všeobecná podpora. Povzbudzujte študentov, aby vytvárali programy s viacerými prechodmi pomocou svojich blokov udalostí. ",
+              "progression_name": "Budovanie zručností"
+            },
+            "e714d4ed-82d3-42a3-8d94-2f236df2f267": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť**: Zobraziť \"Gratulujeme Video\" snímku <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť**: Zobraziť \"Úroveň 9 - Voľná hra\" snímku **Úroveň 9:** Povzbudzujte študentov, aby si prečítali všetky básne v rozbaľovacom menu, aby našli jednu, ktorá sa im páči. Povedzte študentom, že môžu zdieľať to, čo vytvoria v tejto poslednej úrovni, so svojimi priateľmi a rodinou. Teraz je čas spojiť všetky kódovacie a ELA zručnosti dohromady! ",
+              "progression_name": "Voľná hra"
+            }
+          }
+        },
+        "ce713f16-6392-4922-b661-50dbf0853e80": {
+          "name": "Zhrnutie",
+          "activity_sections": {
+            "a74e9248-707c-43ca-bc03-c4b024a9cd2a": {
+              "description": "Ak ste si dnes užili učenie sa programovať, môžete pokračovať v učení návštevou code.org/learn. Ak chcete zdieľať to, čo ste vytvorili, so svojimi priateľmi a rodinou, kliknite na tlačidlo „Zdieľať“ a pošlite odkaz komukoľvek, koho chcete!"
+            },
+            "8832acb1-6add-4178-9e8b-736a6e045e44": {
+              "name": "(Voliteľné) hodnotenie: Skontrolujte porozumenie",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť**: Zobrazte snímku \"Dve zdieľané lepivé poznámky\" Rozdajte každému študentovi dve lepivé poznámky. "
+            },
+            "de9f9de3-8721-41e9-a96b-5ca3bb25041f": {
+              "description": "Máte dve lepiace poznámky. Na jeden napíšte jednu vec, ktorú ste sa dnes naučili o kódovaní. Na druhom napíšte jednu vec, ktorú ste sa dnes naučili o poézii. "
+            },
+            "8af5669d-aefe-47b8-b6d4-ec370642078a": {
+              "name": "Páska",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť**: Zobrazte snímku \"Whiparound\" **Diskutujte:** _Čo ďalšie dúfate, že sa naučíte o programovaní a informatike?_"
+            }
+          }
+        },
+        "aad4dda1-507b-42a5-a62c-1aac5671cb91": {
+          "name": "Možnosti rozšírenia",
+          "activity_sections": {
+            "ca01b961-e407-42c4-9abc-fb3990df39d3": {
+              "description": "Tento modul je skvelým úvodom do informatiky cez prizmu vedy. Tu je niekoľko možností, ako pokračovať v učení sa o konceptoch CS predstavených v tomto module. Odporúčame pokračovať v týchto rozšíreniach po dokončení Lekcie 3 v tomto module. "
+            },
+            "3ffbf11a-4e50-40ff-b781-f003016c72c6": {
+              "tips": [
+                "**ELA Obsah:**\\ Každá farba predstavuje pocit a táto sekcia obsahuje básne s určitým tématom. - <a href=\"https://www.amazon.com/Red-Sings-Treetops-Colors-Sidman/dp/0547014945/ref=sr_1_1?crid=H9ZK0W8DBKC5&keywords=red+sings+from+treetops&qid=1685390186&sprefix=red+sings+%2Caps%2C296&sr=8-1\" target=\"_blank\">\"Červená spieva z korún stromov\"</a> je obrázková kniha od Joyce Sidman (ocenená poetka), ktorá spája farby rôznych ročných období s našimi zmyslami. **Koncepty počítačovej vedy:** - Aby študenti mohli pokračovať v skúmaní udalostí, môžu <a href=\"https://studio.code.org/s/coursed-2023/lessons/7\" target=\"_blank\">Vytvoriť hru Star Wars.</a> - modul <a href=\"http://studio.code.org/s/csc-bookcovers-2023\" target=\"_blank\">Obálky kníh CSC</a> tiež spája počítačovú vedu so štandardmi ELA. Študenti budú kódovať interaktívnu obálku knihy zameranú na postavy a prostredie. - <a href=\"http://studio.code.org/s/csc-timecapsule-2023\" target=\"_blank\">CSC Time Capsule </a>modul využíva poéziu a informatiku na prepojenie so spoločenskými vedami. Študenti budú kódovať krátke básne, ktoré predstavujú konkrétny okamih v čase, ako časová kapsula."
+              ]
+            }
+          }
+        }
+      },
+      "objectives": {
+        "1bd88170-e38e-4c5b-bd62-8107acd68567": {
+          "description": "Reprezentujte figúrny a doslovný jazyk v texte."
+        },
+        "4b7b140c-b345-48c6-b81b-eea3c37f2a0b": {
+          "description": "Použite kód na animáciu zmien nálady básne."
+        },
+        "a39a475f-a7c2-402f-abef-87340f6e4a45": {
+          "description": "Použite bloky udalostí na spustenie akcie, ktorá sa má uskutočniť na konkrétnych riadkoch básne."
+        }
+      },
+      "resources": {
+        "_the_forest_for_the_trees_by_rena_priest_1/poetry/2023": {
+          "name": "\"Les pre stromy\" od Rena Priest",
+          "url": "<https: poets.org lesson-plan teach-poem-forest-trees-rena-priest>",
+          "type": "Zdroje"
+        },
+        "coding_with_poetry_lesson_1/poetry/2023": {
+          "name": "Kódovanie s poéziou",
+          "url": "<https: docs.google.com presentation d 1k0vp9so-gmahq9msotxiz98px7gnfn6tutbeoda3pxy template preview>",
+          "type": "Snímky"
+        },
+        "helpful_hints_1/poetry/2023": {
+          "name": "Užitočné tipy",
+          "url": "<https: docs.google.com presentation d 1rsjhxo9zmtylrt160kvavdyekr4wt2fvsgbrphr4hs0 template preview>",
+          "type": "Snímky"
+        },
+        "poem_art_1_-_introduction/poetry/2023": {
+          "name": "Básnické umenie 1 - Úvod ",
+          "url": "<https: www.youtube.com watch?v=\"uvwUWTTjIXo&amp;list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&amp;index=2\">",
+          "type": "Video"
+        },
+        "poem_art_2_-_events/poetry/2023": {
+          "name": "Básnické umenie 2 - Udalosti",
+          "url": "<https: www.youtube.com watch?v=\"XGwYYUEb6jQ&amp;list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&amp;index=3\">",
+          "type": "Video"
+        },
+        "poem_art_3_-_imagery/poetry/2023": {
+          "name": "Básnické umenie 3 - Obraznosť",
+          "url": "<https: www.youtube.com watch?v=\"doy1aIuV-5U&amp;list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&amp;index=4\">",
+          "type": "Video"
+        },
+        "poem_art_4_-_celebration/poetry/2023": {
+          "name": "Básnické umenie 4 - Oslava ",
+          "url": "<https: www.youtube.com watch?v=\"Q-76vz8i8mo&amp;list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&amp;index=5\">",
+          "type": "Video"
+        }
+      },
+      "vocabularies": {
+        "code/poetry/2023": {
+          "word": "Kód",
+          "definition": "(v) písať pokyny pre počítač."
+        },
+        "event/poetry/2023": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobuje, že sa niečo stane."
+        },
+        "line/poetry/2023": {
+          "word": "Riadok",
+          "definition": "(poézia) - pododdelenie básne usporiadané v riadku, ktoré končí na pravej strane."
+        },
+        "mood/poetry/2023": {
+          "word": "Nálada",
+          "definition": "Výraz pocitu, atmosféry alebo emócie v umení alebo písaní."
+        },
+        "poem/poetry/2023": {
+          "word": "Básnička",
+          "definition": "Riadky písania, ktoré používajú slová na vytváranie obrázkov, pocitov a myšlienok v mysli čitateľa."
+        },
+        "program/poetry/2023": {
+          "word": "Program",
+          "definition": "Séria krokov, ktoré boli zakódované do niečoho, čo môže byť spustené strojom."
+        }
+      }
+    },
+    "https://studio.code.org/s/poetry-2023/lessons/2": {
+      "name": "Písanie mojej básne",
+      "overview": "V tejto lekcii si študenti naplánujú a napíšu svoju vlastnú báseň. Študenti sa zamyslia nad svojím životom a osobnými skúsenosťami, aby si vybrali dôležitú myšlienku na krátku báseň, ktorú môžu animovať. V nasledujúcej lekcii budú študenti kódovať svoje básne, preto je dôležité, aby si pripravili krátku báseň.",
+      "preparation": "- Prezrite si prezentácie lekcie. - Vytlačte jeden **Write Your Own Poem Handout** (<a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\n    \" target=\"_blank\">Sentence Stems</a> \\| <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\" target=\"_blank\">Topics</a>) pre každého študenta. - Zvážte tieto súvisiace rozšírené možnosti ([link][0]) na preskúmanie po poslednej lekcii.",
+      "purpose": "Kombinovaním písania poézie s programovaním má lekcia za cieľ pomôcť študentom rozvinúť hlbšie porozumenie kreatívnemu procesu a vyjadriť svoje myšlienky a emócie prostredníctvom jazyka a technológie. Keď študenti robia rozhodnutia o výbere slov, sú povzbudzovaní, aby plánovali, ako kreatívne a zmysluplne využiť svoj kód na vytvorenie vizuálneho zobrazenia emocionálneho dopadu ich básne. ",
+      "student_overview": "Dnes napíšete svoju vlastnú báseň. Keď plánujete, premýšľajte o tom, aké témy sú pre vás dôležité. Čo chcete zdieľať s čitateľmi? Na ďalšej hodine budete kódovať svoju báseň. Začnite premýšľať o tom, aké pozadia, textové efekty, zvuky, sprity a udalosti môžete použiť.",
+      "lesson_activities": {
+        "f3ff3f84-baa4-4480-9970-252a7478e738": {
+          "name": "Zahriatie",
+          "activity_sections": {
+            "08a4766f-c941-4770-9bb4-019389604584": {
+              "name": "Písanie básne",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť**: Zobraziť snímku „Zahriatie“ **Cieľ diskusie**: Použite túto rozcvičovaciu aktivitu na aktiváciu predchádzajúcich vedomostí a diskusiu o tom, prečo píšeme poéziu. Táto diskusia by mala pripraviť študentov na písanie vlastných básní neskôr v lekcii."
+            },
+            "aa2b8af4-d941-4f4b-8b5c-2b0462df453e": {
+              "description": "Minulý raz sme sa naučili, ako zistiť náladu básne a použiť kód na jej animáciu. V tejto aktivite ste si vybrali báseň iného autora na animáciu. Dnes napíšete svoje vlastné básne a premýšľate o tom, aké bloky by ste použili na animáciu slov vašej básne na obrazovke. Na ďalšej hodine budete môcť animovať svoju báseň pomocou toho, čo viete o kódovaní efektov, spriteoch a udalostiach. Predtým, ako začneme písať naše vlastné básne, si spomeňme na aktivitu, ktorú sme robili na poslednej hodine. - _Prečo píšeme poéziu?_ - _Aké sú niektoré z vašich obľúbených básní z poslednej lekcie?_ - _Čo robí dobrú báseň?_"
+            },
+            "8e76a45c-4ef0-49db-9839-ed7e5323a7f1": {
+              "description": "**Cieľ diskusie:** Povzbudiť študentov, aby prišli s odpoveďami ako \"poézia je vytváranie umenia s slovami\" alebo \"píšeme poéziu, aby sme vyjadrili pocit.\" Pri diskusii o tom, čo sa študentom páči na určitých básňach, povzbudzujte študentov, aby hovorili o tom, aké pocity v nich báseň vyvolala alebo aké obrazy im pri čítaní básne prišli na myseľ. Pri diskusii o tom, čo robí dobrú báseň, sa opýtajte študentov, či musia mať básne rým alebo byť určitej dĺžky. Môže dobrá báseň rozosmiať? Hľadajte odpovede ako \"dobrá báseň je taká, ktorá využíva vašu predstavivosť\" alebo \"dobrá báseň vás núti cítiť niečo.\""
+            },
+            "1d723fa3-6aec-4dd5-a864-ee117b0272e8": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť**: Zobrazte snímku „Diskutovať“ **Diskusia:** _Aké sú výhody a nevýhody používania informatiky na vytvorenie básne?_ **Cieľ diskusie:** Účelom tejto úvodnej otázky je posunúť myslenie študentov k informatike a tomuto konkrétnemu projektu. Študenti by mali aktivovať predchádzajúce vedomosti z Lekcie 1 – informatika je mocný nástroj na kódovanie básne, pretože môžete pridať zložitosti a detaily, aby ste ju naozaj oživili. Čítanie básne sa stáva pohlcujúcim zážitkom, keď používate informatiku."
+            },
+            "9173de11-3a80-4f69-9fd1-fbeefc15e9b8": {
+              "tips": [
+                "Dajte študentom 10 sekúnd **čas na premýšľanie** predtým, ako im umožníte odpovedať. Toto umožní väčšiemu počtu študentov zúčastniť sa a odpovede môžu byť premyslenejšie. Nechajte študentov **otočiť sa a rozprávať** a zdieľať počiatočné nápady. Toto umožní zapojiť všetkých študentov do diskusie, nie len niekoľkých. "
+              ]
+            }
+          }
+        },
+        "e9cbffab-836c-44c6-91e3-fe51eb49cd13": {
+          "name": "Aktivita",
+          "activity_sections": {
+            "6f6494f4-88eb-4f26-8063-c4a204ccf341": {
+              "name": "Hodnotiaca rubrika",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Zobraziť**: Zobrazte snímku \"Rubrika kódovania s poéziou\""
+            },
+            "0ec77c09-d672-48e6-a663-43cfa09f39ce": {
+              "description": "Chystáte sa vytvoriť svoju báseň a oživiť ju pomocou kódu. Predtým, ako začneme, sa pozrime na hodnotiacu schému, aby sme videli, čo váš projekt bude obsahovať.",
+              "tips": [
+                "V tejto lekcii budete používať poskytnutú <a href=\"https://docs.google.com/document/d/13CJlIIV2CFu9D6-oxAm99PZ6EqNnDUZwFZCEW9fSMaE/template/preview\" target=\"_blank\">rubric</a> na hodnotenie projektov vašich študentov. Rubriky sú cenné nástroje, ktoré prinášajú konzistenciu a jasnosť do hodnotiaceho procesu. Vytvorením konkrétnych kritérií a úrovní výkonu zabezpečujú rubriky, že všetci študenti sú hodnotení spravodlivo a objektívne. Odporúčame vám zdieľať hodnotiacu maticu so svojimi študentmi predtým, ako začnú svoje projekty. To im pomáha pochopiť očakávania a pracovať na splnení stanovených kritérií. Okrem toho, keď hodnotíte ich prácu, konzistentne sa odvolávajte na hodnotiacu maticu, aby sa každý aspekt projektu hodnotil na základe rovnakého súboru štandardov. Prijatím tohto prístupu podporujete spravodlivosť, poskytujete študentom zmysluplnú spätnú väzbu a pomáhate im identifikovať oblasti na rast a zlepšenie."
+              ]
+            },
+            "ebbed86c-9d52-42cd-ba0b-658476a564df": {
+              "name": "Brainstorming",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť**: Naplánujte si svoju báseň: \"Vety začiatky\" snímka alebo \"Naplánujte si svoju báseň:\" Témy\" snímka"
+            },
+            "e650d5df-ec03-4080-870f-70516508f4ec": {
+              "description": "Teraz, keď máme nejakú inšpiráciu, použijeme grafický organizér na plánovanie našich básní. Nájdete partnera, ktorý vám pomôže premýšľať o tom, čo vaša báseň povie. Pamätajte, že báseň sa skladá z niekoľkých riadkov, ktoré môžu rýmovať, ale nemusia. Použite vety alebo témy poézie ako východiskový bod. Keď brainstormujete, je užitočné zapísať si čo najviac nápadov, na ktoré si spomeniete. Potom, keď sú všetky vaše nápady na papieri, vyberte si tie najlepšie a použite ich vo svojej konečnej verzii. Poďme na to. Na tri sa nájdete so svojím partnerom a začnete. 1…2…3."
+            },
+            "34ce2240-3936-4e06-9ed1-7f877e98d742": {
+              "description": "Urobte to Dajte každému študentovi leták \"Napíš si vlastnú báseň\". Nechajte študentov, aby sa spojili s partnerom a prečítali si materiály. Študenti by sa mali so svojím partnerom porozprávať o tom, ako odpovedia na otázky, predtým ako začnú písať. **_Vety začiatky:_** Nech študenti odpovedajú na všetky 8 začiatkov viet. **_Témy poézie:_** Nech študenti vyberú 1 tému a napíšu báseň na riadky nižšie."
+            },
+            "63a8df80-5449-402f-ada3-514840f5b47c": {
+              "name": "Vety",
+              "description": "_Milujem…_ - _Cítim sa šťastný, keď…_ - _Niekto výnimočný je…_ - _Môj obľúbený čas dňa je…_ - _Moje obľúbené miesto je…_ - _Vieme, ako…_ - _Chcem sa naučiť…_ - _Jedného dňa, budem…_"
+            },
+            "2f14b146-337f-4c9b-85d4-b5032d0b6291": {
+              "name": "Témy poézie",
+              "description": "_Môžete písať o:_ 1. _Najlepšom dni vôbec_ 2. _Šťastnej spomienke_ 3. _Smutnej spomienke_ 4. _Vašej obľúbenej jedle_ 5. _Sne_ 6. _Témou podľa vášho výberu_"
+            },
+            "8c133a86-8097-4356-9f81-1caa501a07d8": {
+              "progression_name": "Odpojená aktivita"
+            },
+            "5e0ddc43-3c1c-4f35-a143-0363caba2bf7": {
+              "tips": [
+                "Keď študenti diskutujú v pároch, prechádzajte po miestnosti a sledujte, ako sa navzájom zapájajú. Uistite sa, že študenti aktívne počúvajú jeden druhého a plánujú odpoveď na každú otázku. Pripomeňte študentom, že táto aktivita slúži ako základ pre ich básne."
+              ]
+            },
+            "b0fcdd5c-80a1-43e0-a3c6-29a6f915cd9b": {
+              "name": "Napíšte svoju vlastnú báseň",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť**: Zobrazte snímku „Napíšte svoju vlastnú báseň“"
+            },
+            "0bc81311-f866-41f7-b704-dc3dfa994528": {
+              "description": "Teraz je čas, aby sme napísali naše vlastné básne. Použite niekoľko nápadov, ktoré ste vymysleli, a napíšte báseň, ktorá má medzi tromi a ôsmimi riadkami. Použite popisný jazyk na maľovanie obrazu v mysli čitateľa. Vezmite si 15 minút na napísanie svojej básne. Časovač sa spúšťa teraz."
+            },
+            "3a652598-cf63-4947-a18d-e061b8ea0b78": {
+              "description": "Urobte toto Nechajte študentov otočiť svoj pracovný list na poslednú stranu. Vyberú si niekoľko nápadov zo svojej brainstormingovej relácie, ktoré použijú na svoju báseň. Študenti by mali prísť s názvom a asi 8 riadkami básne. Potom sa študenti začnú zamýšľať nad tým, ako zakódujú svoju báseň, aby ju oživili. Zvážia zručnosti, ktoré sa naučili v Lekcii 1, a ako ich aplikujú na svoju vlastnú krátku báseň. **Circulate:** Kým študenti píšu svoje básne, prechádzajte po miestnosti, aby ste zistili, kto by mohol potrebovať extra pomoc pri začatí. Tu sú niektoré usmerňujúce podnety, ktoré pomôžu študentovi, ktorý sa cíti zaseknutý: - Vyberte si jedno z tém. Môžete opísať niektoré veci, ktoré vám prídu na myseľ, keď premýšľate o tejto téme? Iné výzvy: - Povedz mi o čase, keď si sa niečo naučil ťažkým spôsobom. - Napíš ódu na niečo, čo miluješ. - Napíš báseň z pohľadu svojho domáceho maznáčika. Povzbudzujte študenta, ktorý je zaseknutý, aby si zapísal všetky slová, ktoré mu prídu na um. Môžu upraviť neskôr. **Zoskupenie:** Nechajte študentov na chvíľu zastaviť a uistiť sa, že pred pokračovaním dajú svojej básni názov. <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť:** Zobrazte \"Príklad\" snímky **Urobte toto:** Nechajte študentov odkazovať na príkladové básne napísané na ich handoutoch a v snímkach, ak sa cítia zaseknutí. "
+            },
+            "bf6156f8-6307-4af9-8f3a-53c3633a1002": {
+              "name": "Efekty básne",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť**: Zobrazte snímky „Oživte svoju báseň“ - _Aké **pozadie** by mohlo ísť s vašou básňou?_ - _Aké **textové efekty** by mohli ísť s vašou básňou?_ - _Aké **zvuky** by mohli ísť s vašou básňou?_ - _Aké **sprite** by mohli ísť s vašou básňou?_ **Urobte toto:** Dajte študentom 5 minút na brainstormovanie rôznych vizuálnych a zvukových efektov, ktoré by mohli pridať k svojim básňam. Povzbudzujte ich, aby si tieto účinky zapísali vedľa príslušného riadku ich básne."
+            },
+            "665743fa-bed1-498f-bfb5-feb2b6baf6c0": {
+              "tips": [
+                "Nechajte študentov prečítať si svoju báseň niekoľkokrát, aby si dokázali predstaviť, ako by vyzerala s vizuálnymi efektmi a obrázkami. Ak majú študenti problémy s vymýšľaním slov alebo fráz na animáciu, nech sa zamyslia nad príkladmi, ktoré videli v predchádzajúcej lekcii."
+              ]
+            }
+          }
+        },
+        "48e777fe-4e61-4b4e-bfdd-d69fb9869eaa": {
+          "name": "Zhrnutie",
+          "activity_sections": {
+            "2522adc1-9ff5-4d94-a789-85795f238c16": {
+              "name": "Reflexia",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť**: Zobrazte snímku „Reflektovať“ **Reflektovať:** - _Prečítajte si svoju báseň partnerovi._ - _Prediskutujte pozadia, textové efekty, zvuky a sprity, ktoré plánujete použiť._ - _Pozrite sa späť na_ <a href=\"https://docs.google.com/document/d/13CJlIIV2CFu9D6-oxAm99PZ6EqNnDUZwFZCEW9fSMaE/template/preview\" target=\"_blank\">rubriku</a> _a uistite sa, že vaša báseň splní všetky požiadavky._ **Cieľ diskusie:** Na ďalšiu hodinu by mali študenti mať krátku báseň, ktorú posúdili rovesníci, aby ju mohli použiť vo svojej digitálnej aplikácii na básne. Cieľom diskusie je zabezpečiť, aby študenti naplánovali pozadia, textové efekty, zvuky a sprity, ktoré plánujú použiť vo svojom kóde. Študenti môžu chcieť urobiť malé úpravy po rozhovore so svojím partnerom."
+            }
+          }
+        },
+        "9484e482-4713-4747-84d0-fba065c7e4a1": {
+          "name": "Možnosti rozšírenia",
+          "activity_sections": {
+            "0b16d8e7-63c6-4878-b0ee-42865e00697e": {
+              "description": "Tento modul je skvelým úvodom do informatiky cez prizmu poézie. Tu je niekoľko možností, ako pokračovať v učení sa o konceptoch CS predstavených v tomto module. Odporúčame pokračovať v týchto rozšíreniach po dokončení Lekcie 4 v tomto module. "
+            },
+            "054b2bd3-82cc-4bf9-ba4e-bf62fe02f01d": {
+              "tips": [
+                "**ELA Obsah:**\\ Každá farba predstavuje pocit a táto sekcia obsahuje básne s určitým tématom. - <a href=\"https://www.amazon.com/Red-Sings-Treetops-Colors-Sidman/dp/0547014945/ref=sr_1_1?crid=H9ZK0W8DBKC5&keywords=red+sings+from+treetops&qid=1685390186&sprefix=red+sings+%2Caps%2C296&sr=8-1\" target=\"_blank\">\"Červená spieva z korún stromov\"</a> je obrázková kniha od Joyce Sidman (ocenená poetka), ktorá spája farby rôznych ročných období s našimi zmyslami. **Koncepty počítačovej vedy:** - Aby študenti mohli pokračovať v skúmaní udalostí, môžu <a href=\"https://studio.code.org/s/coursed-2023/lessons/7\" target=\"_blank\">Vytvoriť hru Star Wars.</a> - modul <a href=\"http://studio.code.org/s/csc-bookcovers-2023\" target=\"_blank\">Obálky kníh CSC</a> tiež spája počítačovú vedu so štandardmi ELA. Študenti budú kódovať interaktívnu obálku knihy zameranú na postavy a prostredie. - <a href=\"http://studio.code.org/s/csc-timecapsule-2023\" target=\"_blank\">CSC Time Capsule </a>modul využíva poéziu a informatiku na prepojenie so spoločenskými vedami. Študenti budú kódovať krátke básne, ktoré predstavujú konkrétny okamih v čase, ako časová kapsula."
+              ]
+            }
+          }
+        }
+      },
+      "objectives": {
+        "2dfe199c-6e82-4979-a24f-0b20d8b14f2f": {
+          "description": "Vysvetlite, ako vizuálne efekty, zvuky a obrázky zlepšujú zážitok diváka z básne."
+        },
+        "521bc123-9d0a-4588-9b39-a3cc94229a64": {
+          "description": "Naplánovať a napísať svoje vlastné básne."
+        },
+        "db6ecf8b-0374-46ea-b6cd-d59ac77879a1": {
+          "description": "Rozvíjajte kritické myslenie a zručnosti riešenia problémov tým, že požadujete od študentov, aby sa rozhodovali, ako reprezentovať svoju báseň pomocou kódu a umenia."
+        }
+      },
+      "resources": {
+        "coding_with_poetry_lesson_1/poetry/2023": {
+          "name": "Kódovanie s poéziou",
+          "url": "<https: docs.google.com presentation d 1k0vp9so-gmahq9msotxiz98px7gnfn6tutbeoda3pxy template preview>",
+          "type": "Snímky"
+        },
+        "coding_with_poetry_rubric/poetry/2023": {
+          "name": "Kódovanie s poéziou Rubrika",
+          "url": "<https: docs.google.com document d 13cjliiv2cfu9d6-oxam99pz6eqnnduzwfzcew9fsmae template preview>",
+          "type": "Rubrika"
+        },
+        "helpful_hints/poetry/2023": {
+          "name": "Užitočné tipy",
+          "url": "<https: docs.google.com presentation d 1rsjhxo9zmtylrt160kvavdyekr4wt2fvsgbrphr4hs0 template preview>",
+          "type": "Snímky"
+        },
+        "write_your_own_poem/poetry/2023": {
+          "name": "Napíšte si vlastnú báseň - vetné začiatky",
+          "url": "<https: docs.google.com document d 1b6w_lonibuhydlycp3rawed5ielgm6loqajwg-hlih0 template preview>",
+          "type": "Materiály"
+        },
+        "write_your_own_poem_-_topics/poetry/2023": {
+          "name": "Napíšte si vlastnú báseň - Témy",
+          "url": "<https: docs.google.com document d 1v-dawoiuk0xt7nytzx3aet4my-jc-hx4vy21kl4spoe template preview>",
+          "type": "Materiály"
+        }
+      },
+      "vocabularies": {
+        "code/poetry/2023": {
+          "word": "Kód",
+          "definition": "(v) písať pokyny pre počítač."
+        },
+        "event/poetry/2023": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobuje, že sa niečo stane."
+        },
+        "line/poetry/2023": {
+          "word": "Riadok",
+          "definition": "(poézia) - pododdelenie básne usporiadané v riadku, ktoré končí na pravej strane."
+        },
+        "mood/poetry/2023": {
+          "word": "Nálada",
+          "definition": "Výraz pocitu, atmosféry alebo emócie v umení alebo písaní."
+        },
+        "poem/poetry/2023": {
+          "word": "Básnička",
+          "definition": "Riadky písania, ktoré používajú slová na vytváranie obrázkov, pocitov a myšlienok v mysli čitateľa."
+        },
+        "program/poetry/2023": {
+          "word": "Program",
+          "definition": "Séria krokov, ktoré boli zakódované do niečoho, čo môže byť spustené strojom."
+        }
+      }
+    },
+    "https://studio.code.org/s/poetry-2023/lessons/3": {
+      "name": "Kódovanie mojej básne",
+      "overview": "V tejto integrované hodine CS a ELA budú študenti pracovať na svojich počítačoch, aby animovali svoje básne pomocou kódu. V lekcii 1 študenti použili rozbaľovacie menu básní, aby si vybrali báseň, ktorú chceli animovať. V tejto lekcii študenti vložia svoje vlastné básne do hracieho priestoru a potom použijú bloky kódu na pridanie pozadí, efektov, zvukov a postavičiek.",
+      "preparation": "- Prejdite úrovňami a vopred si prezrite prezentácie lekcií, aby ste sa pripravili na sekcie kódovania a diskusie lekcie. - Uistite sa, že študenti majú svoj leták \"Napíš si vlastnú báseň\" z minulej hodiny. - Vytlačte jeden **<a href=\"https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/template/preview\" target=\"_blank\">Kontrolný zoznam básne</a>** pre každého študenta. - Zvážte tieto súvisiace rozšírenia ([link][0]), ktoré môžete preskúmať po poslednej lekcii. #### Voliteľné - Zvážte potrebu slúchadiel, ak študenti plánujú pridať zvuky do svojich projektov. - Vytvorte svoju vlastnú aplikáciu na básne ako príklad pre študentov.",
+      "purpose": "Študenti budú môcť personalizovať svoje básne výberom efektov, ktoré chcú pridať do svojich programov. Budú spravovať svoje projekty podľa vlastných záujmov a osobných skúseností.",
+      "student_overview": "Dnes si budete môcť prispôsobiť svoju báseň výberom efektov, ktoré chcete pridať do svojej časovej kapsuly. ",
+      "lesson_activities": {
+        "1bf99ed8-87aa-4bc1-b29e-77d8836cbff5": {
+          "name": "Zahriatie",
+          "activity_sections": {
+            "591d5554-8192-45e8-8148-90ea3dccb6e7": {
+              "name": "Prečítajte si príklady básní",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Zobraziť**: Zobraz \"Na ihrisku\" šmýkačku **_Na ihrisku_**\\ _Autor: Jared K._ _Po rebríku, jeden po druhom,\\ Šmýkačka čaká, poďme sa zabaviť.\\ Hojdanie, visenie, cítiť sa silný,\\ Sme na opičích tyčiach, poďte s nami!\\ Cítiť vánok vo vlasoch,\\ Na ihrisku bez starostí._ <i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Zobraziť**: Zobrazte snímku „Čítaj a predstavuj si“ **Diskutujte**: _Aké pozadia, textové efekty, zvuky a postavy by mohli byť súčasťou tejto básne?_"
+            },
+            "66f92999-a212-4c76-b50c-fcc7d3523965": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Zobraziť**: Zobrazte snímku „Robotics Club“ **_Robotics Club_**\n _Od Melissy M._ _V robotickom klube staviame a vytvárame,\n S ozubenými kolesami a drôtmi inovujeme.\n Kódujeme a majstrujeme s nekonečnou radosťou,\n A sledujeme, ako naše stroje ožívajú.\n Učíme sa, hráme sa, rozumieme,\n Budúcnosť technológie je v našich rukách!_ <i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Zobraziť**: Zobrazte snímku „Čítaj a predstavuj si“ **Diskutujte**: _Aké pozadia, textové efekty, zvuky a postavy by mohli byť súčasťou tejto básne?_ **Cieľ diskusie**: Účelom tohto rozcvičenia je ukázať študentom dva príklady krátkych básní, ktoré je možné ľahko vizualizovať. ",
+              "tips": [
+                "Voliteľné: Dve básne zobrazené v snímkach sú príklady študentov, ktoré môžete použiť vo svojej triede. Namiesto použitia poskytnutých básní môžete vložiť svoju vlastnú originálnu báseň alebo použiť príklady študentov z predchádzajúcej lekcie. Snažte sa vybrať básne, ktoré obsahujú slová alebo frázy, ktoré si študenti môžu ľahko vizualizovať."
+              ]
+            }
+          }
+        },
+        "5094fb3f-4b22-4fde-9664-3bbbd94ece74": {
+          "name": "Hlavná činnosť ",
+          "activity_sections": {
+            "0a0328fe-b3d8-4eb3-a67a-7eac98b6d926": {
+              "name": "Kódujte a animujte svoju báseň",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Zobraziť**: Zobraziť snímku \"Príprava\" ",
+              "progression_name": "Voľná hra "
+            },
+            "dbc698a1-7ac4-4226-9347-749ad12885ac": {
+              "description": "Teraz je čas začať kódovať naše básne. Chystáš sa zobrať báseň, ktorú si napísal na poslednej hodine, a zakódovať ju ako aplikáciu. Keď pridávate bloky do svojho programu, odkazujte na svoj dokončený materiál, aby ste videli, ktoré slová alebo frázy chcete vylepšiť vizuálnymi efektmi, obrazmi a zvukom. Ak si potrebujete pripomenúť, ako pridávať v konkrétnych blokoch, prejdite na úroveň voľby v tejto lekcii, aby ste si osviežili svoje zručnosti. Keď pracujete, uistite sa, že sa odvolávate na svoj <a href=\"https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/template/preview\" target=\"_blank\">Coding Your Poem Checklist</a>, aby ste sa uistili, že vaša aplikácia spĺňa všetky požiadavky."
+            },
+            "58facfa2-d6e2-48c8-8a9b-42e9e3e95730": {
+              "description": "Urobte toto Nechajte študentov presunúť sa k svojim počítačom a prihlásiť sa. Študenti si teraz napíšu vlastnú báseň. Študenti by mali použiť svoj **\\*Napíšte si vlastnú báseň** materiál (<a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\n\" target=\"_blank\">Vety na začiatok</a> \\| <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\" target=\"_blank\">Témy</a>) a **\\*<a href=\"https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/template/preview\" target=\"_blank\">Kontrolný zoznam pre písanie vlastnej básne</a>** ako sprievodcu, keď pridávajú svoj text, pozadia, efekty, zvuky a udalosti. Použijú zručnosti, ktoré sa naučili z tutoriálu Lekcia 1, na vylepšenie svojich vlastných básní. Prejdite miestnosťou, aby ste podporili študentov. Povzbudzujte ich, aby každýkrát, keď pridajú blok, stlačili „Spustiť“ a zaznamenali, či potrebujú pridať nejaké ďalšie efekty, sprity alebo udalosti, aby najlepšie zodpovedali ich básni. <i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Zobraziť**: Zobraziť snímku „Úroveň 1 - Kóduj svoju báseň“ **Tipy na ladenie**: **Úroveň 1**: Aby si študenti mohli napísať svoje básne, musia kliknúť na možnosť \"Zadajte svoju vlastnú\" v rozbaľovacom menu básní. Študenti vyplnia text pre svoju báseň, ktorú napísali na poslednej hodine. Napíšu do svojho názvu svoje vlastné meno alebo prezývku a každú líniu svojej krátkej básne. Nechajte študentov pozrieť si krátke <a href=\"https://www.youtube.com/watch?v=oKPgbzdpTSA\" target=\"_blank\">video</a> vysvetlenie pred začiatkom. Vediace otázky na posunutie študentov ďalej: - Vidím, že ste do svojho kódu pridali X, čo to zodpovedá vo vašej básni? - Veľmi sa mi páči, ako ste písali o X. Aký efekt alebo postava by zodpovedala tomu obrazu alebo pocitu básne, ktorú ste napísali? Usmerňujúce otázky pre študentov, ktorí potrebujú pomoc pri ladení: - Povedz mi, čo chceš, aby tvoj program robil. Stlačte „Spustiť.“ - Čo momentálne robí? - Kde si myslíte, že je chyba vo vašom kóde?",
+              "progression_name": "Kód môjho básne"
+            },
+            "30967762-dd16-47ae-abe1-bb00b79e54a9": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Zobraziť**: Zobrazte snímku „Úroveň 2 - Úroveň voľby“ **Úroveň 2 - Úroveň voľby**: Úroveň 2 je úroveň voľby, v ktorej si študenti zopakujú zručnosti z lekcie 1, aby pridali pozadia, textové efekty, zvuky, sprity, udalosti a správanie spriteov. Študenti majú tiež možnosť vrátiť sa k lekcii 1 a znova si pozrieť akékoľvek videá. Po tom, čo študenti dokončia prehľad svojich zručností, povzbudzujte ich, aby klikli na bielu a zelenú bublinu pokroku v hornej časti obrazovky, aby sa vrátili k svojej básni na úrovni 1.",
+              "tips": [
+                "Tu je niekoľko tipov, ktoré by mali pomôcť študentom bez ohľadu na úroveň, na ktorej pracujú: - **Spolupracujte so susedmi:** Povzbudzujte študentov, aby sa skontrolovali so susedom, keď sa zaseknú. V závislosti od veku a schopností vašich študentov by ste mohli zvážiť formálne rozdelenie vašej triedy do dvojíc na dokončenie tutoriálu pomocou párového programovania. - **Prečítajte si pokyny:** Pokyny sú bodové body, ako dokončiť úroveň. Ak sa študent cíti zaseknutý, požiadajte ho, aby vám nahlas prečítal pokyny a aby vám zopakoval, čo pokyny hovoria vlastnými slovami. - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Študenti môžu tiež kliknúť na túto ikonu text-to-speech, aby počuli pokyny prečítané nahlas. - <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Hľadajte nápovedy**: Väčšina úrovní obsahuje aspoň jednu nápovedu s explicitnejšími podrobnosťami o tom, ako prejsť úrovňou. - **Oslávte chyby:** Získanie chyby vo vašom kóde je prirodzenou súčasťou procesu programovania. Ak program nerobí to, čo očakávali, požiadajte študenta, aby vám najprv povedal, čo chce, aby sa stalo, kliknite na spustiť, aby ste pozorovali, čo sa skutočne deje, a potom nájdite miesto v ich kóde, ktoré spôsobilo nesúlad. Nezabudnite osláviť nájdenie chýb a opravu chýb. Získanie chyby znamená, že študenti robia skvelú prácu pri vytváraní zložitejšieho programu. "
+              ],
+              "progression_name": "Recenzia - Úroveň voľby"
+            },
+            "b35a631f-1839-403e-a41b-8277cd6549a3": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Zobraziť**: Zobrazte snímku \"Partner Share and Final Revisions\" **Urobte toto**: Pred ďalšou hodinou by mali študenti ukázať svoju prácu partnerovi. Po krátkej diskusii majú študenti príležitosť dokončiť svoju báseň a vykonať posledné úpravy."
+            },
+            "fc96158a-2f7c-4e47-bc0d-81b5bf26d50a": {
+              "tips": [
+                "Sledovaním projektov navzájom sú študenti schopní riešiť výzvy, inšpirovať sa novými nápadmi a zlepšovať svoje vlastné projekty. Dajte študentom vedieť, kto sa bude zdieľať ako prvý, a uľahčte partnerom striedanie sa. Kruhové zdieľanie počas párového zdieľania, aby ste počúvali rozhovory. Zvážte, či sa podelíte o zmysluplný komentár, ktorý ste počuli, so skupinou neskôr. Identifikujte študentov, ktorí by mali prospech z dodatočnej podpory."
+              ]
+            }
+          }
+        },
+        "8dd85242-85ec-4172-8516-b3124c3ec790": {
+          "name": "Zhrnutie",
+          "activity_sections": {
+            "d3503af6-3a1d-4a6d-b190-6b97bf23302a": {
+              "name": "Reflexia",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť**: Zobrazte snímku „Zdieľať vonku“ **Urobte toto:** Vyberte dobrovoľníka, ktorý predstaví svoj program triede. Po tom, čo študent prednesie svoju báseň, sa opýtajte triedy: - _Aké efekty tento programátor pridal, aby zodpovedali básni, ktorú napísal?_ - _Ako tieto efekty prispeli alebo zmenili pocit básne?_ - _Prekvapilo vás niečo?_ **Cieľ diskusie:** Požiadajte študentov, aby vytvorili spojenia medzi určitými slovami alebo frázami, ktoré vyjadrujú konkrétnu náladu, a efektmi, ktoré programátor zvolil na pridanie atmosféry básne. Diskutujte, či bol nejaký efekt, výber farby alebo zvuk pre triedu prekvapujúci. Dajte dobrovoľníkovi šancu vysvetliť, prečo si mohli vybrať jednu farbu/efekt pred iným. Majte diskusiu o tom, ako sa umenie môže interpretovať rôznymi spôsobmi. <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť**: Zobrazte snímku \"Dobre odvedená práca, programátori!\""
+            },
+            "e273d1cc-0e4c-425b-944b-1d8c9644d003": {
+              "description": "Dobre vykonané, programátori! Na budúce dokončíme naše aplikácie na básne a predstavíme si ich navzájom."
+            }
+          }
+        },
+        "7934c32a-f4ba-48b1-8c92-903075552224": {
+          "name": "Možnosti rozšírenia",
+          "activity_sections": {
+            "30cd25ec-ad85-427d-abca-dff52d31f7d2": {
+              "description": "Tento modul je skvelým úvodom do informatiky cez prizmu poézie. Tu je niekoľko možností, ako pokračovať v učení sa o konceptoch CS predstavených v tomto module. Odporúčame pokračovať v týchto rozšíreniach po dokončení Lekcie 4 v tomto module. "
+            },
+            "8176cab2-0a34-487c-9c38-86d7118c2b7f": {
+              "tips": [
+                "**ELA Obsah:**\\ Každá farba predstavuje pocit a táto sekcia obsahuje básne s určitým tématom. - <a href=\"https://www.amazon.com/Red-Sings-Treetops-Colors-Sidman/dp/0547014945/ref=sr_1_1?crid=H9ZK0W8DBKC5&keywords=red+sings+from+treetops&qid=1685390186&sprefix=red+sings+%2Caps%2C296&sr=8-1\" target=\"_blank\">\"Červená spieva z korún stromov\"</a> je obrázková kniha od Joyce Sidman (ocenená poetka), ktorá spája farby rôznych ročných období s našimi zmyslami. **Koncepty počítačovej vedy:** - Aby študenti mohli pokračovať v skúmaní udalostí, môžu <a href=\"https://studio.code.org/s/coursed-2023/lessons/7\" target=\"_blank\">Vytvoriť hru Star Wars.</a> - modul <a href=\"http://studio.code.org/s/csc-bookcovers-2023\" target=\"_blank\">Obálky kníh CSC</a> tiež spája počítačovú vedu so štandardmi ELA. Študenti budú kódovať interaktívnu obálku knihy zameranú na postavy a prostredie. - <a href=\"http://studio.code.org/s/csc-timecapsule-2023\" target=\"_blank\">CSC Time Capsule </a>modul využíva poéziu a informatiku na prepojenie so spoločenskými vedami. Študenti budú kódovať krátke básne, ktoré predstavujú konkrétny okamih v čase, ako časová kapsula."
+              ]
+            }
+          }
+        }
+      },
+      "objectives": {
+        "079c5cd4-3be3-44f1-9cf1-800dc8a2a86c": {
+          "description": "Urobte spojenia medzi textom a vizuálnou prezentáciou tohto textu, pričom identifikujte, kde vizuálne reprezentácie odrážajú konkrétne opisy v texte."
+        },
+        "4903767c-89c4-4fbf-8879-93cf977803ae": {
+          "description": "Popíšte, ako vizuálne a multimediálne prvky prispievajú k významu, tónu alebo kráse textu. "
+        },
+        "73f2fb47-8d56-4635-80b1-72a57c3c51d5": {
+          "description": "Vyberte vhodné obrázky, zvuky alebo efekty na vylepšenie výberu slov v ich básňach."
+        },
+        "9524e34c-35ef-4735-9404-b7ca08d80257": {
+          "description": "Oživte svoju báseň pomocou blokov, ktoré nastavujú pozadie, textové efekty, sprite, zvuky a udalosti."
+        }
+      },
+      "resources": {
+        "coding_with_poetry_lesson_1/poetry/2023": {
+          "name": "Kódovanie s poéziou",
+          "url": "<https: docs.google.com presentation d 1k0vp9so-gmahq9msotxiz98px7gnfn6tutbeoda3pxy template preview>",
+          "type": "Snímky"
+        },
+        "enter_your_own_poem/poetry/2023": {
+          "name": "Zadajte svoju vlastnú báseň",
+          "url": "<https: www.youtube.com watch?v=\"oKPgbzdpTSA\">",
+          "type": "Video"
+        },
+        "helpful_hints/poetry/2023": {
+          "name": "Užitočné tipy",
+          "url": "<https: docs.google.com presentation d 1rsjhxo9zmtylrt160kvavdyekr4wt2fvsgbrphr4hs0 template preview>",
+          "type": "Snímky"
+        },
+        "poem_art_celebration_video_optional_/poetry/2023": {
+          "name": "Video oslava umeleckej poézie (voliteľné)",
+          "url": "<https: www.youtube.com watch?v=\"Q-76vz8i8mo\">",
+          "type": "Video"
+        },
+        "poem_art_events_video_optional_/poetry/2023": {
+          "name": "Básnické umelecké podujatia video (voliteľné)",
+          "url": "<https: youtu.be xgwyyueb6jq>",
+          "type": "Video"
+        },
+        "poem_art_video_optional_/poetry/2023": {
+          "name": "Video umenia básne (voliteľné)",
+          "url": "<https: www.youtube.com watch?v=\"uvwUWTTjIXo\">",
+          "type": "Video"
+        },
+        "time_capsule_checklist/poetry/2023": {
+          "name": "Skontrolujte svoj básnický zoznam",
+          "url": "<https: docs.google.com document d 14m3wibwjg-yukvrchzkfunamqaqhua7-qxyps738k_0 template preview>",
+          "type": "Materiály"
+        }
+      },
+      "vocabularies": {
+        "poem/poetry/2023": {
+          "word": "Básnička",
+          "definition": "Riadky písania, ktoré používajú slová na vytváranie obrázkov, pocitov a myšlienok v mysli čitateľa."
+        }
+      }
+    },
+    "https://studio.code.org/s/poetry-2023/lessons/4": {
+      "name": "Kruhy poézie",
+      "overview": "V tejto lekcii si študenti budú striedať zdieľanie svojej aplikácie na básne so svojimi rovesníkmi. Študenti začínajú diskusiou o dôležitosti poskytovania a prijímania spätnej väzby. Potom študenti vykonávajú zdieľanie poézie v pároch, keď zdieľajú svoje aplikácie na poéziu s partnerom a poskytujú a dostávajú spätnú väzbu. Nakoniec celá trieda bude mať Poetický kruh, po ktorom bude diskusia o nálade a tóne, ako aj vizuálnych efektoch básne študentského dobrovoľníka.",
+      "preparation": "- Pripravte jeden počítač na študenta. - Pripravte jednu kópiu **<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">Zdieľajte svoju aplikáciu</a>** handoutu na študenta. - Uistite sa, že študenti majú kópiu svojej pôvodnej básne po ruke na túto lekciu. - Rozdeľte triedu do dvojíc na aktivitu Poetry Pair-Share. - Zvážte tieto súvisiace rozšírenia ([link][0]), ktoré môžete preskúmať po tejto lekcii. ##### Voliteľné - Najmä pre dištančné vyučovanie: Určte, či potrebujete nastaviť digitálny dokument alebo zdieľaný online priestor na zverejnenie URL aplikácie každého študenta (pozrite si šablónu učiteľa v \"Odkazy\"). ",
+      "purpose": "Zdieľanie svojich básnických umeleckých projektov s rovesníkmi je dôležitým aspektom kreatívneho procesu. Umožňuje študentom prijímať spätnú väzbu, spolupracovať s ostatnými, zamyslieť sa nad svojou prácou a osláviť svoje úspechy. Zdieľaním svojej práce s ostatnými môžu študenti rásť a zlepšovať sa ako kreatívni myslitelia a rozvíjať dôležité komunikačné a interpersonálne zručnosti.",
+      "student_overview": "Zdieľajte svoje nové aplikácie na básne so svojimi priateľmi! ",
+      "lesson_activities": {
+        "62058ba3-874c-4aae-9d67-8bed1cf236ae": {
+          "name": "Zahriatie",
+          "activity_sections": {
+            "f5e7a9c3-7a9a-4db0-9a3e-495f67c98443": {
+              "name": "Pripravte sa",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť:** Zobrazte snímku „Dnešný program“. _Kruhy poézie_ - _Pripravte si svoju animovanú báseň_ - _Zdieľajte ju so svojím partnerom_ - _Zdieľajte ju s triedou_ - _Diskutujte o básňach navzájom_"
+            },
+            "713a05d9-fdad-4eac-afc9-97eeff0a5197": {
+              "description": "Na poslednej hodine sme oživili naše vlastné básne pomocou kódu. Dnes sa podelíme o našu prácu s našimi spolužiakmi. Najprv si prehrajte svoju vlastnú aplikáciu, aby ste sa uistili, že funguje tak, ako očakávate. Máte 5 minút na dokončenie akýchkoľvek úprav vo vašej aplikácii. Päť minút je dostatok času na malé zmeny alebo na ladenie kódu, ktorý ste napísali. Snažte sa odolať túžbe prepisovať veľké časti vášho kódu. Keď časovač vyprší, počkajte na pokyny na ďalší krok. Teraz spustím časovač. "
+            },
+            "870d6b26-f55f-4667-809d-cf9e4979df7c": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť:** Zobrazte snímku „Pripravujeme sa“. <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Urobte toto:** Nastavte 5-minútový časovač alebo použite ten, ktorý je k dispozícii na snímke „Pripravujeme sa“. Uistite sa, že študenti: - Prejdite na Úroveň 1 (tento kód sa prenáša z Lekcie 3, Úroveň 1) - Kliknite na „Spustiť“ a hrajte svoju aplikáciu - Urobte akékoľvek posledné úpravy - Rozšírte svoj herný priestor kliknutím a ťahaním troch bodiek napravo od svojho herného priestoru (pozrite si gif na snímke) ",
+              "tips": [
+                "**Pre dištančné vyučovanie:** Táto aktivita si vyžaduje prácu v pároch. Ak študenti nie sú schopní fyzicky prepnúť počítače, budete potrebovať zdieľaný dokument s odkazmi na projekty každého študenta. Povedzte študentom, že URL je webová adresa na webovú stránku; táto URL vás zavedie na zdieľateľnú verziu vašej aplikácie na básne. Nasmerujte študentov, aby klikli na tlačidlo „Zdieľať“ na poslednej úrovni a zverejnili odkaz na vašej LMS alebo inom zdieľanom priestore, ako je „<a href=\"https://docs.google.com/document/d/1DNcBWminB8MmyLQC4fIWrLZ8uI9HR7d4W3HuuclIpB0/template/preview\" target=\"_blank\">Dokument o zdieľaní URL študentov</a>“. Študenti môžu na svoje projekty pridávať ďalšie veci aj po tom, čo zdieľali odkaz na svoj projekt."
+              ],
+              "progression_name": "Voľná hra"
+            }
+          }
+        },
+        "6974a2ee-1e66-4ea4-8a37-6e1f5eebdc42": {
+          "name": "Hlavná činnosť",
+          "activity_sections": {
+            "2c69b8bf-8ba9-4254-a5f5-10f0822ffd95": {
+              "name": "Prečo je spätná väzba dôležitá?",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť:** Zobrazte snímku „Čo je konštruktívna spätná väzba“. "
+            },
+            "30f7aa3d-9d66-44f6-8e3a-ede490c45c89": {
+              "description": "Dnes sa spolu podelíme o naše aplikácie na básne. Keď hráme aplikácie navzájom, chceme premýšľať o konštruktívnej spätnej väzbe, ktorá by mohla pomôcť programátorovi aplikácie vylepšiť jeho aplikáciu. "
+            },
+            "769c5b1f-880d-48aa-ae0c-ce18a62d0aba": {
+              "description": "**Diskusia:** - _Čo je konštruktívna spätná väzba?_ - _Prečo je dôležité prezentovať naše básne a získať spätnú väzbu?_ - _Ako prejavujete úctu, keď niekto prezentuje?_ **Cieľ diskusie:** Uistite sa, že študenti chápu, že konštruktívna spätná väzba je úctivá, nápomocná a konkrétna. Povzbudzujte študentov, aby diskutovali o tom, ako príležitosti na spätnú väzbu im dávajú priestor na zamyslenie a zlepšenie ich básne aj kódu. "
+            },
+            "1539968b-8ef6-4d84-ad50-d47083975ba2": {
+              "name": "Modelovanie konštruktívnej spätnej väzby",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť:** Zobrazte snímku „Modelovanie konštruktívnej spätnej väzby“."
+            },
+            "0f923259-48aa-46b2-a124-89658cb23f04": {
+              "description": "Keď sa spojíme, vyskúšate aplikáciu básní svojho partnera. Potom im napíšete spätnú väzbu o tom, čo si myslíte o aplikácii. Pamätajte, aby ste svoje komentáre udržali konštruktívne a rešpektujúce. Keď budete hrať cez aplikáciu, budete premýšľať o \"žiare\", \"rastu\" a \"otázke\", ktorú môžete napísať svojmu partnerovi. \"Žiara\" je niečo, čo urobili dobre, \"rast\" je niečo, čo môžu zmeniť alebo zlepšiť, a \"otázka\" je niečo, o čom chcete vedieť viac. Napríklad môžete použiť nasledujúce vety: - **Žiara:** „Páčilo sa mi, že ste zahrnuli...“ - **Rásť:** „Skúsili ste...“ - **Otázka:** „Môžete mi povedať viac o...“"
+            },
+            "2f6b0e78-8580-4da8-bf5f-f425eff9b958": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť:** Zobrazte snímku „Príklad aplikácie“ **Urobte toto:** Otvorte príkladový projekt **\\*<a href=\"https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo\" target=\"_blank\">link</a>** v inom okne. Majte kópiu letáku \"Zdieľajte svoju aplikáciu\" po ruke, aby ste ukázali študentom, ako by mali vyplniť svoje žiarenie, rast a otázku.",
+              "progression_name": "Príklad"
+            },
+            "e363b2bd-99ee-4dc0-8f7c-c8c25f623381": {
+              "description": "Dovoľte mi modelovať príklad, ako budete testovať aplikáciu a písať spätnú väzbu. Keď prechádzam týmto príkladom, všimol som si, že básnik použil niekoľko spriteov a blokov správania. Vidím, že oblakový duch zakrýva slnečný duch a potom odpláva preč. Vidím, že sa neskôr v básni objaví aj sprite koňa a sprite lietadla. - \"Žiar\" , ktorý mám pre teba, je: _\"Páči sa mi, že zahŕňaš obraznosť, ktorá zodpovedá textu básne.\"_ Tiež si všímam, že kód má rám, ale žiadnu farbu pozadia ani textu. - \"Rast\" , ktorý mám pre teba, je: _\"Skúsil si pridať kód na zmenu farby pozadia a textu?\"_ Nakoniec si všímam, že hrá \"harfová\" hudba a na 4. riadku sa ozýva zvuk \"šuchotania\". - \"Otázka\" , ktorú stále mám, je: _\"Ako si sa rozhodol, akú hudbu a zvuky zahrnúť?\"_ ",
+              "tips": [
+                "Môžete tiež poskytnúť príklady a nepríklady spätnej väzby: - **Užitočné:** „Všimol som si chybu s jedným z vašich efektov. Skúsili ste pridať blok „Sprite Stops Growing“? - **Špecifické:** „Páči sa mi, že ste zahrnuli blok udalosti, ktorý spôsobí, že sa sprite šalátu objaví na riadku 3.“ - _Nepríklad:_ „Nepáči sa mi váš zebra sprite.“"
+              ]
+            },
+            "6703dc75-a394-4e9c-8d1c-061fb3d53cf2": {
+              "name": "Párovanie poézie",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť:** Zobrazte snímku „Otestujte aplikáciu svojho partnera“. **Urobte toto:** Rozdajte jeden **\\*<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">Zdieľajte svoj leták o aplikácii</a>** na študenta. Prečítajte si podnety \"Modelovanie konštruktívnej spätnej väzby\" z materiálu. Uistite sa, že študenti chápu, ako poskytnúť rešpektujúcu spätnú väzbu svojim spolužiakom. "
+            },
+            "31a7ae8f-4773-4e68-8656-773b19c9bb69": {
+              "description": "Teraz sa chystáte zdieľať svoje aplikácie. Keď prechádzate aplikáciou svojho partnera, budete pozorovať voľby, ktoré urobili, a napíšete im spätnú väzbu na svojich materiáloch. Keď vy a váš partner dokončíte testovanie aplikácií navzájom a napíšete spätnú väzbu na váš leták, zdieľate svoju spätnú väzbu so svojím partnerom. Máte 10 minút na vyskúšanie ich aplikácie a napísanie akýchkoľvek pripomienok, teraz spustím časovač. "
+            },
+            "78bb242f-03a6-4b70-9013-41e95836f0b2": {
+              "description": "**Urobte toto:** Nastavte časovač na 10 minút, alebo použite ten na snímke \"Otestujte aplikáciu svojho partnera\". Rozdeľte triedu na páry. Nech každý študent vymení miesto (alebo počítač) so svojím partnerom, prehrajú aplikáciu svojho partnera, napíšu spätnú väzbu a po dokončení pracovného listu zdieľajú svoju spätnú väzbu so svojím partnerom. "
+            },
+            "3f1e4652-e9d2-4fa5-944a-1f5fe9e9a5b0": {
+              "progression_name": "Zdieľanie vašej básne"
+            },
+            "36325512-9851-4e3b-9cdc-52c5d78cc8d7": {
+              "name": "Kruhy poézie",
+              "tips": [
+                "Ako zobraziť prácu študentov z vášho učiteľského panela: Ak ste prihlásení a vaši študenti sú vo vašej triede, môžete prejsť na Úroveň 1, otvoriť svoj učiteľský panel a nájsť meno študenta, aby ste získali prístup k jeho práci. <a href=\"https://support.code.org/hc/en-us/articles/360047703872-How-do-I-view-a-student-s-code-on-an-individual-level-\" target=\"_blank\">Kliknite sem a dozviete sa viac o paneli učiteľa</a>"
+              ]
+            },
+            "5e611050-c614-4775-b1c1-db1c4c3fd75f": {
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť:** Zobrazte snímku „Poetry Circle“ **Urobte toto:** Prečítajte snímku Poetry Circle nahlas. Požiadajte jedného študenta, aby sa prihlásil na dobrovoľníka a zdieľal svoju aplikáciu na básne s triedou. Prezentujte aplikáciu básne študentského dobrovoľníka a nechajte dobrovoľníka prečítať svoju originálnu báseň nahlas. <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť:** Zobrazte snímku \"Diskusia v triede\". **Diskutovať:** Pre publikum: - _Ako prispeli vizuály alebo zvuk k atmosfére básne?_ - _Aké podobnosti alebo rozdiely si všimnete medzi vašou aplikáciou básne a aplikáciou prezentujúceho?_ - _Čo je to žiara, rast a otázka, ktorú máte pre prezentujúceho?_ Pre básnika/programátora: - _Aká bola vaša obľúbená časť kódovania vašej básne?_ - _Je niečo, čo ešte potrebujete opraviť alebo zmeniť?_ **Cieľ diskusie:** Toto je konečné zhrnutie jednotky Kódovanie s poéziou. Študenti by mali pochopiť, ako konkrétne voľby slov formujú význam alebo tón básne. Mali by byť schopní vytvárať spojenia medzi obsahom básne a vizuálnymi a zvukovými efektmi, ktoré sa používajú. [Voliteľné] **Urobte toto:** Ak máte čas, požiadajte o ďalších študentov dobrovoľníkov, aby zdieľali svoje aplikácie a zopakovali diskusiu v triede. "
+            }
+          }
+        },
+        "bc06844e-05f4-4090-94f2-c46dece69e6f": {
+          "name": "Zhrnutie",
+          "activity_sections": {
+            "105d9bbe-d1e0-4bd9-a553-35e9b5a29939": {
+              "name": "Oslavovať",
+              "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Zobraziť:** Zobrazte snímku „Oslávte“"
+            },
+            "3ef7e9e0-bacf-4a7d-b44d-ad0ecdb52ad1": {
+              "description": "Ďakujem všetkým za zdieľanie vašich aplikácií na básne a za vašu spätnú väzbu s vašimi spolužiakmi! Je čas sa pokloniť. Skvelá práca, programátori!"
+            },
+            "031f9d52-aa34-4bce-bbd4-dcf00712d6aa": {
+              "description": "**Urobte toto:** Nech všetci študenti vstanú a uklonia sa, zatlieskajte všetkým (alebo jemne zapískajte). "
+            }
+          }
+        },
+        "e57a4ee9-956b-410e-8d3e-b321b0abe71c": {
+          "name": "Možnosti rozšírenia",
+          "activity_sections": {
+            "178accb4-abd2-426b-b492-35d076276c1c": {
+              "description": "Tento modul je skvelým úvodom do informatiky cez prizmu poézie. Tu je niekoľko možností, ako pokračovať v učení sa o konceptoch CS predstavených v tomto module. Odporúčame pokračovať v týchto rozšíreniach po dokončení Lekcie 4 v tomto module. "
+            },
+            "eeb26e7a-97c3-449c-8215-a88977a6e8f8": {
+              "tips": [
+                "**ELA Obsah:**\\ Každá farba predstavuje pocit a táto sekcia obsahuje básne s určitým tématom. - <a href=\"https://www.amazon.com/Red-Sings-Treetops-Colors-Sidman/dp/0547014945/ref=sr_1_1?crid=H9ZK0W8DBKC5&keywords=red+sings+from+treetops&qid=1685390186&sprefix=red+sings+%2Caps%2C296&sr=8-1\" target=\"_blank\">\"Červená spieva z korún stromov\"</a> je obrázková kniha od Joyce Sidman (ocenená poetka), ktorá spája farby rôznych ročných období s našimi zmyslami. **Koncepty počítačovej vedy:** - Aby študenti mohli pokračovať v skúmaní udalostí, môžu <a href=\"https://studio.code.org/s/coursed-2023/lessons/7\" target=\"_blank\">Vytvoriť hru Star Wars.</a> - modul <a href=\"http://studio.code.org/s/csc-bookcovers-2023\" target=\"_blank\">Obálky kníh CSC</a> tiež spája počítačovú vedu so štandardmi ELA. Študenti budú kódovať interaktívnu obálku knihy zameranú na postavy a prostredie. - <a href=\"http://studio.code.org/s/csc-timecapsule-2023\" target=\"_blank\">CSC Time Capsule </a>modul využíva poéziu a informatiku na prepojenie so spoločenskými vedami. Študenti budú kódovať krátke básne, ktoré predstavujú konkrétny okamih v čase, ako časová kapsula."
+              ]
+            }
+          }
+        }
+      },
+      "objectives": {
+        "2ef99265-af55-4a2d-8719-58d4451f0610": {
+          "description": "Pochopte silu schopnosti písať programy na animáciu textu"
+        },
+        "a4fa2434-b9c5-4e36-819b-50398d230730": {
+          "description": "Zdieľať svoje aplikácie navzájom"
+        }
+      },
+      "resources": {
+        "_optional_student_url_sharing_document/poetry/2023": {
+          "name": "[Voliteľné] Dokument na zdieľanie URL študentov",
+          "url": "<https: docs.google.com document d 1dncbwminb8mmylqc4fiwrlz8ui9hr7d4w3huuclipb0 template preview>",
+          "type": "Zdroje"
+        },
+        "coding_with_poetry_lesson_1/poetry/2023": {
+          "name": "Kódovanie s poéziou",
+          "url": "<https: docs.google.com presentation d 1k0vp9so-gmahq9msotxiz98px7gnfn6tutbeoda3pxy template preview>",
+          "type": "Snímky"
+        },
+        "poem_app_example/poetry/2023": {
+          "name": "Príklad aplikácie básne",
+          "url": "<https: studio.code.org projects poetry_hoc j3txdxnhz0xesh4xjk_rt9bubhycplirikty_pg_byo>",
+          "type": "Zdroje"
+        },
+        "share_your_app_/poetry/2023": {
+          "name": "Zdieľajte svoju aplikáciu!",
+          "url": "<https: docs.google.com document d 1ko4sneivym0grxxjb6nzvyauxxpi6rzqkdifrzqf1ls template preview>",
+          "type": "Materiály"
+        }
+      },
+      "vocabularies": {
+        "constructive_feedback/poetry/2023": {
+          "word": "Konstruktívna spätná väzba",
+          "definition": "Respektujúce komentáre, ktoré pomáhajú niekomu zlepšiť jeho prácu"
+        },
+        "poetry_circle/poetry/2023": {
+          "word": "Kruhy poézie",
+          "definition": "Bezpečný a kreatívny priestor na testovanie nových básní a získavanie konštruktívnej spätnej väzby od ostatných."
+        }
+      }
+    }
+  }
+}
