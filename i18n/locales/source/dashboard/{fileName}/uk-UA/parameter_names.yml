@@ -1,0 +1,25 @@
+---
+en:
+  data:
+    parameter_names:
+      "???": "???"
+      actor: актор
+      color: колір
+      counter: лічильник
+      dir: каталог
+      direction: напрямок
+      height: висота
+      honey: мед
+      left: ліво
+      length: довжина
+      min: мін
+      nectar units: нектарні одиниці
+      nectars: нектари
+      numOctagons: число октагонів
+      points: бали
+      radius: радіус
+      sides: боки
+      size: розмір
+      speed: швидкість
+      theGuess: вгадати
+      width: ширина
