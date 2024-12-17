@@ -1,0 +1,25 @@
+---
+en:
+  data:
+    parameter_names:
+      "???": "???"
+      actor: herec
+      color: farba
+      counter: pult
+      dir: dir
+      direction: smer
+      height: výška
+      honey: med
+      left: vľavo
+      length: dĺžka
+      min: min
+      nectar units: nektárové jednotky
+      nectars: nektáre
+      numOctagons: numOctagons
+      points: body
+      radius: polomer
+      sides: strany
+      size: veľkosť
+      speed: rýchlosť
+      theGuess: theGuess
+      width: šírka
