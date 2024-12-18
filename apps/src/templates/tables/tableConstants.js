@@ -13,6 +13,12 @@ import color from '../../util/color';
  *     overflow?: string;
  *     whiteSpace?: "normal" | "nowrap" | "pre" | "pre-line" | "pre-wrap";
  *   };
+ *   tableNameText: {
+ *     textOverflow: string,
+ *     overflow: string;
+ *     whiteSpace: string;
+ *     minWidth: number;
+ *   };
  *   table: {
  *     borderWidth?: string;
  *     borderStyle?: string;
@@ -52,6 +58,10 @@ export const tableLayoutStyles = {
     textOverflow: 'ellipsis',
     overflow: 'hidden',
     whiteSpace: 'nowrap',
+  },
+  tableNameText: {
+    ...this.tableText,
+    minWidth: 150,
   },
   table: {
     borderWidth: 1,
