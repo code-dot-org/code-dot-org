@@ -264,11 +264,9 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         oauth_callback_url = oauth_params['redirect_uri']
         _(oauth_callback_url).must_equal "https://test-studio.code.org/users/auth/#{provider}/callback"
 
-        OmniAuth.config.test_mode = true
-
         # GET /users/auth/:provider/callback
         get oauth_callback_url
-        must_respond_with 200
+        must_redirect_to '/users/sign_in'
       end
     end
   end
