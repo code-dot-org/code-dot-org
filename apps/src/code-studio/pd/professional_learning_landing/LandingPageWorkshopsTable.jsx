@@ -5,35 +5,21 @@ import {Table, Button, Modal} from 'react-bootstrap'; // eslint-disable-line no-
 import ReactTooltip from 'react-tooltip';
 
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
-import i18n from '@cdo/locale';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 
 import * as utils from '../../../utils';
-import WorkshopTableLoader from '../workshop_dashboard/components/workshop_table_loader';
 import {workshopShape} from '../workshop_dashboard/types.js';
 import {
   DATE_FORMAT,
   TIME_FORMAT,
 } from '../workshop_dashboard/workshopConstants';
 
-class EnrolledWorkshops extends React.Component {
-  render() {
-    return (
-      <WorkshopTableLoader
-        queryUrl="/api/v1/pd/workshops_user_enrolled_in"
-        hideNoWorkshopsMessage={true}
-        tableHeader={i18n.myWorkshops()}
-      >
-        <WorkshopsTable tableHeader={i18n.myWorkshops()} />
-      </WorkshopTableLoader>
-    );
-  }
-}
-
-class WorkshopsTable extends React.Component {
+export default class LandingPageWorkshopsTable extends React.Component {
   static propTypes = {
     workshops: PropTypes.arrayOf(workshopShape),
-    forMyPlPage: PropTypes.bool,
+    isLoading: PropTypes.bool,
     tableHeader: PropTypes.string,
+    participantView: PropTypes.bool,
   };
 
   state = {
@@ -103,18 +89,7 @@ class WorkshopsTable extends React.Component {
   };
 
   renderWorkshopActionButtons(workshop) {
-    if (this.props.forMyPlPage) {
-      return (
-        <Button
-          onClick={() =>
-            utils.windowOpen(`/pd/workshop_dashboard/workshops/${workshop.id}`)
-          }
-          style={styles.button}
-        >
-          Workshop Details
-        </Button>
-      );
-    } else {
+    if (!!this.props.participantView) {
       return (
         <div>
           {workshop.state === 'Not Started' &&
@@ -149,6 +124,17 @@ class WorkshopsTable extends React.Component {
           )}
         </div>
       );
+    } else {
+      return (
+        <Button
+          onClick={() =>
+            utils.windowOpen(`/pd/workshop_dashboard/workshops/${workshop.id}`)
+          }
+          style={styles.button}
+        >
+          Workshop Details
+        </Button>
+      );
     }
   }
 
@@ -165,7 +151,7 @@ class WorkshopsTable extends React.Component {
             <th>Date</th>
             <th>Time</th>
             <th>Location</th>
-            {this.props.forMyPlPage && <th>Status</th>}
+            {!this.props.participantView && <th>Status</th>}
             <th style={{width: '20%'}} />
           </tr>
         </thead>
@@ -205,13 +191,26 @@ class WorkshopsTable extends React.Component {
             <p>{workshop.location_address}</p>
           </div>
         </td>
-        {this.props.forMyPlPage && <td>{workshop.status}</td>}
+        {!this.props.participantView && <td>{workshop.status}</td>}
         <td>{this.renderWorkshopActionButtons(workshop)}</td>
       </tr>
     );
   }
 
   render() {
+    if (this.props.isLoading) {
+      return (
+        // While reloading, preserve the height of the previous child component so the refresh is smoother.
+        <div style={{height: this.childHeight}}>
+          <Spinner />
+        </div>
+      );
+    }
+
+    if (this.props.workshops.length === 0) {
+      return null;
+    }
+
     return (
       <div>
         <Modal
@@ -249,5 +248,3 @@ const styles = {
     width: '100%',
   },
 };
-
-export {EnrolledWorkshops, WorkshopsTable};

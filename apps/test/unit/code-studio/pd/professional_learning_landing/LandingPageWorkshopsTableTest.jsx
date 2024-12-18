@@ -4,12 +4,12 @@ import moment from 'moment';
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import {WorkshopsTable} from '@cdo/apps/code-studio/pd/professional_learning_landing/EnrolledWorkshops';
+import LandingPageWorkshopsTable from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPageWorkshopsTable';
 import * as utils from '@cdo/apps/utils';
 
 import {serializedWorkshopFactory} from '../../../../factories/professionalLearning';
 
-describe('EnrolledWorkshops', () => {
+describe('LandingPageWorkshopsTable', () => {
   const workshops = [
     serializedWorkshopFactory.build({
       pre_workshop_survey_url: 'code.org/pre_survey_url',
@@ -35,38 +35,34 @@ describe('EnrolledWorkshops', () => {
   });
 
   it('Clicking cancel enrollment cancels the enrollment', () => {
-    const enrolledWorkshopsTable = shallow(
-      <WorkshopsTable workshops={workshops} />
+    const workshopsTable = shallow(
+      <LandingPageWorkshopsTable workshops={workshops} participantView />
     );
 
     // We expect there to be a table with 4 rows in the body, three of which have two buttons
-    expect(enrolledWorkshopsTable.find('tbody tr')).to.have.length(4);
-    expect(enrolledWorkshopsTable.find('tbody tr Button')).to.have.length(8);
-    expect(enrolledWorkshopsTable.state('showCancelModal')).to.be.false;
-    expect(enrolledWorkshopsTable.state('enrollmentCodeToCancel')).to.equal(
-      undefined
-    );
+    expect(workshopsTable.find('tbody tr')).to.have.length(4);
+    expect(workshopsTable.find('tbody tr Button')).to.have.length(8);
+    expect(workshopsTable.state('showCancelModal')).to.be.false;
+    expect(workshopsTable.state('enrollmentCodeToCancel')).to.equal(undefined);
 
     // Pushing the button should bring up the modal
-    enrolledWorkshopsTable
+    workshopsTable
       .find('tbody tr')
       .at(0)
       .find('Button')
       .last()
       .simulate('click');
-    expect(enrolledWorkshopsTable.state('showCancelModal')).to.be.true;
-    expect(enrolledWorkshopsTable.state('enrollmentCodeToCancel')).to.equal(
-      'code1'
-    );
+    expect(workshopsTable.state('showCancelModal')).to.be.true;
+    expect(workshopsTable.state('enrollmentCodeToCancel')).to.equal('code1');
   });
 
   it('Clicking "Print Certificate" opens the certificate in a new tab if user attended workshop', function () {
-    const enrolledWorkshopsTable = shallow(
-      <WorkshopsTable workshops={workshops} />
+    const workshopsTable = shallow(
+      <LandingPageWorkshopsTable workshops={workshops} participantView />
     );
 
     // Click the "Print Certificate" button
-    enrolledWorkshopsTable
+    workshopsTable
       .find('tbody tr')
       .at(2)
       .find('Button')
@@ -82,12 +78,12 @@ describe('EnrolledWorkshops', () => {
   });
 
   it('"Print Certificate" button is disabled if user did not attend workshop', function () {
-    const enrolledWorkshopsTable = shallow(
-      <WorkshopsTable workshops={workshops} />
+    const workshopsTable = shallow(
+      <LandingPageWorkshopsTable workshops={workshops} participantView />
     );
 
     // Get disabled "Print Certificate" React Button component
-    const printCertificateButton = enrolledWorkshopsTable
+    const printCertificateButton = workshopsTable
       .find('tbody tr')
       .at(3)
       .find('Button')
@@ -97,11 +93,11 @@ describe('EnrolledWorkshops', () => {
   });
 
   it('Pre-survey link button shown in workshops that have not started', function () {
-    const enrolledWorkshopsTable = shallow(
-      <WorkshopsTable workshops={workshops} />
+    const workshopsTable = shallow(
+      <LandingPageWorkshopsTable workshops={workshops} participantView />
     );
 
-    enrolledWorkshopsTable
+    workshopsTable
       .find('tbody tr')
       .at(0)
       .find('Button')
@@ -112,11 +108,11 @@ describe('EnrolledWorkshops', () => {
   });
 
   it('Pre-survey link button not shown in ended workshop', function () {
-    const enrolledWorkshopsTable = shallow(
-      <WorkshopsTable workshops={workshops} />
+    const workshopsTable = shallow(
+      <LandingPageWorkshopsTable workshops={workshops} participantView />
     );
 
-    const preWorkshopSurveyButton = enrolledWorkshopsTable
+    const preWorkshopSurveyButton = workshopsTable
       .find('tbody tr')
       .at(3)
       .find('Button')
@@ -130,11 +126,11 @@ describe('EnrolledWorkshops', () => {
       moment(workshops[0].workshop_starting_date).subtract(14, 'days').toDate()
     );
 
-    const enrolledWorkshopsTable = shallow(
-      <WorkshopsTable workshops={workshops} />
+    const workshopsTable = shallow(
+      <LandingPageWorkshopsTable workshops={workshops} participantView />
     );
 
-    const preWorkshopSurveyButton = enrolledWorkshopsTable
+    const preWorkshopSurveyButton = workshopsTable
       .find('tbody tr')
       .at(0)
       .find('Button')
@@ -143,21 +139,32 @@ describe('EnrolledWorkshops', () => {
     expect(preWorkshopSurveyButton.props().disabled).to.be.true;
   });
 
-  it('shows Status column and only has Workshop Details button when forMyPlPage is true', function () {
-    const enrolledWorkshopsTable = shallow(
-      <WorkshopsTable workshops={workshops} forMyPlPage={true} />
+  it('shows Status column and only has Workshop Details button when not in a participant view', function () {
+    const workshopsTable = shallow(
+      <LandingPageWorkshopsTable
+        workshops={workshops}
+        participantView={false}
+      />
     );
 
-    expect(enrolledWorkshopsTable.find('thead tr').text()).to.contain('Status');
+    expect(workshopsTable.find('thead tr').text()).to.contain('Status');
 
-    const numButtonsInTable = enrolledWorkshopsTable
+    const numButtonsInTable = workshopsTable
       .find('tbody tr')
       .find('Button').length;
     expect(
-      enrolledWorkshopsTable
+      workshopsTable
         .find('tbody tr')
         .find('Button')
         .findWhere(n => n.text() === 'Workshop Details').length
     ).to.equal(numButtonsInTable);
+  });
+
+  it('doesnt show anything if loading is complete and there are no workshops', function () {
+    const workshopsTable = shallow(
+      <LandingPageWorkshopsTable workshops={[]} isLoading={false} />
+    );
+
+    expect(workshopsTable.find('tbody tr')).to.have.length(0);
   });
 });

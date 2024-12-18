@@ -22,6 +22,9 @@ const Console: React.FunctionComponent = () => {
   const dispatch = useDispatch();
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const scrollAnchorRef = useRef<HTMLDivElement>(null);
+  const hasMiniApp = useAppSelector(
+    state => !!state.lab.levelProperties?.miniApp
+  );
 
   const [graphModalOpen, setGraphModalOpen] = useState(false);
   const [activeGraphIndex, setActiveGraphIndex] = useState(0);
@@ -66,7 +69,7 @@ const Console: React.FunctionComponent = () => {
       rightHeaderContent={
         <RightButtons clearOutput={() => clearOutput(true)} />
       }
-      leftHeaderContent={<ControlButtons />}
+      leftHeaderContent={!hasMiniApp && <ControlButtons />}
       headerClassName={moduleStyles.consoleHeader}
     >
       <div className={moduleStyles.console} id="uitest-codebridge-console">

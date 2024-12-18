@@ -32,7 +32,7 @@
   js_data = {
     levels: levels.map do |level|
       {
-        properties: level.properties,
+        properties: level.localized_properties,
         height: level.respond_to?(:height) ? level.height : nil,
         type: level.type,
         id: level.id,
