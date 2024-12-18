@@ -15,6 +15,11 @@
   height: 100%
 }
 
+.consoleV2 {
+  overflow-y: scroll;
+  height: 100%
+}
+
 .errorLine {
   color: $lightest_red;
 }

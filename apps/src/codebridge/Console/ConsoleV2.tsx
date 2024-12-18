@@ -42,6 +42,14 @@ const ConsoleV2: React.FunctionComponent = () => {
     }
   };
 
+  const ignoreEscapeAndTab = (e: KeyboardEvent) => {
+    if (e.key === 'Tab' || e.key === 'Escape') {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
   useEffect(() => {
     if (!terminalRef || terminalRef.current === null || didInit) {
       return;
@@ -56,14 +64,7 @@ const ConsoleV2: React.FunctionComponent = () => {
     terminal.onData(onData);
 
     // Prevent keyboard trap.
-    const ignoredKeys = ['Tab', 'Esc'];
-    terminal.attachCustomKeyEventHandler(e => {
-      if (ignoredKeys.includes(e.key)) {
-        return false;
-      } else {
-        return true;
-      }
-    });
+    terminal.attachCustomKeyEventHandler(ignoreEscapeAndTab);
 
     setDidInit(true);
   }, [didInit, terminalRef]);
@@ -77,7 +78,7 @@ const ConsoleV2: React.FunctionComponent = () => {
       leftHeaderContent={!hasMiniApp && <ControlButtons />}
       headerClassName={moduleStyles.consoleHeader}
     >
-      <div ref={terminalRef} />
+      <div ref={terminalRef} className={moduleStyles.consoleV2} />
     </PanelContainer>
   );
 };

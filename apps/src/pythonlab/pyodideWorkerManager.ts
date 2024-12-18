@@ -42,6 +42,8 @@ const setUpPyodideWorker = () => {
           break;
         }
         terminal?.writeln(message);
+        terminal?.focus();
+        terminal?.scrollToBottom();
         getStore().dispatch(appendSystemOutMessage(message));
         break;
       case 'run_complete':
