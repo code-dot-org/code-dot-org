@@ -207,6 +207,10 @@ export default class LandingPageWorkshopsTable extends React.Component {
       );
     }
 
+    if (this.props.workshops.length === 0) {
+      return null;
+    }
+
     return (
       <div>
         <Modal

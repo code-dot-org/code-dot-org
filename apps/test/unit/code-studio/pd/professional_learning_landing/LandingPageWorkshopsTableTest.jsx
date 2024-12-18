@@ -159,4 +159,12 @@ describe('LandingPageWorkshopsTable', () => {
         .findWhere(n => n.text() === 'Workshop Details').length
     ).to.equal(numButtonsInTable);
   });
+
+  it('doesnt show anything if loading is complete and there are no workshops', function () {
+    const workshopsTable = shallow(
+      <LandingPageWorkshopsTable workshops={[]} isLoading={false} />
+    );
+
+    expect(workshopsTable.find('tbody tr')).to.have.length(0);
+  });
 });

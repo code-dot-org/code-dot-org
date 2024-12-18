@@ -173,6 +173,7 @@ function LandingPage({
           setWorkshopsAsParticipant(jsonData);
         }
       } catch (error) {
+        setLoadingWorkshopsAsParticipant(false);
         console.error('Error fetching participant data:', error);
       }
     };
@@ -199,6 +200,7 @@ function LandingPage({
             setWorkshopsAsFacilitator(jsonData.workshops_as_facilitator);
           }
         } catch (error) {
+          setLoadingWorkshopsAsFacilitator(false);
           console.error('Error fetching facilitator data:', error);
         }
       };
@@ -227,6 +229,7 @@ function LandingPage({
             setWorkshopsAsOrganizer(jsonData.workshops_as_organizer);
           }
         } catch (error) {
+          setLoadingWorkshopsAsOrganizer(false);
           console.error('Error fetching workshop organizer data:', error);
         }
       };
@@ -255,6 +258,7 @@ function LandingPage({
             setWorkshopsAsProgramManager(jsonData.workshops_as_program_manager);
           }
         } catch (error) {
+          setLoadingWorkshopsAsProgramManager(false);
           console.error('Error fetching program manager data:', error);
         }
       };
