@@ -235,8 +235,18 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
   end
 
   describe 'oauth' do
+    let(:omniauth_test_mode) {OmniAuth.config.test_mode}
+
     before do
       cookies[:ge_region] = ge_region
+
+      # Disables OmniAuth test mode to generate real OAuth URLs.
+      OmniAuth.config.test_mode = false
+    end
+
+    after do
+      # Restores the initial OmniAuth test mode configuration.
+      OmniAuth.config.test_mode = omniauth_test_mode
     end
 
     {
@@ -244,13 +254,10 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
       AuthenticationOption::MICROSOFT => 'https://login.microsoftonline.com/common/oauth2/v2.0/authorize',
       AuthenticationOption::FACEBOOK  => 'https://www.facebook.com/v2.12/dialog/oauth',
       AuthenticationOption::CLEVER    => 'https://clever.com/oauth/authorize',
-    }.each do |provider, oauth_url|
+    }.each do |provider, expected_oauth_url|
       it "#{provider} authentication process is not affected by regional redirection" do
-        OmniAuth.config.test_mode = false
-
-        # POST /global/fa/users/auth/:provider
-        post Cdo::GlobalEdition.path(ge_region, OmniAuth.config.path_prefix, provider.to_s)
-        must_redirect_to %r(^#{oauth_url})
+        post "/global/fa/users/auth/#{provider}"
+        must_redirect_to %r(^#{expected_oauth_url})
 
         oauth_uri = URI.parse(response.location)
         oauth_params = URI.decode_www_form(oauth_uri.query.to_s).to_h
@@ -258,6 +265,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         _(oauth_callback_url).must_equal "https://test-studio.code.org/users/auth/#{provider}/callback"
 
         OmniAuth.config.test_mode = true
+
         # GET /users/auth/:provider/callback
         get oauth_callback_url
         must_respond_with 200
