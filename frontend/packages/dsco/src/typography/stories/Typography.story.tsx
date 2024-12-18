@@ -1,4 +1,3 @@
-import React from 'react';
 import {StoryFn} from '@storybook/react';
 
 import Typography, {TypographyProps} from './../index';

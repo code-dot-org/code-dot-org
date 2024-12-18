@@ -1,5 +1,5 @@
 @import '@/common/styles/primitiveColors.css';
-@import "@/common/styles/mixins";
+@import '@/common/styles/mixins';
 
 // Close Button common styles
 .closeButton {
@@ -18,7 +18,8 @@
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 
-  &:focus-visible, &:focus {
+  &:focus-visible,
+  &:focus {
     text-decoration: none;
   }
 

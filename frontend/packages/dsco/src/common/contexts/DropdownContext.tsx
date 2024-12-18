@@ -8,7 +8,9 @@ const DropdownContext = createContext({
   /**
    * This is a dummy function to satisfy the type checker
    * */
-  setActiveDropdownName: (name: string) => {},
+  setActiveDropdownName: (name: string) => {
+    void name;
+  },
 });
 
 export const useDropdownContext = () => useContext(DropdownContext);
