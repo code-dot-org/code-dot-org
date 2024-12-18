@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.4.0] (https://github.com/code-dot-org/code-dot-org/pull/62023)
+## [0.5.0](https://github.com/code-dot-org/code-dot-org/pull/62926)
+
+- made `size` prop optional since we have default value for this prop
+- rewritten `IconDropdownTest` in typescript
+- refactored/optimized `IconDropdownTest.tsx`
+
+## [0.4.1](https://github.com/code-dot-org/code-dot-org/pull/62917)
+
+- updated color variables to use `primitiveColors.css`
+
+## [0.4.0](https://github.com/code-dot-org/code-dot-org/pull/62023)
 
 - added `readOnly` state
 - added `styleAsFormField` support

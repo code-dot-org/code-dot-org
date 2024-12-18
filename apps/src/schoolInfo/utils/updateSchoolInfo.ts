@@ -28,7 +28,11 @@ export async function updateSchoolInfo({
       'Content-Type': 'application/json',
       'X-CSRF-Token': await getAuthenticityToken(),
     },
-    body: JSON.stringify(schoolData),
+    body: JSON.stringify({
+      user: {
+        school_info_attributes: schoolData,
+      },
+    }),
   });
 
   if (!response.ok) {

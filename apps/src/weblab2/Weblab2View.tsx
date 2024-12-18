@@ -25,7 +25,7 @@ const labeledGridLayouts = {
     gridLayoutRows: '1fr',
     gridLayoutColumns: '300px minmax(0, 1fr) 1fr',
     gridLayout: `
-    "info-panel workspace preview-container"
+    "info-panel workspace file-preview"
     `,
   },
   vertical: {
@@ -33,7 +33,7 @@ const labeledGridLayouts = {
     gridLayoutColumns: '300px minmax(0, 1fr) 1fr',
     gridLayout: `
     "info-panel workspace workspace"
-    "info-panel preview-container preview-container"`,
+    "info-panel file-preview file-preview"`,
   },
 };
 

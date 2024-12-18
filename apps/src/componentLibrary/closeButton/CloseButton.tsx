@@ -26,7 +26,7 @@ export interface CloseButtonProps extends HTMLAttributes<HTMLButtonElement> {
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/CloseButtonTest.jsx)
+ * * (see apps/test/unit/componentLibrary/CloseButtonTest.tsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```

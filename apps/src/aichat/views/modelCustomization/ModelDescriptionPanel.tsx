@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
 import {BodyThreeText, StrongText} from '@cdo/apps/componentLibrary/typography';
 
+import aichatI18n from '../../locale';
 import {ModelDescription} from '../../types';
 
 import styles from './compare-models-dialog.module.scss';
@@ -29,7 +30,7 @@ const ModelDescriptionPanel: React.FunctionComponent<{
   return (
     <div className={styles.modelDescriptionPanelContainer}>
       <SimpleDropdown
-        labelText="Choose a model"
+        labelText={aichatI18n.modelDescriptionPanel()}
         isLabelVisible={false}
         onChange={event => onDropdownChange(event.target.value)}
         items={availableModels.map(model => {
@@ -42,14 +43,14 @@ const ModelDescriptionPanel: React.FunctionComponent<{
       />
       <br />
       <div className={styles.modelDescriptionContainer}>
-        <StrongText>Overview</StrongText>
+        <StrongText>{aichatI18n.technicalInfoHeader_overview()}</StrongText>
         <div className={styles.textContainer}>
           <BodyThreeText className={styles.modelText}>
             {selectedModel.overview}
           </BodyThreeText>
         </div>
         <br />
-        <StrongText>Training Data</StrongText>
+        <StrongText>{aichatI18n.technicalInfoHeader_trainingData()}</StrongText>
         <div className={styles.textContainer}>
           <BodyThreeText className={styles.modelText}>
             {selectedModel.trainingData}

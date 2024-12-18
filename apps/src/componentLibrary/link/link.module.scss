@@ -1,4 +1,4 @@
-@import "color";
+@import '@cdo/apps/componentLibrary/common/styles/primitiveColors.css';
 @import "@cdo/apps/componentLibrary/common/styles/mixins";
 
 // Link common styles
@@ -11,7 +11,7 @@
 
 
   &:focus-visible {
-    outline: 2px solid $light_primary_500;
+    outline: 2px solid var(--brand-teal-50);
     border-radius: 0.25rem;
     outline-offset: 0;
   }
@@ -21,33 +21,33 @@
   }
 
   &-primary {
-    color: $light_secondary_500;
+    color: var(--brand-purple-50);
 
     &:hover, :active, :visited {
-      color: $light_secondary_700;
+      color: var(--brand-purple-70);
     }
 
     &:focus-visible {
-      color: $light_secondary_500;
+      color: var(--brand-purple-50);
     }
   }
 
   &-secondary {
-    color: $light_black;
+    color: var(--neutral-base-black);
 
     &:hover, :active, :visited {
-      color: $light_gray_800;
+      color: var(--neutral-gray-80);
     }
 
     &:focus-visible {
-      color: $light_black;
+      color: var(--neutral-base-black);
     }
   }
 
 
   &[aria-disabled="true"] {
     cursor: not-allowed;
-    color: $light_gray_300;
+    color: var(--neutral-gray-30);
   }
 }
 

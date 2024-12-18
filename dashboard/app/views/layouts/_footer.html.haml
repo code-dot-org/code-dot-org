@@ -36,7 +36,9 @@
         -# user input or to persist data without also updating it to enforce UTF-8
         = form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;', enforce_utf8: false) do
           = hidden_field_tag :user_return_to, request.url
-          - options = options_for_select(Cdo::I18n.locale_options, locale)
+          - options = options_for_select(locale_options, locale)
           = select_tag :locale, options, { onchange: 'this.form.submit();', 'aria-label':  t('footer.locale_select', default: 'Select language') }
+        - if request.ge_region
+          = render_shared_haml('global_edition/region_reset_button')
         %small.dim
           !="&copy; Code.org, #{Time.now.year}"

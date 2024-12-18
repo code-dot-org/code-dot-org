@@ -5,21 +5,21 @@ import {BlocklyWrapperType} from '../types';
 export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
   blocklyWrapper.Css.register(
     `.fieldGridDropDownContainer.blocklyMenu .blocklyMenuItem {
-      width: 32px;
-      height: 32px;
       padding: 0px;
       border: none;
     }
     .fieldGridDropDownContainer .blocklyMenuItem.blocklyMenuItemSelected {
       background-color: white;
     }
+    /* A special class for image dropdown fields with all-white images */
+    .transparentContainer .blocklyMenuItem.blocklyMenuItemSelected {
+      background-color: rgba(1, 1, 1, 0.25);
+    }
     /* Change look of focus/highlighted cell */
     .fieldGridDropDownContainer .blocklyMenuItem.blocklyMenuItemHighlight {
       box-shadow: 0 0 0 4px hsla(0.57, 10%, 34%, .2);
     }
     .blocklyMenuItemContent > img {
-      width: 32px;
-      height: 32px;
       object-fit: contain;
     }
 

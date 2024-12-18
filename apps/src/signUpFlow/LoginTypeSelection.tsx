@@ -158,7 +158,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
     analyticsReporter.sendEvent(
       EVENTS.LMS_INFORMATION_BUTTON_CLICKED,
       {},
-      PLATFORMS.STATSIG
+      PLATFORMS.BOTH
     );
   };
 
@@ -168,7 +168,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
       {
         'user login type': loginType,
       },
-      PLATFORMS.STATSIG
+      PLATFORMS.BOTH
     );
   }
 
