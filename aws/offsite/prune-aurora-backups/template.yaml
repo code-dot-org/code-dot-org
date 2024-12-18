@@ -8,6 +8,16 @@ Parameters:
     Type: String
     Description: SNS topic ARN created by alerting CloudFormation stack
     NoEcho: True
+  DBSnapshotIDPrefix:
+    Type: String
+    Description: Prefix of Database Snapshot Name/Identifier
+    Default: autoscale-prod-cluster
+    NoEcho: True
+  NumSnapshotsToKeep:
+    Type: String
+    Description: Number of database snapshots to retain.
+    Default: 10
+    NoEcho: True
 
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
@@ -38,7 +48,11 @@ Resources:
       Role: !GetAtt PruneAuroraBackupsRole.Arn
       CodeUri: src/
       Handler: prune-aurora-backups.handler
-      Runtime: nodejs10.x
+      Environment:
+        Variables:
+          DB_SNAPSHOT_IDENTIFIER_PREFIX: !Ref DBSnapshotIDPrefix
+          NUM_SNAPSHOTS_TO_KEEP: !Ref NumSnapshotsToKeep
+      Runtime: nodejs18.x
 
   OncePerDayRule:
     Type: AWS::Events::Rule
