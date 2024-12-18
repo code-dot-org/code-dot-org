@@ -5638,4 +5638,72 @@ class UserTest < ActiveSupport::TestCase
       end
     end
   end
+
+  describe '.authenticate_with_section_and_secret_words' do
+    subject(:authenticate_with_section_and_secret_words) do
+      described_class.authenticate_with_section_and_secret_words(section: section, params: params)
+    end
+
+    let!(:student) {create(:student, secret_words: secret_words)}
+    let!(:section) {create(:section, login_type: section_login_type)}
+    let!(:follower) {create(:follower, section: section, student_user: student)}
+
+    let(:section_login_type) {Section::LOGIN_TYPE_WORD}
+    let(:secret_words) {'secret words'}
+    let(:params) {{user_id: student.id, secret_words: secret_words}}
+
+    it 'returns student' do
+      _authenticate_with_section_and_secret_words.must_equal student
+    end
+
+    context 'when :secret_words param is blank' do
+      let(:secret_words) {nil}
+
+      it 'returns nil' do
+        _authenticate_with_section_and_secret_words.must_be_nil
+      end
+    end
+
+    context 'when section login_type in not word' do
+      let(:section_login_type) {Section::LOGIN_TYPE_PICTURE}
+
+      it 'returns nil' do
+        _authenticate_with_section_and_secret_words.must_be_nil
+      end
+    end
+  end
+
+  describe '.authenticate_with_section_and_secret_picture' do
+    subject(:authenticate_with_section_and_secret_picture) do
+      described_class.authenticate_with_section_and_secret_picture(section: section, params: params)
+    end
+
+    let!(:student) {create(:student, secret_picture_id: secret_picture_id)}
+    let!(:section) {create(:section, login_type: section_login_type)}
+    let!(:follower) {create(:follower, section: section, student_user: student)}
+
+    let(:section_login_type) {Section::LOGIN_TYPE_PICTURE}
+    let(:secret_picture_id) {SecretPicture.first.id}
+    let(:params) {{user_id: student.id, secret_picture_id: secret_picture_id}}
+
+    it 'returns student' do
+      _authenticate_with_section_and_secret_picture.must_equal student
+    end
+
+    context 'when :secret_picture_id param is blank' do
+      let(:secret_picture_id) {nil}
+
+      it 'returns nil' do
+        _authenticate_with_section_and_secret_picture.must_be_nil
+      end
+    end
+
+    context 'when section login_type in not picture' do
+      let(:section_login_type) {Section::LOGIN_TYPE_WORD}
+
+      it 'returns nil' do
+        _authenticate_with_section_and_secret_picture.must_be_nil
+      end
+    end
+  end
 end
