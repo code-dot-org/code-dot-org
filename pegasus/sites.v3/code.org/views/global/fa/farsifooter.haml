@@ -1,5 +1,4 @@
 - require 'cdo/footer'
-- require 'cdo/global_edition'
 
 - options = {}
 - options[:ge_region] = request.ge_region
@@ -23,10 +22,8 @@
       %div.powered-by-aws
         %a{:href=>"https://aws.amazon.com/what-is-cloud-computing"}
           %img{:src=>"/shared/images/Powered-By_logo-horiz_RGB_REV.png", :alt=>"Powered by AWS Cloud Computing", :style=>"width: 190px"}
-    .right{style: 'float: right; width: 30%; text-align: right;'}
+    .right{style: 'float: right; width: 30%; padding-left: 1rem; text-align: right;'}
       .language-dropdown
         =view :language
-      .global-edition-region-reset
-        %form{method: :post, action: Cdo::GlobalEdition.region_change_url(request.fullpath)}
-          %button#global-edition-region-reset.small.secondary.white
-            = I18n.t(:region_reset_button, scope: %i[global_edition])
+      .global-edition-region-reset{style: 'display: inline-block;margin-top: 1rem;'}
+        = view 'global_edition/region_reset_button'

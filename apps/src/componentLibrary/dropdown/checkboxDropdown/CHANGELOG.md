@@ -2,7 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.6.0] (https://github.com/code-dot-org/code-dot-org/pull/62023)
+## [0.7.0](https://github.com/code-dot-org/code-dot-org/pull/62910)
+
+- made `size` prop optional since we have default value for this prop
+- rewritten `CheckboxDropdownTest` in typescript
+- refactored/optimized `CheckboxDropdownTest.tsx`
+
+## [0.6.1](https://github.com/code-dot-org/code-dot-org/pull/62917)
+
+- updated color variables to use `primitiveColors.css`
+
+## [0.6.0](https://github.com/code-dot-org/code-dot-org/pull/62023)
+
 
 - added `readOnly` state
 - added `styleAsFormField` support

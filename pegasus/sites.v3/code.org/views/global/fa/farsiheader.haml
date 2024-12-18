@@ -46,7 +46,6 @@
       - (Cdo::GlobalEdition.region_locales(ge_region).to_a - [I18n.locale.to_s]).each do |locale|
         %li
           %form{method: :post, action: Cdo::I18n.language_change_url(request.fullpath, locale)}
-            %input{type: 'hidden', name: Rack::GlobalEdition::REGION_KEY, value: ge_region}
             %a.headerlink{href: '#', onclick: 'this.parentNode.submit();'}
               = I18n.t(:region_language_switch, scope: %i[global_edition], language: Cdo::I18n.language_name(locale) || locale)
     = view :sign_in_or_user
