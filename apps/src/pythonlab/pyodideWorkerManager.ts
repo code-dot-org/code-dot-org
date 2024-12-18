@@ -12,6 +12,8 @@ import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {getStore} from '@cdo/apps/redux';
 
+import CodebridgeRegistry from '../codebridge/CodebridgeRegistry';
+
 import {parseErrorMessage} from './pythonHelpers/messageHelpers';
 import {MATPLOTLIB_IMG_TAG} from './pythonHelpers/patches';
 import {PyodideMessage} from './types';
@@ -27,6 +29,7 @@ const setUpPyodideWorker = () => {
   worker.onmessage = event => {
     const {type, id, message} = event.data as PyodideMessage;
     const onSuccess = callbacks[id];
+    const terminal = CodebridgeRegistry.getInstance().getTerminal();
     switch (type) {
       case 'sysout':
       case 'syserr':
@@ -38,6 +41,7 @@ const setUpPyodideWorker = () => {
           getStore().dispatch(appendOutputImage(image));
           break;
         }
+        terminal?.writeln(message);
         getStore().dispatch(appendSystemOutMessage(message));
         break;
       case 'run_complete':

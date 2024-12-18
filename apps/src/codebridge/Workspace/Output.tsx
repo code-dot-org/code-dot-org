@@ -1,4 +1,3 @@
-import Console from '@codebridge/Console';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -6,6 +5,7 @@ import MiniAppPreview from '@cdo/apps/codebridge/MiniAppPreview/MiniAppPreview';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useCodebridgeContext} from '../codebridgeContext';
+import ConsoleV2 from '../Console/ConsoleV2';
 
 import moduleStyles from './output.module.scss';
 
@@ -16,7 +16,7 @@ const Output: React.FunctionComponent = () => {
   if (!miniApp) {
     return (
       <div className={moduleStyles.outputContainer}>
-        <Console />
+        <ConsoleV2 />
       </div>
     );
   }
@@ -29,7 +29,7 @@ const Output: React.FunctionComponent = () => {
       )}
     >
       <MiniAppPreview />
-      <Console />
+      <ConsoleV2 />
     </div>
   );
 };
