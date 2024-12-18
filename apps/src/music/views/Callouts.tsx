@@ -86,6 +86,14 @@ const availableCallouts: AvailableCallouts = {
       '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable ~ .blocklyDraggable',
     openToolboxCategory: 0,
   },
+  'flyout-third-block': {
+    selector:
+      '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable ~ .blocklyDraggable ~ .blocklyDraggable',
+  },
+  'flyout-fourth-block': {
+    selector:
+      '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable ~ .blocklyDraggable ~ .blocklyDraggable ~ .blocklyDraggable',
+  },
 };
 
 interface Target {
