@@ -44,6 +44,7 @@ const setUpPyodideWorker = () => {
         terminal?.writeln(message);
         terminal?.focus();
         terminal?.scrollToBottom();
+        CodebridgeRegistry.getInstance().getTerminalFitAddon()?.fit();
         getStore().dispatch(appendSystemOutMessage(message));
         break;
       case 'run_complete':

@@ -1,9 +1,11 @@
+import {FitAddon} from '@xterm/addon-fit';
 import {Terminal} from '@xterm/xterm';
 import React, {useEffect, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
 import '@xterm/xterm/css/xterm.css';
 
 import CodebridgeRegistry from '../CodebridgeRegistry';
@@ -59,9 +61,13 @@ const ConsoleV2: React.FunctionComponent = () => {
       screenReaderMode: true,
       minimumContrastRatio: 4.5,
     });
+    const fitAddon = new FitAddon();
+    terminal.loadAddon(fitAddon);
     CodebridgeRegistry.getInstance().setTerminal(terminal);
+    CodebridgeRegistry.getInstance().setTerminalFitAddon(fitAddon);
     terminal.open(terminalRef.current);
     terminal.onData(onData);
+    fitAddon.fit();
 
     // Prevent keyboard trap.
     terminal.attachCustomKeyEventHandler(ignoreEscapeAndTab);

@@ -1,12 +1,15 @@
+import {FitAddon} from '@xterm/addon-fit';
 import {Terminal} from '@xterm/xterm';
 
 export default class CodebridgeRegistry {
   private terminal: Terminal | null;
+  private terminalFitAddon: FitAddon | null;
 
   private static _instance: CodebridgeRegistry;
 
   constructor() {
     this.terminal = null;
+    this.terminalFitAddon = null;
   }
 
   public static getInstance(): CodebridgeRegistry {
@@ -26,5 +29,13 @@ export default class CodebridgeRegistry {
 
   public getTerminal() {
     return this.terminal;
+  }
+
+  public setTerminalFitAddon(terminalFitAddon: FitAddon) {
+    this.terminalFitAddon = terminalFitAddon;
+  }
+
+  public getTerminalFitAddon() {
+    return this.terminalFitAddon;
   }
 }
