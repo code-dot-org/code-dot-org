@@ -23,14 +23,35 @@ const ConsoleV2: React.FunctionComponent = () => {
     CodebridgeRegistry.getInstance().getTerminal()?.clear();
   };
 
+  const onData = (data: string) => {
+    const terminal = CodebridgeRegistry.getInstance().getTerminal();
+    if (!terminal) {
+      return;
+    }
+    const charCode = data.charCodeAt(0);
+    if (charCode === 13) {
+      // new line
+      terminal.writeln('');
+    } else if (charCode === 127) {
+      // backspace
+      terminal.write('\b \b');
+    } else {
+      terminal.write(data);
+    }
+  };
+
   useEffect(() => {
     if (!terminalRef || terminalRef.current === null || didInit) {
       return;
     }
 
-    const terminal = new Terminal();
+    const terminal = new Terminal({
+      screenReaderMode: true,
+      minimumContrastRatio: 4.5,
+    });
     CodebridgeRegistry.getInstance().setTerminal(terminal);
     terminal.open(terminalRef.current);
+    terminal.onData(onData);
 
     setDidInit(true);
   }, [didInit, terminalRef]);
