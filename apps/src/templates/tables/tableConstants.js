@@ -60,7 +60,9 @@ export const tableLayoutStyles = {
     whiteSpace: 'nowrap',
   },
   tableNameText: {
-    ...this.tableText,
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
     minWidth: 160,
   },
   table: {
