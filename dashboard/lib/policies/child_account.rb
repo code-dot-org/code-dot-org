@@ -192,7 +192,11 @@ class Policies::ChildAccount
 
   # Returns true if the user has provided the minimum information we need to decide if their account is affected by our Child Account Policy.
   def self.has_required_information?(user)
-    [user.us_state, user.country_code, user.birthday].all?(&:present?)
+    if ['US', 'RD'].include?(user.country_code)
+      [user.us_state, user.country_code, user.birthday].all?(&:present?)
+    else
+      user.birthday.present?
+    end
   end
 
   # Check if parent permission is required for this account according to our
