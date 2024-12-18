@@ -32,6 +32,8 @@ const ConsoleV2: React.FunctionComponent = () => {
     if (charCode === 13) {
       // new line
       terminal.writeln('');
+    } else if (charCode < 32) {
+      // control characters, do nothing
     } else if (charCode === 127) {
       // backspace
       terminal.write('\b \b');
@@ -52,6 +54,16 @@ const ConsoleV2: React.FunctionComponent = () => {
     CodebridgeRegistry.getInstance().setTerminal(terminal);
     terminal.open(terminalRef.current);
     terminal.onData(onData);
+
+    // Prevent keyboard trap.
+    const ignoredKeys = ['Tab', 'Esc'];
+    terminal.attachCustomKeyEventHandler(e => {
+      if (ignoredKeys.includes(e.key)) {
+        return false;
+      } else {
+        return true;
+      }
+    });
 
     setDidInit(true);
   }, [didInit, terminalRef]);
