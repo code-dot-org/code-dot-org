@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_11_25_202219) do
+ActiveRecord::Schema.define(version: 2024_12_12_205120) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -78,6 +78,8 @@ ActiveRecord::Schema.define(version: 2024_11_25_202219) do
     t.json "aichat_event"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "request_id"
+    t.index ["request_id"], name: "index_aichat_events_on_request_id"
     t.index ["user_id", "level_id", "script_id"], name: "index_ace_user_level_script"
   end
 
@@ -1536,6 +1538,7 @@ ActiveRecord::Schema.define(version: 2024_11_25_202219) do
     t.string "funding_type"
     t.text "properties"
     t.string "module"
+    t.string "name"
     t.index ["organizer_id"], name: "index_pd_workshops_on_organizer_id"
     t.index ["regional_partner_id"], name: "index_pd_workshops_on_regional_partner_id"
   end
@@ -1880,6 +1883,7 @@ ActiveRecord::Schema.define(version: 2024_11_25_202219) do
     t.string "validation_type", default: "full", null: false
     t.index ["school_district_id"], name: "fk_rails_951bceb7e3"
     t.index ["school_id"], name: "index_school_infos_on_school_id"
+    t.index ["school_name", "country", "school_type"], name: "index_school_infos_on_school_name_and_country_and_school_type"
   end
 
   create_table "school_stats_by_years", primary_key: ["school_id", "school_year"], charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2506,6 +2510,7 @@ ActiveRecord::Schema.define(version: 2024_11_25_202219) do
 
   add_foreign_key "ai_tutor_interaction_feedbacks", "ai_tutor_interactions"
   add_foreign_key "ai_tutor_interaction_feedbacks", "users"
+  add_foreign_key "aichat_events", "aichat_requests", column: "request_id"
   add_foreign_key "cap_user_events", "users"
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"

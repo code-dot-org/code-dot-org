@@ -56,8 +56,8 @@ const filterTypes = {
   },
 };
 
-const getEmptyFilters = () => {
-  let filters = {translated: false};
+const getEmptyFilters = (forceTranslated = false) => {
+  let filters = {translated: forceTranslated};
   Object.keys(filterTypes).forEach(filterKey => {
     filters[filterKey] = [];
   });
@@ -76,11 +76,11 @@ const getValidParamValues = (filterKey, paramValues) => {
 
 // Returns initial filter states based on URL parameters (returns empty filters if
 // no relevant parameters in the URL).
-const getInitialFilterStates = () => {
+const getInitialFilterStates = forceTranslated => {
   const filterTypeKeys = Object.keys(filterTypes);
   const urlParams = queryParams();
 
-  let filters = getEmptyFilters();
+  let filters = getEmptyFilters(forceTranslated);
   Object.keys(urlParams).forEach(paramKey => {
     if (filterTypeKeys.includes(paramKey)) {
       filters[paramKey] = getValidParamValues(paramKey, urlParams[paramKey]);
@@ -184,10 +184,11 @@ const CurriculumCatalogFilters = ({
   filteredCurricula,
   setFilteredCurricula,
   isEnglish,
+  forceTranslated,
   languageNativeName,
 }) => {
   const [appliedFilters, setAppliedFilters] = useState(
-    getInitialFilterStates()
+    getInitialFilterStates(forceTranslated)
   );
   const [numFilteredTranslatedCurricula, setNumFilteredTranslatedCurricula] =
     useState(
@@ -343,15 +344,17 @@ const CurriculumCatalogFilters = ({
               />
             </BodyTwoText>
           </div>
-          <Toggle
-            name="filterTranslatedToggle"
-            label={i18n.onlyShowCurriculaInLanguage({
-              language: languageNativeName,
-            })}
-            size="m"
-            checked={appliedFilters['translated']}
-            onChange={e => handleToggleLanguageFilter(e.target.checked)}
-          />
+          {!forceTranslated && (
+            <Toggle
+              name="filterTranslatedToggle"
+              label={i18n.onlyShowCurriculaInLanguage({
+                language: languageNativeName,
+              })}
+              size="m"
+              checked={appliedFilters['translated']}
+              onChange={e => handleToggleLanguageFilter(e.target.checked)}
+            />
+          )}
         </div>
       )}
     </div>
@@ -364,6 +367,7 @@ CurriculumCatalogFilters.propTypes = {
   setFilteredCurricula: PropTypes.func.isRequired,
   isEnglish: PropTypes.bool.isRequired,
   languageNativeName: PropTypes.string.isRequired,
+  forceTranslated: PropTypes.bool,
 };
 
 export default CurriculumCatalogFilters;

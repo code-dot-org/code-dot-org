@@ -5,6 +5,7 @@ import {useSelector} from 'react-redux';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -20,6 +21,19 @@ interface CurrentPackProps {
   packFolder: SoundFolder;
   noRightPadding: boolean;
 }
+
+const TEACHER_FEEDBACK_LINK =
+  'https://docs.google.com/forms/d/e/1FAIpQLSflGeMmY_ff1QllJfpTsWGZdn_xv6dKpPba_evTMwfbvG3FTA/viewform';
+const STUDENT_FEEDBACK_LINK =
+  'https://docs.google.com/forms/d/e/1FAIpQLSeZGNgX4wDvA29stId_Q2toofJN-r12zSP8yBMZ-E9KW5XPWg/viewform';
+
+const useFeedbackLink = () => {
+  const {userType, signInState} = useAppSelector(state => state.currentUser);
+  const isSignedIn = signInState === SignInState.SignedIn;
+  const feedbackLink =
+    userType === 'teacher' ? TEACHER_FEEDBACK_LINK : STUDENT_FEEDBACK_LINK;
+  return {isSignedIn, feedbackLink};
+};
 
 const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
   packFolder,
@@ -86,6 +100,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   const currentPackId = useAppSelector(state => state.music.packId);
   const analyticsReporter = useContext(AnalyticsContext);
   const dialogControl = useDialogControl();
+  const {isSignedIn, feedbackLink} = useFeedbackLink();
 
   const library = MusicLibrary.getInstance();
 
@@ -127,16 +142,6 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
       analyticsReporter.onButtonClicked('startOver');
     }
   }, [hideChaff, dialogControl, analyticsReporter, clearCode]);
-
-  const onFeedbackClicked = () => {
-    if (analyticsReporter) {
-      analyticsReporter.onButtonClicked('feedback');
-    }
-    window.open(
-      'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
-      '_blank'
-    );
-  };
 
   const onClickSkip = useCallback(() => {
     if (dialogControl) {
@@ -216,17 +221,19 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
                 className={'icon'}
               />
             </button>
-            <button
-              onClick={onFeedbackClicked}
-              type="button"
-              className={classNames(moduleStyles.button)}
-            >
-              <FontAwesome
-                title={musicI18n.feedback()}
-                icon="commenting"
-                className={'icon'}
-              />
-            </button>
+            {isSignedIn && (
+              <button
+                onClick={() => window.open(feedbackLink, '_blank')}
+                type="button"
+                className={classNames(moduleStyles.button)}
+              >
+                <FontAwesome
+                  title={musicI18n.feedback()}
+                  icon="commenting"
+                  className={'icon'}
+                />
+              </button>
+            )}
           </>
         )}
       </div>

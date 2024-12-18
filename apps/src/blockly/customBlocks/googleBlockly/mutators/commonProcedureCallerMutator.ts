@@ -26,6 +26,9 @@ export const commonFunctions = {
     if (model.getParameters().length) {
       state['params'] = model.getParameters().map(p => p.getName());
     }
+    if (!this.nextConnection) {
+      state['disableNextConnection'] = true;
+    }
     return state;
   },
 
@@ -39,6 +42,9 @@ export const commonFunctions = {
   loadExtraState: function (this: ProcedureBlock, state: Record<string, any>) {
     this.behaviorId = state['behaviorId'];
     this.deserialize_(state['name'], state['params'] || []);
+    if (state['disableNextConnection']) {
+      this.setNextStatement(false);
+    }
   },
 
   /**
@@ -61,4 +67,6 @@ export const commonFunctions = {
     }
     this.paramsFromSerializedState_ = params;
   },
+
+  canSerializeNextConnection: true,
 };

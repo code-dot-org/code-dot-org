@@ -2,23 +2,32 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.7.1] (https://github.com/code-dot-org/code-dot-org/pull/62102)
+## [0.8.1](https://github.com/code-dot-org/code-dot-org/pull/62917)
+
+- updated color variables to use `primitiveColors.css`
+
+## [0.8.0](https://github.com/code-dot-org/code-dot-org/pull/62806)
+
+- rewritten `SimpleDropdownTest` in typescript
+- refactored/optimized `SimpleDropdownTest.tsx`
+
+## [0.7.1](https://github.com/code-dot-org/code-dot-org/pull/62102)
 
 - added `iconLeft` prop support to `SimpleDropdown`
 
-## [0.7.0] (https://github.com/code-dot-org/code-dot-org/pull/62023)
+## [0.7.0](https://github.com/code-dot-org/code-dot-org/pull/62023)
 
 - added `readOnly` state support to `SimpleDropdown`
 - added full support of native HTML Select attributes to `SimpleDropdown`
 - added `styleAsFormField` support
 
-## [0.6.2] (https://github.com/code-dot-org/code-dot-org/pull/61460)
+## [0.6.2](https://github.com/code-dot-org/code-dot-org/pull/61460)
 
 - added `errorMessage` prop to `SimpleDropdown`
 - added error state border color to `SimpleDropdown` when `errorMessage` exists
 - added `helperMessage` and `helperIcon` props to `SimpleDropdown`
 
-## [0.6.1] (https://github.com/code-dot-org/code-dot-org/pull/61181)
+## [0.6.1](https://github.com/code-dot-org/code-dot-org/pull/61181)
 
 - improved `SimpleDropdown` down arrow icon RTL support
 

@@ -1,0 +1,42 @@
+{
+  "name": "@code-dot-org/frontend",
+  "private": true,
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo build",
+    "clean": "turbo clean",
+    "dev": "turbo dev",
+    "format": "prettier --check *",
+    "format:fix": "prettier --write .",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix",
+    "release:dryrun": "turbo release:dryrun",
+    "test": "turbo test",
+    "typecheck": "turbo typecheck"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "devDependencies": {
+    "@storybook/test-runner": "^0.19.1",
+    "prettier": "3.3.3",
+    "rimraf": "^6.0.1",
+    "turbo": "^2.3.0",
+    "typescript": "5.5.4"
+  },
+  "packageManager": "yarn@4.5.1",
+  "engines": {
+    "node": ">=20"
+  }
+}

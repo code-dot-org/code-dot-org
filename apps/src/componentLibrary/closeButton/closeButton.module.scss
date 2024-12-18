@@ -1,4 +1,4 @@
-@import "color";
+@import '@cdo/apps/componentLibrary/common/styles/primitiveColors.css';
 @import "@cdo/apps/componentLibrary/common/styles/mixins";
 
 // Close Button common styles
@@ -28,7 +28,7 @@
   }
 
   &:focus-visible {
-    outline: 2px solid $light_primary_500;
+    outline: 2px solid var(--brand-teal-50);
     outline-offset: 2px;
     border-radius: 0.25rem;
   }
@@ -41,26 +41,26 @@
 
 // Button Colors
 .closeButton-dark {
-  color: $light_gray_600;
+  color: var(--neutral-gray-60);
 
   &:hover {
-    color: $light_gray_400;
+    color: var(--neutral-gray-40);
   }
 
   &:active {
-    color: $light_gray_600;
+    color: var(--neutral-gray-60);
   }
 }
 
 .closeButton-light {
-  color: $light_gray_400;
+  color: var(--neutral-gray-40);
 
   &:hover {
-    color: $light_gray_600;
+    color: var(--neutral-gray-60);
   }
 
   &:active {
-    color: $light_gray_400;
+    color: var(--neutral-gray-40);
   }
 }
 

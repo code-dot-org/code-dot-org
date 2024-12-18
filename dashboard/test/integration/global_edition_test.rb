@@ -10,6 +10,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
   before do
     allow(DCDO).to receive(:get).and_call_original
     allow(DCDO).to receive(:get).with('global_edition_enabled', anything).and_return(true)
+    allow(Metrics::Events).to receive(:log_event)
   end
 
   describe 'routing' do
@@ -42,8 +43,17 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         it 'redirects to regional page with extra params' do
           get_international_page
 
+          expect(Metrics::Events).to have_received(:log_event).with(
+            event_name: 'Global Edition Region Selected',
+            request: anything,
+            metadata: {
+              region: ge_region,
+              locale: ge_region_locale,
+            }
+          ).once
+
           must_respond_with 302
-          must_redirect_to "#{international_page_path}?#{extra_params.merge(ge_region: ge_region).to_query}"
+          must_redirect_to "#{international_page_path}?#{extra_params.to_query}"
 
           follow_redirect!
 
@@ -159,6 +169,55 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
 
       it 'routing helpers generates region version of urls' do
         _ {get_regional_page}.must_change -> {incubator_path}, from: international_page_path, to: regional_page_path
+      end
+
+      context 'on locale change via params' do
+        let(:params) {{set_locale: locale}}
+        let(:extra_params) {{foo: 'bar'}}
+
+        let(:locale) {'en-US'}
+
+        before do
+          params.merge!(extra_params)
+        end
+
+        it 'changes region page language' do
+          get_regional_page
+
+          expect(Metrics::Events).not_to have_received(:log_event).with(
+            event_name: 'Global Edition Region Selected',
+            request: anything,
+            metadata: anything,
+          )
+
+          must_respond_with 302
+          must_redirect_to "#{regional_page_path}?#{extra_params.to_query}"
+
+          follow_redirect!
+
+          must_respond_with 200
+          _(request.fullpath).must_equal "#{regional_page_path}?#{extra_params.to_query}"
+        end
+
+        context 'when locale is not available in region' do
+          let(:locale) {'uk-UA'}
+
+          it 'redirects to international page' do
+            get_regional_page
+
+            expect(Metrics::Events).to have_received(:log_event).with(
+              event_name: 'Global Edition Region Selected',
+              request: anything,
+              metadata: {
+                region: nil,
+                locale: locale,
+              }
+            ).once
+
+            must_respond_with 302
+            must_redirect_to "#{regional_page_path}?#{extra_params.to_query}&ge_region"
+          end
+        end
       end
 
       context 'when ge_region is invalid' do

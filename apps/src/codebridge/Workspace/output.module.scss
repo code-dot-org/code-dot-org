@@ -1,0 +1,14 @@
+.outputContainer {
+  display: flex;
+  height: 100%;
+  grid-area: output;
+  overflow: hidden;
+
+  &.vertical {
+    flex-direction: column;
+  }
+
+  &.horizontal {
+    flex-direction: row;
+  }
+}
