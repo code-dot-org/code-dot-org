@@ -114,17 +114,19 @@ def main
     next
   end
 
-  contained_levels.map {|row| row[:contained_level_id]}.each do |contained_level_id|
-    LevelSource.
-      where(level_id: contained_level_id).
+  contained_levels.each do |contained_level|
+    if contained_level[:contained_level_type] == 'Multi'
+      LevelSource.
+      where(level_id: contained_level[:contained_level_id]).
       find_each do |level_source|
-      level_sources_multi_types << {
-        level_source_id: level_source.id,
-        level_id: level_source.level_id,
-        data: level_source.data,
-        md5: level_source.md5,
-        hidden: level_source.hidden
-      }
+        level_sources_multi_types << {
+          level_source_id: level_source.id,
+          level_id: level_source.level_id,
+          data: level_source.data,
+          md5: level_source.md5,
+          hidden: level_source.hidden
+        }
+      end
     end
   end
 
