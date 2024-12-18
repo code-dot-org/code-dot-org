@@ -3023,6 +3023,36 @@ class UserTest < ActiveSupport::TestCase
     ).level_source_id
   end
 
+  test 'track_level_progress stores locale with support flag when provided' do
+    user_level_params = {
+      user_id: @user.id,
+      level_id: @csf_script_level.level_id,
+      script_id: @csf_script_level.script_id,
+    }
+
+    level_progress_params = {
+      **user_level_params,
+      level_source_id: nil,
+      new_result: 100,
+      submitted: false,
+    }
+
+    User.track_level_progress(**level_progress_params)
+    refute_nil user_level = UserLevel.find_by(user_level_params)
+    assert_nil user_level.locale
+    assert_nil user_level.locale_supported
+
+    current_locale = 'uk-UA'
+    User.track_level_progress(**level_progress_params.merge(locale: current_locale))
+    assert_equal current_locale, user_level.reload.locale
+    assert_equal false, user_level.locale_supported
+
+    @csf_script_level.script.update!(supported_locales: [current_locale])
+    User.track_level_progress(**level_progress_params.merge(locale: current_locale))
+    assert_equal current_locale, user_level.reload.locale
+    assert_equal true, user_level.locale_supported
+  end
+
   test 'can create user with same name as deleted user' do
     create(:user, :deleted, name: 'Same Name')
     assert_creates(User) do

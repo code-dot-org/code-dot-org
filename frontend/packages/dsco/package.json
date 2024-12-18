@@ -1,0 +1,104 @@
+{
+  "name": "@code-dot-org/dsco",
+  "version": "0.0.0-alpha.0",
+  "keywords": [
+    "design-system",
+    "code.org"
+  ],
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/dsco/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/dsco"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    "./stub-section": {
+      "types": "./dist/stub-section/index.d.ts",
+      "import": "./dist/stub-section/index.js",
+      "require": "./dist/stub-section/index.cjs"
+    },
+    "./stub": {
+      "types": "./dist/stub/index.d.ts",
+      "import": "./dist/stub/index.js",
+      "require": "./dist/stub/index.cjs"
+    }
+  },
+  "main": "components/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "NODE_OPTIONS='--max-old-space-size=8192' tsup --dts",
+    "build:fast": "tsup",
+    "clean": "rimraf dist .turbo",
+    "dev": "yarn build:fast --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "test": "jest",
+    "typecheck": "tsc --noEmit"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "dependencies": {
+    "classnames": "^2.5.1",
+    "lodash": "^4.17.21",
+    "react-bootstrap": "^2.10.5"
+  },
+  "devDependencies": {
+    "@code-dot-org/legacy-css": "workspace:*",
+    "@code-dot-org/lint-config": "workspace:*",
+    "@contentful/experiences-sdk-react": "^1.24.0",
+    "@eslint/js": "^9.15.0",
+    "@swc/core": "^1.9.3",
+    "@swc/jest": "^0.2.37",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
+    "@types/identity-obj-proxy": "^3",
+    "@types/jest": "^29.5.14",
+    "@types/lodash": "^4",
+    "@types/node": "^22.9.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "clean-package": "^2.2.0",
+    "esbuild-sass-plugin": "^3.3.1",
+    "eslint": "^9.15.0",
+    "eslint-plugin-jest": "^28.9.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-storybook": "^0.11.1",
+    "glob": "^11.0.0",
+    "globals": "^15.12.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "postcss": "^8.4.49",
+    "postcss-modules": "^6.0.1",
+    "prettier": "3.3.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.3.5",
+    "typescript-eslint": "^8.15.0"
+  },
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "clean-package": "./clean-package.config.cjs"
+}

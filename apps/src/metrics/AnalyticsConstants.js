@@ -24,6 +24,7 @@ const EVENTS = {
     'Curriculum Free Dialog Button Clicked',
   LMS_INFORMATION_BUTTON_CLICKED: 'LMS Information Button Clicked',
   PARENT_OR_GUARDIAN_SIGN_UP_CLICKED: 'Parent or Guardian Sign Up Clicked',
+  FINISH_ACCOUNT_PAGE_LOADED: 'Finish Account Page Loaded',
 
   // School Association
   // Update School Info Dialog

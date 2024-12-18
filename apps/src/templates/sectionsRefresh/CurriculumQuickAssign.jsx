@@ -63,7 +63,7 @@ export default function CurriculumQuickAssign({
     const filterOfferings = data => {
       const languageFilter = courseFilters?.language;
 
-      if (languageFilter) {
+      if (languageFilter && data) {
         // Crawl data and remove any courses / versions that are not available
         // in the requested language.
         for (const levelInfo of Object.values(data)) {

@@ -184,6 +184,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           selectedValue={selectedLesson ? selectedLesson.id.toString() : ''}
           name={'lessons-in-assigned-unit-dropdown'}
           size="s"
+          id="ui-test-lessons-in-assigned-unit-dropdown"
         />
         {lessonMaterials?.unitNumber && (
           <UnitResourcesDropdown
