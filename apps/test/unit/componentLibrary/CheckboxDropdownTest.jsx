@@ -31,7 +31,6 @@ describe('Design System - Checkbox Dropdown Component', () => {
     render(
       <CheckboxDropdown
         name="test1-dropdown"
-        showControls
         allOptions={allOptions}
         checkedOptions={selectedValues}
         onChange={e =>
@@ -66,7 +65,6 @@ describe('Design System - Checkbox Dropdown Component', () => {
     const DropdownToRender = () => (
       <CheckboxDropdown
         name="test2-dropdown"
-        showControls
         allOptions={allOptions}
         checkedOptions={selectedValues}
         onChange={onChange}
@@ -117,7 +115,6 @@ describe('Design System - Checkbox Dropdown Component', () => {
     const DropdownToRender = () => (
       <CheckboxDropdown
         name="test2-dropdown"
-        showControls
         disabled={true}
         allOptions={allOptions}
         checkedOptions={selectedValues}
@@ -169,7 +166,6 @@ describe('Design System - Checkbox Dropdown Component', () => {
     const DropdownToRender = () => (
       <CheckboxDropdown
         name="test2-dropdown"
-        showControls
         disabled={true}
         allOptions={allOptions}
         checkedOptions={selectedValues}
@@ -219,7 +215,7 @@ describe('Design System - Checkbox Dropdown Component', () => {
     const DropdownToRender = () => (
       <CheckboxDropdown
         name="test2-dropdown"
-        showControls={false}
+        hideControls
         disabled={true}
         allOptions={allOptions}
         checkedOptions={selectedValues}

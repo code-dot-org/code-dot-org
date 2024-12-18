@@ -48,11 +48,11 @@ interface BaseCheckboxDropdownProps
 
 interface CheckboxDropdownWithoutControlProps
   extends BaseCheckboxDropdownProps {
-  showControls: false;
+  hideControls: true;
 }
 
 interface CheckboxDropdownWithControlsProps extends BaseCheckboxDropdownProps {
-  showControls: true;
+  hideControls?: false;
   onSelectAll: (
     event:
       | React.MouseEvent<HTMLButtonElement>
@@ -125,7 +125,7 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
             </li>
           ))}
         </ul>
-        {rest.showControls && (
+        {!rest.hideControls && (
           <div className={moduleStyles.bottomButtonsContainer}>
             <Button
               type="tertiary"
