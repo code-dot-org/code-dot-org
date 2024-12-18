@@ -19,7 +19,7 @@ TIME_NOW = DateTime.now.strftime('%F %T').freeze
 #   quotations escaped. Returns nil on nil input.
 def sanitize_string_for_db(unsanitized)
   return nil if unsanitized.nil?
-  unsanitized.gsub(/[\r\n\"]+/, '').dump
+  unsanitized.gsub(/[\r\n]+/, '').dump
 end
 
 # @param contained_level [Level] The level to parse.
@@ -177,8 +177,6 @@ def main
       SQL
     end
   rescue => exception
-    puts "Error when writing contained_level_answers"
-    puts exception
     Honeybadger.notify(
       exception,
       error_message: "Error when writing contained_level_answers"
