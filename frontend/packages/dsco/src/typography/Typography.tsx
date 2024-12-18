@@ -1,21 +1,22 @@
 import classnames from 'classnames';
-import React, {memo} from 'react';
+import {memo, ReactNode, CSSProperties} from 'react';
 
 import {SemanticTag, VisualAppearance} from './types';
 
 import moduleStyles from './typography.module.scss';
 
 export interface TypographyProps {
-  // Html tag to use for the typography element
+  /** Html tag to use for the typography element */
   semanticTag: SemanticTag;
-  // Scss module classname to use for the typography element
+  /** Scss module classname to use for the typography element */
   visualAppearance: VisualAppearance;
-  // Additional classnames to apply to the typography element
+  /** Additional classnames to apply to the typography element */
   className?: string;
-  // Inline styles to apply to the typography element
-  style?: React.CSSProperties;
-  // Text or other elements to render inside the typography element
-  children: React.ReactNode;
+  /** Inline styles to apply to the typography element */
+  style?: CSSProperties;
+  /** Text or other elements to render inside the typography element */
+  children: ReactNode;
+  /** Typography element id */
   id?: string;
 }
 
