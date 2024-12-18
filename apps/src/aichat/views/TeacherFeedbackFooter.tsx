@@ -1,8 +1,9 @@
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
-import Typography from '@cdo/apps/componentLibrary/typography/Typography';
+import {EmText} from '@cdo/apps/componentLibrary/typography';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {submitTeacherFeedback} from '../redux/aichatRedux';
@@ -47,17 +48,10 @@ const TeacherFeedbackFooter: React.FC<Props> = ({
   };
 
   return (
-    <div className={moduleStyles.outerContainer}>
+    <>
       {isProfanityViolation && (
-        <div
-          className={classNames(
-            moduleStyles.flaggyContainer,
-            moduleStyles.showAlways
-          )}
-        >
-          <Typography semanticTag="em" visualAppearance="em">
-            Was this content flagged correctly?
-          </Typography>
+        <div className={moduleStyles.teacherFeedbackContainer}>
+          <EmText>Was this content flagged correctly?</EmText>
           <Button
             color={buttonColors.black}
             disabled={false}
@@ -81,15 +75,21 @@ const TeacherFeedbackFooter: React.FC<Props> = ({
       {!isProfanityViolation && (
         <div
           className={classNames(
-            moduleStyles.flaggyContainer,
-            flaggedAsInappropriate && moduleStyles.showAlways
+            moduleStyles.teacherFeedbackContainer,
+            chatMessage.role === Role.ASSISTANT &&
+              moduleStyles.assistanctFeedbackContainerOverride
           )}
         >
-          <Typography semanticTag="em" visualAppearance="em">
+          <EmText
+            className={classNames(
+              moduleStyles.hiddenTilHover,
+              flaggedAsInappropriate && moduleStyles.showAlways
+            )}
+          >
             {flaggedAsInappropriate
               ? 'This message has been flagged'
               : 'Flag message as inappropriate'}
-          </Typography>
+          </EmText>
           <Button
             color={buttonColors.black}
             disabled={false}
@@ -98,10 +98,14 @@ const TeacherFeedbackFooter: React.FC<Props> = ({
             onClick={() => handleFlagClick(!flaggedAsInappropriate)}
             size="xs"
             type={flaggedAsInappropriate ? 'primary' : 'tertiary'}
+            className={classNames(
+              moduleStyles['button-xxs'],
+              !flaggedAsInappropriate && moduleStyles.flagButtonColorOverride
+            )}
           />
         </div>
       )}
-    </div>
+    </>
   );
 };
 

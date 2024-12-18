@@ -2,27 +2,53 @@
 @import 'font.scss';
 @import '@cdo/apps/componentLibrary/typography/typography.module';
 
-.outerContainer {
-  .flaggyContainer {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    margin-top: 4px;
-    justify-content: flex-end;
-    // display: none;
-    // this was doing a hover thing, but that seems to be broken currently.
-    // I think the reason is because the hover used to be
-    // on the outerContainer which was around the container-role
-  }
+// todo: just a couple small visual bugs remain with padding
+// left of the assistant's flag doesn't line up with left side of chatbox.
+// on profane message, when message is showing, there's no margin between
+// the thumb buttons and the "Hide message" button. (only visible when
+// thumb selected and hovering on "Hide message" button.
+
+// Also, text doesn't become unhidden when tab-focused. Not sure why.
+// But screen reader might be able to read it anyway since it's not display:none?
+
+.hiddenTilHover {
+  visibility: hidden;
+  transition: visibility 0.2s ease;
+}
+
+.teacherFeedbackContainer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: flex-end;
 
   &:hover,
-  &:focus {
-    .flaggyContainer {
-      display: flex;
+  &:focus,
+  &:focus-visible {
+    .hiddenTilHover {
+      visibility: visible;
     }
   }
 
   .showAlways {
-    display: flex;
+    visibility: visible;
   }
+
+  .button-xxs {
+    padding: 0.125rem 0.1rem;
+
+    i {
+      font-size: 0.75rem;
+    }
+  }
+
+  .flagButtonColorOverride {
+    &:not(:hover, :active) {
+      color: $light_black_opacity-30;
+    }
+  }
+}
+
+.assistanctFeedbackContainerOverride {
+  flex-direction: row-reverse;
 }
