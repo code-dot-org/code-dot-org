@@ -2,7 +2,7 @@ import React from 'react';
 
 import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
 
-import {WorkshopsTable} from './EnrolledWorkshops';
+import LandingPageWorkshopsTable from './LandingPageWorkshopsTable';
 
 const workshops = [
   // Have all required and non-required data
@@ -40,15 +40,22 @@ const workshops = [
 ];
 
 export default {
-  component: WorkshopsTable,
+  component: LandingPageWorkshopsTable,
   decorators: [reactBootstrapStoryDecorator],
 };
 
 const Template = args => {
-  return <WorkshopsTable {...args} />;
+  return <LandingPageWorkshopsTable {...args} />;
 };
 
-export const Default = Template.bind({});
-Default.args = {
+export const ParticipantView = Template.bind({});
+ParticipantView.args = {
   workshops: workshops,
+  participantView: true,
+};
+
+export const OrganizerView = Template.bind({});
+OrganizerView.args = {
+  workshops: workshops,
+  participantView: false,
 };

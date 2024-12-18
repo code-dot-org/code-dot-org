@@ -123,6 +123,23 @@ export const playMultiMutator = {
 };
 
 /*
+ * Mutator for blocks that support disabling the next connection.
+ */
+export const nextConnectionMutator = {
+  saveExtraState: function () {
+    return {
+      disableNextConnection: !this.nextConnection,
+    };
+  },
+  loadExtraState: function (state) {
+    if (state.disableNextConnection) {
+      this.setNextStatement(false);
+    }
+  },
+  canSerializeNextConnection: true,
+};
+
+/*
  * Extension for the effects field, which replaces the input_dummy in the block
  * with a dynamic field_dropdown and updates the effect value dropdown
  * based on the selected effect name.

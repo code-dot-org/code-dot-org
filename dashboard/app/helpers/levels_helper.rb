@@ -736,6 +736,7 @@ module LevelsHelper
       app_options[:is_viewing_exemplar] = level_options[:is_viewing_exemplar] || false
     end
     app_options[:share] = level_options[:share] if level_options[:share]
+    app_options[:public_caching] = @public_caching
     app_options.camelize_keys
   end
 

@@ -1211,6 +1211,7 @@ class User < ApplicationRecord
   end
 
   def self.authenticate_with_section_and_secret_words(section:, params:)
+    return if params[:secret_words].blank?
     return if section.login_type != Section::LOGIN_TYPE_WORD
 
     User.joins(:sections_as_student).find_by(
@@ -1221,6 +1222,7 @@ class User < ApplicationRecord
   end
 
   def self.authenticate_with_section_and_secret_picture(section:, params:)
+    return if params[:secret_picture_id].blank?
     return if section.login_type != Section::LOGIN_TYPE_PICTURE
 
     User.joins(:sections_as_student).find_by(
@@ -2089,7 +2091,18 @@ class User < ApplicationRecord
 
   # The synchronous handler for the track_level_progress helper.
   # @return [UserLevel]
-  def self.track_level_progress(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false, time_spent: nil)
+  def self.track_level_progress(
+    user_id:,
+    level_id:,
+    script_id:,
+    new_result:,
+    submitted:,
+    level_source_id:,
+    pairing_user_ids: nil,
+    is_navigator: false,
+    time_spent: nil,
+    locale: nil
+  )
     new_level_completed = false
     new_csf_level_perfected = false
 
@@ -2135,6 +2148,11 @@ class User < ApplicationRecord
       total_time_spent = user_level.calculate_total_time_spent(time_spent)
       user_level.time_spent = total_time_spent if total_time_spent
 
+      if locale
+        user_level.locale = locale
+        user_level.locale_supported = script.supported_locale?(locale)
+      end
+
       user_level.atomic_save!
     end
 
@@ -2149,6 +2167,7 @@ class User < ApplicationRecord
           level_source_id: level_source_id,
           pairing_user_ids: nil,
           is_navigator: true,
+          locale: locale,
           time_spent: time_spent
         )
         Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
@@ -2429,7 +2448,7 @@ class User < ApplicationRecord
 
   def show_census_teacher_banner?
     # Must have an NCES school to show the banner
-    users_school = try(:school_info).try(:school)
+    users_school = school_info_school
     teacher? && users_school && (next_census_display.nil? || Time.zone.today >= next_census_display.to_date)
   end
 

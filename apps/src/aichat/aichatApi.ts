@@ -236,9 +236,8 @@ async function postChatCompletionAsyncPolling(
     messages: getUpdatedMessages(
       newMessage,
       modelResponse,
-      executionStatus,
-      requestId
-    ),
+      executionStatus
+    ).map(message => ({...message, requestId})),
   };
 }
 
@@ -248,13 +247,11 @@ async function postChatCompletionAsyncPolling(
 function getUpdatedMessages(
   userMessage: ChatMessage,
   modelResponse: string,
-  executionStatus: ValueOf<typeof AiRequestExecutionStatus>,
-  requestId: number
+  executionStatus: ValueOf<typeof AiRequestExecutionStatus>
 ): ChatMessage[] {
-  let updatedMessages: ChatMessage[];
   switch (executionStatus) {
     case AiRequestExecutionStatus.SUCCESS:
-      updatedMessages = [
+      return [
         {
           ...userMessage,
           status: AiInteractionStatus.OK,
@@ -266,25 +263,22 @@ function getUpdatedMessages(
           status: AiInteractionStatus.OK,
         },
       ];
-      break;
     case AiRequestExecutionStatus.USER_PROFANITY:
-      updatedMessages = [
+      return [
         {
           ...userMessage,
           status: AiInteractionStatus.PROFANITY_VIOLATION,
         },
       ];
-      break;
     case AiRequestExecutionStatus.USER_PII:
-      updatedMessages = [
+      return [
         {
           ...userMessage,
           status: AiInteractionStatus.PII_VIOLATION,
         },
       ];
-      break;
     case AiRequestExecutionStatus.MODEL_PROFANITY:
-      updatedMessages = [
+      return [
         {
           ...userMessage,
           status: AiInteractionStatus.ERROR,
@@ -296,10 +290,9 @@ function getUpdatedMessages(
           status: AiInteractionStatus.PROFANITY_VIOLATION,
         },
       ];
-      break;
     case AiRequestExecutionStatus.FAILURE:
     case AiRequestExecutionStatus.MODEL_PII:
-      updatedMessages = [
+      return [
         {
           ...userMessage,
           status: AiInteractionStatus.ERROR,
@@ -311,9 +304,8 @@ function getUpdatedMessages(
           status: AiInteractionStatus.ERROR,
         },
       ];
-      break;
     case AiRequestExecutionStatus.USER_INPUT_TOO_LARGE:
-      updatedMessages = [
+      return [
         {
           ...userMessage,
           status: AiInteractionStatus.USER_INPUT_TOO_LARGE,
@@ -325,12 +317,9 @@ function getUpdatedMessages(
           status: AiInteractionStatus.USER_INPUT_TOO_LARGE,
         },
       ];
-      break;
     default:
       throw new Error(`Unexpected status: ${executionStatus}`);
   }
-
-  return updatedMessages.map(message => ({...message, requestId}));
 }
 
 /**

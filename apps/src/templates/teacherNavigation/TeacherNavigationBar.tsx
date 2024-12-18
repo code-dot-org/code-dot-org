@@ -191,6 +191,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
           selectedValue={String(selectedSection?.id)}
           className={styles.sectionDropdown}
           name="section-dropdown"
+          id="uitest-sidebar-section-dropdown"
           color="gray"
           disabled={isLoadingSectionData || !selectedSection}
         />
