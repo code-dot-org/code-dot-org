@@ -8,11 +8,7 @@ export default {
 } as Meta;
 
 const Template: StoryFn<typeof RegionSwitchConfirm> = args => (
-  <RegionSwitchConfirm
-    {...args}
-    country="IR"
-    region={{code: 'fa', name: 'Farsi', href: '#'}}
-  />
+  <RegionSwitchConfirm {...args} code="fa" name="Farsi" />
 );
 
 export const Default = Template.bind({});

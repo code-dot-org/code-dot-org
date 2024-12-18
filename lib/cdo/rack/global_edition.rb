@@ -40,18 +40,15 @@ module Rack
         if request.params.key?(REGION_KEY)
           new_region = request.params[REGION_KEY].presence
 
-          unless new_region == request.cookies[REGION_KEY]
-            redirect_path = ::File.join('/', request_path_vars(:main_path).first || request.path)
-            redirect_path = regional_path_for(new_region, redirect_path) if Cdo::GlobalEdition.region_available?(new_region)
+          redirect_path = ::File.join('/', request_path_vars(:main_path).first || request.path)
+          redirect_path = regional_path_for(new_region, redirect_path) if Cdo::GlobalEdition.region_available?(new_region)
 
-            redirect_uri = URI(redirect_path)
-            redirect_uri.query = URI.encode_www_form(request.params.except(REGION_KEY)).presence
-            redirect_path = redirect_uri.to_s
-
-            setup_redirect_to(redirect_path)
-          end
+          redirect_uri = URI(redirect_path)
+          redirect_uri.query = URI.encode_www_form(request.params.except(REGION_KEY)).presence
+          redirect_path = redirect_uri.to_s
 
           setup_region(new_region)
+          setup_redirect_to(redirect_path)
         elsif PATH_PATTERN.match?(request.path_info)
           ge_prefix, ge_region, main_path = request_path_vars(:ge_prefix, :ge_region, :main_path)
 
@@ -86,7 +83,7 @@ module Rack
       # @note Once the `response` instance is initialized, any changes to the `request` made afterward will not be applied.
       private def response
         @response ||= begin
-          RequestStore.store[Cdo::GlobalEdition::REGION_KEY] = request.cookies[REGION_KEY]
+          RequestStore.store[Cdo::GlobalEdition::REGION_KEY] = request.cookies[REGION_KEY].presence
           Rack::Response[*app.call(env)]
         end
       end
@@ -109,12 +106,8 @@ module Rack
         set_locale_cookie(request.cookies[LOCALE_KEY].presence)
       end
 
-      private def dashboard?
-        request.hostname == CDO.dashboard_hostname
-      end
-
       private def dashboard_route?(path = request.path)
-        return false unless dashboard?
+        return false unless request.hostname == CDO.dashboard_hostname
         Dashboard::Application.routes.recognize_path(path, method: request.request_method).present?
       rescue ActionController::RoutingError
         false
@@ -128,12 +121,8 @@ module Rack
         end
       end
 
-      private def pegasus?
-        request.hostname == CDO.pegasus_hostname
-      end
-
       private def pegasus_route?(path = request.path)
-        return false unless pegasus?
+        return false unless request.hostname == CDO.pegasus_hostname
         path = URI(path).path
         pegasus_helpers.resolve_document(path).present? || pegasus_helpers.resolve_view_template(path).present?
       rescue StandardError
@@ -144,11 +133,9 @@ module Rack
         site_locale = request.cookies[LOCALE_KEY]
 
         if Cdo::GlobalEdition.region_available?(region)
-          # Only Pegasus pages are available in all regional languages.
-          site_locale = Cdo::GlobalEdition.region_locked_locales.key(region) unless pegasus?
-
-          region_locales = Cdo::GlobalEdition.region_locales(region)
-          site_locale = Cdo::GlobalEdition.main_region_locale(region) unless region_locales.include?(site_locale)
+          unless Cdo::GlobalEdition.locale_available?(region, site_locale)
+            site_locale = Cdo::GlobalEdition.main_region_locale(region)
+          end
         else
           # Locales locked to a specific region should not be set during a region reset.
           site_locale = nil if Cdo::GlobalEdition.region_locked_locales[site_locale]

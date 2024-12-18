@@ -1404,6 +1404,7 @@
   "getCodePrice": "Get Code for {price} kit",
   "getGuideContinue": "Get your guide and continue",
   "getHelp": "Get Help",
+  "globalEdition_regionResetButton_text": "Return to Full Site",
   "globalEdition_regionSwitchConfirm_title": "Hello!",
   "globalEdition_regionSwitchConfirm_text": "Would you like to see the **{region}** version of Code.org?",
   "globalEdition_regionSwitchConfirm_accept": "Yes, take me to the {region} site",

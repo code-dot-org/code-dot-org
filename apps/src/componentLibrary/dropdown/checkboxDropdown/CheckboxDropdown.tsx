@@ -1,4 +1,4 @@
-import React, {AriaAttributes, memo, MouseEvent} from 'react';
+import React, {AriaAttributes, memo} from 'react';
 
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox';
@@ -29,7 +29,7 @@ export interface CheckboxDropdownProps
   /** CheckboxDropdown color */
   color?: DropdownColor;
   /** CheckboxDropdown size */
-  size: ComponentSizeXSToL;
+  size?: ComponentSizeXSToL;
   /** CheckboxDropdown disabled state */
   disabled?: boolean;
   /** CheckboxDropdown readOnly state */
