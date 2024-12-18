@@ -61,7 +61,7 @@ export const tableLayoutStyles = {
   },
   tableNameText: {
     ...this.tableText,
-    minWidth: 150,
+    minWidth: 160,
   },
   table: {
     borderWidth: 1,
