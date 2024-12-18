@@ -372,6 +372,14 @@ columns:
     comment:
   - *14
   - *15
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: request_id
+    sql_type_metadata: *18
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
   aichat_messages:
   - *10
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -4814,6 +4822,7 @@ columns:
     default_function:
     collation: utf8mb3_unicode_ci
     comment:
+  - *43
   pd_workshops_facilitators:
   - *92
   - *11
@@ -8422,6 +8431,19 @@ indexes:
     - user_id
     - level_id
     - script_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: aichat_events
+    name: index_aichat_events_on_request_id
+    unique: false
+    columns:
+    - request_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -13923,7 +13945,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20241203163649
+version: 20241212205120
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
