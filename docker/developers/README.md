@@ -17,11 +17,20 @@ steps that are related to running MySQL and Redis.
 >
 > If you are already running MySQL and/or Redis natively, you may depending on your
 > operating system need to stop those services or the `docker compose run` command below
-> will fail due to in-use ports:
+> will fail due to in-use ports.
+>
+> On Linux, that will likely be:
 >
 > ```shell
 > sudo systemctl stop mysql
 > sudo systemctl stop redis
+> ```
+>
+> On MacOS, that will likely be:
+>
+> ```shell
+> brew services stop mysql@8.0
+> brew services stop redis
 > ```
 
 Once you have a working Ruby and Node environment, you can then use this command to spin
