@@ -6,6 +6,7 @@ import {getChatMessageDisplayText} from '@cdo/apps/aiComponentLibrary/chatMessag
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
+import aichatI18n from '../locale';
 import {ChatMessage as ChatMessageType} from '../types';
 
 import TeacherFeedbackFooter from './TeacherFeedbackFooter';
@@ -60,7 +61,11 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
                 onClick={() => {
                   setShowProfaneUserMessage(!showProfaneUserMessage);
                 }}
-                text={showProfaneUserMessage ? 'Hide message' : 'Show message'}
+                text={
+                  showProfaneUserMessage
+                    ? aichatI18n.chatMessage_hideMessage()
+                    : aichatI18n.chatMessage_showMessage()
+                }
                 size="xs"
                 type="tertiary"
                 className={moduleStyles.userProfaneMessageButton}

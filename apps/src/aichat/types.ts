@@ -27,11 +27,6 @@ export interface ChatEvent {
   descriptionKey?: keyof typeof ChatEventDescriptions;
 }
 
-// teacher_feedback: [undefined, CLEAN_DISAGREE, PROFANITY_AGREE, PROFANITY_DISAGREE]
-// undefined: They took no action on the message (or they undid their action)
-// CLEAN_DISAGREE: They toggled the flag on on one of the clean messages
-// PROFANITY_AGREE: They thumbs upped a message that was flagged as profanity
-// PROFANITY_DISAGREE: They thumbs downed a message that was flagged as profanity
 export enum TeacherFeedback {
   CLEAN_DISAGREE = 'clean_disagree', // Flagged a clean message as inappropriate
   PROFANITY_AGREE = 'profanity_agree', // Thumbs-upped profane message
@@ -43,6 +38,7 @@ export interface ChatMessage extends ChatEvent {
   role: Role;
   status: ValueOf<typeof AiInteractionStatus>;
   requestId?: number;
+  // If undefined, the teacher took no action or undid their action.
   teacherFeedback?: TeacherFeedback;
 }
 

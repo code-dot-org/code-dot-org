@@ -18,10 +18,10 @@ class AichatControllerTest < ActionController::TestCase
     valid_student2_chat_message = {role: 'user', chatMessageText: 'hello from authorized student 2', status: 'ok', timestamp: Time.now.to_i}
     valid_teacher1_chat_message = {role: 'user', chatMessageText: 'hello from authorized teacher 1', status: 'ok', timestamp: Time.now.to_i}
     # Store 4 chat_events in AichatEvents table: 2 for authorized student1, 1 for authorized teacher, 1 for authorized student2
-    @student1_aichat_event1 = create(:aichat_event, user_id: @authorized_student1.id, level_id: @level.id, script_id: @script.id, aichat_event: valid_student1_chat_message1.to_json)
-    @student1_aichat_event2 = create(:aichat_event, user_id: @authorized_student1.id, level_id: @level.id, script_id: @script.id, aichat_event: valid_student1_chat_message2.to_json)
-    @teacher1_aichat_event = create(:aichat_event, user_id: @authorized_teacher1.id, level_id: @level.id, script_id: @script.id, aichat_event: valid_teacher1_chat_message.to_json)
-    @student2_aichat_event = create(:aichat_event, user_id: @authorized_student2.id, level_id: @level.id, script_id: @script.id, aichat_event: valid_student2_chat_message.to_json)
+    @student1_aichat_event1 = create(:aichat_event, user_id: @authorized_student1.id, level_id: @level.id, script_id: @script.id, aichat_event: valid_student1_chat_message1)
+    @student1_aichat_event2 = create(:aichat_event, user_id: @authorized_student1.id, level_id: @level.id, script_id: @script.id, aichat_event: valid_student1_chat_message2)
+    @teacher1_aichat_event = create(:aichat_event, user_id: @authorized_teacher1.id, level_id: @level.id, script_id: @script.id, aichat_event: valid_teacher1_chat_message)
+    @student2_aichat_event = create(:aichat_event, user_id: @authorized_student2.id, level_id: @level.id, script_id: @script.id, aichat_event: valid_student2_chat_message)
     @student1_aichat_request = create(:aichat_request, user_id: @authorized_student1.id, model_customizations: @default_model_customizations.to_json, stored_messages: [].to_json, new_message: valid_student1_chat_message1.to_json, execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS])
     @default_model_customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"}.stringify_keys
     @default_aichat_context = {
@@ -175,7 +175,7 @@ class AichatControllerTest < ActionController::TestCase
     assert_response :success
     assert_equal json_response.keys, ['chat_event_id', 'chat_event']
     aichat_event_row = AichatEvent.find(json_response['chat_event_id'])
-    stored_aichat_event = JSON.parse(aichat_event_row.aichat_event)
+    stored_aichat_event = aichat_event_row.aichat_event
     assert_equal stored_aichat_event['timestamp'], @valid_params_log_chat_event[:newChatEvent][:timestamp]
   end
 
@@ -191,7 +191,7 @@ class AichatControllerTest < ActionController::TestCase
     assert_response :success
     assert_equal json_response.keys, ['chat_event_id', 'chat_event']
     aichat_event_row = AichatEvent.find(json_response['chat_event_id'])
-    stored_aichat_event = JSON.parse(aichat_event_row.aichat_event)
+    stored_aichat_event = aichat_event_row.aichat_event
     assert_equal request_id, stored_aichat_event['requestId']
   end
 
@@ -229,9 +229,14 @@ class AichatControllerTest < ActionController::TestCase
     assert_equal chat_events_array.length, 2
     chat_event1_response = chat_events_array.first
     chat_event2_response = chat_events_array.last
-    chat_event1_stored = JSON.parse(AichatEvent.find(@student1_aichat_event1.id).aichat_event)
-    chat_event2_stored = JSON.parse(AichatEvent.find(@student1_aichat_event2.id).aichat_event)
-    assert_equal chat_event1_response.keys, ['role', 'chatMessageText', 'status', 'timestamp']
+    assert_equal chat_event1_response.keys, ['chat_event_id', 'chat_event']
+
+    chat_event1_response = chat_event1_response['chat_event']
+    chat_event2_response = chat_event2_response['chat_event']
+    chat_event1_stored = AichatEvent.find(@student1_aichat_event1.id).aichat_event
+    chat_event2_stored = AichatEvent.find(@student1_aichat_event2.id).aichat_event
+    assert_equal chat_event1_response.keys.sort, ['role', 'chatMessageText', 'status', 'timestamp'].sort
+
     assert_equal chat_event1_response["chatMessageText"], chat_event1_stored["chatMessageText"]
     assert_equal chat_event2_response["chatMessageText"], chat_event2_stored["chatMessageText"]
   end
@@ -239,7 +244,7 @@ class AichatControllerTest < ActionController::TestCase
   # chat_request tests
   test 'GET chat_request returns not found if request does not exist' do
     sign_in(@authorized_student1)
-    get :chat_request, params: {id: 1}, as: :json
+    get :chat_request, params: {id: 100}, as: :json
     assert_response :not_found
   end
 

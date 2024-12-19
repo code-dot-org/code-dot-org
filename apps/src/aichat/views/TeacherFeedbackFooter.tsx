@@ -6,6 +6,7 @@ import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import {EmText} from '@cdo/apps/componentLibrary/typography';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
+import aichatI18n from '../locale';
 import {submitTeacherFeedback} from '../redux/aichatRedux';
 import {ChatMessage, TeacherFeedback} from '../types';
 
@@ -87,8 +88,8 @@ const TeacherFeedbackFooter: React.FC<Props> = ({
             )}
           >
             {flaggedAsInappropriate
-              ? 'This message has been flagged'
-              : 'Flag message as inappropriate'}
+              ? aichatI18n.chatMessage_hasBeenFlagged()
+              : aichatI18n.chatMessage_flagAsInappropriate()}
           </EmText>
           <Button
             color={buttonColors.black}
