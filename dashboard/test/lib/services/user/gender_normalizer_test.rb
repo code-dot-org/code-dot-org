@@ -50,5 +50,19 @@ class Services::User::GenderNormalizerTest < ActiveSupport::TestCase
         end
       end
     end
+
+    context 'when blank' do
+      let(:raw_input) {''}
+
+      it 'returns nil' do
+        _(normalize).must_be_nil
+      end
+    end
+
+    context 'when nil' do
+      it 'returns nil' do
+        _(normalize).must_be_nil
+      end
+    end
   end
 end
