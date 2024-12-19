@@ -6,7 +6,9 @@ import i18n from '@cdo/locale';
 
 import styles from '../link-account.module.scss';
 
-const WorkshopStudentEnrollPage: React.FunctionComponent = () => (
+const WorkshopStudentEnrollPage: React.FunctionComponent<{
+  userReturnTo?: string;
+}> = ({userReturnTo}) => (
   <main>
     <div className={styles.contentContainer}>
       <AccountBanner
@@ -31,7 +33,9 @@ const WorkshopStudentEnrollPage: React.FunctionComponent = () => (
           content={i18n.accountSwitchTeacherAccountCardContent()}
           buttonText={i18n.accountSwitchTeacherAccountCardButton()}
           buttonType="primary"
-          href="/users/edit"
+          href={`/users/edit${
+            userReturnTo ? `?user_return_to=${userReturnTo}` : ''
+          }#change-user-type-modal-form`}
         />
       </div>
     </div>

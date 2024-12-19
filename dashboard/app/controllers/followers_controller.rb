@@ -49,7 +49,7 @@ class FollowersController < ApplicationController
           elsif !@section.can_join_section_as_participant?(@user)
             # check if student is joining a teacher section
             if @section.student_joining_teacher_course?(@user)
-              render :students_cannot_join
+              render :students_cannot_join, locals: {section_code: params[:section_code]}
             else
               redirect_to root_path, alert: I18n.t('follower.error.not_participant_type', section_code: params[:section_code])
             end
