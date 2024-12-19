@@ -7,8 +7,8 @@ require 'fileutils'
 require 'net/http'
 
 # Force very small downloads to be stored as Tempfiles instead of using StringIO objects
-OpenURI::Buffer.send :remove_const, 'StringMax' if OpenURI::Buffer.const_defined?('StringMax')
-OpenURI::Buffer.const_set 'StringMax', 0
+OpenURI::Buffer.send :remove_const, :StringMax if OpenURI::Buffer.const_defined?(:StringMax)
+OpenURI::Buffer.const_set :StringMax, 0
 
 # These methods can/should be moved out of a monkey patch if/when this process
 # is moved out of an ad-hoc script
