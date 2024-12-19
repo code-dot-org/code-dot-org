@@ -43,8 +43,6 @@ interface CensusFormPrefill {
 }
 
 interface CensusFormState {
-  showFollowUp: boolean;
-  showPledge: boolean;
   selectedHowMuchCS: string[];
   selectedTopics: string[];
   otherTopicsDesc: string;
@@ -80,8 +78,6 @@ export const CensusForm: React.FC<CensusFormProps> = ({
   prefillData = {},
 }) => {
   const [state, setState] = useState<CensusFormState>({
-    showFollowUp: false,
-    showPledge: false,
     selectedHowMuchCS: [],
     selectedTopics: [],
     otherTopicsDesc: '',
