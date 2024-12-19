@@ -16,7 +16,8 @@
 }
 
 .consoleV2 {
-  height: 100%
+  flex-grow: 1;
+  overflow: hidden;
 }
 
 .errorLine {
