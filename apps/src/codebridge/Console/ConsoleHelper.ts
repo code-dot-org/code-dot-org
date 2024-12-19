@@ -5,7 +5,6 @@ export function writeConsoleMessage(message: string) {
   if (terminal) {
     const lines = message.split('\n');
     lines.forEach(l => terminal.writeln(l));
-    terminal.scrollLines(1);
     terminal.focus();
   }
 }
