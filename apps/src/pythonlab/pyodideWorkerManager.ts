@@ -6,10 +6,10 @@ import {
 } from '@codebridge/Console/ConsoleHelper';
 import {
   appendOutputImage,
-  // appendSystemMessage,
-  // appendSystemOutMessage,
-  // appendErrorMessage,
-  // appendSystemError,
+  appendSystemMessage,
+  appendSystemOutMessage,
+  appendErrorMessage,
+  appendSystemError,
 } from '@codebridge/redux/consoleRedux';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -46,11 +46,11 @@ const setUpPyodideWorker = () => {
           break;
         }
         writeConsoleMessage(message);
-        //getStore().dispatch(appendSystemOutMessage(message));
+        getStore().dispatch(appendSystemOutMessage(message));
         break;
       case 'run_complete':
         writeSystemMessage('Program completed.', appName);
-        //getStore().dispatch(appendSystemMessage('Program completed.'));
+        getStore().dispatch(appendSystemMessage('Program completed.'));
         delete callbacks[id];
         onSuccess(event.data);
         break;
@@ -59,11 +59,11 @@ const setUpPyodideWorker = () => {
         break;
       case 'error':
         writeErrorMessage(parseErrorMessage(message));
-        //getStore().dispatch(appendErrorMessage(parseErrorMessage(message)));
+        getStore().dispatch(appendErrorMessage(parseErrorMessage(message)));
         break;
       case 'system_error':
         writeSystemError(message, appName);
-        //getStore().dispatch(appendSystemError(message));
+        getStore().dispatch(appendSystemError(message));
         Lab2Registry.getInstance()
           .getMetricsReporter()
           .logError('Python Lab System Code Error', undefined, {message});
@@ -126,7 +126,7 @@ const restartPyodideIfProgramIsRunning = () => {
     pyodideWorker.terminate();
     pyodideWorker = setUpPyodideWorker();
     writeSystemMessage('Program stopped.', appName);
-    //getStore().dispatch(appendSystemMessage('Program stopped.'));
+    getStore().dispatch(appendSystemMessage('Program stopped.'));
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .incrementCounter('PythonLab.PyodideRestarted');
