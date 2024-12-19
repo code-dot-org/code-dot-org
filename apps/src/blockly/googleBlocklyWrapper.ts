@@ -825,6 +825,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
         container as HTMLElement
       ).style.height = `calc(100% - ${styleConstants['workspace-headers-height']}px)`;
     }
+    blocklyWrapper.disableVariableEditing =
+      !!optOptionsExtended.disableVariableEditing;
+    blocklyWrapper.varsInGlobals = !!optOptionsExtended.varsInGlobals;
     blocklyWrapper.isStartMode = !!optOptionsExtended.editBlocks;
     blocklyWrapper.isToolboxMode =
       optOptionsExtended.editBlocks === 'toolbox_blocks';

@@ -100,6 +100,19 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
     (this as any).arrow = arrow;
   }
 
+  /**
+   * Create a dropdown menu under the text.
+   *
+   * @param e Optional mouse event that triggered the field to open, or
+   *     undefined if triggered programmatically.
+   * @override Prevent editing if variable editing is disabled (Play Lab)
+   */
+  showEditor_(e?: MouseEvent) {
+    if (!Blockly.disableVariableEditing) {
+      super.showEditor_(e);
+    }
+  }
+
   menuGenerator_ = function (
     this: GoogleBlockly.FieldDropdown
   ): GoogleBlockly.MenuOption[] {
