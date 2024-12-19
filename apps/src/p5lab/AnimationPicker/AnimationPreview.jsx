@@ -51,7 +51,8 @@ export default class AnimationPreview extends React.Component {
 
   componentDidUpdate(prevProps) {
     // Only start/stop animations via focus if there is no playBehavior set.
-    // The playBehavior props sets the animation to always play or never play.
+    // If set, the playBehavior prop sets the animation to 'ALWAYS_PLAY' or 'NEVER_PLAY',
+    // which determines if animation preview should play and should not be overridden by the focus state.
     if (
       !prevProps.isFocused &&
       this.props.isFocused &&
