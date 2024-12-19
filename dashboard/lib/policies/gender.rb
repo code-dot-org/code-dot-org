@@ -1,19 +1,122 @@
 class Policies::Gender
-  MALE_REGEX = /(^m$|\bmale|boy|guy|\bm(a|e)n|masculin|him|\bhe\b|hombre|dude|\bmail)/
-  FEMALE_REGEX = /(^f$|\bfemal|girl|gal|\bwom(a|e)n|fem(e|i)nin|she|\bher|mujer|\bfemail|\bfem)/
-  NON_BINARY_REGEX = /(^n$|they|them|non((\ |-)?)binary|inter(\ )?sex|gender(\ )?fluid|inter(\ )?gender|agender|boyflux|\btrans|\bit)/
+  module MatchingPatterns
+    MALE_REGEXES = [
+      /^m$/,
+      /\bmale/,
+      /boy/,
+      /guy/,
+      /\bm(a|e)n/,
+      /masculin/,
+      /him/,
+      /\bhe\b/,
+      /hombre/,
+      /dude/,
+      /\bmail/,
+      # Korean
+      /남자/,
+      /남성/,
+      # Turkish
+      /erkek/,
+      # Indonesian
+      /laki[ -]?laki/,
+      # German
+      /männlich/,
+      /mänlich/,
+      # Dutch
+      /jongen/,
+      # Czech
+      /muž/,
+      # Polish
+      /mężczyzna/,
+      # French
+      /homme/,
+      # Italian
+      /maschio/,
+      /uomo/,
+      # Spanish
+      /macho/,
+      /chico/,
+      # Swedish
+      /pojke/,
+      # Misspellings
+      /mal/,
+      /homem/,
+    ]
 
-  def self.normalize(gender)
-    return nil if gender.blank?
-    lowercase_gender = gender.downcase
-    if NON_BINARY_REGEX.match(lowercase_gender)
-      return 'n'
-    elsif MALE_REGEX.match(lowercase_gender)
-      return 'm'
-    elsif FEMALE_REGEX.match(lowercase_gender)
-      return 'f'
-    else
-      return 'o'
-    end
+    FEMALE_REGEXES = [
+      /^f$/,
+      /\bfemal/,
+      /girl/,
+      /gal/,
+      /\bwom(a|e)n/,
+      /fem(e|i)nin/,
+      /she/,
+      /\bher/,
+      /mujer/,
+      /\bfemail/,
+      /\bfem/,
+      # Korean
+      /여자/,
+      /여성/,
+      /여\b/,
+      # Turkish
+      /kız/,
+      /kadın/,
+      # Indonesian
+      /perempuan/,
+      # Farsi
+      /أنثى/,
+      /بنت/,
+      /انثي/,
+      # Croatian
+      /žena/,
+      # German
+      /weiblich/,
+      # Dutch
+      /vrouw/,
+      /meisje/,
+      # Polish
+      /kobieta/,
+      # French
+      /fille/,
+      /féminin/,
+      # Italian
+      /donna/,
+      # Spanish
+      /chica/,
+      # Danish
+      /kvinde/,
+      /pige/,
+      # Swedish
+      /tjej/,
+      /kvinna/,
+      # Khmer
+      /ស្រី/,
+      # Misspellings
+      /famale/,
+      /gril/,
+    ]
+
+    NON_BINARY_REGEXES = [
+      /^n$/,
+      /^x$/,
+      /they/,
+      /them/,
+      /non((\ |-)?)binary/,
+      /inter(\ )?sex/,
+      /gender(\ )?fluid/,
+      /inter(\ )?gender/,
+      /agender/,
+      /boyflux/,
+      /\btrans/,
+      /\bit/,
+    ]
+  end
+
+  module NormalizedValues
+    NON_BINARY = 'n'.freeze
+    MALE = 'm'.freeze
+    FEMALE = 'f'.freeze
+    OTHER = 'o'.freeze
   end
 end
