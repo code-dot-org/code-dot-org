@@ -3,11 +3,13 @@
   width: 400px;
   border-right: 5px solid $light_gray_800;
   background-color: $light_black;
+  height: 100%;
 }
 
 .previewContainerVertical {
   height: 400px;
   background-color: $light_black;
+  width: 100%;
 }
 
 .previewHeader {
