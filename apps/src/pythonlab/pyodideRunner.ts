@@ -1,4 +1,3 @@
-import {appendSystemMessage} from '@codebridge/redux/consoleRedux';
 import {AnyAction, Dispatch} from 'redux';
 
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
@@ -7,6 +6,7 @@ import {getFileByName} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 
 import {getValidationFromSource} from '../codebridge';
+import {writeSystemMessage} from '../codebridge/Console/ConsoleHelper';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import {
@@ -14,6 +14,8 @@ import {
   restartPyodideIfProgramIsRunning,
 } from './pyodideWorkerManager';
 import {runStudentTests, runValidationTests} from './pythonHelpers/scripts';
+
+const appName = 'pythonlab';
 
 export async function handleRunClick(
   runTests: boolean,
@@ -23,7 +25,8 @@ export async function handleRunClick(
   validationFile?: ProjectFile
 ) {
   if (!source) {
-    dispatch(appendSystemMessage('You have no code to run.'));
+    writeSystemMessage('You have no code to run.', appName);
+    //dispatch(appendSystemMessage('You have no code to run.'));
     return;
   }
   if (runTests) {
@@ -32,10 +35,12 @@ export async function handleRunClick(
     // Run main.py
     const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
     if (!code) {
-      dispatch(appendSystemMessage(`You have no ${MAIN_PYTHON_FILE} to run.`));
+      writeSystemMessage(`You have no ${MAIN_PYTHON_FILE} to run.`, appName);
+      //dispatch(appendSystemMessage(`You have no ${MAIN_PYTHON_FILE} to run.`));
       return;
     }
-    dispatch(appendSystemMessage('Running program...'));
+    writeSystemMessage('Running program...', appName);
+    //dispatch(appendSystemMessage('Running program...'));
     await runPythonCode(code, source);
   }
 }
@@ -70,7 +75,8 @@ export async function runAllTests(
   // we check the source for the validation file (this is the case in start mode).
   const validationToRun = validationFile || getValidationFromSource(source);
   if (validationToRun) {
-    dispatch(appendSystemMessage(`Running level tests...`));
+    writeSystemMessage(`Running level tests...`, appName);
+    //dispatch(appendSystemMessage(`Running level tests...`));
     progressManager?.resetValidation();
     // We only send the separate validation file, because otherwise the
     // source already has the validation file.
@@ -92,7 +98,8 @@ export async function runAllTests(
       }
     }
   } else {
-    dispatch(appendSystemMessage(`Running your project's tests...`));
+    writeSystemMessage(`Running your project's tests...`, appName);
+    //dispatch(appendSystemMessage(`Running your project's tests...`));
     // Otherwise, we look for files that follow the regex 'test*.py' and run those.
     await runPythonCode(runStudentTests(), source);
   }

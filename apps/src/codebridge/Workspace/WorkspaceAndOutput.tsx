@@ -6,6 +6,8 @@ import globalStyleConstants from '@cdo/apps/styleConstants';
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 import color from '@cdo/apps/util/color';
 
+import CodebridgeRegistry from '../CodebridgeRegistry';
+
 import Output from './Output';
 
 import moduleStyles from './workspace.module.scss';
@@ -62,6 +64,7 @@ const WorkspaceAndOutput: React.FunctionComponent = () => {
         Math.min(desiredConsoleHeight, consoleHeightMax)
       )
     );
+    CodebridgeRegistry.getInstance().getTerminalFitAddon()?.fit();
   };
 
   // The editor height is computed based on the column height, console height,

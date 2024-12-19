@@ -60,6 +60,7 @@ const ConsoleV2: React.FunctionComponent = () => {
     const terminal = new Terminal({
       screenReaderMode: true,
       minimumContrastRatio: 4.5,
+      tabStopWidth: 2,
     });
     const fitAddon = new FitAddon();
     terminal.loadAddon(fitAddon);
