@@ -28,12 +28,13 @@ end
 def get_contained_question(contained_level)
   contained_question_markdown = contained_level.properties['markdown']
 
-  contained_question_text = nil
-  if contained_level.properties['questions']
-    contained_question_text = contained_level.
-      properties['questions'].
-      first['text']
-  end
+  contained_question_text = if contained_level.properties['questions']
+                              contained_level.properties['questions'].first['text']
+                            elsif contained_level.properties['long_instructions']
+                              contained_level.properties['long_instructions']
+                            else
+                              nil
+                            end
 
   if contained_question_markdown.nil?
     return contained_question_text || ""
