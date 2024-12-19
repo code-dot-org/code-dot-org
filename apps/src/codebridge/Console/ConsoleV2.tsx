@@ -4,11 +4,11 @@ import React, {useEffect, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import '@xterm/xterm/css/xterm.css';
 
 import CodebridgeRegistry from '../CodebridgeRegistry';
+import {usePreviewPanel} from '../hooks/usePreviewPanel';
 
 import ControlButtons from './ControlButtons';
 import RightButtons from './RightButtons';
@@ -16,9 +16,7 @@ import RightButtons from './RightButtons';
 import moduleStyles from './console.module.scss';
 
 const ConsoleV2: React.FunctionComponent = () => {
-  const hasMiniApp = useAppSelector(
-    state => !!state.lab.levelProperties?.miniApp
-  );
+  const {showPreviewPanel} = usePreviewPanel();
   const terminalRef = useRef<HTMLDivElement>(null);
   const [didInit, setDidInit] = useState(false);
   const clearOutput = () => {
@@ -90,7 +88,7 @@ const ConsoleV2: React.FunctionComponent = () => {
       className={moduleStyles.consoleContainer}
       headerContent={codebridgeI18n.consoleHeader()}
       rightHeaderContent={<RightButtons clearOutput={clearOutput} />}
-      leftHeaderContent={!hasMiniApp && <ControlButtons />}
+      leftHeaderContent={!showPreviewPanel && <ControlButtons />}
       headerClassName={moduleStyles.consoleHeader}
     >
       <div ref={terminalRef} className={moduleStyles.consoleV2} />

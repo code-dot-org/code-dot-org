@@ -1,3 +1,4 @@
+import {usePreviewPanel} from '@codebridge/hooks/usePreviewPanel';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -13,15 +14,15 @@ import ImagePreview from '../OutputPreview/ImagePreview';
 import moduleStyles from './output.module.scss';
 
 const Output: React.FunctionComponent = () => {
-  const miniApp = useAppSelector(state => state.lab.levelProperties?.miniApp);
   const images = useAppSelector(state => state.codebridgeConsole.images);
+  const {showPreviewPanel} = usePreviewPanel();
   const {config} = useCodebridgeContext();
   const isVertical = config.activeGridLayout === 'vertical';
   const consoleExperimentEnabled = experiments.isEnabled(
     experiments.PYTHONLAB_XTERM
   );
   const ConsoleComponent = consoleExperimentEnabled ? ConsoleV2 : Console;
-  if (!miniApp && (!consoleExperimentEnabled || images.length === 0)) {
+  if (!showPreviewPanel) {
     return (
       <div className={moduleStyles.outputContainer}>
         <ConsoleComponent />

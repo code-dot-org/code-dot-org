@@ -48,6 +48,9 @@ const consoleSlice = createSlice({
     resetOutput(state) {
       state.output = [];
     },
+    resetImages(state) {
+      state.images = [];
+    },
   },
 });
 
@@ -59,6 +62,7 @@ export const {
   appendErrorMessage,
   appendSystemError,
   resetOutput,
+  resetImages,
 } = consoleSlice.actions;
 
 export default consoleSlice.reducer;
