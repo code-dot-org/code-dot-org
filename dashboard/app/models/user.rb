@@ -1211,6 +1211,7 @@ class User < ApplicationRecord
   end
 
   def self.authenticate_with_section_and_secret_words(section:, params:)
+    return if params[:secret_words].blank?
     return if section.login_type != Section::LOGIN_TYPE_WORD
 
     User.joins(:sections_as_student).find_by(
@@ -1221,6 +1222,7 @@ class User < ApplicationRecord
   end
 
   def self.authenticate_with_section_and_secret_picture(section:, params:)
+    return if params[:secret_picture_id].blank?
     return if section.login_type != Section::LOGIN_TYPE_PICTURE
 
     User.joins(:sections_as_student).find_by(

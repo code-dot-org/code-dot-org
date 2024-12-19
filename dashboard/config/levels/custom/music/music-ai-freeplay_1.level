@@ -22,9 +22,10 @@
     },
     "name_suffix": "_1",
     "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:50.427+00:00\",\"changed\":[\"cloned from \\\"music-ai-freeplay_3\\\"\"],\"cloned_from\":\"music-ai-freeplay_3\"},{\"changed_at\":\"2024-10-21 23:24:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-21 23:27:27 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-21 23:27:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:50.427+00:00\",\"changed\":[\"cloned from \\\"music-ai-freeplay_3\\\"\"],\"cloned_from\":\"music-ai-freeplay_3\"},{\"changed_at\":\"2024-10-21 23:24:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-21 23:27:27 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-21 23:27:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-04 22:25:49 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

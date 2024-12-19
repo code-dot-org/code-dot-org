@@ -34,7 +34,7 @@ Feature: Global Edition - Region Switch Confirm Modal
 
     # User accepts the switch to the regional version and gets redirected to it
     Given I clear local storage
-    And I reload the page
+    And I am on "http://code.org"
     And I wait until element "#global-edition-region-switch-confirm.fade.in[role='dialog']" is visible
     When I press "global-edition-region-switch-confirm-accept"
     Then I get redirected away from "http://code.org"

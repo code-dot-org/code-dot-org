@@ -881,6 +881,8 @@ en:
         self-paced-gen-ai-retrieval-example: Retrieval Example
         music_jam_intro: 'Music Lab: Jam Session Intro'
         self-paced-pl-data-science: CODAP Tutorial
+        PL_equitymod_identity: 'Chimamanda Ngozi Adichie: The Danger of a Single Story'
+        PL-equitymod-belongingvid: Building a Belonging Classroom
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

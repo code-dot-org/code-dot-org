@@ -1,0 +1,25 @@
+name 'self-paced-equity-U1L3-intro'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Welcome!
+
+## Module 1, Lesson 3: Reflecting on Personal Experiences
+
+<div style="display: flex; align-items: flex-start; gap: 20px; margin-top: 20px;">
+    <div style="width: 70%;">
+		<p style="line-height: 1.5; font-size: 18px;">In this lesson, you will:</p>
+        <ul style="margin-left: 20px; line-height: 1.6;">
+        <li style="line-height: 1.5;font-size: 16px;">Reflect on your identity markers and how you view yourself.</li>
+        <li style="line-height: 1.5;font-size: 16px;">Reflect on their educational experiences and how they inform their teaching practice today.</li>
+        </ul>
+        <p style="font-size: 16px; color: black;">
+        <br>
+        <p style="line-height: 1.5; font-size: 18px;"><strong>Suggested time for this lesson:</strong> 30 minutes
+        </p>
+    </div>
+    
+    <img src="https://images.code.org/f87d0c3f75934fdd0d95ddd92773b51c-image-1733783996837.39.52 PM.png" alt="Two individuals sit face-to-face in front of their own laptops. They both smile while they work." style="width: 30%; height: auto; border-radius: 10px;">
+</div>
+MARKDOWN
