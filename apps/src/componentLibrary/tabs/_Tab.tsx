@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {useCallback} from 'react';
+import React, {useCallback, useState} from 'react';
 
 import CloseButton from '@cdo/apps/componentLibrary/closeButton';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
@@ -97,19 +97,26 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   isClosable = false,
   onClose = () => {},
 }) => {
+  const [longTooltip, setLongTooltip] = useState<TooltipProps>();
   const handleClick = useCallback(() => onClick(value), [onClick, value]);
   const handleClose = useCallback(() => onClose(value), [onClose, value]);
-  const handleNativeTooltip = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleNativeTooltip = (
+    e: React.MouseEvent<HTMLButtonElement> | React.FocusEvent<HTMLButtonElement>
+  ) => {
     const target = e.currentTarget;
     // Locate the element that contains the text (if nested inside spans or other elements).
     const textElement = target.querySelector('span') || target;
 
-    if (textElement.scrollWidth > textElement.clientWidth && !tooltip) {
-      // Set the tooltip text if overflow occurs if the tooltip prop is not passed.
-      target.title = textElement.textContent || '';
+    if (textElement.scrollWidth > textElement.clientWidth) {
+      // Not sure what the ID here should be.
+      setLongTooltip({
+        tooltipId: 'test-id',
+        text: text || '',
+        direction: 'onBottom',
+      });
     } else {
-      // Clear tooltip if no overflow.
-      target.title = '';
+      // is unset necessary / should be somewhere else (onBlur)?
+      setLongTooltip(undefined);
     }
   };
 
@@ -136,6 +143,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
       )}
       onClick={handleClick}
       onMouseOver={handleNativeTooltip}
+      onFocus={handleNativeTooltip}
       disabled={disabled}
     >
       {buttonContent}
@@ -149,10 +157,14 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
     </button>
   );
 
+  const preferredTooltip = tooltip || longTooltip;
+
   return (
     <li role="presentation">
-      {tooltip ? (
-        <WithTooltip tooltipProps={tooltip}>{buttonElement}</WithTooltip>
+      {preferredTooltip ? (
+        <WithTooltip tooltipProps={preferredTooltip}>
+          {buttonElement}
+        </WithTooltip>
       ) : (
         buttonElement
       )}
