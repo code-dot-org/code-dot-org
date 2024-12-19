@@ -34,7 +34,9 @@ const WorkshopStudentEnrollPage: React.FunctionComponent<{
           buttonText={i18n.accountSwitchTeacherAccountCardButton()}
           buttonType="primary"
           href={`/users/edit${
-            userReturnTo ? `?user_return_to=${userReturnTo}` : ''
+            userReturnTo
+              ? `?user_return_to=${encodeURIComponent(userReturnTo)}`
+              : ''
           }#change-user-type-modal-form`}
         />
       </div>
