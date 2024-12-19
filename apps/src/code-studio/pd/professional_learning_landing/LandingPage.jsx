@@ -459,7 +459,7 @@ function LandingPage({
       <>
         {enrollSuccessWorkshopTitle && (
           <WorkshopEnrollmentCelebrationDialog
-            workshopName={enrollSuccessWorkshopTitle}
+            workshopTitle={enrollSuccessWorkshopTitle}
             onClose={() => setEnrollSuccessWorkshopTitle('')}
           />
         )}
