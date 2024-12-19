@@ -71,7 +71,7 @@ export default class ChangeUserTypeController {
       this.button.prop('disabled', true);
       this.status.text(i18n.saving());
       // Note: this.submitPromise is exposed as a property for testing.
-      this.submitPromise = promise.then(utils.reload).catch(err => {
+      this.submitPromise = promise.catch(err => {
         this.dropdown.prop('disabled', false);
         this.button.prop('disabled', false);
         this.status.text(i18n.changeUserTypeModal_unexpectedError());
@@ -85,15 +85,11 @@ export default class ChangeUserTypeController {
     if (this.mountPoint) {
       return; // Idempotent show
     }
-
-    const handleSubmit = values =>
-      this.submitUserTypeChange(values).then(() => utils.reload());
-
     this.mountPoint = document.createElement('div');
     document.body.appendChild(this.mountPoint);
     ReactDOM.render(
       <ChangeUserTypeModal
-        handleSubmit={handleSubmit}
+        handleSubmit={this.submitUserTypeChange}
         handleCancel={this.hideChangeUserTypeModal}
       />,
       this.mountPoint
@@ -108,6 +104,15 @@ export default class ChangeUserTypeController {
     }
   };
 
+  handleSuccess = () => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('user_return_to')) {
+      window.location.href = params.get('user_return_to');
+    } else {
+      utils.reload();
+    }
+  };
+
   /**
    * Submit a user type change using the Rails-generated async form.
    * @param {string} email
@@ -115,16 +120,11 @@ export default class ChangeUserTypeController {
    * @return {Promise} which may reject with an error or object containing
    *   serverErrors.
    */
-  submitUserTypeChange({email, emailOptIn}) {
+  submitUserTypeChange = ({email, emailOptIn}) => {
     return new Promise((resolve, reject) => {
       const onSuccess = () => {
         detachHandlers();
-        const params = new URLSearchParams(window.location.search);
-        if (params.get('user_return_to')) {
-          window.location.href = params.get('user_return_to');
-        } else {
-          resolve();
-        }
+        resolve();
       };
 
       const onFailure = (_, xhr) => {
@@ -162,6 +162,6 @@ export default class ChangeUserTypeController {
         .find('#change-user-type_user_email_preference_opt_in')
         .val(emailOptIn);
       this.form.submit();
-    });
-  }
+    }).then(this.handleSuccess);
+  };
 }
