@@ -5,7 +5,7 @@ import React from 'react';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
-import moduleStyles from './mini-app-preview.module.scss';
+import moduleStyles from './output-preview.module.scss';
 
 const MiniAppPreview: React.FunctionComponent = () => {
   const {config} = useCodebridgeContext();
