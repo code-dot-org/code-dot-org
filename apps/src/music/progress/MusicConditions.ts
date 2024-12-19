@@ -42,7 +42,7 @@ export const MusicConditions: ConditionNames = {
     name: 'played_anything_in_same_function',
     valueType: 'number',
     description:
-      'Checks if something is playing from within a function definition block, at least this many times. Ex. Value: 3',
+      'Tracks how many times a specific block (e.g., sound, drum beat, chord) is played within a function.  Useful for checking how many times a function is called. Ex. Value: 3',
   },
   PLAYED_ANYTHING_IN_SAME_LOOP: {
     name: 'played_anything_in_same_loop',

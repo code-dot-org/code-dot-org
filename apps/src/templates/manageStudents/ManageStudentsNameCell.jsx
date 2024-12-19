@@ -38,7 +38,7 @@ class ManageStudentNameCell extends Component {
     const studentUrl = unitUrlForStudent(sectionId, scriptName, id);
 
     return (
-      <div style={tableLayoutStyles.tableText}>
+      <div style={tableLayoutStyles.tableNameText}>
         {!this.props.isEditing && (
           <div>
             {studentUrl && (

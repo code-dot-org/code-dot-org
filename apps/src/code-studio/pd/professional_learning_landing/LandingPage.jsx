@@ -26,6 +26,7 @@ import {
   asyncLoadCoteacherInvite,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {hiddenPlSectionIds} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
 import {queryParams, updateQueryParam} from '../../utils';
@@ -37,7 +38,7 @@ import {
 } from '../workshop_dashboard/workshopConstants';
 import WorkshopEnrollmentCelebrationDialog from '../workshop_enrollment/WorkshopEnrollmentCelebrationDialog';
 
-import {EnrolledWorkshops, WorkshopsTable} from './EnrolledWorkshops';
+import LandingPageWorkshopsTable from './LandingPageWorkshopsTable';
 import SelfPacedProgressTable from './SelfPacedProgressTable';
 
 import style from './landingPage.module.scss';
@@ -108,12 +109,9 @@ const getEnrollSucessWorkshopName = () => {
 function LandingPage({
   lastWorkshopSurveyUrl,
   lastWorkshopSurveyCourse,
-  deeperLearningCourseData,
+  showDeeperLearning,
   currentYearApplicationId,
   hasEnrolledInWorkshop,
-  workshopsAsFacilitator,
-  workshopsAsOrganizer,
-  workshopsAsRegionalPartner,
   plCoursesStarted,
   userPermissions,
   joinedStudentSections,
@@ -127,20 +125,147 @@ function LandingPage({
     getEnrollSucessWorkshopName()
   );
   const [currentTab, setCurrentTab] = useState(availableTabs[0].value);
+
+  const [workshopsAsParticipant, setWorkshopsAsParticipant] = useState([]);
+  const [loadingWorkshopsAsParticipant, setLoadingWorkshopsAsParticipant] =
+    useState(false);
+  const [loadingWorkshopsAsFacilitator, setLoadingWorkshopsAsFacilitator] =
+    useState(false);
+  const [workshopsAsFacilitator, setWorkshopsAsFacilitator] = useState([]);
+  const [loadingWorkshopsAsOrganizer, setLoadingWorkshopsAsOrganizer] =
+    useState(false);
+  const [workshopsAsOrganizer, setWorkshopsAsOrganizer] = useState([]);
+  const [
+    loadingWorkshopsAsProgramManager,
+    setLoadingWorkshopsAsProgramManager,
+  ] = useState(false);
+  const [workshopsAsProgramManager, setWorkshopsAsProgramManager] = useState(
+    []
+  );
+
   const headerContainerStyles =
     availableTabs.length > 1
       ? style.headerWithTabsContainer
       : style.headerWithoutTabsContainer;
-
   const joinedPlSectionsStyling =
     joinedPlSections?.length > 0 ? '' : style.joinedPlSectionsWithNoSections;
 
-  // Load PL section info into redux
+  // Load PL section into redux and fetch applicable workshop info
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(asyncLoadSectionData());
     dispatch(asyncLoadCoteacherInvite());
-  }, [dispatch]);
+
+    const fetchParticipantData = async () => {
+      setLoadingWorkshopsAsParticipant(true);
+      try {
+        const response = await fetch('/api/v1/pd/workshops_user_enrolled_in', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': await getAuthenticityToken(),
+          },
+        });
+
+        setLoadingWorkshopsAsParticipant(false);
+        if (response.ok) {
+          const jsonData = await response.json();
+          setWorkshopsAsParticipant(jsonData);
+        }
+      } catch (error) {
+        setLoadingWorkshopsAsParticipant(false);
+        console.error('Error fetching participant data:', error);
+      }
+    };
+    fetchParticipantData();
+
+    if (userPermissions.includes('facilitator')) {
+      const fetchFacilitatorData = async () => {
+        setLoadingWorkshopsAsFacilitator(true);
+        try {
+          const response = await fetch(
+            '/dashboardapi/v1/pd/workshops_as_facilitator_for_pl_page',
+            {
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-Token': await getAuthenticityToken(),
+              },
+            }
+          );
+
+          setLoadingWorkshopsAsFacilitator(false);
+          if (response.ok) {
+            const jsonData = await response.json();
+            setWorkshopsAsFacilitator(jsonData.workshops_as_facilitator);
+          }
+        } catch (error) {
+          setLoadingWorkshopsAsFacilitator(false);
+          console.error('Error fetching facilitator data:', error);
+        }
+      };
+
+      fetchFacilitatorData();
+    }
+
+    if (userPermissions.includes('workshop_organizer')) {
+      const fetchWorkshopOrganizerData = async () => {
+        try {
+          setLoadingWorkshopsAsOrganizer(true);
+          const response = await fetch(
+            '/dashboardapi/v1/pd/workshops_as_organizer_for_pl_page',
+            {
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-Token': await getAuthenticityToken(),
+              },
+            }
+          );
+
+          setLoadingWorkshopsAsOrganizer(false);
+          if (response.ok) {
+            const jsonData = await response.json();
+            setWorkshopsAsOrganizer(jsonData.workshops_as_organizer);
+          }
+        } catch (error) {
+          setLoadingWorkshopsAsOrganizer(false);
+          console.error('Error fetching workshop organizer data:', error);
+        }
+      };
+
+      fetchWorkshopOrganizerData();
+    }
+
+    if (userPermissions.includes('program_manager')) {
+      const fetchProgramManagerWorkshops = async () => {
+        setLoadingWorkshopsAsProgramManager(true);
+        try {
+          const response = await fetch(
+            '/dashboardapi/v1/pd/workshops_as_program_manager_for_pl_page',
+            {
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-Token': await getAuthenticityToken(),
+              },
+            }
+          );
+
+          setLoadingWorkshopsAsProgramManager(false);
+          if (response.ok) {
+            const jsonData = await response.json();
+            setWorkshopsAsProgramManager(jsonData.workshops_as_program_manager);
+          }
+        } catch (error) {
+          setLoadingWorkshopsAsProgramManager(false);
+          console.error('Error fetching program manager data:', error);
+        }
+      };
+
+      fetchProgramManagerWorkshops();
+    }
+  }, [dispatch, userPermissions]);
 
   const RenderLastWorkshopSurveyBanner = () => (
     <TwoColumnActionBlock
@@ -308,7 +433,7 @@ function LandingPage({
       });
     });
 
-    if (deeperLearningCourseData?.length >= 1) {
+    if (showDeeperLearning) {
       allResources.push({
         headingText: i18n.plSectionsOnboardingTitle(),
         descriptionText: i18n.plSectionsOnboardingDesc(),
@@ -389,7 +514,12 @@ function LandingPage({
             isPlSections={true}
           />
         </div>
-        <EnrolledWorkshops />
+        <LandingPageWorkshopsTable
+          workshops={workshopsAsParticipant}
+          isLoading={loadingWorkshopsAsParticipant}
+          tableHeader={i18n.myWorkshops()}
+          participantView
+        />
         <section>
           <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
           {RenderStaticRecommendedPL()}
@@ -407,13 +537,12 @@ function LandingPage({
           {RenderFacilitatorResources()}
         </section>
         {RenderOwnedPlSections()}
-        {workshopsAsFacilitator?.length > 0 && (
-          <WorkshopsTable
-            workshops={workshopsAsFacilitator}
-            forMyPlPage={true}
-            tableHeader={i18n.inProgressAndUpcomingWorkshops()}
-          />
-        )}
+        <LandingPageWorkshopsTable
+          workshops={workshopsAsFacilitator}
+          isLoading={loadingWorkshopsAsFacilitator}
+          tableHeader={i18n.inProgressAndUpcomingWorkshops()}
+          participantView={false}
+        />
       </>
     );
   };
@@ -430,13 +559,12 @@ function LandingPage({
           <Heading2>{i18n.plSectionsRegionalPartnerResources()}</Heading2>
           {RenderRegionalPartnerResources()}
         </section>
-        {workshopsAsRegionalPartner?.length > 0 && (
-          <WorkshopsTable
-            workshops={workshopsAsRegionalPartner}
-            forMyPlPage={true}
-            tableHeader={i18n.inProgressAndUpcomingWorkshops()}
-          />
-        )}
+        <LandingPageWorkshopsTable
+          workshops={workshopsAsProgramManager}
+          isLoading={loadingWorkshopsAsProgramManager}
+          tableHeader={i18n.inProgressAndUpcomingWorkshops()}
+          participantView={false}
+        />
       </>
     );
   };
@@ -456,13 +584,12 @@ function LandingPage({
             solidBorder={true}
           />
         </section>
-        {workshopsAsOrganizer?.length > 0 && (
-          <WorkshopsTable
-            workshops={workshopsAsOrganizer}
-            forMyPlPage={true}
-            tableHeader={i18n.inProgressAndUpcomingWorkshops()}
-          />
-        )}
+        <LandingPageWorkshopsTable
+          workshops={workshopsAsOrganizer}
+          isLoading={loadingWorkshopsAsOrganizer}
+          tableHeader={i18n.inProgressAndUpcomingWorkshops()}
+          participantView={false}
+        />
       </>
     );
   };
@@ -505,12 +632,9 @@ export default connect(state => ({
 LandingPage.propTypes = {
   lastWorkshopSurveyUrl: PropTypes.string,
   lastWorkshopSurveyCourse: PropTypes.string,
-  deeperLearningCourseData: PropTypes.array,
+  showDeeperLearning: PropTypes.bool,
   currentYearApplicationId: PropTypes.number,
   hasEnrolledInWorkshop: PropTypes.bool,
-  workshopsAsFacilitator: PropTypes.array,
-  workshopsAsOrganizer: PropTypes.array,
-  workshopsAsRegionalPartner: PropTypes.array,
   plCoursesInstructed: PropTypes.array,
   plCoursesStarted: PropTypes.array,
   userPermissions: PropTypes.arrayOf(PropTypes.string),

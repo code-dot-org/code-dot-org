@@ -1,0 +1,277 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-12-16T21:22:01.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "instructions_important": "false",
+    "long_instructions": "####<i class=\"fa-solid fa-list-music\"></i> Chorus music \r\n\r\nAdd the [chorusMusic](#clickable=flyout-third-block) function to accompany each part of the lyrics.\r\n\r\n\r\n",
+    "hide_share_and_remix": "true",
+    "validations": [
+      {
+        "key": "music-ai-skill-function-verse_fc9881f2-7571-49f1-8971-dcab68a657a9",
+        "message": "Great work! That beat is a great addition to each of the lyrics. ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_anything_in_same_function",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-functions-chorus2_7db882b2-6fc8-473e-9b9c-0a9a0f3959a3",
+        "message": "Almost there! Add the [chorusMusic](#clickable=flyout-third-block) block to each play together block under [when run](#clickable=when-run-block). ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_anything_in_same_function",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-functions-chorus2_bcd459c6-c54d-4cac-8f7e-0970c7889a58",
+        "message": "You added the [chorusMusic](#clickable=flyout-third-block) to one play together block. Now, add the [chorusMusic](#clickable=flyout-third-block) block to the other two play together blocks under [when run](#clickable=when-run-block). ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_anything_in_same_function",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-sequence_a0f44420-3323-439a-be62-f0aa67dbcbe1",
+        "message": "Your function didn't play yet. Add the [chorusMusic](#clickable=flyout-third-block) to each [play together](#clickable=play_sounds_together) block under [when run](#clickable=when-run-block). ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_in_any_function"
+          }
+        ],
+        "callout": "flyout-third-block"
+      }
+    ],
+    "level_data": {
+      "validationTimeout": 5,
+      "library": "launch2024",
+      "packId": "dove_cameron_boyfriend",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 34,
+              "y": 34,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "$?KUv+Cn|@?~MOOU,:^L",
+                  "movable": false,
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
+                        "movable": false,
+                        "editable": false,
+                        "fields": {
+                          "sound": "dove_cameron_boyfriend/vocals_chorus_1"
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "d?4Q}?QHYAfA/bxc):lZ",
+                      "movable": false,
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "=^*2zE/Lqg@?_xS$l%e0",
+                            "movable": false,
+                            "editable": false,
+                            "fields": {
+                              "sound": "dove_cameron_boyfriend/vocals_chorus_2"
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "I{%rkRaHY)T$Fm|ow~8@",
+                          "movable": false,
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "%aDt;:n)me?hcJW#JF8~",
+                                "movable": false,
+                                "editable": false,
+                                "fields": {
+                                  "sound": "dove_cameron_boyfriend/vocals_ooh"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "!^sDFN@95hnMYj/jj2LP",
+              "x": 290,
+              "y": 30,
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "chorus_workspace",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "chorusMusic"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "play_sounds_together",
+                    "movable": false,
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "FjUk;Qs-hq,EfK@I1CqZ",
+                          "movable": false,
+                          "fields": {
+                            "sound": "dove_cameron_boyfriend/main_beat"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "5|(x/Zq5i_Rz4T^4[I-$",
+                              "movable": false,
+                              "fields": {
+                                "sound": "dove_cameron_boyfriend/hat_beat"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "*F#%p_K%HSl#IP/lc.Vz",
+                                  "movable": false,
+                                  "fields": {
+                                    "sound": "dove_cameron_boyfriend/bass_electric"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "D1`93s{!o`O_Zz%jS)}j",
+                                      "movable": false,
+                                      "fields": {
+                                        "sound": "dove_cameron_boyfriend/strings_small"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "chorus_workspace",
+            "name": "chorusMusic",
+            "returnTypes": null
+          }
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Functions": [
+
+          ],
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together"
+          ]
+        },
+        "type": "flyout",
+        "addFunctionCalls": true
+      },
+      "Control": [
+        "play_sounds_together"
+      ],
+      "Play": [
+        "play_sound_at_current_location_simple2"
+      ],
+      "sounds": {
+        "dove_cameron_boyfriend": [
+          "vocals_verse",
+          "vocals_prechorus",
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_tag",
+          "vocals_ooh",
+          "snaps",
+          "ride",
+          "main_beat",
+          "hat_beat",
+          "bass_electric",
+          "bass_synth_growl",
+          "bass_synth_long",
+          "bass_upright",
+          "brass",
+          "guitar_hit",
+          "guitar_heavy",
+          "keys_1",
+          "keys_2",
+          "plucks",
+          "horn",
+          "vocal_chop",
+          "strings_small",
+          "strings_big",
+          "roll",
+          "hits",
+          "riser",
+          "reverse"
+        ]
+      }
+    },
+    "name_suffix": "_final",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-12-16T21:22:01.454+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-chorus\\\"\"],\"cloned_from\":\"music-coding-intro-functions-chorus\"},{\"changed_at\":\"2024-12-16 21:22:47 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-16 21:23:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-16 21:23:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-16 21:23:52 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-16 21:24:44 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-16 21:26:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-16 21:27:36 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-16 22:16:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-16 22:17:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 23:00:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 17:56:10 +0000\",\"changed\":[\"long_instructions\",\"validations\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 17:59:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 17:59:41 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 18:10:24 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 18:12:49 +0000\",\"changed\":[\"validations\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 18:14:36 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 18:18:14 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 18:25:30 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 18:28:27 +0000\",\"changed\":[\"validations\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 18:52:49 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

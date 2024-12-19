@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Data Science with Python 
 
-#### The Data Science units are designed to be modular, meaning you can choose to teach one or both lessons depending on the needs of your course and your students.  
+#### The Data Science units are designed to be modular, meaning you can choose to teach one or both units depending on the needs of your course and your students.  
 
-#### Unit 2 focuses on how to use **Pandas** and **Matplotlab** libraries in Python. 
+#### Unit 2 focuses on how to use **Pandas** and **Matplotlib** libraries in Python. 
 
 <br>
 
@@ -40,7 +40,7 @@ markdown <<MARKDOWN
 ### **Suggested time:** 120 minutes
 
 
-## Let's get started 
+## Let's get started!
 
 
 MARKDOWN

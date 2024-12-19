@@ -36,8 +36,8 @@ class Policies::ChildAccount::StatePoliciesTest < ActiveSupport::TestCase
 
     describe 'for Delaware' do
       let(:co_state_policy) {state_policies['DE']}
-      let(:default_start_date) {DateTime.parse('2025-01-01T00:00:00-05:00')}
-      let(:default_lockout_date) {DateTime.parse('2025-01-01T00:00:00-05:00')}
+      let(:default_start_date) {DateTime.parse('2025-01-06T00:00:00-05:00')}
+      let(:default_lockout_date) {DateTime.parse('2025-01-06T00:00:00-05:00')}
 
       it 'contains expected max age' do
         _(co_state_policy[:max_age]).must_equal 12

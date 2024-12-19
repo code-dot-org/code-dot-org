@@ -56,14 +56,14 @@ const labeledGridLayouts = {
     gridLayoutRows: '1fr',
     gridLayoutColumns: '340px minmax(0, 1fr)',
     gridLayout: `
-  "info-panel workspace-and-console"
+  "info-panel workspace-and-output"
   `,
   },
   vertical: {
     gridLayoutRows: '1fr',
     gridLayoutColumns: '340px minmax(0, 1fr) 400px',
     gridLayout: `
-    "info-panel workspace console"
+    "info-panel workspace output"
     `,
   },
 };

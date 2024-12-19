@@ -1,0 +1,124 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-12-12T00:10:30.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "level_data": {
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "oG~wmPtW6bbNmv[*-6?e",
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "ArKMz1@GoqVsk+~x=p1/",
+                        "fields": {
+                          "sound": "chainsmokers_coldplay_something_just_like_this/drums_tom_build"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "q#fzceb}@j}*_q.qmGG]",
+                            "fields": {
+                              "sound": "chainsmokers_coldplay_something_just_like_this/piano_build"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sounds_sequential",
+                                "id": "4va!0Q`U_3)$Q1iF![+=",
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": ";*UwE:0E?G9hIuLBvM;X",
+                                      "fields": {
+                                        "sound": "chainsmokers_coldplay_something_just_like_this/vocals_prechorus_3"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": ":X(~,hry{?#:R3%S/55Y",
+                                          "fields": {
+                                            "sound": "chainsmokers_coldplay_something_just_like_this/vocals_prechorus_4"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "library": "launch2024",
+      "packId": "chainsmokers_coldplay_something_just_like_this",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Functions": [
+
+          ],
+          "Control": [
+            "play_sounds_together",
+            "repeat_simple2",
+            "play_sounds_sequential"
+          ],
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ]
+        }
+      }
+    },
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "long_instructions": "####Make the beat drop!\r\n\r\n1. Add more sounds to follow this build up. \r\n2. Press Run to listen to your beat drop.\r\n3. Press Finish when you are done experimenting. ",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "display_name": "Something Just Like This",
+    "bubble_choice_description": "By The Chainsmokers & Coldplay",
+    "validations": [
+      {
+        "key": "music-coding-intro-drop3_cbf812aa-8ab3-445b-be68-04ea24aba753",
+        "message": "Change a few sounds and tinker with the code. When you're done, click Continue.",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 4
+          }
+        ]
+      }
+    ],
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-12-12T00:10:30.141+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-drop\\\"\"],\"cloned_from\":\"music-coding-intro-drop\"},{\"changed_at\":\"2024-12-12 00:20:14 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-12 00:21:54 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-12 18:42:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 21:47:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 22:17:37 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 22:56:03 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-17 22:56:28 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

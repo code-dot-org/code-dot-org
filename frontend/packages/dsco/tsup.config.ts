@@ -12,7 +12,6 @@ export default defineConfig({
   clean: true,
   target: 'es2019',
   format: ['cjs', 'esm'],
-  banner: {js: '"use client";'},
   external: [
     '/fonts/barlowSemiCondensed/BarlowSemiCondensed-Medium.ttf',
     '/fonts/barlowSemiCondensed/BarlowSemiCondensed-SemiBold.ttf',
@@ -27,7 +26,12 @@ export default defineConfig({
       }),
       importMapper: path => {
         // Convert any references to @ to the ./src directory
-        return resolve(__dirname, path.replace(/^@\//, './src/'));
+        // Note: sass will detect relative paths if the file exists
+        // resulting in a situation where if the file is found relatively
+        // it results in a nested import statement when esbuild tries to resolve it.
+        // To avoid this, remove any strings prior to `@` and replace it with `./src/`
+        // See: https://github.com/glromeo/esbuild-sass-plugin/issues/136#issuecomment-1542828117
+        return resolve(__dirname, path.replace(/^(.*?)@\//, './src/'));
       },
     }),
   ],

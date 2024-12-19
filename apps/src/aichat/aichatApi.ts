@@ -206,7 +206,11 @@ async function postChatCompletionAsyncPolling(
   }
 
   return {
-    messages: getUpdatedMessages(newMessage, modelResponse, executionStatus),
+    messages: getUpdatedMessages(
+      newMessage,
+      modelResponse,
+      executionStatus
+    ).map(message => ({...message, requestId})),
   };
 }
 

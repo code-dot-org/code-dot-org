@@ -7,12 +7,13 @@ import type {
 import {Role} from '../aiComponentLibrary/chatMessage/types';
 import type {ValueOf} from '../types/utils';
 
+import aichatI18n from './locale';
 import {FIELDS_CHECKED_FOR_TOXICITY} from './views/modelCustomization/constants';
 
 export const ChatEventDescriptions = {
-  COPY_CHAT: 'The user copied the chat history.',
-  CLEAR_CHAT: 'The user cleared the chat workspace.',
-  LOAD_LEVEL: 'The user loaded the aichat level.',
+  COPY_CHAT: aichatI18n.chatEventDescriptions_copyChat(),
+  CLEAR_CHAT: aichatI18n.chatEventDescriptions_clearChat(),
+  LOAD_LEVEL: aichatI18n.chatEventDescriptions_loadLevel(),
 } as const;
 
 export interface ChatEvent {
@@ -28,6 +29,7 @@ export interface ChatMessage extends ChatEvent {
   chatMessageText: string;
   role: Role;
   status: ValueOf<typeof AiInteractionStatus>;
+  requestId?: number;
 }
 
 export interface ModelUpdate extends ChatEvent {

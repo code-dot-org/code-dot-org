@@ -1,4 +1,5 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import '@testing-library/jest-dom';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -17,6 +18,10 @@ import {
 } from '@cdo/apps/redux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
+
+jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
+  getAuthenticityToken: jest.fn().mockResolvedValue('authToken'),
+}));
 
 const TEST_WORKSHOP = {
   id: 1,
@@ -41,12 +46,9 @@ const TEST_WORKSHOP = {
 const DEFAULT_PROPS = {
   lastWorkshopSurveyUrl: 'url',
   lastWorkshopSurveyCourse: 'CS Fundamentals',
-  deeperLearningCourseData: [{data: 'oh yeah'}],
+  showDeeperLearning: true,
   currentYearApplicationId: 2024,
   hasEnrorolledInWorkshop: true,
-  workshopsAsFacilitator: [],
-  workshopsAsOrganizer: [],
-  workshopsAsRegionalPartner: [],
   plCoursesStarted: selfPacedCourseConstants,
   userPermissions: [],
   joinedStudentSections: [],
@@ -88,8 +90,6 @@ describe('LandingPage', () => {
     });
     screen.getByText(i18n.plLandingGettingStartedHeading());
     expect(screen.queryByText(i18n.plLandingStartSurvey())).toBeFalsy();
-    // eslint-disable-next-line no-restricted-properties
-    screen.getByTestId('enrolled-workshops-loader');
     expect(
       screen.queryByText(i18n.plLandingSelfPacedProgressHeading())
     ).toBeFalsy();
@@ -102,8 +102,6 @@ describe('LandingPage', () => {
       screen.queryByText(i18n.plLandingGettingStartedHeading())
     ).toBeFalsy();
     screen.getByText(i18n.plLandingStartSurvey());
-    // eslint-disable-next-line no-restricted-properties
-    screen.getByTestId('enrolled-workshops-loader');
     screen.getByText(i18n.plLandingSelfPacedProgressHeading());
     screen.getByText(i18n.plLandingStaticPLMidHighHeading());
   });
@@ -114,13 +112,16 @@ describe('LandingPage', () => {
       screen.queryByText(i18n.plLandingGettingStartedHeading())
     ).toBeFalsy();
     screen.getByText(i18n.plLandingStartSurvey());
-    // eslint-disable-next-line no-restricted-properties
-    screen.getByTestId('enrolled-workshops-loader');
     screen.getByText(i18n.plLandingSelfPacedProgressHeading());
     screen.getByText(i18n.plLandingStaticPLMidHighHeading());
   });
 
-  it('page shows upcoming workshops, self-paced courses, and plc enrollments but no survey banner if no pending survey exists', () => {
+  it('page shows upcoming workshops, self-paced courses, and plc enrollments but no survey banner if no pending survey exists', async () => {
+    const fetchStub = jest.spyOn(window, 'fetch').mockResolvedValue({
+      ok: true,
+      json: () => Promise.resolve([TEST_WORKSHOP]),
+    });
+
     renderDefault({
       lastWorkshopSurveyUrl: null,
       lastWorkshopSurveyCourse: null,
@@ -129,10 +130,14 @@ describe('LandingPage', () => {
       screen.queryByText(i18n.plLandingGettingStartedHeading())
     ).toBeFalsy();
     expect(screen.queryByText(i18n.plLandingStartSurvey())).toBeFalsy();
-    // eslint-disable-next-line no-restricted-properties
-    screen.getByTestId('enrolled-workshops-loader');
-    screen.getByText(i18n.plLandingSelfPacedProgressHeading());
-    screen.getByText(i18n.plLandingStaticPLMidHighHeading());
+    await waitFor(() => {
+      screen.getByText(i18n.myWorkshops());
+      screen.getByText(TEST_WORKSHOP.location_address);
+      screen.getByText(i18n.plLandingSelfPacedProgressHeading());
+      screen.getByText(i18n.plLandingStaticPLMidHighHeading());
+    });
+
+    fetchStub.mockRestore();
   });
 
   it('page shows self-paced progress table if enrolled in self-paced courses', () => {
@@ -155,11 +160,22 @@ describe('LandingPage', () => {
     screen.getByText(i18n.joinedProfessionalLearningSectionsHomepageTitle());
   });
 
-  it('page shows enrolled workshops table', () => {
+  it('page shows enrolled workshops table', async () => {
+    const fetchStub = jest
+      .spyOn(window, 'fetch')
+      .mockClear()
+      .mockResolvedValue({
+        ok: true,
+        json: () => Promise.resolve([TEST_WORKSHOP]),
+      });
+
     renderDefault();
 
-    // eslint-disable-next-line no-restricted-properties
-    screen.getByTestId('enrolled-workshops-loader');
+    await waitFor(() => {
+      screen.getByText(i18n.myWorkshops());
+      screen.getByText(TEST_WORKSHOP.location_address);
+    });
+    fetchStub.mockRestore();
   });
 
   it('page shows no tabs for teacher with no relevant permissions', () => {
@@ -257,11 +273,28 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plLandingTabWorkshopOrganizerCenter());
   });
 
-  it('page shows expected sections in Facilitator Center tab', () => {
-    renderDefault({
-      userPermissions: ['facilitator'],
-      workshopsAsFacilitator: [TEST_WORKSHOP],
-      coursesAsFacilitator: ['CS Discoveries', 'Computer Science A'],
+  it('page shows expected sections in Facilitator Center tab', async () => {
+    const fetchStub = jest
+      .spyOn(window, 'fetch')
+      .mockClear()
+      .mockImplementation(args => {
+        if (args.includes('workshops_user_enrolled_in')) {
+          return Promise.resolve({ok: true, json: () => []});
+        } else if (args.includes('workshops_as_facilitator_for_pl_page')) {
+          return Promise.resolve({
+            ok: true,
+            json: () => {
+              return {workshops_as_facilitator: [TEST_WORKSHOP]};
+            },
+          });
+        }
+      });
+
+    await waitFor(() => {
+      renderDefault({
+        userPermissions: ['facilitator'],
+        coursesAsFacilitator: ['CS Discoveries', 'Computer Science A'],
+      });
     });
     fireEvent.click(screen.getByText(i18n.plLandingTabFacilitatorCenter()));
 
@@ -286,7 +319,9 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plSectionsInstructorTitle());
 
     // Facilitated workshop table
-    screen.getByText('In Progress and Upcoming Workshops');
+    screen.getByText(i18n.inProgressAndUpcomingWorkshops());
+
+    fetchStub.mockRestore();
   });
 
   it('page shows expected sections in Instructor Center tab (for universal instructor)', () => {
@@ -311,10 +346,27 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plSectionsInstructorTitle());
   });
 
-  it('page shows expected sections in Regional Partner Center tab', () => {
-    renderDefault({
-      userPermissions: ['program_manager'],
-      workshopsAsRegionalPartner: [TEST_WORKSHOP],
+  it('page shows expected sections in Regional Partner Center tab', async () => {
+    const fetchStub = jest
+      .spyOn(window, 'fetch')
+      .mockClear()
+      .mockImplementation(args => {
+        if (args.includes('workshops_user_enrolled_in')) {
+          return Promise.resolve({ok: true, json: () => []});
+        } else if (args.includes('workshops_as_program_manager_for_pl_page')) {
+          return Promise.resolve({
+            ok: true,
+            json: () => {
+              return {workshops_as_program_manager: [TEST_WORKSHOP]};
+            },
+          });
+        }
+      });
+
+    await waitFor(() => {
+      renderDefault({
+        userPermissions: ['program_manager'],
+      });
     });
     fireEvent.click(screen.getByText(i18n.plLandingTabRPCenter()));
 
@@ -324,23 +376,46 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plSectionsRegionalPartnerPlaybookTitle());
 
     // Regional Partner workshop table
-    screen.getByText('In Progress and Upcoming Workshops');
+    screen.getByText(i18n.inProgressAndUpcomingWorkshops());
+
+    fetchStub.mockRestore();
   });
 
-  it('page shows expected sections in Workshop Organizer Center tab', () => {
+  it('page shows expected sections in Workshop Organizer Center tab', async () => {
+    const fetchStub = jest
+      .spyOn(window, 'fetch')
+      .mockClear()
+      .mockImplementation(args => {
+        if (args.includes('workshops_user_enrolled_in')) {
+          return Promise.resolve({ok: true, json: () => []});
+        } else if (args.includes('workshops_as_organizer_for_pl_page')) {
+          return Promise.resolve({
+            ok: true,
+            json: () => {
+              return {workshops_as_organizer: [TEST_WORKSHOP]};
+            },
+          });
+        }
+      });
     renderDefault({
       userPermissions: ['workshop_organizer'],
-      workshopsAsOrganizer: [TEST_WORKSHOP],
+    });
+    await waitFor(() => {
+      screen.getByText(i18n.plLandingTabWorkshopOrganizerCenter());
     });
     fireEvent.click(
-      screen.getAllByText(i18n.plLandingTabWorkshopOrganizerCenter())[0]
+      screen.getByText(i18n.plLandingTabWorkshopOrganizerCenter())
     );
 
     // Workshop Organizer Resources
     screen.getByText(i18n.plSectionsWorkshopResources());
 
-    // Workshop Organizer workshop table
-    screen.getByText('In Progress and Upcoming Workshops');
+    await waitFor(() => {
+      // Workshop Organizer workshop table
+      screen.getByText(i18n.inProgressAndUpcomingWorkshops());
+    });
+
+    fetchStub.mockRestore();
   });
 
   it('page does not show success dialog when not redirected here from successful enrollment', () => {

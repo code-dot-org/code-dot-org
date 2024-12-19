@@ -17,11 +17,13 @@
   ],
   "scripts": {
     "build": "turbo build",
+    "clean": "turbo clean",
     "dev": "turbo dev",
     "format": "prettier --check *",
     "format:fix": "prettier --write .",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
+    "release:dryrun": "turbo release:dryrun",
     "test": "turbo test",
     "typecheck": "turbo typecheck"
   },
@@ -35,6 +37,6 @@
   },
   "packageManager": "yarn@4.5.1",
   "engines": {
-    "node": ">=22"
+    "node": ">=20"
   }
 }
