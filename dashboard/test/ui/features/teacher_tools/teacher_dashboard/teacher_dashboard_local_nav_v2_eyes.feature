@@ -27,7 +27,6 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
     And I join the section
 
     When I sign in as "Teacher_Sally" and go home
-    And I get levelbuilder access
 
     When I click selector "a:contains(Untitled Section)" once I see it to load a new page
 
