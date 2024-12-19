@@ -119,7 +119,12 @@ export default class ChangeUserTypeController {
     return new Promise((resolve, reject) => {
       const onSuccess = () => {
         detachHandlers();
-        resolve();
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('user_return_to')) {
+          window.location.href = params.get('user_return_to');
+        } else {
+          resolve();
+        }
       };
 
       const onFailure = (_, xhr) => {
