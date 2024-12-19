@@ -56,6 +56,14 @@ const ConsoleV2: React.FunctionComponent = () => {
     if (!terminalRef || terminalRef.current === null || didInit) {
       return;
     }
+    // if (CodebridgeRegistry.getInstance().getTerminal()) {
+    //   const existingTerminal = CodebridgeRegistry.getInstance().getTerminal();
+    //   existingTerminal?.open(terminalRef.current);
+    //   const fitAddon = CodebridgeRegistry.getInstance().getTerminalFitAddon();
+    //   fitAddon?.fit();
+    //   setDidInit(true);
+    //   return;
+    // }
 
     const terminal = new Terminal({
       screenReaderMode: true,

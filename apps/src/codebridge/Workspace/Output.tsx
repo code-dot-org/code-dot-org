@@ -21,7 +21,7 @@ const Output: React.FunctionComponent = () => {
     experiments.PYTHONLAB_XTERM
   );
   const ConsoleComponent = consoleExperimentEnabled ? ConsoleV2 : Console;
-  if (!miniApp && consoleExperimentEnabled && images.length === 0) {
+  if (!miniApp && (!consoleExperimentEnabled || images.length === 0)) {
     return (
       <div className={moduleStyles.outputContainer}>
         <ConsoleComponent />
