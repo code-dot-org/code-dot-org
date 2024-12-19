@@ -24,6 +24,51 @@ describe('ChangeUserTypeController', () => {
     ReactDOM.unmountComponentAtNode.restore();
   });
 
+  describe('handling user_return_to param', () => {
+    const windowLocation = window.location;
+
+    beforeEach(() => {
+      delete window.location;
+      window.location = {
+        href: '',
+        search: '',
+      };
+      const INITIAL_USER_TYPE = 'student';
+      setupWithInitialUserType(INITIAL_USER_TYPE);
+    });
+
+    afterEach(() => {
+      window.location = windowLocation;
+    });
+
+    it('navigates to the user_return_to URL if the param exists', async () => {
+      const userReturnToUrl = '/return-path';
+      window.location.search = `?user_return_to=${encodeURIComponent(
+        userReturnToUrl
+      )}`;
+
+      const submitPromise = controller.submitUserTypeChange({
+        email: 'test@example.com',
+        emailOptIn: true,
+      });
+      form.trigger('ajax:success');
+      await submitPromise;
+
+      expect(window.location.href).to.equal(userReturnToUrl);
+    });
+
+    it('resolves normally if the user_return_to param does not exist', async () => {
+      const submitPromise = controller.submitUserTypeChange({
+        email: 'test@example.com',
+        emailOptIn: true,
+      });
+      form.trigger('ajax:success');
+      await submitPromise;
+
+      expect(window.location.href).to.equal('');
+    });
+  });
+
   describe('when initialUserType = "student"', () => {
     const INITIAL_USER_TYPE = 'student';
     const OTHER_USER_TYPE = 'teacher';
