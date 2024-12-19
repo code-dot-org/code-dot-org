@@ -6,7 +6,6 @@ class TeacherDashboardController < ApplicationController
       redirect_to "/#{params[:path]}"
     elsif params[:path].include? 'unit'
       params[:path].sub! 'unit', 's'
-      puts params[:path]
       redirect_to "/#{params[:path]}"
     else
       redirect_to "/home"
