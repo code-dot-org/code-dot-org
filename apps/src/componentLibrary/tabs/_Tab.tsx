@@ -1,5 +1,11 @@
 import classNames from 'classnames';
-import React, {useCallback, useState} from 'react';
+import React, {
+  useCallback,
+  useState,
+  useRef,
+  useEffect,
+  MutableRefObject,
+} from 'react';
 
 import CloseButton from '@cdo/apps/componentLibrary/closeButton';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
@@ -67,7 +73,8 @@ const renderTabButtonContent = (
   icon?: FontAwesomeV6IconProps,
   text?: string,
   iconLeft?: FontAwesomeV6IconProps,
-  iconRight?: FontAwesomeV6IconProps
+  iconRight?: FontAwesomeV6IconProps,
+  tabTextRef?: MutableRefObject<HTMLSpanElement | null>
 ) => {
   if (isIconOnly && icon) {
     return <FontAwesomeV6Icon {...icon} />;
@@ -75,7 +82,7 @@ const renderTabButtonContent = (
   return (
     <>
       {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
-      {text && <span>{text}</span>}
+      {text && <span ref={tabTextRef}>{text}</span>}
       {iconRight && <FontAwesomeV6Icon {...iconRight} />}
     </>
   );
@@ -98,27 +105,9 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   onClose = () => {},
 }) => {
   const [longTooltip, setLongTooltip] = useState<TooltipProps>();
+  const tabTextRef = useRef<HTMLSpanElement | null>(null);
   const handleClick = useCallback(() => onClick(value), [onClick, value]);
   const handleClose = useCallback(() => onClose(value), [onClose, value]);
-  const handleNativeTooltip = (
-    e: React.MouseEvent<HTMLButtonElement> | React.FocusEvent<HTMLButtonElement>
-  ) => {
-    const target = e.currentTarget;
-    // Locate the element that contains the text (if nested inside spans or other elements).
-    const textElement = target.querySelector('span') || target;
-
-    if (textElement.scrollWidth > textElement.clientWidth) {
-      // Not sure what the ID here should be.
-      setLongTooltip({
-        tooltipId: 'test-id',
-        text: text || '',
-        direction: 'onBottom',
-      });
-    } else {
-      // is unset necessary / should be somewhere else (onBlur)?
-      setLongTooltip(undefined);
-    }
-  };
 
   checkTabForErrors(isIconOnly, icon, text);
 
@@ -127,7 +116,8 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
     icon,
     text,
     iconLeft,
-    iconRight
+    iconRight,
+    tabTextRef
   );
 
   const buttonElement = (
@@ -142,8 +132,6 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
         isIconOnly && moduleStyles.iconOnlyTab
       )}
       onClick={handleClick}
-      onMouseOver={handleNativeTooltip}
-      onFocus={handleNativeTooltip}
       disabled={disabled}
     >
       {buttonContent}
@@ -158,6 +146,21 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   );
 
   const preferredTooltip = tooltip || longTooltip;
+
+  useEffect(() => {
+    if (tabTextRef.current) {
+      const textElement = tabTextRef.current;
+      if (textElement.scrollWidth > textElement.clientWidth && !tooltip) {
+        setLongTooltip({
+          tooltipId: 'test123',
+          text: text || '',
+          direction: 'onBottom',
+        });
+      } else {
+        setLongTooltip(undefined);
+      }
+    }
+  }, [text, tooltip]);
 
   return (
     <li role="presentation">
