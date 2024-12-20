@@ -1,6 +1,9 @@
 import {FitAddon} from '@xterm/addon-fit';
 import {Terminal} from '@xterm/xterm';
 
+// TODO: Rather than having all these console-specific methods in the registry, we should
+// instead make a ConsoleManager (combine with ConsoleHelpers) that manages all the console
+// operations, and reference that singleton here.
 export default class CodebridgeRegistry {
   private terminal: Terminal | null;
   private terminalFitAddon: FitAddon | null;

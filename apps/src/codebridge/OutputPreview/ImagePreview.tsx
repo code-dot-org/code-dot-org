@@ -22,11 +22,11 @@ const ImagePreview: React.FunctionComponent = () => {
   }
 
   const handleNextImage = () => {
-    setSelectedIndex((selectedIndex + 1) % images.length);
+    setSelectedIndex(selectedIndex + 1);
   };
 
   const handlePrevImage = () => {
-    setSelectedIndex((selectedIndex - 1 + images.length) % images.length);
+    setSelectedIndex(selectedIndex - 1);
   };
 
   const popOutGraph = (index: number) => {
@@ -67,11 +67,19 @@ const ImagePreview: React.FunctionComponent = () => {
           onClick={handlePrevImage}
           text={codebridgeI18n.previous()}
           iconLeft={{iconName: 'arrow-left'}}
+          type={'secondary'}
+          disabled={selectedIndex === 0}
+          size={'xs'}
+          color={buttonColors.black}
         />
         <Button
           onClick={handleNextImage}
           text={codebridgeI18n.next()}
           iconLeft={{iconName: 'arrow-right'}}
+          type={'secondary'}
+          disabled={selectedIndex === images.length - 1}
+          size={'xs'}
+          color={buttonColors.black}
         />
       </div>
     </div>

@@ -9,5 +9,7 @@
 .buttonBar {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 8px;
+  margin: 8px;
 }
