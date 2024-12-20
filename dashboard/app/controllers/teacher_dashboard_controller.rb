@@ -2,9 +2,9 @@ class TeacherDashboardController < ApplicationController
   load_and_authorize_resource :section
 
   rescue_from CanCan::AccessDenied do
-    if params[:path].include? 'courses'
+    if params[:path]&.include? 'courses'
       redirect_to "/#{params[:path]}"
-    elsif params[:path].include? 'unit'
+    elsif params[:path]&.include? 'unit'
       params[:path].sub! 'unit', 's'
       redirect_to "/#{params[:path]}"
     else
