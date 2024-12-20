@@ -3496,7 +3496,7 @@ exports.install = function (blockly, blockInstallOptions) {
   // Variable labels in Playlab include the Globals namespace.
   blockGeneratorFunctionDictionary.variables_get = function () {
     // Variable getter.
-    var code = Blockly.JavaScript.translateVarName(this.getFieldValue('VAR'));
+    const code = Blockly.JavaScript.translateVarName(this.getFieldValue('VAR'));
     return [code, Blockly.JavaScript.ORDER_ATOMIC];
   };
 
@@ -3504,13 +3504,13 @@ exports.install = function (blockly, blockInstallOptions) {
   // Variable labels in Playlab include the Globals namespace.
   blockGeneratorFunctionDictionary.variables_set = function () {
     // Variable setter.
-    var argument0 =
+    const argument0 =
       Blockly.JavaScript.valueToCode(
         this,
         'VALUE',
         Blockly.JavaScript.ORDER_ASSIGNMENT
       ) || '0';
-    var varName = Blockly.JavaScript.translateVarName(
+    const varName = Blockly.JavaScript.translateVarName(
       this.getFieldValue('VAR')
     );
     return varName + ' = ' + argument0 + ';\n';
