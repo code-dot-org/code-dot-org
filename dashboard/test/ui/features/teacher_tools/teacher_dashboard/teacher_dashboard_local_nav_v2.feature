@@ -25,12 +25,10 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
     And I click selector "button:contains(Middle School)" once I see it
     And I click selector "input[name='Interactive Animations and Games']" once I see it
 
-    And I click selector "#uitest-section-name-setup"
-    And I type "Sally's Super Section" into "#uitest-section-name-setup"
-    And I press enter key
+    And I press backspace to clear element "#uitest-section-name-setup"
+    And I press keys "Sally's Super Section" for element "#uitest-section-name-setup"
 
     And I press "button:contains(Save)" using jQuery
-#    And I click selector "#uitest-save-section-changes" to load a new page
 
     And I wait until element "h6:contains(Icon Key)" is visible
     And I wait until element "#ui-test-progress-table-v2" is visible
