@@ -3,6 +3,8 @@ import {Terminal} from '@xterm/xterm';
 import React, {useEffect, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
 import '@xterm/xterm/css/xterm.css';
@@ -21,8 +23,12 @@ const ConsoleV2: React.FunctionComponent = () => {
   const terminalRef = useRef<HTMLDivElement>(null);
   const [didInit, setDidInit] = useState(false);
   const clearOutput = () => {
-    CodebridgeRegistry.getInstance().getTerminal()?.clear();
+    CodebridgeRegistry.getInstance().clearTerminalLines();
   };
+
+  // Clear console when we change levels. Don't send an analytics event
+  // as the user did not initiate this action.
+  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => clearOutput());
 
   const onData = (data: string) => {
     const terminal = CodebridgeRegistry.getInstance().getTerminal();
@@ -55,12 +61,6 @@ const ConsoleV2: React.FunctionComponent = () => {
     if (!terminalRef || terminalRef.current === null || didInit) {
       return;
     }
-    const existingTerminal = CodebridgeRegistry.getInstance().getTerminal();
-    let existingTerminalData: string | undefined;
-    if (existingTerminal) {
-      existingTerminal.selectAll();
-      existingTerminalData = existingTerminal.getSelection().trim();
-    }
 
     const terminal = new Terminal({
       screenReaderMode: true,
@@ -75,13 +75,16 @@ const ConsoleV2: React.FunctionComponent = () => {
     terminal.onData(onData);
     fitAddon.fit();
 
-    // Right now we lose some data (specifically error colors)
-    // when the terminal is re-mounted. This may be fixable after
+    // Right now we are tracking lines in the registry so we can replay them here.
+    // We may be able to avoid this after
     // this pr goes in: https://github.com/xtermjs/xterm.js/pull/5253
-    // If not, we may need to fetch the existing terminal data from redux and re-play it into the terminal :(
-    // We also can lose data due to a race condition.
-    if (existingTerminalData) {
-      writeConsoleMessage(existingTerminalData);
+    // After that, we may just be able to call open() on the existing terminal instance
+    // and move it to the new container.
+    const existingLines = CodebridgeRegistry.getInstance().getTerminalLines();
+    if (existingLines.length > 0) {
+      const lines = existingLines.join('\n');
+      CodebridgeRegistry.getInstance().clearTerminalLines();
+      writeConsoleMessage(lines);
     }
 
     // Prevent keyboard trap.

@@ -1,12 +1,8 @@
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 
 export function writeConsoleMessage(message: string) {
-  const terminal = CodebridgeRegistry.getInstance().getTerminal();
-  if (terminal) {
-    const lines = message.split('\n');
-    lines.forEach(l => terminal.writeln(l));
-    terminal.focus();
-  }
+  const lines = message.split('\n');
+  lines.forEach(l => CodebridgeRegistry.getInstance().appendTerminalLine(l));
 }
 
 export function writeSystemMessage(message: string, appName: string) {

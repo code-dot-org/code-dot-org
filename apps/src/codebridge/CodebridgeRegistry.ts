@@ -4,12 +4,14 @@ import {Terminal} from '@xterm/xterm';
 export default class CodebridgeRegistry {
   private terminal: Terminal | null;
   private terminalFitAddon: FitAddon | null;
+  private terminalLines: string[];
 
   private static _instance: CodebridgeRegistry;
 
   constructor() {
     this.terminal = null;
     this.terminalFitAddon = null;
+    this.terminalLines = [];
   }
 
   public static getInstance(): CodebridgeRegistry {
@@ -37,5 +39,24 @@ export default class CodebridgeRegistry {
 
   public getTerminalFitAddon() {
     return this.terminalFitAddon;
+  }
+
+  public appendTerminalLine(line: string) {
+    this.terminalLines.push(line);
+    if (this.terminal) {
+      this.terminal.writeln(line);
+      this.terminal.focus();
+    }
+  }
+
+  public clearTerminalLines() {
+    this.terminalLines = [];
+    if (this.terminal) {
+      this.terminal.clear();
+    }
+  }
+
+  public getTerminalLines() {
+    return this.terminalLines;
   }
 }
