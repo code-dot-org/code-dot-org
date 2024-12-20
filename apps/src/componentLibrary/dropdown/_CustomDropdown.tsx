@@ -4,13 +4,14 @@ import React, {
   useMemo,
   useRef,
   useEffect,
+  AriaAttributes,
   KeyboardEvent,
-  HTMLAttributes,
 } from 'react';
 
 import {Button, ButtonProps} from '@cdo/apps/componentLibrary/button';
 import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
 import {useDropdownContext} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
+import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
 import {
   ComponentSizeXSToL,
   DropdownColor,
@@ -21,8 +22,7 @@ import FontAwesomeV6Icon, {
 
 import moduleStyles from './customDropdown.module.scss';
 
-export interface TriggerComponentProps
-  extends Omit<HTMLAttributes<HTMLButtonElement>, 'color'> {
+export interface TriggerComponentProps extends AriaAttributes {
   id: string;
   onClick: () => void;
   disabled: boolean;
@@ -37,8 +37,7 @@ export interface _CustomDropdownOption {
   isOptionDisabled?: boolean;
 }
 
-export interface CustomDropdownProps
-  extends Omit<HTMLAttributes<HTMLButtonElement>, 'color'> {
+export interface CustomDropdownProps extends AriaAttributes {
   /** CustomDropdown name.
    * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
   name: string;
@@ -106,7 +105,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   errorMessage,
   styleAsFormField = false,
   selectedValueText,
-  ...HTMLAttributes
+  ...rest
 }) => {
   const {activeDropdownName, setActiveDropdownName} = useDropdownContext();
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -123,6 +122,8 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
     },
     [dropdownRef, setActiveDropdownName, activeDropdownName]
   );
+
+  const ariaProps = getAriaPropsFromProps(rest);
 
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
@@ -162,13 +163,13 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   };
 
   const triggerComponentProps: TriggerComponentProps = {
-    ...HTMLAttributes,
     id: `${name}-dropdown-button`,
     'data-toggle': 'dropdown',
     onClick: toggleDropdown,
     disabled: disabled || readOnly,
+    ...ariaProps,
     'aria-haspopup': true,
-    'aria-label': HTMLAttributes['aria-label'] || `${name} filter dropdown`,
+    'aria-label': ariaProps['aria-label'] || `${name} filter dropdown`,
   };
 
   return (
@@ -189,7 +190,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
       )}
       onKeyDown={onKeyDown}
       ref={dropdownRef}
-      aria-describedby={HTMLAttributes['aria-describedby']}
+      aria-describedby={ariaProps['aria-describedby']}
     >
       {styleAsFormField && labelText && (
         <div>
