@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {useCallback, memo, AriaAttributes} from 'react';
+import React, {useCallback, memo, HTMLAttributes} from 'react';
 
 import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
 import {
@@ -26,7 +26,7 @@ export interface IconDropdownOption extends _CustomDropdownOption {
 
 export interface IconDropdownProps
   extends DropdownFormFieldRelatedProps,
-    AriaAttributes {
+    Omit<HTMLAttributes<HTMLButtonElement>, 'color' | 'onChange'> {
   /** IconDropdown name.
    * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
   name: string;
@@ -69,7 +69,7 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
   helperIcon,
   errorMessage,
   styleAsFormField = false,
-  ...rest
+  ...HTMLAttributes
 }) => {
   const {setActiveDropdownName} = useDropdownContext();
   const onOptionClick = useCallback(
@@ -98,7 +98,7 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
       errorMessage={errorMessage}
       styleAsFormField={styleAsFormField}
       selectedValueText={selectedOption?.label}
-      {...rest}
+      {...HTMLAttributes}
     >
       <div className={moduleStyles.dropdownMenuContainer}>
         <ul>
