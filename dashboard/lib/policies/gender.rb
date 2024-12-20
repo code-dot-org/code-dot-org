@@ -39,7 +39,7 @@ class Policies::Gender
       # Swedish
       /pojke/,
       # Misspellings
-      /mal/,
+      /^mal$/,
       /homem/,
     ]
 
@@ -94,7 +94,7 @@ class Policies::Gender
       /ស្រី/,
       # Misspellings
       /famale/,
-      /gril/,
+      /^gril$/,
     ]
 
     NON_BINARY_REGEXES = [
