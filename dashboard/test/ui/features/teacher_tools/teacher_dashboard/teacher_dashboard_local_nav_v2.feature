@@ -37,3 +37,4 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
 
     Then element "#unit-selector-v2" contains text "Interactive Animations and Games ('24-'25)"
     Then element "#uitest-sidebar-section-dropdown" contains text "Sally's Super Section"
+    Then element "#uitest-sidebar-section-dropdown" does not contain text "Untitled Section"
