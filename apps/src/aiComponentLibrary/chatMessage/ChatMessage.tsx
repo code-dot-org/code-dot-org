@@ -11,10 +11,6 @@ import {getChatMessageDisplayText} from './utils';
 
 import moduleStyles from './chat-message.module.scss';
 
-// TODO:
-//    Make sure none of the UI shows up in student view
-//    Replace hard coded strings with i18n ones
-
 interface ChatMessageProps {
   chatMessageText: string;
   role: Role;

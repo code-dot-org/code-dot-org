@@ -498,6 +498,9 @@ class Ability
       can :student_chat_history, :aichat do
         user.teacher_can_access_ai_chat?
       end
+      can :submit_teacher_feedback, :aichat do
+        user.teacher_can_access_ai_chat?
+      end
       can :user_has_access, :aichat
     end
 

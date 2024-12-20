@@ -666,28 +666,9 @@ const aichatSlice = createSlice({
       state[messageListKey].splice(index, 1);
     },
     updateChatMessage: (state, action: PayloadAction<ChatMessage>) => {
-      // This causes the whole ChatWorkspace to re-render (i think?), and
-      // scrolls the thing down to the bottom...
-      // state.studentChatHistory = state.studentChatHistory.map(message =>
-      //   message.id === action.payload.id ? action.payload : message
-      // );
-
-      // Noo, I thought this might mitigate but it does the same thing :(
-      const {id} = action.payload;
-      if (!id) {
-        return;
-      }
-      const chatHistory = state['studentChatHistory'];
-
-      const indexToUpdate = chatHistory.findIndex(
-        message => isChatMessage(message) && message.id === id
+      state.studentChatHistory = state.studentChatHistory.map(message =>
+        message.id === action.payload.id ? action.payload : message
       );
-
-      if (indexToUpdate < 0) {
-        return;
-      }
-
-      state['studentChatHistory'][indexToUpdate] = action.payload;
     },
     clearChatMessages: state => {
       state.chatEventsPast = [];
