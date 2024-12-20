@@ -274,7 +274,7 @@ class User < ApplicationRecord
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
 
   has_many :user_school_infos
-  after_save :update_and_add_users_school_infos, if: :saved_change_to_school_info_id?
+  after_save :update_and_add_users_school_infos, if: -> {saved_change_to_school_info_id? || (school_info_id.present? && user_school_infos.empty?)}
   validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
 
   has_many :pd_applications,
@@ -1211,6 +1211,7 @@ class User < ApplicationRecord
   end
 
   def self.authenticate_with_section_and_secret_words(section:, params:)
+    return if params[:secret_words].blank?
     return if section.login_type != Section::LOGIN_TYPE_WORD
 
     User.joins(:sections_as_student).find_by(
@@ -1221,6 +1222,7 @@ class User < ApplicationRecord
   end
 
   def self.authenticate_with_section_and_secret_picture(section:, params:)
+    return if params[:secret_picture_id].blank?
     return if section.login_type != Section::LOGIN_TYPE_PICTURE
 
     User.joins(:sections_as_student).find_by(

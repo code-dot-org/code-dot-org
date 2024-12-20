@@ -7,6 +7,7 @@
   "user_id": 18605,
   "properties": {
     "level_data": {
+      "validationTimeout": 6,
       "startSources": {
         "blocks": {
           "languageVersion": 0,
@@ -31,25 +32,13 @@
                         "fields": {
                           "times": 1
                         },
-                        "inputs": {
-                          "code": {
-                            "block": {
-                              "type": "play_sound_at_current_location_simple2",
-                              "id": "play_sound_at_current_location_simple2",
-                              "movable": false,
-                              "editable": false,
-                              "fields": {
-                                "sound": "shakira_whenever_wherever/percussion_beat"
-                              }
-                            }
-                          }
-                        },
                         "next": {
                           "block": {
                             "type": "play_sounds_sequential",
                             "id": "9$Q(,nxS)LEJk4:7`_2|",
                             "deletable": false,
                             "movable": false,
+                            "editable": false,
                             "inputs": {
                               "code": {
                                 "block": {
@@ -102,7 +91,11 @@
       "library": "launch2024",
       "toolbox": {
         "blocks": {
-        }
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
       },
       "packId": "shakira_whenever_wherever",
       "sounds": {
@@ -120,10 +113,107 @@
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "false",
-    "long_instructions": "###Loop the beat\r\n1. Change the number of times the drums repeat to keep the beat going.",
+    "long_instructions": "####<i class=\"fa-solid fa-repeat\"></i> Loop the beat\r\n1. Drag a drum [sound](#clickable=play-sound-block) into the [repeat loop](#clickable=id-up-left:repeat_simple2).\r\n2. Change the number of [times](#clickable=repeat-block-field-workspace) keep the beat going.",
+    "validations": [
+      {
+        "key": "music-coding-intro-loop-beat_bf0ed4a4-3139-4a89-b2c9-860c44654230",
+        "message": "Great work! You used a loop to repeat the drum beat for the length of the song. ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 3
+          },
+          {
+            "name": "played_sound_id",
+            "value": "shakira_whenever_wherever/percussion_beat"
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-loop-beat_ebe3dea6-16d1-429f-93e5-2bf8bc327af2",
+        "message": "The drum loop played twice. Change the [number](#clickable=repeat-block-field-workspace) in the loop so the sounds repeat for the length of the song. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 2
+          },
+          {
+            "name": "played_sound_id",
+            "value": "shakira_whenever_wherever/percussion_beat"
+          }
+        ],
+        "callout": "repeat-block-field-workspace"
+      },
+      {
+        "key": "music-coding-intro-loop-beat_d1ebcf9f-4b24-4961-88c8-0cd30201676a",
+        "message": "The drum loop played once. Change the [number](#clickable=repeat-block-field-workspace) in the loop so the sounds repeat for the length of the song. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          },
+          {
+            "name": "played_sound_id",
+            "value": "shakira_whenever_wherever/percussion_beat"
+          }
+        ],
+        "callout": "repeat-block-field-workspace"
+      },
+      {
+        "key": "music-coding-intro-loop-beat_7e9392ad-c3b4-4ebc-aade-bb450bf98f8a",
+        "message": "Choose a drum beat to repeat for the length of the song. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_id",
+            "value": "shakira_whenever_wherever/vocals_verse_1"
+          },
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          }
+        ],
+        "callout": "play-sound-block-workspace"
+      },
+      {
+        "key": "music-coding-intro-loop-beat_b9dac023-4530-4ed8-832e-d316cd6e491e",
+        "message": "Choose a drum beat to repeat for the length of the song. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_id",
+            "value": "shakira_whenever_wherever/vocals_verse_2"
+          },
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          }
+        ],
+        "callout": "play-sound-block-workspace"
+      },
+      {
+        "key": "music-coding-intro-loop-beat_7ff64e35-4d58-4848-a49f-80e4b3e80f6e",
+        "message": "Choose a drum beat to repeat for the length of the song. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_id",
+            "value": "shakira_whenever_wherever/vocals_verse_3"
+          },
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          }
+        ],
+        "callout": "play-sound-block-workspace"
+      }
+    ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-11-24 17:50:22 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:51:56 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:53:27 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:55:30 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 18:02:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-11-24 17:50:22 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:51:56 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:53:27 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:55:30 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 18:02:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 19:03:51 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 19:04:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 19:04:47 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 19:23:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 22:09:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 22:10:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 19:51:57 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-17 19:56:45 +0000\",\"changed\":[\"level_data\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-17 20:00:06 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-17 20:01:18 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-19 17:28:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

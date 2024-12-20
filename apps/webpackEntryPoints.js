@@ -222,8 +222,6 @@ const PEGASUS_ENTRIES = {
   'code.org/views/tabs_section': './src/sites/code.org/pages/views/tabs_section.js',
   'code.org/views/classy_embed_form': './src/sites/code.org/pages/views/classy_embed_form.js',
   'code.org/public/poetry': './src/sites/code.org/pages/public/poetry.js',
-  'code.org/public/teach': './src/sites/code.org/pages/public/teach.js',
-  'code.org/public/students': './src/sites/code.org/pages/public/students.js',
   'code.org/public/cms-demo': './src/sites/code.org/pages/public/cms-demo.js',
   'code.org/public/embeddable_census_map': './src/sites/code.org/pages/public/embeddable_census_map.js',
 

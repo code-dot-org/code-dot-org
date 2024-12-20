@@ -29,6 +29,7 @@ export interface ChatMessage extends ChatEvent {
   chatMessageText: string;
   role: Role;
   status: ValueOf<typeof AiInteractionStatus>;
+  requestId?: number;
 }
 
 export interface ModelUpdate extends ChatEvent {

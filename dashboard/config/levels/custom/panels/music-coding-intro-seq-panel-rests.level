@@ -1,0 +1,40 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-12-17T16:01:26.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "Writing songs is all about getting the **sequence** and **timing** for each layer of sound just right.",
+        "imageUrl": "https://images.code.org/3ae6994c2f55419444db564af599b4ef-audio-record-studio-room-2023-11-27-04-58-32-utc.jpg",
+        "key": "music-intro-coding-seq-panel-bc024962-11c0-46a8-a581-1b95ac378e08",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "In music, **measures** are used as a way to keep track of time.\n\nThe sounds are timed based on how many measures they will play.",
+        "imageUrl": "https://images.code.org/db7684ad84de1056c8f5ff11f3c03c61-measures.jpg",
+        "key": "music-coding-intro-seq-panel-d41fd16c-480c-4da2-a69c-6eee3f56814f",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "Songwriters might need to include **rests** to line up sounds in the music.\n\nA rest in music is a short break where no sound is played. It's like a pause in the music.",
+        "imageUrl": "https://images.code.org/49bbe702588ef19463646f0360fde8d1-rest.jpg",
+        "key": "music-coding-intro-seq-panel-62188d64-289a-4399-a6bb-3ec3ac3ef864",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "Some sounds will be played **together**.\n\nOther sounds need to play in a **sequential** order. ",
+        "imageUrl": "",
+        "key": "music-coding-intro-seq-panel-rests-658f4077-7762-4a9b-be1e-f7f0a49e4cab",
+        "layout": "text-top-center"
+      }
+    ],
+    "offer_browser_tts": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-12-17T16:01:26.636+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-seq-panel\\\"\"],\"cloned_from\":\"music-coding-intro-seq-panel\"},{\"changed_at\":\"2024-12-17 16:03:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 16:13:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 16:16:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-19 17:20:12 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,0 +1,26 @@
+name 'self-paced-equity-U1L2-introduction'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Welcome!
+
+## Module 1, Lesson 2: Looking at Data
+
+<div style="display: flex; align-items: flex-start; gap: 20px; margin-top: 20px;">
+    <div style="width: 70%;">
+		<p style="line-height: 1.5; font-size: 18px;">In this lesson, you will:</p>
+        <ul style="margin-left: 20px; line-height: 1.6;">
+        <li style="line-height: 1.5;font-size: 16px;">Define and identify systemic barriers that limit access, diversity, and inclusion in CS education.</li>
+        <li style="line-height: 1.5;font-size: 16px;">Recognize disparities by race and gender in access, diversity, and inclusion in CS education nationally.</li>
+		<li style="line-height: 1.5;font-size: 16px;">Analyze access, diversity, and inclusion data from school and classroom to identify issues of inequities</li>
+        </ul>
+        <p style="font-size: 16px; color: black;">
+        <br>
+        <p style="line-height: 1.5; font-size: 18px;"><strong>Suggested time for this lesson:</strong> 30 minutes
+        </p>
+    </div>
+    
+    <img src="https://images.code.org/96cf2cf98452d96de0abf8ddf9f2783a-image-1733264279720.17.57 PM.png" alt="A teacher and a student look on to a laptop computer together, smiling." style="width: 30%; height: auto; border-radius: 10px;">
+</div>
+MARKDOWN

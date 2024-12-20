@@ -1,0 +1,26 @@
+name 'self-paced-equity-U1L3-close'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Great Job! 🎉
+
+<img src="https://images.code.org/98354235450da210a073ef3ca2d139fa-image-1733872113414.08.30 PM.png" alt="Three students show their laptops at the camera and smile." style="border-radius:40px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 20px 20px 20px 20px;">
+
+#### So far, you have:
+
+* #### Reflected on your own identity markers and how you view yourself.
+* #### Reflected on your educational experiences and how they inform your teaching practice today.
+
+## Up Next
+
+#### In the next module of this professional learning module, you will:
+
+* #### Use a common definition of inclusion and accessibility.
+* #### Recognize that all students can and should learn CS.
+* #### Describe the influence you have over culture and student success in a CS classroom.
+
+<br>
+
+#### Click continue to keep going!
+MARKDOWN

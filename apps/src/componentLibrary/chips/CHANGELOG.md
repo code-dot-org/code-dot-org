@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.0] (https://github.com/code-dot-org/code-dot-org/pull/62664)
+
+* updated `Chip` and `Chips` props to include error message displayed when response required
+
 ## [0.3.1](https://github.com/code-dot-org/code-dot-org/pull/62909)
 
 * updated color variables to use `primitiveColors.css`

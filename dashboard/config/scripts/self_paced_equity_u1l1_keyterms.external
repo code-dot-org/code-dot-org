@@ -6,15 +6,21 @@ markdown <<MARKDOWN
 # Defining Equity
 
 
-### Let's start by defining a few key terms relevant to equity in CS.
+#### Let's start by defining a few key terms relevant to equity in CS. We'll be referring to these terms throughout this course. You've likely considered these concepts within the broader scope of education, but we'll be focusing specifically on K-12 computer science.
 
-<div style="display: flex; align-items: left; border: solid .1px; border-radius: 20px 20px 20px 20px; padding: 15px 5px 10px 5px;">
-	<a href="code.org" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/b3228ff3b84aeb85ec00b47136800a8f-image-1731959884476.png" style="width: auto; height: 50px;" alt="A piece of paper with lines and a pencil."></a>
-	<div style="background-color: #FFFFFF; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 0%; margin-right: 0%; padding: 0px 10px 5px 10px;">
-		<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Activity Guide</b></p>
-	<p style="color: black; line-height: 1; margin-left: 10px; margin-right: 0px; font-size: 16px">These definitions are also in your Activity Guide on page <mark>XX.</mark></p>
-	</div>
+<div style="display: flex; align-items: left; border: 1px solid black; border-radius: 20px 20px 20px 20px; padding: 20px 10px 10px 10px; margin: 20px 0px 20px 0px">
+
+<a href="code.org" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/b3228ff3b84aeb85ec00b47136800a8f-image-1731959884476.png" style="width: auto; height: 50px;" alt="A piece of paper with lines and a pencil."></a>
+
+<div style="background-color: #FFFFFF;  border-radius: 20px 20px 20px 20px; color: #000000; width: 90%; margin-left: 0%; margin-right: 0%; padding: 5px 5px 0px 5px;">
+
+<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Activity Guide <mark>(update icon link)</mark></b></p>
+<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 0px; font-size: 18px">These definitions are also in your Activity Guide on page <mark>2.</mark> Click the icon to the left to access this resource.
+</p>
+
 </div>
+</div>
+
 
 ## Key Terms
 
@@ -31,8 +37,9 @@ markdown <<MARKDOWN
 	<img src="https://images.code.org/dd51b2d288841f86773ca05520f6104c-image-1731961166553.png" style="width: auto; height: 100px;"  alt="An illuminated light bulb with a brain inside of it.">
 	<div style="background-color: #B8E0E5; border-radius: 20px 20px 20px 20px; color: #000000; width: 90%; margin-left: 5%; padding: 10px 10px 5px 10px;">
 		<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Extension Activity</b></p>
-		<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 16px">Explore the Computer Science Teacher Association's <a href="https://csteachers.org/teacherstandards/interactive/" target="blank" rel="noopener noreferrer">K-12 CS Teacher Standards</a> that are mapped to Equity and Inclusion (Standard 2). While you read, consider the following:</p>
-        <ul style="color: black; line-height: 2; font-size: 16px; margin-left: 20px;">
+		<p style="color: black; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px">The above key terms are essential to know as a computer science teacher. To see how these concepts can be applied to a teaching context, explore the Computer Science Teacher Association's <a href="https://csteachers.org/teacherstandards/interactive/" target="blank" rel="noopener noreferrer">K-12 CS Teacher Standards</a> that are mapped to Equity and Inclusion (Standard 2). This will give you an idea of the sorts of skills we'll be developing in this course.</p>
+        <p style="color: black; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px">While you read, consider the following:</p>
+        <ul style="color: black; line-height: 2; font-size: 18px; margin-left: 20px;">
 <li>What aligns to your current classroom practice? </li>
 <li>Where do you need to learn more?</li></ul>
 	</div>
