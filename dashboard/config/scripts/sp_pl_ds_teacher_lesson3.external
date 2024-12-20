@@ -15,7 +15,7 @@ markdown <<MARKDOWN
 
 
 
-##
+
 
 <hr style="clear:both">
 
@@ -32,9 +32,8 @@ markdown <<MARKDOWN
 </p>
 </div>
 
-  <div style="clear: both;"></div>
+<div style="clear: both;"></div>
 
-<hr style="clear:both">
 
 <img src="https://images.code.org/afffe2a6888d8098395f88716b2b7a4b-image-1724090541798.png" alt="headshot of a teacher" style="float:right; height: 175px; clear: both; margin: 0 20px 20px 0;">
 
@@ -49,7 +48,7 @@ markdown <<MARKDOWN
 </p>
 </div>
 
-  <div style="clear: both;"></div>
+<div style="clear: both;"></div>
 
 
 ## Let's take a look at a scenario!

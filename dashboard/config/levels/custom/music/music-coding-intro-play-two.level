@@ -9,7 +9,7 @@
     "encrypted": "false",
     "background": "music-black",
     "instructions_important": "false",
-    "long_instructions": "###<i class=\"fa-duotone fa-solid fa-list-check\"></i> Build the sequence\r\n\r\n1. Drag two or more [play](#clickable=play-sound-block) blocks under [when run](#clickable=when-run-block).\r\n2. Choose two different sounds.\r\n2. Press [Run](#clickable=run-button).",
+    "long_instructions": "###<i class=\"fa-duotone fa-solid fa-list-check\"></i> Build a sequence\r\n\r\n1. Drag two or more [play](#clickable=play-sound-block) blocks under [when run](#clickable=when-run-block).\r\n2. Choose two different sounds.\r\n2. Press [Run](#clickable=run-button).",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -228,7 +228,7 @@
     "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-12-11T02:40:12.423+00:00\",\"changed\":[\"cloned from \\\"music-jam-sequence\\\"\"],\"cloned_from\":\"music-jam-sequence\"},{\"changed_at\":\"2024-12-11 02:41:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 18:04:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-17 18:05:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-12-11T02:40:12.423+00:00\",\"changed\":[\"cloned from \\\"music-jam-sequence\\\"\"],\"cloned_from\":\"music-jam-sequence\"},{\"changed_at\":\"2024-12-11 02:41:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 18:04:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-17 18:05:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-19 17:09:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

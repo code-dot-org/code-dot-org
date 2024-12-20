@@ -35,6 +35,6 @@
     ],
     "offer_browser_tts": "true"
   },
-  "audit_log": "[{\"changed_at\":\"2024-12-17T16:01:26.636+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-seq-panel\\\"\"],\"cloned_from\":\"music-coding-intro-seq-panel\"},{\"changed_at\":\"2024-12-17 16:03:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 16:13:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 16:16:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-12-17T16:01:26.636+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-seq-panel\\\"\"],\"cloned_from\":\"music-coding-intro-seq-panel\"},{\"changed_at\":\"2024-12-17 16:03:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 16:13:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 16:16:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-19 17:20:12 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

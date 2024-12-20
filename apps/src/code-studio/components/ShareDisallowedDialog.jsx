@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
@@ -30,16 +30,15 @@ class ShareDisallowedDialog extends Component {
           </div>
           <div style={styles.bottom}>
             <Button
-              __useDeprecatedTag
-              onClick={this.props.hideShareDialog}
               text={i18n.cancel()}
-              color={Button.ButtonColor.gray}
+              onClick={this.props.hideShareDialog}
+              type="secondary"
+              color={buttonColors.gray}
             />
             <Button
-              __useDeprecatedTag
+              useAsLink={true}
               href={`/users/sign_up?user_return_to=${location.pathname}`}
               text={i18n.createAccount()}
-              color={Button.ButtonColor.brandSecondaryDefault}
             />
           </div>
         </div>

@@ -19659,3 +19659,20 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        net-int:
+          lessons:
+            lesson-1:
+              name: AI Chat Bots
+            lesson-2:
+              name: Net Sims
+          lesson_groups:
+            lessonGroup-2:
+              display_name: AI Chat Levels
+            lessonGroup-3:
+              display_name: Net Sim Levels
+          name: net-int
+          title: Networks & Internet Playground
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

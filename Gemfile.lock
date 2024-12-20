@@ -609,13 +609,14 @@ GEM
       rack-protection
     omniauth-facebook (4.0.0)
       omniauth-oauth2 (~> 1.2)
-    omniauth-google-oauth2 (0.6.0)
+    omniauth-google-oauth2 (1.1.3)
       jwt (>= 2.0)
-      omniauth (>= 1.1.1)
-      omniauth-oauth2 (>= 1.5)
-    omniauth-oauth2 (1.7.3)
+      oauth2 (~> 2.0)
+      omniauth (~> 2.0)
+      omniauth-oauth2 (~> 1.8)
+    omniauth-oauth2 (1.8.0)
       oauth2 (>= 1.4, < 3)
-      omniauth (>= 1.9, < 3)
+      omniauth (~> 2.0)
     omniauth-rails_csrf_protection (1.0.2)
       actionpack (>= 4.2)
       omniauth (~> 2.0)
@@ -1043,7 +1044,7 @@ DEPENDENCIES
   oj (~> 3.10)
   omniauth-clever (~> 2.0.1)!
   omniauth-facebook (~> 4.0.0)
-  omniauth-google-oauth2 (~> 0.6.0)
+  omniauth-google-oauth2 (~> 1.1.3)
   omniauth-microsoft_v2_auth!
   omniauth-rails_csrf_protection (~> 1.0.2)
   open_uri_redirections

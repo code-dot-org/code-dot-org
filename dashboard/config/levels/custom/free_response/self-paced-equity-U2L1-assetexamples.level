@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-12-19T22:37:07.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Examples of Asset- and Deficit-Based Pedagogy",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "height": "200",
+    "long_instructions": "#### The following examples are computer-science specific examples. While you read, consider which strategies under *asset-based pedagogy* you're already using, and which ones you'd like to try first in your classroom.\r\n\r\n## Examples of Asset-Based Pedagogy\r\n\r\n* #### Maintain high expectations for all students while providing them with the tools they need to succeed.\r\n* #### Display student projects and contributions in your classroom.\r\n* #### Arrange the learning space to promote collaboration and hands-on activities.\r\n* #### <a href=\"https://www.nc2ml.org/wp-content/uploads/2024/01/Assigning-T_L.pdf\" target=\"blank\" rel=\"noopener noreferrer\">Assign competence</a> to students when you notice their contributions in class.\r\n\t* #### **Example**: \"_Let's take a look at how Alexis creatively solved this coding challenge using if-statements. He's thinking outside the box to solve a complex problem!_\"\r\n* #### Build a classroom culture where failure is seen as a learning process.\r\n\t* #### **Example**: _\"Alia had a bug in her code, and she worked hard to find and get rid of it. Listen to her explain the bug so we can all learn from how she fixed her mistake.\"_\r\n* ####Model a <a href=\"https://docs.google.com/document/d/1y0y94NsxP6kQGZyTcML3l5aR0Uiaqm9K1qQ7PVIVrCo/edit?usp=sharing\" target=\"blank\" rel=\"noopener noreferrer\">lead learner</a> mentality, and position students as experts alongside you.\r\n\t* #### **Example**: _\"Hmm, I'm not sure how to fix this problem myself. If we go line-by-line and check our code, I'm sure we can solve this problem together.\"_\r\n* #### Build a coding identity for all students to see themselves in computer science.\r\n\t* #### **Example**: _\"Good morning coders! I can't wait to see what kind of work you do today.\"_\r\n* #### Get to know your students personally to connect instruction to existing knowledge that students possess, then connect students to high-interest projects\r\n\r\n🔗 Curriculum Connection: \r\nHour of Code Tutorials: Music Lab, Dance Party, Hello World\r\nUnits of Code.org curricula:\r\nUnit 3 of CSD: Students customize a game based on their interests\r\nUnit 2 of Generative AI: Students create a chatbot that addresses a personally relevant issue or an issue in their community\r\n\r\n\r\n<div style=\"background-color: #F7F8FA; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;\"> <p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;\">\r\n\r\n#### **Asset-based pedagogy:** the belief that students possess unique life experiences and abilities which can be leveraged to foster effective and meaningful learning experiences \r\n</p></div>\r\n\r\n## Examples of Deficit-Based Pedagogy\r\n\r\n<div style=\"background-color: #F7F8FA; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;\"> <p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;\">\r\n\r\n#### **Deficit-based pedagogy:** the notion that students (particularly those of low income, racial/ethnic minority background) fail in school because such students and their families have internal defects (deficits) that thwart the learning process.\r\n</p></div>\r\n\r\n* #### Barring certain groups of students from engaging in computer science due to perceived “readiness” – (dis)ability, English learner (EL) status, etc.\r\n* #### Discouraging a student from taking CS because you may feel that they are too social or inclined toward humanities to enjoy computer science\r\n* #### Lowering expectations of success in computer science for certain groups of students (like female students)\r\n* #### Assuming a student with limited experience using technology is incapable of creating with computer science\r\n* #### Assuming students do not have a foundation for computer science concepts - many CS concepts connect to real-world events!\r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-12-19T22:37:07.770+00:00\",\"changed\":[\"cloned from \\\"self-paced-equity-U2L1-actionplan\\\"\"],\"cloned_from\":\"self-paced-equity-U2L1-actionplan\"},{\"changed_at\":\"2024-12-19 22:39:25 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-12-19 23:10:56 +0000\",\"changed\":[],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

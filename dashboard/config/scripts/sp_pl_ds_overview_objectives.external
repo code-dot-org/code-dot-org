@@ -3,41 +3,83 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Teaching Data Science
 
 
-#### Welcome! This professional learning module is designed to help you prepare to teach Code.org’s **Data Science** content.
+<!-- Banner Section -->
+<div style="position: relative; text-align: left; color: white; margin-top: 20px;">
+    <img src="https://images.code.org/a035808b2a48ce2f5885fe702272fbf2-image-1732312298159.51.29 PM.png" alt="Banner Background" style="width: 100%; border-radius: 10px;">
+    <div style="position: absolute; top: 50%; left: 35%; transform: translate(-50%, -50%); padding: 20px; width: 90%; max-width: 800px; border-radius: 10px; display: flex; align-items: center; gap: 20px; justify-content: center;">
+        <img src="https://images.code.org/830b0690e59be4fa5c2874ed9b88f365-image-1724077617808.png" alt="Banner Icon" style="width: 120px; height: auto; border-radius: 10px;">
+        <p style="color: white; line-height: 1; font-size: 32px; font-weight: bold; margin: 0;">Teaching Data Science</p>
+    </div>
+</div>
 
-<img src="https://images.code.org/830b0690e59be4fa5c2874ed9b88f365-image-1724077617808.png" alt="Image of AI bot and a model card" style="border-radius:0px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0px 0px 0px 0;">
+<!-- Welcome Section -->
+<div style="margin: 10px auto; width: 95%; max-width: 900px; font-family: Arial, sans-serif; line-height: 1.6; font-size: 14pt; color: #333;">
+    <h2>Welcome!</h2>
+    
+       <img src="https://images.code.org/47e212f6f6c3e22f16ad0ed154eb1947-image-1734623597426.png" 
+         alt="Students discussing work around computers" 
+         style="border-radius: 10px; float: right; margin-left: 20px; height: 200px;">
+    <p style = "font-size: 14pt">
+        This professional learning module is designed to help you prepare to teach Code.org’s 
+        <strong>Data Science</strong> content.
+    </p>
+   
+    <p style = "font-size: 14pt">
+        The Data Science content is designed for 9th - 12th grade students and consists of two units:
+    </p>
+  
+    <ul style="list-style-type: none; padding: 0;">
+        <li><p style = "font-size: 14pt"><b>Unit 1: Introduction to Data Science</b><p></li>
+        <li><p style = "font-size: 14pt"><b>Unit 2: Data Science with Python</b></p></li>
+    </ul>
+    <div style="clear:both;"></div>
+    <br>
+    <p style = "font-size: 14pt">
+        You can teach Data Science as a complete unit, or choose to teach only one of the parts, 
+        offering flexibility to meet your educational needs.
+    </p>
+</div>
 
-#### The Data Science content is designed for 9th - 12th grade students and consists of two units: 
-- #### ***Unit 1: Introduction to Data Science***
-- #### ***Unit 2: Data Science with Python***
+<!-- Goals Section -->
+<div style="margin: 20px auto; width: 90%; max-width: 900px; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+    <h2>In this module, you will:</h2>
+    <ul style="list-style-type: disc; padding-left: 20px; font-size: 14pt">
+        <li>Get an introduction to teaching Data Science</li>
+        <li>Define and explore foundational concepts of data science</li>
+        <li>Utilize Python and Pandas libraries to analyze, manipulate, and visualize data</li>
+        <li>Explore Data Science lessons</li>
+    </ul>
+</div>
 
-#### You can teach Data Science as a complete unit, or choose to teach only one of the parts, offering flexibility to meet your educational needs. 
+<!-- Time Estimate Section -->
+<div style="margin: 20px auto; width: 90%; max-width: 900px; font-size: 14pt;">
+    <h3><b>Suggested Total Time:</b></h3>
+    <p style = "font-size: 14pt">120 minutes</p>
+    <h3><b>Lesson One Suggested Time:</b></h3>
+    <p style = "font-size: 14pt">15 minutes</p>
+</div>
 
-## **In this module, you will:** 
-- #### Get an introduction to teaching Data Science
-- #### Define and explore foundational concepts of data science
-- #### Utilize Python and Pandas libraries to analyze, manipulate, and visualize data
-- #### Explore Data Science lessons
+<!-- Pre-Survey Section -->
+<div style="margin: 10px auto; width: 95%; max-width: 900px; text-align: center; font-size: 14pt;">
+    <h2>Take the Pre-Survey</h2>
+    <p style = "font-size: 14pt">
+        Code.org values and is responsive to feedback. Please fill out 
+        <a href="https://studio.code.org/form/linkhere" target="_blank" rel="noopener noreferrer">this short pre-survey</a> 
+        to tell us about who you are and how we can best support you.
+    </p>
+    <a class="btn btn-large btn-primary" 
+       href="https://studio.code.org/form/linkhere" 
+       target="_blank" rel="noopener noreferrer" 
+       style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; font-size: 14pt;">
+        Take the Pre-Survey
+    </a>
+</div>
 
-
-
-
-### **Suggested total time:** 90 minutes (still working on this)
-
-### **Lesson one suggested time:** 15 minutes
-
-## Take the pre-survey
-
-#### Code.org values and is responsive to feedback. Please fill out <a href="https://studio.code.org/form/linkhere" target="blank" rel="noopener noreferrer">this short pre-survey</a> to  tell us about who you are and how we can best support you.
-
-<a class="btn btn-large btn-primary" href="https://studio.code.org/form/linkhere" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
-
-## Let's get started!
-
-<div style="clear:both"/>
-
+<!-- Footer Section -->
+<div style="margin-top: 20px; text-align: center; font-size: 14pt;">
+    <h2>Let's Get Started!</h2>
+</div>
 
 MARKDOWN

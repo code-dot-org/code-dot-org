@@ -1,4 +1,5 @@
 @no_mobile
+@chrome
 Feature: Global Edition - Region Switch Confirm Modal
 
   Background:
