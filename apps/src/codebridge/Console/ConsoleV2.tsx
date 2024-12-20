@@ -28,6 +28,7 @@ const ConsoleV2: React.FunctionComponent = () => {
 
   // Clear console when we change levels. Don't send an analytics event
   // as the user did not initiate this action.
+  // TODO: Add analytics
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => clearOutput());
 
   const onData = (data: string) => {
