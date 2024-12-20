@@ -71,12 +71,18 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
    * super.createTextArrow_() after the early return.
    *  @override */
   createTextArrow_() {
+    /**
+     * Begin CDO customization
+     */
     if (
       Blockly.disableVariableEditing ||
       !this.getSourceBlock()?.isEditable()
     ) {
       return;
     }
+    /**
+     * End CDO customization
+     */
 
     const arrow = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.TSPAN,

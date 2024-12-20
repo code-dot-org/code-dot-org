@@ -158,9 +158,15 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * super.createTextArrow_() after the early return.
    *  @override */
   createTextArrow_() {
+    /**
+     * Begin CDO customization
+     */
     if (!this.getSourceBlock()?.isEditable()) {
       return;
     }
+    /**
+     * End CDO customization
+     */
 
     // Once we are on v11, we should be able to use the parent class method
     // for everything below this point.
