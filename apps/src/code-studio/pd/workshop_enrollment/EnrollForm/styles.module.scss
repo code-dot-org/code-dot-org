@@ -1,0 +1,56 @@
+@import '@cdo/apps/componentLibrary/common/styles/colors.css';
+
+#enroll_form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  gap: 1.125rem;
+  margin: 1rem 0 10rem;
+
+  .required > span::after,
+  .school_info_required label > span::after {
+    content: '*';
+    color: var(--text-error-primary);
+    margin-left: 0.2em;
+    font-size: inherit;
+  }
+
+  .no_margin {
+    margin: 0;
+  }
+
+  .school_info_container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  .table {
+    label {
+      justify-content: center;
+    }
+  }
+
+  textarea,
+  fieldset,
+  input:not([type='checkbox']),
+  label,
+  label > div {
+    width: 100%;
+  }
+
+  textarea {
+    height: 6rem;
+    margin-bottom: 0;
+    border-radius: 0.25rem;
+    border: 1px solid;
+    box-sizing: border-box;
+    resize: vertical;
+
+    &:focus-visible {
+      outline: 2px solid var(--borders-brand-teal-primary);
+      outline-offset: 2px;
+      box-shadow: none;
+    }
+  }
+}

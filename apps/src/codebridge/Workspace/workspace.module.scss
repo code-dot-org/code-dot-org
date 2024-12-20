@@ -47,9 +47,9 @@
   grid-template-columns: 156px auto;
 }
 
-.workspaceAndConsole {
+.workspaceAndOutput {
   height: 100%;
-  grid-area: workspace-and-console;
+  grid-area: workspace-and-output;
   background-color: $light_black;
   color: $white;
   overflow: hidden;

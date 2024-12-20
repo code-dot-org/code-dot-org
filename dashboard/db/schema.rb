@@ -78,6 +78,8 @@ ActiveRecord::Schema.define(version: 2024_12_16_152219) do
     t.json "aichat_event"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "request_id"
+    t.index ["request_id"], name: "index_aichat_events_on_request_id"
     t.index ["user_id", "level_id", "script_id"], name: "index_ace_user_level_script"
   end
 
@@ -2509,6 +2511,7 @@ ActiveRecord::Schema.define(version: 2024_12_16_152219) do
 
   add_foreign_key "ai_tutor_interaction_feedbacks", "ai_tutor_interactions"
   add_foreign_key "ai_tutor_interaction_feedbacks", "users"
+  add_foreign_key "aichat_events", "aichat_requests", column: "request_id"
   add_foreign_key "cap_user_events", "users"
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"

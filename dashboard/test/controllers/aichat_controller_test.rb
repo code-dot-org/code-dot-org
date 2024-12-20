@@ -22,6 +22,7 @@ class AichatControllerTest < ActionController::TestCase
     @student1_aichat_event2 = create(:aichat_event, user_id: @authorized_student1.id, level_id: @level.id, script_id: @script.id, aichat_event: valid_student1_chat_message2.to_json)
     @teacher1_aichat_event = create(:aichat_event, user_id: @authorized_teacher1.id, level_id: @level.id, script_id: @script.id, aichat_event: valid_teacher1_chat_message.to_json)
     @student2_aichat_event = create(:aichat_event, user_id: @authorized_student2.id, level_id: @level.id, script_id: @script.id, aichat_event: valid_student2_chat_message.to_json)
+    @student1_aichat_request = create(:aichat_request, user_id: @authorized_student1.id, model_customizations: @default_model_customizations.to_json, stored_messages: [].to_json, new_message: valid_student1_chat_message1.to_json, execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS])
     @default_model_customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"}.stringify_keys
     @default_aichat_context = {
       currentLevelId: @level.id,
@@ -176,6 +177,22 @@ class AichatControllerTest < ActionController::TestCase
     aichat_event_row = AichatEvent.find(json_response['chat_event_id'])
     stored_aichat_event = JSON.parse(aichat_event_row.aichat_event)
     assert_equal stored_aichat_event['timestamp'], @valid_params_log_chat_event[:newChatEvent][:timestamp]
+  end
+
+  test 'log_chat_event logs requestId successfully to AichatEvents table' do
+    sign_in(@authorized_student1)
+
+    # need a valid requestId for foreign key constraint
+    request_id = @student1_aichat_request.id
+    params = @valid_params_log_chat_event.merge(newChatEvent: @valid_params_log_chat_event[:newChatEvent].merge(requestId: request_id))
+
+    post :log_chat_event, params: params, as: :json
+
+    assert_response :success
+    assert_equal json_response.keys, ['chat_event_id', 'chat_event']
+    aichat_event_row = AichatEvent.find(json_response['chat_event_id'])
+    stored_aichat_event = JSON.parse(aichat_event_row.aichat_event)
+    assert_equal request_id, stored_aichat_event['requestId']
   end
 
   test 'Bad request if required params are not included for student_chat_history' do

@@ -782,6 +782,14 @@ class Level < ApplicationRecord
     end
   end
 
+  def localized_properties
+    return properties unless should_localize?
+
+    properties.each_with_object({}) do |(key, value), i18n|
+      i18n[key] = try(:localized_property, key) || get_localized_property(key) || value
+    end
+  end
+
   # There's a bit of trickery here. We consider a level to be
   # hint_prompt_enabled for the sake of the level editing experience if any of
   # the scripts associated with the level are hint_prompt_enabled.

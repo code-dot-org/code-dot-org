@@ -590,6 +590,17 @@ html, body {
       @include main-font-semi-bold;
     }
   }
+  #localeForm {
+    max-width: fit-content;
+
+    select {
+      min-width: 8.43rem;
+    }
+  }
+  #global-edition-region-reset-button-container {
+    width: max-content;
+    margin: 0.5rem 0;
+  }
   .dim {
     display: inline-block;
     opacity: 0.8;

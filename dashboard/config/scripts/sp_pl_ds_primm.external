@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # The PRIMM Method
 
-####  The **PRIMM** method is a structured approach to teaching and learning programming. It is well-researched pedagogical strategy to getting students to understand code. 
+####  The **PRIMM** method is a well-researched, structured approach to teaching programming that helps students effectively understand and engage with code.
 
 #### It stands for Predict, Run, Investigate, Modify, and Make. As you work through the lessons, you will notice that they follow a modified version of this approach.
 
@@ -13,7 +13,7 @@ markdown <<MARKDOWN
 ## Here is a breakdown of each step: 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🤔Predict</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🤔 Predict</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p style="font-size:14pt;">
 Before running any code, students are encouraged to predict what the code will do. This helps them engage with the logic and structure of the code, fostering a deeper understanding of how it works. 
@@ -30,7 +30,7 @@ In this step, students run the code to see if their predictions were correct. Th
 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎Investigate </summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Investigate </summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 
    <p style="font-size:14pt;">
@@ -40,7 +40,7 @@ After running the code, students explore why it behaves as it does by examining 
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🧩Modify </summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🧩 Modify </summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p style="font-size:14pt;">
 Students change the existing code by altering variables, adding functionality, or fixing errors. This helps them apply their understanding and experiment, reinforcing learning through practice.

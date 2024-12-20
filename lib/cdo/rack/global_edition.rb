@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'active_support/all'
+require 'omniauth'
 require 'request_store'
 
 require 'cdo/global_edition'
@@ -15,18 +16,26 @@ module Rack
     class RouteHandler
       include Middleware::Helpers::Cookies
 
-      ROOT_PATH = '/global'
       # @example Matches paths like `/global/fa/home`, capturing:
       # - ge_prefix: "/global/fa"
       # - ge_region: "fa"
       # - main_path: "/home"
       PATH_PATTERN = Regexp.new <<~REGEXP.remove(/\s+/)
         ^(?<ge_prefix>
-          #{ROOT_PATH}/
+          #{Cdo::GlobalEdition::ROOT_PATH}/
           (?<ge_region>#{Cdo::GlobalEdition::REGIONS.join('|')})
         )
         (?<main_path>/.*|$)
       REGEXP
+
+      # HTTP paths that to be excluded from Global Edition scope.
+      EXCLUDED_PATHS = [
+        # To make an OAuth callback accessible, it must be added to the whitelist of each SSO provider.
+        # Instead of repeating this process for each new Global Edition region,
+        # it is more efficient to remove the Global Edition prefix and treat the request as a standard route.
+        # Additionally, preventing OAuth routes from being redirected, ensuring the authentication process is not disrupted.
+        ::OmniAuth.config.path_prefix, # e.g. `/users/auth`
+      ].compact.freeze
 
       attr_reader :app, :env
 
@@ -40,18 +49,15 @@ module Rack
         if request.params.key?(REGION_KEY)
           new_region = request.params[REGION_KEY].presence
 
-          unless new_region == request.cookies[REGION_KEY]
-            redirect_path = ::File.join('/', request_path_vars(:main_path).first || request.path)
-            redirect_path = regional_path_for(new_region, redirect_path) if Cdo::GlobalEdition.region_available?(new_region)
+          redirect_path = ::File.join('/', request_path_vars(:main_path).first || request.path)
+          redirect_path = regional_path_for(new_region, redirect_path) if Cdo::GlobalEdition.region_available?(new_region)
 
-            redirect_uri = URI(redirect_path)
-            redirect_uri.query = URI.encode_www_form(request.params.except(REGION_KEY)).presence
-            redirect_path = redirect_uri.to_s
-
-            setup_redirect_to(redirect_path)
-          end
+          redirect_uri = URI(redirect_path)
+          redirect_uri.query = URI.encode_www_form(request.params.except(REGION_KEY)).presence
+          redirect_path = redirect_uri.to_s
 
           setup_region(new_region)
+          setup_redirect_to(redirect_path)
         elsif PATH_PATTERN.match?(request.path_info)
           ge_prefix, ge_region, main_path = request_path_vars(:ge_prefix, :ge_region, :main_path)
 
@@ -61,7 +67,7 @@ module Rack
             # - `request.script_name` strips the prefix from the request path
             #   so the application processes requests as if it were running at the root level.
             # - `request.path_info` provides the specific path that should be handled by the application.
-            request.script_name = ::File.join(ge_prefix, request.script_name).chomp('/')
+            request.script_name = ::File.join(ge_prefix, request.script_name).chomp('/') unless excluded_path?(main_path)
             request.path_info = main_path
           end
 
@@ -86,7 +92,7 @@ module Rack
       # @note Once the `response` instance is initialized, any changes to the `request` made afterward will not be applied.
       private def response
         @response ||= begin
-          RequestStore.store[Cdo::GlobalEdition::REGION_KEY] = request.cookies[REGION_KEY]
+          RequestStore.store[Cdo::GlobalEdition::REGION_KEY] = request.cookies[REGION_KEY].presence
           Rack::Response[*app.call(env)]
         end
       end
@@ -109,12 +115,8 @@ module Rack
         set_locale_cookie(request.cookies[LOCALE_KEY].presence)
       end
 
-      private def dashboard?
-        request.hostname == CDO.dashboard_hostname
-      end
-
       private def dashboard_route?(path = request.path)
-        return false unless dashboard?
+        return false unless request.hostname == CDO.dashboard_hostname
         Dashboard::Application.routes.recognize_path(path, method: request.request_method).present?
       rescue ActionController::RoutingError
         false
@@ -128,12 +130,8 @@ module Rack
         end
       end
 
-      private def pegasus?
-        request.hostname == CDO.pegasus_hostname
-      end
-
       private def pegasus_route?(path = request.path)
-        return false unless pegasus?
+        return false unless request.hostname == CDO.pegasus_hostname
         path = URI(path).path
         pegasus_helpers.resolve_document(path).present? || pegasus_helpers.resolve_view_template(path).present?
       rescue StandardError
@@ -144,11 +142,9 @@ module Rack
         site_locale = request.cookies[LOCALE_KEY]
 
         if Cdo::GlobalEdition.region_available?(region)
-          # Only Pegasus pages are available in all regional languages.
-          site_locale = Cdo::GlobalEdition.region_locked_locales.key(region) unless pegasus?
-
-          region_locales = Cdo::GlobalEdition.region_locales(region)
-          site_locale = Cdo::GlobalEdition.main_region_locale(region) unless region_locales.include?(site_locale)
+          unless Cdo::GlobalEdition.locale_available?(region, site_locale)
+            site_locale = Cdo::GlobalEdition.main_region_locale(region)
+          end
         else
           # Locales locked to a specific region should not be set during a region reset.
           site_locale = nil if Cdo::GlobalEdition.region_locked_locales[site_locale]
@@ -157,12 +153,17 @@ module Rack
         site_locale
       end
 
+      private def excluded_path?(path)
+        EXCLUDED_PATHS.any? {|excluded_path| path.match?(excluded_path)}
+      end
+
       # Determines if the request is eligible for redirection.
       # To improve efficiency, the redirection should only affect the browser's address bar,
       # avoiding redirection for non-visible to user requests such as AJAX, non-GET, or asset requests.
       private def redirectable?(redirect_path)
         return false unless request.get? # only GET request can be redirected
         return false if request.xhr? # only non-AJAX requests should be redirected
+        return false if excluded_path?(request.path)
 
         # Unlike in Dashboard, where any route can be dynamically changed to a regional version,
         # Pegasus requires an existing regional template.
@@ -170,10 +171,10 @@ module Rack
       end
 
       private def regional_path_for(region, main_path)
-        redirect_path = ::File.join(ROOT_PATH, region, main_path)
+        redirect_path = Cdo::GlobalEdition.path(region, main_path)
 
         # Pegasus requires a predefined template for each path, unlike Dashboard, which manages paths dynamically.
-        redirect_path = ::File.join(ROOT_PATH, region) if pegasus_route?(main_path) && !pegasus_route?(redirect_path)
+        redirect_path = Cdo::GlobalEdition.path(region) if pegasus_route?(main_path) && !pegasus_route?(redirect_path)
 
         redirect_path
       end

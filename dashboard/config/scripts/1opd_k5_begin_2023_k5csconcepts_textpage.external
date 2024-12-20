@@ -1,0 +1,27 @@
+name '1OPD-K5 Begin_2023_K5CSConcepts_TextPage'
+skip_dialog true
+markdown <<MARKDOWN
+# Introducing The Basics
+<IMG SRC="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXJvd25rcnZqa2Q1aGVqeGFqMTB6aGdlNGkwNmtyc2ZsZHUyNWd3byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fyaVEgUF9g8xYLRNau/giphy.gif">.
+
+## What is code?
+
+####**Code** is a set of instructions written in a language that computers can understand to perform specific tasks. It’s how people communicate with computers to create websites, apps, games, and more. Coding helps students develop problem-solving, logical thinking, and creativity.
+
+
+## What is text-based code?
+#### **Text-based code** uses written programming languages, like Python or JavaScript, where coders type commands in text form. It’s precise and offers more flexibility, making it ideal for advanced projects. It helps students understand the structure and syntax of real-world programming languages.
+
+## What is Block-Based Programming? 
+
+####**Block-based code** is like building with digital blocks! Block-based code simplifies coding for early learners through a visual, **drag-and-drop** interface, eliminating the need for writing exact words or symbols. 
+
+## Why Use Block-Based Programming?
+#### Block-based programming is great for beginners, making coding fun and easy with drag-and-drop methods. It's a good start for learning basic programming concepts, helping to **smoothly transition** to more advanced, text-based coding later.
+
+
+
+##Let’s get started. 
+
+
+MARKDOWN

@@ -496,6 +496,9 @@ const EVENTS = {
   // Lab2
   SKIP_TO_PROJECT: 'User Skipped To Project From Tutorial Level',
 
+  // Global Edition - Region Reset Button
+  GLOBAL_EDITION_REGION_RESET_BUTTON_CLICKED:
+    'Global Edition Return to Full Site Clicked',
   // Global Edition - Region Switch Confirm events
   GLOBAL_EDITION_REGION_SWITCH_CONFIRM_SHOWN:
     'Global Edition Region Switch Confirm Shown',

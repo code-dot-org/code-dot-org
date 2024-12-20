@@ -17,8 +17,16 @@ markdown <<MARKDOWN
 
 #### This method supports incremental learning, builds confidence, and mirrors real-world programming practices, making it an effective pedagogical strategy for teaching computer science.
 
-##Use-Modify-Create in Game Design Module 
-####In the game design module, students begin by <b>using</b> four pre-created games.Then, they will practice coding with variables by <b>modifying</b> and building on existing code.To complete this lesson, students will have an opportunity to use what they learned to practice and free-play to <b>create</b> a game. 
+##Use-Modify-Create in Code.org Curriculum
+#### The Use-Modify-Create framework provides a practical approach for teaching computer science on Code.org, helping students gradually build their skills and confidence with coding. Here’s how it works:
+
+#### Use: In the initial phase, students explore pre-written code provided by the teacher or Code.org lessons. They observe how the code functions, engaging in whole-class discussions and activities to develop a foundational understanding.
+
+#### Modify: Once students are comfortable, they begin making small changes to the code. This phase encourages experimentation and helps them see the impact of their modifications, fostering a deeper understanding of programming concepts.
+
+#### Create: Finally, students apply what they’ve learned to design their own projects. This stage is student-driven, as they use their knowledge to solve problems, meet specific goals, or create something entirely new. Teachers take on a supportive role, guiding students as needed.
+
+This framework gives teachers flexibility to customize lessons and projects to align with specific educational outcomes or class needs. Code.org’s open-ended projects, such as the CS Connections projects, are perfect for this approach. Teachers can adapt these resources to fit their goals, while students move from passive learners to confident creators of their own code.
 
 ##Let’s get started!
 

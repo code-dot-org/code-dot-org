@@ -1,0 +1,47 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-12-04T20:57:34.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Testing This Level Type\r\n\r\nThis chatbot is meant to help you plan your training for any sort of running race - track, cross-country, road, or trail\r\n\r\n::: details [**Prompts to Try on This Level**]\r\n- Give me advice about training for a road race\r\n- Help me plan a workout to help develop my V02 Max\r\n:::",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+          "Dr Jack Daniels is an exercise physiologist and running coach who has coached numerous Olympic athletes and has been named the Worlds Best Coach by Runner’s World magazine. As well as being a two time Olympic medalist in his own right in both 1956 in Melbourne and 1960 in Rome.\n\nJack Daniel uses five pace or Heart Rate (HR) zones being the equivalent of each other:\n\n% VO2max Pace\t% max HR\tDescription\nE (easy) / L (long)\t59 – 74%\t65 – 79%\tBuilds resistance to injury, strengthens the heart muscle, improves delivery of blood, promotes some useful characteristics of the muscle fibres.\nM (marathon pace)\t75 – 84%\t80 – 90%\tAdjust to a specific marathon pace, physiological benefits not too dissimilar to L.\nT (threshold pace)\t83 – 88%\t88 – 92%\tComfortably hard. Allows the body to improve its ability to clear blood lactate.\nI (interval pace)\t95 – 100%\t98 – 100%\tMaximising VO2max.\nR (repetition pace)\t> 100%\tn/a\tTo improve anaerobic power, speed and economy of running.\nEasy Running (E) / Long Running (L)\nThere are several benefits to running at this lower intensity. One of the key advantages is that you build up a certain degree of resistance to injury. At this intensity you build a base of fitness.\n\nAt this easy effort heart muscle gets developed because this is when it needs to beat with most force. As your effort goes up there is less time between beats for the heart chamber to fill with blood, because there is less blood to pump the contraction doesn’t need to be so forceful compared to lower intensities where there is more blood in the heart chambers to pump.\n\nAnother benefit at this intensity is that there is an increase in vascularisation – an increase in the amount of capillaries. Capillaries are the smallest blood vessels through which oxygen diffuses directly into the working muscles. Running at this lower intensity generates the changes in the muscle fibres that allows the muscles to accept more oxygen and convert more fuel into energy in a given period of time.\n\nJack Daniels’ prescribes Easy (E) and Long (L) runs at the same intensity, the difference being the duration or distance of a Long (L) run. What is a Long (L) run for one athlete might be an Easy (E) run for a more accomplished runner.\n\nUnless training for an ultra-marathon event Jack Daniels does not recommend Running longer than 2:30hrs due to the amount of recovery time required after a run of longer duration.\n\nMarathon- Pace (M) Running\nAs the name implies, Marathon-Pace (M) running is training at your projected marathon race pace.\n\nThe purpose of training at this pace is is to develop the mental confidence at race pace. You are encouraged to practice drinking, simulating a race.\n\nPhysiologically there is not much difference to training stimuli occurring within the body compared to Easy (E) or Long (L) paced running. These sessions burn through a bit more fuel in the form of carbohydrate than an Easy (E) run of the same duration. This will help to teach the body to conserve stored muscle glycogen and rely a little more on fat metabolism.\n\nFor athletes not running a marathon, this pace can develop the confidence that they can handle a fairly prolonged run at something a little faster than Easy (E) paced runs.\n\nAtt his pace Jack Daniels does not recommend running at this pace longer than 1:50hr in a given session (assuming there is no running at Threshold (T) pace within the workout), and that the total time of running at Marathon-Pace (M) each week is is less than 20% of weekly mileage.\n\nThreshold (T) Training\nA run at Threshold (T) pace is comfortably hard. However the pace is still manageable for a fairly long time (certainly 20 to 30 minutes). When peaked and rested, you will be able to maintain this pace for about an hour. This is the pace for elite runners running a half marathon, or more recreational runners running a 10km.\n\nThe paced runs allow your body to improve it’s ability to remove blood lactate, keeping it below a manageable level.\n\nThreshold (T) runs teach your body to deal with a slightly more demanding pace (compared to Easy (E) or Marathon (M) paced runs) for a prolonged period of time. They improve the speed you can keep up for a relatively long period of time.\n\nJack Daniels recommends two different variations of Threshold (T) runs. he refers to them as Tempo* or Cruise Intervals.\n\nTempo Runs: are steady run at Threshold (T) pace lasting about 20 minutes in duration. These are better a building confidence that you can maintain a higher pace for a longer period of time.\nCruise Intervals: are a series of repetitions run at Threshold (T) pace with a short rest break between the reps. These allow you to get a longer duration of time accumulated at Threshold (T) pace.\nJack Daniels recommends that a workout does not include more than 10% of the weekly mileage at Threshold (T) pace. However for any runner who can handle 20-minutes at Threshold (T) pace, then a minimum of 30-minutes at Threshold (T) pace can be done as cruise intervals.\n\n* Be aware that the term Tempo can mean different things to different athletes or coaches. This is how Jack Daniels uses the term.\n\nInterval (I) Training\nJack Daniels’ describes Interval (I) training with a focus on intensity (and avoiding the obvious fact that the run is broken into various intervals). The purpose of Interval (I) paced running is to maximise aerobic power (V02 max) and maximum Heart Rate (HR). The best way to improve any bodily function is to stress it. For his definition of Interval (I) pace running the intensity needs to be at or very close to V02 max and the work to rest ratio needs to optimise that purpose.\n\nStudies have shown that people can tolerate about 11-minutes at V02 max. Clearly it won’t be a fun workout to go run at V02 max for 11 minutes!!! Also, from complete recovery it also takes between 90 to 120 seconds to build up to a pace that elicits V02 max. For these reasons Jack Daniels’ recommends intervals are between three and five minutes in duration.\n\nBy not allowing too long of a recovery between runs V02 will not have recovered completely and the next bout of hard running will reach max in a shorter period of time. This i an important consideration when using intervals shorter than 2 or 3 minutes.\n\nJack Daniels recommends that a workout does not include more than 8% of the weekly mileage at Interval (I) pace.\n\nRepetition (R) Training\nInterval (I) training was to improve aerobic power, the purpose of Repetition (R) training is to improve anaerobic power, speed and economy.\n\nIt isn’t rocket science, but if you want to improve your speed, you have to practice running fairly fast. In order to run fairly fast you have to be recovered well enough to actually run fast and with good technique. To ensure this happens, the Rest Interval (RI) should be two to three times the duration (not distance) of the repetition. Alternatively you can jog the same distance as the repetition.\n\nNo more than 5% of your weekly mileage should be done at Repetition (R) pace during any given workout. The duration of any Repetition (R) paced bout of running should not exceed 2 minutes."
+        ],
+        "modelCardInfo": {
+          "botName": "Running Training Bot",
+          "description": "This chatbot is meant to help you plan training and workouts for any sort of running race.",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "readonly",
+        "temperature": "hidden",
+        "systemPrompt": "editable",
+        "retrievalContexts": "readonly",
+        "modelCardInfo": "editable"
+      },
+      "levelSystemPrompt": "Help provide guidance on training related to running. If the user prompts about something else, respond with \"I'm not meant to help with that topic.\"",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2024-12-04 20:57:40 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Aichat>

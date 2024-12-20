@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {connect, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -8,6 +8,7 @@ import {
   selectAtRiskAgeGatedDate,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {RootState} from '@cdo/apps/types/redux';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import Notification, {
@@ -16,11 +17,6 @@ import Notification, {
 
 import AgeGatedStudentsModal from './AgeGatedStudentsModal';
 
-interface ReduxState {
-  manageStudents: {
-    studentData?: object;
-  };
-}
 interface Props {
   toggleModal: () => void;
   modalOpen: boolean;
@@ -47,7 +43,12 @@ export const AgeGatedStudentsBanner: React.FC<Props> = ({
     });
   }, [currentUser.userId, ageGatedStudentsCount, ageGatedStudentsUsState]);
 
-  const startDate = new Date('2025/01/01');
+  const startDate = useAppSelector(state =>
+    selectAtRiskAgeGatedDate(
+      convertStudentDataToArray(state.manageStudents?.studentData)
+    )
+  );
+
   const dateOptions: Intl.DateTimeFormatOptions = {
     year: 'numeric',
     month: '2-digit',
@@ -80,8 +81,5 @@ export const AgeGatedStudentsBanner: React.FC<Props> = ({
     </div>
   );
 };
-export default connect((state: ReduxState) => ({
-  atRiskAgeGatedDate: selectAtRiskAgeGatedDate(
-    convertStudentDataToArray(state.manageStudents)
-  ),
-}))(AgeGatedStudentsModal);
+
+export default AgeGatedStudentsModal;

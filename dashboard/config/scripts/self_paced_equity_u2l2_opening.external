@@ -1,0 +1,86 @@
+name 'self-paced-equity-U2L2-opening'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Course Details
+
+## Who should take this course?
+
+#### In short, anyone who wants to take this course should! We think this will be a valuable learning experience for anyone looking to grow their skills in K-12 computer science education.
+
+#### That said, there are a few audiences that we had in mind when creating this professional learning experience:
+
+<div style="margin-top: 20px; background-color: rgba(0, 119, 134, .2); border-radius:10px; padding: 20px 20px 10px 20px">
+<div style="display: flex; align-items: center; margin-bottom: 20px; background-color: transparent;">
+	<img src="https://images.code.org/727ed9a8ffd8dc0629063f0765a1c4cd-image-1732325087776.24.42 PM.png" alt="A teacher crosses their arms and smiles at the camera." style="width: 80px; height: 80px; border-radius: 50%; margin-right: 20px;">
+    <p style="font-size: 18px; line-height: 1.5;">I am a <b>new-to-computer science teacher</b> looking to learn instructional practices that are CS-specific and join a community of educators interested in improving belonging, inclusion, and representation of students in CS classrooms.
+	</p>
+</div>
+
+<div style="display: flex; align-items: center; margin-bottom: 20px; background-color: transparent;">
+	<img src="https://images.code.org/618d413476692f58b5b4dacf834672fb-image-1732325518952.31.41 PM.png" alt="A teacher smiles at the camera." style="width:80px; height: 80px; border-radius: 50%; margin-right: 20px;">
+    <p style="font-size: 18px; line-height: 1.5;">I am a <b>veteran computer science teacher</b> looking to extend my practice and join an online community of educators interested in improving belonging, inclusion and representation of students in CS classrooms.
+	</p>
+</div>
+
+<div style="display: flex; align-items: center; margin-bottom: 20px; background-color: transparent;">
+	<img src="https://images.code.org/1c2d93d804416e25b5b9760889c267bb-image-1732325518954.31.24 PM.png" alt="An administrator smiles at the camera." style="width: 80px; height: 80px; border-radius: 50%; margin-right: 20px;">
+    <p style="font-size: 18px; line-height: 1.5;">I am a <b>school- or district-level leader</b> looking to find resources and activities for professional learning communities of educators.
+	</p>
+</div>
+</div>
+
+## Through-Course Features
+
+#### This course has several features are woven throughout. Engage with the ones that are relevant to you and your learning.
+
+### Look for the following icons to signal each feature:
+
+<div style="margin-top: 20px; border-radius:10px; padding: 20px 20px 10px 20px">
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background-color: transparent;">
+	<div style="width: 90%;">
+		<p style="font-size: 18px; line-height: 1.5;">
+		<strong>Code.org Forum</strong> - Provides a discussion board to post ideas and learn from other educators. Engagement in the forum is optional, but highly encouraged!
+		</p>
+	</div>
+	<img src="https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png" alt="Code.org Forum Icon" style="width: 7%;">
+</div>
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background-color: transparent;">
+	<div style="width: 90%;">
+	<p style="font-size: 18px; line-height: 1.5;">
+    <strong><a href="code.org" target="blank" rel="noopener noreferrer"><mark>Activity Guide</mark></a></strong> - A central document with digital or physical versions of activities in this course. The Activity Guide provides an artifact of learning by the end of the course. 
+	</p>
+	</div>
+	<img src="https://images.code.org/b3228ff3b84aeb85ec00b47136800a8f-image-1731959884476.png" alt="Activity Guide Icon" style="width: 7%;">
+</div>
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background-color: transparent;">
+	<div style="width: 90%;">
+		<p style="font-size: 18px; line-height: 1.5;">
+			<strong>Extension Activities</strong> - Provide reflections or activities for interested newbies or teachers who are experienced in equity to extend their learning.
+		</p>
+	</div>
+	<img src="https://images.code.org/dd51b2d288841f86773ca05520f6104c-image-1731961166553.png" alt="Extension Activities Icon" style="width: 7%;">
+</div>
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background-color: transparent;">
+	<div style="width: 90%;">
+		<p style="font-size: 18px; line-height: 1.5;">
+			<strong>Resource Suggestions</strong> - These are key resources that participants can optionally research on their own to further guide their equity journey.
+		</p>
+	</div>
+	<img src="https://images.code.org/08d8da1158d67fd1ed7535c90b2b91bc-image-1731961007471.png" alt="Resource Suggestions Icon" style="width: 7%;">
+</div>
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background-color: transparent;">
+	<div style="width: 90%;">
+		<p style="font-size: 18px; line-height: 1.5;">
+			<strong>Curriculum Connection</strong> - When applicable, we will make a link to Code.org's curriculum to highlight equitable practices in CS.
+		</p>
+	</div>
+	<img src="https://images.code.org/86fb480e433c7feca6d9e6df4a73a062-image-1731961341605.png" alt="Curriculum Connection Icon" style="width: 7%;">
+</div>
+</div>
+MARKDOWN

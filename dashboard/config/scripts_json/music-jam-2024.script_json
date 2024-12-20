@@ -39,7 +39,7 @@
     },
     "new_name": null,
     "family_name": "music-jam",
-    "serialized_at": "2024-11-25 21:50:04 UTC",
+    "serialized_at": "2024-12-11 04:49:58 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -264,7 +264,7 @@
       "key": "16e21d7e-940f-41a3-a655-77d826b68d89",
       "position": 1,
       "properties": {
-        "description": "Celebrate the students' accomplishments! At the end of the activity, students will have a number of extension opportunities. They can:\n- Share their creation with their friends and family.\n- Keep playing to reflect on what they've learned and practice additional skills.\n- Further explore career paths in music and technology with Amazon Music through a [free virtual field trip](https://www.amazonfutureengineer.com/careertours/careervideos). \n- Receive a [certificate](http://code.org/certificates) for completing the Hour of Code.\n"
+        "description": "Celebrate the students' accomplishments! At the end of the activity, students will have a number of extension opportunities. They can:\n- Share their creation with their friends and family.\n- Keep playing to reflect on what they've learned and practice additional skills.\n- Further explore career paths in music and technology with Amazon Music through a [free virtual field trip](https://www.amazonfutureengineer.com/music?utm_campaign=Code.org&utm_medium=Musiclab&utm_source=US&utm_content=Career%20Tours&utm_term=2024). \n- Receive a [certificate](http://code.org/certificates) for completing the Hour of Code.\n"
       },
       "seeding_key": {
         "activity_section.key": "16e21d7e-940f-41a3-a655-77d826b68d89",
@@ -917,6 +917,17 @@
       "seeding_key": {
         "resource.key": "amazon_music_careers_behind_the_beats"
       }
+    },
+    {
+      "name": "Music Lab Spotify Playlist (all ages)",
+      "url": "https://open.spotify.com/playlist/6hpv1W7OxV4uOuFDdzZB1M?si=xY31T0SbTauGbOY1-iXu7Q",
+      "key": "music_lab_spotify_playlist_all_ages_",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "music_lab_spotify_playlist_all_ages_"
+      }
     }
   ],
   "lessons_resources": [
@@ -924,6 +935,12 @@
       "seeding_key": {
         "lesson.key": "Music Lab: AI Edition for Hour of Code",
         "resource.key": "amazon_music_careers_behind_the_beats"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "resource.key": "music_lab_spotify_playlist_all_ages_"
       }
     }
   ],

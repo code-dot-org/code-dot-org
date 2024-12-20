@@ -1,7 +1,8 @@
 name 'self-paced-equity-U1L1-CFU'
 title 'Check for Understanding'
-description 'Match the correct code to each image.'
+description 'These examples are specific to computer science. Match the correct example to each term.'
 height'300'
+width'450'
 
 
 question 'Inequality'
