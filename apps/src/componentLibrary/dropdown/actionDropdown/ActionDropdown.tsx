@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {useCallback, memo, AriaAttributes} from 'react';
+import React, {useCallback, memo, HTMLAttributes} from 'react';
 
 import {ButtonProps} from '@cdo/apps/componentLibrary/button';
 import {
@@ -22,7 +22,8 @@ export interface ActionDropdownOption extends _CustomDropdownOption {
   icon: FontAwesomeV6IconProps;
 }
 
-export interface ActionDropdownProps extends AriaAttributes {
+export interface ActionDropdownProps
+  extends Omit<HTMLAttributes<HTMLButtonElement>, 'color' | 'onChange'> {
   /** ActionDropdown name.
    * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
   name: string;
@@ -52,7 +53,7 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
   menuPlacement = 'left',
   size = 'm',
   triggerButtonProps,
-  ...rest
+  ...HTMLAttributes
 }) => {
   const {setActiveDropdownName} = useDropdownContext();
   const onOptionClick = useCallback(
@@ -73,7 +74,7 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
       disabled={disabled}
       menuPlacement={menuPlacement}
       size={size}
-      {...rest}
+      {...HTMLAttributes}
       useDSCOButtonAsTrigger
       triggerButtonProps={triggerButtonProps}
     >
