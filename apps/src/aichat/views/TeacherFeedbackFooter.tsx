@@ -52,7 +52,7 @@ const TeacherFeedbackFooter: React.FC<Props> = ({
     <>
       {isProfanityViolation && (
         <div className={moduleStyles.teacherFeedbackContainer}>
-          <EmText>Was this content flagged correctly?</EmText>
+          <EmText>{aichatI18n.chatMessage_wasContentFlaggedCorrectly()}</EmText>
           <Button
             color={buttonColors.black}
             disabled={false}
@@ -61,6 +61,7 @@ const TeacherFeedbackFooter: React.FC<Props> = ({
             onClick={() => handleThumbClick(!thumbsUp, false)}
             size="xs"
             type={thumbsUp ? 'primary' : 'tertiary'}
+            ariaLabel="thumbs up"
           />
           <Button
             color={buttonColors.black}
@@ -70,6 +71,7 @@ const TeacherFeedbackFooter: React.FC<Props> = ({
             onClick={() => handleThumbClick(false, !thumbsDown)}
             size="xs"
             type={thumbsDown ? 'primary' : 'tertiary'}
+            ariaLabel="thumbs down"
           />
         </div>
       )}
@@ -103,6 +105,7 @@ const TeacherFeedbackFooter: React.FC<Props> = ({
               moduleStyles['button-xxs'],
               !flaggedAsInappropriate && moduleStyles.flagButtonColorOverride
             )}
+            ariaLabel={flaggedAsInappropriate ? 'unflag' : 'flag'}
           />
         </div>
       )}

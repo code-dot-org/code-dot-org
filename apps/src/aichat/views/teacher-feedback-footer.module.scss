@@ -2,15 +2,6 @@
 @import 'font.scss';
 @import '@cdo/apps/componentLibrary/typography/typography.module';
 
-// todo: just a couple small visual bugs remain with padding
-// left of the assistant's flag doesn't line up with left side of chatbox.
-// on profane message, when message is showing, there's no margin between
-// the thumb buttons and the "Hide message" button. (only visible when
-// thumb selected and hovering on "Hide message" button.
-
-// Also, text doesn't become unhidden when tab-focused. Not sure why.
-// But screen reader might be able to read it anyway since it's not display:none?
-
 .hiddenTilHover {
   visibility: hidden;
   transition: visibility 0.2s ease;
@@ -22,6 +13,7 @@
   gap: 4px;
   justify-content: flex-end;
 
+  // I can't get the text to show up when tab-focused. Not sure why.
   &:hover,
   &:focus,
   &:focus-visible {
