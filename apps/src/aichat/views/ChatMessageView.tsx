@@ -24,7 +24,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
 }) => {
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
 
-  const getDisplayText: string = useMemo(() => {
+  const displayText: string = useMemo(() => {
     return getChatMessageDisplayText(
       chatMessage.status,
       chatMessage.role,
@@ -39,13 +39,14 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
       showProfaneUserMessage={showProfaneUserMessage}
     >
       {isChatHistoryView &&
-        getDisplayText === chatMessage.chatMessageText &&
+        displayText === chatMessage.chatMessageText &&
         chatMessage.status !== Status.PROFANITY_VIOLATION && (
           <TeacherFeedbackFooter
             isProfanityViolation={false}
             chatMessage={chatMessage}
           />
         )}
+
       {isChatHistoryView &&
         chatMessage.role === Role.USER &&
         chatMessage.status === Status.PROFANITY_VIOLATION && (

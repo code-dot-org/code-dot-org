@@ -121,7 +121,7 @@ class AichatController < ApplicationController
     render(status: :ok, json: response_body)
   end
 
-  # params are eventId: number, feedback?: TeacherFeedback
+  # params are eventId: number, feedback?: 'clean_disagree' | 'profanity_agree' | 'profanity_disagree'
   # POST /aichat/submit_teacher_feedback
   # Update a given chat message with teacher feedback. If feedback is nil, remove any existing feedback.
   # Also has the side effect of fixing up any chat events that were stored as strings.
@@ -137,9 +137,8 @@ class AichatController < ApplicationController
 
     begin
       chat_event = AichatEvent.find(chat_event_id)
-      permission_error = chat_history_permission_error(chat_event.user_id, chat_event.level_id, chat_event.script_id)
-      if permission_error
-        return render(status: :forbidden, json: permission_error)
+      unless can_view_student_chat_history?(chat_event.user_id, chat_event.level_id, chat_event.script_id)
+        return render(status: :forbidden, json: {error: "Access denied for submitting teacher feedback."})
       end
 
       # Parse aichat_event if it's stored as a string
@@ -168,9 +167,8 @@ class AichatController < ApplicationController
     script_id = params[:scriptId]
     level_id = params[:levelId]
     student_user_id = params[:studentUserId]
-    permission_error = chat_history_permission_error(student_user_id, level_id, script_id, params[:scriptLevelId])
-    if permission_error
-      return render(status: :forbidden, json: permission_error)
+    unless can_view_student_chat_history?(student_user_id, level_id, script_id, params[:scriptLevelId])
+      return render(status: :forbidden, json: {error: "Access denied for student chat history."})
     end
 
     aichat_events = AichatEvent.where(user_id: student_user_id, level_id: level_id, script_id: script_id).order(:created_at).map do |event|
@@ -240,7 +238,7 @@ class AichatController < ApplicationController
     Cdo::Throttle.throttle(AICHAT_PREFIX + id.to_s, limit, 60)
   end
 
-  private def chat_history_permission_error(student_user_id, level_id, script_id, script_level_id = nil)
+  private def can_view_student_chat_history?(student_user_id, level_id, script_id, script_level_id = nil)
     # If a script level ID is provided, ensure it matches the level ID or that
     # the level is a sublevel of the script level.
     level = Level.find(level_id)
@@ -248,7 +246,7 @@ class AichatController < ApplicationController
       script_level = ScriptLevel.cache_find(script_level_id.to_i)
       same_level = script_level.oldest_active_level.id == level_id
       is_sublevel = ParentLevelsChildLevel.exists?(child_level_id: level_id, parent_level_id: script_level.oldest_active_level.id)
-      return {error: "Access denied."} unless same_level || is_sublevel
+      return false unless same_level || is_sublevel
     else
       script_level = level.script_levels.find_by_script_id(script_id)
     end
@@ -257,8 +255,8 @@ class AichatController < ApplicationController
     # i.e., student is in teacher section.
     user = User.find(student_user_id)
     unless can?(:view_as_user, script_level, user)
-      return {error: "Access denied for student chat history."}
+      return false
     end
-    nil
+    true
   end
 end

@@ -68,7 +68,14 @@ export async function postAichatCompletionMessage(
     maxPollingTimeMs
   );
 }
-
+/**
+ * @param eventId
+ * @param feedback
+ * @returns Promise<ChatEventApiResponse>
+ *
+ * Sends a POST request to the aichat submit teacher feedback backend controller,
+ * then returns the updated chat event if successful.
+ */
 export async function postSubmitTeacherFeedback(
   eventId: number,
   feedback: TeacherFeedback
