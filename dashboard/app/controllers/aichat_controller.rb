@@ -114,8 +114,8 @@ class AichatController < ApplicationController
     end
 
     response_body = {
-      chat_event_id: logged_event.id,
-      chat_event: logged_event.aichat_event
+      id: logged_event.id,
+      **logged_event.aichat_event
     }
 
     render(status: :ok, json: response_body)
@@ -172,9 +172,10 @@ class AichatController < ApplicationController
     end
 
     aichat_events = AichatEvent.where(user_id: student_user_id, level_id: level_id, script_id: script_id).order(:created_at).map do |event|
+      chat_event = event[:aichat_event].is_a?(String) ? JSON.parse(event[:aichat_event]) : event[:aichat_event]
       {
-        chat_event_id: event.id,
-        chat_event: event[:aichat_event].is_a?(String) ? JSON.parse(event[:aichat_event]) : event[:aichat_event]
+        id: event.id,
+        **chat_event
       }
     end
     render json: aichat_events

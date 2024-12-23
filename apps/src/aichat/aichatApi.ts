@@ -15,7 +15,6 @@ import {
   ChatEvent,
   ChatMessage,
   DetectToxicityResponse,
-  ChatEventApiResponse,
   TeacherFeedback,
 } from './types';
 import {extractFieldsToCheckForToxicity} from './utils';
@@ -71,7 +70,6 @@ export async function postAichatCompletionMessage(
 /**
  * @param eventId
  * @param feedback
- * @returns Promise<ChatEventApiResponse>
  *
  * Sends a POST request to the aichat submit teacher feedback backend controller,
  * then returns the updated chat event if successful.
@@ -79,7 +77,7 @@ export async function postAichatCompletionMessage(
 export async function postSubmitTeacherFeedback(
   eventId: number,
   feedback: TeacherFeedback
-): Promise<ChatEventApiResponse> {
+) {
   const payload = {
     eventId,
     feedback,
@@ -103,7 +101,7 @@ export async function postSubmitTeacherFeedback(
 export async function postLogChatEvent(
   newChatEvent: ChatEvent,
   aichatContext: AichatContext
-): Promise<ChatEventApiResponse> {
+): Promise<ChatEvent> {
   const payload = {
     newChatEvent,
     aichatContext,
@@ -138,15 +136,11 @@ export async function getStudentChatHistory(
   if (scriptLevelId) {
     params.scriptLevelId = scriptLevelId.toString();
   }
-  const response = await HttpClient.fetchJson<ChatEventApiResponse[]>(
+  const response = await HttpClient.fetchJson<ChatEvent[]>(
     paths.STUDENT_CHAT_HISTORY_URL + '?' + new URLSearchParams(params)
   );
 
-  // Write the id from the ChatEventApiResponse into each ChatEvent and return ChatEvent[]
-  return response.value.map<ChatEvent>(chatEventApiResponse => ({
-    ...chatEventApiResponse.chat_event,
-    id: chatEventApiResponse.chat_event_id,
-  }));
+  return response.value;
 }
 
 /**
