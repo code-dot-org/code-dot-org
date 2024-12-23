@@ -99,11 +99,13 @@ const Chips: React.FunctionComponent<ChipsProps> = ({
               key={option.value}
               textThickness={textThickness}
               checked={values.includes(option.value)}
-              // The child's `required` prop will be set to `false` if the
-              // Group's `required` prop is falsy. It will be set to `true` if
-              // the Group's `required` prop is truthy AND none of the options
-              // are `checked`, or `false` if at least one of the options is
-              // `checked`.
+              // The `required` prop for each individual _Chip (option) is determined based on the `required` prop
+              // of the Chips (group):
+              // - If the Chips (group) `required` prop is `false`, all _Chip (option) `required` props will also
+              // be `false`.
+              // - If the Chips (group) `required` prop is `true`, the _Chip (option) `required` prop will be:
+              //    - `true` if none of the _Chip (options) are `checked`.
+              //    - `false` if at least one of the _Chip (options) is `checked`.
               required={required ? values.length === 0 : false}
               requiredMessageText={requiredMessageText}
               disabled={disabled}

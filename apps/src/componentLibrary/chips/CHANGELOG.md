@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 - rewritten `ChipsTest` in typescript
 - refactored/optimized `ChipsTest.tsx`
+- minor documentation update
 
 ## [0.4.0](https://github.com/code-dot-org/code-dot-org/pull/62664)
 

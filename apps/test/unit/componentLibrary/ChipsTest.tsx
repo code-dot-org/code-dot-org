@@ -77,6 +77,13 @@ describe('Design System - Chips', () => {
   });
 
   it('handles required state correctly', async () => {
+    // The `required` prop for each individual _Chip (option) is determined based on the `required` prop
+    // of the Chips (group):
+    // - If the Chips (group) `required` prop is `false`, all _Chip (option) `required` props will also
+    // be `false`.
+    // - If the Chips (group) `required` prop is `true`, the _Chip (option) `required` prop will be:
+    //    - `true` if none of the _Chip (options) are `checked`.
+    //    - `false` if at least one of the _Chip (options) is `checked`.
     const user = userEvent.setup();
 
     render(
