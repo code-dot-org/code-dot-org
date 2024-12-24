@@ -75,6 +75,7 @@ LinkButtonWithIcons.args = {
 export const IconLinkButton = SingleTemplate.bind({});
 IconLinkButton.args = {
   icon: {iconName: 'smile', iconStyle: 'solid'},
+  ariaLabel: 'Icon link button',
   type: 'primary',
   isIconOnly: true,
   href: 'https://www.google.com',
@@ -166,6 +167,7 @@ GroupOfColorsOfLinkButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'Purple primary icon link button',
       color: buttonColors.purple,
       type: 'primary',
       isIconOnly: true,
@@ -174,6 +176,7 @@ GroupOfColorsOfLinkButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'Black primary icon link button',
       color: buttonColors.black,
       type: 'primary',
       isIconOnly: true,
@@ -182,6 +185,7 @@ GroupOfColorsOfLinkButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'White primary icon link button',
       color: buttonColors.white,
       type: 'primary',
       isIconOnly: true,
@@ -190,6 +194,7 @@ GroupOfColorsOfLinkButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'Destructive primary icon link button',
       color: buttonColors.destructive,
       type: 'primary',
       isIconOnly: true,
@@ -198,6 +203,7 @@ GroupOfColorsOfLinkButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'Black secondary icon link button',
       color: buttonColors.black,
       type: 'secondary',
       isIconOnly: true,
@@ -206,6 +212,7 @@ GroupOfColorsOfLinkButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'Gray secondary icon link button',
       color: buttonColors.gray,
       type: 'secondary',
       isIconOnly: true,
@@ -214,6 +221,7 @@ GroupOfColorsOfLinkButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'White secondary icon link button',
       color: buttonColors.white,
       type: 'secondary',
       isIconOnly: true,
@@ -222,6 +230,7 @@ GroupOfColorsOfLinkButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'Destructive secondary icon link button',
       color: buttonColors.destructive,
       type: 'secondary',
       isIconOnly: true,
@@ -230,6 +239,7 @@ GroupOfColorsOfLinkButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'Purple tertiary icon link button',
       color: buttonColors.purple,
       type: 'tertiary',
       isIconOnly: true,
@@ -238,6 +248,7 @@ GroupOfColorsOfLinkButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'Black tertiary icon link button',
       color: buttonColors.black,
       type: 'tertiary',
       isIconOnly: true,
@@ -246,6 +257,7 @@ GroupOfColorsOfLinkButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'White tertiary icon link button',
       color: buttonColors.white,
       type: 'tertiary',
       isIconOnly: true,
@@ -254,6 +266,7 @@ GroupOfColorsOfLinkButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'Destructive tertiary icon link button',
       color: buttonColors.destructive,
       type: 'tertiary',
       isIconOnly: true,
