@@ -13,22 +13,14 @@ export default {
 };
 
 const Template = args => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
-  const handleOpen = () => setIsOpen(true);
   const handleClose = () => {
     setIsOpen(false);
     action('closed')();
   };
 
-  return (
-    <span>
-      <button type="button" onClick={handleOpen}>
-        Open Redirect Dialog
-      </button>
-      <RedirectDialog {...args} isOpen={isOpen} handleClose={handleClose} />
-    </span>
-  );
+  return <RedirectDialog {...args} isOpen={isOpen} handleClose={handleClose} />;
 };
 
 export const Default = Template.bind({});
