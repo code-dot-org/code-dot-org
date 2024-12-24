@@ -4,6 +4,36 @@ All of the pre-1 package version are listed here.
 Since initially dsco was a part of code-dot-ord/apps build - it initially had 1 Changelog per each DSCO
 component/entity. All of that Changelogs will be combined into one in this file grouped by component/entity.
 
+## `componentLibrary/chips`
+
+## [0.5.0](https://github.com/code-dot-org/code-dot-org/pull/63047)
+
+- rewritten `ChipsTest` in typescript
+- refactored/optimized `ChipsTest.tsx`
+- minor documentation update
+
+## [0.4.0](https://github.com/code-dot-org/code-dot-org/pull/62664)
+
+- updated `Chip` and `Chips` props to include error message displayed when response required
+
+## [0.3.1](https://github.com/code-dot-org/code-dot-org/pull/62909)
+
+- updated color variables to use `primitiveColors.css`
+
+## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/60911)
+
+- updated `Chip` props to support native HTML Input element attributes
+
+## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/58809)
+
+- Added `gray` color
+- Added `thick` and `thin` options (chips text type)
+- Updated Chip text vertical alignment to be middle aligned
+
+## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/54064)
+
+- Initial release
+
 ## `componentLibrary/closeButton`
 
 ## [0.4.1](https://github.com/code-dot-org/code-dot-org/pull/62914)
