@@ -58,6 +58,7 @@ DisabledLinkButton.args = {
 export const PendingLinkButton = SingleTemplate.bind({});
 PendingLinkButton.args = {
   text: 'Button',
+  ariaLabel: 'Button',
   href: 'https://www.google.com',
   isPending: true,
   size: 'm',

@@ -61,6 +61,7 @@ Disabled_BaseButton.args = {
 export const Pending_BaseButton = SingleTemplate.bind({});
 Pending_BaseButton.args = {
   text: 'Button',
+  ariaLabel: 'Button',
   onClick: () => null,
   isPending: true,
   size: 'm',

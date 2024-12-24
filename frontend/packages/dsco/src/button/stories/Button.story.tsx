@@ -52,6 +52,7 @@ DisabledButton.args = {
 export const PendingButton = SingleTemplate.bind({});
 PendingButton.args = {
   text: 'Button',
+  ariaLabel: 'Button',
   onClick: () => null,
   isPending: true,
   size: 'm',
