@@ -160,6 +160,7 @@ GroupOfColorsOfButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'purple primary icon only button',
       color: buttonColors.purple,
       type: 'primary',
       isIconOnly: true,
@@ -168,6 +169,7 @@ GroupOfColorsOfButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'black primary icon only button',
       color: buttonColors.black,
       type: 'primary',
       isIconOnly: true,
@@ -176,6 +178,7 @@ GroupOfColorsOfButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      'aria-label': 'white primary icon only button',
       color: buttonColors.white,
       type: 'primary',
       isIconOnly: true,
@@ -184,6 +187,7 @@ GroupOfColorsOfButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      'aria-label': 'destructive primary icon only button',
       color: buttonColors.destructive,
       type: 'primary',
       isIconOnly: true,
@@ -192,6 +196,7 @@ GroupOfColorsOfButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'black secondary icon only button',
       color: buttonColors.black,
       type: 'secondary',
       isIconOnly: true,
@@ -200,6 +205,7 @@ GroupOfColorsOfButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'gray secondary icon only button',
       color: buttonColors.gray,
       type: 'secondary',
       isIconOnly: true,
@@ -208,6 +214,7 @@ GroupOfColorsOfButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'white secondary icon only button',
       color: buttonColors.white,
       type: 'secondary',
       isIconOnly: true,
@@ -216,6 +223,7 @@ GroupOfColorsOfButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'destructive secondary icon only button',
       color: buttonColors.destructive,
       type: 'secondary',
       isIconOnly: true,
@@ -224,6 +232,7 @@ GroupOfColorsOfButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'purple tertiary icon only button',
       color: buttonColors.purple,
       type: 'tertiary',
       isIconOnly: true,
@@ -232,6 +241,7 @@ GroupOfColorsOfButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'black tertiary icon only button',
       color: buttonColors.black,
       type: 'tertiary',
       isIconOnly: true,
@@ -240,6 +250,7 @@ GroupOfColorsOfButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'white tertiary icon only button',
       color: buttonColors.white,
       type: 'tertiary',
       isIconOnly: true,
@@ -248,6 +259,7 @@ GroupOfColorsOfButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'destructive tertiary icon only button',
       color: buttonColors.destructive,
       type: 'tertiary',
       isIconOnly: true,
