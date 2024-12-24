@@ -1,4 +1,4 @@
-# `componentLibrary/simpleDropdown`
+# `componentLibrary/dropdown/simpleDropdown`
 
 ### Status: `Ready for dev`
 
