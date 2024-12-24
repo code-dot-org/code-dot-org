@@ -132,7 +132,7 @@ component/entity. All of that Changelogs will be combined into one in this file 
 - added storybook
 - added tests
 
-## `componentLibrary/typography`
+## `componentLibrary/segmentedButtons`
 
 ## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/62807)
 
