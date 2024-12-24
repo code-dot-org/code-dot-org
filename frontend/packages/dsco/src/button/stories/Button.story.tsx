@@ -70,6 +70,7 @@ ButtonWithIcons.args = {
 export const IconButton = SingleTemplate.bind({});
 IconButton.args = {
   icon: {iconName: 'smile', iconStyle: 'solid'},
+  ariaLabel: 'Icon Button',
   type: 'primary',
   isIconOnly: true,
   onClick: () => null,
