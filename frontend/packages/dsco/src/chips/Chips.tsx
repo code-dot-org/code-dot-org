@@ -40,7 +40,7 @@ export interface ChipsProps {
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see ./__tests__/ChipsTest.tsx)
+ * * (see ./__tests__/Chips.test.tsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```
