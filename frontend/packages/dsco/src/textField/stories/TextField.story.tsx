@@ -44,6 +44,7 @@ export const PasswordTextField = SingleTemplate.bind({});
 PasswordTextField.args = {
   ...defaultArgs,
   name: 'textfield_password',
+  label: 'Password TextField Label',
   inputType: 'password',
 };
 
@@ -51,6 +52,7 @@ export const NumberTextField = SingleTemplate.bind({});
 NumberTextField.args = {
   ...defaultArgs,
   name: 'textfield_number',
+  label: 'Number TextField Label',
   inputType: 'number',
 };
 
@@ -58,6 +60,7 @@ export const EmailTextField = SingleTemplate.bind({});
 EmailTextField.args = {
   ...defaultArgs,
   name: 'textfield_email',
+  label: 'Email TextField Label',
   inputType: 'email',
 };
 
