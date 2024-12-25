@@ -36,7 +36,7 @@ export interface SegmentedButtonsProps {
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see ./__tests__/SegmentedButtonsTest.jsx)
+ * * (see ./__tests__/SegmentedButtons.test.jsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```
