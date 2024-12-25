@@ -4,6 +4,30 @@ All of the pre-1 package version are listed here.
 Since initially dsco was a part of code-dot-ord/apps build - it initially had 1 Changelog per each DSCO
 component/entity. All of that Changelogs will be combined into one in this file grouped by component/entity.
 
+## `componentLibrary/alert`
+
+## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/62907)
+
+- rewritten `AlertTest` in typescript
+- refactored/optimized `AlertTest.tsx`
+- minor Changelog formatting update
+
+## [0.2.1](https://github.com/code-dot-org/code-dot-org/pull/62725)
+
+- updated color variables to use primitiveColors.css
+
+## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/60911)
+
+- updated `Alert` props to support native HTML Div element attributes
+
+## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/59159)
+
+- implemented component
+- added tests
+- added storybook
+- component is now `Ready for Dev`
+- Initial release
+
 ## `componentLibrary/closeButton`
 
 ## [0.4.1](https://github.com/code-dot-org/code-dot-org/pull/62914)
