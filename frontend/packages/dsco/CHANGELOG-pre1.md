@@ -6,8 +6,6 @@ component/entity. All of that Changelogs will be combined into one in this file 
 
 ## componentLibrary/checkbox
 
-All notable changes to this project will be documented in this file.
-
 ## [0.5.1](https://github.com/code-dot-org/code-dot-org/pull/62908)
 
 - updated color variables to use `primitiveColors.css`

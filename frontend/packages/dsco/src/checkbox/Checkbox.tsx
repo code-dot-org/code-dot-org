@@ -34,7 +34,7 @@ export interface CheckboxProps extends HTMLAttributes<HTMLInputElement> {
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see ./__tests__/CheckboxTest.tsx)
+ * * (see ./__tests__/Checkbox.test.tsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```
