@@ -1,0 +1,222 @@
+@import '@/common/styles/mixins';
+@import '@/typography/typography.module';
+
+// TextField common styles
+.textField {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.125rem;
+  min-width: 18.75rem;
+  margin: 0;
+
+  input {
+    margin-bottom: 0;
+    border-radius: 0.25rem;
+    border-width: 1px;
+    border-style: solid;
+    caret-color: #0093a4;
+    box-sizing: border-box;
+    height: unset;
+
+    &:focus-visible {
+      outline: 2px solid #0093a4;
+      outline-offset: 2px;
+      box-shadow: none;
+    }
+  }
+
+  .textFieldHelperSection {
+    display: flex;
+    align-items: baseline;
+    align-self: stretch;
+  }
+}
+
+// TextField colors
+.textField.textField-black,
+.textField.textField-gray {
+  .textFieldLabel {
+    color: #292f36;
+  }
+
+  input {
+    border-color: #292f36;
+    background: #ffffff;
+
+    &.hasError {
+      border-color: #e5311a;
+    }
+
+    &::placeholder {
+      color: #abb0b6;
+    }
+
+    &:focus-visible {
+      border-color: #292f36;
+    }
+  }
+
+  .textFieldHelperSection {
+    color: #292f36;
+  }
+
+  .textFieldErrorSection {
+    color: #e5311a;
+  }
+
+  // Disabled styles
+  &:has(input:disabled) {
+    .textFieldLabel {
+      color: #d1d4d8;
+    }
+
+    input {
+      border-color: #d1d4d8;
+      color: #d1d4d8;
+    }
+
+    .textFieldHelperSection,
+    .textFieldErrorSection {
+      color: #d1d4d8;
+    }
+  }
+
+  // Read Only styles
+  &:has(input:read-only) {
+    input {
+      border-color: #d1d4d8;
+      background-color: #f7f8fa;
+    }
+  }
+}
+
+.textField.textField-gray {
+  input {
+    border-color: #abb0b6;
+
+    &.hasError {
+      border-color: #e5311a;
+    }
+
+    &:focus-visible {
+      border-color: #abb0b6;
+    }
+  }
+}
+
+.textField.textField-white {
+  .textFieldLabel {
+    color: #ffffff;
+  }
+
+  input {
+    border-color: #ffffff;
+    background: #292f36;
+    color: #ffffff;
+
+    &::placeholder {
+      color: #858c94;
+    }
+
+    &:focus-visible {
+      border-color: #ffffff;
+    }
+  }
+
+  .textFieldHelperSection,
+  .textFieldErrorSection {
+    color: #ffffff;
+  }
+
+  // Disabled styles
+  &:has(input:disabled) {
+    .textFieldLabel {
+      color: #727a83;
+    }
+
+    input {
+      border-color: #5f6872;
+      color: #5f6872;
+    }
+
+    .textFieldHelperSection,
+    .textFieldErrorSection {
+      color: #727a83;
+    }
+  }
+
+  // Read Only styles
+  &:has(input:read-only) {
+    input {
+      border-color: #d1d4d8;
+      background-color: #4c5661;
+    }
+  }
+}
+
+// TextField sizes
+.textField-l {
+  .textFieldLabel {
+    @include label-one;
+    margin-bottom: 0;
+  }
+
+  input {
+    @include body-one;
+    padding: 0.625rem 0.875rem;
+    margin-bottom: 0;
+  }
+
+  .textFieldHelperSection {
+    @include body-two;
+    margin-bottom: 0;
+    gap: 0.375rem;
+  }
+}
+
+.textField-m {
+  .textFieldLabel {
+    @include label-two;
+    margin-bottom: 0;
+  }
+
+  input {
+    @include body-two;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0;
+
+    &::placeholder {
+      color: #abb0b6;
+    }
+  }
+
+  .textFieldHelperSection {
+    @include body-three;
+    margin-bottom: 0;
+    gap: 0.375rem;
+  }
+}
+
+.textField-s {
+  .textFieldLabel {
+    @include label-three;
+    margin-bottom: 0;
+  }
+
+  input {
+    @include body-three;
+    padding: 0.3125rem 0.625rem;
+    margin-bottom: 0;
+
+    &::placeholder {
+      color: #abb0b6;
+    }
+  }
+
+  .textFieldHelperSection {
+    @include body-four;
+    margin-bottom: 0;
+    gap: 0.25rem;
+  }
+}
