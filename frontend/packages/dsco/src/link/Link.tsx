@@ -47,7 +47,7 @@ export type LinkProps = LinkWithChildren | LinkWithText;
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see ./__tests__/LinkTest.tsx)
+ * * (see ./__tests__/Link.test.tsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```
