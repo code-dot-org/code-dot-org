@@ -1,4 +1,6 @@
-import React, {
+import {
+  cloneElement,
+  isValidElement,
   useEffect,
   useRef,
   useState,
@@ -91,8 +93,8 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
   // Check if children is a valid React element and clone it with ariaDescribedBy attribute
   // and additional event handlers to make sure the tooltip is displayed correctly
   const componentToWrap =
-    React.isValidElement<HTMLAttributes<HTMLElement>>(children) &&
-    React.cloneElement(children, {
+    isValidElement<HTMLAttributes<HTMLElement>>(children) &&
+    cloneElement(children, {
       'aria-describedby': tooltipProps.tooltipId,
       onFocus: (event: React.FocusEvent<HTMLElement>) => {
         handleShowTooltip(true, event);

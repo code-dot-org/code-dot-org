@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import React from 'react';
+import {forwardRef} from 'react';
 
 import {ComponentPlacementDirection, ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
@@ -60,7 +60,7 @@ export const TooltipOverlay: React.FunctionComponent<TooltipOverlayProps> = ({
  * Design System: Tooltip Component.
  * Renders Tooltip for a given html element (Needs to be wrapped in TooltipOverlay, see stories or README.md).
  */
-const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
+const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
   (
     {
       text,
