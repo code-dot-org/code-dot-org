@@ -1,6 +1,7 @@
+@import '@/common/styles/colors.css';
 @import '@/typography/typography.module';
 
-$tooltip-background-color: #394450;
+$tooltip-background-color: var(--background-neutral-primary-inverse);
 $tail-offset: 4px;
 $l-tail-length: 12px;
 $m-tail-length: 9px;
@@ -66,7 +67,7 @@ $tooltip-span-vertical-top-spacing: 2px;
 
   .tooltipText,
   i {
-    color: #ffffff;
+    color: var(--text-neutral-inverse);
     width: max-content;
   }
 }
