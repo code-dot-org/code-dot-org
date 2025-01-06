@@ -13,7 +13,7 @@ import '@xterm/xterm/css/xterm.css';
 import CodebridgeRegistry from '../CodebridgeRegistry';
 import {usePreviewPanel} from '../hooks/usePreviewPanel';
 
-import {writeConsoleMessage} from './ConsoleHelper';
+import ConsoleManager from './ConsoleManager';
 import ControlButtons from './ControlButtons';
 import RightButtons from './RightButtons';
 
@@ -24,7 +24,7 @@ const ConsoleV2: React.FunctionComponent = () => {
   const terminalRef = useRef<HTMLDivElement>(null);
   const [didInit, setDidInit] = useState(false);
   const clearOutput = () => {
-    CodebridgeRegistry.getInstance().clearTerminalLines();
+    CodebridgeRegistry.getInstance().getConsoleManager()?.clearTerminalLines();
   };
 
   // Clear console when we change levels. Don't send an analytics event
@@ -33,7 +33,9 @@ const ConsoleV2: React.FunctionComponent = () => {
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => clearOutput());
 
   const onData = (data: string) => {
-    const terminal = CodebridgeRegistry.getInstance().getTerminal();
+    const terminal = CodebridgeRegistry.getInstance()
+      .getConsoleManager()
+      ?.getTerminal();
     if (!terminal) {
       return;
     }
@@ -64,6 +66,14 @@ const ConsoleV2: React.FunctionComponent = () => {
       return;
     }
 
+    let existingTerminalLines: string[] = [];
+
+    const existingConsoleManager =
+      CodebridgeRegistry.getInstance().getConsoleManager();
+    if (existingConsoleManager) {
+      existingTerminalLines = existingConsoleManager.getTerminalLines();
+    }
+
     const terminal = new Terminal({
       screenReaderMode: true,
       minimumContrastRatio: 4.5,
@@ -73,22 +83,20 @@ const ConsoleV2: React.FunctionComponent = () => {
     terminal.loadAddon(fitAddon);
     const imageAddon = new ImageAddon();
     terminal.loadAddon(imageAddon);
-    CodebridgeRegistry.getInstance().setTerminal(terminal);
-    CodebridgeRegistry.getInstance().setTerminalFitAddon(fitAddon);
+    const consoleManager = new ConsoleManager(terminal, fitAddon);
+    CodebridgeRegistry.getInstance().setConsoleManager(consoleManager);
     terminal.open(terminalRef.current);
     terminal.onData(onData);
     fitAddon.fit();
 
-    // Right now we are tracking lines in the registry so we can replay them here.
+    // Right now we are tracking lines from the previous console so we can replay them here.
     // We may be able to avoid this after
     // this pr goes in: https://github.com/xtermjs/xterm.js/pull/5253
     // After that, we may just be able to call open() on the existing terminal instance
     // and move it to the new container.
-    const existingLines = CodebridgeRegistry.getInstance().getTerminalLines();
-    if (existingLines.length > 0) {
-      const lines = existingLines.join('\n');
-      CodebridgeRegistry.getInstance().clearTerminalLines();
-      writeConsoleMessage(lines);
+    if (existingTerminalLines.length > 0) {
+      const lines = existingTerminalLines.join('\n');
+      consoleManager.writeConsoleMessage(lines);
     }
 
     // Prevent keyboard trap.

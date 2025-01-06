@@ -64,7 +64,10 @@ const WorkspaceAndOutput: React.FunctionComponent = () => {
         Math.min(desiredConsoleHeight, consoleHeightMax)
       )
     );
-    CodebridgeRegistry.getInstance().getTerminalFitAddon()?.fit();
+    CodebridgeRegistry.getInstance()
+      .getConsoleManager()
+      ?.getTerminalFitAddon()
+      ?.fit();
   };
 
   // The editor height is computed based on the column height, console height,

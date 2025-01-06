@@ -1,20 +1,11 @@
-import {FitAddon} from '@xterm/addon-fit';
-import {Terminal} from '@xterm/xterm';
+import ConsoleManager from '@codebridge/Console/ConsoleManager';
 
-// TODO: Rather than having all these console-specific methods in the registry, we should
-// instead make a ConsoleManager (combine with ConsoleHelpers) that manages all the console
-// operations, and reference that singleton here.
 export default class CodebridgeRegistry {
-  private terminal: Terminal | null;
-  private terminalFitAddon: FitAddon | null;
-  private terminalLines: string[];
+  private consoleManager: ConsoleManager | null;
 
   private static _instance: CodebridgeRegistry;
-
   constructor() {
-    this.terminal = null;
-    this.terminalFitAddon = null;
-    this.terminalLines = [];
+    this.consoleManager = null;
   }
 
   public static getInstance(): CodebridgeRegistry {
@@ -28,39 +19,11 @@ export default class CodebridgeRegistry {
     CodebridgeRegistry._instance = new CodebridgeRegistry();
   }
 
-  public setTerminal(terminal: Terminal) {
-    this.terminal = terminal;
+  public setConsoleManager(consoleManager: ConsoleManager) {
+    this.consoleManager = consoleManager;
   }
 
-  public getTerminal() {
-    return this.terminal;
-  }
-
-  public setTerminalFitAddon(terminalFitAddon: FitAddon) {
-    this.terminalFitAddon = terminalFitAddon;
-  }
-
-  public getTerminalFitAddon() {
-    return this.terminalFitAddon;
-  }
-
-  public appendTerminalLine(line: string) {
-    this.terminalLines.push(line);
-    if (this.terminal) {
-      this.terminal.writeln(line);
-      this.terminal.scrollToBottom();
-      this.terminal.focus();
-    }
-  }
-
-  public clearTerminalLines() {
-    this.terminalLines = [];
-    if (this.terminal) {
-      this.terminal.clear();
-    }
-  }
-
-  public getTerminalLines() {
-    return this.terminalLines;
+  public getConsoleManager() {
+    return this.consoleManager;
   }
 }
