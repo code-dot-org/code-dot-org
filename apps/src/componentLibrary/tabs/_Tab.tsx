@@ -156,7 +156,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
         text
       ) {
         setOverflowTooltip({
-          tooltipId: 'test123',
+          tooltipId: `${tabButtonId}-overflow-tooltip`,
           text: text,
           direction: 'onBottom',
         });
@@ -164,7 +164,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
         setOverflowTooltip(undefined);
       }
     }
-  }, [text, tooltip]);
+  }, [text, tooltip, tabButtonId]);
 
   return (
     <li role="presentation">
