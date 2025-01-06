@@ -44,10 +44,7 @@
 
 .title {
   @include main-font-semi-bold;
-  padding-left: 15px;
-  padding-right: 10px;
-  padding-top: 18px;
-  padding-bottom: 5px;
+  padding: 18px 10px 5px 15px;
   font-size: 16px;
   color: $neutral-dark;
   overflow: hidden;
