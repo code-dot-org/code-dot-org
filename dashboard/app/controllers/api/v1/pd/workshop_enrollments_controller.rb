@@ -157,7 +157,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     {
       school_type: params[:school_info][:school_type],
       school_state: params[:school_info][:school_state],
-      school_zip: params[:school_info][:school_zip],
+      school_zip: params[:school_info][:zip],
       school_district_name: params[:school_info][:school_district_name]&.strip_utf8mb4,
       school_district_other: params[:school_info][:school_district_other]&.strip_utf8mb4,
       school_id: params[:school_info][:school_id],
