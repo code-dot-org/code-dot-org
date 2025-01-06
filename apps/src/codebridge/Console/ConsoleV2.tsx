@@ -1,3 +1,4 @@
+import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import {FitAddon} from '@xterm/addon-fit';
 import {ImageAddon} from '@xterm/addon-image';
 import {Terminal} from '@xterm/xterm';
@@ -10,8 +11,6 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import '@xterm/xterm/css/xterm.css';
-
-import CodebridgeRegistry from '../CodebridgeRegistry';
 
 import ConsoleManager from './ConsoleManager';
 import ControlButtons from './ControlButtons';

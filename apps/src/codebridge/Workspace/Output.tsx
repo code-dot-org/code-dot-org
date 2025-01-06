@@ -1,13 +1,12 @@
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import Console from '@codebridge/Console';
+import ConsoleV2 from '@codebridge/Console/ConsoleV2';
+import MiniAppPreview from '@codebridge/MiniAppPreview/MiniAppPreview';
 import classNames from 'classnames';
 import React from 'react';
 
 import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {useCodebridgeContext} from '../codebridgeContext';
-import Console from '../Console';
-import ConsoleV2 from '../Console/ConsoleV2';
-import MiniAppPreview from '../MiniAppPreview/MiniAppPreview';
 
 import moduleStyles from './output.module.scss';
 

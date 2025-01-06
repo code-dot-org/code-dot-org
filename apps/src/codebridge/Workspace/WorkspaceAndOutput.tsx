@@ -1,3 +1,4 @@
+import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import Workspace from '@codebridge/Workspace';
 import {debounce} from 'lodash';
 import React, {useEffect, useMemo} from 'react';
@@ -5,8 +6,6 @@ import React, {useEffect, useMemo} from 'react';
 import globalStyleConstants from '@cdo/apps/styleConstants';
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 import color from '@cdo/apps/util/color';
-
-import CodebridgeRegistry from '../CodebridgeRegistry';
 
 import Output from './Output';
 
