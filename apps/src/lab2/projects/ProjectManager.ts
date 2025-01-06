@@ -10,7 +10,7 @@
  *
  * If a project manager is destroyed, the enqueued save will be cancelled, if it exists.
  */
-import {NetworkError} from '@cdo/apps/util/HttpClient';
+import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 import {currentLocation} from '@cdo/apps/utils';
 
 import LabMetricsReporter from '../Lab2MetricsReporter';
@@ -91,7 +91,11 @@ export default class ProjectManager {
     }
 
     this.lastChannel = channel;
-    return {sources, channel};
+    const response = await HttpClient.fetchJson<{abuse_score: number}>(
+      `/v3/channels/${this.channelId}/abuse`
+    );
+    const abuseScore = response.value.abuse_score;
+    return {sources, channel, abuseScore};
   }
 
   // Restore the given version of the project. This will call restore on the sources store
