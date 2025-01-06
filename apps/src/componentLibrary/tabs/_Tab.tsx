@@ -150,10 +150,14 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   useEffect(() => {
     if (tabTextRef.current) {
       const textElement = tabTextRef.current;
-      if (textElement.scrollWidth > textElement.clientWidth && !tooltip) {
+      if (
+        textElement.scrollWidth > textElement.clientWidth &&
+        !tooltip &&
+        text
+      ) {
         setLongTooltip({
           tooltipId: 'test123',
-          text: text || '',
+          text: text,
           direction: 'onBottom',
         });
       } else {
