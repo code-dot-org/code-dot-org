@@ -6,6 +6,10 @@ export default {
       '@swc/jest',
       {
         jsc: {
+          baseUrl: '.',
+          paths: {
+            '@/*': ['./src/*'],
+          },
           transform: {
             react: {
               runtime: 'automatic',

@@ -1,6 +1,6 @@
 {
   "ar-SA": {
-    "/dashboard/unplugged.yml": "5bf310ce9f7d460dc4db70fb623b4164"
+    "/dashboard/unplugged.yml": "56d16933a08147efc2c1a73e188144bb"
   },
   "az-AZ": {
     "/dashboard/unplugged.yml": "f4e9b35b11bab754b5734735beb9829d"
@@ -27,7 +27,7 @@
     "/dashboard/unplugged.yml": "5399c759685bf686fc77ee6a2deae8da"
   },
   "de-DE": {
-    "/dashboard/unplugged.yml": "61629ccf9a4d3044d05a3554530aa459"
+    "/dashboard/unplugged.yml": "7b03de655bd291814d0cbdf9cde2988a"
   },
   "dv-MV": {
     "/dashboard/unplugged.yml": "4b31ccdd6b658d745b53539e87b3ab1f"
@@ -42,7 +42,7 @@
     "/dashboard/unplugged.yml": "f77a25b1e96bb26b0ef04882207a3a49"
   },
   "es-MX": {
-    "/dashboard/unplugged.yml": "ee99f69b5a2659cdcdaf0c8c2fc1ffe4"
+    "/dashboard/unplugged.yml": "90cf896f88973c60a39f9d0c275f5934"
   },
   "et-EE": {
     "/dashboard/unplugged.yml": "d1783db26c3985e2064faa42d4979e0a"
@@ -60,10 +60,10 @@
     "/dashboard/unplugged.yml": "6c2ee53fa8733f54ad9fe8a0a6b4147b"
   },
   "fil-PH": {
-    "/dashboard/unplugged.yml": "d0be4b89d4e538ff600b3d46db84ec15"
+    "/dashboard/unplugged.yml": "51fa49809bb1a93be1427537336af874"
   },
   "fr-FR": {
-    "/dashboard/unplugged.yml": "f81ad2e4870abe9c0c86c88085c57047"
+    "/dashboard/unplugged.yml": "176e6dae939eebf6c04ff1182d29738f"
   },
   "ga-IE": {
     "/dashboard/unplugged.yml": "6e9934b80ea28d44706fc265b20c0abd"
@@ -78,7 +78,7 @@
     "/dashboard/unplugged.yml": "794127a83d3d58e2635d33234ff3027b"
   },
   "hi-IN": {
-    "/dashboard/unplugged.yml": "a38e7690a5c8a05c1e5b3a8698da2726"
+    "/dashboard/unplugged.yml": "442144ab389efc03a34de9d11ea4dc36"
   },
   "hr-HR": {
     "/dashboard/unplugged.yml": "a567cf023d82b61959f979aac24282e6"
@@ -90,16 +90,16 @@
     "/dashboard/unplugged.yml": "249b1ed9279bc688086aac7d0fe8596c"
   },
   "id-ID": {
-    "/dashboard/unplugged.yml": "124e1bd61de4509d9d556e4770b60627"
+    "/dashboard/unplugged.yml": "0af2d0a110dff9d49d5aee34eaf34a9c"
   },
   "is-IS": {
     "/dashboard/unplugged.yml": "3758192babb8061ef1f714716bdc8395"
   },
   "it-IT": {
-    "/dashboard/unplugged.yml": "0e487abdc4c9d79db885f1f5a488a778"
+    "/dashboard/unplugged.yml": "82d121523188ca78242f9639f04ba7d6"
   },
   "ja-JP": {
-    "/dashboard/unplugged.yml": "bdaa239013c94b1d488dd449ac4d8a7a"
+    "/dashboard/unplugged.yml": "cb01cfc360e535bdb88b454136fc73ac"
   },
   "ka-GE": {
     "/dashboard/unplugged.yml": "d4da93d01c1e4474f7d914ea9c61bc3e"
@@ -114,7 +114,7 @@
     "/dashboard/unplugged.yml": "a67164dfb1c18c6d450cba5d32c5fcb6"
   },
   "ko-KR": {
-    "/dashboard/unplugged.yml": "cc1ed3b01840c97a57321e7f408875d2"
+    "/dashboard/unplugged.yml": "ab7e784f8f5458366efdc01177533b9a"
   },
   "ku-IQ": {
     "/dashboard/unplugged.yml": "4fac70c7b747a598c281f8e7341cbda4"
@@ -168,7 +168,7 @@
     "/dashboard/unplugged.yml": "bbad23a18d888478f9970bb77efae3d8"
   },
   "pt-BR": {
-    "/dashboard/unplugged.yml": "af7f99fd3e7769d29285f3c5d4554fb8"
+    "/dashboard/unplugged.yml": "1cee9222d86b5660eee02e200cbabaa4"
   },
   "pt-PT": {
     "/dashboard/unplugged.yml": "db4278e0428503b24dea00e68bef8c07"
@@ -189,7 +189,7 @@
     "/dashboard/unplugged.yml": "868ef5d74f838b9a85da9265369aa7f4"
   },
   "sk-SK": {
-    "/dashboard/unplugged.yml": "d3c163713a344ac44c0e00d48924f7ac"
+    "/dashboard/unplugged.yml": "c84b41895abcacef7619ed2622b2f7a3"
   },
   "sl-SI": {
     "/dashboard/unplugged.yml": "ffa66f355fc5e68adca87c3455e50f1d"
@@ -213,7 +213,7 @@
     "/dashboard/unplugged.yml": "d058669bc9c1e0d990b2c5d84bc8f66a"
   },
   "th-TH": {
-    "/dashboard/unplugged.yml": "2e771e7dcf651f38723964ef604aa1e4"
+    "/dashboard/unplugged.yml": "8b494763b51c612b67cc59245df590fc"
   },
   "tr-TR": {
     "/dashboard/unplugged.yml": "c0888b62580605a51405198bb67d0b68"
@@ -234,7 +234,7 @@
     "/dashboard/unplugged.yml": "19b4882c2f2860b3ae01a46bb88cd7ce"
   },
   "zh-TW": {
-    "/dashboard/unplugged.yml": "a76873494e8a9c1fb0acb56c99f6ff3b"
+    "/dashboard/unplugged.yml": "cc018d213f6d205345e3ed6019366ef8"
   },
   "zu-ZA": {
     "/dashboard/unplugged.yml": "3544ae2f87c0e4208be3fb12b9943eaa"

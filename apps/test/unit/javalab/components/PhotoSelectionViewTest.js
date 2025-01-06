@@ -20,7 +20,7 @@ describe('PhotoSelectionView', () => {
       />
     );
 
-    expect(wrapper.text()).toBe(promptText);
+    expect(wrapper.text()).toContain(promptText);
   });
 
   it('invokes onPhotoSelected callback after photo is selected', () => {

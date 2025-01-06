@@ -1,0 +1,26 @@
+name 'self-paced-equity-U1L1-lessonclose'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Great Job! 🎉
+
+<img src="https://images.code.org/6ec2e486c106c994f6b6ea056ae41b31-image-1733174889961.27.04 PM.png" alt="A teacher smiles while looking at a student who is waving and smiling at the camera." style="border-radius:40px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 20px 20px 20px 20px;">
+
+#### So far, you have:
+
+* #### Become oriented to the structure and content of the course.
+* #### Defined key concepts related to equity and inclusion in the context of CS education.
+* #### Set an intention for learning based in student outcomes.
+
+## Up Next
+
+#### In the next section of this professional learning module, you will:
+* #### Define and identify systemic barriers that limit access, diversity, and inclusion in CS education.
+* #### Recognize disparities by race and gender in access, diversity, and inclusion in CS education nationally.
+* #### Analyze access, diversity, and inclusion data from school and classroom to identify issues of inequities.
+<br>
+
+#### Click continue to keep going!
+
+MARKDOWN

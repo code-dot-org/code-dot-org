@@ -13,7 +13,7 @@
             .header_button.header_user#header_user_signin
               %span= I18n.t(dashboard ? "nav.user.signin" : "user_header_signin")
               .signin_callout_wrapper
-          %a.linktag{href: CDO.studio_url('users/sign_up'), class: 'button-create-account', id: 'create_account_button'}
+          %a.linktag{href: CDO.studio_url('users/new_sign_up/account_type'), class: 'button-create-account', id: 'create_account_button'}
             .header_button.header_user#header_user_create_account
               %span= I18n.t(dashboard ? "nav.user.create_account_low_cap" : "user_header_create_account_low_cap")
         .divider

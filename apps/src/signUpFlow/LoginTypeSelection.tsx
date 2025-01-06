@@ -10,7 +10,6 @@ import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import canvas from '@cdo/apps/signUpFlow/images/canvas.png';
-import cleverLogo from '@cdo/apps/signUpFlow/images/cleverLogo.png';
 import schoology from '@cdo/apps/signUpFlow/images/schoology.png';
 import locale from '@cdo/apps/signUpFlow/locale';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
@@ -196,56 +195,43 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             </BodyThreeText>
           </div>
           <form action="/users/auth/google_oauth2" method="POST">
-            <button
-              className={style.googleButton}
+            <Button
+              text={locale.sign_up_google()}
               onClick={() => selectOauthLoginType('google')}
-              type="submit"
-            >
-              <FontAwesomeV6Icon
-                iconName="brands fa-google"
-                iconStyle="solid"
-              />
-              {locale.sign_up_google()}
-            </button>
+              iconLeft={{iconName: 'brands fa-google', iconStyle: 'solid'}}
+              className={style.googleButton}
+              buttonTagTypeAttribute="submit"
+            />
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/microsoft_v2_auth" method="POST">
-            <button
-              className={style.microsoftButton}
+            <Button
+              text={locale.sign_up_microsoft()}
               onClick={() => selectOauthLoginType('microsoft')}
-              type="submit"
-            >
-              <FontAwesomeV6Icon
-                iconName="brands fa-microsoft"
-                iconStyle="light"
-              />
-              {locale.sign_up_microsoft()}
-            </button>
+              iconLeft={{iconName: 'brands fa-microsoft', iconStyle: 'light'}}
+              className={style.microsoftButton}
+              buttonTagTypeAttribute="submit"
+            />
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/facebook" method="POST">
-            <button
-              className={style.facebookButton}
+            <Button
+              text={locale.sign_up_facebook()}
               onClick={() => selectOauthLoginType('facebook')}
-              type="submit"
-            >
-              <FontAwesomeV6Icon
-                iconName="brands fa-facebook-f"
-                iconStyle="solid"
-              />
-              {locale.sign_up_facebook()}
-            </button>
+              iconLeft={{iconName: 'brands fa-facebook-f', iconStyle: 'solid'}}
+              className={style.facebookButton}
+              buttonTagTypeAttribute="submit"
+            />
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/clever" method="POST">
-            <button
-              className={style.cleverButton}
+            <Button
+              text={locale.sign_up_clever()}
               onClick={() => selectOauthLoginType('clever')}
-              type="submit"
-            >
-              <img src={cleverLogo} alt="" />
-              {locale.sign_up_clever()}
-            </button>
+              iconLeft={{iconName: 'kit fa-clever', iconStyle: 'solid'}}
+              className={style.cleverButton}
+              buttonTagTypeAttribute="submit"
+            />
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <div className={style.greyTextbox}>

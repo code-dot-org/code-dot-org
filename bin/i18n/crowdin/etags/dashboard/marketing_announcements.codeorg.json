@@ -1,6 +1,6 @@
 {
   "ar-SA": {
-    "/dashboard/marketing_announcements.json": "c63d7f18a498742b498cff6ba27d7815"
+    "/dashboard/marketing_announcements.json": "99de3d5775e95480e622b0ce0fa1001a"
   },
   "az-AZ": {
     "/dashboard/marketing_announcements.json": "0ea9750a9bdad78fd1705c98c52fe6be"
@@ -27,7 +27,7 @@
     "/dashboard/marketing_announcements.json": "f395508ae0ac3ab167c5930d4ae0d450"
   },
   "de-DE": {
-    "/dashboard/marketing_announcements.json": "31cea8b776e3a1450c04a5fca3baad39"
+    "/dashboard/marketing_announcements.json": "5675a10cb881571b1c78c409662527f0"
   },
   "dv-MV": {
     "/dashboard/marketing_announcements.json": "e6a87af0a031eb01cf4af33f8a2fb5f9"
@@ -42,7 +42,7 @@
     "/dashboard/marketing_announcements.json": "d8d6b3678c5ce0219a459fd57398b689"
   },
   "es-MX": {
-    "/dashboard/marketing_announcements.json": "3c5044108025b0dd69a4ac83cb040b17"
+    "/dashboard/marketing_announcements.json": "56a7f477a57f780dd158f1a6526309e8"
   },
   "et-EE": {
     "/dashboard/marketing_announcements.json": "2a952a3746e6f9f8489c746659438850"
@@ -60,10 +60,10 @@
     "/dashboard/marketing_announcements.json": "992fe1cb45c5fdc6c3af75908da4c005"
   },
   "fil-PH": {
-    "/dashboard/marketing_announcements.json": "3c51f75da6abdd41965c7264e6215bac"
+    "/dashboard/marketing_announcements.json": "045ef6ca1e29c95b6b0953743727bd13"
   },
   "fr-FR": {
-    "/dashboard/marketing_announcements.json": "9817ee864adf7ee845cac1fd2a803cef"
+    "/dashboard/marketing_announcements.json": "45dfbefc81b0aee0980c4b0c5be14fc1"
   },
   "ga-IE": {
     "/dashboard/marketing_announcements.json": "77a080305d6b79b0f411b41366ead3f5"
@@ -78,7 +78,7 @@
     "/dashboard/marketing_announcements.json": "fa0ce7adddd24dcfbdd6d84cd62fcb88"
   },
   "hi-IN": {
-    "/dashboard/marketing_announcements.json": "548e0ca24b7c84d9d1a1cdb027377567"
+    "/dashboard/marketing_announcements.json": "7056ff3d749e1257f811cd7f66211978"
   },
   "hr-HR": {
     "/dashboard/marketing_announcements.json": "60dc4f39117a03f1ada392123ab268ae"
@@ -90,16 +90,16 @@
     "/dashboard/marketing_announcements.json": "e5c94a961b0986457cfde7dbd7e656d3"
   },
   "id-ID": {
-    "/dashboard/marketing_announcements.json": "2b6f38b17f0d024ed32f9eb8c97e8077"
+    "/dashboard/marketing_announcements.json": "d3f6c380fa91c7a2cf114a442a6e920c"
   },
   "is-IS": {
     "/dashboard/marketing_announcements.json": "f03b91a178eda0b6d0130b027a8fe256"
   },
   "it-IT": {
-    "/dashboard/marketing_announcements.json": "47037871c37bfa0e58900b068f64d1d0"
+    "/dashboard/marketing_announcements.json": "97355f183dd14714a10a2e3a9f8d72a4"
   },
   "ja-JP": {
-    "/dashboard/marketing_announcements.json": "88a8b3944683873c62a28f3f0067716d"
+    "/dashboard/marketing_announcements.json": "5cecd16747e8440f3e9bb7ab7dc50701"
   },
   "ka-GE": {
     "/dashboard/marketing_announcements.json": "e33332676079059c5cfe5a41ce0fad14"
@@ -114,7 +114,7 @@
     "/dashboard/marketing_announcements.json": "288633db30f3806d85aa3b95b10a6775"
   },
   "ko-KR": {
-    "/dashboard/marketing_announcements.json": "e1244034b88310352f9fcc5f433df437"
+    "/dashboard/marketing_announcements.json": "21a4cc31d783d676cb5b4231bf46f7a2"
   },
   "ku-IQ": {
     "/dashboard/marketing_announcements.json": "7099f0c7ac01be8d5dc1ba2f52db0ac1"
@@ -168,7 +168,7 @@
     "/dashboard/marketing_announcements.json": "700d010fce550f28f4ea47c2504dfc94"
   },
   "pt-BR": {
-    "/dashboard/marketing_announcements.json": "c1a48822be1dd984d815d211d4d897c9"
+    "/dashboard/marketing_announcements.json": "6a4e6d7370bd3fabe98b66358f13bf52"
   },
   "pt-PT": {
     "/dashboard/marketing_announcements.json": "d968ecba468576e603f6ddf870935ef6"
@@ -189,7 +189,7 @@
     "/dashboard/marketing_announcements.json": "670499ecd1cdc18d311b391b2da56961"
   },
   "sk-SK": {
-    "/dashboard/marketing_announcements.json": "f4927520db22c0161e4676155aee728f"
+    "/dashboard/marketing_announcements.json": "cb2ccd56bb0cdeaeab3b21ad9a9e0f28"
   },
   "sl-SI": {
     "/dashboard/marketing_announcements.json": "1b88fd777eedc7f9cf8634f0a7f0569c"
@@ -213,7 +213,7 @@
     "/dashboard/marketing_announcements.json": "c0cc91e5afbdfb48cf4dd6fe64ced2b2"
   },
   "th-TH": {
-    "/dashboard/marketing_announcements.json": "68a96b68705b89df6efab6e48ac6f176"
+    "/dashboard/marketing_announcements.json": "69b03359ff20e149e877eb9edd36536c"
   },
   "tr-TR": {
     "/dashboard/marketing_announcements.json": "927490742fa9c23a5f0693a1fc044458"
@@ -234,7 +234,7 @@
     "/dashboard/marketing_announcements.json": "d32dc8b3339433aa5f23accceb94a55d"
   },
   "zh-TW": {
-    "/dashboard/marketing_announcements.json": "e495c32488acdb541cc638320aa45521"
+    "/dashboard/marketing_announcements.json": "0af214e06b1916086e862abcaa391dd3"
   },
   "zu-ZA": {
     "/dashboard/marketing_announcements.json": "d2c20ac265e8dc85865783aab0081862"

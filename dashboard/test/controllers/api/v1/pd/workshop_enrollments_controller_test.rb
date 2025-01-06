@@ -536,9 +536,8 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
 
   private def school_info_params
     {
-      school_type: 'private',
-      school_state: 'WA',
-      school_name: 'A Seattle private school',
+      country: 'US',
+      school_name: 'A Seattle school',
       school_zip: '98102'
     }
   end
