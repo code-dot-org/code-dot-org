@@ -29,6 +29,9 @@
                   "id": "repeat_simple2",
                   "deletable": false,
                   "movable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
                   "fields": {
                     "times": 1
                   },
@@ -39,6 +42,9 @@
                         "id": "play_sounds_together",
                         "deletable": false,
                         "movable": false,
+                        "extraState": {
+                          "disableNextConnection": true
+                        },
                         "inputs": {
                           "code": {
                             "block": {
@@ -46,6 +52,9 @@
                               "id": "play_sound_at_current_location_simple2",
                               "deletable": false,
                               "movable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
                               "fields": {
                                 "sound": "benson_boone_in_the_stars/piano_verse_1"
                               },
@@ -55,6 +64,9 @@
                                   "id": "B;uG]HL1K=]aZ1LvxAIn",
                                   "deletable": false,
                                   "movable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
                                   "fields": {
                                     "sound": "benson_boone_in_the_stars/drums_kick_beat"
                                   },
@@ -64,6 +76,9 @@
                                       "id": "$%^Gz~U0$crxYII3(iH*",
                                       "deletable": false,
                                       "movable": false,
+                                      "extraState": {
+                                        "disableNextConnection": true
+                                      },
                                       "fields": {
                                         "sound": "benson_boone_in_the_stars/vocals_choir"
                                       }
@@ -193,30 +208,18 @@
     "validations": [
       {
         "key": "music-intro-coding-loops-try_c514cdbe-6925-4db8-bd3b-22cce5639912",
-        "message": "Great work! You used a loop to repeat your code at least three times. ",
+        "message": "Great work! You used a loop to repeat your code at least two times. ",
         "next": true,
-        "conditions": [
-          {
-            "name": "played_anything_in_same_loop",
-            "value": 3
-          }
-        ]
-      },
-      {
-        "key": "music-coding-intro-5sounds_2cff78e0-f1c2-4839-9ffa-b2ff15987647",
-        "message": "The loop played twice. Change the [number](#clickable=repeat-block-field-workspace) in the loop so the sounds repeat three times. ",
-        "next": false,
         "conditions": [
           {
             "name": "played_anything_in_same_loop",
             "value": 2
           }
-        ],
-        "callout": "repeat-block-field-workspace"
+        ]
       },
       {
         "key": "music-coding-intro-5sounds_65cda160-e29d-4d3e-b8dc-a95bd2896c7b",
-        "message": "The loop played once. Change the [number](#clickable=repeat-block-field-workspace) in the loop so the sounds repeat three times. ",
+        "message": "The loop played once. Change the [number](#clickable=repeat-block-field-workspace) in the loop so the sounds repeat at least two times. ",
         "next": false,
         "conditions": [
           {
@@ -232,7 +235,7 @@
     "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-11-23T17:19:23.417+00:00\",\"changed\":[\"cloned from \\\"music-intro-coding-loops-try\\\"\"],\"cloned_from\":\"music-intro-coding-loops-try\"},{\"changed_at\":\"2024-11-26 17:10:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 18:15:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 18:16:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 18:19:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 18:20:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 18:21:41 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-11 04:02:27 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-11 04:05:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-11 04:06:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-13 22:36:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 19:30:41 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-17 19:33:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-17 19:34:13 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-19 17:14:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-11-23T17:19:23.417+00:00\",\"changed\":[\"cloned from \\\"music-intro-coding-loops-try\\\"\"],\"cloned_from\":\"music-intro-coding-loops-try\"},{\"changed_at\":\"2024-11-26 17:10:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 18:15:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 18:16:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 18:19:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 18:20:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 18:21:41 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-11 04:02:27 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-11 04:05:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-11 04:06:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-13 22:36:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 19:30:41 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-17 19:33:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-17 19:34:13 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-19 17:14:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 18:02:56 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 18:04:54 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
