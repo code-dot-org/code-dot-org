@@ -4,16 +4,16 @@ import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 import AccountCard from '@cdo/apps/templates/account/AccountCard';
 import i18n from '@cdo/locale';
 
-import styles from '../link-account.module.scss';
+import styles from './style.module.scss';
 
-const WorkshopStudentEnrollPage: React.FunctionComponent<{
+const StudentUserTypeChangePrompt: React.FunctionComponent<{
   userReturnTo?: string;
 }> = ({userReturnTo}) => (
   <main>
     <div className={styles.contentContainer}>
       <AccountBanner
         heading={i18n.accountNeedTeacherAccountWelcomeBannerHeaderLabel()}
-        desc={i18n.accountNeedTeacherAccountWelcomeBannerHeaderDesc()}
+        desc={i18n.accountNeedTeacherAccountWelcomeBannerHeaderDescGeneric()}
         showLogo={true}
       />
       <div className={styles.cardContainer}>
@@ -21,7 +21,7 @@ const WorkshopStudentEnrollPage: React.FunctionComponent<{
           id={'keep-student-account-card'}
           icon={'child'}
           title={i18n.accountKeepStudentAccountCardTitle()}
-          content={i18n.accountKeepStudentAccountCardContent()}
+          content={i18n.accountKeepStudentAccountCardContentGeneric()}
           buttonText={i18n.accountKeepStudentAccountCardButton()}
           buttonType="secondary"
           href="/home"
@@ -30,7 +30,7 @@ const WorkshopStudentEnrollPage: React.FunctionComponent<{
           id={'switch-to-teacher-account-card'}
           icon={'chalkboard-user'}
           title={i18n.accountSwitchTeacherAccountCardTitle()}
-          content={i18n.accountSwitchTeacherAccountCardContent()}
+          content={i18n.accountSwitchTeacherAccountCardContentGeneric()}
           buttonText={i18n.accountSwitchTeacherAccountCardButton()}
           buttonType="primary"
           href={`/users/edit${
@@ -44,4 +44,4 @@ const WorkshopStudentEnrollPage: React.FunctionComponent<{
   </main>
 );
 
-export default WorkshopStudentEnrollPage;
+export default StudentUserTypeChangePrompt;
