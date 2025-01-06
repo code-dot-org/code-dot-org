@@ -48,6 +48,7 @@ export default class CodebridgeRegistry {
     this.terminalLines.push(line);
     if (this.terminal) {
       this.terminal.writeln(line);
+      this.terminal.scrollToBottom();
       this.terminal.focus();
     }
   }
