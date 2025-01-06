@@ -21,3 +21,9 @@ function getSystemMessage(message: string, appName: string) {
   const systemMessagePrefix = appName === 'pythonlab' ? '[PYTHON LAB] ' : '';
   return `${systemMessagePrefix}${message}`;
 }
+
+export function writeImage(base64Image: string) {
+  const dataSize = atob(base64Image).length;
+  const imageString = `\x1b]1337;File=inline=1;size=${dataSize}:${base64Image}\x1b\\`;
+  CodebridgeRegistry.getInstance().appendTerminalLine(imageString);
+}

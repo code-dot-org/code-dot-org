@@ -8686,6 +8686,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@xterm/addon-image@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "@xterm/addon-image@npm:0.8.0"
+  peerDependencies:
+    "@xterm/xterm": ^5.2.0
+  checksum: 852ea4482e0272bf74a505a9b54429a7d60775f0ee0b86bf207b5ea52a8f2e83ce2870415129fca82710a63a7ca3e233564d5dd050ebc49512d1d0113e5b5b1b
+  languageName: node
+  linkType: hard
+
 "@xterm/xterm@npm:^5.5.0":
   version: 5.5.0
   resolution: "@xterm/xterm@npm:5.5.0"
@@ -10108,6 +10117,7 @@ __metadata:
     "@typescript-eslint/parser": ^7.16.1
     "@wojtekmaj/enzyme-adapter-react-17": ^0.8.0
     "@xterm/addon-fit": ^0.10.0
+    "@xterm/addon-image": ^0.8.0
     "@xterm/xterm": ^5.5.0
     acorn-import-assertions: ^1.9.0
     aws-sdk: 2.1231.0

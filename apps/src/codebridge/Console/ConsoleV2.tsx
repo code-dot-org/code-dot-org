@@ -1,4 +1,5 @@
 import {FitAddon} from '@xterm/addon-fit';
+import {ImageAddon} from '@xterm/addon-image';
 import {Terminal} from '@xterm/xterm';
 import React, {useEffect, useRef, useState} from 'react';
 
@@ -70,6 +71,8 @@ const ConsoleV2: React.FunctionComponent = () => {
     });
     const fitAddon = new FitAddon();
     terminal.loadAddon(fitAddon);
+    const imageAddon = new ImageAddon();
+    terminal.loadAddon(imageAddon);
     CodebridgeRegistry.getInstance().setTerminal(terminal);
     CodebridgeRegistry.getInstance().setTerminalFitAddon(fitAddon);
     terminal.open(terminalRef.current);

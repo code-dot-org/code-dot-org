@@ -34,7 +34,7 @@ const consoleSlice = createSlice({
     },
     appendOutputImage(state, action: PayloadAction<string>) {
       state.output.push({type: 'img', contents: action.payload});
-      state.images.push(action.payload);
+      //state.images.push(action.payload);
     },
     appendSystemMessage(state, action: PayloadAction<string>) {
       state.output.push({type: 'system_msg', contents: action.payload});

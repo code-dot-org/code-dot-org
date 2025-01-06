@@ -1,6 +1,7 @@
 import {
   writeConsoleMessage,
   writeErrorMessage,
+  writeImage,
   writeSystemError,
   writeSystemMessage,
 } from '@codebridge/Console/ConsoleHelper';
@@ -42,6 +43,7 @@ const setUpPyodideWorker = () => {
         if (message.startsWith(MATPLOTLIB_IMG_TAG)) {
           // This is a matplotlib image, so we need to append it to the output
           const image = message.slice(MATPLOTLIB_IMG_TAG.length + 1);
+          writeImage(image);
           getStore().dispatch(appendOutputImage(image));
           break;
         }
