@@ -402,7 +402,6 @@ class ManageStudentsTable extends Component {
 
   handleSaveAllClick() {
     this.props.saveAllStudents();
-    this.props.updateNeedsReloadFunction();
 
     analyticsReporter.sendEvent(
       EVENTS.SECTION_STUDENTS_TABLE_SAVE_ALL_CLICKED,

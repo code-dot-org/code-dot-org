@@ -107,7 +107,6 @@ class ManageStudentsActionsCell extends Component {
 
   onRequestDelete = () => {
     this.setState({deleting: true});
-    this.props.updateNeedsReloadFunction();
   };
 
   onCancelDelete = () => {
@@ -158,7 +157,6 @@ class ManageStudentsActionsCell extends Component {
       this.onAdd();
     } else {
       this.props.saveStudent(id);
-      this.props.updateNeedsReloadFunction();
       firehoseClient.putRecord(
         {
           study: 'teacher-dashboard',
@@ -181,8 +179,6 @@ class ManageStudentsActionsCell extends Component {
   onAdd = () => {
     const {id, sectionId} = this.props;
     this.props.addStudent(id);
-    console.log('onAdd inside');
-    this.props.updateNeedsReloadFunction();
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard',
