@@ -2,7 +2,6 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 export interface CodebridgeConsoleState {
   output: ConsoleLog[];
-  images: string[];
 }
 
 export interface ConsoleLog {
@@ -18,7 +17,6 @@ export interface ConsoleLog {
 
 export const initialState: CodebridgeConsoleState = {
   output: [],
-  images: [],
 };
 
 // SLICE
@@ -34,7 +32,6 @@ const consoleSlice = createSlice({
     },
     appendOutputImage(state, action: PayloadAction<string>) {
       state.output.push({type: 'img', contents: action.payload});
-      //state.images.push(action.payload);
     },
     appendSystemMessage(state, action: PayloadAction<string>) {
       state.output.push({type: 'system_msg', contents: action.payload});
@@ -48,9 +45,6 @@ const consoleSlice = createSlice({
     resetOutput(state) {
       state.output = [];
     },
-    resetImages(state) {
-      state.images = [];
-    },
   },
 });
 
@@ -62,7 +56,6 @@ export const {
   appendErrorMessage,
   appendSystemError,
   resetOutput,
-  resetImages,
 } = consoleSlice.actions;
 
 export default consoleSlice.reducer;

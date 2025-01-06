@@ -1,5 +1,5 @@
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
-import {appendSystemMessage, resetImages} from '@codebridge/redux/consoleRedux';
+import {appendSystemMessage} from '@codebridge/redux/consoleRedux';
 import {AnyAction, Dispatch} from 'redux';
 
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
@@ -44,7 +44,6 @@ export async function handleRunClick(
       dispatch(appendSystemMessage(`You have no ${MAIN_PYTHON_FILE} to run.`));
       return;
     }
-    dispatch(resetImages());
     consoleManager?.writeSystemMessage('Running program...', appName);
     dispatch(appendSystemMessage('Running program...'));
     await runPythonCode(code, source);

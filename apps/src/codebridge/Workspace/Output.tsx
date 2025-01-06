@@ -1,36 +1,31 @@
-import {usePreviewPanel} from '@codebridge/hooks/usePreviewPanel';
 import classNames from 'classnames';
 import React from 'react';
 
-import OutputPreview from '@cdo/apps/codebridge/OutputPreview/OutputPreview';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useCodebridgeContext} from '../codebridgeContext';
 import Console from '../Console';
 import ConsoleV2 from '../Console/ConsoleV2';
-import ImagePreview from '../OutputPreview/ImagePreview';
+import MiniAppPreview from '../MiniAppPreview/MiniAppPreview';
 
 import moduleStyles from './output.module.scss';
 
 const Output: React.FunctionComponent = () => {
-  const images = useAppSelector(state => state.codebridgeConsole.images);
-  const {showPreviewPanel} = usePreviewPanel();
+  const miniApp = useAppSelector(state => state.lab.levelProperties?.miniApp);
   const {config} = useCodebridgeContext();
   const isVertical = config.activeGridLayout === 'vertical';
   const consoleExperimentEnabled = experiments.isEnabled(
     experiments.PYTHONLAB_XTERM
   );
   const ConsoleComponent = consoleExperimentEnabled ? ConsoleV2 : Console;
-  if (!showPreviewPanel) {
+  if (!miniApp) {
     return (
       <div className={moduleStyles.outputContainer}>
         <ConsoleComponent />
       </div>
     );
   }
-
-  const innerPreviewComponent = images.length > 0 ? <ImagePreview /> : null;
 
   return (
     <div
@@ -39,7 +34,7 @@ const Output: React.FunctionComponent = () => {
         isVertical ? moduleStyles.vertical : moduleStyles.horizontal
       )}
     >
-      <OutputPreview innerComponent={innerPreviewComponent} />
+      <MiniAppPreview />
       <ConsoleComponent />
     </div>
   );

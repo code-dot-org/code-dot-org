@@ -11,8 +11,6 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {usePreviewPanel} from '../hooks/usePreviewPanel';
-
 import ControlButtons from './ControlButtons';
 import GraphModal from './GraphModal';
 import RightButtons from './RightButtons';
@@ -24,7 +22,9 @@ const Console: React.FunctionComponent = () => {
   const dispatch = useDispatch();
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const scrollAnchorRef = useRef<HTMLDivElement>(null);
-  const {showPreviewPanel} = usePreviewPanel();
+  const hasMiniApp = useAppSelector(
+    state => !!state.lab.levelProperties?.miniApp
+  );
 
   const [graphModalOpen, setGraphModalOpen] = useState(false);
   const [activeGraphIndex, setActiveGraphIndex] = useState(0);
@@ -69,7 +69,7 @@ const Console: React.FunctionComponent = () => {
       rightHeaderContent={
         <RightButtons clearOutput={() => clearOutput(true)} />
       }
-      leftHeaderContent={!showPreviewPanel && <ControlButtons />}
+      leftHeaderContent={!hasMiniApp && <ControlButtons />}
       headerClassName={moduleStyles.consoleHeader}
     >
       <div className={moduleStyles.console} id="uitest-codebridge-console">

@@ -7,11 +7,11 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import '@xterm/xterm/css/xterm.css';
 
 import CodebridgeRegistry from '../CodebridgeRegistry';
-import {usePreviewPanel} from '../hooks/usePreviewPanel';
 
 import ConsoleManager from './ConsoleManager';
 import ControlButtons from './ControlButtons';
@@ -20,13 +20,15 @@ import RightButtons from './RightButtons';
 import moduleStyles from './console.module.scss';
 
 const ConsoleV2: React.FunctionComponent = () => {
-  const {showPreviewPanel} = usePreviewPanel();
   const terminalRef = useRef<HTMLDivElement>(null);
   const [didInit, setDidInit] = useState(false);
   const clearOutput = () => {
     CodebridgeRegistry.getInstance().getConsoleManager()?.clearTerminalLines();
   };
 
+  const hasMiniApp = useAppSelector(
+    state => !!state.lab.levelProperties?.miniApp
+  );
   // Clear console when we change levels. Don't send an analytics event
   // as the user did not initiate this action.
   // TODO: Add analytics
@@ -111,7 +113,7 @@ const ConsoleV2: React.FunctionComponent = () => {
       className={moduleStyles.consoleContainer}
       headerContent={codebridgeI18n.consoleHeader()}
       rightHeaderContent={<RightButtons clearOutput={clearOutput} />}
-      leftHeaderContent={!showPreviewPanel && <ControlButtons />}
+      leftHeaderContent={!hasMiniApp && <ControlButtons />}
       headerClassName={moduleStyles.consoleHeader}
     >
       <div ref={terminalRef} className={moduleStyles.consoleV2} />

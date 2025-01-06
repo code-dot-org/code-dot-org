@@ -5,18 +5,11 @@ import React from 'react';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
-import moduleStyles from './output-preview.module.scss';
+import moduleStyles from './mini-app-preview.module.scss';
 
-interface OutputPreviewProps {
-  innerComponent?: React.ReactNode;
-}
-
-const OutputPreview: React.FunctionComponent<OutputPreviewProps> = ({
-  innerComponent,
-}) => {
+const MiniAppPreview: React.FunctionComponent = () => {
   const {config} = useCodebridgeContext();
   const isHorizontal = config.activeGridLayout === 'horizontal';
-
   return (
     <PanelContainer
       id="codebridge-preview"
@@ -29,9 +22,9 @@ const OutputPreview: React.FunctionComponent<OutputPreviewProps> = ({
       }
       headerClassName={moduleStyles.previewHeader}
     >
-      {innerComponent}
+      <div />
     </PanelContainer>
   );
 };
 
-export default OutputPreview;
+export default MiniAppPreview;
