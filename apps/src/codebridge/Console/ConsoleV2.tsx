@@ -1,13 +1,15 @@
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils';
 import {FitAddon} from '@xterm/addon-fit';
 import {ImageAddon} from '@xterm/addon-image';
 import {Terminal} from '@xterm/xterm';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import '@xterm/xterm/css/xterm.css';
@@ -18,20 +20,32 @@ import RightButtons from './RightButtons';
 
 import moduleStyles from './console.module.scss';
 
+// An xterm.js console component.
 const ConsoleV2: React.FunctionComponent = () => {
   const terminalRef = useRef<HTMLDivElement>(null);
   const [didInit, setDidInit] = useState(false);
-  const clearOutput = () => {
-    CodebridgeRegistry.getInstance().getConsoleManager()?.clearTerminalLines();
-  };
+  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+
+  const clearOutput = useCallback(
+    (sendAnalytics: boolean) => {
+      CodebridgeRegistry.getInstance()
+        .getConsoleManager()
+        ?.clearTerminalLines();
+      if (sendAnalytics) {
+        sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_CLEAR_CONSOLE, appName);
+      }
+    },
+    [appName]
+  );
 
   const hasMiniApp = useAppSelector(
     state => !!state.lab.levelProperties?.miniApp
   );
   // Clear console when we change levels. Don't send an analytics event
   // as the user did not initiate this action.
-  // TODO: Add analytics
-  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => clearOutput());
+  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () =>
+    clearOutput(false)
+  );
 
   const onData = (data: string) => {
     const terminal = CodebridgeRegistry.getInstance()
@@ -111,7 +125,9 @@ const ConsoleV2: React.FunctionComponent = () => {
       id="codebridge-console"
       className={moduleStyles.consoleContainer}
       headerContent={codebridgeI18n.consoleHeader()}
-      rightHeaderContent={<RightButtons clearOutput={clearOutput} />}
+      rightHeaderContent={
+        <RightButtons clearOutput={() => clearOutput(true)} />
+      }
       leftHeaderContent={!hasMiniApp && <ControlButtons />}
       headerClassName={moduleStyles.consoleHeader}
     >

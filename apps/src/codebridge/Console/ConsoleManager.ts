@@ -1,6 +1,7 @@
 import {FitAddon} from '@xterm/addon-fit';
 import {Terminal} from '@xterm/xterm';
 
+// Manager for xterm.js-based console in codebridge
 export default class ConsoleManager {
   private terminal: Terminal;
   private terminalFitAddon: FitAddon;
