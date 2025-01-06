@@ -42,9 +42,9 @@ const CopyrightDialog: React.FC<CopyrightDialogProps> = ({
         <div className="modalBody">
           <SafeMarkdown
             markdown={i18n.copyright_thanks({
-              donors_link: pegasus('about/donors'),
-              partners_link: pegasus('about/partners'),
-              team_link: pegasus('about/team'),
+              donors_link: pegasus('/about/donors'),
+              partners_link: pegasus('/about/partners'),
+              team_link: pegasus('/about/team'),
             })}
           />
           <BodyThreeText>{i18n.copyright_specialRecognition()}</BodyThreeText>

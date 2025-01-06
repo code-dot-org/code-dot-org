@@ -1,0 +1,28 @@
+name 'self-paced-equity-U2L1-keyterms'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Key Terms
+
+#### Before we dive in to strategies for promoting inclusion and belonging in the classroom, let's review a few key terms. If you completed Module 1, you've already seen the definitions for **inclusion** and **belonging**, which we've included again below. Accessibility is a new term.
+<br>
+
+* #### **Inclusion**: Creating learning environments that are accessible and welcoming of students’ identities, backgrounds, differences and perspectives without barriers or judgment. This means actively attending to gender, race, ethnicity, ability, or socioeconomic status.
+* #### **Belonging**: Belonging is the feeling of security and support when there is a sense of acceptance, inclusion, and identity for a member of a certain group.
+
+<div style="background-color: #C6E3E7; border-radius: 20px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
+
+* #### **Accessibility:** When a person with a disability is afforded the opportunity to acquire the same information, engage in the same interactions, and enjoy the same services as a person without a disability in an equally integrated and equally effective manner, with substantially equivalent ease of use.</p></div>
+<br>
+
+#### It's important to note that accessibility falls *under* the umbrella of inclusion and focuses on ensuring that students with any form of disability are considered in the computer science classroom. We'll review specific strategies to promote accessibility later in this lesson. Let's start with belonging and inclusion by continuing to the next level.
+
+<div style="display: flex; align-items: left; margin: 30px 0px 30px 0px">
+	<img src="https://images.code.org/08d8da1158d67fd1ed7535c90b2b91bc-image-1731961007471.png" style="width: auto; height: 100px;"  alt="An open hand with an open book floating above it.">
+	<div style="background-color: #009EB0; border-radius: 20px 20px 20px 20px; color: #000000; width: 90%; margin-left: 5%; padding: 10px 10px 5px 10px;">
+		<p style="color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Resource Suggestion</b></p>
+        <p style="color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px">These definitions are sourced from <span style="background-color: LightCyan;"><a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4GC0a" target="blank" rel="noopener noreferrer">Microsoft's Guide to Inclusive Computer Science Education</a></span>. This resource is a great overview of issues of diversity, access, and inclusion in K-12 computer science education.</p>
+	</div>
+</div>
+MARKDOWN

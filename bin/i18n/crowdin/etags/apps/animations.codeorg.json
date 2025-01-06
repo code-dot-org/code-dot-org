@@ -1,6 +1,6 @@
 {
   "ar-SA": {
-    "/animations/spritelab_animation_library.json": "4577455473593b4ab1b84a6788b6e33b"
+    "/animations/spritelab_animation_library.json": "b6272498a59e1350ab73015f11cc3df4"
   },
   "az-AZ": {
     "/animations/spritelab_animation_library.json": "2a2a9cb202f399d5321a8a3bbd5fc177"
@@ -27,7 +27,7 @@
     "/animations/spritelab_animation_library.json": "1f71aa85a6ac6672877a55326fec528b"
   },
   "de-DE": {
-    "/animations/spritelab_animation_library.json": "dc51774fc3d8cc6a663bf3e36d0722de"
+    "/animations/spritelab_animation_library.json": "ddcd5157b420f2d270a14b801e957bef"
   },
   "dv-MV": {
     "/animations/spritelab_animation_library.json": "f0d5dc81a5027be2d29bf2f76ec58ac3"
@@ -42,7 +42,7 @@
     "/animations/spritelab_animation_library.json": "863aaee1f7ed986f4db0222698109f12"
   },
   "es-MX": {
-    "/animations/spritelab_animation_library.json": "1a63a156cdbcbecb8fadc6a942c985b6"
+    "/animations/spritelab_animation_library.json": "6097fa2497927403104bd43712f693c0"
   },
   "et-EE": {
     "/animations/spritelab_animation_library.json": "753e19da9f4140707ce4a4915f94a333"
@@ -60,10 +60,10 @@
     "/animations/spritelab_animation_library.json": "3ec2c08bf2102f0156c80a8e3f783dea"
   },
   "fil-PH": {
-    "/animations/spritelab_animation_library.json": "a094163b0fff89092f6a505f3ec8a414"
+    "/animations/spritelab_animation_library.json": "f79b4bafed859b7f8b4288651b8707bb"
   },
   "fr-FR": {
-    "/animations/spritelab_animation_library.json": "1a0c268189736ff7388bcea8d7d939c9"
+    "/animations/spritelab_animation_library.json": "1843c6a7166ffb3dc411c1d761341de8"
   },
   "ga-IE": {
     "/animations/spritelab_animation_library.json": "0e23140e3b9c5c803507d164e5a8833d"
@@ -78,7 +78,7 @@
     "/animations/spritelab_animation_library.json": "3f0c409ee1b1eddc32488a5cdfd937d8"
   },
   "hi-IN": {
-    "/animations/spritelab_animation_library.json": "f1f95880b7d6103deef5e6ef0e4388fb"
+    "/animations/spritelab_animation_library.json": "fca03700e451ca19d2839968ad344a3e"
   },
   "hr-HR": {
     "/animations/spritelab_animation_library.json": "f77640268264650ca1d973e1b0750b65"
@@ -90,16 +90,16 @@
     "/animations/spritelab_animation_library.json": "8ef895746c12e5acc8ad7d70d6e50298"
   },
   "id-ID": {
-    "/animations/spritelab_animation_library.json": "82a27061af44fd979f7a06117978d808"
+    "/animations/spritelab_animation_library.json": "18f835d396f3c13a6077d6353bb67b9f"
   },
   "is-IS": {
     "/animations/spritelab_animation_library.json": "631c79ffca697ef72e89473cbfa985b7"
   },
   "it-IT": {
-    "/animations/spritelab_animation_library.json": "512c85212cf2368cfc3c6efed375f38e"
+    "/animations/spritelab_animation_library.json": "abd223504e07717980f5fa51ef664627"
   },
   "ja-JP": {
-    "/animations/spritelab_animation_library.json": "afc837e46259009374c30474a43e33e0"
+    "/animations/spritelab_animation_library.json": "39fe08a486273e855671c0ad144493fd"
   },
   "ka-GE": {
     "/animations/spritelab_animation_library.json": "a88d29d82f56cf7aa2e3d884fa378ab6"
@@ -114,7 +114,7 @@
     "/animations/spritelab_animation_library.json": "d8f0d8e9706844986812301c84979824"
   },
   "ko-KR": {
-    "/animations/spritelab_animation_library.json": "f7e90093662db4eb8387a4066c4f3db9"
+    "/animations/spritelab_animation_library.json": "137f41c59d24af64853f6f031ba28a36"
   },
   "ku-IQ": {
     "/animations/spritelab_animation_library.json": "d009bc8802f74d36f5c498e51a6e291d"
@@ -168,13 +168,13 @@
     "/animations/spritelab_animation_library.json": "546c80bd7f556a7ee636950239c6fc41"
   },
   "pt-BR": {
-    "/animations/spritelab_animation_library.json": "3907f13add2a0da38fec010c149ad441"
+    "/animations/spritelab_animation_library.json": "48447e81d2ab79e14ef74fd10e8144f1"
   },
   "pt-PT": {
     "/animations/spritelab_animation_library.json": "fe79327c80c0f00c98943569c64358be"
   },
   "ro-RO": {
-    "/animations/spritelab_animation_library.json": "187bc9ead09ede4b0466c487e4b3f5b7"
+    "/animations/spritelab_animation_library.json": "e8ec4f344b193bae085fbf3693324a81"
   },
   "ru-RU": {
     "/animations/spritelab_animation_library.json": "441ea3b3c90394b16d077d2df4de2432"
@@ -189,10 +189,10 @@
     "/animations/spritelab_animation_library.json": "05aa27808d10779d3cf439b54c5b9081"
   },
   "sk-SK": {
-    "/animations/spritelab_animation_library.json": "307dd8a3f398258d2f5797d07741ae53"
+    "/animations/spritelab_animation_library.json": "73783a4dff50a30c14351bfd261879ba"
   },
   "sl-SI": {
-    "/animations/spritelab_animation_library.json": "0a79858bf5c84c89fcc749f913366ce8"
+    "/animations/spritelab_animation_library.json": "f7bfa925950dbe33d08d474bf48d26aa"
   },
   "sq-AL": {
     "/animations/spritelab_animation_library.json": "50808975e84a0fa3b4b653ba886a3a9b"
@@ -213,7 +213,7 @@
     "/animations/spritelab_animation_library.json": "8521b0f45977e5f220ccc87b6f6916c6"
   },
   "th-TH": {
-    "/animations/spritelab_animation_library.json": "51584312d4c4d540fe6c3f749aa1581e"
+    "/animations/spritelab_animation_library.json": "026f499f2eb72565a663c2195259546f"
   },
   "tr-TR": {
     "/animations/spritelab_animation_library.json": "537837a82486168212840e99026c5f66"
@@ -234,7 +234,7 @@
     "/animations/spritelab_animation_library.json": "95b751ba9c3ff53f023d11c4321b6e38"
   },
   "zh-TW": {
-    "/animations/spritelab_animation_library.json": "3d92113a6138f6533e719e1eb74fd9d0"
+    "/animations/spritelab_animation_library.json": "a6cce97418a14390ecd154d635c0d533"
   },
   "zu-ZA": {
     "/animations/spritelab_animation_library.json": "efda914f2e6def67dff9ab84fed455b1"

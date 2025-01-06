@@ -1,0 +1,35 @@
+name 'self-paced-equity-U2L3-opening'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Welcome!
+
+## Module 2, Lesson 3: Expanding Access to Computer Science
+
+<div style="display: flex; align-items: flex-start; gap: 20px; margin-top: 20px;">
+    <div style="width: 70%;">
+        <p style="line-height: 1.5; font-size: 18px;">
+            In this lesson, you will:
+        </p>
+        <ul style="margin-left: 20px; line-height: 1.6;">
+            <li style="line-height: 1.5;font-size: 16px;">
+                Become an advocate for equity and inclusion within your school and community.
+            </li>
+            <li style="line-height: 1.5;font-size: 16px;">
+                Expand participation in computer science classes.
+            </li>
+        </ul>
+        <p style="font-size: 16px; color: black;">
+        <br>
+        <p style="line-height: 1.5; font-size: 18px;"><strong>Suggested time for this lesson:</strong> <mark>update</mark> minutes
+        </p>
+    </div>
+    
+    <!-- Image on the right -->
+    <img src="https://images.code.org/73e849d38e6b50a497245a8410f3da76-image-1736141051850.24.09 PM.png" alt="Three students smile at the camera" style="width: 30%; height: auto; border-radius: 10px;">
+</div>
+<br>
+
+#### **Note**: This lesson is differentiated into two parts: Expanding Access in Elementary School and Expanding Access in Middle and High School. We will note each section in the subsequent levels, but feel free to direct yourself to the levels that are relevant to your teaching context.
+MARKDOWN

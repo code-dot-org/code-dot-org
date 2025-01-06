@@ -11,7 +11,7 @@ markdown <<MARKDOWN
 
 #### Bias occurs when a decision favors some things and de-prioritizes or excludes others. Bias within an AI system is a direct reflection of the data a system was trained on and the way it is trained.
 
-#### Teaching about biases in technology can be a sensitive subject for your students. These **action items** will help you feel more comfortable discussion these issues in your class. 
+#### Teaching about biases in technology can be a sensitive subject for your students. These **action items** will help you feel more comfortable discussing these issues in your class. 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;"> 🖥️Assume all AI systems have bias</summary>

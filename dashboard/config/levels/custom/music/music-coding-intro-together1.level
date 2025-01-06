@@ -8,12 +8,12 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "####<i class=\"fa-solid fa-layer-group\"></i> Layering sounds\r\n\r\n1. Add another sound into the play together block.\r\n\r\n\r\n",
+    "long_instructions": "####<i class=\"fa-solid fa-layer-group\"></i> Layer the sounds\r\n\r\n1. Add another [sound](#clickable=play-sound-block) into the [play together](#clickable=id-up-left:play_sounds_together) block.\r\n\r\n\r\n",
     "hide_share_and_remix": "true",
     "validations": [
       {
         "key": "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b",
-        "message": "You can choose different sounds if you want. <br> Press Continue when you are done.",
+        "message": "Those sounds are great together!",
         "next": true,
         "conditions": [
           {
@@ -24,7 +24,7 @@
       },
       {
         "key": "music-ai-skill-playtogether_795b9999-0f45-441c-bd81-23af6c157f81",
-        "message": "Try playing two different [sounds](#clickable=play-sound-block) in the [play together](#clickable=play-sounds-together-block-workspace) block.",
+        "message": "Try playing two different [sounds](#clickable=play-sound-block) in the [play together](#clickable=id-up-left:play_sounds_together) block.",
         "next": false,
         "conditions": [
           {
@@ -32,7 +32,7 @@
             "value": 1
           }
         ],
-        "callout": "play-sound-block-workspace"
+        "callout": "id-up-left:play_sounds_together"
       },
       {
         "key": "music-ai-skill-playtogether_7d85508c-951f-4734-8c97-9c67745a4207",
@@ -44,7 +44,7 @@
             "value": 1
           }
         ],
-        "callout": "play-sounds-together-block-workspace"
+        "callout": "play-sound-block---play-sounds-together-block-workspace-up-inside"
       },
       {
         "key": "music-ai-skill-playtogether_36540a11-c67f-47da-bb3a-e2bb6181e9d1",
@@ -53,7 +53,7 @@
         "conditions": [
 
         ],
-        "callout": "play-sound-block"
+        "callout": "play-sound-block---play-sounds-together-block-workspace-up-inside"
       }
     ],
     "level_data": {
@@ -70,7 +70,7 @@
               "movable": false,
               "next": {
                 "block": {
-                  "type": "play_sounds_together",
+                  "type": "play_sounds_together_no_next",
                   "id": "play_sounds_together",
                   "deletable": false,
                   "movable": false,
@@ -79,6 +79,7 @@
                       "block": {
                         "type": "play_sound_at_current_location_simple2",
                         "id": "play_sound_at_current_location_simple2",
+                        "deletable": false,
                         "movable": false,
                         "fields": {
                           "sound": "i_need_a_dollar_aloe_blacc/drums_1"
@@ -156,7 +157,7 @@
     "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-11-24T17:01:13.616+00:00\",\"changed\":[\"cloned from \\\"music-intro-coding-seq-modify-together\\\"\"],\"cloned_from\":\"music-intro-coding-seq-modify-together\"},{\"changed_at\":\"2024-11-24 17:16:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:17:20 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:20:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-11-24T17:01:13.616+00:00\",\"changed\":[\"cloned from \\\"music-intro-coding-seq-modify-together\\\"\"],\"cloned_from\":\"music-intro-coding-seq-modify-together\"},{\"changed_at\":\"2024-11-24 17:16:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:17:20 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:20:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 17:23:29 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-10 20:24:07 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-10 20:24:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-13 22:35:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 18:11:22 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-17 18:13:48 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-17 18:14:42 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Read 1: Context",
-    "long_instructions": "![](https://images.code.org/ec50df7f593a0b42a051016e9c923b50-image-1721233031201.16.52 PM.png)\r\n#### Take a look at the data above. Use the sentence starters to help you answer the question: **What is this data about?**\r\n- #### This data is from...\r\n- #### I know that...\r\n- #### A pattern I see is...\r\n- #### The data is organized...\r\n\r\n##### *The sentence starters are here to help you think about your answer. You do not have to answer all of them.*\r\n",
+    "long_instructions": "\r\n\r\n<img src=\"https://images.code.org/ec50df7f593a0b42a051016e9c923b50-image-1721233031201.16.52 PM.png\" alt=\"spreadsheet of dataset with pizza preferences\" width=\"300px\" style=\"border-radius:10px; float:left; margin: 0 0 40px 40px;\">\r\n\r\n<div style=\"clear:both;\"></div>\r\n\r\n#### Take a look at the data above. Use the sentence starters to help you answer the question: **What is this data about?**\r\n- #### This data is from...\r\n- #### I know that...\r\n- #### A pattern I see is...\r\n- #### The data is organized...\r\n\r\n##### *The sentence starters are here to help you think about your answer. You do not have to answer all of them.*\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -17,7 +17,7 @@
     "skip_dialog": true,
     "skip_sound": true
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-21T19:09:30.859+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson2-level1\\\"\"],\"cloned_from\":\"data-science-ch1-lesson2-level1\"},{\"changed_at\":\"2024-11-06 17:09:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-08-21T19:09:30.859+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson2-level1\\\"\"],\"cloned_from\":\"data-science-ch1-lesson2-level1\"},{\"changed_at\":\"2024-11-06 17:09:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-12-12 17:58:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

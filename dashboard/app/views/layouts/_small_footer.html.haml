@@ -5,7 +5,7 @@
     i18nDropdownInBase: view_options[:has_i18n],
     localeUrl: locale_url,
     currentLocale: locale,
-    localeOptions: Cdo::I18n.locale_options.map {|(text, value)| {text: text, value: value}},
+    localeOptions: locale_options.map {|(text, value)| {text: text, value: value}},
     privacyPolicyInBase: true,
     copyrightInBase: true,
     baseMoreMenuString: I18n.t('footer.more'),

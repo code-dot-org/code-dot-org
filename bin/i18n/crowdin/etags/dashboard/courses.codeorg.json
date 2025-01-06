@@ -1,6 +1,6 @@
 {
   "ar-SA": {
-    "/dashboard/courses.yml": "5bf310ce9f7d460dc4db70fb623b4164"
+    "/dashboard/courses.yml": "56d16933a08147efc2c1a73e188144bb"
   },
   "az-AZ": {
     "/dashboard/courses.yml": "efc5740959f34d1f2c4f025741f01abb"
@@ -27,7 +27,7 @@
     "/dashboard/courses.yml": "efc5740959f34d1f2c4f025741f01abb"
   },
   "de-DE": {
-    "/dashboard/courses.yml": "504e896a268e48debe80b00edddf1423"
+    "/dashboard/courses.yml": "7b03de655bd291814d0cbdf9cde2988a"
   },
   "dv-MV": {
     "/dashboard/courses.yml": "efc5740959f34d1f2c4f025741f01abb"
@@ -42,7 +42,7 @@
     "/dashboard/courses.yml": "ee88a8e0f3cc17c5d1454f251cb3b300"
   },
   "es-MX": {
-    "/dashboard/courses.yml": "e8c936391b0500c32372a95badd4b08d"
+    "/dashboard/courses.yml": "111dcb37a885b5a9ebe31e2650bb3f04"
   },
   "et-EE": {
     "/dashboard/courses.yml": "efc5740959f34d1f2c4f025741f01abb"
@@ -60,10 +60,10 @@
     "/dashboard/courses.yml": "efc5740959f34d1f2c4f025741f01abb"
   },
   "fil-PH": {
-    "/dashboard/courses.yml": "d0be4b89d4e538ff600b3d46db84ec15"
+    "/dashboard/courses.yml": "b0342565509817a9c98966fe450c1473"
   },
   "fr-FR": {
-    "/dashboard/courses.yml": "f81ad2e4870abe9c0c86c88085c57047"
+    "/dashboard/courses.yml": "176e6dae939eebf6c04ff1182d29738f"
   },
   "ga-IE": {
     "/dashboard/courses.yml": "ee88a8e0f3cc17c5d1454f251cb3b300"
@@ -78,7 +78,7 @@
     "/dashboard/courses.yml": "efc5740959f34d1f2c4f025741f01abb"
   },
   "hi-IN": {
-    "/dashboard/courses.yml": "3313e00b8c094eb32f9cf2582d4f97b7"
+    "/dashboard/courses.yml": "442144ab389efc03a34de9d11ea4dc36"
   },
   "hr-HR": {
     "/dashboard/courses.yml": "efc5740959f34d1f2c4f025741f01abb"
@@ -90,16 +90,16 @@
     "/dashboard/courses.yml": "efc5740959f34d1f2c4f025741f01abb"
   },
   "id-ID": {
-    "/dashboard/courses.yml": "124e1bd61de4509d9d556e4770b60627"
+    "/dashboard/courses.yml": "b59ce0910e546c13ec46712cffd54513"
   },
   "is-IS": {
     "/dashboard/courses.yml": "ee88a8e0f3cc17c5d1454f251cb3b300"
   },
   "it-IT": {
-    "/dashboard/courses.yml": "0e487abdc4c9d79db885f1f5a488a778"
+    "/dashboard/courses.yml": "bdafa4d9dd1157fb0d162b278c7e7047"
   },
   "ja-JP": {
-    "/dashboard/courses.yml": "bdaa239013c94b1d488dd449ac4d8a7a"
+    "/dashboard/courses.yml": "cb01cfc360e535bdb88b454136fc73ac"
   },
   "ka-GE": {
     "/dashboard/courses.yml": "efc5740959f34d1f2c4f025741f01abb"
@@ -114,7 +114,7 @@
     "/dashboard/courses.yml": "ee88a8e0f3cc17c5d1454f251cb3b300"
   },
   "ko-KR": {
-    "/dashboard/courses.yml": "cc1ed3b01840c97a57321e7f408875d2"
+    "/dashboard/courses.yml": "ab7e784f8f5458366efdc01177533b9a"
   },
   "ku-IQ": {
     "/dashboard/courses.yml": "ee88a8e0f3cc17c5d1454f251cb3b300"
@@ -168,7 +168,7 @@
     "/dashboard/courses.yml": "cd2f9c2db962173e365f5da92d1f6aa9"
   },
   "pt-BR": {
-    "/dashboard/courses.yml": "af7f99fd3e7769d29285f3c5d4554fb8"
+    "/dashboard/courses.yml": "1cee9222d86b5660eee02e200cbabaa4"
   },
   "pt-PT": {
     "/dashboard/courses.yml": "ee88a8e0f3cc17c5d1454f251cb3b300"
@@ -189,7 +189,7 @@
     "/dashboard/courses.yml": "ee88a8e0f3cc17c5d1454f251cb3b300"
   },
   "sk-SK": {
-    "/dashboard/courses.yml": "d3c163713a344ac44c0e00d48924f7ac"
+    "/dashboard/courses.yml": "8e051bdf289e446e33f74c293cd83777"
   },
   "sl-SI": {
     "/dashboard/courses.yml": "ee88a8e0f3cc17c5d1454f251cb3b300"
@@ -213,7 +213,7 @@
     "/dashboard/courses.yml": "cd2f9c2db962173e365f5da92d1f6aa9"
   },
   "th-TH": {
-    "/dashboard/courses.yml": "1c25ac2810ba43f946d280346bd3a31f"
+    "/dashboard/courses.yml": "c353c43562bd653720caea160a029e40"
   },
   "tr-TR": {
     "/dashboard/courses.yml": "ee88a8e0f3cc17c5d1454f251cb3b300"
@@ -234,7 +234,7 @@
     "/dashboard/courses.yml": "efc5740959f34d1f2c4f025741f01abb"
   },
   "zh-TW": {
-    "/dashboard/courses.yml": "a08bbefbce431db44320bdf16836ba93"
+    "/dashboard/courses.yml": "cc018d213f6d205345e3ed6019366ef8"
   },
   "zu-ZA": {
     "/dashboard/courses.yml": "cd2f9c2db962173e365f5da92d1f6aa9"

@@ -9,7 +9,7 @@
     "encrypted": "false",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
-    "long_instructions": "###<i class=\"fa-duotone fa-solid fa-list-check\"></i> Build the sequence\r\n\r\n1. Drag two or more play blocks under when run.\r\n2. Chooe two different sounds.\r\n2. Press <i class=\"fa-solid fa-play\"></i> Run.",
+    "long_instructions": "###<i class=\"fa-duotone fa-solid fa-list-check\"></i> Build the sequence\r\n\r\n1. Drag two or more play blocks under when run.\r\n2. Choose two different sounds.\r\n2. Press Run.",
     "level_data": {
       "startSources": {
         "blocks": {
@@ -36,17 +36,18 @@
       },
       "library": "launch2024",
       "sounds": {
-        "mc_hammer_u_cant_touch_this": [
-          "break_it_down",
-          "bass_breakdown",
-          "breakdown_oohs"
+        "pop": [
+          "drum_kit_pop",
+          "piano_run",
+          "bass_shake"
         ],
-        "hiphop": [
-          "drum_beat_trap",
-          "piano_fresh"
+        "electro": [
+          "guitar_melody",
+          "drum_beat_tom",
+          "synth_wiggle"
         ]
       },
-      "packId": "rosa_linn_hallelujah"
+      "packId": "default"
     },
     "validations": [
       {
@@ -66,7 +67,7 @@
     "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-11-23T17:16:49.698+00:00\",\"changed\":[\"cloned from \\\"music-intro-coding-loops-try\\\"\"],\"cloned_from\":\"music-intro-coding-loops-try\"},{\"changed_at\":\"2024-11-24 17:29:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:30:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:34:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-11-23T17:16:49.698+00:00\",\"changed\":[\"cloned from \\\"music-intro-coding-loops-try\\\"\"],\"cloned_from\":\"music-intro-coding-loops-try\"},{\"changed_at\":\"2024-11-24 17:29:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:30:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:34:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 17:18:35 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 17:19:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 17:21:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 17:22:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 22:01:38 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 22:02:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
