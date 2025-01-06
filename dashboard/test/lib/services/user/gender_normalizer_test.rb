@@ -13,8 +13,8 @@ class Services::User::GenderNormalizerTest < ActiveSupport::TestCase
         context "with input #{value}" do
           let(:raw_input) {value}
 
-          it "returns #{Policies::Gender::NormalizedValues::FEMALE}" do
-            _(normalize).must_equal Policies::Gender::NormalizedValues::FEMALE
+          it "returns #{Services::User::GenderNormalizer::FEMALE}" do
+            _(normalize).must_equal Services::User::GenderNormalizer::FEMALE
           end
         end
       end
@@ -26,8 +26,8 @@ class Services::User::GenderNormalizerTest < ActiveSupport::TestCase
         context "with input #{value}" do
           let(:raw_input) {value}
 
-          it "returns #{Policies::Gender::NormalizedValues::MALE}" do
-            _(normalize).must_equal Policies::Gender::NormalizedValues::MALE
+          it "returns #{Services::User::GenderNormalizer::MALE}" do
+            _(normalize).must_equal Services::User::GenderNormalizer::MALE
           end
         end
       end
@@ -39,8 +39,8 @@ class Services::User::GenderNormalizerTest < ActiveSupport::TestCase
         context "with input #{value}" do
           let(:raw_input) {value}
 
-          it "returns #{Policies::Gender::NormalizedValues::NON_BINARY} for #{value}" do
-            _(normalize).must_equal Policies::Gender::NormalizedValues::NON_BINARY
+          it "returns #{Services::User::GenderNormalizer::NON_BINARY} for #{value}" do
+            _(normalize).must_equal Services::User::GenderNormalizer::NON_BINARY
           end
         end
       end
@@ -52,8 +52,8 @@ class Services::User::GenderNormalizerTest < ActiveSupport::TestCase
         context "with input #{value}" do
           let(:raw_input) {value}
 
-          it "returns #{Policies::Gender::NormalizedValues::OTHER} for #{value}" do
-            _(normalize).must_equal Policies::Gender::NormalizedValues::OTHER
+          it "returns #{Services::User::GenderNormalizer::OTHER} for #{value}" do
+            _(normalize).must_equal Services::User::GenderNormalizer::OTHER
           end
         end
       end
