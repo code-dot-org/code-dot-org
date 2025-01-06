@@ -87,24 +87,19 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   );
   const selectedSection = useAppSelector(selectedSectionSelector);
 
-  const studentCount = useAppSelector(
-    state => state.teacherSections.selectedStudents.length
-  );
-
-  // need to update anyStudentHasProgress when new students are added
   const anyStudentHasProgress = React.useMemo(
     () => (selectedSection ? selectedSection.anyStudentHasProgress : true),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [selectedSection, studentCount]
+    [selectedSection]
+  );
+
+  const studentCount = useAppSelector(
+    state => state.teacherSections.selectedStudents.length
   );
 
   const needsReload = useAppSelector(
     state => state.teacherSections.needsReload
   );
 
-  // const studentCount = useAppSelector(
-  //   state => state.teacherSections.selectedStudents.length
-  // );
   const providerName = useAppSelector(state =>
     sectionProviderName(state, state.teacherSections.selectedSectionId)
   );
