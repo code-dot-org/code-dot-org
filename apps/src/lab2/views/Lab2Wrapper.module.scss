@@ -41,10 +41,8 @@
     }
   }
 
-  .blockedProjectPageContainer {
-    animation: fadein 2s;
+  .blockedProjectUIContainer {
     background-color: $white;
-    color: $neutral_dark;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -53,7 +51,7 @@
     z-index: 80;
   }
 
-  .blockedProjectPageContainerPV {
+  .blockedProjectUIContainerProjectValidator {
     position: absolute;
     display: flex;
     justify-content: center;

@@ -2,24 +2,26 @@ import React, {useState} from 'react';
 
 import AbuseExclamation from '@cdo/apps/code-studio/components/AbuseExclamation';
 import Alert, {alertTypes} from '@cdo/apps/componentLibrary/alert/Alert';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import Lab2Registry from '../Lab2Registry';
 
 import moduleStyles from './Lab2Wrapper.module.scss';
 
-export const ProjectBlockedPage: React.FunctionComponent<{
+export const ProjectBlockedUI: React.FunctionComponent<{
   isProjectValidator: boolean;
 }> = ({isProjectValidator}) => {
   const [showAlert, setShowAlert] = useState(true);
   const projectManager = Lab2Registry.getInstance().getProjectManager();
   const shareUrl = projectManager ? projectManager.getShareUrl() : null;
+  const isOwner = useAppSelector(state => state.lab.channel?.isOwner || false);
 
   if (isProjectValidator) {
     return (
       <div
-        id="blocked-project-page-container-pv"
-        className={moduleStyles.blockedProjectPageContainerPV}
+        id="blocked-project-ui-container-project-validator"
+        className={moduleStyles.blockedProjectUIContainerProjectValidator}
       >
         {showAlert && (
           <Alert
@@ -35,8 +37,8 @@ export const ProjectBlockedPage: React.FunctionComponent<{
   } else {
     return (
       <div
-        id="blocked-project-page-container"
-        className={moduleStyles.blockedProjectPageContainer}
+        id="blocked-project-ui-container"
+        className={moduleStyles.blockedProjectUIContainer}
       >
         <AbuseExclamation
           i18n={{
@@ -49,7 +51,7 @@ export const ProjectBlockedPage: React.FunctionComponent<{
             edit_project: i18n.editProject(),
             go_to_code_studio: i18n.goToCodeStudio(),
           }}
-          isOwner={false}
+          isOwner={isOwner}
         />
       </div>
     );

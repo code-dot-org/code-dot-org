@@ -30,7 +30,7 @@ import {LifecycleEvent} from '../utils';
 
 import {ErrorFallbackPage, ErrorUI} from './ErrorFallbackPage';
 import Loading from './Loading';
-import {ProjectBlockedPage} from './ProjectBlockedPage';
+import {ProjectBlockedUI} from './ProjectBlockedUI';
 
 import moduleStyles from './Lab2Wrapper.module.scss';
 
@@ -50,9 +50,7 @@ async function fetchIsProjectValidator(): Promise<boolean> {
 const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
   const isLoading: boolean = useSelector(isLabLoading);
   const isPageError: boolean = useSelector(hasPageError);
-  const isBlocked: boolean | undefined = useSelector(
-    (state: {lab: LabState}) => state.lab.isBlocked
-  );
+  const isBlocked = useAppSelector(state => state.lab.isBlocked);
   const [isProjectValidator, setIsProjectValidator] = useState(false);
   useEffect(() => {
     fetchIsProjectValidator().then(data => {
@@ -115,7 +113,7 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
 
         {isPageError && <ErrorUI message={errorMessage} />}
         {isBlocked && (
-          <ProjectBlockedPage isProjectValidator={isProjectValidator} />
+          <ProjectBlockedUI isProjectValidator={isProjectValidator} />
         )}
       </div>
     </ErrorBoundary>
