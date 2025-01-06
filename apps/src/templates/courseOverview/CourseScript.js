@@ -146,8 +146,7 @@ class CourseScript extends Component {
             {confirmationMessageOpen && (
               <span style={styles.confirmText}>{i18n.assignSuccess()}</span>
             )}
-            {!isAssigned &&
-              viewAs === ViewType.Instructor &&
+            {viewAs === ViewType.Instructor &&
               showAssignButton &&
               selectedSection && (
                 <div className={styles.assignButton}>
