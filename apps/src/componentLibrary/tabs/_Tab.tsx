@@ -104,7 +104,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   isClosable = false,
   onClose = () => {},
 }) => {
-  const [longTooltip, setLongTooltip] = useState<TooltipProps>();
+  const [overflowTooltip, setOverflowTooltip] = useState<TooltipProps>();
   const tabTextRef = useRef<HTMLSpanElement | null>(null);
   const handleClick = useCallback(() => onClick(value), [onClick, value]);
   const handleClose = useCallback(() => onClose(value), [onClose, value]);
@@ -145,7 +145,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
     </button>
   );
 
-  const preferredTooltip = tooltip || longTooltip;
+  const preferredTooltip = tooltip || overflowTooltip;
 
   useEffect(() => {
     if (tabTextRef.current) {
@@ -155,13 +155,13 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
         !tooltip &&
         text
       ) {
-        setLongTooltip({
+        setOverflowTooltip({
           tooltipId: 'test123',
           text: text,
           direction: 'onBottom',
         });
       } else {
-        setLongTooltip(undefined);
+        setOverflowTooltip(undefined);
       }
     }
   }, [text, tooltip]);
