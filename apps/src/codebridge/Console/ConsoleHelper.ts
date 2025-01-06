@@ -24,6 +24,6 @@ function getSystemMessage(message: string, appName: string) {
 
 export function writeImage(base64Image: string) {
   const dataSize = atob(base64Image).length;
-  const imageString = `\x1b]1337;File=inline=1;size=${dataSize}:${base64Image}\x1b\\`;
+  const imageString = `\x1b]1337;File=inline=1;size=${dataSize};width=400px;height=400px:${base64Image}\x1b\\`;
   CodebridgeRegistry.getInstance().appendTerminalLine(imageString);
 }
