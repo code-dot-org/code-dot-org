@@ -1,5 +1,5 @@
-@import "color.scss";
 @import "font.scss";
+@import '@cdo/apps/componentLibrary/common/styles/primitiveColors.css';
 @import "@cdo/apps/componentLibrary/typography/typography.module";
 
 // Tags common styles
@@ -11,9 +11,9 @@
     display: flex;
     align-items: baseline;
     gap: 2px;
-    color: $neutral-dark;
+    color: var(--neutral-base-black);
     padding: 2px 12px;
-    background-color: $brand_primary_light;
+    background-color: var(--brand-teal-5);
     border-radius: 6.25rem;;
     max-width: 15em;
 
@@ -35,31 +35,6 @@
     &:has(i:not(:first-child)) {
       padding-inline-end: 8px;
     }
-  }
-}
-
-.tagTooltip {
-  opacity: 1;
-  margin-bottom: 0.75em;
-  pointer-events: none;
-
-  :global(.tooltip-inner) { /* stylelint-disable-line selector-pseudo-class-no-unknown */
-    border-radius: 5px;
-    color: $light_white;
-    background-color: $light_gray_900;
-
-    p {
-      color: #fff;
-      margin: 0;
-    }
-  }
-
-  :global(.tooltip-arrow) { /* stylelint-disable-line selector-pseudo-class-no-unknown */
-    left: 50%;
-    bottom: 0;
-    border: 15px solid transparent;
-    border-top: 15px solid $light_gray_900;
-    transform: translate(-50%, calc(100% - 8px));
   }
 }
 

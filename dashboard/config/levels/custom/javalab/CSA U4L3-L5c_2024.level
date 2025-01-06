@@ -1,12 +1,13 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2024-01-12T20:58:32.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "A researcher wants to determine what year computing power is predicted to match that of the human brain based on the increase in the speed and power of computers over recent years.\r\n\r\n✅ **TO DO #1:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ComputingScene.java</code>, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">calcGrowth()</code> method to calculate the estimated growth of computing power. The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">calcGrowth()</code> method should:\r\n\r\n1. Have a parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">numYears</code> for the number of years to calculate.\r\n\r\n2. Calculate the result of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">GROWTH_RATE</code> raised to the power of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">numYears</code> multiplied by <code style=\"background-color: #ececec; color: black; font-weight: bold;\">startPower</code>.\r\n\r\n3. Return the result.\r\n\r\n✅ **TO DO #2:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner.java</code>, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawResults()</code> method with the result returned from calling the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">calcGrowth()</code>.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Math</code> class in the <strong>Documentation</strong> tab ⬆️ for help using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Math.pow()</code> method.\r\n</div>",
+    "long_instructions": "A researcher wants to determine what year computing power is predicted to match that of the human brain based on the increase in the speed and power of computers over recent years.\r\n\r\n✅ **TO DO #1:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ComputingScene.java</code>, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">calcGrowth()</code> method to calculate the estimated growth of computing power. The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">calcGrowth()</code> method should:\r\n\r\n1. Have a parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">numYears</code> for the number of years to calculate.\r\n\r\n2. Calculate the result of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">GROWTH_RATE</code> raised to the power of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">numYears</code> multiplied by <code style=\"background-color: #ececec; color: black; font-weight: bold;\">startPower</code>.\r\n\r\n3. Return the result.\r\n\r\n✅ **TO DO #2:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner.java</code>, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawResult()</code> method with the result returned from calling the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">calcGrowth()</code>.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Math</code> class in the <strong>Documentation</strong> tab ⬆️ for help using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Math.pow()</code> method.\r\n</div>",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -32,9 +33,11 @@
       }
     },
     "name_suffix": "_2024",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true",
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-01-12T20:58:32.157+00:00\",\"changed\":[\"cloned from \\\"CSA U4L3-L5c_2023\\\"\"],\"cloned_from\":\"CSA U4L3-L5c_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-01-12T20:58:32.157+00:00\",\"changed\":[\"cloned from \\\"CSA U4L3-L5c_2023\\\"\"],\"cloned_from\":\"CSA U4L3-L5c_2023\"},{\"changed_at\":\"2024-12-04 17:14:29 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

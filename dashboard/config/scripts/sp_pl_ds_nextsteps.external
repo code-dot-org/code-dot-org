@@ -3,9 +3,29 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
+<br>
+<br>
+
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); width: 750px; margin: 0 auto;">
+  <div style="flex-shrink: 0;">
+    <img src="https://em-content.zobj.net/thumbs/240/apple/354/party-popper_1f389.png" alt="Party Popper Emoji" style="width: 70px; height: 70px; filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));">
+  </div>
+  <div style="text-align: center; flex-grow: 1;">
+    <div style="font-size: 28px; font-weight: bold; color: #333; margin-bottom: 10px;">
+      Congratulations!
+    </div>
+    <div style="font-size: 20px; color: #333;">
+      You have completed the Teaching Data Science Module!
+    </div>
+  </div>
+  <div style="flex-shrink: 0;">
+    <img src="https://em-content.zobj.net/thumbs/240/apple/354/party-popper_1f389.png" alt="Party Popper Emoji" style="width: 70px; height: 70px; filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));">
+  </div>
+</div>
+
 # Next Steps
 
-#### Thank you for completing the **Teaching Data Science** self-paced professional learning module. Now that you've learned about using the Design Thinking process to create computer vision solutions, check out our curriculum and professional learning offerings to continue your journey.
+#### Now that you've learned about teaching Data Science with Python, check out our curriculum and professional learning offerings to continue your journey.
 
 ## Help us make this module better!
 

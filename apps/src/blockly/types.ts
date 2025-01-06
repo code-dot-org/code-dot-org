@@ -190,6 +190,7 @@ export type GoogleBlocklyInstance = typeof GoogleBlockly;
 // types and can cast to them when needed.
 
 export interface ExtendedBlockSvg extends GoogleBlockly.BlockSvg {
+  canSerializeNextConnection?: boolean;
   isVisible: () => boolean;
   isUserVisible: () => boolean;
   shouldBeGrayedOut: () => boolean;

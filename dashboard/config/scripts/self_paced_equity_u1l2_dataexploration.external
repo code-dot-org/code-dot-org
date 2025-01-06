@@ -1,0 +1,69 @@
+name 'self-paced-equity-U1L2-dataexploration'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Data Deep-Dive
+
+<img src="https://images.code.org/5ae3efe3b38e75c5a2a2e5542af8264c-image-1733351769464.36.06 PM.png" alt="The cover page of the 2024 State of CS Report." style="border:1px solid #000000; float: right; height: 250px; clear: both; margin: 0px 10px 10px 10px;">
+
+#### In this level, we'll guide you through relevant sections of the <a href="https://advocacy.code.org/stateofcs/" target="blank" rel="noopener noreferrer"> State of Computer Science Education Report</a>. This is a robust resource with the latest and best information about the state of computer science across the country.
+
+#### Please download the report at the link above to complete this activity.
+
+## While You Read
+
+#### In the last level, we introduced the following questions for you to keep in mind:
+
+* #### What surprises you about the data?
+* #### What might the data reveal about your students’ needs?
+* #### How does the data compare to what you've noticed about CS access in your school/district?
+<br>
+
+___
+
+## Data Review
+
+<div style="background-color: #F7F8FA; border-radius: 20px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
+
+#### ⚠️ Please note that the page numbers below refer to the document pagination (on the bottom corners of the page) and *not* the page numbers given by your document reader.
+</p></div>
+
+### **Elementary Teachers:**
+* #### Review pages 50 - 51, 65 - 66
+
+### **Middle School Teachers:**
+* #### Review pages 70 - 77
+
+### **High School Teachers:**
+* #### Review pages 40 - 49
+
+### **All Teachers:**
+* #### Download and review your state report by choosing your state from the dropdown on the State of Computer Science Education Report <a href="https://advocacy.code.org/stateofcs/" target="blank" rel="noopener noreferrer">landing page</a>
+<br>
+
+<img src="https://images.code.org/332607cea7f7f8adabfe8c0eacd67cb7-image-1733352521030.48.37 PM.png" alt="The State of CS dashboard showing where to download a state report." style="width:80%; margin-left:10%;">
+<br>
+
+___
+
+<div style="display: flex; align-items: left;">
+
+<img src="https://images.code.org/dd51b2d288841f86773ca05520f6104c-image-1731961166553.png" style="width: auto; height: 100px;"  alt="An illuminated light bulb with a brain inside of it.">
+
+<div style="background-color: #B8E0E5; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;">
+
+<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Extension Activity</b></p>
+
+<p style="color: black; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px">There are so many sources of data across the internet about the state of K-12 CS education! Here's a few we recommend if you're looking for more:
+
+<ul style="color: black; line-height: 2; font-size: 18px; margin-left: 20px;">
+<li><a href="https://wpassets.ncwit.org/wp-content/uploads/2024/05/03092125/NCWIT_4-24_BTN_FullSize.pdf" target="blank" rel="noopener noreferrer">National Center for Women & Information Technology’s (NCWIT) By the Numbers Infographic</a></li>
+<li><a href="https://www.kaporcenter.org/wp-content/uploads/2021/05/KCS-Teacher-Survey-Report_exec-sum.pdf" target="blank" rel="noopener noreferrer">Kapor Center’s The Computer Science Teacher Landscape Survey Executive Summary</a></li></ul>
+</div>
+</p>
+
+</div>
+</div>
+<br><br>
+MARKDOWN

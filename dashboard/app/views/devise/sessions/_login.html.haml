@@ -32,7 +32,7 @@
 
     / Not yet signed up? Sign up
     - if devise_mapping.registerable?
-      %a#signup-link.field-aligned{href: new_user_registration_path}
+      %a#signup-link.field-aligned{href: users_new_sign_up_account_type_path}
         %button.neutral-button{:id => 'user_signup'}= t('nav.user.signup')
 
   %div.vertical-or

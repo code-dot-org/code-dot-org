@@ -173,6 +173,10 @@ GEM
       rake (>= 10.4, < 14.0)
     ansi (1.5.0)
     ast (2.4.2)
+    async (1.32.1)
+      console (~> 1.10)
+      nio4r (~> 2.3)
+      timers (~> 4.1)
     auto_strip_attributes (2.1.0)
       activerecord (>= 3.0)
     aws-eventstream (1.3.0)
@@ -284,6 +288,10 @@ GEM
       activerecord (~> 6.1.0)
     concurrent-ruby (1.2.3)
     connection_pool (2.4.1)
+    console (1.24.0)
+      fiber-annotation
+      fiber-local
+      json
     crack (0.4.5)
       rexml
     crass (1.0.6)
@@ -401,6 +409,8 @@ GEM
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
+    fiber-annotation (0.2.0)
+    fiber-local (1.0.0)
     fspath (3.1.0)
     gemoji (4.1.0)
     geocoder (1.6.4)
@@ -609,13 +619,14 @@ GEM
       rack-protection
     omniauth-facebook (4.0.0)
       omniauth-oauth2 (~> 1.2)
-    omniauth-google-oauth2 (0.6.0)
+    omniauth-google-oauth2 (1.1.3)
       jwt (>= 2.0)
-      omniauth (>= 1.1.1)
-      omniauth-oauth2 (>= 1.5)
-    omniauth-oauth2 (1.7.3)
+      oauth2 (~> 2.0)
+      omniauth (~> 2.0)
+      omniauth-oauth2 (~> 1.8)
+    omniauth-oauth2 (1.8.0)
       oauth2 (>= 1.4, < 3)
-      omniauth (>= 1.9, < 3)
+      omniauth (~> 2.0)
     omniauth-rails_csrf_protection (1.0.2)
       actionpack (>= 4.2)
       omniauth (~> 2.0)
@@ -882,6 +893,7 @@ GEM
       date
     timecop (0.8.1)
     timeout (0.3.2)
+    timers (4.3.5)
     trailblazer-option (0.1.2)
     ttfunk (1.7.0)
     twilio-ruby (5.77.0)
@@ -939,6 +951,7 @@ DEPENDENCIES
   acts_as_list
   addressable
   annotate (~> 3.1.1)
+  async (~> 1.32)
   auto_strip_attributes (~> 2.1)
   aws-google (~> 0.2.0)
   aws-sdk-acm
@@ -1043,7 +1056,7 @@ DEPENDENCIES
   oj (~> 3.10)
   omniauth-clever (~> 2.0.1)!
   omniauth-facebook (~> 4.0.0)
-  omniauth-google-oauth2 (~> 0.6.0)
+  omniauth-google-oauth2 (~> 1.1.3)
   omniauth-microsoft_v2_auth!
   omniauth-rails_csrf_protection (~> 1.0.2)
   open_uri_redirections

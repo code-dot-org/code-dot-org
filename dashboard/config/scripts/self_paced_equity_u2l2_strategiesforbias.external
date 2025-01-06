@@ -1,0 +1,62 @@
+name 'self-paced-equity-U2L2-strategiesforbias'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Reducing Implicit Bias
+
+#### Recognizing your implicit biases is a good first step toward becoming a more equity-minded computer science teacher. But you also need to work to reduce the impact of your current biases and fight against new ones!
+
+___
+
+<div style="display: flex; justify-content: space-between; gap: 10px; margin-top: 20px; margin-bottom: 20px; ">
+    <img src="https://images.code.org/bb9d7b4ce8d6221cd4849964add48557-image-1736121016199.50.13 PM.png" alt="A student and adult look at the same laptop. The adult points at the screen." style="width: 23%; height: auto; border-radius: 10px;">
+    <img src="https://images.code.org/77fa297852883957b9bab3d33a158094-image-1736121395178.56.33 PM.png" alt="A teacher and student look at the same desktop computer and smile. Other students work in the background." style="width: 23%; height: auto; border-radius: 10px;">
+    <img src="https://images.code.org/669aab6d5e8768d279f1793db3f3ff28-image-1736121453948.57.29 PM.png" alt="An adult leans on a table while looking down at two students working on a tablet. One student looks back up at the adult and smiles." style="width: 23%; height: auto; border-radius: 10px;">
+    <img src="https://images.code.org/d1e70271d4894979c8f715cd795f43b6-image-1736121524336.58.40 PM.png" alt="A teacher sits on their desk and looks out at their classroom while speaking." style="width: 23%; height: auto; border-radius: 10px;">
+</div>
+
+___
+
+## Strategies to Fight Bias
+
+#### <a href="https://womensplace.osu.edu/resources/implicit-bias-resources" target="blank" rel="noopener noreferrer">The Women's Place from Ohio State University</a> has curated a robust set of resources to fight implicit bias, including actions you can take to reduce implicit bias. We've included them below and added suggestions for connecting these strategies to computer science.
+
+#### **Raise awareness of implicit bias.**
+#### Awareness of implicit bias is a crucial starting point that may prompt individuals to seek out and implement further strategies. In our experience, most people find that becoming aware of their implicit biases helps them avoid those biases in decision making. 
+
+#### 🖥️ **CS Connection:** Help students understand their biases around computer science by point out the stereotypical depiction of a programmer (like you saw in <a href="https://studio.code.org/s/self-paced-pl-equitymodule-unit2/lessons/1/levels/5" target="blank" rel="noopener noreferrer">this level</a>). Remind yourself and students that these biases don't dictate who can and can't participate in computer science.
+
+___
+
+#### **Seek to identify and consciously acknowledge real group and individual differences**
+#### Cultivate greater awareness of and sensitivity to group and individual differences. Attend and offer training seminars, events, and opportunities to share information that acknowledge and promote an appreciation of group differences and multi-cultural viewpoints.
+
+#### 🖥️ **CS Connection:** Help students understand their biases around computer science by point out the stereotypical depiction of a programmer (like you saw in <a href="https://studio.code.org/s/self-paced-pl-equitymodule-unit2/lessons/1/levels/5" target="blank" rel="noopener noreferrer">this level</a>). Remind yourself and students that these biases don't dictate who can and can't participate in computer science.
+
+___
+
+#### **Routinely check thought processes and decisions for possible bias: Practice mindfulness**
+#### Actively engage in more thoughtful, deliberative information processing and be mindful of your decision-making processes. Mindfulness training helps facilitate these efforts. When sufficient effort is exerted to limit the effects of implicit biases on judgment, attempts to consciously control implicit bias can be successful.
+
+___
+
+#### **Increase exposure to minority group members and counter-stereotypes**
+#### Distribute stories and pictures widely that portray stereotype-busting images: posters, newsletters, annual reports, speaker series, and podcasts are examples of media you can use to distribute this message. Increased contact with counter-stereotypes—specifically, increased exposure to underrepresented group members that contradict the social stereotype—can help individuals “unlearn” the associations that underlie implicit bias.
+
+___
+
+#### **Reduce exposure to stereotypes**
+#### Identify and discard or change environmental cues such as images and language in any signage, pamphlets, brochures, instructional manuals, background music, or any other verbal or visual communications that trigger stereotype activation and implicit bias.
+
+___
+
+
+#### **Take a first-person perspective of a member of a stereotyped group**
+#### Perspective taking increases psychological closeness to “other” groups, which ameliorates automatic group-based evaluations.
+
+___
+
+#### **Practice individuation: Obtain and help others obtain specific information about people as individuals rather than as group members**
+#### Help prevent stereotypic inferences by encouraging people to evaluate members of a group based on individual, rather than group-based, attributes. Regularly remind yourself and others that majority group members aren’t characterized by the actions of a few, unlike minority group members.
+MARKDOWN
