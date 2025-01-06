@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2024-11-27T16:39:14.000Z",
   "level_num": "custom",
@@ -49,6 +48,9 @@
                     "type": "play_sounds_together",
                     "id": "play_sounds_together",
                     "deletable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
                     "inputs": {
                       "code": {
                         "block": {
@@ -56,6 +58,9 @@
                           "id": "play_sound_at_current_location_simple2",
                           "deletable": false,
                           "movable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
                           "fields": {
                             "sound": "chainsmokers_coldplay_something_just_like_this/vocals_prechorus_1"
                           },
@@ -64,6 +69,9 @@
                               "type": "play_sound_at_current_location_simple2",
                               "id": "qNQ1k.0XN15y#o]cKd%G",
                               "deletable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
                               "fields": {
                                 "sound": "chainsmokers_coldplay_something_just_like_this/drums_drop_beat"
                               },
@@ -71,6 +79,9 @@
                                 "block": {
                                   "type": "play_sound_at_current_location_simple2",
                                   "id": "zT}v;|yEx}30{XBtf}SP",
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
                                   "fields": {
                                     "sound": "chainsmokers_coldplay_something_just_like_this/wurly"
                                   }
@@ -85,12 +96,18 @@
                       "block": {
                         "type": "play_sounds_together",
                         "id": "T$nb#=2q|yC,|%Y(52St",
+                        "extraState": {
+                          "disableNextConnection": true
+                        },
                         "inputs": {
                           "code": {
                             "block": {
                               "type": "play_sound_at_current_location_simple2",
                               "id": "#Q,[%mfEY-c.CJ]!=~;X",
                               "deletable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
                               "fields": {
                                 "sound": "chainsmokers_coldplay_something_just_like_this/vocals_prechorus_2"
                               },
@@ -99,6 +116,9 @@
                                   "type": "play_sound_at_current_location_simple2",
                                   "id": "P157|7U2Ycll5GaKXsto",
                                   "deletable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
                                   "fields": {
                                     "sound": "chainsmokers_coldplay_something_just_like_this/drums_drop_beat"
                                   },
@@ -106,6 +126,9 @@
                                     "block": {
                                       "type": "play_sound_at_current_location_simple2",
                                       "id": "S+qI3$t[BQmXY5bUbtpq",
+                                      "extraState": {
+                                        "disableNextConnection": true
+                                      },
                                       "fields": {
                                         "sound": "chainsmokers_coldplay_something_just_like_this/wurly"
                                       }
@@ -142,12 +165,18 @@
                   "block": {
                     "type": "play_sounds_together",
                     "id": "h68(Y613D1tw!LeM{R5D",
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
                     "inputs": {
                       "code": {
                         "block": {
                           "type": "play_sound_at_current_location_simple2",
                           "id": "N/KYOy.IXc7m*u(+;Buh",
                           "deletable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
                           "fields": {
                             "sound": "chainsmokers_coldplay_something_just_like_this/vocals_verse_1"
                           },
@@ -155,6 +184,9 @@
                             "block": {
                               "type": "play_sound_at_current_location_simple2",
                               "id": "3]-cj-Om/WS`e4Dz}v/C",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
                               "fields": {
                                 "sound": "chainsmokers_coldplay_something_just_like_this/drums_verse_beat"
                               },
@@ -162,6 +194,9 @@
                                 "block": {
                                   "type": "play_sound_at_current_location_simple2",
                                   "id": "/!ue%~5CLWQi6dsh6bk!",
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
                                   "fields": {
                                     "sound": "chainsmokers_coldplay_something_just_like_this/guitar_verse_1"
                                   }
@@ -176,11 +211,17 @@
                       "block": {
                         "type": "play_sounds_together",
                         "id": "%zTXEV4w#Yd)s?75DAVS",
+                        "extraState": {
+                          "disableNextConnection": true
+                        },
                         "inputs": {
                           "code": {
                             "block": {
                               "type": "play_sound_at_current_location_simple2",
                               "id": "3acPbL$+tfFWOW!@b56T",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
                               "fields": {
                                 "sound": "chainsmokers_coldplay_something_just_like_this/vocals_verse_2"
                               },
@@ -189,6 +230,9 @@
                                   "type": "play_sound_at_current_location_simple2",
                                   "id": "jN6v:04PQW@K=KC*]Ik]",
                                   "deletable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
                                   "fields": {
                                     "sound": "chainsmokers_coldplay_something_just_like_this/drums_verse_beat"
                                   },
@@ -198,6 +242,9 @@
                                       "id": "OJW^%gSWxo:Q]%_9Uv1V",
                                       "deletable": false,
                                       "movable": false,
+                                      "extraState": {
+                                        "disableNextConnection": true
+                                      },
                                       "fields": {
                                         "sound": "chainsmokers_coldplay_something_just_like_this/guitar_verse_2"
                                       }
@@ -358,7 +405,8 @@
     "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-11-27T16:39:14.146+00:00\",\"changed\":[\"cloned from \\\"music-jam-functions-chorus\\\"\"],\"cloned_from\":\"music-jam-functions-chorus\"},{\"changed_at\":\"2024-12-03 22:47:19 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 22:48:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 22:51:35 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 22:59:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 21:55:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-09 19:42:07 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-13 20:21:11 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-13 20:23:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 22:47:56 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 22:48:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 22:55:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 23:14:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 16:34:37 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 17:21:56 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 17:23:34 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 17:26:45 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 17:28:17 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-19 17:05:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-11-27T16:39:14.146+00:00\",\"changed\":[\"cloned from \\\"music-jam-functions-chorus\\\"\"],\"cloned_from\":\"music-jam-functions-chorus\"},{\"changed_at\":\"2024-12-03 22:47:19 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 22:48:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 22:51:35 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 22:59:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 21:55:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-09 19:42:07 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-13 20:21:11 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-13 20:23:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 22:47:56 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 22:48:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 22:55:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 23:14:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 16:34:37 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 17:21:56 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 17:23:34 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 17:26:45 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 17:28:17 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-19 17:05:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 20:52:51 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

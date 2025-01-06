@@ -22,11 +22,17 @@
                 "block": {
                   "type": "play_sounds_together",
                   "id": "oG~wmPtW6bbNmv[*-6?e",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
                   "inputs": {
                     "code": {
                       "block": {
                         "type": "play_sound_at_current_location_simple2",
                         "id": "ArKMz1@GoqVsk+~x=p1/",
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
                         "fields": {
                           "sound": "chainsmokers_coldplay_something_just_like_this/drums_tom_build"
                         },
@@ -34,6 +40,9 @@
                           "block": {
                             "type": "play_sound_at_current_location_simple2",
                             "id": "q#fzceb}@j}*_q.qmGG]",
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
                             "fields": {
                               "sound": "chainsmokers_coldplay_something_just_like_this/piano_build"
                             },
@@ -41,11 +50,17 @@
                               "block": {
                                 "type": "play_sounds_sequential",
                                 "id": "4va!0Q`U_3)$Q1iF![+=",
+                                "extraState": {
+                                  "disableNextConnection": true
+                                },
                                 "inputs": {
                                   "code": {
                                     "block": {
                                       "type": "play_sound_at_current_location_simple2",
                                       "id": ";*UwE:0E?G9hIuLBvM;X",
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
                                       "fields": {
                                         "sound": "chainsmokers_coldplay_something_just_like_this/vocals_prechorus_3"
                                       },
@@ -53,6 +68,9 @@
                                         "block": {
                                           "type": "play_sound_at_current_location_simple2",
                                           "id": ":X(~,hry{?#:R3%S/55Y",
+                                          "extraState": {
+                                            "disableNextConnection": true
+                                          },
                                           "fields": {
                                             "sound": "chainsmokers_coldplay_something_just_like_this/vocals_prechorus_4"
                                           }
@@ -65,6 +83,15 @@
                             }
                           }
                         }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "play_sounds_together",
+                      "extraState": {
+                        "disableNextConnection": false
                       }
                     }
                   }
@@ -92,12 +119,27 @@
             "play_rest_at_current_location_simple2"
           ]
         }
+      },
+      "sounds": {
+        "chainsmokers_coldplay_something_just_like_this": [
+          "vocals_prechorus_4",
+          "vocals_prechorus_3",
+          "drums_tom_build",
+          "piano_build",
+          "drums_drop_beat",
+          "synth_drop_1",
+          "synth_drop_2",
+          "drums_crash",
+          "piano_full_1",
+          "vocals_hook_high",
+          "vocals_hook_low"
+        ]
       }
     },
     "encrypted": "false",
     "instructions_important": "false",
     "hint_prompt_attempts_threshold": "1",
-    "long_instructions": "####Make the beat drop!\r\n\r\n1. Add more sounds to follow this build up. \r\n2. Press Run to listen to your beat drop.\r\n3. Press Finish when you are done experimenting. ",
+    "long_instructions": "####Make the beat drop!\r\n\r\n1. Add sounds to play together following the build up. \r\n2. Press Run to listen to your beat drop.\r\n3. Press Finish when you are done experimenting. ",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "false",
@@ -118,7 +160,7 @@
     ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-12-12T00:10:30.141+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-drop\\\"\"],\"cloned_from\":\"music-coding-intro-drop\"},{\"changed_at\":\"2024-12-12 00:20:14 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-12 00:21:54 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-12 18:42:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 21:47:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 22:17:37 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 22:56:03 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-17 22:56:28 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-12-12T00:10:30.141+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-drop\\\"\"],\"cloned_from\":\"music-coding-intro-drop\"},{\"changed_at\":\"2024-12-12 00:20:14 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-12 00:21:54 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-12 18:42:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 21:47:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 22:17:37 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 22:56:03 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-17 22:56:28 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-30 19:50:09 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 19:51:16 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 19:53:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 19:54:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
