@@ -15,7 +15,7 @@ import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shap
 import {
   assignToSection,
   unassignSection,
-  setNeedsReload,
+  sectionHasNewData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
@@ -39,7 +39,7 @@ const MultipleSectionsAssigner = ({
   unassignSection,
   assignToSection,
   updateHiddenScript,
-  setNeedsReload,
+  sectionHasNewData,
 }) => {
   const [currentSectionsAssigned, setCurrentSectionsAssigned] = useState([]);
 
@@ -114,7 +114,7 @@ const MultipleSectionsAssigner = ({
         } else {
           unhideAndAssignUnit(currentSectionsAssigned[i]);
         }
-        setNeedsReload();
+        sectionHasNewData();
       }
     }
 
@@ -280,7 +280,7 @@ MultipleSectionsAssigner.propTypes = {
   unassignSection: PropTypes.func.isRequired,
   assignToSection: PropTypes.func.isRequired,
   updateHiddenScript: PropTypes.func.isRequired,
-  setNeedsReload: PropTypes.func.isRequired,
+  sectionHasNewData: PropTypes.func.isRequired,
 };
 
 export const UnconnectedMultipleSectionsAssigner = MultipleSectionsAssigner;
@@ -289,5 +289,5 @@ export default connect(state => ({}), {
   assignToSection,
   updateHiddenScript,
   unassignSection,
-  setNeedsReload,
+  sectionHasNewData,
 })(MultipleSectionsAssigner);

@@ -15,7 +15,7 @@ import {
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
 import TeacherUnitOverview from '@cdo/apps/code-studio/components/progress/TeacherUnitOverview';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
-import {setClearReload} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {sectionDoesNotHaveNewData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import TeacherCourseOverview from '../courseOverview/TeacherCourseOverview';
@@ -61,7 +61,7 @@ const PathChangeHandler: React.FC<{needsReload: boolean}> = ({needsReload}) => {
   useEffect(() => {
     if (needsReload && previousLocation.current !== location.pathname) {
       asyncLoadSelectedSection(urlSectionId ? urlSectionId : '0', true);
-      dispatch(setClearReload());
+      dispatch(sectionDoesNotHaveNewData());
     }
     previousLocation.current = location.pathname;
   }, [needsReload, location.pathname, urlSectionId, dispatch]);

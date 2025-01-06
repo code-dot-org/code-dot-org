@@ -180,12 +180,6 @@ const sectionSlice = createSlice({
   name: 'teacherSections',
   initialState,
   reducers: {
-    setNeedsReload(state) {
-      state.needsReload = true;
-    },
-    setClearReload(state) {
-      state.needsReload = false;
-    },
     setAuthProviders(state, action: PayloadAction<string[]>) {
       state.providers = action.payload.map(mapProviderToSectionType);
     },
@@ -1143,8 +1137,6 @@ export const {
   updateSelectedSection,
   sectionHasNewData,
   sectionDoesNotHaveNewData,
-  setNeedsReload,
-  setClearReload,
 } = sectionSlice.actions;
 
 export default sectionSlice.reducer;
