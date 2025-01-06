@@ -106,8 +106,10 @@ export default class ChangeUserTypeController {
 
   handleSuccess = () => {
     const params = new URLSearchParams(window.location.search);
-    if (params.get('user_return_to')) {
-      window.location.href = params.get('user_return_to');
+    const userReturnTo = params.get('user_return_to');
+    // only allow relative urls to prevent open redirect
+    if (userReturnTo && userReturnTo.startsWith('/')) {
+      window.location.href = userReturnTo;
     } else {
       utils.reload();
     }

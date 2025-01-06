@@ -57,6 +57,22 @@ describe('ChangeUserTypeController', () => {
       expect(window.location.href).to.equal(userReturnToUrl);
     });
 
+    it('resolves normally if the user_return_to param is not relative', async () => {
+      const userReturnToUrl = 'http://return-path';
+      window.location.search = `?user_return_to=${encodeURIComponent(
+        userReturnToUrl
+      )}`;
+
+      const submitPromise = controller.submitUserTypeChange({
+        email: 'test@example.com',
+        emailOptIn: true,
+      });
+      form.trigger('ajax:success');
+      await submitPromise;
+
+      expect(window.location.href).to.equal('');
+    });
+
     it('resolves normally if the user_return_to param does not exist', async () => {
       const submitPromise = controller.submitUserTypeChange({
         email: 'test@example.com',
