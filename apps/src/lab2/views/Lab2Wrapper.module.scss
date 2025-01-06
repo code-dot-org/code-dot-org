@@ -40,4 +40,25 @@
       }
     }
   }
+
+  .blockedProjectPageContainer {
+    animation: fadein 2s;
+    background-color: $white;
+    color: $neutral_dark;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 80;
+  }
+
+  .blockedProjectPageContainerPV {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 80;
+  }
+
 }
