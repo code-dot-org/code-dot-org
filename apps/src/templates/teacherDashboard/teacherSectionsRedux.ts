@@ -218,9 +218,6 @@ const sectionSlice = createSlice({
         state.selectedSectionName = '';
       }
     },
-    updateNeedsReload(state) {
-      state.needsReload = true;
-    },
     updateSelectedSection(state, action: PayloadAction<ServerSection>) {
       const sectionId = action.payload.id;
       if (sectionId) {
@@ -303,7 +300,6 @@ const sectionSlice = createSlice({
       },
     },
     sectionHasNewData(state) {
-      console.log('inside sectionHaseNewData');
       state.needsReload = true;
     },
     sectionDoesNotHaveNewData(state) {
@@ -777,11 +773,6 @@ export const finishEditingSection =
     });
   };
 
-export const updateNeedsReloadFunction = (): SectionThunkAction => dispatch => {
-  console.log('updateNeedsReloadFunction CALLED');
-  dispatch(updateNeedsReload());
-};
-
 /**
  * Removes a section or throws an error if the section does not exist.
  */
@@ -1152,7 +1143,6 @@ export const {
   updateSelectedSection,
   sectionHasNewData,
   sectionDoesNotHaveNewData,
-  updateNeedsReload,
   setNeedsReload,
   setClearReload,
 } = sectionSlice.actions;

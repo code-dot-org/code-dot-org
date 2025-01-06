@@ -54,7 +54,6 @@ import {
   sortableOptions,
 } from '@cdo/apps/templates/tables/tableConstants';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
-import {updateNeedsReloadFunction} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   selectedSectionSelector,
   syncEnabled,
@@ -144,7 +143,6 @@ class ManageStudentsTable extends Component {
     transferStatus: PropTypes.object,
     setSortByFamilyName: PropTypes.func,
     syncEnabled: PropTypes.bool,
-    updateNeedsReloadFunction: PropTypes.func,
   };
 
   constructor(props) {
@@ -1174,6 +1172,5 @@ export default connect(
         setSortByFamilyName(isSortedByFamilyName, sectionId, unitName, source)
       );
     },
-    updateNeedsReloadFunction: () => dispatch(updateNeedsReloadFunction()),
   })
 )(ManageStudentsTable);

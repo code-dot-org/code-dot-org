@@ -8,10 +8,7 @@ import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/metrics/firehose';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/sharedComponents/PopUpMenu';
-import {
-  asyncLoadSectionData,
-  updateNeedsReloadFunction,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {navigateToHref} from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
@@ -53,7 +50,6 @@ class ManageStudentsActionsCell extends Component {
     saveStudent: PropTypes.func,
     addStudent: PropTypes.func,
     loadSectionData: PropTypes.func,
-    updateNeedsReloadFunction: PropTypes.func,
   };
 
   state = {
@@ -346,6 +342,5 @@ export default connect(
     loadSectionData(sectionId) {
       dispatch(asyncLoadSectionData(sectionId));
     },
-    updateNeedsReloadFunction: () => dispatch(updateNeedsReloadFunction()),
   })
 )(ManageStudentsActionsCell);
