@@ -83,7 +83,7 @@ export interface LabState {
   levelProperties: LevelProperties | undefined;
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
-  // If this lab is blocked due to inappropriate content, e.g., abuse score >= 15.
+  // If this lab is blocked because abuse score >= 15.
   isBlocked: boolean | undefined;
   overrideValidations: Validation[] | undefined;
 }
@@ -555,7 +555,6 @@ function setProjectAndLevelData(
   // Dispatch level change last so labs can react to the new level data
   // and new initial sources at once.
   dispatch(onLevelChange(data));
-
   Lab2Registry.getInstance()
     .getLifecycleNotifier()
     .notify(
