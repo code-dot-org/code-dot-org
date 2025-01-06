@@ -18,7 +18,7 @@ export default function initializeGenerator(
       Blockly.VARIABLE_CATEGORY_NAME
     );
     // Play Lab (aka Studio) variables are contained within the Globals namespace.
-    if (Blockly.varsInGlobals) varName += 'Globals.';
+    if (Blockly.varsInGlobals) varName = 'Globals.' + varName;
     return varName;
   };
 
