@@ -302,13 +302,13 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
     ),
     [
       needsReload,
-      studioUrlPrefix,
-      providerName,
-      studentCount,
-      anyStudentHasProgress,
-      selectedSection,
       sectionId,
+      studentCount,
+      providerName,
+      anyStudentHasProgress,
       showAITutorTab,
+      selectedSection,
+      studioUrlPrefix,
     ]
   );
 
