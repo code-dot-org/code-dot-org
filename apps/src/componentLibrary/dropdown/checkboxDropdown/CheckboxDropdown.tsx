@@ -12,13 +12,12 @@ import {
 import CustomDropdown, {
   _CustomDropdownOption,
 } from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
-import i18n from '@cdo/locale';
 
 import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
 
 export interface CheckboxDropdownOption extends _CustomDropdownOption {}
 
-export interface CheckboxDropdownProps
+interface BaseCheckboxDropdownProps
   extends DropdownFormFieldRelatedProps,
     AriaAttributes {
   /** CheckboxDropdown name.
@@ -45,19 +44,32 @@ export interface CheckboxDropdownProps
   checkedOptions: string[];
   /** CheckboxDropdown onChange handler */
   onChange: (args: React.ChangeEvent<HTMLInputElement>) => void;
-  /** CheckboxDropdown onSelectAll handler */
+}
+
+interface CheckboxDropdownWithoutControlProps
+  extends BaseCheckboxDropdownProps {
+  hideControls: true;
+}
+
+interface CheckboxDropdownWithControlsProps extends BaseCheckboxDropdownProps {
+  hideControls?: false;
   onSelectAll: (
     event:
       | React.MouseEvent<HTMLButtonElement>
       | React.MouseEvent<HTMLAnchorElement>
   ) => void;
-  /** CheckboxDropdown onClearAll handler */
   onClearAll: (
     event:
       | React.MouseEvent<HTMLButtonElement>
       | React.MouseEvent<HTMLAnchorElement>
   ) => void;
+  selectAllText: string;
+  clearAllText: string;
 }
+
+export type CheckboxDropdownProps =
+  | CheckboxDropdownWithoutControlProps
+  | CheckboxDropdownWithControlsProps;
 
 const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   name,
@@ -67,8 +79,6 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   allOptions,
   checkedOptions = [],
   onChange,
-  onSelectAll,
-  onClearAll,
   disabled = false,
   readOnly = false,
   color = dropdownColors.black,
@@ -115,22 +125,24 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
             </li>
           ))}
         </ul>
-        <div className={moduleStyles.bottomButtonsContainer}>
-          <Button
-            type="tertiary"
-            color={buttonColors.purple}
-            text={i18n.selectAll()}
-            onClick={onSelectAll}
-            size={size}
-          />
-          <Button
-            type="tertiary"
-            color={buttonColors.purple}
-            text={i18n.clearAll()}
-            onClick={onClearAll}
-            size={size}
-          />
-        </div>
+        {!rest.hideControls && (
+          <div className={moduleStyles.bottomButtonsContainer}>
+            <Button
+              type="tertiary"
+              color={buttonColors.purple}
+              text={rest.selectAllText}
+              onClick={rest.onSelectAll}
+              size={size}
+            />
+            <Button
+              type="tertiary"
+              color={buttonColors.purple}
+              text={rest.clearAllText}
+              onClick={rest.onClearAll}
+              size={size}
+            />
+          </div>
+        )}
       </div>
     </CustomDropdown>
   );

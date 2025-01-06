@@ -7,6 +7,9 @@ Dashboard::Application.routes.draw do
   # Redirect studio.code.org/courses to code.org/students
   get "/courses", to: redirect(CDO.code_org_url("/students"))
 
+  # Redirect old sign up flow to new sign up flow
+  get "/users/sign_up", to: redirect("/users/new_sign_up/account_type")
+
   # Redirect studio.code.org/sections/teacher_dashboard/first_section_progress to most recent section
   get '/teacher_dashboard/sections/first_section_progress', to: "teacher_dashboard#redirect_to_newest_section_progress"
 

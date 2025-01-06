@@ -816,6 +816,19 @@ class UserTest < ActiveSupport::TestCase
     refute_nil user.errors[:email]
   end
 
+  test "LTI users with school_info_id should have a user_school_info entry" do
+    lti_integration = create :lti_integration
+    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
+    user = build :teacher
+    user.authentication_options << build(:lti_authentication_option, user: user, authentication_id: auth_id)
+    user.school_info = create :school_info
+    user.save
+
+    assert_equal 1, user.user_school_infos.count
+    assert_equal user.id, user.user_school_infos.first.user_id
+    assert_equal user.school_info_id, user.user_school_infos.first.school_info_id
+  end
+
   test "LTI users should have a LtiUserIdentity when created" do
     lti_integration = create :lti_integration
     auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
@@ -5635,6 +5648,74 @@ class UserTest < ActiveSupport::TestCase
       it 'does not generates secret word' do
         _(user.secret_words).must_be_nil
         _ {user.save!}.wont_change -> {user.secret_words}
+      end
+    end
+  end
+
+  describe '.authenticate_with_section_and_secret_words' do
+    subject(:authenticate_with_section_and_secret_words) do
+      described_class.authenticate_with_section_and_secret_words(section: section, params: params)
+    end
+
+    let!(:student) {create(:student, secret_words: secret_words)}
+    let!(:section) {create(:section, login_type: section_login_type)}
+    let!(:follower) {create(:follower, section: section, student_user: student)}
+
+    let(:section_login_type) {Section::LOGIN_TYPE_WORD}
+    let(:secret_words) {'secret words'}
+    let(:params) {{user_id: student.id, secret_words: secret_words}}
+
+    it 'returns student' do
+      _authenticate_with_section_and_secret_words.must_equal student
+    end
+
+    context 'when :secret_words param is blank' do
+      let(:secret_words) {nil}
+
+      it 'returns nil' do
+        _authenticate_with_section_and_secret_words.must_be_nil
+      end
+    end
+
+    context 'when section login_type in not word' do
+      let(:section_login_type) {Section::LOGIN_TYPE_PICTURE}
+
+      it 'returns nil' do
+        _authenticate_with_section_and_secret_words.must_be_nil
+      end
+    end
+  end
+
+  describe '.authenticate_with_section_and_secret_picture' do
+    subject(:authenticate_with_section_and_secret_picture) do
+      described_class.authenticate_with_section_and_secret_picture(section: section, params: params)
+    end
+
+    let!(:student) {create(:student, secret_picture_id: secret_picture_id)}
+    let!(:section) {create(:section, login_type: section_login_type)}
+    let!(:follower) {create(:follower, section: section, student_user: student)}
+
+    let(:section_login_type) {Section::LOGIN_TYPE_PICTURE}
+    let(:secret_picture_id) {SecretPicture.first.id}
+    let(:params) {{user_id: student.id, secret_picture_id: secret_picture_id}}
+
+    it 'returns student' do
+      _authenticate_with_section_and_secret_picture.must_equal student
+    end
+
+    context 'when :secret_picture_id param is blank' do
+      let(:secret_picture_id) {nil}
+
+      it 'returns nil' do
+        _authenticate_with_section_and_secret_picture.must_be_nil
+      end
+    end
+
+    context 'when section login_type in not picture' do
+      let(:section_login_type) {Section::LOGIN_TYPE_WORD}
+
+      it 'returns nil' do
+        _authenticate_with_section_and_secret_picture.must_be_nil
       end
     end
   end

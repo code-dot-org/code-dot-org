@@ -43,6 +43,7 @@ export default function SingleSectionSetUp({
             label={i18n.chooseGrades()}
             name="grades"
             required={true}
+            requiredMessageText={i18n.chooseAtLeastOne()}
             options={gradeOptions}
             values={section.grade || section.grades || []}
             setValues={g => updateSection('grade', g)}

@@ -9,14 +9,18 @@
     "encrypted": "false",
     "instructions_important": "false",
     "hint_prompt_attempts_threshold": "1",
-    "long_instructions": "####Timing the layers\r\n\r\nPress Run to see what happens if we put a loop *inside* the play together block.",
+    "long_instructions": "####<i class=\"fa-solid fa-timer\"></i> Timing the layers\r\n\r\nTo time these layers, there is a rest block before the vocals. \r\n- Add a play vocal block after the [rest](#clickable=id-left:play_rest_at_current_location_simple2) inside the [play sequential](#clickable=id-up-left:play_sounds_sequential) block.",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "false",
     "level_data": {
+      "validationTimeout": 3,
       "library": "launch2024",
       "toolbox": {
         "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
         },
         "type": "flyout"
       },
@@ -26,21 +30,10 @@
           "stop_hammer_time",
           "cant_touch_this",
           "mymymy",
-          "verse_1",
-          "verse_2",
-          "yo_let_me_bust",
-          "i_told_ya",
           "break_it_down",
-          "bass",
-          "bass_breakdown",
+          "i_told_ya",
           "beat",
-          "beat_breakdown",
-          "main_loop",
-          "main_loop_short",
-          "oohs",
-          "chopped_oohs",
-          "breakdown_oohs",
-          "synth"
+          "main_loop"
         ]
       },
       "startSources": {
@@ -56,7 +49,7 @@
               "movable": false,
               "next": {
                 "block": {
-                  "type": "play_sounds_together",
+                  "type": "play_sounds_together_no_next",
                   "id": "play_sounds_together",
                   "movable": false,
                   "inputs": {
@@ -65,25 +58,33 @@
                         "type": "play_sound_at_current_location_simple2",
                         "id": "wlN~AgBJwU]b8VJ%..~w",
                         "movable": false,
+                        "editable": false,
                         "fields": {
-                          "sound": "mc_hammer_u_cant_touch_this/main_loop"
+                          "sound": "mc_hammer_u_cant_touch_this/beat"
                         },
                         "next": {
                           "block": {
-                            "type": "repeat_simple2",
-                            "id": "repeat_simple2",
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "F{+ztn7-)#{gXJii+DzB",
                             "movable": false,
                             "fields": {
-                              "times": 2
+                              "sound": "mc_hammer_u_cant_touch_this/main_loop"
                             },
-                            "inputs": {
-                              "code": {
-                                "block": {
-                                  "type": "play_sound_at_current_location_simple2",
-                                  "id": "play_sound_at_current_location_simple2",
-                                  "movable": false,
-                                  "fields": {
-                                    "sound": "mc_hammer_u_cant_touch_this/stop_hammer_time"
+                            "next": {
+                              "block": {
+                                "type": "play_sounds_sequential",
+                                "id": "play_sounds_sequential",
+                                "movable": false,
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_rest_at_current_location_simple2",
+                                      "id": "play_rest_at_current_location_simple2",
+                                      "movable": false,
+                                      "fields": {
+                                        "rest_duration": "<field name=\"rest_duration\">1</field>"
+                                      }
+                                    }
                                   }
                                 }
                               }
@@ -100,9 +101,90 @@
         }
       }
     },
+    "validations": [
+      {
+        "key": "music-coding-intro-layer_503877f4-1334-41b5-8ec5-bbe74da11625",
+        "message": "The timing of that sound works well! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_id",
+            "value": "mc_hammer_u_cant_touch_this/stop_hammer_time"
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-layer_40a470a2-1445-4cad-8fe6-fb3f31a0879c",
+        "message": "The timing of that sound works well! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_id",
+            "value": "mc_hammer_u_cant_touch_this/cant_touch_this"
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-layer_e11ffe25-7d6d-4f85-a6fb-44d7b9e454bb",
+        "message": "The timing of that sound works well! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_id",
+            "value": "mc_hammer_u_cant_touch_this/mymymy"
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-layer_bd31ef2b-20cc-4420-8190-231030787d88",
+        "message": "The timing of that sound works well! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_id",
+            "value": "mc_hammer_u_cant_touch_this/i_told_ya"
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-layer_b47a22a4-c041-405c-9986-8ca7620e5d0d",
+        "message": "The timing of that sound works well! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_id",
+            "value": "mc_hammer_u_cant_touch_this/break_it_down"
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-layer_29ee755e-32c4-4954-8ea3-d76928b84bc5",
+        "message": "Choose a lyric to play after the [rest](#clickable=id:play_rest_at_current_location_simple2). ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_id",
+            "value": "mc_hammer_u_cant_touch_this/beat"
+          }
+        ],
+        "callout": "play-sound-block---id:play_rest_at_current_location_simple2"
+      },
+      {
+        "key": "music-coding-intro-layer_8a7884b4-2ecf-4c29-aea7-295be5ee07d2",
+        "message": "Choose a lyric to play after the [rest](#clickable=id:play_rest_at_current_location_simple2). ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_id",
+            "value": "mc_hammer_u_cant_touch_this/main_loop"
+          }
+        ],
+        "callout": "play-sound-block---id:play_rest_at_current_location_simple2"
+      }
+    ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-11-24 17:40:44 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:42:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:43:13 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:43:52 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:44:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:46:42 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:47:13 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:48:33 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-26 17:12:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-11-24 17:40:44 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:42:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:43:13 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:43:52 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:44:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:46:42 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:47:13 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-24 17:48:33 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-26 17:12:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 17:42:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 17:59:05 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 18:00:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 18:01:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 18:02:07 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 18:03:09 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 18:04:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 18:05:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 18:27:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-13 22:42:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-13 23:08:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-13 23:11:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-13 23:14:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-13 23:16:41 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-13 23:17:01 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 21:23:24 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-17 21:33:26 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-17 21:38:37 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 21:42:14 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-17 22:01:07 +0000\",\"changed\":[\"long_instructions\",\"level_data\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-17 22:04:34 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-17 22:06:15 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-17 22:13:27 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-17 22:18:11 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-30 20:32:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

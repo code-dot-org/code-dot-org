@@ -1,11 +1,15 @@
 # frozen_string_literal: true
 
+require 'omniauth'
+
+require 'cdo/global_edition'
 require 'test_helper'
 
 class GlobalEditionTest < ActionDispatch::IntegrationTest
   include Minitest::RSpecMocks
 
   let(:document) {Nokogiri::HTML(response.body)}
+  let(:ge_region) {'fa'}
 
   before do
     allow(DCDO).to receive(:get).and_call_original
@@ -15,7 +19,6 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
 
   describe 'routing' do
     let(:international_page_path) {'/incubator'}
-    let(:ge_region) {'fa'}
     let(:ge_region_locale) {'fa-IR'}
     let(:regional_page_path) {File.join('/global', ge_region, international_page_path)}
     let(:ge_region_script_data) {document.at('script[data-ge-region]').try(:[], 'data-ge-region')}
@@ -227,6 +230,43 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
           get_regional_page
           must_respond_with 500
         end
+      end
+    end
+  end
+
+  describe 'oauth' do
+    let(:omniauth_test_mode) {OmniAuth.config.test_mode}
+
+    before do
+      cookies[:ge_region] = ge_region
+
+      # Disables OmniAuth test mode to generate real OAuth URLs.
+      OmniAuth.config.test_mode = false
+    end
+
+    after do
+      # Restores the initial OmniAuth test mode configuration.
+      OmniAuth.config.test_mode = omniauth_test_mode
+    end
+
+    {
+      AuthenticationOption::GOOGLE    => 'https://accounts.google.com/o/oauth2/auth',
+      AuthenticationOption::MICROSOFT => 'https://login.microsoftonline.com/common/oauth2/v2.0/authorize',
+      AuthenticationOption::FACEBOOK  => 'https://www.facebook.com/v2.12/dialog/oauth',
+      AuthenticationOption::CLEVER    => 'https://clever.com/oauth/authorize',
+    }.each do |provider, expected_oauth_url|
+      it "#{provider} authentication process is not affected by regional redirection" do
+        post "/global/fa/users/auth/#{provider}"
+        must_redirect_to %r(^#{expected_oauth_url})
+
+        oauth_uri = URI.parse(response.location)
+        oauth_params = URI.decode_www_form(oauth_uri.query.to_s).to_h
+        oauth_callback_url = oauth_params['redirect_uri']
+        _(oauth_callback_url).must_equal "https://test-studio.code.org/users/auth/#{provider}/callback"
+
+        # GET /users/auth/:provider/callback
+        get oauth_callback_url
+        must_redirect_to '/users/sign_in'
       end
     end
   end

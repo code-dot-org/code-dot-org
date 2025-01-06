@@ -14,7 +14,8 @@ markdown <<MARKDOWN
 <div style="clear:both;"></div>
 
 ## Index
-#### The index called or accesses was 1. 
+#### Index 1 was assigned to the variable `favorite`.
+#### The value stored in `favorite` was then called or accessed in the `message` string, which was subsequently printed.  
 #### Remember, lists are always indexed starting at zero (0). 
 
 <img src="https://images.code.org/d7af1e2812041818ae6613d39fa038e5-image-1732034114419.png" alt="graph of element count and index for python" width="350px" style="display: block; float:left;">

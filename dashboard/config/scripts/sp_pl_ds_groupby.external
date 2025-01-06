@@ -55,5 +55,7 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/1728365a69bc0cbe3642efface65f94b-image-1728329251246.png" alt="design process graph of the cycle" width="450px" style="display: block; float:left;">
 
+<div style="clear:both;"></div>
+
 ## Let's try out some of these in a *modify* level!
 MARKDOWN
