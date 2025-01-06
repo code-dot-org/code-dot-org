@@ -71,8 +71,7 @@ export async function postAichatCompletionMessage(
  * @param eventId
  * @param feedback
  *
- * Sends a POST request to the aichat submit teacher feedback backend controller,
- * then returns the updated chat event if successful.
+ * Sends a POST request to the aichat submit teacher feedback backend controller.
  */
 export async function postSubmitTeacherFeedback(
   eventId: number,
@@ -82,7 +81,7 @@ export async function postSubmitTeacherFeedback(
     eventId,
     feedback,
   };
-  const response = await HttpClient.post(
+  await HttpClient.post(
     `${paths.SUBMIT_TEACHER_FEEDBACK_URL}`,
     JSON.stringify(payload),
     true,
@@ -90,8 +89,6 @@ export async function postSubmitTeacherFeedback(
       'Content-Type': 'application/json; charset=UTF-8',
     }
   );
-
-  return await response.json();
 }
 
 /**
