@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
       "is_course": true,
@@ -21,7 +22,7 @@
     },
     "new_name": null,
     "family_name": "nevada-standards-aligned-second-grade",
-    "serialized_at": "2023-08-18 19:05:39 UTC",
+    "serialized_at": "2024-11-19 01:19:09 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

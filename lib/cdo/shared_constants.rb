@@ -42,6 +42,12 @@ module SharedConstants
     }
   ).freeze
 
+  USER_LEVEL_INTERACTIONS = OpenStruct.new(
+    {
+      click_help_and_tips: "click_help_and_tips",
+    }
+  ).freeze
+
   # The set of valid login types for a section
   SECTION_LOGIN_TYPE = OpenStruct.new(
     {
@@ -105,6 +111,7 @@ module SharedConstants
     poetry_hoc
     thebadguys
     music
+    pythonlab
   ).freeze
 
   # For privacy reasons, App Lab and Game Lab can only be shared if certain conditions are met. These project types can be shared if: the user is >= 13 years old and their teacher has NOT disabled sharing OR the user is < 13 and their teacher has enabled sharing.
@@ -719,7 +726,7 @@ module SharedConstants
   # Current song manifest file name for Dance Party. Note that different manifests
   # can be tested using query params (?manifest=...), but once this value is updated
   # the default manifest will change for all users.
-  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2024_v2.json'
+  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2024_v4.json'
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   # reference: https://platform.openai.com/docs/models/gpt-3-5
@@ -743,6 +750,7 @@ module SharedConstants
     COMPILATION: 'compilation',
     VALIDATION: 'validation',
     GENERAL_CHAT: 'general_chat',
+    COMPLETION: 'completion',
   }.freeze
 
   USER_TYPES = OpenStruct.new(
@@ -790,4 +798,14 @@ module SharedConstants
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
 
   US_STATES = STATE_ABBR_WITH_DC_HASH.merge(DC: 'Washington, D.C.').sort_by(&:last).to_h.freeze
+
+  PROJECT_SUBMISSION_STATUS = {
+    CAN_SUBMIT: 'can_submit',
+    ALREADY_SUBMITTED: 'already_submitted',
+    PROJECT_TYPE_NOT_ALLOWED: 'project_type_not_allowed',
+    RESTRICTED_SHARE_MODE: 'restricted_share_mode',
+    SHARING_DISABLED: 'sharing_disabled',
+    OWNER_TOO_NEW: 'owner_too_new',
+    PROJECT_TOO_NEW: 'project_too_new',
+  }
 end

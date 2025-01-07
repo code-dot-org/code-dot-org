@@ -51,7 +51,7 @@ const ToggleFileBrowserButton: React.FunctionComponent = () => {
           ariaLabel={codebridgeI18n.toggleFileBrowser()}
           size={'xs'}
           type={'tertiary'}
-          className={darkModeStyles.iconOnlyTertiaryButton}
+          className={darkModeStyles.tertiaryButton}
         />
       </WithTooltip>
     </span>

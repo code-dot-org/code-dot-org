@@ -37,7 +37,7 @@ module InternationalOptInPeople
     new_zealand: ["OMGTech!"],
     panama: ["SENACYT"],
     paraguay: ["Paraguay Educa"],
-    peru: ["Instituto San Agustín - ISAT", 'Sumatec - Code en mi Cole'],
+    peru: ["Instituto San Agustín - ISAT", 'Kodea-ExE', 'Sumatec - Code en mi Cole'],
     philippines: ["CHED and NTC", "Computer Science Teachers Association Philippines"],
     portugal: ["ANPRI", "DRE - Direção Regional de Educação (Madeira)"],
     puerto_rico: ["Department of Economic Development"],

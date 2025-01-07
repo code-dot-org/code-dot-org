@@ -1,5 +1,6 @@
 import classNames from 'classnames';
-import React, {useState, useCallback} from 'react';
+import React, {useState, useCallback, useRef, useEffect} from 'react';
+import {createPortal} from 'react-dom';
 
 import Button from '@cdo/apps/componentLibrary/button';
 
@@ -11,17 +12,23 @@ type PopUpButtonProps = {
   children?: React.ReactNode;
   className?: string;
   alignment?: 'left' | 'right';
+  id?: string;
 };
+
+const TOP_PADDING = 5;
 
 export const PopUpButton = ({
   children,
   iconName,
   className,
   alignment = 'left',
+  id,
 }: PopUpButtonProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [buttonRect, setButtonRect] = useState<DOMRect>();
-  const [offsetParent, setOffsetParent] = useState<DOMRect>();
+  const [buttonRef, setButtonRef] = useState<HTMLElement | null>(null);
+  const [dropdownStyles, setDropdownStyles] = useState<React.CSSProperties>({});
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
+  const [updatedStyles, setUpdatedStyles] = useState(false);
 
   const setIsOpenFalse = useCallback(() => {
     setIsOpen(false);
@@ -35,10 +42,8 @@ export const PopUpButton = ({
         | React.MouseEvent<HTMLAnchorElement>
     ) => {
       e.stopPropagation();
-      setButtonRect((e.target as HTMLElement).getBoundingClientRect());
-      setOffsetParent(
-        (e.target as HTMLElement).offsetParent?.getBoundingClientRect()
-      );
+      setUpdatedStyles(false);
+      setButtonRef(e.target as HTMLElement);
       setIsOpen(oldIsOpen => {
         const newIsOpen = !oldIsOpen;
         if (newIsOpen) {
@@ -54,33 +59,72 @@ export const PopUpButton = ({
         return newIsOpen;
       });
     },
-    [setIsOpen, setIsOpenFalse]
+    [setIsOpenFalse]
   );
+
+  // Effect to update dropdown position when it is shown.
+  useEffect(() => {
+    const updateDropdownPositionIfShown = () => {
+      if (isOpen) {
+        if (buttonRef && dropdownRef.current) {
+          const dropdownRect = dropdownRef.current.getBoundingClientRect();
+          const buttonRect = buttonRef.getBoundingClientRect();
+          const top =
+            buttonRect.top + buttonRect.height + TOP_PADDING + window.scrollY;
+          const left =
+            alignment === 'right'
+              ? buttonRect.right - dropdownRect.width + window.scrollX
+              : buttonRect.left + window.scrollX;
+          setDropdownStyles({
+            top,
+            left,
+          });
+          setUpdatedStyles(true);
+        }
+      }
+    };
+
+    updateDropdownPositionIfShown();
+
+    window.addEventListener('resize', updateDropdownPositionIfShown);
+    return () => {
+      window.removeEventListener('resize', updateDropdownPositionIfShown);
+    };
+  }, [alignment, buttonRef, isOpen]);
+
+  // We wait to make the dropdown visible until we've calculated the position
+  // it should be in based on its own width and the size of the button.
+  // We do this to avoid the dropdown appearing in the wrong place momentarily.
+  const dropdownStyleProps: React.CSSProperties = {
+    visibility: updatedStyles ? 'visible' : 'hidden',
+    ...dropdownStyles,
+  };
 
   return (
     <>
       <Button
-        className={classNames(className, darkModeStyles.iconOnlyTertiaryButton)}
+        className={classNames(className, darkModeStyles.tertiaryButton)}
         size="xs"
         icon={{iconStyle: 'solid', iconName}}
         color="white"
         isIconOnly
         onClick={clickHandler}
         type={'tertiary'}
+        id={id}
       />
-      {isOpen && buttonRect && offsetParent && (
-        <div
-          className={moduleStyles['popup-button-menu']}
-          onClick={() => setIsOpen(false)}
-          style={{
-            top:
-              buttonRect.top + buttonRect.height + 5 - (offsetParent.top || 0),
-            [alignment]: buttonRect[alignment] - (offsetParent[alignment] || 0),
-          }}
-        >
-          {children}
-        </div>
-      )}
+      {isOpen &&
+        // We use a portal so the dropdown can appear above all other elements.
+        createPortal(
+          <div
+            className={moduleStyles['popup-button-menu']}
+            onClick={() => setIsOpen(false)}
+            style={dropdownStyleProps}
+            ref={dropdownRef}
+          >
+            {children}
+          </div>,
+          document.body
+        )}
     </>
   );
 };

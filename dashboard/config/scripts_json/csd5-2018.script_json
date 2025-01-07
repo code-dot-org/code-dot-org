@@ -14,6 +14,7 @@
           "key": "324c3312-b070-4ac4-8bde-4b97251b6760"
         }
       ],
+      "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -25,7 +26,7 @@
     },
     "new_name": null,
     "family_name": "csd5",
-    "serialized_at": "2022-09-28 14:31:28 UTC",
+    "serialized_at": "2024-11-19 01:16:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2491,6 +2492,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
@@ -20,7 +21,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2024-09-19 19:48:51 UTC",
+    "serialized_at": "2024-11-19 01:17:42 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -9775,6 +9776,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_freeplay_express"
+        ],
         "progression": "Project"
       },
       "bonus": false,

@@ -13,6 +13,8 @@
           "key": "8730f9b7-64bd-4381-9e13-3128cc87c89a"
         }
       ],
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "CSP",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_course": true,
@@ -23,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "csp-ap",
-    "serialized_at": "2022-09-28 14:31:23 UTC",
+    "serialized_at": "2024-11-19 01:17:10 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -647,6 +649,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

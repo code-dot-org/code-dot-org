@@ -7,20 +7,25 @@ export default {
   component: I18nDropdown,
   argTypes: {
     localeUrl: {control: 'text'},
-    optionsForLocaleSelect: {control: 'object'},
+    selected: {control: 'text'},
+    options: {control: 'object'},
   },
 } as Meta;
 
+const localeOptions = [
+  {value: 'en', text: 'English'},
+  {value: 'es', text: 'Spanish'},
+  {value: 'fr', text: 'French'},
+];
+
 const Template: StoryFn<typeof I18nDropdown> = args => (
-  <I18nDropdown {...args} />
+  <I18nDropdown {...args} localeUrl="/set_locale" options={localeOptions} />
 );
 
 export const Default = Template.bind({});
-Default.args = {
-  localeUrl: '/set_locale',
-  optionsForLocaleSelect: [
-    {value: 'en', text: 'English'},
-    {value: 'es', text: 'Spanish'},
-    {value: 'fr', text: 'French'},
-  ],
+Default.args = {};
+
+export const WithSelectedLocale = Template.bind({});
+WithSelectedLocale.args = {
+  selected: 'es',
 };

@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import i18n from '@cdo/locale';
 
@@ -37,22 +39,35 @@ class Incubator extends Component {
           </div>
 
           <TwoColumnActionBlock
-            imageUrl="/shared/images/teacher-announcement/incubator-rubrics-pilot-graphic.png"
-            subHeading={i18n.incubator_aiRubric_title()}
-            description={
-              <span>
-                {i18n.incubator_aiRubric_desc1()}{' '}
-                <a href="https://www.edweek.org/technology/this-ai-tool-cut-one-teachers-grading-time-in-half-how-it-works/2024/04">
-                  {i18n.incubator_aiRubric_descLink()}
-                </a>{' '}
-                {i18n.incubator_aiRubric_desc2()}
-              </span>
-            }
+            imageUrl="/shared/images/teacher-announcement/incubator-codebridge-python.png"
+            subHeading={i18n.incubator_codebridge_python_title()}
+            description={<span>{i18n.incubator_codebridge_python_desc()}</span>}
             marginBottom="20px"
             buttons={[
               {
-                url: 'https://code.org/ai/teaching-assistant',
-                text: 'Learn More',
+                url: '/s/codebridge-ascii/reset',
+                text: i18n.incubator_codebridge_python_ascii_button(),
+              },
+              {
+                url: '/projects/pythonlab/new',
+                text: i18n.incubator_codebridge_python_project_button(),
+                color: Button.ButtonColor.neutralDark,
+              },
+            ]}
+          />
+          <TwoColumnActionBlock
+            imageUrl="shared/images/teacher-announcement/incubator-genai-graphic.png"
+            subHeading={i18n.incubator_genai_title()}
+            description={<span>{i18n.incubator_genai_desc()}</span>}
+            marginBottom="20px"
+            buttons={[
+              {
+                url: '/courses/exploring-gen-ai-2024',
+                text: i18n.incubator_genai_course_button(),
+              },
+              {
+                url: pegasus('/curriculum/generative-ai'),
+                text: i18n.incubator_genai_marketing_button(),
               },
             ]}
           />

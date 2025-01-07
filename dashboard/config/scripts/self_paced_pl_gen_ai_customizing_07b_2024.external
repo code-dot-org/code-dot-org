@@ -14,7 +14,7 @@ markdown <<MARKDOWN
     <p>
 
 #### The steps the model takes to explain its answer, showing how it got from the question to the final response, like solving a math problem step by step.
-<img src="https://images.code.org/b47dd24b89e67d4dbb150d1bf6298daf-Screenshot 2024-09-11 at 2.17.19 PM.png" alt="chatbot lab level" width="900px" style="border: 2px solid black; border-radius: 8px; float:center">
+<img src="https://images.code.org/b47dd24b89e67d4dbb150d1bf6298daf-Screenshot 2024-09-11 at 2.17.19 PM.png" alt="chain of reasoning example" width="900px" style="border: 2px solid black; border-radius: 8px; float:center">
 
 <br>
 
@@ -28,7 +28,7 @@ markdown <<MARKDOWN
     <p>
 
 #### Providing specific instances or situations to make the explanation clearer, like saying, "For example, when you..." to help people understand better.
-<img src="https://images.code.org/3432fa7472cb8abd54d4d89209b701fc-Screenshot 2024-09-11 at 2.18.21 PM.png" alt="chatbot lab level" width="900px" style="border: 2px solid black; border-radius: 8px; float:center">
+<img src="https://images.code.org/3432fa7472cb8abd54d4d89209b701fc-Screenshot 2024-09-11 at 2.18.21 PM.png" alt="giving examples example" width="900px" style="border: 2px solid black; border-radius: 8px; float:center">
 
 <br>
 

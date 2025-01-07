@@ -67,6 +67,13 @@ class CongratsController < ApplicationController
     if @is_pl_course
       course_version = CurriculumHelper.find_matching_course_version(@course_name)
       @is_k5_pl_course = course_version&.course_offering&.pl_for_elementary_school?
+      if current_user.teacher?
+        @sections = current_user.sections.all.reject(&:hidden).map(&:summarize)
+      end
+      @assignable_course_suggestions =
+        CourseOffering.assignable_published_for_students_course_offerings.
+          select {|co| co.self_paced_pl_course_offering_id == curriculum.get_course_version&.course_offering_id}.
+          map(&:summarize_for_catalog)
     end
     @next_course_script_name = ScriptConstants.csf_next_course_recommendation(@course_name)
     next_script = Unit.get_from_cache(@next_course_script_name) if @next_course_script_name

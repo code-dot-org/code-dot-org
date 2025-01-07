@@ -1,0 +1,29 @@
+:ruby
+  hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
+
+-# TODO ACQ-2556 - Remove this after 2024 HOC
+%link{href: "/css/generated/hoc-2024-music-lab-jam-hero.css", rel: "stylesheet"}
+
+.hoc-2024-music-lab-jam-hero
+  .wrapper
+    .content-wrapper
+      %p.body-one.white
+        - if hoc_mode == "soon-hoc"
+          =hoc_s(:social_hoc_is_coming)
+        - elsif hoc_mode == "actual-hoc"
+          =hoc_s(:social_hoc2018_hoc_here)
+      %h1.white
+        =hoc_s("music_lab.jam_session.name")
+      %p.body-one.white
+        =hoc_s("music_lab.jam_session.banner.desc_01")
+      .button-wrapper
+        %a.link-button.white{href: CDO.studio_url("/s/music-jam-2024/reset")}
+          =hoc_s(:call_to_action_try_activity)
+        %a.link-button.secondary.white{href: "/music"}
+          =hoc_s(:call_to_action_learn_more)
+      .afe
+        %p.white
+          =hoc_s("music_lab.in_partnership_with")
+        %img{src: "/images/avatars/amazon_future_engineer_light.png", alt: hoc_s("music_lab.amazon_future_engineer")}
+  .overlay
+  .clear

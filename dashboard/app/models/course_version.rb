@@ -197,6 +197,7 @@ class CourseVersion < ApplicationRecord
         is_stable: stable?,
         is_recommended: recommended?(locale_code),
         locales: content_root.supported_locale_names,
+        locale_codes: content_root.supported_locale_codes,
         units: units.select {|u| u.course_assignable?(user)}.map(&:summarize_for_assignment_dropdown).to_h
       }
     ]

@@ -14,6 +14,8 @@
           "key": "522deba9-98c0-4e5e-9d33-f27c05fe8f97"
         }
       ],
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_migrated": true,
       "only_instructor_review_required": true,
       "professional_learning_course": "Andrea Test",
@@ -21,7 +23,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-28 14:31:30 UTC",
+    "serialized_at": "2024-11-19 01:13:54 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "plc_reviewer",
@@ -464,6 +466,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

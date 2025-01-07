@@ -10,7 +10,6 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import progressRedux from '@cdo/apps/code-studio/progressRedux';
 import verifiedInstructor from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import viewAs from '@cdo/apps/code-studio/viewAsRedux';
-import DCDO from '@cdo/apps/dcdo';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
@@ -35,8 +34,9 @@ import teacherSections, {
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sectionProviderName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {setSelectedSectionData} from '@cdo/apps/templates/teacherNavigation/selectedSectionLoader';
+import {showV2TeacherDashboard} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
 import TeacherNavigationRouter from '@cdo/apps/templates/teacherNavigation/TeacherNavigationRouter';
-import experiments from '@cdo/apps/util/experiments';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
@@ -76,10 +76,6 @@ $(document).ready(function () {
   store.dispatch(setLocaleCode(localeCode));
 
   const showAITutorTab = canViewStudentAIChatMessages;
-
-  const showV2TeacherDashboard =
-    DCDO.get('teacher-local-nav-v2', false) ||
-    experiments.isEnabled('teacher-local-nav-v2');
 
   // When removing v1TeacherDashboard after v2 launch, remove `selectedSection` from api response.
   const getV1TeacherDashboard = () => {
@@ -133,16 +129,27 @@ $(document).ready(function () {
     );
   };
 
+  const getV2TeacherDashboard = () => {
+    const selectedSectionFromList = sections.find(s => s.id === section.id);
+    const selectedSection = {...selectedSectionFromList, ...section};
+
+    getStore().dispatch(selectSection(selectedSection.id));
+
+    setSelectedSectionData(selectedSection);
+
+    return (
+      <TeacherNavigationRouter
+        studioUrlPrefix={scriptData.studioUrlPrefix}
+        showAITutorTab={showAITutorTab}
+      />
+    );
+  };
+
   ReactDOM.render(
     <Provider store={store}>
-      {!showV2TeacherDashboard ? (
-        getV1TeacherDashboard()
-      ) : (
-        <TeacherNavigationRouter
-          studioUrlPrefix={scriptData.studioUrlPrefix}
-          showAITutorTab={showAITutorTab}
-        />
-      )}
+      {!showV2TeacherDashboard()
+        ? getV1TeacherDashboard()
+        : getV2TeacherDashboard()}
     </Provider>,
     document.getElementById('teacher-dashboard')
   );

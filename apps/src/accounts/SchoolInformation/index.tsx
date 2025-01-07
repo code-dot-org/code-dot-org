@@ -14,7 +14,7 @@ import commonStyles from '../common/common.styles.module.scss';
 interface SchoolInfo {
   country: string;
   school_name: string;
-  zip: string;
+  school_zip: string;
   school_id: string;
   school_type: string;
 }
@@ -35,7 +35,7 @@ export const SchoolInformation: React.FC<SchoolInformationProps> = ({
     schoolId: schoolInfo?.school_id,
     schoolName: schoolInfo?.school_name,
     country: schoolInfo?.country,
-    schoolZip: schoolInfo?.zip,
+    schoolZip: schoolInfo?.school_zip,
     schoolType: schoolInfo?.school_type,
   });
 

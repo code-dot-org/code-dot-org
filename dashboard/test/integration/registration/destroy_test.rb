@@ -92,7 +92,8 @@ module RegistrationsControllerTests
     end
 
     test "destroying teacher does not destroy student with personal login" do
-      student = create(:follower, section: @section).student_user
+      student = create(:student)
+      create(:follower, section: @section, student_user: student)
       sign_in @teacher
 
       assert_destroys(User) do

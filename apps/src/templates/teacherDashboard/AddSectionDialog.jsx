@@ -124,8 +124,9 @@ const AddSectionDialog = ({
         useUpdatedStyles
         fixedWidth={1010}
         isOpen={isOpen}
-        overflow="hidden"
+        overflow="auto"
         uncloseable
+        style={{overflow: 'hidden'}}
       >
         <PadAndCenter>{getDialogContent()}</PadAndCenter>
       </BaseDialog>

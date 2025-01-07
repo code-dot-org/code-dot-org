@@ -191,10 +191,8 @@ export default class FunctionEditor {
   }
 
   // Leaving these two functions as placeholders for when we implement parameters.
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-empty-function
   renameParameter(_oldName: string, _newName: string) {}
 
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
   refreshParamsEverywhere() {}
 
   autoOpenFunction(functionName: string) {
@@ -300,6 +298,14 @@ export default class FunctionEditor {
       ) as ProcedureBlock;
     }
     this.block?.setDeletable(false);
+
+    // We store the workspace width for RTL workspaces so that we can move
+    // blocks back to the correct positions after a browser window resize.
+    // See: https://github.com/google/blockly/issues/8637
+    if (this.editorWorkspace.RTL) {
+      this.editorWorkspace.previousViewWidth =
+        this.editorWorkspace.getMetrics().viewWidth;
+    }
 
     // If keyboard navigation was on, enable it on the editor workspace.
     if (

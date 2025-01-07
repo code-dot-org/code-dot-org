@@ -1,3 +1,4 @@
+@import '@cdo/apps/componentLibrary/common/styles/primitiveColors.css';
 @import '@cdo/apps/componentLibrary/common/styles/mixins';
 @import '@cdo/apps/componentLibrary/typography/typography.module';
 
@@ -31,6 +32,6 @@ button.submit {
 }
 
 h2.sectionHeader {
-  color: $light_primary_500;
+  color: var(--brand-teal-50);
   margin-bottom: 1rem;
 }

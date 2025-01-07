@@ -16,6 +16,7 @@ const EVENTS = {
   SECTION_SETUP_SIGN_IN_EVENT: 'Section Setup Sign In',
   ABANDON_SECTION_SETUP_SIGN_IN_EVENT: 'Abandon Section Setup Sign In',
   TEACHER_LOGIN_EVENT: 'Teacher Login',
+  STUDENT_LOGIN_EVENT: 'Student Login',
   ACCOUNT_SETTINGS_PAGE_VISITED: 'Account Settings Page Visited',
   LOGIN_PAGE_VISITED: 'Login Page Visited',
   LOGIN_PAGE_CREATE_ACCOUNT_CLICKED: 'Login Page Create Account Button Clicked',
@@ -23,6 +24,7 @@ const EVENTS = {
     'Curriculum Free Dialog Button Clicked',
   LMS_INFORMATION_BUTTON_CLICKED: 'LMS Information Button Clicked',
   PARENT_OR_GUARDIAN_SIGN_UP_CLICKED: 'Parent or Guardian Sign Up Clicked',
+  FINISH_ACCOUNT_PAGE_LOADED: 'Finish Account Page Loaded',
 
   // School Association
   // Update School Info Dialog
@@ -65,6 +67,13 @@ const EVENTS = {
   CAP_STUDENT_WARNING_LINK_CLICKED:
     'CAP Teacher Students Warning Modal Documentation Clicked',
   CAP_AGE_GATED_BANNER_SHOWN: 'CAP Teacher Students Banner Shown',
+  CAP_AGE_GATED_SECTIONS_BANNER_SHOWN: 'CAP Teacher Sections Banner Shown',
+  CAP_AGE_GATED_SECTIONS_MODAL_SHOWN:
+    'CAP Teacher Sections Warning Modal Shown',
+  CAP_AGE_GATED_SECTIONS_MODAL_CLOSED:
+    'CAP Teacher Sections Warning Modal Closed',
+  CAP_AGE_GATED_SECTIONS_TABLE_SECTION_NAME_LINK_CLICKED:
+    'CAP Teacher Sections Table Section Name Clicked',
 
   // School Selection Component
   COUNTRY_SELECTED: 'User Selects Country',
@@ -116,7 +125,7 @@ const EVENTS = {
   AFE_HOMEPAGE_BANNER_SUBMIT: 'AFE Teacher Homepage Banner Submitted',
 
   // Sections
-  COMPLETED_EVENT: 'Section Setup Completed',
+  SECTION_SETUP_COMPLETED: 'Section Setup Completed',
   CURRICULUM_ASSIGNED: 'Section Curriculum Assigned',
   PROGRESS_VIEWED: 'Section Progress Viewed',
   PROGRESS_VIEWED_FIXED: 'Accurate V1 Section Progress Viewed',
@@ -187,10 +196,15 @@ const EVENTS = {
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
   RUBRIC_LEVEL_VIEWED_EVENT: 'Rubric Level Viewed',
+  RUBRIC_ACTIVITY: 'Rubric Activity',
   TEACHER_VIEWING_STUDENT_WORK: 'Teacher Viewing Student Work',
   SUMMARY_PAGE_LOADED: 'Summary Page Loaded',
   SUMMARY_PAGE_NEXT_LEVEL_CLICKED: 'Summary Page Next Level Clicked',
   SUMMARY_PAGE_BACK_TO_LEVEL_CLICKED: 'Summary Page Back To Level Clicked',
+  LEVEL_ACTIVITY: 'Level Activity',
+
+  // Projects
+  PROJECT_ACTIVITY: 'Project Activity',
 
   // Check for understanding
   CFU_NAMES_TOGGLED_ON: 'Summary Page Names Toggled On',
@@ -379,6 +393,11 @@ const EVENTS = {
   FINISH_BUTTON_CERTIFICATE:
     'User Clicks on Finish Button in Finish Congrats Dialog - Certificate',
 
+  // Project submission
+  SHARING_DIALOG_SUBMIT_TO_BE_FEATURED:
+    'User Clicks Submit To Be Featured In Share Dialog',
+  SUBMIT_PROJECT_DIALOG_SUBMIT: 'User Clicks Submit In Submit Project Dialog',
+
   // Export app
   EXPORT_APP: 'User Exports App From Share Advanced Options',
 
@@ -393,6 +412,7 @@ const EVENTS = {
   LTI_UNLINK_MODAL_SHOWN: 'lti_unlink_modal_shown',
   LTI_UNLINK_CLICK: 'lti_unlink_click',
   LTI_UNLINK_CANCEL: 'lti_unlink_cancel',
+  LTI_DYNAMIC_REGISTRATION_COMPLETED: 'lti_dynamic_registration_completed',
 
   // Teacher Homepage
   TEACHER_HOMEPAGE_VISITED: 'Teacher Homepage Visited',
@@ -406,8 +426,7 @@ const EVENTS = {
   AICHAT_START_OVER: 'Student starts over and resets to default model settings',
   SUBMIT_AICHAT_REQUEST_SUCCESS: 'User submits aichat request successfully',
   SUBMIT_AICHAT_REQUEST_UNAUTHORIZED:
-    'Unauthorized user attempts to submit aichat request and fails',
-
+    'Unauthorized user attempts to submit aichat request or model customizations and fails',
   // Codebridge - File broswer-related events
   CODEBRIDGE_DELETE_FILE: 'Delete file on codebridge',
   CODEBRIDGE_DELETE_FOLDER: 'Delete folder on codebridge',
@@ -444,6 +463,51 @@ const EVENTS = {
   BLOCKLY_SETTING_ON: 'on',
   BLOCKLY_SETTING_OFF: 'off',
   BLOCKLY_APP_TYPE_MUSIC: 'music',
+
+  // Teacher Navigation V2
+  NAVIGATE_TO_SECTION: 'Local Nav Class Section Selected',
+  NAVIGATE_TO_PAGE: 'Local Nav Page Clicked',
+  SECTION_LOAD_FAILURE: 'Local Nav Section Load Failure',
+  UNIT_CALENDAR_FAILURE: 'Local Nav Unit Calendar Load Failure',
+  VIEW_UNIT_CALENDAR: 'Local Nav View Unit Calendar',
+  CHANGED_CALENDAR_MINUTES: 'Local Nav Changed Calendar Minutes',
+
+  // Lesson Materials page
+  VIEW_LESSON_MATERIALS: 'Local Nav View Lesson Materials',
+  LESSON_MATERIALS_LESSON_CHANGE: 'Local Nav Lesson Materials Lesson Change',
+  LESSON_MATERIALS_FAILURE: 'Local Nav Lesson Materials Load Failure',
+  LESSON_MATERIALS_DOWNLOAD_ALL_LESSON_PLANS:
+    'Local Nav Download All Lesson Plans',
+  LESSON_MATERIALS_DOWNLOAD_ALL_HANDOUTS: 'Local Nav Download All Handouts',
+  LESSON_MATERIALS_RESOURCE_DROPDOWN_OPTION:
+    'Local Nav Resource Dropdown Option Clicked',
+
+  // Unit Overview
+  TEACHER_NAV_UNIT_OVERVIEW_PAGE_VIEWED:
+    'Teacher Nav Unit Overview Page Viewed',
+  TEACHER_NAV_UNIT_OVERVIEW_FAILED: 'Teacher Nav Unit Overview Load Failure',
+
+  // Course Overview
+  TEACHER_NAV_COURSE_OVERVIEW_PAGE_VIEWED:
+    'Teacher Nav Course Overview Page Viewed',
+  TEACHER_NAV_COURSE_OVERVIEW_FAILED:
+    'Teacher Nav Course Overview Load Failure',
+
+  // Lab2
+  SKIP_TO_PROJECT: 'User Skipped To Project From Tutorial Level',
+
+  // Global Edition - Region Reset Button
+  GLOBAL_EDITION_REGION_RESET_BUTTON_CLICKED:
+    'Global Edition Return to Full Site Clicked',
+  // Global Edition - Region Switch Confirm events
+  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_SHOWN:
+    'Global Edition Region Switch Confirm Shown',
+  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_CLOSED:
+    'Global Edition Region Switch Confirm Closed',
+  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_ACCEPTED:
+    'Global Edition Region Switch Confirm Accepted',
+  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_REJECTED:
+    'Global Edition Region Switch Confirm Rejected',
 };
 
 const EVENT_GROUP_NAMES = {

@@ -1,6 +1,6 @@
 // Making sure that css is first so that it is imported for other classes.
 // This might not be necessary.
-import './styles/Weblab2View.css'; // eslint-disable-line import/order
+import './styles/Weblab2View.css';
 
 import {Codebridge} from '@codebridge/Codebridge';
 import {ConfigType, ProjectType} from '@codebridge/types';
@@ -25,7 +25,7 @@ const labeledGridLayouts = {
     gridLayoutRows: '1fr',
     gridLayoutColumns: '300px minmax(0, 1fr) 1fr',
     gridLayout: `
-    "info-panel workspace preview-container"
+    "info-panel workspace file-preview"
     `,
   },
   vertical: {
@@ -33,7 +33,7 @@ const labeledGridLayouts = {
     gridLayoutColumns: '300px minmax(0, 1fr) 1fr',
     gridLayout: `
     "info-panel workspace workspace"
-    "info-panel preview-container preview-container"`,
+    "info-panel file-preview file-preview"`,
   },
 };
 

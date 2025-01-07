@@ -1,0 +1,42 @@
+{
+  "encrypted": false,
+  "startSources": {
+    "files": {
+      "0": {
+        "id": "0",
+        "name": "main.py",
+        "language": "py",
+        "contents": "print('Hello start!!')",
+        "folderId": "1",
+        "active": true,
+        "open": true
+      }
+    },
+    "folders": {
+      "1": {
+        "id": "1",
+        "name": "src",
+        "parentId": "0",
+        "open": true
+      }
+    }
+  },
+  "longInstructions": "## Submittable Level\r\nHere's a sample submittable level!",
+  "hideShareAndRemix": true,
+  "teacherMarkdown": "Teachers should see this extra info.",
+  "submittable": true,
+  "predictSettings": {
+    "isPredictLevel": false
+  },
+  "aiTutorAvailable": true,
+  "containedLevelNames": null,
+  "id": 59219,
+  "helpVideos": [],
+  "type": "Pythonlab",
+  "appName": "pythonlab",
+  "useRestrictedSongs": false,
+  "usesProjects": true,
+  "finishUrl": "/s/allthethings/lessons/51/levels/1",
+  "exampleSolutions": [],
+  "exemplarSources": null
+}

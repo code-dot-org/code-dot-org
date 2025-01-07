@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import i18n from '@cdo/locale';
 
 import Button from '../../legacySharedComponents/Button';
@@ -9,7 +10,7 @@ import color from '../../util/color';
 
 import NewProjectButtons from './NewProjectButtons';
 
-export default class StartNewProject extends React.Component {
+export class StartNewProject extends React.Component {
   static propTypes = {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     canViewFullList: PropTypes.bool,
@@ -155,3 +156,30 @@ const styles = {
     width: '100%',
   },
 };
+
+/**
+ * This is a version of the new project selection that is overridable by a region
+ * configuration.
+ *
+ * This is done via a configuration in, for instance, /config/global_editions/fa.yml
+ * via a paths rule such as:
+ *
+ * ```
+ * pages:
+ *   # All pages
+ *   - path: /
+ *     components:
+ *       LtiFeedbackBanner: false
+ *       StartNewProject:
+ *         canViewFullList: false
+ * ```
+ */
+const RegionalStartNewProject = props => (
+  <GlobalEditionWrapper
+    component={StartNewProject}
+    componentId="StartNewProject"
+    props={props}
+  />
+);
+
+export default RegionalStartNewProject;

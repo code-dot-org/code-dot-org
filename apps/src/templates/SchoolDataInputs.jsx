@@ -26,6 +26,8 @@ const SEARCH_DEFAULTS = [
 
 const COUNTRIES_US_FIRST = getCountriesUsFirst();
 
+export const SCHOOL_INFO_ID = 'school_info';
+
 export default function SchoolDataInputs({
   schoolId,
   country,
@@ -37,7 +39,9 @@ export default function SchoolDataInputs({
   setSchoolName,
   setSchoolZip,
   usIp,
+  containerClassName,
   includeHeaders = true,
+  markFieldsAsRequired = false,
   fieldNames = {
     country: 'user[school_info_attributes][country]',
     ncesSchoolId: 'user[school_info_attributes][school_id]',
@@ -82,21 +86,22 @@ export default function SchoolDataInputs({
     setCountry(c);
   };
 
-  const labelClassName = schoolZipIsValid ? '' : style.disabledLabel;
-
   const handleSchoolChange = id => {
     setSchoolId(id);
-
-    if (!Object.values(NonSchoolOptions).includes(id)) {
-      const schoolName = schoolsList.find(school => school.value === id)?.text;
-      if (schoolName) {
-        setSchoolName(schoolName);
-      }
-    }
   };
 
+  const labelClassName = schoolZipIsValid ? '' : style.disabledLabel;
+
+  const computedStyleClass = classNames(
+    style.schoolAssociationWrapper,
+    {
+      [style.requiredLabel]: markFieldsAsRequired,
+    },
+    containerClassName
+  );
+
   return (
-    <div className={style.schoolAssociationWrapper}>
+    <div id={SCHOOL_INFO_ID} className={computedStyleClass}>
       {includeHeaders && (
         <div className={style.headerContainer}>
           <Heading2>{i18n.censusHeading()}</Heading2>
@@ -212,7 +217,9 @@ export default function SchoolDataInputs({
 
 SchoolDataInputs.propTypes = {
   includeHeaders: PropTypes.bool,
+  markFieldsAsRequired: PropTypes.bool,
   fieldNames: PropTypes.object,
+  containerClassName: PropTypes.string,
   schoolId: PropTypes.string.isRequired,
   country: PropTypes.string.isRequired,
   schoolName: PropTypes.string.isRequired,

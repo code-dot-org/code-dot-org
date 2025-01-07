@@ -14,6 +14,7 @@
           "key": "c26302f6-951a-41db-9c37-da33c8f00d3a"
         }
       ],
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -25,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-28 14:31:49 UTC",
+    "serialized_at": "2024-11-19 01:15:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -8751,6 +8752,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -1,6 +1,7 @@
 require_relative './test_helper'
 require_relative '../router'
 require 'cdo/rack/request'
+require 'varnish_environment'
 require 'shared_resources'
 require 'parallel'
 require 'open3'

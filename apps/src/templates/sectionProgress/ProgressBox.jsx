@@ -77,6 +77,7 @@ export default class ProgressBox extends Component {
     };
 
     return (
+      // eslint-disable-next-line react/forbid-dom-props
       <div style={boxWithBorderStyle} data-testid="progress-box">
         {this.props.lessonNumber && (
           <div style={lessonNumberStyle}>{this.props.lessonNumber}</div>

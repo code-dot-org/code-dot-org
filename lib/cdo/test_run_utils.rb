@@ -11,14 +11,6 @@ module TestRunUtils
     end
   end
 
-  def self.run_interpreter_tests
-    Dir.chdir(apps_dir) do
-      ChatClient.wrap('interpreter tests') do
-        RakeUtils.system './test/interpreter/test-on-circle.sh'
-      end
-    end
-  end
-
   def self.run_local_ui_test
     feature_path = File.expand_path(ENV.fetch('feature', nil))
     Dir.chdir(dashboard_dir('test/ui/')) do
@@ -85,6 +77,15 @@ module TestRunUtils
     Dir.chdir(lib_dir) do
       ChatClient.wrap('lib tests') do
         RakeUtils.rake_stream_output 'test'
+      end
+    end
+  end
+
+  def self.run_python_tests
+    ChatClient.wrap('python tests') do
+      # Run pytest on every sub-dir in python/ that has a pyproject.toml
+      Dir.glob('python/**/pyproject.toml').map {|file| File.dirname(file)}.each do |dir|
+        PythonVenv.run 'pytest', dir
       end
     end
   end

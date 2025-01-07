@@ -15,6 +15,13 @@ const rulesToEventuallyReenable = {
   'jsx-a11y/tabindex-no-positive': 'off',
 };
 
+const accessibilityTestingMessage =
+  'Tests should resemble how the user interacts with the application and should not rely on technical details, see docs https://testing-library.com/docs/queries/about/#priority and playbook https://docs.google.com/document/d/1U4MRbH1kthYn40mbAFK59fOWWJNcvrMIDpAZzYd9q9Y/edit';
+
+const noDataTestIdMessage =
+  'Attribute data-testid does not meet accessibility guidelines. ' +
+  accessibilityTestingMessage;
+
 // This config defines globals available especially in apps,
 // enables es6, and enables apps-specific plugins and rules.
 // See the root .eslintrc.js for generic eslint linting rules.
@@ -94,6 +101,7 @@ module.exports = {
     Turtle: 'readonly',
     YT: 'readonly',
   },
+  reportUnusedDisableDirectives: true,
   rules: {
     ...rulesToEventuallyReenable,
     'babel/semi': 'error', // autofixable
@@ -157,8 +165,31 @@ module.exports = {
             message: 'Use jest matchers instead of chai',
           },
           {
+            // We are deprecating enzyme in favor of react-testing-library. See further work at https://docs.google.com/document/d/1eX-LV7d2GtuAypy9BYiT5HOwu7FQjc4kVu6qx_6bDiI
+            name: 'enzyme',
+            message: 'Use react-testing-library instead of enzyme',
+          },
+          {
+            // In Feb 2022, we voted to deprecate Radium (proposal at https://docs.google.com/document/d/1Y3uK_iYMhTUaCI6yIDwOAMprIJCuzXSs2fECQggwp60/edit#heading=h.htf3pg55q2kt)
+            name: 'radium',
+            message: 'Use css modules instead of radium',
+          },
+          {
+            // We are now using 'react-bootstrap-2'. See further work at https://github.com/code-dot-org/code-dot-org/pull/51681
+            name: 'react-bootstrap',
+            message: 'Use react-bootstrap-2 instead of react-bootstrap',
+          },
+          {
+            name: 'react-router',
+            message: 'Use react-router-dom instead of react-router',
+          },
+          {
             name: 'sinon',
-            message: 'Use jest spys and stubs instead of sinon',
+            message: 'Use jest spies and stubs instead of sinon',
+          },
+          {
+            name: 'sinon-chai',
+            message: 'Use jest matchers instead of chai',
           },
         ],
         patterns: [
@@ -167,6 +198,18 @@ module.exports = {
             message: 'Use jest matchers instead of chai',
           },
         ],
+      },
+    ],
+    'react/forbid-dom-props': [
+      'error',
+      {
+        forbid: [{propName: 'data-testid', message: noDataTestIdMessage}],
+      },
+    ],
+    'react/forbid-component-props': [
+      'error',
+      {
+        forbid: [{propName: 'data-testid', message: noDataTestIdMessage}],
       },
     ],
   },
@@ -197,6 +240,58 @@ module.exports = {
       files: ['*.story.@(ts|tsx|js|jsx)'],
       rules: {
         'storybook/no-title-property-in-meta': 'error',
+      },
+    },
+    {
+      files: ['test/unit/**'],
+      rules: {
+        'no-restricted-properties': [
+          'error',
+          {
+            object: 'screen',
+            property: 'getByTestId',
+            message: accessibilityTestingMessage,
+          },
+          {
+            object: 'screen',
+            property: 'queryByTestId',
+            message: accessibilityTestingMessage,
+          },
+          {
+            object: 'screen',
+            property: 'getAllByTestId',
+            message: accessibilityTestingMessage,
+          },
+          {
+            object: 'screen',
+            property: 'queryAllByTestId',
+            message: accessibilityTestingMessage,
+          },
+          {
+            object: 'screen',
+            property: 'findByTestId',
+            message: accessibilityTestingMessage,
+          },
+          {
+            object: 'screen',
+            property: 'findAllByTestId',
+            message: accessibilityTestingMessage,
+          },
+          {
+            object: 'container',
+            property: 'querySelector',
+            message: accessibilityTestingMessage,
+          },
+          {
+            object: 'container',
+            property: 'querySelectorAll',
+            message: accessibilityTestingMessage,
+          },
+          {
+            property: 'toHaveClass',
+            message: accessibilityTestingMessage,
+          },
+        ],
       },
     },
   ],

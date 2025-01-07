@@ -6,13 +6,6 @@
 # i18n #
 ########
 
-# Files containing internationalization strings
-/i18n/                     @code-dot-org/i18n
-/apps/i18n/                @code-dot-org/i18n
-/dashboard/config/locales/ @code-dot-org/i18n
-/pegasus/cache/i18n/       @code-dot-org/i18n
-/pegasus/sites.v3/*/i18n/  @code-dot-org/i18n
-
 # Scripts controlling the internationalization sync
 /bin/i18n/                  @code-dot-org/i18n
 
@@ -40,7 +33,7 @@
 /.github/                       @code-dot-org/infrastructure
 /aws/                           @code-dot-org/infrastructure
 /cookbooks/                     @code-dot-org/infrastructure
-/docker/continuous-integration/ @code-dot-org/infrastructure
+/docker/ci/                     @code-dot-org/infrastructure
 .ruby-version                   @code-dot-org/infrastructure
 
 # May have feedback on:

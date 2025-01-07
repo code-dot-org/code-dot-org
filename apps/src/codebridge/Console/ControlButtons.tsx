@@ -39,8 +39,8 @@ const ControlButtons: React.FunctionComponent = () => {
   const isPredictLevel = useAppSelector(
     state => state.lab.levelProperties?.predictSettings?.isPredictLevel
   );
-  const isLoadingEnvironment = useAppSelector(
-    state => state.lab2System.loadingCodeEnvironment
+  const hasLoadedEnvironment = useAppSelector(
+    state => state.lab2System.loadedCodeEnvironment
   );
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
   const isValidating = useAppSelector(state => state.lab2System.isValidating);
@@ -91,7 +91,7 @@ const ControlButtons: React.FunctionComponent = () => {
     let tooltip = null;
     if (awaitingPredictSubmit) {
       tooltip = codebridgeI18n.predictRunDisabledTooltip();
-    } else if (isLoadingEnvironment) {
+    } else if (!hasLoadedEnvironment) {
       tooltip = codebridgeI18n.loadingEnvironmentTooltip();
     } else if (isValidating) {
       tooltip = codebridgeI18n.validatingRunDisabledTooltip();
@@ -100,7 +100,7 @@ const ControlButtons: React.FunctionComponent = () => {
   };
 
   const disabledCodeActionsTooltip = getDisabledCodeActionsTooltip();
-  const disabledCodeActionsIcon = isLoadingEnvironment
+  const disabledCodeActionsIcon = !hasLoadedEnvironment
     ? 'fa-spinner fa-spin'
     : 'fa-question-circle-o';
 
@@ -108,7 +108,7 @@ const ControlButtons: React.FunctionComponent = () => {
     <div className={moduleStyles.controlButtons}>
       {isRunning ? (
         <Button
-          text={'Stop'}
+          text={codebridgeI18n.stop()}
           onClick={handleStop}
           color={'destructive'}
           iconLeft={{iconStyle: 'solid', iconName: 'square'}}
@@ -129,7 +129,8 @@ const ControlButtons: React.FunctionComponent = () => {
           }}
         >
           <Button
-            text={'Run'}
+            id="uitest-codebridge-run"
+            text={codebridgeI18n.run()}
             onClick={handleRun}
             disabled={!!disabledCodeActionsTooltip}
             iconLeft={{iconStyle: 'solid', iconName: 'play'}}

@@ -4,13 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_course": true,
       "is_migrated": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "csp-playground",
-    "serialized_at": "2022-11-02 17:55:19 UTC",
+    "serialized_at": "2024-11-19 01:17:12 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1269,6 +1271,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4 My Pet Rock Example App_erik"
+        ],
         "progression": "Sample Apps"
       },
       "bonus": false,
@@ -1291,6 +1296,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L01 Poetry App_erik"
+        ],
         "progression": "Sample Apps"
       },
       "bonus": false,
@@ -1313,6 +1321,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L01 Thermostat App_erik"
+        ],
         "progression": "Sample Apps"
       },
       "bonus": false,
@@ -1335,6 +1346,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1 L02 CYU MC2022_erik"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1357,6 +1371,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L02 Thermostat App v1_erik"
+        ],
         "progression": "Investigation #1: Thermostat App v.1 "
       },
       "bonus": false,
@@ -1379,6 +1396,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L02 Thermostat App v1 Code_erik"
+        ],
         "progression": "Investigation #1: Thermostat App v.1 "
       },
       "bonus": false,
@@ -1401,6 +1421,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L02 Thermostat App v2_erik"
+        ],
         "progression": "Investigation #2: Thermostat App v.2"
       },
       "bonus": false,
@@ -1423,6 +1446,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L02 Thermostat App v3_erik"
+        ],
         "progression": "Investigation #3: Thermostat App v.3"
       },
       "bonus": false,
@@ -1445,6 +1471,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L02 Thermostat App v3 pt2_erik"
+        ],
         "progression": "Investigation #3: Thermostat App v.3"
       },
       "bonus": false,
@@ -1467,6 +1496,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 L02 CYU Exit Ticket_erik"
+        ],
         "progression": "Assessment: Check For Understanding\r"
       },
       "bonus": false,
@@ -1489,6 +1521,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables numbers practice 1_erik"
+        ],
         "progression": "Assigning Numbers and Strings"
       },
       "bonus": false,
@@ -1511,6 +1546,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables numbers practice 4_erik"
+        ],
         "progression": "Assigning Numbers and Strings"
       },
       "bonus": false,
@@ -1533,6 +1571,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 1_erik"
+        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -1555,6 +1596,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 3_erik"
+        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -1577,6 +1621,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 2_erik"
+        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -1599,6 +1646,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 5_erik"
+        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -1621,6 +1671,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 6_erik"
+        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -1643,6 +1696,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variable Scope: Local vs. Global2022_erik"
+        ],
         "progression": "Debugging Scope Issues"
       },
       "bonus": false,
@@ -1665,6 +1721,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Scope Issue_erik"
+        ],
         "progression": "Debugging Scope Issues"
       },
       "bonus": false,
@@ -1687,6 +1746,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L3 Choice_erik"
+        ],
         "progression": "Putting it Together"
       },
       "bonus": false,
@@ -1709,6 +1771,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L3 CFU Variables Psuedocode2022_erik"
+        ],
         "progression": "Assessment: Check For Understanding: AP Practice\r"
       },
       "bonus": false,
@@ -1731,6 +1796,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L3 CFU Variables Randomness Psuedocode2022_erik"
+        ],
         "progression": "Assessment: Check For Understanding: AP Practice\r"
       },
       "bonus": false,
@@ -1753,6 +1821,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L04 Variables Make Project_erik"
+        ],
         "progression": "Try the Photo Liker app"
       },
       "bonus": false,
@@ -1775,6 +1846,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 L04 Variables Make Project Submit_erik"
+        ],
         "progression": "Make the Photo Liker app"
       },
       "bonus": false,
@@ -1797,6 +1871,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L4 Embed Choice_erik"
+        ],
         "progression": "Try the Apps "
       },
       "bonus": false,
@@ -1819,6 +1896,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L4 Submit Choice_erik"
+        ],
         "progression": "Make an App"
       },
       "bonus": false,
@@ -2721,6 +2801,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

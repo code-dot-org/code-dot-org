@@ -1,4 +1,5 @@
 @import 'color.scss';
+@import 'font.scss';
 @import '@cdo/apps/componentLibrary/typography/typography.module';
 
 $message-border-radius: 8px;
@@ -7,9 +8,11 @@ $assistant-color: $brand_primary_light;
 
 %message {
   @extend %markdown-styles;
+  display: flex;
   padding: 12px;
-  overflow: hidden;
-  white-space: pre-line;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
   border-start-start-radius: $message-border-radius;
   border-start-end-radius: $message-border-radius;
 }
@@ -46,6 +49,12 @@ $assistant-color: $brand_primary_light;
   }
 }
 
+.messageWithChildren {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .message-user {
   @extend %message;
   background-color: $user_color;
@@ -61,8 +70,24 @@ $assistant-color: $brand_primary_light;
   overflow-x: auto;
 }
 
+%message-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.message-container-assistant {
+  @extend %message-container;
+  justify-content: flex-start;
+}
+
+.message-container-user {
+  @extend %message-container;
+  justify-content: flex-end;
+}
+
 %container {
   display: flex;
+  flex-direction: row;
   gap: 8px;
 }
 
@@ -85,17 +110,57 @@ $assistant-color: $brand_primary_light;
 .botIconContainer {
   flex: 0 0 32px;
   height: 32px;
-  background: $assistant-color;
+  width: 32px;
+  background: $light-black;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 8px;
+}
+
+.botIconContainerWithOverlay {
+  position: relative;
+  display: flex;
+  padding-right: 8px;
+  padding-top: 3px;
+}
+
+.childContainer {
+  margin-left: 48px;
 }
 
 .botIcon {
-  width: 19.25px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   flex-shrink: 0;
+}
+
+.botOverlay {
+  position:absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  padding: 2px 3px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 58px;
+  background: $ai_rubric_cyan;
+  border-width: 1px;
+  border-color: $background_gray;
+  border-style: solid;
+
+  span {
+    @include main-font-medium;
+    color: $light-black;
+    font-size: 8px;
+    font-style: normal;
+    line-height: 100%;
+    text-transform: uppercase;
+    p {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .danger {

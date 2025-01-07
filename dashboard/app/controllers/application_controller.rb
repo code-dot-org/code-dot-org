@@ -3,7 +3,6 @@ require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
 require 'cdo/shared_constants'
-require 'cpa'
 require 'policies/child_account'
 
 class ApplicationController < ActionController::Base
@@ -29,7 +28,7 @@ class ApplicationController < ActionController::Base
 
   before_action :clear_sign_up_session_vars
 
-  before_action :initialize_statsig_session
+  before_action :initialize_statsig_stable_id
 
   around_action :with_global_current_user
 
@@ -337,9 +336,6 @@ class ApplicationController < ActionController::Base
   # Check that the user is compliant with the Child Account Policy. If they
   # are not compliant, then we need to send them to the lockout page.
   protected def handle_cap_lockout
-    # Check that the child account policy is currently enabled.
-    return unless ::Cpa.cpa_experience(request)
-
     # Transits the user to the CAP grace period if they are eligible.
     Services::ChildAccount::GracePeriodHandler.call(user: current_user)
 
@@ -365,7 +361,8 @@ class ApplicationController < ActionController::Base
       # Allow students to join sections while locked out
       student_user_new_path,
       student_register_path,
-    ].include?(request.path)
+      reset_session_path,
+    ].any? {|path| request.path.include?(path)}
 
     redirect_to lockout_path
   rescue StandardError => exception
@@ -402,10 +399,10 @@ class ApplicationController < ActionController::Base
     redirect_to lti_v1_account_linking_landing_path
   end
 
-  # Creates a stable statsig id for use of session tracking (whether the user is logged in or not)
-  # Use this session variable when you want to track the user journey when the user is not logged in.
-  protected def initialize_statsig_session
-    session[:statsig_stable_id] ||= SecureRandom.uuid
+  # Creates a statsig stable id for use of signed-out user tracking.
+  # This cookie is used by the Statsig SDK for both JS and Ruby.
+  protected def initialize_statsig_stable_id
+    cookies[:statsig_stable_id] ||= {value: SecureRandom.uuid, domain: :all, path: '/'}
   end
 
   private def pairing_still_enabled

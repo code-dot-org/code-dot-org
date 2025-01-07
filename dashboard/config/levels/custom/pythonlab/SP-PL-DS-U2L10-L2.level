@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": ">  Investigate the dataset by calculating the lowest sea level anomaly, then modify the code to find the highest sea level anomaly.\r\n\r\n# Data Extremes\r\n\r\n::: details [**✅ Step 1**]\r\nRun the code to see the output again and consider:\r\n- *What is the lowest sea level anomaly?*\r\n- *When did it occur?*\r\n- *Why might this be significant?*\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\n- Add code to calculate the **highest** sea level anomaly and when it occurred.\r\n  - *Check out the [documentation](https://docs.google.com/document/d/12xlUG_K0F8mx-fqJ9OHhe1o49IGNO6RLPv8yO0jDJ9o/edit) to help figure out what function to use.*\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nThink about:\r\n- *How do the lowest and highest sea level anomalies compare?*\r\n- *What might these extremes indicate about changes in the East River?*\r\n:::",
+    "long_instructions": ">  Investigate the dataset by calculating the lowest sea level anomaly, then modify the code to find the highest sea level anomaly.\r\n\r\n# Data Extremes\r\n\r\n::: details [**✅ Step 1**]\r\nRun the code to see the output again and consider:\r\n- *What is the lowest sea level anomaly?*\r\n- *When did it occur?*\r\n- *Why might this be significant?*\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\n- Add code to calculate the **highest** sea level anomaly and when it occurred.\r\n  - *Check out the [documentation](https://docs.google.com/document/d/12xlUG_K0F8mx-fqJ9OHhe1o49IGNO6RLPv8yO0jDJ9o/edit) to help figure out what function to use.*\r\n:::\r\n\r\n::: details [**🔎 Show me how**]\r\n![](https://images.code.org/ecaa9eb9bbc2664f6ec6780e0960f737-image-1732644924677.png)\r\n*Keep the code on the same line. This is split to have room for the image. \r\n:::\r\n\r\n\r\n::: details [**✅ Step 3**]\r\nThink about:\r\n- *How do the lowest and highest sea level anomalies compare?*\r\n- *What might these extremes indicate about changes in the East River?*\r\n:::\r\n\r\n",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -43,6 +43,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-14T15:03:22.108+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L9-L2_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L9-L2_2024-pilot\"},{\"changed_at\":\"2024-10-14 15:24:33 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-14T15:03:22.108+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L9-L2_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L9-L2_2024-pilot\"},{\"changed_at\":\"2024-10-14 15:24:33 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-26 18:16:52 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-26 18:17:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Pythonlab>

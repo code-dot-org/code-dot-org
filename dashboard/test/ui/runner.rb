@@ -33,13 +33,13 @@ require_relative './utils/selenium_constants'
 
 require 'active_support/core_ext/object/blank'
 
-ENV['BUILD'] ||= `git rev-parse --short HEAD`
+ENV['GIT_COMMIT'] ||= `git rev-parse --short HEAD`
 
 GIT_BRANCH = GitUtils.current_branch
 COMMIT_HASH = RakeUtils.git_revision
 LOCAL_LOG_DIRECTORY = File.join(UI_TEST_DIR, 'log')
 S3_LOGS_BUCKET = 'cucumber-logs'
-S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV.fetch('CIRCLE_BUILD_NUM', nil)}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
+S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV.fetch('CI_BUILD_NUMBER', nil)}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
 LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, make_public: true)
 
 #
@@ -173,8 +173,8 @@ def parse_options
       opts.on("-m", "--maximize", "Maximize local webdriver window on startup") do
         options.maximize = true
       end
-      opts.on("--circle", "Whether is CircleCI (skip failing Circle tests)") do
-        options.is_circle = true
+      opts.on("--ci", "Whether is CI (skip failing CI tests)") do
+        options.is_ci = true
       end
       opts.on("--html", "Use html reporter") do
         options.html = true
@@ -543,7 +543,7 @@ end
 
 def parallel_config(parallel_limit)
   {
-    # Run in parallel threads on CircleCI (less memory), processes on main test machine (better CPU utilization)
+    # Run in parallel threads on CI (less memory), processes on main test machine (better CPU utilization)
     in_threads: ENV['CI'] ? parallel_limit : nil,
     in_processes: ENV['CI'] ? nil : parallel_limit,
 
@@ -673,12 +673,12 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@only_mobile') unless browser['appium:mobile']
   arguments += skip_tag('@no_phone') if browser['name'] == 'iPhone'
   arguments += skip_tag('@only_phone') unless browser['name'] == 'iPhone'
-  arguments += skip_tag('@no_circle') if options.is_circle
+  arguments += skip_tag('@no_ci') if options.is_ci
 
-  # always run locally or during circle runs.
+  # always run locally or during CI runs.
   # Note that you may end up running in more than one browser if you use flags
-  # like [test safari] or [test firefox] during a circle run.
-  arguments += skip_tag('@only_one_browser') if !options.local && !options.is_circle
+  # like [test safari] or [test firefox] during a CI run.
+  arguments += skip_tag('@only_one_browser') if !options.local && !options.is_ci
 
   arguments += skip_tag('@chrome') if browser['browserName'] != 'chrome' && !options.local
   arguments += skip_tag('@no_chrome') if browser['browserName'] == 'chrome'
@@ -702,11 +702,10 @@ def cucumber_arguments_for_feature(options, test_run_string, max_reruns)
     arguments += " --format rerun --out #{rerun_filename test_run_string}"
   end
 
-  # In CircleCI we export additional logs in junit xml format so CircleCI can
+  # In CI we export additional logs in junit xml format so CI could in theory
   # provide pretty test reports with success/fail/timing data upon completion.
-  # See: https://circleci.com/docs/test-metadata/#cucumber
   if ENV['CI']
-    arguments += " --format junit --out $CIRCLE_TEST_REPORTS/cucumber/#{test_run_string}.xml"
+    arguments += " --format junit --out $CI_TEST_REPORTS/cucumber/#{test_run_string}.xml"
   end
 
   arguments
@@ -744,7 +743,6 @@ def run_feature(browser, feature, options)
   run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
   run_environment['MOBILE'] = browser['appium:mobile'] ? "true" : "false"
   run_environment['TEST_RUN_NAME'] = test_run_string
-  run_environment['IS_CIRCLE'] = options.is_circle ? "true" : "false"
   run_environment['PRIORITY'] = options.priority
 
   # disable some stuff to make require_rails_env run faster within cucumber.

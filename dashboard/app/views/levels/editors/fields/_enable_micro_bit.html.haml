@@ -1,0 +1,7 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#enable_micro_bit"}}
+  Enable micro:bit
+#enable_micro_bit.in.collapse
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :enable_micro_bit, description: "Enable micro:bit"}
+  %p
+    If checked, the pythonlab level will display a 'Send to micro:bit' header button.
+    When the button is clicked, the user's code will be flashed to the connected micro:bit.

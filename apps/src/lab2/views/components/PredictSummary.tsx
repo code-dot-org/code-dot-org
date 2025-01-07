@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import {useSelector} from 'react-redux';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {LinkButton} from '@cdo/apps/componentLibrary/button';
@@ -19,9 +18,8 @@ const PredictSummary: React.FunctionComponent = () => {
     `viewAs=${ViewType.Instructor}`
   );
   const summaryUrl = document.location.pathname + SUMMARY_PATH + params;
-  const currentSectionId = useSelector(
-    (state: {teacherSections: {selectedSectionId: number}}) =>
-      state.teacherSections.selectedSectionId
+  const currentSectionId = useAppSelector(
+    state => state.teacherSections.selectedSectionId
   );
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const [responseCount, setResponseCount] = useState<number | null>(null);

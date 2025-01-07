@@ -1,5 +1,11 @@
 import classNames from 'classnames';
-import React, {useCallback} from 'react';
+import React, {
+  useCallback,
+  useState,
+  useRef,
+  useEffect,
+  MutableRefObject,
+} from 'react';
 
 import CloseButton from '@cdo/apps/componentLibrary/closeButton';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
@@ -68,7 +74,7 @@ const renderTabButtonContent = (
   text?: string,
   iconLeft?: FontAwesomeV6IconProps,
   iconRight?: FontAwesomeV6IconProps,
-  isClosable?: boolean
+  tabTextRef?: MutableRefObject<HTMLSpanElement | null>
 ) => {
   if (isIconOnly && icon) {
     return <FontAwesomeV6Icon {...icon} />;
@@ -76,8 +82,8 @@ const renderTabButtonContent = (
   return (
     <>
       {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
-      {text && <span>{text}</span>}
-      {iconRight && !isClosable && <FontAwesomeV6Icon {...iconRight} />}
+      {text && <span ref={tabTextRef}>{text}</span>}
+      {iconRight && <FontAwesomeV6Icon {...iconRight} />}
     </>
   );
 };
@@ -98,21 +104,10 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   isClosable = false,
   onClose = () => {},
 }) => {
+  const [overflowTooltip, setOverflowTooltip] = useState<TooltipProps>();
+  const tabTextRef = useRef<HTMLSpanElement | null>(null);
   const handleClick = useCallback(() => onClick(value), [onClick, value]);
   const handleClose = useCallback(() => onClose(value), [onClose, value]);
-  const handleNativeTooltip = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const target = e.currentTarget;
-    // Locate the element that contains the text (if nested inside spans or other elements).
-    const textElement = target.querySelector('span') || target;
-
-    if (textElement.scrollWidth > textElement.clientWidth && !tooltip) {
-      // Set the tooltip text if overflow occurs if the tooltip prop is not passed.
-      target.title = textElement.textContent || '';
-    } else {
-      // Clear tooltip if no overflow.
-      target.title = '';
-    }
-  };
 
   checkTabForErrors(isIconOnly, icon, text);
 
@@ -122,7 +117,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
     text,
     iconLeft,
     iconRight,
-    isClosable
+    tabTextRef
   );
 
   const buttonElement = (
@@ -137,7 +132,6 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
         isIconOnly && moduleStyles.iconOnlyTab
       )}
       onClick={handleClick}
-      onMouseOver={handleNativeTooltip}
       disabled={disabled}
     >
       {buttonContent}
@@ -151,10 +145,33 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
     </button>
   );
 
+  const preferredTooltip = tooltip || overflowTooltip;
+
+  useEffect(() => {
+    if (tabTextRef.current) {
+      const textElement = tabTextRef.current;
+      if (
+        textElement.scrollWidth > textElement.clientWidth &&
+        !tooltip &&
+        text
+      ) {
+        setOverflowTooltip({
+          tooltipId: `${tabButtonId}-overflow-tooltip`,
+          text: text,
+          direction: 'onBottom',
+        });
+      } else {
+        setOverflowTooltip(undefined);
+      }
+    }
+  }, [text, tooltip, tabButtonId]);
+
   return (
     <li role="presentation">
-      {tooltip ? (
-        <WithTooltip tooltipProps={tooltip}>{buttonElement}</WithTooltip>
+      {preferredTooltip ? (
+        <WithTooltip tooltipProps={preferredTooltip}>
+          {buttonElement}
+        </WithTooltip>
       ) : (
         buttonElement
       )}

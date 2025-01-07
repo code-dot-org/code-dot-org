@@ -4,41 +4,40 @@ theme: responsive_full_width
 ---
 
 :ruby
+
   hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/hour-of-code-styles.css", rel: "stylesheet", type: "text/css"}
 
-%section.hero-banner-basic
-  .wrapper.centered.flex-container.align-items-center.flex-direction-column.gap-2
-    %figure
-      %img{src: "/images/banners/banner-hoc-2024.png", alt: ""}
+%section.hero-banner-basic.overlay
+  .wrapper.grid-container.justify-space-between.align-items-center.gap-2
     .text-wrapper
-      %h1=hoc_s("hoc_2024.header")
-      %a.link-button.black.has-external-link{href: "https://hourofcode.com/events", target: "_blank", rel: "noopener noreferrer"}
-        =hoc_s("hoc_2024.button_host_an_event")
-
-%section.bg-neutral-light
-  .wrapper
-    %h2=hoc_s("hoc_page.what_is_hoc.heading")
-    .flex-container.justify-space-between.wrap.gap-1
-      .text-wrapper.col-50
-        %p.body-three.has-external-link
-          =hoc_s("hoc_page.what_is_hoc.desc_01", markdown: :inline, locals:{hoc_url: "https://hourofcode.com"})
+      %p.body-one.white.has-icon
         - if hoc_mode == "soon-hoc"
-          %p.body-three
-            =hoc_s("hoc_page.what_is_hoc.desc_02", markdown: :inline)
-        - else
-          %p.body-three
-            =hoc_s(:hoc_page_desc_2023)
-      %figure.col-45
-        %img{src: "/images/hoc-page-kids-computer.png", alt: "", style: "width: 100%"}
+          =hoc_s(:social_hoc_is_coming)
+        - elsif hoc_mode == "actual-hoc"
+          =hoc_s(:social_hoc2018_hoc_here)
+      %h1.white
+        =hoc_s("music_lab.jam_session.name")
+      %p.body-one.white
+        =hoc_s("music_lab.jam_session.banner.desc_01")
+      %a.link-button.white{href: CDO.studio_url("/s/music-jam-2024/reset")}
+        =hoc_s("music_lab.jam_session.button.start")
+
+      .afe.flex-container.align-items-baseline.wrap
+        %p.add-margin-top.no-margin-bottom.white
+          =hoc_s("music_lab.in_partnership_with")
+        %figure
+          %img{src: "/images/avatars/amazon_future_engineer_light.png", alt: hoc_s("music_lab.amazon_future_engineer")}
+    %figure
+      %img{src: "/images/music-lab/music-lab-banner-graphic-best-of-stem.png", alt: "", style: "width: 100%"}
 
 %section
   .wrapper
     %h2=hoc_s("hoc_page.activities.heading")
     %p.has-external-link
-      =hoc_s("hoc_page.activities.desc", markdown: :inline, locals:{register_url: "https://hourofcode.com/events"})
+      =hoc_s("hoc_page.activities.desc", markdown: :inline, locals:{register_url: CDO.hourofcode_url("/events")})
     = view :hoc_activites_featured
     .centered{style: "margin-top: 3rem"}
       %hr
@@ -49,10 +48,27 @@ theme: responsive_full_width
         %img{src: "/images/tutorials/resubmission/frozen.jpg", alt: ""}
         %img{src: "/images/tutorials/hoc2021/poem_art.jpg", alt: ""}
         %img{src: "/images/tutorials/resubmission/starwars.jpg", alt: ""}
-      %a.link-button.secondary{href: CDO.studio_url("/catalog?marketingInitiative=hoc")}
+      %a.link-button{href: CDO.hourofcode_url("/learn")}
         =hoc_s(:call_to_action_explore_activities)
 
+
 %section.bg-neutral-light
+  .wrapper
+    %h2=hoc_s("hoc_page.what_is_hoc.heading")
+    .flex-container.justify-space-between.wrap.gap-1
+      .text-wrapper.col-50
+        %p.body-three.has-external-link
+          =hoc_s("hoc_page.what_is_hoc.desc_01", markdown: :inline, locals:{hoc_url: CDO.hourofcode_url()})
+        - if hoc_mode == "soon-hoc"
+          %p.body-three
+            =hoc_s("hoc_page.what_is_hoc.desc_02", markdown: :inline)
+        - else
+          %p.body-three
+            =hoc_s(:hoc_page_desc_2023)
+      %figure.col-45
+        %img{src: "/images/hoc-page-kids-computer.png", alt: "", style: "width: 100%"}
+
+%section
   .wrapper.centered
     %h2=hoc_s("hoc_page.beyond.heading")
     = view :hoc_page_beyond

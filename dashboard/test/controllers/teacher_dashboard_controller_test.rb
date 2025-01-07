@@ -43,7 +43,7 @@ class TeacherDashboardControllerTest < ActionController::TestCase
     @section_2 = @sections_2.first
     sign_in @section_owner_2
     section = create :section, user: @section_owner
-    get :show, params: {section_id: section.id, course_version_name: 'csd-2024'}
+    get :show, params: {section_id: section.id, path: 'courses/csd-2024'}
     assert_response :redirect
     assert_redirected_to "http://test.host/courses/csd-2024"
   end
@@ -62,7 +62,7 @@ class TeacherDashboardControllerTest < ActionController::TestCase
     other_teacher = create(:teacher)
     sign_in other_teacher
 
-    get :redirect_to_newest_section
+    get :redirect_to_newest_section_progress
 
     assert_redirected_to 'https://support.code.org/hc/en-us/articles/25195525766669-Getting-Started-New-Progress-View'
   end
@@ -72,8 +72,46 @@ class TeacherDashboardControllerTest < ActionController::TestCase
 
     section = create :section, user: @section_owner, created_at: 2.days.from_now
 
-    get :redirect_to_newest_section
+    get :redirect_to_newest_section_progress
 
     assert_redirected_to "/teacher_dashboard/sections/#{section.id}/progress?view=v2"
+  end
+
+  test 'enable_experiments: redirects to home if no sections' do
+    other_teacher = create(:teacher)
+    sign_in other_teacher
+
+    get :enable_experiments
+
+    assert_redirected_to '/home'
+  end
+
+  test 'enable_experiments: redirects to newest section with flags' do
+    sign_in @section_owner
+
+    section = create :section, user: @section_owner, created_at: 2.days.from_now
+
+    get :enable_experiments
+
+    assert_redirected_to "/teacher_dashboard/sections/#{section.id}/progress?enableExperiments=teacher-local-nav-v2"
+  end
+
+  test 'disable_experiments: redirects to home if no sections' do
+    other_teacher = create(:teacher)
+    sign_in other_teacher
+
+    get :disable_experiments
+
+    assert_redirected_to '/home'
+  end
+
+  test 'disable_experiments: redirects to newest section with flags' do
+    sign_in @section_owner
+
+    section = create :section, user: @section_owner, created_at: 2.days.from_now
+
+    get :disable_experiments
+
+    assert_redirected_to "/teacher_dashboard/sections/#{section.id}/progress?disableExperiments=teacher-local-nav-v2"
   end
 end

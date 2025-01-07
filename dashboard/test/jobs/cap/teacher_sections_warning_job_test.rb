@@ -17,7 +17,7 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
     let(:student) {create(:cpa_non_compliant_student, :in_grace_period, cap_status_date: student_aga_gate_start_date)}
 
     let(:expect_teacher_warning_to_be_sent) do
-      MailjetDeliveryJob.expects(:perform_later).with(
+      MailJet.expects(:send_email).with(
         :cap_section_warning,
         teacher_email,
         teacher_name,
@@ -53,7 +53,7 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
       end
     end
 
-    it 'schedules warning email via MailjetDeliveryJob with expected arguments' do
+    it 'send an email using MailJet with expected arguments' do
       expect_teacher_warning_to_be_sent.once
       perform_enqueued_jobs {perform_later}
     end
@@ -61,6 +61,15 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
     it 'logs event' do
       expect_event_logging.once
       perform_enqueued_jobs {perform_later}
+    end
+
+    context 'when the first attempt raises TooManyRequests' do
+      let(:exception) {RestClient::TooManyRequests}
+
+      it 'it will try to send the email again' do
+        expect_teacher_warning_to_be_sent.twice.raises(exception).then.returns(nil)
+        perform_enqueued_jobs {perform_later}
+      end
     end
 
     context 'when StandardError is raised' do

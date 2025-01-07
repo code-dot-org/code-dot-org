@@ -18,7 +18,6 @@ import reducer, {
   setCourseOfferings,
   setSections,
   selectSection,
-  removeSection,
   beginCreatingSection,
   beginEditingSection,
   editSectionProperties,
@@ -30,6 +29,7 @@ import reducer, {
   importOrUpdateRoster,
   assignToSection,
   NO_SECTION,
+  removeSectionOrThrow,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   assignmentNames,
@@ -168,6 +168,8 @@ const sections = [
         instructor_email: 'teacher@code.org',
       },
     ],
+    at_risk_age_gated_date: undefined,
+    at_risk_age_gated_us_state: undefined,
   },
 ];
 
@@ -262,7 +264,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('does set selectedSectionId if passed a single section', () => {
-      const action = setSections(sections.slice(0, 1));
+      const action = setSections(sections.slice(0, 1), true);
       const nextState = reducer(startState, action);
       assert.strictEqual(nextState.selectedSectionId, sections[0].id);
     });
@@ -328,26 +330,32 @@ describe('teacherSectionsRedux', () => {
     });
   });
 
-  describe('removeSection', () => {
-    const stateWithSections = reducer(initialState, setSections(sections));
+  describe('removeSectionOrThrow', () => {
+    beforeEach(() => {
+      store.dispatch(setSections(sections));
+    });
 
     it('removes sectionid for a persisted section', () => {
       const sectionId = sections[0].id;
-      const action = removeSection(sectionId);
-      const state = reducer(stateWithSections, action);
-      assert.equal(state.sectionIds.includes(sectionId), false);
+      store.dispatch(removeSectionOrThrow(sectionId));
+      assert.equal(
+        getState().teacherSections.sectionIds.includes(sectionId),
+        false
+      );
     });
 
     it('removes a persisted section', () => {
       const sectionId = sections[0].id;
-      const action = removeSection(sectionId);
-      const state = reducer(stateWithSections, action);
-      assert.strictEqual(state.sections[sectionId], undefined);
+      store.dispatch(removeSectionOrThrow(sectionId));
+      assert.strictEqual(
+        getState().teacherSections.sections[sectionId],
+        undefined
+      );
     });
 
     it('doesnt let you remove a non-existent section', () => {
       assert.throws(() => {
-        reducer(stateWithSections, removeSection(1234));
+        store.dispatch(removeSectionOrThrow(1234));
       });
     });
   });
@@ -497,6 +505,8 @@ describe('teacherSectionsRedux', () => {
         syncEnabled: undefined,
         aiTutorEnabled: undefined,
         anyStudentHasProgress: undefined,
+        atRiskAgeGatedDate: null,
+        atRiskAgeGatedUsState: undefined,
       });
     });
   });
@@ -656,6 +666,8 @@ describe('teacherSectionsRedux', () => {
       restrict_section: false,
       post_milestone_disabled: false,
       ai_tutor_enabled: false,
+      at_risk_age_gated_date: undefined,
+      at_risk_age_gated_us_state: undefined,
     };
 
     function successResponse(customProps = {}) {
@@ -823,6 +835,8 @@ describe('teacherSectionsRedux', () => {
           syncEnabled: undefined,
           aiTutorEnabled: false,
           anyStudentHasProgress: undefined,
+          atRiskAgeGatedDate: null,
+          atRiskAgeGatedUsState: undefined,
         },
       });
     });
@@ -965,7 +979,7 @@ describe('teacherSectionsRedux', () => {
 
     it('sets courseOfferings from server responses', () => {
       const promise = store.dispatch(asyncLoadSectionData());
-      expect(state().courseOfferings).to.deep.equal({});
+      expect(state().courseOfferings).to.deep.equal([]);
 
       expect(server.requests).to.have.length(3);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
@@ -990,7 +1004,7 @@ describe('teacherSectionsRedux', () => {
 
     it('sets availableParticipantTypes from server responses', () => {
       const promise = store.dispatch(asyncLoadSectionData());
-      expect(state().courseOfferings).to.deep.equal({});
+      expect(state().courseOfferings).to.deep.equal([]);
 
       expect(server.requests).to.have.length(3);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
@@ -1013,7 +1027,7 @@ describe('teacherSectionsRedux', () => {
 
     it('sets students from server responses', () => {
       const promise = store.dispatch(asyncLoadSectionData('id'));
-      expect(state().courseOfferings).to.deep.equal({});
+      expect(state().courseOfferings).to.deep.equal([]);
 
       expect(server.requests).to.have.length(4);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
@@ -1104,34 +1118,40 @@ describe('teacherSectionsRedux', () => {
     const stateWithSections = reducer(stateWithAssigns, setSections(sections));
     const stateWithUnassignedSection = reducer(stateWithSections, {
       type: EDIT_SECTION_SUCCESS,
-      sectionId: '12',
-      serverSection: {
-        ...sections[1],
-        course_offering_id: null,
-        course_version_id: null,
-        unit_id: null,
+      payload: {
+        sectionId: '12',
+        serverSection: {
+          ...sections[1],
+          course_offering_id: null,
+          course_version_id: null,
+          unit_id: null,
+        },
       },
     });
     const stateWithInvalidUnitAssignment = reducer(stateWithSections, {
       type: EDIT_SECTION_SUCCESS,
-      sectionId: '12',
-      serverSection: {
-        ...sections[1],
-        course_offering_id: 2,
-        course_version_id: 3,
-        unit_id: 9999,
+      payload: {
+        sectionId: '12',
+        serverSection: {
+          ...sections[1],
+          course_offering_id: 2,
+          course_version_id: 3,
+          unit_id: 9999,
+        },
       },
     });
     const stateWithInvalidCourseOfferingAssignment = reducer(
       stateWithSections,
       {
         type: EDIT_SECTION_SUCCESS,
-        sectionId: '12',
-        serverSection: {
-          ...sections[1],
-          course_offering_id: 9999,
-          course_version_id: 9999,
-          unit_id: null,
+        payload: {
+          sectionId: '12',
+          serverSection: {
+            ...sections[1],
+            course_offering_id: 9999,
+            course_version_id: 9999,
+            unit_id: null,
+          },
         },
       }
     );
@@ -1380,7 +1400,7 @@ describe('teacherSectionsRedux', () => {
     it('clears the classroom list', () => {
       store.dispatch({
         type: IMPORT_ROSTER_FLOW_LIST_LOADED,
-        classrooms: [1, 2, 3],
+        payload: [1, 2, 3],
       });
       expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
       store.dispatch(cancelImportRosterFlow());
@@ -1444,7 +1464,7 @@ describe('teacherSectionsRedux', () => {
       withGoogle();
       store.dispatch({
         type: IMPORT_ROSTER_FLOW_LIST_LOADED,
-        classrooms: [1, 2, 3],
+        payload: [1, 2, 3],
       });
       expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
 

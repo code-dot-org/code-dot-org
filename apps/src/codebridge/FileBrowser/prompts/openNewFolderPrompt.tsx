@@ -1,4 +1,3 @@
-import {getNextFolderId} from '@codebridge/codebridgeContext';
 import {NewFolderFunction} from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {ProjectType, FolderId} from '@codebridge/types';
@@ -38,8 +37,7 @@ export const openNewFolderPrompt = async ({
   }
   const folderName = extractUserInput(results);
 
-  const folderId = getNextFolderId(Object.values(projectFolders));
-  newFolder({parentId, folderName, folderId});
+  newFolder({parentId, folderName});
 
   const eventName =
     parentId === DEFAULT_FOLDER_ID

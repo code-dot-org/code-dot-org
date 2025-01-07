@@ -1,5 +1,5 @@
 @no_mobile
-Feature: Using the V2 teacher dashboard
+Feature: Using the V2 progress page
 
 Scenario: Teacher can open and close Icon Key and details
   Given I create an authorized teacher-associated student named "Sally"

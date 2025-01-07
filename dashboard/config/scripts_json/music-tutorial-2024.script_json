@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "is_course": true,
       "is_migrated": true,
@@ -27,11 +28,14 @@
         "vi-VN",
         "zh-TW"
       ],
+      "topic_tags": [
+        "music_lab"
+      ],
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "music-tutorial-2024",
-    "serialized_at": "2024-08-01 16:22:18 UTC",
+    "serialized_at": "2024-11-19 01:19:06 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

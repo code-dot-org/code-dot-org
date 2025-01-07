@@ -61,9 +61,13 @@ rows.each do |row|
   raise "missing script_id for row #{row}" unless script_id
   if follower_ids.include?(student_id)
     if do_dry_run
-      puts "can remove student data with id " + student_id.to_s
+      puts "Can remove student data with id " + student_id.to_s + " for unit with ID " + script_id.to_s
     else
-      User.delete_progress_for_unit(user_id: student_id, script_id: script_id)
+      begin
+        User.delete_progress_for_unit(user_id: student_id, script_id: script_id)
+      rescue
+        puts "Error deleting progress for student " + student_id.to_s + " for unit with ID " + script_id.to_s
+      end
     end
   else
     puts "Student with id " + student_id.to_s + " is not in teacher " + teacher_id.to_s +

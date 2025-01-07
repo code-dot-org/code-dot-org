@@ -1,0 +1,13 @@
+name 'self-paced-pl-ex-gen-ai-customizing_09_2024'
+title 'Check for Understanding: Temperature'
+description ''
+question 'Which of the following best describes what changing temperature does to the responses you get from the chatbot?'
+
+right  'Temperature affects which words are chosen as a language model tries to generate new words. The higher the temperature, the more random the word choices.', feedback: ‘Nope!’
+wrong 'Temperature affects which words are chosen as a language model tries to generate new words. The lower the temperature, the more random the word choices', feedback: ‘Nope!’
+wrong 'Temperature changes how nice the chatbot is. The higher the temperature, the nicer the responses.', feedback: ‘Nope!’
+wrong 'Temperature changes how nice the chatbot is. The lower the temperature, the nicer the responses.', feedback: ‘Nope!’
+allow_multiple_attempts true
+markdown <<MARKDOWN
+
+MARKDOWN

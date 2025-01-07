@@ -4,13 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "hideable_lessons": true,
       "is_migrated": true,
       "lesson_extras_available": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-09-18 19:31:24 UTC",
+    "serialized_at": "2024-12-18 15:25:10 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6270,6 +6272,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Advanced Music Level 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6671,6 +6676,27 @@
     },
     {
       "chapter": 186,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Python Lab 8"
+        ],
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607"
+      },
+      "level_keys": [
+        "Allthethings Python Lab 8"
+      ]
+    },
+    {
+      "chapter": 187,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6694,7 +6720,7 @@
       ]
     },
     {
-      "chapter": 187,
+      "chapter": 188,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6718,7 +6744,7 @@
       ]
     },
     {
-      "chapter": 188,
+      "chapter": 189,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6742,7 +6768,7 @@
       ]
     },
     {
-      "chapter": 189,
+      "chapter": 190,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6766,7 +6792,7 @@
       ]
     },
     {
-      "chapter": 190,
+      "chapter": 191,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6790,7 +6816,7 @@
       ]
     },
     {
-      "chapter": 191,
+      "chapter": 192,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6814,7 +6840,7 @@
       ]
     },
     {
-      "chapter": 192,
+      "chapter": 193,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -6838,7 +6864,7 @@
       ]
     },
     {
-      "chapter": 193,
+      "chapter": 194,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -6862,7 +6888,7 @@
       ]
     },
     {
-      "chapter": 194,
+      "chapter": 195,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -6886,7 +6912,7 @@
       ]
     },
     {
-      "chapter": 195,
+      "chapter": 196,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -6910,7 +6936,7 @@
       ]
     },
     {
-      "chapter": 196,
+      "chapter": 197,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9274,6 +9300,18 @@
         "level.key": "Allthethings Python Lab 7",
         "script_level.level_keys": [
           "Allthethings Python Lab 7"
+        ],
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Python Lab 8",
+        "script_level.level_keys": [
+          "Allthethings Python Lab 8"
         ],
         "lesson.key": "lesson-53",
         "lesson_group.key": "",

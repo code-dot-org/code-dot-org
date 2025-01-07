@@ -664,7 +664,7 @@ form {
   }
 
   input[type="text"],
-  select {
+  select:not(.default) {
     display: block;
     width: 100%;
     margin: 0.25rem auto 1.5rem;

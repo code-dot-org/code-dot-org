@@ -56,12 +56,16 @@ Given(/^I am a teacher with student sections named Section 1 and Section 2/) do
   )
 end
 
-Given(/^I create a new student section assigned to "([^"]*)"$/) do |script_name|
-  browser_request(
-    url: '/api/test/create_student_section_assigned_to_script',
-    method: 'POST',
-    body: {script_name: script_name}
+Given(/^I create a new student section assigned to "([^"]*)"( and save the section)?$/) do |script_name, save|
+  response = JSON.parse(browser_request(
+                          url: '/api/test/create_student_section_assigned_to_script',
+                          method: 'POST',
+                          body: {script_name: script_name}
+    )
   )
+  if save
+    @section_url = "http://studio.code.org/join/#{response['section_code']}"
+  end
 end
 
 And /^I create a new "([^"]*)" student section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?$/ do |marketing_audience, assignment_family, version_year, secondary|
@@ -121,14 +125,14 @@ And(/^I create a(n authorized)? teacher-associated( under-13)?( sponsored)? stud
     user_opts[:user_provided_us_state] = true
   end
 
-  cap_start_date = DateTime.parse('2023-07-01T00:00:00MDT').freeze
-
   if after_cap_start
-    user_opts[:created_at] = cap_start_date
+    raise "cap_lockout_date undefined" unless @cap_lockout_date
+    user_opts[:created_at] = @cap_lockout_date
   end
 
   if before_cap_start
-    user_opts[:created_at] = cap_start_date - 1.second
+    raise "cap_start_date undefined" unless @cap_start_date
+    user_opts[:created_at] = @cap_start_date - 1.second
   end
 
   create_user(name, **user_opts)

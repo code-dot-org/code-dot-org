@@ -168,7 +168,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
 
   test_redirect_to_sign_in_for :index
 
-  test 'courses are sorted as expected' do
+  test 'show_deeper_learning is true if user is enrolled in PL courses' do
     prepare_scenario
 
     ['Bills Fandom 101', 'ECS Support', 'CSP Support'].each do |name|
@@ -179,7 +179,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
     load_pl_landing @teacher
 
     response = assigns(:landing_page_data)
-    assert_equal(['CSP Support', 'ECS Support', 'Bills Fandom 101'], response[:summarized_plc_enrollments].pluck(:courseName))
+    assert response[:show_deeper_learning]
   end
 
   test 'id of current year application is passed down' do
@@ -200,50 +200,6 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
 
     response = assigns(:landing_page_data)
     assert response[:has_enrolled_in_workshop]
-  end
-
-  test 'facilitated workshops are passed down' do
-    prepare_scenario
-
-    @teacher.permission = UserPermission::FACILITATOR
-    workshop = create :pd_workshop, facilitators: [@teacher]
-    create :pd_workshop, :ended, facilitators: [@teacher]
-    @teacher.reload
-
-    load_pl_landing @teacher
-
-    response = assigns(:landing_page_data)
-    assert_equal 1, response[:workshops_as_facilitator].length
-    assert_equal workshop.course_name, response[:workshops_as_facilitator].first[:course]
-  end
-
-  test 'organized workshops are passed down' do
-    prepare_scenario
-
-    @teacher.permission = UserPermission::WORKSHOP_ORGANIZER
-    workshop = create :pd_workshop, organizer: @teacher
-    create :pd_workshop, :ended, organizer: @teacher
-
-    load_pl_landing @teacher
-
-    response = assigns(:landing_page_data)
-    assert_equal 1, response[:workshops_as_organizer].length
-    assert_equal workshop.course_name, response[:workshops_as_organizer].first[:course]
-  end
-
-  test 'workshops for regional partner are passed down' do
-    prepare_scenario
-
-    regional_partner = create :regional_partner
-    @teacher.regional_partners << regional_partner
-    workshop = create :pd_workshop, regional_partner: regional_partner
-    create :pd_workshop, :ended, regional_partner: regional_partner
-
-    load_pl_landing @teacher
-
-    response = assigns(:landing_page_data)
-    assert_equal 1, response[:workshops_for_regional_partner].length
-    assert_equal workshop.course_name, response[:workshops_for_regional_partner].first[:course]
   end
 
   test 'progress in PL courses is passed down' do
@@ -343,15 +299,81 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
     assert_select '.extra-links', count: 0
   end
 
-  def go_to_workshop(workshop, teacher)
+  test 'workshops_as_facilitator_for_pl_page returns live facilitated workshops' do
+    prepare_scenario
+    facilitator = create :facilitator
+    load_pl_landing facilitator
+
+    # Check that no workshops are returned if user isn't facilitating any
+    no_workshops_response = get :workshops_as_facilitator_for_pl_page
+    assert_equal [], JSON.parse(no_workshops_response.body)['workshops_as_facilitator']
+
+    # Set up workshops the user facilitated
+    later_workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSD, sessions: [session_on_day(3)], facilitators: [facilitator]
+    earlier_workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSA, sessions: [session_on_day(1)], facilitators: [facilitator]
+    create :pd_workshop, :ended, facilitators: [facilitator]
+    facilitator.reload
+
+    # Only returns workshops that are not ended
+    facilitated_workshops_response = get :workshops_as_facilitator_for_pl_page
+    facilitated_workshop_courses = JSON.parse(facilitated_workshops_response.body)['workshops_as_facilitator'].map {|w| w['course']}
+    assert_equal [earlier_workshop.course, later_workshop.course], facilitated_workshop_courses
+  end
+
+  test 'workshops_as_organizer_for_pl_page returns live organized workshops' do
+    prepare_scenario
+    workshop_organizer = create :workshop_organizer
+    load_pl_landing workshop_organizer
+
+    # Check that no workshops are returned if user isn't organizing any
+    no_workshops_response = get :workshops_as_organizer_for_pl_page
+    assert_equal [], JSON.parse(no_workshops_response.body)['workshops_as_organizer']
+
+    # Set up workshops the user organized
+    later_workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSD, sessions: [session_on_day(3)], organizer: workshop_organizer
+    earlier_workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSA, sessions: [session_on_day(1)], organizer: workshop_organizer
+    create :pd_workshop, :ended, organizer: workshop_organizer
+
+    # Only returns workshops that are not ended (sorted by start date)
+    organized_workshops_response = get :workshops_as_organizer_for_pl_page
+    organized_workshop_courses = JSON.parse(organized_workshops_response.body)['workshops_as_organizer'].map {|w| w['course']}
+    assert_equal [earlier_workshop.course, later_workshop.course], organized_workshop_courses
+  end
+
+  test 'workshops_as_program_manager_for_pl_page returns live workshops user is program manager of' do
+    prepare_scenario
+    program_manager = create :program_manager
+    load_pl_landing program_manager
+
+    # Check that no workshops are returned if user isn't the program manager for any
+    no_workshops_response = get :workshops_as_program_manager_for_pl_page
+    assert_equal [], JSON.parse(no_workshops_response.body)['workshops_as_program_manager']
+
+    # Set up workshops the user is the program manager of
+    later_workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSD, sessions: [session_on_day(3)], organizer: program_manager
+    earlier_workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSA, sessions: [session_on_day(1)], organizer: program_manager
+    create :pd_workshop, :ended, organizer: program_manager
+
+    # Only returns workshops that are not ended (sorted by start date)
+    program_manager_workshops_response = get :workshops_as_program_manager_for_pl_page
+    program_manager_workshop_courses = JSON.parse(program_manager_workshops_response.body)['workshops_as_program_manager'].map {|w| w['course']}
+    assert_equal [earlier_workshop.course, later_workshop.course], program_manager_workshop_courses
+  end
+
+  private def go_to_workshop(workshop, teacher)
     enrollment = create :pd_enrollment, email: teacher.email, workshop: workshop
     create :pd_attendance, session: workshop.sessions.first, enrollment: enrollment
     enrollment
   end
 
-  def load_pl_landing(teacher)
+  private def load_pl_landing(teacher)
     sign_in teacher
     get :index
     assert_response :success
+  end
+
+  private def session_on_day(day_offset)
+    day = Time.zone.today + day_offset.days
+    create :pd_session, start: day + 9.hours, end: day + 17.hours
   end
 end

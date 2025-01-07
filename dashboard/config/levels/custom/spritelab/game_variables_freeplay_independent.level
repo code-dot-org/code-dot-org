@@ -65,7 +65,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-31T21:21:17.484+00:00\",\"changed\":[\"cloned from \\\"game_variables_freeplay_course-e\\\"\"],\"cloned_from\":\"game_variables_freeplay_course-e\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-31T21:21:17.484+00:00\",\"changed\":[\"cloned from \\\"game_variables_freeplay_course-e\\\"\"],\"cloned_from\":\"game_variables_freeplay_course-e\"},{\"changed_at\":\"2024-11-12 23:44:15 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1282,17 +1282,17 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_spriteSay" id="53{-89xx,W1:d6)oyQ#l" x="16" y="614">
+        <block type="gamelab_spriteSay" id="53{-89xx,W1:d6)oyQ#l" x="49" y="635">
           <field name="SPEECH">Hello, world!</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" id="wEQ6#*HMP%@ccDpNBJWt" movable="false">
+            <block type="gamelab_allSpritesWithAnimation" id="wEQ6#*HMP%@ccDpNBJWt">
               <field name="ANIMATION">"game_cow"</field>
             </block>
           </value>
         </block>
         <block type="gamelab_spriteSayTime" id="_3KD%96S/ierp4Db}vR3" x="16" y="690">
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" id="/]~|Sa!|Uqk(brdV+M=." movable="false">
+            <block type="gamelab_allSpritesWithAnimation" id="/]~|Sa!|Uqk(brdV+M=.">
               <field name="ANIMATION">"game_cow"</field>
             </block>
           </value>
@@ -1310,7 +1310,7 @@
         <block type="gamelab_setProp" id="~mNL8Iq{dH=[jV{-o]X+" x="16" y="766">
           <field name="PROPERTY">"scale"</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" id="nC@,pCS$m+ibwr*YhsGc" movable="false">
+            <block type="gamelab_allSpritesWithAnimation" id="nC@,pCS$m+ibwr*YhsGc">
               <field name="ANIMATION">"game_cow"</field>
             </block>
           </value>
@@ -1323,7 +1323,7 @@
         <block type="gamelab_changePropBy" id="$w$-R:pP/u8u09hU2dV*" x="16" y="842">
           <field name="PROPERTY">"scale"</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" id="H0SOirc.|7z$ic/+B|jj" movable="false">
+            <block type="gamelab_allSpritesWithAnimation" id="H0SOirc.|7z$ic/+B|jj">
               <field name="ANIMATION">"game_cow"</field>
             </block>
           </value>
@@ -1333,17 +1333,17 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_setAnimation" id="%2}:?i[s|Kml+DtNu_pO" x="16" y="918">
+        <block type="gamelab_setAnimation" id="%2}:?i[s|Kml+DtNu_pO" x="38" y="925">
           <field name="ANIMATION">"game_cow"</field>
           <value name="THIS">
-            <block type="gamelab_allSpritesWithAnimation" id="PV5^F0*Z!5`2c;Od::(6" movable="false">
+            <block type="gamelab_allSpritesWithAnimation" id="PV5^F0*Z!5`2c;Od::(6">
               <field name="ANIMATION">"game_cow"</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_destroy" id=")0x%NA*s%/R2-v$;~gub" x="16" y="994">
+        <block type="gamelab_destroy" id=")0x%NA*s%/R2-v$;~gub" x="30" y="1017">
           <value name="THIS">
-            <block type="gamelab_allSpritesWithAnimation" id="8tN/UW{F/X#16g$z$H5e" movable="false">
+            <block type="gamelab_allSpritesWithAnimation" id="8tN/UW{F/X#16g$z$H5e">
               <field name="ANIMATION">"game_cow"</field>
             </block>
           </value>
@@ -1363,28 +1363,32 @@
         </block>
         <block type="gamelab_removeAllBehaviors" id="v}u%3K_q3-|1TOr-^T|X" x="351" y="1115">
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" id="ZDsd)e-yWp`%oDd#ya+)" movable="false">
+            <block type="gamelab_allSpritesWithAnimation" id="ZDsd)e-yWp`%oDd#ya+)">
               <field name="ANIMATION">"game_cow"</field>
             </block>
           </value>
         </block>
         <block type="gamelab_spriteClicked" id="]pOXTOb?)ZVt8B7!2m}3" x="16" y="1178">
+          <mutation useDefaultIcon="true"/>
+          <field name="button_gamelab_spriteClicked"/>
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" id="%.S(6PL2)@6BLf.!4}Vq" movable="false">
+            <block type="gamelab_allSpritesWithAnimation" id="%.S(6PL2)@6BLf.!4}Vq">
               <field name="ANIMATION">"game_cow"</field>
             </block>
           </value>
         </block>
         <block type="gamelab_checkTouching" id="8mg}.yCF;A//1f-vlsA," x="12" y="1262">
+          <mutation useDefaultIcon="true"/>
+          <field name="button_gamelab_checkTouching"/>
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation" id="2(^^d$ID+{!TC,#E%wgM" movable="false">
+            <block type="gamelab_allSpritesWithAnimation" id="2(^^d$ID+{!TC,#E%wgM">
               <field name="ANIMATION">"game_cow"</field>
             </block>
           </value>
           <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation" id="7([6Q0N_u[;Iz2AtEDWf" movable="false">
+            <block type="gamelab_allSpritesWithAnimation" id="7([6Q0N_u[;Iz2AtEDWf">
               <field name="ANIMATION">"game_cow"</field>
             </block>
           </value>

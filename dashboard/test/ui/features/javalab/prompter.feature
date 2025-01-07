@@ -1,7 +1,7 @@
 @eyes
 Feature: Prompter
 
-  @no_circle
+  @no_ci
   Scenario: Upload an image via the prompter
     When I open my eyes to test "Javalab Prompter Image Upload"
     Given I create a levelbuilder named "Simone"

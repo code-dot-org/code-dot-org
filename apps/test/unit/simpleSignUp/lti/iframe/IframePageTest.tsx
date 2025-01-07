@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import {act} from 'react-dom/test-utils'; // eslint-disable-line no-restricted-imports
+import {act} from 'react-dom/test-utils';
 import sinon, {SinonStub} from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {

@@ -24,5 +24,8 @@ export const generatePreviewCode = (
     Blockly.getGenerator().init(workspace);
   }
 
-  return Blockly.getGenerator().blockToCode(setup);
+  // blockToCode returns a string of generated code for statement blocks, or an array of
+  // generated code and an operator order value for value blocks. Because the setup
+  // block is a statement block, we can safely cast this to a string.
+  return Blockly.getGenerator().blockToCode(setup) as string;
 };

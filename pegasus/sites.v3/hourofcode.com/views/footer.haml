@@ -1,16 +1,24 @@
+- require 'cdo/footer'
+
+- options = {}
+- options[:ge_region] = request.ge_region
+- options[:site] = :hour_of_code
+- options[:loc_prefix] = 'footer_menu_'
+- options[:i18n] = method(:hoc_s)
+- footer_contents = Cdo::Footer.get_footer_contents(options)
+
 %footer#pagefooter
   #footer-links
     %ul.hide-responsive-footer-menu
-      %li
-        %a{:href=>"http://support.code.org/hc/en-us/requests/new", :target=>"_blank"}= hoc_s(:footer_menu_contact)
-      %li
-        %a{:href=>"http://support.code.org", :target=>"_blank"}= hoc_s(:footer_menu_support)
-      %li
-        %a{:href=>codeorg_url('/tos'), :target=>"_blank"}= hoc_s(:footer_menu_terms)
-      %li
-        %a{:href=>codeorg_url('/privacy'), :target=>"_blank"}= hoc_s(:footer_menu_privacy)
-      %li
-        %a{href:resolve_url('/cookies'), :target=>"_blank"}= hoc_s(:footer_menu_cookie)
+      - footer_contents.each do |link|
+        - if link[:domain] == 'hourofcode.com'
+          - link[:href] = resolve_url(link[:url])
+        - elsif link[:domain].nil?
+          - link[:href] = link[:url]
+        - else
+          - link[:href] = link[:url]
+        %li
+          %a{link.except(:title, :url, :domain)}= link[:title]
     #footer-toggle
       %a{href: "#"}
         Code.org

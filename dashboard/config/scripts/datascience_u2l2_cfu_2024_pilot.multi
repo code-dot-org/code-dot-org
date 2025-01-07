@@ -5,7 +5,7 @@ wrong 'My favorite fruit is apple!'
 right 'My favorite fruit is banana!'
 wrong 'My favorite fruit is cherry!'
 wrong 'Error: list index out of range'
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 What will be the output of the following code?

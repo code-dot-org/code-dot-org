@@ -11,10 +11,11 @@ import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
 import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
-import {cancelSpeech} from '@cdo/apps/util/BrowserTextToSpeech';
+import {useBrowserTextToSpeech} from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import ErrorBoundary from '../ErrorBoundary';
+import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
 import {
   LabState,
   isLabLoading,
@@ -41,6 +42,7 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
     (state: {lab: LabState}) =>
       state.lab.pageError?.errorMessage || state.lab.pageError?.error?.message
   );
+  const {cancel} = useBrowserTextToSpeech();
 
   // Store some server-provided data in redux.
 
@@ -65,18 +67,8 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
   }, [isShareView, dispatch]);
 
   // Add listeners to cancel in any-progress text to speech on level change or reload.
-  useEffect(() => {
-    const notifier = Lab2Registry.getInstance().getLifecycleNotifier();
-    notifier.addListener(LifecycleEvent.LevelChangeRequested, cancelSpeech);
-    notifier.addListener(LifecycleEvent.LevelLoadStarted, cancelSpeech);
-    return () => {
-      notifier.removeListener(
-        LifecycleEvent.LevelChangeRequested,
-        cancelSpeech
-      );
-      notifier.removeListener(LifecycleEvent.LevelLoadStarted, cancelSpeech);
-    };
-  }, []);
+  useLifecycleNotifier(LifecycleEvent.LevelChangeRequested, cancel);
+  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, cancel);
 
   return (
     <ErrorBoundary

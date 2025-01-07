@@ -1,5 +1,6 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
   "created_at": "2022-10-21T19:01:01.000Z",
   "level_num": "custom",
@@ -12,11 +13,10 @@
     "name_suffix": "_2023",
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "This video gives you a tour of the Java Lab environment.  As you watch, pay attention to how you can rename files in Java Lab, resize different parts of the screen, or clear the console. \r\n\r\n**Vocabulary:**\r\n\r\n* **Integrated development environment (IDE)** - a software application for writing, compiling, testing, and debugging program code\r\n\r\n**Up next:** You will watch a video describing how to write a program in Java Lab."
+    "long_instructions": "#### This video gives you a tour of the Java Lab environment.  As you watch, pay attention to how you can rename files in Java Lab, resize different parts of the screen, or clear the console. \r\n\r\n#### **Vocabulary:**\r\n\r\n- #### **Integrated development environment (IDE)** - a software application for writing, compiling, testing, and debugging program code\r\n\r\n#### **Up next:** You will watch a video describing how to write a program in Java Lab."
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-21T19:01:01.315+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-java-lab-intro-video\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-java-lab-intro-video\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-21T19:01:01.315+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-java-lab-intro-video\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-java-lab-intro-video\"},{\"changed_at\":\"2024-10-24 18:21:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

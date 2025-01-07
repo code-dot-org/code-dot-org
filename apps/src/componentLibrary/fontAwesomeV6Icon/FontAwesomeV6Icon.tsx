@@ -43,7 +43,7 @@ export interface FontAwesomeV6IconProps extends HTMLAttributes<HTMLElement> {
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/FontAwesomeV6IconTest.jsx)
+ * * (see apps/test/unit/componentLibrary/FontAwesomeV6IconTest.tsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```
@@ -63,6 +63,7 @@ const FontAwesomeV6Icon: React.FunctionComponent<FontAwesomeV6IconProps> = ({
   ...HTMLAttributes
 }) => (
   <i
+    // eslint-disable-next-line react/forbid-dom-props
     data-testid="font-awesome-v6-icon"
     className={classNames(
       iconFamily && `fa-${iconFamily}`,

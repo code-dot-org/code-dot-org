@@ -434,13 +434,17 @@ class ApiController < ApplicationController
     end
 
     render json: {is_verified_instructor: current_user.try(:verified_instructor?) || false,
-                  unit_group: unit_group.summarize(current_user, for_edit: false, locale_code: request.locale),
-                  hidden_scripts: current_user.try(:get_hidden_unit_ids, unit_group)}
+                  course_summary: unit_group.summarize(current_user, for_edit: false, locale_code: request.locale),
+                  hidden_scripts: current_user.try(:get_hidden_unit_ids, unit_group),
+                  redirect_to_course_url: unit_group.redirect_to_course_url(current_user),
+                  show_version_warning: unit_group.has_older_version_progress?(current_user) && !unit_group.has_dismissed_version_warning?(current_user)}
   end
 
   def unit_summary
     unit_name = params[:unit_name]
     unit = Unit.get_from_cache(unit_name)
+
+    redirect_unit_url = unit.redirect_to_unit_url(current_user, locale: request.locale)
 
     additional_script_data = {
       is_instructor: unit.can_be_instructor?(current_user),
@@ -450,6 +454,7 @@ class ApiController < ApplicationController
       course_link: unit.course_link(params[:section_id]),
       course_title: unit.course_title || I18n.t('view_all_units'),
       course_name: unit.unit_group&.name,
+      redirect_unit_url: redirect_unit_url,
     }
 
     if unit.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: unit.plc_course_unit.plc_course)

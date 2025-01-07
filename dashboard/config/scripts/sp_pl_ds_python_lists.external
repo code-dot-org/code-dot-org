@@ -1,0 +1,74 @@
+name 'sp-pl-DS_Python-Lists'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lists
+
+
+
+## List
+#### A **list** is created with a **comma-separated list** of values, or objects **inside square brackets []**.
+<br>
+ 
+ <div style="font-size: 24px; font-weight: bold;">
+  scores = [75, 90, 83, 78, 97]
+</div>
+
+
+<div style="clear:both;"></div>
+
+## Index
+#### An **index** is an **integer value** that indicates the **position** of a value inside of a list. See the index value inside the boxes. 
+
+<img src="https://images.code.org/10e4ab1b190afa118bb196c9924395b7-image-1732030289342.png" alt="graph of element count and index for python" width="550px" style="display: block; float:left;">
+
+<div style="clear:both;"></div>
+
+#### *Notice that the index count starts at zero (0).*
+
+## Accessing and Assigning Values  
+
+   <table border="1" width="100%" cellpadding="10">
+          <tr>
+           <th width="33%" style="font-size:16pt;">
+            Notes
+            </th>
+            <th width="33%" style="font-size:16pt;">
+                Code 
+            </th>
+         
+             <th width="33%" style="font-size:16pt;">
+                Console
+            </th>
+        </tr>
+        <tr>
+           <td width="33%" style="font-size:16pt;">
+            Using square brackets [] to <b>access</b> values at a specific position in a list.
+            </td>
+            <td width="33%">
+                <img src="https://images.code.org/8165a9edeb8c23bcd8046590d0a4386e-image-1732031582078.png" alt="code to access an index on a list" width="100%">
+            </td>
+         
+             <td width="33%">
+                <img src="https://images.code.org/e0f4a80af2925e4dea5cdec2848c23db-image-1732031054309.png" alt="console output 90" width="100%">
+            </td>
+        </tr>
+        <tr>
+           
+            <td width="33%" style="font-size:14pt;">
+                Using square brackets to <b>assign</b> values at a specific position in a list.
+            </td>
+             <td width="33%">
+                <img src="https://images.code.org/2ffe6d48ff4ef6c815144cab1943e84f-image-1732031262947.png" alt="code assigning a value on a list" width="100%">
+            </td>
+             <td width="33%">
+                <img src="https://images.code.org/b94ff83590c34a08ec7bab3711f5ee78-image-1732031330507.png" alt="conosole with output of 90 and 85" width="100%">
+            </td>
+        </tr>
+    </table>
+
+<div style="clear:both;"></div>
+
+## Now, try a **Modify** level using lists.
+MARKDOWN

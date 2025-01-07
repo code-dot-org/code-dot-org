@@ -1,9 +1,12 @@
 import classNames from 'classnames';
+import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
+import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {
   Heading2,
@@ -20,7 +23,14 @@ import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 import {navigateToHref} from '../utils';
 
 import locale from './locale';
-import {EMAIL_SESSION_KEY} from './signUpFlowConstants';
+import {
+  ACCOUNT_TYPE_SESSION_KEY,
+  EMAIL_SESSION_KEY,
+  OAUTH_LOGIN_TYPE_SESSION_KEY,
+  USER_RETURN_TO_SESSION_KEY,
+  clearSignUpSessionStorage,
+  NEW_SIGN_UP_USER_TYPE,
+} from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
 
@@ -48,8 +58,32 @@ const FinishStudentAccount: React.FunctionComponent<{
   const [gdprChecked, setGdprChecked] = useState(false);
   const [showGDPR, setShowGDPR] = useState(false);
   const [isGdprLoaded, setIsGdprLoaded] = useState(false);
+  const [userReturnTo, setUserReturnTo] = useState('/home');
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorCreatingAccountMessage, showErrorCreatingAccountMessage] =
+    useState(false);
+
+  // Remove oauth user_type cookie if it exists
+  cookies.remove(NEW_SIGN_UP_USER_TYPE);
 
   useEffect(() => {
+    // If the user hasn't selected a user type or login type, redirect them back to the incomplete step of signup.
+    if (sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === null) {
+      navigateToHref('/users/new_sign_up/account_type');
+    } else if (
+      sessionStorage.getItem(EMAIL_SESSION_KEY) === null &&
+      sessionStorage.getItem(OAUTH_LOGIN_TYPE_SESSION_KEY) === null
+    ) {
+      navigateToHref('/users/new_sign_up/login_type');
+    }
+
+    analyticsReporter.sendEvent(
+      EVENTS.FINISH_ACCOUNT_PAGE_LOADED,
+      {'user type': 'student'},
+      PLATFORMS.BOTH
+    );
+
     const fetchGdprData = async () => {
       const urlParams = new URLSearchParams(window.location.search);
       const forceInEu = urlParams.get('force_in_eu');
@@ -68,6 +102,11 @@ const FinishStudentAccount: React.FunctionComponent<{
       }
     };
     fetchGdprData();
+
+    const userReturnToHref = sessionStorage.getItem(USER_RETURN_TO_SESSION_KEY);
+    if (userReturnToHref) {
+      setUserReturnTo(userReturnToHref);
+    }
   }, []);
 
   // GDPR is valid if
@@ -87,9 +126,14 @@ const FinishStudentAccount: React.FunctionComponent<{
     analyticsReporter.sendEvent(
       EVENTS.PARENT_OR_GUARDIAN_SIGN_UP_CLICKED,
       {},
-      PLATFORMS.STATSIG
+      PLATFORMS.BOTH
     );
     const newIsParentCheckedChoice = !isParent;
+    // If the user unchecks the parent checkbox, clear the parent email field
+    if (!newIsParentCheckedChoice) {
+      setParentEmail('');
+      setShowParentEmailError(false);
+    }
     setIsParent(newIsParentCheckedChoice);
   };
 
@@ -153,7 +197,12 @@ const FinishStudentAccount: React.FunctionComponent<{
   };
 
   const submitStudentAccount = async () => {
+    if (isSubmitting) {
+      return;
+    }
+    setIsSubmitting(true);
     sendFinishEvent();
+    showErrorCreatingAccountMessage(false);
 
     const signUpParams = {
       new_sign_up: true,
@@ -170,7 +219,7 @@ const FinishStudentAccount: React.FunctionComponent<{
       },
     };
     const authToken = await getAuthenticityToken();
-    await fetch('/users', {
+    const response = await fetch('/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -179,7 +228,13 @@ const FinishStudentAccount: React.FunctionComponent<{
       body: JSON.stringify(signUpParams),
     });
 
-    navigateToHref('/home');
+    if (response.ok) {
+      clearSignUpSessionStorage(false);
+      navigateToHref(userReturnTo);
+    } else {
+      setIsSubmitting(false);
+      showErrorCreatingAccountMessage(true);
+    }
   };
 
   return (
@@ -189,6 +244,23 @@ const FinishStudentAccount: React.FunctionComponent<{
           <Heading2>{locale.finish_creating_student_account()}</Heading2>
           <BodyTwoText>{locale.tailor_experience()}</BodyTwoText>
         </div>
+        {errorCreatingAccountMessage && (
+          <div className={style.errorSigningUpMessage}>
+            <div className={style.errorMessageWithXMark}>
+              <FontAwesomeV6Icon
+                iconName={'circle-xmark'}
+                className={style.xIcon}
+              />
+              <BodyThreeText className={style.errorMessageText}>
+                <SafeMarkdown markdown={locale.error_signing_up_message()} />
+              </BodyThreeText>
+            </div>
+            <CloseButton
+              onClick={() => showErrorCreatingAccountMessage(false)}
+              aria-label={locale.error_signing_up_message_aria_label()}
+            />
+          </div>
+        )}
         <fieldset className={style.inputContainer}>
           <div className={style.parentInfoContainer}>
             <Checkbox
@@ -232,6 +304,7 @@ const FinishStudentAccount: React.FunctionComponent<{
           <div>
             <TextField
               name="displayName"
+              id="uitest-display-name"
               label={locale.display_name_eg()}
               value={name}
               placeholder={locale.coder()}
@@ -246,6 +319,7 @@ const FinishStudentAccount: React.FunctionComponent<{
           <div>
             <SimpleDropdown
               name="userAge"
+              id="uitest-user-age"
               className={style.dropdownContainer}
               labelText={locale.what_is_your_age()}
               size="m"
@@ -263,6 +337,7 @@ const FinishStudentAccount: React.FunctionComponent<{
             <div>
               <SimpleDropdown
                 name="userState"
+                id="uitest-user-state"
                 className={style.dropdownContainer}
                 labelText={locale.what_state_are_you_in()}
                 size="m"
@@ -281,7 +356,6 @@ const FinishStudentAccount: React.FunctionComponent<{
             name="userGender"
             label={locale.what_is_your_gender()}
             value={gender}
-            placeholder={locale.female()}
             onChange={e => setGender(e.target.value)}
           />
           {showGDPR && (
@@ -327,18 +401,20 @@ const FinishStudentAccount: React.FunctionComponent<{
               name === '' ||
               age === '' ||
               (usIp && state === '') ||
-              (isParent && parentEmail === '') ||
+              (isParent && (parentEmail === '' || showParentEmailError)) ||
               !gdprValid
             }
+            isPending={isSubmitting}
           />
         </div>
       </div>
       <SafeMarkdown
         className={style.tosAndPrivacy}
         markdown={locale.by_signing_up({
-          tosLink: 'code.org/tos',
-          privacyPolicyLink: 'code.org/privacy',
+          tosLink: 'https://code.org/tos',
+          privacyPolicyLink: 'https://code.org/privacy',
         })}
+        openExternalLinksInNewTab={true}
       />
     </div>
   );

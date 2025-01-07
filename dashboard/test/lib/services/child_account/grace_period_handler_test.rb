@@ -32,7 +32,7 @@ class Services::ChildAccount::GracePeriodHandlerTest < ActiveSupport::TestCase
       Policies::ChildAccount::ComplianceState.stubs(:locked_out?).with(user).returns(user_is_locked_out?)
       Policies::ChildAccount::ComplianceState.stubs(:grace_period?).with(user).returns(user_is_in_grace_period?)
       Policies::ChildAccount.stubs(:user_predates_policy?).with(user).returns(user_predates_policy?)
-      Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
+      Policies::ChildAccount::StatePolicies.stubs(:state_policy).with(user).returns(user_state_policy)
     end
 
     it 'starts grace period for user' do

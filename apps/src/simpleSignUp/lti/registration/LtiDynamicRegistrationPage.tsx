@@ -3,6 +3,8 @@ import React, {useState} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import Typography from '@cdo/apps/componentLibrary/typography';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import styles from './styles.module.scss';
@@ -10,11 +12,13 @@ import styles from './styles.module.scss';
 interface LtiDynamicRegistrationProps {
   logoUrl: string;
   registrationID: string;
+  lmsName: string;
 }
 
 export const LtiDynamicRegistrationPage = ({
   logoUrl,
   registrationID,
+  lmsName,
 }: LtiDynamicRegistrationProps) => {
   const [submitDisable, setSubmitDisable] = useState<boolean>(false);
   const [email, setEmail] = useState('');
@@ -37,6 +41,11 @@ export const LtiDynamicRegistrationPage = ({
         // Send post message to Canvas parent window
         // https://canvas.instructure.com/doc/api/file.registration.html#registration-response
         window.parent.postMessage({subject: 'org.imsglobal.lti.close'}, '*');
+        analyticsReporter.sendEvent(
+          EVENTS.LTI_DYNAMIC_REGISTRATION_COMPLETED,
+          {lms_name: lmsName},
+          PLATFORMS.BOTH
+        );
       },
       error: xhr => {
         setHasError(true);

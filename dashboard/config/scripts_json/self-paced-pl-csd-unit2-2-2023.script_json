@@ -4,12 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "self_paced_pl_6_8",
       "curriculum_umbrella": "CSD Self Paced PL",
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-29 03:58:11 UTC",
+    "serialized_at": "2024-11-19 01:19:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -471,6 +472,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U2SelfPaced-Lesson1Cert"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -1068,6 +1072,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U2SelfPaced-CSS-overview"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1340,6 +1347,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U2SelfPaced-FlexboxOverview"
+        ],
         "progression": "Using Flexbox"
       },
       "bonus": false,
@@ -1362,6 +1372,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U2SelfPaced-FlexboxVideo1"
+        ],
         "progression": "Using Flexbox"
       },
       "bonus": false,
@@ -1384,6 +1397,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U2SelfPaced-Flexbox2"
+        ],
         "progression": "Using Flexbox"
       },
       "bonus": false,
@@ -1406,6 +1422,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U2SelfPaced-Flexbox3"
+        ],
         "progression": "Using Flexbox"
       },
       "bonus": false,
@@ -1428,6 +1447,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U2SelfPaced-Flexbox4"
+        ],
         "progression": "Using Flexbox"
       },
       "bonus": false,
@@ -1450,6 +1472,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U2SelfPaced-Flexbox5"
+        ],
         "progression": "Using Flexbox"
       },
       "bonus": false,
@@ -1472,6 +1497,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U2SelfPaced-FlexboxVideo2"
+        ],
         "progression": "Flexbox Children"
       },
       "bonus": false,
@@ -1494,6 +1522,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U2SelfPaced-FlexboxChildren2"
+        ],
         "progression": "Flexbox Children"
       },
       "bonus": false,
@@ -1516,6 +1547,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U2SelfPaced-FlexboxChildren3"
+        ],
         "progression": "Flexbox Children"
       },
       "bonus": false,
@@ -1538,6 +1572,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U2SelfPaced-FlexboxChildren4"
+        ],
         "progression": "Flexbox Children"
       },
       "bonus": false,
@@ -1560,6 +1597,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U2SelfPaced-FlexboxChildren5"
+        ],
         "progression": "Flexbox Children"
       },
       "bonus": false,
@@ -1582,6 +1622,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD_Lesson3WrapUp_self-paced-unit2"
+        ],
         "progression": "Section Wrap Up"
       },
       "bonus": false,
@@ -1779,6 +1822,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U2SelfPaced-Lesson4-Matching"
+        ],
         "progression": "Section Wrap Up"
       },
       "bonus": false,
@@ -1801,6 +1847,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD_Lesson4WrapUp_self-paced-unit2"
+        ],
         "progression": "Section Wrap Up"
       },
       "bonus": false,

@@ -6,6 +6,7 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
     @teacher = create :teacher
 
     @project_new = create :project, value: {frozen: false, hidden: false, updatedAt: DateTime.now}.to_json
+    @project_new_2 = create :project, value: {frozen: false, hidden: false, updatedAt: DateTime.now}.to_json
     @project_active = create :project, value: {frozen: true, hidden: true, updatedAt: DateTime.now}.to_json
     @project_archived = create :project, value: {frozen: false, hidden: false, updatedAt: DateTime.now}.to_json
 
@@ -15,30 +16,28 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
   end
 
   test 'project validators can bookmark a project as a featured project' do
+    @controller.stubs(:reset_abuse_score).returns(nil)
     sign_in @project_validator
-    @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, @project_new.id])
-    put :bookmark, params: {channel_id: "789"}
+    put :bookmark, params: {channel_id: @project_new.channel_id}
     assert_response :success
   end
 
   test 'project validators can feature projects' do
+    @controller.stubs(:reset_abuse_score).returns(nil)
     sign_in @project_validator
-    @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, @project_new.id])
-    put :feature, params: {channel_id: "789"}
+    put :feature, params: {channel_id: @project_new.channel_id}
     assert_response :success
   end
 
   test 'project validators can unfeature projects' do
     sign_in @project_validator
-    @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, @project_new.id])
-    put :unfeature, params: {channel_id: "789"}
+    put :unfeature, params: {channel_id: @project_new.channel_id}
     assert_response :success
   end
 
   test 'project validators can delete a featured project' do
     sign_in @project_validator
-    @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, @project_new.id])
-    delete :destroy, params: {channel_id: "789"}
+    delete :destroy, params: {channel_id: @project_new.channel_id}
     assert_response :success
   end
 
@@ -67,30 +66,27 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
   end
 
   test 'bookmarking a never featured project creates a new featured project' do
+    @controller.stubs(:reset_abuse_score).returns(nil)
     sign_in @project_validator
-    @controller.expects(:storage_decrypt_channel_id).with("678").returns([234, 654])
-    assert_creates(FeaturedProject) do
-      put :bookmark, params: {channel_id: "678"}
-    end
-    assert FeaturedProject.last.project_id == 654
+    put :bookmark, params: {channel_id: @project_new_2.channel_id}
+    assert FeaturedProject.last.project_id == @project_new_2.id
     assert FeaturedProject.last.unfeatured_at.nil?
     assert FeaturedProject.last.featured_at.nil?
   end
 
   test 'featuring a currently unfeatured project should update the correct featured project' do
+    @controller.stubs(:reset_abuse_score).returns(nil)
     sign_in @project_validator
-    @controller.expects(:storage_decrypt_channel_id).with("567").returns([345, @project_archived.id])
     refute @archived_featured_project.active?
-    put :feature, params: {channel_id: "567"}
+    put :feature, params: {channel_id: @project_archived.channel_id}
     @archived_featured_project.reload
     assert @archived_featured_project.active?
   end
 
   test 'unfeaturing a featured project should unfeature the project' do
     sign_in @project_validator
-    @controller.expects(:storage_decrypt_channel_id).with("678").returns([987, @project_active.id])
     assert @active_featured_project.active?
-    put :unfeature, params: {channel_id: "678"}
+    put :unfeature, params: {channel_id: @project_active.channel_id}
     @active_featured_project.reload
     refute @active_featured_project.active?
   end

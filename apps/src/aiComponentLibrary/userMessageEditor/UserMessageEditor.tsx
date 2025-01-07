@@ -6,6 +6,8 @@ import {commonI18n} from '@cdo/apps/types/locale';
 
 import moduleStyles from './user-message-editor.module.scss';
 
+const MAX_MESSAGE_LENGTH = 10000;
+
 /**
  * Renders the user message editor component.
  */
@@ -73,10 +75,12 @@ const UserMessageEditor = React.forwardRef<
           value={userMessage}
           disabled={disabled}
           onKeyDown={e => handleKeyPress(e, userMessage)}
+          maxLength={MAX_MESSAGE_LENGTH}
         />
 
         <div className={moduleStyles.centerSingleItemContainer}>
           <Button
+            aria-label={commonI18n.submit()}
             id="uitest-chat-submit"
             isIconOnly={!showSubmitLabel}
             onClick={() => handleSubmit(userMessage)}

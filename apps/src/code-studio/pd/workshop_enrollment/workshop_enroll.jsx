@@ -4,23 +4,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {COURSE_BUILD_YOUR_OWN} from '../workshop_dashboard/workshopConstants';
-
+import {SUBMISSION_STATUSES} from './constants';
 import EnrollForm from './enroll_form';
 import {WorkshopPropType, FacilitatorPropType} from './enrollmentConstants';
 import FacilitatorBio from './facilitator_bio';
 import WorkshopDetails from './workshop_details';
-
-const SUBMISSION_STATUSES = {
-  UNSUBMITTED: 'unsubmitted',
-  DUPLICATE: 'duplicate',
-  OWN: 'own',
-  CLOSED: 'closed',
-  FULL: 'full',
-  NOT_FOUND: 'not found',
-  SUCCESS: 'success',
-  UNKNOWN_ERROR: 'error',
-};
 
 export default class WorkshopEnroll extends React.Component {
   static propTypes = {
@@ -36,14 +24,17 @@ export default class WorkshopEnroll extends React.Component {
     workshop_enrollment_status: PropTypes.string,
     previous_courses: PropTypes.arrayOf(PropTypes.string).isRequired,
     collect_demographics: PropTypes.bool,
+    school_info: PropTypes.shape({
+      country: PropTypes.string,
+      school_id: PropTypes.string,
+      school_name: PropTypes.string,
+      school_type: PropTypes.string,
+      school_zip: PropTypes.string,
+    }),
   };
 
   constructor(props) {
     super(props);
-
-    if (this.props.workshop.course === COURSE_BUILD_YOUR_OWN) {
-      this.skipEnrollForm();
-    }
 
     this.state = {
       workshopEnrollmentStatus:
@@ -52,34 +43,14 @@ export default class WorkshopEnroll extends React.Component {
     };
   }
 
-  skipEnrollForm = () => {
-    const postParams = {
-      user_id: this.props.user_id,
-      first_name: this.props.enrollment.first_name,
-      last_name: this.props.enrollment.last_name,
-      email: this.props.enrollment.email,
-      previous_courses: this.props.previous_courses,
-    };
-    this.submitRequest = $.ajax({
-      method: 'POST',
-      url: `/api/v1/pd/workshops/${this.props.workshop.id}/enrollments`,
-      contentType: 'application/json',
-      data: JSON.stringify(postParams),
-      complete: result => {
-        this.onSubmissionComplete(result);
-      },
-    });
-  };
-
   onSubmissionComplete = result => {
-    if (result.responseJSON) {
+    if (result) {
       this.setState({
-        workshopEnrollmentStatus:
-          result.responseJSON.workshop_enrollment_status,
-        cancelUrl: result.responseJSON.cancel_url,
-        accountExists: result.responseJSON.account_exists,
-        signUpUrl: result.responseJSON.sign_up_url,
-        workshopUrl: result.responseJSON.workshop_url,
+        workshopEnrollmentStatus: result.workshop_enrollment_status,
+        cancelUrl: result.cancel_url,
+        accountExists: result.account_exists,
+        signUpUrl: result.sign_up_url,
+        workshopUrl: result.workshop_url,
       });
     } else {
       this.setState({
@@ -214,6 +185,7 @@ export default class WorkshopEnroll extends React.Component {
                         workshop_subject={this.props.workshop.subject}
                         previous_courses={this.props.previous_courses}
                         collect_demographics={this.props.collect_demographics}
+                        school_info={this.props.school_info}
                       />
                     </div>
                   </div>

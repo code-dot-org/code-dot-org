@@ -12,6 +12,7 @@ import lab2System from '@cdo/apps/lab2/redux/systemRedux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
+import teacherRubric from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 import microBit from '../maker/microBitRedux';
@@ -61,6 +62,7 @@ registerReducers({
   lab2System,
   codebridgeWorkspace,
   calendar,
+  teacherRubric,
 });
 
 export {getStore};

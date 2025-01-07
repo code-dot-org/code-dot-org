@@ -28,12 +28,14 @@ describe('ProgressIconComponent', () => {
 
   it('renders the feedback given triangle when itemType is FEEDBACK_GIVEN', () => {
     render(<ProgressIcon itemType={ITEM_TYPE.FEEDBACK_GIVEN} />);
+    // eslint-disable-next-line no-restricted-properties
     const feedbackGivenTriangle = screen.getByTestId('feedback-given-triangle');
     expect(feedbackGivenTriangle).to.be.visible;
   });
 
   it('renders the feedback needed triangle when itemType is NEEDS_FEEDBACK', () => {
     render(<ProgressIcon itemType={ITEM_TYPE.NEEDS_FEEDBACK} />);
+    // eslint-disable-next-line no-restricted-properties
     const feedbackGivenTriangle = screen.getByTestId('needs-feedback-triangle');
     expect(feedbackGivenTriangle).to.be.visible;
   });

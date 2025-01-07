@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {setSectionCodeReviewExpiresAt} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
@@ -90,8 +90,8 @@ export const UnconnectedCodeReviewGroupsStatusToggle =
 
 export default connect(
   state => ({
-    codeReviewExpiresAt: selectedSection(state).codeReviewExpiresAt,
-    sectionId: selectedSection(state).id,
+    codeReviewExpiresAt: selectedSectionSelector(state).codeReviewExpiresAt,
+    sectionId: selectedSectionSelector(state).id,
   }),
   dispatch => ({
     setCodeReviewExpiration: (sectionId, expiration) =>

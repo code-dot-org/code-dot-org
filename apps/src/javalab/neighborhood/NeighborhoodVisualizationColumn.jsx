@@ -3,10 +3,12 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {toggleVisualizationCollapsed} from '@cdo/apps/javalab/redux/viewRedux';
-import MazeVisualization from '@cdo/apps/maze/Visualization';
+import NeighborhoodVisualization from '@cdo/apps/miniApps/neighborhood/NeighborhoodVisualization';
 
 import {DisplayTheme} from '../DisplayTheme';
 import PreviewPaneHeader from '../PreviewPaneHeader';
+
+import moduleStyles from './neighborhood-visualization-column.module.scss';
 
 const ICON_PATH = '/blockly/media/turtle/';
 
@@ -32,7 +34,9 @@ class NeighborhoodVisualizationColumn extends React.Component {
         ? ICON_PATH + 'icons_white.png'
         : ICON_PATH + 'icons.png';
 
-    const opacity = isCollapsed ? 0 : 1;
+    const visualizationClassName = isCollapsed
+      ? moduleStyles.collapsed
+      : moduleStyles.expanded;
 
     return (
       <div
@@ -44,50 +48,14 @@ class NeighborhoodVisualizationColumn extends React.Component {
           isCollapsed={isCollapsed}
           toggleVisualizationCollapsed={toggleVisualizationCollapsed}
         />
-        <div style={{opacity}}>
-          <div style={styles.neighborhoodPreviewBackground}>
-            <MazeVisualization />
-          </div>
-          <svg id="slider" version="1.1" width="150" height="50">
-            {/* Slow icon. */}
-            <clipPath id="slowClipPath">
-              <rect width="26" height="12" x="5" y="14" />
-            </clipPath>
-            <image
-              xlinkHref={fullIconPath}
-              height="42"
-              width="84"
-              x="-21"
-              y="-10"
-              clipPath="url(#slowClipPath)"
-            />
-            {/* Fast icon. */}
-            <clipPath id="fastClipPath">
-              <rect width="26" height="16" x="120" y="10" />
-            </clipPath>
-            <image
-              xlinkHref={fullIconPath}
-              height="42"
-              width="84"
-              x="120"
-              y="-11"
-              clipPath="url(#fastClipPath)"
-            />
-          </svg>
-        </div>
+        <NeighborhoodVisualization
+          fullIconPath={fullIconPath}
+          className={visualizationClassName}
+        />
       </div>
     );
   }
 }
-
-const styles = {
-  neighborhoodPreviewBackground: {
-    backgroundImage: 'url("/blockly/media/javalab/Neighborhood.png")',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    backgroundPosition: 'top',
-  },
-};
 
 export default connect(
   state => ({

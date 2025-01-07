@@ -7,7 +7,7 @@ import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 
-import {DARK_THEME_SUFFIX, Themes} from './constants';
+import {DARK_THEME_SUFFIX, Themes, BLOCK_TYPES} from './constants';
 import {ExtendedBlock} from './types';
 
 type xmlAttribute = string | null;
@@ -311,4 +311,38 @@ export function getAllBlocks(): BlockList {
       ? Blockly.getHiddenDefinitionWorkspace().getAllBlocks()
       : []),
   ];
+}
+
+export function disableOrphanBlocks(eventWorkspace: GoogleBlockly.Workspace) {
+  // When a function definition is moved, we should not suddenly enable
+  // its call blocks.
+  eventWorkspace.getTopBlocks().forEach(block => {
+    if (block.type === BLOCK_TYPES.procedureCall) {
+      block.setEnabled(false);
+    }
+    updateBlockEnabled(block);
+  });
+}
+
+export function updateBlockEnabled(block: GoogleBlockly.Block) {
+  // Changing blocks as part of this event shouldn't be undoable.
+  const initialUndoFlag = Blockly.Events.getRecordUndo();
+  try {
+    Blockly.Events.setRecordUndo(false);
+    const parent = block.getParent();
+    if (parent && parent.isEnabled()) {
+      const children = block.getDescendants(false);
+      for (let i = 0, child; (child = children[i]); i++) {
+        child.setEnabled(true);
+      }
+    } else if (block.outputConnection || block.previousConnection) {
+      let currentBlock: GoogleBlockly.Block | null = block;
+      do {
+        currentBlock.setEnabled(false);
+        currentBlock = currentBlock.getNextBlock();
+      } while (currentBlock);
+    }
+  } finally {
+    Blockly.Events.setRecordUndo(initialUndoFlag);
+  }
 }

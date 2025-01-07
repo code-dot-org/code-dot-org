@@ -58,10 +58,11 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
   /**
    * Construct a CdoFieldToggle from a JSON arg object.
    *
-   * @param {Object} options - A JSON object with options.
+   * @param {GoogleBlockly.FieldConfig} _options - A JSON object with options.
    * @returns {CdoFieldToggle} The new field instance.
    */
-  static fromJson(options: CdoFieldButtonToggleOptions) {
+  static fromJson(_options: GoogleBlockly.FieldConfig): CdoFieldToggle {
+    const options = _options as CdoFieldButtonToggleOptions;
     return new CdoFieldToggle(options);
   }
 

@@ -1,13 +1,18 @@
 # `apps/src/componentLibrary/common`
 
-This package contains all ComponentLibrary (DSCO) common design constants, tokens, and styles. These are made available as `.scss, .ts` files.
+This package contains all ComponentLibrary (DSCO) common design constants, tokens, and styles. These are made available
+as `.scss, .ts` files.
 
 **Notes:**
 
-- The [`@use`](https://sass-lang.com/documentation/at-rules/use) Sass feature is only available for Dart Sass. If you are using a different Sass implementation, replace `@use` with [`@import`](https://sass-lang.com/documentation/at-rules/import). Internally, this package uses `@import` to maintain compatibility with all Sass implementations.
-- The import paths below use the "exports" field in `package.json`, which is a feature only available to Webpack 5+ consumers. If you use Webpack 4 or below, you should import this package as `@cdo/apps/componentLibrary/common` (which corresponds to the "main" field in `package.json`), or point to a specific file in the package (e.g., `@cdo/apps/componentLibrary/common/styles/mixins`).
-
-
+- The [`@use`](https://sass-lang.com/documentation/at-rules/use) Sass feature is only available for Dart Sass. If you
+  are using a different Sass implementation, replace `@use` with [
+  `@import`](https://sass-lang.com/documentation/at-rules/import). Internally, this package uses `@import` to maintain
+  compatibility with all Sass implementations.
+- The import paths below use the "exports" field in `package.json`, which is a feature only available to Webpack 5+
+  consumers. If you use Webpack 4 or below, you should import this package as `@cdo/apps/componentLibrary/common` (which
+  corresponds to the "main" field in `package.json`), or point to a specific file in the package (e.g.,
+  `@cdo/apps/componentLibrary/common/styles/mixins`).
 
 ### SCSS
 
@@ -26,9 +31,11 @@ Usage example:
   font-weight: 400; // override mixin / add custom styles
 }
 ```
+
 ### TypeScript
 
 ## [constants](constants.ts)
+
 Common constants.
 
 ```ts 
@@ -43,13 +50,40 @@ const bodyTextSize = componentSizeToBodyTextSizeMap[size];
 
 Common types.
 
-
 ```ts 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 // ...
 // ...
 // ...
 type ComponentProps = {
-  size?: ComponentSizeXSToL;
+    size?: ComponentSizeXSToL;
 };
+```
+
+## [hooks](hooks)
+
+Common hooks.
+
+```tsx
+import {useBodyScrollLock} from '@cdo/apps/componentLibrary/common/hooks';
+// OR
+import useBodyScrollLock from '@cdo/apps/componentLibrary/common/hooks/useBodyScrollLock';
+
+// ...
+// ...
+// ...
+useBodyScrollLock();
+```
+
+## [contexts](contexts)
+
+Common contexts.
+
+```tsx
+import {DropdownContext} from '@cdo/apps/componentLibrary/common/contexts';
+// ...
+
+<DropdownContext.Provider value={dropdownContextValue}>
+    {children}
+</DropdownContext.Provider>
 ```

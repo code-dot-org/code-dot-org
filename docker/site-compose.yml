@@ -17,17 +17,17 @@ version: "3"
 services:
   site:
     # TODO: switch to codedotorg/cdo-ci or other new image
-    image: codedotorg/code-dot-org:1.10.0
+    image: codedotorg/code-dot-org:1.11.1
     user: ${FIXUID:-1000}:${FIXGID:-1000}
     volumes:
-      - ../:/home/circleci/code-dot-org:delegated
-      - $HOME/.ssh:/home/circleci/.ssh:ro
+      - ../:/home/ci/code-dot-org:delegated
+      - $HOME/.ssh:/home/ci/.ssh:ro
       - $HOME/.ssh:$HOME/.ssh:ro
-      - rbenv:/home/circleci/.rbenv
+      - rbenv:/home/ci/.rbenv
       - mysqldata:/var/lib/mysql
-      - yarncache:/home/circleci/.cache
-      - gcloud_config:/home/circleci/.config/gcloud
-      - $HOME/.aws:/home/circleci/.aws
+      - yarncache:/home/ci/.cache
+      - gcloud_config:/home/ci/.config/gcloud
+      - $HOME/.aws:/home/ci/.aws
     environment:
       - AWS_PROFILE
     ports:

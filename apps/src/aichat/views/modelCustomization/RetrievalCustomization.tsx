@@ -5,6 +5,8 @@ import {setAiCustomizationProperty} from '@cdo/apps/aichat/redux/aichatRedux';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
+import aichatI18n from '../../locale';
+
 import MultiInputCustomization from './MultiInputCustomization';
 import SaveChangesAlerts from './SaveChangesAlerts';
 import UpdateButton from './UpdateButton';
@@ -39,9 +41,9 @@ const RetrievalCustomization: React.FunctionComponent = () => {
     <div className={modelCustomizationStyles.verticalFlexContainer}>
       <div className={modelCustomizationStyles.customizationContainer}>
         <MultiInputCustomization
-          label="Retrieval"
+          label={aichatI18n.retrievalCustomizationHeader()}
           fieldId="retrieval-input"
-          tooltipText="Retrieval lets you add new information for a chatbot to reference. Type in each retrieval statement into the text box, then click “Add” for each one."
+          tooltipText={aichatI18n.retrievalCustomizationTooltipText()}
           addedItems={retrievalContexts}
           visibility={visibility}
           isReadOnly={isReadOnly}

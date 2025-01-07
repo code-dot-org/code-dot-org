@@ -15,6 +15,7 @@
           "buttonText": null
         }
       ],
+      "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -29,12 +30,15 @@
         "sk-SK",
         "uk-UA"
       ],
+      "topic_tags": [
+        "ai"
+      ],
       "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-10-16 18:44:07 UTC",
+    "serialized_at": "2024-11-19 01:16:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

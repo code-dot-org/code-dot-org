@@ -2,8 +2,9 @@ import * as GoogleBlockly from 'blockly/core';
 import 'blockly/blocks';
 import cookies from 'js-cookie';
 
-import {blocklyLocaleMap} from '@cdo/apps/blockly/constants';
 import initializeGoogleBlocklyWrapper from '@cdo/apps/blockly/googleBlocklyWrapper';
+
+import {blocklyLocaleMap} from './blocklyLocaleImports';
 
 // Blockly provides "messages" files, which are JSON-format files containing human-translated
 // strings that are needed by Blockly.
@@ -13,9 +14,9 @@ import initializeGoogleBlocklyWrapper from '@cdo/apps/blockly/googleBlocklyWrapp
 // https://developers.google.com/blockly/guides/configure/web/translations
 // https://github.com/google/blockly/blob/master/msg/json/README.md
 const localeFromCookies = cookies.get('language_') || 'en-US';
-const blocklyLocale = blocklyLocaleMap[localeFromCookies] || 'en';
-const messages = require(`blockly/msg/${blocklyLocale}.js`);
-
+const messages =
+  blocklyLocaleMap[localeFromCookies.toLocaleLowerCase()] ||
+  blocklyLocaleMap['en-us'];
 GoogleBlockly.setLocale(messages);
 
 window.Blockly = initializeGoogleBlocklyWrapper(GoogleBlockly);

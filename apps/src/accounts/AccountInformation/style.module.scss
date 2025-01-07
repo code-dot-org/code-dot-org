@@ -1,3 +1,4 @@
+@import '@cdo/apps/componentLibrary/common/styles/primitiveColors.css';
 @import '@cdo/apps/componentLibrary/common/styles/mixins';
 @import '@cdo/apps/componentLibrary/typography/typography.module';
 
@@ -7,9 +8,9 @@
       margin-bottom: 0.5rem;
     }
 
-    &.authorizedTeacher {
+    &.verifiedTeacher {
       font-weight: bold;
-      color: $light_affirmative_500;
+      color: var(--sentiment-success-50);
       margin: 0;
     }
   }

@@ -22,6 +22,7 @@
           "key": "097e685b-eeee-44a6-8f5b-f8492c3233a7"
         }
       ],
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -33,7 +34,7 @@
     },
     "new_name": null,
     "family_name": "csp-explore",
-    "serialized_at": "2022-09-28 14:31:28 UTC",
+    "serialized_at": "2024-11-19 01:17:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -511,6 +512,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

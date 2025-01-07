@@ -5,15 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # Attention
 
-## Lesson Highlight: Meaning from Context Activity
+## Lesson Highlight: Activity Guide Videos
 
-<img src="https://images.code.org/042ebb58f4d8c4d131d1aa5bc9980de4-c379b162ffaae9e3dfc974b814d12a2a-Slide11.PNG" alt="system prompt with role, goal, tone, and restriction" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 20px 20px 20px 20px">
+### [Editing Note] Content will be added shortly.
 
-#### During **Lesson 8: Attention Is All You Need**, students explore how words can have multiple meanings, but we can usually determine the intended meaning based on context clues in the sentence. This could be from looking at other words in the sentence or the grammar of the sentence.
-
-#### Students do this by exploring the different meanings of the word “bat” used various passages and then by coming up with words that have at least 3 different meanings such as date, spring, or fly.
-
-#### In language models **attention** is the process that updates the meaning of each word by using the context from other words in the input. Neural networks are used to detect relationships between each word in the sentence, and then the embedding of each word is updated to reflect the meaning of the word in the sentence.
 
 ## Lesson Preview
 
@@ -22,7 +17,7 @@ markdown <<MARKDOWN
 </summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
-<img src="https://images.code.org/ffb88967c446f891ff869c2399d66624-d42f141647823ec967845edf94706034-Slide30.PNG" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+<img src="https://images.code.org/ffb88967c446f891ff869c2399d66624-d42f141647823ec967845edf94706034-Slide30.PNG" alt="definition of attention" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
 
 #### **Question of the Day:** How does a language model determine the meaning of words within a sentence?
 

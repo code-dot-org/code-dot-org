@@ -12,7 +12,7 @@ import i18n from '@cdo/locale';
 import {
   // assert,
   expect,
-} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+} from '../../../util/reconfiguredChai';
 
 import {topCourse} from './homepagesTestData';
 

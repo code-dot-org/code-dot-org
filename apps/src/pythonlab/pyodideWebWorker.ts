@@ -21,22 +21,26 @@ async function loadPyodideAndPackages() {
     // which does serve the unhashed files. We need to serve the unhashed files because
     // pyodide controls adding the filenames to the url we provide here.
     indexURL: `/blockly/js/pyodide/${version}/`,
-    // pre-load numpy as it will frequently be used, our custom setup package, and matplotlib
-    // which our custom setup package patches.
-    packages: [
-      'numpy',
-      'matplotlib',
-      // These are custom packages that we have built. They are defined in this repo:
-      // https://github.com/code-dot-org/pythonlab-packages
-      `/blockly/js/pyodide/${version}/unittest_runner-0.1.0-py3-none-any.whl`,
-      `/blockly/js/pyodide/${version}/pythonlab_setup-0.1.0-py3-none-any.whl`,
-    ],
     env: {
       HOME: `/${HOME_FOLDER}/`,
     },
   });
   pyodide.setStdout(getStreamHandlerOptions('sysout'));
   pyodide.setStderr(getStreamHandlerOptions('syserr'));
+
+  // Pre-load our custom packages (unittest_runner and pythonlab_setup), as well as
+  // matplotlib, which pythonlab_setup depends on, and numpy,
+  // which will frequently be used. We have seen issues with loading these via
+  // loadPyodide, so we load them here to ensure they are available.
+  await pyodide.loadPackage([
+    'numpy',
+    'matplotlib',
+    // These are custom packages that we have built. They are defined in this repo:
+    // https://github.com/code-dot-org/pythonlab-packages
+    `/blockly/js/pyodide/${version}/unittest_runner-0.1.0-py3-none-any.whl`,
+    `/blockly/js/pyodide/${version}/pythonlab_setup-0.1.0-py3-none-any.whl`,
+    `/blockly/js/pyodide/${version}/neighborhood-0.1.0-py3-none-any.whl`,
+  ]);
   // Warm up the pyodide environment by running setup code.
   await runInternalCode(SETUP_CODE, -1);
 }
@@ -45,15 +49,21 @@ let pyodideReadyPromise: Promise<void> | null = null;
 // Pyodide defines the globals object as any.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let pyodideGlobals: any | null = null;
+let loadStartTime: number | undefined;
 async function initializePyodide() {
   const promiseWasNull = pyodideReadyPromise === null;
   if (promiseWasNull) {
+    loadStartTime = Date.now();
     pyodideReadyPromise = loadPyodideAndPackages();
     postMessage({type: 'loading_pyodide'});
   }
   await pyodideReadyPromise;
   if (promiseWasNull) {
-    postMessage({type: 'loaded_pyodide'});
+    const loadTime = loadStartTime ? Date.now() - loadStartTime : undefined;
+    postMessage({
+      type: 'loaded_pyodide',
+      message: loadTime,
+    });
   }
   pyodideGlobals = pyodide.globals.toJs();
 }

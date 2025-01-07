@@ -1,5 +1,5 @@
 import React from 'react';
-import {Fade} from 'react-bootstrap';
+import {Fade} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';

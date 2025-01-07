@@ -10,13 +10,14 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import RubricContent from '@cdo/apps/templates/rubrics/RubricContent';
+import teacherRubric from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 describe('RubricContent', () => {
   let store;
   beforeEach(() => {
     stubRedux();
-    registerReducers({teacherSections, teacherPanel});
+    registerReducers({teacherRubric, teacherSections, teacherPanel});
     store = getStore();
   });
 

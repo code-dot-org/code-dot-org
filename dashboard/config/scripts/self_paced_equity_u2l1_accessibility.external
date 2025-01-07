@@ -1,0 +1,60 @@
+name 'self-paced-equity-U2L1-accessibility'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Making Computer Science Accessible
+
+## Why Accessibility?
+
+#### Part of ensuring that students feel like they belong in the classroom is making sure that our computer science classrooms are **accessible**. As we prepare students for a future shaped by technology, it’s essential to ensure that **every learner** — regardless of ability — can fully engage with the curriculum and materials. 
+
+___
+
+<div style="display: flex; justify-content: space-between; gap: 10px; margin-top: 20px; margin-bottom: 20px; ">
+    <img src="https://images.code.org/2c79fc3528fb785e210160c843d89224-image-1736035933486.12.09 PM.png" alt="A student at a table places their finger on a trackpad." style="width: 23%; height: auto; border-radius: 10px;">
+    <img src="https://images.code.org/ebb82072fb8c1fc14b73d71df1d6cdbf-image-1736035995726.13.12 PM.png" alt="A student holds up a Circuit Playground in front of a laptop." style="width: 23%; height: auto; border-radius: 10px;">
+    <img src="https://images.code.org/8b29a536cf62d0ee43cd8010a55dbd48-image-1736035945738.12.22 PM.png" alt="Two students work at a laptop together." style="width: 23%; height: auto; border-radius: 10px;">
+    <img src="https://images.code.org/a6afd61edc757dcaed2093f2d4f37375-image-1736035959255.12.33 PM.png" alt="A student looks off to the left and smiles." style="width: 23%; height: auto; border-radius: 10px;">
+</div>
+
+___
+
+#### Recall this definition of accessibility from earlier in this lesson:
+
+<div style="background-color: #C6E3E7; border-radius: 20px; color: #000000; width: 95%; padding: 10px 20px 10px 20px; margin: 20px 0px 20px 0px"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
+
+#### **Accessibility:** When a person with a disability is afforded the opportunity to acquire the same information, engage in the same interactions, and enjoy the same services as a person without a disability in an equally integrated and equally effective manner, with substantially equivalent ease of use.</p></div>
+
+#### Accessibility includes ensuring that physical materials are available in formats that suit diverse needs. It also means utilizing teaching materials and learning activities that can be understood, used, and enjoyed by all students, with equal ease. Accessibility isn’t just an adjustment — it’s a commitment to equity, belonging, and opportunity. We'll cover ways to make computer science more accessible in the new few levels.
+
+#### By making your curriculum and resources accessible, you:
+
+* #### Empower students with disabilities to participate meaningfully in the learning process.
+* #### Foster an inclusive classroom culture where diversity is celebrated.
+* #### Set the stage for innovation by encouraging all students to bring their unique perspectives to computer science.
+
+## Students with Disabilities in Computer Science
+
+#### Read the following from the State of Computer Science Education Report. It provides an overview of students with disabilities in computer science.
+
+<div style="background-color: #F7F8FA; border-radius: 10px; padding: 20px; margin: 20px 0; width: 100%; box-sizing: border-box;">
+  <p style="margin: 0; font-size: 18px; line-height: 1.5; color: #333; text-align: left;">
+
+#### Students with disabilities face significant and wide-ranging barriers to learning computer science. For example, blind students frequently encounter inaccessible programming tools, and Deaf students may encounter uncaptioned video. Students with disabilities are supported in two main ways in educational environments: 504 plans provide students with accommodations to meet the same educational goals as their peers, and individualized education plans (IEPs) may provide both accommodations and modifications to meet students’ needs.
+     
+#### Students with 504 plans continue to be well-represented in foundational computer science, whereas students with IEPs remain underrepresented. There are many organizations dedicated to making sure computer science classes are accessible for all learners; however, there is still much work to do to ensure all students get this opportunity. 
+  </p>
+  <div style="margin-top: 20px; text-align: center;">
+    <img src="https://images.code.org/af9d74d242854bb26b8d71ec9aca09ca-image-1736036629328.21.43 PM.png" alt="A chart that shows that the amount of students with IEPs and 504 plans in CS. Students with IEPs are underrepresented, while students with 504 plans are not." style="max-width: 50%; height: auto; border-radius: 10px;">
+  </div>
+</div>
+
+## What if I don't have any students with IEPs or 504 plans?
+
+#### Maybe not now, but that doesn't mean you never will.
+
+#### Further, attending to accessibility helps everyone. You may be a person with typical hearing, but have you ever benefited from video captions? What about walking up a ramp instead of taking the stairs to access a building? In the same way, a neurotypical student who prefers instructions to be read aloud to them may benefit from utilizing a text-to-speech feature.
+
+#### The bottom line is that learning about accessibility is a key component of leading young learners. You never know how making your classroom more accessible will help other students thrive.
+MARKDOWN

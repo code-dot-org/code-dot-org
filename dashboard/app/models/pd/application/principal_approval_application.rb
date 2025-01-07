@@ -151,7 +151,7 @@ module Pd::Application
           next unless hash.key? field_name
 
           option ||= OTHER_WITH_TEXT
-          additional_text_field_name ||= "#{field_name}_other".to_sym
+          additional_text_field_name ||= :"#{field_name}_other"
           hash[field_name] = self.class.answer_with_additional_text hash, field_name, option, additional_text_field_name
           hash.delete additional_text_field_name
         end

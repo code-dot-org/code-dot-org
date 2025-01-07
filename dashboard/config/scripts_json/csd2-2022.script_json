@@ -25,6 +25,7 @@
           "key": "340a3627-eb27-42c9-8649-24b9b77e8c48"
         }
       ],
+      "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -44,7 +45,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-15 20:52:25 UTC",
+    "serialized_at": "2024-11-19 01:15:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

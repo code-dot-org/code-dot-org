@@ -7,8 +7,15 @@ Dashboard::Application.routes.draw do
   # Redirect studio.code.org/courses to code.org/students
   get "/courses", to: redirect(CDO.code_org_url("/students"))
 
+  # Redirect old sign up flow to new sign up flow
+  get "/users/sign_up", to: redirect("/users/new_sign_up/account_type")
+
   # Redirect studio.code.org/sections/teacher_dashboard/first_section_progress to most recent section
-  get '/teacher_dashboard/sections/first_section_progress', to: "teacher_dashboard#redirect_to_newest_section"
+  get '/teacher_dashboard/sections/first_section_progress', to: "teacher_dashboard#redirect_to_newest_section_progress"
+
+  # Redirect enable and disable experiments to most recent section
+  get '/teacher_dashboard/sections/enable_experiments', to: "teacher_dashboard#enable_experiments"
+  get '/teacher_dashboard/sections/disable_experiments', to: "teacher_dashboard#disable_experiments"
 
   constraints host: CDO.codeprojects_hostname do
     # Routes needed for the footer on weblab share links on codeprojects
@@ -38,6 +45,8 @@ Dashboard::Application.routes.draw do
     get '/user_levels/get_token', to: 'user_levels#get_token'
     get '/user_levels/level_source/:script_id/:level_id', to: 'user_levels#get_level_source'
     get '/user_levels/section_summary/:section_id/:level_id', to: 'user_levels#get_section_response_summary'
+
+    resources :user_level_interactions, only: [:create]
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 
@@ -249,6 +258,9 @@ Dashboard::Application.routes.draw do
     end
 
     get "/gallery", to: redirect("/projects/public")
+
+    get 'projects/:project_type/:channel_id/submission_status', to: 'projects#submission_status'
+    post 'projects/:project_type/:channel_id/submit', to: 'projects#submit'
 
     get 'projects/featured', to: 'projects#featured'
     delete '/featured_projects/:channel_id', to: 'featured_projects#destroy'
@@ -798,6 +810,9 @@ Dashboard::Application.routes.draw do
     get '/dashboardapi/v1/regional_partners/find', to: 'api/v1/regional_partners#find'
     get '/dashboardapi/v1/regional_partners/show/:partner_id', to: 'api/v1/regional_partners#show'
     get '/dashboardapi/v1/pd/application/applications_closed', to: 'pd/professional_learning_landing#applications_closed'
+    get '/dashboardapi/v1/pd/workshops_as_facilitator_for_pl_page', to: 'pd/professional_learning_landing#workshops_as_facilitator_for_pl_page'
+    get '/dashboardapi/v1/pd/workshops_as_organizer_for_pl_page', to: 'pd/professional_learning_landing#workshops_as_organizer_for_pl_page'
+    get '/dashboardapi/v1/pd/workshops_as_program_manager_for_pl_page', to: 'pd/professional_learning_landing#workshops_as_program_manager_for_pl_page'
     post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
     post '/dashboardapi/v1/amazon_future_engineer_submit', to: 'api/v1/amazon_future_engineer#submit'
 
@@ -970,7 +985,6 @@ Dashboard::Application.routes.draw do
         get 'users/current/permissions', to: 'users#get_current_permissions'
         get 'users/netsim_signed_in', to: 'users#netsim_signed_in'
         get 'users/:user_id/school_name', to: 'users#get_school_name'
-        get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
         get 'users/:user_id/tos_version', to: 'users#get_tos_version'
 
         get 'users/cached_page_auth_redirect', to: 'users#cached_page_auth_redirect'
@@ -985,6 +999,8 @@ Dashboard::Application.routes.draw do
         post 'users/:user_id/dismiss_census_banner', to: 'users#dismiss_census_banner'
         post 'users/:user_id/dismiss_donor_teacher_banner', to: 'users#dismiss_donor_teacher_banner'
         post 'users/:user_id/dismiss_parent_email_banner', to: 'users#dismiss_parent_email_banner'
+
+        post 'users/set_seen_ta_scores', to: 'users#set_seen_ta_scores'
 
         get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
         get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}
@@ -1040,7 +1056,6 @@ Dashboard::Application.routes.draw do
 
     get '/dashboardapi/v1/users/:user_id/contact_details', to: 'api/v1/users#get_contact_details'
     get '/dashboardapi/v1/users/:user_id/donor_teacher_banner_details', to: 'api/v1/users#get_donor_teacher_banner_details'
-    get '/dashboardapi/v1/users/:user_id/school_donor_name', to: 'api/v1/users#get_school_donor_name'
     post '/dashboardapi/v1/users/accept_data_transfer_agreement', to: 'api/v1/users#accept_data_transfer_agreement'
     get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: {format: 'json'}
     get '/dashboardapi/v1/schools/:id/afe_high_needs', to: 'api/v1/schools#afe_high_needs', defaults: {format: 'json'}

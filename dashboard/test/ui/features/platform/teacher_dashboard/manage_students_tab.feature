@@ -1,12 +1,16 @@
 @no_mobile
 Feature: Using the manage students tab of the teacher dashboard
   Scenario: Teacher bulk updates US state for all section students
+    Given I am on "http://studio.code.org"
+    Given CPA all user lockout phase
+
     Given I create a teacher-associated under-13 student in Colorado named "Student" after CAP start
     And I sign in as "Teacher_Student" and go home
     And I save the section id from row 0 of the section table
     And I navigate to manage students for the section I saved
 
     # Test the US state Bulk Set modal
+    Then I wait until element "#uitest-manage-students-table th:contains(State) i" is visible
     When I click selector "#uitest-manage-students-table th:contains(State) i"
     And I click selector ".pop-up-menu-item:contains(Set state for all students)"
     Then I wait until element "#us-state-column-bulk-set-modal" is visible

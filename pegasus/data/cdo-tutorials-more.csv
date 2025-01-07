@@ -49,9 +49,9 @@ blockscad_virus,BlocksCAD Modeling a Virus with Code,https://www.blockscad3d.com
 blockscad_roblox,BlocksCAD Roblox Characters,https://docs.google.com/document/d/1MYHBO4v1crvWI1qJKMflrlzKB4gvIa0k/edit?usp=sharing&ouid=105468947376233864179&rtpof=true&sd=true
 blocksmith_yeti,Don't Yeet the Yeti,https://www.blocksmithxr.com/blog/hourofcode
 blupants,BluPants: Learn Coding with Real Robots,https://blupants.com/hourofcode
-bs_image,Image Composition - A Wintry Puzzle!,https://bootstrapworld.org/materials/fall2022/en-us/lessons/hoc-winter-parley/
-bs_computing,Computing Needs All Voices,https://bootstrapworld.org/materials/latest/en-us/lessons/computing-needs-all-voices/index.shtml
-bs_data,Hour of Data,https://teacher.desmos.com/activitybuilder/custom/61aeb1da79cd49727623544f
+bs_image,Bootstrap: Snowman Puzzle ,https://bootstrapworld.org/materials/latest/en-us/lessons/hoc-winter-parley/ 
+bs_computing,Bootstrap: Computing Needs All Voices,https://bootstrapworld.org/materials/latest/en-us/lessons/computing-needs-all-voices/index.shtml
+bs_data,Bootstrap: Hour of Data ,https://www.bootstrapworld.org/materials/latest/en-us/lessons/hoc-data/index.shtml
 bootup_animal,Animal House,https://bootuppd.org/lesson-plan/scratchjr/animal-house/watch-this-first/
 bootup_sea,Under the Sea,https://bootuppd.org/lesson-plan/scratchjr/under-the-sea/watch-this-first/
 bootup_starry,Starry Night,https://bootuppd.org/lesson-plan/scratchjr/starry-night/watch-this-first/
@@ -68,7 +68,6 @@ bp_math_scratch,Math: Multiplication (Scratch),https://go.brainpop.com/scratch/m
 bp_math_vidcode,Math: Multiplication (Vidcode),https://go.brainpop.com/vidcode/multiplication
 bp_mlk_scratch,Social Studies: Martin Luther King Jr. (Scratch),https://go.brainpop.com/scratch/MLK
 bp_mlk_vidcode,Social Studies: Martin Luther King Jr. (Vidcode),https://go.brainpop.com/vidcode/MLK
-bp_safety_scratch,Digital Citizenship: Online Safety (Scratch),https://go.brainpop.com/scratch/onlinesafety
 bp_safety_vidcode,Digital Citizenship: Online Safety (Vidcode),https://go.brainpop.com/vidcode/onlinesafety
 bp_science_scratch,Science: Food Chains (Scratch),https://go.brainpop.com/scratch/foodchains
 bp_tech_scratch,Engineering & Tech: Computer Programming (Scratch),https://go.brainpop.com/scratch/computerprogramming
@@ -417,7 +416,6 @@ iorder,iOrder,http://www.icompute-uk.com/hoc-2017-3
 isave_santa,iSave Santa!,http://www.icompute-uk.com/hoc-2017-4
 icteach_microbit,Micro:bit Cyber Pin Code Generator,https://icteach.com/2023/09/30/microbit-cyber-pin-code-generator/
 imagilabs,Imagine it. Code it. Wear it.,https://imagilabs.com/pages/hour-of-code-x-imagilabs
-imagi_python,Creative Coding in Python,https://imagilabs.com/pages/hour-of-code-x-imagilabs
 idr_patterns,Creating patterns with code,https://weavly.org/learn/activities/creating-patterns/
 idr_shapes,Drawing shapes with code,https://weavly.org/learn/activities/drawing-shapes/
 intelino_field,intelino Mission: Field Trip,https://files.intelino.com/activities/challenges/intelino-field-trip.pdf
@@ -689,7 +687,7 @@ scigirls_cc,SciGirls: Code Creators,http://www.scigirlsconnect.org/resources/cod
 scigirls_pixels,SciGirls: Passion for Pixels,http://www.scigirlsconnect.org/resources/passion-for-pixels/
 scratch_storytelling,Anything is Possible! Storytelling with Scratch,https://resources.scratch.mit.edu/www/HoC/en/HOC_Scratch_Storytelling_2022.pdf 
 scratch_music,Make Music with Scratch,https://scratch.mit.edu/projects/editor/?tip_bar=music&utm_source=codeorg
-scratch_imagine,Imagine a World,https://scratch.mit.edu/imagine
+magi,Imagine a World,https://scratch.mit.edu/imagine
 scratch_fly,Make it Fly with Scratch,https://scratch.mit.edu/projects/editor/?tutorial=make-it-fly&utm_source=codeorg
 scratch_tales,Talking Tales,https://scratch.mit.edu/talking-tales
 scratch_talk,Create Animations That Talk,https://scratch.mit.edu/projects/editor/?tutorial=animations-that-talk
@@ -909,9 +907,11 @@ wonder_trip,Dash's Road Trip (F2),http://hourofcode.makewonder.com/dashs-road-tr
 wonder_zoo,Dot at the Petting Zoo (B2),http://hourofcode.makewonder.com/dot-at-the-petting-zoo-level-b.html
 imagi_pixel_art,Code your own pixel art!,https://imagilabs.com/pages/hour-of-code
 quorum_penguins,Penguins: Accessible Data Science with Quorum Blocks,https://quorumlanguage.com/hourofcode/datascience1.html
-bubble_popping,Joy of Bubble Popping,aka.ms/bubbles
-hubble_scott_kelly,Mission to Hubble with Scott Kelly,aka.ms/MissionHubble
-loops_diner,Loops Diner,aka.ms/lyla
+bubble_popping,Joy of Bubble Popping,https://arcade.makecode.com/#editor
+hubble_scott_kelly,Mission to Hubble with Scott Kelly,https://forms.codeninjas.com/back-to-school-game-building-session/?utm-source=makecode&utm_medium=partner&utm_campaign=bts_gbs
+loops_diner,Loops Diner,https://arcade.makecode.com/#editor
 kodable_high_flyer,High Flyer,https://www.kodable.com/hour-of-code/creator-high-flyer
-octostudio_creature,Create a Creature,https://octostudio.org/en/hoc/create-a-creature
-octostudio_tilt,Make a Tilt Game,https://octostudio.org/en/hoc/tilt-game
+octostudio_creature,OctoStudio: Create a Creature,https://octostudio.org/en/hoc/create-a-creature
+octostudio_tilt,OctoStudio: Make a Tilt Game,https://octostudio.org/en/hoc/tilt-game
+ai_game_platformer,AI Text to Game: Platformer,https://www.rosebud.ai/hour-of-code
+app_inventor,App Inventor & StoryGPT,https://aif.to/2024-hoc-storygpt

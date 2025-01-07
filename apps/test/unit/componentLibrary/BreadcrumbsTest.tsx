@@ -37,6 +37,7 @@ describe('Breadcrumbs Component', () => {
   it('renders correct test id for the breadcrumbs container', () => {
     setup();
 
+    // eslint-disable-next-line no-restricted-properties
     const container = screen.getByTestId('breadcrumbs-test-breadcrumbs');
     expect(container).toBeInTheDocument();
   });
@@ -45,7 +46,9 @@ describe('Breadcrumbs Component', () => {
     const customClass = 'custom-class';
     setup({className: customClass});
 
+    // eslint-disable-next-line no-restricted-properties
     const container = screen.getByTestId('breadcrumbs-test-breadcrumbs');
+    // eslint-disable-next-line no-restricted-properties
     expect(container).toHaveClass(customClass);
   });
 
@@ -53,6 +56,7 @@ describe('Breadcrumbs Component', () => {
     setup();
 
     // Since the FontAwesome icon might not have a clear role, check it by query
+    // eslint-disable-next-line no-restricted-properties
     const chevrons = screen.getAllByTestId('font-awesome-v6-icon');
     expect(chevrons.length).toBe(breadcrumbsData.length - 1); // Should be one less than breadcrumbs
   });

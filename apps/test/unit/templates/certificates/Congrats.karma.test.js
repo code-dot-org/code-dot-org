@@ -137,6 +137,22 @@ describe('Congrats', () => {
       .true;
   });
 
+  it('renders SuggestedAssignableCourses when there are assignable course suggestions', () => {
+    const assignableCourses = [
+      {
+        courseDisplayName: 'CS Discoveries',
+      },
+    ];
+    const wrapper = shallow(
+      <Congrats
+        {...plProps}
+        assignableCourseSuggestions={assignableCourses}
+        curriculumUrl="/s/self-paced-pl3-2023"
+      />
+    );
+    expect(wrapper.find('SuggestedAssignableCourses').exists()).to.be.true;
+  });
+
   it('renders a message when there is no certificateData', () => {
     const wrapper = shallow(
       <Congrats

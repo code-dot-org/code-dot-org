@@ -17,6 +17,7 @@ import Notification, {
 } from '@cdo/apps/sharedComponents/Notification';
 import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
 import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import AddMultipleStudents from '@cdo/apps/templates/manageStudents/AddMultipleStudents';
 import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
 import DownloadParentLetter from '@cdo/apps/templates/manageStudents/DownloadParentLetter';
@@ -54,7 +55,7 @@ import {
 } from '@cdo/apps/templates/tables/tableConstants';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import {
-  selectedSection,
+  selectedSectionSelector,
   syncEnabled,
   sectionCode,
   sectionName,
@@ -66,6 +67,8 @@ import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import experiments from '@cdo/apps/util/experiments';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
+
+import {showV2TeacherDashboard} from '../../teacherNavigation/TeacherNavFlagUtils';
 
 const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
   SectionLoginType.word,
@@ -825,6 +828,7 @@ class ManageStudentsTable extends Component {
     );
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
+    const tableStyle = showV2TeacherDashboard() ? styles.v2TableWidth : {};
 
     const decoratedRows = this.props.studentData.map(rowData => ({
       ...rowData,
@@ -919,14 +923,19 @@ class ManageStudentsTable extends Component {
               />
             </div>
           )}
-          <div style={styles.button}>
-            <DownloadParentLetter
-              sectionId={this.props.sectionId}
-              buttonMetricsCategory={
-                ParentLetterButtonMetricsCategory.ABOVE_TABLE
-              }
-            />
-          </div>
+          <GlobalEditionWrapper
+            component={() => (
+              <div style={styles.button}>
+                <DownloadParentLetter
+                  sectionId={this.props.sectionId}
+                  buttonMetricsCategory={
+                    ParentLetterButtonMetricsCategory.ABOVE_TABLE
+                  }
+                />
+              </div>
+            )}
+            componentId="DownloadParentLetterButton"
+          />
           {/* Passes button style to CodeReviewGroupsDialog to avoid extra div,
             but is otherwise similar to other button/modal components here.
             Despite being unused in this component, we pass the dataApi object
@@ -977,21 +986,29 @@ class ManageStudentsTable extends Component {
             </div>
           )}
         </div>
-        <Table.Provider
-          columns={columns}
-          style={tableLayoutStyles.table}
-          id="uitest-manage-students-table"
-        >
-          <Table.Header />
-          <Table.Body rows={sortedRows} rowKey="id" />
-        </Table.Provider>
-        <ManageStudentsLoginInfo
-          sectionId={sectionId}
-          sectionName={sectionName}
-          studentData={studentData}
-          loginType={loginType}
-          sectionCode={this.props.sectionCode}
-          studioUrlPrefix={this.props.studioUrlPrefix}
+        <div style={tableStyle}>
+          <Table.Provider
+            columns={columns}
+            style={tableLayoutStyles.table}
+            id="uitest-manage-students-table"
+          >
+            <Table.Header />
+            <Table.Body rows={sortedRows} rowKey="id" />
+          </Table.Provider>
+        </div>
+
+        <GlobalEditionWrapper
+          component={ManageStudentsLoginInfo}
+          componentId="ManageStudentsLoginInfo"
+          props={{
+            sectionId: sectionId,
+            sectionName: sectionName,
+            studentData: studentData,
+            loginType: loginType,
+            sectionCode: this.props.sectionCode,
+            studioUrlPrefix: this.props.studioUrlPrefix,
+            providePrivacyLetter: true,
+          }}
         />
       </div>
     );
@@ -1036,6 +1053,10 @@ const styles = {
   },
   sectionCodeNotApplicable: {
     ...fontConstants['main-font-bold'],
+  },
+  v2TableWidth: {
+    width: '100%',
+    overflowX: 'auto',
   },
 };
 
@@ -1131,7 +1152,7 @@ export default connect(
         .participantType,
     loginType: state.manageStudents.loginType,
     studentData: convertStudentDataToArray(state.manageStudents.studentData),
-    isSectionAssignedCSA: selectedSection(state).isAssignedCSA,
+    isSectionAssignedCSA: selectedSectionSelector(state).isAssignedCSA,
     editingData: state.manageStudents.editingData,
     showSharingColumn: state.manageStudents.showSharingColumn,
     addStatus: state.manageStudents.addStatus,

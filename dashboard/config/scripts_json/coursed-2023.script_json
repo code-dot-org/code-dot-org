@@ -16,6 +16,7 @@
           "buttonText": "Get free resources"
         }
       ],
+      "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
@@ -27,7 +28,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2024-01-31 21:32:16 UTC",
+    "serialized_at": "2024-11-19 01:14:24 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
