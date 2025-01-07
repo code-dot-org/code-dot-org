@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 
 import MazeVisualization from '@cdo/apps/maze/Visualization';
 
@@ -7,18 +7,37 @@ import moduleStyles from './neighborhood.module.scss';
 interface NeighborhoodVisualizationProps {
   className?: string;
   fullIconPath: string;
+  useProtectedDiv?: boolean;
 }
 
 const NeighborhoodVisualization: React.FunctionComponent<
   NeighborhoodVisualizationProps
-> = ({className, fullIconPath}) => {
+> = ({className, fullIconPath, useProtectedDiv = true}) => {
+  const visualizationComponent = useMemo(() => {
+    if (useProtectedDiv) {
+      return <MazeVisualization />;
+    } else {
+      return (
+        <div id="visualization">
+          <svg version="1.1" id="svgMaze">
+            <g id="look">
+              <path d="M 0,-15 a 15 15 0 0 1 15 15" />
+              <path d="M 0,-35 a 35 35 0 0 1 35 35" />
+              <path d="M 0,-55 a 55 55 0 0 1 55 55" />
+            </g>
+          </svg>
+        </div>
+      );
+    }
+  }, [useProtectedDiv]);
+
   return (
     <div className={className}>
       <div
         className={moduleStyles.neighborhoodPreviewBackground}
         style={styles.neighborhoodBackground}
       >
-        <MazeVisualization />
+        {visualizationComponent}
       </div>
       <svg id="slider" version="1.1" width="150" height="50">
         {/* Slow icon. */}

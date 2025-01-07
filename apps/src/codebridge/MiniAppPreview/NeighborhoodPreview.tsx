@@ -52,6 +52,7 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
   return (
     <NeighborhoodVisualization
       fullIconPath={'/blockly/media/turtle/icons_white.png'}
+      useProtectedDiv={false}
     />
   );
 };
