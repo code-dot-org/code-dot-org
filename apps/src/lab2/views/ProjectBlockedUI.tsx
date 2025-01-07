@@ -25,7 +25,7 @@ export const ProjectBlockedUI: React.FunctionComponent<{
       >
         {showAlert && (
           <Alert
-            text={i18n.tosLong({url: 'http://code.org/tos'})}
+            text={i18n.tosWithoutLink()}
             type={alertTypes.danger}
             onClose={() => {
               setShowAlert(false);

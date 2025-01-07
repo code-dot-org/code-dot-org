@@ -10,7 +10,7 @@
  *
  * If a project manager is destroyed, the enqueued save will be cancelled, if it exists.
  */
-import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
+import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {currentLocation} from '@cdo/apps/utils';
 
 import LabMetricsReporter from '../Lab2MetricsReporter';
@@ -91,10 +91,7 @@ export default class ProjectManager {
     }
 
     this.lastChannel = channel;
-    const response = await HttpClient.fetchJson<{abuse_score: number}>(
-      `/v3/channels/${this.channelId}/abuse`
-    );
-    const abuseScore = response.value.abuse_score;
+    const abuseScore = await this.channelsStore.getAbuseScore(channel);
     return {sources, channel, abuseScore};
   }
 
