@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {ChangeEvent, HTMLAttributes} from 'react';
+import {ChangeEvent, HTMLAttributes} from 'react';
 
 import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
