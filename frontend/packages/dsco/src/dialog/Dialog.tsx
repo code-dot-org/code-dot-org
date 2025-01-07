@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import React, {HTMLAttributes, ReactNode} from 'react';
+import {HTMLAttributes, ReactNode} from 'react';
 
 import {Button, ButtonProps} from '@/button';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
@@ -44,7 +44,7 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
  *  * (✔) implementation of component approved by design team;
  *  * (✔) has storybook, covered with stories and documentation;
  *  * (✔) has tests: test every prop, every state and every interaction that's js related;
- *  * (see apps/test/unit/componentLibrary/DialogTest.tsx)
+ *  * (see ./__tests__/Dialog.test.tsx)
  *  * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```

@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import React, {HTMLAttributes, ReactNode, useEffect, useRef} from 'react';
+import {HTMLAttributes, ReactNode, useEffect, useRef} from 'react';
 
 import CloseButton from '@/closeButton';
 import useBodyScrollLock from '@/common/hooks/useBodyScrollLock';
@@ -26,7 +26,7 @@ export interface CustomDialogProps extends HTMLAttributes<HTMLDivElement> {
  *  * (✔) implementation of component approved by design team;
  *  * (✔) has storybook, covered with stories and documentation;
  *  * (✔) has tests: test every prop, every state and every interaction that's js related;
- *  * (see apps/test/unit/componentLibrary/CustomDialogTest.tsx)
+ *  * (see ./__tests__/CustomDialog.test.tsx)
  *  * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```
