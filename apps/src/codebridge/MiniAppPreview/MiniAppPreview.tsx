@@ -4,8 +4,9 @@ import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import NeighborhoodVisualization from '@cdo/apps/miniApps/neighborhood/NeighborhoodVisualization';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import NeighborhoodPreview from './NeighborhoodPreview';
 
 import moduleStyles from './mini-app-preview.module.scss';
 
@@ -16,11 +17,7 @@ const MiniAppPreview: React.FunctionComponent = () => {
 
   // need to inject Neighborhood.ts
   const miniAppComponent =
-    miniApp === 'neighborhood' ? (
-      <NeighborhoodVisualization
-        fullIconPath={'/blockly/media/turtle/icons_white.png'}
-      />
-    ) : null;
+    miniApp === 'neighborhood' ? <NeighborhoodPreview /> : null;
 
   return (
     <PanelContainer

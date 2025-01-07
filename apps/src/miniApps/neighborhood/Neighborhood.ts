@@ -45,8 +45,11 @@ export default class Neighborhood {
 
   afterInject(
     level: LevelProperties,
-    skin: Record<string, string>,
-    config: {skinId: string; level: LevelProperties},
+    // We are relying on old maze skins here, which are not typed.
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    skin: Record<string, any>,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    config: {skinId: string; level: LevelProperties; skin: Record<string, any>},
     playAudio: (name: string, options: Record<string, unknown>) => void,
     playAudioOnFailure: () => void,
     loadAudio: (filenames: string[], name: string[]) => void,
@@ -89,9 +92,12 @@ export default class Neighborhood {
 
     // Expose an interface for testing
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (window as any).__TestInterface.setSpeedSliderValue = (value: number) => {
-      this.speedSlider!.setValue(value);
-    };
+    const testInterface = (window as any).__TestInterface;
+    if (testInterface) {
+      testInterface.setSpeedSliderValue = (value: number) => {
+        this.speedSlider!.setValue(value);
+      };
+    }
   }
 
   handleSignal(signal: NeighborhoodSignal) {

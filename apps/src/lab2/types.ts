@@ -168,6 +168,7 @@ export interface LevelProperties {
   templateSources?: MultiFileSource;
   sharedBlocks?: BlockDefinition[];
   validations?: Validation[];
+  baseAssetUrl?: string;
   // An optional URL that allows the user to skip the progression.
   skipUrl?: string;
   // Project Template level name for the level if it exists.
