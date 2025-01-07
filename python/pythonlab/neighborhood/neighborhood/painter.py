@@ -16,7 +16,7 @@ class Painter:
     self.x = x
     self.y = y
     self.direction = direction
-    self.remainingPaint = paint
+    self.remaining_paint = paint
 
   def turn_left(self):
     """
@@ -49,7 +49,7 @@ class Painter:
     """
     Returns the amount of paint the painter has.
     """
-    return self.remainingPaint
+    return self.remaining_paint
   
   def hide_painter(self):
     """
@@ -173,4 +173,4 @@ class Painter:
     Args:
       paint (int): The amount of paint that should be in the painter's bucket.
     """
-    self.remainingPaint = paint
+    self.remaining_paint = paint
