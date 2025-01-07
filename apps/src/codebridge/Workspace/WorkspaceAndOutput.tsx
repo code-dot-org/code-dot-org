@@ -95,7 +95,7 @@ const WorkspaceAndOutput: React.FunctionComponent = () => {
         'max-width': availableWidth,
         'max-height': newVisualizationWidth,
         height: newVisualizationWidth,
-        //'margin-left': (availableWidth - newVisualizationWidth) / 2,
+        'margin-left': (availableWidth - newVisualizationWidth) / 2,
       });
     }
   };
