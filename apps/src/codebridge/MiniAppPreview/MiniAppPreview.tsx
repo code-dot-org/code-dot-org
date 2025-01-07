@@ -1,5 +1,6 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import ControlButtons from '@codebridge/Console/ControlButtons';
+import {MiniApps} from '@codebridge/constants';
 import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -16,7 +17,7 @@ const MiniAppPreview: React.FunctionComponent = () => {
   const miniApp = useAppSelector(state => state.lab.levelProperties?.miniApp);
 
   const miniAppComponent =
-    miniApp === 'neighborhood' ? <NeighborhoodPreview /> : null;
+    miniApp === MiniApps.Neighborhood ? <NeighborhoodPreview /> : null;
 
   return (
     <PanelContainer

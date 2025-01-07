@@ -1,4 +1,5 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import {MiniApps} from '@codebridge/constants';
 import {appendSystemOutMessage} from '@codebridge/redux/consoleRedux';
 import React, {useEffect, useMemo} from 'react';
 
@@ -7,8 +8,6 @@ import skins from '@cdo/apps/maze/skins';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import NeighborhoodVisualization from '@cdo/apps/miniApps/neighborhood/NeighborhoodVisualization';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-const NEIGHBORHOOD = 'neighborhood';
 
 // Preview panel for the neighborhood mini app.
 const NeighborhoodPreview: React.FunctionComponent = () => {
@@ -23,7 +22,7 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
     }
     return skins.load(
       (path: string) => levelProperties.baseAssetUrl + path,
-      NEIGHBORHOOD
+      MiniApps.Neighborhood
     );
   }, [levelProperties]);
 
@@ -41,7 +40,11 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
     neighborhood.afterInject(
       levelProperties,
       neighborhoodSkin,
-      {skinId: NEIGHBORHOOD, level: levelProperties, skin: neighborhoodSkin},
+      {
+        skinId: MiniApps.Neighborhood,
+        level: levelProperties,
+        skin: neighborhoodSkin,
+      },
       () => {},
       () => {},
       () => {},
