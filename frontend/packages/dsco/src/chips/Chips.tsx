@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import uniq from 'lodash/uniq';
-import React, {useEffect} from 'react';
+import {useEffect} from 'react';
 
 import {ComponentSizeXSToL} from '@/common/types';
 
