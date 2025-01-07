@@ -51,6 +51,14 @@
     -webkit-appearance: none;
     appearance: none;
 
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+
     &:focus-visible {
       outline: 2px solid var(--brand-teal-50);
       border-radius: 0.25rem;
