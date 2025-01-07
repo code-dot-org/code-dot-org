@@ -12,7 +12,7 @@ export default {
   },
 };
 
-const Template = args => {
+const TemplateWrapper = args => {
   const [isOpen, setIsOpen] = useState(true);
 
   const handleClose = () => {
@@ -22,6 +22,8 @@ const Template = args => {
 
   return <RedirectDialog {...args} isOpen={isOpen} handleClose={handleClose} />;
 };
+
+const Template = args => <TemplateWrapper {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
