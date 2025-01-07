@@ -280,6 +280,7 @@ module ScriptConstants
     ALLTHETHINGS = 'allthethings'.freeze,
     COMPUTER_VISION = 'computer-vision'.freeze,
     FOUNDATIONS_GEN_AI = 'foundations-gen-ai-2024'.freeze,
+    EXPLORING_GEN_AI = 'exploring-gen-ai2-2024'.freeze,
     CSD2_2024 = 'csd2-2024'.freeze,
     K5_UNPLUGGED = 'k5-unplugged'.freeze
   ]
