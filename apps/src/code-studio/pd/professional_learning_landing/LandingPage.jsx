@@ -86,7 +86,9 @@ const getAvailableTabs = permissions => {
 };
 
 const getEnrollSucessWorkshopTitle = () => {
-  // If sent here from successfully enrolling in a workshop, log WORKSHOP_ENROLLMENT_COMPLETED_EVENT.
+  // If a user was sent here after successfully enrolling in a workshop, the one field guaranteed to have
+  // been set in sessionStorage is 'workshopCourse' (since a workshop must have a course) so we can use
+  // its presence to determine whether to log the WORKSHOP_ENROLLMENT_COMPLETED_EVENT event or not.
   const workshopCourse = sessionStorage.getItem('workshopCourse', null);
   if (!workshopCourse) {
     return '';
@@ -102,7 +104,7 @@ const getEnrollSucessWorkshopTitle = () => {
       sessionKey => sessionStorage.removeItem(sessionKey)
     );
 
-    return workshopName ? workshopName : workshopCourse;
+    return !!workshopName ? workshopName : workshopCourse;
   }
 };
 
