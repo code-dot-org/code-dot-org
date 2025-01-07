@@ -1,6 +1,6 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {appendSystemOutMessage} from '@codebridge/redux/consoleRedux';
-import React, {useEffect} from 'react';
+import React, {useEffect, useMemo} from 'react';
 
 import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
 import skins from '@cdo/apps/maze/skins';
@@ -8,14 +8,27 @@ import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import NeighborhoodVisualization from '@cdo/apps/miniApps/neighborhood/NeighborhoodVisualization';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+const NEIGHBORHOOD = 'neighborhood';
+
+// Preview panel for the neighborhood mini app.
 const NeighborhoodPreview: React.FunctionComponent = () => {
   const levelProperties = useAppSelector(state => state.lab.levelProperties);
   const dispatch = useAppDispatch();
   const {config} = useCodebridgeContext();
   const isVertical = config.activeGridLayout === 'vertical';
 
-  useEffect(() => {
+  const neighborhoodSkin = useMemo(() => {
     if (!levelProperties) {
+      return null;
+    }
+    return skins.load(
+      (path: string) => levelProperties.baseAssetUrl + path,
+      NEIGHBORHOOD
+    );
+  }, [levelProperties]);
+
+  useEffect(() => {
+    if (!levelProperties || !neighborhoodSkin) {
       return;
     }
     const neighborhood = new Neighborhood(
@@ -25,15 +38,10 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
       '[PYTHON LAB]'
     );
 
-    const neighborhoodSkin = skins.load(
-      (path: string) => levelProperties.baseAssetUrl + path,
-      'neighborhood'
-    );
-
     neighborhood.afterInject(
       levelProperties,
       neighborhoodSkin,
-      {skinId: 'neighborhood', level: levelProperties, skin: neighborhoodSkin},
+      {skinId: NEIGHBORHOOD, level: levelProperties, skin: neighborhoodSkin},
       () => {},
       () => {},
       () => {},
@@ -57,13 +65,10 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
         position: 'absolute',
       });
     }
-  }, [dispatch, levelProperties, isVertical]);
+  }, [dispatch, levelProperties, isVertical, neighborhoodSkin]);
 
   return (
-    <NeighborhoodVisualization
-      fullIconPath={'/blockly/media/turtle/icons_white.png'}
-      useProtectedDiv={false}
-    />
+    <NeighborhoodVisualization isDarkMode={true} useProtectedDiv={false} />
   );
 };
 

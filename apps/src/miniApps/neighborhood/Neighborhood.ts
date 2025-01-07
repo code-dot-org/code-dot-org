@@ -15,6 +15,10 @@ const ANIMATED_STEP_SPEED = 500;
 const ANIMATED_STEPS = [NeighborhoodSignalType.MOVE];
 const SIGNAL_CHECK_TIME = 200;
 
+// We are relying on old maze skins here, which are not typed.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type SkinType = Record<string, any>;
+
 export default class Neighborhood {
   private controller: typeof MazeController | null;
   private seenFirstSignal: boolean;
@@ -45,11 +49,8 @@ export default class Neighborhood {
 
   afterInject(
     level: LevelProperties,
-    // We are relying on old maze skins here, which are not typed.
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    skin: Record<string, any>,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    config: {skinId: string; level: LevelProperties; skin: Record<string, any>},
+    skin: SkinType,
+    config: {skinId: string; level: LevelProperties; skin: SkinType},
     playAudio: (name: string, options: Record<string, unknown>) => void,
     playAudioOnFailure: () => void,
     loadAudio: (filenames: string[], name: string[]) => void,
@@ -90,7 +91,8 @@ export default class Neighborhood {
     this.signals = [];
     this.nextSignalIndex = 0;
 
-    // Expose an interface for testing
+    // Expose an interface for testing.
+    // Only used in legacy labs.
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const testInterface = (window as any).__TestInterface;
     if (testInterface) {

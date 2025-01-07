@@ -7,9 +7,9 @@
 }
 
 .previewContainerVertical {
-  // 440px to account for 40px header
-  height: 440px;
-  min-height: 440px;
+  // 500px to account for 40px header and 60px slider
+  height: 500px;
+  min-height: 500px;
   background-color: $light_black;
 }
 

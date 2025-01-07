@@ -26,6 +26,7 @@ import Output from './Workspace/Output';
 import WorkspaceAndOutput from './Workspace/WorkspaceAndOutput';
 
 import moduleStyles from './styles/cdoIDE.module.scss';
+import './styles/codebridge.scss';
 
 type CodebridgeProps = {
   project: ProjectType;

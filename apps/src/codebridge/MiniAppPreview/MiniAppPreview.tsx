@@ -15,7 +15,6 @@ const MiniAppPreview: React.FunctionComponent = () => {
   const isHorizontal = config.activeGridLayout === 'horizontal';
   const miniApp = useAppSelector(state => state.lab.levelProperties?.miniApp);
 
-  // need to inject Neighborhood.ts
   const miniAppComponent =
     miniApp === 'neighborhood' ? <NeighborhoodPreview /> : null;
 
