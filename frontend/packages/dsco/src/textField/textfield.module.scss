@@ -21,6 +21,10 @@
     box-sizing: border-box;
     height: unset;
 
+    &:disabled, &:read-only {
+      cursor: not-allowed;
+    }
+
     &:focus-visible {
       outline: 2px solid var(--borders-brand-teal-primary);
       outline-offset: 2px;
