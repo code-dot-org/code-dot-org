@@ -38,7 +38,7 @@ export interface PopoverProps extends HTMLAttributes<HTMLDivElement> {
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/PopoverTest.tsx, apps/test/unit/componentLibrary/WithPopoverTest.tsx);
+ * * (see ./__tests__/Popover.test.tsx, ./__tests__/WithPopover.test.tsx);
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready For Dev```
