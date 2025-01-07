@@ -12,6 +12,7 @@ import {
   FIELD_EFFECTS_EXTENSION,
   FIELD_SOUNDS_VALIDATOR,
   FIELD_PATTERNS_VALIDATOR,
+  NEXT_CONNECTION_MUTATOR,
 } from './constants';
 import {
   getDefaultTrackNameExtension,
@@ -19,6 +20,7 @@ import {
   effectsFieldExtension,
   fieldSoundsValidator,
   fieldPatternsValidator,
+  nextConnectionMutator,
 } from './extensions';
 import FieldChord from './FieldChord';
 import FieldPattern from './FieldPattern';
@@ -44,6 +46,10 @@ export function setUpBlocklyForMusicLab() {
   Blockly.Extensions.register(FIELD_SOUNDS_VALIDATOR, fieldSoundsValidator);
   Blockly.Extensions.register(FIELD_PATTERNS_VALIDATOR, fieldPatternsValidator);
   Blockly.Extensions.registerMutator(PLAY_MULTI_MUTATOR, playMultiMutator);
+  Blockly.Extensions.registerMutator(
+    NEXT_CONNECTION_MUTATOR,
+    nextConnectionMutator
+  );
 
   // Needed for TypeScript to recognize the type of the MUSIC_BLOCKS. Remove
   // after converting musicBlocks to TypeScript.

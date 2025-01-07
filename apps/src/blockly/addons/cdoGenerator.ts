@@ -13,10 +13,13 @@ export default function initializeGenerator(
   (
     blocklyWrapper.getGenerator() as ExtendedJavascriptGenerator
   ).translateVarName = function (name: string) {
-    return (Blockly.JavaScript.nameDB_ as GoogleBlockly.Names).getName(
+    let varName = (Blockly.JavaScript.nameDB_ as GoogleBlockly.Names).getName(
       name,
       Blockly.VARIABLE_CATEGORY_NAME
     );
+    // Play Lab (aka Studio) variables are contained within the Globals namespace.
+    if (Blockly.varsInGlobals) varName = 'Globals.' + varName;
+    return varName;
   };
 
   // This function was a custom addition in CDO Blockly, so we need to add it here

@@ -1,0 +1,27 @@
+name 'self-paced-equity-U1L2-closing'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Great Job! 🎉
+
+<img src="https://images.code.org/5db8730311b02ffa36c536f31712b324-image-1733440983279.23.00 PM.png" alt="Three students around a laptop huddle together and smile at the camera." style="border-radius:40px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 20px 20px 20px 20px;">
+
+#### So far, you have:
+
+* #### Defined and identified systemic barriers that limit access, diversity, and inclusion in CS education.
+* #### Recognized disparities by race and gender in access, diversity, and inclusion in CS education nationally.
+* #### Analyzed access, diversity, and inclusion data from school and classroom to identify issues of inequities.
+
+## Up Next
+
+#### In the next section of this professional learning module, you will:
+
+* #### Reflect on your own identity markers and how you view yourself.
+* #### Reflect on your educational experiences and how they inform your teaching practice today.
+
+<br>
+
+#### Click continue to keep going!
+
+MARKDOWN

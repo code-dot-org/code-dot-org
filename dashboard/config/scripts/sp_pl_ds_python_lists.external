@@ -9,19 +9,23 @@ markdown <<MARKDOWN
 
 ## List
 #### A **list** is created with a **comma-separated list** of values, or objects **inside square brackets []**.
+<br>
  
-<img src="https://images.code.org/10e4ab1b190afa118bb196c9924395b7-image-1732030289342.png" alt="code for declaring a list with a chart of example" width="550px" style="display: block; float:left;">
+ <div style="font-size: 24px; font-weight: bold;">
+  scores = [75, 90, 83, 78, 97]
+</div>
+
 
 <div style="clear:both;"></div>
 
 ## Index
-#### An **index** is an **integer value** that indicates the **position** of a value inside of a list. 
+#### An **index** is an **integer value** that indicates the **position** of a value inside of a list. See the index value inside the boxes. 
 
 <img src="https://images.code.org/10e4ab1b190afa118bb196c9924395b7-image-1732030289342.png" alt="graph of element count and index for python" width="550px" style="display: block; float:left;">
 
 <div style="clear:both;"></div>
 
-- #### *Notice that the index count starts at zero (0).*
+#### *Notice that the index count starts at zero (0).*
 
 ## Accessing and Assigning Values  
 

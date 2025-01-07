@@ -9,13 +9,13 @@ markdown <<MARKDOWN
 <br>
 
 <a href="https://docs.google.com/presentation/d/1EnQ8lf1l2FVqU0AVvwODPcwW9ERlD8vle2ELAyqKIjA/edit?usp=sharing" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/1deaadb47c55ad112dd414bdf93b93f1-image-1732573038355.17.14 PM.png" alt="Four panels show a Giving Tree analogy for inequality, equality, equity, and justice."></a>
-##### Click the image to access a larger version.
+##### **Note**: Click the image to access a larger version.
 
 ___
 
 ## Examples
 
-#### Read the following examples. While you do so, considering the distinguishing features between each. We'll get into CS-specific examples in the next level.
+#### Knowing what each of these key concepts looks like in action will help you to notice and act on issues of inequity in your school. Read the following examples to learn more. While you do so, considering the distinguishing features between each. We'll get into CS-specific examples in the next level.
 
 <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
     <thead>
@@ -66,7 +66,7 @@ ___
 	<img src="https://images.code.org/08d8da1158d67fd1ed7535c90b2b91bc-image-1731961007471.png" style="width: auto; height: 100px;"  alt="An open hand with an open book floating above it.">
 	<div style="background-color: #009EB0; border-radius: 20px 20px 20px 20px; color: #000000; width: 90%; margin-left: 5%; padding: 10px 10px 5px 10px;">
 		<p style="color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Resource Suggestion</b></p>
-        <p style="color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 16px">For the purposes of this course, we will be focusing effecting change with regards to equity. If you are interested in enacting justice by influecing education systems on a larger scale, consider advocating for a complete K-12 computer science pathway at your school or district. <a href="https://csforca.org/csequityguide/" target="blank" rel="noopener noreferrer">The CA for CS Equity Guide</a> is a good resource to start with.</p>
+        <p style="color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px">For the purposes of this course, we will be focusing on effecting change with regards to equity, as educators typically have the most influence in their school and district. If you are interested in enacting justice by influencing education systems on a larger scale, consider advocating for a complete K-12 computer science pathway at your district and state.  <span style="background-color: LightCyan;"><a href="https://csforca.org/csequityguide/" target="blank" rel="noopener noreferrer">The CA for CS Equity Guide</a></span> is a good resource to start with.</p>
 	</div>
 </div>
 MARKDOWN

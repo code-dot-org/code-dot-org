@@ -25,11 +25,7 @@ export function buildSchoolData({
     !Object.values(NonSchoolOptions).some(option => schoolId === option)
   ) {
     return {
-      user: {
-        school_info_attributes: {
-          school_id: schoolId,
-        },
-      },
+      school_id: schoolId,
     };
   }
 
@@ -38,25 +34,17 @@ export function buildSchoolData({
     schoolId === NonSchoolOptions.NO_SCHOOL_SETTING
   ) {
     return {
-      user: {
-        school_info_attributes: {
-          country,
-          school_type: NonSchoolOptions.NO_SCHOOL_SETTING,
-          zip: schoolZip,
-        },
-      },
+      country,
+      school_type: NonSchoolOptions.NO_SCHOOL_SETTING,
+      zip: schoolZip,
     };
   }
 
   if (country && country !== SELECT_COUNTRY) {
     return {
-      user: {
-        school_info_attributes: {
-          country,
-          school_name: schoolName,
-          zip: country === US_COUNTRY_CODE ? schoolZip : undefined,
-        },
-      },
+      country,
+      school_name: schoolName,
+      zip: country === US_COUNTRY_CODE ? schoolZip : undefined,
     };
   }
 }

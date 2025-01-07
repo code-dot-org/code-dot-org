@@ -1,5 +1,5 @@
 class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
-  attributes :id, :organizer, :location_name, :location_address, :course,
+  attributes :id, :name, :organizer, :location_name, :location_address, :course,
     :subject, :capacity, :notes, :fee, :state, :facilitators,
     :enrolled_teacher_count, :sessions, :account_required_for_attendance?,
     :enrollment_code, :pre_workshop_survey_url, :attended, :on_map, :funded, :funding_type, :ready_to_close?,

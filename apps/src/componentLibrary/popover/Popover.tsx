@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import React, {ReactNode} from 'react';
+import React, {HTMLAttributes, ReactNode} from 'react';
 
 import CloseButton from '@cdo/apps/componentLibrary/closeButton';
 import {
@@ -13,7 +13,7 @@ import {BodyTwoText, Heading5} from '@cdo/apps/componentLibrary/typography';
 
 import moduleStyles from './popover.module.scss';
 
-export interface PopoverProps {
+export interface PopoverProps extends HTMLAttributes<HTMLDivElement> {
   /** Popover title */
   title: string;
   /** Popover direction/position relative to connected element */
@@ -64,6 +64,7 @@ const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(
       className,
       size = 'm',
       style = {},
+      ...HTMLAttributes
     },
     ref
   ) => {
@@ -78,6 +79,7 @@ const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(
           className
         )}
         style={style}
+        {...HTMLAttributes}
       >
         <CloseButton
           className={moduleStyles.closeButton}

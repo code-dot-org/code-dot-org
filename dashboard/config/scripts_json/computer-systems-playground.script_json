@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "computer-systems-playground",
-    "serialized_at": "2024-11-19 21:59:59 UTC",
+    "serialized_at": "2024-12-04 21:06:53 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -199,6 +199,21 @@
         "lesson_group.key": "",
         "script.name": "computer-systems-playground"
       }
+    },
+    {
+      "key": "lesson-12",
+      "name": "AI Chat Examples",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground"
+      }
     }
   ],
   "lesson_activities": [
@@ -306,6 +321,18 @@
       "seeding_key": {
         "lesson_activity.key": "eb75410e-0ee6-4188-a383-5c6202a8cd48",
         "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground"
+      }
+    },
+    {
+      "key": "054fa114-88b1-48d6-8285-07f50de969f1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "054fa114-88b1-48d6-8285-07f50de969f1",
+        "lesson.key": "lesson-12",
         "lesson_group.key": "",
         "script.name": "computer-systems-playground"
       }
@@ -681,6 +708,49 @@
       "seeding_key": {
         "activity_section.key": "f86ea5fc-7c6a-4bd6-a6d4-11c35eb42e11",
         "lesson_activity.key": "eb75410e-0ee6-4188-a383-5c6202a8cd48"
+      }
+    },
+    {
+      "key": "467249d5-6796-4db2-9927-fbe656b38492",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "467249d5-6796-4db2-9927-fbe656b38492",
+        "lesson_activity.key": "054fa114-88b1-48d6-8285-07f50de969f1"
+      }
+    },
+    {
+      "key": "02220f17-3af4-4fb6-9b85-da681d4ed2cc",
+      "position": 2,
+      "properties": {
+        "progression_name": "Emma - Troubleshooting Bot"
+      },
+      "seeding_key": {
+        "activity_section.key": "02220f17-3af4-4fb6-9b85-da681d4ed2cc",
+        "lesson_activity.key": "054fa114-88b1-48d6-8285-07f50de969f1"
+      }
+    },
+    {
+      "key": "dc013e68-08fd-40a2-9972-78dbf715523c",
+      "position": 3,
+      "properties": {
+        "progression_name": "Emma - micro:bit bot"
+      },
+      "seeding_key": {
+        "activity_section.key": "dc013e68-08fd-40a2-9972-78dbf715523c",
+        "lesson_activity.key": "054fa114-88b1-48d6-8285-07f50de969f1"
+      }
+    },
+    {
+      "key": "0a38fa6d-7597-4e1f-8628-92597af9bf9d",
+      "position": 4,
+      "properties": {
+        "progression_name": "Ken - training bot"
+      },
+      "seeding_key": {
+        "activity_section.key": "0a38fa6d-7597-4e1f-8628-92597af9bf9d",
+        "lesson_activity.key": "054fa114-88b1-48d6-8285-07f50de969f1"
       }
     }
   ],
@@ -1341,6 +1411,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Example Project 1.1"
+        ],
         "progression": "Example Project 1"
       },
       "bonus": false,
@@ -1363,6 +1436,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Example Project 1.2"
+        ],
         "progression": "Example Project 2"
       },
       "bonus": false,
@@ -1385,6 +1461,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Example Project 1.6"
+        ],
         "progression": "Template Level"
       },
       "bonus": false,
@@ -1407,6 +1486,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Example Project 1.3"
+        ],
         "progression": "Code Snippets"
       },
       "bonus": false,
@@ -1429,6 +1511,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Example Project 1.4"
+        ],
         "progression": "Code Snippets"
       },
       "bonus": false,
@@ -1451,6 +1536,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Example Project 1.5"
+        ],
         "progression": "Code Snippets"
       },
       "bonus": false,
@@ -1473,6 +1561,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Template 1"
+        ],
         "progression": "Template 1"
       },
       "bonus": false,
@@ -1495,6 +1586,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Template 2"
+        ],
         "progression": "Template 2"
       },
       "bonus": false,
@@ -1517,6 +1611,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Template 3"
+        ],
         "progression": "Template 3"
       },
       "bonus": false,
@@ -1539,6 +1636,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Template 4"
+        ],
         "progression": "Template 4"
       },
       "bonus": false,
@@ -1561,6 +1661,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Template 5"
+        ],
         "progression": "Template 5"
       },
       "bonus": false,
@@ -1583,6 +1686,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Template 6"
+        ],
         "progression": "Template 6"
       },
       "bonus": false,
@@ -1597,6 +1703,72 @@
       },
       "level_keys": [
         "Computer Systems Playground - Template 6"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Emma - Troubleshooting Bot"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma-test-ai-chatbot-computersystems-1"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "02220f17-3af4-4fb6-9b85-da681d4ed2cc"
+      },
+      "level_keys": [
+        "emma-test-ai-chatbot-computersystems-1"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Emma - micro:bit bot"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma-test-ai-chatbot-computersystems-2"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "dc013e68-08fd-40a2-9972-78dbf715523c"
+      },
+      "level_keys": [
+        "emma-test-ai-chatbot-computersystems-2"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Ken - training bot"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Ken's First AI Chat Level"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "0a38fa6d-7597-4e1f-8628-92597af9bf9d"
+      },
+      "level_keys": [
+        "Ken's First AI Chat Level"
       ]
     }
   ],
@@ -2055,6 +2227,42 @@
         "lesson_group.key": "",
         "script.name": "computer-systems-playground",
         "activity_section.key": "f86ea5fc-7c6a-4bd6-a6d4-11c35eb42e11"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma-test-ai-chatbot-computersystems-1",
+        "script_level.level_keys": [
+          "emma-test-ai-chatbot-computersystems-1"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "02220f17-3af4-4fb6-9b85-da681d4ed2cc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma-test-ai-chatbot-computersystems-2",
+        "script_level.level_keys": [
+          "emma-test-ai-chatbot-computersystems-2"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "dc013e68-08fd-40a2-9972-78dbf715523c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Ken's First AI Chat Level",
+        "script_level.level_keys": [
+          "Ken's First AI Chat Level"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "0a38fa6d-7597-4e1f-8628-92597af9bf9d"
       }
     }
   ],

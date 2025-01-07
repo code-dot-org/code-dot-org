@@ -24,7 +24,7 @@
     "/dashboard/blocks.yml": "2434a6e8a42522b3e70a647345737300"
   },
   "de-DE": {
-    "/dashboard/blocks.yml": "c3916faeb45751d022f33a3bd6eae604"
+    "/dashboard/blocks.yml": "f76fa89ca51af3517ce746f2c2e7e8e7"
   },
   "dv-MV": {
     "/dashboard/blocks.yml": "2434a6e8a42522b3e70a647345737300"
@@ -39,13 +39,13 @@
     "/dashboard/blocks.yml": "c1f3858a5bb5075f86e91c760223f331"
   },
   "es-MX": {
-    "/dashboard/blocks.yml": "e8c936391b0500c32372a95badd4b08d"
+    "/dashboard/blocks.yml": "111dcb37a885b5a9ebe31e2650bb3f04"
   },
   "et-EE": {
     "/dashboard/blocks.yml": "2434a6e8a42522b3e70a647345737300"
   },
   "ar-SA": {
-    "/dashboard/blocks.yml": "5bf310ce9f7d460dc4db70fb623b4164"
+    "/dashboard/blocks.yml": "56d16933a08147efc2c1a73e188144bb"
   },
   "eu-ES": {
     "/dashboard/blocks.yml": "3195cac8da3c4d07f6922cfd9536e775"
@@ -60,10 +60,10 @@
     "/dashboard/blocks.yml": "2434a6e8a42522b3e70a647345737300"
   },
   "fil-PH": {
-    "/dashboard/blocks.yml": "d0be4b89d4e538ff600b3d46db84ec15"
+    "/dashboard/blocks.yml": "b0342565509817a9c98966fe450c1473"
   },
   "fr-FR": {
-    "/dashboard/blocks.yml": "f81ad2e4870abe9c0c86c88085c57047"
+    "/dashboard/blocks.yml": "176e6dae939eebf6c04ff1182d29738f"
   },
   "ga-IE": {
     "/dashboard/blocks.yml": "a2ba33d4074573b96e00cd8435978918"
@@ -78,7 +78,7 @@
     "/dashboard/blocks.yml": "2434a6e8a42522b3e70a647345737300"
   },
   "hi-IN": {
-    "/dashboard/blocks.yml": "3313e00b8c094eb32f9cf2582d4f97b7"
+    "/dashboard/blocks.yml": "442144ab389efc03a34de9d11ea4dc36"
   },
   "hr-HR": {
     "/dashboard/blocks.yml": "2434a6e8a42522b3e70a647345737300"
@@ -90,16 +90,16 @@
     "/dashboard/blocks.yml": "3195cac8da3c4d07f6922cfd9536e775"
   },
   "id-ID": {
-    "/dashboard/blocks.yml": "124e1bd61de4509d9d556e4770b60627"
+    "/dashboard/blocks.yml": "b59ce0910e546c13ec46712cffd54513"
   },
   "is-IS": {
     "/dashboard/blocks.yml": "a2ba33d4074573b96e00cd8435978918"
   },
   "it-IT": {
-    "/dashboard/blocks.yml": "0e487abdc4c9d79db885f1f5a488a778"
+    "/dashboard/blocks.yml": "bdafa4d9dd1157fb0d162b278c7e7047"
   },
   "ja-JP": {
-    "/dashboard/blocks.yml": "bdaa239013c94b1d488dd449ac4d8a7a"
+    "/dashboard/blocks.yml": "cb01cfc360e535bdb88b454136fc73ac"
   },
   "ka-GE": {
     "/dashboard/blocks.yml": "2434a6e8a42522b3e70a647345737300"
@@ -114,7 +114,7 @@
     "/dashboard/blocks.yml": "a2ba33d4074573b96e00cd8435978918"
   },
   "ko-KR": {
-    "/dashboard/blocks.yml": "cc1ed3b01840c97a57321e7f408875d2"
+    "/dashboard/blocks.yml": "ab7e784f8f5458366efdc01177533b9a"
   },
   "ku-IQ": {
     "/dashboard/blocks.yml": "a2ba33d4074573b96e00cd8435978918"
@@ -168,7 +168,7 @@
     "/dashboard/blocks.yml": "16f79ef800dd671bc170f15449c07282"
   },
   "pt-BR": {
-    "/dashboard/blocks.yml": "af7f99fd3e7769d29285f3c5d4554fb8"
+    "/dashboard/blocks.yml": "fdb9d33113f8cd9451afd83ba61b0e39"
   },
   "pt-PT": {
     "/dashboard/blocks.yml": "eb803b4da553ab42d268dd6074d8378a"
@@ -189,10 +189,10 @@
     "/dashboard/blocks.yml": "c1f3858a5bb5075f86e91c760223f331"
   },
   "sk-SK": {
-    "/dashboard/blocks.yml": "d3c163713a344ac44c0e00d48924f7ac"
+    "/dashboard/blocks.yml": "8e051bdf289e446e33f74c293cd83777"
   },
   "sl-SI": {
-    "/dashboard/blocks.yml": "c1f3858a5bb5075f86e91c760223f331"
+    "/dashboard/blocks.yml": "8200efa0fe719039af581daab6a03a76"
   },
   "sq-AL": {
     "/dashboard/blocks.yml": "3195cac8da3c4d07f6922cfd9536e775"
@@ -213,7 +213,7 @@
     "/dashboard/blocks.yml": "16f79ef800dd671bc170f15449c07282"
   },
   "th-TH": {
-    "/dashboard/blocks.yml": "1c25ac2810ba43f946d280346bd3a31f"
+    "/dashboard/blocks.yml": "c353c43562bd653720caea160a029e40"
   },
   "tr-TR": {
     "/dashboard/blocks.yml": "c1f3858a5bb5075f86e91c760223f331"
@@ -234,7 +234,7 @@
     "/dashboard/blocks.yml": "3195cac8da3c4d07f6922cfd9536e775"
   },
   "zh-TW": {
-    "/dashboard/blocks.yml": "a08bbefbce431db44320bdf16836ba93"
+    "/dashboard/blocks.yml": "cc018d213f6d205345e3ed6019366ef8"
   },
   "zu-ZA": {
     "/dashboard/blocks.yml": "52f3c083c74e22b216afedfe32dbff28"

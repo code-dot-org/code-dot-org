@@ -75,8 +75,8 @@ class TestController < ApplicationController
     return unless (user = current_user)
     script = Unit.find_by_name(params.require(:script_name))
 
-    Section.create!(name: "New Section", user: user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
-    head :ok
+    section = Section.create!(name: "New Section", user: user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    render json: {section_code: section.code}
   end
 
   def create_student_section_with_name

@@ -372,6 +372,14 @@ columns:
     comment:
   - *14
   - *15
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: request_id
+    sql_type_metadata: *18
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
   aichat_messages:
   - *10
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -8430,6 +8438,19 @@ indexes:
     type:
     using: :btree
     comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: aichat_events
+    name: index_aichat_events_on_request_id
+    unique: false
+    columns:
+    - request_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
   aichat_messages:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aichat_messages
@@ -13924,7 +13945,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20241210181552
+version: 20241212205120
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
