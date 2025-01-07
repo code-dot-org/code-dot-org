@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {HTMLAttributes} from 'react';
+import {HTMLAttributes} from 'react';
 
 import {ComponentSizeXSToL} from '@/common/types';
 
