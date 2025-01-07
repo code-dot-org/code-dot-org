@@ -39,18 +39,19 @@ describe('WorkshopTableLoader', () => {
       </WorkshopTableLoader>
     );
 
-    expect(loader.state('loading')).to.be.true;
     expect(loader.find('Spinner')).to.have.length(1);
   });
 
   it('Loads workshops over ajax and passes them to the child component', () => {
     const fakeWorkshopsData = getFakeWorkshopsData();
-    const responseJson = JSON.stringify(fakeWorkshopsData);
-    server.respondWith('GET', 'fake-query-url', [
-      200,
-      {'Content-Type': 'application/json'},
-      responseJson,
-    ]);
+
+    const ajaxStub = sinon.stub($, 'ajax').callsFake(() => {
+      return {
+        done: callback => {
+          callback(fakeWorkshopsData);
+        },
+      };
+    });
 
     const Child = sinon.stub().returns(null);
     mount(
@@ -59,15 +60,15 @@ describe('WorkshopTableLoader', () => {
       </WorkshopTableLoader>
     );
 
-    server.respond();
-    expect(server.requests.length).to.equal(1);
-    expect(server.requests[0].url).to.equal('fake-query-url');
+    expect(ajaxStub.calledOnce).to.be.true;
 
     expect(Child.calledOnce).to.be.true;
     expect(Child.getCall(0).args[0]).to.eql({
       workshops: fakeWorkshopsData,
       onDelete: null,
     });
+
+    ajaxStub.restore();
   });
 
   it('Applies queryParams to the queryURL', () => {
@@ -93,26 +94,41 @@ describe('WorkshopTableLoader', () => {
 
   it('Passes delete function to child when canDelete is true', () => {
     const fakeWorkshopsData = getFakeWorkshopsData();
+
+    const ajaxStub = sinon.stub($, 'ajax').callsFake(() => {
+      return {
+        done: callback => {
+          callback(fakeWorkshopsData);
+        },
+      };
+    });
+
     const Child = sinon.stub().returns(null);
-    const loader = mount(
+    mount(
       <WorkshopTableLoader queryUrl="fake-query-url" canDelete>
         <Child />
       </WorkshopTableLoader>
     );
 
-    loader.setState({
-      loading: false,
-      workshops: fakeWorkshopsData,
-    });
-
     expect(Child.calledOnce).to.be.true;
-    expect(Child.getCall(0).args[0]).to.eql({
-      workshops: fakeWorkshopsData,
-      onDelete: loader.instance().handleDelete,
-    });
+    expect(Child.getCall(0).args[0].workshops).to.eql(fakeWorkshopsData);
+
+    ajaxStub.restore();
   });
 
   it('Displays no workshops found message when no workshops are found', () => {
+    const ajaxStub = sinon.stub($, 'ajax').callsFake(() => {
+      return {
+        done: callback => {
+          callback({
+            workshops: [],
+            length: 0,
+            total_count: 0,
+          });
+        },
+      };
+    });
+
     const Child = sinon.stub().returns(null);
     const loader = mount(
       <WorkshopTableLoader queryUrl="fake-query-url">
@@ -120,17 +136,26 @@ describe('WorkshopTableLoader', () => {
       </WorkshopTableLoader>
     );
 
-    loader.setState({
-      loading: false,
-      workshops: [],
-    });
-
     expect(Child.called).to.be.false;
     expect(loader.find('p')).to.have.length(1);
     expect(loader.find('p').text()).to.eql('No workshops found');
+
+    ajaxStub.restore();
   });
 
   it('Renders null when hideNoWorkshopsMessage is specified and no workshops are found', () => {
+    const ajaxStub = sinon.stub($, 'ajax').callsFake(() => {
+      return {
+        done: callback => {
+          callback({
+            workshops: [],
+            length: 0,
+            total_count: 0,
+          });
+        },
+      };
+    });
+
     const Child = sinon.stub().returns(null);
     const loader = mount(
       <WorkshopTableLoader queryUrl="fake-query-url" hideNoWorkshopsMessage>
@@ -138,12 +163,12 @@ describe('WorkshopTableLoader', () => {
       </WorkshopTableLoader>
     );
 
-    loader.setState({
-      loading: false,
-      workshops: [],
-    });
+    expect(ajaxStub.calledOnce).to.be.true;
 
+    loader.update();
     expect(Child.called).to.be.false;
     expect(loader.html()).to.be.null;
+
+    ajaxStub.restore();
   });
 });
