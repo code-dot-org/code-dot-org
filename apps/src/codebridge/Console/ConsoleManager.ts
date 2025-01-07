@@ -7,6 +7,9 @@ export default class ConsoleManager {
   private terminalFitAddon: FitAddon;
   private terminalLines: string[];
 
+  private IMAGE_WIDTH = 400;
+  private IMAGE_HEIGHT = 400;
+
   constructor(terminal: Terminal, terminalFitAddon: FitAddon) {
     this.terminal = terminal;
     this.terminalFitAddon = terminalFitAddon;
@@ -60,7 +63,7 @@ export default class ConsoleManager {
     const dataSize = atob(base64Image).length;
     // This is a special sequence that tells the terminal to display an image
     // See documentation here: https://iterm2.com/documentation-images.html
-    const imageString = `\x1b]1337;File=inline=1;size=${dataSize};width=400px;height=400px:${base64Image}\x1b\\`;
+    const imageString = `\x1b]1337;File=inline=1;size=${dataSize};width=${this.IMAGE_WIDTH}px;height=${this.IMAGE_HEIGHT}px:${base64Image}\x1b\\`;
     this.appendTerminalLine(imageString);
   }
 

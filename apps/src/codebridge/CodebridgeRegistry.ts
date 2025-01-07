@@ -1,5 +1,7 @@
 import ConsoleManager from '@codebridge/Console/ConsoleManager';
 
+// Registry for Codebridge singletons that need to be accessed by
+// multiple components/helper classes.
 export default class CodebridgeRegistry {
   private consoleManager: ConsoleManager | null;
 
