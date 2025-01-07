@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import React, {useRef, useEffect, ChangeEvent, HTMLAttributes} from 'react';
+import {useRef, useEffect, ChangeEvent, HTMLAttributes} from 'react';
 
 import {componentSizeToBodyTextSizeMap} from '@/common/constants';
 import {ComponentSizeXSToL} from '@/common/types';
