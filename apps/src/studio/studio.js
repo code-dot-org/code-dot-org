@@ -416,7 +416,6 @@ Studio.loadLevel = function () {
         staticPlayer: true,
       });
   }
-  blocks.registerCustomGameLogic(Studio.customLogic);
 
   // Custom game logic doesn't work yet in the interpreter.
   Studio.legacyRuntime = !!Studio.customLogic;
@@ -3161,7 +3160,15 @@ var registerHandlers = function (
   matchParam2Val,
   argNames
 ) {
-  const blocks = Blockly.mainBlockSpace.getTopBlocks();
+  const blocks = [...Blockly.mainBlockSpace.getTopBlocks()];
+
+  // Account for hidden blocks, e.g. function definitions or blocks from
+  // legacy levels that were set as invisible to the user.
+  const hiddenWorkspace = Blockly.getHiddenDefinitionWorkspace();
+  if (hiddenWorkspace) {
+    blocks.push(...hiddenWorkspace.getTopBlocks());
+  }
+
   for (let x = 0; blocks[x]; x++) {
     const block = blocks[x];
     // default field values to '0' for case when there is only one sprite
