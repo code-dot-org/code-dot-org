@@ -55,7 +55,12 @@ export const courseLinkFormatter = function (course, {rowData}) {
           <a
             href={
               showV2TeacherDashboard()
-                ? teacherDashboardUrl(rowData.id, assignmentPaths[0])
+                ? assignmentPaths[0].includes('/s/')
+                  ? teacherDashboardUrl(
+                      rowData.id,
+                      assignmentPaths[0].replace('/s/', '/unit/')
+                    )
+                  : teacherDashboardUrl(rowData.id, assignmentPaths[0])
                 : `${assignmentPaths[0]}${stringifyQueryParams({
                     section_id: rowData.id,
                   })}`
