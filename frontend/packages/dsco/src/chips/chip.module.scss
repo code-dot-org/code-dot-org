@@ -6,6 +6,14 @@
 // Chips common styles
 .chips {
   fieldset {
+    padding: 0;
+    border: 0;
+    margin: 0;
+
+    > label {
+      display: block;
+    }
+
     .chipsContainer {
       display: flex;
       flex-wrap: wrap;
