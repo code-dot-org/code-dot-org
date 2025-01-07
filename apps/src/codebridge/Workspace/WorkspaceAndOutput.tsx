@@ -1,3 +1,4 @@
+import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import Workspace from '@codebridge/Workspace';
 import {debounce} from 'lodash';
 import React, {useEffect, useMemo} from 'react';
@@ -66,6 +67,11 @@ const WorkspaceAndOutput: React.FunctionComponent = () => {
     );
 
     setOutputHeight(newOutputHeight);
+
+    CodebridgeRegistry.getInstance()
+      .getConsoleManager()
+      ?.getTerminalFitAddon()
+      ?.fit();
 
     // If this is a neighborhood level, also resize the visualization.
     if (miniAppName === 'neighborhood') {

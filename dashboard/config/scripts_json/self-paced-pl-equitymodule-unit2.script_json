@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-06 05:04:00 UTC",
+    "serialized_at": "2025-01-07 01:23:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -340,15 +340,12 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "self-paced-equity-U2L1-belongingvideo"
-        ],
         "progression": "Belonging in the CS Classroom"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-equity-U2L1-belongingvideo"
+          "self-paced-equity-U2L1-belongingclassroomvid"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -356,7 +353,7 @@
         "activity_section.key": "1c2fb263-29de-46dc-af08-51e3731decfc"
       },
       "level_keys": [
-        "self-paced-equity-U2L1-belongingvideo"
+        "self-paced-equity-U2L1-belongingclassroomvid"
       ]
     },
     {
@@ -665,15 +662,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "self-paced-equity-U2L1-PBJvideo"
-        ],
         "progression": "Implicit Bias"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-equity-U2L1-PBJvideo"
+          "self-paced-equity-U2L2-PBJvid"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -681,7 +675,7 @@
         "activity_section.key": "1640512f-a6f0-4cf4-b623-b825b57ee7ae"
       },
       "level_keys": [
-        "self-paced-equity-U2L1-PBJvideo"
+        "self-paced-equity-U2L2-PBJvid"
       ]
     },
     {
@@ -867,7 +861,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-equity-U2L3-CSvideo"
+          "self-paced-equity-U2L3-AccessVideo"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -875,7 +869,7 @@
         "activity_section.key": "9a3c7225-13c4-4223-a200-462f2894ddcf"
       },
       "level_keys": [
-        "self-paced-equity-U2L3-CSvideo"
+        "self-paced-equity-U2L3-AccessVideo"
       ]
     },
     {
@@ -1228,9 +1222,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-equity-U2L1-belongingvideo",
+        "level.key": "self-paced-equity-U2L1-belongingclassroomvid",
         "script_level.level_keys": [
-          "self-paced-equity-U2L1-belongingvideo"
+          "self-paced-equity-U2L1-belongingclassroomvid"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1384,9 +1378,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-equity-U2L1-PBJvideo",
+        "level.key": "self-paced-equity-U2L2-PBJvid",
         "script_level.level_keys": [
-          "self-paced-equity-U2L1-PBJvideo"
+          "self-paced-equity-U2L2-PBJvid"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -1480,9 +1474,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-equity-U2L3-CSvideo",
+        "level.key": "self-paced-equity-U2L3-AccessVideo",
         "script_level.level_keys": [
-          "self-paced-equity-U2L3-CSvideo"
+          "self-paced-equity-U2L3-AccessVideo"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",

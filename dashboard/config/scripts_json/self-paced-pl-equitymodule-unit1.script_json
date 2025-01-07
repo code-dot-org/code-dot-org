@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-04 05:01:53 UTC",
+    "serialized_at": "2025-01-06 22:18:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -793,15 +793,12 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "self-paced-equity-U1L3-identityvideo"
-        ],
         "progression": "Identity Reflection"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-equity-U1L3-identityvideo"
+          "self-paced-equity-U1L3-dangerofasinglestory"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -809,7 +806,7 @@
         "activity_section.key": "2aa01d53-fc25-446b-9500-5338b6168354"
       },
       "level_keys": [
-        "self-paced-equity-U1L3-identityvideo"
+        "self-paced-equity-U1L3-dangerofasinglestory"
       ]
     },
     {
@@ -1192,9 +1189,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-equity-U1L3-identityvideo",
+        "level.key": "self-paced-equity-U1L3-dangerofasinglestory",
         "script_level.level_keys": [
-          "self-paced-equity-U1L3-identityvideo"
+          "self-paced-equity-U1L3-dangerofasinglestory"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",

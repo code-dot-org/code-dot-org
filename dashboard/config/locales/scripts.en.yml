@@ -19676,3 +19676,6 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        none-none:
+          lessons: {}
+          lesson_groups: {}
