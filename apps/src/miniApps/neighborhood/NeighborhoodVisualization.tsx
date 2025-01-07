@@ -18,6 +18,8 @@ const NeighborhoodVisualization: React.FunctionComponent<
     ? ICON_PATH + 'icons_white.png'
     : ICON_PATH + 'icons.png';
 
+  // In lab2 labs we often want to be able to unmount components, so we
+  // have the option to not use the ProtectedVisualizationDiv that MazeVisualization uses.
   const visualizationComponent = useMemo(() => {
     if (useProtectedDiv) {
       return <MazeVisualization />;

@@ -25,7 +25,7 @@ const PANEL_TOP_COORDINATE = 80;
 // We also will want resizing to be accessible, and the HeightResizer component only works with mouse and touch
 // events.
 const WorkspaceAndOutput: React.FunctionComponent = () => {
-  // Default console height is 200px.
+  // Default console height is 400px.
   const [outputHeight, setOutputHeight] = React.useState(400);
   const [columnHeight, setColumnHeight] = React.useState(800);
   const miniApp = useAppSelector(state => state.lab.levelProperties?.miniApp);
@@ -45,15 +45,15 @@ const WorkspaceAndOutput: React.FunctionComponent = () => {
 
   const handleResize = (desiredHeight: number) => {
     // While the horizontal resizer thinks it's resizing the content above it, which
-    // is the editor panel, we are actually storing the size of the console below it.
-    // That way, if the window resizes, the console stays the same height while the editor
+    // is the editor panel, we are actually storing the size of the output below it.
+    // That way, if the window resizes, the output stays the same height while the editor
     // changes in height.
     const desiredOutputHeight = columnHeight - desiredHeight;
     normalizeOutputHeight(desiredOutputHeight, miniApp);
   };
 
   // Given a desired output height, ensure it is between the minimum and maximum
-  // console height.
+  // output height.
   const normalizeOutputHeight = (
     desiredOutputHeight: number,
     miniAppName: string | undefined
