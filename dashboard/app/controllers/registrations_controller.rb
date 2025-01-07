@@ -476,7 +476,7 @@ class RegistrationsController < Devise::RegistrationsController
     @student_in_lockout_flow = underage && !Policies::ChildAccount::ComplianceState.permission_granted?(current_user)
 
     @personal_account_linking_enabled = Policies::ChildAccount.can_link_new_personal_account?(current_user) && !Policies::ChildAccount.partially_locked_out?(current_user)
-    @personal_account_linking_enabled = false if underage && (@is_usa && current_user.country_code.nil?)
+    @personal_account_linking_enabled = false if current_user.student? && (@is_usa && current_user.country_code.nil?)
 
     # Handle users who aren't locked out, but still need parent permission to link personal accounts.
     if underage || !Policies::ChildAccount.has_required_information?(current_user)
