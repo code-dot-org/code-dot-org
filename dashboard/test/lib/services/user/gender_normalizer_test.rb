@@ -14,7 +14,7 @@ class Services::User::GenderNormalizerTest < ActiveSupport::TestCase
           let(:raw_input) {value}
 
           it "returns #{Services::User::GenderNormalizer::FEMALE}" do
-            _(normalize).must_equal Services::User::GenderNormalizer::FEMALE
+            _normalize.must_equal Services::User::GenderNormalizer::FEMALE
           end
         end
       end
@@ -27,7 +27,7 @@ class Services::User::GenderNormalizerTest < ActiveSupport::TestCase
           let(:raw_input) {value}
 
           it "returns #{Services::User::GenderNormalizer::MALE}" do
-            _(normalize).must_equal Services::User::GenderNormalizer::MALE
+            _normalize.must_equal Services::User::GenderNormalizer::MALE
           end
         end
       end
@@ -40,7 +40,7 @@ class Services::User::GenderNormalizerTest < ActiveSupport::TestCase
           let(:raw_input) {value}
 
           it "returns #{Services::User::GenderNormalizer::NON_BINARY} for #{value}" do
-            _(normalize).must_equal Services::User::GenderNormalizer::NON_BINARY
+            _normalize.must_equal Services::User::GenderNormalizer::NON_BINARY
           end
         end
       end
@@ -53,7 +53,7 @@ class Services::User::GenderNormalizerTest < ActiveSupport::TestCase
           let(:raw_input) {value}
 
           it "returns #{Services::User::GenderNormalizer::OTHER} for #{value}" do
-            _(normalize).must_equal Services::User::GenderNormalizer::OTHER
+            _normalize.must_equal Services::User::GenderNormalizer::OTHER
           end
         end
       end
@@ -63,13 +63,13 @@ class Services::User::GenderNormalizerTest < ActiveSupport::TestCase
       let(:raw_input) {''}
 
       it 'returns nil' do
-        _(normalize).must_be_nil
+        _normalize.must_be_nil
       end
     end
 
     context 'when nil' do
       it 'returns nil' do
-        _(normalize).must_be_nil
+        _normalize.must_be_nil
       end
     end
   end
