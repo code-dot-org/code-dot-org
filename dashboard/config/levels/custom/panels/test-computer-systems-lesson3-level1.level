@@ -1,0 +1,74 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-01-07T21:26:25.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "### Central Processing Unit (CPU)\nThe CPU is like the brain of the computer—it does all the thinking and calculations to make everything work. Just like your brain processes information, the CPU **processes** instructions from software.",
+        "imageUrl": "https://images.code.org/9f9f3b9ad15ebdbaa92c3a973942193c-central-processing-unit-or-computer-chip-3-2023-11-27-05-16-03-utc-min.JPG",
+        "key": "hardware-components-3d887b32-d501-4032-b990-2a51ae5b4de8",
+        "layout": "text-bottom-center",
+        "typing": false,
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Motherboard\nThe motherboard is like the computer's main control board that **connects** all the parts—like the CPU, memory, and storage—so they can work together, and it also sends power and data where they’re needed.",
+        "imageUrl": "https://images.code.org/b56de783f0f89415f8950be382fd3577-computerchip-technology-and-electronics-industry-2023-11-27-05-08-36-utc-min.jpg",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Power Supply Unit\nThe Power Supply Unit (PSU) is the part of the computer that takes electricity from a wall outlet and converts it into the right type and amount of **power** to run all the computer's parts, like the CPU, GPU, and hard drive.",
+        "imageUrl": "https://images.code.org/b6c5e9c0cc0ed7042138f5ea58542719-power-supply-isolated-2023-11-27-05-12-35-utc-min.jpg",
+        "key": "hardware-components-ed2b07b1-278f-49d5-ba3b-02994f4bccd8",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Graphics Processing Unit (GPU)\nThe GPU is a specialized part of the computer that **processes** images, videos, and animations, making them ready to display on the screen, especially for tasks like gaming or video editing.",
+        "imageUrl": "https://images.code.org/ddc5145d3a3e9c415ef6c58a0f6f5202-graphics-card-modern-gaming-gpu-graphics-process-2023-11-27-05-28-10-utc-min.jpg",
+        "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
+        "layout": "text-bottom-left",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Random Access Memory (RAM) \nRAM is the computer's short-term **memory**, temporarily storing information the CPU needs right now so it can quickly access it while working on tasks.",
+        "imageUrl": "https://images.code.org/aa2f624ce284c612cdf40e1e48849354-computer-random-access-memory-ram-sticks-close-u-2023-11-27-04-56-04-utc-min.jpg",
+        "key": "hardware-components-266c1383-bf2b-4307-bd04-1f35b2808edd",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Hard Drive\nThe hard drive is the computer's long-term **memory**, where all your files, programs, and operating system are stored, even when the computer is turned off.",
+        "imageUrl": "https://images.code.org/f928d4dc5705437983886a4a9bd64e5d-hard-disk-isolated-on-white-background-with-clipp-2023-11-27-04-57-22-utc-min.jpg",
+        "key": "hardware-components-8296a10a-18ea-4c91-933f-b2b6dec55bd2",
+        "layout": "text-bottom-left",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Peripherals\n\nPeripherals are the external devices you use to interact with the computer—like the monitor for displaying information, the keyboard for typing, and the mouse for pointing and clicking.\nThey can either **input** information, like a keyboard or **output** information, like a monitor. ",
+        "imageUrl": "https://images.code.org/2c4a27b587980eb5c021ad9e3bcea726-periphs2.png",
+        "key": "hardware-components-3fb7f8f9-2e27-4b0a-aa81-96a7528b3571",
+        "layout": "text-bottom-left",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Case\nThe case is the protective outer shell or **enclosure** of the computer that houses all the internal components, keeps them organized, and helps manage airflow to prevent overheating.",
+        "imageUrl": "https://images.code.org/951cffe353b65b61249042ce4e406819-disassembled-computer-processor-on-desk-2024-02-27-00-32-53-utc-min.jpg",
+        "key": "hardware-components-fde7ae9f-ebcc-47e4-a6d0-24cf8caeb2e8",
+        "layout": "text-bottom-left",
+        "fadeInOverPrevious": true
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-07T21:26:25.467+00:00\",\"changed\":[\"cloned from \\\"test-computer-systems-lesson2-level1\\\"\"],\"cloned_from\":\"test-computer-systems-lesson2-level1\"},{\"changed_at\":\"2025-01-07 21:26:32 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-08 04:01:38 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-08 04:04:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Panels>

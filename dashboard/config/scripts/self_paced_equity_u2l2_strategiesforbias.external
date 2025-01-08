@@ -20,7 +20,7 @@ ___
 
 #### <a href="https://womensplace.osu.edu/resources/implicit-bias-resources" target="blank" rel="noopener noreferrer">The Women's Place from Ohio State University</a> has curated a robust set of resources to fight implicit bias, including actions you can take to reduce implicit bias. We've included them below and added suggestions for connecting these strategies to computer science.
 
-<div style="border: 1px solid black; border-radius: 20px; padding: 10px; margin: 20px 0px 20px 0px">
+<div style="border: 1px solid black; border-radius: 20px; padding: 20px; margin: 20px 0px 20px 0px">
 <p style="font-size: 18px; line-height: 1.2;">
   <img src="https://images.code.org/c04fff982abdcc7794636315a6e15789-image-1736211221255.png" alt="A megaphone" style="float: left; margin-right: 10px; width: 48px; height: 48px;">
 <b>Raise awareness of implicit bias.</b></p>
@@ -29,10 +29,10 @@ ___
 
 ___
 
-#### **CS Connection:** Help students understand their biases around computer science by point out the stereotypical depiction of a programmer (like you saw in <a href="https://studio.code.org/s/self-paced-pl-equitymodule-unit2/lessons/1/levels/5" target="blank" rel="noopener noreferrer">this level</a>). Remind yourself and students that these biases don't dictate who can and can't participate in computer science.
+#### **CS Connection:** Help students understand their biases around computer science by pointing out the stereotypical depiction of a programmer (like you saw in <a href="https://studio.code.org/s/self-paced-pl-equitymodule-unit2/lessons/1/levels/5" target="blank" rel="noopener noreferrer">this level</a>) when it surfaces. Remind students (and yourself!) that these biases don't dictate who can and can't participate in computer science.
 </div>
 
-<div style="border: 1px solid black; border-radius: 20px; padding: 10px; margin: 20px 0px 20px 0px">
+<div style="border: 1px solid black; border-radius: 20px; padding: 20px; margin: 20px 0px 20px 0px">
 <p style="font-size: 18px; line-height: 1.2;">
   <img src="https://images.code.org/fb21dbf70a9a411c5ff27efeed609191-image-1736211386074.png" alt="Three people in a circle icon" style="float: left; margin-right: 10px; width: 48px; height: 48px;">
 <b>Seek to identify and consciously acknowledge real group and individual differences.</b></p>
@@ -41,10 +41,10 @@ ___
 
 ___
 
-#### **CS Connection:** 
+#### **CS Connection:** There's a wealth of computer science-related learning opportunities! We recommend you start with the <a href="https://csteachers.org/pd-opportunities/" target="blank" rel="noopener noreferrer">Computer Science Teacher Association's Professional Development Opportunities</a> page to look for additional learning resources on this and other equity-related topics.
 </div>
 
-<div style="border: 1px solid black; border-radius: 20px; padding: 10px; margin: 20px 0px 20px 0px">
+<div style="border: 1px solid black; border-radius: 20px; padding: 20px; margin: 20px 0px 20px 0px">
 <p style="font-size: 18px; line-height: 1.2;">
   <img src="https://images.code.org/198b3a9bff01f1258308d31ae8a5c46c-image-1736211625174.png" alt="A thought bubble" style="float: left; margin-right: 10px; width: 48px; height: 48px;">
 <b>Routinely check thought processes and decisions for possible bias: Practice mindfulness.</b></p>
@@ -53,10 +53,10 @@ ___
 
 ___
 
-#### **CS Connection:** 
+#### **CS Connection:** This course is a great start for noticing and interrupting your biases. Continue to practice that strategies that you learn here (and in any other trainings) to check for bias in your computer science curricular materials and instructional practices.
 </div>
 
-<div style="border: 1px solid black; border-radius: 20px; padding: 10px; margin: 20px 0px 20px 0px">
+<div style="border: 1px solid black; border-radius: 20px; padding: 20px; margin: 20px 0px 20px 0px">
 <p style="font-size: 18px; line-height: 1.2;">
   <img src="https://images.code.org/1f2556814a89903e0a0d22192795c2db-image-1736211704237.png" alt="Two faces smiling and laughing" style="float: left; margin-right: 10px; width: 48px; height: 48px;">
 <b>Increase exposure to minority group members and counter-stereotypes.</b></p>
@@ -73,9 +73,7 @@ ___
 
 <p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Curriculum Connection</b></p>
 
-<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 16px">Guess what? This is linked to the curriculum.
-
-<a href="https://studio.code.org/courses/csd-2024" target="_blank" rel="noopener noreferrer"><p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 16px">This is a link to the curriculum.</a>
+<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 16px">Code.org has a host of materials that help expose teachers and students to a diverse set of people in computer science. Take a look at our <a href="https://code.org/educate/resources/videos" target="blank" rel="noopener noreferrer">library of instructional videos</a> (also embedded in our curricula) and <a href="https://code.org/educate/resources/posters" target="blank" rel="noopener noreferrer">classroom posters</a> for resources.
 
 </p>
 
@@ -83,7 +81,7 @@ ___
 </div>
 </div>
 
-<div style="border: 1px solid black; border-radius: 20px; padding: 10px; margin: 20px 0px 20px 0px">
+<div style="border: 1px solid black; border-radius: 20px; padding: 20px; margin: 20px 0px 20px 0px">
 <p style="font-size: 18px; line-height: 1.2;">
   <img src="https://images.code.org/d68888e97cac928b9acc5547212b114b-image-1736211843103.png" alt="An arrow going down" style="float: left; margin-right: 10px; width: 48px; height: 48px;">
 <b>Reduce exposure to stereotypes.</b></p>
@@ -92,11 +90,11 @@ ___
 
 ___
 
-#### **CS Connection:** 
+#### **CS Connection:** Code.org's curricular materials are intentional in presenting role models who break stereotypes. If you choose to utilize other curricula, be mindful of what sorts of biases may be present, and modify or avoid them.
 
 </div>
 
-<div style="border: 1px solid black; border-radius: 20px; padding: 10px; margin: 20px 0px 20px 0px">
+<div style="border: 1px solid black; border-radius: 20px; padding: 20px; margin: 20px 0px 20px 0px">
 <p style="font-size: 18px; line-height: 1.2;">
   <img src="https://images.code.org/bdb43a095ae8c943c0bac57d08bc9c30-image-1736211912778.png" alt="Binoculars" style="float: left; margin-right: 10px; width: 48px; height: 48px;">
 <b>Take a first-person perspective of a member of a stereotyped group.</b></p>
@@ -113,9 +111,7 @@ ___
 
 <p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Curriculum Connection</b></p>
 
-<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 16px">Guess what? This is linked to the curriculum.
-
-<a href="https://studio.code.org/courses/csd-2024" target="_blank" rel="noopener noreferrer"><p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 16px">This is a link to the curriculum.</a>
+<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 16px">Code.org's curricular materials often invite students to take on the perspective of and empathize with a user to complete a project. For example, in CS Discoveries Unit 4 - The Design Process (for sixth through tenth graders), students <a href="https://studio.code.org/s/csd4-2024/lessons/1" target="blank" rel="noopener noreferrer">learn about designing with empathy</a> as a part of human-centered design. As a teacher, you can also employ these strategies to design learning experiences based on your students' unique needs.
 
 </p>
 
@@ -123,7 +119,7 @@ ___
 </div>
 </div>
 
-<div style="border: 1px solid black; border-radius: 20px; padding: 10px; margin: 20px 0px 20px 0px">
+<div style="border: 1px solid black; border-radius: 20px; padding: 20px; margin: 20px 0px 20px 0px">
 <p style="font-size: 18px; line-height: 1.2;">
   <img src="https://images.code.org/79dc16e78e4f530b0a04184661c2abd1-image-1736212326584.png" alt="A person" style="float: left; margin-right: 10px; width: 48px; height: 48px;">
 <b>Practice individuation: Obtain and help others obtain specific information about people as individuals rather than as group members.</b></p>
@@ -132,7 +128,7 @@ ___
 
 ___
 
-#### **CS Connection:** 
+#### **CS Connection:** Get to know your students in your computer science classroom! Take the time to learn about their backgrounds and home lives to see them as individuals rather than as part of a group.
 
 </div>
 MARKDOWN

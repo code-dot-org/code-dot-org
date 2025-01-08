@@ -5,17 +5,28 @@ description 'description here'
 markdown <<MARKDOWN
 # Expanding Computer Science Access in Elementary Schools
 
-#### Efforts to increase access and participation in computer science often focus on middle and high schools. However, providing computer science exposure to elementary school students is equally as important.Due to increasing usage and adoption of technology, today’s elementary school students are poised to participate in computer science better than ever.
+## Why Computer Science?
 
-## Why Start Early?
+<img src="https://images.code.org/aa175cb1842674606af2f5d8e9fb723b-image-1736286505886.48.22 PM.png" alt="A young student leans their head on their hand and smiles while working in front of a laptop." style="border-radius:20px; float: right; height: 200px; clear: both; margin: 0px 20px 0px 20px;">
 
-#### Students as young as five have shown the capacity for engaging in computer science concepts and learning programming. (<a href="https://doi.org/10.1016/j.compedu.2012.11.016" target="_blank" rel="noopener noreferrer">Fessakis, et al., 2013</a>) Additionally, short, weekly exposure to computer science concepts significantly increases students' interest in the subject. (<a href="https://dl.acm.org/doi/10.5555/1409873.1409896" target="_blank" rel="noopener noreferrer">Lambert & Guiffre, 2009</a>).
+#### Efforts to increase access and participation in computer science often focus on middle and high schools. This may be due to the fact that some believe that compuster science isn't appropriate for younger students. But this isn't true!
+
+* #### Students as young as five have shown the capacity for engaging in computer science concepts and learning programming. (<a href="https://doi.org/10.1016/j.compedu.2012.11.016" target="_blank" rel="noopener noreferrer">Fessakis, et al., 2013</a>)
+* #### Additionally, short, weekly exposure to computer science concepts significantly increases students' interest in the subject. (<a href="https://dl.acm.org/doi/10.5555/1409873.1409896" target="_blank" rel="noopener noreferrer">Lambert & Guiffre, 2009</a>).
+
+#### Providing computer science exposure to elementary school students is important to facilitate crucial **exposure** to fundamental computer science topics for younger students. Due to increasing usage and adoption of technology, today’s elementary school students are poised to participate in computer science better than ever.
+
+## Access for **ALL** Elementary Schoolers
+
+#### Elementary school schedules are different than middle and high school schedules. Finding time for computer science can be more difficult in lower grades due to competing priorities for core subjects like English Language Arts and math.
+
+#### We encourage you to use the strategies below to expand access for **all** students in your grade or school.
 
 ## Strategies for Increasing Access
 
-* #### Host an Hour of Code event at your school.
-* #### Apply to start an after-school club with Girls Who Code.
-* #### Provide informational materials about computer science to administrators and parents.
-* #### If computer science is a hard sell, consider integrating it into core subjects using **Computer Science Connections**.
-
+* #### Make computer science a priority for all students! Resist the urge to relegate CS to times when certain students may be pulled out of class for services like speech or occupational therapy.
+* #### Get started by hosting an <a href="https://hourofcode.com/us/events" target="blank" rel="noopener noreferrer">Hour of Code event</a> at your school.
+* #### If you can't incorporate CS during the school day, apply to start an after-school club with Code.org curriculum or groups like <a href="https://girlswhocode.com/programs/clubs-program" target="blank" rel="noopener noreferrer">Girls Who Code</a>.
+* #### Provide <a href="https://drive.google.com/file/d/1grIR8CU-S17z74dw86NCc28Tu6pMJnj6/view?usp=drive_link" target="blank" rel="noopener noreferrer">informational materials</a> about computer science to administrators and parents.
+* #### If computer science is a hard sell, consider integrating it into core subjects using <a href="https://code.org/curriculum/csc" target="blank" rel="noopener noreferrer">**Computer Science Connections**</a>.
 MARKDOWN
