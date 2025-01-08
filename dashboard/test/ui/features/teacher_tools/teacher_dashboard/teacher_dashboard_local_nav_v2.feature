@@ -30,7 +30,6 @@ Feature: Using the V2 teacher dashboard local navigation
 
     And I click selector "button:contains(Save)" to load a new page
 
-    And I wait for jquery to load
     And I wait until element "h1:contains(Progress)" is visible
     And I wait until element "#ui-test-progress-table-v2" is visible
 
