@@ -1,0 +1,167 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-12-05T17:47:13.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Functions": [
+
+          ],
+          "Play": [
+            "play_chord_at_current_location_simple2",
+            "play_pattern_at_current_location_simple2"
+          ]
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "triggered_at_simple2",
+              "id": "IF`z{bw{e*6/VdHdAYkB",
+              "x": 30,
+              "y": 50,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger1</field>",
+                "trigger_start": "<field name=\"trigger_start\">immediately</field>"
+              },
+              "next": {
+                "block": {
+                  "type": "play_chord_at_current_location_simple2",
+                  "id": "play_chord_at_current_location_simple2",
+                  "fields": {
+                    "chord": {
+                      "notes": [
+
+                      ],
+                      "playStyle": "arpeggio-up",
+                      "instrument": "piano"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "0t,1=PlFAWcJX-OB!#kH",
+              "x": 330,
+              "y": 50,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger2</field>",
+                "trigger_start": "<field name=\"trigger_start\">immediately</field>"
+              },
+              "next": {
+                "block": {
+                  "type": "play_pattern_at_current_location_simple2",
+                  "id": "play_pattern_at_current_location_simple2",
+                  "fields": {
+                    "pattern": {
+                      "instrument": "drums",
+                      "length": 1,
+                      "events": [
+
+                      ],
+                      "ai": false
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "long_instructions": "####<i class=\"fa-solid fa-music\"></i> Make your own melody\r\n\r\n1. Click on the [play notes](#clickable=play-notes-block) block to create your own unique melody.\r\n2. Then, click on the [play drums](#clickable=play-drums-block) block to make your own beat.\r\n3. Press [Run](#clickable=run-button) then trigger your new sound!",
+    "validations": [
+      {
+        "key": "music-coding-intro-effects_70c7b024-3441-4cb3-a904-33635808b53c",
+        "message": "Nice! You triggered both events. ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_chords",
+            "value": 1
+          },
+          {
+            "name": "played_patterns",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-effects_30c23d9c-144e-4028-8ee5-5d0c9fe605e4",
+        "message": "You triggered the notes. Now use the numbers 1 and 2 to trigger both sounds. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_chords",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-effects_ca810c65-90d6-4113-b7cc-5b831a9d897b",
+        "message": "You triggered the drums. Now use the numbers 1 and 2 to trigger both sounds. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_patterns",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-effects_4445ebcb-444e-4089-81ee-8949a2ec233c",
+        "message": "Nothing has played in your [play drums](#clickable=play-drums-block) block. Click on the blank space to make a new beat. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_empty_patterns",
+            "value": 1
+          }
+        ],
+        "callout": "id-left:play_pattern_at_current_location_simple2"
+      },
+      {
+        "key": "music-coding-intro-effects_805687aa-0b6a-4798-bcc6-9bcabd3ebd53",
+        "message": "Nothing has played in your [play notes](#clickable=play-notes-block) block. Click on the blank space to make a new tune. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_empty_chords",
+            "value": 1
+          }
+        ],
+        "callout": "id-left:play_chord_at_current_location_simple2"
+      },
+      {
+        "key": "music-coding-intro-effects_35b45d42-21a3-48b6-8f6c-e7f23a7a028e",
+        "message": "Nothing has played yet. Press Stop, read the instructions and try again. ",
+        "next": false,
+        "conditions": [
+
+        ],
+        "callout": "run-button"
+      }
+    ],
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-12-05 19:30:00 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 19:31:46 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 19:41:03 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 20:11:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 20:13:01 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 20:16:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 20:17:01 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 23:28:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 23:29:18 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 16:02:31 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 16:03:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 16:05:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 16:10:42 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 16:12:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 21:59:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 22:05:09 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 22:06:26 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 22:07:03 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 22:10:00 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 22:13:06 +0000\",\"changed\":[\"level_data\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 22:13:49 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

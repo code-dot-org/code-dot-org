@@ -13,6 +13,7 @@ enum SignInState {
 }
 
 export interface CurrentUserState {
+  countryCode: string;
   userId: number;
   userName: string;
   userType: 'unknown' | 'teacher' | 'student';

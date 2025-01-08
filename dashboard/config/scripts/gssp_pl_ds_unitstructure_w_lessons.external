@@ -3,77 +3,22 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Click below to find your next steps!
+# Next Steps
 
-#### Don't know where to go next? Click below to explore options tailored for you!
-
-
-
-## What Grade Do You Teach?
+##What Do I Do Next? 
 
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">K-5th Grade</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
+### <b>Never Coded before? </b>
+####<a href="https://studio.code.org/courses/self-paced-pl-k5-2024" target="_blank">CS Basics</a> is Code.org's free self-paced online learning for educators to get familiar with Computer Science Basics! After completing this professional learning experience, you'll be comfortable with basic K-5 grade coding concepts.
 
 
-#### insert flowchart here
-</p></div>
-</details>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">Middle School</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
+### <b>Ready to Teach?</b> 
+#### Browse the <a href="https://studio.code.org/catalog" target="_blank">course catalog</a>
 
+### <b>Need Course Specific Support?</b>  
+#### Start a <a href="https://code.org/professional-learning/self-paced" target="_blank">self-paced professional learning module</a>
 
-#### insert flowchart here
-</p></div>
-</details>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">High School</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-
-#### Insert flowchart here
-</p></div>
-</details>
-
-### **Lesson Types**
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">💻 Programming Lessons</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-#### Programming lessons introduce new programming concepts and skills to students. Although students will spend a majority of their time on the computer during these lessons, programming lessons also include offline components. Students are expected to complete many of the activities in small groups or as a class. The teacher plays an active role facilitating opportunities for sense making and formative assessment as students engage in lesson content. 
-</p></div>
-</details>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">✍🏽 Non-Programming Lessons</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-
-#### Non-programming lessons focus on process skills and non-programming computing concepts. These lessons are mostly offline, but some do include online components. Offline lessons typically include an activity guide that students will use throughout the lesson as a guide for their learning. Non-programming lessons present students with opportunities for collaboration and discussion in small groups as well as individual reflection.
-</p></div>
-</details>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">👩‍💻 Project Lessons</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-
-#### ***Mini-projects*** are opportunities for students to apply what they have learned by creating something new in a more open-ended setting. Mini-projects appear throughout the unit as opportunities for students to practice open-ended application of a small set of new skills. These projects can be expanded or condensed depending on the class time available. 
-
-#### ***Projects*** are multi-day open-ended lessons found at the end of each chapter or unit. Projects challenge students to create using skills developed throughout the unit. Projects often include opportunities for planning, creation, and reflection. 
-</p></div>
-</details>
 
 
 MARKDOWN

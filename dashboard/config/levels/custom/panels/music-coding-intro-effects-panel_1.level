@@ -1,0 +1,35 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-01-07T23:37:29.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "This block lets you play an **arpeggio**, which is a string of notes.",
+        "imageUrl": "",
+        "key": "music-coding-intro-functions-panel-dd6ade9d-4ac1-4787-89e4-4fa347cf3c12",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "Choose the instrument and whether the notes play up, down, randomly, or all together.",
+        "imageUrl": "",
+        "key": "music-coding-intro-effects-panel-6df27d16-d6f1-4aff-b88a-d4921d2b6347",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "Now you are the sound designer. What notes will you play?",
+        "imageUrl": "",
+        "key": "music-coding-intro-effects-panel-73c494ff-321c-41bf-ae75-c95818ba22ae",
+        "layout": "text-top-center"
+      }
+    ],
+    "name_suffix": "_1"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:29.964+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-effects-panel\\\"\"],\"cloned_from\":\"music-coding-intro-effects-panel\"}]"
+}]]></config>
+</Panels>

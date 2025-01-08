@@ -67,6 +67,8 @@ interface AnalyticsData {
 type GoogleBlocklyType = typeof GoogleBlockly;
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
+  varsInGlobals: boolean;
+  disableVariableEditing: boolean;
   ALIGN_CENTRE: GoogleBlockly.inputs.Align.CENTRE;
   ALIGN_LEFT: GoogleBlockly.inputs.Align.LEFT;
   ALIGN_RIGHT: GoogleBlockly.inputs.Align.RIGHT;
@@ -190,6 +192,7 @@ export type GoogleBlocklyInstance = typeof GoogleBlockly;
 // types and can cast to them when needed.
 
 export interface ExtendedBlockSvg extends GoogleBlockly.BlockSvg {
+  canSerializeNextConnection?: boolean;
   isVisible: () => boolean;
   isUserVisible: () => boolean;
   shouldBeGrayedOut: () => boolean;
@@ -274,6 +277,8 @@ export interface ExtendedVariableMap extends GoogleBlockly.VariableMap {
 }
 
 export interface ExtendedBlocklyOptions extends GoogleBlockly.BlocklyOptions {
+  varsInGlobals: boolean;
+  disableVariableEditing: boolean;
   assetUrl: (path: string) => string;
   customSimpleDialog: (config: object) => void;
   levelBlockIds: Set<string>;

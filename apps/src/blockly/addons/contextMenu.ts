@@ -18,6 +18,7 @@ import {
   NAVIGATION_CURSOR_TYPES,
   DARK_THEME_SUFFIX,
 } from '../constants';
+import {ExtendedBlockSvg} from '../types';
 import {getBaseName} from '../utils';
 
 // Some options are only available to levelbuilders via start mode.
@@ -77,6 +78,42 @@ const registerMovable = function (weight: number) {
   GoogleBlockly.ContextMenuRegistry.registry.register(movableOption);
 };
 
+const registerNextConnection = function (weight: number) {
+  const nextConnectionOption = {
+    displayText: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
+      const block = scope.block;
+      if (!block) {
+        return '';
+      }
+      const displayText = `${
+        block.nextConnection ? 'Disable' : 'Enable'
+      } Next Connection`;
+      return displayText;
+    },
+    preconditionFn: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
+      const block = scope.block as ExtendedBlockSvg;
+
+      // This option requires a custom mutator in order to serialize the disabled connection.
+      if (Blockly.isStartMode && block?.canSerializeNextConnection) {
+        return MenuOptionStates.ENABLED;
+      }
+      return MenuOptionStates.HIDDEN;
+    },
+    callback: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
+      const block = scope.block;
+      if (!block) {
+        return;
+      }
+      block.nextConnection?.disconnect();
+      block.setNextStatement(!block.nextConnection);
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
+    id: 'nextConnection',
+    weight,
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(nextConnectionOption);
+};
+
 const registerEditable = function (weight: number) {
   const editableOption = {
     displayText: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
@@ -124,6 +161,7 @@ const registerShadow = function (weight: number) {
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(shadowOption);
 };
+
 const registerUnshadow = function (weight: number) {
   const unshadowOption = {
     // If there's 1 child, text should be 'Make Child Block Non-Shadow'
@@ -526,6 +564,7 @@ function registerCustomBlockOptions() {
   registerHelp(nextWeight++);
   registerDeletable(nextWeight++);
   registerMovable(nextWeight++);
+  registerNextConnection(nextWeight++);
   registerEditable(nextWeight++);
   registerShadow(nextWeight++);
   registerUnshadow(nextWeight++);

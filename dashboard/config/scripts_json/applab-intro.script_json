@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "applab-intro",
-    "serialized_at": "2024-11-19 01:13:55 UTC",
+    "serialized_at": "2025-01-07 20:03:34 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -67,6 +67,7 @@
       "key": "f4670c8c-98ec-47d0-b458-02a96f130b76",
       "position": 1,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -80,6 +81,7 @@
       "key": "5ff12dbb-3603-4bc6-9a8a-3fa7dc917685",
       "position": 2,
       "properties": {
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -93,6 +95,7 @@
       "key": "8e673a7c-56ec-49ed-b7ca-36799cb40b2f",
       "position": 3,
       "properties": {
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {

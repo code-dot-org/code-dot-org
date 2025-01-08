@@ -7,7 +7,6 @@ import {
 import {FileBrowser} from '@codebridge/FileBrowser';
 import {useReducerWithCallback} from '@codebridge/hooks';
 import {InfoPanel} from '@codebridge/InfoPanel';
-import {PreviewContainer} from '@codebridge/PreviewContainer';
 import {SideBar} from '@codebridge/SideBar';
 import {
   ProjectType,
@@ -18,12 +17,13 @@ import {
 } from '@codebridge/types';
 import React, {useEffect, useReducer, useRef} from 'react';
 
+import {FilePreview} from '@cdo/apps/codebridge/FilePreview';
 import './styles/small-footer-dark-overrides.scss';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 
-import Console from './Console';
 import Workspace from './Workspace';
-import WorkspaceAndConsole from './Workspace/WorkspaceAndConsole';
+import Output from './Workspace/Output';
+import WorkspaceAndOutput from './Workspace/WorkspaceAndOutput';
 
 import moduleStyles from './styles/cdoIDE.module.scss';
 
@@ -72,11 +72,11 @@ export const Codebridge = React.memo(
     const ComponentMap = {
       'file-browser': FileBrowser,
       'side-bar': SideBar,
-      'preview-container': PreviewContainer,
+      'file-preview': FilePreview,
       'info-panel': config.Instructions || InfoPanel,
       workspace: Workspace,
-      console: Console,
-      'workspace-and-console': WorkspaceAndConsole,
+      output: Output,
+      'workspace-and-output': WorkspaceAndOutput,
     };
 
     let gridLayout: string;
