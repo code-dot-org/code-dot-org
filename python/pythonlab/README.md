@@ -22,7 +22,7 @@ This tests adds some customization to the output of unit tests, and has a functi
 (more customized) or student tests (less customized).
 
 ## Building a package
-From the package folder containing `pyproject.toml`, run `pdm build`. The generated `.whl` file will be in the `dist` folder.
+From the package folder containing `pyproject.toml`, run `pdm install`, and then `pdm build`. The generated `.whl` file will be in the `dist` folder.
 The generated `.whl` file can then be copied to [apps/lib/pyodide](../../apps/lib/pyodide/).
 
 ### TODO
