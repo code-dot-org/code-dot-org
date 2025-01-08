@@ -19,6 +19,27 @@ class Middlewares::RedisSessionStoreTest < ActiveSupport::TestCase
     redis_session_store.write_session(request, session_id, session_data)
   end
 
+  describe '#delete_session' do
+    subject(:delete_session) {redis_session_store.delete_session(request, session_id, {})}
+
+    let(:session_data) {{deleted: false}}
+    let(:session_options) {{renew: false}}
+
+    it 'stores session as deleted' do
+      _ {delete_session}.must_change -> {redis_session_store.find_session(request, session_id)},
+                                     from: [session_id, {deleted: false}],
+                                     to: [session_id, {deleted: true}]
+    end
+
+    it 'deletes request session :deleted flag' do
+      _ {delete_session}.must_change -> {request.session['deleted']}, from: false, to: nil
+    end
+
+    it 'sets session :renew option' do
+      _ {delete_session}.must_change -> {request.session.options[:renew]}, from: false, to: true
+    end
+  end
+
   describe '#commit_session?' do
     subject(:commit_session?) {redis_session_store.send(:commit_session?, request, session, options)}
 
@@ -57,6 +78,47 @@ class Middlewares::RedisSessionStoreTest < ActiveSupport::TestCase
 
           it 'returns true' do
             _commit_session?.must_equal true
+          end
+        end
+      end
+    end
+
+    context 'when session has been changed' do
+      before do
+        session[:fake_session_data] = 'updated'
+        _(session.changed?).must_equal true
+      end
+
+      it 'returns true' do
+        _commit_session?.must_equal true
+      end
+
+      context 'if session has been deleted' do
+        before do
+          redis_session_store.delete_session(request, session_id, {})
+        end
+
+        it 'returns false' do
+          _commit_session?.must_equal false
+        end
+
+        context 'and it must be renewed' do
+          let(:options) {{renew: true}}
+
+          it 'returns true' do
+            _commit_session?.must_equal true
+          end
+        end
+
+        context 'but it is forced to be updated' do
+          let(:options) {{max_age: 10.years}}
+
+          before do
+            _(redis_session_store.send(:forced_session_update?, session, options)).must_equal true
+          end
+
+          it 'returns false' do
+            _commit_session?.must_equal false
           end
         end
       end

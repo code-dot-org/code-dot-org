@@ -25,7 +25,7 @@ const LayoutInstructions = () => (
     <ul>
       <li>editor</li>
       <li>instructions</li>
-      <li>preview-container</li>
+      <li>file-preview</li>
       <li>file-browser</li>
       <li>file-tabs</li>
       <li>side-bar</li>

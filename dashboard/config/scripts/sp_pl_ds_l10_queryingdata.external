@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Data Science with Python
 
-## Lesson 11 Quarrying your Data 
+## Lesson 11: Querying your Data 
 
 <img src="https://images.code.org/2df9050dff40b9e5fa362d87339c5ceb-image-1724862949854.png" alt="notnull() chart example" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
@@ -21,7 +21,7 @@ markdown <<MARKDOWN
 
 
 > ## Key concepts 
-> - #### **notnull()** -creates new DataFrame containg the non-null values
+> - #### **notnull()** -creates new DataFrame containing the non-null values
 > - #### **str.endswith()** - checks if a value ends with a given string
 
 

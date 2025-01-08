@@ -22,9 +22,6 @@ export interface CellProps {
   value: string;
   editedValue: string;
   isEditing?: boolean;
-  currentUser: CurrentUserState;
-  section: Section;
-  editStudent: (id: number, studentData: StudentData) => void;
 }
 
 export interface BulkSetModalProps {

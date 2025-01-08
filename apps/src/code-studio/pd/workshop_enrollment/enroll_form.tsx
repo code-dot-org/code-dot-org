@@ -1,174 +1,205 @@
 /*
  * Form to create a workshop enrollment
  */
-import React, {useState} from 'react';
-import {FormGroup, ControlLabel, HelpBlock, Alert} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import Select, {Option} from 'react-select';
+import classNames from 'classnames';
+import React, {Fragment, ReactNode, useMemo, useState} from 'react';
 
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
+import Alert from '@cdo/apps/componentLibrary/alert';
+import {Button} from '@cdo/apps/componentLibrary/button';
+import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
+import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import RadioButtonsGroup from '@cdo/apps/componentLibrary/radioButton/RadioButtonsGroup';
+import TextField from '@cdo/apps/componentLibrary/textField/TextField';
+import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
+import {buildSchoolData} from '@cdo/apps/schoolInfo/utils/buildSchoolData';
+import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
+import SchoolDataInputs, {
+  SCHOOL_INFO_ID,
+} from '@cdo/apps/templates/SchoolDataInputs.jsx';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
-import color from '@cdo/apps/util/color';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 
-import SchoolAutocompleteDropdownWithCustomFields from '../components/schoolAutocompleteDropdownWithCustomFields';
-import {ButtonList} from '../form_components/ButtonList.jsx';
-import FieldGroup from '../form_components/FieldGroup';
 import QuestionsTable from '../form_components/QuestionsTable';
 import {COURSE_BUILD_YOUR_OWN} from '../workshop_dashboard/workshopConstants';
 
-const OTHER = 'Other';
-const NOT_TEACHING = "I'm not teaching this year";
-const EXPLAIN = '(Please Explain):';
+import {
+  ADMIN_COUNSELOR,
+  ADMIN_COUNSELOR_ROLES,
+  ATTENDED_CSF_COURSES_OPTIONS,
+  CSF,
+  CSF_COURSES,
+  CSF_ROLES,
+  CSP,
+  DEEP_DIVE,
+  DESCRIBE_ROLES,
+  DISTRICT,
+  EXPLAIN,
+  GRADES_TEACHING,
+  INTRO,
+  NOT_TEACHING,
+  OTHER,
+  SUBMISSION_STATUSES,
+} from './constants';
 
-const CSF = 'CS Fundamentals';
-const INTRO = SubjectNames.SUBJECT_CSF_101;
-const DISTRICT = SubjectNames.SUBJECT_CSF_DISTRICT;
-const DEEP_DIVE = SubjectNames.SUBJECT_CSF_201;
-
-const CSP = 'CS Principles';
-const ADMIN_COUNSELOR = 'Admin/Counselor Workshop';
-
-const VALIDATION_STATE_ERROR = 'error';
-
-const SCHOOL_TYPES_MAPPING = {
-  'Public school': 'public',
-  'Private school': 'private',
-  'Charter school': 'charter',
-  Other: 'other',
-};
-
-const DESCRIBE_ROLES = [
-  'School Administrator',
-  'District Administrator',
-  'Parent',
-  'Other',
-];
-
-const CSF_ROLES = [
-  'Classroom Teacher',
-  'Media Specialist',
-  'Tech Teacher',
-  'Librarian',
-].concat(DESCRIBE_ROLES);
-
-const ADMIN_COUNSELOR_ROLES = ['Administrator', 'Counselor', 'Other'];
-
-const GRADES_TEACHING = [
-  'Pre-K',
-  'Kindergarten',
-  'Grade 1',
-  'Grade 2',
-  'Grade 3',
-  'Grade 4',
-  'Grade 5',
-  'Grade 6-8',
-  'Grade 9-12',
-];
-
-const CSF_COURSES = {
-  courseA: 'Course A',
-  courseB: 'Course B',
-  courseC: 'Course C',
-  courseD: 'Course D',
-  courseE: 'Course E',
-  courseF: 'Course F',
-  express: 'Express',
-  courses14_accelerated: 'Courses 1-4 or Accelerated',
-};
-
-const ATTENDED_CSF_COURSES_OPTIONS = {
-  'Yes, I attended a CS Fundamentals Intro workshop this academic year.':
-    'Yes, this year',
-  'Yes, I attended a CS Fundamentals Intro workshop in a previous academic year.':
-    'Yes, prior year',
-  'Nope, I have never attended a CS Fundamentals workshop.': 'No',
-};
+import styles from '@cdo/apps/code-studio/pd/workshop_enrollment/EnrollForm/styles.module.scss';
+import textFieldStyles from '@cdo/apps/componentLibrary/textField/textfield.module.scss';
 
 interface SchoolInfoProps {
+  country?: string;
   school_id?: string;
-  school_district_name?: string;
-  school_district_other?: string;
   school_name?: string;
-  school_state?: string;
+  school_type?: string;
   school_zip?: string;
-  school_type?: keyof typeof SCHOOL_TYPES_MAPPING;
 }
 
 interface EnrollFormState {
-  attended_csf_intro_workshop?: keyof typeof ATTENDED_CSF_COURSES_OPTIONS;
-  csf_course_experience?: Partial<typeof CSF_COURSES>;
-  csf_courses_planned?: string[];
-  csf_intro_intent?: string;
-  csf_intro_other_factors?: string;
-  describe_role?: string;
-  email?: string;
-  confirm_email?: string;
-  explain_csf_course_other?: string;
-  explain_not_teaching?: string;
-  explain_teaching_other?: string;
-  first_name?: string;
-  grades_teaching?: string[];
-  last_name?: string;
-  planning_to_teach_ap?: string;
-  previous_courses: Array<string>;
-  role?: string;
-  taught_ap_before?: string;
-  years_teaching?: string;
-  years_teaching_cs?: string;
+  attended_csf_intro_workshop: keyof typeof ATTENDED_CSF_COURSES_OPTIONS;
+  confirm_email: string;
+  csf_course_experience: Partial<typeof CSF_COURSES>;
+  csf_courses_planned: string[];
+  csf_intro_intent: string;
+  csf_intro_other_factors: string[];
+  describe_role: string;
+  email: string;
+  explain_csf_course_other: string;
+  explain_not_teaching: string;
+  explain_teaching_other: string;
+  first_name: string;
+  grades_teaching: string[];
+  last_name: string;
+  planning_to_teach_ap: string;
+  previous_courses: string[];
+  role: string;
+  taught_ap_before: string;
+  years_teaching: string;
+  years_teaching_cs: string;
 }
 
-type CombinedFormState = keyof EnrollFormState | keyof SchoolInfoProps;
+type CombinedFormState = keyof EnrollFormState | 'school_info';
 
 type FormErrors = Partial<Record<CombinedFormState, string>>;
 
 type EnrollmentResponse = {
-  workshop_enrollment_status: string;
   account_exists: boolean;
-  sign_up_url: string;
   cancel_url: string;
+  sign_up_url: string;
+  workshop_enrollment_status: string;
 };
 
-type EnrollFormProps = EnrollFormState & {
+/**
+ * not all props are passed down from the parent WorkshopEnroll component
+ * but they are used in unit tests to set initial state
+ */
+type EnrollFormProps = {
   collect_demographics?: boolean;
+  email?: string;
+  first_name?: string;
+  last_name?: string;
+  role?: string;
   onSubmissionComplete: (response?: EnrollmentResponse) => void;
+  previous_courses: string[];
+  school_info?: SchoolInfoProps;
   user_id: number;
   workshop_course?: string;
   workshop_id: number;
   workshop_subject?: string;
-  school_info: SchoolInfoProps;
+  grades_teaching?: string[];
+  csf_intro_intent?: string;
+  attended_csf_intro_workshop?: string;
+  years_teaching?: string;
+  years_teaching_cs?: string;
+  taught_ap_before?: string;
+  planning_to_teach_ap?: string;
 };
 
+/**
+ * This Label component is necessary to apply the same label and
+ * error message elements that TextField DSCO component has to other
+ * inputs that don't yet have a label or error message prop, such
+ * as textarea, RadioButtonsGroup, and Checkbox.
+ */
+const Label = ({
+  children,
+  text,
+  htmlFor,
+  errorMessage,
+  className = '',
+}: {
+  children?: ReactNode;
+  text?: ReactNode;
+  htmlFor?: string;
+  errorMessage?: ReactNode;
+  className?: string;
+}) => (
+  <label
+    className={classNames(
+      textFieldStyles.textField,
+      textFieldStyles['textField-black'],
+      textFieldStyles['textField-m'],
+      className
+    )}
+    htmlFor={htmlFor}
+  >
+    {text && <span className={textFieldStyles.textFieldLabel}>{text}</span>}
+    {children}
+    {errorMessage && (
+      <div
+        className={classNames(
+          textFieldStyles.textFieldHelperSection,
+          textFieldStyles.textFieldErrorSection
+        )}
+      >
+        <FontAwesomeV6Icon iconName={'circle-exclamation'} />
+        <span>{errorMessage}</span>
+      </div>
+    )}
+  </label>
+);
+
 export default function EnrollForm(props: EnrollFormProps) {
+  const roles = useMemo(() => {
+    switch (props.workshop_course) {
+      case CSF:
+        return CSF_ROLES;
+      case ADMIN_COUNSELOR:
+        return ADMIN_COUNSELOR_ROLES;
+      default:
+        return [];
+    }
+  }, [props.workshop_course]);
+
   const [formState, setFormState] = useState<EnrollFormState>({
-    first_name: props.first_name,
-    last_name: props.last_name,
-    email: props.email,
-    describe_role: props.describe_role,
-    explain_teaching_other: props.explain_teaching_other,
-    explain_not_teaching: props.explain_not_teaching,
-    csf_course_experience: props.csf_course_experience,
-    explain_csf_course_other: props.explain_csf_course_other,
-    attended_csf_intro_workshop: props.attended_csf_intro_workshop,
-    previous_courses: props.previous_courses,
-    csf_intro_intent: props.csf_intro_intent,
-    csf_intro_other_factors: props.csf_intro_other_factors,
-    years_teaching: props.years_teaching,
-    years_teaching_cs: props.years_teaching_cs,
-    taught_ap_before: props.taught_ap_before,
-    planning_to_teach_ap: props.planning_to_teach_ap,
-    grades_teaching: props.grades_teaching,
-    role: props.role,
+    attended_csf_intro_workshop: props.attended_csf_intro_workshop ?? '',
+    confirm_email: '',
+    csf_course_experience: {},
+    csf_courses_planned: [],
+    csf_intro_intent: props.csf_intro_intent ?? '',
+    csf_intro_other_factors: [],
+    describe_role: '',
+    email: props.email ?? '',
+    explain_csf_course_other: '',
+    explain_not_teaching: '',
+    explain_teaching_other: '',
+    first_name: props.first_name ?? '',
+    grades_teaching: props.grades_teaching ?? [],
+    last_name: props.last_name ?? '',
+    planning_to_teach_ap: props.planning_to_teach_ap ?? '',
+    previous_courses: [],
+    role: props.role ?? '',
+    taught_ap_before: props.taught_ap_before ?? '',
+    years_teaching: props.years_teaching ?? '',
+    years_teaching_cs: props.years_teaching_cs ?? '',
   });
 
-  const [schoolInfoState, setSchoolInfoState] = useState<SchoolInfoProps>({
-    school_id: props.school_info?.school_id,
-    school_district_name: props.school_info?.school_district_name,
-    school_district_other: props.school_info?.school_district_other,
-    school_name: props.school_info?.school_name,
-    school_state: props.school_info?.school_state,
-    school_zip: props.school_info?.school_zip,
-    school_type: props.school_info?.school_type,
+  const schoolInfo = useSchoolInfo({
+    schoolId: props.school_info?.school_id,
+    country: props.school_info?.country,
+    schoolName: props.school_info?.school_name,
+    schoolZip: props.school_info?.school_zip,
+    schoolType: props.school_info?.school_type,
   });
 
   const [formErrors, setFormErrors] = useState<FormErrors>({});
@@ -182,28 +213,30 @@ export default function EnrollForm(props: EnrollFormProps) {
     }));
   };
 
-  const onSchoolInfoChange = ({
-    school_info,
-  }: {
-    school_info: SchoolInfoProps;
-  }) => {
-    setSchoolInfoState(school_info);
+  const handleRoleChange = (selection: string | undefined) => {
+    handleChange({role: selection});
   };
 
-  const handleRoleChange = (selection: Option<string> | null) => {
-    handleChange({role: selection?.value});
-  };
-
-  const handleNotTeachingChange = (input: string) => {
-    handleChange({explain_not_teaching: input});
-  };
-
-  const handleTeachingOtherChange = (input: string) => {
-    handleChange({explain_teaching_other: input});
-  };
-
-  const handleCsfCourseOtherChange = (input: string) => {
-    handleChange({explain_csf_course_other: input});
+  const handleChecked = (
+    key: keyof Pick<
+      EnrollFormState,
+      | 'grades_teaching'
+      | 'previous_courses'
+      | 'csf_intro_other_factors'
+      | 'csf_courses_planned'
+    >,
+    value: string,
+    checked: boolean
+  ) => {
+    const selected = new Set(formState[key]);
+    if (checked) {
+      selected.add(value);
+    } else {
+      selected.delete(value);
+    }
+    handleChange({
+      [key]: Array.from(selected),
+    });
   };
 
   const handleCsfCourseExperienceChange = (
@@ -211,7 +244,7 @@ export default function EnrollForm(props: EnrollFormProps) {
   ) => {
     handleChange({
       csf_course_experience: {
-        ...(formState.csf_course_experience ?? {}),
+        ...formState.csf_course_experience,
         ...input,
       },
     });
@@ -221,23 +254,26 @@ export default function EnrollForm(props: EnrollFormProps) {
     if (props.workshop_course === COURSE_BUILD_YOUR_OWN) {
       submit();
     } else {
-      const errors = getRequiredFieldErrors();
-      setFormErrors(errors);
+      const errors = updateErrors();
       if (!Object.keys(errors).length) {
         submit();
       }
     }
   };
 
+  const updateErrors = () => {
+    const errors = getAllErrors();
+    setFormErrors(errors);
+    return errors;
+  };
+
   const getRole = () => {
     if (!formState.role) {
       return null;
     }
-    let roleWithDescription = '';
+    let roleWithDescription = formState.role;
     if (formState.describe_role) {
-      roleWithDescription = `${formState.role}: ${formState.describe_role}`;
-    } else {
-      roleWithDescription = formState.role;
+      roleWithDescription += `: ${formState.describe_role}`;
     }
     return roleWithDescription;
   };
@@ -290,35 +326,22 @@ export default function EnrollForm(props: EnrollFormProps) {
     return processedGrades;
   };
 
-  const getSchoolType = () => {
-    if (!schoolInfoState.school_id && schoolInfoState.school_type) {
-      return SCHOOL_TYPES_MAPPING[schoolInfoState.school_type];
-    }
-  };
-
   const submit = async () => {
     setFormErrors({});
     setSubmissionErrorMessage('');
     setIsSubmitting(true);
-    let schoolInfo = {};
-    if (schoolInfoState.school_id) {
-      schoolInfo = {school_id: schoolInfoState.school_id};
-    } else {
-      schoolInfo = {
-        school_district_name: schoolInfoState.school_district_name,
-        school_district_other: schoolInfoState.school_district_other,
-        school_name: schoolInfoState.school_name,
-        school_state: schoolInfoState.school_state,
-        school_zip: schoolInfoState.school_zip,
-        school_type: getSchoolType(),
-      };
-    }
+
     const params = {
       user_id: props.user_id,
       first_name: formState.first_name,
       last_name: formState.last_name,
       email: formState.email,
-      school_info: schoolInfo,
+      school_info: buildSchoolData({
+        schoolId: schoolInfo.schoolId,
+        country: schoolInfo.country,
+        schoolName: schoolInfo.schoolName,
+        schoolZip: schoolInfo.schoolZip,
+      }),
       role: getRole(),
       describe_role: formState.describe_role,
       grades_teaching: getGradesTeaching(),
@@ -327,9 +350,8 @@ export default function EnrollForm(props: EnrollFormProps) {
       csf_course_experience: formState.csf_course_experience,
       csf_courses_planned: getCsfCoursesPlanned(),
       explain_csf_course_other: formState.explain_csf_course_other,
-      attended_csf_intro_workshop: formState.attended_csf_intro_workshop
-        ? ATTENDED_CSF_COURSES_OPTIONS[formState.attended_csf_intro_workshop]
-        : undefined,
+      attended_csf_intro_workshop:
+        ATTENDED_CSF_COURSES_OPTIONS[formState.attended_csf_intro_workshop],
       previous_courses: formState.previous_courses,
       csf_intro_intent: formState.csf_intro_intent,
       csf_intro_other_factors: formState.csf_intro_other_factors,
@@ -352,81 +374,22 @@ export default function EnrollForm(props: EnrollFormProps) {
         }
       );
       setIsSubmitting(false);
-      if (response.ok) {
-        const result = await response.json();
-        if (result.workshop_enrollment_status === 'error') {
-          setSubmissionErrorMessage(result.error_message || 'unknown error');
-        }
-        props.onSubmissionComplete(result);
-      }
-    } catch (error) {
-      setSubmissionErrorMessage('unknown error');
-    }
-  };
-
-  const getRequiredFieldErrors = () => {
-    let errors = getErrors();
-    const missingRequiredFields = getMissingRequiredFields();
-    const schoolInfoErrors =
-      SchoolAutocompleteDropdownWithCustomFields.validate(schoolInfoState);
-
-    if (
-      missingRequiredFields.length ||
-      Object.keys(errors).length ||
-      Object.keys(schoolInfoErrors).length
-    ) {
-      const requiredFieldsErrors: FormErrors = {};
-      missingRequiredFields.forEach(f => {
-        requiredFieldsErrors[f] = '';
-      });
-      errors = {...errors, ...requiredFieldsErrors, ...schoolInfoErrors};
-    }
-    return errors;
-  };
-
-  const getMissingRequiredFields = () => {
-    const requiredFields: Array<keyof EnrollFormState> = [
-      'first_name',
-      'last_name',
-      'email',
-    ];
-
-    if (!props.email) {
-      requiredFields.push('confirm_email');
-    }
-
-    if (props.workshop_course === CSF) {
-      requiredFields.push('role', 'grades_teaching');
+      const result = await response.json();
       if (
-        props.workshop_subject === INTRO ||
-        props.workshop_subject === DISTRICT
+        result.workshop_enrollment_status === SUBMISSION_STATUSES.UNKNOWN_ERROR
       ) {
-        requiredFields.push('csf_intro_intent');
-      } else if (props.workshop_subject === DEEP_DIVE) {
-        requiredFields.push('attended_csf_intro_workshop');
+        setSubmissionErrorMessage(
+          result.error_message || 'Unknown error occurred'
+        );
       }
+      props.onSubmissionComplete(result);
+    } catch (error) {
+      setIsSubmitting(false);
+      setSubmissionErrorMessage('Unknown error occurred');
     }
-
-    if (
-      props.workshop_course === CSP &&
-      props.workshop_subject === SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS
-    ) {
-      requiredFields.push(
-        'years_teaching',
-        'years_teaching_cs',
-        'taught_ap_before',
-        'planning_to_teach_ap'
-      );
-    }
-
-    const missingRequiredFields = requiredFields.filter(
-      field => !formState[field]
-    );
-
-    return missingRequiredFields;
   };
 
-  const getErrors = () => {
+  const getAllErrors = () => {
     const errors: FormErrors = {};
 
     if (formState.email) {
@@ -438,16 +401,102 @@ export default function EnrollForm(props: EnrollFormProps) {
       }
     }
 
+    if (
+      schoolInfoInvalid({
+        country: schoolInfo.country,
+        schoolName: schoolInfo.schoolName,
+        schoolZip: schoolInfo.schoolZip,
+        schoolId: schoolInfo.schoolId,
+        schoolsList: schoolInfo.schoolsList,
+      })
+    ) {
+      errors.school_info = 'School information is required';
+    }
+
+    const missingRequiredFields = requiredFields.filter(
+      field =>
+        !formState[field] ||
+        (Array.isArray(formState[field]) && formState[field].length === 0)
+    );
+    if (missingRequiredFields.length) {
+      missingRequiredFields.forEach(f => {
+        errors[f] = 'Field is required';
+      });
+    }
+
     return errors;
   };
 
-  const gradesLabel = (
-    <div>
-      What grades are you teaching this year? (Select all that apply)
-      <span className="form-required-field"> *</span>
-      <p>This workshop is intended for teachers of grades K-5.</p>
-    </div>
-  );
+  const requiredFields: Array<keyof EnrollFormState> = useMemo(() => {
+    const fields: Array<keyof EnrollFormState> = [
+      'first_name',
+      'last_name',
+      'email',
+    ];
+
+    if (!props.email) {
+      fields.push('confirm_email');
+    }
+
+    if (props.workshop_course === CSF) {
+      fields.push('role', 'grades_teaching');
+
+      const gradesTeachingExplainKeys: Array<
+        [keyof EnrollFormState, value: string]
+      > = [
+        ['explain_not_teaching', NOT_TEACHING],
+        ['explain_teaching_other', OTHER],
+      ];
+
+      const relevantFormState: Partial<EnrollFormState> = {
+        explain_not_teaching: formState.explain_not_teaching,
+        explain_teaching_other: formState.explain_teaching_other,
+      };
+
+      gradesTeachingExplainKeys.forEach(([key, value]) => {
+        if (
+          formState.grades_teaching.some(option => option.includes(value)) &&
+          !relevantFormState[key]
+        ) {
+          fields.push(key);
+        }
+      });
+
+      if (
+        props.workshop_subject === INTRO ||
+        props.workshop_subject === DISTRICT
+      ) {
+        fields.push('csf_intro_intent');
+      } else if (props.workshop_subject === DEEP_DIVE) {
+        fields.push('attended_csf_intro_workshop');
+      }
+    }
+
+    if (
+      props.workshop_course === CSP &&
+      props.workshop_subject === SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS
+    ) {
+      fields.push(
+        'years_teaching',
+        'years_teaching_cs',
+        'taught_ap_before',
+        'planning_to_teach_ap'
+      );
+    }
+
+    return fields;
+  }, [
+    formState.grades_teaching,
+    formState.explain_teaching_other,
+    formState.explain_not_teaching,
+    props.email,
+    props.workshop_course,
+    props.workshop_subject,
+  ]);
+
+  const getRequiredStyles = (key: keyof EnrollFormState) =>
+    requiredFields.includes(key) ? styles.required : undefined;
+
   const coursesPlannedLabel = (
     <div>
       Which CS Fundamentals course(s), if any, do you plan to{' '}
@@ -456,16 +505,8 @@ export default function EnrollForm(props: EnrollFormProps) {
   );
   const gradesTeaching = [
     ...GRADES_TEACHING,
-    {
-      answerText: `${NOT_TEACHING} ${EXPLAIN}`,
-      inputValue: formState.explain_not_teaching,
-      onInputChange: handleNotTeachingChange,
-    },
-    {
-      answerText: `${OTHER} ${EXPLAIN}`,
-      inputValue: formState.explain_teaching_other,
-      onInputChange: handleTeachingOtherChange,
-    },
+    `${NOT_TEACHING} ${EXPLAIN}`,
+    `${OTHER} ${EXPLAIN}`,
   ];
 
   const csfIntroIntentLabel =
@@ -505,209 +546,262 @@ export default function EnrollForm(props: EnrollFormProps) {
     ...Object.values(CSF_COURSES).filter(
       value => CSF_COURSES.courses14_accelerated !== value
     ),
-    {
-      answerText: `${OTHER} ${EXPLAIN}`,
-      inputValue: formState.explain_csf_course_other,
-      onInputChange: handleCsfCourseOtherChange,
-    },
+    `${OTHER} ${EXPLAIN}`,
   ];
   const previousCourses = props.previous_courses.concat([
     "I don't have experience teaching any of these courses",
   ]);
 
-  const getRoles = (course?: string) => {
-    switch (course) {
-      case CSF:
-        return CSF_ROLES;
-      case ADMIN_COUNSELOR:
-        return ADMIN_COUNSELOR_ROLES;
-      default:
-        return [];
-    }
-  };
-
-  const roles = getRoles(props.workshop_course);
-
   return (
-    <form id="enroll-form">
+    <form id={styles.enroll_form}>
       {props.workshop_course !== COURSE_BUILD_YOUR_OWN && (
         <>
-          <p>
+          <Typography
+            semanticTag="p"
+            visualAppearance="body-three"
+            className={styles.no_margin}
+          >
             Fields marked with a<span className="form-required-field"> * </span>
             are required.
-          </p>
-          <FormGroup>
-            <FieldGroup
-              id="first_name"
-              label="First Name"
-              type="text"
-              required={true}
-              onChange={handleChange}
-              defaultValue={props.first_name}
-              validationState={
-                Object.prototype.hasOwnProperty.call(formErrors, 'first_name')
-                  ? VALIDATION_STATE_ERROR
-                  : null
-              }
-              errorMessage={formErrors.first_name}
-            />
-            <FieldGroup
-              id="last_name"
-              label="Last Name"
-              type="text"
-              required={true}
-              onChange={handleChange}
-              validationState={
-                Object.prototype.hasOwnProperty.call(formErrors, 'last_name')
-                  ? VALIDATION_STATE_ERROR
-                  : null
-              }
-              errorMessage={formErrors.last_name}
-            />
-            <FieldGroup
-              id="email"
-              label="Email Address"
-              type="text"
-              required={true}
-              onChange={handleChange}
-              defaultValue={props.email}
-              title={
-                props.email ? 'Email can be changed in account settings' : ''
-              }
-              validationState={
-                Object.prototype.hasOwnProperty.call(formErrors, 'email')
-                  ? VALIDATION_STATE_ERROR
-                  : null
-              }
-              errorMessage={formErrors.email}
-            />
-            {!props.email && (
-              <FieldGroup
-                id="confirm_email"
-                label="Confirm Email Address"
-                type="text"
-                required={true}
-                onChange={handleChange}
-                validationState={
-                  Object.prototype.hasOwnProperty.call(
-                    formErrors,
-                    'confirm_email'
-                  )
-                    ? VALIDATION_STATE_ERROR
-                    : null
-                }
-                errorMessage={formErrors.confirm_email}
-              />
-            )}
-          </FormGroup>
-          <SchoolAutocompleteDropdownWithCustomFields
-            onSchoolInfoChange={onSchoolInfoChange}
-            school_info={schoolInfoState}
-            errors={formErrors}
-          />
-        </>
-      )}
-      {(props.workshop_course === CSF ||
-        props.workshop_course === ADMIN_COUNSELOR) && (
-        <FormGroup>
-          <FormGroup
-            validationState={
-              Object.prototype.hasOwnProperty.call(formErrors, 'role')
-                ? VALIDATION_STATE_ERROR
-                : null
+          </Typography>
+          <TextField
+            id="first_name"
+            name="first_name"
+            label="First Name"
+            onChange={e =>
+              handleChange({
+                first_name: e.target.value,
+              })
             }
-          >
-            <ControlLabel>
-              What is your current role? (Select the role that best applies)
-              <span className="form-required-field"> *</span>
-            </ControlLabel>
-            <Select
-              id="role"
-              clearable={false}
-              value={formState.role}
-              onChange={handleRoleChange}
-              options={roles.map(r => ({value: r, label: r}))}
-            />
-            <HelpBlock>{formErrors.role}</HelpBlock>
-            {formState.role && DESCRIBE_ROLES.includes(formState.role) && (
-              <FieldGroup
-                id="describe_role"
-                label="Please describe your role"
-                type="text"
-                onChange={handleChange}
-              />
-            )}
-          </FormGroup>
-          {props.workshop_course !== ADMIN_COUNSELOR && (
-            <ButtonList
-              id="grades_teaching"
-              answers={gradesTeaching}
-              groupName="grades_teaching"
-              label={gradesLabel}
-              onChange={handleChange}
-              selectedItems={formState.grades_teaching}
-              validationState={
-                Object.prototype.hasOwnProperty.call(
-                  formErrors,
-                  'grades_teaching'
-                )
-                  ? VALIDATION_STATE_ERROR
-                  : null
+            value={formState.first_name}
+            errorMessage={formErrors.first_name}
+            className={getRequiredStyles('first_name')}
+          />
+          <TextField
+            id="last_name"
+            name="last_name"
+            label="Last Name"
+            onChange={e =>
+              handleChange({
+                last_name: e.target.value,
+              })
+            }
+            value={formState.last_name}
+            errorMessage={formErrors.last_name}
+            className={getRequiredStyles('last_name')}
+          />
+          <TextField
+            id="email"
+            name="email"
+            label="Email Address"
+            onChange={e =>
+              handleChange({
+                email: e.target.value,
+              })
+            }
+            value={formState.email}
+            title={
+              props.email ? 'Email can be changed in account settings' : ''
+            }
+            errorMessage={formErrors.email}
+            className={getRequiredStyles('email')}
+          />
+          {!props.email && (
+            <TextField
+              id="confirm_email"
+              name="confirm_email"
+              label="Confirm Email Address"
+              onChange={e =>
+                handleChange({
+                  confirm_email: e.target.value,
+                })
               }
-              errorText={formErrors.grades_teaching}
-              type="check"
+              value={formState.confirm_email}
+              errorMessage={formErrors.confirm_email}
+              className={getRequiredStyles('confirm_email')}
             />
           )}
-        </FormGroup>
+          <div className={styles.school_info_container}>
+            <SchoolDataInputs
+              includeHeaders={false}
+              containerClassName={styles.school_info_required}
+              {...schoolInfo}
+            />
+            <Label
+              errorMessage={formErrors.school_info}
+              htmlFor={SCHOOL_INFO_ID}
+            />
+          </div>
+        </>
+      )}
+
+      {(props.workshop_course === CSF ||
+        props.workshop_course === ADMIN_COUNSELOR) && (
+        <>
+          <SimpleDropdown
+            id="role"
+            name="role"
+            labelText=" What is your current role? (Select the role that best applies)"
+            items={roles.map(r => ({value: r, text: r}))}
+            selectedValue={formState.role}
+            onChange={e => handleRoleChange(e.target.value)}
+            dropdownTextThickness="thin"
+            className={getRequiredStyles('role')}
+            errorMessage={formErrors.role}
+          />
+          {formState.role && DESCRIBE_ROLES.includes(formState.role) && (
+            <Label
+              text="Please describe your role"
+              className={getRequiredStyles('describe_role')}
+              errorMessage={formErrors.describe_role}
+              htmlFor="describe_role"
+            >
+              <textarea
+                id="describe_role"
+                name="describe_role"
+                onChange={e =>
+                  handleChange({
+                    describe_role: e.target.value,
+                  })
+                }
+                value={formState.describe_role}
+              />
+            </Label>
+          )}
+
+          {props.workshop_course !== ADMIN_COUNSELOR && (
+            <Label
+              className={getRequiredStyles('grades_teaching')}
+              text="What grades are you teaching this year? (Select all that
+                    apply)"
+              errorMessage={formErrors.grades_teaching}
+              htmlFor="grades_teaching"
+            >
+              <Typography
+                semanticTag="p"
+                visualAppearance="body-three"
+                className={styles.no_margin}
+              >
+                This workshop is intended for teachers of grades K-5.
+              </Typography>
+              <fieldset>
+                {gradesTeaching.map(grade => {
+                  let stateKey:
+                    | keyof Pick<
+                        EnrollFormState,
+                        'explain_not_teaching' | 'explain_teaching_other'
+                      >
+                    | undefined;
+                  if (
+                    grade.includes(NOT_TEACHING) &&
+                    formState.grades_teaching.includes(grade)
+                  ) {
+                    stateKey = 'explain_not_teaching';
+                  }
+                  if (
+                    grade.includes(OTHER) &&
+                    formState.grades_teaching.includes(grade)
+                  ) {
+                    stateKey = 'explain_teaching_other';
+                  }
+                  return (
+                    <Fragment key={grade}>
+                      <Checkbox
+                        size="s"
+                        name={grade}
+                        label={grade}
+                        checked={formState.grades_teaching.includes(grade)}
+                        onChange={e =>
+                          handleChecked(
+                            'grades_teaching',
+                            grade,
+                            e.target.checked
+                          )
+                        }
+                      />
+                      {stateKey && (
+                        <Label
+                          htmlFor={grade}
+                          errorMessage={formErrors[stateKey]}
+                        >
+                          <textarea
+                            id={grade}
+                            name={grade}
+                            onChange={e =>
+                              handleChange({
+                                [stateKey]: e.target.value,
+                              })
+                            }
+                            value={formState[stateKey]}
+                          />
+                        </Label>
+                      )}
+                    </Fragment>
+                  );
+                })}
+              </fieldset>
+            </Label>
+          )}
+        </>
       )}
       {props.workshop_course === CSF &&
         (props.workshop_subject === INTRO ||
           props.workshop_subject === DISTRICT) && (
-          <ButtonList
-            id="csf_intro_intent"
-            groupName="csf_intro_intent"
-            type="radio"
-            required
-            label={csfIntroIntentLabel}
-            answers={csfIntroIntentAnswers}
-            onChange={handleChange}
-            selectedItems={formState.csf_intro_intent}
-            validationState={
-              Object.prototype.hasOwnProperty.call(
-                formErrors,
-                'csf_intro_intent'
-              )
-                ? VALIDATION_STATE_ERROR
-                : null
-            }
-            errorText={formErrors.csf_intro_intent}
-          />
+          <Label
+            className={getRequiredStyles('csf_intro_intent')}
+            text={csfIntroIntentLabel}
+            errorMessage={formErrors.csf_intro_intent}
+            htmlFor="csf_intro_intent"
+          >
+            <fieldset id="csf_intro_intent">
+              <RadioButtonsGroup
+                onChange={e =>
+                  handleChange({
+                    csf_intro_intent: e.target.value,
+                  })
+                }
+                radioButtons={csfIntroIntentAnswers.map(option => ({
+                  value: option,
+                  name: option,
+                  label: option,
+                  size: 's',
+                }))}
+              />
+            </fieldset>
+          </Label>
         )}
       {props.workshop_course === CSF &&
         (props.workshop_subject === INTRO ||
           props.workshop_subject === DISTRICT) && (
-          <ButtonList
-            id="csf_intro_other_factors"
-            groupName="csf_intro_other_factors"
-            type="check"
-            label={csfIntroOtherFactorsLabel}
-            answers={csfIntroOtherFactorsAnswers}
-            onChange={handleChange}
-            selectedItems={formState.csf_intro_other_factors}
-            validationState={
-              Object.prototype.hasOwnProperty.call(
-                formErrors,
-                'csf_intro_other_factors'
-              )
-                ? VALIDATION_STATE_ERROR
-                : null
-            }
-            errorText={formErrors.csf_intro_other_factors}
-          />
+          <Label
+            className={getRequiredStyles('csf_intro_other_factors')}
+            text={csfIntroOtherFactorsLabel}
+            errorMessage={formErrors.csf_intro_other_factors}
+            htmlFor="csf_intro_other_factors"
+          >
+            <fieldset id="csf_intro_other_factors">
+              {csfIntroOtherFactorsAnswers.map(factor => (
+                <Checkbox
+                  key={factor}
+                  size="s"
+                  name={factor}
+                  label={factor}
+                  checked={formState.csf_intro_other_factors.includes(factor)}
+                  onChange={e =>
+                    handleChecked(
+                      'csf_intro_other_factors',
+                      factor,
+                      e.target.checked
+                    )
+                  }
+                />
+              ))}
+            </fieldset>
+          </Label>
         )}
       {props.workshop_course === CSF &&
         props.workshop_subject === DEEP_DIVE && (
-          <FormGroup>
+          <>
             <QuestionsTable
               id="csf_course_experience"
               label="This workshop is designed for educators that have experience teaching CS Fundamentals. During the past year, how have you used CS Fundamentals course(s) with students?"
@@ -718,151 +812,200 @@ export default function EnrollForm(props: EnrollFormProps) {
                 name: key,
               }))}
               selectedItems={formState.csf_course_experience}
+              className={styles.table}
             />
-            <ButtonList
-              id="csf_courses_planned"
-              answers={csfCourses}
-              groupName="csf_courses_planned"
-              label={coursesPlannedLabel}
-              onChange={handleChange}
-              selectedItems={formState.csf_courses_planned}
-              validationState={
-                Object.prototype.hasOwnProperty.call(
-                  formErrors,
-                  'csf_courses_planned'
-                )
-                  ? VALIDATION_STATE_ERROR
-                  : null
-              }
-              errorText={formErrors.csf_courses_planned}
-              type="check"
-            />
-            <ButtonList
-              id="attended_csf_intro_workshop"
-              answers={Object.keys(ATTENDED_CSF_COURSES_OPTIONS)}
-              groupName="attended_csf_intro_workshop"
-              label="Have you attended a CS Fundamentals Intro Workshop before?"
-              onChange={handleChange}
-              selectedItems={formState.attended_csf_intro_workshop}
-              validationState={
-                Object.prototype.hasOwnProperty.call(
-                  formErrors,
-                  'attended_csf_intro_workshop'
-                )
-                  ? VALIDATION_STATE_ERROR
-                  : null
-              }
-              errorText={formErrors.attended_csf_intro_workshop}
-              type="radio"
-              required={true}
-            />
-          </FormGroup>
+
+            <Label
+              className={getRequiredStyles('csf_courses_planned')}
+              text={coursesPlannedLabel}
+              errorMessage={formErrors.csf_courses_planned}
+              htmlFor="csf_courses_planned"
+            >
+              <fieldset id="csf_courses_planned">
+                {csfCourses.map(course => {
+                  let stateKey:
+                    | keyof Pick<EnrollFormState, 'explain_csf_course_other'>
+                    | undefined;
+                  if (
+                    course.includes(OTHER) &&
+                    formState.csf_courses_planned.includes(course)
+                  ) {
+                    stateKey = 'explain_csf_course_other';
+                  }
+                  return (
+                    <Fragment key={course}>
+                      <Checkbox
+                        size="s"
+                        name={course}
+                        label={course}
+                        checked={formState.csf_courses_planned.includes(course)}
+                        onChange={e =>
+                          handleChecked(
+                            'csf_courses_planned',
+                            course,
+                            e.target.checked
+                          )
+                        }
+                      />
+                      {stateKey && (
+                        <Label
+                          htmlFor={course}
+                          errorMessage={formErrors[stateKey]}
+                        >
+                          <textarea
+                            id={course}
+                            name={course}
+                            value={formState[stateKey]}
+                            onChange={e =>
+                              handleChange({
+                                [stateKey]: e.target.value,
+                              })
+                            }
+                            className={styles.textarea}
+                          />
+                        </Label>
+                      )}
+                    </Fragment>
+                  );
+                })}
+              </fieldset>
+            </Label>
+
+            <Label
+              className={getRequiredStyles('attended_csf_intro_workshop')}
+              text="Have you attended a CS Fundamentals Intro Workshop before?"
+              errorMessage={formErrors.attended_csf_intro_workshop}
+              htmlFor="attended_csf_intro_workshop"
+            >
+              <fieldset id="attended_csf_intro_workshop">
+                <RadioButtonsGroup
+                  onChange={e =>
+                    handleChange({
+                      attended_csf_intro_workshop: e.target.value,
+                    })
+                  }
+                  radioButtons={Object.keys(ATTENDED_CSF_COURSES_OPTIONS).map(
+                    option => ({
+                      value: option,
+                      name: option,
+                      label: option,
+                      size: 's',
+                    })
+                  )}
+                />
+              </fieldset>
+            </Label>
+          </>
         )}
 
       {props.collect_demographics && (
-        <div>
-          <ButtonList
-            id="previous_courses"
-            answers={previousCourses}
-            groupName="previous_courses"
-            label="Which computer science courses or activities have you taught in the past?"
-            onChange={handleChange}
-            selectedItems={formState.previous_courses}
-            validationState={
-              Object.prototype.hasOwnProperty.call(
-                formErrors,
-                'previous_courses'
-              )
-                ? VALIDATION_STATE_ERROR
-                : null
-            }
-            errorText={formErrors.previous_courses}
-            type="check"
-            columnCount={2}
-          />
-        </div>
+        <Label
+          className={getRequiredStyles('previous_courses')}
+          text="Which computer science courses or activities have you taught in
+                the past?"
+          errorMessage={formErrors.previous_courses}
+          htmlFor="previous_courses"
+        >
+          <fieldset id="previous_courses">
+            {previousCourses.map(course => (
+              <Checkbox
+                key={course}
+                size="s"
+                name={course}
+                label={course}
+                checked={formState.previous_courses.includes(course)}
+                onChange={e =>
+                  handleChecked('previous_courses', course, e.target.checked)
+                }
+              />
+            ))}
+          </fieldset>
+        </Label>
       )}
 
       {props.workshop_course === CSP &&
         props.workshop_subject ===
           SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS && (
-          <div>
-            <FieldGroup
+          <>
+            <TextField
               id="years_teaching"
+              name="years_teaching"
               label="Years Teaching (overall)"
-              type="number"
-              required={true}
-              onChange={handleChange}
-              validationState={
-                Object.prototype.hasOwnProperty.call(
-                  formErrors,
-                  'years_teaching'
-                )
-                  ? VALIDATION_STATE_ERROR
-                  : null
+              inputType="number"
+              onChange={e =>
+                handleChange({
+                  years_teaching: e.target.value,
+                })
               }
               errorMessage={formErrors.years_teaching}
+              className={getRequiredStyles('years_teaching')}
             />
-            <FieldGroup
+            <TextField
               id="years_teaching_cs"
+              name="years_teaching_cs"
               label="Years Teaching Computer Science"
-              type="number"
-              required={true}
-              onChange={handleChange}
-              validationState={
-                Object.prototype.hasOwnProperty.call(
-                  formErrors,
-                  'years_teaching_cs'
-                )
-                  ? VALIDATION_STATE_ERROR
-                  : null
+              inputType="number"
+              onChange={e =>
+                handleChange({
+                  years_teaching_cs: e.target.value,
+                })
               }
               errorMessage={formErrors.years_teaching_cs}
+              className={getRequiredStyles('years_teaching_cs')}
             />
-            <ButtonList
-              id="taught_ap_before"
-              groupName="taught_ap_before"
-              type="radio"
-              required
-              label={cspReturningTeachersTaughtAPLabel}
-              answers={cspReturningTeachersTaughtAPAnswers}
-              onChange={handleChange}
-              selectedItems={formState.taught_ap_before}
-              validationState={
-                Object.prototype.hasOwnProperty.call(
-                  formErrors,
-                  'taught_ap_before'
-                )
-                  ? VALIDATION_STATE_ERROR
-                  : null
-              }
-              errorText={formErrors.taught_ap_before}
-              suppressLineBreak={true}
-            />
-            <ButtonList
-              id="planning_to_teach_ap"
-              groupName="planning_to_teach_ap"
-              type="radio"
-              required
-              label={cspReturningTeachersPlanningAPLabel}
-              answers={cspReturningTeachersPlanningAPAnswers}
-              onChange={handleChange}
-              selectedItems={formState.planning_to_teach_ap}
-              validationState={
-                Object.prototype.hasOwnProperty.call(
-                  formErrors,
-                  'planning_to_teach_ap'
-                )
-                  ? VALIDATION_STATE_ERROR
-                  : null
-              }
-              errorText={formErrors.planning_to_teach_ap}
-              suppressLineBreak={true}
-            />
-          </div>
-        )}
 
-      <p>
+            <Label
+              className={getRequiredStyles('taught_ap_before')}
+              text={cspReturningTeachersTaughtAPLabel}
+              errorMessage={formErrors.taught_ap_before}
+              htmlFor="taught_ap_before"
+            >
+              <fieldset id="taught_ap_before">
+                <RadioButtonsGroup
+                  onChange={e =>
+                    handleChange({
+                      taught_ap_before: e.target.value,
+                    })
+                  }
+                  radioButtons={cspReturningTeachersTaughtAPAnswers.map(
+                    option => ({
+                      value: option,
+                      name: option,
+                      label: option,
+                      size: 's',
+                    })
+                  )}
+                />
+              </fieldset>
+            </Label>
+
+            <Label
+              className={getRequiredStyles('planning_to_teach_ap')}
+              text={cspReturningTeachersPlanningAPLabel}
+              errorMessage={formErrors.planning_to_teach_ap}
+              htmlFor="planning_to_teach_ap"
+            >
+              <fieldset id="planning_to_teach_ap">
+                <RadioButtonsGroup
+                  onChange={e =>
+                    handleChange({
+                      planning_to_teach_ap: e.target.value,
+                    })
+                  }
+                  radioButtons={cspReturningTeachersPlanningAPAnswers.map(
+                    option => ({
+                      value: option,
+                      name: option,
+                      label: option,
+                      size: 's',
+                    })
+                  )}
+                />
+              </fieldset>
+            </Label>
+          </>
+        )}
+      <Typography semanticTag="p" visualAppearance="body-four">
         Code.org works closely with local Regional Partners and Code.org
         facilitators to deliver the Professional Learning Program. By enrolling
         in this workshop, you are agreeing to allow Code.org to share
@@ -876,35 +1019,30 @@ export default function EnrollForm(props: EnrollFormProps) {
         partners - all information will be de-identified and aggregated. Our
         Regional Partners and facilitators are contractually obliged to treat
         this information with the same level of confidentiality as Code.org.
-      </p>
-      <Button
-        id="submit"
-        isIconOnly={false}
-        text={'Register'}
-        color={buttonColors.purple}
-        style={{color: 'white'}}
-        onClick={handleClickRegister}
-        disabled={isSubmitting}
-      />
+      </Typography>
       {Object.keys(formErrors).length > 0 && (
-        <p style={{color: color.bootstrap_v3_error_text}}>
-          Form errors found. Please check your responses above.
-        </p>
+        <Alert
+          id="form-errors"
+          type="danger"
+          text="Form errors found. Please check your responses above."
+        />
       )}
       {submissionErrorMessage && (
-        <Alert bsStyle="danger" style={{marginTop: 10}}>
-          <p>
-            Sorry, we were unable to enroll you in this workshop because
-            {' ' + submissionErrorMessage}. Please double check your responses,
-            and if the problem persists, contact{' '}
-            <a href="mailto:support@code.org">support@code.org</a>.
-          </p>
-        </Alert>
+        // TODO: use mailto link once Alert DSCO accepts jsx
+        <Alert
+          type="danger"
+          text={`Sorry, we were unable to enroll you in this workshop: ${submissionErrorMessage}. Please double check your responses, and if the problem persists, contact support@code.org`}
+        />
       )}
-      <br />
-      <br />
-      <br />
-      <br />
+      <div>
+        <Button
+          id="submit"
+          onClick={handleClickRegister}
+          disabled={isSubmitting}
+          isPending={isSubmitting}
+          text="Register"
+        />
+      </div>
     </form>
   );
 }

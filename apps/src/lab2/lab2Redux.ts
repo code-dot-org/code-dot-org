@@ -13,10 +13,15 @@ import {
 } from '@reduxjs/toolkit';
 
 import {
+  getPublicCaching,
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
+import {
+  setUserRoleInCourse,
+  CourseRoles,
+} from '@cdo/apps/templates/currentUserRedux';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {getCurrentLevel} from '../code-studio/progressReduxSelectors';
@@ -47,6 +52,7 @@ import {
   LevelProperties,
   ProjectManagerStorageType,
   ProjectSources,
+  PartialUserAppOptions,
   Validation,
 } from './types';
 import {LifecycleEvent} from './utils/LifecycleNotifier';
@@ -105,6 +111,7 @@ export const setUpWithLevel = createAsyncThunk<
     levelId: number;
     scriptId?: number;
     levelPropertiesPath: string;
+    userAppOptionsPath?: string;
     channelId?: string;
     userId?: number;
     scriptLevelId?: string;
@@ -138,6 +145,20 @@ export const setUpWithLevel = createAsyncThunk<
     const {isProjectLevel, usesProjects} = levelProperties;
 
     Lab2Registry.getInstance().setAppName(levelProperties.appName);
+
+    // If we are cached, and there is a user app options path because we are in a script
+    // level, then make an async call to the server to find out whether the user is an
+    // instructor, and if they are, then update the user role.  This is needed for the
+    // teacher panel to appear in cached levels.
+    if (getPublicCaching()) {
+      if (payload.userAppOptionsPath) {
+        loadUserAppOptions(payload.userAppOptionsPath).then(result => {
+          if (result.isInstructor) {
+            thunkAPI.dispatch(setUserRoleInCourse(CourseRoles.Instructor));
+          }
+        });
+      }
+    }
 
     if (!usesProjects) {
       // If projects are disabled on this level, we can skip loading projects data.
@@ -544,6 +565,15 @@ async function loadLevelProperties(
     levelPropertiesPath,
     {},
     LevelPropertiesValidator
+  );
+  return response.value;
+}
+
+async function loadUserAppOptions(
+  userAppOptionsPath: string
+): Promise<PartialUserAppOptions> {
+  const response = await HttpClient.fetchJson<PartialUserAppOptions>(
+    userAppOptionsPath
   );
   return response.value;
 }

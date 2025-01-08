@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import uniq from 'lodash/uniq';
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 
@@ -15,6 +15,8 @@ export interface ChipsProps {
   name: string;
   /** Chips required state */
   required?: boolean;
+  /** Error to display if selection required and none made */
+  requiredMessageText?: string;
   /** Chips disabled state */
   disabled?: boolean;
   /** Chips text type (thickness) */
@@ -38,7 +40,7 @@ export interface ChipsProps {
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/ChipsTest.jsx)
+ * * (see apps/test/unit/componentLibrary/ChipsTest.tsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```
@@ -50,6 +52,7 @@ const Chips: React.FunctionComponent<ChipsProps> = ({
   label,
   name,
   required,
+  requiredMessageText,
   disabled,
   options,
   values,
@@ -64,6 +67,14 @@ const Chips: React.FunctionComponent<ChipsProps> = ({
   // the user to have to select at least one of the options to proceed.
   // You probably want `values` to start out as an empty array.
   const inputName = `${name}[]`;
+
+  useEffect(() => {
+    if (required && !requiredMessageText) {
+      console.warn(
+        'For usages of the Chips component where the "required" prop is set to true, a localized error message to display when no option is selected is needed.'
+      );
+    }
+  }, [required, requiredMessageText]);
 
   return (
     <div
@@ -88,12 +99,15 @@ const Chips: React.FunctionComponent<ChipsProps> = ({
               key={option.value}
               textThickness={textThickness}
               checked={values.includes(option.value)}
-              // The child's `required` prop will be set to `false` if the
-              // Group's `required` prop is falsy. It will be set to `true` if
-              // the Group's `required` prop is truthy AND none of the options
-              // are `checked`, or `false` if at least one of the options is
-              // `checked`.
+              // The `required` prop for each individual _Chip (option) is determined based on the `required` prop
+              // of the Chips (group):
+              // - If the Chips (group) `required` prop is `false`, all _Chip (option) `required` props will also
+              // be `false`.
+              // - If the Chips (group) `required` prop is `true`, the _Chip (option) `required` prop will be:
+              //    - `true` if none of the _Chip (options) are `checked`.
+              //    - `false` if at least one of the _Chip (options) is `checked`.
               required={required ? values.length === 0 : false}
+              requiredMessageText={requiredMessageText}
               disabled={disabled}
               onCheckedChange={checked => {
                 if (checked) {

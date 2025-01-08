@@ -22,6 +22,8 @@ import {isRosterDialogOpen} from './teacherSectionsReduxSelectors';
 const COMPLETED_EVENT = 'Section Setup Completed';
 const CANCELLED_EVENT = 'Section Setup Cancelled';
 
+const ARCHIVED_STATE = 'ARCHIVED';
+
 const ctaButtonStyle = {
   background: color.orange,
   color: color.white,
@@ -48,6 +50,12 @@ const ClassroomList = ({classrooms, onSelect, selectedId, rosterProvider}) =>
           {classroom.name}
           {classroom.section && (
             <span style={{color: '#aaa'}}> ({classroom.section})</span>
+          )}
+          {classroom.course_state === ARCHIVED_STATE && (
+            <span id="course-state" style={{color: color.bootstrap_error_text}}>
+              {' '}
+              - {classroom.course_state}
+            </span>
           )}
           <span style={{float: 'right'}}>
             {locale.code()}

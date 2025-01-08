@@ -16,7 +16,7 @@ markdown <<MARKDOWN
 ### **Key Charachteristics**
 - #### Displays data as stacked bars, where each segment represents a subcategory.
 - #### Effective for showing how different categories contribute to a whole across multiple groups.
-- #### Allows for comparison of multiple variables withing the same chart. 
+- #### Allows for comparison of multiple variables within the same chart. 
 
 ## Pie Charts
 
@@ -24,9 +24,9 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/db9dd8ab670745291de8b4f6cb3948ec-image-1728578111278.png" alt="pie chart" width="350px" style="border-radius:10px; float:right; margin: 0 0 0px 0px;">
 
-### **Key Charachteristics**
+### **Key Characteristics**
 - #### Displays data as slices of a circle, representing parts of a whole.
-- #### Effective for showing how categories compare to eachother within a single group.
+- #### Effective for showing how categories compare to each other within a single group.
 - #### Not ideal for comparing multiple variables simultaneously. 
 
 <div style="clear:both;"></div>

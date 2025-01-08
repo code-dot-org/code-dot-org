@@ -2,19 +2,12 @@
   require 'cdo/global_edition'
   return unless DCDO.get('global_edition_enabled', false)
 
-  country_code = request.country_code
-  ge_region = Cdo::GlobalEdition.country_region(country_code)
+  ge_region = Cdo::GlobalEdition.country_region(request.country_code)
   return if ge_region.nil? || ge_region == request.ge_region
 
   enabled_regions = DCDO.get('global_edition_region_switch_confirm_enabled_in', [])
   return unless enabled_regions.include?('all') || enabled_regions.include?(ge_region)
 
-  region_data = {
-    code: ge_region,
-    name: I18n.t(ge_region, scope: %i[global_edition regions]),
-    href: Cdo::GlobalEdition.region_change_url(request.fullpath, ge_region),
-  }
-
 #global-edition-region-switch-confirm-container
   %script{src: webpack_asset_path('js/global_edition/region_switch_confirm.js'),
-          data: {country: country_code.to_json, region: region_data.to_json}}
+          data: {code: ge_region.to_json, name: I18n.t(ge_region, scope: %i[global_edition regions]).to_json}}

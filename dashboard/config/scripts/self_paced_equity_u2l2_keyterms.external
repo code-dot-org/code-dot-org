@@ -1,0 +1,37 @@
+name 'self-paced-equity-U2L2-keyterms'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Implicit Bias and Stereotype Threat
+
+## Key Terms
+
+#### Let's engage with a few key terms you'll need to know to engage with the upcoming activities. The following definitions are new.
+
+<div style="background-color: #C6E3E7; border-radius: 20px; color: #000000; width: 95%; padding: 10px 10px 10px 10px; margin: 20px 0px 20px 0px"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
+
+* #### **Implicit bias:** Stereotypes, prejudices, or preferences that cause us to favor a person, thing, or group in a way that is deemed unfair. They are implicit attitudes, behaviors, words, or actions that we exhibit in our personal lives and in the workplace.
+* #### **Stereotype threat:** The risk of confirming negative stereotypes about an individual’s racial, ethnic, gender, or cultural group which can create high cognitive load and reduce academic focus and performance.</p></div>
+
+#### We'll cover **implicit bias** in the first part of this lesson, and **stereotype threat** in the second part. Both of these concepts will add to your understanding of building an inclusive computer science classroom.
+
+## Why Implicit Bias?
+
+<img src="https://images.code.org/cdefef55a8ca1f09b26f1ffa6136e2f1-image-1736137143446.19.02 PM.png" alt="Close up on a laptop displaying a Minecraft Hour of Code Tutorial." style="border-radius:20px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 20px 20px 20px 20px;">
+
+#### As a computer science teacher, you play a critical role in shaping how your students perceive themselves and the field of computer science. Implicit biases, if unexamined, can subtly influence your interactions, teaching strategies, and expectations for students. These biases might unintentionally limit opportunities for students from underrepresented groups, discouraging them from fully engaging with the subject or seeing themselves as future computer scientists.
+
+#### Consider how implicit bias can impact:
+
+* #### **Student Engagement**: Certain students may receive less encouragement or fewer opportunities to showcase their skills based on unconscious assumptions about their abilities.
+* #### **Curriculum Choices**: The examples and problems you choose to include in your lessons may reflect narrow perspectives or reinforce stereotypes.
+* #### **Classroom Culture**: A bias-aware approach fosters a more inclusive and welcoming environment, encouraging all students to feel like they belong and can succeed.
+
+___
+
+##### **Sources for Definitions:**
+
+* ##### <a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4GC0a" target="blank" rel="noopener noreferrer">Guide to Inclusive Computer Science Education</a>
+* ##### <a href="https://www.colorado.edu/center/teaching-learning/inclusivity/stereotype-threat'" target="blank" rel="noopener noreferrer">University of Colorado, Boulder Center for Teaching and Learning</a>
+MARKDOWN

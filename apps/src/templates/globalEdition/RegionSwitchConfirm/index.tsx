@@ -14,54 +14,39 @@ import i18n from '@cdo/locale';
 import './style.scss';
 
 interface RegionSwitchConfirmProps {
-  country: string;
-  region: {
-    code: string;
-    name: string;
-    href: string;
-  };
+  code: string; // Region code
+  name: string; // Region name
 }
 
 const LOCAL_STORAGE_KEY = 'prompted_ge_region';
 
 const RegionSwitchConfirm: React.FC<RegionSwitchConfirmProps> = ({
-  country,
-  region,
+  code,
+  name,
 }) => {
+  const [show, setShow] = useState(false);
+
   const reportEvent = useCallback(
-    (eventName: string, payload: object = {}) => {
-      analyticsReporter.sendEvent(
-        eventName,
-        {
-          country: country,
-          region: region.code,
-          ...payload,
-        },
-        PLATFORMS.STATSIG
-      );
+    (eventName: string) => {
+      analyticsReporter.sendEvent(eventName, {region: code}, PLATFORMS.STATSIG);
     },
-    [country, region]
+    [code]
   );
 
-  const [show, setShow] = useState(false);
-  const promptedRegion = tryGetLocalStorage(LOCAL_STORAGE_KEY, '');
-
   useEffect(() => {
-    setShow(region.code !== promptedRegion);
-  }, [region, promptedRegion]);
+    setShow(code !== tryGetLocalStorage(LOCAL_STORAGE_KEY, ''));
+  }, [code]);
 
   useEffect(() => {
     if (show) {
-      trySetLocalStorage(LOCAL_STORAGE_KEY, region.code);
+      trySetLocalStorage(LOCAL_STORAGE_KEY, code);
       reportEvent(EVENTS.GLOBAL_EDITION_REGION_SWITCH_CONFIRM_SHOWN);
     }
-  }, [show, region, reportEvent]);
+  }, [show, code, reportEvent]);
 
   const handleAccept = () => {
     setShow(false);
-    reportEvent(EVENTS.GLOBAL_EDITION_REGION_SWITCH_CONFIRM_ACCEPTED, {
-      page: region.href,
-    });
+    reportEvent(EVENTS.GLOBAL_EDITION_REGION_SWITCH_CONFIRM_ACCEPTED);
   };
 
   const handleReject = () => {
@@ -85,18 +70,15 @@ const RegionSwitchConfirm: React.FC<RegionSwitchConfirmProps> = ({
         <Heading1>{i18n.globalEdition_regionSwitchConfirm_title()}</Heading1>
 
         <SafeMarkdown
-          markdown={i18n.globalEdition_regionSwitchConfirm_text({
-            region: region.name,
-          })}
+          markdown={i18n.globalEdition_regionSwitchConfirm_text({region: name})}
         />
 
-        <form action={region.href} method="post">
+        <form action={window.location.href} method="post">
+          <input type="hidden" name="ge_region" value={code} />
           <Button
             id="global-edition-region-switch-confirm-accept"
             className="no-mc"
-            text={i18n.globalEdition_regionSwitchConfirm_accept({
-              region: region.name,
-            })}
+            text={i18n.globalEdition_regionSwitchConfirm_accept({region: name})}
             buttonTagTypeAttribute="submit"
             type="primary"
             size="l"

@@ -102,6 +102,7 @@ class AichatController < ApplicationController
         level_id: context[:currentLevelId],
         script_id: context[:scriptId],
         project_id: project_id,
+        request_id: event[:requestId], # Only present if ChatEvent is a ChatMessage, otherwise nil
         aichat_event: event.to_json
       )
     rescue StandardError => exception

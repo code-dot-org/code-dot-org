@@ -8677,6 +8677,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@xterm/addon-fit@npm:^0.10.0":
+  version: 0.10.0
+  resolution: "@xterm/addon-fit@npm:0.10.0"
+  peerDependencies:
+    "@xterm/xterm": ^5.0.0
+  checksum: 8edfad561c0d0316c5883cbe2ce56109f105a2b2bf53b71d5f8c788e656a3205c1093a659dddcf4025a459e4b7ff8e07b6c6a19815c8711deeded560de5f1893
+  languageName: node
+  linkType: hard
+
+"@xterm/addon-image@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "@xterm/addon-image@npm:0.8.0"
+  peerDependencies:
+    "@xterm/xterm": ^5.2.0
+  checksum: 852ea4482e0272bf74a505a9b54429a7d60775f0ee0b86bf207b5ea52a8f2e83ce2870415129fca82710a63a7ca3e233564d5dd050ebc49512d1d0113e5b5b1b
+  languageName: node
+  linkType: hard
+
+"@xterm/xterm@npm:^5.5.0":
+  version: 5.5.0
+  resolution: "@xterm/xterm@npm:5.5.0"
+  checksum: 393c1891b95fdd50d05e7a063abdc95a6643d2c45a4231637c23db90511426a95b1b56a5c4c91831121d2710aee9de97cf5e426016c589ca87dea8fff9a41b33
+  languageName: node
+  linkType: hard
+
 "@xtuc/ieee754@npm:^1.2.0":
   version: 1.2.0
   resolution: "@xtuc/ieee754@npm:1.2.0"
@@ -10091,6 +10116,9 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^7.16.1
     "@typescript-eslint/parser": ^7.16.1
     "@wojtekmaj/enzyme-adapter-react-17": ^0.8.0
+    "@xterm/addon-fit": ^0.10.0
+    "@xterm/addon-image": ^0.8.0
+    "@xterm/xterm": ^5.5.0
     acorn-import-assertions: ^1.9.0
     aws-sdk: 2.1231.0
     babel-loader: ^9.2.1

@@ -1,0 +1,41 @@
+<NetSim>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 42,
+  "created_at": "2024-12-20T16:08:28.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "skin": "netsim",
+    "instructions_important": "false",
+    "never_autoplay_video": "false",
+    "show_clients_in_lobby": "false",
+    "show_routers_in_lobby": "false",
+    "can_connect_to_clients": "false",
+    "can_connect_to_routers": "false",
+    "show_add_router_button": "false",
+    "show_log_browser_button": "false",
+    "message_granularity": "bits",
+    "automatic_receive": "false",
+    "broadcast_mode": "false",
+    "connected_routers": "false",
+    "show_hostname_in_graph": "false",
+    "show_add_packet_button": "false",
+    "show_packet_size_control": "false",
+    "show_pulse_rate_slider": "false",
+    "show_metronome": "false",
+    "show_bit_rate_control": "false",
+    "lock_bit_rate_control": "false",
+    "show_chunk_size_control": "false",
+    "lock_chunk_size_control": "false",
+    "show_router_bandwidth_control": "false",
+    "show_router_memory_control": "false",
+    "show_dns_mode_control": "false",
+    "default_dns_mode": "none",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-12-20 16:08:41 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</NetSim>
