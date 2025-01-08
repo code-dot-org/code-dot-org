@@ -332,6 +332,18 @@ export default class MusicPlayer {
     this.audioPlayer.stop();
   }
 
+  getLevel() {
+    return this.audioPlayer.getLevel();
+  }
+
+  toggleLimiter(enabled: boolean) {
+    this.audioPlayer.toggleLimiter(enabled);
+  }
+
+  setLimiterThreshold(threshold: number) {
+    this.audioPlayer.setLimiterThreshold(threshold);
+  }
+
   // Returns the current playhead position, in floating point for an exact position,
   // 1-based, and scaled to measures.
   // Returns 0 if music is not playing.

@@ -95,6 +95,10 @@ export interface AudioPlayer {
     event: PlayerEvent,
     callback: (payload?: string) => void
   ): void;
+
+  getLevel(): number;
+  toggleLimiter(enabled: boolean): void;
+  setLimiterThreshold(threshold: number): void;
 }
 
 /** A single sound played on the timeline */

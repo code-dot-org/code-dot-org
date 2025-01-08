@@ -75,6 +75,18 @@ class SamplePlayerWrapper implements AudioPlayer {
     console.warn('playSequenceImmediately not supported');
   }
 
+  getLevel() {
+    return 0;
+  }
+
+  toggleLimiter() {
+    // no-op
+  }
+
+  setLimiterThreshold(threshold: number): void {
+    // no-op
+  }
+
   cancelPreviews(): void {
     this.samplePlayer.cancelPreviews();
   }

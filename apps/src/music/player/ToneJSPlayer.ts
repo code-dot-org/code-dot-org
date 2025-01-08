@@ -1,12 +1,15 @@
 import {
   Filter,
   GrainPlayer,
+  Limiter,
+  Meter,
   PingPongDelay,
   Player,
   Sampler,
   ToneAudioNode,
   Transport,
   getContext,
+  getDestination,
   start,
 } from 'tone';
 import {BarsBeatsSixteenths} from 'tone/build/esm/core/type/Units';
@@ -51,6 +54,9 @@ class ToneJSPlayer implements AudioPlayer {
   };
   private loadingInstruments: {[instrumentName: string]: boolean};
   private currentSequencePreviewTimer: NodeJS.Timeout | null;
+  private useLimiter: boolean;
+  private limiter: Limiter;
+  private meter: Meter;
 
   constructor(
     bpm = DEFAULT_BPM,
@@ -66,6 +72,9 @@ class ToneJSPlayer implements AudioPlayer {
     this.registeredCallbacks = {};
     this.loadingInstruments = {};
     this.currentSequencePreviewTimer = null;
+    this.meter = new Meter({normalRange: true}).toDestination();
+    this.limiter = new Limiter(-20).connect(this.meter);
+    this.useLimiter = false;
     this.generateEffectBusses();
   }
 
@@ -135,7 +144,7 @@ class ToneJSPlayer implements AudioPlayer {
     // Create a separate sampler for each set of effects
     const effectsSamplers: {[effectsKey: string]: Sampler} = {
       // Default Sampler without effects
-      [EMPTY_EFFECTS_KEY]: new Sampler(urls).toDestination(),
+      [EMPTY_EFFECTS_KEY]: this.toOutput(new Sampler(urls)),
     };
     for (const keyString of Object.keys(this.effectBusses)) {
       const sampler = new Sampler(urls);
@@ -145,7 +154,7 @@ class ToneJSPlayer implements AudioPlayer {
 
     this.samplers[instrumentName] = effectsSamplers;
     // Create a separate sampler without effects for previews
-    this.previewSamplers[instrumentName] = new Sampler(urls).toDestination();
+    this.previewSamplers[instrumentName] = this.toOutput(new Sampler(urls));
     for (const callback of this.registeredCallbacks['InstrumentLoaded'] || []) {
       callback(instrumentName);
     }
@@ -186,11 +195,9 @@ class ToneJSPlayer implements AudioPlayer {
       ? 1
       : Transport.bpm.value / sample.originalBpm;
 
-    const player = this.createPlayer(
-      buffer,
-      playbackRate,
-      sample.pitchShift
-    ).toDestination();
+    const player = this.toOutput(
+      this.createPlayer(buffer, playbackRate, sample.pitchShift)
+    );
 
     player.onstop = () => {
       player.dispose();
@@ -294,7 +301,7 @@ class ToneJSPlayer implements AudioPlayer {
         player.volume.value = sample.effects.volume === 'low' ? -9 : -4;
       }
     } else {
-      player.toDestination();
+      this.toOutput(player);
     }
 
     player
@@ -308,6 +315,8 @@ class ToneJSPlayer implements AudioPlayer {
       () => onSampleStart(sample.id),
       this.playbackTimeToTransportTime(sample.playbackPosition)
     );
+
+    console.log('GAIN' + getDestination().output.gain.value);
   }
 
   scheduleSamplerSequence({instrument, events, effects}: SamplerSequence) {
@@ -350,6 +359,22 @@ class ToneJSPlayer implements AudioPlayer {
     Transport.cancel();
     Transport.stop();
     this.stopAllPlayers();
+  }
+
+  getLevel() {
+    const level = this.meter.getValue();
+    if (typeof level === 'number') {
+      return level;
+    }
+    return level[0];
+  }
+
+  toggleLimiter(enabled: boolean) {
+    this.useLimiter = enabled;
+  }
+
+  setLimiterThreshold(threshold: number) {
+    this.limiter.threshold.value = threshold;
   }
 
   cancelPendingEvents() {
@@ -447,7 +472,7 @@ class ToneJSPlayer implements AudioPlayer {
 
       if (firstNode && lastNode) {
         this.effectBusses[generateEffectsKeyString(effects)] = firstNode;
-        lastNode.toDestination();
+        this.toOutput(lastNode);
       }
     });
   }
@@ -457,7 +482,15 @@ class ToneJSPlayer implements AudioPlayer {
     if (this.effectBusses[key]) {
       node.connect(this.effectBusses[key]);
     } else {
-      node.toDestination();
+      this.toOutput(node);
+    }
+  }
+
+  private toOutput<T extends ToneAudioNode>(node: T) {
+    if (this.useLimiter) {
+      return node.connect(this.limiter);
+    } else {
+      return node.connect(this.meter);
     }
   }
 }

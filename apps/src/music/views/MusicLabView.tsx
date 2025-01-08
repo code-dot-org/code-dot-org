@@ -33,6 +33,7 @@ import usePlaybackUpdate from './hooks/usePlaybackUpdate';
 import useUpdateAnalytics from './hooks/useUpdateAnalytics';
 import useUpdatePlayer from './hooks/useUpdatePlayer';
 import MusicPlayView from './MusicPlayView';
+import Output from './Output';
 import PackDialog from './PackDialog';
 import PackDialog2 from './PackDialog2';
 import Timeline from './Timeline';
@@ -220,6 +221,16 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     [hideHeaders, onInstructionsTextClick]
   );
 
+  const getLevel = useCallback(() => player.getLevel(), [player]);
+  const toggleLimiter = useCallback(
+    (enabled: boolean) => player.toggleLimiter(enabled),
+    [player]
+  );
+  const setLimiterThreshold = useCallback(
+    (threshold: number) => player.setLimiterThreshold(threshold),
+    [player]
+  );
+
   const renderPlayArea = useCallback(
     (timelineAtTop: boolean) => {
       return (
@@ -262,10 +273,33 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               <Timeline />
             </PanelContainer>
           </div>
+          {AppConfig.getValue('show-output') === 'true' && (
+            <div id="output-area" className={moduleStyles.outputArea}>
+              <PanelContainer
+                id="output"
+                headerContent="Output"
+                hideHeaders={hideHeaders}
+              >
+                <Output
+                  getOutputValue={getLevel}
+                  toggleLimiter={toggleLimiter}
+                  setLimiterThreshold={setLimiterThreshold}
+                />
+              </PanelContainer>
+            </div>
+          )}
         </div>
       );
     },
-    [setPlaying, playTrigger, hasTrigger, hideHeaders]
+    [
+      setPlaying,
+      playTrigger,
+      hasTrigger,
+      hideHeaders,
+      getLevel,
+      toggleLimiter,
+      setLimiterThreshold,
+    ]
   );
 
   const showAdvancedControls =

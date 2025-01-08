@@ -1,0 +1,145 @@
+@import 'color.scss';
+
+.container {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  height: 100%;
+  background-color: $neutral_dark;
+}
+
+.meter {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.bars {
+  display: flex;
+  flex-direction: column;
+  width: 20px;
+  height: 100%;
+}
+
+%zone {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: $neutral_light;
+}
+
+%fill {
+  transition: height 0.1s ease;
+}
+
+.clipZone,
+.warningZone {
+  @extend %zone;
+  border-bottom: 1px dashed $neutral_dark;
+  flex: calc(1 / 6);
+}
+
+.clipZone {
+  border-radius: 2px 2px 0 0;
+}
+
+.clipFill {
+  @extend %fill;
+  background-color: red;
+}
+
+.warningFill {
+  @extend %fill;
+  background-color: orange;
+}
+
+.safeZone {
+  @extend %zone;
+  border-radius: 0 0 2px 2px;
+  flex: calc(2 / 3);
+}
+
+.safeFill {
+  @extend %fill;
+  background-color: green;
+}
+
+.readout {
+  position: relative;
+  width: 50px;
+}
+
+.readoutValue {
+  position: absolute;
+  color: $neutral_light;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  align-items: center;
+  font-size: 10px;
+  background-color: green;
+  border-radius: 2px;
+  padding: 0 2px;
+
+  &Warning {
+    background-color: orange;
+  }
+
+  &Clip {
+    background-color: red;
+  }
+}
+
+.marks {
+  position: relative;
+  width: 30px;
+  color: $neutral_gray10;
+  font-size: 10px;
+}
+
+%mark {
+  position: absolute;
+  right: 0;
+}
+
+.warningMark {
+  @extend %mark;
+  top: calc(30% - 3px);
+}
+
+.clipMark {
+  @extend %mark;
+  top: calc(15% - 3px);
+}
+
+.maxMark {
+  @extend %mark;
+  top: -3px;
+}
+
+.limiterArea {
+  padding: 8px;
+  background-color: $neutral_light;
+  border-radius: 4px;
+  border: 2px solid $orange;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  &Disabled {
+    background-color: $neutral_dark30;
+  }
+}
+
+.limiterThreshold {
+  width: auto;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+
+  input {
+    width: auto;
+    height: auto;
+  }
+}
