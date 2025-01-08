@@ -129,7 +129,7 @@ export function getActiveFileForProject(project: MultiFileSource) {
   // (or files without a type, which default to starter files).
   const visibleFiles = files.filter(
     f =>
-      isStartMode ||
+      (isStartMode && f.type !== ProjectFileType.SYSTEM_SUPPORT) ||
       !f.type ||
       f.type === ProjectFileType.STARTER ||
       f.type === ProjectFileType.LOCKED_STARTER

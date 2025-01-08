@@ -7,8 +7,15 @@ import {
   getAppOptionsEditingExemplar,
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
-import {ProjectSources} from '@cdo/apps/lab2/types';
+import {
+  MultiFileSource,
+  ProjectFileType,
+  ProjectSources,
+} from '@cdo/apps/lab2/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {getNextFileId} from '../codebridgeContext';
+import {DEFAULT_FOLDER_ID} from '../constants';
 
 /**
  * Custom hook that determines the initial sources for the current level.
@@ -41,14 +48,39 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
     state => state.lab.levelProperties?.validationFile
   );
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  const serializedMaze = useAppSelector(
+    state => state.lab.levelProperties?.serializedMaze
+  );
 
   // We memoize these objects so that they don't cause an unexpected re-render.
   const projectStartSource: ProjectSources | undefined = useMemo(() => {
+    const combinedStartSources: MultiFileSource | undefined =
+      levelStartSource || (defaultSources.source as MultiFileSource);
+    if (serializedMaze) {
+      const mazeFileId = getNextFileId(
+        Object.values(combinedStartSources.files)
+      );
+      const mazeFile = {
+        id: mazeFileId,
+        name: 'serialized_maze.txt',
+        contents: JSON.stringify(serializedMaze),
+        type: ProjectFileType.SYSTEM_SUPPORT,
+        language: 'txt',
+        folderId: DEFAULT_FOLDER_ID,
+      };
+      combinedStartSources.files[mazeFileId] = mazeFile;
+    }
     const source = isStartMode
-      ? combineStartSourcesAndValidation(levelStartSource, validationFile)
-      : levelStartSource;
+      ? combineStartSourcesAndValidation(combinedStartSources, validationFile)
+      : combinedStartSources;
     return source ? {source} : undefined;
-  }, [levelStartSource, validationFile, isStartMode]);
+  }, [
+    levelStartSource,
+    defaultSources.source,
+    serializedMaze,
+    isStartMode,
+    validationFile,
+  ]);
   const templateStartSource: ProjectSources | undefined = useMemo(
     () => (levelTemplateSource ? {source: levelTemplateSource} : undefined),
     [levelTemplateSource]
