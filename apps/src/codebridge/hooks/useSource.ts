@@ -1,7 +1,4 @@
-import {
-  combineStartSourcesAndValidation,
-  prepareSourceForLevelbuilderSave,
-} from '@codebridge/utils';
+import {prepareSourceForLevelbuilderSave} from '@codebridge/utils';
 import {debounce, isEqual} from 'lodash';
 import {useEffect, useMemo, useRef} from 'react';
 
@@ -37,13 +34,18 @@ export const useSource = (defaultSources: ProjectSources) => {
   const source = projectSource?.source as MultiFileSource;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const isEditingExemplarMode = getAppOptionsEditingExemplar();
-  const initialSources = useInitialSources(defaultSources);
-  const levelStartSource = useAppSelector(
-    state => state.lab.levelProperties?.startSources
-  );
-  const templateStartSource = useAppSelector(
-    state => state.lab.levelProperties?.templateSources
-  );
+  const {
+    initialSources,
+    levelStartSource,
+    templateStartSource,
+    parsedDefaultSources,
+  } = useInitialSources(defaultSources);
+  console.log({
+    initialSources,
+    levelStartSource,
+    templateStartSource,
+    parsedDefaultSources,
+  });
   const previousLevelIdRef = useRef<number | null>(null);
   const previousInitialSources = useRef<ProjectSources | null>(null);
   const validationFile = useAppSelector(
@@ -104,36 +106,27 @@ export const useSource = (defaultSources: ProjectSources) => {
     [currentLevel, debouncedProgressReport, dispatch, hasEdited]
   );
 
-  const setSource = useMemo(
-    () => (newSource: MultiFileSource) => {
+  const setProject = useMemo(
+    () => (newProject: ProjectSources) => {
+      const newSource = newProject.source as MultiFileSource;
       checkForFirstEdit(newSource);
       localProjectRef.current = newSource;
-      setSourceHelper({source: newSource});
+      setSourceHelper(newProject);
     },
     [setSourceHelper, checkForFirstEdit]
   );
 
   const startSource = useMemo(() => {
-    // When resetting in start mode, we always use the level start source
-    // combined with the validation file.
-    let finalLevelStartSource = levelStartSource;
-    if (isStartMode) {
-      finalLevelStartSource = levelStartSource
-        ? combineStartSourcesAndValidation(levelStartSource, validationFile)
-        : undefined;
-    }
-    return {
-      source:
-        (!isStartMode && templateStartSource) ||
-        finalLevelStartSource ||
-        (defaultSources.source as MultiFileSource),
-    };
+    return (
+      (!isStartMode && templateStartSource) ||
+      levelStartSource ||
+      parsedDefaultSources
+    );
   }, [
-    defaultSources.source,
     isStartMode,
     templateStartSource,
     levelStartSource,
-    validationFile,
+    parsedDefaultSources,
   ]);
 
   useEffect(() => {
@@ -184,5 +177,12 @@ export const useSource = (defaultSources: ProjectSources) => {
     return projectVersionRef.current;
   }, [source]);
 
-  return {source, setSource, startSource, projectVersion, validationFile};
+  return {
+    source,
+    setProject,
+    startSource,
+    projectVersion,
+    validationFile,
+    labConfig: projectSource?.labConfig,
+  };
 };

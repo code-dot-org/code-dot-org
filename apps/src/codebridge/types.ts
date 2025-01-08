@@ -57,7 +57,7 @@ export type ConfigType = {
 export type ProjectType = MultiFileSource;
 export type SourceType = ProjectSources;
 
-export type SetProjectFunction = (project: ProjectType) => void;
+export type SetProjectFunction = (project: SourceType) => void;
 export type SetConfigFunction = (project: ConfigType) => void;
 export type ResetProjectFunction = () => void;
 export type OnRunFunction = (

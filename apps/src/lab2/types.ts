@@ -61,9 +61,11 @@ export interface ProjectSources {
   // Source code can either be a string or a nested JSON object (for multi-file).
   source: string | MultiFileSource;
   // Optional lab-specific configuration for this project
-  labConfig?: {[key: string]: {[key: string]: string}};
+  labConfig?: LabConfig;
   // Add other properties (animations, html, etc) as needed.
 }
+
+export type LabConfig = {[key: string]: {[key: string]: string}};
 
 // We will eventually make this a union type to include other source types.
 export type Source = BlocklySource | MultiFileSource;

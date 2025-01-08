@@ -106,8 +106,14 @@ const defaultConfig: ConfigType = {
 
 const PythonlabView: React.FunctionComponent = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setSource, startSource, projectVersion, validationFile} =
-    useSource(defaultProject);
+  const {
+    source,
+    setProject,
+    startSource,
+    projectVersion,
+    validationFile,
+    labConfig,
+  } = useSource(defaultProject);
   const isPredictLevel = useAppSelector(
     state => state.lab.levelProperties?.predictSettings?.isPredictLevel
   );
@@ -118,6 +124,8 @@ const PythonlabView: React.FunctionComponent = () => {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
+
+  console.log({labConfigInView: labConfig});
 
   useEffect(() => {
     if (progressManager && appName === 'pythonlab') {
@@ -178,12 +186,13 @@ const PythonlabView: React.FunctionComponent = () => {
         <Codebridge
           project={source}
           config={config}
-          setProject={setSource}
+          setProject={setProject}
           setConfig={setConfig}
           startSource={startSource}
           onRun={onRun}
           onStop={stopPythonCode}
           projectVersion={projectVersion}
+          labConfig={labConfig}
         />
       )}
     </div>
