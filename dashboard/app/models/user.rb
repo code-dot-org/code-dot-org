@@ -537,7 +537,7 @@ class User < ApplicationRecord
   # Relationships (sections_as_students/followeds/teachers) from being a
   # student.
   has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id', dependent: :destroy
-  has_many :sections_as_student, -> {where.not(participant_type: :teacher)}, through: :followeds, source: :section
+  has_many :sections_as_student, through: :followeds, source: :section
   has_many :teachers, through: :sections_as_student, source: :instructors
 
   belongs_to :secret_picture, optional: true
@@ -2320,7 +2320,8 @@ class User < ApplicationRecord
     if student? # upgrading to teacher
       # Requires ability to edit email because upgrade requires adding a cleartext email address.
       # Students in sections cannot edit user type because teacher/school owns the student's data.
-      can_edit_email? && sections_as_student.empty?
+      non_teacher_sections = sections_as_student.reject {|section| section.participant_type == Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher}
+      can_edit_email? && non_teacher_sections.empty?
     else # downgrading to student
       # Teachers with sections cannot downgrade because our validations require sections
       # to be taught by teachers.
