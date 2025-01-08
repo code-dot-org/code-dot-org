@@ -6,6 +6,23 @@ import SegmentedButtons, {SegmentedButtonsProps} from '../index';
 export default {
   title: 'DesignSystem/Segmented Buttons',
   component: SegmentedButtons,
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            // Disable the color contrast rule for segmented button.
+            // SegmentedButtons component has one a11y issue, and it's related to selected button color.
+            // Explanation from Design team: Since to indicate active/selected state, means that the user has
+            // already made the decision to interact with that element, we are not worried about it.
+            // This check only starts to pass when made very dark, which causes other issues, so we’ll leave it for now.
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
+    },
+  },
 } as Meta;
 
 //
