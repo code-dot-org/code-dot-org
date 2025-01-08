@@ -95,7 +95,7 @@ export function prepareSourceForLevelbuilderSave(source?: MultiFileSource) {
  * @returns: MultiFileSource with the validation file added to the files, if it exists.
  */
 export function combineStartSourcesAndValidation(
-  source?: MultiFileSource,
+  source: MultiFileSource,
   validationFile?: ProjectFile
 ) {
   let returnValue = source;

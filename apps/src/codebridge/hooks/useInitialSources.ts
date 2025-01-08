@@ -1,3 +1,5 @@
+import {getNextFileId} from '@codebridge/codebridgeContext';
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {combineStartSourcesAndValidation} from '@codebridge/utils';
 import {useMemo} from 'react';
 
@@ -13,9 +15,6 @@ import {
   ProjectSources,
 } from '@cdo/apps/lab2/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {getNextFileId} from '../codebridgeContext';
-import {DEFAULT_FOLDER_ID} from '../constants';
 
 /**
  * Custom hook that determines the initial sources for the current level.
@@ -51,10 +50,11 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
   const serializedMaze = useAppSelector(
     state => state.lab.levelProperties?.serializedMaze
   );
+  const miniApp = useAppSelector(state => state.lab.levelProperties?.miniApp);
 
   // We memoize these objects so that they don't cause an unexpected re-render.
   const projectStartSource: ProjectSources | undefined = useMemo(() => {
-    const combinedStartSources: MultiFileSource | undefined =
+    const combinedStartSources: MultiFileSource =
       levelStartSource || (defaultSources.source as MultiFileSource);
 
     // If we have a serialized maze, we need to add it to the project sources so
@@ -78,13 +78,16 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
     const source = isStartMode
       ? combineStartSourcesAndValidation(combinedStartSources, validationFile)
       : combinedStartSources;
-    return source ? {source} : undefined;
+
+    const labConfig = miniApp ? {miniApp: {name: miniApp}} : undefined;
+    return {source, labConfig};
   }, [
     levelStartSource,
-    defaultSources.source,
+    defaultSources,
     serializedMaze,
     isStartMode,
     validationFile,
+    miniApp,
   ]);
   const templateStartSource: ProjectSources | undefined = useMemo(
     () => (levelTemplateSource ? {source: levelTemplateSource} : undefined),

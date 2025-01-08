@@ -118,10 +118,9 @@ export const useSource = (defaultSources: ProjectSources) => {
     // combined with the validation file.
     let finalLevelStartSource = levelStartSource;
     if (isStartMode) {
-      finalLevelStartSource = combineStartSourcesAndValidation(
-        levelStartSource,
-        validationFile
-      );
+      finalLevelStartSource = levelStartSource
+        ? combineStartSourcesAndValidation(levelStartSource, validationFile)
+        : undefined;
     }
     return {
       source:
