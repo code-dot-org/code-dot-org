@@ -41,7 +41,7 @@ export async function unpublish(channel: Channel): Promise<Response> {
 
 export async function fetchAbuseScore(channelId: string): Promise<number> {
   const {value} = await HttpClient.fetchJson<{abuse_score: number}>(
-    `/v3/channels/${channelId}/abuse`
+    `${rootUrl}/${channelId}/abuse`
   );
   return value.abuse_score;
 }
