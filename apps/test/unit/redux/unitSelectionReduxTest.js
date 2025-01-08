@@ -26,6 +26,17 @@ describe('unitSelectionRedux', () => {
       expect(getSelectedScriptName(state)).toEqual('csd1-2018');
     });
 
+    it('returns unitName if script selected but no coursesWithProgress', () => {
+      const state = {
+        unitSelection: {
+          scriptId: 5,
+          unitName: 'csp1-2024',
+          coursesWithProgress: [],
+        },
+      };
+      expect(getSelectedScriptName(state)).toEqual('csp1-2024');
+    });
+
     it('returns null if no script is selected', () => {
       const state = {
         unitSelection: {
@@ -33,7 +44,7 @@ describe('unitSelectionRedux', () => {
           coursesWithProgress: fakeCoursesWithProgress,
         },
       };
-      expect(getSelectedScriptName(state)).toEqual(null);
+      expect(getSelectedScriptName(state)).toBeUndefined();
     });
   });
 
