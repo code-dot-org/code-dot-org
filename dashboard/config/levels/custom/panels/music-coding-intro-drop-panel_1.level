@@ -1,0 +1,40 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-01-07T23:37:01.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "**Wow!** You are doing great: writing code, using loops, sequencing sounds, and layering them too.",
+        "imageUrl": "https://images.code.org/d98399ec84dc64988b807b100623d58e-Lesson 3 Level 9.png",
+        "key": "music-coding-intro-drop-panel-0f010c7c-b724-44cd-a2a7-4066da5c4751",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "Next, **take your music to the next level** by building sounds up to a beat drop!",
+        "imageUrl": "",
+        "key": "music-coding-intro-drop-panel-3e22b9ae-97fc-4cd2-8ddd-492ef624dcf7"
+      },
+      {
+        "text": "**A beat drop is a transition** that grabs your attention and creates a moment listeners will always remember.",
+        "imageUrl": "https://images.code.org/e1e5209fd96b1bd13d76542d0af5bca5-dance.jpg",
+        "key": "music-coding-intro-drop-panel-59786f5a-bf3f-4878-be20-35e07c0ed472",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "**Now it’s your turn!** Start by remixing some code, then create your own by layering and timing sounds!",
+        "imageUrl": "",
+        "key": "music-coding-intro-drop-panel-f7e711ab-365f-4a0b-aaff-5164d525d328",
+        "layout": "text-top-center"
+      }
+    ],
+    "name_suffix": "_1"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:01.373+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-drop-panel\\\"\"],\"cloned_from\":\"music-coding-intro-drop-panel\"}]"
+}]]></config>
+</Panels>

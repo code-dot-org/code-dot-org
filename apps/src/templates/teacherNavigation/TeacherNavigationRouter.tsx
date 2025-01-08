@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
+import {useDispatch} from 'react-redux';
 import {
   Route,
   Outlet,
@@ -6,12 +7,15 @@ import {
   createBrowserRouter,
   RouterProvider,
   Navigate,
+  useLocation,
   generatePath,
+  useParams,
 } from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
 import TeacherUnitOverview from '@cdo/apps/code-studio/components/progress/TeacherUnitOverview';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
+import {sectionDoesNotHaveNewData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import TeacherCourseOverview from '../courseOverview/TeacherCourseOverview';
@@ -32,6 +36,7 @@ import TextResponses from '../textResponses/TextResponses';
 import ElementOrEmptyPage from './ElementOrEmptyPage';
 import LessonMaterialsContainer from './lessonMaterials/LessonMaterialsContainer';
 import PageLayout from './PageLayout';
+import {asyncLoadSelectedSection} from './selectedSectionLoader';
 import TeacherNavigationBar from './TeacherNavigationBar';
 import {
   LABELED_TEACHER_NAVIGATION_PATHS,
@@ -43,6 +48,26 @@ import {
 import UnitCalendar from './UnitCalendar';
 
 import styles from './teacher-navigation.module.scss';
+
+// This component doesn't render anything but rather tracks
+// if new data needs to be reloaded.
+const PathChangeHandler: React.FC<{needsReload: boolean}> = ({needsReload}) => {
+  const dispatch = useDispatch();
+  const urlSectionId = useParams().sectionId;
+
+  const location = useLocation();
+  const previousLocation = useRef(location.pathname);
+
+  useEffect(() => {
+    if (needsReload && previousLocation.current !== location.pathname) {
+      asyncLoadSelectedSection(urlSectionId ? urlSectionId : '0', true);
+      dispatch(sectionDoesNotHaveNewData());
+    }
+    previousLocation.current = location.pathname;
+  }, [needsReload, location.pathname, urlSectionId, dispatch]);
+
+  return null;
+};
 
 interface TeacherNavigationRouterProps {
   studioUrlPrefix: string;
@@ -70,6 +95,11 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   const studentCount = useAppSelector(
     state => state.teacherSections.selectedStudents.length
   );
+
+  const needsReload = useAppSelector(
+    state => state.teacherSections.needsReload
+  );
+
   const providerName = useAppSelector(state =>
     sectionProviderName(state, state.teacherSections.selectedSectionId)
   );
@@ -79,10 +109,15 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       <Route
         path={TEACHER_NAVIGATION_SECTIONS_URL}
         element={
-          <div className={styles.pageAndSidebar}>
-            <TeacherNavigationBar />
-            <Outlet />
-          </div>
+          <>
+            <PathChangeHandler
+              needsReload={needsReload ? needsReload : false}
+            />
+            <div className={styles.pageAndSidebar}>
+              <TeacherNavigationBar />
+              <Outlet />
+            </div>
+          </>
         }
       >
         <Route path={SPECIFIC_SECTION_BASE_URL} element={<PageLayout />}>
@@ -266,6 +301,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       </Route>
     ),
     [
+      needsReload,
       sectionId,
       studentCount,
       providerName,

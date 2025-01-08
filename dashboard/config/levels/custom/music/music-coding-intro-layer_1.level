@@ -1,0 +1,191 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-01-07T23:37:01.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "long_instructions": "####<i class=\"fa-solid fa-timer\"></i> Timing the layers\r\n\r\nTo time these layers, there is a rest block before the vocals. \r\n- Add a play vocal block after the [rest](#clickable=id-left:play_rest_at_current_location_simple2) inside the [play sequential](#clickable=id-up-left:play_sounds_sequential) block.",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "validationTimeout": 3,
+      "library": "launch2024",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "mc_hammer_u_cant_touch_this",
+      "sounds": {
+        "mc_hammer_u_cant_touch_this": [
+          "stop_hammer_time",
+          "cant_touch_this",
+          "mymymy",
+          "break_it_down",
+          "i_told_ya",
+          "beat",
+          "main_loop"
+        ]
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together_no_next",
+                  "id": "play_sounds_together",
+                  "movable": false,
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "wlN~AgBJwU]b8VJ%..~w",
+                        "movable": false,
+                        "editable": false,
+                        "fields": {
+                          "sound": "mc_hammer_u_cant_touch_this/beat"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "F{+ztn7-)#{gXJii+DzB",
+                            "movable": false,
+                            "fields": {
+                              "sound": "mc_hammer_u_cant_touch_this/main_loop"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sounds_sequential",
+                                "id": "play_sounds_sequential",
+                                "movable": false,
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_rest_at_current_location_simple2",
+                                      "id": "play_rest_at_current_location_simple2",
+                                      "movable": false,
+                                      "fields": {
+                                        "rest_duration": "<field name=\"rest_duration\">1</field>"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "validations": [
+      {
+        "key": "music-coding-intro-layer_503877f4-1334-41b5-8ec5-bbe74da11625",
+        "message": "The timing of that sound works well! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_id",
+            "value": "mc_hammer_u_cant_touch_this/stop_hammer_time"
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-layer_40a470a2-1445-4cad-8fe6-fb3f31a0879c",
+        "message": "The timing of that sound works well! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_id",
+            "value": "mc_hammer_u_cant_touch_this/cant_touch_this"
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-layer_e11ffe25-7d6d-4f85-a6fb-44d7b9e454bb",
+        "message": "The timing of that sound works well! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_id",
+            "value": "mc_hammer_u_cant_touch_this/mymymy"
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-layer_bd31ef2b-20cc-4420-8190-231030787d88",
+        "message": "The timing of that sound works well! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_id",
+            "value": "mc_hammer_u_cant_touch_this/i_told_ya"
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-layer_b47a22a4-c041-405c-9986-8ca7620e5d0d",
+        "message": "The timing of that sound works well! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_id",
+            "value": "mc_hammer_u_cant_touch_this/break_it_down"
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-layer_29ee755e-32c4-4954-8ea3-d76928b84bc5",
+        "message": "Choose a lyric to play after the [rest](#clickable=id:play_rest_at_current_location_simple2). ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_id",
+            "value": "mc_hammer_u_cant_touch_this/beat"
+          }
+        ],
+        "callout": "play-sound-block---id:play_rest_at_current_location_simple2"
+      },
+      {
+        "key": "music-coding-intro-layer_8a7884b4-2ecf-4c29-aea7-295be5ee07d2",
+        "message": "Choose a lyric to play after the [rest](#clickable=id:play_rest_at_current_location_simple2). ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_id",
+            "value": "mc_hammer_u_cant_touch_this/main_loop"
+          }
+        ],
+        "callout": "play-sound-block---id:play_rest_at_current_location_simple2"
+      }
+    ],
+    "name_suffix": "_1",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:01.155+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-layer\\\"\"],\"cloned_from\":\"music-coding-intro-layer\"}]"
+}]]></config>
+  <blocks/>
+</Music>
