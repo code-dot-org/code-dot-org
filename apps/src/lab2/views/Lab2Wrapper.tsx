@@ -89,6 +89,9 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
   useLifecycleNotifier(LifecycleEvent.LevelChangeRequested, cancel);
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, cancel);
 
+  // Do not render lab if project is blocked and user is not a project validator.
+  const renderLab = !isProjectValidator ? !isBlocked : true;
+
   return (
     <ErrorBoundary
       fallback={<ErrorFallbackPage />}
@@ -108,7 +111,7 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
           isShareView && moduleStyles.labContainerShareView
         )}
       >
-        {children}
+        {renderLab && children}
         <Loading isLoading={isLoading} />
 
         {isPageError && <ErrorUI message={errorMessage} />}
