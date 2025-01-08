@@ -35,12 +35,14 @@ const RedirectDialog = ({
           onClick={handleClose}
           type="secondary"
           color="gray"
+          size="s"
         />
         <Button
           text={redirectButtonText}
           onClick={redirect}
           type="primary"
           color="purple"
+          size="s"
         />
       </DialogFooter>
     </BaseDialog>
