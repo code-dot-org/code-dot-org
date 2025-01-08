@@ -3,84 +3,35 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Course Details
+# Implicit Bias and Stereotype Threat
 
-## Who should take this course?
+## Key Terms
 
-#### In short, anyone who wants to take this course should! We think this will be a valuable learning experience for anyone looking to grow their skills in K-12 computer science education.
+#### Let's engage with a few key terms you'll need to know to engage with the upcoming activities. The following definitions are new.
 
-#### That said, there are a few audiences that we had in mind when creating this professional learning experience:
+<div style="background-color: #C6E3E7; border-radius: 20px; color: #000000; width: 95%; padding: 10px 10px 10px 10px; margin: 20px 0px 20px 0px"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
 
-<div style="margin-top: 20px; background-color: rgba(0, 119, 134, .2); border-radius:10px; padding: 20px 20px 10px 20px">
-<div style="display: flex; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<img src="https://images.code.org/727ed9a8ffd8dc0629063f0765a1c4cd-image-1732325087776.24.42 PM.png" alt="A teacher crosses their arms and smiles at the camera." style="width: 80px; height: 80px; border-radius: 50%; margin-right: 20px;">
-    <p style="font-size: 18px; line-height: 1.5;">I am a <b>new-to-computer science teacher</b> looking to learn instructional practices that are CS-specific and join a community of educators interested in improving belonging, inclusion, and representation of students in CS classrooms.
-	</p>
-</div>
+* #### **Implicit bias:** Stereotypes, prejudices, or preferences that cause us to favor a person, thing, or group in a way that is deemed unfair. They are implicit attitudes, behaviors, words, or actions that we exhibit in our personal lives and in the workplace.
+* #### **Stereotype threat:** The risk of confirming negative stereotypes about an individual’s racial, ethnic, gender, or cultural group which can create high cognitive load and reduce academic focus and performance.</p></div>
 
-<div style="display: flex; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<img src="https://images.code.org/618d413476692f58b5b4dacf834672fb-image-1732325518952.31.41 PM.png" alt="A teacher smiles at the camera." style="width:80px; height: 80px; border-radius: 50%; margin-right: 20px;">
-    <p style="font-size: 18px; line-height: 1.5;">I am a <b>veteran computer science teacher</b> looking to extend my practice and join an online community of educators interested in improving belonging, inclusion and representation of students in CS classrooms.
-	</p>
-</div>
+#### We'll cover **implicit bias** in the first part of this lesson, and **stereotype threat** in the second part. Both of these concepts will add to your understanding of building an inclusive computer science classroom.
 
-<div style="display: flex; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<img src="https://images.code.org/1c2d93d804416e25b5b9760889c267bb-image-1732325518954.31.24 PM.png" alt="An administrator smiles at the camera." style="width: 80px; height: 80px; border-radius: 50%; margin-right: 20px;">
-    <p style="font-size: 18px; line-height: 1.5;">I am a <b>school- or district-level leader</b> looking to find resources and activities for professional learning communities of educators.
-	</p>
-</div>
-</div>
+## Why Implicit Bias?
 
-## Through-Course Features
+<img src="https://images.code.org/cdefef55a8ca1f09b26f1ffa6136e2f1-image-1736137143446.19.02 PM.png" alt="Close up on a laptop displaying a Minecraft Hour of Code Tutorial." style="border-radius:20px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 20px 20px 20px 20px;">
 
-#### This course has several features are woven throughout. Engage with the ones that are relevant to you and your learning.
+#### As a computer science teacher, you play a critical role in shaping how your students perceive themselves and the field of computer science. Implicit biases, if unexamined, can subtly influence your interactions, teaching strategies, and expectations for students. These biases might unintentionally limit opportunities for students from underrepresented groups, discouraging them from fully engaging with the subject or seeing themselves as future computer scientists.
 
-### Look for the following icons to signal each feature:
+#### Consider how implicit bias can impact:
 
-<div style="margin-top: 20px; border-radius:10px; padding: 20px 20px 10px 20px">
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<div style="width: 90%;">
-		<p style="font-size: 18px; line-height: 1.5;">
-		<strong>Code.org Forum</strong> - Provides a discussion board to post ideas and learn from other educators. Engagement in the forum is optional, but highly encouraged!
-		</p>
-	</div>
-	<img src="https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png" alt="Code.org Forum Icon" style="width: 7%;">
-</div>
+* #### **Student Engagement**: Certain students may receive less encouragement or fewer opportunities to showcase their skills based on unconscious assumptions about their abilities.
+* #### **Curriculum Choices**: The examples and problems you choose to include in your lessons may reflect narrow perspectives or reinforce stereotypes.
+* #### **Classroom Culture**: A bias-aware approach fosters a more inclusive and welcoming environment, encouraging all students to feel like they belong and can succeed.
 
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<div style="width: 90%;">
-	<p style="font-size: 18px; line-height: 1.5;">
-    <strong><a href="code.org" target="blank" rel="noopener noreferrer"><mark>Activity Guide</mark></a></strong> - A central document with digital or physical versions of activities in this course. The Activity Guide provides an artifact of learning by the end of the course. 
-	</p>
-	</div>
-	<img src="https://images.code.org/b3228ff3b84aeb85ec00b47136800a8f-image-1731959884476.png" alt="Activity Guide Icon" style="width: 7%;">
-</div>
+___
 
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<div style="width: 90%;">
-		<p style="font-size: 18px; line-height: 1.5;">
-			<strong>Extension Activities</strong> - Provide reflections or activities for interested newbies or teachers who are experienced in equity to extend their learning.
-		</p>
-	</div>
-	<img src="https://images.code.org/dd51b2d288841f86773ca05520f6104c-image-1731961166553.png" alt="Extension Activities Icon" style="width: 7%;">
-</div>
+##### **Sources for Definitions:**
 
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<div style="width: 90%;">
-		<p style="font-size: 18px; line-height: 1.5;">
-			<strong>Resource Suggestions</strong> - These are key resources that participants can optionally research on their own to further guide their equity journey.
-		</p>
-	</div>
-	<img src="https://images.code.org/08d8da1158d67fd1ed7535c90b2b91bc-image-1731961007471.png" alt="Resource Suggestions Icon" style="width: 7%;">
-</div>
-
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<div style="width: 90%;">
-		<p style="font-size: 18px; line-height: 1.5;">
-			<strong>Curriculum Connection</strong> - When applicable, we will make a link to Code.org's curriculum to highlight equitable practices in CS.
-		</p>
-	</div>
-	<img src="https://images.code.org/86fb480e433c7feca6d9e6df4a73a062-image-1731961341605.png" alt="Curriculum Connection Icon" style="width: 7%;">
-</div>
-</div>
+* ##### <a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4GC0a" target="blank" rel="noopener noreferrer">Guide to Inclusive Computer Science Education</a>
+* ##### <a href="https://www.colorado.edu/center/teaching-learning/inclusivity/stereotype-threat'" target="blank" rel="noopener noreferrer">University of Colorado, Boulder Center for Teaching and Learning</a>
 MARKDOWN

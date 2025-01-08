@@ -1,3 +1,4 @@
+import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import {
   appendOutputImage,
   appendSystemMessage,
@@ -17,6 +18,7 @@ import {MATPLOTLIB_IMG_TAG} from './pythonHelpers/patches';
 import {PyodideMessage} from './types';
 
 let callbacks: {[key: number]: (event: PyodideMessage) => void} = {};
+const appName = 'pythonlab';
 
 const setUpPyodideWorker = () => {
   // @ts-expect-error because TypeScript does not like this syntax.
@@ -27,6 +29,7 @@ const setUpPyodideWorker = () => {
   worker.onmessage = event => {
     const {type, id, message} = event.data as PyodideMessage;
     const onSuccess = callbacks[id];
+    const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
     switch (type) {
       case 'sysout':
       case 'syserr':
@@ -35,12 +38,15 @@ const setUpPyodideWorker = () => {
         if (message.startsWith(MATPLOTLIB_IMG_TAG)) {
           // This is a matplotlib image, so we need to append it to the output
           const image = message.slice(MATPLOTLIB_IMG_TAG.length + 1);
+          consoleManager?.writeImage(image);
           getStore().dispatch(appendOutputImage(image));
           break;
         }
+        consoleManager?.writeConsoleMessage(message);
         getStore().dispatch(appendSystemOutMessage(message));
         break;
       case 'run_complete':
+        consoleManager?.writeSystemMessage('Program completed.', appName);
         getStore().dispatch(appendSystemMessage('Program completed.'));
         delete callbacks[id];
         onSuccess(event.data);
@@ -49,9 +55,11 @@ const setUpPyodideWorker = () => {
         getStore().dispatch(setAndSaveProjectSource({source: message}));
         break;
       case 'error':
+        consoleManager?.writeErrorMessage(parseErrorMessage(message));
         getStore().dispatch(appendErrorMessage(parseErrorMessage(message)));
         break;
       case 'system_error':
+        consoleManager?.writeSystemError(message, appName);
         getStore().dispatch(appendSystemError(message));
         Lab2Registry.getInstance()
           .getMetricsReporter()
@@ -114,6 +122,8 @@ const restartPyodideIfProgramIsRunning = () => {
   if (Object.keys(callbacks).length > 0) {
     pyodideWorker.terminate();
     pyodideWorker = setUpPyodideWorker();
+    const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
+    consoleManager?.writeSystemMessage('Program stopped.', appName);
     getStore().dispatch(appendSystemMessage('Program stopped.'));
     Lab2Registry.getInstance()
       .getMetricsReporter()

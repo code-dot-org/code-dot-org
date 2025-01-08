@@ -67,7 +67,7 @@
     },
     "new_name": null,
     "family_name": "aquatic",
-    "serialized_at": "2024-11-19 01:13:55 UTC",
+    "serialized_at": "2025-01-07 19:59:26 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -130,7 +130,8 @@
       "key": "9bd1489e-8bf5-45a9-828f-e8fab79d8331",
       "position": 2,
       "properties": {
-        "name": "Activity (30-45 minutes)"
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "9bd1489e-8bf5-45a9-828f-e8fab79d8331",
@@ -143,7 +144,8 @@
       "key": "09d516b6-38b7-42e0-900c-5d427b051b65",
       "position": 3,
       "properties": {
-        "name": "Wrap Up (5 minutes)"
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "09d516b6-38b7-42e0-900c-5d427b051b65",
@@ -156,7 +158,8 @@
       "key": "3b10ea82-0421-4583-a1cf-561c09edc727",
       "position": 4,
       "properties": {
-        "name": "Assessment (2 minutes)"
+        "duration": 5,
+        "name": "Assessment"
       },
       "seeding_key": {
         "lesson_activity.key": "3b10ea82-0421-4583-a1cf-561c09edc727",

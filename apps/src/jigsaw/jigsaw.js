@@ -13,7 +13,6 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var Provider = require('react-redux').Provider;
 
-var dom = require('../dom');
 var studioApp = require('../StudioApp').singleton;
 
 var JigsawVisualizationColumn = require('./JigsawVisualizationColumn');
@@ -181,22 +180,12 @@ Jigsaw.init = function (config) {
     Jigsaw.successListener = Blockly.mainBlockSpaceEditor.addChangeListener(
       function (evt) {
         // Only used by level1, in which the success criteria is clicking on the block
-        // Only effective with Google Blockly.
-        if (evt.type === 'click' && evt.blockId === 'block1') {
+        if (evt.type === 'click' && evt.blockId === 'jigsaw_1A') {
           Jigsaw.block1Clicked = true;
         }
         checkForSuccess();
       }
     );
-
-    // Only used by level1, in which the success criteria is clicking on the block
-    // Only effective with CDO Blockly.
-    var block1 = document.querySelectorAll("[block-id='1']")[0];
-    if (block1) {
-      dom.addMouseDownTouchEvent(block1, function () {
-        Jigsaw.block1Clicked = true;
-      });
-    }
   };
 
   studioApp().setPageConstants(config, {

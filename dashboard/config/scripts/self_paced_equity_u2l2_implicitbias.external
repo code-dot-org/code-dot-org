@@ -3,84 +3,59 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Course Details
+# Understanding Bias
 
-## Who should take this course?
+<img src="https://images.code.org/f594dacfac54123c40862bd1e687dc7b-image-1736137548868.25.46 PM.png" alt="A row of green school lockers." style="border-radius:20px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 0px 20px 20px 20px;">
 
-#### In short, anyone who wants to take this course should! We think this will be a valuable learning experience for anyone looking to grow their skills in K-12 computer science education.
+#### Educators engaged in equity work often ask themselves how they can become aware of their bias and interrupt those patterns of thinking. A team at Harvard attempted to answer that question with the Implicit Association Test.
 
-#### That said, there are a few audiences that we had in mind when creating this professional learning experience:
+## The Harvard Implicit Association Test
 
-<div style="margin-top: 20px; background-color: rgba(0, 119, 134, .2); border-radius:10px; padding: 20px 20px 10px 20px">
-<div style="display: flex; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<img src="https://images.code.org/727ed9a8ffd8dc0629063f0765a1c4cd-image-1732325087776.24.42 PM.png" alt="A teacher crosses their arms and smiles at the camera." style="width: 80px; height: 80px; border-radius: 50%; margin-right: 20px;">
-    <p style="font-size: 18px; line-height: 1.5;">I am a <b>new-to-computer science teacher</b> looking to learn instructional practices that are CS-specific and join a community of educators interested in improving belonging, inclusion, and representation of students in CS classrooms.
-	</p>
-</div>
+#### In 1998, three scientists from Harvard created the first version of the **Implicit Association Test (IAT)** - a test that <a href="https://implicit.harvard.edu/implicit/education.html" target="blank" rel="noopener noreferrer">promises the following</a>:
 
-<div style="display: flex; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<img src="https://images.code.org/618d413476692f58b5b4dacf834672fb-image-1732325518952.31.41 PM.png" alt="A teacher smiles at the camera." style="width:80px; height: 80px; border-radius: 50%; margin-right: 20px;">
-    <p style="font-size: 18px; line-height: 1.5;">I am a <b>veteran computer science teacher</b> looking to extend my practice and join an online community of educators interested in improving belonging, inclusion and representation of students in CS classrooms.
-	</p>
-</div>
+<div style="background-color: #F7F8FA; border-radius: 20px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
 
-<div style="display: flex; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<img src="https://images.code.org/1c2d93d804416e25b5b9760889c267bb-image-1732325518954.31.24 PM.png" alt="An administrator smiles at the camera." style="width: 80px; height: 80px; border-radius: 50%; margin-right: 20px;">
-    <p style="font-size: 18px; line-height: 1.5;">I am a <b>school- or district-level leader</b> looking to find resources and activities for professional learning communities of educators.
-	</p>
-</div>
-</div>
+#### The **Implicit Association Test (IAT)** measures attitudes and beliefs that people may be unwilling or unable to report. The IAT may be especially interesting if it shows that you have an implicit attitude that you did not know about. 
 
-## Through-Course Features
+</p></div>
 
-#### This course has several features are woven throughout. Engage with the ones that are relevant to you and your learning.
+#### The test has been used in learning experiences such as this one for years to help people understand their implicit bias. To complete the test, users use a keyboard or touchscreen to associate words, phrases, or images with categories of identities (based on religion, race, gender, etc.) and reveal implicit biases.
 
-### Look for the following icons to signal each feature:
+#### While the IAT may be useful, <a href="https://www.vox.com/identities/2017/3/7/14637626/implicit-association-test-racism" target="blank" rel="noopener noreferrer">a 2017 article from Vox</a> suggests that its utility may be limited if you take it just once:
 
-<div style="margin-top: 20px; border-radius:10px; padding: 20px 20px 10px 20px">
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<div style="width: 90%;">
-		<p style="font-size: 18px; line-height: 1.5;">
-		<strong>Code.org Forum</strong> - Provides a discussion board to post ideas and learn from other educators. Engagement in the forum is optional, but highly encouraged!
-		</p>
-	</div>
-	<img src="https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png" alt="Code.org Forum Icon" style="width: 7%;">
-</div>
+<div style="background-color: #F7F8FA; border-radius: 20px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
 
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<div style="width: 90%;">
-	<p style="font-size: 18px; line-height: 1.5;">
-    <strong><a href="code.org" target="blank" rel="noopener noreferrer"><mark>Activity Guide</mark></a></strong> - A central document with digital or physical versions of activities in this course. The Activity Guide provides an artifact of learning by the end of the course. 
-	</p>
-	</div>
-	<img src="https://images.code.org/b3228ff3b84aeb85ec00b47136800a8f-image-1731959884476.png" alt="Activity Guide Icon" style="width: 7%;">
-</div>
+#### According to a growing body of research and the researchers who created the test and maintain it at the Project Implicit website, the IAT is not good for predicting individual biases based on just one test. <b>It requires a collection — an aggregate — of tests before it can really make any sort of conclusions.</b>
+ 
+####  “It can predict things in the aggregate, but it cannot predict behavior at the level of an individual” who took the test once, Calvin Lai, a postdoctoral fellow at Harvard University and director of research at Project Implicit, told [the author of the article].
 
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<div style="width: 90%;">
-		<p style="font-size: 18px; line-height: 1.5;">
-			<strong>Extension Activities</strong> - Provide reflections or activities for interested newbies or teachers who are experienced in equity to extend their learning.
-		</p>
-	</div>
-	<img src="https://images.code.org/dd51b2d288841f86773ca05520f6104c-image-1731961166553.png" alt="Extension Activities Icon" style="width: 7%;">
-</div>
+####  For individuals, this means they would have to take the test many times — maybe dozens of times — and average out the results to get a clear indication of their bias and potentially how that bias guides behavior. For a broader population, it’s similar: You’d have to collect the results of individuals in the population and average those out to get an idea of the overall population’s bias and potential behavior.
+</p></div>
 
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<div style="width: 90%;">
-		<p style="font-size: 18px; line-height: 1.5;">
-			<strong>Resource Suggestions</strong> - These are key resources that participants can optionally research on their own to further guide their equity journey.
-		</p>
-	</div>
-	<img src="https://images.code.org/08d8da1158d67fd1ed7535c90b2b91bc-image-1731961007471.png" alt="Resource Suggestions Icon" style="width: 7%;">
-</div>
+## So What?
 
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<div style="width: 90%;">
-		<p style="font-size: 18px; line-height: 1.5;">
-			<strong>Curriculum Connection</strong> - When applicable, we will make a link to Code.org's curriculum to highlight equitable practices in CS.
-		</p>
-	</div>
-	<img src="https://images.code.org/86fb480e433c7feca6d9e6df4a73a062-image-1731961341605.png" alt="Curriculum Connection Icon" style="width: 7%;">
+#### As part of this course, we want to make the test available to you, but not without providing adequate context for the test itself. It may be helpful for you to take a version of the test (once or multiple times) if only to reflect on your associations with different categories. This is an **optional** activity in this course. 
+
+<div style="display: flex; align-items: left; margin: 30px 0px 20px 0px">
+
+<img src="https://images.code.org/dd51b2d288841f86773ca05520f6104c-image-1731961166553.png" style="width: auto; height: 100px;"  alt="An illuminated light bulb with a brain inside of it.">
+
+<div style="background-color: #B8E0E5; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;">
+
+<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Extension Activity</b></p>
+
+<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 16px"><a href="https://implicit.harvard.edu/implicit/takeatest.html" target="blank" rel="noopener noreferrer">Take the Implicit Association Test</a>. After completing the test, consider the following reflection questions:
+
+<ul style="color: black; line-height: 2; font-size: 16px; margin-left: 20px;">
+<li>What did you feel while you were taking the test?</li>
+<li>Did this help inform your understanding of your biases? How so?</li></ul>
+
+</p>
+
 </div>
 </div>
+
+## Now What?
+
+#### Surfacing your biases is just part of the process of interrupting them. Regardless of whether or not you take the IAT, we'll provide you with strategies to become aware of and combat your implicit biases in the next level.
 MARKDOWN

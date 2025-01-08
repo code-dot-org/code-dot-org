@@ -42,7 +42,7 @@
     },
     "new_name": null,
     "family_name": "dance",
-    "serialized_at": "2024-11-19 01:17:16 UTC",
+    "serialized_at": "2025-01-07 19:56:36 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -102,23 +102,11 @@
       }
     },
     {
-      "key": "0f404bbf-d9f1-45c9-a496-271179254aed",
+      "key": "14d674a9-18e0-43f3-ae74-d593dfc0fbda",
       "position": 2,
       "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0f404bbf-d9f1-45c9-a496-271179254aed",
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "dance"
-      }
-    },
-    {
-      "key": "14d674a9-18e0-43f3-ae74-d593dfc0fbda",
-      "position": 3,
-      "properties": {
-        "name": "Activity (30-45 minutes)"
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "14d674a9-18e0-43f3-ae74-d593dfc0fbda",
@@ -129,7 +117,7 @@
     },
     {
       "key": "4d9f4220-ead7-435d-adeb-bd7968b543aa",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -143,9 +131,10 @@
     },
     {
       "key": "2d33d18f-944d-4408-992a-31d1311733fc",
-      "position": 5,
+      "position": 4,
       "properties": {
-        "name": "Assessment (2 minutes)"
+        "duration": 2,
+        "name": "Assessment"
       },
       "seeding_key": {
         "lesson_activity.key": "2d33d18f-944d-4408-992a-31d1311733fc",
@@ -156,7 +145,7 @@
     },
     {
       "key": "74e90ab8-051a-45fd-bfd7-ec1e72686dc4",
-      "position": 6,
+      "position": 5,
       "properties": {
         "name": "Go Viral"
       },

@@ -1,3 +1,4 @@
+import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import Workspace from '@codebridge/Workspace';
 import {debounce} from 'lodash';
 import React, {useEffect, useMemo} from 'react';
@@ -62,6 +63,10 @@ const WorkspaceAndOutput: React.FunctionComponent = () => {
         Math.min(desiredConsoleHeight, consoleHeightMax)
       )
     );
+    CodebridgeRegistry.getInstance()
+      .getConsoleManager()
+      ?.getTerminalFitAddon()
+      ?.fit();
   };
 
   // The editor height is computed based on the column height, console height,

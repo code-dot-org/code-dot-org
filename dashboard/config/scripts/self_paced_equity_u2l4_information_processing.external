@@ -1,0 +1,36 @@
+name 'self-paced-equity-U2L4-information-processing'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Welcome!
+
+## Module 2, Lesson 2: Bias and Stereotype Threat
+
+<div style="display: flex; align-items: flex-start; gap: 20px; margin-top: 20px;">
+    <div style="width: 70%;">
+        <p style="line-height: 1.5; font-size: 18px;">
+            In this lesson, you will:
+        </p>
+        <ul style="margin-left: 20px; line-height: 1.6;">
+            <li style="line-height: 1.5;font-size: 16px;">
+                Use a shared definition of unconscious bias and stereotype threat.
+            </li>
+            <li style="line-height: 1.5;font-size: 16px;">
+                Identify and address your own implicit biases and assumptions about students. 
+            </li>
+            <li style="line-height: 1.5;font-size: 16px;">
+                Describe the impact of bias and stereotypes on student learning and engagement.
+            </li>
+        </ul>
+        <p style="font-size: 16px; color: black;">
+        <br>
+        <p style="line-height: 1.5; font-size: 18px;"><strong>Suggested time for this lesson:</strong> <mark>update</mark> minutes
+        </p>
+    </div>
+    
+    <!-- Image on the right -->
+    <img src="https://images.code.org/46d3d805d26a73542b42f55cb255486e-image-1736119661753.27.39 PM.png" alt="Two students look on at the same laptop, while another looks intently at their laptop in the background." style="width: 30%; height: auto; border-radius: 10px;">
+</div>
+<br>
+MARKDOWN

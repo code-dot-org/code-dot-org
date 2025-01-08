@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-01-07T23:36:59.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "#Placeholder for a hype video about songwriters using technology to help them express their creativity.",
+        "imageUrl": "https://images.code.org/47d8743206663e4c56b7377f2e671285-shakira creativity.jpg",
+        "key": "music-coding-intro-career1-panel-6cc616ef-9579-45db-9546-552ccf158a67"
+      }
+    ],
+    "name_suffix": "_1"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-07T23:36:59.189+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-career1-panel\\\"\"],\"cloned_from\":\"music-coding-intro-career1-panel\"}]"
+}]]></config>
+</Panels>
