@@ -131,6 +131,16 @@ export interface ProjectFile {
   type?: ProjectFileType;
 }
 
+/**
+ * Project file types are as follows:
+ * Starter: Files that come from level start code that are editable by the user.
+ * Support: Files that come from level start code that are hidden and not editable by the user.
+ * Validation: The file that contain the level's validation code. This file is hidden from users.
+ * Locked Starter: Files that come from level start code that are editable by the user, but cannot be
+ *  deleted or renamed.
+ * System Support: Files that are used for running code and for share/remix, but are hidden from the user.
+ *  For example, the serialized maze for a neighborhood level.
+ */
 export enum ProjectFileType {
   STARTER = 'starter',
   SUPPORT = 'support',

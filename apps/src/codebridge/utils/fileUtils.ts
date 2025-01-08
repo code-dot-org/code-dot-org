@@ -48,8 +48,9 @@ export function getFileIconNameAndStyle(file: ProjectFile): {
 /**
  * Prepare the source for saving in levelbuilder. This moves the validation file
  * into a separate field and removes it from the files and list of open files, if
- * it was open. It also removes system support files, which are only used for running code
- * and for share/remix.
+ * it was open. It also removes system support files, which are included in the sources
+ * from the other level properties and therefore don't also need to be in the start sources
+ * (for example, the maze grid).
  *
  * We split out the validation file because it is handled differently from start sources
  * in user code. The validation file is not saved to the user's project, and we always use

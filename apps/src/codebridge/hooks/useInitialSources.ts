@@ -56,6 +56,10 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
   const projectStartSource: ProjectSources | undefined = useMemo(() => {
     const combinedStartSources: MultiFileSource | undefined =
       levelStartSource || (defaultSources.source as MultiFileSource);
+
+    // If we have a serialized maze, we need to add it to the project sources so
+    // it is accessible when running/sharing/remixing the code. We save it as a
+    // system support file.
     if (serializedMaze) {
       const mazeFileId = getNextFileId(
         Object.values(combinedStartSources.files)
@@ -70,6 +74,7 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
       };
       combinedStartSources.files[mazeFileId] = mazeFile;
     }
+
     const source = isStartMode
       ? combineStartSourcesAndValidation(combinedStartSources, validationFile)
       : combinedStartSources;
