@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import {Fragment} from 'react';
 
 import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
@@ -49,7 +49,7 @@ const Breadcrumbs: React.FunctionComponent<BreadcrumbsProps> = ({
       data-testid={`breadcrumbs-${name}`}
     >
       {breadcrumbs.map(({text, href, ...rest}, i) => (
-        <React.Fragment key={`${text}-${href}`}>
+        <Fragment key={`${text}-${href}`}>
           <Link
             {...rest}
             text={text}
@@ -60,7 +60,7 @@ const Breadcrumbs: React.FunctionComponent<BreadcrumbsProps> = ({
           {i < breadcrumbs.length - 1 && (
             <FontAwesomeV6Icon iconName="chevron-right" />
           )}
-        </React.Fragment>
+        </Fragment>
       ))}
     </div>
   );
