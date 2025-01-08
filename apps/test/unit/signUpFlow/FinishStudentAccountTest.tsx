@@ -205,6 +205,11 @@ describe('FinishStudentAccount', () => {
 
     // Error shows with whitespace display name
     screen.getByText(locale.display_name_error_message());
+
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+    expect(finishSignUpButton).toBeDisabled();
   });
 
   it('adding a long display name shows error message', () => {
@@ -225,6 +230,11 @@ describe('FinishStudentAccount', () => {
         maxLength: MAX_DISPLAY_NAME_LENGTH,
       })
     );
+
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+    expect(finishSignUpButton).toBeDisabled();
   });
 
   it('leaving the age field empty shows error message and disabled submit button until age is entered', async () => {

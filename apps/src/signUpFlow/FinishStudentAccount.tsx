@@ -154,10 +154,10 @@ const FinishStudentAccount: React.FunctionComponent<{
   };
 
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    const newName = e.target.value.trim();
+    const newName = e.target.value;
     setName(newName);
 
-    if (newName === '') {
+    if (newName.trim() === '') {
       setNameErrorMessage(locale.display_name_error_message());
     } else if (newName.length > MAX_DISPLAY_NAME_LENGTH) {
       setNameErrorMessage(
@@ -407,7 +407,8 @@ const FinishStudentAccount: React.FunctionComponent<{
               title: 'arrow-right',
             }}
             disabled={
-              name === '' ||
+              name.trim() === '' ||
+              name?.length > MAX_DISPLAY_NAME_LENGTH ||
               age === '' ||
               (usIp && state === '') ||
               (isParent && (parentEmail === '' || showParentEmailError)) ||
