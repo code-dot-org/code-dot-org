@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import {useSelector} from 'react-redux';
 
 import UnitCalendarGrid from '@cdo/apps//code-studio/components/progress/UnitCalendarGrid';
 import {setCalendarData} from '@cdo/apps/code-studio/calendarRedux';
@@ -32,19 +31,16 @@ const UnitCalendar: React.FC = () => {
     useState<string>(WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS[4].toString());
 
   const selectedSection = useAppSelector(selectedSectionSelector);
-  const unitName = useSelector(
-    (state: {unitSelection: {unitName: string}}) => state.unitSelection.unitName
-  );
 
-  const unitNameFromProgress = useAppSelector(
-    state => state.progress?.scriptName
-  );
+  const unitName = selectedSection.unitName;
 
   const hasCalendar = useAppSelector(state => state.calendar?.showCalendar);
 
   const calendarLessons = useAppSelector(
     state => state.calendar?.calendarLessons
   );
+
+  const calendarUnitName = useAppSelector(state => state.calendar?.unitName);
 
   const {userId, userType} = useAppSelector(state => state.currentUser);
 
@@ -54,6 +50,7 @@ const UnitCalendar: React.FC = () => {
     if (!selectedSection.courseOfferingId || !unitName) {
       dispatch(
         setCalendarData({
+          unitName: null,
           showCalendar: false,
           calendarLessons: null,
           versionYear: null,
@@ -62,12 +59,13 @@ const UnitCalendar: React.FC = () => {
       return;
     }
     if (
-      (!isLoading &&
-        unitName &&
-        userType &&
-        userId &&
-        (hasCalendar === undefined || calendarLessons === null)) ||
-      unitNameFromProgress !== unitName
+      !isLoading &&
+      unitName &&
+      userType &&
+      userId &&
+      (hasCalendar === undefined ||
+        calendarLessons === null ||
+        unitName !== calendarUnitName)
     ) {
       setIsLoading(true);
       HttpClient.fetchJson<UnitSummaryResponse>(
@@ -98,10 +96,10 @@ const UnitCalendar: React.FC = () => {
     userType,
     hasCalendar,
     calendarLessons,
-    unitNameFromProgress,
     dispatch,
     isLoading,
     selectedSection.courseOfferingId,
+    calendarUnitName,
   ]);
 
   const weeklyMinutesOptions = WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS.map(
@@ -120,9 +118,16 @@ const UnitCalendar: React.FC = () => {
     });
   };
 
+  const needsReload = useAppSelector(
+    state => state.teacherSections.needsReload
+  );
+
+  if (isLoading || needsReload) {
+    return <Spinner size={'large'} />;
+  }
+
   return (
     <div className={styles.calendarContentContainer}>
-      {isLoading && <Spinner />}
       {!isLoading && <CalendarEmptyState />}
       {!isLoading && hasCalendar && (
         <div>
