@@ -97,6 +97,7 @@ class Level < ApplicationRecord
     ai_tutor_available
     offer_browser_tts
     use_secondary_finish_button
+    skip_url
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -778,6 +779,14 @@ class Level < ApplicationRecord
         default: nil,
         smart: true
       )
+    end
+  end
+
+  def localized_properties
+    return properties unless should_localize?
+
+    properties.each_with_object({}) do |(key, value), i18n|
+      i18n[key] = try(:localized_property, key) || get_localized_property(key) || value
     end
   end
 

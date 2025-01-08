@@ -136,11 +136,11 @@
 }
 
 .headerSectionName {
-  font-size: 12px;
-  font-weight: 600;
+  margin-bottom: 0;
+  margin-top: 0;
   color: $light_primary_500;
-  text-transform: uppercase;
-  height: 18px;
+  letter-spacing: 0.48px;
+  font-size: 12px;
 }
 
 .skeletonHeaderSectionName {

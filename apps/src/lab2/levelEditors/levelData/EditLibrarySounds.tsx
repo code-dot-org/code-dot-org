@@ -2,7 +2,11 @@ import React, {useCallback} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import {BodyTwoText, StrongText} from '@cdo/apps/componentLibrary/typography';
+import {
+  BodyFourText,
+  BodyTwoText,
+  StrongText,
+} from '@cdo/apps/componentLibrary/typography';
 import MusicLibrary, {Sounds} from '@cdo/apps/music/player/MusicLibrary';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
@@ -116,6 +120,12 @@ const EditLibrarySounds: React.FunctionComponent<EditLibrarySoundsProps> = ({
                 </BodyTwoText>
               }
             >
+              <BodyFourText>
+                <i>
+                  Numbers in square brackets indicate the length of the sound in
+                  measures.
+                </i>
+              </BodyFourText>
               <div className={moduleStyles.indentedContainer}>
                 <Checkbox
                   name={pack.name + '-select-all'}
@@ -132,7 +142,7 @@ const EditLibrarySounds: React.FunctionComponent<EditLibrarySoundsProps> = ({
                     <Checkbox
                       key={sound.src}
                       name={sound.src}
-                      label={sound.name}
+                      label={`${sound.name} [${sound.length}]`}
                       checked={
                         (currentlySelected &&
                           currentlySelected.includes(sound.src)) ||

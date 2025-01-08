@@ -145,11 +145,6 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     end
   end
 
-  # GET /api/v1/users/<user_id>/school_donor_name
-  def get_school_donor_name
-    render json: @user.school_donor_name.nil? ? 'null' : @user.school_donor_name.inspect
-  end
-
   # GET /api/v1/users/<user_id>/tos_version
   def get_tos_version
     render json: @user.terms_of_service_version.nil? ? -1 : @user.terms_of_service_version.inspect

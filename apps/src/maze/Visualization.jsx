@@ -16,3 +16,4 @@ var Visualization = function () {
   );
 };
 module.exports = Visualization;
+export default Visualization;

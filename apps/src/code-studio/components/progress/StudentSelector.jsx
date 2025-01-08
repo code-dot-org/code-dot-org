@@ -59,6 +59,7 @@ function StudentSelector({
       size="s"
       name="students"
       items={student_list}
+      id="uitest-view-as-student-selector"
     />
   );
 }

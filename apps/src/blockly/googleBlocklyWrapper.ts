@@ -825,6 +825,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
         container as HTMLElement
       ).style.height = `calc(100% - ${styleConstants['workspace-headers-height']}px)`;
     }
+    blocklyWrapper.disableVariableEditing =
+      !!optOptionsExtended.disableVariableEditing;
+    blocklyWrapper.varsInGlobals = !!optOptionsExtended.varsInGlobals;
     blocklyWrapper.isStartMode = !!optOptionsExtended.editBlocks;
     blocklyWrapper.isToolboxMode =
       optOptionsExtended.editBlocks === 'toolbox_blocks';
@@ -896,7 +899,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     // blocks back to the correct positions after a browser window resize.
     // See: https://github.com/google/blockly/issues/8637
     workspace.addChangeListener(storeWorkspaceWidth);
-    workspace.addChangeListener(setPathFill);
+    // Jigsaw blocks have additional path SVGs that need to be filled with
+    // a pattern image.
+    if (optOptionsExtended.isJigsaw) {
+      workspace.addChangeListener(setPathFill);
+    }
     window.addEventListener('resize', bumpRTLBlocks);
 
     initializeScrollbarPair(workspace);

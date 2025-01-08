@@ -39,26 +39,6 @@ class Incubator extends Component {
           </div>
 
           <TwoColumnActionBlock
-            imageUrl="/shared/images/teacher-announcement/incubator-rubrics-pilot-graphic.png"
-            subHeading={i18n.incubator_aiRubric_title()}
-            description={
-              <span>
-                {i18n.incubator_aiRubric_desc1()}{' '}
-                <a href="https://www.edweek.org/technology/this-ai-tool-cut-one-teachers-grading-time-in-half-how-it-works/2024/04">
-                  {i18n.incubator_aiRubric_descLink()}
-                </a>{' '}
-                {i18n.incubator_aiRubric_desc2()}
-              </span>
-            }
-            marginBottom="20px"
-            buttons={[
-              {
-                url: 'https://code.org/ai/teaching-assistant',
-                text: 'Learn More',
-              },
-            ]}
-          />
-          <TwoColumnActionBlock
             imageUrl="/shared/images/teacher-announcement/incubator-codebridge-python.png"
             subHeading={i18n.incubator_codebridge_python_title()}
             description={<span>{i18n.incubator_codebridge_python_desc()}</span>}

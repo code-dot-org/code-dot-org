@@ -362,6 +362,42 @@ describe('FinishStudentAccount', () => {
     expect(finishSignUpButton).toBeDisabled();
   });
 
+  it('clears parent email if parent checkbox is unchecked, and can submit successfully', async () => {
+    renderDefault();
+    await waitFor(() => {
+      expect(fetchStub.calledOnce).toBe(true);
+    });
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+
+    // Set other required fields
+    const displayNameInput = screen.getAllByDisplayValue('')[1];
+    const stateInput = screen.getAllByRole('combobox')[1];
+    const ageInput = screen.getAllByRole('combobox')[0];
+    fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
+    fireEvent.change(stateInput, {target: {value: 'WA'}});
+    fireEvent.change(ageInput, {target: {value: '6'}});
+    // Check parent checkbox
+    fireEvent.click(screen.getAllByRole('checkbox')[0]);
+
+    // Enter parent email
+    const parentEmailInput = screen.getAllByDisplayValue('')[1];
+    fireEvent.change(parentEmailInput, {
+      target: {value: '@invalidparentemail'},
+    });
+
+    // Uncheck parent checkbox
+    fireEvent.click(screen.getAllByRole('checkbox')[0]);
+    // Click finish sign up button
+    fireEvent.click(finishSignUpButton);
+
+    await waitFor(() => {
+      // Verify the user is redirected to the finish sign up page
+      expect(navigateToHrefMock).toHaveBeenCalledWith('/home');
+    });
+  });
+
   it('GDPR has expected behavior if api call returns true', async () => {
     act(() => {
       fetchStub.callsFake(() => {

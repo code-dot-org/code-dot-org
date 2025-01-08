@@ -7,7 +7,7 @@ $(document).ready(() => {
   analyticsReporter.sendEvent(
     EVENTS.SIGN_UP_STARTED_EVENT,
     {source: 'section code sign up form'},
-    PLATFORMS.STATSIG
+    PLATFORMS.BOTH
   );
 
   document
@@ -21,7 +21,7 @@ $(document).ready(() => {
           'has school': false,
           'has marketing value selected': true,
         },
-        PLATFORMS.STATSIG
+        PLATFORMS.BOTH
       );
     });
 });

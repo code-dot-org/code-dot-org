@@ -80,7 +80,8 @@ class MetricsReporter {
   /**
    * Publish a metric.
    *
-   * Note that this will send two metrics, with and without the browser version dimension.
+   * Note that this will send two metrics, with and without the browser version dimension
+   * (the browser name dimension is included in both).
    * This allows us to more easily aggregate metrics by browser.
    */
   publishMetric(

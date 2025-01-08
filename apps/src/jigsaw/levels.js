@@ -25,16 +25,17 @@ var jigsawBlockWithDeletableAttr = function (
   }
   // We add a static block ID to the first block in the lesson
   // so that we can validate whether or not it is clicked.
-  const idAttr = type === 'jigsaw_1A' ? ' id="block1"' : '';
   return (
     '<block type="' +
     type +
     '" deletable="' +
     deletable +
     '"' +
-    idAttr +
     ' x="' +
     x +
+    '"' +
+    ' id="' +
+    type +
     '"' +
     ' y="' +
     y +
@@ -131,8 +132,8 @@ module.exports = {
     },
     backgroundHSV: [184, 1.0, 0.733],
     ghost: {
-      x: 400,
-      y: 100,
+      x: 380,
+      y: 80,
     },
     numBlocks: 1,
     requiredBlocks: [],
@@ -165,8 +166,8 @@ module.exports = {
     },
     backgroundHSV: [36, 1.0, 0.999],
     ghost: {
-      x: 400,
-      y: 100,
+      x: 380,
+      y: 80,
     },
     numBlocks: 2,
     requiredBlocks: [],
@@ -178,7 +179,7 @@ module.exports = {
       },
     },
     startBlocks:
-      undeletableJigsawBlock('jigsaw_3A', 400, 100) +
+      undeletableJigsawBlock('jigsaw_3A', 380, 80) +
       undeletableJigsawBlock('jigsaw_3B', 100, 220),
   },
 
@@ -192,8 +193,8 @@ module.exports = {
     },
     backgroundHSV: [320, 0.6, 0.999],
     ghost: {
-      x: 400,
-      y: 100,
+      x: 380,
+      y: 80,
     },
     numBlocks: 2,
     requiredBlocks: [],
@@ -206,7 +207,7 @@ module.exports = {
     },
     startBlocks:
       undeletableJigsawBlock('jigsaw_4A', 100, 140) +
-      undeletableJigsawBlock('jigsaw_4B', 400, 200),
+      undeletableJigsawBlock('jigsaw_4B', 380, 180),
   },
 
   5: {
@@ -217,10 +218,10 @@ module.exports = {
       width: 200,
       height: 200,
     },
-    backgroundHSV: [209, 0.57, 0.6],
+    backgroundHSV: [209, 0.66, 0.59],
     ghost: {
-      x: 400,
-      y: 100,
+      x: 380,
+      y: 80,
     },
     numBlocks: 3,
     requiredBlocks: [],
@@ -246,10 +247,10 @@ module.exports = {
       width: 200,
       height: 200,
     },
-    backgroundHSV: [25, 0.57, 0.96],
+    backgroundHSV: [25, 0.87, 0.96],
     ghost: {
-      x: 400,
-      y: 100,
+      x: 380,
+      y: 80,
     },
     numBlocks: 3,
     requiredBlocks: [],
@@ -277,8 +278,8 @@ module.exports = {
     },
     backgroundHSV: [238, 0.51, 0.999],
     ghost: {
-      x: 400,
-      y: 100,
+      x: 380,
+      y: 80,
     },
     numBlocks: 3,
     requiredBlocks: [],
@@ -306,8 +307,8 @@ module.exports = {
     },
     backgroundHSV: [75, 0.8, 0.999],
     ghost: {
-      x: 400,
-      y: 100,
+      x: 380,
+      y: 80,
     },
     numBlocks: 3,
     requiredBlocks: [],
@@ -335,8 +336,8 @@ module.exports = {
     },
     backgroundHSV: [110, 0.56, 0.6],
     ghost: {
-      x: 400,
-      y: 100,
+      x: 380,
+      y: 80,
     },
     numBlocks: 3,
     requiredBlocks: [],
@@ -371,8 +372,8 @@ module.exports = {
     },
     backgroundHSV: [300, 0.25, 0.8],
     ghost: {
-      x: 400,
-      y: 100,
+      x: 380,
+      y: 80,
     },
     numBlocks: 3,
     requiredBlocks: [],
@@ -402,12 +403,12 @@ module.exports = {
     isK1: true,
     image: {
       name: 'blocks',
-      width: 131,
-      height: 286,
+      width: 115,
+      height: 233,
     },
     ghost: {
-      x: 200,
-      y: 12,
+      x: 170,
+      y: 56,
     },
     numBlocks: 0,
     requiredBlocks: [],
@@ -426,7 +427,7 @@ module.exports = {
     startBlocks: undeletableJigsawBlock(
       'jigsaw_purple',
       0,
-      0,
+      40,
       undeletableJigsawBlock('jigsaw_blue')
     ),
     toolbox: createToolbox(jigsawBlock('jigsaw_green')),
@@ -437,12 +438,12 @@ module.exports = {
     isK1: true,
     image: {
       name: 'blocks',
-      width: 131,
-      height: 286,
+      width: 115,
+      height: 233,
     },
     ghost: {
-      x: 200,
-      y: 12,
+      x: 94,
+      y: 94,
     },
     numBlocks: 0,
     requiredBlocks: [],
@@ -476,10 +477,10 @@ module.exports = {
       height: 200,
     },
     ghost: {
-      x: 400,
-      y: 100,
+      x: 380,
+      y: 80,
     },
-    backgroundHSV: [25, 0.57, 0.96],
+    backgroundHSV: [25, 0.87, 0.96],
     numBlocks: 3,
     requiredBlocks: [],
     freePlay: false,

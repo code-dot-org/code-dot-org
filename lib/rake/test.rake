@@ -284,6 +284,11 @@ namespace :test do
     TestRunUtils.run_lib_tests
   end
 
+  desc 'Runs python tests.'
+  timed_task_with_logging :python do
+    TestRunUtils.run_python_tests
+  end
+
   desc 'Runs bin tests.'
   timed_task_with_logging :bin do
     TestRunUtils.run_bin_tests
@@ -391,6 +396,25 @@ namespace :test do
       end
     end
 
+    desc 'Runs python tests if python might have changed from staging.'
+    task :python do
+      run_tests_if_changed(
+        'python',
+        [
+          'pyproject.toml',
+          'pdm.lock',
+          'python/**/*',
+          'lib/cdo/python_venv.py',
+          'Gemfile',
+          'Gemfile.lock',
+          'deployment.rb',
+          'config/**/*',
+        ]
+      ) do
+        TestRunUtils.run_python_tests
+      end
+    end
+
     desc 'Runs lib tests if lib might have changed from staging.'
     timed_task_with_logging :bin do
       run_tests_if_changed('bin', ['Gemfile', 'Gemfile.lock', 'deployment.rb', 'bin/**/*']) do
@@ -407,6 +431,7 @@ namespace :test do
       :pegasus,
       :shared,
       :lib,
+      :python,
       :bin
     ]
 

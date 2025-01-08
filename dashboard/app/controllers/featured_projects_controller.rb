@@ -9,7 +9,7 @@ class FeaturedProjectsController < ApplicationController
     return render_404 unless project_id
     @featured_project = FeaturedProject.find_or_create_by!(project_id: project_id)
     @featured_project.update! unfeatured_at: nil, featured_at: nil
-    buffer_abuse_score
+    reset_abuse_score
   end
 
   # Set the featured project to 'active', i.e., project will be displayed in public gallery.
@@ -18,8 +18,8 @@ class FeaturedProjectsController < ApplicationController
     return render_404 unless project_id
     @featured_project = FeaturedProject.find_or_create_by!(project_id: project_id)
     @featured_project.update! unfeatured_at: nil, featured_at: DateTime.now
-    # Set the featured project's abuse score to -50.
-    buffer_abuse_score
+    # Set the featured project's abuse score to 0.
+    reset_abuse_score
     freeze_featured_project(project_id)
   end
 
@@ -41,40 +41,21 @@ class FeaturedProjectsController < ApplicationController
 
   # Featured projects are selected internally for their
   # quality, so we can be reasonably confident that they
-  # are not abusive. To prevent users from spamming Zendesk
-  # with false reports of abuse on featured projects, this
-  # sets their abuse score such that the project needs to
-  # be reported many times before being blocked.
-  def buffer_abuse_score(score = -50)
-    channels_path = "/v3/channels/#{params[:project_id]}/buffer_abuse_score"
-    assets_path = "/v3/assets/#{params[:project_id]}/"
-    files_path = "/v3/files/#{params[:project_id]}/"
+  # are not abusive. We reset their abuse score to 0.
+  def reset_abuse_score
+    project = Project.find_by_channel_id(params[:channel_id])
+    project.update! abuse_score: 0
+    reset_file_abuse_score('assets')
+    reset_file_abuse_score('files')
+  end
 
-    ChannelsApi.call(
-      'REQUEST_METHOD' => 'POST',
-      'PATH_INFO' => channels_path,
-      'REQUEST_PATH' => channels_path,
-      'HTTP_COOKIE' => request.env['HTTP_COOKIE'],
-      'rack.input' => StringIO.new
-    )
-
-    FilesApi.call(
-      'REQUEST_METHOD' => 'PATCH',
-      'PATH_INFO' => assets_path,
-      'REQUEST_PATH' => assets_path,
-      'QUERY_STRING' => "abuse_score=#{score}",
-      'HTTP_COOKIE' => request.env['HTTP_COOKIE'],
-      'rack.input' => StringIO.new
-    )
-
-    FilesApi.call(
-      'REQUEST_METHOD' => 'PATCH',
-      'PATH_INFO' => files_path,
-      'REQUEST_PATH' => files_path,
-      'QUERY_STRING' => "abuse_score=#{score}",
-      'HTTP_COOKIE' => request.env['HTTP_COOKIE'],
-      'rack.input' => StringIO.new
-    )
+  def reset_file_abuse_score(endpoint)
+    bucket_type = endpoint == 'assets' ? AssetBucket : FileBucket
+    buckets = bucket_type.new
+    files = buckets.list(params[:channel_id])
+    files.each do |file|
+      buckets.replace_abuse_score(params[:channel_id], file[:filename], 0)
+    end
   end
 
   def freeze_featured_project(project_id)

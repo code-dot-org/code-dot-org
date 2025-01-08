@@ -141,9 +141,10 @@ describe('TeacherCourseOverview', () => {
 
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson').mockResolvedValue({
       value: {
-        unit_group: COURSE_SUMMARY,
+        course_summary: COURSE_SUMMARY,
         is_verified_instructor: true,
         hidden_scripts: [],
+        redirect_to_course_url: null,
       },
       response: new Response(),
     });

@@ -1,8 +1,14 @@
-import {OptionsToAvoid, Lab2EntryPoint} from '@cdo/apps/lab2/types';
-import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo'; // avoid hardcoding imports like this in an entrypoint.tsx
+import {lazy} from 'react';
+
+import {Lab2EntryPoint} from '@cdo/apps/lab2/types';
 
 export const StandaloneVideoEntryPoint: Lab2EntryPoint = {
   backgroundMode: false,
-  view: OptionsToAvoid.UseHardcodedView_WARNING_Bloats_Lab2_Bundle,
-  hardcodedView: StandaloneVideo,
+  view: lazy(() =>
+    import(/* webpackChunkName: "standaloneVideo" */ './index.js').then(
+      ({StandaloneVideo}) => ({
+        default: StandaloneVideo,
+      })
+    )
+  ),
 };

@@ -14,6 +14,7 @@ import {
 import classNames from 'classnames';
 import React, {useMemo, useState} from 'react';
 
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -154,7 +155,7 @@ export const FileBrowser = React.memo(() => {
   return (
     <PanelContainer
       id="file-browser"
-      headerContent={'Files'}
+      headerContent={codebridgeI18n.filesHeader()}
       headerClassName={moduleStyles.fileBrowserHeader}
       className={moduleStyles['file-browser']}
       rightHeaderContent={!isReadOnly && <FileBrowserHeaderPopUpButton />}

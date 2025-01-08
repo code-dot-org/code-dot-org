@@ -19,13 +19,7 @@ export default function CardLabels({subjectsAndTopics}) {
 
   if (subjectsAndTopics.length > 1) {
     const remainingSubjectsAndTopics = subjectsAndTopics.slice(1);
-    const tooltipContent = (
-      <>
-        {remainingSubjectsAndTopics.map(subjectOrTopic => (
-          <p key={subjectOrTopic}>{subjectOrTopic}</p>
-        ))}
-      </>
-    );
+    const tooltipContent = <>{remainingSubjectsAndTopics.join(', ')}</>;
     tagsList.push({
       label: `+${remainingSubjectsAndTopics.length}`,
       tooltipContent,

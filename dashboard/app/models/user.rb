@@ -274,7 +274,7 @@ class User < ApplicationRecord
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
 
   has_many :user_school_infos
-  after_save :update_and_add_users_school_infos, if: :saved_change_to_school_info_id?
+  after_save :update_and_add_users_school_infos, if: -> {saved_change_to_school_info_id? || (school_info_id.present? && user_school_infos.empty?)}
   validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
 
   has_many :pd_applications,
@@ -310,7 +310,7 @@ class User < ApplicationRecord
   before_destroy :soft_delete_channels
 
   before_validation on: :create, if: -> {gender.present?} do
-    self.gender = Policies::Gender.normalize gender
+    self.gender = Services::User::GenderNormalizer.call(raw_input: gender)
   end
 
   before_validation :enforce_age_or_state_update, on: :update, if: :should_check_age_or_state_update?
@@ -318,12 +318,12 @@ class User < ApplicationRecord
   validate :validate_us_state, if: :should_validate_us_state?
 
   before_validation on: [:create, :update], if: -> {gender_teacher_input.present? && will_save_change_to_attribute?('properties')} do
-    self.gender = Policies::Gender.normalize gender_teacher_input
+    self.gender = Services::User::GenderNormalizer.call(raw_input: gender_teacher_input)
   end
 
   before_validation on: [:create, :update], if: -> {gender_student_input.present? && will_save_change_to_attribute?('properties')} do
     gender_student_input.strip!
-    self.gender = Policies::Gender.normalize gender_student_input
+    self.gender = Services::User::GenderNormalizer.call(raw_input: gender_student_input)
   end
 
   validates :gender_student_input, length: {maximum: 50}, no_utf8mb4: true
@@ -912,7 +912,7 @@ class User < ApplicationRecord
     end
 
     user.gender_third_party_input = auth.info.gender
-    user.gender = Policies::Gender.normalize auth.info.gender
+    user.gender = Services::User::GenderNormalizer.call(raw_input: auth.info.gender)
     user.roster_synced = params['roster_synced'] || false
   end
 
@@ -1211,6 +1211,7 @@ class User < ApplicationRecord
   end
 
   def self.authenticate_with_section_and_secret_words(section:, params:)
+    return if params[:secret_words].blank?
     return if section.login_type != Section::LOGIN_TYPE_WORD
 
     User.joins(:sections_as_student).find_by(
@@ -1221,6 +1222,7 @@ class User < ApplicationRecord
   end
 
   def self.authenticate_with_section_and_secret_picture(section:, params:)
+    return if params[:secret_picture_id].blank?
     return if section.login_type != Section::LOGIN_TYPE_PICTURE
 
     User.joins(:sections_as_student).find_by(
@@ -2089,7 +2091,18 @@ class User < ApplicationRecord
 
   # The synchronous handler for the track_level_progress helper.
   # @return [UserLevel]
-  def self.track_level_progress(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false, time_spent: nil)
+  def self.track_level_progress(
+    user_id:,
+    level_id:,
+    script_id:,
+    new_result:,
+    submitted:,
+    level_source_id:,
+    pairing_user_ids: nil,
+    is_navigator: false,
+    time_spent: nil,
+    locale: nil
+  )
     new_level_completed = false
     new_csf_level_perfected = false
 
@@ -2135,6 +2148,11 @@ class User < ApplicationRecord
       total_time_spent = user_level.calculate_total_time_spent(time_spent)
       user_level.time_spent = total_time_spent if total_time_spent
 
+      if locale
+        user_level.locale = locale
+        user_level.locale_supported = script.supported_locale?(locale)
+      end
+
       user_level.atomic_save!
     end
 
@@ -2149,6 +2167,7 @@ class User < ApplicationRecord
           level_source_id: level_source_id,
           pairing_user_ids: nil,
           is_navigator: true,
+          locale: locale,
           time_spent: time_spent
         )
         Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
@@ -2429,17 +2448,8 @@ class User < ApplicationRecord
 
   def show_census_teacher_banner?
     # Must have an NCES school to show the banner
-    users_school = try(:school_info).try(:school)
+    users_school = school_info_school
     teacher? && users_school && (next_census_display.nil? || Time.zone.today >= next_census_display.to_date)
-  end
-
-  # Returns the name of the donor for the donor teacher banner and donor footer, or nil if none.
-  # Donors are associated with certain schools, captured in DonorSchool and populated from a Pegasus gsheet
-  def school_donor_name
-    school_id = school_info_school&.id
-    donor_name = DonorSchool.find_by(nces_id: school_id)&.name if school_id
-
-    donor_name
   end
 
   # Removes PII and other information from the user and marks the user as having been purged.

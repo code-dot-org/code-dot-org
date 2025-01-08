@@ -1986,6 +1986,10 @@ class Unit < ApplicationRecord
     locales.sort
   end
 
+  def supported_locale?(locale)
+    supported_locale_codes.include?(locale.to_s)
+  end
+
   def supported_locale_names
     supported_locale_codes.map {|l| Unit.locale_native_name_map[l] || l}.uniq
   end

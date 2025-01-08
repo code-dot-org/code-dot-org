@@ -172,7 +172,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   );
 
   return (
-    <nav className={styles.sidebarContainer}>
+    <nav className={styles.sidebarContainer} id="ui-test-teacher-sidebar">
       <div className={styles.sidebarContent}>
         <Typography
           semanticTag={'h2'}
@@ -191,6 +191,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
           selectedValue={String(selectedSection?.id)}
           className={styles.sectionDropdown}
           name="section-dropdown"
+          id="uitest-sidebar-section-dropdown"
           color="gray"
           disabled={isLoadingSectionData || !selectedSection}
         />

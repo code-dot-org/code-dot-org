@@ -48,6 +48,8 @@ Feature: Professional Learning landing page
     And I see no difference for "Facilitator workshops table"
     And I close my eyes
 
+    And I delete the workshop
+
   Scenario: Universal Instructor sees relevant content sections
     Given I create a teacher named "PL Instructor"
     And I sign in as "PL Instructor" and go home
@@ -62,11 +64,9 @@ Feature: Professional Learning landing page
     # Sees Instructor Professional Learning Sections section
     And I wait until element "button:contains(Create a section)" is visible
 
-  # This test has been flaky due to the page render timing out. Skipping until
-  # a fix can be addressed
-  @skip
   Scenario: Regional Partner sees relevant content sections
     Given I am a program manager with a started course
+    And I wait for 2 seconds
     And I am on "http://studio.code.org/my-professional-learning"
 
     # Go to the right My PL page tab
@@ -88,6 +88,7 @@ Feature: Professional Learning landing page
 
   Scenario: Workshop Organizer sees relevant content sections
     Given I am an organizer with started and completed courses
+    And I wait for 2 seconds
     And I am on "http://studio.code.org/my-professional-learning"
 
     # Go to the right My PL page tab
@@ -100,6 +101,8 @@ Feature: Professional Learning landing page
 
     # Sees Workshops table
     And I wait until element "button:contains(Workshop Details)" is visible
+
+    And I delete the workshop
 
   Scenario: Teacher with Self-paced PL courses sees relevant content sections
     Given I create a teacher named "Self-paced Teacher"

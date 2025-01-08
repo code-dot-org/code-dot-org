@@ -1,7 +1,6 @@
 @import 'color.scss';
 
 .consoleContainer {
-  grid-area: console;
   color: $white;
   overflow: hidden;
   height: 100%;
@@ -14,6 +13,11 @@
   overflow-y: scroll;
   user-select: text;
   height: 100%
+}
+
+.consoleV2 {
+  flex-grow: 1;
+  overflow: hidden;
 }
 
 .errorLine {

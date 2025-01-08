@@ -56,7 +56,7 @@ function SkeletonProgressDataColumn({
   expandedMetadataStudentIds,
 }) {
   return (
-    <div className={styles.lessonColumn}>
+    <div className={styles.lessonColumn} id="ui-test-skeleton-progress-column">
       <LessonProgressColumnHeader
         lesson={lesson}
         addExpandedLesson={() => {}}

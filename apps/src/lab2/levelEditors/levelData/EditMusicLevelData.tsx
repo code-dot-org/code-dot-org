@@ -4,10 +4,12 @@ import React, {useEffect, useMemo, useState} from 'react';
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
 import {installFunctionBlocks} from '@cdo/apps/music/blockly/blockUtils';
 import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';
 import {
   BlockMode,
+  DEFAULT_BPM,
   DEFAULT_LIBRARY,
   DEFAULT_PACK,
 } from '@cdo/apps/music/constants';
@@ -86,10 +88,15 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
             ? a.artist.localeCompare(b.artist) || a.name.localeCompare(b.name)
             : 0
         )
-        ?.map(({name, id, artist}) => ({
-          value: id,
-          text: `${artist} - ${name}`,
-        })),
+        ?.map(({name, id, artist, bpm, sounds}) => {
+          // Use the pack bpm if present, or the bpm of the first sound that has one.
+          const packTempo =
+            bpm || sounds?.find(sound => sound.bpm)?.bpm || DEFAULT_BPM;
+          return {
+            value: id,
+            text: `[${packTempo}] ${artist} - ${name}`,
+          };
+        }),
     [levelData.library, loadedLibraries]
   );
 
@@ -138,7 +145,10 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
                 size="s"
                 items={[
                   {value: 'none', text: '(none)'},
-                  {value: DEFAULT_PACK, text: 'Code.org (Default)'},
+                  {
+                    value: DEFAULT_PACK,
+                    text: `[${DEFAULT_BPM}] Code.org (Default)`,
+                  },
                   ...restrictedPackOptions,
                 ]}
                 selectedValue={levelData.packId}
@@ -162,6 +172,9 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
                   setLevelData({...levelData, packId, sounds});
                 }}
               />
+              <BodyFourText>
+                <i>Numbers in square brackets indicate the pack tempo (BPM).</i>
+              </BodyFourText>
             </div>
           )}
           {levelData.library && loadedLibraries[levelData.library] ? (

@@ -73,6 +73,12 @@ const FinishTeacherAccount: React.FunctionComponent<{
       navigateToHref('/users/new_sign_up/login_type');
     }
 
+    analyticsReporter.sendEvent(
+      EVENTS.FINISH_ACCOUNT_PAGE_LOADED,
+      {'user type': 'teacher', country: countryCode},
+      PLATFORMS.BOTH
+    );
+
     const fetchGdprData = async () => {
       const urlParams = new URLSearchParams(window.location.search);
       const forceInEu = urlParams.get('force_in_eu');
@@ -96,7 +102,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
     if (userReturnToHref) {
       setUserReturnTo(userReturnToHref);
     }
-  }, []);
+  }, [countryCode, usIp]);
 
   // GDPR is valid if
   // 1. The fetch call has completed AND
@@ -171,6 +177,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
         'has school': hasSchool,
         'has marketing value selected': true,
         'has display name': !showNameError,
+        country: countryCode,
       },
       PLATFORMS.BOTH
     );
@@ -220,7 +227,11 @@ const FinishTeacherAccount: React.FunctionComponent<{
               </BodyThreeText>
             )}
           </div>
-          <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
+          <SchoolDataInputs
+            {...schoolInfo}
+            includeHeaders={false}
+            markFieldsAsRequired={isInSchoolRequiredExperiment}
+          />
           {showGDPR && (
             <div>
               <BodyThreeText

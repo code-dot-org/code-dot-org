@@ -30,7 +30,7 @@ class CoursesController < ApplicationController
   end
 
   def show
-    if Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') && current_user.sections_instructed.any? {|s| s.course_id == @unit_group.id}
+    if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.course_id == @unit_group.id} && (Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') || DCDO.get('teacher-local-nav-v2', false))
       if !params[:section_id] && current_user&.last_section_id
         redirect_to "/teacher_dashboard/sections/#{current_user.last_section_id}/courses/#{@unit_group.name}"
         return

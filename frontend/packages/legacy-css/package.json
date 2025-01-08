@@ -1,0 +1,21 @@
+{
+  "name": "@code-dot-org/legacy-css",
+  "version": "0.0.0-alpha.0",
+  "type": "module",
+  "files": [
+    "*.scss"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/legacy-css/#readme",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/legacy-css"
+  },
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  }
+}
