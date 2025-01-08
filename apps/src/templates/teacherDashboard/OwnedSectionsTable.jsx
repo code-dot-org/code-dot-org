@@ -55,7 +55,8 @@ export const courseLinkFormatter = function (course, {rowData}) {
           <a
             href={
               showV2TeacherDashboard()
-                ? assignmentPaths[0].includes('/s/')
+                ? assignmentPaths.length > 1 &&
+                  assignmentPaths[0].includes('/s/')
                   ? teacherDashboardUrl(
                       rowData.id,
                       assignmentPaths[0].replace('/s/', '/unit/')
