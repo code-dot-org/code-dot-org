@@ -33,7 +33,7 @@ describe I18n::Resources::Apps::TextToSpeech::SyncOut do
     let(:lab_message_key) {'expected_lab_message_key'}
     let(:lab_message_i10n) {'expected_lab_message_i10n'}
 
-    let(:tts_keys_file_path) {CDO.dir("apps/i18n/#{lab}/_tts_keys.csv")}
+    let(:tts_keys_file_path) {CDO.dir("apps/i18n/tts_keys/#{lab}.csv")}
     let(:lab_i18n_file_path) {CDO.dir("apps/i18n/#{lab}/#{js_locale}.json")}
     let(:lab_i18n_file_data) {{lab_message_key => lab_message_i10n}}
 
@@ -48,7 +48,9 @@ describe I18n::Resources::Apps::TextToSpeech::SyncOut do
     before do
       FileUtils.mkdir_p File.dirname(lab_i18n_file_path)
       File.write lab_i18n_file_path, JSON.dump(lab_i18n_file_data)
-      File.write tts_keys_file_path, lab_message_key
+
+      FileUtils.mkdir_p File.dirname(tts_keys_file_path)
+      File.write tts_keys_file_path, " #{lab_message_key} "
     end
 
     it 'updates TTS I18n Static Messages' do

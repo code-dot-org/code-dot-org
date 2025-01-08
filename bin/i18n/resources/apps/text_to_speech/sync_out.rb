@@ -16,7 +16,6 @@ module I18n
         class SyncOut < I18n::Utils::SyncOutBase
           METRIC_CONTEXT = 'update_i18n_static_messages'.freeze
           TTS_LOCALES = ::TextToSpeech::VOICES.keys.freeze
-          TTS_KEYS_FILE_NAME = '_tts_keys.csv'.freeze
 
           def perform
             progress_bar.start
@@ -24,13 +23,14 @@ module I18n
             progress_bar.total = tts_key_files.size * TTS_LOCALES.size
 
             tts_key_files.each do |tts_keys_file|
+              lab_name = File.basename(tts_keys_file, '.csv')
               tts_keys = CSV.read(tts_keys_file, strip: true).flatten
               next if tts_keys.empty?
 
               TTS_LOCALES.each do |locale|
                 js_locale = I18nScriptUtils.to_js_locale(locale)
 
-                i18n_file = tts_keys_file.sub(TTS_KEYS_FILE_NAME, "#{js_locale}.json")
+                i18n_file = CDO.dir('apps/i18n', lab_name, "#{js_locale}.json")
                 next unless File.exist?(i18n_file)
 
                 i18n_data = JSON.load_file(i18n_file)
@@ -54,7 +54,7 @@ module I18n
           end
 
           private def tts_key_files
-            @tts_key_files ||= Dir.glob(CDO.dir('apps/i18n/**', TTS_KEYS_FILE_NAME))
+            @tts_key_files ||= Dir[CDO.dir('apps/i18n/tts_keys/*.csv')]
           end
         end
       end
