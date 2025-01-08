@@ -33,16 +33,23 @@ export default function WorkshopTableLoader({
       ? `${queryUrl}?${$.param(effectiveParams)}`
       : queryUrl;
 
-    $.ajax({
+    fetch(url, {
       method: 'GET',
-      url: url,
-      dataType: 'json',
-    }).done(data => {
-      console.log('WorkshopTableLoader data:');
-      console.log(data);
-      setLoading(false);
-      setWorkshops(data);
-    });
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error('Failed to load workshops');
+        }
+      })
+      .then(data => {
+        setWorkshops(data);
+        setLoading(false);
+      });
   }, [queryParams, queryUrl]);
 
   useEffect(() => {
@@ -61,11 +68,23 @@ export default function WorkshopTableLoader({
   }, [childElement]);
 
   const handleDelete = workshopId => {
-    $.ajax({
+    /*$.ajax({
       method: 'DELETE',
       url: '/api/v1/pd/workshops/' + workshopId,
     }).done(() => {
       load();
+    });*/
+    fetch(`/api/v1/pd/workshops/${workshopId}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }).then(response => {
+      if (response.ok) {
+        load();
+      } else {
+        throw new Error('Failed to delete workshop');
+      }
     });
   };
 
@@ -78,7 +97,7 @@ export default function WorkshopTableLoader({
     );
   }
 
-  if (!workshops.length && !workshops.total_count) {
+  if (workshops && !workshops.length && !workshops.total_count) {
     if (hideNoWorkshopsMessage) {
       return null;
     } else {

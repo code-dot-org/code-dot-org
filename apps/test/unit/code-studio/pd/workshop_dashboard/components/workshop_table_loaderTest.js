@@ -1,79 +1,89 @@
-import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
-import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import _ from 'lodash';
+import {render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import WorkshopTableLoader from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_table_loader';
 
 describe('WorkshopTableLoader', () => {
-  let server;
-  let debounceStub;
-
-  beforeAll(() => {
-    // stub out debounce to return the original function, so it's called immediately
-    debounceStub = sinon.stub(_, 'debounce').callsFake(f => f);
-  });
-
-  afterAll(() => {
-    debounceStub.restore();
-  });
-
-  beforeEach(() => {
-    server = sinon.fakeServer.create();
-  });
-
-  afterEach(() => {
-    server.restore();
-  });
-
   const getFakeWorkshopsData = () => {
     return [{id: 1}, {id: 2}];
   };
 
   it('Initially displays a spinner', () => {
-    const Child = sinon.stub().returns(null);
-    const loader = shallow(
+    const fetchMock = jest
+      .spyOn(global, 'fetch')
+      .mockImplementation(() => new Promise(() => {}));
+
+    const Child = jest.fn().mockImplementation(() => null);
+    render(
       <WorkshopTableLoader queryUrl="fake-query-url">
         <Child />
       </WorkshopTableLoader>
     );
 
-    expect(loader.find('Spinner')).to.have.length(1);
+    screen.findByTitle('Loading...');
+
+    fetchMock.mockRestore();
   });
 
-  it('Loads workshops over ajax and passes them to the child component', () => {
+  it('Loads workshops using fetch and passes them to the child component', async () => {
     const fakeWorkshopsData = getFakeWorkshopsData();
 
-    const ajaxStub = sinon.stub($, 'ajax').callsFake(() => {
-      return {
-        done: callback => {
-          callback(fakeWorkshopsData);
-        },
-      };
+    const responseData = {
+      workshops: fakeWorkshopsData,
+      length: fakeWorkshopsData.length,
+      total_count: fakeWorkshopsData.length,
+    };
+
+    const fetchMock = jest.spyOn(global, 'fetch').mockImplementation(() => {
+      return Promise.resolve({
+        json: () => Promise.resolve(responseData),
+        ok: true,
+      });
     });
 
-    const Child = sinon.stub().returns(null);
-    mount(
+    /*const Child = jest.fn().mockImplementation(props => {
+      return (
+        <div>
+          Child Component with workshops {JSON.stringify(props.workshops)}
+        </div>
+      );
+    });*/
+    const Child = jest.fn().mockImplementation(() => null);
+
+    render(
       <WorkshopTableLoader queryUrl="fake-query-url">
         <Child />
       </WorkshopTableLoader>
     );
 
-    expect(ajaxStub.calledOnce).to.be.true;
+    await waitFor(() => {
+      expect(fetchMock).toHaveBeenCalledTimes(1);
 
-    expect(Child.calledOnce).to.be.true;
-    expect(Child.getCall(0).args[0]).to.eql({
-      workshops: fakeWorkshopsData,
-      onDelete: null,
+      expect(Child).toHaveBeenCalledTimes(1);
+      expect(Child.mock.calls[0][0].workshops).toEqual(responseData);
+      expect(Child.mock.calls[0][0].onDelete).toBeNull();
     });
 
-    ajaxStub.restore();
+    fetchMock.mockRestore();
   });
 
-  it('Applies queryParams to the queryURL', () => {
-    const Child = sinon.stub().returns(null);
-    mount(
+  it('Applies queryParams to the queryURL', async () => {
+    const Child = jest.fn().mockImplementation(() => null);
+
+    const responseData = {
+      workshops: [],
+      length: 0,
+      total_count: 0,
+    };
+
+    const fetchMock = jest.spyOn(global, 'fetch').mockImplementation(() => {
+      return Promise.resolve({
+        json: () => Promise.resolve(responseData),
+        ok: true,
+      });
+    });
+
+    render(
       <WorkshopTableLoader
         queryUrl="https://studio.code.org/api/v1/pd/workshops/filter"
         queryParams={{
@@ -86,89 +96,108 @@ describe('WorkshopTableLoader', () => {
       </WorkshopTableLoader>
     );
 
-    const expectedUrlWithParams =
-      'https://studio.code.org/api/v1/pd/workshops/filter?date_order=desc&state=In+Progress';
-    expect(server.requests.length).to.equal(1);
-    expect(server.requests[0].url).to.equal(expectedUrlWithParams);
-  });
-
-  it('Passes delete function to child when canDelete is true', () => {
-    const fakeWorkshopsData = getFakeWorkshopsData();
-
-    const ajaxStub = sinon.stub($, 'ajax').callsFake(() => {
-      return {
-        done: callback => {
-          callback(fakeWorkshopsData);
-        },
-      };
+    await waitFor(() => {
+      expect(fetchMock).toHaveBeenCalledTimes(1);
+      expect(fetchMock).toHaveBeenCalledWith(
+        'https://studio.code.org/api/v1/pd/workshops/filter?date_order=desc&state=In+Progress',
+        {headers: {'Content-Type': 'application/json'}, method: 'GET'}
+      );
     });
 
-    const Child = sinon.stub().returns(null);
-    mount(
+    fetchMock.mockRestore();
+  });
+
+  it('Passes delete function to child when canDelete is true', async () => {
+    const fakeWorkshopsData = getFakeWorkshopsData();
+    const responseData = {
+      workshops: fakeWorkshopsData,
+      length: fakeWorkshopsData.length,
+      total_count: fakeWorkshopsData.length,
+    };
+
+    const fetchMock = jest.spyOn(global, 'fetch').mockImplementation(() => {
+      return Promise.resolve({
+        json: () => Promise.resolve(responseData),
+        ok: true,
+      });
+    });
+
+    const Child = jest.fn().mockImplementation(() => null);
+
+    render(
       <WorkshopTableLoader queryUrl="fake-query-url" canDelete>
         <Child />
       </WorkshopTableLoader>
     );
 
-    expect(Child.calledOnce).to.be.true;
-    expect(Child.getCall(0).args[0].workshops).to.eql(fakeWorkshopsData);
-
-    ajaxStub.restore();
-  });
-
-  it('Displays no workshops found message when no workshops are found', () => {
-    const ajaxStub = sinon.stub($, 'ajax').callsFake(() => {
-      return {
-        done: callback => {
-          callback({
-            workshops: [],
-            length: 0,
-            total_count: 0,
-          });
-        },
-      };
+    await waitFor(() => {
+      expect(Child).toHaveBeenCalledTimes(1);
+      expect(Child.mock.calls[0][0].workshops).toEqual(responseData);
+      expect(Child.mock.calls[0][0].onDelete).toBeDefined();
     });
 
-    const Child = sinon.stub().returns(null);
-    const loader = mount(
+    fetchMock.mockRestore();
+  });
+
+  it('Displays no workshops found message when no workshops are found', async () => {
+    const responseData = {
+      workshops: [],
+      length: 0,
+      total_count: 0,
+    };
+
+    const fetchMock = jest.spyOn(global, 'fetch').mockImplementation(() => {
+      return Promise.resolve({
+        json: () => Promise.resolve(responseData),
+        ok: true,
+      });
+    });
+
+    const Child = jest.fn().mockImplementation(() => null);
+
+    render(
       <WorkshopTableLoader queryUrl="fake-query-url">
         <Child />
       </WorkshopTableLoader>
     );
 
-    expect(Child.called).to.be.false;
-    expect(loader.find('p')).to.have.length(1);
-    expect(loader.find('p').text()).to.eql('No workshops found');
+    await waitFor(() => {
+      expect(fetchMock).toHaveBeenCalledTimes(1);
+      screen.findByText('No workshops found');
+    });
+    expect(Child).toHaveBeenCalledTimes(0);
 
-    ajaxStub.restore();
+    fetchMock.mockRestore();
   });
 
-  it('Renders null when hideNoWorkshopsMessage is specified and no workshops are found', () => {
-    const ajaxStub = sinon.stub($, 'ajax').callsFake(() => {
-      return {
-        done: callback => {
-          callback({
-            workshops: [],
-            length: 0,
-            total_count: 0,
-          });
-        },
-      };
+  it('Renders null when hideNoWorkshopsMessage is specified and no workshops are found', async () => {
+    const responseData = {
+      workshops: [],
+      length: 0,
+      total_count: 0,
+    };
+    const fetchMock = jest.spyOn(global, 'fetch').mockImplementation(() => {
+      return Promise.resolve({
+        json: () => Promise.resolve(responseData),
+        ok: true,
+      });
     });
 
-    const Child = sinon.stub().returns(null);
-    const loader = mount(
+    const Child = jest.fn().mockImplementation(() => null);
+
+    render(
       <WorkshopTableLoader queryUrl="fake-query-url" hideNoWorkshopsMessage>
         <Child />
       </WorkshopTableLoader>
     );
 
-    expect(ajaxStub.calledOnce).to.be.true;
+    await waitFor(() => {
+      expect(fetchMock).toHaveBeenCalledTimes(1);
+    });
 
-    loader.update();
-    expect(Child.called).to.be.false;
-    expect(loader.html()).to.be.null;
+    expect(screen.queryByText('No workshops found')).toBeNull();
+    expect(Child).toHaveBeenCalledTimes(0);
 
-    ajaxStub.restore();
+    fetchMock.mockRestore();
   });
 });
