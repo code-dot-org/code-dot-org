@@ -28,13 +28,14 @@ Feature: Using the V2 teacher dashboard local navigation
     And I press backspace to clear element "#uitest-section-name-setup"
     And I press keys "Sally's Super Section" for element "#uitest-section-name-setup"
 
-    And I press "button:contains(Save)" using jQuery
+    And I click selector "button:contains(Save)" to load a new page
 
-    And I wait until element "h6:contains(Icon Key)" is visible
+    And I wait for jquery to load
+    And I wait until element "h1:contains(Progress)" is visible
     And I wait until element "#ui-test-progress-table-v2" is visible
 
     And I wait until element "#ui-test-skeleton-progress-column" is not visible
 
-    Then element "#unit-selector-v2" contains text "Interactive Animations and Games ('24-'25)"
+    And I wait until element "#unit-selector-v2" contains text "Interactive Animations and Games ('24-'25)"
     Then element "#uitest-sidebar-section-dropdown" contains text "Sally's Super Section"
     Then element "#uitest-sidebar-section-dropdown" does not contain text "Untitled Section"
