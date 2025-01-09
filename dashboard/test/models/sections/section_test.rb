@@ -496,6 +496,7 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
+  # BROKEN
   test 'concise_summarize: section with a script assigned' do
     # Use an existing script so that it has a translation
     script = Unit.find_by_name('jigsaw')
@@ -722,6 +723,13 @@ class SectionTest < ActiveSupport::TestCase
         script: {id: nil, name: nil, project_sharing: nil},
         students: [],
         any_student_has_progress: false,
+        course: {
+          course_offering_id: unit_group.course_version.course_offering.id,
+          version_id: unit_group.course_version.id,
+          lesson_extras_available: nil,
+          text_to_speech_enabled: nil,
+          unit_id: section.unit_group ? section.script_id : nil,
+        }
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -745,6 +753,13 @@ class SectionTest < ActiveSupport::TestCase
         script: {id: script.id, name: script.name, project_sharing: nil},
         students: [],
         any_student_has_progress: false,
+        course: {
+          course_offering_id: script.course_version.course_offering.id,
+          version_id: script.course_version.id,
+          lesson_extras_available: script.lesson_extras_available,
+          text_to_speech_enabled: script.text_to_speech_enabled?,
+          unit_id: section.unit_group ? section.script_id : nil,
+        }
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
