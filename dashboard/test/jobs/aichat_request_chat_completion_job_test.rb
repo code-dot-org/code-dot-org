@@ -104,7 +104,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
   end
 
   test 'reports metrics for successful job' do
-    customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test", selectedModelId: @metrics_model_id}.to_json
+    customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test", selectedModelId: @metrics_model_id}
     request = create :aichat_request, model_customizations: customizations
 
     reported_metrics = []
@@ -155,7 +155,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
   end
 
   test 'reports metrics for failed job' do
-    customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test", selectedModelId: @metrics_model_id}.to_json
+    customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test", selectedModelId: @metrics_model_id}
     request = create :aichat_request, model_customizations: customizations
 
     reported_metrics = []
@@ -194,6 +194,6 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     assert_equal 'Environment', metric[:dimensions][0][:name]
     assert_equal @test_env, metric[:dimensions][0][:value]
     assert_equal 'ModelId', metric[:dimensions][1][:name]
-    assert_equal @metrics_model_id, metric[:dimensions][1][:value]
+    assert_equal @metrics_model_id, metric[:dimensions][1][:value] # FAILING
   end
 end
