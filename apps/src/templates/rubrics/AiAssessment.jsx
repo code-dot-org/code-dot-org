@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {Heading6, StrongText} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
+import {Heading6, StrongText} from '@cdo/apps/componentLibrary/typography';
 
 import AiAssessmentBox from './AiAssessmentBox';
 import aiBotImage from './images/AiBot_2x.png';
