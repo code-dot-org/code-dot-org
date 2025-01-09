@@ -19612,9 +19612,9 @@ en:
 
             ##### There are four lessons in Module 2:
 
+            * ##### Expanding Access to Computer Science
             * ##### Cultivating an Inclusive Classroom Culture
             * ##### Bias and Stereotype Threat
-            * ##### Expanding Access to Computer Science
             * ##### Equity in Code.org’s Curriculum
 
             ___
@@ -19625,9 +19625,9 @@ en:
 
             ##### There are four lessons in Module 2:
 
+            * ##### Expanding Access to Computer Science
             * ##### Cultivating an Inclusive Classroom Culture
             * ##### Bias and Stereotype Threat
-            * ##### Expanding Access to Computer Science
             * ##### Equity in Code.org’s Curriculum
 
             ___
@@ -19681,3 +19681,58 @@ en:
         none-none:
           lessons: {}
           lesson_groups: {}
+        6-12-intro-to-programming-python:
+          lessons: {}
+          lesson_groups: {}
+          name: 6-12-intro-to-programming-python
+          title: 6-12 Intro to Programming (Python) Playground
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        6-12-computer-systems-and-devices:
+          lessons:
+            lesson-1:
+              name: 'Lesson 1: Introduction'
+            lesson-2:
+              name: 'Lesson 2: Career Pathways and Computing Concepts'
+            lesson-3:
+              name: 'Lesson 3: Hardware'
+            lesson-4:
+              name: 'Lesson 4: Troubleshooting and Optimizing Hardware'
+            lesson-5:
+              name: 'Lesson 5: Software and Operating Systems'
+            lesson-6:
+              name: 'Lesson 6: Troubleshooting and Optimizing Software'
+            lesson-7:
+              name: 'Lesson 7: Build a Computer System'
+            lesson-8:
+              name: Data in Computer Science
+            lesson-9:
+              name: Processing Data in a System
+            lesson-10:
+              name: How AI uses Data
+            lesson-11:
+              name: IoT and Emerging Technologies
+            lesson-12:
+              name: User Testing
+            lesson-13:
+              name: Just because we can, should we?
+            lesson-14:
+              name: Nobel in AI Project
+          lesson_groups: {}
+          name: 6-12-computer-systems-and-devices
+          title: 6-12 Computer Systems and Devices Playground
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        6-12-networks-and-the-internet:
+          lessons: {}
+          lesson_groups: {}
+          name: 6-12-networks-and-the-internet
+          title: 6-12 Networks and the Internet Playground
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

@@ -656,6 +656,11 @@ nav.main #hamburger #hamburger-contents {
   right: -3px;
 }
 
+html[dir="rtl"] nav.main #hamburger #hamburger-contents {
+  right: unset;
+  left: -3px;
+}
+
 /* Do not show hamburger links that are hidden until the
  * width becomes a certain size.
  */
