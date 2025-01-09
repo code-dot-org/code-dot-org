@@ -11,11 +11,10 @@ import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
+import fetchIsProjectValidator from '@cdo/apps/lab2/utils/fetchIsProjectValidator';
 import {useBrowserTextToSpeech} from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {PERMISSIONS} from '../constants';
 import ErrorBoundary from '../ErrorBoundary';
 import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
 import {
@@ -36,15 +35,6 @@ import moduleStyles from './Lab2Wrapper.module.scss';
 
 export interface Lab2WrapperProps {
   children: React.ReactNode;
-}
-
-async function fetchIsProjectValidator(): Promise<boolean> {
-  const permissionsResponse = await HttpClient.fetchJson<{
-    permissions: string[];
-  }>('/api/v1/users/current/permissions');
-  const {permissions} = permissionsResponse.value;
-
-  return permissions.includes(PERMISSIONS.PROJECT_VALIDATOR) ? true : false;
 }
 
 const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
