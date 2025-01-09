@@ -1,0 +1,71 @@
+@import '@/common/styles/primitiveColors.css';
+@import '@/common/styles/mixins';
+
+// Link common styles
+.link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: underline;
+
+  &:focus-visible {
+    outline: 2px solid var(--brand-teal-50);
+    border-radius: 0.25rem;
+    outline-offset: 0;
+  }
+
+  &:active:not([aria-disabled='true']) {
+    text-decoration: none;
+  }
+
+  &-primary {
+    color: var(--brand-purple-50);
+
+    &:hover,
+    :active,
+    :visited {
+      color: var(--brand-purple-70);
+    }
+
+    &:focus-visible {
+      color: var(--brand-purple-50);
+    }
+  }
+
+  &-secondary {
+    color: var(--neutral-base-black);
+
+    &:hover,
+    :active,
+    :visited {
+      color: var(--neutral-gray-80);
+    }
+
+    &:focus-visible {
+      color: var(--neutral-base-black);
+    }
+  }
+
+  &[aria-disabled='true'] {
+    cursor: not-allowed;
+    color: var(--neutral-gray-30);
+  }
+}
+
+// Sizes
+.link-l {
+  @include link-body-one;
+}
+
+.link-m {
+  @include link-body-two;
+}
+
+.link-s {
+  @include link-body-three;
+}
+
+.link-xs {
+  @include link-body-four;
+}

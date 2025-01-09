@@ -12,7 +12,9 @@ markdown <<MARKDOWN
 ![](https://images.code.org/57475ec41c652afa5db079b72fc99945-image-1727211392306.png)
 
 ## Python Operators 
-#### A Python operator is a special symbol or keyword that performs a specific operation on one or more operands (values or variables). 
+#### A **Python operator** is a special symbol or keyword that performs a specific operation on one or more operands (values or variables).
+
+#### **Operands** are the inputs (such as numbers, strings, or variables) that the operator acts upon to produce a result.
 
 #### **Common operators:** 
 

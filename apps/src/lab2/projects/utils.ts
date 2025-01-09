@@ -13,6 +13,7 @@ export interface PartialAppOptions {
   share: boolean;
   isEditingExemplar: boolean;
   isViewingExemplar: boolean;
+  publicCaching: boolean;
 }
 
 /**
@@ -82,6 +83,18 @@ export function getIsShareView(): boolean | undefined {
   if (hasScriptData('script[data-appoptions]')) {
     const appOptions = getScriptData('appoptions') as PartialAppOptions;
     return appOptions.share;
+  }
+}
+
+/**
+ * Fetch whether the page is cached.
+ *
+ * @returns true if the page is cached.
+ */
+export function getPublicCaching(): boolean | undefined {
+  if (hasScriptData('script[data-appoptions]')) {
+    const appOptions = getScriptData('appoptions') as PartialAppOptions;
+    return appOptions.publicCaching;
   }
 }
 

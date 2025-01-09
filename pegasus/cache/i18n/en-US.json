@@ -1819,7 +1819,6 @@
     "code_org_logo_alt": "Code.org Home",
     "global_edition": {
       "region_language_switch": "View in %{language}",
-      "region_reset_button": "Return to Full Site",
       "regions": {
         "fa": "Farsi"
       }

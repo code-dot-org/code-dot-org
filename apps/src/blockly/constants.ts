@@ -178,7 +178,6 @@ export const READ_ONLY_PROPERTIES = [
   'Css',
   'Cursor',
   'dialog',
-  'disableVariableEditing',
   'DropDownDiv',
   'Events',
   'Extensions',

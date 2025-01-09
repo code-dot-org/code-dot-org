@@ -108,6 +108,7 @@ export interface TeacherSectionState {
   initialLoginType?: keyof typeof SectionLoginType;
   coteacherInvite?: SectionInstructor;
   coteacherInviteForPl?: SectionInstructor;
+  needsReload?: boolean;
 }
 
 /** @const {null} null used to indicate no section selected */
@@ -157,6 +158,8 @@ const initialState: TeacherSectionState = {
   ltiSyncResult: null,
   isLoadingSectionData: false,
   initialUnitName: null,
+  // used to track if data about the section has changed
+  needsReload: false,
 };
 
 // Maps authentication provider to OAuthSectionTypes for ease of comparison
@@ -289,6 +292,12 @@ const sectionSlice = createSlice({
           },
         };
       },
+    },
+    sectionHasNewData(state) {
+      state.needsReload = true;
+    },
+    sectionDoesNotHaveNewData(state) {
+      state.needsReload = false;
     },
     startLoadingSectionData(state) {
       state.isLoadingSectionData = true;
@@ -1126,6 +1135,8 @@ export const {
   startLoadingSectionData,
   updateSectionAiTutorEnabled,
   updateSelectedSection,
+  sectionHasNewData,
+  sectionDoesNotHaveNewData,
 } = sectionSlice.actions;
 
 export default sectionSlice.reducer;

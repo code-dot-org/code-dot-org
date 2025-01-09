@@ -17901,6 +17901,8 @@ en:
               name: Python and Data Science [Chapter 2]
             lesson-4:
               name: Teaching Resources for Data Science
+            lesson-5:
+              name: 'Advanced Data Science and Python [Unit 2: Part 2]'
           lesson_groups: {}
           name: sandbox-teaching-data-science
           title: Teaching Data Science
@@ -18019,6 +18021,8 @@ en:
               name: Producer Power
             lesson-8:
               name: Sound Designer’s Studio
+            lesson-9:
+              name: Experimenting with shorter sounds
           lesson_groups:
             lessonGroup-3:
               display_name: New progression
@@ -18137,6 +18141,8 @@ en:
               name: 'Example Project 1: Classroom Light Levels'
             lesson-11:
               name: Templates
+            lesson-12:
+              name: AI Chat Examples
           lesson_groups: {}
           name: computer-systems-playground
           title: "[PLAYGROUND] Computer Systems and Devices (with micro:bit)"
@@ -18482,17 +18488,25 @@ en:
           title: Understanding Equity in Computer Science
           description_audience: ''
           description_short: ''
-          description: "##### **Module 1: Understanding Equity in Computer Science** provides a conceptual foundation for equity. You'll take the time to reflect on your journey and orient yourself toward enacting equity in your classroom. There are no prerequisites for the learning in this module.\n\n##### There are three lessons in Module 1:\n\n-   ##### What is Equity in CS?\n-   ##### Looking at Data\n-   ##### Reflecting on Personal Experiences\n\n* * *\n\n##### ⏰ **Suggested total time for this module:** <mark>UPDATE</mark>"
-          student_description: "##### **Module 1: Understanding Equity in Computer Science** provides a conceptual foundation for equity. You'll take the time to reflect on your journey and orient yourself toward enacting equity in your classroom. There are no prerequisites for the learning in this module.\n\n##### There are three lessons in Module 1:\n\n-   ##### What is Equity in CS?\n-   ##### Looking at Data\n-   ##### Reflecting on Personal Experiences\n\n* * *\n\n##### Suggested total time for this module: <mark>UPDATE</mark>"
+          description: "##### **Module 1: Understanding Equity in Computer Science** provides a conceptual foundation for equity. You'll take the time to reflect on your journey and orient yourself toward enacting equity in your classroom. There are no prerequisites for the learning in this module.\n\n##### There are three lessons in Module 1:\n\n-   ##### What is Equity in CS?\n-   ##### Looking at Data\n-   ##### Reflecting on Personal Experiences\n\n* * *\n\n##### ⏰ **Suggested total time for this module:** 85 minutes"
+          student_description: "##### **Module 1: Understanding Equity in Computer Science** provides a conceptual foundation for equity. You'll take the time to reflect on your journey and orient yourself toward enacting equity in your classroom. There are no prerequisites for the learning in this module.\n\n##### There are three lessons in Module 1:\n\n-   ##### What is Equity in CS?\n-   ##### Looking at Data\n-   ##### Reflecting on Personal Experiences\n\n* * *\n\n##### ⏰ **Suggested total time for this module:** 85 minutes"
         self-paced-pl-equitymodule-unit2:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Cultivating an Inclusive Classroom Culture
+            lesson-2:
+              name: Bias and Stereotype Threat
+            lesson-3:
+              name: Expanding Access to Computer Science
+            lesson-4:
+              name: Equity in Code.org’s Curriculum
           lesson_groups: {}
           name: self-paced-pl-equitymodule-unit2
           title: Strategies to Promote Equity in Computer Science
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "##### **Module 2: Strategies to Promote Equity in Computer Science** gets concrete about strategies educators can use in their classrooms to promote equity in computer science. This unit is oriented toward resources educators can use to bridge professional learning to the classroom.\n\n##### There are four lessons in Module 2:\n\n-   ##### Cultivating an Inclusive Classroom Culture\n-   ##### Bias and Stereotype Threat\n-   ##### Expanding Access to Computer Science\n-   ##### Equity in Code.org’s Curriculum\n\n* * *\n\n##### ⏰ Suggested total time for this module: <mark>update</mark>"
+          student_description: "##### **Module 2: Strategies to Promote Equity in Computer Science** gets concrete about strategies educators can use in their classrooms to promote equity in computer science. This unit is oriented toward resources educators can use to bridge professional learning to the classroom.\n\n##### There are four lessons in Module 2:\n\n-   ##### Cultivating an Inclusive Classroom Culture\n-   ##### Bias and Stereotype Threat\n-   ##### Expanding Access to Computer Science\n-   ##### Equity in Code.org’s Curriculum\n\n* * *\n\n##### ⏰ Suggested total time for this module: <mark>update</mark>"
         sandbox-teaching-getting-started:
           lessons:
             lesson-5:
@@ -18509,3 +18523,32 @@ en:
         kt-test-123:
           lessons: {}
           lesson_groups: {}
+        dan-test:
+          lessons: {}
+          lesson_groups: {}
+        sandbox-pl-teaching-k5-music-lab:
+          lessons: {}
+          lesson_groups: {}
+          name: sandbox-pl-teaching-k5-music-lab
+          title: Teaching K-5 Music Lab (Sandbox)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        net-int:
+          lessons:
+            lesson-1:
+              name: AI Chat Bots
+            lesson-2:
+              name: Net Sims
+          lesson_groups:
+            lessonGroup-2:
+              display_name: AI Chat Levels
+            lessonGroup-3:
+              display_name: Net Sim Levels
+          name: net-int
+          title: Networks & Internet Playground
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

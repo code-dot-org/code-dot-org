@@ -1,0 +1,20 @@
+name 'self-paced-equity-U2L3-AccessVideo'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Video: Be a Changemaker
+
+#### The following video shares how teachers can expand access to computer science. While you watch the video, consider the following:
+
+* #### What does your school do **well** in giving all students access to computer science?
+* #### How can your school **improve** in giving all students access to computer science?
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://www.youtube.com/watch?v=Nh9-R8AGcxc" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.code.org/8120002ade43a6ee1d04ee92a66781e3-image-1736213014224.23.31 PM.png" 
+         alt="YouTube Video Thumbnail" 
+         style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+  </a>
+</div>
+MARKDOWN

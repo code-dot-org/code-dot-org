@@ -13,10 +13,15 @@ import {
 } from '@reduxjs/toolkit';
 
 import {
+  getPublicCaching,
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
+import {
+  setUserRoleInCourse,
+  CourseRoles,
+} from '@cdo/apps/templates/currentUserRedux';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {getCurrentLevel} from '../code-studio/progressReduxSelectors';
@@ -47,6 +52,7 @@ import {
   LevelProperties,
   ProjectManagerStorageType,
   ProjectSources,
+  PartialUserAppOptions,
   Validation,
 } from './types';
 import {LifecycleEvent} from './utils/LifecycleNotifier';
@@ -77,6 +83,8 @@ export interface LabState {
   levelProperties: LevelProperties | undefined;
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
+  // If this lab is blocked because abuse score >= 15.
+  isBlocked: boolean | undefined;
   overrideValidations: Validation[] | undefined;
 }
 
@@ -89,6 +97,7 @@ const initialState: LabState = {
   validationState: getInitialValidationState(),
   levelProperties: undefined,
   isShareView: undefined,
+  isBlocked: undefined,
   overrideValidations: undefined,
 };
 
@@ -105,6 +114,7 @@ export const setUpWithLevel = createAsyncThunk<
     levelId: number;
     scriptId?: number;
     levelPropertiesPath: string;
+    userAppOptionsPath?: string;
     channelId?: string;
     userId?: number;
     scriptLevelId?: string;
@@ -138,6 +148,20 @@ export const setUpWithLevel = createAsyncThunk<
     const {isProjectLevel, usesProjects} = levelProperties;
 
     Lab2Registry.getInstance().setAppName(levelProperties.appName);
+
+    // If we are cached, and there is a user app options path because we are in a script
+    // level, then make an async call to the server to find out whether the user is an
+    // instructor, and if they are, then update the user role.  This is needed for the
+    // teacher panel to appear in cached levels.
+    if (getPublicCaching()) {
+      if (payload.userAppOptionsPath) {
+        loadUserAppOptions(payload.userAppOptionsPath).then(result => {
+          if (result.isInstructor) {
+            thunkAPI.dispatch(setUserRoleInCourse(CourseRoles.Instructor));
+          }
+        });
+      }
+    }
 
     if (!usesProjects) {
       // If projects are disabled on this level, we can skip loading projects data.
@@ -219,12 +243,12 @@ export const setUpWithLevel = createAsyncThunk<
 
     Lab2Registry.getInstance().setProjectManager(projectManager);
     // Load channel and source.
-    const {sources, channel} = await setUpAndLoadProject(
+    const {sources, channel, abuseScore} = await setUpAndLoadProject(
       projectManager,
       thunkAPI.dispatch
     );
     setProjectAndLevelData(
-      {initialSources: sources, channel, levelProperties},
+      {initialSources: sources, channel, levelProperties, abuseScore},
       thunkAPI.signal.aborted,
       thunkAPI.dispatch,
       thunkAPI.getState
@@ -372,11 +396,15 @@ const labSlice = createSlice({
         channel?: Channel;
         levelProperties: LevelProperties;
         initialSources?: ProjectSources;
+        abuseScore?: number;
       }>
     ) {
       state.channel = action.payload.channel;
       state.levelProperties = action.payload.levelProperties;
       state.initialSources = action.payload.initialSources;
+      if (typeof action.payload.abuseScore === 'number') {
+        state.isBlocked = action.payload.abuseScore >= 15 ? true : false;
+      }
     },
     setIsShareView(state, action: PayloadAction<boolean>) {
       state.isShareView = action.payload;
@@ -514,6 +542,7 @@ function setProjectAndLevelData(
     levelProperties: LevelProperties;
     channel?: Channel;
     initialSources?: ProjectSources;
+    abuseScore?: number;
   },
   aborted: boolean,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>,
@@ -533,6 +562,7 @@ function setProjectAndLevelData(
       data.levelProperties,
       data.channel,
       data.initialSources,
+      data.abuseScore,
       isReadOnlyWorkspace(getState())
     );
 }
@@ -544,6 +574,15 @@ async function loadLevelProperties(
     levelPropertiesPath,
     {},
     LevelPropertiesValidator
+  );
+  return response.value;
+}
+
+async function loadUserAppOptions(
+  userAppOptionsPath: string
+): Promise<PartialUserAppOptions> {
+  const response = await HttpClient.fetchJson<PartialUserAppOptions>(
+    userAppOptionsPath
   );
   return response.value;
 }

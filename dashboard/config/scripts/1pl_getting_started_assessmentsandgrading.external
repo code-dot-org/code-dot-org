@@ -1,0 +1,23 @@
+name '1PL_getting_started_assessmentsandgrading'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Assessment Levels
+
+## Finding Assessment Levels
+#### On the Course View page, assessment levels are denoted with a purple circle with a white checkmark.These levels are helpful for formative assessment. 
+![](https://images.code.org/cf747bb670038bc08149881ef4048ab1-image-1734026218172.56.53 AM.png)
+
+
+##Using Assessments 
+Insert testimonials here
+
+
+### Want to know more about assessment? Click here to see how other teachers assess in their classroom. (Link to the forum) 
+
+
+</details>
+
+
+MARKDOWN

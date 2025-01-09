@@ -558,6 +558,29 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal false, UserLevel.where(user_id: @user.id, level: @level.id).first.submitted?
   end
 
+  test 'logged in milestone with current locale' do
+    current_locale = set_request_locale('uk-UA')
+
+    post :milestone, params: @milestone_params
+    assert_response :success
+
+    user_level = UserLevel.find_by(user_id: @user.id, level: @level.id)
+    assert_equal current_locale, user_level.locale
+    assert_equal false, user_level.locale_supported
+  end
+
+  test 'logged in milestone with current locale support flag' do
+    current_locale = set_request_locale('uk-UA')
+    @script.update!(supported_locales: [current_locale])
+
+    post :milestone, params: @milestone_params
+    assert_response :success
+
+    user_level = UserLevel.find_by(user_id: @user.id, level: @level.id)
+    assert_equal current_locale, user_level.locale
+    assert_equal true, user_level.locale_supported
+  end
+
   test "Milestone with milestone posts disabled returns 503 status" do
     Gatekeeper.set('postMilestone', where: {script_name: @script.name}, value: false)
     post :milestone, params: @milestone_params
@@ -1136,18 +1159,22 @@ class ActivitiesControllerTest < ActionController::TestCase
       submitted: false
     }
 
+    current_locale = set_request_locale('uk-UA')
+
     post :milestone, params: milestone_params
     assert_response :success
 
     user_level = UserLevel.find_by(user: @user, level: sublevel1, script: script)
     refute_nil user_level
     assert_equal 100, user_level.best_result
+    assert_equal current_locale, user_level.locale
 
     assert_nil UserLevel.find_by(user: @user, level: sublevel2, script: script)
 
     parent_user_level = UserLevel.find_by(user: @user, level: bubble_choice, script: script)
     refute_nil parent_user_level
     assert_equal 100, parent_user_level.best_result
+    assert_equal current_locale, parent_user_level.locale
   end
 
   test 'milestone triggers AI rubric eval job' do

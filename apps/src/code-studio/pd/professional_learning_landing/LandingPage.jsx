@@ -37,7 +37,7 @@ import {
 } from '../workshop_dashboard/workshopConstants';
 import WorkshopEnrollmentCelebrationDialog from '../workshop_enrollment/WorkshopEnrollmentCelebrationDialog';
 
-import {EnrolledWorkshops, WorkshopsTable} from './EnrolledWorkshops';
+import LandingPageWorkshopsTable from './LandingPageWorkshopsTable';
 import SelfPacedProgressTable from './SelfPacedProgressTable';
 
 import style from './landingPage.module.scss';
@@ -86,7 +86,9 @@ const getAvailableTabs = permissions => {
 };
 
 const getEnrollSucessWorkshopTitle = () => {
-  // If sent here from successfully enrolling in a workshop, log WORKSHOP_ENROLLMENT_COMPLETED_EVENT.
+  // If a user was sent here after successfully enrolling in a workshop, the one field guaranteed to have
+  // been set in sessionStorage is 'workshopCourse' (since a workshop must have a course) so we can use
+  // its presence to determine whether to log the WORKSHOP_ENROLLMENT_COMPLETED_EVENT event or not.
   const workshopCourse = sessionStorage.getItem('workshopCourse', null);
   if (!workshopCourse) {
     return '';
@@ -102,7 +104,7 @@ const getEnrollSucessWorkshopTitle = () => {
       sessionKey => sessionStorage.removeItem(sessionKey)
     );
 
-    return workshopName ? workshopName : workshopCourse;
+    return !!workshopName ? workshopName : workshopCourse;
   }
 };
 
@@ -128,8 +130,20 @@ function LandingPage({
     getEnrollSucessWorkshopTitle()
   );
   const [currentTab, setCurrentTab] = useState(availableTabs[0].value);
+
+  const [workshopsAsParticipant, setWorkshopsAsParticipant] = useState([]);
+  const [loadingWorkshopsAsParticipant, setLoadingWorkshopsAsParticipant] =
+    useState(false);
+  const [loadingWorkshopsAsFacilitator, setLoadingWorkshopsAsFacilitator] =
+    useState(false);
   const [workshopsAsFacilitator, setWorkshopsAsFacilitator] = useState([]);
+  const [loadingWorkshopsAsOrganizer, setLoadingWorkshopsAsOrganizer] =
+    useState(false);
   const [workshopsAsOrganizer, setWorkshopsAsOrganizer] = useState([]);
+  const [
+    loadingWorkshopsAsProgramManager,
+    setLoadingWorkshopsAsProgramManager,
+  ] = useState(false);
   const [workshopsAsProgramManager, setWorkshopsAsProgramManager] = useState(
     []
   );
@@ -147,8 +161,32 @@ function LandingPage({
     dispatch(asyncLoadSectionData());
     dispatch(asyncLoadCoteacherInvite());
 
+    const fetchParticipantData = async () => {
+      setLoadingWorkshopsAsParticipant(true);
+      try {
+        const response = await fetch('/api/v1/pd/workshops_user_enrolled_in', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': await getAuthenticityToken(),
+          },
+        });
+
+        setLoadingWorkshopsAsParticipant(false);
+        if (response.ok) {
+          const jsonData = await response.json();
+          setWorkshopsAsParticipant(jsonData);
+        }
+      } catch (error) {
+        setLoadingWorkshopsAsParticipant(false);
+        console.error('Error fetching participant data:', error);
+      }
+    };
+    fetchParticipantData();
+
     if (userPermissions.includes('facilitator')) {
       const fetchFacilitatorData = async () => {
+        setLoadingWorkshopsAsFacilitator(true);
         try {
           const response = await fetch(
             '/dashboardapi/v1/pd/workshops_as_facilitator_for_pl_page',
@@ -161,11 +199,13 @@ function LandingPage({
             }
           );
 
+          setLoadingWorkshopsAsFacilitator(false);
           if (response.ok) {
             const jsonData = await response.json();
             setWorkshopsAsFacilitator(jsonData.workshops_as_facilitator);
           }
         } catch (error) {
+          setLoadingWorkshopsAsFacilitator(false);
           console.error('Error fetching facilitator data:', error);
         }
       };
@@ -176,6 +216,7 @@ function LandingPage({
     if (userPermissions.includes('workshop_organizer')) {
       const fetchWorkshopOrganizerData = async () => {
         try {
+          setLoadingWorkshopsAsOrganizer(true);
           const response = await fetch(
             '/dashboardapi/v1/pd/workshops_as_organizer_for_pl_page',
             {
@@ -187,11 +228,13 @@ function LandingPage({
             }
           );
 
+          setLoadingWorkshopsAsOrganizer(false);
           if (response.ok) {
             const jsonData = await response.json();
             setWorkshopsAsOrganizer(jsonData.workshops_as_organizer);
           }
         } catch (error) {
+          setLoadingWorkshopsAsOrganizer(false);
           console.error('Error fetching workshop organizer data:', error);
         }
       };
@@ -201,6 +244,7 @@ function LandingPage({
 
     if (userPermissions.includes('program_manager')) {
       const fetchProgramManagerWorkshops = async () => {
+        setLoadingWorkshopsAsProgramManager(true);
         try {
           const response = await fetch(
             '/dashboardapi/v1/pd/workshops_as_program_manager_for_pl_page',
@@ -213,11 +257,13 @@ function LandingPage({
             }
           );
 
+          setLoadingWorkshopsAsProgramManager(false);
           if (response.ok) {
             const jsonData = await response.json();
             setWorkshopsAsProgramManager(jsonData.workshops_as_program_manager);
           }
         } catch (error) {
+          setLoadingWorkshopsAsProgramManager(false);
           console.error('Error fetching program manager data:', error);
         }
       };
@@ -459,7 +505,7 @@ function LandingPage({
       <>
         {enrollSuccessWorkshopTitle && (
           <WorkshopEnrollmentCelebrationDialog
-            workshopName={enrollSuccessWorkshopTitle}
+            workshopTitle={enrollSuccessWorkshopTitle}
             onClose={() => setEnrollSuccessWorkshopTitle('')}
           />
         )}
@@ -473,7 +519,12 @@ function LandingPage({
             isPlSections={true}
           />
         </div>
-        <EnrolledWorkshops />
+        <LandingPageWorkshopsTable
+          workshops={workshopsAsParticipant}
+          isLoading={loadingWorkshopsAsParticipant}
+          tableHeader={i18n.myWorkshops()}
+          participantView
+        />
         <section>
           <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
           {RenderStaticRecommendedPL()}
@@ -491,13 +542,12 @@ function LandingPage({
           {RenderFacilitatorResources()}
         </section>
         {RenderOwnedPlSections()}
-        {workshopsAsFacilitator?.length > 0 && (
-          <WorkshopsTable
-            workshops={workshopsAsFacilitator}
-            forMyPlPage={true}
-            tableHeader={i18n.inProgressAndUpcomingWorkshops()}
-          />
-        )}
+        <LandingPageWorkshopsTable
+          workshops={workshopsAsFacilitator}
+          isLoading={loadingWorkshopsAsFacilitator}
+          tableHeader={i18n.inProgressAndUpcomingWorkshops()}
+          participantView={false}
+        />
       </>
     );
   };
@@ -514,13 +564,12 @@ function LandingPage({
           <Heading2>{i18n.plSectionsRegionalPartnerResources()}</Heading2>
           {RenderRegionalPartnerResources()}
         </section>
-        {workshopsAsProgramManager?.length > 0 && (
-          <WorkshopsTable
-            workshops={workshopsAsProgramManager}
-            forMyPlPage={true}
-            tableHeader={i18n.inProgressAndUpcomingWorkshops()}
-          />
-        )}
+        <LandingPageWorkshopsTable
+          workshops={workshopsAsProgramManager}
+          isLoading={loadingWorkshopsAsProgramManager}
+          tableHeader={i18n.inProgressAndUpcomingWorkshops()}
+          participantView={false}
+        />
       </>
     );
   };
@@ -540,13 +589,12 @@ function LandingPage({
             solidBorder={true}
           />
         </section>
-        {workshopsAsOrganizer?.length > 0 && (
-          <WorkshopsTable
-            workshops={workshopsAsOrganizer}
-            forMyPlPage={true}
-            tableHeader={i18n.inProgressAndUpcomingWorkshops()}
-          />
-        )}
+        <LandingPageWorkshopsTable
+          workshops={workshopsAsOrganizer}
+          isLoading={loadingWorkshopsAsOrganizer}
+          tableHeader={i18n.inProgressAndUpcomingWorkshops()}
+          participantView={false}
+        />
       </>
     );
   };
