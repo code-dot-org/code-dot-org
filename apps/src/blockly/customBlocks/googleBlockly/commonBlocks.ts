@@ -9,6 +9,7 @@ import {Order} from 'blockly/javascript';
 
 import {
   BlocklyWrapperType,
+  ExtendedCodeGenerator,
   ExtendedJavascriptGenerator,
   JavascriptGeneratorType,
 } from '@cdo/apps/blockly/types';
@@ -177,7 +178,9 @@ export const blocks = {
       // https://github.com/google/blockly/blob/2c29c01b14fd9cec9f7fde82f6c80b6f4f7b7c30/generators/javascript/loops.ts#L85-L178
 
       // Customization: use translateVarName instead of getVariableName
-      const variable0 = generator.translateVarName(block.getFieldValue('VAR'));
+      const variable0 = (
+        generator as unknown as ExtendedCodeGenerator
+      ).translateVarName(block.getFieldValue('VAR'));
       // End customation.
 
       const argument0 =
