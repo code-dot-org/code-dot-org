@@ -2,7 +2,6 @@ require 'cdo/shared_constants'
 require 'date'
 
 class Policies::ChildAccount
-  extend UsersHelper
   # Values for the `cap_status` attribute
   module ComplianceState
     # The period for "existing" users before their accounts locked out.
@@ -185,7 +184,7 @@ class Policies::ChildAccount
   def self.can_link_new_personal_account?(user)
     return true unless user.student?
     return false unless has_required_information?(user)
-    return true unless usa?(user.country_code)
+    return true unless Policies::User.in_usa?(user.country_code)
     return true unless underage?(user)
 
     ComplianceState.permission_granted?(user)
@@ -193,7 +192,7 @@ class Policies::ChildAccount
 
   # Returns true if the user has provided the minimum information we need to decide if their account is affected by our Child Account Policy.
   def self.has_required_information?(user)
-    if usa?(user.country_code)
+    if Policies::User.in_usa?(user.country_code)
       [user.us_state, user.country_code, user.birthday].all?(&:present?)
     else
       user.birthday.present?

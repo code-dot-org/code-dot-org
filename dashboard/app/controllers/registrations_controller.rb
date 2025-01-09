@@ -7,8 +7,6 @@ require 'policies/lti'
 require 'queries/lti'
 
 class RegistrationsController < Devise::RegistrationsController
-  include UsersHelper
-
   before_action :require_no_authentication, only: [:account_type, :login_type, :finish_student_account, :finish_teacher_account, :new, :create, :cancel]
 
   respond_to :json
@@ -469,7 +467,7 @@ class RegistrationsController < Devise::RegistrationsController
     # Get the request location
     location = Geocoder.search(request.ip).try(:first)
     @country_code = location&.country_code.to_s.upcase
-    @is_usa = usa?(@country_code)
+    @is_usa = Policies::User.in_usa?(@country_code)
 
     # A student is underage if they reside in a state with a CAP policy and are in the affected age range.
     underage = Policies::ChildAccount.underage?(current_user)
