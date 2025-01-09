@@ -67,7 +67,7 @@
   --brand-teal-80: #00636e;
   --brand-teal-90: #004b54;
   --neutral-base-black: #292f36;
-  --neutral-base-white: #fff;
+  --neutral-base-white: #ffffff;
   --neutral-black-alpha-10: #292f361a;
   --neutral-black-alpha-20: #292f3633;
   --neutral-black-alpha-30: #292f364d;
@@ -91,14 +91,14 @@
   --neutral-gray-90: #4c5661;
   --neutral-gray-95: #394450;
   --neutral-white-alpha-10: #ffffff1a;
-  --neutral-white-alpha-20: #fff3;
+  --neutral-white-alpha-20: #ffffff33;
   --neutral-white-alpha-30: #ffffff4d;
-  --neutral-white-alpha-40: #fff6;
+  --neutral-white-alpha-40: #ffffff66;
   --neutral-white-alpha-5: #ffffff0d;
   --neutral-white-alpha-50: #ffffff80;
-  --neutral-white-alpha-60: #fff9;
+  --neutral-white-alpha-60: #ffffff99;
   --neutral-white-alpha-70: #ffffffb2;
-  --neutral-white-alpha-80: #fffc;
+  --neutral-white-alpha-80: #ffffffcc;
   --neutral-white-alpha-90: #ffffffe5;
   --neutral-white-alpha-95: #fffffff2;
   --sentiment-error-10: #ffe1dd;
@@ -106,7 +106,7 @@
   --sentiment-error-20: #ffbfb6;
   --sentiment-error-30: #ff8677;
   --sentiment-error-40: #f95d4a;
-  --sentiment-error-50: #e5311a;
+  --sentiment-error-50: #e02d16;
   --sentiment-error-60: #c12814;
   --sentiment-error-70: #aa2513;
   --sentiment-error-80: #842418;
