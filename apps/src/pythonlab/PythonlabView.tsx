@@ -125,8 +125,6 @@ const PythonlabView: React.FunctionComponent = () => {
 
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
 
-  console.log({labConfigInView: labConfig});
-
   useEffect(() => {
     if (progressManager && appName === 'pythonlab') {
       progressManager.setValidator(

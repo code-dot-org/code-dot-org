@@ -394,7 +394,6 @@ export default class ProjectManager {
       // If the sources contain a labConfig entry, then also save this to the
       // channel, which means that the labConfig entry will also be saved in the
       // Project model in the database, specifically inside the value field JSON.
-      console.log({labConfig: this.sourcesToSave?.labConfig});
       if (this.sourcesToSave?.labConfig) {
         this.channelToSave = {
           ...this.channelToSave,

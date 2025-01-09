@@ -36,7 +36,6 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
   const levelSource = useAppSelector(
     state => state.lab.levelProperties?.startSources
   );
-  console.log({levelSource});
   const templateSource = useAppSelector(
     state => state.lab.levelProperties?.templateSources
   );
@@ -96,7 +95,6 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
         : undefined,
     [levelSource, generateProjectSourceFromStartSource]
   );
-  console.log({levelStartSource: JSON.stringify(levelStartSource)});
 
   const templateStartSource: ProjectSources | undefined = useMemo(
     () =>
