@@ -1,0 +1,68 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-10-24T22:02:21.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Biology Study Chatbot\r\n\r\nClick into \"User View\" to view the model card for this project and interact with the chatbot.",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 1,
+        "systemPrompt": "This chatbot helps with highschool science homework. Make the questions within a paragraph so the reader doesn't lose interest quickly. Provide information you think would be on a high school test and make your answers as close as possible to notes from a textbook. All questions should be about biology and human science and if the questions are not related to human biology say \"I don't know about that topic\".",
+        "retrievalContexts": [
+          "The small intestine has three parts: the duodenum, jejunum, and ileum. It helps to further digest food coming from the stomach. It absorbs nutrients (vitamins, minerals, carbohydrates, fats, proteins) and water from food so they can be used by the body.",
+          "The frontal lobe is the largest of the four major lobes of the brain in mammals, and is located at the front of each cerebral hemisphere. It is parted from the parietal lobe by a groove between tissues called the central sulcus and from the temporal lobe by a deeper groove called the lateral sulcus.",
+          "The brain is a complex organ that controls thought, memory, emotion, touch, motor skills, vision, breathing, temperature, hunger and every process that regulates our body. Together, the brain and spinal cord that extends from it make up the central nervous system, or CNS.",
+          "One of a pair of organs in the abdomen. The kidneys remove waste and extra water from the blood (as urine) and help keep chemicals (such as sodium, potassium, and calcium) balanced in the body. The kidneys also make hormones that help control blood pressure and stimulate bone marrow to make red blood cells.",
+          "Your lungs are the pair of spongy, pinkish-gray organs in your chest. When you inhale (breathe in), air enters your lungs, and oxygen from that air moves to your blood. At the same time, carbon dioxide, a waste gas, moves from your blood to the lungs and is exhaled (breathed out). This process, called gas exchange, is essential to life. The lungs are the centerpiece of your respiratory system. Your respiratory system also includes the trachea (windpipe), muscles of the chest wall and diaphragm, blood vessels, and other tissues. All of these parts make breathing and gas exchange possible. Your brain controls your breathing rate (how fast or slow you breathe), by sensing your body’s need to get oxygen and eliminate carbon dioxide. lung injury and disease.",
+          "Located in the lower abdomen, the bladder is a hollow organ, much like a balloon, that stores urine. Urine contains waste and extra fluid left over after the body takes what it needs from what we eat and drink. Each day, adults pass about a quart and a half of urine through the bladder and out of the body.",
+          "The three main types of muscle include: Skeletal muscle – the specialised tissue that is attached to bones and allows movement. Together, skeletal muscles and bones are called the musculoskeletal system (also known as the locomotor system). Generally speaking, skeletal muscle is grouped into opposing pairs such as the biceps and triceps on the front and back of the upper arm. Skeletal muscles are under our conscious control, which is why they are also known as voluntary muscles. Another term is striated muscles, since the tissue looks striped when viewed under a microscope. Smooth muscle – located in various internal structures including the digestive tract, uterus and blood vessels such as arteries. Smooth muscle is arranged in layered sheets that contract in waves along the length of the structure. Another common term is involuntary muscle, since the motion of smooth muscle happens without our conscious awareness. Cardiac muscle – the muscle specific to the heart. The heart contracts and relaxes without our conscious awareness.",
+          "There are about 600 muscles in the human body. Muscles have a range of functions from pumping blood and supporting movement to lifting heavy weights or giving birth. Muscles work by either contracting or relaxing to cause movement. This movement may be voluntary (meaning the movement is made consciously) or done without our conscious awareness (involuntary).",
+          "The right atrium pumps the blood to the right ventricle. The right ventricle pumps the low-oxygen blood to the lungs to pick up a fresh supply of oxygen. The left atrium receives to high-oxygen blood from the lungs and pumps it to the left ventricle.",
+          "The heart is a pump, usually beating about 60 to 100 times per minute. With each heartbeat, the heart sends blood throughout our bodies, carrying oxygen to every cell. After delivering the oxygen, the blood returns to the heart. The heart then sends the blood to the lungs to pick up more oxygen.",
+          "The liver is an organ that sits just under the rib cage on the right side of the abdomen. It can weigh up to 4 pounds (1.8 kilograms). The liver is needed to help digest food, rid the body of waste products and make substances, called clotting factors, that keep the blood flowing well, among other tasks",
+          "Human biology is the study of all aspects of the human organism, including evolution, genetics, ecology, anatomy and physiology, development, anthropology, and nutrition, among others."
+        ],
+        "modelCardInfo": {
+          "botName": "Biology Study Chatbot",
+          "description": "This bot will help you learn more about how living things work and can be used to take quick notes while having fun with a chatbot. ",
+          "intendedUse": "This is used for students to take notes and study with. It is also to help people with short attention spans have some more fun chatting with the bot while studying for school ",
+          "limitationsAndWarnings": "This bot is not used for getting the wrong kind of info or to learn how to do things like surgery or to learn how much a body part costs.",
+          "testingAndEvaluation": "It worked well with the system prompt only, but I needed to add info about human body organs because it sometimes wouldn't give the pre-programmed information.",
+          "exampleTopics": [
+            "\"Tell me about the heart\"",
+            "\"what are kidneys stones\" ",
+            "\"what does the kidney do\"",
+            "The topic is many about human body parts."
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "readonly",
+        "temperature": "readonly",
+        "systemPrompt": "readonly",
+        "retrievalContexts": "readonly",
+        "modelCardInfo": "readonly"
+      },
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ],
+      "levelSystemPrompt": ""
+    },
+    "name_suffix": "_2024",
+    "display_name": "Biology Study Chatbot",
+    "bubble_choice_description": "This bot will help you learn more about how living things work and can be used to take quick notes while having fun with a chatbot."
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-24T22:02:21.024+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project2-L0A_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project2-L0A_2024\"},{\"changed_at\":\"2024-10-24 22:05:13 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Aichat>

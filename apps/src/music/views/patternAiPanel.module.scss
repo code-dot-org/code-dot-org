@@ -1,5 +1,7 @@
 @import "color.scss";
 
+$ai-rubric-cyan-hover: #37e1db;
+
 // Move the arrow left and right.
 @keyframes left-right {
   0%, 100% {
@@ -19,38 +21,106 @@
   }
 }
 
+@keyframes delay-fade-in {
+  0%, 80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+    margin-top: 20px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
 .patternPanel {
   font-size: 13px;
   user-select: none;
+  height: 100%;
 }
 
 .body {
   display: flex;
   justify-content: space-around;
+  height: 100%;
+  background-color: $neutral_dark;
+
+  &Generating {
+    pointer-events: none;
+  }
 }
 
 .leftArea {
   width: 744px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: space-evenly;
+  height: 100%;
+
+  .topRow {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .editArea {
+    display: flex;
+  }
+
+  .drumArea {
+    margin-top: 11px;
+  }
+
+  .patternArea {
+    background-color: $dark_black;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: solid 1px $neutral_dark40;
+  }
+}
+
+.select {
+  margin-bottom: 0;
+  width: 110px;
+}
+
+.previewControls {
+  width: 110px;
+  margin-left: 17px;
+
+  div {
+    margin: 0;
+  }
 }
 
 .row {
   display: flex;
   align-items: center;
+  height: 23px;
 
   &:hover {
-    background-color: rgba($background_gray, 0.2);
+    background-color: rgba($white, 0.02);
     border-radius: 4px;
   }
 }
 
 .nameContainer {
   display: inline-block;
-  width: 100px;
-  vertical-align: middle;
+  width: 105px;
   padding-left: 3px;
+  padding-right: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   .name {
     cursor: pointer;
@@ -60,27 +130,46 @@
 
 .outerCell {
   display: inline-block;
-  padding: 5px 3px;
+  padding: 2px 1px;
   box-sizing: border-box;
   cursor: pointer;
+  transition: background-color 0s;
+  border-radius: 2px;
 
-  &Playing {
-    background-color: $light-gray;
+  .innerCell {
+    padding: 1px;
+
+    &Playing {
+      background-color: $realyellow;
+    }
+
+    &Scanning {
+      background-color: $ai_rubric_cyan;
+    }
+
+    &SlowFade {
+      transition: background-color 0.25s;
+    }
+  }
+
+  &Fourth {
+    margin-right: 5px;
   }
 }
 
 .rightArea {
-  width: 100px;
+  width: 120px;
+  height: 100%;
 }
 
 .botArea {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
   opacity: 0;
   transition: 0.1s ease-in-out;
-  justify-content: flex-end;
+  justify-content: center;
   height: 100%;
 
   &Gap {
@@ -93,14 +182,28 @@
 }
 
 .button {
+  background-color: $ai_rubric_cyan !important;
+
+  &:hover, &:disabled {
+    background-color: $ai-rubric-cyan-hover !important;
+  }
+
+  &:disabled {
+    border: 1px solid rgba(0 0 0 / 0);
+    cursor: default;
+  }
+
   span {
     user-select: none;
   }
 }
 
 .temperatureInput {
-  width: 100px;
-  height: 5px;
+  width: 140px;
+
+  button {
+    padding-bottom: 1px !important;
+  }
 }
 
 .temperatureText {
@@ -119,14 +222,8 @@
 }
 
 .aiBot {
-  width: 60px;
   transition: 0.1s ease-in-out;
-  cursor: pointer;
-
-  &Generating {
-    pointer-events: none;
-    cursor: initial;
-  }
+  width: 100px;
 
   &:hover{
     transform: scale(1.05, 1.05);
@@ -137,9 +234,9 @@
 .cell {
   padding: 2px;
   width: 10px;
-  height: 10px;
+  height: 13px;
 
-  border-radius: 50%;
+  border-radius: 2px;
   transition: 0.1s ease-in-out;
   animation: 0.5s fade-in;
 
@@ -182,7 +279,7 @@
     }
 
     &Active {
-      background-color: white;
+      background-color: $ai_rubric_cyan;
     }
   }
 }
@@ -199,24 +296,38 @@
   padding: 14px;
   border-radius: 4px;
   max-width: 300px;
+  white-space: pre-line;
+  animation: slidein 0.5s;
+  z-index: 1;
 
   &DrawDrums {
     left: 370px;
     top: 80px;
   }
 
-  &Generate {
-    top: 172px;
-    right: 196px;
+  &Temperature {
+    top: 170px;
+    right: 214px;
+  }
 
-    &Error {
-      top: 100px;
-    }
+  &GenerateNoTemperature, &GenerateAgainNoTemperature {
+    top: 195px;
+    right: 216px;
+  }
+
+  &Generate, &GenerateAgain {
+    top: 205px;
+    right: 216px;
+  }
+
+  &Generating {
+    left: 370px;
+    top: 80px;
   }
 
   &Error {
-    top: 143px;
-    right: 196px;
+    left: 370px;
+    top: 80px;
   }
 }
 
@@ -228,9 +339,19 @@
     top: 90px;
   }
 
-  &Generate {
-    right: 177px;
-    top: 201px;
+  &Temperature {
+    right: 192px;
+    top: 177px;
+  }
+
+  &GenerateNoTemperature, &GenerateAgainNoTemperature {
+    right: 189px;
+    top: 210px;
+  }
+
+  &Generate, &GenerateAgain {
+    right: 189px;
+    top: 221px;
   }
 }
 
@@ -247,6 +368,14 @@
     transform: rotate(90deg);
     animation: left-right 0.75s infinite;
   }
+}
+
+.generatingSpinner {
+  position: absolute;
+  left: 525px;
+  top: 190px;
+  font-size: 45px;
+  animation: delay-fade-in 7s;
 }
 
 .errorMessage {

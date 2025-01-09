@@ -1,4 +1,5 @@
-@import 'color';
+@import '@cdo/apps/componentLibrary/common/styles/primitiveColors.css';
+@import '@cdo/apps/componentLibrary/common/styles/variables';
 @import '@cdo/apps/componentLibrary/common/styles/mixins';
 @import '@cdo/apps/componentLibrary/typography/typography.module';
 
@@ -11,8 +12,30 @@
   gap: 0.125rem;
   margin: 0;
 
+  &.styleAsFormField {
+    width: $form-field-width;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+
+    .dropdownArrowDiv {
+      width: 100%;
+
+      select {
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
   .dropdownLabel {
     display: block;
+  }
+
+  .iconLeft {
+    position: absolute;
+    z-index: 1;
   }
 
   select {
@@ -29,9 +52,13 @@
     appearance: none;
 
     &:focus-visible {
-      outline: 2px solid $light_primary_500;
+      outline: 2px solid var(--brand-teal-50);
       border-radius: 0.25rem;
       outline-offset: 2px;
+    }
+
+    &.readOnly {
+      opacity: 1;
     }
   }
 
@@ -58,190 +85,235 @@
 // Dropdown colors
 .dropdownContainer-black {
   .dropdownLabel {
-    color: $light_black;
+    color: var(--neutral-base-black);
   }
 
   select {
-    color: $light_black;
-    border-color: $light_black;
-    background-color: $light_white;
+    color: var(--neutral-base-black);
+    border-color: var(--neutral-base-black);
+    background-color: var(--neutral-base-white);
 
     &.hasError {
-      border-color: $light_negative_500;
+      border-color: var(--sentiment-error-50);
     }
   }
 
   .dropdownArrowDiv:after {
-    color: $light_black;
+    color: var(--neutral-base-black);
   }
 
   .helperSection {
-    color: $light_black;
+    color: var(--neutral-base-black);
   }
 
   .errorSection {
-    color: $light_negative_500;
+    color: var(--sentiment-error-50);
   }
 
   &:has(select:hover) {
     select:not(:disabled) {
-      color: $light_black;
-      background-color: $light_gray_100;
+      color: var(--neutral-base-black);
+      background-color: var(--neutral-gray-10);
     }
 
     .dropdownArrowDiv:after {
-      color: $light_black;
+      color: var(--neutral-base-black);
     }
   }
 
   &:has(select:active) {
     select:not(:disabled) {
-      color: $light_black;
+      color: var(--neutral-base-black);
     }
 
     .dropdownArrowDiv:after {
-      color: $light_black;
+      color: var(--neutral-base-black);
     }
   }
 
   &:has(select:disabled) {
     select {
-      color: $light_gray_200;
-      border-color: $light_gray_200;
+      color: var(--neutral-gray-20);
+      border-color: var(--neutral-gray-20);
     }
 
     .dropdownArrowDiv:after {
-      color: $light_gray_200;
+      color: var(--neutral-gray-20);
     }
 
     .helperSection,
     .errorSection {
-      color: $light_gray_200;
+      color: var(--neutral-gray-20);
+    }
+  }
+
+  &:has(select.readOnly) {
+    select {
+      @include field-read-only-black-colors;
+    }
+
+    .dropdownArrowDiv:after {
+      @include field-read-only-black-colors;
+    }
+
+    .helperSection,
+    .errorSection {
+      @include field-read-only-black-colors;
     }
   }
 }
 
 .dropdownContainer-gray {
   .dropdownLabel {
-    color: $light_black;
+    color: var(--neutral-base-black);
   }
 
   select {
-    color: $light_black;
-    border-color: $light_gray_400;
-    background-color: $light_white;
+    color: var(--neutral-base-black);
+    border-color: var(--neutral-gray-40);
+    background-color: var(--neutral-base-white);
 
     &.hasError {
-      border-color: $light_negative_500;
+      border-color: var(--sentiment-error-50);
     }
   }
 
   .dropdownArrowDiv:after {
-    color: $light_black;
+    color: var(--neutral-base-black);
   }
 
   .helperSection {
-    color: $light_black;
+    color: var(--neutral-base-black);
   }
 
   .errorSection {
-    color: $light_negative_500;
+    color: var(--sentiment-error-50);
   }
 
   &:has(select:hover) {
     select:not(:disabled) {
-      color: $light_black;
-      background-color: $light_gray_100;
+      color: var(--neutral-base-black);
+      background-color: var(--neutral-gray-10);
     }
 
     .dropdownArrowDiv:after {
-      color: $light_black;
+      color: var(--neutral-base-black);
     }
   }
 
   &:has(select:active) {
     select:not(:disabled) {
-      color: $light_black;
+      color: var(--neutral-base-black);
     }
 
     .dropdownArrowDiv:after {
-      color: $light_black;
+      color: var(--neutral-base-black);
     }
   }
 
   &:has(select:disabled) {
     select {
-      color: $light_gray_200;
-      border-color: $light_gray_200;
+      color: var(--neutral-gray-20);
+      border-color: var(--neutral-gray-20);
     }
 
     .dropdownArrowDiv:after {
-      color: $light_gray_200;
+      color: var(--neutral-gray-20);
     }
 
     .helperSection,
     .errorSection {
-      color: $light_gray_200;
+      color: var(--neutral-gray-20);
+    }
+  }
+
+  &:has(select.readOnly) {
+    select {
+      @include field-read-only-black-colors;
+    }
+
+    .dropdownArrowDiv:after {
+      @include field-read-only-black-colors;
+    }
+
+    .helperSection,
+    .errorSection {
+      @include field-read-only-black-colors;
     }
   }
 }
 
 .dropdownContainer-white {
   .dropdownLabel {
-    color: $light_white;
+    color: var(--neutral-base-white);
   }
 
   &.dropdownContainer.dropdownContainer-thin select,
   select {
-    color: $light_white;
-    border-color: $light_white;
-    background-color: $light_black;
+    color: var(--neutral-base-white);
+    border-color: var(--neutral-base-white);
+    background-color: var(--neutral-base-black);
   }
 
   .helperSection,
   .errorSection {
-    color: $light_white;
+    color: var(--neutral-base-white);
   }
 
   &:has(select:hover) {
     select:not(:disabled) {
-      color: $light_white;
-      background-color: $light_gray_900;
+      color: var(--neutral-base-white);
+      background-color: var(--neutral-gray-90);
     }
 
     .dropdownArrowDiv:after {
-      color: $light_white;
+      color: var(--neutral-base-white);
     }
   }
 
   &:has(select:active) {
     select:not(:disabled) {
-      color: $light_white;
+      color: var(--neutral-base-white);
     }
 
     .dropdownArrowDiv:after {
-      color: $light_white;
+      color: var(--neutral-base-white);
     }
   }
 
   &:has(select:disabled) {
     select {
-      color: $light_gray_900;
-      border-color: $light_gray_900;
+      color: var(--neutral-gray-90);
+      border-color: var(--neutral-gray-90);
     }
 
     .dropdownArrowDiv:after {
-      color: $light_gray_900;
+      color: var(--neutral-gray-90);
     }
 
     .helperSection,
     .errorSection {
-      color: $light_gray_700;
+      color: var(--neutral-gray-70);
     }
   }
 
   .dropdownArrowDiv:after {
-    color: $light_white;
+    color: var(--neutral-base-white);
+  }
+
+  &:has(select.readOnly) {
+    select {
+      @include field-read-only-white-colors;
+    }
+
+    .dropdownArrowDiv:after {
+      @include field-read-only-white-colors;
+    }
+
+    .helperSection,
+    .errorSection {
+      @include field-read-only-white-colors;
+    }
   }
 }
 
@@ -272,6 +344,21 @@
     padding-inline-end: 3rem;
   }
 
+  .iconLeft {
+    font-size: 1.1875rem;
+    line-height: 125%;
+    width: 1.5rem;
+
+    inset-inline-start: 1rem;
+    top: 0.825rem;
+  }
+
+  &:has(.iconLeft) {
+    select {
+      padding-inline-start: 3rem;
+    }
+  }
+
   .dropdownArrowDiv:after {
     font-size: 1.1875rem;
     line-height: 1.25;
@@ -287,7 +374,7 @@
     gap: 0.375rem;
 
     &.errorSection {
-      color: $light_negative_500;
+      color: var(--sentiment-error-50);
     }
   }
 }
@@ -319,6 +406,21 @@
     padding-inline-end: 2.75rem;
   }
 
+  .iconLeft {
+    font-size: 1rem;
+    line-height: 125%;
+    width: 1.25rem;
+
+    inset-inline-start: 1rem;
+    top: 0.625rem;
+  }
+
+  &:has(.iconLeft) {
+    select {
+      padding-inline-start: 2.75rem;
+    }
+  }
+
   .dropdownArrowDiv:after {
     font-size: 1rem;
     line-height: 1.25;
@@ -334,7 +436,7 @@
     gap: 0.375rem;
 
     &.errorSection {
-      color: $light_negative_500;
+      color: var(--sentiment-error-50);
     }
   }
 }
@@ -365,6 +467,21 @@
     padding-inline-end: 2.625rem;
   }
 
+  .iconLeft {
+    font-size: 0.875rem;
+    line-height: 125%;
+    width: 1.125rem;
+
+    inset-inline-start: 1rem;
+    top: 0.425rem;
+  }
+
+  &:has(.iconLeft) {
+    select {
+      padding-inline-start: 2.625rem;
+    }
+  }
+
   .dropdownArrowDiv:after {
     font-size: 0.875rem;
     line-height: 1.25;
@@ -380,7 +497,7 @@
     gap: 0.25rem;
 
     &.errorSection {
-      color: $light_negative_500;
+      color: var(--sentiment-error-50);
     }
   }
 }
@@ -411,6 +528,21 @@
     padding-inline-end: 1.75rem;
   }
 
+  .iconLeft {
+    font-size: 0.8125rem;
+    line-height: 125%;
+    width: 1rem;
+
+    inset-inline-start: 0.5rem;
+    top: 0.25rem;
+  }
+
+  &:has(.iconLeft) {
+    select {
+      padding-inline-start: 1.75rem;
+    }
+  }
+
   .dropdownArrowDiv:after {
     font-size: 0.8125rem;
     line-height: 1.25;
@@ -426,7 +558,7 @@
     gap: 0.25rem;
 
     &.errorSection {
-      color: $light_negative_500;
+      color: var(--sentiment-error-50);
     }
   }
 }

@@ -210,8 +210,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    *     area.
    * @override
    */
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  wouldDelete(_element: GoogleBlockly.IDraggable, _couldConnect: boolean) {
+  wouldDelete(_element: GoogleBlockly.IDraggable) {
     return false;
   }
 

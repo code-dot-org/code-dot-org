@@ -4,6 +4,8 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
@@ -12,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "alltheblocklythings",
-    "serialized_at": "2022-06-15 18:58:00 UTC",
+    "serialized_at": "2024-11-19 01:13:53 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -225,6 +227,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Flappy Project"
+        ],
         "progression": "Flappy Project"
       },
       "bonus": false,
@@ -247,6 +252,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Poetry Project"
+        ],
         "progression": "Poetry Projects"
       },
       "bonus": false,
@@ -269,6 +277,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Poetry HOC Project"
+        ],
         "progression": "Poetry Projects"
       },
       "bonus": false,
@@ -291,6 +302,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Bounce Project"
+        ],
         "progression": "Bounce Projects"
       },
       "bonus": false,
@@ -313,6 +327,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Basketball Project"
+        ],
         "progression": "Bounce Projects"
       },
       "bonus": false,
@@ -335,6 +352,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Sports Project"
+        ],
         "progression": "Bounce Projects"
       },
       "bonus": false,
@@ -357,6 +377,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Dance Lab Project"
+        ],
         "progression": "Dance Party Project"
       },
       "bonus": false,
@@ -379,6 +402,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Sprite Lab Project"
+        ],
         "progression": "Sprite Lab Projects"
       },
       "bonus": false,
@@ -401,6 +427,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New The Bad Guys Project"
+        ],
         "progression": "Sprite Lab Projects"
       },
       "bonus": false,
@@ -423,6 +452,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Artist Project"
+        ],
         "progression": "Artist Projects"
       },
       "bonus": false,
@@ -445,6 +477,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New K1 Artist Project"
+        ],
         "progression": "Artist Projects"
       },
       "bonus": false,
@@ -467,6 +502,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Frozen Project"
+        ],
         "progression": "Artist Projects"
       },
       "bonus": false,
@@ -489,6 +527,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Minecraft Adventurer Project"
+        ],
         "progression": "Minecraft Projects"
       },
       "bonus": false,
@@ -511,6 +552,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Minecraft Designer Project"
+        ],
         "progression": "Minecraft Projects"
       },
       "bonus": false,
@@ -533,6 +577,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Minecraft Hero Project"
+        ],
         "progression": "Minecraft Projects"
       },
       "bonus": false,
@@ -555,6 +602,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Minecraft Aquatic Project"
+        ],
         "progression": "Minecraft Projects"
       },
       "bonus": false,
@@ -577,6 +627,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Minecraft Code Connection Project"
+        ],
         "progression": "Minecraft Projects"
       },
       "bonus": false,
@@ -599,6 +652,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Play Lab Project"
+        ],
         "progression": "Play Lab Projects"
       },
       "bonus": false,
@@ -621,6 +677,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New K1 Play Lab Project"
+        ],
         "progression": "Play Lab Projects"
       },
       "bonus": false,
@@ -643,6 +702,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Ice Age Project"
+        ],
         "progression": "Play Lab Projects"
       },
       "bonus": false,
@@ -665,6 +727,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Infinity Project"
+        ],
         "progression": "Play Lab Projects"
       },
       "bonus": false,
@@ -687,6 +752,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Gumball Project"
+        ],
         "progression": "Play Lab Projects"
       },
       "bonus": false,
@@ -709,6 +777,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Star Wars Blocks Project"
+        ],
         "progression": "Star Wars Projects"
       },
       "bonus": false,
@@ -731,6 +802,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Star Wars Expanded Blocks Project"
+        ],
         "progression": "Star Wars Projects"
       },
       "bonus": false,
@@ -753,6 +827,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Algebra Project"
+        ],
         "progression": "Algebra Projects"
       },
       "bonus": false,
@@ -775,6 +852,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Free Play"
+        ],
         "progression": "Algebra Projects"
       },
       "bonus": false,
@@ -797,6 +877,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Free Play"
+        ],
         "progression": "Algebra Projects"
       },
       "bonus": false,
@@ -1168,6 +1251,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

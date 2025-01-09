@@ -4,14 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "curriculum_umbrella": "CSF Self Paced PL",
+      "content_area": "self_paced_pl_6_8",
+      "curriculum_umbrella": "CSD Self Paced PL",
       "is_migrated": true,
       "student_detail_progress_view": true,
+      "topic_tags": [
+        "maker"
+      ],
       "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-11 20:34:25 UTC",
+    "serialized_at": "2024-11-19 01:19:37 UTC",
     "published_state": null,
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

@@ -497,6 +497,8 @@ class Lesson < ApplicationRecord
       scriptResourcesPdfUrl: script.get_unit_resources_pdf_url,
       standardsUrl: standards_script_path(script),
       vocabularyUrl: vocab_script_path(script),
+      hasLessonPlan: has_lesson_plan,
+      isLockable: lockable?,
     }
   end
 

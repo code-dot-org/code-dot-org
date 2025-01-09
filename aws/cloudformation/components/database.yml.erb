@@ -146,10 +146,15 @@
         # https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_execution_time
         max_execution_time: 30000
 
-        # Favor write performance over durability. In the event of a database server crash
-        # we could lose roughly 1 second of transactions.
+        # Control balance of write performance vs transaction durability.
         # https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit
-        innodb_flush_log_at_trx_commit: 1
+        # https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.BestPractices.FeatureRecommendations.html#AuroraMySQL.BestPractices.Flush
+        # Note in Aurora 3 / MySQL this setting works as follows:
+        #   0 – The database doesn't wait for confirmation that the redo log records are written to the Aurora cluster volume.
+        #   1 or 2 – The database waits for confirmation that the redo log records are written to the Aurora cluster volume.
+        # During high usage time periods (such as Hour of Code) set `innodb_flush_log_at_trx_commit=0` to reduce write
+        # latency, but potentially risk losing up to 1 second of data due to database instance crash, failover, restart.
+        innodb_flush_log_at_trx_commit: 0
         innodb_trx_commit_allow_data_loss: 1
         # END: Dynamic configuration settings.
   DBProxyRole:
@@ -290,7 +295,7 @@
       # Updating a Stack with a change to EngineVersion causes "Some Interruption".
       # Each Database Instance in the cluster is restarted.
       # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-engineversion
-      EngineVersion: 8.0.mysql_aurora.3.05.2
+      EngineVersion: 8.0.mysql_aurora.3.08.0
       MasterUsername: !Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:username}}"
       MasterUserPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:password}}"
       EnableIAMDatabaseAuthentication: true

@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import {getSelectedScriptName} from '@cdo/apps/redux/unitSelectionRedux';
-import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import {unitUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
 import {
@@ -35,10 +35,10 @@ class ManageStudentNameCell extends Component {
   render() {
     const {id, sectionId, name, username, email, editedValue, scriptName} =
       this.props;
-    const studentUrl = scriptUrlForStudent(sectionId, scriptName, id);
+    const studentUrl = unitUrlForStudent(sectionId, scriptName, id);
 
     return (
-      <div style={tableLayoutStyles.tableText}>
+      <div style={tableLayoutStyles.tableNameText}>
         {!this.props.isEditing && (
           <div>
             {studentUrl && (

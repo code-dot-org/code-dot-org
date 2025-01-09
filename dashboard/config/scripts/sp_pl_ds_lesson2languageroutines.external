@@ -1,0 +1,27 @@
+name 'sp-pl-DS-lesson2LanguageRoutines'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson Resources
+
+> #### Take a moment to explore the resources on this page to build awareness of what’s available. You don’t need to read each one in detail now, but we recommend opening them to get a sense of their content and bookmarking this page for easy access when you need them later.
+
+<img src="https://images.code.org/8cb81004d23e85f78fa35f9f84b13106-image-1697565421892.png" alt="teacher helping two CSA students on the computer" width="300px" style="border-radius:10px; float:right; margin: 20px 60px 40px 40px;">
+
+## Language Routines
+
+#### The Data Science module  utilizes various language routines to help lead your class in discussions about data. 
+
+#### Take a few minutes to review the teaching strategies in the <a href = "https://docs.google.com/document/d/1B93Lzlo63VrBNjlc3puiujew8gtMFanxSdXx3lqzIrs/edit?usp=sharing" target="blank" rel="noopener noreferrer"><b>Guide to Language Routines</b></a>.
+
+## Unit One Guides
+- #### <a href = "https://docs.google.com/document/d/1XH9U-frBYMWbf_bSHtci02TuIPb-YmVhqXoQJYW7aVE/edit?tab=t.0" target="blank" rel="noopener noreferrer"><b>Unit 1 Guide</b></a> - student resource that they will fill in each lesson
+- #### <a href = "https://docs.google.com/document/d/14V8-mxHA1cz--owWOLPbwN8iqXXlDbr_KFOrbG0iA18/edit?tab=t.0#heading=h.45qzl245b5xj"><b>Unit 1 Overview</b></a> - teacher resource with information on key terms for each lesson
+- #### <a href = "https://docs.google.com/document/d/1bW29rP0OZBZL_FuXsMrnwq5pWiqB7oA1qegVL7ZeQwc/edit?tab=t.0#heading=h.xe9cnc3216z0"><b>Unit 1 Study Guide</b></a> - student resource to be provided after the last lesson with information on key terms for each lesson
+- #### <a href = "https://docs.google.com/document/d/1rvW9lgAsALg8zJHHqaYf0lx60RCAbEb1h_5ldLWNQeo/edit?tab=t.0"><b>CODAP Teacher Guide</b></a> - teacher resorce to support learning in CODAP
+
+
+
+
+MARKDOWN

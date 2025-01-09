@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
+import Button from '@cdo/apps/componentLibrary/button';
 import {ExtraLinksLevelData, ExtraLinksProjectData} from '@cdo/apps/lab2/types';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -98,6 +98,8 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
         onClick={() => setIsModalOpen(true)}
         text={'Extra Links'}
         className={moduleStyles.extraLinksButton}
+        size={'s'}
+        id={'uitest-extra-links-button'}
       />
       {levelLinkData && (
         <ExtraLinksModal

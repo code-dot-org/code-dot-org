@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -17,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-09-03 19:25:29 UTC",
+    "serialized_at": "2024-11-19 01:14:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -9295,7 +9296,7 @@
     },
     {
       "name": "No-Argument Constructors Extra Practice",
-      "url": "https://docs.google.com/document/d/1p38v4gNRGC59tpf9NIFkhWsd_LXSe_YRR3iZSG86978/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1BtlTqQj-tTlPEbwBbSDzy8COBg5hxAd3ZBuiQRf88Do/edit?usp=sharing",
       "key": "u2l2_extra_practice",
       "properties": {
         "audience": "Student",

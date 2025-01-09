@@ -17,12 +17,13 @@ import i18n from '@cdo/locale';
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import color from '../../util/color';
 import BaseDialog from '../BaseDialog';
+import {showV2TeacherDashboard} from '../teacherNavigation/TeacherNavFlagUtils';
 
 import DialogFooter from './DialogFooter';
 import PrintCertificates from './PrintCertificates';
 import {sortableSectionShape} from './shapes.jsx';
 import {
-  removeSection,
+  removeSectionOrThrow,
   toggleSectionHidden,
   importOrUpdateRoster,
 } from './teacherSectionsRedux';
@@ -34,7 +35,7 @@ class SectionActionDropdown extends Component {
     sectionData: sortableSectionShape.isRequired,
 
     //Provided by redux
-    removeSection: PropTypes.func.isRequired,
+    removeSectionOrThrow: PropTypes.func.isRequired,
     toggleSectionHidden: PropTypes.func.isRequired,
     sectionCode: PropTypes.string,
     sectionName: PropTypes.string,
@@ -58,14 +59,14 @@ class SectionActionDropdown extends Component {
   }
 
   onConfirmDelete = () => {
-    const {removeSection} = this.props;
+    const {removeSectionOrThrow} = this.props;
     const section = this.props.sectionData;
     $.ajax({
       url: `/dashboardapi/sections/${section.id}`,
       method: 'DELETE',
     })
       .done(() => {
-        removeSection(section.id);
+        removeSectionOrThrow(section.id);
       })
       .fail((jqXhr, status) => {
         // We may want to handle this more cleanly in the future, but for now this
@@ -79,7 +80,12 @@ class SectionActionDropdown extends Component {
    * Returns the URL to the correct section to be edited
    */
   editRedirectUrl = (sectionId, isPl) => {
-    let editSectionUrl = '/sections/' + sectionId + '/edit';
+    let editSectionUrl;
+    if (showV2TeacherDashboard()) {
+      editSectionUrl = teacherDashboardUrl(sectionId, '/settings');
+    } else {
+      editSectionUrl = '/sections/' + sectionId + '/edit';
+    }
     editSectionUrl += isPl ? '?redirectToPage=my-professional-learning' : '';
     return editSectionUrl;
   };
@@ -172,7 +178,11 @@ class SectionActionDropdown extends Component {
             {i18n.sectionViewProgress()}
           </PopUpMenu.Item>
           <PopUpMenu.Item
-            href={teacherDashboardUrl(sectionData.id, '/manage_students')}
+            href={
+              showV2TeacherDashboard()
+                ? teacherDashboardUrl(sectionData.id, '/roster')
+                : teacherDashboardUrl(sectionData.id, '/manage_students')
+            }
             className="manage-students-link"
             hrefOnClick={() => {
               analyticsReporter.sendEvent(
@@ -288,7 +298,7 @@ export default connect(
     sectionName: sectionName(state, props.sectionData.id),
   }),
   {
-    removeSection,
+    removeSectionOrThrow,
     toggleSectionHidden,
     updateRoster: importOrUpdateRoster,
     setRosterProvider,

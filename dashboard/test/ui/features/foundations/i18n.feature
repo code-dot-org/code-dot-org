@@ -54,7 +54,7 @@ Scenario: HoC tutorial in Portuguese
   And element "#resetButton" is hidden
   Then element ".csf-top-instructions p" has "pt-BR" text from key "data.level.instructions.maze_2_14"
 
-@no_circle
+@no_ci
 Scenario: Frozen tutorial in Portuguese
   Given I am on "http://studio.code.org/s/frozen/lessons/1/levels/2/lang/pt-br"
   And I wait for the lab page to fully load

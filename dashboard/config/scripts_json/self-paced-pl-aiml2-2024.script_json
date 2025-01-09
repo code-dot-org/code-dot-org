@@ -4,15 +4,19 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "self_paced_pl_6_8",
       "curriculum_umbrella": "CSD Self Paced PL",
       "has_verified_resources": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
+      "topic_tags": [
+        "ai"
+      ],
       "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-06 19:02:48 UTC",
+    "serialized_at": "2024-11-19 01:19:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -462,6 +466,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-24-mod1-Certificate"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -1334,6 +1341,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-physical-computing-22-Overview-TeachingLearning_CSD-PL-24"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1356,6 +1366,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-LeadLearner_CSD-PL-24"
+        ],
         "progression": "The Role of the Teacher"
       },
       "bonus": false,
@@ -1378,6 +1391,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-LeadLearner-vid_CSD-PL-24"
+        ],
         "progression": "The Role of the Teacher"
       },
       "bonus": false,
@@ -1400,6 +1416,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-ClassroomCulture_CSD-PL-24"
+        ],
         "progression": "The Role of the Teacher"
       },
       "bonus": false,
@@ -1422,6 +1441,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-PairProgramming_CSD-PL-24"
+        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1444,6 +1466,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-PairProgramming-TipVid_CSD-PL-24"
+        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1466,6 +1491,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-Resources_CSD-PL-24"
+        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1488,6 +1516,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-Debugging_CSD-PL-24"
+        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1510,6 +1541,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-Debugging-TipVid_CSD-PL-24"
+        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1532,6 +1566,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CP-22-teamworkOverview_CSD-PL-24"
+        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1554,6 +1591,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-Strategies-StudentVideos_CSD-PL-24"
+        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1576,6 +1616,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CP-22-ProgrammingLevelsOverview_CSD-PL-24"
+        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1598,6 +1641,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CP-22-Inclusion_CSD-PL-24"
+        ],
         "progression": "Meeting Student Needs"
       },
       "bonus": false,
@@ -1620,6 +1666,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-Differentiation_CSD-PL-24"
+        ],
         "progression": "Meeting Student Needs"
       },
       "bonus": false,
@@ -1642,6 +1691,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-DifferentiationContinued_CSD-PL-24"
+        ],
         "progression": "Meeting Student Needs"
       },
       "bonus": false,
@@ -1664,6 +1716,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-Assessment_CSD-PL-24"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1686,6 +1741,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-AssessmentPlan_CSD-PL-24"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1708,6 +1766,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-mod2-WrapUp_CSD-PL-24"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,

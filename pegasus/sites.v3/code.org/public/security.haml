@@ -1,0 +1,71 @@
+---
+title: Security Policy
+theme: responsive_full_width
+---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/teach-styles.css", rel: "stylesheet"}
+
+%section.top
+  .wrapper
+    .text-wrapper.col-50
+      %h1= "Code.org Vulnerability Disclosure Policy"
+      %p= "Code.org welcomes feedback from security researchers and the general public to help improve our security. If you believe you have discovered a vulnerability, privacy issue, exposed data, or other security issues in any of our assets, we want to hear from you. This policy outlines steps for reporting vulnerabilities to us, what we expect, and what you can expect from us."
+    %figure.col-45{style: "float: right; margin-top: 1.25rem;"}
+      %img.rounded-corners.box-shadow-primary{src: "/images/teach-page-top.png", alt: "", style: "position: relative; width: 100%;"}
+    .clear
+
+%section.policy-details.bg-neutral-light
+  .wrapper
+    %h2= "In-Scope Systems"
+    %p
+      This policy applies to any digital assets owned, operated, or maintained by Code.org. However, vulnerability "testing" may only be performed on in-scope Targets defined at 
+      %a{href: "https://bugcrowd.com/codeorg", target: "_blank"} https://bugcrowd.com/codeorg,
+      which we’ve established for security testing purposes.
+    %h2= "Out-of-Scope Systems"
+    %p= "This policy does not apply to assets or other equipment not owned by Code.org. Vulnerabilities discovered or suspected in out-of-scope systems should be reported to the appropriate asset owner, vendor, or other applicable authority."
+
+    %h2= "Our Commitments"
+    %p= "When working with us, according to this policy, you can expect us to:"
+    %ul
+      %li= "Respond to your report promptly, and work with you to understand and validate your report;"
+      %li= "Strive to keep you informed about the progress of our review of your report as it is processed;"
+      %li= "Work to remediate confirmed vulnerabilities in a timely manner, within our operational constraints; and"
+      %li= "Extend Safe Harbor (as explained below) for your vulnerability research that is related to this policy."
+
+    %h2= "Our Expectations"
+    %p= "In participating in our vulnerability disclosure program in good faith, we ask that you:"
+    %ul
+      %li= "Play by the rules, including following this policy and any other relevant agreements. If there is any inconsistency between this policy and any other applicable terms, the terms of this policy will prevail;"
+      %li= "Report to us any vulnerability you’ve discovered promptly;"
+      %li= "Avoid violating the privacy of others, disrupting our systems, destroying data, and/or harming user experience;"
+      %li= "Use only the Official Channels to discuss vulnerability information with us;"
+      %li= "Provide us a reasonable amount of time (at least 180 days from the initial report) to resolve the issue before you disclose it publicly;"
+      %li
+        Perform testing only on in-scope Targets defined at
+        %a{href: "https://bugcrowd.com/codeorg", target: "_blank"} https://bugcrowd.com/codeorg,
+        which we’ve established for security testing purposes (i.e., do not perform test procedures on our production environments where the testing could result in disruption or data loss) and respect systems and activities which are out-of-scope;
+      %li= "If a vulnerability provides unintended access to data, we ask that you limit the amount of data you access to the minimum required for effectively demonstrating a Proof of Concept; and cease testing and submit a report immediately if you encounter any user data during testing, such as Personally Identifiable Information (PII), user project data, or proprietary information;"
+      %li= "You should only interact with test accounts you own or with explicit permission from the account holder; and"
+      %li= "Do not engage in extortion."
+
+    %h2= "Official Channels"
+    %p
+      Please report security issues via our bug bounty program:
+      %a{href: "https://bugcrowd.com/codeorg", target: "_blank"} https://bugcrowd.com/codeorg,
+      providing all relevant information. The more details you provide, the easier it will be for us to triage and fix the issue. If you identify an issue or concern that does not appear to fall within the bug bounty program but you wish to report anyway, you may email us at
+      %a{href: "mailto:security@code.org"} security@code.org.
+      Please note, however, no bug bounties will be paid for any issue that is not reported via
+      %a{href: "https://bugcrowd.com/codeorg", target: "_blank"} https://bugcrowd.com/codeorg.
+
+    %h2= "Safe Harbor"
+    %p= "When conducting vulnerability research, according to this policy, we will consider such research to be:"
+    %ul
+      %li= "Authorized to the extent it might implicate any applicable anti-hacking laws, and we will not initiate or support legal action against you for accidental, good-faith violations of this policy;"
+      %li= "Authorized concerning any relevant anti-circumvention laws, and we will not bring a claim against you for circumvention of technology controls;"
+      %li= "Exempt from restrictions in our Terms of Service (TOS) that would interfere with conducting security research, and we waive those restrictions on a limited basis; and"
+      %li= "Lawful, helpful to the overall security of the Internet, and conducted in good faith."
+
+    %p= "You are expected, as always, to comply with all applicable laws. If legal action is initiated by a third party against you and you have complied with this policy, we will take steps to make it known that we believe your actions were conducted in compliance with this policy."
+    %p= "If at any time you have concerns or are uncertain whether your security research is consistent with this policy, please submit a report through one of our Official Channels before going any further."
+    %p= "Note that the Safe Harbor applies only to legal claims under the control of Code.org, and that the policy does not bind independent third parties."

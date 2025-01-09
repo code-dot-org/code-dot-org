@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import {Chips} from '@cdo/apps/componentLibrary/chips';
+import Link from '@cdo/apps/componentLibrary/link/Link';
 import {
   InstructionType,
   PublishedState,
@@ -719,6 +720,12 @@ class UnitEditor extends React.Component {
                     blocks and there will be information about CSTA Standards.
                   </p>
                 </HelpTip>
+                <Link
+                  href="https://github.com/code-dot-org/code-dot-org/wiki/Updating-Publish-State-of-Scripts-or-Courses"
+                  openInNewTab={true}
+                >
+                  More info
+                </Link>
               </label>
               <label>
                 Content Area
@@ -795,6 +802,7 @@ class UnitEditor extends React.Component {
                   </div>
                 )}
               {!this.props.hasCourse && (
+                // eslint-disable-next-line react/forbid-dom-props
                 <div data-testid="course-version-publishing-editor">
                   <CourseVersionPublishingEditor
                     pilotExperiment={this.state.pilotExperiment}

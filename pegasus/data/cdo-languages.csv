@@ -9,7 +9,7 @@ co,co,co,co-CO,Corsu,Corsican,FALSE,FALSE,co,Corsican,TRUE,TRUE,FALSE,TRUE,FALSE
 cs,cs,cs,cs-CZ,Čeština,Czech,TRUE,TRUE,cs,Czech,FALSE,TRUE,FALSE,TRUE,FALSE
 da,da,da,da-DK,Dansk,Danish,TRUE,TRUE,da,Danish,TRUE,TRUE,TRUE,TRUE,FALSE
 de,de,de,de-DE,Deutsch,German,TRUE,TRUE,de,German,TRUE,TRUE,TRUE,TRUE,FALSE
-dv,dv,dv,dv-MV,ދިވެހި,Dhivehi,FALSE,FALSE,dv,Dhivehi,FALSE,FALSE,FALSE,FALSE,FALSE
+dv,dv,dv,dv-MV,ދިވެހި,Dhivehi,TRUE,FALSE,dv,Dhivehi,FALSE,FALSE,FALSE,FALSE,FALSE
 el,el,el,el-GR,Ελληνικά,Greek,TRUE,TRUE,el,Greek,FALSE,FALSE,FALSE,FALSE,FALSE
 en-GB,gb,en,en-GB,English (UK),English (UK),FALSE,TRUE,en-GB,"English, United Kingdom",FALSE,TRUE,TRUE,TRUE,FALSE
 en,en,en,en-US,English,English,TRUE,TRUE,en,English,TRUE,TRUE,TRUE,TRUE,FALSE

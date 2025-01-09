@@ -29,10 +29,11 @@ class PasswordsController < Devise::PasswordsController
       # We can safely treat this string as HTML-safe because we can trust
       # Devise's edit_password_url method not to inject HTML
       # rubocop:disable Rails/OutputSafety
-      flash[:notice] = "Reset password link sent to user. You may also send this link directly: <a href='#{url}'>#{url}</a>".html_safe
+      flash[:notice] = "Reset password link sent to user if email was used to reset. You may also send this link directly: <a href='#{url}'>#{url}</a>".html_safe
       # rubocop:enable Rails/OutputSafety
     else
-      flash[:notice] = "User does not have an email authentication option or does not exist."
+      flash.delete(:notice)
+      flash[:alert] = "User does not have an email authentication option or does not exist."
     end
   end
 

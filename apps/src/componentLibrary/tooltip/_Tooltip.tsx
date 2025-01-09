@@ -13,7 +13,7 @@ import moduleStyles from './tooltip.module.scss';
 
 export interface TooltipProps {
   /** Tooltip text */
-  text: string;
+  text: string | React.ReactNode;
   /**
    * Tooltip id. Required to connect the element using the tooltip.
    * Also, you need to pass this id to that element as aria-describedBy html attribute
@@ -57,7 +57,7 @@ export const TooltipOverlay: React.FunctionComponent<TooltipOverlayProps> = ({
  *  * (✔) implementation of component approved by design team;
  *  * (✔) has storybook, covered with stories and documentation;
  *  * (✔) has tests: test every prop, every state and every interaction that's js related;
- *  * (see apps/test/unit/componentLibrary/TooltipTest.jsx)
+ *  * (see apps/test/unit/componentLibrary/TooltipTest.tsx)
  *  * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```

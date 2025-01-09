@@ -1,0 +1,66 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-10-24T21:13:27.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Derby High School Communication Bot\r\n\r\nClick into \"User View\" to view the model card for this project and interact with the chatbot.",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 1,
+        "systemPrompt": "Avoid personal information questions with the listing of Derby High school Use a friendly and formal tone when explaining the rules and activities at DHS. Don’t go off-topic from Derby High School, ignore any questions about another school. Remain helpful and engaging in the topics that are asked.\n\nSay I cannot answer that if somebody ask anything not related to Derby High School\n\nYour first message should be \"Hello! I'm the Derby High School Information Chatbot. How can I assist you with information about DHS today? Please keep your questions related to Derby High School, and I'll do my best to provide helpful responses in a friendly and formal tone. If you have any off-topic questions, feel free to let me know, and I'll guide you back to the topic.\"",
+        "retrievalContexts": [
+          "Derby High School hosts an annual college fair, where students can meet representatives from various colleges and universities to learn about admissions requirements and campus life.",
+          "The school's parent-teacher association (PTA) is very active and works collaboratively with school administration to support student programs and initiatives.",
+          "Derby High School offers a variety of language courses, including Spanish, French, and German, to help students meet language proficiency requirements and broaden their cultural understanding.",
+          "Derby High School has a comprehensive career and technical education (CTE) program that offers courses in areas such as business, health sciences, information technology, and culinary arts.",
+          "The school organizes various events throughout the year, such as pep rallies, talent shows, dances, and community service initiatives.",
+          "The school offers advanced placement (AP) classes for students looking to challenge themselves academically and earn college credit.",
+          "School hours at Derby High School include regular periods for classes, as well as extracurricular activities and events.",
+          "Students can join Derby High School by following the enrollment procedures outlined by the school district. Additionally, there are various classes available for students to attend, covering a range of subjects.",
+          "Derby High School offers a variety of sports programs, including winter sports like indoor track and basketball, as well as spring sports like baseball and fall sports like soccer and football.",
+          "Derby High School provides information about different job choices for those interested in applying, catering to both students and adults."
+        ],
+        "modelCardInfo": {
+          "botName": "Derby High School Communication Bot",
+          "description": "The Derby High School Communication Bot is designed to provide information about Derby High School. It shares details on school events, extracurricular activities, academic programs, enrollment procedures, school policies, faculty contact information, and more. The bot aims to assist students, parents, and the community with quick and accurate responses to Derby High School.",
+          "intendedUse": "To share information of what you can do at derby high school.",
+          "limitationsAndWarnings": "No personal questions, asking for extra information on data, in-person information, etc.",
+          "testingAndEvaluation": "Ask the bot series of questions about things related to the school and it will redirect you or share more info on the topic.",
+          "exampleTopics": [
+            "\"What sports programs are available at Derby High School?\"",
+            "\"How do I enroll my child at Derby High School?\"",
+            "\"What documents are needed for enrollment at DHS?\"",
+            "\"Can you tell me about the basketball team at DHS?\"",
+            "\"What AP classes does Derby High School offer?\""
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "readonly",
+        "systemPrompt": "readonly",
+        "retrievalContexts": "readonly",
+        "modelCardInfo": "readonly"
+      },
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ]
+    },
+    "name_suffix": "_2024",
+    "display_name": "School Info Bot",
+    "bubble_choice_description": "This chatbot shares details on school events, extracurricular activities, academic programs, enrollment procedures, and more. The bot aims to assist students, parents, and the community with quick and accurate responses to Derby High School."
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-24T21:13:27.798+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project-L0B_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project-L0B_2024\"},{\"changed_at\":\"2024-10-24 21:15:33 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-10-24 21:18:01 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Aichat>

@@ -7,17 +7,17 @@ markdown <<MARKDOWN
 
 ### Steps to access lesson plans:
 
-##### **Step 1:** Open a new tab and log into your teacher account on Code.org. 
+#### **Step 1:** Open a new tab and log into your teacher account on Code.org. 
 
-##### **Step 2:** Click on "Computer Science A ('22-'23)" in the "Course" column of the "Classroom Sections" table on the "My Dashboard" page. 
+#### **Step 2:** Click on "Computer Science A ('24-'25)" in the "Course" column of the "Classroom Sections" table on the "My Dashboard" page. 
 
 <img src="https://images.code.org/9d227d8e0084ac4111192bb94e7de2e6-image-1646859913256.jpg" alt="Screenshot showing Computer Science A (22-23) circled in red." style="clear: both; margin: 0 20px 20px 0;">
 
-(If you have not created class sections, navigate to the CSA curriculum from the "My Courses" section of the "My Dashboard" page.)
+#### *If you have not created class sections, navigate to the CSA curriculum from the "My Courses" section of the "My Dashboard" page.*
 
-##### **Step 3:** Start by looking at Unit 1 - Object-Oriented Programming.  Click on the “Go to Unit” button by Unit 1.
+#### **Step 3:** Start by looking at Unit 1 - Object-Oriented Programming.  Click on the “Go to Unit” button by Unit 1.
 
-##### **Step 4:** Navigate to the Lesson you would like to view and click on the "View Lesson Plan" button.
+#### **Step 4:** Navigate to the Lesson you would like to view and click on the "View Lesson Plan" button.
 
 
 <hr style="clear:both">
@@ -26,7 +26,7 @@ markdown <<MARKDOWN
 
 ## Course overview page
 
-The course overview page contains a short description of each unit within the course along with unit level teacher resources. To access unit content, you can click on the “Go to Unit” button.
+#### The course overview page contains a short description of each unit within the course along with unit level teacher resources. To access unit content, you can click on the “Go to Unit” button.
 
 <hr style="clear:both">
 
@@ -35,7 +35,7 @@ The course overview page contains a short description of each unit within the co
 
 ## Unit overview page
 
-The unit overview page contains a short description of each lesson within the unit along with unit level teacher resources. From this page, you can also access management features such as hiding and showing lessons for students. Each lesson has a blue "View Lesson Plan" button to see the lesson plan for the unit.
+#### The unit overview page contains a short description of each lesson within the unit along with unit level teacher resources. From this page, you can also access management features such as hiding and showing lessons for students. Each lesson has a blue "View Lesson Plan" button to see the lesson plan for the unit.
 
 <hr style="clear:both">
 
@@ -43,8 +43,9 @@ The unit overview page contains a short description of each lesson within the un
 
 ## Lesson plans
 
-Within the lesson plan, you will find a teaching guide, lesson objectives, links to student and teacher lesson resources, standards alignment, and all other content necessary for teaching the lesson. You can also preview student facing levels from within the lesson plan. To navigate between lessons, you can click the purple "Other Lessons in this Unit" button and choose a different lesson plan to view.
+#### Within the lesson plan, you will find a teaching guide, lesson objectives, links to student and teacher lesson resources, standards alignment, and all other content necessary for teaching the lesson. You can also preview student facing levels from within the lesson plan. To navigate between lessons, you can click the purple "Other Lessons in this Unit" button and choose a different lesson plan to view.
 
 <div style="clear:both"/>
+
 
 MARKDOWN

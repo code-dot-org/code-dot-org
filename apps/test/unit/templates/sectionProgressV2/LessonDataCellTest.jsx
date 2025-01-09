@@ -30,6 +30,7 @@ describe('LevelDataCell', () => {
   it('Shows empty if no progress', () => {
     renderDefault({studentLessonProgress: null});
 
+    // eslint-disable-next-line no-restricted-properties
     const cell = screen.getByTestId('lesson-data-cell-1-1');
     expect(cell.children).toHaveLength(0);
   });

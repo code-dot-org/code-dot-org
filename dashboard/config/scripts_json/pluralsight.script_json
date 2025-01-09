@@ -16,13 +16,15 @@
           "buttonText": "Request Code"
         }
       ],
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_course": true,
       "is_migrated": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "pluralsight",
-    "serialized_at": "2023-05-03 12:13:55 UTC",
+    "serialized_at": "2024-11-19 01:19:19 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -156,6 +158,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

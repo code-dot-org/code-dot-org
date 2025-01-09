@@ -8,7 +8,6 @@ const DropdownContext = createContext({
   /**
    * This is a dummy function to satisfy the type checker
    * */
-  // eslint-disable-next-line @typescript-eslint/no-empty-function,  @typescript-eslint/no-unused-vars
   setActiveDropdownName: (name: string) => {},
 });
 

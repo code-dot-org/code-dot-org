@@ -12,6 +12,7 @@
   hamburger_options[:show_gallery] = true
   hamburger_options[:loc_prefix] = "header_"
   hamburger_options[:page_mode] = request.cookies['pm']
+  hamburger_options[:ge_region] = request.ge_region
 
   header_contents_options = {}
   header_contents_options[:user_type] = user_type
@@ -31,7 +32,7 @@
     -# rubocop:enable CustomCops/DashboardDbUsage
     %ul#headerlinks
       - Hamburger.get_header_contents(header_contents_options).each do |entry|
-        %li
+        %li{class: entry[:class]}
           %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
   .right
     = view :sign_in_or_user

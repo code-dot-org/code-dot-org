@@ -16,7 +16,8 @@
           "buttonText": "CS Connections Landing Page"
         }
       ],
-      "curriculum_umbrella": "CSC",
+      "content_area": "curriculum_k_5",
+      "curriculum_umbrella": "CSC K-5",
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
@@ -26,7 +27,7 @@
     },
     "new_name": null,
     "family_name": "csc-fables",
-    "serialized_at": "2023-06-27 22:22:41 UTC",
+    "serialized_at": "2024-11-19 01:15:37 UTC",
     "published_state": "sunsetting",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2766,6 +2767,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

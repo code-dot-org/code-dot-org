@@ -13,6 +13,7 @@ describe('Workshop Link Account Page Tests', () => {
     it('should render a keep student account card', () => {
       renderDefault();
 
+      // eslint-disable-next-line no-restricted-properties
       const keepStudentAccountCard = screen.getByTestId(
         'keep-student-account-card'
       );
@@ -40,6 +41,7 @@ describe('Workshop Link Account Page Tests', () => {
     it('should render a switch to teacher account card', async () => {
       renderDefault();
 
+      // eslint-disable-next-line no-restricted-properties
       const switchToTeacherAccountCard = screen.getByTestId(
         'switch-to-teacher-account-card'
       );

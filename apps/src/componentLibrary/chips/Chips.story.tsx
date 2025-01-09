@@ -46,6 +46,7 @@ DefaultChips.args = {
   label: 'Chips label',
   name: 'test-chips',
   required: true,
+  requiredMessageText: 'Please choose at least one option',
   options: [
     {value: 'chip1', label: 'Chip1'},
     {value: 'chip2', label: 'Chip2'},
@@ -59,6 +60,7 @@ export const DisabledChips = SingleTemplate.bind({});
 DisabledChips.args = {
   name: 'test-chips',
   required: true,
+  requiredMessageText: 'Please choose at least one option',
   disabled: true,
   options: [
     {value: 'chip1', label: 'Chip1'},
@@ -144,6 +146,7 @@ GroupOfSizesOfChips.args = {
       label: 'Chips L',
       name: 'test-chips1',
       required: true,
+      requiredMessageText: 'Please choose at least one option',
       size: 'l',
       options: [
         {value: 'Lchip1', label: 'Chip1'},
@@ -159,6 +162,7 @@ GroupOfSizesOfChips.args = {
       label: 'Chips M',
       name: 'test-chips2',
       required: true,
+      requiredMessageText: 'Please choose at least one option',
       size: 'm',
       options: [
         {value: 'Mchip1', label: 'Chip1'},
@@ -174,6 +178,7 @@ GroupOfSizesOfChips.args = {
       label: 'Chips S',
       name: 'test-chips3',
       required: true,
+      requiredMessageText: 'Please choose at least one option',
       size: 's',
       options: [
         {value: 'Schip1', label: 'Chip1'},
@@ -189,6 +194,7 @@ GroupOfSizesOfChips.args = {
       label: 'Chips XS',
       name: 'test-chips4',
       required: true,
+      requiredMessageText: 'Please choose at least one option',
       size: 'xs',
       options: [
         {value: 'XSchip1', label: 'Chip1'},

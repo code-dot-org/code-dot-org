@@ -1,0 +1,30 @@
+name 'sp-pl-DS_cfu-PandasanswerExplain'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Check for Understanding 
+
+## Reviewing Pandas and Python
+
+#### Let's take a look at the code from the previous **Check for Understanding** level.
+
+#### The output for the code below is:  `(789, 23)`. What does this mean? 
+
+<img src="https://images.code.org/33da1f8ed2dc8256991ec4093bb9fa1a-image-1732055277143.png" alt="code for determing rows and columns with Pandas and Python using shape" width="350px" style="display: block; float:left;">
+
+<div style="clear:both;"></div>
+
+## .shape
+#### Returns the dimensions of the DataFrame as a tuple: (number of rows, number of columns), which is useful for understanding both the size and structure of your dataset.
+
+
+
+#### Therefore, the answer to the question is **B.The dataset contains 23 columns and 789 rows.**
+
+
+
+## Now, let's move on to *matplotlib*.
+
+> 🎉 Congratulations! You are almost halfway through with this lesson. This is a great time to take a break! 
+MARKDOWN

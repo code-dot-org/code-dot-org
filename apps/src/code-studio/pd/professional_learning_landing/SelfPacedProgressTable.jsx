@@ -41,6 +41,7 @@ const CourseRow = ({
             {percent_completed}% {i18n.selfPacedPlCompleted()}
           </BodyThreeText>
           {/* Progress bar */}
+          {/* eslint-disable-next-line react/forbid-dom-props */}
           <div className={styles.progressBar} data-testid="progress-bar">
             <span
               className={styles.progressBarFill}

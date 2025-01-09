@@ -18,12 +18,14 @@ type PopUpButtonOptionProps = {
   iconName: string;
   labelText: string;
   clickHandler?: () => void;
+  id?: string;
 };
 
 export const PopUpButtonOption = ({
   iconName,
   labelText,
   clickHandler,
+  id,
 }: PopUpButtonOptionProps) => {
   return (
     <div
@@ -32,6 +34,7 @@ export const PopUpButtonOption = ({
         darkModeStyles.dropdownItem,
         moduleStyles.dropdownItem
       )}
+      id={id}
     >
       <FontAwesomeV6Icon iconName={iconName} iconStyle="solid" />
       <div>{labelText}</div>

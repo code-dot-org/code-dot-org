@@ -49,7 +49,7 @@ import moduleStyles from './aichatView.module.scss';
 
 const getResetModelNotification = (): Notification => ({
   id: getNewMessageId(),
-  text: 'Model customizations and model card information have been reset to default settings.',
+  text: aichatI18n.modelResetNotification(),
   notificationType: 'success',
   timestamp: Date.now(),
   includeInChatHistory: true,
@@ -158,17 +158,21 @@ const AichatView: React.FunctionComponent = () => {
   const viewModeButtonsProps: SegmentedButtonsProps = {
     buttons: [
       {
-        label: 'Edit',
+        label: aichatI18n.editModeButtonText(),
         value: ViewMode.EDIT,
-        iconLeft: {iconName: 'wrench', iconStyle: 'solid', title: 'Edit Mode'},
+        iconLeft: {
+          iconName: 'wrench',
+          iconStyle: 'solid',
+          title: aichatI18n.aichatView_screenReader_EditModeButton(),
+        },
       },
       {
-        label: 'User View',
+        label: aichatI18n.userViewButtonText(),
         value: ViewMode.PRESENTATION,
         iconLeft: {
           iconName: 'user-group',
           iconStyle: 'solid',
-          title: 'User View Mode',
+          title: aichatI18n.aichatView_screenReader_UserViewModeButton(),
         },
         id: 'uitest-user-view-button',
       },
@@ -260,7 +264,7 @@ const AichatView: React.FunctionComponent = () => {
               <div className={moduleStyles.customizationArea}>
                 <PanelContainer
                   id="aichat-model-customization-panel"
-                  headerContent="Model Customization"
+                  headerContent={aichatI18n.modelCustomizationHeader()}
                   className={moduleStyles.panelContainer}
                   headerClassName={moduleStyles.panelHeader}
                   rightHeaderContent={renderModelCustomizationHeaderRight(
@@ -287,7 +291,7 @@ const AichatView: React.FunctionComponent = () => {
           >
             <PanelContainer
               id="aichat-presentation-panel"
-              headerContent={'Model Card'}
+              headerContent={aichatI18n.modelCardPanelHeader()}
               className={moduleStyles.panelContainer}
               headerClassName={moduleStyles.panelHeader}
             >
@@ -334,7 +338,7 @@ const renderInstructionsHeaderRight = (
   return isUserTeacher ? (
     <ActionDropdown
       name="instructionsInfoDropdown"
-      labelText="Instructions Info Dropdown"
+      labelText={aichatI18n.instructionsHeaderRight()}
       size="xs"
       triggerButtonProps={{
         type: 'tertiary',

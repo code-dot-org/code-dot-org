@@ -1,8 +1,14 @@
-import {OptionsToAvoid, Lab2EntryPoint} from '@cdo/apps/lab2/types';
-import PanelsLabView from '@cdo/apps/panels/PanelsLabView'; // avoid hardcoding imports like this in an entrypoint.tsx
+import {lazy} from 'react';
+
+import {Lab2EntryPoint} from '@cdo/apps/lab2/types';
 
 export const PanelsEntryPoint: Lab2EntryPoint = {
   backgroundMode: false,
-  view: OptionsToAvoid.UseHardcodedView_WARNING_Bloats_Lab2_Bundle,
-  hardcodedView: PanelsLabView,
+  view: lazy(() =>
+    import(/* webpackChunkName: "panels" */ './index.js').then(
+      ({PanelsLabView}) => ({
+        default: PanelsLabView,
+      })
+    )
+  ),
 };

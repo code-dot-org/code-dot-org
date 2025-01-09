@@ -284,6 +284,11 @@ namespace :test do
     TestRunUtils.run_lib_tests
   end
 
+  desc 'Runs python tests.'
+  timed_task_with_logging :python do
+    TestRunUtils.run_python_tests
+  end
+
   desc 'Runs bin tests.'
   timed_task_with_logging :bin do
     TestRunUtils.run_bin_tests
@@ -302,12 +307,6 @@ namespace :test do
         ]
       ) do
         TestRunUtils.run_apps_tests
-      end
-    end
-
-    timed_task_with_logging :interpreter do
-      run_tests_if_changed('interpreter', ['apps/src/lib/tools/jsinterpreter/patchInterpreter.js']) do
-        TestRunUtils.run_interpreter_tests
       end
     end
 
@@ -397,6 +396,25 @@ namespace :test do
       end
     end
 
+    desc 'Runs python tests if python might have changed from staging.'
+    task :python do
+      run_tests_if_changed(
+        'python',
+        [
+          'pyproject.toml',
+          'pdm.lock',
+          'python/**/*',
+          'lib/cdo/python_venv.py',
+          'Gemfile',
+          'Gemfile.lock',
+          'deployment.rb',
+          'config/**/*',
+        ]
+      ) do
+        TestRunUtils.run_python_tests
+      end
+    end
+
     desc 'Runs lib tests if lib might have changed from staging.'
     timed_task_with_logging :bin do
       run_tests_if_changed('bin', ['Gemfile', 'Gemfile.lock', 'deployment.rb', 'bin/**/*']) do
@@ -404,15 +422,18 @@ namespace :test do
       end
     end
 
-    all_tasks = [:apps,
-                 # currently disabled because these tests take too long to run on circle
-                 # :interpreter,
-                 :dashboard,
-                 :dashboard_legacy,
-                 :pegasus,
-                 :shared,
-                 :lib,
-                 :bin]
+    all_tasks = [
+      :apps,
+      # currently disabled because these tests take too long to run on CI
+      # :interpreter,
+      :dashboard,
+      :dashboard_legacy,
+      :pegasus,
+      :shared,
+      :lib,
+      :python,
+      :bin
+    ]
 
     timed_task_with_logging all_but_apps: all_tasks.reject {|t| t == :apps}
 
@@ -428,7 +449,7 @@ timed_task_with_logging test: ['test:changed']
 # Some files are so fundamental to our test runner(s) that changes to them
 # should cause us to run all tests.
 GLOBS_AFFECTING_EVERYTHING = %w(
-  .circleci/config.yml
+  .drone.yml
   lib/rake/test.rake
 )
 

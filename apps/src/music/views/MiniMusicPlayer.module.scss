@@ -31,9 +31,23 @@
       }
     }
 
+    &:hover {
+      .pack {
+        transform: scale(1.05, 1.05);
+        transition: 0.1s ease-in-out;
+      }
+    }
+
     .pack {
       width: 42px;
       height: 42px;
+      transform: scale(1, 1);
+      transition: 0.1s ease-in-out;
+
+      &:hover, &Playing {
+        transform: scale(1.05, 1.05);
+        transition: 0.1s ease-in-out;
+      }
 
       &Image {
         height: 42px;

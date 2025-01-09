@@ -405,7 +405,7 @@ end
 Then /^the link reading "([^"]*)"(?: within element "([^"]*)")? goes to "([^"]*)"$/ do |text, parent, url|
   context = @browser.find_element(:css, parent) if parent
   context ||= @browser
-  xpath = ".//a[contains(text(), '#{text}')]"
+  xpath = ".//a[starts-with(text(), '#{text}')]"
   link = context.find_element(:xpath, xpath)
   expect(link.attribute("href")).to eq(replace_hostname(url)).or eq(url)
 end
@@ -469,6 +469,12 @@ When /^I press the last button with text "([^"]*)"( to load a new page)?$/ do |n
   end
 end
 
+When /^I press the last link with text "([^"]*)"( to load a new page)?$/ do |name, load|
+  page_load(load) do
+    @browser.execute_script("$('a:contains(#{name})').simulate('drag', function(){});")
+  end
+end
+
 When /^I press the SVG text "([^"]*)"$/ do |name|
   name_selector = "text:contains(#{name})"
   @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
@@ -490,11 +496,22 @@ When /^I select the "([^"]*)" option in dropdown named "([^"]*)"( to load a new 
   select_dropdown(@browser.find_element(:css, "select[name=#{element_name}]"), option_text, load)
 end
 
-def select_dropdown(element, option_text, load)
+When /^I select the "([^"]*)" option withing the "([^"]*)" group in dropdown "([^"]*)"( to load a new page)?$/ do |option_text, option_group, selector, load|
+  select_element = @browser.find_element(:css, selector)
+  expect(select_element).not_to be_nil
+
+  options = select_element.find_elements(:css, "optgroup[label='#{option_group}'] option")
+  option = options.find {|o| o.text == option_text}
+  expect(option).not_to be_nil
+
+  select_dropdown(select_element, option.property(:value), load, by: :value)
+end
+
+def select_dropdown(element, option_text, load, by: :text)
   element.location_once_scrolled_into_view
   page_load(load) do
     select = Selenium::WebDriver::Support::Select.new(element)
-    select.select_by(:text, option_text)
+    select.select_by(by, option_text)
   end
 end
 
@@ -1106,19 +1123,19 @@ Given(/^I am enrolled in a plc course$/) do
   browser_request(url: '/api/test/enroll_in_plc_course', method: 'POST')
 end
 
-Given(/^I am assigned to unit "([^"]*)"$/) do |script_name|
+Given(/^I am assigned to unit "([^"]*)"(?: with teacher "([^"]*)")?$/) do |script_name, teacher_name|
   browser_request(
     url: '/api/test/assign_script_as_student',
     method: 'POST',
-    body: {script_name: script_name}
+    body: {script_name: script_name, teacher_email: teacher_name ? (@users[teacher_name][:email]).to_s : nil}
   )
 end
 
-Given(/^I am assigned to course "([^"]*)" and unit "([^"]*)"$/) do |course_name, script_name|
+Given(/^I am assigned to course "([^"]*)" and unit "([^"]*)"(?: with teacher "([^"]*)")?$/) do |course_name, script_name, teacher_name|
   browser_request(
     url: '/api/test/assign_course_and_unit_as_student',
     method: 'POST',
-    body: {script_name: script_name, course_name: course_name}
+    body: {script_name: script_name, course_name: course_name, teacher_email: teacher_name ? (@users[teacher_name][:email]).to_s : nil}
   )
 end
 
@@ -1246,6 +1263,10 @@ end
 
 And(/^I clear session storage/) do
   @browser.execute_script("sessionStorage.clear(); localStorage.clear();")
+end
+
+And 'I clear local storage' do
+  @browser.execute_script('localStorage.clear();')
 end
 
 When(/^I debug cookies$/) do
@@ -1583,4 +1604,9 @@ And(/^I wait until ai assessments announcement is marked as seen$/) do
     response = browser_request(url: '/api/v1/users/current')
     response['has_seen_ai_assessments_announcement']
   end
+end
+
+And(/^I hover over selector "([^"]*)"$/) do |selector|
+  element = @browser.find_element(:css, selector)
+  @browser.action.move_to(element).perform
 end

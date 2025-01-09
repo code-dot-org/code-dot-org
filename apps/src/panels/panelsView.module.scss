@@ -2,23 +2,36 @@
 @import 'font.scss';
 @import '../mixins.scss';
 
-$text-offset-x: -5cqw;
-$text-offset-y: 5cqw;
+$text-offset-x: 2cqw;
+$text-offset-y: 2cqw;
+$text-vertical-padding: 1.8cqw;
+$text-horizontal-padding: 2.6cqw;
 
 @keyframes fade-in {
-  0%, 50% {
+  from {
     opacity: 0;
   }
-  100% {
+  to{
     opacity: 1;
   }
 }
 
+@keyframes slide-in {
+  from {
+    margin-top: $text-offset-y;
+    margin-bottom: -$text-offset-y;
+  }
+  to {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
 @keyframes delay-pointer-events {
-  0%, 49% {
+  from {
     pointer-events: none;
   }
-  50%, 100% {
+  to {
     pointer-events: initial;
   }
 }
@@ -39,6 +52,7 @@ $text-offset-y: 5cqw;
     position: relative;
     container-name: panel;
     container-type: inline-size;
+    overflow: hidden;
 
     .image {
       position: absolute;
@@ -52,17 +66,24 @@ $text-offset-y: 5cqw;
       background-position: center;
 
       &Current {
-        animation: fade-in 0.5s;
+        animation: 0.5s ease 0s fade-in;
+        animation-fill-mode: both;
+      }
+
+      &Invisible {
+        opacity: 0;
       }
     }
 
     .text {
       background-color: $neutral_light;
+      color: $neutral_dark;
       border-radius: 5px;
       width: 40%;
       position: absolute;
-      padding: 1.8cqw 2.6cqw;
-      animation: fade-in 1.5s;
+      padding: $text-vertical-padding $text-horizontal-padding;
+      animation: 0.5s ease 0.5s fade-in, 0.5s ease 0.5s slide-in;
+      animation-fill-mode: both;
       font-size: 1.6cqw;
       line-height: 1.4em;
 
@@ -75,7 +96,7 @@ $text-offset-y: 5cqw;
         margin: 0 0 1cqw 0;
         font-family: $barlowSemiCondensed-semibold;
         font-size: 3cqw;
-        line-height: 2cqw;
+        line-height: 1.2em;
       }
 
       p {
@@ -87,13 +108,29 @@ $text-offset-y: 5cqw;
         }
       }
 
+      ol, ul {
+        font-size: 1.6cqw;
+        margin: 0 0 1.1cqw 2.2cqw;
+
+        li {
+          margin-bottom: 1.1cqw;
+          line-height: 1.4em;
+        }
+      }
+
       .invisiblePlaceholder {
         opacity: 0;
+      }
+
+      code {
+        color: $light_primary_700;
+        font-size: 1.37cqw;
       }
 
       .typist {
         position: absolute;
         top: 1.8cqw;
+        width: calc(100% - 2 * $text-horizontal-padding);
       }
 
       &TopLeft {
@@ -138,15 +175,19 @@ $text-offset-y: 5cqw;
 
     .button {
       position: absolute;
-      right: 0;
+      inset-inline-end: 0;
       height: 38px;
 
+      // After typing, the button will be ready.
       &Ready {
-        animation: fade-in 0.5s;
+        animation: 0.5s ease 0s fade-in, 0.5s ease 0s delay-pointer-events;
+        animation-fill-mode: both;
       }
 
+      // If no typing, the button appears with a delay.
       &Delay {
-        animation: fade-in 3s, delay-pointer-events 3s;
+        animation: 0.5s ease 1.2s fade-in, 0.5s ease 1.2s delay-pointer-events;
+        animation-fill-mode: both;
       }
     }
 

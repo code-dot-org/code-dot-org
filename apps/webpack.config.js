@@ -48,6 +48,7 @@ const nodeModulesToTranspile = [
   '@blockly/plugin-scroll-options',
   '@blockly/field-angle',
   '@blockly/field-bitmap',
+  '@blockly/field-colour',
   'blockly',
   '@code-dot-org/dance-party',
   '@code-dot-org/johnny-five',

@@ -28,7 +28,7 @@ import {
   RearrangeFilesFunction,
 } from './types';
 
-type CodebridgeContextType = {
+export type CodebridgeContextType = {
   project: ProjectType;
   config: ConfigType;
   setProject: SetProjectFunction;

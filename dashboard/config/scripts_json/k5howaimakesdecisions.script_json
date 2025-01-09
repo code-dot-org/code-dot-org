@@ -4,14 +4,19 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "skills_focused_self_paced_pl",
+      "curriculum_umbrella": "AI for teachers selfpaced pl",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "topic_tags": [
+        "ai"
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-15 21:26:23 UTC",
+    "serialized_at": "2024-11-19 01:18:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

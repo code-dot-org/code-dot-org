@@ -2,28 +2,30 @@
 #
 # Table name: pd_workshops
 #
-#  id                  :integer          not null, primary key
-#  organizer_id        :integer          not null
-#  location_name       :string(255)
-#  location_address    :string(255)
-#  processed_location  :text(65535)
-#  course              :string(255)      not null
-#  subject             :string(255)
-#  capacity            :integer          not null
-#  notes               :text(65535)
-#  section_id          :integer
-#  started_at          :datetime
-#  ended_at            :datetime
-#  created_at          :datetime
-#  updated_at          :datetime
-#  processed_at        :datetime
-#  deleted_at          :datetime
-#  regional_partner_id :integer
-#  on_map              :boolean
-#  funded              :boolean
-#  funding_type        :string(255)
-#  properties          :text(65535)
-#  module              :string(255)
+#  id                     :integer          not null, primary key
+#  organizer_id           :integer          not null
+#  location_name          :string(255)
+#  location_address       :string(255)
+#  processed_location     :text(65535)
+#  course                 :string(255)      not null
+#  subject                :string(255)
+#  capacity               :integer          not null
+#  notes                  :text(65535)
+#  section_id             :integer
+#  started_at             :datetime
+#  ended_at               :datetime
+#  created_at             :datetime
+#  updated_at             :datetime
+#  processed_at           :datetime
+#  deleted_at             :datetime
+#  regional_partner_id    :integer
+#  on_map                 :boolean
+#  funded                 :boolean
+#  funding_type           :string(255)
+#  properties             :text(65535)
+#  module                 :string(255)
+#  name                   :string(255)
+#  participant_group_type :string(255)
 #
 # Indexes
 #

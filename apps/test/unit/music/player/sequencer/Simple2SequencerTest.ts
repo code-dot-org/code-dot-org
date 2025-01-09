@@ -14,6 +14,8 @@ import {SoundEvent} from '@cdo/apps/music/player/interfaces/SoundEvent';
 import MusicLibrary, {SoundData} from '@cdo/apps/music/player/MusicLibrary';
 import Simple2Sequencer from '@cdo/apps/music/player/sequencer/Simple2Sequencer';
 
+import setGoogleBlocklyGlobal from '../../../../util/setupGoogleBlocklyGlobal';
+
 const testSound: SoundData = {
   name: 'name',
   src: 'id',
@@ -21,6 +23,7 @@ const testSound: SoundData = {
   type: 'bass',
 };
 
+setGoogleBlocklyGlobal();
 describe('Simple2Sequencer', () => {
   let sequencer: Simple2Sequencer;
   let library: SinonStubbedInstance<MusicLibrary>;

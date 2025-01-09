@@ -4,15 +4,19 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
+      "topic_tags": [
+        "survey"
+      ],
       "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-11 12:07:54 UTC",
+    "serialized_at": "2024-11-19 01:16:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -150,6 +154,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

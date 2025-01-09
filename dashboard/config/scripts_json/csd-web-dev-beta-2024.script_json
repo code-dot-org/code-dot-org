@@ -4,7 +4,8 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "curriculum_umbrella": "CSD",
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_course": true,
@@ -17,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "csd-web-dev-beta-2024",
-    "serialized_at": "2024-05-23 17:29:19 UTC",
+    "serialized_at": "2024-11-19 01:16:33 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

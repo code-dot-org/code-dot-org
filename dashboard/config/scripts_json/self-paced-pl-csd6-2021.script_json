@@ -15,6 +15,7 @@
           "buttonText": null
         }
       ],
+      "content_area": "self_paced_pl_6_8",
       "curriculum_umbrella": "CSD Self Paced PL",
       "has_verified_resources": true,
       "is_course": true,
@@ -25,7 +26,7 @@
     },
     "new_name": null,
     "family_name": "self-paced-pl-csd6-2021",
-    "serialized_at": "2024-01-25 21:29:31 UTC",
+    "serialized_at": "2024-11-19 01:19:33 UTC",
     "published_state": "beta",
     "instruction_type": "self_paced",
     "instructor_audience": "universal_instructor",

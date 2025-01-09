@@ -75,7 +75,9 @@ module Curriculum
         special_topics_curriculum_selfpaced_pl_6_8: '6-8 Special topics curriculum selfpaced pl',
         special_topics_curriculum_selfpaced_pl_9_12: '9-12 Special topics curriculum selfpaced pl',
         pedagogy_special_topics_selfpaced_pl: 'Pedagogy special topics selfpaced pl',
-        cs_basics_selfpaced_pl: 'CS Basics selfpaced pl'
+        cs_basics_selfpaced_pl: 'CS Basics selfpaced pl',
+        pd_for_facilitators: 'PD for Facilitators',
+        other: 'Other'
       }
     ).freeze
 
@@ -84,7 +86,9 @@ module Curriculum
       {
         ai: 'AI',
         maker: 'Maker',
-        music_lab: 'Music lab'
+        music_lab: 'Music lab',
+        survey: 'Survey',
+        data_science: 'Data Science'
       }
     ).freeze
 
@@ -100,6 +104,7 @@ module Curriculum
         self_paced_pl_6_8: '6-8 self-paced PL',
         self_paced_pl_9_12: '9-12 self-paced PL',
         skills_focused_self_paced_pl: 'Skills-focused self-paced PL',
+        pd_for_facilitators: 'PD for Facilitators',
         other: 'Other'
       }
     ).freeze

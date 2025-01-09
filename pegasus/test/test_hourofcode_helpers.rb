@@ -24,6 +24,7 @@ class HourOfCodeHelpersTest < Minitest::Test
 
     Geocoder.stubs(:search).with(gb_ip, {ip_address: true}).returns([OpenStruct.new(country_code: 'GB')])
     Geocoder.stubs(:search).with(fr_ip, {ip_address: true}).returns([OpenStruct.new(country_code: 'FR')])
+    Geocoder.stubs(:search).with(cloudfront_ip)
 
     header 'host', 'hourofcode.com'
     header 'X_FORWARDED_FOR', [gb_ip, cloudfront_ip, local_load_balancer].join(', ')
@@ -61,7 +62,8 @@ class HourOfCodeHelpersTest < Minitest::Test
     cloudfront_ip = '54.240.158.170' # Whitelisted CloudFront-ip proxy range
     local_load_balancer = '10.31.164.34' # Private-network address range
     Geocoder.stubs(:search).with(user_ip, {ip_address: true}).returns([OpenStruct.new(country_code: 'GB')])
-    Geocoder.stubs(:search).with('127.0.0.1', {ip_address: true}).returns([OpenStruct.new(country_code: 'RD')])
+    Geocoder.stubs(:search).with('127.0.0.1', anything).returns([OpenStruct.new(country_code: 'RD')])
+    Geocoder.stubs(:search).with(cloudfront_ip)
 
     header 'host', 'hourofcode.com'
     header 'X_FORWARDED_FOR', [user_ip, untrusted_proxy_ip, cloudfront_ip, local_load_balancer].join(', ')

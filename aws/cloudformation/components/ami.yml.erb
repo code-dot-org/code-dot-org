@@ -3,13 +3,13 @@
 
 # String to append to AMI logical resources that get replaced on every build.
 # Typically a portion of the commit hash.
-ami ||= raise('ami string required')
+commit_hash ||= raise('ami commit hash is required')
 
 # Shell script to run when building/updating the AMI-creating instance.
 build_ami ||= <<SH
 INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
 STACK=${AWS::StackName}
-RESOURCE_ID=AMICreate#{ami}
+RESOURCE_ID=AMICreate#{commit_hash}
 STATUS=SUCCESS
 REGION=${AWS::Region}
 SH
@@ -52,7 +52,7 @@ frontend_device_name ||= '/dev/sda1'
     Type: AWS::IAM::InstanceProfile
     Properties: {Roles: [!Ref FrontendRole]}
   # Signal when the instance is fully provisioned and ready for AMI creation.
-  AMICreate<%=ami%>:
+  AMICreate<%=commit_hash%>:
     Type: AWS::CloudFormation::WaitCondition
     CreationPolicy:
       ResourceSignal:
@@ -92,11 +92,11 @@ frontend_device_name ||= '/dev/sda1'
             || true
 
           shutdown -h now
-  AMI<%=ami%>: <%= lambda_fn 'AMIManager',
-    DependsOn: "AMICreate#{ami}",
+  AMI<%=commit_hash%>: <%= lambda_fn 'AMIManager',
+    DependsOn: "AMICreate#{commit_hash}",
     InstanceId: {Ref: "WebServerAMI" } %>
   FastSnapshotRestore: <%= lambda_fn 'FastSnapshotRestore',
-    ImageIds: [{Ref: "AMI#{ami}" }],
+    ImageIds: [{Ref: "AMI#{commit_hash}" }],
     AvailabilityZones: AVAILABILITY_ZONES
   %>
   ASGCount: <%= lambda_fn 'CountASG',
@@ -109,7 +109,7 @@ frontend_device_name ||= '/dev/sda1'
       {Key: 'aws:cloudformation:stack-id', Value: {Ref: 'AWS::StackId'}},
       {Key: 'aws:cloudformation:logical-id', Value: 'Frontends'}
     ],
-    LaunchConfiguration: {Ref: 'FrontendLaunchConfig'}
+    LatestStackUpdateDateTime: Time.now # Trigger update of this custom Resource (invocation of the Lambda) for each Stack update.
   %>
   Frontends:
     Type: AWS::AutoScaling::AutoScalingGroup
@@ -130,7 +130,9 @@ frontend_device_name ||= '/dev/sda1'
     Properties:
       AutoScalingGroupName: !Sub "Frontends-${AWS::StackName}"
       VPCZoneIdentifier: <%= subnets.to_json %>
-      LaunchConfigurationName: !Ref FrontendLaunchConfig
+      LaunchTemplate:
+        LaunchTemplateId: !Ref FrontendLaunchTemplate
+        Version: !GetAtt FrontendLaunchTemplate.LatestVersionNumber
       MinSize: !GetAtt ASGCount.MinSize
       MaxSize: !GetAtt ASGCount.MaxSize
       DesiredCapacity: !GetAtt ASGCount.DesiredCapacity
@@ -146,63 +148,83 @@ frontend_device_name ||= '/dev/sda1'
         - Key: "environment"
           Value: <%=environment%>
           PropagateAtLaunch: true
-  FrontendLaunchConfig:
-    Type: AWS::AutoScaling::LaunchConfiguration
+  FrontendLaunchTemplate:
+    Type: AWS::EC2::LaunchTemplate
     DependsOn: FastSnapshotRestore
     Properties:
-      ImageId: !GetAtt [AMI<%=ami%>, ImageId]
-      InstanceType: <%=instance_type%>
-      IamInstanceProfile: !Ref FrontendInstanceProfile
-      SecurityGroups: [!ImportValue VPC-FrontendSecurityGroup]
-      KeyName: <%=ssh_key_name%>
-      BlockDeviceMappings:
-        - DeviceName: <%=frontend_device_name%>
-          Ebs:
-            VolumeSize: <%=frontend_volume_size * 2%> # Double volume size to leave room for logs written to disk
-            VolumeType: gp2
-      UserData:
-        Fn::Base64: !Sub |
-          #!/bin/bash -x
-          # UserData bootstrap script for CloudFormation stack instances.
-          # Note: Every time this script's contents change,
-          # the LaunchConfiguration will be replaced in the CloudFormation stack.
+      LaunchTemplateName: !Sub ${AWS::StackName}-frontend
+      VersionDescription: !Sub "AMI: ${AMI<%=commit_hash%>.ImageId}, Commit: <%=commit_hash%>"
+      TagSpecifications:
+        - ResourceType: launch-template
+          Tags:
+            - Key: "git-commit"
+              Value: <%=commit_hash%>
+            - Key: "ami-id"
+              Value: !GetAtt AMI<%=commit_hash%>.ImageId
+            - Key: "environment"
+              Value: <%=environment%>
+      LaunchTemplateData:
+        ImageId: !GetAtt [AMI<%=commit_hash%>, ImageId]
+        InstanceType: <%=instance_type%>
+        IamInstanceProfile:
+          Name: !Ref FrontendInstanceProfile
+        SecurityGroupIds:
+          - !ImportValue VPC-FrontendSecurityGroup
+        KeyName: <%=ssh_key_name%>
+        BlockDeviceMappings:
+          - DeviceName: <%=frontend_device_name%>
+            Ebs:
+              VolumeSize: <%=frontend_volume_size * 2%> # Double volume size to leave room for logs written to disk
+              VolumeType: gp2
+        TagSpecifications:
+          - ResourceType: instance
+            Tags:
+              - Key: "Name"
+                Value: !Sub "Frontend-${AWS::StackName}"
+              - Key: "git-commit"
+                Value: <%=commit_hash%>
+              - Key: "environment"
+                Value: <%=environment%>
+        UserData:
+          Fn::Base64: !Sub |
+            #!/bin/bash -x
 
-          STACK=${AWS::StackName}
-          REGION=${AWS::Region}
+            STACK=${AWS::StackName}
+            REGION=${AWS::Region}
 
-          INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
-          <%=indent(build_frontend, 10)%>
-          if [ $? -eq 0 ]
-          then
-            CFN_STATUS=SUCCESS
-            LIFECYCLE_ACTION=CONTINUE
-          else
-            CFN_STATUS=FAILURE
-            LIFECYCLE_ACTION=ABANDON
-          fi
+            INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+            <%=indent(build_frontend, 12)%>
+            if [ $? -eq 0 ]
+            then
+              CFN_STATUS=SUCCESS
+              LIFECYCLE_ACTION=CONTINUE
+            else
+              CFN_STATUS=FAILURE
+              LIFECYCLE_ACTION=ABANDON
+            fi
 
-          # Signal CompleteLifecycleAction, in case this instance was launched from an Auto Scaling process.
-          LIFECYCLE_HOOK=WebServerHook-${AWS::StackName}
-          AUTO_SCALING_GROUP=Frontends-${AWS::StackName}
-          if [ -n "$LIFECYCLE_HOOK" ] && [ -n "$AUTO_SCALING_GROUP" ]; then
-            aws autoscaling complete-lifecycle-action \
-              --lifecycle-action-result $LIFECYCLE_ACTION \
-              --instance-id $INSTANCE_ID \
-              --lifecycle-hook-name $LIFECYCLE_HOOK \
-              --auto-scaling-group-name $AUTO_SCALING_GROUP \
+            # Signal CompleteLifecycleAction, in case this instance was launched from an Auto Scaling process.
+            LIFECYCLE_HOOK=WebServerHook-${AWS::StackName}
+            AUTO_SCALING_GROUP=Frontends-${AWS::StackName}
+            if [ -n "$LIFECYCLE_HOOK" ] && [ -n "$AUTO_SCALING_GROUP" ]; then
+              aws autoscaling complete-lifecycle-action \
+                --lifecycle-action-result $LIFECYCLE_ACTION \
+                --instance-id $INSTANCE_ID \
+                --lifecycle-hook-name $LIFECYCLE_HOOK \
+                --auto-scaling-group-name $AUTO_SCALING_GROUP \
+                --region $REGION \
+                || true
+            fi
+
+            # Signal CloudFormation, in case this instance was launched from a CloudFormation stack update.
+            RESOURCE_ID=Frontends
+            aws cloudformation signal-resource \
+              --status $CFN_STATUS \
+              --unique-id $INSTANCE_ID \
+              --stack-name $STACK \
+              --logical-resource-id $RESOURCE_ID \
               --region $REGION \
               || true
-          fi
-
-          # Signal CloudFormation, in case this instance was launched from a CloudFormation stack update.
-          RESOURCE_ID=Frontends
-          aws cloudformation signal-resource \
-            --status $CFN_STATUS \
-            --unique-id $INSTANCE_ID \
-            --stack-name $STACK \
-            --logical-resource-id $RESOURCE_ID \
-            --region $REGION \
-            || true
   CPUScalingPolicy:
     Type: AWS::AutoScaling::ScalingPolicy
     Properties:

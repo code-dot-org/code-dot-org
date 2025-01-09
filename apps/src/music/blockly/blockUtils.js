@@ -1,6 +1,6 @@
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 
-import {BlockMode} from '../constants';
+import {BlockMode, MAX_FUNCTION_CALLS_COUNT} from '../constants';
 
 import {BlockTypes} from './blockTypes';
 import {DOCS_BASE_URL} from './constants';
@@ -28,7 +28,7 @@ export function getCodeForSingleBlock(block) {
     return getCodeForSingleBlock(block.getNextBlock());
   }
 
-  var func = Blockly.JavaScript[block.type];
+  const func = Blockly.JavaScript.forBlock[block.type];
   if (typeof func !== 'function') {
     throw Error(
       'Language "JavaScript" does not know how to generate ' +
@@ -40,7 +40,7 @@ export function getCodeForSingleBlock(block) {
   // Prior to 24 September 2013 'this' was the only way to access the block.
   // The current preferred method of accessing the block is through the second
   // argument to func.call, which becomes the first parameter to the generator.
-  var code = func.call(block, block);
+  const code = func.call(block, block, Blockly.JavaScript);
   if (Array.isArray(code)) {
     // Value blocks return tuples of code and operator order.
     if (!block.outputConnection) {
@@ -89,7 +89,8 @@ export function installFunctionBlocks(blockMode) {
       generator
     ) =>
       simple2FunctionCallGenerator(
-        generator.getProcedureName(block.getFieldValue('NAME'))
+        generator.getProcedureName(block.getFieldValue('NAME')),
+        block.getProcedureModel().id
       );
   }
   // Sets the help URL for each function definiton block to the appropriate
@@ -134,12 +135,45 @@ function restoreBlockDefinitions() {
 }
 
 // A helper function to generate the code for a function call to play sounds sequentially.
-function simple2FunctionCallGenerator(functionName) {
+function simple2FunctionCallGenerator(functionName, functionCallBllockId) {
   return `
-    Sequencer.startFunctionContext('${functionName}');
-    Sequencer.playSequential();
-    ${functionName}();
-    Sequencer.endSequential();
-    Sequencer.endFunctionContext();
+    if (__functionCallsCount++ < ${MAX_FUNCTION_CALLS_COUNT}) {
+      Sequencer.startFunctionContext('${functionName}', '${functionCallBllockId}');
+      Sequencer.playSequential();
+      ${functionName}();
+      Sequencer.endSequential();
+      Sequencer.endFunctionContext();
+    }
   `;
+}
+
+// For a given block id, return a list of block types. These block types
+// represent any C-shaped block between itself and the root (top) block
+// which contains it. The returned list could include types for loop blocks,
+// function definitions, conditionals, or other control structures.
+// These blocks all have a "statement" input that contains other blocks.
+export function findParentStatementInputTypes(id) {
+  if (id === 'preview') {
+    return [];
+  }
+
+  // Ensure Blockly is defined for the sake of unit tests.
+  const block = Blockly.getMainWorkspace()?.getBlockById(id);
+
+  const parentTypes = [];
+  function addParentBlockTypes(currentBlock) {
+    if (currentBlock) {
+      const parentBlock = currentBlock.getParent();
+      const parentInput =
+        currentBlock.previousConnection?.targetConnection?.getParentInput();
+      if (parentInput?.type === Blockly.inputTypes.STATEMENT) {
+        parentTypes.push(parentBlock.type);
+      }
+      addParentBlockTypes(parentBlock);
+    }
+  }
+
+  addParentBlockTypes(block);
+
+  return parentTypes;
 }

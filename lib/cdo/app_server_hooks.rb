@@ -28,7 +28,7 @@ module Cdo
 
     def self.after_fork(host:)
       require 'cdo/aws/metrics'
-      Cdo::Metrics.put('App Server', 'WorkerBoot', 1, Host: host)
+      Cdo::Metrics.put('App Server', 'WorkerBoot', 1, {Host: host})
 
       # Statsig is initialized here for managed environments. For development, it is
       # intialized in config/initializers/statsig.rb

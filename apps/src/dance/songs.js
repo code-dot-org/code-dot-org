@@ -20,6 +20,11 @@ const DEPRECATED_SONGS = [
   'savagelove_jasonderulo',
   'astronautintheocean_maskedwolf',
   'dernieredanse_indila',
+  'kidzbop_ificanthaveyou_shawnmendes',
+  'neverreallyover_katyperry',
+  'occidentalview_francescogabbani',
+  'oldtownroadremix_lilnasx',
+  'oldtownroadremix_lilnasx_long',
 ];
 
 /**

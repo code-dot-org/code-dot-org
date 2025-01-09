@@ -27,6 +27,7 @@
       ComparisonOperator: GreaterThanThreshold
       Dimensions:
         - {Name: InstanceId, Value: !Ref <%=daemon%>}
+        - {Name: Environment, Value: <%= environment %>}
       EvaluationPeriods: 7
       MetricName: mem_used_percent
       Namespace: CWAgent
@@ -82,3 +83,8 @@
     Type: 'AWS::SNS::Topic'
     Properties:
       DisplayName: Infra-Urgent
+
+  StudentLearningWorkdayUrgent:
+      Type: 'AWS::SNS::Topic'
+      Properties:
+        DisplayName: StudentLearning-WorkdayUrgent

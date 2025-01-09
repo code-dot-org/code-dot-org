@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "design-process",
-    "serialized_at": "2023-10-03 16:58:10 UTC",
+    "serialized_at": "2024-11-19 01:17:19 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

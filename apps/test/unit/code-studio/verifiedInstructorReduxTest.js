@@ -1,7 +1,7 @@
 import reducer, {
   setVerified,
   setVerifiedResources,
-} from '@cdo/apps/code-studio/verifiedInstructorRedux'; // eslint-disable-line no-restricted-imports
+} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 
 describe('verifiedInstructorRedux', () => {
   it('begins with teachers unverified', () => {

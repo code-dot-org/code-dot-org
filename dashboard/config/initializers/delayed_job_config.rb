@@ -8,3 +8,5 @@ Delayed::Worker.destroy_failed_jobs = false
 # retry_on method, and second from delayed_job, which is controlled by the
 # max_attempts variable.
 Delayed::Worker.max_attempts = 1
+
+Delayed::Worker.logger = Logger.new(File.join(Rails.root, 'log', 'delayed_job.log'))

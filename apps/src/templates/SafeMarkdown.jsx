@@ -27,6 +27,7 @@ class SafeMarkdown extends React.Component {
     markdown: PropTypes.string.isRequired,
     openExternalLinksInNewTab: PropTypes.bool,
     className: PropTypes.string,
+    id: PropTypes.string,
   };
 
   render() {
@@ -43,6 +44,9 @@ class SafeMarkdown extends React.Component {
     const markdownProps = {};
     if (this.props.className) {
       markdownProps.className = this.props.className;
+    }
+    if (this.props.id) {
+      markdownProps.id = this.props.id;
     }
     // rehype-react will only wrap the compiled markdown in a <div> tag
     // if it needs to (ie, if there would otherwise be multiple elements

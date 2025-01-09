@@ -16,6 +16,7 @@
           "buttonText": "Computer Science Basics for K-5 Teachers "
         }
       ],
+      "content_area": "hoc",
       "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
@@ -57,7 +58,7 @@
     },
     "new_name": null,
     "family_name": "playlab",
-    "serialized_at": "2024-02-05 21:44:59 UTC",
+    "serialized_at": "2025-01-07 20:01:01 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -120,7 +121,8 @@
       "key": "974b1dfa-682c-4556-89d8-af3f0d0a9d69",
       "position": 2,
       "properties": {
-        "name": "Activity (30-45 minutes)"
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "974b1dfa-682c-4556-89d8-af3f0d0a9d69",

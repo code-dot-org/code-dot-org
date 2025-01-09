@@ -1,5 +1,4 @@
 !!! 5
--require 'cpa'
 -require '../shared/middleware/helpers/experiments'
 %html{dir: locale_dir}
   %head
@@ -26,6 +25,8 @@
     -# data needed for dcdo.js. This tag is needed on every page because our translation code is
     -# making use of the dcdo feature.
     %script{data: {'dcdo': DCDO.frontend_config.to_json}}
+    -# current Global Edition region
+    %script{'data-ge-region' => request.ge_region.to_s}
     -# auth key needed for amplitude analytics.
     %script{data: {'amplitude-api-key': CDO.safe_amplitude_api_key}}
     -# auth key needed for statsig analytics
@@ -50,6 +51,8 @@
     -# which we only use when optimizing our webpack build (ie, non-development environments).
     - if CDO.optimize_webpack_assets
       %script{src: webpack_asset_path('js/code-studio-common.js'), 'data-ot-ignore' => ''}
+    - if request.ge_region
+      %script{src: webpack_asset_path('js/statsigWebAnalytics.js'), 'data-ot-ignore' => ''}
     = csrf_meta_tags
     = yield :head
     - if content_for? :og
@@ -67,7 +70,7 @@
     - else
       - unless Rails.env.production?
         = render partial: 'layouts/environment_tag'
-    - if current_user&.student?
+    - if current_user&.student? && !current_user.sponsored?
       - forceStudentInterstitial = params[:forceStudentInterstitial]
       - if current_user.age.nil? || lti_user_info_required?(current_user) || cap_user_info_required?(current_user, request.country) || forceStudentInterstitial
         = render partial: 'layouts/student_information_interstitial', locals: {student: current_user, country: request.country, forceStudentInterstitial: forceStudentInterstitial}
@@ -89,6 +92,8 @@
     #gdpr-dialog
 
     %script{src: webpack_asset_path('js/code-studio.js'), data: {gdpr: gdpr_data.to_json, usertype: user_type.to_json, under13: under_13.to_json}, 'data-ot-ignore' => ''}
+
+    = render_shared_haml('global_edition/region_switch_confirm')
 
     .wrapper{style: ('background-color: #ffffff' if view_options[:white_background])}
       - unless view_options[:no_header]

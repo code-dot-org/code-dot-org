@@ -26,20 +26,26 @@ const BrowserTextToSpeechWrapper: React.FC<{children: ReactNode}> = ({
   }, []);
 
   return (
-    <BrowserTtsContext.Provider value={{isTtsAvailable: ttsReady, speak}}>
+    <BrowserTtsContext.Provider value={{isTtsAvailable: ttsReady, ...ttsApi}}>
       {children}
     </BrowserTtsContext.Provider>
   );
 };
 
-interface BrowserTtsContextType {
+type BrowserTtsContextType = {
   isTtsAvailable: boolean;
-  speak: (text: string) => void;
-}
+} & typeof ttsApi;
+
+const ttsApi = {
+  speak,
+  cancel: () => speechSynthesis.cancel(),
+  pause: () => speechSynthesis.pause(),
+  resume: () => speechSynthesis.resume(),
+};
 
 const BrowserTtsContext = createContext<BrowserTtsContextType>({
   isTtsAvailable: isTtsAvailable(),
-  speak,
+  ...ttsApi,
 });
 
 /** Hook to access the browser text-to-speech context. */

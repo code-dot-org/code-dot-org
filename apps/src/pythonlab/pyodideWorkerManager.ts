@@ -1,3 +1,4 @@
+import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import {
   appendOutputImage,
   appendSystemMessage,
@@ -6,10 +7,10 @@ import {
   appendSystemError,
 } from '@codebridge/redux/consoleRedux';
 
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {setAndSaveProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
-import {setLoadingCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
+import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
-import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
 
 import {parseErrorMessage} from './pythonHelpers/messageHelpers';
@@ -17,6 +18,7 @@ import {MATPLOTLIB_IMG_TAG} from './pythonHelpers/patches';
 import {PyodideMessage} from './types';
 
 let callbacks: {[key: number]: (event: PyodideMessage) => void} = {};
+const appName = 'pythonlab';
 
 const setUpPyodideWorker = () => {
   // @ts-expect-error because TypeScript does not like this syntax.
@@ -27,6 +29,7 @@ const setUpPyodideWorker = () => {
   worker.onmessage = event => {
     const {type, id, message} = event.data as PyodideMessage;
     const onSuccess = callbacks[id];
+    const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
     switch (type) {
       case 'sysout':
       case 'syserr':
@@ -35,12 +38,15 @@ const setUpPyodideWorker = () => {
         if (message.startsWith(MATPLOTLIB_IMG_TAG)) {
           // This is a matplotlib image, so we need to append it to the output
           const image = message.slice(MATPLOTLIB_IMG_TAG.length + 1);
+          consoleManager?.writeImage(image);
           getStore().dispatch(appendOutputImage(image));
           break;
         }
+        consoleManager?.writeConsoleMessage(message);
         getStore().dispatch(appendSystemOutMessage(message));
         break;
       case 'run_complete':
+        consoleManager?.writeSystemMessage('Program completed.', appName);
         getStore().dispatch(appendSystemMessage('Program completed.'));
         delete callbacks[id];
         onSuccess(event.data);
@@ -49,26 +55,31 @@ const setUpPyodideWorker = () => {
         getStore().dispatch(setAndSaveProjectSource({source: message}));
         break;
       case 'error':
+        consoleManager?.writeErrorMessage(parseErrorMessage(message));
         getStore().dispatch(appendErrorMessage(parseErrorMessage(message)));
         break;
       case 'system_error':
+        consoleManager?.writeSystemError(message, appName);
         getStore().dispatch(appendSystemError(message));
-        MetricsReporter.logError({
-          type: 'PythonLabSystemCodeError',
-          message,
-        });
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Python Lab System Code Error', undefined, {message});
         break;
       case 'internal_error':
-        MetricsReporter.logError({
-          type: 'PythonLabInternalError',
-          message,
-        });
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Python Lab Internal Error', undefined, {message});
         break;
       case 'loading_pyodide':
-        getStore().dispatch(setLoadingCodeEnvironment(true));
+        getStore().dispatch(setLoadedCodeEnvironment(false));
         break;
       case 'loaded_pyodide':
-        getStore().dispatch(setLoadingCodeEnvironment(false));
+        getStore().dispatch(setLoadedCodeEnvironment(true));
+        if (message && parseInt(message)) {
+          Lab2Registry.getInstance()
+            .getMetricsReporter()
+            .reportLoadTime('PythonLab.PyodideLoadTime', parseInt(message));
+        }
         break;
       default:
         console.warn(
@@ -111,7 +122,12 @@ const restartPyodideIfProgramIsRunning = () => {
   if (Object.keys(callbacks).length > 0) {
     pyodideWorker.terminate();
     pyodideWorker = setUpPyodideWorker();
+    const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
+    consoleManager?.writeSystemMessage('Program stopped.', appName);
     getStore().dispatch(appendSystemMessage('Program stopped.'));
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .incrementCounter('PythonLab.PyodideRestarted');
   }
 };
 

@@ -313,7 +313,6 @@ function validateFirehoseDataSize(data) {
 // This code sets up an AWS config against a very restricted user, so this is
 // not a concern, we just don't want to make things super obvious. For more
 // info, contact the infrastructure team.
-/* eslint-disable */
 function createNewFirehose(AWS, Firehose) {
   var _0xr0t13 = function (message) {
     return message.replace(/[a-z]/gi, letter =>
@@ -356,7 +355,6 @@ function createNewFirehose(AWS, Firehose) {
     correctClockSkew: true,
   });
 }
-/* eslint-enable */
 
 let promise;
 function getSingleton() {

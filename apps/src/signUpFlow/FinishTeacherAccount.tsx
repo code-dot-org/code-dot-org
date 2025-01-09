@@ -1,8 +1,11 @@
 import classNames from 'classnames';
+import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
+import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {
   BodyThreeText,
@@ -12,6 +15,8 @@ import {
 } from '@cdo/apps/componentLibrary/typography';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
+import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
@@ -21,7 +26,14 @@ import {useSchoolInfo} from '../schoolInfo/hooks/useSchoolInfo';
 import {navigateToHref} from '../utils';
 
 import locale from './locale';
-import {EMAIL_SESSION_KEY} from './signUpFlowConstants';
+import {
+  ACCOUNT_TYPE_SESSION_KEY,
+  EMAIL_SESSION_KEY,
+  OAUTH_LOGIN_TYPE_SESSION_KEY,
+  USER_RETURN_TO_SESSION_KEY,
+  clearSignUpSessionStorage,
+  NEW_SIGN_UP_USER_TYPE,
+} from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
 
@@ -36,8 +48,37 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const [gdprChecked, setGdprChecked] = useState(false);
   const [showGDPR, setShowGDPR] = useState(false);
   const [isGdprLoaded, setIsGdprLoaded] = useState(false);
+  const [userReturnTo, setUserReturnTo] = useState('/home');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorCreatingAccountMessage, showErrorCreatingAccountMessage] =
+    useState(false);
+
+  const isInSchoolRequiredExperiment = statsigReporter.getIsInExperiment(
+    'require_school_in_signup_v1',
+    'requireInfo',
+    false
+  );
+
+  // Remove oauth user_type cookie if it exists
+  cookies.remove(NEW_SIGN_UP_USER_TYPE);
 
   useEffect(() => {
+    // If the user hasn't selected a user type or login type, redirect them back to the incomplete step of signup.
+    if (sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === null) {
+      navigateToHref('/users/new_sign_up/account_type');
+    } else if (
+      sessionStorage.getItem(EMAIL_SESSION_KEY) === null &&
+      sessionStorage.getItem(OAUTH_LOGIN_TYPE_SESSION_KEY) === null
+    ) {
+      navigateToHref('/users/new_sign_up/login_type');
+    }
+
+    analyticsReporter.sendEvent(
+      EVENTS.FINISH_ACCOUNT_PAGE_LOADED,
+      {'user type': 'teacher', country: countryCode},
+      PLATFORMS.BOTH
+    );
+
     const fetchGdprData = async () => {
       const urlParams = new URLSearchParams(window.location.search);
       const forceInEu = urlParams.get('force_in_eu');
@@ -56,7 +97,12 @@ const FinishTeacherAccount: React.FunctionComponent<{
       }
     };
     fetchGdprData();
-  }, []);
+
+    const userReturnToHref = sessionStorage.getItem(USER_RETURN_TO_SESSION_KEY);
+    if (userReturnToHref) {
+      setUserReturnTo(userReturnToHref);
+    }
+  }, [countryCode, usIp]);
 
   // GDPR is valid if
   // 1. The fetch call has completed AND
@@ -78,7 +124,12 @@ const FinishTeacherAccount: React.FunctionComponent<{
   };
 
   const submitTeacherAccount = async () => {
+    if (isSubmitting) {
+      return;
+    }
+    setIsSubmitting(true);
     sendFinishEvent();
+    showErrorCreatingAccountMessage(false);
 
     const signUpParams = {
       new_sign_up: true,
@@ -92,7 +143,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
       },
     };
     const authToken = await getAuthenticityToken();
-    await fetch('/users', {
+    const response = await fetch('/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -101,7 +152,13 @@ const FinishTeacherAccount: React.FunctionComponent<{
       body: JSON.stringify(signUpParams),
     });
 
-    navigateToHref('/home');
+    if (response.ok) {
+      clearSignUpSessionStorage(true);
+      navigateToHref(userReturnTo);
+    } else {
+      setIsSubmitting(false);
+      showErrorCreatingAccountMessage(true);
+    }
   };
 
   const onGDPRChange = (): void => {
@@ -120,6 +177,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
         'has school': hasSchool,
         'has marketing value selected': true,
         'has display name': !showNameError,
+        country: countryCode,
       },
       PLATFORMS.BOTH
     );
@@ -132,10 +190,28 @@ const FinishTeacherAccount: React.FunctionComponent<{
           <Heading2>{locale.finish_creating_teacher_account()}</Heading2>
           <BodyTwoText>{locale.tailor_experience()}</BodyTwoText>
         </div>
+        {errorCreatingAccountMessage && (
+          <div className={style.errorSigningUpMessage}>
+            <div className={style.errorMessageWithXMark}>
+              <FontAwesomeV6Icon
+                iconName={'circle-xmark'}
+                className={style.xIcon}
+              />
+              <BodyThreeText className={style.errorMessageText}>
+                <SafeMarkdown markdown={locale.error_signing_up_message()} />
+              </BodyThreeText>
+            </div>
+            <CloseButton
+              onClick={() => showErrorCreatingAccountMessage(false)}
+              aria-label={locale.error_signing_up_message_aria_label()}
+            />
+          </div>
+        )}
         <fieldset className={style.inputContainer}>
           <div>
             <TextField
               name="displayName"
+              id="uitest-display-name"
               label={locale.what_do_you_want_to_be_called()}
               className={style.nameInput}
               value={name}
@@ -151,7 +227,11 @@ const FinishTeacherAccount: React.FunctionComponent<{
               </BodyThreeText>
             )}
           </div>
-          <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
+          <SchoolDataInputs
+            {...schoolInfo}
+            includeHeaders={false}
+            markFieldsAsRequired={isInSchoolRequiredExperiment}
+          />
           {showGDPR && (
             <div>
               <BodyThreeText
@@ -207,16 +287,22 @@ const FinishTeacherAccount: React.FunctionComponent<{
               iconStyle: 'solid',
               title: 'arrow-right',
             }}
-            disabled={name === '' || !gdprValid}
+            disabled={
+              name === '' ||
+              !gdprValid ||
+              (isInSchoolRequiredExperiment && schoolInfoInvalid(schoolInfo))
+            }
+            isPending={isSubmitting}
           />
         </div>
       </div>
       <SafeMarkdown
         className={style.tosAndPrivacy}
         markdown={locale.by_signing_up({
-          tosLink: 'code.org/tos',
-          privacyPolicyLink: 'code.org/privacy',
+          tosLink: 'https://code.org/tos',
+          privacyPolicyLink: 'https://code.org/privacy',
         })}
+        openExternalLinksInNewTab={true}
       />
     </div>
   );

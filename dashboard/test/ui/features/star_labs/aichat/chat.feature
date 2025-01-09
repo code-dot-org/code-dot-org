@@ -1,5 +1,5 @@
 @no_mobile
-@no_circle
+@no_ci
 
 Feature: AI Chat
 
@@ -17,8 +17,8 @@ Feature: AI Chat
     When I press keys "Hello" for element "#uitest-chat-textarea"
     And I wait until element "#uitest-chat-submit" is enabled
     And I click selector "#uitest-chat-submit"
-    And I wait until element "[aria-label='AI bot']" is visible
-    Then element "[aria-label='AI bot']" has css property "background-color" equal to "rgb(224, 248, 249)"
+    And I wait until element "[aria-label='AI bot chat message']" is visible
+    Then element "[aria-label='AI bot chat message']" has css property "background-color" equal to "rgb(224, 248, 249)"
 
   Scenario: Editing system prompt produces success notification and saves
     When I press keys "You are a safe chatbot" for element "#system-prompt"

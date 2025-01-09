@@ -28,50 +28,36 @@ If you get the error `unknown error: cannot get automation extension`, follow th
 
 Running tests remotely on [Sauce Labs](https://saucelabs.com) lets you review results, view visual logs of test runs and even watch live video of your tests running on different browsers in real-time.
 
-We currently have 120 available browsers, and the automated ui tests attempt to run 110.
+#### Installing Sauce Connect Proxy
 
-#### Credentials
+If you want to run tests on Sauce Labs against localhost you need to run the sauce connect proxy. This
+creates a tunnel which allows sauce labs to access your localhost server.
 
-Sauce Labs requires credentials to be set in locals.yml first.
+1. Follow [installation directions](https://docs.saucelabs.com/secure-connections/sauce-connect-5/installation/) for sauce connect proxy. `sc --version` should be >= 5.2
 
+2. Setup saucelabs credentials in locals.yml:
 ```
 # code-dot-org/locals.yml
 saucelabs_username: 'yourusername'
+# see https://app.saucelabs.com/user-settings under the "Access Key" header:
 saucelabs_authkey: 'xxxxxx-xxxx-xxxx-xxx-xxxxxxxxx'
-
+# can be anything, if you use multiple machines (e.g. EC2), should be unique to each:
+saucelabs_tunnel_name: cdo-tunnel
 ```
 
-You can find the values for these settings in your saucelabs account settings (`https://app.saucelabs.com/users/:username`) The key you need, `saucelabs_authkey`, will be under the "Access Key" header.
+## Running UI Tests with Sauce Labs
 
-#### Sauce Labs tunnel
+1. Start the sauce connect proxy:
+```
+bin/sauce_connect
+```
+2. Run your UI test
+```
+./runner.rb -l -c Chrome --html -f features/platform/policy_compliance.feature
+```
 
-If you want to run tests on Sauce Labs against localhost you need to set up your tunnel:
-
-#### Latest version of Sauce Connect Proxy CLI (5.1.0)
-1. Login to Sauce Labs and download the [tunnel](https://app.saucelabs.com/tunnels).
-2. Uncomment and fill out the values for the "saucelabs_" properties in `locals.yml`
-   - `saucelabs_tunnel_name` can be an arbitrary name, but it needs to match what you pass as an argument to `sc run...`
-3. (Re)start your dashboard-server `./bin/dashboard-server`.
-4. Start the sauce labs tunnel
-    - `sc run -u <saucelabs_username> -k <saucelabs_authkey> -r us-west --tunnel-name <saucelabs_tunnel_name>`
-5. Run your UI test
-    - `./runner.rb -l -c Chrome --html -f features/platform/policy_compliance.feature`
-        - The log output can be found in `log/*.html`
-#### Older versions of Sauce Connect Proxy CLI
-1. Login to Sauce Labs and download the [tunnel](https://app.saucelabs.com/tunnels).
-   - If you work on a Linux EC2 instance:
-     - Download the Linux version (will end in .tar.gz)
-     - Secure copy this file into your dev environment with something like `scp sc-4.7.1-linux.tar.gz ubuntu@[ip_address]:/ec2-user/environment/code-dot-org`
-   - From the destination folder, unzip the file (or for EC2 instances, unzip and untar the file with `tar -xvzf sc-4.7.1-linux.tar`)
-2. `cd` into the unzipped folder and start the tunnel via `bin/sc --user <saucelabs-username> --api-key <saucelabs-api-key>`. You can find your username and key on the page linked in step 1. Note: the command listed there does not match the above.
-   - The `bin/sc` path only works once you've navigated into the unzipped file (on a mac, the full path might look something like `sc-4.8.2-osx/bin/sc`).
-   - The configuration of the `--tunnel-name` flag (formerly [`--tunnel-id`](https://docs.saucelabs.com/dev/cli/saucectl/run/#--tunnel-name)) depends on your environment:
-     - If you do *not* work on an EC2 instance, the `--tunnel-name` flag (included in the command given by Sauce Labs), can be removed. If you leave it in, you'll also need to set the `tunnelIdentifier` option in the `sauce_capabilities` config. See [Using Sauce Connect Tunnel Identifiers](https://wiki.saucelabs.com/display/DOCS/Using+Sauce+Connect+Tunnel+Identifiers#UsingSauceConnectTunnelIdentifiers-TheBasicsofUsingTunnelIdentifiers) for more details.
-     - If you *do* work on an EC2 instance, the `--tunnel-name` flag is required to launch the tunnel.
-3. (Re)start your dashboard-server `./bin/dashboard-server`.
-4. In a new terminal window, navigate back into `dashboard/test/ui` and run your ui tests `./runner.rb -d localhost-studio.code.org:3000 <whatever other arguments you want>`
-
-You can now watch your tests run at the [Sauce Labs dashboard](https://saucelabs.com/beta/dashboard/tests)
+- Log output can be found in `log/*.html`
+- You can watch your tests run on the [Sauce Labs dashboard](https://saucelabs.com/beta/dashboard/tests)
 
 ## Options
 

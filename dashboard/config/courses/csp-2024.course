@@ -18,18 +18,6 @@
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
-    "announcements": [
-      {
-        "key": "a645aed6-f8ed-4f64-becd-0053a6915935",
-        "notice": "Create PT Updates Launched",
-        "details": "Updates throughout the programming Make and Project lessons have been launched as of October 4 to better align with the format of the AP Exam's Create Performance Task.",
-        "link": "https://docs.google.com/document/d/1JJqAWqR9XufLGf4F1Pa2MbUXp4iYlCeqrq3GXpVtGck/edit?usp=sharing",
-        "type": "bullhorn_yellow",
-        "visibility": "Teacher-only",
-        "dismissible": true,
-        "buttonText": "Learn More"
-      }
-    ],
     "family_name": "csp",
     "has_numbered_units": true,
     "has_verified_resources": true,

@@ -9,20 +9,25 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/29853488a851de70a5c2e34c9e6f16aa-image-1707522795571.53.06 PM.png" style="float: right; height: 200px; clear: both; margin: 10px 10px 10px 10px; border-radius: 30px" alt="A young student in a library smiles while holding a laptop open to the camera.">
 
-#### This professional learning module is made up of four parts:
+#### This professional learning module is made up of **four lessons:**
 
-### 🏘️ **Introduction to Teaching Data Science** - ⭐️ You're here!
-#### This lesson provides an introduction to the Data Science course and professional learning module. It offers a brief overview of key data science concepts and familiarizes you with the structure and flow of the lessons you'll explore throughout the course..
+### 🏘️ **Lesson 1- Introduction to Teaching Data Science** - ⭐️ You're here!
+#### This lesson provides an introduction to the Data Science course and professional learning module. It offers a brief overview of key data science concepts and familiarizes you with the structure and flow of the lessons you'll explore throughout the course. *10 minutes*
 
-### 🖥️ **Overview of Unit 1: Introduction to Data Science**
-#### This lesson focuses on building skills in data analysis and visualization using tools like CODAP. You will explore how to transform raw data into meaningful visualizations while addressing ethical considerations, such as data privacy and bias. Each unit equips you to guide students in solving real-world problems through data-driven projects.
+### 🖥️ **Lesson 2- Overview of Unit 1: Introduction to Data Science**
+#### This lesson focuses on building skills in data analysis and visualization using tools like CODAP. You will explore how to transform raw data into meaningful visualizations while addressing ethical considerations, such as data privacy and bias. *30 minutes*
 
-### 📊 **Overview of Unit 2: Data Science and Python**
-#### This lesson prepares you to teach data analysis using Python. You'll explore guiding students through Python basics, data manipulation with Pandas and Matplotlib, and creating visualizations. The unit focuses on data cleaning, analysis, and communicating insights, culminating in a real-world data-driven project.
+### 📊 **Unit 2: Data Science and Python**
+
+#### This unit is divided into two lessons. 
+
+#### **Lesson 3- Part 1: Introduction to Python, Pandas, and Matplotlib**
+#### Learn how to guide students through Python basics, data manipulation using Pandas, and creating visualizations with Matplotlib. This part builds foundational skills in programming and data analysis. *45 minutes*
+
+#### **Lesson 4- Part 2: Advanced Data Science Concepts**
+#### Delve into advanced topics such as cleaning data, analyzing datasets, and creating custom visualizations. Students will develop the skills to communicate insights effectively through a real-world, data-driven project. *35 minutes*
 
 
-### 🧑‍🏫 **Teaching Resources for Data Science**
-#### This lesson covers best practices and strategies for teaching bias in data science. You'll explore effective methods to guide discussions on data ethics and bias, with suggestions for further learning to deepen understanding and application in the classroom.
 
 ## Engaging with This Module
 

@@ -1,5 +1,7 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {
+  openConfirmDeleteFile as globalOpenConfirmDeleteFile,
+  openConfirmDeleteFolder as globalOpenConfirmDeleteFolder,
   openNewFolderPrompt as globalOpenNewFolderPrompt,
   openNewFilePrompt as globalOpenNewFilePrompt,
   openMoveFilePrompt as globalOpenMoveFilePrompt,
@@ -12,9 +14,10 @@ import {useCallback, useMemo} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {usePartialApply, PAFunctionArgs} from '@cdo/apps/lab2/hooks';
+import {setOverrideValidations} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {useDialogControl} from '@cdo/apps/lab2/views/dialogs';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 /**
  * Provides functions to open new file or folder prompts within the application.
@@ -34,9 +37,12 @@ export const usePrompts = () => {
   );
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const dialogControl = useDialogControl();
+  const dispatch = useAppDispatch();
 
   const {
     project,
+    deleteFile,
+    deleteFolder,
     moveFile,
     moveFolder,
     newFolder,
@@ -48,6 +54,29 @@ export const usePrompts = () => {
   const sendCodebridgeAnalyticsEvent = useCallback(
     (event: string) => globalSendCodebridgeAnalyticsEvent(event, appName),
     [appName]
+  );
+
+  const cleanupValidationFile = useCallback(
+    () => dispatch(setOverrideValidations([])),
+    [dispatch]
+  );
+
+  const openConfirmDeleteFile = usePartialApply(globalOpenConfirmDeleteFile, {
+    dialogControl,
+    deleteFile,
+    sendCodebridgeAnalyticsEvent,
+    cleanupValidationFile,
+  } satisfies PAFunctionArgs<typeof globalOpenConfirmDeleteFile>);
+
+  const openConfirmDeleteFolder = usePartialApply(
+    globalOpenConfirmDeleteFolder,
+    {
+      dialogControl,
+      deleteFolder,
+      sendCodebridgeAnalyticsEvent,
+      projectFiles: project.files,
+      projectFolders: project.folders,
+    } satisfies PAFunctionArgs<typeof globalOpenConfirmDeleteFolder>
   );
 
   const openNewFolderPrompt = usePartialApply(globalOpenNewFolderPrompt, {
@@ -101,6 +130,8 @@ export const usePrompts = () => {
 
   return useMemo(
     () => ({
+      openConfirmDeleteFile,
+      openConfirmDeleteFolder,
       openNewFilePrompt,
       openNewFolderPrompt,
       openMoveFilePrompt,
@@ -109,6 +140,8 @@ export const usePrompts = () => {
       openRenameFolderPrompt,
     }),
     [
+      openConfirmDeleteFile,
+      openConfirmDeleteFolder,
       openNewFilePrompt,
       openNewFolderPrompt,
       openMoveFilePrompt,

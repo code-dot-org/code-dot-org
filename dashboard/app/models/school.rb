@@ -18,12 +18,10 @@
 #  longitude                   :decimal(9, 6)
 #  school_category             :string(255)
 #  last_known_school_year_open :string(9)
-#  is_current                  :boolean
 #
 # Indexes
 #
 #  index_schools_on_id                           (id) UNIQUE
-#  index_schools_on_is_current                   (is_current)
 #  index_schools_on_last_known_school_year_open  (last_known_school_year_open)
 #  index_schools_on_name_and_city                (name,city)
 #  index_schools_on_school_district_id           (school_district_id)
@@ -421,6 +419,26 @@ class School < ApplicationRecord
             school_district_id:           row['Agency ID - NCES Assigned [Public School] Latest available year'].to_i,
             school_category:              SCHOOL_CATEGORY_MAP[row['School Type [Public School] 2021-22']].presence,
             last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [Public School] 2021-22']) ? '2021-2022' : nil
+          }
+        end
+      end
+
+      CDO.log.info "Seeding 2021-2022 private school data."
+      AWS::S3.seed_from_file('cdo-nces', "2021-2022/pss/schools_private.csv") do |filename|
+        merge_from_csv(filename, {headers: true, encoding: 'bom|utf-8'}, true, is_dry_run: false) do |row|
+          {
+            id:                           row['PPIN'],
+            name:                         row['PINST'].upcase,
+            address_line1:                row['PADDRS'].to_s.upcase.truncate(50).presence,
+            address_line2:                nil,
+            address_line3:                nil,
+            city:                         row['PCITY'].to_s.upcase.presence,
+            state:                        row['PSTABB'].to_s.strip.upcase.presence,
+            zip:                          row['PZIP'],
+            latitude:                     row['LATITUDE22'].to_f,
+            longitude:                    row['LONGITUDE22'].to_f,
+            school_type:                  'private',
+            school_district_id:           nil
           }
         end
       end

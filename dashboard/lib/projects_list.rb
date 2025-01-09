@@ -235,8 +235,8 @@ module ProjectsList
     end
 
     def fetch_active_published_featured_projects_by_type(project_type, featured_before: nil)
-      projects = "#{CDO.dashboard_db_name}__projects".to_sym
-      user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
+      projects = :"#{CDO.dashboard_db_name}__projects"
+      user_project_storage_ids = :"#{CDO.dashboard_db_name}__user_project_storage_ids"
 
       project_featured_project_user_combo_data = DASHBOARD_DB[:featured_projects].
         select(*project_and_featured_project_and_user_fields).
@@ -341,9 +341,9 @@ module ProjectsList
     end
 
     private def fetch_published_project_types(project_groups, limit:, published_before: nil)
-      users = "dashboard_#{CDO.rack_env}__users".to_sym
+      users = :"dashboard_#{CDO.rack_env}__users"
 
-      user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
+      user_project_storage_ids = :"#{CDO.dashboard_db_name}__user_project_storage_ids"
 
       {}.tap do |projects|
         project_groups.map do |project_group|

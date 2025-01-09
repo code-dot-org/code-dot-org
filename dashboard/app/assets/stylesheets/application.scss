@@ -590,16 +590,23 @@ html, body {
       @include main-font-semi-bold;
     }
   }
+  #localeForm {
+    max-width: fit-content;
+
+    select {
+      min-width: 8.43rem;
+    }
+  }
+  #global-edition-region-reset-button-container {
+    width: max-content;
+    margin: 0.5rem 0;
+  }
   .dim {
     display: inline-block;
     opacity: 0.8;
   }
 
   .container {
-    html[dir=rtl] & {
-      float: right;
-    }
-
     .row {
       [class*="span"] {
         html[dir=rtl] & {
@@ -829,6 +836,9 @@ $small-footer-standard-width: 400px;
 #locale {
   font-family: sans-serif;
   height: 24px;
+  @media screen and (max-width: 1024px) {
+    max-width: 150px;
+  }
 }
 
 .oceans-blue .small-footer-base, .music-black .small-footer-base {

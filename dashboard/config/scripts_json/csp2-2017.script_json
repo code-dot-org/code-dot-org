@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -15,7 +16,7 @@
     },
     "new_name": "csp2-2017",
     "family_name": "csp2",
-    "serialized_at": "2022-03-22 21:16:29 UTC",
+    "serialized_at": "2024-11-19 01:16:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3744,7 +3745,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_control_2",
+        "level.key": "csp_affirmation_intervention_2",
         "script_level.level_keys": [
           "csp_affirmation_control_2",
           "csp_affirmation_intervention_2"
@@ -3757,7 +3758,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_intervention_2",
+        "level.key": "csp_affirmation_control_2",
         "script_level.level_keys": [
           "csp_affirmation_control_2",
           "csp_affirmation_intervention_2"
@@ -3916,6 +3917,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

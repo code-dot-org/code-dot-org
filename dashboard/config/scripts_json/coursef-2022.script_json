@@ -16,6 +16,7 @@
           "buttonText": "Learn more"
         }
       ],
+      "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
@@ -39,7 +40,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2024-01-12 19:15:54 UTC",
+    "serialized_at": "2024-11-19 01:14:37 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

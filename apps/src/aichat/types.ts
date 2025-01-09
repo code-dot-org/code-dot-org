@@ -9,11 +9,7 @@ import type {ValueOf} from '../types/utils';
 
 import {FIELDS_CHECKED_FOR_TOXICITY} from './views/modelCustomization/constants';
 
-export const ChatEventDescriptions = {
-  COPY_CHAT: 'The user copied the chat history.',
-  CLEAR_CHAT: 'The user cleared the chat workspace.',
-  LOAD_LEVEL: 'The user loaded the aichat level.',
-} as const;
+export type ChatEventDescriptionKey = 'COPY_CHAT' | 'CLEAR_CHAT' | 'LOAD_LEVEL';
 
 export interface ChatEvent {
   // UTC timestamp in milliseconds
@@ -21,13 +17,15 @@ export interface ChatEvent {
   // This field is optional but when it is defined, it must be set to `true`.
   // This allows the chat event to be visible by default without having to add an extra field.
   hideForParticipants?: true;
-  descriptionKey?: keyof typeof ChatEventDescriptions;
+  /** Optional key used if this event has a localized text description (ex. copy chat, clear chat, load level) */
+  descriptionKey?: ChatEventDescriptionKey;
 }
 
 export interface ChatMessage extends ChatEvent {
   chatMessageText: string;
   role: Role;
   status: ValueOf<typeof AiInteractionStatus>;
+  requestId?: number;
 }
 
 export interface ModelUpdate extends ChatEvent {

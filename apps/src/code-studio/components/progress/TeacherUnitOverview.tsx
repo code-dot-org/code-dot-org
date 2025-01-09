@@ -1,285 +1,34 @@
 import React, {useState} from 'react';
-import {useSelector} from 'react-redux';
-import {generatePath, useNavigate, useParams} from 'react-router-dom';
+import {
+  generatePath,
+  useNavigate,
+  useParams,
+  useSearchParams,
+} from 'react-router-dom';
 
-import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import plcHeaderReducer, {
-  setPlcHeader,
-} from '@cdo/apps/code-studio/plc/plcHeaderRedux';
-import progress from '@cdo/apps/code-studio/progress';
-import {registerReducers} from '@cdo/apps/redux';
-import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
-import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
-import googlePlatformApi, {
-  loadGooglePlatformApi,
-} from '@cdo/apps/templates/progress/googlePlatformApiRedux';
+import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {
-  setPageType,
-  pageTypes,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
-import {PeerReviewLessonInfo} from '@cdo/apps/types/progressTypes';
-import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+  TEACHER_NAVIGATION_PATHS,
+  LABELED_TEACHER_NAVIGATION_PATHS,
+} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import experiments from '@cdo/apps/util/experiments';
-import {
-  AppDispatch,
-  useAppDispatch,
-  useAppSelector,
-} from '@cdo/apps/util/reduxHooks';
-
-import {
-  addAnnouncement,
-  clearAnnouncements,
-  VisibilityType,
-} from '../../announcementsRedux';
-import {setCalendarData} from '../../calendarRedux';
-import {setVerified, setVerifiedResources} from '../../verifiedInstructorRedux';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import UnitOverview from './UnitOverview';
+import {UnitSummaryResponse, setUnitSummaryReduxData} from './UnitSummaryUtils';
 
-interface Section {
-  id: number;
-  courseId: number | null;
-  courseVersionId: number;
-  courseVersionName: string | null;
-  courseOfferingId: number | null;
-  unitId: number | null;
-  unitName: string | null;
-  courseDisplayName: string | null;
-}
+interface TeacherUnitOverviewProps {}
 
-interface Resource {
-  id: number;
-  key: string;
-  markdownKey: string;
-  name: string;
-  url: string;
-  isRollup: boolean;
-}
-
-interface Announcement {
-  key: string;
-  notice: string;
-  details: string;
-  link: string;
-  type: keyof typeof NotificationType;
-  visibility: keyof typeof VisibilityType;
-  dismissible: boolean;
-  buttonText: string | null;
-}
-
-interface DropdownUnit {
-  id: number;
-  name: string;
-  path: string;
-  lesson_extras_available: boolean;
-  text_to_speech_enabled: boolean;
-  position: number;
-  requires_verified_instructor: boolean;
-}
-
-interface CourseVersion {
-  id: number;
-  key: string;
-  version_year: string;
-  content_root_id: number;
-  name: string;
-  path: string;
-  type: string;
-  is_stable: boolean;
-  is_recommended: boolean;
-  locales: string[];
-  units: {[id: number]: DropdownUnit};
-}
-
-interface LessonGroup {
-  id: number;
-  key: string;
-  display_name: string;
-  description: string;
-  big_questions: string | null;
-  user_facing: boolean;
-  position: number | null;
-}
-
-interface Level {}
-
-interface Lesson {
-  levels: Level[];
-}
-
-interface CalendarLesson {
-  id: number;
-  lessonNumber: number;
-  title: string;
-  duration: number;
-  assessment: boolean;
-  unplugged: boolean;
-  url: string;
-}
-
-interface UnitData {
-  is_instructor: boolean;
-  is_verified_instructor: boolean;
-  locale: string;
-  locale_code: string;
-  course_link: string | null;
-  course_title: string | null;
-  course_name: string | null;
-  id: string;
-  name: string;
-  title: string;
-  description: string;
-  studentDescription: string;
-  publishedState: string;
-  instructionType: string;
-  instructorAudience: string;
-  participantAudience: string;
-  loginRequired: boolean;
-  plc: boolean;
-  hideable_lessons: boolean;
-  disablePostMilestone: boolean;
-  csf: boolean;
-  isCsd: boolean;
-  isCsp: boolean;
-  only_instructor_review_required: boolean;
-  peerReviewsRequired: number;
-  peerReviewLessonInfo: PeerReviewLessonInfo | null;
-  student_detail_progress_view: boolean;
-  project_widget_visible: boolean;
-  project_widget_types: string[];
-  teacher_resources: Resource[];
-  student_resources: Resource[];
-  lesson_extras_available: boolean;
-  has_verified_resources: boolean;
-  curriculum_path: string | null;
-  announcements: Announcement[];
-  age_13_required: boolean;
-  show_course_unit_version_warning: boolean;
-  show_script_version_warning: boolean;
-  course_versions: {[id: number]: CourseVersion};
-  supported_locales: string[] | null;
-  section_hidden_unit_info: {[sectionId: string]: string[]};
-  pilot_experiment: string | null;
-  editor_experiment: string | null;
-  show_assign_button: boolean;
-  project_sharing: boolean;
-  curriculum_umbrella: string;
-  family_name: string | null;
-  version_year: string | null;
-  hasStandards: boolean;
-  tts: boolean;
-  deprecated: boolean;
-  is_course: boolean;
-  is_migrated: boolean;
-  scriptPath: string | null;
-  showCalendar: boolean;
-  weeklyInstructionalMinutes: number | null;
-  includeStudentLessonPlans: boolean;
-  useLegacyLessonPlans: boolean;
-  scriptOverviewPdfUrl: string;
-  scriptResourcesPdfUrl: string;
-  updated_at: string;
-  isPlCourse: boolean;
-  showAiAssessmentsAnnouncement: boolean;
-  lessonGroups: LessonGroup[];
-  lessons: Lesson[];
-  deeperLearningCourse: string | null;
-  wrapupVideo: string | null;
-  calendarLessons: CalendarLesson[];
-}
-
-interface UnitSummaryResponse {
-  unitData: UnitData;
-  plcBreadcrumb: {
-    unit_name: string;
-    course_view_path: string;
-  };
-}
-
-interface TeacherUnitOverviewProps {
-  // Define any props you need here
-}
-
-export const initializeRedux = (
-  unitSummaryResponse: UnitSummaryResponse,
-  dispatch: AppDispatch,
-  userType: string,
-  userId: number
-) => {
-  if (!unitSummaryResponse) {
-    return;
-  }
-  const unitData = unitSummaryResponse.unitData;
-  const plcBreadcrumb = unitSummaryResponse.plcBreadcrumb;
-
-  dispatch(setLocaleCode(unitData.locale_code));
-
-  if (plcBreadcrumb) {
-    // Dispatch breadcrumb props so that UnitOverviewHeader can add the breadcrumb
-    // as appropriate
-    registerReducers({plcHeader: plcHeaderReducer});
-    dispatch(
-      setPlcHeader(plcBreadcrumb.unit_name, plcBreadcrumb.course_view_path)
-    );
-  }
-
-  dispatch(setVerifiedResources(!!unitData.has_verified_resources));
-
-  if (unitData.is_verified_instructor) {
-    dispatch(setVerified());
-  }
-
-  if (unitData.announcements) {
-    unitData.announcements.forEach(announcement =>
-      dispatch(addAnnouncement(announcement))
-    );
-  } else {
-    dispatch(clearAnnouncements());
-  }
-
-  dispatch(
-    setCalendarData({
-      showCalendar: !!unitData.showCalendar,
-      calendarLessons: unitData.calendarLessons,
-    })
-  );
-
-  progress.initViewAsWithoutStore(
-    dispatch,
-    userId !== null,
-    unitData.is_instructor
-  );
-  dispatch(initializeHiddenScripts(unitData.section_hidden_unit_info));
-  dispatch(setPageType(pageTypes.scriptOverview));
-
-  progress.initCourseProgress(unitData, false);
-
-  const mountPoint = document.createElement('div');
-  $('.user-stats-block').prepend(mountPoint);
-
-  //TODO
-  // const completedLessonNumber = queryParams('completedLessonNumber');
-  // This query param is immediately removed so that it is not included in the links
-  // rendered on this page
-  // updateQueryParam('completedLessonNumber', undefined);
-  if (userType === 'teacher') {
-    registerReducers({googlePlatformApi});
-    dispatch(loadGooglePlatformApi()).catch(e => console.warn(e));
-  }
-};
-
-const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = props => {
+const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
   const [unitSummaryResponse, setUnitSummaryResponse] =
     useState<UnitSummaryResponse | null>(null);
+  const [unitLoaded, setUnitLoaded] = useState<string | null>(null);
 
-  const selectedSection = useSelector(
-    (state: {
-      teacherSections: {sections: Section[]; selectedSectionId: number};
-    }) =>
-      state.teacherSections.sections[state.teacherSections.selectedSectionId]
-  );
+  const selectedSection = useAppSelector(selectedSectionSelector);
 
   const {userId, userType} = useAppSelector(state => ({
     userId: state.currentUser.userId,
@@ -287,40 +36,74 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = props => {
   }));
 
   const dispatch = useAppDispatch();
+  const [searchParams] = useSearchParams();
 
   const navigate = useNavigate();
   const {unitName} = useParams();
 
   React.useEffect(() => {
-    if (!unitName && selectedSection.unitName) {
-      navigate(selectedSection.unitName, {replace: true});
+    if (!unitName && selectedSection?.unitName) {
+      navigate(
+        generatePath(
+          LABELED_TEACHER_NAVIGATION_PATHS.unitOverview.absoluteUrl,
+          {unitName: selectedSection.unitName, sectionId: selectedSection.id}
+        ),
+        {replace: true}
+      );
+      return;
     }
-  });
+  }, [unitName, selectedSection, navigate]);
 
   React.useEffect(() => {
     if (!unitName || !userType || !userId) {
       return;
     }
+
+    if (unitLoaded === unitName) {
+      return;
+    }
+
     setUnitSummaryResponse(null);
+    setUnitLoaded(unitName);
 
-    getAuthenticityToken()
-      .then(token =>
-        fetch(`/dashboardapi/unit_summary/${unitName}`, {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-CSRF-Token': token,
-          },
-        })
-      )
-      .then(response => response.json())
+    HttpClient.fetchJson<UnitSummaryResponse>(
+      `/dashboardapi/unit_summary/${unitName}`
+    )
+      .then(response => response?.value)
       .then(responseJson => {
-        initializeRedux(responseJson, dispatch, userType, userId);
+        setUnitSummaryReduxData(responseJson, dispatch, userType, userId);
         setUnitSummaryResponse(responseJson);
-      });
-  }, [unitName, userType, userId, dispatch]);
 
-  if (!unitSummaryResponse) {
+        analyticsReporter.sendEvent(
+          EVENTS.TEACHER_NAV_UNIT_OVERVIEW_PAGE_VIEWED,
+          {
+            unitName: unitName,
+          }
+        );
+      })
+      .catch(error => {
+        console.error('Error loading unit overview', error);
+
+        analyticsReporter.sendEvent(EVENTS.TEACHER_NAV_UNIT_OVERVIEW_FAILED, {
+          unitName,
+        });
+      });
+  }, [
+    unitName,
+    userType,
+    userId,
+    dispatch,
+    navigate,
+    selectedSection,
+    unitLoaded,
+    setUnitLoaded,
+  ]);
+
+  if (
+    !unitSummaryResponse ||
+    !unitSummaryResponse.unitData ||
+    unitSummaryResponse.unitData.name !== unitName
+  ) {
     return <Spinner size={'large'} />;
   }
 
@@ -356,8 +139,8 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = props => {
       showScriptVersionWarning={
         unitSummaryResponse.unitData.show_script_version_warning
       }
-      showRedirectWarning={false} // TODO: https://codedotorg.atlassian.net/browse/TEACH-1374
-      redirectScriptUrl={''}
+      showRedirectWarning={searchParams.get('redirect_warning') === 'true'}
+      redirectScriptUrl={unitSummaryResponse.unitData.redirect_unit_url}
       versions={unitSummaryResponse.unitData.course_versions}
       courseName={unitSummaryResponse.unitData.course_name}
       showAssignButton={unitSummaryResponse.unitData.show_assign_button}
@@ -366,6 +149,7 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = props => {
       userType={userType}
       assignedSectionId={selectedSection.id}
       showCalendar={unitSummaryResponse.unitData.showCalendar}
+      versionYear={unitSummaryResponse.unitData.version_year}
       weeklyInstructionalMinutes={
         unitSummaryResponse.unitData.weeklyInstructionalMinutes
       }

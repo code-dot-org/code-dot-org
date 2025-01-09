@@ -43,6 +43,7 @@ function LessonDataCell({
           href={teacherDashboardUrl(sectionId, '/assessments')}
           openInNewTab
           external
+          // eslint-disable-next-line react/forbid-component-props
           data-testid={'lesson-data-cell-' + lesson.id + '-' + studentId}
         >
           {children}
@@ -59,6 +60,7 @@ function LessonDataCell({
           interactive && styles.lessonInteractive
         )}
         onClick={expandLesson}
+        // eslint-disable-next-line react/forbid-dom-props
         data-testid={'lesson-data-cell-' + lesson.id + '-' + studentId}
       >
         {children}

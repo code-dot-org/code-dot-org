@@ -3,7 +3,7 @@ module AichatSagemakerHelper
   TOP_P = 0.9
 
   def self.create_sagemaker_client
-    # Stubbed SageMaker allows UI tests (without the roundtrip to the model) to run in CI environments (ie, Drone)
+    # Stubbed SageMaker allows UI tests (without the roundtrip to the model) to run in CI environments
     Rails.application.config.respond_to?(:stub_aichat_aws_services) && Rails.application.config.stub_aichat_aws_services ?
       StubbedSagemakerClient.new :
       Aws::SageMakerRuntime::Client.new
@@ -78,7 +78,7 @@ module AichatSagemakerHelper
   end
 end
 
-# Classes that allow us to stub Sagemaker in Drone, which does not have permission to access SageMaker.
+# Classes that allow us to stub Sagemaker in CI, which does not have permission to access SageMaker.
 class StubbedSagemakerClient
   def invoke_endpoint(_)
     StubbedSagemakerResponse.new

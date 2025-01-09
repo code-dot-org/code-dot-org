@@ -42,7 +42,6 @@ export class MapboxLocationSearchField extends React.Component {
     if (!this.props.mapboxAccessToken || this.props.readOnly) {
       return;
     }
-    // eslint-disable-next-line no-undef
     const mapboxGeocoder = new MapboxGeocoder({
       accessToken: this.props.mapboxAccessToken,
       types: this.props.locationTypes.join(','),

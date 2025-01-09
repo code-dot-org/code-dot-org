@@ -13,6 +13,17 @@ const defaultProps = {
 };
 
 describe('OwnedSections', () => {
+  const oldWindowLocation = window.location;
+
+  beforeEach(() => {
+    delete window.location;
+    window.location = new URL('https://studio.code.org/teacher_dashboard');
+  });
+
+  afterEach(() => {
+    window.location = oldWindowLocation;
+  });
+
   it('renders a OwnedSectionsTable with no extra button if no archived sections', () => {
     const wrapper = shallow(<OwnedSections {...defaultProps} />);
     expect(wrapper.find('Connect(OwnedSectionsTable)').length).to.equal(1);
@@ -59,5 +70,36 @@ describe('OwnedSections', () => {
     expect(
       wrapper.find('Connect(OwnedSectionsTable)').props().sectionIds
     ).to.deep.equal([11, 12]);
+  });
+
+  it('renders an LtiFeedbackBanner', () => {
+    const wrapper = shallow(<OwnedSections {...defaultProps} />);
+    const globalWrapper = wrapper.find('GlobalEditionWrapper', {
+      componentId: 'LtiFeedbackBanner',
+    });
+    expect(globalWrapper.dive().find('LtiFeedbackBanner').length).to.equal(1);
+  });
+});
+
+describe('OwnedSections - Farsi Global Edition', () => {
+  const oldWindowLocation = window.location;
+
+  beforeEach(() => {
+    delete window.location;
+    window.location = new URL(
+      'https://studio.code.org/global/fa/teacher_dashboard'
+    );
+  });
+
+  afterEach(() => {
+    window.location = oldWindowLocation;
+  });
+
+  it('does not render an LtiFeedbackBanner', () => {
+    const wrapper = shallow(<OwnedSections {...defaultProps} />);
+    const globalWrapper = wrapper.find('GlobalEditionWrapper', {
+      componentId: 'LtiFeedbackBanner',
+    });
+    expect(globalWrapper.dive().find('LtiFeedbackBanner').length).to.equal(0);
   });
 });

@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.2](https://github.com/code-dot-org/code-dot-org/pull/62325)
+
+* added color "aqua"
+
+
 ## [0.2.1](https://github.com/code-dot-org/code-dot-org/pull/61724)
 
 * added hideValue prop

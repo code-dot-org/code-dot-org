@@ -659,16 +659,6 @@ function getFilters({mobile}) {
       ],
     },
     {
-      name: 'student_experience',
-      text: i18n.filterStudentExperience(),
-      headerOnDesktop: true,
-      singleEntry: true,
-      entries: [
-        {name: 'beginner', text: i18n.filterStudentExperienceBeginner()},
-        {name: 'comfortable', text: i18n.filterStudentExperienceComfortable()},
-      ],
-    },
-    {
       name: 'platform',
       text: i18n.filterPlatform(),
       entries: [
@@ -742,7 +732,6 @@ function getFilters({mobile}) {
   ];
 
   const initialFilters = {
-    student_experience: ['beginner'],
     grade: ['all'],
   };
 

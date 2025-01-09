@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
       "is_course": true,
@@ -19,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2024-07-11 15:59:57 UTC",
+    "serialized_at": "2024-11-19 01:14:39 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

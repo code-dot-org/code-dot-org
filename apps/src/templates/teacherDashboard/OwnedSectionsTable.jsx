@@ -18,6 +18,7 @@ import i18n from '@cdo/locale';
 import {stringifyQueryParams} from '../../utils';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
+import {showV2TeacherDashboard} from '../teacherNavigation/TeacherNavFlagUtils';
 
 import SectionActionDropdown from './SectionActionDropdown';
 import {sortableSectionShape} from './shapes';
@@ -52,9 +53,13 @@ export const courseLinkFormatter = function (course, {rowData}) {
       {courseOfferingsAreLoaded ? (
         <>
           <a
-            href={`${assignmentPaths[0]}${stringifyQueryParams({
-              section_id: rowData.id,
-            })}`}
+            href={
+              showV2TeacherDashboard()
+                ? teacherDashboardUrl(rowData.id, assignmentPaths[0])
+                : `${assignmentPaths[0]}${stringifyQueryParams({
+                    section_id: rowData.id,
+                  })}`
+            }
             style={tableLayoutStyles.link}
           >
             {assignmentNames[0]}
@@ -63,9 +68,16 @@ export const courseLinkFormatter = function (course, {rowData}) {
             <div style={styles.currentUnit}>
               <div>{i18n.currentUnit()}</div>
               <a
-                href={`${assignmentPaths[1]}${stringifyQueryParams({
-                  section_id: rowData.id,
-                })}`}
+                href={
+                  showV2TeacherDashboard()
+                    ? teacherDashboardUrl(
+                        rowData.id,
+                        assignmentPaths[1].replace('/s/', '/unit/')
+                      )
+                    : `${assignmentPaths[1]}${stringifyQueryParams({
+                        section_id: rowData.id,
+                      })}`
+                }
                 style={tableLayoutStyles.link}
               >
                 {assignmentNames[1]}
@@ -84,6 +96,7 @@ export const courseLinkFormatter = function (course, {rowData}) {
       ) : (
         <span
           className={skeletonizeContent.skeletonizeContent}
+          // eslint-disable-next-line react/forbid-dom-props
           data-testid={'skeletonize-content'}
           style={{width: random(30, 90) + '%'}}
         />
@@ -116,7 +129,9 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
 };
 
 export const studentsFormatter = function (studentCount, {rowData}) {
-  const manageStudentsUrl = teacherDashboardUrl(rowData.id, '/manage_students');
+  const manageStudentsUrl = showV2TeacherDashboard()
+    ? teacherDashboardUrl(rowData.id, '/roster')
+    : teacherDashboardUrl(rowData.id, '/manage_students');
   const studentHtml =
     rowData.studentCount <= 0 ? (
       <Button

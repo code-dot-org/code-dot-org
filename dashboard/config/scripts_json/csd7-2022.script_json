@@ -25,6 +25,7 @@
           "key": "c0ef1240-b469-4ee7-a778-e7d5b30b0332"
         }
       ],
+      "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -37,13 +38,16 @@
         "it-IT",
         "az-AZ"
       ],
+      "topic_tags": [
+        "ai"
+      ],
       "tts": true,
       "version_year": "2022",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-15 21:19:57 UTC",
+    "serialized_at": "2024-11-19 01:16:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

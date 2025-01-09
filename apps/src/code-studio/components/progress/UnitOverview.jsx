@@ -25,6 +25,7 @@ import {
 import i18n from '@cdo/locale';
 
 import UnitCalendarGrid from './UnitCalendarGrid';
+import UnitOverviewActionRow from './UnitOverviewActionRow';
 import UnitOverviewHeader from './UnitOverviewHeader';
 import UnitOverviewTopRow from './UnitOverviewTopRow';
 
@@ -175,7 +176,21 @@ class UnitOverview extends React.Component {
             versions={versions}
             courseName={courseName}
             userId={userId}
-          />
+          >
+            <UnitOverviewActionRow
+              courseVersionId={courseVersionId}
+              versions={versions}
+              viewAs={viewAs}
+              showAssignButton={showAssignButton}
+              courseOfferingId={courseOfferingId}
+              scriptId={scriptId}
+              participantAudience={participantAudience}
+              scriptOverviewPdfUrl={scriptOverviewPdfUrl}
+              scriptResourcesPdfUrl={scriptResourcesPdfUrl}
+              teacherResources={teacherResources}
+              isMigrated={isMigrated}
+            />
+          </UnitOverviewHeader>
           {/* unit-calendar-for-printing has style `display: none` from `style/curriculum/scripts.scss` which is added from the BE */}
           {showCalendar && viewAs === ViewType.Instructor && (
             <div className="unit-calendar-for-printing print-only">

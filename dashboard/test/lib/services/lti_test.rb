@@ -312,10 +312,29 @@ class Services::LtiTest < ActiveSupport::TestCase
     auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
     user = build :student
     user.authentication_options << build(:lti_authentication_option, user: user, authentication_id: auth_id)
+
+    #LtiUserIdentity created after creation of LTI user
     user.save
 
-    lti_user_identity = Services::Lti.create_lti_user_identity(user)
-    assert lti_user_identity
+    refute user.lti_user_identities.empty?
+  end
+
+  test 'create_lti_user_identity should create a unique LtiUserIdentity with multiple LTI auth options' do
+    lti_integration = create :lti_integration
+    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
+    user = build :student
+    user.authentication_options << build(:lti_authentication_option, user: user, authentication_id: auth_id, created_at: 2.hours.ago)
+    user.save
+
+    # Add a second LTI auth option
+    new_auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
+    user.authentication_options << build(:lti_authentication_option, user: user, authentication_id: new_auth_id)
+    user.save
+    second_lti_user_identity = Services::Lti.create_lti_user_identity(user)
+
+    first_lti_user_identity = user.lti_user_identities.first
+    refute_equal first_lti_user_identity.subject, second_lti_user_identity.subject
+    assert_equal user.lti_user_identities.count, 2
   end
 
   test 'create_lti_integration should create an LtiIntegration when given valid inputs' do
@@ -357,6 +376,11 @@ class Services::LtiTest < ActiveSupport::TestCase
     user = Services::Lti.initialize_lti_user_from_nrps(client_id: @id_token[:aud], issuer: @id_token[:iss], nrps_member: @nrps_student)
     assert user
     assert_equal user.user_type, User::TYPE_STUDENT
+  end
+
+  test 'should mark the user as roster synced' do
+    user = Services::Lti.initialize_lti_user_from_nrps(client_id: @id_token[:aud], issuer: @id_token[:iss], nrps_member: @nrps_student)
+    assert_equal user.roster_synced, true
   end
 
   test 'should create a student user if LTI does not provide email despite instructor role' do
@@ -434,15 +458,16 @@ class Services::LtiTest < ActiveSupport::TestCase
 
   test 'should update a section name if it has changed' do
     teacher = create :teacher
-    lti_integration = create :lti_integration
-    create :lti_user_identity, lti_integration: lti_integration, user: teacher, subject: 'user-id-1'
-    lti_course = create :lti_course, lti_integration: lti_integration
+    auth_id = "#{@lti_integration[:issuer]}|#{@lti_integration[:client_id]}|user-id-1"
+    create :lti_authentication_option, user: teacher, authentication_id: auth_id
+    Services::Lti.create_lti_user_identity(teacher)
+    lti_course = create :lti_course, lti_integration: @lti_integration
     section = create :section, user: teacher
 
     create :lti_section, lti_course: lti_course, section: section
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
-    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
+    Services::Lti.sync_course_roster(lti_integration: @lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
 
     # initial names
     expected_section_names = @lms_section_names.map {|name| "#{@course_name}: #{name}"}
@@ -457,7 +482,7 @@ class Services::LtiTest < ActiveSupport::TestCase
     end
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(new_response, @id_token[:iss])
-    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
+    Services::Lti.sync_course_roster(lti_integration: @lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
     new_expected_names = JSON.parse(new_names).map {|name| "#{@course_name}: #{name}"}
     actual_section_names = lti_course.reload.sections.map(&:name)
     assert_empty new_expected_names - actual_section_names
@@ -491,6 +516,55 @@ class Services::LtiTest < ActiveSupport::TestCase
     Services::Lti.sync_section_roster(@lti_integration, lti_section, nrps_section)
     assert_equal lti_section.reload.followers.length, 3
     assert_equal lti_section.followers.last, user_to_remove
+  end
+
+  test 'should update a user\'s name when syncing a section' do
+    auth_id = "#{@lti_integration[:issuer]}|#{@lti_integration[:client_id]}|user-id-1"
+    user = create :teacher
+    create :lti_authentication_option, user: user, authentication_id: auth_id
+
+    section = create :section, user: user
+
+    lti_deployment = create :lti_deployment, lti_integration: @lti_integration
+    lti_course = create :lti_course, lti_integration: @lti_integration, lti_deployment: lti_deployment
+    lti_section = create(:lti_section, lti_course: lti_course, section: section)
+    Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
+    nrps_section = parsed_response[@lms_section_ids.first.to_s]
+    Services::Lti.sync_section_roster(@lti_integration, lti_section, nrps_section)
+
+    # initial names
+    expected_member_names = @nrps_full_response[:members].map do |member|
+      if member[:roles].include?(@student_role)
+        member[:message][0][@custom_claims_key][:full_name]
+      end
+    end.compact
+    actual_member_names = lti_section.section.students.map(&:name)
+    assert_empty expected_member_names - actual_member_names
+
+    # re-sync with new names
+    new_names = ['Renamed LastZero', 'Renamed LastOne', 'Renamed LastTwo']
+    new_family_names = ['LastZero', 'LastOne', 'LastTwo']
+    name_index = 0
+    new_response = @nrps_full_response.deep_dup
+    new_response[:members].each do |member|
+      if member[:roles].include?(@student_role)
+        member[:message][0][@custom_claims_key][:name] = new_names[name_index]
+        member[:message][0][@custom_claims_key][:family_name] = new_family_names[name_index]
+        name_index += 1
+      end
+    end
+    Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
+    parsed_response = Services::Lti.parse_nrps_response(new_response, @id_token[:iss])
+    nrps_section = parsed_response[@lms_section_ids.first.to_s]
+    Services::Lti.sync_section_roster(@lti_integration, lti_section, nrps_section)
+
+    # Check changed names
+    section.reload
+    actual_member_names = section.students.map(&:name)
+    actual_member_family_names = lti_section.section.students.map(&:family_name)
+    assert_empty new_names - actual_member_names
+    assert_empty new_family_names - actual_member_family_names
   end
 
   test 'should add new user lti_user_identity to deployment when syncing a section' do

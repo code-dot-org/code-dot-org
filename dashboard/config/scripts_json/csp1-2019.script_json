@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-19/unit1/{LESSON}",
       "curriculum_umbrella": "CSP",
       "has_verified_resources": true,
@@ -16,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csp1",
-    "serialized_at": "2022-03-22 21:16:29 UTC",
+    "serialized_at": "2024-11-19 01:16:35 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3058,7 +3059,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_socialBelonging_intervention_2019",
+        "level.key": "csp_socialBelonging_control_2019",
         "script_level.level_keys": [
           "csp_socialBelonging_control_2019",
           "csp_socialBelonging_intervention_2019"
@@ -3071,7 +3072,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_socialBelonging_control_2019",
+        "level.key": "csp_socialBelonging_intervention_2019",
         "script_level.level_keys": [
           "csp_socialBelonging_control_2019",
           "csp_socialBelonging_intervention_2019"
@@ -4082,6 +4083,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

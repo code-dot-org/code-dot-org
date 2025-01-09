@@ -1,5 +1,6 @@
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
 import {fetchSignedCookies} from '@cdo/apps/utils';
 
 import {baseAssetUrlRestricted} from '../constants';
@@ -15,17 +16,14 @@ class SoundCache {
     return SoundCache.instance;
   }
 
-  private readonly audioContext: AudioContext;
-  private readonly metricsReporter: LabMetricsReporter;
   private audioBuffers: {[id: string]: AudioBuffer};
   private hasLoadedSignedCookies: boolean;
 
-  private constructor(
-    audioContext: AudioContext = new AudioContext(),
-    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
+  constructor(
+    private readonly audioContext: AudioContext = new AudioContext(),
+    private readonly metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter(),
+    private readonly httpClient: typeof HttpClient = HttpClient
   ) {
-    this.audioContext = audioContext;
-    this.metricsReporter = metricsReporter;
     this.audioBuffers = {};
     this.hasLoadedSignedCookies = false;
   }
@@ -64,7 +62,11 @@ class SoundCache {
     const loadPromises: Promise<void>[] = [];
 
     if (paths.length > 0) {
-      this.metricsReporter.incrementCounter('SoundCache.LoadSoundsAttempt');
+      this.metricsReporter.publishMetric(
+        'SoundCache.LoadSoundsCount',
+        paths.length,
+        'Count'
+      );
     }
 
     for (const path of paths) {
@@ -100,7 +102,11 @@ class SoundCache {
         count: failedSounds.length,
         failedSounds,
       });
-      this.metricsReporter.incrementCounter('SoundCache.LoadSoundsError');
+      this.metricsReporter.publishMetric(
+        'SoundCache.FailedSoundsCount',
+        failedSounds.length,
+        'Count'
+      );
     }
   }
 
@@ -114,13 +120,15 @@ class SoundCache {
     }
     const startTime = Date.now();
 
-    const verified = await this.verifyUrl(url);
-    if (!verified) {
-      // Error is logged below
-      return;
+    // Fetch signed cookies if necessary
+    if (
+      url.startsWith(baseAssetUrlRestricted) &&
+      !this.hasLoadedSignedCookies
+    ) {
+      await this.refreshSignedCookies();
     }
 
-    const response = await fetch(url);
+    const response = await this.fetchSoundFromUrl(url);
     const arrayBuffer = await response.arrayBuffer();
     const audioBuffer = await this.audioContext.decodeAudioData(arrayBuffer);
     this.audioBuffers[url] = audioBuffer;
@@ -136,30 +144,29 @@ class SoundCache {
     this.audioBuffers = {};
   }
 
-  private async verifyUrl(path: string): Promise<boolean | null> {
-    const restricted = path.startsWith(baseAssetUrlRestricted);
-
-    let canLoadRestrictedContent = this.hasLoadedSignedCookies;
-    if (restricted && !this.hasLoadedSignedCookies) {
-      try {
-        const response = await fetchSignedCookies();
-        if (response.ok) {
-          canLoadRestrictedContent = true;
-          this.hasLoadedSignedCookies = true;
-        }
-      } catch (error) {
-        this.metricsReporter.logError(
-          'Error loading signed cookies',
-          error as Error
-        );
+  private async fetchSoundFromUrl(url: string) {
+    try {
+      const response = await this.httpClient.get(url);
+      return response;
+    } catch (error) {
+      if (isNetworkError(error) && error.response.status === 403) {
+        // Cloudfront cookies may have expired. Try refreshing and fetch again.
+        // If this fails, the error will be caught and logged.
+        await this.refreshSignedCookies();
+        return this.httpClient.get(url);
+      } else {
+        throw error;
       }
     }
+  }
 
-    if (restricted && !canLoadRestrictedContent) {
-      return false;
+  private async refreshSignedCookies(): Promise<void> {
+    const response = await fetchSignedCookies();
+    if (response.ok) {
+      this.hasLoadedSignedCookies = true;
+    } else {
+      throw new Error(`Failed to refresh signed cookies: ${response.status}`);
     }
-
-    return true;
   }
 }
 

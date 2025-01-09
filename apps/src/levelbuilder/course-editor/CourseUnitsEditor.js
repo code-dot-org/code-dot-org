@@ -49,6 +49,11 @@ export default class CourseUnitsEditor extends Component {
                 {name}
               </option>
             ))}
+            {this.props.initialUnitsInCourse.map((courseUnitName, index) => (
+              <option key={unitNames.length + index} value={courseUnitName}>
+                {courseUnitName}
+              </option>
+            ))}
           </select>
         ))}
       </div>

@@ -196,6 +196,7 @@ class SectionAssessments extends Component {
       this.props.assessmentId === ASSESSMENT_FEEDBACK_OPTION_ID;
 
     return (
+      // eslint-disable-next-line react/forbid-dom-props
       <div data-testid={'assessments-tab'}>
         <div style={styles.selectors}>
           <div style={styles.unitSelection}>

@@ -26,6 +26,7 @@
           "buttonText": "CSF Kursong D "
         }
       ],
+      "content_area": "curriculum_k_5",
       "curriculum_path": "https://code.org/curriculum/course4/{LESSON}/Teacher",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
@@ -37,7 +38,7 @@
     },
     "new_name": null,
     "family_name": "course4",
-    "serialized_at": "2024-07-23 17:10:38 UTC",
+    "serialized_at": "2024-11-19 01:14:01 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

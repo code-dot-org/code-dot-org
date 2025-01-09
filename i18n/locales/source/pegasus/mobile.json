@@ -767,6 +767,12 @@
   "girls": "Girls",
   "girls_team": "Girls' Team",
   "give_my_hour": "Give my Hour to:",
+  "global_edition": {
+    "region_language_switch": "View in %{language}",
+    "regions": {
+      "fa": "Farsi"
+    }
+  },
   "go": "Go",
   "google_sign_in_instruct": "From there, they should choose the “Sign in with Google Account” option:",
   "groklearning_beyond_gradelevel": "Middle school +",

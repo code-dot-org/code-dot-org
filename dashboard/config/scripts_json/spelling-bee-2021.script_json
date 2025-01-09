@@ -16,7 +16,8 @@
           "buttonText": "Computer Science Basics for K-5 Teachers"
         }
       ],
-      "curriculum_umbrella": "CSC",
+      "content_area": "curriculum_k_5",
+      "curriculum_umbrella": "CSC K-5",
       "has_verified_resources": true,
       "is_course": true,
       "is_migrated": true,
@@ -25,7 +26,7 @@
     },
     "new_name": null,
     "family_name": "spelling-bee",
-    "serialized_at": "2024-02-05 21:45:12 UTC",
+    "serialized_at": "2024-11-19 01:19:38 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

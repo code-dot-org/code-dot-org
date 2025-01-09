@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 
+import {DEFAULT_PATTERN_LENGTH} from '../constants';
 import {generateGraphDataFromPattern} from '../utils/Patterns';
 import PatternPanel from '../views/PatternPanel';
 
@@ -35,6 +36,7 @@ class FieldPattern extends GoogleBlockly.Field {
       state.instrument = state.kit;
       delete state.kit;
     }
+    state.length ||= DEFAULT_PATTERN_LENGTH;
     this.setValue(state);
   }
 
@@ -120,6 +122,7 @@ class FieldPattern extends GoogleBlockly.Field {
   }
 
   dropdownDispose_() {
+    ReactDOM.unmountComponentAtNode(this.newDiv_);
     this.newDiv_ = null;
   }
 
@@ -170,10 +173,6 @@ class FieldPattern extends GoogleBlockly.Field {
     });
 
     this.renderContent();
-  }
-
-  getText() {
-    return this.getValue().kit;
   }
 
   updateSize_() {

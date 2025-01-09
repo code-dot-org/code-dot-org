@@ -6,15 +6,9 @@ class SchoolInfoTest < ActiveSupport::TestCase
 
   # non-US
 
-  test 'non-US with type, name and address succeeds' do
+  test 'non-US with name succeeds' do
     school_info = build :school_info_non_us
     assert school_info.valid?, school_info.errors.full_messages
-  end
-
-  test 'non-US without address fails' do
-    school_info = build :school_info_non_us, full_address: nil
-    refute school_info.valid?  # Run the validations and set errors
-    assert_equal 'Full address is required', school_info.errors.full_messages.first
   end
 
   test 'non-US without name fails' do
@@ -23,22 +17,10 @@ class SchoolInfoTest < ActiveSupport::TestCase
     assert_equal 'School name is required', school_info.errors.full_messages.first
   end
 
-  test 'non-US without type fails' do
-    school_info = build :school_info_non_us, school_type: nil
-    refute school_info.valid?  # Run the validations and set errors
-    assert_equal 'School type is required', school_info.errors.full_messages.first
-  end
-
-  test 'non-US with nonexistent type fails' do
-    school_info = build :school_info_non_us, school_type: 'fake type'
-    refute school_info.valid?
-    assert_equal 'School type is invalid', school_info.errors.full_messages.first
-  end
-
   # US
 
   test "US without school type fails" do
-    school_info = build :school_info_us
+    school_info = build(:school_info_us, :with_district, :with_school, school: build(:public_school, school_type: nil))
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School type is required', school_info.errors.full_messages.first
   end
@@ -47,6 +29,32 @@ class SchoolInfoTest < ActiveSupport::TestCase
     school_info = build :school_info_us, school_type: 'fake type'
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School type is invalid', school_info.errors.full_messages.first
+  end
+
+  # US non-nces school
+
+  test 'US non-nces school succeeds' do
+    school_info = build :school_info_us_non_nces
+    assert school_info.valid?, school_info.errors.full_messages
+  end
+
+  test "US non-nces school without zip fails" do
+    school_info = build :school_info_us_non_nces, zip: nil
+    refute school_info.valid?  # Run the validations and set errors
+    assert_equal 'Zip is required', school_info.errors.full_messages.first
+  end
+
+  # US non-school setting
+
+  test 'US non-school setting succeeds' do
+    school_info = build :school_info_us_non_school_setting
+    assert school_info.valid?, school_info.errors.full_messages
+  end
+
+  test "US non-school setting without zip fails" do
+    school_info = build :school_info_us_non_school_setting, zip: nil
+    refute school_info.valid?  # Run the validations and set errors
+    assert_equal 'Zip is required', school_info.errors.full_messages.first
   end
 
   # US, private

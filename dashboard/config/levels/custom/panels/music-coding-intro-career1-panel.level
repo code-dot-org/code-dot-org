@@ -1,0 +1,21 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-11-21T19:19:24.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "#Placeholder for a hype video about songwriters using technology to help them express their creativity.",
+        "imageUrl": "https://images.code.org/47d8743206663e4c56b7377f2e671285-shakira creativity.jpg",
+        "key": "music-coding-intro-career1-panel-6cc616ef-9579-45db-9546-552ccf158a67"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-11-23 17:12:42 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

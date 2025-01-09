@@ -84,6 +84,7 @@ def main
       ARTIST_AUTORUN_OPTIONS
       LEVEL_KIND
       LEVEL_STATUS
+      USER_LEVEL_INTERACTIONS
       SECTION_LOGIN_TYPE
       STUDENT_GRADE_LEVELS
       PL_GRADE_VALUE
@@ -113,7 +114,8 @@ def main
       USER_TYPES
       NON_SCHOOL_OPTIONS
       US_STATES
-    ), 
+      PROJECT_SUBMISSION_STATUS
+    ),
     file_type: 'ts'
   )
 

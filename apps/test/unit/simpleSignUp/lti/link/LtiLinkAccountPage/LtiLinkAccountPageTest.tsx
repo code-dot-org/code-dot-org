@@ -35,6 +35,7 @@ describe('LTI Link Account Page Tests', () => {
         </LtiProviderContext.Provider>
       );
 
+      // eslint-disable-next-line no-restricted-properties
       const existingAccountCard = screen.getByTestId('existing-account-card');
       const withinExistingAccountCard = within(existingAccountCard);
       const urlParams = new URLSearchParams({
@@ -72,6 +73,7 @@ describe('LTI Link Account Page Tests', () => {
         </LtiProviderContext.Provider>
       );
 
+      // eslint-disable-next-line no-restricted-properties
       const newAccountCard = screen.getByTestId('new-account-card');
       const withinNewAccountCard = within(newAccountCard);
 
@@ -84,6 +86,7 @@ describe('LTI Link Account Page Tests', () => {
         i18n.ltiLinkAccountNewAccountCardContent({providerName: 'Canvas'})
       );
       const newAccountForm: HTMLFormElement =
+        // eslint-disable-next-line no-restricted-properties
         screen.getByTestId('new-account-form');
 
       const formValues = new FormData(newAccountForm);

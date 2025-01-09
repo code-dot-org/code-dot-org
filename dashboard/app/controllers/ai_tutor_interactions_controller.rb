@@ -1,5 +1,6 @@
 class AiTutorInteractionsController < ApplicationController
   include Rails.application.routes.url_helpers
+  include LevelsHelper
   before_action :authenticate_user!
   load_and_authorize_resource :ai_tutor_interaction
 
@@ -26,10 +27,7 @@ class AiTutorInteractionsController < ApplicationController
     )
     ai_tutor_interaction_params[:user_id] = current_user.id
     ai_tutor_interaction_params[:ai_model_version] = SharedConstants::AI_TUTOR_CHAT_MODEL_VERISON
-
-    # TODO: We may want to only do this lookup for levels that use the projects system (e.g. level.channel_backed?)
-    # For now, since all the levels this is enabled for use projects/are JavaLab levels, we can just do this for all of them.
-    project_data = find_project_and_version_id(ai_tutor_interaction_params[:level_id], ai_tutor_interaction_params[:script_id])
+    project_data = get_project_and_version_id(ai_tutor_interaction_params[:level_id], ai_tutor_interaction_params[:script_id])
     ai_tutor_interaction_params[:project_id] = project_data[:project_id]
     ai_tutor_interaction_params[:project_version_id] = project_data[:version_id]
 
@@ -38,28 +36,6 @@ class AiTutorInteractionsController < ApplicationController
 
   def valid_status
     SharedConstants::AI_TUTOR_INTERACTION_STATUS.value?(params[:status])
-  end
-
-  def find_project_and_version_id(level_id, script_id)
-    result = {project_id: nil, version_id: nil}
-
-    user_storage_id = storage_id_for_user_id(current_user.id)
-    return result unless user_storage_id
-
-    level = Level.find(level_id)
-    return result unless level
-
-    channel_token = ChannelToken.find_channel_token(level, user_storage_id, script_id)
-    return result unless channel_token
-
-    _owner_id, result[:project_id] = storage_decrypt_channel_id(channel_token.channel)
-    source_data = SourceBucket.new.get(channel_token.channel, "main.json")
-
-    if source_data[:status] == 'FOUND'
-      result[:version_id] = source_data[:version_id]
-    end
-
-    result
   end
 
   # GET /ai_tutor_interactions

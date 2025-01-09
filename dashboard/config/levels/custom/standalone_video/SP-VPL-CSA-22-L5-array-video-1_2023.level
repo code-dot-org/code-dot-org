@@ -1,5 +1,6 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
   "created_at": "2022-10-21T19:01:49.000Z",
   "level_num": "custom",
@@ -12,11 +13,10 @@
     "parent_level_id": 28813,
     "name_suffix": "_2023",
     "encrypted": "false",
-    "long_instructions": "This video will introduce 1D arrays in Java.\r\n\r\n## Vocabulary: \r\n\r\n* **Data Structure** - A way of storing and organizing data in a program\r\n* **Element** - An item in an array\r\n* **Immutable** - The content cannot be changed once it is created\r\n* **Index** - The numerical position of an item in an array\r\n* **Length** - The size of the array that is set when it is created\r\n* **One-Dimensional (1D) Array** - A linear structure that stores one or more values of the same data type\r\n\r\n**Up next:** In the next level, we will watch another video that introduces another way to initialize an array. \r\n"
+    "long_instructions": "#### This video will introduce 1D arrays in Java.\r\n\r\n## Vocabulary: \r\n\r\n- #### **Data Structure** - A way of storing and organizing data in a program\r\n- ####  **Element** - An item in an array\r\n- ####  **Immutable** - The content cannot be changed once it is created\r\n- ####  **Index** - The numerical position of an item in an array\r\n- ####  **Length** - The size of the array that is set when it is created\r\n- ####  **One-Dimensional (1D) Array** - A linear structure that stores one or more values of the same data type\r\n\r\n#### **Up next:** In the next level, we will watch another video that introduces another way to initialize an array. \r\n"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-21T19:01:49.276+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-L5-array-video-1\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-L5-array-video-1\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-21T19:01:49.276+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-L5-array-video-1\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-L5-array-video-1\"},{\"changed_at\":\"2024-10-24 18:55:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-10-31 15:02:48 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

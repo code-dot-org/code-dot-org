@@ -49,7 +49,7 @@ module Cdo
         )
       rescue => exception
         Honeybadger.notify(exception)
-        puts "Error sending metrics: #{exception.full_message}" if rack_env?(:development)
+        puts "Error sending metrics to namespace #{@namespace}: #{exception.full_message}" if rack_env?(:development)
       end
 
       def size(events)

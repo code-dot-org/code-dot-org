@@ -79,6 +79,10 @@ class MetricsReporter {
 
   /**
    * Publish a metric.
+   *
+   * Note that this will send two metrics, with and without the browser version dimension
+   * (the browser name dimension is included in both).
+   * This allows us to more easily aggregate metrics by browser.
    */
   publishMetric(
     name: string,
@@ -96,7 +100,14 @@ class MetricsReporter {
       console.info('[MetricsReporter] ' + JSON.stringify(metric));
       return;
     }
-    this.sendMetric(metric);
+    // Send a version of the metric with and without the browser version dimension
+    this.sendMetrics([
+      metric,
+      {
+        ...metric,
+        dimensions: [...metric.dimensions, this.getBrowserVersionDimension()],
+      },
+    ]);
   }
 
   private async log(level: LogLevel, message: string | object) {
@@ -119,16 +130,16 @@ class MetricsReporter {
     }
   }
 
-  private async sendMetric(metric: MetricDatum) {
+  private async sendMetrics(metrics: MetricDatum[]) {
     if (!this.isReportingEnabled()) {
-      this.fallbackLog(metric);
+      this.fallbackLog(metrics);
       return;
     }
 
     try {
-      await this.metricsApi.sendMetricData([metric]);
+      await this.metricsApi.sendMetricData(metrics);
     } catch (error) {
-      this.fallbackLog(metric);
+      this.fallbackLog(metrics);
       this.handleError(error as Error);
     }
   }
@@ -163,11 +174,14 @@ class MetricsReporter {
         name: 'Browser',
         value: getBrowserName(),
       },
-      {
-        name: 'BrowserVersion',
-        value: getBrowserName(true),
-      },
     ];
+  }
+
+  private getBrowserVersionDimension(): MetricDimension {
+    return {
+      name: 'BrowserVersion',
+      value: getBrowserName(true),
+    };
   }
 
   private fallbackLog(payload: object) {

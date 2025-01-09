@@ -60,7 +60,7 @@ class RegionalPartnersController < ApplicationController
     courses.each do |course|
       roles.each do |role|
         states.each do |state|
-          key = "apps_#{state}_date_#{course}_#{role}".to_sym
+          key = :"apps_#{state}_date_#{course}_#{role}"
           # Do a date validation.  An exception will result if invalid.
           Date.parse(regional_partner_params[key]) if regional_partner_params[key].presence
         end

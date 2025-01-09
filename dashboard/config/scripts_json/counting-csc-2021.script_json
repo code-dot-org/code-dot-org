@@ -16,7 +16,8 @@
           "buttonText": "Computer Science Basics for K-5 Teachers "
         }
       ],
-      "curriculum_umbrella": "CSC",
+      "content_area": "curriculum_k_5",
+      "curriculum_umbrella": "CSC K-5",
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_course": true,
@@ -26,7 +27,7 @@
     },
     "new_name": null,
     "family_name": "counting-csc",
-    "serialized_at": "2024-02-05 21:49:01 UTC",
+    "serialized_at": "2024-11-19 01:13:59 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

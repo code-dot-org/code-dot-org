@@ -4,25 +4,30 @@
 # a Pull Request that changes this file, an Infrastructure Engineer must execute the following steps on their workstation
 # utilizing their admin AWS credentials to validate and then deploy these changes:
 #
-#    VALIDATE: The output should only specify AWS::DMS::ReplicationTask Resources that will change and only the specific
-#    Tasks that are being modified in this feature branch. If there are any other changes, do not deploy, and instead
-#    determine the source of the differences between template configuration in the current commit and the state of the
-#    `DATA-production` Stack.
+#    VALIDATE:
 #
-#    code-dot-org $ export AWS_PROFILE=codeorg-admin
-#    code-dot-org $ bin/aws_access
-#    AWS access: GoogleSignInAdmin/suresh@code.org
-#    code-dot-org $ bundle exec rake stack:data:validate RAILS_ENV=production ADMIN=true
-#    Finished stack:data:environment (less than a minute)
-#    Parameters:
-#    Pending update for stack `DATA-production`:
-#    Modify DMSCronPii [AWS::DMS::ReplicationTask] Properties Replacement: Conditional (TableMappings)
-#    Modify DMSCron [AWS::DMS::ReplicationTask] Properties Replacement: Conditional (TableMappings)
-#    Finished stack:data:validate (1 minute)
+#    The output of `stack:data:validate` (below) should only specify AWS::DMS::ReplicationTask Resources that will change
+#    and only the specific Tasks that are being modified in this feature branch. If there are any other changes, do not
+#    deploy, and instead determine the source of the differences between template configuration in the current commit and
+#    the state of the `DATA-production` Stack.
+#
+#        code-dot-org $ export AWS_PROFILE=codeorg-admin
+#        code-dot-org $ bin/aws_access
+#          AWS access: GoogleSignInAdmin/suresh@code.org
+#        code-dot-org $ bundle exec rake stack:data:validate RAILS_ENV=production ADMIN=true
+#          Finished stack:data:environment (less than a minute)
+#          Parameters:
+#          Pending update for stack `DATA-production`:
+#          Modify DMSCronPii [AWS::DMS::ReplicationTask] Properties Replacement: Conditional (TableMappings)
+#          Modify DMSCron [AWS::DMS::ReplicationTask] Properties Replacement: Conditional (TableMappings)
+#          Finished stack:data:validate (1 minute)
 #
 #    EXECUTE:
 #
-#    code-dot-org % bundle exec rake stack:data:start RAILS_ENV=production ADMIN=true
+#        code-dot-org $ bundle exec rake stack:data:start RAILS_ENV=production ADMIN=true
+
+# All tables in this section are exported to the Redshift `dashboard_production_pii` schema. Sensitive data may be
+# exported to this schema, but should be limited to only columns that have an identified analytics purpose.
 cron-pii:
 - dashboard.census_submissions
 - pegasus.contacts
@@ -40,6 +45,7 @@ cron-pii:
 - dashboard.regional_partners
 - dashboard.regional_partners_school_districts
 - dashboard.pd_%
+- dashboard.course_offerings_pd_workshops
 - dashboard.email_preferences
 - dashboard.teacher_feedbacks
 - dashboard.authentication_options:
@@ -51,7 +57,15 @@ cron-pii:
 - dashboard.learning_goal_ai_evaluations
 - dashboard.learning_goal_teacher_evaluations
 - dashboard.learning_goal_ai_evaluation_feedbacks
+- dashboard.ai_tutor_interactions
+
+# All tables in this section are exported to the Redshift `dashboard_production` schema. Do NOT export columns containing
+# sensitive data to this schema.
 cron:
+- dashboard.ai_tutor_interactions:
+    remove_column:
+      - prompt
+      - ai_response
 - dashboard.experiments
 - dashboard.authored_hint_view_requests
 - dashboard.hint_view_requests
@@ -59,6 +73,14 @@ cron:
 - dashboard.metrics
 - dashboard.contained_level_answers
 - dashboard.contained_levels
+- dashboard.learning_goal_ai_evaluations:
+    remove_column:
+      - observations
+      - evidence
+- dashboard.learning_goal_teacher_evaluations:
+    remove_column: [feedback]
+- dashboard.learning_goal_ai_evaluation_feedbacks:
+    remove_column: [other_content]
 - dashboard.level_sources_multi_types
 - dashboard.paired_user_levels
 - dashboard.parental_permission_requests:
@@ -120,6 +142,9 @@ cron:
 - dashboard.cap_user_events
 - dashboard.ai_tutor_interaction_feedbacks
 - dashboard.aichat_sessions
+
+# All tables in this section are exported to the Redshift `dashboard_production` schema. Do NOT export columns containing
+# sensitive data to this schema.
 cron-user-hierarchy:
 - dashboard.users:
     remove_column:
@@ -161,6 +186,9 @@ cron-user-hierarchy:
 - dashboard.studio_people:
     remove_column: [emails]
 - dashboard.sign_ins
+
+# All tables in this section are exported to the Redshift `dashboard_production_pii` schema. Sensitive data may be
+# exported to this schema, but should be limited to only columns that have an identified analytics purpose.
 cron-user-hierarchy-pii:
 - dashboard.studio_people
 - dashboard.teacher_profiles
@@ -172,8 +200,14 @@ cron-user-hierarchy-pii:
         - secret_words
 - dashboard.user_geos
 - dashboard.user_school_infos
+
+# All tables in this section are exported to the Redshift `dashboard_production` schema. Do NOT export columns containing
+# sensitive data to this schema.
 cron-user-levels:
 - dashboard.user_levels
+
+# All tables in this section are exported to the Redshift `dashboard_production_pii` schema. Sensitive data may be
+# exported to this schema, but should be limited to only columns that have an identified analytics purpose.
 cron-level-sources-pii:
 - dashboard.level_sources:
     skip_staging_table: true

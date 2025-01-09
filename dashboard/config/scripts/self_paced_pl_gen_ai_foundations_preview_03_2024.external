@@ -7,17 +7,18 @@ markdown <<MARKDOWN
 
 ## Lesson Highlight: Character Quiz Activity
 
-<img src="https://images.code.org/9a52d33d49d488c302d04354a96a3d2d-bed5925cbfe2b9a80368293aa21cf84b-Slide19.PNG" alt="system prompt with role, goal, tone, and restriction" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 20px 20px 20px 20px">
+<img src="https://images.code.org/9a52d33d49d488c302d04354a96a3d2d-bed5925cbfe2b9a80368293aa21cf84b-Slide19.PNG" alt="character repersentations by Kim and Hawa  representations" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 20px 20px 20px 20px">
 
 #### During **Lesson 4: Understanding Embeddings**, students investigate how characters from stories or movies can be similar as a way to understand how words can be similar.
 
-#### Students create a representation of chosen characters based on their different traits, and then compare their characters to others in the class. 
+#### Students do the following...
+* #### Create a representation of chosen characters based on their different traits.
+* #### Collect data on other characters by sharing with classmates.
+* #### Compare two characters row-by-row, noticing when dots are close together or far apart. For example, Kim and Hawa's characters are on opposite ends of the good/bad spectrum, but are close in several other areas. 
 
-#### After students collect some data on various characters, students should compare two characters row-by-row, noticing when dots are close together or far apart. For example, Kim and Hawa's characters are on opposite ends of the good/bad spectrum, but are close in several other areas. 
+<img src="https://images.code.org/5587e0a3e25e4642f2da11c4f317800e-3d83c1f988e645b8de16c95ee6709055-Slide22.PNG" alt="character representations shown as a matrix of numbers" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 20px 20px 20px 20px">
 
-<img src="https://images.code.org/5587e0a3e25e4642f2da11c4f317800e-3d83c1f988e645b8de16c95ee6709055-Slide22.PNG" alt="system prompt with role, goal, tone, and restriction" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 20px 20px 20px 20px">
-
-#### During discussions, emphasize responses that are explicitly counting spaces between dots and comparing distances. Students will eventually understand that they can compare numbers in each position to determine how similar or different characters are. This can be done by comparing each number from left-to-right. One powerful insight is that it doesn’t matter what each position represents, only how close or far the numbers are in that same position.
+#### During discussions, students will eventually understand that they can compare numbers in each position to determine how similar or different characters are. One powerful insight is that it doesn’t matter what each position represents, only how close or far the numbers are in that same position.
 
 #### These key concepts helps us generalize the idea of “character traits” to **embeddings** which are the set of numbers used to represent a word in a large-language model.
 
@@ -27,7 +28,7 @@ markdown <<MARKDOWN
     <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 4: Understanding Embeddings</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
-<img src="https://images.code.org/f8f255ae13beed4bb8255ee46c235786-170a15084c6c3ae34f619c8d0ff22954-Slide27.PNG" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+<img src="https://images.code.org/f8f255ae13beed4bb8255ee46c235786-170a15084c6c3ae34f619c8d0ff22954-Slide27.PNG" alt="embeddings definition" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
 
 #### **Question of the Day:** How do computers represent the meanings of words?
 
@@ -47,7 +48,7 @@ markdown <<MARKDOWN
     <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 5: Embeddings: How They're Created</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
-<img src="https://images.code.org/088a71b0747a8b137cd39ac44767ce18-c25ee550d58ce9ea5e005f9a5bb11a4d-Slide19.PNG" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+<img src="https://images.code.org/088a71b0747a8b137cd39ac44767ce18-c25ee550d58ce9ea5e005f9a5bb11a4d-Slide19.PNG" alt="completed tabel from lesson activity" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
 
 #### **Question of the Day:** How do language models learn the embeddings they use to represent words?
 

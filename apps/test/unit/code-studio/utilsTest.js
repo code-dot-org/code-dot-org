@@ -3,7 +3,7 @@ import {
   resetWindowLocation,
   queryParams,
   updateQueryParam,
-} from '@cdo/apps/code-studio/utils'; // eslint-disable-line no-restricted-imports
+} from '@cdo/apps/code-studio/utils';
 
 describe('utils', () => {
   let fakeWindowLocation = {

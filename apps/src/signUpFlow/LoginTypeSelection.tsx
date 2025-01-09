@@ -1,21 +1,22 @@
+import cookies from 'js-cookie';
 import React, {useState, useEffect} from 'react';
 
-import {Button as NewButton} from '@cdo/apps/componentLibrary/button';
+import Button from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {Heading3, BodyThreeText} from '@cdo/apps/componentLibrary/typography';
-import Button from '@cdo/apps/legacySharedComponents/Button';
+import OldButton from '@cdo/apps/legacySharedComponents/Button';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import canvas from '@cdo/apps/signUpFlow/images/canvas.png';
-import cleverLogo from '@cdo/apps/signUpFlow/images/cleverLogo.png';
 import schoology from '@cdo/apps/signUpFlow/images/schoology.png';
 import locale from '@cdo/apps/signUpFlow/locale';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {isEmail} from '@cdo/apps/util/formatValidation';
+import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {navigateToHref} from '../utils';
@@ -23,6 +24,8 @@ import {navigateToHref} from '../utils';
 import {
   ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
+  OAUTH_LOGIN_TYPE_SESSION_KEY,
+  NEW_SIGN_UP_USER_TYPE,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
@@ -50,14 +53,27 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   const finishAccountUrl = isTeacher
     ? studio('/users/new_sign_up/finish_teacher_account')
     : studio('/users/new_sign_up/finish_student_account');
+  const userType = isTeacher ? UserTypes.TEACHER : UserTypes.STUDENT;
+  cookies.set(NEW_SIGN_UP_USER_TYPE, userType, {path: '/'});
 
   useEffect(() => {
+    // If the user hasn't selected a user type, redirect them back to the first step of signup.
+    if (sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === null) {
+      navigateToHref('/users/new_sign_up/account_type');
+    }
+
     async function getToken() {
       setAuthToken(await getAuthenticityToken());
     }
 
     getToken();
   }, []);
+
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter' && !createAccountButtonDisabled) {
+      submitLoginType();
+    }
+  };
 
   useEffect(() => {
     if (
@@ -71,24 +87,6 @@ const LoginTypeSelection: React.FunctionComponent = () => {
       setCreateAccountButtonDisabled(true);
     }
   }, [passwordIcon, showConfirmPasswordError, confirmPassword, email]);
-
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Enter') {
-        const button = document.getElementById(
-          'createAccountButton'
-        ) as HTMLButtonElement;
-        if (button && !button.disabled) {
-          button.click();
-        }
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
 
   const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
@@ -159,7 +157,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
     analyticsReporter.sendEvent(
       EVENTS.LMS_INFORMATION_BUTTON_CLICKED,
       {},
-      PLATFORMS.STATSIG
+      PLATFORMS.BOTH
     );
   };
 
@@ -169,8 +167,13 @@ const LoginTypeSelection: React.FunctionComponent = () => {
       {
         'user login type': loginType,
       },
-      PLATFORMS.STATSIG
+      PLATFORMS.BOTH
     );
+  }
+
+  function selectOauthLoginType(loginType: string) {
+    logUserLoginType(loginType);
+    sessionStorage.setItem(OAUTH_LOGIN_TYPE_SESSION_KEY, loginType);
   }
 
   return (
@@ -192,60 +195,43 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             </BodyThreeText>
           </div>
           <form action="/users/auth/google_oauth2" method="POST">
-            <input type="hidden" name="finish_url" value={finishAccountUrl} />
-            <button
+            <Button
+              text={locale.sign_up_google()}
+              onClick={() => selectOauthLoginType('google')}
+              iconLeft={{iconName: 'brands fa-google', iconStyle: 'solid'}}
               className={style.googleButton}
-              onClick={() => logUserLoginType('google')}
-              type="submit"
-            >
-              <FontAwesomeV6Icon
-                iconName="brands fa-google"
-                iconStyle="solid"
-              />
-              {locale.sign_up_google()}
-            </button>
+              buttonTagTypeAttribute="submit"
+            />
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/microsoft_v2_auth" method="POST">
-            <input type="hidden" name="finish_url" value={finishAccountUrl} />
-            <button
+            <Button
+              text={locale.sign_up_microsoft()}
+              onClick={() => selectOauthLoginType('microsoft')}
+              iconLeft={{iconName: 'brands fa-microsoft', iconStyle: 'light'}}
               className={style.microsoftButton}
-              onClick={() => logUserLoginType('microsoft')}
-              type="submit"
-            >
-              <FontAwesomeV6Icon
-                iconName="brands fa-microsoft"
-                iconStyle="light"
-              />
-              {locale.sign_up_microsoft()}
-            </button>
+              buttonTagTypeAttribute="submit"
+            />
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/facebook" method="POST">
-            <input type="hidden" name="finish_url" value={finishAccountUrl} />
-            <button
+            <Button
+              text={locale.sign_up_facebook()}
+              onClick={() => selectOauthLoginType('facebook')}
+              iconLeft={{iconName: 'brands fa-facebook-f', iconStyle: 'solid'}}
               className={style.facebookButton}
-              onClick={() => logUserLoginType('facebook')}
-              type="submit"
-            >
-              <FontAwesomeV6Icon
-                iconName="brands fa-facebook-f"
-                iconStyle="solid"
-              />
-              {locale.sign_up_facebook()}
-            </button>
+              buttonTagTypeAttribute="submit"
+            />
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/clever" method="POST">
-            <input type="hidden" name="finish_url" value={finishAccountUrl} />
-            <button
+            <Button
+              text={locale.sign_up_clever()}
+              onClick={() => selectOauthLoginType('clever')}
+              iconLeft={{iconName: 'kit fa-clever', iconStyle: 'solid'}}
               className={style.cleverButton}
-              onClick={() => logUserLoginType('clever')}
-              type="submit"
-            >
-              <img src={cleverLogo} alt="" />
-              {locale.sign_up_clever()}
-            </button>
+              buttonTagTypeAttribute="submit"
+            />
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <div className={style.greyTextbox}>
@@ -267,26 +253,26 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             </BodyThreeText>
             {isTeacher && (
               <div className={style.buttonContainer}>
-                <Button
+                <OldButton
                   href="https://support.code.org/hc/en-us/articles/24825250283021-Single-Sign-On-with-Canvas"
                   onClick={sendLMSAnalyticsEvent}
-                  color={Button.ButtonColor.white}
+                  color={OldButton.ButtonColor.white}
                   text={'Canvas'}
                   icon={'arrow-up-right-from-square'}
                   __useDeprecatedTag
                 >
                   <img src={canvas} alt="" />
-                </Button>
-                <Button
+                </OldButton>
+                <OldButton
                   href="https://support.code.org/hc/en-us/articles/26677769411085-Single-Sign-On-with-Schoology"
                   onClick={sendLMSAnalyticsEvent}
-                  color={Button.ButtonColor.white}
+                  color={OldButton.ButtonColor.white}
                   text={'Schoology'}
                   icon={'arrow-up-right-from-square'}
                   __useDeprecatedTag
                 >
                   <img src={schoology} alt="" />
-                </Button>
+                </OldButton>
               </div>
             )}
           </div>
@@ -307,6 +293,8 @@ const LoginTypeSelection: React.FunctionComponent = () => {
                 value={email}
                 onChange={handleEmailChange}
                 name="emailInput"
+                id="uitest-email"
+                onKeyDown={handleKeyDown}
               />
               {showEmailError && (
                 <div className={style.validationMessage}>
@@ -326,7 +314,9 @@ const LoginTypeSelection: React.FunctionComponent = () => {
                 value={password}
                 onChange={handlePasswordChange}
                 name="passwordInput"
+                id="uitest-password"
                 inputType="password"
+                onKeyDown={handleKeyDown}
               />
               <div className={style.validationMessage}>
                 <FontAwesomeV6Icon
@@ -343,6 +333,8 @@ const LoginTypeSelection: React.FunctionComponent = () => {
                 onChange={handleConfirmPasswordChange}
                 name="confirmPasswordInput"
                 inputType="password"
+                id="uitest-confirm-password"
+                onKeyDown={handleKeyDown}
               />
               {showConfirmPasswordError && (
                 <div className={style.validationMessage}>
@@ -357,20 +349,23 @@ const LoginTypeSelection: React.FunctionComponent = () => {
               )}
             </div>
           </div>
-          <NewButton
+          <Button
             id="createAccountButton"
             className={style.shortButton}
             text={locale.create_my_account()}
             onClick={submitLoginType}
             disabled={createAccountButtonDisabled}
+            buttonTagTypeAttribute="submit"
           />
         </div>
       </div>
       <SafeMarkdown
+        className={style.tosAndPrivacy}
         markdown={locale.by_signing_up({
-          tosLink: 'code.org/tos',
-          privacyPolicyLink: 'code.org/privacy',
+          tosLink: 'https://code.org/tos',
+          privacyPolicyLink: 'https://code.org/privacy',
         })}
+        openExternalLinksInNewTab={true}
       />
     </div>
   );

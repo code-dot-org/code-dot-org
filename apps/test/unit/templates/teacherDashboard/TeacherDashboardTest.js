@@ -100,26 +100,31 @@ describe('TeacherDashboard', () => {
 
   it('defaults to progress tab if no tab provided in route', () => {
     renderDefault(['/']);
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('section-progress', {exact: false});
   });
 
   it('defaults to progress tab if incorrect tab provided in route', () => {
     renderDefault(['/some_fake_path']);
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('section-progress', {exact: false});
   });
 
   it('defaults to manage students tab if no tab provided in route and section has 0 students', () => {
     renderDefault(['/'], {studentCount: 0});
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('manage-students-tab');
   });
 
   it('defaults to manage students tab if incorrect tab provided in route and section has 0 students', () => {
     renderDefault(['/some-fake-path'], {studentCount: 0});
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('manage-students-tab');
   });
 
   it('does not override given path if there are students and path is legitimate', () => {
     renderDefault(['/assessments']);
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('assessments-tab');
   });
 });

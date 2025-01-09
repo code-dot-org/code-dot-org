@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "hideable_lessons": true,
       "is_course": true,
@@ -12,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "bingo",
-    "serialized_at": "2023-06-20 18:47:22 UTC",
+    "serialized_at": "2025-01-07 20:00:35 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -56,6 +57,7 @@
       "key": "5dcd8087-ea0c-4f5a-a4c7-0d42fe8189a9",
       "position": 1,
       "properties": {
+        "duration": 45
       },
       "seeding_key": {
         "lesson_activity.key": "5dcd8087-ea0c-4f5a-a4c7-0d42fe8189a9",
@@ -540,6 +542,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

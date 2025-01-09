@@ -4,20 +4,24 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "AI",
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "9-12 Special topics",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_course": true,
       "is_migrated": true,
       "show_calendar": true,
+      "topic_tags": [
+        "ai"
+      ],
       "tts": true,
       "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "foundations-gen-ai",
-    "serialized_at": "2024-10-10 19:43:50 UTC",
+    "serialized_at": "2024-11-19 16:34:59 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2032,7 +2036,7 @@
       "position": 1,
       "properties": {
         "description": "There are two options for wrap-ups in this lesson. This first option involves watching a 1-minute video about the nature of intelligence and responding to a prompt, while the second option involves considering a scenario involving data collection and privacy and responding to a prompt. This first option is more abstract addressing the hype around \"intelligence machines\" and how well language models \"learn\", while the second option is more aligned to the real-world ethical considerations of data collection and privacy with opportunities for students to bring their lived-experiences into the discussion. Both wrap-ups can help students construct arguments for the final project in the unit - but for the sake of time, you may only be able to do one. If possible, consider doing the second activity during another lesson so students can reflect and discuss both.\n\nIf you choose this wrap-up, skip or delete the slides associated with Wrap Up 2",
-        "name": "Warp Up - Option 1"
+        "name": "Wrap Up - Option 1"
       },
       "seeding_key": {
         "activity_section.key": "4c91d9ab-c028-40bd-b077-c9881c7c4b67",
@@ -2303,7 +2307,7 @@
       "key": "874d7b57-5a1e-427a-801d-28b5a00a4b62",
       "position": 2,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/4f39fb6057e7fee36c657f20c1bf253d-Slide10.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Create a mad-lib using the cards in your group. You can be as silly or as serious as you’d like. Once you’re done, we’ll share a few as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Check in with groups as they use the cards to complete their mad-libs. Identify a few unique stories to share out as a class.\n\t\t<br />\n\t\t<br />As groups are finishing up, bring up the <a href=\"https://studio.code.org/s/gen-ai-foudations-pilot-v1/lessons/9/levels/1\" target=\"_blank\">Mad Lib Generator app</a> and go into the “Generate Mad Lib” screen. This app does not need to be used by students - instead, you can drive this app while projecting to the class.\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/4f39fb6057e7fee36c657f20c1bf253d-Slide10.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Create a mad-lib using the cards in your group. You can be as silly or as serious as you’d like. Once you’re done, we’ll share a few as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Check in with groups as they use the cards to complete their mad-libs. Identify a few unique stories to share out as a class.\n\t\t<br />\n\t\t<br />As groups are finishing up, bring up the Mad Lib Generator app (Level 2 on studio.code.org) and go into the “Generate Mad Lib” screen. This app does not need to be used by students - instead, you can drive this app while projecting to the class.\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "874d7b57-5a1e-427a-801d-28b5a00a4b62",
@@ -3452,6 +3456,45 @@
       }
     },
     {
+      "name": "[For Teachers] Activity Overview - Attention is All You Need",
+      "url": "https://youtu.be/6A2GHAE3iHg",
+      "key": "_for_teachers_activity_overview_-_attention_is_all_you_need",
+      "properties": {
+        "audience": "Verified Teacher",
+        "download_url": "https://videos.code.org/levelbuilder/lesson_8_attention_v2-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "_for_teachers_activity_overview_-_attention_is_all_you_need"
+      }
+    },
+    {
+      "name": "[For Teachers] Activity Overview - How Embeddings Work",
+      "url": "https://youtu.be/DDnETR6vPcs",
+      "key": "_for_teachers_activity_overview_-_how_embeddings_work",
+      "properties": {
+        "audience": "Verified Teacher",
+        "download_url": "https://videos.code.org/levelbuilder/lesson_5_how_embeddings_are_made_v2-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "_for_teachers_activity_overview_-_how_embeddings_work"
+      }
+    },
+    {
+      "name": "[For Teachers] Activity Overview - How Neural Networks Work",
+      "url": "https://youtu.be/yN2-ll6ZVJ8",
+      "key": "_for_teachers_activity_overview_-_how_neural_networks_work",
+      "properties": {
+        "audience": "Verified Teacher",
+        "download_url": "https://videos.code.org/levelbuilder/lesson_7learning_neural_networks_v2-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "_for_teachers_activity_overview_-_how_neural_networks_work"
+      }
+    },
+    {
       "name": "[For Teachers] Behind the Activity",
       "url": "https://docs.google.com/document/d/1r3bQUafEdjoN2flf-htXkO0iYCIBrW5-_NtQCQMoedU/edit",
       "key": "_for_teachers_behind_the_activity",
@@ -3497,6 +3540,19 @@
       },
       "seeding_key": {
         "resource.key": "_key_learning_a_language"
+      }
+    },
+    {
+      "name": "[For Teachers] Activity Overview - Understanding Embeddings",
+      "url": "https://youtu.be/QjtYSpgiKXY",
+      "key": "activity_overview_-_understanding_embeddings",
+      "properties": {
+        "audience": "Verified Teacher",
+        "download_url": "https://videos.code.org/levelbuilder/lesson_4_understanding_embeddings_v2-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "activity_overview_-_understanding_embeddings"
       }
     },
     {
@@ -4135,6 +4191,12 @@
     {
       "seeding_key": {
         "lesson.key": "Attention Is All You Need",
+        "resource.key": "_for_teachers_activity_overview_-_attention_is_all_you_need"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Attention Is All You Need",
         "resource.key": "attention_is_all_you_need"
       }
     },
@@ -4166,6 +4228,12 @@
       "seeding_key": {
         "lesson.key": "Embeddings: How They're Created",
         "resource.key": "_exemplar_foundations_of_generative_ai_graphic_organizer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Embeddings: How They're Created",
+        "resource.key": "_for_teachers_activity_overview_-_how_embeddings_work"
       }
     },
     {
@@ -4297,6 +4365,12 @@
     {
       "seeding_key": {
         "lesson.key": "Neural Networks: How They're Trained",
+        "resource.key": "_for_teachers_activity_overview_-_how_neural_networks_work"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Neural Networks: How They're Trained",
         "resource.key": "_for_teachers_behind_the_activity"
       }
     },
@@ -4418,6 +4492,12 @@
       "seeding_key": {
         "lesson.key": "Understanding Embeddings",
         "resource.key": "_exemplar_foundations_of_generative_ai_graphic_organizer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Embeddings",
+        "resource.key": "activity_overview_-_understanding_embeddings"
       }
     },
     {

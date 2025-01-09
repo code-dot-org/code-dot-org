@@ -4,7 +4,8 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "AI",
+      "content_area": "curriculum_6_8",
+      "curriculum_umbrella": "6-8 Special topics",
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_course": true,
@@ -25,13 +26,16 @@
         "th-TH",
         "tr-TR"
       ],
+      "topic_tags": [
+        "ai"
+      ],
       "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "how-ai-works",
-    "serialized_at": "2024-09-09 23:23:21 UTC",
+    "serialized_at": "2024-11-19 01:18:48 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

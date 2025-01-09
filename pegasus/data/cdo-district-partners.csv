@@ -3,9 +3,11 @@ Birmingham City Schools,Alabama
 Dale County Schools,Alabama
 Elmore County Public Schools,Alabama
 Montgomery Public Schools,Alabama
+Bering Strait School District,Alaska
 Galena City School District,Alaska
 Hydaburg City School District,Alaska
 Kenai Peninsula Borough School District,Alaska
+Lake and Peninsula School District - BBRCTE,Alaska
 Matanuska-Susitna Borough School District,Alaska
 Sitka School District,Alaska
 Yukon Flats School District,Alaska
@@ -26,10 +28,13 @@ Buffalo Island Central School District,Arkansas
 Lake Hamilton School District,Arkansas
 Newport Special School District,Arkansas
 Alameda Unified School District,California
+Alliance Jack H. Skirball Middle School,California
 Alta Loma School District,California
+Berkeley Unified School District,California
 Clovis Unified School District,California
 Columbia Union School District,California
 Corona-Norco Unified School District,California
+El Nido Elementary School District,California
 Fort Bragg Unified School District,California
 Garden Grove Unified School District,California
 La Cañada Unified,California
@@ -97,7 +102,9 @@ Lewiston Independent School District #1,Idaho
 Pocatello Chubbuck School District #25,Idaho
 Calvary Academy,Illinois
 Carlinville CUSD#1,Illinois
+Carmel Catholic High School,Illinois
 Effingham Community Unit School District 40,Illinois
+Elementary School District 159,Illinois
 Evanston Skokie CCSD 65,Illinois
 Grayslake CCSD 46,Illinois
 Herscher Community Unit School District #2,Illinois
@@ -145,16 +152,24 @@ Daviess County Public Schools,Kentucky
 Jefferson County Public Schools,Kentucky
 Magoffin County Schools,Kentucky
 Robertson County Schools,Kentucky
+Acadiana Renaissance Charter,Louisiana
+Acadiana Renaissance Charter,Louisiana
 Ascension Parish School Board,Louisiana
+Beauregard,Louisiana
 Bossier Parish Schools,Louisiana
+Delta Charter Group,Louisiana
 Discovery Health Sciences Foundation,Louisiana
 East Baton Rouge,Louisiana
+East Baton Rouge Parish School System,Louisiana
 Integrated Impact Academy,Louisiana
+Morehouse Parish School District,Louisiana
+Natchitoches Parish,Louisiana
 Pelican Educational Foundation,Louisiana
 Great Salt Bay School,Maine
 Baltimore City Public Schools,Maryland
 Charles County Public Schools,Maryland
 Garrett County Public Schools,Maryland
+MCS Alim Academy,Maryland
 Montgomery County Public Schools,Maryland
 Washington County Public Schools,Maryland
 Worcester County Public Schools,Maryland
@@ -182,6 +197,7 @@ Huron School District,Michigan
 Kearsley Community Schools,Michigan
 Lake Shore Public Schools,Michigan
 Lansing School District,Michigan
+Mattawan Consolidated School,Michigan
 Merrill Community School District,Michigan
 Muskegon Public Schools,Michigan
 National Heritage Academies,Michigan
@@ -229,6 +245,7 @@ Marshall Public Schools,Missouri
 Miller R-II Schools,Missouri
 Plato R-V School District,Missouri
 Putnam County R-I School District,Missouri
+St. Charles R-VI,Missouri
 University City,Missouri
 Wentzville School District,Missouri
 Battle Creek Public Schools,Nebraska
@@ -244,6 +261,7 @@ Maywood Public Schools,Nebraska
 Northwest Public Schools,Nebraska
 Pierce Public Schools,Nebraska
 Raymond Central Public Schools,Nebraska
+Sandy Creek,Nebraska
 Scribner Snyder Community Schools,Nebraska
 Wakefield Community Schools,Nebraska
 Alpine Academy,Nevada
@@ -258,9 +276,11 @@ Fall Mountain Regional,New Hampshire
 Pinkerton Academy School District,New Hampshire
 Portsmouth School District,New Hampshire
 SAU 43: Newport School District,New Hampshire
+Ambassador Christian Academy,New Jersey
 Barnegat Township School District,New Jersey
 Bayonne Board of Education,New Jersey
 Beach Haven School,New Jersey
+Benjamin Banneker Preparatory Charter School,New Jersey
 Bloomfield Public Schools,New Jersey
 Brick Education Network,New Jersey
 Cape May County Vocational School District,New Jersey
@@ -291,6 +311,7 @@ North Hunterdon Voorhees High School District,New Jersey
 Ocean City School District,New Jersey
 Plainfield School District,New Jersey
 Rumson-Fair Haven Regional High School District,New Jersey
+Saint Joseph High School,New Jersey
 South Brunswick Township School District,New Jersey
 Springfield Public Schools,New Jersey
 St Joseph High School,New Jersey
@@ -325,6 +346,7 @@ Mount Markham Central School District,New York
 New Visions Charter Network IV,New York
 Norwood-Norfolk Central School District,New York
 Orchard Park Central School District,New York
+P.S. 354Q,New York
 Pathways in Technology Early College High School,New York
 PS 165 Robert E Simon,New York
 Public Schools of the Tarrytowns,New York
@@ -346,6 +368,7 @@ Cumberland County Schools,North Carolina
 Currituck County School District,North Carolina
 Davie County Schools,North Carolina
 Duplin County Schools,North Carolina
+Durham Public School,North Carolina
 Gaston County Schools,North Carolina
 Guilford County Schools,North Carolina
 Guilford Preparatory Academy,North Carolina
@@ -370,6 +393,7 @@ Kenmare 28 School District,North Dakota
 Kindred 2 School District,North Dakota
 Maddock Public School District #9,North Dakota
 May-Port CG School District,North Dakota
+Midkota,North Dakota
 Midway Public School #128,North Dakota
 Mott-Regent Public Schools,North Dakota
 Mt Pleasant School District #4,North Dakota
@@ -378,6 +402,7 @@ ND Youth Correctional Center,North Dakota
 New England Public School,North Dakota
 New Rockford-Sheyenne School District,North Dakota
 Northwood 129,North Dakota
+Parshall School District #3,North Dakota
 Richland 44,North Dakota
 Sargent Central Public School,North Dakota
 Sawyer Public School District,North Dakota
@@ -405,6 +430,7 @@ Olentangy Local Schools,Ohio
 Par Excellence STEM Academy,Ohio
 Perrysburg Exempted Village School District,Ohio
 Pickerington Local School District,Ohio
+Pike-Delta-York Local Schools,Ohio
 Springfield Local Schools,Ohio
 Allen Public Schools,Oklahoma
 Chouteau Early Childhood Center,Oklahoma
@@ -412,12 +438,15 @@ Coleman Public Schools,Oklahoma
 Coweta School District I-17,Oklahoma
 Epic Charter Schools,Oklahoma
 Kildare Public School,Oklahoma
+McAlester Public Schools,Oklahoma
 Tulsa Public Schools,Oklahoma
 Wayne Public Schools,Oklahoma
 Berwick Area School District,Pennsylvania
 Carbon Learning Achievement School,Pennsylvania
 Community Academy of Philadelphia Charter School,Pennsylvania
 East Stroudsburg University,Pennsylvania
+Interboro School District,Pennsylvania
+Montrose Area School District,Pennsylvania
 Norwin School District,Pennsylvania
 Philadelphia Academy Charter School,Pennsylvania
 Russell Byers Charter School,Pennsylvania

@@ -383,8 +383,29 @@
         {
           "type": "comment",
           "name": "other_feedback_FR",
-          "title": "Is there anything else you’d like to tell us about your experience teaching {unit_variable_name}?",
+          "title": "Is there anything else you would like to share about your teaching experience? Your constructive feedback is essential for us to improve our curriculum, and we appreciate you sharing it with us.",
           "rows": 3
+        },
+        {
+          "type": "radiogroup",
+          "name": "gen_ai_participate_focus_group",
+          "title": "OPTIONAL: Would you be willing to participate in a follow-up focus group to provide direct feedback about your experience teaching {unit_variable_name}? We are really interested in hearing from teachers who have constructive feedback to help us improve this unit.",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "gen_ai_email_focus_group",
+          "title": "Great! Please share an email address where we may contact you.",
+          "visibleIf": "{gen_ai_participate_focus_group}='yes'"
         },
         {
           "type": "html",

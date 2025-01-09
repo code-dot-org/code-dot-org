@@ -82,6 +82,7 @@ export class Workshop extends React.Component {
           loadingWorkshop: false,
           workshop: _.pick(data, [
             'id',
+            'name',
             'organizer',
             'facilitators',
             'location_name',

@@ -36,6 +36,19 @@ export interface TabsProps {
   tabPanelsContainerId?: string;
 }
 
+/**
+ * ### Production-ready Checklist:
+ * * (✔) implementation of component approved by design team;
+ * * (✔) has storybook, covered with stories and documentation;
+ * * (✔) has tests: test every prop, every state and every interaction that's js related;
+ * * (see apps/test/unit/componentLibrary/TabsTest.tsx)
+ * * (?) passes accessibility checks;
+ *
+ * ###  Status: ```Ready for dev```
+ *
+ * Design System: Tabs Component.
+ * Can be used to render a set of Tabs and Tab's content.
+ */
 const Tabs: React.FunctionComponent<TabsProps> = ({
   tabs,
   name,

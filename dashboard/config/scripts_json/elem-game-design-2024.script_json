@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
       "is_course": true,
@@ -13,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "elem-game-design",
-    "serialized_at": "2024-09-05 17:00:07 UTC",
+    "serialized_at": "2024-11-19 01:17:29 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

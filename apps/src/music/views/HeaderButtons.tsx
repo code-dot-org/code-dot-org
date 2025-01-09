@@ -5,6 +5,7 @@ import {useSelector} from 'react-redux';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -20,6 +21,19 @@ interface CurrentPackProps {
   packFolder: SoundFolder;
   noRightPadding: boolean;
 }
+
+const TEACHER_FEEDBACK_LINK =
+  'https://docs.google.com/forms/d/e/1FAIpQLSflGeMmY_ff1QllJfpTsWGZdn_xv6dKpPba_evTMwfbvG3FTA/viewform';
+const STUDENT_FEEDBACK_LINK =
+  'https://docs.google.com/forms/d/e/1FAIpQLSeZGNgX4wDvA29stId_Q2toofJN-r12zSP8yBMZ-E9KW5XPWg/viewform';
+
+const useFeedbackLink = () => {
+  const {userType, signInState} = useAppSelector(state => state.currentUser);
+  const isSignedIn = signInState === SignInState.SignedIn;
+  const feedbackLink =
+    userType === 'teacher' ? TEACHER_FEEDBACK_LINK : STUDENT_FEEDBACK_LINK;
+  return {isSignedIn, feedbackLink};
+};
 
 const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
   packFolder,
@@ -65,6 +79,7 @@ interface HeaderButtonsProps {
   clearCode: () => void;
   allowPackSelection: boolean;
   skipUrl: string | undefined;
+  hideChaff: () => void;
 }
 
 /**
@@ -76,6 +91,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   clearCode,
   allowPackSelection,
   skipUrl,
+  hideChaff,
 }) => {
   const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
   const {canUndo, canRedo} = useSelector(
@@ -84,6 +100,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   const currentPackId = useAppSelector(state => state.music.packId);
   const analyticsReporter = useContext(AnalyticsContext);
   const dialogControl = useDialogControl();
+  const {isSignedIn, feedbackLink} = useFeedbackLink();
 
   const library = MusicLibrary.getInstance();
 
@@ -112,7 +129,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
 
   const onClickStartOver = useCallback(() => {
     // Hide any custom fields that are showing.
-    Blockly.getMainWorkspace().hideChaff();
+    hideChaff();
 
     if (dialogControl) {
       dialogControl.showDialog({
@@ -124,17 +141,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
     if (analyticsReporter) {
       analyticsReporter.onButtonClicked('startOver');
     }
-  }, [dialogControl, analyticsReporter, clearCode]);
-
-  const onFeedbackClicked = () => {
-    if (analyticsReporter) {
-      analyticsReporter.onButtonClicked('feedback');
-    }
-    window.open(
-      'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
-      '_blank'
-    );
-  };
+  }, [hideChaff, dialogControl, analyticsReporter, clearCode]);
 
   const onClickSkip = useCallback(() => {
     if (dialogControl) {
@@ -151,81 +158,85 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
 
   return (
     <div className={moduleStyles.container}>
-      {!readOnlyWorkspace && (
-        <div className={moduleStyles.subContainer}>
-          {!allowPackSelection && packFolder && (
+      <div className={moduleStyles.subContainer}>
+        {!allowPackSelection && packFolder && (
+          <button
+            type="button"
+            className={classNames(
+              moduleStyles.button,
+              moduleStyles.buttonWide,
+              moduleStyles.buttonInteractionDisabled
+            )}
+            disabled={true}
+          >
+            <CurrentPack packFolder={packFolder} noRightPadding={true} />
+          </button>
+        )}
+        {!readOnlyWorkspace && (
+          <>
             <button
+              onClick={onClickStartOver}
               type="button"
               className={classNames(
                 moduleStyles.button,
-                moduleStyles.buttonWide,
-                moduleStyles.buttonInteractionDisabled
+                allowPackSelection && packFolder && moduleStyles.buttonWide
               )}
-              disabled={true}
             >
-              <CurrentPack packFolder={packFolder} noRightPadding={true} />
+              {allowPackSelection && packFolder && (
+                <CurrentPack packFolder={packFolder} noRightPadding={false} />
+              )}
+              <FontAwesome
+                title={musicI18n.startOver()}
+                icon="refresh"
+                className={'icon'}
+              />
             </button>
-          )}
-          <button
-            onClick={onClickStartOver}
-            type="button"
-            className={classNames(
-              moduleStyles.button,
-              allowPackSelection && packFolder && moduleStyles.buttonWide
+            <button
+              onClick={() => onClickUndoRedo('undo')}
+              type="button"
+              className={classNames(
+                moduleStyles.button,
+                !canUndo && moduleStyles.buttonDisabled
+              )}
+              disabled={!canUndo}
+            >
+              <FontAwesome
+                title={musicI18n.undo()}
+                icon="undo"
+                className={'icon'}
+              />
+            </button>
+            <button
+              onClick={() => onClickUndoRedo('redo')}
+              type="button"
+              className={classNames(
+                moduleStyles.button,
+                !canRedo && moduleStyles.buttonDisabled
+              )}
+              disabled={!canRedo}
+            >
+              <FontAwesome
+                title={musicI18n.redo()}
+                icon="redo"
+                className={'icon'}
+              />
+            </button>
+            {isSignedIn && (
+              <button
+                onClick={() => window.open(feedbackLink, '_blank')}
+                type="button"
+                className={classNames(moduleStyles.button)}
+              >
+                <FontAwesome
+                  title={musicI18n.feedback()}
+                  icon="commenting"
+                  className={'icon'}
+                />
+              </button>
             )}
-          >
-            {allowPackSelection && packFolder && (
-              <CurrentPack packFolder={packFolder} noRightPadding={false} />
-            )}
-            <FontAwesome
-              title={musicI18n.startOver()}
-              icon="refresh"
-              className={'icon'}
-            />
-          </button>
-          <button
-            onClick={() => onClickUndoRedo('undo')}
-            type="button"
-            className={classNames(
-              moduleStyles.button,
-              !canUndo && moduleStyles.buttonDisabled
-            )}
-            disabled={!canUndo}
-          >
-            <FontAwesome
-              title={musicI18n.undo()}
-              icon="undo"
-              className={'icon'}
-            />
-          </button>
-          <button
-            onClick={() => onClickUndoRedo('redo')}
-            type="button"
-            className={classNames(
-              moduleStyles.button,
-              !canRedo && moduleStyles.buttonDisabled
-            )}
-            disabled={!canRedo}
-          >
-            <FontAwesome
-              title={musicI18n.redo()}
-              icon="redo"
-              className={'icon'}
-            />
-          </button>
-        </div>
-      )}
-      <button
-        onClick={onFeedbackClicked}
-        type="button"
-        className={classNames(moduleStyles.button)}
-      >
-        <FontAwesome
-          title={musicI18n.feedback()}
-          icon="commenting"
-          className={'icon'}
-        />
-      </button>
+          </>
+        )}
+      </div>
       {skipUrl && (
         <button
           onClick={onClickSkip}

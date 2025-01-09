@@ -1,0 +1,19 @@
+name 'self-paced-equity-U2L2-PBJvid'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Video: Peanut Butter, Jelly, and Racism
+
+#### The following video will give you a primer for implicit bias, which we'll cover in the first part of this lesson. While you watch the video, consider the following question:
+
+* #### What do you think of when you hear the word **bias**?
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://www.youtube.com/watch?v=1JVN2qWSJF4" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.code.org/805242510468e0d5967e9961bb68587f-image-1736203623791.46.25 PM.png" 
+         alt="YouTube Video Thumbnail" 
+         style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+  </a>
+</div>
+MARKDOWN

@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_6_8",
       "curriculum_path": "https://curriculum.code.org/csd-19/unit5/{LESSON}",
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
@@ -16,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd5",
-    "serialized_at": "2022-03-22 21:16:21 UTC",
+    "serialized_at": "2024-11-19 01:16:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2589,6 +2590,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

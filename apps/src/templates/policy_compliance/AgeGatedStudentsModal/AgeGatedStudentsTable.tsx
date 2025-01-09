@@ -1,23 +1,17 @@
 import React from 'react';
-import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 
 import {
   convertStudentDataToArray,
   filterAgeGatedStudents,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import ManageStudentsFamilyNameCell from '../../manageStudents/ManageStudentsFamilyNameCell';
 import {tableLayoutStyles} from '../../tables/tableConstants';
 
 import AgeGatedTableConsentStatusCell from './AgeGatedTableConsentStatusCell';
-
-interface ReduxState {
-  manageStudents: {
-    studentData?: object;
-  };
-}
 
 interface RowData {
   rowData: {
@@ -26,11 +20,7 @@ interface RowData {
   };
 }
 
-interface Props {
-  studentData?: [];
-}
-
-const AgeGatedStudentsTable: React.FC<Props> = ({studentData}) => {
+const AgeGatedStudentsTable: React.FC = () => {
   const getColumns = () => {
     const columns = [
       nameColumn(),
@@ -136,27 +126,26 @@ const AgeGatedStudentsTable: React.FC<Props> = ({studentData}) => {
   });
 
   const columns = getColumns();
+  const students = useAppSelector(state =>
+    filterAgeGatedStudents(
+      convertStudentDataToArray(state.manageStudents.studentData)
+    )
+  );
   return (
     <div>
-      {studentData && studentData.length !== 0 && (
+      {students && students.length !== 0 && (
         <Table.Provider
           columns={columns}
           style={tableLayoutStyles.table}
+          // eslint-disable-next-line react/forbid-component-props
           data-testid="uitest-age-gated-students-table"
         >
           <Table.Header />
-          <Table.Body rows={studentData} rowKey="id" />
+          <Table.Body rows={students} rowKey="id" />
         </Table.Provider>
       )}
     </div>
   );
 };
 
-export default connect(
-  (state: ReduxState) => ({
-    studentData: filterAgeGatedStudents(
-      convertStudentDataToArray(state.manageStudents.studentData)
-    ),
-  }),
-  {}
-)(AgeGatedStudentsTable);
+export default AgeGatedStudentsTable;

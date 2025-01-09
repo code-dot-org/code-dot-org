@@ -874,6 +874,17 @@ en:
         PL-genAI-neuralnetworks: 'Generative AI: Processing & Neural Networks'
         PL-genAI-attention: 'Generative AI: Attention'
         PL-genAI-output: 'Generative AI: Output & Probabilities'
+        gen-ai-understanding-embeddings-overview: Activity Overview - Understanding Embeddings
+        gen-ai-how-embeddings-work-overview: Activity Overview - How Embeddings Work
+        gen-ai-neural-networks-overview: Activity Overview - How Neural Networks Work
+        gen-ai-attention-overview: Activity Overview - Attention is All You Need
+        self-paced-gen-ai-retrieval-example: Retrieval Example
+        music_jam_intro: 'Music Lab: Jam Session Intro'
+        self-paced-pl-data-science: CODAP Tutorial
+        PL_equitymod_identity: 'Chimamanda Ngozi Adichie: The Danger of a Single Story'
+        PL-equitymod-belongingvid: Building a Belonging Classroom
+        PL_equitymod_implicitbias: 'Implicit Bias: Peanut Butter, Jelly and Racism'
+        PL_equitymod_access: 'How to bring computer science to your elementary school: Be a changemaker'
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

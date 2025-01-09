@@ -16,16 +16,18 @@
           "key": "a48eb877-ae33-4f8e-99b6-290679837e79"
         }
       ],
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "hideable_lessons": true,
       "is_course": true,
+      "is_deprecated": true,
       "is_migrated": true,
       "use_legacy_lesson_plans": true,
-      "version_year": "unversioned",
-      "is_deprecated": true
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "algebra",
-    "serialized_at": "2022-09-28 14:31:22 UTC",
+    "serialized_at": "2024-11-19 01:13:52 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -5639,6 +5641,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }
