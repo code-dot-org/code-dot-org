@@ -1,0 +1,65 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-01-07T17:42:22.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "Motherboard",
+        "imageUrl": "",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-bottom-center",
+        "typing": true
+      },
+      {
+        "text": "Central Processing Unit (CPU)",
+        "imageUrl": "",
+        "key": "hardware-components-3d887b32-d501-4032-b990-2a51ae5b4de8",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "Power Supply Unit",
+        "imageUrl": "",
+        "key": "hardware-components-ed2b07b1-278f-49d5-ba3b-02994f4bccd8",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "Graphics Processing Unit (GPU)",
+        "imageUrl": "",
+        "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "Random Access Memory (RAM) ",
+        "imageUrl": "",
+        "key": "hardware-components-266c1383-bf2b-4307-bd04-1f35b2808edd",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "Boot Drives (SSD) ",
+        "imageUrl": "",
+        "key": "hardware-components-8296a10a-18ea-4c91-933f-b2b6dec55bd2",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "Peripherals: Monitor, Keyboard, Mouse, Speakers, Webcam, Microphone",
+        "imageUrl": "",
+        "key": "hardware-components-3fb7f8f9-2e27-4b0a-aa81-96a7528b3571",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "Case ",
+        "imageUrl": "",
+        "key": "hardware-components-fde7ae9f-ebcc-47e4-a6d0-24cf8caeb2e8",
+        "layout": "text-bottom-center"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-07 17:52:26 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Panels>

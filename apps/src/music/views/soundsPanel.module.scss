@@ -139,6 +139,11 @@
 
     &Middle {
       font-size: 11px;
+      min-width: 240px;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     &Right {

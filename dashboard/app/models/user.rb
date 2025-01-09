@@ -310,7 +310,7 @@ class User < ApplicationRecord
   before_destroy :soft_delete_channels
 
   before_validation on: :create, if: -> {gender.present?} do
-    self.gender = Policies::Gender.normalize gender
+    self.gender = Services::User::GenderNormalizer.call(raw_input: gender)
   end
 
   before_validation :enforce_age_or_state_update, on: :update, if: :should_check_age_or_state_update?
@@ -318,12 +318,12 @@ class User < ApplicationRecord
   validate :validate_us_state, if: :should_validate_us_state?
 
   before_validation on: [:create, :update], if: -> {gender_teacher_input.present? && will_save_change_to_attribute?('properties')} do
-    self.gender = Policies::Gender.normalize gender_teacher_input
+    self.gender = Services::User::GenderNormalizer.call(raw_input: gender_teacher_input)
   end
 
   before_validation on: [:create, :update], if: -> {gender_student_input.present? && will_save_change_to_attribute?('properties')} do
     gender_student_input.strip!
-    self.gender = Policies::Gender.normalize gender_student_input
+    self.gender = Services::User::GenderNormalizer.call(raw_input: gender_student_input)
   end
 
   validates :gender_student_input, length: {maximum: 50}, no_utf8mb4: true
@@ -912,7 +912,7 @@ class User < ApplicationRecord
     end
 
     user.gender_third_party_input = auth.info.gender
-    user.gender = Policies::Gender.normalize auth.info.gender
+    user.gender = Services::User::GenderNormalizer.call(raw_input: auth.info.gender)
     user.roster_synced = params['roster_synced'] || false
   end
 
