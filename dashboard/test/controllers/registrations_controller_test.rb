@@ -777,12 +777,13 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   # USING NEW SIGN-UP FLOW [END]
 
-  test "existing account sign in/up links redirect to user edit page" do
-    get :existing_account, params: {email: "test@email.com", provider: "facebook"}
-    assert_response :success
-    assert_select "a[href=?]", "/users/sign_in?user_return_to=%2Fusers%2Fedit"
-    assert_select "a[href=?]", "/users/sign_up?user_return_to=%2Fusers%2Fedit"
-  end
+  ### TODO: Create an equivalent test for this in new sign up flow ACQ-2871
+  # test "existing account sign in/up links redirect to user edit page" do
+  #   get :existing_account, params: {email: "test@email.com", provider: "facebook"}
+  #   assert_response :success
+  #   assert_select "a[href=?]", "/users/sign_in?user_return_to=%2Fusers%2Fedit"
+  #   assert_select "a[href=?]", "/users/sign_up?user_return_to=%2Fusers%2Fedit"
+  # end
 
   test "the us_state and country_code attributes can be set and updated" do
     user = create :student, us_state: "CO", country_code: "US"

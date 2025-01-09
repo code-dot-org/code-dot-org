@@ -17,6 +17,14 @@ import {lab2EntryPoints} from '../../lab2EntryPoints';
 
 export {Theme};
 
+/// ------ USER APP OPTIONS ------ ///
+
+// Partial definition of the UserAppOptions structure, only defining the
+// pieces we need at the moment.
+export interface PartialUserAppOptions {
+  isInstructor: boolean;
+}
+
 /// ------ PROJECTS ------ ///
 
 /** Identifies a project. Corresponds to the "value" JSON column for the entry in the projects table. */
@@ -44,6 +52,7 @@ export interface ProjectAndSources {
   // When projects are loaded for the first time, sources may not be present
   sources?: ProjectSources;
   channel: Channel;
+  abuseScore?: number;
 }
 
 /// ------ SOURCES ------ ///
@@ -182,6 +191,7 @@ export interface LevelProperties {
   // Python Lab/Codebridge specific properties
   validationFile?: ProjectFile;
   enableMicroBit?: boolean;
+  miniApp?: string;
   serializedMaze?: MazeCell[][];
   startDirection?: number;
 }

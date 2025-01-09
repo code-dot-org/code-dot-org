@@ -1,0 +1,63 @@
+name 'self-paced-equity-U2L1-drawascientist'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Expanding Belonging in Computer Science
+
+## Stereotypes in Computer Science
+
+#### Why is it so important to attend to your students' sense of belonging? Like many science, technology, engineering, and math (STEM) fields, computer science has long been associated with a specific stereotype of a person. Look at the representations of IT professionals and software engineers. What do you notice?
+
+____
+
+<div style="display: flex; justify-content: space-around; align-items: center; margin-top: 20px;">
+  <div style="text-align: center; width: 31%;">
+    <img src="https://images.code.org/67c25e86abb4783667749b17d4bfb4fa-image-1734386913618.08.31 PM.png" alt="The characters of Silicon Valley sit around a computer." style="width: 300px; border-radius: 10px;">
+    <p style="font-size: 18px; margin-top: 10px;"><i>Silicon Valley</i></p>
+  </div>
+  <div style="text-align: center; width: 28%;">
+    <img src="https://images.code.org/4bf20cb32f8f2abc911f8e12be5083e7-image-1734386864304.07.42 PM.png" alt="Three characters from the IT Crowd sit on a couch and look at the camera. The words IT Crowd are written above their heads" style="width: 300px; border-radius: 10px;">
+    <p style="font-size: 18px; margin-top: 10px;"><i>The IT Crowd</i></p>
+  </div>
+
+  <div style="text-align: center; width: 31%;">
+    <img src="https://images.code.org/16801400f4a07a246c556dbeb39e4087-image-1734387055751.10.54 PM.png" alt="Four characters from the Social Network work around a computer." style="width: 300px; border-radius: 10px;">
+    <p style="font-size: 18px; margin-top: 10px;"><i>The Social Network</i></p>
+  </div>
+</div>
+
+____
+
+## Draw a Computer Scientist
+
+#### It should be no surprise that these tropes infiltrate students' sense of who belongs and can succeed in computer science. This effect has been observed and measured by researchers who created the <a href="https://eric.ed.gov/?id=ED586813" target="blank" rel="noopener noreferrer">Draw-A-Computer-Scientist Test</a> (Hansen, et al. 2016). This test is based on the <a href="https://onlinelibrary.wiley.com/doi/10.1002/sce.3730670213" target="blank" rel="noopener noreferrer">Draw-A-Scientist Test </a>, developed by David Wade Chambers (1983) to observe how children absorb and reproduce stereotypes of scientists.
+
+#### The following block of text contains several excerpts from Hansen, et al.'s research, who prompted fourth through sixth graders to draw a computer scientist completing work before and after 12 hours of programming instruction by their classroom teacher:
+
+<div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 20px 20px 20px 20px; margin: 30px 0px 30px 0px"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
+
+<i> 
+
+#### On the pre-assessment, 71% of students drew a male computer scientist, while only 27% drew a female computer scientist. The remaining 3% of student drawings were not coded for gender because the images were unclear (e.g., stick figure drawings and no gender-specific pronoun in the written description.)
+
+#### 90% of students drew computer scientists working alone, in isolation. In one extreme example, a student drew a computer scientist working in an empty computer lab, and wrote, “She is the only one working.” In contrast, only 10% of students drew more than one computer scientist working together.
+
+#### After students completed roughly 12 hours of programming instruction within a block-based environment, they were asked to repeat the same activity: draw a computer science working, and describe what is going on in the picture. Note that the curriculum did not address explicitly who could be a computer scientist or stereotypes.
+
+#### After the computer science instruction, the percentage of drawings featuring a male computer scientist dropped from 71% to 51%, whereas the number featuring females increased from 27% to 31%. One possible explanation for this could be related to the gender of the teacher; a female teacher taught all participating students computer science. 
+
+#### For some of these drawings, only a computer screen was visible; in others, non gender-specific pronouns were used in the written description, and, thus, were not coded for gender. Seven percent of students changed from an initial drawing with a male to a drawing with a female; all of these students were female. <b>Considering that computer science is a male-dominated profession, this is a promising finding because it indicates that computer science experiences in school can change student perceptions about the field, allowing students to more readily see themselves as computer scientists.</b>
+
+</i>
+</p></div>
+
+<div style="display: flex; flex-direction: column; align-items: center; margin: 0px 0; padding: 10px; width: fit-content;">
+    <img src="https://images.code.org/dc8b491549189dd503cab5bc1c81c3de-image-1734389994350.59.51 PM.png" alt="Two hand-drawn images side-by-side by a child of computer scientists sitting at a desk." style="max-width: 100%; height: 300px">
+    <p style="margin-top: 10px; font-size: 18px; text-align: center;">Pre- and post-assessment depictions of computer scientists by the same student. The pre-test (left) contains a male computer scientist while the post-test (right) contains a female one.</p>
+</div>
+
+___
+
+##### **Source:** Hansen, Alexandria Killian, et al. "What Is a Computer Scientist? Developing the Draw-A-Computer-Scientist-Test for Elementary School Students." AERA Online Paper Repository, 12 Apr. 2016.
+MARKDOWN

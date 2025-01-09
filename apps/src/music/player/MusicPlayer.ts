@@ -2,7 +2,6 @@ import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 
-import appConfig from '../appConfig';
 import {DEFAULT_CHORD_LENGTH, MIN_BPM, MAX_BPM} from '../constants';
 import {LoadFinishedCallback, UpdateLoadProgressCallback} from '../types';
 import {generateNotesFromChord, ChordNote} from '../utils/Chords';
@@ -26,8 +25,6 @@ import MusicLibrary, {
   SoundData,
   SoundFolder,
 } from './MusicLibrary';
-import SamplePlayer from './SamplePlayer';
-import SamplePlayerWrapper from './SamplePlayerWrapper';
 import ToneJSPlayer from './ToneJSPlayer';
 import {
   AudioPlayer,
@@ -42,7 +39,7 @@ const DEFAULT_KEY = Key.C;
 
 /**
  * Main music player component which maintains the list of playback events and
- * uses a {@link SamplePlayer} to play sounds.
+ * uses an {@link AudioPlayer} to play sounds.
  */
 export default class MusicPlayer {
   private readonly metricsReporter: LabMetricsReporter;
@@ -60,14 +57,8 @@ export default class MusicPlayer {
     audioPlayer?: AudioPlayer,
     metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {
-    if (appConfig.getValue('player') === 'sample') {
-      console.log('[MusicPlayer] Using SamplePlayer');
-      this.audioPlayer =
-        new SamplePlayerWrapper(new SamplePlayer()) || audioPlayer;
-    } else {
-      console.log('[MusicPlayer] Using ToneJSPlayer');
-      this.audioPlayer = new ToneJSPlayer() || audioPlayer;
-    }
+    console.log('[MusicPlayer] Using ToneJSPlayer');
+    this.audioPlayer = new ToneJSPlayer() || audioPlayer;
     this.metricsReporter = metricsReporter;
     this.analyticsReporter = analyticsReporter;
     this.updateConfiguration(bpm, key);
@@ -326,7 +317,7 @@ export default class MusicPlayer {
   }
 
   /**
-   * Stop playback. Tells the {@link SamplePlayer} to stop all sample playback.
+   * Stop playback. Tells the {@link AudioPlayer} to stop all sample playback.
    */
   stopSong() {
     this.audioPlayer.stop();

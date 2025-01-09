@@ -275,6 +275,10 @@ class ActiveSupport::TestCase
     end
   end
 
+  def set_request_locale(locale)
+    request.env['cdo.locale'] = locale
+  end
+
   def with_default_locale(locale)
     original_locale = I18n.default_locale
     request.env['cdo.locale'] = I18n.default_locale = locale

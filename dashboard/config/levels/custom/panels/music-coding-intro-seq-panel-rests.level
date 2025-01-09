@@ -1,0 +1,44 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-12-17T16:01:26.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "####Writing music is all about creating the perfect sequence and timing for each layer of sound.",
+        "imageUrl": "https://images.code.org/98c62dfa8fbaab00032f1dd88797b63d-digital-mixer-in-a-recording-studio-with-a-comput-2023-11-27-05-03-44-utc.jpg",
+        "key": "music-intro-coding-seq-panel-bc024962-11c0-46a8-a581-1b95ac378e08",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "In music, we use measures to keep track of time. Sounds can be short or long—some last for just a beat, and others play for one or more measures. Songwriters use these measures to carefully time each sound in their song.",
+        "imageUrl": "https://images.code.org/db7684ad84de1056c8f5ff11f3c03c61-measures.jpg",
+        "key": "music-coding-intro-seq-panel-d41fd16c-480c-4da2-a69c-6eee3f56814f",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "Some sounds play together to build harmony, while others follow a sequence to guide the song's flow and tell its story.",
+        "imageUrl": "https://images.code.org/725367fdc34517f8d5eb0795cb8765d9-Untitled 5.jpg",
+        "key": "music-coding-intro-seq-panel-rests-658f4077-7762-4a9b-be1e-f7f0a49e4cab",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "To create space or rhythm, songwriters might add pauses called rests. A rest is a moment of silence that keeps the music balanced.",
+        "imageUrl": "https://images.code.org/49bbe702588ef19463646f0360fde8d1-rest.jpg",
+        "key": "music-coding-intro-seq-panel-62188d64-289a-4399-a6bb-3ec3ac3ef864",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "offer_browser_tts": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-12-17T16:01:26.636+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-seq-panel\\\"\"],\"cloned_from\":\"music-coding-intro-seq-panel\"},{\"changed_at\":\"2024-12-17 16:03:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 16:13:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 16:16:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-19 17:20:12 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 19:13:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 19:14:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 19:33:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 19:58:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 20:02:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

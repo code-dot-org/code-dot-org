@@ -82,6 +82,7 @@ export class Workshop extends React.Component {
           loadingWorkshop: false,
           workshop: _.pick(data, [
             'id',
+            'name',
             'organizer',
             'facilitators',
             'location_name',
@@ -109,6 +110,7 @@ export class Workshop extends React.Component {
             'third_party_provider',
             'course_offerings',
             'module',
+            'participant_group_type',
           ]),
         });
       })

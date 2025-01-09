@@ -73,6 +73,9 @@ const availableCallouts: AvailableCallouts = {
   },
   'run-button': {selector: '#run-button'},
   'trigger-button-1': {selector: `#${Triggers[0].id}`},
+  'trigger-button-2': {selector: `#${Triggers[1].id}`},
+  'trigger-button-3': {selector: `#${Triggers[2].id}`},
+  'trigger-button-4': {selector: `#${Triggers[3].id}`},
   'toolbox-first-row': {selector: '.blocklyTreeRow'},
   'flyout-first-block': {
     selector: '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable',
@@ -85,6 +88,14 @@ const availableCallouts: AvailableCallouts = {
     selector:
       '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable ~ .blocklyDraggable',
     openToolboxCategory: 0,
+  },
+  'flyout-third-block': {
+    selector:
+      '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable ~ .blocklyDraggable ~ .blocklyDraggable',
+  },
+  'flyout-fourth-block': {
+    selector:
+      '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable ~ .blocklyDraggable ~ .blocklyDraggable ~ .blocklyDraggable',
   },
 };
 

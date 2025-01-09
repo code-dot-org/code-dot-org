@@ -1,0 +1,16 @@
+@import 'color.scss';
+.previewContainerHorizontal {
+  width: 400px;
+  border-right: 5px solid $light_gray_800;
+  background-color: $light_black;
+}
+
+.previewContainerVertical {
+  height: 400px;
+  background-color: $light_black;
+}
+
+.previewHeader {
+  height: 40px;
+  min-height: 40px;
+}

@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-19 01:17:01 UTC",
+    "serialized_at": "2024-12-19 16:02:21 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1432,13 +1432,7 @@
         "description": "**Group:** It is recommended that students work in pairs for this lesson. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio, Lesson 3 Level 1. ",
         "duration": "35",
         "name": "Practice Time",
-        "progression_name": "App Development: Lists in Action!",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Optional Resource**: There is an activity guide available in the *Resources* section that contains all of the main tasks that students need to complete over the course of the five levels. The tasks and descriptions in this activity guide are identical to what is presented within the levels themselves. However, some students might benefit from this task list as they work on creating the practice app.  "
-          }
-        ]
+        "progression_name": "App Development: Lists in Action!"
       },
       "seeding_key": {
         "activity_section.key": "a4dfa009-28b2-4e2b-8a29-62bd8c4c28f8",
@@ -1452,7 +1446,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "<b>Create Performance Task Written Response Practice</b>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\n</br>\n\nSample Prompt: <i>Identify the number of times the body of your iteration statement will execute. Describe a condition or error that would cause your iteration statement to not terminate and cause an infinite loop. If no such condition or error exists, explain how the loop could be modified to cause an infinite loop.</i>\n\n\n<a href=\"https://docs.google.com/presentation/d/1J2hBz676YRP_Fbs7IwNYsX32XQmJ49x2RxptD-DwBIk/edit#slide=id.g28a3d051caa_0_0\">Unit Journal Template</a>\n\n<b>Sample Response for Instructors</b> (<i>coming soon...</i>)\n\n\n"
+            "markdown": "<b>Create Performance Task Written Response Practice</b>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\n</br>\n\nSample Prompt: <i>Identify the number of times the body of your iteration statement will execute. Describe a condition or error that would cause your iteration statement to not terminate and cause an infinite loop. If no such condition or error exists, explain how the loop could be modified to cause an infinite loop.</i>\n\n\n<a href=\"https://docs.google.com/presentation/d/1J2hBz676YRP_Fbs7IwNYsX32XQmJ49x2RxptD-DwBIk/edit#slide=id.g28a3d051caa_0_0\">Unit Journal Template</a>\n\n\n"
           }
         ]
       },

@@ -84,6 +84,7 @@ const SILENCED = [
   'userHeaderEventLogger',
   'regionalPartnerMiniContact',
   'statsigWebAnalytics',
+  'global_edition/region_reset_button',
   'global_edition/region_switch_confirm',
 
   // other entry points

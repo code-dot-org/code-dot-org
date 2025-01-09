@@ -5,11 +5,13 @@ require 'uri'
 require 'yaml'
 require 'cdo/git_utils' # Necessary for 'test' environment to load test.erb.yml
 require 'cdo'
+require 'cdo/i18n'
 
 module Cdo
   # Lazily loads global configurations for regional pages
   module GlobalEdition
     REGION_KEY = 'ge_region'
+    ROOT_PATH = '/global'
 
     # Retrieves a list a global region names.
     REGIONS = Dir.glob('*.yml', base: CDO.dir('config', 'global_editions')).map {|f| File.basename(f, '.yml')}.freeze
@@ -64,6 +66,12 @@ module Cdo
       region_locales(region)&.first
     end
 
+    # @note Only Pegasus pages are available in all regional languages.
+    def self.locale_available?(region, locale)
+      return true if region.nil? || region.empty?
+      region_locales(region)&.include?(locale)
+    end
+
     def self.locale_lock?(region)
       configuration_for(region)&.dig(:locale_lock)
     end
@@ -80,6 +88,7 @@ module Cdo
       end.freeze
     end
 
+    # @note GET requests do not trigger the region change due to +HttpCache.config+ on Pegasus. Use POST instead.
     def self.region_change_url(url, region = nil)
       uri = URI.parse(url)
 
@@ -99,6 +108,23 @@ module Cdo
 
     def self.country_region(country)
       countries_regions[country]
+    end
+
+    def self.region_locale_options(region)
+      locale_options = Cdo::I18n.locale_options
+      return locale_options unless region_available?(region)
+
+      @region_locale_options ||= {}
+
+      @region_locale_options[region] ||= begin
+        region_locales = region_locales(region)
+        locale_options = locale_options.select {|_name, value| region_locales.include?(value)} if region_locales
+        locale_options
+      end
+    end
+
+    def self.path(region, *paths)
+      ::File.join(ROOT_PATH, region, *paths)
     end
   end
 end
