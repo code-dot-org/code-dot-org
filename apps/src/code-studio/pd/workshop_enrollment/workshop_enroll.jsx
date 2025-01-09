@@ -4,6 +4,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import {navigateToHref} from '@cdo/apps/utils';
+
 import {SUBMISSION_STATUSES} from './constants';
 import EnrollForm from './enroll_form';
 import {WorkshopPropType, FacilitatorPropType} from './enrollmentConstants';
@@ -125,10 +127,18 @@ export default class WorkshopEnroll extends React.Component {
   renderSuccess() {
     // Redirect to My PL landing page. The WORKSHOP_ENROLLMENT_COMPLETED_EVENT event will be logged
     // on that page since event logs immediately followed by redirects sometimes do not fire.
-    const rpName = this.props.workshop.regional_partner?.name;
-    const wsCourse = this.props.workshop.course;
-    const wsSubject = this.props.workshop.subject;
-    window.location.href = `/my-professional-learning?rpName=${rpName}&wsCourse=${wsCourse}&wsSubject=${wsSubject}`;
+    sessionStorage.setItem(
+      'rpName',
+      this.props.workshop.regional_partner?.name || ''
+    );
+    sessionStorage.setItem('workshopCourse', this.props.workshop.course);
+    sessionStorage.setItem(
+      'workshopSubject',
+      this.props.workshop.subject || ''
+    );
+    sessionStorage.setItem('workshopName', this.props.workshop.name || '');
+
+    navigateToHref('/my-professional-learning');
   }
 
   render() {
