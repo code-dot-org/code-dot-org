@@ -27,6 +27,8 @@ export interface ChannelsStore {
   publish: (channel: Channel) => Promise<Response>;
 
   unpublish: (channel: Channel) => Promise<Response>;
+
+  getAbuseScore: (channel: Channel) => Promise<number>;
 }
 
 // Note: We don't need to actually save a channel for local storage.
@@ -67,6 +69,11 @@ export class LocalChannelsStore implements ChannelsStore {
   unpublish() {
     // Unpublishing is not supported for local storage.
     return Promise.resolve(new Response(''));
+  }
+
+  getAbuseScore() {
+    // Abuse score is not supported for local storage.
+    return Promise.resolve(0);
   }
 }
 
@@ -110,5 +117,9 @@ export class RemoteChannelsStore implements ChannelsStore {
 
   unpublish(channel: Channel) {
     return channelsApi.unpublish(channel);
+  }
+
+  getAbuseScore(channel: Channel) {
+    return channelsApi.fetchAbuseScore(channel.id);
   }
 }
