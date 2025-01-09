@@ -32,7 +32,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
 
   test "execution status is set to USER_PROFANITY if toxicity detected in user input" do
     request = create :aichat_request
-    user_message = JSON.parse(request.new_message, symbolize_names: true)[:chatMessageText]
+    user_message = request.new_message['chatMessageText']
     AichatSafetyHelper.expects(:find_toxicity).with('user', user_message, @locale).returns(@toxic_response)
 
     perform_enqueued_jobs do
