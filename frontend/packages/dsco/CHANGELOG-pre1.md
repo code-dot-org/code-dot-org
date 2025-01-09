@@ -28,6 +28,24 @@ component/entity. All of that Changelogs will be combined into one in this file 
 - component is now `Ready for Dev`
 - Initial release
 
+## `componentLibrary/breadcrumbs`
+
+## [0.2.1](https://github.com/code-dot-org/code-dot-org/pull/62813)
+
+- updated color variables to use primitiveColors.css
+
+## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/61009)
+
+- implemented component
+- added tests
+- added storybook
+- component is now `Ready for Dev`
+
+## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/60944)
+
+- created component's skeleton
+- Initial commit
+
 ## `componentLibrary/button`
 
 ## [0.6.1](https://github.com/code-dot-org/code-dot-org/pull/63021)
@@ -135,6 +153,34 @@ component/entity. All of that Changelogs will be combined into one in this file 
 
 ## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/52154)
 
+## `componentLibrary/chips`
+
+## [0.5.0](https://github.com/code-dot-org/code-dot-org/pull/63047)
+
+- rewritten `ChipsTest` in typescript
+- refactored/optimized `ChipsTest.tsx`
+- minor documentation update
+
+## [0.4.0](https://github.com/code-dot-org/code-dot-org/pull/62664)
+
+- updated `Chip` and `Chips` props to include error message displayed when response required
+
+## [0.3.1](https://github.com/code-dot-org/code-dot-org/pull/62909)
+
+- updated color variables to use `primitiveColors.css`
+
+## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/60911)
+
+- updated `Chip` props to support native HTML Input element attributes
+
+## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/58809)
+
+- Added `gray` color
+- Added `thick` and `thin` options (chips text type)
+- Updated Chip text vertical alignment to be middle aligned
+
+## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/54064)
+
 - Initial release
 
 ## `componentLibrary/closeButton`
@@ -219,6 +265,26 @@ component/entity. All of that Changelogs will be combined into one in this file 
 
 - added `constants.ts`
 - added `types.ts`
+- Initial commit
+
+## `componentLibrary/dialog`
+
+## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/62614)
+
+- added `CustomDialog` component, added stories and tests for it
+- `Dialog` is now using `CustomDialog` component
+- updated exports in `index.ts`
+
+## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/62335)
+
+- implemented component
+- added tests
+- added storybook
+- component is now `Ready for Dev`
+
+## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/61823)
+
+- created component's skeleton
 - Initial commit
 
 ## `componentLibrary/dropdown/simpleDropdown`
@@ -414,6 +480,40 @@ component/entity. All of that Changelogs will be combined into one in this file 
 ## [0.0.1](https://github.com/code-dot-org/code-dot-org/pull/58494)
 
 - Create skeleton for TextField component
+
+## `componentLibrary/tooltip`
+
+## [0.3.1](https://github.com/code-dot-org/code-dot-org/pull/62996)
+
+- allowed `text` prop to be `string | React.ReactNode`
+
+## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/62745)
+
+- rewritten `TooltipTest` in typescript
+- refactored/optimized `TooltipTest.tsx`
+
+## [0.2.3](https://github.com/code-dot-org/code-dot-org/pull/59328)
+
+- minor types update
+- moved `updatePositionedElementStyles` to `common/helpers`, used it in WithTooltip
+
+## [0.2.2](https://github.com/code-dot-org/code-dot-org/pull/60245)
+
+- updated `Tooltip` background color to be $light_gray_950;
+
+## [0.2.1](https://github.com/code-dot-org/code-dot-org/pull/59610)
+
+- used DSCO Button component for `Tooltip` stories
+
+## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/59106)
+
+- Reworked `WithTooltip` to use React Portal for rendering tooltip content outside the DOM hierarchy of the parent
+  component. This allows the tooltip to be rendered outside the parent component's overflow boundaries.
+- `WithTooltip` is now a recomended way to use `Tooltip` and `TooltipOverlay` components.
+
+## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/58273)
+
+- Initial release
 
 ## `componentLibrary/typography`
 

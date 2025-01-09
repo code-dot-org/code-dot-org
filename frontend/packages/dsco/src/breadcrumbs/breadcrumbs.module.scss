@@ -1,0 +1,111 @@
+@import '@/common/styles/primitiveColors.css';
+@import '@/common/styles/font.scss';
+@import '@/common/styles/mixins';
+@import '@/typography/typography.module';
+
+// Breadcrumbs common styles
+.breadcrumbs {
+  display: inline-flex;
+  align-items: center;
+
+  .breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--neutral-base-black);
+    font-feature-settings:
+      'liga' off,
+      'clig' off;
+    text-decoration: none;
+    border-radius: 4px;
+
+    // Current location styles
+    &:last-child {
+      color: var(--brand-teal-50);
+      cursor: default;
+    }
+
+    // Hover, Pressed, Visited styles
+    &:hover,
+    :active,
+    :visited {
+      &:not(:last-child) {
+        color: var(--neutral-gray-80);
+      }
+    }
+
+    // Focus styles
+    &:focus-visible {
+      color: var(--neutral-base-black);
+      outline: 2px solid var(--brand-teal-50);
+      outline-offset: 2px;
+    }
+  }
+
+  i {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--neutral-black-alpha-70);
+  }
+}
+
+// Breadcrumbs sizes
+.breadcrumbs-l {
+  .breadcrumb {
+    @include label-one;
+    margin: 0;
+  }
+
+  i {
+    padding: 6px;
+    font-size: 13px;
+    width: 16px;
+    line-height: 1.25;
+  }
+}
+
+.breadcrumbs-m {
+  .breadcrumb {
+    @include label-two;
+    margin: 0;
+  }
+
+  i {
+    padding: 5px 6px;
+    font-size: 12px;
+    width: 15px;
+    line-height: 1.25;
+  }
+}
+
+.breadcrumbs-s {
+  .breadcrumb {
+    @include label-three;
+    margin: 0;
+  }
+
+  i {
+    padding: 5px 6px;
+    font-size: 11px;
+    width: 14px;
+    line-height: 1.25;
+  }
+}
+
+.breadcrumbs-xs {
+  .breadcrumb {
+    @include label-four;
+    margin: 0;
+  }
+
+  i {
+    padding: 4px 6px;
+    font-size: 10px;
+    width: 13px;
+    line-height: 1.25;
+  }
+}
