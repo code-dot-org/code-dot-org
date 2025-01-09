@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '3.3.4'
+ruby '>= 3.0', '< 3.5'
+# after pushing this fuzzy match thru chef, commit to make this be:
+# ruby '3.3.4'
 
 gem 'berkshelf'
 gem 'chef', '17.6.18'

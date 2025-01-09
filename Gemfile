@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '3.3.4'
+ruby '>= 3.0', '< 3.5'
+# after pushing this fuzzy match thru chef, commit to make this be:
+# ruby '3.3.4'
 
 # Ruby 2.7 no longer includes some libraries by default; install
 # the ones we need here
