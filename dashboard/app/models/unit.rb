@@ -942,15 +942,11 @@ class Unit < ApplicationRecord
     under_curriculum_umbrella?('Foundations of Programming')
   end
 
-  #misc other comment
-
   # TODO: (Dani) Update to use new course types framework.
   # Currently this grouping is used to determine whether the script should have # a custom end-of-lesson experience.
   def middle_high?
     csd? || csp? || csa? || foundations_of_cs? || foundations_of_programming?
   end
-
-  foo = 1
 
   def requires_verified_instructor?
     # As of now the only course that requires the instructor to be verified in order to run code is CSA.
